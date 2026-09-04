@@ -21,4 +21,7 @@ node fix-name-collisions.mjs
 node fix-hand-patches.mjs
 node setup-entry.mjs
 node fix-missing-imports.mjs
-echo "pipeline complete"
+# record which design commit src/ now corresponds to (read by
+# ../check-design-updates.sh)
+git -C ../../.. log -1 --format=%H -- design_handoff_stuti/ > .ported-at 2>/dev/null || true
+echo "pipeline complete (ported design @ $(cut -c1-9 .ported-at 2>/dev/null || echo 'uncommitted'))"
