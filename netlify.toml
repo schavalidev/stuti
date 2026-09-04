@@ -1,11 +1,12 @@
 # Netlify builds the web app from stuti-app/ (used both by `netlify deploy`
 # from the repo root and by a site linked to the GitHub repo, where every
 # push to main redeploys). The app routes by URL hash, so no SPA fallback
-# rule is needed.
+# rule is needed. `publish` is resolved against the repo root (where this
+# file lives), not against `base` — the first deploy failed on exactly that.
 [build]
   base = "stuti-app"
   command = "npm run build"
-  publish = "dist"
+  publish = "stuti-app/dist"
 
 [build.environment]
   NODE_VERSION = "24"
