@@ -6,6 +6,7 @@ import "./stuti.css";
 import "./stuti-components.css";
 import "./stuti-palette.css";
 import "./stuti-pigment.css";
+import "./stuti-app.css"; // app-shell overrides: system-bar insets, listening cue (hand-authored)
 
 /* No StrictMode: the prototype's stores/timers/effects were never written
    against React's double-invoke-in-dev checks, and this first pass is

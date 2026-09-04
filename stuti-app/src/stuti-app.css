@@ -1,0 +1,26 @@
+/* ============================================================
+   STUTI — app-shell overrides (hand-authored; loaded after the design's
+   stylesheets, never regenerated). Two things the prototype, built for
+   a browser tab, could not know about.
+   ============================================================ */
+
+/* 1. System bars. index.html asks for viewport-fit=cover, and on a
+   current Android WebView Capacitor 8 honours that literally: it pads
+   nothing and publishes the insets as --safe-area-inset-* for the page
+   to apply. The design pads only the bottom (tab bar), so every top bar
+   sat under the status bar. One rule for all screens; env() covers iOS
+   Safari and any WebView that exposes the insets natively. */
+.app {
+  padding-top: var(--safe-area-inset-top, env(safe-area-inset-top, 0px));
+}
+
+/* 2. The mic's listening pulse. Its colours are --accent-soft /
+   --accent-ink, which the pigment sheet defines only inside deity- and
+   lens-tinted containers; the search bar is outside all of them, so the
+   ring drew in an invalid colour and the cue was invisible (on the web
+   too). Root-level fallbacks: any tinted ancestor still wins by
+   inheritance, so tinted screens are unchanged. */
+:root {
+  --accent-soft: color-mix(in oklab, var(--gold) 22%, var(--surface));
+  --accent-ink: var(--gold-deep);
+}
