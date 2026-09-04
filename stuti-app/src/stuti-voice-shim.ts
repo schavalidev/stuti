@@ -10,11 +10,19 @@
    @capacitor-community/speech-recognition. It must be imported before
    anything that reads window.SpeechRecognition — main.tsx imports it
    first. In a plain browser (the PWA) it does nothing.
+
+   Plugin contract on Android (read from its SpeechRecognition.java):
+   with partialResults on, start() resolves IMMEDIATELY; every result —
+   the final one included — arrives on the "partialResults" listener,
+   and the end of recognition on "listeningState" { status: "stopped" }.
+   The first version of this shim tore its listeners down as soon as
+   start() resolved and therefore heard nothing.
    ============================================================ */
 import { Capacitor } from "@capacitor/core";
 import { SpeechRecognition as Native } from "@capacitor-community/speech-recognition";
 
 type Handle = { remove: () => Promise<void> };
+const MAX_LISTEN_MS = 20000;
 
 class NativeSpeechRecognition {
   lang = "en-IN";
@@ -26,6 +34,8 @@ class NativeSpeechRecognition {
   onend: (() => void) | null = null;
   private handles: Handle[] = [];
   private done = false;
+  private latest = "";
+  private timer: any = null;
 
   private emit(transcript: string, isFinal: boolean) {
     const result: any = [{ transcript, confidence: 1 }];
@@ -35,27 +45,39 @@ class NativeSpeechRecognition {
 
   async start() {
     this.done = false;
+    this.latest = "";
     try {
       const { available } = await Native.available();
       if (!available) throw new Error("service-not-allowed");
       const perm: any = await Native.requestPermissions();
       const granted = perm && (perm.speechRecognition === "granted" || perm.microphone === "granted");
       if (!granted) throw new Error("not-allowed");
-      if (this.interimResults) {
-        this.handles.push(await Native.addListener("partialResults", (d: any) => {
-          const t = d && d.matches && d.matches[0];
-          if (t && !this.done) this.emit(String(t), false);
-        }));
-      }
+
+      this.handles.push(await Native.addListener("partialResults", (d: any) => {
+        const t = d && d.matches && d.matches[0];
+        if (!t || this.done) return;
+        this.latest = String(t);
+        this.emit(this.latest, false);
+      }));
+      this.handles.push(await Native.addListener("listeningState", (d: any) => {
+        if (this.done || !d || d.status !== "stopped") return;
+        // the recognizer has closed: the last partial is the answer
+        if (this.latest) this.emit(this.latest, true);
+        this.finish();
+      }));
+      this.timer = setTimeout(() => { if (!this.done) { if (this.latest) this.emit(this.latest, true); this.finish(); } }, MAX_LISTEN_MS);
+
       const res: any = await Native.start({
         language: this.lang,
         maxResults: this.maxAlternatives || 1,
-        partialResults: this.interimResults,
+        partialResults: true,
         popup: false,
       });
+      // without partial results the plugin would resolve here with the
+      // matches; with them on it resolves at once and the listeners do the
+      // rest — but honour a result if one ever does come back this way
       const t = res && res.matches && res.matches[0];
-      if (t && !this.done) this.emit(String(t), true);
-      this.finish();
+      if (t && !this.done) { this.latest = String(t); this.emit(this.latest, true); this.finish(); }
     } catch (e: any) {
       if (this.done) return;
       if (this.onerror) this.onerror({ error: String((e && e.message) || e) });
@@ -65,6 +87,7 @@ class NativeSpeechRecognition {
 
   stop() { Native.stop().catch(() => {}); }
   abort() {
+    if (this.done) return;
     this.done = true;
     Native.stop().catch(() => {});
     this.cleanup();
@@ -77,6 +100,7 @@ class NativeSpeechRecognition {
     if (this.onend) this.onend();
   }
   private cleanup() {
+    if (this.timer) { clearTimeout(this.timer); this.timer = null; }
     for (const h of this.handles) h.remove().catch(() => {});
     this.handles = [];
   }
