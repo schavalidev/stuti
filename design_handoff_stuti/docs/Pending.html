@@ -1,0 +1,19 @@
+<!DOCTYPE html><html><head><meta charset="utf-8"><title>Stuti — Pending</title>
+<link rel="stylesheet" href="stuti-palette.css"><link rel="stylesheet" href="stuti-ops.css">
+</head><body class="ops"><div class="page">
+<h1 style="font-family:var(--font-display);font-size:2rem;margin:40px 0 6px">Pending</h1>
+<p style="color:var(--ink-soft);margin:0 0 30px">Work that needs more than an HTML change before it can ship. Kept here so a request for it doesn't get re-scoped from scratch.</p>
+
+<h2 style="margin-top:0">Push notifications that survive a closed browser</h2>
+<p>Today's bell buttons (sandhyā, pañcāṅga digest) only ring while a Stuti tab is open — <code>stuti-nudge.js</code> arms a plain <code>setTimeout</code> against the browser's own clock. A phone with the tab closed, or the browser killed to save battery, hears nothing. Fixing that needs a server standing between the almanac and the device, because only a server can hand the OS a wake-up call in advance.</p>
+<p><b>What's already in place:</b> <code>stuti-push.js</code> stores a device's push subscription (endpoint + keys) in localStorage and exposes <code>subscribed()</code> — the client half of the handshake exists, unused.</p>
+<p><b>What's missing, in order:</b></p>
+<ol style="padding-left:20px;line-height:1.9">
+<li>A subscribe call — <code>PushManager.subscribe()</code> against a VAPID public key, wired to the existing bell taps and the Settings reminder toggles, replacing the local <code>Notification.requestPermission()</code> path for anyone who grants it.</li>
+<li>A small backend (a cron-triggered function is enough — no always-on server needed) that, once a minute, computes which subscriptions have a cue due in the next window: sandhyā junctures per subscriber's saved place, the daily digest at their chosen hour, tithi nudges. The almanac math is pure and already lives in <code>stuti-panchanga-engine.js</code>/<code>stuti-muhurta.js</code>; the backend needs the same formulas (or to call the same JS via a small Node runner) plus each subscriber's place and prefs, which today live only in the browser's localStorage and would need to move to a real store.</li>
+<li>A send step using <code>web-push</code> (or the provider's REST API) with the VAPID keys, POSTing the payload to each due subscription's endpoint.</li>
+<li>A service worker (<code>sw.js</code>) with a <code>push</code> event handler to show the OS notification when the payload arrives with no page open, and a <code>notificationclick</code> handler to focus/open the app — mirroring what <code>stuti-nudge.js</code>'s <code>post()</code> already does for the in-tab case.</li>
+<li>A place to keep subscriptions and preferences server-side (endpoint, place, sandhyā toggles, quiet hours, digest time) — today all of that is <code>localStorage</code>, which no server can read.</li>
+</ol>
+<p style="color:var(--ink-soft)">Scope, not a build: this needs a real backend decision (which host, which store) before any of it can be written. Flag when ready to pick one.</p>
+</div></body></html>

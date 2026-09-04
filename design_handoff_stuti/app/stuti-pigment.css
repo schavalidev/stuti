@@ -1,0 +1,200 @@
+/* ============================================================
+   STUTI — pigment glyphs + micro-motion (Tweaks · Glyphs)
+
+   The line icons were all ink. Here each practice keeps a small
+   pigment of its own — mineral colours ground to the parchment's
+   level, not screen colour — and the moment of choosing something
+   answers with a small, specific motion: the lotus blooms, the
+   mālā turns, the spark kindles. Everything sits behind
+   [data-pigment="on"] so Ink remains one tweak away, and the
+   global reduced-motion rule already stills all of it.
+   ============================================================ */
+
+[data-pigment="on"]{
+  --pig-gold:    oklch(0.56 0.11 80);
+  --pig-rose:    oklch(0.58 0.13 15);
+  --pig-verm:    oklch(0.55 0.14 42);
+  --pig-peacock: oklch(0.50 0.09 215);
+  --pig-leaf:    oklch(0.53 0.09 145);
+  --pig-moss:    #6B7448;   /* śarad's unturned leaf, deepened to hold on cream */
+  --pig-indigo:  #283A66;   /* Akshara's indigo, unaltered */
+  --pig-violet:  #6A5A78;   /* the bloom violet, ground down for cream */
+  --pig-red:     oklch(0.50 0.13 27);   /* the banti puvvu, ground to the jar's chroma */
+  --pig-terra:   oklch(0.57 0.09 45);
+  /* japa's yellow sits between the app's gold and real metal — the gold hue
+     lifted enough to read yellow rather than ochre, without leaving the jar */
+  --pig-amber:   oklch(0.65 0.13 83);
+}
+[data-pigment="on"][data-theme="night"]{
+  --pig-gold:    oklch(0.78 0.11 82);
+  --pig-rose:    oklch(0.76 0.11 15);
+  --pig-verm:    oklch(0.75 0.12 45);
+  --pig-peacock: oklch(0.74 0.08 215);
+  --pig-leaf:    oklch(0.74 0.09 145);
+  --pig-moss:    #A9B183;
+  --pig-indigo:  #97A6CC;   /* the same indigo lifted for the night page */
+  --pig-violet:  #AFA0BE;
+  --pig-red:     oklch(0.77 0.1 27);
+  --pig-terra:   oklch(0.76 0.09 45);
+  --pig-amber:   oklch(0.81 0.12 85);
+}
+
+/* ---------- lens pills: each practice wears its own pigment ---------- */
+[data-pigment="on"] .lens-pill svg{ opacity:0.95; transition: color var(--fast); }
+[data-pigment="on"] .lens-pill[data-lens="type"] svg{ color:var(--pig-gold); }
+[data-pigment="on"] .lens-pill[data-lens="deity"] svg{ color:var(--pig-verm); }
+[data-pigment="on"] .lens-pill[data-lens="masa"] svg{ color:var(--pig-peacock); }
+[data-pigment="on"] .lens-pill[data-lens="vrata"] svg{ color:var(--pig-gold); }
+[data-pigment="on"] .lens-pill[data-lens="parayana"] svg{ color:var(--pig-leaf); }
+/* ---------- one pigment per Nitya lens ----------
+   The bar used to light every pill in the same gold, telling you where you
+   were by position alone. Each lens now owns a pigment from the same jar the
+   glyphs are ground from — and the icon, the pill and the cards beneath it
+   all read the SAME token, so nothing on the screen contradicts itself. */
+.lens-pill[data-lens="patha"],  .lens-pad[data-lens="patha"]  { --lens-pig:var(--pig-indigo,var(--accent)) }
+.lens-pill[data-lens="sadhana"],.lens-pad[data-lens="sadhana"]{ --lens-pig:var(--pig-verm,var(--accent)) }
+.lens-pill[data-lens="japa"],   .lens-pad[data-lens="japa"]   { --lens-pig:var(--pig-amber,var(--accent)) }
+.lens-pill[data-lens="learn"],  .lens-pad[data-lens="learn"]  { --lens-pig:var(--pig-moss,var(--accent)) }
+/* red belongs to the Nitya bar's nomulu, not the library's: both bars use
+   data-lens="nomu", so the jar is chosen by which bar the pill sits in */
+.lens-pill[data-lens="nomu"],   .lens-pad[data-lens="nomu"]   { --lens-pig:var(--pig-violet,var(--accent)) }
+.nitya-bar .lens-pill[data-lens="nomu"], .lens-pad.lens-red[data-lens="nomu"] { --lens-pig:var(--pig-red,var(--accent)) }
+.lens-pill[data-lens="ledger"], .lens-pad[data-lens="ledger"] { --lens-pig:var(--pig-gold,var(--accent)) }
+[data-pigment="on"] :is(.lens-pill,.lens-pad):is([data-lens="patha"],[data-lens="sadhana"],[data-lens="japa"],[data-lens="learn"],[data-lens="nomu"],[data-lens="ledger"]){
+  --accent:var(--lens-pig);
+  --accent-ink:color-mix(in oklab,var(--lens-pig) 78%,var(--ink));
+  --accent-soft:color-mix(in oklab,var(--lens-pig) 13%,var(--surface));
+}
+[data-pigment="on"][data-theme="night"] :is(.lens-pill,.lens-pad)[data-lens]{
+  --accent-ink:var(--ink);
+  --accent-soft:color-mix(in oklab,var(--lens-pig) 20%,var(--surface-2));
+}
+[data-pigment="on"] .lens-pill[data-lens] svg{ color:var(--lens-pig); }
+/* at night the bar goes monochrome: white type, white glyph, and the chosen
+   pill a plain lifted surface — the pigments were six competing lights in a
+   dark room, which is exactly where they read worst */
+[data-theme="night"] .lens-pill[data-lens],[data-theme="night"][data-pigment="on"] .lens-pill[data-lens]{ --accent:var(--ink); --accent-ink:var(--ink); --accent-soft:var(--surface-2); color:var(--ink-soft) }
+[data-theme="night"][data-pigment="on"] .lens-pill[data-lens] svg{ color:var(--ink-soft) }
+[data-theme="night"] .lens-pill[data-lens].on{ background:var(--surface-2); border-color:var(--line); color:var(--ink); box-shadow:none }
+[data-theme="night"][data-pigment="on"] .lens-pill[data-lens].on svg{ color:var(--ink) }
+/* and the same in the cards beneath: at night a filled control is a white
+   pill with dark type, not a pastel lozenge of whatever pigment the lens
+   happens to carry */
+[data-theme="night"] .lens-pad[data-lens]{ --accent:#F2EEE8; --accent-ink:var(--ink); --accent-soft:var(--surface-2) }
+/* on a solid-filled pill (Current palette) the pigment must yield to the fill;
+   under Unified the pill is a soft tint, where the pigment reads even better */
+[data-pigment="on"]:not([data-palette="unified"]) .lens-pill.on svg{ color:inherit; }
+[data-pigment="on"][data-palette="unified"] .lens-pill.on svg{ opacity:1; }
+
+/* the answer to being chosen: one motion per practice */
+[data-pigment="on"] .lens-pill.on svg{ animation: pig-pop 0.45s var(--ease-out); }
+.lens-pill[data-lens="vrata"] img, .lens-pill[data-lens="parayana"] img, .lens-pill[data-lens="nomu"] img{ transition: transform var(--fast); }
+.lens-pill[data-lens="vrata"].on img, .lens-pill[data-lens="parayana"].on img, .lens-pill[data-lens="nomu"].on img{ animation: pig-pop 0.45s var(--ease-out); }
+/* s\u0101dhana's diy\u0101: chosen, the lamp is lit \u2014 the flame flickers and throws a
+   small warm glow; unlit pills keep a still lamp */
+[data-pigment="on"] .lens-pill[data-lens="sadhana"].on svg{ animation:pig-bloom 0.55s var(--ease-out); overflow:visible; }
+[data-pigment="on"] .lens-pill[data-lens="sadhana"].on .diya-flame{ transform-origin:12px 12px; animation:pig-flick 2.2s var(--ease) infinite; filter:drop-shadow(0 0 3px oklch(0.8 0.13 80 / 0.85)) drop-shadow(0 0 7px oklch(0.75 0.13 70 / 0.45)); }
+@keyframes pig-flick{ 0%,100%{transform:scale(1)} 35%{transform:scale(1.06,0.96) translateY(-0.4px)} 70%{transform:scale(0.96,1.05) translateY(0.3px)} }
+/* the festival lens pill's lamp is always lit, on or off */
+[data-pigment="on"] .lens-pill[data-lens="festival"] .diya-flame{ transform-origin:12px 12px; animation:pig-flick 2.2s var(--ease) infinite; filter:drop-shadow(0 0 3px oklch(0.8 0.13 80 / 0.85)) drop-shadow(0 0 7px oklch(0.75 0.14 70 / 0.5)); }
+/* the Nitya tab carries the same lamp; lit, it glows the same way */
+[data-pigment="on"] :is(.tab.tab-on,.tab[data-active="true"]) .diya-flame{ transform-origin:12px 12px; animation:pig-flick 2.2s var(--ease) infinite; filter:drop-shadow(0 0 3px oklch(0.8 0.13 80 / 0.85)) drop-shadow(0 0 7px oklch(0.75 0.13 70 / 0.45)); }
+[data-pigment="on"] .lens-pill[data-lens="japa"].on svg{ animation: pig-turn 0.55s var(--ease-out); }
+[data-pigment="on"] .lens-pill[data-lens="learn"].on svg{ animation: pig-kindle 0.6s var(--ease-out); }
+@keyframes pig-pop    { 0%{transform:scale(0.6)} 60%{transform:scale(1.12)} 100%{transform:scale(1)} }
+@keyframes pig-bloom  { 0%{transform:scale(0.4) rotate(-25deg)} 60%{transform:scale(1.15) rotate(5deg)} 100%{transform:scale(1) rotate(0)} }
+@keyframes pig-turn   { 0%{transform:rotate(-180deg) scale(0.7)} 100%{transform:rotate(0) scale(1)} }
+@keyframes pig-kindle { 0%{transform:scale(0.5) rotate(-20deg); opacity:0.3} 45%{transform:scale(1.25) rotate(8deg); opacity:1} 100%{transform:scale(1) rotate(0)} }
+
+/* the pill bar greets the eye: a quiet stagger as a lens screen arrives */
+[data-pigment="on"] .view .lensbar-inner > .lens-pill{ animation: pig-in 0.34s var(--ease-out) both; }
+[data-pigment="on"] .view .lensbar-inner > .lens-pill:nth-child(2){ animation-delay:0.045s; }
+[data-pigment="on"] .view .lensbar-inner > .lens-pill:nth-child(3){ animation-delay:0.09s; }
+[data-pigment="on"] .view .lensbar-inner > .lens-pill:nth-child(4){ animation-delay:0.135s; }
+[data-pigment="on"] .view .lensbar-inner > .lens-pill:nth-child(5){ animation-delay:0.18s; }
+[data-pigment="on"] .view .lensbar-inner > .lens-pill:nth-child(n+6){ animation-delay:0.22s; }
+@keyframes pig-in{ from{opacity:0; transform:translateY(6px)} to{opacity:1; transform:none} }
+
+/* ---------- tab bar: the lit tab's glyph takes its own pigment ---------- */
+[data-pigment="on"] :is(.tab.tab-on, .tab[data-active="true"]) svg{ animation: pig-rise 0.4s var(--ease-out); }
+[data-pigment="on"] .tabbar :is(.tab.tab-on, .tab[data-active="true"]):nth-child(1) svg{ color:var(--pig-gold); }
+[data-pigment="on"] .tabbar :is(.tab.tab-on, .tab[data-active="true"]):nth-child(2) svg{ color:var(--pig-rose); }
+[data-pigment="on"] .tabbar :is(.tab.tab-on, .tab[data-active="true"]):nth-child(3) svg{ color:var(--pig-peacock); }
+[data-pigment="on"] .tabbar :is(.tab.tab-on, .tab[data-active="true"]):nth-child(4) svg{ color:var(--pig-verm); }
+@keyframes pig-rise{ 0%{transform:translateY(4px) scale(0.85); opacity:0.4} 60%{transform:translateY(-1px) scale(1.06)} 100%{transform:none; opacity:1} }
+
+/* ---------- lighting a lamp: the mark of keeping is a lit diyā ---------- */
+[data-pigment="on"] .fav-btn.on{ color:var(--pig-gold); }
+[data-pigment="on"] .fav-btn:not(.on):hover{ color:var(--pig-gold); }
+[data-pigment="on"] .fav-btn.on .diya-flame{ transform-origin:12px 12px; animation:pig-flick 2.2s var(--ease) infinite; filter:drop-shadow(0 0 3px oklch(0.8 0.13 80 / 0.85)) drop-shadow(0 0 7px oklch(0.75 0.13 70 / 0.45)); }
+
+/* ---------- full-colour miniatures (Glyph option B) ----------
+   A pigged icon carries both renderings; only one shows. Ink mode — and any
+   tab not currently lit, so idle tabs dry back to ink — shows the line. */
+svg.has-pig .g-pig{ display:none; }
+[data-pigment="on"] svg.has-pig .g-pig{ display:inline; }
+[data-pigment="on"] svg.has-pig .g-ink{ display:none; }
+/* idle tabs sit back a little so the lit one still reads as chosen */
+[data-pigment="on"] .tab:not(.tab-on):not([data-active="true"]) svg.has-pig{ opacity:0.55; filter:saturate(0.35); }
+/* miniatures carry their own colour — the per-lens/tab tints above only reach
+   the ink rendering, and pig fills are literal, so no override is needed */
+
+/* ---------- festive layer: showers and drifts (stuti-festive.js) ---------- */
+#festive-layer{ position:fixed; inset:0; pointer-events:none; z-index:80; overflow:hidden; }
+.festive-petal{ position:absolute; top:-3vh; width:9px; height:13px; border-radius:50% 50% 50% 50% / 62% 62% 38% 38%; opacity:0; animation:festive-fall var(--fp-dur) var(--fp-delay) linear forwards; }
+.festive-petal.drift{ width:8px; height:11px; animation-timing-function:cubic-bezier(0.35,0,0.65,1); }
+@keyframes festive-fall{
+  0%{ opacity:0; transform:translate(0,0) rotate(0) scale(var(--fp-scale)); }
+  8%{ opacity:0.85; }
+  85%{ opacity:0.75; }
+  100%{ opacity:0; transform:translate(var(--fp-sway),104vh) rotate(var(--fp-rot)) scale(var(--fp-scale)); }
+}
+[data-pigment="off"] #festive-layer{ display:none; }
+@media (prefers-reduced-motion: reduce){ #festive-layer{ display:none; } }
+
+/* Season-tinted accents were tried and withdrawn: --accent is re-derived
+   per theme, palette and deity, and a color-mix wrapper invalidated it
+   (a custom property cannot reference itself). The season already shows
+   in the home wash and ambient; the accent stays the deity's. */
+.fav-btn{ position:relative; }
+.fav-burst{ position:absolute; inset:0; pointer-events:none; }
+.fav-burst i{ position:absolute; left:50%; top:50%; width:5px; height:5px; border-radius:50%; background:oklch(0.82 0.12 80); opacity:0; transform:translate(-50%,-50%) rotate(var(--a)); animation:pig-petal 0.6s var(--dl) var(--ease-out) forwards; box-shadow:0 0 6px oklch(0.8 0.13 78 / 0.8); }
+@keyframes pig-petal{ 0%{opacity:0; transform:translate(-50%,-50%) rotate(var(--a)) translateY(-4px) scale(0.4)} 25%{opacity:1} 100%{opacity:0; transform:translate(-50%,-50%) rotate(var(--a)) translateY(-22px) scale(1)} }
+[data-pigment="off"] .fav-burst{ display:none; }
+
+/* ---------- toggles: the knob overshoots, the track blooms ---------- */
+[data-pigment="on"] .rm-switch i{ transition:transform 0.34s cubic-bezier(0.34,1.56,0.64,1); }
+[data-pigment="on"] :is(.rm-toggle.on,.rm-sy.on) .rm-switch{ animation:pig-soak 0.45s var(--ease-out); }
+@keyframes pig-soak{ 0%{box-shadow:0 0 0 0 color-mix(in oklab,var(--accent) 45%,transparent)} 100%{box-shadow:0 0 0 9px transparent} }
+
+/* ---------- a tick that draws itself ---------- */
+[data-pigment="on"] :is(.on,.done,[aria-checked="true"],[aria-pressed="true"]) svg path[d^="M5 12.5"]{ stroke-dasharray:22; animation:pig-draw 0.4s var(--ease-out); }
+@keyframes pig-draw{ from{stroke-dashoffset:22} to{stroke-dashoffset:0} }
+
+/* ---------- press: ink soaks in rather than the button merely shrinking ---------- */
+[data-pigment="on"] :is(.btn-primary,.mala-record,.icon-btn,.chip){ position:relative; }
+[data-pigment="on"] :is(.btn-primary,.mala-record,.icon-btn,.chip):active::after{ content:""; position:absolute; inset:0; border-radius:inherit; background:radial-gradient(circle at 50% 55%, color-mix(in oklab,var(--accent) 22%,transparent), transparent 70%); animation:pig-ink 0.4s var(--ease-out); pointer-events:none; }
+@keyframes pig-ink{ from{opacity:0.9} to{opacity:0} }
+
+/* ---------- japa: adding a m\u0101l\u0101 gives the hand a small settle ---------- */
+[data-pigment="on"] .mala-record:not(:disabled):active{ transform:scale(0.94); transition:transform 0.1s; }
+
+/* ---------- bells: a reminder switched on rings once ---------- */
+.rm-toggle-lbl{ display:inline-flex; align-items:center; gap:8px; }
+.rm-toggle-bell{ display:inline-flex; color:var(--ink-faint); }
+.rm-toggle.on .rm-toggle-bell{ color:var(--accent-ink); }
+[data-pigment="on"] .rm-toggle.on .rm-toggle-bell{ color:var(--pig-gold); }
+[data-pigment="on"] :is(.rm-toggle.on .rm-toggle-bell, .rm-card.on .rm-mark, .vow-bell.on, .aw-tell.on, .sky-plate-bell.on, .eyebrow-bell.on) svg{ transform-origin:50% 12%; animation:pig-ring 0.9s var(--ease-out); }
+[data-pigment="on"] .rm-card.on .rm-mark svg{ color:var(--pig-gold); }
+@keyframes pig-ring{ 0%{transform:rotate(0)} 12%{transform:rotate(26deg) scale(1.15)} 32%{transform:rotate(-20deg) scale(1.15)} 52%{transform:rotate(13deg) scale(1.08)} 72%{transform:rotate(-7deg)} 88%{transform:rotate(3deg)} 100%{transform:rotate(0) scale(1)} }
+
+/* ---------- the settings night switch keeps pace with the reminder ones ---------- */
+[data-pigment="on"] .set-switch i{ transition:transform 0.34s cubic-bezier(0.34,1.56,0.64,1); }
+[data-pigment="on"] .set-switch.on{ animation:pig-soak 0.45s var(--ease-out); }
+
+/* ---------- japa ring: each count answers in the hand and in the number ---------- */
+[data-pigment="on"] .japa-entry-beads{ color:var(--pig-amber); }
+[data-pigment="on"] .japa-ring svg{ transition:transform 0.35s var(--ease-out); }
+[data-pigment="on"] .japa-ring:active svg{ transform:rotate(1.6deg); transition:transform 0.1s; }
+[data-pigment="on"] .japa-ring .japa-center{ transition:transform 0.3s var(--ease-out); }
+[data-pigment="on"] .japa-ring:active .japa-center{ transform:scale(1.05); transition:transform 0.1s; }

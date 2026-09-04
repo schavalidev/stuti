@@ -1,0 +1,106 @@
+/* ============================================================
+   STUTI — wide: the same app on a tablet or a desk
+   The phone layout (<760px) is untouched. From 760px the tab bar
+   stands up as a left rail and every screen keeps a book-like
+   measure instead of stretching; from 1160px the calendar opens
+   into a two-page spread (month grid · day detail).
+   ============================================================ */
+
+/* rail-only furniture, absent on the phone */
+.rail-head, .rail-foot { display: none; }
+
+@media (min-width: 760px) {
+  :root { --rail-w: 100px; }
+  .app { max-width: none; display: grid; grid-template-columns: var(--rail-w) minmax(0, 1fr); grid-template-rows: minmax(0, 1fr); }
+  .brandbar { display: none; }
+  .viewport { grid-row: 1; grid-column: 2; }
+
+  /* ---- the tab bar, stood up as a rail ---- */
+  .tabbar { grid-row: 1; grid-column: 1; display: flex; flex-direction: column; align-items: stretch; gap: 8px; padding: 16px 12px calc(12px + env(safe-area-inset-bottom)); border-top: none; border-right: 1px solid var(--line); background: linear-gradient(90deg, var(--surface), color-mix(in oklab, var(--surface) 62%, transparent)); box-shadow: 16px 0 34px -30px rgba(40, 25, 8, 0.35); }
+  .tab { flex: none; min-height: 66px; gap: 5px; }
+  .tabbar-4 .tab { font-size: 12.5px; }
+  .rail-head { display: flex; flex-direction: column; align-items: center; gap: 7px; padding: 6px 0 16px; color: var(--gold-deep); }
+  .rail-name { font-size: 17px; line-height: 1.2; color: var(--gold-deep); letter-spacing: 0.01em; }
+  .rail-foot { margin-top: auto; display: flex; flex-direction: column; align-items: center; gap: 2px; padding-top: 12px; border-top: 1px solid var(--line-2); }
+  .rail-foot .icon-btn.rail-on { background: var(--accent-soft); color: var(--accent-ink); }
+  /* the rail has its own Settings button, so Today yields while it is lit */
+  .app[data-screen-label="settings"] .tab-home.tab-on { color: var(--ink-faint); background: none; }
+
+  /* ---- measures: every screen keeps a column it can be read at ----
+     --padx centres a self-padded view; --padc does the same for views
+     whose children carry their own 14–18px gutters. */
+  .view { --colw: 660px; --padx: max(28px, calc((100% - var(--colw)) / 2)); --padc: max(8px, calc((100% - var(--colw)) / 2 - 18px)); }
+  .view.home { --colw: 640px; }
+  .view.browse, .view.libhub { --colw: 680px; }
+  .view.deity-view { --colw: 720px; }
+  .view.cal-view { --colw: 720px; }
+  .view.japa { --colw: 620px; }
+  .view.reader { --colw: 800px; }
+
+  .home, .browse, .deity-view { padding-inline: var(--padx); }
+  .view.japa, .view.cal-view, .view.practice-view, .view.reader { padding-inline: var(--padc); }
+  .libhub .lens-pad { padding-inline: var(--padx); }
+  .libhub .lensbar-inner { padding-inline: var(--padx); }
+  .libhub > .topbar, .libhub > .thread-strip { padding-inline: max(16px, calc(var(--padx) - 2px)); }
+  .cal-view > .topbar { padding-inline: max(16px, calc(var(--padx) - 4px)); }
+
+  /* the sky becomes a lit panel rather than a torn-off strip */
+  .home .sky { margin: 4px -14px 0; }
+  .home .sky-fill { border-radius: 20px; }
+
+  /* the browse grid flows with the room it is given */
+  .browse-grid { grid-template-columns: repeat(auto-fill, minmax(172px, 1fr)); }
+  /* the phone's three-up is a phone measure; a tablet has room to keep flowing */
+  .lib-deity-grid { grid-template-columns: repeat(auto-fill, minmax(172px, 1fr)); gap: 12px; }
+  .lib-deity-grid .gtile:not(.gtile-full) { padding: 14px 10px 16px; gap: 8px; }
+  .lib-deity-grid .gtile:not(.gtile-full) .gtile-name { font-size: 21px; }
+  .lib-deity-grid .gtile-full .gtile-name { padding: 34px 12px 13px; font-size: 21px; }
+
+  /* reader furniture centres over the text column */
+  .reader-layers { justify-content: center; }
+  .reader-versebar { max-width: 640px; margin-inline: auto; width: calc(100% - 32px); }
+  /* the learn bar is a control, not a column: two 350px mode pills read as a
+     banner rather than a segmented choice */
+  .rd-modebar { max-width: 520px; margin-inline: auto; width: 100%; }
+  .reader .reciter { border-radius: 18px 18px 0 0; border-inline: 1px solid var(--line); }
+
+  /* japa ring earns a little more air */
+  .japa-ring { width: min(52vh, 360px); }
+
+  /* ---- sheets: bottom drawers become anchored panels ---- */
+  .rhb-sheet { left: 0; right: 0; width: min(620px, 94%); margin-inline: auto; bottom: 26px; border-radius: 26px; border: 1px solid var(--line); max-height: 84%; transform: translateY(calc(102% + 30px)); }
+  .sel-sheet { left: 0; right: 0; width: min(560px, 92%); margin-inline: auto; bottom: 26px; border-radius: 22px; border: 1px solid var(--line); }
+  .pd-wrap { padding-bottom: 26px; }
+  .pd-sheet { width: min(640px, 94%); margin-inline: auto; border-radius: var(--r-lg); border: 1px solid var(--line); }
+  /* full-page sheets keep their surface but read at a column */
+  .nm-sheet > * { width: min(100%, 800px); margin-left: auto; margin-right: auto; }
+  .nm-sheet > .nm-search { margin: 12px auto 6px; width: min(calc(100% - 32px), 768px); }
+  .ob-wrap { justify-content: center; }
+  .ob-sheet { flex: 0 1 660px; }
+
+  /* desks have pointers: give the cards an answer to one */
+  @media (hover: hover) {
+    .tab:hover { background: var(--surface-2); color: var(--ink); }
+    .tab.tab-on:hover { background: var(--accent-soft); color: var(--accent-ink); }
+    .tile:hover, .gtile:hover, .hymn-card:hover, .lens-row:hover, .occ-row:hover, .vr-row:hover, .daily-row:hover, .practice-card:hover, .resume-card:hover, .foryou-today:hover, .week-row:hover, .sr-verse:hover, .plan-card:hover, .coll-card:not(.coll-card-soon):hover { border-color: color-mix(in oklab, var(--accent) 38%, var(--line)); }
+    .gs-main:hover .gs-d { color: var(--accent-ink); }
+  }
+
+  /* a desk shows its scrollbar */
+  .scroll { scrollbar-width: thin; scrollbar-color: color-mix(in oklab, var(--ink) 22%, transparent) transparent; }
+  .scroll::-webkit-scrollbar { width: 10px; }
+  .scroll::-webkit-scrollbar-thumb { background: color-mix(in oklab, var(--ink) 16%, transparent); border-radius: 99px; border: 3px solid transparent; background-clip: content-box; }
+}
+
+/* ---- desktop: the calendar opens as a two-page spread ---- */
+@media (min-width: 1160px) {
+  .view.cal-view { --colw: 1080px; display: grid; grid-template-columns: minmax(0, 11fr) minmax(0, 9fr); column-gap: 40px; align-content: start; padding-inline: max(40px, calc((100% - 1120px) / 2)); }
+  .cal-view > * { grid-column: 1; }
+  .cal-view > .topbar { grid-column: 1 / -1; }
+  .cal-view > .cal-detail { grid-column: 2; grid-row: 2 / span 8; align-self: start; position: sticky; top: 78px; margin: 12px 0 24px; }
+}
+
+/* the phone keeps its immersive reader: no bar while reciting */
+@media (max-width: 759.98px) {
+  .app[data-screen-label="reader"] .tabbar { display: none; }
+}

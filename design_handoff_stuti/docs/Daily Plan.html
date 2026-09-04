@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="day">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Stuti · Daily Plan · 7 September – 4 October</title>
+<link rel="stylesheet" href="stuti.css" />
+<link rel="stylesheet" href="stuti-ops.css" />
+<style>
+em{font-style:normal;color:var(--ink);font-weight:600}
+.wk{padding:38px 0 26px;border-bottom:1px solid var(--line)}
+.wk-head{display:flex;align-items:baseline;justify-content:space-between;gap:14px;flex-wrap:wrap}
+.wk-k{font-size:11.5px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--gold-deep)}
+.wk h2{margin-top:6px}
+.wk-goal{margin:10px 0 0;padding:13px 15px;border-radius:var(--r-sm);background:color-mix(in oklab,var(--gold) 9%,var(--surface-2));border:1px solid color-mix(in oklab,var(--gold) 28%,var(--line-2));font-size:14.5px;line-height:1.6;color:var(--ink-soft);max-width:66ch}
+.wk-goal b{color:var(--ink)}
+.day{display:grid;grid-template-columns:78px 1fr;gap:16px;padding:18px 2px 16px;border-top:1px solid var(--line-2)}
+.day.done .day-t,.day.done .p1,.day.done .row{color:var(--ink-faint)}
+.day-when{display:flex;flex-direction:column;gap:6px}
+.day-n{font-family:var(--font-display);font-size:24px;line-height:1;color:var(--gold-deep)}
+.day-d{font-size:12px;font-weight:700;letter-spacing:.06em;color:var(--ink-faint);text-transform:uppercase}
+.day-top{display:flex;align-items:flex-start;gap:12px}
+.day-t{flex:1;font-size:17px;font-weight:700;line-height:1.4;color:var(--ink);text-wrap:pretty}
+.tags{display:flex;gap:6px;flex-wrap:wrap;margin-top:2px}
+.p1{margin-top:10px;padding:11px 14px;border-radius:var(--r-sm);background:color-mix(in oklab,var(--gold) 10%,var(--surface-2));border:1px solid color-mix(in oklab,var(--gold) 30%,var(--line-2));font-size:14.5px;line-height:1.6;color:var(--ink);max-width:66ch;text-wrap:pretty}
+.p1 .k{display:block;font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--gold-deep);margin-bottom:3px}
+.rows{display:grid;gap:7px;margin-top:9px;max-width:66ch}
+.row{display:grid;grid-template-columns:82px 1fr;gap:10px;font-size:14px;line-height:1.6;color:var(--ink-soft);text-wrap:pretty}
+.row .k{font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-faint);padding-top:3px}
+.row.dn .k{color:color-mix(in oklab,var(--leaf-green-1) 78%,var(--ink))}
+.rest .day-t{font-weight:600;color:var(--ink-soft)}
+.pill-code{background:color-mix(in oklab,var(--ink) 8%,transparent);color:var(--ink-soft);border-color:transparent}
+.pill-paper{background:color-mix(in oklab,var(--caution) 11%,transparent);color:color-mix(in oklab,var(--caution) 70%,var(--ink));border-color:transparent}
+.pill-people{background:color-mix(in oklab,var(--leaf-green-1) 16%,transparent);color:color-mix(in oklab,var(--leaf-green-1) 75%,var(--ink));border-color:transparent}
+.always{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:10px 22px;margin-top:14px}
+.always div{font-size:14px;line-height:1.55;color:var(--ink-soft);text-wrap:pretty}
+.always b{color:var(--ink)}
+.wait{display:grid;gap:6px;margin-top:12px;max-width:66ch}
+.wait div{display:grid;grid-template-columns:110px 1fr;gap:10px;font-size:14px;line-height:1.55;color:var(--ink-soft)}
+.wait b{color:var(--ink)}
+@media (max-width:720px){.day{grid-template-columns:60px 1fr;gap:12px}.day-n{font-size:20px}.row{grid-template-columns:1fr;gap:1px}}
+</style>
+</head>
+<body class="ops" data-ops-key="stuti-ops-4week">
+<div class="page">
+<div class="top">
+<div class="brand"><svg width="20" height="23" viewBox="0 0 24 28" fill="none" aria-hidden="true"><path d="M12 1.5c2.6 3.2 5.4 5.7 5.4 9.4A5.4 5.4 0 0 1 12 16.3a5.4 5.4 0 0 1-5.4-5.4C6.6 7.2 9.4 4.7 12 1.5z" fill="var(--accent)"></path><path d="M12 6.2c1.3 1.7 2.7 3 2.7 4.9A2.7 2.7 0 0 1 12 13.8a2.7 2.7 0 0 1-2.7-2.7c0-1.9 1.4-3.2 2.7-4.9z" fill="color-mix(in oklab, var(--accent) 30%, #fff)"></path></svg><span class="brand-name">Stuti</span><span class="brand-dev">स्तुति</span></div>
+<button class="theme-btn" id="tt" aria-label="Day or night"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 14.5A8 8 0 1 1 9.5 4a6.3 6.3 0 0 0 10.5 10.5z"></path></svg></button>
+</div>
+<nav class="ops-nav"><a href="Stuti.html">The app</a><a href="Launch Plan.html">Launch plan</a><a href="Launch Tracker.html">Launch tracker</a><a href="Founders Guide 4 Weeks.html">4-week guide</a><a class="here" href="Daily Plan.html">Daily plan</a><a href="Work Items.html">Work items</a><a href="Pending.html">Pending</a><a href="Changelog.html">Changelog</a></nav>
+
+<div class="head">
+<div class="eyebrow">Daily plan · in plain words</div>
+<h1>One month. One main job a day.</h1>
+<p class="lede">Monday 7 September to Sunday 4 October. Each day has one job that matters most — do that first. Below it are smaller jobs for the same day. Do them if there is time; skip them if there is not. Ticks here and on the <a href="Founders Guide 4 Weeks.html">4-week guide</a> are the same ticks — that page explains the "why" behind each day.</p>
+<div class="prog"><div class="prog-bar"><div class="prog-fill"></div></div><div class="prog-num"></div></div>
+</div>
+
+<section class="sec">
+<div class="sec-head"><h2>Every day, no matter what</h2></div>
+<div class="always">
+<div><b>Do the main job first.</b> Before mail, before small fixes. If only one thing gets done today, it is that one.</div>
+<div><b>From 14 September, no new features.</b> Only fixes and words. Write "frozen" on a note and keep it where you can see it.</div>
+<div><b>Reply to every message the same day.</b> One warm line is enough. From 20 September this is the most important habit you have.</div>
+<div><b>Test on a phone, not the laptop.</b> Every change you ship, open it once on your own phone before you close for the day.</div>
+<div><b>If a day says "ask" or "book", do it that day.</b> The reply will be slow. That is why it is early.</div>
+<div><b>Sundays are light.</b> One small job, then stop. Tired people make expensive mistakes in week four.</div>
+</div>
+<div class="note">What this month is <b>not</b>: it is not the full product with accounts, sync and notifications. That needs a server and takes six to ten weeks — it begins on 5 October. This month puts what already works on the web, in front of real people, honestly.</div>
+</section>
+
+<section class="wk" data-sec="w1">
+<div class="wk-head"><div><div class="wk-k">Week 1 · 7–13 September</div><h2>Put it on the web. Start the slow things.</h2></div><span class="sec-count"></span></div>
+<div class="wk-goal"><b>By Sunday:</b> the app opens from your own web address on your phone and two other people's. The accountant is booked. Every fake screen says it is not ready yet.</div>
+<div class="ck-list">
+
+<div class="day" data-ck="d01"><div class="day-when"><div class="day-n">01</div><div class="day-d">Mon 7</div></div><div><div class="day-top"><button class="ck" aria-pressed="false"></button><div class="day-t">Get the app online at your own address</div></div><div class="tags"><span class="pill pill-code">Build</span><span class="pill pill-paper">Paper</span></div>
+<div class="p1"><span class="k">Main job</span>Buy the domain name. Put the app on a free static host. Point the domain at it.</div>
+<div class="rows"><div class="row"><span class="k">Also</span><span>Buy the obvious misspellings of the name too. Open the app on your phone using mobile data, not Wi-Fi.</span></div>
+<div class="row dn"><span class="k">Done when</span><span>The app opens at your address on your phone, with the right fonts, and still opens after you turn off the internet.</span></div></div></div></div>
+
+<div class="day" data-ck="d02"><div class="day-when"><div class="day-n">02</div><div class="day-d">Tue 8</div></div><div><div class="day-top"><button class="ck" aria-pressed="false"></button><div class="day-t">Book the accountant</div></div><div class="tags"><span class="pill pill-paper">Paper</span></div>
+<div class="p1"><span class="k">Main job</span>Find an accountant who has set up small trusts or Section 8 companies. Book a call for this week or next.</div>
+<div class="rows"><div class="row"><span class="k">Also</span><span>Write one page for the call: what Stuti is, that it will take voluntary gifts, that you may never charge for anything. Search the Indian trademark register for "Stuti" and write down what you find.</span></div>
+<div class="row dn"><span class="k">Done when</span><span>A call is in your calendar with a date. You can answer "is anyone else called Stuti in this space?" in one line.</span></div></div></div></div>
+
+<div class="day" data-ck="d03"><div class="day-when"><div class="day-n">03</div><div class="day-d">Wed 9</div></div><div><div class="day-top"><button class="ck" aria-pressed="false"></button><div class="day-t">Make every fake screen honest</div></div><div class="tags"><span class="pill pill-code">Build</span></div>
+<div class="p1"><span class="k">Main job</span>Go through the app screen by screen. Anywhere it pretends something works, either hide it or say plainly "coming later".</div>
+<div class="rows"><div class="row"><span class="k">Also</span><span>Sign-in: hide it or label it "coming — your practice stays on this phone for now". Giving: one honest line, no blank payment buttons. Reminders: "rings while Stuti is open". Delete the print meter. Remove any audio buttons.</span></div>
+<div class="row dn"><span class="k">Done when</span><span>You have walked every screen out loud and nothing on it says something that is not true.</span></div></div></div></div>
+
+<div class="day" data-ck="d04"><div class="day-when"><div class="day-n">04</div><div class="day-d">Thu 10</div></div><div><div class="day-top"><button class="ck" aria-pressed="false"></button><div class="day-t">Warn about data loss and add an export</div></div><div class="tags"><span class="pill pill-code">Build</span></div>
+<div class="p1"><span class="k">Main job</span>Add one sentence where practice is saved: "Your practice is saved on this device only. Install Stuti to your home screen to keep it."</div>
+<div class="rows"><div class="row"><span class="k">Also</span><span>Add a one-tap export that saves favourites, lists and the practice ledger to a file the person can keep or share.</span></div>
+<div class="row dn"><span class="k">Done when</span><span>On your phone, the export makes a file, and you can see everything in it.</span></div></div></div></div>
+
+<div class="day" data-ck="d05"><div class="day-when"><div class="day-n">05</div><div class="day-d">Fri 11</div></div><div><div class="day-top"><button class="ck" aria-pressed="false"></button><div class="day-t">Make it installable, add a passcode, fix feedback</div></div><div class="tags"><span class="pill pill-code">Build</span></div>
+<div class="p1"><span class="k">Main job</span>Make "Add to Home Screen" work on Android and iPhone: app name, colours, icons.</div>
+<div class="rows"><div class="row"><span class="k">Also</span><span>Add a passcode screen so only invited people can get in during the beta. Point the feedback button at an email you check every day, and send yourself one test message from your phone.</span></div>
+<div class="row dn"><span class="k">Done when</span><span>Installed on one Android and one iPhone. The wrong passcode is refused politely. Your test message is in your inbox.</span></div></div></div></div>
+
+<div class="day" data-ck="d06"><div class="day-when"><div class="day-n">06</div><div class="day-d">Sat 12</div></div><div><div class="day-top"><button class="ck" aria-pressed="false"></button><div class="day-t">Count what people do — never who they are</div></div><div class="tags"><span class="pill pill-code">Build</span></div>
+<div class="p1"><span class="k">Main job</span>Pick a privacy-friendly analytics tool and count about a dozen actions: app opened, text opened, script switched, japa session, guide opened, search, install, feedback sent.</div>
+<div class="rows"><div class="row"><span class="k">Rule</span><span>No names, no user ids, no verse text in anything you send.</span></div>
+<div class="row dn"><span class="k">Done when</span><span>Actions from two different devices show in the dashboard, and you have read three raw records and found nothing that identifies a person.</span></div></div></div></div>
+
+<div class="day rest" data-ck="d07"><div class="day-when"><div class="day-n">07</div><div class="day-d">Sun 13</div></div><div><div class="day-top"><button class="ck" aria-pressed="false"></button><div class="day-t">Rest. Write the invite list.</div></div><div class="tags"><span class="pill pill-people">People</span></div>
+<div class="p1"><span class="k">Main job</span>Write the names of 20–50 households you could personally hand this to. Next to each: which phone they use, and who introduces you if it is not you.</div>
+<div class="rows"><div class="row"><span class="k">Aim for</span><span>About a third on iPhone. A few elders. A few on iPad or desktop.</span></div>
+<div class="row dn"><span class="k">Done when</span><span>At least 20 names, each with a device and an introducer. Nothing else today.</span></div></div></div></div>
+</div>
+</section>
+
+<section class="wk" data-sec="w2">
+<div class="wk-head"><div><div class="wk-k">Week 2 · 14–20 September</div><h2>Stop adding. Test everything. Invite people.</h2></div><span class="sec-count"></span></div>
+<div class="wk-goal"><b>By Sunday:</b> 20–50 invited households have Stuti on their home screens and feedback is arriving. You have not built one new feature all week.</div>
+<div class="ck-list">
+
+<div class="day" data-ck="d08"><div class="day-when"><div class="day-n">08</div><div class="day-d">Mon 14</div></div><div><div class="day-top"><button class="ck" aria-pressed="false"></button><div class="day-t">Freeze. Then test on Android and desktop.</div></div><div class="tags"><span class="pill pill-code">Build</span></div>
+<div class="p1"><span class="k">Main job</span>Write a note dated today that says "frozen". From now until launch: fixes and words only, no new features.</div>
+<div class="rows"><div class="row"><span class="k">Also</span><span>Open every screen on Android Chrome and on a desktop browser. Check fonts, tap sizes, and the layout at very wide and very narrow widths. Fix as you go; write down what you cannot fix today.</span></div>
+<div class="row dn"><span class="k">Done when</span><span>The "frozen" note exists. Every problem found is fixed or written down as minor.</span></div></div></div></div>
+
+<div class="day" data-ck="d09"><div class="day-when"><div class="day-n">09</div><div class="day-d">Tue 15</div></div><div><div class="day-top"><button class="ck" aria-pressed="false"></button><div class="day-t">Test on iPhone and iPad</div></div><div class="tags"><span class="pill pill-code">Build</span></div>
+<div class="p1"><span class="k">Main job</span>Install from the web address, open from the home screen, and read a hymn with the internet turned off.</div>
+<div class="rows"><div class="row"><span class="k">Also</span><span>Check nothing hides under the notch or the home bar. Send feedback from an iPad with no mail app and make sure the "copy" fallback works.</span></div>
+<div class="row dn"><span class="k">Done when</span><span>Everything above works on both devices, or the failure is fixed today.</span></div></div></div></div>
+
+<div class="day" data-ck="d10"><div class="day-when"><div class="day-n">10</div><div class="day-d">Wed 16</div></div><div><div class="day-top"><button class="ck" aria-pressed="false"></button><div class="day-t">Check the calendar against a printed pañcāṅga</div></div><div class="tags"><span class="pill pill-code">Build</span><span class="pill pill-paper">Paper</span></div>
+<div class="p1"><span class="k">Main job</span>Pick five dates and two places. Compare tithi at sunrise, nakṣatra, month name, sunrise, sunset and sandhyā times against a printed pañcāṅga your family trusts. Include an Ekādaśī and this year's adhika-māsa.</div>
+<div class="rows"><div class="row"><span class="k">Also</span><span>Write a short accuracy note for the app: how it is calculated, what it was checked against, how far it may be off, and "follow your own tradition where it differs".</span></div>
+<div class="row dn"><span class="k">Done when</span><span>Everything matches or the difference is explained. The note is in the app next to the calendar.</span></div></div></div></div>
+
+<div class="day" data-ck="d11"><div class="day-when"><div class="day-n">11</div><div class="day-d">Thu 17</div></div><div><div class="day-top"><button class="ck" aria-pressed="false"></button><div class="day-t">Fix day — only what blocks or looks broken</div></div><div class="tags"><span class="pill pill-code">Build</span></div>
+<div class="p1"><span class="k">Main job</span>Take the list from the last three days. Fix anything that stops a person doing something, or makes the app look broken.</div>
+<div class="rows"><div class="row"><span class="k">Do not</span><span>Add features. Redesign anything. Polish small things — write them down and leave them.</span></div>
+<div class="row dn"><span class="k">Done when</span><span>Nothing on the list is marked "blocker" or "major". Minor items are written down.</span></div></div></div></div>
+
+<div class="day" data-ck="d12"><div class="day-when"><div class="day-n">12</div><div class="day-d">Fri 18</div></div><div><div class="day-top"><button class="ck" aria-pressed="false"></button><div class="day-t">Write the welcome note. Watch two people use it.</div></div><div class="tags"><span class="pill pill-people">People</span></div>
+<div class="p1"><span class="k">Main job</span>Write the message testers will get: what works, what is missing on purpose, why to install, what is counted, how to report problems, the passcode, install steps for both phones. Short and warm.</div>
+<div class="rows"><div class="row"><span class="k">Also</span><span>Give the link and the note to two family members. Watch them silently, from link to first feedback message. Do not touch their phone. Fix what they trip on tonight.</span></div>
+<div class="row dn"><span class="k">Done when</span><span>Both installed, read a hymn and sent feedback without your help. The note is final.</span></div></div></div></div>
+
+<div class="day" data-ck="d13"><div class="day-when"><div class="day-n">13</div><div class="day-d">Sat 19</div></div><div><div class="day-top"><button class="ck" aria-pressed="false"></button><div class="day-t">Go or no-go. Deploy. Stop.</div></div><div class="tags"><span class="pill pill-code">Build</span></div>
+<div class="p1"><span class="k">Main job</span>Go through the checklist in the <a href="Launch Plan.html">launch plan</a> line by line. If every line is true: deploy, open it once from a phone, close the laptop.</div>
+<div class="rows"><div class="row"><span class="k">If not</span><span>Fix it today, or move the beta by one day. Never open something broken. No "small changes" tonight.</span></div>
+<div class="row dn"><span class="k">Done when</span><span>Every line ticked. Checked from a phone. Nothing touched after.</span></div></div></div></div>
+
+<div class="day rest" data-ck="d14"><div class="day-when"><div class="day-n">14</div><div class="day-d">Sun 20</div></div><div><div class="day-top"><button class="ck" aria-pressed="false"></button><div class="day-t">Beta opens</div></div><div class="tags"><span class="pill pill-people">People</span></div>
+<div class="p1"><span class="k">Main job</span>In the morning, send the invites one by one, personally. No mass message.</div>
+<div class="rows"><div class="row"><span class="k">Also</span><span>Watch the first sessions arrive. Reply to every message today, by name, in one warm line. Then rest.</span></div>
+<div class="row dn"><span class="k">Done when</span><span>Everyone on the list is invited. At least five devices show in the dashboard. Every message has a reply.</span></div></div></div></div>
+</div>
+</section>
+
+<section class="wk" data-sec="w3">
+<div class="wk-head"><div><div class="wk-k">Week 3 · 21–27 September</div><h2>Listen. Fix. Do the paperwork.</h2></div><span class="sec-count"></span></div>
+<div class="wk-goal"><b>By Sunday:</b> the beta has changed the app at least twice. The company or trust is being set up. Every text has a source. The privacy policy exists. You know how many people came back after a week.</div>
+<div class="ck-list">
+
+<div class="day" data-ck="d15"><div class="day-when"><div class="day-n">15</div><div class="day-d">Mon 21</div></div><div><div class="day-top"><button class="ck" aria-pressed="false"></button><div class="day-t">Talk to the accountant. Start the feedback habit.</div></div><div class="tags"><span class="pill pill-paper">Paper</span><span class="pill pill-people">People</span></div>
+<div class="p1"><span class="k">Main job</span>The accountant call. Decide: sole proprietor, private limited company, or trust / Section 8. Learn what papers each needs and how long it takes.</div>
+<div class="rows"><div class="row"><span class="k">Also</span><span>Start the habit: 30 minutes morning and evening reading feedback and sorting it — fix today, fix in two days, or batch for later. Fix today's blockers.</span></div>
+<div class="row dn"><span class="k">Done when</span><span>You know which entity you are forming, what it needs from you, and the date it will exist.</span></div></div></div></div>
+
+<div class="day" data-ck="d16"><div class="day-when"><div class="day-n">16</div><div class="day-d">Tue 22</div></div><div><div class="day-top"><button class="ck" aria-pressed="false"></button><div class="day-t">Write down where every text came from</div></div><div class="tags"><span class="pill pill-paper">Paper</span><span class="pill pill-code">Build</span></div>
+<div class="p1"><span class="k">Main job</span>A table with one row per text in the app: where it came from, whether that source is free to use, whether you checked the text against it, and who reviewed it.</div>
+<div class="rows"><div class="row"><span class="k">Rule</span><span>"Found online" is not a source. Any text with that as its source gets a real one today, or is marked for removal.</span></div>
+<div class="row dn"><span class="k">Done when</span><span>Every text has a row. Every row has a rights basis. Texts you cannot defend are listed by name.</span></div></div></div></div>
+
+<div class="day" data-ck="d17"><div class="day-when"><div class="day-n">17</div><div class="day-d">Wed 23</div></div><div><div class="day-top"><button class="ck" aria-pressed="false"></button><div class="day-t">Ask two reviewers to lend their names</div></div><div class="tags"><span class="pill pill-people">People</span></div>
+<div class="p1"><span class="k">Main job</span>Write to one or two paṇḍitas or senior reciters your family knows. Ask: would they review the texts for their deity and be named in the app as reviewer?</div>
+<div class="rows"><div class="row"><span class="k">Also</span><span>Offer to send the texts in whichever script they read.</span></div>
+<div class="row dn"><span class="k">Done when</span><span>The messages are sent. Whether they say yes is not today's job.</span></div></div></div></div>
+
+<div class="day" data-ck="d18"><div class="day-when"><div class="day-n">18</div><div class="day-d">Thu 24</div></div><div><div class="day-top"><button class="ck" aria-pressed="false"></button><div class="day-t">Fix day — what the beta found</div></div><div class="tags"><span class="pill pill-code">Build</span></div>
+<div class="p1"><span class="k">Main job</span>Take four days of feedback. Fix the blockers and the big problems.</div>
+<div class="rows"><div class="row"><span class="k">Watch for</span><span>Small problems that more than one household hit. Those are big problems in disguise — fix them too.</span></div>
+<div class="row dn"><span class="k">Done when</span><span>No open blockers or big problems from the beta. Deployed and checked from a phone.</span></div></div></div></div>
+
+<div class="day" data-ck="d19"><div class="day-when"><div class="day-n">19</div><div class="day-d">Fri 25</div></div><div><div class="day-top"><button class="ck" aria-pressed="false"></button><div class="day-t">Decide the money question in writing</div></div><div class="tags"><span class="pill pill-paper">Paper</span></div>
+<div class="p1"><span class="k">Main job</span>Write one paragraph, dated: does Stuti ever charge for anything? Does giving open at launch, or does the app say "soon"? Write the reason too.</div>
+<div class="rows"><div class="row"><span class="k">If giving is at launch</span><span>Open the payment gateway application today, with whatever the accountant said you need. Approval takes days.</span></div>
+<div class="row dn"><span class="k">Done when</span><span>A stranger could read the paragraph and understand what Stuti charges (nothing) and how it takes gifts (and from when).</span></div></div></div></div>
+
+<div class="day" data-ck="d20"><div class="day-when"><div class="day-n">20</div><div class="day-d">Sat 26</div></div><div><div class="day-top"><button class="ck" aria-pressed="false"></button><div class="day-t">Write the privacy policy and terms</div></div><div class="tags"><span class="pill pill-paper">Paper</span></div>
+<div class="p1"><span class="k">Main job</span>List exactly what the app stores and where (today: on the phone; later: on a server). List what analytics counts and what it never does. Say how someone deletes their data and how they reach you. Turn that into two short plain pages.</div>
+<div class="rows"><div class="row"><span class="k">Also</span><span>Have someone who is not you read both pages and tell you what is unclear. Link them from the app's settings and the website.</span></div>
+<div class="row dn"><span class="k">Done when</span><span>Both pages are live and linked. A non-technical reader understood them without asking you anything.</span></div></div></div></div>
+
+<div class="day rest" data-ck="d21"><div class="day-when"><div class="day-n">21</div><div class="day-d">Sun 27</div></div><div><div class="day-top"><button class="ck" aria-pressed="false"></button><div class="day-t">One hour: what did the beta teach you?</div></div><div class="tags"><span class="pill pill-people">People</span></div>
+<div class="p1"><span class="k">Main job</span>Three questions on one page. What did people actually do (from the dashboard)? What did more than one household ask for or hit? What would you build differently now?</div>
+<div class="rows"><div class="row"><span class="k">Also</span><span>Write the day-seven return number at the top of the page — how many who opened Stuti on day one opened it again a week later.</span></div>
+<div class="row dn"><span class="k">Done when</span><span>One page, three answers, the number at the top. Then stop for the day.</span></div></div></div></div>
+</div>
+</section>
+
+<section class="wk" data-sec="w4">
+<div class="wk-head"><div><div class="wk-k">Week 4 · 28 September – 4 October</div><h2>Cut what you cannot defend. Open the door.</h2></div><span class="sec-count"></span></div>
+<div class="wk-goal"><b>By Sunday:</b> anyone with the link can install Stuti. Every text in it has a source. The website and policies are live. People you have never met have opened it.</div>
+<div class="ck-list">
+
+<div class="day" data-ck="d22"><div class="day-when"><div class="day-n">22</div><div class="day-d">Mon 28</div></div><div><div class="day-top"><button class="ck" aria-pressed="false"></button><div class="day-t">Remove any text you cannot defend</div></div><div class="tags"><span class="pill pill-code">Build</span><span class="pill pill-paper">Paper</span></div>
+<div class="p1"><span class="k">Main job</span>From the table you made on day 16: any text without a rights basis or a proof check is fixed today or taken out of the launch build.</div>
+<div class="rows"><div class="row"><span class="k">Also</span><span>Show the source on every remaining text's page. Publish a short "coming later" list so missing texts look deliberate, not forgotten.</span></div>
+<div class="row dn"><span class="k">Done when</span><span>Every text in the live app shows a source and a proof status you would say aloud to a paṇḍita.</span></div></div></div></div>
+
+<div class="day" data-ck="d23"><div class="day-when"><div class="day-n">23</div><div class="day-d">Tue 29</div></div><div><div class="day-top"><button class="ck" aria-pressed="false"></button><div class="day-t">The one-page website, and three launch messages</div></div><div class="tags"><span class="pill pill-code">Build</span><span class="pill pill-people">People</span></div>
+<div class="p1"><span class="k">Main job</span>Make the website one page: what Stuti is in two sentences, one screenshot, install buttons for both phones, the two policies, a support email.</div>
+<div class="rows"><div class="row"><span class="k">Also</span><span>Write three short messages for launch day: one for family WhatsApp groups, one for a bhajana or temple group, one for anyone who asks "what is it?". Read each aloud to someone who would receive it.</span></div>
+<div class="row dn"><span class="k">Done when</span><span>The page is live at your address. The three messages are written and read aloud once.</span></div></div></div></div>
+
+<div class="day" data-ck="d24"><div class="day-when"><div class="day-n">24</div><div class="day-d">Wed 30</div></div><div><div class="day-top"><button class="ck" aria-pressed="false"></button><div class="day-t">Take off the passcode. Say how to reach you.</div></div><div class="tags"><span class="pill pill-code">Build</span></div>
+<div class="p1"><span class="k">Main job</span>Remove the passcode from the live build. Put the support email and a reply-time promise you can actually keep ("within three days") in the app's settings.</div>
+<div class="rows"><div class="row"><span class="k">Also</span><span>Add a visible version number in settings so you know which build a complaint is about. Make the feedback button reachable in one tap from every screen.</span></div>
+<div class="row dn"><span class="k">Done when</span><span>A stranger can install without a code. Settings show a version number, a support email and a reply-time promise.</span></div></div></div></div>
+
+<div class="day" data-ck="d25"><div class="day-when"><div class="day-n">25</div><div class="day-d">Thu 1 Oct</div></div><div><div class="day-top"><button class="ck" aria-pressed="false"></button><div class="day-t">Test everything on all four devices, from scratch</div></div><div class="tags"><span class="pill pill-code">Build</span></div>
+<div class="p1"><span class="k">Main job</span>Uninstall everywhere. Start from the website like a stranger on Android phone, iPhone, iPad and desktop: install, first open, choose a script, read a hymn, open a guide, check the calendar, go offline, send feedback, find the policies.</div>
+<div class="rows"><div class="row"><span class="k">Why</span><span>Three weeks of fixes change things you did not touch. This is the cheapest insurance against a broken launch day.</span></div>
+<div class="row dn"><span class="k">Done when</span><span>All four walks finish with no blockers. Anything found is fixed and re-tested on the device that found it.</span></div></div></div></div>
+
+<div class="day" data-ck="d26"><div class="day-when"><div class="day-n">26</div><div class="day-d">Fri 2</div></div><div><div class="day-top"><button class="ck" aria-pressed="false"></button><div class="day-t">Spare day</div></div><div class="tags"><span class="pill pill-code">Build</span><span class="pill pill-paper">Paper</span></div>
+<div class="p1"><span class="k">Main job</span>Whatever slipped this month. Do not plan anything else for today in advance.</div>
+<div class="rows"><div class="row"><span class="k">If nothing slipped</span><span>Chase the accountant, the payment gateway and the reviewers. Keep one month of hosting money aside. Write a one-page credits file for fonts and libraries and link it from settings.</span></div>
+<div class="row dn"><span class="k">Done when</span><span>Nothing left open this month blocks Sunday.</span></div></div></div></div>
+
+<div class="day" data-ck="d27"><div class="day-when"><div class="day-n">27</div><div class="day-d">Sat 3</div></div><div><div class="day-top"><button class="ck" aria-pressed="false"></button><div class="day-t">Go or no-go for the public opening</div></div><div class="tags"><span class="pill pill-paper">Paper</span></div>
+<div class="p1"><span class="k">Main job</span>Check each line: policies live, texts trimmed and sourced, giving real or honestly closed, support email working, all four devices tested, version number showing, day-seven return number known. All true: final deploy, one check from a phone, close the laptop.</div>
+<div class="rows"><div class="row"><span class="k">If any line is false</span><span>Move Sunday. Tell the beta households why. They will respect it.</span></div>
+<div class="row dn"><span class="k">Done when</span><span>Every line true and written down. Live build checked from a phone. Nothing touched after.</span></div></div></div></div>
+
+<div class="day rest" data-ck="d28"><div class="day-when"><div class="day-n">28</div><div class="day-d">Sun 4</div></div><div><div class="day-top"><button class="ck" aria-pressed="false"></button><div class="day-t">Open the door</div></div><div class="tags"><span class="pill pill-people">People</span></div>
+<div class="p1"><span class="k">Main job</span>Morning: send the three messages, personally. Ask each beta household to forward to one family.</div>
+<div class="rows"><div class="row"><span class="k">Also</span><span>Afternoon: watch the dashboard, reply to every message by name. Evening: write one page — what happened, what surprised you. Then rest.</span></div>
+<div class="row dn"><span class="k">Done when</span><span>Messages sent. First installs from people you have never met. Every message answered. One page of notes for Monday.</span></div></div></div></div>
+</div>
+</section>
+
+<section class="sec">
+<div class="sec-head"><h2>Things you will be waiting on</h2></div>
+<p class="sec-note">These take weeks and you cannot speed them up by working harder. Check on each one every Friday.</p>
+<div class="wait">
+<div><b>Accountant</b><span>Booked day 2, call day 15. Then papers for the entity — weeks. Giving cannot take money until the entity and its bank account exist.</span></div>
+<div><b>Trademark</b><span>Searched day 2. Filing, if you file, is a separate decision after launch.</span></div>
+<div><b>Payment gateway</b><span>Applied for on day 19 at the earliest. Needs the entity's papers. Days to approve. If not ready by launch, the app says "giving opens soon".</span></div>
+<div><b>Reviewers</b><span>Asked on day 17. Replies take weeks. Launch with sources shown; add names as they come.</span></div>
+<div><b>Testers</b><span>Listed day 7, invited day 14. Some will never install. Twenty active households is a good beta.</span></div>
+</div>
+</section>
+
+<section class="sec">
+<div class="sec-head"><h2>Monday 5 October — what comes next</h2></div>
+<p class="sec-note">The real build begins: a server, real sign-in, practice that syncs between phones, reminders that ring with the app closed, giving that actually settles. Six to ten weeks. Its plan is the page of beta findings you wrote on day 21, plus the <a href="Launch Tracker.html">tracker's</a> "must become real" list. Keep replying to messages within the time you promised. Keep Sundays.</p>
+</section>
+
+</div>
+<script src="stuti-ops.js"></script>
+</body>
+</html>

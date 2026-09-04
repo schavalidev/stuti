@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="day">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Stuti · Work Items</title>
+<link rel="stylesheet" href="stuti.css" />
+<link rel="stylesheet" href="stuti-ops.css" />
+</head>
+<body class="ops" data-ops-key="stuti-ops-work">
+<div class="page">
+<div class="top">
+<div class="brand"><svg width="20" height="23" viewBox="0 0 24 28" fill="none" aria-hidden="true"><path d="M12 1.5c2.6 3.2 5.4 5.7 5.4 9.4A5.4 5.4 0 0 1 12 16.3a5.4 5.4 0 0 1-5.4-5.4C6.6 7.2 9.4 4.7 12 1.5z" fill="var(--accent)"></path><path d="M12 6.2c1.3 1.7 2.7 3 2.7 4.9A2.7 2.7 0 0 1 12 13.8a2.7 2.7 0 0 1-2.7-2.7c0-1.9 1.4-3.2 2.7-4.9z" fill="color-mix(in oklab, var(--accent) 30%, #fff)"></path></svg><span class="brand-name">Stuti</span><span class="brand-dev">स्तुति</span></div>
+<button class="theme-btn" id="tt" aria-label="Day or night"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 14.5A8 8 0 1 1 9.5 4a6.3 6.3 0 0 0 10.5 10.5z"></path></svg></button>
+</div>
+<nav class="ops-nav"><a href="Stuti.html">The app</a><a href="Launch Plan.html">Launch plan</a><a href="Launch Tracker.html">Launch tracker</a><a href="Founders Guide 4 Weeks.html">4-week guide</a><a class="here" href="Work Items.html">Work items</a><a href="Test Plan.html">Test plan</a><a href="Design Decisions.html">Design decisions</a><a href="Stuti Design System.html">Design system</a><a href="Changelog.html">Changelog</a></nav>
+
+<div class="head">
+<div class="eyebrow">To live testing · the list</div>
+<h1>Work items</h1>
+<p class="lede">Everything standing between the prototype and the beta on 6 September, grouped by what it is for. Group A blocks the beta; nothing else does. Checkmarks persist on this device. Effort: S is an hour or two, M a half-day, L a full day or more.</p>
+<div class="prog"><div class="prog-bar"><div class="prog-fill"></div></div><div class="prog-num"></div></div>
+</div>
+
+<section class="sec" data-sec="a">
+<div class="sec-head"><h2>A · Beta blockers</h2><span class="sec-count"></span></div>
+<p class="sec-note">The gate on 5 September checks exactly this group. Dates follow the <a href="Launch Plan.html">launch plan</a>.</p>
+<div class="ck-list">
+<div class="ck-row" data-ck="a1"><button class="ck" aria-pressed="false"></button><div class="ck-body"><div class="ck-t">Pick the host and make the first deploy</div><div class="ck-d">Netlify or Cloudflare Pages — free static hosting, HTTPS out of the box. Deploy the project folder as-is, confirm fonts, emblems and the service worker load from the hosted origin, keep the URL private.</div></div><span class="ck-meta"><span class="pill">S</span><span class="pill pill-gold">Mon 24</span></span></div>
+<div class="ck-row" data-ck="a2"><button class="ck" aria-pressed="false"></button><div class="ck-body"><div class="ck-t">Passcode gate</div><div class="ck-d">A small screen before first run: one shared passcode, stored locally once entered (a new <code>stuti-beta-key</code>), warm refusal copy for the wrong code. A latch for invited testers, not security.</div></div><span class="ck-meta"><span class="pill">M</span><span class="pill pill-gold">Tue 25</span></span></div>
+<div class="ck-row" data-ck="a3"><button class="ck" aria-pressed="false"></button><div class="ck-body"><div class="ck-t">Web manifest, icons, install path</div><div class="ck-d">manifest.json with name, colours and 192/512 icons drawn from the brand drop; apple-touch-icon and status-bar meta for iOS. Verify Add to Home Screen and standalone launch on both platforms.</div></div><span class="ck-meta"><span class="pill">M</span><span class="pill pill-gold">Tue 25</span></span></div>
+<div class="ck-row" data-ck="a4"><button class="ck" aria-pressed="false"></button><div class="ck-body"><div class="ck-t">The feedback inbox goes real</div><div class="ck-d">The sheet mails <code>feedback@stuti.app</code> — that address must receive mail, or <code>FB_TO</code> in <code>stuti-feedback.jsx</code> changes to one that does. Test the mailto on all four devices and the copy fallback where mail is absent.</div></div><span class="ck-meta"><span class="pill">S</span><span class="pill pill-gold">Wed 26</span></span></div>
+<div class="ck-row" data-ck="a5"><button class="ck" aria-pressed="false"></button><div class="ck-body"><div class="ck-t">Usage analytics, wired and restrained</div><div class="ck-d">Pick the tool (see <a href="Design Decisions.html">open decisions</a>), load it from the entry pages, and emit events from the router and key actions: screen views, onboarding completed, text opened, reading depth, script switched, japa session, guide opened, search used, install. No identifiers, no verse content.</div></div><span class="ck-meta"><span class="pill">M</span><span class="pill pill-gold">Wed 26</span></span></div>
+<div class="ck-row" data-ck="a6"><button class="ck" aria-pressed="false"></button><div class="ck-body"><div class="ck-t">Audio affordances cut cleanly</div><div class="ck-d">Audio is out of the beta: remove or disable anything that implies a recording exists — no dead play buttons. Text-only recitation cues may stay if they stand on their own.</div></div><span class="ck-meta"><span class="pill">S</span><span class="pill pill-gold">Thu 27</span></span></div>
+<div class="ck-row" data-ck="a7"><button class="ck" aria-pressed="false"></button><div class="ck-body"><div class="ck-t">Unproofed texts flagged</div><div class="ck-d">A provenance mark per text — proofed against its printed source, or awaiting proof. The unproofed ones carry a quiet line in the reader that links to the "text is wrong" feedback kind. Ship everything; hide nothing.</div></div><span class="ck-meta"><span class="pill">M</span><span class="pill pill-gold">Thu 27</span></span></div>
+<div class="ck-row" data-ck="a8"><button class="ck" aria-pressed="false"></button><div class="ck-body"><div class="ck-t">Device passes, fixing as found</div><div class="ck-d">Android Chrome and desktop on Friday; iPhone and iPad Safari on Saturday — install, standalone, safe areas, offline launch, fonts, tap targets.</div></div><span class="ck-meta"><span class="pill">L</span><span class="pill pill-gold">Fri 28 – Sat 29</span></span></div>
+<div class="ck-row" data-ck="a9"><button class="ck" aria-pressed="false"></button><div class="ck-body"><div class="ck-t">Almanac spot-check against a published pañcāṅga</div><div class="ck-d">Tithi at sunrise, nakṣatra, māsa label, sunrise/sunset and sandhyā windows for several dates and at least two places; include an Ekādaśī viddha case and the adhika-māsa month naming.</div></div><span class="ck-meta"><span class="pill">M</span><span class="pill pill-gold">Sun 30</span></span></div>
+<div class="ck-row" data-ck="a10"><button class="ck" aria-pressed="false"></button><div class="ck-body"><div class="ck-t">Feature freeze</div><div class="ck-d">After breakfast on Monday 31, only fixes land.</div></div><span class="ck-meta"><span class="pill pill-gold">Mon 31</span></span></div>
+<div class="ck-row" data-ck="a11"><button class="ck" aria-pressed="false"></button><div class="ck-body"><div class="ck-t">Go / no-go walked, final deploy made</div><div class="ck-d">The gate lives in the <a href="Launch Plan.html">launch plan</a>. Green means deploy, verify once from a phone, stop.</div></div><span class="ck-meta"><span class="pill">S</span><span class="pill pill-gold">Sat 5</span></span></div>
+<div class="ck-row" data-ck="a12"><button class="ck" aria-pressed="false"></button><div class="ck-body"><div class="ck-t">Invites out — beta open</div></div><span class="ck-meta"><span class="pill">S</span><span class="pill pill-gold">Sun 6</span></span></div>
+</div>
+</section>
+
+<section class="sec" data-sec="b">
+<div class="sec-head"><h2>B · Content</h2><span class="sec-count"></span></div>
+<div class="ck-list">
+<div class="ck-row" data-ck="b1"><button class="ck" aria-pressed="false"></button><div class="ck-body"><div class="ck-t">Proof-status ledger, shelf by shelf</div><div class="ck-d">One pass over the catalogue recording each text's source and whether its mūla was verified against it — this ledger is what the unproofed flag (A7) reads from.</div></div><span class="ck-meta"><span class="pill">M</span><span class="pill pill-gold">by Thu 27</span></span></div>
+<div class="ck-row" data-ck="b2"><button class="ck" aria-pressed="false"></button><div class="ck-body"><div class="ck-t">Variance disclaimers audit</div><div class="ck-d">Every vrata, nomu and māsa guide ends by deferring to family practice. Confirm none lost its line.</div></div><span class="ck-meta"><span class="pill">S</span><span class="pill pill-gold">by Mon 31</span></span></div>
+<div class="ck-row" data-ck="b3"><button class="ck" aria-pressed="false"></button><div class="ck-body"><div class="ck-t">The welcome note</div><div class="ck-d">What works, what is deliberately absent (audio), why installing matters, what is counted by analytics, how to report — warm, short, honest. Include the passcode and install steps for both platforms.</div></div><span class="ck-meta"><span class="pill">S</span><span class="pill pill-gold">Fri 4</span></span></div>
+</div>
+</section>
+
+<section class="sec" data-sec="c">
+<div class="sec-head"><h2>C · Test execution</h2><span class="sec-count"></span></div>
+<p class="sec-note">The suites themselves live in the <a href="Test Plan.html">test plan</a>; these rows track that they were run.</p>
+<div class="ck-list">
+<div class="ck-row" data-ck="c1"><button class="ck" aria-pressed="false"></button><div class="ck-body"><div class="ck-t">Suites S1–S6 executed on both primary devices</div></div><span class="ck-meta"><span class="pill pill-gold">Mon 31</span></span></div>
+<div class="ck-row" data-ck="c2"><button class="ck" aria-pressed="false"></button><div class="ck-body"><div class="ck-t">Suites S7–S12 executed</div></div><span class="ck-meta"><span class="pill pill-gold">Tue 1</span></span></div>
+<div class="ck-row" data-ck="c3"><button class="ck" aria-pressed="false"></button><div class="ck-body"><div class="ck-t">Fix backlog burned down to zero blockers and majors</div></div><span class="ck-meta"><span class="pill pill-gold">Wed 2</span></span></div>
+<div class="ck-row" data-ck="c4"><button class="ck" aria-pressed="false"></button><div class="ck-body"><div class="ck-t">Every failed case re-run green</div></div><span class="ck-meta"><span class="pill pill-gold">Thu 3</span></span></div>
+<div class="ck-row" data-ck="c5"><button class="ck" aria-pressed="false"></button><div class="ck-body"><div class="ck-t">Cross-cutting sweep (S13–S14) done</div><div class="ck-d">No italics anywhere, trilingual completeness, contrast, targets, console silence, analytics payload check.</div></div><span class="ck-meta"><span class="pill pill-gold">Thu 3</span></span></div>
+<div class="ck-row" data-ck="c6"><button class="ck" aria-pressed="false"></button><div class="ck-body"><div class="ck-t">Dry run with two in-family testers</div><div class="ck-d">Cold, on their own phones: link, passcode, install, onboarding, a full read, one guide, one feedback mail that arrives.</div></div><span class="ck-meta"><span class="pill pill-gold">Fri 4</span></span></div>
+</div>
+</section>
+
+<section class="sec" data-sec="d">
+<div class="sec-head"><h2>D · The port, in parallel</h2><span class="sec-count"></span></div>
+<p class="sec-note">Track B never blocks the beta. With one builder, these move on green days and become the main line from 7 September. The brief is <code>design_handoff_stuti_app/README.md</code>.</p>
+<div class="ck-list">
+<div class="ck-row" data-ck="p1"><button class="ck" aria-pressed="false"></button><div class="ck-body"><div class="ck-t">Dev repo set up, handoff bundle imported</div><div class="ck-d">Connect the repo here too, so syncs and work tracking share one source.</div></div><span class="ck-meta"><span class="pill">S</span></span></div>
+<div class="ck-row" data-ck="p2"><button class="ck" aria-pressed="false"></button><div class="ck-body"><div class="ck-t">Engine smoke test in the target stack</div><div class="ck-d">Ephemeris and pañcāṅga engine ported as-is, dependency-free; one known date must produce the same tithi, nakṣatra and māsa as the prototype.</div></div><span class="ck-meta"><span class="pill">M</span></span></div>
+<div class="ck-row" data-ck="p3"><button class="ck" aria-pressed="false"></button><div class="ck-body"><div class="ck-t">Token port</div><div class="ck-d"><code>stuti.css</code> tokens, themes and the deity-hue derivations land verbatim as the codebase's theme layer.</div></div><span class="ck-meta"><span class="pill">S</span></span></div>
+<div class="ck-row" data-ck="p4"><button class="ck" aria-pressed="false"></button><div class="ck-body"><div class="ck-t">Stotra pipeline adapter</div><div class="ck-d">Fetched stotras adapted into the hymn shape from <code>stuti-data.js</code> and pushed into the pool — the one integration point everything downstream reads.</div></div><span class="ck-meta"><span class="pill">M</span></span></div>
+<div class="ck-row" data-ck="p5"><button class="ck" aria-pressed="false"></button><div class="ck-body"><div class="ck-t">Screen order agreed</div><div class="ck-d">Reader first (the soul of the app), then Library, Today, Nitya, Calendar, Settings — each recreated pixel-faithfully from the prototype.</div></div><span class="ck-meta"><span class="pill">S</span></span></div>
+</div>
+</section>
+
+<section class="sec" data-sec="e">
+<div class="sec-head"><h2>E · Beta operations</h2><span class="sec-count"></span></div>
+<div class="ck-list">
+<div class="ck-row" data-ck="e1"><button class="ck" aria-pressed="false"></button><div class="ck-body"><div class="ck-t">Invite list of 20–50, with device spread</div><div class="ck-d">Aim for at least a third on iPhone, a few iPad readers, a few desktop; elders deliberately included — they are the design's first audience.</div></div><span class="ck-meta"><span class="pill">S</span><span class="pill pill-gold">Fri 4</span></span></div>
+<div class="ck-row" data-ck="e2"><button class="ck" aria-pressed="false"></button><div class="ck-body"><div class="ck-t">Week-one tester asks written</div><div class="ck-d">Three gentle asks: read one text a day in your own script; open the guide for the nearest vrata; search for a text you know. The rest is their own use.</div></div><span class="ck-meta"><span class="pill">S</span><span class="pill pill-gold">Fri 4</span></span></div>
+<div class="ck-row" data-ck="e3"><button class="ck" aria-pressed="false"></button><div class="ck-body"><div class="ck-t">Triage cadence standing</div><div class="ck-d">Thirty minutes morning and evening through beta week; hotfix rule from the <a href="Launch Plan.html">launch plan</a>.</div></div><span class="ck-meta"><span class="pill pill-gold">from Sun 6</span></span></div>
+<div class="ck-row" data-ck="e4"><button class="ck" aria-pressed="false"></button><div class="ck-body"><div class="ck-t">Findings review scheduled</div><div class="ck-d">Sunday 13 September: what the beta taught, what the prototype fixes, what the port does differently.</div></div><span class="ck-meta"><span class="pill pill-gold">Sun 13</span></span></div>
+</div>
+</section>
+
+</div>
+<script src="stuti-ops.js"></script>
+</body>
+</html>

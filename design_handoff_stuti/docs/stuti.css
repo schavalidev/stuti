@@ -1,0 +1,428 @@
+/* ============================================================
+   STUTI — design system
+   A fresh devotional aesthetic. Calm, warm, reverent, premium.
+   Designed elder-first: large type, generous targets, high
+   contrast, simple rhythm. Light + night ceremonial themes.
+   ============================================================ */
+
+/* ---------- Fonts ----------
+   Noto Serif — English display/headings; sets all 22 IAST diacritics the corpus uses
+   Noto Sans  — English UI/body; same superfamily as the serif and as the Devanagari
+                and Telugu faces, so all four scripts share one set of proportions
+   Marcellus  — classical roman display, like stone inscription
+   Mukta      — clean, friendly UI/body, large x-height (elder-legible)
+   Noto Sans Devanagari — clean, highly legible Devanagari for verses
+   Noto Sans Telugu — clean, highly legible Telugu
+*/
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400..700&family=Noto+Sans:wght@400..700&family=Marcellus&family=Mukta:wght@300;400;500;600;700&family=Noto+Sans+Devanagari:wght@400;500;600;700&family=Noto+Sans+Telugu:wght@300;400;500;600;700&family=Noto+Sans+Display:wght@400;500;600;700&family=Tiro+Devanagari+Sanskrit&family=Tiro+Telugu&display=swap');
+@font-face { font-family: 'KanakaDurga'; src: url('fonts/KanakaDurga.otf') format('opentype'); font-weight: 400; font-style: normal; font-display: swap; }
+@font-face { font-family: 'KanakaDurga'; src: url('fonts/KanakaDurga-Italic.otf') format('opentype'); font-weight: 400; font-style: italic; font-display: swap; }
+@font-face { font-family: 'SangamSans'; src: url('fonts/SangamSans-Light.ttf') format('truetype'); font-weight: 300; font-style: normal; font-display: swap; }
+@font-face { font-family: 'SangamSans'; src: url('fonts/SangamSans-Regular.ttf') format('truetype'); font-weight: 400; font-style: normal; font-display: swap; }
+@font-face { font-family: 'SangamSans'; src: url('fonts/SangamSans-Medium.ttf') format('truetype'); font-weight: 500; font-style: normal; font-display: swap; }
+@font-face { font-family: 'SangamSans'; src: url('fonts/SangamSans-Bold.ttf') format('truetype'); font-weight: 700; font-style: normal; font-display: swap; }
+@font-face { font-family: 'Stuti Sans'; src: url('fonts/StutiSans-Light.ttf') format('truetype'); font-weight: 300; font-style: normal; font-display: swap; }
+@font-face { font-family: 'Stuti Sans'; src: url('fonts/StutiSans-Regular.ttf') format('truetype'); font-weight: 400; font-style: normal; font-display: swap; }
+@font-face { font-family: 'Stuti Sans'; src: url('fonts/StutiSans-Medium.ttf') format('truetype'); font-weight: 500; font-style: normal; font-display: swap; }
+@font-face { font-family: 'Stuti Sans'; src: url('fonts/StutiSans-Bold.ttf') format('truetype'); font-weight: 700; font-style: normal; font-display: swap; }
+@font-face { font-family: 'Suravaram'; src: url('fonts/Suravaram-Regular.ttf') format('truetype'); font-weight: 400; font-style: normal; font-display: swap; }
+@font-face { font-family: 'Surasans03'; src: url('fonts/Surasans03-Light.ttf') format('truetype'); font-weight: 300; font-style: normal; font-display: swap; }
+@font-face { font-family: 'Surasans03'; src: url('fonts/Surasans03-Regular.ttf') format('truetype'); font-weight: 400; font-style: normal; font-display: swap; }
+@font-face { font-family: 'Surasans03'; src: url('fonts/Surasans03-Medium.ttf') format('truetype'); font-weight: 500; font-style: normal; font-display: swap; }
+@font-face { font-family: 'Surasans03'; src: url('fonts/Surasans03-Bold.ttf') format('truetype'); font-weight: 700; font-style: normal; font-display: swap; }
+@font-face { font-family: 'Surasans02'; src: url('fonts/Surasans02-Light.ttf') format('truetype'); font-weight: 300; font-style: normal; font-display: swap; }
+@font-face { font-family: 'Surasans02'; src: url('fonts/Surasans02-Regular.ttf') format('truetype'); font-weight: 400; font-style: normal; font-display: swap; }
+@font-face { font-family: 'Surasans02'; src: url('fonts/Surasans02-Medium.ttf') format('truetype'); font-weight: 500; font-style: normal; font-display: swap; }
+@font-face { font-family: 'Surasans02'; src: url('fonts/Surasans02-Bold.ttf') format('truetype'); font-weight: 700; font-style: normal; font-display: swap; }
+@font-face { font-family: 'Surasans02 Regular'; src: url('fonts/Surasans02-Regular.ttf') format('truetype'); font-weight: 300 700; font-style: normal; font-display: swap; }
+
+:root {
+  /* type */
+  --font-display: 'Noto Serif', 'SangamSans', 'Marcellus', Georgia, serif;
+  --font-ui: 'Noto Sans', 'Mukta', 'Noto Sans Telugu', system-ui, sans-serif;
+  --font-deva: 'Noto Sans Devanagari', 'Noto Sans', 'Mukta', sans-serif;
+  /* the reader's Devanagari verse face */
+  --font-deva-read: 'Noto Sans Devanagari', 'Noto Sans', 'Mukta', sans-serif;
+  --font-telugu: 'Surasans02 Regular', 'Mallanna', 'Noto Sans Telugu', 'Mukta', sans-serif;
+  /* manuscript serifs — the printed index (deity page) sets its titles in these */
+  --font-deva-serif: 'Noto Sans Devanagari', 'Tiro Devanagari Sanskrit', serif;
+  --font-telugu-serif: 'SangamSans', 'Tiro Telugu', 'Noto Sans Telugu', serif;
+}
+/* Telugu interface: Mallanna leads every face */
+/* Telugu interface: Mallanna leads every face, one step larger — every
+   rem-based size scales from here (+2px at the 18px base). These are the
+   INTERFACE faces, so they key off data-ui-lang: a reciter reading Telugu
+   verses under an English interface gets English chrome in the Latin faces,
+   and the verse faces below still follow data-lang. */
+[data-ui-lang="telugu"] {
+  font-size: 111%;
+  --font-ui: 'Surasans02 Regular', 'Mallanna', 'Noto Sans Telugu', 'Mukta', sans-serif;
+  --font-display: 'Surasans02 Regular', 'Mallanna', 'Noto Sans Telugu', sans-serif;
+}
+[data-ui-lang="telugu"] .eyebrow { font-family: var(--font-telugu); }
+/* Mallanna ships one light-ish weight; one uniform heavier weight across the
+   whole Telugu interface — every element, so no rule-by-rule drift */
+[data-ui-lang="telugu"] :not(svg):not(path):not(circle):not(rect):not(line) { font-weight: 600; }
+/* Hindi (Devanāgarī) interface: every face is Noto Sans Devanagari, at the same
+   one step up the Telugu interface takes. 125% blew the whole page up a size
+   larger than either of its neighbours; 111% still read a step large beside the
+   roman and Telugu pages, so the bump is now a nudge for the mātrās, not a size. */
+[data-ui-lang="deva"] {
+  font-size: 105%;
+  --font-ui: 'Noto Sans Devanagari', 'Mukta', sans-serif;
+  --font-display: 'Noto Sans Devanagari', sans-serif;
+}
+:root {
+
+  /* radii / shape */
+  --r-lg: 26px;
+  --r-md: 18px;
+  --r-sm: 12px;
+  --tap: 60px;              /* minimum comfortable touch target */
+
+  /* motion */
+  --ease: cubic-bezier(.22,.61,.36,1);
+  --ease-out: cubic-bezier(.16,1,.3,1);
+  --slow: 620ms;
+  --med: 420ms;
+  --fast: 240ms;
+
+  /* the app frame */
+  --app-max: 480px;
+}
+
+/* ---------- Ink ----------
+   Three steps, and every one of them readable. --ink-faint used to be
+   #9A8A78 — 2.7:1 on the warm parchment, which is a decoration, not a
+   colour you can set text in. It carries ~60 labels across the app, so
+   the ramp was rebalanced rather than each one patched: ink · ink-soft
+   (6.8:1) · ink-faint (4.7:1), measured against the lightest surface. */
+
+/* ---------- Light (day) theme ---------- */
+:root, [data-theme="day"] {
+  --bg:        #FAF5EB;
+  --bg-warm:   #F8F1E3;
+  --surface:   #FFFDF8;
+  --surface-2: #FCF7EF;
+  --ink:       #2B2017;
+  --ink-soft:  #584B3E;
+  --ink-faint: #6F6356;
+  --line:      rgba(43,32,23,0.10);
+  --line-2:    rgba(43,32,23,0.06);
+  --gold:      #B07A2B;
+  --gold-deep: #8A5A18;
+  --shadow:    0 20px 50px -22px rgba(58,40,20,0.40), 0 4px 14px -8px rgba(58,40,20,0.30);
+  --shadow-sm: 0 8px 22px -14px rgba(58,40,20,0.40);
+  --glow:      radial-gradient(120% 80% at 50% 0%, rgba(255,228,168,0.55), transparent 60%);
+  --scrim:     rgba(40,28,16,0.46);
+  /* the moon is moon-coloured — a pale silver with only a breath of warmth,
+     not a gold coin; the gold stays with the sun */
+  --moon-lit:  #E3DCC9;
+  --moon-lit-hi: #F4EFE2;
+  --moon-lit-lo: #C2B89F;
+  --moon-dark: #99917E;
+  --moon-dark-hi: color-mix(in oklab, #99917E 80%, #F4EAD7);
+  --moon-mare: rgba(75, 68, 52, 0.22);
+  --moon-ring: rgba(43,32,23,0.18);
+  --caution:   #C0392B;     /* rāhu kāla, durmuhūrta, destructive actions */
+  /* the six ṛtu — weather is representational, so it keeps its hue, but the
+     hues are dyestuffs now rather than screen colour: indigo, madder, ochre,
+     ash. Śiśira is the pale one and Varṣā the deep one so late winter and
+     monsoon stop reading as the same blue. */
+  --rtu-sisira:  #9FB2C4;
+  --rtu-vasanta: #D08A9C;
+  --rtu-grisma:  #D8932F;
+  --rtu-varsa:   #46648C;
+  --rtu-sarad:   #C08A38;
+  --rtu-hemanta: #A79C8C;
+  /* Śarad's fall is a turning canopy, not one pigment: leaves come down still
+     green, half-turned, and spent — two shades apiece */
+  --leaf-green-1: #7C8A4E;
+  --leaf-green-2: #94A05C;
+  --leaf-gold-1:  #C89A3C;
+  --leaf-gold-2:  #DCB255;
+  --leaf-brown-1: #9A6A32;
+  --leaf-brown-2: #7C5228;
+  /* Vasanta's fall is a mixed orchard — pink, yellow and orange blossoms */
+  --bloom-pink-1:   #D08A9C;
+  --bloom-pink-2:   #C0708A;
+  --bloom-yellow-1: #E0BE55;
+  --bloom-yellow-2: #EBD07C;
+  --bloom-orange-1: #DE9552;
+  --bloom-orange-2: #C77739;
+  --bloom-violet-1: #9C7CC2;
+  --bloom-violet-2: #7E5EA6;
+  color-scheme: light;
+}
+
+/* ---------- Night (evening) theme ---------- */
+[data-theme="night"] {
+  --bg:        #14110C;
+  --bg-warm:   #1A150E;
+  --surface:   #211B13;
+  --surface-2: #271F16;
+  /* night type is white, not tinted: the warm parchment ink that reads as
+     paper by day turned every caption a different shade of tea at night */
+  --ink:       #FFFFFF;
+  --ink-soft:  rgba(255,255,255,0.76);
+  --ink-faint: rgba(255,255,255,0.54);
+  --line:      rgba(244,234,215,0.13);
+  --line-2:    rgba(244,234,215,0.07);
+  --gold:      #E2B266;
+  /* gold-deep is the app's label colour, and at night a label is white: the
+     tinted caps were the last thing on the dark page still reading as tea */
+  --gold-deep: #FFFFFF;
+  --shadow:    0 26px 60px -24px rgba(0,0,0,0.72), 0 6px 18px -10px rgba(0,0,0,0.6);
+  --shadow-sm: 0 10px 26px -16px rgba(0,0,0,0.7);
+  --glow:      radial-gradient(120% 80% at 50% 0%, rgba(226,178,102,0.20), transparent 62%);
+  --scrim:     rgba(0,0,0,0.6);
+  --moon-lit:  #D9D4C4;
+  --moon-lit-hi: #EFEBDE;
+  --moon-lit-lo: #A29A85;
+  --moon-dark: #35312A;
+  --moon-dark-hi: color-mix(in oklab, #35312A 74%, #A79E88);
+  --moon-mare: rgba(12, 10, 6, 0.28);
+  --moon-ring: rgba(244,234,215,0.20);
+  --caution:   #E8776A;     /* lifted for the dark ground — same warning, still legible */
+  /* same six, lifted — a 26% wash of a day pigment disappears into night ground */
+  --rtu-sisira:  #A9BACA;
+  --rtu-vasanta: #D2909F;
+  --rtu-grisma:  #E0A047;
+  --rtu-varsa:   #6E8CB4;
+  --rtu-sarad:   #CE9A47;
+  --rtu-hemanta: #B2A797;
+  --leaf-green-1: #8D9B5D;
+  --leaf-green-2: #A3B06B;
+  --leaf-gold-1:  #D6A84A;
+  --leaf-gold-2:  #E6C06A;
+  --leaf-brown-1: #AE7B3E;
+  --leaf-brown-2: #916234;
+  --bloom-pink-1:   #D2909F;
+  --bloom-pink-2:   #C67C94;
+  --bloom-yellow-1: #E8CA69;
+  --bloom-yellow-2: #F0D98D;
+  --bloom-orange-1: #E7A263;
+  --bloom-orange-2: #D3894B;
+  --bloom-violet-1: #AC8ED2;
+  --bloom-violet-2: #9375BC;
+  color-scheme: dark;
+}
+
+/* per-deity accent — hue set inline as --deity-hue; falls back to gold-ish.
+   Per-deity pages still override inline. */
+:root { --deity-hue: 36; }
+[data-theme="day"] {
+  --accent:      oklch(0.58 0.13 var(--deity-hue));
+  --accent-soft: oklch(0.92 0.045 var(--deity-hue));
+  --accent-ink:  oklch(0.42 0.12 var(--deity-hue));
+}
+[data-theme="night"] {
+  --accent:      oklch(0.74 0.13 var(--deity-hue));
+  --accent-soft: oklch(0.30 0.06 var(--deity-hue));
+  /* accent-ink is a TEXT colour, so at night it is simply white — the colour
+     stays in the fills, glyphs and beads where it does no harm to reading */
+  --accent-ink:  var(--ink);
+}
+
+/* ---------- Reset ---------- */
+* { margin: 0; padding: 0; box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
+/* Viewport lock only where an .app shell scrolls its own panes; docs, audits and sheets scroll normally */
+html:has(.app), body:has(.app) { height: 100%; overflow: hidden; overscroll-behavior: none; }
+body {
+  font-family: var(--font-ui);
+  background: var(--bg);
+  color: var(--ink);
+  font-size: 1.125rem;
+  line-height: 1.55;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+button { font-family: inherit; color: inherit; cursor: pointer; border: none; background: none; }
+::selection { background: var(--accent-soft); color: var(--accent-ink); }
+
+/* ---------- App frame: a calm centered column on any screen ---------- */
+#root { min-height: 100dvh; }
+.stage {
+  min-height: 100dvh;
+  display: flex;
+  justify-content: center;
+  background: var(--bg);
+  transition: background var(--med) var(--ease);
+}
+.app {
+  width: 100%;
+  max-width: var(--app-max);
+  height: 100dvh;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  background: var(--bg);
+  box-shadow: 0 0 0 1px var(--line-2), 0 30px 90px -40px rgba(40,25,8,0.45);
+  overflow: hidden;
+}
+@media (min-width: 520px) {
+  .stage { padding: 0; align-items: stretch; }
+}
+
+[data-ui-lang="telugu"] { font-weight: 300; }
+/* ---------- Shared utilities ---------- */
+.eyebrow {
+  font-size: 0.8438rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  font-weight: 600;
+  color: var(--ink-faint);
+}
+.deva { font-family: var(--font-deva); }
+/* Telugu and Devanagari take no tracking — uppercase+letterspacing is a Latin
+   device, and spread aksharas stop reading as words. The caps also step up a
+   size: at 10–12px these scripts' conjuncts and matras clot. Applied by
+   data-lang on the root. */
+/* Indic scripts: no tracking, one shared larger size — uniform across languages */
+[data-ui-lang="telugu"] .eyebrow, [data-ui-lang="deva"] .eyebrow { letter-spacing: 0; font-size: calc(0.8438rem + 3pt); }
+.display { font-family: var(--font-display); font-weight: 400; letter-spacing: 0.01em; }
+
+/* a reusable round seed-medallion (the bīja inside a ring) */
+.seal {
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  font-family: var(--font-deva);
+  background: var(--accent-soft);
+  color: var(--accent-ink);
+  border: 1.5px solid color-mix(in oklab, var(--accent) 45%, transparent);
+  flex: none;
+  line-height: 1;
+}
+/* Re-derive the accent tokens on the seal itself, so each medallion resolves
+   its own --deity-hue. (The tokens are otherwise computed once on <html>, where
+   --deity-hue is the fallback, so a hue set on the seal would have no effect.) */
+/* Re-derive the accent tokens on anything that sets its own --deity-hue. The
+   tokens are otherwise computed once on <html>, where --deity-hue is still the
+   fallback 36 — so every deityStyle() call site was quietly resolving to gold
+   no matter whose page it was. */
+[data-theme="day"] .seal, [data-theme="day"] .gtile, [data-theme="day"] .deity-view, [data-theme="day"] .hymn-card {
+  --accent:      oklch(0.58 calc(0.13 * var(--deity-chroma, 1)) var(--deity-hue));
+  --accent-soft: oklch(0.92 calc(0.045 * var(--deity-chroma, 1)) var(--deity-hue));
+  --accent-ink:  oklch(0.42 calc(0.12 * var(--deity-chroma, 1)) var(--deity-hue));
+}
+/* At night the same recipe inverted the tint into eight saturated coins —
+   teal, plum, green, ochre — sitting cold on a warm brown ground; the library
+   grid read as a dashboard, not a shrine. The disc is now lamplit stone: the
+   app's own surface carrying a trace of the hue, a faint ring, and a glow that
+   falls off inward. Identity comes from the emblem's line, which is already
+   drawn in the deity's colour and now has a quiet ground to stand on. */
+[data-theme="night"] .seal, [data-theme="night"] .gtile, [data-theme="night"] .deity-view, [data-theme="night"] .hymn-card {
+  --accent:      oklch(0.74 calc(0.13 * var(--deity-chroma, 1)) var(--deity-hue));
+  --accent-soft: color-mix(in oklab, oklch(0.60 calc(0.14 * var(--deity-chroma, 1)) var(--deity-hue)) 14%, var(--surface-2));
+  --accent-ink:  oklch(0.82 calc(0.11 * var(--deity-chroma, 1)) var(--deity-hue));
+}
+[data-theme="night"] .seal {
+  border-color:  color-mix(in oklab, var(--accent) 24%, transparent);
+  box-shadow:    inset 0 0 24px -11px color-mix(in oklab, var(--accent) 30%, transparent);
+}
+
+/* ---------- Ratna ----------
+   Colour moves out of the fill and into the ink: one parchment seal for all
+   eight, a thin gem ring, the name set in the deity's own stone. It is the
+   only formula that survives inversion — a large dark colour field is the
+   worst carrier of hue there is, and small coloured text is the best.
+
+   At night the parchment is aged rather than bleached, and it carries the DAY
+   artwork. That is the point of it: a light-on-dark emblem is a negative, not
+   a drawing, and eight of them glowing on a black page read as radiographs.
+   Given a lit ground the line is ink again. The ring keeps the deep day ink
+   in both themes, because a pale ring on pale parchment is no ring. */
+[data-seal="ratna"] .seal {
+  --gem: oklch(0.42 calc(0.12 * var(--deity-chroma, 1)) var(--deity-hue));
+  background: oklch(0.945 0.012 85);
+  border-color: color-mix(in oklab, var(--gem) 38%, transparent);
+  box-shadow: none;
+}
+[data-seal="ratna"][data-theme="night"] .seal { background: oklch(0.79 0.017 82); border-color: color-mix(in oklab, var(--gem) 44%, transparent); }
+[data-seal="ratna"][data-theme="night"] .seal-emblem--day { display: block; }
+[data-seal="ratna"][data-theme="night"] .seal-emblem--night { display: none; }
+/* the colour has to go somewhere: it goes to the name */
+[data-seal="ratna"] .gtile-name, [data-seal="ratna"] .deity-hero-name { color: var(--accent-ink); }
+/* a drawn emblem, pre-tinted to the deity accent (day + night), in place of the bīja */
+/* 82% of the disc, on artwork that already carries ~6% of transparent margin
+   of its own, left the figure at about 72% and looking adrift in its frame */
+.seal-emblem { display: block; width: 92%; height: 92%; object-fit: contain; }
+/* the painting is its own plate: it fills the disc and overrides the ratna
+   stone, so nothing shows through behind it */
+.seal--colour { overflow: hidden; background: none; box-shadow: none; border: none; }
+[data-seal="ratna"] .seal--colour, [data-seal="ratna"][data-theme="night"] .seal--colour, [data-theme="night"] .seal--colour { background: none; box-shadow: none; border: none; }
+.seal-emblem--colour { width: 100%; height: 100%; object-fit: cover; border-radius: 50%; }
+[data-theme="day"] .seal-emblem--night { display: none; }
+[data-theme="night"] .seal-emblem--day { display: none; }
+/* bare emblem (no disc) — used for the full-picture deity tile */
+.emblem-img { display: block; object-fit: contain; }
+[data-theme="day"] .emblem-img--night { display: none; }
+[data-theme="night"] .emblem-img--day { display: none; }
+
+/* primary action — big, warm, unmistakable */
+.cta {
+  min-height: var(--tap);
+  border-radius: 999px;
+  background: var(--accent);
+  color: #fff;
+  font-weight: 600;
+  font-size: 1.125rem;
+  letter-spacing: 0.01em;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  padding: 0 28px;
+  box-shadow: var(--shadow-sm);
+  transition: transform var(--fast) var(--ease), filter var(--fast) var(--ease);
+}
+[data-theme="night"] .cta { color: #1b150d; }
+.cta:active { transform: scale(0.97); filter: brightness(1.04); }
+
+.ghost {
+  min-height: 52px;
+  border-radius: 999px;
+  border: 1.5px solid var(--line);
+  background: var(--surface);
+  color: var(--ink);
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 0 22px;
+  transition: transform var(--fast) var(--ease), border-color var(--fast);
+}
+.ghost:active { transform: scale(0.97); }
+
+/* icon button (top bar) — generous 48px target */
+.icon-btn {
+  width: 50px; height: 50px;
+  border-radius: 50%;
+  display: grid; place-items: center;
+  color: var(--ink-soft);
+  transition: background var(--fast), color var(--fast), transform var(--fast);
+}
+.icon-btn:active { transform: scale(0.92); }
+.icon-btn:hover { background: var(--surface-2); color: var(--ink); }
+
+/* ---------- View transition (route change) ---------- */
+.view { animation: viewIn var(--med) var(--ease-out) both; }
+@keyframes viewIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+.view-back { animation: viewBack var(--med) var(--ease-out) both; }
+@keyframes viewBack {
+  from { opacity: 0; transform: translateY(-6px) scale(0.995); }
+  to   { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation-duration: 0.001ms !important; transition-duration: 0.001ms !important; }
+}
+
+/* thin, unobtrusive scrollbars */
+.scroll { overflow-y: auto; -webkit-overflow-scrolling: touch; scrollbar-width: thin; overscroll-behavior: contain; }
+.scroll::-webkit-scrollbar { width: 0; }

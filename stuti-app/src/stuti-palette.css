@@ -1,0 +1,96 @@
+/* ============================================================
+   STUTI — palette variants (Tweaks · Palette)
+
+   The app was running two warm families at once. Gold — the brand drop,
+   the sun, the moon, the rules, the progress — is an ochre around hue 68.
+   Everything else derived from --deity-hue, whose fallback is 36, a brick
+   red; so headings, chips, fills and selected rows were brick while the
+   ornament was gold, and neither one owned the page.
+
+   The tint was the louder problem. --accent-soft in day was an independent
+   pale red-orange, but the paper it lands on is a pale YELLOW. Pale
+   red-orange on pale yellow reads as rose, which is why a location menu on
+   parchment looked like confectionery. Night never had this, because night
+   already mixes its tint INTO the surface — so day now does the same.
+
+   Warm     fixes the tint, the menu's two papers, and the block-scale fills.
+   Unified  does that and moves the neutral chrome to the gold family, so the
+            deep red is left to do one job: identity. A deity's own hue is
+            untouched in both — that is the one place colour should vary.
+   ============================================================ */
+
+/* ---------- shared by Warm and Unified ---------- */
+
+/* the tint sits in the paper instead of beside it — same recipe night uses */
+:is([data-palette="warm"],[data-palette="unified"])[data-theme="day"]{--accent-soft:color-mix(in oklab,oklch(0.58 0.13 var(--deity-hue)) 11%,var(--surface-2))}
+:is([data-palette="warm"],[data-palette="unified"])[data-theme="day"] :is(.seal,.gtile,.deity-view,.hymn-card){--accent-soft:color-mix(in oklab,oklch(0.58 calc(0.13 * var(--deity-chroma,1)) var(--deity-hue)) 11%,var(--surface-2))}
+
+/* one paper per surface. The location menu was three: a near-white head, a
+   cream list and the page behind them, which made the head read colder than
+   the body of its own menu. Head and list now share a sheet and are parted
+   by the hairline that was already there. */
+:is([data-palette="warm"],[data-palette="unified"]) .loc-menu-float{background:var(--surface)}
+:is([data-palette="warm"],[data-palette="unified"]) .loc-head{background:transparent}
+
+/* secondary actions stop shouting. Detect-my-location was the largest colour
+   field on the screen, spent on the thing you reach for once. */
+:is([data-palette="warm"],[data-palette="unified"]) .loc-detect{background:transparent;border:1.5px solid color-mix(in oklab,var(--accent) 34%,var(--line));color:var(--accent-ink)}
+:is([data-palette="warm"],[data-palette="unified"]) .loc-detect:not(:disabled):hover{background:var(--accent-soft)}
+
+/* the moon's unlit limb was a brown belonging to no ramp in the app; it is
+   now the ink, dropped into the warm ground */
+:is([data-palette="warm"],[data-palette="unified"])[data-theme="day"]{--moon-dark:color-mix(in oklab,var(--ink) 42%,var(--bg-warm))}
+:is([data-palette="warm"],[data-palette="unified"])[data-theme="night"]{--moon-dark:color-mix(in oklab,var(--ink) 26%,var(--surface))}
+
+/* ---------- Unified only ---------- */
+/* The neutral chrome — anything not standing for a deity — becomes the gold
+   family, so the page has one accent and the deep red is reserved for the
+   deities themselves. Deity cards, seals and pages re-derive from their own
+   --deity-hue at higher specificity, so none of this reaches them. */
+[data-palette="unified"][data-theme="day"]{
+  --accent:      var(--gold);
+  --accent-ink:  var(--gold-deep);
+  --accent-soft: color-mix(in oklab,var(--gold) 11%,var(--surface-2));
+  --caution:     #A63A26;
+}
+[data-palette="unified"][data-theme="night"]{
+  --accent:      var(--gold);
+  --accent-ink:  var(--gold-deep);
+  --accent-soft: color-mix(in oklab,var(--gold) 13%,var(--surface-2));
+  --caution:     #D9705C;
+}
+/* The eight deity hues stay themselves — identity is the one thing that should
+   vary — but at full chroma a violet Guru or a rose Devī page reads as screen
+   colour dropped on parchment. Damped a little, they read as pigment: the same
+   hue, ground finer. Śiva already carries his own damping (ash, not blue) and
+   keeps it, since an inline value outranks this. */
+[data-palette="unified"]{--deity-chroma:0.86}
+
+/* the library's warm wash was two hand-picked hexes; it is the gold, dropped
+   into the page's own ground, so it moves when the palette moves */
+/* the library's wash is flat now — gradients came out of every screen */
+[data-palette="unified"][data-theme="day"] .libhub{background:color-mix(in oklab,var(--gold) 8%,var(--bg))}
+[data-palette="unified"][data-theme="night"] .libhub{background:color-mix(in oklab,var(--gold) 5%,var(--bg))}
+
+/* One way to say "selected". The app had three: a soft tint with coloured ink
+   (chips, list rows, the tab bar), a solid fill with white type (lens pills,
+   aspect pills, segmented buttons), and a solid fill on ticks. The middle one
+   was the odd case and the loudest — on a deity page it made the aspect pill
+   the brightest thing on the screen, in that deity's own colour, competing
+   with the seal it belongs to. Filters and segmented controls now take the
+   soft treatment; solid fill is left to what it should mean, an action to
+   press and a mark that something is done. Rung as an inset ring rather than
+   a border so nothing shifts by a pixel and a half when it is chosen. */
+[data-palette="unified"][data-theme] :is(.fsel-pills .fsel-item.on,.lens-pill.on,.rd-view-btn.on,.rd-seg-btn.on,.sk-seg button.on,.rm-time.on){
+  background: var(--accent-soft);
+  color: var(--accent-ink);
+  border-color: transparent;
+  box-shadow: inset 0 0 0 1.5px color-mix(in oklab,var(--accent) 40%,transparent);
+}
+[data-palette="unified"][data-theme] :is(.fsel-pills .fsel-item.on,.lens-pill.on,.rd-view-btn.on,.rd-seg-btn.on,.sk-seg button.on,.rm-time.on) :is(svg,.fsel-count){color:inherit;opacity:.78}
+/* on the dark ground a 11% tint is barely a tint; the selected pill needs more
+   of its own colour under it to read as chosen at all */
+[data-palette="unified"][data-theme="night"] :is(.fsel-pills .fsel-item.on,.lens-pill.on,.rd-view-btn.on,.rd-seg-btn.on,.sk-seg button.on,.rm-time.on){background:color-mix(in oklab,var(--accent) 19%,var(--surface-2))}
+/* gold is light enough that white on it is thin; the app's own dark ink reads
+   better on a filled gold button in both themes */
+[data-palette="unified"][data-theme="night"] :is(.btn-primary,.sk-copy,.fsel-pills .fsel-item.on,.sk-seg button.on){color:#1B150D}

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="day">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Stuti · Launch Plan</title>
+<link rel="stylesheet" href="stuti.css" />
+<link rel="stylesheet" href="stuti-ops.css" />
+</head>
+<body class="ops" data-ops-key="stuti-ops-plan">
+<div class="page">
+<div class="top">
+<div class="brand"><svg width="20" height="23" viewBox="0 0 24 28" fill="none" aria-hidden="true"><path d="M12 1.5c2.6 3.2 5.4 5.7 5.4 9.4A5.4 5.4 0 0 1 12 16.3a5.4 5.4 0 0 1-5.4-5.4C6.6 7.2 9.4 4.7 12 1.5z" fill="var(--accent)"></path><path d="M12 6.2c1.3 1.7 2.7 3 2.7 4.9A2.7 2.7 0 0 1 12 13.8a2.7 2.7 0 0 1-2.7-2.7c0-1.9 1.4-3.2 2.7-4.9z" fill="color-mix(in oklab, var(--accent) 30%, #fff)"></path></svg><span class="brand-name">Stuti</span><span class="brand-dev">स्तुति</span></div>
+<button class="theme-btn" id="tt" aria-label="Day or night"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 14.5A8 8 0 1 1 9.5 4a6.3 6.3 0 0 0 10.5 10.5z"></path></svg></button>
+</div>
+<nav class="ops-nav"><a href="Stuti.html">The app</a><a class="here" href="Launch Plan.html">Launch plan</a><a href="Launch Tracker.html">Launch tracker</a><a href="Founders Guide 4 Weeks.html">4-week guide</a><a href="Daily Plan.html">Daily plan</a><a href="Work Items.html">Work items</a><a href="Test Plan.html">Test plan</a><a href="Design Decisions.html">Design decisions</a><a href="Stuti Design System.html">Design system</a><a href="Changelog.html">Changelog</a></nav>
+
+<div class="head">
+<div class="eyebrow">To live testing · 24 Aug – 6 Sep 2026</div>
+<h1>Launch plan</h1>
+<p class="lede">Fourteen days from a finished prototype to twenty–fifty invited households using Stuti on their own phones. One builder, so the plan protects the critical path: the hosted app is the beta; the port to the production codebase runs alongside and never steals a day from it.</p>
+<div class="prog"><div class="prog-bar"><div class="prog-fill"></div></div><div class="prog-num"></div></div>
+</div>
+
+<section class="sec">
+<div class="sec-head"><h2>What "live testing" means</h2></div>
+<p class="sec-note">On Sunday 6 September, 20–50 invited testers receive a link and a passcode. They install Stuti to their home screen, use it as their daily companion for at least a week, and report through the in-app feedback door. Scope of the beta build: the phone app plus the tablet/desktop layout and the website, with audio cut, the full corpus shipped with unproofed texts flagged, and full usage analytics that count actions but never people.</p>
+<div class="cards">
+<div class="cardo"><div class="cardo-k">Track A · critical path</div><div class="cardo-t">The beta: this prototype, hardened and hosted</div><div class="cardo-d">The HTML app deployed to a static host behind a passcode. Every day until 6 Sep serves this track first.</div></div>
+<div class="cardo"><div class="cardo-k">Track B · parallel</div><div class="cardo-t">The port: the production codebase begins</div><div class="cardo-d">Repo setup, engine smoke test, token port — from the handoff bundle. Moves only on days Track A is green; the real port sprint starts 7 Sep, informed by beta findings.</div></div>
+<div class="cardo"><div class="cardo-k">Out of scope</div><div class="cardo-t">Audio, real accounts, the kids app, a paid tier</div><div class="cardo-d">Recorded recitation is a v2 promise; auth stays a stub behind the passcode latch; the kids app waits; dakṣiṇā stays the only ask.</div></div>
+</div>
+</section>
+
+<section class="sec">
+<div class="sec-head"><h2>Milestones</h2></div>
+<div class="ms"><div class="ms-d">Mon 24 Aug</div><div class="ms-b"><div class="ms-t">M1 — The app is on the web</div><div class="ms-sub">First deploy loads over HTTPS on your own phone.</div></div></div>
+<div class="ms"><div class="ms-d">Wed 26 Aug</div><div class="ms-b"><div class="ms-t">M2 — Eyes and ears open</div><div class="ms-sub">Passcode gate, install path, analytics and a feedback inbox that really receives mail.</div></div></div>
+<div class="ms"><div class="ms-d">Mon 31 Aug</div><div class="ms-b"><div class="ms-t">M3 — Feature freeze</div><div class="ms-sub">Nothing new lands after this. Every change until the beta is a fix.</div></div></div>
+<div class="ms"><div class="ms-d">Thu 3 Sep</div><div class="ms-b"><div class="ms-t">M4 — Test pass complete</div><div class="ms-sub">All fourteen suites executed on both primary devices; regressions re-run.</div></div></div>
+<div class="ms"><div class="ms-d">Sat 5 Sep</div><div class="ms-b"><div class="ms-t">M5 — Go / no-go</div><div class="ms-sub">The gate below, walked honestly. Then the final deploy, and hands off.</div></div></div>
+<div class="ms"><div class="ms-d">Sun 6 Sep</div><div class="ms-b"><div class="ms-t">M6 — Beta opens</div><div class="ms-sub">Invites go out in the morning; the first sessions get watched the same day.</div></div></div>
+</section>
+
+<section class="sec" data-sec="days">
+<div class="sec-head"><h2>The fourteen days</h2><span class="sec-count"></span></div>
+<p class="sec-note">Week one hardens the app and its plumbing. Week two freezes, tests, fixes, and opens the doors. Each day has one deliverable; if a day slips, the fix-day on 2 Sep is the buffer — not the freeze, and not the gate.</p>
+<div class="ck-list">
+<div class="ck-row" data-ck="d1"><button class="ck" aria-pressed="false"></button><div class="ck-body"><div class="ck-t">Hosting live</div><div class="ck-d">Pick the static host, first deploy, verify HTTPS, fonts and the service worker from the hosted origin. Deliverable: the app loads from the web on your phone.</div></div><span class="ck-meta"><span class="pill pill-gold">Mon 24</span></span></div>
+<div class="ck-row" data-ck="d2"><button class="ck" aria-pressed="false"></button><div class="ck-body"><div class="ck-t">The door and the doorstep</div><div class="ck-d">Passcode gate before first run; web manifest, icons, theme colour, apple-touch-icon; Add to Home Screen verified on Android and iOS.</div></div><span class="ck-meta"><span class="pill pill-gold">Tue 25</span></span></div>
+<div class="ck-row" data-ck="d3"><button class="ck" aria-pressed="false"></button><div class="ck-body"><div class="ck-t">Eyes and ears</div><div class="ck-d">Analytics wired into the router and key actions; the feedback address really receives mail; one full round-trip tested from a phone.</div></div><span class="ck-meta"><span class="pill pill-gold">Wed 26</span></span></div>
+<div class="ck-row" data-ck="d4"><button class="ck" aria-pressed="false"></button><div class="ck-body"><div class="ck-t">Honest shelves</div><div class="ck-d">Audio affordances cut cleanly — no dead buttons implying recordings. Every unproofed text carries its quiet flag and points at the correction door.</div></div><span class="ck-meta"><span class="pill pill-gold">Thu 27</span></span></div>
+<div class="ck-row" data-ck="d5"><button class="ck" aria-pressed="false"></button><div class="ck-body"><div class="ck-t">Device pass 1 — Android and desktop</div><div class="ck-d">Walk every screen on Android Chrome and desktop; fix as found: fonts, viewport, tap targets, layout at width extremes.</div></div><span class="ck-meta"><span class="pill pill-gold">Fri 28</span></span></div>
+<div class="ck-row" data-ck="d6"><button class="ck" aria-pressed="false"></button><div class="ck-body"><div class="ck-t">Device pass 2 — iPhone and iPad</div><div class="ck-d">Safari quirks day: install, standalone mode, safe areas, offline launch, the copy-fallback for feedback where no mail app exists.</div></div><span class="ck-meta"><span class="pill pill-gold">Sat 29</span></span></div>
+<div class="ck-row" data-ck="d7"><button class="ck" aria-pressed="false"></button><div class="ck-body"><div class="ck-t">The almanac answers</div><div class="ck-d">Spot-check tithi, nakṣatra, māsa, sunrise and sandhyā against a published pañcāṅga for several dates and places — the adhika-māsa year makes this the season to catch it.</div></div><span class="ck-meta"><span class="pill pill-gold">Sun 30</span></span></div>
+<div class="ck-row" data-ck="d8"><button class="ck" aria-pressed="false"></button><div class="ck-body"><div class="ck-t">Feature freeze · suites S1–S6</div><div class="ck-d">Freeze at breakfast. Then execute first-run, Today, Library, deity pages, Reader and Search suites on both primary devices.</div></div><span class="ck-meta"><span class="pill pill-gold">Mon 31</span></span></div>
+<div class="ck-row" data-ck="d9"><button class="ck" aria-pressed="false"></button><div class="ck-body"><div class="ck-t">Suites S7–S12</div><div class="ck-d">Nitya, Calendar, Settings, almanac correctness, offline and install, feedback and limits.</div></div><span class="ck-meta"><span class="pill pill-gold">Tue 1</span></span></div>
+<div class="ck-row" data-ck="d10"><button class="ck" aria-pressed="false"></button><div class="ck-body"><div class="ck-t">Burn the backlog</div><div class="ck-d">Fix day. Blockers and majors only; minors get triaged, not chased.</div></div><span class="ck-meta"><span class="pill pill-gold">Wed 2</span></span></div>
+<div class="ck-row" data-ck="d11"><button class="ck" aria-pressed="false"></button><div class="ck-body"><div class="ck-t">Regression and the cross-cutting sweep</div><div class="ck-d">Re-run every failed case; then S13–S14 — analytics, passcode, no-italics sweep, trilingual completeness, contrast, console silence.</div></div><span class="ck-meta"><span class="pill pill-gold">Thu 3</span></span></div>
+<div class="ck-row" data-ck="d12"><button class="ck" aria-pressed="false"></button><div class="ck-body"><div class="ck-t">Beta ops and the dry run</div><div class="ck-d">Invite list final with device spread; welcome note written; two in-family testers walk the whole thing cold — installation to first feedback mail.</div></div><span class="ck-meta"><span class="pill pill-gold">Fri 4</span></span></div>
+<div class="ck-row" data-ck="d13"><button class="ck" aria-pressed="false"></button><div class="ck-body"><div class="ck-t">Go / no-go · final deploy</div><div class="ck-d">Walk the gate below. If green: deploy, verify once from a phone, and stop touching it.</div></div><span class="ck-meta"><span class="pill pill-gold">Sat 5</span></span></div>
+<div class="ck-row" data-ck="d14"><button class="ck" aria-pressed="false"></button><div class="ck-body"><div class="ck-t">Beta opens</div><div class="ck-d">Invites out in the morning. Watch the first sessions arrive in analytics; answer the first feedback the same day.</div></div><span class="ck-meta"><span class="pill pill-gold">Sun 6</span></span></div>
+</div>
+</section>
+
+<section class="sec" data-sec="gate">
+<div class="sec-head"><h2>The go / no-go gate</h2><span class="sec-count"></span></div>
+<p class="sec-note">Walked on Saturday 5 September. Every line must be true; any line that is not either gets fixed that day or delays the beta — a devotional app that ships broken spends trust it cannot buy back.</p>
+<div class="ck-list">
+<div class="ck-row" data-ck="g1"><button class="ck" aria-pressed="false"></button><div class="ck-body"><div class="ck-t">Every beta-blocker work item is done</div><div class="ck-d">Group A on the <a href="Work Items.html">work items</a> list reads complete.</div></div></div>
+<div class="ck-row" data-ck="g2"><button class="ck" aria-pressed="false"></button><div class="ck-body"><div class="ck-t">Zero open blockers or majors</div><div class="ck-d">By the severity ladder in the <a href="Test Plan.html">test plan</a>; minors are dispositioned, not necessarily fixed.</div></div></div>
+<div class="ck-row" data-ck="g3"><button class="ck" aria-pressed="false"></button><div class="ck-body"><div class="ck-t">Install verified from the beta URL on Android and iOS</div></div></div>
+<div class="ck-row" data-ck="g4"><button class="ck" aria-pressed="false"></button><div class="ck-body"><div class="ck-t">The reader works in airplane mode after install</div></div></div>
+<div class="ck-row" data-ck="g5"><button class="ck" aria-pressed="false"></button><div class="ck-body"><div class="ck-t">A feedback mail sent from a tester's phone arrived in the inbox</div></div></div>
+<div class="ck-row" data-ck="g6"><button class="ck" aria-pressed="false"></button><div class="ck-body"><div class="ck-t">The passcode admits the code and refuses everything else</div></div></div>
+<div class="ck-row" data-ck="g7"><button class="ck" aria-pressed="false"></button><div class="ck-body"><div class="ck-t">Analytics shows events from at least two different devices</div><div class="ck-d">And no event payload carries a name, an address, or verse content.</div></div></div>
+<div class="ck-row" data-ck="g8"><button class="ck" aria-pressed="false"></button><div class="ck-body"><div class="ck-t">Almanac spot-checks match the published pañcāṅga</div></div></div>
+<div class="ck-row" data-ck="g9"><button class="ck" aria-pressed="false"></button><div class="ck-body"><div class="ck-t">Every unproofed text carries its flag</div></div></div>
+<div class="ck-row" data-ck="g10"><button class="ck" aria-pressed="false"></button><div class="ck-body"><div class="ck-t">Welcome note written; invite list final; passcode chosen</div></div></div>
+</div>
+</section>
+
+<section class="sec">
+<div class="sec-head"><h2>Risks, named</h2></div>
+<div class="cards">
+<div class="cardo"><div class="cardo-k">R1 · the big one</div><div class="cardo-t">One pair of hands</div><div class="cardo-d">Everything below exists to protect this: freeze on 31 Aug, the port defers, week two is fixing and testing only — no new features, however tempting.</div></div>
+<div class="cardo"><div class="cardo-k">R2</div><div class="cardo-t">Safari can evict local data</div><div class="cardo-d">An uninstalled web app that goes unused for a week can lose its storage — and all progress lives on-device. The welcome note insists on installing to the home screen; an export comes with v2.</div></div>
+<div class="cardo"><div class="cardo-k">R3</div><div class="cardo-t">mailto with nowhere to go</div><div class="cardo-d">iPads without a mail app strand the feedback send. The copy-to-clipboard fallback already exists; device pass 2 proves it.</div></div>
+<div class="cardo"><div class="cardo-k">R4</div><div class="cardo-t">Corpus trust</div><div class="cardo-d">A wrong akṣara in a sacred text costs more than a crash. Unproofed texts are flagged, the "text is wrong" feedback kind is one tap away, and corrections get same-week deploys.</div></div>
+<div class="cardo"><div class="cardo-k">R5</div><div class="cardo-t">Analytics against the app's character</div><div class="cardo-d">Counting is fine; watching is not. No identifiers, no verse content in events — and the welcome note says exactly what is counted, in plain words.</div></div>
+<div class="cardo"><div class="cardo-k">R6</div><div class="cardo-t">The passcode is a latch, not a lock</div><div class="cardo-d">Right-sized for fifty friendly households. If the URL leaks, rotate the code and redeploy — five minutes, not a crisis.</div></div>
+</div>
+</section>
+
+<section class="sec">
+<div class="sec-head"><h2>Beta week · 6–13 September</h2></div>
+<ul class="plain">
+<li>Triage twice daily, thirty minutes each: morning and evening. Severity ladder from the test plan decides what moves.</li>
+<li>Hotfix rule: blockers the same day, majors within forty-eight hours, minors batch to the week after.</li>
+<li>Day 1: watch the first sessions; be reachable. Day 3: a gentle nudge to testers who have not opened it. Day 7: the findings review.</li>
+<li>All reports through the in-app door — one inbox, with the build stamp attached to every mail. Calls happen, but the caller is asked to also send it in.</li>
+<li>The findings review on 13 Sep decides two things: what the prototype fixes next, and what the port must do differently.</li>
+</ul>
+<div class="note">After the beta, Track B becomes the main line: the handoff bundle in <code>design_handoff_stuti_app/</code> is the port's brief — engine as-is, stylesheets verbatim, the hymn shape as the data contract. Beta findings fold into it as amendments, not rewrites.</div>
+</section>
+
+</div>
+<script src="stuti-ops.js"></script>
+</body>
+</html>
