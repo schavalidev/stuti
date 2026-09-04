@@ -119,8 +119,16 @@ code { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: .
       </div>
     </div>
     <div class="entry">
+      <div class="entry-head"><span class="tag tag-add">Added</span><h3>One repo for both halves — <code>github.com/schavalidev/stuti</code></h3></div>
+      <p>The designer keeps exporting from Claude Design and the port has to keep up, so the two now live side by side on <code>main</code>: <code>design_handoff_stuti/</code> exactly as exported (a future export drops straight in), <code>stuti-app/</code> generated from it. That only works if regenerating is safe, and it wasn't — a rerun of the pipeline had already erased the entry point once and would have taken every later hand-fix with it. So the pipeline now owns the whole result: the entry files come from templates, every after-the-fact fix is a scripted step that fails loud on an unexpected anchor, the load order is read from the prototype's own <code>Stuti.html</code> rather than copied out of it, and a removed source file removes its module. <code>tools/codemod/.ported-at</code> records which design commit <code>src/</code> came from; <code>tools/check-design-updates.sh</code> compares that against the remote and lists what the designer has pushed since. Signing keys and their passwords are ignored by name and were checked to be, before the first commit.</p>
+    </div>
+    <div class="entry">
+      <div class="entry-head"><span class="tag tag-add">Added</span><h3>The web build, live — <code>stuti-app.netlify.app</code></h3></div>
+      <p>The installable half of "both": the same Vite build, served over HTTPS so the service worker and the manifest do their work and Android Chrome offers Add to Home Screen. <code>netlify.toml</code> at the repo root drives it, so a site linked to the GitHub repo redeploys on every push as well. The first deploy built cleanly and then failed looking for <code>Stuti/dist</code>: with the config at the root, <code>publish</code> resolves against the root even when <code>base</code> is set — it has to name <code>stuti-app/dist</code> outright. The service worker is served with <code>no-cache</code> so a deploy can reach devices that already hold the previous one.</p>
+    </div>
+    <div class="entry">
       <div class="entry-head"><span class="tag tag-chg">Next</span><h3>What this build still doesn't do</h3></div>
-      <p>Sign-in, sync, dāna and reminders behave exactly as the prototype's own tracker already describes them — local-only, honestly so. Real accounts and cross-device sync are the next milestone, once a Supabase project exists to point them at. The PWA half of this round (an installable web build, not just the APK) is a short step from here but wants a hosting account first.</p>
+      <p>Sign-in, sync, dāna and reminders behave exactly as the prototype's own tracker already describes them — local-only, honestly so. Real accounts and cross-device sync are the next milestone, once a Supabase project exists to point them at, and they go in new modules that wrap the generated stores, never in the generated files themselves. A scheduled check that runs <code>check-design-updates.sh</code> and reports what the designer has pushed is the remaining piece of the collaborative setup.</p>
     </div>
   </div>
 </section>

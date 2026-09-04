@@ -14,7 +14,7 @@ export default defineConfig({
     // so an edit is never masked by a stale copy.
     VitePWA({
       registerType: 'autoUpdate',
-      includeAssets: ['emblems/*.png', 'assets/*.png', 'stuti-logo*.png'],
+      includeAssets: ['emblems/*.png', 'assets/*.png', 'icons/*.png', 'stuti-logo*.png'],
       manifest: {
         name: 'Stuti · स्तुति',
         short_name: 'Stuti',
@@ -23,8 +23,13 @@ export default defineConfig({
         background_color: '#faf6ee',
         display: 'standalone',
         start_url: '/',
+        // the kalasha brand mark (public/icons, generated from
+        // design_handoff_stuti/app/assets/kalasha.png); the maskable one sits
+        // inset on the app's cream so Android's circular crop keeps the leaves
         icons: [
-          { src: '/stuti-logo.png', sizes: '512x512', type: 'image/png', purpose: 'any maskable' },
+          { src: '/icons/icon-192.png', sizes: '192x192', type: 'image/png' },
+          { src: '/icons/icon-512.png', sizes: '512x512', type: 'image/png' },
+          { src: '/icons/icon-512-maskable.png', sizes: '512x512', type: 'image/png', purpose: 'maskable' },
         ],
       },
       workbox: {
