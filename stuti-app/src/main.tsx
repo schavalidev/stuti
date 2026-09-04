@@ -1,3 +1,4 @@
+import "./stuti-voice-shim"; // must come first: replaces window.SpeechRecognition in the native app
 import ReactDOM from "react-dom/client";
 import App from "./stuti-main";
 import { STUTI_NUDGE } from "./stuti-nudge";
