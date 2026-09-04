@@ -128,7 +128,7 @@ code { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: .
     </div>
     <div class="entry">
       <div class="entry-head"><span class="tag tag-chg">Next</span><h3>What this build still doesn't do</h3></div>
-      <p>Sign-in, sync, dāna and reminders behave exactly as the prototype's own tracker already describes them — local-only, honestly so. Real accounts and cross-device sync are the next milestone, once a Supabase project exists to point them at, and they go in new modules that wrap the generated stores, never in the generated files themselves. A scheduled check that runs <code>check-design-updates.sh</code> and reports what the designer has pushed is the remaining piece of the collaborative setup.</p>
+      <p>Sign-in, sync, dāna and reminders behave exactly as the prototype's own tracker already describes them — local-only, honestly so. Real accounts and cross-device sync are the next milestone, once a Supabase project exists to point them at, and they go in new modules that wrap the generated stores, never in the generated files themselves. The collaborative setup's last piece landed after this build: a scheduled task runs <code>check-design-updates.sh</code> every morning at nine and reports what the designer has pushed since the last port — reporting only, never re-porting on its own, so a design change still becomes a build only when someone asks for one.</p>
     </div>
   </div>
 </section>
