@@ -127,6 +127,7 @@ export class FollowEngine {
   private idx = -1;                   // token index of the current position (-1 = not yet)
   private misses = 0;
   private lastMoveAt = 0;
+  private lastMoveOn = "";            // the heard tail that last moved the light
   status: FollowStatus = "listening";
 
   constructor(lines: Line[]) {
@@ -214,6 +215,7 @@ export class FollowEngine {
      an ambiguous word must not teleport the light. */
   private best(from: number, to: number, keys: string[], cur: number, strict: boolean) {
     const scores: number[] = [];
+    const inside: boolean[] = [];
     let bi = -1, bq = -Infinity;
     for (let e = Math.max(0, from); e <= Math.min(to, this.toks.length - 1); e++) {
       let q = -Infinity;
@@ -231,15 +233,32 @@ export class FollowEngine {
         if (strict && n > 1 && h.length < 8) continue;
         const s = sim(h, this.runEndingAt(e, h.length));
         const over = lone ? s - (strict ? 0.95 : this.bar(h.length) + 0.1) : s - this.bar(h.length) - (strict ? 0.05 : 0);
-        if (over > q) q = over;
+        if (over > q) { q = over; inside[e] = false; }
+        /* the middle of a long compound: "rajatādri" is heard inside
+           "rajatādriśṛṅganiketanaṁ" — the light belongs on that word, not
+           past it. A little stricter than the ends, and never when lost. */
+        if (!strict && n === 1 && h.length >= 4) {
+          const key = this.toks[e].key;
+          if (key.length >= h.length + 2) {
+            let bs = 0;
+            for (let p = 1; p + h.length < key.length; p++) { const sc = sim(h, key.slice(p, p + h.length)); if (sc > bs) bs = sc; }
+            const oi = bs - this.bar(h.length) - 0.05 - (far ? 0.1 : 0);
+            if (oi > q) { q = oi; inside[e] = true; }
+          }
+        }
       }
       scores[e] = q;
-      /* nearest-ahead wins ties; going back costs more than going on */
+      /* nearest-ahead wins ties, and a fit that skips lines must be
+         clearly better than one that does not — the refrain every stanza
+         ends on fits the next stanza's as well as this one's, give or take
+         the words before it; going back costs more than going on */
       const dist = Math.abs(e - (cur + 1));
-      const qq = q - dist * (e < cur ? 0.02 : 0.004);
+      const nextLine = cur >= 0 ? this.toks[cur].line + 1 : 0;
+      const skipped = Math.max(0, this.toks[e].line - nextLine - 1);
+      const qq = q - (e < cur ? 0.1 + dist * 0.02 : dist * 0.004) - (strict ? 0 : skipped * 0.05);
       if (qq > bq) { bq = qq; bi = e; }
     }
-    if (bi < 0 || scores[bi] < 0) return { idx: -1, margin: 0 };
+    if (bi < 0 || scores[bi] < 0) return { idx: -1, margin: 0, inside: false };
     let second = -Infinity;
     for (let e = from; e <= to; e++) {
       if (scores[e] == null || Math.abs(e - bi) <= 2) continue;
@@ -248,7 +267,7 @@ export class FollowEngine {
       if (!strict && scores[e] >= scores[bi] - 1e-9) continue;
       if (scores[e] > second) second = scores[e];
     }
-    return { idx: bi, margin: scores[bi] - (second === -Infinity ? -1 : second) };
+    return { idx: bi, margin: scores[bi] - (second === -Infinity ? -1 : second), inside: !!inside[bi] };
   }
 
   /* The head of a line: a reciter who goes back to the first line, or
@@ -281,6 +300,10 @@ export class FollowEngine {
     if (!keys.length) return null;
     const joined = keys.join("");
     if (joined.length < 3) return null;       // too little to go on
+    /* the same words that moved the light a moment ago — a final result
+       repeating its partial — are not new evidence; without this a refrain
+       shared by every stanza would carry the light a stanza on each time */
+    if (joined === this.lastMoveOn) return null;
     const now = Date.now();
 
     /* near: a few words back to a few lines ahead of where we are */
@@ -291,7 +314,7 @@ export class FollowEngine {
     /* a partial being revised often re-fits a word or two back; the light
        does not follow that — small steps back are ignored unless lost */
     if (near.idx >= 0 && near.idx < cur && this.status !== "lost") return null;
-    if (near.idx >= 0) return this.moveTo(near.idx, now, joined);
+    if (near.idx >= 0) return this.moveTo(near.inside ? near.idx - 1 : near.idx, now, joined);
 
     /* the head of some line, anywhere: the deliberate jump */
     const head = this.bestHead(keys);
@@ -315,6 +338,7 @@ export class FollowEngine {
     this.idx = i;
     this.misses = 0;
     this.lastMoveAt = now;
+    this.lastMoveOn = heard;
     /* "done" only once the last word has actually been said, not on a
        partial of it — the tail of what was heard must resemble the whole key */
     const last = this.toks[this.toks.length - 1].key;

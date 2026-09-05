@@ -35,6 +35,7 @@ import java.nio.ByteBuffer;
 import java.nio.ByteOrder;
 import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
+import java.util.concurrent.LinkedBlockingQueue;
 import java.util.zip.ZipEntry;
 import java.util.zip.ZipInputStream;
 import org.vosk.Model;
@@ -280,8 +281,10 @@ public class StutiVoskPlugin extends Plugin {
                 }
                 Recognizer rec = grammarJson != null ? new Recognizer(model, (float) RATE, grammarJson) : new Recognizer(model, (float) RATE);
                 int minBuf = AudioRecord.getMinBufferSize(RATE, AudioFormat.CHANNEL_IN_MONO, AudioFormat.ENCODING_PCM_16BIT);
+                /* a generous buffer (five seconds): the recognizer may stall
+                   for a moment on a hard stretch, and no audio must be lost */
                 AudioRecord audio = new AudioRecord(MediaRecorder.AudioSource.VOICE_RECOGNITION, RATE,
-                    AudioFormat.CHANNEL_IN_MONO, AudioFormat.ENCODING_PCM_16BIT, Math.max(minBuf, CHUNK * 2 * 4));
+                    AudioFormat.CHANNEL_IN_MONO, AudioFormat.ENCODING_PCM_16BIT, Math.max(minBuf, RATE * 2 * 5));
                 if (audio.getState() != AudioRecord.STATE_INITIALIZED) { rec.close(); call.reject("mic unavailable"); return; }
                 running = true;
                 loop = new Thread(() -> run(audio, rec, capture), "stuti-vosk");
@@ -294,7 +297,33 @@ public class StutiVoskPlugin extends Plugin {
         }).start();
     }
 
+    /* Two threads: one only reads the microphone (and keeps the copy), the
+       other recognizes. Recognition can fall behind for a moment on a hard
+       stretch; the queue holds the audio meanwhile, so nothing is lost and
+       the ears catch up. The session log notes how far behind they got. */
     private void run(AudioRecord audio, Recognizer rec, boolean capture) {
+        final LinkedBlockingQueue<short[]> q = new LinkedBlockingQueue<>();
+        final Thread decoder = new Thread(() -> {
+            int worst = 0;
+            try {
+                while (true) {
+                    short[] chunk = q.take();
+                    if (chunk.length == 0) break;            // the reader's end mark
+                    int depth = q.size();
+                    if (depth > worst) { worst = depth; if (worst >= 10) Log.w(TAG, "recognizer " + (worst / 10.0) + " s behind"); }
+                    if (rec.acceptWaveForm(chunk, chunk.length)) emit("result", field(rec.getResult(), "text"));
+                    else emit("partial", field(rec.getPartialResult(), "partial"));
+                }
+                emit("result", field(rec.getFinalResult(), "text"));
+            } catch (InterruptedException ignored) {
+            } catch (Exception e) {
+                Log.e(TAG, "decoder", e);
+            } finally {
+                Log.d(TAG, "decoder done; worst lag " + (worst / 10.0) + " s");
+                rec.close();
+            }
+        }, "stuti-vosk-decode");
+        decoder.start();
         RandomAccessFile wav = null;
         long bytes = 0;
         short[] buf = new short[CHUNK];
@@ -323,10 +352,10 @@ public class StutiVoskPlugin extends Plugin {
                        mid-session still opens (the founder's first one did not) */
                     if ((bytes / (n * 2)) % 20 == 0) { long at = wav.getFilePointer(); writeWavHeader(wav, bytes); wav.seek(at); }
                 }
-                if (rec.acceptWaveForm(buf, n)) emit("result", field(rec.getResult(), "text"));
-                else emit("partial", field(rec.getPartialResult(), "partial"));
+                short[] chunk = new short[n];
+                System.arraycopy(buf, 0, chunk, 0, n);
+                q.add(chunk);
             }
-            emit("result", field(rec.getFinalResult(), "text"));
         } catch (Exception e) {
             Log.e(TAG, "audio loop", e);
             JSObject d = new JSObject(); d.put("message", String.valueOf(e.getMessage()));
@@ -334,7 +363,8 @@ public class StutiVoskPlugin extends Plugin {
         } finally {
             try { audio.stop(); } catch (Exception ignored) {}
             audio.release();
-            rec.close();
+            q.add(new short[0]);                                   // end mark: let the decoder drain and close
+            try { decoder.join(4000); } catch (InterruptedException ignored) {}
             if (wav != null) {
                 try { writeWavHeader(wav, bytes); wav.close(); } catch (Exception ignored) {}
             }
