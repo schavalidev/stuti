@@ -22,6 +22,7 @@ type Plugin = {
   vocab(o: { id: string }): Promise<{ words: string }>;
   shareSession(o: { log: string }): Promise<void>;
   log(o: { msg: string }): Promise<void>;
+  note(o: { line: string; fresh?: boolean }): Promise<void>;
   addListener(ev: "partial" | "result" | "progress" | "error" | "level", fn: (d: any) => void): Promise<Handle>;
 };
 
@@ -61,6 +62,9 @@ export function voskVocab(lang: VoskLang): Promise<string> {
 
 /** A note into the phone's log (logcat), for a release build's silent console. */
 export function voskLog(msg: string) { if (voskAvailable()) Native.log({ msg }).catch(() => {}); }
+
+/** A line of the session log, onto the phone's disk as it happens. */
+export function voskNote(line: string, fresh = false) { if (voskAvailable()) Native.note({ line, fresh }).catch(() => {}); }
 
 /** Hand the last session (audio + the page's log) to another app, so a
     real chant can be replayed on a desk for tuning. */

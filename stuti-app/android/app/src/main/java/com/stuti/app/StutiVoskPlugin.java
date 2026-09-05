@@ -400,6 +400,17 @@ public class StutiVoskPlugin extends Plugin {
         call.resolve();
     }
 
+    /* a line of the session log, kept on disk as it grows, so a share does
+       not depend on the page still holding it */
+    @PluginMethod
+    public void note(PluginCall call) {
+        String line = call.getString("line", "");
+        boolean fresh = Boolean.TRUE.equals(call.getBoolean("fresh", false));
+        try (FileWriter w = new FileWriter(logFile(), !fresh)) { w.write(line); w.write("\n"); }
+        catch (Exception e) { Log.w(TAG, "note failed: " + e); }
+        call.resolve();
+    }
+
     @PluginMethod
     public void stop(PluginCall call) {
         stopInternal();
@@ -421,10 +432,8 @@ public class StutiVoskPlugin extends Plugin {
         try {
             ArrayList<Uri> uris = new ArrayList<>();
             String auth = getContext().getPackageName() + ".fileprovider";
-            if (!log.isEmpty()) {
-                try (FileWriter w = new FileWriter(logFile())) { w.write(log); }
-                uris.add(FileProvider.getUriForFile(getContext(), auth, logFile()));
-            }
+            if (!log.isEmpty()) { try (FileWriter w = new FileWriter(logFile())) { w.write(log); } }
+            if (logFile().isFile() && logFile().length() > 0) uris.add(FileProvider.getUriForFile(getContext(), auth, logFile()));
             if (wavFile().isFile() && wavFile().length() > 44) uris.add(FileProvider.getUriForFile(getContext(), auth, wavFile()));
             if (uris.isEmpty()) { call.reject("nothing recorded yet"); return; }
             Intent send = new Intent(Intent.ACTION_SEND_MULTIPLE);

@@ -18,7 +18,7 @@ import React from "react";
 import { Icon } from "./stuti-icons";
 import { FollowEngine } from "./stuti-follow-engine";
 import type { FollowStatus, Line } from "./stuti-follow-engine";
-import { VOSK_MODELS, VoskRecognition, voskAvailable, voskDownload, voskLangFor, voskLog, voskModelReady, voskShareSession, voskVocab } from "./stuti-vosk";
+import { VOSK_MODELS, VoskRecognition, voskAvailable, voskDownload, voskLangFor, voskLog, voskModelReady, voskNote, voskShareSession, voskVocab } from "./stuti-vosk";
 import { grammarFor, indexVocab } from "./stuti-follow-grammar";
 
 /* the vocabulary index per model and the grammar per text, built once */
@@ -98,6 +98,14 @@ export function useFollow({ hymn, lines, lang, active, setActive, setWord, setPl
   const supported = native || !!BrowserSR();
   const voskLang = voskLangFor(lang);
 
+  /* the session log: kept here for the share, and on the phone's disk line
+     by line, so a share after the reader was reopened still has it */
+  const note = (line: string, fresh = false) => {
+    if (fresh) log.current = [line]; else log.current.push(line);
+    if (log.current.length > 4000) log.current.splice(0, 1000);
+    voskNote(line, fresh);
+  };
+
   const apply = (pos: { line: number; word: number }) => {
     applied.current = pos.line;
     setActive(pos.line);
@@ -121,8 +129,7 @@ export function useFollow({ hymn, lines, lang, active, setActive, setWord, setPl
       console.log("[follow] heard:", last[0].transcript, last.isFinal ? "(final)" : "");
       setEvents((n) => n + 1);
       const moved = eng.current.hear(last[0].transcript, !!last.isFinal);
-      log.current.push(((Date.now() - t0.current) / 1000).toFixed(2) + (last.isFinal ? " F " : " p ") + last[0].transcript + (moved ? "  -> " + moved.line + ":" + moved.word : ""));
-      if (log.current.length > 4000) log.current.splice(0, 1000);
+      note(((Date.now() - t0.current) / 1000).toFixed(2) + (last.isFinal ? " F " : " p ") + last[0].transcript + (moved ? "  -> " + moved.line + ":" + moved.word : ""));
       if (moved) apply(moved);
       const st = eng.current.status;
       setStatus(st);
@@ -135,7 +142,7 @@ export function useFollow({ hymn, lines, lang, active, setActive, setWord, setPl
       /* "no-speech" and friends just mean a quiet stretch */
     };
     r.onlevel = (v: number) => setLevel(v);
-    r.onraw = (text: string) => { setRaw(text.slice(-60)); setEvents((n) => n + 1); log.current.push(((Date.now() - t0.current) / 1000).toFixed(2) + " raw " + text); };
+    r.onraw = (text: string) => { setRaw(text.slice(-60)); setEvents((n) => n + 1); note(((Date.now() - t0.current) / 1000).toFixed(2) + " raw " + text); };
     r.onend = () => {
       rec.current = null;
       /* the browser's recogniser closes after a pause: reopen it. Vosk only
@@ -165,7 +172,7 @@ export function useFollow({ hymn, lines, lang, active, setActive, setWord, setPl
     setStatus("listening");
     setHeard(""); setEvents(0); setLevel(0); setRaw("");
     t0.current = Date.now();
-    log.current = ["# Stuti Follow " + new Date().toISOString() + " hymn=" + (hymn && hymn.id) + " lang=" + lang + " ears=" + (native ? "vosk-" + voskLang : "browser")];
+    note("# Stuti Follow " + new Date().toISOString() + " hymn=" + (hymn && hymn.id) + " lang=" + lang + " ears=" + (native ? "vosk-" + voskLang : "browser"), true);
     grammar.current = null;
     if (native && voskLang === "hi") {
       /* the stotra's own sounds as the recogniser's vocabulary; built once
@@ -174,7 +181,7 @@ export function useFollow({ hymn, lines, lang, active, setActive, setWord, setPl
          full of Sanskrit and the model already knows most of the words,
          and a grammar only takes its language model away. */
       grammar.current = await grammarForLines(voskLang, (hymn && hymn.id) + ":" + voskLang, lines);
-      log.current.push("# grammar " + (grammar.current ? grammar.current.length + " words" : "none"));
+      note("# grammar " + (grammar.current ? grammar.current.length + " words" : "none"));
       if (!onRef.current) return;   // stopped while the grammar was being built
     }
     listen();
@@ -182,7 +189,7 @@ export function useFollow({ hymn, lines, lang, active, setActive, setWord, setPl
   const share = () => {
     if (!native) return;
     if (onRef.current) stop();   // close the session, then hand it over
-    voskShareSession(log.current.join("\n")).catch(() => {});
+    voskShareSession(log.current.length > 1 ? log.current.join("\n") : "").catch(() => {});
   };
 
   const start = async () => {
