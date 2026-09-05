@@ -199,6 +199,10 @@ code { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: .
       <p>The audio was kept on disk from the first, but the log of what was heard and where the light went lived in the page, and a reader reopened before the long press had a fresh, empty one. The log is now written to disk line by line as the session runs, and a share offers whatever is there.</p>
     </div>
     <div class="entry">
+      <div class="entry-head"><span class="tag tag-fix">Fixed</span><h3>A false restart on two fragments</h3></div>
+      <p>Tested on the Āditya Hṛdayam, the light tracked nine lines closely and then snapped to the top. The log showed "nama" and "savā", the recogniser's two fragments of sanātanam, whose keys together happen to spell the first four letters of the first line, "namassavitre". A restart may still be called by one short exact word, but a run of fragments must be six letters long, and a jump to the top within four seconds of the light moving on is not a restart at all. The engine now keeps the caller's clock rather than its own, so the replays that verify each change judge the timing rule with the session's real timestamps.</p>
+    </div>
+    <div class="entry">
       <div class="entry-head"><span class="tag tag-chg">Next</span><h3>What this build still doesn't do</h3></div>
       <p>Sign-in, sync, dāna and reminders behave exactly as the prototype's own tracker already describes them — local-only, honestly so. Real accounts and cross-device sync are the next milestone, once a Supabase project exists to point them at, and they go in new modules that wrap the generated stores, never in the generated files themselves. The collaborative setup's last piece landed after this build: a scheduled task runs <code>check-design-updates.sh</code> every morning at nine and reports what the designer has pushed since the last port — reporting only, never re-porting on its own, so a design change still becomes a build only when someone asks for one.</p>
     </div>

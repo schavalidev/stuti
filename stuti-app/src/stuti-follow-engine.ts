@@ -127,6 +127,7 @@ export class FollowEngine {
   private idx = -1;                   // token index of the current position (-1 = not yet)
   private misses = 0;
   private lastMoveAt = 0;
+  private now = 0;                    // the clock the caller keeps (real, or a replay's)
   private lastMoveOn = "";            // the heard tail that last moved the light
   private lastMoveKeys = 0;           // ...and how many words it had
   status: FollowStatus = "listening";
@@ -167,7 +168,8 @@ export class FollowEngine {
 
   /** Feed the recogniser's current utterance transcript (cumulative, may
       revise earlier words). Returns the new position if it moved. */
-  hear(transcript: string, isFinal: boolean): Pos | null {
+  hear(transcript: string, isFinal: boolean, at: number = Date.now()): Pos | null {
+    this.now = at;
     const ks = wordsOf(transcript).map(keyOf).filter(Boolean);
     /* a partial that only re-spells the last word is not new evidence; a
        miss is counted only when a fresh word arrived and still nothing fit */
@@ -295,8 +297,11 @@ export class FollowEngine {
         const h = keys.slice(-n).join("");
         if (h.length < 4) continue;
         /* one short word may only send the light back to the first line
-           (the restart every reciter makes); any other line needs more */
+           (the restart every reciter makes); any other line needs more,
+           and a run of fragments needs more still — two two-letter words
+           spell the start of a line by accident easily enough */
         if (n === 1 && e > 0 && h.length < 6) continue;
+        if (n > 1 && h.length < 6) continue;
         const sc = sim(h, this.runStartingAt(e, h.length));
         /* a longer run may be a little rougher; one word must be exact */
         const need = h.length >= 8 ? 0.8 : h.length >= 6 ? 0.88 : 0.95;
@@ -319,7 +324,7 @@ export class FollowEngine {
     /* nor is a partial that only re-spells its last word: the light moves
        on a new word, or on the final say of an utterance */
     if (!fresh && this.lastMoveOn && keys.length === this.lastMoveKeys) return null;
-    const now = Date.now();
+    const now = this.now;
 
     /* near: a few words back to a few lines ahead of where we are */
     const cur = Math.max(this.idx, -1);
@@ -335,7 +340,9 @@ export class FollowEngine {
 
     /* the head of some line, anywhere: the deliberate jump */
     const head = this.bestHead(keys);
-    if (head >= 0 && head !== cur + 1) return this.moveTo(head - 1, now, joined);
+    /* a restart from the top seconds after the light moved on is not one */
+    const tooSoon = head === 0 && cur > 0 && now - this.lastMoveAt < 4000;
+    if (head >= 0 && head !== cur + 1 && !tooSoon) return this.moveTo(head - 1, now, joined);
 
     if (fresh) this.misses++;
     if (this.misses >= 5) this.status = "lost";   // even after "done": starting over re-finds
