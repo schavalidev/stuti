@@ -96,7 +96,8 @@ export class VoskRecognition {
   }
 
   async start() {
-    const lang: VoskLang = /^te/.test(this.lang) ? "te" : "hi";
+    /* the same choice the download made — the script decides nothing now */
+    const lang: VoskLang = voskLangFor(/^te/.test(this.lang) ? "telugu" : "deva");
     this.live = true;
     try {
       this.handles.push(await Native.addListener("partial", (d: any) => { if (this.live && d && d.text) this.emit(String(d.text), false); }));
