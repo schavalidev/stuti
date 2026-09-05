@@ -18,7 +18,7 @@ function patch(from, to, what) {
 
 patch(
   `import { nityaQueue } from "./stuti-nitya-queue";`,
-  `import { nityaQueue } from "./stuti-nitya-queue";\nimport { useFollow, FollowButton, FollowChip, RecitationsButton } from "./stuti-follow";`,
+  `import { nityaQueue } from "./stuti-nitya-queue";\nimport { useFollow, FollowButton, FollowChip, RecitationsButton, RecordChip } from "./stuti-follow";`,
   "import line",
 );
 
@@ -69,6 +69,19 @@ patch(
   `      {findOpen && (\n        <FindStrip`,
   `      {follow.showChip && <FollowChip follow={follow} lang={lang} />}\n      {findOpen && (\n        <FindStrip`,
   "chip before FindStrip",
+);
+
+// one Record for the whole screen: the chip in the main row, and the learn
+// bar's toggle, both start the voice-tracked recording (stuti-follow.tsx)
+patch(
+  `          {STUTI_L.t("learn", lang)}\n        </button>`,
+  `          {STUTI_L.t("learn", lang)}\n        </button>\n        <RecordChip follow={follow} lang={lang} />`,
+  "Record chip after the Learn chip",
+);
+patch(
+  `onClick={() => setRecordOn(v => !v)}`,
+  `onClick={() => { setLearnOpen(false); setPlaying(false); follow.record(); }}`,
+  "learn-bar Record toggle starts the voice-tracked recording",
 );
 
 writeFileSync(FILE, t);

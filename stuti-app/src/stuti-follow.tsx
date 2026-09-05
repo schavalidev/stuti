@@ -246,7 +246,7 @@ export function useFollow({ hymn, lines, lang, active, setActive, setWord, setPl
     try {
       const r = await keepRecitation({ hymn: hymn && hymn.id, title: (hymn && (hymn.title || hymn.id)) || "", lang, cues: k.cues, lineCount: lines.length, linesLit: k.linesLit, blob: k.blob, dur: k.dur });
       setKeep(null); setKept(r);
-      setTimeout(() => setKept((x) => (x && x.id === r.id ? null : x)), 7000);
+      /* stays until dismissed: the reciter should read where it went */
     } catch (e) { setKeep({ ...k, failed: true }); }
   };
   const discardKeep = () => setKeep(null);
@@ -386,9 +386,11 @@ export function FollowChip({ follow, lang }: { follow: ReturnType<typeof useFoll
   }
   if (follow.kept && !follow.on) {
     return (
-      <div className="rd-follow-chip is-done is-kept" role="status" aria-live="polite" onClick={follow.dismissKept}>
+      <div className="rd-follow-chip is-done is-kept" role="status" aria-live="polite">
         <span className="rd-follow-dot" aria-hidden="true" />
         <span className="rd-follow-text"><span>{t("kept", lang, { dur: fmtDur(follow.kept.dur), learn: STUTI_L.t("learn", lang), listen: STUTI_L.t("listen", lang) })}</span></span>
+        <button type="button" className="rd-follow-act primary" onClick={() => { follow.dismissKept(); follow.openShelf(); }}>{t("shelf", lang)}</button>
+        <button type="button" className="rd-follow-act" onClick={follow.dismissKept}>{t("close", lang)}</button>
       </div>
     );
   }
@@ -417,6 +419,18 @@ export function FollowChip({ follow, lang }: { follow: ReturnType<typeof useFoll
     </div>
     {follow.shelf && <RecitationsSheet follow={follow} lang={lang} />}
     </React.Fragment>
+  );
+}
+
+/* the Record chip in the reader's main row: one word, one action */
+export function RecordChip({ follow, lang }: { follow: ReturnType<typeof useFollow>; lang: string }) {
+  if (!follow.supported) return null;
+  const on = follow.recOn;
+  return (
+    <button type="button" className={"chip chip-record" + (on ? " chip-on" : "")} onClick={on ? () => follow.stop() : follow.record}
+      aria-pressed={on} title={t("recordTitle", lang)}>
+      {on ? "■ " + t("stopRec", lang) : "● " + t("record", lang)}
+    </button>
   );
 }
 

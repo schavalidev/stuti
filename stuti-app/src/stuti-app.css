@@ -90,3 +90,7 @@
 .rd-seg-rec.on { color: #a5281c; background: color-mix(in oklab, #c0392b 16%, var(--surface)); }
 .rd-seg-rec.on .rd-seg-rec-lbl::before { content: ""; display: inline-block; width: 6px; height: 6px; border-radius: 50%; background: #c0392b; margin-right: 5px; vertical-align: 1px; animation: voice-pulse 1.1s ease-in-out infinite; }
 .reader.is-following .rd-speak, .reader.is-following .rt-strip { display: none; }
+
+.chip-record { color: #a5281c; border-color: color-mix(in oklab, #c0392b 40%, var(--line)); }
+.chip-record.chip-on { background: color-mix(in oklab, #c0392b 18%, var(--surface)); }
+.rd-follow-chip.is-kept { flex-wrap: wrap; }

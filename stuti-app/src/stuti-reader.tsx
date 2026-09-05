@@ -21,7 +21,7 @@ import { ShareSheet, printStotra } from "./stuti-share";
 import { STUTI_PROGRESS } from "./stuti-store";
 import { STUTI_RITUAL } from "./stuti-texts";
 import { nityaQueue } from "./stuti-nitya-queue";
-import { useFollow, FollowButton, FollowChip, RecitationsButton } from "./stuti-follow";
+import { useFollow, FollowButton, FollowChip, RecitationsButton, RecordChip } from "./stuti-follow";
 import { STUTI_TRANSLIT } from "./stuti-translit";
 
 /* ============================================================
@@ -1325,6 +1325,7 @@ function ReaderView({ hymn, deity, go, theme, toggleTheme, lang, setLang, backVi
         <button className={"chip chip-learn" + (learnOpen ? " chip-on" : "")} onClick={() => setLearnOpen(o => { const n = !o; if (!n) { setLearnMode(hasAudio ? "listen" : "repeat"); setPlaying(false); } return n; })}>
           {STUTI_L.t("learn", lang)}
         </button>
+        <RecordChip follow={follow} lang={lang} />
         {/* how the page moves — two named stops, only where there is a page to move */}
         {flow && !learnOpen && !namaluOpen && (
           <div className="rd-view rd-pace" role="tablist" aria-label={STUTI_L.t("paceLbl", lang)} title={STUTI_L.t(drift ? "driftNote" : "pointerNote", lang)}>
@@ -1421,7 +1422,7 @@ function ReaderView({ hymn, deity, go, theme, toggleTheme, lang, setLang, backVi
               </button>
             )}
             {learnMode === "repeat" && (
-              <button className={"rd-seg-rec" + (recordOn ? " on" : "")} onClick={() => setRecordOn(v => !v)}
+              <button className={"rd-seg-rec" + (recordOn ? " on" : "")} onClick={() => { setLearnOpen(false); setPlaying(false); follow.record(); }}
                 aria-pressed={recordOn} aria-label={STUTI_L.t("recordTurn", lang)} title={STUTI_L.t("recordTurn", lang)}>
                 <Icon name="mic" size={17} /><span className="rd-seg-rec-lbl">{STUTI_L.t("recordTurn", lang)}</span>
               </button>
