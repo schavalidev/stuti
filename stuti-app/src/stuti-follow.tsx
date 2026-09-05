@@ -181,6 +181,7 @@ export function useFollow({ hymn, lines, lang, active, setActive, setWord, setPl
   };
   const share = () => {
     if (!native) return;
+    if (onRef.current) stop();   // close the session, then hand it over
     voskShareSession(log.current.join("\n")).catch(() => {});
   };
 

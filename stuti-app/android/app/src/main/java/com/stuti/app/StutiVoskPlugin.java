@@ -300,7 +300,7 @@ public class StutiVoskPlugin extends Plugin {
         short[] buf = new short[CHUNK];
         ByteBuffer bb = ByteBuffer.allocate(CHUNK * 2).order(ByteOrder.LITTLE_ENDIAN);
         try {
-            if (capture) { wav = new RandomAccessFile(wavFile(), "rw"); wav.setLength(0); wav.write(new byte[44]); }
+            if (capture) { wav = new RandomAccessFile(wavFile(), "rw"); wav.setLength(0); writeWavHeader(wav, 0); wav.seek(44); }
             audio.startRecording();
             long lastLevel = 0;
             while (running) {
@@ -319,6 +319,9 @@ public class StutiVoskPlugin extends Plugin {
                 if (wav != null) {
                     bb.clear(); for (int i = 0; i < n; i++) bb.putShort(buf[i]);
                     wav.write(bb.array(), 0, n * 2); bytes += n * 2;
+                    /* keep the header honest while recording, so a file shared
+                       mid-session still opens (the founder's first one did not) */
+                    if ((bytes / (n * 2)) % 20 == 0) { long at = wav.getFilePointer(); writeWavHeader(wav, bytes); wav.seek(at); }
                 }
                 if (rec.acceptWaveForm(buf, n)) emit("result", field(rec.getResult(), "text"));
                 else emit("partial", field(rec.getPartialResult(), "partial"));
@@ -384,6 +387,7 @@ public class StutiVoskPlugin extends Plugin {
     @PluginMethod
     public void shareSession(PluginCall call) {
         String log = call.getString("log", "");
+        stopInternal();   // a session shared while still listening is closed first
         try {
             ArrayList<Uri> uris = new ArrayList<>();
             String auth = getContext().getPackageName() + ".fileprovider";

@@ -34,7 +34,11 @@ export const VOSK_MODELS = {
 export type VoskLang = keyof typeof VOSK_MODELS;
 
 export const voskAvailable = () => Capacitor.isNativePlatform() && Capacitor.getPlatform() === "android";
-export const voskLangFor = (script: string): VoskLang => (script === "telugu" ? "te" : "hi");
+/* Every script gets the Hindi ears. The Telugu model was tried on the
+   founder's own chanting (Liṅgāṣṭakam, Telugu script, 55 s): one word.
+   The Hindi model on the same audio: seventy-odd results with "liṅgam"
+   on nearly every line. Matching is script-blind, so the ears can be. */
+export const voskLangFor = (_script: string): VoskLang => "hi";
 
 export async function voskModelReady(lang: VoskLang): Promise<boolean> {
   try { return (await Native.modelStatus({ id: VOSK_MODELS[lang].id })).ready; } catch (e) { return false; }
