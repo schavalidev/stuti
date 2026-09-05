@@ -18,7 +18,7 @@ function patch(from, to, what) {
 
 patch(
   `import { nityaQueue } from "./stuti-nitya-queue";`,
-  `import { nityaQueue } from "./stuti-nitya-queue";\nimport { useFollow, FollowButton, FollowChip } from "./stuti-follow";`,
+  `import { nityaQueue } from "./stuti-nitya-queue";\nimport { useFollow, FollowButton, FollowChip, RecitationsButton } from "./stuti-follow";`,
   "import line",
 );
 
@@ -53,7 +53,7 @@ patch(
 // the mic, beside the stotra's title (the user's call: not in the tools panel)
 patch(
   `<div className="reader-topbar-name display">{hymnTitle(hymn, lang)}<FavButton id={hymn.id} size={21} /></div>`,
-  `<div className="reader-topbar-name display">{hymnTitle(hymn, lang)}<FavButton id={hymn.id} size={21} /><FollowButton follow={follow} lang={lang} /></div>`,
+  `<div className="reader-topbar-name display">{hymnTitle(hymn, lang)}<FavButton id={hymn.id} size={21} /><FollowButton follow={follow} lang={lang} /><RecitationsButton follow={follow} lang={lang} /></div>`,
   "topbar title (after FavButton)",
 );
 

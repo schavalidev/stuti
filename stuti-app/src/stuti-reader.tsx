@@ -21,7 +21,7 @@ import { ShareSheet, printStotra } from "./stuti-share";
 import { STUTI_PROGRESS } from "./stuti-store";
 import { STUTI_RITUAL } from "./stuti-texts";
 import { nityaQueue } from "./stuti-nitya-queue";
-import { useFollow, FollowButton, FollowChip } from "./stuti-follow";
+import { useFollow, FollowButton, FollowChip, RecitationsButton } from "./stuti-follow";
 import { STUTI_TRANSLIT } from "./stuti-translit";
 
 /* ============================================================
@@ -870,6 +870,7 @@ function ReaderView({ hymn, deity, go, theme, toggleTheme, lang, setLang, backVi
 
   // reset per-line learn state
   useEffect(() => { setPhase("chant"); setPeek(false); setRepIter(1); }, [active, learnMode]);
+  useEffect(() => { if (!playing) setPhase("chant"); }, [playing]);
 
   /* the queue: arriving from the countdown, begin at once */
   useEffect(() => {
@@ -904,11 +905,12 @@ function ReaderView({ hymn, deity, go, theme, toggleTheme, lang, setLang, backVi
   useEffect(() => {
     if (!recordOn) return;
     if (speakingNow) { rec.clear(); rec.start(); }
-    else if (rec.state === "recording") rec.stop();
-  }, [speakingNow, recordOn]);
+    else rec.stop();
+  }, [speakingNow, recordOn, repIter]);   // each turn of Repeat xN is its own take
   useEffect(() => { if (!recordOn) rec.forget(); }, [recordOn]);
   useEffect(() => {
     if (!recordOn) return;
+    setMicNote(false);
     let live = true;
     const refuse = () => { if (live) { setMicNote(true); setRecordOn(false); } };
     const fp = document.featurePolicy || document.permissionsPolicy;
@@ -1288,7 +1290,7 @@ function ReaderView({ hymn, deity, go, theme, toggleTheme, lang, setLang, backVi
           <Icon name="back" />
         </button>
         <div className="reader-topbar-title">
-          <div className="reader-topbar-name display">{hymnTitle(hymn, lang)}<FavButton id={hymn.id} size={21} /><FollowButton follow={follow} lang={lang} /></div>
+          <div className="reader-topbar-name display">{hymnTitle(hymn, lang)}<FavButton id={hymn.id} size={21} /><FollowButton follow={follow} lang={lang} /><RecitationsButton follow={follow} lang={lang} /></div>
         </div>
         {/* settings in the corner; when the panel is pinned it carries its own gear */}
         {!panelPin ? <button className="icon-btn" onClick={() => setPanelOpen(v => !v)} aria-expanded={panelOpen}
@@ -1420,8 +1422,8 @@ function ReaderView({ hymn, deity, go, theme, toggleTheme, lang, setLang, backVi
             )}
             {learnMode === "repeat" && (
               <button className={"rd-seg-rec" + (recordOn ? " on" : "")} onClick={() => setRecordOn(v => !v)}
-                disabled={micNote} aria-pressed={recordOn} aria-label={STUTI_L.t("recordTurn", lang)} title={STUTI_L.t("recordTurn", lang)}>
-                <Icon name="mic" size={17} />
+                aria-pressed={recordOn} aria-label={STUTI_L.t("recordTurn", lang)} title={STUTI_L.t("recordTurn", lang)}>
+                <Icon name="mic" size={17} /><span className="rd-seg-rec-lbl">{STUTI_L.t("recordTurn", lang)}</span>
               </button>
             )}
             {/* the plan is the third thing you can do with a text you are learning,
@@ -1576,7 +1578,7 @@ function ReaderView({ hymn, deity, go, theme, toggleTheme, lang, setLang, backVi
       </div>
 
       {/* Repeat mode: the your-turn strip, replaced by the take once there is one */}
-      {repeatOn && recordOn && (rec.take || rec.recording) ? (
+      {repeatOn && recordOn && rec.take && !rec.recording ? (
         <RecordStrip rec={rec} lang={lang}
           expectedMs={active >= 0 ? lineMs(active) / speed : 3000}
           beats={(() => {
@@ -1588,7 +1590,8 @@ function ReaderView({ hymn, deity, go, theme, toggleTheme, lang, setLang, backVi
             return durs.slice(0, -1).map(d => (acc += d) / total);
           })()}
           onAgain={() => { rec.clear(); setPhase("speak"); setPlaying(true); }} />
-      ) : repeatOn && playing ? (
+      ) : null}
+      {repeatOn && playing ? (
         <div className={"rd-speak" + (speaking ? " on" : "")}>
           <span className="rd-mic">
             <span className="rd-core">◉</span>

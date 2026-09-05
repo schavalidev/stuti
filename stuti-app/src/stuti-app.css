@@ -60,3 +60,33 @@
 /* (A phone-width rule that moved the tools panels to the bottom of the
    screen lived here briefly and was reverted at the user's request; the
    panels sit where the design puts them.) */
+
+/* ---- recording a recitation (hand-authored, see stuti-follow.tsx) ---- */
+.rd-follow-act.rec { margin-left: 4px; white-space: nowrap; }
+.rd-follow-act.rec.on { background: color-mix(in oklab, #c0392b 18%, var(--surface)); color: #a5281c; border-color: color-mix(in oklab, #c0392b 40%, var(--line)); }
+.rd-follow-chip.is-recording .rd-follow-dot { background: #c0392b; }
+.rd-follow-chip.is-keep { gap: 6px; }
+.rd-follow-where { font-size: 12px; color: var(--ink-faint); }
+.rd-follow-chip.is-kept { cursor: pointer; }
+.rd-follow-act.danger { background: color-mix(in oklab, #c0392b 18%, var(--surface)); color: #a5281c; }
+.reader-topbar-name .rd-rec-btn { display: inline-flex; align-items: center; gap: 3px; height: 30px; padding: 0 9px; margin-left: 2px; border-radius: 999px; color: var(--accent-ink); background: var(--accent-soft); font-size: 12px; line-height: 1; }
+.rd-rec-count { font-weight: 700; }
+.rd-rec-scrim { position: fixed; inset: 0; background: color-mix(in oklab, var(--ink) 35%, transparent); z-index: 59; }
+.rd-rec-sheet { position: fixed; left: 0; right: 0; bottom: 0; max-height: 72vh; overflow: auto; background: var(--surface); color: var(--ink); border-radius: 18px 18px 0 0;
+  padding: 14px 16px calc(16px + var(--safe-area-inset-bottom, env(safe-area-inset-bottom, 0px))); box-shadow: 0 -6px 24px color-mix(in oklab, var(--ink) 18%, transparent); z-index: 60; }
+.rd-rec-head { display: flex; align-items: center; justify-content: space-between; gap: 10px; margin-bottom: 4px; }
+.rd-rec-title { font-size: 16px; font-weight: 700; }
+.rd-rec-empty { padding: 14px 0; color: var(--ink-soft); font-size: 14px; }
+.rd-rec-row { display: flex; align-items: center; gap: 10px; padding: 10px 0; border-top: 1px solid var(--line); }
+.rd-rec-play { flex: none; width: 40px; height: 40px; border-radius: 50%; display: grid; place-items: center; background: var(--accent-soft); color: var(--accent-ink); border: 0; }
+.rd-rec-row.is-playing .rd-rec-play { background: var(--accent-ink); color: var(--surface); }
+.rd-rec-meta { flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 2px; }
+.rd-rec-when { font-size: 14px; font-weight: 600; }
+.rd-rec-sub { font-size: 12px; color: var(--ink-faint); }
+.rd-rec-foot { margin-top: 12px; font-size: 12px; color: var(--ink-faint); }
+
+/* ---- Record & compare, repaired (see tools/codemod/fix-record-seam.mjs) ---- */
+.rd-seg-rec:not(.rd-seg-repcount) { width: auto; display: inline-flex; align-items: center; gap: 5px; padding: 0 10px; font-size: 0.8125rem; font-weight: 600; }
+.rd-seg-rec.on { color: #a5281c; background: color-mix(in oklab, #c0392b 16%, var(--surface)); }
+.rd-seg-rec.on .rd-seg-rec-lbl::before { content: ""; display: inline-block; width: 6px; height: 6px; border-radius: 50%; background: #c0392b; margin-right: 5px; vertical-align: 1px; animation: voice-pulse 1.1s ease-in-out infinite; }
+.reader.is-following .rd-speak, .reader.is-following .rt-strip { display: none; }

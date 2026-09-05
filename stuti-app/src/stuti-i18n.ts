@@ -412,9 +412,9 @@ export const STUTI_L = (function () {
     paceQuick:     { roman: "A little quick — let the line breathe", deva: "थोड़ा शीघ्र — पंक्ति को सांस दें", telugu: "కొంచెం వేగంగా ఉంది — నెమ్మదిగా చదవండి" },
     paceSlow:      { roman: "A little slow — keep it moving", deva: "थोड़ा मंद — गति बनाये रखें", telugu: "కొంచెం నెమ్మదిగా ఉంది — వేగం పెంచండి" },
     nothingHeard:  { roman: "Nothing heard — recite a little louder", deva: "कुल सुनाई नहीं — थोड़ा ऊँचा पाठ करें", telugu: "ఏమీ వినబడలేదు — కొంచెం పెద్దగా పలకండి" },
-    micDenied:     { roman: "The microphone is not available — recording needs permission. Open the app directly and try again.",
-                     deva: "माइक्रोफोन उपलब्ध नहीं — रिकॉर्डिंग के लिए अनुमति चाहिए। ऐप को सीधे खोलकर फिर से कोशिश करें।",
-                     telugu: "ఇక్కడ మైక్రోఫోన్ అందుబాటులో లేదు — రెకార్డు చేయడానికి అనుమతి కావాలి, మరొక పేజీ లోపల తెరిచిన పేజీకి అది సాధారణంగా ఇవ్వబడదు." },
+    micDenied:     { roman: "The microphone was refused. Allow it for Stuti in Settings → Apps → Stuti → Permissions, then switch Record on again.",
+                     deva: "माइक्रोफ़ोन को अनुमति नहीं मिली। सेटिंग्स → ऐप्स → Stuti → अनुमतियाँ में माइक्रोफ़ोन चालू करें, फिर रिकॉर्ड दोबारा चालू करें।",
+                     telugu: "మైక్రోఫోన్ అనుమతి నిరాకరించబడింది. సెట్టింగ్స్ → యాప్స్ → Stuti → అనుమతులు లో మైక్రోఫోన్ అనుమతించి, రికార్డు మళ్లీ ఆన్ చేయండి." },
 
     /* first run */
     obReadIn:     { roman: "How shall the verses read?", deva: "श्लोक किस लिपि में?", telugu: "శ్లోకాలు ఏ లిపిలో?" },

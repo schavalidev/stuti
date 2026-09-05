@@ -22,7 +22,7 @@ import { STUTI_L } from "./stuti-i18n";
    ============================================================ */
 const { useState: useStateR, useEffect: useEffectR, useRef: useRefR } = React;
 
-const REC_CAP_MS = 15000;   // no turn of a single line runs longer than this
+const REC_CAP_MS = 60000;   // a hard stop for a forgotten take; the turn's own timer ends a normal one
 
 function useRecTake() {
   const [state, setState] = useStateR("idle");     // idle | arming | recording | ready | denied
@@ -59,6 +59,7 @@ function useRecTake() {
   /* move to a line: bank nothing, recall what that line already has */
   const at = (k) => {
     if (k === key.current) return;
+    if (box.current.rec && box.current.rec.state === "recording") stop();   // the take closes under its own line
     key.current = k;
     const t = k != null ? bank.current.get(k) || null : null;
     setTake(t);
@@ -78,18 +79,22 @@ function useRecTake() {
 
   const start = async () => {
     release();                                          // never stack two streams
+    const mine = box.current;                           // this arm's box: a stop in flight replaces it
+    mine.key = key.current;                             // the line this take belongs to
     setState("arming");
     setTake((t) => { if (t && t.url) URL.revokeObjectURL(t.url); return null; });
     if (!navigator.mediaDevices || !navigator.mediaDevices.getUserMedia) { setState("denied"); return; }
     let stream;
     try { stream = await navigator.mediaDevices.getUserMedia({ audio: true }); }
     catch (e) { setState("denied"); return; }
+    if (box.current !== mine) { stream.getTracks().forEach((t) => t.stop()); return; }   // stopped while the mic was opening
     const b = box.current;
     b.stream = stream;
     b.env = [];
     b.t0 = performance.now();
     try {
       b.ctx = new (window.AudioContext || window.webkitAudioContext)();
+      if (b.ctx.state !== "running") b.ctx.resume().catch(() => {});
       const an = b.ctx.createAnalyser();
       an.fftSize = 512;
       b.ctx.createMediaStreamSource(stream).connect(an);
@@ -108,7 +113,7 @@ function useRecTake() {
       const chunks = [];
       rec.ondataavailable = (e) => { if (e.data && e.data.size) chunks.push(e.data); };
       rec.onstop = () => {
-        const bb = box.current;
+        const bb = b;                                   // the box this take was made in, not whatever is current
         const discarded = bb.discard;
         const ms = performance.now() - (bb.t0 || performance.now());
         const env = (bb.env || []).slice();
@@ -116,7 +121,8 @@ function useRecTake() {
         if (discarded) return;
         const url = chunks.length ? URL.createObjectURL(new Blob(chunks, { type: chunks[0].type })) : null;
         const t = { url, env, ms };
-        if (key.current != null) bank.current.set(key.current, t);
+        if (bb.key != null) bank.current.set(bb.key, t);
+        if (bb.key != null && bb.key !== key.current) return;   // closed for a line we have left: banked, not shown
         setTake(t);
         setState("ready");
       };
@@ -182,7 +188,7 @@ function RecordStrip({ rec, expectedMs, beats, lang, onAgain }) {
     if (!el) return;
     let raf;
     const tick = () => {
-      if (el.duration && !el.paused) { setFrac(el.currentTime / el.duration); raf = requestAnimationFrame(tick); }
+      if (!el.paused) { setFrac(Math.min(1, (el.currentTime * 1000) / Math.max(1, take.ms || 0))); raf = requestAnimationFrame(tick); }
     };
     const onPlay = () => { raf = requestAnimationFrame(tick); };
     const onEnd = () => { cancelAnimationFrame(raf); setFrac(null); };

@@ -35,6 +35,9 @@ import java.nio.ByteBuffer;
 import java.nio.ByteOrder;
 import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
+import java.util.Arrays;
+import org.json.JSONArray;
+import org.json.JSONObject;
 import java.util.concurrent.LinkedBlockingQueue;
 import java.util.zip.ZipEntry;
 import java.util.zip.ZipInputStream;
@@ -422,6 +425,105 @@ public class StutiVoskPlugin extends Plugin {
         Thread t = loop;
         loop = null;
         if (t != null) { try { t.join(1500); } catch (InterruptedException ignored) {} }
+    }
+
+    /* ---- kept recitations: the session's audio moved into the app's own
+       storage, with a sidecar naming the hymn and where each line begins ---- */
+    private File recDir() { File d = new File(getContext().getFilesDir(), "recitations"); d.mkdirs(); return d; }
+    private File recWav(String id) { return new File(recDir(), id + ".wav"); }
+    private File recMeta(String id) { return new File(recDir(), id + ".json"); }
+
+    private JSObject entryOf(JSONObject m) {
+        JSObject e = new JSObject();
+        for (java.util.Iterator<String> it = m.keys(); it.hasNext();) { String k = it.next(); e.put(k, m.opt(k)); }
+        File w = recWav(m.optString("id"));
+        e.put("path", w.getAbsolutePath());
+        e.put("size", w.length());
+        return e;
+    }
+
+    @PluginMethod
+    public void keepRecording(PluginCall call) {
+        stopInternal();                                   // the file is whole once the loop has closed it
+        String hymn = call.getString("hymn", "");
+        if (hymn.isEmpty()) { call.reject("hymn required"); return; }
+        File src = wavFile();
+        if (!src.isFile() || src.length() <= 44) { call.reject("nothing recorded"); return; }
+        try {
+            String id = hymn.replaceAll("[^A-Za-z0-9_-]", "_") + "-" + System.currentTimeMillis();
+            File dst = recWav(id);
+            if (!src.renameTo(dst)) { copy(src, dst); src.delete(); }
+            JSONObject m = new JSONObject();
+            m.put("id", id);
+            m.put("hymn", hymn);
+            m.put("title", call.getString("title", ""));
+            m.put("lang", call.getString("lang", ""));
+            m.put("at", System.currentTimeMillis());
+            m.put("dur", (dst.length() - 44) / (double) (RATE * 2));
+            m.put("lineCount", call.getInt("lineCount", 0));
+            m.put("linesLit", call.getInt("linesLit", 0));
+            JSArray cues = call.getArray("cues", new JSArray());
+            m.put("cues", new JSONArray(cues.toString()));
+            try (FileWriter w = new FileWriter(recMeta(id))) { w.write(m.toString()); }
+            call.resolve(entryOf(m));
+        } catch (Exception e) {
+            call.reject("keep failed: " + e);
+        }
+    }
+
+    @PluginMethod
+    public void listRecordings(PluginCall call) {
+        String hymn = call.getString("hymn", "");
+        JSArray out = new JSArray();
+        File[] metas = recDir().listFiles((d, n) -> n.endsWith(".json"));
+        if (metas != null) {
+            Arrays.sort(metas, (a, b) -> Long.compare(b.lastModified(), a.lastModified()));
+            for (File f : metas) {
+                try {
+                    JSONObject m = new JSONObject(new String(java.nio.file.Files.readAllBytes(f.toPath()), StandardCharsets.UTF_8));
+                    if (!hymn.isEmpty() && !hymn.equals(m.optString("hymn"))) continue;
+                    if (!recWav(m.optString("id")).isFile()) continue;
+                    out.put(entryOf(m));
+                } catch (Exception ignored) {}
+            }
+        }
+        JSObject r = new JSObject(); r.put("recordings", out);
+        call.resolve(r);
+    }
+
+    @PluginMethod
+    public void deleteRecording(PluginCall call) {
+        String id = call.getString("id", "");
+        if (id.isEmpty() || id.contains("/") || id.contains("..")) { call.reject("bad id"); return; }
+        recWav(id).delete(); recMeta(id).delete();
+        call.resolve();
+    }
+
+    @PluginMethod
+    public void shareRecording(PluginCall call) {
+        String id = call.getString("id", "");
+        File w = recWav(id);
+        if (!w.isFile()) { call.reject("no such recording"); return; }
+        try {
+            String auth = getContext().getPackageName() + ".fileprovider";
+            Intent send = new Intent(Intent.ACTION_SEND);
+            send.setType("audio/wav");
+            send.putExtra(Intent.EXTRA_STREAM, FileProvider.getUriForFile(getContext(), auth, w));
+            send.putExtra(Intent.EXTRA_SUBJECT, call.getString("title", "Stuti recitation"));
+            send.addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION);
+            Intent chooser = Intent.createChooser(send, call.getString("title", "Stuti recitation"));
+            chooser.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+            getActivity().startActivity(chooser);
+            call.resolve();
+        } catch (Exception e) {
+            call.reject("share failed: " + e);
+        }
+    }
+
+    private static void copy(File a, File b) throws Exception {
+        try (InputStream in = new FileInputStream(a); FileOutputStream out = new FileOutputStream(b)) {
+            byte[] buf = new byte[1 << 16]; int n; while ((n = in.read(buf)) > 0) out.write(buf, 0, n);
+        }
     }
 
     /* ---- hand the last session (audio + the page's log) to another app ---- */

@@ -23,10 +23,22 @@ type Plugin = {
   shareSession(o: { log: string }): Promise<void>;
   log(o: { msg: string }): Promise<void>;
   note(o: { line: string; fresh?: boolean }): Promise<void>;
+  keepRecording(o: { hymn: string; title: string; lang: string; cues: number[]; lineCount: number; linesLit: number }): Promise<Recitation>;
+  listRecordings(o: { hymn: string }): Promise<{ recordings: Recitation[] }>;
+  deleteRecording(o: { id: string }): Promise<void>;
+  shareRecording(o: { id: string; title: string }): Promise<void>;
   addListener(ev: "partial" | "result" | "progress" | "error" | "level", fn: (d: any) => void): Promise<Handle>;
 };
 
 const Native = registerPlugin<Plugin>("StutiVosk");
+
+/** A kept recitation: the session's audio in the app's own storage, with
+    the second at which each line of the text begins. */
+export type Recitation = {
+  id: string; hymn: string; title: string; lang: string; at: number;
+  dur: number; lineCount: number; linesLit: number; cues: number[];
+  path?: string; size: number;
+};
 
 export const VOSK_MODELS = {
   hi: { id: "vosk-model-small-hi-0.22", url: "https://alphacephei.com/vosk/models/vosk-model-small-hi-0.22.zip", mb: 45, label: "Hindi" },
@@ -66,6 +78,14 @@ export function voskLog(msg: string) { if (voskAvailable()) Native.log({ msg }).
 /** A line of the session log, onto the phone's disk as it happens. */
 export function voskNote(line: string, fresh = false) { if (voskAvailable()) Native.note({ line, fresh }).catch(() => {}); }
 
+/* ---- kept recitations (Android: files under filesDir/recitations) ---- */
+export const voskKeepRecording = (o: { hymn: string; title: string; lang: string; cues: number[]; lineCount: number; linesLit: number }) => Native.keepRecording(o);
+export const voskListRecordings = async (hymn: string): Promise<Recitation[]> => (await Native.listRecordings({ hymn })).recordings || [];
+export const voskDeleteRecording = (id: string) => Native.deleteRecording({ id });
+export const voskShareRecording = (id: string, title: string) => Native.shareRecording({ id, title });
+/** A file of the app's own, as a URL the WebView will play. */
+export const voskFileUrl = (path: string) => Capacitor.convertFileSrc(path);
+
 /** Hand the last session (audio + the page's log) to another app, so a
     real chant can be replayed on a desk for tuning. */
 export function voskShareSession(log: string): Promise<void> {
@@ -83,6 +103,7 @@ export class VoskRecognition {
   onresult: ((ev: any) => void) | null = null;
   onerror: ((ev: any) => void) | null = null;
   onend: (() => void) | null = null;
+  onstart: (() => void) | null = null;                 // the mic is open and the file has begun
   onlevel: ((level: number) => void) | null = null;   // mic loudness 0..1, a few times a second
   onraw: ((text: string) => void) | null = null;      // the recogniser's words before "[unk]" is dropped
   private handles: Handle[] = [];
@@ -112,6 +133,7 @@ export class VoskRecognition {
         if (this.onerror) this.onerror({ error: String((d && d.message) || "audio") });
       }));
       await Native.start({ id: VOSK_MODELS[lang].id, grammar: this.grammar || undefined, capture: true });
+      if (this.live && this.onstart) this.onstart();
     } catch (e: any) {
       const msg = String((e && e.message) || e);
       this.live = false;

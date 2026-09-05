@@ -20,6 +20,7 @@ node fix-alias-collisions.mjs
 node fix-name-collisions.mjs
 node fix-hand-patches.mjs
 node fix-follow-seam.mjs
+node fix-record-seam.mjs
 node setup-entry.mjs
 node fix-missing-imports.mjs
 # record which design commit src/ now corresponds to (read by

@@ -2,6 +2,7 @@ import "./stuti-voice-shim"; // must come first: replaces window.SpeechRecogniti
 import ReactDOM from "react-dom/client";
 import App from "./stuti-main";
 import { STUTI_NUDGE } from "./stuti-nudge";
+import { registerKept } from "./stuti-recitations"; // kept recitations become each hymn's Listen recording
 import "./stuti.css";
 import "./stuti-components.css";
 import "./stuti-palette.css";
@@ -18,3 +19,4 @@ ReactDOM.createRoot(document.getElementById("root")!).render(<App />);
    handled by vite-plugin-pwa instead of the prototype's hand-written
    stuti-sw.js / manual registration block — see vite.config.ts) */
 if (STUTI_NUDGE) STUTI_NUDGE.start();
+registerKept();
