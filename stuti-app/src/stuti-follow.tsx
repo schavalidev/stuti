@@ -83,6 +83,8 @@ export function useFollow({ hymn, lines, lang, active, setActive, setWord, setPl
   const [pct, setPct] = React.useState(0);
   const [heard, setHeard] = React.useState("");   // the last thing the ears reported — shown in the chip
   const [events, setEvents] = React.useState(0);  // how many results have arrived (0 = the ears are silent)
+  const [level, setLevel] = React.useState(0);    // mic loudness (Android), so a dead mic shows as one
+  const [raw, setRaw] = React.useState("");       // the recogniser's last words, "[unk]" included
   const eng = React.useRef<FollowEngine | null>(null);
   const rec = React.useRef<any>(null);
   const onRef = React.useRef(false);
@@ -132,6 +134,8 @@ export function useFollow({ hymn, lines, lang, active, setActive, setWord, setPl
       else if (/model-missing/.test(e)) stop("needs-model");
       /* "no-speech" and friends just mean a quiet stretch */
     };
+    r.onlevel = (v: number) => setLevel(v);
+    r.onraw = (text: string) => { setRaw(text.slice(-60)); setEvents((n) => n + 1); log.current.push(((Date.now() - t0.current) / 1000).toFixed(2) + " raw " + text); };
     r.onend = () => {
       rec.current = null;
       /* the browser's recogniser closes after a pause: reopen it. Vosk only
@@ -159,7 +163,7 @@ export function useFollow({ hymn, lines, lang, active, setActive, setWord, setPl
     onRef.current = true;
     setOn(true);
     setStatus("listening");
-    setHeard(""); setEvents(0);
+    setHeard(""); setEvents(0); setLevel(0); setRaw("");
     t0.current = Date.now();
     log.current = ["# Stuti Follow " + new Date().toISOString() + " hymn=" + (hymn && hymn.id) + " lang=" + lang + " ears=" + (native ? "vosk-" + voskLang : "browser")];
     grammar.current = null;
@@ -211,7 +215,7 @@ export function useFollow({ hymn, lines, lang, active, setActive, setWord, setPl
   React.useEffect(() => { if (on) { stop(); start(); } }, [lang]);   // eslint-disable-line react-hooks/exhaustive-deps
   React.useEffect(() => () => stop(), [hymn && hymn.id]);            // leaving the text stops listening
 
-  return { on, status, pct, heard, events, supported, native, showChip, voskLang, start, stop, toggle, download, dismiss, share };
+  return { on, status, pct, heard, events, level, raw, supported, native, showChip, voskLang, start, stop, toggle, download, dismiss, share };
 }
 
 export function FollowButton({ follow, lang }: { follow: ReturnType<typeof useFollow>; lang: string }) {
@@ -259,8 +263,11 @@ export function FollowChip({ follow, lang }: { follow: ReturnType<typeof useFoll
       <span className="rd-follow-dot" aria-hidden="true" />
       <span className="rd-follow-text">
         <span>{text}</span>
-        {showHeard && <span className="rd-follow-heard">{follow.events ? "“" + follow.heard + "”" : "…"}</span>}
+        {showHeard && <span className="rd-follow-heard">{follow.events ? "“" + (follow.raw || follow.heard) + "”" : "…"}</span>}
       </span>
+      {showHeard && follow.native && (
+        <span className="rd-follow-level" aria-hidden="true"><span style={{ transform: "scaleY(" + Math.max(0.08, follow.level) + ")" }} /></span>
+      )}
     </div>
   );
 }

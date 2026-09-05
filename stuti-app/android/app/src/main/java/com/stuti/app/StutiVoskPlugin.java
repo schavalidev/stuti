@@ -302,9 +302,20 @@ public class StutiVoskPlugin extends Plugin {
         try {
             if (capture) { wav = new RandomAccessFile(wavFile(), "rw"); wav.setLength(0); wav.write(new byte[44]); }
             audio.startRecording();
+            long lastLevel = 0;
             while (running) {
                 int n = audio.read(buf, 0, CHUNK);
                 if (n <= 0) continue;
+                /* how loud the mic is, a few times a second — the chip shows
+                   it, so a silent microphone and a silent recogniser look
+                   different to the reciter (and to whoever reads their log) */
+                long now = System.currentTimeMillis();
+                if (now - lastLevel >= 200) {
+                    lastLevel = now;
+                    double sum = 0; for (int i = 0; i < n; i++) sum += (double) buf[i] * buf[i];
+                    double rms = Math.sqrt(sum / n) / 32768.0;
+                    JSObject d = new JSObject(); d.put("level", Math.min(1.0, rms * 6)); notifyListeners("level", d);
+                }
                 if (wav != null) {
                     bb.clear(); for (int i = 0; i < n; i++) bb.putShort(buf[i]);
                     wav.write(bb.array(), 0, n * 2); bytes += n * 2;

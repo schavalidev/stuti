@@ -22,7 +22,7 @@ type Plugin = {
   vocab(o: { id: string }): Promise<{ words: string }>;
   shareSession(o: { log: string }): Promise<void>;
   log(o: { msg: string }): Promise<void>;
-  addListener(ev: "partial" | "result" | "progress" | "error", fn: (d: any) => void): Promise<Handle>;
+  addListener(ev: "partial" | "result" | "progress" | "error" | "level", fn: (d: any) => void): Promise<Handle>;
 };
 
 const Native = registerPlugin<Plugin>("StutiVosk");
@@ -75,12 +75,15 @@ export class VoskRecognition {
   onresult: ((ev: any) => void) | null = null;
   onerror: ((ev: any) => void) | null = null;
   onend: (() => void) | null = null;
+  onlevel: ((level: number) => void) | null = null;   // mic loudness 0..1, a few times a second
+  onraw: ((text: string) => void) | null = null;      // the recogniser's words before "[unk]" is dropped
   private handles: Handle[] = [];
   private live = false;
 
   private emit(raw: string, isFinal: boolean) {
     /* in grammar mode the recogniser names what it could not place "[unk]";
        that is silence to the matcher, not a word */
+    if (this.onraw) this.onraw(raw);
     const transcript = raw.replace(/\[unk\]/g, " ").replace(/\s+/g, " ").trim();
     if (!transcript) return;
     const result: any = [{ transcript, confidence: 1 }];
@@ -94,6 +97,7 @@ export class VoskRecognition {
     try {
       this.handles.push(await Native.addListener("partial", (d: any) => { if (this.live && d && d.text) this.emit(String(d.text), false); }));
       this.handles.push(await Native.addListener("result", (d: any) => { if (this.live && d && d.text) this.emit(String(d.text), true); }));
+      this.handles.push(await Native.addListener("level", (d: any) => { if (this.live && this.onlevel) this.onlevel(Number(d && d.level) || 0); }));
       this.handles.push(await Native.addListener("error", (d: any) => {
         if (!this.live) return;
         if (this.onerror) this.onerror({ error: String((d && d.message) || "audio") });
