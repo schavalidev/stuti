@@ -1260,7 +1260,6 @@ function ReaderView({ hymn, deity, go, theme, toggleTheme, lang, setLang, backVi
       </button>
       <RdScriptSeg lang={lang} setLang={setLang} />
       <SizePicker dec={() => bumpSize(-1)} inc={() => bumpSize(1)} atMin={fontScale <= SIZES[0]} atMax={fontScale >= SIZES[SIZES.length - 1]} />
-      <FollowButton follow={follow} lang={lang} />
       <span className="rd-toppanel-gap" />
       <button className={"icon-btn" + (shareLeft <= 0 ? " is-locked" : "")} title={limTitle(shareLeft, "share")} aria-label={STUTI_L.t("share", lang)}
         onClick={() => { panelDismiss(); gated("share", () => setShareOpen(true))(); }}>
@@ -1289,7 +1288,7 @@ function ReaderView({ hymn, deity, go, theme, toggleTheme, lang, setLang, backVi
           <Icon name="back" />
         </button>
         <div className="reader-topbar-title">
-          <div className="reader-topbar-name display">{hymnTitle(hymn, lang)}<FavButton id={hymn.id} size={21} /></div>
+          <div className="reader-topbar-name display">{hymnTitle(hymn, lang)}<FavButton id={hymn.id} size={21} /><FollowButton follow={follow} lang={lang} /></div>
         </div>
         {/* settings in the corner; when the panel is pinned it carries its own gear */}
         {!panelPin ? <button className="icon-btn" onClick={() => setPanelOpen(v => !v)} aria-expanded={panelOpen}

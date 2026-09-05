@@ -50,11 +50,11 @@ patch(
   "verse-view line-off class",
 );
 
-// the mic, beside the size picker in the tools panel
+// the mic, beside the stotra's title (the user's call: not in the tools panel)
 patch(
-  `atMax={fontScale >= SIZES[SIZES.length - 1]} />\n      <span className="rd-toppanel-gap" />`,
-  `atMax={fontScale >= SIZES[SIZES.length - 1]} />\n      <FollowButton follow={follow} lang={lang} />\n      <span className="rd-toppanel-gap" />`,
-  "tools panel (after SizePicker)",
+  `<div className="reader-topbar-name display">{hymnTitle(hymn, lang)}<FavButton id={hymn.id} size={21} /></div>`,
+  `<div className="reader-topbar-name display">{hymnTitle(hymn, lang)}<FavButton id={hymn.id} size={21} /><FollowButton follow={follow} lang={lang} /></div>`,
+  "topbar title (after FavButton)",
 );
 
 // the status chip, in the same slot the find strip uses

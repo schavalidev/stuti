@@ -26,8 +26,10 @@
 }
 
 /* 3. Follow — the reader listens and the light keeps pace (stuti-follow.tsx).
-   The mic in the tools panel pulses while following, using the same
-   voice-pulse the search mic uses; the chip sits above the reciter bar. */
+   The mic sits beside the stotra's title (user's call), pulsing while
+   following with the same voice-pulse the search mic uses; the chip sits
+   above the reciter bar. */
+.reader-topbar-name .rd-follow-btn { display: inline-flex; vertical-align: middle; width: 36px; height: 36px; min-width: 36px; margin-left: 4px; border-radius: 999px; color: var(--ink-soft); }
 .rd-follow-btn.is-on { color: var(--accent-ink); background: var(--accent-soft); animation: voice-pulse 1.1s ease-in-out infinite; }
 .rd-follow-btn.is-on.is-lost { animation: none; color: var(--ink-faint); }
 .rd-follow-chip {
@@ -41,3 +43,23 @@
 .rd-follow-chip.is-lost .rd-follow-dot { background: var(--ink-faint); animation: none; }
 .rd-follow-chip.is-done .rd-follow-dot { background: var(--leaf-green-1, var(--gold)); animation: none; }
 .rd-follow-chip.is-denied .rd-follow-dot, .rd-follow-chip.is-unsupported .rd-follow-dot { background: var(--caution, var(--ink-faint)); animation: none; }
+
+/* 4. Thumb reach. The tools panels (the reader's and the app's) were the
+   first thing in their column — the very top of a tall phone, out of
+   reach one-handed. Both shells are flex columns, so on phone widths the
+   pinned panel takes the last slot, just above the tab bar, and the
+   dropdown rises from the bottom instead of dropping from the top. The
+   tablet/desktop layout keeps the design's placement. */
+@media (max-width: 720px) {
+  .view.reader { display: flex; flex-direction: column; }
+  .view.reader > .rd-toppanel.is-pinned { order: 99; border-bottom: 0; border-top: 1px solid var(--line); padding-top: 6px; padding-bottom: 6px; }
+  .app > .rd-toppanel.is-pinned { order: 90; margin: 0; border-bottom: 0; border-top: 1px solid var(--line); }
+  .app > .tabbar { order: 100; }
+  .rd-toppanel.is-drop {
+    top: auto; bottom: 0;
+    border-bottom: 0; border-top: 1px solid var(--line);
+    box-shadow: 0 -14px 30px rgba(0, 0, 0, 0.16);
+    padding-bottom: calc(10px + var(--safe-area-inset-bottom, env(safe-area-inset-bottom, 0px)));
+  }
+  .rd-toppanel.is-drop .rd-pin-btn { top: auto; bottom: calc(10px + var(--safe-area-inset-bottom, env(safe-area-inset-bottom, 0px))); }
+}
