@@ -56,7 +56,12 @@ function teluguToDeva(s: string): string {
 
 function devaToLatin(s: string): string {
   let out = "";
-  for (const ch of s) {
+  const chars = [...s];
+  for (let i = 0; i < chars.length; i++) {
+    const ch = chars[i];
+    /* anusvāra is the nasal of whatever follows; at the end of a word it is
+       the m the ears report ("liṅgaṁ" is heard as "liṅgam") */
+    if (ch === "ं" || ch === "ँ") { out += i + 1 < chars.length && /[\u0915-\u0939]/.test(chars[i + 1]) ? "n" : "m"; continue; }
     if (DEVA[ch] !== undefined) out += DEVA[ch];
     else if (/[ऀ-ॿ]/.test(ch)) continue; // stray marks, digits, etc.
     else out += ch;
@@ -145,7 +150,7 @@ export class FollowEngine {
       said, so lighting that word would always trail the reciter; a
       teleprompter shows what comes next. */
   get lead(): Pos | null {
-    if (this.idx < 0) return null;
+    if (this.idx < -1 || !this.toks.length) return null;
     const t = this.toks[Math.min(this.idx + 1, this.toks.length - 1)];
     return { line: t.line, word: t.word };
   }
@@ -182,8 +187,16 @@ export class FollowEngine {
   private runEndingAt(end: number, len: number): string {
     let s = "";
     for (let i = end; i >= 0 && s.length < len; i--) s = this.toks[i].key + s;
-    return s;
+    return s.slice(-len);   // the tail of a long compound, not the whole of it
   }
+  /* ...and the run starting at `start`, for the head of a line: a reciter
+     who begins a line has said its first sounds, not its last */
+  private runStartingAt(start: number, len: number): string {
+    let s = "";
+    for (let i = start; i < this.toks.length && s.length < len; i++) s += this.toks[i].key;
+    return s.slice(0, len);
+  }
+  private isLineStart(i: number): boolean { return i === 0 || this.toks[i].line !== this.toks[i - 1].line; }
 
   /* The bar a match must clear: short runs are easy to hit by accident,
      long ones tolerate more mishearing */
@@ -195,30 +208,29 @@ export class FollowEngine {
      suffix of the last few heard words is tried (a Hindi recogniser breaks
      one Sanskrit compound into several words, and drops junk words in
      between — a suffix that skips the junk still fits). Ties go to the
-     position just ahead of the light. `strict` (used when lost) wants a
-     longer run and a clear winner over any other place in the text. */
+     position just ahead of the light. `strict` (used away from the light)
+     wants a longer run, or one long word said exactly, and a clear winner
+     over any other place in the text — including an identical one, since
+     an ambiguous word must not teleport the light. */
   private best(from: number, to: number, keys: string[], cur: number, strict: boolean) {
     const scores: number[] = [];
     let bi = -1, bq = -Infinity;
     for (let e = Math.max(0, from); e <= Math.min(to, this.toks.length - 1); e++) {
       let q = -Infinity;
-      /* a single word may only carry the light onward within the current
-         line or the next; a longer jump, or any step back, needs a run */
       const curLine = cur >= 0 ? this.toks[cur].line : -1;
       const far = this.toks[e].line > curLine + 1;      // more than a line ahead
       const minN = e < cur ? 2 : 1;
       for (let n = minN; n <= Math.min(6, keys.length); n++) {
         const h = keys.slice(-n).join("");
         if (h.length < (n > 1 ? 4 : 3)) continue;
-        /* one word alone may carry the light more than a line ahead, or
-           re-find it when lost, only when it is long and unmistakable — the
-           case of ears that catch one word in three, which is how a Telugu
-           model hears a compound-heavy verse */
+        /* one word alone may carry the light more than a line ahead only
+           when it is long and unmistakable — the case of ears that catch
+           one word in three, which is how a compound-heavy verse is heard */
         const lone = n === 1 && (far || strict);
-        if (lone && h.length < (strict ? 5 : 4)) continue;
+        if (lone && h.length < (strict ? 6 : 4)) continue;
         if (strict && n > 1 && h.length < 8) continue;
         const s = sim(h, this.runEndingAt(e, h.length));
-        const over = lone ? s - (strict ? 0.9 : this.bar(h.length) + 0.1) : s - this.bar(h.length) - (strict ? 0.05 : 0);
+        const over = lone ? s - (strict ? 0.95 : this.bar(h.length) + 0.1) : s - this.bar(h.length) - (strict ? 0.05 : 0);
         if (over > q) q = over;
       }
       scores[e] = q;
@@ -228,12 +240,40 @@ export class FollowEngine {
       if (qq > bq) { bq = qq; bi = e; }
     }
     if (bi < 0 || scores[bi] < 0) return { idx: -1, margin: 0 };
-    /* the runner-up, for the margin: another place that fits nearly as
-       well. An identical fit (the refrain every verse ends on) is not a
-       rival — the nearest one ahead of the light was already chosen. */
     let second = -Infinity;
-    for (let e = from; e <= to; e++) if (scores[e] != null && Math.abs(e - bi) > 2 && scores[e] < scores[bi] - 1e-9 && scores[e] > second) second = scores[e];
+    for (let e = from; e <= to; e++) {
+      if (scores[e] == null || Math.abs(e - bi) <= 2) continue;
+      /* nearby, an identical fit (the refrain every verse ends on) is not a
+         rival — the nearest one ahead was chosen; far away it is */
+      if (!strict && scores[e] >= scores[bi] - 1e-9) continue;
+      if (scores[e] > second) second = scores[e];
+    }
     return { idx: bi, margin: scores[bi] - (second === -Infinity ? -1 : second) };
+  }
+
+  /* The head of a line: a reciter who goes back to the first line, or
+     skips to the next verse, has just said its first sounds. Compared
+     against the start of every line, and taken only when one line's head
+     fits exactly and no other comes close. Returns the line's first token. */
+  private bestHead(keys: string[]) {
+    let bi = -1, bs = 0, second = 0;
+    for (let e = 0; e < this.toks.length; e++) {
+      if (!this.isLineStart(e)) continue;
+      let q = 0;
+      for (let n = 1; n <= Math.min(4, keys.length); n++) {
+        const h = keys.slice(-n).join("");
+        if (h.length < 4) continue;
+        /* one short word may only send the light back to the first line
+           (the restart every reciter makes); any other line needs more */
+        if (n === 1 && e > 0 && h.length < 6) continue;
+        const sc = sim(h, this.runStartingAt(e, h.length));
+        /* a longer run may be a little rougher; one word must be exact */
+        const need = h.length >= 8 ? 0.8 : h.length >= 6 ? 0.88 : 0.95;
+        if (sc >= need && sc > q) q = sc;
+      }
+      if (q > bs) { second = bs; bs = q; bi = e; } else if (q > second) second = q;
+    }
+    return bi >= 0 && bs - second >= 0.15 ? bi : -1;
   }
 
   private align(fresh: boolean): Pos | null {
@@ -253,14 +293,19 @@ export class FollowEngine {
     if (near.idx >= 0 && near.idx < cur && this.status !== "lost") return null;
     if (near.idx >= 0) return this.moveTo(near.idx, now, joined);
 
+    /* the head of some line, anywhere: the deliberate jump */
+    const head = this.bestHead(keys);
+    if (head >= 0 && head !== cur + 1) return this.moveTo(head - 1, now, joined);
+
     if (fresh) this.misses++;
     if (this.misses >= 5) this.status = "lost";   // even after "done": starting over re-finds
 
     /* lost: search everywhere, but only on strong evidence — a longer run
-       and a clear winner, so a stray "sarva" can't teleport the light */
+       or one long word said exactly, and a clear winner, so a stray
+       "sarva" can't teleport the light */
     if (this.status === "lost") {
       const far = this.best(0, this.toks.length - 1, keys, cur, true);
-      if (far.idx >= 0 && far.margin >= 0.04) return this.moveTo(far.idx, now, joined);
+      if (far.idx >= 0 && far.margin >= 0.1) return this.moveTo(far.idx, now, joined);
     }
     return null;
   }
