@@ -128,6 +128,7 @@ export class FollowEngine {
   private misses = 0;
   private lastMoveAt = 0;
   private lastMoveOn = "";            // the heard tail that last moved the light
+  private lastMoveKeys = 0;           // ...and how many words it had
   status: FollowStatus = "listening";
 
   constructor(lines: Line[]) {
@@ -185,9 +186,13 @@ export class FollowEngine {
      was heard. Recogniser and text segment words differently (a heard
      "sūrya kōṭi sama prabhā" is one hyphenated compound in the text), so
      runs are measured in letters, not words. */
-  private runEndingAt(end: number, len: number): string {
-    let s = "";
-    for (let i = end; i >= 0 && s.length < len; i--) s = this.toks[i].key + s;
+  private runEndingAt(end: number, len: number, heard = ""): string {
+    /* a word's final nasal is heard as often as not ("śobhita" for
+       śobhitaṁ, "liṅga" for liṅgaṁ): when what was heard has none, the
+       text's is left off too */
+    let s = this.toks[end].key;
+    if (heard && !/[mn]$/.test(heard) && /[mn]$/.test(s) && s.length > 2) s = s.slice(0, -1);
+    for (let i = end - 1; i >= 0 && s.length < len; i--) s = this.toks[i].key + s;
     return s.slice(-len);   // the tail of a long compound, not the whole of it
   }
   /* ...and the run starting at `start`, for the head of a line: a reciter
@@ -231,9 +236,16 @@ export class FollowEngine {
         const lone = n === 1 && (far || strict);
         if (lone && h.length < (strict ? 6 : 4)) continue;
         if (strict && n > 1 && h.length < 8) continue;
-        const s = sim(h, this.runEndingAt(e, h.length));
+        const s = sim(h, this.runEndingAt(e, h.length, h));
         const over = lone ? s - (strict ? 0.95 : this.bar(h.length) + 0.1) : s - this.bar(h.length) - (strict ? 0.05 : 0);
         if (over > q) { q = over; inside[e] = false; }
+        /* the head of a word ahead of the light: the first sounds of a
+           compound are the ones the ears catch most reliably */
+        if (!strict && e >= cur && this.toks[e].key.length > h.length + 1) {
+          const sh = sim(h, this.runStartingAt(e, h.length));
+          const oh = lone ? sh - (this.bar(h.length) + 0.1) : sh - this.bar(h.length) + 0.03;
+          if (oh > q) { q = oh; inside[e] = true; }
+        }
         /* the middle of a long compound: "rajatādri" is heard inside
            "rajatādriśṛṅganiketanaṁ" — the light belongs on that word, not
            past it. A little stricter than the ends, and never when lost. */
@@ -304,6 +316,9 @@ export class FollowEngine {
        repeating its partial — are not new evidence; without this a refrain
        shared by every stanza would carry the light a stanza on each time */
     if (joined === this.lastMoveOn) return null;
+    /* nor is a partial that only re-spells its last word: the light moves
+       on a new word, or on the final say of an utterance */
+    if (!fresh && this.lastMoveOn && keys.length === this.lastMoveKeys) return null;
     const now = Date.now();
 
     /* near: a few words back to a few lines ahead of where we are */
@@ -314,6 +329,8 @@ export class FollowEngine {
     /* a partial being revised often re-fits a word or two back; the light
        does not follow that — small steps back are ignored unless lost */
     if (near.idx >= 0 && near.idx < cur && this.status !== "lost") return null;
+    /* the head or middle of the word the light is already on: stay */
+    if (near.idx >= 0 && near.inside && near.idx <= cur) return null;
     if (near.idx >= 0) return this.moveTo(near.inside ? near.idx - 1 : near.idx, now, joined);
 
     /* the head of some line, anywhere: the deliberate jump */
@@ -339,6 +356,7 @@ export class FollowEngine {
     this.misses = 0;
     this.lastMoveAt = now;
     this.lastMoveOn = heard;
+    this.lastMoveKeys = this.recent().length;
     /* "done" only once the last word has actually been said, not on a
        partial of it — the tail of what was heard must resemble the whole key */
     const last = this.toks[this.toks.length - 1].key;
