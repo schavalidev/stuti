@@ -60,7 +60,7 @@ patch(
 // the status chip, in the same slot the find strip uses
 patch(
   `      {findOpen && (\n        <FindStrip`,
-  `      {follow.on && <FollowChip follow={follow} lang={lang} />}\n      {findOpen && (\n        <FindStrip`,
+  `      {follow.showChip && <FollowChip follow={follow} lang={lang} />}\n      {findOpen && (\n        <FindStrip`,
   "chip before FindStrip",
 );
 

@@ -75,7 +75,7 @@ export function useFollow({ hymn, lines, lang, active, setActive, setWord, setPl
     };
     r.onerror = (ev: any) => {
       const e = String((ev && ev.error) || "");
-      if (/not-allowed|service-not-allowed|denied/.test(e)) { setStatus("denied"); stop(); }
+      if (/not-allowed|service-not-allowed|denied/.test(e)) { stop("denied"); }
       /* "no-speech" and friends just mean a quiet stretch; onend restarts */
     };
     r.onend = () => {
@@ -87,7 +87,7 @@ export function useFollow({ hymn, lines, lang, active, setActive, setWord, setPl
   };
 
   const start = () => {
-    if (!supported) { setStatus("unsupported"); return; }
+    if (!supported) { setStatus("unsupported"); noteTimer(); return; }
     setPlaying(false);
     eng.current = new FollowEngine(lines);
     eng.current.seek(active < 0 ? 0 : active);
@@ -98,15 +98,19 @@ export function useFollow({ hymn, lines, lang, active, setActive, setWord, setPl
     setStatus("listening");
     listen();
   };
-  const stop = () => {
+  /* a refusal has to be SEEN: "denied"/"unsupported" outlive the stop, show
+     in the chip for a few seconds, and clear on the next tap */
+  const noteTimer = () => { setTimeout(() => setStatus((s) => (s === "denied" || s === "unsupported" ? "idle" : s)), 4000); };
+  const stop = (why?: "denied") => {
     onRef.current = false;
     setOn(false);
     if (restartTimer.current) { clearTimeout(restartTimer.current); restartTimer.current = null; }
     try { rec.current && rec.current.abort(); } catch (e) {}
     rec.current = null;
-    setStatus("idle");
+    if (why) { setStatus(why); noteTimer(); } else setStatus("idle");
   };
   const toggle = () => (on ? stop() : start());
+  const showChip = on || status === "denied" || status === "unsupported";
 
   /* the reciter tapped another line: follow them, don't fight them */
   React.useEffect(() => {
@@ -116,7 +120,7 @@ export function useFollow({ hymn, lines, lang, active, setActive, setWord, setPl
   React.useEffect(() => { if (on) { try { rec.current && rec.current.abort(); } catch (e) {} } }, [lang]);
   React.useEffect(() => () => stop(), [hymn && hymn.id]);   // leaving the text stops listening
 
-  return { on, status, supported, start, stop, toggle };
+  return { on, status, supported, showChip, start, stop, toggle };
 }
 
 export function FollowButton({ follow, lang }: { follow: ReturnType<typeof useFollow>; lang: string }) {

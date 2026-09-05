@@ -1398,7 +1398,7 @@ function ReaderView({ hymn, deity, go, theme, toggleTheme, lang, setLang, backVi
         </div>
       )}
 
-      {follow.on && <FollowChip follow={follow} lang={lang} />}
+      {follow.showChip && <FollowChip follow={follow} lang={lang} />}
       {findOpen && (
         <FindStrip lines={lines} hymn={hymn} lang={lang} active={active} onPick={findPick} onClose={() => setFindOpen(false)} />
       )}
