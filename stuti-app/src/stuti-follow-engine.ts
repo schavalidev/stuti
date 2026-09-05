@@ -143,8 +143,11 @@ export class FollowEngine {
       revise earlier words). Returns the new position if it moved. */
   hear(transcript: string, isFinal: boolean): Pos | null {
     const ks = wordsOf(transcript).map(keyOf).filter(Boolean);
+    /* a partial that only re-spells the last word is not new evidence; a
+       miss is counted only when a fresh word arrived and still nothing fit */
+    const fresh = ks.length > this.partial.length || isFinal;
     this.partial = ks;
-    const moved = this.align();
+    const moved = this.align(fresh);
     if (isFinal) { this.heard = this.heard.concat(ks).slice(-8); this.partial = []; }
     return moved;
   }
@@ -163,42 +166,68 @@ export class FollowEngine {
     return s;
   }
 
-  private best(from: number, to: number, heardJoined: string) {
-    let bi = -1, bs = 0, second = 0;
-    for (let e = from; e <= to; e++) {
-      if (e < 0 || e >= this.toks.length) continue;
-      const s = sim(heardJoined, this.runEndingAt(e, heardJoined.length));
-      if (s > bs) { second = bs; bs = s; bi = e; } else if (s > second) second = s;
-    }
-    return { idx: bi, score: bs, margin: bs - second };
+  /* The bar a match must clear: short runs are easy to hit by accident,
+     long ones tolerate more mishearing */
+  private bar(len: number): number {
+    return len >= 12 ? 0.58 : len >= 8 ? 0.63 : len >= 5 ? 0.7 : 0.78;
   }
 
-  private align(): Pos | null {
-    const r = this.recent();
-    if (!r.length) return null;
-    const joined = r.slice(-6).join("");
-    if (joined.length < 5) return null;       // too little to go on
+  /* Best position in [from, to] for the tail of what was heard. Every
+     suffix of the last few heard words is tried (a Hindi recogniser breaks
+     one Sanskrit compound into several words, and drops junk words in
+     between — a suffix that skips the junk still fits). Ties go to the
+     position just ahead of the light. `strict` (used when lost) wants a
+     longer run and a clear winner over any other place in the text. */
+  private best(from: number, to: number, keys: string[], cur: number, strict: boolean) {
+    const scores: number[] = [];
+    let bi = -1, bq = -Infinity;
+    for (let e = Math.max(0, from); e <= Math.min(to, this.toks.length - 1); e++) {
+      let q = -Infinity;
+      /* a single word may only carry the light onward within the current
+         line or the next; a longer jump, or any step back, needs a run */
+      const curLine = cur >= 0 ? this.toks[cur].line : -1;
+      const minN = strict || e < cur || this.toks[e].line > curLine + 1 ? 2 : 1;
+      for (let n = minN; n <= Math.min(6, keys.length); n++) {
+        const h = keys.slice(-n).join("");
+        if (h.length < (strict ? 8 : n > 1 ? 5 : 3)) continue;
+        const s = sim(h, this.runEndingAt(e, h.length));
+        const over = s - this.bar(h.length) - (strict ? 0.05 : 0);
+        if (over > q) q = over;
+      }
+      scores[e] = q;
+      /* nearest-ahead wins ties; going back costs more than going on */
+      const dist = Math.abs(e - (cur + 1));
+      const qq = q - dist * (e < cur ? 0.02 : 0.004);
+      if (qq > bq) { bq = qq; bi = e; }
+    }
+    if (bi < 0 || scores[bi] < 0) return { idx: -1, margin: 0 };
+    let second = -Infinity;
+    for (let e = from; e <= to; e++) if (scores[e] != null && Math.abs(e - bi) > 2 && scores[e] > second) second = scores[e];
+    return { idx: bi, margin: scores[bi] - (second === -Infinity ? -1 : second) };
+  }
+
+  private align(fresh: boolean): Pos | null {
+    const keys = this.recent();
+    if (!keys.length) return null;
+    const joined = keys.join("");
+    if (joined.length < 3) return null;       // too little to go on
     const now = Date.now();
 
-    /* near: a few words back to a couple of lines ahead of where we are */
+    /* near: a few words back to a few lines ahead of where we are */
     const cur = Math.max(this.idx, -1);
-    const aheadLine = cur >= 0 ? this.toks[cur].line + 2 : 1;
+    const aheadLine = cur >= 0 ? this.toks[cur].line + 3 : 2;
     const aheadEnd = this.lineStart[aheadLine + 1] != null ? this.lineStart[aheadLine + 1] - 1 : this.toks.length - 1;
-    const near = this.best(Math.max(0, cur - 3), aheadEnd, joined);
-    if (near.idx >= 0 && near.score >= 0.62) {
-      return this.moveTo(near.idx, now, joined);
-    }
+    const near = this.best(Math.max(0, cur - 3), aheadEnd, keys, cur, false);
+    if (near.idx >= 0) return this.moveTo(near.idx, now, joined);
 
-    this.misses++;
-    if (this.misses >= 3) this.status = "lost";   // even after "done": starting over re-finds
+    if (fresh) this.misses++;
+    if (this.misses >= 5) this.status = "lost";   // even after "done": starting over re-finds
 
     /* lost: search everywhere, but only on strong evidence — a longer run
        and a clear winner, so a stray "sarva" can't teleport the light */
-    if (this.status === "lost" && joined.length >= 12) {
-      const far = this.best(0, this.toks.length - 1, joined);
-      if (far.idx >= 0 && far.score >= 0.72 && far.margin >= 0.06) {
-        return this.moveTo(far.idx, now, joined);
-      }
+    if (this.status === "lost") {
+      const far = this.best(0, this.toks.length - 1, keys, cur, true);
+      if (far.idx >= 0 && far.margin >= 0.04) return this.moveTo(far.idx, now, joined);
     }
     return null;
   }
