@@ -140,10 +140,20 @@ export class FollowEngine {
     return { line: t.line, word: t.word };
   }
 
+  /** Where the light should be: the word about to be said, one past the
+      last word heard. A recogniser can only name a word once it has been
+      said, so lighting that word would always trail the reciter; a
+      teleprompter shows what comes next. */
+  get lead(): Pos | null {
+    if (this.idx < 0) return null;
+    const t = this.toks[Math.min(this.idx + 1, this.toks.length - 1)];
+    return { line: t.line, word: t.word };
+  }
+
   /** Jump to a line the reciter picked by hand (keeps alignment honest). */
   seek(line: number) {
     const i = this.lineStart[line];
-    this.idx = Number.isFinite(i) ? Math.max(0, i - 1) : -1;
+    this.idx = Number.isFinite(i) ? i - 1 : -1;   // one before the line, so its first word counts as a move
     this.misses = 0;
     this.status = "listening";
   }
@@ -227,6 +237,9 @@ export class FollowEngine {
     const aheadLine = cur >= 0 ? this.toks[cur].line + 3 : 2;
     const aheadEnd = this.lineStart[aheadLine + 1] != null ? this.lineStart[aheadLine + 1] - 1 : this.toks.length - 1;
     const near = this.best(Math.max(0, cur - 3), aheadEnd, keys, cur, false);
+    /* a partial being revised often re-fits a word or two back; the light
+       does not follow that — small steps back are ignored unless lost */
+    if (near.idx >= 0 && near.idx < cur && this.status !== "lost") return null;
     if (near.idx >= 0) return this.moveTo(near.idx, now, joined);
 
     if (fresh) this.misses++;
@@ -251,7 +264,7 @@ export class FollowEngine {
     const last = this.toks[this.toks.length - 1].key;
     const finished = i >= this.toks.length - 1 && sim(heard.slice(-last.length), last) >= 0.7;
     this.status = finished ? "done" : "listening";
-    return changed ? this.pos : null;
+    return changed ? this.lead : null;
   }
 
   get atEnd() { return this.status === "done"; }
