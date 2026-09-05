@@ -78,7 +78,11 @@ export class VoskRecognition {
   private handles: Handle[] = [];
   private live = false;
 
-  private emit(transcript: string, isFinal: boolean) {
+  private emit(raw: string, isFinal: boolean) {
+    /* in grammar mode the recogniser names what it could not place "[unk]";
+       that is silence to the matcher, not a word */
+    const transcript = raw.replace(/\[unk\]/g, " ").replace(/\s+/g, " ").trim();
+    if (!transcript) return;
     const result: any = [{ transcript, confidence: 1 }];
     result.isFinal = isFinal;
     if (this.onresult) this.onresult({ resultIndex: 0, results: [result] });

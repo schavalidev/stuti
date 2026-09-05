@@ -25,7 +25,7 @@ type Tok = { line: number; word: number; key: string };
 /* ---- keys ---- */
 const DEVA: Record<string, string> = {
   "अ":"a","आ":"a","इ":"i","ई":"i","उ":"u","ऊ":"u","ऋ":"r","ॠ":"r","ऌ":"l","ए":"e","ऐ":"ai","ओ":"o","औ":"au",
-  "ा":"a","ि":"i","ी":"i","ु":"u","ू":"u","ृ":"r","ॄ":"r","ॢ":"l","े":"e","ै":"ai","ो":"o","ौ":"au","ॅ":"e","ॉ":"o",
+  "ा":"a","ि":"i","ी":"i","ु":"u","ू":"u","ृ":"r","ॄ":"r","ॢ":"l","े":"e","ै":"ai","ो":"o","ौ":"au","ॅ":"e","ॉ":"o","ऎ":"e","ऒ":"o","ॆ":"e","ॊ":"o","ऱ":"r",
   "क":"k","ख":"k","ग":"g","घ":"g","ङ":"n","च":"c","छ":"c","ज":"j","झ":"j","ञ":"n",
   "ट":"t","ठ":"t","ड":"d","ढ":"d","ण":"n","त":"t","थ":"t","द":"d","ध":"d","न":"n",
   "प":"p","फ":"p","ब":"b","भ":"b","म":"m","य":"y","र":"r","ल":"l","व":"v","श":"s","ष":"s","स":"s","ह":"h","ळ":"l",
@@ -205,12 +205,20 @@ export class FollowEngine {
       /* a single word may only carry the light onward within the current
          line or the next; a longer jump, or any step back, needs a run */
       const curLine = cur >= 0 ? this.toks[cur].line : -1;
-      const minN = strict || e < cur || this.toks[e].line > curLine + 1 ? 2 : 1;
+      const far = this.toks[e].line > curLine + 1;      // more than a line ahead
+      const minN = e < cur ? 2 : 1;
       for (let n = minN; n <= Math.min(6, keys.length); n++) {
         const h = keys.slice(-n).join("");
-        if (h.length < (strict ? 8 : n > 1 ? 5 : 3)) continue;
+        if (h.length < (n > 1 ? 4 : 3)) continue;
+        /* one word alone may carry the light more than a line ahead, or
+           re-find it when lost, only when it is long and unmistakable — the
+           case of ears that catch one word in three, which is how a Telugu
+           model hears a compound-heavy verse */
+        const lone = n === 1 && (far || strict);
+        if (lone && h.length < (strict ? 5 : 4)) continue;
+        if (strict && n > 1 && h.length < 8) continue;
         const s = sim(h, this.runEndingAt(e, h.length));
-        const over = s - this.bar(h.length) - (strict ? 0.05 : 0);
+        const over = lone ? s - (strict ? 0.9 : this.bar(h.length) + 0.1) : s - this.bar(h.length) - (strict ? 0.05 : 0);
         if (over > q) q = over;
       }
       scores[e] = q;
@@ -220,8 +228,11 @@ export class FollowEngine {
       if (qq > bq) { bq = qq; bi = e; }
     }
     if (bi < 0 || scores[bi] < 0) return { idx: -1, margin: 0 };
+    /* the runner-up, for the margin: another place that fits nearly as
+       well. An identical fit (the refrain every verse ends on) is not a
+       rival — the nearest one ahead of the light was already chosen. */
     let second = -Infinity;
-    for (let e = from; e <= to; e++) if (scores[e] != null && Math.abs(e - bi) > 2 && scores[e] > second) second = scores[e];
+    for (let e = from; e <= to; e++) if (scores[e] != null && Math.abs(e - bi) > 2 && scores[e] < scores[bi] - 1e-9 && scores[e] > second) second = scores[e];
     return { idx: bi, margin: scores[bi] - (second === -Infinity ? -1 : second) };
   }
 
@@ -234,7 +245,7 @@ export class FollowEngine {
 
     /* near: a few words back to a few lines ahead of where we are */
     const cur = Math.max(this.idx, -1);
-    const aheadLine = cur >= 0 ? this.toks[cur].line + 3 : 2;
+    const aheadLine = cur >= 0 ? this.toks[cur].line + 4 : 3;
     const aheadEnd = this.lineStart[aheadLine + 1] != null ? this.lineStart[aheadLine + 1] - 1 : this.toks.length - 1;
     const near = this.best(Math.max(0, cur - 3), aheadEnd, keys, cur, false);
     /* a partial being revised often re-fits a word or two back; the light

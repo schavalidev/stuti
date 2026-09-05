@@ -162,9 +162,13 @@ export function useFollow({ hymn, lines, lang, active, setActive, setWord, setPl
     setHeard(""); setEvents(0);
     t0.current = Date.now();
     log.current = ["# Stuti Follow " + new Date().toISOString() + " hymn=" + (hymn && hymn.id) + " lang=" + lang + " ears=" + (native ? "vosk-" + voskLang : "browser")];
-    if (native) {
+    grammar.current = null;
+    if (native && voskLang === "hi") {
       /* the stotra's own sounds as the recogniser's vocabulary; built once
-         per text, from the model's word list */
+         per text, from the model's word list. Hindi ears need it — their
+         vocabulary has no Sanskrit. Telugu ears are left free: Telugu is
+         full of Sanskrit and the model already knows most of the words,
+         and a grammar only takes its language model away. */
       grammar.current = await grammarForLines(voskLang, (hymn && hymn.id) + ":" + voskLang, lines);
       log.current.push("# grammar " + (grammar.current ? grammar.current.length + " words" : "none"));
       if (!onRef.current) return;   // stopped while the grammar was being built
