@@ -1281,7 +1281,7 @@ function ReaderView({ hymn, deity, go, theme, toggleTheme, lang, setLang, backVi
     </React.Fragment>
   );
   return (
-    <div className="view reader" style={deityStyle(deity, { flex: 1, "--rd-scale": fontScale })}>
+    <div className={"view reader" + (follow.on ? " is-following" : "")} style={deityStyle(deity, { flex: 1, "--rd-scale": fontScale })}>
       {panelPin && <div className="rd-toppanel is-pinned">{panelBody}</div>}
       <div className="topbar reader-topbar">
         <button className="icon-btn" onClick={() => go(backView, { deity: deity.id, from: retView })} aria-label={STUTI_L.a("aBack")}>

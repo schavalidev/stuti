@@ -57,6 +57,13 @@ patch(
   "topbar title (after FavButton)",
 );
 
+// the reader root carries is-following, so the timed transport can hide
+patch(
+  `    <div className="view reader" style={deityStyle(deity, { flex: 1, "--rd-scale": fontScale })}>`,
+  `    <div className={"view reader" + (follow.on ? " is-following" : "")} style={deityStyle(deity, { flex: 1, "--rd-scale": fontScale })}>`,
+  "reader root className",
+);
+
 // the status chip, in the same slot the find strip uses
 patch(
   `      {findOpen && (\n        <FindStrip`,

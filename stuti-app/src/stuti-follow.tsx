@@ -59,6 +59,8 @@ export function useFollow({ hymn, lines, lang, active, setActive, setWord, setPl
   const [on, setOn] = React.useState(false);
   const [status, setStatus] = React.useState<Status>("idle");
   const [pct, setPct] = React.useState(0);
+  const [heard, setHeard] = React.useState("");   // the last thing the ears reported — shown in the chip
+  const [events, setEvents] = React.useState(0);  // how many results have arrived (0 = the ears are silent)
   const eng = React.useRef<FollowEngine | null>(null);
   const rec = React.useRef<any>(null);
   const onRef = React.useRef(false);
@@ -88,6 +90,8 @@ export function useFollow({ hymn, lines, lang, active, setActive, setWord, setPl
       if (!onRef.current || !eng.current) return;
       const last = ev.results[ev.results.length - 1];
       if (!last) return;
+      setHeard(String(last[0].transcript || "").slice(-60));
+      setEvents((n) => n + 1);
       const moved = eng.current.hear(last[0].transcript, !!last.isFinal);
       if (moved) apply(moved);
       const st = eng.current.status;
@@ -126,6 +130,7 @@ export function useFollow({ hymn, lines, lang, active, setActive, setWord, setPl
     onRef.current = true;
     setOn(true);
     setStatus("listening");
+    setHeard(""); setEvents(0);
     listen();
   };
 
@@ -160,7 +165,7 @@ export function useFollow({ hymn, lines, lang, active, setActive, setWord, setPl
   React.useEffect(() => { if (on) { stop(); start(); } }, [lang]);   // eslint-disable-line react-hooks/exhaustive-deps
   React.useEffect(() => () => stop(), [hymn && hymn.id]);            // leaving the text stops listening
 
-  return { on, status, pct, supported, showChip, voskLang, start, stop, toggle, download, dismiss };
+  return { on, status, pct, heard, events, supported, showChip, voskLang, start, stop, toggle, download, dismiss };
 }
 
 export function FollowButton({ follow, lang }: { follow: ReturnType<typeof useFollow>; lang: string }) {
@@ -190,10 +195,17 @@ export function FollowChip({ follow, lang }: { follow: ReturnType<typeof useFoll
     );
   }
   const text = st === "downloading" ? t("downloading", lang, { pct: follow.pct }) : t(st, lang);
+  /* what the ears last reported: the reciter sees that they are heard (as
+     every voice teleprompter shows), and a chip that stays empty says the
+     ears are silent rather than the matcher lost */
+  const showHeard = follow.on && (st === "listening" || st === "lost");
   return (
     <div className={"rd-follow-chip is-" + st} role="status" aria-live="polite">
       <span className="rd-follow-dot" aria-hidden="true" />
-      <span>{text}</span>
+      <span className="rd-follow-text">
+        <span>{text}</span>
+        {showHeard && <span className="rd-follow-heard">{follow.events ? "“" + follow.heard + "”" : "…"}</span>}
+      </span>
     </div>
   );
 }
