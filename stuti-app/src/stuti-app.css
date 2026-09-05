@@ -42,7 +42,13 @@
 .rd-follow-dot { width: 8px; height: 8px; border-radius: 50%; background: var(--gold); animation: voice-pulse 1.1s ease-in-out infinite; }
 .rd-follow-chip.is-lost .rd-follow-dot { background: var(--ink-faint); animation: none; }
 .rd-follow-chip.is-done .rd-follow-dot { background: var(--leaf-green-1, var(--gold)); animation: none; }
-.rd-follow-chip.is-denied .rd-follow-dot, .rd-follow-chip.is-unsupported .rd-follow-dot { background: var(--caution, var(--ink-faint)); animation: none; }
+.rd-follow-chip.is-denied .rd-follow-dot, .rd-follow-chip.is-unsupported .rd-follow-dot, .rd-follow-chip.is-failed .rd-follow-dot { background: var(--caution, var(--ink-faint)); animation: none; }
+.rd-follow-chip.is-downloading .rd-follow-dot { background: var(--gold); animation: voice-pulse 0.7s ease-in-out infinite; }
+/* the one-time model consent: a small sheet, not a chip */
+.rd-follow-chip.is-needs-model { flex-direction: column; align-items: stretch; gap: 10px; width: auto; max-width: calc(100% - 24px); padding: 12px 14px; border-radius: 14px; color: var(--ink); text-wrap: pretty; }
+.rd-follow-actions { display: flex; gap: 8px; justify-content: flex-end; }
+.rd-follow-act { padding: 8px 14px; border-radius: 999px; border: 1px solid var(--line); background: var(--surface-2); color: var(--ink-soft); font: inherit; font-size: 13px; font-weight: 600; }
+.rd-follow-act.primary { background: var(--gold-deep); border-color: var(--gold-deep); color: #fff; }
 
 /* (A phone-width rule that moved the tools panels to the bottom of the
    screen lived here briefly and was reverted at the user's request; the
