@@ -91,6 +91,7 @@ export function useFollow({ hymn, lines, lang, active, setActive, setWord, setPl
       const last = ev.results[ev.results.length - 1];
       if (!last) return;
       setHeard(String(last[0].transcript || "").slice(-60));
+      console.log("[follow] heard:", last[0].transcript, last.isFinal ? "(final)" : "");
       setEvents((n) => n + 1);
       const moved = eng.current.hear(last[0].transcript, !!last.isFinal);
       if (moved) apply(moved);

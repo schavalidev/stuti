@@ -1,6 +1,7 @@
 package com.stuti.app;
 
 import android.Manifest;
+import android.util.Log;
 import android.content.Context;
 import com.getcapacitor.JSArray;
 import com.getcapacitor.JSObject;
@@ -177,7 +178,8 @@ public class StutiVoskPlugin extends Plugin implements RecognitionListener {
                 }
                 Recognizer rec = new Recognizer(model, 16000.0f);
                 service = new SpeechService(rec, 16000.0f);
-                service.startListening(this);
+                boolean ok = service.startListening(this);
+                Log.d("StutiVosk", "startListening=" + ok + " model=" + id);
                 call.resolve();
             } catch (Exception e) {
                 call.reject("start failed: " + e.getMessage());
@@ -204,16 +206,19 @@ public class StutiVoskPlugin extends Plugin implements RecognitionListener {
     }
     @Override public void onPartialResult(String hypothesis) {
         String t = field(hypothesis, "partial");
+        Log.d("StutiVosk", "partial: " + hypothesis);
         if (t.isEmpty()) return;
         JSObject d = new JSObject(); d.put("text", t); notifyListeners("partial", d);
     }
     @Override public void onResult(String hypothesis) {
         String t = field(hypothesis, "text");
+        Log.d("StutiVosk", "result: " + hypothesis);
         if (t.isEmpty()) return;
         JSObject d = new JSObject(); d.put("text", t); notifyListeners("result", d);
     }
     @Override public void onFinalResult(String hypothesis) { onResult(hypothesis); }
     @Override public void onError(Exception e) {
+        Log.e("StutiVosk", "error", e);
         JSObject d = new JSObject(); d.put("message", String.valueOf(e.getMessage())); notifyListeners("error", d);
     }
     @Override public void onTimeout() { /* SpeechService without a timeout never calls this */ }
