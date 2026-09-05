@@ -21,6 +21,7 @@ import { ShareSheet, printStotra } from "./stuti-share";
 import { STUTI_PROGRESS } from "./stuti-store";
 import { STUTI_RITUAL } from "./stuti-texts";
 import { nityaQueue } from "./stuti-nitya-queue";
+import { useFollow, FollowButton, FollowChip } from "./stuti-follow";
 import { STUTI_TRANSLIT } from "./stuti-translit";
 
 /* ============================================================
@@ -757,6 +758,8 @@ function ReaderView({ hymn, deity, go, theme, toggleTheme, lang, setLang, backVi
   const song = audioFor(hymn, lines.length);
   const hasAudio = !!song;                  // a recording exists, and it plays for anyone
   const A = STUTI_AUDIO;
+  /* Follow: the reader listens and the light keeps pace (hand-authored module) */
+  const follow = useFollow({ hymn, lines, lang, active, setActive, setWord, setPlaying, onDone: () => STUTI_THREAD.mark("r", hymn.id) });
 
   const scrollRef = useRef(null);
   const lineRefs = useRef([]);
@@ -1257,6 +1260,7 @@ function ReaderView({ hymn, deity, go, theme, toggleTheme, lang, setLang, backVi
       </button>
       <RdScriptSeg lang={lang} setLang={setLang} />
       <SizePicker dec={() => bumpSize(-1)} inc={() => bumpSize(1)} atMin={fontScale <= SIZES[0]} atMax={fontScale >= SIZES[SIZES.length - 1]} />
+      <FollowButton follow={follow} lang={lang} />
       <span className="rd-toppanel-gap" />
       <button className={"icon-btn" + (shareLeft <= 0 ? " is-locked" : "")} title={limTitle(shareLeft, "share")} aria-label={STUTI_L.t("share", lang)}
         onClick={() => { panelDismiss(); gated("share", () => setShareOpen(true))(); }}>
@@ -1394,6 +1398,7 @@ function ReaderView({ hymn, deity, go, theme, toggleTheme, lang, setLang, backVi
         </div>
       )}
 
+      {follow.on && <FollowChip follow={follow} lang={lang} />}
       {findOpen && (
         <FindStrip lines={lines} hymn={hymn} lang={lang} active={active} onPick={findPick} onClose={() => setFindOpen(false)} />
       )}
@@ -1465,7 +1470,7 @@ function ReaderView({ hymn, deity, go, theme, toggleTheme, lang, setLang, backVi
         ) : flow ? (
           <FlowText hymn={hymn} lang={lang} showMeaning={showMeaning} scale={fontScale}
             at={curLine ? { vi: curLine.vi, li: curLine.li } : null}
-            word={word} lit={playing && !drifting} masked={flowMask} hint={hint} peek={peek}
+            word={word} lit={(playing && !drifting) || follow.on} masked={flowMask} hint={hint} peek={peek}
             onPick={flowPick} onWord={flowWord} onSeen={flowSeen}
             ritual={hidRitual} ritualOn={ritualOn} onRitual={toggleRitual}
             onOpenNames={() => setNamesOpen(true)}
@@ -1497,7 +1502,7 @@ function ReaderView({ hymn, deity, go, theme, toggleTheme, lang, setLang, backVi
                     const showNum = isLast && hymn.verses.length > 1 && !v.pr;
                     return (
                       <div key={li} ref={el => (lineRefs.current[idx] = el)}
-                        className={"line" + (on ? " line-on" : "") + (playing && !on ? " line-off" : "")}
+                        className={"line" + (on ? " line-on" : "") + ((playing || follow.on) && !on ? " line-off" : "")}
                         onClick={() => { if (masked) setPeek(true); setActive(idx); }}>
                         {(() => {
                           var mainText = STUTI_BIND(lang === "telugu" ? ((tdv && tdv[li]) || STUTI_TRANSLIT.convert(d, "telugu")) : lang === "deva" ? d : it[li]);
@@ -1517,7 +1522,7 @@ function ReaderView({ hymn, deity, go, theme, toggleTheme, lang, setLang, backVi
                           return <div className={mainCls}>{
                             masked ? <RecMasked text={mainText} hint={hint} />
                             : <React.Fragment>
-                                <WordRun text={bodyText} upto={on ? word : -1} lit={on && playing}
+                                <WordRun text={bodyText} upto={on ? word : -1} lit={on && (playing || follow.on)}
                                   onWord={(wi) => openPada(idx, wi)} />
                                 {markText && <span className="verse-end-mark">{"\u2002" + markText.replace(/\s+/g, "\u2009")}</span>}
                               </React.Fragment>
