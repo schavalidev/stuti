@@ -17,8 +17,11 @@ type Plugin = {
   modelStatus(o: { id: string }): Promise<{ ready: boolean }>;
   downloadModel(o: { id: string; url: string }): Promise<{ ready: boolean }>;
   deleteModel(o: { id: string }): Promise<void>;
-  start(o: { id: string }): Promise<void>;
+  start(o: { id: string; grammar?: string[]; capture?: boolean }): Promise<void>;
   stop(): Promise<void>;
+  vocab(o: { id: string }): Promise<{ words: string }>;
+  shareSession(o: { log: string }): Promise<void>;
+  log(o: { msg: string }): Promise<void>;
   addListener(ev: "partial" | "result" | "progress" | "error", fn: (d: any) => void): Promise<Handle>;
 };
 
@@ -44,6 +47,23 @@ export async function voskDownload(lang: VoskLang, onProgress: (pct: number) => 
   finally { h.remove().catch(() => {}); }
 }
 
+/* the model's word list, read once per model and kept for the session */
+const vocabCache: Partial<Record<VoskLang, Promise<string>>> = {};
+export function voskVocab(lang: VoskLang): Promise<string> {
+  const id = VOSK_MODELS[lang].id;
+  if (!vocabCache[lang]) vocabCache[lang] = Native.vocab({ id }).then((r) => r.words).catch((e) => { delete vocabCache[lang]; throw e; });
+  return vocabCache[lang]!;
+}
+
+/** A note into the phone's log (logcat), for a release build's silent console. */
+export function voskLog(msg: string) { if (voskAvailable()) Native.log({ msg }).catch(() => {}); }
+
+/** Hand the last session (audio + the page's log) to another app, so a
+    real chant can be replayed on a desk for tuning. */
+export function voskShareSession(log: string): Promise<void> {
+  return Native.shareSession({ log });
+}
+
 /** Same surface as SpeechRecognition, over the streaming plugin. `onend`
     fires only on abort() or an unrecoverable error — never on a pause. */
 export class VoskRecognition {
@@ -51,6 +71,7 @@ export class VoskRecognition {
   interimResults = true;
   continuous = true;
   maxAlternatives = 1;
+  grammar: string[] | null = null;   // words the recogniser may output (see stuti-follow-grammar.ts)
   onresult: ((ev: any) => void) | null = null;
   onerror: ((ev: any) => void) | null = null;
   onend: (() => void) | null = null;
@@ -73,7 +94,7 @@ export class VoskRecognition {
         if (!this.live) return;
         if (this.onerror) this.onerror({ error: String((d && d.message) || "audio") });
       }));
-      await Native.start({ id: VOSK_MODELS[lang].id });
+      await Native.start({ id: VOSK_MODELS[lang].id, grammar: this.grammar || undefined, capture: true });
     } catch (e: any) {
       const msg = String((e && e.message) || e);
       this.live = false;

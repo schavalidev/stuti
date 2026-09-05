@@ -18,7 +18,29 @@ import React from "react";
 import { Icon } from "./stuti-icons";
 import { FollowEngine } from "./stuti-follow-engine";
 import type { FollowStatus, Line } from "./stuti-follow-engine";
-import { VOSK_MODELS, VoskRecognition, voskAvailable, voskDownload, voskLangFor, voskModelReady } from "./stuti-vosk";
+import { VOSK_MODELS, VoskRecognition, voskAvailable, voskDownload, voskLangFor, voskLog, voskModelReady, voskShareSession, voskVocab } from "./stuti-vosk";
+import { grammarFor, indexVocab } from "./stuti-follow-grammar";
+
+/* the vocabulary index per model and the grammar per text, built once */
+const vocabIndex: Record<string, ReturnType<typeof indexVocab>> = {};
+const grammars: Record<string, string[]> = {};
+async function grammarForLines(voskLang: string, key: string, lines: Line[]): Promise<string[] | null> {
+  if (grammars[key]) return grammars[key];
+  try {
+    const t0 = Date.now();
+    if (!vocabIndex[voskLang]) vocabIndex[voskLang] = indexVocab(await voskVocab(voskLang as any));
+    const t1 = Date.now();
+    const g = grammarFor(lines.map((l) => l.deva || l.iast).join(" "), vocabIndex[voskLang]);
+    if (g.length) g.push("[unk]");
+    grammars[key] = g;
+    voskLog("grammar " + key + ": " + g.length + " words; vocab " + (t1 - t0) + " ms, build " + (Date.now() - t1) + " ms");
+    return g;
+  } catch (e) {
+    voskLog("no grammar: " + String(e && (e as any).message || e));
+    console.warn("[follow] no grammar:", e);
+    return null;   // free decoding still works, just noisier
+  }
+}
 
 const T: Record<string, Record<string, string>> = {
   follow:      { roman: "Follow my voice",                  deva: "मेरी आवाज़ के साथ चलो",             telugu: "నా స్వరాన్ని అనుసరించు" },
@@ -67,6 +89,9 @@ export function useFollow({ hymn, lines, lang, active, setActive, setWord, setPl
   const applied = React.useRef(-1);       // last line WE set — a different `active` means the reciter tapped
   const doneRef = React.useRef(false);
   const restartTimer = React.useRef<any>(null);
+  const log = React.useRef<string[]>([]);      // this session, for sharing: what was heard and where the light went
+  const t0 = React.useRef(0);
+  const grammar = React.useRef<string[] | null>(null);
   const native = voskAvailable();
   const supported = native || !!BrowserSR();
   const voskLang = voskLangFor(lang);
@@ -94,6 +119,8 @@ export function useFollow({ hymn, lines, lang, active, setActive, setWord, setPl
       console.log("[follow] heard:", last[0].transcript, last.isFinal ? "(final)" : "");
       setEvents((n) => n + 1);
       const moved = eng.current.hear(last[0].transcript, !!last.isFinal);
+      log.current.push(((Date.now() - t0.current) / 1000).toFixed(2) + (last.isFinal ? " F " : " p ") + last[0].transcript + (moved ? "  -> " + moved.line + ":" + moved.word : ""));
+      if (log.current.length > 4000) log.current.splice(0, 1000);
       if (moved) apply(moved);
       const st = eng.current.status;
       setStatus(st);
@@ -118,11 +145,12 @@ export function useFollow({ hymn, lines, lang, active, setActive, setWord, setPl
     let r: any;
     try { r = native ? new VoskRecognition() : new (BrowserSR())(); } catch (e) { stop("unsupported"); return; }
     wire(r);
+    if (native) r.grammar = grammar.current;
     rec.current = r;
     try { r.start(); } catch (e) { if (!native) restartTimer.current = setTimeout(listen, 800); }
   };
 
-  const begin = () => {
+  const begin = async () => {
     setPlaying(false);
     eng.current = new FollowEngine(lines);
     eng.current.seek(active < 0 ? 0 : active);
@@ -132,7 +160,20 @@ export function useFollow({ hymn, lines, lang, active, setActive, setWord, setPl
     setOn(true);
     setStatus("listening");
     setHeard(""); setEvents(0);
+    t0.current = Date.now();
+    log.current = ["# Stuti Follow " + new Date().toISOString() + " hymn=" + (hymn && hymn.id) + " lang=" + lang + " ears=" + (native ? "vosk-" + voskLang : "browser")];
+    if (native) {
+      /* the stotra's own sounds as the recogniser's vocabulary; built once
+         per text, from the model's word list */
+      grammar.current = await grammarForLines(voskLang, (hymn && hymn.id) + ":" + voskLang, lines);
+      log.current.push("# grammar " + (grammar.current ? grammar.current.length + " words" : "none"));
+      if (!onRef.current) return;   // stopped while the grammar was being built
+    }
     listen();
+  };
+  const share = () => {
+    if (!native) return;
+    voskShareSession(log.current.join("\n")).catch(() => {});
   };
 
   const start = async () => {
@@ -166,15 +207,24 @@ export function useFollow({ hymn, lines, lang, active, setActive, setWord, setPl
   React.useEffect(() => { if (on) { stop(); start(); } }, [lang]);   // eslint-disable-line react-hooks/exhaustive-deps
   React.useEffect(() => () => stop(), [hymn && hymn.id]);            // leaving the text stops listening
 
-  return { on, status, pct, heard, events, supported, showChip, voskLang, start, stop, toggle, download, dismiss };
+  return { on, status, pct, heard, events, supported, native, showChip, voskLang, start, stop, toggle, download, dismiss, share };
 }
 
 export function FollowButton({ follow, lang }: { follow: ReturnType<typeof useFollow>; lang: string }) {
   if (!follow.supported) return null;
   const label = follow.on ? t("stop", lang) : t("follow", lang);
+  /* a long press on the mic shares the last session (its audio and what
+     was heard) — the founder's way of getting a real chant onto a desk */
+  const held = React.useRef(false);
+  const timer = React.useRef<any>(null);
+  const down = () => { held.current = false; clearTimeout(timer.current); timer.current = setTimeout(() => { held.current = true; follow.share(); }, 650); };
+  const up = () => clearTimeout(timer.current);
+  const click = () => { if (held.current) { held.current = false; return; } follow.toggle(); };
   return (
     <button type="button" className={"icon-btn rd-follow-btn" + (follow.on ? " is-on" : "") + (follow.status === "lost" ? " is-lost" : "")}
-      onClick={follow.toggle} aria-pressed={follow.on} aria-label={label} title={label}>
+      onClick={click} onPointerDown={down} onPointerUp={up} onPointerCancel={up} onPointerLeave={up}
+      onContextMenu={(e) => { e.preventDefault(); }}
+      aria-pressed={follow.on} aria-label={label} title={label}>
       <Icon name="mic" size={20} />
     </button>
   );

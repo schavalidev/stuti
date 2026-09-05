@@ -1,8 +1,15 @@
 package com.stuti.app;
 
 import android.Manifest;
+import android.content.Intent;
+import android.media.AudioFormat;
+import android.media.AudioRecord;
+import android.media.MediaRecorder;
+import android.net.Uri;
+import android.os.Handler;
+import android.os.Looper;
 import android.util.Log;
-import android.content.Context;
+import androidx.core.content.FileProvider;
 import com.getcapacitor.JSArray;
 import com.getcapacitor.JSObject;
 import com.getcapacitor.PermissionState;
@@ -13,23 +20,36 @@ import com.getcapacitor.annotation.CapacitorPlugin;
 import com.getcapacitor.annotation.Permission;
 import com.getcapacitor.annotation.PermissionCallback;
 import java.io.BufferedInputStream;
+import java.io.BufferedReader;
+import java.io.DataInputStream;
 import java.io.File;
+import java.io.FileInputStream;
 import java.io.FileOutputStream;
+import java.io.FileWriter;
 import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.io.RandomAccessFile;
 import java.net.HttpURLConnection;
 import java.net.URL;
+import java.nio.ByteBuffer;
+import java.nio.ByteOrder;
+import java.nio.charset.StandardCharsets;
+import java.util.ArrayList;
 import java.util.zip.ZipEntry;
 import java.util.zip.ZipInputStream;
 import org.vosk.Model;
 import org.vosk.Recognizer;
-import org.vosk.android.RecognitionListener;
-import org.vosk.android.SpeechService;
 
 /**
  * Follow's ears on Android: a streaming, on-device recognizer (Vosk) that
  * never closes the microphone between phrases — unlike the system
  * SpeechRecognizer, which ends a session at every pause and loses the
  * first syllables of the next one on restart.
+ *
+ * The audio loop is our own (not Vosk's SpeechService): tenth-of-a-second
+ * chunks for a quicker partial, an optional grammar so the recognizer
+ * listens for the stotra's own words, and a copy of the session's audio
+ * kept in the cache so the founder can share a real chant for tuning.
  *
  * Models are fetched on demand into filesDir/vosk/<id>/ (opt-in: nothing is
  * downloaded until the user asks for Follow and agrees). Events:
@@ -42,11 +62,17 @@ import org.vosk.android.SpeechService;
     name = "StutiVosk",
     permissions = { @Permission(alias = "microphone", strings = { Manifest.permission.RECORD_AUDIO }) }
 )
-public class StutiVoskPlugin extends Plugin implements RecognitionListener {
+public class StutiVoskPlugin extends Plugin {
+
+    private static final String TAG = "StutiVosk";
+    private static final int RATE = 16000;
+    private static final int CHUNK = RATE / 10;          // samples per read: 100 ms
 
     private Model model;
     private String modelId;
-    private SpeechService service;
+    private Thread loop;
+    private volatile boolean running;
+    private final Handler main = new Handler(Looper.getMainLooper());
 
     private File modelDir(String id) {
         return new File(new File(getContext().getFilesDir(), "vosk"), id);
@@ -56,6 +82,9 @@ public class StutiVoskPlugin extends Plugin implements RecognitionListener {
         File d = modelDir(id);
         return d.isDirectory() && new File(d, "am").isDirectory() && new File(d, "conf").isDirectory();
     }
+
+    private File wavFile() { return new File(getContext().getCacheDir(), "follow-last.wav"); }
+    private File logFile() { return new File(getContext().getCacheDir(), "follow-last.txt"); }
 
     @PluginMethod
     public void modelStatus(PluginCall call) {
@@ -110,7 +139,7 @@ public class StutiVoskPlugin extends Plugin implements RecognitionListener {
     private void unzip(File zip, File target) throws Exception {
         deleteRecursive(target);
         target.mkdirs();
-        try (ZipInputStream z = new ZipInputStream(new BufferedInputStream(new java.io.FileInputStream(zip)))) {
+        try (ZipInputStream z = new ZipInputStream(new BufferedInputStream(new FileInputStream(zip)))) {
             ZipEntry e;
             byte[] buf = new byte[64 * 1024];
             while ((e = z.getNextEntry()) != null) {
@@ -150,6 +179,74 @@ public class StutiVoskPlugin extends Plugin implements RecognitionListener {
         call.resolve();
     }
 
+    /* ---- the model's vocabulary, so the page can pick the words that sound
+       like the stotra's and hand them back as a grammar ---- */
+    @PluginMethod
+    public void vocab(PluginCall call) {
+        String id = call.getString("id", "");
+        if (!modelReady(id)) { call.reject("model-missing"); return; }
+        new Thread(() -> {
+            try {
+                File dir = modelDir(id);
+                StringBuilder sb = new StringBuilder();
+                File wordsTxt = new File(dir, "graph/words.txt");
+                if (wordsTxt.isFile()) {
+                    try (BufferedReader br = new BufferedReader(new InputStreamReader(new FileInputStream(wordsTxt), StandardCharsets.UTF_8))) {
+                        String line;
+                        while ((line = br.readLine()) != null) {
+                            int sp = line.indexOf(' ');
+                            sb.append(sp > 0 ? line.substring(0, sp) : line).append('\n');
+                        }
+                    }
+                } else {
+                    readFstSymbols(new File(dir, "graph/Gr.fst"), sb);
+                }
+                Log.d(TAG, "vocab " + id + ": " + sb.length() + " chars");
+                JSObject r = new JSObject(); r.put("words", sb.toString());
+                call.resolve(r);
+            } catch (Throwable e) {
+                Log.e(TAG, "vocab failed", e);
+                call.reject("vocab failed: " + e);
+            }
+        }).start();
+    }
+
+    /* The small models keep their word list only inside Gr.fst, as an
+       OpenFst SymbolTable: magic, name, available key, size, then
+       (length-prefixed string, int64 key) per entry — all little-endian. */
+    private void readFstSymbols(File fst, StringBuilder out) throws Exception {
+        /* the table sits right after the FST header (a few dozen bytes in);
+           the file is 30 MB, so map it rather than read it onto the heap */
+        try (RandomAccessFile raf = new RandomAccessFile(fst, "r"); java.nio.channels.FileChannel ch = raf.getChannel()) {
+            ByteBuffer b = ch.map(java.nio.channels.FileChannel.MapMode.READ_ONLY, 0, ch.size()).order(ByteOrder.LITTLE_ENDIAN);
+            byte[] head = new byte[(int) Math.min(65536, ch.size())];
+            b.get(head);
+            byte[] magic = new byte[] { (byte) 0x74, (byte) 0xFB, (byte) 0xB2, (byte) 0x7E };   // 2125658996 LE
+            int p = indexOf(head, magic, 0);
+            if (p < 0) throw new Exception("no symbol table");
+            b.position(p + 4);
+            int nameLen = b.getInt(); b.position(b.position() + nameLen);
+            b.getLong();                          // available key
+            long size = b.getLong();
+            for (long i = 0; i < size; i++) {
+                int len = b.getInt();
+                byte[] s = new byte[len]; b.get(s);
+                b.getLong();                      // key
+                out.append(new String(s, StandardCharsets.UTF_8)).append('\n');
+            }
+        }
+    }
+
+    private static int indexOf(byte[] hay, byte[] needle, int from) {
+        outer:
+        for (int i = from; i <= hay.length - needle.length; i++) {
+            for (int j = 0; j < needle.length; j++) if (hay[i + j] != needle[j]) continue outer;
+            return i;
+        }
+        return -1;
+    }
+
+    /* ---- listening ---- */
     @PluginMethod
     public void start(PluginCall call) {
         if (getPermissionState("microphone") != PermissionState.GRANTED) {
@@ -168,6 +265,11 @@ public class StutiVoskPlugin extends Plugin implements RecognitionListener {
     private void startInternal(PluginCall call) {
         String id = call.getString("id", "");
         if (!modelReady(id)) { call.reject("model-missing"); return; }
+        JSArray grammarArr = call.getArray("grammar", null);
+        boolean capture = Boolean.TRUE.equals(call.getBoolean("capture", true));
+        String grammar = null;
+        if (grammarArr != null && grammarArr.length() > 0) grammar = grammarArr.toString();
+        final String grammarJson = grammar;
         new Thread(() -> {
             try {
                 stopInternal();
@@ -176,15 +278,82 @@ public class StutiVoskPlugin extends Plugin implements RecognitionListener {
                     model = new Model(modelDir(id).getAbsolutePath());
                     modelId = id;
                 }
-                Recognizer rec = new Recognizer(model, 16000.0f);
-                service = new SpeechService(rec, 16000.0f);
-                boolean ok = service.startListening(this);
-                Log.d("StutiVosk", "startListening=" + ok + " model=" + id);
+                Recognizer rec = grammarJson != null ? new Recognizer(model, (float) RATE, grammarJson) : new Recognizer(model, (float) RATE);
+                int minBuf = AudioRecord.getMinBufferSize(RATE, AudioFormat.CHANNEL_IN_MONO, AudioFormat.ENCODING_PCM_16BIT);
+                AudioRecord audio = new AudioRecord(MediaRecorder.AudioSource.VOICE_RECOGNITION, RATE,
+                    AudioFormat.CHANNEL_IN_MONO, AudioFormat.ENCODING_PCM_16BIT, Math.max(minBuf, CHUNK * 2 * 4));
+                if (audio.getState() != AudioRecord.STATE_INITIALIZED) { rec.close(); call.reject("mic unavailable"); return; }
+                running = true;
+                loop = new Thread(() -> run(audio, rec, capture), "stuti-vosk");
+                loop.start();
+                Log.d(TAG, "listening model=" + id + " grammar=" + (grammarJson != null ? grammarArr.length() + " words" : "free") + " capture=" + capture);
                 call.resolve();
             } catch (Exception e) {
                 call.reject("start failed: " + e.getMessage());
             }
         }).start();
+    }
+
+    private void run(AudioRecord audio, Recognizer rec, boolean capture) {
+        RandomAccessFile wav = null;
+        long bytes = 0;
+        short[] buf = new short[CHUNK];
+        ByteBuffer bb = ByteBuffer.allocate(CHUNK * 2).order(ByteOrder.LITTLE_ENDIAN);
+        try {
+            if (capture) { wav = new RandomAccessFile(wavFile(), "rw"); wav.setLength(0); wav.write(new byte[44]); }
+            audio.startRecording();
+            while (running) {
+                int n = audio.read(buf, 0, CHUNK);
+                if (n <= 0) continue;
+                if (wav != null) {
+                    bb.clear(); for (int i = 0; i < n; i++) bb.putShort(buf[i]);
+                    wav.write(bb.array(), 0, n * 2); bytes += n * 2;
+                }
+                if (rec.acceptWaveForm(buf, n)) emit("result", field(rec.getResult(), "text"));
+                else emit("partial", field(rec.getPartialResult(), "partial"));
+            }
+            emit("result", field(rec.getFinalResult(), "text"));
+        } catch (Exception e) {
+            Log.e(TAG, "audio loop", e);
+            JSObject d = new JSObject(); d.put("message", String.valueOf(e.getMessage()));
+            notifyListeners("error", d);
+        } finally {
+            try { audio.stop(); } catch (Exception ignored) {}
+            audio.release();
+            rec.close();
+            if (wav != null) {
+                try { writeWavHeader(wav, bytes); wav.close(); } catch (Exception ignored) {}
+            }
+        }
+    }
+
+    private void writeWavHeader(RandomAccessFile f, long dataBytes) throws Exception {
+        ByteBuffer h = ByteBuffer.allocate(44).order(ByteOrder.LITTLE_ENDIAN);
+        h.put("RIFF".getBytes(StandardCharsets.US_ASCII)).putInt((int) (36 + dataBytes)).put("WAVE".getBytes(StandardCharsets.US_ASCII));
+        h.put("fmt ".getBytes(StandardCharsets.US_ASCII)).putInt(16).putShort((short) 1).putShort((short) 1)
+            .putInt(RATE).putInt(RATE * 2).putShort((short) 2).putShort((short) 16);
+        h.put("data".getBytes(StandardCharsets.US_ASCII)).putInt((int) dataBytes);
+        f.seek(0); f.write(h.array());
+    }
+
+    private String field(String json, String key) {
+        try { return new org.json.JSONObject(json).optString(key, ""); } catch (Exception e) { return ""; }
+    }
+
+    private String lastPartial = "";
+    private void emit(String event, String text) {
+        if (text == null || text.isEmpty()) return;
+        if (event.equals("partial")) { if (text.equals(lastPartial)) return; lastPartial = text; } else lastPartial = "";
+        Log.d(TAG, event + ": " + text);
+        JSObject d = new JSObject(); d.put("text", text);
+        notifyListeners(event, d);
+    }
+
+    /* the page's own notes into logcat — the only console a release build has */
+    @PluginMethod
+    public void log(PluginCall call) {
+        Log.d(TAG, "page: " + call.getString("msg", ""));
+        call.resolve();
     }
 
     @PluginMethod
@@ -194,32 +363,39 @@ public class StutiVoskPlugin extends Plugin implements RecognitionListener {
     }
 
     private void stopInternal() {
-        if (service != null) { service.stop(); service.shutdown(); service = null; }
+        running = false;
+        Thread t = loop;
+        loop = null;
+        if (t != null) { try { t.join(1500); } catch (InterruptedException ignored) {} }
+    }
+
+    /* ---- hand the last session (audio + the page's log) to another app ---- */
+    @PluginMethod
+    public void shareSession(PluginCall call) {
+        String log = call.getString("log", "");
+        try {
+            ArrayList<Uri> uris = new ArrayList<>();
+            String auth = getContext().getPackageName() + ".fileprovider";
+            if (!log.isEmpty()) {
+                try (FileWriter w = new FileWriter(logFile())) { w.write(log); }
+                uris.add(FileProvider.getUriForFile(getContext(), auth, logFile()));
+            }
+            if (wavFile().isFile() && wavFile().length() > 44) uris.add(FileProvider.getUriForFile(getContext(), auth, wavFile()));
+            if (uris.isEmpty()) { call.reject("nothing recorded yet"); return; }
+            Intent send = new Intent(Intent.ACTION_SEND_MULTIPLE);
+            send.setType("*/*");
+            send.putParcelableArrayListExtra(Intent.EXTRA_STREAM, uris);
+            send.putExtra(Intent.EXTRA_SUBJECT, "Stuti Follow session");
+            send.addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION);
+            Intent chooser = Intent.createChooser(send, "Share Follow session");
+            chooser.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+            getActivity().startActivity(chooser);
+            call.resolve();
+        } catch (Exception e) {
+            call.reject("share failed: " + e.getMessage());
+        }
     }
 
     @Override
     protected void handleOnDestroy() { stopInternal(); if (model != null) { model.close(); model = null; } }
-
-    /* ---- RecognitionListener: Vosk hands JSON; we pass on just the text ---- */
-    private String field(String json, String key) {
-        try { return new org.json.JSONObject(json).optString(key, ""); } catch (Exception e) { return ""; }
-    }
-    @Override public void onPartialResult(String hypothesis) {
-        String t = field(hypothesis, "partial");
-        Log.d("StutiVosk", "partial: " + hypothesis);
-        if (t.isEmpty()) return;
-        JSObject d = new JSObject(); d.put("text", t); notifyListeners("partial", d);
-    }
-    @Override public void onResult(String hypothesis) {
-        String t = field(hypothesis, "text");
-        Log.d("StutiVosk", "result: " + hypothesis);
-        if (t.isEmpty()) return;
-        JSObject d = new JSObject(); d.put("text", t); notifyListeners("result", d);
-    }
-    @Override public void onFinalResult(String hypothesis) { onResult(hypothesis); }
-    @Override public void onError(Exception e) {
-        Log.e("StutiVosk", "error", e);
-        JSObject d = new JSObject(); d.put("message", String.valueOf(e.getMessage())); notifyListeners("error", d);
-    }
-    @Override public void onTimeout() { /* SpeechService without a timeout never calls this */ }
 }

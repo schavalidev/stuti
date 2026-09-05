@@ -66,6 +66,15 @@ function devaToLatin(s: string): string {
 
 /** Fold any script to the comparison key: first letter kept (vowel or
     consonant), then consonants only, confusables merged, doubles collapsed. */
+/* A finer fold that keeps the vowels: not for matching, but for choosing
+   which words of a recogniser's vocabulary sound most like a text word */
+export function fineKey(word: string): string {
+  let s = word;
+  if (/[\u0C00-\u0C7F]/.test(s)) s = teluguToDeva(s);
+  if (/[\u0900-\u097F]/.test(s)) s = devaToLatin(s);
+  return latinFold(s);
+}
+
 export function keyOf(word: string): string {
   let s = word;
   if (/[ఀ-౿]/.test(s)) s = teluguToDeva(s);
