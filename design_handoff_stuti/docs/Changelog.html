@@ -215,6 +215,10 @@ code { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: .
       <p>Tested on the phone, the founder went Learn → Repeat → Record, the designer's per-line drill, and found the light driven by a timer, a transport bar that belonged to that timer, and no file at the end. The voice-tracked recording lived behind the mic beside the title, a second recorder on the same screen. There is one now. A Record chip sits in the reader's main row beside Learn, and the Record toggle inside the learn bar starts the same thing: Follow with the file kept, the light on the reciter's voice, the transport stood down. Per-line compare stays reachable only as the take strip after a turn. The note after keeping no longer fades; it stays until dismissed and opens the shelf with one tap, so where the recording went is never a question.</p>
     </div>
     <div class="entry">
+      <div class="entry-head"><span class="tag tag-fix">Fixed</span><h3>The Record chip was clipped in Telugu</h3></div>
+      <p>In the reader's chip row the new Record chip sat last and, in Telugu where the labels run wide, was squeezed and cut off with no way to reach it. Chips in that row no longer shrink, and the row scrolls to it.</p>
+    </div>
+    <div class="entry">
       <div class="entry-head"><span class="tag tag-chg">Next</span><h3>What this build still doesn't do</h3></div>
       <p>Sign-in, sync, dāna and reminders behave exactly as the prototype's own tracker already describes them — local-only, honestly so. Real accounts and cross-device sync are the next milestone, once a Supabase project exists to point them at, and they go in new modules that wrap the generated stores, never in the generated files themselves. The collaborative setup's last piece landed after this build: a scheduled task runs <code>check-design-updates.sh</code> every morning at nine and reports what the designer has pushed since the last port — reporting only, never re-porting on its own, so a design change still becomes a build only when someone asks for one.</p>
     </div>

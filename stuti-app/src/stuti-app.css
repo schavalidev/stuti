@@ -94,3 +94,6 @@
 .chip-record { color: #a5281c; border-color: color-mix(in oklab, #c0392b 40%, var(--line)); }
 .chip-record.chip-on { background: color-mix(in oklab, #c0392b 18%, var(--surface)); }
 .rd-follow-chip.is-kept { flex-wrap: wrap; }
+/* the Record chip must never shrink or wrap inside the scrolling chip row */
+.reader-layers.tight .chip-record, .reader-layers.tight .chip-learn { flex: none; white-space: nowrap; }
+.reader-layers.tight > * { flex-shrink: 0; }
