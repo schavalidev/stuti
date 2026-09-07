@@ -219,6 +219,10 @@ code { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: .
       <p>In the reader's chip row the new Record chip sat last and, in Telugu where the labels run wide, was squeezed and cut off with no way to reach it. Chips in that row no longer shrink, and the row scrolls to it.</p>
     </div>
     <div class="entry">
+      <div class="entry-head"><span class="tag tag-chg">Changed</span><h3>The APK loses two thirds of its weight</h3></div>
+      <p>Seventy-odd megabytes, and three things made most of it. The eight ink emblems were the designer's twelve-hundred-pixel exports, two and a half megabytes each, shown as tiles a quarter that size; a script now keeps a 720-pixel, palette-reduced copy in the app, and the emblems folder went from twenty-nine megabytes to six. The Vosk recogniser was packed for two processor families; every phone since 2017 is 64-bit, so the 32-bit copy is gone. And two source images of mine that nothing referenced were still shipping. Twenty-six megabytes now, same key, same everything.</p>
+    </div>
+    <div class="entry">
       <div class="entry-head"><span class="tag tag-chg">Next</span><h3>What this build still doesn't do</h3></div>
       <p>Sign-in, sync, dāna and reminders behave exactly as the prototype's own tracker already describes them — local-only, honestly so. Real accounts and cross-device sync are the next milestone, once a Supabase project exists to point them at, and they go in new modules that wrap the generated stores, never in the generated files themselves. The collaborative setup's last piece landed after this build: a scheduled task runs <code>check-design-updates.sh</code> every morning at nine and reports what the designer has pushed since the last port — reporting only, never re-porting on its own, so a design change still becomes a build only when someone asks for one.</p>
     </div>
