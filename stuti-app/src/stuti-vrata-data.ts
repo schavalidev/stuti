@@ -1008,10 +1008,33 @@ export const STUTI_VRATA = (function () {
     STUTI_PARVA_EXTRA.entries.forEach((e) => vratas.push(e));
   }
 
+  /* ---- memo: a vrata's find(), remembered until its inputs change ---- */
+  const FIND_CACHE = new Map<string, any>();
+  let FIND_STAMP = "";
+  const findStamp = () => {
+    try { return JSON.stringify(STUTI_PREFS.get()) + "|" + STUTI_LOC.getLocId() + "|" + JSON.stringify(STUTI_LOC.getDetected()); }
+    catch (e) { return ""; }
+  };
+  const memoFind = (v: any, extra = "") => {
+    if (!v || v.__memoFind || typeof v.find !== "function") return v;
+    const raw = v.find;
+    v.find = function (...a: any[]) {
+      const s = findStamp();
+      if (s !== FIND_STAMP) { FIND_STAMP = s; FIND_CACHE.clear(); }
+      const k = v.id + "|" + extra + "|" + a.join(",");
+      if (FIND_CACHE.has(k)) { const c = FIND_CACHE.get(k); return c instanceof Date ? new Date(c) : c; }
+      const r = raw.apply(v, a);
+      FIND_CACHE.set(k, r instanceof Date ? new Date(r) : r);
+      return r;
+    };
+    v.__memoFind = true;
+    return v;
+  };
+  vratas.forEach((v) => memoFind(v));
   const byId = {};
   vratas.forEach((v) => { byId[v.id] = v; });
   /* the house's own tithis, dressed as vratas — read live, since they are edited */
-  const personal = () => { try { return STUTI_TITHIS ? STUTI_TITHIS.vratas() : []; } catch (e) { return []; } };
+  const personal = () => { try { return STUTI_TITHIS ? STUTI_TITHIS.vratas().map((v) => memoFind(v, JSON.stringify(v, (k, x) => (typeof x === "function" ? undefined : x)))) : []; } catch (e) { return []; } };
   const all = () => vratas.concat(personal());
   const lookup = (id) => byId[id] || personal().find((v) => v.id === id) || null;
 
