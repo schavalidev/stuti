@@ -48,14 +48,22 @@ netlify env:set STUTI_DRIVE_FOLDER 1msv7s9w0Q-MJJINiuVQDq-tnzmzWHKez --site 3f9c
 netlify env:set STUTI_DRIVE_OAUTH '{"client_id":"PASTE","client_secret":"PASTE","refresh_token":"PASTE"}' --site 3f9cdccf-4d91-463c-ae77-7fa0489e48d9
 ```
 
-Functions read the environment at each invocation, so no redeploy is needed.
-Check with:
+A function only sees the environment captured when it was deployed, so
+redeploy after setting them (`netlify deploy --prod --build --site 3f9cdccf-4d91-463c-ae77-7fa0489e48d9 --skip-functions-cache`
+from the repo root). Then check with:
 
 ```bash
 curl -s -X POST https://stuti-app.netlify.app/.netlify/functions/relay -H 'Content-Type: application/json' -d '{"name":"note-setup-check.txt","text":"hello from setup"}'
 ```
 
 A `{"id":…,"name":"note-setup-check.txt"}` reply means the file is in the folder.
+
+If the reply is `token 401 unauthorized_client`, the refresh token was not
+minted for this client id: in the playground the gear's **Use your own OAuth
+credentials** must be ticked, with this client's id and secret pasted in,
+*before* pressing Authorize APIs. A token minted with the playground's own
+credentials belongs to Google's client, and this client cannot refresh it.
+Redo step 4 with the box ticked, set the variable again, redeploy.
 
 ## What the app sends
 
