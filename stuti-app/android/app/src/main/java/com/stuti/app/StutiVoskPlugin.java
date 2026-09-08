@@ -527,6 +527,18 @@ public class StutiVoskPlugin extends Plugin {
     }
 
     /* ---- hand the last session (audio + the page's log) to another app ---- */
+    /* where the last session's files are, so the page can read them itself
+       (through the WebView's file URL) and hand them to the log relay */
+    @PluginMethod
+    public void sessionFiles(PluginCall call) {
+        JSObject r = new JSObject();
+        r.put("log", logFile().getAbsolutePath());
+        r.put("wav", wavFile().getAbsolutePath());
+        r.put("logBytes", logFile().isFile() ? logFile().length() : 0);
+        r.put("wavBytes", wavFile().isFile() ? wavFile().length() : 0);
+        call.resolve(r);
+    }
+
     @PluginMethod
     public void shareSession(PluginCall call) {
         String log = call.getString("log", "");

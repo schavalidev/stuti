@@ -1,6 +1,7 @@
 import { Icon } from "./stuti-icons";
 import React from "react";
 import { STUTI_BUILD } from "./stuti-build";
+import { RelayRow } from "./stuti-relay-ui";
 import { STUTI_DANA } from "./stuti-dana-core";
 import { DanaSheet, useDana } from "./stuti-dana";
 import { FeedbackSheet } from "./stuti-feedback";
@@ -419,6 +420,7 @@ function SettingsView({ go, lang, setLang, uiLang, setUiLang, theme, toggleTheme
               <p className="set-about">{L.t("aboutTexts", uiLang)}</p>
               <p className="set-about">{L.t("aboutProof", uiLang).replace("{p}", STUTI_PROOF.counts().proofed).replace("{a}", STUTI_PROOF.counts().awaiting)}</p>
               <p className="set-about set-support">{L.t("supportLine", uiLang).replace("{days}", STUTI_BUILD.REPLY_DAYS)} <a href={"mailto:" + STUTI_BUILD.SUPPORT}>{STUTI_BUILD.SUPPORT}</a></p>
+              <RelayRow lang={uiLang} Row={SetRow} />
               <BuildStamp lang={lang} noReset />
             </SetBlock>
           </SetPanel>

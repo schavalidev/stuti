@@ -21,6 +21,7 @@ type Plugin = {
   stop(): Promise<void>;
   vocab(o: { id: string }): Promise<{ words: string }>;
   shareSession(o: { log: string }): Promise<void>;
+  sessionFiles(): Promise<{ log: string; wav: string; logBytes: number; wavBytes: number }>;
   log(o: { msg: string }): Promise<void>;
   note(o: { line: string; fresh?: boolean }): Promise<void>;
   keepRecording(o: { hymn: string; title: string; lang: string; cues: number[]; lineCount: number; linesLit: number }): Promise<Recitation>;
@@ -88,6 +89,9 @@ export const voskFileUrl = (path: string) => Capacitor.convertFileSrc(path);
 
 /** Hand the last session (audio + the page's log) to another app, so a
     real chant can be replayed on a desk for tuning. */
+/** The last session's files on disk, for the log relay. */
+export const voskSessionFiles = () => Native.sessionFiles();
+
 export function voskShareSession(log: string): Promise<void> {
   return Native.shareSession({ log });
 }

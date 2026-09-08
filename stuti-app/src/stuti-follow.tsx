@@ -18,6 +18,7 @@ import React from "react";
 import { Icon } from "./stuti-icons";
 import { FollowEngine } from "./stuti-follow-engine";
 import type { FollowStatus, Line } from "./stuti-follow-engine";
+import { relayFollowSession } from "./stuti-relay";
 import { VOSK_MODELS, VoskRecognition, voskAvailable, voskDownload, voskLangFor, voskLog, voskModelReady, voskNote, voskShareSession, voskVocab } from "./stuti-vosk";
 import { grammarFor, indexVocab } from "./stuti-follow-grammar";
 import { OverlayPortal } from "./stuti-picker";
@@ -313,9 +314,13 @@ export function useFollow({ hymn, lines, lang, active, setActive, setWord, setPl
   const dismiss = () => { armRec.current = false; setStatus("idle"); };
 
   const stop = (why?: Status, silent = false) => {
+    const wasOn = onRef.current;
     onRef.current = false;
     setOn(false);
     endCapture(silent);
+    /* the session goes to the makers by itself (stuti-relay.ts): the log,
+       and on the phone the audio, so a real chant can be replayed for tuning */
+    if (wasOn && t0.current) relayFollowSession({ hymn: (hymn && hymn.id) || "", lang, lines: log.current.slice(), seconds: (Date.now() - t0.current) / 1000, wav: true }).catch(() => {});
     armRec.current = false;   // a Record that never began must not arm the next Follow
     if (restartTimer.current) { clearTimeout(restartTimer.current); restartTimer.current = null; }
     try { rec.current && rec.current.abort(); } catch (e) {}
