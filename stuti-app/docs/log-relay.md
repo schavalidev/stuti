@@ -24,8 +24,9 @@ error. Files uploaded with your own account's refresh token are yours.
 
 1. Google Cloud console → a project (any name) → **APIs & Services → Library**
    → enable **Google Drive API**.
-2. **OAuth consent screen** → External → fill the app name and your email →
-   add your own Google account as a test user. (Testing mode is fine; the
+2. **OAuth consent screen** (now "Google Auth Platform → Audience") →
+   External → fill the app name and your email → under **Test users** add
+   your own Google account, or the consent page answers "Access blocked". (Testing mode is fine; the
    refresh token for a test user lasts seven days *unless* the app is
    published — press **Publish app** on that screen, no verification is
    needed for a Drive scope you only use yourself.)
@@ -33,11 +34,15 @@ error. Files uploaded with your own account's refresh token are yours.
    add `https://developers.google.com/oauthplayground` as an authorised
    redirect URI. Note the client id and secret.
 4. Open https://developers.google.com/oauthplayground → the gear icon → tick
-   **Use your own OAuth credentials** and paste the id and secret.
+   **Use your own OAuth credentials** and paste the id and secret — *before*
+   pressing Authorize APIs, and check the redirect shown in the right pane
+   carries your client id, not the playground's 407408718192.
    In step 1 type the scope `https://www.googleapis.com/auth/drive.file`
    — or `https://www.googleapis.com/auth/drive` if the folder is one you
    did not create in this app — authorise, then in step 2 press
-   **Exchange authorization code for tokens** and copy the refresh token.
+   **Exchange authorization code for tokens** and copy the refresh token —
+   the one the box shows *after* that press; a value left from an earlier
+   attempt is the wrong token, and will fail as `unauthorized_client`.
 5. From the repo root:
 
 ```bash
@@ -81,3 +86,5 @@ Testers can turn it off in Settings → About → "Send diagnostics to the
 makers" (`stuti-relay = "0"`). A dev server on localhost never sends.
 When the network is away, text goes into a small queue (`stuti-relay-q`) and
 leaves on the next launch or when the connection returns; audio is tried once.
+
+Verified 8 Sep 2026: the text path (`note-setup-check.txt` landed in the folder) and the resumable audio path (a 2-second WAV via PUT, 200).
