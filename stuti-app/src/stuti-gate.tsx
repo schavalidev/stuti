@@ -14,6 +14,7 @@ import { Flame, Icon } from "./stuti-icons";
    ============================================================ */
 const { useState: useGateS, useEffect: useGateE, useRef: useGateR } = React;
 
+const GATE_ASK: Record<string, string> = { roman: "Do not have the word? Write to", deva: "शब्द नहीं मिला? हमें लिखें:", telugu: "పదం లేదా? మాకు రాయండి:" };
 function GateScreen({ lang = "deva", onOpen }) {
   const L = STUTI_L, B = STUTI_BUILD;
   const [v, setV] = useGateS("");
@@ -41,7 +42,7 @@ function GateScreen({ lang = "deva", onOpen }) {
           <button className="gate-go" type="submit" disabled={!v.trim()}>{L.t("gateGo", lang)}<Icon name="arrow" size={17} /></button>
         </form>
         <p className={"gate-note" + (no ? " is-no" : "")}>{no ? L.t(no > 2 ? "gateNoAgain" : "gateNo", lang) : L.t("gateHint", lang)}</p>
-        {no > 2 && B.SUPPORT && <a className="gate-mail" href={"mailto:" + B.SUPPORT}>{B.SUPPORT}</a>}
+        {B.SUPPORT && <a className="gate-mail" href={"mailto:" + B.SUPPORT + "?subject=" + encodeURIComponent("Stuti beta")}>{GATE_ASK[lang] || GATE_ASK.roman} {B.SUPPORT}</a>}
         <div className="gate-foot">{B.label()}</div>
       </div>
     </div>

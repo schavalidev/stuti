@@ -21,5 +21,6 @@
 - **When diagnosing, don't guess from CSS** — probe the live element's `getComputedStyle(el).fontFamily/fontWeight` plus `document.fonts.check()` in one shot; inline styles and `:is()` specificity make source-reading unreliable.
 
 ## Design updates
-- The designer's Claude Design project root is newer than its own `design_handoff_stuti/` export; when she hands over the project folder, assemble the handoff from the root working files that `Stuti.html` loads (see the 8 Sep 2026 port in the changelog), then run the pipeline.
+- **The designer's Claude Design project root is the only design source** (agreed 8 Sep 2026). She hands over the whole project folder; her own `design_handoff_stuti/app/` copy is being deleted from her project so it can never be mistaken for the source again, while her `docs/` stay. Assemble this repo's `design_handoff_stuti/app/` from the root working files that `Stuti.html` loads (see the 8 Sep 2026 port in the changelog), then run the pipeline.
+- The beta latch grandfathers any device that finished onboarding before the gate existed (`main.tsx`); keep that. New devices, reinstalls and cleared browsers see the gate, which always shows the support address.
 - The beta latch (`stuti-gate.jsx`) asks for the passcode in `stuti-build.js` (`STUTI_BUILD.GATE`) once per device; set it to null for a public build.
