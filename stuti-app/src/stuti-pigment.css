@@ -20,6 +20,7 @@
   --pig-indigo:  #283A66;   /* Akshara's indigo, unaltered */
   --pig-violet:  #6A5A78;   /* the bloom violet, ground down for cream */
   --pig-red:     oklch(0.50 0.13 27);   /* the banti puvvu, ground to the jar's chroma */
+  --pig-olive:   #5C6339;   /* the vow's olive — deeper than śarad's moss so the two shelves stay apart */
   --pig-terra:   oklch(0.57 0.09 45);
   /* japa's yellow sits between the app's gold and real metal — the gold hue
      lifted enough to read yellow rather than ochre, without leaving the jar */
@@ -35,6 +36,7 @@
   --pig-indigo:  #97A6CC;   /* the same indigo lifted for the night page */
   --pig-violet:  #AFA0BE;
   --pig-red:     oklch(0.77 0.1 27);
+  --pig-olive:   #9AA372;
   --pig-terra:   oklch(0.76 0.09 45);
   --pig-amber:   oklch(0.81 0.12 85);
 }
@@ -55,11 +57,13 @@
 .lens-pill[data-lens="sadhana"],.lens-pad[data-lens="sadhana"]{ --lens-pig:var(--pig-verm,var(--accent)) }
 .lens-pill[data-lens="japa"],   .lens-pad[data-lens="japa"]   { --lens-pig:var(--pig-amber,var(--accent)) }
 .lens-pill[data-lens="learn"],  .lens-pad[data-lens="learn"]  { --lens-pig:var(--pig-moss,var(--accent)) }
-/* red belongs to the Nitya bar's nomulu, not the library's: both bars use
+/* olive belongs to the Nitya bar's nomulu, not the library's: both bars use
    data-lens="nomu", so the jar is chosen by which bar the pill sits in */
 .lens-pill[data-lens="nomu"],   .lens-pad[data-lens="nomu"]   { --lens-pig:var(--pig-violet,var(--accent)) }
-.nitya-bar .lens-pill[data-lens="nomu"], .lens-pad.lens-red[data-lens="nomu"] { --lens-pig:var(--pig-red,var(--accent)) }
-.lens-pill[data-lens="ledger"], .lens-pad[data-lens="ledger"] { --lens-pig:var(--pig-gold,var(--accent)) }
+.nitya-bar .lens-pill[data-lens="nomu"], .lens-pad.lens-olive[data-lens="nomu"] { --lens-pig:var(--pig-olive,var(--accent)) }
+/* the Ledger reads the whole thread back, and the thread's own colour is
+   indigo — the ink the record is kept in */
+.lens-pill[data-lens="ledger"], .lens-pad[data-lens="ledger"] { --lens-pig:var(--pig-indigo,var(--accent)) }
 [data-pigment="on"] :is(.lens-pill,.lens-pad):is([data-lens="patha"],[data-lens="sadhana"],[data-lens="japa"],[data-lens="learn"],[data-lens="nomu"],[data-lens="ledger"]){
   --accent:var(--lens-pig);
   --accent-ink:color-mix(in oklab,var(--lens-pig) 78%,var(--ink));

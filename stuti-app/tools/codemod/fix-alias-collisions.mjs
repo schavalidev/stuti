@@ -30,4 +30,17 @@ for (const [file, from, to] of FIXES) {
   wr(file, text);
 }
 
-console.log("alias collisions fixed:", FIXES.length);
+// The same collision in a newer shape: a module-local `const NAME = ...`
+// that the prototype then publishes with `window.NAME = NAME`, which the
+// transform turns into `export const NAME = NAME;`. Found by scanning every
+// file; the fix is to export the existing binding instead of redeclaring it.
+import { readdirSync } from "node:fs";
+let general = 0;
+for (const f of readdirSync(OUT)) {
+  if (!/\.tsx?$/.test(f)) continue;
+  const text = rd(f);
+  const fixed = text.replace(/^export const (\w+) = \1;$/gm, (m, name) => { general++; return `export { ${name} };`; });
+  if (fixed !== text) wr(f, fixed);
+}
+
+console.log("alias collisions fixed:", FIXES.length, "+ self-alias exports:", general);

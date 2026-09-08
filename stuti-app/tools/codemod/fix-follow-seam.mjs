@@ -79,9 +79,14 @@ patch(
   "Record chip after the Learn chip",
 );
 patch(
-  `onClick={() => setRecordOn(v => !v)}`,
-  `onClick={() => { setLearnOpen(false); setPlaying(false); follow.record(); }}`,
-  "learn-bar Record toggle starts the voice-tracked recording",
+  `<button className={"rd-seg-rec" + (recordOn ? " on" : "")} onClick={() => setRecordOn(v => !v)}`,
+  `<button className={"rd-seg-rec" + ((follow.supported ? follow.recOn : recordOn) ? " on" : "")} onClick={() => { if (!follow.supported) { setRecordOn(v => !v); return; } if (follow.recOn) { follow.stop(); return; } setLearnOpen(false); setPlaying(false); follow.record(); }}`,
+  "learn-bar Record toggle starts (or stops) the voice-tracked recording; the designer's recorder where the ears cannot run",
+);
+patch(
+  `aria-pressed={recordOn} aria-label={STUTI_L.t("recordTurn", lang)}`,
+  `aria-pressed={follow.supported ? follow.recOn : recordOn} aria-label={STUTI_L.t("recordTurn", lang)}`,
+  "learn-bar Record toggle pressed state",
 );
 
 writeFileSync(FILE, t);

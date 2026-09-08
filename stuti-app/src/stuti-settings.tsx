@@ -1,6 +1,5 @@
 import { Icon } from "./stuti-icons";
 import React from "react";
-import { STUTI_AUTH } from "./stuti-auth";
 import { STUTI_BUILD } from "./stuti-build";
 import { STUTI_DANA } from "./stuti-dana-core";
 import { DanaSheet, useDana } from "./stuti-dana";
@@ -11,6 +10,8 @@ import { BuildStamp, ResetPanel } from "./stuti-library";
 import { STUTI_NUDGE } from "./stuti-nudge";
 import { LocationControl } from "./stuti-panchanga";
 import { STUTI_PREFS } from "./stuti-prefs";
+import { STUTI_PROOF } from "./stuti-proof";
+import { STUTI_VRATA } from "./stuti-vrata-data";
 
 /* ============================================================
    STUTI — Settings
@@ -26,7 +27,7 @@ import { STUTI_PREFS } from "./stuti-prefs";
    sit on real longitudes and real tithi timings, so all three
    change what the app says — which is why they are offered.
    ============================================================ */
-const { useState: useStateS, useEffect: useEffectS } = React;
+const { useState: useStateS, useEffect: useEffectS, useMemo: useMemoS } = React;
 
 function SetSection({ title, note, children }) {
   return (
@@ -257,6 +258,14 @@ function SettingsView({ go, lang, setLang, uiLang, setUiLang, theme, toggleTheme
     { k: "smarta", name: L.t("smarta", uiLang), sub: L.t("smartaSub", uiLang) },
     { k: "vaishnava", name: L.t("vaishnava", uiLang), sub: L.t("vaishnavaSub", uiLang) },
   ];
+  /* north or south for the few days the two halves keep apart — Hanumān
+     Jayantī above all. The place answers unless the reciter overrides it. */
+  const south = STUTI_VRATA && STUTI_VRATA.southern ? STUTI_VRATA.southern() : true;
+  const tradOptions = [
+    { k: "place", name: uiLang === "telugu" ? "ప్రదేశం ప్రకారం" : uiLang === "deva" ? "स्थान के अनुसार" : "By place", sub: (prefs.tradition || "place") === "place" ? (south ? (uiLang === "telugu" ? "ఇప్పుడు: దక్షిణ" : uiLang === "deva" ? "अभी: दक्षिण" : "Now: south") : (uiLang === "telugu" ? "ఇప్పుడు: ఉత్తర" : uiLang === "deva" ? "अभी: उत्तर" : "Now: north")) : undefined },
+    { k: "south", name: uiLang === "telugu" ? "దక్షిణ" : uiLang === "deva" ? "दक्षिण" : "South", sub: uiLang === "telugu" ? "హనుమాన్ జయంతి వైశాఖ బహుళ దశమి" : uiLang === "deva" ? "हनुमान् जयन्ती वैशाख कृष्ण दशमी" : "Hanumān Jayantī on Vaiśākha Kṛṣṇa Daśamī" },
+    { k: "north", name: uiLang === "telugu" ? "ఉత్తర" : uiLang === "deva" ? "उत्तर" : "North", sub: uiLang === "telugu" ? "హనుమాన్ జయంతి చైత్ర పౌర్ణమి" : uiLang === "deva" ? "हनुमान् जयन्ती चैत्र पूर्णिमा" : "Hanumān Jayantī on Caitra Pūrṇimā" },
+  ];
   /* vākya is nirayana by construction, so the ayanāṁśa below has nothing to
      act on. The control stays visible and goes quiet — hiding it would leave
      the reciter hunting for a setting that was there yesterday. */
@@ -269,6 +278,25 @@ function SettingsView({ go, lang, setLang, uiLang, setUiLang, theme, toggleTheme
     { k: "drik", name: L.t("drikName", uiLang), sub: L.t("drikSub", uiLang) },
     { k: "vakya", name: L.t("vakyaName", uiLang), sub: L.t("vakyaSub", uiLang) },
   ];
+  /* the festival card can be checked before the day comes: pin one of the
+     next parvas as "today" for the card and the petal drift alone — the
+     pañcāṅga itself keeps the real date */
+  const T3 = uiLang === "telugu" ? "tel" : uiLang === "roman" ? "roman" : "deva";
+  const previewDay = localStorage.getItem("stuti-preview-day") || "off";
+  const previewOptions = useMemoS(() => {
+    const V = STUTI_VRATA; if (!V) return [];
+    const off = { k: "off", name: uiLang === "telugu" ? "ఆపు" : uiLang === "deva" ? "बन्द" : "Off" };
+    const seen = new Set();
+    let list = [];
+    try { list = V.upcoming(80).filter((u) => V.isParva(u.v) && !seen.has(u.v.id) && seen.add(u.v.id)).slice(0, 8); } catch (e) {}
+    const fmt = (d) => d.toLocaleDateString(uiLang === "telugu" ? "te-IN" : uiLang === "deva" ? "hi-IN" : "en-IN", { day: "numeric", month: "short" });
+    return [off].concat(list.map((u) => ({ k: V.dayKey(u.date), name: u.v.name[T3] || u.v.name.roman, sub: fmt(u.date) })));
+  }, [uiLang]);
+  const setPreview = (k) => {
+    localStorage.removeItem("stuti-preview-day");
+    if (k !== "off") localStorage.setItem("stuti-preview-day", k);
+    PR.set({ previewBump: Date.now() });
+  };
 
   return (
     <div className="view libhub scroll">
@@ -287,11 +315,9 @@ function SettingsView({ go, lang, setLang, uiLang, setUiLang, theme, toggleTheme
         <SetChapter icon="pray" title={L.t("setChReciter", uiLang)}>
           <SetPanel>
             <FlyleafBlock lang={uiLang} />
-            <SetRow label={STUTI_AUTH.signedIn() ? (STUTI_AUTH.get().name || L.t("account", uiLang)) : L.t("accSignIn", uiLang)}
-              sub={STUTI_AUTH.signedIn() ? L.t("accSyncWaiting", uiLang) : L.t("accLede", uiLang)}
-              onClick={() => go("account", { from: "settings" })}>
-              <Icon name="chev" size={18} />
-            </SetRow>
+            {/* honest about the account: none exists yet, and the row says so
+               rather than inviting a sign-in that verifies nothing */}
+            <SetRow label={L.t("accComing", uiLang)} sub={L.t("accComingSub", uiLang)} />
             <SetRow label={L.t(given ? "danaRowLit" : "danaRowAsk", uiLang)}
               sub={given ? ((given.name || L.t("danaLampNoName", uiLang)) + " · " + L.t("danaPreviewShort", uiLang)) : L.t("danaRowSub", uiLang)}
               onClick={() => setDanaOpen(true)}>
@@ -321,7 +347,7 @@ function SettingsView({ go, lang, setLang, uiLang, setUiLang, theme, toggleTheme
               <div className="set-loc"><LocationControl /></div>
             </SetBlock>
             <SetRow label={L.t("dailyReminder", uiLang)}
-              sub={rm.on ? rm.time : L.t("reminderOff", uiLang)}
+              sub={(rm.on ? rm.time : L.t("reminderOff", uiLang)) + " · " + L.t("remindOpenOnly", uiLang)}
               onClick={() => openRemind && openRemind()}>
               <Icon name="chev" size={18} />
             </SetRow>
@@ -343,6 +369,11 @@ function SettingsView({ go, lang, setLang, uiLang, setUiLang, theme, toggleTheme
               <SetChoice value={prefs.sampradaya || "smarta"} options={sampradayaOptions} dropdown
                 onChange={(k) => PR.set({ sampradaya: k })} />
             </SetField>
+            <SetField label={uiLang === "telugu" ? "ఉత్తర / దక్షిణ సంప్రదాయం" : uiLang === "deva" ? "उत्तर / दक्षिण परम्परा" : "North or south"}
+              note={uiLang === "telugu" ? "కొన్ని పర్వ దినాలు వింధ్యకు ఇరువైపులా వేరు. మీ ప్రదేశం నిర్ణయిస్తుంది — మీ కుటుంబం వేరే పద్ధతి పాటిస్తే మార్చండి." : uiLang === "deva" ? "कुछ पर्व विन्ध्य के दोनों ओर अलग दिन पड़ते हैं। स्थान तय करता है — परिवार की रीति अलग हो तो बदलें।" : "A few parva days fall differently either side of the Vindhyas. Your place decides — change it if your family keeps the other."}>
+              <SetChoice value={prefs.tradition || "place"} options={tradOptions} dropdown
+                onChange={(k) => PR.set({ tradition: k })} />
+            </SetField>
             <SetField label={L.t("setReckoning", uiLang)} note={L.t("reckoningNote", uiLang)}>
               <SetChoice value={reckoning} options={reckoningOptions} dropdown
                 onChange={(k) => PR.set({ reckoning: k })} />
@@ -353,6 +384,12 @@ function SettingsView({ go, lang, setLang, uiLang, setUiLang, theme, toggleTheme
                 disabled={reckoning === "vakya"}
                 onChange={(k) => PR.set({ ayanamsa: k })} />
             </SetField>
+            {previewOptions.length > 1 && (
+              <SetField label={uiLang === "telugu" ? "పర్వ కార్డ్ మున్దుచూపు" : uiLang === "deva" ? "पर्व कार्ड पूर्वदर्शन" : "Preview a festival day"}
+                note={uiLang === "telugu" ? "ముఖపుట పర్వ కార్డ్ను ఆ రోజు రాకమునెే చూడండి. పంచాంగం ఇవాళి తేదీనే చూపుతుంది." : uiLang === "deva" ? "घर का पर्व कार्ड उस दिन से पहले देखें। पञ्चाङ्ग आज की ही तिथि दिखाता रहेगा।" : "Shows the home festival card as it will look on that day. The pañcāṅga itself keeps today's date."}>
+                <SetChoice value={previewDay} options={previewOptions} dropdown onChange={setPreview} />
+              </SetField>
+            )}
           </SetPanel>
         </SetChapter>
 
@@ -380,6 +417,8 @@ function SettingsView({ go, lang, setLang, uiLang, setUiLang, theme, toggleTheme
             <SetBlock>
               <div className="set-block-cap">{L.t("aboutLabel", uiLang)}</div>
               <p className="set-about">{L.t("aboutTexts", uiLang)}</p>
+              <p className="set-about">{L.t("aboutProof", uiLang).replace("{p}", STUTI_PROOF.counts().proofed).replace("{a}", STUTI_PROOF.counts().awaiting)}</p>
+              <p className="set-about set-support">{L.t("supportLine", uiLang).replace("{days}", STUTI_BUILD.REPLY_DAYS)} <a href={"mailto:" + STUTI_BUILD.SUPPORT}>{STUTI_BUILD.SUPPORT}</a></p>
               <BuildStamp lang={lang} noReset />
             </SetBlock>
           </SetPanel>

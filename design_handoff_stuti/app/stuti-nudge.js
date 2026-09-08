@@ -109,6 +109,9 @@ window.STUTI_NUDGE = (function () {
           parts.push(nm + (note ? " · " + note : ""));
         } catch (e) {}
       }
+      else if (it.kind === "mytithi") {
+        parts.push(it.name + " · " + (it.away === 0 ? L.t("vrataToday", lg) : it.away === 1 ? L.t("vrataTomorrow", lg) : L.t("vrataInDays", lg).replace("{n}", it.away)));
+      }
       else if (it.kind === "tithi") {
         const o = it.obs;
         parts.push(lg === "telugu" ? TR.convert(o.deva || o.name, "telugu") : lg === "deva" ? (o.deva || o.name) : o.name);

@@ -52,9 +52,7 @@
   .browse-grid { grid-template-columns: repeat(auto-fill, minmax(172px, 1fr)); }
   /* the phone's three-up is a phone measure; a tablet has room to keep flowing */
   .lib-deity-grid { grid-template-columns: repeat(auto-fill, minmax(172px, 1fr)); gap: 12px; }
-  .lib-deity-grid .gtile:not(.gtile-full) { padding: 14px 10px 16px; gap: 8px; }
-  .lib-deity-grid .gtile:not(.gtile-full) .gtile-name { font-size: 21px; }
-  .lib-deity-grid .gtile-full .gtile-name { padding: 34px 12px 13px; font-size: 21px; }
+  .lib-deity-grid .gtile-niche .gtile-name { padding: 34px 12px 13px; font-size: 21px; }
 
   /* reader furniture centres over the text column */
   .reader-layers { justify-content: center; }

@@ -6,6 +6,7 @@ import { STUTI_PREFS } from "./stuti-prefs";
 import { STUTI_PLANS, STUTI_VOWS } from "./stuti-sadhana";
 import { STUTI_SANDHYA } from "./stuti-sandhya-core";
 import { STUTI_LOC } from "./stuti-store";
+import { STUTI_TITHIS } from "./stuti-tithis-core";
 import { STUTI_VRATA } from "./stuti-vrata-data";
 
 /* ============================================================
@@ -56,12 +57,15 @@ export const STUTI_CUES = (function () {
   function vowDueOn(vow, day, ctx) {
     const PA = ctx.engines.panchanga, V = ctx.engines.vows;
     if (!PA || !V) return false;
-    const start = new Date(vow.start + "T12:00:00");
-    const end = new Date(start.getTime() + V.term(vow.term).days * DAY);
+    const start = new Date((vow.occasion === "range" && vow.from ? vow.from : vow.start) + "T12:00:00");
+    const span = V.spanDays ? V.spanDays(vow) : V.term(vow.term).days;
+    const end = new Date(start.getTime() + span * DAY + DAY / 2);
     const d = noon(day);
     if (d < noon(start) || d > end) return false;
     const o = V.occ(vow.occasion);
-    return o.weekday ? d.getDay() === (vow.weekday || 0) : !!o.test(PA.forDay(d, ctx.place));
+    if (o.weekday) return d.getDay() === (vow.weekday || 0);
+    if (o.tithi) return PA.forDay(d, ctx.place).tithiIndex === (vow.tithi | 0);
+    return !!o.test(PA.forDay(d, ctx.place));
   }
 
   /* a japa practice is established, not incidental — someone who tapped the
@@ -175,6 +179,18 @@ export const STUTI_CUES = (function () {
       if (!d) return;
       out.push({ kind: "keep", id: "keep-" + k.id, ref: k.id, kkind: k.kind, kref: k.ref, mode: k.mode, state: d.state, away: d.away, n: d.n, done: d.done, remind: d.remind });
     });
+
+    /* the house's own tithis, inside the warning each asked for */
+    try {
+      const TT = STUTI_TITHIS, V = ctx.engines.vrata;
+      if (TT && V) TT.list().forEach((r) => {
+        const v = TT.asVrata(r); let d = null; try { d = V.nextDate(v, now); } catch (e) {}
+        if (!d) return;
+        const away = Math.round((noon(d) - noon(now)) / DAY);
+        if (away < 0 || away > (r.lead == null ? 1 : r.lead)) return;
+        out.push({ kind: "mytithi", id: "mytithi-" + r.id, ref: r.id, name: r.name, tkind: r.kind, away, date: d, done: null, remind: true });
+      });
+    } catch (e) {}
 
     /* an observance is not a debt — it is the day telling you what it is.
        Carried here so one surface can answer "what is today". */

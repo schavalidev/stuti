@@ -8,6 +8,8 @@ import { AKSHARA_PANCHANGA } from "./stuti-panchanga-engine";
 import { LocationControl, MoonPhase, RTU_VIS, SK_CONST, SeasonAmbient, samvatsaraFor, useLoc } from "./stuti-panchanga";
 import { masaShown } from "./stuti-reckoning";
 import { STUTI_SANDHYA } from "./stuti-sandhya-core";
+import { STUTI_TITHIS } from "./stuti-tithis-core";
+import { MyTithisCard, TithiSheet, ttT } from "./stuti-tithis";
 import { STUTI_TRANSLIT } from "./stuti-translit";
 import { VoiceButton } from "./stuti-voice";
 import { STUTI_VRATA } from "./stuti-vrata-data";
@@ -69,19 +71,29 @@ function CalendarView({ go, lang = "deva" }) {
      pūrṇimā…) say what kind of day it is; this says what it's FOR. Each entry
      in STUTI_VRATA knows how to find its own date in a given year, so the
      month's occurrences are collected once and read off by day-key. */
+  /* the house's own tithis are edited live; the month map re-reads on change */
+  const [myTick, bumpMy] = React.useState(0);
+  React.useEffect(() => STUTI_TITHIS ? STUTI_TITHIS.subscribe(() => bumpMy((n) => n + 1)) : undefined, []);
+  const [tithiSheet, setTithiSheet] = React.useState(null);
   const monthFestMap = useCM(() => {
     const map = {};
     if (!V) return map;
-    for (const v of V.vratas) {
+    for (const v of V.all()) {
       if (v.optional) continue;
       let d;
       try { d = v.everyMonth ? v.find(cursor.y, cursor.m) : v.find(cursor.y); } catch (e) { d = null; }
       if (!d) continue;
-      const key = V.dayKey(d);
-      (map[key] = map[key] || []).push(v);
+      /* a many-day parva marks each of its days; Dīpāvalī's span opens
+         before its own pūjā day, which is what `lead` says */
+      const days = v.days || 1, lead = v.lead || 0;
+      for (let i = 0; i < days; i++) {
+        const day = new Date(d.getFullYear(), d.getMonth(), d.getDate() - lead + i);
+        const key = V.dayKey(day);
+        (map[key] = map[key] || []).push(days > 1 ? Object.assign(Object.create(v), { dayNo: i + 1, days }) : v);
+      }
     }
     return map;
-  }, [cursor.y, cursor.m]);
+  }, [cursor.y, cursor.m, myTick]);
   const nameOf = (o) => lang === "telugu" ? o.tel : lang === "roman" ? o.roman : o.deva;
 
   /* Search, scoped to this page: parva dinams by name, and days by what the
@@ -456,10 +468,11 @@ function CalendarView({ go, lang = "deva" }) {
       {selFests.length > 0 && (
         <div className="cal-fest-card">
           {selFests.map(v => (
-            <button key={v.id} className="cal-fest-item" onClick={() => go("browse", { libSub: { kind: "vrata", key: v.id, returnTo: "calendar" } })}>
+            <button key={v.id} className={"cal-fest-item" + (v.personal ? " is-mine" : "")} onClick={() => v.personal ? setTithiSheet({ rec: v.rec }) : go("browse", { libSub: { kind: "vrata", key: v.id, returnTo: "calendar" } })}>
               <span className="cal-fest-dot" aria-hidden="true" />
               <span className="cal-fest-body">
                 <span className="cal-fest-name" style={{ fontFamily: calFont(lang) }}>{nameOf(v.name)}</span>
+                {v.dayNo && <span className="cal-fest-sub">{(lang === "telugu" ? v.dayNo + "వ రోజు / " + v.days : lang === "deva" ? "दिन " + v.dayNo + " / " + v.days : "Day " + v.dayNo + " of " + v.days) + (v.dayLines && v.dayLines[v.dayNo - 1] ? " · " + nameOf(v.dayLines[v.dayNo - 1]) : "")}</span>}
               </span>
               <Icon name="next" size={15} />
             </button>
@@ -508,9 +521,18 @@ function CalendarView({ go, lang = "deva" }) {
           <div className="cal-detail-note">{L.t("ordinaryDay", lang)}</div>
         )}
         <div className="cal-detail-note">{L.t("panchangaNote", lang)}</div>
+        <button className="tt-addhere" onClick={() => setTithiSheet({ seedDate: sel })}><Icon name="plus" size={15} />{ttT("addHere", lang)}</button>
       </section>
+      <MyTithisCard lang={lang} onJump={jumpTo} />
+      {tithiSheet && <TithiSheet lang={lang} rec={tithiSheet.rec} seedDate={tithiSheet.seedDate} onClose={() => setTithiSheet(null)} />}
       </React.Fragment>
       )}
+      {/* what the numbers are, and what they are not — said once, where the
+         numbers are, rather than buried in Settings */}
+      <div className="cal-accuracy">
+        <p>{L.t("calAccuracy", lang)}</p>
+        <p>{L.t("calAccuracyFollow", lang)}</p>
+      </div>
       <div style={{ height: 32 }} />
     </div>
   );

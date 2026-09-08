@@ -1,5 +1,5 @@
 import { STUTI_KEEP } from "./stuti-keep-core";
-import { STUTI_PLANS, STUTI_THREAD } from "./stuti-sadhana";
+import { STUTI_JAPA, STUTI_PLANS, STUTI_THREAD, STUTI_VOWS } from "./stuti-sadhana";
 import { STUTI_FAVS, STUTI_FAVS_WEEK } from "./stuti-store";
 
 /* ============================================================
@@ -68,7 +68,57 @@ export const STUTI_LEDGER = (function () {
   }
   const month = (y, m) => summary(monthDates(y, m));
   const week = (end) => summary(lastDays(7, end));
-  const year = (y) => { const out = []; for (let m = 0; m < 12; m++) out.push(...monthDates(y, m)); return summary(out); };
+  const year = (y) => summary(yearDates(y));
+  const yearDates = (y) => { const out = []; for (let m = 0; m < 12; m++) out.push(...monthDates(y, m)); return out; };
+  const weekDates = (end) => lastDays(7, end);
+
+  /* ---- what was actually done over a run of days, named ----
+     The four figures above say how often; these say what. Every answer is
+     read back out of the same records, so nothing new is stored. */
+  function detail(dates) {
+    const today = dkey(new Date());
+    const past = dates.filter((d) => dkey(d) <= today);
+    const keys = past.map(dkey), first = keys[0], last = keys[keys.length - 1];
+    const inSpan = (k) => !!k && k >= first && k <= last;
+
+    /* one stotra, one tally: how many days in this span it was recited */
+    const times = {};
+    past.forEach((d) => ((rec(d) || {}).r || []).forEach((id) => { times[id] = (times[id] || 0) + 1; }));
+    const recited = Object.keys(times).map((id) => ({ id, n: times[id] })).sort((a, b) => b.n - a.n || a.id.localeCompare(b.id));
+
+    /* a text learnt is a plan run to its end, dated by its last portion */
+    let learnt = [];
+    try {
+      const P = STUTI_PLANS;
+      learnt = Object.keys(JSON.parse(localStorage.getItem("stuti-plans") || "{}"))
+        .map((id) => ({ id, p: P.get(id) })).filter((x) => x.p && x.p.finished && inSpan(x.p.last))
+        .map((x) => ({ id: x.id, on: x.p.last }));
+    } catch (e) {}
+
+    /* a dīkṣā finished is one whose term ran out inside the span */
+    let diksha = [];
+    try {
+      const V = STUTI_VOWS;
+      diksha = V.list().map((v) => {
+        const s = new Date((v.occasion === "range" && v.from ? v.from : v.start) + "T12:00:00");
+        const end = dkey(new Date(s.getTime() + V.spanDays(v) * 86400000));
+        return { v, end, kept: (v.kept || []).filter(inSpan).length };
+      }).filter((x) => inSpan(x.end));
+    } catch (e) {}
+
+    /* nomulu and vratālu the bell was rung on and the day kept */
+    let nomus = [], vratas = [];
+    try {
+      const K = STUTI_KEEP;
+      K.list().forEach((k) => {
+        if (k.kind === "vrata") { if (inSpan(k.keptOn)) vratas.push({ k, on: k.keptOn }); return; }
+        const ticks = (k.ticks || []).filter(inSpan).length;
+        if (k.kept && inSpan(k.keptOn)) nomus.push({ k, on: k.keptOn, ticks, done: true });
+        else if (ticks) nomus.push({ k, ticks, done: false });
+      });
+    } catch (e) {}
+    return { recited, learnt, diksha, nomus, vratas };
+  }
 
   /* what is open right now, for the month-start line */
   const open = () => {
@@ -80,11 +130,11 @@ export const STUTI_LEDGER = (function () {
 
   const subs = new Set();
   const fire = () => subs.forEach((fn) => fn());
-  ["STUTI_THREAD", "STUTI_JAPA", "STUTI_PLANS", "STUTI_KEEP", "STUTI_FAVS", "STUTI_FAVS_WEEK"].forEach((k) => { try { window[k].subscribe(fire); } catch (e) {} });
+  [STUTI_THREAD, STUTI_JAPA, STUTI_PLANS, STUTI_KEEP, STUTI_FAVS, STUTI_FAVS_WEEK].forEach((s) => { try { s.subscribe(fire); } catch (e) {} });
 
   return {
     MALA, dkey, fromKey, dueRecite, recite, japa, learn, nomu,
-    monthCells, monthDates, lastDays, summary, month, week, year, open,
+    monthCells, monthDates, lastDays, weekDates, yearDates, summary, month, week, year, detail, open,
     streak: () => { try { return T().streak(); } catch (e) { return { days: 0, graced: 0, today: false }; } },
     subscribe: (fn) => { subs.add(fn); return () => subs.delete(fn); },
   };

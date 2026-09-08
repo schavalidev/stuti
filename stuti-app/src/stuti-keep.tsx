@@ -19,7 +19,7 @@ import { STUTI_PREFS } from "./stuti-prefs";
 const { useState: useStateK, useEffect: useEffectK } = React;
 
 const kpPick = (o, lang) => (!o ? "" : lang === "telugu" ? (o.tel || o.roman) : lang === "deva" ? (o.deva || o.tel || o.roman) : o.roman);
-const kpMasaName = (m, lang) => kpPick(m.name, lang);
+const kpMasaName = (m, lang) => m === "any" ? STUTI_L.t("keepAnyMonth", lang) : kpPick(m.name, lang);
 function kpDate(d, lang) {
   return d.toLocaleDateString(lang === "telugu" ? "te-IN" : lang === "deva" ? "hi-IN" : "en-IN", { weekday: "short", day: "numeric", month: "short" });
 }
@@ -81,6 +81,10 @@ function KeepMonthSheet({ lang, onClose, onPick, current }) {
       </div>
       <div className="nm-list scroll">
         <div className="keep-months">
+          <button className={"keep-month" + (current === "any" ? " on" : "")} onClick={() => onPick("any")}>
+            <span className="keep-month-name display" style={{ fontFamily: font }}>{L.t("keepAnyMonth", lang)}</span>
+            <span className="keep-month-sub">{L.t("keepAnyMonthSub", lang)}</span>
+          </button>
           {months.map((m, i) => {
             const rng = MA.rangeOf ? MA.rangeOf(m.idx) : null;
             return (
@@ -105,7 +109,7 @@ function KeepCard({ go, lang = "deva" }) {
   const items = K.list();
   const eng = K.engines();
   const open = (k) => go("browse", { libSub: { kind: k.kind, key: k.ref, returnTo: "daily" } });
-  const masaOf = (idx) => MA.list.find((m) => m.idx === idx);
+  const masaOf = (idx) => idx === "any" ? "any" : MA.list.find((m) => m.idx === idx);
   return (
     <div className="vows keep">
       <div className="vows-head">
@@ -126,7 +130,7 @@ function KeepCard({ go, lang = "deva" }) {
               sub = L.t("keepDailySub", lang).replace("{n}", k.ticks.length).replace("{t}", K.YEAR);
             } else if (k.mode === "month") {
               const m = k.masa != null && masaOf(k.masa);
-              sub = m ? L.t("keepMonthSub", lang).replace("{m}", kpMasaName(m, lang)) : L.t("keepPickMonth", lang);
+              sub = m ? (m === "any" ? L.t("keepAnySub", lang) : L.t("keepMonthSub", lang).replace("{m}", kpMasaName(m, lang))) : L.t("keepPickMonth", lang);
               if (due && !k.kept) status = L.t("keepThisMonth", lang);
             } else {
               let nd = null; try { nd = eng.vrata.nextDate(s, new Date()); } catch (e) {}
@@ -204,7 +208,7 @@ function NomuTrackerRow({ k, lang, go, K, eng }) {
   const d = S.deityById[n.deity];
   const due = K.dueOn(k, now, eng);
   const udy = k.kept && K.hasUdyapana(k) && !k.udyapanaDone;
-  const masa = k.masa != null && MA.list.find((m) => m.idx === k.masa);
+  const masa = k.masa === "any" ? "any" : k.masa != null && MA.list.find((m) => m.idx === k.masa);
   const T = (o) => kpPick(o, lang);
   const open = () => go("browse", { libSub: { kind: "nomu", key: k.ref, returnTo: "daily" } });
   const arm = (what, fn) => { if (armed === what) { fn(); setArmed(null); return; } setArmed(what); setTimeout(() => setArmed((a) => (a === what ? null : a)), 4000); };
@@ -291,3 +295,5 @@ function NomuTracker({ go, lang = "telugu" }) {
 }
 
 export { KeepBell, KeepCard, KeepMonthSheet, NomuTracker, stutiToast };
+
+export { kpArmReminders };

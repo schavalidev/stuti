@@ -1,8 +1,8 @@
 /* ============================================================
    STUTI — learn-by-heart plans
    PlanEntryCard (Nitya tab) · PlansView (choose a text)
-   · PlanView (a day's sitting: learn new verses, recall by
-   masked words, review earlier portions)
+   · PlanView (a day's sitting — see stuti-plan-sitting.jsx: review
+   what is learnt, then the new verse round and round)
    ============================================================ */
 const { useState: useStateL, useEffect: useEffectL, useMemo: useMemoL } = React;
 
@@ -183,7 +183,7 @@ function PlanView({ hymnId, go, lang = "deva", backView = "daily" }) {
   const doneToday = plan.last === window.STUTI_THREAD.dkey() && plan.done.indexOf(day) >= 0;
   return plan.finished
     ? <PlanFinished hymn={hymn} deity={deity} go={go} lang={lang} backView={backView} />
-    : <PlanDay key={hymnId + ":" + day} hymn={hymn} deity={deity} day={day} meta={m} go={go} lang={lang} backView={backView} />;
+    : <window.PlanDay key={hymnId + ":" + day} hymn={hymn} deity={deity} day={day} meta={m} go={go} lang={lang} backView={backView} />;
 }
 
 function PlanFinished({ hymn, deity, go, lang, backView = "daily" }) {
@@ -205,77 +205,7 @@ function PlanFinished({ hymn, deity, go, lang, backView = "daily" }) {
   );
 }
 
-function PlanDay({ hymn, deity, day, meta, go, lang, backView = "daily" }) {
-  const L = window.STUTI_L, P = window.STUTI_PLANS;
-  /* the sitting: learn each new verse (read, then recall), then review earlier portions */
-  const steps = useMemoL(() => {
-    const out = [];
-    const cur = P.chunkFor(hymn, day);
-    for (let i = cur.from; i < cur.to; i++) { out.push({ t: "learn", vi: i }); out.push({ t: "recall", vi: i }); }
-    if (day > 1) { const prev = P.chunkFor(hymn, day - 1); for (let i = prev.from; i < prev.to; i++) out.push({ t: "review", vi: i }); }
-    if (day > 7) { const week = P.chunkFor(hymn, day - 7); out.push({ t: "review", vi: week.from }); if (week.from + 1 < week.to) out.push({ t: "review", vi: week.from + 1 }); }
-    return out;
-  }, [hymn, day]);
-  const [idx, setIdx] = useStateL(0);
-  const [celebrate, setCelebrate] = useStateL(false);
-  const finished = idx >= steps.length;
-  useEffectL(() => { if (finished && !celebrate) { P.completeDay(hymn.id, day, hymn); setCelebrate(true); } }, [finished]);
-  const font = L.font(lang);
-  const back = () => go(backView);
-  if (finished) {
-    return (
-      <div className="view japa scroll" style={{ "--deity-hue": deity.hue }}>
-        <div className="topbar">
-          <button className="icon-btn" onClick={back} aria-label={window.STUTI_L.a("aBack")}><Icon name="back" /></button>
-          <div className="topbar-title display" style={{ fontFamily: font }}>{L.hymnTitle(hymn, lang)}</div>
-          <span style={{ width: 40 }} />
-        </div>
-        <div className="plan-done-wrap">
-          <div className="plan-done-mark">दीप</div>
-          <div className="plan-done-head display">{L.t("dayDone", lang)}</div>
-          <p className="plans-lede" style={{ textAlign: "center" }}>{day < meta.days ? L.t("backTomorrow", lang) : L.t("planDoneLine", lang)}</p>
-          <div className="plan-day-dots">{Array.from({ length: meta.days }).map((_, i) => <span key={i} className={"plan-day-dot" + (i < day ? " on" : "")}></span>)}</div>
-          <button className="preface-btn" onClick={back}>{backView === "daily"
-            ? <React.Fragment><Icon name="flower" size={17} /> {L.t("nitya", lang)}</React.Fragment>
-            : <React.Fragment><Icon name="book" size={17} /> {L.t("backToText", lang)}</React.Fragment>}</button>
-        </div>
-      </div>
-    );
-  }
-  const st = steps[idx];
-  const v = hymn.verses[st.vi];
-  const text = planVerseText(v, lang);
-  const meaning = window.STUTI_MEAN(v, lang);
-  const kind = st.t === "learn" ? "newVerses" : st.t === "recall" ? "recallLabel" : "reviewLabel";
-  return (
-    <div className="view japa scroll" style={{ "--deity-hue": deity.hue }}>
-      <div className="topbar">
-        <button className="icon-btn" onClick={back} aria-label={window.STUTI_L.a("aBack")}><Icon name="back" /></button>
-        <div className="topbar-title display" style={{ fontFamily: font }}>{L.hymnTitle(hymn, lang)}</div>
-        <span className="plan-day-tag">{L.t("day", lang)} {day}/{meta.days}</span>
-      </div>
-      <div className="plan-progress"><span style={{ width: (idx / steps.length) * 100 + "%" }}></span></div>
-      <div className="plan-step">
-        <div className={"plan-step-kind" + (st.t === "learn" ? " learn" : "")}>{L.t(kind, lang)}{v.n ? " · " + v.n : ""}</div>
-        {st.t === "learn" ? (
-          <React.Fragment>
-            <div className="plan-verse" style={{ fontFamily: lang === "roman" ? "var(--font-ui)" : font }}>{text.split("\n").map((ln, i) => <span key={i} className="plan-verse-line">{ln.replace(/\s+((?:[|।॥]|\p{L}*\d)[\s|।॥\d.]*)$/u, (mm, g) => "\u00A0" + g.replace(/\s+/g, "\u00A0"))}</span>)}</div>
-            {meaning && <div className={"plan-meaning" + (lang === "telugu" ? " tel" : "")}>{meaning}</div>}
-          </React.Fragment>
-        ) : (
-          <React.Fragment>
-            <MaskedVerse text={text} lang={lang} />
-            <div className="japa-hint">{L.t("tapMasked", lang)}</div>
-          </React.Fragment>
-        )}
-        <button className="plan-next" onClick={() => setIdx(i => i + 1)}>
-          {st.t === "learn" ? L.t("reciteContinue", lang) : L.t("iRecited", lang)} <Icon name="chev" size={16} />
-        </button>
-      </div>
-      <div style={{ height: 90 }} />
-    </div>
-  );
-}
+/* PlanDay — the sitting itself — lives in stuti-plan-sitting.jsx (loaded after this file) */
 
 /* ---------------- Learn button — sits beside the flower everywhere ----------------
    `from` is where this button was tapped, and it rides along on the

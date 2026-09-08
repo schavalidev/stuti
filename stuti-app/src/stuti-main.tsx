@@ -1,9 +1,11 @@
 import { DeityView, ReaderView } from "./stuti-reader";
-import { FavButton, Icon, Seal, deityStyle } from "./stuti-icons";
+import { DeityTile, FavButton, Icon, Seal, deityStyle } from "./stuti-icons";
 import React from "react";
 import { AccountView } from "./stuti-account";
 import { CalendarView } from "./stuti-calendar";
+import { STUTI_COUNT } from "./stuti-count";
 import { STUTI } from "./stuti-data";
+import { GateScreen, gateOpen } from "./stuti-gate";
 import { HomeA, todayInfo } from "./stuti-home";
 import { STUTI_L } from "./stuti-i18n";
 import { JapaView } from "./stuti-japa";
@@ -121,6 +123,9 @@ function SearchView({ go, lang = "deva", backView = "browse", weekday, voice = f
   const qf = srFold(q).trim();
   const raw = q.trim();
   const live = qf.length >= 1;
+  /* one "search" per sitting, once the query is real — not a keystroke log */
+  const counted = useRefM(false);
+  useEffectM(() => { if (qf.length >= 2 && !counted.current) { counted.current = true; try { STUTI_COUNT.hit("search", { from: backView }); } catch (e) {} } }, [qf.length >= 2]);
 
   /* 1 — titles, deities, forms */
   const hymnHits = React.useMemo(() => {
@@ -317,14 +322,11 @@ function BrowseView({ go, lang = "deva" }) {
         <div className="topbar-title display">{L.t("deities", lang)}</div>
         <button className="icon-btn" onClick={() => go("search", { from: "browse" })} aria-label={L.t("search", lang)}><Icon name="search" /></button>
       </div>
-      <div className="tile-grid browse-grid">
+      <div className="tile-grid browse-grid lib-deity-grid lib-deity-grid-3">
         {S.deities.map((d, i) => (
-          <button key={d.id} className="gtile" style={{ ...deityStyle(d), animationDelay: `${60 + i * 60}ms` }}
-            onClick={() => go("deity", { deity: d.id, from: "browse" })}>
-            <Seal d={d} size={66} />
-            <div className="gtile-name display" style={{ fontFamily: L.font(lang) }}>{L.name(d, lang)}</div>
-            <div className="gtile-count">{L.hymnsCount(S.hymnsForDeity(d.id).length, lang)}</div>
-          </button>
+          <DeityTile key={d.id} d={d} lang={lang} i={i} onClick={() => go("deity", { deity: d.id, from: "browse" })}>
+            <span className="niche-count">{L.hymnsCount(S.hymnsForDeity(d.id).length, lang)}</span>
+          </DeityTile>
         ))}
       </div>
       <div style={{ height: 40 }} />
@@ -509,6 +511,8 @@ function App() {
   const [dir, setDir] = useStateM("fwd");
   const [overlayEl, setOverlayEl] = useStateM(null); // app-level host for the saṅkalpa bottom sheet
   const [onboarding, setOnboarding] = useStateM(() => !STUTI_PREFS.get().onboarded);
+  /* the beta latch stands before everything, onboarding included */
+  const [gated, setGated] = useStateM(() => !gateOpen());
   const [remindOpen, setRemindOpen] = useStateM(false);
   /* the library's open lens and open detail live here, not in the hub — the
      hub unmounts on every trip out of the library and would forget them */
@@ -528,6 +532,11 @@ function App() {
   useEffectM(() => { document.documentElement.setAttribute("data-palette", String(t.palette || "Current").toLowerCase()); }, [t.palette]);
   useEffectM(() => { document.documentElement.setAttribute("data-pigment", t.glyphs === "Ink" ? "off" : "on"); }, [t.glyphs]);
   useEffectM(() => { localStorage.setItem("stuti-lang", lang); if (localStorage.getItem("stuti-ui-lang-custom") !== "1") setUiLangRaw(lang); }, [lang]);
+  /* counted: which screen, which script, which guide — never who */
+  useEffectM(() => { try { STUTI_COUNT.hit("screen", { screen: route.view }); } catch (e) {} }, [route.view]);
+  const langSeen = useRefM(lang);
+  useEffectM(() => { if (langSeen.current !== lang) { langSeen.current = lang; try { STUTI_COUNT.hit("script", { script: lang }); } catch (e) {} } }, [lang]);
+  useEffectM(() => { if (libSub && libSub.kind) { try { STUTI_COUNT.hit("guide", { kind: libSub.kind }); } catch (e) {} } }, [libSub && libSub.kind, libSub && libSub.key]);
   useEffectM(() => { localStorage.setItem("stuti-ui-lang", uiLang); }, [uiLang]);
 
   // verification hook (harmless)
@@ -584,7 +593,7 @@ function App() {
   if (route.view === "home") body = <Home key="home" go={go} openToday={openToday} lang={lang} overlayEl={overlayEl} />;
   else if (route.view === "browse") body = <LibraryHub key="browse" go={go} lang={lang} tileMode={tileMode} lens={libLens} setLens={setLibLens} sub={libSub} setSub={setLibSub} />;
   else if (route.view === "search") body = <SearchView key="search" go={go} lang={lang} backView={route.from || "browse"} weekday={route.weekday} voice={!!route.voice} />;
-  else if (route.view === "daily") body = <NityaView key="daily" go={go} lang={lang} showPractices={false} openRemind={() => setRemindOpen(true)} />;
+  else if (route.view === "daily") body = <NityaView key="daily" go={go} lang={lang} showPractices={false} openRemind={() => setRemindOpen(true)} initLens={route.lens} />;
   else if (route.view === "practices") body = <PracticesView key="practices" go={go} lang={lang} />;
   else if (route.view === "japa") body = <JapaView key="japa" go={go} lang={lang} />;
   else if (route.view === "plans") body = <PlansView key="plans" go={go} lang={lang} />;
@@ -661,9 +670,10 @@ function App() {
         <div className="app-overlay" ref={setOverlayEl} />
 
         {remindOpen && <RemindSheet lang={lang} onClose={() => setRemindOpen(false)} />}
-        {onboarding && (
+        {onboarding && !gated && (
           <Onboarding lang={lang} setLang={setLang} onDone={() => setOnboarding(false)} />
         )}
+        {gated && <GateScreen lang={lang} onOpen={() => setGated(false)} />}
       </div>
 
       {TweaksPanel && (

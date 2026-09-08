@@ -14,7 +14,12 @@ const HERE = dirname(fileURLToPath(import.meta.url));
 const OUT = join(HERE, "../../src");
 const { registry } = JSON.parse(readFileSync(join(HERE, "registry.json"), "utf8"));
 
-const BASES = ["stuti-dana", "stuti-flyleaf", "stuti-keep", "stuti-ledger", "stuti-limits", "stuti-prep", "stuti-sandhya"];
+// every base that exists as both a .js store and a .jsx screen in the
+// handoff — found, not listed, so a new pair (stuti-tithis, 8 Sep 2026) is
+// caught the day it arrives
+const APP = join(HERE, "../../../design_handoff_stuti/app");
+const appFiles = new Set(readdirSync(APP));
+const BASES = [...appFiles].filter((f) => f.endsWith(".js") && appFiles.has(f.replace(/\.js$/, ".jsx"))).map((f) => f.replace(/\.js$/, "")).sort();
 
 // name -> which side of the collision it belongs to, per base
 const jsNamesByBase = {};

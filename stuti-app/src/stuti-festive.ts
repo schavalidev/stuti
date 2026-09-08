@@ -68,7 +68,7 @@ import { STUTI_VRATA } from "./stuti-vrata-data";
   function festivalToday() {
     try {
       const V = STUTI_VRATA; if (!V) return false;
-      return (V.upcoming(40) || []).some((u) => u.away === 0 && u.v.weekly === undefined && !u.v.everyMonth);
+      const p = V.parvaNow && V.parvaNow(); return !!(p && !p.eve);
     } catch (e) { return false; }
   }
   function startDrift() {

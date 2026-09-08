@@ -8,6 +8,7 @@ import { STUTI_EPHEM } from "./stuti-ephemeris";
 import { SankalpaSheet, useFlyleaf } from "./stuti-flyleaf";
 import { STUTI_L } from "./stuti-i18n";
 import { FavButton, Icon, Seal, deityStyle, useFavs } from "./stuti-icons";
+import { STUTI_LIB } from "./stuti-library-data";
 import { masaMixFor } from "./stuti-masa";
 import { nityaQueue } from "./stuti-nitya-queue";
 import { STUTI_MUHURTA } from "./stuti-muhurta";
@@ -18,13 +19,16 @@ import { STUTI_PREFS } from "./stuti-prefs";
 import { HomePrepCard } from "./stuti-prep";
 import { hymnParts } from "./stuti-reader";
 import { STUTI_RECITE } from "./stuti-recite";
-import { manaSys, masaShown } from "./stuti-reckoning";
+import { manaSys, masaShown, masaSys } from "./stuti-reckoning";
 import { SandhyaCard } from "./stuti-sandhya";
 import { SkyHeader } from "./stuti-sky";
 import { STUTI_FAVS_WEEK, STUTI_PROGRESS } from "./stuti-store";
 import { STUTI_RITUAL } from "./stuti-texts";
+import { STUTI_TITHIS } from "./stuti-tithis-core";
+import { TithiSheet } from "./stuti-tithis";
 import { STUTI_TRANSLIT } from "./stuti-translit";
 import { STUTI_VOICE } from "./stuti-voice";
+import { STUTI_VRATA } from "./stuti-vrata-data";
 
 /* ============================================================
    STUTI — home (Today)
@@ -293,6 +297,117 @@ function usePanchangaVM(lang, sk, deity) {
   };
 }
 
+/* ---- Festival-day card: shown only on a singular annual parva (never a
+   weekly or monthly vrata — the same rule the petal drift keeps). Compact:
+   the day's name, its hour; a tap opens the vrata page. On the eve it is a
+   quieter line — "Tomorrow · …" — so the sāmagrī can be bought in time. A
+   many-day parva says which day this is. ---- */
+/* per-festival artwork, when it exists: id → image path. Empty for now. */
+const PARVA_ART = { shivaratri: "assets/parva-shiva.png", navaratri: "assets/parva-devi.png", "vasanta-navaratri": "assets/parva-devi.png", "ganesha-chaturthi": "assets/parva-ganesha.png", "hanuman-jayanti": "assets/parva-hanuman.png", "dattatreya-jayanti": "assets/parva-guru.png" };
+function ParvaCard({ go, lang }) {
+  const V = STUTI_VRATA;
+  const [, bump] = React.useState(0);
+  React.useEffect(() => STUTI_PREFS.subscribe(() => bump((n) => n + 1)), []);
+  React.useEffect(() => STUTI_TITHIS ? STUTI_TITHIS.subscribe(() => bump((n) => n + 1)) : undefined, []);
+  let hits = [];
+  try { hits = V && V.parvasNow ? V.parvasNow().slice(0, 2) : []; } catch (e) { hits = []; }
+  if (!hits.length) return null;
+  return <React.Fragment>{hits.map((hit) => <ParvaOne key={hit.v.id} hit={hit} go={go} lang={lang} />)}</React.Fragment>;
+}
+function ParvaOne({ hit, go, lang }) {
+  const L = lang || "deva";
+  const { loc } = useLoc();
+  const V = STUTI_VRATA, PA = AKSHARA_PANCHANGA;
+  const [editing, setEditing] = React.useState(false);
+  const v = hit.v, T = L === "telugu" ? "tel" : L === "roman" ? "roman" : "deva";
+  const name = v.name[T] || v.name.roman;
+  const KALA = {
+    madhyahna: { roman: "Madhyāhna pūjā", deva: "मध्यध्न पूजी", tel: "మధ్యాహ్న పూజ" },
+    pradosha:  { roman: "Pradoṣa kāla",   deva: "प्रदोष कल", tel: "ప్రదోష కాలం" },
+    nishitha:  { roman: "Niśītha kāla",   deva: "नशीथ कल", tel: "నిశీథ కాలం" },
+  };
+  /* the sub-line: the pūjā window when the vrata names one, else its rule
+     (regional where the vrata has two; pūrṇimānta where the month
+     reckoning asks). A many-day parva says the day's own line instead. */
+  const rule = v.ruleBy ? v.ruleBy(V.southern()) : (masaSys && masaSys() === "purnimanta" && v.ruleP) ? v.ruleP : v.rule;
+  let sub = rule[T] || rule.roman;
+  const kalaDay = v.kalaDay || 1;
+  if (!hit.eve && v.kala && (!hit.dayNo || hit.dayNo === kalaDay)) {
+    const w = V.kalaWindow(v, hit.date, loc);
+    if (w) sub = `${KALA[v.kala][T]} · ${PA.fmtTime(w.start)} – ${PA.fmtTime(w.end)}`;
+  } else if (hit.dayNo && v.dayLines && v.dayLines[hit.dayNo - 1]) {
+    const dl = v.dayLines[hit.dayNo - 1]; sub = dl[T] || dl.roman;
+  }
+  if (hit.dayNo && hit.days > 1) {
+    const dayOf = L === "telugu" ? `${hit.dayNo}వ రోజు / ${hit.days}` : L === "deva" ? `दिन ${hit.dayNo} / ${hit.days}` : `Day ${hit.dayNo} of ${hit.days}`;
+    sub = `${dayOf} · ${sub}`;
+  }
+  /* the hymns the vrata names, as chips that open the reader directly */
+  const hymns = hit.eve ? [] : (STUTI_LIB && STUTI_LIB.resolveStotras ? STUTI_LIB.resolveStotras(v.stotras) : []).slice(0, 3);
+  const openVrata = () => go("browse", { libSub: { kind: "vrata", key: v.id, returnTo: "home" } });
+  const k = hit.eve
+    ? (L === "telugu" ? "రేపు" : L === "deva" ? "कल" : "Tomorrow")
+    : v.personal && STUTI_TITHIS
+      ? (STUTI_TITHIS.KINDS[v.kind] || STUTI_TITHIS.KINDS.other).label[T] + " · " + (L === "telugu" ? "ఇవాళ" : L === "deva" ? "आज" : "today")
+      : (L === "telugu" ? "పర్వం · ఇవాళ" : L === "deva" ? "पर्व · आज" : "Parva · today");
+  const art = PARVA_ART[v.id];
+  const open = v.personal ? () => setEditing(true) : openVrata;
+  return (
+    <div className={"parva-card" + (hit.eve ? " is-eve" : "")} style={deityStyle(v.deity)}>
+      <button className="parva-main" onClick={open}>
+        {art && <img className="parva-art" src={art} alt="" />}
+        <span className="parva-body">
+          <span className="parva-k">{k}</span>
+          <span className="parva-n" style={{ fontFamily: sFont(L) }}>{name}</span>
+          <span className="parva-s">{sub}</span>
+        </span>
+        <span className="parva-chev" aria-hidden="true"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="m9 6 6 6-6 6"></path></svg></span>
+      </button>
+      {hymns.length > 0 && (
+        <div className="parva-chips">
+          {hymns.map((h) => (
+            <button key={h.id} className="parva-chip" style={{ fontFamily: sFont(L) }} onClick={() => go("reader", { deity: h.deity, hymn: h.id, from: "home" })}>{STUTI_L.hymnTitle(h, L)}</button>
+          ))}
+        </div>
+      )}
+      {editing && v.personal && <TithiSheet lang={L} rec={v.rec} onClose={() => setEditing(false)} />}
+    </div>
+  );
+}
+
+/* the preview pin, said out loud: while Settings holds a fake today for the
+   festival card, Home says so and offers the way back */
+function PreviewPill({ go, lang }) {
+  const L = lang || "deva";
+  const [, bump] = React.useState(0);
+  React.useEffect(() => STUTI_PREFS.subscribe(() => bump((n) => n + 1)), []);
+  const k = (() => { try { return localStorage.getItem("stuti-preview-day"); } catch (e) { return null; } })();
+  if (!k) return null;
+  const d = STUTI_VRATA.today();
+  const ds = d.toLocaleDateString(L === "telugu" ? "te-IN" : L === "deva" ? "hi-IN" : "en-IN", { day: "numeric", month: "short", year: "numeric" });
+  const txt = L === "telugu" ? "మున్దుచూపు ఆన్" : L === "deva" ? "पूर्वदर्शन चालू" : "Preview on";
+  return <button className="preview-pill" onClick={() => go("settings", { from: "home" })}>{txt} <b>· {ds}</b></button>;
+}
+
+/* the routine vrata of the day — Ekādaśī, Pradoṣa, a Śrāvaṇa Monday —
+   too frequent for the festival card, but not nothing: one line under the
+   pañcāṅga rows, opening the vrata page */
+function RoutineVrata({ go, lang }) {
+  const L = lang || "deva", T = L === "telugu" ? "tel" : L === "roman" ? "roman" : "deva";
+  const V = STUTI_VRATA;
+  let hits = [];
+  try { hits = (V.upcoming(80) || []).filter((u) => u.away === 0 && !V.isParva(u.v) && !u.v.optional); } catch (e) {}
+  if (!hits.length) return null;
+  const lead = L === "telugu" ? "ఇవాళ" : L === "deva" ? "आज" : "Today";
+  return (
+    <div className="rhb-vrata">
+      <span>{lead} · {hits.map((u, i) => (
+        <React.Fragment key={u.v.id}>{i > 0 && ", "}<b role="link" style={{ fontFamily: sFont(L), cursor: "pointer" }} onClick={() => go("browse", { libSub: { kind: "vrata", key: u.v.id, returnTo: "home" } })}>{u.v.name[T] || u.v.name.roman}</b></React.Fragment>
+      ))}</span>
+    </div>
+  );
+}
+
 /* ============ Home — "Today, first" (calm pañcāṅga + saṅkalpa sheet) ============ */
 function HomeA({ go, lang, overlayEl }) {
   const L = lang || "deva";
@@ -377,6 +492,9 @@ function HomeA({ go, lang, overlayEl }) {
 
       <HomePrepCard lang={L} />
 
+      <PreviewPill go={go} lang={L} />
+      <ParvaCard go={go} lang={L} />
+
       <section className="rhb-card">
         <div className="eyebrow rhb-eyebrow" style={{ color: "var(--accent-ink)" }}>
           <span>{t("todaysPanchanga")}</span>
@@ -422,6 +540,7 @@ function HomeA({ go, lang, overlayEl }) {
             );
           })}
         </div>
+        <RoutineVrata go={go} lang={L} />
         <button className="rhb-more-toggle" aria-expanded={moreOpen} onClick={() => setMoreOpen(o => !o)}>
           <span>{moreOpen ? t("rhbLess") : t("rhbMore")}</span>
           <Icon name="chev" size={15} style={{ transform: moreOpen ? "rotate(180deg)" : "none" }} />

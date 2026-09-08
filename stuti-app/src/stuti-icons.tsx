@@ -81,9 +81,16 @@ function Icon({ name, size = 24, stroke = 2, filled = false }) {
     /* the nomu glyph is the vāyanam plate itself — the tied offering of
        turmeric, betel and fruit handed on at the vow's close, banana leaves
        fanned beneath it the way the kalaśa's mango leaves fan its neck */
+    /* Drawn for 17px, which is the only size it is ever seen at. The first
+       version composed the plate as a wide shallow ellipse low in the box with
+       two ring strokes and three small offerings on it: at 17px the plate was
+       two pixels tall, the rings and the offerings merged into one brown
+       smudge, and the whole mark hung under the label's baseline. It is now
+       three big separated shapes on the box's own centre — leaf, plate, and
+       one offering large enough to read as a fruit. */
     case "vayanam": return pig2(p,
-      <React.Fragment><ellipse cx="12" cy="14.5" rx="7.3" ry="3.4" /><path d="M6 13.6c-.7-2.6.5-5.2 3-6.4M18 13.6c.7-2.6-.5-5.2-3-6.4" /><circle cx="9.6" cy="14.3" r=".8" fill={filled ? "currentColor" : "none"} /><circle cx="14.4" cy="14.3" r=".8" fill={filled ? "currentColor" : "none"} /></React.Fragment>,
-      <React.Fragment><path d="M4.3 12.6c-1.7 1-2.5 3.3-1.7 4.7 1.7-.1 3.2-1.4 3.6-3.2z" fill={C.leaf} stroke={C.leafInk} strokeWidth="1" strokeLinejoin="round" /><path d="M19.7 12.6c1.7 1 2.5 3.3 1.7 4.7-1.7-.1-3.2-1.4-3.6-3.2z" fill={C.leaf} stroke={C.leafInk} strokeWidth="1" strokeLinejoin="round" /><ellipse cx="12" cy="14.8" rx="7.3" ry="3.4" fill={C.gold} stroke={C.goldInk} strokeWidth="1.2" /><ellipse cx="12" cy="14.8" rx="7.3" ry="3.4" fill="none" stroke={C.verm} strokeWidth="1" opacity="0.85" /><circle cx="9.4" cy="14.5" r="1.3" fill={C.verm} /><circle cx="14.6" cy="14.5" r="1.3" fill="oklch(0.6 0.1 55)" stroke="oklch(0.42 0.08 55)" strokeWidth="0.6" /><circle cx="12" cy="15.6" r="1.1" fill="oklch(0.85 0.14 90)" /></React.Fragment>);
+      <React.Fragment><ellipse cx="12" cy="14.6" rx="8.2" ry="3.2" /><circle cx="12" cy="9.4" r="3.3" fill={filled ? "color-mix(in oklab, currentColor 22%, transparent)" : "none"} /><path d="M4.6 12.8c-1.5-1.3-1.9-3.4-.9-4.9 1.6.7 2.7 2.4 2.7 4.2M19.4 12.8c1.5-1.3 1.9-3.4.9-4.9-1.6.7-2.7 2.4-2.7 4.2" /></React.Fragment>,
+      <React.Fragment><path d="M4.6 12.9c-1.5-1.3-1.9-3.5-.9-5 1.7.8 2.8 2.5 2.8 4.3z" fill={C.leaf} stroke={C.leafInk} strokeWidth="1" strokeLinejoin="round" /><path d="M19.4 12.9c1.5-1.3 1.9-3.5.9-5-1.7.8-2.8 2.5-2.8 4.3z" fill={C.leaf} stroke={C.leafInk} strokeWidth="1" strokeLinejoin="round" /><ellipse cx="12" cy="14.8" rx="8.2" ry="3.3" fill={C.gold} stroke={C.goldInk} strokeWidth="1.2" /><circle cx="12" cy="9.6" r="3.5" fill={C.verm} stroke="oklch(0.42 0.14 32)" strokeWidth="1" /><circle cx="10.8" cy="8.4" r="1" fill={C.glint} /></React.Fragment>);
     case "list":   return pig2(p,
       <path d="M8 6h12M8 12h12M8 18h12M4 6h.01M4 12h.01M4 18h.01" />,
       <React.Fragment><path d="M8 6h12M8 12h12M8 18h12" stroke="oklch(0.45 0.03 60)" strokeWidth="2" strokeLinecap="round" /><g fill={C.gold}><circle cx="4" cy="6" r="1.6" /><circle cx="4" cy="12" r="1.6" /><circle cx="4" cy="18" r="1.6" /></g></React.Fragment>);
@@ -111,6 +118,7 @@ function Icon({ name, size = 24, stroke = 2, filled = false }) {
       <React.Fragment><rect x="3.5" y="4.5" width="17" height="16" rx="2.5" /><path d="M3.5 9.5h17M8 3v3M16 3v3" /></React.Fragment>,
       <React.Fragment><rect x="3.5" y="4.5" width="17" height="16" rx="2.5" fill="oklch(0.96 0.02 85)" stroke={C.goldInk} strokeWidth="1.5" /><path d="M3.5 7a2.5 2.5 0 0 1 2.5-2.5h12A2.5 2.5 0 0 1 20.5 7v2.5h-17z" fill={C.verm} /><path d="M8 3v3M16 3v3" stroke="oklch(0.35 0.05 60)" strokeWidth="1.8" strokeLinecap="round" /><g fill={C.gold}><circle cx="8" cy="13" r="1.2" /><circle cx="12" cy="13" r="1.2" /><circle cx="16" cy="13" r="1.2" /><circle cx="8" cy="17" r="1.2" /><circle cx="12" cy="17" r="1.2" /></g></React.Fragment>);
     case "close":  return <svg {...p}><path d="M6 6l12 12M18 6L6 18" /></svg>;
+    case "plus":   return <svg {...p}><path d="M12 5v14M5 12h14" /></svg>;
     case "pin":    return <svg {...p}><path d="M9.5 3.5h5l-.8 5.5 3.3 3.5H7l3.3-3.5z" /><path d="M12 12.5V20" /></svg>;
     case "chevron-left": return <svg {...p}><path d="M15 6l-6 6 6 6" /></svg>;
     case "chevron-right": return <svg {...p}><path d="M9 6l6 6-6 6" /></svg>;
@@ -158,7 +166,7 @@ const DEITY_EMBLEM = {
 
 /* deities whose seal shows the painting itself — full colour on its own
    ground, in place of the tinted plate + ratna stone */
-const DEITY_COLOUR = { devi: "emblems/devi-face-colour.png", ganesha: "emblems/ganesha-face-colour.png", shiva: "emblems/shiva-face-colour.png", vishnu: "emblems/vishnu-face-colour.png", subrahmanya: "emblems/subrahmanya-face-colour.png", guru: "emblems/guru-face-colour.png" };
+const DEITY_COLOUR = { devi: "emblems/devi-face-colour.png", ganesha: "emblems/ganesha-face-colour.png", shiva: "emblems/shiva-face-colour.png", vishnu: "emblems/vishnu-face-colour.png", subrahmanya: "emblems/subrahmanya-face-colour.png", guru: "emblems/guru-face-colour.png", hanuman: "emblems/hanuman-face-colour.png" };
 
 /* A reusable deity seal — the deity's drawn emblem, pre-tinted for day + night;
    CSS shows the right one. There is no bīja fallback: a seed syllable is
@@ -180,6 +188,52 @@ function Seal({ d, size = 56, fontScale = 0.42, style }) {
         </React.Fragment>
       ) : null}
     </div>
+  );
+}
+
+/* Square portraits drawn for the shelf tile — the figure on its own cream
+   ground with no circle, so the frame can crop it freely. Falls back to the
+   round colour painting, then to the ink emblem. */
+const DEITY_PORTRAIT = { ganesha: "emblems/ganesha-portrait-v3.png", guru: "emblems/guru-portrait.png", hanuman: "emblems/hanuman-portrait.png", vishnu: "emblems/vishnu-portrait.png", surya: "emblems/surya-portrait.png", shiva: "emblems/shiva-portrait-v2.png", subrahmanya: "emblems/subrahmanya-portrait-v2.png", devi: "emblems/devi-portrait.png" };
+function Portrait({ d }) {
+  const colour = d && (DEITY_PORTRAIT[d.id] || DEITY_COLOUR[d.id]);
+  if (colour) return <img className={"niche-img niche-img--colour" + (DEITY_PORTRAIT[d.id] ? " niche-img--circle" : "")} src={colour} alt="" draggable="false" />;
+  return <Emblem d={d} variant="ink" className="niche-img" />;
+}
+
+/* The shelf tile, shared by the Library and the Home browse grid: the painting
+   full-bleed inside a flat frame in the deity's colour, a name plate at the
+   foot, tilt + parallax toward the finger and a light that sweeps the glass.
+   Pointer position lands in custom properties; the CSS does the rest. */
+/* a tap on a phone never moves: the light sweeps on pointerdown as well, and
+   is held long enough to be seen before the page turns */
+function tileDown(e) {
+  const el = e.currentTarget;
+  el.classList.remove("is-sweep"); void el.offsetWidth; el.classList.add("is-sweep");
+  clearTimeout(el._sw); el._sw = setTimeout(() => el.classList.remove("is-sweep"), 1500);
+  tileTilt(e);
+}
+function tileTilt(e) {
+  const el = e.currentTarget, r = el.getBoundingClientRect();
+  const x = (e.clientX - r.left) / r.width - 0.5, y = (e.clientY - r.top) / r.height - 0.5;
+  el.style.setProperty("--mx", x.toFixed(3)); el.style.setProperty("--my", y.toFixed(3));
+  el.style.setProperty("--ry", (x * 14).toFixed(2) + "deg"); el.style.setProperty("--rx", (-y * 14).toFixed(2) + "deg");
+  el.classList.add("is-tilt");
+}
+function tileRest(e) {
+  const el = e.currentTarget;
+  ["--mx", "--my", "--rx", "--ry"].forEach(p => el.style.removeProperty(p));
+  el.classList.remove("is-tilt");
+}
+function DeityTile({ d, lang, i = 0, kept = false, onClick, children }) {
+  const L = STUTI_L;
+  return (
+    <button className={"gtile gtile-niche" + (kept ? " gtile-kept" : "")} style={{ ...deityStyle(d), "--i": i, animationDelay: `${40 + i * 55}ms` }}
+      onPointerDown={tileDown} onPointerMove={tileTilt} onPointerLeave={tileRest} onPointerUp={tileRest} onPointerCancel={tileRest} onClick={onClick}>
+      <div className="niche-pic"><Portrait d={d} /></div>
+      <div className="niche-sheen"></div>
+      <div className="gtile-name display niche-name" style={{ fontFamily: L.font(lang) }}>{L.name(d, lang)}{children}</div>
+    </button>
   );
 }
 
@@ -262,4 +316,4 @@ function DeityLink({ d, go, lang }) {
   );
 }
 
-export { Icon, Flame, Seal, Emblem, deityStyle, useFavs, FavButton, DeityLink };
+export { Icon, Flame, Seal, Emblem, Portrait, DeityTile, tileDown, tileTilt, tileRest, deityStyle, useFavs, FavButton, DeityLink, DEITY_PORTRAIT };

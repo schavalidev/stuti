@@ -3,17 +3,19 @@ import { STUTI_NAMES } from "./stuti-names";
 import React from "react";
 import { STUTI_AUDIO } from "./stuti-audio";
 import { AwaitingText } from "./stuti-await";
+import { STUTI_COUNT } from "./stuti-count";
 import { STUTI } from "./stuti-data";
+import { FeedbackSheet } from "./stuti-feedback";
 import { FindStrip } from "./stuti-find";
 import { FlowText } from "./stuti-flow";
 import { STUTI_BIND, STUTI_L, STUTI_MEAN } from "./stuti-i18n";
 import { STUTI_PADA } from "./stuti-lexicon";
 import { STUTI_LIB } from "./stuti-library-data";
-import { STUTI_LIMITS } from "./stuti-limits-core";
-import { LimitSheet, useLimitLeft } from "./stuti-limits";
+import { LimitSheet } from "./stuti-limits";
 import { PadaSheet } from "./stuti-pada";
 import { OverlayPortal } from "./stuti-picker";
 import { LearnButton } from "./stuti-plans";
+import { STUTI_PROOF } from "./stuti-proof";
 import { STUTI_RECITE } from "./stuti-recite";
 import { RecordStrip, useRecTake } from "./stuti-record";
 import { STUTI_THREAD } from "./stuti-sadhana";
@@ -23,6 +25,7 @@ import { STUTI_RITUAL } from "./stuti-texts";
 import { nityaQueue } from "./stuti-nitya-queue";
 import { useFollow, FollowButton, FollowChip, RecitationsButton, RecordChip } from "./stuti-follow";
 import { STUTI_TRANSLIT } from "./stuti-translit";
+import { VoiceButton } from "./stuti-voice";
 
 /* ============================================================
    STUTI — Deity view + Reader/Reciter (follow-along)
@@ -59,6 +62,23 @@ function scriptFontFor(lang) {
    hear; Repeat and Memorize never needed audio and are unaffected. */
 function audioFor(hymn, lineCount) {
   try { return STUTI_AUDIO.get(hymn.id, lineCount) || null; } catch (e) { return null; }
+}
+
+/* Where the text came from, said at its end: proofed against a named source,
+   or awaiting proof — and the door for saying it is wrong stands beside it.
+   Quiet on purpose; it is a footnote, not a warning. */
+function ProofLine({ proof, lang, onReport }) {
+  const L = STUTI_L;
+  return (
+    <div className={"rd-proof" + (proof.proofed ? " is-proofed" : "")}>
+      <span className="rd-proof-mark" aria-hidden="true">{proof.proofed ? "✓" : "·"}</span>
+      <span className="rd-proof-text">
+        {proof.proofed ? L.t("proofYes", lang).replace("{src}", proof.src) : L.t("proofNo", lang)}
+        {proof.by ? " · " + L.t("proofBy", lang).replace("{by}", proof.by) : ""}
+      </span>
+      <button className="rd-proof-btn" onClick={onReport}>{L.t("fbKind_text", lang)}</button>
+    </div>
+  );
 }
 
 /* a masked line for Memorize mode (first word / initials / blank) */
@@ -329,7 +349,16 @@ function DeityView({ deity, go, lang = "deva", showFormCounts = true, defaultFor
   useEffect(() => { setForm(defaultForm === "principal" ? principal : "all"); }, [defaultForm, deity.id]);
 
   const indexFont = scriptFontFor(lang);
-  const shown = form === "all" ? allHymns : allHymns.filter(h => (h.form || "others") === form);
+  /* a shelf can run to forty texts: the field narrows it by name in any script,
+     so a reader who arrives with a title in mind need not scroll the genres */
+  const [q, setQ] = useState("");
+  useEffect(() => { setQ(""); }, [deity.id]);
+  const byForm = form === "all" ? allHymns : allHymns.filter(h => (h.form || "others") === form);
+  const nq = q.trim().toLowerCase();
+  const fold = s => (s || "").normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase();
+  const shown = !nq ? byForm : byForm.filter(h =>
+    fold(h.title).includes(fold(q)) || (h.tel || "").includes(q.trim()) ||
+    (h.deva || "").includes(q.trim()) || fold(h.iast).includes(fold(q)));
   /* A granthasūcī, not a stack of cards: texts sit under their genre in the
      library's canonical order, carry a running folio numeral in the script
      being read, and reach their verse count across a dotted leader. A text
@@ -442,10 +471,20 @@ function DeityView({ deity, go, lang = "deva", showFormCounts = true, defaultFor
         <FormSelector forms={forms} value={form} onChange={setForm} lang={lang} showCounts={false} variant="printed" />
       )}
 
+      <div className="vr-find vr-find-compact gs-find">
+        <div className="search-field search-field-sm">
+          <Icon name="search" size={17} />
+          <input className="search-input" type="search" value={q} onChange={e => setQ(e.target.value)}
+            placeholder={L.t("searchHint", lang)} aria-label={L.t("searchHint", lang)} style={{ fontFamily: indexFont }} />
+          <VoiceButton lang={lang} size={17} onInterim={setQ} onResult={setQ} />
+          {q && <button className="icon-btn vr-find-x" onClick={() => setQ("")} aria-label={L.t("startOver", lang)}><Icon name="close" size={17} /></button>}
+        </div>
+      </div>
+
       {shown.length === 0 ? (
         <div className="form-empty">
           <div className="form-empty-mark"><Icon name="lotus" size={28} /></div>
-          <div className="form-empty-text">{L.t("noFormTexts", lang)}</div>
+          <div className="form-empty-text">{nq ? L.t("noResults", lang) : L.t("noFormTexts", lang)}</div>
         </div>
       ) : (
         <div className="gs-ix">
@@ -647,24 +686,16 @@ function ReaderView({ hymn, deity, go, theme, toggleTheme, lang, setLang, backVi
     if (STUTI_RECITE && STUTI_RECITE.isCustom(hymn.id)) return !!STUTI_RECITE.get(hymn.id).nyasa;
     return localStorage.getItem("stuti-ritual") === "1";
   });
-  /* print and share stay open once a month, free — past that they are held,
-     not disabled, until v2's paid plan exists to lift them for good */
+  /* print and share are open. The monthly meter that stood here promised a
+     paid plan nobody has decided on; until someone does, nothing is held back. */
   const [limAsk, setLimAsk] = useState(false);
   const [freeNote, setFreeNote] = useState("");
-  const printLeft = useLimitLeft("print");
-  const shareLeft = useLimitLeft("share");
-  const gated = (gate, fn) => () => {
-    if (STUTI_LIMITS.take(gate)) {
-      fn();
-      setFreeNote(STUTI_L.t("limFreeLeft", lang));
-      setTimeout(() => setFreeNote(""), 3600);
-      return;
-    }
-    setLimAsk(true);
-  };
-  const limTitle = (leftN, normal) => leftN > 0
-    ? STUTI_L.t(normal, lang) + " · " + STUTI_L.t("limFreeOne", lang)
-    : STUTI_L.t("limCap", lang);
+  const printLeft = 1, shareLeft = 1;
+  const gated = (gate, fn) => fn;
+  const limTitle = (leftN, normal) => STUTI_L.t(normal, lang);
+  const [fbOpen, setFbOpen] = useState(false);
+  const proof = STUTI_PROOF ? STUTI_PROOF.status(hymn.id) : { proofed: false };
+  useEffect(() => { try { STUTI_COUNT.hit("text_open", { kind: hymn.type || "stotra", script: lang }); } catch (e) {} }, [hymn.id]);
   const [namesOpen, setNamesOpen] = useState(false);
   const [namaluOpen, setNamaluOpen] = useState(false);
   const [storyOpen, setStoryOpen] = useState(false);
@@ -690,8 +721,8 @@ function ReaderView({ hymn, deity, go, theme, toggleTheme, lang, setLang, backVi
   const [nqPaused, setNqPaused] = useState(false);
   const wasPlayingRef = useRef(false);
   const [fontScale, setFontScale] = useState(() => {
-    const s = parseFloat(localStorage.getItem("stuti-fontscale"));
-    return [0.9, 1, 1.15, 1.3, 1.5].includes(s) ? s : 1.5;
+    const s = parseFloat(localStorage.getItem("stuti-fontscale2"));
+    return [0.9, 1, 1.15, 1.3, 1.5].includes(s) ? s : 1;
   });
   const [active, setActive] = useState(() => {   // resume where the reciter left off
     const total = (hymn.verses || []).reduce((n, v) => n + v.deva.split("\n").length, 0);
@@ -955,7 +986,7 @@ function ReaderView({ hymn, deity, go, theme, toggleTheme, lang, setLang, backVi
       at: Date.now(),
     });
   }, [active, hymn.id]);
-  useEffect(() => { try { localStorage.setItem("stuti-fontscale", String(fontScale)); } catch (e) {} }, [fontScale]);
+  useEffect(() => { try { localStorage.setItem("stuti-fontscale2", String(fontScale)); } catch (e) {} }, [fontScale]);
   useEffect(() => { try { localStorage.setItem("stuti-ritual", ritualOn ? "1" : "0"); } catch (e) {} }, [ritualOn]);
   /* dropping the nyāsa shortens the sequence: a position saved with it included
      must not point past the end */
@@ -1422,8 +1453,8 @@ function ReaderView({ hymn, deity, go, theme, toggleTheme, lang, setLang, backVi
               </button>
             )}
             {learnMode === "repeat" && (
-              <button className={"rd-seg-rec" + (recordOn ? " on" : "")} onClick={() => { setLearnOpen(false); setPlaying(false); follow.record(); }}
-                aria-pressed={recordOn} aria-label={STUTI_L.t("recordTurn", lang)} title={STUTI_L.t("recordTurn", lang)}>
+              <button className={"rd-seg-rec" + ((follow.supported ? follow.recOn : recordOn) ? " on" : "")} onClick={() => { if (!follow.supported) { setRecordOn(v => !v); return; } if (follow.recOn) { follow.stop(); return; } setLearnOpen(false); setPlaying(false); follow.record(); }}
+                aria-pressed={follow.supported ? follow.recOn : recordOn} aria-label={STUTI_L.t("recordTurn", lang)} title={STUTI_L.t("recordTurn", lang)}>
                 <Icon name="mic" size={17} /><span className="rd-seg-rec-lbl">{STUTI_L.t("recordTurn", lang)}</span>
               </button>
             )}
@@ -1470,6 +1501,7 @@ function ReaderView({ hymn, deity, go, theme, toggleTheme, lang, setLang, backVi
         {namaluOpen ? (
           <NamaluList hymn={hymn} lang={lang} />
         ) : flow ? (
+          <React.Fragment>
           <FlowText hymn={hymn} lang={lang} showMeaning={showMeaning} scale={fontScale}
             at={curLine ? { vi: curLine.vi, li: curLine.li } : null}
             word={word} lit={(playing && !drifting) || follow.on} masked={flowMask} hint={hint} peek={peek}
@@ -1477,6 +1509,8 @@ function ReaderView({ hymn, deity, go, theme, toggleTheme, lang, setLang, backVi
             ritual={hidRitual} ritualOn={ritualOn} onRitual={toggleRitual}
             onOpenNames={() => setNamesOpen(true)}
             scrollRef={scrollRef} hush={hush} plain={scrollOn} />
+          <div className="rd-proof-flow"><ProofLine proof={proof} lang={lang} onReport={() => setFbOpen(true)} /></div>
+          </React.Fragment>
         ) : (
         <div className="reader-verse-stage">
           {(() => {
@@ -1565,6 +1599,7 @@ function ReaderView({ hymn, deity, go, theme, toggleTheme, lang, setLang, backVi
                     {lang !== "telugu" && <div className="colophon-en">{hymn.colophon.en}</div>}
                   </div>
                 )}
+                {curVerse === hymn.verses.length - 1 && <ProofLine proof={proof} lang={lang} onReport={() => setFbOpen(true)} />}
                 {curVerse === hymn.verses.length - 1 && (
                   <div className="reader-end">
                     <Flame size={28} />
@@ -1627,6 +1662,7 @@ function ReaderView({ hymn, deity, go, theme, toggleTheme, lang, setLang, backVi
         </div>
       )}
       {limAsk && <LimitSheet lang={lang} onClose={() => setLimAsk(false)} />}
+      {fbOpen && <FeedbackSheet lang={lang} kind="text" about={hymn.title} onClose={() => setFbOpen(false)} />}
       {namesOpen && <OverlayPortal><NamesSheet hymn={hymn} lang={lang} onClose={() => setNamesOpen(false)} /></OverlayPortal>}
       {storyOpen && hymn.about && (
         <OverlayPortal>

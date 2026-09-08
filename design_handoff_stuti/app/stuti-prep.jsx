@@ -24,12 +24,11 @@ function PrepSheet({ occ, lang, onClose }) {
   const [copied, setCopied] = usePrS(false);
   const [limAsk, setLimAsk] = usePrS(false);
   const [note, setNote] = usePrS("");
-  const shareLeft = window.useLimitLeft("share");
-  const packLeft = window.useLimitLeft("pack");
-  const gated = (gate, fn) => () => {
-    if (window.STUTI_LIMITS.take(gate)) { fn(); setNote(L.t("limFreeLeft", lang)); setTimeout(() => setNote(""), 3600); return; }
-    setLimAsk(true);
-  };
+  /* sharing and printing are open. The monthly meter that stood here was a
+     placeholder for a paid plan nobody has decided on; until someone does,
+     nothing in the app is held back. */
+  const shareLeft = 1, packLeft = 1;
+  const gated = (gate, fn) => fn;
   const gets = its.filter((i) => i.kind === "get"), dos = its.filter((i) => i.kind === "do");
   const pct = its.length ? Math.round(done.length / its.length * 100) : 0;
   const dateStr = occ.date.toLocaleDateString(prLocale(lang), { weekday: "long", day: "numeric", month: "long" });

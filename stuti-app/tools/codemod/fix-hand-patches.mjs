@@ -74,3 +74,21 @@ for (const file of readdirSync(OUT)) {
 }
 
 console.log("hand patches applied; ReactDOM imports added to", dom, "files");
+
+/* Live refresh by binding, not by window: the ledger and the Today band
+   subscribed to stores through `window[k]`, which the port never publishes,
+   so neither refreshed when a bead was counted or a plan advanced. The
+   stores are imported names now (fix-missing-imports adds the imports). */
+{
+  let t = rd("stuti-ledger-core.ts");
+  const from = `["STUTI_THREAD", "STUTI_JAPA", "STUTI_PLANS", "STUTI_KEEP", "STUTI_FAVS", "STUTI_FAVS_WEEK"].forEach((k) => { try { window[k].subscribe(fire); } catch (e) {} });`;
+  if (!t.includes(from)) throw new Error("fix-hand-patches: ledger subscribe line not found");
+  wr("stuti-ledger-core.ts", t.replace(from, `[STUTI_THREAD, STUTI_JAPA, STUTI_PLANS, STUTI_KEEP, STUTI_FAVS, STUTI_FAVS_WEEK].forEach((s) => { try { s.subscribe(fire); } catch (e) {} });`));
+  t = rd("stuti-today.tsx");
+  const from2 = `const offs = ["STUTI_PREFS", "STUTI_VOWS", "STUTI_PLANS", "STUTI_JAPA", "STUTI_THREAD", "STUTI_LOC", "STUTI_KEEP"]
+      .map((k) => { try { return window[k].subscribe(f); } catch (e) { return null; } });`;
+  if (!t.includes(from2)) throw new Error("fix-hand-patches: today subscribe lines not found");
+  wr("stuti-today.tsx", t.replace(from2, `const offs = [STUTI_PREFS, STUTI_VOWS, STUTI_PLANS, STUTI_JAPA, STUTI_THREAD, STUTI_LOC, STUTI_KEEP]
+      .map((s) => { try { return s.subscribe(f); } catch (e) { return null; } });`));
+  console.log("live subscriptions rewired: ledger, today");
+}

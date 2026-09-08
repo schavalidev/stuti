@@ -1,6 +1,7 @@
 import { Icon } from "./stuti-icons";
 import ReactDOM from "react-dom";
 import React from "react";
+import { STUTI_L } from "./stuti-i18n";
 import { STUTI_TRANSLIT } from "./stuti-translit";
 
 /* ============================================================
@@ -44,7 +45,7 @@ function Picker({ value, options, onChange, placeholder, font, id, ariaLabel, se
               <div className="sel-search">
                 <Icon name="search" size={16} />
                 <input autoFocus value={q} onChange={(e) => setQ(e.target.value)}
-                  placeholder={placeholder || "—"} />
+                  placeholder={placeholder || STUTI_L.t("searchHint", STUTI_L.ui())} />
               </div>
             )}
             <div className="sel-sheet-list scroll">

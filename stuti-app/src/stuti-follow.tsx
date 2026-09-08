@@ -47,13 +47,13 @@ async function grammarForLines(voskLang: string, key: string, lines: Line[]): Pr
 }
 
 const T: Record<string, Record<string, string>> = {
-  follow:      { roman: "Follow my voice",                  deva: "मेरी आवाज़ के साथ चलो",             telugu: "నా స్వరాన్ని అనుసరించు" },
+  follow:      { roman: "Follow my voice",                  deva: "मेरी आवाज़ के साथ चलो",             telugu: "నా గొంతును అనుసరించు" },
   stop:        { roman: "Stop following",                   deva: "अनुसरण रोकें",                     telugu: "అనుసరణ ఆపు" },
-  listening:   { roman: "Following your voice",             deva: "आपकी आवाज़ के साथ",                telugu: "మీ స్వరాన్ని అనుసరిస్తోంది" },
+  listening:   { roman: "Following your voice",             deva: "आपकी आवाज़ के साथ",                telugu: "మీ గొంతును అనుసరిస్తోంది" },
   lost:        { roman: "Lost you — keep chanting",         deva: "सुन नहीं पाया — जारी रखें",        telugu: "వినిపించలేదు — కొనసాగించండి" },
   done:        { roman: "Recitation complete",              deva: "पाठ पूर्ण हुआ",                    telugu: "పారాయణం పూర్తయింది" },
   denied:      { roman: "Microphone not allowed",           deva: "माइक्रोफ़ोन की अनुमति नहीं",         telugu: "మైక్రోఫోన్ అనుమతి లేదు" },
-  unsupported: { roman: "Voice follow isn't available here", deva: "यहाँ आवाज़-अनुसरण उपलब्ध नहीं",   telugu: "ఇక్కడ స్వర-అనుసరణ అందుబాటులో లేదు" },
+  unsupported: { roman: "Voice follow isn't available here", deva: "यहाँ आवाज़-अनुसरण उपलब्ध नहीं",   telugu: "ఇక్కడ గొంతును అనుసరించడం కుదరదు" },
   needsModel:  { roman: "Follow needs a {mb} MB {label} voice model, downloaded once (Wi-Fi recommended). It stays on this phone and works offline.",
                  deva:  "अनुसरण के लिए {mb} MB का {label} वॉइस मॉडल एक बार डाउनलोड होगा (Wi-Fi बेहतर)। यह फ़ोन पर रहेगा और ऑफ़लाइन चलेगा।",
                  telugu:"అనుసరణకు {mb} MB {label} వాయిస్ మోడల్ ఒకసారి డౌన్‌లోడ్ అవుతుంది (Wi-Fi మంచిది). ఇది ఫోన్‌లోనే ఉండి ఆఫ్‌లైన్‌లో పనిచేస్తుంది." },
@@ -63,13 +63,11 @@ const T: Record<string, Record<string, string>> = {
   failed:      { roman: "Download failed — check the connection and try again", deva: "डाउनलोड विफल — कनेक्शन देखकर फिर कोशिश करें", telugu: "డౌన్‌లోడ్ విఫలం — కనెక్షన్ చూసి మళ్లీ ప్రయత్నించండి" },
   langLabel:   { roman: "{label}", deva: "{label}", telugu: "{label}" },
   /* recording a recitation */
-  record:      { roman: "Record",                           deva: "रिकॉर्ड",                           telugu: "రికార్డు" },
-  recordTitle: { roman: "Record this recitation",           deva: "यह पाठ रिकॉर्ड करें",                telugu: "ఈ పారాయణం రికార్డు చేయి" },
-  recording:   { roman: "Recording · {t}",                  deva: "रिकॉर्ड हो रहा है · {t}",            telugu: "రికార్డు అవుతోంది · {t}" },
-  stopRec:     { roman: "Stop",                             deva: "रोकें",                             telugu: "ఆపు" },
+  recordTitle: { roman: "Record this recitation",           deva: "यह पाठ रिकॉर्ड करें",                telugu: "ఈ పాఠం రెకార్డు చేయి" },
+  recording:   { roman: "Recording · {t}",                  deva: "रिकॉर्ड हो रहा है · {t}",            telugu: "రెకార్డు అవుతోంది · {t}" },
   keepQ:       { roman: "Keep this recitation? {dur} · {lit} of {n} lines followed.",
                  deva:  "यह पाठ रखें? {dur} · {n} में से {lit} पंक्तियाँ पहचानी गईं।",
-                 telugu:"ఈ పారాయణం ఉంచాలా? {dur} · {n}లో {lit} పంక్తులు గుర్తించబడ్డాయి." },
+                 telugu:"ఈ పాఠం ఉంచాలా? {dur} · {n}లో {lit} పంక్తులు గుర్తించబడ్డాయి." },
   keepWhere:   { roman: "It stays on this phone only, under this stotra. Nothing is uploaded.",
                  deva:  "यह केवल इस फ़ोन पर, इसी स्तोत्र के नीचे रहेगा। कुछ भी अपलोड नहीं होता।",
                  telugu:"ఇది ఈ ఫోన్‌లోనే, ఈ స్తోత్రం కింద ఉంటుంది. ఏదీ అప్‌లోడ్ కాదు." },
@@ -77,28 +75,28 @@ const T: Record<string, Record<string, string>> = {
                  deva:  "यह केवल इस ब्राउज़र में, इसी स्तोत्र के नीचे रहेगा। कुछ भी अपलोड नहीं होता।",
                  telugu:"ఇది ఈ బ్రౌజర్‌లోనే, ఈ స్తోత్రం కింద ఉంటుంది. ఏదీ అప్‌లోడ్ కాదు." },
   keep:        { roman: "Keep",                             deva: "रखें",                              telugu: "ఉంచు" },
-  discard:     { roman: "Discard",                          deva: "हटाएँ",                             telugu: "వదిలేయి" },
   kept:        { roman: "Kept · {dur}. Hear it under {learn} → {listen}, or from ● beside the title.",
                  deva:  "रख लिया · {dur}। इसे {learn} → {listen} में, या शीर्षक के पास ● से सुनें।",
-                 telugu:"ఉంచాం · {dur}. {learn} → {listen} లో, లేదా శీర్షిక పక్క ● నుండి వినండి." },
+                 telugu:"ఉంచాం · {dur}. {learn} → {listen}లో, లేదా శీర్షిక పక్క ● నుండి వినండి." },
   keepFailed:  { roman: "Could not keep it — try again",    deva: "रख नहीं सका — फिर कोशिश करें",        telugu: "ఉంచలేకపోయాం — మళ్లీ ప్రయత్నించండి" },
-  shelf:       { roman: "My recitations",                   deva: "मेरे पाठ",                           telugu: "నా పారాయణలు" },
-  shelfEmpty:  { roman: "None yet. Tap the mic beside the title, then Record.", deva: "अभी कोई नहीं। शीर्षक के पास माइक दबाएँ, फिर रिकॉर्ड।", telugu: "ఇంకా లేవు. శీర్షిక పక్క మైక్ నొక్కి, రికార్డు నొక్కండి." },
+  shelf:       { roman: "My recitations",                   deva: "मेरे पाठ",                           telugu: "నా పఠనాలు" },
+  shelfEmpty:  { roman: "None yet. Tap the mic beside the title, then Record.", deva: "अभी कोई नहीं। शीर्षक के पास माइक दबाएँ, फिर रिकॉर्ड।", telugu: "ఇంకా లేవు. శీర్షిక పక్క మైక్ నొక్కి, రెకార్డు నొక్కండి." },
   /* (labels of the learn bar come from the app's own strings at render time) */
   linesOf:     { roman: "{lit} of {n} lines",               deva: "{n} में से {lit} पंक्तियाँ",          telugu: "{n}లో {lit} పంక్తులు" },
-  play:        { roman: "Play",                             deva: "सुनें",                              telugu: "వినండి" },
-  pause:       { roman: "Pause",                            deva: "रोकें",                              telugu: "ఆపు" },
   share:       { roman: "Share",                            deva: "साझा करें",                           telugu: "పంచు" },
-  del:         { roman: "Delete",                           deva: "हटाएँ",                              telugu: "తొలగించు" },
-  sure:        { roman: "Delete?",                          deva: "हटाएँ?",                             telugu: "తొలగించాలా?" },
-  close:       { roman: "Close",                            deva: "बंद करें",                           telugu: "మూసివేయి" },
-  openShelf:   { roman: "My recitations ({n})",             deva: "मेरे पाठ ({n})",                     telugu: "నా పారాయణలు ({n})" },
+  del:         { roman: "Delete",                           deva: "हटाएँ",                              telugu: "తీసేయి" },
+  sure:        { roman: "Delete?",                          deva: "हटाएँ?",                             telugu: "తీసేయాలా?" },
+  openShelf:   { roman: "My recitations ({n})",             deva: "मेरे पाठ ({n})",                     telugu: "నా పఠనాలు ({n})" },
 };
 const MODEL_LABEL: Record<string, Record<string, string>> = {
   hi: { roman: "Hindi", deva: "हिन्दी", telugu: "హిందీ" },
   te: { roman: "Telugu", deva: "तेलुगु", telugu: "తెలుగు" },
 };
+/* words the app already has are hers: the learn bar's Record and Stop, the
+   sheets' Close and Discard, the player's Play and Pause */
+const HERS: Record<string, string> = { record: "recordTurn", stopRec: "stopRec", close: "close", discard: "discardTake", play: "aPlay", pause: "aPause" };
 const t = (k: string, lang: string, vars: Record<string, string | number> = {}) => {
+  if (HERS[k]) { try { const v = STUTI_L.t(HERS[k], lang); if (v && v !== HERS[k]) return v; } catch (e) {} }
   let s = (T[k] && (T[k][lang] || T[k].roman)) || k;
   for (const [a, b] of Object.entries(vars)) s = s.replace("{" + a + "}", String(b));
   return s;
@@ -234,12 +232,18 @@ export function useFollow({ hymn, lines, lang, active, setActive, setWord, setPl
     if (recT0.current) return;
     setKeep(null); setKept(null);
     armRec.current = true;
-    if (onRef.current && rec.current) {
-      /* the ears are open already: reopen them so the file starts now */
-      try { rec.current.abort(); } catch (e) {}
-      rec.current = null;
-      listen();
-    } else start();
+    if (onRef.current) {
+      if (rec.current) {
+        /* the ears are open already: reopen them so the file starts now */
+        try { rec.current.abort(); } catch (e) {}
+        rec.current = null;
+        listen();
+      }
+      /* otherwise the ears are still opening (the grammar is being built):
+         the pending listen()'s onstart will begin the capture */
+      return;
+    }
+    start();
   };
   const doKeep = async () => {
     const k = keep; if (!k) return;
@@ -306,12 +310,13 @@ export function useFollow({ hymn, lines, lang, active, setActive, setWord, setPl
     try { await voskDownload(voskLang, setPct); begin(); }
     catch (e) { setStatus("failed"); noteTimer(); }
   };
-  const dismiss = () => setStatus("idle");
+  const dismiss = () => { armRec.current = false; setStatus("idle"); };
 
   const stop = (why?: Status, silent = false) => {
     onRef.current = false;
     setOn(false);
     endCapture(silent);
+    armRec.current = false;   // a Record that never began must not arm the next Follow
     if (restartTimer.current) { clearTimeout(restartTimer.current); restartTimer.current = null; }
     try { rec.current && rec.current.abort(); } catch (e) {}
     rec.current = null;

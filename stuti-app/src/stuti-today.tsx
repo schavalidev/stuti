@@ -1,11 +1,14 @@
 import { Icon } from "./stuti-icons";
+import { STUTI_LOC } from "./stuti-store";
+import { STUTI_PREFS } from "./stuti-prefs";
 import React from "react";
 import { STUTI_CUES } from "./stuti-cues";
 import { STUTI } from "./stuti-data";
 import { STUTI_L } from "./stuti-i18n";
 import { JAPA_THREADS } from "./stuti-japa";
 import { STUTI_KEEP } from "./stuti-keep-core";
-import { STUTI_JAPA } from "./stuti-sadhana";
+import { STUTI_JAPA, STUTI_PLANS, STUTI_THREAD, STUTI_VOWS } from "./stuti-sadhana";
+import { STUTI_TITHIS } from "./stuti-tithis-core";
 import { STUTI_TRANSLIT } from "./stuti-translit";
 
 /* ============================================================
@@ -31,8 +34,8 @@ function TodayBand({ go, lang = "deva" }) {
   const [, bump] = useStateT(0);
   useEffectT(() => {
     const f = () => bump((n) => n + 1);
-    const offs = ["STUTI_PREFS", "STUTI_VOWS", "STUTI_PLANS", "STUTI_JAPA", "STUTI_THREAD", "STUTI_LOC", "STUTI_KEEP"]
-      .map((k) => { try { return window[k].subscribe(f); } catch (e) { return null; } });
+    const offs = [STUTI_PREFS, STUTI_VOWS, STUTI_PLANS, STUTI_JAPA, STUTI_THREAD, STUTI_LOC, STUTI_KEEP]
+      .map((s) => { try { return s.subscribe(f); } catch (e) { return null; } });
     /* the running juncture is a live fact — a band left open must not keep
        claiming prātaḥ is open an hour after it closed */
     const id = setInterval(f, 60000);
@@ -62,8 +65,11 @@ function TodayBand({ go, lang = "deva" }) {
   const dayName = (d) => d.toLocaleDateString(locale, { weekday: "short", day: "numeric" });
   const since = (kind, ref) => gaps[kind + ":" + ref] ? " · " + L.t("gapDays", lang).replace("{n}", gaps[kind + ":" + ref]) : "";
 
-  const row = (key, name, note, onClick, mod) => (
+  /* each ask wears its own glyph: the lamp for a text to be said,
+     the mālā for beads to be told */
+  const row = (key, name, note, onClick, mod, icon) => (
     <button className={"tb-row" + (mod ? " " + mod : "")} key={key} onClick={onClick} disabled={!onClick}>
+      {icon && <span className="tb-row-ico" aria-hidden="true"><Icon name={icon} size={20} filled={icon === "diya"} /></span>}
       <span className="tb-row-body">
         <span className="tb-row-name" style={{ fontFamily: font }}>{name}</span>
         {note && <span className="tb-row-note">{note}</span>}
@@ -86,17 +92,23 @@ function TodayBand({ go, lang = "deva" }) {
 
       {owed.map((o) => {
         if (o.kind === "vow") {
-          if (o.vkind === "japa") return row(o.id, japaVowName(o.deity, o.label), L.t("bandVow", lang), malaHas(o.deity) ? () => goJapa(o.deity) : null);
+          if (o.vkind === "japa") return row(o.id, japaVowName(o.deity, o.label), L.t("bandVow", lang), malaHas(o.deity) ? () => goJapa(o.deity) : null, null, "mala");
           const h = hymnOf(o.hymn); if (!h) return null;
           return row(o.id, L.hymnTitle(h, lang), L.t("bandVow", lang),
-            () => go("reader", { deity: h.deity, hymn: h.id, from: "daily" }));
+            () => go("reader", { deity: h.deity, hymn: h.id, from: "daily" }), null, "diya");
         }
         if (o.kind === "plan") {
           const h = hymnOf(o.hymn); if (!h) return null;
           const note = L.t("digestPlanDay", lang).replace("{n}", o.day) + (o.days ? " / " + o.days : "") + since("plan", o.ref);
-          return row(o.id, L.hymnTitle(h, lang), note, () => go("plan", { plan: o.hymn, from: "daily" }));
+          return row(o.id, L.hymnTitle(h, lang), note, () => go("plan", { plan: o.hymn, from: "daily" }), null, "diya");
         }
-        if (o.kind === "japa") return row(o.id, L.t("bandJapa", lang), L.t("bandJapaNote", lang) + since("japa", o.ref), () => go("japa"));
+        if (o.kind === "japa") return row(o.id, L.t("bandJapa", lang), L.t("bandJapaNote", lang) + since("japa", o.ref), () => go("japa"), null, "mala");
+        if (o.kind === "mytithi") {
+          const TT = STUTI_TITHIS, k = TT && TT.KINDS[o.tkind];
+          const kl = k ? (lang === "telugu" ? k.label.tel : lang === "deva" ? k.label.deva : k.label.roman) : "";
+          const when = o.away === 0 ? L.t("vrataToday", lang) : o.away === 1 ? L.t("vrataTomorrow", lang) : L.t("vrataInDays", lang).replace("{n}", o.away);
+          return row(o.id, o.name, kl + " · " + when, () => go("calendar"));
+        }
         if (o.kind === "keep") {
           let s = null; try { s = STUTI_KEEP.subject(STUTI_KEEP.byId(o.ref)); } catch (e) {}
           if (!s) return null;

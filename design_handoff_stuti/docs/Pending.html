@@ -1,19 +1,49 @@
-<!DOCTYPE html><html><head><meta charset="utf-8"><title>Stuti — Pending</title>
-<link rel="stylesheet" href="stuti-palette.css"><link rel="stylesheet" href="stuti-ops.css">
-</head><body class="ops"><div class="page">
-<h1 style="font-family:var(--font-display);font-size:2rem;margin:40px 0 6px">Pending</h1>
-<p style="color:var(--ink-soft);margin:0 0 30px">Work that needs more than an HTML change before it can ship. Kept here so a request for it doesn't get re-scoped from scratch.</p>
+<!DOCTYPE html>
+<html lang="en" data-theme="day">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Stuti · Pending</title>
+<link rel="stylesheet" href="stuti.css" />
+<link rel="stylesheet" href="stuti-ops.css" />
+<style>
+.pend p{font-size:15.5px;line-height:1.65;color:var(--ink-soft);max-width:68ch;text-wrap:pretty;margin:10px 0 0}
+.pend p b{color:var(--ink)}
+.pend ol{margin:10px 0 0;padding-left:22px;max-width:68ch}
+.pend li{font-size:15px;line-height:1.65;color:var(--ink-soft);margin-top:8px;text-wrap:pretty}
+.pend code{font-size:.92em;padding:1px 6px;border-radius:5px;background:color-mix(in oklab,var(--ink) 7%,transparent);color:var(--ink)}
+</style>
+</head>
+<body class="ops">
+<div class="page">
+<div class="top">
+<div class="brand"><svg width="20" height="23" viewBox="0 0 24 28" fill="none" aria-hidden="true"><path d="M12 1.5c2.6 3.2 5.4 5.7 5.4 9.4A5.4 5.4 0 0 1 12 16.3a5.4 5.4 0 0 1-5.4-5.4C6.6 7.2 9.4 4.7 12 1.5z" fill="var(--accent)"></path><path d="M12 6.2c1.3 1.7 2.7 3 2.7 4.9A2.7 2.7 0 0 1 12 13.8a2.7 2.7 0 0 1-2.7-2.7c0-1.9 1.4-3.2 2.7-4.9z" fill="color-mix(in oklab, var(--accent) 30%, #fff)"></path></svg><span class="brand-name">Stuti</span><span class="brand-dev">स्तुति</span></div>
+<button class="theme-btn" id="tt" aria-label="Day or night"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 14.5A8 8 0 1 1 9.5 4a6.3 6.3 0 0 0 10.5 10.5z"></path></svg></button>
+</div>
+<nav class="ops-nav"><a href="Stuti.html">The app</a><a href="Launch Plan.html">Launch plan</a><a href="Launch Tracker.html">Launch tracker</a><a href="Founders Guide 4 Weeks.html">4-week guide</a><a href="Daily Plan.html">Daily plan</a><a href="Welcome Note.html">Welcome note</a><a href="Work Items.html">Work items</a><a class="here" href="Pending.html">Pending</a><a href="Changelog.html">Changelog</a></nav>
 
-<h2 style="margin-top:0">Push notifications that survive a closed browser</h2>
+<div class="head">
+<div class="eyebrow">Pending</div>
+<h1>Needs more than an HTML change</h1>
+<p class="lede">Work that cannot ship from this project alone. Kept here so a request for it is not re-scoped from scratch.</p>
+</div>
+
+<section class="sec pend">
+<div class="sec-head"><h2>Push notifications that survive a closed browser</h2></div>
 <p>Today's bell buttons (sandhyā, pañcāṅga digest) only ring while a Stuti tab is open — <code>stuti-nudge.js</code> arms a plain <code>setTimeout</code> against the browser's own clock. A phone with the tab closed, or the browser killed to save battery, hears nothing. Fixing that needs a server standing between the almanac and the device, because only a server can hand the OS a wake-up call in advance.</p>
-<p><b>What's already in place:</b> <code>stuti-push.js</code> stores a device's push subscription (endpoint + keys) in localStorage and exposes <code>subscribed()</code> — the client half of the handshake exists, unused.</p>
-<p><b>What's missing, in order:</b></p>
-<ol style="padding-left:20px;line-height:1.9">
+<p><b>What is already in place:</b> <code>stuti-push.js</code> stores a device's push subscription (endpoint + keys) in localStorage and exposes <code>subscribed()</code> — the client half of the handshake exists, unused.</p>
+<p><b>What is missing, in order:</b></p>
+<ol>
 <li>A subscribe call — <code>PushManager.subscribe()</code> against a VAPID public key, wired to the existing bell taps and the Settings reminder toggles, replacing the local <code>Notification.requestPermission()</code> path for anyone who grants it.</li>
 <li>A small backend (a cron-triggered function is enough — no always-on server needed) that, once a minute, computes which subscriptions have a cue due in the next window: sandhyā junctures per subscriber's saved place, the daily digest at their chosen hour, tithi nudges. The almanac math is pure and already lives in <code>stuti-panchanga-engine.js</code>/<code>stuti-muhurta.js</code>; the backend needs the same formulas (or to call the same JS via a small Node runner) plus each subscriber's place and prefs, which today live only in the browser's localStorage and would need to move to a real store.</li>
 <li>A send step using <code>web-push</code> (or the provider's REST API) with the VAPID keys, POSTing the payload to each due subscription's endpoint.</li>
-<li>A service worker (<code>sw.js</code>) with a <code>push</code> event handler to show the OS notification when the payload arrives with no page open, and a <code>notificationclick</code> handler to focus/open the app — mirroring what <code>stuti-nudge.js</code>'s <code>post()</code> already does for the in-tab case.</li>
-<li>A place to keep subscriptions and preferences server-side (endpoint, place, sandhyā toggles, quiet hours, digest time) — today all of that is <code>localStorage</code>, which no server can read.</li>
+<li>A service worker <code>push</code> event handler to show the OS notification when the payload arrives with no page open, and a <code>notificationclick</code> handler to focus/open the app — mirroring what <code>stuti-nudge.js</code>'s <code>post()</code> already does for the in-tab case.</li>
+<li>A place to keep subscriptions and preferences server-side (endpoint, place, sandhyā toggles, quiet hours, digest time) — today all of that is localStorage, which no server can read.</li>
 </ol>
-<p style="color:var(--ink-soft)">Scope, not a build: this needs a real backend decision (which host, which store) before any of it can be written. Flag when ready to pick one.</p>
-</div></body></html>
+<p>Scope, not a build: this needs a real backend decision (which host, which store) before any of it can be written. It is item 3 of Stage 2 in the <a href="Launch Tracker.html">launch tracker</a> and begins after the four-week launch month.</p>
+</section>
+
+</div>
+<script src="stuti-ops.js"></script>
+</body>
+</html>

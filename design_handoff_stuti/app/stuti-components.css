@@ -99,12 +99,13 @@
 /* ---------- generic top bar (sub-screens) ---------- */
 .topbar {
   display: flex; align-items: center; justify-content: space-between;
-  gap: 8px; padding: 8px 12px 6px; flex: none;
+  gap: 8px; padding: calc(8px + env(safe-area-inset-top)) 12px 6px; flex: none;
   position: sticky; top: 0; z-index: 5;
   background: var(--bg-warm);
   backdrop-filter: blur(6px);
 }
-.topbar-title { font-size: calc(1.3125rem + 2pt); }
+.topbar-title { font-size: calc(1.3125rem + 2pt); flex: 1; min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.topbar .icon-btn, .topbar .plan-day-tag { flex: none; }
 
 /* ---------- bottom tab bar ---------- */
 .tabbar {
@@ -200,6 +201,83 @@
 [data-theme="night"] .gtile-full .emblem-img--day { display: block; }
 [data-theme="night"] .gtile-full .emblem-img--night { display: none; }
 [data-theme="night"] .gtile-full .gtile-name { padding: 11px 12px 12px; background: var(--surface-2); border-top: 1px solid color-mix(in oklab, #2B2017 22%, transparent); }
+
+/* ---------- The deity tile ----------
+   One tile for every shelf of deities (Library, Home browse): the painting
+   full-bleed inside a flat frame in the deity's own colour — a picture frame,
+   not a rim with light and shade, so it will take whatever artwork comes
+   next. The tile tilts toward the finger, the painting slides a little against
+   the frame, and a light sweeps the glass on touch. */
+.gtile-niche {
+  --frame: 0px; --rad: 12px;
+  --frame-c: #F7EADC;
+  position: relative; padding: 0; gap: 0; min-height: 0; aspect-ratio: 1 / 1; overflow: visible;
+  border: none; border-radius: var(--rad); background: var(--frame-c);
+  box-shadow: var(--shadow-sm);
+  transform: perspective(720px) rotateX(var(--rx, 0deg)) rotateY(var(--ry, 0deg)) translateY(var(--lift, 0px));
+  animation: nicheRise 640ms var(--ease-out) backwards;
+  cursor: pointer; -webkit-tap-highlight-color: transparent;
+}
+.lib-deity-grid .gtile-niche { transition: transform 420ms var(--ease-out), box-shadow 420ms var(--ease-out); }
+.lib-deity-grid .gtile-niche.is-tilt { --lift: -4px; transition-duration: 120ms; box-shadow: var(--shadow), 0 26px 40px -24px color-mix(in oklab, var(--accent) 55%, transparent); }
+.gtile-niche:active { transform: perspective(720px) rotateX(var(--rx, 0deg)) rotateY(var(--ry, 0deg)) scale(0.965); }
+/* the glass: the painting slightly oversized so its own cream ground reaches
+   every edge of the frame */
+.niche-pic { position: absolute; inset: var(--frame); border-radius: calc(var(--rad) - var(--frame)); overflow: hidden; background: #F7EADC; transform: translateZ(0); }
+/* the frame is not a line but a bevel: the glass sits a hair below the edge,
+   so a soft shadow falls in from the top and sides and lifts at the foot */
+.niche-pic::after { content: ""; position: absolute; inset: 0; border-radius: inherit; pointer-events: none; z-index: 3; box-shadow: inset 0 0 0 1px rgba(90,64,36,0.10), inset 0 6px 10px -6px rgba(90,64,36,0.28), inset 3px 0 6px -4px rgba(90,64,36,0.18), inset -3px 0 6px -4px rgba(90,64,36,0.18), inset 0 -2px 4px -3px rgba(90,64,36,0.10); }
+.niche-pic .niche-img { position: absolute; left: 50%; top: 50%; width: 142%; height: auto; aspect-ratio: 1 / 1; object-fit: cover; transform: translate(calc(-50% + var(--mx, 0) * -7px), calc(-52% + var(--my, 0) * -7px)) scale(var(--zoom, 1)); transition: transform 420ms var(--ease-out); }
+.gtile-niche.is-tilt .niche-img { --zoom: 1.04; transition-duration: 120ms; }
+/* a square portrait has no circle to crop away: it fills the frame's height
+   and loses only a little at the sides */
+.niche-pic .niche-img--square { width: auto; height: 108%; transform: translate(calc(-50% + var(--mx, 0) * -7px), calc(-50% + var(--my, 0) * -7px)) scale(var(--zoom, 1)); }
+/* a circle, not an oval: the tile is 4:5, so a percentage height and a
+   percentage width give different pixels — the width alone is set and the
+   1/1 aspect ratio squares it */
+.niche-pic .niche-img--circle { width: 78%; height: auto; aspect-ratio: 1 / 1; border-radius: 50%; transform: translate(calc(-50% + var(--mx, 0) * -7px), calc(-56% + var(--my, 0) * -7px)) scale(var(--zoom, 1)); box-shadow: 0 0 0 1.5px var(--frame-c), 0 0 0 3px color-mix(in oklab, var(--accent) 55%, transparent); }
+[data-theme="night"] .niche-pic .niche-img--circle { box-shadow: 0 0 0 1.5px var(--frame-c), 0 0 0 3px color-mix(in oklab, var(--accent) 55%, transparent); }
+/* the name sits on a cream plate rising out of the painting's own ground.
+   Dark ink in both themes: the tile is a lit painting, not part of the wall. */
+.niche-name { position: absolute; left: var(--frame); right: var(--frame); bottom: var(--frame); margin: 0; padding: 22px 8px 8px; text-align: center; color: #2B2017; border-radius: 0 0 calc(var(--rad) - var(--frame)) calc(var(--rad) - var(--frame)); background: linear-gradient(to top, #F7EADC 38%, color-mix(in oklab, #F7EADC 70%, transparent) 70%, transparent); pointer-events: none; }
+.niche-count { display: block; margin-top: 2px; font-family: var(--font-ui); font-size: 0.6875rem; letter-spacing: 0.02em; color: #584B3E; }
+.lib-deity-grid .gtile-niche .gtile-name { font-size: 1rem; line-height: 1.2; }
+[data-theme] .lib-deity-grid .gtile-niche .gtile-name.niche-name { color: #2B2017; }
+.lib-deity-grid-2 .gtile-niche .gtile-name { font-size: 1.1875rem; padding-bottom: 12px; }
+.lib-deity-grid-4 .gtile-niche .gtile-name { font-size: 0.8125rem; padding: 18px 4px 6px; }
+.lib-deity-grid-4 .niche-count { display: none; }
+/* a light that sweeps the glass once when the tile is touched */
+.niche-sheen { position: absolute; inset: var(--frame); border-radius: calc(var(--rad) - var(--frame)); overflow: hidden; pointer-events: none; z-index: 2; }
+.niche-sheen::before { content: ""; position: absolute; inset: -20% -40%; background: linear-gradient(112deg, transparent 38%, rgba(255,255,255,0.55) 49%, rgba(255,255,255,0.15) 53%, transparent 62%); transform: translateX(-70%); transition: transform 1300ms var(--ease-out); }
+.gtile-niche.is-tilt .niche-sheen::before, .is-sweep .niche-sheen::before { transform: translateX(70%); }
+/* the month tile borrows the deity tile's glass: same sheen, same lift on press */
+.masa-tile .niche-sheen, .masa-now .niche-sheen { position: absolute; inset: 0; border-radius: inherit; overflow: hidden; pointer-events: none; z-index: 3; }
+.masa-tile .niche-sheen::before, .masa-now .niche-sheen::before { content: ""; position: absolute; inset: -20% -40%; background: linear-gradient(112deg, transparent 38%, rgba(255,255,255,0.45) 49%, rgba(255,255,255,0.12) 53%, transparent 62%); transform: translateX(-70%); transition: transform 1300ms var(--ease-out); }
+.masa-tile.is-tilt { transform: perspective(720px) rotateX(var(--rx, 0deg)) rotateY(var(--ry, 0deg)) translateY(-3px); transition: transform 120ms var(--ease-out); }
+.masa-tile { transition: transform 420ms var(--ease-out); }
+/* on a desktop the sweep also answers the hover; and every tile sweeps once as
+   the shelf opens, so the glass is seen before anything is touched */
+/* the band travels only forward: when the pointer leaves, it snaps home
+   unseen instead of sweeping back across the tile it just left */
+.niche-sheen::before { transition-duration: 0ms !important; }
+.gtile-niche:hover .niche-sheen::before, .masa-tile:hover .niche-sheen::before, .masa-now:hover .niche-sheen::before, .is-tilt .niche-sheen::before, .is-sweep .niche-sheen::before { transition-duration: 1300ms !important; }
+@media (hover: hover) { .masa-tile:hover .niche-sheen::before, .masa-now:hover .niche-sheen::before, .gtile-niche:hover .niche-sheen::before { transform: translateX(70%); } .masa-tile:hover { transform: translateY(-3px); } }
+/* no arrival sweep on the tiles — the sheen moves only on hover or press */
+@keyframes sheenOnce { from { transform: translateX(-70%); } to { transform: translateX(70%); } }
+/* one plain frame for every deity — the paintings carry the colour, the frame
+   does not. A kept deity is marked only by a thin outer halo. */
+.gtile-niche.gtile-kept { box-shadow: var(--shadow-sm), 0 0 0 1.5px color-mix(in oklab, var(--accent) 40%, transparent); }
+[data-theme="night"] .gtile-niche { --frame-c: #E8DCC8; background: var(--frame-c); box-shadow: var(--shadow-sm), 0 0 0 1px rgba(255,255,255,0.06); }
+[data-theme="night"] .niche-pic { background: #E8DCC8; }
+[data-theme="night"] .niche-pic::after { box-shadow: inset 0 0 0 1px rgba(40,28,16,0.14), inset 0 6px 10px -6px rgba(40,28,16,0.40), inset 3px 0 6px -4px rgba(40,28,16,0.26), inset -3px 0 6px -4px rgba(40,28,16,0.26), inset 0 -2px 4px -3px rgba(40,28,16,0.14); }
+[data-theme="night"] .niche-pic .niche-img--colour { filter: brightness(0.94); }
+[data-theme="night"] .niche-pic .emblem-img--day { display: block; }
+[data-theme="night"] .niche-pic .emblem-img--night { display: none; }
+[data-theme="night"] .niche-name { background: linear-gradient(to top, #E8DCC8 38%, color-mix(in oklab, #E8DCC8 70%, transparent) 70%, transparent); }
+/* the ninth, unstocked tile keeps the proportion so the shelf reads as one row */
+.lib-deity-grid .gtile-soon { aspect-ratio: 1 / 1; min-height: 0; border-radius: 12px; justify-content: center; }
+@keyframes nicheRise { from { opacity: 0; transform: perspective(720px) rotateX(14deg) translateY(18px); } to { opacity: 1; transform: perspective(720px) rotateX(0deg) translateY(0); } }
+@media (prefers-reduced-motion: reduce) { .gtile-niche { animation: none; transform: none !important; } .niche-img, .niche-sheen::before { transition: none; } }
 
 /* ---------- Calendar (month pañcāṅga) ---------- */
 .cal-nav { display: flex; align-items: center; justify-content: space-between; gap: 10px; padding: 4px 18px 12px; }
@@ -477,7 +555,11 @@
 @keyframes bloom { 0% { transform: scale(0.5) rotate(-30deg); } 60% { transform: scale(1.15) rotate(6deg); } 100% { transform: scale(1) rotate(0); } }
 
 /* ---------- Reader ---------- */
-.reader { background: var(--bg); }
+.reader { background: var(--bg); --rd-fit: 1; }
+/* A phone column is ~360px of text; the verse sizes were tuned on a wider frame.
+   Every reader size multiplies this fit factor after the user's own dial. */
+@media (max-width: 480px) { .reader { --rd-fit: 0.78; } }
+@media (min-width: 481px) and (max-width: 640px) { .reader { --rd-fit: 0.9; } }
 .reader-topbar { background: var(--bg-warm); }
 [data-theme="night"] .reader-topbar { background: #241C10; }
 .rd-parts { background: var(--bg-warm); margin: 0; }
@@ -485,13 +567,13 @@
 .reader-topbar { align-items: center; gap: 6px; padding: 12px 12px 8px; }
 .reader-topbar .icon-btn, .reader-topbar .fav-btn { width: 42px; min-width: 42px; height: 44px; border-radius: 999px; }
 .reader-topbar-title { flex: 1; text-align: left; padding-top: 7px; min-width: 0; overflow: hidden; }
-.reader-topbar-name { font-size: calc(1.6875rem * var(--rd-scale, 1)); line-height: 1.15; overflow-wrap: break-word; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+.reader-topbar-name { font-size: calc(1.6875rem * var(--rd-scale, 1) * var(--rd-fit, 1)); line-height: 1.15; overflow-wrap: break-word; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
 [data-lang="telugu"] .reader-topbar-name, [data-lang="telugu"] .reader-layers { font-family: var(--font-telugu); }
 /* Telugu and Devanāgarī hang vowel marks well above the em box; a 1.15 line box
    clipped their tops against the title's overflow. Give those scripts room. */
 [data-lang="telugu"] .reader-topbar-name, [data-lang="deva"] .reader-topbar-name { line-height: 1.4; }
 .reader-topbar-name .fav-btn { display: inline-flex; vertical-align: middle; margin-left: 2px; width: 34px; height: 34px; min-width: 34px; }
-.reader-topbar-by { font-size: calc(0.8125rem * var(--rd-scale, 1)); color: var(--ink-faint); margin-top: 1px; }
+.reader-topbar-by { font-size: calc(0.8125rem * var(--rd-scale, 1) * var(--rd-fit, 1)); color: var(--ink-faint); margin-top: 1px; }
 .reader-topbar-actions { display: flex; align-items: center; gap: 2px; }
 
 .reader-layers { display: flex; gap: 6px; justify-content: flex-start; padding: 4px 12px 10px; flex: none; flex-wrap: nowrap; overflow-x: auto; scrollbar-width: none; -webkit-overflow-scrolling: touch; }
@@ -501,7 +583,7 @@
 .chip {
   display: inline-flex; align-items: center; gap: 6px; min-height: 44px; padding: 0 12px;
   border-radius: 999px; border: 1.5px solid var(--line); background: var(--surface);
-  color: var(--ink-soft); font-weight: 600; font-size: calc(0.875rem * var(--rd-scale, 1)); transition: all var(--fast);
+  color: var(--ink-soft); font-weight: 600; font-size: calc(0.875rem * var(--rd-scale, 1) * var(--rd-fit, 1)); transition: all var(--fast);
 }
 .chip-ico { width: 44px; min-width: 44px; padding: 0; justify-content: center; }
 .chip-sep { flex: none; align-self: center; width: 1px; height: 24px; background: var(--line); margin: 0 3px; }
@@ -551,22 +633,22 @@
 .nm-list { flex: 1; padding: 4px 16px 32px; }
 .nm-inline { padding: 8px 4px 40px; max-width: 720px; margin: 0 auto; }
 .nm-row { display: flex; gap: 13px; padding: 13px 0; border-bottom: 1px solid var(--line-2); }
-.nm-n { flex: none; width: 42px; text-align: right; font-size: calc(0.8125rem * var(--rd-scale, 1)); font-weight: 700; color: var(--ink-faint); padding-top: 4px; font-variant-numeric: tabular-nums; }
+.nm-n { flex: none; width: 42px; text-align: right; font-size: calc(0.8125rem * var(--rd-scale, 1) * var(--rd-fit, 1)); font-weight: 700; color: var(--ink-faint); padding-top: 4px; font-variant-numeric: tabular-nums; }
 .nm-body { min-width: 0; flex: 1; }
-.nm-name { font-size: calc(1.3125rem * var(--rd-scale, 1)); line-height: 1.5; color: var(--ink); }
+.nm-name { font-size: calc(1.3125rem * var(--rd-scale, 1) * var(--rd-fit, 1)); line-height: 1.5; color: var(--ink); }
 /* the nāmalu list reads at the same size as the nāmāvali's flow text, per script */
-.nm-inline .nm-name-deva { font-size: calc(38px * var(--rd-scale, 1)); line-height: 1.58; }
-.nm-inline .nm-name-telugu { font-size: calc(27px * var(--rd-scale, 1)); line-height: 1.7; }
-.nm-inline .nm-name-iast { font-size: calc(22px * var(--rd-scale, 1)); line-height: 1.5; }
-.nm-iast { font-size: calc(0.875rem * var(--rd-scale, 1)); color: var(--ink-soft); margin-top: 2px; font-style: normal; }
-.nm-mean { font-size: calc(0.9063rem * var(--rd-scale, 1)); color: var(--ink-soft); margin-top: 5px; line-height: 1.5; text-wrap: pretty; }
+.nm-inline .nm-name-deva { font-size: calc(38px * var(--rd-scale, 1) * var(--rd-fit, 1)); line-height: 1.58; }
+.nm-inline .nm-name-telugu { font-size: calc(27px * var(--rd-scale, 1) * var(--rd-fit, 1)); line-height: 1.7; }
+.nm-inline .nm-name-iast { font-size: calc(22px * var(--rd-scale, 1) * var(--rd-fit, 1)); line-height: 1.5; }
+.nm-iast { font-size: calc(0.875rem * var(--rd-scale, 1) * var(--rd-fit, 1)); color: var(--ink-soft); margin-top: 2px; font-style: normal; }
+.nm-mean { font-size: calc(0.9063rem * var(--rd-scale, 1) * var(--rd-fit, 1)); color: var(--ink-soft); margin-top: 5px; line-height: 1.5; text-wrap: pretty; }
 .nm-empty { padding: 40px 0; text-align: center; color: var(--ink-faint); }
 .verse-lines { display: flex; flex-direction: column; gap: 4px; }
 .line { text-align: center; padding: 12px 8px; border-radius: 14px; cursor: pointer; transition: opacity var(--med) var(--ease), transform var(--med) var(--ease); }
-.line-deva { font-family: var(--font-deva-read); word-spacing: 0.18em; font-size: calc(38px * var(--rd-scale, 1)); line-height: 1.62; color: var(--ink); transition: color var(--med); }
-.line-iast { font-family: var(--font-display); font-size: calc(17px * var(--rd-scale, 1)); color: var(--ink-soft); margin-top: 6px; font-style: normal; }
-.line-iast-lead { font-family: var(--font-display); font-size: calc(26px * var(--rd-scale, 1)); line-height: 1.5; color: var(--ink); font-style: normal; transition: color var(--med); }
-.line-telugu { font-family: var(--font-telugu); word-spacing: 0.18em; font-size: calc(32px * var(--rd-scale, 1)); line-height: 1.6; color: var(--ink); transition: color var(--med); }
+.line-deva { font-family: var(--font-deva-read); word-spacing: 0.18em; font-size: calc(38px * var(--rd-scale, 1) * var(--rd-fit, 1)); line-height: 1.62; color: var(--ink); transition: color var(--med); }
+.line-iast { font-family: var(--font-display); font-size: calc(17px * var(--rd-scale, 1) * var(--rd-fit, 1)); color: var(--ink-soft); margin-top: 6px; font-style: normal; }
+.line-iast-lead { font-family: var(--font-display); font-size: calc(26px * var(--rd-scale, 1) * var(--rd-fit, 1)); line-height: 1.5; color: var(--ink); font-style: normal; transition: color var(--med); }
+.line-telugu { font-family: var(--font-telugu); word-spacing: 0.18em; font-size: calc(32px * var(--rd-scale, 1) * var(--rd-fit, 1)); line-height: 1.6; color: var(--ink); transition: color var(--med); }
 .line-deva-sub { font-family: var(--font-deva); font-size: 1.1875rem; color: var(--ink-soft); margin-top: 7px; }
 .verse-end-mark { font-size: 0.56em; opacity: 0.75; letter-spacing: 0.02em; word-spacing: normal; white-space: nowrap; }
 .line-on .line-iast-lead, .line-on .line-telugu { color: var(--accent-ink); }
@@ -583,10 +665,10 @@
 .verse-meaning {
   margin-top: 16px; padding: 0; border-radius: 0;
   background: none; border: none;
-  color: var(--ink-soft); font-size: calc(18px * var(--rd-scale, 1)); line-height: 1.55; text-align: center; text-wrap: pretty;
+  color: var(--ink-soft); font-size: calc(18px * var(--rd-scale, 1) * var(--rd-fit, 1)); line-height: 1.55; text-align: left; text-wrap: pretty;
 }
 .reader-end { text-align: center; display: flex; flex-direction: column; align-items: center; gap: 8px; padding: 26px 0 10px; }
-.verse-mean-names { margin-top: 16px; padding: 0; border-radius: 0; background: none; border: none; color: var(--ink-faint); font-family: var(--font-ui); font-size: calc(14.5px * var(--rd-scale, 1)); line-height: 1.5; display: inline-flex; align-items: center; gap: 8px; cursor: pointer; text-align: left; }
+.verse-mean-names { margin-top: 16px; padding: 0; border-radius: 0; background: none; border: none; color: var(--ink-faint); font-family: var(--font-ui); font-size: calc(14.5px * var(--rd-scale, 1) * var(--rd-fit, 1)); line-height: 1.5; display: inline-flex; align-items: center; gap: 8px; cursor: pointer; text-align: left; }
 .verse-mean-names:hover { border-color: color-mix(in oklab, var(--accent) 45%, var(--line)); color: var(--accent-ink); }
 .verse .verse-mean-names { margin-top: 4px; }
 
@@ -597,9 +679,12 @@
 /* ---------- Reciter bar ---------- */
 .reciter {
   flex: none; background: var(--surface); border-top: 1px solid var(--line);
-  padding: 0 16px calc(6px + env(safe-area-inset-bottom));
+  padding: 0 16px 6px;
   box-shadow: 0 -18px 40px -26px rgba(40,25,8,0.55);
 }
+/* the safe-area inset belongs to the bar that touches the screen edge: the
+   tabbar when it is present, the reciter only when no tabbar follows the viewport */
+.viewport:not(:has(+ .tabbar)) .reciter { padding-bottom: calc(6px + env(safe-area-inset-bottom)); }
 .reciter-progress { position: relative; height: 18px; margin: 0 2px; display: flex; align-items: center; touch-action: none; cursor: pointer; }
 .reciter-progress::before { content: ""; position: absolute; left: 0; right: 0; height: 4px; border-radius: 4px; background: var(--line); }
 .reciter-progress span { position: relative; display: block; height: 4px; border-radius: 4px; background: var(--accent); transition: width var(--med) var(--ease); }
@@ -610,6 +695,7 @@
 .scrubbing .scrub-knob { transform: scale(1.35); transition: transform var(--fast); }
 .scrubbing span { transition: none !important; }
 .reciter-row { display: flex; align-items: center; justify-content: space-between; padding-bottom: 0; }
+@media (max-width: 520px) { .reciter-row { justify-content: center; gap: 20px; } }
 .reciter-center { display: flex; align-items: center; gap: 14px; }
 .reciter-step {
   width: 44px; height: 44px; border-radius: 50%; display: grid; place-items: center;
@@ -1050,6 +1136,62 @@ select.sk-input {
 .eyebrow-bell.on{background:var(--accent);border-color:var(--accent);color:#fff}
 [data-theme="night"] .eyebrow-bell.on{color:#1b150d}
 .rhb-tapnote{margin-top:10px;padding:10px 14px;border-radius:12px;background:var(--surface-2);color:var(--ink-soft);font-size:0.8125rem;line-height:1.45;cursor:pointer}
+/* the festival-day card: one compact strip above the pañcāṅga on a singular
+   annual parva — kalaśa, name, hour. Tinted from the deity's own hue. */
+.parva-card{position:relative;display:flex;flex-direction:column;width:100%;margin:0 0 16px;border-radius:var(--r-lg);color:var(--ink);background:color-mix(in oklab,var(--accent) 9%,var(--surface));box-shadow:var(--shadow-sm);overflow:hidden}
+.parva-main{all:unset;box-sizing:border-box;display:flex;align-items:center;gap:14px;width:100%;padding:14px 14px 14px 18px;text-align:left;color:inherit;cursor:pointer;font:inherit}
+.parva-main:active{opacity:.85}
+.parva-card::before{content:"";position:absolute;inset:0;border-radius:inherit;border:1px solid color-mix(in oklab,var(--accent) 28%,transparent);pointer-events:none}
+.parva-card .parva-art{width:46px;height:46px;object-fit:contain;flex:none;filter:drop-shadow(0 3px 5px rgba(58,40,20,.25))}
+/* the eve: same shape, no tint — a note, not an announcement */
+.parva-card.is-eve{background:var(--surface);box-shadow:none}
+.parva-card.is-eve .parva-main{padding-top:11px;padding-bottom:11px}
+.parva-card.is-eve::before{border-color:var(--line)}
+.parva-card.is-eve .parva-k{color:var(--ink-faint)}
+.parva-card.is-eve .parva-n{font-size:1.125rem}
+.parva-card .parva-chev{color:var(--ink-faint);flex:none;display:flex}
+.parva-body{flex:1;min-width:0;display:flex;flex-direction:column;gap:2px}
+.parva-k{font-size:.72rem;letter-spacing:.2em;text-transform:uppercase;font-weight:700;color:var(--accent-ink)}
+[data-ui-lang="telugu"] .parva-k,[data-ui-lang="deva"] .parva-k{letter-spacing:0;font-size:.9rem}
+.parva-n{font-size:1.375rem;line-height:1.15;color:var(--ink);font-weight:400}
+.parva-s{font-size:.875rem;color:var(--ink-soft);line-height:1.4;text-wrap:pretty}
+.parva-chips{display:flex;gap:8px;padding:0 14px 14px 18px;overflow-x:auto;scrollbar-width:none}
+.parva-chips::-webkit-scrollbar{display:none}
+.parva-chip{all:unset;box-sizing:border-box;flex:none;display:inline-flex;align-items:center;min-height:36px;padding:0 14px;border-radius:999px;background:var(--surface);border:1px solid color-mix(in oklab,var(--accent) 30%,var(--line));font-size:.875rem;color:var(--ink);cursor:pointer;white-space:nowrap}
+.parva-chip:active{background:var(--surface-2)}
+.cal-fest-sub{display:block;font-size:.8125rem;color:var(--ink-soft);margin-top:2px}
+.cal-fest-item.is-mine{background:var(--surface);border:1px dashed color-mix(in oklab,var(--accent) 45%,var(--line))}
+.cal-fest-item.is-mine .cal-fest-dot{background:var(--ink-faint)}
+/* ---------- the house's own tithis ---------- */
+.tt-card{margin:18px 16px 0;padding:16px 16px 14px;border-radius:var(--r-md);background:var(--surface);border:1px solid var(--line);box-shadow:var(--shadow-sm)}
+.tt-head{display:flex;align-items:center;justify-content:space-between;gap:12px}
+.tt-add{display:inline-flex;align-items:center;gap:6px;min-height:36px;padding:0 13px;border-radius:999px;border:1px solid var(--line);background:var(--surface);color:var(--accent-ink);font-family:var(--font-ui);font-size:.8438rem;font-weight:600;cursor:pointer}
+.tt-add:active{transform:scale(.98)}
+.tt-empty{margin:12px 0 2px;font-size:.875rem;color:var(--ink-faint);text-wrap:pretty}
+.tt-list{display:flex;flex-direction:column;margin-top:8px}
+.tt-row{all:unset;box-sizing:border-box;display:flex;align-items:center;gap:12px;width:100%;padding:12px 0;border-top:1px solid var(--line-2);cursor:pointer;color:var(--ink)}
+.tt-row:first-child{border-top:0}
+.tt-row-body{flex:1;min-width:0;display:flex;flex-direction:column;gap:2px}
+.tt-row-name{font-size:1.0625rem;line-height:1.25}
+.tt-row-rule{font-size:.8125rem;color:var(--ink-soft)}
+.tt-row-date{flex:none;text-align:right;font-size:.9375rem;color:var(--ink);display:flex;flex-direction:column;gap:1px;font-variant-numeric:tabular-nums}
+.tt-row-date small{font-size:.75rem;color:var(--accent-ink);font-weight:600}
+.tt-addhere{display:flex;align-items:center;justify-content:center;gap:7px;width:100%;min-height:46px;margin-top:14px;border-radius:999px;border:1px dashed color-mix(in oklab,var(--accent) 45%,var(--line));background:var(--surface);color:var(--accent-ink);font-family:var(--font-ui);font-size:.9063rem;font-weight:600;cursor:pointer}
+.tt-rule{margin-top:4px;padding:14px;border-radius:var(--r-md);background:var(--surface-2);border:1px solid var(--line-2)}
+.tt-rule-v{font-size:1.25rem;color:var(--ink);margin-top:6px;line-height:1.3}
+.tt-selects{display:grid;grid-template-columns:1.4fr 1fr 1.2fr;gap:8px;margin-top:12px}
+.tt-selects label{display:flex;flex-direction:column;gap:4px;font-size:.75rem;color:var(--ink-faint);min-width:0}
+.tt-selects select{min-height:42px;padding:0 8px;border-radius:var(--r-sm);border:1px solid var(--line);background:var(--bg);color:var(--ink);font-size:.9375rem;min-width:0}
+.tt-next{margin-top:12px;font-size:.875rem;color:var(--accent-ink);font-weight:600}
+.tt-actions{display:flex;gap:10px;margin-top:20px}
+.tt-actions .dana-cta{flex:1}
+.tt-actions .dana-later{flex:0 0 auto;padding:0 18px}
+/* the preview pin: a fake today must never pass unnoticed */
+.preview-pill{all:unset;box-sizing:border-box;display:flex;align-items:center;justify-content:center;gap:8px;margin:0 0 12px;min-height:34px;padding:0 14px;border-radius:999px;background:var(--ink);color:var(--surface);font-size:.8125rem;font-weight:600;letter-spacing:.02em;cursor:pointer}
+.preview-pill b{font-weight:400;opacity:.8}
+/* the routine vrata of the day, one line under the pañcāṅga rows */
+.rhb-vrata{display:flex;align-items:center;gap:10px;margin:10px 0 2px;padding:10px 12px;border-radius:12px;background:var(--surface-2);color:var(--ink-soft);font-size:.875rem;line-height:1.4;text-wrap:pretty}
+.rhb-vrata b{color:var(--ink);font-weight:500}
 .rhb-row-btn{all:unset;box-sizing:border-box;display:flex;align-items:center;justify-content:space-between;gap:18px;width:100%;cursor:pointer;font:inherit;color:inherit;text-align:left}
 .rhb-muhurta-badge{all:unset;position:absolute;top:16px;right:16px;display:flex;align-items:center;justify-content:center;width:26px;height:26px;border-radius:50%;flex:none;cursor:pointer;box-sizing:border-box}
 .rhb-muhurta-badge.avoid{background:color-mix(in oklab,var(--warn,#b5462a) 16%,transparent);color:var(--warn,#b5462a)}
@@ -1219,14 +1361,18 @@ select.sk-input {
 /* ---------- Deity page as granthasūcī (printed index of texts) ----------
    No cards: genre sections, folio numerals, dotted leaders, the emblem
    receded to a watermark. Fits roughly three times the texts per screen. */
-.deity-index { position: relative; overflow-x: clip; }
-.gs-head { position: relative; padding: 0 6px 0; isolation: isolate; display: flex; flex-direction: column; align-items: center; text-align: center; }
+.deity-index { position: relative; overflow-x: clip; z-index: 0; }
+/* the shelf head reads left, like the index it is: the back arrow keeps the
+   top-left corner and the title starts under it, so nothing has to be
+   centred around a watermark on a narrow screen */
+.gs-head { position: relative; padding: 4px 6px 0; isolation: isolate; display: flex; flex-direction: column; align-items: flex-start; text-align: left; }
+.gs-head > h1, .gs-head > .gs-rom { max-width: 78%; }
 .gs-head > *:not(.gs-wm) { position: relative; z-index: 1; }
-.gs-head-nb { padding-top: 4px; margin-top: 0; }
-.gs-back { position: absolute; top: 6px; left: 8px; z-index: 20; }
+.gs-head-nb { padding-top: 40px; margin-top: 0; }
+.gs-back { position: absolute; top: 2px; left: 0; z-index: 20; }
 .gs-count { font-family: var(--font-body); font-size: 0.8rem; font-weight: 700; color: var(--gold-deep); margin-left: 8px; }
 [data-theme="night"] .gs-count { color: var(--gold); }
-.gs-wm { position: absolute; top: 0; right: -120px; width: 360px; opacity: 0.26; pointer-events: none; user-select: none; z-index: 0; }
+.gs-wm { position: absolute; top: 10px; right: -48px; width: 196px; opacity: 0.16; pointer-events: none; user-select: none; z-index: 0; }
 /* the night plates are white line on black, and at day-strength opacity a
    line drawing inverted like that reads as a photographic negative rather
    than a watermark — so at night the art is held much fainter */
@@ -1236,16 +1382,18 @@ select.sk-input {
    The unified palette declares --accent at the root, so a hue set on the lens
    body alone would inherit gold: the tokens have to be re-derived here, the
    same recipe .deity-view uses. */
-/* the red is fixed, not derived: routed through --deity-chroma the shelf came
-   out at 0.86 of full chroma, which on cream is a warm brown indistinguishable
-   from the app's gold — the reason the change looked like no change at all.
-   --accent-soft is deliberately NOT re-derived: the soft tint is what fills the
-   head plate and the row cards, and a red wash there turns the whole shelf into
-   a warning. Only the things you press take the red. */
-[data-theme="day"] .lens-red{--accent:oklch(0.52 0.13 27);--accent-ink:oklch(0.43 0.12 27)}
-[data-theme="night"] .lens-red{--accent:oklch(0.76 0.1 27);--accent-ink:oklch(0.86 0.07 27)}
+/* the olive is fixed, not derived: routed through --deity-chroma the shelf came
+   out at 0.86 of full chroma, which on cream reads as the app's gold — the
+   reason the change looked like no change at all. --accent-soft is deliberately
+   NOT re-derived: the soft tint fills the head plate and the row cards, and a
+   full wash there flattens the shelf. Only the things you press take the olive. */
+[data-theme="day"] .lens-olive{--accent:oklch(0.50 0.07 118);--accent-ink:oklch(0.42 0.065 118)}
+[data-theme="night"] .lens-olive{--accent:oklch(0.76 0.06 118);--accent-ink:oklch(0.86 0.05 118)}
 /* nomu lens reuses the deity index's watermark treatment on its own list header */
-.lens-pad { position: relative; overflow-x: clip; isolation: isolate; }
+/* z-index: 0 — the pad is its own stacking context and comes after the sticky
+   title/lens bars in the DOM, so without a level of its own it painted over them
+   and the medallion rode up into the pill bar on scroll */
+.lens-pad { position: relative; overflow-x: clip; isolation: isolate; z-index: 0; }
 .lens-pad > *:not(.gs-wm-nomu) { position: relative; z-index: 1; }
 /* the lens plates now sit in the library's own medallion: the deity page puts
    its emblem in a ringed disc, and the same frame turns these line drawings
@@ -1272,13 +1420,20 @@ select.sk-input {
 /* on vratālu, parva-dinālu and pārāyaṇa the plate sits higher and a little
    smaller than on nomulu: those headers have no chip row, so the medallion
    rides up to the band instead of pressing on the first list heading */
-.nomu-lens-head :is(.gs-wm-vrata, .gs-wm-parva, .gs-wm-grantha) { top: -14px; width: 142px; height: 142px; }
-.nomu-lens-head .gs-wm-nomu:not(.gs-wm-vrata):not(.gs-wm-parva):not(.gs-wm-grantha) { top: -12px; width: 142px; height: 142px; }
-.vr-find-side { padding-right: 168px; min-height: 100px; align-items: flex-start; }
+/* the medallion used to overhang the head by 12–14px; once the head pinned under
+   the lens pills the overhang showed through the bar's blur. It now sits flush
+   with the head's top, and the pad's top padding above gives it the same air. */
+.nomu-lens-head :is(.gs-wm-vrata, .gs-wm-parva, .gs-wm-grantha) { top: 0; width: 142px; height: 142px; }
+.nomu-lens-head .gs-wm-nomu:not(.gs-wm-vrata):not(.gs-wm-parva):not(.gs-wm-grantha) { top: 0; width: 142px; height: 142px; }
+/* the right padding is what keeps the field clear of the plate. It is set on the
+   two-class selector below, not here: .vr-find-compact's padding shorthand comes
+   later in this sheet and at equal specificity zeroed it, so the field ran the
+   full width under the medallion and the disc covered the mic. */
+.vr-find-side { min-height: 100px; align-items: flex-start; }
 /* nomulu: the cadence chips fill the space beside the plate, so the header
    does not also need to reserve a plate's worth of empty height under the
    field — two chips to a row, in the app's own pill, tight to the search */
-.nomu-lens-head .vr-find-side { min-height: 0; padding-bottom: 0; }
+.nomu-lens-head .vr-find-side { min-height: 0; padding-bottom: 0; padding-right: 158px; }
 /* the band is as tall as the plate hanging in it, so the field sits in its
    middle rather than at its top with a strip of empty parchment underneath */
 .nomu-lens-head:has(:is(.gs-wm-vrata, .gs-wm-parva, .gs-wm-grantha)) .vr-find-side { min-height: 104px; align-items: center; }
@@ -1287,11 +1442,11 @@ select.sk-input {
 .nomu-lens-head:has(:is(.gs-wm-vrata, .gs-wm-parva, .gs-wm-grantha)) { min-height: 104px; }
 .nomu-cad { display: flex; gap: 6px; margin: 4px 0 8px; max-width: 258px; }
 .nomu-cad .chip { min-height: 32px; padding: 0 10px; font-size: 0.8125rem; justify-content: center; text-align: center; white-space: nowrap; }
-.vr-find-side .search-field { flex: 0 1 auto; width: calc(100% - 150px); max-width: 260px; }
+.nomu-lens-head .vr-find-side .search-field { max-width: 260px; }
 .lens-pad > .nomu-lens-head { position: sticky; top: 94px; z-index: 4; background: var(--bg); margin: 0 calc(-1 * var(--bleed)); padding: 0 var(--bleed); }
-.gs-name { font-size: clamp(40px, 13.3vw, 52px); line-height: 1.15; font-weight: 400; margin-top: 2px; }
+.gs-name { font-size: clamp(32px, 9.4vw, 42px); line-height: 1.15; font-weight: 400; margin-top: 0; }
 .gs-rom { font-family: var(--font-display); font-size: 0.9063rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--ink-soft); margin-top: 2px; }
-.gs-rule { margin: 16px 0 0; border-top: 1px solid color-mix(in oklab, var(--gold) 62%, transparent); position: relative; }
+.gs-rule { align-self: stretch; margin: 14px 0 0; border-top: 1px solid color-mix(in oklab, var(--gold) 62%, transparent); position: relative; }
 .gs-rule::after { content: ""; position: absolute; left: 0; right: 0; top: 2px; border-top: 1px solid color-mix(in oklab, var(--gold) 30%, transparent); }
 
 .formbar-index { top: 70px; margin: 0 -18px; background: var(--bg); border-bottom: none; }
@@ -1460,7 +1615,15 @@ select.sk-input {
 /* by deity — three across on a phone: eight deities then read as one shelf
    taken in at a glance instead of four rows of pairs. The seal is fluid rather
    than a fixed 134px, so it fills whatever column it lands in. */
-.lib-deity-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 10px; padding: 16px 0 8px; }
+.lib-deity-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 10px; padding: 16px 0 8px; touch-action: pan-y; transform-origin: 50% 20%; transition: transform 120ms ease-out; }
+.lib-deity-grid.is-pinching { transition: none; }
+.lib-deity-grid .gtile { transition: padding 180ms ease, font-size 180ms ease; }
+.lib-deity-grid-2 .gtile:not(.gtile-full) .gtile-name { font-size: 1.125rem; }
+.lib-deity-grid-4 { gap: 7px; }
+.lib-deity-grid-4 .gtile:not(.gtile-full) { padding: 6px 3px 8px; gap: 3px; }
+.lib-deity-grid-4 .gtile:not(.gtile-full) .gtile-name { font-size: 0.8125rem; }
+.lib-deity-grid-4 .gtile-full .gtile-name { padding: 14px 4px 6px; font-size: 0.8125rem; }
+.lib-deity-grid-4 .gtile-soon-tag { display: none; }
 /* :not, because the full-picture tile is deliberately padding-free — a
    descendant selector here outranks .gtile-full and would inset the artwork */
 .lib-deity-grid .gtile:not(.gtile-full) { padding: 9px 5px 11px; gap: 5px; }
@@ -1605,7 +1768,7 @@ select.sk-input {
 
 /* ---------- uvāca speaker line + section subtitle ---------- */
 .verse-sec-sub { text-align: center; font-size: 0.7813rem; line-height: 1.45; color: var(--ink-faint); margin: -5px 0 11px; text-wrap: pretty; }
-.verse-speaker { text-align: center; font-size: calc(17px * var(--rd-scale, 1)); line-height: 1.4; color: var(--accent-ink); margin: 0 0 10px; letter-spacing: .01em; }
+.verse-speaker { text-align: center; font-size: calc(17px * var(--rd-scale, 1) * var(--rd-fit, 1)); line-height: 1.4; color: var(--accent-ink); margin: 0 0 10px; letter-spacing: .01em; }
 .verse-speaker::before, .verse-speaker::after { content: "—"; color: var(--ink-faint); opacity: .5; margin: 0 9px; }
 
 /* ---------- preface card, shown ahead of the first verse ---------- */
@@ -1641,12 +1804,12 @@ select.sk-input {
 
 /* ---------- sahasranāma part tabs: story · pūrva · nāmāvali · uttara ---------- */
 .rd-parts { display: flex; gap: 10px; justify-content: center; flex-wrap: wrap; padding: 0 16px; flex: none; position: relative; border-bottom: 1px solid var(--line-2); min-height: 0; }
-.rd-part { display: inline-flex; align-items: center; gap: 6px; height: auto; padding: 7px 14px; border-radius: 999px; font-size: calc(1.0625rem * var(--rd-scale, 1)); font-weight: 600; color: var(--ink-soft); background: var(--surface); border: 1px solid var(--line); box-shadow: none; transition: color var(--fast), border-color var(--fast), background var(--fast); }
+.rd-part { display: inline-flex; align-items: center; gap: 6px; height: auto; padding: 7px 14px; border-radius: 999px; font-size: calc(1.0625rem * var(--rd-scale, 1) * var(--rd-fit, 1)); font-weight: 600; color: var(--ink-soft); background: var(--surface); border: 1px solid var(--line); box-shadow: none; transition: color var(--fast), border-color var(--fast), background var(--fast); }
 .rd-part:hover { color: var(--ink); border-color: color-mix(in oklab, var(--accent) 35%, var(--line)); }
 .rd-part.on { background: color-mix(in oklab, var(--accent) 16%, var(--surface)); border-color: var(--accent); color: var(--ink); box-shadow: none; }
 [data-theme="night"] .rd-part.on { color: var(--ink); }
 .rd-part-seg { display: inline-flex; padding: 3px; gap: 2px; background: var(--surface-2); border: 1px solid var(--line); border-radius: 10px; }
-.rd-seg-opt { border: 0; background: none; padding: 5px 12px; border-radius: 7px; font-size: calc(1.0313rem * var(--rd-scale, 1)); font-weight: 600; color: var(--ink-soft); cursor: pointer; }
+.rd-seg-opt { border: 0; background: none; padding: 5px 12px; border-radius: 7px; font-size: calc(1.0313rem * var(--rd-scale, 1) * var(--rd-fit, 1)); font-weight: 600; color: var(--ink-soft); cursor: pointer; }
 .rd-seg-opt.on { background: var(--surface); color: var(--ink); box-shadow: 0 1px 2px rgba(43,32,23,0.16), 0 0 0 1px var(--line); }
 
 /* ---------- Sādhanā: the unbroken thread ---------- */
@@ -1750,7 +1913,7 @@ select.sk-input {
 .plan-step-kind{font-size: 0.7188rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--ink-faint);margin-bottom:18px}
 .plan-step-kind.learn{color:var(--accent-ink)}
 .plan-verse{font-size: 1.3125rem;line-height:1.85;color:var(--ink);white-space:pre-line;text-wrap:balance}
-.plan-meaning{font-size: 0.9063rem;color:var(--ink-soft);line-height:1.6;margin-top:18px;padding-top:16px;border-top:1px solid var(--line-2);text-wrap:pretty}
+.plan-meaning{font-size: 0.9063rem;color:var(--ink-soft);line-height:1.6;margin-top:18px;padding-top:16px;border-top:1px solid var(--line-2);text-wrap:pretty;text-align:left;width:100%;max-width:440px}
 .plan-meaning.tel{font-family:var(--font-telugu)}
 .plan-next{margin-top:28px;display:inline-flex;align-items:center;gap:8px;background:var(--accent);color:var(--surface);border:0;border-radius:999px;padding:12px 24px;font-family:var(--font-ui);font-size: 0.9688rem;font-weight:600;cursor:pointer;box-shadow:var(--shadow-sm)}
 .plan-next:active{transform:scale(.98)}
@@ -1791,15 +1954,55 @@ select.sk-input {
 
 .view.japa>div[style]{flex-shrink:0}
 .plan-step{padding-bottom:34px}
+/* ---------- the kaṇṭhastha sitting ---------- */
+.ps-steps{display:flex;gap:5px;margin:10px 18px 0;flex-shrink:0}
+.ps-step{flex:1;height:4px;border-radius:99px;background:var(--line-2)}
+.ps-step.done{background:var(--accent)}
+.ps-step.now{background:color-mix(in srgb,var(--accent) 45%,var(--line-2))}
+.ps-phase{max-width:560px;width:100%;margin:22px auto 0;padding:0 22px 34px;display:flex;flex-direction:column;align-items:center;text-align:center;flex-shrink:0}
+.ps-head{width:100%;display:flex;align-items:baseline;justify-content:space-between;gap:12px}
+.ps-head .plan-step-kind{margin-bottom:0}
+.ps-round{font-size:0.8125rem;font-weight:700;color:var(--accent-ink);letter-spacing:.04em;white-space:nowrap}
+.ps-lede{font-size:0.9063rem;color:var(--ink-soft);line-height:1.55;margin:14px 0 0;text-wrap:pretty}
+.ps-verse{font-size:1.3125rem;line-height:1.85;color:var(--ink);text-wrap:balance;margin-top:18px;width:100%;max-width:440px;text-align:left}
+.ps-line{display:flex;flex-wrap:wrap;justify-content:flex-start;gap:0 .32em;border-radius:10px;padding:2px 10px;transition:background .25s,opacity .25s}
+.ps-line.lit{background:color-mix(in srgb,var(--accent) 14%,transparent)}
+.ps-line.dim{opacity:.5}
+.ps-w.veil{color:var(--ink-faint)}
+.ps-w.veil b{font-weight:inherit;color:var(--ink-soft)}
+.ps-w.veil i{font-style:normal;letter-spacing:.06em;opacity:.7}
+/* the veil chooser was drawn as three filling bars, which read as a progress
+   meter running on its own rather than three things you press. It is a
+   segmented control now: one track, the chosen veil filled. */
+.ps-veils{display:flex;gap:3px;margin-top:18px;width:100%;max-width:420px;background:var(--surface-2);border:1px solid var(--line);border-radius:999px;padding:3px}
+.ps-veil-pip{flex:1;background:none;border:0;border-radius:999px;padding:7px 6px;display:flex;align-items:center;justify-content:center;font-family:var(--font-ui);font-size:0.75rem;color:var(--ink-soft);transition:background .18s,color .18s;cursor:pointer;letter-spacing:.02em}
+.ps-veil-pip span{display:none}
+.ps-veil-pip.on{background:var(--accent);color:var(--surface);font-weight:700}
+.ps-pacer{display:flex;align-items:center;justify-content:center;gap:8px;margin-top:22px;flex-wrap:wrap}
+.ps-play{display:inline-flex;align-items:center;gap:8px;background:var(--surface-2);border:1px solid var(--line);border-radius:999px;padding:9px 16px 9px 12px;font-family:var(--font-ui);font-size:0.875rem;font-weight:600;color:var(--ink);cursor:pointer}
+.ps-play.on{background:var(--accent);border-color:var(--accent);color:var(--surface)}
+.ps-chip{display:inline-flex;align-items:center;gap:5px;background:none;border:1px solid var(--line);border-radius:999px;padding:8px 12px;font-family:var(--font-ui);font-size:0.8125rem;font-weight:600;color:var(--ink-soft);cursor:pointer;min-height:38px}
+.ps-scroll{width:100%;margin-top:6px}
+.ps-rv{padding:12px 0;border-bottom:1px solid var(--line-2)}
+.ps-rv:last-child{border-bottom:0}
+.ps-rv-n{font-size:0.7188rem;font-weight:700;letter-spacing:.12em;color:var(--ink-faint)}
+.ps-rv .ps-verse{margin-top:4px;font-size:1.1875rem;line-height:1.8}
+.ps-actions{display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:10px;margin-top:26px}
+.ps-actions .plan-next{margin-top:0}
+.plan-next.soft{background:var(--surface-2);color:var(--ink);border:1px solid var(--line)}
+.ps-again{display:inline-flex;align-items:center;gap:8px;background:none;border:1px solid var(--accent);color:var(--accent-ink);border-radius:999px;padding:11px 20px;font-family:var(--font-ui);font-size:0.9375rem;font-weight:600;cursor:pointer}
+.ps-again:active{transform:scale(.98)}
+.ps-phase .japa-hint{margin-top:14px;font-size:0.875rem}
+.ps-phase .plan-meaning{margin-top:14px}
 .japa-actions{margin-bottom:24px}
 
 /* ---------- Saṅkalpa vows ---------- */
 .vows{background:var(--surface);border:1px solid var(--line);border-radius:20px;padding:16px 17px 15px;box-shadow:var(--shadow-sm);margin-bottom:16px}
-.vows-head{display:flex;align-items:flex-start;justify-content:space-between;gap:12px}
-.vows-title{font-size: 1.3125rem;line-height:1.2;color:var(--ink);margin-top:2px}
+.vows-head{display:flex;align-items:center;justify-content:space-between;gap:12px;min-height:34px}
+.vows-title{font-size: 1.3125rem;line-height:1.15;color:var(--ink);margin:0;font-weight:inherit}
 .vows-add{border:1px solid var(--line);background:var(--surface-2);color:var(--accent-ink);border-radius:999px;padding:7px 14px;font-family:var(--font-ui);font-size: 0.8438rem;font-weight:600;cursor:pointer;white-space:nowrap;flex-shrink:0}
 .vows-add:active{transform:scale(.97)}
-.vows-empty{font-size: 0.875rem;color:var(--ink-soft);line-height:1.55;margin:12px 0 2px;text-wrap:pretty}
+.vows-empty{font-size: 0.875rem;color:var(--ink-soft);line-height:1.55;margin:10px 0 0;text-wrap:pretty;max-width:44ch}
 .vows-list{display:grid;gap:10px;margin-top:14px}
 .vow{border:1px solid var(--line);border-radius:15px;padding:12px 14px;background:var(--surface-2)}
 .vow.due{background:var(--accent-soft);border-color:transparent}
@@ -1874,8 +2077,8 @@ select.sk-input {
 .lg-fig-n{font-size:1.875rem;line-height:1;color:var(--ink);font-variant-numeric:tabular-nums}
 .lg-fig-r .lg-fig-n{font-size:1.375rem;color:var(--ink-soft)}
 .lg-fig-l{font-size:0.9375rem;color:var(--ink-soft);letter-spacing:0;white-space:nowrap}
-.lg-fig-name{display:flex;flex-direction:column;align-items:flex-end;gap:3px;text-align:right;min-width:0}
-.lg-fig-hint{font-size:0.8125rem;color:var(--ink-faint);letter-spacing:0;text-wrap:pretty}
+.lg-fig-name{display:flex;flex-direction:column;align-items:flex-end;gap:3px;text-align:right;min-width:0;margin-left:auto}
+.lg-fig-hint{font-size:0.8125rem;color:var(--ink-faint);letter-spacing:0;text-transform:none;font-weight:400;text-wrap:pretty}
 .lg-thread{position:relative;margin-top:10px;width:100%}
 .lg-thread svg{position:absolute;inset:0;width:100%;height:100%;overflow:visible}
 .lg-th-base{stroke:color-mix(in oklab, var(--ink) 10%, transparent);stroke-width:1;vector-effect:non-scaling-stroke;stroke-dasharray:2 3}
@@ -1883,6 +2086,7 @@ select.sk-input {
 .lg-beads{position:absolute;inset:0}
 .lg-bead{position:absolute;top:50%;transform:translate(-50%,-50%);border-radius:50%;background:var(--accent);border:0;padding:0;box-sizing:border-box;display:block}
 .lg-bead.miss{background:color-mix(in oklab, var(--ink) 18%, transparent)}
+.lg-bead.future{background:color-mix(in oklab, var(--ink) 9%, transparent);width:3px!important;height:3px!important}
 .lg-bead.half{background:var(--surface-2);border:1.5px solid var(--accent)}
 .lg-bead.w2{background:var(--accent)}
 .lg-bead.w3{background:var(--accent);box-shadow:0 0 0 2px color-mix(in oklab, var(--accent) 30%, transparent)}
@@ -1894,6 +2098,7 @@ select.sk-input {
 .lg-sheet-body{padding-top:4px;padding-bottom:22px}
 .lg-sheet-list{list-style:none;margin:0;padding:0;display:flex;flex-direction:column}
 .lg-peek-none{color:var(--ink-faint);font-size:0.9375rem;padding:6px 2px 10px}
+.lg-sheet-foot{display:flex;align-items:baseline;gap:6px;margin-top:14px;padding:12px 2px 0;border-top:1px solid var(--line)}
 .lg-peek-h{display:flex;align-items:center;gap:10px;padding:12px 2px;border-bottom:1px solid var(--line-2);font-size:1.125rem;color:var(--ink-faint)}
 .lg-peek-h:last-child{border-bottom:0}
 .lg-peek-h.on{color:var(--ink)}
@@ -1905,6 +2110,99 @@ select.sk-input {
 .lg-streak-n{font-size:1.875rem;line-height:1;color:var(--ink)}
 .lg-streak-l{font-size:0.9375rem;color:var(--ink-soft);margin-top:2px}
 .lg-streak-span{margin-left:auto;font-size:0.875rem;color:var(--ink-faint);letter-spacing:.02em}
+.lg-streak-r{margin-left:auto;text-align:right}
+.lg-head{display:flex;align-items:baseline;gap:10px;flex-wrap:wrap;margin:2px 0 8px}
+.lg-head-n{font-size:2.625rem;line-height:1;color:var(--ink);font-variant-numeric:tabular-nums}
+.lg-head-n .lg-of{font-size:1.375rem}
+.lg-head-l{font-size:1rem;color:var(--ink-soft)}
+.lg-streak-line{display:flex;align-items:center;gap:8px;margin:14px 0 10px;padding-top:12px;border-top:1px solid var(--line)}
+.lg-streak-line .lg-streak-n{font-size:1.375rem}
+.lg-streak-line .lg-streak-l{margin-top:0;font-size:1rem}
+.lg-bars-big .lg-bar-track{height:46px;border-radius:5px}
+.lg-bars-big{gap:5px;margin-top:4px}
+.lg-nav{display:flex;align-items:center;gap:6px;margin:0 0 10px}
+.lg-nav-b{width:38px;height:38px;display:grid;place-items:center;border-radius:999px;border:1px solid var(--line);background:var(--surface);color:var(--ink-soft);cursor:pointer}
+.lg-nav-b:disabled{opacity:.35;cursor:default}
+.lg-nav-t{flex:1;text-align:center;font-size:1.125rem;color:var(--ink)}
+.lg-detail{margin-top:16px}
+.lg-sect{margin-top:14px}
+.lg-sect-h{color:var(--ink-faint);margin-bottom:4px}
+.lg-list{list-style:none;margin:0;padding:0}
+.lg-li{display:flex;align-items:baseline;justify-content:space-between;gap:12px;padding:10px 0;border-bottom:1px solid var(--line-2)}
+.lg-li:last-child{border-bottom:0}
+.lg-li.tap{cursor:pointer}
+.lg-li-n{font-size:1.0625rem;color:var(--ink);min-width:0}
+.lg-li-x{flex:none;font-size:0.9375rem;color:var(--ink-soft);font-variant-numeric:tabular-nums}
+.lg-more{margin-top:8px;padding:8px 14px;border-radius:999px;border:1px solid var(--line);background:var(--surface);font-family:var(--font-ui);font-size:0.9375rem;color:var(--ink-soft);cursor:pointer}
+.lg-empty{margin-top:16px;padding:14px 0 4px;border-top:1px solid var(--line);font-size:1rem;color:var(--ink-faint);text-wrap:pretty}
+.lg-streak-r .lg-streak-n{font-variant-numeric:tabular-nums}
+.lg-of{font-size:1rem;color:var(--ink-faint);margin-left:1px}
+.lg-seg{display:flex;gap:2px;padding:3px;margin:0 0 12px;border-radius:10px;background:var(--surface);border:1px solid var(--line)}
+.lg-seg-b{flex:1;min-width:0;height:34px;border:0;background:none;border-radius:7px;font-family:inherit;font-size:0.9063rem;font-weight:600;color:var(--ink-soft);cursor:pointer}
+.lg-seg-b.on{background:var(--accent-soft);color:var(--accent-ink);box-shadow:0 0 0 1px color-mix(in oklab, var(--accent) 35%, transparent)}
+.lg-prog{height:4px;border-radius:2px;background:color-mix(in oklab, var(--ink) 10%, transparent);margin:2px 0 12px;overflow:hidden}
+.lg-prog>span{display:block;height:100%;border-radius:2px;background:var(--accent);transition:width var(--fast) var(--ease)}
+.lg-row-bar{display:block;height:3px;border-radius:2px;background:color-mix(in oklab, var(--ink) 8%, transparent);margin-top:7px;overflow:hidden}
+.lg-row-bar>span{display:block;height:100%;border-radius:2px;background:var(--accent);transition:width var(--fast) var(--ease)}
+.lg-row-n b{font-weight:400;font-size:1.125rem;color:var(--ink)}
+.lg-row-delta{display:block;margin-top:6px;font-size:0.8125rem;color:var(--ink-faint);font-variant-numeric:tabular-nums}
+.lg-row-delta.up{color:var(--accent-ink)}
+.lg-bars{display:grid;grid-template-columns:repeat(12,1fr);gap:4px;margin-top:6px;align-items:end}
+.lg-bar{display:flex;flex-direction:column;align-items:center;gap:3px;min-width:0}
+.lg-bar-track{display:block;width:100%;height:26px;border-radius:3px;background:color-mix(in oklab, var(--ink) 7%, transparent);position:relative;overflow:hidden}
+.lg-bar-fill{position:absolute;left:0;right:0;bottom:0;background:var(--accent);border-radius:3px 3px 0 0}
+.lg-bar.future .lg-bar-track{background:color-mix(in oklab, var(--ink) 4%, transparent)}
+.lg-bar.now .lg-bar-track{box-shadow:inset 0 0 0 1px color-mix(in oklab, var(--accent) 45%, transparent)}
+.lg-bar-l{font-size:0.8438rem;line-height:1.25;color:var(--ink-faint)}
+/* the week: one cell a day */
+.lg-cells{display:grid;grid-template-columns:repeat(7,1fr);gap:4px;margin-top:8px}
+.lg-cell{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2px;min-height:62px;border-radius:12px;background:color-mix(in oklab, var(--ink) 6%, transparent);box-sizing:border-box}
+.lg-cell[data-t="1"]{background:color-mix(in oklab, var(--accent) 20%, transparent)}
+.lg-cell[data-t="2"]{background:color-mix(in oklab, var(--accent) 42%, transparent)}
+.lg-cell[data-t="3"]{background:color-mix(in oklab, var(--accent) 68%, transparent)}
+.lg-cell[data-t="4"]{background:var(--accent)}
+.lg-cell[data-t="3"] .lg-cell-d,.lg-cell[data-t="4"] .lg-cell-d,.lg-cell[data-t="3"] .lg-cell-l,.lg-cell[data-t="4"] .lg-cell-l{color:#fff}
+[data-theme="night"] .lg-cell[data-t="3"] .lg-cell-d,[data-theme="night"] .lg-cell[data-t="4"] .lg-cell-d,[data-theme="night"] .lg-cell[data-t="3"] .lg-cell-l,[data-theme="night"] .lg-cell[data-t="4"] .lg-cell-l{color:#1b150d}
+.lg-cell.future{background:color-mix(in oklab, var(--ink) 3%, transparent)}
+.lg-cell.today{box-shadow:inset 0 0 0 1.5px var(--accent)}
+.lg-cell-l{font-size:0.75rem;letter-spacing:.04em;text-transform:uppercase;color:var(--ink-faint);line-height:1}
+.lg-cell-d{font-size:1.0625rem;font-variant-numeric:tabular-nums;color:var(--ink);line-height:1}
+/* the month: the whole month as a heat calendar */
+.lg-heat{margin:2px 0 14px}
+.lg-heat-wd,.lg-heat-grid{display:grid;grid-template-columns:repeat(7,1fr);gap:3px}
+.lg-heat-wd{margin-bottom:4px}
+.lg-heat-wd span{text-align:center;font-size:0.75rem;letter-spacing:.05em;text-transform:uppercase;color:var(--ink-faint)}
+.lg-hc{aspect-ratio:1;display:grid;place-items:center;border-radius:9px;font-size:0.9375rem;font-variant-numeric:tabular-nums;color:var(--ink-soft);background:color-mix(in oklab, var(--ink) 6%, transparent)}
+.lg-hc.pad{background:none}
+/* a day, a week-cell and a month-bar are all pressable now: the record for
+   that stretch opens as a sheet. Buttons need the span's own look back. */
+button.lg-hc,button.lg-cell,button.lg-bar{border:0;font:inherit;padding:0;cursor:pointer;-webkit-tap-highlight-color:transparent;color:inherit}
+button.lg-bar{background:none}
+.lg-hc.tap:active,.lg-cell.tap:active{transform:scale(.94)}
+.lg-hc.tap,.lg-cell.tap{transition:transform .12s var(--ease-out)}
+.lg-hc.sel{box-shadow:inset 0 0 0 1.5px var(--ink),0 0 0 1px var(--surface-2)}
+.lg-cell.sel{box-shadow:inset 0 0 0 1.5px var(--ink)}
+.lg-bar.tap .lg-bar-track{transition:box-shadow .12s}
+.lg-bar.sel .lg-bar-track{box-shadow:inset 0 0 0 1.5px var(--ink)}
+.lg-bar.sel .lg-bar-l{color:var(--ink)}
+.lg-tap-hint{margin:8px 2px 2px;font-size:0.8125rem;color:var(--ink-faint);text-wrap:pretty}
+.lg-peek-figs{display:flex;flex-wrap:wrap;gap:8px;padding:8px 0 4px}
+.lg-peek-fig{display:inline-flex;align-items:center;gap:6px;padding:6px 11px;border-radius:999px;background:var(--accent-soft);color:var(--accent-ink);font-size:0.8125rem}
+.lg-peek-fig b{font-size:1rem;font-variant-numeric:tabular-nums}
+.lg-peek-fig span{color:var(--ink-soft)}
+.lg-hc.future{background:color-mix(in oklab, var(--ink) 3%, transparent);color:var(--ink-faint)}
+.lg-hc[data-t="1"]{background:color-mix(in oklab, var(--accent) 18%, transparent)}
+.lg-hc[data-t="2"]{background:color-mix(in oklab, var(--accent) 38%, transparent)}
+.lg-hc[data-t="3"]{background:color-mix(in oklab, var(--accent) 62%, transparent);color:#fff}
+.lg-hc[data-t="4"]{background:var(--accent);color:#fff}
+[data-theme="night"] .lg-hc[data-t="3"],[data-theme="night"] .lg-hc[data-t="4"]{color:#1b150d}
+.lg-hc.today{box-shadow:inset 0 0 0 1.5px var(--accent),0 0 0 1px var(--surface-2)}
+/* the month, per practice: a bar a calendar week */
+.lg-wbars{display:grid;grid-auto-flow:column;grid-auto-columns:1fr;gap:6px;margin-top:8px;align-items:end}
+.lg-wbar{display:flex;flex-direction:column;align-items:center;gap:3px;min-width:0}
+.lg-wbar .lg-bar-track{display:block;width:100%;height:24px;border-radius:4px;background:color-mix(in oklab, var(--ink) 7%, transparent);position:relative;overflow:hidden}
+.lg-wbar.future .lg-bar-track{background:color-mix(in oklab, var(--ink) 3%, transparent)}
+.lg-bar.now .lg-bar-l{color:var(--accent-ink);font-weight:600}
 .lg-rows{display:grid;gap:6px}
 .lg-row{display:block;width:100%;text-align:left;padding:8px 10px 6px;border-radius:10px;border:1px solid var(--line);background:var(--surface);cursor:pointer;font-family:var(--font-ui)}
 .lg-row:active{transform:scale(.99)}
@@ -1914,7 +2212,12 @@ select.sk-input {
 .lg-row-label{display:inline-flex;align-items:center;gap:6px;font-size:1rem;font-weight:600;color:var(--ink)}
 .lg-row-label svg{opacity:.75}
 .lg-row-n{font-size:0.9375rem;color:var(--ink-soft);font-variant-numeric:tabular-nums;white-space:nowrap}
+.lg-row-flat .lg-row-n{font-size:1rem}
 .lg-row-n i{font-style:normal;color:var(--ink-faint)}
+.lg-row-flat{border:0;background:none;padding:10px 0;border-bottom:1px solid var(--line-2);border-radius:0;cursor:default}
+.lg-row-flat:last-child{border-bottom:0}
+.lg-row-flat .lg-row-bar{height:6px;border-radius:3px;margin-top:9px}
+.lg-row-flat .lg-row-label{font-size:1.0625rem}
 .nt-track .lg-thread{margin-top:6px}
 [data-ui-lang="telugu"] :is(.lg-row,.lg-row-label){font-family:var(--font-telugu)}
 .stuti-toast{position:fixed;left:50%;bottom:calc(84px + env(safe-area-inset-bottom));transform:translate(-50%,12px);z-index:95;padding:10px 16px;border-radius:999px;background:var(--ink);color:var(--surface);font-family:var(--font-ui);font-size:0.875rem;font-weight:600;box-shadow:var(--shadow);opacity:0;pointer-events:none;transition:opacity .2s,transform .2s;white-space:nowrap}
@@ -1930,6 +2233,40 @@ select.sk-input {
 .vow-opt{border:1px solid var(--line);background:var(--surface);color:var(--ink-soft);border-radius:999px;padding:8px 14px;font-family:var(--font-ui);font-size: 0.9063rem;font-weight:600;cursor:pointer}
 .vow-opt.on{background:var(--accent);border-color:var(--accent);color:var(--surface)}
 .vow-weekdays{margin-top:8px}
+/* the "when" section is grouped: a quiet sub-heading over each run of chips */
+.vow-sub{font-size:.8125rem;color:var(--ink-faint);margin:6px 0 7px}
+.vow-sub+.vow-opts+.vow-sub{margin-top:14px}
+/* the builder is read as steps — each question in its own card, and any
+   follow-up picker (tithi, weekday, dates) inset inside the card that asked */
+.vow-step{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:14px 16px 16px;margin-top:12px}
+.vow-step .vow-label{margin:18px 0 10px}
+.vow-step>.vow-label:first-child,.vow-step>:first-child>.vow-label:first-child{margin-top:0}
+.vow-step .vow-sub{margin:14px 0 8px}
+.vow-step>.vow-label+.vow-sub{margin-top:0}
+.vow-step .vow-opts+.vow-opts{margin-top:8px}
+.vow-step .vow-opt{background:var(--surface-2)}
+.vow-step .vow-opt.on{background:var(--accent)}
+.vow-nest{margin-top:14px;padding:12px 12px 14px;border-radius:12px;background:var(--bg);border:1px solid var(--line-2)}
+.vow-nest.vow-weekdays{margin-top:14px}
+.vow-nest.vow-range{margin-top:14px}
+/* the two fortnights, one under the other: a heading row, then the fifteen
+   tithis in a grid so daśamī sits under pañcamī and the eye can count */
+.vow-tithis{display:flex;flex-direction:column;gap:16px}
+.vow-paksha-grp{display:flex;flex-direction:column;gap:8px}
+.vow-paksha{display:flex;align-items:center;gap:10px;font-size:.75rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-faint)}
+.vow-paksha::after{content:"";flex:1;height:1px;background:var(--line)}
+.vow-tithi-grid{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:6px}
+.vow-tithi-grid .vow-opt{padding:7px 4px;text-align:center;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;min-height:40px}
+@media (max-width:420px){.vow-tithi-grid{grid-template-columns:repeat(3,minmax(0,1fr))}}
+.vow-opt-sm{padding:6px 11px;font-size:.8438rem}
+.vow-range{display:flex;gap:10px;margin-top:10px}
+.vow-date{flex:1;display:flex;flex-direction:column;gap:5px;font-size:.75rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-faint)}
+.vow-date input{accent-color:var(--accent);width:100%;font-family:var(--font-ui);font-size:1rem;color:var(--ink);background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:9px 12px;min-height:44px;color-scheme:light}
+[data-theme="night"] .vow-date input{color-scheme:dark}
+.vow-num{width:8.5em;min-height:38px;font-family:var(--font-ui);font-size:.9063rem;font-weight:600;color:var(--ink);background:var(--surface);border:1px solid var(--line);border-radius:999px;padding:6px 14px;appearance:textfield;-moz-appearance:textfield}
+.vow-num::-webkit-inner-spin-button,.vow-num::-webkit-outer-spin-button{-webkit-appearance:none;margin:0}
+.vow-num::placeholder{color:var(--ink-faint);font-weight:500}
+.vow-num:focus{outline:none;border-color:var(--accent)}
 .vow-preview{margin-top:26px;padding-top:18px;border-top:1px solid var(--line-2)}
 .vow-commit{width:100%;margin-top:26px;display:inline-flex;align-items:center;justify-content:center;gap:9px;background:var(--accent);color:var(--surface);border:0;border-radius:999px;padding:14px 22px;font-family:var(--font-ui);font-size: 1rem;font-weight:600;cursor:pointer;box-shadow:var(--shadow-sm)}
 .vow-commit[disabled]{opacity:.45;pointer-events:none}
@@ -2392,7 +2729,8 @@ input:is([type="date"],[type="time"],[type="month"],[type="datetime-local"]) { a
 .tb-card .tb-row:first-of-type{border-top:none}
 .tb-row:disabled{opacity:1}
 .tb-row:not(:disabled):active{transform:scale(.995)}
-.tb-row-body{display:flex;flex-direction:column;gap:2px;min-width:0}
+.tb-row-body{display:flex;flex-direction:column;gap:2px;min-width:0;flex:1}
+.tb-row-ico{flex:none;display:grid;place-items:center;width:34px;height:34px;border-radius:10px;background:var(--accent-soft);color:var(--accent-ink)}
 .tb-row-name{font-size: 1rem;line-height:1.25;text-wrap:pretty}
 .tb-row-note{font-size: 0.7813rem;color:var(--ink-faint);font-variant-numeric:tabular-nums}
 .tb-row .icon{color:var(--ink-faint);flex:none}
@@ -2453,6 +2791,9 @@ input:is([type="date"],[type="time"],[type="month"],[type="datetime-local"]) { a
 .vr-find-x{width:34px;height:34px;min-height:0;flex:none;color:var(--ink-faint)}
 .vr-find-compact{display:flex;align-items:center;gap:8px;padding:4px 0 10px}
 .vr-find-compact .search-field{flex:1;min-width:0}
+/* the shelf's own field: it sits between the form tabs and the first genre
+   heading, so it carries the index's side padding rather than the lens's */
+.gs-find{padding:6px 6px 4px}
 .search-field-sm{min-height:38px;padding:0 6px 0 13px}
 .vr-q-btn{flex:none;width:38px;height:38px;border-radius:999px;border:1.5px solid var(--line);background:var(--surface);color:var(--ink-soft);font-size:0.9375rem;font-weight:700;display:flex;align-items:center;justify-content:center;transition:border-color var(--fast),color var(--fast),background var(--fast)}
 .vr-q-btn:hover{border-color:var(--line-2);background:var(--surface-2)}
@@ -2849,6 +3190,15 @@ button.set-row:active{transform:scale(.99)}
 .sy-row.now .sy-row-k{color:var(--gold-deep)}
 .sy-row.now .sy-row-v{font-weight:600}
 
+/* captioned bands in the reminder sheet — one band per source of a cue */
+.rm-group{margin-top:22px;padding-top:18px;border-top:1px solid var(--line)}
+.rm-group.first{margin-top:0;padding-top:0;border-top:0}
+.rm-group-note{margin:-2px 0 10px;font-size:0.8125rem;line-height:1.5;color:var(--ink-soft);text-wrap:pretty}
+.rm-group>.rm-toggle+.rm-fields{margin-top:10px}
+.rm-sheet .rm-group-note{font-size:0.9375rem}
+.rm-sheet .rm-group{margin-top:28px;padding-top:24px}
+.rm-sheet .rm-group.first{margin-top:0;padding-top:0}
+
 /* the junctures as switches in the reminder sheet */
 .rm-sy-sect{margin-top:22px;padding-top:18px;border-top:1px solid var(--line)}
 .rm-sy-note{margin:0 0 10px;font-size: 0.8125rem;line-height:1.55;color:var(--ink-soft);text-wrap:pretty}
@@ -2945,12 +3295,19 @@ button.set-row:active{transform:scale(.99)}
 .moonp circle:first-of-type{transition:filter var(--slow,.4s)}
 @media (prefers-reduced-motion:no-preference){
 .moonp{animation:moonBreathe 9s ease-in-out infinite}
-@keyframes moonBreathe{0%,100%{filter:drop-shadow(0 0 4px color-mix(in oklab,var(--moon-lit) 22%,transparent))}50%{filter:drop-shadow(0 0 10px color-mix(in oklab,var(--moon-lit) 38%,transparent))}}
+/* the glint drifts across the sphere as the halo breathes, so the moon reads as a lit body, not a disc */
+.moonp-glint{animation:moonGlint 9s ease-in-out infinite;transform-box:fill-box;transform-origin:center}
+@keyframes moonGlint{0%,100%{opacity:.6;translate:-5% -3%}50%{opacity:1;translate:5% 3%}}
+.moonp-sweep{animation:moonSweep 9s var(--ease-out) infinite;transform-box:view-box;transform-origin:center}
+@keyframes moonSweep{0%,60%{transform:translateX(-120%);opacity:0}66%{opacity:1}96%,100%{transform:translateX(120%);opacity:0}}
+.moonp circle:first-of-type{filter:none}
+.moonp{filter:drop-shadow(0 2px 3px rgba(40,28,16,.28))}
+@keyframes moonBreathe{0%,100%{filter:drop-shadow(0 2px 3px rgba(40,28,16,.28)) drop-shadow(0 0 4px color-mix(in oklab,var(--moon-lit) 22%,transparent))}50%{filter:drop-shadow(0 2px 3px rgba(40,28,16,.28)) drop-shadow(0 0 10px color-mix(in oklab,var(--moon-lit) 38%,transparent))}}
 }
 
 /* the plate. Read-only, and that is the design: it names the hour and stops.
    Nothing to mark, nothing owed, no reproach for a kāla that has passed. */
-.sky-plate{position:relative;z-index:3;margin:calc(-1 * var(--sky-lap)) 18px -14px;padding:13px 16px 14px;border-radius:18px;background:color-mix(in oklab,var(--surface) 72%,transparent);backdrop-filter:blur(10px) saturate(1.15);-webkit-backdrop-filter:blur(10px) saturate(1.15);border:1px solid color-mix(in oklab,var(--line) 70%,transparent);box-shadow:0 22px 44px -22px rgba(46,32,14,.5);color:var(--ink)}
+.sky-plate{position:relative;z-index:3;margin:calc(-1 * var(--sky-lap)) 18px -14px;padding:13px 16px 14px;border-radius:18px;background:color-mix(in oklab,var(--surface) 90%,transparent);backdrop-filter:blur(10px) saturate(1.15);-webkit-backdrop-filter:blur(10px) saturate(1.15);border:1px solid color-mix(in oklab,var(--line) 70%,transparent);box-shadow:0 22px 44px -22px rgba(46,32,14,.5);color:var(--ink)}
 .sky-plate-cap{font-size: 0.6563rem;letter-spacing:.24em;text-transform:uppercase;font-weight:700;color:var(--accent-ink);display:flex;align-items:center;gap:8px}
 .sky-plate-bell{display:inline-flex;align-items:center;justify-content:center;width:24px;height:24px;border-radius:50%;background:color-mix(in oklab,var(--accent-ink) 20%,var(--surface));border:1px solid color-mix(in oklab,var(--accent-ink) 40%,var(--line));color:var(--accent-ink);flex:none;cursor:pointer;box-shadow:var(--shadow-sm,0 1px 3px rgba(0,0,0,.12));transition:transform var(--fast,120ms) var(--ease,ease)}.sky-plate-bell:active{transform:scale(.9)}
 /* on = the switch is live; off is the quiet outline, so a glance tells which */
@@ -3095,15 +3452,15 @@ button.set-row:active{transform:scale(.99)}
 .verse-n-badge-lead { margin-left: 0; margin-right: 8px; }
 .flow-text { min-width: 0; display: flex; flex-direction: column; gap: 6px; }
 .flow-line .line-deva, .flow-line .line-telugu, .flow-line .line-iast-lead { text-align: left; overflow-wrap: break-word; text-wrap: pretty; }
-.flow-line .line-deva { font-size: calc(38px * var(--rd-scale, 1)); line-height: 1.58; }
-.flow-line .line-telugu { font-size: calc(27px * var(--rd-scale, 1)); line-height: 1.7; }
-.flow-line .line-iast-lead { font-size: calc(22px * var(--rd-scale, 1)); line-height: 1.5; }
+.flow-line .line-deva { font-size: calc(38px * var(--rd-scale, 1) * var(--rd-fit, 1)); line-height: 1.58; }
+.flow-line .line-telugu { font-size: calc(27px * var(--rd-scale, 1) * var(--rd-fit, 1)); line-height: 1.7; }
+.flow-line .line-iast-lead { font-size: calc(22px * var(--rd-scale, 1) * var(--rd-fit, 1)); line-height: 1.5; }
 .flow-line .line-iast { text-align: left; overflow-wrap: break-word; text-wrap: pretty; }
 .flow-v .verse-sec { text-align: left; margin: 4px 0 10px; }
 .flow-v .verse-sec-sub { text-align: left; }
 .flow-v .verse-speaker { text-align: left; margin-bottom: 6px; }
 
-.flow-mean { margin: 0; color: var(--ink-soft); font-size: calc(17px * var(--rd-scale, 1)); line-height: 1.55; text-wrap: pretty; border-left: 2px solid var(--line); padding-left: 12px; }
+.flow-mean { margin: 0; color: var(--ink-soft); font-size: calc(17px * var(--rd-scale, 1) * var(--rd-fit, 1)); line-height: 1.55; text-wrap: pretty; border-left: 2px solid var(--line); padding-left: 12px; }
 .flow-tail { text-align: center; color: var(--ink-faint); font-size: 0.8125rem; padding: 18px 0 4px; }
 /* the reciter lives in the full text too: the lit line word by word, the rest of the page standing back while it plays */
 .flow .flow-v { transition: background var(--fast), opacity 200ms var(--ease); }
@@ -3117,7 +3474,7 @@ button.set-row:active{transform:scale(.99)}
 
 /* the verse-by-verse / full-text switch, first in the layers row */
 .rd-view { display: flex; gap: 3px; background: var(--surface-2); border: 1px solid var(--line); border-radius: 999px; padding: 3px; }
-.rd-view-btn { display: inline-flex; align-items: center; gap: 5px; height: 32px; padding: 0 11px; border-radius: 999px; font-weight: 600; font-size: calc(0.8438rem * var(--rd-scale, 1)); color: var(--ink-soft); white-space: nowrap; transition: background var(--fast), color var(--fast); }
+.rd-view-btn { display: inline-flex; align-items: center; gap: 5px; height: 32px; padding: 0 11px; border-radius: 999px; font-weight: 600; font-size: calc(0.8438rem * var(--rd-scale, 1) * var(--rd-fit, 1)); color: var(--ink-soft); white-space: nowrap; transition: background var(--fast), color var(--fast); }
 .rd-view-btn.on { background: var(--accent); color: #fff; box-shadow: var(--shadow-sm); }
 
 /* ---------- the reader's four lines ----------
@@ -3166,12 +3523,12 @@ button.set-row:active{transform:scale(.99)}
 /* line three — how it reads. Three controls, so the row can be centred and
    never needs to scroll. */
 .reader-layers.tight { justify-content: flex-start; padding: 8px 12px 10px; gap: 5px; background: var(--bg-warm); border-bottom: 1px solid var(--line-2); }
-.reader-layers.tight .chip { min-height: 38px; padding: 0 12px; font-size: calc(1.125rem * var(--rd-scale, 1)); gap: 5px; }
+.reader-layers.tight .chip { min-height: 38px; padding: 0 12px; font-size: calc(1.125rem * var(--rd-scale, 1) * var(--rd-fit, 1)); gap: 5px; }
 .reader-layers.tight .rd-view { padding: 2px; gap: 2px; }
 .rd-story-end { margin-left: auto; }
 /* the collapsed half is a glyph alone, so nothing but a floor keeps it a
    fingertip wide — its row has ~180px spare */
-.reader-layers.tight .rd-view-btn { height: 32px; min-width: 44px; padding: 0 10px; font-size: calc(1.125rem * var(--rd-scale, 1)); gap: 5px; justify-content: center; }
+.reader-layers.tight .rd-view-btn { height: 32px; min-width: 44px; padding: 0 10px; font-size: calc(1.125rem * var(--rd-scale, 1) * var(--rd-fit, 1)); gap: 5px; justify-content: center; }
 /* Both halves say their name. Hiding the unchosen one saved 39px of a row with
    144px to spare, and bought a wordless control on a header where three other
    glyphs are also wordless — the book already meant Learn one row up and कथा one
@@ -3181,7 +3538,7 @@ button.set-row:active{transform:scale(.99)}
 /* line four — where you are. Tighter pills; the long pīṭhikā names are already
    shortened in the data, so 12.5px holds them without wrapping. */
 .rd-parts { padding: 4px 14px 5px; gap: 8px; }
-.rd-part { height: auto; min-width: 0; padding: 6px 12px; font-size: calc(0.8125rem * var(--rd-scale, 1)); gap: 5px; justify-content: center; }
+.rd-part { height: auto; min-width: 0; padding: 6px 12px; font-size: calc(0.8125rem * var(--rd-scale, 1) * var(--rd-fit, 1)); gap: 5px; justify-content: center; }
 .rd-part svg { width: 15px; height: 15px; }
 
 /* The four lines are drawn tight; the hands using them are not. Each row is a
@@ -3437,3 +3794,101 @@ button.set-row:active{transform:scale(.99)}
 .cal-sr-date { font-weight: 600; font-size: 0.9688rem; }
 .cal-sr-tithi { color: var(--ink-soft); font-size: 0.9063rem; }
 .cal-sr-away { flex: none; color: var(--ink-faint); font-size: 0.8125rem; }
+
+/* ---------- the beta latch ---------- */
+.gate-wrap { position: absolute; inset: 0; z-index: 95; background: var(--bg); display: flex; align-items: center; justify-content: center; padding: 24px; animation: obIn var(--med) var(--ease); }
+.gate-card { width: 100%; max-width: 380px; display: flex; flex-direction: column; gap: 14px; }
+.gate-brand { display: flex; align-items: center; gap: 10px; color: var(--accent-ink); font-size: 1.1875rem; margin-bottom: 10px; }
+.gate-title { margin: 0; font-size: 1.75rem; line-height: 1.25; color: var(--ink); text-wrap: pretty; }
+.gate-lede { margin: 0; font-size: 0.9375rem; line-height: 1.6; color: var(--ink-soft); text-wrap: pretty; }
+.gate-form { display: flex; flex-direction: column; gap: 10px; margin-top: 8px; }
+.gate-input { min-height: 52px; padding: 0 16px; border-radius: var(--r-md); border: 1.5px solid var(--line); background: var(--surface); color: var(--ink); font-family: var(--font-ui); font-size: 1.125rem; letter-spacing: .04em; }
+.gate-input:focus { outline: none; border-color: var(--accent); }
+.gate-input.gate-shake { animation: gateShake .32s var(--ease); }
+@keyframes gateShake { 0%,100% { transform: translateX(0) } 25% { transform: translateX(-6px) } 75% { transform: translateX(6px) } }
+.gate-go { display: inline-flex; align-items: center; justify-content: center; gap: 8px; min-height: 50px; border-radius: 999px; background: var(--accent); color: #fff; font-size: 0.9688rem; font-weight: 600; }
+[data-theme="night"] .gate-go { color: #1b150d; }
+.gate-go:disabled { opacity: .45; }
+.gate-note { margin: 0; min-height: 2.4em; font-size: 0.8438rem; line-height: 1.55; color: var(--ink-faint); text-wrap: pretty; }
+.gate-note.is-no { color: var(--accent-ink); }
+.gate-foot { margin-top: 18px; font-size: 0.7188rem; letter-spacing: .06em; color: var(--ink-faint); }
+
+/* ---------- provenance, at the foot of a text ---------- */
+.rd-proof { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; margin: 18px auto 0; max-width: 560px; padding: 10px 4px 0; border-top: 1px solid var(--line-2); font-size: 0.7813rem; line-height: 1.5; color: var(--ink-faint); }
+.rd-proof-mark { flex: none; width: 18px; height: 18px; border-radius: 50%; display: grid; place-items: center; border: 1px solid var(--line); font-size: 0.6875rem; }
+.rd-proof.is-proofed .rd-proof-mark { border-color: transparent; background: var(--accent-soft); color: var(--accent-ink); }
+.rd-proof-text { flex: 1; min-width: 12ch; text-wrap: pretty; }
+.rd-proof-btn { flex: none; min-height: 34px; padding: 0 12px; border-radius: 999px; border: 1px solid var(--line); background: var(--surface); color: var(--ink-soft); font-family: var(--font-ui); font-size: 0.75rem; }
+.rd-proof-btn:active { transform: scale(.97); }
+.rd-proof-flow { padding: 0 20px 28px; }
+
+/* ---------- what the almanac is, and is not ---------- */
+.cal-accuracy { margin: 18px 16px 0; padding-top: 12px; border-top: 1px solid var(--line-2); }
+.cal-accuracy p { margin: 0 0 6px; font-size: 0.75rem; line-height: 1.55; color: var(--ink-faint); text-wrap: pretty; }
+.set-support a { color: var(--accent-ink); text-decoration: none; border-bottom: 1px solid color-mix(in oklab, var(--accent) 40%, transparent); }
+
+/* ---------- Glass: the one material for a picture you can pick up ----------
+   The deity tile set it: a cream ground with a soft bevel falling in from the
+   top and sides, so the picture sits a hair below the edge. Everything that
+   holds an image now shares it — full strength on image tiles (deity, month,
+   season), light on the cards and heroes that carry a seal — and the seal
+   itself becomes a small round pane of the same glass, everywhere it appears.
+   Text-only rows stay flat: a bevel on a list of text is a widget, not a page. */
+:root { --glass-ground: #F7EADC; --glass-ink: 90,64,36; }
+[data-theme="night"] { --glass-ground: #E8DCC8; --glass-ink: 40,28,16; }
+/* the seal: painting or emblem on the glass ground, bevel over it, no drawn ring */
+.seal, [data-seal="ratna"] .seal, [data-seal="ratna"][data-theme="night"] .seal, [data-theme="night"] .seal, .seal--colour, [data-theme="night"] .seal--colour, [data-seal="ratna"] .seal--colour { position: relative; overflow: hidden; background: var(--glass-ground); border: none; box-shadow: inset 0 0 0 1px rgba(var(--glass-ink),0.10), inset 0 3px 5px -3px rgba(var(--glass-ink),0.32), inset 2px 0 4px -3px rgba(var(--glass-ink),0.18), inset -2px 0 4px -3px rgba(var(--glass-ink),0.18), inset 0 -1px 2px -1px rgba(var(--glass-ink),0.10); }
+.seal::after { content: ""; position: absolute; inset: 0; border-radius: 50%; pointer-events: none; z-index: 2; box-shadow: inset 0 0 0 1px rgba(var(--glass-ink),0.10), inset 0 3px 5px -3px rgba(var(--glass-ink),0.32), inset 2px 0 4px -3px rgba(var(--glass-ink),0.18), inset -2px 0 4px -3px rgba(var(--glass-ink),0.18); }
+[data-theme="night"] .seal::after { box-shadow: inset 0 0 0 1px rgba(var(--glass-ink),0.16), inset 0 3px 5px -3px rgba(var(--glass-ink),0.45), inset 2px 0 4px -3px rgba(var(--glass-ink),0.28), inset -2px 0 4px -3px rgba(var(--glass-ink),0.28); }
+/* the lit day drawing on the glass in both themes, as the tile does */
+[data-theme="night"] .seal .seal-emblem--day { display: block; }
+[data-theme="night"] .seal .seal-emblem--night { display: none; }
+.seal-emblem--colour { border-radius: 0; }
+/* the medallion sweeps too: once as its row arrives, and whenever the row it
+   sits in is pressed or hovered */
+.seal::before { content: ""; position: absolute; inset: -20% -40%; z-index: 3; pointer-events: none; background: linear-gradient(112deg, transparent 38%, rgba(255,255,255,0.6) 49%, rgba(255,255,255,0.15) 53%, transparent 62%); transform: translateX(-70%); transition: transform 0ms; animation: sheenOnce 1200ms var(--ease-out) calc(500ms + var(--i, 0) * 120ms) backwards; }
+.seal { --i: 0; }
+:is(button, [role="button"], .hymn-card, .vr-row, .occ-row, .practice-card, .resume-card, .daily-row, .watch-row, .ob-deity, .deity-hero-row, .search-result):is(:hover, :active, .is-tilt, .is-sweep) .seal::before { transform: translateX(70%); transition: transform 1300ms var(--ease-out); }
+@media (prefers-reduced-motion: reduce) { .seal::before { animation: none; } }
+/* the lens medallions (vrata kalaśa, nomu vāyanam, festival hārathi, parāyaṇa
+   grantha) are the same glass: cream ground, bevel, a sweep as the lens opens */
+.gs-wm-nomu, .gs-wm-vrata, .gs-wm-parva, [data-theme="night"] :is(.gs-wm-nomu, .gs-wm-vrata, .gs-wm-parva) { position: absolute; background: var(--glass-ground); border: none; box-shadow: none; }
+:is(.gs-wm-nomu, .gs-wm-vrata, .gs-wm-parva) .emblem-img { position: relative; z-index: 1; }
+:is(.gs-wm-nomu, .gs-wm-vrata, .gs-wm-parva)::after { content: ""; position: absolute; inset: 0; border-radius: 50%; pointer-events: none; z-index: 2; box-shadow: inset 0 0 0 1px rgba(var(--glass-ink),0.10), inset 0 6px 10px -6px rgba(var(--glass-ink),0.30), inset 3px 0 6px -4px rgba(var(--glass-ink),0.18), inset -3px 0 6px -4px rgba(var(--glass-ink),0.18), inset 0 -2px 4px -3px rgba(var(--glass-ink),0.10); }
+[data-theme="night"] :is(.gs-wm-nomu, .gs-wm-vrata, .gs-wm-parva)::after { box-shadow: inset 0 0 0 1px rgba(var(--glass-ink),0.16), inset 0 6px 10px -6px rgba(var(--glass-ink),0.45), inset 3px 0 6px -4px rgba(var(--glass-ink),0.28), inset -3px 0 6px -4px rgba(var(--glass-ink),0.28); }
+:is(.gs-wm-nomu, .gs-wm-vrata, .gs-wm-parva)::before { content: ""; position: absolute; inset: -20% -40%; z-index: 3; pointer-events: none; background: linear-gradient(112deg, transparent 38%, rgba(255,255,255,0.6) 49%, rgba(255,255,255,0.15) 53%, transparent 62%); transform: translateX(-70%); animation: sheenOnce 1400ms var(--ease-out) 600ms backwards; }
+@media (prefers-reduced-motion: reduce) { :is(.gs-wm-nomu, .gs-wm-vrata, .gs-wm-parva)::before { animation: none; } }
+/* image tiles: full bevel */
+.masa-tile, .masa-now, .pcard { --glass-b: 1; }
+.masa-tile::after, .masa-now::after, .pcard::after { content: ""; position: absolute; inset: 0; border-radius: inherit; pointer-events: none; z-index: 4; box-shadow: inset 0 0 0 1px rgba(var(--glass-ink),0.10), inset 0 7px 12px -7px rgba(var(--glass-ink),0.30), inset 3px 0 7px -5px rgba(var(--glass-ink),0.18), inset -3px 0 7px -5px rgba(var(--glass-ink),0.18), inset 0 -2px 4px -3px rgba(var(--glass-ink),0.10); }
+.masa-tile, .masa-now, .pcard { border-color: transparent; }
+/* cards and heroes that carry a seal: a lighter bevel, the same fall of light */
+.practice-card, .resume-card, .coll-card { position: relative; border-color: transparent; }
+.practice-card::after, .resume-card::after, .coll-card::after { content: ""; position: absolute; inset: 0; border-radius: inherit; pointer-events: none; z-index: 4; box-shadow: inset 0 0 0 1px rgba(var(--glass-ink),0.08), inset 0 5px 9px -6px rgba(var(--glass-ink),0.22), inset 2px 0 5px -4px rgba(var(--glass-ink),0.12), inset -2px 0 5px -4px rgba(var(--glass-ink),0.12); }
+[data-theme="night"] .masa-tile::after, [data-theme="night"] .masa-now::after, [data-theme="night"] .pcard::after { box-shadow: inset 0 0 0 1px rgba(255,255,255,0.07), inset 0 7px 12px -7px rgba(0,0,0,0.55), inset 3px 0 7px -5px rgba(0,0,0,0.35), inset -3px 0 7px -5px rgba(0,0,0,0.35); }
+[data-theme="night"] .practice-card::after, [data-theme="night"] .resume-card::after, [data-theme="night"] .coll-card::after { box-shadow: inset 0 0 0 1px rgba(255,255,255,0.06), inset 0 5px 9px -6px rgba(0,0,0,0.45), inset 2px 0 5px -4px rgba(0,0,0,0.25), inset -2px 0 5px -4px rgba(0,0,0,0.25); }
+
+/* ---------- phone edges: one gutter, one safe area ----------
+   The house gutter is 18px, set by .home and every card rail. What must sit on
+   it is the glyph, not the button box — so a bar that touches a screen edge
+   pads to the gutter and its edge icon buttons pull back out by their own
+   internal padding, keeping a thumb-sized box while the mark stays in line.
+   The floating tools gear is app chrome over every screen, so the bars that
+   pass under it reserve its slot rather than letting a screen's own control
+   land beneath it. And a bar at the very top of the frame carries the notch
+   inset itself — .topbar already did; the masthead and the pinned bar did not. */
+.topbar { padding-inline: var(--gut); }
+.app:has(> .app-gearrow) .topbar { padding-right: 56px; }
+.topbar > .icon-btn:first-child { margin-left: -13px; }
+.app:not(:has(> .app-gearrow)) .topbar > .icon-btn:last-child { margin-right: -13px; }
+.reader-topbar > .icon-btn:first-child { margin-left: -9px; }
+.reader-topbar > .icon-btn:last-child { margin-right: -12px; }
+.app-gearrow { top: calc(6px + env(safe-area-inset-top)); }
+.brandbar { padding: calc(14px + env(safe-area-inset-top)) var(--gut) 8px; }
+.brandbar-cog { margin-left: -15px; }
+.rd-toppanel { padding-inline: 6px; }
+.rd-toppanel.is-pinned { margin: 0; padding: calc(8px + env(safe-area-inset-top)) 56px 6px 6px; }
+.app > .rd-toppanel.is-pinned .rd-pin-btn { right: 6px; top: calc(6px + env(safe-area-inset-top)); }
+.rd-toppanel.is-drop { padding-inline: 6px; }
+.rd-toppanel.is-drop .rd-pin-btn { right: 6px; }
+.reciter { padding-inline: var(--gut); }

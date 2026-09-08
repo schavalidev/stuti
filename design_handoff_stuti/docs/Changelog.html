@@ -95,12 +95,20 @@ code { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: .
 
 <section class="release">
   <div class="rail">
-    <div class="ver">0.9.90</div>
-    <div class="date">4 September 2026</div>
+    <div class="ver">0.9.95</div>
+    <div class="date">4 – 8 September 2026</div>
     <div class="rail-note">The prototype, ported — and a first Android build in hand.</div>
   </div>
   <div class="release-body">
-    <h2 class="release-title">Off the seventy-seven script tags, into a real build — and onto a phone</h2>
+
+    <div class="entry">
+      <div class="entry-head"><span class="tag tag-chg">Changed</span><h3>The designer's 0.9.90–0.9.94 lands in the app</h3></div>
+      <p>The designer handed over her whole Claude Design project rather than an export, and the project root turned out to be five versions ahead of the export folder inside it: the export stopped at 0.9.89 while the root carried the beta latch, the provenance footnote, the counting of screens and scripts, the installable manifest and icons, the phone-edge gutter, the searchable deity shelf, the olive nomu lens and the Telugu rewrite. The handoff was assembled from the root's working files, taking every file the app's own page loads and the docs beside them, and the pipeline ran over it. Two new shapes the pipeline had not met: a store and a screen sharing the name stuti-tithis, which the same-name step now finds by looking rather than by list, and a module-local function the prototype then publishes on window, which the transform turned into a self-alias export and the collision step now rewrites. Every seam found its anchor in the new reader. Her changelog is the base of this file again, with the port's own arc kept above it as 0.9.95; her CLAUDE.md typography notes came across too. Three things the port decided for itself. The app's own safe-area padding now uses only Capacitor's variable, since her bars carry the notch inset themselves on the web. The launcher icon and the install manifest take her icons and colours. And the offline worker now registers only on the web: inside the app every file is already on the phone, and its precache was the reason the first launch or two after an update still showed the previous build.</p>
+    </div>
+    <div class="entry">
+      <div class="entry-head"><span class="tag tag-fix">Fixed</span><h3>What a review of the re-port turned up</h3></div>
+      <p>Five readers went over the port with one lens each and two more tried to refute what they found. What survived, and was fixed: the ledger and the Today band subscribed to their stores through window, which the port never publishes, so neither refreshed when a bead was counted or a plan advanced, and had not since the first port; saving a personal tithi called a reminder hook the same way and never armed it; the pipeline read a shared plain function as a global and passed, which would have thrown the moment a plan sitting opened, so an unresolved name now fails the pipeline and a shared function is exported and imported instead; the offline precache had swollen to every image in the folder, and now holds only the shell, everything else caching the first time it is shown; the install manifest and the page head were hand-typed copies that had drifted from hers, and now read her file; the reader's chip row could not scroll to the Record chip in Telugu, and the learn bar's Record toggle showed no state and could not stop what it started; a declined Record left the next plain Follow recording unasked; the beta latch closed the keyboard on every wrong word and, after three, said write to us with nowhere to write; and Follow's Telugu used words her 0.9.94 pass had retired, so its shared words now come from her table and the rest were respelled to her voice. One decision the port made for the founder: a phone that had finished onboarding before the latch existed is let through without being asked, since the founder invited it in person; every new install sees the gate.</p>
+    </div>    <h2 class="release-title">Off the seventy-seven script tags, into a real build — and onto a phone</h2>
     <div class="entry">
       <div class="entry-head"><span class="tag tag-add">Added</span><h3>The Vite + TypeScript port (<code>stuti-app/</code>)</h3></div>
       <p>Every plain <code>.js</code> and <code>.jsx</code> file became an ES module, in the exact load order <code>Stuti.html</code> always used, with <code>window.X</code> globals replaced by real imports — the phase the handoff called the port's foundation. Written as a small pipeline of scripts rather than by hand, because the alternative was retyping 1.7 MB of Sanskrit, Telugu and Hindi text and trusting nothing got mistranscribed along the way; the scripts live in <code>tools/codemod/</code> and rerun cleanly if the prototype's source ever moves again. <code>stuti-boot.js</code> and the CDN copies of React and Babel it fetched at runtime are gone — Vite compiles JSX at build time now, which is one less thing that can fail without wifi in the pūjā room.</p>
@@ -228,6 +236,229 @@ code { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: .
     </div>
   </div>
 </section>
+<section class="release">
+  <div class="rail">
+    <div class="ver">0.9.94</div>
+    <div class="date">8 September 2026</div>
+    <div class="rail-note">A vow is not a warning.</div>
+  </div>
+  <div class="release-body">
+    <h2 class="release-title">Nitya's nomulu shelf is kept in olive</h2>
+    <div class="entry">
+      <div class="entry-head"><span class="tag tag-fix">Changed</span><h3>The notification sheet stopped being a rival set of switches</h3></div>
+      <p>Once the bell arrived on the pañcāṅga card and the sandhyā plate, the sheet was quietly holding a second copy of both — the same two settings reachable from two places with nothing to say they were the same setting, and a wall of undifferentiated toggles in between. The sheet is now banded by where a cue comes from: the daily reading cue, special days, the sandhyā junctures, the vratham list, progress, and the quiet hours that govern all of them. The two bands that mirror a card's bell say so in a line beneath the caption, so a reciter who set it at the card recognises it here instead of wondering which one wins. The “what arrives” preview moved out of the daily cue's own fields, where it had been hiding whenever the daily switch was off — even with three sandhyā cues live — and now closes the sheet as a summary of everything set above it.</p>
+    </div>
+    <div class="entry">
+      <div class="entry-head"><span class="tag tag-fix">Fixed</span><h3>The vāyanam plate was drawn for 24 pixels and shown at 17</h3></div>
+      <p>The nomulu lens's mark composed the plate as a wide shallow ellipse sitting low in its box, with two rim strokes and three small offerings on it. At the 17px the pill actually renders, the plate stood two pixels tall, the rims and the offerings merged into a single brown smudge, and the whole mark hung below the label's baseline. It is redrawn for the size it is seen at: three large separated shapes on the box's own centre — two leaf blades, the plate, and one offering big enough to read as a fruit.</p>
+    </div>
+    <div class="entry">
+      <div class="entry-head"><span class="tag tag-fix">Fixed</span><h3>Every bar now sits on the same gutter, and the notch is nobody's business but the top bar's</h3></div>
+      <p>An audit of every screen at phone width found the app's 18px gutter honoured by content and ignored by chrome. Sub-screen titles and their day tags sat at 12, back arrows at 25, the masthead gear at 23, the reciter bar at 16 — six different edges within a few hundred pixels. Each bar that touches the frame now pads to a single <code>--gut</code> token, and the icon buttons at its ends pull back out by their own inner padding, so the mark lands on the gutter while the tap target still reaches the edge. The floating tools gear was the other half: absolutely placed top-right over every screen, it covered the Practices bar's own right-hand button outright and sat on the calendar's place chip, and it took no notch inset at all — so on a notched phone it lived under the status bar. Bars passing beneath it now reserve its slot, and it, the masthead and the pinned tools bar carry <code>safe-area-inset-top</code> like the top bar always had.</p>
+    </div>
+    <div class="entry">
+      <div class="entry-head"><span class="tag tag-add">Added</span><h3>Each deity's shelf can be searched by name</h3></div>
+      <p>A shelf runs to seventeen texts on Gaṇeśa and more elsewhere, and the only way to a remembered title was to scroll the genres. The index now carries the same field the vratālu and pārāyaṇa lenses use, under the form tabs: it narrows the list by name in Telugu, Devanāgarī, roman or IAST — diacritics folded, so “ganesa” finds gaṇeśa — takes voice, clears itself, and resets when another deity is opened. With nothing matching, the shelf says so rather than emptying silently.</p>
+    </div>
+    <div class="entry">
+      <div class="entry-head"><span class="tag tag-chg">Changed</span><h3>The deity shelf's head reads left, and its tiles are square</h3></div>
+      <p>The granthasūcī opened with a centred title that had to share the top of a narrow screen with a life-size watermark: the name sat under the back arrow, the roman line ran to both edges, and the painting came down over the first two entries. The head is now set left like the index it introduces — the arrow keeps the corner, the title starts below it, and the plate is held smaller and higher so it stays a watermark. The shelf tiles are square rather than 4:5, which is what made the portrait rings read as ovals in the first place.</p>
+    </div>
+    <div class="entry">
+      <div class="entry-head"><span class="tag tag-fix">Fixed</span><h3>The deity portraits were ovals, not circles</h3></div>
+      <p>The Saṅkalanam shelf frames each painting in a ring, and the ring was sized as 85% wide by 85% tall inside a tile that is four wide by five tall — two different numbers of pixels, so every deity sat in an egg. The height is now taken from the width through a 1/1 ratio, and the portrait is a true circle in every tile size.</p>
+    </div>
+    <div class="entry">
+      <div class="entry-head"><span class="tag tag-add">Added</span><h3>Every day and every month in the Ledger opens</h3></div>
+      <p>The week's cells, the month's calendar and the year's twelve bars were a picture you could read but not question — the named record underneath always spoke for the whole span. Each is pressable now: a day opens that day, a month opens that month, and the sheet lists what was recited and how often, what was learnt by heart, which dīkṣās ran, which nomulu were ticked and which vratālu kept, with the day's or month's own tally above it. Tapping a recited title still opens it in the reader.</p>
+    </div>
+    <div class="entry">
+      <div class="entry-head"><span class="tag tag-chg">Changed</span><h3>The Telugu speaks the way a house speaks</h3></div>
+      <p>"Go round a few times — the veil thickens each round" asked the reciter to hold two figures of speech at once, and in Telugu it read stiffer still. It now says what happens: say it a few times, and each time a few words go missing — పదాలు, not మాటలు.</p>
+      <p>The same pass went across the app's own words, in the two places all of them are kept. Passive, written-Telugu constructions gave way to what a person would actually say: కనుగొనబడలేదు became దొరకలేదు, నిరోధించబడ్డాయి became ఆపి ఉన్నాయి, గణించబడతాయి became లెక్కిస్తాం. Bookish nouns went too — పునశ్చరణ is మళ్ళీ చదవడం, పరికరం is ఫోన్, ప్రణాళికలు are ప్లాన్‌లు, గృహపేజీ is మొదటి పేజీ, నేటి కర్తవ్యం is ఈరోజు చేయాల్సినవి — and -వలసినవి endings became -వాల్సినవి throughout. Sixty-odd strings in the app and two on the website. The verses, the kathas and the pañcāṅga's own terms were not touched: those are the corpus, not chrome.</p>
+    </div>
+    <div class="entry">
+      <div class="entry-head"><span class="tag tag-fix">Fixed</span><h3>The veil chooser looked like a progress bar</h3></div>
+      <p>The three veils — full text, first letters, first word — were drawn as three bars that filled, which read as a meter advancing on its own rather than three things you press. They are one segmented track now, the chosen veil filled olive, and nothing about them suggests it moves by itself.</p>
+    </div>
+    <div class="entry">
+      <div class="entry-head"><span class="tag tag-chg">Changed</span><h3>The kaṇṭhastha sitting is olive too</h3></div>
+      <p>The kaṇṭhastha sitting followed: the step bars, the lit line, the veil pips and the "once more" ring were the app's gold, which every screen wears. It takes the same olive, so learning by heart looks like its own work.</p>
+    </div>
+    <div class="entry">
+      <div class="entry-head"><span class="tag tag-chg">Changed</span><h3>The nomu lens takes an olive green</h3></div>
+      <p>The shelf was lit in the banti puvvu's red, and red on a screen of buttons and counts reads as alarm rather than as a flower. It now takes an olive green of its own — deeper and greyer than śarad's moss, so the Learn lens beside it stays distinct — and the pill, the segment switches and the cards beneath all follow the same token, in pigment mode and out of it. The marigold glyph keeps its own bloom.</p>
+    </div>
+  </div>
+</section>
+
+<section class="release">
+  <div class="rail">
+    <div class="ver">0.9.93</div>
+    <div class="date">7 September 2026</div>
+    <div class="rail-note">Four figures said how often; nothing said what.</div>
+  </div>
+  <div class="release-body">
+    <h2 class="release-title">The Ledger names what was done, and lets the reciter step back through the weeks</h2>
+    <div class="entry">
+      <div class="entry-head"><span class="tag tag-add">Added</span><h3>The record, by name</h3></div>
+      <p>Under the figures the span now lists what actually happened: each stotra with the number of days it was recited — Lalitā Sahasranāma, fifteen times — the texts whose kaṇṭhastha plan ran to its end, the dīkṣās whose term closed inside the span with how many days of it were kept, the nomulu ticked or completed, and the vratālu kept with their dates. Every line is read back out of the records already stored; nothing new is written, and tapping a recited title opens it in the reader.</p>
+    </div>
+    <div class="entry">
+      <div class="entry-head"><span class="tag tag-add">Added</span><h3>Today's asks carry their glyph</h3></div>
+      <p>The rows under "today's reminders" were four identical lines of text, so a text to be recited and beads to be told looked alike. Each row now leads with its own mark — the lamp for a stotra or a kaṇṭhastha portion, the mālā for japa — set in a soft accent tile.</p>
+    </div>
+    <div class="entry">
+      <div class="entry-head"><span class="tag tag-chg">Changed</span><h3>The Ledger is kept in indigo</h3></div>
+      <p>The lens wore the bar's gold, which is the colour of everything and so says nothing. It now takes the indigo pigment — the ink a record is kept in — and the segment switch, the bars, the calendar and the day-cells all follow it.</p>
+    </div>
+    <div class="entry">
+      <div class="entry-head"><span class="tag tag-add">Added</span><h3>Earlier weeks, months and years</h3></div>
+      <p>The span switch only ever read the one running now. A titled row above the count steps back and forward — a named week range, a month with its year, the year itself — and the arrow forward stops at today. The streak line shows only on the current span, where it means something.</p>
+    </div>
+  </div>
+</section>
+
+<section class="release">
+  <div class="rail">
+    <div class="ver">0.9.92</div>
+    <div class="date">7 September 2026</div>
+    <div class="rail-note">A fortnight of beads said what was kept, not how the practice was going.</div>
+  </div>
+  <div class="release-body">
+    <h2 class="release-title">The Ledger reads the week, the month and the year</h2>
+    <div class="entry">
+      <div class="entry-head"><span class="tag tag-chg">Changed</span><h3>The Ledger lens gets a span switch</h3></div>
+      <p>The lens showed every practice as the same fourteen beads, and a fortnight is neither a week nor a month — it answered no question the reciter actually asks. A switch at the top now reads the record over the last seven days, the month so far, or the year so far, and remembers the choice.</p>
+    </div>
+    <div class="entry">
+      <div class="entry-head"><span class="tag tag-add">Added</span><h3>One picture, then four plain figures</h3></div>
+      <p>A first pass gave every practice its own chart, and four charts on one screen is a dashboard, not a ledger. The span now draws a single large picture of its days — seven day-cells for the week, a heat calendar for the month, twelve month-bars for the year, each shaded by how much of that day was kept — with the count of days practised above it and the streak beneath. Under that, each practice is one calm line: its figure, and a bar for how much of the span it filled, with the change against the week or month before. The rows are no longer buttons; tapping a figure used to throw the reciter into another lens.</p>
+    </div>
+  </div>
+</section>
+
+<section class="release">
+  <div class="rail">
+    <div class="ver">0.9.91</div>
+    <div class="date">5 September 2026</div>
+    <div class="rail-note">A verse read once is not learnt.</div>
+  </div>
+  <div class="release-body">
+    <h2 class="release-title">The kaṇṭhastha sitting goes round and round</h2>
+    <div class="entry">
+      <div class="entry-head"><span class="tag tag-chg">Changed</span><h3>The deity and month tiles no longer sweep as they arrive</h3></div>
+      <p>Every tile ran a staggered sheen on load, and once the sweep crossed the whole card it read as a shop-window glint rather than a material. The arrival animation is gone; the sheen now moves only under the hand, on hover and on press.</p>
+    </div>
+    <div class="entry">
+      <div class="entry-head"><span class="tag tag-fix">Fixed</span><h3>The month tiles' sheen swept only half the card</h3></div>
+      <p>Two selectors aimed the sweep's gradient and its opening animation at the sheen container instead of the layer inside it, so the container itself slid and the light stopped at the tile's midline. Both now address the layer, and the sweep crosses the whole tile as it does on the deity niches.</p>
+    </div>
+    <div class="entry">
+      <div class="entry-head"><span class="tag tag-chg">Changed</span><h3>The sandhyā plate sits more solidly on the sky</h3></div>
+      <p>At 72% paper the plate let the dawn and dusk washes bleed through under its title, and the timings were reading against a gradient rather than a surface. It now takes 90% of the surface colour; the blur stays, so the sky is still felt at the edges without competing with the hour.</p>
+    </div>
+    <div class="entry">
+      <div class="entry-head"><span class="tag tag-chg">Changed</span><h3>Review first, then the new verse — the way it is done at home</h3></div>
+      <p>The sitting used to be one straight pass: read each new verse once, recall it, glance at yesterday's, done. Nothing in it asked the reciter to go back, and nothing told the truth about whether the verse had stuck. It now opens by reciting what is already learnt — the whole of it while that is twenty-four verses or fewer, then a spaced set of yesterday's portion, a week ago's, and one older chunk — and only then takes up today's. A day counts as done when both halves are.</p>
+    </div>
+    <div class="entry">
+      <div class="entry-head"><span class="tag tag-add">Added</span><h3>Rounds, a line light, and a veil that thickens</h3></div>
+      <p>Each new verse sits under a round counter with "Once more" always to hand. The reader's pacing comes along: a light walks the lines at a chosen speed for a chosen number of repeats, and the reciter follows aloud. Every second round the veil deepens by itself — full text, then the first akṣara of each word, then the first word of each line — and any pip can be tapped to go back. A fourth, blank level was tried and dropped: with no cue at all the page had nothing left to do that the reciter's own closed eyes did not. The verse is finished when the reciter says "I can say it without looking"; the app does not grade, and a slip in review has no consequence beyond the reciter's own once-more. The day's close counts the rounds and offers to sit again.</p>
+    </div>
+    <div class="entry">
+      <div class="entry-head"><span class="tag tag-chg">Changed</span><h3>The sitting moves to its own file</h3></div>
+      <p><code>stuti-plan-sitting.jsx</code> holds PlanDay, the veiled verse and the pacer; <code>stuti-plans.jsx</code> keeps the entry card, the chooser and the finished page. Sixteen new strings in the three scripts.</p>
+    </div>
+    <div class="entry">
+      <div class="entry-head"><span class="tag tag-chg">Changed</span><h3>The deity tile becomes a niche</h3></div>
+      <p>The tile was a card with a coin on it: a round seal, a name under it, and a good deal of surface doing nothing. It is now the painting itself, full-bleed inside a flat frame in the deity's own colour — a picture frame, not a rim with light and shade, so it will take whatever artwork comes next. The tile tilts toward a finger or pointer and the painting slides a little against the frame; a light sweeps the glass as it is touched. The eight rise into place one after another when the shelf opens. A kept deity's frame is a shade brighter with a thin halo. An arched stone niche with a gradient rim and a hairline gold inner frame were each tried on a board of five directions and set aside.</p>
+    </div>
+    <div class="entry">
+      <div class="entry-head"><span class="tag tag-chg">Changed</span><h3>The frame stops wearing the deity's colour</h3></div>
+      <p>Eight frames in eight hues made the shelf a row of coloured boxes before it was a row of paintings; the eye met the frame first and the figure second. Every tile now sits in one plain frame — a deep warm ink by day, a quieter tone of the same ink at night — and the paintings alone carry the colour. A kept deity is still marked, but only by its thin outer halo.</p>
+    </div>
+    <div class="entry">
+      <div class="entry-head"><span class="tag tag-chg">Changed</span><h3>One deity tile across the app</h3></div>
+      <p>The Home browse grid drew the same eight deities as a different object — a small round seal on a plain card with a hymn count. It now uses the same DeityTile as the Library, count and all, so the two shelves are one shelf. The small round seals on rows and cards stay: at thirty to fifty pixels a circle reads as a mark, and the framed painting is a shelf object, not an icon. The seal / full-picture tweak no longer changes the tile's shape. Gaṇeśa is the first to receive a square portrait drawn for the frame — the figure on its own ground, no circle — and the tile crops it by height so nothing of the figure is lost; the other seven wait on their artwork.</p>
+    </div>
+    <div class="entry">
+      <div class="entry-head"><span class="tag tag-chg">Changed</span><h3>Glass becomes the app's one material for a picture</h3></div>
+      <p>The deity tile's frame settled into a bevel — the painting on a cream ground, a soft shadow falling in from the top and sides so the picture sits a hair below the edge, no drawn line. That material now goes everywhere a picture is held. The month tiles, the month card and the pañcāṅga card take it at full strength; the practice, resume and collection cards, which carry a seal, take it lighter. The seal itself becomes a small round pane of the same glass wherever it appears — hymn cards, rows, heroes, the onboarding picker — with the day drawing lit on it in both themes and no ring. Text-only rows, chips, bars and the reader stay flat: a bevel on a list of text is a widget, and the reader is paper.</p>
+    </div>
+    <div class="entry">
+      <div class="entry-head"><span class="tag tag-fix">Fixed</span><h3>The light sweep never showed on a phone</h3></div>
+      <p>The sweep and tilt answered only to a moving pointer, and a finger that taps does not move — so on the device the app is for, the deity tile did nothing but shrink. The light now crosses the glass on the press itself, held long enough to be seen before the page turns; if the finger moves, the tile tilts after it. The month tiles take the same press and sweep. The moon on the home sky and in the tithi sheet is shaded as a sphere — the limb falls away into shadow, a glint rides the upper-left and drifts as the halo breathes — so it reads as a lit body rather than a flat disc, and once each breath a band of light crosses it. The opening sweep on the deity and month shelves runs tile by tile, not as one wave across the screen.</p>
+    </div>
+    <div class="entry">
+      <div class="entry-head"><span class="tag tag-add">Added</span><h3>The deity grid answers a pinch</h3></div>
+      <p>Three across was a fixed choice, and the tiles at that size are small for a reader who wants to see the artwork. The grid now behaves as a photo roll does: spread two fingers and it steps to two across, pinch and it goes to four. The grid stretches a little under the fingers before it commits, so the gesture reads as pulling the tiles apart rather than flipping a switch; the count is remembered. On a trackpad the same pinch arrives as a zoom and is honoured. Tile padding and type step down at four across so the name still fits.</p>
+    </div>
+    <div class="entry">
+      <div class="entry-head"><span class="tag tag-fix">Fixed</span><h3>The sub-screen top bar sat under the phone's status bar</h3></div>
+      <p>The generic top bar — back arrow, title, day tag — never asked for the top safe-area inset, so on a notched phone the status clock and the title shared the same pixels, and a long hymn title pushed the "Day 2/12" tag off the edge. The bar now clears the inset and the title truncates with an ellipsis, leaving the arrow and the tag their room. The progress bar below it moved down a hair to match.</p>
+    </div>
+    <div class="entry">
+      <div class="entry-head"><span class="tag tag-add">Added</span><h3>A board of festival-day cards for Home</h3></div>
+      <p>On a parva the home screen said nothing that an ordinary Caturthī did not — the petals drifted, but the day was never named. A board (<code>Festival Card Options.html</code>) tried three placements on the live pañcāṅga card's own classes; the pick was a compact card of its own above the pañcāṅga — "Parva · today", the festival's name in the reader's script, its hour — tinted from the deity's hue, opening the vrata page on tap. It appears only on a singular annual day, by the same rule the petal drift keeps, so a weekly Somavāram or a fortnightly Ekādaśī never claims it.</p>
+      <p>The hour is now a real one. A vrata that names its kāla — Gaṇeśa Caturthī at madhyāhna, Dīpāvalī at pradoṣa, Śivarātri and Janmāṣṭamī at niśītha — has the span computed from the reciter's own sunrise and sunset: the third fifth of daylight, the two muhūrtas after sunset, the muhūrta astride true midnight. Vratas without a kāla keep their tithi rule as the sub-line. The Navarātris run nine days (ten for Śāradīya, with Vijayadaśamī) and stay on the card throughout, saying which day this is; on the eve of any parva the same card appears quieter and untinted — "Tomorrow · …" — so the sāmagrī can be bought in time. Because none of this could be seen until 14 September, Settings › Pañcāṅga gained "Preview a festival day": pin one of the coming parvas and the card and the petal drift behave as on that day, while the pañcāṅga itself keeps the real date.</p>
+      <p>Checked through the preview in all three scripts and at night, the card then grew where it was thin. A many-day parva now says what the day is for rather than counting it: Navarātri names the day's form — Skandamātā on the fifth, Āyudha pūjā on the ninth — and Dīpāvalī runs its five days from Dhanatrayodaśī to Bhrātṛ Dvitīyā with the pradoṣa hour shown on the Lakṣmī Pūjā day alone. The hymns a vrata names sit under the line as chips that open the reader directly, so the Vakratuṇḍa is one tap on the morning it is wanted. Hanumān Jayantī, which the north keeps on Caitra Pūrṇimā and the Deccan on Vaiśākha Kṛṣṇa Daśamī, now follows the reciter's place — south of the Vindhyas gets the southern date and the matching rule, in the card and on the vrata page alike.</p>
+      <p>The calendar had been reading only from the vrata list, so a whole class of marked days was missing from a month that knew its tithis to the minute. Twenty parva dinams join in <code>stuti-parva-data.js</code> as brief entries — Holi, Kārtika Pūrṇimā and its Mondays, Śrāvaṇa Fridays, Bonālu, Ananta Caturdaśī, Mahālaya and Polāla Amāvāsyā, Aṭla Taddi, Karvā Cauth, Tulasī Vivāha, Subrahmaṇya Ṣaṣṭhī, Vaikuṇṭha, Bhīṣma and Nirjalā Ekādaśī, Gaṅgā Daśaharā, Ratha Yātrā, Upākarma, Vijayadaśamī — and flow into the calendar, the upcoming list and the home card unchanged. Dīpāvalī, which was a line and four hymns, has its five days written out. A many-day parva now marks every day it runs on the calendar grid, and the day sheet names the day — "Day 5 of 10 · Skandamātā". Under the pañcāṅga rows a quiet line names the routine vrata of the day — an Ekādaśī, a Śrāvaṇa Monday — which the festival card rightly refuses. Settings › Pañcāṅga gained "North or south" beside the sampradāya, defaulting to the place, for the days the Vindhyas divide. And while a preview day is pinned, Home says so in a dark pill with the date, so a fake today never passes for a real one.</p>
+      <p>Every hymn a vrata names was run through the pool; eleven pointed at titles that were not there — a Khaḍgamālā, a Tiruppāvai, a Tulasī stotra — and the chip simply vanished. They now point at hymns that exist, or were dropped. Vaikuṇṭha Ekādaśī is found the way it is actually kept: the bright Ekādaśī after the sun enters Dhanu, from the engine's own saṅkrānti, not a tithi counted in Mārgaśīrṣa. Dhanurmāsa and Pitṛ Pakṣa mark their whole spans on the calendar as quiet entries — no home card, no petals.</p>
+    </div>
+    <div class="entry">
+      <div class="entry-head"><span class="tag tag-add">Added</span><h3>The house's own tithis</h3></div>
+      <p>The almanac knew every festival and nothing about the family. A janma tithi, an ābdikam, the day a house was entered — these were kept in someone's head and missed the year the head was elsewhere. The calendar page now carries "My tithis": tap any day and "Add a tithi on this day" reads its māsa, pakṣa and tithi off the pañcāṅga; or give the Gregorian date you remember — 5 August 1962 resolves to Śrāvaṇa Śukla Pañcamī — and correct the rule by hand if the family keeps it differently. A śrāddha follows the tithi at aparāhṇa, as it should, so its day can differ by one from the sunrise tithi. Each tithi dresses as a vrata inside the app: it paints on the calendar in a dashed frame, takes the home card on its day — ahead of any festival it shares the tithi with — says "Tomorrow" on the eve, and enters the morning digest inside the warning it asked for, a day to a week ahead. Tapping it anywhere opens it for editing.</p>
+    </div>
+    <div class="entry">
+      <div class="entry-head"><span class="tag tag-fix">Fixed</span><h3>The first-letter veil showed half an akṣara</h3></div>
+      <p>The hint took the first code point of each word, which in an Indic script is the bare consonant — శ for శ్రీ, వ for వా. It now takes the first akṣara, consonant cluster and vowel sign together, so the cue is what the reciter would actually say. The veiled verse also sits left-aligned rather than centred, so the hints of successive lines fall in one column. Meanings follow: the flow view, the plan card and the sitting all had them centred while the reader already set them left; every meaning is now left-aligned.</p>
+    </div>
+  </div>
+</section>
+
+<section class="release">
+  <div class="rail">
+    <div class="ver">0.9.90</div>
+    <div class="date">5 September 2026</div>
+    <div class="rail-note">Thirty chips in one heap, and the sheet read as one long list.</div>
+  </div>
+  <div class="release-body">
+    <h2 class="release-title">The dīkṣā sheet is read as steps</h2>
+    <div class="entry">
+      <div class="entry-head"><span class="tag tag-chg">Changed</span><h3>The dīkṣā card's name sits level with its button</h3></div>
+      <p>Dīkṣā's name was a plain div inside a spare wrapper, nudged down two pixels and top-aligned against the pill beside it — in Telugu, whose ascenders run tall, that read as two things at different heights rather than one heading and its action. The name is now the card's heading proper, centred on the same line as the pill, and the empty-state sentence sits closer under it and stops at a comfortable measure instead of running the card's full width.</p>
+    </div>
+    <div class="entry">
+      <div class="entry-head"><span class="tag tag-chg">Changed</span><h3>The two fortnights sit one under the other</h3></div>
+      <p>The tithi picker laid thirty chips into two wrapping rows with the pakṣa name tucked in as the first chip — so Śukla's overflow ran into Kṛṣṇa's start and the eye could not tell where one fortnight ended. Each pakṣa now has a heading row of its own, and its fifteen tithis sit in a grid of five, so daśamī stands under pañcamī and pūrṇimā or amāvāsyā closes the last row alone.</p>
+    </div>
+    <div class="entry">
+      <div class="entry-head"><span class="tag tag-chg">Changed</span><h3>Each question in its own card</h3></div>
+      <p>The builder was one column of caps and chips — kind, text, when, how long, japa — with nothing but margin telling them apart, and the tithi or weekday picker appearing mid-stream as more chips. The four questions are now four cards, and whatever a choice opens (the tithis, the weekdays, the date range) is inset inside the card that asked. The first dates and the commit button stay outside, as the answer to all four.</p>
+    </div>
+    <div class="entry">
+      <div class="entry-head"><span class="tag tag-fix">Fixed</span><h3>Back from a Sādhana door landed on Recitation</h3></div>
+      <p>Open the japa counter or a reader from Nitya's Sādhana lens, finish, press back — and Nitya came up on Recitation, its first pill. The lens choice was written to storage on every tap but never read: the tab began at Recitation each time it was mounted, so the memory was kept and ignored. Nitya now opens on the lens it was left on, and a route may name a lens outright (<code>go("daily", { lens })</code>) for a notification or link that should land on a specific shelf.</p>
+    </div>
+    <div class="entry">
+      <div class="entry-head"><span class="tag tag-chg">Changed</span><h3>The month's mālā count moves into the day sheet</h3></div>
+      <p>The japa tracker on Nitya led with a large figure — the mālās told this month — beside the tracker's own name, so the card had two headlines fighting for the same line and on a phone the hint wrapped under the number. The card now carries only its name and the thread, like the recitation and learning trackers beside it. The month's total is read where a day is: tap a bead and the sheet lists that day's mantras, then closes with the mālās so far this month, under a rule.</p>
+    </div>
+    <div class="entry">
+      <div class="entry-head"><span class="tag tag-chg">Changed</span><h3>The reminder card no longer recites its settings</h3></div>
+      <p>The collapsed daily-reminder card on Nitya closed with a third line — the hour, "and pañcāṅga days", then every sandhyā that was switched on, dot-separated — which on a phone wrapped to two lines and restated what the sheet behind the card already shows. The line is gone; the card is its title and its one-sentence explanation, and the settings are read where they are set.</p>
+    </div>
+    <div class="entry">
+      <div class="entry-head"><span class="tag tag-fix">Fixed</span><h3>The lens medallion covered the microphone</h3></div>
+      <p>On a phone, the search field in the vratālu, parva, nomulu and pārāyaṇa lenses ran the full width of the band and disappeared under the plate, taking its voice button with it. The field's header had been given right padding to stop it short of the disc, but the compact-search rule later in the sheet resets padding with a shorthand at the same specificity, so the reservation never took. The padding is now set where it outranks that reset, and the field ends 16px before the medallion on every width.</p>
+    </div>
+    <div class="entry">
+      <div class="entry-head"><span class="tag tag-fix">Fixed</span><h3>The date range's calendar was blue</h3></div>
+      <p>The from/to fields are the browser's own date inputs, and their popup calendar is drawn by the browser, not the app — Chrome painted the picked day in its default blue. The inputs now carry the app's accent, which is the one colour the browser lets a page hand to that popup. Its type and layout remain the browser's; an in-app calendar picker would be the way to own them fully.</p>
+    </div>
+  </div>
+</section>
 
 <section class="release">
   <div class="rail">
@@ -237,6 +468,43 @@ code { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: .
   </div>
   <div class="release-body">
     <h2 class="release-title">A launch tracker, because the prototype had started to look finished</h2>
+    <div class="entry">
+      <div class="entry-head"><span class="tag tag-fix">Fixed</span><h3>The player sat on a shelf of empty space</h3></div>
+      <p>The reciter bar padded its bottom by the phone's safe-area inset, as a bar at the screen's edge should — but on the phone it is not at the edge; the tab bar is, and it pads the same inset. On an Android with a gesture bar that was the inset twice, a blank band under the play button as tall as the controls themselves. The reciter now takes the inset only when no tab bar follows it.</p>
+    </div>
+    <div class="entry">
+      <div class="entry-head"><span class="tag tag-add">Added</span><h3>A dīkṣā can be tied to any tithi, a span of dates, or a count of days</h3></div>
+      <p>The builder offered eight marked days and a weekday, and four fixed terms. Families take dīkṣās the builder could not write down — eleven days, a Kārtika-long span between two dates, every bahuḻa caturthī. "On which days" is now grouped: the marked days first (pradoṣa, ekādaśī, saṅkaṣṭī…), then every day, a tithi picked from both pakṣas, a weekday, or a from–to date range. "For how long" gains one week and a count of days — a few common numbers, or your own. The japa count also takes a number of your own beside the fixed mālās. The sheet's subtitle now asks which dīkṣā, and the stotra field says what it is for instead of a dash — the same dash every search-pick field showed when nothing was typed, now the search hint in the interface language everywhere.</p>
+    </div>
+    <div class="entry">
+      <div class="entry-head"><span class="tag tag-fix">Fixed</span><h3>The lens medallion rode up over the pill bar</h3></div>
+      <p>Scroll a nomu, vrata or parva lens and its ringed emblem slid up into the pinned lens pills and showed through them. Two things: the lens body is its own stacking context and came after the pinned bars in the page, so it painted above them regardless of their z-index — it now has a level below; and the medallion hung 12–14px above its own header, so once that header pinned under the pills the overhang sat inside the bar's blur. The medallion now sits flush with the header's top edge.</p>
+    </div>
+    <div class="entry">
+      <div class="entry-head"><span class="tag tag-add">Added</span><h3>A nomu can be kept anytime this year</h3></div>
+      <p>The month sheet asked which māsa the nomu would be kept in, and offered only the twelve. Many are not fixed to a month — the family says "this year" and picks a day when it suits. The sheet now opens with "ఈ ఏడాదిలో ఎప్పుడైనా" above the months; a nomu kept that way is owed all year, and the reminder comes once a month, on the day each lunar month opens, until it is marked kept. The card and the tracker row name the choice where they would have named the month.</p>
+    </div>
+    <div class="entry">
+      <div class="entry-head"><span class="tag tag-fix">Fixed</span><h3>The saṅkalpa section called itself vratālu</h3></div>
+      <p>The English heading already said Dīkṣā — the vow one takes over a text — but the Telugu and Hindi still read వ్రతాలు and व्रत, which name the tithi observances the library keeps elsewhere. A dīkṣā is not a vrata; the two scripts now say దీక్ష and दीक्षा, on the section head and in the reset sheet's list. The head also carried a second line, "సంకల్పం", under the eyebrow — a saṅkalpa is what a dīkṣā opens with, not a separate thing, so the section now has one title and the button says take a dīkṣā. The empty-state sentence and the reminders card ("దినసరి గుర్తు", now ప్రకటనలు / नोटिफ़िकेशन) were rewritten shorter, in the words a person would say.</p>
+    </div>
+    <div class="entry">
+      <div class="entry-head"><span class="tag tag-chg">Changed</span><h3>The tracker stops counting the month</h3></div>
+      <p>The recitation and learning threads each opened with a large "0 / 4 days this month" — a ratio against days elapsed that read as a score before the month had begun. The figure is gone from both; what remains above the thread is one right-set line — the tracker's name and "tap a bead for the day" where the beads open one. The japa card keeps its mālā count because that is a total, not a grade.</p>
+      <p>The wording came down with it. "పూసల దారం" and "मनकों की डोरी" were the metaphor spelled out where the other tracker heading already said "ట్రాకర్"; the ledger now says tracker, days in a row, skipped, a few, nothing that day — the words a person would use, in all three scripts.</p>
+    </div>
+    <div class="entry">
+      <div class="entry-head"><span class="tag tag-fix">Fixed</span><h3>The reader opened at its largest, on the smallest screen</h3></div>
+      <p>Two things compounded. The size dial's five steps were tuned on the wide frame, and the reader defaulted to the top step — so a fresh phone met Devanāgarī at 57px, five or six aksharas to a line. The default is now the middle step, and the reader multiplies every size — verse, gloss, chips, part tabs — by a fit factor the viewport sets: 0.78 under 480px, 0.9 to 640px, 1 above. The dial keeps its five steps on top of that, so + still reaches the old size for anyone who wants it. The remembered preference moves to a new key so phones that had the old default written for them start from the middle too.</p>
+    </div>
+    <div class="entry">
+      <div class="entry-head"><span class="tag tag-chg">Changed</span><h3>The beta word is set, and every guide now ends by deferring</h3></div>
+      <p>The gate's placeholder word is replaced with the one the invites will carry. The disclaimer audit found the rule kept unevenly: the ten full vratas each end with a source line naming their tradition and where families differ, and the month pages close with a standing note, but the twenty-four brief vratas ended on a stotra list and all hundred and two nomus ended on the kathā, with nothing saying whose count wins. Both now close with one sentence in three languages — nomus are kept house by house, and the family that taught it is the rule; a brief vrata's date is the almanac's, its observance the family's. Full vratas keep their own line rather than gaining a second.</p>
+    </div>
+    <div class="entry">
+      <div class="entry-head"><span class="tag tag-add">Added</span><h3>The note testers receive</h3></div>
+      <p>The invite needed a letter, and the letter needed to tell the truth the tracker had just written down: what works, what is deliberately absent and why, why installing matters, what is counted, how to write back. Welcome Note.html holds it in the house voice, with install steps for both platforms and the three small asks for week one. The passcode, the support address and the reply promise are read from the build stamp rather than typed, so the letter cannot name a door the app does not have; the link and the sender's name are filled in place and remembered. Two copy buttons — plain text, and WhatsApp with its bold markers.</p>
+    </div>
     <div class="entry">
       <div class="entry-head"><span class="tag tag-add">Added</span><h3>Launch Tracker — what is real, what only looks real</h3></div>
       <p>The launch plan covers the fortnight to the beta; nothing covered the longer road behind it, and the app had reached the point where a screen that works on the builder's phone reads as shipped. The tracker states the three conditions plainly — real, prototype, missing — and puts every substantial capability into one of them, with the promise each prototype makes on the app's behalf: the stub session that mints an id and authenticates nobody, a year of practice living in one browser's local storage with no export, a giving screen whose Razorpay slots are blank, a print meter that both contradicts the app's own stance and resets with a cleared cache, and reminders that ring only while a tab is open. Above that, a five-stage ladder from prototype to sustaining, so stage-four costs stop being paid during stage two.</p>
@@ -252,6 +520,34 @@ code { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: .
     <div class="entry">
       <div class="entry-head"><span class="tag tag-add">Added</span><h3>A first-time founder's guide — twenty-eight days, each with a "done when"</h3></div>
       <p>The tracker says what must become real; nothing said what to do on Tuesday. The guide lays out 7 September to 4 October one day at a time, in plain English, each day carrying what to do, why it matters, and the single observable fact that proves it finished — because a first-time founder's most expensive habit is ticking a day when they feel done rather than when it is. The month runs two tracks on purpose: the app, and the slow world around it — the accountant, the entity, the domain, the reviewers, the policies — scheduled first because a reply that takes weeks has to be asked for in week one. The ops checkmark script now recognises any row carrying a work id, not only the original checklist rows, so the day cards and week counters persist like everything else.</p>
+    </div>
+    <div class="entry">
+      <div class="entry-head"><span class="tag tag-add">Added</span><h3>The beta latch</h3></div>
+      <p>A link leaks; a beta of twenty households becomes two hundred strangers before the app can carry them. <code>stuti-gate.jsx</code> stands before onboarding and asks for one small word, compared blind to case and spaces, remembered on the device once given. The refusal copy is warm and gets warmer on the third miss — it offers the public date and a way to write in rather than a locked door. The word lives on the build stamp (<code>STUTI_BUILD.GATE</code>); set it to null and the gate is gone for the public build.</p>
+    </div>
+    <div class="entry">
+      <div class="entry-head"><span class="tag tag-chg">Changed</span><h3>Nothing on screen says something that is not true</h3></div>
+      <p>Four places pretended. The account row invited a sign-in that verified nothing; it now says accounts and syncing are coming later and that practice is saved on this phone only, with the two ways to keep it. The daily-reminder row says it rings while Stuti is open. The monthly print-and-share meter, a placeholder for a paid plan nobody has decided on, is gone — both are simply open, in the reader and in the vratham prep sheet. Audio needed nothing: Listen was already asked of the recording bank per hymn, and the bank is empty.</p>
+    </div>
+    <div class="entry">
+      <div class="entry-head"><span class="tag tag-add">Added</span><h3>Every text says where it stands</h3></div>
+      <p>A corpus typed from documents of mixed pedigree owes its readers one fact per text: proofed against a named printed source, or not yet. <code>stuti-proof.js</code> is the single ledger of that fact — one line per hymn id, any id absent is awaiting proof — and the reader ends each text with a quiet footnote saying which, the reviewer's name when one has lent it, and the "text is wrong" door beside it, opened on that kind with the stotra already named. About in Settings totals the two counts. The ledger is empty today; the shelf-by-shelf pass fills it.</p>
+    </div>
+    <div class="entry">
+      <div class="entry-head"><span class="tag tag-add">Added</span><h3>The almanac says what it is</h3></div>
+      <p>People will plan real observances on these numbers, so the calendar now ends with two sentences: how tithi and nakṣatra are computed and for where, that the result was spot-checked against printed pañcāṅgas, that a tithi ending within minutes of sunrise may differ by a day — and that the family's own pañcāṅga wins where it differs.</p>
+    </div>
+    <div class="entry">
+      <div class="entry-head"><span class="tag tag-add">Added</span><h3>Installable, counted, reachable</h3></div>
+      <p>A web manifest with kalaśa icons at 192, 512 and maskable, an Apple touch icon and the status-bar meta, so Add to Home Screen gives a real app tile on both platforms; the worker caches them. <code>stuti-count.js</code> counts a dozen verbs — screen, text opened, script switched, guide opened, search, install, feedback, onboarding done — with enumerated facts only, never an id, name or verse; without an endpoint it keeps a session buffer a tester can read, and it honours Do Not Track. The support address and the reply-time promise moved onto the build stamp so the feedback sheet and About cannot name different doors; About shows both under the version. Build 0.9.89, channel beta.</p>
+    </div>
+    <div class="entry">
+      <div class="entry-head"><span class="tag tag-fix">Fixed</span><h3>The pending page opened dark</h3></div>
+      <p>Pending.html predates the operations chrome: it loaded only the palette sheet, carried no day/night attribute and had no header, nav or theme button, so its tokens fell back to the night values and the page looked unlit. It now sits on the same shell as the other operations documents.</p>
+    </div>
+    <div class="entry">
+      <div class="entry-head"><span class="tag tag-add">Added</span><h3>A handoff package for the production build</h3></div>
+      <p>The prototype was about to leave this project for a real codebase, and nothing told a developer which of the 130 files load in which order, which globals depend on which, which localStorage keys must survive, or which screens are honest and which pretend. <code>design_handoff_stuti/</code> now carries the whole app (code, fonts, emblems, both entry points, the website), the operations documents, and a README that says all of that plus a phase plan — lift, modularise, back end, launch — so the first session in Claude Code starts on the design of record rather than rediscovering it.</p>
     </div>
     <div class="entry">
       <div class="entry-head"><span class="tag tag-add">Added</span><h3>The daily plan — the same month in plainer words</h3></div>

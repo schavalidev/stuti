@@ -54,7 +54,7 @@ export const STUTI_SANKRANTI = (function () {
         { roman: "A blanket, cloth or ghee to give away", tel: "దానం చేయడానికి కంబళి, వస్త్రం లేదా నెయ్యి" },
         { roman: "Rangoli powders and cow dung for the gobbemma", tel: "ముగ్గు పిండి, గొబ్బెమ్మలకు ఆవు పేడ" },
       ],
-      stotras: [{ deity: "surya", m: "aditya" }, { deity: "surya", m: "japakusuma" }, { deity: "surya", m: "surya astakam" }],
+      stotras: [{ deity: "surya", m: "aditya" }, { deity: "surya", m: "japakusuma" }, { deity: "surya", m: "suryastakam" }],
       dos: [
         { roman: "Bathe before the transit, not after — the puṇyakāla is for giving, and one gives clean.", tel: "సంక్రమణానికి ముందే స్నానం — పుణ్యకాలం దానానికి; శుచిగా దానం చేయాలి." },
         { roman: "Give something warm. In the coldest fortnight of the year the blanket is the point, not the symbol.", tel: "వెచ్చనిదేదో ఇవ్వాలి. ఏటిలో అతి చలి పక్షంలో కంబళి ప్రతీక కాదు, అవసరం." },
@@ -228,7 +228,7 @@ export const STUTI_SANKRANTI = (function () {
         { roman: "Rice and moong for huggi; jaggery, ghee, cashew for akkāra aḍisil", tel: "హుగ్గికి బియ్యం, పెసరపప్పు; అక్కార అడిసిల్‌కు బెల్లం, నెయ్యి, జీడిపప్పు" },
         { roman: "A lamp that will hold for the whole hour before dawn", tel: "వేకువ ముందు ఘడియంతా వెలిగే దీపం" },
       ],
-      stotras: [{ deity: "vishnu", m: "tiruppavai" }, { deity: "vishnu", m: "venkatesa suprabhata" }, { deity: "vishnu", m: "sahasranama" }, { deity: "vishnu", m: "madhurastakam" }],
+      stotras: [{ deity: "vishnu", m: "venkatesvara suprabhata" }, { deity: "vishnu", m: "sahasranama" }, { deity: "vishnu", m: "madhurastakam" }],
       dos: [
         { roman: "Finish before sunrise. A Dhanurmāsa pūjā after sunrise has missed its own point.", tel: "సూర్యోదయానికి ముందే ముగించాలి. సూర్యోదయం తరువాతి ధనుర్మాస పూజ తన ప్రయోజనాన్నే కోల్పోతుంది." },
         { roman: "Keep the same hour every day for the thirty. The month is a habit, not thirty separate rites.", tel: "ముప్పై రోజులు ఒకే ఘడియ ఉంచాలి. ఈ మాసం అలవాటు, ముప్పై వేరు వేరు పూజలు కాదు." },

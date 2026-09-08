@@ -6,7 +6,16 @@
 const { useState: useStateV, useEffect: useEffectV } = React;
 
 const vowOccName = (o, lang) => lang === "telugu" ? o.tel : lang === "deva" ? o.deva : o.name;
-const vowTermName = (t, lang) => lang === "telugu" ? t.tel : lang === "deva" ? t.deva : t.name;
+const vowTermName = (t, lang, v) => t.custom && v ? window.STUTI_L.t("vowNDays", lang).replace("{n}", v.days | 0) : lang === "telugu" ? t.tel : lang === "deva" ? t.deva : t.name;
+/* tithi index 0–29 → "Śukla Caturthī", "Pūrṇimā", "Kṛṣṇa Aṣṭamī", "Amāvāsyā" */
+function vowTithiName(i, lang) {
+  const PA = window.AKSHARA_PANCHANGA, L = window.STUTI_L;
+  if (i === 14) return L.t("tithiPurnima", lang);
+  if (i === 29) return L.t("tithiAmavasya", lang);
+  const t = PA.TITHI[i % 15], p = i < 15 ? L.t("pakshaShukla", lang) : L.t("pakshaKrishna", lang);
+  return p + " " + (lang === "telugu" ? t.tel : lang === "deva" ? t.deva : t.iast);
+}
+const vowKey = (d) => d.getFullYear() + "-" + String(d.getMonth() + 1).padStart(2, "0") + "-" + String(d.getDate()).padStart(2, "0");
 function vowDateStr(d, lang) {
   const V = window.AKSHARA_PANCHANGA.VARA[d.getDay()];
   const wd = lang === "telugu" ? V.tel : lang === "deva" ? V.deva : V.iast;
@@ -30,10 +39,7 @@ function VowsCard({ go, lang = "deva" }) {
     <React.Fragment>
       <div className="vows">
         <div className="vows-head">
-          <div>
-            <div className="eyebrow">{L.t("vows", lang)}</div>
-            <div className="vows-title display" style={{ fontFamily: L.font(lang) }}>{L.t("sankalpaVow", lang)}</div>
-          </div>
+          <h2 className="vows-title display" style={{ fontFamily: L.font(lang) }}>{L.t("vows", lang)}</h2>
           <button className="vows-add" onClick={() => setOpen(true)}>+ {L.t("takeVow", lang)}</button>
         </div>
         {vows.length === 0 ? (
@@ -51,12 +57,15 @@ function VowsCard({ go, lang = "deva" }) {
               const next = W.dates(v, 3).filter(x => x.toDateString() !== new Date().toDateString());
               const occLabel = o.weekday
                 ? vowOccName(o, lang) + " · " + vowDateStr(new Date(Date.now() + ((7 + (v.weekday || 0) - new Date().getDay()) % 7) * 86400000), lang).split(" · ")[0]
+                : o.tithi ? vowTithiName(v.tithi | 0, lang)
+                : o.range && v.from && v.to ? vowDateStr(new Date(v.from + "T12:00:00"), lang).split(" · ")[1] + " – " + vowDateStr(new Date(v.to + "T12:00:00"), lang).split(" · ")[1]
                 : vowOccName(o, lang);
+              const termLabel = o.range ? L.t("vowNDays", lang).replace("{n}", W.spanDays(v) + 1) : vowTermName(t, lang, v);
               return (
                 <div key={v.id} className={"vow" + (due ? " due" : "")} style={{ "--deity-hue": d ? d.hue : 36 }}>
                   <div className="vow-top">
                     <div className="vow-body">
-                      <div className="vow-occ">{occLabel} · {vowTermName(t, lang)}</div>
+                      <div className="vow-occ">{occLabel} · {termLabel}</div>
                       <button className="vow-hymn display" style={{ fontFamily: L.font(lang) }} disabled={isJ && !inMala}
                         onClick={() => { if (isJ) { if (!inMala) return; window.STUTI_JAPA.setLast(v.deity); go("japa"); } else go("reader", { deity: h.deity, hymn: h.id, from: "daily" }); }}>
                         {isJ ? jTitle : L.hymnTitle(h, lang)}</button>
@@ -134,7 +143,7 @@ function SearchSelect({ value, options, onChange, placeholder, font, ariaLabel }
     <div className="ssel">
       <div className="ssel-field">
         <Icon name="search" size={16} />
-        <input aria-label={ariaLabel} placeholder={placeholder || "—"}
+        <input aria-label={ariaLabel} placeholder={placeholder || window.STUTI_L.t("searchHint", window.STUTI_L.ui())}
           style={font ? { fontFamily: font } : null}
           value={focused ? q : chosen}
           onFocus={() => setFocused(true)}
@@ -150,7 +159,7 @@ function SearchSelect({ value, options, onChange, placeholder, font, ariaLabel }
               <span className="ssel-opt-label">{o.label}</span>
               {o.sub && <span className="ssel-opt-sub">{o.sub}</span>}
             </button>
-          )) : <div className="ssel-empty">{placeholder || "—"}</div>}
+          )) : <div className="ssel-empty">{window.STUTI_L.t("noResults", window.STUTI_L.ui())}</div>}
         </div>
       )}
     </div>
@@ -168,13 +177,24 @@ function VowSheet({ lang = "deva", onClose }) {
   const [hymn, setHymn] = useStateV(() => (window.STUTI_FAVS.list().find(id => S.hymnById(id)) || texts[0].id));
   const [occasion, setOccasion] = useStateV("pradosha");
   const [weekday, setWeekday] = useStateV(2);
+  const [tithi, setTithi] = useStateV(3);
+  const todayKey = vowKey(new Date());
+  const [from, setFrom] = useStateV(todayKey);
+  const [to, setTo] = useStateV(vowKey(new Date(Date.now() + 6 * 86400000)));
   const [term, setTerm] = useStateV("m3");
+  const [days, setDays] = useStateV(11);
   const [japaOn, setJapaOn] = useStateV(false);
   const [japaCount, setJapaCount] = useStateV(108);
+  const [ownCount, setOwnCount] = useStateV("");
   const o = W.occ(occasion);
-  const preview = W.dates({ hymn, occasion, weekday, term, start: window.STUTI_THREAD.dkey() }, 4);
+  const count = ownCount.trim() ? Math.max(1, parseInt(ownCount, 10) || 0) : japaCount;
+  const draft = { hymn, occasion, weekday, tithi, from, to, term, days, start: window.STUTI_THREAD.dkey() };
+  const preview = W.dates(draft, 4);
   const font = L.font(lang);
   const VARA = window.AKSHARA_PANCHANGA.VARA;
+  /* the "when" list, grouped: the marked days, then the mechanisms */
+  const SPECIAL = W.OCCASIONS.filter(x => !x.weekday && !x.tithi && !x.range && x.id !== "daily");
+  const scriptFont = lang === "roman" ? null : { fontFamily: font };
   return (
     <div className="nm-sheet vow-sheet">
       <div className="nm-head">
@@ -186,6 +206,7 @@ function VowSheet({ lang = "deva", onClose }) {
       </div>
       <div className="nm-list scroll">
         <div className="vow-form">
+          <section className="vow-step">
           <label className="vow-label">{L.t("vowKindLabel", lang)}</label>
           <div className="vow-opts">
             {[["stotra", "vowKindStotra"], ["japa", "vowKindJapa"]].map(([k, key]) => (
@@ -196,7 +217,7 @@ function VowSheet({ lang = "deva", onClose }) {
           {kind === "stotra" ? (
             <React.Fragment>
               <label className="vow-label">{L.t("vowWhat", lang)}</label>
-              <SearchSelect value={hymn} onChange={(v) => setHymn(v || hymn)} font={font} ariaLabel={L.t("vowWhat", lang)}
+              <SearchSelect value={hymn} onChange={(v) => setHymn(v || hymn)} font={font} ariaLabel={L.t("vowWhat", lang)} placeholder={L.t("searchHint", lang)}
                 options={texts.map(h => ({ value: h.id, label: L.hymnTitle(h, lang), sub: L.name(S.deityById[h.deity], lang) + " \u00b7 " + L.versesCount(h.verses.length, lang) }))} />
             </React.Fragment>
           ) : (
@@ -220,31 +241,96 @@ function VowSheet({ lang = "deva", onClose }) {
               </div>
             </React.Fragment>
           )}
+          </section>
+          <section className="vow-step">
           <label className="vow-label">{L.t("vowWhen", lang)}</label>
+          <div className="vow-sub">{L.t("vowWhenSpecial", lang)}</div>
           <div className="vow-opts">
-            {W.OCCASIONS.map(x => (
-              <button key={x.id} className={"vow-opt" + (x.id === occasion ? " on" : "")} onClick={() => setOccasion(x.id)}
-                style={lang === "roman" ? null : { fontFamily: font }}>{vowOccName(x, lang)}</button>
+            {SPECIAL.map(x => (
+              <button key={x.id} className={"vow-opt" + (x.id === occasion ? " on" : "")} onClick={() => setOccasion(x.id)} style={scriptFont}>{vowOccName(x, lang)}</button>
             ))}
           </div>
+          <div className="vow-sub">{L.t("vowWhenOther", lang)}</div>
+          <div className="vow-opts">
+            {["daily", "tithi", "vara", "range"].map(id => { const x = W.occ(id); return (
+              <button key={id} className={"vow-opt" + (id === occasion ? " on" : "")} onClick={() => setOccasion(id)} style={scriptFont}>{vowOccName(x, lang)}</button>
+            ); })}
+          </div>
+          {o.tithi && (
+            <div className="vow-nest vow-tithis">
+              {[0, 15].map(base => (
+                <div key={base} className="vow-paksha-grp">
+                  <div className="vow-paksha" style={scriptFont}>{L.t(base ? "pakshaKrishna" : "pakshaShukla", lang)}</div>
+                  <div className="vow-tithi-grid">
+                    {Array.from({ length: 15 }, (_, i) => base + i).map(i => (
+                      <button key={i} className={"vow-opt vow-opt-sm" + (i === tithi ? " on" : "")} onClick={() => setTithi(i)} style={scriptFont}>{vowTithiName(i, lang).replace(/^\S+\s/, "")}</button>
+                    ))}
+                  </div>
+                </div>
+              ))}
+            </div>
+          )}
           {o.weekday && (
-            <div className="vow-opts vow-weekdays">
+            <div className="vow-nest vow-opts vow-weekdays">
               {VARA.map((v, i) => (
-                <button key={i} className={"vow-opt" + (i === weekday ? " on" : "")} onClick={() => setWeekday(i)}
-                  style={lang === "roman" ? null : { fontFamily: font }}>
+                <button key={i} className={"vow-opt" + (i === weekday ? " on" : "")} onClick={() => setWeekday(i)} style={scriptFont}>
                   {lang === "telugu" ? v.tel : lang === "deva" ? v.deva : v.iast}
                 </button>
               ))}
             </div>
           )}
+          {o.range && (
+            <div className="vow-nest vow-range">
+              <label className="vow-date"><span>{L.t("vowFrom", lang)}</span><input type="date" value={from} min={todayKey} onChange={(e) => { const v = e.target.value; setFrom(v); if (v > to) setTo(v); }} /></label>
+              <label className="vow-date"><span>{L.t("vowTo", lang)}</span><input type="date" value={to} min={from} onChange={(e) => setTo(e.target.value)} /></label>
+            </div>
+          )}
+          </section>
 
-          <label className="vow-label">{L.t("vowHowLong", lang)}</label>
-          <div className="vow-opts">
-            {W.TERMS.map(x => (
-              <button key={x.id} className={"vow-opt" + (x.id === term ? " on" : "")} onClick={() => setTerm(x.id)}
-                style={lang === "roman" ? null : { fontFamily: font }}>{vowTermName(x, lang)}</button>
-            ))}
-          </div>
+          {!o.range && (
+            <section className="vow-step">
+              <label className="vow-label">{L.t("vowHowLong", lang)}</label>
+              <div className="vow-opts">
+                {W.TERMS.map(x => (
+                  <button key={x.id} className={"vow-opt" + (x.id === term ? " on" : "")} onClick={() => setTerm(x.id)} style={scriptFont}>{x.custom ? L.t("vowSomeDays", lang) : vowTermName(x, lang)}</button>
+                ))}
+              </div>
+              {W.term(term).custom && (
+                <div className="vow-opts">
+                  {[3, 5, 9, 11, 21, 41, 48].map(n => (
+                    <button key={n} className={"vow-opt vow-opt-sm" + (n === days ? " on" : "")} onClick={() => setDays(n)}>{n}</button>
+                  ))}
+                  <input className="vow-num" type="number" inputMode="numeric" min="1" max="999" aria-label={L.t("vowOwnDays", lang)} placeholder={L.t("vowOwnDays", lang)}
+                    value={[3, 5, 9, 11, 21, 41, 48].includes(days) ? "" : days} onChange={(e) => setDays(Math.max(1, parseInt(e.target.value, 10) || 1))} />
+                </div>
+              )}
+            </section>
+          )}
+
+          <section className="vow-step">
+          {kind === "stotra" ? (
+            <React.Fragment>
+              <label className="vow-label">{L.t("vowJapaLabel", lang)}</label>
+              <div className="vow-opts">
+                <button className={"vow-opt" + (japaOn ? " on" : "")} onClick={() => setJapaOn(v => !v)}>{japaOn ? "✓" : "+"} {L.t("vowJapaLabel", lang)}</button>
+                {japaOn && [27, 54, 108, 216].map(n => (
+                  <button key={n} className={"vow-opt" + (n === japaCount && !ownCount.trim() ? " on" : "")} onClick={() => { setJapaCount(n); setOwnCount(""); }}>{n} {L.t("vowJapaCount", lang)}</button>
+                ))}
+                {japaOn && <input className="vow-num" type="number" inputMode="numeric" min="1" aria-label={L.t("vowOwnCount", lang)} placeholder={L.t("vowOwnCount", lang)} value={ownCount} onChange={(e) => setOwnCount(e.target.value)} />}
+              </div>
+            </React.Fragment>
+          ) : (
+            <React.Fragment>
+              <label className="vow-label">{L.t("vowJapaCount", lang)}</label>
+              <div className="vow-opts">
+                {[27, 54, 108, 216, 1008].map(n => (
+                  <button key={n} className={"vow-opt" + (n === japaCount && !ownCount.trim() ? " on" : "")} onClick={() => { setJapaCount(n); setOwnCount(""); }}>{n}</button>
+                ))}
+                <input className="vow-num" type="number" inputMode="numeric" min="1" aria-label={L.t("vowOwnCount", lang)} placeholder={L.t("vowOwnCount", lang)} value={ownCount} onChange={(e) => setOwnCount(e.target.value)} />
+              </div>
+            </React.Fragment>
+          )}
+          </section>
 
           <div className="vow-preview">
             <div className="vow-label" style={{ marginTop: 0 }}>{L.t("firstDates", lang)}</div>
@@ -253,35 +339,16 @@ function VowSheet({ lang = "deva", onClose }) {
             ) : <p className="vows-empty" style={{ margin: 0 }}>{L.t("noDates", lang)}</p>}
           </div>
 
-          {kind === "stotra" ? (
-            <React.Fragment>
-              <label className="vow-label">{L.t("vowJapaLabel", lang)}</label>
-              <div className="vow-opts">
-                <button className={"vow-opt" + (japaOn ? " on" : "")} onClick={() => setJapaOn(v => !v)}>{japaOn ? "✓" : "+"} {L.t("vowJapaLabel", lang)}</button>
-                {japaOn && [27, 54, 108, 216].map(n => (
-                  <button key={n} className={"vow-opt" + (n === japaCount ? " on" : "")} onClick={() => setJapaCount(n)}>{n} {L.t("vowJapaCount", lang)}</button>
-                ))}
-              </div>
-            </React.Fragment>
-          ) : (
-            <React.Fragment>
-              <label className="vow-label">{L.t("vowJapaCount", lang)}</label>
-              <div className="vow-opts">
-                {[27, 54, 108, 216, 1008].map(n => (
-                  <button key={n} className={"vow-opt" + (n === japaCount ? " on" : "")} onClick={() => setJapaCount(n)}>{n}</button>
-                ))}
-              </div>
-            </React.Fragment>
-          )}
-
           <button className="vow-commit" disabled={!preview.length}
             onClick={() => {
+              const extra = { occasion, weekday, tithi, term, days };
+              if (o.range) { extra.from = from; extra.to = to; }
               if (kind === "japa") {
                 const ownId = own ? "own:" + window.STUTI_TRANSLIT.fold(own).replace(/\s+/g, "-") : null;
-                W.add({ kind: "japa", deity: ownId || deity, label: own || undefined, occasion, weekday, term, japa: { count: japaCount } });
+                W.add(Object.assign({ kind: "japa", deity: ownId || deity, label: own || undefined, japa: { count } }, extra));
                 window.STUTI_JAPA.setLast(ownId || deity);
               } else {
-                W.add({ hymn, occasion, weekday, term, japa: japaOn ? { count: japaCount } : null });
+                W.add(Object.assign({ hymn, japa: japaOn ? { count } : null }, extra));
                 if (japaOn) window.STUTI_JAPA.setLast(hymn);
               }
               const N = window.STUTI_NUDGE;

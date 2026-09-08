@@ -59,6 +59,21 @@ function MoonPhase({ phase, size = 46 }) {
           <feGaussianBlur stdDeviation={Math.max(0.6, size / 46)} />
         </filter>
         <clipPath id={`mc${uid}`}><circle cx={r} cy={r} r={r} /></clipPath>
+        <radialGradient id={`ms${uid}`} cx="38%" cy="34%" r="78%">
+          <stop offset="0%" stopColor="#fff" stopOpacity="0.30" />
+          <stop offset="40%" stopColor="#fff" stopOpacity="0" />
+          <stop offset="68%" stopColor="#000" stopOpacity="0" />
+          <stop offset="100%" stopColor="#000" stopOpacity="0.48" />
+        </radialGradient>
+        <linearGradient id={`mw${uid}`} x1="0" x2="1" y1="0" y2="0">
+          <stop offset="0%" stopColor="#fff" stopOpacity="0" />
+          <stop offset="50%" stopColor="#fff" stopOpacity="0.55" />
+          <stop offset="100%" stopColor="#fff" stopOpacity="0" />
+        </linearGradient>
+        <radialGradient id={`mg${uid}`} cx="50%" cy="50%" r="50%">
+          <stop offset="0%" stopColor="#fff" stopOpacity="0.75" />
+          <stop offset="100%" stopColor="#fff" stopOpacity="0" />
+        </radialGradient>
       </defs>
       <circle cx={r} cy={r} r={r} fill={`url(#md${uid})`} />
       <g clipPath={`url(#mc${uid})`}>
@@ -69,6 +84,13 @@ function MoonPhase({ phase, size = 46 }) {
           <circle cx={r * (waxing ? 1.18 : 0.82)} cy={r * 1.22} r={r * 0.14} />
           <circle cx={r * (waxing ? 1.52 : 0.48)} cy={r * 1.06} r={r * 0.09} />
         </g>
+      </g>
+      {/* the sphere: the limb falls away into shadow, a soft glint rides the upper-left, and a rim of light catches the edge */}
+      <circle cx={r} cy={r} r={r} fill={`url(#ms${uid})`} />
+      <ellipse className="moonp-glint" cx={r * 0.62} cy={r * 0.5} rx={r * 0.34} ry={r * 0.2} fill={`url(#mg${uid})`} transform={`rotate(-30 ${r * 0.62} ${r * 0.5})`} />
+      {/* a band of light crossing the glass once each breath */}
+      <g clipPath={`url(#mc${uid})`}>
+        <rect className="moonp-sweep" x={-size * 0.1} y={-size * 0.2} width={size * 0.5} height={size * 1.4} fill={`url(#mw${uid})`} transform={`rotate(-24 ${r} ${r})`} />
       </g>
       <circle cx={r} cy={r} r={r - 0.5} fill="none" stroke="var(--moon-ring)" strokeWidth="1" />
     </svg>

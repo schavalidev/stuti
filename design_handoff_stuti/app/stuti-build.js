@@ -5,9 +5,16 @@
    and can serialise a small, non-personal snapshot to the clipboard.
    ============================================================ */
 window.STUTI_BUILD = (function () {
-  const VERSION = "0.9.59";
-  const BUILD = "2026.08.25";
-  const CHANNEL = "test";                 // test | beta | release
+  const VERSION = "0.9.89";
+  const BUILD = "2026.09.04";
+  const CHANNEL = "beta";                 // test | beta | release
+  /* the beta latch — one shared word for invited households. Null opens the
+     door to everyone (the public build). Compared case- and space-blind. */
+  const GATE = "matsya";
+  /* where a message goes, and how soon a reply can be promised. One place, so
+     the feedback sheet, Settings and the website cannot name different doors. */
+  const SUPPORT = "feedback@stuti.app";
+  const REPLY_DAYS = 3;
 
   const label = () => "Stuti " + VERSION + " · " + BUILD + " · " + CHANNEL;
 
@@ -68,6 +75,7 @@ window.STUTI_BUILD = (function () {
     "stuti-last", "stuti-loc", "stuti-detected", "stuti-nitya-lens", "stuti-speed",
     "stuti-pada-seen", "stuti-fontscale", "stuti-flyleaf", "stuti-gotra",
     "stuti-nama", "stuti-gender", "stuti-karma", "stuti-home",
+    "stuti-keep", "stuti-ledger", "stuti-recite-cfg", "stuti-session", "stuti-ui-lang", "stuti-ui-lang-custom", "stuti-uiscale",
   ]);
   const APP_PREFIX = PRACTICE_PREFIX.concat(["stuti-pos-"]);
 
@@ -183,6 +191,6 @@ window.STUTI_BUILD = (function () {
     return n;
   }
 
-  return { VERSION, BUILD, CHANNEL, label, texts, diagnostics, copy, tally, reset,
+  return { VERSION, BUILD, CHANNEL, GATE, SUPPORT, REPLY_DAYS, label, texts, diagnostics, copy, tally, reset,
            carry, carryFile, carryTally, carryRead, carryRestore };
 })();

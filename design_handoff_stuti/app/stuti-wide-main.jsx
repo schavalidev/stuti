@@ -253,14 +253,11 @@ function BrowseView({ go, lang = "deva" }) {
         <div className="topbar-title display">{L.t("deities", lang)}</div>
         <button className="icon-btn" onClick={() => go("search", { from: "browse" })} aria-label={L.t("search", lang)}><Icon name="search" /></button>
       </div>
-      <div className="tile-grid browse-grid">
+      <div className="tile-grid browse-grid lib-deity-grid lib-deity-grid-3">
         {S.deities.map((d, i) => (
-          <button key={d.id} className="gtile" style={{ ...deityStyle(d), animationDelay: `${60 + i * 60}ms` }}
-            onClick={() => go("deity", { deity: d.id, from: "browse" })}>
-            <Seal d={d} size={66} />
-            <div className="gtile-name display" style={{ fontFamily: L.font(lang) }}>{L.name(d, lang)}</div>
-            <div className="gtile-count">{L.hymnsCount(S.hymnsForDeity(d.id).length, lang)}</div>
-          </button>
+          <DeityTile key={d.id} d={d} lang={lang} i={i} onClick={() => go("deity", { deity: d.id, from: "browse" })}>
+            <span className="niche-count">{L.hymnsCount(S.hymnsForDeity(d.id).length, lang)}</span>
+          </DeityTile>
         ))}
       </div>
       <div style={{ height: 40 }} />
@@ -451,7 +448,7 @@ function App() {
   if (route.view === "home") body = <Home key="home" go={go} openToday={openToday} lang={lang} overlayEl={overlayEl} />;
   else if (route.view === "browse") body = <window.LibraryHub key="browse" go={go} lang={lang} tileMode={tileMode} lens={libLens} setLens={setLibLens} sub={libSub} setSub={setLibSub} />;
   else if (route.view === "search") body = <SearchView key="search" go={go} lang={lang} backView={route.from || "browse"} weekday={route.weekday} voice={!!route.voice} />;
-  else if (route.view === "daily") body = <window.NityaView key="daily" go={go} lang={lang} showPractices={false} openRemind={() => setRemindOpen(true)} />;
+  else if (route.view === "daily") body = <window.NityaView key="daily" go={go} lang={lang} showPractices={false} openRemind={() => setRemindOpen(true)} initLens={route.lens} />;
   else if (route.view === "practices") body = <window.PracticesView key="practices" go={go} lang={lang} />;
   else if (route.view === "japa") body = <window.JapaView key="japa" go={go} lang={lang} />;
   else if (route.view === "plans") body = <window.PlansView key="plans" go={go} lang={lang} />;

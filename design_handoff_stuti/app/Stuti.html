@@ -8,6 +8,15 @@
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous" />
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Mallanna&display=swap" />
+<link rel="manifest" href="manifest.webmanifest" />
+<meta name="theme-color" content="#FAF5EB" media="(prefers-color-scheme: light)" />
+<meta name="theme-color" content="#14110C" media="(prefers-color-scheme: dark)" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="default" />
+<meta name="apple-mobile-web-app-title" content="Stuti" />
+<meta name="mobile-web-app-capable" content="yes" />
+<link rel="apple-touch-icon" href="icons/apple-touch-icon.png" />
+<link rel="icon" type="image/png" sizes="192x192" href="icons/icon-192.png" />
 <link rel="stylesheet" href="stuti.css" />
 <link rel="stylesheet" href="stuti-components.css" />
 <link rel="stylesheet" href="stuti-palette.css" />
@@ -58,11 +67,14 @@
 <script src="stuti-hindi-subrahmanya.js"></script>
 <script src="stuti-library-data.js"></script>
 <script src="stuti-sankranti-data.js"></script>
+<script src="stuti-parva-data.js"></script>
 <script src="stuti-vrata-data.js"></script>
 <script src="stuti-nomu-data.js"></script>
 <script src="stuti-parayana-data.js"></script>
 <script src="stuti-masa-data.js"></script>
 <script src="stuti-build.js"></script>
+<script src="stuti-count.js"></script>
+<script src="stuti-proof.js"></script>
 <script src="stuti-i18n.js"></script>
 <script src="stuti-hindi-ganesha.js"></script>
 <script src="stuti-hindi-sahasra.js"></script>
@@ -85,6 +97,7 @@
 <script src="stuti-nudge.js"></script>
 <script src="stuti-prep.js"></script>
 <script src="stuti-keep.js"></script>
+<script src="stuti-tithis.js"></script>
 <script src="stuti-ledger.js"></script>
 <script src="stuti-translit.js"></script>
 <script src="stuti-lexicon.js"></script>
@@ -100,6 +113,7 @@
   "stuti-dana.jsx",
   "stuti-limits.jsx",
   "stuti-feedback.jsx",
+  "stuti-gate.jsx",
   "stuti-account.jsx",
   "stuti-picker.jsx",
   "stuti-panchanga.jsx",
@@ -118,8 +132,10 @@
   "stuti-home.jsx",
   "stuti-japa.jsx",
   "stuti-plans.jsx",
+  "stuti-plan-sitting.jsx",
   "stuti-vows.jsx",
   "stuti-keep.jsx",
+  "stuti-tithis.jsx",
   "stuti-ledger.jsx",
   "stuti-share.jsx",
   "stuti-vrata.jsx",

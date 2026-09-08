@@ -159,14 +159,30 @@ export const STUTI_VOWS = (function () {
     { id: "purnima",   name: "Pūrṇimā",             deva: "पूर्णिमा",         tel: "పూర్ణిమ",         test: p => p.tithiIndex === 14 },
     { id: "amavasya",  name: "Amāvāsyā",            deva: "अमावस्या",        tel: "అమావాస్య",        test: p => p.tithiIndex === 29 },
     { id: "ashtami",   name: "Kṛṣṇa Aṣṭamī",        deva: "कृष्ण अष्टमी",     tel: "కృష్ణ అష్టమి",     test: p => p.tithiIndex === 22 },
+    /* any tithi, picked by index 0–29 (śukla 0–14, kṛṣṇa 15–29) */
+    { id: "tithi",     name: "A tithi",             deva: "तिथि",            tel: "తిథి",            tithi: true },
+    /* every day between two dates — the term is the range itself */
+    { id: "range",     name: "Between two dates",   deva: "दो तारीख़ों के बीच", tel: "రెండు తేదీల మధ్య",  range: true, test: () => true },
   ];
   const TERMS = [
+    { id: "w1",  name: "One week",      deva: "एक सप्ताह",   tel: "ఒక వారం",     days: 7 },
     { id: "m1",  name: "One month",     deva: "एक मास",      tel: "ఒక మాసం",     days: 30 },
     { id: "m3",  name: "Three months",  deva: "तीन मास",     tel: "మూడు మాసాలు",  days: 92 },
     { id: "m6",  name: "Six months",    deva: "छह मास",      tel: "ఆరు మాసాలు",   days: 183 },
     { id: "y1",  name: "One year",      deva: "एक वर्ष",      tel: "ఒక సంవత్సరం",  days: 366 },
+    /* a count of days the person picks — the real number rides on vow.days */
+    { id: "days", name: "Some days",     deva: "कुछ दिन",      tel: "కొన్ని రోజులు", days: 0, custom: true },
   ];
   const occ = (id) => OCCASIONS.find(o => o.id === id) || OCCASIONS[0];
+  /* how long a vow runs, in days: a range is measured from its own two dates,
+     a custom term from the number typed, everything else from the table */
+  function spanDays(vow) {
+    if (vow.occasion === "range" && vow.from && vow.to) return Math.max(0, Math.round((new Date(vow.to + "T12:00:00") - new Date(vow.from + "T12:00:00")) / 86400000));
+    const t = term(vow.term);
+    return t.custom ? Math.max(1, vow.days | 0) : t.days;
+  }
+  const startOf = (vow) => new Date((vow.occasion === "range" && vow.from ? vow.from : vow.start) + "T12:00:00");
+  const dayOk = (vow, o, d, PA, loc) => o.weekday ? d.getDay() === (vow.weekday || 0) : o.tithi ? PA.forDay(d, loc).tithiIndex === (vow.tithi | 0) : o.test(PA.forDay(d, loc));
   function vowLoc() { // the reader's own place, so tithi-bound vows fall on their real days
     const PA = AKSHARA_PANCHANGA, LOC = STUTI_LOC;
     if (!PA) return null;
@@ -182,17 +198,16 @@ export const STUTI_VOWS = (function () {
     const PA = AKSHARA_PANCHANGA, out = [];
     if (!PA) return out;
     const loc = vowLoc();
-    const o = occ(vow.occasion), t = term(vow.term);
-    const start = new Date(vow.start + "T12:00:00");
-    const end = new Date(start.getTime() + t.days * 86400000);
+    const o = occ(vow.occasion), span = spanDays(vow);
+    const start = startOf(vow);
+    const end = new Date(start.getTime() + span * 86400000);
     const from = new Date(); from.setHours(12, 0, 0, 0);
     const cur = from > start ? from : new Date(start);
     const limit = cap || 6;
-    for (let i = 0; i < t.days && out.length < limit; i++) {
+    for (let i = 0; i <= span && out.length < limit; i++) {
       const d = new Date(cur.getTime() + i * 86400000);
       if (d > end) break;
-      const ok = o.weekday ? d.getDay() === (vow.weekday || 0) : o.test(PA.forDay(d, loc));
-      if (ok) out.push(d);
+      if (dayOk(vow, o, d, PA, loc)) out.push(d);
     }
     return out;
   }
@@ -200,14 +215,13 @@ export const STUTI_VOWS = (function () {
     const PA = AKSHARA_PANCHANGA; if (!PA) return false;
     const loc = vowLoc();
     const d = date || new Date();
-    const start = new Date(vow.start + "T12:00:00");
-    const end = new Date(start.getTime() + term(vow.term).days * 86400000);
+    const start = startOf(vow);
+    const end = new Date(start.getTime() + spanDays(vow) * 86400000 + 43200000);
     if (d < start || d > end) return false;
-    const o = occ(vow.occasion);
-    return o.weekday ? d.getDay() === (vow.weekday || 0) : o.test(PA.forDay(d, loc));
+    return dayOk(vow, occ(vow.occasion), d, PA, loc);
   }
   return {
-    OCCASIONS, TERMS, occ, term, dates, isDue,
+    OCCASIONS, TERMS, occ, term, dates, isDue, spanDays,
     list: () => list.slice(),
     add: (v) => { list = list.concat([Object.assign({ id: "v" + Date.now(), start: STUTI_THREAD.dkey(), kept: [] }, v)]); save(); },
     remove: (id) => { list = list.filter(v => v.id !== id); save(); },

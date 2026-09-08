@@ -11,7 +11,7 @@
    sat under the status bar. One rule for all screens; env() covers iOS
    Safari and any WebView that exposes the insets natively. */
 .app {
-  padding-top: var(--safe-area-inset-top, env(safe-area-inset-top, 0px));
+  padding-top: var(--safe-area-inset-top, env(safe-area-inset-top, 0px)); /* the one carrier of the top inset: Capacitor's variable on the phone, env() on the web */
 }
 
 /* 2. The mic's listening pulse. Its colours are --accent-soft /
@@ -97,3 +97,19 @@
 /* the Record chip must never shrink or wrap inside the scrolling chip row */
 .reader-layers.tight .chip-record, .reader-layers.tight .chip-learn { flex: none; white-space: nowrap; }
 .reader-layers.tight > * { flex-shrink: 0; }
+/* with the Record chip the row is one control wider than the designer laid
+   it out for; it scrolls, as her own :has() rule does for a wrapped row */
+.reader-layers.tight:has(.chip-record) { overflow-x: auto; overflow-y: hidden; }
+
+/* ---- the top inset, once ----
+   The designer's phone-edge rules (8 Sep 2026) give four bars their own
+   env(safe-area-inset-top). In this app the frame carries the inset for every
+   screen (above), so those bars take it off again: on a current WebView env()
+   is real and the two would stack, and on an older one env() is 0 and the
+   frame is all there is either way. */
+.topbar { padding-top: 8px; }
+.app-gearrow { top: 6px; }
+.brandbar { padding-top: 14px; }
+.rd-toppanel.is-pinned { padding-top: 8px; }
+.app > .rd-toppanel.is-pinned .rd-pin-btn { top: 6px; }
+.gate-mail { display: block; margin-top: 10px; font-size: 14px; color: var(--accent-ink); text-decoration: underline; text-underline-offset: 3px; }

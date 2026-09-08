@@ -1,4 +1,4 @@
-import { Emblem, FavButton, Icon, Seal, deityStyle } from "./stuti-icons";
+import { DeityTile, FavButton, Icon, Seal, deityStyle } from "./stuti-icons";
 import React from "react";
 import { STUTI_BUILD } from "./stuti-build";
 import { STUTI } from "./stuti-data";
@@ -58,23 +58,47 @@ function HymnRow({ h, go, lang, showSeal = true, i = 0, from = "browse" }) {
 /* ---------------- By deity (adaptive grid) ---------------- */
 function DeityLens({ go, lang, tileMode = "seal" }) {
   const S = STUTI, L = STUTI_L;
-  const full = tileMode === "full";
+  /* every tile is the shared DeityTile; the old seal/full tweak no longer
+     changes the shape */
   /* the deities the reciter said they keep stand first */
   const kept = STUTI_PREFS ? STUTI_PREFS.get().kept : [];
   const deities = kept.length
     ? S.deities.slice().sort((a, b) => (kept.indexOf(b.id) !== -1) - (kept.indexOf(a.id) !== -1))
     : S.deities;
+  /* pinch on the grid re-flows it, as a photo roll does: spread → fewer, larger
+     tiles; pinch → more, smaller. Two to four across; the count sticks. */
+  const [cols, setCols] = React.useState(() => { const v = +(localStorage.getItem("stuti.deityCols") || 3); return v >= 2 && v <= 4 ? v : 3; });
+  const gridRef = React.useRef(null);
+  const pinch = React.useRef(null);
+  React.useEffect(() => { localStorage.setItem("stuti.deityCols", String(cols)); }, [cols]);
+  React.useEffect(() => {
+    const el = gridRef.current; if (!el) return;
+    const dist = t => Math.hypot(t[0].clientX - t[1].clientX, t[0].clientY - t[1].clientY);
+    const start = e => { if (e.touches.length === 2) { pinch.current = { d0: dist(e.touches), cols, moved: false }; el.classList.add("is-pinching"); } };
+    const move = e => {
+      const p = pinch.current; if (!p || e.touches.length !== 2) return;
+      e.preventDefault();
+      const s = dist(e.touches) / p.d0;
+      /* live stretch until the gesture commits to a new count */
+      el.style.transform = `scale(${Math.max(0.9, Math.min(1.1, s))})`;
+      const next = s > 1.25 ? Math.max(2, p.cols - 1) : s < 0.8 ? Math.min(4, p.cols + 1) : p.cols;
+      if (next !== p.cols) { p.cols = next; p.d0 = dist(e.touches); el.style.transform = ""; setCols(next); }
+    };
+    const end = e => { if (pinch.current && e.touches.length < 2) { pinch.current = null; el.style.transform = ""; el.classList.remove("is-pinching"); } };
+    /* trackpad pinch arrives as ctrl+wheel */
+    let acc = 0;
+    const wheel = e => { if (!e.ctrlKey) return; e.preventDefault(); acc += e.deltaY; if (Math.abs(acc) > 60) { setCols(c => Math.max(2, Math.min(4, c + (acc > 0 ? 1 : -1)))); acc = 0; } };
+    el.addEventListener("touchstart", start, { passive: true });
+    el.addEventListener("touchmove", move, { passive: false });
+    el.addEventListener("touchend", end); el.addEventListener("touchcancel", end);
+    el.addEventListener("wheel", wheel, { passive: false });
+    return () => { el.removeEventListener("touchstart", start); el.removeEventListener("touchmove", move); el.removeEventListener("touchend", end); el.removeEventListener("touchcancel", end); el.removeEventListener("wheel", wheel); };
+  }, [cols]);
   return (
     <div className="lens-pad">
-      <div className="tile-grid lib-deity-grid">
+      <div ref={gridRef} className={"tile-grid lib-deity-grid lib-deity-grid-" + cols} style={{ gridTemplateColumns: `repeat(${cols}, minmax(0, 1fr))` }}>
         {deities.map((d, i) => (
-          <button key={d.id} className={"gtile" + (full ? " gtile-full" : "") + (kept.indexOf(d.id) !== -1 ? " gtile-kept" : "")} style={{ ...deityStyle(d), animationDelay: `${40 + i * 45}ms` }}
-            onClick={() => go("deity", { deity: d.id, from: "browse" })}>
-            {full
-              ? <div className="gtile-pic"><Emblem d={d} variant="ink" /></div>
-              : <Seal d={d} size={134} style={{ width: "100%", height: "auto", aspectRatio: "1 / 1", maxWidth: 134 }} />}
-            <div className="gtile-name display" style={{ fontFamily: L.font(lang) }}>{L.name(d, lang)}</div>
-          </button>
+          <DeityTile key={d.id} d={d} lang={lang} i={i} kept={kept.indexOf(d.id) !== -1} onClick={() => go("deity", { deity: d.id, from: "browse" })} />
         ))}
         {/* the ninth shelf: what is coming. A dashed ring rather than an emblem —
             a drawn deity would promise a text that is not there yet, and eight

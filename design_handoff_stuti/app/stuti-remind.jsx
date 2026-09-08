@@ -84,9 +84,6 @@ function RemindCard({ lang = "deva", onOpen }) {
       <span className="rm-card-body">
         <span className="rm-title">{L.t("remindTitle", lang)}</span>
         <span className="rm-explain">{L.t("remindExplain", lang)}</span>
-        <span className="rm-sub" style={syOn.length && !r.on ? { fontFamily: L.font(lang) } : undefined}>
-          {parts.length ? parts.join(" · ") : L.t("remindOff", lang)}
-        </span>
       </span>
       <Icon name="chev" size={18} />
     </button>
@@ -119,7 +116,7 @@ function NudgePreview({ lang }) {
    sunset at the chosen place, so it moves daily and by city. The reciter
    picks the juncture; the app works out the minute, every day. */
 const LEADS = [0, 10, 15, 30];
-function SandhyaCues({ lang, loc, onNeedPermission }) {
+function SandhyaCues({ lang, loc, onNeedPermission, bare }) {
   const L = window.STUTI_L, S = window.STUTI_SANDHYA, P = window.AKSHARA_PANCHANGA;
   const p = usePrefs(), r = p.remind, sy = r.sandhya || {};
   if (!S || !P) return null;
@@ -137,8 +134,8 @@ function SandhyaCues({ lang, loc, onNeedPermission }) {
   const dayWord = next && next.at.getDate() !== new Date().getDate() ? L.t("tomorrow", lang) : L.t("todayLower", lang);
 
   return (
-    <div className="rm-sy-sect">
-      <div className="pd-cap">{L.t("remindSandhya", lang)}</div>
+    <div className={bare ? "" : "rm-sy-sect"}>
+      {!bare && <div className="pd-cap">{L.t("remindSandhya", lang)}</div>}
       <p className="rm-sy-note">{L.t("remindSandhyaSub", lang)}</p>
       <div className="rm-sy-list">
         {S.ORDER.map((id) => {
@@ -182,14 +179,26 @@ function SandhyaCues({ lang, loc, onNeedPermission }) {
    does not ring at all, because by then its window has closed — and if any
    enabled juncture falls inside, the sheet names it rather than letting the
    bell vanish without explanation. */
-function QuietHours({ lang }) {
+/* a captioned band. Cues that also have a bell on a card say so, so the sheet
+   reads as one place to see them all rather than a second, rival set of switches. */
+function RemindGroup({ cap, note, first, children }) {
+  return (
+    <div className={"rm-group" + (first ? " first" : "")}>
+      <div className="pd-cap">{cap}</div>
+      {note && <p className="rm-group-note">{note}</p>}
+      {children}
+    </div>
+  );
+}
+
+function QuietHours({ lang, bare }) {
   const L = window.STUTI_L, C = window.STUTI_CUES, S = window.STUTI_SANDHYA;
   const p = usePrefs(), q = p.remind.quiet || {};
   const set = (patch) => window.STUTI_PREFS.setQuiet(patch);
   let hush = [];
   try { hush = q.on ? C.silenced(C.ctx()) : []; } catch (e) {}
   return (
-    <div className="rm-sy-sect">
+    <div className={bare ? "" : "rm-sy-sect"}>
       <button className={"rm-toggle" + (q.on ? " on" : "")} onClick={() => set({ on: !q.on })} role="switch" aria-checked={!!q.on}>
         <span>{L.t("quietHours", lang)}</span>
         <span className="rm-switch"><i /></span>
@@ -249,24 +258,30 @@ function RemindSheet({ lang = "deva", onClose }) {
           <div className="rm-head-sub">{L.t("remindSub", lang)}</div>
         </div>
         <div className="pd-body scroll">
-          <button className={"rm-toggle" + (r.on ? " on" : "")} onClick={toggle} role="switch" aria-checked={r.on}>
-            <span className="rm-toggle-lbl"><span className="rm-toggle-bell"><Icon name="bell" size={16} /></span>{L.t("remindMeDaily", lang)}</span>
-            <span className="rm-switch"><i /></span>
-          </button>
-
-          <div className={"rm-fields" + (r.on ? "" : " off")}>
-            <div className="pd-cap">{L.t("atWhatHour", lang)}</div>
-            <div className="rm-times">
-              {TIME_CHIPS.map((t) => (
-                <button key={t} className={"rm-time" + (r.time === t ? " on" : "")} onClick={() => set({ time: t })}>{fmtTime(t, lang)}</button>
-              ))}
-              <label className="rm-time rm-time-custom">
-                <Icon name="clock" size={15} />
-                <input type="time" value={r.time} onChange={(e) => set({ time: e.target.value || "06:00" })} aria-label={L.t("atWhatHour", lang)} />
-              </label>
+          <RemindGroup cap={L.t("cueGroupDaily", lang)} first>
+            <button className={"rm-toggle" + (r.on ? " on" : "")} onClick={toggle} role="switch" aria-checked={r.on}>
+              <span className="rm-toggle-lbl"><span className="rm-toggle-bell"><Icon name="bell" size={16} /></span>{L.t("remindMeDaily", lang)}</span>
+              <span className="rm-switch"><i /></span>
+            </button>
+            <div className={"rm-fields" + (r.on ? "" : " off")}>
+              <div className="pd-cap">{L.t("atWhatHour", lang)}</div>
+              <div className="rm-times">
+                {TIME_CHIPS.map((t) => (
+                  <button key={t} className={"rm-time" + (r.time === t ? " on" : "")} onClick={() => set({ time: t })}>{fmtTime(t, lang)}</button>
+                ))}
+                <label className="rm-time rm-time-custom">
+                  <Icon name="clock" size={15} />
+                  <input type="time" value={r.time} onChange={(e) => set({ time: e.target.value || "06:00" })} aria-label={L.t("atWhatHour", lang)} />
+                </label>
+              </div>
+              <div className="rm-next">
+                {L.t("remindNext", lang)}: {next.today ? L.t("todayLower", lang) : L.t("tomorrow", lang)} {fmtTime(r.time, lang)}
+              </div>
             </div>
+          </RemindGroup>
 
-            <button className={"rm-toggle rm-toggle-quiet" + (r.tithi ? " on" : "")} onClick={() => set({ tithi: !r.tithi })} role="switch" aria-checked={r.tithi}>
+          <RemindGroup cap={L.t("cueGroupCalendar", lang)} note={L.t("cueMirrorPanchanga", lang)}>
+            <button className={"rm-toggle" + (r.tithi ? " on" : "")} onClick={() => set({ tithi: !r.tithi })} role="switch" aria-checked={r.tithi}>
               <span>{L.t("tithiNudges", lang)}</span>
               <span className="rm-switch"><i /></span>
             </button>
@@ -280,25 +295,34 @@ function RemindSheet({ lang = "deva", onClose }) {
                 ))}
               </div>
             )}
+          </RemindGroup>
 
-            <button className={"rm-toggle rm-toggle-quiet" + (r.progress !== false ? " on" : "")} onClick={() => set({ progress: r.progress === false })} role="switch" aria-checked={r.progress !== false}>
-              <span>{L.t("progressNudges", lang)}</span>
-              <span className="rm-switch"><i /></span>
-            </button>
-
-            <div className="pd-cap">{L.t("whatArrives", lang)}</div>
-            <NudgePreview lang={lang} />
-            <div className="rm-next">
-              {L.t("remindNext", lang)}: {next.today ? L.t("todayLower", lang) : L.t("tomorrow", lang)} {fmtTime(r.time, lang)}
-              {next.mark ? " · " + obsName(next.mark, lang) : ""}
-            </div>
-          </div>
-
-          <SandhyaCues lang={lang} loc={loc} onNeedPermission={() => { if (N && N.permission() === "default") N.ask().then(setPerm); }} />
+          <RemindGroup cap={L.t("remindSandhya", lang)} note={L.t("cueMirrorSandhya", lang)}>
+            <SandhyaCues bare lang={lang} loc={loc} onNeedPermission={() => { if (N && N.permission() === "default") N.ask().then(setPerm); }} />
+          </RemindGroup>
 
           <window.PrepCues lang={lang} />
 
-          <QuietHours lang={lang} />
+          <RemindGroup cap={L.t("cueGroupProgress", lang)}>
+            <button className={"rm-toggle" + (r.progress !== false ? " on" : "")} onClick={() => set({ progress: r.progress === false })} role="switch" aria-checked={r.progress !== false}>
+              <span>{L.t("progressNudges", lang)}</span>
+              <span className="rm-switch"><i /></span>
+            </button>
+          </RemindGroup>
+
+          <RemindGroup cap={L.t("cueGroupQuiet", lang)}>
+            <QuietHours bare lang={lang} />
+          </RemindGroup>
+
+          <RemindGroup cap={L.t("whatArrives", lang)}>
+            <NudgePreview lang={lang} />
+            {r.on && (
+              <div className="rm-next">
+                {L.t("remindNext", lang)}: {next.today ? L.t("todayLower", lang) : L.t("tomorrow", lang)} {fmtTime(r.time, lang)}
+                {next.mark && r.tithi ? " · " + obsName(next.mark, lang) : ""}
+              </div>
+            )}
+          </RemindGroup>
 
           {(r.on || Object.keys(r.sandhya || {}).some((k) => r.sandhya[k])) && perm === "default" && (
             <button className="rm-permit" onClick={() => N.ask().then(setPerm)}>
@@ -317,4 +341,4 @@ function RemindSheet({ lang = "deva", onClose }) {
   );
 }
 
-Object.assign(window, { RemindCard, RemindSheet, SandhyaCues, QuietHours, NudgePreview, usePrefs, fmtNudgeTime: fmtTime, nextNudge });
+Object.assign(window, { RemindCard, RemindSheet, RemindGroup, SandhyaCues, QuietHours, NudgePreview, usePrefs, fmtNudgeTime: fmtTime, nextNudge });

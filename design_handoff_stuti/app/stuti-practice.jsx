@@ -141,9 +141,19 @@ const NITYA_LENSES = [
   { id: "ledger",  key: "lensLedger",  icon: "book" },
 ];
 
-function NityaView({ go, lang = "deva", showPractices = true, openRemind }) {
+/* the lens is remembered: a reader or counter opened from Sādhana returns to
+   Sādhana, not to Recitation. A route may name one outright (`initLens`) —
+   a deep link from a notification, say — and that wins over the memory. */
+const NITYA_IDS = NITYA_LENSES.map((l) => l.id);
+function readNityaLens(init) {
+  if (init && NITYA_IDS.indexOf(init) >= 0) return init;
+  try { const v = localStorage.getItem("stuti-nitya-lens"); if (v && NITYA_IDS.indexOf(v) >= 0) return v; } catch (e) {}
+  return "patha";
+}
+function NityaView({ go, lang = "deva", showPractices = true, openRemind, initLens }) {
   const L = window.STUTI_L, LIB = window.STUTI_LIB;
-  const [lens0, setLens] = useStatePr("patha");
+  const [lens0, setLens] = useStatePr(() => readNityaLens(initLens));
+  useEffectPr(() => { if (initLens) setLens(readNityaLens(initLens)); }, [initLens]);
   /* the nomulu shelf is Telugu custom and hidden from the Devanāgarī interface, as in the library */
   const lens = lens0 === "nomu" && lang === "deva" ? "patha" : lens0;
   const choose = React.useCallback((id) => { setLens(id); try { localStorage.setItem("stuti-nitya-lens", id); } catch (e) {} }, [setLens]);
@@ -178,7 +188,7 @@ function NityaView({ go, lang = "deva", showPractices = true, openRemind }) {
         {arr.note}
       </div>
 
-      <div className={"lens-pad" + (lens === "nomu" ? " lens-red" : "")} data-lens={lens}>
+      <div className={"lens-pad" + (lens === "nomu" ? " lens-olive" : "")} data-lens={lens}>
         {lens === "patha" ? (
           <React.Fragment>
             <window.ReciteTracker lang={lang} />
@@ -195,7 +205,7 @@ function NityaView({ go, lang = "deva", showPractices = true, openRemind }) {
             <window.JapaView go={go} lang={lang} embedded={true} />
           </React.Fragment>
         ) : lens === "ledger" ? (
-          <window.LedgerLens lang={lang} onLens={choose} />
+          <window.LedgerLens lang={lang} onLens={choose} go={go} />
         ) : lens === "nomu" ? (
           <window.NomuTracker go={go} lang={lang} />
         ) : (

@@ -84,6 +84,7 @@ function Onboarding({ lang, setLang, onDone }) {
   const finish = () => {
     P.set({ kept: kept, remind: remind });
     P.finish();
+    try { window.STUTI_COUNT.hit("onboarded", { script: lang }); } catch (e) {}
     onDone();
   };
   const next = () => (i === last ? finish() : setI(i + 1));

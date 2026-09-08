@@ -39,7 +39,7 @@ function Picker({ value, options, onChange, placeholder, font, id, ariaLabel, se
               <div className="sel-search">
                 <Icon name="search" size={16} />
                 <input autoFocus value={q} onChange={(e) => setQ(e.target.value)}
-                  placeholder={placeholder || "—"} />
+                  placeholder={placeholder || window.STUTI_L.t("searchHint", window.STUTI_L.ui())} />
               </div>
             )}
             <div className="sel-sheet-list scroll">

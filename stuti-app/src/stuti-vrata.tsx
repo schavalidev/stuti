@@ -18,7 +18,11 @@ import { STUTI_VRATA } from "./stuti-vrata-data";
    ============================================================ */
 const { useState: useStateV2, useEffect: useEffectV2 } = React;
 
-const vRule = (v) => (masaSys && masaSys() === "purnimanta" && v.ruleP) ? v.ruleP : v.rule;
+const vRule = (v) => {
+  if (v.ruleBy && STUTI_VRATA && STUTI_VRATA.southern) return v.ruleBy(STUTI_VRATA.southern());
+  return (masaSys && masaSys() === "purnimanta" && v.ruleP) ? v.ruleP : v.rule;
+};
+export { vRule };
 /* the month reckoning can change under a screen that is already open */
 function useMasaSys() {
   const [s, setS] = useStateV2(() => (masaSys ? masaSys() : "amanta"));
@@ -169,7 +173,7 @@ function SamagriList({ vrataId, items, lang }) {
 function VrataDetail({ vrataId, go, lang, onBack }) {
   const S = STUTI, L = STUTI_L, V = STUTI_VRATA;
   useMasaSys();
-  const v = V.byId[vrataId];
+  const v = V.lookup ? V.lookup(vrataId) : V.byId[vrataId];
   if (!v) return null;
   const d = S.deityById[v.deity];
   const date = V.nextDate(v);
@@ -284,6 +288,7 @@ function VrataDetail({ vrataId, go, lang, onBack }) {
         )}
 
         {v.source && <div className="vr-source">{vp3(v.source, lang)}</div>}
+        {v.brief && !v.source && <div className="vr-caveat">{L.t("vrataNote", lang)}</div>}
         <div style={{ height: 40 }} />
       </div>
     </div>

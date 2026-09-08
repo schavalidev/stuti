@@ -1,5 +1,6 @@
 import { Flame, Icon, Seal, deityStyle } from "./stuti-icons";
 import React from "react";
+import { STUTI_COUNT } from "./stuti-count";
 import { STUTI } from "./stuti-data";
 import { FlyleafForm, KnownClauses, useFlyleaf } from "./stuti-flyleaf";
 import { STUTI_L } from "./stuti-i18n";
@@ -93,6 +94,7 @@ function Onboarding({ lang, setLang, onDone }) {
   const finish = () => {
     P.set({ kept: kept, remind: remind });
     P.finish();
+    try { STUTI_COUNT.hit("onboarded", { script: lang }); } catch (e) {}
     onDone();
   };
   const next = () => (i === last ? finish() : setI(i + 1));

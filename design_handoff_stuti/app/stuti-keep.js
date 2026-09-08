@@ -72,7 +72,7 @@ window.STUTI_KEEP = (function () {
   }
 
   /* the nomu's and vrata's own records, resolved */
-  const subject = (k) => k.kind === "vrata" ? (window.STUTI_VRATA && window.STUTI_VRATA.byId[k.ref]) : (window.STUTI_NOMU && window.STUTI_NOMU.get(k.ref));
+  const subject = (k) => k.kind === "vrata" ? (window.STUTI_VRATA && (window.STUTI_VRATA.lookup ? window.STUTI_VRATA.lookup(k.ref) : window.STUTI_VRATA.byId[k.ref])) : (window.STUTI_NOMU && window.STUTI_NOMU.get(k.ref));
   const hasUdyapana = (k) => { const n = k.kind === "nomu" && subject(k); return !!(n && n.udyapana && (n.udyapana.roman || n.udyapana.tel)); };
 
   /* ---- what one record asks of one day — pure, given the engines ----
@@ -91,6 +91,12 @@ window.STUTI_KEEP = (function () {
     if (k.mode === "month") {
       if (k.masa == null || !eng.panchanga || !eng.place) return null;
       let pa; try { pa = eng.panchanga.forDay(d, eng.place); } catch (e) { return null; }
+      /* "any month this year" — owed all year; the nudge comes as each lunar month opens */
+      if (k.masa === "any") {
+        let first = false;
+        try { const y = eng.panchanga.forDay(new Date(d - DAY), eng.place); first = y.masaIdx !== pa.masaIdx || !!y.masaAdhika !== !!pa.masaAdhika; } catch (e) {}
+        return { state: "month", done: false, remind: first };
+      }
       if (pa.masaIdx !== k.masa || pa.masaAdhika) return null;
       /* the month's first day, and its last `lead` days */
       let first = false, closing = false;
@@ -101,7 +107,7 @@ window.STUTI_KEEP = (function () {
       return { state: "month", done: false, remind: first || closing };
     }
     if (k.mode === "vrata") {
-      const V = eng.vrata, v = V && V.byId[k.ref]; if (!v) return null;
+      const V = eng.vrata, v = V && (V.lookup ? V.lookup(k.ref) : V.byId[k.ref]); if (!v) return null;
       let nd; try { nd = V.nextDate(v, d); } catch (e) { return null; }
       if (!nd) return null;
       const away = Math.round((noon(nd) - d) / DAY);

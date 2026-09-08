@@ -1,5 +1,6 @@
 import React from "react";
 import { STUTI_BUILD } from "./stuti-build";
+import { STUTI_COUNT } from "./stuti-count";
 import { STUTI_DANA } from "./stuti-dana-core";
 import { STUTI_L } from "./stuti-i18n";
 import { Icon } from "./stuti-icons";
@@ -19,12 +20,15 @@ import { STUTI_LOC } from "./stuti-store";
    ============================================================ */
 const { useState: useFbS } = React;
 
-/* the one address to change when there is a better one */
-const FB_TO = "feedback@stuti.app";
+/* the address lives on the build stamp, beside the version — one door, named once */
+const FB_TO = STUTI_BUILD.SUPPORT;
 
-function FeedbackSheet({ lang = "deva", onClose }) {
+/* `kind` opens the sheet on one of the three doors; `about` names the text the
+   message is about, so a correction sent from the reader arrives saying which
+   stotra without the reciter having to type it */
+function FeedbackSheet({ lang = "deva", onClose, kind: kind0, about }) {
   const L = STUTI_L;
-  const [kind, setKind] = useFbS("problem");
+  const [kind, setKind] = useFbS(kind0 || "problem");
   const [text, setText] = useFbS("");
   const [reply, setReply] = useFbS("");
   const [sent, setSent] = useFbS("");
@@ -40,6 +44,7 @@ function FeedbackSheet({ lang = "deva", onClose }) {
     const B = STUTI_BUILD;
     if (kind === "problem" && B && B.diagnostics) { try { return B.diagnostics(); } catch (e) {} }
     const out = [B && B.label ? B.label() : "Stuti"];
+    if (about) out.push("text: " + about);
     out.push("script: " + lang);
     try {
       const LOC = STUTI_LOC, LOCS = AKSHARA_PANCHANGA.locations;
@@ -57,11 +62,12 @@ function FeedbackSheet({ lang = "deva", onClose }) {
   const send = () => {
     if (!text.trim()) return;
     const href = "mailto:" + FB_TO + "?subject=" + encodeURIComponent(subject) + "&body=" + encodeURIComponent(body());
-    try { window.location.href = href; setSent("mail"); } catch (e) { setSent("fail"); }
+    try { window.location.href = href; setSent("mail"); count(); } catch (e) { setSent("fail"); }
   };
+  const count = () => { try { STUTI_COUNT.hit("feedback", { kind }); } catch (e) {} };
   const copy = () => {
     const t = subject + "\n\n" + body();
-    if (navigator.clipboard && navigator.clipboard.writeText) navigator.clipboard.writeText(t).then(() => setSent("copied"), () => setSent("fail"));
+    if (navigator.clipboard && navigator.clipboard.writeText) navigator.clipboard.writeText(t).then(() => { setSent("copied"); count(); }, () => setSent("fail"));
     else setSent("fail");
   };
 

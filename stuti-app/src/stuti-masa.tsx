@@ -1,7 +1,7 @@
-import { Icon, Seal, deityStyle } from "./stuti-icons";
 import React from "react";
 import { STUTI } from "./stuti-data";
 import { STUTI_L } from "./stuti-i18n";
+import { Icon, Seal, deityStyle, tileDown, tileRest } from "./stuti-icons";
 import { STUTI_LIB } from "./stuti-library-data";
 import { STUTI_MASA } from "./stuti-masa-data";
 import { RtuGlyph, SeasonAmbient } from "./stuti-panchanga";
@@ -79,8 +79,9 @@ function MasaLens({ lang, onOpen }) {
   return (
     <div className="lens-pad">
       <div className="lens-sect"><div className="eyebrow">{L.t("masaNow", lang)}</div></div>
-      <button className="masa-now" style={MASA_MIX[hero.id] ? { "--rtu": rtu.hue, "--rtu-b": MASA_MIX[hero.id].hueB } : { "--rtu": rtu.hue }} data-mix={MASA_MIX[hero.id] ? "1" : undefined} onClick={() => onOpen(hero.id)}>
+      <button className="masa-now" style={MASA_MIX[hero.id] ? { "--rtu": rtu.hue, "--rtu-b": MASA_MIX[hero.id].hueB, "--i": 0 } : { "--rtu": rtu.hue, "--i": 0 }} data-mix={MASA_MIX[hero.id] ? "1" : undefined} onPointerDown={tileDown} onPointerLeave={tileRest} onPointerUp={tileRest} onPointerCancel={tileRest} onClick={() => onOpen(hero.id)}>
         <SeasonAmbient kind={rtu.kind} dense mix={MASA_MIX[hero.id] && MASA_MIX[hero.id].kinds} heat={MASA_MIX[hero.id] && MASA_MIX[hero.id].heat} sunHue={MASA_MIX[hero.id] && MASA_MIX[hero.id].sunHue} sunBright={MASA_MIX[hero.id] && MASA_MIX[hero.id].sunBright} />
+        <span className="niche-sheen" aria-hidden="true"></span>
         <span className="masa-now-top">
           <span className="masa-now-rtu">
             <RtuGlyph kind={rtu.kind} size={17} />
@@ -110,7 +111,8 @@ function MasaLens({ lang, onOpen }) {
         {rest.map((m, n) => {
           const r = maRtu(m.id), kept = maKept(m), mix = MASA_MIX[m.id];
           return (
-            <button key={m.id} className="masa-tile masa-tile-plain" style={mix ? { "--rtu": r.hue, "--rtu-b": mix.hueB, animationDelay: `${60 + n * 30}ms` } : { "--rtu": r.hue, animationDelay: `${60 + n * 30}ms` }} data-mix={mix ? "1" : undefined} onClick={() => onOpen(m.id)}>
+            <button key={m.id} className="masa-tile masa-tile-plain" onPointerDown={tileDown} onPointerLeave={tileRest} onPointerUp={tileRest} onPointerCancel={tileRest} style={mix ? { "--rtu": r.hue, "--rtu-b": mix.hueB, "--i": n, animationDelay: `${60 + n * 30}ms` } : { "--rtu": r.hue, "--i": n, animationDelay: `${60 + n * 30}ms` }} data-mix={mix ? "1" : undefined} onClick={() => onOpen(m.id)}>
+              <span className="niche-sheen" aria-hidden="true"></span>
               <span className="masa-tile-name display" style={{ fontFamily: font }}>{maP(m.name, lang)}</span>
               <span className="masa-tile-greg">{maRange(m, lang)}</span>
               {kept > 0 && <span className="masa-tile-kept">{kept + " " + L.t("masaKept", lang)}</span>}

@@ -14,7 +14,12 @@
 - The keystore and `android/keystore.properties` are gitignored; don't commit or paste them anywhere.
 - The changelog to update is `design_handoff_stuti/docs/Changelog.html`.
 
-## Typography
+## Typography — how to avoid font-detective sessions
 - **All font choices go through the CSS tokens** (`--font-ui`, `--font-display`, `--font-deva`, `--font-telugu`, `--font-deva-serif`, `--font-telugu-serif` in `stuti.css`). Never hard-code a family name in a rule or a JSX `style={{ fontFamily }}`.
-- **Known inline-family exceptions:** `stuti-sky.jsx` (sandhyā plate title + till, greeting), `stuti-flow.jsx` end-marks.
-- **Alias trap:** `'Surasans02 Regular'` is one Regular.ttf registered across weight 300–700. For a real bold, use the `'Surasans02'` family. Nothing heavier than 700 exists in any project font.
+- **Known inline-family exceptions** (they beat every stylesheet rule — check these FIRST when a font "won't change"): `stuti-sky.jsx` (sandhyā plate title + till, greeting), `home-redesign.jsx`/`stuti-flow.jsx` end-marks. If more are added, list them here.
+- **Alias trap:** `'Surasans02 Regular'` is one Regular.ttf registered across weight 300–700 — every weight renders as Regular. For a real bold, use the `'Surasans02'` family (has true faces at 300/400/500/700). Nothing heavier than 700 exists in any project font.
+- **When diagnosing, don't guess from CSS** — probe the live element's `getComputedStyle(el).fontFamily/fontWeight` plus `document.fonts.check()` in one shot; inline styles and `:is()` specificity make source-reading unreliable.
+
+## Design updates
+- The designer's Claude Design project root is newer than its own `design_handoff_stuti/` export; when she hands over the project folder, assemble the handoff from the root working files that `Stuti.html` loads (see the 8 Sep 2026 port in the changelog), then run the pipeline.
+- The beta latch (`stuti-gate.jsx`) asks for the passcode in `stuti-build.js` (`STUTI_BUILD.GATE`) once per device; set it to null for a public build.

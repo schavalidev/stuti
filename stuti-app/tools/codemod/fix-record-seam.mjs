@@ -85,8 +85,8 @@ patchFile(join(SRC, "stuti-reader.tsx"), [
     setMicNote(false);
     let live = true;`,
    "recordOn clears the note"],
-  [`disabled={micNote} aria-pressed={recordOn}`,
-   `aria-pressed={recordOn}`,
+  [`disabled={micNote} aria-pressed=`,
+   `aria-pressed=`,
    "toggle stays enabled"],
   // the toggle says its name
   [`                <Icon name="mic" size={17} />
@@ -104,12 +104,19 @@ patchFile(join(SRC, "stuti-reader.tsx"), [
    "cue alongside the strip"],
 ]);
 
-patchFile(join(SRC, "stuti-i18n.ts"), [
-  [`    micDenied:     { roman: "The microphone is not available — recording needs permission. Open the app directly and try again.",`,
-   `    micDenied:     { roman: "The microphone was refused. Allow it for Stuti in Settings → Apps → Stuti → Permissions, then switch Record on again.",`,
-   "micDenied roman"],
-  ["माइक्रोफोन उपलब्ध नहीं — रिकॉर्डिंग के लिए अनुमति चाहिए। ऐप को सीधे खोलकर फिर से कोशिश करें।", "माइक्रोफ़ोन को अनुमति नहीं मिली। सेटिंग्स → ऐप्स → Stuti → अनुमतियाँ में माइक्रोफ़ोन चालू करें, फिर रिकॉर्ड दोबारा चालू करें।", "micDenied deva"],
-  ["ఇక్కడ మైక్రోఫోన్ అందుబాటులో లేదు — రెకార్డు చేయడానికి అనుమతి కావాలి, మరొక పేజీ లోపల తెరిచిన పేజీకి అది సాధారణంగా ఇవ్వబడదు.", "మైక్రోఫోన్ అనుమతి నిరాకరించబడింది. సెట్టింగ్స్ → యాప్స్ → Stuti → అనుమతులు లో మైక్రోఫోన్ అనుమతించి, రికార్డు మళ్లీ ఆన్ చేయండి.", "micDenied telugu"],
-]);
+// the refusal note: the designer's copy was written for a web embed ("open the
+// app directly"); inside the app the reciter needs the settings path. The
+// three strings are replaced by pattern, so her wording may change freely.
+{
+  const file = join(SRC, "stuti-i18n.ts");
+  let t = readFileSync(file, "utf8");
+  const re = /(    micDenied:\s*\{ roman: ")([^"]*)(",\s*deva: ")([^"]*)(",\s*telugu: ")([^"]*)(")/;
+  if (!re.test(t)) throw new Error("fix-record-seam: micDenied block not found in stuti-i18n.ts");
+  t = t.replace(re, (m, a, r, b, d, c, tl, e) => a
+    + "The microphone was refused. Allow it for Stuti in Settings → Apps → Stuti → Permissions, then switch Record on again." + b
+    + "माइक्रोफ़ोन को अनुमति नहीं मिली। सेटिंग्स → ऐप्स → Stuti → अनुमतियाँ में माइक्रोफ़ोन चालू करें, फिर रिकॉर्ड दोबारा चालू करें।" + c
+    + "మైక్రోఫోన్ అనుమతి నిరాకరించబడింది. సెట్టింగ్స్ → యాప్స్ → Stuti → అనుమతులు లో మైక్రోఫోన్ అనుమతించి, రికార్డు మళ్లీ ఆన్ చేయండి." + e);
+  writeFileSync(file, t);
+}
 
 console.log("record seam applied");

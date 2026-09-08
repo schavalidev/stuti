@@ -1,7 +1,11 @@
 import { STUTI_EPHEM } from "./stuti-ephemeris";
 import { AKSHARA_PANCHANGA } from "./stuti-panchanga-engine";
+import { STUTI_PARVA_EXTRA } from "./stuti-parva-data";
+import { STUTI_PREFS } from "./stuti-prefs";
 import { sampradaya } from "./stuti-reckoning";
 import { STUTI_SANKRANTI } from "./stuti-sankranti-data";
+import { STUTI_LOC } from "./stuti-store";
+import { STUTI_TITHIS } from "./stuti-tithis-core";
 
 /* ============================================================
    STUTI — Vratas & viśeṣa pūjās
@@ -123,6 +127,19 @@ export const STUTI_VRATA = (function () {
      Smārtas by aṣṭamī at niśītha, Vaiṣṇavas by aṣṭamī at sunrise. This is
      a genuine disagreement between schools, not an error in either. */
   const sampradaya = () => (typeof sampradaya === "function" ? sampradaya() : "smarta");
+  /* whether the reciter keeps the southern (Deccan) dates: a Settings pick
+     when made, else the chosen place — south of the Vindhyas, ~21.5°N */
+  function southern() {
+    try {
+      const pref = STUTI_PREFS && STUTI_PREFS.get().tradition;
+      if (pref === "south") return true;
+      if (pref === "north") return false;
+      const LOC = STUTI_LOC, LOCS = P().locations;
+      const id = LOC && LOC.getLocId();
+      const loc = (id === "detected" && LOC.getDetected()) || LOCS.find((l) => l.id === id) || LOCS[0];
+      return loc.lat < 21.5;
+    } catch (e) { return true; }
+  }
 
   function viddhaShift(base, ti) {
     if (sampradaya() !== "vaishnava") return base;
@@ -164,6 +181,7 @@ export const STUTI_VRATA = (function () {
       if (pa.sunrise == null || pa.sunset == null) continue;
       let mins;
       if (rule === "madhyahna") mins = (pa.sunrise + pa.sunset) / 2;
+      else if (rule === "aparahna") mins = pa.sunrise + (pa.sunset - pa.sunrise) * 0.7;   // the fourth fifth of daylight — śrāddha's hour
       else if (rule === "pradosha") mins = pa.sunset;
       else if (rule === "nishitha") mins = 1440;          // the night that follows
       else mins = pa.sunrise;
@@ -185,7 +203,7 @@ export const STUTI_VRATA = (function () {
       id: "ganesha-chaturthi", deity: "ganesha",
       name: { roman: "Gaṇeśa Caturthī", deva: "गणेश चतुर्थी", tel: "గణేశ చతుర్థి" },
       rule: { roman: "Bhādrapada · Śukla Caturthī", deva: "भाद्रपद शुक्ल चतुर्थी", tel: "భాద్రపద శుక్ల చతుర్థి" },
-      find: (y) => lunar(y, MASA.bhadrapada, T.caturthi, "madhyahna"),
+      find: (y) => lunar(y, MASA.bhadrapada, T.caturthi, "madhyahna"), kala: "madhyahna",
       duration: { roman: "One day, or one to eleven days of installation", tel: "ఒక రోజు, లేదా ఒకటి నుండి పదకొండు రోజుల ప్రతిష్ఠ" },
       tagline: { roman: "The birth of Gaṇeśa — clay, not stone; welcomed as a guest and sent home to the water.",
                  tel: "గణేశుని జననం — మట్టితో, రాతితో కాదు; అతిథిగా ఆహ్వానించి, నీటికి సాగనంపుతారు." },
@@ -366,7 +384,21 @@ export const STUTI_VRATA = (function () {
       id: "navaratri", deity: "devi",
       name: { roman: "Śāradīya Navarātri", deva: "शारदीय नवरात्रि", tel: "శారదీయ నవరాత్రి" },
       rule: { roman: "Āśvayuja · Śukla Pratipadā to Navamī", deva: "आश्विन शुक्ल प्रतिपदा से नवमी", tel: "ఆశ్వయుజ శుక్ల పాడ్యమి నుండి నవమి" },
-      find: (y) => lunar(y, MASA.ashvina, T.pratipada),
+      find: (y) => lunar(y, MASA.ashvina, T.pratipada), days: 10,
+      /* the day's own line, for the home card while the nine nights run.
+         Alaṅkāra orders differ by family; these are the Telugu smārta ones. */
+      dayLines: [
+        { roman: "Ghaṭasthāpana · Śailaputrī", deva: "घटस्थापना · शैलपुत्री", tel: "ఘటస్థాపన · శైలపుత్రి" },
+        { roman: "Brahmacāriṇī", deva: "ब्रह्मचारिणी", tel: "బ్రహ్మచారిణి" },
+        { roman: "Candraghaṇṭā", deva: "चन्द्रघण्टा", tel: "చంద్రఘంట" },
+        { roman: "Kūṣmāṇḍā", deva: "कूष्माण्डा", tel: "కూష్మాండ" },
+        { roman: "Skandamātā · Lalitā Pañcamī", deva: "स्कन्दमाता · ललिता पञ्चमी", tel: "స్కందమాత · లలితా పంచమి" },
+        { roman: "Kātyāyanī", deva: "कात्यायनी", tel: "కాత్యాయని" },
+        { roman: "Kālarātri · Sarasvatī āvāhana", deva: "कालरात्रि · सरस्वती आवाहन", tel: "కాలరాత్రి · సరస్వతీ ఆవాహన" },
+        { roman: "Mahāgaurī · Durgāṣṭamī", deva: "महागौरी · दुर्गाष्टमी", tel: "మహాగౌరి · దుర్గాష్టమి" },
+        { roman: "Siddhidātrī · Mahānavamī, Āyudha pūjā", deva: "सिद्धिदात्री · महानवमी, आयुध पूजा", tel: "సిద్ధిదాత్రి · మహానవమి, ఆయుధ పూజ" },
+        { roman: "Vijayadaśamī · Śamī pūjā at dusk", deva: "विजयदशमी · सायं शमी पूजा", tel: "విజయదశమి · సాయంత్రం శమీ పూజ" },
+      ],
       duration: { roman: "Nine nights, ten days with Vijayadaśamī", tel: "తొమ్మిది రాత్రులు, విజయదశమితో పది రోజులు" },
       tagline: { roman: "Nine nights to the Mother — Durgā, Lakṣmī and Sarasvatī, three nights each.",
                  tel: "అమ్మవారికి తొమ్మిది రాత్రులు — దుర్గ, లక్ష్మి, సరస్వతి, మూడేసి రాత్రులు." },
@@ -638,7 +670,7 @@ export const STUTI_VRATA = (function () {
       name: { roman: "Mahā Śivarātri", deva: "महा शिवरात्रि", tel: "మహా శివరాత్రి" },
       rule:  { roman: "Māgha · Kṛṣṇa Caturdaśī",    deva: "माघ कृष्ण चतुर्दशी",     tel: "మాఘ కృష్ణ చతుర్దశి" },
       ruleP: { roman: "Phālguna · Kṛṣṇa Caturdaśī", deva: "फाल्गुन कृष्ण चतुर्दशी", tel: "ఫాల్గుణ కృష్ణ చతుర్దశి" },
-      find: (y) => lunar(y, MASA.magha, 28, "nishitha"),
+      find: (y) => lunar(y, MASA.magha, 28, "nishitha"), kala: "nishitha",
       duration: { roman: "Night-long · four praharas", tel: "రాత్రంతా · నాలుగు ప్రహరాలు" },
       who: { roman: "Kept by all; the vigil is the vrata.", tel: "అందరూ చేస్తారు; జాగరణమే వ్రతం." },
       tagline: { roman: "The great night of Śiva — vigil, fasting, and the rudrābhiṣeka.", tel: "శివుని మహారాత్రి — జాగరణ, ఉపవాసం, రుద్రాభిషేకం." },
@@ -687,15 +719,63 @@ export const STUTI_VRATA = (function () {
       stotras: [{ deity: "shiva", m: "lingastakam" }, { deity: "shiva", m: "pancaksara" }],
     },
     {
-      id: "dipavali", deity: "devi", brief: true,
+      id: "dipavali", deity: "devi",
       name: { roman: "Dīpāvalī · Lakṣmī Pūjā", deva: "दीपावली · लक्ष्मी पूजा", tel: "దీపావళి · లక్ష్మీ పూజ" },
       rule:  { roman: "Āśvayuja · Amāvāsyā",  deva: "आश्विन अमावस्या",  tel: "ఆశ్వయుజ అమావాస్య" },
       ruleP: { roman: "Kārtika · Amāvāsyā", deva: "कार्तिक अमावस्या", tel: "కార్తిక అమావాస్య" },
-      find: (y) => lunar(y, MASA.ashvina, T.amavasya, "pradosha"),
-      duration: { roman: "Evening, at pradoṣa", tel: "సాయంత్రం, ప్రదోష వేళ" },
+      /* five days, Dhanatrayodaśī to Bhrātṛ Dvitīyā; the vrata's own date
+         (find) stays the Lakṣmī Pūjā amāvāsyā, so `lead` says how many days
+         the span opens before it. The kāla applies to the pūjā day alone. */
+      find: (y) => lunar(y, MASA.ashvina, T.amavasya, "pradosha"), kala: "pradosha", days: 5, lead: 2, kalaDay: 3,
+      dayLines: [
+        { roman: "Dhanatrayodaśī · Dhanteras", deva: "धनत्रयोदशी · धनतेरस", tel: "ధనత్రయోదశి · ధంతేరస్" },
+        { roman: "Naraka Caturdaśī · the oil bath at dawn", deva: "नरक चतुर्दशी · प्रभात अभ्यङ्ग स्नान", tel: "నరక చతుర్దశి · తెల్లవారుజామున అభ్యంగ స్నానం" },
+        { roman: "Lakṣmī Pūjā · the lamps", deva: "लक्ष्मी पूजा · दीपदान", tel: "లక్ష్మీ పూజ · దీపాలు" },
+        { roman: "Bali Pāḍyami · Govardhana pūjā", deva: "बलि प्रतिपदा · गोवर्धन पूजा", tel: "బలి పాడ్యమి · గోవర్ధన పూజ" },
+        { roman: "Bhrātṛ Dvitīyā · Bhāgi Bhāgi", deva: "भ्रातृ द्वितीया · भाई दूज", tel: "భగినీ హస్త భోజనం · యమ ద్వితీయ" },
+      ],
+      duration: { roman: "Five days · Dhanatrayodaśī to Bhrātṛ Dvitīyā; the Lakṣmī Pūjā at pradoṣa on the amāvāsyā", tel: "ఐదు రోజులు · ధనత్రయోదశి నుండి యమ ద్వితీయ వరకు; అమావాస్య ప్రదోష వేళ లక్ష్మీ పూజ" },
       who: { roman: "The whole household; the lamps are lit by everyone.", tel: "ఇల్లంతా; దీపాలు అందరూ వెలిగిస్తారు." },
       tagline: { roman: "The festival of lights — Lakṣmī enters the swept and lamp-lit home.", tel: "దీపాల పండుగ — శుభ్రమైన, దీపాలంకృత గృహంలోకి లక్ష్మి రాక." },
+      significance: [
+        { roman: "Amāvāsyā is the darkest night of the year's darkest month; the lamps are set against it on purpose — light is asked for where it is least.", tel: "అమావాస్య సంవత్సరంలోని చీకటి నెలలో అతి చీకటి రాత్రి; దీపాలు దానికి ఎదురుగా కావాలనే పెడతారు." },
+        { roman: "In the south the day belongs first to Kṛṣṇa's victory over Naraka — the dawn oil bath on Caturdaśī is the older heart of the festival; the Lakṣmī Pūjā at dusk is what the trading towns added.", tel: "దక్షిణాదిలో ఇది ముందు నరకాసురునిపై కృష్ణుని విజయం — చతుర్దశి తెల్లవారుజాము అభ్యంగ స్నానం పండుగ ప్రాచీన హృదయం; సాయంత్రం లక్ష్మీ పూజ వర్తక పట్టణాలు చేర్చినది." },
+        { roman: "The five days answer five different debts: to health (Dhanvantari), to Kṛṣṇa, to Lakṣmī, to the earth and cattle (Govardhana), and to one's own sister.", tel: "ఐదు రోజులు ఐదు రుణాలు తీర్చుతాయి: ఆరోగ్యం (ధన్వంతరి), కృష్ణుడు, లక్ష్మి, భూమి-పశువులు (గోవర్ధన), స్వంత సోదరి." },
+      ],
+      timeline: [
+        { t: { roman: "Dhanatrayodaśī", tel: "ధనత్రయోదశి" }, d: { roman: "Clean the house through; buy a new vessel or a little gold; light the first lamp for Yama at the doorstep, facing south.", tel: "ఇల్లంతా శుభ్రం; కొత్త పాత్ర లేదా కొంచెం బంగారం; గుమ్మంలో దక్షిణాభిముఖంగా యమదీపం." } },
+        { t: { roman: "Naraka Caturdaśī", tel: "నరక చతుర్దశి" }, d: { roman: "Before sunrise, the abhyaṅga snāna with sesame oil; new clothes; a few crackers at dawn in the south.", tel: "సూర్యోదయానికి ముందు నువ్వుల నూనెతో అభ్యంగ స్నానం; కొత్త బట్టలు; తెల్లవారుజామున కొద్దిగా టపాసులు." } },
+        { t: { roman: "Amāvāsyā · pradoṣa", tel: "అమావాస్య · ప్రదోషం" }, d: { roman: "Lakṣmī Pūjā as the sun sets; every lamp in the house lit, the doors left open, the ledgers begun anew.", tel: "సూర్యాస్తమయాన లక్ష్మీ పూజ; ఇంటి దీపాలన్నీ వెలిగించి, తలుపులు తెరిచి, కొత్త లెక్కలు." } },
+        { t: { roman: "Bali Pāḍyami", tel: "బలి పాడ్యమి" }, d: { roman: "Govardhana pūjā with a mound of cooked rice; cattle garlanded; Bali welcomed back for his one day.", tel: "అన్నకూటంతో గోవర్ధన పూజ; పశువులకు పూలదండలు; బలికి ఒక్కరోజు స్వాగతం." } },
+        { t: { roman: "Bhrātṛ Dvitīyā", tel: "భగినీ హస్త భోజనం" }, d: { roman: "Brothers eat at their sisters' homes; the sister marks his forehead and asks Yama for his long life.", tel: "సోదరులు సోదరి ఇంట భోజనం; సోదరి తిలకం దిద్ది యముని ఆయుష్షు కోరుతుంది." } },
+      ],
+      samagri: [
+        { roman: "Clay lamps in quantity, sesame oil or ghee, cotton wicks", tel: "ప్రమిదెలు ఎక్కువగా, నువ్వుల నూనె లేదా నెయ్యి, వత్తులు" },
+        { roman: "A Lakṣmī image or coin, a new red cloth, a kalaśa", tel: "లక్ష్మీ ప్రతిమ లేదా నాణెం, కొత్త ఎరుపు వస్త్రం, కలశం" },
+        { roman: "Lotus or marigold, kaṅkuṃa and turmeric, rice grains for the paḍma", tel: "తామర లేదా బంతి, కుంకుమ, పసుపు, పద్మానికి బియ్యం" },
+        { roman: "Sesame oil and śīkākāi for the Caturdaśī bath", tel: "చతుర్దశి స్నానానికి నువ్వుల నూనె, శీకాయ" },
+        { roman: "Sweets for the neighbours; a new account book if the house keeps one", tel: "ఇరుగుపొరుగుకి మిఠాయిలు; కొత్త లెక్కల పుస్తకం" },
+      ],
+      vidhi: [
+        { step: { roman: "Sweep and light", tel: "శుభ్రం, దీపం" }, detail: { roman: "The house is cleaned to the corners before the first lamp; Lakṣmī is said to pass a house that is dark or unswept.", tel: "మొదటి దీపానికి ముందే ఇల్లు మూలల వరకూ శుభ్రం; చీకటి, అశుభ్ర ఇంటిని లక్ష్మి దాటిపోతుందని చెబుతారు." } },
+        { step: { roman: "Abhyaṅga snāna", tel: "అభ్యంగ స్నానం" }, detail: { roman: "On Caturdaśī, oil the body before dawn and bathe while the stars are still out — the Gaṅgā is held to be in the water that hour.", tel: "చతుర్దశి నాడు తెల్లవారక ముందే నూనె రాసుకొని, నక్షత్రాలుండగానే స్నానం — ఆ ఘడియ నీటిలో గంగ ఉంటుందని." } },
+        { step: { roman: "Lakṣmī Pūjā", tel: "లక్ష్మీ పూజ" }, detail: { roman: "At pradoṣa on the amāvāsyā: kalaśa sthāpana, ṣoḍaśopacāra with the aṣṭottara, then the Śrī Sūkta or Kanakadhārā, and the lamps carried to every doorway.", tel: "అమావాస్య ప్రదోష వేళ: కలశ స్థాపన, అష్టోత్తరంతో షోడశోపచారం, శ్రీ సూక్తం లేదా కనకధార, ప్రతి గుమ్మానికి దీపాలు." } },
+        { step: { roman: "Keep the lamps", tel: "దీపాలు నిలపండి" }, detail: { roman: "One lamp burns through the night; the rest are relit each evening to Kārtika Pūrṇimā in houses that keep the month.", tel: "ఒక దీపం రాత్రంతా; మిగతావి కార్తిక పౌర్ణమి వరకూ ప్రతి సాయంత్రం మళ్ళీ — మాసం పాటించే ఇళ్ళల్లో." } },
+      ],
+      naivedya: [
+        { item: { roman: "Ariselu and boorelu", tel: "అరిసెలు, బూరెలు" }, note: { roman: "The Telugu Dīpāvalī sweets; rice-flour and jaggery.", tel: "తెలుగు దీపావళి పిండివంటలు; బియ్యప్పిండి, బెల్లం." } },
+        { item: { roman: "Kheer or pāyasam, dry fruit, puffed rice", tel: "పాయసం, ఎండు ఫలాలు, మరమరాలు" }, note: { roman: "Offered to Lakṣmī with the coins laid before her.", tel: "ఎదురుగా నాణేలు పెట్టి లక్ష్మికి సమర్పణ." } },
+      ],
       stotras: [{ deity: "devi", m: "kanakadhara" }, { deity: "devi", m: "sri suktam" }, { deity: "devi", m: "mahalaksmi" }, { deity: "devi", m: "laksmi astottara" }],
+      dos: [
+        { roman: "Light the first lamp at the doorstep before the ones inside — the threshold is where she is met.", tel: "లోపలి దీపాలకు ముందే గుమ్మంలో మొదటి దీపం — అమ్మవారిని కలుసుకునేది గడప దగ్గరే." },
+        { roman: "Give before you receive: sweets and clothes out of the house on the morning of the pūjā.", tel: "తీసుకోకముందు ఇవ్వండి: పూజ రోజు ఉదయం మిఠాయిలు, బట్టలు బయటకు." },
+      ],
+      donts: [
+        { roman: "Do not let the house go dark on the amāvāsyā night, even after the pūjā.", tel: "అమావాస్య రాత్రి పూజ తర్వాత కూడా ఇల్లు చీకటిపడనీయరాదు." },
+        { roman: "Do not lend or borrow money on the pūjā day; the ledgers open, they do not close.", tel: "పూజ రోజు అప్పు ఇవ్వరాదు, తీసుకోరాదు; లెక్కలు తెరుస్తాయి, మూయవు." },
+      ],
+      source: { roman: "Telugu smārta practice, with the north's Dhanteras and Bhāī Dūj named where the days coincide. Bengal keeps Kālī Pūjā this night instead.", tel: "తెలుగు స్మార్త ఆచారం; ఉత్తరాది ధంతేరస్, భాయి దూజ్ ఒకే రోజులు కాబట్టి పేర్కొన్నాము. బెంగాల్‌లో ఈ రాత్రి కాళీ పూజ." },
     },
     {
       id: "rama-navami", deity: "vishnu", brief: true,
@@ -708,7 +788,7 @@ export const STUTI_VRATA = (function () {
       stotras: [{ deity: "vishnu", m: "rama raksa" }, { deity: "vishnu", m: "nama ramayanam" }, { deity: "vishnu", m: "rama pancaratna" }],
     },
     {
-      id: "janmashtami", deity: "vishnu", brief: true, kind: "vratam",
+      id: "janmashtami", deity: "vishnu", brief: true, kind: "vratam", kala: "nishitha",
       name: { roman: "Kṛṣṇa Janmāṣṭamī", deva: "कृष्ण जन्माष्टमी", tel: "కృష్ణ జన్మాష్టమి" },
       rule:  { roman: "Śrāvaṇa · Kṛṣṇa Aṣṭamī",    deva: "श्रावण कृष्ण अष्टमी",    tel: "శ్రావణ కృష్ణ అష్టమి" },
       ruleP: { roman: "Bhādrapada · Kṛṣṇa Aṣṭamī", deva: "भाद्रपद कृष्ण अष्टमी", tel: "భాద్రపద కృష్ణ అష్టమి" },
@@ -722,7 +802,11 @@ export const STUTI_VRATA = (function () {
       id: "hanuman-jayanti", deity: "hanuman", brief: true,
       name: { roman: "Hanumān Jayantī", deva: "हनुमान् जयन्ती", tel: "హనుమాన్ జయంతి" },
       rule: { roman: "Caitra Pūrṇimā in the north; Vaiśākha Kṛṣṇa Daśamī in the Deccan", deva: "उत्तर में चैत्र पूर्णिमा; दक्षिण में वैशाख कृष्ण दशमी", tel: "ఉత్తరాదిలో చైత్ర పౌర్ణమి; దక్కన్‌లో వైశాఖ కృష్ణ దశమి" },
-      find: (y) => lunar(y, MASA.caitra, T.purnima),
+      /* two traditions, and the reciter's place decides: the Deccan and the
+         south keep Vaiśākha Kṛṣṇa Daśamī, the north Caitra Pūrṇimā. The
+         boundary is drawn at the Vindhyas, roughly 21°N. */
+      find: (y) => (southern() ? lunar(y, MASA.vaisakha, 24) : lunar(y, MASA.caitra, T.purnima)),
+      ruleBy: (s) => s ? { roman: "Vaiśākha · Kṛṣṇa Daśamī", deva: "वैशाख कृष्ण दशमी", tel: "వైశాఖ కృష్ణ దశమి" } : { roman: "Caitra · Pūrṇimā", deva: "चैत्र पूर्णिमा", tel: "చైత్ర పౌర్ణమి" },
       duration: { roman: "One day", tel: "ఒక రోజు" },
       who: { roman: "Kept by all; especially those under Śani's period.", tel: "అందరూ; ముఖ్యంగా శని దశలో ఉన్నవారు." },
       tagline: { roman: "The birth of Hanumān — the Cālīsā and Saṅkaṭamocana are read.", tel: "హనుమాన్ జననం — చాలీసా, సంకటమోచన పారాయణం." },
@@ -791,7 +875,7 @@ export const STUTI_VRATA = (function () {
       duration: { roman: "One day, the sahasranāma at its centre", tel: "ఒక రోజు, మధ్యలో సహస్రనామ పారాయణం" },
       who: { roman: "Śrīvidyā upāsakas above all, and any household that keeps the sahasranāma.", tel: "ముఖ్యంగా శ్రీవిద్యా ఉపాసకులు; సహస్రనామం చేసే ఇళ్ళన్నీ." },
       tagline: { roman: "The day of the thousand names — Lalitā's appearance, read from Śrīmātā to Lalitāmbikā.", tel: "సహస్రనామ దినం — శ్రీమాత నుండి లలితాంబిక వరకు పారాయణం." },
-      stotras: [{ deity: "devi", m: "lalita sahasra" }, { deity: "devi", m: "lalita pancaratna" }, { deity: "devi", m: "khadgamala" }],
+      stotras: [{ deity: "devi", m: "lalita sahasra" }, { deity: "devi", m: "lalita pancaratna" }, { deity: "devi", m: "lalita sahasra" }],
     },
     {
       id: "sita-navami", deity: "vishnu", brief: true,
@@ -883,7 +967,7 @@ export const STUTI_VRATA = (function () {
       id: "vasanta-navaratri", deity: "devi", brief: true,
       name: { roman: "Vasanta Navarātri", deva: "वसन्त नवरात्रि", tel: "వసంత నవరాత్రి" },
       rule: { roman: "Caitra · Śukla Pratipadā to Navamī — the first nine days of Vasanta", deva: "चैत्र शुक्ल प्रतिपदा से नवमी — वसन्त के प्रथम नौ दिन", tel: "చైత్ర శుక్ల పాడ్యమి నుండి నవమి — వసంతపు మొదటి తొమ్మిది రోజులు" },
-      find: (y) => lunar(y, MASA.caitra, T.pratipada),
+      find: (y) => lunar(y, MASA.caitra, T.pratipada), days: 9,
       duration: { roman: "Nine nights, ending on Rāma Navamī", tel: "తొమ్మిది రాత్రులు, రామనవమితో ముగింపు" },
       who: { roman: "Devī upāsakas; in Rāma temples the same nine days are kept as Rāma's.", tel: "దేవీ ఉపాసకులు; రామాలయాల్లో ఇవే తొమ్మిది రోజులు రామునికి." },
       tagline: { roman: "The spring nine nights — the year's other Navarātri, closing on Rāma's birth.", tel: "వసంతపు తొమ్మిది రాత్రులు — సంవత్సరపు రెండో నవరాత్రి, రామజననంతో ముగుస్తుంది." },
@@ -893,7 +977,7 @@ export const STUTI_VRATA = (function () {
       id: "shyamala-navaratri", deity: "devi", brief: true,
       name: { roman: "Śyāmalā Navarātri · Gupta Navarātri", deva: "श्यामला नवरात्रि · गुप्त नवरात्रि", tel: "శ్యామలా నవరాత్రి · గుప్త నవరాత్రి" },
       rule: { roman: "Māgha · Śukla Pratipadā to Navamī — the first nine days of Māgha", deva: "माघ शुक्ल प्रतिपदा से नवमी — माघ के प्रथम नौ दिन", tel: "మాఘ శుక్ల పాడ్యమి నుండి నవమి — మాఘపు మొదటి తొమ్మిది రోజులు" },
-      find: (y) => lunar(y, MASA.magha, T.pratipada),
+      find: (y) => lunar(y, MASA.magha, T.pratipada), days: 9,
       duration: { roman: "Nine nights, kept quietly", tel: "తొమ్మిది రాత్రులు, నిశ్శబ్దంగా" },
       who: { roman: "Śrīvidyā upāsakas; Śyāmalā is the minister of the Devī's court, asked for speech and skill.", tel: "శ్రీవిద్యా ఉపాసకులు; శ్యామల దేవీ మంత్రిణి — వాక్కు, నైపుణ్యం కోరతారు." },
       tagline: { roman: "Gupta — hidden: nine nights done without announcement, to Rāja-Mātaṅgī.", tel: "గుప్తం — ప్రకటన లేకుండా చేసే తొమ్మిది రాత్రులు, రాజమాతంగికి." },
@@ -903,11 +987,11 @@ export const STUTI_VRATA = (function () {
       id: "varahi-navaratri", deity: "devi", brief: true,
       name: { roman: "Vārāhī Navarātri", deva: "वाराही नवरात्रि", tel: "వారాహీ నవరాత్రి" },
       rule: { roman: "Āṣāḍha · Śukla Pratipadā to Navamī — the first nine days of Āṣāḍha", deva: "आषाढ शुक्ल प्रतिपदा से नवमी — आषाढ के प्रथम नौ दिन", tel: "ఆషాఢ శుక్ల పాడ్యమి నుండి నవమి — ఆషాఢపు మొదటి తొమ్మిది రోజులు" },
-      find: (y) => lunar(y, MASA.ashadha, T.pratipada),
+      find: (y) => lunar(y, MASA.ashadha, T.pratipada), days: 9,
       duration: { roman: "Nine nights, kept quietly", tel: "తొమ్మిది రాత్రులు, నిశ్శబ్దంగా" },
       who: { roman: "Śrīvidyā upāsakas; Vārāhī is the commander of the Devī's forces, asked for protection.", tel: "శ్రీవిద్యా ఉపాసకులు; వారాహి దేవీ దండనాయకి — రక్షణ కోరతారు." },
       tagline: { roman: "The other gupta nine nights — to Daṇḍanāthā, who removes what stands in the way.", tel: "మరో గుప్త నవరాత్రి — అడ్డు తొలగించే దండనాథకు." },
-      stotras: [{ deity: "devi", m: "varahi" }, { deity: "devi", m: "lalita sahasra" }, { deity: "devi", m: "durga" }],
+      stotras: [{ deity: "devi", m: "lalita sahasra" }, { deity: "devi", m: "durga" }],
     },
   ];
 
@@ -916,13 +1000,54 @@ export const STUTI_VRATA = (function () {
      join here so the calendar, the upcoming list and the day sheets treat them
      like any other observance. */
   (((STUTI_SANKRANTI || {}).entries) || []).forEach((e) => vratas.push(e));
+  /* the brief parva dinams (Holi, Kārtika Pūrṇimā, Aṭla Taddi…) borrow the
+     tithi finders from here, then join the list the same way */
+  if (STUTI_PARVA_EXTRA) {
+    lunar.viddha = viddhaShift;
+    STUTI_PARVA_EXTRA.bind({ lunar, monthStart });
+    STUTI_PARVA_EXTRA.entries.forEach((e) => vratas.push(e));
+  }
 
   const byId = {};
   vratas.forEach((v) => { byId[v.id] = v; });
+  /* the house's own tithis, dressed as vratas — read live, since they are edited */
+  const personal = () => { try { return STUTI_TITHIS ? STUTI_TITHIS.vratas() : []; } catch (e) { return []; } };
+  const all = () => vratas.concat(personal());
+  const lookup = (id) => byId[id] || personal().find((v) => v.id === id) || null;
 
-  /* the next occurrence on or after `from` — monthly vratas roll forward */
+  /* "today" — the clock, unless Settings has pinned a preview day so the
+     festival card can be checked before the day itself comes round */
+  function today() {
+    try {
+      const k = localStorage.getItem("stuti-preview-day");
+      if (k) { const [y, m, d] = k.split("-").map(Number); if (y && m && d) return new Date(y, m - 1, d); }
+    } catch (e) {}
+    return new Date();
+  }
+
+  /* ---------- the hour a parva is kept at ----------
+     The `kala` a vrata carries names the span; the day's own sunrise and
+     sunset turn it into clock minutes for the reciter's place. Madhyāhna is
+     the third fifth of daylight, pradoṣa the two muhūrtas after sunset,
+     niśītha the muhūrta astride true midnight. Returned in minutes after
+     local midnight, like every other window the engine hands out. */
+  function kalaWindow(v, date, loc) {
+    if (!v.kala) return null;
+    const pa = P().forDay(date, loc || REF());
+    if (pa.sunrise == null || pa.sunset == null) return null;
+    const day = pa.sunset - pa.sunrise;
+    if (v.kala === "madhyahna") return { start: pa.sunrise + day * 0.4, end: pa.sunrise + day * 0.6 };
+    if (v.kala === "pradosha") return { start: pa.sunset, end: pa.sunset + 96 };
+    if (v.kala === "nishitha") { const mid = pa.sunset + (1440 - day) / 2; return { start: mid - 24, end: mid + 24 }; }
+    return null;
+  }
+
+  /* the next occurrence on or after `from` — monthly vratas roll forward;
+     a many-day parva still counts while it runs, so its start is returned
+     until its last day has passed */
   function nextDate(v, from) {
-    const base = from || new Date();
+    const base = from || today();
+    const span = (v.days || 1) - 1, lead = v.lead || 0;
     const t0 = new Date(base.getFullYear(), base.getMonth(), base.getDate());
     /* a weekly vrata: the next matching weekday still inside this year's
        window, else the first of next year's */
@@ -941,30 +1066,54 @@ export const STUTI_VRATA = (function () {
       try { d = v.everyMonth ? v.find(probe.getFullYear(), probe.getMonth()) : v.find(probe.getFullYear()); }
       catch (e) { return null; }
       if (!d) continue;
-      if (d >= t0) return d;
+      if (addDays(d, span - lead) >= t0) return d;
       if (!v.everyMonth) { // try next year once we have passed this year's
-        try { const nd = v.find(t0.getFullYear() + 1); if (nd && nd >= t0) return nd; } catch (e) {}
+        try { const nd = v.find(t0.getFullYear() + 1); if (nd && addDays(nd, span - lead) >= t0) return nd; } catch (e) {}
       }
     }
     return null;
   }
 
+  const addDays = (d, n) => new Date(d.getFullYear(), d.getMonth(), d.getDate() + n);
   const daysAway = (d) => {
-    const t = new Date(); t.setHours(0, 0, 0, 0);
+    const t = today(); t.setHours(0, 0, 0, 0);
     return Math.round((new Date(d.getFullYear(), d.getMonth(), d.getDate()) - t) / 86400000);
   };
 
-  /* every vrata with its next date, soonest first */
+  /* every vrata with its next date, soonest first. A running many-day parva
+     reports away = 0 and which day of it this is; `date` stays the vrata's
+     own day (the pūjā day), `start` the first day of its span. */
   function upcoming(limit) {
-    const out = vratas.map((v) => { const d = nextDate(v); return d ? { v, date: d, away: daysAway(d) } : null; })
-      .filter(Boolean).sort((a, b) => a.date - b.date);
+    const out = all().map((v) => {
+      const d = nextDate(v); if (!d) return null;
+      const lead = v.lead || 0, days = v.days || 1, start = addDays(d, -lead);
+      const raw = daysAway(start);
+      const running = raw <= 0 && -raw < days;
+      return { v, date: d, start, away: running ? 0 : raw, dayNo: running ? 1 - raw : null, days };
+    }).filter(Boolean).sort((a, b) => a.start - b.start);
     return limit ? out.slice(0, limit) : out;
   }
+
+  /* singular annual days only — the rule the petal drift and the home card
+     share. Weekly and fortnightly vratas recur too often to be an occasion. */
+  const isParva = (v) => v.weekly === undefined && !v.everyMonth && !v.quiet;
+  /* the parvas running today (the house's own first), else the one falling
+     tomorrow (eve: true) — a list, since a janma tithi can share the day with
+     Nāga Pañcamī */
+  function parvasNow() {
+    const list = upcoming(80).filter((u) => isParva(u.v));
+    const rank = (u) => (u.v.personal ? 0 : 1);
+    const now = list.filter((u) => u.away === 0).sort((a, b) => rank(a) - rank(b));
+    if (now.length) return now.map((u) => Object.assign({ eve: false }, u));
+    const eve = list.filter((u) => u.away === 1).sort((a, b) => rank(a) - rank(b));
+    return eve.map((u) => Object.assign({ eve: true }, u));
+  }
+  function parvaNow() { const l = parvasNow(); return l.length ? l[0] : null; }
 
   /* those falling inside a given month */
   function inMonth(y, m) {
     return upcoming().filter((x) => x.date.getFullYear() === y && x.date.getMonth() === m);
   }
 
-  return { vratas, byId, nextDate, daysAway, upcoming, inMonth, dayKey };
+  return { vratas, byId, lookup, all, nextDate, daysAway, upcoming, inMonth, dayKey, today, kalaWindow, isParva, parvaNow, parvasNow, southern, lunarDay: lunar };
 })();
