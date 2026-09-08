@@ -19,7 +19,7 @@
 import { createSign } from "node:crypto";
 
 const MAX_TEXT = 4 * 1024 * 1024, MAX_BLOB = 40 * 1024 * 1024;
-const PREFIXES = ["crash-", "follow-", "note-", "recitation-"];
+const PREFIXES = ["crash-", "follow-", "note-", "recitation-", "journal-"];
 const ORIGINS = [/^https:\/\/stuti-app\.netlify\.app$/, /^https?:\/\/localhost(:\d+)?$/, /^capacitor:\/\/localhost$/, /^https:\/\/[a-z0-9-]+--stuti-app\.netlify\.app$/];
 
 let cached = { token: null, until: 0 };

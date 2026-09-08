@@ -79,11 +79,18 @@ Redo step 4 with the box ticked, set the variable again, redeploy.
   heard, where the light went), after every session of eight seconds or
   more. On the phone the audio goes alongside as `.wav` when it is under
   12 MB (about six minutes); longer sessions send the log alone.
+- `journal-<device>-<time>-<why>.txt` — the reciter's path through the app,
+  one line per event with seconds since launch: each screen, each tapped
+  control by its label, each of the counter's events, and every main-thread
+  task over half a second (`slow 2314ms on calendar`). Flushed every ten
+  minutes of use once twenty lines have gathered (`timer`), whenever the app
+  goes to the background (`hide`), and at the next launch for what was left
+  (`launch`). Never a typed word or a verse.
 - `<device>` is a random eight-character id kept on the phone
   (`stuti-device` in localStorage). No name, no account, no text read.
 
 Testers can turn it off in Settings → About → "Send diagnostics to the
-makers" (`stuti-relay = "0"`). A dev server on localhost never sends.
+makers" (`stuti-relay = "0"`). A dev server on localhost never sends, unless `stuti-relay-dev` is `"1"` in its localStorage.
 When the network is away, text goes into a small queue (`stuti-relay-q`) and
 leaves on the next launch or when the connection returns; audio is tried once.
 

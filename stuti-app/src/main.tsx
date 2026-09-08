@@ -5,6 +5,7 @@ import App from "./stuti-main";
 import { STUTI_NUDGE } from "./stuti-nudge";
 import { registerKept } from "./stuti-recitations"; // kept recitations become each hymn's Listen recording
 import { installRelay } from "./stuti-relay"; // crash notes and Follow sessions go to the makers' Drive folder
+import { installJournal } from "./stuti-journal"; // screens, taps and slow tasks, flushed to the same folder
 import "./stuti.css";
 import "./stuti-components.css";
 import "./stuti-palette.css";
@@ -31,6 +32,7 @@ ReactDOM.createRoot(document.getElementById("root")!).render(<App />);
 if (STUTI_NUDGE) STUTI_NUDGE.start();
 registerKept();
 installRelay();
+installJournal();
 (window as any).STUTI_COUNT_DOMAIN = "stuti-app.netlify.app";   // one site for the counters, phone and web alike
 
 /* The offline worker is for the web. Inside the Android app every file is

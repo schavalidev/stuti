@@ -25,7 +25,9 @@ const MAX_WAV = 12 * 1024 * 1024;   // ~6 minutes of 16 kHz mono; longer session
 const native = Capacitor.isNativePlatform();
 const onSite = /netlify\.app$/.test(location.hostname);
 /** A dev server on localhost is not a tester's phone: stay quiet there. */
-const active = () => (native || onSite) && enabled();
+const dev = () => { try { return localStorage.getItem("stuti-relay-dev") === "1"; } catch (e) { return false; } };
+const bot = /HeadlessChrome|Lighthouse|bot\b/i.test(navigator.userAgent);   // Netlify screenshots every deploy with a headless browser
+const active = () => !bot && (native || onSite || dev()) && enabled();
 const url = () => (onSite ? "" : SITE) + PATH;
 
 export const enabled = () => { try { return localStorage.getItem("stuti-relay") !== "0"; } catch (e) { return true; } };
