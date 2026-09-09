@@ -25,6 +25,7 @@ node fix-gate-seam.mjs
 node fix-count-seam.mjs
 node fix-perf-seam.mjs
 node fix-relay-seam.mjs
+node fix-notify-seam.mjs
 node setup-entry.mjs
 node fix-missing-imports.mjs
 # record which design commit src/ now corresponds to (read by

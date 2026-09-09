@@ -52,11 +52,20 @@ export const STUTI_NUDGE = (function () {
     try { localStorage.setItem(KEY, JSON.stringify(m)); } catch (e) {}
   }
 
-  const supported = () => typeof window.Notification === "function";
-  const permission = () => (supported() ? Notification.permission : "unsupported");
+  /* on the phone the OS holds the bells, and answers all three of these */
+  const nativeCues = () => { try { return (window as any).STUTI_NATIVE_CUES || null; } catch (e) { return null; } };
+
+  const supported = () => !!nativeCues() || typeof window.Notification === "function";
+  const permission = () => {
+    const n = nativeCues();
+    if (n) return n.permission();
+    return typeof window.Notification === "function" ? Notification.permission : "unsupported";
+  };
 
   function ask() {
-    if (!supported()) return Promise.resolve("unsupported");
+    const n = nativeCues();
+    if (n) return n.ask();
+    if (typeof window.Notification !== "function") return Promise.resolve("unsupported");
     if (Notification.permission !== "default") return Promise.resolve(Notification.permission);
     try { return Notification.requestPermission().then((p) => { arm(); return p; }); }
     catch (e) { return Promise.resolve(Notification.permission); }
@@ -94,6 +103,9 @@ export const STUTI_NUDGE = (function () {
 
   /* once the server can reach the device, it owns delivery */
   function pushOwns() {
+    /* the OS's own alarm table counts as a server for this purpose: once it
+       holds the week, a page left open must not ring the same cue again */
+    try { const n = nativeCues(); if (n && n.owns()) return true; } catch (e) {}
     try { return !!(STUTI_PUSH && STUTI_PUSH.subscribed()); } catch (e) { return false; }
   }
 

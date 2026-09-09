@@ -5,6 +5,7 @@ import { todayInfo } from "./stuti-home";
 import { STUTI_L } from "./stuti-i18n";
 import { Flame, Icon } from "./stuti-icons";
 import { STUTI_NUDGE } from "./stuti-nudge";
+import { notifyNote } from "./stuti-notify";
 import { AKSHARA_PANCHANGA } from "./stuti-panchanga-engine";
 import { useLoc } from "./stuti-panchanga";
 import { STUTI_PREFS } from "./stuti-prefs";
@@ -345,9 +346,10 @@ function RemindSheet({ lang = "deva", onClose }) {
             </button>
           )}
           <div className={"rm-note" + (perm === "denied" ? " rm-note-warn" : "")}>
-            {perm === "denied" ? L.t("notifBlocked", lang)
+            {notifyNote(lang, perm)
+              || (perm === "denied" ? L.t("notifBlocked", lang)
               : perm === "unsupported" ? L.t("notifNote", lang)
-              : L.t("notifWhileOpen", lang)}
+              : L.t("notifWhileOpen", lang))}
           </div>
         </div>
         <button className="pd-close" onClick={onClose}>{L.t("close", lang)}</button>
