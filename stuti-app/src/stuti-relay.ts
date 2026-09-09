@@ -96,14 +96,18 @@ export async function relayBlob(name: string, blob: Blob): Promise<boolean> {
 export async function relayFollowSession(o: { hymn: string; lang: string; lines: string[]; seconds: number; wav?: boolean }) {
   if (!active() || o.seconds < 8 || o.lines.length < 3) return;   // a tap-and-stop tells nothing
   const base = "follow-" + deviceId() + "-" + stamp() + "-" + String(o.hymn || "hymn").replace(/[^A-Za-z0-9_-]/g, "_").slice(0, 40);
+  /* the audio is read first: a Keep two seconds later moves the file into
+     the recitations shelf, and a session that was kept is exactly the one
+     worth hearing */
+  let blob: Blob | null = null;
+  if (o.wav && native && voskAvailable()) {
+    try {
+      const f = await voskSessionFiles();
+      if (f.wavBytes > 44 && f.wavBytes <= MAX_WAV) blob = new Blob([await (await fetch(voskFileUrl(f.wav))).blob()], { type: "audio/wav" });
+    } catch (e) {}
+  }
   await relayText(base + ".txt", o.lines.join("\n"));
-  if (!o.wav || !native || !voskAvailable()) return;
-  try {
-    const f = await voskSessionFiles();
-    if (!f.wavBytes || f.wavBytes <= 44 || f.wavBytes > MAX_WAV) return;
-    const blob = await (await fetch(voskFileUrl(f.wav))).blob();
-    await relayBlob(base + ".wav", new Blob([blob], { type: "audio/wav" }));
-  } catch (e) {}
+  if (blob) { try { await relayBlob(base + ".wav", blob); } catch (e) {} }
 }
 
 /* ---- crashes: the page's own errors, with the last console lines ---- */

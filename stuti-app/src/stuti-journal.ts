@@ -40,8 +40,11 @@ function labelOf(el: Element): string {
   return c ? "." + c : el.tagName.toLowerCase();
 }
 
+/* a flush that would carry only show/hide lines says nothing: keep those
+   for the next one that has something to say */
+const substantive = () => lines.some((l) => /^ *[\d.]+ (tap|screen|count|slow|open) /.test(l));
 async function flush(why: string) {
-  if (flushing || !lines.length || (why === "timer" && since < FLUSH_AT)) return;
+  if (flushing || !lines.length || (why === "timer" && since < FLUSH_AT) || !substantive()) return;
   flushing = true;
   const body = lines.join("\n") + "\n";
   const held = lines; lines = []; since = 0; save();
