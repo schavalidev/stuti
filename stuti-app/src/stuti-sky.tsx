@@ -3,6 +3,7 @@ import { STUTI_FLYLEAF } from "./stuti-flyleaf-core";
 import { STUTI_L } from "./stuti-i18n";
 import { Icon } from "./stuti-icons";
 import { STUTI_NUDGE } from "./stuti-nudge";
+import { cueNote, cueRefusal } from "./stuti-notify";
 import { AKSHARA_PANCHANGA } from "./stuti-panchanga-engine";
 import { LocationControl, MoonPhase, useLoc } from "./stuti-panchanga";
 import { STUTI_PREFS } from "./stuti-prefs";
@@ -110,9 +111,9 @@ function SkyHeader({ lang = "deva", greeting, go }) {
   const LEADS = [0, 5, 10, 15, 30];
   const askPermission = () => {
     const N = STUTI_NUDGE;
-    if (!N || !N.supported()) { setConfirmNote("Notifications aren't supported in this browser."); return; }
+    if (!N || !N.supported()) { setConfirmNote(cueRefusal("unsupported") || "Notifications aren't supported in this browser."); return; }
     if (N.permission() === "granted") return;
-    N.ask().then((p) => { if (p !== "granted") setConfirmNote("Notifications are blocked — allow them for this site to get sandhyā nudges."); });
+    N.ask().then((p) => { if (p !== "granted") setConfirmNote(cueRefusal("denied") || "Notifications are blocked — allow them for this site to get sandhyā nudges."); });
   };
   const setSandhya = (id, on) => {
     const PR = STUTI_PREFS; if (!PR) return;
@@ -130,8 +131,9 @@ function SkyHeader({ lang = "deva", greeting, go }) {
     setBellOpen(false);
     const n = SY.ORDER.filter((id) => sandhyaOn[id]).length;
     setConfirmNote(n === 0 ? "No sandhyā reminders are set."
-      : lead ? `You'll be nudged ${lead} min before ${n === 3 ? "each sandhyā" : n === 1 ? "the chosen sandhyā" : "the chosen sandhyās"} while Stuti is open.`
-      : `You'll be nudged as ${n === 3 ? "each sandhyā" : n === 1 ? "the chosen sandhyā" : "each chosen sandhyā"} opens, while Stuti is open.`);
+      : cueNote(n, lead)
+      || (lead ? `You'll be nudged ${lead} min before ${n === 3 ? "each sandhyā" : n === 1 ? "the chosen sandhyā" : "the chosen sandhyās"} while Stuti is open.`
+      : `You'll be nudged as ${n === 3 ? "each sandhyā" : n === 1 ? "the chosen sandhyā" : "each chosen sandhyā"} opens, while Stuti is open.`));
   };
   const bellSheet = bellOpen && (
     <div className="sky-bell-sheet" onClick={(e) => e.stopPropagation()}>

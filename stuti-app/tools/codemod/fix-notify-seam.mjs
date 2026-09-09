@@ -83,3 +83,37 @@ patchSheet(
   "the sheet's closing note");
 writeFileSync(SHEET, r);
 console.log("notify seam applied (sheet)");
+
+// The sandhyā plate's own copy, which the sheet's note does not cover. Two
+// problems, both reported as "the bell did nothing": it promised "while
+// Stuti is open", which stopped being the phone's truth; and when a bell was
+// switched on after that evening's window had already opened, it said the
+// reminder was set without saying the first one it could ring was the next
+// day's. It now names the hour it will actually ring at.
+const SKY = join(HERE, "../../src/stuti-sky.tsx");
+let k = readFileSync(SKY, "utf8");
+function patchSky(from, to, what) { if (!k.includes(from)) throw new Error(`fix-notify-seam: anchor not found — ${what}`); k = k.replace(from, to); }
+patchSky(
+`import { STUTI_NUDGE } from "./stuti-nudge";`,
+`import { STUTI_NUDGE } from "./stuti-nudge";
+import { cueNote, cueRefusal } from "./stuti-notify";`,
+  "sky import");
+patchSky(
+`    if (!N || !N.supported()) { setConfirmNote("Notifications aren't supported in this browser."); return; }
+    if (N.permission() === "granted") return;
+    N.ask().then((p) => { if (p !== "granted") setConfirmNote("Notifications are blocked — allow them for this site to get sandhyā nudges."); });`,
+`    if (!N || !N.supported()) { setConfirmNote(cueRefusal("unsupported") || "Notifications aren't supported in this browser."); return; }
+    if (N.permission() === "granted") return;
+    N.ask().then((p) => { if (p !== "granted") setConfirmNote(cueRefusal("denied") || "Notifications are blocked — allow them for this site to get sandhyā nudges."); });`,
+  "the plate's two refusals");
+patchSky(
+`    setConfirmNote(n === 0 ? "No sandhyā reminders are set."
+      : lead ? \`You'll be nudged \${lead} min before \${n === 3 ? "each sandhyā" : n === 1 ? "the chosen sandhyā" : "the chosen sandhyās"} while Stuti is open.\`
+      : \`You'll be nudged as \${n === 3 ? "each sandhyā" : n === 1 ? "the chosen sandhyā" : "each chosen sandhyā"} opens, while Stuti is open.\`);`,
+`    setConfirmNote(n === 0 ? "No sandhyā reminders are set."
+      : cueNote(n, lead)
+      || (lead ? \`You'll be nudged \${lead} min before \${n === 3 ? "each sandhyā" : n === 1 ? "the chosen sandhyā" : "the chosen sandhyās"} while Stuti is open.\`
+      : \`You'll be nudged as \${n === 3 ? "each sandhyā" : n === 1 ? "the chosen sandhyā" : "each chosen sandhyā"} opens, while Stuti is open.\`));`,
+  "the plate's confirmation");
+writeFileSync(SKY, k);
+console.log("notify seam applied (sky)");

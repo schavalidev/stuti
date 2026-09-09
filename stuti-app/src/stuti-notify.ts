@@ -3,6 +3,7 @@ import { LocalNotifications } from "@capacitor/local-notifications";
 import { STUTI } from "./stuti-data";
 import { STUTI_CUES } from "./stuti-cues";
 import { STUTI_L } from "./stuti-i18n";
+import { journal } from "./stuti-journal";
 import { STUTI_NUDGE } from "./stuti-nudge";
 import { AKSHARA_PANCHANGA } from "./stuti-panchanga-engine";
 import { STUTI_PREFS } from "./stuti-prefs";
@@ -160,6 +161,14 @@ async function lay() {
         };
       });
     if (fresh.length) { try { await LocalNotifications.schedule({ notifications: fresh } as any); } catch (e) {} }
+    /* the first night of this shipped, the journal could say the bells were
+       permitted but not whether anything had been laid — which is the only
+       question that matters when a reciter reports silence */
+    try {
+      const next = cues[0];
+      journal("cues", "laid=" + fresh.length + " held=" + (cues.length - fresh.length) + " dropped=" + stale.length
+        + (next ? " next=" + next.id + "@" + new Date(next.at).toISOString() : " next=none"));
+    } catch (e) {}
   } finally { laying = false; }
 }
 
@@ -216,4 +225,32 @@ export function notifyNote(lang: string, perm: string) {
         telugu: "సూచనలు ఫోన్‌కు అప్పగించబడతాయి, కాబట్టి స్తుతి మూసి ఉన్నా వస్తాయి. యాప్ తెరిచిన ప్రతిసారీ ముందున్న వారం మళ్లీ సిద్ధమవుతుంది.",
       };
   return lang === "telugu" ? s.telugu : lang === "roman" ? s.roman : s.deva;
+}
+
+/* When a bell is switched on, say when it will actually ring. The sky plate
+   promised "while Stuti is open", which the phone no longer needs — and said
+   nothing about the case that brought this on: a sāyaṃ bell set at 6:52pm,
+   two hours after that evening's window had opened, so the first cue it could
+   possibly ring was the next day's. Nothing was broken and nothing was going
+   to arrive, and the screen had no way to say so. */
+export function cueNote(count: number, lead: number) {
+  if (!native() || !count) return null;
+  const soon = week().filter((c: any) => c.kind === "sandhya")[0];
+  if (!soon) return "Set — but nothing falls in the next week. Check the quiet hours, which may be swallowing every chosen juncture.";
+  const at = new Date(soon.at), now = new Date();
+  const sameDay = at.toDateString() === now.toDateString();
+  const tomorrow = at.toDateString() === new Date(now.getTime() + 86400000).toDateString();
+  const when = (sameDay ? "today" : tomorrow ? "tomorrow" : at.toLocaleDateString(undefined, { weekday: "long" }))
+    + " " + at.toLocaleTimeString(undefined, { hour: "numeric", minute: "2-digit" });
+  const name = STUTI_SANDHYA.name(soon.kala.label, "roman");
+  return "Next: " + name + ", " + when + (lead ? " (" + lead + " min before it opens)" : "")
+    + ". Reminders arrive with Stuti closed.";
+}
+
+/* the sky plate's two refusals, which speak of browsers and sites */
+export function cueRefusal(kind: "unsupported" | "denied") {
+  if (!native()) return null;
+  return kind === "denied"
+    ? "Notifications are turned off for Stuti — allow them in the phone's settings to get sandhyā reminders."
+    : "This device cannot post notifications.";
 }
