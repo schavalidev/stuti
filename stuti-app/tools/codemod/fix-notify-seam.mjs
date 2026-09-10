@@ -115,5 +115,19 @@ patchSky(
       || (lead ? \`You'll be nudged \${lead} min before \${n === 3 ? "each sandhyā" : n === 1 ? "the chosen sandhyā" : "the chosen sandhyās"} while Stuti is open.\`
       : \`You'll be nudged as \${n === 3 ? "each sandhyā" : n === 1 ? "the chosen sandhyā" : "each chosen sandhyā"} opens, while Stuti is open.\`));`,
   "the plate's confirmation");
+// The note stayed on the plate as written: switched on at 10:30 it still
+// said "Next: Mādhyāhnika, today 10:47" at 11:15, with the window open and
+// the first bell that could ring the evening's. It now keeps step with the
+// plate's own minute tick, so once a cue's hour passes it names the next.
+patchSky(
+`  const bellSheet = bellOpen && (`,
+`  React.useEffect(() => {
+    if (!confirmNote || String(confirmNote).indexOf("Next: ") !== 0) return;
+    const n = SY.ORDER.filter((id) => sandhyaOn[id]).length;
+    const fresh = n ? cueNote(n, lead) : null;
+    if (fresh && fresh !== confirmNote) setConfirmNote(fresh);
+  });
+  const bellSheet = bellOpen && (`,
+  "the plate's live note");
 writeFileSync(SKY, k);
 console.log("notify seam applied (sky)");

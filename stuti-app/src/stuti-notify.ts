@@ -243,7 +243,8 @@ export function cueNote(count: number, lead: number) {
   const when = (sameDay ? "today" : tomorrow ? "tomorrow" : at.toLocaleDateString(undefined, { weekday: "long" }))
     + " " + at.toLocaleTimeString(undefined, { hour: "numeric", minute: "2-digit" });
   const name = STUTI_SANDHYA.name(soon.kala.label, "roman");
-  return "Next: " + name + ", " + when + (lead ? " (" + lead + " min before it opens)" : "")
+  const opens = new Date(at.getTime() + lead * 60000);   // the cue is laid lead minutes before the window
+  return "Next: " + name + ", " + when + (lead ? " (" + lead + " min before it opens at " + opens.toLocaleTimeString(undefined, { hour: "numeric", minute: "2-digit" }) + ")" : "")
     + ". Reminders arrive with Stuti closed.";
 }
 

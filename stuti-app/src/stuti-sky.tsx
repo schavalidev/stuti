@@ -135,6 +135,12 @@ function SkyHeader({ lang = "deva", greeting, go }) {
       || (lead ? `You'll be nudged ${lead} min before ${n === 3 ? "each sandhyā" : n === 1 ? "the chosen sandhyā" : "the chosen sandhyās"} while Stuti is open.`
       : `You'll be nudged as ${n === 3 ? "each sandhyā" : n === 1 ? "the chosen sandhyā" : "each chosen sandhyā"} opens, while Stuti is open.`));
   };
+  React.useEffect(() => {
+    if (!confirmNote || String(confirmNote).indexOf("Next: ") !== 0) return;
+    const n = SY.ORDER.filter((id) => sandhyaOn[id]).length;
+    const fresh = n ? cueNote(n, lead) : null;
+    if (fresh && fresh !== confirmNote) setConfirmNote(fresh);
+  });
   const bellSheet = bellOpen && (
     <div className="sky-bell-sheet" onClick={(e) => e.stopPropagation()}>
       <div className="sky-bell-cap">Remind me at</div>
