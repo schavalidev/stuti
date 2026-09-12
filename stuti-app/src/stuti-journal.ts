@@ -63,6 +63,11 @@ export function installJournal() {
   if (left.length) { lines = left; since = left.length; setTimeout(() => flush("launch"), 5000); }
   else lines = [];
   t0 = Date.now();
+  /* for the one module that must not import this one: stuti-voice-shim is
+     the first thing main.tsx loads, ahead of the ported app, and an import
+     from it would pull the relay and the build block to the head of the
+     module graph — see the note at the head of that file */
+  (window as any).STUTI_JOURNAL = journal;
   journal("open", innerWidth + "x" + innerHeight + (document.hidden ? " hidden" : ""));
 
   /* the counter's verbs, as they happen */

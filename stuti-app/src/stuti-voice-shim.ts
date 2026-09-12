@@ -40,7 +40,19 @@
    ============================================================ */
 import { Capacitor } from "@capacitor/core";
 import { SpeechRecognition as Native } from "@capacitor-community/speech-recognition";
-import { journal } from "./stuti-journal";
+
+/* Nothing in this file may import from the app. main.tsx loads it first, on
+   purpose, so that window.SpeechRecognition is replaced before anything can
+   read it — which means every module it imports is initialised ahead of the
+   ported app's own, in an order the port was not generated in. An import of
+   the journal here dragged the relay, the build block and everything under
+   them to the head of the graph and landed a released build on a white
+   screen (12 Sep 2026). The journal is reached through the window instead,
+   where installJournal() leaves it; before it is installed, and on the web,
+   these notes simply go nowhere. */
+const journal = (kind: string, what: string) => {
+  try { (window as any).STUTI_JOURNAL && (window as any).STUTI_JOURNAL(kind, what); } catch (e) {}
+};
 
 type Handle = { remove: () => Promise<void> };
 const MAX_LISTEN_MS = 20000;
