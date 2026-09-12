@@ -23,6 +23,7 @@ node fix-follow-seam.mjs
 node fix-record-seam.mjs
 node fix-gate-seam.mjs
 node fix-count-seam.mjs
+node fix-search-seam.mjs
 node fix-perf-seam.mjs
 node fix-relay-seam.mjs
 node fix-notify-seam.mjs

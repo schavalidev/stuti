@@ -114,3 +114,17 @@
 .app > .rd-toppanel.is-pinned .rd-pin-btn { top: 6px; }
 .gate-mail { display: block; margin-top: 12px; font-size: 14px; line-height: 1.5; color: var(--ink-faint); }
 .gate-mail:hover, .gate-mail:focus-visible { color: var(--accent-ink); text-decoration: underline; text-underline-offset: 3px; }
+
+/* ---- the search, over the screen that called it (search seam) ----
+   The search used to be a screen of its own: tapping the bar on Home
+   replaced Home, and coming back rebuilt it. It is now a sheet laid over
+   whatever was behind, which keeps the reciter's place — the tab of the
+   screen underneath stays lit, and the bar it was opened from is still
+   there when it closes. Opaque, because a search reading a list of results
+   over a page of text is unreadable, and full-bleed inside the viewport so
+   the tab bar below stays reachable. */
+.sr-sheet { position: absolute; inset: 0; z-index: 40; display: flex; flex-direction: column;
+  background: var(--bg); animation: srSheetIn var(--med, 220ms) var(--ease-out, ease) both; }
+.sr-sheet > .view { flex: 1; min-height: 0; animation: none; }
+@keyframes srSheetIn { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: none; } }
+@media (prefers-reduced-motion: reduce) { .sr-sheet { animation: none; } }
