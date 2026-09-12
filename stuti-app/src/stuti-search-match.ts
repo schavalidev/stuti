@@ -52,32 +52,49 @@ const slack = (len: number) => (len >= 10 ? 2 : len >= 6 ? 1 : 0);
 const words = (s: string) => (s || "").split(/[^a-z0-9ऀ-ॿఀ-౿]+/).filter(Boolean);
 
 /** How well one query word is answered by one word of a hymn's names.
-    1 exact · .9 the name begins with it · .75 it sits inside the name ·
-    .6 near enough to be a misspelling · 0 no. */
+    1 exact · .9 the name begins with it · .82 the name ends with it ·
+    .75 it sits inside the name · .6 near enough to be a misspelling · 0 no.
+
+    Ending counts for more than sitting in the middle because Sanskrit builds
+    by suffix: sahasranāma and śatanāma both END in the nāma someone typed,
+    while śatanāmāvali only contains it, and the first two are the texts they
+    were reaching for. */
 export function wordScore(q: string, w: string): number {
   if (!q || !w) return 0;
   if (q === w) return 1;
   if (w.startsWith(q) || q.startsWith(w)) return q.length >= 3 ? 0.9 : 0;
-  if (q.length >= 4 && w.indexOf(q) !== -1) return 0.75;
+  if (q.length >= 4 && w.indexOf(q) !== -1) return w.endsWith(q) ? 0.82 : 0.75;
   const s = slack(Math.max(q.length, w.length));
   if (s && within(q, w, s) <= s) return 0.6;
   return 0;
 }
 
-/** How well a query answers a hymn, given the hymn's folded names as one
-    string. 0 means "not this one". The exact old behaviour — the whole
-    query as an unbroken run — scores highest, so nothing that used to come
-    first stops coming first. */
-export function matchScore(qf: string, folded: string): number {
+/** How well a query answers a hymn: `title` is its own name in all three
+    scripts, `about` everything else it is filed under — its form, its deity,
+    its author. 0 means "not this one".
+
+    The two are weighed differently, and that is the point. A hymn's name is
+    what a reciter is reaching for; what it is filed under is only how it was
+    found. Scored as one string they compete, and the filing wins far too
+    often: every Nāmāvali is FILED as "Nāmāvali", which begins with the "nama"
+    someone typed, while the Viṣṇu Sahasranāma only carries those letters
+    inside its own name — so eleven Nāmāvalis stood in front of it, and the
+    text being looked for was sixteenth of twenty.
+
+    The exact old behaviour — the whole query as one unbroken run — still
+    scores highest, so nothing that used to come first stops coming first. */
+const ABOUT_WEIGHT = 0.6;
+export function matchScore(qf: string, title: string, about = ""): number {
   const qs = words(qf);
   if (!qs.length) return 0;
-  const run = folded.indexOf(qf) !== -1;
-  const ws = words(folded);
-  if (!ws.length) return 0;
+  const tw = words(title), aw = words(about);
+  if (!tw.length && !aw.length) return 0;
+  const run = (title + " " + about).indexOf(qf) !== -1;
   let total = 0;
   for (const q of qs) {
     let best = 0;
-    for (const w of ws) { const s = wordScore(q, w); if (s > best) best = s; if (best === 1) break; }
+    for (const w of tw) { const s = wordScore(q, w); if (s > best) best = s; if (best === 1) break; }
+    if (best < 1) for (const w of aw) { const s = wordScore(q, w) * ABOUT_WEIGHT; if (s > best) best = s; }
     /* one word of the query unaccounted for and this is a different hymn —
        "shiva sahasranama" must not answer with the Viṣṇu one */
     if (!best) return 0;

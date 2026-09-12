@@ -139,7 +139,10 @@ function SearchView({ go, lang = "deva", backView = "browse", weekday, voice = f
     const scored = [];
     for (const h of S.hymns) {
       const d = S.deityById[h.deity];
-      const s = matchScore(qf, srFold([h.title, h.deva, h.tel, h.type, h.by, d && d.name, d && d.deva, d && d.tel, d && d.epithet].join(" ")));
+      /* the hymn's own name, and separately what it is filed under: a match
+         on the name outweighs a match on the form or the deity */
+      const s = matchScore(qf, srFold([h.title, h.deva, h.tel].join(" ")),
+                               srFold([h.type, h.by, d && d.name, d && d.deva, d && d.tel, d && d.epithet].join(" ")));
       if (s > 0) scored.push({ h, s });
     }
     const r = scored.map((x) => x.h);
