@@ -33,10 +33,24 @@
    And an error never arrives at all. The plugin reports one by rejecting
    the start call, which with partialResults on it has already resolved;
    the rejection is dropped on the floor, no "stopped" is sent, and the
-   button stays lit until a timeout with nothing to show. What the plugin
-   does do on the way out is set its own listening flag false, so that flag
-   is polled: when it goes down unannounced, the session ended badly and
-   the shim says so.
+   button stays lit until a timeout with nothing to show.
+
+   The first answer to that was to poll the plugin's own listening flag and
+   treat it going down unannounced as the error arriving. The relayed logs
+   of 12 Sep 2026 killed the idea: nine of twelve failed searches ended at
+   exactly 1.2 seconds — two polls — while every search that worked took
+   between 2.9 and 4.5 seconds, because a reciter taps the mic and THEN
+   begins to speak. The flag was never the signal it looked like: the plugin
+   lowers it on onEndOfSpeech, an ordinary event, exactly as it does on an
+   error, and from this side the two cannot be told apart. So the watchdog
+   was hanging up on people who had not spoken yet, more often than it ever
+   caught a real fault.
+
+   There is no signal here worth having, so the shim stops looking for one:
+   it waits FIRST_WORD_MS for a first word and gives up if none comes. A
+   hard error now costs that wait instead of being caught early — which is
+   the right trade, because the thing it was catching is rare and the thing
+   it was breaking was every other search.
    ============================================================ */
 import { Capacitor } from "@capacitor/core";
 import { SpeechRecognition as Native } from "@capacitor-community/speech-recognition";
@@ -55,11 +69,15 @@ const journal = (kind: string, what: string) => {
 };
 
 type Handle = { remove: () => Promise<void> };
-const MAX_LISTEN_MS = 20000;
+const MAX_LISTEN_MS = 15000;
 /* how long after the speaker stops to wait for the recogniser's final say */
 const SETTLE_MS = 1800;
-/* how often to ask the plugin whether it is still listening */
-const WATCH_MS = 600;
+/* how long to wait for a first word before giving up on the whole session.
+   Generous on purpose: the relayed sessions that worked took between 2.9 and
+   4.5 seconds from the tap to the answer, because a reciter taps the mic and
+   THEN starts speaking. Anything tighter cuts off people who are simply
+   thinking. */
+const FIRST_WORD_MS = 8000;
 
 class NativeSpeechRecognition {
   lang = "en-IN";
@@ -157,21 +175,11 @@ class NativeSpeechRecognition {
         popup: false,
       });
       journal("voice", "listening " + this.lang);
-      /* the plugin drops an error instead of delivering it (see the head of
-         this file); its own listening flag going down is the only sign */
-      /* the flag goes down a moment before "stopped" reaches this side, so a
-         single reading down means nothing; two in a row mean no event is
-         coming, and the session ended the way the plugin cannot report */
-      let downFor = 0;
-      this.watch = setInterval(async () => {
-        if (this.done || this.ended) return;
-        try {
-          const s: any = await Native.isListening();
-          if (s && s.listening !== false) { downFor = 0; return; }
-          /* whatever was heard before it went quiet is still the answer */
-          if (++downFor >= 2 && !this.ended) this.settleNow("plugin stopped without a word");
-        } catch (e) { /* asking failed; the timeout still ends the session */ }
-      }, WATCH_MS);
+      /* Nothing said yet, and nothing to distinguish a recogniser waiting
+         patiently from one that has died quietly — so simply wait, and give
+         up once no reciter could still be starting. See the note at the head
+         of this file on the watchdog this replaced. */
+      this.watch = setTimeout(() => { if (!this.spoke) this.settleNow("nothing said"); }, FIRST_WORD_MS);
 
       // without partial results the plugin would resolve here with the
       // matches; with them on it resolves at once and the listeners do the
@@ -198,13 +206,16 @@ class NativeSpeechRecognition {
 
   private finish() {
     this.done = true;
+    /* the plugin owns the recogniser; whichever way this session ended, say
+       so, or a session we gave up on keeps the microphone */
+    Native.stop().catch(() => {});
     this.cleanup();
     if (this.onend) this.onend();
   }
   private cleanup() {
     if (this.timer) { clearTimeout(this.timer); this.timer = null; }
     if (this.settle) { clearTimeout(this.settle); this.settle = null; }
-    if (this.watch) { clearInterval(this.watch); this.watch = null; }
+    if (this.watch) { clearTimeout(this.watch); this.watch = null; }
     for (const h of this.handles) h.remove().catch(() => {});
     this.handles = [];
   }
