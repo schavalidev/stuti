@@ -44,3 +44,9 @@ print(f"published {d.get('name')}  ({got or want} bytes)")
 if got and got != want:
     sys.exit(f"SIZE MISMATCH: sent {want}, Drive holds {got}")
 PY
+
+# The build is safely away, so the ones it replaced need not sit here. Only
+# after the upload succeeded, and only ever on local APKs: the Drive folder is
+# tidied from a signed-in session, never from this endpoint, which takes no
+# credential and must not be able to delete anything.
+"$(dirname "$0")/prune-builds.sh"
