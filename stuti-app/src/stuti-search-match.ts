@@ -44,6 +44,29 @@ function within(a: string, b: string, cap: number): number {
   return prev[n];
 }
 
+/* How long a word is, counted so that the same word is the same length in
+   any script the reader types in.
+
+   An abugida writes a syllable in fewer characters than its romanisation:
+   నామ and नाम are three characters each where nama is four, because a
+   consonant carries its own vowel and a vowel sign only replaces it. Every
+   threshold below is a judgement about how much a reciter has typed, and
+   counting raw characters therefore asked more of a Telugu reader than of
+   one typing Roman — enough more that a search for నామ found only the one
+   hymn whose name begins with the word, while nama found twenty. So a
+   consonant or an independent vowel counts two, and the marks that hang off
+   it count none, which puts an Indic word within a letter of its own
+   romanisation. */
+const INDIC = /[ऀ-ॿఀ-౿]/;
+const INDIC_MARK = /[ऀ-ःऺ-ॏ॑-ॗ़ॢॣఀ-ఄా-ౖౢౣ]/;
+export function effLen(s: string): number {
+  if (!s) return 0;
+  if (!INDIC.test(s)) return s.length;
+  let base = 0;
+  for (const ch of s) if (!INDIC_MARK.test(ch)) base++;
+  return base * 2;
+}
+
 /* A longer word may be more misspelt than a short one before it stops being
    the same word: "ram" and "rama" are different hymns, "sahasranamam" and
    "sahasranama" are not. */
@@ -62,9 +85,10 @@ const words = (s: string) => (s || "").split(/[^a-z0-9ऀ-ॿఀ-౿]+/).filter(
 export function wordScore(q: string, w: string): number {
   if (!q || !w) return 0;
   if (q === w) return 1;
-  if (w.startsWith(q) || q.startsWith(w)) return q.length >= 3 ? 0.9 : 0;
-  if (q.length >= 4 && w.indexOf(q) !== -1) return w.endsWith(q) ? 0.82 : 0.75;
-  const s = slack(Math.max(q.length, w.length));
+  const ql = effLen(q);
+  if (w.startsWith(q) || q.startsWith(w)) return ql >= 3 ? 0.9 : 0;
+  if (ql >= 4 && w.indexOf(q) !== -1) return w.endsWith(q) ? 0.82 : 0.75;
+  const s = slack(Math.max(ql, effLen(w)));
   if (s && within(q, w, s) <= s) return 0.6;
   return 0;
 }
