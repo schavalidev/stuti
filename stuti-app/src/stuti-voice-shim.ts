@@ -187,8 +187,17 @@ let known: string[] | null = null;
 async function usableLang(want: string): Promise<string> {
   if (known === null) {
     known = [];
-    try { const r: any = await Native.getSupportedLanguages(); known = (r && r.languages || []).map(String); }
-    catch (e) { known = []; }
+    /* the plugin answers this from an ordered broadcast to the phone's
+       search app, which on a phone that has no such app may never come
+       back — the mic must not wait on it, so the question is given a
+       second and the session goes ahead with what was asked for */
+    try {
+      const r: any = await Promise.race([
+        Native.getSupportedLanguages(),
+        new Promise((res) => setTimeout(() => res(null), 1000)),
+      ]);
+      known = (r && r.languages || []).map(String);
+    } catch (e) { known = []; }
   }
   if (!known.length) return want;                                  // the phone did not say
   const has = (t: string) => known!.some((l) => l.toLowerCase().replace("_", "-") === t.toLowerCase());
