@@ -220,7 +220,7 @@ export class FollowEngine {
      wants a longer run, or one long word said exactly, and a clear winner
      over any other place in the text — including an identical one, since
      an ambiguous word must not teleport the light. */
-  private best(from: number, to: number, keys: string[], cur: number, strict: boolean) {
+  private best(from: number, to: number, keys: string[], cur: number, strict: boolean, skipCost = 0.05) {
     const scores: number[] = [];
     const inside: boolean[] = [];
     let bi = -1, bq = -Infinity;
@@ -269,7 +269,7 @@ export class FollowEngine {
       const dist = Math.abs(e - (cur + 1));
       const nextLine = cur >= 0 ? this.toks[cur].line + 1 : 0;
       const skipped = Math.max(0, this.toks[e].line - nextLine - 1);
-      const qq = q - (e < cur ? 0.1 + dist * 0.02 : dist * 0.004) - (strict ? 0 : skipped * 0.05);
+      const qq = q - (e < cur ? 0.1 + dist * 0.02 : dist * 0.004) - (strict ? 0 : skipped * skipCost);
       if (qq > bq) { bq = qq; bi = e; }
     }
     if (bi < 0 || scores[bi] < 0) return { idx: -1, margin: 0, inside: false };
@@ -326,11 +326,22 @@ export class FollowEngine {
     if (!fresh && this.lastMoveOn && keys.length === this.lastMoveKeys) return null;
     const now = this.now;
 
-    /* near: a few words back to a few lines ahead of where we are */
+    /* near: a few words back to a few lines ahead of where we are. How far
+       ahead is not a constant. Ears that catch one word in five leave the
+       light standing while the reciter goes on — a real session had it hold
+       one line for thirty seconds while the ears named, correctly, a line
+       twelve further down, out of reach of a four-line window and priced out
+       by the per-line cost of skipping. So the window opens with the wait,
+       and skipping cheapens, until at half a minute of silence the light can
+       catch up with most of a page. A light that is keeping pace never sees
+       any of this: the wait resets on every move. */
     const cur = Math.max(this.idx, -1);
-    const aheadLine = cur >= 0 ? this.toks[cur].line + 4 : 3;
+    const stalled = this.lastMoveAt ? Math.max(0, (now - this.lastMoveAt) / 1000 - 6) : 0;
+    const reach = Math.min(40, 4 + Math.floor(stalled / 2.5) * 2);
+    const skipCost = Math.max(0.012, 0.05 - stalled * 0.004);
+    const aheadLine = cur >= 0 ? this.toks[cur].line + reach : reach - 1;
     const aheadEnd = this.lineStart[aheadLine + 1] != null ? this.lineStart[aheadLine + 1] - 1 : this.toks.length - 1;
-    const near = this.best(Math.max(0, cur - 3), aheadEnd, keys, cur, false);
+    const near = this.best(Math.max(0, cur - 3), aheadEnd, keys, cur, false, skipCost);
     /* a partial being revised often re-fits a word or two back; the light
        does not follow that — small steps back are ignored unless lost */
     if (near.idx >= 0 && near.idx < cur && this.status !== "lost") return null;

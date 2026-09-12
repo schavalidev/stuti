@@ -95,7 +95,7 @@ export async function shareRecitation(r: Recitation): Promise<void> {
 export async function registerLatest(hymn: string): Promise<boolean> {
   const list = await listRecitations(hymn);
   const r = list[0];
-  if (!r || !r.cues || r.cues.length < 1) { unregister(hymn); return false; }
+  if (!r || !cuesWorthFollowing(r.cues, r.lineCount, r.linesLit)) { unregister(hymn); return false; }
   const src = native() ? recitationSrc(r) : await webBlobUrl(r.id);
   if (!src) return false;
   return STUTI_AUDIO.register({ [hymn]: { src, lines: r.cues, dur: r.dur, by: "you" } }) > 0;
@@ -155,8 +155,14 @@ export const fmtWhen = (at: number, lang: string) => {
 
 /** Cue table from where the light went: the first second each line was
     entered. Lines the ears never caught are placed between their
-    neighbours; the table must climb, so it is made to. */
-export function cuesFrom(entered: Map<number, number>, lineCount: number, dur: number): number[] {
+    neighbours; the table must climb, so it is made to.
+
+    `weights` — how long each line takes to say, in letters — shares out the
+    gap in proportion. Chanted at one pace a half-line takes half the time of
+    a full one, and a table that gave every line an equal slice ran ahead of
+    the short lines and behind the long ones for the whole stretch. */
+export function cuesFrom(entered: Map<number, number>, lineCount: number, dur: number, weights?: number[]): number[] {
+  const w = (i: number) => Math.max(1, (weights && weights[i]) || 1);
   const known: (number | null)[] = Array.from({ length: lineCount }, (_, i) => (entered.has(i) ? entered.get(i)! : null));
   if (known[0] == null) known[0] = 0;
   const out: number[] = new Array(lineCount);
@@ -165,10 +171,39 @@ export function cuesFrom(entered: Map<number, number>, lineCount: number, dur: n
     if (known[i] != null) { out[i] = known[i]!; i++; continue; }
     let j = i; while (j < lineCount && known[j] == null) j++;
     const a = out[i - 1], b = j < lineCount ? known[j]! : Math.max(dur, a + (j - i + 1) * 0.5);
-    const n = j - i + 1;
-    for (let k = i; k < j; k++) out[k] = a + ((b - a) * (k - i + 1)) / n;
+    let tot = 0; for (let k = i - 1; k < j; k++) tot += w(k);
+    let run = 0;
+    for (let k = i; k < j; k++) { run += w(k - 1); out[k] = a + ((b - a) * run) / tot; }
     i = j;
   }
   for (let k = 1; k < lineCount; k++) if (!(out[k] > out[k - 1])) out[k] = out[k - 1] + 0.01;
   return out.map((v) => Math.round(v * 100) / 100);
+}
+
+/** Did the light walk enough of this hymn to say where the reciter is?
+
+    A cue table always has one entry per line, because that is the contract
+    the reader checks. What it cannot say is how much of it was measured and
+    how much was filled in between. A recording of twenty verses out of a
+    hundred and seventy still arrives as a full table, and Listen then sweeps
+    the light through the hundred and fifty verses that are not on the tape
+    before the first word is out — which is what a reciter sees as the light
+    ignoring her. So a table is offered only when the light really did walk
+    the hymn from its head to its end, stopping often enough on the way to
+    have measured something. A recitation that fails this is still kept,
+    still played and still shared from the shelf; it just does not claim to
+    know where in the text the voice is. */
+export function cuesCover(entered: Map<number, number>, lineCount: number): boolean {
+  const lit = Array.from(entered.keys()).sort((a, b) => a - b);
+  if (lineCount < 2 || lit.length < Math.max(4, lineCount / 6)) return false;
+  if (lit[0] > 1) return false;                                   // began somewhere in the middle
+  return lit[lit.length - 1] >= (lineCount - 1) * 0.9;            // and reached the end
+}
+
+/** The same judgement for a table already on the shelf, which kept its
+    counts but not which lines they were. Coarser, and deliberately so: it is
+    there to retire the tables written before the light learned to keep up. */
+export function cuesWorthFollowing(cues: number[] | null | undefined, lineCount: number, linesLit: number): boolean {
+  if (!cues || cues.length !== lineCount || lineCount < 2) return false;
+  return linesLit >= Math.max(4, lineCount / 6);
 }

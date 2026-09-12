@@ -23,7 +23,7 @@ import { VOSK_MODELS, VoskRecognition, voskAvailable, voskDownload, voskLangFor,
 import { grammarFor, indexVocab } from "./stuti-follow-grammar";
 import { OverlayPortal } from "./stuti-picker";
 import { STUTI_L } from "./stuti-i18n";
-import { WebCapture, cuesFrom, deleteRecitation, fmtDur, fmtSize, fmtWhen, keepRecitation, listRecitations, onRecitationsChange, recitationSrc, shareRecitation } from "./stuti-recitations";
+import { WebCapture, cuesCover, cuesFrom, deleteRecitation, fmtDur, fmtSize, fmtWhen, keepRecitation, listRecitations, onRecitationsChange, recitationSrc, shareRecitation } from "./stuti-recitations";
 import type { Recitation } from "./stuti-recitations";
 
 /* the vocabulary index per model and the grammar per text, built once */
@@ -218,7 +218,11 @@ export function useFollow({ hymn, lines, lang, active, setActive, setWord, setPl
   const endCapture = (silent = false) => {
     if (!recT0.current) return;
     const dur = (Date.now() - recT0.current) / 1000;
-    const cues = cuesFrom(entered.current, lines.length, dur);
+    /* the cue table is offered only if the light walked the whole hymn; a
+       recording of two verses out of a hundred keeps its audio and gives up
+       its claim to know where the voice is (see cuesCover) */
+    const weights = lines.map((l: any) => (l.iast || l.deva || "").replace(/\s+/g, "").length);
+    const cues = cuesCover(entered.current, lines.length) ? cuesFrom(entered.current, lines.length, dur, weights) : [];
     const linesLit = entered.current.size;
     recT0.current = 0; armRec.current = false;
     clearInterval(ticker.current);
