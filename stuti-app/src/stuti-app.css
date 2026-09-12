@@ -122,21 +122,42 @@
    for it was that it still opened in a new tab, with only the bottom nav to
    say otherwise. Then a panel dropped from the top over a dimmed screen.
 
-   What was wanted is a window: it sits in the middle of the screen, the
-   screen behind is left exactly as it was rather than dimmed, and the
-   window's own ground is thin enough to read the screen through — not
-   legibly, and not meant to be. Only what the reciter has to read carries
-   enough of its own ground to stay readable: the search field and the
-   result cards. Nothing here blurs what is behind, because blurring it
-   would undo the one thing the window is for. */
+   What was wanted is a window in the middle of the screen, with the screen
+   behind left as it was rather than dimmed, and thin enough to see that
+   screen through it — "even if it's not very legible".
+
+   The fourth try took that literally and simply made the ground thin. It
+   does not work, and the reason is worth writing down: two pieces of text
+   at the same size and weight, one behind the other, do not read as one in
+   front — they read as damage. The reciter's own screen is words, and so is
+   a list of stotra names.
+
+   Softening is the answer, and it is the same sentence read properly: what
+   is behind must be SEEN and need not be LEGIBLE. So the screen behind goes
+   out of focus while the search is open. It is all still there — its
+   colours, its shapes, where its cards fall — and its words have become
+   texture, which is the one state in which they cannot fight with the words
+   on top.
+
+   The blur is put on the screen itself rather than on the window as a
+   backdrop-filter, which would have been the tidier way to say it. That was
+   tried and could not be verified: backdrop-filter computes correctly here
+   and never composites, so there was no way to know what the phone would
+   actually draw without shipping it and asking. A filter on the screen
+   behind renders everywhere, which is worth more than the tidier spelling.
+   It also blurs the whole screen rather than a window-shaped hole in it,
+   and reads better for it — there is no hard edge where focus changes. The
+   tab bar sits outside and stays sharp. */
 .sr-scrim { position: absolute; inset: 0; z-index: 40; display: flex; flex-direction: column;
   justify-content: center; padding: 0 12px;
-  background: transparent;                      /* the screen behind stays as it was */
+  background: transparent;                      /* no dimming: the softening is the whole effect */
   animation: srScrimIn var(--fast, 160ms) var(--ease-out, ease) both; }
+.viewport.is-searching > .view { filter: blur(7px); transition: filter var(--med, 220ms) var(--ease-out, ease); }
+@media (prefers-reduced-motion: reduce) { .viewport.is-searching > .view { transition: none; } }
 .sr-sheet { flex: none; max-height: 78%; min-height: 0; display: flex; flex-direction: column;
   border-radius: 20px; overflow: hidden;
-  background: color-mix(in oklab, var(--bg) 58%, transparent);
-  border: 1px solid color-mix(in oklab, var(--ink) 14%, transparent);
+  background: color-mix(in oklab, var(--bg) 80%, transparent);
+  border: 1px solid color-mix(in oklab, var(--ink) 12%, transparent);
   box-shadow: 0 22px 60px color-mix(in oklab, var(--ink) 30%, transparent);
   animation: srSheetIn var(--med, 220ms) var(--ease-out, ease) both; }
 /* the view inside hugs its content instead of filling the frame, and scrolls
@@ -145,13 +166,12 @@
 /* the bar inside is the window's own, not a screen's top bar: no notch inset
    to carry, no ground of its own, and nothing behind it to blur */
 .sr-sheet .topbar { position: static; padding: 12px 12px 8px; background: none;
-  backdrop-filter: none; -webkit-backdrop-filter: none; }
-/* What has to be read keeps nearly all of its ground — the seeing-through is
-   the window's job, not the result's. A card thin enough to read the screen
-   through is a card you cannot read either, and the reciter is here to read
-   the card. */
-.sr-sheet .search-field { background: color-mix(in oklab, var(--surface) 94%, transparent); }
-.sr-sheet .hymn-card { background: color-mix(in oklab, var(--surface) 93%, transparent); }
+  backdrop-filter: none; }
+/* Content on glass is content, not more glass: the field the reciter types
+   into and the names she is reading keep their own ground entirely. The
+   seeing-through happens once, at the window, and never twice. */
+.sr-sheet .search-field { background: var(--surface); }
+.sr-sheet .hymn-card { background: var(--surface); }
 @keyframes srScrimIn { from { opacity: 0; } to { opacity: 1; } }
 @keyframes srSheetIn { from { opacity: 0; transform: scale(0.97); } to { opacity: 1; transform: none; } }
 @media (prefers-reduced-motion: reduce) { .sr-scrim, .sr-sheet { animation: none; } }

@@ -28,6 +28,7 @@ node fix-perf-seam.mjs
 node fix-relay-seam.mjs
 node fix-notify-seam.mjs
 node setup-entry.mjs
+node fix-backdrop-prefix.mjs
 node fix-missing-imports.mjs
 # record which design commit src/ now corresponds to (read by
 # ../check-design-updates.sh)

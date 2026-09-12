@@ -470,7 +470,7 @@
   position: sticky; top: 0; z-index: 6;
   margin: 2px -18px 4px;
   background: color-mix(in oklab, var(--bg) 78%, transparent);
-  -webkit-backdrop-filter: blur(14px) saturate(1.1);
+  
   backdrop-filter: blur(14px) saturate(1.1);
   border-bottom: 1px solid var(--line-2);
 }
@@ -1457,7 +1457,7 @@ select.sk-input {
 .fsel-index .fsel-item.soon { opacity: 0.72; }
 
 /* printed — deity page's own strip: no chrome, plain type on the card */
-.formbar-printed { position: static; margin: 0 -18px; background: none; -webkit-backdrop-filter: none; backdrop-filter: none; border-bottom: none; }
+.formbar-printed { position: static; margin: 0 -18px; background: none;  backdrop-filter: none; border-bottom: none; }
 .fsel-printed .fsel-track { padding: 0 18px 16px; }
 .fsel-printed .fsel-inner { gap: 20px; }
 .fsel-printed .fsel-item { flex: none; padding: 2px 0 6px; height: auto; border: none; border-bottom: 2px solid transparent; background: none; border-radius: 0; font-size: 1rem; font-weight: 500; color: var(--ink-faint); white-space: nowrap; }
@@ -1539,7 +1539,7 @@ select.sk-input {
 .lens-pad { padding: 0 18px; --bleed: 18px; }
 /* the lens bar is sticky and 17px taller than the pad's start; give every lens's first card room to clear it */
 .lensbar + .lens-pad { padding-top: 22px; }
-.lens-topbar { position: sticky; top: 0; z-index: 8; background: var(--bg-warm); backdrop-filter: blur(6px); -webkit-backdrop-filter: blur(6px); border-bottom: 1px solid var(--line-2); }
+.lens-topbar { position: sticky; top: 0; z-index: 8; background: var(--bg-warm); backdrop-filter: blur(6px);  border-bottom: 1px solid var(--line-2); }
 /* the Library bar carries a search button and Nitya's does not, so the same
    title sat in a bar 17px taller on one tab than the other — and the lens bar
    pins under a fixed offset, so the taller bar also reopened the gap */
@@ -1552,7 +1552,7 @@ select.sk-input {
      the bar itself (47px), which left a strip of bare parchment between them */
   position: sticky; top: 48px; z-index: 7; flex: none; padding: 3px 0 7px;
   background: var(--bg-warm);
-  -webkit-backdrop-filter: blur(12px) saturate(1.1); backdrop-filter: blur(12px) saturate(1.1);
+   backdrop-filter: blur(12px) saturate(1.1);
   border-bottom: 1px solid var(--line-2);
 }
 .lensbar-track { overflow-x: auto; scrollbar-width: none; }
@@ -2629,7 +2629,7 @@ input:is([type="date"],[type="time"],[type="month"],[type="datetime-local"]) { a
    so a tap on the page below never closed them — and Chrome blurred the
    whole screen under the bar for as long as the menu stood open. The bar
    drops its blur while a menu is up; there is nothing behind it to see. */
-.topbar:has(:is(.locctl,.langpick).open){backdrop-filter:none;-webkit-backdrop-filter:none}
+.topbar:has(:is(.locctl,.langpick).open){backdrop-filter:none;}
 /* the reader's layer row scrolls sideways once the chips overflow, and a
    scroller clips whatever hangs out of it — the reading-script menu with it.
    While that menu is open the row lets it through. */
@@ -2824,7 +2824,7 @@ input:is([type="date"],[type="time"],[type="month"],[type="datetime-local"]) { a
 .masa-detail-page .bough-petal,.masa-detail-page .bough-leaf{animation-name:calPetal}
 .masa-detail-page .pcard-ambient.mist .mist-pool{height:30%}
 .masa-detail-page>*:not(.pcard-ambient):not(.pcard-mix){position:relative;z-index:1}
-.masa-detail-page>.topbar{background:transparent;backdrop-filter:none;-webkit-backdrop-filter:none}
+.masa-detail-page>.topbar{background:transparent;backdrop-filter:none;}
 /* the guide's hero is not a card: the month's name stands straight on the
    season, with the rain or leaves passing behind the letters */
 .md-hero{padding:2px 0 0}
@@ -2840,7 +2840,7 @@ input:is([type="date"],[type="time"],[type="month"],[type="datetime-local"]) { a
 .md-left{font-size:0.8125rem;color:var(--ink-soft);white-space:nowrap}
 /* prose sits on frosted paper so the season stays legible behind it; the
    reference rows are already paper of their own and go bare */
-.md-card{margin-top:14px;padding:14px 16px 16px;border-radius:var(--r-lg, 18px);background:color-mix(in oklab, var(--surface) 82%, transparent);border:1px solid color-mix(in oklab, var(--surface) 60%, var(--line));backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);box-shadow:var(--shadow-sm)}
+.md-card{margin-top:14px;padding:14px 16px 16px;border-radius:var(--r-lg, 18px);background:color-mix(in oklab, var(--surface) 82%, transparent);border:1px solid color-mix(in oklab, var(--surface) 60%, var(--line));backdrop-filter:blur(10px);box-shadow:var(--shadow-sm)}
 .md-card .eyebrow{margin-bottom:8px}
 .md-card .vr-para{font-size:1rem}
 .md-card .masa-nishta:first-of-type{padding-top:0}
@@ -2848,8 +2848,8 @@ input:is([type="date"],[type="time"],[type="month"],[type="datetime-local"]) { a
 .md-card .pstep-recite{margin-top:6px}
 .md-list{margin-top:18px}
 .md-list .eyebrow{margin-bottom:8px;padding-left:2px}
-.md-list .vr-row{background:color-mix(in oklab, var(--surface) 92%, transparent);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px)}
-.masa-detail-page .vr-brief{background:color-mix(in oklab, var(--surface) 72%, transparent);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px)}
+.md-list .vr-row{background:color-mix(in oklab, var(--surface) 92%, transparent);backdrop-filter:blur(8px);}
+.masa-detail-page .vr-brief{background:color-mix(in oklab, var(--surface) 72%, transparent);backdrop-filter:blur(8px);}
 .masa-detail-page .vr-caveat{background:color-mix(in oklab, var(--surface) 70%, transparent)}
 [data-theme="night"] .md-card{background:color-mix(in oklab, var(--surface-2) 78%, transparent)}
 .vr-when{display:flex;align-items:baseline;gap:10px;flex-wrap:wrap;margin-top:14px;padding:12px 14px;border-radius:var(--r-md);background:var(--surface);border:1px solid var(--line)}
@@ -3307,7 +3307,7 @@ button.set-row:active{transform:scale(.99)}
 
 /* the plate. Read-only, and that is the design: it names the hour and stops.
    Nothing to mark, nothing owed, no reproach for a kāla that has passed. */
-.sky-plate{position:relative;z-index:3;margin:calc(-1 * var(--sky-lap)) 18px -14px;padding:13px 16px 14px;border-radius:18px;background:color-mix(in oklab,var(--surface) 90%,transparent);backdrop-filter:blur(10px) saturate(1.15);-webkit-backdrop-filter:blur(10px) saturate(1.15);border:1px solid color-mix(in oklab,var(--line) 70%,transparent);box-shadow:0 22px 44px -22px rgba(46,32,14,.5);color:var(--ink)}
+.sky-plate{position:relative;z-index:3;margin:calc(-1 * var(--sky-lap)) 18px -14px;padding:13px 16px 14px;border-radius:18px;background:color-mix(in oklab,var(--surface) 90%,transparent);backdrop-filter:blur(10px) saturate(1.15);border:1px solid color-mix(in oklab,var(--line) 70%,transparent);box-shadow:0 22px 44px -22px rgba(46,32,14,.5);color:var(--ink)}
 .sky-plate-cap{font-size: 0.6563rem;letter-spacing:.24em;text-transform:uppercase;font-weight:700;color:var(--accent-ink);display:flex;align-items:center;gap:8px}
 .sky-plate-bell{display:inline-flex;align-items:center;justify-content:center;width:24px;height:24px;border-radius:50%;background:color-mix(in oklab,var(--accent-ink) 20%,var(--surface));border:1px solid color-mix(in oklab,var(--accent-ink) 40%,var(--line));color:var(--accent-ink);flex:none;cursor:pointer;box-shadow:var(--shadow-sm,0 1px 3px rgba(0,0,0,.12));transition:transform var(--fast,120ms) var(--ease,ease)}.sky-plate-bell:active{transform:scale(.9)}
 /* on = the switch is live; off is the quiet outline, so a glance tells which */

@@ -172,13 +172,20 @@ if (!rewired) throw new Error("fix-search-seam: anchor not found — nothing to 
 chain = chain.split(`route.view === `).join(`rv === `);
 t = t.slice(0, chainAt) + chain + t.slice(chainEnd);
 
+/* the screen behind softens while the search is open (CSS in stuti-app.css) */
+sub(
+  `        <div className={"viewport " + (dir === "fwd" ? "d-fwd" : "d-back")}>`,
+  `        <div className={"viewport " + (dir === "fwd" ? "d-fwd" : "d-back") + (searchOpen ? " is-searching" : "")}>`,
+  "the viewport's class",
+);
+
 sub(
   `          {body}
         </div>`,
   `          {body}
-          {/* search seam: over the screen, not instead of it — the dimmed
-              screen below the panel is still the screen, and tapping it
-              closes the search the way tapping outside any sheet does */}
+          {/* search seam: over the screen, not instead of it — the softened
+              screen behind is still the screen, and tapping it closes the
+              search the way tapping outside any sheet does */}
           {searchOpen && (
             <div className="sr-scrim" onClick={() => go(route.from || "browse")}>
               <div className="sr-sheet" onClick={(e) => e.stopPropagation()}>
