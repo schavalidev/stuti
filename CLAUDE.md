@@ -2,6 +2,8 @@
 
 ## Working rules
 - **Every change ships three ways, every time:** commit + push to `origin main`, deploy the web build to Netlify (`netlify deploy --prod --build --site 3f9cdccf-4d91-463c-ae77-7fa0489e48d9` from the repo root), and when native code, assets, or the manifest changed, rebuild the APK into `builds/`. Don't skip Netlify because a change "only affects native" — the user asked for it unconditionally.
+- **Publish every APK to Drive** (agreed 12 Sep 2026): `stuti-app/tools/publish-apk.sh builds/Stuti-vNN.apk` puts it in the makers' "Stuti App" folder, beside the testers' logs, where the phone can install it. Don't hand the APK over as a chat attachment — at ~32 MB it never reaches the phone. The bytes go straight to Google through a resumable session the relay hands out, so Netlify's request limit is not in the way; the relay only accepts the name shape `Stuti-v<N>.apk`.
+- **Verify the built bundle before shipping it.** Serve `stuti-app/dist` (the `stuti-built` entry in `.claude/launch.json`), load it, and check the console and that the app actually renders. The dev server resolves modules differently and hides load-order faults; grepping the APK proves a file is present, not that it runs. A released build once opened on a white screen for want of this.
 - **Update `Changelog.html` at the end of every run.** Add to the current version's section, or open a new one when the work starts a new arc. Follow the house voice: name the cause, not the symptom; entries are prose, not bullet dumps of file names.
 - **End every run with a handoff summary** — a short block the user can paste into a new chat: what changed, what's pending, and any context a fresh session would otherwise have to rediscover.
 

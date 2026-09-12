@@ -20,6 +20,11 @@ import { createSign } from "node:crypto";
 
 const MAX_TEXT = 4 * 1024 * 1024, MAX_BLOB = 40 * 1024 * 1024;
 const PREFIXES = ["crash-", "follow-", "note-", "recitation-", "journal-"];
+// ...and the signed build itself, published from the maker's machine so a
+// tester can install it from the same folder their logs arrive in. Named
+// exactly rather than by prefix: this endpoint carries no credential, and a
+// shape this narrow leaves nothing to drop here but another build.
+const BUILD = /^Stuti-v\d+\.apk$/;
 const ORIGINS = [/^https:\/\/stuti-app\.netlify\.app$/, /^https?:\/\/localhost(:\d+)?$/, /^capacitor:\/\/localhost$/, /^https:\/\/[a-z0-9-]+--stuti-app\.netlify\.app$/];
 
 let cached = { token: null, until: 0 };
@@ -61,7 +66,7 @@ export default async (req) => {
   if (!folder || !(process.env.STUTI_DRIVE_OAUTH || process.env.STUTI_DRIVE_SA)) return reply(503, { error: "relay not configured" }, origin);
   let q; try { q = await req.json(); } catch (e) { return reply(400, { error: "bad json" }, origin); }
   const name = String(q.name || "").replace(/[^A-Za-z0-9._-]/g, "_").slice(0, 120);
-  if (!PREFIXES.some((p) => name.startsWith(p))) return reply(400, { error: "unknown kind" }, origin);
+  if (!BUILD.test(name) && !PREFIXES.some((p) => name.startsWith(p))) return reply(400, { error: "unknown kind" }, origin);
   const mime = /^[a-z]+\/[a-z0-9.+-]+$/i.test(q.mime || "") ? q.mime : "text/plain";
   const meta = JSON.stringify({ name, parents: [folder], mimeType: mime });
   let token; try { token = await accessToken(); } catch (e) { return reply(502, { error: String(e.message || e) }, origin); }
