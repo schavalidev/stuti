@@ -14,7 +14,7 @@ import { STUTI_L } from "./stuti-i18n";
 const VOICE_SR = window.SpeechRecognition || window.webkitSpeechRecognition || null;
 const VOICE_LANG = { deva: "hi-IN", telugu: "te-IN", roman: "en-IN" };
 
-function VoiceButton({ lang = "deva", onResult, onInterim, autoStart = false, size = 18, className = "" }) {
+function VoiceButton({ lang = "deva", onResult, onInterim, onStart, onNothing, autoStart = false, size = 18, className = "" }) {
   const L = STUTI_L;
   const [state, setState] = React.useState("idle"); // idle | listening | error
   const recRef = React.useRef(null);
@@ -22,6 +22,7 @@ function VoiceButton({ lang = "deva", onResult, onInterim, autoStart = false, si
   const start = () => {
     if (!VOICE_SR) return;
     stop();
+    onStart && onStart();          // search seam: the box is cleared for the new words
     const r = new VOICE_SR();
     r.lang = VOICE_LANG[lang] || "en-IN";
     r.interimResults = true; r.continuous = false; r.maxAlternatives = 1;
@@ -35,8 +36,8 @@ function VoiceButton({ lang = "deva", onResult, onInterim, autoStart = false, si
       if (finalText) { onResult && onResult(finalText.trim()); }
       else if (interim && onInterim) onInterim(interim.trim());
     };
-    r.onerror = () => { setState("error"); recRef.current = null; setTimeout(() => setState("idle"), 1400); };
-    r.onend = () => { recRef.current = null; setState((s) => (s === "error" ? s : "idle")); };
+    r.onerror = () => { setState("error"); recRef.current = null; if (!finalText) onNothing && onNothing(); setTimeout(() => setState("idle"), 1400); };
+    r.onend = () => { recRef.current = null; if (!finalText) onNothing && onNothing(); setState((s) => (s === "error" ? s : "idle")); };
     recRef.current = r;
     try { r.start(); setState("listening"); } catch (e) { setState("idle"); }
   };

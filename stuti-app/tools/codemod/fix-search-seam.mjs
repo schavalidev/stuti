@@ -33,6 +33,15 @@ const sub = (from, to, what) => {
   if (!t.includes(from)) throw new Error(`fix-search-seam: anchor not found — ${what}`);
   t = t.replace(from, to);
 };
+const voiceFile = join(SRC, "stuti-voice.tsx");
+function patchVoice(patches) {
+  let v = readFileSync(voiceFile, "utf8");
+  for (const [from, to, what] of patches) {
+    if (!v.includes(from)) throw new Error(`fix-search-seam: anchor not found in stuti-voice.tsx — ${what}`);
+    v = v.replace(from, to);
+  }
+  writeFileSync(voiceFile, v);
+}
 
 /* ---- 1. the matcher ---- */
 sub(
@@ -96,6 +105,46 @@ sub(
   "the search input's focus",
 );
 
+/* ---- 4. a new dictation replaces what is in the box, not adds to it ----
+   Tapping the microphone with a query already typed left that query sitting
+   there, and the reciter could not tell which words the search was answering.
+   The button now says when it starts listening, so the box can be emptied
+   for the new words, and says when a session ended with nothing heard, so a
+   mic that failed does not cost the reciter what they had typed. */
+patchVoice([
+  [`  const start = () => {
+    if (!VOICE_SR) return;
+    stop();`,
+   `  const start = () => {
+    if (!VOICE_SR) return;
+    stop();
+    onStart && onStart();          // search seam: the box is cleared for the new words`,
+   "the start of a listening session"],
+  [`    r.onerror = () => { setState("error"); recRef.current = null; setTimeout(() => setState("idle"), 1400); };`,
+   `    r.onerror = () => { setState("error"); recRef.current = null; if (!finalText) onNothing && onNothing(); setTimeout(() => setState("idle"), 1400); };`,
+   "the error path"],
+  [`    r.onend = () => { recRef.current = null; setState((s) => (s === "error" ? s : "idle")); };`,
+   `    r.onend = () => { recRef.current = null; if (!finalText) onNothing && onNothing(); setState((s) => (s === "error" ? s : "idle")); };`,
+   "the end of a session"],
+  [`function VoiceButton({ lang = "deva", onResult, onInterim, autoStart = false, size = 18, className = "" }) {`,
+   `function VoiceButton({ lang = "deva", onResult, onInterim, onStart, onNothing, autoStart = false, size = 18, className = "" }) {`,
+   "the button's props"],
+]);
+
+sub(
+  `          <VoiceButton lang={lang} autoStart={voice} onInterim={setQ} onResult={setQ} />`,
+  `          <VoiceButton lang={lang} autoStart={voice} onInterim={setQ} onResult={setQ}
+            onStart={() => { wasTyped.current = q; setQ(""); }}
+            onNothing={() => setQ((cur) => cur || wasTyped.current)} />`,
+  "the search's voice button",
+);
+sub(
+  `  const [q, setQ] = useStateM("");`,
+  `  const [q, setQ] = useStateM("");
+  const wasTyped = useRefM("");   // search seam: given back if a dictation hears nothing`,
+  "the search's query state",
+);
+
 /* ---- 2. the search opens over the screen that called it ---- */
 sub(
   `  let body;
@@ -127,10 +176,14 @@ sub(
   `          {body}
         </div>`,
   `          {body}
-          {/* search seam: over the screen, not instead of it */}
+          {/* search seam: over the screen, not instead of it — the dimmed
+              screen below the panel is still the screen, and tapping it
+              closes the search the way tapping outside any sheet does */}
           {searchOpen && (
-            <div className="sr-sheet">
-              <SearchView key="search" go={go} lang={lang} backView={route.from || "browse"} weekday={route.weekday} voice={!!route.voice} />
+            <div className="sr-scrim" onClick={() => go(route.from || "browse")}>
+              <div className="sr-sheet" onClick={(e) => e.stopPropagation()}>
+                <SearchView key="search" go={go} lang={lang} backView={route.from || "browse"} weekday={route.weekday} voice={!!route.voice} />
+              </div>
             </div>
           )}
         </div>`,

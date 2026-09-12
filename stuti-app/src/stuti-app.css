@@ -116,15 +116,24 @@
 .gate-mail:hover, .gate-mail:focus-visible { color: var(--accent-ink); text-decoration: underline; text-underline-offset: 3px; }
 
 /* ---- the search, over the screen that called it (search seam) ----
-   The search used to be a screen of its own: tapping the bar on Home
-   replaced Home, and coming back rebuilt it. It is now a sheet laid over
-   whatever was behind, which keeps the reciter's place — the tab of the
-   screen underneath stays lit, and the bar it was opened from is still
-   there when it closes. Opaque, because a search reading a list of results
-   over a page of text is unreadable, and full-bleed inside the viewport so
-   the tab bar below stays reachable. */
-.sr-sheet { position: absolute; inset: 0; z-index: 40; display: flex; flex-direction: column;
-  background: var(--bg); animation: srSheetIn var(--med, 220ms) var(--ease-out, ease) both; }
-.sr-sheet > .view { flex: 1; min-height: 0; animation: none; }
-@keyframes srSheetIn { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: none; } }
-@media (prefers-reduced-motion: reduce) { .sr-sheet { animation: none; } }
+   It used to be a screen of its own: opening it from Home replaced Home.
+   The first attempt at a sheet was opaque and full-bleed, which looks
+   exactly like the screen it replaced — the founder's word for it was that
+   it still opened in a new tab, with only the bottom nav to say otherwise.
+   So the panel now takes only the height it needs, dropping from the top
+   with the search bar and whatever results there are, and the screen it was
+   opened from stays visible and dimmed beneath it. Tapping that dimmed part
+   closes the search, as tapping outside a sheet does everywhere else. */
+.sr-scrim { position: absolute; inset: 0; z-index: 40; display: flex; flex-direction: column;
+  background: color-mix(in oklab, var(--ink) 34%, transparent);
+  animation: srScrimIn var(--fast, 160ms) var(--ease-out, ease) both; }
+.sr-sheet { flex: none; max-height: 88%; min-height: 0; display: flex; flex-direction: column;
+  background: var(--bg); border-radius: 0 0 18px 18px; overflow: hidden;
+  box-shadow: 0 10px 30px color-mix(in oklab, var(--ink) 22%, transparent);
+  animation: srSheetIn var(--med, 220ms) var(--ease-out, ease) both; }
+/* the view inside hugs its content instead of filling the frame, and scrolls
+   on its own once the results outgrow the screen */
+.sr-sheet > .view { flex: 0 1 auto; min-height: 0; animation: none; overflow-y: auto; }
+@keyframes srScrimIn { from { opacity: 0; } to { opacity: 1; } }
+@keyframes srSheetIn { from { transform: translateY(-10px); } to { transform: none; } }
+@media (prefers-reduced-motion: reduce) { .sr-scrim, .sr-sheet { animation: none; } }

@@ -118,6 +118,7 @@ const srPadaGloss = (lk) => {
 function SearchView({ go, lang = "deva", backView = "browse", weekday, voice = false }) {
   const S = STUTI, L = STUTI_L, TR = STUTI_TRANSLIT, PADA = STUTI_PADA;
   const [q, setQ] = useStateM("");
+  const wasTyped = useRefM("");   // search seam: given back if a dictation hears nothing
   /* opened from the home, the search is a search for stotras and nothing
      else — festivals have their own place on the calendar */
   const stotraOnly = backView === "home" || backView === "daily";
@@ -204,7 +205,9 @@ function SearchView({ go, lang = "deva", backView = "browse", weekday, voice = f
           <Icon name="search" size={18} />
           <input className="search-input" value={q} onChange={(e) => setQ(e.target.value)} autoFocus={!voice}
             placeholder={L.t("searchHint", lang)} autoComplete="off" spellCheck="false" enterKeyHint="search" />
-          <VoiceButton lang={lang} autoStart={voice} onInterim={setQ} onResult={setQ} />
+          <VoiceButton lang={lang} autoStart={voice} onInterim={setQ} onResult={setQ}
+            onStart={() => { wasTyped.current = q; setQ(""); }}
+            onNothing={() => setQ((cur) => cur || wasTyped.current)} />
           {q && <button className="search-clear" onClick={() => setQ("")} aria-label={STUTI_L.a("aClearSearch")}>×</button>}
         </div>
       </div>
@@ -670,10 +673,14 @@ function App() {
 
         <div className={"viewport " + (dir === "fwd" ? "d-fwd" : "d-back")}>
           {body}
-          {/* search seam: over the screen, not instead of it */}
+          {/* search seam: over the screen, not instead of it — the dimmed
+              screen below the panel is still the screen, and tapping it
+              closes the search the way tapping outside any sheet does */}
           {searchOpen && (
-            <div className="sr-sheet">
-              <SearchView key="search" go={go} lang={lang} backView={route.from || "browse"} weekday={route.weekday} voice={!!route.voice} />
+            <div className="sr-scrim" onClick={() => go(route.from || "browse")}>
+              <div className="sr-sheet" onClick={(e) => e.stopPropagation()}>
+                <SearchView key="search" go={go} lang={lang} backView={route.from || "browse"} weekday={route.weekday} voice={!!route.voice} />
+              </div>
             </div>
           )}
         </div>

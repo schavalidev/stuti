@@ -77,6 +77,22 @@ class NativeSpeechRecognition {
   private watch: any = null;
   private ended = false;     // the speaker has stopped; we are waiting on the final text
   private spoke = false;     // anything at all was heard this session
+  private gone = false;      // abandoned before the mic was even open
+
+  /* Opening the mic is not instant: the plugin is asked whether it is
+     available, then for permission, then which languages it holds, and each
+     of those is a round trip to the phone. A reciter who taps the mic and
+     changes their mind is gone long before the last of them answers — and
+     the old code, having already run abort(), went on to open the mic
+     anyway, with nothing left alive to close it. That is the microphone
+     that stayed on with the app on another screen. Every step now looks to
+     see whether it is still wanted, and the last word to the plugin is stop
+     rather than start. */
+  private giveUp() {
+    journal("voice", "left before the mic opened");
+    Native.stop().catch(() => {});
+    this.cleanup();
+  }
 
   private emit(transcript: string, isFinal: boolean) {
     const result: any = [{ transcript, confidence: 1 }];
@@ -100,14 +116,18 @@ class NativeSpeechRecognition {
 
   async start() {
     this.done = false; this.ended = false; this.spoke = false;
+    this.gone = false;
     this.latest = "";
     try {
       const { available } = await Native.available();
       if (!available) throw new Error("service-not-allowed");
+      if (this.gone) return this.giveUp();
       const perm: any = await Native.requestPermissions();
       const granted = perm && (perm.speechRecognition === "granted" || perm.microphone === "granted");
       if (!granted) throw new Error("not-allowed");
+      if (this.gone) return this.giveUp();
       this.lang = await usableLang(this.lang);
+      if (this.gone) return this.giveUp();
 
       this.handles.push(await Native.addListener("partialResults", (d: any) => {
         const t = d && d.matches && d.matches[0];
@@ -128,6 +148,7 @@ class NativeSpeechRecognition {
         this.settle = setTimeout(() => this.settleNow("settled"), SETTLE_MS);
       }));
       this.timer = setTimeout(() => this.settleNow("timeout"), MAX_LISTEN_MS);
+      if (this.gone) return this.giveUp();
 
       const res: any = await Native.start({
         language: this.lang,
@@ -165,9 +186,12 @@ class NativeSpeechRecognition {
 
   stop() { Native.stop().catch(() => {}); }
   abort() {
+    /* said even when this session already finished: the plugin holds the
+       recogniser, not us, and stopping twice costs nothing */
+    this.gone = true;
+    Native.stop().catch(() => {});
     if (this.done) return;
     this.done = true;
-    Native.stop().catch(() => {});
     this.cleanup();
     if (this.onend) this.onend();
   }
