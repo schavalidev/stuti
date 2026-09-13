@@ -3377,3 +3377,190 @@ Nine differences are recorded in the file's recension note, the largest being th
 One defect was repaired, and it was confirmed by both printed witnesses: `పుజా` to `పూజా`. Separately the base page's own apparatus mark `[రత్న]` was dropped from the dīpa verse as the site's editorial note rather than part of the text.
 
 Gaps that remain. The base text prints **no udyāpana** — the concluding rite of the fifth year, which the 1998 booklet sets out in full, is absent here and could close this file later. The **Maṅgaḷacaṇḍikā stava** is pointed at and not printed; *Vratha Ratnākaramu* prints it in full at that place, but its OCR is too broken to transcribe and the stava needs page images. The **aṣṭottara** is a pointer in the base text and was not compared against either nāmāvaḷi in the corpus.
+
+### 2026-09-14 — Kedāreśvara vrata written
+
+`puja/smarta/26_kedareswara_vrata_kalpam.txt` — the Kedāreśvara (Kedāra Gaurī) vrata, 56 units.
+The rite and the story are printed on two separate stotranidhi pages and both are carried in this
+one file. The vrata runs from the eighth day of the bright fortnight of Bhādrapada to the new
+moon, which is twenty-one days, and the twenty-one knots of the toram are one for each of those
+days. The header and the Blurb state that duration, because the rite is now often kept in a
+one-day form.
+
+Collated against the printed *Āru Vratālu*, Paṇḍita Pariṣkṛtamu, Gollapudi Veeraswamy Son,
+Rajahmundry 1999, at lines 3055–3805 of its archive.org OCR. The two editions agree on the
+resolve, the meditation, the invitation, the order of the services, the seventeen names of the
+worship of the limbs, the twenty-one knots, the mantra for taking up the thread, the toram
+mantra, the vāyana mantra and the mantra for the giving of the image. The Telugu story agrees
+word for word.
+
+Seven differences were found and all seven are recorded in the file, with both readings named.
+The one that changes the sense is the name spoken over the twenty-first knot: the base text has
+Mṛtyuñjaya and the print has Kedāreśvara. The others are that the print gives only a direction
+where the base text prints the establishing of the pot in full; that the print omits the series
+of baths with their Vedic mantras; that the print omits the mantras of the food offering, the
+services of a king and the mantrapuṣpa; that the print gives the hundred and eight names in full
+where the base text points elsewhere; one word in the worship of the limbs; and one word at the
+sixth knot, which is printed in the bracket form.
+
+Three defects were repaired, each confirmed by the printed witness: `విరూపాక్ష్యాయ` to
+`విరూపాక్షాయ`, `వృషభద్వజాయ` to `వృషభధ్వజాయ`, and `చతుర్ధశ` to `చతుర్దశ`. Two suspected defects
+were left standing because no witness confirms a correction, and the file says so.
+
+Gaps. The *Āru Vratālu* print carries the story in Sanskrit at line 3491 of its OCR. It was
+located and not transcribed, because those pages are too damaged to read with confidence, and
+nothing was reconstructed. Closing that gap needs the page images. The hundred and eight names in
+the print stand in three columns and were neither transcribed nor collated for the same reason.
+
+### 2026-09-14 — Vaibhava Lakṣmī vrata written
+
+`puja/smarta/29_vaibhava_lakshmi_vrata_kalpam.txt`, 41 units. The evening vrata of
+Vaibhavalakṣmī: a full ṣoḍaśopacāra pūjā performed upon a pot, with a ṛc of the Śrī Sūkta before
+the verse of each service, the worship of ten limbs, the mantra of the vāyana, and a kathā in
+seven parts. The base text is the stotranidhi Telugu page, 229 lines, Telugu script only; the
+Devanāgarī and the IAST were made from it by `bin/tel2dev.py` and `bin/dev2iast.py` and nothing
+was typed by hand. The header states in full how this rite differs from the Mārgaśira Lakṣmīvāra
+vrata, which is a separate work and was fetched and read for that purpose only.
+
+Independent witnesses hunted, and what each returned. A printed Telugu booklet of a different
+lineage was found and used for the collation: *Śubhaprada Vaibhavalakṣmī Pūjā Vidhānam*, compiled
+by Śrīnidhi Koṭṭampalle Prakāśarāo, Mahesh Prakashan, Bengaluru, read from the archive.org scan
+`vqye-shubhaprada-vaibhava-lakshmi-pooja-vidhana-by-srin`, 13,188 Telugu characters of OCR
+measured. It agrees on every verse the two rites share and differs in seven recorded places,
+including the whole shape of the rite, the rule of the weeks, one vocative and one pronoun of the
+closing verse, and the kathā. *Vratha Ratnākaram* volumes 1 and 2, scans `VrathaRathnakaramu1`
+and `VrathaRatnakaramu2`, were read in full — 126,949 and 365,404 Telugu characters — and neither
+contains this vrata; the word `వైభవలక్ష్మీ` does not occur in either. *Āru Vratālu* does not
+contain it either and was used only to confirm the wording of two shared ritual verses.
+`vignanam.org` was searched through all 27,096 entries of its own `sitemap.xml` and carries no
+Vaibhava Lakṣmī vrata in any script. Two northern printed witnesses were read for the date:
+`pxdz_vaibhav-lakshmi-vrat-surat-sahitya-sangam` and
+`BwbU_shri-vaibhav-lakshmi-vrat-katha-compiled-by-narendra-sharma-lakshmi-publication-delhi`.
+
+What the text is. A modern printed observance of the twentieth century, not a classical one, and
+the header says so plainly. The Surat booklet carries a Government of India registration number
+of 1988 and names the ten other languages it is printed in; the Bengaluru booklet propagates by
+the giving away of its own copies, eight to eight married women. The observance is in none of the
+Telugu vrata compendia and in none of the classical nibandhas. The Telugu recension of the base
+text is not the Gujarati booklet in translation: it has been given a full Śrī Sūkta pūjā and a
+purāṇic kathā of Bhṛgu, Suśarma and the four sisters, which the northern booklets do not have.
+
+Repaired: fifty, of two kinds, each counted in the header. Thirty-nine occurrences of a Latin
+`o` for the anusvāra and nine of an ASCII colon for the visarga, all of them on accented lines,
+repaired only on lines already carrying an accent mark; and two single-word repairs confirmed
+against the *Āru Vratālu* print. Four further suspected slips were searched for in both printed
+witnesses, were not confirmed, and are left exactly as the source prints them.
+
+Gaps. The hundred and eight names were not collated. The base text prints none and points at two
+nāmāvaḷis; the Bengaluru booklet prints a list, but its OCR of those pages is broken name by name
+and a list cannot be collated against a list that cannot be read. Closing that gap needs the page
+images. The Mārgaśira Lakṣmīvāra vrata is still unwritten and remains a separate file to make.
+
+### Session log — Kedāreśvara collision, and three findings for `26_kedareswara_vrata_kalpam.txt` (2026-09-14)
+
+**No file was written this session. Stopping and reporting instead, per the standing rule on
+conflict.** The Kedāreśvara vrata kalpa was researched and drafted here in full — units, header
+and builder are in this session's scratchpad — and then, at the moment of writing,
+`26_kedareswara_vrata_kalpam.txt` was found on disk, authored by another session at 00:32 on
+2026-09-14 from the same two stotranidhi pages. **An existing file is not ours to rewrite and a
+second file of the same work from the same base text would be pure duplication**, so the draft
+was not written. The build script refused of its own accord as well, because its accent check
+could not find one of its sources; both guards agreed.
+
+**Three findings from the drafting work that bear on that file. None has been applied to it —
+a correction is not an additive cross-reference, so these are reported, not made.**
+
+1. **The Ṛgveda citation can now be settled, and it is wrong in the base text.** That file's
+   `Note` says of `గౌరీర్మిమాయ సలిలాని తక్షతి`: *"The reference was left exactly as printed. No
+   witness was found that confirms it and nothing was altered."* **The witness exists.** Against
+   the Aufrecht critical text through `bin/gretil.py`, the verse is **Ṛgveda 1.164.41**, the
+   Gaurī verse of the Asya-vāmasya hymn. The printed `(ఋ.౧.౧౬౧.౪౧)` cannot be right:
+   **sūkta 1.161 has only fourteen verses**, while 1.164 has fifty-two. The companion reference
+   `(ఋ.౧.౪౩.౧)` for `kad rudrāya pracetase` **is** correct. The text of both ṛcs matches the
+   critical edition; only the one reference is wrong. This is exactly the gap the standing rule
+   on critical editions (2026-09-13) exists to close.
+2. **`Accent: none, and none is expected` is not right for this rite, and accented sources in
+   the correct śākhā were located.** The seven mantras of the bath — `āpyāyasva`,
+   `dadhikrāvṇo`, `śukram asi`, `madhu vātā`, `svāduḥ pavasva`, `yāḥ phalinīḥ`, `āpo hi ṣṭhā` —
+   all stand accented, **in the same order at the same seven services of a Śiva pūjā**, at
+   `https://vignanam.org/devanagari/shiva-panchamruta-snanam.html` (1,108 accent marks), a
+   native accented Devanāgarī Taittirīya source this corpus already uses elsewhere. Both
+   Ṛgvedic ṛcs stand accented in the Śākala saṁhitā at sa.wikisource (`ऋग्वेदः सूक्तं १.४३`
+   pageid 635, `ऋग्वेदः सूक्तं १.१६४` pageid 755). A page printing a mantra bare is not evidence
+   that the mantra has no accent. **Caution, learned here:** vignanam's *Ṛgvedic* pages are
+   mechanically converted from the Aufrecht IAST and print broken akṣaras — `प्रच्᳚एतसे` for
+   `प्रचे॑तसे` — so they must not be used for Devanāgarī marking, though its Taittirīya pages
+   are sound.
+3. **A second independent witness exists and was not used.** archive.org `kedareswara-vratam`
+   carries a complete Telugu Kedāreśvara vrata-kalpa as clean OCR — 29,538 characters, 24,515
+   Telugu, **zero Latin**, correct from its first line. It is of wider scope than the base text:
+   it writes out the preparation of the place, the lamp, the vessels and the twenty-four names
+   of Keśava at the ācamana, which stotranidhi only points at. It agrees on the twenty-one
+   strands and twenty-one knots.
+
+**Two structural collisions that need a human decision — neither is drift in a generated count.**
+
+- **Two files are numbered 26.** `26_sravana_mangalagauri_vrata_kalpam.txt` (written here
+  2026-09-12) and `26_kedareswara_vrata_kalpam.txt` (2026-09-14). One must be renumbered.
+- **Two files hold the same Śrāvaṇa Maṅgaḷa Gaurī rite, from the same base page.**
+  `26_sravana_mangalagauri_vrata_kalpam.txt` (55 units, written here) and
+  `28_mangala_gauri_vrata_kalpam.txt` (45 units, 2026-09-14) both take
+  `https://stotranidhi.com/sravana-mangala-gowri-vratham-puja-katha-in-telugu/` as base. They
+  differ in the second witness — Challa Lakṣmī Nṛsiṁha Śāstri, Machilipatnam 1958 here;
+  Sannidhānaṁ Narasiṁha Śarma, Rajahmundry 1998 there — and in accent, since the mantras here
+  are accented from the site's own accented pūjā page and there are left bare. **This is the
+  same work, not two recensions**, so the dedup rule points at retiring one rather than keeping
+  both. Which one survives is the user's call, and the readings of the other are worth keeping
+  in whichever does.
+
+**Still open, unchanged:** the Challa 1958 recension of Śrāvaṇa Maṅgaḷa Gaurī as its own file —
+it is a genuinely different work (different service verses throughout, and a different kathā
+entirely, spoken by Kṛṣṇa to Yudhiṣṭhira and set in Kuṇḍinanagara), and it exists only as 33
+page images requiring full transcription. And Lakṣmī Kubera, 50 page images, no text layer and
+no digital witness located.
+
+### 2026-09-14 — Ananta Padmanābha vrata written
+
+`puja/smarta/27_ananta_padmanabha_vrata_kalpam.txt` is written: 74 units, the vrata of Ananta Padmanābha kept on the fourteenth tithi of the bright fortnight of Bhādrapada and held for fourteen years. It carries the worship of Yamunā Devī as a limb, the darbha image with the breath put into it, the sixteen services, the toram of fourteen knots with its own section, the vāyana, and the story in nine parts. The base text is the stotranidhi page; the collating witness is the printed *Āru Vratālu*, Rajahmundry 1999.
+
+The two editions agree on the meditation, on the body of the sixteen services, on the fourteen knots and their fourteen names in the same order, on the taking up, the bowing and the binding of the toram, and on the substance of the story, including the rule told inside it — the maṇḍala, the darbha image, the twenty-eight cakes of which half are given away, and all the materials counted in fourteens. Nine differences were found and all nine stand in the recension note: the number of resolves; the darbha mantra and the prāṇapratiṣṭhā, which the print does not carry; what is offered to Yamunā and in what order, the print giving her no bath in the five nectars; the Vedic `āpo vā idaṁ sarvam` passage of the subsidiary pot, which the print does not carry; the last word of the toram's verse, where the base reads `prapūjayet` and the print's story reads `prayojayet`, a difference of sense that was left unsettled; the name of the eleventh service; the hundred and eight names, which the print prints in full as those of Kṛṣṇa while the base only points at two nāmāvaḷis; the heading over the letting go of the worn toram; and the close of the rite, which the print does not have at all.
+
+Six defects were repaired, each confirmed against the print and none from judgement: `jāṭajūṭa` to `jaṭājūṭa`, `bhāgīradhyai` to `bhāgīrathyai`, `āvahanaṁ` to `āvāhanaṁ`, `caturdaśa granthiṁ saṁyuktaṁ` to `caturdaśa granthi saṁyuktaṁ`, `ājānubhāhave` to `ājānubāhave`, and `netraṁ` to `netre`. One suspected defect was left alone: `prasādaṁ śīrasā gṛhṇāmi`, for which the print offers no witness because it has no closing.
+
+Two gaps remain. The print's Sanskrit kathā was located at lines 2610 to 2783 of its OCR and was **not** transcribed, because those pages are damaged beyond confident reading and nothing was reconstructed; closing that gap needs the page images. The hundred and eight names were not collated and are not in the file.
+
+### 2026-09-14 — the five vratas moved into a folder of their own
+
+**1. `puja/vrata/` was made, and the five files written for this queue were moved into it.**
+`01` Varalakṣmī, `02` Kedāreśvara, `03` Maṅgaḷa Gaurī, `04` Vaibhava Lakṣmī,
+`05` Ananta Padmanābha. **The reason is genre, not paddhati.** A vrata kalpa is kept on a named
+day or recurrence, it carries a story, and it usually carries a toram whose knots are worshipped
+one by one and which is then bound on the wrist. The daily pūjā has no counterpart for that
+apparatus. Each file still states its own paddhati, and **no file there carries a
+`Recension / śākhā:` field, because śākhā does not apply to this genre.**
+
+**2. The move also ends a numbering collision.** Other sessions filled `puja/smarta/` from 26 to
+50 while these five were being written, and three of the five had landed on numbers already
+taken.
+
+**3. Four vrata files were deliberately left where they are**, because they are other sessions'
+work and moving a file is a change to it: `puja/smarta/14` Vināyaka, `24` Anaghāṣṭamī,
+`26` Śrāvaṇa Maṅgaḷagaurī and `49` Nāga Pañcamī. **Until the maintainer says otherwise a reader
+must look in both folders**, and `puja/vrata/README.md` lists them so that the reader knows to.
+
+**4. One rite is now written twice and this is not an error to be cleaned up silently.**
+`puja/vrata/03_mangala_gauri_vrata_kalpam.txt` and
+`puja/smarta/26_sravana_mangalagauri_vrata_kalpam.txt` are the same rite from the same base text,
+written by two hands that did not see each other's work. The older file is the fuller of the two
+at 55 units against 45. **They were collated against different printed editions** — Machilipatnam
+**1958** there, Rajahmundry **1998** here — and they differ in the story they tell and in whether
+an udyāpana is given. Each file now points at the other and says neither supersedes it.
+**Not one character of the older file was altered. Whether to retire one of them is the
+maintainer's decision and has not been made.**
+
+**5. Relative cross-references were rewritten for the new depth** — a bare
+`03_purvanga_vidhanam.txt` became `../smarta/03_purvanga_vidhanam.txt`, and so on. No bare
+same-folder reference survives in the new folder.
+
+**6. Verified.** `bin/reader_view.py --audit` reports no sourcing in any reader-facing field of
+the five. `bin/recount.py` reconciles at 996 with a new tracked row for `puja/vrata/`.

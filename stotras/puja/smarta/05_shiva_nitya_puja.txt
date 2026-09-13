@@ -1,0 +1,1083 @@
+Title: Śiva Nitya Pūjā Vidhānam (Smārta Paddhati)
+Devanāgarī: शिव नित्य पूजा विधानम् (स्मार्त पद्धतिः)
+Telugu: శివ నిత్య పూజా విధానం (స్మార్త పద్ధతిః)
+
+Author: Anonymous (received smārta household rite). No compiler is named and none should be inferred.
+
+Type: vidhi (ritual manual) — not a stotra. Uses the one-extra-field vidhi format documented in `../../vidhi/madhyandina/01_sandhyopasana_vidhi.txt`: a `vidhi:` field carrying the ritual instruction, then deva / iast / en / tel / hi.
+
+Recension / paddhati: **Smārta, South Indian.** Pūjā-vidhāna divides by *paddhati* the way sandhyāvandana divides by śākhā. The Vaiṣṇava form of the opening is kept separately at `../vaishnava/01_purvanga_vidhanam.txt` and **the two must never be merged, harmonised or collated against each other.**
+
+**Relation to `01_nitya_puja_vidhanam.txt`.** `01` is the generic template, printing `श्री इष्ट देवता` as a slot. This is the same rite with the slot filled in for Śiva by the source itself, published as a complete self-contained order of service and transcribed so. **Units 1–29 are the shared pūrvāṅga, word-for-word the template's**; units 30–60 are the Śiva ṣoḍaśopacāra proper. Measured against the template, 228 of this page's 312 lines are shared and 84 are new — 73% reuse. The duplication is deliberate: a manual that sent the reciter to another file for its first half would be unusable at the altar. Its sibling for Gaṇapati is `04_ganapati_nitya_puja.txt`.
+
+Accent: **present throughout.** Udātta `॑` (U+0951), anudātta `॒` (U+0952), dīrgha svarita `᳚` (U+1CDA); the praṇava before a spirant takes the guttural nasal, written `ओग्ं` (`ogṁ`). The source prints its accented mantras in a sandhi-joined orthography that hyphenates across word boundaries (`ओ-न्त्र्य॑म्बकं-यँजामहे`), kept exactly as printed and carried into the IAST. **No accent was inferred, derived or reconstructed.**
+
+**This file carries more accented Vedic material than its Gaṇapati sibling**, and all of it is Śaiva:
+
+- the **Śiva Gāyatrī** (unit 33), `ओ-न्तत्पुरु॑षाय वि॒द्महे॑ महादे॒वाय॑ धीमहि । तन्नो॑ रुद्रः प्रचो॒दया᳚त् ॥`;
+- the **Mahāmṛtyuñjaya** (unit 33), `त्र्यम्बकं यजामहे` — Ṛgveda 7.59.12, also Vājasaneyi Saṁhitā 3.60;
+- a **Puruṣasūkta** verse at the nīrājana (unit 52), `वेदा॒हमे॒त-म्पुरु॑ष-म्म॒हान्तम्᳚`;
+- the **Śatarudriya** formula at the mantrapuṣpa (unit 53), `नमो हिरण्यबाहवे … पशुपतये॑ नमो॒ नमः`.
+
+Source / recension: base text `https://vignanam.org/devanagari/shiva-nitya-puja-vidhanam.html` (fetched 2026-09-12), a **native accented Devanāgarī edition** declaring itself "शुद्ध देवनागरी with the right anusvaras marked"; its Telugu page carries an identical accent count, so **nothing here was transliterated by us.**
+
+Independent collation: against **stotranidhi's Śiva ṣoḍaśopacāra pūjā** (`https://stotranidhi.com/sri-shiva-shodasopachara-puja-vidhanam-in-telugu/`, fetched 2026-09-12; 371 accent marks) and against **Gītā Press, Gorakhpur, *Nitya Karma Pūjā Prakāśa***, whose `देवी-देव-पूजाका विधान` chapter gives **Śiva-pūjā as its own worked example** — so for this deity Gītā Press is an unusually direct witness rather than a general one. Three separate editorial lineages.
+
+**Where Gītā Press differs, it differs as a different regional tradition and nothing was imported:**
+
+- GP expands the snāna into a full **abhiṣeka series** — `दुग्धस्नान`, `दधिस्नान`, `घृतस्नान`, `मधुस्नान`, `शर्करास्नान`, `पञ्चामृतस्नान`, `गन्धोदकस्नान`, `शुद्धोदकस्नान` — each followed by its own ācamana, where this text has a single `शुद्धोदक स्नान`. It also adds `उपवस्त्र` after vastra and `दक्षिणा` near the close.
+- GP's upacāra verses are different verses: `अनेकरत्नसंयुक्तं नानामणिगणान्वितम्` for the seat where this text has `नमस्ते गिरिजानाथ`; `गङ्गोदकं निर्मलं च` for pādya where this text has `महादेव जगन्नाथ`.
+- GP addresses Śiva throughout as `श्रीभगवते साम्बशिवाय नमः` where this text says `ॐ नमः शिवाय`.
+- GP says **आरती** where this text says **नीराजन** — the same act, differently named.
+
+stotranidhi's Śiva pūjā is again a fuller and partly different rite, as its Gaṇapati one was (see `04_ganapati_nitya_puja.txt`): it carries a `प्राणप्रतिष्ठा`, a `पुनः सङ्कल्प`, `मधुपर्क` and `पञ्चामृत स्नान` as separate upacāras, and an `आभरण`. That is a second recension, recorded here and **written as a file of its own** rather than folded in — see `17_shiva_shodashopachara_puja.txt`, where it is transcribed in full and collated against the *Mahānārāyaṇa Upaniṣad* itself, from which every one of its sixteen service-mantras comes. **Neither file is to be corrected from the other.** (Cross-reference added 2026-09-12, changing not one character of the text above or below it.)
+
+Defect in the base text, corrected with reason: **`उपमश्रवस्तवम्` → `उपमश्रवस्तमम्`** at unit 27. The mantra is Ṛgveda 2.23.1, whose transmitted reading is `upamaśravastamam`, a superlative in *-tama-*; `-stavam` is not construable. The same slip stands on this site's Gaṇapati page and is corrected there too; the site's own generic template at `01_nitya_puja_vidhanam.txt` prints it correctly, so the defect is local to these deity pages. As on the Gaṇapati page, this one also splits `क॒वि-ङ्क॑वी॒नाम्` as `क॒वि-ङ्क॑वी॒नां उप॒-`; that is a word-division difference in the printed sandhi, not a difference of text, and is kept as printed.
+
+Not collated: the paurāṇika verses shared with the template, and the Śiva upacāra and dhyāna verses, for which no critical edition exists. `कर्पूर गौरं` and `ध्यायेन्नित्यं महेशं` are among the most widely printed Śiva dhyāna verses and are given as this source prints them.
+
+Unit count: 60 units. Not a verse count in the stotra sense — the work is a prose order of service punctuated by mantras, and the numbering is this corpus's, not the source's.
+
+Sections:
+आवश्यकानि वस्तूनि — Materials (unit 1)
+पूर्वाङ्ग पूजा — Opening, purification, prārthanā (units 2–9)
+आचमनम् — Ācamana (unit 10)
+दीपाराधनम् — Lighting the lamp (units 11–12)
+भूतोच्चाटनम् — Dispelling the bhūtas (units 13–14)
+प्राणायामः — Prāṇāyāma (units 15–17)
+सङ्कल्पः — Saṅkalpa (unit 18)
+कलशाराधनम् — Worship of the water-vessel (units 19–23)
+शङ्खपूजा — Worship of the conch (units 24–25)
+घण्टानादः — Sounding the bell (unit 26)
+श्री महागणपति पूजा — Gaṇapati as remover of obstacles (units 27–29)
+शिव ध्यानम् — Meditation on Śiva (units 30–33)
+षोडशोपचार पूजा — The sixteen services (units 34–56)
+स्तोत्रपठनम् — Recitation of hymns (unit 57)
+क्षमाप्रार्थना — Asking pardon (units 58–59)
+उद्वासनम् — Dismissal and prasāda (unit 60)
+
+Blurb: This is the daily pūjā of Śiva in the smārta form, complete in sixty units. It follows the same order as the Gaṇapati pūjā in this folder, with Śiva as the chosen deity. After the materials and the opening acts, the worshipper honours the water-vessel, the conch and the bell. Gaṇapati is worshipped first, so that obstacles may be removed. Śiva is then meditated upon in four units, which carry the Śiva Gāyatrī and the Mahāmṛtyuñjaya mantra. The sixteen services follow. A verse of the Puruṣasūkta is said at the waving of the lamp, and the Śatarudriya formula at the offering of flowers with mantra. A recitation of hymns comes next. The rite closes with the asking of pardon, the dismissal, and the receiving of the prasāda. Every mantra carries its accent marks.
+
+--- unit 1 | section: आवश्यकानि वस्तूनि ---
+vidhi:
+The things to be gathered before beginning. The conch is marked optional. Note this page allows a **liṅga** in place of an image — the one material difference from the other deity rites.
+deva:
+आवश्यकानि वस्तूनि — आसनं । दीपः । गन्धः । कुङ्कुमं । अक्षताः । पुष्पाणि । धूपः । नैवेद्यं । ताम्बूलं । आचमनीयं । पूजा पात्रं । कलशः । शङ्खः (वैकल्पिकः) । शिव प्रतिमा वा शिवलिङ्गं वा चित्रपटः वा ।
+iast:
+āvaśyakāni vastūni — āsanaṁ | dīpaḥ | gandhaḥ | kuṅkumaṁ | akṣatāḥ | puṣpāṇi | dhūpaḥ | naivedyaṁ | tāmbūlaṁ | ācamanīyaṁ | pūjā pātraṁ | kalaśaḥ | śaṅkhaḥ (vaikalpikaḥ) | śiva pratimā vā śivaliṅgaṁ vā citrapaṭaḥ vā |
+en: Things required — a seat; a lamp; sandal-paste; kuṅkuma; unbroken rice; flowers; incense; food-offering; betel; water for ācamana; the pūjā vessel; a water-pot; a conch (optional); and an image of Śiva, or a śivaliṅga, or a picture.
+tel: కావలసిన వస్తువులు — ఆసనం; దీపం; గంధం; కుంకుమ; అక్షతలు; పుష్పాలు; ధూపం; నైవేద్యం; తాంబూలం; ఆచమనీయం; పూజా పాత్ర; కలశం; శంఖం (ఐచ్ఛికం); శివ ప్రతిమ లేదా శివలింగం లేదా చిత్రపటం.
+hi: आवश्यक वस्तुएँ — आसन; दीप; गन्ध; कुङ्कुम; अक्षत; पुष्प; धूप; नैवेद्य; ताम्बूल; आचमनीय जल; पूजापात्र; कलश; शङ्ख (वैकल्पिक); तथा शिव की प्रतिमा अथवा शिवलिङ्ग अथवा चित्रपट।
+
+--- unit 2 | section: पूर्वाङ्ग पूजा ---
+vidhi:
+The opening salutations, before anything else is done.
+deva:
+श्रीमहागणाधिपतये नमः । श्री गुरुभ्यो नमः । हरिः ओम् ॥
+iast:
+śrīmahāgaṇādhipataye namaḥ | śrī gurubhyo namaḥ | hariḥ om ||
+en: Salutation to the great lord of the gaṇas. Salutation to the teachers. Hari Oṁ.
+tel: శ్రీమహాగణాధిపతికి నమస్కారం. శ్రీ గురువులకు నమస్కారం. హరిః ఓం.
+hi: श्रीमहागणाधिपति को नमस्कार। श्रीगुरुजनों को नमस्कार। हरि ओम्।
+
+--- unit 3 | section: पूर्वाङ्ग पूजा ---
+vidhi:
+Purification. Recited to make oneself fit, inwardly and outwardly, for what follows.
+deva:
+अपवित्रः पवित्रो वा सर्वावस्थां गतोऽपि वा ।
+यः स्मरेत् पुण्डरीकाक्षं स बाह्याभ्यन्तरः शुचिः ॥
+पुण्डरीकाक्ष पुण्डरीकाक्ष पुण्डरीकाक्षाय नमः ॥
+iast:
+apavitraḥ pavitro vā sarvāvasthāṁ gato'pi vā |
+yaḥ smaret puṇḍarīkākṣaṁ sa bāhyābhyantaraḥ śuciḥ ||
+puṇḍarīkākṣa puṇḍarīkākṣa puṇḍarīkākṣāya namaḥ ||
+en: Impure or pure, or gone into whatever condition — whoever calls to mind the lotus-eyed one is clean, without and within. Lotus-eyed one, lotus-eyed one: salutation to the lotus-eyed one.
+tel: అపవిత్రుడైనా, పవిత్రుడైనా, ఏ అవస్థలో ఉన్నా — పుండరీకాక్షుని ఎవడు స్మరిస్తాడో అతడు బయటా లోపలా శుద్ధుడు. పుండరీకాక్షా, పుండరీకాక్షా, పుండరీకాక్షునికి నమస్కారం.
+hi: अपवित्र हो या पवित्र, अथवा किसी भी अवस्था में क्यों न हो — जो पुण्डरीकाक्ष का स्मरण करता है वह बाहर-भीतर से शुद्ध हो जाता है। पुण्डरीकाक्ष, पुण्डरीकाक्ष, पुण्डरीकाक्ष को नमस्कार।
+
+--- unit 4 | section: पूर्वाङ्ग पूजा ---
+vidhi:
+Prārthanā. The first of the invocatory verses — to Viṣṇu, for the quieting of all obstacles. Note that this Śaiva rite keeps the Vaiṣṇava and Gāṇapatya opening verses unchanged; the smārta pūrvāṅga is common ground.
+deva:
+शुक्लाम्बरधरं विष्णुं शशिवर्णं चतुर्भुजम् ।
+प्रसन्नवदनं ध्यायेत् सर्वविघ्नोपशान्तये ॥
+iast:
+śuklāmbaradharaṁ viṣṇuṁ śaśivarṇaṁ caturbhujam |
+prasannavadanaṁ dhyāyet sarvavighnopaśāntaye ||
+en: For the quieting of every obstacle one should meditate on Viṣṇu — robed in white, moon-coloured, four-armed, his face serene.
+tel: సమస్త విఘ్నాలూ శాంతించడానికి — తెల్లని వస్త్రం ధరించినవాడు, చంద్రుని వన్నెవాడు, నాలుగు చేతులవాడు, ప్రసన్నమైన ముఖం కలవాడు అయిన విష్ణువును ధ్యానించాలి.
+hi: समस्त विघ्नों की शान्ति के लिये श्वेत वस्त्र धारण किये हुए, चन्द्रमा के समान वर्णवाले, चतुर्भुज, प्रसन्नमुख विष्णु का ध्यान करना चाहिये।
+
+--- unit 5 | section: पूर्वाङ्ग पूजा ---
+vidhi:
+To Gaṇeśa.
+deva:
+अगजानन पद्मार्कं गजाननमहर्निशम् ।
+अनेकदं तं भक्तानां एकदन्तमुपास्महे ॥
+iast:
+agajānana padmārkaṁ gajānanamaharniśam |
+anekadaṁ taṁ bhaktānāṁ ekadantamupāsmahe ||
+en: We worship day and night that elephant-faced one, a sun to the lotus that is Pārvatī's face, who gives his devotees much though he is the one-tusked.
+tel: పార్వతి ముఖపద్మానికి సూర్యుని వంటివాడు, గజముఖుడు, ఒకే దంతం కలవాడైనా భక్తులకు అనేకమైన వరాలిచ్చువాడు — ఆ ఏకదంతుని రేయింబవళ్లు ఉపాసిస్తాము.
+hi: पार्वती के मुखकमल के लिये सूर्य के समान, गजानन, एकदन्त होते हुए भी भक्तों को अनेक वर देनेवाले उन गणेश की हम दिन-रात उपासना करते हैं।
+
+--- unit 6 | section: पूर्वाङ्ग पूजा ---
+vidhi:
+That the hour itself is made auspicious by remembering the Lord.
+deva:
+तदेव लग्नं सुदिनं तदेव
+ताराबलं चन्द्रबलं तदेव ।
+विद्याबलं दैवबलं तदेव
+लक्ष्मीपते तेऽङ्घ्रियुगं स्मरामि ॥
+iast:
+tadeva lagnaṁ sudinaṁ tadeva
+tārābalaṁ candrabalaṁ tadeva |
+vidyābalaṁ daivabalaṁ tadeva
+lakṣmīpate te'ṅghriyugaṁ smarāmi ||
+en: That alone is the right moment, that alone the good day, that alone the strength of the stars and of the moon, that alone the strength of learning and of the gods — O consort of Lakṣmī, when I call your two feet to mind.
+tel: ఓ లక్ష్మీపతీ! నీ పాదద్వయాన్ని స్మరించినప్పుడే అదే శుభలగ్నం, అదే సుదినం, అదే తారాబలం, చంద్రబలం, విద్యాబలం, దైవబలం.
+hi: हे लक्ष्मीपते! जब मैं आपके चरणयुगल का स्मरण करता हूँ, वही लग्न है, वही सुदिन, वही ताराबल और चन्द्रबल, वही विद्याबल और दैवबल।
+
+--- unit 7 | section: पूर्वाङ्ग पूजा ---
+vidhi:
+To the teacher.
+deva:
+गुरुर्ब्रह्मा गुरुर्विष्णुः गुरुर्देवो महेश्वरः ।
+गुरुः साक्षात् परब्रह्म तस्मै श्रीगुरवे नमः ॥
+iast:
+gururbrahmā gururviṣṇuḥ gururdevo maheśvaraḥ |
+guruḥ sākṣāt parabrahma tasmai śrīgurave namaḥ ||
+en: The teacher is Brahmā, the teacher is Viṣṇu, the teacher is the god Maheśvara; the teacher is the supreme Brahman itself — salutation to that revered teacher.
+tel: గురువే బ్రహ్మ, గురువే విష్ణువు, గురువే మహేశ్వరుడు; గురువే సాక్షాత్తు పరబ్రహ్మము — ఆ శ్రీగురువుకు నమస్కారం.
+hi: गुरु ही ब्रह्मा हैं, गुरु ही विष्णु, गुरु ही देव महेश्वर; गुरु ही साक्षात् परब्रह्म हैं — उन श्रीगुरु को नमस्कार।
+
+--- unit 8 | section: पूर्वाङ्ग पूजा ---
+vidhi:
+To the Goddess.
+deva:
+सर्वमङ्गल माङ्गल्ये शिवे सर्वार्थसाधिके ।
+शरण्ये त्र्यम्बके गौरी नारायणि नमोऽस्तु ते ॥
+iast:
+sarvamaṅgala māṅgalye śive sarvārthasādhike |
+śaraṇye tryambake gaurī nārāyaṇi namo'stu te ||
+en: Auspicious one in whom all auspiciousness rests, benign, accomplisher of every aim, refuge, three-eyed Gaurī — Nārāyaṇī, salutation be to you.
+tel: సర్వమంగళాలకు మంగళస్వరూపిణీ, శివా, సమస్త ప్రయోజనాలను సాధించునదీ, శరణ్యా, త్ర్యంబకా, గౌరీ — నారాయణీ, నీకు నమస్కారం.
+hi: सर्वमङ्गलों की मङ्गलस्वरूपा, शिवा, समस्त अर्थों को सिद्ध करनेवाली, शरण्या, त्र्यम्बका, गौरी — नारायणी, आपको नमस्कार हो।
+
+--- unit 9 | section: पूर्वाङ्ग पूजा ---
+vidhi:
+Salutation to the divine couples, then to one's parents and to all worthy people.
+deva:
+1. श्रीलक्ष्मीनारायणाभ्यां नमः ।
+2. उमामहेश्वराभ्यां नमः ।
+3. वाणीहिरण्यगर्भाभ्यां नमः ।
+4. शचीपुरन्दराभ्यां नमः ।
+5. अरुन्धतीवसिष्ठाभ्यां नमः ।
+6. श्रीसीतारामाभ्यां नमः ।
+7. मातापितृभ्यो नमः ।
+8. सर्वेभ्यो महाजनेभ्यो नमः ॥
+iast:
+1. śrīlakṣmīnārāyaṇābhyāṁ namaḥ |
+2. umāmaheśvarābhyāṁ namaḥ |
+3. vāṇīhiraṇyagarbhābhyāṁ namaḥ |
+4. śacīpurandarābhyāṁ namaḥ |
+5. arundhatīvasiṣṭhābhyāṁ namaḥ |
+6. śrīsītārāmābhyāṁ namaḥ |
+7. mātāpitṛbhyo namaḥ |
+8. sarvebhyo mahājanebhyo namaḥ ||
+en: Salutation to Lakṣmī and Nārāyaṇa; to Umā and Maheśvara; to Vāṇī and Hiraṇyagarbha; to Śacī and Purandara; to Arundhatī and Vasiṣṭha; to Sītā and Rāma; to my mother and father; to all great and worthy people.
+tel: శ్రీలక్ష్మీనారాయణులకు నమస్కారం; ఉమామహేశ్వరులకు; వాణీహిరణ్యగర్భులకు; శచీపురందరులకు; అరుంధతీవసిష్ఠులకు; శ్రీసీతారాములకు; తల్లిదండ్రులకు; సమస్త మహాజనులకు నమస్కారం.
+hi: श्रीलक्ष्मीनारायण को नमस्कार; उमामहेश्वर को; वाणी-हिरण्यगर्भ को; शची-पुरन्दर को; अरुन्धती-वसिष्ठ को; श्रीसीताराम को; माता-पिता को; तथा समस्त महाजनों को नमस्कार।
+
+--- unit 10 | section: आचमनम् ---
+vidhi:
+Ācamana. Twenty-four names of Viṣṇu; the first three said each with a sip of water, the rest with the hand touching the appropriate part of the body.
+deva:
+1. ॐ केशवाय स्वाहा ।
+2. ॐ नारायणाय स्वाहा ।
+3. ॐ माधवाय स्वाहा ।
+4. ॐ गोविन्दाय नमः ।
+5. ॐ विष्णवे नमः ।
+6. ॐ मधुसूदनाय नमः ।
+7. ॐ त्रिविक्रमाय नमः ।
+8. ॐ वामनाय नमः ।
+9. ॐ श्रीधराय नमः ।
+10. ॐ हृषीकेशाय नमः ।
+11. ॐ पद्मनाभाय नमः ।
+12. ॐ दामोदराय नमः ।
+13. ॐ सङ्कर्षणाय नमः ।
+14. ॐ वासुदेवाय नमः ।
+15. ॐ प्रद्युम्नाय नमः ।
+16. ॐ अनिरुद्धाय नमः ।
+17. ॐ पुरुषोत्तमाय नमः ।
+18. ॐ अधोक्षजाय नमः ।
+19. ॐ नारसिंहाय नमः ।
+20. ॐ अच्युताय नमः ।
+21. ॐ जनार्दनाय नमः ।
+22. ॐ उपेन्द्राय नमः ।
+23. ॐ हरये नमः ।
+24. ॐ श्रीकृष्णाय नमः ॥
+iast:
+1. oṁ keśavāya svāhā |
+2. oṁ nārāyaṇāya svāhā |
+3. oṁ mādhavāya svāhā |
+4. oṁ govindāya namaḥ |
+5. oṁ viṣṇave namaḥ |
+6. oṁ madhusūdanāya namaḥ |
+7. oṁ trivikramāya namaḥ |
+8. oṁ vāmanāya namaḥ |
+9. oṁ śrīdharāya namaḥ |
+10. oṁ hṛṣīkeśāya namaḥ |
+11. oṁ padmanābhāya namaḥ |
+12. oṁ dāmodarāya namaḥ |
+13. oṁ saṅkarṣaṇāya namaḥ |
+14. oṁ vāsudevāya namaḥ |
+15. oṁ pradyumnāya namaḥ |
+16. oṁ aniruddhāya namaḥ |
+17. oṁ puruṣottamāya namaḥ |
+18. oṁ adhokṣajāya namaḥ |
+19. oṁ nārasiṁhāya namaḥ |
+20. oṁ acyutāya namaḥ |
+21. oṁ janārdanāya namaḥ |
+22. oṁ upendrāya namaḥ |
+23. oṁ haraye namaḥ |
+24. oṁ śrīkṛṣṇāya namaḥ ||
+en: Oṁ, to Keśava, svāhā. To Nārāyaṇa, svāhā. To Mādhava, svāhā. Salutation to Govinda; to Viṣṇu; to Madhusūdana; to Trivikrama; to Vāmana; to Śrīdhara; to Hṛṣīkeśa; to Padmanābha; to Dāmodara; to Saṅkarṣaṇa; to Vāsudeva; to Pradyumna; to Aniruddha; to Puruṣottama; to Adhokṣaja; to Nārasiṁha; to Acyuta; to Janārdana; to Upendra; to Hari; to Śrīkṛṣṇa.
+tel: ఓం కేశవునికి స్వాహా. నారాయణునికి స్వాహా. మాధవునికి స్వాహా. గోవిందునికి నమస్కారం; విష్ణువుకు; మధుసూదనునికి; త్రివిక్రమునికి; వామనునికి; శ్రీధరునికి; హృషీకేశునికి; పద్మనాభునికి; దామోదరునికి; సంకర్షణునికి; వాసుదేవునికి; ప్రద్యుమ్నునికి; అనిరుద్ధునికి; పురుషోత్తమునికి; అధోక్షజునికి; నారసింహునికి; అచ్యుతునికి; జనార్దనునికి; ఉపేంద్రునికి; హరికి; శ్రీకృష్ణునికి నమస్కారం.
+hi: ॐ केशव को स्वाहा। नारायण को स्वाहा। माधव को स्वाहा। गोविन्द को नमस्कार; विष्णु को; मधुसूदन को; त्रिविक्रम को; वामन को; श्रीधर को; हृषीकेश को; पद्मनाभ को; दामोदर को; सङ्कर्षण को; वासुदेव को; प्रद्युम्न को; अनिरुद्ध को; पुरुषोत्तम को; अधोक्षज को; नारसिंह को; अच्युत को; जनार्दन को; उपेन्द्र को; हरि को; श्रीकृष्ण को नमस्कार।
+
+--- unit 11 | section: दीपाराधनम् ---
+vidhi:
+Lighting the lamp.
+deva:
+दीपस्त्वं ब्रह्मरूपोऽसि ज्योतिषां प्रभुरव्ययः ।
+सौभाग्यं देहि पुत्रांश्च सर्वान्कामांश्च देहि मे ॥
+iast:
+dīpastvaṁ brahmarūpo'si jyotiṣāṁ prabhuravyayaḥ |
+saubhāgyaṁ dehi putrāṁśca sarvānkāmāṁśca dehi me ||
+en: Lamp, you are Brahman in form, the imperishable lord of all lights: give me good fortune, and children, and all that I desire.
+tel: ఓ దీపమా! నీవు బ్రహ్మస్వరూపుడవు, జ్యోతులకు అవ్యయుడైన ప్రభువు; నాకు సౌభాగ్యాన్నీ, సంతానాన్నీ, కోరిన కోరికలన్నిటినీ ఇమ్ము.
+hi: हे दीप! तुम ब्रह्मरूप हो, ज्योतियों के अविनाशी प्रभु हो; मुझे सौभाग्य, सन्तान तथा समस्त कामनाएँ प्रदान करो।
+
+--- unit 12 | section: दीपाराधनम् ---
+vidhi:
+The lamp as witness of the act, asked to stand steady; then the hour is declared auspicious.
+deva:
+भो दीप देवि रूपस्त्वं कर्मसाक्षी ह्यविघ्नकृत् ।
+यावत्पूजां करिष्यामि तावत्त्वं सुस्थिरो भव ॥
+दीपाराधन मुहूर्तः सुमुहूर्तोऽस्तु ॥
+iast:
+bho dīpa devi rūpastvaṁ karmasākṣī hyavighnakṛt |
+yāvatpūjāṁ kariṣyāmi tāvattvaṁ susthiro bhava ||
+dīpārādhana muhūrtaḥ sumuhūrto'stu ||
+en: O lamp, you are the Goddess in form, the witness of this act and the remover of hindrance: stand steady for as long as I perform the worship. May this hour of the lamp's worship be a good hour.
+tel: ఓ దీపమా! నీవు దేవీస్వరూపము, కర్మకు సాక్షివి, విఘ్నాలను తొలగించువాడవు; నేను పూజ చేసేంతవరకూ స్థిరంగా ఉండుము. ఈ దీపారాధన ముహూర్తం సుముహూర్తమగుగాక.
+hi: हे दीप! तुम देवीरूप हो, कर्म के साक्षी और विघ्न दूर करनेवाले हो; जब तक मैं पूजा करूँ तब तक सुस्थिर रहो। यह दीपाराधन का मुहूर्त सुमुहूर्त हो।
+
+--- unit 13 | section: भूतोच्चाटनम् ---
+vidhi:
+Dispelling the bhūtas, so that the rite may begin without hindrance.
+deva:
+उत्तिष्ठन्तु भूतपिशाचाः य एते भूमिभारकाः ।
+एतेषामविरोधेन ब्रह्मकर्म समारभे ॥
+iast:
+uttiṣṭhantu bhūtapiśācāḥ ya ete bhūmibhārakāḥ |
+eteṣāmavirodhena brahmakarma samārabhe ||
+en: Let the bhūtas and piśācas who are a burden on the earth rise up and go; with no opposition from them, I begin this sacred act.
+tel: భూమికి భారమైన ఈ భూతపిశాచాలు లేచి వెళ్లిపోవుగాక; వాటి అడ్డు లేకుండా నేను ఈ బ్రహ్మకర్మను ఆరంభిస్తున్నాను.
+hi: जो भूत-पिशाच इस भूमि के भार हैं वे उठकर चले जायँ; उनके विरोध के बिना मैं यह ब्रह्मकर्म आरम्भ करता हूँ।
+
+--- unit 14 | section: भूतोच्चाटनम् ---
+vidhi:
+The second verse, which here dismisses the obstructing beings **at Śiva's own command** — fitting in a Śaiva rite, though the same wording stands in the generic template. Gītā Press prints `ते नश्यन्तु शिवाज्ञया`, 'let them perish'; recorded, not reconciled.
+deva:
+अपसर्पन्तु ते भूता ये भूता भूमिसंस्थिताः ।
+ये भूता विघ्नकर्तारस्ते गच्छन्तु शिवाऽज्ञया ॥
+iast:
+apasarpantu te bhūtā ye bhūtā bhūmisaṁsthitāḥ |
+ye bhūtā vighnakartāraste gacchantu śivā'jñayā ||
+en: Let those beings withdraw who are settled upon this ground; and those who make obstruction — let them depart at Śiva's command.
+tel: భూమిపై నెలకొన్న ఆ భూతాలు తొలగిపోవుగాక; విఘ్నాలు కలిగించే భూతాలు శివుని ఆజ్ఞచేత వెళ్లిపోవుగాక.
+hi: जो भूत इस भूमि पर स्थित हैं वे हट जायँ; और जो विघ्न करनेवाले हैं वे शिव की आज्ञा से चले जायँ।
+
+--- unit 15 | section: प्राणायामः ---
+vidhi:
+Prāṇāyāma. The seven vyāhṛtis. The praṇava before the spirant-initial `suvaḥ` and `satyam` takes the guttural nasal — `ओग्ं` — while before the others it is plain `ओं`.
+deva:
+ओ-म्भूः । ओ-म्भुवः॑ । ओग्ं सुवः॑ । ओ-म्महः॑ । ओ-ञ्जनः॑ । ओ-न्तपः॑ । ओग्ं सत्यम् ।
+iast:
+o-mbhūḥ | o-mbhuvaḥ | ogṁ suvaḥ | o-mmahaḥ | o-ñjanaḥ | o-ntapaḥ | ogṁ satyam |
+en: Oṁ, earth. Oṁ, mid-air. Oṁ, the world of light. Oṁ, the great. Oṁ, the world of beings. Oṁ, austerity. Oṁ, truth.
+tel: ఓం భూః — భూలోకం. ఓం భువః — అంతరిక్షం. ఓం సువః — స్వర్లోకం. ఓం మహః — మహర్లోకం. ఓం జనః — జనలోకం. ఓం తపః — తపోలోకం. ఓం సత్యం — సత్యలోకం.
+hi: ॐ भूः — भूलोक। ॐ भुवः — अन्तरिक्ष। ॐ सुवः — स्वर्लोक। ॐ महः — महर्लोक। ॐ जनः — जनलोक। ॐ तपः — तपोलोक। ॐ सत्यम् — सत्यलोक।
+
+--- unit 16 | section: प्राणायामः ---
+vidhi:
+The Gāyatrī, in its South Indian accentuation.
+deva:
+ओ-न्तत्स॑वि॒तुर्वरे᳚ण्य॒-म्भर्गो॑ दे॒वस्य॑ धीमहि ।
+धियो॒ यो नः॑ प्रचो॒दया᳚त् ॥
+iast:
+o-ntatsaviturvareṇya-mbhargo devasya dhīmahi |
+dhiyo yo naḥ pracodayāt ||
+en: Oṁ. That adorable splendour of the god Savitṛ — we meditate on it; may he impel our understandings.
+tel: ఓం. సవితృదేవుని ఆ వరణీయమైన తేజస్సును మేము ధ్యానిస్తున్నాము; ఆయన మా బుద్ధులను ప్రేరేపించుగాక.
+hi: ॐ। सवितादेव के उस वरणीय तेज का हम ध्यान करते हैं; वे हमारी बुद्धियों को प्रेरित करें।
+
+--- unit 17 | section: प्राणायामः ---
+vidhi:
+The closing formula of the prāṇāyāma.
+deva:
+ओमापो॒ ज्योती॒ रसो॒-ऽमृत॒-म्ब्रह्म॒ भूर्भुव॒स्सुव॒रोम् ॥
+iast:
+omāpo jyotī raso-'mṛta-mbrahma bhūrbhuvassuvarom ||
+en: Oṁ — the waters, the light, the essence, the deathless, Brahman; earth, mid-air, heaven; Oṁ.
+tel: ఓం — ఆపః, జ్యోతి, రసము, అమృతము, బ్రహ్మము; భూః, భువః, సువః; ఓం.
+hi: ॐ — जल, ज्योति, रस, अमृत, ब्रह्म; भूः, भुवः, सुवः; ॐ।
+
+--- unit 18 | section: सङ्कल्पः ---
+vidhi:
+Saṅkalpa — the formal statement of what is about to be done and why. Where the generic template says 'for the pleasing of my chosen deity', this page names Parameśvara. Then the kalaśa is taken up.
+deva:
+मम उपात्त समस्त दुरितक्षय द्वारा, मम/अस्माकं सहकुटुम्बस्य क्षेम-स्थैर्य-धैर्य-वीर्य-विजय-अभय-आयुः-आरोग्य-ऐश्वर्य-अभिवृद्ध्यर्थं, धर्मार्थ-काम-मोक्ष-चतुर्विध-पुरुषार्थ-फल-सिद्ध्यर्थं, सर्वाभीष्ट-सिद्ध्यर्थं, श्रीपरमेश्वर-प्रीत्यर्थं, यावच्छक्ति ध्यान-आवाहनादि-षोडशोपचार-पूजां करिष्ये ॥ तदङ्ग कलशाराधनं करिष्ये ॥
+iast:
+mama upātta samasta duritakṣaya dvārā, mama/asmākaṁ sahakuṭumbasya kṣema-sthairya-dhairya-vīrya-vijaya-abhaya-āyuḥ-ārogya-aiśvarya-abhivṛddhyarthaṁ, dharmārtha-kāma-mokṣa-caturvidha-puruṣārtha-phala-siddhyarthaṁ, sarvābhīṣṭa-siddhyarthaṁ, śrīparameśvara-prītyarthaṁ, yāvacchakti dhyāna-āvāhanādi-ṣoḍaśopacāra-pūjāṁ kariṣye || tadaṅga kalaśārādhanaṁ kariṣye ||
+en: For the destruction of all the sin I have incurred; for the welfare, steadiness, courage, vigour, victory, fearlessness, long life, health and prosperity of myself and of my household; for the gaining of the four aims of life — duty, wealth, desire and liberation; for the fulfilment of every wish; and for the pleasing of the supreme Lord — I shall perform, so far as I am able, the sixteen-fold worship beginning with meditation and invocation. As a limb of that, I shall perform the worship of the water-vessel.
+tel: నేను చేసిన సమస్త పాపాల నాశనం ద్వారా; నా/మా కుటుంబ సహితంగా క్షేమ, స్థైర్య, ధైర్య, వీర్య, విజయ, అభయ, ఆయుః, ఆరోగ్య, ఐశ్వర్యాల అభివృద్ధి కోసం; ధర్మ-అర్థ-కామ-మోక్షాలనే చతుర్విధ పురుషార్థ ఫలసిద్ధి కోసం; సర్వాభీష్టసిద్ధి కోసం; శ్రీపరమేశ్వరుని ప్రీతి కోసం — శక్తికొలది ధ్యాన-ఆవాహనాది షోడశోపచార పూజను చేస్తాను. దానికి అంగంగా కలశారాధన చేస్తాను.
+hi: अपने द्वारा किये गये समस्त पापों के क्षय द्वारा; अपने तथा अपने कुटुम्ब के क्षेम, स्थैर्य, धैर्य, वीर्य, विजय, अभय, आयु, आरोग्य और ऐश्वर्य की वृद्धि के लिये; धर्म-अर्थ-काम-मोक्ष इन चार पुरुषार्थों की फलसिद्धि के लिये; समस्त अभीष्ट की सिद्धि के लिये; तथा श्रीपरमेश्वर की प्रीति के लिये — यथाशक्ति ध्यान-आवाहन आदि षोडशोपचार पूजा करूँगा। उसके अङ्गरूप में कलशाराधन करूँगा।
+
+--- unit 19 | section: कलशाराधनम् ---
+vidhi:
+The vessel is honoured with sandal, flowers and rice, filled with water, and the hand laid over its mouth.
+deva:
+कलशे गन्ध पुष्पाक्षतैरभ्यर्च्य । कलशे उदकं पूरयित्वा । कलशस्योपरि हस्तं निधाय ॥
+iast:
+kalaśe gandha puṣpākṣatairabhyarcya | kalaśe udakaṁ pūrayitvā | kalaśasyopari hastaṁ nidhāya ||
+en: Having honoured the vessel with sandal-paste, flowers and unbroken rice; having filled it with water; and having laid the hand upon it.
+tel: కలశాన్ని గంధం, పుష్పాలు, అక్షతలతో అర్చించి; కలశంలో నీరు నింపి; కలశంపై చేయి ఉంచి.
+hi: कलश को गन्ध, पुष्प और अक्षत से अर्चित करके; कलश में जल भरकर; कलश के ऊपर हाथ रखकर।
+
+--- unit 20 | section: कलशाराधनम् ---
+vidhi:
+The gods, the worlds and the four Vedas are seen as present in the vessel.
+deva:
+कलशस्य मुखे विष्णुः कण्ठे रुद्रः समाश्रितः ।
+मूले त्वस्य स्थितो ब्रह्मा मध्ये मातृगणाः स्मृताः ॥
+कुक्षौ तु सागराः सर्वे सप्तद्वीपा वसुन्धरा ।
+ऋग्वेदोऽथ यजुर्वेदो सामवेदो ह्यथर्वणः ॥
+अङ्गैश्च सहिताः सर्वे कलशाम्बु समाश्रिताः ॥
+iast:
+kalaśasya mukhe viṣṇuḥ kaṇṭhe rudraḥ samāśritaḥ |
+mūle tvasya sthito brahmā madhye mātṛgaṇāḥ smṛtāḥ ||
+kukṣau tu sāgarāḥ sarve saptadvīpā vasundharā |
+ṛgvedo'tha yajurvedo sāmavedo hyatharvaṇaḥ ||
+aṅgaiśca sahitāḥ sarve kalaśāmbu samāśritāḥ ||
+en: At the vessel's mouth is Viṣṇu, at its neck Rudra abides, at its base stands Brahmā, and in its middle the host of Mothers is remembered. In its belly are all the oceans, the seven continents, the earth; and the Ṛgveda, the Yajurveda, the Sāmaveda and the Atharvaveda, with all their limbs, abide together in the vessel's water.
+tel: కలశ ముఖంలో విష్ణువు, కంఠంలో రుద్రుడు, మూలంలో బ్రహ్మ, మధ్యలో మాతృగణాలు ఉన్నారని స్మరిస్తారు. దాని కుక్షిలో సముద్రాలన్నీ, సప్తద్వీపాలు, భూమి; ఋగ్వేదం, యజుర్వేదం, సామవేదం, అథర్వవేదం — అంగాలతో సహా అన్నీ కలశజలంలో ఆశ్రయించి ఉన్నాయి.
+hi: कलश के मुख में विष्णु, कण्ठ में रुद्र, मूल में ब्रह्मा और मध्य में मातृगण स्थित माने गये हैं। उसकी कुक्षि में समस्त सागर, सप्तद्वीप और वसुन्धरा; तथा ऋग्वेद, यजुर्वेद, सामवेद और अथर्ववेद — अपने अङ्गों सहित सब कलश के जल में आश्रित हैं।
+
+--- unit 21 | section: कलशाराधनम् ---
+vidhi:
+The rivers are invoked into the water.
+deva:
+गङ्गे च यमुने चैव गोदावरी सरस्वती ।
+नर्मदे सिन्धु कावेरी जलेऽस्मिन् सन्निधिं कुरु ॥
+iast:
+gaṅge ca yamune caiva godāvarī sarasvatī |
+narmade sindhu kāverī jale'smin sannidhiṁ kuru ||
+en: Gaṅgā and Yamunā, Godāvarī, Sarasvatī, Narmadā, Sindhu, Kāverī — be present in this water.
+tel: గంగా, యమునా, గోదావరీ, సరస్వతీ, నర్మదా, సింధూ, కావేరీ — ఈ జలంలో సన్నిధి చేయండి.
+hi: गङ्गा, यमुना, गोदावरी, सरस्वती, नर्मदा, सिन्धु, कावेरी — इस जल में सन्निधि करें।
+
+--- unit 22 | section: कलशाराधनम् ---
+vidhi:
+The five rivers of the South, named as the pañcagaṅgā.
+deva:
+कावेरी तुङ्गभद्रा च कृष्णवेणी च गौतमी ।
+भागीरथीति विख्याताः पञ्चगङ्गाः प्रकीर्तिताः ॥
+iast:
+kāverī tuṅgabhadrā ca kṛṣṇaveṇī ca gautamī |
+bhāgīrathīti vikhyātāḥ pañcagaṅgāḥ prakīrtitāḥ ||
+en: Kāverī, Tuṅgabhadrā, Kṛṣṇaveṇī, Gautamī and Bhāgīrathī — these renowned five are proclaimed the five Gaṅgās.
+tel: కావేరీ, తుంగభద్రా, కృష్ణవేణీ, గౌతమీ, భాగీరథీ — ఈ ప్రసిద్ధమైనవి పంచగంగలుగా కీర్తింపబడ్డాయి.
+hi: कावेरी, तुङ्गभद्रा, कृष्णवेणी, गौतमी और भागीरथी — ये विख्यात नदियाँ पञ्चगङ्गा कही गयी हैं।
+
+--- unit 23 | section: कलशाराधनम् ---
+vidhi:
+The rivers are asked to come for the worship; then the vessel's water is sprinkled over the materials, over the deity, and over oneself.
+deva:
+आयान्तु देवपूजार्थं मम दुरितक्षयकारकाः ।
+कलशोदकेन पूजा द्रव्याणि सम्प्रोक्ष्य, देवं सम्प्रोक्ष्य, आत्मानं च सम्प्रोक्ष्य ॥
+iast:
+āyāntu devapūjārthaṁ mama duritakṣayakārakāḥ |
+kalaśodakena pūjā dravyāṇi samprokṣya, devaṁ samprokṣya, ātmānaṁ ca samprokṣya ||
+en: Let them come for the worship of the deity, they who destroy my sin. With the vessel's water, having sprinkled the materials of worship, having sprinkled the deity, and having sprinkled oneself.
+tel: నా పాపాలను నశింపజేసే ఆ నదులు దేవపూజ కోసం విచ్చేయుగాక. కలశోదకంతో పూజాద్రవ్యాలను ప్రోక్షించి, దేవుని ప్రోక్షించి, తనను తాను ప్రోక్షించుకొని.
+hi: मेरे पापों का क्षय करनेवाली वे नदियाँ देवपूजा के लिये पधारें। कलश के जल से पूजा-द्रव्यों का प्रोक्षण करके, देव का प्रोक्षण करके, और अपना भी प्रोक्षण करके।
+
+--- unit 24 | section: शङ्खपूजा ---
+vidhi:
+Worship of the conch. As on the Gaṇapati page, the third quarter reads `वासुदेवस्य आज्ञया` — the reading that stotranidhi's standalone pūrvāṅga garbles; see `03_purvanga_vidhanam.txt` unit 27.
+deva:
+शङ्खं चन्द्रार्क दैवतं मध्ये वरुण देवताम् ।
+पृष्ठे प्रजापतिं विन्द्यादग्रे गङ्गा सरस्वतीम् ॥
+त्रैलोक्ये यानि तीर्थानि वासुदेवस्य आज्ञया ।
+शङ्खे तिष्ठन्तु विप्रेन्द्राः तस्मात् शङ्खं प्रपूजयेत् ॥
+iast:
+śaṅkhaṁ candrārka daivataṁ madhye varuṇa devatām |
+pṛṣṭhe prajāpatiṁ vindyādagre gaṅgā sarasvatīm ||
+trailokye yāni tīrthāni vāsudevasya ājñayā |
+śaṅkhe tiṣṭhantu viprendrāḥ tasmāt śaṅkhaṁ prapūjayet ||
+en: Know the conch to have the moon and sun for its deities, Varuṇa in its middle, Prajāpati at its back, and Gaṅgā and Sarasvatī at its tip. By Vāsudeva's command, let all the sacred waters of the three worlds abide in the conch, O best of brāhmaṇas; therefore should the conch be worshipped.
+tel: శంఖానికి చంద్రసూర్యులు దైవతాలు, మధ్యలో వరుణుడు, వెనుక ప్రజాపతి, అగ్రభాగంలో గంగా సరస్వతులు ఉన్నారని తెలుసుకోవాలి. వాసుదేవుని ఆజ్ఞచేత ముల్లోకాల తీర్థాలన్నీ శంఖంలో నిలచుగాక; అందుచేత శంఖాన్ని పూజించాలి.
+hi: शङ्ख के देवता चन्द्र और सूर्य हैं, मध्य में वरुण, पृष्ठ में प्रजापति और अग्र में गङ्गा-सरस्वती — ऐसा जानना चाहिये। वासुदेव की आज्ञा से तीनों लोकों के समस्त तीर्थ शङ्ख में निवास करें; इसलिये शङ्ख की पूजा करनी चाहिये।
+
+--- unit 25 | section: शङ्खपूजा ---
+vidhi:
+The conch's name-mantras, with unbroken rice offered at each.
+deva:
+1. ॐ शङ्खाय नमः ।
+2. ॐ धवलाय नमः ।
+3. ॐ पाञ्चजन्याय नमः ।
+4. ॐ शङ्खदेवताभ्यो नमः ।
+5. सकलपूजार्थे अक्षतान् समर्पयामि ॥
+iast:
+1. oṁ śaṅkhāya namaḥ |
+2. oṁ dhavalāya namaḥ |
+3. oṁ pāñcajanyāya namaḥ |
+4. oṁ śaṅkhadevatābhyo namaḥ |
+5. sakalapūjārthe akṣatān samarpayāmi ||
+en: Salutation to the conch; to the white one; to Pāñcajanya; to the deities of the conch. For the whole worship I offer unbroken rice.
+tel: ఓం శంఖునికి నమస్కారం; ధవళునికి; పాంచజన్యునికి; శంఖదేవతలకు నమస్కారం. సకల పూజ కోసం అక్షతలు సమర్పిస్తున్నాను.
+hi: ॐ शङ्ख को नमस्कार; धवल को; पाञ्चजन्य को; शङ्ख के देवताओं को नमस्कार। सम्पूर्ण पूजा के लिये अक्षत समर्पित करता हूँ।
+
+--- unit 26 | section: घण्टानादः ---
+vidhi:
+Sounding the bell.
+deva:
+आगमार्थं तु देवानां गमनार्थं तु राक्षसाम् ।
+घण्टारवं करोम्यादौ देवताह्वान लाञ्छनम् ॥
+ॐ घण्टादेवताभ्यो नमः । सकलोपचार पूजार्थे अक्षतान् समर्पयामि ॥
+iast:
+āgamārthaṁ tu devānāṁ gamanārthaṁ tu rākṣasām |
+ghaṇṭāravaṁ karomyādau devatāhvāna lāñchanam ||
+oṁ ghaṇṭādevatābhyo namaḥ | sakalopacāra pūjārthe akṣatān samarpayāmi ||
+en: For the coming of the gods and for the going of the demons, I sound the bell at the outset — the token by which the deity is called. Salutation to the deities of the bell. For the worship with all its services I offer unbroken rice.
+tel: దేవతల రాక కోసం, రాక్షసుల పోక కోసం — దేవతను ఆహ్వానించే గుర్తుగా మొదట ఘంటానాదం చేస్తున్నాను. ఓం ఘంటాదేవతలకు నమస్కారం. సకలోపచార పూజ కోసం అక్షతలు సమర్పిస్తున్నాను.
+hi: देवताओं के आगमन के लिये और राक्षसों के गमन के लिये — देवता के आह्वान के चिह्नस्वरूप मैं आदि में घण्टानाद करता हूँ। ॐ घण्टा के देवताओं को नमस्कार। समस्त उपचारों सहित पूजा के लिये अक्षत समर्पित करता हूँ।
+
+--- unit 27 | section: श्री महागणपति पूजा ---
+vidhi:
+Gaṇapati is worshipped first, as remover of obstacles, before the Śiva rite proper. The mantra is Ṛgveda 2.23.1, accented. The source prints `उपमश्रवस्तवम्`; the transmitted reading is `उपमश्रवस्तमम्`, corrected here — see the header.
+deva:
+ओ-ङ्ग॒णाना᳚-न्त्वा ग॒णप॑तिग्ं हवामहे क॒वि-ङ्क॑वी॒नां उप॒मश्र॑वस्तमम् ।
+ज्ये॒ष्ठ॒राज॒-म्ब्रह्म॑णा-म्ब्रह्मणस्पत॒ आ नः॑ शृ॒ण्वन्नू॒तिभि॑स्सीद॒ साद॑नम् ॥
+iast:
+o-ṅgaṇānā-ntvā gaṇapatigṁ havāmahe kavi-ṅkavīnāṁ upamaśravastamam |
+jyeṣṭharāja-mbrahmaṇā-mbrahmaṇaspata ā naḥ śṛṇvannūtibhissīda sādanam ||
+en: We call upon you, lord of hosts among the hosts, the poet of poets, most renowned of all; eldest king of sacred utterances — O lord of the sacred word, hearing us, come with your help and take your seat.
+tel: గణాలలో గణపతివైన నిన్ను ఆహ్వానిస్తున్నాము — కవులలో కవివి, అత్యంత కీర్తిమంతుడవు; బ్రహ్మలకు జ్యేష్ఠరాజువు. ఓ బ్రహ్మణస్పతీ! మా మొర విని, రక్షణలతో వచ్చి ఆసనంపై కూర్చొనుము.
+hi: गणों में गणपति रूप आपका हम आह्वान करते हैं — कवियों के कवि, सर्वाधिक कीर्तिमान्; ब्रह्मों के ज्येष्ठराज। हे ब्रह्मणस्पते! हमें सुनकर अपनी रक्षाओं सहित आइये और आसन पर विराजिये।
+
+--- unit 28 | section: श्री महागणपति पूजा ---
+vidhi:
+The twelve names of Gaṇeśa. Gītā Press prints `विघ्ननाशो विनायकः` for `विघ्नराजो गणाधिपः`, and `धूम्रकेतुर्` for `धूमकेतुर्`. Recorded, not reconciled.
+deva:
+सुमुखश्चैकदन्तश्च कपिलो गजकर्णकः ।
+लम्बोदरश्च विकटो विघ्नराजो गणाधिपः ॥
+धूमकेतुर्गणाध्यक्षः फालचन्द्रो गजाननः ।
+वक्रतुण्डः शूर्पकर्णो हेरम्बः स्कन्दपूर्वजः ॥
+iast:
+sumukhaścaikadantaśca kapilo gajakarṇakaḥ |
+lambodaraśca vikaṭo vighnarājo gaṇādhipaḥ ||
+dhūmaketurgaṇādhyakṣaḥ phālacandro gajānanaḥ |
+vakratuṇḍaḥ śūrpakarṇo herambaḥ skandapūrvajaḥ ||
+en: Fair-faced, single-tusked, tawny, elephant-eared; pot-bellied, huge, king over obstacles, lord of the hosts; smoke-bannered, overseer of the hosts, moon-browed, elephant-faced; curved-trunked, winnow-eared, Heramba, elder brother of Skanda.
+tel: సుముఖుడు, ఏకదంతుడు, కపిలుడు, గజకర్ణకుడు; లంబోదరుడు, వికటుడు, విఘ్నరాజు, గణాధిపుడు; ధూమకేతువు, గణాధ్యక్షుడు, ఫాలచంద్రుడు, గజాననుడు; వక్రతుండుడు, శూర్పకర్ణుడు, హేరంబుడు, స్కందపూర్వజుడు.
+hi: सुमुख, एकदन्त, कपिल, गजकर्णक; लम्बोदर, विकट, विघ्नराज, गणाधिप; धूमकेतु, गणाध्यक्ष, फालचन्द्र, गजानन; वक्रतुण्ड, शूर्पकर्ण, हेरम्ब, स्कन्दपूर्वज।
+
+--- unit 29 | section: श्री महागणपति पूजा ---
+vidhi:
+The sixteen services offered to Gaṇapati in brief, by naming them, before the Śiva sequence begins.
+deva:
+1. ॐ श्रीमहागणपतये नमः ।
+2. ध्यायामि ।
+3. आवाहयामि ।
+4. आसनं समर्पयामि ।
+5. पाद्यं समर्पयामि ।
+6. अर्घ्यं समर्पयामि ।
+7. आचमनीयं समर्पयामि ।
+8. स्नानं समर्पयामि ।
+9. वस्त्रं समर्पयामि ।
+10. यज्ञोपवीतं समर्पयामि ।
+11. गन्धं समर्पयामि ।
+12. पुष्पाणि समर्पयामि ।
+13. धूपमाघ्रापयामि ।
+14. दीपं दर्शयामि ।
+15. नैवेद्यं समर्पयामि ।
+16. ताम्बूलं समर्पयामि ।
+17. नीराजनं समर्पयामि ।
+18. मन्त्रपुष्पं समर्पयामि ।
+19. प्रदक्षिण नमस्कारान् समर्पयामि ॥
+iast:
+1. oṁ śrīmahāgaṇapataye namaḥ |
+2. dhyāyāmi |
+3. āvāhayāmi |
+4. āsanaṁ samarpayāmi |
+5. pādyaṁ samarpayāmi |
+6. arghyaṁ samarpayāmi |
+7. ācamanīyaṁ samarpayāmi |
+8. snānaṁ samarpayāmi |
+9. vastraṁ samarpayāmi |
+10. yajñopavītaṁ samarpayāmi |
+11. gandhaṁ samarpayāmi |
+12. puṣpāṇi samarpayāmi |
+13. dhūpamāghrāpayāmi |
+14. dīpaṁ darśayāmi |
+15. naivedyaṁ samarpayāmi |
+16. tāmbūlaṁ samarpayāmi |
+17. nīrājanaṁ samarpayāmi |
+18. mantrapuṣpaṁ samarpayāmi |
+19. pradakṣiṇa namaskārān samarpayāmi ||
+en: Salutation to the great Gaṇapati. I meditate; I invoke; I offer a seat; water for the feet; the guest-offering; water for sipping; a bath; a garment; the sacred thread; sandal-paste; flowers; I let the incense be smelled; I show the lamp; I offer food; betel; the waving of lights; the mantra-flower; and circumambulation with salutations.
+tel: ఓం శ్రీమహాగణపతికి నమస్కారం. ధ్యానిస్తున్నాను; ఆవాహన చేస్తున్నాను; ఆసనం సమర్పిస్తున్నాను; పాద్యం; అర్ఘ్యం; ఆచమనీయం; స్నానం; వస్త్రం; యజ్ఞోపవీతం; గంధం; పుష్పాలు సమర్పిస్తున్నాను; ధూపం ఆఘ్రాపిస్తున్నాను; దీపం చూపిస్తున్నాను; నైవేద్యం; తాంబూలం; నీరాజనం; మంత్రపుష్పం; ప్రదక్షిణ నమస్కారాలు సమర్పిస్తున్నాను.
+hi: ॐ श्रीमहागणपति को नमस्कार। ध्यान करता हूँ; आवाहन करता हूँ; आसन समर्पित करता हूँ; पाद्य; अर्घ्य; आचमनीय; स्नान; वस्त्र; यज्ञोपवीत; गन्ध; पुष्प समर्पित करता हूँ; धूप आघ्रापित करता हूँ; दीप दिखाता हूँ; नैवेद्य; ताम्बूल; नीराजन; मन्त्रपुष्प; तथा प्रदक्षिणा-नमस्कार समर्पित करता हूँ।
+
+--- unit 30 | section: शिव ध्यानम् ---
+vidhi:
+Meditation on Śiva. The first and most widely recited of the dhyāna verses — camphor-white, compassion incarnate, the king of serpents for his garland.
+deva:
+कर्पूर गौरं करुणावतारं
+संसारसारं भुजगेन्द्र हारम् ।
+सदा रमन्तं हृदयारविन्दे
+भवं भवानी सहितं नमामि ॥
+iast:
+karpūra gauraṁ karuṇāvatāraṁ
+saṁsārasāraṁ bhujagendra hāram |
+sadā ramantaṁ hṛdayāravinde
+bhavaṁ bhavānī sahitaṁ namāmi ||
+en: White as camphor, compassion made flesh, the very essence of the world, wearing the king of serpents as his garland — ever at play in the lotus of the heart: to Bhava, together with Bhavānī, I bow.
+tel: కర్పూరము వలె తెల్లనైనవాడు, కరుణకు అవతారము, సంసారసారము, సర్పరాజును హారముగా ధరించినవాడు, హృదయకమలంలో ఎల్లప్పుడూ విహరించువాడు — భవానీసహితుడైన భవునికి నమస్కరిస్తున్నాను.
+hi: कर्पूर के समान गौर, करुणा के अवतार, संसार के सार, भुजगेन्द्र को हार के रूप में धारण करनेवाले, हृदयकमल में सदा रमण करनेवाले — भवानी सहित भव को मैं नमस्कार करता हूँ।
+
+--- unit 31 | section: शिव ध्यानम् ---
+vidhi:
+The second dhyāna verse — Maheśa on his couch with the daughter of the mountain, in a grove of wish-fulfilling trees.
+deva:
+वन्दे महेशं सुरसिद्धसेवितं
+देवाङ्गना गीत सुनृत्य तुष्टम् ।
+पर्यङ्कगं शैलसुतासमेतं
+कल्पद्रुमारण्यगतं प्रसन्नम् ॥
+iast:
+vande maheśaṁ surasiddhasevitaṁ
+devāṅganā gīta sunṛtya tuṣṭam |
+paryaṅkagaṁ śailasutāsametaṁ
+kalpadrumāraṇyagataṁ prasannam ||
+en: I praise Maheśa, served by gods and siddhas, delighted by the song and fair dancing of the celestial women; resting on his couch, together with the mountain's daughter, dwelling in a forest of wish-fulfilling trees, serene.
+tel: సురసిద్ధులచేత సేవింపబడువాడు, దేవాంగనల గీతము, సునృత్యముచేత సంతోషించువాడు, పర్యంకముపై ఉన్నవాడు, శైలసుతతో కూడినవాడు, కల్పవృక్షారణ్యంలో ఉన్నవాడు, ప్రసన్నుడు — ఆ మహేశుని వందిస్తున్నాను.
+hi: सुर और सिद्धों से सेवित, देवाङ्गनाओं के गीत और सुनृत्य से सन्तुष्ट, पर्यङ्क पर विराजमान, शैलसुता सहित, कल्पद्रुम के वन में स्थित, प्रसन्न — उन महेश की मैं वन्दना करता हूँ।
+
+--- unit 32 | section: शिव ध्यानम् ---
+vidhi:
+The third and fullest dhyāna — the five-faced, three-eyed form, silver as the mountain, the crescent for an ornament, bearing axe, boon, deer and the gesture of fearlessness, clad in a tiger's hide.
+deva:
+ध्यायेन्नित्यं महेशं रजतगिरिनिभं चारुचन्द्रावतंसं
+रत्नाकल्पोज्ज्वलाङ्गं परशुवरमृगाभीति हस्तं प्रसन्नम् ।
+पद्मासीनं समन्तात् स्तुतममरगणैर्व्याघ्रकृत्तिं वसानं
+विश्वाद्यं विश्ववन्द्यं निखिल भयहरं पञ्चवक्त्रं त्रिनेत्रम् ॥
+iast:
+dhyāyennityaṁ maheśaṁ rajatagirinibhaṁ cārucandrāvataṁsaṁ
+ratnākalpojjvalāṅgaṁ paraśuvaramṛgābhīti hastaṁ prasannam |
+padmāsīnaṁ samantāt stutamamaragaṇairvyāghrakṛttiṁ vasānaṁ
+viśvādyaṁ viśvavandyaṁ nikhila bhayaharaṁ pañcavaktraṁ trinetram ||
+en: Let one meditate daily on Maheśa — like a mountain of silver, the lovely crescent for his ear-ornament, his limbs ablaze with jewelled ornament, holding axe and boon and deer and the gesture that dispels fear, serene; seated on the lotus, praised on every side by the hosts of the immortals, clad in a tiger's hide; the first of the universe, worshipped by the universe, remover of every fear, five-faced and three-eyed.
+tel: వెండికొండ వంటివాడు, అందమైన చంద్రుని అవతంసముగా కలవాడు, రత్నాలంకారాలతో ప్రకాశించే అంగాలవాడు, గొడ్డలి-వరము-జింక-అభయము చేతులలో కలవాడు, ప్రసన్నుడు; పద్మాసనుడు, అమరగణాలచేత అన్నివైపులా స్తుతింపబడినవాడు, పులిచర్మము ధరించినవాడు; విశ్వానికి ఆదియైనవాడు, విశ్వవంద్యుడు, సమస్త భయాలను హరించువాడు, పంచముఖుడు, త్రినేత్రుడు — ఆ మహేశుని నిత్యం ధ్యానించాలి.
+hi: रजतगिरि के समान, सुन्दर चन्द्र को अवतंस रूप में धारण किये, रत्नालङ्कारों से उज्ज्वल अङ्गोंवाले, परशु-वर-मृग-अभय हस्तवाले, प्रसन्न; पद्मासीन, चारों ओर से अमरगणों द्वारा स्तुत, व्याघ्रचर्म धारण किये; विश्व के आदि, विश्ववन्द्य, समस्त भय को हरनेवाले, पञ्चमुख और त्रिनेत्र — उन महेश का नित्य ध्यान करना चाहिये।
+
+--- unit 33 | section: शिव ध्यानम् ---
+vidhi:
+The two accented Vedic mantras of the Śaiva rite: the **Śiva Gāyatrī**, and the **Mahāmṛtyuñjaya** (Ṛgveda 7.59.12, also Vājasaneyi Saṁhitā 3.60), which asks for release from death as a cucumber is released from its stalk.
+deva:
+ओ-न्तत्पुरु॑षाय वि॒द्महे॑ महादे॒वाय॑ धीमहि ।
+तन्नो॑ रुद्रः प्रचो॒दया᳚त् ॥
+ओ-न्त्र्य॑म्बकं-यँजामहे सुग॒न्धि-म्पु॑ष्टि॒ वर्ध॑नम् ।
+उ॒र्वा॒रु॒कमि॑व॒ बन्ध॑नान्मृ॒त्योर्मु॑क्षीय॒ मा-ऽमृता᳚त् ॥
+ॐ नमः शिवाय । ध्यायामि । ध्यानं समर्पयामि ॥
+iast:
+o-ntatpuruṣāya vidmahe mahādevāya dhīmahi |
+tanno rudraḥ pracodayāt ||
+o-ntryambakaṁ-yam̐jāmahe sugandhi-mpuṣṭi vardhanam |
+urvārukamiva bandhanānmṛtyormukṣīya mā-'mṛtāt ||
+oṁ namaḥ śivāya | dhyāyāmi | dhyānaṁ samarpayāmi ||
+en: Oṁ — may we know that Person; may we meditate on Mahādeva; may Rudra impel us. Oṁ — we worship the three-eyed one, the fragrant, the increaser of nourishment: as a cucumber from its stalk, may I be freed from death, not from deathlessness. Salutation to Śiva: I meditate; I offer meditation.
+tel: ఓం — ఆ పురుషుని ఎరుగుదుము; మహాదేవుని ధ్యానించుదుము; ఆ రుద్రుడు మమ్ము ప్రేరేపించుగాక. ఓం — త్ర్యంబకుని, సుగంధిని, పుష్టిని వృద్ధిచేయువానిని పూజిస్తాము; దోసపండు తొడిమనుండి విడివడునట్లు మృత్యువునుండి విడుదల పొందుదునుగాక, అమృతత్వమునుండి కాదు. ఓం నమః శివాయ. ధ్యానిస్తున్నాను; ధ్యానం సమర్పిస్తున్నాను.
+hi: ॐ — उस पुरुष को हम जानें; महादेव का हम ध्यान करें; वे रुद्र हमें प्रेरित करें। ॐ — त्र्यम्बक की, सुगन्धि की, पुष्टिवर्धन की हम उपासना करते हैं; ककड़ी के बन्धन से छूटने के समान मैं मृत्यु से मुक्त हो जाऊँ, अमृतत्व से नहीं। ॐ नमः शिवाय। ध्यान करता हूँ; ध्यान समर्पित करता हूँ।
+
+--- unit 34 | section: षोडशोपचार पूजा ---
+vidhi:
+Invocation, addressing Śiva as the Oṁkāra and as beloved of Pārvatī.
+deva:
+ओङ्काराय नमस्तुभ्यं ओङ्कारप्रिय शङ्कर ।
+आवाहनं गृहाणेदं पार्वतीप्रिय वल्लभ ॥
+1. ॐ नमः शिवाय ।
+2. आवाहयामि ।
+3. स्थापयामि ।
+4. पूजयामि ॥
+iast:
+oṅkārāya namastubhyaṁ oṅkārapriya śaṅkara |
+āvāhanaṁ gṛhāṇedaṁ pārvatīpriya vallabha ||
+1. oṁ namaḥ śivāya |
+2. āvāhayāmi |
+3. sthāpayāmi |
+4. pūjayāmi ||
+en: Salutation to you who are the Oṁkāra, Śaṅkara to whom the Oṁkāra is dear: accept this invocation, beloved husband of Pārvatī. Salutation to Śiva: I invoke; I establish; I worship.
+tel: ఓంకారస్వరూపుడా, నీకు నమస్కారం; ఓంకారప్రియుడైన శంకరా! ఓ పార్వతీప్రియ వల్లభా! ఈ ఆవాహనను స్వీకరించు. ఓం నమః శివాయ. ఆవాహన చేస్తున్నాను; స్థాపిస్తున్నాను; పూజిస్తున్నాను.
+hi: हे ओङ्काररूप, आपको नमस्कार; हे ओङ्कारप्रिय शङ्कर! हे पार्वतीप्रिय वल्लभ! यह आवाहन ग्रहण कीजिये। ॐ नमः शिवाय। आवाहन करता हूँ; स्थापित करता हूँ; पूजन करता हूँ।
+
+--- unit 35 | section: षोडशोपचार पूजा ---
+vidhi:
+The seat. Gītā Press gives `अनेकरत्नसंयुक्तं नानामणिगणान्वितम्` here instead; recorded, not reconciled.
+deva:
+नमस्ते गिरिजानाथ कैलासगिरि मन्दिर ।
+सिंहासनं मया दत्तं स्वीकुरुष्व उमापते ॥
+ॐ नमः शिवाय । आसनं समर्पयामि ॥
+iast:
+namaste girijānātha kailāsagiri mandira |
+siṁhāsanaṁ mayā dattaṁ svīkuruṣva umāpate ||
+oṁ namaḥ śivāya | āsanaṁ samarpayāmi ||
+en: Salutation to you, lord of the mountain's daughter, whose temple is Mount Kailāsa: accept this throne given by me, husband of Umā. Salutation to Śiva: I offer a seat.
+tel: ఓ గిరిజానాథా! కైలాసగిరియే మందిరముగా కలవాడా! నీకు నమస్కారం. ఓ ఉమాపతీ! నేనిచ్చిన ఈ సింహాసనాన్ని స్వీకరించు. ఓం నమః శివాయ. ఆసనం సమర్పిస్తున్నాను.
+hi: हे गिरिजानाथ! कैलासगिरि ही जिनका मन्दिर है, आपको नमस्कार। हे उमापते! मेरे द्वारा दिया गया यह सिंहासन स्वीकार कीजिये। ॐ नमः शिवाय। आसन समर्पित करता हूँ।
+
+--- unit 36 | section: षोडशोपचार पूजा ---
+vidhi:
+Water for the feet. Gītā Press gives `गङ्गोदकं निर्मलं च` here instead.
+deva:
+महादेव जगन्नाथ भक्तानामभयप्रद ।
+पाद्यं गृहाण देवेश मम सौख्यं विवर्धय ॥
+ॐ नमः शिवाय । पादयोः पाद्यं समर्पयामि ॥
+iast:
+mahādeva jagannātha bhaktānāmabhayaprada |
+pādyaṁ gṛhāṇa deveśa mama saukhyaṁ vivardhaya ||
+oṁ namaḥ śivāya | pādayoḥ pādyaṁ samarpayāmi ||
+en: Mahādeva, lord of the world, giver of fearlessness to your devotees: accept this water for the feet, lord of gods, and increase my wellbeing. Salutation to Śiva: I offer water at the feet.
+tel: ఓ మహాదేవా, జగన్నాథా, భక్తులకు అభయమిచ్చువాడా! ఓ దేవేశా, ఈ పాద్యాన్ని స్వీకరించి నా సౌఖ్యాన్ని వృద్ధిచేయుము. ఓం నమః శివాయ. పాదాలకు పాద్యం సమర్పిస్తున్నాను.
+hi: हे महादेव, जगन्नाथ, भक्तों को अभय देनेवाले! हे देवेश, यह पाद्य ग्रहण कीजिये और मेरा सौख्य बढ़ाइये। ॐ नमः शिवाय। चरणों में पाद्य समर्पित करता हूँ।
+
+--- unit 37 | section: षोडशोपचार पूजा ---
+vidhi:
+The guest-offering, from a vessel of Gaṅgā water.
+deva:
+शिवाप्रिय नमस्तेस्तु पावनं जलपूरितम् ।
+अर्घ्यं गृहाण भगवन् गाङ्गेय कलशस्थितम् ॥
+ॐ नमः शिवाय । हस्तयोः अर्घ्यं समर्पयामि ॥
+iast:
+śivāpriya namastestu pāvanaṁ jalapūritam |
+arghyaṁ gṛhāṇa bhagavan gāṅgeya kalaśasthitam ||
+oṁ namaḥ śivāya | hastayoḥ arghyaṁ samarpayāmi ||
+en: Salutation be to you, dear to Śivā: accept this guest-offering, O Lord, pure and filled with water, Gaṅgā's own, standing in the vessel. Salutation to Śiva: I offer the guest-offering into the hands.
+tel: ఓ శివాప్రియా! నీకు నమస్కారం. ఓ భగవానుడా! పవిత్రమైన, జలంతో నిండిన, గంగాజలమైన, కలశంలో ఉన్న ఈ అర్ఘ్యాన్ని స్వీకరించు. ఓం నమః శివాయ. చేతులకు అర్ఘ్యం సమర్పిస్తున్నాను.
+hi: हे शिवाप्रिय! आपको नमस्कार हो। हे भगवन्! पावन, जल से पूरित, गाङ्गेय, कलश में स्थित यह अर्घ्य ग्रहण कीजिये। ॐ नमः शिवाय। हाथों में अर्घ्य समर्पित करता हूँ।
+
+--- unit 38 | section: षोडशोपचार पूजा ---
+vidhi:
+Water for sipping, addressing Śiva as Vāmadeva and as an ocean of compassion.
+deva:
+वामदेव सुराधीश वन्दिताङ्घ्रि सरोरुह ।
+गृहाणाचमनं देव करुणा वरुणालय ॥
+ॐ नमः शिवाय । मुखे आचमनीयं समर्पयामि ॥
+iast:
+vāmadeva surādhīśa vanditāṅghri saroruha |
+gṛhāṇācamanaṁ deva karuṇā varuṇālaya ||
+oṁ namaḥ śivāya | mukhe ācamanīyaṁ samarpayāmi ||
+en: Vāmadeva, lord of the gods, whose lotus feet are worshipped: accept this water for sipping, O god, ocean of compassion. Salutation to Śiva: I offer water for sipping at the mouth.
+tel: ఓ వామదేవా, సురాధీశా, వందితమైన పాదపద్మాలు కలవాడా! ఓ దేవా, కరుణకు సముద్రమైనవాడా, ఈ ఆచమనాన్ని స్వీకరించు. ఓం నమః శివాయ. ముఖానికి ఆచమనీయం సమర్పిస్తున్నాను.
+hi: हे वामदेव, सुराधीश, जिनके चरणकमल वन्दित हैं! हे देव, करुणा के वरुणालय, यह आचमन ग्रहण कीजिये। ॐ नमः शिवाय। मुख में आचमनीय समर्पित करता हूँ।
+
+--- unit 39 | section: षोडशोपचार पूजा ---
+vidhi:
+The bath. The mantra is the `āpo hiṣṭhā` triad (Ṛgveda 10.9.1–3), accented; run together as `आपो हिष्ठा` with the Taittirīya tradition, where the Mādhyandina manuals split `आपो हि ष्ठा`. **Gītā Press instead expands this single bath into eight** — milk, curd, ghee, honey, sugar, pañcāmṛta, scented water and pure water, each with its own ācamana. Recorded, not imported.
+deva:
+आपो॒ हिष्ठा म॑यो॒भुव॒स्ता न॑ ऊ॒र्जे द॑धातन ।
+म॒हे रणा॑य॒ चक्ष॑से ॥
+यो वः॑ शि॒वत॑मो रस॒स्तस्य॑ भाजयते॒ह नः॑ ।
+उ॒श॒तीरि॑व मा॒त॑रः ॥
+तस्मा॒ अर॑-ङ्गमाम वो॒ यस्य॒ क्षया॑य॒ जिन्व॑थ ।
+आपो॑ ज॒नय॑था च नः ॥
+ॐ नमः शिवाय । शुद्धोदक स्नानं समर्पयामि ॥ स्नानानन्तरं आचमनीयं समर्पयामि ॥
+iast:
+āpo hiṣṭhā mayobhuvastā na ūrje dadhātana |
+mahe raṇāya cakṣase ||
+yo vaḥ śivatamo rasastasya bhājayateha naḥ |
+uśatīriva mātaraḥ ||
+tasmā ara-ṅgamāma vo yasya kṣayāya jinvatha |
+āpo janayathā ca naḥ ||
+oṁ namaḥ śivāya | śuddhodaka snānaṁ samarpayāmi || snānānantaraṁ ācamanīyaṁ samarpayāmi ||
+en: Waters, you are the bringers of well-being: grant us strength, and the sight of great delight. Give us here a share of that most kindly essence of yours, like mothers in their longing. We would come readily to you, to whose dwelling you quicken us — and you beget us anew, O waters. Salutation to Śiva: I offer a bath of pure water; and after the bath, water for sipping.
+tel: ఓ జలములారా! మీరు సుఖాన్ని కలిగించువారు; మాకు బలాన్ని ఇవ్వండి, గొప్ప ఆనందదర్శనాన్ని ఇవ్వండి. మీలోని అత్యంత శుభకరమైన ఆ రసాన్ని, కోరికతో ఉన్న తల్లులవలె, ఇక్కడ మాకు పంచండి. ఎవరి నివాసానికి మీరు మమ్మల్ని ప్రేరేపిస్తారో దానికి మేము సిద్ధంగా వస్తాము; ఓ జలములారా, మీరు మమ్మల్ని మళ్లీ జన్మింపజేస్తారు. ఓం నమః శివాయ. శుద్ధోదక స్నానం సమర్పిస్తున్నాను; స్నానానంతరం ఆచమనీయం సమర్పిస్తున్నాను.
+hi: हे जल! तुम सुख देनेवाले हो; हमें बल दो और महान् आनन्द का दर्शन दो। तुम्हारा जो अत्यन्त कल्याणकारी रस है, उसका भाग यहाँ हमें दो — जैसे वात्सल्यभरी माताएँ देती हैं। जिसके निवास के लिये तुम हमें प्रेरित करते हो, उसके लिये हम तत्पर होकर आयें; हे जल, तुम हमें पुनः जन्म देते हो। ॐ नमः शिवाय। शुद्धोदक स्नान समर्पित करता हूँ; स्नान के पश्चात् आचमनीय समर्पित करता हूँ।
+
+--- unit 40 | section: षोडशोपचार पूजा ---
+vidhi:
+The garment. The source gives only the first line of the couplet; it is transcribed as printed.
+deva:
+वस्त्रयुग्मं च दिव्यं च शोभनं प्रीति वर्धनम् ।
+ॐ नमः शिवाय । वस्त्रं समर्पयामि ॥
+iast:
+vastrayugmaṁ ca divyaṁ ca śobhanaṁ prīti vardhanam |
+oṁ namaḥ śivāya | vastraṁ samarpayāmi ||
+en: A pair of cloths, heavenly, beautiful, increasing of affection. Salutation to Śiva: I offer a garment.
+tel: దివ్యమూ, శోభనమూ, ప్రీతిని పెంచునదీ అయిన వస్త్రయుగ్మం. ఓం నమః శివాయ. వస్త్రం సమర్పిస్తున్నాను.
+hi: दिव्य, शोभन और प्रीतिवर्धक वस्त्रयुग्म। ॐ नमः शिवाय। वस्त्र समर्पित करता हूँ।
+
+--- unit 41 | section: षोडशोपचार पूजा ---
+vidhi:
+The sacred thread, with the yajñopavīta verse. Gītā Press adds an `उपवस्त्र` between vastra and yajñopavīta, which this text does not have.
+deva:
+यज्ञोपवीतं परमं पवित्रं प्रजापतेर्यत्सहजं पुरस्तात् ।
+आयुष्यमग्र्यं प्रतिमुञ्च शुभ्रं यज्ञोपवीतं बलमस्तु तेजः ॥
+ॐ नमः शिवाय । यज्ञोपवीतं समर्पयामि ॥
+iast:
+yajñopavītaṁ paramaṁ pavitraṁ prajāpateryatsahajaṁ purastāt |
+āyuṣyamagryaṁ pratimuñca śubhraṁ yajñopavītaṁ balamastu tejaḥ ||
+oṁ namaḥ śivāya | yajñopavītaṁ samarpayāmi ||
+en: The yajñopavīta is supremely pure; it was born with Prajāpati at the beginning. Put on this bright thread, foremost giver of long life: let the sacred thread be strength and splendour. Salutation to Śiva: I offer the sacred thread.
+tel: యజ్ఞోపవీతం పరమ పవిత్రమైనది; ఆదిలో ప్రజాపతితో కూడ సహజంగా పుట్టినది. ఆయుష్యాన్ని ఇచ్చే ఈ శుభ్రమైన యజ్ఞోపవీతాన్ని ధరించు; అది బలమూ తేజమూ అగుగాక. ఓం నమః శివాయ. యజ్ఞోపవీతం సమర్పిస్తున్నాను.
+hi: यज्ञोपवीत परम पवित्र है; वह आदि में प्रजापति के साथ सहज ही उत्पन्न हुआ। आयु देनेवाले इस शुभ्र यज्ञोपवीत को धारण कीजिये; वह बल और तेज हो। ॐ नमः शिवाय। यज्ञोपवीत समर्पित करता हूँ।
+
+--- unit 42 | section: षोडशोपचार पूजा ---
+vidhi:
+Sandal-paste. Here the source keeps the template's generic verse rather than a Śaiva one.
+deva:
+श्रीखण्डं चन्दनं दिव्यं गन्धाढ्यं सुमनोहरम् ।
+विलेपनं सुरश्रेष्ठ प्रीत्यर्थं प्रतिगृह्यताम् ॥
+ॐ नमः शिवाय । गन्धं समर्पयामि ॥
+iast:
+śrīkhaṇḍaṁ candanaṁ divyaṁ gandhāḍhyaṁ sumanoharam |
+vilepanaṁ suraśreṣṭha prītyarthaṁ pratigṛhyatām ||
+oṁ namaḥ śivāya | gandhaṁ samarpayāmi ||
+en: Sandal of the śrīkhaṇḍa kind, heavenly, rich in fragrance, most pleasing: let this unguent be accepted for your pleasure, best of gods. Salutation to Śiva: I offer sandal-paste.
+tel: శ్రీఖండ చందనం, దివ్యమైనది, సుగంధభరితమైనది, మనోహరమైనది; ఓ సురశ్రేష్ఠా! ఈ విలేపనాన్ని ప్రీతికై స్వీకరించు. ఓం నమః శివాయ. గంధం సమర్పిస్తున్నాను.
+hi: श्रीखण्ड चन्दन, दिव्य, सुगन्ध से भरा और अत्यन्त मनोहर; हे सुरश्रेष्ठ! यह विलेपन प्रीति के लिये स्वीकार कीजिये। ॐ नमः शिवाय। गन्ध समर्पित करता हूँ।
+
+--- unit 43 | section: षोडशोपचार पूजा ---
+vidhi:
+The archana begins: rice and flowers are offered.
+deva:
+अक्षतान् धवलान् दिव्यान् पुष्पाणि च सुगन्धीनि ।
+भक्त्या दत्तानि गृह्यन्तां सर्वदेवाः प्रसीदत ॥
+iast:
+akṣatān dhavalān divyān puṣpāṇi ca sugandhīni |
+bhaktyā dattāni gṛhyantāṁ sarvadevāḥ prasīdata ||
+en: White and heavenly grains of rice, and fragrant flowers, given with devotion: let them be accepted. Be gracious, all you gods.
+tel: తెల్లనైన, దివ్యమైన అక్షతలూ, సుగంధభరితమైన పుష్పాలూ భక్తితో సమర్పించబడ్డాయి; స్వీకరించండి. సర్వదేవతలారా, ప్రసన్నులు కండి.
+hi: श्वेत, दिव्य अक्षत और सुगन्धित पुष्प भक्तिपूर्वक दिये गये हैं; स्वीकार किये जायँ। हे समस्त देवगण, प्रसन्न होइये।
+
+--- unit 44 | section: षोडशोपचार पूजा ---
+vidhi:
+The aṅga-pūjā — worship of the deity limb by limb, fifteen names from the feet upward. Reference list.
+deva:
+अङ्ग पूजा —
+1. ॐ शिवाय नमः - पादौ पूजयामि ।
+2. ॐ महेश्वराय नमः - गुल्फौ पूजयामि ।
+3. ॐ शम्भवे नमः - जानुनी पूजयामि ।
+4. ॐ पिनाकिने नमः - ऊरू पूजयामि ।
+5. ॐ शशिशेखराय नमः - कटिं पूजयामि ।
+6. ॐ वामदेवाय नमः - उदरं पूजयामि ।
+7. ॐ विरूपाक्षाय नमः - हृदयं पूजयामि ।
+8. ॐ कपर्दिने नमः - कण्ठं पूजयामि ।
+9. ॐ नीललोहिताय नमः - स्कन्धौ पूजयामि ।
+10. ॐ शङ्कराय नमः - बाहू पूजयामि ।
+11. ॐ शूलपाणये नमः - हस्तौ पूजयामि ।
+12. ॐ खट्वाङ्गिने नमः - मुखं पूजयामि ।
+13. ॐ अम्बिकानाथाय नमः - नेत्रे पूजयामि ।
+14. ॐ श्रीकण्ठाय नमः - शिरः पूजयामि ।
+15. ॐ भक्तवत्सलाय नमः - सर्वाण्यङ्गानि पूजयामि ॥
+iast:
+aṅga pūjā —
+1. oṁ śivāya namaḥ - pādau pūjayāmi |
+2. oṁ maheśvarāya namaḥ - gulphau pūjayāmi |
+3. oṁ śambhave namaḥ - jānunī pūjayāmi |
+4. oṁ pinākine namaḥ - ūrū pūjayāmi |
+5. oṁ śaśiśekharāya namaḥ - kaṭiṁ pūjayāmi |
+6. oṁ vāmadevāya namaḥ - udaraṁ pūjayāmi |
+7. oṁ virūpākṣāya namaḥ - hṛdayaṁ pūjayāmi |
+8. oṁ kapardine namaḥ - kaṇṭhaṁ pūjayāmi |
+9. oṁ nīlalohitāya namaḥ - skandhau pūjayāmi |
+10. oṁ śaṅkarāya namaḥ - bāhū pūjayāmi |
+11. oṁ śūlapāṇaye namaḥ - hastau pūjayāmi |
+12. oṁ khaṭvāṅgine namaḥ - mukhaṁ pūjayāmi |
+13. oṁ ambikānāthāya namaḥ - netre pūjayāmi |
+14. oṁ śrīkaṇṭhāya namaḥ - śiraḥ pūjayāmi |
+15. oṁ bhaktavatsalāya namaḥ - sarvāṇyaṅgāni pūjayāmi ||
+en: Worship of the limbs — to Śiva, I worship the feet; to Maheśvara, the ankles; to Śambhu, the knees; to Pinākin, the thighs; to Śaśiśekhara, the waist; to Vāmadeva, the belly; to Virūpākṣa, the heart; to Kapardin, the throat; to Nīlalohita, the shoulders; to Śaṅkara, the arms; to Śūlapāṇi, the hands; to Khaṭvāṅgin, the face; to Ambikānātha, the eyes; to Śrīkaṇṭha, the head; to Bhaktavatsala, all the limbs.
+tel: అంగపూజ — శివునికి పాదాలను పూజిస్తాను; మహేశ్వరునికి గుల్ఫాలను; శంభునికి మోకాళ్లను; పినాకికి తొడలను; శశిశేఖరునికి నడుమును; వామదేవునికి ఉదరాన్ని; విరూపాక్షునికి హృదయాన్ని; కపర్దికి కంఠాన్ని; నీలలోహితునికి భుజాలను; శంకరునికి బాహువులను; శూలపాణికి చేతులను; ఖట్వాంగికి ముఖాన్ని; అంబికానాథునికి కన్నులను; శ్రీకంఠునికి శిరస్సును; భక్తవత్సలునికి సర్వాంగాలను పూజిస్తాను.
+hi: अङ्गपूजा — शिव को चरणों की पूजा करता हूँ; महेश्वर को गुल्फों की; शम्भु को जानुओं की; पिनाकी को ऊरुओं की; शशिशेखर को कटि की; वामदेव को उदर की; विरूपाक्ष को हृदय की; कपर्दी को कण्ठ की; नीललोहित को स्कन्धों की; शङ्कर को बाहुओं की; शूलपाणि को हस्तों की; खट्वाङ्गी को मुख की; अम्बिकानाथ को नेत्रों की; श्रीकण्ठ को शिर की; भक्तवत्सल को समस्त अङ्गों की पूजा करता हूँ।
+
+--- unit 45 | section: षोडशोपचार पूजा ---
+vidhi:
+The nāmāvalī. The source directs that Śiva's aṣṭottaraśatanāmāvalī be recited here, a flower or grain of rice offered at each name — or, failing that, at least a few known names. No nāmāvalī is printed on the page, and none has been supplied by us; the corpus carries Śiva's aṣṭottara separately under `../../shiva/`.
+deva:
+अथवा शिव नामावली पठनम् ॥
+ॐ नमः शिवाय । अष्टोत्तर शत नामावली पूजां समर्पयामि । अक्षतान् पुष्पाणि च समर्पयामि ॥
+iast:
+athavā śiva nāmāvalī paṭhanam ||
+oṁ namaḥ śivāya | aṣṭottara śata nāmāvalī pūjāṁ samarpayāmi | akṣatān puṣpāṇi ca samarpayāmi ||
+en: Or else the recitation of Śiva's list of names. Salutation to Śiva: I offer the worship of the hundred and eight names; I offer unbroken rice and flowers.
+tel: లేదా శివ నామావళి పఠనం. ఓం నమః శివాయ. అష్టోత్తర శత నామావళి పూజను సమర్పిస్తున్నాను; అక్షతలూ పుష్పాలూ సమర్పిస్తున్నాను.
+hi: अथवा शिव की नामावली का पाठ। ॐ नमः शिवाय। अष्टोत्तरशतनामावली की पूजा समर्पित करता हूँ; अक्षत और पुष्प समर्पित करता हूँ।
+
+--- unit 46 | section: षोडशोपचार पूजा ---
+vidhi:
+Incense.
+deva:
+वनस्पत्युद्भवैर्दिव्यैः नानागन्धैः सुसंयुतः ।
+आघ्रेयः सर्वदेवानां धूपोऽयं प्रतिगृह्यताम् ॥
+ॐ नमः शिवाय । धूपमाघ्रापयामि ॥
+iast:
+vanaspatyudbhavairdivyaiḥ nānāgandhaiḥ susaṁyutaḥ |
+āghreyaḥ sarvadevānāṁ dhūpo'yaṁ pratigṛhyatām ||
+oṁ namaḥ śivāya | dhūpamāghrāpayāmi ||
+en: Compounded of many heavenly fragrances born of the forest trees, fit to be smelled by all the gods: let this incense be accepted. Salutation to Śiva: I let the incense be smelled.
+tel: వనస్పతుల నుండి పుట్టిన దివ్యమైన నానాగంధాలతో కూడినది, సర్వదేవతలకు ఆఘ్రాణయోగ్యమైనది — ఈ ధూపాన్ని స్వీకరించు. ఓం నమః శివాయ. ధూపం ఆఘ్రాపిస్తున్నాను.
+hi: वनस्पतियों से उत्पन्न दिव्य नाना गन्धों से युक्त, समस्त देवताओं के आघ्राण योग्य — यह धूप स्वीकार किया जाय। ॐ नमः शिवाय। धूप आघ्रापित करता हूँ।
+
+--- unit 47 | section: षोडशोपचार पूजा ---
+vidhi:
+The lamp.
+deva:
+साज्यं त्रिवर्ति संयुक्तं वह्निना योजितं प्रियम् ।
+गृहाण मङ्गलं दीपं त्रैलोक्य तिमिरापहम् ॥
+ॐ नमः शिवाय । दीपं दर्शयामि ॥
+iast:
+sājyaṁ trivarti saṁyuktaṁ vahninā yojitaṁ priyam |
+gṛhāṇa maṅgalaṁ dīpaṁ trailokya timirāpaham ||
+oṁ namaḥ śivāya | dīpaṁ darśayāmi ||
+en: With ghee, with three wicks, joined to fire, and dear: accept this auspicious lamp, which takes away the darkness of the three worlds. Salutation to Śiva: I show the lamp.
+tel: నేతితో కూడినది, మూడు వత్తులు కలది, అగ్నితో జ్వలించునది, ప్రియమైనది; ముల్లోకాల చీకటిని పోగొట్టే ఈ మంగళదీపాన్ని స్వీకరించు. ఓం నమః శివాయ. దీపం చూపిస్తున్నాను.
+hi: घृतयुक्त, तीन बत्तियोंवाला, अग्नि से संयुक्त और प्रिय; त्रैलोक्य के अन्धकार को दूर करनेवाले इस मङ्गलदीप को ग्रहण कीजिये। ॐ नमः शिवाय। दीप दिखाता हूँ।
+
+--- unit 48 | section: षोडशोपचार पूजा ---
+vidhi:
+The food-offering: the verse of offering.
+deva:
+नैवेद्यं गृह्यतां देव भक्त्या सम्पादितं मया ।
+इदं फलं च पानीयं सर्वोपचार संयुतम् ॥
+iast:
+naivedyaṁ gṛhyatāṁ deva bhaktyā sampāditaṁ mayā |
+idaṁ phalaṁ ca pānīyaṁ sarvopacāra saṁyutam ||
+en: Let the offering be accepted, O god, prepared by me with devotion: this fruit and this drink, together with every service.
+tel: ఓ దేవా! భక్తితో నేను సిద్ధం చేసిన ఈ నైవేద్యాన్ని స్వీకరించు; ఈ ఫలమూ, పానీయమూ, సమస్త ఉపచారాలతో కూడినవి.
+hi: हे देव! भक्तिपूर्वक मेरे द्वारा तैयार किया गया यह नैवेद्य ग्रहण कीजिये; यह फल और पानीय, समस्त उपचारों सहित।
+
+--- unit 49 | section: षोडशोपचार पूजा ---
+vidhi:
+The Gāyatrī is recited over the food, then the five breath-offerings. `अमृतोपस्तरणमसि` is said before and `अमृतापिधानमसि` after — the food is covered above and below with the deathless.
+deva:
+ओ-म्भूर्भुव॒स्सुवः॒ । तत्स॑वि॒तुर्वरे᳚ण्य॒-म्भर्गो॑ दे॒वस्य॑ धीमहि ।
+धि॒यो यो नः॑ प्रचो॒दया᳚त् ॥
+सत्यं त्वा ऋतेन परिषिञ्चामि । अमृतमस्तु । अमृतोपस्तरणमसि ।
+1. ॐ प्राणाय स्वाहा ।
+2. ॐ अपानाय स्वाहा ।
+3. ॐ व्यानाय स्वाहा ।
+4. ॐ उदानाय स्वाहा ।
+5. ॐ समानाय स्वाहा ।
+मध्ये मध्ये पानीयं समर्पयामि । अमृतापिधानमसि । उत्तरापोशनं समर्पयामि ।
+1. हस्तौ प्रक्षालयामि ।
+2. पादौ प्रक्षालयामि ।
+3. शुद्धाचमनीयं समर्पयामि ॥
+iast:
+o-mbhūrbhuvassuvaḥ | tatsaviturvareṇya-mbhargo devasya dhīmahi |
+dhiyo yo naḥ pracodayāt ||
+satyaṁ tvā ṛtena pariṣiñcāmi | amṛtamastu | amṛtopastaraṇamasi |
+1. oṁ prāṇāya svāhā |
+2. oṁ apānāya svāhā |
+3. oṁ vyānāya svāhā |
+4. oṁ udānāya svāhā |
+5. oṁ samānāya svāhā |
+madhye madhye pānīyaṁ samarpayāmi | amṛtāpidhānamasi | uttarāpośanaṁ samarpayāmi |
+1. hastau prakṣālayāmi |
+2. pādau prakṣālayāmi |
+3. śuddhācamanīyaṁ samarpayāmi ||
+en: Oṁ, earth, mid-air, heaven. That adorable splendour of the god Savitṛ — we meditate on it; may he impel our understandings. I sprinkle you, the true, with the right. Let there be the deathless. You are the underlayer of the deathless. Oṁ, to the out-breath, svāhā; to the in-breath; to the diffused breath; to the up-breath; to the even breath, svāhā. Between the morsels I offer water. You are the covering of the deathless. I offer the after-sipping. I wash the hands; I wash the feet; I offer pure water for sipping.
+tel: ఓం భూర్భువస్సువః. సవితృదేవుని ఆ వరణీయ తేజస్సును ధ్యానిస్తాము; ఆయన మా బుద్ధులను ప్రేరేపించుగాక. సత్యమైన నిన్ను ఋతంతో పరిషించుతున్నాను. అమృతమగుగాక. నీవు అమృతానికి ఉపస్తరణము. ఓం ప్రాణాయ స్వాహా; అపానాయ; వ్యానాయ; ఉదానాయ; సమానాయ స్వాహా. మధ్యమధ్యలో పానీయం సమర్పిస్తున్నాను. నీవు అమృతానికి ఆపిధానము. ఉత్తరాపోశనం సమర్పిస్తున్నాను. చేతులు కడుగుతున్నాను; పాదాలు కడుగుతున్నాను; శుద్ధాచమనీయం సమర్పిస్తున్నాను.
+hi: ॐ भूर्भुवः सुवः। सवितादेव के उस वरणीय तेज का हम ध्यान करते हैं; वे हमारी बुद्धियों को प्रेरित करें। सत्यस्वरूप तुम्हें मैं ऋत से परिषिञ्चित करता हूँ। अमृत हो। तुम अमृत के उपस्तरण हो। ॐ प्राण को स्वाहा; अपान को; व्यान को; उदान को; समान को स्वाहा। बीच-बीच में पानीय समर्पित करता हूँ। तुम अमृत के आपिधान हो। उत्तरापोशन समर्पित करता हूँ। हाथ धुलाता हूँ; चरण धुलाता हूँ; शुद्ध आचमनीय समर्पित करता हूँ।
+
+--- unit 50 | section: षोडशोपचार पूजा ---
+vidhi:
+The offering is made.
+deva:
+ॐ नमः शिवाय । नैवेद्यं समर्पयामि ॥
+iast:
+oṁ namaḥ śivāya | naivedyaṁ samarpayāmi ||
+en: Salutation to Śiva: I offer the food.
+tel: ఓం నమః శివాయ. నైవేద్యం సమర్పిస్తున్నాను.
+hi: ॐ नमः शिवाय। नैवेद्य समर्पित करता हूँ।
+
+--- unit 51 | section: षोडशोपचार पूजा ---
+vidhi:
+Betel.
+deva:
+पूगीफलश्च कर्पूरैः नागवल्लीदलैर्युतम् ।
+मुक्ताचूर्ण संयुक्तं ताम्बूलं प्रतिगृह्यताम् ॥
+ॐ नमः शिवाय । ताम्बूलं समर्पयामि ॥
+iast:
+pūgīphalaśca karpūraiḥ nāgavallīdalairyutam |
+muktācūrṇa saṁyuktaṁ tāmbūlaṁ pratigṛhyatām ||
+oṁ namaḥ śivāya | tāmbūlaṁ samarpayāmi ||
+en: Areca nut with camphor, together with betel leaves and powdered pearl: let this betel be accepted. Salutation to Śiva: I offer betel.
+tel: పోకచెక్కలు, కర్పూరం, తమలపాకులు, ముత్యపు చూర్ణంతో కూడిన ఈ తాంబూలాన్ని స్వీకరించు. ఓం నమః శివాయ. తాంబూలం సమర్పిస్తున్నాను.
+hi: सुपारी, कर्पूर, नागवल्ली के पत्ते और मुक्ताचूर्ण से युक्त यह ताम्बूल स्वीकार किया जाय। ॐ नमः शिवाय। ताम्बूल समर्पित करता हूँ।
+
+--- unit 52 | section: षोडशोपचार पूजा ---
+vidhi:
+The waving of lights — and here, instead of the template's generic verse, an accented **Puruṣasūkta** verse: the great Person, sun-coloured, beyond darkness, who names all forms and speaks them. Gītā Press calls this service `आरती`.
+deva:
+वेदा॒हमे॒त-म्पुरु॑ष-म्म॒हान्तम्᳚ । आ॒दि॒त्यव॑र्ण॒-न्तम॑स॒स्तु पा॒रे ।
+सर्वा॑णि रू॒पाणि॑ वि॒चित्य॒ धीरः॑ । नामा॑नि कृ॒त्वा-ऽभि॒वद॒न्॒, यदा-ऽऽस्ते᳚ ॥
+ॐ नमः शिवाय । नीराजनं समर्पयामि ॥
+iast:
+vedāhameta-mpuruṣa-mmahāntam | ādityavarṇa-ntamasastu pāre |
+sarvāṇi rūpāṇi vicitya dhīraḥ | nāmāni kṛtvā-'bhivadan, yadā-''ste ||
+oṁ namaḥ śivāya | nīrājanaṁ samarpayāmi ||
+en: I know this great Person, sun-coloured, beyond the darkness; the wise one who, having discerned all forms and made their names, utters them as he abides. Salutation to Śiva: I offer the waving of lights.
+tel: ఆదిత్యవర్ణుడు, చీకటికి ఆవల ఉన్నవాడు — ఈ మహాపురుషుని నేను ఎరుగుదును; సమస్త రూపాలను విచారించి, నామాలను ఏర్పరచి, వాటిని పలుకుచు ఉండే ఆ ధీరుడు. ఓం నమః శివాయ. నీరాజనం సమర్పిస్తున్నాను.
+hi: आदित्यवर्ण, अन्धकार के पार स्थित — इस महान् पुरुष को मैं जानता हूँ; जो धीर समस्त रूपों का विचार करके, नाम बनाकर उन्हें कहते हुए विराजते हैं। ॐ नमः शिवाय। नीराजन समर्पित करता हूँ।
+
+--- unit 53 | section: षोडशोपचार पूजा ---
+vidhi:
+The mantra-flower, with the accented **Śatarudriya** formula — Śiva as golden-armed, golden-hued, golden-formed, lord of Ambikā, of Umā, of all creatures.
+deva:
+नमो हिरण्यबाहवे हिरण्यवर्णाय हिरण्यरूपाय हिरण्यपतये-ऽम्बिकापतय उमापतये पशुपतये॑ नमो॒ नमः ॥
+ॐ नमः शिवाय । मन्त्रपुष्पं समर्पयामि ॥
+iast:
+namo hiraṇyabāhave hiraṇyavarṇāya hiraṇyarūpāya hiraṇyapataye-'mbikāpataya umāpataye paśupataye namo namaḥ ||
+oṁ namaḥ śivāya | mantrapuṣpaṁ samarpayāmi ||
+en: Salutation to the golden-armed, the golden-hued, the golden-formed, the lord of gold; to the lord of Ambikā, the lord of Umā, the lord of creatures — salutation, salutation. Salutation to Śiva: I offer the mantra-flower.
+tel: హిరణ్యబాహువుకు, హిరణ్యవర్ణునికి, హిరణ్యరూపునికి, హిరణ్యపతికి నమస్కారం; అంబికాపతికి, ఉమాపతికి, పశుపతికి నమో నమః. ఓం నమః శివాయ. మంత్రపుష్పం సమర్పిస్తున్నాను.
+hi: हिरण्यबाहु को, हिरण्यवर्ण को, हिरण्यरूप को, हिरण्यपति को नमस्कार; अम्बिकापति, उमापति, पशुपति को नमो नमः। ॐ नमः शिवाय। मन्त्रपुष्प समर्पित करता हूँ।
+
+--- unit 54 | section: षोडशोपचार पूजा ---
+vidhi:
+Circumambulation. The template's verse is followed by a second, Śaiva one addressed to the Conqueror of Death.
+deva:
+यानि कानि च पापानि जन्मान्तर कृतानि च ।
+तानि तानि प्रणश्यन्ति प्रदक्षिण पदे पदे ॥
+पदे पदे सर्वतमो निकृन्तनं
+पदे पदे सर्व शुभप्रदायकम् ।
+प्रदक्षिणं भक्तियुतेन चेतसा
+करोमि मृत्युञ्जय रक्ष रक्ष माम् ॥
+ॐ नमः शिवाय । प्रदक्षिण नमस्कारान् समर्पयामि ॥
+iast:
+yāni kāni ca pāpāni janmāntara kṛtāni ca |
+tāni tāni praṇaśyanti pradakṣiṇa pade pade ||
+pade pade sarvatamo nikṛntanaṁ
+pade pade sarva śubhapradāyakam |
+pradakṣiṇaṁ bhaktiyutena cetasā
+karomi mṛtyuñjaya rakṣa rakṣa mām ||
+oṁ namaḥ śivāya | pradakṣiṇa namaskārān samarpayāmi ||
+en: Whatever sins there are, and those committed in other births, they perish one by one at every step of the circumambulation. At every step a cutting away of all darkness, at every step a giver of every good — I make this circumambulation with a mind full of devotion: Conqueror of Death, guard me, guard me. Salutation to Śiva: I offer circumambulation and salutations.
+tel: ఏ ఏ పాపాలు ఉన్నాయో, జన్మాంతరాలలో చేసినవి ఏవో — అవన్నీ ప్రదక్షిణంలో అడుగడుగునా నశిస్తాయి. అడుగడుగునా సమస్త చీకటిని ఖండించునది, అడుగడుగునా సర్వశుభాలను ఇచ్చునది — భక్తియుక్తమైన మనస్సుతో ఈ ప్రదక్షిణం చేస్తున్నాను; ఓ మృత్యుంజయా, నన్ను రక్షించు, రక్షించు. ఓం నమః శివాయ. ప్రదక్షిణ నమస్కారాలు సమర్పిస్తున్నాను.
+hi: जो कोई भी पाप हैं और जन्मान्तरों में किये गये हैं, वे प्रदक्षिणा के पद-पद पर नष्ट हो जाते हैं। पद-पद पर समस्त अन्धकार का निकृन्तन, पद-पद पर सर्व शुभ का प्रदाता — भक्तियुक्त चित्त से यह प्रदक्षिणा करता हूँ; हे मृत्युञ्जय, मेरी रक्षा कीजिये, रक्षा कीजिये। ॐ नमः शिवाय। प्रदक्षिणा-नमस्कार समर्पित करता हूँ।
+
+--- unit 55 | section: षोडशोपचार पूजा ---
+vidhi:
+The eight-limbed prostration.
+deva:
+उरसा शिरसा दृष्ट्या मनसा वचसा तथा ।
+पद्भ्यां कराभ्यां कर्णाभ्यां प्रणामोऽष्टाङ्ग उच्यते ॥
+ॐ नमः शिवाय । नमस्कारान् समर्पयामि ॥
+iast:
+urasā śirasā dṛṣṭyā manasā vacasā tathā |
+padbhyāṁ karābhyāṁ karṇābhyāṁ praṇāmo'ṣṭāṅga ucyate ||
+oṁ namaḥ śivāya | namaskārān samarpayāmi ||
+en: With the chest, the head, the eyes, the mind and speech, with the two feet, the two hands and the two ears: this is called the eight-limbed prostration. Salutation to Śiva: I offer salutations.
+tel: వక్షస్సుతో, శిరస్సుతో, దృష్టితో, మనస్సుతో, వాక్కుతో, పాదాలతో, చేతులతో, చెవులతో చేసేది అష్టాంగ ప్రణామం అనబడుతుంది. ఓం నమః శివాయ. నమస్కారాలు సమర్పిస్తున్నాను.
+hi: वक्ष से, शिर से, दृष्टि से, मन से, वचन से, दोनों चरणों, दोनों हाथों और दोनों कानों से — यह अष्टाङ्ग प्रणाम कहलाता है। ॐ नमः शिवाय। नमस्कार समर्पित करता हूँ।
+
+--- unit 56 | section: षोडशोपचार पूजा ---
+vidhi:
+The remaining royal and divine services, offered together by naming them.
+deva:
+1. ॐ नमः शिवाय ।
+2. छत्रं समर्पयामि ।
+3. चामरं समर्पयामि ।
+4. गीतं श्रावयामि ।
+5. नृत्यं दर्शयामि ।
+6. समस्त राजोपचारान् देवोपचारान् समर्पयामि ॥
+iast:
+1. oṁ namaḥ śivāya |
+2. chatraṁ samarpayāmi |
+3. cāmaraṁ samarpayāmi |
+4. gītaṁ śrāvayāmi |
+5. nṛtyaṁ darśayāmi |
+6. samasta rājopacārān devopacārān samarpayāmi ||
+en: Salutation to Śiva. I offer the parasol; the fly-whisk; I cause song to be heard; I show dance; I offer all the royal services and all the divine services.
+tel: ఓం నమః శివాయ. ఛత్రం సమర్పిస్తున్నాను; చామరం సమర్పిస్తున్నాను; గీతం వినిపిస్తున్నాను; నృత్యం చూపిస్తున్నాను; సమస్త రాజోపచారాలనూ దేవోపచారాలనూ సమర్పిస్తున్నాను.
+hi: ॐ नमः शिवाय। छत्र समर्पित करता हूँ; चामर समर्पित करता हूँ; गीत सुनाता हूँ; नृत्य दिखाता हूँ; समस्त राजोपचार और देवोपचार समर्पित करता हूँ।
+
+--- unit 57 | section: स्तोत्रपठनम् ---
+vidhi:
+The source directs the recitation of hymns here, naming two — the Śrī Rudram (the Namakam) and the Śiva Pañcākṣarī Stotram. Neither is printed on the page, and neither has been supplied by us; the corpus carries both separately under `../../shiva/`.
+deva:
+स्तोत्र-सूक्त पठनम् — श्री रुद्रं नमकम् । शिव पञ्चाक्षरि स्तोत्रम् ॥
+iast:
+stotra-sūkta paṭhanam — śrī rudraṁ namakam | śiva pañcākṣari stotram ||
+en: Recitation of hymns and sūktas — the Śrī Rudram, the Namakam; the Śiva Pañcākṣarī Stotram.
+tel: స్తోత్ర-సూక్త పఠనం — శ్రీ రుద్రం నమకం; శివ పంచాక్షరీ స్తోత్రం.
+hi: स्तोत्र-सूक्त पाठ — श्री रुद्रं नमकम्; शिव पञ्चाक्षरी स्तोत्रम्।
+
+--- unit 58 | section: क्षमाप्रार्थना ---
+vidhi:
+Asking pardon. The first verse is Śaiva and has no counterpart in the template: by the mere remembrance of Maheśvara, what is deficient in austerity, worship or rite becomes complete. Note the second verse addresses `महेश्वर` where the template reads `सुरेश्वर`.
+deva:
+यस्य स्मृत्या च नामोक्त्या तपः पूजा क्रियादिषु ।
+न्यूनं सम्पूर्णतां याति सद्यो वन्दे महेश्वरम् ॥
+मन्त्रहीनं क्रियाहीनं भक्तिहीनं महेश्वर ।
+यत्पूजितं मया देव परिपूर्णं तदस्तु ते ॥
+iast:
+yasya smṛtyā ca nāmoktyā tapaḥ pūjā kriyādiṣu |
+nyūnaṁ sampūrṇatāṁ yāti sadyo vande maheśvaram ||
+mantrahīnaṁ kriyāhīnaṁ bhaktihīnaṁ maheśvara |
+yatpūjitaṁ mayā deva paripūrṇaṁ tadastu te ||
+en: By whose remembrance and by the uttering of whose name, whatever is deficient in austerity, worship, rite and the rest at once attains completeness — him, Maheśvara, I praise. Lacking in mantra, lacking in rite, lacking in devotion though it was, O Maheśvara — let what I have worshipped be counted complete for you.
+tel: ఎవరి స్మరణచేత, ఎవరి నామోచ్చారణచేత తపస్సు, పూజ, క్రియ మొదలైనవాటిలో లోపము వెంటనే సంపూర్ణతను పొందునో — ఆ మహేశ్వరుని వందిస్తున్నాను. ఓ మహేశ్వరా! మంత్రహీనమైనా, క్రియాహీనమైనా, భక్తిహీనమైనా — నేను చేసిన ఈ పూజ నీకు పరిపూర్ణమగుగాక.
+hi: जिनके स्मरण और नामोच्चारण से तप, पूजा, क्रिया आदि में न्यूनता तत्काल सम्पूर्णता को प्राप्त होती है — उन महेश्वर की मैं वन्दना करता हूँ। हे महेश्वर! मन्त्रहीन, क्रियाहीन और भक्तिहीन होते हुए भी मेरे द्वारा की गयी यह पूजा आपके लिये परिपूर्ण हो।
+
+--- unit 59 | section: क्षमाप्रार्थना ---
+vidhi:
+Surrendering the act itself, and the closing declaration of the fruit of the worship.
+deva:
+कायेन वाचा मनसेन्द्रियैर्वा
+बुद्ध्यात्मना वा प्रकृतेः स्वभावात् ।
+करोमि यद्यत् सकलं परस्मै
+नारायणायेति समर्पयामि ॥
+अनया ध्यान-आवाहनादि-षोडशोपचार पूजया श्रीपरमेश्वरः सुप्रीतः सुप्रसन्नः वरदो भवतु ॥
+iast:
+kāyena vācā manasendriyairvā
+buddhyātmanā vā prakṛteḥ svabhāvāt |
+karomi yadyat sakalaṁ parasmai
+nārāyaṇāyeti samarpayāmi ||
+anayā dhyāna-āvāhanādi-ṣoḍaśopacāra pūjayā śrīparameśvaraḥ suprītaḥ suprasannaḥ varado bhavatu ||
+en: Whatever I do with body, speech, mind or senses, with intellect or self or by the nature of my own disposition, all of it I offer to the supreme Nārāyaṇa. By this sixteen-fold worship beginning with meditation and invocation, may the supreme Lord be well pleased, gracious, and a giver of boons.
+tel: శరీరంతో, వాక్కుతో, మనస్సుతో, ఇంద్రియాలతో, బుద్ధితో, ఆత్మతో, ప్రకృతి స్వభావంతో నేను ఏది చేసినా అదంతా పరమాత్ముడైన నారాయణునికి సమర్పిస్తున్నాను. ఈ ధ్యాన-ఆవాహనాది షోడశోపచార పూజచేత శ్రీపరమేశ్వరుడు సుప్రీతుడు, సుప్రసన్నుడు, వరదుడు అగుగాక.
+hi: शरीर, वाणी, मन, इन्द्रियों, बुद्धि, आत्मा अथवा प्रकृति के स्वभाव से मैं जो कुछ करता हूँ, वह सब परम नारायण को समर्पित करता हूँ। इस ध्यान-आवाहन आदि षोडशोपचार पूजा से श्रीपरमेश्वर सुप्रीत, सुप्रसन्न और वरदायी हों।
+
+--- unit 60 | section: उद्वासनम् ---
+vidhi:
+Dismissal, the taking of the prasāda, and the close.
+deva:
+ॐ नमः शिवाय । यथास्थानं उद्वासयामि । शोभनार्थे क्षेमाय पुनरागमनाय च ॥
+अकालमृत्युहरणं सर्वव्याधिनिवारणम् ।
+समस्तपापक्षयकरं देवता पादोदकं शुभम् ॥
+श्रीपरमेश्वर प्रसादं शिरसा गृह्णामि ॥
+ॐ शान्तिः शान्तिः शान्तिः ॥ ॐ तत्सत् ब्रह्मार्पणमस्तु ॥
+iast:
+oṁ namaḥ śivāya | yathāsthānaṁ udvāsayāmi | śobhanārthe kṣemāya punarāgamanāya ca ||
+akālamṛtyuharaṇaṁ sarvavyādhinivāraṇam |
+samastapāpakṣayakaraṁ devatā pādodakaṁ śubham ||
+śrīparameśvara prasādaṁ śirasā gṛhṇāmi ||
+oṁ śāntiḥ śāntiḥ śāntiḥ || oṁ tatsat brahmārpaṇamastu ||
+en: Salutation to Śiva. I dismiss you to your own place, for beauty, for well-being, and for your coming again. The water from the deity's feet is auspicious: it takes away untimely death, wards off every disease, and destroys all sin. I receive the prasāda of the supreme Lord upon my head. Oṁ, peace, peace, peace. Oṁ, that is the truth: let this be an offering to Brahman.
+tel: ఓం నమః శివాయ. యథాస్థానానికి ఉద్వాసన చేస్తున్నాను — శోభ కోసం, క్షేమం కోసం, మరల విచ్చేయుట కోసం. దేవత పాదోదకం శుభమైనది; అకాలమృత్యువును హరించునది, సర్వవ్యాధులను నివారించునది, సమస్త పాపాలను క్షయింపజేయునది. శ్రీపరమేశ్వర ప్రసాదాన్ని శిరస్సుతో గ్రహిస్తున్నాను. ఓం శాంతిః శాంతిః శాంతిః. ఓం తత్సత్ — ఇది బ్రహ్మార్పణమగుగాక.
+hi: ॐ नमः शिवाय। यथास्थान उद्वासन करता हूँ — शोभा के लिये, क्षेम के लिये और पुनः पधारने के लिये। देवता का पादोदक शुभ है; वह अकालमृत्यु को हरता है, समस्त व्याधियों का निवारण करता है और सब पापों का क्षय करता है। श्रीपरमेश्वर का प्रसाद मैं शिर से ग्रहण करता हूँ। ॐ शान्तिः शान्तिः शान्तिः। ॐ तत्सत् — यह ब्रह्मार्पण हो।

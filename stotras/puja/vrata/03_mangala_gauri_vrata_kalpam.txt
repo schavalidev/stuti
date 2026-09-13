@@ -6,11 +6,13 @@ Author: Traditional. No compiler is named and none should be inferred. The base 
 
 Type: vidhi (ritual manual) — not a stotra. It uses the one-extra-field vidhi format of this folder: a `vidhi:` field carrying the instruction, then deva / iast / en / tel / hi.
 
-Recension / paddhati: **Smārta, South Indian (Telugu country).** The rite directs the worshipper to the shared pūrvāṅga and the Gaṇapati pūjā before it begins, and both stand in this folder — `03_purvanga_vidhanam.txt` and `15_mahaganapati_shodashopachara_puja.txt`. The Śrīvaiṣṇava form of the opening is kept separately at `../vaishnava/01_purvanga_vidhanam.txt`, and **the two must never be merged, harmonised or collated against each other.** Śākhā does not apply to this genre; what divides vrata texts is paddhati and region.
+Recension / paddhati: **Smārta, South Indian (Telugu country).** The rite directs the worshipper to the shared pūrvāṅga and the Gaṇapati pūjā before it begins, and both stand in this folder — `../smarta/03_purvanga_vidhanam.txt` and `../smarta/15_mahaganapati_shodashopachara_puja.txt`. The Śrīvaiṣṇava form of the opening is kept separately at `../vaishnava/01_purvanga_vidhanam.txt`, and **the two must never be merged, harmonised or collated against each other.** Śākhā does not apply to this genre; what divides vrata texts is paddhati and region.
 
 The month: **Śrāvaṇa, amānta, as the Telugu calendar reckons it.** All three editions consulted are Telugu and all three name the month Śrāvaṇa without naming a reckoning, so no pūrṇimānta name is put in brackets here. The day is **every Tuesday of that month**, and the vrata is repeated **from the first year of the marriage to the fifth year**.
 
 Source / recension: base text `https://stotranidhi.com/sravana-mangala-gowri-vratham-puja-katha-in-telugu/` (fetched 2026-09-14, 240 lines), which is **Telugu script only**. **The Devanāgarī column is therefore transliterated by us**, mechanically, with `bin/tel2dev.py`, and `iast:` from that with `bin/dev2iast.py`; no Sanskrit in this file was typed by hand. The source's own section-label lines are not carried into the text; they are carried as the Devanāgarī section names instead.
+
+Sibling file — added 2026-09-14, and neither file supersedes the other. **This rite is also written at `../smarta/26_sravana_mangalagauri_vrata_kalpam.txt`**, by another hand, from the same stotranidhi base text. That file was written first and it is the fuller of the two: 55 units against this file's 45, and it carries the placing of the life-breath and a second meditation which this file does not. **The two were collated against different printed editions, and that is the reason to keep both.** That file's witness is *Śrāvaṇa Maṅgaḷagaurī Vrata Kalpamu* with an Āndhra tātparya by Challa Lakṣmī Nṛsiṁha Śāstri, Machilipatnam **1958**. This file's witness is *Maṅgaḷa Gaurī Vratamu* of Sannidhānaṁ Narasiṁha Śarma, Rajahmundry **1998**, which supplies an udyāpana for the fifth year and a wholly different telling of the story. A reader wanting the rite should use the older file; a reader wanting to know how the printed editions differ needs both. **Not one character of that file was altered in writing this one.**
 
 Independent collation: **a printed Telugu booklet of a different lineage — *Maṅgaḷa Gaurī Vratamu — Vrata, Vrata Kathā*, compiled by Sannidhānaṁ Narasiṁha Śarma, Śrī Sītārāma Book Depot, Gollapudi Veeraswamy Son, Rajahmundry 1998**, read from the archive.org scan `xwcq-mangala-gauri-vratam-by-sannidhanam-narasimha-sarm`. Its OCR carries 22,621 Telugu characters and is legible through the whole rite. This is a genuinely independent witness: a separate printed book by a named compiler, not the same site in another script. This vrata is **not** in *Āru Vratālu*, which served the Varalakṣmī file, so that lineage could not be used here.
 
@@ -57,7 +59,7 @@ Blurb: This is the vrata of Maṅgaḷa Gaurī. It is kept on **every Tuesday of
 
 --- unit 1 | section: पुनः सङ्कल्पः ---
 vidhi:
-The rite opens where the shared apparatus leaves off. The source does not print the pūrvāṅga or the Gaṇapati pūjā. It points the worshipper to them and begins after they are done. Both stand in this folder — see `03_purvanga_vidhanam.txt` and `15_mahaganapati_shodashopachara_puja.txt`.
+The rite opens where the shared apparatus leaves off. The source does not print the pūrvāṅga or the Gaṇapati pūjā. It points the worshipper to them and begins after they are done. Both stand in this folder — see `../smarta/03_purvanga_vidhanam.txt` and `../smarta/15_mahaganapati_shodashopachara_puja.txt`.
 deva:
 पूर्वांगं पश्यतु |
 हरिद्रा गणपति पूजा अथवा श्रीमहागणपति षोडशोपचार पूजा पश्यतु |

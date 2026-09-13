@@ -1,0 +1,1364 @@
+Title: Śrī Kedāreśvara Vrata Kalpam — the twenty-one day worship of Kedāreśvara with Gaurī, from the eighth day of the bright fortnight of Bhādrapada to the new moon (Smārta Paddhati, South Indian)
+Devanāgarī: श्री केदारेश्वर व्रत कल्पम् — भाद्रपद शुक्ल अष्टमी तः अमावास्या पर्यन्तं एकविंशति दिन व्रत विधानम् (स्मार्त पद्धतिः)
+Telugu: శ్రీ కేదారేశ్వర వ్రత కల్పం — భాద్రపద శుక్ల అష్టమి నుండి అమావాస్య వరకు ఇరువది ఒక్క దినముల వ్రత విధానం (స్మార్త పద్ధతిః)
+
+Author: Traditional. No compiler is named and none should be inferred. The kathā is spoken in the text by Gautama to Pārvatī, reported by Sūta to Śaunaka and the other sages, and set out by Vyāsa in the Skānda Purāṇa.
+
+Type: vidhi (ritual manual) — not a stotra. It uses the one-extra-field vidhi format of this folder: a `vidhi:` field carrying the instruction, then deva / iast / en / tel / hi.
+
+Recension / paddhati: **Smārta, South Indian (Telugu country).** The rite directs the worshipper to the shared pūrvāṅga and the Gaṇapati pūjā before it begins, and both stand in this folder — `../smarta/03_purvanga_vidhanam.txt` and `../smarta/15_mahaganapati_shodashopachara_puja.txt`. The Śrīvaiṣṇava form of the opening is kept separately at `../vaishnava/01_purvanga_vidhanam.txt`, and **the two must never be merged, harmonised or collated against each other.** Śākhā does not apply to this genre; what divides vrata texts is paddhati and region.
+
+Source / recension: base text is two pages, because the rite and the story are printed separately — `https://stotranidhi.com/sri-kedareswara-vratha-puja-in-telugu/` (fetched 2026-09-14, 265 lines) for the rite, and `https://stotranidhi.com/sri-kedareswara-vratha-katha-in-telugu/` (fetched 2026-09-14, 26 lines) for the story. Both are **Telugu script only**. **The Devanāgarī column is therefore transliterated by us**, mechanically, with `bin/tel2dev.py`, and `iast:` from that with `bin/dev2iast.py`; no Sanskrit in this file was typed by hand.
+
+Independent collation: **a printed Telugu edition of a different lineage — *Āru Vratālu*, Paṇḍita Pariṣkṛtamu, Gollapudi Veeraswamy Son, Rajahmundry 1999**, read from the archive.org scan `snmc-aaru-vratalu-pandita-parishkrutamu-telugu-and-sans`, where the Kedāreśvara kalpa runs from line 3055 to line 3805 of the OCR text. This is a genuinely independent witness: a printed book from a different publishing house, not the same site in another script. The whole rite was compared unit by unit. The two editions agree on the resolve, on the meditation and the invitation, on the order of the services, on the seventeen names of the worship of the limbs, on the twenty-one knots of the toram, on the mantra for taking up the thread, on the toram mantra, on the vāyana mantra and on the mantra for the giving of the image. **The Telugu story agrees word for word in both editions**, from the opening of Sūta to the closing mention of the Skānda Purāṇa.
+
+Recension note: the two editions are the same rite, and seven differences were found. None of them is reconciled by silently choosing one.
+
+1. **They differ in which name stands over the twenty-first knot, and this changes the sense.** The base text worships the last knot with `ఓం మృత్యుంజయాయ నమః`. The *Āru Vratālu* print worships it with `ఓం కేదారేశ్వరాయ నమః`, so that the series closes on the name of the deity of the vrata itself. **This is not bracketed as a variant, because it is not a matter of spelling; the two readings name two different forms of Śiva.** The base text's reading stands in the verse and both are recorded here.
+2. **They differ in what is printed before the sixteen services.** The base text prints the establishing of the pot in full: the Ṛgvedic verse `ఓం కద్రుద్రాయ ప్రచేతసే` for the invitation of Rudra, the verse `ఓం గౌరీర్మిమాయ సలిలాని తక్షతి` for the invitation of Mahāgaurī, and the prāṇapratiṣṭhā. The *Āru Vratālu* print gives only the direction `ఆదౌ గణాధిపతి పూజాం, కలశ పూజాంచ కుర్యాత్` and prints none of those mantras. The base text's reading is kept.
+3. **They differ in the bathing.** The base text gives the full series of baths with their Vedic mantras — milk, curd, ghee, honey, sugar and fruit water, and `ఆపో హిష్ఠా మయోభువః` before the bath in pure water. The *Āru Vratālu* print goes straight from the bath in the five nectars to the bath in pure water and prints only the verse `నదీజలం సమాయుక్తం`. The base text's fuller reading is kept.
+4. **They differ in how much of the closing apparatus is printed.** The base text carries the mantras spoken while the food is offered, the further worship in which the services of a king are offered, and the mantrapuṣpa with the five faces of Śiva. The *Āru Vratālu* print has none of these three. It is the shorter book at this point, and nothing in it contradicts the base text.
+5. **They differ over the hundred and eight names.** The base text does not print them. It directs the worshipper to the Śiva nāmāvaḷi. The *Āru Vratālu* print gives the hundred and eight names in full, set in three columns on one page. **Those names were not transcribed and were not collated**, because the OCR of a three-column page interleaves the columns and its readings cannot be trusted line by line.
+6. **They differ in one word of the worship of the limbs.** The base text reads `నేత్రాని పూజయామి`. The *Āru Vratālu* print reads `నేత్రాన్ పూజయామి`. The base text's reading is kept. The base reading looks like a defect for `నేత్రాణి`, but the printed witness does not give that form, so nothing was altered; see the note on defects below.
+7. **They differ in one word of the sixth knot, and the difference is only in that word.** The base text reads `షష్ట గ్రంథిం` and the *Āru Vratālu* print reads `షష్టమ గ్రంథిం`. This is a one-word difference inside a line that is otherwise the same, so it is printed in the bracket form `షష్ట(షష్టమ)`, written identically in `deva:` and `iast:`.
+
+Not transcribed, and said plainly: **the *Āru Vratālu* print carries the story in Sanskrit as well as in Telugu**, marked `కేదారేశ్వర వ్రత కథారంభః (మూలము)` at line 3491 of its OCR, in the form `సూత ఉవాచ`. **That Sanskrit was located and was not written into this file, because the OCR of those pages is too damaged to transcribe with confidence** — Latin characters and stray marks stand in the middle of half the lines, and words are broken across the damage (`హ్యుజ్ఞయినీపతి:`, `TL: కార్పాసకైర్వాపి`). **Nothing was reconstructed from memory.** The Sanskrit kathā is a real gap in this file and closing it needs the page images, not the OCR. The story as it stands here is the base text's own Telugu prose, and it sits in the translation fields where the source put it; the `deva:` of those units carries the section heading alone. As far as the damaged text can be read, it agrees with the Telugu on every point of the rule — twenty-one threads, the eighth day of the bright fortnight of Bhādrapada to the new moon, twenty-one brāhmaṇas, and twenty-one kinds of food.
+
+Not collated: the hundred and eight names, for the reason given above; and the Śiva nāmāvaḷi to which the rite points was not compared against the list in the *Āru Vratālu* print.
+
+Accent: **none, and none is expected.** The Vedic verses used here for the baths and for the mantrapuṣpa are printed unaccented in both editions, and every other verse in the rite is stotra, which is not accent-marked. No accent was added and none was inferred.
+
+Note on defects repaired in the base text, each counted and each confirmed against the *Āru Vratālu* print rather than corrected from judgement. Three in all: `ఓం విరూపాక్ష్యాయ నమః` to `ఓం విరూపాక్షాయ నమః` in the worship of the limbs; `వృషభద్వజాయ` to `వృషభధ్వజాయ` at the fourth knot; and `చతుర్ధశ గ్రంథిం` to `చతుర్దశ గ్రంథిం` at the fourteenth knot, where the surrounding lines all read `ద`. No other character of the base text was altered.
+
+Note on two suspected defects left standing, because no witness confirms a correction. The base text reads `నేత్రాని పూజయామి` where `నేత్రాణి` would be expected, and `అన్యధా శరణం నాస్తి` where `అన్యథా` would be expected. The *Āru Vratālu* print gives a different word in the first place and does not carry the verse at all in the second. Both were therefore left exactly as the base text prints them.
+
+Note: the base text prints the reference of the verse `ఓం గౌరీర్మిమాయ సలిలాని తక్షతి` as `(ఋ.౧.౧౬౧.౪౧)`. The reference was left exactly as printed. No witness was found that confirms it and nothing was altered.
+
+Unit count: 56 units. The rite falls into the second resolve, the establishing of the pot, the sixteen services with the worship of the limbs and the hundred and eight names, the worship of the twenty-one knots, the taking up of the thread and the binding of the toram, the giving of the vāyana and of the image, the story in nine parts, and the closing.
+
+Sections:
+पुनः सङ्कल्पः — The second resolve, naming what is to be done and for whom (units 1-2)
+कलशे आवाहनम् — The invitation of Rudra and of Mahāgaurī into the pot, and the establishing of the breath (units 3-5)
+षोडशोपचार पूजा — The sixteen services, from the meditation to the prayer (units 6-26, 30-41)
+अङ्गपूजा — The worship of the seventeen limbs, and the hundred and eight names (units 27-28)
+सूत्रग्रन्थिपूजा — The worship of the twenty-one knots of the toram (unit 29)
+सूत्रग्रहणं तोरबन्धनम् — The taking up of the thread and the binding of the toram (units 42-43)
+वायनदानं प्रतिमादानम् — The giving of the vāyana and of the image (units 44-45)
+व्रतकथा — The story: the frame, Kailāsa, Bhṛṅgiriṭi, the teaching of Gautama, the half body, the two daughters, Bhāgyavatī, and the close (units 46-54)
+समर्पणम् — The asking of pardon and the handing over (units 55-56)
+
+Blurb: This is the vrata of Kedāreśvara, who is Śiva worshipped together with Gaurī. It is not a rite of one day. It begins on the eighth day of the bright fortnight of the month of Bhādrapada and is kept every day until the new moon, which is twenty-one days, and the rite given here is the worship performed on the last of those days. It may be kept by anyone. The fruit stated for it is long life, health, wealth and, at the end, union with Śiva. A full pot is set upon a heap of grain in a clean place in the house, wrapped with twenty-one threads and covered with silk. Kedāreśvara is invited into that pot along with Gaurī, and the sixteen services are offered to him. His limbs are then worshipped by seventeen names, from the feet upward to the crown of the head, and the hundred and eight names of Śiva are recited. The central act of this vrata is the toram. It is a thread in which twenty-one knots are tied, one for each day of the vrata. Each knot is worshipped by one name of Śiva, and the thread is then bound upon the hand. The vāyana is given, and the image that was worshipped is given away. The story is told last. In it Pārvatī, ashamed at being passed over by the devotee Bhṛṅgiriṭi, draws back her own power and leaves Kailāsa. The sage Gautama teaches her this vrata, and by keeping it she obtains half the body of Śiva. She then asks that whoever keeps it shall obtain what they desire, and Śiva grants it.
+
+--- unit 1 | section: पुनः सङ्कल्पः ---
+vidhi:
+The rite opens where the shared apparatus leaves off. The source does not print the pūrvāṅga or the turmeric-Gaṇapati pūjā. It directs the worshipper to them and begins after they are done. Both stand in this folder — see `../smarta/03_purvanga_vidhanam.txt` and `../smarta/15_mahaganapati_shodashopachara_puja.txt`.
+deva:
+पूर्वांगं चू. ||
+श्री महागणपति पूज (पसुपु गणपति पूज) चू. ||
+iast:
+pūrvāṁgaṁ cū. ||
+śrī mahāgaṇapati pūja (pasupu gaṇapati pūja) cū. ||
+en: See the pūrvāṅga. See the worship of Śrī Mahāgaṇapati, which is the worship of the turmeric Gaṇapati.
+tel: పూర్వాంగం చూడండి. శ్రీ మహాగణపతి పూజ (పసుపు గణపతి పూజ) చూడండి.
+hi: पूर्वाङ्ग देखिये। श्री महागणपति पूजा (हरिद्रा गणपति पूजा) देखिये।
+
+--- unit 2 | section: पुनः सङ्कल्पः ---
+vidhi:
+The second resolve, declaring what is to be done and for whom. It is spoken for the household together. The words `వర్షే వర్షే` state that this vrata is kept year after year.
+deva:
+पुनः संकल्पं –
+पूर्वोक्त एवं गुण विशेषण विशिष्टायां शुभतिथौ, अस्माकं सहकुटुंबानां क्षेमस्थैर्य विजयायुरारोग्य ऐश्वर्याभिवृद्ध्यर्थं धर्मार्थ काममोक्ष चतुर्विध पुरुषार्थ फल सिद्ध्यर्थं इष्टकाम्यार्थ सिद्ध्यर्थं सत्संतान सौभाग्य शुभ फलावाप्त्यर्थं वर्षे वर्षे प्रयुक्त श्री केदारेश्वर देवतामुद्दिश्य श्री केदारेश्वर देवता प्रीत्यर्थं कल्पोक्त प्रकारेण यावच्छक्ति ध्यानावाहनादि षोडशोपचार पूजां करिष्ये ||
+iast:
+punaḥ saṁkalpaṁ –
+pūrvokta evaṁ guṇa viśeṣaṇa viśiṣṭāyāṁ śubhatithau, asmākaṁ sahakuṭuṁbānāṁ kṣemasthairya vijayāyurārogya aiśvaryābhivṛddhyarthaṁ dharmārtha kāmamokṣa caturvidha puruṣārtha phala siddhyarthaṁ iṣṭakāmyārtha siddhyarthaṁ satsaṁtāna saubhāgya śubha phalāvāptyarthaṁ varṣe varṣe prayukta śrī kedāreśvara devatāmuddiśya śrī kedāreśvara devatā prītyarthaṁ kalpokta prakāreṇa yāvacchakti dhyānāvāhanādi ṣoḍaśopacāra pūjāṁ kariṣye ||
+en: The second resolve. On this auspicious day, marked by all the qualities already stated — for the well-being, steadiness, victory, long life, health and increase of wealth of ourselves together with our family; for the gaining of the four ends of life, which are righteousness, wealth, desire and release; for the accomplishment of what we desire and have asked for; and for the obtaining of good children, of a fortunate married life and of every good fruit — year after year, I shall worship Śrī Kedāreśvara. To please him, and by the method the kalpa lays down, I shall perform the sixteen services beginning with meditation and invitation, to the full measure of my ability.
+tel: పునః సంకల్పం. పూర్వం చెప్పిన గుణ విశేషణాలతో కూడిన ఈ శుభ తిథి నాడు — మా కుటుంబ సమేతంగా మాకు క్షేమం, స్థైర్యం, విజయం, ఆయుష్షు, ఆరోగ్యం, ఐశ్వర్యం వృద్ధి కావడానికి; ధర్మ అర్థ కామ మోక్షాలనే నాలుగు పురుషార్థ ఫలాలు సిద్ధించడానికి; ఇష్టకామ్యార్థ సిద్ధి కోసం; సత్సంతానం, సౌభాగ్యం, శుభ ఫలాలు కలగడానికి — ప్రతి సంవత్సరం శ్రీ కేదారేశ్వర దేవుని ఉద్దేశించి, ఆ స్వామి ప్రీతి కోసం, కల్పంలో చెప్పిన విధానం ప్రకారం, నా శక్తి కొలది ధ్యానం ఆవాహనం మొదలైన షోడశోపచార పూజ చేస్తాను.
+hi: पुनः सङ्कल्प। पूर्वोक्त गुण-विशेषणों से युक्त इस शुभ तिथि पर — हमारे तथा हमारे कुटुम्ब के क्षेम, स्थैर्य, विजय, आयु, आरोग्य और ऐश्वर्य की वृद्धि के लिये; धर्म, अर्थ, काम और मोक्ष — इन चार पुरुषार्थ फलों की सिद्धि के लिये; इष्ट और काम्य अर्थ की सिद्धि के लिये; तथा सत्सन्तान, सौभाग्य और शुभ फल की प्राप्ति के लिये — प्रति वर्ष श्री केदारेश्वर देव को उद्दिष्ट करके, उनकी प्रीति के लिये, कल्पोक्त विधि से, अपनी शक्ति के अनुसार ध्यान और आवाहन आदि षोडशोपचार पूजा करता हूँ।
+
+--- unit 3 | section: कलशे आवाहनम् ---
+vidhi:
+The bowing, and the invitation of Rudra into the pot. The mantra is from the Ṛgveda, and the source prints its reference beside it.
+deva:
+नमस्कारं –
+ओं कद्रुद्राय प्रचेतसे मीढुष्टमाय तव्यसे |
+वोचेम शंतमं हृदे || (ऋ.१.४३.१)
+अस्मिन् कलशे श्री रुद्रमूर्तिं आवाहयामि स्थापयामि पूजयामि |
+iast:
+namaskāraṁ –
+oṁ kadrudrāya pracetase mīḍhuṣṭamāya tavyase |
+vocema śaṁtamaṁ hṛde || (ṛ.1.43.1)
+asmin kalaśe śrī rudramūrtiṁ āvāhayāmi sthāpayāmi pūjayāmi |
+en: Bowing. To Rudra, who is wise, who is most bountiful and most strong, let us speak the words that are most soothing to his heart.
+In this pot I invite, establish and worship the form of Śrī Rudra.
+tel: నమస్కారం. ప్రచేతసుడైన, మిక్కిలి వర్షించువాడైన, మిక్కిలి బలవంతుడైన ఆ రుద్రునికి హృదయానికి మిగుల సుఖమైన మాటను పలుకుదుము.
+ఈ కలశంలో శ్రీ రుద్రమూర్తిని ఆవాహనం చేసి, స్థాపించి, పూజిస్తున్నాను.
+hi: नमस्कार। प्रचेता, अत्यन्त वर्षण करने वाले और अत्यन्त बलवान् उन रुद्र के लिये हृदय को सुख देने वाला वचन कहें।
+इस कलश में श्री रुद्रमूर्ति का आवाहन, स्थापन और पूजन करता हूँ।
+
+--- unit 4 | section: कलशे आवाहनम् ---
+vidhi:
+The invitation of Mahāgaurī into the same pot. Kedāreśvara is worshipped with Gaurī beside him, and this rite is therefore also called the Kedāra Gaurī vrata.
+deva:
+ओं गौरीर्मिमाय सलिलानि तक्षत्येकपदी
+द्विपदी सा चतुष्पदी |
+अष्टापदी नवपदी बभूवुषी
+सहस्राक्षरा परमे व्योमन् || (ऋ.१.१६१.४१)
+श्री महागौरि देवतां आवाहयामि स्थापयामि पूजयामि |
+iast:
+oṁ gaurīrmimāya salilāni takṣatyekapadī
+dvipadī sā catuṣpadī |
+aṣṭāpadī navapadī babhūvuṣī
+sahasrākṣarā parame vyoman || (ṛ.1.161.41)
+śrī mahāgauri devatāṁ āvāhayāmi sthāpayāmi pūjayāmi |
+en: Gaurī measured out the waters. She is of one foot, of two feet, of four feet, of eight feet and of nine feet. She has become the thousand-syllabled one in the highest heaven.
+I invite, establish and worship Śrī Mahāgaurī Devī.
+tel: గౌరి జలాలను కొలిచింది. ఆమె ఏకపది, ద్విపది, చతుష్పది, అష్టాపది, నవపది. పరమ వ్యోమంలో ఆమె సహస్రాక్షర రూపమై ఉన్నది.
+శ్రీ మహాగౌరీ దేవిని ఆవాహనం చేసి, స్థాపించి, పూజిస్తున్నాను.
+hi: गौरी ने जलों को मापा। वे एकपदी, द्विपदी, चतुष्पदी, अष्टापदी और नवपदी हैं। परम व्योम में वे सहस्राक्षरा हो गयी हैं।
+श्री महागौरी देवी का आवाहन, स्थापन और पूजन करता हूँ।
+
+--- unit 5 | section: कलशे आवाहनम् ---
+vidhi:
+The establishing of the breath in the image.
+deva:
+प्राणप्रतिष्ठ –
+ओं असुनीते पुनरस्मासु चक्षुः
+पुनः प्राणमिह नो धेहि भोगम् |
+ज्योक्पश्येम सूर्यमुच्चरन्त
+मनुमते मृडया नः स्वस्ति ||
+अमृतं वै प्राणा अमृतमापः
+प्राणानेव यथास्थानमुपह्वयते ||
+आवाहितो भव स्थापितो भव |
+सुप्रसन्नो भव वरदो भव |
+iast:
+prāṇapratiṣṭha –
+oṁ asunīte punarasmāsu cakṣuḥ
+punaḥ prāṇamiha no dhehi bhogam |
+jyokpaśyema sūryamuccaranta
+manumate mṛḍayā naḥ svasti ||
+amṛtaṁ vai prāṇā amṛtamāpaḥ
+prāṇāneva yathāsthānamupahvayate ||
+āvāhito bhava sthāpito bhava |
+suprasanno bhava varado bhava |
+en: Prāṇapratiṣṭhā. O giver of life, give us back our sight, and give us here again breath and enjoyment. May we long see the sun rising. Anumati, be gracious to us, and give us well-being.
+The breaths are the deathless. The waters are the deathless. The breaths are called back to their own place.
+Be invited. Be established. Be well pleased. Be a giver of boons.
+tel: ప్రాణప్రతిష్ఠ. అసునీతా, మాకు మరల చూపును ఇమ్ము. మరల ఇక్కడ ప్రాణాన్ని, భోగాన్ని ఇమ్ము. ఉదయించే సూర్యుని చిరకాలం చూచెదముగాక. అనుమతీ, మాకు అనుగ్రహించి క్షేమం ఇమ్ము.
+ప్రాణాలు అమృతం. జలాలు అమృతం. ప్రాణాలను వాటి స్థానానికి పిలుస్తున్నాను.
+ఆవాహితుడవు కమ్ము. స్థాపితుడవు కమ్ము. సుప్రసన్నుడవు కమ్ము. వరదుడవు కమ్ము.
+hi: प्राणप्रतिष्ठा। हे असुनीत, हमें पुनः दृष्टि दीजिये। यहाँ पुनः प्राण और भोग दीजिये। उदय होते सूर्य को हम चिरकाल तक देखें। हे अनुमति, हम पर कृपा करके कल्याण दीजिये।
+प्राण अमृत हैं। जल अमृत हैं। प्राणों को उनके स्थान पर बुलाया जाता है।
+आवाहित हूजिये। स्थापित हूजिये। सुप्रसन्न हूजिये। वरद हूजिये।
+
+--- unit 6 | section: षोडशोपचार पूजा ---
+vidhi:
+The meditation. He holds the trident and the drum, and he is the destroyer of the three cities.
+deva:
+ध्यानम् –
+शूलं डमरुकंचैव दधानं हस्तयुग्मके |
+केदारदेवमीशानं ध्यायेत् त्रिपुरघातिनं ||
+ओं श्री केदारेश्वर स्वामिने नमः ध्यायामि ||
+iast:
+dhyānam –
+śūlaṁ ḍamarukaṁcaiva dadhānaṁ hastayugmake |
+kedāradevamīśānaṁ dhyāyet tripuraghātinaṁ ||
+oṁ śrī kedāreśvara svāmine namaḥ dhyāyāmi ||
+en: He holds the trident and the drum, one in each hand. Meditate upon Kedāra, the lord, the ruler, who destroyed the three cities.
+I meditate upon Śrī Kedāreśvara Svāmin.
+tel: రెండు చేతులలో శూలాన్ని, డమరుకాన్ని ధరించినవాడు, త్రిపురాలను సంహరించినవాడు అయిన కేదారదేవుని, ఈశానుని ధ్యానించవలెను.
+శ్రీ కేదారేశ్వర స్వామిని ధ్యానిస్తున్నాను.
+hi: दोनों हाथों में शूल और डमरू धारण करने वाले, त्रिपुर का नाश करने वाले केदारदेव ईशान का ध्यान करना चाहिये।
+श्री केदारेश्वर स्वामी का ध्यान करता हूँ।
+
+--- unit 7 | section: षोडशोपचार पूजा ---
+vidhi:
+The invitation.
+deva:
+आवाहनं –
+कैलासशिखरे रम्ये पार्वत्याः सहित प्रभो |
+आगच्छ देवदेवेश मद्भक्त्या चंद्रशेखर ||
+ओं श्री केदारेश्वर स्वामिने नमः आवाहयामि ||
+iast:
+āvāhanaṁ –
+kailāsaśikhare ramye pārvatyāḥ sahita prabho |
+āgaccha devadeveśa madbhaktyā caṁdraśekhara ||
+oṁ śrī kedāreśvara svāmine namaḥ āvāhayāmi ||
+en: Lord, you are upon the beautiful peak of Kailāsa, together with Pārvatī. God of gods, you who wear the moon, come to me, for my devotion calls you.
+I invite Śrī Kedāreśvara Svāmin.
+tel: ప్రభూ, రమ్యమైన కైలాస శిఖరంలో పార్వతితో కూడి ఉన్నవాడా, దేవదేవేశా, చంద్రశేఖరా — నా భక్తి చేత ఇక్కడికి రమ్ము.
+శ్రీ కేదారేశ్వర స్వామిని ఆవాహనం చేస్తున్నాను.
+hi: हे प्रभो, रमणीय कैलास शिखर पर पार्वती के सहित विराजमान, हे देवदेवेश, हे चन्द्रशेखर — मेरी भक्ति से यहाँ पधारिये।
+श्री केदारेश्वर स्वामी का आवाहन करता हूँ।
+
+--- unit 8 | section: षोडशोपचार पूजा ---
+vidhi:
+The seat.
+deva:
+आसनं –
+सुरासुरशिरोरत्न प्रदीपित पदांबुज |
+केदारदेव मद्दत्तमासनं प्रतिगृह्यताम् ||
+ओं श्री केदारेश्वर स्वामिने नमः आसनं समर्पयामि ||
+iast:
+āsanaṁ –
+surāsuraśiroratna pradīpita padāṁbuja |
+kedāradeva maddattamāsanaṁ pratigṛhyatām ||
+oṁ śrī kedāreśvara svāmine namaḥ āsanaṁ samarpayāmi ||
+en: The jewels on the heads of gods and demons light up your lotus feet. Kedāradeva, receive this seat which I give.
+I offer the seat to Śrī Kedāreśvara Svāmin.
+tel: సురాసురుల శిరస్సులలోని రత్నాలు నీ పాదపద్మాలను ప్రకాశింపజేస్తున్నాయి. కేదారదేవా, నేను ఇచ్చే ఈ ఆసనాన్ని స్వీకరించు.
+శ్రీ కేదారేశ్వర స్వామికి ఆసనం సమర్పిస్తున్నాను.
+hi: सुरों और असुरों के शिरोरत्न आपके चरणकमलों को प्रकाशित करते हैं। हे केदारदेव, मेरे द्वारा दिया गया यह आसन ग्रहण कीजिये।
+श्री केदारेश्वर स्वामी को आसन समर्पित करता हूँ।
+
+--- unit 9 | section: षोडशोपचार पूजा ---
+vidhi:
+The water for the feet.
+deva:
+पाद्यं –
+गंगाधर नमस्तेऽस्तु त्रिलोचन वृषध्वज |
+मौक्तिकासन संस्थाय केदाराय नमो नमः ||
+ओं श्री केदारेश्वर स्वामिने नमः पादयोः पाद्यं समर्पयामि ||
+iast:
+pādyaṁ –
+gaṁgādhara namaste'stu trilocana vṛṣadhvaja |
+mauktikāsana saṁsthāya kedārāya namo namaḥ ||
+oṁ śrī kedāreśvara svāmine namaḥ pādayoḥ pādyaṁ samarpayāmi ||
+en: Bearer of the Gaṅgā, may our bowing reach you. You have three eyes, and the bull is on your banner. To Kedāra, who is seated upon a seat of pearl, we bow again and again.
+I offer the water for the feet of Śrī Kedāreśvara Svāmin.
+tel: గంగాధరా, నీకు నమస్కారం. త్రిలోచనా, వృషధ్వజా, ముత్యాల ఆసనంలో కూర్చున్న కేదారునికి మరల మరల నమస్కారం.
+శ్రీ కేదారేశ్వర స్వామి పాదాలకు పాద్యం సమర్పిస్తున్నాను.
+hi: हे गङ्गाधर, आपको नमस्कार। हे त्रिलोचन, हे वृषध्वज, मौक्तिक आसन पर विराजमान केदार को बारम्बार नमस्कार।
+श्री केदारेश्वर स्वामी के चरणों में पाद्य समर्पित करता हूँ।
+
+--- unit 10 | section: षोडशोपचार पूजा ---
+vidhi:
+The water for the hands.
+deva:
+अर्घ्यं –
+अर्घ्यं गृहाण भगवन्भक्त्या दत्तं महेश्वरः |
+प्रयच्छमे मनस्तुष्टिं भक्तानामिष्टदायकं ||
+ओं श्री केदारेश्वर स्वामिने नमः हस्तयोः अर्घ्यं समर्पयामि.
+iast:
+arghyaṁ –
+arghyaṁ gṛhāṇa bhagavanbhaktyā dattaṁ maheśvaraḥ |
+prayacchame manastuṣṭiṁ bhaktānāmiṣṭadāyakaṁ ||
+oṁ śrī kedāreśvara svāmine namaḥ hastayoḥ arghyaṁ samarpayāmi.
+en: Lord, receive this arghya, given with devotion. Maheśvara, you who give his desire to every devotee, grant contentment to my mind.
+I offer the arghya to the hands of Śrī Kedāreśvara Svāmin.
+tel: భగవంతుడా, భక్తితో సమర్పించిన ఈ అర్ఘ్యాన్ని స్వీకరించు. మహేశ్వరా, భక్తులకు ఇష్టాన్ని ఇచ్చేవాడా, నా మనస్సుకు తృప్తిని ఇమ్ము.
+శ్రీ కేదారేశ్వర స్వామి హస్తాలకు అర్ఘ్యం సమర్పిస్తున్నాను.
+hi: हे भगवन्, भक्ति से दिया गया यह अर्घ्य ग्रहण कीजिये। हे महेश्वर, भक्तों को इष्ट देने वाले, मेरे मन को सन्तोष दीजिये।
+श्री केदारेश्वर स्वामी के हाथों में अर्घ्य समर्पित करता हूँ।
+
+--- unit 11 | section: षोडशोपचार पूजा ---
+vidhi:
+The water for sipping.
+deva:
+आचमनं –
+मुनिभिर्नारद प्रख्यैः नित्यमाख्यातवैभव |
+केदारदेव भगवन् गृहाणाचमनं विभो ||
+ओं श्री केदारेश्वर स्वामिने नमः मुखे आचमनं समर्पयामि |
+iast:
+ācamanaṁ –
+munibhirnārada prakhyaiḥ nityamākhyātavaibhava |
+kedāradeva bhagavan gṛhāṇācamanaṁ vibho ||
+oṁ śrī kedāreśvara svāmine namaḥ mukhe ācamanaṁ samarpayāmi |
+en: Nārada and the other sages tell of your greatness every day. Kedāradeva, lord, all-pervading one, receive this water for sipping.
+I offer the water for sipping at the mouth of Śrī Kedāreśvara Svāmin.
+tel: నారదుడు మొదలైన మునులచేత నిత్యం నీ వైభవం కీర్తింపబడుతున్నది. కేదారదేవా, భగవంతుడా, విభూ — ఈ ఆచమనాన్ని స్వీకరించు.
+శ్రీ కేదారేశ్వర స్వామి ముఖానికి ఆచమనం సమర్పిస్తున్నాను.
+hi: नारद आदि मुनियों के द्वारा नित्य आपका वैभव कहा जाता है। हे केदारदेव, हे भगवन्, हे विभो — यह आचमन ग्रहण कीजिये।
+श्री केदारेश्वर स्वामी के मुख में आचमन समर्पित करता हूँ।
+
+--- unit 12 | section: षोडशोपचार पूजा ---
+vidhi:
+The madhuparka, which is honey mixed with curd.
+deva:
+मधुपर्कं –
+केदारदेव भगवन् सर्वलोकेश्वर प्रभो |
+मधुपर्कं प्रदास्यामि गृहाण त्वं शुभानवै ||
+ओं श्री केदारेश्वर स्वामिने नमः मधुपर्कं समर्पयामि ||
+iast:
+madhuparkaṁ –
+kedāradeva bhagavan sarvalokeśvara prabho |
+madhuparkaṁ pradāsyāmi gṛhāṇa tvaṁ śubhānavai ||
+oṁ śrī kedāreśvara svāmine namaḥ madhuparkaṁ samarpayāmi ||
+en: Kedāradeva, lord of every world, master, I shall give you the madhuparka. Receive it, you who are auspicious.
+I offer the madhuparka to Śrī Kedāreśvara Svāmin.
+tel: కేదారదేవా, సర్వలోకేశ్వరా, ప్రభూ — మధుపర్కాన్ని సమర్పిస్తున్నాను. శుభస్వరూపా, దానిని స్వీకరించు.
+శ్రీ కేదారేశ్వర స్వామికి మధుపర్కం సమర్పిస్తున్నాను.
+hi: हे केदारदेव, हे सर्वलोकेश्वर, हे प्रभो — मधुपर्क अर्पित करता हूँ। हे शुभस्वरूप, इसे ग्रहण कीजिये।
+श्री केदारेश्वर स्वामी को मधुपर्क समर्पित करता हूँ।
+
+--- unit 13 | section: षोडशोपचार पूजा ---
+vidhi:
+The bath in the five nectars.
+deva:
+पंचामृतस्नानं –
+स्नानं पंचामृतैर्देव ततश्शुद्धोदकैरपि |
+गृहाण गौरीरमण तद्भक्तेन मयार्पितम् |
+ओं श्री केदारेश्वर स्वामिने नमः पंचामृतस्नानं समर्पयामि |
+iast:
+paṁcāmṛtasnānaṁ –
+snānaṁ paṁcāmṛtairdeva tataśśuddhodakairapi |
+gṛhāṇa gaurīramaṇa tadbhaktena mayārpitam |
+oṁ śrī kedāreśvara svāmine namaḥ paṁcāmṛtasnānaṁ samarpayāmi |
+en: God, here is the bath of the five nectars, and after it the bath of pure water. Husband of Gaurī, receive what I, your devotee, have offered.
+I offer the bath of the five nectars to Śrī Kedāreśvara Svāmin.
+tel: దేవా, పంచామృతాలతో స్నానం, ఆ తరువాత శుద్ధోదక స్నానం. గౌరీరమణా, భక్తుడనైన నేను సమర్పించిన దీనిని స్వీకరించు.
+శ్రీ కేదారేశ్వర స్వామికి పంచామృత స్నానం సమర్పిస్తున్నాను.
+hi: हे देव, पञ्चामृत से स्नान और उसके पश्चात् शुद्धोदक से स्नान। हे गौरीरमण, भक्त मेरे द्वारा अर्पित इसे ग्रहण कीजिये।
+श्री केदारेश्वर स्वामी को पञ्चामृत स्नान समर्पित करता हूँ।
+
+--- unit 14 | section: षोडशोपचार पूजा ---
+vidhi:
+The bath in milk, with its Vedic mantra.
+deva:
+क्षीरं –
+आप्यायस्व समेतु ते विश्वतस्सोम वृष्णियम् |
+भवा वाजस्य संगथे ||
+ओं श्री केदारेश्वर स्वामिने नमः क्षीरेण स्नपयामि |
+iast:
+kṣīraṁ –
+āpyāyasva sametu te viśvatassoma vṛṣṇiyam |
+bhavā vājasya saṁgathe ||
+oṁ śrī kedāreśvara svāmine namaḥ kṣīreṇa snapayāmi |
+en: Milk. Soma, swell out. May strength come to you from every side. Be present at the gathering of vigour.
+I bathe Śrī Kedāreśvara Svāmin with milk.
+tel: క్షీరం. సోమా, వృద్ధి పొందుము. అన్ని వైపుల నుండి నీకు బలం చేకూరుగాక. వాజ సంగమమునందు నిలుచుము.
+శ్రీ కేదారేశ్వర స్వామికి క్షీరంతో స్నానం చేయిస్తున్నాను.
+hi: क्षीर। हे सोम, वृद्धि को प्राप्त हूजिये। सब ओर से आपको बल प्राप्त हो। वाज के सङ्गम में उपस्थित हूजिये।
+श्री केदारेश्वर स्वामी को क्षीर से स्नान कराता हूँ।
+
+--- unit 15 | section: षोडशोपचार पूजा ---
+vidhi:
+The bath in curd.
+deva:
+दधि –
+दधिक्राव्णोअकारिषं जिष्णोरश्वस्य वाजिनः |
+सुरभि नो मुखा करत्प्राण आयूग्ंषि तारिषत् ||
+ओं श्री केदारेश्वर स्वामिने नमः दध्ना स्नपयामि |
+iast:
+dadhi –
+dadhikrāvṇoakāriṣaṁ jiṣṇoraśvasya vājinaḥ |
+surabhi no mukhā karatprāṇa āyūgṁṣi tāriṣat ||
+oṁ śrī kedāreśvara svāmine namaḥ dadhnā snapayāmi |
+en: Curd. I have praised Dadhikrāvan, the victorious steed, strong and swift. May he make our mouths fragrant. May he lengthen our breath and our years.
+I bathe Śrī Kedāreśvara Svāmin with curd.
+tel: దధి. జయశీలుడైన, వేగవంతమైన అశ్వమైన దధిక్రావుని స్తుతించాను. అతడు మన ముఖాలను సుగంధభరితం చేయుగాక. మన ప్రాణాలను, ఆయుష్షును పెంచుగాక.
+శ్రీ కేదారేశ్వర స్వామికి పెరుగుతో స్నానం చేయిస్తున్నాను.
+hi: दधि। जयशील और वेगवान् अश्व दधिक्रावा की स्तुति की। वे हमारे मुख को सुगन्धित करें। हमारे प्राण और आयु को बढ़ायें।
+श्री केदारेश्वर स्वामी को दधि से स्नान कराता हूँ।
+
+--- unit 16 | section: षोडशोपचार पूजा ---
+vidhi:
+The bath in ghee.
+deva:
+आज्यं –
+शुक्रमसि ज्योतिरसि तेजोसि देवोवस्सवितोत्पुनातु-
+अच्छिद्रेण पवित्रेण वसोस्सूर्यस्य रश्मिभिः |
+ओं श्री केदारेश्वर स्वामिने नमः आज्येन स्नपयामि |
+iast:
+ājyaṁ –
+śukramasi jyotirasi tejosi devovassavitotpunātu-
+acchidreṇa pavitreṇa vasossūryasya raśmibhiḥ |
+oṁ śrī kedāreśvara svāmine namaḥ ājyena snapayāmi |
+en: Ghee. You are bright. You are light. You are splendour. May the god Savitṛ purify you with the flawless strainer and with the rays of the sun, who is the dwelling of all good.
+I bathe Śrī Kedāreśvara Svāmin with ghee.
+tel: ఆజ్యం. నీవు శుక్రము, జ్యోతివి, తేజస్సువి. దేవుడైన సవిత నిన్ను అచ్ఛిద్రమైన పవిత్రముతోను, సూర్యుని రశ్ములతోను పవిత్రం చేయుగాక.
+శ్రీ కేదారేశ్వర స్వామికి నేతితో స్నానం చేయిస్తున్నాను.
+hi: आज्य। आप शुक्र हैं, ज्योति हैं, तेज हैं। देव सविता आपको अच्छिद्र पवित्र से और सूर्य की रश्मियों से पवित्र करें।
+श्री केदारेश्वर स्वामी को घृत से स्नान कराता हूँ।
+
+--- unit 17 | section: षोडशोपचार पूजा ---
+vidhi:
+The bath in honey.
+deva:
+मधु –
+मधुवाता ऋतायते मधुक्षरन्ति सिंधवः |
+माध्वीर्नः सन्त्वौषधीः |
+मधु नक्तमुतोषसि मधुमत्पार्थिवग्ं रजः |
+मधुद्यौरस्तु नः पिता |
+मधुमान्नो वनस्पतिर्मधुमाग्ं अस्तु सूर्यः |
+माध्वीर्गावो भवन्तु नः |
+ओं श्री केदारेश्वर स्वामिने नमः मधुना स्नपयामि |
+iast:
+madhu –
+madhuvātā ṛtāyate madhukṣaranti siṁdhavaḥ |
+mādhvīrnaḥ santvauṣadhīḥ |
+madhu naktamutoṣasi madhumatpārthivagṁ rajaḥ |
+madhudyaurastu naḥ pitā |
+madhumānno vanaspatirmadhumāgṁ astu sūryaḥ |
+mādhvīrgāvo bhavantu naḥ |
+oṁ śrī kedāreśvara svāmine namaḥ madhunā snapayāmi |
+en: Honey. The winds are sweet for the one who keeps the law. The rivers pour out sweetness. May the plants be sweet for us.
+Sweet is the night, and sweet the dawn. Sweet is the dust of the earth. May our father, the sky, be sweet.
+May the tree be full of sweetness for us, and the sun full of sweetness. May the cows be sweet for us.
+I bathe Śrī Kedāreśvara Svāmin with honey.
+tel: మధు. ఋతాన్ని పాటించేవానికి వాయువులు మధురమైనవి. నదులు మధువును ప్రవహింపజేస్తాయి. ఓషధులు మనకు మధురమగుగాక.
+రాత్రి మధురం, ఉషస్సు మధురం. భూమి రజస్సు మధురం. మన తండ్రియైన ద్యులోకం మధురమగుగాక.
+వనస్పతి మనకు మధుమంతమగుగాక. సూర్యుడు మధుమంతుడగుగాక. గోవులు మనకు మధురమగుగాక.
+శ్రీ కేదారేశ్వర స్వామికి తేనెతో స్నానం చేయిస్తున్నాను.
+hi: मधु। ऋत का पालन करने वाले के लिये वायु मधुर हैं। नदियाँ मधु बहाती हैं। ओषधियाँ हमारे लिये मधुर हों।
+रात्रि मधुर है और उषा भी। पृथिवी का रज मधुर है। हमारे पिता द्युलोक मधुर हों।
+वनस्पति हमारे लिये मधुमान् हो। सूर्य मधुमान् हों। गौएँ हमारे लिये मधुर हों।
+श्री केदारेश्वर स्वामी को मधु से स्नान कराता हूँ।
+
+--- unit 18 | section: षोडशोपचार पूजा ---
+vidhi:
+The bath in sugar.
+deva:
+शर्करा –
+स्वादुः पवस्व दिव्याय जन्मने |
+स्वादुरिंद्राय सुहवीतु नाम्ने |
+स्वादुर्मित्राय वरुणाय वायवे |
+बृहस्पतये मधुमां अदाभ्यः |
+ओं श्री केदारेश्वर स्वामिने नमः शर्करेण स्नपयामि |
+iast:
+śarkarā –
+svāduḥ pavasva divyāya janmane |
+svāduriṁdrāya suhavītu nāmne |
+svādurmitrāya varuṇāya vāyave |
+bṛhaspataye madhumāṁ adābhyaḥ |
+oṁ śrī kedāreśvara svāmine namaḥ śarkareṇa snapayāmi |
+en: Sugar. Flow sweet for the divine birth.
+Sweet for Indra, whose name is worthy of good calling.
+Sweet for Mitra, for Varuṇa, for Vāyu.
+For Bṛhaspati, full of sweetness, not to be harmed.
+I bathe Śrī Kedāreśvara Svāmin with sugar.
+tel: శర్కర. దివ్యమైన జన్మ కోసం మధురంగా ప్రవహించుము.
+సుహవీతు అనే పేరు గల ఇంద్రునికి మధురంగా.
+మిత్రునికి, వరుణునికి, వాయువుకు మధురంగా.
+బృహస్పతికి మధుమంతుడవై, ఎవరిచేతను హింసింపబడనివాడవై ప్రవహించుము.
+శ్రీ కేదారేశ్వర స్వామికి చక్కెరతో స్నానం చేయిస్తున్నాను.
+hi: शर्करा। दिव्य जन्म के लिये मधुर होकर प्रवाहित हूजिये।
+सुहवीतु नाम वाले इन्द्र के लिये मधुर।
+मित्र, वरुण और वायु के लिये मधुर।
+बृहस्पति के लिये मधुमान् और अदाभ्य होकर।
+श्री केदारेश्वर स्वामी को शर्करा से स्नान कराता हूँ।
+
+--- unit 19 | section: षोडशोपचार पूजा ---
+vidhi:
+The bath in fruit water.
+deva:
+फलोदकं –
+याः फलिनीर्या अफला अपुष्पायाश्च पुष्पिणीः |
+बृहस्पति प्रसूतास्तानो मुन्चन्त्वग्ं हसः ||
+ओं श्री केदारेश्वर स्वामिने नमः फलोदकेन स्नपयामि ||
+iast:
+phalodakaṁ –
+yāḥ phalinīryā aphalā apuṣpāyāśca puṣpiṇīḥ |
+bṛhaspati prasūtāstāno muncantvagṁ hasaḥ ||
+oṁ śrī kedāreśvara svāmine namaḥ phalodakena snapayāmi ||
+en: Fruit water. The plants that bear fruit and those that bear none, those without flower and those in flower — may they, sent forth by Bṛhaspati, release us from our fault.
+I bathe Śrī Kedāreśvara Svāmin with fruit water.
+tel: ఫలోదకం. ఫలించే ఓషధులు, ఫలించనివి, పుష్పించనివి, పుష్పించేవి — బృహస్పతిచేత ప్రేరితమై అవి మనలను పాపం నుండి విడిపించుగాక.
+శ్రీ కేదారేశ్వర స్వామికి ఫలోదకంతో స్నానం చేయిస్తున్నాను.
+hi: फलोदक। फल देने वाली ओषधियाँ और फल न देने वाली, पुष्परहित और पुष्पवती — बृहस्पति से प्रेरित वे हमें पाप से मुक्त करें।
+श्री केदारेश्वर स्वामी को फलोदक से स्नान कराता हूँ।
+
+--- unit 20 | section: षोडशोपचार पूजा ---
+vidhi:
+The bath in pure water. The mantra of the waters is spoken first, and then the verse of the rite.
+deva:
+शुद्धोदक स्नानं –
+आपो हिष्ठा मयोभुवस्ता न ऊर्जे दधातन |
+महेरणाय चक्षसे |
+यो वः शिवतमो रसस्तस्य भाजयते ह नः |
+उशतीरिव मातरः |
+तस्मा अरङ्गमामवो यस्य क्षयाय जिन्वथ |
+आपो जनयथा च नः |
+नदीजलं समायुक्तं मयादत्तमनुत्तमं |
+स्नानं स्वीकुरु देवेश सदाशिव नमोऽस्तु ते |
+ओं श्री केदारेश्वर स्वामिने नमः शुद्धोदकस्नानं समर्पयामि |
+iast:
+śuddhodaka snānaṁ –
+āpo hiṣṭhā mayobhuvastā na ūrje dadhātana |
+maheraṇāya cakṣase |
+yo vaḥ śivatamo rasastasya bhājayate ha naḥ |
+uśatīriva mātaraḥ |
+tasmā araṅgamāmavo yasya kṣayāya jinvatha |
+āpo janayathā ca naḥ |
+nadījalaṁ samāyuktaṁ mayādattamanuttamaṁ |
+snānaṁ svīkuru deveśa sadāśiva namo'stu te |
+oṁ śrī kedāreśvara svāmine namaḥ śuddhodakasnānaṁ samarpayāmi |
+en: Waters, you are the givers of happiness. Grant us strength, that we may look upon the great joy.
+Make us share here in that most kindly sap of yours, like mothers who wish it.
+We come to you for the sake of him to whose dwelling you urge us on. Waters, give us birth again.
+I have brought the water of the rivers, gathered together, and there is none better. Lord of gods, Sadāśiva, accept this bath. May our bowing reach you.
+I offer the bath of pure water to Śrī Kedāreśvara Svāmin.
+tel: ఆపో దేవతలారా, మీరు సుఖాన్ని కలిగించేవారు. గొప్ప ఆనందాన్ని చూచుటకు మాకు బలం ఇవ్వండి.
+మీలోని మిక్కిలి శుభమైన రసాన్ని, కోరిక గల తల్లుల వలె, మాకు ఇక్కడ పంచండి.
+ఎవరి నివాసమునకు మీరు మమ్ము ప్రేరేపిస్తారో ఆయన కొరకు మేము వచ్చాము. ఆపో దేవతలారా, మమ్ము మరల జనింపజేయండి.
+ఉత్తమమైన నదీ జలాలను తెచ్చి సమర్పిస్తున్నాను. దేవేశా, సదాశివా, ఈ స్నానాన్ని స్వీకరించు. నీకు నమస్కారం.
+శ్రీ కేదారేశ్వర స్వామికి శుద్ధోదక స్నానం సమర్పిస్తున్నాను.
+hi: हे आपो देवता, आप सुख देने वाली हैं। महान् आनन्द को देखने के लिये हमें बल दीजिये।
+आपका जो अत्यन्त कल्याणकारी रस है, उसमें हमें भागी कीजिये, इच्छा करने वाली माताओं के समान।
+जिनके निवास के लिये आप हमें प्रेरित करती हैं, उनके लिये हम आये हैं। हे आपो, हमें पुनः जन्म दीजिये।
+नदियों का उत्तम जल एकत्र करके अर्पित करता हूँ। हे देवेश, हे सदाशिव, यह स्नान स्वीकार कीजिये। आपको नमस्कार।
+श्री केदारेश्वर स्वामी को शुद्धोदक स्नान समर्पित करता हूँ।
+
+--- unit 21 | section: षोडशोपचार पूजा ---
+vidhi:
+The pair of garments.
+deva:
+वस्त्रयुग्मं –
+वस्त्रयुग्मं सदाशुभ्रं मनोहरमिदं शुभं |
+ददामि देवदेवेश भक्त्येदं प्रतिगृह्यताम् ||
+ओं श्री केदारेश्वर स्वामिने नमः वस्त्रयुग्मं समर्पयामि |
+iast:
+vastrayugmaṁ –
+vastrayugmaṁ sadāśubhraṁ manoharamidaṁ śubhaṁ |
+dadāmi devadeveśa bhaktyedaṁ pratigṛhyatām ||
+oṁ śrī kedāreśvara svāmine namaḥ vastrayugmaṁ samarpayāmi |
+en: Here is a pair of garments, always clean, pleasing and auspicious. God of gods, I give them with devotion. Receive them.
+I offer the pair of garments to Śrī Kedāreśvara Svāmin.
+tel: ఎప్పుడూ శుభ్రమైన, మనోహరమైన, శుభకరమైన ఈ వస్త్రయుగ్మాన్ని దేవదేవేశా, భక్తితో సమర్పిస్తున్నాను. స్వీకరించు.
+శ్రీ కేదారేశ్వర స్వామికి వస్త్రయుగ్మం సమర్పిస్తున్నాను.
+hi: सदा शुभ्र, मनोहर और शुभ यह वस्त्रयुग्म, हे देवदेवेश, भक्ति से अर्पित करता हूँ। ग्रहण कीजिये।
+श्री केदारेश्वर स्वामी को वस्त्रयुग्म समर्पित करता हूँ।
+
+--- unit 22 | section: षोडशोपचार पूजा ---
+vidhi:
+The sacred thread and the upper cloth.
+deva:
+यज्ञोपवीतं –
+स्वर्णयज्ञोपवीतं च कांचनं चोत्तरीयकं |
+रुद्राक्षमालया युक्तं ददामि स्वीकुरु प्रभो ||
+ओं श्री केदारेश्वर स्वामिने नमः यज्ञोपवीतं समर्पयामि |
+iast:
+yajñopavītaṁ –
+svarṇayajñopavītaṁ ca kāṁcanaṁ cottarīyakaṁ |
+rudrākṣamālayā yuktaṁ dadāmi svīkuru prabho ||
+oṁ śrī kedāreśvara svāmine namaḥ yajñopavītaṁ samarpayāmi |
+en: Here is a sacred thread of gold and an upper cloth of gold, together with a rosary of rudrākṣa. Lord, I give them. Accept them.
+I offer the sacred thread to Śrī Kedāreśvara Svāmin.
+tel: బంగారు యజ్ఞోపవీతాన్ని, బంగారు ఉత్తరీయాన్ని, రుద్రాక్షమాలతో కూడినవాటిని సమర్పిస్తున్నాను. ప్రభూ, స్వీకరించు.
+శ్రీ కేదారేశ్వర స్వామికి యజ్ఞోపవీతం సమర్పిస్తున్నాను.
+hi: स्वर्ण यज्ञोपवीत और स्वर्ण उत्तरीय, रुद्राक्षमाला से युक्त, अर्पित करता हूँ। हे प्रभो, स्वीकार कीजिये।
+श्री केदारेश्वर स्वामी को यज्ञोपवीत समर्पित करता हूँ।
+
+--- unit 23 | section: षोडशोपचार पूजा ---
+vidhi:
+The sandal paste.
+deva:
+गंधं –
+समस्त गंध द्रव्याणां देवत्वमसि जन्मभूः |
+भक्त्या समर्पितं प्रीत्या मधुगंधादि गृह्यतां ||
+ओं श्री केदारेश्वर स्वामिने नमः गंधान् समर्पयामि |
+iast:
+gaṁdhaṁ –
+samasta gaṁdha dravyāṇāṁ devatvamasi janmabhūḥ |
+bhaktyā samarpitaṁ prītyā madhugaṁdhādi gṛhyatāṁ ||
+oṁ śrī kedāreśvara svāmine namaḥ gaṁdhān samarpayāmi |
+en: You are the birthplace of the divine nature of every fragrant substance. Receive with pleasure this sweet sandal paste, offered with devotion.
+I offer the sandal paste to Śrī Kedāreśvara Svāmin.
+tel: సమస్త గంధ ద్రవ్యాలకు దేవత్వం నీవే, జన్మభూమి నీవే. భక్తితో సమర్పించిన ఈ మధుర గంధాన్ని ప్రీతితో స్వీకరించు.
+శ్రీ కేదారేశ్వర స్వామికి గంధం సమర్పిస్తున్నాను.
+hi: समस्त गन्ध द्रव्यों का देवत्व और जन्मभूमि आप ही हैं। भक्ति से अर्पित इस मधुर गन्ध को प्रीति से ग्रहण कीजिये।
+श्री केदारेश्वर स्वामी को गन्ध समर्पित करता हूँ।
+
+--- unit 24 | section: षोडशोपचार पूजा ---
+vidhi:
+The unbroken rice grains.
+deva:
+अक्षतान्-
+अक्षतोऽसि स्वभावेन भक्तानामक्षतं पदं |
+ददासि नाथ मद्दत्तैः अक्षतैः प्रीयतां भवान् ||
+ओं श्री केदारेश्वर स्वामिने नमः अक्षतान् समर्पयामि |
+iast:
+akṣatān-
+akṣato'si svabhāvena bhaktānāmakṣataṁ padaṁ |
+dadāsi nātha maddattaiḥ akṣataiḥ prīyatāṁ bhavān ||
+oṁ śrī kedāreśvara svāmine namaḥ akṣatān samarpayāmi |
+en: By your own nature you are unbroken, and you give your devotees the state that is never broken. Lord, be pleased with these unbroken grains which I offer.
+I offer the unbroken grains to Śrī Kedāreśvara Svāmin.
+tel: నీవు స్వభావంగా అక్షతుడవు. భక్తులకు అక్షతమైన పదాన్ని ఇచ్చేవాడవు. నాథా, నేను సమర్పించే ఈ అక్షతలచేత ప్రీతి చెందుము.
+శ్రీ కేదారేశ్వర స్వామికి అక్షతలు సమర్పిస్తున్నాను.
+hi: आप स्वभाव से अक्षत हैं और भक्तों को अक्षत पद देते हैं। हे नाथ, मेरे द्वारा दिये गये इन अक्षतों से प्रसन्न हूजिये।
+श्री केदारेश्वर स्वामी को अक्षत समर्पित करता हूँ।
+
+--- unit 25 | section: षोडशोपचार पूजा ---
+vidhi:
+The flowers.
+deva:
+पुष्पपूज –
+कल्पवृक्षप्रसूनैस्त्वं पूर्वैरभ्यर्चितस्सुरैः |
+कुंकुमै पार्थिवैरेभिरिदानीमर्चतां मया ||
+ओं श्री केदारेश्वर स्वामिने नमः पुष्पाणि समर्पयामि |
+iast:
+puṣpapūja –
+kalpavṛkṣaprasūnaistvaṁ pūrvairabhyarcitassuraiḥ |
+kuṁkumai pārthivairebhiridānīmarcatāṁ mayā ||
+oṁ śrī kedāreśvara svāmine namaḥ puṣpāṇi samarpayāmi |
+en: In earlier times the gods worshipped you with the blossoms of the tree of wish. Now let me worship you with these flowers of the earth and with vermilion.
+I offer the flowers to Śrī Kedāreśvara Svāmin.
+tel: పూర్వం దేవతలు కల్పవృక్ష పుష్పాలతో నిన్ను అర్చించారు. ఇప్పుడు నేను భూమి మీది ఈ పుష్పాలతో, కుంకుమతో నిన్ను అర్చిస్తున్నాను.
+శ్రీ కేదారేశ్వర స్వామికి పుష్పాలు సమర్పిస్తున్నాను.
+hi: पूर्वकाल में देवताओं ने कल्पवृक्ष के पुष्पों से आपकी अर्चना की। अब मैं इन पार्थिव पुष्पों और कुङ्कुम से अर्चना करता हूँ।
+श्री केदारेश्वर स्वामी को पुष्प समर्पित करता हूँ।
+
+--- unit 26 | section: षोडशोपचार पूजा ---
+vidhi:
+The worship of the guardians of the quarters, and the placing of the three. Brahmā is worshipped on the right of Śiva, Viṣṇu on the left, and Kedāreśvara in the middle.
+deva:
+ततः इंद्रादि लोकपालकपूजां कुर्यात् ||
+शिवस्य दक्षिणेभागे ब्रह्मणे नमः |
+उत्तरभागे विष्णवे नमः |
+मध्ये केदारेश्वराय नमः |
+iast:
+tataḥ iṁdrādi lokapālakapūjāṁ kuryāt ||
+śivasya dakṣiṇebhāge brahmaṇe namaḥ |
+uttarabhāge viṣṇave namaḥ |
+madhye kedāreśvarāya namaḥ |
+en: After this the worship of Indra and the other guardians of the quarters is to be done.
+On the right side of Śiva, to Brahmā we bow.
+On the left side, to Viṣṇu we bow.
+In the middle, to Kedāreśvara we bow.
+tel: ఆ తరువాత ఇంద్రుడు మొదలైన లోకపాలకుల పూజ చేయవలెను.
+శివుని కుడి భాగంలో బ్రహ్మకు నమస్కారం.
+ఎడమ భాగంలో విష్ణువుకు నమస్కారం.
+మధ్యలో కేదారేశ్వరునికి నమస్కారం.
+hi: इसके पश्चात् इन्द्र आदि लोकपालों की पूजा करनी चाहिये।
+शिव के दक्षिण भाग में ब्रह्मा को नमस्कार।
+उत्तर भाग में विष्णु को नमस्कार।
+मध्य में केदारेश्वर को नमस्कार।
+
+--- unit 27 | section: अङ्गपूजा ---
+vidhi:
+The worship of the limbs. Seventeen names are spoken, and with each one a part of the body is worshipped, going from the feet upward to the crown of the head. A summary line closes the list.
+deva:
+अथ अंगपूजा –
+1. ओं महेश्वराय नमः – पादौ पूजयामि |
+2. ओं ईश्वराय नमः – जंघे पूजयामि |
+3. ओं कामरूपाय नमः – जानुनी पूजयामि |
+4. ओं हराय नमः – ऊरूं पूजयामि |
+5. ओं त्रिपुरांतकाय नमः – गुह्यं पूजयामि |
+6. ओं भवाय नमः – कटिं पूजयामि |
+7. ओं गंगाधराय नमः – नाभिं पूजयामि |
+8. ओं महादेवाय नमः – उदरं पूजयामि |
+9. ओं पशुपतये नमः – हृदयं पूजयामि |
+10. ओं पिनाकिने नमः – हस्तान् पूजयामि |
+11. ओं शिवाय नमः – भुजौ पूजयामि |
+12. ओं शितिकंठाय नमः – कंठं पूजयामि |
+13. ओं विरूपाक्षाय नमः – मुखं पूजयामि |
+14. ओं त्रिनेत्राय नमः – नेत्रानि पूजयामि |
+15. ओं रुद्राय नमः – ललाटं पूजयामि |
+16. ओं शर्वाय नमः – शिरः पूजयामि |
+17. ओं चंद्रमौळये नमः – मौळिं पूजयामि |
+पशुपतये नमः सर्वाण्यंगानि पूजयामि |
+iast:
+atha aṁgapūjā –
+1. oṁ maheśvarāya namaḥ – pādau pūjayāmi |
+2. oṁ īśvarāya namaḥ – jaṁghe pūjayāmi |
+3. oṁ kāmarūpāya namaḥ – jānunī pūjayāmi |
+4. oṁ harāya namaḥ – ūrūṁ pūjayāmi |
+5. oṁ tripurāṁtakāya namaḥ – guhyaṁ pūjayāmi |
+6. oṁ bhavāya namaḥ – kaṭiṁ pūjayāmi |
+7. oṁ gaṁgādharāya namaḥ – nābhiṁ pūjayāmi |
+8. oṁ mahādevāya namaḥ – udaraṁ pūjayāmi |
+9. oṁ paśupataye namaḥ – hṛdayaṁ pūjayāmi |
+10. oṁ pinākine namaḥ – hastān pūjayāmi |
+11. oṁ śivāya namaḥ – bhujau pūjayāmi |
+12. oṁ śitikaṁṭhāya namaḥ – kaṁṭhaṁ pūjayāmi |
+13. oṁ virūpākṣāya namaḥ – mukhaṁ pūjayāmi |
+14. oṁ trinetrāya namaḥ – netrāni pūjayāmi |
+15. oṁ rudrāya namaḥ – lalāṭaṁ pūjayāmi |
+16. oṁ śarvāya namaḥ – śiraḥ pūjayāmi |
+17. oṁ caṁdramauḻaye namaḥ – mauḻiṁ pūjayāmi |
+paśupataye namaḥ sarvāṇyaṁgāni pūjayāmi |
+en: The worship of the limbs. To Maheśvara, the feet. To Īśvara, the shanks. To Kāmarūpa, the knees. To Hara, the thighs. To Tripurāntaka, the private parts. To Bhava, the waist. To Gaṅgādhara, the navel. To Mahādeva, the belly. To Paśupati, the heart. To Pināki, the hands. To Śiva, the arms. To Śitikaṇṭha, the throat. To Virūpākṣa, the face. To Trinetra, the eyes. To Rudra, the forehead. To Śarva, the head. To Candramauli, the crown. To Paśupati, all the limbs together.
+tel: అంగ పూజ. మహేశ్వరునికి నమస్కారం — పాదాలను పూజిస్తున్నాను. ఈశ్వరునికి — పిక్కలను. కామరూపునికి — మోకాళ్ళను. హరునికి — తొడలను. త్రిపురాంతకునికి — గుహ్యాన్ని. భవునికి — నడుమును. గంగాధరునికి — నాభిని. మహాదేవునికి — ఉదరాన్ని. పశుపతికి — హృదయాన్ని. పినాకికి — చేతులను. శివునికి — భుజాలను. శితికంఠునికి — కంఠాన్ని. విరూపాక్షునికి — ముఖాన్ని. త్రినేత్రునికి — కన్నులను. రుద్రునికి — లలాటాన్ని. శర్వునికి — శిరస్సును. చంద్రమౌళికి — మౌళిని. పశుపతికి — సర్వాంగాలను పూజిస్తున్నాను.
+hi: अङ्ग पूजा। महेश्वर को नमस्कार — चरणों की पूजा। ईश्वर को — जङ्घाओं की। कामरूप को — जानुओं की। हर को — ऊरुओं की। त्रिपुरान्तक को — गुह्य की। भव को — कटि की। गङ्गाधर को — नाभि की। महादेव को — उदर की। पशुपति को — हृदय की। पिनाकी को — हाथों की। शिव को — भुजाओं की। शितिकण्ठ को — कण्ठ की। विरूपाक्ष को — मुख की। त्रिनेत्र को — नेत्रों की। रुद्र को — ललाट की। शर्व को — शिर की। चन्द्रमौलि को — मौलि की। पशुपति को — सर्वाङ्गों की पूजा करता हूँ।
+
+--- unit 28 | section: अङ्गपूजा ---
+vidhi:
+The hundred and eight names. The source does not print them here. It directs the worshipper to the Śiva nāmāvaḷi. Flowers of many kinds are offered while the names are spoken.
+deva:
+अष्टोत्तरशतनामावळिः
+श्री शिव अष्टोत्तरशतनामावळिः चू. ||
+ओं श्री केदारेश्वर स्वामिने नमः नानाविध परिमळ पुष्पाणि समर्पयामि |
+iast:
+aṣṭottaraśatanāmāvaḻiḥ
+śrī śiva aṣṭottaraśatanāmāvaḻiḥ cū. ||
+oṁ śrī kedāreśvara svāmine namaḥ nānāvidha parimaḻa puṣpāṇi samarpayāmi |
+en: The hundred and eight names. See the hundred and eight names of Śrī Śiva.
+I offer flowers of many kinds and of many scents to Śrī Kedāreśvara Svāmin.
+tel: అష్టోత్తర శతనామావళి. శ్రీ శివ అష్టోత్తర శతనామావళి చూడండి.
+శ్రీ కేదారేశ్వర స్వామికి నానావిధ పరిమళ పుష్పాలు సమర్పిస్తున్నాను.
+hi: अष्टोत्तरशतनामावली। श्री शिव अष्टोत्तरशतनामावली देखिये।
+श्री केदारेश्वर स्वामी को नानाविध सुगन्धित पुष्प समर्पित करता हूँ।
+
+--- unit 29 | section: सूत्रग्रन्थिपूजा ---
+vidhi:
+The worship of the twenty-one knots of the toram. This is the distinguishing act of this vrata. A thread is made with twenty-one knots, one for each of the twenty-one days on which the rite is kept, and one name of Śiva is spoken over each knot in turn.
+deva:
+सूत्रग्रंथि पूज –
+1. ओं शिवाय नमः – प्रथम ग्रंथिं पूजयामि |
+2. ओं शांताय नमः – द्वितीय ग्रंथिं पूजयामि |
+3. ओं महादेवाय नमः – तृतीय ग्रंथिं पूजयामि |
+4. ओं वृषभध्वजाय नमः – चतुर्थ ग्रंथिं पूजयामि |
+5. ओं गौरीशाय नमः – पंचम ग्रंथिं पूजयामि |
+6. ओं रुद्राय नमः – षष्ट(षष्टम) ग्रंथिं पूजयामि |
+7. ओं पशुपतये नमः – सप्तम ग्रंथिं पूजयामि |
+8. ओं भीमाय नमः – अष्टम ग्रंथिं पूजयामि |
+9. ओं त्र्यंबकाय नमः – नवम ग्रंथिं पूजयामि |
+10. ओं नीललोहिताय नमः – दशम ग्रंथिं पूजयामि |
+11. ओं हराय नमः – एकादश ग्रंथिं पूजयामि |
+12. ओं स्मरहराय नमः – द्वादश ग्रंथिं पूजयामि |
+13. ओं भर्गाय नमः – त्रयोदश ग्रंथिं पूजयामि |
+14. ओं स्वयंभुवे नमः – चतुर्दश ग्रंथिं पूजयामि |
+15. ओं शर्वाय नमः – पंचदश ग्रंथिं पूजयामि |
+16. ओं सदाशिवाय नमः – षोडश ग्रंथिं पूजयामि |
+17. ओं ईश्वराय नमः – सप्तदश ग्रंथिं पूजयामि |
+18. ओं उग्राय नमः – अष्टादश ग्रंथिं पूजयामि |
+19. ओं श्रीकंठाय नमः – एकोनविंशति ग्रंथिं पूजयामि |
+20. ओं नीलकंठाय नमः – विंशति ग्रंथिं पूजयामि |
+21. ओं मृत्युंजयाय नमः – एकविंशति ग्रंथिं पूजयामि |
+ओं श्री केदारेश्वर स्वामिने नमः नानाविध परिमळ पुष्पाणि समर्पयामि |
+iast:
+sūtragraṁthi pūja –
+1. oṁ śivāya namaḥ – prathama graṁthiṁ pūjayāmi |
+2. oṁ śāṁtāya namaḥ – dvitīya graṁthiṁ pūjayāmi |
+3. oṁ mahādevāya namaḥ – tṛtīya graṁthiṁ pūjayāmi |
+4. oṁ vṛṣabhadhvajāya namaḥ – caturtha graṁthiṁ pūjayāmi |
+5. oṁ gaurīśāya namaḥ – paṁcama graṁthiṁ pūjayāmi |
+6. oṁ rudrāya namaḥ – ṣaṣṭa(ṣaṣṭama) graṁthiṁ pūjayāmi |
+7. oṁ paśupataye namaḥ – saptama graṁthiṁ pūjayāmi |
+8. oṁ bhīmāya namaḥ – aṣṭama graṁthiṁ pūjayāmi |
+9. oṁ tryaṁbakāya namaḥ – navama graṁthiṁ pūjayāmi |
+10. oṁ nīlalohitāya namaḥ – daśama graṁthiṁ pūjayāmi |
+11. oṁ harāya namaḥ – ekādaśa graṁthiṁ pūjayāmi |
+12. oṁ smaraharāya namaḥ – dvādaśa graṁthiṁ pūjayāmi |
+13. oṁ bhargāya namaḥ – trayodaśa graṁthiṁ pūjayāmi |
+14. oṁ svayaṁbhuve namaḥ – caturdaśa graṁthiṁ pūjayāmi |
+15. oṁ śarvāya namaḥ – paṁcadaśa graṁthiṁ pūjayāmi |
+16. oṁ sadāśivāya namaḥ – ṣoḍaśa graṁthiṁ pūjayāmi |
+17. oṁ īśvarāya namaḥ – saptadaśa graṁthiṁ pūjayāmi |
+18. oṁ ugrāya namaḥ – aṣṭādaśa graṁthiṁ pūjayāmi |
+19. oṁ śrīkaṁṭhāya namaḥ – ekonaviṁśati graṁthiṁ pūjayāmi |
+20. oṁ nīlakaṁṭhāya namaḥ – viṁśati graṁthiṁ pūjayāmi |
+21. oṁ mṛtyuṁjayāya namaḥ – ekaviṁśati graṁthiṁ pūjayāmi |
+oṁ śrī kedāreśvara svāmine namaḥ nānāvidha parimaḻa puṣpāṇi samarpayāmi |
+en: The worship of the knots of the thread. To Śiva, the first knot. To Śānta, the second. To Mahādeva, the third. To Vṛṣabhadhvaja, the fourth. To Gaurīśa, the fifth. To Rudra, the sixth. To Paśupati, the seventh. To Bhīma, the eighth. To Tryambaka, the ninth. To Nīlalohita, the tenth. To Hara, the eleventh. To Smarahara, the twelfth. To Bharga, the thirteenth. To Svayambhū, the fourteenth. To Śarva, the fifteenth. To Sadāśiva, the sixteenth. To Īśvara, the seventeenth. To Ugra, the eighteenth. To Śrīkaṇṭha, the nineteenth. To Nīlakaṇṭha, the twentieth. To Mṛtyuñjaya, the twenty-first.
+I offer flowers of many kinds and of many scents to Śrī Kedāreśvara Svāmin.
+tel: సూత్ర గ్రంథి పూజ. శివునికి — మొదటి ముడిని పూజిస్తున్నాను. శాంతునికి — రెండవది. మహాదేవునికి — మూడవది. వృషభధ్వజునికి — నాలుగవది. గౌరీశునికి — ఐదవది. రుద్రునికి — ఆరవది. పశుపతికి — ఏడవది. భీమునికి — ఎనిమిదవది. త్ర్యంబకునికి — తొమ్మిదవది. నీలలోహితునికి — పదవది. హరునికి — పదకొండవది. స్మరహరునికి — పన్నెండవది. భర్గునికి — పదమూడవది. స్వయంభువుకు — పద్నాలుగవది. శర్వునికి — పదిహేనవది. సదాశివునికి — పదహారవది. ఈశ్వరునికి — పదిహేడవది. ఉగ్రునికి — పద్దెనిమిదవది. శ్రీకంఠునికి — పందొమ్మిదవది. నీలకంఠునికి — ఇరవైయవది. మృత్యుంజయునికి — ఇరవై ఒకటవ ముడిని పూజిస్తున్నాను.
+శ్రీ కేదారేశ్వర స్వామికి నానావిధ పరిమళ పుష్పాలు సమర్పిస్తున్నాను.
+hi: सूत्र ग्रन्थि पूजा। शिव को — प्रथम ग्रन्थि की पूजा। शान्त को — द्वितीय। महादेव को — तृतीय। वृषभध्वज को — चतुर्थ। गौरीश को — पञ्चम। रुद्र को — षष्ठ। पशुपति को — सप्तम। भीम को — अष्टम। त्र्यम्बक को — नवम। नीललोहित को — दशम। हर को — एकादश। स्मरहर को — द्वादश। भर्ग को — त्रयोदश। स्वयम्भू को — चतुर्दश। शर्व को — पञ्चदश। सदाशिव को — षोडश। ईश्वर को — सप्तदश। उग्र को — अष्टादश। श्रीकण्ठ को — एकोनविंशति। नीलकण्ठ को — विंशति। मृत्युञ्जय को — एकविंशति ग्रन्थि की पूजा करता हूँ।
+श्री केदारेश्वर स्वामी को नानाविध सुगन्धित पुष्प समर्पित करता हूँ।
+
+--- unit 30 | section: षोडशोपचार पूजा ---
+vidhi:
+The incense.
+deva:
+धूपं –
+दशांग धूपमुख्यं च ह्यंगार विनिवेशितं |
+धूपं सुगंधैरुत्पन्नं त्वां प्रीणयतु शंकर ||
+ओं श्री केदारेश्वर स्वामिने नमः धूपमाघ्रापयामि |
+iast:
+dhūpaṁ –
+daśāṁga dhūpamukhyaṁ ca hyaṁgāra viniveśitaṁ |
+dhūpaṁ sugaṁdhairutpannaṁ tvāṁ prīṇayatu śaṁkara ||
+oṁ śrī kedāreśvara svāmine namaḥ dhūpamāghrāpayāmi |
+en: Here is incense of ten ingredients, the best of incense, placed upon the coals. It has risen as a sweet scent. Śaṅkara, may it please you.
+I show the incense to Śrī Kedāreśvara Svāmin.
+tel: నిప్పులమీద ఉంచిన దశాంగ ధూపం, సుగంధాలతో పుట్టినది. శంకరా, ఇది నిన్ను ప్రీతి పరచుగాక.
+శ్రీ కేదారేశ్వర స్వామికి ధూపం చూపిస్తున్నాను.
+hi: अङ्गार पर रखा हुआ दशाङ्ग धूप, सुगन्ध से उत्पन्न। हे शङ्कर, यह आपको प्रसन्न करे।
+श्री केदारेश्वर स्वामी को धूप दिखाता हूँ।
+
+--- unit 31 | section: षोडशोपचार पूजा ---
+vidhi:
+The lamp, and the water for sipping which follows the incense and the lamp.
+deva:
+दीपं –
+योगिनां हृदयेष्वेव ज्ञानदीपांकुरोह्यसि |
+बाह्यदीपो मयादत्तः गृह्यतां भक्तगौरवात् ||
+ओं श्री केदारेश्वर स्वामिने नमः दीपं दर्शयामि |
+धूपदीपानंतरं शुद्धाचमनीयं समर्पयामि ||
+iast:
+dīpaṁ –
+yogināṁ hṛdayeṣveva jñānadīpāṁkurohyasi |
+bāhyadīpo mayādattaḥ gṛhyatāṁ bhaktagauravāt ||
+oṁ śrī kedāreśvara svāmine namaḥ dīpaṁ darśayāmi |
+dhūpadīpānaṁtaraṁ śuddhācamanīyaṁ samarpayāmi ||
+en: In the hearts of those who practise yoga you yourself are the sprout of the lamp of knowledge. I give this outer lamp. Receive it, for you honour your devotees.
+I show the lamp to Śrī Kedāreśvara Svāmin.
+After the incense and the lamp I offer pure water for sipping.
+tel: యోగుల హృదయాలలో జ్ఞానదీపాంకురం నీవే. బాహ్యమైన ఈ దీపాన్ని నేను సమర్పిస్తున్నాను. భక్తుల యెడ గౌరవం చేత దీనిని స్వీకరించు.
+శ్రీ కేదారేశ్వర స్వామికి దీపం చూపిస్తున్నాను.
+ధూప దీపాల తరువాత శుద్ధ ఆచమనీయం సమర్పిస్తున్నాను.
+hi: योगियों के हृदय में ज्ञानदीप का अङ्कुर आप ही हैं। यह बाह्य दीप मैं अर्पित करता हूँ। भक्तगौरव से इसे ग्रहण कीजिये।
+श्री केदारेश्वर स्वामी को दीप दिखाता हूँ।
+धूप और दीप के अनन्तर शुद्ध आचमनीय समर्पित करता हूँ।
+
+--- unit 32 | section: षोडशोपचार पूजा ---
+vidhi:
+The food offering.
+deva:
+नैवेद्यं –
+त्रैलोक्यमपि नैवेद्यं तत्ते तृप्तिस्तथा बहिः |
+नैवेद्यं भक्तवात्सल्यात् गृह्यतां त्र्यंबकं त्वया ||
+ओं श्री केदारेश्वर स्वामिने नमः नैवेद्यं समर्पयामि |
+iast:
+naivedyaṁ –
+trailokyamapi naivedyaṁ tatte tṛptistathā bahiḥ |
+naivedyaṁ bhaktavātsalyāt gṛhyatāṁ tryaṁbakaṁ tvayā ||
+oṁ śrī kedāreśvara svāmine namaḥ naivedyaṁ samarpayāmi |
+en: The three worlds themselves are your food offering, and your satisfaction is beyond them. Tryambaka, receive this food offering, out of love for your devotee.
+I offer the food to Śrī Kedāreśvara Svāmin.
+tel: మూడు లోకాలే నీకు నైవేద్యం. నీ తృప్తి వాటికి అతీతమైనది. త్ర్యంబకా, భక్తవాత్సల్యంతో ఈ నైవేద్యాన్ని స్వీకరించు.
+శ్రీ కేదారేశ్వర స్వామికి నైవేద్యం సమర్పిస్తున్నాను.
+hi: तीनों लोक ही आपका नैवेद्य हैं और आपकी तृप्ति उनसे परे है। हे त्र्यम्बक, भक्तवात्सल्य से यह नैवेद्य ग्रहण कीजिये।
+श्री केदारेश्वर स्वामी को नैवेद्य समर्पित करता हूँ।
+
+--- unit 33 | section: षोडशोपचार पूजा ---
+vidhi:
+The mantras spoken while the food is offered. The Gāyatrī is said, then the sprinkling of the food, then the five oblations to the breaths, then the washing of the hands and the feet. The morning form and the evening form of the sprinkling verse are both printed, and the blank in the source is for the name of the food being offered.
+deva:
+ओं भूर्भुवस्सुवः | तत्सवितुर्वरेण्यम् |
+भर्गो देवस्य धीमहि |
+धियो योनः प्रचोदयात् ||
+सत्यं त्वा ऋतेन परिषिंचामि
+(सायंत्रं – ऋतं त्वा सत्येन परिषिंचामि)
+अमृतमस्तु | अमृतोपस्तरणमसि |
+ओं श्री केदारेश्वर स्वामिने नमः _____ निवेदयामि |
+ओं प्राणाय स्वाहा | ओं अपानाय स्वाहा | ओं व्यानाय स्वाहा |
+ओं उदानाय स्वाहा | ओं समानाय स्वाहा |
+मध्ये मध्ये पानीयं समर्पयामि |
+अमृतापिधानमसि |
+उत्तरापोशनं समर्पयामि | हस्तौ प्रक्षाळयामि |
+पादौ प्रक्षाळयामि | शुद्धाचमनीयं समर्पयामि |
+iast:
+oṁ bhūrbhuvassuvaḥ | tatsaviturvareṇyam |
+bhargo devasya dhīmahi |
+dhiyo yonaḥ pracodayāt ||
+satyaṁ tvā ṛtena pariṣiṁcāmi
+(sāyaṁtraṁ – ṛtaṁ tvā satyena pariṣiṁcāmi)
+amṛtamastu | amṛtopastaraṇamasi |
+oṁ śrī kedāreśvara svāmine namaḥ _____ nivedayāmi |
+oṁ prāṇāya svāhā | oṁ apānāya svāhā | oṁ vyānāya svāhā |
+oṁ udānāya svāhā | oṁ samānāya svāhā |
+madhye madhye pānīyaṁ samarpayāmi |
+amṛtāpidhānamasi |
+uttarāpośanaṁ samarpayāmi | hastau prakṣāḻayāmi |
+pādau prakṣāḻayāmi | śuddhācamanīyaṁ samarpayāmi |
+en: Oṁ. Earth, mid-air, heaven. Let us meditate upon that excellent light of the god Savitṛ. May he guide our thoughts.
+With truth I sprinkle you about. (In the evening — With right order I sprinkle you about.)
+Let it be nectar. You are the seat of nectar.
+To Śrī Kedāreśvara Svāmin I offer _____ .
+To the outward breath, svāhā. To the downward breath, svāhā. To the diffused breath, svāhā.
+To the upward breath, svāhā. To the even breath, svāhā.
+Between them I offer drinking water.
+You are the covering of nectar.
+I offer the water taken after the meal. I wash the hands.
+I wash the feet. I offer pure water for sipping.
+tel: ఓం భూర్భువస్సువః. సవిత దేవుని ఆ శ్రేష్ఠమైన తేజస్సును ధ్యానిస్తున్నాము. ఆయన మన బుద్ధులను ప్రేరేపించుగాక.
+సత్యంతో నిన్ను చుట్టూ ప్రోక్షిస్తున్నాను. (సాయంత్రం — ఋతంతో నిన్ను చుట్టూ ప్రోక్షిస్తున్నాను.)
+అమృతమగుగాక. నీవు అమృతానికి ఆధారం.
+శ్రీ కేదారేశ్వర స్వామికి _____ నివేదిస్తున్నాను.
+ప్రాణానికి స్వాహా. అపానానికి స్వాహా. వ్యానానికి స్వాహా.
+ఉదానానికి స్వాహా. సమానానికి స్వాహా.
+మధ్య మధ్యలో పానీయం సమర్పిస్తున్నాను.
+నీవు అమృతానికి కప్పు.
+ఉత్తరాపోశనం సమర్పిస్తున్నాను. చేతులు కడిగిస్తున్నాను.
+పాదాలు కడిగిస్తున్నాను. శుద్ధ ఆచమనీయం సమర్పిస్తున్నాను.
+hi: ॐ भूर्भुवः स्वः। सविता देव के उस श्रेष्ठ तेज का हम ध्यान करते हैं। वे हमारी बुद्धियों को प्रेरित करें।
+सत्य से आपको चारों ओर सींचता हूँ। (सायंकाल — ऋत से आपको चारों ओर सींचता हूँ।)
+अमृत हो। आप अमृत का आस्तरण हैं।
+श्री केदारेश्वर स्वामी को _____ निवेदित करता हूँ।
+प्राण को स्वाहा। अपान को स्वाहा। व्यान को स्वाहा।
+उदान को स्वाहा। समान को स्वाहा।
+बीच-बीच में पानीय समर्पित करता हूँ।
+आप अमृत का आपिधान हैं।
+उत्तरापोशन समर्पित करता हूँ। हाथ धुलाता हूँ।
+चरण धुलाता हूँ। शुद्ध आचमनीय समर्पित करता हूँ।
+
+--- unit 34 | section: षोडशोपचार पूजा ---
+vidhi:
+The betel leaf.
+deva:
+तांबूलं –
+नित्यानंदस्वरूपस्त्वं योगिहृत्कमले स्थितः |
+गृहाणभक्त्या मद्दत्तं तांबूलं प्रतिगृह्यताम् |
+ओं श्री केदारेश्वर स्वामिने नमः तांबूलं समर्पयामि |
+iast:
+tāṁbūlaṁ –
+nityānaṁdasvarūpastvaṁ yogihṛtkamale sthitaḥ |
+gṛhāṇabhaktyā maddattaṁ tāṁbūlaṁ pratigṛhyatām |
+oṁ śrī kedāreśvara svāmine namaḥ tāṁbūlaṁ samarpayāmi |
+en: You are of the nature of everlasting bliss, and you dwell in the lotus of the heart of those who practise yoga. Receive with favour this betel leaf which I give with devotion.
+I offer the betel leaf to Śrī Kedāreśvara Svāmin.
+tel: నిత్యానంద స్వరూపుడవైన నీవు యోగుల హృదయకమలంలో నిలిచి ఉన్నావు. భక్తితో నేను సమర్పించే ఈ తాంబూలాన్ని స్వీకరించు.
+శ్రీ కేదారేశ్వర స్వామికి తాంబూలం సమర్పిస్తున్నాను.
+hi: आप नित्यानन्दस्वरूप हैं और योगियों के हृदयकमल में स्थित हैं। भक्ति से दिया गया यह ताम्बूल ग्रहण कीजिये।
+श्री केदारेश्वर स्वामी को ताम्बूल समर्पित करता हूँ।
+
+--- unit 35 | section: षोडशोपचार पूजा ---
+vidhi:
+The second offering of water for the hands.
+deva:
+पुनरर्घ्यं –
+अर्घ्यं गृहाण भगवन् भक्त्यादत्तं महेश्वर |
+प्रयच्छ मे मनस्तुष्टिं भक्तानामिष्टदायकं ||
+ओं श्री केदारेश्वर स्वामिने नमः पुनरर्घ्यं समर्पयामि |
+iast:
+punararghyaṁ –
+arghyaṁ gṛhāṇa bhagavan bhaktyādattaṁ maheśvara |
+prayaccha me manastuṣṭiṁ bhaktānāmiṣṭadāyakaṁ ||
+oṁ śrī kedāreśvara svāmine namaḥ punararghyaṁ samarpayāmi |
+en: Lord, receive this arghya, given with devotion. Maheśvara, you who give his desire to every devotee, grant contentment to my mind.
+I offer the second arghya to Śrī Kedāreśvara Svāmin.
+tel: భగవంతుడా, భక్తితో సమర్పించిన ఈ అర్ఘ్యాన్ని స్వీకరించు. మహేశ్వరా, భక్తులకు ఇష్టాన్ని ఇచ్చేవాడా, నా మనస్సుకు తృప్తిని ఇమ్ము.
+శ్రీ కేదారేశ్వర స్వామికి పునరర్ఘ్యం సమర్పిస్తున్నాను.
+hi: हे भगवन्, भक्ति से दिया गया यह अर्घ्य ग्रहण कीजिये। हे महेश्वर, भक्तों को इष्ट देने वाले, मेरे मन को सन्तोष दीजिये।
+श्री केदारेश्वर स्वामी को पुनरर्घ्य समर्पित करता हूँ।
+
+--- unit 36 | section: षोडशोपचार पूजा ---
+vidhi:
+The waving of the camphor light, and the water for sipping which follows it.
+deva:
+नीराजनं –
+कर्पूरं चंद्रसंकाशं ज्योतिस्सूर्यमिवोदितं |
+भक्त्या दास्यामि कर्पूर नीराजनमिदं शिव ||
+ओं श्री केदारेश्वर स्वामिने नमः नीराजनं समर्पयामि ||
+नीराजनानंतरं शुद्धाचमनीयं समर्पयामि ||
+iast:
+nīrājanaṁ –
+karpūraṁ caṁdrasaṁkāśaṁ jyotissūryamivoditaṁ |
+bhaktyā dāsyāmi karpūra nīrājanamidaṁ śiva ||
+oṁ śrī kedāreśvara svāmine namaḥ nīrājanaṁ samarpayāmi ||
+nīrājanānaṁtaraṁ śuddhācamanīyaṁ samarpayāmi ||
+en: Camphor shines like the moon, and its light is like the sun risen. Śiva, with devotion I shall give this waving of the camphor light.
+I offer the waving of the light to Śrī Kedāreśvara Svāmin.
+After the waving of the light I offer pure water for sipping.
+tel: చంద్రుని వలె ప్రకాశించే కర్పూరం, ఉదయించిన సూర్యుని వలె జ్యోతిస్సు గలది. శివా, భక్తితో ఈ కర్పూర నీరాజనాన్ని సమర్పిస్తున్నాను.
+శ్రీ కేదారేశ్వర స్వామికి నీరాజనం సమర్పిస్తున్నాను.
+నీరాజనం తరువాత శుద్ధ ఆచమనీయం సమర్పిస్తున్నాను.
+hi: चन्द्रमा के समान कान्तिमान् कर्पूर, उदित सूर्य के समान ज्योति वाला। हे शिव, भक्ति से यह कर्पूर नीराजन अर्पित करता हूँ।
+श्री केदारेश्वर स्वामी को नीराजन समर्पित करता हूँ।
+नीराजन के अनन्तर शुद्ध आचमनीय समर्पित करता हूँ।
+
+--- unit 37 | section: षोडशोपचार पूजा ---
+vidhi:
+The mantrapuṣpa. The five faces of Śiva are addressed in turn — Sadyojāta, Vāmadeva, Aghora, Tatpuruṣa and Īśāna — and gold and flowers are offered with them.
+deva:
+मंत्रपुष्पं –
+ओं सद्योजातं प्रपद्यामि सद्योजाताय वै नमो नमः |
+भवे भवे नातिभवे भवस्व माम् |
+भवोद्भवाय नमः ||
+ओं वामदेवाय नमो ज्येष्ठाय नमः श्रेष्ठाय नमो रुद्राय नमः कालाय नमः कलविकरणाय नमो बलविकरणाय नमो बलाय नमो बलप्रमथनाय नमः सर्वभूतदमनाय नमो मनोन्मनाय नमः ||
+अघोरेभ्योऽथ घोरेभ्यो घोरघोरतरेभ्यः |
+सर्वेभ्यः सर्वशर्वेभ्यो नमस्ते अस्तु रुद्ररूपेभ्यः ||
+ओं तत्पुरुषाय विद्महे महादेवाय धीमहि |
+तन्नो रुद्रः प्रचोदयात् ||
+ईशानस्सर्वविद्यानामीश्वरस्सर्वभूतानां ब्रह्माऽधिपतिर्ब्रह्मणोऽधिपतिर्ब्रह्मा शिवो मे अस्तु सदाशिवोम् ||
+ओं श्री केदारेश्वर स्वामिने नमः सुवर्णमंत्रपुष्पांजलिं समर्पयामि |
+iast:
+maṁtrapuṣpaṁ –
+oṁ sadyojātaṁ prapadyāmi sadyojātāya vai namo namaḥ |
+bhave bhave nātibhave bhavasva mām |
+bhavodbhavāya namaḥ ||
+oṁ vāmadevāya namo jyeṣṭhāya namaḥ śreṣṭhāya namo rudrāya namaḥ kālāya namaḥ kalavikaraṇāya namo balavikaraṇāya namo balāya namo balapramathanāya namaḥ sarvabhūtadamanāya namo manonmanāya namaḥ ||
+aghorebhyo'tha ghorebhyo ghoraghoratarebhyaḥ |
+sarvebhyaḥ sarvaśarvebhyo namaste astu rudrarūpebhyaḥ ||
+oṁ tatpuruṣāya vidmahe mahādevāya dhīmahi |
+tanno rudraḥ pracodayāt ||
+īśānassarvavidyānāmīśvarassarvabhūtānāṁ brahmā'dhipatirbrahmaṇo'dhipatirbrahmā śivo me astu sadāśivom ||
+oṁ śrī kedāreśvara svāmine namaḥ suvarṇamaṁtrapuṣpāṁjaliṁ samarpayāmi |
+en: Oṁ. I take refuge in Sadyojāta. To Sadyojāta we bow again and again. In birth after birth, let me not be born again. Make me become. To him from whom existence rises, we bow.
+Oṁ. To Vāmadeva we bow. To the eldest we bow. To the best we bow. To Rudra we bow. To Kāla we bow. To him who divides time we bow. To him who divides strength we bow. To strength we bow. To him who crushes strength we bow. To him who subdues all beings we bow. To him who is beyond the mind we bow.
+To the forms that are not terrible, and to the terrible, and to those more terrible than the terrible — to all of them, to all the forms of Śarva, may our bowing reach you, who are the forms of Rudra.
+Oṁ. We know Tatpuruṣa. We meditate upon Mahādeva. May Rudra guide us.
+Īśāna is the lord of every branch of knowledge, the ruler of all beings, the overlord of the Vedas, the overlord of Brahmā. May that Brahmā, who is Śiva, be mine. He is Sadāśiva.
+I offer gold, and flowers held in the hollow of the hands, to Śrī Kedāreśvara Svāmin.
+tel: ఓం. సద్యోజాతుని శరణు పొందుతున్నాను. సద్యోజాతునికి మరల మరల నమస్కారం. జన్మ జన్మలో మరల జన్మ లేకుండు గాక. నన్ను భవుని చేయుము. భవోద్భవునికి నమస్కారం.
+ఓం. వామదేవునికి నమస్కారం. జ్యేష్ఠునికి, శ్రేష్ఠునికి, రుద్రునికి, కాలునికి, కలవికరణునికి, బలవికరణునికి, బలునికి, బలప్రమథనునికి, సర్వభూతదమనునికి, మనోన్మనునికి నమస్కారం.
+అఘోరమైన రూపాలకు, ఘోరమైన రూపాలకు, ఘోరాతిఘోరమైన రూపాలకు — సర్వ శర్వ రూపాలకు, రుద్ర రూపాలకు నమస్కారం.
+ఓం. తత్పురుషుని ఎరుగుదుము. మహాదేవుని ధ్యానిస్తాము. ఆ రుద్రుడు మనలను ప్రేరేపించుగాక.
+ఈశానుడు సర్వ విద్యలకు ఈశ్వరుడు, సర్వ భూతాలకు అధిపతి, బ్రహ్మకు అధిపతి. ఆ శివుడైన బ్రహ్మ నాకు మంగళకరుడగుగాక. ఆయనే సదాశివుడు.
+శ్రీ కేదారేశ్వర స్వామికి సువర్ణ మంత్రపుష్పాంజలి సమర్పిస్తున్నాను.
+hi: ॐ। सद्योजात की शरण लेता हूँ। सद्योजात को बारम्बार नमस्कार। जन्म-जन्म में पुनः जन्म न हो। मुझे भव कीजिये। भवोद्भव को नमस्कार।
+ॐ। वामदेव को नमस्कार। ज्येष्ठ, श्रेष्ठ, रुद्र, काल, कलविकरण, बलविकरण, बल, बलप्रमथन, सर्वभूतदमन और मनोन्मन को नमस्कार।
+अघोर रूपों को, घोर रूपों को और घोर से भी घोरतर रूपों को — समस्त शर्व रूपों को, रुद्र रूपों को नमस्कार।
+ॐ। तत्पुरुष को हम जानते हैं। महादेव का ध्यान करते हैं। वे रुद्र हमें प्रेरित करें।
+ईशान समस्त विद्याओं के ईश्वर, समस्त भूतों के अधिपति और ब्रह्मा के अधिपति हैं। वे शिवरूप ब्रह्मा मेरे लिये मङ्गलकारी हों। वे ही सदाशिव हैं।
+श्री केदारेश्वर स्वामी को सुवर्ण मन्त्रपुष्पाञ्जलि समर्पित करता हूँ।
+
+--- unit 38 | section: षोडशोपचार पूजा ---
+vidhi:
+The going round, and the bowing. The worshipper walks around the deity, and asks in plain words that the vrata bear fruit.
+deva:
+प्रदक्षिणं –
+भूतेश भुवनाधीश सर्वदेवादिपूजित |
+प्रदक्षिणं करोमि त्वां व्रतं मे सफलं कुरु ||
+यानिकानिच पापानि जन्मांतरकृतानि च |
+तानि तानि प्रणश्यंति प्रदक्षिण पदे पदे ||
+पापोऽहं पापकर्माऽहं पापात्मा पापसंभवः |
+त्राहि मां कृपया देव शरणागतवत्सल ||
+अन्यधा शरणं नास्ति त्वमेव शरणं मम |
+तस्मात्कारुण्य भावेन रक्ष रक्ष महेश्वर ||
+ओं श्री केदारेश्वर स्वामिने नमः आत्मप्रदक्षिण नमस्कारान् समर्पयामि |
+iast:
+pradakṣiṇaṁ –
+bhūteśa bhuvanādhīśa sarvadevādipūjita |
+pradakṣiṇaṁ karomi tvāṁ vrataṁ me saphalaṁ kuru ||
+yānikānica pāpāni janmāṁtarakṛtāni ca |
+tāni tāni praṇaśyaṁti pradakṣiṇa pade pade ||
+pāpo'haṁ pāpakarmā'haṁ pāpātmā pāpasaṁbhavaḥ |
+trāhi māṁ kṛpayā deva śaraṇāgatavatsala ||
+anyadhā śaraṇaṁ nāsti tvameva śaraṇaṁ mama |
+tasmātkāruṇya bhāvena rakṣa rakṣa maheśvara ||
+oṁ śrī kedāreśvara svāmine namaḥ ātmapradakṣiṇa namaskārān samarpayāmi |
+en: Lord of beings, ruler of the worlds, worshipped by all the gods and by those before them — I walk around you. Make my vrata bear fruit.
+Whatever faults were done in other births, all of them perish at every step of the going round.
+I am a sinner. My acts are sinful. My nature is sinful. I am born of sin. God, you who love those who come to you for refuge, save me in your mercy.
+There is no other refuge. You alone are my refuge. Therefore, out of your compassion, Maheśvara, protect me, protect me.
+I offer the going round and the bowing to Śrī Kedāreśvara Svāmin.
+tel: భూతేశా, భువనాధీశా, సర్వదేవతలచేత పూజింపబడేవాడా — నీకు ప్రదక్షిణం చేస్తున్నాను. నా వ్రతాన్ని సఫలం చేయుము.
+జన్మాంతరాలలో చేసిన పాపాలన్నీ ప్రదక్షిణంలోని ప్రతి అడుగుతోను నశిస్తాయి.
+నేను పాపిని. నా కర్మలు పాపమైనవి. నా ఆత్మ పాపమైనది. నేను పాపం నుండి పుట్టినవాడను. దేవా, శరణాగతవత్సలా, కృపతో నన్ను రక్షించు.
+నాకు వేరే శరణం లేదు. నీవే నాకు శరణం. కావున కారుణ్యంతో, మహేశ్వరా, నన్ను రక్షించు, రక్షించు.
+శ్రీ కేదారేశ్వర స్వామికి ఆత్మ ప్రదక్షిణ నమస్కారాలు సమర్పిస్తున్నాను.
+hi: हे भूतेश, हे भुवनाधीश, समस्त देवताओं से पूजित — आपकी प्रदक्षिणा करता हूँ। मेरे व्रत को सफल कीजिये।
+जन्मान्तरों में किये गये जो-जो पाप हैं, वे प्रदक्षिणा के प्रत्येक पद पर नष्ट हो जाते हैं।
+मैं पापी हूँ। मेरे कर्म पाप हैं। मेरा आत्मा पापमय है। मैं पाप से उत्पन्न हूँ। हे देव, हे शरणागतवत्सल, कृपा करके मेरी रक्षा कीजिये।
+दूसरा कोई शरण नहीं। आप ही मेरे शरण हैं। अतः करुणा से, हे महेश्वर, मेरी रक्षा कीजिये, रक्षा कीजिये।
+श्री केदारेश्वर स्वामी को आत्मप्रदक्षिण नमस्कार समर्पित करता हूँ।
+
+--- unit 39 | section: षोडशोपचार पूजा ---
+vidhi:
+The bowing.
+deva:
+नमस्कारान् –
+हरः शंभो महादेव विश्वेशाऽमरवल्लभ |
+शिव शंकर सर्वात्मन् नीलकंठ नमोऽस्तु ते ||
+ओं श्री केदारेश्वर स्वामिने नमः नमस्कारान् समर्पयामि |
+iast:
+namaskārān –
+haraḥ śaṁbho mahādeva viśveśā'maravallabha |
+śiva śaṁkara sarvātman nīlakaṁṭha namo'stu te ||
+oṁ śrī kedāreśvara svāmine namaḥ namaskārān samarpayāmi |
+en: Hara, Śambhu, Mahādeva, lord of the universe, beloved of the immortals — Śiva, Śaṅkara, self of all, Nīlakaṇṭha, may our bowing reach you.
+I offer the bowing to Śrī Kedāreśvara Svāmin.
+tel: హరా, శంభో, మహాదేవా, విశ్వేశా, అమరవల్లభా — శివా, శంకరా, సర్వాత్మా, నీలకంఠా, నీకు నమస్కారం.
+శ్రీ కేదారేశ్వర స్వామికి నమస్కారాలు సమర్పిస్తున్నాను.
+hi: हे हर, हे शम्भो, हे महादेव, हे विश्वेश, हे अमरवल्लभ — हे शिव, हे शङ्कर, हे सर्वात्मन्, हे नीलकण्ठ, आपको नमस्कार।
+श्री केदारेश्वर स्वामी को नमस्कार समर्पित करता हूँ।
+
+--- unit 40 | section: षोडशोपचार पूजा ---
+vidhi:
+The further worship, in which the services of a king are offered.
+deva:
+पुनः पूज –
+ओं श्री केदारेश्वर स्वामिने नमः |
+छत्रमाच्छादयामि | चामराभ्यां वीजयामि |
+नृत्यं दर्शयामि | गीतं श्रावयामि |
+वाद्यं घोषयामि | आंदोळिकानारोहयामि |
+अश्वानारोहयामि | गजानारोहयामि |
+समस्त राजोपचार देवोपचार भक्त्युपचार
+शक्त्युपचार मंत्रोपचार पूजास्समर्पयामि ||
+iast:
+punaḥ pūja –
+oṁ śrī kedāreśvara svāmine namaḥ |
+chatramācchādayāmi | cāmarābhyāṁ vījayāmi |
+nṛtyaṁ darśayāmi | gītaṁ śrāvayāmi |
+vādyaṁ ghoṣayāmi | āṁdoḻikānārohayāmi |
+aśvānārohayāmi | gajānārohayāmi |
+samasta rājopacāra devopacāra bhaktyupacāra
+śaktyupacāra maṁtropacāra pūjāssamarpayāmi ||
+en: To Śrī Kedāreśvara Svāmin we bow.
+I hold the umbrella. I fan with the two whisks.
+I show the dance. I let the song be heard.
+I sound the instruments. I set you upon the palanquin.
+I set you upon horses. I set you upon elephants.
+I offer all the services of a king, all the services of a god, all the services of devotion, all the services of ability and all the services of mantra.
+tel: శ్రీ కేదారేశ్వర స్వామికి నమస్కారం.
+ఛత్రాన్ని పడుతున్నాను. చామరాలతో వీస్తున్నాను.
+నృత్యాన్ని చూపిస్తున్నాను. గీతాన్ని వినిపిస్తున్నాను.
+వాద్యాన్ని మ్రోగిస్తున్నాను. అందలం ఎక్కిస్తున్నాను.
+గుర్రాలు ఎక్కిస్తున్నాను. ఏనుగులు ఎక్కిస్తున్నాను.
+సమస్త రాజోపచార, దేవోపచార, భక్త్యుపచార, శక్త్యుపచార, మంత్రోపచార పూజలు సమర్పిస్తున్నాను.
+hi: श्री केदारेश्वर स्वामी को नमस्कार।
+छत्र लगाता हूँ। चामरों से वीजन करता हूँ।
+नृत्य दिखाता हूँ। गीत सुनाता हूँ।
+वाद्य बजाता हूँ। आन्दोलिका पर आरोहण कराता हूँ।
+अश्वों पर आरोहण कराता हूँ। गजों पर आरोहण कराता हूँ।
+समस्त राजोपचार, देवोपचार, भक्त्युपचार, शक्त्युपचार और मन्त्रोपचार पूजा समर्पित करता हूँ।
+
+--- unit 41 | section: षोडशोपचार पूजा ---
+vidhi:
+The prayer.
+deva:
+प्रार्थन –
+अभीष्टसिद्धिं कुरु मे शिवाऽव्यय महेश्वर |
+भक्तानां वरदानार्थं मूर्तीकृत कळेबर ||
+ओं श्री केदारेश्वर स्वामिने नमः प्रार्थना नमस्कारान् समर्पयामि |
+iast:
+prārthana –
+abhīṣṭasiddhiṁ kuru me śivā'vyaya maheśvara |
+bhaktānāṁ varadānārthaṁ mūrtīkṛta kaḻebara ||
+oṁ śrī kedāreśvara svāmine namaḥ prārthanā namaskārān samarpayāmi |
+en: Śiva, unchanging one, Maheśvara, accomplish for me what I desire. You have taken a body in order to give boons to your devotees.
+I offer the prayer and the bowing to Śrī Kedāreśvara Svāmin.
+tel: శివా, అవ్యయా, మహేశ్వరా — నా అభీష్టాన్ని సిద్ధింపజేయుము. భక్తులకు వరాలు ఇచ్చుటకే నీవు మూర్తిని ధరించావు.
+శ్రీ కేదారేశ్వర స్వామికి ప్రార్థనా నమస్కారాలు సమర్పిస్తున్నాను.
+hi: हे शिव, हे अव्यय, हे महेश्वर — मेरी अभीष्ट सिद्धि कीजिये। भक्तों को वर देने के लिये ही आपने शरीर धारण किया है।
+श्री केदारेश्वर स्वामी को प्रार्थना नमस्कार समर्पित करता हूँ।
+
+--- unit 42 | section: सूत्रग्रहणं तोरबन्धनम् ---
+vidhi:
+The taking up of the thread. The words `ఏకవింశద్దినే` name the day on which the twenty-one days are completed, and they are the reason this vrata must be kept with its duration stated.
+deva:
+सूत्रग्रहणं –
+केदार देवदेवेश भगवन्नंबिकापते |
+एकविंशद्दिने तस्मिन् सूत्रं गृह्णाम्यहं प्रभो ||
+सूत्रग्रहणं करिष्ये ||
+iast:
+sūtragrahaṇaṁ –
+kedāra devadeveśa bhagavannaṁbikāpate |
+ekaviṁśaddine tasmin sūtraṁ gṛhṇāmyahaṁ prabho ||
+sūtragrahaṇaṁ kariṣye ||
+en: Kedāra, god of gods, lord, husband of Ambikā — on this twenty-first day I take up the thread, O master.
+I shall now take up the thread.
+tel: కేదారా, దేవదేవేశా, భగవంతుడా, అంబికాపతీ — ఇరవై ఒకటవ ఈ దినమున సూత్రాన్ని గ్రహిస్తున్నాను, ప్రభూ.
+సూత్రగ్రహణం చేస్తాను.
+hi: हे केदार, हे देवदेवेश, हे भगवन्, हे अम्बिकापति — इस एकविंश दिन में मैं सूत्र ग्रहण करता हूँ, हे प्रभो।
+सूत्रग्रहण करता हूँ।
+
+--- unit 43 | section: सूत्रग्रहणं तोरबन्धनम् ---
+vidhi:
+The mantra for the binding of the toram. The thread of twenty-one knots, worshipped above, is bound upon the hand as these words are spoken.
+deva:
+तोरबंधन मंत्रं –
+आयुश्च विद्यां च तथा सुखं च
+सौभाग्यवृद्धिं कुरु देवदेव |
+संसार घोरांबुनिधौ निमग्नं
+मां रक्ष केदार नमो नमस्ते |
+तोरबंधनं करिष्ये ||
+iast:
+torabaṁdhana maṁtraṁ –
+āyuśca vidyāṁ ca tathā sukhaṁ ca
+saubhāgyavṛddhiṁ kuru devadeva |
+saṁsāra ghorāṁbunidhau nimagnaṁ
+māṁ rakṣa kedāra namo namaste |
+torabaṁdhanaṁ kariṣye ||
+en: God of gods, give me long life, and learning, and happiness, and increase of good fortune.
+I am sunk in the terrible ocean of birth and death. Kedāra, protect me. To you we bow again and again.
+I shall now bind the toram.
+tel: దేవదేవా, ఆయుష్షును, విద్యను, సుఖాన్ని, సౌభాగ్య వృద్ధిని నాకు ఇమ్ము.
+సంసారమనే ఘోరమైన సముద్రంలో మునిగిన నన్ను కేదారా, రక్షించు. నీకు మరల మరల నమస్కారం.
+తోరబంధనం చేస్తాను.
+hi: हे देवदेव, मुझे आयु, विद्या, सुख और सौभाग्य की वृद्धि दीजिये।
+संसार के घोर समुद्र में डूबे हुए मुझे, हे केदार, रक्षा कीजिये। आपको बारम्बार नमस्कार।
+तोरबन्धन करता हूँ।
+
+--- unit 44 | section: वायनदानं प्रतिमादानम् ---
+vidhi:
+The giving of the vāyana.
+deva:
+वायनदानं –
+केदारः प्रतिगृह्णातु केदारो वैददाति च |
+केदारस्तारकोभाभ्यां केदाराय नमो नमः ||
+वायनदानं करिष्यामि ||
+iast:
+vāyanadānaṁ –
+kedāraḥ pratigṛhṇātu kedāro vaidadāti ca |
+kedārastārakobhābhyāṁ kedārāya namo namaḥ ||
+vāyanadānaṁ kariṣyāmi ||
+en: May Kedāra receive it, and Kedāra indeed gives it. Kedāra is of the brightness of the stars. To Kedāra we bow again and again.
+I shall now give the vāyana.
+tel: కేదారుడు స్వీకరించుగాక. కేదారుడే ఇచ్చుచున్నాడు. కేదారుడు తారకల కాంతి గలవాడు. కేదారునికి మరల మరల నమస్కారం.
+వాయనదానం చేస్తాను.
+hi: केदार ग्रहण करें। केदार ही देते हैं। केदार तारकों की कान्ति वाले हैं। केदार को बारम्बार नमस्कार।
+वायनदान करता हूँ।
+
+--- unit 45 | section: वायनदानं प्रतिमादानम् ---
+vidhi:
+The giving of the image. The image of Kedāra that was worshipped is given away, and prosperity is asked for in return.
+deva:
+प्रतिमादानं –
+केदारः प्रतिमां यस्माद्राज्यं सौभाग्यवर्धिनी |
+तस्मादस्याः प्रदानेन ममाऽस्तु श्रीरचंचला |
+इति प्रतिमादानमंत्रः ||
+iast:
+pratimādānaṁ –
+kedāraḥ pratimāṁ yasmādrājyaṁ saubhāgyavardhinī |
+tasmādasyāḥ pradānena mamā'stu śrīracaṁcalā |
+iti pratimādānamaṁtraḥ ||
+en: Because the image of Kedāra increases sovereignty and good fortune, therefore by the giving of it may unwavering prosperity be mine.
+This is the mantra for the giving of the image.
+tel: కేదారుని ప్రతిమ రాజ్యాన్ని, సౌభాగ్యాన్ని వృద్ధి చేసేది. కావున దీనిని దానం చేయుట వలన నాకు చంచలము కాని సంపద కలుగుగాక.
+ఇది ప్రతిమాదాన మంత్రం.
+hi: केदार की प्रतिमा राज्य और सौभाग्य को बढ़ाने वाली है। अतः इसके दान से मुझे अचञ्चल श्री प्राप्त हो।
+यह प्रतिमादान मन्त्र है।
+
+--- unit 46 | section: व्रतकथा ---
+vidhi:
+The story is read next. The source prints it on its own page and directs the worshipper to it. It follows here.
+deva:
+व्रत कथ –
+श्री केदारेश्वर व्रत कथ चू. ||
+iast:
+vrata katha –
+śrī kedāreśvara vrata katha cū. ||
+en: The story of the vrata. See the story of the Śrī Kedāreśvara vrata.
+tel: వ్రత కథ. శ్రీ కేదారేశ్వర వ్రత కథ చూడండి.
+hi: व्रत कथा। श्री केदारेश्वर व्रत कथा देखिये।
+
+--- unit 47 | section: व्रतकथा ---
+vidhi:
+The story begins. Sūta tells it to Śaunaka and the other sages. He states at once who may keep this vrata and what it gives. **The story is the source's own Telugu prose, and no Sanskrit of it was written here.** The *Āru Vratālu* print does carry a Sanskrit kathā, but its scan could not be read with confidence; see the recension note.
+deva:
+व्रत कथा प्रारंभमु
+iast:
+vrata kathā prāraṁbhamu
+en: Sūta, the teller of the Purāṇas, looked upon Śaunaka and the other great sages and spoke to them. "Best of sages! There is a vrata called the Kedāreśvara vrata. It gives people every good fortune, and by it Pārvatī Devī obtained half the body of Sāmbaśiva. I shall explain the method of that vrata. Listen. Brāhmaṇas, kṣatriyas, vaiśyas and śūdras may all keep it. Those who keep this vrata twenty-one times enjoy every kind of wealth, and afterwards obtain union with Śiva."
+tel: సూత పౌరాణికుడు శౌనకుడు మొదలైన మహర్షులను చూచి ఇట్లనెను. "ఋషి శ్రేష్ఠులారా! మానవులకు సర్వ సౌభాగ్యాలను కలిగించేదియు, పార్వతీ దేవి దీని చేత సాంబశివుని శరీరార్ధమును పొందినదియు అయిన కేదారేశ్వర వ్రతము అనేది ఒకటి కలదు. ఆ వ్రత విధానాన్ని వివరిస్తాను, వినండి. దీనిని బ్రాహ్మణ, క్షత్రియ, వైశ్య, శూద్రులు అందరూ ఆచరించవచ్చును. ఈ వ్రతమును ఇరువది ఒక్క మారులు ఆచరించేవారు సకల సంపదలను అనుభవించి, పిదప శివసాయుజ్యమును పొందుతారు."
+hi: सूत पौराणिक ने शौनक आदि महर्षियों को देखकर कहा — "हे ऋषिश्रेष्ठो! मनुष्यों को समस्त सौभाग्य देने वाला, तथा जिससे पार्वती देवी ने साम्बशिव के शरीर का आधा भाग प्राप्त किया, ऐसा केदारेश्वर व्रत नामक एक व्रत है। उसकी विधि मैं बताता हूँ, सुनिये। इसे ब्राह्मण, क्षत्रिय, वैश्य और शूद्र सभी कर सकते हैं। जो इस व्रत को इक्कीस बार करते हैं, वे समस्त सम्पदाओं को भोगकर अन्त में शिवसायुज्य प्राप्त करते हैं।"
+
+--- unit 48 | section: व्रतकथा ---
+vidhi:
+Kailāsa is described, and the assembly of Parameśvara upon it.
+deva:
+व्रत कथा प्रारंभमु
+iast:
+vrata kathā prāraṁbhamu
+en: "Best of sages! I shall explain the greatness of this vrata. Listen. In the north-eastern part of the world there stands a great mountain called Kailāsa. Its peaks are set with every kind of jewel, and they are like the clouds of autumn with lightning among them. It is covered with creepers of many kinds, with flowers and fruits of many kinds, with birds of many kinds, and with many mountain streams. Gardens shine upon it with sāla and tamāla, mango and hintāla, vakuḷa and aśoka, sandal and devadāru, coconut and mango, jackfruit, nāga, punnāga and campaka, and with trees of many other kinds. It gives every good thing, and all people bow to it.
+Upon the beautiful peak of that mountain, Parameśvara, the maker of the world, sat surrounded by the hosts of the Pramathas, together with Bhavānī. Yogins of great dignity, endowed with the six kinds of greatness, and Siddhas, Gandharvas, Kinnaras and Kimpuruṣas served him. All the gods and the company of sages bowed to him. He was gracious, and one day he gave his sight to Brahmā and to all the gods.
+Then the sun, fire and the wind, the moon with the stars, Indra and the other gods, Vasiṣṭha and the other great sages, Rambhā and the other apsarases, Brāhmī and the other seven mothers, the commander of the army, Gaṇapati, and Nandi, Bhṛṅgi and the other Pramatha hosts who bear his own form, all stood about him and served him. In that wonderful assembly of the lord of Bhavānī, Nārada and the other singers of the gods took his leave and sang. While that pleasing and sweet singing went on, Ghṛtācī, Menakā and the others danced to the vīṇā and to the four kinds of instruments, keeping time.
+Then Rambhā, the most beautiful of those servants of the gods, danced so that the hearts of all the hosts of the gods were delighted."
+tel: "ఓ ముని శ్రేష్ఠులారా! ఈ వ్రత మహాత్మ్యాన్ని వివరిస్తాను, వినండి. భూలోకంలో ఈశాన్య భాగంలో కైలాసం అనే ఒక గొప్ప పర్వతం కలదు. మెరుపుల గుంపులతో కూడిన శరత్కాల మేఘాల వంటి, నానా మణులతో విచిత్రమైన శిఖరాలు దానికి కలవు. పలు రకాల లతలతోను, బహు విధములైన పుష్ప ఫలాలతోను, నానా విధములైన పక్షులతోను, అనేకమైన కొండ కాలువలతోను అది వ్యాపించి ఉన్నది. సాల, తమాల, రసాల, హింతాల, వకుళ, అశోక, చందన, దేవదారు, నారికేళ, ఆమ్ర, పనస, నాగ, పున్నాగ, చంపక మొదలైన వృక్షాలతోను, ఇతర తరువులతోను ప్రకాశించే ఉద్యాన వనాలు దానిపై ఉన్నాయి. అది నిఖిల కల్యాణాలను ఇచ్చేది, సర్వ జనులచేత నమస్కరింపబడేది.
+ఆ పర్వత శిఖరమునందు జగత్కర్త అయిన పరమేశ్వరుడు ప్రమథ గణాలచేత పరివేష్టింపబడి, భవానీ సమేతుడై కూర్చుని ఉండెను. షడ్గుణైశ్వర్య సంపన్నులైన మహామహనీయులైన యోగులచేతను, సిద్ధ గంధర్వ కిన్నర కింపురుషులచేతను ఆయన సేవింపబడెను. సకల దేవముని బృందాలు నమస్కరించగా ఆయన ప్రసన్నుడై ఒక సమయమున చతుర్ముఖుడు మొదలైన దేవతలందరికి దర్శనమిచ్చెను.
+అప్పుడు సూర్యుడు, అగ్ని, వాయువు, నక్షత్రాలతో కూడిన చంద్రుడు, ఇంద్రుడు మొదలైన దేవతలు, వశిష్ఠుడు మొదలైన మహర్షులు, రంభ మొదలైన అప్సరసలు, బ్రాహ్మి మొదలైన సప్త మాతృకలు, సేనాని, గణపతి, ఆయన రూపమునే పొందిన నంది భృంగి మొదలైన ప్రమథ గణాలు ఆయనను పరివేష్టించి కొలుచుచుండిరి. అట్టి భవానీ వల్లభుని అద్భుతమైన సభలో నారదుడు మొదలైన దేవ గాయకులు స్వామి అనుజ్ఞ పొంది గానం చేసిరి. ఆ రమణీయమైన శ్రావ్యమైన గానం సాగుతుండగా ఘృతాచి మేనక మొదలైనవారు వీణ మొదలైన చతుర్విధ వాద్యాలతో లయతో కూడిన నృత్యం చేసిరి.
+అప్పుడు ఆ దేవ దాసీలలో మిక్కిలి సొగసైన రంభ, సకల సుర బృందాల హృదయాలు రంజిల్లునట్లు నాట్యం చేసెను."
+hi: "हे मुनिश्रेष्ठो! इस व्रत का माहात्म्य कहता हूँ, सुनिये। भूलोक के ईशान भाग में कैलास नामक एक महान् पर्वत है। बिजली की पंक्तियों से युक्त शरत्कालीन मेघों के समान, नाना मणियों से विचित्र उसके शिखर हैं। वह अनेक लताओं से, बहुविध पुष्प-फलों से, नाना पक्षियों से और अनेक पर्वतीय झरनों से व्याप्त है। साल, तमाल, रसाल, हिन्ताल, वकुल, अशोक, चन्दन, देवदारु, नारिकेल, आम्र, पनस, नाग, पुन्नाग और चम्पक आदि वृक्षों से तथा अन्य तरुओं से शोभित उद्यान वन उस पर हैं। वह समस्त कल्याण देने वाला और सब जनों से नमस्कृत है।
+उस पर्वत के शिखर पर जगत्कर्ता परमेश्वर प्रमथगणों से घिरे हुए, भवानी सहित विराजमान थे। षड्गुणैश्वर्य सम्पन्न महान् योगियों से तथा सिद्ध, गन्धर्व, किन्नर और किम्पुरुषों से वे सेवित थे। समस्त देव और मुनि समूह नमस्कार करते थे। वे प्रसन्न होकर एक समय ब्रह्मा आदि सब देवताओं को दर्शन देने लगे।
+तब सूर्य, अग्नि, वायु, नक्षत्रों सहित चन्द्र, इन्द्र आदि देवता, वसिष्ठ आदि महर्षि, रम्भा आदि अप्सराएँ, ब्राह्मी आदि सप्त मातृकाएँ, सेनानी, गणपति तथा उनका ही रूप धारण किये नन्दी, भृङ्गी आदि प्रमथगण उन्हें घेरकर सेवा करते थे। भवानीवल्लभ की उस अद्भुत सभा में नारद आदि देवगायकों ने स्वामी की अनुज्ञा लेकर गान किया। उस रमणीय और श्रवणसुखद गान के चलते हुए घृताची और मेनका आदि ने वीणा आदि चतुर्विध वाद्यों के साथ लययुक्त नृत्य किया।
+तब उन देवदासियों में सबसे सुन्दरी रम्भा ने ऐसा नृत्य किया कि समस्त देवसमूहों के हृदय प्रसन्न हो गये।"
+
+--- unit 49 | section: व्रतकथा ---
+vidhi:
+Bhṛṅgiriṭi dances, and bows to Īśvara alone. Pārvatī asks why, and on hearing the answer she draws back her own power from her husband and leaves Kailāsa.
+deva:
+व्रत कथा प्रारंभमु
+iast:
+vrata kathā prāraṁbhamu
+en: "At that time a great devotee named Bhṛṅgiriṭi danced a comic dance before the lord, so that the lord might be pleased. All the gods laughed greatly at it. The caves of the mountain were filled with the sound of that laughter.
+While the laughter was still spreading, Śaṅkara, the lord of all, looked upon Bhṛṅgiriṭi and said that the dance he had made gave great joy, and he was pleased and showed him grace. Having received the grace of Śiva, Bhṛṅgiriṭi was glad. He was honoured by all the wise ones. With a settled mind and with humility he passed by Pārvatī Devī, and walked around Īśvara alone and bowed to him alone. Then Pārvatī smiled and looked at her husband Parameśvara and asked, \"Lord! Why does this Bhṛṅgiriṭi leave me aside and walk around you alone? I wish to hear it. Tell me.\" Sadāśiva said, \"Dear one! Listen. For yogins who know the highest truth there is no purpose to be gained from you. That is why he bowed to me alone.\"
+At those words Parameśvarī was greatly ashamed. She drew back into herself the power of hers that was in her husband, and the lord was left with only skin and bone. The goddess herself became without sap and without form. Then the goddess was angry. Though the gods consoled her, she left Kailāsa and went to perform austerity. She entered the āśrama of Gautama, which is served by lions, śarabhas, tigers, elephants and deer, where serpents and eagles and all creatures live together with their old enmity given up, which is thick with trees and creepers and shrubs of many kinds, which is served by the best of sages, and which gives everything that is desired."
+tel: "ఆ సమయంలో భృంగిరిటి అనే భక్త శ్రేష్ఠుడు స్వామి సన్నిధిలో ఆయనకు ప్రీతి కలుగునట్లు వికట నాట్యం చేయగా, సకల దేవతలకు మిక్కుటమైన హాస్యం కలిగెను. ఆ ఆశ్చర్యకరమైన నవ్వుల చేత పర్వత గుహలు నిండునట్లు గొప్ప కలకల ధ్వని కలిగెను.
+ఇట్లు హాస్యం వ్యాపిస్తుండగా సర్వేశ్వరుడైన శంకరుడు ఆ భృంగిరిటిని చూచి, నీచేత మిగుల హర్షాన్ని పెంచే నాట్యం చేయబడినదని సెలవిచ్చి, సంతోషించి ఆ భక్తుని అనుగ్రహించెను. శివానుగ్రహం కలుగుటచేత భృంగిరిటి ప్రీతుడై, సకల విబుధులచేత గౌరవింపబడి, సమాహిత చిత్తుడై, వినయంతో కూడి, పార్వతీ దేవిని వదలి ఈశ్వరునికి మాత్రమే ప్రదక్షిణ నమస్కారాలు చేసెను. అప్పుడు పార్వతి చిరునవ్వుతో తన పతి అయిన పరమేశ్వరుని చూచి, \"ఓ స్వామీ! ఈ భృంగిరిటి నన్ను విడిచి మీకు మాత్రమే ప్రదక్షిణం చేయుటకు కారణమేమి? వినవలెనని ఉన్నది. ఆనతీయండి\" అని వేడెను. అప్పుడు సదాశివుడు, \"ఓ ప్రియురాలా! చెప్పెద, వినుము. పరమార్థాన్ని ఎరిగిన యోగులకు నీ వలన ప్రయోజనం లేకపోవుట చేత అతడు నాకు మాత్రమే నమస్కరించెను\" అని చెప్పెను.
+ఆ మాటలకు పరమేశ్వరి మిగుల సిగ్గు పొంది, భర్తయందున్న తన శక్తిని ఆకర్షించగా ఆ స్వామి చర్మము ఎముకలు మాత్రమే మిగిలినవాడాయెను. ఆ దేవియు సారహీనురాలై వికటురాలాయెను. పిదప ఆ దేవి కోపించి, దేవతలచేత ఊరడింపబడినను కైలాసమును వదలి తపస్సు చేయుటకు వెళ్ళెను. సింహ శరభ శార్దూల గజ మృగాదులచేత సేవింపబడేదియు, నిత్య వైరాన్ని విడిచిన పన్నగ గరుడాది సకల జంతువులతో నిండినదియు, నానా విధ వృక్ష లతా గుల్మాదులతో నిండినదియు, ఋషి శ్రేష్ఠులచేత సేవింపబడేదియు, సర్వాభీష్టాలను ఇచ్చేదియు అయిన గౌతమాశ్రమాన్ని ఆమె ప్రవేశించెను."
+hi: "उस समय भृङ्गिरिटि नामक एक भक्तश्रेष्ठ ने स्वामी के सम्मुख उन्हें प्रसन्न करने के लिये विकट नृत्य किया, जिससे समस्त देवताओं को बहुत हास्य हुआ। उस आश्चर्यजनक हास्य से पर्वत की गुफाएँ भर गयीं और महान् कलकल ध्वनि हुई।
+हास्य के फैलते हुए सर्वेश्वर शङ्कर ने भृङ्गिरिटि को देखकर कहा कि तुमने बहुत हर्ष बढ़ाने वाला नृत्य किया, और प्रसन्न होकर उस भक्त पर अनुग्रह किया। शिव का अनुग्रह पाकर भृङ्गिरिटि प्रसन्न हुआ। समस्त विबुधों से सम्मानित होकर, समाहित चित्त और विनय से युक्त होकर, उसने पार्वती देवी को छोड़कर केवल ईश्वर की प्रदक्षिणा और नमस्कार किया। तब पार्वती ने मुस्कुराकर अपने पति परमेश्वर को देखकर पूछा — \"हे स्वामी! यह भृङ्गिरिटि मुझे छोड़कर केवल आपकी ही प्रदक्षिणा क्यों करता है? सुनने की इच्छा है, बताइये।\" तब सदाशिव ने कहा — \"हे प्रिये! सुनो। परमार्थ को जानने वाले योगियों को तुमसे कोई प्रयोजन नहीं, इसीलिये उसने केवल मुझे नमस्कार किया।\"
+उन वचनों से परमेश्वरी को बहुत लज्जा हुई। उन्होंने पति में स्थित अपनी शक्ति को खींच लिया, जिससे स्वामी केवल त्वचा और अस्थि मात्र रह गये। देवी स्वयं भी सारहीन और विकट हो गयीं। फिर देवी क्रुद्ध हुईं। देवताओं के समझाने पर भी वे कैलास छोड़कर तप करने चली गयीं। सिंह, शरभ, शार्दूल, गज और मृग आदि से सेवित, नित्य वैर त्यागे हुए सर्प और गरुड आदि समस्त जीवों से भरे हुए, नाना वृक्ष-लता-गुल्मों से युक्त, ऋषिश्रेष्ठों से सेवित और समस्त अभीष्ट देने वाले गौतम के आश्रम में उन्होंने प्रवेश किया।"
+
+--- unit 50 | section: व्रतकथा ---
+vidhi:
+Gautama finds the goddess in his āśrama, and teaches her the vrata. **The rule of the rite is given here: it begins on the eighth day of the bright fortnight of Bhādrapada and is kept every day until the new moon, which is twenty-one days. Twenty-one threads are bound on the hand, twenty-one strands wrap the pot, twenty-one brāhmaṇas are called, and the food offered is of twenty-one kinds.**
+deva:
+व्रत कथा प्रारंभमु
+iast:
+vrata kathā prāraṁbhamu
+en: "Gautama had gathered fuel sticks, kuśa grass and fruits from the forest, fit for the offering, and was returning. He saw a light shining in the part where his āśrama stood. He wondered why the āśrama of a sage should shine in this way, and thinking on the reason he entered it. He saw there Maheśvarī, whose eyes were like the petals of a lotus, and who was adorned. He honoured her and asked, \"Revered Bhagavatī! What is the reason for your coming here?\" The goddess told that sage of matted hair the cause of her sorrow, bowed to him and said, \"Lord of sages! Teach me that vrata which is approved by yogins, and by the keeping of which half the body of Śaṅkara will be mine.\" The great sage looked through all the śāstras and the Purāṇas, and taught her the excellent vrata named Śrīmat Kedāra, which gives what is desired. The goddess then asked him to explain the order in which it is to be kept, and he began to speak.
+\"Mother! On the eighth day of the bright fortnight of Bhādrapada, with a pure mind, bind upon your hand the pratisara made of twenty-one auspicious threads. Worship it, and fast on that day. On the next day give food to brāhmaṇas. From that day until the new moon keep this vrata in this way, and worship the lord Śrīmat Kedāra every day. Further, in a clean place in the house, set a full pot upon a heap of grain. Wrap it with twenty-one threads, cover it with silk cloth, and place in it the nine jewels, or gold according to your means. Worship it with sandal, flowers and unbroken grains. Call twenty-one brāhmaṇas, wash their feet and perform the other acts, and seat them. There establish the lord Kedāra. Offer sandal, aloe, musk and vermilion, śrīgandha, flowers of many kinds, betel leaves and garments, and make the offering. Worship him with incense and lamp as the śāstra directs. Offer as food twenty-one things to be sucked and licked, and plantain, jackfruit and mango fruits. Give betel leaves. Praise him well. Give the brāhmaṇas the fee according to your means. Keep the vrata properly. If Īśvara is pleased in his mind, that lord whose banner is the bull will be well pleased and will give you the boon you ask.\" So he said, and Kātyāyanī answered that it would be so, and kept it."
+tel: "గౌతముడు అడవి నుండి హోమయోగ్యమైన సమిధలను, దర్భలను, ఫలాలను సేకరించుకుని వచ్చుచుండగా, తన ఆశ్రమ భాగమున వెలుగుచున్న ప్రకాశాన్ని చూచెను. ఋష్యాశ్రమం ఇట్లు శోభిల్లుచున్నదేమి అని ఆశ్చర్యపడి, ఆ కారణాన్ని ఆలోచిస్తూ ఆశ్రమంలో ప్రవేశించెను. తామర రేకుల వంటి కన్నులు కలిగి అలంకరింపబడి ఉన్న ఆ మహేశ్వరిని చూచి, \"పూజ్యురాలైన ఓ భగవతీ! నీవు ఇచ్చటికి వచ్చుటకు కారణమేమి?\" అని అడిగెను. ఆ దేవి ఆ జడధారికి తన విషాద కారణాన్ని చెప్పి నమస్కరించి, \"ఓ మునీశ్వరా! ఏ వ్రతము యోగులకు సమ్మతమైనదో, ఏ వ్రతాచరణం చేత శంకరుని దేహార్ధము నాకు లభించునో, అటువంటి వ్రతాన్ని ఉపదేశించు\" అనెను. ఆ మహర్షి సకల శాస్త్ర పురాణాలను పరిశీలించి, కోరిన అర్థాన్ని ఇచ్చే శ్రీమత్కేదారము అనే ఉత్తమ వ్రతాన్ని ఆచరించుమని ఉపదేశించెను. ఆ దేవి ఆ వ్రతానుష్ఠాన క్రమాన్ని చెప్పమని వేడగా ఆయన ఇట్లు చెప్పసాగెను.
+\"అమ్మా! భాద్రపద శుక్ల అష్టమి నాడు శుద్ధ మనస్సు కలదానవై, మంగళకరమైన ఇరువది ఒక్క తంతువులతో చేసిన ప్రతిసరమును హస్తమునందు ధరించి, పూజించి, ఆ దినమున ఉపవాసము చేసి, మరునాడు బ్రాహ్మణ భోజనము చేయించి, అది మొదలు అమావాస్య వరకు ఈ వ్రతమును ఇట్లు సలుపుచు ప్రతి దినము శ్రీమత్కేదార దేవుని ఆరాధించవలెను. మరియు ఇంటియందు శుభ్రమైన ఒక ప్రదేశమున ధాన్యరాశిలో పూర్ణ కుంభమును ఉంచి, ఇరువది ఒక్క సూత్రములచేత చుట్టి, పట్టు వస్త్రములచేత కప్పి, నవరత్నములు గాని శక్తి కొలది సువర్ణమును గాని ఉంచి, గంధ పుష్ప అక్షతలచేత అర్చించి, ఇరువది ఒక్క మంది బ్రాహ్మణులను పిలిపించి, పాద ప్రక్షాళనాది కృత్యములు ఆచరించి కూర్చుండ నియోగించి, అచట ఆ కేదార దేవుని ప్రతిష్ఠింపజేసి, చందన అగరు కస్తూరి కుంకుమాదులను, శ్రీగంధమును, నానా విధ పుష్పములను, తాంబూలములను, వస్త్రములను ఉంచి నివేదన చేసి, శాస్త్ర ప్రకారం ధూప దీపాదులచేత అర్చించి, ఇరువది ఒక్క సంఖ్య గల చోష్య లేహ్యాదులను, అరటి పనస మామిడి ఫలములను నైవేద్యము చేసి, తాంబూలములు ఇచ్చి, చక్కగా స్తోత్రము చేసి, బ్రాహ్మణులకు యథాశక్తి దక్షిణలు ఇచ్చి, వ్రతమును చక్కగా అనుష్ఠించి ఈశ్వరునికి మనస్సంతుష్టి కలిగించినయెడల, ఆ వృషభధ్వజుడు ప్రీతుడై నీవు కోరిన వరములను ఇవ్వగలడు\" అని చెప్పగా, ఆ కాత్యాయని అటులే అగుగాక అని ఆచరించెను."
+hi: "गौतम वन से होम योग्य समिधा, कुश और फल एकत्र करके लौट रहे थे। उन्होंने अपने आश्रम के भाग में प्रकाश देखा। ऋषि का आश्रम इस प्रकार क्यों शोभित हो रहा है, यह सोचकर आश्चर्य से आश्रम में प्रवेश किया। वहाँ कमलदल के समान नेत्रों वाली, अलङ्कृत महेश्वरी को देखकर उन्होंने पूजा करके पूछा — \"हे पूज्य भगवती! आपके यहाँ आने का कारण क्या है?\" देवी ने उस जटाधारी मुनि से अपने विषाद का कारण कहा, नमस्कार किया और बोलीं — \"हे मुनीश्वर! जो व्रत योगियों को सम्मत है और जिसके आचरण से मुझे शङ्कर के देह का आधा भाग प्राप्त हो, वह व्रत मुझे बताइये।\" उस महर्षि ने समस्त शास्त्र और पुराणों का अवलोकन करके, अभीष्ट देने वाला श्रीमत्केदार नामक उत्तम व्रत करने का उपदेश दिया। देवी ने उस व्रत की विधि पूछी, तब वे कहने लगे।
+\"हे माता! भाद्रपद शुक्ल अष्टमी को शुद्ध मन से, इक्कीस माङ्गलिक तन्तुओं से बने प्रतिसर को हाथ में धारण करके, उसकी पूजा करके, उस दिन उपवास करके, दूसरे दिन ब्राह्मण भोजन कराकर, उस दिन से अमावास्या तक इस व्रत को इसी प्रकार करते हुए प्रतिदिन श्रीमत्केदार देव की आराधना करनी चाहिये। और घर में किसी स्वच्छ स्थान पर धान्यराशि पर पूर्णकुम्भ रखकर, इक्कीस सूत्रों से लपेटकर, रेशमी वस्त्र से ढककर, उसमें नवरत्न अथवा यथाशक्ति सुवर्ण रखकर, गन्ध, पुष्प और अक्षत से अर्चना करके, इक्कीस ब्राह्मणों को बुलाकर, पादप्रक्षालन आदि करके बैठाकर, वहाँ केदार देव की प्रतिष्ठा कराकर, चन्दन, अगरु, कस्तूरी और कुङ्कुम आदि, श्रीगन्ध, नाना पुष्प, ताम्बूल और वस्त्र रखकर निवेदन करके, शास्त्रानुसार धूप-दीप आदि से अर्चना करके, इक्कीस संख्या वाले चोष्य और लेह्य आदि तथा कदली, पनस और आम्र फलों का नैवेद्य करके, ताम्बूल देकर, भलीभाँति स्तोत्र करके, ब्राह्मणों को यथाशक्ति दक्षिणा देकर, व्रत का भलीभाँति अनुष्ठान करके ईश्वर को मन से सन्तुष्ट किया जाये, तो वे वृषभध्वज प्रसन्न होकर तुम्हारा माँगा हुआ वर देंगे।\" ऐसा कहने पर कात्यायनी ने वैसा ही हो कहकर व्रत किया।"
+
+--- unit 51 | section: व्रतकथा ---
+vidhi:
+Śiva gives half his body to the goddess, and at her asking grants the vrata to all. Citrāṅgada learns it from Nandikeśvara and teaches it to king Vajradanta.
+deva:
+व्रत कथा प्रारंभमु
+iast:
+vrata kathā prāraṁbhamu
+en: "Then Paramaśiva was pleased in his heart. He came there with the hosts of the gods and said, \"I give you half of my body,\" and gave it. Pārvatī Devī was filled with joy. Having obtained half the body of Śaṅkara, she wished to show grace to the worlds, and said to her husband Paramaśiva, \"If you grant that those who keep this vrata shall obtain all that they desire, then everyone will keep it.\" Śiva agreed that it should be so, and with the company of the gods he became unseen in that place.
+After some time a Gandharva named Citrāṅgada, who was devoted to Śiva, learned the order of this vrata from Nandikeśvara. He wished to go to the world of men and teach it to them. He reached the city of Ujjayinī and taught the vrata to a king named Vajradanta. The king kept the vrata as the kalpa lays down, and became emperor of the whole earth."
+tel: "అప్పుడు పరమశివుడు సంతుష్టాంతరంగుడై, దేవగణాలతో అచటికి వచ్చి, \"నా శరీరార్ధమును నీకు ఇచ్చెదను\" అని ఇచ్చెను. ఆ పార్వతీ దేవి ఉప్పొంగి, శంకరుని దేహార్ధమును పొంది, లోకానుగ్రహము చేయదలచి, తన పతి అయిన పరమశివునితో, \"ఈ వ్రతమును ఆచరించువారలకు సకల అభీష్ట సిద్ధి కలుగునట్లు అనుగ్రహించితిరేని ఎల్లవారు ఆచరింతురు\" అనెను. అటులే అగుగాక అని శివుడు అంగీకరించి, సుర సంఘములతో కూడ అచ్చట అంతర్హితుడాయెను.
+మరి కొంత కాలమునకు శివభక్తి కలవాడైన చిత్రాంగదుడు అనే గంధర్వుడు నందికేశ్వరుని వలన ఆ వ్రత చర్యా క్రమమును ఎరిగి, మనుష్య లోకమునకు వెళ్ళి వారలకు ఉపదేశింపవలెనని ఇచ్ఛ కలవాడై, ఉజ్జయినీ పట్టణమును చేరి, వజ్రదంతుడు అనే రాజునకు ఆ వ్రతమును ఉపదేశింపగా, అతడు ఆ వ్రతమును కల్పోక్త ప్రకారము ఆచరించి సార్వభౌముడాయెను."
+hi: "तब परमशिव अन्तःकरण से सन्तुष्ट हुए। वे देवगणों सहित वहाँ आये और कहा — \"मैं तुम्हें अपने शरीर का आधा भाग देता हूँ\", और दे दिया। पार्वती देवी अत्यन्त प्रसन्न हुईं। शङ्कर के देह का आधा भाग पाकर, लोकों पर अनुग्रह करने की इच्छा से उन्होंने अपने पति परमशिव से कहा — \"यदि आप अनुग्रह करें कि इस व्रत को करने वालों को समस्त अभीष्ट सिद्धि हो, तो सब लोग इसे करेंगे।\" शिव ने वैसा ही हो कहकर स्वीकार किया और देवसमूहों सहित वहीं अन्तर्धान हो गये।
+कुछ काल के पश्चात् शिवभक्त चित्राङ्गद नामक एक गन्धर्व ने नन्दिकेश्वर से इस व्रत की विधि जानी। वह मनुष्यलोक में जाकर लोगों को उपदेश देने की इच्छा से उज्जयिनी नगरी पहुँचा और वज्रदन्त नामक राजा को वह व्रत बताया। राजा ने कल्पोक्त रीति से वह व्रत करके सार्वभौम पद प्राप्त किया।"
+
+--- unit 52 | section: व्रतकथा ---
+vidhi:
+Puṇyavatī and Bhāgyavatī, the two daughters of a poor vaiśya, keep the vrata with their father's leave and receive what they need from Īśvara himself.
+deva:
+व्रत कथा प्रारंभमु
+iast:
+vrata kathā prāraṁbhamu
+en: "After some more time, a vaiśya of that city had two daughters, named Puṇyavatī and Bhāgyavatī. Both of them went to their father and asked his leave to keep the Kedāra vrata. He said, \"Children! I am very poor. Give up that thought.\" They said, \"Father! Your leave is the greatest wealth to us. Give it.\" So they took his leave, sat down beneath a banyan tree, bound on the pratisara, and worshipped as the rule directs. Īśvara was pleased with their devotion and gave them the materials they needed.
+Because they kept the vrata well, Mahādeva was pleased. He gave those girls long life, health and wealth, and forms of divine beauty, and became unseen.
+Afterwards, by the greatness of that vrata, the king who ruled the city of Ujjayinī married the girl Puṇyavatī, and the Cōḷa king married the girl Bhāgyavatī. Through this the vaiśya obtained abundance of wealth, and with the riches of a kingdom and with sons he lived in happiness."
+tel: "మరికొంత కాలమునకు ఆ పట్టణమున ఉన్న ఒక వైశ్యునకు పుణ్యవతి, భాగ్యవతి అనే ఇద్దరు కుమార్తెలు కలిగిరి. వారిద్దరూ తండ్రి దగ్గరకు పోయి కేదార వ్రతమును ఆచరించుటకు అనుమతి ఇమ్మని వేడగా, అతడు \"అమ్మా! నేను మిగుల దరిద్రుడను. మీరు ఆ తలంపు మానుడు\" అనెను. \"ఓ తండ్రీ! నీ అనుజ్ఞయే మాకు పరమ ధనము, కావున ఆనతిమ్ము\" అని సెలవు పుచ్చుకుని, ఒక వటవృక్షము వద్ద కూర్చుని, ప్రతిసరమును కట్టుకుని యథావిధిగా పూజింపగా, వారల భక్తికి మెచ్చి ఈశ్వరుడు కావలసిన సామగ్రిని ఇచ్చెను.
+వారు చక్కగా వ్రతమును ఆచరించుట వలన ఆ మహాదేవుడు ప్రీతుడై, ఆ కన్యలకు ఆయురారోగ్య ఐశ్వర్యములను, దివ్య రూపములను ఇచ్చి అంతర్ధానుడాయెను.
+పిమ్మట ఆ వ్రత మహాత్మ్యము వలన ఉజ్జయినీ పట్టణమును ఏలుచున్న రాజు పుణ్యవతి అనే కన్యను, చోళ భూపాలుడు భాగ్యవతి అనే కన్యను పాణిగ్రహణము చేసుకొనిరి. అందువలన ఆ వైశ్యుడు ధన సమృద్ధి కలిగి, సామ్రాజ్య సంపదలను, పుత్రులను పొంది సుఖముగా ఉండెను."
+hi: "कुछ और काल के पश्चात् उस नगर के एक वैश्य के पुण्यवती और भाग्यवती नामक दो कन्याएँ हुईं। दोनों ने पिता के पास जाकर केदार व्रत करने की अनुमति माँगी। उन्होंने कहा — \"पुत्रियो! मैं अत्यन्त दरिद्र हूँ। तुम यह विचार छोड़ दो।\" उन्होंने कहा — \"हे पिता! आपकी आज्ञा ही हमारे लिये परम धन है, आज्ञा दीजिये।\" आज्ञा लेकर वे एक वटवृक्ष के नीचे बैठीं, प्रतिसर बाँधा और यथाविधि पूजा की। उनकी भक्ति से प्रसन्न होकर ईश्वर ने आवश्यक सामग्री दी।
+उनके भलीभाँति व्रत करने से महादेव प्रसन्न हुए। उन्होंने उन कन्याओं को आयु, आरोग्य, ऐश्वर्य और दिव्य रूप देकर अन्तर्धान हो गये।
+इसके पश्चात् उस व्रत के माहात्म्य से उज्जयिनी नगरी के राजा ने पुण्यवती से और चोल भूपाल ने भाग्यवती से विवाह किया। इससे वह वैश्य धन-सम्पन्न होकर, साम्राज्य सम्पदा और पुत्रों को पाकर सुख से रहने लगा।"
+
+--- unit 53 | section: व्रतकथा ---
+vidhi:
+Bhāgyavatī gives up the vrata and loses everything. Her son goes twice to her sister for money, and twice it is taken from him on the road, until Īśvara himself tells him why. She keeps the vrata again, and all is restored.
+deva:
+व्रत कथा प्रारंभमु
+iast:
+vrata kathā prāraṁbhamu
+en: "Some days later the second daughter, Bhāgyavatī, was made proud by her wealth, and after a time she gave up that vrata. Because of this she lost her good fortune. She was sent away by her husband along with her son, wandered in the forest, grew weary of wandering, and reached the house of a hunter. There she looked at her son and said, \"Child! My elder sister Puṇyavatī has been married by the king of the city of Ujjayinī. Go there, tell her of our state, take enough money to live upon, and come back quickly.\" He went to that city, told his mother's elder sister of his mother's hard suffering, and Puṇyavatī gave a large sum of money into his hand.
+As he was bringing that money, the lord himself, unseen on the road, took it away. He went again to his mother's elder sister, told her what had happened, took some more money and came back. That money too was taken away. As he stood distressed, Īśvara, remaining unseen, said, \"Child! For those who have abandoned the vrata, this money cannot be held.\" Hearing those words he was astonished. The boy went once more to the city of Ujjayinī as before, and told his mother's elder sister what Īśvara had said. Puṇyavatī thought about it, had her son keep the Kedāra vrata, told him to say that her sister also should keep the vrata, gave him money and sent him away.
+As he set out and came along the road, all the money that had been lost earlier came into his hands without any effort. He was glad, took all of it, and as he was entering the city of Kāñcī his father came to meet him with an army of the four kinds. He took the boy and his mother with him and went to his own city. There the prince lived in happiness with his mother and his father.
+After that his mother Bhāgyavatī and his father the Cōḷa king kept this vrata from that time onward, and enjoyed every kind of wealth without a break."
+tel: "కొన్నాళ్ళ పిదప రెండవది అయిన భాగ్యవతి ఐశ్వర్య మదముచేత మోహితురాలై, కొంత కాలమునకు ఆ వ్రతమును విడిచెను. అందువలన భాగ్యహీనురాలై, పుత్రునితో పాటు భర్తచేత వెడలగొట్టబడి, అడవిలో తిరిగి, సంచారముచేత ఖిన్నురాలై ఒక బోయవాని ఇల్లు చేరెను. అచ్చట పుత్రుని చూచి, \"నాయనా! నా అక్క అయిన పుణ్యవతిని ఉజ్జయినీ పురపు రాజు వివాహమాడి ఉన్నాడు. నీవు అచ్చటికి పోయి మన సంగతిని తెలిపి, బ్రతుకు తెరువునకై తగినంత ధనమును తీసుకుని శీఘ్రముగా రమ్ము\" అనగా, అతడు ఆ పట్టణమునకు పోయి పెద్దతల్లితో తన తల్లి యొక్క దుస్సహమైన కష్టమును తెలుపగా, ఆ పుణ్యవతి అతని చేతికి విస్తారముగా ధనమును ఇచ్చెను.
+అతడు ఆ ధనమును తీసుకుని వచ్చుచుండగా, మార్గమున అదృశ్య రూపుడైన ఆ దేవుని వలన ఆ ధనము అపహరింపబడగా, అతడు మరల పెద్దతల్లి కడకు వచ్చి ఆ వృత్తాంతమును విన్నవించి మరికొంత ధనమును తీసుకుని వచ్చెను. ఆ ధనము కూడా హరింపబడగా, దుఃఖితుడై నిలిచి ఉన్న వానితో ఈశ్వరుడు అదృశ్యుడై, \"ఓ చిన్నవాడా! వ్రత భ్రష్టులకు ఈ ధనమును గ్రహించుట అలవి కానిది\" అని చెప్పెను. ఆ మాటలు విని ఆశ్చర్యపడి, ఆ చిన్నవాడు మరల ముందటి వలెనే ఉజ్జయినీ పట్టణమునకు పోయి ఈశ్వరుడు చెప్పిన వృత్తాంతమును పెద్దతల్లికి తెలుపగా, ఆ పుణ్యవతి ఆలోచించి పుత్రునిచేత కేదార వ్రతమును ఆచరింపజేసి, తన చెల్లెలు కూడా వ్రతమును ఆచరించునట్లు చెప్పవలెనని చెప్పి, ధనమును ఇచ్చి పంపెను.
+అతడు బయలుదేరి వచ్చుచుండగా, మార్గమున అప్రయత్నముగా ముందు కోలుపోయిన ధనమంతయు స్వాధీనమైనందున సంతోషించి, సర్వమును గ్రహించుకుని కాంచీ పట్టణమును ప్రవేశించు సమయమున, చతురంగ బలములతో అతని తండ్రి ఎదుర్కోలుగా వచ్చి, ఆ బాలుని, అతని తల్లిని కూడా వెంట బెట్టుకుని తన పట్టణమునకు వెళ్ళెను. అంతట ఆ రాకుమారుడు తల్లిదండ్రులతో కూడి సుఖముగా ఉండెను.
+పిమ్మట తల్లి అయిన భాగ్యవతియు, తండ్రి అయిన చోళరాజును అది మొదలు ఈ వ్రతమును ఆచరించుచు అవిచ్ఛిన్నమైన సకల సంపదలను అనుభవించుచుండిరి."
+hi: "कुछ दिनों के पश्चात् दूसरी कन्या भाग्यवती ऐश्वर्य के मद से मोहित होकर, कुछ काल बाद उस व्रत को छोड़ बैठी। इससे वह भाग्यहीन हो गयी और पुत्र सहित पति के द्वारा निकाल दी गयी। वन में भटककर, भ्रमण से खिन्न होकर वह एक व्याध के घर पहुँची। वहाँ पुत्र से बोली — \"पुत्र! मेरी बड़ी बहिन पुण्यवती से उज्जयिनी नगरी के राजा ने विवाह किया है। तुम वहाँ जाकर हमारी स्थिति बताओ, जीविका के लिये पर्याप्त धन लेकर शीघ्र लौट आओ।\" वह उस नगर में गया और मौसी से अपनी माता का दुःसह कष्ट कहा। पुण्यवती ने उसके हाथ में बहुत धन दिया।
+वह धन लेकर आ रहा था कि मार्ग में अदृश्य रूप वाले उन देव ने वह धन हर लिया। वह पुनः मौसी के पास जाकर वृत्तान्त कहकर और कुछ धन लेकर आया। वह धन भी हर लिया गया। दुःखी होकर खड़े हुए उससे ईश्वर ने अदृश्य रहकर कहा — \"हे बालक! व्रतभ्रष्टों के लिये यह धन ग्रहण करना सम्भव नहीं।\" यह सुनकर आश्चर्यचकित होकर वह बालक पुनः पहले की भाँति उज्जयिनी गया और ईश्वर का कहा वृत्तान्त मौसी को बताया। पुण्यवती ने विचार करके पुत्र से केदार व्रत कराया, और कहा कि उसकी बहिन भी व्रत करे, ऐसा कहना; फिर धन देकर भेज दिया।
+वह चलकर आ रहा था कि मार्ग में बिना प्रयत्न के पहले खोया हुआ सारा धन उसे मिल गया। वह प्रसन्न होकर सब लेकर काञ्ची नगरी में प्रवेश कर रहा था, तभी चतुरङ्ग सेना के साथ उसके पिता उसे लेने आये। बालक और उसकी माता को साथ लेकर वे अपने नगर को गये। तब वह राजकुमार माता-पिता के साथ सुख से रहने लगा।
+इसके पश्चात् माता भाग्यवती और पिता चोलराज उस समय से यह व्रत करते हुए अविच्छिन्न समस्त सम्पदाओं का भोग करते रहे।"
+
+--- unit 54 | section: व्रतकथा ---
+vidhi:
+The fruit of hearing the story, and the close. The source names the Skānda Purāṇa as the place where this account is given.
+deva:
+व्रत कथा प्रारंभमु
+iast:
+vrata kathā prāraṁbhamu
+en: "Whoever hears or reads the greatness of this vrata with devotion, in the way it has been told, obtains by the grace of Śrī Mahādeva unending life, health and wealth, enjoys happiness, and obtains union with Śiva." This was said by the great sage Gautama, and Sūta told it to Śaunaka and the others. Śrī Vyāsa Bhaṭṭāraka set it out in the Skānda Purāṇa.
+tel: "ఎవరైనను చెప్పిన ప్రకారము ఈ వ్రత మహాత్మ్యమును భక్తితో వినినను, చదివినను, అట్టివారందరూ శ్రీ మహాదేవుని అనుగ్రహము వలన అనంతమైన ఆయురారోగ్య ఐశ్వర్యములను పొంది, సుఖములను అనుభవించి శివసాయుజ్యమును పొందుతారు\" అని గౌతమ మహర్షిచేత చెప్పబడినదని సూతుడు శౌనకాదులకు చెప్పినట్లుగా శ్రీ వ్యాస భట్టారకుడు స్కాంద పురాణమునందు వర్ణించెను.
+hi: "जो कोई कहे गये प्रकार से इस व्रत के माहात्म्य को भक्तिपूर्वक सुनते हैं अथवा पढ़ते हैं, वे सब श्री महादेव के अनुग्रह से अनन्त आयु, आरोग्य और ऐश्वर्य पाकर सुख भोगते हैं और शिवसायुज्य प्राप्त करते हैं" — ऐसा गौतम महर्षि ने कहा, और सूत ने शौनक आदि से कहा, जैसा श्री व्यास भट्टारक ने स्कान्द पुराण में वर्णन किया है।
+
+--- unit 55 | section: समर्पणम् ---
+vidhi:
+The asking of pardon, for whatever was left out or done wrongly.
+deva:
+समर्पणं –
+यस्य स्मृत्याच नामोक्त्या तपः पूजा क्रियादिषु |
+न्यूनं संपूर्णतां याति सद्योवंदे महेश्वरं ||
+मंत्रहीनं क्रियाहीनं भक्तिहीनं सुरेश्वर |
+यत्पूजितं मयादेव परिपूर्णं तदस्तुते ||
+iast:
+samarpaṇaṁ –
+yasya smṛtyāca nāmoktyā tapaḥ pūjā kriyādiṣu |
+nyūnaṁ saṁpūrṇatāṁ yāti sadyovaṁde maheśvaraṁ ||
+maṁtrahīnaṁ kriyāhīnaṁ bhaktihīnaṁ sureśvara |
+yatpūjitaṁ mayādeva paripūrṇaṁ tadastute ||
+en: Offering. By remembering him and by speaking his name, whatever is lacking in austerity, in worship and in the acts of the rite at once becomes complete. To that Maheśvara I bow.
+Lord of the gods, whatever I have worshipped without the mantra, without the proper act, and without devotion — god, let that be full and complete for you.
+tel: సమర్పణం. ఎవరిని స్మరించుట చేతను, ఎవరి నామమును ఉచ్చరించుట చేతను తపస్సు పూజ క్రియ మొదలైన వాటిలో లోపించినది వెంటనే సంపూర్ణమగునో, ఆ మహేశ్వరునికి నమస్కరిస్తున్నాను.
+సురేశ్వరా, మంత్రహీనంగా, క్రియాహీనంగా, భక్తిహీనంగా నేను చేసిన పూజను — దేవా, అది నీకు పరిపూర్ణమగుగాక.
+hi: समर्पण। जिनके स्मरण से और जिनके नाम के उच्चारण से तप, पूजा और क्रिया आदि में जो न्यूनता है वह तत्काल पूर्णता को प्राप्त होती है, उन महेश्वर को नमस्कार करता हूँ।
+हे सुरेश्वर, मन्त्रहीन, क्रियाहीन और भक्तिहीन जो पूजा मैंने की है — हे देव, वह आपके लिये परिपूर्ण हो।
+
+--- unit 56 | section: समर्पणम् ---
+vidhi:
+The handing over, and the close.
+deva:
+अनया ध्यान आवाहनादि षोडशोपचार पूजया भगवान् सर्वात्मिकः श्री केदारेश्वर स्वामि सुप्रीतो सुप्रसन्नो वरदो भवंतु ||
+iast:
+anayā dhyāna āvāhanādi ṣoḍaśopacāra pūjayā bhagavān sarvātmikaḥ śrī kedāreśvara svāmi suprīto suprasanno varado bhavaṁtu ||
+en: By this worship of sixteen services, beginning with meditation and invitation, may Bhagavān Śrī Kedāreśvara Svāmin, who is the self of all, be well pleased, gracious, and a giver of boons.
+tel: ధ్యానం ఆవాహనం మొదలైన ఈ షోడశోపచార పూజ చేత సర్వాత్మకుడైన భగవాన్ శ్రీ కేదారేశ్వర స్వామి సుప్రీతుడై, సుప్రసన్నుడై, వరదుడు అగుగాక.
+hi: ध्यान और आवाहन आदि इस षोडशोपचार पूजा से सर्वात्मक भगवान् श्री केदारेश्वर स्वामी सुप्रीत, सुप्रसन्न और वरद हों।

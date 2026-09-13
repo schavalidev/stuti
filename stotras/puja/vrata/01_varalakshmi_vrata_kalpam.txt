@@ -1,0 +1,827 @@
+Title: Śrī Varalakṣmī Vrata Kalpam — the worship of Varalakṣmī on the Friday before the full moon of Śrāvaṇa (Smārta Paddhati, South Indian)
+Devanāgarī: श्री वरलक्ष्मी व्रत कल्पम् — श्रावण शुक्ल पूर्णिमा पूर्व शुक्रवार व्रत विधानम् (स्मार्त पद्धतिः)
+Telugu: శ్రీ వరలక్ష్మీ వ్రత కల్పం — శ్రావణ శుక్ల పూర్ణిమకు ముందు వచ్చే శుక్రవారం నాటి వ్రత విధానం (స్మార్త పద్ధతిః)
+
+Author: Traditional. No compiler is named and none should be inferred. The kathā is spoken in the text by Parameśvara to Pārvatī, and reported by Sūta to Śaunaka and the other sages.
+
+Type: vidhi (ritual manual) — not a stotra. It uses the one-extra-field vidhi format of this folder: a `vidhi:` field carrying the instruction, then deva / iast / en / tel / hi.
+
+Recension / paddhati: **Smārta, South Indian (Telugu country).** The rite directs the worshipper to the shared pūrvāṅga and the Gaṇapati pūjā before it begins, and both stand in this folder — `../smarta/03_purvanga_vidhanam.txt` and `../smarta/15_mahaganapati_shodashopachara_puja.txt`. The Śrīvaiṣṇava form of the opening is kept separately at `../vaishnava/01_purvanga_vidhanam.txt`, and **the two must never be merged, harmonised or collated against each other.** Śākhā does not apply to this genre; what divides vrata texts is paddhati and region.
+
+Source / recension: base text `https://stotranidhi.com/sri-varalakshmi-vrata-kalpam-in-telugu/` (fetched 2026-09-12, 164 lines), which is **Telugu script only**. **The Devanāgarī column is therefore transliterated by us**, mechanically, with `bin/tel2dev.py`, and `iast:` from that with `bin/dev2iast.py`; no Sanskrit in this file was typed by hand.
+
+Independent collation: **a printed Telugu edition of a different lineage — *Āru Vratālu*, Paṇḍita Pariṣkṛtamu, Gollapudi Veeraswamy Son, Rajahmundry 1999**, read from the archive.org scan `snmc-aaru-vratalu-pandita-parishkrutamu-telugu-and-sans`, where the Varalakṣmī kalpa runs from line 1494 to line 2020 of the OCR text. This is a genuinely independent witness: a printed book from a different publishing house, not the same site in another script. The whole rite was compared verse by verse. It agrees with the base text on the entire body of the sixteen services, on the toram mantra, on the vāyana verse and on the frame of the story.
+
+Recension note: the two editions are the same rite, and six differences were found. None of them is reconciled by silently choosing one.
+
+1. **They differ in the order of two services.** The base text gives the arghya before the pādya. The *Āru Vratālu* print gives the pādya before the arghya. Both orders are in use and the base text's order is kept here.
+2. **They differ in which service stands eleventh.** The base text gives the **māṅgalya**, the marriage thread of gold. The *Āru Vratālu* print gives the **upavīta**, the sacred thread, in that place, with the verse `ఉపవీతమిదం దేవి గృహాణ త్వం శుభప్రదే`. The base text's reading is kept. The difference is a real one and is worth knowing, because a vrata kept by married women is more likely to offer the māṅgalya.
+3. **They differ in the number of knots in the toram, and the base text is the one that is internally consistent.** The base text worships **nine** knots and ends with `హరివల్లభాయై నమః నవమ గ్రంథిం పూజయామి`. The *Āru Vratālu* print worships only **eight** and stops at the eighth — yet its own binding mantra, printed immediately below, says `నవసూత్రం`, a thread of nine. The kathā in both editions also says nine. The base text's nine knots are kept. Whether the print omits the ninth line or the scan dropped it could not be settled from the OCR.
+4. **They differ by one name in the worship of the limbs.** The base text has fourteen names and includes `ఓం శ్రియై నమః ఓష్ఠౌ పూజయామి`, the worship of the lips. The *Āru Vratālu* print does not have it. The base text's fourteen are kept.
+5. **They differ in one word of the vāyana mantra, and this one changes the sense.** The base text reads `ఇందిరా ప్రతిగృహ్ణాతు ఇందిరాయై దదాతి చ` — Indirā receives, and it is given to Indirā. The *Āru Vratālu* print reads `ఇందిరా వై దదాతి చ` — and Indirā indeed gives. **This is not bracketed as a variant, because it is not a matter of spelling; the two readings say different things about who gives and who receives.** The base text's reading stands in the verse and both are recorded here.
+6. **The *Āru Vratālu* print carries a kalaśa pūjā which the base text does not print.** Before the sixteen services it establishes the pot with `కుక్షౌ తు సాగరాః సర్వే సప్తద్వీపా వసుంధరా` and `గంగే చ యమునే చైవ గోదావరి సరస్వతి`, which are the standard verses of that rite. The base text leaves the kalaśa to the pūrvāṅga, which this folder also does.
+
+Not transcribed, and said plainly: **the *Āru Vratālu* print carries the story in Sanskrit as well as in Telugu**, marked `అథ కథాప్రారంభః` at line 1823 of its OCR, in the form of a dialogue of Gaurī and Īśvara. **That Sanskrit was not written into this file, because the OCR of those pages is too damaged to transcribe with confidence** — whole lines of the questions are missing, and the readings that survive are broken (`శరణ్యో త్రి జగద్వంద్యే` for `శరణ్యే త్రిజగద్వంద్యే`). **Nothing was reconstructed from memory.** The Sanskrit kathā is a real gap in this file and closing it needs the page images, not the OCR. The story as it stands here is the base text's own Telugu prose, and it sits in the translation fields where the source put it; the `deva:` of those units carries the section heading alone.
+
+Not collated: the hundred and eight names. At its aṣṭottara the rite points at the Lakṣmī nāmāvaḷi rather than printing it. That nāmāvaḷi is in this corpus at `../../devi/lakshmi/36_lakshmi_ashtottarashatanamavali.txt`, and it was not compared against this rite's own list of names.
+
+Accent: **none, and none is expected.** This rite contains no Vedic mantra. Every verse in it is stotra, and stotra is not accent-marked. No accent was added and none was inferred.
+
+Note on defects repaired in the base text, each counted and each confirmed against the *Āru Vratālu* print rather than corrected from judgement. Six in all: `ఓం వరలక్ష్మై నమః` to `ఓం వరలక్ష్మ్యై నమః` and `మహాలక్ష్మై నమః` to `మహాలక్ష్మ్యై నమః`, both missing the `య` of the feminine dative; `నారయణప్రియే` to `నారాయణప్రియే` in the mantrapuṣpa verse, which the same page prints correctly in the meditation nine lines above; `తోరగ్రంధి` to `తోరగ్రంథి`; `ప్రథమ గంథిం` to `ప్రథమ గ్రంథిం`, where the following eight lines all read `గ్రంథిం`; and `స్వశక్తతః` to `స్వశక్తితః` in the vāyana verse. No other character of the base text was altered.
+
+Unit count: 39 units. The rite falls into the resolve, the sixteen services with the worship of the limbs and the hundred and eight names, the worship of the nine knots and the binding of the toram, the vāyana, the story in six parts, and the closing.
+
+Sections:
+पुनः सङ्कल्पः — The second resolve, naming what is to be done and for whom (units 1-2)
+षोडशोपचार पूजा — The sixteen services, from the meditation to the bowing (units 3-16, 19-27)
+अङ्गपूजा — The worship of the fourteen limbs, and the hundred and eight names (units 17-18)
+तोरबन्धनम् — The worship of the nine knots and the binding of the toram (units 28-29)
+वायनविधिः — The giving of the twelve apūpas (units 30-31)
+व्रतकथा — The story: the frame, the day, Cārumatī of Kuṇḍina, the dream, the keeping of the vrata, and the close (units 32-37)
+समर्पणम् — The asking of pardon and the handing over (units 38-39)
+
+Blurb: This is the vrata of Varalakṣmī, kept on the Friday that falls before the full moon of the bright fortnight of Śrāvaṇa. It is kept by women, and the fruit stated for it is a fortunate married life, good children, and the well-being of the whole household. A maṇḍapa is made on ground cleaned with cow dung. A seat is placed on it, new rice is poured on the seat, and a pot is set up with five kinds of fresh shoots. Varalakṣmī is invited into that pot, and the sixteen services are offered to her. Her limbs are then worshipped by fourteen names, from the feet upward to the head, and the hundred and eight names of Lakṣmī are recited. The central act of this vrata is the toram. It is a thread of nine strands with nine knots tied in it. Each knot is worshipped by one name of the goddess, and the thread is then bound on the right hand. Twelve apūpas are given as the vāyana. The story is told last. In it Parameśvara tells Pārvatī of Cārumatī of the city of Kuṇḍina, a woman who served her elders, did the work of her house, and spoke little and kindly. Lakṣmī came to her in a dream and named the day. Cārumatī kept the vrata with the other women of the city, and as they walked around the goddess the ornaments came upon them, once at the feet, once at the hands, and the third time in full.
+
+--- unit 1 | section: पुनः सङ्कल्पः ---
+vidhi:
+The rite opens where the shared apparatus leaves off. The source does not print the pūrvāṅga or the turmeric-Gaṇapati pūjā. It directs the worshipper to them and begins after they are done. Both stand in this folder — see `../smarta/03_purvanga_vidhanam.txt` and `../smarta/15_mahaganapati_shodashopachara_puja.txt`.
+deva:
+पूर्वांगं चू.
+श्री महागणपति लघु पूज चू.
+iast:
+pūrvāṁgaṁ cū.
+śrī mahāgaṇapati laghu pūja cū.
+en: See the pūrvāṅga. See the short worship of Śrī Mahāgaṇapati.
+tel: పూర్వాంగం చూడండి. శ్రీ మహాగణపతి లఘు పూజ చూడండి.
+hi: पूर्वाङ्ग देखिये। श्री महागणपति लघु पूजा देखिये।
+
+--- unit 2 | section: पुनः सङ्कल्पः ---
+vidhi:
+The second resolve, declaring what is to be done and for whom. It is spoken for the household together, not for the worshipper alone.
+deva:
+पूर्वोक्त एवं गुण विशेषण विशिष्टायां शुभतिथौ, अस्माकं सहकुटुंबानां क्षेमस्थैर्य विजयायुरारोग्य ऐश्वर्याभिवृद्ध्यर्थं धर्मार्थ काममोक्ष चतुर्विध पुरुषार्थ फल सिद्ध्यर्थं सत्संतान सौभाग्य फलावाप्त्यर्थं श्री वरलक्ष्मी देवतामुद्दिश्य श्री वरलक्ष्मी देवता प्रीत्यर्थं कल्पोक्त विधानेन यावच्छक्ति ध्यानावाहनादि षोडशोपचार पूजां करिष्ये ||
+iast:
+pūrvokta evaṁ guṇa viśeṣaṇa viśiṣṭāyāṁ śubhatithau, asmākaṁ sahakuṭuṁbānāṁ kṣemasthairya vijayāyurārogya aiśvaryābhivṛddhyarthaṁ dharmārtha kāmamokṣa caturvidha puruṣārtha phala siddhyarthaṁ satsaṁtāna saubhāgya phalāvāptyarthaṁ śrī varalakṣmī devatāmuddiśya śrī varalakṣmī devatā prītyarthaṁ kalpokta vidhānena yāvacchakti dhyānāvāhanādi ṣoḍaśopacāra pūjāṁ kariṣye ||
+en: On this auspicious day, marked by all the qualities already stated — for the well-being, steadiness, victory, long life, health and increase of wealth of ourselves together with our family; for the gaining of the four ends of life, which are righteousness, wealth, desire and release; and for the obtaining of good children and of a fortunate married life — I shall worship Śrī Varalakṣmī Devī. To please her, and by the method the kalpa lays down, I shall perform the sixteen services beginning with meditation and invitation, to the full measure of my ability.
+tel: పూర్వం చెప్పిన గుణ విశేషణాలతో కూడిన ఈ శుభ తిథి నాడు — మా కుటుంబ సమేతంగా మాకు క్షేమం, స్థైర్యం, విజయం, ఆయుష్షు, ఆరోగ్యం, ఐశ్వర్యం వృద్ధి కావడానికి; ధర్మ అర్థ కామ మోక్షాలనే నాలుగు పురుషార్థ ఫలాలు సిద్ధించడానికి; సత్సంతానం, సౌభాగ్యం కలగడానికి — శ్రీ వరలక్ష్మీ దేవిని ఉద్దేశించి, ఆ దేవి ప్రీతి కోసం, కల్పంలో చెప్పిన విధానం ప్రకారం, నా శక్తి కొలది ధ్యానం ఆవాహనం మొదలైన షోడశోపచార పూజ చేస్తాను.
+hi: पूर्वोक्त गुण-विशेषणों से युक्त इस शुभ तिथि पर — हमारे तथा हमारे कुटुम्ब के क्षेम, स्थैर्य, विजय, आयु, आरोग्य और ऐश्वर्य की वृद्धि के लिये; धर्म, अर्थ, काम और मोक्ष — इन चार पुरुषार्थ फलों की सिद्धि के लिये; तथा सत्सन्तान और सौभाग्य की प्राप्ति के लिये — श्री वरलक्ष्मी देवी को उद्दिष्ट करके, उनकी प्रीति के लिये, कल्पोक्त विधि से, अपनी शक्ति के अनुसार ध्यान और आवाहन आदि षोडशोपचार पूजा करता हूँ।
+
+--- unit 3 | section: षोडशोपचार पूजा ---
+vidhi:
+The meditation. Two verses: the first sets her on the lotus with the lotus in her hand, the second recalls that she rose from the ocean of milk, and asks her to stay in the house.
+deva:
+पद्मासने पद्मकरे सर्वलोकैक पूजिते |
+नारायणप्रिये देवी सुप्रीता भव सर्वदा ||
+क्षीरोदार्णव संभूते कमले कमलालये
+सुस्थिरा भव मे गेहे सुरासुर नमस्कृते ||
+श्री वरलक्ष्मी देवतायै नमः ध्यायामि || १
+iast:
+padmāsane padmakare sarvalokaika pūjite |
+nārāyaṇapriye devī suprītā bhava sarvadā ||
+kṣīrodārṇava saṁbhūte kamale kamalālaye
+susthirā bhava me gehe surāsura namaskṛte ||
+śrī varalakṣmī devatāyai namaḥ dhyāyāmi || 1
+en: You are seated on the lotus, and the lotus is in your hand. All the worlds worship you alone. You are dear to Nārāyaṇa. Devī, be well pleased with me always.
+You arose from the ocean of milk. You are the lotus, and the lotus is your dwelling. Gods and demons alike bow to you. Stay firmly in my house.
+I meditate upon Śrī Varalakṣmī Devī.
+tel: పద్మాసనంలో కూర్చున్న తల్లీ, చేతిలో పద్మం ధరించిన తల్లీ, సర్వలోకాలచేత పూజింపబడేదానా, నారాయణునికి ప్రియమైనదానా — దేవీ, ఎల్లప్పుడూ నా యందు ప్రసన్నురాలవై ఉండు.
+క్షీరసముద్రం నుండి పుట్టినదానా, కమలమా, కమలమే నివాసంగా కలదానా, సురాసురులచేత నమస్కరింపబడేదానా — నా ఇంటిలో స్థిరంగా నిలిచి ఉండు.
+శ్రీ వరలక్ష్మీ దేవిని ధ్యానిస్తున్నాను.
+hi: पद्मासन पर विराजमान, हाथ में कमल धारण करने वाली, समस्त लोकों से पूजित, नारायण की प्रिया — हे देवी, सदा मुझ पर प्रसन्न रहिये।
+क्षीरसागर से प्रकट हुई, कमलरूपा, कमल में निवास करने वाली, सुरों और असुरों से नमस्कृत — मेरे घर में स्थिर होकर रहिये।
+श्री वरलक्ष्मी देवी का ध्यान करता हूँ।
+
+--- unit 4 | section: षोडशोपचार पूजा ---
+vidhi:
+The invitation.
+deva:
+सर्वमंगळ मांगळ्ये विष्णुवक्षस्स्थलालये |
+आवहयामि देवी त्वां सुप्रीता भव सर्वदा ||
+श्री वरलक्ष्मी देवतायै नमः आवहयामि || २
+iast:
+sarvamaṁgaḻa māṁgaḻye viṣṇuvakṣassthalālaye |
+āvahayāmi devī tvāṁ suprītā bhava sarvadā ||
+śrī varalakṣmī devatāyai namaḥ āvahayāmi || 2
+en: You are the auspiciousness of everything auspicious. Your dwelling is the breast of Viṣṇu. Devī, I invite you. Be well pleased with me always.
+I invite Śrī Varalakṣmī Devī.
+tel: సర్వ మంగళాలకూ మంగళమైనదానా, విష్ణువు వక్షస్థలమే నివాసంగా కలదానా — దేవీ, నిన్ను ఆవాహనం చేస్తున్నాను. ఎల్లప్పుడూ ప్రసన్నురాలవై ఉండు.
+శ్రీ వరలక్ష్మీ దేవిని ఆవాహనం చేస్తున్నాను.
+hi: सर्व मङ्गलों की मङ्गलरूपा, विष्णु के वक्षःस्थल में निवास करने वाली — हे देवी, आपका आवाहन करता हूँ। सदा प्रसन्न रहिये।
+श्री वरलक्ष्मी देवी का आवाहन करता हूँ।
+
+--- unit 5 | section: षोडशोपचार पूजा ---
+vidhi:
+The seat.
+deva:
+सूर्यायुत निभस्फूर्ते स्फुरद्रत्नविभूषिते |
+सिंहासनमिदं देवी स्थीयतां सुरपूजिते ||
+श्री वरलक्ष्मी देवतायै नमः रत्नसिंहासनं समर्पयामि || ३
+iast:
+sūryāyuta nibhasphūrte sphuradratnavibhūṣite |
+siṁhāsanamidaṁ devī sthīyatāṁ surapūjite ||
+śrī varalakṣmī devatāyai namaḥ ratnasiṁhāsanaṁ samarpayāmi || 3
+en: Your brightness is that of ten thousand suns. You are adorned with shining jewels. Devī, worshipped by the gods, be seated upon this lion-throne.
+I offer the jewelled throne to Śrī Varalakṣmī Devī.
+tel: వేయి సూర్యుల కాంతితో ప్రకాశించేదానా, మెరిసే రత్నాలతో అలంకరింపబడినదానా, దేవతలచేత పూజింపబడేదానా — దేవీ, ఈ సింహాసనమునందు ఆసీనురాలవు కమ్ము.
+శ్రీ వరలక్ష్మీ దేవికి రత్న సింహాసనం సమర్పిస్తున్నాను.
+hi: सहस्र सूर्यों के समान कान्तिमयी, देदीप्यमान रत्नों से विभूषित, देवताओं से पूजित — हे देवी, इस सिंहासन पर विराजिये।
+श्री वरलक्ष्मी देवी को रत्न सिंहासन समर्पित करता हूँ।
+
+--- unit 6 | section: षोडशोपचार पूजा ---
+vidhi:
+The offering of water for the hands. **The base text gives the arghya before the pādya, and the *Āru Vratālu* print gives the pādya first.** Both orders are kept as each edition prints them; see the recension note.
+deva:
+शुद्धोदकं च पात्रस्थं गंध पुष्पादि मिश्रितं |
+अर्घ्यं दास्यामि ते देवी गृह्यतां हरिवल्लभे ||
+श्री वरलक्ष्मी देवतायै नमः अर्घ्यं समर्पयामि || ४
+iast:
+śuddhodakaṁ ca pātrasthaṁ gaṁdha puṣpādi miśritaṁ |
+arghyaṁ dāsyāmi te devī gṛhyatāṁ harivallabhe ||
+śrī varalakṣmī devatāyai namaḥ arghyaṁ samarpayāmi || 4
+en: Here is pure water in a vessel, mixed with sandal paste and with flowers. Devī, I shall offer you this arghya. Beloved of Hari, receive it.
+I offer the arghya to Śrī Varalakṣmī Devī.
+tel: పాత్రలో ఉంచిన శుద్ధమైన నీరు, గంధం పుష్పాలు మొదలైనవి కలిపినది — దేవీ, ఈ అర్ఘ్యాన్ని నీకు సమర్పిస్తున్నాను. హరివల్లభా, స్వీకరించు.
+శ్రీ వరలక్ష్మీ దేవికి అర్ఘ్యం సమర్పిస్తున్నాను.
+hi: पात्र में रखा हुआ शुद्ध जल, गन्ध और पुष्प आदि से मिश्रित — हे देवी, यह अर्घ्य आपको अर्पित करता हूँ। हरिवल्लभा, इसे ग्रहण कीजिये।
+श्री वरलक्ष्मी देवी को अर्घ्य समर्पित करता हूँ।
+
+--- unit 7 | section: षोडशोपचार पूजा ---
+vidhi:
+The offering of water for the feet.
+deva:
+सुवासित जलं रम्यं सर्वतीर्थ समुद्भवं |
+पाद्यं गृहाण देवी त्वं सर्वदेव नमस्कृते||
+श्री वरलक्ष्मी देवतायै नमः पाद्यं समर्पयामि || ५
+iast:
+suvāsita jalaṁ ramyaṁ sarvatīrtha samudbhavaṁ |
+pādyaṁ gṛhāṇa devī tvaṁ sarvadeva namaskṛte||
+śrī varalakṣmī devatāyai namaḥ pādyaṁ samarpayāmi || 5
+en: This water is sweet-scented and pleasant, and it has risen from every holy place. Devī, you to whom all the gods bow, receive this water for your feet.
+I offer the pādya to Śrī Varalakṣmī Devī.
+tel: సువాసనలు గల రమ్యమైన ఈ నీరు సర్వ తీర్థాల నుండి పుట్టినది — దేవీ, సర్వ దేవతలచేత నమస్కరింపబడేదానా, ఈ పాద్యాన్ని స్వీకరించు.
+శ్రీ వరలక్ష్మీ దేవికి పాద్యం సమర్పిస్తున్నాను.
+hi: सुगन्धित और रमणीय यह जल समस्त तीर्थों से उत्पन्न है — हे देवी, समस्त देवताओं से नमस्कृत, यह पाद्य ग्रहण कीजिये।
+श्री वरलक्ष्मी देवी को पाद्य समर्पित करता हूँ।
+
+--- unit 8 | section: षोडशोपचार पूजा ---
+vidhi:
+The water for sipping.
+deva:
+सुवर्ण कलशानीतं चंदनागरु संयुतं |
+गृहाणाचमनं देवी मयादत्तं शुभप्रदे ||
+श्री वरलक्ष्मी देवतायै नमः आचमनीयं समर्पयामि || ६
+iast:
+suvarṇa kalaśānītaṁ caṁdanāgaru saṁyutaṁ |
+gṛhāṇācamanaṁ devī mayādattaṁ śubhaprade ||
+śrī varalakṣmī devatāyai namaḥ ācamanīyaṁ samarpayāmi || 6
+en: This water is brought in a golden vessel, and sandal and aloe are mixed in it. Devī, giver of all good, receive from my hand this water for sipping.
+I offer the ācamanīya to Śrī Varalakṣmī Devī.
+tel: బంగారు కలశంలో తెచ్చిన ఈ నీటిలో చందనం అగరు కలిపి ఉన్నాయి — దేవీ, శుభాలను ఇచ్చేదానా, నేను సమర్పించే ఈ ఆచమనీయాన్ని స్వీకరించు.
+శ్రీ వరలక్ష్మీ దేవికి ఆచమనీయం సమర్పిస్తున్నాను.
+hi: स्वर्ण कलश में लाया हुआ यह जल, चन्दन और अगरु से युक्त — हे देवी, शुभप्रदा, मेरे द्वारा दिया गया यह आचमनीय ग्रहण कीजिये।
+श्री वरलक्ष्मी देवी को आचमनीय समर्पित करता हूँ।
+
+--- unit 9 | section: षोडशोपचार पूजा ---
+vidhi:
+The bath in the five nectars — milk, curd, ghee, sugar and honey.
+deva:
+पयोदधि घृतोपेतं शर्करामधु संयुतं |
+पंचामृतस्नानमिदं गृहाण कमलालये ||
+श्री वरलक्ष्मी देवतायै नमः पंचामृतस्नानं समर्पयामि ||
+iast:
+payodadhi ghṛtopetaṁ śarkarāmadhu saṁyutaṁ |
+paṁcāmṛtasnānamidaṁ gṛhāṇa kamalālaye ||
+śrī varalakṣmī devatāyai namaḥ paṁcāmṛtasnānaṁ samarpayāmi ||
+en: Here are milk, curd and ghee, with sugar and honey added. You who dwell in the lotus, receive this bath of the five nectars.
+I offer the bath of the five nectars to Śrī Varalakṣmī Devī.
+tel: పాలు పెరుగు నెయ్యి, వాటితో పాటు చక్కెర తేనె — కమలాలయా, ఈ పంచామృత స్నానాన్ని స్వీకరించు.
+శ్రీ వరలక్ష్మీ దేవికి పంచామృత స్నానం సమర్పిస్తున్నాను.
+hi: दूध, दही और घी, उनके साथ शर्करा और मधु — हे कमलालया, यह पञ्चामृत स्नान ग्रहण कीजिये।
+श्री वरलक्ष्मी देवी को पञ्चामृत स्नान समर्पित करता हूँ।
+
+--- unit 10 | section: षोडशोपचार पूजा ---
+vidhi:
+The bath in pure water, and the sipping of water after it.
+deva:
+गंगाजलं मयाऽनीतं महादेवशिरस्स्थितं |
+शुद्धोदक स्नानमिदं गृहाण विधुसोदरि ||
+श्री वरलक्ष्मी देवतायै नमः शुद्धोदक स्नानं समर्पयामि || ७
+स्नानानंतरं आचमनीयं समर्पयामि |
+iast:
+gaṁgājalaṁ mayā'nītaṁ mahādevaśirassthitaṁ |
+śuddhodaka snānamidaṁ gṛhāṇa vidhusodari ||
+śrī varalakṣmī devatāyai namaḥ śuddhodaka snānaṁ samarpayāmi || 7
+snānānaṁtaraṁ ācamanīyaṁ samarpayāmi |
+en: I have brought the water of the Gaṅgā, which rests upon the head of Mahādeva. Sister of the moon, receive this bath of pure water.
+I offer the bath of pure water to Śrī Varalakṣmī Devī.
+After the bath I offer the water for sipping.
+tel: మహాదేవుని శిరస్సున నిలిచిన గంగాజలాన్ని నేను తెచ్చాను — చంద్రుని సోదరీ, ఈ శుద్ధోదక స్నానాన్ని స్వీకరించు.
+శ్రీ వరలక్ష్మీ దేవికి శుద్ధోదక స్నానం సమర్పిస్తున్నాను.
+స్నానం అయిన తరువాత ఆచమనీయం సమర్పిస్తున్నాను.
+hi: महादेव के शिर पर स्थित गङ्गाजल मैं लाया हूँ — हे चन्द्रमा की भगिनी, यह शुद्धोदक स्नान ग्रहण कीजिये।
+श्री वरलक्ष्मी देवी को शुद्धोदक स्नान समर्पित करता हूँ।
+स्नान के अनन्तर आचमनीय समर्पित करता हूँ।
+
+--- unit 11 | section: षोडशोपचार पूजा ---
+vidhi:
+The pair of garments.
+deva:
+सुरार्चितांघ्रि युगळे दुकूलवसनप्रिये |
+वस्त्रयुग्मं प्रदास्यामि गृहाण सुरपूजिते ||
+श्री वरलक्ष्मी देवतायै नमः वस्त्रयुग्मं समर्पयामि || ८
+iast:
+surārcitāṁghri yugaḻe dukūlavasanapriye |
+vastrayugmaṁ pradāsyāmi gṛhāṇa surapūjite ||
+śrī varalakṣmī devatāyai namaḥ vastrayugmaṁ samarpayāmi || 8
+en: Your two feet are worshipped by the gods, and fine cloth is dear to you. I shall give you a pair of garments. You whom the gods worship, receive them.
+I offer the pair of garments to Śrī Varalakṣmī Devī.
+tel: దేవతలచేత పూజింపబడే పాదాలు కలదానా, సన్నని వస్త్రాలు ఇష్టమైనదానా — వస్త్రయుగ్మాన్ని సమర్పిస్తున్నాను. సురపూజితా, స్వీకరించు.
+శ్రీ వరలక్ష్మీ దేవికి వస్త్రయుగ్మం సమర్పిస్తున్నాను.
+hi: देवताओं से पूजित चरणों वाली, सूक्ष्म वस्त्रों से प्रीति रखने वाली — वस्त्रयुग्म अर्पित करता हूँ। हे सुरपूजिता, ग्रहण कीजिये।
+श्री वरलक्ष्मी देवी को वस्त्रयुग्म समर्पित करता हूँ।
+
+--- unit 12 | section: षोडशोपचार पूजा ---
+vidhi:
+The ornaments.
+deva:
+केयूर कंकणा दिव्ये हार नूपुर मेखलाः |
+विभूषणान्य मूल्यानि गृहाण ऋषिपूजिते ||
+श्री वरलक्ष्मी देवतायै नमः आभरणानि समर्पयामि || ९
+iast:
+keyūra kaṁkaṇā divye hāra nūpura mekhalāḥ |
+vibhūṣaṇānya mūlyāni gṛhāṇa ṛṣipūjite ||
+śrī varalakṣmī devatāyai namaḥ ābharaṇāni samarpayāmi || 9
+en: Here are armlets and bangles, a necklace, anklets and a girdle, all of them divine. You whom the sages worship, receive these ornaments beyond price.
+I offer the ornaments to Śrī Varalakṣmī Devī.
+tel: కేయూరాలు కంకణాలు, హారం నూపురాలు మేఖల — ఇవన్నీ దివ్యమైనవి. ఋషులచేత పూజింపబడేదానా, వెలకట్టలేని ఈ ఆభరణాలను స్వీకరించు.
+శ్రీ వరలక్ష్మీ దేవికి ఆభరణాలు సమర్పిస్తున్నాను.
+hi: केयूर और कङ्कण, हार, नूपुर और मेखला — ये सब दिव्य हैं। हे ऋषिपूजिता, ये अमूल्य आभूषण ग्रहण कीजिये।
+श्री वरलक्ष्मी देवी को आभूषण समर्पित करता हूँ।
+
+--- unit 13 | section: षोडशोपचार पूजा ---
+vidhi:
+The maṅgala-sūtra. **This service is in the base text and is absent from the *Āru Vratālu* print, which gives the sacred thread in its place.** The difference is recorded below and neither reading is set aside.
+deva:
+तप्तहेमकृतं देवी मांगळ्यं मंगळप्रदं |
+मया समर्पितं देवी गृहाण त्वं शुभप्रदे ||
+श्री वरलक्ष्मी देवतायै नमः मांगळ्यं समर्पयामि ||
+iast:
+taptahemakṛtaṁ devī māṁgaḻyaṁ maṁgaḻapradaṁ |
+mayā samarpitaṁ devī gṛhāṇa tvaṁ śubhaprade ||
+śrī varalakṣmī devatāyai namaḥ māṁgaḻyaṁ samarpayāmi ||
+en: Devī, here is the maṅgala-sūtra, made of gold purified in fire, which itself gives all good fortune. Devī, giver of every blessing, receive what I offer.
+I offer the maṅgala-sūtra to Śrī Varalakṣmī Devī.
+tel: దేవీ, అగ్నిలో కాచిన బంగారంతో చేసిన ఈ మాంగల్యం మంగళాలను ఇచ్చేది. శుభప్రదా, నేను సమర్పించే దీనిని స్వీకరించు.
+శ్రీ వరలక్ష్మీ దేవికి మాంగల్యం సమర్పిస్తున్నాను.
+hi: हे देवी, तपाये हुए स्वर्ण से बना यह माङ्गल्य मङ्गल देने वाला है। हे शुभप्रदा, मेरे द्वारा अर्पित इसे ग्रहण कीजिये।
+श्री वरलक्ष्मी देवी को माङ्गल्य समर्पित करता हूँ।
+
+--- unit 14 | section: षोडशोपचार पूजा ---
+vidhi:
+The sandal paste.
+deva:
+कर्पूरागरु कस्तूरि रोचनादिभिरन्वितं |
+गंधं दास्याम्यहं देवि प्रीत्यर्थं प्रतिगृह्यतां ||
+श्री वरलक्ष्मी देवतायै नमः गंधं समर्पयामि || १०
+iast:
+karpūrāgaru kastūri rocanādibhiranvitaṁ |
+gaṁdhaṁ dāsyāmyahaṁ devi prītyarthaṁ pratigṛhyatāṁ ||
+śrī varalakṣmī devatāyai namaḥ gaṁdhaṁ samarpayāmi || 10
+en: This paste has camphor, aloe, musk and gorocana in it. Devī, I shall give it to you. Receive it, that you may be pleased.
+I offer the sandal paste to Śrī Varalakṣmī Devī.
+tel: కర్పూరం అగరు కస్తూరి గోరోచనం మొదలైనవి కలిసిన ఈ గంధాన్ని దేవీ, నీకు సమర్పిస్తున్నాను. ప్రీతి కలుగుటకై దీనిని స్వీకరించు.
+శ్రీ వరలక్ష్మీ దేవికి గంధం సమర్పిస్తున్నాను.
+hi: कर्पूर, अगरु, कस्तूरी और गोरोचन से युक्त यह गन्ध, हे देवी, आपको अर्पित करता हूँ। प्रीति के लिये इसे ग्रहण कीजिये।
+श्री वरलक्ष्मी देवी को गन्ध समर्पित करता हूँ।
+
+--- unit 15 | section: षोडशोपचार पूजा ---
+vidhi:
+The unbroken rice grains, with turmeric and vermilion.
+deva:
+अक्षतान् धवळान् दिव्यान् शालीयान् तंडुलान् शूभान् |
+हरिद्रा कुंकुमोपेतान् गृह्यतामब्धिपुत्रिके ||
+श्री वरलक्ष्मी देवतायै नमः अक्षतान् समर्पयामि
+iast:
+akṣatān dhavaḻān divyān śālīyān taṁḍulān śūbhān |
+haridrā kuṁkumopetān gṛhyatāmabdhiputrike ||
+śrī varalakṣmī devatāyai namaḥ akṣatān samarpayāmi
+en: These grains are whole and white and shining, good rice grains, and turmeric and vermilion are mixed with them. Daughter of the ocean, receive them.
+I offer the unbroken grains to Śrī Varalakṣmī Devī.
+tel: తెల్లనైన దివ్యమైన మేలిమి బియ్యపు గింజలు, పసుపు కుంకుమలతో కలిపినవి — సముద్ర పుత్రికా, వీటిని స్వీకరించు.
+శ్రీ వరలక్ష్మీ దేవికి అక్షతలు సమర్పిస్తున్నాను.
+hi: श्वेत, दिव्य और उत्तम चावल के अक्षत, हरिद्रा और कुङ्कुम से युक्त — हे अब्धिपुत्रिके, इन्हें ग्रहण कीजिये।
+श्री वरलक्ष्मी देवी को अक्षत समर्पित करता हूँ।
+
+--- unit 16 | section: षोडशोपचार पूजा ---
+vidhi:
+The flowers.
+deva:
+मल्लिका जाजिकुसुमैश्चंपकैर्वकुळैरपि |
+शतपत्रैश्च कल्हारैः पूजयामि हरिप्रिये ||
+श्री वरलक्ष्मी देवतायै नमः पुष्पाणि पूजयामि ||
+iast:
+mallikā jājikusumaiścaṁpakairvakuḻairapi |
+śatapatraiśca kalhāraiḥ pūjayāmi haripriye ||
+śrī varalakṣmī devatāyai namaḥ puṣpāṇi pūjayāmi ||
+en: With jasmine and with jāji flowers, with campaka and with vakuḷa, with the hundred-petalled lotus and with the white water-lily, I worship you, beloved of Hari.
+I worship Śrī Varalakṣmī Devī with flowers.
+tel: మల్లెలు జాజులు సంపెంగలు పొగడపూవులు, శతపత్రాలు కల్హారాలు — వీటితో హరిప్రియా, నిన్ను పూజిస్తున్నాను.
+శ్రీ వరలక్ష్మీ దేవిని పుష్పాలతో పూజిస్తున్నాను.
+hi: मल्लिका और जाजी, चम्पक और वकुल, शतपत्र और कल्हार — इनसे, हे हरिप्रिया, आपकी पूजा करता हूँ।
+श्री वरलक्ष्मी देवी की पुष्पों से पूजा करता हूँ।
+
+--- unit 17 | section: अङ्गपूजा ---
+vidhi:
+The worship of the limbs. Fourteen names are spoken, and with each one a part of the body is worshipped, going from the feet upward to the head. **The *Āru Vratālu* print gives thirteen and does not have `ఓం శ్రియై నమః ఓష్ఠౌ పూజయామి`, the worship of the lips.** The base text's reading is kept and the difference is recorded.
+deva:
+ओं चंचलायै नमः | पादौ पूजयामि |
+ओं चपलायै नमः | जानुनी पूजयामि |
+ओं पीतांबरधरायै नमः | ऊरू पूजयामि |
+ओं कमलवासिन्यै नमः | कटिं पूजयामि |
+ओं पद्मालयायै नमः | नाभिं पूजयामि |
+ओं मदनमात्रे नमः | स्तनौ पूजयामि |
+ओं ललितायै नमः | भुजद्वयं पूजयामि |
+ओं कंबुकंठ्यै नमः | कंठं पूजयामि |
+ओं सुमुखायै नमः | मुखं पूजयामि |
+ओं श्रियै नमः | ओष्ठौ पूजयामि |
+ओं सुनासिकायै नमः | नासिकां पूजयामि |
+ओं सुनेत्रायै नमः | नेत्रौ पूजयामि |
+ओं रमायै नमः | कर्णौ पूजयामि |
+ओं कमलायै नमः | शिरः पूजयामि |
+ओं वरलक्ष्म्यै नमः सर्वाण्यंगानि पूजयामि ||
+iast:
+oṁ caṁcalāyai namaḥ | pādau pūjayāmi |
+oṁ capalāyai namaḥ | jānunī pūjayāmi |
+oṁ pītāṁbaradharāyai namaḥ | ūrū pūjayāmi |
+oṁ kamalavāsinyai namaḥ | kaṭiṁ pūjayāmi |
+oṁ padmālayāyai namaḥ | nābhiṁ pūjayāmi |
+oṁ madanamātre namaḥ | stanau pūjayāmi |
+oṁ lalitāyai namaḥ | bhujadvayaṁ pūjayāmi |
+oṁ kaṁbukaṁṭhyai namaḥ | kaṁṭhaṁ pūjayāmi |
+oṁ sumukhāyai namaḥ | mukhaṁ pūjayāmi |
+oṁ śriyai namaḥ | oṣṭhau pūjayāmi |
+oṁ sunāsikāyai namaḥ | nāsikāṁ pūjayāmi |
+oṁ sunetrāyai namaḥ | netrau pūjayāmi |
+oṁ ramāyai namaḥ | karṇau pūjayāmi |
+oṁ kamalāyai namaḥ | śiraḥ pūjayāmi |
+oṁ varalakṣmyai namaḥ sarvāṇyaṁgāni pūjayāmi ||
+en: To her who is ever moving, I worship the feet.
+To her who is swift, I worship the knees.
+To her who wears the yellow garment, I worship the thighs.
+To her who dwells in the lotus, I worship the waist.
+To her whose home is the lotus, I worship the navel.
+To the mother of Manmatha, I worship the breast.
+To the graceful one, I worship the two arms.
+To her whose throat is like a conch, I worship the throat.
+To her whose face is pleasing, I worship the face.
+To Śrī, I worship the lips.
+To her whose nose is shapely, I worship the nose.
+To her whose eyes are beautiful, I worship the two eyes.
+To Ramā, I worship the two ears.
+To Kamalā, I worship the head.
+To Varalakṣmī, I worship all her limbs together.
+tel: చంచలాయై నమః — పాదాలను పూజిస్తున్నాను.
+చపలాయై నమః — మోకాళ్ళను పూజిస్తున్నాను.
+పీతాంబరధరాయై నమః — తొడలను పూజిస్తున్నాను.
+కమలవాసిన్యై నమః — నడుమును పూజిస్తున్నాను.
+పద్మాలయాయై నమః — నాభిని పూజిస్తున్నాను.
+మదనమాత్రే నమః — వక్షస్థలాన్ని పూజిస్తున్నాను.
+లలితాయై నమః — రెండు భుజాలను పూజిస్తున్నాను.
+కంబుకంఠ్యై నమః — కంఠాన్ని పూజిస్తున్నాను.
+సుముఖాయై నమః — ముఖాన్ని పూజిస్తున్నాను.
+శ్రియై నమః — పెదవులను పూజిస్తున్నాను.
+సునాసికాయై నమః — ముక్కును పూజిస్తున్నాను.
+సునేత్రాయై నమః — రెండు కన్నులను పూజిస్తున్నాను.
+రమాయై నమః — రెండు చెవులను పూజిస్తున్నాను.
+కమలాయై నమః — శిరస్సును పూజిస్తున్నాను.
+వరలక్ష్మ్యై నమః — సర్వాంగాలను పూజిస్తున్నాను.
+hi: चञ्चला को नमस्कार — चरणों की पूजा करता हूँ।
+चपला को नमस्कार — जानुओं की पूजा करता हूँ।
+पीताम्बरधरा को नमस्कार — ऊरुओं की पूजा करता हूँ।
+कमलवासिनी को नमस्कार — कटि की पूजा करता हूँ।
+पद्मालया को नमस्कार — नाभि की पूजा करता हूँ।
+मदन की माता को नमस्कार — वक्षःस्थल की पूजा करता हूँ।
+ललिता को नमस्कार — दोनों भुजाओं की पूजा करता हूँ।
+कम्बुकण्ठी को नमस्कार — कण्ठ की पूजा करता हूँ।
+सुमुखी को नमस्कार — मुख की पूजा करता हूँ।
+श्री को नमस्कार — ओष्ठों की पूजा करता हूँ।
+सुनासिका को नमस्कार — नासिका की पूजा करता हूँ।
+सुनेत्रा को नमस्कार — दोनों नेत्रों की पूजा करता हूँ।
+रमा को नमस्कार — दोनों कानों की पूजा करता हूँ।
+कमला को नमस्कार — शिर की पूजा करता हूँ।
+वरलक्ष्मी को नमस्कार — सर्वाङ्गों की पूजा करता हूँ।
+
+--- unit 18 | section: अङ्गपूजा ---
+vidhi:
+The hundred and eight names. The source does not print them here. It directs the worshipper to the Lakṣmī nāmāvaḷi, which stands in this corpus at `../../devi/lakshmi/36_lakshmi_ashtottarashatanamavali.txt`. The flowers are offered while the names are spoken.
+deva:
+श्री लक्ष्मी अष्टोत्तर शतनामावळिः चू. |
+श्री वरलक्ष्मी देवतायै नमः पुष्पाणि समर्पयामि || ११
+iast:
+śrī lakṣmī aṣṭottara śatanāmāvaḻiḥ cū. |
+śrī varalakṣmī devatāyai namaḥ puṣpāṇi samarpayāmi || 11
+en: See the hundred and eight names of Śrī Lakṣmī.
+I offer flowers to Śrī Varalakṣmī Devī.
+tel: శ్రీ లక్ష్మీ అష్టోత్తర శతనామావళి చూడండి.
+శ్రీ వరలక్ష్మీ దేవికి పుష్పాలు సమర్పిస్తున్నాను.
+hi: श्री लक्ष्मी अष्टोत्तरशतनामावली देखिये।
+श्री वरलक्ष्मी देवी को पुष्प समर्पित करता हूँ।
+
+--- unit 19 | section: षोडशोपचार पूजा ---
+vidhi:
+The incense.
+deva:
+दशांगं गुग्गुलोपेतं सुगंधं च मनोहरं |
+धूपं दास्यामि ते देवी गृहाण कमलप्रिये ||
+श्री वरलक्ष्मी देवतायै नमः धूपमाघ्रपयामि || १२
+iast:
+daśāṁgaṁ guggulopetaṁ sugaṁdhaṁ ca manoharaṁ |
+dhūpaṁ dāsyāmi te devī gṛhāṇa kamalapriye ||
+śrī varalakṣmī devatāyai namaḥ dhūpamāghrapayāmi || 12
+en: This incense is of ten ingredients, with guggulu in it, sweet-scented and pleasing. Devī, I shall give it to you. Lover of the lotus, receive it.
+I show the incense to Śrī Varalakṣmī Devī.
+tel: గుగ్గిలం కలిసిన దశాంగ ధూపం సువాసనతో మనోహరంగా ఉన్నది. దేవీ, దీనిని నీకు సమర్పిస్తున్నాను. కమలప్రియా, స్వీకరించు.
+శ్రీ వరలక్ష్మీ దేవికి ధూపం చూపిస్తున్నాను.
+hi: गुग्गुल से युक्त दशाङ्ग धूप सुगन्धित और मनोहर है। हे देवी, इसे आपको अर्पित करता हूँ। हे कमलप्रिया, ग्रहण कीजिये।
+श्री वरलक्ष्मी देवी को धूप दिखाता हूँ।
+
+--- unit 20 | section: षोडशोपचार पूजा ---
+vidhi:
+The lamp.
+deva:
+घृताक्तवर्ति समायुक्तं अंधकार विनाशकं |
+दीपं दास्यामि ते देवी गृहाणमुदिता भव ||
+श्री वरलक्ष्मी देवतायै नमः दीपं समर्पयामि || १३
+iast:
+ghṛtāktavarti samāyuktaṁ aṁdhakāra vināśakaṁ |
+dīpaṁ dāsyāmi te devī gṛhāṇamuditā bhava ||
+śrī varalakṣmī devatāyai namaḥ dīpaṁ samarpayāmi || 13
+en: This lamp has a wick soaked in ghee, and it destroys the darkness. Devī, I shall give it to you. Receive it and be glad.
+I offer the lamp to Śrī Varalakṣmī Devī.
+tel: నేతితో తడిపిన వత్తితో వెలిగించిన ఈ దీపం చీకటిని పోగొట్టేది. దేవీ, దీనిని నీకు సమర్పిస్తున్నాను. స్వీకరించి సంతోషించు.
+శ్రీ వరలక్ష్మీ దేవికి దీపం సమర్పిస్తున్నాను.
+hi: घृत में डुबोयी हुई बत्ती से युक्त यह दीप अन्धकार का नाश करने वाला है। हे देवी, इसे आपको अर्पित करता हूँ। ग्रहण करके प्रसन्न हूजिये।
+श्री वरलक्ष्मी देवी को दीप समर्पित करता हूँ।
+
+--- unit 21 | section: षोडशोपचार पूजा ---
+vidhi:
+The food offering.
+deva:
+नैवेद्यं षड्रसोपेतं दधि मध्वाज्य संयुतं |
+नानाभक्ष्यफलोपेतं गृहाण हरिवल्लभे ||
+श्री वरलक्ष्मी देवतायै नमः नैवेद्यं समर्पयामि || १४
+iast:
+naivedyaṁ ṣaḍrasopetaṁ dadhi madhvājya saṁyutaṁ |
+nānābhakṣyaphalopetaṁ gṛhāṇa harivallabhe ||
+śrī varalakṣmī devatāyai namaḥ naivedyaṁ samarpayāmi || 14
+en: This offering has the six tastes, and curd, honey and ghee are in it. Many kinds of food and fruit are set with it. Beloved of Hari, receive it.
+I offer the food to Śrī Varalakṣmī Devī.
+tel: షడ్రసాలతో కూడిన ఈ నైవేద్యంలో పెరుగు తేనె నెయ్యి ఉన్నాయి. నానా విధమైన భక్ష్యాలు ఫలాలు ఉన్నాయి. హరివల్లభా, స్వీకరించు.
+శ్రీ వరలక్ష్మీ దేవికి నైవేద్యం సమర్పిస్తున్నాను.
+hi: षड्रस से युक्त इस नैवेद्य में दधि, मधु और घृत हैं। नाना प्रकार के भक्ष्य और फल भी हैं। हे हरिवल्लभा, ग्रहण कीजिये।
+श्री वरलक्ष्मी देवी को नैवेद्य समर्पित करता हूँ।
+
+--- unit 22 | section: षोडशोपचार पूजा ---
+vidhi:
+The drinking water.
+deva:
+घनसार सुगंधेन मिश्रितं पुष्पवासितं |
+पानीयं गृह्यतां देवी शीतलं सुमनोहरं ||
+श्री वरलक्ष्मी देवतायै नमः पानीयं समर्पयामि ||
+iast:
+ghanasāra sugaṁdhena miśritaṁ puṣpavāsitaṁ |
+pānīyaṁ gṛhyatāṁ devī śītalaṁ sumanoharaṁ ||
+śrī varalakṣmī devatāyai namaḥ pānīyaṁ samarpayāmi ||
+en: This water is mixed with the scent of camphor and made fragrant with flowers. Devī, receive it. It is cool and very pleasant.
+I offer the drinking water to Śrī Varalakṣmī Devī.
+tel: కర్పూర సువాసనతో కలిపి, పుష్పాలతో పరిమళింపజేసిన ఈ నీరు చల్లగా మనోహరంగా ఉన్నది. దేవీ, దీనిని స్వీకరించు.
+శ్రీ వరలక్ష్మీ దేవికి పానీయం సమర్పిస్తున్నాను.
+hi: कर्पूर की सुगन्ध से मिश्रित और पुष्पों से सुवासित यह जल शीतल और मनोहर है। हे देवी, इसे ग्रहण कीजिये।
+श्री वरलक्ष्मी देवी को पानीय समर्पित करता हूँ।
+
+--- unit 23 | section: षोडशोपचार पूजा ---
+vidhi:
+The betel.
+deva:
+पूगीफल समायुक्तं नागवल्ली दळैर्युतं |
+कर्पूर चूर्ण संयुक्तं तांबूलं प्रतिगृह्यतां ||
+श्री वरलक्ष्मी देवतायै नमः तांबूलं समर्पयामि || १५
+iast:
+pūgīphala samāyuktaṁ nāgavallī daḻairyutaṁ |
+karpūra cūrṇa saṁyuktaṁ tāṁbūlaṁ pratigṛhyatāṁ ||
+śrī varalakṣmī devatāyai namaḥ tāṁbūlaṁ samarpayāmi || 15
+en: Here is betel with areca nut and with the leaves of the betel vine, and powdered camphor is added to it. Receive this tāmbūla.
+I offer the betel to Śrī Varalakṣmī Devī.
+tel: పోకచెక్కలతోను, తమలపాకులతోను, కర్పూర చూర్ణంతోను కూడిన ఈ తాంబూలాన్ని స్వీకరించు.
+శ్రీ వరలక్ష్మీ దేవికి తాంబూలం సమర్పిస్తున్నాను.
+hi: पूगीफल और नागवल्ली के पत्तों से युक्त, कर्पूर चूर्ण से संयुक्त यह ताम्बूल ग्रहण कीजिये।
+श्री वरलक्ष्मी देवी को ताम्बूल समर्पित करता हूँ।
+
+--- unit 24 | section: षोडशोपचार पूजा ---
+vidhi:
+The waving of the light.
+deva:
+नीराजनं समानीतं कर्पूरेण समन्वितं |
+तुभ्यं दास्याम्यहं देवि गृह्यतां विष्णुवल्लभे ||
+श्री वरलक्ष्मी देवतायै नमः नीराजनं समर्पयामि || १६
+iast:
+nīrājanaṁ samānītaṁ karpūreṇa samanvitaṁ |
+tubhyaṁ dāsyāmyahaṁ devi gṛhyatāṁ viṣṇuvallabhe ||
+śrī varalakṣmī devatāyai namaḥ nīrājanaṁ samarpayāmi || 16
+en: This light is brought with camphor burning in it. Devī, I shall give it to you. Beloved of Viṣṇu, receive it.
+I offer the waving of the light to Śrī Varalakṣmī Devī.
+tel: కర్పూరంతో కూడిన ఈ నీరాజనాన్ని తెచ్చాను. దేవీ, దీనిని నీకు సమర్పిస్తున్నాను. విష్ణువల్లభా, స్వీకరించు.
+శ్రీ వరలక్ష్మీ దేవికి నీరాజనం సమర్పిస్తున్నాను.
+hi: कर्पूर से युक्त यह नीराजन लाया हूँ। हे देवी, इसे आपको अर्पित करता हूँ। हे विष्णुवल्लभा, ग्रहण कीजिये।
+श्री वरलक्ष्मी देवी को नीराजन समर्पित करता हूँ।
+
+--- unit 25 | section: षोडशोपचार पूजा ---
+vidhi:
+The flower of the mantra. The verse is the first verse of the meditation, spoken again at the close of the services.
+deva:
+पद्मासने पद्मकरे सर्वलोकैकपूजिते |
+नारायणप्रिये देवी सुप्रीता भव सर्वदा ||
+श्री वरलक्ष्मी देवतायै नमः मंत्रपुष्पं समर्पयामि ||
+iast:
+padmāsane padmakare sarvalokaikapūjite |
+nārāyaṇapriye devī suprītā bhava sarvadā ||
+śrī varalakṣmī devatāyai namaḥ maṁtrapuṣpaṁ samarpayāmi ||
+en: You are seated on the lotus, and the lotus is in your hand. All the worlds worship you alone. You are dear to Nārāyaṇa. Devī, be well pleased with me always.
+I offer the flower of the mantra to Śrī Varalakṣmī Devī.
+tel: పద్మాసనంలో కూర్చున్న తల్లీ, చేతిలో పద్మం ధరించిన తల్లీ, సర్వలోకాలచేత పూజింపబడేదానా, నారాయణునికి ప్రియమైనదానా — దేవీ, ఎల్లప్పుడూ ప్రసన్నురాలవై ఉండు.
+శ్రీ వరలక్ష్మీ దేవికి మంత్రపుష్పం సమర్పిస్తున్నాను.
+hi: पद्मासन पर विराजमान, हाथ में कमल धारण करने वाली, समस्त लोकों से पूजित, नारायण की प्रिया — हे देवी, सदा प्रसन्न रहिये।
+श्री वरलक्ष्मी देवी को मन्त्रपुष्प समर्पित करता हूँ।
+
+--- unit 26 | section: षोडशोपचार पूजा ---
+vidhi:
+The circling. Three verses are spoken: the first on the fruit of walking round, the second a confession, the third the taking of refuge.
+deva:
+यानिकानि च पापानि जन्मांतर कृतानि च
+तानि तानि प्रणश्यंति प्रदक्षिण पदे पदे |
+पापोऽहं पापकर्माहं पापात्मा पापसंभवा
+त्राहि मां कृपया देवि शरणागतवत्सले |
+अन्यथा शरणं नास्ति त्वमेव शरणं मम
+तस्मात्कारुण्यभावेन रक्षरक्ष जनार्दनि ||
+श्री वरलक्ष्मी देवतायै नमः प्रदक्षिणं समर्पयामि ||
+iast:
+yānikāni ca pāpāni janmāṁtara kṛtāni ca
+tāni tāni praṇaśyaṁti pradakṣiṇa pade pade |
+pāpo'haṁ pāpakarmāhaṁ pāpātmā pāpasaṁbhavā
+trāhi māṁ kṛpayā devi śaraṇāgatavatsale |
+anyathā śaraṇaṁ nāsti tvameva śaraṇaṁ mama
+tasmātkāruṇyabhāvena rakṣarakṣa janārdani ||
+śrī varalakṣmī devatāyai namaḥ pradakṣiṇaṁ samarpayāmi ||
+en: Whatever sins have been committed, in this birth and in births before it, perish step by step as the worshipper walks around.
+I am sinful, my deeds are sinful, my self is sinful, I am born of sin. Devī, you who love those who come to you for refuge, protect me in your mercy.
+There is no other refuge. You alone are my refuge. Therefore, out of compassion, protect me, protect me, Janārdanī.
+I walk around Śrī Varalakṣmī Devī.
+tel: ఈ జన్మలోను, పూర్వ జన్మలలోను చేసిన పాపాలు ప్రదక్షిణం చేస్తుండగా అడుగడుగునా నశిస్తాయి.
+నేను పాపిని, నా కర్మలు పాపమయమైనవి, నా ఆత్మ పాపమయమైనది, నేను పాపం నుండి పుట్టినవాడను. శరణాగతులను ఆదరించే దేవీ, కృపతో నన్ను రక్షించు.
+వేరే శరణం లేదు. నీవే నాకు శరణం. కావున కారుణ్యంతో నన్ను రక్షించు, రక్షించు, జనార్దనీ.
+శ్రీ వరలక్ష్మీ దేవికి ప్రదక్షిణం చేస్తున్నాను.
+hi: इस जन्म में और पूर्व जन्मों में किये गये जो पाप हैं, वे प्रदक्षिणा के प्रत्येक पग पर नष्ट हो जाते हैं।
+मैं पापी हूँ, मेरे कर्म पापमय हैं, मेरी आत्मा पापमयी है, मैं पाप से उत्पन्न हूँ। हे शरणागतवत्सला देवी, कृपा करके मेरी रक्षा कीजिये।
+अन्य कोई शरण नहीं है। आप ही मेरी शरण हैं। इसलिये करुणा से मेरी रक्षा कीजिये, रक्षा कीजिये, हे जनार्दनी।
+श्री वरलक्ष्मी देवी की प्रदक्षिणा करता हूँ।
+
+--- unit 27 | section: षोडशोपचार पूजा ---
+vidhi:
+The bowing.
+deva:
+नमस्ते लोकजननि नमस्ते विष्णुवल्लभे |
+पाहिमां भक्तवरदे वरलक्ष्मी नमो नमः ||
+श्री वरलक्ष्मी देवतायै नमः नमस्कारान् समर्पयामि ||
+iast:
+namaste lokajanani namaste viṣṇuvallabhe |
+pāhimāṁ bhaktavarade varalakṣmī namo namaḥ ||
+śrī varalakṣmī devatāyai namaḥ namaskārān samarpayāmi ||
+en: I bow to you, mother of the worlds. I bow to you, beloved of Viṣṇu. You give what is asked to those who trust you. Protect me. Varalakṣmī, again and again I bow.
+I bow to Śrī Varalakṣmī Devī.
+tel: లోకాలకు తల్లీ, నీకు నమస్కారం. విష్ణువల్లభా, నీకు నమస్కారం. భక్తులకు వరాలిచ్చేదానా, నన్ను కాపాడు. వరలక్ష్మీ, నీకు మరల మరల నమస్కారం.
+శ్రీ వరలక్ష్మీ దేవికి నమస్కారాలు సమర్పిస్తున్నాను.
+hi: हे लोकजननी, आपको नमस्कार। हे विष्णुवल्लभा, आपको नमस्कार। हे भक्तवरदा, मेरी रक्षा कीजिये। हे वरलक्ष्मी, बारम्बार नमस्कार।
+श्री वरलक्ष्मी देवी को नमस्कार समर्पित करता हूँ।
+
+--- unit 28 | section: तोरबन्धनम् ---
+vidhi:
+The worship of the knots of the toram. **The toram is the practical heart of this vrata.** It is a thread of nine strands, and nine knots are tied in it. Each knot is worshipped by one name of the goddess before the thread is bound. **The *Āru Vratālu* print gives only eight knots, ending at the eighth**, although its own binding mantra says the thread is of nine. The base text's nine are kept; see the recension note.
+deva:
+कमलायै नमः | प्रथम ग्रंथिं पूजयामि |
+रमायै नमः | द्वितीय ग्रंथिं पूजयामि |
+लोकमात्रे नमः | तृतीय ग्रंथिं पूजयामि |
+विश्वजनन्यै नमः | चतुर्थ ग्रंथिं पूजयामि |
+महालक्ष्म्यै नमः | पंचम ग्रंथिं पूजयामि |
+क्षीराब्धितनयायै नमः | षष्ठ ग्रंथिं पूजयामि |
+विश्वसाक्षिण्यै नमः | सप्तम ग्रंथिं पूजयामि |
+चंद्रसोदर्यै नमः | अष्टम ग्रंथिं पूजयामि |
+हरिवल्लभायै नमः | नवम ग्रंथिं पूजयामि |
+iast:
+kamalāyai namaḥ | prathama graṁthiṁ pūjayāmi |
+ramāyai namaḥ | dvitīya graṁthiṁ pūjayāmi |
+lokamātre namaḥ | tṛtīya graṁthiṁ pūjayāmi |
+viśvajananyai namaḥ | caturtha graṁthiṁ pūjayāmi |
+mahālakṣmyai namaḥ | paṁcama graṁthiṁ pūjayāmi |
+kṣīrābdhitanayāyai namaḥ | ṣaṣṭha graṁthiṁ pūjayāmi |
+viśvasākṣiṇyai namaḥ | saptama graṁthiṁ pūjayāmi |
+caṁdrasodaryai namaḥ | aṣṭama graṁthiṁ pūjayāmi |
+harivallabhāyai namaḥ | navama graṁthiṁ pūjayāmi |
+en: To Kamalā, I worship the first knot.
+To Ramā, I worship the second knot.
+To the mother of the world, I worship the third knot.
+To her who gave birth to all that is, I worship the fourth knot.
+To Mahālakṣmī, I worship the fifth knot.
+To the daughter of the ocean of milk, I worship the sixth knot.
+To her who is witness to all, I worship the seventh knot.
+To the sister of the moon, I worship the eighth knot.
+To the beloved of Hari, I worship the ninth knot.
+tel: కమలాయై నమః — మొదటి ముడిని పూజిస్తున్నాను.
+రమాయై నమః — రెండవ ముడిని పూజిస్తున్నాను.
+లోకమాత్రే నమః — మూడవ ముడిని పూజిస్తున్నాను.
+విశ్వజనన్యై నమః — నాలుగవ ముడిని పూజిస్తున్నాను.
+మహాలక్ష్మ్యై నమః — ఐదవ ముడిని పూజిస్తున్నాను.
+క్షీరాబ్ధితనయాయై నమః — ఆరవ ముడిని పూజిస్తున్నాను.
+విశ్వసాక్షిణ్యై నమః — ఏడవ ముడిని పూజిస్తున్నాను.
+చంద్రసోదర్యై నమః — ఎనిమిదవ ముడిని పూజిస్తున్నాను.
+హరివల్లభాయై నమః — తొమ్మిదవ ముడిని పూజిస్తున్నాను.
+hi: कमला को नमस्कार — प्रथम ग्रन्थि की पूजा करता हूँ।
+रमा को नमस्कार — द्वितीय ग्रन्थि की पूजा करता हूँ।
+लोकमाता को नमस्कार — तृतीय ग्रन्थि की पूजा करता हूँ।
+विश्वजननी को नमस्कार — चतुर्थ ग्रन्थि की पूजा करता हूँ।
+महालक्ष्मी को नमस्कार — पञ्चम ग्रन्थि की पूजा करता हूँ।
+क्षीराब्धितनया को नमस्कार — षष्ठ ग्रन्थि की पूजा करता हूँ।
+विश्वसाक्षिणी को नमस्कार — सप्तम ग्रन्थि की पूजा करता हूँ।
+चन्द्रसोदरी को नमस्कार — अष्टम ग्रन्थि की पूजा करता हूँ।
+हरिवल्लभा को नमस्कार — नवम ग्रन्थि की पूजा करता हूँ।
+
+--- unit 29 | section: तोरबन्धनम् ---
+vidhi:
+The binding of the toram. It is tied on the right hand. The kathā says the same, and the *Āru Vratālu* print gives this mantra in the same words.
+deva:
+बध्नामि दक्षिणेहस्ते नवसूत्रं शुभप्रदं |
+पुत्र पौत्राभि वृद्धिं च सौभाग्यं देहि मे रमे ||
+iast:
+badhnāmi dakṣiṇehaste navasūtraṁ śubhapradaṁ |
+putra pautrābhi vṛddhiṁ ca saubhāgyaṁ dehi me rame ||
+en: I bind upon my right hand this thread of nine strands, which gives all good. Ramā, grant me the increase of sons and of grandsons, and a fortunate married life.
+tel: శుభాలను ఇచ్చే ఈ తొమ్మిది పోగుల తోరాన్ని కుడి చేతికి కట్టుకుంటున్నాను. రమా, నాకు పుత్ర పౌత్ర అభివృద్ధిని, సౌభాగ్యాన్ని ఇవ్వు.
+hi: शुभ देने वाले इस नवसूत्र तोरण को अपने दाहिने हाथ में बाँधता हूँ। हे रमा, मुझे पुत्र-पौत्र की वृद्धि और सौभाग्य दीजिये।
+
+--- unit 30 | section: वायनविधिः ---
+vidhi:
+The vāyana, which is the handing over of the offering. Twelve apūpas are given. The kathā calls them twelve kuḍumulu, and names the purohita as the one who receives them.
+deva:
+एवं संपूज्य कळ्याणीं वरलक्ष्मीं स्वशक्तितः |
+दातव्यं द्वादशापूपं वायनं हि द्विजातये ||
+iast:
+evaṁ saṁpūjya kaḻyāṇīṁ varalakṣmīṁ svaśaktitaḥ |
+dātavyaṁ dvādaśāpūpaṁ vāyanaṁ hi dvijātaye ||
+en: Having worshipped Varalakṣmī, the giver of good, in this way and to the full measure of one's ability, twelve apūpas are to be given as the vāyana to a twice-born.
+tel: ఈ విధంగా శక్తి కొలది కల్యాణి అయిన వరలక్ష్మిని పూజించి, ద్విజునికి పన్నెండు అపూపాలను వాయనంగా ఇవ్వవలెను.
+hi: इस प्रकार अपनी शक्ति के अनुसार कल्याणी वरलक्ष्मी की पूजा करके, द्विज को बारह अपूप वायन के रूप में देने चाहिये।
+
+--- unit 31 | section: वायनविधिः ---
+vidhi:
+The mantra spoken while the vāyana is handed over, and the direction that follows it. **The two editions differ in the second half of the first line and the difference is not settled here** — see the recension note.
+deva:
+इंदिरा प्रतिगृह्णातु इंदिरायै ददाति च |
+इंदिरा तारकोभाभ्यां इंदिरायै नमो नमः ||
+(वायनं इच्चि अक्षतलु पुच्चुकुनि व्रतकथनु चदुवुकोवालि)
+iast:
+iṁdirā pratigṛhṇātu iṁdirāyai dadāti ca |
+iṁdirā tārakobhābhyāṁ iṁdirāyai namo namaḥ ||
+(vāyanaṁ icci akṣatalu puccukuni vratakathanu caduvukovāli)
+en: May Indirā receive it, and to Indirā it is given. Indirā is of the brightness of the stars. To Indirā I bow, again and again.
+(Having given the vāyana, take the unbroken grains in the hand and read the story of the vrata.)
+tel: ఇందిర స్వీకరించుగాక, ఇందిరకే ఇవ్వబడుతున్నది. ఇందిర తారకల కాంతి గలది. ఇందిరకు మరల మరల నమస్కారం.
+(వాయనం ఇచ్చి అక్షతలు చేతిలో పుచ్చుకుని వ్రతకథను చదువుకోవాలి.)
+hi: इन्दिरा ग्रहण करें, और इन्दिरा को ही दिया जाता है। इन्दिरा तारकों की कान्ति वाली हैं। इन्दिरा को बारम्बार नमस्कार।
+(वायन देकर हाथ में अक्षत लेकर व्रतकथा पढ़नी चाहिये।)
+
+--- unit 32 | section: व्रतकथा ---
+vidhi:
+The story begins. Sūta tells it to Śaunaka and the other sages, and within his telling it is Parameśvara who tells it to Pārvatī. **The story is the source's own Telugu prose, and no Sanskrit of it was written here.** The *Āru Vratālu* print does carry a Sanskrit kathā, but its scan could not be read with confidence; see the recension note.
+deva:
+व्रतकथा प्रारम्भम्
+iast:
+vratakathā prārambham
+en: Sūta, the great sage, looked upon Śaunaka and the other great sages and spoke to them. "Best of sages! Parameśvara told Pārvatī Devī of a vrata by which women obtain every good fortune. I shall tell it to you. Listen."
+tel: సూత మహాముని శౌనకుడు మొదలగు మహర్షులను జూచి ఇట్లనియె. "మునివర్యులారా! స్త్రీలకు సర్వసౌభాగ్యములు గలుగునట్టి యొక వ్రతమును పరమేశ్వరుడు పార్వతీదేవికి జెప్పెను. దానిని చెప్పెద వినుండు."
+hi: सूत महामुनि ने शौनक आदि महर्षियों को देखकर कहा — "हे मुनिवरो! स्त्रियों को समस्त सौभाग्य देने वाले एक व्रत को परमेश्वर ने पार्वती देवी से कहा था। उसी को कहता हूँ, सुनिये।"
+
+--- unit 33 | section: व्रतकथा ---
+vidhi:
+Pārvatī asks, and Parameśvara names the vrata and the day. **The day is given here and nowhere else in the rite: the Friday that falls before the full moon of the bright fortnight of Śrāvaṇa.**
+deva:
+व्रतकथा प्रारम्भम्
+iast:
+vratakathā prārambham
+en: On the mountain Kailāsa, Parameśvara was seated upon a throne set with diamonds, lapis and every kind of jewel. Pārvatī Devī bowed to him and said, "Lord! By keeping which vrata do the women of this world obtain every good fortune, and sons and grandsons, and live in happiness? Tell me that vrata." Parameśvara answered, "O beautiful one! There is a vrata called the Varalakṣmī vrata, which gives women the wealth of sons and of grandsons. It is to be kept on the Friday that comes before the full moon of the bright fortnight of the month of Śrāvaṇa." Then Pārvatī Devī said, "O you whom the world reveres! How is the Varalakṣmī vrata you have named to be performed? What is its rule? Which deity is to be worshipped? Who kept this vrata in earlier times? Tell me all of this in full." So she prayed, and Parameśvara looked upon Pārvatī Devī and said, "O Kātyāyanī! I shall tell you the Varalakṣmī vrata in detail. Listen."
+tel: కైలాసపర్వతమున వజ్రవైఢూర్యాది మణిగణ ఖచితంబగు సింహాసనంబునందు పరమేశ్వరుండు కూర్చుండియుండ, పార్వతీదేవి నమస్కరించి, "దేవా! లోకంబున స్త్రీలు ఏ వ్రతంబొనర్చిన సర్వసౌభాగ్యంబులును, పుత్రపౌత్రాదులును కలిగి సుఖంబుగనుందురో, అట్టి వ్రతంబు నాకు ఆనతీయవలయు" ననియె. అప్పుడు పరమేశ్వరుండు — "ఓ మనోహరీ! స్త్రీలకు పుత్రపౌత్రాది సంపత్తులు గలుగజేసెడి వరలక్ష్మీ వ్రతంబను నొక వ్రతంబు గలదు. ఆ వ్రతంబును శ్రావణమాస శుక్లపక్ష పూర్ణిమకు ముందుగ వచ్చెడి శుక్రవారమునాడు చేయవలయు" ననియె. అంతట పార్వతీదేవి — "ఓ లోకారాధ్యా! ఆ వ్రతంబు నెట్లు చేయవలయును? దానికి విధియేమి? ఏ దేవతను పూజింపవలయును? పూర్వం బెవరిచే నీ వ్రతంబాచరింపబడియె? వీనినెల్ల సవివరంబుగా వచియింపవలయు"నని ప్రార్థించెను. పరమేశ్వరుండు — "ఓ కాత్యాయనీ! వరలక్ష్మీ వ్రతమును సవిస్తరంబుగ జెప్పెద వినుము" అనియె.
+hi: कैलास पर्वत पर वज्र और वैडूर्य आदि मणियों से जड़े सिंहासन पर परमेश्वर विराजमान थे। पार्वती देवी ने नमस्कार करके कहा — "हे देव! संसार में स्त्रियाँ कौन सा व्रत करने से समस्त सौभाग्य तथा पुत्र-पौत्रादि पाकर सुख से रहती हैं? वह व्रत मुझे बताइये।" तब परमेश्वर ने कहा — "हे मनोहरी! स्त्रियों को पुत्र-पौत्र आदि सम्पत्ति देने वाला वरलक्ष्मी व्रत नामक एक व्रत है। वह व्रत श्रावण मास के शुक्ल पक्ष की पूर्णिमा से पूर्व आने वाले शुक्रवार को करना चाहिये।" तब पार्वती देवी ने कहा — "हे लोकाराध्य! वह व्रत कैसे करना चाहिये? उसकी विधि क्या है? किस देवता की पूजा करनी चाहिये? पूर्वकाल में किसने यह व्रत किया था? यह सब विस्तार से कहिये।" तब परमेश्वर ने पार्वती देवी को देखकर कहा — "हे कात्यायनी! वरलक्ष्मी व्रत विस्तार से कहता हूँ, सुनो।"
+
+--- unit 34 | section: व्रतकथा ---
+vidhi:
+Cārumatī of Kuṇḍina. The story names her before it names her merit, and what it praises in her is the ordinary conduct of a good household.
+deva:
+व्रतकथा प्रारम्भम्
+iast:
+vratakathā prārambham
+en: "In the country of Magadha there is a city called Kuṇḍina. That city had walls of gold, and the houses in it had golden walls also. In that city there lived a woman named Cārumatī. Every day she rose at dawn, bathed, and served her elders in many ways. She did the work of the house. She spoke little, and she spoke kindly."
+tel: "మగధ దేశంబున కుండినంబను నొక పట్టణము గలదు. ఆ పట్టణము బంగారు ప్రాకారంబులతోడను, బంగారు గోడలు గల ఇండ్లతోడను గూడియుండె. అట్టి పట్టణమునందు చారుమతియను నొక మహిళ గలదు. ఆ వనితామణి ప్రతిదినంబును ఉషఃకాలంబున మేల్కాంచి స్నానంబు చేసి, పెద్దలకు అనేక విధంబులైన యుపచారంబులను జేసి, ఇంటి పనులను జేసికొని, మితముగాను ప్రియముగాను భాషించుచు నుండెను."
+hi: "मगध देश में कुण्डिन नामक एक नगर है। उस नगर में स्वर्ण के परकोटे थे और घरों की दीवारें भी स्वर्ण की थीं। उस नगर में चारुमती नाम की एक स्त्री रहती थी। वह प्रतिदिन उषःकाल में उठकर स्नान करती, बड़ों की अनेक प्रकार से सेवा करती, घर का कार्य करती, और मित तथा प्रिय वचन बोलती थी।"
+
+--- unit 35 | section: व्रतकथा ---
+vidhi:
+The dream. Lakṣmī herself names the day, and Cārumatī's household confirms that the vrata must be kept.
+deva:
+व्रतकथा प्रारम्भम्
+iast:
+vratakathā prārambham
+en: "In this way she lived, and Mahālakṣmī became gracious to her. One day the goddess appeared to her in a dream and said, 'O Cārumatī! I am Varalakṣmī Devī. I am pleased with you, and so I have shown myself. Worship me on the Friday that comes before the full moon of the bright fortnight of Śrāvaṇa, and I shall give you the boons you ask for.' So she spoke, and Cārumatī Devī, still in the dream, walked round Varalakṣmī Devī and bowed to her, and praised her in many ways. 'O mother of the world! When your glance falls upon them, people become blessed. They become learned, and they come to have every kind of wealth. By the merit I gathered in another birth, I have been given the sight of your feet.' She spoke so, and Mahālakṣmī was pleased. She gave Cārumatī many boons and vanished. Cārumatī woke at once and looked to the four sides of the house, and did not see Varalakṣmī Devī. She thought that she had dreamed, and told what she had seen to her husband, her father-in-law and the others. They said that the dream was a very good one, and that as soon as the month of Śrāvaṇa came the Varalakṣmī vrata must certainly be kept. After that Cārumatī, and the women who had heard of the dream, waited and watched for the month of Śrāvaṇa to come. So it was that by their good fortune the Friday before the full moon of Śrāvaṇa arrived."
+tel: "ఇట్లుండ ఆమెయందు మహాలక్ష్మికి అనుగ్రహము గలిగి, ఒకనాడు స్వప్నంబున ప్రసన్నయై, 'ఓ చారుమతీ! నేను వరలక్ష్మీ దేవిని. నీయందు నాకు అనుగ్రహము గలిగి ప్రత్యక్షమైతిని. శ్రావణ శుక్ల పూర్ణిమకు ముందుగా వచ్చెడు శుక్రవారమునాడు నన్ను పూజించిన, నీవు కోరిన వరంబుల నిచ్చెద' నని వచించెను. అంతట చారుమతీదేవి స్వప్నంబులోనే వరలక్ష్మీదేవికి ప్రదక్షిణ నమస్కారములు చేసి, అనేక విధంబుల స్తోత్రము చేసి, 'ఓ జగజ్జననీ! నీ కటాక్షంబు గలిగెనేని జనులు ధన్యులగుదురు, విద్వాంసులుగను సకల సంపన్నులుగను నయ్యెదరు. నేను జన్మాంతరంబున జేసిన పుణ్య విశేషంబు వలన నీ పాదదర్శనంబు నాకు గలిగె' నని చెప్పెను. మహాలక్ష్మి సంతోషంబు జెంది చారుమతికి ననేక వరంబులిచ్చి యంతర్థానంబు నొందె. చారుమతి తక్షణంబున నిదుర మేల్కొని ఇంటికి నాలుగు ప్రక్కలంజూచి వరలక్ష్మీదేవిని గానక, 'ఓహో! నేను కలగంటిన' ననుకొని, యా స్వప్న వృత్తాంతమును పెనిమిటి, మామగారు మొదలయిన వాండ్రతో జెప్పెను. వారు 'ఈ స్వప్నము ముగుల నుత్తమమైనది, శ్రావణ మాసంబు వచ్చిన తోడనే వరలక్ష్మీ వ్రతంబవశ్యంబుగ జేయవలసినది' యని చెప్పిరి. పిమ్మట చారుమతియును, స్వప్నంబు విన్న స్త్రీలును శ్రావణమాసం బెప్పుడు వచ్చునాయని ఎదురుచూచుచుండిరి. ఇట్లుండగా వీరి భాగ్యోదయంబు వలన శ్రావణమాస పూర్ణిమకు ముందుగ వచ్చెడి శుక్రవారము వచ్చెను."
+hi: "इस प्रकार रहते हुए महालक्ष्मी उस पर प्रसन्न हुईं। एक दिन स्वप्न में प्रकट होकर उन्होंने कहा — 'हे चारुमती! मैं वरलक्ष्मी देवी हूँ। तुम पर प्रसन्न होकर प्रत्यक्ष हुई हूँ। श्रावण शुक्ल पूर्णिमा से पूर्व आने वाले शुक्रवार को मेरी पूजा करो, तो जो वर माँगोगी वह दूँगी।' तब चारुमती देवी ने स्वप्न में ही वरलक्ष्मी देवी की प्रदक्षिणा और नमस्कार करके अनेक प्रकार से स्तुति की — 'हे जगज्जननी! आपका कटाक्ष हो जाये तो मनुष्य धन्य हो जाते हैं, विद्वान् और सर्व सम्पन्न हो जाते हैं। जन्मान्तर में किये पुण्य विशेष से मुझे आपके चरणों का दर्शन हुआ।' यह सुनकर महालक्ष्मी प्रसन्न हुईं, चारुमती को अनेक वर देकर अन्तर्धान हो गयीं। चारुमती तत्क्षण जागकर घर की चारों ओर देखकर वरलक्ष्मी देवी को न पाकर सोचा कि यह स्वप्न था, और वह वृत्तान्त पति, श्वशुर आदि से कहा। उन्होंने कहा कि यह स्वप्न अत्यन्त उत्तम है, श्रावण मास आते ही वरलक्ष्मी व्रत अवश्य करना चाहिये। तत्पश्चात् चारुमती तथा स्वप्न की बात सुनने वाली स्त्रियाँ श्रावण मास की प्रतीक्षा करने लगीं। इस प्रकार उनके भाग्योदय से श्रावण मास की पूर्णिमा से पूर्व आने वाला शुक्रवार आ गया।"
+
+--- unit 36 | section: व्रतकथा ---
+vidhi:
+The keeping of the vrata, and what followed. **This paragraph is also a set of directions.** It states the whole apparatus of the rite in order — the cleaned ground, the maṇḍapa, the seat, the new rice, the kalaśa made with the five shoots, the invitation, the sixteen services, the nine-strand toram on the right hand, the food offering, and the circling.
+deva:
+व्रतकथा प्रारम्भम्
+iast:
+vratakathā prārambham
+en: "Then Cārumatī and all the other women said, 'This is the very day that Varalakṣmī Devī named.' They rose at dawn, bathed, and put on fine garments. In a place in Cārumatī Devī's house they smeared the ground with cow dung and made a maṇḍapa there. They set a seat upon it, poured new rice on the seat, and made ready a kalaśa with the five shoots, of which the banyan shoot is one. In it they invited Varalakṣmī Devī. With great devotion they performed the sixteen services beginning with meditation and invitation. They bound upon the right hand a toram of nine threads, offered to Varalakṣmī Devī many kinds of food, and walked around her.
+
+When they had walked round once, some of those women heard a sound of small bells at their feet. They looked down and saw that anklets and other ornaments had come upon them, and they were filled with joy and said that this had come from the grace of Varalakṣmī Devī. They walked round a second time, and saw upon their hands bangles and other ornaments, set with the nine jewels and shining brightly. And when they had walked round the third time, all those women were adorned from head to foot. All their houses became golden, and were filled with chariots, elephants and horses. Then, to take those women home, horses, elephants, chariots and carts came from each of their houses and stood waiting.
+
+After that Cārumatī and all the other women gave twelve kuḍumulu as vāyana to the purohita who had performed the worship for them according to the kalpa. They gave him dakṣiṇā and tāmbūla and received his blessing. With their relatives they all ate the food that had been offered to Varalakṣmī Devī. Then they mounted the horses and elephants and the other vehicles that had come and were waiting for them, and went to their houses. As they went, they said to one another, 'How can the good fortune of Cārumatī Devī be told? Varalakṣmī Devī came to her of her own accord in a dream and showed herself. It is through Cārumatī Devī alone that such great fortune and wealth have come to us.' Praising Cārumatī Devī greatly, they went to their houses. After that Cārumatī and all the other women kept this vrata every year, and they had the increase of sons and of grandsons, and lived in happiness with wealth, gold, goods and vehicles."
+tel: "అంత చారుమతి మొదలగు స్త్రీలందరును 'ఈ దినంబే గదా వరలక్ష్మీ దేవి చెప్పిన దినంబ'ని, ఉదయంబుననే మేల్కాంచి, స్నానంబులంజేసి, చిత్ర వస్త్రంబులం గట్టుకొని, చారుమతీదేవి గృహంబున నొక ప్రదేశమునందు గోమయంబుచే నలికి మంటపం బేర్పరిచి, యందొక ఆసనంబువైచి, దానిపై క్రొత్త బియ్యము పోసి, మర్రి చిగుళ్ళు మొదలగు పంచ పల్లవంబులచే కలశం బేర్పరచి, యందు వరలక్ష్మీదేవిని ఆవాహనము చేసి, మిగుల భక్తియుక్తులై ధ్యానావాహనాది షోడశోపచార పూజలను జేసి, తొమ్మిది సూత్రంబులను గల తోరంబును దక్షిణహస్తంబున గట్టుకొని, వరలక్ష్మీ దేవికి నానావిధ భక్ష్యభోజ్యంబులను నివేదన చేసి ప్రదక్షిణంబు చేసిరి.
+
+ఇట్లొక ప్రదక్షిణము చేయగనే ఆ స్త్రీల కొందరికి కాళ్ళయందు ఘల్లుఘల్లుమను నొక శబ్దము గలిగె. అంత కాళ్ళం జూచికొనిన గజ్జెలు మొదలగు నాభరణములు కలిగియుండగ, వారందరును 'ఓహో! వరలక్ష్మీదేవి కటాక్షము వలన గలిగినవి' యని పరమానందంబునొంది, మరియొక ప్రదక్షిణంబు చేయ, హస్తములందు ధగద్ధగాయమానంబుగ పొలయుచుండు నవరత్న ఖచితంబులైన కంకణములు మొదలగు నాభరణములుండుటం గనిరి. మూడవ ప్రదక్షిణంబు గావించిన తోడనే యా స్త్రీలందరును సర్వభూషణాలంకృతులైరి. ఆ స్త్రీల గృహంబులెల్ల స్వర్ణమయంబులై రథగజతురగ వాహనంబులతోడ నిండియుండెను. అంత నా స్త్రీలందోడ్కొని గృహంబులకు బోవుటకు వారివారి ఇండ్లనుండి గుర్రములు, ఏనుగులు, రథములు, బండ్లు వచ్చి నిల్చియుండెను.
+
+పిదప చారుమతి మొదలగు స్త్రీలందరును తమచే కల్పోక్త ప్రకారముగా పూజ చేయించిన పురోహితునికి పండ్రెండు కుడుములు వాయన దానంబిచ్చి, దక్షిణ తాంబూలంబు లొసంగి, ఆశీర్వాదంబు నొంది, వరలక్ష్మీ దేవికి నివేదనము చేసిన భక్ష్యాదులను బంధువులతోడ నెల్లరును భుజించి, తమ కొరకు వచ్చి కాచుకొనియున్న గుర్రములు, ఏనుగులు మొదలగు వాహనములనెక్కి తమ తమ ఇండ్లకు బోవుచు, ఒకరితో నొకరు 'ఓహో! చారుమతీదేవి భాగ్యంబేమని చెప్పవచ్చును. వరలక్ష్మీ దేవి తనంతట స్వప్నములో వచ్చి ప్రత్యక్షంబాయెను. ఆ చారుమతీదేవి వలననే గదా మనకిట్టి మహాభాగ్య సంపత్తులు గలిగె' నని చారుమతీదేవిని మిక్కిలి పొగడుచు తమ తమ ఇండ్లకు బోయిరి. పిదప చారుమతి మొదలగు స్త్రీలందరును ప్రతి సంవత్సరము నీ వ్రతంబు సేయుచు, పుత్ర పౌత్రాభివృద్ధి కలిగి, ధన కనక వస్తు వాహనముల తోడం గూడుకొని సుఖంబుగనుండిరి."
+hi: "तब चारुमती आदि सब स्त्रियों ने कहा — 'यही तो वह दिन है जो वरलक्ष्मी देवी ने बताया था।' प्रातःकाल उठकर उन्होंने स्नान किया, सुन्दर वस्त्र पहने, और चारुमती देवी के घर में एक स्थान पर गोमय से लीपकर मण्डप बनाया। उस पर आसन रखा, आसन पर नया चावल डाला, वटवृक्ष के अङ्कुर आदि पञ्च पल्लवों से कलश स्थापित किया, और उसमें वरलक्ष्मी देवी का आवाहन किया। अत्यन्त भक्ति से ध्यान और आवाहन आदि षोडशोपचार पूजा की, नौ सूत्रों वाला तोरण दाहिने हाथ में बाँधा, वरलक्ष्मी देवी को नाना प्रकार के भक्ष्य-भोज्य निवेदित किये, और प्रदक्षिणा की।
+
+एक प्रदक्षिणा करते ही उनमें से कुछ स्त्रियों के चरणों में घुँघरुओं की ध्वनि हुई। देखा तो पैरों में नूपुर आदि आभूषण आ गये थे। सब परमानन्द से भर गयीं और कहा कि यह वरलक्ष्मी देवी के कटाक्ष से हुआ है। दूसरी प्रदक्षिणा करने पर उन्होंने अपने हाथों में नवरत्न जड़े देदीप्यमान कङ्कण आदि आभूषण देखे। तीसरी प्रदक्षिणा करते ही वे सब स्त्रियाँ सर्व आभूषणों से अलङ्कृत हो गयीं। उनके सब घर स्वर्णमय हो गये और रथ, गज, अश्व आदि वाहनों से भर गये। तब उन स्त्रियों को घर ले जाने के लिये उनके घरों से घोड़े, हाथी, रथ और गाड़ियाँ आकर खड़ी हो गयीं।
+
+तत्पश्चात् चारुमती आदि सब स्त्रियों ने कल्पोक्त विधि से पूजा कराने वाले पुरोहित को बारह कुडुम वायन दान में दिये, दक्षिणा और ताम्बूल देकर आशीर्वाद लिया, वरलक्ष्मी देवी को निवेदित भक्ष्य आदि को बन्धुओं सहित सबने भोजन किया, और अपने लिये आकर खड़े घोड़े, हाथी आदि वाहनों पर चढ़कर अपने-अपने घर जाने लगीं। जाते हुए वे परस्पर कहती थीं — 'अहो! चारुमती देवी का भाग्य क्या कहा जाये। वरलक्ष्मी देवी स्वयं स्वप्न में आकर प्रत्यक्ष हुईं। उसी चारुमती देवी के कारण हमें ऐसी महाभाग्य सम्पत्ति मिली।' चारुमती देवी की बहुत प्रशंसा करती हुई वे अपने घर गयीं। इसके बाद चारुमती आदि सब स्त्रियाँ प्रति वर्ष यह व्रत करती रहीं, और पुत्र-पौत्र की वृद्धि पाकर धन, स्वर्ण, वस्तु और वाहनों सहित सुखपूर्वक रहीं।"
+
+--- unit 37 | section: व्रतकथा ---
+vidhi:
+The close of the story. The fruit is stated for those who hear it and for those who read it, and the vrata is not restricted to any one class of person.
+deva:
+व्रतकथा प्रारम्भम्
+iast:
+vratakathā prārambham
+en: "Therefore, O Pārvatī, all may keep this excellent vrata. Those who keep it obtain every good fortune and live in happiness. For those who hear this story and for those who read it, all their undertakings are accomplished by the grace of Varalakṣmī." So spoke Parameśvara.
+Here the story of the Varalakṣmī vrata is complete.
+tel: "కావున ఓ పార్వతీ! ఈ ఉత్తమమైన వ్రతమును అందరును చేయవచ్చును. అట్లొనర్చిన సర్వసౌభాగ్యంబులును కలిగి సుఖంబుగ నుందురు. ఈ కథను వినువారలకును, చదువువారలకును వరలక్ష్మీ ప్రసాదము వలన సకల కార్యంబులు సిద్ధించును" అని పరమేశ్వరుడు పలికెను.
+వరలక్ష్మీ వ్రతకథ సంపూర్ణం.
+hi: "अतः हे पार्वती! यह उत्तम व्रत सब कर सकते हैं। ऐसा करने पर समस्त सौभाग्य पाकर सुख से रहते हैं। इस कथा को सुनने वालों और पढ़ने वालों के समस्त कार्य वरलक्ष्मी के प्रसाद से सिद्ध होते हैं।" — ऐसा परमेश्वर ने कहा।
+वरलक्ष्मी व्रतकथा सम्पूर्ण।
+
+--- unit 38 | section: समर्पणम् ---
+vidhi:
+The asking of pardon, for whatever was left out or done wrongly.
+deva:
+यस्य स्मृत्या च नामोक्त्या तपः पूजाक्रियादिषु |
+न्यूनं संपूर्णतां याति सद्योवंदे तमच्युतं ||
+मंत्रहीनं क्रियाहीनं भक्तिहीनं महेश्वरि |
+यत्पूजितं मया देवी परिपूर्णं तदस्तुते ||
+iast:
+yasya smṛtyā ca nāmoktyā tapaḥ pūjākriyādiṣu |
+nyūnaṁ saṁpūrṇatāṁ yāti sadyovaṁde tamacyutaṁ ||
+maṁtrahīnaṁ kriyāhīnaṁ bhaktihīnaṁ maheśvari |
+yatpūjitaṁ mayā devī paripūrṇaṁ tadastute ||
+en: By remembering him and by speaking his name, whatever is lacking in austerity, in worship and in the acts of the rite at once becomes complete. To that Acyuta I bow.
+Maheśvarī, whatever I have worshipped without the mantra, without the proper act, and without devotion — Devī, let that be full and complete for you.
+tel: ఎవరిని స్మరించుటచేతను, ఎవరి నామమును ఉచ్చరించుటచేతను తపస్సు పూజ క్రియ మొదలైనవాటిలో లోపించినది వెంటనే సంపూర్ణమగునో, ఆ అచ్యుతునికి నమస్కరిస్తున్నాను.
+మహేశ్వరీ, మంత్రహీనంగా, క్రియాహీనంగా, భక్తిహీనంగా నేను చేసిన పూజను — దేవీ, అది నీకు పరిపూర్ణమగుగాక.
+hi: जिनके स्मरण से और जिनके नाम के उच्चारण से तप, पूजा और क्रिया आदि में जो न्यूनता है वह तत्काल पूर्णता को प्राप्त होती है, उन अच्युत को नमस्कार करता हूँ।
+हे महेश्वरी, मन्त्रहीन, क्रियाहीन और भक्तिहीन जो पूजा मैंने की है — हे देवी, वह आपके लिये परिपूर्ण हो।
+
+--- unit 39 | section: समर्पणम् ---
+vidhi:
+The handing over, and the close. Unbroken grains and water are let fall from the hand as the words are spoken.
+deva:
+अनया कल्पोक्त प्रकारेण कृतया षोडशोपचार पूजया भगवती सर्वात्मिका श्री वरलक्ष्मी देवता सुप्रीता सुप्रसन्ना वरदा भवतु ||
+मम इष्टकाम्यार्थ सिद्धिरस्तुः ||
+(अक्षतलु, नीळ्ळु विडिचि पॆट्टालि)
+वरलक्ष्मी व्रत कल्पं समाप्तं ||
+iast:
+anayā kalpokta prakāreṇa kṛtayā ṣoḍaśopacāra pūjayā bhagavatī sarvātmikā śrī varalakṣmī devatā suprītā suprasannā varadā bhavatu ||
+mama iṣṭakāmyārtha siddhirastuḥ ||
+(akṣatalu, nīḻḻu viḍici peṭṭāli)
+varalakṣmī vrata kalpaṁ samāptaṁ ||
+en: By this worship of sixteen services, performed according to the kalpa, may the goddess Śrī Varalakṣmī Devī, who is the self of all, be well pleased, gracious, and a giver of boons.
+May what I desire and have asked for be accomplished.
+(Let fall the unbroken grains and the water.)
+Here the kalpa of the Varalakṣmī vrata is complete.
+tel: కల్పోక్త ప్రకారంగా చేసిన ఈ షోడశోపచార పూజచేత సర్వాత్మిక అయిన శ్రీ వరలక్ష్మీ దేవి సుప్రీతురాలై, సుప్రసన్నురాలై, వరదాయిని అగుగాక.
+నా ఇష్టకామ్యార్థ సిద్ధి కలుగుగాక.
+(అక్షతలు, నీళ్ళు విడిచిపెట్టాలి.)
+వరలక్ష్మీ వ్రత కల్పం సమాప్తం.
+hi: कल्पोक्त प्रकार से की गयी इस षोडशोपचार पूजा से सर्वात्मिका भगवती श्री वरलक्ष्मी देवी सुप्रीत, सुप्रसन्न और वरदा हों।
+मेरे इष्ट-काम्य-अर्थ की सिद्धि हो।
+(अक्षत और जल छोड़ देने चाहिये।)
+वरलक्ष्मी व्रत कल्प समाप्त।
+
