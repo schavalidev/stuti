@@ -3008,9 +3008,10 @@ Sundays of Āṣāḍha, Mukkanuma is solar, and Bathukamma and Kēdāra Gaurī 
 entered at both ends. Sakaṭa Caturthī was found to be the Māgha occurrence of the monthly
 Saṅkaṣṭahara Caturthī rather than a separate festival, and is entered as a named instance.
 
-**4. Authoring the five was prepared but not done.** *(Superseded 2026-09-12: Varalakṣmī is
-now written — see the session log at the end of this file. The four below still have no file.)*
-Kedāra Gaurī, Ananta Padmanābha, Maṅgaḷa Gaurī and Vaibhava Lakṣmī still have no file. Each carries a unique kathā,
+**4. Authoring the five was prepared but not done.** *(Superseded 2026-09-14: **all five are
+now written** and they live in `puja/vrata/` — Varalakṣmī `01`, Kedāreśvara `02`, Maṅgaḷa Gaurī
+`03`, Vaibhava Lakṣmī `04`, Ananta Padmanābha `05`. See the session logs at the end of this file.
+The paragraph below is kept for the record of how they were staged.)* Each carries a unique kathā,
 which is why the survey above calls them the expensive ones, and five of them did not fit this
 session alongside the three items above. What was done instead is the staging: `Āru Vratālu` was
 fetched and **mapped line by line** — see the subsection above — so the authoring session opens
