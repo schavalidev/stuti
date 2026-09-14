@@ -1,0 +1,1112 @@
+Title: Devī Catuḥṣaṣṭyupacāra-pūjā Stotram — the Goddess worshipped with sixty-four services
+Devanāgarī: देवी चतुःषष्ट्युपचारपूजा स्तोत्रम्
+Telugu: దేవీ చతుఃషష్ట్యుపచారపూజా స్తోత్రం
+
+Author: Ādi Śaṅkarācārya. The colophon printed at the end of the text names him in the usual full form — "the work of the venerable Śaṅkara Bhagavat, disciple of the venerable Govinda Bhagavatpāda, of the paramahaṁsa-parivrājaka order" (iti śrīmatparamahaṁsaparivrājakācāryasya śrīgovindabhagavatpūjyapādaśiṣyasya śrīmacchaṅkarabhagavataḥ kṛtau devī catuḥṣaṣṭyupacārapūjā stotram).
+
+Source / recension: base text `https://stotranidhi.com/sri-devi-chathuhshasti-upachara-puja-stotram-in-telugu/` (fetched 2026-09-12), which is **Telugu script only**. That site publishes no Devanāgarī edition of this text — its `/hi/` URL for the title redirects back to the Telugu page — so **the `deva:` column here is transliterated by us**, mechanically, with `bin/tel2dev.py`, and the `iast:` column from that with `bin/dev2iast.py`. No Sanskrit in this file was typed by hand. The transliterator was written for this text and validated first: it round-trips all 53,400 `deva:` lines in the corpus through `bin/dev2tel.py` and back at 97.71% exact identity, with every remaining mismatch accounted for (`python3 bin/tel2dev.py --selftest`).
+
+Independent collation: against the printed **Catuḥṣaṣṭi Upacāra Pūjā of the Śrīguru Madanānanda Sarasvatī Pīṭham** (user-supplied scan, 19 pp.), which is a genuinely separate lineage — a maṭha's order of service, not a stotra anthology. Every verse checked against it was word for word the same. This is a real collation and not the same site in another script.
+
+Recension note: the two witnesses are the same poem in two different forms, and neither is a defective copy of the other.
+
+1. **stotranidhi prints the verses only, and says so** — its own header reads `ఈ స్తోత్రము (శ్లోకాలు మాత్రమే)`, "this stotra (the ślokas only)". That is the text given here.
+2. **The Pīṭham edition sets the same verses out as a rite of sixty-four numbered services.** After each service's verse or verses it prints a long address to the Goddess — `श्रीमहाकाळी महालक्ष्मी महासरस्वती बालात्रिपुरसुंदरी राजराजेश्वरी भवानीचंद्रमौळीश्वर देवताभ्योनमः` — followed by `<service> समर्पयामि`, sixty-four times over. That refrain, and the service names, are not in the base text and are not reproduced here.
+3. **What the Pīṭham edition adds besides.** Dhyāna verses of its own at the head, which stotranidhi does not carry; a sixteen-name **aṅga-pūjā** at its twenty-eighth service, running `ओं महाकाळ्यै नमः — पादौ पूजयामि` through `ओं सर्वदेवस्तुतायै नमः — सर्वांगानि पूजयामि`, with a direction to worship further with the Lalitā Sahasranāma, the Triśatī and the Khaḍgamālā; roughly seven closing ślokas after its sixty-fourth service, among them `या देवी मधुकैटभप्रमथिनी` and `मंत्रहीनं क्रियाहीनं`; and a closing prose formula. None of that is in the base text and none has been added to this file.
+4. **The service numbers do not map one-to-one onto the verses, and the correspondence was checked rather than assumed.** It holds for long stretches — the Pīṭham's services 5 to 15 stand against verses 5 to 15 — but its twentieth service takes two verses, 19 and 20, and the count realigns after it. Its sixteenth service, the upavīta, has no verse in the base text at all. The sections below therefore group the verses by what they actually offer, which is visible in the verses themselves, rather than by that edition's numbering.
+5. **Two printing errors in the Pīṭham edition, recorded and not carried over.** Its sequence marks run (0) to (64); the mark (55) is skipped entirely, and its `चतुरंगसैन्यम्` is marked (57) where the surrounding order requires (47).
+
+Accent: none, and none is to be added. This is a stotra, and the base text prints it unaccented, as stotra is printed. The Pīṭham edition heads each of its sixty-four services with one ṛc of the **Puruṣa Sūkta** and one of the **Śrī Sūkta**, taken in order and **accented throughout**; those are Vedic text, they are not part of this poem, and they are not transcribed here. The corpus holds both sūktas accented already — see `../lakshmi/06_sri_suktam.txt` and the Puruṣa Sūkta files under `../../veda/`. Per the rule in the repo-root `CLAUDE.md`, accent is transcribed or absent, never inferred, and never moved from one text onto another.
+
+Verse count: 72 verses. The text is called the worship "with sixty-four services", and the number of verses is not sixty-four. Sixty-nine verses carry the worship itself, and the last three are the phalaśruti. The count is reported as the text yields it and has not been trimmed to match the title; some single services take two verses, which is where the difference lies.
+
+Sections:
+ఆవాహనం — the waking of the Goddess, the hall, and the palanquin (vv. 1-4)
+ఆసనం — the jewelled throne and the canopy (vv. 5-6)
+పాద్యాదులు — water for the feet, the arghya, the rinsing of the mouth, and the madhuparka (vv. 7-10)
+స్నానం — the anointing with oil and saffron, and the bath (vv. 11-14)
+వస్త్రాభరణాలు — the robe, the sandals, the binding of the hair, the collyrium, and the ornaments (vv. 15-20)
+గంధపుష్పాలు — sandal and saffron, grain, scented powder, vermilion, and the flowers (vv. 21-27)
+ధూపదీపాలు — the incense and the lamps (vv. 28-29)
+నైవేద్యం — the food, the washing of the hands, the drinking water, and the fruit (vv. 30-36)
+తాంబూలం — the betel (vv. 37-39)
+నీరాజనాదులు — the waving of lamps, the gift of gold, the parasol, the cāmara, and the mirror (vv. 40-46)
+వాహనాలు — the horse, the elephant, the chariot, the fourfold army, and the fortress (vv. 47-51)
+నృత్తగీతవాద్యాలు — the lotus fans, the dancers, the gandharva singers, and the drums (vv. 52-58)
+నమస్కారం — praise, circumambulation, obeisance, the handful of flowers, and the couch (vv. 59-64)
+విశ్రాంతి, క్షమాపణం — lac for the feet, the rinsing water, rest, the meditation, and the asking of pardon (vv. 65-69)
+ఫలశ్రుతి — the fruit of reciting the poem (vv. 70-72)
+
+Blurb: This poem worships the Goddess by serving her through a whole day. She is woken at dawn by the songs of bards. She is led into a jewelled hall, seated on a throne, and given water for her feet. She is anointed with campaka oil and saffron, bathed, dressed, and given her ornaments one by one — anklets, girdle, necklace, armlets, bangles, earrings and the crest-jewel. She is offered sandal paste, flowers of many names, incense and lamps. She is given food, fruit and betel. Then she is offered a parasol, a mirror, a horse, an elephant, a chariot, a fourfold army, and the whole earth as her fortress. Dancers dance and the gandharva maidens sing at her door. At the close she is asked to rest, and to dwell always in the worshipper's heart. The worshipper who cannot perform the rite may recite the poem instead, and the last verses say that this brings the same fruit. Much of the poem is a list of named substances — flowers, spices, grains and fragrances — so it is also a record of what a South Indian household once had to hand for worship.
+
+--- verse 1 | section: ఆవాహనం ---
+deva:
+उषसि मागधमंगलगायनै-
+-र्झटिति जागृहि जागृहि जागृहि ।
+अतिकृपार्द्रकटाक्षनिरीक्षणै-
+-र्जगदिदं जगदंब सुखीकुरु ॥
+iast:
+uṣasi māgadhamaṁgalagāyanai-
+-rjhaṭiti jāgṛhi jāgṛhi jāgṛhi |
+atikṛpārdrakaṭākṣanirīkṣaṇai-
+-rjagadidaṁ jagadaṁba sukhīkuru ||
+en: At dawn, with the auspicious songs of the Māgadha bards — awake, awake, awake. Mother of the world, with glances wet with great compassion, make this world happy.
+tel: ఉదయాన మాగధ గాయకుల మంగళగీతాలతో — మేల్కొనుము, మేల్కొనుము, మేల్కొనుము. జగదంబా, గొప్ప కరుణతో తడిసిన చూపులతో ఈ లోకాన్ని సుఖపెట్టుము.
+hi: प्रातःकाल में मागध गायकों के मङ्गलगीतों के साथ — जागो, जागो, जागो। हे जगदम्बा, अति करुणा से आर्द्र दृष्टि से इस जगत् को सुखी करो।
+
+--- verse 2 | section: ఆవాహనం ---
+deva:
+कनकमयवितर्दिशोभमानं
+दिशि दिशि पूर्णसुवर्णकुंभयुक्तम् ।
+मणिमयमंटपमध्यमेहि मात-
+-र्मयि कृपयाशु समर्चनं ग्रहीतुम् ॥
+iast:
+kanakamayavitardiśobhamānaṁ
+diśi diśi pūrṇasuvarṇakuṁbhayuktam |
+maṇimayamaṁṭapamadhyamehi māta-
+-rmayi kṛpayāśu samarcanaṁ grahītum ||
+en: Mother, come into the middle of the jewelled hall, which shines with a golden platform and has full golden pots set in every direction. Be gracious, and accept this worship of mine quickly.
+tel: అమ్మా, బంగారు వేదికతో ప్రకాశించే, అన్ని దిక్కులలో నిండిన బంగారు కుంభాలు ఉంచిన మణిమయ మంటపం మధ్యకు రమ్ము. కృప చేసి నా ఈ పూజను వేగంగా స్వీకరించుము.
+hi: हे माता, स्वर्ण वेदी से शोभित और चारों दिशाओं में पूर्ण स्वर्ण कुम्भों से युक्त इस मणिमय मण्टप के मध्य में आओ। कृपा कर मेरी इस अर्चना को शीघ्र स्वीकार करो।
+
+--- verse 3 | section: ఆవాహనం ---
+deva:
+कनककलशशोभमानशीर्षं
+जलधरलंबि समुल्लसत्पताकम् ।
+भगवति तव संनिवासहेतो-
+-र्मणिमयमंदिरमेतदर्पयामि ॥
+iast:
+kanakakalaśaśobhamānaśīrṣaṁ
+jaladharalaṁbi samullasatpatākam |
+bhagavati tava saṁnivāsaheto-
+-rmaṇimayamaṁdirametadarpayāmi ||
+en: Its top shines with a golden pot, and its banner rises to touch the clouds. Goddess, for your dwelling I offer this jewelled palace.
+tel: దాని శిఖరం బంగారు కలశంతో ప్రకాశిస్తుంది, దాని పతాకం మేఘాలను తాకుతూ ఎగురుతుంది. భగవతీ, నీ నివాసం కోసం ఈ మణిమయ మందిరాన్ని సమర్పిస్తాను.
+hi: उसका शिखर स्वर्ण कलश से शोभित है और उसकी पताका मेघों को छूती हुई लहराती है। हे भगवती, आपके निवास हेतु यह मणिमय मन्दिर अर्पित करता हूँ।
+
+--- verse 4 | section: ఆవాహనం ---
+deva:
+तपनीयमयी सुतूलिका
+कमनीया मृदुलोत्तरच्छदा ।
+नवरत्नविभूषिता मया
+शिबिकेयं जगदंब तेऽर्पिता ॥
+iast:
+tapanīyamayī sutūlikā
+kamanīyā mṛdulottaracchadā |
+navaratnavibhūṣitā mayā
+śibikeyaṁ jagadaṁba te'rpitā ||
+en: Mother of the world, this palanquin is offered to you by me. It is made of gold, with a fine cushion, a soft coverlet, and the nine jewels set upon it.
+tel: జగదంబా, ఈ పాలకీని నేను నీకు సమర్పిస్తున్నాను. అది బంగారంతో చేసినది, మంచి పరుపు, మెత్తని పైబట్ట, తొమ్మిది రత్నాలు అమర్చినది.
+hi: हे जगदम्बा, यह शिबिका मेरे द्वारा आपको अर्पित है। यह स्वर्ण की बनी है, उत्तम तूलिका, कोमल उत्तरच्छद और नवरत्नों से विभूषित है।
+
+--- verse 5 | section: ఆసనం ---
+deva:
+कनकमयवितर्दिस्थापिते तूलिकाढ्ये
+विविधकुसुमकीर्णे कोटिबालार्कवर्णे ।
+भगवति रमणीये रत्नसिंहासनेऽस्मि-
+-न्नुपविश पदयुग्मं हेमपीठे निधाय ॥
+iast:
+kanakamayavitardisthāpite tūlikāḍhye
+vividhakusumakīrṇe koṭibālārkavarṇe |
+bhagavati ramaṇīye ratnasiṁhāsane'smi-
+-nnupaviśa padayugmaṁ hemapīṭhe nidhāya ||
+en: Goddess, be seated on this beautiful jewelled throne, set upon a golden platform, spread with a cushion, strewn with many flowers, and coloured like a million young suns. Place your two feet upon the golden footstool.
+tel: భగవతీ, బంగారు వేదికపై ఉంచిన, పరుపు పరచిన, పలు పుష్పాలు చల్లిన, కోటి బాలసూర్యుల వన్నె కలిగిన ఈ సుందర రత్నసింహాసనంపై ఆసీనురాలవు. నీ పాదద్వయాన్ని బంగారు పీఠంపై ఉంచుము.
+hi: हे भगवती, स्वर्ण वेदी पर स्थापित, तूलिका से युक्त, विविध पुष्पों से बिखरे, कोटि बालार्क के वर्ण वाले इस रमणीय रत्नसिंहासन पर विराजो। अपने चरणयुगल को स्वर्ण पीठ पर रखो।
+
+--- verse 6 | section: ఆసనం ---
+deva:
+मणिमौक्तिकनिर्मितं महांतं
+कनकस्तंभचतुष्टयेन युक्तम् ।
+कमनीयतमं भवानि तुभ्यं
+नवमुल्लोचमहं समर्पयामि ॥
+iast:
+maṇimauktikanirmitaṁ mahāṁtaṁ
+kanakastaṁbhacatuṣṭayena yuktam |
+kamanīyatamaṁ bhavāni tubhyaṁ
+navamullocamahaṁ samarpayāmi ||
+en: Bhavānī, I offer you this new canopy. It is made of jewels and pearls, it is very large, it stands on four golden pillars, and it is most beautiful.
+tel: భవానీ, ఈ కొత్త మేలుకట్టును నీకు సమర్పిస్తాను. అది మణులతో ముత్యాలతో చేసినది, మిక్కిలి పెద్దది, నాలుగు బంగారు స్తంభాలపై నిలిచినది, మిక్కిలి సుందరమైనది.
+hi: हे भवानि, यह नया उल्लोच आपको समर्पित करता हूँ। यह मणि और मुक्ता से निर्मित, महान्, चार स्वर्ण स्तम्भों से युक्त और अतिशय कमनीय है।
+
+--- verse 7 | section: పాద్యాదులు ---
+deva:
+दूर्वया सरसिजान्वितविष्णु-
+-क्रांतया च सहितं कुसुमाढ्यम् ।
+पद्मयुग्मसदृशे पदयुग्मे
+पाद्यमेतदुररीकुरु मातः ॥
+iast:
+dūrvayā sarasijānvitaviṣṇu-
+-krāṁtayā ca sahitaṁ kusumāḍhyam |
+padmayugmasadṛśe padayugme
+pādyametadurarīkuru mātaḥ ||
+en: Mother, accept this water for the feet. It is rich with flowers, and carries dūrvā grass, lotus and viṣṇukrāntā. Your two feet are like a pair of lotuses.
+tel: అమ్మా, ఈ పాద్యాన్ని స్వీకరించుము. అది పుష్పాలతో నిండినది, దూర్వ, కమలం, విష్ణుక్రాంత కలిగినది. నీ పాదద్వయం కమలద్వయం వంటిది.
+hi: हे माता, इस पाद्य को स्वीकार करो। यह पुष्पों से समृद्ध है और दूर्वा, कमल तथा विष्णुक्रान्ता से युक्त है। आपके चरणयुगल कमलयुगल के समान हैं।
+
+--- verse 8 | section: పాద్యాదులు ---
+deva:
+गंधपुष्पयवसर्षपदूर्वा-
+-संयुतं तिलकुशाक्षतमिश्रम् ।
+हेमपात्रनिहितं सह रत्नै-
+-रर्घ्यमेतदुररीकुरु मातः ॥
+iast:
+gaṁdhapuṣpayavasarṣapadūrvā-
+-saṁyutaṁ tilakuśākṣatamiśram |
+hemapātranihitaṁ saha ratnai-
+-rarghyametadurarīkuru mātaḥ ||
+en: Mother, accept this arghya water. It carries fragrance, flowers, barley, mustard and dūrvā grass, mixed with sesame, kuśa grass and unbroken rice, and it is held in a golden vessel with jewels in it.
+tel: అమ్మా, ఈ అర్ఘ్యాన్ని స్వీకరించుము. అది గంధం, పుష్పాలు, యవలు, ఆవాలు, దూర్వ కలిగినది, నువ్వులు, దర్భ, అక్షతలతో కలిపినది, రత్నాలతో కూడిన బంగారు పాత్రలో ఉంచినది.
+hi: हे माता, इस अर्घ्य को स्वीकार करो। यह गन्ध, पुष्प, यव, सर्षप और दूर्वा से युक्त, तिल, कुश और अक्षत से मिश्रित, तथा रत्नों सहित स्वर्ण पात्र में रखा हुआ है।
+
+--- verse 9 | section: పాద్యాదులు ---
+deva:
+जलजद्युतिना करेण जाती-
+-फलतक्कोललवंगगंधयुक्तैः ।
+अमृतैरमृतैरिवातिशीतै-
+-र्भगवत्याचमनं विधीयताम् ॥
+iast:
+jalajadyutinā kareṇa jātī-
+-phalatakkolalavaṁgagaṁdhayuktaiḥ |
+amṛtairamṛtairivātiśītai-
+-rbhagavatyācamanaṁ vidhīyatām ||
+en: Goddess, let the rinsing of the mouth be done with your lotus-bright hand. The waters are scented with nutmeg, takkola and clove, and they are cool like nectar upon nectar.
+tel: భగవతీ, కమలకాంతి కల నీ చేతితో ఆచమనం చేయబడును గాక. ఆ జలాలు జాజికాయ, తక్కోలం, లవంగం సువాసన కలిగినవి, అమృతంపై అమృతమువలె మిక్కిలి చల్లనివి.
+hi: हे भगवती, कमल की द्युति वाले अपने कर से आचमन किया जाय। वे जल जातीफल, तक्कोल और लवङ्ग से सुगन्धित तथा अमृत पर अमृत के समान अति शीतल हैं।
+
+--- verse 10 | section: పాద్యాదులు ---
+deva:
+निहितं कनकस्य संपुटे
+पिहितं रत्नपिधानकेन यत् ।
+तदिदं जगदंब तेऽर्पितं
+मधुपर्कं जननि प्रगृह्यताम् ॥
+iast:
+nihitaṁ kanakasya saṁpuṭe
+pihitaṁ ratnapidhānakena yat |
+tadidaṁ jagadaṁba te'rpitaṁ
+madhuparkaṁ janani pragṛhyatām ||
+en: Mother of the world, receive this madhuparka offered to you. It is set in a golden cup and covered with a jewelled lid.
+tel: జగదంబా, నీకు సమర్పించిన ఈ మధుపర్కాన్ని గ్రహించుము. అది బంగారు సంపుటంలో ఉంచినది, రత్నపు మూతతో కప్పినది.
+hi: हे जगदम्बा, आपको अर्पित इस मधुपर्क को ग्रहण करो। यह स्वर्ण के सम्पुट में रखा और रत्न के ढक्कन से ढका हुआ है।
+
+--- verse 11 | section: స్నానం ---
+deva:
+एतच्चंपकतैलमंब विविधैः पुष्पैर्मुहुर्वासितं
+न्यस्तं रत्नमये सुवर्णचषके भृंगैर्भ्रमद्भिर्वृतम् ।
+सानंदं सुरसुंदरीभिरभितो हस्तैर्धृतं ते मया
+केशेषु भ्रमरभ्रमेषु सकलेष्वंगेषु चालिप्यते ॥
+iast:
+etaccaṁpakatailamaṁba vividhaiḥ puṣpairmuhurvāsitaṁ
+nyastaṁ ratnamaye suvarṇacaṣake bhṛṁgairbhramadbhirvṛtam |
+sānaṁdaṁ surasuṁdarībhirabhito hastairdhṛtaṁ te mayā
+keśeṣu bhramarabhrameṣu sakaleṣvaṁgeṣu cālipyate ||
+en: Mother, this campaka oil is scented again and again with many flowers. It is placed in a jewelled golden cup, and bees circle about it. Held gladly in the hands of the beautiful women of the gods, and by mine, it is rubbed into your hair, where bees seem to wander, and over all your limbs.
+tel: అమ్మా, ఈ సంపెంగ నూనె పలు పుష్పాలతో మరల మరల సువాసన చేయబడినది. అది రత్నమయ బంగారు గిన్నెలో ఉంచినది, దాని చుట్టూ తుమ్మెదలు తిరుగుతున్నాయి. దేవసుందరుల చేతులతో, నా చేతులతో ఆనందంగా పట్టుకొని, తుమ్మెదలు తిరుగుతున్నట్టు ఉన్న నీ కేశాలలో, నీ సర్వాంగాలలో పూయబడుతున్నది.
+hi: हे माता, यह चम्पक तैल अनेक पुष्पों से बार-बार सुवासित है। यह रत्नमय स्वर्ण चषक में रखा है और भ्रमर इसके चारों ओर मँडराते हैं। देवसुन्दरियों के तथा मेरे हाथों से आनन्दपूर्वक धारण कर, भ्रमरों के भ्रम जैसे आपके केशों में और समस्त अङ्गों में यह लगाया जाता है।
+
+--- verse 12 | section: స్నానం ---
+deva:
+मातः कुंकुमपंकनिर्मितमिदं देहे तवोद्वर्तनं
+भक्त्याहं कलयामि हेमरजसा संमिश्रितं केसरैः ।
+केशानामलकैर्विशोध्य विशदान्कस्तूरिकोदंचितैः
+स्नानं ते नवरत्नकुंभसहितैः संवासितोष्णोदकैः ॥
+iast:
+mātaḥ kuṁkumapaṁkanirmitamidaṁ dehe tavodvartanaṁ
+bhaktyāhaṁ kalayāmi hemarajasā saṁmiśritaṁ kesaraiḥ |
+keśānāmalakairviśodhya viśadānkastūrikodaṁcitaiḥ
+snānaṁ te navaratnakuṁbhasahitaiḥ saṁvāsitoṣṇodakaiḥ ||
+en: Mother, with devotion I make this unguent of saffron paste for your body, mixed with gold dust and kesara. Having cleansed your bright hair with āmalaka and raised its fragrance with musk, I make your bath with warm scented waters from pots of the nine jewels.
+tel: అమ్మా, భక్తితో నీ దేహానికి ఈ కుంకుమ పంకపు ఉద్వర్తనం చేస్తాను, బంగారు రజనుతో కేసరంతో కలిపి. ఉసిరికతో నీ నిర్మల కేశాలను శుద్ధి చేసి, కస్తూరితో సువాసన చేసి, నవరత్న కుంభాలలోని సువాసన కల వెచ్చని జలాలతో నీకు స్నానం చేయిస్తాను.
+hi: हे माता, भक्ति से आपके देह पर यह कुङ्कुम पङ्क का उद्वर्तन करता हूँ, स्वर्ण रज और केसर से मिश्रित। आमलक से आपके विशद केशों को शुद्ध कर, कस्तूरी से सुवासित कर, नवरत्न कुम्भों के संवासित उष्ण जलों से आपका स्नान कराता हूँ।
+
+--- verse 13 | section: స్నానం ---
+deva:
+दधिदुग्धघृतैः समाक्षिकैः
+सितया शर्करया समन्वितैः ।
+स्नपयामि तवाहमादरा-
+-ज्जननि त्वां पुनरुष्णवारिभिः ॥
+iast:
+dadhidugdhaghṛtaiḥ samākṣikaiḥ
+sitayā śarkarayā samanvitaiḥ |
+snapayāmi tavāhamādarā-
+-jjanani tvāṁ punaruṣṇavāribhiḥ ||
+en: Mother, with respect I bathe you in curd, milk and ghee, together with honey, white sugar and jaggery; and then again in warm water.
+tel: అమ్మా, ఆదరంతో పెరుగు, పాలు, నెయ్యి, తేనె, తెల్ల పంచదార, బెల్లంతో నీకు స్నానం చేయిస్తాను; ఆ పిమ్మట మరల వెచ్చని జలాలతో.
+hi: हे जननि, आदरपूर्वक दधि, दुग्ध और घृत से, मधु, सिता और शर्करा सहित आपको स्नान कराता हूँ; और पुनः उष्ण जल से।
+
+--- verse 14 | section: స్నానం ---
+deva:
+एलोशीरसुवासितैः सकुसुमैर्गंगादितीर्थोदकै-
+-र्माणिक्यामलमौक्तिकामृतरसैः स्वच्छैः सुवर्णोदकैः ।
+मंत्रान्वैदिकतांत्रिकान्परिपठन्सानंदमत्यादरा-
+-त्स्नानं ते परिकल्पयामि जननि स्नेहात्त्वमंगीकुरु ॥
+iast:
+elośīrasuvāsitaiḥ sakusumairgaṁgāditīrthodakai-
+-rmāṇikyāmalamauktikāmṛtarasaiḥ svacchaiḥ suvarṇodakaiḥ |
+maṁtrānvaidikatāṁtrikānparipaṭhansānaṁdamatyādarā-
+-tsnānaṁ te parikalpayāmi janani snehāttvamaṁgīkuru ||
+en: Mother, I prepare your bath with waters scented with cardamom and uśīra, with flowers, with the waters of the Gaṅgā and other holy rivers, with the nectar-essence of ruby and clear pearl, and with pure golden water — reciting the Vedic and the Tāntric mantras with gladness and great respect. Accept it out of affection.
+tel: అమ్మా, యాలకులు, వట్టివేరుతో సువాసన కల జలాలతో, పుష్పాలతో, గంగాది తీర్థజలాలతో, మాణిక్యం, నిర్మల ముత్యాల అమృతరసంతో, స్వచ్ఛమైన బంగారు జలాలతో నీ స్నానాన్ని ఏర్పాటు చేస్తాను — వైదిక తాంత్రిక మంత్రాలను ఆనందంతో మిక్కిలి ఆదరంతో పఠిస్తూ. స్నేహంతో దానిని అంగీకరించుము.
+hi: हे जननि, एला और उशीर से सुवासित जलों से, पुष्पों से, गङ्गा आदि तीर्थजलों से, माणिक्य और निर्मल मुक्ता के अमृतरस से, तथा स्वच्छ स्वर्णजल से आपका स्नान प्रस्तुत करता हूँ — वैदिक और तान्त्रिक मन्त्रों का आनन्द और अति आदर से पाठ करते हुए। स्नेह से इसे अङ्गीकार करो।
+
+--- verse 15 | section: వస్త్రాభరణాలు ---
+deva:
+बालार्कद्युति दाडिमीयकुसुमप्रस्पर्धि सर्वोत्तमं
+मातस्त्वं परिधेहि दिव्यवसनं भक्त्या मया कल्पितम् ।
+मुक्ताभिर्ग्रथितं सुकंचुकमिदं स्वीकृत्य पीतप्रभं
+तप्तस्वर्णसमानवर्णमतुलं प्रावर्णमंगीकुरु ॥
+iast:
+bālārkadyuti dāḍimīyakusumapraspardhi sarvottamaṁ
+mātastvaṁ paridhehi divyavasanaṁ bhaktyā mayā kalpitam |
+muktābhirgrathitaṁ sukaṁcukamidaṁ svīkṛtya pītaprabhaṁ
+taptasvarṇasamānavarṇamatulaṁ prāvarṇamaṁgīkuru ||
+en: Mother, wear this divine robe which I have made with devotion. It has the light of the young sun, it rivals the pomegranate flower, and it is the best of all. Accept also this fine bodice, woven with pearls and shining yellow, and this peerless upper cloth, coloured like molten gold.
+tel: అమ్మా, భక్తితో నేను సిద్ధం చేసిన ఈ దివ్య వస్త్రాన్ని ధరించుము. అది బాలసూర్యుని కాంతి కలిగినది, దానిమ్మ పుష్పంతో పోటీపడునది, సర్వోత్తమమైనది. ముత్యాలతో అల్లిన, పసుపు కాంతి కల ఈ మంచి కంచుకాన్ని, కరిగిన బంగారు వన్నె కల ఈ అతులిత ఉత్తరీయాన్ని కూడ స్వీకరించుము.
+hi: हे माता, भक्ति से मेरे द्वारा कल्पित इस दिव्य वसन को धारण करो। यह बालार्क की द्युति वाला, दाडिमी पुष्प से स्पर्धा करने वाला और सर्वोत्तम है। मुक्ताओं से गुंथे, पीत प्रभा वाले इस सुकञ्चुक को तथा तप्त स्वर्ण के समान वर्ण वाले इस अतुल प्रावरण को भी स्वीकार करो।
+
+--- verse 16 | section: వస్త్రాభరణాలు ---
+deva:
+नवरत्नमये मयार्पिते
+कमनीये तपनीयपादुके ।
+सविलासमिदं पदद्वयं
+कृपया देवि तयोर्निधीयताम् ॥
+iast:
+navaratnamaye mayārpite
+kamanīye tapanīyapāduke |
+savilāsamidaṁ padadvayaṁ
+kṛpayā devi tayornidhīyatām ||
+en: Goddess, be gracious and set these two feet of yours, moving in their beauty, upon these lovely golden sandals studded with the nine jewels, which I have offered.
+tel: దేవీ, కృప చేసి, విలాసంతో కదిలే నీ ఈ పాదద్వయాన్ని, నేను సమర్పించిన నవరత్నమయమైన ఈ సుందర బంగారు పాదుకలపై ఉంచుము.
+hi: हे देवि, कृपा कर विलास से युक्त अपने इन चरणयुगल को, मेरे द्वारा अर्पित इन नवरत्नमय कमनीय स्वर्ण पादुकाओं पर रखो।
+
+--- verse 17 | section: వస్త్రాభరణాలు ---
+deva:
+बहुभिरगरुधूपैः सादरं धूपयित्वा
+भगवति तव केशांकंकतैर्मार्जयित्वा ।
+सुरभिभिररविंदैश्चंपकैश्चार्चयित्वा
+झटिति कनकसूत्रैर्जूटयन्वेष्टयामि ॥
+iast:
+bahubhiragarudhūpaiḥ sādaraṁ dhūpayitvā
+bhagavati tava keśāṁkaṁkatairmārjayitvā |
+surabhibhiraraviṁdaiścaṁpakaiścārcayitvā
+jhaṭiti kanakasūtrairjūṭayanveṣṭayāmi ||
+en: Goddess, having perfumed your hair with much agaru incense, and combed it, and worshipped it with fragrant lotuses and campaka flowers, I quickly bind it up and tie it with threads of gold.
+tel: భగవతీ, పలు అగరు ధూపాలతో ఆదరంతో నీ కేశాలను సువాసన చేసి, దువ్వెనతో దిద్ది, సువాసన కల కమలాలతో సంపెంగలతో పూజించి, వేగంగా బంగారు దారాలతో జడ కట్టి చుడుతాను.
+hi: हे भगवती, बहुत अगरु धूप से सादर आपके केशों को सुवासित कर, कङ्कत से मार्जित कर, सुरभित अरविन्द और चम्पक से अर्चित कर, शीघ्र स्वर्ण सूत्रों से जूड़ा बाँधता हूँ।
+
+--- verse 18 | section: వస్త్రాభరణాలు ---
+deva:
+सौवीरांजनमिदमंब चक्षुषोस्ते
+विन्यस्तं कनकशलाकया मया यत् ।
+तन्न्यूनं मलिनमपि त्वदक्षिसंगात्
+ब्रह्मेंद्राद्यभिलषणीयतामियाय ॥
+iast:
+sauvīrāṁjanamidamaṁba cakṣuṣoste
+vinyastaṁ kanakaśalākayā mayā yat |
+tannyūnaṁ malinamapi tvadakṣisaṁgāt
+brahmeṁdrādyabhilaṣaṇīyatāmiyāya ||
+en: Mother, this sauvīra collyrium which I have applied to your eyes with a golden rod was a small and dark thing; but by touching your eyes it has become something Brahmā and Indra themselves would desire.
+tel: అమ్మా, బంగారు శలాకతో నీ కన్నులకు నేను పెట్టిన ఈ సౌవీరాంజనం అల్పమైనది, నలుపైనది; కాని నీ కన్నుల స్పర్శతో అది బ్రహ్మ ఇంద్రాదులు కోరదగినదిగా అయినది.
+hi: हे अम्ब, स्वर्ण शलाका से आपके नेत्रों में मेरे द्वारा लगाया गया यह सौवीर अञ्जन न्यून और मलिन था; किन्तु आपके नेत्रों के सङ्ग से वह ब्रह्मा और इन्द्र आदि के भी अभिलषणीय हो गया।
+
+--- verse 19 | section: వస్త్రాభరణాలు ---
+deva:
+मंजीरे पदयोर्निधाय रुचिरां विन्यस्य कांचीं कटौ
+मुक्ताहारमुरोजयोरनुपमां नक्षत्रमालां गले ।
+केयूराणि भुजेषु रत्नवलयश्रेणीं करेषु क्रमा-
+-त्ताटंके तव कर्णयोर्विनिदधे शीर्षे च चूडामणिम् ॥
+iast:
+maṁjīre padayornidhāya rucirāṁ vinyasya kāṁcīṁ kaṭau
+muktāhāramurojayoranupamāṁ nakṣatramālāṁ gale |
+keyūrāṇi bhujeṣu ratnavalayaśreṇīṁ kareṣu kramā-
+-ttāṭaṁke tava karṇayorvinidadhe śīrṣe ca cūḍāmaṇim ||
+en: I place anklets on your feet, a lovely girdle at your waist, a pearl necklace at your breast, a peerless string of stars at your throat, armlets on your arms, and rows of jewelled bangles on your hands; then earrings in your ears, and the crest-jewel upon your head.
+tel: నీ పాదాలకు అందెలు, నడుముకు అందమైన వడ్డాణం, వక్షానికి ముత్యాల హారం, కంఠానికి అతులిత నక్షత్రమాల, భుజాలకు కేయూరాలు, చేతులకు రత్నపు గాజుల వరుసలు ఉంచుతాను; ఆ పిమ్మట నీ చెవులకు తాటంకాలు, శిరస్సుపై చూడామణి.
+hi: आपके चरणों में मञ्जीर, कटि में रुचिर काञ्ची, उरोज पर मुक्ताहार, गले में अनुपम नक्षत्रमाला, भुजाओं में केयूर और हाथों में रत्नवलय की श्रेणी क्रम से रखता हूँ; तदनन्तर आपके कानों में ताटङ्क और शीर्ष पर चूडामणि।
+
+--- verse 20 | section: వస్త్రాభరణాలు ---
+deva:
+धम्मिल्ले तव देवि हेमकुसुमान्याधाय फालस्थले
+मुक्ताराजिविराजमानतिलकं नासापुटे मौक्तिकम् ।
+मातर्मौक्तिकजालिकां च कुचयोः सर्वांगुलीषूर्मिकाः
+कट्यां कांचनकिंकिणीर्विनिदधे रत्नावतंसं श्रुतौ ॥
+iast:
+dhammille tava devi hemakusumānyādhāya phālasthale
+muktārājivirājamānatilakaṁ nāsāpuṭe mauktikam |
+mātarmauktikajālikāṁ ca kucayoḥ sarvāṁgulīṣūrmikāḥ
+kaṭyāṁ kāṁcanakiṁkiṇīrvinidadhe ratnāvataṁsaṁ śrutau ||
+en: Goddess, I set golden flowers in your braided hair, a forehead-mark bright with a line of pearls upon your brow, a pearl in your nostril; and, Mother, a net of pearls at your breast, rings on all your fingers, little golden bells at your waist, and jewelled pendants at your ears.
+tel: దేవీ, నీ ధమ్మిల్లంలో బంగారు పుష్పాలు, నుదుటిపై ముత్యాల వరుసతో ప్రకాశించే తిలకం, ముక్కు పుటంలో ముత్యం ఉంచుతాను; అమ్మా, వక్షాన ముత్యాల జాలిక, అన్ని వేళ్లకు ఉంగరాలు, నడుముకు బంగారు కింకిణులు, చెవులకు రత్నపు అవతంసాలు.
+hi: हे देवि, आपके धम्मिल्ल में स्वर्ण पुष्प, फालस्थल पर मुक्ताराजि से विराजमान तिलक, नासापुट में मौक्तिक रखता हूँ; और हे माता, कुचों पर मौक्तिक जालिका, सब अङ्गुलियों में ऊर्मिकाएँ, कटि में काञ्चन किङ्किणी तथा श्रुति में रत्नावतंस।
+
+--- verse 21 | section: గంధపుష్పాలు ---
+deva:
+मातः फालतले तवातिविमले काश्मीरकस्तूरिका-
+-कर्पूरागरुभिः करोमि तिलकं देहेऽंगरागं ततः ।
+वक्षोजादिषु यक्षकर्दमरसं सिक्त्वा च पुष्पद्रवं
+पादौ चंदनलेपनादिभिरहं संपूजयामि क्रमात् ॥
+iast:
+mātaḥ phālatale tavātivimale kāśmīrakastūrikā-
+-karpūrāgarubhiḥ karomi tilakaṁ dehe'ṁgarāgaṁ tataḥ |
+vakṣojādiṣu yakṣakardamarasaṁ siktvā ca puṣpadravaṁ
+pādau caṁdanalepanādibhirahaṁ saṁpūjayāmi kramāt ||
+en: Mother, upon your very clear forehead I make a mark of Kashmir saffron, musk, camphor and agaru, and then an unguent for the body. Sprinkling yakṣakardama and flower-essence upon your breast and the rest, I worship your feet in order with sandal paste and the other offerings.
+tel: అమ్మా, మిక్కిలి నిర్మలమైన నీ నుదుటిపై కాశ్మీర కుంకుమ, కస్తూరి, కర్పూరం, అగరుతో తిలకం దిద్ది, ఆ పిమ్మట దేహానికి అంగరాగం చేస్తాను. వక్షాదులపై యక్షకర్దమ రసాన్ని, పుష్పద్రవాన్ని చల్లి, చందన లేపనాదులతో నీ పాదాలను క్రమంగా పూజిస్తాను.
+hi: हे माता, आपके अति विमल फालतल पर काश्मीर, कस्तूरी, कर्पूर और अगरु से तिलक करता हूँ, तदनन्तर देह पर अङ्गराग। वक्षोज आदि पर यक्षकर्दम रस और पुष्पद्रव सींचकर, चन्दन लेपन आदि से आपके चरणों की क्रम से सम्पूजा करता हूँ।
+
+--- verse 22 | section: గంధపుష్పాలు ---
+deva:
+रत्नाक्षतैस्त्वां परिपूजयामि
+मुक्ताफलैर्वा रुचिरैरविद्धैः ।
+अखंडितैर्देवि यवादिभिर्वा
+काश्मीरपंकांकिततंडुलैर्वा ॥
+iast:
+ratnākṣataistvāṁ paripūjayāmi
+muktāphalairvā rucirairaviddhaiḥ |
+akhaṁḍitairdevi yavādibhirvā
+kāśmīrapaṁkāṁkitataṁḍulairvā ||
+en: Goddess, I worship you with jewels for grain, or with lovely unpierced pearls, or with unbroken barley and the like, or with rice marked with Kashmir saffron paste.
+tel: దేవీ, అక్షతల స్థానంలో రత్నాలతో, లేక చిల్లు పెట్టని అందమైన ముత్యాలతో, లేక విరగని యవలు మొదలైనవాటితో, లేక కాశ్మీర కుంకుమ పంకంతో గుర్తుపెట్టిన బియ్యంతో నిన్ను పూజిస్తాను.
+hi: हे देवि, रत्नाक्षत से, अथवा रुचिर अविद्ध मुक्ताफलों से, अथवा अखण्डित यव आदि से, अथवा काश्मीर पङ्क से अङ्कित तण्डुलों से आपकी परिपूजा करता हूँ।
+
+--- verse 23 | section: గంధపుష్పాలు ---
+deva:
+जननि चंपकतैलमिदं पुरो
+मृगमदोपयुतं पटवासकम् ।
+सुरभिगंधमिदं च चतुःसमं
+सपदि सर्वमिदं परिगृह्यताम् ॥
+iast:
+janani caṁpakatailamidaṁ puro
+mṛgamadopayutaṁ paṭavāsakam |
+surabhigaṁdhamidaṁ ca catuḥsamaṁ
+sapadi sarvamidaṁ parigṛhyatām ||
+en: Mother, here before you are this campaka oil, this scented powder mixed with musk, this fragrance, and this catuḥsama. Receive all of it at once.
+tel: అమ్మా, నీ ఎదుట ఈ సంపెంగ నూనె, కస్తూరి కలిపిన ఈ పటవాసం, ఈ సువాసన, ఈ చతుఃసమం ఉన్నాయి. ఇవన్నీ వెంటనే గ్రహించుము.
+hi: हे जननि, आपके सम्मुख यह चम्पक तैल, मृगमद से युक्त यह पटवासक, यह सुरभि गन्ध और यह चतुःसम है। यह सब सपदि ग्रहण करो।
+
+--- verse 24 | section: గంధపుష్పాలు ---
+deva:
+सीमंते ते भगवति मया सादरं न्यस्तमेत-
+-त्सिंदूरं मे हृदयकमले हर्षवर्षं तनोति ।
+बालादित्यद्युतिरिव सदा लोहिता यस्य कांती-
+-रंतर्ध्वांतं हरति सकलं चेतसा चिंतयैव ॥
+iast:
+sīmaṁte te bhagavati mayā sādaraṁ nyastameta-
+-tsiṁdūraṁ me hṛdayakamale harṣavarṣaṁ tanoti |
+bālādityadyutiriva sadā lohitā yasya kāṁtī-
+-raṁtardhvāṁtaṁ harati sakalaṁ cetasā ciṁtayaiva ||
+en: Goddess, this vermilion which I have placed with respect in the parting of your hair spreads a rain of joy in the lotus of my heart. Its colour is always red like the light of the young sun, and by the mere thought of it in the mind it takes away all the darkness within.
+tel: భగవతీ, ఆదరంతో నీ సీమంతంలో నేను ఉంచిన ఈ సిందూరం నా హృదయకమలంలో ఆనంద వర్షాన్ని కురిపిస్తుంది. దాని కాంతి బాలసూర్యుని వెలుగువలె ఎప్పుడూ ఎరుపు, మనస్సులో దాని తలంపు మాత్రంతోనే అది లోపలి చీకటిని అంతా తొలగిస్తుంది.
+hi: हे भगवती, आदरपूर्वक आपके सीमन्त में मेरे द्वारा रखा यह सिन्दूर मेरे हृदयकमल में हर्ष की वर्षा करता है। उसकी कान्ति बालसूर्य की द्युति के समान सदा लोहित है, और चित्त में उसके चिन्तन मात्र से वह भीतर का समस्त अन्धकार हर लेता है।
+
+--- verse 25 | section: గంధపుష్పాలు ---
+deva:
+मंदारकुंदकरवीरलवंगपुष्पै-
+-स्त्वां देवि संततमहं परिपूजयामि ।
+जातीजपावकुलचंपककेतकादि-
+-नानाविधानि कुसुमानि च तेऽर्पयामि ॥
+iast:
+maṁdārakuṁdakaravīralavaṁgapuṣpai-
+-stvāṁ devi saṁtatamahaṁ paripūjayāmi |
+jātījapāvakulacaṁpakaketakādi-
+-nānāvidhāni kusumāni ca te'rpayāmi ||
+en: Goddess, I worship you continually with mandāra, kunda, karavīra and clove flowers. I also offer you flowers of many kinds — jātī, japā, vakula, campaka, ketaka and the rest.
+tel: దేవీ, మందార, కుంద, కరవీర, లవంగ పుష్పాలతో నిన్ను నిరంతరం పూజిస్తాను. జాజి, మందార, పొగడ, సంపెంగ, మొగలి మొదలైన అనేక విధాల పుష్పాలను కూడ నీకు సమర్పిస్తాను.
+hi: हे देवि, मन्दार, कुन्द, करवीर और लवङ्ग पुष्पों से आपकी सतत परिपूजा करता हूँ। जाती, जपा, वकुल, चम्पक, केतक आदि नानाविध कुसुम भी आपको अर्पित करता हूँ।
+
+--- verse 26 | section: గంధపుష్పాలు ---
+deva:
+मालतीवकुलहेमपुष्पिका-
+-कांचनारकरवीरकैतकैः ।
+कर्णिकारगिरिकर्णिकादिभिः
+पूजयामि जगदंब ते वपुः ॥
+iast:
+mālatīvakulahemapuṣpikā-
+-kāṁcanārakaravīrakaitakaiḥ |
+karṇikāragirikarṇikādibhiḥ
+pūjayāmi jagadaṁba te vapuḥ ||
+en: Mother of the world, I worship your body with mālatī, vakula, hemapuṣpikā, kāñcanāra, karavīra, kaitaka, karṇikāra, girikarṇikā and the other flowers.
+tel: జగదంబా, మాలతి, పొగడ, హేమపుష్పిక, కాంచనారం, కరవీరం, మొగలి, కర్ణికారం, గిరికర్ణిక మొదలైన పుష్పాలతో నీ దేహాన్ని పూజిస్తాను.
+hi: हे जगदम्बा, मालती, वकुल, हेमपुष्पिका, काञ्चनार, करवीर, कैतक, कर्णिकार, गिरिकर्णिका आदि से आपके वपु की पूजा करता हूँ।
+
+--- verse 27 | section: గంధపుష్పాలు ---
+deva:
+पारिजातशतपत्रपाटलै-
+-र्मल्लिकावकुलचंपकादिभिः ।
+अंबुजैः सुकुसुमैश्च सादरं
+पूजयामि जगदंब ते वपुः ॥
+iast:
+pārijātaśatapatrapāṭalai-
+-rmallikāvakulacaṁpakādibhiḥ |
+aṁbujaiḥ sukusumaiśca sādaraṁ
+pūjayāmi jagadaṁba te vapuḥ ||
+en: Mother of the world, with respect I worship your body with pārijāta, the hundred-petalled lotus, pāṭala, mallikā, vakula, campaka and the rest, with lotuses and with other good flowers.
+tel: జగదంబా, ఆదరంతో పారిజాతం, శతపత్రం, పాటలం, మల్లిక, పొగడ, సంపెంగ మొదలైనవాటితో, కమలాలతో, ఇతర మంచి పుష్పాలతో నీ దేహాన్ని పూజిస్తాను.
+hi: हे जगदम्बा, सादर पारिजात, शतपत्र, पाटल, मल्लिका, वकुल, चम्पक आदि से, अम्बुजों और अन्य सुकुसुमों से आपके वपु की पूजा करता हूँ।
+
+--- verse 28 | section: ధూపదీపాలు ---
+deva:
+लाक्षासंमिलितैः सिताभ्रसहितैः श्रीवाससंमिश्रितैः
+कर्पूराकलितैः शिरैर्मधुयुतैर्गोसर्पिषा लोडितैः ।
+श्रीखंडागरुगुग्गुलुप्रभृतिभिर्नानाविधैर्वस्तुभि-
+-र्धूपं ते परिकल्पयामि जननि स्नेहात्त्वमंगीकुरु ॥
+iast:
+lākṣāsaṁmilitaiḥ sitābhrasahitaiḥ śrīvāsasaṁmiśritaiḥ
+karpūrākalitaiḥ śirairmadhuyutairgosarpiṣā loḍitaiḥ |
+śrīkhaṁḍāgarugugguluprabhṛtibhirnānāvidhairvastubhi-
+-rdhūpaṁ te parikalpayāmi janani snehāttvamaṁgīkuru ||
+en: Mother, I prepare incense for you from many kinds of substance — lac, white resin, śrīvāsa, camphor, honey, cow's ghee, and sandalwood, agaru, guggulu and the rest. Accept it out of affection.
+tel: అమ్మా, లక్క, తెల్ల సాంబ్రాణి, శ్రీవాసం, కర్పూరం, తేనె, ఆవునెయ్యి, శ్రీగంధం, అగరు, గుగ్గిలం మొదలైన అనేక విధాల వస్తువులతో నీకు ధూపాన్ని సిద్ధం చేస్తాను. స్నేహంతో దానిని అంగీకరించుము.
+hi: हे जननि, लाक्षा, सिताभ्र, श्रीवास, कर्पूर, मधु, गोघृत तथा श्रीखण्ड, अगरु, गुग्गुलु आदि नानाविध वस्तुओं से आपके लिये धूप प्रस्तुत करता हूँ। स्नेह से इसे अङ्गीकार करो।
+
+--- verse 29 | section: ధూపదీపాలు ---
+deva:
+रत्नालंकृतहेमपात्रनिहितैर्गोसर्पिषा लोडितै-
+-र्दीपैर्दीर्घतरांधकारभिदुरैर्बालार्ककोटिप्रभैः ।
+आताम्रज्वलदुज्ज्वलप्रविलसद्रत्नप्रदीपैस्तथा
+मातस्त्वामहमादरादनुदिनं नीराजयाम्युच्चकैः ॥
+iast:
+ratnālaṁkṛtahemapātranihitairgosarpiṣā loḍitai-
+-rdīpairdīrghatarāṁdhakārabhidurairbālārkakoṭiprabhaiḥ |
+ātāmrajvaladujjvalapravilasadratnapradīpaistathā
+mātastvāmahamādarādanudinaṁ nīrājayāmyuccakaiḥ ||
+en: Mother, day after day with respect I wave the lamps before you on high — lamps set in jewelled golden vessels and fed with cow's ghee, which break the longest darkness and shine like a million young suns; and also bright jewel-lamps, glowing copper-red and blazing.
+tel: అమ్మా, ప్రతి దినం ఆదరంతో నీకు ఎత్తుగా దీపాలను నీరాజనం చేస్తాను — రత్నాలంకృత బంగారు పాత్రలలో ఉంచి ఆవునెయ్యితో వెలిగించిన దీపాలు, అవి దీర్ఘమైన చీకటిని ఛేదిస్తాయి, కోటి బాలసూర్యుల కాంతితో ప్రకాశిస్తాయి; అట్లే ఎరుపుగా మండుతూ ప్రకాశించే రత్నప్రదీపాలతో కూడ.
+hi: हे मातः, प्रतिदिन आदरपूर्वक आपकी उच्च नीराजना करता हूँ — रत्नालङ्कृत स्वर्ण पात्रों में रखे और गोघृत से युक्त दीप, जो दीर्घतर अन्धकार को भेदते हैं और कोटि बालार्क के समान प्रभा वाले हैं; तथा आताम्र ज्वलित उज्ज्वल रत्नप्रदीपों से भी।
+
+--- verse 30 | section: నైవేద్యం ---
+deva:
+मातस्त्वां दधिदुग्धपायसमहाशाल्यन्नसंतानिकाः
+सूपापूपसिताघृतैः सवटकैः सक्षौद्ररंभाफलैः ।
+एलाजीरकहिंगुनागरनिशाकुस्तुंभरीसंस्कृतैः
+शाकैः साकमहं सुधाधिकरसैः संतर्पयाम्यर्चयन् ॥
+iast:
+mātastvāṁ dadhidugdhapāyasamahāśālyannasaṁtānikāḥ
+sūpāpūpasitāghṛtaiḥ savaṭakaiḥ sakṣaudraraṁbhāphalaiḥ |
+elājīrakahiṁgunāgaraniśākustuṁbharīsaṁskṛtaiḥ
+śākaiḥ sākamahaṁ sudhādhikarasaiḥ saṁtarpayāmyarcayan ||
+en: Mother, worshipping you, I satisfy you with curd, milk, pāyasa, rice of the great śāli grain and cream; with lentils, cakes, sugar and ghee, with vaṭaka, honey and plantain; and with vegetables dressed with cardamom, cumin, asafoetida, ginger, turmeric and coriander — all of a taste beyond nectar.
+tel: అమ్మా, నిన్ను పూజిస్తూ పెరుగు, పాలు, పాయసం, మేలైన శాలి అన్నం, మీగడతో; పప్పు, అప్పాలు, పంచదార, నెయ్యితో, వడలతో, తేనెతో, అరటిపండ్లతో; యాలకులు, జీలకర్ర, ఇంగువ, అల్లం, పసుపు, ధనియాలతో వండిన కూరలతో నిన్ను తృప్తిపరుస్తాను — ఇవన్నీ అమృతాన్ని మించిన రుచి కలిగినవి.
+hi: हे मातः, आपकी अर्चना करते हुए दधि, दुग्ध, पायस, महाशालि अन्न और सन्तानिका से; सूप, अपूप, सिता और घृत से, वटक, क्षौद्र और रम्भाफल से; तथा एला, जीरक, हिङ्गु, नागर, निशा और कुस्तुम्भरी से संस्कृत शाकों से आपको सन्तर्पित करता हूँ — ये सब सुधा से अधिक रस वाले हैं।
+
+--- verse 31 | section: నైవేద్యం ---
+deva:
+सापूपसूपदधिदुग्धसिताघृतानि
+सुस्वादुभक्तपरमान्नपुरःसराणि ।
+शाकोल्लसन्मरिचिजीरकबाह्लिकानि
+भक्ष्याणि भुंक्ष्व जगदंब मयार्पितानि ॥
+iast:
+sāpūpasūpadadhidugdhasitāghṛtāni
+susvādubhaktaparamānnapuraḥsarāṇi |
+śākollasanmaricijīrakabāhlikāni
+bhakṣyāṇi bhuṁkṣva jagadaṁba mayārpitāni ||
+en: Mother of the world, eat these foods offered by me — cakes, lentils, curd, milk, sugar and ghee, with sweet rice and the best of dishes before them, and vegetables bright with pepper, cumin and asafoetida.
+tel: జగదంబా, నేను సమర్పించిన ఈ భక్ష్యాలను ఆరగించుము — అప్పాలు, పప్పు, పెరుగు, పాలు, పంచదార, నెయ్యి, ముందు ఉంచిన రుచికరమైన అన్నం, పరమాన్నం, మిరియాలు, జీలకర్ర, ఇంగువతో ప్రకాశించే కూరలు.
+hi: हे जगदम्बा, मेरे द्वारा अर्पित इन भक्ष्यों का भोग करो — अपूप, सूप, दधि, दुग्ध, सिता और घृत, सुस्वादु भक्त और परमान्न सम्मुख, तथा मरिच, जीरक और बाह्लिक से उल्लसित शाक।
+
+--- verse 32 | section: నైవేద్యం ---
+deva:
+क्षीरमेतदिदमुत्तमोत्तमं
+प्राज्यमाज्यमिदमुज्ज्वलं मधु ।
+मातरेतदमृतोपमं पयः
+संभ्रमेण परिपीयतां मुहुः ॥
+iast:
+kṣīrametadidamuttamottamaṁ
+prājyamājyamidamujjvalaṁ madhu |
+mātaretadamṛtopamaṁ payaḥ
+saṁbhrameṇa paripīyatāṁ muhuḥ ||
+en: Mother, this milk is the best of the best; this ghee is abundant; this honey is bright. Drink again and again, with eagerness, this milk which is like nectar.
+tel: అమ్మా, ఈ పాలు ఉత్తమోత్తమమైనవి; ఈ నెయ్యి సమృద్ధమైనది; ఈ తేనె ప్రకాశమైనది. అమృతంవంటి ఈ పాలను ఆసక్తితో మరల మరల త్రాగుము.
+hi: हे मातः, यह क्षीर उत्तमोत्तम है; यह आज्य प्राज्य है; यह मधु उज्ज्वल है। अमृत के समान इस पयः को सम्भ्रम से बार-बार पान करो।
+
+--- verse 33 | section: నైవేద్యం ---
+deva:
+उष्णोदकैः पाणियुगं मुखं च
+प्रक्षाल्य मातः कलधौतपात्रे ।
+कर्पूरमिश्रेण सकुंकुमेन
+हस्तौ समुद्वर्तय चंदनेन ॥
+iast:
+uṣṇodakaiḥ pāṇiyugaṁ mukhaṁ ca
+prakṣālya mātaḥ kaladhautapātre |
+karpūramiśreṇa sakuṁkumena
+hastau samudvartaya caṁdanena ||
+en: Mother, having washed your two hands and your face with warm water in a silver vessel, rub your hands with sandal paste mixed with camphor and saffron.
+tel: అమ్మా, వెండి పాత్రలో వెచ్చని జలాలతో నీ చేతులను, ముఖాన్ని కడిగి, కర్పూరం కుంకుమ కలిపిన చందనంతో నీ చేతులను రాసుకొనుము.
+hi: हे मातः, कलधौत पात्र में उष्ण जल से अपने पाणियुगल और मुख को प्रक्षालित कर, कर्पूर और कुङ्कुम मिश्रित चन्दन से हाथों का उद्वर्तन करो।
+
+--- verse 34 | section: నైవేద్యం ---
+deva:
+अतिशीतमुशीरवासितं
+तपनीये कलशे निवेशितम् ।
+पटपूतमिदं जितामृतं
+शुचि गंगाजलमंब पीयताम् ॥
+iast:
+atiśītamuśīravāsitaṁ
+tapanīye kalaśe niveśitam |
+paṭapūtamidaṁ jitāmṛtaṁ
+śuci gaṁgājalamaṁba pīyatām ||
+en: Mother, drink this pure water of the Gaṅgā. It is very cool, scented with uśīra, set in a golden pot, strained through a cloth, and it has surpassed nectar.
+tel: అమ్మా, ఈ పవిత్రమైన గంగాజలాన్ని త్రాగుము. అది మిక్కిలి చల్లనిది, వట్టివేరుతో సువాసన కలది, బంగారు కలశంలో ఉంచినది, వస్త్రంతో వడపోసినది, అమృతాన్ని జయించినది.
+hi: हे अम्ब, इस शुचि गङ्गाजल का पान करो। यह अति शीतल, उशीर से वासित, तपनीय कलश में निवेशित, पट से पूत और अमृत को जीतने वाला है।
+
+--- verse 35 | section: నైవేద్యం ---
+deva:
+जंब्वाम्ररंभाफलसंयुतानि
+द्राक्षाफलक्षौद्रसमन्वितानि ।
+सनारिकेलानि सदाडिमानि
+फलानि ते देवि समर्पयामि ॥
+iast:
+jaṁbvāmraraṁbhāphalasaṁyutāni
+drākṣāphalakṣaudrasamanvitāni |
+sanārikelāni sadāḍimāni
+phalāni te devi samarpayāmi ||
+en: Goddess, I offer you these fruits — with jambū, mango and plantain, with grapes and honey, with coconut and pomegranate.
+tel: దేవీ, ఈ ఫలాలను నీకు సమర్పిస్తాను — నేరేడు, మామిడి, అరటితో, ద్రాక్ష తేనెతో, కొబ్బరి దానిమ్మతో.
+hi: हे देवि, ये फल आपको समर्पित करता हूँ — जम्बू, आम्र और रम्भाफल सहित, द्राक्षाफल और क्षौद्र सहित, नारिकेल और दाडिम सहित।
+
+--- verse 36 | section: నైవేద్యం ---
+deva:
+कूश्मांडकोशातकिसंयुतानि
+जंबीरनारंगसमन्वितानि ।
+सबीजपूराणि सबादराणि
+फलानि ते देवि समर्पयामि ॥
+iast:
+kūśmāṁḍakośātakisaṁyutāni
+jaṁbīranāraṁgasamanvitāni |
+sabījapūrāṇi sabādarāṇi
+phalāni te devi samarpayāmi ||
+en: Goddess, I offer you these fruits — with pumpkin and kośātaki, with citron and orange, with bījapūra and jujube.
+tel: దేవీ, ఈ ఫలాలను నీకు సమర్పిస్తాను — గుమ్మడి, బీరతో, జంబీరం, నారింజతో, బీజపూరం, రేగుతో.
+hi: हे देवि, ये फल आपको समर्पित करता हूँ — कूश्माण्ड और कोशातकि सहित, जम्बीर और नारङ्ग सहित, बीजपूर और बादर सहित।
+
+--- verse 37 | section: తాంబూలం ---
+deva:
+कर्पूरेण युतैर्लवंगसहितैस्तक्कोलचूर्णान्वितैः
+सुस्वादुक्रमुकैः सगौरखदिरैः सुस्निग्धजातीफलैः ।
+मातः कैतकपत्रपांडुरुचिभिस्तांबूलवल्लीदलैः
+सानंदं मुखमंडनार्थमतुलं तांबूलमंगीकुरु ॥
+iast:
+karpūreṇa yutairlavaṁgasahitaistakkolacūrṇānvitaiḥ
+susvādukramukaiḥ sagaurakhadiraiḥ susnigdhajātīphalaiḥ |
+mātaḥ kaitakapatrapāṁḍurucibhistāṁbūlavallīdalaiḥ
+sānaṁdaṁ mukhamaṁḍanārthamatulaṁ tāṁbūlamaṁgīkuru ||
+en: Mother, accept this peerless betel with gladness, for the adorning of your mouth. It has camphor and clove, powdered takkola, sweet areca, pale white catechu, smooth nutmeg, and betel leaves pale and bright as ketaka petals.
+tel: అమ్మా, నీ ముఖాలంకారం కోసం ఈ అతులిత తాంబూలాన్ని ఆనందంతో స్వీకరించుము. దానిలో కర్పూరం, లవంగం, తక్కోల చూర్ణం, రుచికరమైన వక్క, తెల్లని కాచు, నునుపైన జాజికాయ, మొగలి రేకులవలె తెల్లగా ప్రకాశించే తమలపాకులు ఉన్నాయి.
+hi: हे मातः, अपने मुखमण्डन के लिये इस अतुल ताम्बूल को सानन्द अङ्गीकार करो। इसमें कर्पूर और लवङ्ग, तक्कोल चूर्ण, सुस्वादु क्रमुक, गौर खदिर, सुस्निग्ध जातीफल, तथा कैतक पत्र के समान पाण्डु रुचि वाले ताम्बूलवल्ली दल हैं।
+
+--- verse 38 | section: తాంబూలం ---
+deva:
+एलालवंगादिसमन्वितानि
+तक्कोलकर्पूरविमिश्रितानि ।
+तांबूलवल्लीदलसंयुतानि
+पूगानि ते देवि समर्पयामि ॥
+iast:
+elālavaṁgādisamanvitāni
+takkolakarpūravimiśritāni |
+tāṁbūlavallīdalasaṁyutāni
+pūgāni te devi samarpayāmi ||
+en: Goddess, I offer you these areca nuts, together with cardamom, clove and the rest, mixed with takkola and camphor, and with betel leaves.
+tel: దేవీ, ఈ వక్కలను నీకు సమర్పిస్తాను, యాలకులు, లవంగం మొదలైనవాటితో, తక్కోలం కర్పూరం కలిపి, తమలపాకులతో.
+hi: हे देवि, ये पूग आपको समर्पित करता हूँ, एला और लवङ्ग आदि सहित, तक्कोल और कर्पूर से विमिश्रित, तथा ताम्बूलवल्ली दल सहित।
+
+--- verse 39 | section: తాంబూలం ---
+deva:
+तांबूलनिर्जितसुतप्तसुवर्णवर्णं
+स्वर्णाक्तपूगफलमौक्तिकचूर्णयुक्तम् ।
+सौवर्णपात्रनिहितं खदिरेन सार्धं
+तांबूलमंब वदनांबुरुहे गृहाण ॥
+iast:
+tāṁbūlanirjitasutaptasuvarṇavarṇaṁ
+svarṇāktapūgaphalamauktikacūrṇayuktam |
+sauvarṇapātranihitaṁ khadirena sārdhaṁ
+tāṁbūlamaṁba vadanāṁburuhe gṛhāṇa ||
+en: Mother, take this betel into your lotus mouth. Its colour outdoes well-heated gold; it carries gilded areca and powdered pearl; it is set in a golden vessel, together with catechu.
+tel: అమ్మా, ఈ తాంబూలాన్ని నీ ముఖకమలంలోకి గ్రహించుము. దాని వన్నె బాగా కాచిన బంగారాన్ని మించినది; అందులో బంగారు పూత పూసిన వక్క, ముత్యాల చూర్ణం ఉన్నాయి; అది కాచుతో కూడి బంగారు పాత్రలో ఉంచినది.
+hi: हे अम्ब, इस ताम्बूल को अपने वदनाम्बुरुह में ग्रहण करो। इसका वर्ण सुतप्त स्वर्ण को भी जीतता है; इसमें स्वर्णाक्त पूगफल और मौक्तिक चूर्ण है; यह खदिर सहित सौवर्ण पात्र में रखा है।
+
+--- verse 40 | section: నీరాజనాదులు ---
+deva:
+महति कनकपात्रे स्थापयित्वा विशालान्
+डमरुसदृशरूपान्बद्धगोधूमदीपान् ।
+बहुघृतमथ तेषु न्यस्य दीपान्प्रकृष्टा-
+-न्भुवनजननि कुर्वे नित्यमारार्तिकं ते ॥
+iast:
+mahati kanakapātre sthāpayitvā viśālān
+ḍamarusadṛśarūpānbaddhagodhūmadīpān |
+bahughṛtamatha teṣu nyasya dīpānprakṛṣṭā-
+-nbhuvanajanani kurve nityamārārtikaṁ te ||
+en: Mother of the worlds, having set in a great golden vessel large lamps of bound wheat flour, shaped like a ḍamaru drum, and having placed much ghee and excellent wicks in them, I perform your ārārtika every day.
+tel: లోకమాతా, పెద్ద బంగారు పాత్రలో డమరుక ఆకారంలో గోధుమపిండితో చేసిన పెద్ద దీపాలను ఉంచి, వాటిలో పుష్కలంగా నెయ్యి, మేలైన వత్తులు పెట్టి, ప్రతి దినం నీకు ఆరార్తికం చేస్తాను.
+hi: हे भुवनजननि, महान् स्वर्ण पात्र में डमरु के सदृश रूप वाले बद्ध गोधूम के विशाल दीप स्थापित कर, उनमें बहुत घृत और प्रकृष्ट दीप रखकर, प्रतिदिन आपका आरार्तिक करता हूँ।
+
+--- verse 41 | section: నీరాజనాదులు ---
+deva:
+सविनयमथ दत्वा जानुयुग्मं धरण्यां
+सपदि शिरसि धृत्वा पात्रमारार्तिकस्य ।
+मुखकमलसमीपे तेऽंब सार्थं त्रिवारं
+भ्रमयति मयि भूयात्ते कृपार्द्रः कटाक्षः ॥
+iast:
+savinayamatha datvā jānuyugmaṁ dharaṇyāṁ
+sapadi śirasi dhṛtvā pātramārārtikasya |
+mukhakamalasamīpe te'ṁba sārthaṁ trivāraṁ
+bhramayati mayi bhūyātte kṛpārdraḥ kaṭākṣaḥ ||
+en: Then, setting both knees humbly upon the ground and at once raising the ārārtika vessel to my head, I turn it three times before your lotus face, Mother. May your glance, wet with compassion, fall upon me.
+tel: ఆ పిమ్మట వినయంతో రెండు మోకాళ్లను నేలపై ఉంచి, ఆరార్తిక పాత్రను వెంటనే శిరస్సుపై ధరించి, అమ్మా, నీ ముఖకమలం ఎదుట దానిని మూడు సార్లు త్రిప్పుతాను. కరుణతో తడిసిన నీ చూపు నాపై ప్రసరించును గాక.
+hi: तदनन्तर सविनय दोनों जानुओं को धरती पर रखकर, आरार्तिक के पात्र को सपदि शिर पर धारण कर, हे अम्ब, आपके मुखकमल के समीप उसे तीन बार घुमाता हूँ। आप की करुणा से आर्द्र कटाक्ष मुझ पर हो।
+
+--- verse 42 | section: నీరాజనాదులు ---
+deva:
+अथ बहुमणिमिश्रैर्मौक्तिकैस्त्वां विकीर्य
+त्रिभुवनकमनीयैः पूजयित्वा च वस्त्रैः ।
+मिलितविविधमुक्तां दिव्यमाणिक्ययुक्तां
+जननि कनकवृष्टिं दक्षिणां तेऽर्पयामि ॥
+iast:
+atha bahumaṇimiśrairmauktikaistvāṁ vikīrya
+tribhuvanakamanīyaiḥ pūjayitvā ca vastraiḥ |
+militavividhamuktāṁ divyamāṇikyayuktāṁ
+janani kanakavṛṣṭiṁ dakṣiṇāṁ te'rpayāmi ||
+en: Then, having strewn you with pearls mixed with many jewels, and having worshipped you with garments lovely in all three worlds, Mother, I offer you as dakṣiṇā a shower of gold, gathered with many pearls and set with divine rubies.
+tel: ఆ పిమ్మట పలు మణులతో కలిపిన ముత్యాలను నీపై చల్లి, ముల్లోకాలలో సుందరమైన వస్త్రాలతో నిన్ను పూజించి, అమ్మా, పలు ముత్యాలతో కూడిన, దివ్య మాణిక్యాలు అమర్చిన బంగారు వర్షాన్ని దక్షిణగా నీకు సమర్పిస్తాను.
+hi: तदनन्तर बहुत मणियों से मिश्रित मौक्तिकों से आपको विकीर्ण कर, त्रिभुवन में कमनीय वस्त्रों से आपकी पूजा कर, हे जननि, मिलित विविध मुक्ता से युक्त और दिव्य माणिक्य से युक्त कनकवृष्टि दक्षिणा रूप में आपको अर्पित करता हूँ।
+
+--- verse 43 | section: నీరాజనాదులు ---
+deva:
+मातः कांचनदंडमंडितमिदं पूर्णेंदुबिंबप्रभं
+नानारत्नविशोभिहेमकलशं लोकत्रयाह्लादकम् ।
+भास्वन्मौक्तिकजालिकापरिवृतं प्रीत्यात्महस्ते धृतं
+छत्रं ते परिकल्पयामि शिरसि त्वष्ट्रा स्वयं निर्मितम् ॥
+iast:
+mātaḥ kāṁcanadaṁḍamaṁḍitamidaṁ pūrṇeṁdubiṁbaprabhaṁ
+nānāratnaviśobhihemakalaśaṁ lokatrayāhlādakam |
+bhāsvanmauktikajālikāparivṛtaṁ prītyātmahaste dhṛtaṁ
+chatraṁ te parikalpayāmi śirasi tvaṣṭrā svayaṁ nirmitam ||
+en: Mother, I hold this parasol above your head. Its golden staff is adorned, it has the light of the full moon's orb, its golden dome shines with many jewels, and it gladdens all three worlds. It is surrounded by a net of bright pearls, held with love in my own hand, and fashioned by Tvaṣṭā himself.
+tel: అమ్మా, ఈ ఛత్రాన్ని నీ శిరస్సుపై ధరిస్తాను. దాని బంగారు దండం అలంకరించినది, పూర్ణచంద్ర బింబ కాంతి కలది, దాని బంగారు కలశం పలు రత్నాలతో ప్రకాశిస్తుంది, అది ముల్లోకాలను ఆహ్లాదపరుస్తుంది. అది ప్రకాశమైన ముత్యాల జాలికతో చుట్టబడినది, ప్రేమతో నా చేతిలో ధరించినది, త్వష్ట స్వయంగా నిర్మించినది.
+hi: हे मातः, यह छत्र आपके शिर पर धारण करता हूँ। इसका काञ्चन दण्ड मण्डित है, यह पूर्णेन्दु बिम्ब की प्रभा वाला है, इसका हेम कलश नाना रत्नों से विशोभित है, और यह लोकत्रय को आह्लादित करता है। यह भास्वर मौक्तिक जालिका से परिवृत, प्रीति से अपने हाथ में धृत और त्वष्टा द्वारा स्वयं निर्मित है।
+
+--- verse 44 | section: నీరాజనాదులు ---
+deva:
+शरदिंदुमरीचिगौरवर्णै-
+-र्मणिमुक्ताविलसत्सुवर्णदंडैः ।
+जगदंब विचित्रचामरैस्त्वा-
+-महमानंदभरेण वीजयामि ॥
+iast:
+śaradiṁdumarīcigauravarṇai-
+-rmaṇimuktāvilasatsuvarṇadaṁḍaiḥ |
+jagadaṁba vicitracāmaraistvā-
+-mahamānaṁdabhareṇa vījayāmi ||
+en: Mother of the world, with a fullness of joy I fan you with wonderful cāmaras, white as the rays of the autumn moon, their golden staffs bright with jewels and pearls.
+tel: జగదంబా, శరత్కాల చంద్ర కిరణాలవలె తెల్లనైన, మణులు ముత్యాలతో ప్రకాశించే బంగారు దండాలు కల అద్భుతమైన చామరాలతో ఆనంద భరంతో నీకు విసురుతాను.
+hi: हे जगदम्बा, शरद् इन्दु की मरीचि के समान गौर वर्ण वाले, मणि और मुक्ता से विलसित सुवर्ण दण्डों वाले विचित्र चामरों से आनन्द के भार से आपको वीजित करता हूँ।
+
+--- verse 45 | section: నీరాజనాదులు ---
+deva:
+मार्तांडमंडलनिभो जगदंब योऽयं
+भक्त्या मया मणिमयो मुकुरोऽर्पितस्ते ।
+पूर्णेंदुबिंबरुचिरं वदनं स्वकीय-
+-मस्मिन्विलोकय विलोलविलोचने त्वम् ॥
+iast:
+mārtāṁḍamaṁḍalanibho jagadaṁba yo'yaṁ
+bhaktyā mayā maṇimayo mukuro'rpitaste |
+pūrṇeṁdubiṁbaruciraṁ vadanaṁ svakīya-
+-masminvilokaya vilolavilocane tvam ||
+en: Mother of the world, this jewelled mirror, like the orb of the sun, has been offered by me with devotion. You whose eyes move restlessly, look in it upon your own face, lovely as the orb of the full moon.
+tel: జగదంబా, సూర్యమండలం వంటి ఈ మణిమయ దర్పణాన్ని భక్తితో నేను సమర్పించాను. చలించే కన్నులు కల నీవు, పూర్ణచంద్ర బింబం వలె సుందరమైన నీ ముఖాన్ని దానిలో చూచుకొనుము.
+hi: हे जगदम्बा, मार्ताण्ड मण्डल के समान यह मणिमय मुकुर मेरे द्वारा भक्ति से अर्पित है। हे विलोल विलोचने, इसमें पूर्णेन्दु बिम्ब के समान रुचिर अपने वदन को देखो।
+
+--- verse 46 | section: నీరాజనాదులు ---
+deva:
+इंद्रादयो नतिनतैर्मकुटप्रदीपै-
+-र्नीराजयंति सततं तव पादपीठम् ।
+तस्मादहं तव समस्तशरीरमेत-
+-न्नीराजयामि जगदंब सहस्रदीपैः ॥
+iast:
+iṁdrādayo natinatairmakuṭapradīpai-
+-rnīrājayaṁti satataṁ tava pādapīṭham |
+tasmādahaṁ tava samastaśarīrameta-
+-nnīrājayāmi jagadaṁba sahasradīpaiḥ ||
+en: Indra and the other gods, bowing low, wave the lamps of their crowns before your footstool without ceasing. Therefore, Mother of the world, I wave a thousand lamps before your whole body.
+tel: ఇంద్రాది దేవతలు వంగి నమస్కరిస్తూ, తమ కిరీటాల దీపాలతో నీ పాదపీఠానికి నిరంతరం నీరాజనం చేస్తారు. అందుచేత జగదంబా, నీ సమస్త శరీరానికి వేయి దీపాలతో నీరాజనం చేస్తాను.
+hi: इन्द्र आदि देव नति से नत होकर अपने मकुट के प्रदीपों से आपके पादपीठ की सतत नीराजना करते हैं। इसलिये हे जगदम्बा, आपके समस्त शरीर की सहस्र दीपों से नीराजना करता हूँ।
+
+--- verse 47 | section: వాహనాలు ---
+deva:
+प्रियगतिरतितुंगो रत्नपल्याणयुक्तः
+कनकमयविभूषः स्निग्धगंभीरघोषः ।
+भगवति कलितोऽयं वाहनार्थं मया ते
+तुरगशतसमेतो वायुवेगस्तुरंगः ॥
+iast:
+priyagatiratituṁgo ratnapalyāṇayuktaḥ
+kanakamayavibhūṣaḥ snigdhagaṁbhīraghoṣaḥ |
+bhagavati kalito'yaṁ vāhanārthaṁ mayā te
+turagaśatasameto vāyuvegasturaṁgaḥ ||
+en: Goddess, this horse has been prepared by me for your mount. Its gait is pleasing, it is very tall, it carries a jewelled saddle, its ornament is of gold, its neigh is smooth and deep; it comes with a hundred horses, and it has the speed of the wind.
+tel: భగవతీ, నీ వాహనం కోసం ఈ గుర్రాన్ని నేను సిద్ధం చేశాను. దాని నడక ప్రియమైనది, అది మిక్కిలి ఎత్తైనది, రత్నపు జీనుతో కూడినది, దాని అలంకారం బంగారమయమైనది, దాని సకిలింపు మృదువైనది, గంభీరమైనది; అది వంద గుర్రాలతో వస్తుంది, గాలి వేగం కలది.
+hi: हे भगवती, आपके वाहन हेतु यह तुरङ्ग मेरे द्वारा कल्पित है। इसकी गति प्रिय है, यह अति तुङ्ग है, रत्न पल्याण से युक्त है, इसका विभूष कनकमय है, इसका घोष स्निग्ध और गम्भीर है; यह सौ तुरगों सहित है और वायु के वेग वाला है।
+
+--- verse 48 | section: వాహనాలు ---
+deva:
+मधुकरवृतकुंभन्यस्तसिंदूररेणुः
+कनककलितघंटाकिंकणीशोभिकंठः ।
+श्रवणयुगलचंचच्चामरो मेघतुल्यो
+जननि तव मुदे स्यान्मत्तमातंग एषः ॥
+iast:
+madhukaravṛtakuṁbhanyastasiṁdūrareṇuḥ
+kanakakalitaghaṁṭākiṁkaṇīśobhikaṁṭhaḥ |
+śravaṇayugalacaṁcaccāmaro meghatulyo
+janani tava mude syānmattamātaṁga eṣaḥ ||
+en: Mother, may this rutting elephant be for your delight. Vermilion dust is laid upon its bee-circled temples, its neck is bright with a golden bell and small bells, cāmaras swing at its two ears, and it is like a cloud.
+tel: అమ్మా, ఈ మదగజం నీ సంతోషానికి అగును గాక. తుమ్మెదలు చుట్టుకొన్న దాని కుంభస్థలంపై సిందూర రేణువు ఉంచినది, దాని కంఠం బంగారు ఘంట కింకిణులతో ప్రకాశిస్తుంది, దాని రెండు చెవులవద్ద చామరాలు కదులుతున్నాయి, అది మేఘంవలె ఉన్నది.
+hi: हे जननि, यह मत्त मातङ्ग आपके मोद के लिये हो। मधुकरों से वृत इसके कुम्भ पर सिन्दूर रेणु न्यस्त है, इसका कण्ठ कनक की घण्टा और किङ्किणी से शोभित है, इसके श्रवणयुगल पर चामर चञ्चल हैं, और यह मेघ के तुल्य है।
+
+--- verse 49 | section: వాహనాలు ---
+deva:
+द्रुततरतुरगैर्विराजमानं
+मणिमयचक्रचतुष्टयेन युक्तम् ।
+कनकमयममुं वितानवंतं
+भगवति ते हि रथं समर्पयामि ॥
+iast:
+drutataraturagairvirājamānaṁ
+maṇimayacakracatuṣṭayena yuktam |
+kanakamayamamuṁ vitānavaṁtaṁ
+bhagavati te hi rathaṁ samarpayāmi ||
+en: Goddess, I offer you this chariot. It is bright with very swift horses, it has four jewelled wheels, it is made of gold, and it carries a canopy.
+tel: భగవతీ, ఈ రథాన్ని నీకు సమర్పిస్తాను. అది మిక్కిలి వేగమైన గుర్రాలతో ప్రకాశిస్తుంది, నాలుగు మణిమయ చక్రాలు కలది, బంగారంతో చేసినది, మేలుకట్టు కలది.
+hi: हे भगवती, यह रथ आपको समर्पित करता हूँ। यह द्रुततर तुरगों से विराजमान है, इसमें चार मणिमय चक्र हैं, यह कनकमय है और वितानवान् है।
+
+--- verse 50 | section: వాహనాలు ---
+deva:
+हयगजरथपत्तिशोभमानं
+दिशि दिशि दुंदुभिमेघनादयुक्तम् ।
+अतिबहु चतुरंगसैन्यमेत-
+-द्भगवति भक्तिभरेण तेऽर्पयामि ॥
+iast:
+hayagajarathapattiśobhamānaṁ
+diśi diśi duṁdubhimeghanādayuktam |
+atibahu caturaṁgasainyameta-
+-dbhagavati bhaktibhareṇa te'rpayāmi ||
+en: Goddess, with a fullness of devotion I offer you this very great fourfold army. It is bright with horses, elephants, chariots and foot soldiers, and the sound of its drums is like thunder in every direction.
+tel: భగవతీ, భక్తి భరంతో ఈ మిక్కిలి గొప్ప చతురంగ సైన్యాన్ని నీకు సమర్పిస్తాను. అది గుర్రాలు, ఏనుగులు, రథాలు, కాలిబంటులతో ప్రకాశిస్తుంది, దాని దుందుభుల ధ్వని అన్ని దిక్కులలో మేఘగర్జనవలె ఉంది.
+hi: हे भगवती, भक्ति के भार से यह अति बहु चतुरङ्ग सैन्य आपको अर्पित करता हूँ। यह हय, गज, रथ और पत्ति से शोभमान है, और इसके दुन्दुभि का नाद दिशि दिशि में मेघनाद के समान है।
+
+--- verse 51 | section: వాహనాలు ---
+deva:
+परिघीकृतसप्तसागरं
+बहुसंपत्सहितं मयांब ते विपुलम् ।
+प्रबलं धरणीतलाभिधं
+दृढदुर्गं निखिलं समर्पयामि ॥
+iast:
+parighīkṛtasaptasāgaraṁ
+bahusaṁpatsahitaṁ mayāṁba te vipulam |
+prabalaṁ dharaṇītalābhidhaṁ
+dṛḍhadurgaṁ nikhilaṁ samarpayāmi ||
+en: Mother, I offer you this whole strong fortress, girded by the seven seas, holding great wealth, wide, mighty, and named the surface of the earth.
+tel: అమ్మా, సప్త సముద్రాలు పరిఖగా కల, గొప్ప సంపదలు కల, విశాలమైన, ప్రబలమైన, ధరణీతలం అనే పేరు కల ఈ దృఢమైన దుర్గాన్ని అంతటిని నీకు సమర్పిస్తాను.
+hi: हे अम्ब, सप्त सागरों से परिखीकृत, बहु सम्पत् सहित, विपुल, प्रबल और धरणीतल नामक इस समस्त दृढ दुर्ग को आपको समर्पित करता हूँ।
+
+--- verse 52 | section: నృత్తగీతవాద్యాలు ---
+deva:
+शतपत्रयुतैः स्वभावशीतै-
+-रतिसौरभ्ययुतैः परागपीतैः ।
+भ्रमरीमुखरीकृतैरनंतै-
+-र्व्यजनैस्त्वां जगदंब वीजयामि ॥
+iast:
+śatapatrayutaiḥ svabhāvaśītai-
+-ratisaurabhyayutaiḥ parāgapītaiḥ |
+bhramarīmukharīkṛtairanaṁtai-
+-rvyajanaistvāṁ jagadaṁba vījayāmi ||
+en: Mother of the world, I fan you with endless fans made of hundred-petalled lotuses. They are cool by nature, they carry great fragrance, they are yellow with pollen, and they are made to hum by the female bees.
+tel: జగదంబా, శతపత్ర కమలాలతో చేసిన అనంతమైన విసనకర్రలతో నీకు విసురుతాను. అవి స్వభావంగా చల్లనివి, గొప్ప సువాసన కలవి, పరాగంతో పసుపు రంగు కలవి, ఆడ తుమ్మెదలచేత ధ్వని చేయబడినవి.
+hi: हे जगदम्बा, शतपत्रों से युक्त अनन्त व्यजनों से आपको वीजित करता हूँ। वे स्वभाव से शीतल, अति सौरभ्य से युक्त, पराग से पीत और भ्रमरियों से मुखरीकृत हैं।
+
+--- verse 53 | section: నృత్తగీతవాద్యాలు ---
+deva:
+भ्रमरलुलितलोलकुंतलाली-
+-विगलितमाल्यविकीर्णरंगभूमिः ।
+इयमतिरुचिरा नटी नटंती
+तव हृदये मुदमातनोतु मातः ॥
+iast:
+bhramaralulitalolakuṁtalālī-
+-vigalitamālyavikīrṇaraṁgabhūmiḥ |
+iyamatirucirā naṭī naṭaṁtī
+tava hṛdaye mudamātanotu mātaḥ ||
+en: Mother, may this most lovely dancing girl, dancing here, spread joy in your heart. Her tossing locks are stirred by bees, and the stage is strewn with the garlands fallen from her.
+tel: అమ్మా, ఇక్కడ నర్తిస్తున్న ఈ మిక్కిలి సుందరమైన నటి నీ హృదయంలో ఆనందాన్ని వ్యాపింపజేయును గాక. తుమ్మెదలు కదిలించిన ఆమె చలించే కురులు, ఆమెనుండి జారిన మాలలతో రంగభూమి నిండినది.
+hi: हे मातः, यहाँ नृत्य करती यह अति रुचिरा नटी आपके हृदय में मुद का विस्तार करे। भ्रमरों से लुलित उसके लोल कुन्तल हैं, और उससे विगलित माल्यों से रङ्गभूमि विकीर्ण है।
+
+--- verse 54 | section: నృత్తగీతవాద్యాలు ---
+deva:
+मुखनयनविलासलोलवेणी-
+-विलसितनिर्जितलोलभृंगमालाः ।
+युवजनसुखकारिचारुलीला
+भगवति ते पुरतो नटंति बालाः ॥
+iast:
+mukhanayanavilāsalolaveṇī-
+-vilasitanirjitalolabhṛṁgamālāḥ |
+yuvajanasukhakāricārulīlā
+bhagavati te purato naṭaṁti bālāḥ ||
+en: Goddess, these young girls dance before you. Their loose braids, bright with the play of face and eye, have outdone the rows of restless bees, and their graceful play gives joy to the young.
+tel: భగవతీ, ఈ బాలికలు నీ ఎదుట నర్తిస్తున్నారు. ముఖ నయన విలాసంతో ప్రకాశించే వారి వదులైన జడలు చలించే తుమ్మెద వరుసలను జయించాయి, వారి సుందరమైన లీల యువజనులకు సుఖాన్ని ఇస్తుంది.
+hi: हे भगवती, ये बालाएँ आपके सम्मुख नृत्य करती हैं। मुख और नयन के विलास से विलसित उनकी लोल वेणी ने लोल भृङ्गमाला को जीत लिया है, और उनकी चारु लीला युवजनों को सुख देती है।
+
+--- verse 55 | section: నృత్తగీతవాద్యాలు ---
+deva:
+भ्रमदलिकुलतुल्यालोलधम्मिल्लभाराः
+स्मितमुखकमलोद्यद्दिव्यलावण्यपूराः ।
+अनुपमितसुवेषा वारयोषा नटंति
+परभृतकलकंठ्यो देवि दैन्यं धुनोतु ॥
+iast:
+bhramadalikulatulyāloladhammillabhārāḥ
+smitamukhakamalodyaddivyalāvaṇyapūrāḥ |
+anupamitasuveṣā vārayoṣā naṭaṁti
+parabhṛtakalakaṁṭhyo devi dainyaṁ dhunotu ||
+en: Goddess, these courtesans dance, their heavy loose braids like circling swarms of bees, a flood of divine beauty rising from their smiling lotus faces, their dress beyond compare, their voices sweet as the cuckoo's. May they drive away all wretchedness.
+tel: దేవీ, ఈ వారయోషలు నర్తిస్తున్నారు; వారి బరువైన వదులు జడలు తిరిగే తుమ్మెద గుంపులవలె ఉన్నాయి, చిరునవ్వు కల ముఖకమలాలనుండి దివ్య లావణ్య ప్రవాహం పొంగుతున్నది, వారి వేషం అనుపమానమైనది, వారి కంఠాలు కోయిలవలె మధురమైనవి. వారు దైన్యాన్ని అంతటిని తొలగించుదురు గాక.
+hi: हे देवि, ये वारयोषाएँ नृत्य करती हैं; उनके लोल धम्मिल्ल के भार भ्रमद् अलिकुल के तुल्य हैं, स्मित मुखकमल से उदित दिव्य लावण्य का पूर उठता है, उनका वेष अनुपमित है, और उनके कण्ठ परभृत के समान कल हैं। वे दैन्य को धुन डालें।
+
+--- verse 56 | section: నృత్తగీతవాద్యాలు ---
+deva:
+डमरुडिंडिमजर्झरझल्लरी-
+-मृदुरवद्रगडद्द्रगडादयः ।
+झटिति झांकृतझांकृतझांकृतै-
+-र्बहुदयं हृदयं सुखयंतु ते ॥
+iast:
+ḍamaruḍiṁḍimajarjharajhallarī-
+-mṛduravadragaḍaddragaḍādayaḥ |
+jhaṭiti jhāṁkṛtajhāṁkṛtajhāṁkṛtai-
+-rbahudayaṁ hṛdayaṁ sukhayaṁtu te ||
+en: Goddess, may the ḍamaru, ḍiṇḍima, jarjhara and jhallarī, with their soft sounds of dragaḍa-dragaḍa, and their sudden jhāṁ, jhāṁ, jhāṁ, give joy to your most generous heart.
+tel: దేవీ, డమరు, డిండిమ, జర్ఝర, ఝల్లరీ వాద్యాలు, వాటి మృదువైన ద్రగడ ద్రగడ ధ్వనులు, వెంటనే వచ్చే ఝాం ఝాం ఝాం శబ్దాలు మిక్కిలి ఉదారమైన నీ హృదయాన్ని సుఖపెట్టును గాక.
+hi: हे देवि, डमरु, डिण्डिम, जर्झर और झल्लरी, उनके मृदु द्रगड-द्रगड रव, तथा झटिति झांकृत झांकृत झांकृत शब्द आपके बहुदय हृदय को सुखी करें।
+
+--- verse 57 | section: నృత్తగీతవాద్యాలు ---
+deva:
+विपंचीषु सप्तस्वरान्वादयंत्य-
+-स्तव द्वारि गायंति गंधर्वकन्याः ।
+क्षणं सावधानेन चित्तेन मातः
+समाकर्णय त्वं मया प्रार्थितासि ॥
+iast:
+vipaṁcīṣu saptasvarānvādayaṁtya-
+-stava dvāri gāyaṁti gaṁdharvakanyāḥ |
+kṣaṇaṁ sāvadhānena cittena mātaḥ
+samākarṇaya tvaṁ mayā prārthitāsi ||
+en: Mother, the gandharva maidens play the seven notes upon their lutes and sing at your door. For a moment listen to them with an attentive mind. This I ask of you.
+tel: అమ్మా, గంధర్వ కన్యలు తమ వీణలపై సప్త స్వరాలను వాయిస్తూ నీ ద్వారంవద్ద గానం చేస్తున్నారు. ఒక క్షణం శ్రద్ధ కల మనస్సుతో వారిని ఆలకించుము. ఇది నేను నిన్ను ప్రార్థిస్తున్నాను.
+hi: हे मातः, गन्धर्व कन्याएँ विपञ्ची पर सप्त स्वर बजाती हुई आपके द्वार पर गाती हैं। क्षण भर सावधान चित्त से उन्हें सुनो। यह मेरी आपसे प्रार्थना है।
+
+--- verse 58 | section: నృత్తగీతవాద్యాలు ---
+deva:
+अभिनयकमनीयैर्नर्तनैर्नर्तकीनां
+क्षणमपि रमयित्वा चेत एतत्त्वदीयम् ।
+स्वयमहमतिचित्रैर्नृत्तवादित्रगीतै-
+-र्भगवति भवदीयं मानसं रंजयामि ॥
+iast:
+abhinayakamanīyairnartanairnartakīnāṁ
+kṣaṇamapi ramayitvā ceta etattvadīyam |
+svayamahamaticitrairnṛttavāditragītai-
+-rbhagavati bhavadīyaṁ mānasaṁ raṁjayāmi ||
+en: Goddess, having for a moment delighted this mind of yours with the lovely gestured dances of the dancing girls, I myself now gladden your heart with most wonderful dance, music and song.
+tel: భగవతీ, నర్తకీల అభినయ సుందరమైన నృత్యాలతో ఒక క్షణం నీ ఈ చిత్తాన్ని ఆనందపరచి, ఇప్పుడు నేనే మిక్కిలి అద్భుతమైన నృత్యం, వాద్యం, గీతంతో నీ మనస్సును రంజింపజేస్తాను.
+hi: हे भगवती, नर्तकियों के अभिनय से कमनीय नर्तनों से क्षण भर आपके इस चित्त को रमाकर, अब स्वयं मैं अति चित्र नृत्त, वादित्र और गीत से आपके मानस को रञ्जित करता हूँ।
+
+--- verse 59 | section: నమస్కారం ---
+deva:
+तव देवि गुणानुवर्णने
+चतुरा नो चतुराननादयः ।
+तदिहैकमुखेषु जंतुषु
+स्तवनं कस्तव कर्तुमीश्वरः ॥
+iast:
+tava devi guṇānuvarṇane
+caturā no caturānanādayaḥ |
+tadihaikamukheṣu jaṁtuṣu
+stavanaṁ kastava kartumīśvaraḥ ||
+en: Goddess, even the four-faced Brahmā and the others are not skilled in the telling of your qualities. Then, among creatures here who have but one mouth, who is able to make your praise?
+tel: దేవీ, నాలుగు ముఖాలు కల బ్రహ్మ మొదలైనవారు కూడ నీ గుణాలను వర్ణించుటలో నేర్పరులు కారు. అట్టిచో ఒక్క ముఖమే కల ఇక్కడి ప్రాణులలో నీ స్తవం చేయ శక్తుడెవరు?
+hi: हे देवि, चतुरानन ब्रह्मा आदि भी आपके गुणों के वर्णन में चतुर नहीं हैं। तब यहाँ एक मुख वाले जन्तुओं में आपका स्तवन करने में कौन ईश्वर है?
+
+--- verse 60 | section: నమస్కారం ---
+deva:
+पदे पदे यत्परिपूजकेभ्यः
+सद्योऽश्वमेधादिफलं ददाति ।
+तत्सर्वपापक्षय हेतुभूतं
+प्रदक्षिणं ते परितः करोमि ॥
+iast:
+pade pade yatparipūjakebhyaḥ
+sadyo'śvamedhādiphalaṁ dadāti |
+tatsarvapāpakṣaya hetubhūtaṁ
+pradakṣiṇaṁ te paritaḥ karomi ||
+en: At every step it gives its worshippers at once the fruit of the Aśvamedha and the other sacrifices. Therefore I go round you on all sides in circumambulation, which is the cause of the wearing away of every sin.
+tel: అడుగడుగునా అది పూజకులకు వెంటనే అశ్వమేధాది ఫలాన్ని ఇస్తుంది. అందుచేత సర్వ పాపక్షయానికి హేతువైన ప్రదక్షిణాన్ని నీ చుట్టూ అన్ని వైపులా చేస్తాను.
+hi: पद-पद पर वह परिपूजकों को सद्यः अश्वमेध आदि का फल देता है। इसलिये सर्व पापक्षय के हेतुभूत प्रदक्षिण को आपके चारों ओर करता हूँ।
+
+--- verse 61 | section: నమస్కారం ---
+deva:
+रक्तोत्पलारक्तलताप्रभाभ्यां
+ध्वजोर्ध्वरेखाकुलिशांकिताभ्याम् ।
+अशेषबृंदारकवंदिताभ्यां
+नमो भवानीपदपंकजाभ्याम् ॥
+iast:
+raktotpalāraktalatāprabhābhyāṁ
+dhvajordhvarekhākuliśāṁkitābhyām |
+aśeṣabṛṁdārakavaṁditābhyāṁ
+namo bhavānīpadapaṁkajābhyām ||
+en: Obeisance to the two lotus feet of Bhavānī — bright as the red lotus and the red creeper, marked with the banner, the upright line and the thunderbolt, and worshipped by the whole company of the gods.
+tel: భవానీ పాదకమలాలకు నమస్కారం — ఎర్ర కలువ, ఎర్ర లత కాంతి కలవి, ధ్వజం, ఊర్ధ్వరేఖ, కులిశంతో గుర్తు కలవి, దేవగణమంతటిచేత పూజించబడినవి.
+hi: भवानी के पदपङ्कजयुगल को नमस्कार — रक्तोत्पल और रक्तलता की प्रभा वाले, ध्वज, ऊर्ध्वरेखा और कुलिश से अङ्कित, तथा अशेष बृन्दारकों से वन्दित।
+
+--- verse 62 | section: నమస్కారం ---
+deva:
+चरणनलिनयुग्मं पंकजैः पूजयित्वा
+कनककमलमालां कंठदेशेऽर्पयित्वा ।
+शिरसि विनिहितोऽयं रत्नपुष्पांजलिस्ते
+हृदयकमलमध्ये देवि हर्षं तनोतु ॥
+iast:
+caraṇanalinayugmaṁ paṁkajaiḥ pūjayitvā
+kanakakamalamālāṁ kaṁṭhadeśe'rpayitvā |
+śirasi vinihito'yaṁ ratnapuṣpāṁjaliste
+hṛdayakamalamadhye devi harṣaṁ tanotu ||
+en: Goddess, having worshipped your two lotus feet with lotuses and placed a garland of golden lotuses at your throat, I set this handful of jewelled flowers upon my head. May it spread gladness in the middle of your heart-lotus.
+tel: దేవీ, కమలాలతో నీ పాదకమలద్వయాన్ని పూజించి, కంఠ ప్రదేశంలో బంగారు కమల మాలను సమర్పించి, ఈ రత్న పుష్పాంజలిని నా శిరస్సుపై ఉంచుతాను. అది నీ హృదయకమల మధ్యలో హర్షాన్ని వ్యాపింపజేయును గాక.
+hi: हे देवि, चरणनलिनयुगल की पङ्कजों से पूजा कर, कण्ठदेश में कनक कमल माला अर्पित कर, यह रत्नपुष्पाञ्जलि अपने शिर पर रखता हूँ। वह आपके हृदयकमल के मध्य में हर्ष का विस्तार करे।
+
+--- verse 63 | section: నమస్కారం ---
+deva:
+अथ मणिमयमंचकाभिरामे
+कनकमयवितानराजमाने ।
+प्रसरदगरुधूपधूपितेऽस्मि-
+-न्भगवति भवनेऽस्तु ते निवासः ॥
+iast:
+atha maṇimayamaṁcakābhirāme
+kanakamayavitānarājamāne |
+prasaradagarudhūpadhūpite'smi-
+-nbhagavati bhavane'stu te nivāsaḥ ||
+en: Goddess, then let your dwelling be in this house, beautiful with its jewelled couch, bright with its golden canopy, and perfumed with spreading agaru incense.
+tel: భగవతీ, మణిమయ మంచంతో సుందరమైన, బంగారు మేలుకట్టుతో ప్రకాశించే, వ్యాపించే అగరు ధూపంతో సువాసన కల ఈ భవనంలో నీ నివాసం అగును గాక.
+hi: हे भगवती, तदनन्तर मणिमय मञ्चक से अभिराम, कनकमय वितान से राजमान और प्रसरत् अगरु धूप से धूपित इस भवन में आपका निवास हो।
+
+--- verse 64 | section: నమస్కారం ---
+deva:
+एतस्मिन्मणिखचिते सुवर्णपीठे
+त्रैलोक्याभयवरदौ निधाय हस्तौ ।
+विस्तीर्णे मृदुलतरोत्तरच्छदेऽस्मि-
+-न्पर्यंके कनकमये निषीद मातः ॥
+iast:
+etasminmaṇikhacite suvarṇapīṭhe
+trailokyābhayavaradau nidhāya hastau |
+vistīrṇe mṛdulatarottaracchade'smi-
+-nparyaṁke kanakamaye niṣīda mātaḥ ||
+en: Mother, placing upon this jewel-set golden stool your two hands, which give fearlessness and boons to all three worlds, be seated on this wide golden couch with its very soft coverlet.
+tel: అమ్మా, ముల్లోకాలకు అభయాన్ని వరాన్ని ఇచ్చే నీ రెండు చేతులను రత్నాలు పొదిగిన ఈ బంగారు పీఠంపై ఉంచి, మిక్కిలి మెత్తని పైబట్ట కల ఈ విశాలమైన బంగారు పర్యంకంపై ఆసీనురాలవు.
+hi: हे मातः, त्रैलोक्य को अभय और वर देने वाले अपने दोनों हाथों को इस मणिखचित सुवर्ण पीठ पर रखकर, मृदुलतर उत्तरच्छद वाले इस विस्तीर्ण कनकमय पर्यङ्क पर विराजो।
+
+--- verse 65 | section: విశ్రాంతి, క్షమాపణం ---
+deva:
+तव देवि सरोजचिह्नयोः
+पदयोर्निर्जितपद्मरागयोः ।
+अतिरक्ततरैरलक्तकैः
+पुनरुक्तां रचयामि रक्तताम् ॥
+iast:
+tava devi sarojacihnayoḥ
+padayornirjitapadmarāgayoḥ |
+atiraktatarairalaktakaiḥ
+punaruktāṁ racayāmi raktatām ||
+en: Goddess, upon your two feet, which bear the mark of the lotus and have outdone the ruby, I make redness twice over with the reddest of lac dyes.
+tel: దేవీ, కమల చిహ్నం కల, పద్మరాగాన్ని జయించిన నీ పాదద్వయంపై, మిక్కిలి ఎరుపైన లత్తుకతో ఎరుపును మరల కల్పిస్తాను.
+hi: हे देवि, सरोज चिह्न वाले और पद्मराग को जीतने वाले आपके चरणों पर, अति रक्ततर अलक्तक से पुनरुक्त रक्तता रचता हूँ।
+
+--- verse 66 | section: విశ్రాంతి, క్షమాపణం ---
+deva:
+अथ मातरुशीरवासितं
+निजतांबूलरसेन रंजितम् ।
+तपनीयमये हि पट्टके
+मुखगंडूषजलं विधीयताम् ॥
+iast:
+atha mātaruśīravāsitaṁ
+nijatāṁbūlarasena raṁjitam |
+tapanīyamaye hi paṭṭake
+mukhagaṁḍūṣajalaṁ vidhīyatām ||
+en: Then, Mother, let the rinsing water for the mouth be given upon a golden plate. It is scented with uśīra, and coloured by the juice of your own betel.
+tel: ఆ పిమ్మట అమ్మా, బంగారు పట్టికపై ముఖ గండూష జలం ఇవ్వబడును గాక. అది వట్టివేరుతో సువాసన కలది, నీ స్వంత తాంబూల రసంతో రంగు కలది.
+hi: तदनन्तर हे मातः, तपनीयमय पट्टक पर मुख का गण्डूष जल दिया जाय। वह उशीर से वासित और आपके निज ताम्बूल के रस से रञ्जित है।
+
+--- verse 67 | section: విశ్రాంతి, క్షమాపణం ---
+deva:
+क्षणमथ जगदंब मंचकेऽस्मि-
+-न्मृदुतलतूलिकया विराजमाने ।
+अतिरहसि मुदा शिवेन सार्धं
+सुखशयनं कुरु तत्र मां स्मरंती ॥
+iast:
+kṣaṇamatha jagadaṁba maṁcake'smi-
+-nmṛdutalatūlikayā virājamāne |
+atirahasi mudā śivena sārdhaṁ
+sukhaśayanaṁ kuru tatra māṁ smaraṁtī ||
+en: Mother of the world, then for a while on this couch, bright with its soft under-cushion, in deep privacy and with gladness, take happy rest together with Śiva, remembering me there.
+tel: జగదంబా, ఆ పిమ్మట మెత్తని పరుపుతో ప్రకాశించే ఈ మంచంపై కొంత సేపు, మిక్కిలి ఏకాంతంలో ఆనందంతో, శివునితో కూడి సుఖశయనం చేయుము, అక్కడ నన్ను స్మరిస్తూ.
+hi: हे जगदम्बा, तदनन्तर मृदु तल तूलिका से विराजमान इस मञ्चक पर क्षण भर, अति रहस् में मुदा, शिव के साथ सुखशयन करो, वहाँ मुझे स्मरण करती हुई।
+
+--- verse 68 | section: విశ్రాంతి, క్షమాపణం ---
+deva:
+मुक्ताकुंदेंदुगौरां मणिमयमकुटां रत्नताटंकयुक्ता-
+-मक्षस्रक्पुष्पहस्तामभयवरकरां चंद्रचूडां त्रिनेत्राम् ।
+नानालंकारयुक्तां सुरमकुटमणिद्योतितस्वर्णपीठां
+सानंदां सुप्रसन्नां त्रिभुवनजननीं चेतसा चिंतयामि ॥
+iast:
+muktākuṁdeṁdugaurāṁ maṇimayamakuṭāṁ ratnatāṭaṁkayuktā-
+-makṣasrakpuṣpahastāmabhayavarakarāṁ caṁdracūḍāṁ trinetrām |
+nānālaṁkārayuktāṁ suramakuṭamaṇidyotitasvarṇapīṭhāṁ
+sānaṁdāṁ suprasannāṁ tribhuvanajananīṁ cetasā ciṁtayāmi ||
+en: In my mind I meditate on the Mother of the three worlds — fair as pearl, jasmine and the moon; crowned with jewels; wearing jewelled earrings; holding the rosary and a flower in her hands, and giving fearlessness and boons with her hands; the moon on her head; three-eyed; adorned with many ornaments; seated on a golden throne lit by the crest-jewels of the gods; full of gladness and very gracious.
+tel: ముత్యం, మల్లె, చంద్రునివలె తెల్లనైన, మణిమయ కిరీటం కల, రత్నపు తాటంకాలు కల, చేతులలో అక్షమాలను పుష్పాన్ని ధరించిన, చేతులతో అభయాన్ని వరాన్ని ఇచ్చే, శిరస్సుపై చంద్రుడు కల, మూడు కన్నులు కల, పలు అలంకారాలు కల, దేవతల కిరీట మణుల కాంతితో ప్రకాశించే బంగారు పీఠంపై ఆసీనురాలైన, ఆనందం కల, మిక్కిలి ప్రసన్నమైన త్రిభువన జననిని మనస్సుతో ధ్యానిస్తాను.
+hi: मुक्ता, कुन्द और इन्दु के समान गौर, मणिमय मकुट वाली, रत्न ताटङ्क से युक्त, अक्षस्रक् और पुष्प हाथों में धारण करने वाली, अभय और वर देने वाले करों वाली, चन्द्रचूडा, त्रिनेत्रा, नाना अलङ्कारों से युक्त, देवों के मकुट मणि से द्योतित स्वर्ण पीठ वाली, सानन्दा और सुप्रसन्ना त्रिभुवन जननी का चित्त से चिन्तन करता हूँ।
+
+--- verse 69 | section: విశ్రాంతి, క్షమాపణం ---
+deva:
+एषा भक्त्या तव विरचिता या मया देवि पूजा
+स्वीकृत्यैनां सपदि सकलान्मेऽपराधान् क्षमस्व ।
+न्यूनं यत्तत्तव करुणया पूर्णतामेतु सद्यः
+सानंदं मे हृदयकमले तेऽस्तु नित्यं निवासः ॥
+iast:
+eṣā bhaktyā tava viracitā yā mayā devi pūjā
+svīkṛtyaināṁ sapadi sakalānme'parādhān kṣamasva |
+nyūnaṁ yattattava karuṇayā pūrṇatāmetu sadyaḥ
+sānaṁdaṁ me hṛdayakamale te'stu nityaṁ nivāsaḥ ||
+en: Goddess, this worship has been made by me for you with devotion. Accept it, and forgive at once all my faults. Whatever is wanting in it, let your compassion make full straightaway. With gladness, let your dwelling be always in the lotus of my heart.
+tel: దేవీ, ఈ పూజను భక్తితో నేను నీకు చేశాను. దానిని స్వీకరించి, నా తప్పులన్నిటిని వెంటనే క్షమించుము. దానిలో లోపమైనది ఏదైనా నీ కరుణతో వెంటనే పూర్ణతను పొందును గాక. ఆనందంతో నా హృదయకమలంలో నీ నివాసం ఎప్పుడూ ఉండును గాక.
+hi: हे देवि, यह पूजा मेरे द्वारा भक्ति से आपके लिये विरचित है। इसे स्वीकार कर मेरे समस्त अपराधों को सपदि क्षमा करो। जो भी न्यून है वह आपकी करुणा से सद्यः पूर्णता को प्राप्त हो। सानन्द मेरे हृदयकमल में आपका निवास नित्य हो।
+
+--- verse 70 | section: ఫలశ్రుతి ---
+deva:
+पूजामिमां यः पठति प्रभाते
+मध्याह्नकाले यदि वा प्रदोषे ।
+धर्मार्थकामान्पुरुषोऽभ्युपैति
+देहावसाने शिवभावमेति ॥
+iast:
+pūjāmimāṁ yaḥ paṭhati prabhāte
+madhyāhnakāle yadi vā pradoṣe |
+dharmārthakāmānpuruṣo'bhyupaiti
+dehāvasāne śivabhāvameti ||
+en: Whoever recites this worship at dawn, at midday, or at dusk attains dharma, wealth and desire; and at the end of the body he attains the state of Śiva.
+tel: ఈ పూజను ప్రభాత కాలంలో, మధ్యాహ్న కాలంలో, లేక సాయంకాలంలో ఎవరు పఠిస్తారో, వారు ధర్మం, అర్థం, కామాలను పొందుతారు; దేహావసానంలో శివ భావాన్ని పొందుతారు.
+hi: जो इस पूजा को प्रभात में, मध्याह्न काल में, अथवा प्रदोष में पढ़ता है, वह धर्म, अर्थ और काम को प्राप्त करता है; और देह के अवसान पर शिवभाव को प्राप्त होता है।
+
+--- verse 71 | section: ఫలశ్రుతి ---
+deva:
+पूजामिमां पठेन्नित्यं पूजां कर्तुमनीश्वरः ।
+पूजाफलमवाप्नोति वांछितार्थं च विंदति ॥
+iast:
+pūjāmimāṁ paṭhennityaṁ pūjāṁ kartumanīśvaraḥ |
+pūjāphalamavāpnoti vāṁchitārthaṁ ca viṁdati ||
+en: One who is not able to perform the worship should recite this worship every day. He obtains the fruit of the worship, and he finds what he has wished for.
+tel: పూజ చేయ శక్తి లేనివారు ఈ పూజను ప్రతి దినం పఠించవలెను. వారు పూజా ఫలాన్ని పొందుతారు, కోరిన అర్థాన్ని పొందుతారు.
+hi: जो पूजा करने में असमर्थ है वह इस पूजा का नित्य पाठ करे। वह पूजा का फल प्राप्त करता है और वाञ्छित अर्थ को पाता है।
+
+--- verse 72 | section: ఫలశ్రుతి ---
+deva:
+प्रत्यहं भक्तिसंयुक्तो यः पूजनमिदं पठेत् ।
+वाग्वादिन्याः प्रसादेन वत्सरात्स कविर्भवेत् ॥
+iast:
+pratyahaṁ bhaktisaṁyukto yaḥ pūjanamidaṁ paṭhet |
+vāgvādinyāḥ prasādena vatsarātsa kavirbhavet ||
+en: One who joined with devotion recites this worship day after day becomes, within a year, a poet by the grace of Vāgvādinī.
+tel: భక్తితో కూడి ఈ పూజను ప్రతి దినం ఎవరు పఠిస్తారో, వారు వాగ్వాదిని అనుగ్రహంతో ఒక సంవత్సరంలో కవి అవుతారు.
+hi: जो भक्ति से युक्त होकर इस पूजन का प्रत्यह पाठ करता है, वह वाग्वादिनी के प्रसाद से एक वर्ष में कवि हो जाता है।

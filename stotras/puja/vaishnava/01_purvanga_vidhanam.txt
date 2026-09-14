@@ -1,0 +1,307 @@
+Title: Pūjā Vidhānam — Pūrvāṅgam (Vaiṣṇava Paddhati)
+Devanāgarī: पूजाविधानम् — पूर्वाङ्गम् (वैष्णव पद्धतिः)
+Telugu: పూజావిధానం — పూర్వాంగం (వైష్ణవ పద్ధతిః)
+
+Author: Anonymous (received Śrīvaiṣṇava household rite). No compiler is named. The frame is Śrīvaiṣṇava: the worshipper is located at Śrīraṅga, the work is declared to be `भगवत्कैङ्कर्यरूपम्` — service to the Lord — and the closing line hands on to the worship of Viṣvaksena.
+
+Type: vidhi (ritual manual) — not a stotra. Uses the one-extra-field vidhi format documented in `../../vidhi/madhyandina/01_sandhyopasana_vidhi.txt`: a `vidhi:` field carrying the ritual instruction, then deva / iast / en / tel / hi.
+
+Recension / paddhati: **Vaiṣṇava (Śrīvaiṣṇava), South Indian.** This is important and is not a formality. Pūjā-vidhāna divides by *paddhati* the way sandhyāvandana divides by śākhā, and the divisions are the observances of different communities rather than variant readings of one text. The smārta form is kept separately at `../smarta/` and **the two must never be merged, harmonised or collated against each other.** A user who follows the smārta rite should not use this file.
+
+The differences are substantive, not cosmetic, and they are the reason for the separation:
+
+- **Viṣvaksena, not Gaṇapati, removes obstacles.** The prārthanā names him — `विघ्नं निघ्नन्ति सततं विष्वक्सेनं तमाश्रये` — and the closing saṅkalpa hands on to `श्रीविष्वक्सेन पूजा`. The smārta file worships Mahāgaṇapati at the same point.
+- **The ācamana opens differently.** Here it is Acyuta–Ananta–Govinda, then a run of twelve names ending at Dāmodara. The smārta form runs twenty-four names beginning at Keśava.
+- **There is a four-syllable āsana** — `अं अनन्तासनाय`, `रं कूर्मासनाय`, `विं विमलासनाय`, `पं पद्मासनाय` — with its own viniyoga naming Śrīkūrma as the deity. The smārta form has no counterpart to this.
+- **There is a `पवित्र धारणम्`** (`इदं ब्रह्म पुनीमहे`) and a `नमस्कारम्` built on the accented `नमः सदसे` passage, neither of which stands in the smārta pūrvāṅga.
+- **The saṅkalpa is Śrīraṅga-centred** (`श्रीरङ्गस्य … दिक्प्रदेशे`) where the smārta is Śrīśaila-centred (`श्रीशैलस्य`), and it opens `श्रीगोविन्द गोविन्द गोविन्द` rather than with the smārta's `श्रीमहाविष्णोराज्ञया` alone. It also asks for release from the three afflictions — ādhyātmika, ādhidaivika, ādhibhautika — which the smārta form does not.
+- Each mantra here carries an explicit **viniyoga** (ṛṣi, chandas, devatā, application) before it, in the manner of the Āśvalāyana rite recorded at `../../vidhi/rigveda/01_rigveda_sandhyavandanam.txt`. The smārta pūrvāṅga gives none.
+
+Accent: **present, but only on the two Vedic passages** — the `नमः सदसे` namaskāra and the prāṇāyāma vyāhṛtis and Gāyatrī. The paurāṇika verses are printed unaccented, which is normal and is not a defect. Udātta `॑` (U+0951), anudātta `॒` (U+0952), dīrgha svarita `᳚` (U+1CDA). **No accent was inferred, derived or reconstructed** — every mark stands where the source put it, and the unaccented verses have been left unaccented rather than filled in from elsewhere.
+
+Source / recension: `https://stotranidhi.com/hi/puja-vidhanam-poorvangam-vaishnava-paddhati-in-sanskrit/` (fetched 2026-09-12) — a **native Devanāgarī page**, so nothing here was transliterated by us. Its Telugu counterpart (`.../puja-vidhanam-poorvangam-vaishnava-paddhati-in-telugu/`) was read alongside it and agrees throughout; per the corpus sourcing rule the two script pages of one site are **one witness, not two**, and that is stated plainly rather than dressed up as a collation.
+
+**Independent collation: none was available, and this is a real gap in the file.** Gītā Press does not publish a Śrīvaiṣṇava pūjā-paddhati — its *Nitya Karma Pūjā Prakāśa* is smārta-pañcāyatana throughout — and vignanam.org's pūjā pages are likewise smārta only. So the one witness for this text is stotranidhi, which is explicitly not a critical edition. The two corrections below were therefore made against the *received text of the verses themselves*, not against a second edition of this rite.
+
+Corrections applied to the base text, with reasons, because stotranidhi is not a critical edition:
+
+1. **`धृवा` → `ध्रुवा`** in unit 8. The verse is Bhagavad Gītā 18.78, whose universally transmitted reading is `तत्र श्रीर्विजयो भूतिर्ध्रुवा नीतिर्मतिर्मम`. `धृवा` is not a Sanskrit form; the metathesis of `ru`/`ṛ` is a keying slip. The word-space in `विजयोभूतिर्` was also restored to `विजयो भूतिर्`.
+2. **`पवित्रोवा` → `पवित्रो वा`** in unit 2, a missing word-space; the smārta page of the same site prints the space.
+
+One normalisation, recorded because it is an editorial change and not a transcription: the source writes the praṇava-before-spirant as `ओग्‍ं`, with a zero-width joiner between `ग्` and the anusvāra. The ZWJ is a rendering hint and carries no phonetic distinction in Devanāgarī, and the corpus runs a zero-ZWJ cleanliness check, so it has been **stripped** and the form is written `ओग्ं` — which is what vignanam prints for the same sound and what `../smarta/01_nitya_puja_vidhanam.txt` carries. Note this is the opposite decision from `../../vidhi/taittiriya/01_krishna_yajurveda_sandhyavandanam.txt`, where the ZWJ is *preserved* — but there it sits in the `tel:` field, where Telugu script needs it to keep `ఓగ్‍ం` distinct from `ఓం`. In Devanāgarī the `ग्` is already explicit and the joiner does no work. **Note for the corpus-wide zero-ZWJ check: the two ZWJ this file contains are both in the paragraph above**, where the defective form is quoted so a future reader can recognise it; the rite's own text — every `deva:` field — carries none.
+
+Not collated: the paurāṇika verses — `अपवित्रः पवित्रो वा`, `शुक्लाम्बरधरं विष्णुं`, `तदेव लग्नं`, `स्मृते सकलकल्याण`, `सर्वदा सर्वकार्येषु`, `आपदामपहर्तारं`. These are common to household manuals across traditions and no critical edition governs them.
+
+Unit count: 19 units. Not a verse count in the stotra sense — the work is a prose order of service punctuated by mantras, and the numbering is this corpus's, not the source's. The text is a **pūrvāṅga**: it is the opening portion only, performed before the pūjā proper of whichever deity is to be worshipped, and it ends by handing on to the Viṣvaksena pūjā.
+
+Sections:
+मङ्गलाचरणम् — Opening (unit 1)
+शुचिः — Purification (unit 2)
+आचमनम् — Ācamana (units 3–4)
+प्रार्थना — Prārthanā (units 5–11)
+नमस्कारम् — Salutation (units 12–13)
+पवित्रधारणम् — Putting on the pavitra (unit 14)
+आसनम् — The seat (units 15–16)
+प्राणायामः — Prāṇāyāma (units 17–18)
+सङ्कल्पः — Saṅkalpa (unit 19)
+
+Blurb: This is the pūrvāṅga, that is, the opening portion, of the Śrīvaiṣṇava pūjā, in nineteen units. It is a genuinely different rite from the smārta pūrvāṅga kept at `../smarta/03_purvanga_vidhanam.txt`, and the two must not be mixed. Here Viṣvaksena, and not Gaṇapati, is the remover of obstacles. The ācamana opens upon a different triad of names. There is an āsana of four syllables, अं अनन्तासनाय, रं कूर्मासनाय, विं विमलासनाय and पं पद्मासनाय, which has no smārta counterpart. The saṅkalpa places the worshipper at Śrīraṅga, where the smārta text says Śrīśaila. The order of service runs from the maṅgalācaraṇa and purification, through the ācamana, the prayers and the salutation, to the putting on of the pavitra, the taking of the seat, prāṇāyāma and the saṅkalpa. Accent marks are present only on the two Vedic passages. A user who follows the smārta rite should not use this file.
+
+--- unit 1 | section: मङ्गलाचरणम् ---
+vidhi:
+The opening. Note there is no salutation to Gaṇapati here, where the smārta pūrvāṅga begins with one.
+deva:
+श्री गुरुभ्यो नमः । हरिः ओम् ॥
+iast:
+śrī gurubhyo namaḥ | hariḥ om ||
+en: Salutation to the teachers. Hari Oṁ.
+tel: శ్రీ గురువులకు నమస్కారం. హరిః ఓం.
+hi: श्रीगुरुजनों को नमस्कार। हरि ओम्।
+
+--- unit 2 | section: शुचिः ---
+vidhi:
+Purification. The source prints `पवित्रोवा` without the word-space; it is restored here. The refrain names the lotus-eyed one three times without the dative `पुण्डरीकाक्षाय नमः` that the smārta form adds.
+deva:
+अपवित्रः पवित्रो वा सर्वावस्थां गतोऽपि वा ।
+यः स्मरेत् पुण्डरीकाक्षं स बाह्याभ्यन्तरः शुचिः ॥
+पुण्डरीकाक्ष पुण्डरीकाक्ष पुण्डरीकाक्ष ॥
+iast:
+apavitraḥ pavitro vā sarvāvasthāṁ gato'pi vā |
+yaḥ smaret puṇḍarīkākṣaṁ sa bāhyābhyantaraḥ śuciḥ ||
+puṇḍarīkākṣa puṇḍarīkākṣa puṇḍarīkākṣa ||
+en: Impure or pure, or gone into whatever condition — whoever calls to mind the lotus-eyed one is clean, without and within. Lotus-eyed one, lotus-eyed one, lotus-eyed one.
+tel: అపవిత్రుడైనా, పవిత్రుడైనా, ఏ అవస్థలో ఉన్నా — పుండరీకాక్షుని ఎవడు స్మరిస్తాడో అతడు బయటా లోపలా శుద్ధుడు. పుండరీకాక్షా, పుండరీకాక్షా, పుండరీకాక్షా.
+hi: अपवित्र हो या पवित्र, अथवा किसी भी अवस्था में क्यों न हो — जो पुण्डरीकाक्ष का स्मरण करता है वह बाहर-भीतर से शुद्ध हो जाता है। पुण्डरीकाक्ष, पुण्डरीकाक्ष, पुण्डरीकाक्ष।
+
+--- unit 3 | section: आचमनम् ---
+vidhi:
+Ācamana. The three names said with three sips of water. This opening triad — Acyuta, Ananta, Govinda — is the mark of the Vaiṣṇava rite; the smārta form begins at Keśava instead.
+deva:
+1. ॐ अच्युताय नमः ।
+2. ॐ अनन्ताय नमः ।
+3. ॐ गोविन्दाय नमः ॥
+iast:
+1. oṁ acyutāya namaḥ |
+2. oṁ anantāya namaḥ |
+3. oṁ govindāya namaḥ ||
+en: Salutation to Acyuta. Salutation to Ananta. Salutation to Govinda.
+tel: ఓం అచ్యుతునికి నమస్కారం. అనంతునికి నమస్కారం. గోవిందునికి నమస్కారం.
+hi: ॐ अच्युत को नमस्कार। अनन्त को नमस्कार। गोविन्द को नमस्कार।
+
+--- unit 4 | section: आचमनम् ---
+vidhi:
+Then the twelve names, with the hand touching the appropriate part of the body at each. The list runs from Keśava to Dāmodara — twelve, where the smārta ācamana runs twenty-four.
+deva:
+1. ॐ केशवाय नमः ।
+2. ॐ नारायणाय नमः ।
+3. ॐ माधवाय नमः ।
+4. ॐ गोविन्दाय नमः ।
+5. ॐ विष्णवे नमः ।
+6. ॐ मधुसूदनाय नमः ।
+7. ॐ त्रिविक्रमाय नमः ।
+8. ॐ वामनाय नमः ।
+9. ॐ श्रीधराय नमः ।
+10. ॐ हृषीकेशाय नमः ।
+11. ॐ पद्मनाभाय नमः ।
+12. ॐ दामोदराय नमः ॥
+iast:
+1. oṁ keśavāya namaḥ |
+2. oṁ nārāyaṇāya namaḥ |
+3. oṁ mādhavāya namaḥ |
+4. oṁ govindāya namaḥ |
+5. oṁ viṣṇave namaḥ |
+6. oṁ madhusūdanāya namaḥ |
+7. oṁ trivikramāya namaḥ |
+8. oṁ vāmanāya namaḥ |
+9. oṁ śrīdharāya namaḥ |
+10. oṁ hṛṣīkeśāya namaḥ |
+11. oṁ padmanābhāya namaḥ |
+12. oṁ dāmodarāya namaḥ ||
+en: Salutation to Keśava; to Nārāyaṇa; to Mādhava; to Govinda; to Viṣṇu; to Madhusūdana; to Trivikrama; to Vāmana; to Śrīdhara; to Hṛṣīkeśa; to Padmanābha; to Dāmodara.
+tel: ఓం కేశవునికి నమస్కారం; నారాయణునికి; మాధవునికి; గోవిందునికి; విష్ణువుకు; మధుసూదనునికి; త్రివిక్రమునికి; వామనునికి; శ్రీధరునికి; హృషీకేశునికి; పద్మనాభునికి; దామోదరునికి నమస్కారం.
+hi: ॐ केशव को नमस्कार; नारायण को; माधव को; गोविन्द को; विष्णु को; मधुसूदन को; त्रिविक्रम को; वामन को; श्रीधर को; हृषीकेश को; पद्मनाभ को; दामोदर को नमस्कार।
+
+--- unit 5 | section: प्रार्थना ---
+vidhi:
+Prārthanā. The first verse, to Viṣṇu — shared with the smārta rite.
+deva:
+शुक्लाम्बरधरं विष्णुं शशिवर्णं चतुर्भुजम् ।
+प्रसन्नवदनं ध्यायेत् सर्वविघ्नोपशान्तये ॥
+iast:
+śuklāmbaradharaṁ viṣṇuṁ śaśivarṇaṁ caturbhujam |
+prasannavadanaṁ dhyāyet sarvavighnopaśāntaye ||
+en: For the quieting of every obstacle one should meditate on Viṣṇu — robed in white, moon-coloured, four-armed, his face serene.
+tel: సమస్త విఘ్నాలూ శాంతించడానికి — తెల్లని వస్త్రం ధరించినవాడు, చంద్రుని వన్నెవాడు, నాలుగు చేతులవాడు, ప్రసన్నమైన ముఖం కలవాడు అయిన విష్ణువును ధ్యానించాలి.
+hi: समस्त विघ्नों की शान्ति के लिये श्वेत वस्त्र धारण किये हुए, चन्द्रमा के समान वर्णवाले, चतुर्भुज, प्रसन्नमुख विष्णु का ध्यान करना चाहिये।
+
+--- unit 6 | section: प्रार्थना ---
+vidhi:
+To Viṣvaksena, the commander of Viṣṇu's hosts, who takes the place Gaṇapati holds in the smārta rite. The elephant-faced one is named here only as the first of Viṣvaksena's attendants.
+deva:
+यस्य द्विरदवक्त्राद्याः पारिषद्याः परश्शतम् ।
+विघ्नं निघ्नन्ति सततं विष्वक्सेनं तमाश्रये ॥
+iast:
+yasya dviradavaktrādyāḥ pāriṣadyāḥ paraśśatam |
+vighnaṁ nighnanti satataṁ viṣvaksenaṁ tamāśraye ||
+en: He whose attendants — more than a hundred of them, the elephant-faced one at their head — strike down obstruction without ceasing: to that Viṣvaksena I turn for refuge.
+tel: ఏనుగు ముఖము కలవాడు మొదలుగా నూరుకు మించిన పారిషదులు ఎవరి ఆజ్ఞతో నిరంతరం విఘ్నాలను నశింపజేస్తారో — ఆ విష్వక్సేనుని నేను ఆశ్రయిస్తున్నాను.
+hi: जिनके द्विरदवक्त्र आदि सौ से अधिक पारिषद निरन्तर विघ्नों का नाश करते हैं — उन विष्वक्सेन का मैं आश्रय लेता हूँ।
+
+--- unit 7 | section: प्रार्थना ---
+vidhi:
+That the hour itself is made auspicious by remembering the Lord.
+deva:
+तदेव लग्नं सुदिनं तदेव ताराबलं चन्द्रबलं तदेव ।
+विद्याबलं दैवबलं तदेव लक्ष्मीपते तेऽङ्घ्रियुगं स्मरामि ॥
+iast:
+tadeva lagnaṁ sudinaṁ tadeva tārābalaṁ candrabalaṁ tadeva |
+vidyābalaṁ daivabalaṁ tadeva lakṣmīpate te'ṅghriyugaṁ smarāmi ||
+en: That alone is the right moment, that alone the good day, that alone the strength of the stars and the moon, that alone the strength of learning and of the gods — O consort of Lakṣmī, when I call your two feet to mind.
+tel: ఓ లక్ష్మీపతీ! నీ పాదద్వయాన్ని స్మరించినప్పుడే అదే శుభలగ్నం, అదే సుదినం, అదే తారాబలం, చంద్రబలం, విద్యాబలం, దైవబలం.
+hi: हे लक्ष्मीपते! जब मैं आपके चरणयुगल का स्मरण करता हूँ, वही लग्न है, वही सुदिन, वही ताराबल और चन्द्रबल, वही विद्याबल और दैवबल।
+
+--- unit 8 | section: प्रार्थना ---
+vidhi:
+Bhagavad Gītā 18.78, the last verse of the Gītā. The source prints `विजयोभूतिर्धृवा`; `धृवा` is not a Sanskrit form and the received reading is `ध्रुवा`, so it is corrected here and the word-space restored — see the header.
+deva:
+यत्र योगेश्वरः कृष्णो यत्र पार्थो धनुर्धरः ।
+तत्र श्रीर्विजयो भूतिर्ध्रुवा नीतिर्मतिर्मम ॥
+iast:
+yatra yogeśvaraḥ kṛṣṇo yatra pārtho dhanurdharaḥ |
+tatra śrīrvijayo bhūtirdhruvā nītirmatirmama ||
+en: Where Kṛṣṇa the lord of yoga is, and where Pārtha the bowman is — there are fortune, victory, wellbeing and steadfast right conduct: such is my conviction.
+tel: యోగేశ్వరుడైన కృష్ణుడు ఎక్కడ ఉన్నాడో, ధనుర్ధరుడైన పార్థుడు ఎక్కడ ఉన్నాడో — అక్కడ శ్రీ, విజయము, ఐశ్వర్యము, స్థిరమైన నీతి ఉంటాయి; ఇది నా నిశ్చయము.
+hi: जहाँ योगेश्वर कृष्ण हैं और जहाँ धनुर्धर पार्थ हैं — वहाँ श्री, विजय, ऐश्वर्य और ध्रुव नीति है; यह मेरा मत है।
+
+--- unit 9 | section: प्रार्थना ---
+vidhi:
+Refuge in the unborn and eternal Hari.
+deva:
+स्मृते सकलकल्याणभाजनं यत्र जायते ।
+पुरुषं तमजं नित्यं व्रजामि शरणं हरिम् ॥
+iast:
+smṛte sakalakalyāṇabhājanaṁ yatra jāyate |
+puruṣaṁ tamajaṁ nityaṁ vrajāmi śaraṇaṁ harim ||
+en: To that Person, unborn and eternal — Hari, in the remembering of whom all good finds its vessel — I go for refuge.
+tel: ఎవరిని స్మరించినప్పుడు సమస్త కల్యాణాలకు పాత్రత కలుగుతుందో — అజుడు, నిత్యుడు అయిన ఆ పురుషుని, హరిని శరణు పొందుతున్నాను.
+hi: जिनके स्मरण से समस्त कल्याण का भाजन प्राप्त होता है — उन अज, नित्य पुरुष हरि की मैं शरण लेता हूँ।
+
+--- unit 10 | section: प्रार्थना ---
+vidhi:
+That nothing inauspicious befalls those who hold the Lord in their heart.
+deva:
+सर्वदा सर्वकार्येषु नास्ति तेषाममङ्गलम् ।
+येषां हृदिस्थो भगवान् मङ्गलायतनो हरिः ॥
+iast:
+sarvadā sarvakāryeṣu nāsti teṣāmamaṅgalam |
+yeṣāṁ hṛdistho bhagavān maṅgalāyatano hariḥ ||
+en: Always and in every undertaking there is nothing inauspicious for those in whose heart dwells the Lord Hari, the abode of all auspiciousness.
+tel: మంగళానికి నిలయమైన భగవంతుడు హరి ఎవరి హృదయంలో ఉన్నాడో, వారికి ఎల్లప్పుడూ, అన్ని కార్యాలలోనూ అమంగళము లేదు.
+hi: जिनके हृदय में मङ्गल के आयतन भगवान् हरि निवास करते हैं, उनके लिये सर्वदा और समस्त कार्यों में कुछ भी अमङ्गल नहीं है।
+
+--- unit 11 | section: प्रार्थना ---
+vidhi:
+To Rāma, the last of the prārthanā verses.
+deva:
+आपदामपहर्तारं दातारं सर्वसम्पदाम् ।
+लोकाभिरामं श्रीरामं भूयो भूयो नमाम्यहम् ॥
+iast:
+āpadāmapahartāraṁ dātāraṁ sarvasampadām |
+lokābhirāmaṁ śrīrāmaṁ bhūyo bhūyo namāmyaham ||
+en: To the remover of calamities, the giver of every prosperity, the delight of the worlds — to Śrī Rāma I bow again and again.
+tel: ఆపదలను హరించువాడు, సమస్త సంపదలను ఇచ్చువాడు, లోకాలకు ఆనందకరుడు — ఆ శ్రీరామునికి మాటిమాటికీ నమస్కరిస్తున్నాను.
+hi: आपदाओं को दूर करनेवाले, समस्त सम्पदाओं के दाता, लोकों को आनन्द देनेवाले — उन श्रीराम को मैं बारम्बार नमस्कार करता हूँ।
+
+--- unit 12 | section: नमस्कारम् ---
+vidhi:
+The accented salutation to the assembly, from the Yajurveda. It has no counterpart in the smārta pūrvāṅga.
+deva:
+ॐ नम॒ः सद॑से । नम॒ः सद॑स॒स्पत॑ये । नम॒ः सखी॑नां पुरो॒गाणां॒ चक्षु॑षे । नमो॑ दि॒वे । नम॑ः पृथि॒व्यै । सप्रथ स॒भां मे॑ गोपाय । ये च॒ सभ्या᳚ः सभा॒सद॑ः । तानि॑न्द्रि॒याव॑तः कुरु । सर्व॒मायु॒रुपा॑सताम् ॥
+iast:
+oṁ namaḥ sadase | namaḥ sadasaspataye | namaḥ sakhīnāṁ purogāṇāṁ cakṣuṣe | namo dive | namaḥ pṛthivyai | sapratha sabhāṁ me gopāya | ye ca sabhyāḥ sabhāsadaḥ | tānindriyāvataḥ kuru | sarvamāyurupāsatām ||
+en: Oṁ. Salutation to the assembly; salutation to the lord of the assembly; salutation to the eye of the companions who go before. Salutation to heaven; salutation to earth. Widely, guard my assembly for me. And those who belong to it, who sit in it — make them possessed of vigour. Let them attain a full span of life.
+tel: ఓం. సదస్సుకు నమస్కారం; సదస్సుకు అధిపతికి నమస్కారం; ముందు నడచు సఖులకు నేత్రమైనవానికి నమస్కారం. దివికి నమస్కారం; పృథివికి నమస్కారం. విస్తారంగా నా సభను రక్షించుము. సభ్యులైనవారు, సభలో కూర్చున్నవారు — వారిని ఇంద్రియబలం కలవారిగా చేయుము. అందరూ పూర్ణాయువును పొందుగాక.
+hi: ॐ। सदस् को नमस्कार; सदस् के पति को नमस्कार; आगे चलनेवाले सखाओं के चक्षु को नमस्कार। द्यौ को नमस्कार; पृथ्वी को नमस्कार। विस्तारपूर्वक मेरी सभा की रक्षा करो। जो सभ्य हैं और सभा में बैठे हैं — उन्हें इन्द्रियसम्पन्न करो। सब पूर्ण आयु प्राप्त करें।
+
+--- unit 13 | section: नमस्कारम् ---
+vidhi:
+Salutation to all Śrīvaiṣṇavas — an explicitly sectarian salutation, and one of the clearest marks that this is not the smārta rite.
+deva:
+सर्वेभ्यः श्रीवैष्णवेभ्यो नमः ॥
+iast:
+sarvebhyaḥ śrīvaiṣṇavebhyo namaḥ ||
+en: Salutation to all the Śrīvaiṣṇavas.
+tel: సమస్త శ్రీవైష్ణవులకు నమస్కారం.
+hi: समस्त श्रीवैष्णवों को नमस्कार।
+
+--- unit 14 | section: पवित्रधारणम् ---
+vidhi:
+Putting on the pavitra — the ring of kuśa grass worn on the finger for the rite. The smārta pūrvāṅga has no such step.
+deva:
+इ॒दं ब्रह्म॑ पुनीमहे । ब्रह्मा पुनातु ॥
+iast:
+idaṁ brahma punīmahe | brahmā punātu ||
+en: This sacred power we purify. Let Brahmā purify.
+tel: ఈ బ్రహ్మను మేము పవిత్రం చేస్తున్నాము. బ్రహ్మ పవిత్రం చేయుగాక.
+hi: इस ब्रह्म को हम पवित्र करते हैं। ब्रह्मा पवित्र करें।
+
+--- unit 15 | section: आसनम् ---
+vidhi:
+The viniyoga of the āsana mantra — ṛṣi, chandas, deity and application declared before the mantra itself, in the manner of the Āśvalāyana rite.
+deva:
+आसन मन्त्रस्य पृथिव्याः, मेरुपृष्ठ ऋषिः, सुतलं छन्दः, श्रीकूर्मो देवता, आसने विनियोगः ॥
+iast:
+āsana mantrasya pṛthivyāḥ, merupṛṣṭha ṛṣiḥ, sutalaṁ chandaḥ, śrīkūrmo devatā, āsane viniyogaḥ ||
+en: Of the seat-mantra, 'of the earth': the ṛṣi is Merupṛṣṭha, the metre is Sutala, the deity is the holy Tortoise; its application is in the taking of the seat.
+tel: ఆసన మంత్రానికి — 'పృథివ్యాః' అనుదానికి — మేరుపృష్ఠుడు ఋషి, సుతలము ఛందస్సు, శ్రీకూర్ముడు దేవత; ఆసనమునందు వినియోగము.
+hi: आसन मन्त्र का — 'पृथिव्याः' का — ऋषि मेरुपृष्ठ, छन्द सुतल, देवता श्रीकूर्म; आसन में विनियोग।
+
+--- unit 16 | section: आसनम् ---
+vidhi:
+The four seed-syllables of the seat, each with its own form of the support: Ananta the serpent, Kūrma the tortoise, Vimala, and the lotus. This has no smārta counterpart.
+deva:
+1. अं अनन्तासनाय नमः ।
+2. रं कूर्मासनाय नमः ।
+3. विं विमलासनाय नमः ।
+4. पं पद्मासनाय नमः ॥
+iast:
+1. aṁ anantāsanāya namaḥ |
+2. raṁ kūrmāsanāya namaḥ |
+3. viṁ vimalāsanāya namaḥ |
+4. paṁ padmāsanāya namaḥ ||
+en: Aṁ — salutation to the seat that is Ananta. Raṁ — salutation to the seat that is the Tortoise. Viṁ — salutation to the spotless seat. Paṁ — salutation to the lotus seat.
+tel: అం — అనంతాసనునికి నమస్కారం. రం — కూర్మాసనునికి నమస్కారం. విం — విమలాసనునికి నమస్కారం. పం — పద్మాసనునికి నమస్కారం.
+hi: अं — अनन्तासन को नमस्कार। रं — कूर्मासन को नमस्कार। विं — विमलासन को नमस्कार। पं — पद्मासन को नमस्कार।
+
+--- unit 17 | section: प्राणायामः ---
+vidhi:
+The viniyoga of the praṇava, before the prāṇāyāma.
+deva:
+प्रणवस्य परब्रह्म ऋषिः, देवी गायत्री छन्दः, परमात्मा देवता, प्राणायामे विनियोगः ॥
+iast:
+praṇavasya parabrahma ṛṣiḥ, devī gāyatrī chandaḥ, paramātmā devatā, prāṇāyāme viniyogaḥ ||
+en: Of the praṇava: the ṛṣi is the supreme Brahman, the metre is the goddess Gāyatrī, the deity is the supreme Self; its application is in the prāṇāyāma.
+tel: ప్రణవానికి — పరబ్రహ్మ ఋషి, దేవీ గాయత్రి ఛందస్సు, పరమాత్మ దేవత; ప్రాణాయామమునందు వినియోగము.
+hi: प्रणव का — ऋषि परब्रह्म, छन्द देवी गायत्री, देवता परमात्मा; प्राणायाम में विनियोग।
+
+--- unit 18 | section: प्राणायामः ---
+vidhi:
+The seven vyāhṛtis, the Gāyatrī and the closing formula, said in one breath-cycle. Note the praṇava before the spirant-initial `suvaḥ` and `satyam` takes the guttural nasal `ओग्ं`, while before the others it is plain `ओं`. The source writes that form with a zero-width joiner; it has been stripped — see the header.
+deva:
+ॐ भूः । ॐ भुव॑ः । ओग्ं सुव॑ः । ॐ मह॑ः । ॐ जन॑ः । ॐ तप॑ः । ओग्ं सत्यम् । ॐ तत्स॑वितु॒र्वरे᳚ण्यं॒ भ॒र्गो॑ दे॒वस्य॑ धीमहि । धियो॒ यो न॑ः प्रचो॒दया᳚त् ॥ ओमापो॒ ज्योती॒ रसो॒ऽमृतं॒ ब्रह्म॒ भूर्भुव॒स्सुव॒रोम् ॥
+iast:
+oṁ bhūḥ | oṁ bhuvaḥ | ogṁ suvaḥ | oṁ mahaḥ | oṁ janaḥ | oṁ tapaḥ | ogṁ satyam | oṁ tatsaviturvareṇyaṁ bhargo devasya dhīmahi | dhiyo yo naḥ pracodayāt || omāpo jyotī raso'mṛtaṁ brahma bhūrbhuvassuvarom ||
+en: Oṁ, earth. Oṁ, mid-air. Oṁ, the world of light. Oṁ, the great. Oṁ, the world of beings. Oṁ, austerity. Oṁ, truth. Oṁ — that adorable splendour of the god Savitṛ, we meditate on it; may he impel our understandings. Oṁ — the waters, the light, the essence, the deathless, Brahman; earth, mid-air, heaven; Oṁ.
+tel: ఓం భూః. ఓం భువః. ఓం సువః. ఓం మహః. ఓం జనః. ఓం తపః. ఓం సత్యం. ఓం — సవితృదేవుని ఆ వరణీయ తేజస్సును మేము ధ్యానిస్తున్నాము; ఆయన మా బుద్ధులను ప్రేరేపించుగాక. ఓం — ఆపః, జ్యోతి, రసము, అమృతము, బ్రహ్మము; భూః, భువః, సువః; ఓం.
+hi: ॐ भूः। ॐ भुवः। ॐ सुवः। ॐ महः। ॐ जनः। ॐ तपः। ॐ सत्यम्। ॐ — सवितादेव के उस वरणीय तेज का हम ध्यान करते हैं; वे हमारी बुद्धियों को प्रेरित करें। ॐ — जल, ज्योति, रस, अमृत, ब्रह्म; भूः, भुवः, सुवः; ॐ।
+
+--- unit 19 | section: सङ्कल्पः ---
+vidhi:
+The saṅkalpa. The blanks are the worshipper's own: place, the two rivers between which one stands, the year, half-year, season, month, fortnight, lunar day, weekday, asterism, yoga and karaṇa, then gotra and name, then the deity. Note the Śrīraṅga frame, the declaration of the act as `भगवत्कैङ्कर्यरूपम्`, and the closing hand-off to Viṣvaksena where the smārta rite turns to Gaṇapati.
+deva:
+श्रीगोविन्द गोविन्द गोविन्द । श्रीमहाविष्णोराज्ञया भगवत्कैङ्कर्यरूपं शुभाभ्युदयार्थं च शुभे शोभने मङ्गले मुहूर्ते अत्र पृथिव्यां जम्बूद्वीपे भरत वर्षे भरतखण्डे मेरोर्दक्षिणदिग्भागे श्रीरङ्गस्य ___ दिक्प्रदेशे ___, ___ नद्योः मध्यदेशे मङ्गलप्रदेशे समस्तदेवता भगवद्भागवताचार्य सन्निधौ ब्रह्मणः द्वितीयपरार्थे श्रीश्वेतवराहकल्पे वैवस्वत मन्वन्तरे कलियुगे प्रथमपादे अस्मिन् वर्तमान व्यावहारिक चान्द्रमानेन प्रभवादि षष्टि संवत्सराणां मध्ये श्री ___ नाम संवत्सरे ___ अयने ___ ऋतौ ___ मासे ___ पक्षे ___ तिथौ ___ वासरे ___ नक्षत्रे ___ योगे ___ करणे एवं गुण विशेषण विशिष्टायां अस्यां शुभतिथौ श्रीमान् ___ गोत्रोद्भवस्य ___ नामधेयस्य (मम धर्मपत्नी श्रीमतः ___ गोत्रस्य ___ नामधेयः समेतस्य) मम/अस्माकं सहकुटुम्बस्य क्षेम स्थैर्य धैर्य वीर्य विजय अभय आयुः आरोग्य ऐश्वर धन धान्य गृह भू पुत्रपौत्र अभिवृद्ध्यर्थं, धर्म अर्थ काम मोक्ष चतुर्विध पुरुषार्थ फलसिद्ध्यर्थं, आध्यात्मिक आधिदैविक आधिभौतिक तापत्रय निवारणार्थं मनोवाञ्छाफलसिद्ध्यर्थं श्री ___ उद्दिश्य श्री ___ प्रीत्यर्थं सम्भवद्भिः द्रव्यैः सम्भवद्भिः उपचारैश्च सम्भवता नियमेन सम्भविता प्रकारेण यावच्छक्ति ध्यान आवाहनादि षोडशोपचार पूजां करिष्ये ॥ तदादौ निर्विघ्नेन पूजा परिसमाप्त्यर्थं श्रीविष्वक्सेन पूजां करिष्ये ॥
+iast:
+śrīgovinda govinda govinda | śrīmahāviṣṇorājñayā bhagavatkaiṅkaryarūpaṁ śubhābhyudayārthaṁ ca śubhe śobhane maṅgale muhūrte atra pṛthivyāṁ jambūdvīpe bharata varṣe bharatakhaṇḍe merordakṣiṇadigbhāge śrīraṅgasya ___ dikpradeśe ___, ___ nadyoḥ madhyadeśe maṅgalapradeśe samastadevatā bhagavadbhāgavatācārya sannidhau brahmaṇaḥ dvitīyaparārthe śrīśvetavarāhakalpe vaivasvata manvantare kaliyuge prathamapāde asmin vartamāna vyāvahārika cāndramānena prabhavādi ṣaṣṭi saṁvatsarāṇāṁ madhye śrī ___ nāma saṁvatsare ___ ayane ___ ṛtau ___ māse ___ pakṣe ___ tithau ___ vāsare ___ nakṣatre ___ yoge ___ karaṇe evaṁ guṇa viśeṣaṇa viśiṣṭāyāṁ asyāṁ śubhatithau śrīmān ___ gotrodbhavasya ___ nāmadheyasya (mama dharmapatnī śrīmataḥ ___ gotrasya ___ nāmadheyaḥ sametasya) mama/asmākaṁ sahakuṭumbasya kṣema sthairya dhairya vīrya vijaya abhaya āyuḥ ārogya aiśvara dhana dhānya gṛha bhū putrapautra abhivṛddhyarthaṁ, dharma artha kāma mokṣa caturvidha puruṣārtha phalasiddhyarthaṁ, ādhyātmika ādhidaivika ādhibhautika tāpatraya nivāraṇārthaṁ manovāñchāphalasiddhyarthaṁ śrī ___ uddiśya śrī ___ prītyarthaṁ sambhavadbhiḥ dravyaiḥ sambhavadbhiḥ upacāraiśca sambhavatā niyamena sambhavitā prakāreṇa yāvacchakti dhyāna āvāhanādi ṣoḍaśopacāra pūjāṁ kariṣye || tadādau nirvighnena pūjā parisamāptyarthaṁ śrīviṣvaksena pūjāṁ kariṣye ||
+en: Govinda, Govinda, Govinda. By the command of the great Viṣṇu, as an act of service to the Lord and for auspicious prosperity, at this good, fair and auspicious hour — here on earth, in Jambūdvīpa, in the land of Bharata, in the region of Bharata, south of Meru, in such-and-such quarter of Śrīraṅga, at such a place, in the land between two named rivers, in an auspicious region, in the presence of all the gods, of the Lord, of the Bhāgavatas and of the teachers; in the second half of Brahmā's life, in the Śveta-varāha kalpa, in the Vaivasvata manvantara, in the Kali age, in its first quarter; in the present reckoning by the lunar calendar, among the sixty years beginning with Prabhava, in the year named ___, in the ___ half-year, the ___ season, the ___ month, the ___ fortnight, on the ___ lunar day, the ___ weekday, under the ___ asterism, in the ___ yoga, in the ___ karaṇa — on this auspicious day so qualified, I, born of the ___ gotra and named ___ (together with my wife, of the ___ gotra and named ___), for the welfare, steadiness, courage, vigour, victory, fearlessness, long life, health, prosperity, wealth, grain, house, land, sons and grandsons of myself and my household; for the fruit of the four aims of life — duty, wealth, desire and liberation; for the warding off of the three afflictions, of the self, of the gods and of the elements; and for the fulfilment of my heart's wish — intending ___ and for the pleasing of ___, with such materials and such services as are possible, with such observance and in such manner as is possible, shall perform, so far as I am able, the sixteen-fold worship beginning with meditation and invocation. And first, that the worship may be completed without obstruction, I shall perform the worship of Viṣvaksena.
+tel: శ్రీగోవింద గోవింద గోవింద. శ్రీమహావిష్ణువు ఆజ్ఞచేత, భగవత్కైంకర్యరూపంగా, శుభాభ్యుదయం కోసం, శుభమూ శోభనమూ మంగళమూ అయిన ఈ ముహూర్తంలో — ఈ పృథివిపై, జంబూద్వీపంలో, భరతవర్షంలో, భరతఖండంలో, మేరువుకు దక్షిణదిక్కున, శ్రీరంగానికి ఫలానా దిక్కున, ఫలానా ప్రదేశంలో, రెండు నదుల మధ్యదేశంలో, మంగళప్రదేశంలో, సమస్త దేవతల, భగవంతుని, భాగవతుల, ఆచార్యుల సన్నిధిలో; బ్రహ్మకు ద్వితీయపరార్ధంలో, శ్రీశ్వేతవరాహకల్పంలో, వైవస్వత మన్వంతరంలో, కలియుగ ప్రథమపాదంలో; ప్రస్తుత వ్యావహారిక చాంద్రమానంలో, ప్రభవాది అరవై సంవత్సరాలలో ___ నామ సంవత్సరంలో, ___ అయనంలో, ___ ఋతువులో, ___ మాసంలో, ___ పక్షంలో, ___ తిథిలో, ___ వాసరంలో, ___ నక్షత్రంలో, ___ యోగంలో, ___ కరణంలో — ఇట్టి గుణవిశేషణాలతో కూడిన ఈ శుభతిథిలో, ___ గోత్రంలో జన్మించిన ___ నామధేయుడనైన నేను (నా ధర్మపత్ని ___ గోత్రం ___ నామధేయతో కూడి), నా/మా కుటుంబ సహితంగా క్షేమ, స్థైర్య, ధైర్య, వీర్య, విజయ, అభయ, ఆయుః, ఆరోగ్య, ఐశ్వర్య, ధన, ధాన్య, గృహ, భూమి, పుత్రపౌత్రాభివృద్ధి కోసం; ధర్మ-అర్థ-కామ-మోక్ష చతుర్విధ పురుషార్థ ఫలసిద్ధి కోసం; ఆధ్యాత్మిక, ఆధిదైవిక, ఆధిభౌతిక తాపత్రయ నివారణ కోసం; మనోవాంఛాఫలసిద్ధి కోసం — ___ ను ఉద్దేశించి, ___ ప్రీతి కోసం, సాధ్యమైన ద్రవ్యాలతో, సాధ్యమైన ఉపచారాలతో, సాధ్యమైన నియమంతో, సాధ్యమైన రీతిలో, శక్తికొలది ధ్యాన-ఆవాహనాది షోడశోపచార పూజను చేస్తాను. దానికి ముందుగా, పూజ నిర్విఘ్నంగా పూర్తియగుట కోసం శ్రీవిష్వక్సేన పూజను చేస్తాను.
+hi: श्रीगोविन्द गोविन्द गोविन्द। श्रीमहाविष्णु की आज्ञा से, भगवत्कैङ्कर्यरूप में तथा शुभ अभ्युदय के लिये, इस शुभ, शोभन और मङ्गल मुहूर्त में — इस पृथ्वी पर, जम्बूद्वीप में, भरतवर्ष में, भरतखण्ड में, मेरु के दक्षिण दिग्भाग में, श्रीरङ्ग की अमुक दिशा में, अमुक प्रदेश में, दो नदियों के मध्यदेश में, मङ्गलप्रदेश में, समस्त देवताओं, भगवान्, भागवतों और आचार्यों की सन्निधि में; ब्रह्मा के द्वितीय परार्ध में, श्रीश्वेतवराहकल्प में, वैवस्वत मन्वन्तर में, कलियुग के प्रथम पाद में; इस वर्तमान व्यावहारिक चान्द्रमान से, प्रभव आदि साठ संवत्सरों में ___ नाम संवत्सर में, ___ अयन में, ___ ऋतु में, ___ मास में, ___ पक्ष में, ___ तिथि को, ___ वासर को, ___ नक्षत्र में, ___ योग में, ___ करण में — इन गुण-विशेषणों से विशिष्ट इस शुभतिथि पर, ___ गोत्र में उत्पन्न ___ नामधेय मैं (अपनी धर्मपत्नी ___ गोत्र ___ नामधेया सहित), अपने तथा अपने कुटुम्ब के क्षेम, स्थैर्य, धैर्य, वीर्य, विजय, अभय, आयु, आरोग्य, ऐश्वर्य, धन, धान्य, गृह, भूमि तथा पुत्र-पौत्र की वृद्धि के लिये; धर्म-अर्थ-काम-मोक्ष इन चार पुरुषार्थों की फलसिद्धि के लिये; आध्यात्मिक, आधिदैविक और आधिभौतिक इन तीन तापों के निवारण के लिये; तथा मनोवाञ्छित फल की सिद्धि के लिये — ___ को उद्दिष्ट करके, ___ की प्रीति के लिये, सम्भव द्रव्यों से, सम्भव उपचारों से, सम्भव नियम से और सम्भव प्रकार से, यथाशक्ति ध्यान-आवाहन आदि षोडशोपचार पूजा करूँगा। और उससे पहले, पूजा के निर्विघ्न समाप्त होने के लिये श्रीविष्वक्सेन की पूजा करूँगा।

@@ -3565,3 +3565,56 @@ same-folder reference survives in the new folder.
 
 **6. Verified.** `bin/reader_view.py --audit` reports no sourcing in any reader-facing field of
 the five. `bin/recount.py` reconciles at 996 with a new tracked row for `puja/vrata/`.
+
+### Session log — the snāna thread finished, and the Gautamī nāmāvalī (2026-09-13/14)
+
+Written: `vidhi/samanya/08_vaisakha_snana_vidhi.txt` (3 units),
+`vidhi/samanya/09_snana_bheda_bhasma_gomaya_mrittika_varuna_panchagavya.txt` (8 units),
+`vidhi/samanya/10_pushkara_pitru_tarpanam.txt` (6 units),
+`vidhi/taittiriya/05_malapakarshana_snana_vidhi.txt` (25 units, 650 accent marks),
+`vidhi/taittiriya/06_vaikhanasa_samantra_snana_vidhi.txt` (9 units),
+`devi/nadi/06_gautami_pushkara_sahasranamavali.txt` (1001 names).
+
+**The corpus now holds Vaikhānasa material for the first time** — file `taittiriya/06`, from the
+Telugu *Āhnikāmṛtam*. It is in `vidhi/taittiriya/` because Vaikhānasas are Taittirīyins, with the
+paddhati named in the Title and in `Recension / paddhati`. Its deśa-kāla frame is elided in the
+source and is printed as the source's own rows of dots; **nothing was filled in from a smārta
+manual**, which is the whole point of keeping it separate.
+
+**Three verified negatives. Do not search these again.**
+1. **Grahaṇa-snāna has no text because the śāstra says it has none.** *Dharmasindhu*:
+   `ग्रहणस्नानममन्त्रकं`. *Nirṇayasindhu* index p. 289: `ग्रहणे स्नानममन्त्रकं कार्यम्`. Its
+   20-page `ग्रहणनिरूपणम्` is nirṇaya throughout.
+2. **No Kumbha / Siṁhastha bathing saṅkalpa exists in any edition reached.** Seven now: the two
+   nibandhas, *Vrata-paricaya*, Gītā Press *Kalyāṇ Tīrthāṅka* (`in.ernet.dli.2015.346899`), the
+   *Tristhalīsetu* (`कुम्भ` **zero times in the whole work**), and two Kumbha handbooks.
+3. **No Godāvarī or Kṛṣṇā Puṣkara snāna saṅkalpa.** Two TTD volumes are literary souvenirs with
+   no ritual text; the Mohan Publications Kṛṣṇā māhātmya's ritual chapter (pp. 59–64) was read in
+   full from page images and has pūjā, śrāddha, tarpaṇa and three immersion verses but no saṅkalpa.
+
+**The Gautamī nāmāvalī — how it was actually done, because the first attempt failed.**
+A single-pass run reached 434 of 1000 and stopped rather than guess, which was right. What worked
+was splitting the pages three ways, then a reconciliation pass, then glossing in three ranges,
+with the Devanāgarī and IAST generated once for all 1001 by `bin/tel2dev.py` and `bin/dev2iast.py`
+so nobody retyped them. Working files are kept under `bin/cache/gautami_pushkara/` as `.dat` so
+`recount.py` does not count them.
+
+- **The counting key: the marginal numerals run every TEN**, not every fifty, from page 23 on.
+  Proof: p24 c3, `ధర్మాధారాయై` = ౫౦౦ and `ధర్మజలాయై` = ౫౧౦, ten names between.
+- **A new name is flush at the left margin; a continuation is indented.** That test recovered the
+  name the first attempt lost (p21 c1, `ఖనఃపీయూషపాథసా` and `గంగాయై` are two names) and is what
+  makes the ౨౫౦ numeral land exactly.
+- **Overflow is marked with a bracket**, whose fragment may sit on the line before *or* after the
+  deficient name. Counting one as a name, or reading its line as incomplete, both cause drift.
+- **The file has 1001 names against a printed ౧౦౦౦, and the surplus is the printer's.** ౭౮౦ is
+  absent; the off-round ౭౫౧ and ౮౩౧ are re-synchronisations; ౮౫౦ is set a line early; everything
+  from ౮౦౦ on runs one low. Twelve consecutive numerals ౬౪౦–౭౯౦ land exactly on the merged count,
+  which is what proves the two range junctions clean.
+- **The colophon reads `సమాప్తా`, not `స్వస్తి`.**
+- **The Brahmāṇḍa attribution in the colophon is not borne out.** Three Brahmāṇḍa texts totalling
+  ~5.9M characters carry nothing; the Gautamī Māhātmya is in the **Brahma** Purāṇa, chs. 70–175.
+  Single witness, and the file says so.
+
+**Still open.** The *Dharmasindhu*'s `gauṇa-snāna` section (mantra-, gāyatra-, āgneya-,
+kāpila-snāna) is unwritten — its Sanskrit is unrecoverable in that scan and only the Marathi
+translation carries the sense. Worth assigning if a better copy turns up.
