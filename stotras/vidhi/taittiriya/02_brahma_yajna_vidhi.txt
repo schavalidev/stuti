@@ -1,0 +1,831 @@
+Title: Brahmayajña Vidhi (Taittirīya)
+Devanāgarī: ब्रह्मयज्ञविधिः
+Telugu: బ్రహ్మయజ్ఞ విధిః
+
+Author: Anonymous (traditional Taittirīya smārta rite). No single compiler. The order of service is the received Āpastamba/Bodhāyana sequence. The rite itself is laid down in the Svādhyāya Brāhmaṇa, which is prapāṭhaka 2 of the Taittirīya Āraṇyaka, and the mantras are taken from the Taittirīya Saṁhitā, Brāhmaṇa and Āraṇyaka, with the opening verse of each of the other three Vedas and the opening lines of the Vedāṅgas and the Śāstras.
+
+Type: vidhi (ritual manual) — not a stotra. Uses the one-extra-field vidhi format documented in `../madhyandina/01_sandhyopasana_vidhi.txt`: a `vidhi:` field carrying the ritual instruction, then deva / iast / en / tel / hi.
+
+Recension / śākhā: **Taittirīya (Kṛṣṇa-Yajurveda) — the South Indian form.** This is not a formality. The brahmayajña is śākhā-specific, and this file is NOT the universal or only form of the rite. Northern practice follows the Mādhyandina / Vājasaneyi (Śukla-Yajurveda) form, where Gītā Press book 210 discharges the brahmayajña in a single instruction — face east, wear the yajñopavīta savya, recite the Gāyatrī at least three times — and gives no separate mantra for it. That stands at `../madhyandina/04_balivaisvadeva_vidhi.txt` unit 9. **That is not a shorter version of this file. It is what that volume prints for its own tradition, and the two must never be merged, harmonised or collated against each other.** A user who follows the Mādhyandina rite should not use this file. This rite follows the sandhyāvandana of the same tradition, which is at `01_krishna_yajurveda_sandhyavandanam.txt` in this folder.
+
+Accent: **present throughout**, as in the sibling sandhyāvandana file — accented recitation is normal in this tradition and the source prints it. Udātta `॑` (U+0951) and anudātta `॒` (U+0952) as printed. The dīrgha/double svarita, which South Indian printing renders with a double-quote glyph `”`, is given as `᳚` (U+1CDA VEDIC TONE DOUBLE SVARITA). The nasal before a spirant is given in Devanāgarī as `ग्ं` (U+0917 + U+094D + U+0902), which is the spelling used in `01_krishna_yajurveda_sandhyavandanam.txt` and is romanised `gṁ`. The Telugu source writes that nasal in three ways, and all three are mapped to the one Devanāgarī spelling: `గ్ం` (ga + virama + anusvāra), `గ్` + accent + anusvāra, and — in the twenty-eight tarpaṇa formulae — `గ్‍` before a spirant with no anusvāra written at all (`దేవాగ్‍స్తర్పయామి`). Where an accent mark stood between `గ్` and the anusvāra in the source, it is placed after the cluster in the Devanāgarī, which is how the sibling file spells it (`सर्वाग्ं॑`, `यासा॒ग्ं॒`). **No accent was added, inferred, moved between syllables or reconstructed at any point.** Four zero-width joiners remain in this file, all of them in the prose above, where the source's own Telugu spelling `గ్‍ం` is quoted; there are none in any `deva:`, `iast:`, `en:`, `tel:` or `hi:` field, so the corpus-wide zero-ZWJ check needs no exemption for the text itself.
+
+Source / recension: base text `https://stotranidhi.com/yajurveda-brahma-yagna-vidhi-in-telugu/` (fetched 2026-09-12; 350 accent marks in the body). The page exists **only in Telugu script** — `-in-sanskrit`, `-in-hindi`, `-in-english`, `-in-tamil`, `-in-kannada`, `-in-malayalam` and `-in-devanagari` all return 404 — so the Devanāgarī column here is transliterated from that Telugu, not copied from a Devanāgarī page. The transliteration is a Telugu→Devanāgarī block offset (the two Unicode blocks are code-aligned) with the accent and nasal mappings stated above applied first. U+0951 and U+0952 are already Devanāgarī codepoints and pass through untouched. vignanam.org was searched for a Devanāgarī brahmayajña page and has none: its sitemap carries 1,349 Devanāgarī pages and not one of them is this rite.
+
+Independent collation: **four witnesses, three of them accented, and every one of them a different editorial lineage from the base text.**
+
+**(1) vignanam.org's accented Devanāgarī Taittirīya pāṭha pages** — all 80 of them (42 Saṁhitā, 28 Brāhmaṇa, 10 Āraṇyaka; 2,473,437 Devanāgarī characters), fetched 2026-09-12. This is the śākhā's own corpus in Devanāgarī rather than a second ritual manual, and it is where the accent was checked. **Confirmed there, word for word and mark for mark:** `iṣe tvorje tvā` (Taittirīya Saṁhitā 1.1), `brahma saṁdhattaṁ` (Brāhmaṇa 1.1), `namo brahmaṇe dhāraṇaṁ me astu`, `ṛtaṁ tapaḥ` and `yathā vṛkṣasya` (Āraṇyaka 10), `saha nāvavatu` (Āraṇyaka 8), `ahaṁ vṛkṣasya rerivā` (Āraṇyaka 7), `namo brahmaṇe namo astvagnaye` (Āraṇyaka 2, the Svādhyāya Brāhmaṇa itself), `vidyudasi`, `vṛṣṭirasi`, `ṛco akṣare parame vyoman` and `paro rajasi` (Brāhmaṇa 3.10), the Gāyatrī (Āraṇyaka 1 and 10, Saṁhitā 1.5), and `śaṁ no devīr abhiṣṭaye` (Āraṇyaka 4, Brāhmaṇa 1.2 and 2.5). Every difference found is listed in the Recension note below; there are fifteen, and none of them moves an accent to a different syllable except where the two texts belong to different Vedas.
+
+**(2) sanskritdocuments.org's accented Taittirīya Āraṇyaka** (`doc_veda/taittirIyaAraNyaka.html`, fetched 2026-09-12; 236,935 Devanāgarī characters, 36,745 accent marks) — the same witness used for the sibling sandhyāvandana file. It confirms `ahaṁ vṛkṣasya rerivā` and `hastāvavanijya` independently of vignanam, and it agrees with vignanam against the base text at `hastāvavanijya`. It spells the nasal before a spirant `ꣳ` (U+A8F3), a third spelling of the same sound.
+
+**(3) A second complete printed manual: *Brahma Yagnam*, archive.org item `brahma-yagnam`** (Telugu script, 21,230-character OCR, fetched 2026-09-12). This is a different ritual manual for the same rite, and it is the only witness that covers the whole of it, the tarpaṇa included. **It confirms the entire order of service** — saṅkalpa, `vidyudasi`, `hastāvavanijya`, `dakṣiṇottarau pāṇī pādau kṛtvā`, `ṛco akṣare`, the Gāyatrī by pāda and half and whole, `paro rajasi sāvadom`, the four Vedas in the same order, the closing `namo brahmaṇe namo astvagnaye`, `bhūrbhuvassuvassatyaṁ tapaśśraddhāyāṁ juhomi` with `vṛṣṭirasi`, and then the deva, ṛṣi, kāṇḍarṣi and pitṛ tarpaṇa formulae in the same words and the same order. **Its printing carries accent marks, but the OCR has lost them**, so it is a witness to the text and the sequence and not to the accent.
+
+**(4) sa.wikisource.org's accented Ṛgveda, `ऋग्वेदः सूक्तं १.१`**, fetched through the MediaWiki API — the accented saṁhitā with the accented padapāṭha beside it. Used for the Ṛgvedic incipit only, and compared, not imported: the Ṛgvedic accent is not applied to any mantra in this file.
+
+**No Gītā Press witness applies.** Gītā Press book 210 is a Vājasaneyi manual and prints a different rite for the brahmayajña, as stated above. Under the standing rule, an edition in the wrong śākhā is not a weaker witness — it is not a witness at all — so it was not used, and the Gītā Press reading was not allowed to touch a single word here.
+
+Corrections applied to the base text, with the count, because stotranidhi is not a critical edition. **(1) Twenty-four occurrences of Latin `o` (U+006F) standing where the Telugu anusvāra `ం` (U+0C02) belongs** — the same systematic encoding defect already recorded for that site in `01_krishna_yajurveda_sandhyavandanam.txt`, which found twenty-nine of them on its own page. They sit in `వరే”ణ్య॒o`, `సంధ॑త్త॒o`, `భూయాస॒o`, `ధా॒రణ॑o`, `దాన॒o`, `ఆత్మాన॑o` and the like. A Latin letter cannot occur in Telugu text and every instance sits on an anusvāra-final word after an accent mark, so the repair is unambiguous; all twenty-four were corrected. One of them, in `శ్ర॒ద్ధాయా”o`, sits behind the svarita glyph `”` and is the case the sibling file warned would be missed by a rule keyed only on Telugu characters; the rule used here converts `”` first for that reason. **(2) One asterisk removed.** The Māheśvara sūtra line prints `ఋ ళు* క్`; the asterisk is the source page's own footnote marker and not a letter, and the footnote itself is not on the page. **(3) One doubled letter read as single.** At `బ్రహ్మాణగ్గ్ స్వయంభువం` in the kāṇḍarṣi tarpaṇa, both Telugu witnesses print `గ్` twice. The doubling spells no sound, the word is the accusative `brahmāṇaṁ`, and the recitation is `brahmāṇagṁ svayambhuvaṁ`; it is therefore written here with the single nasal used in every other line of the same list. This is the one place in the file where a letter was not transcribed exactly as printed, and it is recorded rather than passed over. **No other change was made to the source's readings.**
+
+Recension note: **every difference found between the witnesses is listed here, and none of them has been reconciled away.**
+
+**(1) `hastāvavanijya` — three accent marks, and the only place where two independent editions agree against the base text.** vignanam and sanskritdocuments both read `हस्ता॑वव॒निज्य॒ त्रिराचा॑मे॒द्द्विः प॑रि॒मृज्य॑`; the base text reads `हस्ता॑वव॒निज्य॑ | त्रि॒राचा॑मेत् | द्विः परि॒मृ॑ज्य`. The base text's printing is kept, because it is a ritual manual quoting the passage in its own pāṭha and with its own daṇḍas, and because it also carries `यत्स॒व्यं पा॒णिं पा॒दौ प्रोक्ष॑ति`, which the Āraṇyaka pāṭha places elsewhere and which the second manual also prints here. **This is a real disagreement about accent and it is deliberately not reconciled.** A reciter who follows the Āraṇyaka pāṭha should use the marks given above.
+
+**(2) The Gāyatrī — one mark placed differently.** Three Taittirīya witnesses read `तत्स॑वि॒तुर्वरे᳚ण्यम्`; the base text reads `तत्स॑वितु॒र्वरे᳚ण्य॒म्`, and adds `धी॒महि` where they write `धीमहि`. Not reconciled.
+
+**(3) The Sāmavedic verse `agna ā yāhi` — four marks.** The Taittirīya Brāhmaṇa 3.5 carries the same verse with the Yajurvedic accent: `अग्न॒ आया॑हि वी॒तये᳚ । गृ॒णा॒नो ह॒व्यदा॑तये । नि होता॑ सथ्सि`. The source prints the Sāmavedic recitation, `अग्न॒ आ या᳚हि वी॒तये᳚ गृणा॒नो ह॒व्यदा᳚तये | नि होता᳚ सथ्सि`. **The Brāhmaṇa marking was not imported.** Taking it would be exactly the cross-recension transplant the svara rule forbids, and the verse is recited here as Sāmaveda.
+
+**(4) The Atharvavedic verse `śaṁ no devīr` — two marks.** The Taittirīya corpus carries the same verse in three places with `शं नो॑ ... आपो॑`; the source prints `शं नो᳚ ... आपो᳚`, and writes `शं यो` where the Taittirīya pāṭha writes the nasalised `शं-योँ`. Not imported, for the same reason.
+
+**(5) Ṛgveda 1.1.1 — three marks written with a different sign.** sa.wikisource reads `अ॒ग्निमी॑ळे ... ऋ॒त्विजं॑ | होता॑रं`; the source writes `᳚` at those three places. The accented syllables are identical in both; only the sign differs, and the sign is the South Indian one. The source's form is kept. The same hymn stands accented in the corpus at `../../veda/rigveda/01_agni_suktam.txt`, from Śākala sources, and unaccented at `../../misc_vedic/01_agni_suktam.txt`.
+
+**(6) `ऋचो अक्षरे` — one mark.** The Brāhmaṇa reads `पर॒मे व्यो॑मन्न्`, the source `पर॒मे व्यो॑म॒न्`.
+
+**(7) `paro rajasi` — one mark.** The Brāhmaṇa quotes `प॒रोर॑ज॒सीति`, with an anudātta on `ज` that the source does not print. `sāvadom` is the manual's own closing word and stands in both manuals; it is not in the Brāhmaṇa.
+
+**(8) Taittirīya Saṁhitā 1.1 — two readings.** The pāṭha edition reads `आ प्या॑यद्ध्वम` and `अय॒क्ष्मा मा`; the source reads `आ प्या॑यध्वम` and `अय॒क्ष्माः मा`. The second manual agrees with the source. Both stand.
+
+**(9) Taittirīya Brāhmaṇa 1.1 — two spellings.** The pāṭha edition writes `क्ष॒त्रग्ं` and `सन्ध॑त्तं`; the source writes `क्ष॒त्त्रग्ं` and `संध॑त्तं`. The second manual agrees with the source on both.
+
+**(10) Taittirīya Āraṇyaka 10.11 — two defects in the pāṭha page, neither adopted.** It prints `स॒पुंष्पि॑तस्य` for `स॒ंपुष्पि॑तस्य` and `जु॒गुफ्से᳚त्` for `जु॒गुप्से᳚त्`. The source and the second manual agree against it.
+
+**(11) The `थ्स` cluster is left exactly as printed** — `प॒शून्थ्संध॑त्तं`, `सथ्सि` — and is not normalised to `त्स`. The independent Devanāgarī pāṭha edition spells it the same way (`प॒शू-न्थ्सन्ध॑त्तं`, `नि होता॑ सथ्सि`), so this is the tradition's own spelling of that sound and not a Telugu-only convention to undo. The second manual prints `సత్సి` and `పశూన్ధ్స`, which is OCR noise on a page whose other letters are sound.
+
+**(12) `शीक्षा` with a long ī** is the source's spelling in the Vedāṅga section and is kept. So is `कंडर्षि` in the heading of the kāṇḍarṣi tarpaṇa, where the nine formulae under it all read `कांडर्षि`; the second manual writes `కాండర్షి` in both places. The heading is transcribed as the base text prints it.
+
+**(13) The second manual writes `ఓగ్‍ం సువః`** — the praṇava with the guttural nasal — in the Gāyatrī vyāhṛti lines where the base text writes plain `ఓం సువః`. The base text's reading is kept, and the difference is recorded because it is a real difference in recitation, not in spelling.
+
+**(14) The two manuals differ in how much of the Vedāṅga and Śāstra recitation they print.** The base text gives the opening lines of śikṣā, vyākaraṇa, chandas, nirukta, jyotiṣa, the two Mīmāṁsās, Nyāya, Vaiśeṣika, Yoga, Sāṁkhya, Manusmṛti, the Rāmāyaṇa, the Mahābhārata, the Bhagavadgītā, the Bhāgavata and Tantra. The second manual reduces the whole of that to four lines. This is a difference in the extent of the daily recitation between two manuals of one tradition, not a variant reading, and nothing was filled in from either side.
+
+**(15) The second manual adds material the base text does not print** — `uttiṣṭhantu` at the opening, `svadhā namaḥ` in the first pitṛ-tarpaṇa line, and the closing `sarvaṁ śrīparameśvarārpaṇamastu`. **None of it was added to this file.** Two of its ritual directions are carried in `vidhi:` fields and are marked there as coming from the second witness.
+
+Not collated: the Vedāṅga and Śāstra quotations of units 21 to 39 — the śikṣā and Pāṇini verses, the Māheśvara sūtras, Piṅgala, the Nighaṇṭu and the Nirukta, the Vedāṅga-jyotiṣa verses, the sūtras of the six darśanas, and the opening verses of the Manusmṛti, the Rāmāyaṇa, the Mahābhārata, the Bhagavadgītā, the Bhāgavata and the Tantra. These are quotations from other works, they are unaccented in the source, and no second edition of each was consulted; they stand on the two manuals alone. The corpus carries Bhagavadgītā 1.1 in full at `../../bhagavadgita/01_arjuna_vishada_yoga.txt`, and the Mahābhārata verse `nārāyaṇaṁ namaskṛtya` opens `../../vishnu/25_vishnu_sahasranama_stotram.txt`. The saṅkalpa and prārthanā sentences, and `sāvadom`, are ritual Sanskrit and not Veda; they stand on the two manuals alone as well.
+
+Verse count: 49 units. Not a verse count in the stotra sense — the work is an order of service punctuated by mantras, and the numbering is this corpus's, not the source's. The source prints the rite as one continuous page.
+
+Sections:
+आरम्भः — The beginning (units 1–3)
+श्रुत्याचमनम् — Śrutyācamana (units 4–5)
+गायत्री — The Gāyatrī (units 6–9)
+वेदपठनम् — Recitation of the four Vedas (units 10–20)
+वेदाङ्गपठनम् — Recitation of the Vedāṅgas and the Śāstras (units 21–39)
+परिधानीयमन्त्रः — The closing mantra (units 40–41)
+नित्यतर्पणविधिः — The daily tarpaṇa (units 42–49)
+
+Blurb: The brahmayajña is the daily study of the Veda. It is the fifth of the five great sacrifices that a householder performs every day, and it is the one that is owed to the sages. This file gives the rite as it is followed in the South Indian Taittirīya tradition, where it is done after the morning sandhyāvandana. The worshipper does not recite the whole Veda. He recites the opening words of each of the four Vedas, and then the opening words of the Vedāṅgas and of the Śāstras. In this way the whole of sacred learning is honoured every day in a few minutes. The Yajurveda portion is the longest, because it is his own Veda. After the recitation he offers water to the gods, to the sages, to the sages of the kāṇḍas and to the forefathers. The northern tradition does this rite in a much shorter form, and that form is kept in a separate file.
+
+--- unit 1 | section: The beginning ---
+vidhi:
+Do ācamana and prāṇāyāma. The source names both actions and does not reprint their mantras. The ācamana mantras are the Keśava-Nārāyaṇa-Mādhava series used at the start of every rite in this tradition.
+deva:
+आचम्य ||
+प्राणानायम्य ||
+iast:
+ācamya ||
+prāṇānāyamya ||
+en: Having performed ācamana. Having performed prāṇāyāma.
+tel: ఆచమనము చేసి. ప్రాణాయామము చేసి.
+hi: आचमन करके। प्राणायाम करके।
+
+--- unit 2 | section: The beginning ---
+vidhi:
+State the resolve. Say your own gotra and your own name where the source leaves blanks. Then release a few akṣata grains and a little water into the worship plate.
+deva:
+संकल्पः –
+पूर्वोक्त एवं गुण विशेषण विशिष्टायां शुभ तिथौ श्रीपरमेश्वरमुद्दिश्य श्रीपरमेश्वर प्रीत्यर्थं श्रीमान् …… सगोत्रः …… नामधेयोऽहं चतुर्वेद पारायण फलसिद्ध्यर्थं नित्य स्वाध्याय ब्रह्मयज्ञेन यक्ष्ये ||
+iast:
+saṁkalpaḥ –
+pūrvokta evaṁ guṇa viśeṣaṇa viśiṣṭāyāṁ śubha tithau śrīparameśvaramuddiśya śrīparameśvara prītyarthaṁ śrīmān …… sagotraḥ …… nāmadheyo'haṁ caturveda pārāyaṇa phalasiddhyarthaṁ nitya svādhyāya brahmayajñena yakṣye ||
+en: Saṅkalpa. The tithi today is auspicious and has the attributes stated above. With the Supreme Lord in view, and for his pleasure, I now make my resolve. I am of the gotra named here, and I bear the name spoken here. I shall perform the brahmayajña, which is the daily study of the Veda. I do this so that the fruit of reciting all four Vedas may be obtained.
+tel: సంకల్పము. పైన చెప్పిన గుణవిశేషణములచేత విశిష్టమైన శుభతిథియందు శ్రీపరమేశ్వరుని ఉద్దేశించి, శ్రీపరమేశ్వరుని ప్రీతికొరకు, ఇచ్చట చెప్పబడిన గోత్రము కలిగిన, ఇచ్చట చెప్పబడిన నామము కలిగిన నేను, నాలుగు వేదముల పారాయణ ఫలము సిద్ధించుటకొరకు, నిత్య స్వాధ్యాయరూపమైన బ్రహ్మయజ్ఞమును చేయుచున్నాను.
+hi: संकल्प। पूर्वोक्त गुण-विशेषणोंसे विशिष्ट शुभ तिथिमें श्रीपरमेश्वरको उद्दिष्ट करके, उनकी प्रीतिके लिये, यहाँ कहे गये गोत्रवाला और यहाँ कहे गये नामवाला मैं, चारों वेदोंके पारायणका फल सिद्ध होनेके लिये नित्य स्वाध्यायरूप ब्रह्मयज्ञ करता हूँ।
+
+--- unit 3 | section: The beginning ---
+vidhi:
+Purification. Recite this mantra. The Taittirīya Brāhmaṇa 3.10 quotes the mantra by its opening words, and its accent marks agree with the source exactly.
+deva:
+शुद्धिः –
+ओं विद्यु॑दसि॒ विद्य॑मे पा॒प्मान॒मृता᳚त्स॒त्यमुपै॑मि |
+iast:
+śuddhiḥ –
+oṁ vidyudasi vidyame pāpmānamṛtātsatyamupaimi |
+en: Purification. Oṁ. You are the lightning. Cut away my sin. From sacred order I come to truth.
+tel: శుద్ధి. ఓం. నీవు విద్యుత్తు. నా పాపమును ఛేదించుము. ఋతమునుండి సత్యమునకు చేరుచున్నాను.
+hi: शुद्धि। ओं। तुम विद्युत् हो। मेरे पापको काट दो। ऋतसे सत्यको प्राप्त करता हूँ।
+
+--- unit 4 | section: Śrutyācamana ---
+vidhi:
+Śrutyācamana. Wash both hands. Sip water three times. Wipe the lips twice and touch them once. Sprinkle the left hand and both feet. Then touch the head, the two eyes, the two nostrils, the two ears and the heart. Then touch water once more.
+deva:
+हस्ता॑वव॒निज्य॑ | त्रि॒राचा॑मेत् | द्विः परि॒मृ॑ज्य | स॒कृदु॑प॒स्पृश्य॑ | यत्स॒व्यं पा॒णिं पा॒दौ प्रोक्ष॑ति | शिर॒श्चक्षु॑षी॒ नासि॑के॒ श्रोत्रे॒ हृद॑यमा॒लभ्य॑ || अप उपस्पृश्य |
+iast:
+hastāvavanijya | trirācāmet | dviḥ parimṛjya | sakṛdupaspṛśya | yatsavyaṁ pāṇiṁ pādau prokṣati | śiraścakṣuṣī nāsike śrotre hṛdayamālabhya || apa upaspṛśya |
+en: Having washed both hands. Let him sip water three times. Having wiped twice. Having touched once. He sprinkles the left hand and the two feet. Touching the head, the two eyes, the two nostrils, the two ears and the heart. Having touched water.
+tel: రెండు చేతులను కడుగుకొని. మూడు సార్లు ఆచమించవలెను. రెండు సార్లు పరిమార్జనము చేసి. ఒకసారి ఉపస్పర్శము చేసి. ఎడమ చేతిని, రెండు పాదములను ప్రోక్షించును. శిరస్సును, రెండు కన్నులను, రెండు నాసికలను, రెండు చెవులను, హృదయమును తాకి. తిరిగి జలమును తాకి.
+hi: दोनों हाथ धोकर। तीन बार आचमन करे। दो बार परिमार्जन करके। एक बार उपस्पर्श करके। बायें हाथ और दोनों पैरोंका प्रोक्षण करता है। सिर, दोनों नेत्र, दोनों नासिका, दोनों कान और हृदयको स्पर्श करके। फिर जलका स्पर्श करके।
+
+--- unit 5 | section: Śrutyācamana ---
+vidhi:
+Place the right hand and the right foot above the left. Wear a blade of darbha grass in the tuft of hair and the pavitra of darbha on the right ring finger. Then begin with the syllable Oṁ.
+deva:
+द॒क्षि॒णो॒त्त॒रौ पा॒णी पा॒दौ कृ॒त्वा | सप॒वित्रा॒ ओमिति॒ प्रति॑पद्यते |
+iast:
+dakṣiṇottarau pāṇī pādau kṛtvā | sapavitrā omiti pratipadyate |
+en: Having placed the right hand and the right foot above the left. Wearing the pavitra, he begins with the word Oṁ.
+tel: కుడి చేతిని, కుడి పాదమును ఎడమవాటిపైన ఉంచి. పవిత్రమును ధరించి, ఓం అను శబ్దముతో ఆరంభించును.
+hi: दाहिने हाथ और दाहिने पैरको बायेंके ऊपर रखकर। पवित्र धारण करके ओं शब्दसे आरम्भ करता है।
+
+--- unit 6 | section: The Gāyatrī ---
+vidhi:
+Sit with the right foot upon the left thigh, and the right hand over the left upon the right knee. Close the eyes and recite. The Taittirīya Brāhmaṇa 3.10 gives this mantra with the same accent marks.
+deva:
+ओं ऋ॒चो अ॒क्षरे॑ पर॒मे व्यो॑म॒न् यस्मि॑न् दे॒वा अधि॒ विश्वे॑ निषे॒दुः |
+यस्तन्न वेद॒ किमृ॒चा क॑रिष्यति॒ य इत्तद्वि॒दुस्त इ॒मे समा॑सते ||
+iast:
+oṁ ṛco akṣare parame vyoman yasmin devā adhi viśve niṣeduḥ |
+yastanna veda kimṛcā kariṣyati ya ittadvidusta ime samāsate ||
+en: Oṁ. In the syllable of the ṛc, in the highest heaven, upon which all the gods are seated — he who does not know that, what will he do with the ṛc? Those who do know it sit here together.
+tel: ఓం. పరమమైన వ్యోమమునందు ఋక్కుల అక్షరమునందు సమస్త దేవతలు నిలిచియున్నారు. దానిని ఎవడు ఎరుగడో, అతడు ఋక్కుతో ఏమి చేయగలడు? దానిని ఎరిగినవారు ఇచ్చట కలిసి కూర్చుండియున్నారు.
+hi: ओं। परम व्योममें ऋचाके अक्षरमें सब देवता स्थित हैं। जो उसे नहीं जानता, वह ऋचासे क्या करेगा? जो उसे जानते हैं, वे यहाँ एक साथ बैठे हैं।
+
+--- unit 7 | section: The Gāyatrī ---
+vidhi:
+Recite the Gāyatrī one pāda at a time. Each pāda is preceded by its own vyāhṛti.
+deva:
+गायत्री मंत्र पठनम् –
+ओं भूः – तत्स॑वितु॒र्वरे᳚ण्य॒म् |
+ओं भुवः – भर्गो॑ दे॒वस्य॑ धी॒महि |
+ओं सुवः – धियो॒ यो न॑ः प्रचो॒दया᳚त् |
+iast:
+gāyatrī maṁtra paṭhanam –
+oṁ bhūḥ – tatsaviturvareṇyam |
+oṁ bhuvaḥ – bhargo devasya dhīmahi |
+oṁ suvaḥ – dhiyo yo naḥ pracodayāt |
+en: Recitation of the Gāyatrī mantra. Oṁ bhūḥ — that adorable light of the god Savitṛ. Oṁ bhuvaḥ — we meditate upon the splendour of that god. Oṁ suvaḥ — may he impel our understanding.
+tel: గాయత్రీ మంత్ర పఠనము. ఓం భూః — సవితృదేవుని ఆ వరణీయమైన తేజస్సు. ఓం భువః — ఆ దేవుని భర్గమును ధ్యానించుచున్నాము. ఓం సువః — అతడు మా బుద్ధులను ప్రేరేపించుగాక.
+hi: गायत्री मन्त्रका पाठ। ओं भूः — सवितादेवका वह वरणीय तेज। ओं भुवः — उस देवके भर्गका ध्यान करते हैं। ओं सुवः — वह हमारी बुद्धियोंको प्रेरित करे।
+
+--- unit 8 | section: The Gāyatrī ---
+vidhi:
+Now recite the Gāyatrī by halves, and then once in full. These three recitations together — by pāda, by half and whole — are the Gāyatrī of the brahmayajña.
+deva:
+ओं भूः – तत्स॑वितु॒र्वरे᳚ण्य॒ं भर्गो॑ दे॒वस्य॑ धी॒महि |
+ओं भुवः – धियो॒ यो न॑ः प्रचो॒दया᳚त् |
+ओं सुवः – तत्स॑वितु॒र्वरे᳚ण्य॒ं भर्गो॑ दे॒वस्य॑ धी॒महि धियो॒ यो न॑ः प्रचो॒दया᳚त् |
+iast:
+oṁ bhūḥ – tatsaviturvareṇyaṁ bhargo devasya dhīmahi |
+oṁ bhuvaḥ – dhiyo yo naḥ pracodayāt |
+oṁ suvaḥ – tatsaviturvareṇyaṁ bhargo devasya dhīmahi dhiyo yo naḥ pracodayāt |
+en: Oṁ bhūḥ — we meditate upon that adorable splendour of the god Savitṛ. Oṁ bhuvaḥ — may he impel our understanding. Oṁ suvaḥ — we meditate upon that adorable splendour of the god Savitṛ; may he impel our understanding.
+tel: ఓం భూః — సవితృదేవుని ఆ వరణీయమైన తేజస్సును ధ్యానించుచున్నాము. ఓం భువః — అతడు మా బుద్ధులను ప్రేరేపించుగాక. ఓం సువః — సవితృదేవుని ఆ వరణీయమైన తేజస్సును ధ్యానించుచున్నాము; అతడు మా బుద్ధులను ప్రేరేపించుగాక.
+hi: ओं भूः — सवितादेवके उस वरणीय तेजका ध्यान करते हैं। ओं भुवः — वह हमारी बुद्धियोंको प्रेरित करे। ओं सुवः — सवितादेवके उस वरणीय तेजका ध्यान करते हैं; वह हमारी बुद्धियोंको प्रेरित करे।
+
+--- unit 9 | section: The Gāyatrī ---
+vidhi:
+Close the Gāyatrī with this word. The Taittirīya Brāhmaṇa 3.10 quotes the opening `paro rajasi` and marks one syllable this source leaves unmarked; `sāvadom` is the manual's own closing word.
+deva:
+ओं प॒रो र॑जसि साव॒दोम् |
+iast:
+oṁ paro rajasi sāvadom |
+en: Oṁ. Beyond the darkness is that sun. Oṁ.
+tel: ఓం. రజస్సునకు అవల ఆ సూర్యుడు. ఓం.
+hi: ओं। रजसे परे वह सूर्य है। ओं।
+
+--- unit 10 | section: Recitation of the four Vedas ---
+vidhi:
+The recitation of the Vedas begins here. Salute the teachers first.
+deva:
+|| अथ वेदपठनम् ||
+श्रीगुरुभ्यो नमः | हरिः ओम् ||
+iast:
+|| atha vedapaṭhanam ||
+śrīgurubhyo namaḥ | hariḥ om ||
+en: Now the recitation of the Vedas. Salutation to the teachers. Hari Oṁ.
+tel: ఇప్పుడు వేదపఠనము. గురువులకు నమస్కారము. హరిః ఓం.
+hi: अब वेदपाठ। गुरुओंको नमस्कार। हरिः ओं।
+
+--- unit 11 | section: Recitation of the four Vedas ---
+vidhi:
+Study of the Yajurveda. The source cites this as Taittirīya Saṁhitā 1.1. Confirmed word for word, accents included, against the accented Taittirīya Saṁhitā pāṭha.
+deva:
+यजुर्वेदाध्ययनम् –
+ओं इ॒षे त्वो॒र्जे त्वा॑ वा॒यव॑स्स्थोपा॒यव॑स्स्थ दे॒वो व॑स्सवि॒ता प्रार्प॑यतु॒ श्रेष्ठ॑तमाय॒ कर्म॑ण॒ आ प्या॑यध्वमघ्निया देवभा॒गमूर्ज॑स्वती॒ः पय॑स्वतीः प्र॒जाव॑तीरनमी॒वा अ॑य॒क्ष्माः मा व॑स्स्ते॒न ई॑शत॒ माऽघशग्ं॑सो रु॒द्रस्य॑ हे॒तिः परि॑ वो वृणक्तु ध्रु॒वा अ॒स्मिन् गोप॑तौ स्यात ब॒ह्वीर्यज॑मानस्य प॒शून् पा॑हि || हरिः ओम् ||
+iast:
+yajurvedādhyayanam –
+oṁ iṣe tvorje tvā vāyavassthopāyavasstha devo vassavitā prārpayatu śreṣṭhatamāya karmaṇa ā pyāyadhvamaghniyā devabhāgamūrjasvatīḥ payasvatīḥ prajāvatīranamīvā ayakṣmāḥ mā vasstena īśata mā'ghaśagṁso rudrasya hetiḥ pari vo vṛṇaktu dhruvā asmin gopatau syāta bahvīryajamānasya paśūn pāhi || hariḥ om ||
+en: Study of the Yajurveda. Oṁ. For food I take you; for strength I take you. You are the winds; you are those who draw near. May the god Savitṛ send you forth to the most excellent work. Grow full, you cows that must not be harmed, you portion of the gods, rich in strength and rich in milk, having offspring, free from affliction and free from disease. Let no thief have power over you. Let no evil word have power over you. May the weapon of Rudra pass you by. Stay steady and many with this master of the herd. Guard the cattle of the sacrificer. Hari Oṁ.
+tel: యజుర్వేదాధ్యయనము. ఓం. అన్నముకొరకు నిన్ను గ్రహించుచున్నాను; బలముకొరకు నిన్ను గ్రహించుచున్నాను. మీరు వాయువులు; మీరు దరిచేరువారు. సవితృదేవుడు మిమ్ము శ్రేష్ఠతమమైన కర్మకు పంపుగాక. హింసింపరాని గోవులారా, దేవతల భాగమైనవారలారా, ఊర్జస్వతులు, పయస్వతులు, ప్రజాసహితులు, పీడ లేనివారు, రోగము లేనివారు — వృద్ధి పొందుడు. మీపై దొంగకు అధికారము కలుగకుండుగాక. మీపై పాపవాక్కునకు అధికారము కలుగకుండుగాక. రుద్రుని ఆయుధము మిమ్ము తప్పించుగాక. ఈ గోపతియొద్ద స్థిరముగా, అనేకముగా ఉండుడు. యజమానుని పశువులను రక్షించుము. హరిః ఓం.
+hi: यजुर्वेदका अध्ययन। ओं। अन्नके लिये तुम्हें ग्रहण करता हूँ; बलके लिये तुम्हें ग्रहण करता हूँ। तुम वायु हो; तुम पास आनेवाले हो। सविता देव तुम्हें श्रेष्ठतम कर्मके लिये भेजें। हे अवध्य गौओ, देवताओंके भागरूप, ऊर्जस्वती, पयस्वती, सन्तानवती, पीडारहित और रोगरहित — तुम बढो। तुम पर चोरका अधिकार न हो। तुम पर पापवाणीका अधिकार न हो। रुद्रका आयुध तुम्हें छोडकर चले। इस गोपतिके पास स्थिर और बहुत होकर रहो। यजमानके पशुओंकी रक्षा करो। हरिः ओं।
+
+--- unit 12 | section: Recitation of the four Vedas ---
+vidhi:
+The source cites this as Taittirīya Brāhmaṇa 1.1. Confirmed word for word, accents included, against the accented Taittirīya Brāhmaṇa pāṭha.
+deva:
+ओं ब्रह्म॒ संध॑त्त॒ं तन्मे॑ जिन्वतम् | क्ष॒त्त्रग्ं संध॑त्त॒ं तन्मे॑ जिन्वतम् | इष॒ग्ं॒ संध॑त्त॒ं तां मे॑ जिन्वतम् | ऊर्ज॒ग्ं॒ संध॑त्त॒ं तां मे॑ जिन्वतम् | र॒यिग्ं संध॑त्त॒ं तां मे॑ जिन्वतम् | पुष्टि॒ग्ं॒ संध॑त्त॒ं तां मे॑ जिन्वतम् | प्र॒जाग्ं संध॑त्त॒ं तां मे॑ जिन्वतम् | प॒शून्थ्संध॑त्त॒ं तान्मे॑ जिन्वतम् | स्तु॒तो॑ऽसि॒ जन॑धाः | दे॒वास्त्वा॑ शुक्र॒पाः प्रण॑यन्तु || सु॒वीरा᳚ः प्र॒जाः प्र॑ज॒नय॒न्परी॑हि || हरिः ओम् ||
+iast:
+oṁ brahma saṁdhattaṁ tanme jinvatam | kṣattragṁ saṁdhattaṁ tanme jinvatam | iṣagṁ saṁdhattaṁ tāṁ me jinvatam | ūrjagṁ saṁdhattaṁ tāṁ me jinvatam | rayigṁ saṁdhattaṁ tāṁ me jinvatam | puṣṭigṁ saṁdhattaṁ tāṁ me jinvatam | prajāgṁ saṁdhattaṁ tāṁ me jinvatam | paśūnthsaṁdhattaṁ tānme jinvatam | stuto'si janadhāḥ | devāstvā śukrapāḥ praṇayantu || suvīrāḥ prajāḥ prajanayanparīhi || hariḥ om ||
+en: Oṁ. Join brahman to me; quicken that for me. Join kṣatra to me; quicken that for me. Join food to me; quicken that for me. Join strength to me; quicken that for me. Join wealth to me; quicken that for me. Join nourishment to me; quicken that for me. Join offspring to me; quicken that for me. Join cattle to me; quicken them for me. You are praised, giver to men. May the gods who drink the clear juice lead you forward. Bring forth good offspring, and go round. Hari Oṁ.
+tel: ఓం. బ్రహ్మమును నాకు చేర్చుడు; దానిని నాకు వృద్ధి చేయుడు. క్షత్రమును నాకు చేర్చుడు; దానిని నాకు వృద్ధి చేయుడు. అన్నమును నాకు చేర్చుడు; దానిని నాకు వృద్ధి చేయుడు. ఊర్జమును నాకు చేర్చుడు; దానిని నాకు వృద్ధి చేయుడు. ధనమును నాకు చేర్చుడు; దానిని నాకు వృద్ధి చేయుడు. పుష్టిని నాకు చేర్చుడు; దానిని నాకు వృద్ధి చేయుడు. ప్రజను నాకు చేర్చుడు; దానిని నాకు వృద్ధి చేయుడు. పశువులను నాకు చేర్చుడు; వాటిని నాకు వృద్ధి చేయుడు. జనులకు ఇచ్చువాడా, నీవు స్తుతింపబడినావు. శుక్రపానము చేయు దేవతలు నిన్ను ముందుకు నడిపించుగాక. మంచి సంతానమును కలిగించి, చుట్టు తిరుగుము. హరిః ఓం.
+hi: ओं। ब्रह्मको मुझमें जोडो; उसे मेरे लिये बढाओ। क्षत्रको मुझमें जोडो; उसे मेरे लिये बढाओ। अन्नको मुझमें जोडो; उसे मेरे लिये बढाओ। ऊर्जाको मुझमें जोडो; उसे मेरे लिये बढाओ। धनको मुझमें जोडो; उसे मेरे लिये बढाओ। पुष्टिको मुझमें जोडो; उसे मेरे लिये बढाओ। सन्तानको मुझमें जोडो; उसे मेरे लिये बढाओ। पशुओंको मुझमें जोडो; उन्हें मेरे लिये बढाओ। हे जनोंको देनेवाले, तुम स्तुत हो। शुक्रपान करनेवाले देवता तुम्हें आगे ले चलें। उत्तम सन्तान उत्पन्न करके परिक्रमा करो। हरिः ओं।
+
+--- unit 13 | section: Recitation of the four Vedas ---
+vidhi:
+The source cites this and the two mantras that follow as Taittirīya Āraṇyaka 10.9, 10.10 and 10.11. Confirmed word for word, accents included, against two independent accented editions of the Āraṇyaka. Where the name of the reciter is to be spoken, say your own name.
+deva:
+ओं नमो॒ ब्रह्म॑णे धा॒रण॑ं मे अ॒स्त्वनि॑राकरणं धा॒रयि॑ता भूयास॒ं कर्ण॑योश्श्रु॒तं मा च्यो᳚ढ्व॒ं ममा॒मुष्य॒ ओम् ||
+iast:
+oṁ namo brahmaṇe dhāraṇaṁ me astvanirākaraṇaṁ dhārayitā bhūyāsaṁ karṇayośśrutaṁ mā cyoḍhvaṁ mamāmuṣya om ||
+en: Oṁ. Salutation to Brahman. Let there be retention for me, and no forgetting. May I become one who retains. Let what is heard in my two ears not slip away — not from me, and not from the one whose name is spoken here. Oṁ.
+tel: ఓం. బ్రహ్మమునకు నమస్కారము. నాకు ధారణ కలుగుగాక, అనిరాకరణము కలుగుగాక. నేను ధారణ చేయువాడనై ఉందునుగాక. నా రెండు చెవులయందు వినినది జారిపోకుండుగాక — నానుండియు, ఇచ్చట పేరు చెప్పబడినవానినుండియు. ఓం.
+hi: ओं। ब्रह्मको नमस्कार। मुझे धारणा प्राप्त हो, विस्मरण न हो। मैं धारण करनेवाला बनूँ। मेरे दोनों कानोंमें जो सुना गया है वह न छूटे — न मुझसे, न उससे जिसका नाम यहाँ लिया जाता है। ओं।
+
+--- unit 14 | section: Recitation of the four Vedas ---
+vidhi:
+The second of the three Āraṇyaka passages. The division into three units here is this corpus's; the source prints them as one paragraph.
+deva:
+ऋ॒तं तप॑स्स॒त्यं तप॑श्श्रु॒तं तप॑श्शा॒न्तं तपो॒ दम॒स्तप॒श्शम॒स्तपो॒ दान॒ं तपो॒ यज्ञ॒ं तपो॒ भूर्भुव॒स्सुव॒र्ब्रह्मै॒तदुपा᳚स्यै॒तत्तप॑ः ||
+iast:
+ṛtaṁ tapassatyaṁ tapaśśrutaṁ tapaśśāntaṁ tapo damastapaśśamastapo dānaṁ tapo yajñaṁ tapo bhūrbhuvassuvarbrahmaitadupāsyaitattapaḥ ||
+en: Right order is austerity. Truth is austerity. Sacred learning is austerity. Calm is austerity. Self-control is austerity. Peace is austerity. Giving is austerity. Sacrifice is austerity. Bhūḥ, bhuvaḥ, suvaḥ — Brahman is austerity. Worship this. This is austerity.
+tel: ఋతము తపస్సు. సత్యము తపస్సు. శ్రుతము తపస్సు. శాంతము తపస్సు. దమము తపస్సు. శమము తపస్సు. దానము తపస్సు. యజ్ఞము తపస్సు. భూః, భువః, సువః — బ్రహ్మము తపస్సు. దీనిని ఉపాసించవలెను. ఇదియే తపస్సు.
+hi: ऋत तप है। सत्य तप है। श्रुत तप है। शान्ति तप है। दम तप है। शम तप है। दान तप है। यज्ञ तप है। भूः, भुवः, सुवः — ब्रह्म तप है। इसकी उपासना करो। यही तप है।
+
+--- unit 15 | section: Recitation of the four Vedas ---
+vidhi:
+The third of the three Āraṇyaka passages.
+deva:
+यथा॑ वृ॒क्षस्य॑ स॒ंपुष्पि॑तस्य दू॒राद्ग॒न्धो वा᳚त्ये॒वं पुण्य॑स्य क॒र्मणो॑ दू॒राद्ग॒न्धो वा॑ति॒ यथा॑ऽसिधा॒रां क॒र्तेऽव॑हितामव॒क्रामे॒ यद्युवे॒ युवे॒ हवा॑ वि॒ह्वयि॑ष्यामि क॒र्तं प॑तिष्या॒मीत्ये॒वम॒मृता॑दा॒त्मान॑ं जु॒गुप्से᳚त् || ||
+iast:
+yathā vṛkṣasya saṁpuṣpitasya dūrādgandho vātyevaṁ puṇyasya karmaṇo dūrādgandho vāti yathā'sidhārāṁ karte'vahitāmavakrāme yadyuve yuve havā vihvayiṣyāmi kartaṁ patiṣyāmītyevamamṛtādātmānaṁ jugupset || ||
+en: As the fragrance of a tree in full flower is carried from far away, so is the fragrance of a meritorious deed carried from far away. A sword is laid across a pit, and a man is set upon its edge. He thinks: I am young, I am young; I shall slip and fall into the pit. In that same way should one guard oneself from all that is not immortal.
+tel: పూర్తిగా పుష్పించిన వృక్షముయొక్క గంధము దూరమునుండి వ్యాపించునట్లే, పుణ్యకర్మముయొక్క గంధము దూరమునుండి వ్యాపించును. గోతిపై ఉంచిన కత్తి అంచున నిలిపినవాడు — నేను చిన్నవాడను, నేను చిన్నవాడను, జారి గోతిలో పడుదునేమో — అని తలచునట్లే, అమృతము కానిదానినుండి తన్ను కాపాడుకొనవలెను.
+hi: जैसे पूर्ण खिले वृक्षकी गन्ध दूरसे आती है, वैसे ही पुण्यकर्मकी गन्ध दूरसे आती है। जैसे गड्ढेपर रखी तलवारकी धारपर खडा मनुष्य सोचता है — मैं युवा हूँ, मैं युवा हूँ, फिसलकर गड्ढेमें गिर जाऊँगा — उसी प्रकार अमृतसे भिन्न सबसे अपनी रक्षा करनी चाहिये।
+
+--- unit 16 | section: Recitation of the four Vedas ---
+vidhi:
+The source cites this as Taittirīya Āraṇyaka 8.1. Confirmed word for word, accents included, against the accented Āraṇyaka pāṭha.
+deva:
+ओं स॒ह ना॑ववतु | स॒ह नौ॑ भुनक्तु | स॒ह वी॒र्य॑ं करवावहै |
+ते॒ज॒स्विना॒वधी॑तमस्तु॒ मा वि॑द्विषा॒वहै᳚ | ओं शान्ति॒श्शान्ति॒श्शान्ति॑ः ||
+iast:
+oṁ saha nāvavatu | saha nau bhunaktu | saha vīryaṁ karavāvahai |
+tejasvināvadhītamastu mā vidviṣāvahai | oṁ śāntiśśāntiśśāntiḥ ||
+en: Oṁ. May he protect us both together. May he nourish us both together. May we both do brave work together. May our study be filled with light. May we never quarrel. Oṁ. Peace, peace, peace.
+tel: ఓం. మా ఇరువురను కలిసి రక్షించుగాక. మా ఇరువురను కలిసి పోషించుగాక. మేమిరువురము కలిసి వీర్యవంతమైన కార్యమును చేయుదుముగాక. మా అధ్యయనము తేజస్సుతో నిండుగాక. మేము ఎన్నడును విరోధించకుందుముగాక. ఓం. శాంతి, శాంతి, శాంతి.
+hi: ओं। वह हम दोनोंकी साथमें रक्षा करे। वह हम दोनोंका साथमें पोषण करे। हम दोनों साथमें वीर्यपूर्ण कार्य करें। हमारा अध्ययन तेजसे भरा हो। हम कभी विरोध न करें। ओं। शान्ति, शान्ति, शान्ति।
+
+--- unit 17 | section: Recitation of the four Vedas ---
+vidhi:
+The source cites this as Taittirīya Āraṇyaka 7.10.1. Confirmed word for word, accents included, against the accented Āraṇyaka.
+deva:
+अ॒हं वृ॒क्षस्य॒ रेरि॑वा | की॒र्तिः पृ॒ष्ठं गि॒रेरि॑व | ऊ॒र्ध्वप॑वित्रो वा॒जिनी॑व स्व॒मृत॑मस्मि | द्रवि॑ण॒ग्ं॒ सव॑र्चसम् | सुमेधा अ॑मृतो॒क्षितः | इति त्रिशङ्कोर्वेदा॑नुव॒चनम् ||
+iast:
+ahaṁ vṛkṣasya rerivā | kīrtiḥ pṛṣṭhaṁ gireriva | ūrdhvapavitro vājinīva svamṛtamasmi | draviṇagṁ savarcasam | sumedhā amṛtokṣitaḥ | iti triśaṅkorvedānuvacanam ||
+en: I am the stirrer of the tree. My fame is like the ridge of a mountain. Pure at my source, I am the immortal itself, as it is in the sun. I am shining wealth. I am of good understanding, sprinkled with immortality. So runs the Veda-recitation of Triśaṅku.
+tel: నేను వృక్షమును కదిలించువాడను. నా కీర్తి పర్వత శిఖరమువలె ఉన్నది. ఊర్ధ్వమునందు పవిత్రుడనై, సూర్యునియందు వలె నేను అమృతమే అయి ఉన్నాను. నేను వర్చస్సుతో కూడిన ద్రవిణమును. నేను సుమేధను, అమృతముచేత తడిసినవాడను. ఇది త్రిశంకుని వేదానువచనము.
+hi: मैं वृक्षको हिलानेवाला हूँ। मेरी कीर्ति पर्वतके शिखरके समान है। ऊपरसे पवित्र, सूर्यके समान मैं स्वयं अमृत हूँ। मैं तेजयुक्त धन हूँ। मैं सुमेधा हूँ, अमृतसे सिंचित हूँ। यह त्रिशंकुका वेदानुवचन है।
+
+--- unit 18 | section: Recitation of the four Vedas ---
+vidhi:
+Study of the Ṛgveda. The source cites this as Ṛgveda 1.1.1. The words and the accented syllables are confirmed against the accented Ṛgveda; three marks are written with a different sign there, and this is recorded in the Recension note.
+deva:
+ऋग्वेदाध्ययनम् –
+ओं अ॒ग्निमी᳚ळे पु॒रोहि॑तं य॒ज्ञस्य॑ दे॒वमृ॒त्विज᳚म् |
+होता᳚रं रत्न॒धात॑मम् ||
+iast:
+ṛgvedādhyayanam –
+oṁ agnimīḻe purohitaṁ yajñasya devamṛtvijam |
+hotāraṁ ratnadhātamam ||
+en: Study of the Ṛgveda. Oṁ. I praise Agni, the one placed in front, the god who is the priest of the sacrifice, the invoker, who gives the greatest treasure.
+tel: ఋగ్వేదాధ్యయనము. ఓం. యజ్ఞమునకు పురోహితుడైన, దేవుడైన, ఋత్విజుడైన, హోతయైన, రత్నములను అధికముగా ఇచ్చు అగ్నిని స్తుతించుచున్నాను.
+hi: ऋग्वेदका अध्ययन। ओं। यज्ञके पुरोहित, देव, ऋत्विज्, होता और रत्नोंको अत्यधिक देनेवाले अग्निकी स्तुति करता हूँ।
+
+--- unit 19 | section: Recitation of the four Vedas ---
+vidhi:
+Study of the Sāmaveda. The source cites this as Sāmaveda 1.1.1. The Taittirīya Brāhmaṇa 3.5 carries the same verse with the Yajurvedic accent, which differs in four marks. The Sāmavedic marking printed by the source is kept, and the difference is recorded in the Recension note.
+deva:
+सामवेदाध्ययनम् –
+ओं अग्न॒ आ या᳚हि वी॒तये᳚ गृणा॒नो ह॒व्यदा᳚तये | नि होता᳚ सथ्सि ब॒र्हिषि॑ ||
+iast:
+sāmavedādhyayanam –
+oṁ agna ā yāhi vītaye gṛṇāno havyadātaye | ni hotā sathsi barhiṣi ||
+en: Study of the Sāmaveda. Oṁ. Agni, come to the feast; praised, come to the giving of the offering. Sit down as the invoker upon the sacred grass.
+tel: సామవేదాధ్యయనము. ఓం. అగ్నీ, వీతికొరకు రమ్ము; స్తుతింపబడినవాడై హవ్యదానముకొరకు రమ్ము. బర్హిస్సుపై హోతగా కూర్చుండుము.
+hi: सामवेदका अध्ययन। ओं। हे अग्नि, वीतिके लिये आओ; स्तुत होकर हव्यदानके लिये आओ। बर्हिपर होता बनकर बैठो।
+
+--- unit 20 | section: Recitation of the four Vedas ---
+vidhi:
+Study of the Atharvaveda. The source cites this as Atharvaveda 1.1 and prints the reference after the mantra. The verse also stands in the Taittirīya corpus in three places, with the Yajurvedic accent, which differs in two marks. The source's marking is kept.
+deva:
+अथर्ववेदाध्ययनम् –
+ओं शं नो᳚ दे॒वीर॒भिष्ट॑य॒ आपो᳚ भवन्तु पी॒तये᳚ |
+शं योर॒भिस्र॑वन्तु नः ||
+iast:
+atharvavedādhyayanam –
+oṁ śaṁ no devīrabhiṣṭaya āpo bhavantu pītaye |
+śaṁ yorabhisravantu naḥ ||
+en: Study of the Atharvaveda. Oṁ. May the divine waters be for our help and for our drinking. May they flow to us with well-being and with health.
+tel: అథర్వవేదాధ్యయనము. ఓం. దివ్యమైన జలములు మాకు అభీష్టసిద్ధికొరకు, త్రాగుటకొరకు అగుగాక. అవి శుభముతోను ఆరోగ్యముతోను మావైపు ప్రవహించుగాక.
+hi: अथर्ववेदका अध्ययन। ओं। दिव्य जल हमारे अभीष्टके लिये और पीनेके लिये हों। वे कल्याण और आरोग्यके साथ हमारी ओर बहें।
+
+--- unit 21 | section: Recitation of the Vedāṅgas and the Śāstras ---
+vidhi:
+Study of śikṣā, the science of correct utterance. The source spells the word `शीक्षा`, with a long ī, which is the Taittirīya spelling, and it is kept.
+deva:
+शीक्षाध्ययनम् –
+अथ शीक्षां प्रवक्ष्यामि पाणिनीय मतं यथा |
+शास्त्रानुपूर्वं तद्विद्याद्यथोक्तं लोकवेदयोः ||
+iast:
+śīkṣādhyayanam –
+atha śīkṣāṁ pravakṣyāmi pāṇinīya mataṁ yathā |
+śāstrānupūrvaṁ tadvidyādyathoktaṁ lokavedayoḥ ||
+en: Study of śikṣā. Now I shall declare śikṣā according to the view of Pāṇini. Let it be known in the order of the śāstra, as it has been stated for common speech and for the Veda.
+tel: శీక్షాధ్యయనము. ఇప్పుడు పాణిని మతమును అనుసరించి శీక్షను చెప్పుచున్నాను. లోకమునందును వేదమునందును చెప్పబడిన విధముగా, శాస్త్రక్రమమునందు దానిని తెలిసికొనవలెను.
+hi: शीक्षाका अध्ययन। अब पाणिनिके मतके अनुसार शीक्षा कहता हूँ। लोक और वेद दोनोंमें जैसा कहा गया है, उसी शास्त्रक्रमसे उसे जानना चाहिये।
+
+--- unit 22 | section: Recitation of the Vedāṅgas and the Śāstras ---
+vidhi:
+Study of grammar. The source marks this as the recitation of the Aṣṭādhyāyī.
+deva:
+व्याकरणाध्ययनम् –
+वाक्यकारं वररुचिं भाष्यकारं पतंजलिम् |
+पाणिनिं सूत्रकारं च प्रणतोऽस्मि मुनित्रयम् ||
+iast:
+vyākaraṇādhyayanam –
+vākyakāraṁ vararuciṁ bhāṣyakāraṁ pataṁjalim |
+pāṇiniṁ sūtrakāraṁ ca praṇato'smi munitrayam ||
+en: Study of grammar. I bow to the three sages — Vararuci who made the Vārttikas, Patañjali who made the commentary, and Pāṇini who made the sūtras.
+tel: వ్యాకరణాధ్యయనము. వాక్యకారుడైన వరరుచిని, భాష్యకారుడైన పతంజలిని, సూత్రకారుడైన పాణినిని — ఈ ముని త్రయమునకు నమస్కరించుచున్నాను.
+hi: व्याकरणका अध्ययन। वाक्यकार वररुचि, भाष्यकार पतञ्जलि और सूत्रकार पाणिनि — इन तीन मुनियोंको प्रणाम करता हूँ।
+
+--- unit 23 | section: Recitation of the Vedāṅgas and the Śāstras ---
+vidhi:
+Recite the fourteen Māheśvara sūtras, and then the first three sūtras of the Aṣṭādhyāyī.
+deva:
+अ इ उ ण् | ऋ ळु क् | ए ओ ङ् | ऐ औ च् | ह य व र ट् | ल ण् | ञ म ङ ण न म् | झ भ ञ् | घ ढ ध ष् | ज ब ग ड द श् | ख फ छ ठ थ च ट त व् | क प य् | श ष स र् | ह ल् ||
+वृद्धिरादैच् | अदेङ्गुणः | इको गुणवृद्धी |
+iast:
+a i u ṇ | ṛ ḻu k | e o ṅ | ai au c | ha ya va ra ṭ | la ṇ | ña ma ṅa ṇa na m | jha bha ñ | gha ḍha dha ṣ | ja ba ga ḍa da ś | kha pha cha ṭha tha ca ṭa ta v | ka pa y | śa ṣa sa r | ha l ||
+vṛddhirādaic | adeṅguṇaḥ | iko guṇavṛddhī |
+en: The fourteen sūtras of Maheśvara. Then: vṛddhi is ā, ai and au. Guṇa is a, e and o. In place of i, u, ṛ and ḷ come guṇa and vṛddhi.
+tel: పదునాలుగు మాహేశ్వర సూత్రములు. తరువాత: వృద్ధి అనగా ఆ, ఐ, ఔ. గుణము అనగా అ, ఏ, ఓ. ఇక్ వర్ణములకు గుణమును వృద్ధియు వచ్చును.
+hi: चौदह माहेश्वर सूत्र। इसके बाद: वृद्धि आ, ऐ और औ है। गुण अ, ए और ओ है। इक् वर्णोंके स्थानमें गुण और वृद्धि होते हैं।
+
+--- unit 24 | section: Recitation of the Vedāṅgas and the Śāstras ---
+vidhi:
+Study of metre. The source cites this as Piṅgala's Chandaḥsūtra 1.1.
+deva:
+छंदोऽध्ययनम् –
+मयरसतजभनलग सम्मितम्
+भ्रमति वाङ्मयं जगति यस्य |
+स जयति पिङ्गळनागः
+शिवप्रसादाद्विशुद्धमतिः ||
+iast:
+chaṁdo'dhyayanam –
+mayarasatajabhanalaga sammitam
+bhramati vāṅmayaṁ jagati yasya |
+sa jayati piṅgaḻanāgaḥ
+śivaprasādādviśuddhamatiḥ ||
+en: Study of metre. All speech moves through the world measured by ma, ya, ra, sa, ta, ja, bha, na, la and ga. Victorious is Piṅgala the Nāga, who gave this measure, and whose understanding was made pure by the grace of Śiva.
+tel: ఛందోఽధ్యయనము. మ, య, ర, స, త, జ, భ, న, ల, గ అను గణములచేత కొలవబడిన వాఙ్మయము ఎవని కారణమున జగత్తునందు సంచరించుచున్నదో, శివుని ప్రసాదమువలన విశుద్ధమైన బుద్ధి కలిగిన ఆ పింగళనాగుడు జయించుచున్నాడు.
+hi: छन्दका अध्ययन। म, य, र, स, त, ज, भ, न, ल, ग — इन गणोंसे नापा हुआ वाङ्मय जिसके कारण जगत्में चलता है, शिवकी कृपासे विशुद्ध बुद्धिवाले वे पिङ्गलनाग विजयी होते हैं।
+
+--- unit 25 | section: Recitation of the Vedāṅgas and the Śāstras ---
+vidhi:
+Study of etymology. The source cites this as the first section of the Nighaṇṭu.
+deva:
+निरुक्ताध्ययनम् –
+गौः, ग्मा, ज्मा, क्ष्मा, क्षा, क्षौमा, क्षोणी, क्षितिः, अवनिः, उर्वी, पृथ्वी, मही, अदितिः, रिपः, इळा, निर्ऋतिः, मा, भूमिः, पूषा, गातुः, गोत्रा – इत्येकविंशतिः पृथ्वीनामानि ||
+iast:
+niruktādhyayanam –
+gauḥ, gmā, jmā, kṣmā, kṣā, kṣaumā, kṣoṇī, kṣitiḥ, avaniḥ, urvī, pṛthvī, mahī, aditiḥ, ripaḥ, iḻā, nirṛtiḥ, mā, bhūmiḥ, pūṣā, gātuḥ, gotrā – ityekaviṁśatiḥ pṛthvīnāmāni ||
+en: Study of etymology. Gauḥ, gmā, jmā, kṣmā, kṣā, kṣaumā, kṣoṇī, kṣitiḥ, avaniḥ, urvī, pṛthvī, mahī, aditiḥ, ripaḥ, iḻā, nirṛtiḥ, mā, bhūmiḥ, pūṣā, gātuḥ, gotrā — these are the twenty-one names of the earth.
+tel: నిరుక్తాధ్యయనము. గౌః, గ్మా, జ్మా, క్ష్మా, క్షా, క్షౌమా, క్షోణీ, క్షితిః, అవనిః, ఉర్వీ, పృథ్వీ, మహీ, అదితిః, రిపః, ఇళా, నిర్ఋతిః, మా, భూమిః, పూషా, గాతుః, గోత్రా — ఇవి పృథివికి ఇరువది ఒక్క నామములు.
+hi: निरुक्तका अध्ययन। गौः, ग्मा, ज्मा, क्ष्मा, क्षा, क्षौमा, क्षोणी, क्षितिः, अवनिः, उर्वी, पृथ्वी, मही, अदितिः, रिपः, इळा, निर्ऋतिः, मा, भूमिः, पूषा, गातुः, गोत्रा — ये पृथ्वीके इक्कीस नाम हैं।
+
+--- unit 26 | section: Recitation of the Vedāṅgas and the Śāstras ---
+vidhi:
+The source cites this as the Nirukta of Yāska 1.1.
+deva:
+ओं समाम्नायः समाम्नातः स व्याख्यातव्यस्तमिमं समाम्नायं निघंटव इत्याचक्षते |
+iast:
+oṁ samāmnāyaḥ samāmnātaḥ sa vyākhyātavyastamimaṁ samāmnāyaṁ nighaṁṭava ityācakṣate |
+en: Oṁ. The collected list has been handed down. It is to be explained. This collected list is what they call the Nighaṇṭus.
+tel: ఓం. సమామ్నాయము సమామ్నాతమైనది. అది వ్యాఖ్యానము చేయదగినది. ఈ సమామ్నాయమునే నిఘంటువులు అని చెప్పుదురు.
+hi: ओं। समाम्नाय परम्परासे प्राप्त है। उसकी व्याख्या करनी चाहिये। इस समाम्नायको ही निघण्टु कहते हैं।
+
+--- unit 27 | section: Recitation of the Vedāṅgas and the Śāstras ---
+vidhi:
+Study of astronomy.
+deva:
+ज्यौतिषम् –
+पञ्चसंवत्सरमयं युगाध्यक्षं प्रजापतिम् |
+दिनर्त्वयनमासाङ्गं प्रणम्य शिरसा शुचिः || १
+प्रणम्य शिरसा कालमभिवाद्य सरस्वतीम् |
+कालज्ञानं प्रवक्ष्यामि लगधस्य महात्मनः || २
+iast:
+jyautiṣam –
+pañcasaṁvatsaramayaṁ yugādhyakṣaṁ prajāpatim |
+dinartvayanamāsāṅgaṁ praṇamya śirasā śuciḥ || 1
+praṇamya śirasā kālamabhivādya sarasvatīm |
+kālajñānaṁ pravakṣyāmi lagadhasya mahātmanaḥ || 2
+en: Astronomy. Being pure, I bow my head to Prajāpati, who is made of the five-year cycle, who presides over the yuga, and whose limbs are the day, the season, the half-year and the month. Bowing my head to Time and saluting Sarasvatī, I shall declare the knowledge of time taught by the great soul Lagadha.
+tel: జ్యౌతిషము. శుచియై, పంచసంవత్సరమయుడైన, యుగమునకు అధ్యక్షుడైన, దినము, ఋతువు, అయనము, మాసము అంగములుగా కలిగిన ప్రజాపతికి శిరసా నమస్కరించుచున్నాను. కాలమునకు శిరసా నమస్కరించి, సరస్వతిని అభివాదనము చేసి, మహాత్ముడైన లగధుని కాలజ్ఞానమును చెప్పుచున్నాను.
+hi: ज्यौतिष। शुचि होकर मैं पञ्चसंवत्सरमय, युगके अध्यक्ष तथा दिन, ऋतु, अयन और मासरूप अङ्गोंवाले प्रजापतिको सिरसे प्रणाम करता हूँ। कालको सिरसे प्रणाम कर और सरस्वतीका अभिवादन कर, महात्मा लगधके कालज्ञानको कहता हूँ।
+
+--- unit 28 | section: Recitation of the Vedāṅgas and the Śāstras ---
+vidhi:
+Pūrvamīmāṁsā. The source gives the opening of two works, and names each.
+deva:
+पूर्वमीमांसा –
+(भारद्वाज कर्म मीमांसा)
+अथातो धर्मजिज्ञासा | धारको धर्मः |
+(जैमिनीय कर्म मीमांसा)
+अथातो धर्मजिज्ञासा | चोदना लक्षणोऽर्थो धर्मः |
+iast:
+pūrvamīmāṁsā –
+(bhāradvāja karma mīmāṁsā)
+athāto dharmajijñāsā | dhārako dharmaḥ |
+(jaiminīya karma mīmāṁsā)
+athāto dharmajijñāsā | codanā lakṣaṇo'rtho dharmaḥ |
+en: Pūrvamīmāṁsā. From the Karmamīmāṁsā of Bhāradvāja: Now, therefore, the enquiry into dharma. Dharma is that which upholds. From the Karmamīmāṁsā of Jaimini: Now, therefore, the enquiry into dharma. Dharma is that good which is marked out by the command of scripture.
+tel: పూర్వమీమాంస. భారద్వాజ కర్మమీమాంస: ఇప్పుడు ధర్మజిజ్ఞాస. ధర్మము ధరించునది. జైమినీయ కర్మమీమాంస: ఇప్పుడు ధర్మజిజ్ఞాస. చోదనయే లక్షణముగా కలిగిన అర్థము ధర్మము.
+hi: पूर्वमीमांसा। भारद्वाज कर्ममीमांसा: अब धर्मकी जिज्ञासा। धर्म वह है जो धारण करता है। जैमिनीय कर्ममीमांसा: अब धर्मकी जिज्ञासा। जिसका लक्षण चोदना है, वह अर्थ धर्म है।
+
+--- unit 29 | section: Recitation of the Vedāṅgas and the Śāstras ---
+vidhi:
+Uttaramīmāṁsā, which is the enquiry into Brahman. The source gives the first four sūtras of the Brahmasūtra.
+deva:
+उत्तर (ब्रह्म) मीमांसा –
+अथातो ब्रह्मजिज्ञासा | जन्माद्यस्य यतः | शास्त्रयोनित्वात् | तत्तु समन्वयात् ||
+iast:
+uttara (brahma) mīmāṁsā –
+athāto brahmajijñāsā | janmādyasya yataḥ | śāstrayonitvāt | tattu samanvayāt ||
+en: Uttaramīmāṁsā, or Brahmamīmāṁsā. Now, therefore, the enquiry into Brahman. Brahman is that from which the birth of this world and all else proceeds. Brahman is known because scripture is the means of knowing him. And that is settled by the agreement of all the texts.
+tel: ఉత్తర (బ్రహ్మ) మీమాంస. ఇప్పుడు బ్రహ్మజిజ్ఞాస. ఈ జగత్తుయొక్క జన్మము మొదలైనవి ఎవనినుండి కలుగునో అతడే బ్రహ్మము. శాస్త్రమే ప్రమాణమగుటవలన అతడు తెలియబడును. అది సమస్త వాక్యముల సమన్వయమువలన నిశ్చయమగును.
+hi: उत्तर (ब्रह्म) मीमांसा। अब ब्रह्मकी जिज्ञासा। इस जगत्का जन्म आदि जिससे होता है, वही ब्रह्म है। शास्त्र ही प्रमाण होनेसे वह जाना जाता है। और वह सब वाक्योंके समन्वयसे निश्चित होता है।
+
+--- unit 30 | section: Recitation of the Vedāṅgas and the Śāstras ---
+vidhi:
+Nyāya. The source names the Nyāyasūtra of Gautama.
+deva:
+न्यायदर्शनम् –
+(गौतम न्यायसूत्रम्)
+प्रमाण प्रमेय संशय प्रयोजन दृष्टान्त सिद्धान्तावयव तर्क निर्णय वाद जल्प वितण्डा हेत्वाभास च्छल जति निग्रह स्थानानां तत्त्वज्ञानान्निश्श्रेयसाधिगमः ||
+iast:
+nyāyadarśanam –
+(gautama nyāyasūtram)
+pramāṇa prameya saṁśaya prayojana dṛṣṭānta siddhāntāvayava tarka nirṇaya vāda jalpa vitaṇḍā hetvābhāsa cchala jati nigraha sthānānāṁ tattvajñānānniśśreyasādhigamaḥ ||
+en: Nyāya. From the Nyāyasūtra of Gautama: The highest good is reached through the true knowledge of sixteen things. They are the means of knowledge, the object of knowledge, doubt, purpose, example, established doctrine, the members of an argument, reasoning, ascertainment, debate, wrangling, cavil, fallacy, quibble, false objection and the points of defeat.
+tel: న్యాయదర్శనము. గౌతమ న్యాయసూత్రము: ప్రమాణము, ప్రమేయము, సంశయము, ప్రయోజనము, దృష్టాంతము, సిద్ధాంతము, అవయవము, తర్కము, నిర్ణయము, వాదము, జల్పము, వితండము, హేత్వాభాసము, ఛలము, జాతి, నిగ్రహస్థానము — వీటి తత్త్వజ్ఞానమువలన నిశ్శ్రేయసము లభించును.
+hi: न्यायदर्शन। गौतम न्यायसूत्र: प्रमाण, प्रमेय, संशय, प्रयोजन, दृष्टान्त, सिद्धान्त, अवयव, तर्क, निर्णय, वाद, जल्प, वितण्डा, हेत्वाभास, छल, जाति और निग्रहस्थान — इनके तत्त्वज्ञानसे निःश्रेयसकी प्राप्ति होती है।
+
+--- unit 31 | section: Recitation of the Vedāṅgas and the Śāstras ---
+vidhi:
+Vaiśeṣika.
+deva:
+वैशेषिक दर्शनम् –
+अथातो धर्मं व्याख्यास्यामः | यतोऽभ्युदय निश्श्रेयस सिद्धिः स धर्मः ||
+iast:
+vaiśeṣika darśanam –
+athāto dharmaṁ vyākhyāsyāmaḥ | yato'bhyudaya niśśreyasa siddhiḥ sa dharmaḥ ||
+en: Vaiśeṣika. Now, therefore, we shall explain dharma. Dharma is that from which prosperity and the highest good are attained.
+tel: వైశేషిక దర్శనము. ఇప్పుడు ధర్మమును వ్యాఖ్యానించుచున్నాము. అభ్యుదయమును, నిశ్శ్రేయసమును ఎవనివలన సిద్ధించునో అది ధర్మము.
+hi: वैशेषिक दर्शन। अब हम धर्मकी व्याख्या करते हैं। जिससे अभ्युदय और निःश्रेयसकी सिद्धि होती है, वह धर्म है।
+
+--- unit 32 | section: Recitation of the Vedāṅgas and the Śāstras ---
+vidhi:
+Yoga.
+deva:
+योग दर्शनम् –
+अथ योगानुशासनम् | योगश्चित्तवृत्ति निरोधः ||
+iast:
+yoga darśanam –
+atha yogānuśāsanam | yogaścittavṛtti nirodhaḥ ||
+en: Yoga. Now the teaching of yoga. Yoga is the stilling of the movements of the mind.
+tel: యోగ దర్శనము. ఇప్పుడు యోగానుశాసనము. యోగము చిత్తవృత్తుల నిరోధము.
+hi: योग दर्शन। अब योगका अनुशासन। योग चित्तवृत्तियोंका निरोध है।
+
+--- unit 33 | section: Recitation of the Vedāṅgas and the Śāstras ---
+vidhi:
+Sāṁkhya.
+deva:
+सांख्य दर्शनम् –
+अथ त्रिविधदुःखात्यन्त निवृत्तिरत्यन्त पुरुषार्थः |
+न दृष्टाद्दृष्टात्तत्सिद्धिर्निवृत्तेऽप्यनुवृत्ति दर्शनात् ||
+iast:
+sāṁkhya darśanam –
+atha trividhaduḥkhātyanta nivṛttiratyanta puruṣārthaḥ |
+na dṛṣṭāddṛṣṭāttatsiddhirnivṛtte'pyanuvṛtti darśanāt ||
+en: Sāṁkhya. Now, the complete ending of the three kinds of suffering is the complete goal of man. Visible means do not accomplish it, because suffering is seen to return even after it has ceased.
+tel: సాంఖ్య దర్శనము. ఇప్పుడు — త్రివిధ దుఃఖముల అత్యంత నివృత్తియే అత్యంత పురుషార్థము. దృష్టమైన ఉపాయములవలన అది సిద్ధించదు, ఎందుకనగా నివృత్తి కలిగిన తరువాతను అనువృత్తి కనబడుచున్నది.
+hi: सांख्य दर्शन। अब — तीन प्रकारके दुःखोंकी अत्यन्त निवृत्ति ही अत्यन्त पुरुषार्थ है। दृष्ट उपायोंसे वह सिद्ध नहीं होती, क्योंकि निवृत्तिके बाद भी अनुवृत्ति देखी जाती है।
+
+--- unit 34 | section: Recitation of the Vedāṅgas and the Śāstras ---
+vidhi:
+Smṛti. The source names the Manusmṛti.
+deva:
+स्मृतिः –
+(मनुस्मृति)
+मनुमेकाग्रमासीनमभिगम्य महर्षयः |
+प्रतिपूज्य यथान्यायमिदं वचनमब्रुवन् ||
+iast:
+smṛtiḥ –
+(manusmṛti)
+manumekāgramāsīnamabhigamya maharṣayaḥ |
+pratipūjya yathānyāyamidaṁ vacanamabruvan ||
+en: Smṛti. From the Manusmṛti: Approaching Manu, who was seated with his mind fixed upon one point, the great sages honoured him as was fitting and spoke these words.
+tel: స్మృతి. మనుస్మృతి: ఏకాగ్రుడై కూర్చుండియున్న మనువును సమీపించి, మహర్షులు యథాన్యాయముగా ప్రతిపూజ చేసి ఈ మాటను పలికిరి.
+hi: स्मृति। मनुस्मृति: एकाग्र होकर बैठे हुए मनुके पास जाकर महर्षियोंने यथान्याय उनका पूजन किया और यह वचन कहा।
+
+--- unit 35 | section: Recitation of the Vedāṅgas and the Śāstras ---
+vidhi:
+The Rāmāyaṇa. This is the first verse of the work.
+deva:
+रामायणम् –
+तपःस्वाध्यायनिरतं तपस्वी वाग्विदां वरम् |
+नारदं परिपप्रच्छ वाल्मीकिर्मुनिपुंगवम् ||
+iast:
+rāmāyaṇam –
+tapaḥsvādhyāyanirataṁ tapasvī vāgvidāṁ varam |
+nāradaṁ paripapraccha vālmīkirmunipuṁgavam ||
+en: The Rāmāyaṇa. Vālmīki the ascetic asked Nārada, the foremost of sages and the best among those who know speech, who was devoted to austerity and to the study of the Veda.
+tel: రామాయణము. తపస్సునందును స్వాధ్యాయమునందును నిరతుడైన, వాక్కు తెలిసినవారిలో శ్రేష్ఠుడైన, మునిపుంగవుడైన నారదుని తపస్వియైన వాల్మీకి అడిగెను.
+hi: रामायण। तप और स्वाध्यायमें लगे हुए, वाणीके ज्ञाताओंमें श्रेष्ठ, मुनिपुङ्गव नारदसे तपस्वी वाल्मीकिने पूछा।
+
+--- unit 36 | section: Recitation of the Vedāṅgas and the Śāstras ---
+vidhi:
+The Mahābhārata. This is the opening verse of the work.
+deva:
+महाभारतम् –
+नारायणं नमस्कृत्य नरं चैव नरोत्तमम् |
+देवीं सरस्वतीं व्यासं ततो जयमुदीरयेत् ||
+iast:
+mahābhāratam –
+nārāyaṇaṁ namaskṛtya naraṁ caiva narottamam |
+devīṁ sarasvatīṁ vyāsaṁ tato jayamudīrayet ||
+en: The Mahābhārata. Having saluted Nārāyaṇa, and Nara the best of men, and the goddess Sarasvatī, and Vyāsa, one should then proclaim the Jaya.
+tel: మహాభారతము. నారాయణునకు, నరోత్తముడైన నరునకు, సరస్వతీ దేవికి, వ్యాసునకు నమస్కరించి, అటుపిమ్మట జయమును ఉదీరించవలెను.
+hi: महाभारत। नारायणको, नरोत्तम नरको, देवी सरस्वतीको और व्यासको नमस्कार करके तदनन्तर जयका उच्चारण करना चाहिये।
+
+--- unit 37 | section: Recitation of the Vedāṅgas and the Śāstras ---
+vidhi:
+The Bhagavadgītā. This is its first verse, spoken by Dhṛtarāṣṭra.
+deva:
+भगवद्गीता –
+धर्मक्षेत्रे कुरुक्षेत्रे समवेता युयुत्सवः |
+मामकाः पांडवाश्चैव किमकुर्वत संजय ||
+iast:
+bhagavadgītā –
+dharmakṣetre kurukṣetre samavetā yuyutsavaḥ |
+māmakāḥ pāṁḍavāścaiva kimakurvata saṁjaya ||
+en: The Bhagavadgītā. Sañjaya, when they had gathered together on the field of dharma at Kurukṣetra, eager to fight, what did my people and the sons of Pāṇḍu do?
+tel: భగవద్గీత. సంజయా, ధర్మక్షేత్రమైన కురుక్షేత్రమునందు యుద్ధమునకు సిద్ధముగా సమకూడిన నా వారును, పాండవులును ఏమి చేసిరి?
+hi: भगवद्गीता। हे सञ्जय, धर्मक्षेत्र कुरुक्षेत्रमें युद्धकी इच्छासे एकत्र हुए मेरे लोगोंने और पाण्डवोंने क्या किया?
+
+--- unit 38 | section: Recitation of the Vedāṅgas and the Śāstras ---
+vidhi:
+The Bhāgavata. This is its first verse.
+deva:
+भागवतम् –
+जन्माद्यस्य यतोऽन्वयादितरतश्चार्थेष्वभिज्ञः स्वराट्
+तेने ब्रह्म हृदाय आदिकवये मुह्यंति यत्सूरयः |
+तेजोवारिमृदां यथा विनिमयो यत्र त्रिसर्गोऽमृषा
+धाम्ना स्वेन सदा निरस्तकुहकं सत्यं परं धीमहि ||
+iast:
+bhāgavatam –
+janmādyasya yato'nvayāditarataścārtheṣvabhijñaḥ svarāṭ
+tene brahma hṛdāya ādikavaye muhyaṁti yatsūrayaḥ |
+tejovārimṛdāṁ yathā vinimayo yatra trisargo'mṛṣā
+dhāmnā svena sadā nirastakuhakaṁ satyaṁ paraṁ dhīmahi ||
+en: The Bhāgavata. We meditate upon the highest truth. From him comes the birth of this world and all else. He knows all things, both directly and through inference. He shines by his own light. He taught the Veda to the first poet through his heart. Even the wise are bewildered about him. In him the threefold creation is not false, just as the mutual exchange of fire, water and earth is not false. By his own splendour he is for ever free from all deceit.
+tel: భాగవతము. ఈ జగత్తుయొక్క జన్మము మొదలైనవి ఎవనినుండి కలుగునో, ఎవడు అన్వయముచేతను, ఇతరముచేతను అర్థములను ఎరిగినవాడో, ఎవడు స్వరాట్టో, ఎవడు ఆదికవికి హృదయముద్వారా బ్రహ్మమును ఉపదేశించెనో, ఎవనియందు సూరులును మోహము చెందుదురో, తేజము, జలము, మృత్తికల పరస్పర వినిమయమువలె ఎవనియందు త్రిసర్గము మిథ్య కాదో, ఎవడు తన ధామముచేత ఎల్లప్పుడును కుహకము తొలగినవాడో — ఆ పరమ సత్యమును ధ్యానించుచున్నాము.
+hi: भागवत। इस जगत्का जन्म आदि जिससे होता है, जो अन्वय और व्यतिरेकसे सब अर्थोंको जानता है, जो स्वराट् है, जिसने आदिकविको हृदयके द्वारा ब्रह्मका उपदेश दिया, जिसके विषयमें सूरि भी मोहित होते हैं, तेज, जल और मृत्तिकाके परस्पर विनिमयकी तरह जिसमें त्रिसर्ग मिथ्या नहीं है, और जो अपने धामसे सदा कुहकसे रहित है — उस परम सत्यका हम ध्यान करते हैं।
+
+--- unit 39 | section: Recitation of the Vedāṅgas and the Śāstras ---
+vidhi:
+Tantra.
+deva:
+तंत्रम् –
+आचारमूलाः जातिः स्यादाचारः शास्त्रमूलकः |
+वेदवाक्यं शास्त्रमूलं वेदः साधकमूलकः ||
+साधकश्च क्रियामूलः क्रियापि फलमूलिका |
+फलमूलं सुखं चैव सुखमानंदमूलकम् ||
+iast:
+taṁtram –
+ācāramūlāḥ jātiḥ syādācāraḥ śāstramūlakaḥ |
+vedavākyaṁ śāstramūlaṁ vedaḥ sādhakamūlakaḥ ||
+sādhakaśca kriyāmūlaḥ kriyāpi phalamūlikā |
+phalamūlaṁ sukhaṁ caiva sukhamānaṁdamūlakam ||
+en: Tantra. Birth has conduct for its root, and conduct has the śāstra for its root. The word of the Veda is the root of the śāstra, and the Veda has the practitioner for its root. The practitioner has action for his root, and action in turn has its fruit for its root. The root of the fruit is happiness, and happiness has bliss for its root.
+tel: తంత్రము. జాతికి ఆచారము మూలము; ఆచారమునకు శాస్త్రము మూలము. శాస్త్రమునకు వేదవాక్యము మూలము; వేదమునకు సాధకుడు మూలము. సాధకునికి క్రియ మూలము; క్రియకును ఫలము మూలము. ఫలమునకు సుఖము మూలము; సుఖమునకు ఆనందము మూలము.
+hi: तन्त्र। जातिका मूल आचार है; आचारका मूल शास्त्र है। शास्त्रका मूल वेदवाक्य है; वेदका मूल साधक है। साधकका मूल क्रिया है; क्रियाका मूल भी फल है। फलका मूल सुख है; सुखका मूल आनन्द है।
+
+--- unit 40 | section: The closing mantra ---
+vidhi:
+The closing mantra. Recite it three times. Confirmed word for word, accents included, against the accented Taittirīya Āraṇyaka 2, which is the Svādhyāya Brāhmaṇa — the chapter that lays down this rite.
+deva:
+|| अथ परिधानीय मंत्रम् ||
+ओं नमो॒ ब्रह्म॑णे॒ नमो॑ अस्त्व॒ग्नये॒ नम॑ः पृथि॒व्यै नम॒ ओष॑धीभ्यः |
+नमो॑ वा॒चे नमो॑ वा॒चस्पत॑ये॒ नमो॒ विष्ण॑वे बृह॒ते क॑रोमि ||
+ओं शान्ति॒श्शान्ति॒श्शान्ति॑ः | एवं त्रिः | ओं ओं ओम् ||
+iast:
+|| atha paridhānīya maṁtram ||
+oṁ namo brahmaṇe namo astvagnaye namaḥ pṛthivyai nama oṣadhībhyaḥ |
+namo vāce namo vācaspataye namo viṣṇave bṛhate karomi ||
+oṁ śāntiśśāntiśśāntiḥ | evaṁ triḥ | oṁ oṁ om ||
+en: Now the closing mantra. Oṁ. Salutation to Brahman. Salutation be to Agni. Salutation to the earth. Salutation to the plants. Salutation to speech. Salutation to the lord of speech. I make salutation to Viṣṇu, the great one. Oṁ. Peace, peace, peace. So three times. Oṁ, Oṁ, Oṁ.
+tel: ఇప్పుడు పరిధానీయ మంత్రము. ఓం. బ్రహ్మమునకు నమస్కారము. అగ్నికి నమస్కారము అగుగాక. పృథివికి నమస్కారము. ఓషధులకు నమస్కారము. వాక్కునకు నమస్కారము. వాచస్పతికి నమస్కారము. బృహత్తైన విష్ణువునకు నమస్కారము చేయుచున్నాను. ఓం. శాంతి, శాంతి, శాంతి. ఇట్లు మూడు సార్లు. ఓం ఓం ఓం.
+hi: अब परिधानीय मन्त्र। ओं। ब्रह्मको नमस्कार। अग्निको नमस्कार हो। पृथ्वीको नमस्कार। ओषधियोंको नमस्कार। वाणीको नमस्कार। वाचस्पतिको नमस्कार। बृहत् विष्णुको नमस्कार करता हूँ। ओं। शान्ति, शान्ति, शान्ति। इस प्रकार तीन बार। ओं ओं ओं।
+
+--- unit 41 | section: The closing mantra ---
+vidhi:
+Recite this mantra and clean the hand with water. Then sip water three times. The second half is confirmed word for word, accents included, in the Taittirīya Brāhmaṇa 3.10, where it stands beside the mantra of purification with which this rite opened.
+deva:
+ओं भूर्भुव॒स्सुव॑स्स॒त्यं तप॑श्श्र॒द्धाया᳚ं जुहोमि |
+वृष्टि॑रसि॒ वृश्च॑मे पा॒प्मान॒मृता᳚त्स॒त्यमुपा॑गाम् ||
+त्रिराचामेत् ||
+iast:
+oṁ bhūrbhuvassuvassatyaṁ tapaśśraddhāyāṁ juhomi |
+vṛṣṭirasi vṛścame pāpmānamṛtātsatyamupāgām ||
+trirācāmet ||
+en: Oṁ. Bhūḥ, bhuvaḥ, suvaḥ. I offer truth and austerity into faith. You are the rain; cut away my sin. From sacred order I have come to truth. Let him sip water three times.
+tel: ఓం. భూః, భువః, సువః. సత్యమును, తపస్సును శ్రద్ధయందు హోమము చేయుచున్నాను. నీవు వృష్టి; నా పాపమును ఛేదించుము. ఋతమునుండి సత్యమునకు చేరితిని. మూడు సార్లు ఆచమించవలెను.
+hi: ओं। भूः, भुवः, सुवः। सत्य और तपको श्रद्धामें हवन करता हूँ। तुम वृष्टि हो; मेरे पापको काट दो। ऋतसे सत्यको प्राप्त हुआ। तीन बार आचमन करे।
+
+--- unit 42 | section: The daily tarpaṇa ---
+vidhi:
+The daily tarpaṇa, which is the second half of the rite. Do ācamana, then prāṇāyāma, and state the resolve a second time.
+deva:
+|| नित्य तर्पण विधिः ||
+प्राणानायम्य ||
+पुनः संकल्पं –
+पूर्वोक्त एवं गुण विशेषण विशिष्टायां शुभतिथौ श्रीपरमेश्वरमुद्दिश्य श्रीपरमेश्वर प्रीत्यर्थं ब्रह्मयज्ञांग देवर्षिपितॄनुद्दिश्य देवर्षिपितृ प्रीत्यर्थं देवर्षिपितृ तर्पणं करिष्ये ||
+iast:
+|| nitya tarpaṇa vidhiḥ ||
+prāṇānāyamya ||
+punaḥ saṁkalpaṁ –
+pūrvokta evaṁ guṇa viśeṣaṇa viśiṣṭāyāṁ śubhatithau śrīparameśvaramuddiśya śrīparameśvara prītyarthaṁ brahmayajñāṁga devarṣipitṝnuddiśya devarṣipitṛ prītyarthaṁ devarṣipitṛ tarpaṇaṁ kariṣye ||
+en: The rule of the daily tarpaṇa. Having performed prāṇāyāma. The resolve again. The tithi today is auspicious and has the attributes stated above. With the Supreme Lord in view, and for his pleasure, I now make my resolve. I have the gods, the sages and the forefathers in view, and I act for their pleasure. I shall offer water to the gods, to the sages and to the forefathers. This is done as a limb of the brahmayajña.
+tel: నిత్య తర్పణ విధి. ప్రాణాయామము చేసి. తిరిగి సంకల్పము. పైన చెప్పిన గుణవిశేషణములచేత విశిష్టమైన శుభతిథియందు శ్రీపరమేశ్వరుని ఉద్దేశించి, శ్రీపరమేశ్వరుని ప్రీతికొరకు, బ్రహ్మయజ్ఞాంగముగా దేవతలను, ఋషులను, పితృదేవతలను ఉద్దేశించి, వారి ప్రీతికొరకు దేవర్షిపితృ తర్పణమును చేయుచున్నాను.
+hi: नित्य तर्पणकी विधि। प्राणायाम करके। पुनः संकल्प। पूर्वोक्त गुण-विशेषणोंसे विशिष्ट शुभ तिथिमें श्रीपरमेश्वरको उद्दिष्ट करके, उनकी प्रीतिके लिये, ब्रह्मयज्ञके अङ्गरूपमें देवताओं, ऋषियों और पितरोंको उद्दिष्ट करके, उनकी प्रीतिके लिये देव-ऋषि-पितृ तर्पण करता हूँ।
+
+--- unit 43 | section: The daily tarpaṇa ---
+vidhi:
+Prayer, said before the water is offered.
+deva:
+प्रार्थन –
+ब्रह्मादयः सुराः सर्वे ऋषयः सनकादयः |
+आगच्छंतु महाभागा ब्रह्मांडोदरवर्तिनः ||
+iast:
+prārthana –
+brahmādayaḥ surāḥ sarve ṛṣayaḥ sanakādayaḥ |
+āgacchaṁtu mahābhāgā brahmāṁḍodaravartinaḥ ||
+en: Prayer. May Brahmā and all the gods, and the sages beginning with Sanaka, the greatly blessed ones who dwell within the universe, come here.
+tel: ప్రార్థన. బ్రహ్మ మొదలైన దేవతలందరును, సనకాది ఋషులును, బ్రహ్మాండోదరమునందు నివసించు మహాభాగ్యవంతులును ఇచ్చటికి వచ్చుదురుగాక.
+hi: प्रार्थना। ब्रह्मा आदि सब देवता, सनक आदि ऋषि तथा ब्रह्माण्डके भीतर निवास करनेवाले महाभाग यहाँ आवें।
+
+--- unit 44 | section: The daily tarpaṇa ---
+vidhi:
+Offering of water to the gods. Wear the yajñopavīta in the savya position, over the left shoulder. Offer the water once for each name, through the deva-tīrtha, which is the tips of the fingers.
+deva:
+देव तर्पणं –
+ब्रह्मादयो ये देवाः तान् देवाग्ंस्तर्पयामि |
+सर्वान् देवाग्ंस्तर्पयामि |
+सर्वान् देवगणाग्ंस्तर्पयामि |
+सर्वाः देवपत्नीस्तर्पयामि |
+सर्वान् देवपुत्राग्ंस्तर्पयामि |
+सर्वान् देवपौत्राग्ंस्तर्पयामि |
+भूर्देवाग्ंस्तर्पयामि |
+भुवर्देवाग्ंस्तर्पयामि |
+सुवर्देवाग्ंस्तर्पयामि |
+भूर्भुवस्सुवर्देवाग्ंस्तर्पयामि |
+iast:
+deva tarpaṇaṁ –
+brahmādayo ye devāḥ tān devāgṁstarpayāmi |
+sarvān devāgṁstarpayāmi |
+sarvān devagaṇāgṁstarpayāmi |
+sarvāḥ devapatnīstarpayāmi |
+sarvān devaputrāgṁstarpayāmi |
+sarvān devapautrāgṁstarpayāmi |
+bhūrdevāgṁstarpayāmi |
+bhuvardevāgṁstarpayāmi |
+suvardevāgṁstarpayāmi |
+bhūrbhuvassuvardevāgṁstarpayāmi |
+en: 1. Offering of water to the gods. To Brahmā and to all those who are gods — to them, the gods, I offer water. To all the gods I offer water. To all the hosts of the gods I offer water. To all the wives of the gods I offer water. To all the sons of the gods I offer water. To all the grandsons of the gods I offer water. To the gods of bhūḥ I offer water. To the gods of bhuvaḥ I offer water. To the gods of suvaḥ I offer water. To the gods of bhūḥ, bhuvaḥ and suvaḥ I offer water.
+tel: ౧. దేవ తర్పణము. బ్రహ్మ మొదలైన దేవతలందరికి — ఆ దేవతలకు తర్పణము ఇచ్చుచున్నాను. దేవతలందరికి తర్పణము ఇచ్చుచున్నాను. దేవగణములందరికి తర్పణము ఇచ్చుచున్నాను. దేవపత్నులందరికి తర్పణము ఇచ్చుచున్నాను. దేవపుత్రులందరికి తర్పణము ఇచ్చుచున్నాను. దేవపౌత్రులందరికి తర్పణము ఇచ్చుచున్నాను. భూః లోకపు దేవతలకు తర్పణము ఇచ్చుచున్నాను. భువః లోకపు దేవతలకు తర్పణము ఇచ్చుచున్నాను. సువః లోకపు దేవతలకు తర్పణము ఇచ్చుచున్నాను. భూర్భువస్సువః లోకముల దేవతలకు తర్పణము ఇచ్చుచున్నాను.
+hi: १. देव तर्पण। ब्रह्मा आदि जो देवता हैं — उन देवताओंको तर्पण देता हूँ। सब देवताओंको तर्पण देता हूँ। सब देवगणोंको तर्पण देता हूँ। सब देवपत्नियोंको तर्पण देता हूँ। सब देवपुत्रोंको तर्पण देता हूँ। सब देवपौत्रोंको तर्पण देता हूँ। भूः लोकके देवताओंको तर्पण देता हूँ। भुवः लोकके देवताओंको तर्पण देता हूँ। सुवः लोकके देवताओंको तर्पण देता हूँ। भूर्भुवःसुवः लोकोंके देवताओंको तर्पण देता हूँ।
+
+--- unit 45 | section: The daily tarpaṇa ---
+vidhi:
+Offering of water to the sages. Wear the yajñopavīta in the nivīti position, hanging in front like a garland. Offer the water twice for each name, through the ṛṣi-tīrtha. The second witness adds that the worshipper should face north here.
+deva:
+ऋषि तर्पणं –
+कृष्णद्वैपायनादयो ये ऋषयः तान् ऋषीग्ंस्तर्पयामि तर्पयामि |
+सर्वान् ऋषीग्ंस्तर्पयामि तर्पयामि |
+सर्वान् ऋषिगणाग्ंस्तर्पयामि तर्पयामि |
+सर्वाः ऋषिपत्नीस्तर्पयामि तर्पयामि |
+सर्वान् ऋषिपुत्राग्ंस्तर्पयामि तर्पयामि |
+सर्वान् ऋषिपौत्राग्ंस्तर्पयामि तर्पयामि |
+भूरृषीग्ंस्तर्पयामि तर्पयामि |
+भुवरृषीग्ंस्तर्पयामि तर्पयामि |
+सुवरृषीग्ंस्तर्पयामि तर्पयामि |
+भूर्भुवस्सुवरृषीग्ं स्तर्पयामि तर्पयामि |
+iast:
+ṛṣi tarpaṇaṁ –
+kṛṣṇadvaipāyanādayo ye ṛṣayaḥ tān ṛṣīgṁstarpayāmi tarpayāmi |
+sarvān ṛṣīgṁstarpayāmi tarpayāmi |
+sarvān ṛṣigaṇāgṁstarpayāmi tarpayāmi |
+sarvāḥ ṛṣipatnīstarpayāmi tarpayāmi |
+sarvān ṛṣiputrāgṁstarpayāmi tarpayāmi |
+sarvān ṛṣipautrāgṁstarpayāmi tarpayāmi |
+bhūrṛṣīgṁstarpayāmi tarpayāmi |
+bhuvarṛṣīgṁstarpayāmi tarpayāmi |
+suvarṛṣīgṁstarpayāmi tarpayāmi |
+bhūrbhuvassuvarṛṣīgṁ starpayāmi tarpayāmi |
+en: 2. Offering of water to the sages. To Kṛṣṇa Dvaipāyana and to all those who are sages — to them, the sages, I offer water, I offer water. To all the sages I offer water, I offer water. To all the hosts of the sages I offer water, I offer water. To all the wives of the sages I offer water, I offer water. To all the sons of the sages I offer water, I offer water. To all the grandsons of the sages I offer water, I offer water. To the sages of bhūḥ I offer water, I offer water. To the sages of bhuvaḥ I offer water, I offer water. To the sages of suvaḥ I offer water, I offer water. To the sages of bhūḥ, bhuvaḥ and suvaḥ I offer water, I offer water.
+tel: ౨. ఋషి తర్పణము. కృష్ణద్వైపాయనుడు మొదలైన ఋషులందరికి — ఆ ఋషులకు రెండు సార్లు తర్పణము ఇచ్చుచున్నాను. ఋషులందరికి రెండు సార్లు తర్పణము ఇచ్చుచున్నాను. ఋషిగణములందరికి రెండు సార్లు. ఋషిపత్నులందరికి రెండు సార్లు. ఋషిపుత్రులందరికి రెండు సార్లు. ఋషిపౌత్రులందరికి రెండు సార్లు. భూః లోకపు ఋషులకు రెండు సార్లు. భువః లోకపు ఋషులకు రెండు సార్లు. సువః లోకపు ఋషులకు రెండు సార్లు. భూర్భువస్సువః లోకముల ఋషులకు రెండు సార్లు తర్పణము ఇచ్చుచున్నాను.
+hi: २. ऋषि तर्पण। कृष्णद्वैपायन आदि जो ऋषि हैं — उन ऋषियोंको दो बार तर्पण देता हूँ। सब ऋषियोंको दो बार तर्पण देता हूँ। सब ऋषिगणोंको दो बार। सब ऋषिपत्नियोंको दो बार। सब ऋषिपुत्रोंको दो बार। सब ऋषिपौत्रोंको दो बार। भूः लोकके ऋषियोंको दो बार। भुवः लोकके ऋषियोंको दो बार। सुवः लोकके ऋषियोंको दो बार। भूर्भुवःसुवः लोकोंके ऋषियोंको दो बार तर्पण देता हूँ।
+
+--- unit 46 | section: The daily tarpaṇa ---
+vidhi:
+Offering of water to the sages of the kāṇḍas. Release the water twice for each name, in the same position.
+deva:
+कंडर्षि तर्पणं –
+प्रजापतिं कांडर्षिं तर्पयामि तर्पयामि |
+सोमं कांडर्षिं तर्पयामि तर्पयामि |
+अग्निं कांडर्षिं तर्पयामि तर्पयामि |
+विश्वान् देवान् कांडर्षीग्ंस्तर्पयामि तर्पयामि |
+साग्ंहितीर्देवता उपनिषदस्तर्पयामि तर्पयामि |
+याज्ञिकीर्देवता उपनिषदस्तर्पयामि तर्पयामि |
+वारुणीर्देवता उपनिषदस्तर्पयामि तर्पयामि |
+ब्रह्माणग्ं स्वयंभुवं तर्पयामि तर्पयामि |
+सदसस्पतिं तर्पयामि तर्पयामि |
+iast:
+kaṁḍarṣi tarpaṇaṁ –
+prajāpatiṁ kāṁḍarṣiṁ tarpayāmi tarpayāmi |
+somaṁ kāṁḍarṣiṁ tarpayāmi tarpayāmi |
+agniṁ kāṁḍarṣiṁ tarpayāmi tarpayāmi |
+viśvān devān kāṁḍarṣīgṁstarpayāmi tarpayāmi |
+sāgṁhitīrdevatā upaniṣadastarpayāmi tarpayāmi |
+yājñikīrdevatā upaniṣadastarpayāmi tarpayāmi |
+vāruṇīrdevatā upaniṣadastarpayāmi tarpayāmi |
+brahmāṇagṁ svayaṁbhuvaṁ tarpayāmi tarpayāmi |
+sadasaspatiṁ tarpayāmi tarpayāmi |
+en: Offering of water to the sages of the kāṇḍas. To Prajāpati, the sage of the kāṇḍa, I offer water, I offer water. To Soma, the sage of the kāṇḍa, I offer water, I offer water. To Agni, the sage of the kāṇḍa, I offer water, I offer water. To all the gods, the sages of the kāṇḍas, I offer water, I offer water. To the deities of the Sāṁhitī Upaniṣads I offer water, I offer water. To the deities of the Yājñikī Upaniṣads I offer water, I offer water. To the deities of the Vāruṇī Upaniṣads I offer water, I offer water. To Brahmā the self-born I offer water, I offer water. To Sadasaspati I offer water, I offer water.
+tel: కాండర్షి తర్పణము. ప్రజాపతియైన కాండర్షికి రెండు సార్లు తర్పణము ఇచ్చుచున్నాను. సోముడైన కాండర్షికి రెండు సార్లు. అగ్నియైన కాండర్షికి రెండు సార్లు. కాండర్షులైన విశ్వదేవతలకు రెండు సార్లు. సాంహితీ ఉపనిషత్తుల దేవతలకు రెండు సార్లు. యాజ్ఞికీ ఉపనిషత్తుల దేవతలకు రెండు సార్లు. వారుణీ ఉపనిషత్తుల దేవతలకు రెండు సార్లు. స్వయంభువైన బ్రహ్మకు రెండు సార్లు. సదసస్పతికి రెండు సార్లు తర్పణము ఇచ్చుచున్నాను.
+hi: काण्डर्षि तर्पण। काण्डर्षि प्रजापतिको दो बार तर्पण देता हूँ। काण्डर्षि सोमको दो बार। काण्डर्षि अग्निको दो बार। काण्डर्षिरूप विश्वदेवताओंको दो बार। सांहिती उपनिषदोंके देवताओंको दो बार। याज्ञिकी उपनिषदोंके देवताओंको दो बार। वारुणी उपनिषदोंके देवताओंको दो बार। स्वयम्भू ब्रह्माको दो बार। सदसस्पतिको दो बार तर्पण देता हूँ।
+
+--- unit 47 | section: The daily tarpaṇa ---
+vidhi:
+Offering of water to the forefathers. Wear the yajñopavīta in the prācīnāvīti position, over the right shoulder. Offer the water three times for each name, through the pitṛ-tīrtha. The second witness adds that one whose father is living should not wear the prācīnāvīti, and should hold the yajñopavīta with the right thumb instead.
+deva:
+पितृ तर्पणं –
+सोमः पितृमान् यमोऽंगिरस्वान् अग्निष्वात्ताग्निः कव्यवाहनादयो ये पितरः तान् पितॄग्ंस्तर्पयामि तर्पयामि तर्पयामि |
+सर्वान् पितॄग्ंस्तर्पयामि तर्पयामि तर्पयामि |
+सर्वान् पितृगणाग्ंस्तर्पयामि तर्पयामि तर्पयामि |
+सर्वाः पितृपत्नीस्तर्पयामि तर्पयामि तर्पयामि |
+सर्वान् पितृपुत्राग्ंस्तर्पयामि तर्पयामि तर्पयामि |
+सर्वान् पितृपौत्राग्ंस्तर्पयामि तर्पयामि तर्पयामि |
+भूः पितॄग्ंस्तर्पयामि तर्पयामि तर्पयामि |
+भुवः पितॄग्ंस्तर्पयामि तर्पयामि तर्पयामि |
+सुवः पितॄग्ंस्तर्पयामि तर्पयामि तर्पयामि |
+भूर्भुवस्सुवः पितॄग्ंस्तर्पयामि तर्पयामि तर्पयामि |
+iast:
+pitṛ tarpaṇaṁ –
+somaḥ pitṛmān yamo'ṁgirasvān agniṣvāttāgniḥ kavyavāhanādayo ye pitaraḥ tān pitṝgṁstarpayāmi tarpayāmi tarpayāmi |
+sarvān pitṝgṁstarpayāmi tarpayāmi tarpayāmi |
+sarvān pitṛgaṇāgṁstarpayāmi tarpayāmi tarpayāmi |
+sarvāḥ pitṛpatnīstarpayāmi tarpayāmi tarpayāmi |
+sarvān pitṛputrāgṁstarpayāmi tarpayāmi tarpayāmi |
+sarvān pitṛpautrāgṁstarpayāmi tarpayāmi tarpayāmi |
+bhūḥ pitṝgṁstarpayāmi tarpayāmi tarpayāmi |
+bhuvaḥ pitṝgṁstarpayāmi tarpayāmi tarpayāmi |
+suvaḥ pitṝgṁstarpayāmi tarpayāmi tarpayāmi |
+bhūrbhuvassuvaḥ pitṝgṁstarpayāmi tarpayāmi tarpayāmi |
+en: 3. Offering of water to the forefathers. Soma is with the forefathers. Yama is with Aṅgiras. Agni eats the offering, and Agni carries it. To these, and to all the others who are the forefathers, I offer water, I offer water, I offer water. To all the forefathers I offer water three times. To all the hosts of the forefathers I offer water three times. To all the wives of the forefathers I offer water three times. To all the sons of the forefathers I offer water three times. To all the grandsons of the forefathers I offer water three times. To the forefathers of bhūḥ, of bhuvaḥ, of suvaḥ, and of bhūḥ, bhuvaḥ and suvaḥ together, I offer water three times.
+tel: ౩. పితృ తర్పణము. పితృమంతుడైన సోముడు, అంగిరస్వంతుడైన యముడు, అగ్నిష్వాత్తుడైన అగ్ని, కవ్యవాహనుడు మొదలైన పితృదేవతలందరికి — ఆ పితృదేవతలకు మూడు సార్లు తర్పణము ఇచ్చుచున్నాను. పితృదేవతలందరికి మూడు సార్లు. పితృగణములందరికి మూడు సార్లు. పితృపత్నులందరికి మూడు సార్లు. పితృపుత్రులందరికి మూడు సార్లు. పితృపౌత్రులందరికి మూడు సార్లు. భూః, భువః, సువః లోకముల పితృదేవతలకు, భూర్భువస్సువః లోకముల పితృదేవతలకు మూడు సార్లు తర్పణము ఇచ్చుచున్నాను.
+hi: ३. पितृ तर्पण। पितृमान् सोम, अङ्गिरस्वान् यम, अग्निष्वात्त अग्नि, कव्यवाहन आदि जो पितर हैं — उन पितरोंको तीन बार तर्पण देता हूँ। सब पितरोंको तीन बार। सब पितृगणोंको तीन बार। सब पितृपत्नियोंको तीन बार। सब पितृपुत्रोंको तीन बार। सब पितृपौत्रोंको तीन बार। भूः, भुवः, सुवः लोकोंके पितरोंको तथा भूर्भुवःसुवः तीनों लोकोंके पितरोंको तीन बार तर्पण देता हूँ।
+
+--- unit 48 | section: The daily tarpaṇa ---
+vidhi:
+The offering is made over to the Lord.
+deva:
+अनेन ब्रह्मयज्ञेन देवर्षिपितृ तर्पणेन च भगवान् सर्वात्मकः श्रीपरमेश्वरस्सुप्रीणातु ||
+iast:
+anena brahmayajñena devarṣipitṛ tarpaṇena ca bhagavān sarvātmakaḥ śrīparameśvarassuprīṇātu ||
+en: By this brahmayajña, and by this offering of water to the gods, to the sages and to the forefathers, may the Lord who is the self of all, the Supreme Lord, be well pleased.
+tel: ఈ బ్రహ్మయజ్ఞముచేతను, ఈ దేవర్షిపితృ తర్పణముచేతను సర్వాత్మకుడైన భగవంతుడు, శ్రీపరమేశ్వరుడు సుప్రీతుడగుగాక.
+hi: इस ब्रह्मयज्ञसे तथा इस देव-ऋषि-पितृ तर्पणसे सर्वात्मक भगवान् श्रीपरमेश्वर सुप्रसन्न हों।
+
+--- unit 49 | section: The daily tarpaṇa ---
+vidhi:
+The closing salutation, which ends the rite.
+deva:
+आब्रह्मलोकादाशेषादालोकालोकपर्वतात् |
+येसंति ब्राह्मणादेवास्तेभ्यो नित्यं नमो नमः ||
+iast:
+ābrahmalokādāśeṣādālokālokaparvatāt |
+yesaṁti brāhmaṇādevāstebhyo nityaṁ namo namaḥ ||
+en: From the world of Brahmā to the very last of the worlds, as far as the Lokāloka mountain, to all the brāhmaṇas and the gods who are there, salutation for ever, salutation.
+tel: బ్రహ్మలోకము మొదలుకొని శేషమువరకు, లోకాలోక పర్వతమువరకు ఎందరు బ్రాహ్మణులును దేవతలును కలరో, వారికి నిత్యము నమస్కారము, నమస్కారము.
+hi: ब्रह्मलोकसे लेकर अन्ततक, लोकालोक पर्वततक जितने ब्राह्मण और देवता हैं, उन्हें नित्य नमस्कार है, नमस्कार है।

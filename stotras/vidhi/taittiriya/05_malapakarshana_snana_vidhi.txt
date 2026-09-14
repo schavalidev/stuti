@@ -1,0 +1,471 @@
+Title: Malāpakarṣaṇa Snāna (Taittirīya, Kṛṣṇa-Yajurveda)
+Devanāgarī: मलापकर्षणस्नानम्
+Telugu: మలాపకర్షణ స్నానము
+
+Author: No human author. Vedic. The mantras are the Āpaḥ Sūkta of the Taittirīya Saṁhitā, the brāhmaṇa passage that follows it, the pāvamānī verses of the Taittirīya Brāhmaṇa, a passage of the Taittirīya Āraṇyaka, and a further brāhmaṇa passage. Tradition holds Vedic mantras to have been seen, not composed. The opening and closing lines of offering are traditional and no compiler is named.
+
+Type: vidhi (ritual manual) — not a stotra. Uses the one-extra-field vidhi format of this folder: a `vidhi:` field carrying the ritual instruction, then deva / iast / en / tel / hi.
+
+Recension / śākhā: **Taittirīya (Kṛṣṇa-Yajurveda) — the South Indian form.** The base text prints its own citations `तै.सं.`, `तै.ब्रा.` and `तै.आ.` for every block, and all four were found at those loci in Taittirīya editions. **This file is not the universal form of the rite.** Northern practice bathes the image with other mantras. The corpus's Mādhyandina material is in `../madhyandina/`, and the two traditions are not collated against each other. The sandhyāvandana of this same tradition is at `01_krishna_yajurveda_sandhyavandanam.txt`, its brahmayajña at `02_brahma_yajna_vidhi.txt`, its yajñopavīta rite at `03_yajnopavita_dharana_vidhi.txt` and the Mahānyāsa at `04_mahanyasa_vidhi.txt`.
+
+Accent: **present throughout — 650 marks, counted in this finished file: 246 udātta `॑` (U+0951), 382 anudātta `॒` (U+0952) and 22 double svarita `᳚` (U+1CDA).** The source page in Telugu script carries 246, 382 and 22 of the same three marks, so nothing was lost and nothing was added. The accented lines were lifted from the fetched page by machine and were not retyped at any point. **No accent was added, inferred, moved between syllables or reconstructed.** Two conventions of the base text are kept as printed rather than normalised: the guttural nasal before a spirant is written `ग्ं` in most places and `ग्ग्` before a sibilant, romanised `gṁ` and `gg`, which is what the sibling files of this folder do; and the accent mark is placed after the anusvāra or the visarga, which is this corpus's spelling. The two lines of offering, at the beginning and at the end, are unaccented in the base text and are unaccented here.
+
+Source / recension: base text `https://stotranidhi.com/mahanyasam-24-malapakarshana-snanam-in-telugu/`, fetched 2026-09-14 in Telugu script with a browser User-Agent. The Telugu field of this file is a translation, so the recited text was carried into Devanāgarī by machine with `bin/tel2dev.py` and into IAST with `bin/dev2iast.py`. The site's ASCII colon for visarga was mapped to `ः`, its Latin `o` for anusvāra to `ं`, and its Latin `”` for the double svarita to `᳚`, before any comparison was made. As a check on that machine transliteration only, the same site's Devanāgarī page of the same item was fetched and compared line by line: the 115 lines agree character for character once the daṇḍa, the visarga and the order of accent and anusvāra are normalised. **That is one witness in two scripts, not two witnesses**, and it proves the transliteration and nothing about the reading.
+
+Independent collation: **sanskritdocuments.org, category "veda, svara", transliterated by Muralidhara B A with permission acknowledged to Professor Anathakrishna.** Three files were fetched with a browser User-Agent, since the server answers HTTP 406 to a plain request: `doc_veda/taittirIyasamhitA.itx`, `doc_veda/taittirIyabrAhmaNam.itx` and `doc_veda/taittirIyaAraNyaka.itx`. That is a genuinely separate editorial lineage in the **same śākhā**. All four blocks were found and read: TS 5.6.1 and 5.6.2, TB 1.4.8.1–6, TĀ 10.29.47 and TB 3.2.4.1–2. Every locus the base text claims was confirmed. The collation was done by machine, word by word, with the accents stripped from both sides.
+
+**Result.** The fourteen ṛcs of TS 5.6.1 agree with the independent edition word for word. Every difference found is a matter of spelling or of where one edition breaks a word, and none changes the sense. TS 5.6.1 carries 220 accent marks in this file against 217 in the independent edition, and the three sites of difference are the notational ones listed below. The other three blocks agree in the same way.
+
+Recension note: **every difference found between the two witnesses is listed here, and none has been reconciled away.**
+
+**(1) The guttural nasal is spelled differently.** The base text writes `शग्ग्` and `वयग्ग्` where the independent edition writes `śagṁ` and `vayagṁ`, and writes `अपकामग्` where that edition writes `apakāmagṁ`. This is one sound written two ways, not two readings. The base text's spelling is kept, because that is what this corpus does with the sibling Taittirīya files.
+
+**(2) `रफ्सुषदः` against `apsuṣadaḥ`.** At ṛc 4 the base text prints `अ॒ग्नीग्ं र॑फ्सु॒षदो॑`, with `फ्`; the independent edition prints `agnīgṁrapsuṣado`, with `प्`. The word is the same, and the sense is the same — the fires that sit in the waters. The base text is printed as it stands. Not reconciled.
+
+**(3) `अतिष्ठत्स्यन्दमानाः` against `atiṣṭhathsyandamānāḥ`.** At ṛc 8 the two editions write the same sound with `त्स्` and with `थ्स्`. The base text uses `थ्स्` itself elsewhere, at `कामा॒न्थ्सम॑र्धयन्तु`. This is a spelling convention of the tradition, not a reading.
+
+**(4) One accent mark is missing from the base text, and it has not been supplied.** In the passage of TB 3.2.4 the base text prints `भ्रातृ॑व्येभ्यः प्रहृत्य॑`, with no anudātta on `प्र`; the independent edition reads `pra` with the anudātta, giving `प्र॒हृत्य॑`. Accent is transcribed or absent, never derived, and the rule against supplying it holds even when a second witness in the same śākhā shows what the mark should be. The line is printed as the base text prints it, and the difference is recorded here instead.
+
+**(5) The word divisions differ in several places** — `नि धत्त` against `निधत्त`, `सं प्रयतीः` against `संप्रयतीः`, `अनु स्थन` against `अनुस्थन`, `सं भव` against `संभव`, `मधुपृचां अरंगमः` against `मधुपृचा मरंगमः`. The akṣaras are the same in each place. The base text's divisions are kept.
+
+**(6) The pada-pāṭha is not carried.** The base text prints the pada-pāṭha of each ṛc between `//` marks below it. No file in this corpus carries a pada-pāṭha — neither the seven accented files of `../../veda/taittiriya/` nor the Mahānyāsa in this folder — and the reader recites the saṁhitā-pāṭha. It is therefore left out here as well, and this is recorded so that the next person knows it was in the source and was a decision rather than an oversight.
+
+**(7) On Gītā Press.** No Gītā Press witness applies. Gītā Press publishes the northern rite, and under the standing rule an edition in the wrong śākhā is not a weaker witness but no witness at all.
+
+**(8) On GRETIL.** GRETIL was checked with `bin/gretil.py` and holds no Taittirīya Saṁhitā, Brāhmaṇa or Āraṇyaka. There is no critical edition of this text.
+
+**Cross-references.** This rite is item 24 of the Mahānyāsa order of service as the base text prints it. The corpus's Mahānyāsa, `04_mahanyasa_vidhi.txt`, was written from a different base text and from a printed Mysore edition, and **it carries no snāna section at all**. The two files do not overlap and neither supersedes the other. That file has not been altered.
+
+Not collated: the two lines of offering, at the beginning and at the end. They are the officiant's own words of dedication and belong to no saṁhitā, so no second witness was sought for them.
+
+Unit count: 25 units. Not a verse count in the stotra sense — the rite is an order of service made of one sūkta, two brāhmaṇa passages, an āraṇyaka passage and the pāvamānī verses. The fourteen ṛcs and the six pāvamānī anuvākas are numbered in the line itself, as the source numbers them; the unit numbering is this corpus's.
+
+Sections:
+स्नानारम्भः — The beginning of the bath (unit 1)
+हिरण्यवर्णा आपः — The waters of golden colour (units 2–15)
+अपां ग्रहाः — The cups of water (unit 16)
+पावमानीः — The purifying verses (units 17–22)
+आपो वा इदं सर्वम् — The waters are all this (unit 23)
+अपः प्रणयति — The leading forward of the waters (unit 24)
+समर्पणम् — The offering (unit 25)
+
+Blurb: This is the bath that removes impurity. It is performed before the recitation of the Śrī Rudram, when the image is bathed with pure water. The worshipper does not pour the water in silence. He recites the hymn to the waters, and he speaks to the waters themselves. They are of golden colour, they are clear, and they make clean. He asks them to look upon him kindly, to touch his skin kindly, and to place lustre, strength and vigour in him. The hymn then tells how the rivers received their names. After the hymn comes the passage that explains why the water is taken, and then the pāvamānī verses, in which Agni, Savitṛ, the wind, heaven and earth, Indra, Soma, Varuṇa and Yama are each asked to make the worshipper clean. The rite closes by declaring that the waters are all this world, and by offering the bath to Rudra.
+
+--- unit 1 | section: Opening ---
+vidhi:
+Stand ready for the bath that removes impurity. Say that the pure water is now offered to Rudra, and begin.
+deva:
+श्रीरुद्राय नमः शुद्धोदकेन स्नपयामि ।
+iast:
+śrīrudrāya namaḥ śuddhodakena snapayāmi |
+en: Salutation to Rudra. With pure water I bathe you.
+tel: రుద్రునకు నమస్కారము. శుద్ధమైన జలముతో అభిషేకము చేయుచున్నాను.
+hi: रुद्र को नमस्कार। शुद्ध जल से मैं स्नान कराता हूँ।
+
+--- unit 2 | section: The waters of golden colour ---
+vidhi:
+Recite the first ṛc while the water is held. The waters are addressed directly through this hymn.
+deva:
+हिर॑ण्यवर्णाः॒ शुच॑यः पाव॒का यासु॑ जा॒तः क॒श्यपो॒ यास्विन्द्रः॑ ।
+अ॒ग्निं या गर्भं॑ दधि॒रे विरू॑पा॒स्ता न॒ आपः॒ शग्ग् स्यो॒ना भ॑वन्तु ॥ १
+iast:
+hiraṇyavarṇāḥ śucayaḥ pāvakā yāsu jātaḥ kaśyapo yāsvindraḥ |
+agniṁ yā garbhaṁ dadhire virūpāstā na āpaḥ śagg syonā bhavantu || 1
+en: The waters are of golden colour. They are clear and they make clean. Kaśyapa was born in them and Indra is in them. Though they take many forms, they held Agni as a child within. Let those waters be pleasant and kind to us.
+tel: ఆ జలములు బంగారు వర్ణము కలవి. అవి నిర్మలమైనవి, పవిత్రము చేయునవి. వాటియందు కశ్యపుడు జన్మించెను, వాటియందు ఇంద్రుడు ఉన్నాడు. అనేక రూపములు కలవైనను అవి అగ్నిని గర్భమునందు ధరించెను. ఆ జలములు మాకు సుఖకరముగను, హితకరముగను ఉండును గాక.
+hi: वे जल स्वर्ण के वर्ण वाले हैं। वे निर्मल हैं और शुद्ध करने वाले हैं। उनमें कश्यप का जन्म हुआ और उनमें इन्द्र हैं। अनेक रूप वाले होने पर भी उन्होंने अग्नि को गर्भ में धारण किया। वे जल हमारे लिए सुखकर और हितकर हों।
+
+--- unit 3 | section: The waters of golden colour ---
+vidhi:
+Recite the second ṛc.
+deva:
+यासा॒ग्ं॒ राजा॒ वरु॑णो॒ याति॒ मध्ये॑ सत्यानृ॒ते अ॑व॒पश्य॒ञ्जना॑नाम् ।
+म॒धु॒श्चुतः॒ शुच॑यो॒ याः पा॑व॒कास्ता न॒ आपः॒ शग्ग् स्यो॒ना भ॑वन्तु ॥ २
+iast:
+yāsāgṁ rājā varuṇo yāti madhye satyānṛte avapaśyañjanānām |
+madhuścutaḥ śucayo yāḥ pāvakāstā na āpaḥ śagg syonā bhavantu || 2
+en: In the midst of those waters King Varuṇa moves. He looks down upon the truth and the untruth of men. Those waters flow with sweetness. They are clear and they make clean. Let those waters be pleasant and kind to us.
+tel: ఆ జలముల మధ్యను వరుణ రాజు సంచరించును. ఆయన మనుష్యుల సత్యమును, అసత్యమును చూచుచుండును. ఆ జలములు మధురముగా ప్రవహించును. అవి నిర్మలమైనవి, పవిత్రము చేయునవి. ఆ జలములు మాకు సుఖకరముగను, హితకరముగను ఉండును గాక.
+hi: उन जलों के मध्य वरुण राजा विचरते हैं। वे मनुष्यों के सत्य और असत्य को देखते रहते हैं। वे जल मधु बहाते हैं। वे निर्मल हैं और शुद्ध करने वाले हैं। वे जल हमारे लिए सुखकर और हितकर हों।
+
+--- unit 4 | section: The waters of golden colour ---
+vidhi:
+Recite the third ṛc.
+deva:
+यासां᳚ दे॒वा दि॒वि कृ॒ण्वन्ति॑ भ॒क्षं या अ॒न्तरि॑क्षे बहु॒धा भव॑न्ति ।
+याः पृ॑थि॒वीं पय॑सो॒न्दन्ति॑ शु॒क्रास्ता न॒ आपः॒ शग्ग् स्यो॒ना भ॑वन्तु ॥ ३
+iast:
+yāsāṁ devā divi kṛṇvanti bhakṣaṁ yā antarikṣe bahudhā bhavanti |
+yāḥ pṛthivīṁ payasondanti śukrāstā na āpaḥ śagg syonā bhavantu || 3
+en: Of those waters the gods make their drink in heaven. In the mid-region they become many. They wet the earth with milk. They are bright. Let those waters be pleasant and kind to us.
+tel: ఆ జలములతో దేవతలు స్వర్గమునందు తమ పానీయమును చేసికొందురు. అంతరిక్షమునందు అవి అనేకములుగా అగును. అవి పాలతో భూమిని తడుపును. అవి ప్రకాశవంతమైనవి. ఆ జలములు మాకు సుఖకరముగను, హితకరముగను ఉండును గాక.
+hi: उन जलों से देवता स्वर्ग में अपना भक्ष्य बनाते हैं। अन्तरिक्ष में वे बहुत प्रकार के हो जाते हैं। वे पयस् से पृथ्वी को सींचते हैं। वे शुक्र हैं। वे जल हमारे लिए सुखकर और हितकर हों।
+
+--- unit 5 | section: The waters of golden colour ---
+vidhi:
+Recite the fourth ṛc. The worshipper now asks the waters directly for lustre and strength.
+deva:
+शि॒वेन॑ मा॒ चक्षु॑षा पश्यतापः शि॒वया॑ त॒नुवोऽप॑ स्पृशत॒ त्वचं॑ मे ।
+सर्वाग्ं॑ अ॒ग्नीग्ं र॑फ्सु॒षदो॑ हुवे वो॒ मयि॒ वर्चो॒ बल॒मोजो॒ निध॑त्त ॥ ४
+iast:
+śivena mā cakṣuṣā paśyatāpaḥ śivayā tanuvo'pa spṛśata tvacaṁ me |
+sarvāgṁ agnīgṁ raphsuṣado huve vo mayi varco balamojo nidhatta || 4
+en: O waters, look upon me with a kindly eye. Touch my skin with a kindly form. I call upon all the fires that dwell within the waters. Place in me lustre, strength and vigour.
+tel: ఓ జలములారా, దయగల చూపుతో నన్ను చూడుడు. దయగల రూపముతో నా చర్మమును స్పృశింపుడు. జలములయందు నివసించు అగ్నులనందరిని నేను ఆహ్వానించుచున్నాను. నాయందు తేజస్సును, బలమును, ఓజస్సును ఉంచుడు.
+hi: हे जल, कल्याणकारी दृष्टि से मुझे देखें। कल्याणकारी रूप से मेरी त्वचा का स्पर्श करें। जल में रहने वाले सब अग्नियों को मैं बुलाता हूँ। मुझमें तेज, बल और ओज रखें।
+
+--- unit 6 | section: The waters of golden colour ---
+vidhi:
+Recite the fifth ṛc. It tells how the rivers received their name.
+deva:
+यद॒दः सं॑प्रय॒तीरहा॒वन॑दताह॒ ते ।
+तस्मा॒दा न॒द्यो॑ नाम॑ स्थ॒ ता वो॒ नामा॑नि सिन्धवः ॥ ५
+iast:
+yadadaḥ saṁprayatīrahāvanadatāha te |
+tasmādā nadyo nāma stha tā vo nāmāni sindhavaḥ || 5
+en: When you flowed forward together, you sounded aloud. For that reason your name is nadyaḥ, the sounding ones. These are your names, O rivers.
+tel: మీరు కలిసి ముందుకు ప్రవహించినపుడు మీరు శబ్దము చేసితిరి. అందువలన మీ పేరు నద్యః అని అయినది. ఓ సింధువులారా, ఇవి మీ నామములు.
+hi: जब आप साथ बहती हुई आगे गईं, तब आपने शब्द किया। इसी कारण आपका नाम नद्यः हुआ। हे सिन्धुओ, ये आपके नाम हैं।
+
+--- unit 7 | section: The waters of golden colour ---
+vidhi:
+Recite the sixth ṛc.
+deva:
+यत्प्रेषि॑ता॒ वरु॑णे॒न ताः शीभग्ं॑ स॒मव॑ल्गत ।
+तदा᳚प्नो॒दिन्द्रो॑ वो य॒तीस्तस्मा॒दापो॒ अनु॑स्थन ॥ ६
+iast:
+yatpreṣitā varuṇena tāḥ śībhagṁ samavalgata |
+tadāpnodindro vo yatīstasmādāpo anusthana || 6
+en: When Varuṇa sent you forth, you leapt swiftly together. Indra reached you as you went. For that reason you are called āpaḥ, those that were reached.
+tel: వరుణుడు మిమ్ము పంపినపుడు మీరు వేగముగా కలిసి గంతులు వేసితిరి. మీరు పోవుచుండగా ఇంద్రుడు మిమ్ము పొందెను. అందువలన మీరు ఆపః అని పిలువబడుదురు.
+hi: जब वरुण ने आपको भेजा, तब आप शीघ्रता से साथ उछलीं। जाती हुई आपको इन्द्र ने प्राप्त किया। इसी कारण आप आपः कहलाती हैं।
+
+--- unit 8 | section: The waters of golden colour ---
+vidhi:
+Recite the seventh ṛc.
+deva:
+अ॒प॒का॒मग् स्यन्द॑माना॒ अवी॑वरत वो॒ हि क᳚म् ।
+इन्द्रो॑ वः॒ शक्ति॑भिर्देवी॒स्तस्मा॒द्वार्णाम॑ वो हि॒तम् ॥ ७
+iast:
+apakāmag syandamānā avīvarata vo hi kam |
+indro vaḥ śaktibhirdevīstasmādvārṇāma vo hitam || 7
+en: Flowing on of your own accord, you covered over what was to be covered. Indra held you back with his powers, O goddesses. For that reason your good name is vāḥ.
+tel: మీ ఇష్టము చొప్పున ప్రవహించుచు మీరు కప్పవలసినదానిని కప్పితిరి. ఓ దేవతలారా, ఇంద్రుడు తన శక్తులతో మిమ్ము నిలిపెను. అందువలన వాః అను మీ మంచి పేరు కలిగినది.
+hi: अपने ही वेग से बहती हुई आपने आवरण किया। हे देवियो, इन्द्र ने अपनी शक्तियों से आपको रोका। इसी कारण वाः आपका हितकर नाम हुआ।
+
+--- unit 9 | section: The waters of golden colour ---
+vidhi:
+Recite the eighth ṛc. It tells how water received the name udaka.
+deva:
+एको॑ दे॒वो अप्य॑तिष्ठ॒त्स्यन्द॑माना यथाव॒शम् ।
+उदा॑निषुर्म॒हीरिति॒ तस्मा॑दुद॒कमु॑च्यते ॥ ८
+iast:
+eko devo apyatiṣṭhatsyandamānā yathāvaśam |
+udāniṣurmahīriti tasmādudakamucyate || 8
+en: One god stood over you as you flowed at your will. The great waters then rose upward. For that reason water is called udaka.
+tel: మీరు మీ ఇష్టము చొప్పున ప్రవహించుచుండగా ఒక దేవుడు మీపై నిలిచెను. అప్పుడు మహాజలములు పైకి లేచెను. అందువలన జలమునకు ఉదకము అని పేరు.
+hi: आप अपनी इच्छा से बहती रहीं और एक देव आप पर स्थित हुए। तब महान् जल ऊपर उठे। इसी कारण जल को उदक कहा जाता है।
+
+--- unit 10 | section: The waters of golden colour ---
+vidhi:
+Recite the ninth ṛc.
+deva:
+आपो॑ भ॒द्रा घृ॒तमिदाप॑ आसुर॒ग्नीषोमौ॑ बिभ्र॒त्या॒प॒ इत्ताः ।
+ती॒व्रो रसो॑ मधु॒पृचां॑ अ॒रं॒ग॒म आ मा᳚ प्रा॒णेन॑ स॒ह वर्च॑सा गन् ॥ ९
+iast:
+āpo bhadrā ghṛtamidāpa āsuragnīṣomau bibhratyāpa ittāḥ |
+tīvro raso madhupṛcāṁ araṁgama ā mā prāṇena saha varcasā gan || 9
+en: The waters are auspicious. The waters were ghee. They carry Agni and Soma. These are those very waters. Their essence is strong and mixed with sweetness. Let it come readily to me. Let it come to me together with breath and with lustre.
+tel: జలములు శుభకరములు. జలములే ఘృతము అయినవి. అవి అగ్నిని, సోమమును ధరించును. ఇవి ఆ జలములే. వాటి రసము తీవ్రమైనది, మధురముతో కూడినది. అది నా వద్దకు వేగముగా వచ్చును గాక. ప్రాణముతోను తేజస్సుతోను కలిసి అది నా వద్దకు వచ్చును గాక.
+hi: जल कल्याणकारी हैं। जल ही घृत हुए। वे अग्नि और सोम को धारण करते हैं। ये वही जल हैं। उनका रस तीव्र है और मधु से मिला हुआ है। वह मेरे पास शीघ्र आए। प्राण और वर्चस् के साथ वह मुझ तक आए।
+
+--- unit 11 | section: The waters of golden colour ---
+vidhi:
+Recite the tenth ṛc.
+deva:
+आदित्प॑श्याम्यु॒त वा॑ शृणो॒म्या मा॒ घोषो॑ गच्छति॒ वाङ्न॑ आसाम् ।
+मन्ये॑ भेजा॒नो अ॒मृत॑स्य॒ तर्हि॒ हिर॑ण्यवर्णा॒ अतृ॑पं य॒दा वः॑ ॥ १०
+iast:
+āditpaśyāmyuta vā śṛṇomyā mā ghoṣo gacchati vāṅna āsām |
+manye bhejāno amṛtasya tarhi hiraṇyavarṇā atṛpaṁ yadā vaḥ || 10
+en: Then I see, and I also hear. Their sound comes to me. Their voice is with us. When I have shared in that which does not die, then, O waters of golden colour, I am satisfied by you.
+tel: అప్పుడు నేను చూచుచున్నాను, వినుచున్నాను కూడ. వాటి ధ్వని నా వద్దకు వచ్చుచున్నది. వాటి వాక్కు మాకు కలదు. అమృతమును పొందినపుడు, ఓ బంగారు వర్ణపు జలములారా, మీచేత నేను తృప్తి పొందితిని.
+hi: तब मैं देखता हूँ और सुनता भी हूँ। उनका घोष मुझ तक आता है। उनकी वाणी हमारे पास है। जब मैंने अमृत का भाग पाया, तब हे स्वर्णवर्ण जल, आपसे मैं तृप्त हुआ।
+
+--- unit 12 | section: The waters of golden colour ---
+vidhi:
+Recite the eleventh ṛc.
+deva:
+आपो॒ हि ष्ठा म॑यो॒भुव॒स्ता न॑ ऊ॒र्जे द॑धातन ।
+म॒हे रणा॑य॒ चक्ष॑से ॥ ११
+iast:
+āpo hi ṣṭhā mayobhuvastā na ūrje dadhātana |
+mahe raṇāya cakṣase || 11
+en: O waters, you bring us well-being. Grant us strength, so that we may look upon great joy.
+tel: ఓ జలములారా, మీరు మాకు సుఖమును కలిగించువారు. గొప్ప ఆనందమును మేము చూచునట్లుగా మాకు బలమును ఇండు.
+hi: हे जल, आप सुख देने वाले हैं। हमें ऊर्जा दें, जिससे हम महान् आनन्द को देखें।
+
+--- unit 13 | section: The waters of golden colour ---
+vidhi:
+Recite the twelfth ṛc.
+deva:
+यो वः॑ शि॒वत॑मो॒ रस॒स्तस्य॑ भाजयते॒ह नः॑ ।
+उ॒श॒तीरि॑व मा॒त॑रः ॥ १२
+iast:
+yo vaḥ śivatamo rasastasya bhājayateha naḥ |
+uśatīriva mātaraḥ || 12
+en: Give us here a share of that essence of yours which is most kind, as loving mothers give to their children.
+tel: ప్రేమగల తల్లులు తమ బిడ్డలకు ఇచ్చునట్లు, మీ యొక్క అత్యంత మంగళకరమైన రసమునందు ఇచట మాకు భాగమును ఇండు.
+hi: जैसे स्नेह करने वाली माताएँ देती हैं, वैसे ही अपने अत्यन्त कल्याणकारी रस का भाग हमें यहाँ दें।
+
+--- unit 14 | section: The waters of golden colour ---
+vidhi:
+Recite the thirteenth ṛc.
+deva:
+तस्मा॒ अरं॑ गमाम वो॒ यस्य॒ क्षया॑य॒ जिन्व॑थ ।
+आपो॑ ज॒नय॑था च नः ॥ १३
+iast:
+tasmā araṁ gamāma vo yasya kṣayāya jinvatha |
+āpo janayathā ca naḥ || 13
+en: We come readily to you, to that house of yours to which you send us. O waters, give us birth again.
+tel: మీరు మమ్ము పంపు ఆ నివాసమునకు మేము సిద్ధముగా వచ్చుచున్నాము. ఓ జలములారా, మమ్ము మరల జన్మింపజేయుడు.
+hi: जिस निवास की ओर आप हमें प्रेरित करती हैं, वहाँ हम सहर्ष आते हैं। हे जल, हमें फिर से उत्पन्न करें।
+
+--- unit 15 | section: The waters of golden colour ---
+vidhi:
+Recite the fourteenth ṛc. With it the water is addressed as it is set down.
+deva:
+दि॒वि श्र॑यस्वा॒न्तरि॑क्षे यतस्व पृथि॒व्या सं भ॑व ब्रह्मवर्च॒सम॑सि ब्रह्मवर्च॒साय॑ त्वा ॥ १४
+iast:
+divi śrayasvāntarikṣe yatasva pṛthivyā saṁ bhava brahmavarcasamasi brahmavarcasāya tvā || 14
+en: Rest in heaven. Spread in the mid-region. Be joined with the earth. You are the splendour of sacred learning. For the splendour of sacred learning I take you.
+tel: స్వర్గమునందు నిలిచియుండుము. అంతరిక్షమునందు వ్యాపించుము. భూమితో కలిసియుండుము. నీవు బ్రహ్మవర్చస్సు. బ్రహ్మవర్చస్సు కొరకు నిన్ను గ్రహించుచున్నాను.
+hi: द्युलोक में स्थित हों। अन्तरिक्ष में फैलें। पृथ्वी के साथ मिलें। आप ब्रह्मवर्चस् हैं। ब्रह्मवर्चस् के लिए आपको ग्रहण करता हूँ।
+
+--- unit 16 | section: The cups of water ---
+vidhi:
+Recite the passage of the Saṁhitā that explains why the water is taken. It is not addressed to the waters. It states what the rite does.
+deva:
+अ॒पां ग्रहा᳚न्गृह्णात्ये॒तद्वाव रा॑ज॒सूयं॒ यदे॒ते ग्रहाः᳚ स॒वो᳚ऽग्निर्व॑रुणस॒वो रा॑ज॒सूय॑मग्निस॒वश्चित्य॒स्ताभ्या॑मे॒व सू॑य॒तेऽथो॑ उ॒भावे॒व लो॒काव॒भि ज॑यति॒ यश्च॑ राज॒सूये॑नेजा॒नस्य॒ यश्चा᳚ग्नि॒चित॒ आपो॑ भव॒न्त्यापो॒ वा अ॒ग्नेर्भ्रातृ॑व्या॒ यद॒पो᳚ऽग्नेर॒धस्ता॑दुप॒दधा॑ति॒ भ्रातृ॑व्याभिभूत्यै॒ भव॑त्या॒त्मना॒ परा᳚ऽस्य॒ भ्रातृ॑व्यो भवत्य॒मृतं॑ वा आप॒स्तस्मा॑द॒द्भिरव॑तान्तम॒भिषि॑ञ्चन्ति॒ नाऽऽर्ति॒मार्छ॑ति॒ सर्व॒मायु॑रेति॒ ॥
+iast:
+apāṁ grahāngṛhṇātyetadvāva rājasūyaṁ yadete grahāḥ savo'gnirvaruṇasavo rājasūyamagnisavaścityastābhyāmeva sūyate'tho ubhāveva lokāvabhi jayati yaśca rājasūyenejānasya yaścāgnicita āpo bhavantyāpo vā agnerbhrātṛvyā yadapo'gneradhastādupadadhāti bhrātṛvyābhibhūtyai bhavatyātmanā parā'sya bhrātṛvyo bhavatyamṛtaṁ vā āpastasmādadbhiravatāntamabhiṣiñcanti nā''rtimārchati sarvamāyureti ||
+en: He takes the cups of water. This is the rājasūya, namely these cups. The pressing is Agni. Varuṇa's pressing is the rājasūya. Agni's pressing is the piling of the fire altar. By these two he is consecrated. He thus wins both worlds, the world of one who has performed the rājasūya and the world of one who has piled the fire. The waters come into being. The waters are the rivals of Agni. When he places the waters below Agni, it is for the overcoming of rivals. He remains himself, and his rival is driven away. The waters are that which does not die. Therefore they sprinkle a man with water to the very end. He does not come to harm. He lives out his full span of life.
+tel: అతడు జలముల గ్రహములను గ్రహించును. ఈ గ్రహములే రాజసూయము. సవము అగ్ని. వరుణసవము రాజసూయము. అగ్నిసవము అగ్నిచయనము. ఈ రెండింటిచేతనే అతడు అభిషిక్తుడగును. అందువలన రాజసూయము చేసినవాని లోకమును, అగ్నిచయనము చేసినవాని లోకమును — ఈ రెండు లోకములను అతడు జయించును. జలములు కలుగును. జలములు అగ్నికి భ్రాతృవ్యములు. అగ్నికి క్రింద జలములను ఉంచుట భ్రాతృవ్యులను జయించుట కొరకే. అతడు తానుగా నిలుచును, అతని భ్రాతృవ్యుడు తొలగిపోవును. జలములు అమృతము. అందువలననే చివరివరకు జలముతో అభిషేకము చేయుదురు. అతడు ఆర్తిని పొందడు. అతడు పూర్ణాయుష్షును పొందును.
+hi: वह जल के ग्रह लेता है। ये ग्रह ही राजसूय हैं। सव अग्नि है। वरुणसव राजसूय है। अग्निसव अग्निचयन है। इन दोनों से ही वह अभिषिक्त होता है। इस प्रकार वह दोनों लोकों को जीतता है — राजसूय करने वाले का लोक और अग्निचयन करने वाले का लोक। जल उत्पन्न होते हैं। जल अग्नि के भ्रातृव्य हैं। अग्नि के नीचे जल रखना भ्रातृव्यों के अभिभव के लिए है। वह स्वयं स्थिर रहता है और उसका भ्रातृव्य दूर हो जाता है। जल अमृत हैं। इसी से अन्त तक जल से अभिषेक करते हैं। वह आर्ति को नहीं प्राप्त होता। वह पूर्ण आयु को प्राप्त करता है।
+
+--- unit 17 | section: The purifying verses ---
+vidhi:
+Begin the pāvamānī verses. They are recited while the water is poured.
+deva:
+पव॑मानः॒ सुव॒र्जनः॑ । प॒वित्रे॑ण॒ विच॑र्षणिः ।
+यः पोता॒ स पु॑नातु मा । पु॒नन्तु॑ मा देवज॒नाः ।
+पु॒नन्तु॒ मन॑वो धि॒या । पु॒नन्तु॒ विश्व॑ आ॒यवः॑ ।
+जात॑वेदः प॒वित्र॑वत् । प॒वित्रे॑ण पुनाहि मा ।
+शु॒क्रेण॑ देव॒ दीद्य॑त् । अग्ने॒ क्रत्वा॒ क्रतू॒ग्ं॒ रनु॑ ॥ १
+iast:
+pavamānaḥ suvarjanaḥ | pavitreṇa vicarṣaṇiḥ |
+yaḥ potā sa punātu mā | punantu mā devajanāḥ |
+punantu manavo dhiyā | punantu viśva āyavaḥ |
+jātavedaḥ pavitravat | pavitreṇa punāhi mā |
+śukreṇa deva dīdyat | agne kratvā kratūgṁ ranu || 1
+en: The purifying one wins the light. With his strainer he is present everywhere. He who is the purifier, let him make me clean. Let the people of the gods make me clean. Let thoughtful men make me clean with their understanding. Let all men make me clean. O Jātavedas, you hold the strainer. Make me clean with your strainer. O shining god, make me clean with your bright flame. O Agni, make me clean according to my acts of will.
+tel: పవమానుడు స్వర్గమును జయించువాడు. పవిత్రముతో అతడు అంతటను ఉండువాడు. పవిత్రము చేయువాడు ఎవడో అతడు నన్ను పవిత్రుని చేయును గాక. దేవజనులు నన్ను పవిత్రుని చేయుదురు గాక. మనన శీలురు తమ బుద్ధితో నన్ను పవిత్రుని చేయుదురు గాక. మనుష్యులందరును నన్ను పవిత్రుని చేయుదురు గాక. ఓ జాతవేదా, నీవు పవిత్రము కలవాడవు. నీ పవిత్రముతో నన్ను శుద్ధి చేయుము. ఓ ప్రకాశించు దేవా, నీ శుభ్రమైన జ్వాలతో శుద్ధి చేయుము. ఓ అగ్నీ, నా సంకల్పముల ప్రకారము నన్ను శుద్ధి చేయుము.
+hi: पवमान स्वर् को जीतने वाले हैं। पवित्र से वे सर्वत्र रहते हैं। जो पोता है, वह मुझे पवित्र करे। देवजन मुझे पवित्र करें। मननशील अपनी बुद्धि से मुझे पवित्र करें। सब मनुष्य मुझे पवित्र करें। हे जातवेदा, आप पवित्र वाले हैं। अपने पवित्र से मुझे शुद्ध करें। हे दीप्त देव, अपनी शुभ्र ज्वाला से शुद्ध करें। हे अग्नि, मेरे संकल्पों के अनुसार मुझे शुद्ध करें।
+
+--- unit 18 | section: The purifying verses ---
+vidhi:
+Continue the pāvamānī verses.
+deva:
+यत्ते॑ प॒वित्र॑म॒र्चिषि॑ । अग्ने॒ वित॑तमन्त॒रा ।
+ब्रह्म॒ तेन॑ पुनीमहे । उ॒भाभ्यां᳚ देव सवितः ।
+प॒वित्रे॑ण स॒वेन॑ च । इ॒दं ब्रह्म॑ पुनीमहे ।
+वै॒श्व॒दे॒वी पु॑न॒ती दे॒व्यागा᳚त् ।
+यस्यै॑ ब॒ह्वीस्त॒नुवो॑ वी॒तपृ॑ष्ठाः ।
+तया॒ मद॑न्तः सध॒ माद्ये॑षु ।
+व॒यग्ग् स्या॑म॒ पत॑यो रयी॒णाम् ॥ २
+iast:
+yatte pavitramarciṣi | agne vitatamantarā |
+brahma tena punīmahe | ubhābhyāṁ deva savitaḥ |
+pavitreṇa savena ca | idaṁ brahma punīmahe |
+vaiśvadevī punatī devyāgāt |
+yasyai bahvīstanuvo vītapṛṣṭhāḥ |
+tayā madantaḥ sadha mādyeṣu |
+vayagg syāma patayo rayīṇām || 2
+en: O Agni, that strainer of yours which is spread out within your flame — with it we make this sacred word clean. O god Savitṛ, with both of them, with the strainer and with your impelling, we make this sacred word clean. The goddess of all the gods has come, making clean. Her forms are many and their backs are fair. Rejoicing with her at the feasts of joy, let us be lords of riches.
+tel: ఓ అగ్నీ, నీ జ్వాలయందు వ్యాపించియున్న ఆ పవిత్రముతో ఈ బ్రహ్మను మేము శుద్ధి చేయుచున్నాము. ఓ సవితృదేవా, పవిత్రముతోను ప్రేరణతోను — ఈ రెండింటితో ఈ బ్రహ్మను మేము శుద్ధి చేయుచున్నాము. వైశ్వదేవి అయిన దేవి పవిత్రము చేయుచు వచ్చినది. ఆమెకు అనేక రూపములు కలవు, అవి మంచి పృష్ఠములు కలవి. ఆమెతో ఆనందించుచు ఉత్సవములయందు మేము సంపదలకు అధిపతులమగుదుము గాక.
+hi: हे अग्नि, आपकी ज्वाला में फैला हुआ जो पवित्र है, उससे हम इस ब्रह्म को शुद्ध करते हैं। हे सवितृ देव, पवित्र से और सव से — इन दोनों से हम इस ब्रह्म को शुद्ध करते हैं। वैश्वदेवी देवी पवित्र करती हुई आई हैं। उनके अनेक रूप हैं और उनके पृष्ठ सुन्दर हैं। उनके साथ आनन्द करते हुए उत्सवों में हम धनों के स्वामी हों।
+
+--- unit 19 | section: The purifying verses ---
+vidhi:
+Continue the pāvamānī verses.
+deva:
+वै॒श्वा॒न॒रो र॒श्मिभि॑र्मा पुनातु ।
+वातः॑ प्रा॒णेने॑षि॒रो म॑यो॒भूः ।
+द्यावा॑पृथि॒वी पय॑सा॒ पयो॑भिः ।
+ऋ॒ताव॑री य॒ज्ञिये॑ मा पुनीताम् ।
+बृ॒हद्भिः॑ सवित॒स्तृभिः॑ ।
+वर्षि॑ष्ठैर्देव॒ मन्म॑भिः ।
+अग्ने॒ दक्षैः᳚ पुनाहि मा ।
+येन॑ दे॒वा अपु॑नत ।
+येनापो॑ दि॒व्यं कशः॑ ।
+तेन॑ दि॒व्येन॒ ब्रह्म॑णा ॥ ३
+iast:
+vaiśvānaro raśmibhirmā punātu |
+vātaḥ prāṇeneṣiro mayobhūḥ |
+dyāvāpṛthivī payasā payobhiḥ |
+ṛtāvarī yajñiye mā punītām |
+bṛhadbhiḥ savitastṛbhiḥ |
+varṣiṣṭhairdeva manmabhiḥ |
+agne dakṣaiḥ punāhi mā |
+yena devā apunata |
+yenāpo divyaṁ kaśaḥ |
+tena divyena brahmaṇā || 3
+en: Let Vaiśvānara make me clean with his rays. Let the wind make me clean, which is swift with breath and brings well-being. Let heaven and earth, which hold the law and are fit for sacrifice, make me clean with their milk and their streams of milk. O Savitṛ, with your great and abundant rays, and with the highest thoughts, O god, and with your powers, O Agni, make me clean. Make me clean with that divine sacred word by which the gods made themselves clean and by which the waters received their heavenly brightness.
+tel: వైశ్వానరుడు తన కిరణములతో నన్ను పవిత్రుని చేయును గాక. ప్రాణముతో వేగముగలదియు సుఖమును కలిగించునదియునైన వాయువు నన్ను పవిత్రుని చేయును గాక. ఋతమును ధరించినవియు యజ్ఞమునకు అర్హమైనవియునైన ద్యావాపృథివులు తమ పయస్సుతోను పాలధారలతోను నన్ను పవిత్రుని చేయును గాక. ఓ సవితా, నీ గొప్ప కిరణములతోను, ఓ దేవా, ఉత్తమమైన మననములతోను, ఓ అగ్నీ, నీ శక్తులతోను నన్ను శుద్ధి చేయుము. దేవతలు దేని చేత తమను శుద్ధి చేసికొనిరో, జలములు దేని చేత దివ్యమైన ప్రకాశమును పొందెనో, ఆ దివ్యమైన బ్రహ్మచేత నన్ను శుద్ధి చేయుము.
+hi: वैश्वानर अपनी रश्मियों से मुझे पवित्र करें। प्राण से वेगवान् और सुख देने वाला वायु मुझे पवित्र करे। ऋत को धारण करने वाले और यज्ञ के योग्य द्यावापृथिवी अपने पयस् और दुग्धधाराओं से मुझे पवित्र करें। हे सवितृ, अपनी महती रश्मियों से, हे देव, उत्तम मननों से, और हे अग्नि, अपने दक्षों से मुझे शुद्ध करें। जिस दिव्य ब्रह्म से देवताओं ने स्वयं को शुद्ध किया और जिससे जल ने दिव्य दीप्ति पाई, उसी से मुझे शुद्ध करें।
+
+--- unit 20 | section: The purifying verses ---
+vidhi:
+Continue the pāvamānī verses.
+deva:
+इ॒दं ब्रह्म॑ पुनीमहे ।
+यः पा॑वमा॒नीर॒द्ध्येति॑ ।
+ऋषि॑भिः॒ संभृ॑त॒ग्ं॒ रस᳚म् ।
+सर्व॒ग्ं॒ स पू॒तम॑श्नाति ।
+स्व॒दि॒तं मा॑त॒रिश्व॑ना ।
+पा॒व॒मा॒नीर्यो अ॒ध्येति॑ ।
+ऋषि॑भिः॒ संभृ॑त॒ग्ं॒ रस᳚म् ।
+तस्मै॒ सर॑स्वती दुहे ।
+क्षी॒रग्ं स॒र्पिर्मधू॑द॒कम् ।
+पा॒व॒मा॒नीः स्व॒स्त्यय॑नीः ॥ ४
+iast:
+idaṁ brahma punīmahe |
+yaḥ pāvamānīraddhyeti |
+ṛṣibhiḥ saṁbhṛtagṁ rasam |
+sarvagṁ sa pūtamaśnāti |
+svaditaṁ mātariśvanā |
+pāvamānīryo adhyeti |
+ṛṣibhiḥ saṁbhṛtagṁ rasam |
+tasmai sarasvatī duhe |
+kṣīragṁ sarpirmadhūdakam |
+pāvamānīḥ svastyayanīḥ || 4
+en: We make this sacred word clean. He who recites the pāvamānī verses receives the essence that the sages have gathered. He eats all his food made pure, made sweet by Mātariśvan. For him who recites the pāvamānī verses and receives the essence that the sages have gathered, Sarasvatī yields milk, ghee, honey and water. The pāvamānī verses bring well-being.
+tel: ఈ బ్రహ్మను మేము శుద్ధి చేయుచున్నాము. పావమానీ మంత్రములను ఎవడు పఠించునో అతడు ఋషులు సేకరించిన రసమును పొందును. మాతరిశ్వునిచేత మధురము చేయబడిన తన అన్నమునంతటిని అతడు పవిత్రముగా భుజించును. పావమానీ మంత్రములను పఠించి ఋషులు సేకరించిన రసమును పొందువానికి సరస్వతి పాలను, నేతిని, తేనెను, ఉదకమును ఇచ్చును. పావమానీ మంత్రములు క్షేమమును కలిగించునవి.
+hi: इस ब्रह्म को हम शुद्ध करते हैं। जो पावमानी मन्त्रों का पाठ करता है, वह ऋषियों के द्वारा संचित रस को पाता है। मातरिश्वा से स्वादित अपना सब अन्न वह पवित्र होकर खाता है। जो पावमानी का पाठ करता है और ऋषियों के संचित रस को पाता है, उसके लिए सरस्वती दूध, घृत, मधु और उदक देती हैं। पावमानी मन्त्र कल्याण करने वाले हैं।
+
+--- unit 21 | section: The purifying verses ---
+vidhi:
+Continue the pāvamānī verses.
+deva:
+सु॒दुघा॒ हि पय॑स्वतीः ।
+ऋषि॑भिः॒ संभृ॑तो॒ रसः॑ ।
+ब्रा॒ह्म॒णेष्व॒मृतग्ं॑ हि॒तम् ।
+पा॒व॒मा॒नीर्दि॑शन्तु नः ।
+इ॒मं लो॒कमथो॑ अ॒मुम् ।
+कामा॒न्थ्सम॑र्धयन्तु नः ।
+दे॒वीर्दे॒वैः स॒माभृ॑ताः ।
+पा॒व॒मा॒नीः स्व॒स्त्यय॑नीः ।
+सु॒दुघा॒ हि घृ॑त॒श्चुतः॑ ।
+ऋषि॑भिः॒ संभृ॑तो॒ रसः॑ ॥ ५
+iast:
+sudughā hi payasvatīḥ |
+ṛṣibhiḥ saṁbhṛto rasaḥ |
+brāhmaṇeṣvamṛtagṁ hitam |
+pāvamānīrdiśantu naḥ |
+imaṁ lokamatho amum |
+kāmānthsamardhayantu naḥ |
+devīrdevaiḥ samābhṛtāḥ |
+pāvamānīḥ svastyayanīḥ |
+sudughā hi ghṛtaścutaḥ |
+ṛṣibhiḥ saṁbhṛto rasaḥ || 5
+en: They yield well and they are full of milk. The essence gathered by the sages is placed among the knowers of the sacred word as that which does not die. Let the pāvamānī verses grant us this world and that other world. Let them fulfil our desires. The goddesses are brought together with the gods. The pāvamānī verses bring well-being. They yield well and they drip ghee. The essence is gathered by the sages.
+tel: అవి బాగుగా పాలిచ్చునవి, పయస్సు కలవి. ఋషులు సేకరించిన రసము బ్రహ్మజ్ఞానులయందు అమృతముగా ఉంచబడినది. పావమానీ మంత్రములు ఈ లోకమును, ఆ పరలోకమును మాకు ఇచ్చును గాక. అవి మా కోరికలను నెరవేర్చును గాక. దేవతలతో కలిసి ఆ దేవతలు తీసికొని రాబడినవి. పావమానీ మంత్రములు క్షేమమును కలిగించునవి. అవి బాగుగా పాలిచ్చునవి, ఘృతమును స్రవించునవి. ఆ రసము ఋషులచేత సేకరింపబడినది.
+hi: वे भली प्रकार दुहने योग्य और पयस्वती हैं। ऋषियों का संचित रस ब्रह्मज्ञानियों में अमृत रूप से रखा गया है। पावमानी मन्त्र हमें यह लोक और वह परलोक दें। वे हमारी कामनाओं को पूर्ण करें। देवियाँ देवों के साथ लाई गई हैं। पावमानी मन्त्र कल्याण करने वाले हैं। वे भली प्रकार दुहने योग्य और घृत बहाने वाले हैं। वह रस ऋषियों के द्वारा संचित है।
+
+--- unit 22 | section: The purifying verses ---
+vidhi:
+Recite the last of the pāvamānī verses. With it the purification is complete.
+deva:
+ब्रा॒ह्म॒णेष्व॒मृतग्ं॑ हि॒तम् । येन॑ दे॒वाः प॒वित्रे॑ण ।
+आ॒त्मानं॑ पु॒नते॒ सदा᳚ ।
+तेन॑ स॒हस्र॑धारेण । पा॒व॒मा॒न्यः पु॑नन्तु मा ।
+प्रा॒जा॒प॒त्यं प॒वित्र᳚म् । श॒तोद्या॑मग्ं हिर॒ण्मय᳚म् ।
+तेन॑ ब्रह्म॒विदो॑ व॒यम् । पू॒तं ब्रह्म॑ पुनीमहे ।
+इन्द्रः॑ सुनी॒ती स॒ह मा॑ पुनातु । सोमः॑ स्व॒स्त्या वरु॑णः स॒मीच्या᳚ ।
+य॒मो राजा᳚ प्रमृ॒णाभिः॑ पुनातु मा । जा॒तवे॑दा मो॒र्जय॑न्त्या पुनातु ॥ ६
+iast:
+brāhmaṇeṣvamṛtagṁ hitam | yena devāḥ pavitreṇa |
+ātmānaṁ punate sadā |
+tena sahasradhāreṇa | pāvamānyaḥ punantu mā |
+prājāpatyaṁ pavitram | śatodyāmagṁ hiraṇmayam |
+tena brahmavido vayam | pūtaṁ brahma punīmahe |
+indraḥ sunītī saha mā punātu | somaḥ svastyā varuṇaḥ samīcyā |
+yamo rājā pramṛṇābhiḥ punātu mā | jātavedā morjayantyā punātu || 6
+en: It is placed among the knowers of the sacred word as that which does not die. With that strainer by which the gods always make themselves clean, with its thousand streams, let the pāvamānī verses make me clean. The strainer of Prajāpati has a hundred openings and is made of gold. By it we are knowers of the sacred word. We make the sacred word clean and pure. Let Indra make me clean with good guidance. Let Soma make me clean with well-being. Let Varuṇa make me clean with his grace. Let King Yama make me clean with his measures. Let Jātavedas make me clean with his strengthening power.
+tel: అది బ్రహ్మజ్ఞానులయందు అమృతముగా ఉంచబడినది. దేవతలు ఎల్లప్పుడు తమను శుద్ధి చేసికొను ఆ పవిత్రముతో, దాని వేయి ధారలతో, పావమానీ మంత్రములు నన్ను శుద్ధి చేయును గాక. ప్రజాపతి యొక్క పవిత్రము నూరు రంధ్రములు కలది, బంగారుమయమైనది. దానిచేత మేము బ్రహ్మవిదులము. పూతమైన బ్రహ్మను మేము శుద్ధి చేయుచున్నాము. ఇంద్రుడు మంచి నీతితో నన్ను శుద్ధి చేయును గాక. సోముడు స్వస్తితో శుద్ధి చేయును గాక. వరుణుడు తన అనుగ్రహముతో శుద్ధి చేయును గాక. యమరాజు తన ప్రమాణములతో నన్ను శుద్ధి చేయును గాక. జాతవేదుడు ఊర్జయంతితో శుద్ధి చేయును గాక.
+hi: वह ब्रह्मज्ञानियों में अमृत रूप से रखा गया है। जिस पवित्र से देवता सदा अपने को शुद्ध करते हैं, उसकी सहस्र धाराओं से पावमानी मन्त्र मुझे शुद्ध करें। प्रजापति का पवित्र सौ छिद्रों वाला और स्वर्णमय है। उससे हम ब्रह्मविद् हैं। पूत ब्रह्म को हम शुद्ध करते हैं। इन्द्र सुनीति से मुझे शुद्ध करें। सोम स्वस्ति से शुद्ध करें। वरुण अपनी कृपा से शुद्ध करें। यम राजा अपने प्रमाणों से मुझे शुद्ध करें। जातवेदा ऊर्जयन्ती से शुद्ध करें।
+
+--- unit 23 | section: The waters are all this ---
+vidhi:
+Recite the passage that declares what the waters are.
+deva:
+आपो॒ वा इ॒दग्ं सर्वं॒ विश्वा॑ भू॒तान्यापः॑ प्रा॒णा वा आपः॑ प॒शव॒ आपोऽन्न॒मापोऽमृ॑त॒मापः॑ स॒म्राडापो॑ वि॒राडापः॑ स्व॒राडाप॒श्छन्दा॒ग्॒स्यापो॒ ज्योती॒ग्॒ष्यापो॒ यजू॒ग्॒ष्यापः॑ स॒त्यमापः॒ सर्वा॑ दे॒वता॒ आपो॒ भूर्भुवः॒ सुव॒राप॒ ओम् ॥
+iast:
+āpo vā idagṁ sarvaṁ viśvā bhūtānyāpaḥ prāṇā vā āpaḥ paśava āpo'nnamāpo'mṛtamāpaḥ samrāḍāpo virāḍāpaḥ svarāḍāpaśchandāgsyāpo jyotīgṣyāpo yajūgṣyāpaḥ satyamāpaḥ sarvā devatā āpo bhūrbhuvaḥ suvarāpa om ||
+en: The waters are indeed all this. All beings are the waters. The waters are the breaths. The waters are the animals. The waters are food. The waters are that which does not die. The waters are the supreme ruler. The waters are the wide ruler. The waters are the self-ruler. The waters are the metres. The waters are the lights. The waters are the yajus formulas. The waters are truth. The waters are all the gods. The waters are earth, sky and heaven. The waters are Oṁ.
+tel: ఇదంతయు జలములే. సమస్త భూతములు జలములే. ప్రాణములు జలములే. పశువులు జలములే. అన్నము జలములే. అమృతము జలములే. సమ్రాట్టు జలములే. విరాట్టు జలములే. స్వరాట్టు జలములే. ఛందస్సులు జలములే. జ్యోతిస్సులు జలములే. యజుస్సులు జలములే. సత్యము జలములే. సమస్త దేవతలు జలములే. భూః భువః సువః జలములే. ఓంకారము జలములే.
+hi: यह सब जल ही हैं। समस्त भूत जल ही हैं। प्राण जल ही हैं। पशु जल ही हैं। अन्न जल ही है। अमृत जल ही है। सम्राट् जल ही हैं। विराट् जल ही हैं। स्वराट् जल ही हैं। छन्द जल ही हैं। ज्योति जल ही हैं। यजुस् जल ही हैं। सत्य जल ही है। समस्त देवता जल ही हैं। भूः भुवः सुवः जल ही हैं। ॐ जल ही है।
+
+--- unit 24 | section: The leading forward of the waters ---
+vidhi:
+Recite the passage that tells what is done when the waters are led forward. Each line names what the waters are, and then says what the officiant does with them.
+deva:
+अ॒पः प्रण॑यति ।
+श्र॒द्धा वा आपः॑ ।
+श्र॒द्धामे॒वारभ्य॑ प्र॒णीय॒ प्रच॑रति ।
+अ॒पः प्रण॑यति ।
+य॒ज्ञो वा आपः॑ ।
+य॒ज्ञमे॒वारभ्य॑ प्र॒णीय॒ प्रच॑रति ।
+अ॒पः प्रण॑यति ।
+वज्रो॒ वा आपः॑ ।
+वज्र॑मे॒व भ्रातृ॑व्येभ्यः प्रहृत्य॑ प्र॒णीय॒ प्रच॑रति ।
+अ॒पः प्रण॑यति ।
+आपो॒ वै र॑क्षो॒घ्नीः ।
+रक्ष॑सा॒मप॑हत्यै ।
+अ॒पः प्रण॑यति ।
+आपो॒ वै दे॒वानां᳚ प्रि॒यं धाम॑ ।
+दे॒वाना॑मे॒व प्रि॒यं धाम॑ प्र॒णीय॒ प्रच॑रति ।
+अ॒पः प्रण॑यति ।
+आपो॒ वै सर्वा॑ दे॒वताः᳚ । दे॒वता॑ ए॒वारभ्य॑ प्र॒णीय॒ प्रच॑रति ॥
+iast:
+apaḥ praṇayati |
+śraddhā vā āpaḥ |
+śraddhāmevārabhya praṇīya pracarati |
+apaḥ praṇayati |
+yajño vā āpaḥ |
+yajñamevārabhya praṇīya pracarati |
+apaḥ praṇayati |
+vajro vā āpaḥ |
+vajrameva bhrātṛvyebhyaḥ prahṛtya praṇīya pracarati |
+apaḥ praṇayati |
+āpo vai rakṣoghnīḥ |
+rakṣasāmapahatyai |
+apaḥ praṇayati |
+āpo vai devānāṁ priyaṁ dhāma |
+devānāmeva priyaṁ dhāma praṇīya pracarati |
+apaḥ praṇayati |
+āpo vai sarvā devatāḥ | devatā evārabhya praṇīya pracarati ||
+en: He leads the waters forward. The waters are faith. Taking hold of faith itself, he leads them forward and proceeds. He leads the waters forward. The waters are the sacrifice. Taking hold of the sacrifice itself, he leads them forward and proceeds. He leads the waters forward. The waters are the thunderbolt. Casting the thunderbolt itself at his rivals, he leads them forward and proceeds. He leads the waters forward. The waters destroy the demons. This is for the driving away of the demons. He leads the waters forward. The waters are the dear abode of the gods. Leading forward the dear abode of the gods, he proceeds. He leads the waters forward. The waters are all the gods. Taking hold of the gods themselves, he leads them forward and proceeds.
+tel: అతడు జలములను ముందుకు తీసికొని పోవును. జలములు శ్రద్ధ. శ్రద్ధనే గ్రహించి వాటిని ముందుకు తీసికొని పోయి కర్మను చేయును. అతడు జలములను ముందుకు తీసికొని పోవును. జలములు యజ్ఞము. యజ్ఞమునే గ్రహించి వాటిని ముందుకు తీసికొని పోయి కర్మను చేయును. అతడు జలములను ముందుకు తీసికొని పోవును. జలములు వజ్రము. వజ్రమునే భ్రాతృవ్యులపై ప్రయోగించి వాటిని ముందుకు తీసికొని పోయి కర్మను చేయును. అతడు జలములను ముందుకు తీసికొని పోవును. జలములు రాక్షసులను నశింపజేయును. ఇది రాక్షసులను తొలగించుట కొరకు. అతడు జలములను ముందుకు తీసికొని పోవును. జలములు దేవతలకు ప్రియమైన ధామము. దేవతలకు ప్రియమైన ధామమునే ముందుకు తీసికొని పోయి కర్మను చేయును. అతడు జలములను ముందుకు తీసికొని పోవును. జలములు సమస్త దేవతలు. దేవతలనే గ్రహించి వాటిని ముందుకు తీసికొని పోయి కర్మను చేయును.
+hi: वह जल को आगे ले जाता है। जल श्रद्धा हैं। श्रद्धा को ही ग्रहण करके उन्हें आगे ले जाकर वह कर्म करता है। वह जल को आगे ले जाता है। जल यज्ञ हैं। यज्ञ को ही ग्रहण करके उन्हें आगे ले जाकर वह कर्म करता है। वह जल को आगे ले जाता है। जल वज्र हैं। वज्र को ही भ्रातृव्यों पर चलाकर उन्हें आगे ले जाकर वह कर्म करता है। वह जल को आगे ले जाता है। जल राक्षसों का नाश करने वाले हैं। यह राक्षसों को दूर करने के लिए है। वह जल को आगे ले जाता है। जल देवताओं का प्रिय धाम हैं। देवताओं के प्रिय धाम को ही आगे ले जाकर वह कर्म करता है। वह जल को आगे ले जाता है। जल समस्त देवता हैं। देवताओं को ही ग्रहण करके उन्हें आगे ले जाकर वह कर्म करता है।
+
+--- unit 25 | section: The offering ---
+vidhi:
+Close the rite. Offer the bath that removes impurity to Rudra.
+deva:
+श्री रुद्राय नमः । मलापकर्षणस्नानं समर्पयामि ।
+iast:
+śrī rudrāya namaḥ | malāpakarṣaṇasnānaṁ samarpayāmi |
+en: Salutation to Rudra. I offer the bath that removes impurity.
+tel: రుద్రునకు నమస్కారము. మలాపకర్షణ స్నానమును సమర్పించుచున్నాను.
+hi: रुद्र को नमस्कार। मलापकर्षण स्नान समर्पित करता हूँ।

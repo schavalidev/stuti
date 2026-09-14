@@ -1,0 +1,160 @@
+Title: Gāyatrī Tarpaṇam
+Devanāgarī: गायत्रीतर्पणम्
+Telugu: గాయత్రీ తర్పణం
+
+Author: Anonymous. The order of the offering is laid down in the Devī Bhāgavata Mahāpurāṇa, eleventh skandha, seventeenth adhyāya, where it is given in verse; the ritual manuals print it as a list of formulae. The closing peace invocation is the Taittirīya `tacchaṁ yoḥ`.
+
+Type: vidhi (ritual manual) — not a stotra. Uses the one-extra-field vidhi format documented in `../madhyandina/01_sandhyopasana_vidhi.txt`: a `vidhi:` field carrying the ritual instruction, then deva / iast / en / tel / hi.
+
+Recension / paddhati: **not śākhā-specific.** This is the reason the file sits in `vidhi/samanya/` and not in one of the śākhā folders. Its authority is a Purāṇa, not a śākhā's sūtra, and the manuals of both traditions print the same list from that Purāṇa: the Gītā Press *Nitya Karma Pūjā Prakāśa*, which is a northern Mādhyandina volume, gives it and cites `(देवीभागवत)`, and the southern manual used as the base text gives it and cites the same chapter. **A worshipper of either tradition may use this file.** Note that this is a different text from the Gāyatrī tarpaṇa that stands inside `../kanva/01_shukla_yajurveda_sandhyavandanam.txt` at units 54 to 57: that one belongs to the Kāṇva rite, has a different list of names, and is not this. The two are not collated against each other.
+
+Accent: **present only in the closing peace invocation, which is Vedic; the tarpaṇa formulae are unaccented in every witness, and they are unaccented here.** 23 accent marks. The base text writes the double svarita with `॓` (U+0953 DEVANAGARI GRAVE ACCENT) at two places, in `दैवी॓ः` and `द्वि॒पदे॓`; both are given as `᳚` (U+1CDA VEDIC TONE DOUBLE SVARITA), which is this corpus's sign for that tone and what the sibling files use. That is a change of sign, not of tone. **No accent was added, inferred, moved between syllables or reconstructed at any point.**
+
+Source / recension: base text `https://stotranidhi.com/hi/sri-gayatri-tarpanam-in-sanskrit/` (fetched 2026-09-12; accented Devanāgarī in the closing invocation, 953 Devanāgarī characters). The page carries a line of its own stating where the sequence comes from; that line is a note by the publisher rather than part of the text recited, so it is recorded here and is not printed as a unit.
+
+Independent collation: **two further witnesses, and they are of different kinds.**
+
+**(1) Gītā Press, Gorakhpur, *Nitya Karma Pūjā Prakāśa*** (archive.org item `nitya-karma-puja-prakash-gita-press-gorakhpur`, `_djvu.txt` OCR fetched 2026-09-12; 370,963 Devanāgarī characters and **zero Latin OCR noise**). Its section `(ग) गायत्रीतर्पण` gives the same viniyoga, the same seven Persons of sacred learning, the same three worlds, the same four measures of the goddess and the same ten names, in the same order, and closes by citing `(देवीभागवत)`. **Under the standing rule Gītā Press is the authority where it has published the text, and it has published this one.** Its four differences from the base text are listed in the Recension note, and one of them is carried into the text in brackets. It adds a direction the base text does not give: `केवल प्रातः संध्यामें करे` — the offering is made only at the morning sandhyā. That direction is carried in the `vidhi:` field of unit 1 and is marked there as coming from this witness.
+
+**(2) The Devī Bhāgavata Mahāpurāṇa, eleventh skandha**, `https://sanskritdocuments.org/doc_purana/devIbhAgavatam11.html` (fetched 2026-09-12; 103,511 Devanāgarī characters) — the source both manuals name, in a third editorial lineage. Verses 20 to 30 of the chapter give the sequence in verse: `गायत्री छन्द आख्यातं विश्वामित्रऋषिः स्मृतः । सविता देवता प्रोक्ता विनियोगश्च तर्पणे`, then the seven Persons, then `ओम्भूरेकपदा नाम गायत्रीं तर्पयामि च` and the rest, and then `उषसीं चैव गायत्रीं सावित्रीं च सरस्वतीम् । वेदानां मातरं पृथ्वीमजां चैव तु कौशिकीम् । साङ्कृतिं वै सार्वजितिं गायत्रीं तर्पणे वदेत्` — **the same ten names in the same order.** The Purāṇa's own differences are listed below.
+
+Corrections applied to the base text: **none.** The two `॓` signs described above are a notation mapping, not a correction, and no reading was changed.
+
+Recension note: **every difference found between the three witnesses is listed here, and only one has been carried into the text, in brackets, as the corpus's variant rule directs.**
+
+**(1) `स्वर्गलोक` and `स्वर्लोक`, at unit 3.** The base text reads `ओं स्वः स्वर्गलोक पुरुषं तर्पयामि`; Gītā Press reads `ॐ स्वः स्वर्लोकपुरुषं तर्पयामि`. Both are well attested and both are recited. The base text's reading stands in the line and **the Gītā Press reading is given after it in round brackets**, in `deva:` and in `iast:` alike. The Purāṇa writes the line as `स्वः स्वर्गलोकपुरुषं तर्पयामि`, agreeing with the base text.
+
+**(2) The viniyoga is given in a different order.** The base text reads `गायत्र्या गायत्री छन्दः, विश्वामित्र ऋषिः, सविता देवता`; Gītā Press reads `गायत्र्या विश्वामित्र ऋषिः सविता देवता गायत्री छन्दः`; the Purāṇa's verse has the metre first, as the base text does. The base text's order stands. Nothing here differs in substance.
+
+**(3) The case endings of the four measures differ.** The base text reads `एकपदा गायत्रीं`, `द्विपदा गायत्रीं`; Gītā Press reads `एकपदां गायत्री`, `द्विपदां गायत्री`; the Purāṇa reads `एकपदा नाम गायत्रीं` and `द्विपदां गायत्रीं`. The three do not agree with one another, the sense is the same in all of them, and **the base text is left exactly as it prints.** This is not a variant reading worth a bracket.
+
+**(4) The three witnesses close differently, and this is the one difference of substance.** The base text closes with the peace invocation `तच्छं योरावृणीमहे` and `ओं शान्तिः शान्तिः शान्तिः`, which is unit 6 here. **Gītā Press closes instead with `ॐ तत्सद्ब्रह्मार्पणमस्तु`** and prints no peace invocation at this place. The Purāṇa directs four mantras for the peace — `जातवेदसम्`, `मा नस्तोके`, `त्र्यम्बकम्` and `तच्छंयोः` — where the base text prints only the last of them. **Neither the Gītā Press closing nor the Purāṇa's three further mantras was imported.** The base text's close stands as it prints, and a reciter who follows either of the others will find what they use named here.
+
+**(5) `साङ्कृतीं`, `सांकृति` and `साङ्कृतिं`** are the three witnesses' three spellings of the ninth name. The base text's spelling is kept. Nothing turns on it.
+
+Not collated: nothing. Every line of this file stands in at least two of the three witnesses.
+
+Verse count: 6 units. The offering is a list of twenty-four formulae followed by the peace invocation; the units group them by what is being satisfied, and the numbering is this corpus's, not the source's.
+
+Sections:
+गायत्रीतर्पणम् — The tarpaṇa of the Gāyatrī (units 1–6)
+
+Blurb: Tarpaṇa is the offering of water. This one is made to the Gāyatrī at the end of the morning sandhyā, after the recitation of the mantra is finished. Water is released once at each name. The worshipper first satisfies the Person of each of the four Vedas, then of the histories and the Purāṇas, of the āgamas and of the world of truth. He then satisfies the Person of the earthly, the middle and the heavenly world. He then satisfies the goddess herself in her four measures, of one foot, of two, of three and of four. Ten names of the goddess follow, ending with Sārvajitī, she who conquers all. The offering closes with the prayer for peace, which asks for well-being for men, for the healing herbs to grow, and for peace upon the two-footed and the four-footed alike.
+
+--- unit 1 | section: The tarpaṇa of the Gāyatrī ---
+vidhi:
+Name the metre, the sage, the deity and the use before the offering begins. The offering is made only at the morning sandhyā.
+deva:
+विनियोगः –
+ओं गायत्र्या गायत्री छन्दः, विश्वामित्र ऋषिः, सविता देवता, गायत्री तर्पणे विनियोगः ।
+iast:
+viniyogaḥ –
+oṁ gāyatryā gāyatrī chandaḥ, viśvāmitra ṛṣiḥ, savitā devatā, gāyatrī tarpaṇe viniyogaḥ |
+en: The viniyoga. Om. Of the Gāyatrī the metre is gāyatrī, the sage is Viśvāmitra, the deity is Savitā, and the use is in the tarpaṇa of the Gāyatrī.
+tel: వినియోగము. ఓం. గాయత్రికి గాయత్రి ఛందస్సు, విశ్వామిత్రుడు ఋషి, సవిత దేవత, గాయత్రీ తర్పణమునందు వినియోగము.
+hi: विनियोग। ओम्। गायत्री का छंद गायत्री, ऋषि विश्वामित्र, देवता सविता, और विनियोग गायत्री तर्पण में है।
+
+--- unit 2 | section: The tarpaṇa of the Gāyatrī ---
+vidhi:
+Release water once at each name. The first seven join a vyāhṛti to a body of sacred learning.
+deva:
+तर्पण मन्त्राः –
+ओं भूः ऋग्वेद पुरुषं तर्पयामि ।
+ओं भुवः यजुर्वेद पुरुषं तर्पयामि ।
+ओं स्वः सामवेद पुरुषं तर्पयामि ।
+ओं महः अथर्ववेद पुरुषं तर्पयामि ।
+ओं जनः इतिहासपुराण पुरुषं तर्पयामि ।
+ओं तपः सर्वागम पुरुषं तर्पयामि ।
+ओं सत्यं सत्यलोक पुरुषं तर्पयामि ।
+iast:
+tarpaṇa mantrāḥ –
+oṁ bhūḥ ṛgveda puruṣaṁ tarpayāmi |
+oṁ bhuvaḥ yajurveda puruṣaṁ tarpayāmi |
+oṁ svaḥ sāmaveda puruṣaṁ tarpayāmi |
+oṁ mahaḥ atharvaveda puruṣaṁ tarpayāmi |
+oṁ janaḥ itihāsapurāṇa puruṣaṁ tarpayāmi |
+oṁ tapaḥ sarvāgama puruṣaṁ tarpayāmi |
+oṁ satyaṁ satyaloka puruṣaṁ tarpayāmi |
+en: The mantras of the offering. Om, earth — I satisfy the Person of the Ṛgveda. Om, mid-region — I satisfy the Person of the Yajurveda. Om, heavens — I satisfy the Person of the Sāmaveda. Om, great world — I satisfy the Person of the Atharvaveda. Om, world of men — I satisfy the Person of the histories and the Purāṇas. Om, world of austerity — I satisfy the Person of all the āgamas. Om, truth — I satisfy the Person of the world of truth.
+tel: తర్పణ మంత్రములు. ఓం, భూః — ఋగ్వేద పురుషుని తృప్తిపరచుచున్నాను. ఓం, భువః — యజుర్వేద పురుషుని తృప్తిపరచుచున్నాను. ఓం, స్వః — సామవేద పురుషుని తృప్తిపరచుచున్నాను. ఓం, మహః — అథర్వవేద పురుషుని తృప్తిపరచుచున్నాను. ఓం, జనః — ఇతిహాస పురాణ పురుషుని తృప్తిపరచుచున్నాను. ఓం, తపః — సర్వాగమ పురుషుని తృప్తిపరచుచున్నాను. ఓం, సత్యం — సత్యలోక పురుషుని తృప్తిపరచుచున్నాను.
+hi: तर्पण के मंत्र। ओम्, भूः — ऋग्वेद पुरुष को तृप्त करता हूँ। ओम्, भुवः — यजुर्वेद पुरुष को तृप्त करता हूँ। ओम्, स्वः — सामवेद पुरुष को तृप्त करता हूँ। ओम्, महः — अथर्ववेद पुरुष को तृप्त करता हूँ। ओम्, जनः — इतिहास-पुराण पुरुष को तृप्त करता हूँ। ओम्, तपः — सर्वागम पुरुष को तृप्त करता हूँ। ओम्, सत्यम् — सत्यलोक पुरुष को तृप्त करता हूँ।
+
+--- unit 3 | section: The tarpaṇa of the Gāyatrī ---
+vidhi:
+Then the Persons of the three worlds.
+deva:
+ओं भूः भूर्लोक पुरुषं तर्पयामि ।
+ओं भुवः भुवर्लोक पुरुषं तर्पयामि ।
+ओं स्वः स्वर्गलोक(स्वर्लोक) पुरुषं तर्पयामि ।
+iast:
+oṁ bhūḥ bhūrloka puruṣaṁ tarpayāmi |
+oṁ bhuvaḥ bhuvarloka puruṣaṁ tarpayāmi |
+oṁ svaḥ svargaloka(svarloka) puruṣaṁ tarpayāmi |
+en: Om, earth — I satisfy the Person of the earthly world. Om, mid-region — I satisfy the Person of the middle world. Om, heavens — I satisfy the Person of the heavenly world.
+tel: ఓం, భూః — భూర్లోక పురుషుని తృప్తిపరచుచున్నాను. ఓం, భువః — భువర్లోక పురుషుని తృప్తిపరచుచున్నాను. ఓం, స్వః — స్వర్గలోక పురుషుని తృప్తిపరచుచున్నాను.
+hi: ओम्, भूः — भूर्लोक पुरुष को तृप्त करता हूँ। ओम्, भुवः — भुवर्लोक पुरुष को तृप्त करता हूँ। ओम्, स्वः — स्वर्गलोक पुरुष को तृप्त करता हूँ।
+
+--- unit 4 | section: The tarpaṇa of the Gāyatrī ---
+vidhi:
+Then the goddess in her four measures.
+deva:
+ओं भूः एकपदा गायत्रीं तर्पयामि ।
+ओं भुवः द्विपदा गायत्रीं तर्पयामि ।
+ओं स्वः त्रिपदा गायत्रीं तर्पयामि ।
+ओं भूर्भुवःस्वः चतुष्पदा गायत्रीं तर्पयामि ।
+iast:
+oṁ bhūḥ ekapadā gāyatrīṁ tarpayāmi |
+oṁ bhuvaḥ dvipadā gāyatrīṁ tarpayāmi |
+oṁ svaḥ tripadā gāyatrīṁ tarpayāmi |
+oṁ bhūrbhuvaḥsvaḥ catuṣpadā gāyatrīṁ tarpayāmi |
+en: Om, earth — I satisfy the Gāyatrī of one foot. Om, mid-region — I satisfy the Gāyatrī of two feet. Om, heavens — I satisfy the Gāyatrī of three feet. Om, earth, mid-region and heavens — I satisfy the Gāyatrī of four feet.
+tel: ఓం, భూః — ఏకపద గాయత్రిని తృప్తిపరచుచున్నాను. ఓం, భువః — ద్విపద గాయత్రిని తృప్తిపరచుచున్నాను. ఓం, స్వః — త్రిపద గాయత్రిని తృప్తిపరచుచున్నాను. ఓం, భూర్భువఃస్వః — చతుష్పద గాయత్రిని తృప్తిపరచుచున్నాను.
+hi: ओम्, भूः — एकपदा गायत्री को तृप्त करता हूँ। ओम्, भुवः — द्विपदा गायत्री को तृप्त करता हूँ। ओम्, स्वः — त्रिपदा गायत्री को तृप्त करता हूँ। ओम्, भूर्भुवःस्वः — चतुष्पदा गायत्री को तृप्त करता हूँ।
+
+--- unit 5 | section: The tarpaṇa of the Gāyatrī ---
+vidhi:
+Then the ten names of the goddess.
+deva:
+ओं उषसीं तर्पयामि ।
+ओं गायत्रीं तर्पयामि ।
+ओं सावित्रीं तर्पयामि ।
+ओं सरस्वतीं तर्पयामि ।
+ओं वेदमातरं तर्पयामि ।
+ओं पृथिवीं तर्पयामि ।
+ओं अजां तर्पयामि ।
+ओं कौशिकीं तर्पयामि ।
+ओं साङ्कृतीं तर्पयामि ।
+ओं सार्वजितीं तर्पयामि ।
+iast:
+oṁ uṣasīṁ tarpayāmi |
+oṁ gāyatrīṁ tarpayāmi |
+oṁ sāvitrīṁ tarpayāmi |
+oṁ sarasvatīṁ tarpayāmi |
+oṁ vedamātaraṁ tarpayāmi |
+oṁ pṛthivīṁ tarpayāmi |
+oṁ ajāṁ tarpayāmi |
+oṁ kauśikīṁ tarpayāmi |
+oṁ sāṅkṛtīṁ tarpayāmi |
+oṁ sārvajitīṁ tarpayāmi |
+en: Om, I satisfy Uṣas. Om, I satisfy Gāyatrī. Om, I satisfy Sāvitrī. Om, I satisfy Sarasvatī. Om, I satisfy the Mother of the Veda. Om, I satisfy the Earth. Om, I satisfy Ajā. Om, I satisfy Kauśikī. Om, I satisfy Sāṅkṛtī. Om, I satisfy Sārvajitī.
+tel: ఓం, ఉషస్సును తృప్తిపరచుచున్నాను. ఓం, గాయత్రిని తృప్తిపరచుచున్నాను. ఓం, సావిత్రిని తృప్తిపరచుచున్నాను. ఓం, సరస్వతిని తృప్తిపరచుచున్నాను. ఓం, వేదమాతను తృప్తిపరచుచున్నాను. ఓం, పృథివిని తృప్తిపరచుచున్నాను. ఓం, అజను తృప్తిపరచుచున్నాను. ఓం, కౌశికిని తృప్తిపరచుచున్నాను. ఓం, సాంకృతిని తృప్తిపరచుచున్నాను. ఓం, సార్వజితిని తృప్తిపరచుచున్నాను.
+hi: ओम्, उषा को तृप्त करता हूँ। ओम्, गायत्री को तृप्त करता हूँ। ओम्, सावित्री को तृप्त करता हूँ। ओम्, सरस्वती को तृप्त करता हूँ। ओम्, वेदमाता को तृप्त करता हूँ। ओम्, पृथ्वी को तृप्त करता हूँ। ओम्, अजा को तृप्त करता हूँ। ओम्, कौशिकी को तृप्त करता हूँ। ओम्, सांकृती को तृप्त करता हूँ। ओम्, सार्वजिती को तृप्त करता हूँ।
+
+--- unit 6 | section: The tarpaṇa of the Gāyatrī ---
+vidhi:
+The offering closes with the peace invocation.
+deva:
+ओं तच्छ॒ं योरावृ॑णीमहे । गा॒तुं य॒ज्ञाय॑ ।
+गा॒तुं य॒ज्ञप॑तये । दैवी᳚ः स्व॒स्तिर॑स्तु नः ।
+स्व॒स्तिर्मानु॑षेभ्यः । ऊ॒र्ध्वं जि॑गातु भेष॒जम् ।
+शं नो॑ अस्तु द्वि॒पदे᳚ । शं चतु॑ष्पदे ॥
+ओं शान्ति॒ः शान्ति॒ः शान्ति॑ः ॥
+iast:
+oṁ tacchaṁ yorāvṛṇīmahe | gātuṁ yajñāya |
+gātuṁ yajñapataye | daivīḥ svastirastu naḥ |
+svastirmānuṣebhyaḥ | ūrdhvaṁ jigātu bheṣajam |
+śaṁ no astu dvipade | śaṁ catuṣpade ||
+oṁ śāntiḥ śāntiḥ śāntiḥ ||
+en: Om. We choose that which brings us peace and health. Give us a straight path for the sacrifice, and a straight path for the lord of the sacrifice. Let the blessing of the gods be upon us. Let there be well-being for men. Let healing herbs grow upward. Let there be peace for the two-footed, and peace for the four-footed. Om, peace, peace, peace.
+tel: ఓం. మాకు శాంతిని ఆరోగ్యమును కలిగించు దానిని కోరుచున్నాము. యజ్ఞమునకు, యజ్ఞపతికి సరియైన మార్గమును ఇండు. దేవతల ఆశీస్సు మాకు కలుగును గాక. మనుష్యులకు క్షేమము కలుగును గాక. ఓషధులు పైకి పెరుగును గాక. ద్విపదులకు శాంతి, చతుష్పదులకు శాంతి కలుగును గాక. ఓం, శాంతి, శాంతి, శాంతి.
+hi: ओम्। जो हमें शांति और आरोग्य दे, उसे हम चुनते हैं। यज्ञ के लिए और यज्ञपति के लिए सीधा मार्ग दो। देवताओं का आशीर्वाद हम पर हो। मनुष्यों का कल्याण हो। औषधियाँ ऊपर बढ़ें। द्विपदों को शांति, चतुष्पदों को शांति हो। ओम्, शांति, शांति, शांति।

@@ -1,0 +1,99 @@
+Title: Saṁkṣipta Bhojana-prayoga
+Devanāgarī: संक्षिप्त भोजन-प्रयोग
+Telugu: సంక్షిప్త భోజన-ప్రయోగము
+
+Author: Anonymous (traditional smārta ritual manual). This redaction edited by M.M. Paṇḍita Vidyādhara Śarmā Gauḍa (Vedācārya), Paṇḍita Madanamohana Śāstrī and Pāṇḍeya Paṇḍita Rāmanārāyaṇadatta Śāstrī for Gītā Press.
+
+Type: vidhi (ritual manual) — not a stotra. Uses the one-extra-field vidhi format documented in `01_sandhyopasana_vidhi.txt`.
+
+Recension / śākhā: **North Indian smārta, Vājasaneyi (Śukla-Yajurveda) based — the Mādhyandina-tradition form.** This is important and is not a formality: this nitya-karma material is śākhā-specific, and this file is NOT the universal or only form of the rite. Gītā Press, Gorakhpur is a North Indian house, and this volume's Vedic citations are overwhelmingly to the Vājasaneyi Saṁhitā (यजु० = VS 36.3, 11.50–52, 20.20–21, 7.41–42 and the rest), which is the Śukla Yajurveda followed in the north in its Mādhyandina śākhā. Several core mantras are cited instead to the **Taittirīya Āraṇyaka** (तै० आ० प्र० १०) — the prāṇāyāma mantra, sūryaśca mā manyuśca, āpaḥ punantu, agniśca mā manyuśca, uttame śikhare. That is not a defect in the book: TĀ prapāṭhaka 10 (the Mahānārāyaṇa Upaniṣad) is the common source of sandhyā mantras across traditions. But it means this file must be described as Vājasaneyi-based rather than Mādhyandina throughout.
+
+**Southern (Taittirīya / Kṛṣṇa-Yajurveda) practice differs and is deliberately NOT represented here.** A user following the Taittirīya usage should not use this file: the mantra selection, the sequence and the accented recitation all differ. That recension belongs in its own file, from its own source, and must never be merged into or harmonised with this one. See the śākhā rule in the repo-root `CLAUDE.md`.
+
+Source / recension: Gītā Press, Gorakhpur, book code 210, pp. 47–48, read from the page images of a scan of the printed book (not from OCR). A public copy of the same edition is on archive.org as `byyw_sandhya-upasan-vidhi-aur-tarpan-evam-bali-viswa-dev-vidhi-edited-by-vidyadhar-sh` (creator 'Gita Press, Gorakhpur'), which also carries a `_djvu.txt` OCR; that OCR was NOT used here and, per the standing warning about Devanāgarī OCR dropping lines, should be treated as needing verification if ever consulted. This is the closing piece of the volume, printed immediately after the bali-vaiśvadeva as its natural sequel — the householder eats only once everything else has been fed.
+
+Independent collation: the one Vedic mantra here, 'nābhyā āsīdantarikṣam', was collated against the Mādhyandina Vājasaneyi-Saṁhitā 31.13 on sa.wikisource.org (शुक्लयजुर्वेदः अध्यायः ३१) and matched word for word. The Gītā verse quoted at unit 2, 'brahmārpaṇaṁ brahma haviḥ', is Bhagavad Gītā 4.24, and it **was** collated (2026-09-09) — twice, because the first check was not independent enough to count. It first matched this corpus's own `bhagavadgita/04_jnana_karma_sannyasa_yoga.txt` verse 24 exactly; but that file's own source is stotranidhi, so agreeing with it establishes only that two stotranidhi-descended texts agree, which this corpus's sourcing rule explicitly says is one witness and not two. It was therefore collated again against **github.com/gita/gita** (`data/verse.json`, an independent digital corpus at tier 3 of the sourcing rule), which also matches character-for-character. The only differences across all three are non-substantive: this ritual file prefixes the praṇava `ॐ`, as the bhojana use requires, and the gita/gita text prints `ब्रह्महविर्` as one word where the others space it `ब्रह्म हविर्`. No variant reading exists. GRETIL's Bhagavadgītā plaintext 404s and vedicscriptures.github.io returned no parseable JSON, so neither was usable.
+
+Not independently collated: 'tvadīyaṁ vastu govinda', the amṛtopastaraṇa and amṛtāpidhāna formulae and the five prāṇāhutis, which are standard smārta ritual formulae with no critical edition to check against in the sources reachable here.
+
+Verse count: 6 units.
+
+Sections:
+भोजनसे पूर्व — Before eating (units 1–5)
+भोजनके अन्तमें — At the close of the meal (unit 6)
+
+Blurb: This is the shortest section in the volume. It is two pages on the right way to take a meal. The section begins with the brahmārpaṇa verse from the Bhagavad Gītā. That verse states that the offering is Brahman, the oblation is Brahman, the fire is Brahman, and the one who offers is Brahman as well. After this the food is first offered to Bhagavān Nārāyaṇa, and is then taken back as prasāda. The worshipper next offers five mouthfuls to the five prāṇas, which are the five vital breaths. In this way the meal itself becomes an offering. The book adds a long footnote which householders often quote. It says: sit facing east and eat in silence; do not touch the food with the left hand; hold the vessel with the left hand only until the five morsels have been offered; if a lamp goes out during the meal, do not continue eating without first remembering the Gāyatrī; and fill half the stomach with food, one quarter with water, and leave one quarter empty for air.
+
+--- unit 1 | section: Before eating ---
+vidhi:
+After the bali-vaiśvadeva, having finished the worship of guests and the rest, eat together with the members of the household. First utter this mantra, make a four-finger square maṇḍala with water in front of you, set the food vessel on it, place the dishes with ghee in it, keep the water vessel to your right, and then salute the food with the thought of the Lord in it. [The ṛṣis' rules for eating, given in the book's footnote: wash both feet, both hands and the mouth, and eat facing east in silence. One whose parents are living should not eat facing south. Do not touch the food with the left hand, and do not touch the feet, the head or the testicles while eating. Keep hold of the vessel with the left hand only until the five morsels for the prāṇas have been offered, and then let go. Do not put the hands outside the knees while eating. If, while eating, one lifts the water vessel with the left hand and drinks holding it in the right wrist, the vessel is not made ucchiṣṭa even at the end of the meal — so says Manu. If a twice-born eating touches another twice-born who is eating, both must abandon the meal. If a lamp goes out while eating at night, stop, and touch the food with the right hand while recalling the Gāyatrī inwardly; begin again after the lamp is relit. Eating in excess destroys life and health. Fill half the stomach with food, a quarter with water, and leave a quarter empty for the movement of air. Sit a little while after eating, then walk a hundred paces, then lie a while on the left side — that digests the food well. At the end of the meal eat the tulasī leaf that was offered to the Lord.]
+deva:
+ॐ नमो भगवते वासुदेवाय ।
+iast:
+oṁ namo bhagavate vāsudevāya |
+en: Oṁ, salutation to the blessed Vāsudeva.
+tel: ఓం భగవంతుడైన వాసుదేవునకు నమస్కారము.
+hi: ॐ भगवान् वासुदेवको नमस्कार है।
+
+--- unit 2 | section: Before eating ---
+vidhi:
+Uttering these mantras, drop a tulasī leaf into the food and offer the food, with water, to Bhagavān Nārāyaṇa.
+deva:
+ॐ ब्रह्मार्पणं ब्रह्म हविर्ब्रह्माग्नौ ब्रह्मणा हुतम् ।
+ब्रह्मैव तेन गन्तव्यं ब्रह्मकर्मसमाधिना ॥
+त्वदीयं वस्तु गोविन्द तुभ्यमेव समर्पये ।
+गृहाण सुमुखो भूत्वा प्रसीद परमेश्वर ॥
+iast:
+oṁ brahmārpaṇaṁ brahma havirbrahmāgnau brahmaṇā hutam |
+brahmaiva tena gantavyaṁ brahmakarmasamādhinā ||
+tvadīyaṁ vastu govinda tubhyameva samarpaye |
+gṛhāṇa sumukho bhūtvā prasīda parameśvara ||
+en: The offering is Brahman, the oblation is Brahman, poured by Brahman into the fire of Brahman; Brahman alone is to be reached by one absorbed in the act that is Brahman. What is yours, Govinda, I offer to you alone; be gracious of face and accept it — be pleased, O supreme Lord.
+tel: అర్పణము బ్రహ్మము, హవిస్సు బ్రహ్మము, బ్రహ్మాగ్నియందు బ్రహ్మముచేత హోమము చేయబడినది; బ్రహ్మకర్మసమాధి కలవానిచేత బ్రహ్మమే పొందదగినది. ఓ గోవిందా! నీ వస్తువును నీకే సమర్పించుచున్నాను; సుముఖుడవై గ్రహించుము, ప్రసన్నుడవు కమ్ము, ఓ పరమేశ్వరా.
+hi: अर्पण ब्रह्म है, हवि ब्रह्म है, ब्रह्मरूप अग्निमें ब्रह्मके द्वारा हवन किया गया है; ब्रह्मकर्मसमाधिवाले पुरुषको ब्रह्म ही प्राप्तव्य है। हे गोविन्द! तुम्हारी ही वस्तु तुम्हें समर्पित करता हूँ; सुमुख होकर ग्रहण करो, हे परमेश्वर! प्रसन्न हो।
+
+--- unit 3 | section: Before eating ---
+vidhi:
+Then cover the food from above with both hands and recite this mantra.
+deva:
+ॐ नाभ्या आसीदन्तरिक्षꣳ शीर्ष्णो द्यौः समवर्तत ।
+पद्भ्यां भूमिर्दिशः श्रोत्रात्तथा लोकाꣳ२ अकल्पयन् ॥
+iast:
+oṁ nābhyā āsīdantarikṣaṁ śīrṣṇo dyauḥ samavartata |
+padbhyāṁ bhūmirdiśaḥ śrotrāttathā lokāṁ2 akalpayan ||
+en: From his navel arose the mid-region; from his head the heaven came into being; from his feet the earth, and the quarters from his ear — thus they fashioned the worlds.
+tel: అతని నాభినుండి అంతరిక్షము కలిగెను; శిరస్సునుండి ద్యులోకము ఏర్పడెను; పాదములనుండి భూమి, శ్రోత్రమునుండి దిక్కులు — ఇట్లు లోకములను కల్పించిరి.
+hi: परमेश्वरकी नाभिसे अन्तरिक्ष, सिरसे द्युलोक, पैरोंसे भूमि और कानोंसे दिशाओंकी उत्पत्ति हुई। इस प्रकार परमात्माने समस्त लोकोंकी रचना की।
+
+--- unit 4 | section: Before eating ---
+vidhi:
+Then do ācamana with this mantra.
+deva:
+ॐ अमृतोपस्तरणमसि ।
+iast:
+oṁ amṛtopastaraṇamasi |
+en: You are the underspreading of the nectar.
+tel: నీవు అమృతమునకు ఉపస్తరణమవు.
+hi: तुम अमृतका उपस्तरण (आसन) हो।
+
+--- unit 5 | section: Before eating ---
+vidhi:
+Then recite these five mantras one by one, and with each put into the mouth one morsel of food about the size of a jujube or an āmalaka fruit. After this do ācamana again and eat in silence according to rule.
+deva:
+१ ॐ प्राणाय स्वाहा । २ ॐ अपानाय स्वाहा । ३ ॐ व्यानाय स्वाहा । ४ ॐ समानाय स्वाहा । ५ ॐ उदानाय स्वाहा ।
+iast:
+1 oṁ prāṇāya svāhā | 2 oṁ apānāya svāhā | 3 oṁ vyānāya svāhā | 4 oṁ samānāya svāhā | 5 oṁ udānāya svāhā |
+en: To the prāṇa breath, svāhā. To the apāna, svāhā. To the vyāna, svāhā. To the samāna, svāhā. To the udāna, svāhā.
+tel: ప్రాణమునకు స్వాహా. అపానమునకు స్వాహా. వ్యానమునకు స్వాహా. సమానమునకు స్వాహా. ఉదానమునకు స్వాహా.
+hi: प्राणको स्वाहा। अपानको स्वाहा। व्यानको स्वाहा। समानको स्वाहा। उदानको स्वाहा।
+
+--- unit 6 | section: At the close of the meal ---
+vidhi:
+At the end of the meal, do ācamana with this mantra.
+deva:
+ॐ अमृतापिधानमसि ।
+iast:
+oṁ amṛtāpidhānamasi |
+en: You are the covering of the nectar.
+tel: నీవు అమృతమునకు అపిధానమవు.
+hi: तुम अमृतका अपिधान (ढक्कन) हो।

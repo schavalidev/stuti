@@ -1,0 +1,176 @@
+Title: Bhasma-dhāraṇa Vidhi — the wearing of sacred ash
+Devanāgarī: भस्मधारणविधिः
+Telugu: భస్మధారణ విధిః
+
+Author: Anonymous. The verses are the received Śaiva formulae; no composer is named in the source. The one Vedic mantra in the rite is the Mṛtyuñjaya, which is Ṛgveda 7.59.12 and stands in the Taittirīya corpus at three places named below.
+
+Type: vidhi (ritual manual) — not a stotra. Uses the one-extra-field vidhi format documented in `../madhyandina/01_sandhyopasana_vidhi.txt`: a `vidhi:` field carrying the ritual instruction, then deva / iast / en / tel / hi.
+
+Recension / paddhati: **not śākhā-specific**, which is why the file sits in `vidhi/samanya/`. It is a Śaiva smārta observance and its authority is the Śaiva paddhati literature rather than any branch of the Veda. The source files it under the daily rite, and it is performed each morning after the bath and before the sandhyāvandana.
+
+Accent: **present in one place only — the Mṛtyuñjaya mantra of unit 6, which carries 15 marks.** Everything else in the rite is śloka and ritual prose, unaccented in the source and unaccented here. **No accent was added, inferred, moved between syllables or reconstructed at any point.** There are no zero-width joiners and no zero-width non-joiners in this file.
+
+Source / recension: base text `https://stotranidhi.com/bhasma-dharana-vidhi-in-telugu/` (fetched 2026-09-12; 2,144 Telugu characters, 15 accent marks). **The page exists in Telugu script only** — no Devanāgarī, Sanskrit, Hindi, English, Kannada or Tamil version of it is published — so the Devanāgarī column here is transliterated from that Telugu by the block-offset method used for the Taittirīya files, the two Unicode blocks being code-aligned. The transliteration introduced no Latin-for-anusvāra defects of the kind found on the Telugu brahmayajña page: that defect does not occur anywhere on this page.
+
+Independent collation: **four witnesses, of four different kinds, and between them they cover every unit of the file except the procedure of unit 2.**
+
+**(1) A second complete manual — `https://mahanyasam.com/bhasma-dharana-vidhi/`** (fetched 2026-09-12). This is a genuinely separate editorial lineage, and the evidence is not merely that it is a different site: **it carries a passage the base text does not have, and it lacks two that the base text does.** It prints, after the two meditation verses, the Upaniṣadic line `ओं अग्निरिति भस्म वायुरिति भस्म जलमिति भस्म स्थलमिति भस्म व्योमेति भस्म सर्वं ह वा इदं भस्म`, which is the mantra of the Bhasmajābāla and Kālāgnirudra Upaniṣads and which the base text drops entirely; and it has neither the prayer to Tryambaka of unit 5 nor the kuṅkuma verse of unit 8. A page that both adds and subtracts in that way is not a repost. It also carries **no ASCII-colon-for-visarga and no zero-width joiner**, so it shares none of the base lineage's defects. It settles one reading, and its differences of spelling are listed in the Recension note.
+
+**(2) The Mahāmṛtyuñjaya Stotram**, `sanskritdocuments.org/doc_shiva/mahaamrtyu.itx` (fetched 2026-09-12; the file's own category line names the **Mārkaṇḍeya Purāṇa and the Padma Purāṇa**). **It carries the whole of unit 5**, at its verses 21 and 22, in a Purāṇic lineage with no connection to either manual: `मृत्युञ्जय महादेव त्राहि मां शरणागतम् । जन्ममृत्युजरारोगैः पीडितं कर्मबन्धनैः ॥ तावकस्त्वद्गतः प्राणस्त्वच्चित्तोऽहं सदा मृड । इति विज्ञाप्य देवेशं त्र्यम्बकाख्यमनुं जपेत् ॥` **It settles two readings.**
+
+**(3) The Mṛtyuñjaya mantra of unit 6 — three Vedic witnesses, and the accent agrees mark for mark.** The accented Taittirīya Saṁhitā at **TS 1.8.6** (`sanskritdocuments.org/doc_veda/taittirIyasamhitA.html`, 1,351,568 Devanāgarī characters), the accented Taittirīya Āraṇyaka at **TĀ 10.56**, and the accented Taittirīya Brāhmaṇa, which quotes it at **TB 1.6.10.4**, all fetched 2026-09-12. Every one of the fifteen marks in this file's copy stands where those editions put it. Two differences of spelling, neither of accent: the base text prints `पुष्टि॒ वर्ध॑नम्` as two words where the Saṁhitā prints `पुष्टि॒वर्ध॑नम्` as one, and the Saṁhitā writes `माऽमृता᳚त्` with the avagraha where the Āraṇyaka and both manuals write `मामृता᳚त्`. Neither was changed.
+
+**(4) The Sakalāgama-sāra-saṅgraha**, in the vishvāsa project's transcription of **Institut Français de Pondichéry transcript T0351** (`vishvasa.github.io`, fetched 2026-09-12; the page carries the folio marks of the manuscript). It is an Āgamic compendium and a manuscript lineage, and it carries the verse of unit 4 in a longer and older-looking form: `भूतिर्भूतिकरी पवित्र परमापापौघविध्वंसिनी सर्वोपद्रवनाशिनी परतरासौभाग्यसम्पत्करी । भूतप्रेतपिशाचराक्षसगणापस्मारसंरक्षणी साक्षान्मोक्षकरी फलप्रघटिताभूतिः सदा धार्यताम् ॥` Not adopted; recorded below.
+
+**The scriptural root of the rite, named because it matters for what this text is.** The **Bṛhajjābāla Upaniṣad** of the Atharvaveda (`sanskritdocuments.org/doc_upanishhat/brihajjabala.itx`, fetched 2026-09-12) teaches the tripuṇḍra-vidhi in its sixth and seventh brāhmaṇas, as Yājñavalkya answers Janaka of Videha. **Both of this file's key phrases are its words.** It says, as a refrain, `स एष भस्मज्योतिरिति वै याज्ञवल्क्यः` — "this is indeed the light that is ash, said Yājñavalkya" — which is behind unit 3's `भस्म ज्योतिस्वरूपाय`; and it says `अत एवैषा भूतिर्भूतिकरीत्युक्ता` — "for this very reason she is called *bhūti*, the maker of prosperity" — which is behind unit 4. The **Kālāgnirudra** and **Bhasmajābāla** Upaniṣads carry the same vidhi. **These are the ancestor of the rite and not a witness to the verses as this file prints them**, and they are named here as the former, not offered as the latter.
+
+**(5) The closing verse of unit 8** stands three times elsewhere: in the compiled anthology at `sanskritdocuments.org/doc_z_misc_general/allshlokawmean.html` as śloka 139, which agrees with this file's reading `कुङ्कुमरागशोणे`; and in this corpus at `../../devi/dasamahavidya/15_tripurasundari_stotram.txt`, agreeing, and `../../devi/syamala/01_syamala_dandakam.txt`, which reads `कुङ्कुम राग श्रोणे`. **The two corpus files are stotranidhi-sourced and so are not an independent lineage**; the anthology is, though it names no edition of its own. Neither corpus file was altered.
+
+**What still rests on one lineage.** The procedure of unit 2 — the hexagram drawn on the left palm, the praṇava and the seven syllables written within it, the six of `namaḥ śivāya` at its points — is in both manuals in nearly the same words, but both are devotional websites and neither names a printed source, and the Upaniṣads prescribe a different procedure. It should be checked against a printed Śaiva āhnika manual if one is ever to hand.
+
+Recension note: **two printing slips in the base text, both left as printed.**
+
+**(1) `वाम हसे` at unit 2** stands where `वाम हस्ते`, "in the left hand", is plainly meant — the instruction is to take the ash in the right hand and place it in the left, and the syllables are then written on the left palm. The missing `त्` is a slip of one letter. It is transcribed as printed and the reading intended is given in the `en:`, `tel:` and `hi:` fields.
+
+**(2) `पीडतं` at unit 5** stands where `पीडितं`, "afflicted", is meant, in the line `जन्ममृत्युजरारोगैः पीडतं कर्मबन्धनैः`. Again one letter. Transcribed as printed.
+
+Neither was corrected, because the rule of this corpus is that a reading is changed only when a witness settles it, and here there is none.
+
+Not collated: units 1, 2, 3, 4, 5, 7 and the first sentence of unit 8 — that is, everything except the Mṛtyuñjaya mantra and the closing verse. See above.
+
+Verse count: 8 units. Not a verse count in the stotra sense — the work is an order of service, and the numbering is this corpus's, not the source's.
+
+Sections:
+सङ्कल्पः — Saṅkalpa (unit 1)
+विधिः — The manner of it (unit 2)
+ध्यानम् — Meditation (units 3–4)
+त्र्यम्बकप्रार्थना — Prayer to Tryambaka (unit 5)
+मृत्युञ्जयमन्त्रः — The Mṛtyuñjaya mantra (unit 6)
+भस्मधारणम् — Wearing the ash (unit 7)
+कुङ्कुमधारणम् — Wearing the kuṅkuma (unit 8)
+
+Blurb: Sacred ash is worn in three level lines across the forehead. This file gives the rite for putting it on. The worshipper sips water and states why he wears it — for the protection of his body, for the ending of harm, and for knowledge and prosperity. He takes the ash in his right hand and sets it in his left, sprinkles water on it, covers both hands, and writes the holy syllables upon his palm with his ring finger. He then meditates on the ash as the very form of light, and as Śiva himself. He prays to Tryambaka, who is called the three-eyed, and recites the mantra that asks to be freed from death as the ripe cucumber is freed from its stalk. Only then does he wear the ash — on the forehead, the crown, the heart, the belly, the arms, the sides and the throat. Last he wears kuṅkuma on the forehead, with a verse to the Mother of the world.
+
+--- unit 1 | section: Saṅkalpa ---
+vidhi:
+Sip water and state the intention. The wording of the intention is the source’s own.
+deva:
+आचम्य .. |
+संकल्प्य .. |
+पूर्वोक्त एवं गुण विशेषण विशिष्ठायां शुभतिथौ मम शरीर रक्षण सिद्ध्यर्थं भूत प्रेत पिशाच राक्षस गण अरिष्ट संहारार्थं, ज्ञान ऐश्वर्यता प्राप्त्यर्थं ललाटे कुंकुम सहित भस्म त्रिपुंड्र धारणं करिष्ये ||
+iast:
+ācamya .. |
+saṁkalpya .. |
+pūrvokta evaṁ guṇa viśeṣaṇa viśiṣṭhāyāṁ śubhatithau mama śarīra rakṣaṇa siddhyarthaṁ bhūta preta piśāca rākṣasa gaṇa ariṣṭa saṁhārārthaṁ, jñāna aiśvaryatā prāptyarthaṁ lalāṭe kuṁkuma sahita bhasma tripuṁḍra dhāraṇaṁ kariṣye ||
+en: Having performed ācamana. Having made the saṅkalpa. At this auspicious hour already named, for the protection of my body, for the destruction of the harm done by the hosts of bhūtas, pretas, piśācas and rākṣasas, and for the obtaining of knowledge and prosperity, I shall now wear the three lines of sacred ash with kuṅkuma upon my forehead.
+tel: ఆచమనము చేసి. సంకల్పము చేసి. ముందు చెప్పిన ఈ శుభ తిథియందు, నా శరీర రక్షణ సిద్ధి కొరకు, భూత ప్రేత పిశాచ రాక్షస గణముల అరిష్టము నశించుట కొరకు, జ్ఞానము ఐశ్వర్యము కలుగుట కొరకు, లలాటమునందు కుంకుమ సహిత భస్మ త్రిపుండ్ర ధారణము చేయుచున్నాను.
+hi: आचमन करके। संकल्प करके। पहले कहे हुए इस शुभ तिथि में, अपने शरीर की रक्षा के लिए, भूत, प्रेत, पिशाच और राक्षस गणों के अरिष्ट के नाश के लिए, और ज्ञान तथा ऐश्वर्य की प्राप्ति के लिए, ललाट पर कुंकुम सहित भस्म का त्रिपुंड्र धारण करता हूँ।
+
+--- unit 2 | section: The manner of it ---
+vidhi:
+The procedure, as the source gives it. The syllables are written on the left palm with the ring finger of the right hand, and the ash is held covered while it is done.
+deva:
+विधि |
+दक्षिण हस्तेन भस्ममादाय, वाम हस्ते निक्षिप्य, जलं संप्रोक्ष्य, हस्तद्वयमाच्छाद्य, दक्षिणहस्तानामिकया वामहस्तोपरि षट्कोणं लिखित्वा, षट्कोण मध्ये ओंकारः अं आं इं ईं उं ऊं सौं, षट्कोणेषु ओं नमः शिवाय इति षड्बीजान् लिखित्वा ||
+iast:
+vidhi |
+dakṣiṇa hastena bhasmamādāya, vāma haste nikṣipya, jalaṁ saṁprokṣya, hastadvayamācchādya, dakṣiṇahastānāmikayā vāmahastopari ṣaṭkoṇaṁ likhitvā, ṣaṭkoṇa madhye oṁkāraḥ aṁ āṁ iṁ īṁ uṁ ūṁ sauṁ, ṣaṭkoṇeṣu oṁ namaḥ śivāya iti ṣaḍbījān likhitvā ||
+en: The manner. Take ash in the right hand and place it in the left. Sprinkle water over it. Cover both hands. With the ring finger of the right hand draw a six-pointed figure upon the left hand. In the middle of that figure write the praṇava and the syllables aṁ āṁ iṁ īṁ uṁ ūṁ sauṁ, and at its six points write the six syllables of "Om namaḥ śivāya".
+tel: విధి. కుడి చేతితో భస్మమును తీసికొని, ఎడమ చేతిలో ఉంచవలెను. దానిపై జలమును ప్రోక్షించవలెను. రెండు చేతులను కప్పవలెను. కుడి చేతి అనామికతో ఎడమ చేతిపై షట్కోణమును లిఖించవలెను. ఆ షట్కోణ మధ్యమునందు ఓంకారమును, అం ఆం ఇం ఈం ఉం ఊం సౌం అను బీజములను, షట్కోణముల యందు ఓం నమః శివాయ అను ఆరు బీజములను లిఖించవలెను.
+hi: विधि। दाहिने हाथ से भस्म लेकर बाएँ हाथ में रखे। उस पर जल छिड़के। दोनों हाथों को ढँक ले। दाहिने हाथ की अनामिका से बाएँ हाथ पर षट्कोण बनाए। उस षट्कोण के मध्य में प्रणव तथा अं आं इं ईं उं ऊं सौं लिखे, और षट्कोण के छह कोनों पर "ओं नमः शिवाय" के छह अक्षर लिखे।
+
+--- unit 3 | section: Meditation ---
+vidhi:
+Meditate on the ash in this form.
+deva:
+ध्यानं –
+भस्म ज्योतिस्वरूपाय शिवाय परमात्मने |
+षट्त्रिंशत्तत्त्वरूपाय नमश्शांताय तेजसे ||
+पुनातीदं जगत्सर्वं त्रिपुंड्रात्म सदाशिवम् |
+ऐश्वर्यप्राप्तिरूपाय तस्मै श्री भस्मने नमः ||
+iast:
+dhyānaṁ –
+bhasma jyotisvarūpāya śivāya paramātmane |
+ṣaṭtriṁśattattvarūpāya namaśśāṁtāya tejase ||
+punātīdaṁ jagatsarvaṁ tripuṁḍrātma sadāśivam |
+aiśvaryaprāptirūpāya tasmai śrī bhasmane namaḥ ||
+en: The meditation. Salutations to the ash, which is the very form of light, to Śiva, to the supreme Self, to him whose form is the thirty-six principles, to the peaceful one, to the radiance. This whole world is purified by it. The three lines are Sadāśiva himself. Salutations to that sacred ash, which is the very form of the obtaining of prosperity.
+tel: ధ్యానము. జ్యోతి స్వరూపమైన భస్మమునకు, శివునికి, పరమాత్మకు, ముప్పది ఆరు తత్త్వముల రూపమైన వానికి, శాంతునికి, తేజస్సునకు నమస్కారము. ఈ జగత్తు అంతయు దీనిచేత పవిత్రము అగును. త్రిపుండ్రమే సదాశివుడు. ఐశ్వర్య ప్రాప్తి రూపమైన ఆ శ్రీ భస్మమునకు నమస్కారము.
+hi: ध्यान। ज्योतिस्वरूप भस्म को, शिव को, परमात्मा को, छत्तीस तत्त्वों के स्वरूप को, शांत को, तेज को नमस्कार। इससे यह सारा जगत पवित्र होता है। त्रिपुंड्र ही सदाशिव है। ऐश्वर्य की प्राप्ति के स्वरूप उस श्री भस्म को नमस्कार।
+
+--- unit 4 | section: Meditation ---
+vidhi:
+The verse in praise of the ash, said as it is taken up.
+deva:
+भूतिर्भूतिकरी पवित्रजननी पापौघविध्वंसिनी |
+सर्वोपद्रवनाशिनी प्रियकरी सर्वार्थ संपत्करी ||
+भूतप्रेतपिशाचराक्षस-गणारिष्टोपसंहारिणी |
+तेजोराज्यविभूतिमोक्षणकरी भूतिस्सदा धार्यताम् ||
+iast:
+bhūtirbhūtikarī pavitrajananī pāpaughavidhvaṁsinī |
+sarvopadravanāśinī priyakarī sarvārtha saṁpatkarī ||
+bhūtapretapiśācarākṣasa-gaṇāriṣṭopasaṁhāriṇī |
+tejorājyavibhūtimokṣaṇakarī bhūtissadā dhāryatām ||
+en: Sacred ash gives prosperity. It is the mother of purity. It destroys the mass of wrongdoing. It removes every calamity. It is kind, and it brings about every good end and every wealth. It puts an end to the harm done by bhūtas, pretas, piśācas, rākṣasas and the hosts. It bestows radiance, dominion, prosperity and release. Let the sacred ash always be worn.
+tel: భూతి ఐశ్వర్యమును ఇచ్చునది. పవిత్రతకు జననియైనది. పాపరాశిని నశింపజేయునది. సమస్త ఉపద్రవములను తొలగించునది. ప్రియము కలిగించునది. సర్వార్థములను సంపదలను ఇచ్చునది. భూత ప్రేత పిశాచ రాక్షస గణముల అరిష్టమును తొలగించునది. తేజస్సును, రాజ్యమును, విభూతిని, మోక్షమును ఇచ్చునది. ఆ భూతిని ఎల్లప్పుడు ధరించవలెను.
+hi: भूति ऐश्वर्य देने वाली है। पवित्रता की जननी है। पापों के समूह का नाश करने वाली है। सब उपद्रवों को दूर करने वाली है। प्रिय करने वाली और सब अर्थ तथा संपत्ति देने वाली है। भूत, प्रेत, पिशाच, राक्षस और गणों के अरिष्ट का संहार करने वाली है। तेज, राज्य, विभूति और मोक्ष देने वाली है। उस भूति को सदा धारण करना चाहिए।
+
+--- unit 5 | section: Prayer to Tryambaka ---
+vidhi:
+A prayer to Śiva before the Mṛtyuñjaya mantra is recited.
+deva:
+त्र्यंबक महादेव त्राहिमां शरणागतम् |
+जन्ममृत्युजरारोगैः पीडितं कर्मबंधनैः ||
+तावकस्त्वद्गतः प्राणः त्वच्चित्तोहं सदा मृड |
+इति विज्ञाप्य देवेशं जपेन्मन्त्रं त्र्यंबकम् ||
+iast:
+tryaṁbaka mahādeva trāhimāṁ śaraṇāgatam |
+janmamṛtyujarārogaiḥ pīḍitaṁ karmabaṁdhanaiḥ ||
+tāvakastvadgataḥ prāṇaḥ tvaccittohaṁ sadā mṛḍa |
+iti vijñāpya deveśaṁ japenmantraṁ tryaṁbakam ||
+en: O Tryambaka, O great god, protect me, who have come to you for refuge. I am afflicted by birth, by death, by old age, by sickness and by the bonds of my own deeds. My breath rests in you. My mind is always in you, O gracious one. Having spoken thus to the lord of the gods, let him recite the Tryambaka mantra.
+tel: ఓ త్ర్యంబకా, మహాదేవా, శరణు వచ్చిన నన్ను కాపాడుము. జన్మము, మృత్యువు, ముసలితనము, రోగములు, కర్మ బంధనములచేత పీడితుడనై ఉన్నాను. నా ప్రాణము నీయందే ఉన్నది. ఓ మృడా, నా చిత్తము ఎల్లప్పుడు నీయందే ఉన్నది. ఇట్లు దేవేశునికి విన్నవించి, త్ర్యంబక మంత్రమును జపించవలెను.
+hi: हे त्र्यंबक, हे महादेव, शरण में आए मुझे बचाओ। मैं जन्म, मृत्यु, जरा, रोग और कर्मबंधनों से पीड़ित हूँ। मेरा प्राण तुममें ही है। हे मृड, मेरा चित्त सदा तुममें ही है। इस प्रकार देवेश से निवेदन करके त्र्यंबक मंत्र का जप करे।
+
+--- unit 6 | section: The Mṛtyuñjaya mantra ---
+vidhi:
+Recite the Mṛtyuñjaya mantra. This is the one Vedic mantra in the rite, and it carries its accent.
+deva:
+मृत्युंजय मंत्रं
+ओं त्र्य॑ंबकं यजामहे सुग॒न्धिं पु॑ष्टि॒ वर्ध॑नम् |
+उ॒र्वा॒रु॒कमि॑व॒ बन्ध॑नान्मृ॒त्योर्मु॑क्षीय॒ मामृता᳚त् ||
+iast:
+mṛtyuṁjaya maṁtraṁ
+oṁ tryaṁbakaṁ yajāmahe sugandhiṁ puṣṭi vardhanam |
+urvārukamiva bandhanānmṛtyormukṣīya māmṛtāt ||
+en: The Mṛtyuñjaya mantra. Om. We worship Tryambaka, the fragrant one, who increases nourishment. As the cucumber is freed from its stalk, so may I be freed from death, not from immortality.
+tel: మృత్యుంజయ మంత్రము. ఓం. సుగంధి కలవాడు, పుష్టిని వృద్ధి చేయువాడు అయిన త్ర్యంబకుని పూజించుచున్నాము. దోసకాయ కాడ నుండి విడివడునట్లు, నేను మృత్యువు నుండి విడివడుదును గాక, అమృతము నుండి కాదు.
+hi: मृत्युंजय मंत्र। ओम्। सुगंधि वाले, पुष्टि बढ़ाने वाले त्र्यंबक का हम यजन करते हैं। जैसे ककड़ी अपने बंधन से छूटती है, वैसे ही मैं मृत्यु से छूटूँ, अमृत से नहीं।
+
+--- unit 7 | section: Wearing the ash ---
+vidhi:
+Wear the ash on each place named, then wash the hands and sip a little of the water used.
+deva:
+ललाटे, मूर्ध्नि, हृदये, उदरे, बाह्वोः, पार्श्वयोः, कंठौ इत्यादयः धारणं करिष्ये | हस्तद्वयं प्रक्षाळ्य | प्रक्षाळन जलं किंचित् पीत्वा |
+iast:
+lalāṭe, mūrdhni, hṛdaye, udare, bāhvoḥ, pārśvayoḥ, kaṁṭhau ityādayaḥ dhāraṇaṁ kariṣye | hastadvayaṁ prakṣāḻya | prakṣāḻana jalaṁ kiṁcit pītvā |
+en: I shall now wear it on the forehead, on the crown of the head, on the heart, on the belly, on the two arms, on the two sides and on the throat, and on the other places. Having washed both hands. Having drunk a little of the water of that washing.
+tel: లలాటమునందు, మూర్ధమునందు, హృదయమునందు, ఉదరమునందు, బాహువులయందు, పార్శ్వములయందు, కంఠమునందు, ఇత్యాది స్థానములయందు ధారణము చేయుచున్నాను. రెండు చేతులను కడిగి. ఆ ప్రక్షాళన జలమును కొంచెము త్రాగి.
+hi: ललाट, मूर्धा, हृदय, उदर, दोनों बाहु, दोनों पार्श्व, कंठ तथा अन्य स्थानों पर धारण करता हूँ। दोनों हाथ धोकर। उस प्रक्षालन जल को थोड़ा पीकर।
+
+--- unit 8 | section: Wearing the kuṅkuma ---
+vidhi:
+Then wear the kuṅkuma on the forehead with this verse to the goddess.
+deva:
+सर्वजनवशीकरण सिद्ध्यर्थं दृष्टिदोषपीडापरिहारार्थं ललाटे कुंकुम धारणं करिष्ये |
+श्लोकं –
+ओं चतुर्भुजे चंद्रकलावतंसे कुचोन्नते कुंकुमरागशोणे |
+पुंड्रेक्षुपाशांकुशपुष्पबाणहस्ते नमस्ते जगदेकमातः ||
+iast:
+sarvajanavaśīkaraṇa siddhyarthaṁ dṛṣṭidoṣapīḍāparihārārthaṁ lalāṭe kuṁkuma dhāraṇaṁ kariṣye |
+ślokaṁ –
+oṁ caturbhuje caṁdrakalāvataṁse kuconnate kuṁkumarāgaśoṇe |
+puṁḍrekṣupāśāṁkuśapuṣpabāṇahaste namaste jagadekamātaḥ ||
+en: For the winning of the goodwill of all people, and for the removal of the affliction of the evil eye, I shall now wear kuṅkuma upon my forehead. The verse. Om, salutations to you, the one mother of the world, who has four arms, who wears the crescent of the moon as her ornament, whose breasts are raised, who is red with the glow of kuṅkuma, and who holds in her hands the sugarcane bow, the noose, the goad and the flower arrows.
+tel: సర్వజన వశీకరణ సిద్ధి కొరకు, దృష్టి దోష పీడా పరిహారము కొరకు, లలాటమునందు కుంకుమ ధారణము చేయుచున్నాను. శ్లోకము. ఓం, చతుర్భుజ, చంద్రకళను ఆభరణముగా ధరించినది, ఉన్నత కుచములు కలది, కుంకుమ రాగముతో ఎర్రనైనది, పుండ్రేక్షు ధనువు, పాశము, అంకుశము, పుష్ప బాణములు హస్తములలో ధరించినది అయిన జగదేక మాతా, నీకు నమస్కారము.
+hi: सब लोगों को वश में करने की सिद्धि के लिए और दृष्टिदोष की पीड़ा के परिहार के लिए ललाट पर कुंकुम धारण करता हूँ। श्लोक। ओम्, चतुर्भुजा, चंद्रकला को आभूषण रूप में धारण करने वाली, उन्नत कुचों वाली, कुंकुम के राग से लाल, और हाथों में इक्षु धनुष, पाश, अंकुश तथा पुष्पबाण धारण करने वाली, हे जगत की एकमात्र माता, तुम्हें नमस्कार।

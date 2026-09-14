@@ -1,0 +1,612 @@
+Title: Tarpaṇa-vidhi (Devarṣimanuṣyapitṛtarpaṇa-vidhi)
+Devanāgarī: तर्पण-विधि (देवर्षिमनुष्यपितृतर्पण-विधि)
+Telugu: తర్పణ-విధి (దేవర్షిమనుష్యపితృతర్పణ-విధి)
+
+Author: Anonymous (traditional smārta ritual manual). This redaction edited by M.M. Paṇḍita Vidyādhara Śarmā Gauḍa (Vedācārya), Paṇḍita Madanamohana Śāstrī and Pāṇḍeya Paṇḍita Rāmanārāyaṇadatta Śāstrī for Gītā Press.
+
+Type: vidhi (ritual manual) — not a stotra. Uses the one-extra-field vidhi format documented in `01_sandhyopasana_vidhi.txt`: a `vidhi:` field carrying the ritual instruction, then deva / iast / en / tel / hi as usual.
+
+Recension / śākhā: **North Indian smārta, Vājasaneyi (Śukla-Yajurveda) based — the Mādhyandina-tradition form.** This is important and is not a formality: tarpaṇa practice is śākhā-specific, and this file is NOT the universal or only form of the rite. Gītā Press, Gorakhpur is a North Indian house, and this volume's Vedic citations are overwhelmingly to the Vājasaneyi Saṁhitā (यजु० = VS 36.3, 11.50–52, 20.20–21, 7.41–42 and the rest), which is the Śukla Yajurveda followed in the north in its Mādhyandina śākhā. Several core mantras are cited instead to the **Taittirīya Āraṇyaka** (तै० आ० प्र० १०) — the prāṇāyāma mantra, sūryaśca mā manyuśca, āpaḥ punantu, agniśca mā manyuśca, uttame śikhare. That is not a defect in the book: TĀ prapāṭhaka 10 (the Mahānārāyaṇa Upaniṣad) is the common source of sandhyā mantras across traditions. But it means this file must be described as Vājasaneyi-based rather than Mādhyandina throughout.
+
+**Southern (Taittirīya / Kṛṣṇa-Yajurveda) practice differs and is deliberately NOT represented here.** A user following the Taittirīya tarpaṇa-vidhi should not use this file: the mantra selection, the sequence and the accented recitation all differ. That recension belongs in its own file, from its own source, and must never be merged into or harmonised with this one. See the śākhā rule in the repo-root `CLAUDE.md`.
+
+Source / recension: Gītā Press, Gorakhpur, book code 210, "संध्योपासनविधि, तर्पण एवं बलिवैश्वदेवविधि (मन्त्रानुवादसहित)", saṁ. 2064 twelfth reprint (ISBN 81-293-0220-9), pp. 23–41, read from the page images of a scan of the printed book (not from OCR). A public copy of the same edition is on archive.org as `byyw_sandhya-upasan-vidhi-aur-tarpan-evam-bali-viswa-dev-vidhi-edited-by-vidyadhar-sh` (creator 'Gita Press, Gorakhpur'), which also carries a `_djvu.txt` OCR; that OCR was NOT used here and, per the standing warning about Devanāgarī OCR dropping lines, should be treated as needing verification if ever consulted.
+
+Independent collation: every mantra cited to the Śukla Yajurveda was collated word-for-word against the Mādhyandina Vājasaneyi-Saṁhitā on sa.wikisource.org (शुक्लयजुर्वेदः, adhyāyas 2, 5, 7, 8, 11, 13, 16, 19, 21, 33, 36, fetched via the MediaWiki API), an independent digital lineage carrying the Uvaṭa–Mahīdhara commentary. All matched: VS 7.34, 33.53, 19.70, 19.58, 19.49, 19.50, 19.36, 19.67, 2.34, 2.32, 13.27, 13.28, 13.29, 13.3, 5.15, 16.1, 36.3, 11.62, 21.1, 8.40, 2.24, 8.21. One numbering discrepancy on the Wikisource side (its chapter 19 verse markers skip 19.67) is a defect in that file's apparatus, not a variant reading; Gītā Press's citation numbers are correct against standard VS numbering.
+
+Not independently collated: the paurāṇika and smārta ślokas that are not Vedic — āgacchantu mahābhāgā, devāsurāstathā yakṣāḥ, narakeṣu samasteṣu, ābrahmastambaparyantaṁ, the vastra-niṣpīḍana verse, and the Bhīṣma-tarpaṇa verse. No second witness was consulted for these; they stand on the Gītā Press printing alone. The same holds for the smṛti citations in the book's footnotes (Dakṣasmṛti, Auśanasasmṛti, Pārāskara-gṛhyasūtra, Bodhāyana, Vṛddhayājñavalkya, Vāyupurāṇa, Agnipurāṇa), which are reproduced here only inside `vidhi:` fields as the compiler's framing, never as text units.
+
+Verse count: 39 units. As in the companion file this is not a verse count in the stotra sense: the work is prose vidhi punctuated by mantras, and the numbering is this corpus's, not the book's.
+
+Nāmāvalī note: units 5–9 and 35–36 are name-lists (devatarpaṇa, ṛṣitarpaṇa, divyamanuṣyatarpaṇa, divyapitṛtarpaṇa, yamatarpaṇa, and the two closing namaskāra rows), not verses. Per this corpus's convention that nāmāvalī material takes reference-list treatment rather than the per-verse block, each is kept as a single unit holding the whole list, with the list given once in Devanāgarī and once in IAST and the `en`/`tel`/`hi` fields describing the list rather than translating each name. Retaining them is necessary — they are load-bearing steps of the rite, not an appendix — but they are not being pressed into a shape they do not fit.
+
+Sections:
+संकल्प एवं आवाहन — Saṅkalpa and the invocation of the Viśvedevas (units 1–4)
+देव-ऋषि-दिव्यमनुष्य-दिव्यपितृ-यमतर्पण — Tarpaṇa of gods, ṛṣis, divine men, divine forefathers and the fourteen Yamas (units 5–9)
+मनुष्यपितृतर्पण — Tarpaṇa of one's own forefathers (units 10–22)
+सर्वभूततर्पण — Tarpaṇa of all beings, and of those for whom no one else offers water (units 23–25)
+वस्त्रनिष्पीडन एवं भीष्मतर्पण — Wringing of the cloth, and the offering to Bhīṣma (units 26–27)
+अर्घ्यदान — Arghya to Brahmā, Viṣṇu, Rudra, Savitṛ, Mitra, Varuṇa (units 28–33)
+सूर्योपस्थान एवं नमस्कार — Sūryopasthāna and the salutations (units 34–36)
+मुखमार्जन, विसर्जन एवं समर्पण — Mouth-rinsing, dismissal, offering (units 37–39)
+
+Blurb: Tarpaṇa is the daily rite in which water is offered with respect to the gods, to the sages and to the forefathers. The water is offered together with sesame seeds. The rite follows a fixed order. It begins with the gods and the sages. Next comes the offering to the divine forefathers and to the fourteen names of Yama. After this the worshipper offers water to his own forefathers, calling each one by name. This is done in three gotra lines: the line of his father, the line of his mother's father, and the line of his wife and children. Each forefather is offered three handfuls of water. At the end, water is offered to all those who have no family left to offer it for them. This includes the beings in every hell, those who were never his relatives, those who were his relatives in an earlier birth, and those who died without children and for whom no piṇḍa is offered any more. Water with sesame is offered to them because no one else will offer it. Through the whole rite the yajñopavīta, that is the sacred thread, is moved from one shoulder to the other. The book gives footnotes showing the correct position of the thread for each group.
+
+--- unit 1 | section: Saṅkalpa and invocation ---
+vidhi:
+At dawn, in the brāhmī hour, rise from bed, finish the ablutions, bathe at a river, tank or well as convenience allows, put on clean bright cloth and sit on a kuśa seat facing east. Do ācamana three times, then, after the sandhyopāsana and the daily homa, wear the pavitrī on the ring finger of the left and right hands, reciting 'pavitre stho vaiṣṇavyau…' in full. Then take in the hand three kuśa blades, barley, unbroken rice and water, and recite this saṅkalpa. In place of 'amuka' insert the actual saṁvatsara, month, pakṣa, tithi, weekday and gotra; a brāhmaṇa uses 'śarmā', a kṣatriya 'varmā', a vaiśya 'gupta'.
+deva:
+ॐ विष्णवे नमः ३ । हरिः ॐ तत्सदद्यैतस्य श्रीब्रह्मणो द्वितीयपरार्धे श्रीश्वेतवाराहकल्पे जम्बूद्वीपे भरतखण्डे आर्यावर्तैकदेशे कलियुगे कलिप्रथमचरणे अमुकसंवत्सरे अमुकमासे अमुकपक्षे अमुकतिथौ अमुकवासरे अमुकगोत्रोत्पन्नः अमुकशर्मा अहं श्रीपरमेश्वरप्रीत्यर्थं देवर्षिमनुष्यपितृतर्पणं करिष्ये ।
+iast:
+oṁ viṣṇave namaḥ 3 | hariḥ oṁ tatsadadyaitasya śrībrahmaṇo dvitīyaparārdhe śrīśvetavārāhakalpe jambūdvīpe bharatakhaṇḍe āryāvartaikadeśe kaliyuge kaliprathamacaraṇe amukasaṁvatsare amukamāse amukapakṣe amukatithau amukavāsare amukagotrotpannaḥ amukaśarmā ahaṁ śrīparameśvaraprītyarthaṁ devarṣimanuṣyapitṛtarpaṇaṁ kariṣye |
+en: Salutation to Viṣṇu, three times. Hari Oṁ Tat Sat. It is now the second half of the life of Brahmā, in the Śveta-Vārāha kalpa, in the Kali age, in its first quarter. The place is the continent Jambū, the land of Bhārata, in a region of Āryāvarta. The date is such a year, month, fortnight, lunar day and weekday. I, so-and-so Śarmā, born of such a gotra, will now perform the tarpaṇa of the gods, the ṛṣis, men and the forefathers. I do this for the pleasure of the supreme Lord.
+tel: విష్ణువునకు నమస్కారము — మూడుసార్లు. హరిః ఓం తత్సత్. ఇప్పుడు బ్రహ్మదేవుని ద్వితీయపరార్ధమున, శ్వేతవరాహకల్పమున, జంబూద్వీపమున, భరతఖండమున, ఆర్యావర్తప్రదేశమున, కలియుగ ప్రథమచరణమున, ఫలానా సంవత్సర-మాస-పక్ష-తిథి-వాసరములందు, ఫలానా గోత్రమున జన్మించిన ఫలానా శర్మ అను నేను, పరమేశ్వరుని ప్రీతి కొరకు దేవర్షిమనుష్యపితృతర్పణమును చేయుచున్నాను.
+hi: ॐ विष्णवे नमः (तीन बार)। हरिः ॐ तत्सत्। आज श्रीब्रह्माजीके द्वितीय परार्धमें, श्वेतवाराहकल्पमें, जम्बूद्वीपके भरतखण्डमें, आर्यावर्तके एक देशमें, कलियुगके प्रथम चरणमें, अमुक संवत्सर-मास-पक्ष-तिथि-वारमें, अमुक गोत्रमें उत्पन्न मैं अमुक शर्मा श्रीपरमेश्वरकी प्रसन्नताके लिये देवर्षिमनुष्यपितृतर्पण करूँगा।
+
+--- unit 2 | section: Saṅkalpa and invocation ---
+vidhi:
+Then in a copper or silver vessel place white sandal, rice, fragrant flowers and tulasī leaves; lay across the vessel three kuśa blades a hand or a span long with their tips to the east; fill the vessel with water for the tarpaṇa; take the three kuśa blades with the tulasī, cupped, in the right hand and cover them with the left, and invoke the gods with this mantra and the two that follow. [The vessel for tarpaṇa should be gold, silver, copper or bell-metal, never clay, as Pitāmaha's verse says: gold, silver, copper or bell-metal vessels are to be used for the tarpaṇa of the forefathers; a clay one must be avoided.]
+deva:
+ॐ विश्वेदेवास आगत शृणुता म इमꣳ हवम् । एदं बर्हिर्निषीदत ॥
+iast:
+oṁ viśvedevāsa āgata śṛṇutā ma imaṁ havam | edaṁ barhirniṣīdata ||
+en: O All-gods, come; hear this call of mine; sit down here upon this sacred grass.
+tel: విశ్వేదేవులారా! రండు; నా ఈ ఆహ్వానమును వినుడు; ఈ దర్భాసనమునందు కూర్చుండుడు.
+hi: हे विश्वेदेवगण! आपलोग यहाँ पदार्पण करें, हमारे प्रेमपूर्वक किये हुए इस आवाहनको सुनें और इस कुशके आसनपर विराजमान हों।
+
+--- unit 3 | section: Saṅkalpa and invocation ---
+deva:
+विश्वेदेवाः शृणुतेमꣳ हवं मे ये अन्तरिक्षे य उप द्यविष्ठ ।
+ये अग्निजिह्वा उत वा यजत्रा आसद्यास्मिन् बर्हिषि मादयध्वम् ॥
+iast:
+viśvedevāḥ śṛṇutemaṁ havaṁ me ye antarikṣe ya upa dyaviṣṭha |
+ye agnijihvā uta vā yajatrā āsadyāsmin barhiṣi mādayadhvam ||
+en: O All-gods, hear this call of mine — you who are in the mid-region, you who abide near the sky, you whose tongue is fire, and you who are worthy of worship: take your seat upon this sacred grass and be gladdened.
+tel: విశ్వేదేవులారా! నా ఈ ఆహ్వానమును వినుడు — అంతరిక్షమునందున్నవారు, ద్యులోకము సమీపమునందున్నవారు, అగ్నిజిహ్వులు, యజనార్హులు — ఈ దర్భాసనమునందు కూర్చుండి తృప్తి పొందుడు.
+hi: हे विश्वेदेवगण! आपलोगोंमेंसे जो अन्तरिक्षमें हों, जो द्युलोक (स्वर्ग)-के समीप हों तथा अग्निके समान जिह्वावाले एवं यजन करने योग्य हों, वे सब हमारे इस आवाहनको सुनें और इस कुशासनपर बैठकर तृप्त हों।
+
+--- unit 4 | section: Saṅkalpa and invocation ---
+vidhi:
+The third and last of the invocation mantras. Having invoked them thus, give the gods a seat of kuśa.
+deva:
+आगच्छन्तु महाभागा विश्वेदेवा महाबलाः ।
+ये तर्पणेऽत्र विहिताः सावधाना भवन्तु ते ॥
+iast:
+āgacchantu mahābhāgā viśvedevā mahābalāḥ |
+ye tarpaṇe'tra vihitāḥ sāvadhānā bhavantu te ||
+en: Let the greatly fortunate All-gods of great strength come; those who are ordained here in this tarpaṇa — let them be attentive.
+tel: మహాభాగులు, మహాబలులైన విశ్వేదేవులు రాగాక; ఈ తర్పణమునందు విహితులైనవారు సావధానులై యుందురుగాక.
+hi: जिनका इस तर्पणमें वेदविहित अधिकार है, वे महान् बलवाले महाभाग विश्वेदेवगण यहाँ आवें और सावधान हो जायँ।
+
+--- unit 5 | section: Tarpaṇa of gods, ṛṣis and divine forefathers ---
+vidhi:
+Devatarpaṇa. With the yajñopavīta on the left shoulder (upavīta), facing east, take up water mixed with rice from the first vessel with the tips of the fingers of the right hand — that is, from the deva-tīrtha — and let one aṅjali fall into the second vessel for each of Brahmā and the rest, reciting their name-mantras in turn. [One aṅjali for each god, two for each man, three for each forefather; and, per Vyāsa and Śāṅkhāyana, three each for one's mother, paternal grandmother and paternal great-grandmother, two each for a stepmother and the ācārya's wife, and one for every other woman. The gods' tarpaṇa is done with the tips of the kuśa, men's with the middle, the forefathers' with the root, facing east, north and south respectively.]
+deva:
+ॐ ब्रह्मा तृप्यताम् । ॐ विष्णुस्तृप्यताम् । ॐ रुद्रस्तृप्यताम् । ॐ प्रजापतिस्तृप्यताम् । ॐ देवास्तृप्यन्ताम् । ॐ छन्दांसि तृप्यन्ताम् । ॐ वेदास्तृप्यन्ताम् । ॐ ऋषयस्तृप्यन्ताम् । ॐ पुराणाचार्यास्तृप्यन्ताम् । ॐ गन्धर्वास्तृप्यन्ताम् । ॐ इतराचार्यास्तृप्यन्ताम् । ॐ संवत्सरः सावयवस्तृप्यताम् । ॐ देव्यस्तृप्यन्ताम् । ॐ अप्सरसस्तृप्यन्ताम् । ॐ देवानुगास्तृप्यन्ताम् । ॐ नागास्तृप्यन्ताम् । ॐ सागरास्तृप्यन्ताम् । ॐ पर्वतास्तृप्यन्ताम् । ॐ सरितस्तृप्यन्ताम् । ॐ मनुष्यास्तृप्यन्ताम् । ॐ यक्षास्तृप्यन्ताम् । ॐ रक्षांसि तृप्यन्ताम् । ॐ पिशाचास्तृप्यन्ताम् । ॐ सुपर्णास्तृप्यन्ताम् । ॐ भूतानि तृप्यन्ताम् । ॐ पशवस्तृप्यन्ताम् । ॐ वनस्पतयस्तृप्यन्ताम् । ॐ ओषधयस्तृप्यन्ताम् । ॐ भूतग्रामश्चतुर्विधस्तृप्यताम् ।
+iast:
+oṁ brahmā tṛpyatām | oṁ viṣṇustṛpyatām | oṁ rudrastṛpyatām | oṁ prajāpatistṛpyatām | oṁ devāstṛpyantām | oṁ chandāṁsi tṛpyantām | oṁ vedāstṛpyantām | oṁ ṛṣayastṛpyantām | oṁ purāṇācāryāstṛpyantām | oṁ gandharvāstṛpyantām | oṁ itarācāryāstṛpyantām | oṁ saṁvatsaraḥ sāvayavastṛpyatām | oṁ devyastṛpyantām | oṁ apsarasastṛpyantām | oṁ devānugāstṛpyantām | oṁ nāgāstṛpyantām | oṁ sāgarāstṛpyantām | oṁ parvatāstṛpyantām | oṁ saritastṛpyantām | oṁ manuṣyāstṛpyantām | oṁ yakṣāstṛpyantām | oṁ rakṣāṁsi tṛpyantām | oṁ piśācāstṛpyantām | oṁ suparṇāstṛpyantām | oṁ bhūtāni tṛpyantām | oṁ paśavastṛpyantām | oṁ vanaspatayastṛpyantām | oṁ oṣadhayastṛpyantām | oṁ bhūtagrāmaścaturvidhastṛpyatām |
+en: A list of twenty-nine name-mantras. Each has the form 'may N be satisfied'. The twenty-nine are: Brahmā, Viṣṇu, Rudra, Prajāpati, the gods, the metres, the Vedas, the ṛṣis, the teachers of the Purāṇas, the gandharvas, the other teachers, the year with its divisions, the goddesses, the apsarases, the attendants of the gods, the nāgas, the oceans, the mountains, the rivers, men, the yakṣas, the rākṣasas, the piśācas, the suparṇas, the elements, cattle, the trees, the herbs, and the fourfold host of living beings.
+tel: 'ఎవరు తృప్తి పొందుదురు గాక' అను రూపమున ఇరువదితొమ్మిది నామమంత్రముల జాబితా: బ్రహ్మ, విష్ణువు, రుద్రుడు, ప్రజాపతి, దేవతలు, ఛందస్సులు, వేదములు, ఋషులు, పురాణాచార్యులు, గంధర్వులు, ఇతరాచార్యులు, అవయవసహిత సంవత్సరము, దేవీలు, అప్సరసలు, దేవానుగులు, నాగులు, సాగరములు, పర్వతములు, నదులు, మనుష్యులు, యక్షులు, రాక్షసులు, పిశాచములు, సుపర్ణులు, భూతములు, పశువులు, వనస్పతులు, ఓషధులు, చతుర్విధ భూతగ్రామము.
+hi: 'तृप्त हों' इस रूपमें उनतीस नाम-मन्त्रोंकी सूची: ब्रह्मा, विष्णु, रुद्र, प्रजापति, देवगण, छन्द, वेद, ऋषि, पुराणाचार्य, गन्धर्व, इतर आचार्य, अवयवसहित संवत्सर, देवियाँ, अप्सराएँ, देवानुचर, नाग, सागर, पर्वत, नदियाँ, मनुष्य, यक्ष, राक्षस, पिशाच, सुपर्ण, भूत, पशु, वनस्पति, ओषधि तथा चतुर्विध भूतग्राम।
+
+--- unit 6 | section: Tarpaṇa of gods, ṛṣis and divine forefathers ---
+vidhi:
+Ṛṣitarpaṇa. In the same way give one aṅjali of water to each of Marīci and the other ṛṣis with these mantra-phrases.
+deva:
+ॐ मरीचिस्तृप्यताम् । ॐ अत्रिस्तृप्यताम् । ॐ अङ्गिरास्तृप्यताम् । ॐ पुलस्त्यस्तृप्यताम् । ॐ पुलहस्तृप्यताम् । ॐ क्रतुस्तृप्यताम् । ॐ वसिष्ठस्तृप्यताम् । ॐ प्रचेतास्तृप्यताम् । ॐ भृगुस्तृप्यताम् । ॐ नारदस्तृप्यताम् ।
+iast:
+oṁ marīcistṛpyatām | oṁ atristṛpyatām | oṁ aṅgirāstṛpyatām | oṁ pulastyastṛpyatām | oṁ pulahastṛpyatām | oṁ kratustṛpyatām | oṁ vasiṣṭhastṛpyatām | oṁ pracetāstṛpyatām | oṁ bhṛgustṛpyatām | oṁ nāradastṛpyatām |
+en: Ten name-mantras, each 'may N be satisfied': Marīci, Atri, Aṅgiras, Pulastya, Pulaha, Kratu, Vasiṣṭha, Pracetas, Bhṛgu, Nārada.
+tel: పది నామమంత్రములు, ప్రతిదియు 'తృప్తి పొందుగాక' అను రూపమున: మరీచి, అత్రి, అంగిరసుడు, పులస్త్యుడు, పులహుడు, క్రతువు, వసిష్ఠుడు, ప్రచేతసుడు, భృగువు, నారదుడు.
+hi: दस नाम-मन्त्र, प्रत्येक 'तृप्त हों' इस रूपमें: मरीचि, अत्रि, अङ्गिरा, पुलस्त्य, पुलह, क्रतु, वसिष्ठ, प्रचेता, भृगु, नारद।
+
+--- unit 7 | section: Tarpaṇa of gods, ṛṣis and divine forefathers ---
+vidhi:
+Divyamanuṣyatarpaṇa. Wear the yajñopavīta round the neck like a garland — that is, be nivītī — place the kuśa used before at the root of the little finger of the right hand, face north, and give two aṅjalis of water with barley to each of the divine men, reciting each mantra-phrase twice. [With the yajñopavīta on the left shoulder the state is called upavīta; worn round the neck like a garland it is nivīta — 'nivītaṁ kaṇṭhalambanam' (Auśanasasmṛti). For the tarpaṇa of divine men the nivīta state is required. In rites for the forefathers the yajñopavīta rests on the right shoulder; this is called prācīnāvīta or apasavya.]
+deva:
+ॐ सनकस्तृप्यताम् ॥२॥ ॐ सनन्दनस्तृप्यताम् ॥२॥ ॐ सनातनस्तृप्यताम् ॥२॥ ॐ कपिलस्तृप्यताम् ॥२॥ ॐ आसुरिस्तृप्यताम् ॥२॥ ॐ वोढुस्तृप्यताम् ॥२॥ ॐ पञ्चशिखस्तृप्यताम् ॥२॥
+iast:
+oṁ sanakastṛpyatām ||2|| oṁ sanandanastṛpyatām ||2|| oṁ sanātanastṛpyatām ||2|| oṁ kapilastṛpyatām ||2|| oṁ āsuristṛpyatām ||2|| oṁ voḍhustṛpyatām ||2|| oṁ pañcaśikhastṛpyatām ||2||
+en: Seven name-mantras, each recited twice with two aṅjalis: Sanaka, Sanandana, Sanātana, Kapila, Āsuri, Voḍhu, Pañcaśikha.
+tel: ఏడు నామమంత్రములు, ప్రతిదియు రెండుసార్లు రెండు అంజలులతో: సనకుడు, సనందనుడు, సనాతనుడు, కపిలుడు, ఆసురి, వోఢువు, పంచశిఖుడు.
+hi: सात नाम-मन्त्र, प्रत्येक दो बार दो-दो अञ्जलिके साथ: सनक, सनन्दन, सनातन, कपिल, आसुरि, वोढु, पञ्चशिख।
+
+--- unit 8 | section: Tarpaṇa of gods, ṛṣis and divine forefathers ---
+vidhi:
+Divyapitṛtarpaṇa. Then double the kuśa over and turn its root and tip to the south. Hold them between the thumb and the index finger. Face south and place the left knee on the ground. Be apasavya, that is, wear the yajñopavīta on the right shoulder. Mix black sesame into the water in the vessel. Then offer three aṅjalis to each of the divine forefathers with these mantra-phrases, pouring from the pitṛ-tīrtha, which is the middle of the thumb and the index finger. [On sesame the Vāyupurāṇa says: whatever is given in śraddhā together with sesame and kuśa becomes nectar and reaches the forefathers. Yājñavalkya prescribes white, dappled and black sesame for the gods, the divine men and the forefathers respectively. The Agnipurāṇa forbids sesame-tarpaṇa to one whose father is living.]
+deva:
+1. ॐ कव्यवाडनलस्तृप्यताम् इदं सतिलं जलं (गङ्गाजलं वा) तस्मै स्वधा नमः ॥३॥
+2. ॐ सोमस्तृप्यताम् इदं सतिलं जलं तस्मै स्वधा नमः ॥३॥
+3. ॐ यमस्तृप्यताम् इदं सतिलं जलं तस्मै स्वधा नमः ॥३॥
+4. ॐ अर्यमा तृप्यताम् इदं सतिलं जलं तस्मै स्वधा नमः ॥३॥
+5. ॐ अग्निष्वात्ताः पितरस्तृप्यन्ताम् इदं सतिलं जलं तेभ्यः स्वधा नमः ॥३॥
+6. ॐ सोमपाः पितरस्तृप्यन्ताम् इदं सतिलं जलं तेभ्यः स्वधा नमः ॥३॥
+7. ॐ बर्हिषदः पितरस्तृप्यन्ताम् इदं सतिलं जलं तेभ्यः स्वधा नमः ॥३॥
+iast:
+1. oṁ kavyavāḍanalastṛpyatām idaṁ satilaṁ jalaṁ (gaṅgājalaṁ vā) tasmai svadhā namaḥ ||3||
+2. oṁ somastṛpyatām idaṁ satilaṁ jalaṁ tasmai svadhā namaḥ ||3||
+3. oṁ yamastṛpyatām idaṁ satilaṁ jalaṁ tasmai svadhā namaḥ ||3||
+4. oṁ aryamā tṛpyatām idaṁ satilaṁ jalaṁ tasmai svadhā namaḥ ||3||
+5. oṁ agniṣvāttāḥ pitarastṛpyantām idaṁ satilaṁ jalaṁ tebhyaḥ svadhā namaḥ ||3||
+6. oṁ somapāḥ pitarastṛpyantām idaṁ satilaṁ jalaṁ tebhyaḥ svadhā namaḥ ||3||
+7. oṁ barhiṣadaḥ pitarastṛpyantām idaṁ satilaṁ jalaṁ tebhyaḥ svadhā namaḥ ||3||
+en: Seven name-mantras. Each is recited three times with three aṅjalis of water. Each has the form 'may N be satisfied; this water with sesame (or Gaṅgā water) is offered to him, svadhā, salutation'. The seven are: Kavyavāḍanala, who is the fire that carries the offering to the forefathers; Soma; Yama; Aryaman; and the three classes of forefathers, namely the Agniṣvāttas, the Somapās and the Barhiṣads.
+tel: ఏడు నామమంత్రములు, ప్రతిదియు మూడుసార్లు మూడు అంజలులతో, 'తృప్తి పొందుగాక; ఈ తిలసహిత జలము (లేక గంగాజలము) — అతనికి స్వధా, నమస్కారము' అను రూపమున: కవ్యవాడనలుడు, సోముడు, యముడు, అర్యముడు, అగ్నిష్వాత్తులు, సోమపులు, బర్హిషదులు అను మూడు పితృగణములు.
+hi: सात नाम-मन्त्र, प्रत्येक तीन बार तीन-तीन अञ्जलिके साथ, 'तृप्त हों; यह तिलसहित जल (अथवा गङ्गाजल) — उनके लिये स्वधा, नमस्कार' इस रूपमें: कव्यवाडनल, सोम, यम, अर्यमा तथा अग्निष्वात्त, सोमप और बर्हिषद् — ये तीन पितृगण।
+
+--- unit 9 | section: Tarpaṇa of gods, ṛṣis and divine forefathers ---
+vidhi:
+Yamatarpaṇa. In the same way give water with sesame, three aṅjalis each, from the pitṛ-tīrtha, for the fourteen Yamas, reciting these mantra-phrases.
+deva:
+1. ॐ यमाय नमः ॥३॥
+2. ॐ धर्मराजाय नमः ॥३॥
+3. ॐ मृत्यवे नमः ॥३॥
+4. ॐ अन्तकाय नमः ॥३॥
+5. ॐ वैवस्वताय नमः ॥३॥
+6. ॐ कालाय नमः ॥३॥
+7. ॐ सर्वभूतक्षयाय नमः ॥३॥
+8. ॐ औदुम्बराय नमः ॥३॥
+9. ॐ दध्नाय नमः ॥३॥
+10. ॐ नीलाय नमः ॥३॥
+11. ॐ परमेष्ठिने नमः ॥३॥
+12. ॐ वृकोदराय नमः ॥३॥
+13. ॐ चित्राय नमः ॥३॥
+14. ॐ चित्रगुप्ताय नमः ॥३॥
+iast:
+1. oṁ yamāya namaḥ ||3||
+2. oṁ dharmarājāya namaḥ ||3||
+3. oṁ mṛtyave namaḥ ||3||
+4. oṁ antakāya namaḥ ||3||
+5. oṁ vaivasvatāya namaḥ ||3||
+6. oṁ kālāya namaḥ ||3||
+7. oṁ sarvabhūtakṣayāya namaḥ ||3||
+8. oṁ audumbarāya namaḥ ||3||
+9. oṁ dadhnāya namaḥ ||3||
+10. oṁ nīlāya namaḥ ||3||
+11. oṁ parameṣṭhine namaḥ ||3||
+12. oṁ vṛkodarāya namaḥ ||3||
+13. oṁ citrāya namaḥ ||3||
+14. oṁ citraguptāya namaḥ ||3||
+en: The fourteen names of Yama, each saluted three times with three aṅjalis: Yama, Dharmarāja, Mṛtyu (death), Antaka (the ender), Vaivasvata (son of Vivasvān), Kāla (time), Sarvabhūtakṣaya (the wasting of all beings), Audumbara, Dadhna, Nīla, Parameṣṭhin, Vṛkodara, Citra and Citragupta.
+tel: యమునియొక్క పదునాలుగు నామములు, ప్రతిదానికి మూడుసార్లు మూడు అంజలులతో నమస్కారము: యముడు, ధర్మరాజు, మృత్యువు, అంతకుడు, వైవస్వతుడు, కాలుడు, సర్వభూతక్షయుడు, ఔదుంబరుడు, దధ్నుడు, నీలుడు, పరమేష్ఠి, వృకోదరుడు, చిత్రుడు, చిత్రగుప్తుడు.
+hi: यमके चौदह नाम, प्रत्येकको तीन बार तीन-तीन अञ्जलिके साथ नमस्कार: यम, धर्मराज, मृत्यु, अन्तक, वैवस्वत, काल, सर्वभूतक्षय, औदुम्बर, दध्न, नील, परमेष्ठी, वृकोदर, चित्र और चित्रगुप्त।
+
+--- unit 10 | section: Tarpaṇa of one's own forefathers ---
+vidhi:
+Manuṣyapitṛtarpaṇa. Then invoke the forefathers with this mantra.
+deva:
+ॐ उशन्तस्त्वा नि धीमह्युशन्तः समिधीमहि ।
+उशन्नुशत आ वह पितॄन् हविषे अत्तवे ॥
+iast:
+oṁ uśantastvā ni dhīmahyuśantaḥ samidhīmahi |
+uśannuśata ā vaha pitṝn haviṣe attave ||
+en: Desiring, we set you down; desiring, we kindle you. Desiring, bring here the desiring forefathers to eat the offering.
+tel: కోరుచు నిన్ను స్థాపించుచున్నాము; కోరుచు నిన్ను ప్రజ్వలింపజేయుచున్నాము. కోరుచున్న నీవు, హవిస్సును భుజించుటకు, కోరుచున్న పితరులను ఇచ్చటికి తీసికొనిరమ్ము.
+hi: हे अग्ने! तुम्हारे यजनकी कामना करते हुए हम तुम्हें स्थापित करते हैं। यजनकी ही इच्छा रखते हुए तुम्हें प्रज्वलित करते हैं। हविष्यकी इच्छा रखते हुए तुम भी तृप्तिकी कामनावाले हमारे पितरोंको हविष्य भोजन करनेके लिये बुलाओ।
+
+--- unit 11 | section: Tarpaṇa of one's own forefathers ---
+vidhi:
+The second invocation mantra. It recurs later in the sequence of nine mantras at unit 17, where the book prints it again rather than referring back.
+deva:
+आ यन्तु नः पितरः सोम्यासोऽग्निष्वात्ताः पथिभिर्देवयानैः ।
+अस्मिन् यज्ञे स्वधया मदन्तोऽधि ब्रुवन्तु तेऽवन्त्वस्मान् ॥
+iast:
+ā yantu naḥ pitaraḥ somyāso'gniṣvāttāḥ pathibhirdevayānaiḥ |
+asmin yajñe svadhayā madanto'dhi bruvantu te'vantvasmān ||
+en: Let our forefathers come, the soma-loving, the Agniṣvāttas, by the paths the gods travel. Gladdened with svadhā at this sacrifice, let them speak for us and protect us.
+tel: సోమపానార్హులు, అగ్నిష్వాత్తులైన మా పితరులు దేవయాన మార్గములద్వారా ఇచ్చటికి వచ్చెదరు గాక. ఈ యజ్ఞమునందు స్వధచేత తృప్తులై మాకు అనుకూలముగా పలికి మమ్ములను రక్షించెదరు గాక.
+hi: हमारे सोमपान करनेयोग्य अग्निष्वात्त पितृगण देवताओंके गमन करनेयोग्य मार्गोंसे यहाँ आवें और इस यज्ञमें स्वधासे तृप्त होकर हमें मानसिक उपदेश दें तथा वे हमारी रक्षा करें।
+
+--- unit 12 | section: Tarpaṇa of one's own forefathers ---
+vidhi:
+Then, uttering the name and gotra of each of one's own forefathers, give three aṅjalis of water with sesame to each by the method already described. Substitute the actual gotra and name for 'amuka'. [The order of the forefathers is: father, paternal grandfather, paternal great-grandfather; mother, paternal grandmother, paternal great-grandmother; stepmother; maternal grandfather, maternal great-grandfather, maternal great-great-grandfather; maternal grandmother and hers likewise; wife, son, daughter, paternal uncle, maternal uncle, brother, stepbrother, paternal aunt, maternal aunt, sister, stepsister, father-in-law, teacher, pupil and friend — the same order serves for the mahālaya-śrāddha, the tīrtha-śrāddha and the tarpaṇa alike. Per the Pāraskara-gṛhyasūtra the order of utterance is gotra, relationship, name. Per Bodhāyana a brāhmaṇa's name ends in 'śarmā', a kṣatriya's in 'varmā', a vaiśya's in 'dāsa', a śūdra's in 'dāsa' too; and for those of all four varṇas the gotra follows the father's, while for unmarried girls it is the father's and for married women the husband's.]
+deva:
+1. अमुकगोत्रः अस्मत्पिता अमुकशर्मा वसुरूपस्तृप्यताम् इदं सतिलं जलं (गङ्गाजलं वा) तस्मै स्वधा नमः ॥३॥
+2. अमुकगोत्रः अस्मत्पितामहः अमुकशर्मा रुद्ररूपस्तृप्यताम् इदं सतिलं जलं तस्मै स्वधा नमः ॥३॥
+3. अमुकगोत्रः अस्मत्प्रपितामहः अमुकशर्मा आदित्यरूपस्तृप्यताम् इदं सतिलं जलं तस्मै स्वधा नमः ॥३॥
+4. अमुकगोत्रा अस्मन्माता अमुकी देवी दा वसुरूपा तृप्यताम् इदं सतिलं जलं तस्यै स्वधा नमः ॥३॥
+5. अमुकगोत्रा अस्मत्पितामही अमुकी देवी दा रुद्ररूपा तृप्यताम् इदं सतिलं जलं तस्यै स्वधा नमः ॥३॥
+6. अमुकगोत्रा अस्मत्प्रपितामही अमुकी देवी दा आदित्यरूपा तृप्यताम् इदं सतिलं जलं तस्यै स्वधा नमः ॥३॥
+7. अमुकगोत्रा अस्मत्सापत्नमाता अमुकी देवी दा वसुरूपा तृप्यताम् इदं सतिलं जलं तस्यै स्वधा नमः ॥३॥
+iast:
+1. amukagotraḥ asmatpitā amukaśarmā vasurūpastṛpyatām idaṁ satilaṁ jalaṁ (gaṅgājalaṁ vā) tasmai svadhā namaḥ ||3||
+2. amukagotraḥ asmatpitāmahaḥ amukaśarmā rudrarūpastṛpyatām idaṁ satilaṁ jalaṁ tasmai svadhā namaḥ ||3||
+3. amukagotraḥ asmatprapitāmahaḥ amukaśarmā ādityarūpastṛpyatām idaṁ satilaṁ jalaṁ tasmai svadhā namaḥ ||3||
+4. amukagotrā asmanmātā amukī devī dā vasurūpā tṛpyatām idaṁ satilaṁ jalaṁ tasyai svadhā namaḥ ||3||
+5. amukagotrā asmatpitāmahī amukī devī dā rudrarūpā tṛpyatām idaṁ satilaṁ jalaṁ tasyai svadhā namaḥ ||3||
+6. amukagotrā asmatprapitāmahī amukī devī dā ādityarūpā tṛpyatām idaṁ satilaṁ jalaṁ tasyai svadhā namaḥ ||3||
+7. amukagotrā asmatsāpatnamātā amukī devī dā vasurūpā tṛpyatām idaṁ satilaṁ jalaṁ tasyai svadhā namaḥ ||3||
+en: The first gotra-line, seven formulae, each recited three times with three aṅjalis: the father in the form of a Vasu; the paternal grandfather in the form of a Rudra; the paternal great-grandfather in the form of an Āditya; the mother as a Vasu; the paternal grandmother as a Rudra; the paternal great-grandmother as an Āditya; and the stepmother as a Vasu. Each runs: 'of such a gotra, our N, so-and-so, in the form of a Vasu (Rudra, Āditya), may he be satisfied; this water with sesame (or Gaṅgā water) — to him, svadhā, salutation.'
+tel: ప్రథమ గోత్రపంక్తి, ఏడు వాక్యములు, ప్రతిదియు మూడుసార్లు మూడు అంజలులతో: తండ్రి వసురూపుడుగా; తాత రుద్రరూపుడుగా; ముత్తాత ఆదిత్యరూపుడుగా; తల్లి వసురూపగా; నాయనమ్మ రుద్రరూపగా; ముత్తవ్వ ఆదిత్యరూపగా; సాపత్నమాత వసురూపగా. ప్రతి వాక్యము: 'ఫలానా గోత్రుడు, మా ఫలానావారు, వసురూపుడు (రుద్రరూపుడు, ఆదిత్యరూపుడు) తృప్తి పొందుగాక; ఈ తిలసహిత జలము — అతనికి స్వధా, నమస్కారము.'
+hi: प्रथम गोत्रकी सात वाक्य-पंक्तियाँ, प्रत्येक तीन बार तीन-तीन अञ्जलिके साथ: पिता वसुरूपसे, पितामह रुद्ररूपसे, प्रपितामह आदित्यरूपसे, माता वसुरूपासे, पितामही रुद्ररूपासे, प्रपितामही आदित्यरूपासे तथा सौतेली माता वसुरूपासे। प्रत्येक वाक्य इस रूपमें: 'अमुक गोत्रवाले हमारे अमुक, वसुरूप (रुद्ररूप, आदित्यरूप) तृप्त हों; यह तिलसहित जल (या गङ्गाजल) — उनके लिये स्वधा, नमस्कार।'
+
+--- unit 13 | section: Tarpaṇa of one's own forefathers ---
+vidhi:
+After this, keep pouring water from the pitṛ-tīrtha while reciting the nine mantras that follow (units 13–21).
+deva:
+ॐ उदीरतामवर उत्परास उन्मध्यमाः पितरः सोम्यासः ।
+असुं य ईयुरवृका ऋतज्ञास्ते नोऽवन्तु पितरो हवेषु ॥
+iast:
+oṁ udīratāmavara utparāsa unmadhyamāḥ pitaraḥ somyāsaḥ |
+asuṁ ya īyuravṛkā ṛtajñāste no'vantu pitaro haveṣu ||
+en: Let them rise up — the lower, the higher and the middle soma-loving forefathers. Those who, harmless and knowing the truth, have gone to the life beyond — may those forefathers protect us at our invocations.
+tel: క్రిందివారు, పైవారు, మధ్యమవారునగు సోమపానార్హులైన పితరులు పైకి లేచెదరు గాక. హింసారహితులై, ఋతమును ఎరిగి, ప్రాణలోకమునకు పోయినవారు — ఆ పితరులు మా ఆహ్వానములయందు మమ్ములను రక్షించెదరు గాక.
+hi: इस लोकमें स्थित, परलोकमें स्थित और मर्त्यलोकमें स्थित सोमभागी पितृगण क्रमशः ऊर्ध्वलोकोंको प्राप्त हों। जो वायुरूपको प्राप्त हो चुके हैं, वे शत्रुहीन सत्यवेत्ता पितर आवाहन करनेपर यहाँ उपस्थित होकर हमलोगोंकी रक्षा करें।
+
+--- unit 14 | section: Tarpaṇa of one's own forefathers ---
+deva:
+अङ्गिरसो नः पितरो नवग्वा अथर्वाणो भृगवः सोम्यासः ।
+तेषां वयꣳ सुमतौ यज्ञियानामपि भद्रे सौमनसे स्याम ॥
+iast:
+aṅgiraso naḥ pitaro navagvā atharvāṇo bhṛgavaḥ somyāsaḥ |
+teṣāṁ vayaṁ sumatau yajñiyānāmapi bhadre saumanase syāma ||
+en: Our forefathers of the Aṅgirases, the Navagvas, the Atharvans, the Bhṛgus, the soma-loving — may we abide in the good favour and the auspicious goodwill of those worthy of sacrifice.
+tel: అంగిరసులు, నవగ్వులు, అథర్వణులు, భృగువులునైన సోమపానార్హులగు మా పితరులు — యజ్ఞార్హులైన వారి సుమతియందు, మంగళకరమైన సౌమనసమునందు మేము ఉందుము గాక.
+hi: अङ्गिराके कुलमें, अथर्व मुनिके वंशमें तथा भृगुकुलमें उत्पन्न हुए नवीन गतिवाले एवं सोमपान करनेयोग्य जो हमारे पितर इस समय पितृलोकको प्राप्त हैं, उन यज्ञमें पूजनीय पितरोंकी सुन्दर बुद्धिमें तथा उनके कल्याणकारी मनमें हम स्थित रहें।
+
+--- unit 15 | section: Tarpaṇa of one's own forefathers ---
+vidhi:
+Here the book reprints 'ā yantu naḥ pitaraḥ somyāso'gniṣvāttāḥ…' (unit 11), noting that its meaning has already been given.
+deva:
+आ यन्तु नः पितरः सोम्यासोऽग्निष्वात्ताः पथिभिर्देवयानैः ।
+अस्मिन् यज्ञे स्वधया मदन्तोऽधि ब्रुवन्तु तेऽवन्त्वस्मान् ॥
+iast:
+ā yantu naḥ pitaraḥ somyāso'gniṣvāttāḥ pathibhirdevayānaiḥ |
+asmin yajñe svadhayā madanto'dhi bruvantu te'vantvasmān ||
+en: Let our forefathers come, the soma-loving, the Agniṣvāttas, by the paths the gods travel. Gladdened with svadhā at this sacrifice, let them speak for us and protect us.
+tel: సోమపానార్హులు, అగ్నిష్వాత్తులైన మా పితరులు దేవయాన మార్గములద్వారా ఇచ్చటికి వచ్చెదరు గాక. ఈ యజ్ఞమునందు స్వధచేత తృప్తులై మాకు అనుకూలముగా పలికి మమ్ములను రక్షించెదరు గాక.
+hi: हमारे सोमपान करनेयोग्य अग्निष्वात्त पितृगण देवयान मार्गोंसे यहाँ आवें और इस यज्ञमें स्वधासे तृप्त होकर हमें उपदेश दें तथा हमारी रक्षा करें।
+
+--- unit 16 | section: Tarpaṇa of one's own forefathers ---
+deva:
+ऊर्जं वहन्तीरमृतं घृतं पयः कीलालं परिस्रुतम् ।
+स्वधा स्थ तर्पयत मे पितॄन् ॥
+iast:
+ūrjaṁ vahantīramṛtaṁ ghṛtaṁ payaḥ kīlālaṁ parisrutam |
+svadhā stha tarpayata me pitṝn ||
+en: Bearing strength, the immortal, ghee, milk, the sweet draught, flowing on every side — you are svadhā: satisfy my forefathers.
+tel: బలమును, అమృతమును, ఘృతమును, పాలను, మధురరసమును వహించుచు అన్ని వైపుల ప్రవహించువారలారా — మీరు స్వధా స్వరూపులు: నా పితరులను తృప్తి పరచుడు.
+hi: हे जल! तुम स्वादिष्ट अन्नके साररूप रस, रोग-मृत्युको दूर करनेवाले घी और सब प्रकारका कष्ट मिटानेवाले दूधका वहन करते हो तथा सब ओर प्रवाहित होते हो, अतएव तुम पितरोंके लिये हविःस्वरूप हो; इसलिये मेरे पितरोंको तृप्त करो।
+
+--- unit 17 | section: Tarpaṇa of one's own forefathers ---
+deva:
+1. पितृभ्यः स्वधायिभ्यः स्वधा नमः ।
+2. पितामहेभ्यः स्वधायिभ्यः स्वधा नमः ।
+3. प्रपितामहेभ्यः स्वधायिभ्यः स्वधा नमः ।
+अक्षन् पितरोऽमीमदन्त पितरोऽतीतृपन्त पितरः पितरः शुन्धध्वम् ॥
+iast:
+1. pitṛbhyaḥ svadhāyibhyaḥ svadhā namaḥ |
+2. pitāmahebhyaḥ svadhāyibhyaḥ svadhā namaḥ |
+3. prapitāmahebhyaḥ svadhāyibhyaḥ svadhā namaḥ |
+akṣan pitaro'mīmadanta pitaro'tītṛpanta pitaraḥ pitaraḥ śundhadhvam ||
+en: To the fathers who go to svadhā, svadhā and salutation. To the grandfathers who go to svadhā, svadhā and salutation. To the great-grandfathers who go to svadhā, svadhā and salutation. The forefathers have eaten, the forefathers have rejoiced, the forefathers have been fully satisfied — O forefathers, now cleanse yourselves.
+tel: స్వధను పొందు పితరులకు స్వధా, నమస్కారము. స్వధను పొందు పితామహులకు స్వధా, నమస్కారము. స్వధను పొందు ప్రపితామహులకు స్వధా, నమస్కారము. పితరులు భుజించిరి, పితరులు ఆనందించిరి, పితరులు తృప్తి పొందిరి — ఓ పితరులారా! ఇప్పుడు శుద్ధులు కండు.
+hi: स्वधा (अन्न)-के प्रति गमन करनेवाले पितरोंको स्वधासंज्ञक अन्न प्राप्त हो, उन पितरोंको हमारा नमस्कार है। स्वधाके प्रति जानेवाले पितामहोंको स्वधा प्राप्त हो, उन्हें हमारा नमस्कार है। स्वधाके प्रति गमन करनेवाले प्रपितामहोंको स्वधा प्राप्त हो, उन्हें हमारा नमस्कार है। पितर पूर्ण आहार कर चुके, पितर आनन्दित हुए, पितर तृप्त हुए। हे पितरो! अब आपलोग शुद्ध हों।
+
+--- unit 18 | section: Tarpaṇa of one's own forefathers ---
+deva:
+ये चेह पितरो ये च नेह याꣳश्च विद्म याꣳ२ उ च न प्रविद्म ।
+त्वं वेत्थ यति ते जातवेदः स्वधाभिर्यज्ञꣳ सुकृतं जुषस्व ॥
+iast:
+ye ceha pitaro ye ca neha yāṁśca vidma yāṁ2 u ca na pravidma |
+tvaṁ vettha yati te jātavedaḥ svadhābhiryajñaṁ sukṛtaṁ juṣasva ||
+en: The forefathers who are here and those who are not here, those whom we know and those whom we do not know — you know how many they are, O Jātavedas. Enjoy this well-made sacrifice with the svadhā offerings.
+tel: ఇచ్చటనున్న పితరులు, ఇచ్చట లేని పితరులు, మేము ఎరిగినవారు, ఎరుగనివారు — వారు ఎందరో నీవెరుగుదువు, ఓ జాతవేదసా. స్వధలతో కూడిన ఈ సుకృతమైన యజ్ఞమును సేవించుము.
+hi: जो पितर इस लोकमें वर्तमान हैं और जो इस लोकमें नहीं [किंतु पितृलोकमें विद्यमान] हैं तथा जिन पितरोंको हम जानते हैं और जिनको [स्मरण न होनेके कारण] नहीं जानते, वे सभी पितर जितने हैं, उन सबको हे जातवेदा—अग्निदेव! तुम जानते हो। [पितरोंके निमित्त दी जानेवाली] स्वधाके द्वारा तुम इस श्रेष्ठ यज्ञका सेवन करो—इसे सफल बनाओ!
+
+--- unit 19 | section: Tarpaṇa of one's own forefathers ---
+vidhi:
+The three madhu verses, recited together and closed with 'oṁ madhu madhu madhu, tṛpyadhvaṁ tṛpyadhvaṁ tṛpyadhvam'.
+deva:
+मधु वाता ऋतायते मधु क्षरन्ति सिन्धवः । माध्वीर्नः सन्त्वोषधीः ॥
+मधु नक्तमुतोषसो मधुमत्पार्थिवꣳ रजः । मधु द्यौरस्तु नः पिता ॥
+मधुमान्नो वनस्पतिर्मधुमाँ२ अस्तु सूर्यः । माध्वीर्गावो भवन्तु नः ॥
+ॐ मधु । मधु । मधु । तृप्यध्वम् । तृप्यध्वम् । तृप्यध्वम् ।
+iast:
+madhu vātā ṛtāyate madhu kṣaranti sindhavaḥ | mādhvīrnaḥ santvoṣadhīḥ ||
+madhu naktamutoṣaso madhumatpārthivaṁ rajaḥ | madhu dyaurastu naḥ pitā ||
+madhumānno vanaspatirmadhumāṁ2 astu sūryaḥ | mādhvīrgāvo bhavantu naḥ ||
+oṁ madhu | madhu | madhu | tṛpyadhvam | tṛpyadhvam | tṛpyadhvam |
+en: Sweet blow the winds for him who keeps the ṛta; sweet flow the rivers; may the herbs be sweet for us. Sweet be the night and the dawns, sweet the earthly dust, sweet be heaven our father. Sweet be the tree for us, sweet the sun; may our cows be sweet. Oṁ — sweetness, sweetness, sweetness. Be satisfied, be satisfied, be satisfied.
+tel: ఋతమును ఆచరించువానికి వాయువులు మధురముగా వీచును, నదులు మధురమును ప్రవహించును; ఓషధులు మాకు మధురములగుగాక. రాత్రియు ఉషస్సులును మధురములగుగాక, పార్థివమైన రజస్సు మధురమగుగాక, మా తండ్రియైన ద్యులోకము మధురమగుగాక. వనస్పతి మాకు మధురమగుగాక, సూర్యుడు మధురమగుగాక; మా గోవులు మధురములగుగాక. ఓం — మధురము, మధురము, మధురము. తృప్తి పొందుడు, తృప్తి పొందుడు, తృప్తి పొందుడు.
+hi: यज्ञकी रक्षा करनेवाले यजमानके लिये वायु मधु (पुष्परसमकरन्द)-की वर्षा करती है। बहनेवाली नदियाँ मधुके समान मधुर जलका स्रोत बहाती हैं। समस्त ओषधियाँ हमारे लिये मधुर रससे युक्त हों। हमारे रात-दिन सभी मधुमय हों। पिताके समान पालन करनेवाला द्युलोक हमारे लिये मधुमय—अमृतमय हो। माताके समान पोषण करनेवाली पृथिवीकी धूलि हमारे लिये मधुमयी हो। वनस्पति और सूर्य भी हमारे लिये मधुमान् (मधुर रससे युक्त) हों। हमारी समस्त गौएँ माध्वी—मधुके समान दूध देनेवाली हों। ॐ मधु, मधु, मधु। तृप्त हों, तृप्त हों, तृप्त हों।
+
+--- unit 20 | section: Tarpaṇa of one's own forefathers ---
+vidhi:
+Then recite this mantra as mere recitation, without pouring.
+deva:
+ॐ नमो वः पितरो रसाय नमो वः पितरः शोषाय नमो वः पितरो जीवाय नमो वः पितरः स्वधायै नमो वः पितरो घोराय नमो वः पितरो मन्यवे नमो वः पितरः पितरो नमो वो गृहान्नः पितरो दत्त सतो वः पितरो देष्मैतद्वः पितरो वास आधत्त ॥
+iast:
+oṁ namo vaḥ pitaro rasāya namo vaḥ pitaraḥ śoṣāya namo vaḥ pitaro jīvāya namo vaḥ pitaraḥ svadhāyai namo vaḥ pitaro ghorāya namo vaḥ pitaro manyave namo vaḥ pitaraḥ pitaro namo vo gṛhānnaḥ pitaro datta sato vaḥ pitaro deṣmaitadvaḥ pitaro vāsa ādhatta ||
+en: Salutation to you, forefathers, for the sap; salutation to you, forefathers, for the drying; salutation to you, forefathers, for life; salutation to you, forefathers, for svadhā; salutation to you, forefathers, for the terrible; salutation to you, forefathers, for wrath; salutation to you, forefathers — forefathers, salutation. Give us houses, O forefathers. This that is ours we give to you, forefathers; put on this garment, forefathers.
+tel: ఓ పితరులారా! రసము కొరకు మీకు నమస్కారము; శోషము కొరకు నమస్కారము; జీవము కొరకు నమస్కారము; స్వధ కొరకు నమస్కారము; ఘోరము కొరకు నమస్కారము; మన్యువు కొరకు నమస్కారము; పితరులారా, మీకు నమస్కారము. మాకు గృహములను ఇండు. మాయొద్దనున్న దీనిని మీకు అర్పించుచున్నాము; ఈ వస్త్రమును ధరించుడు.
+hi: हे पितृगण! तुमसे सम्बन्ध रखनेवाली रसरूप वसन्त-ऋतुको नमस्कार है, शोषण करनेवाले ग्रीष्म-ऋतुको नमस्कार है, जीवनस्वरूप वर्षा-ऋतुको नमस्कार है, स्वधारूप शरद्-ऋतुको नमस्कार है, प्राणियोंके लिये घोर प्रतीत होनेवाली हेमन्त-ऋतुको नमस्कार है, क्रोधस्वरूप शिशिर-ऋतुको नमस्कार है। हे षड्-ऋतुरूप पितरो! तुम हमें उत्तम गृह प्रदान करो। हे पितृगण! इन प्रस्तुत दातव्य वस्तुओंको हम तुम्हें अर्पण करते हैं; तुम्हारे लिये यह वस्त्र है, इसे धारण करो।
+
+--- unit 21 | section: Tarpaṇa of one's own forefathers ---
+vidhi:
+Dvitīya gotratarpaṇa — the second gotra-line, that of the maternal grandfather and the rest. Here too recite each formula three times and give three aṅjalis of water with sesame from the pitṛ-tīrtha.
+deva:
+1. अमुकगोत्रः अस्मन्मातामहः अमुकशर्मा वसुरूपस्तृप्यताम् इदं सतिलं जलं तस्मै स्वधा नमः ॥३॥
+2. अमुकगोत्रः अस्मत्प्रमातामहः अमुकशर्मा रुद्ररूपस्तृप्यताम् इदं सतिलं जलं तस्मै स्वधा नमः ॥३॥
+3. अमुकगोत्रः अस्मद्वृद्धप्रमातामहः अमुकशर्मा आदित्यरूपस्तृप्यताम् इदं सतिलं जलं तस्मै स्वधा नमः ॥३॥
+4. अमुकगोत्रा अस्मन्मातामही अमुकी देवी दा वसुरूपा तृप्यताम् इदं सतिलं जलं तस्यै स्वधा नमः ॥३॥
+5. अमुकगोत्रा अस्मत्प्रमातामही अमुकी देवी दा रुद्ररूपा तृप्यताम् इदं सतिलं जलं तस्यै स्वधा नमः ॥३॥
+6. अमुकगोत्रा अस्मद्वृद्धप्रमातामही अमुकी देवी दा आदित्यरूपा तृप्यताम् इदं सतिलं जलं तस्यै स्वधा नमः ॥३॥
+iast:
+1. amukagotraḥ asmanmātāmahaḥ amukaśarmā vasurūpastṛpyatām idaṁ satilaṁ jalaṁ tasmai svadhā namaḥ ||3||
+2. amukagotraḥ asmatpramātāmahaḥ amukaśarmā rudrarūpastṛpyatām idaṁ satilaṁ jalaṁ tasmai svadhā namaḥ ||3||
+3. amukagotraḥ asmadvṛddhapramātāmahaḥ amukaśarmā ādityarūpastṛpyatām idaṁ satilaṁ jalaṁ tasmai svadhā namaḥ ||3||
+4. amukagotrā asmanmātāmahī amukī devī dā vasurūpā tṛpyatām idaṁ satilaṁ jalaṁ tasyai svadhā namaḥ ||3||
+5. amukagotrā asmatpramātāmahī amukī devī dā rudrarūpā tṛpyatām idaṁ satilaṁ jalaṁ tasyai svadhā namaḥ ||3||
+6. amukagotrā asmadvṛddhapramātāmahī amukī devī dā ādityarūpā tṛpyatām idaṁ satilaṁ jalaṁ tasyai svadhā namaḥ ||3||
+en: The second gotra-line, six formulae, each three times with three aṅjalis: the maternal grandfather as a Vasu, the maternal great-grandfather as a Rudra, the maternal great-great-grandfather as an Āditya, and the corresponding three women — maternal grandmother, great-grandmother and great-great-grandmother — as Vasu, Rudra and Āditya in turn.
+tel: ద్వితీయ గోత్రపంక్తి, ఆరు వాక్యములు, ప్రతిదియు మూడుసార్లు మూడు అంజలులతో: మాతామహుడు వసురూపుడుగా, ప్రమాతామహుడు రుద్రరూపుడుగా, వృద్ధప్రమాతామహుడు ఆదిత్యరూపుడుగా, మాతామహి వసురూపగా, ప్రమాతామహి రుద్రరూపగా, వృద్ధప్రమాతామహి ఆదిత్యరూపగా.
+hi: द्वितीय गोत्रकी छह वाक्य-पंक्तियाँ, प्रत्येक तीन बार तीन-तीन अञ्जलिके साथ: मातामह (नाना) वसुरूपसे, प्रमातामह (परनाना) रुद्ररूपसे, वृद्धप्रमातामह (बूढ़े परनाना) आदित्यरूपसे, मातामही (नानी) वसुरूपासे, प्रमातामही (परनानी) रुद्ररूपासे तथा वृद्धप्रमातामही (बूढ़ी परनानी) आदित्यरूपासे।
+
+--- unit 22 | section: Tarpaṇa of one's own forefathers ---
+vidhi:
+Patnyāditarpaṇa — the tarpaṇa of wife, children and the remaining kin. The number of aṅjalis differs by relation: three for male relations of the ascending or collateral line, one for the wife, son, daughter and for women generally, as the book's own numerals after each formula record.
+deva:
+अमुकगोत्रा अस्मत्पत्नी अमुकी देवी दा वसुरूपा तृप्यताम् इदं सतिलं जलं तस्यै स्वधा नमः ॥१॥ अमुकगोत्रः अस्मत्सुतः अमुकशर्मा वसुरूपस्तृप्यताम् ॥१॥ अमुकगोत्रा अस्मत्सुता अमुकी देवी दा वसुरूपा तृप्यताम् ॥१॥ अमुकगोत्रः अस्मत्पितृव्यः अमुकशर्मा वसुरूपस्तृप्यताम् ॥३॥ अमुकगोत्रः अस्मन्मातुलः अमुकशर्मा वसुरूपस्तृप्यताम् ॥३॥ अमुकगोत्रः अस्मद्भ्राता अमुकशर्मा वसुरूपस्तृप्यताम् ॥३॥ अमुकगोत्रः अस्मत्सापत्नभ्राता अमुकशर्मा वसुरूपस्तृप्यताम् ॥३॥ अमुकगोत्रा अस्मत्पितृभगिनी अमुकी देवी दा वसुरूपा तृप्यताम् ॥१॥ अमुकगोत्रा अस्मन्मातृभगिनी अमुकी देवी दा वसुरूपा तृप्यताम् ॥१॥ अमुकगोत्रा अस्मदात्मभगिनी अमुकी देवी दा वसुरूपा तृप्यताम् ॥१॥ अमुकगोत्रा अस्मत्सापत्नभगिनी अमुकी देवी दा वसुरूपा तृप्यताम् ॥१॥ अमुकगोत्रः अस्मच्छ्वशुरः अमुकशर्मा वसुरूपस्तृप्यताम् ॥३॥ अमुकगोत्रः अस्मद्गुरुः अमुकशर्मा वसुरूपस्तृप्यताम् ॥३॥ अमुकगोत्रा अस्मदाचार्यपत्नी अमुकी देवी दा वसुरूपा तृप्यताम् ॥२॥ अमुकगोत्रः अस्मच्छिष्यः अमुकशर्मा वसुरूपस्तृप्यताम् ॥३॥ अमुकगोत्रः अस्मत्सखा अमुकशर्मा वसुरूपस्तृप्यताम् ॥३॥ अमुकगोत्रः अस्मदाप्तपुरुषः अमुकशर्मा वसुरूपस्तृप्यताम् ॥३॥
+iast:
+amukagotrā asmatpatnī amukī devī dā vasurūpā tṛpyatām idaṁ satilaṁ jalaṁ tasyai svadhā namaḥ ||1|| amukagotraḥ asmatsutaḥ amukaśarmā vasurūpastṛpyatām ||1|| amukagotrā asmatsutā amukī devī dā vasurūpā tṛpyatām ||1|| amukagotraḥ asmatpitṛvyaḥ amukaśarmā vasurūpastṛpyatām ||3|| amukagotraḥ asmanmātulaḥ amukaśarmā vasurūpastṛpyatām ||3|| amukagotraḥ asmadbhrātā amukaśarmā vasurūpastṛpyatām ||3|| amukagotraḥ asmatsāpatnabhrātā amukaśarmā vasurūpastṛpyatām ||3|| amukagotrā asmatpitṛbhaginī amukī devī dā vasurūpā tṛpyatām ||1|| amukagotrā asmanmātṛbhaginī amukī devī dā vasurūpā tṛpyatām ||1|| amukagotrā asmadātmabhaginī amukī devī dā vasurūpā tṛpyatām ||1|| amukagotrā asmatsāpatnabhaginī amukī devī dā vasurūpā tṛpyatām ||1|| amukagotraḥ asmacchvaśuraḥ amukaśarmā vasurūpastṛpyatām ||3|| amukagotraḥ asmadguruḥ amukaśarmā vasurūpastṛpyatām ||3|| amukagotrā asmadācāryapatnī amukī devī dā vasurūpā tṛpyatām ||2|| amukagotraḥ asmacchiṣyaḥ amukaśarmā vasurūpastṛpyatām ||3|| amukagotraḥ asmatsakhā amukaśarmā vasurūpastṛpyatām ||3|| amukagotraḥ asmadāptapuruṣaḥ amukaśarmā vasurūpastṛpyatām ||3||
+en: Seventeen formulae, all in the form 'of such a gotra, our N, so-and-so, in the form of a Vasu, may they be satisfied; this water with sesame — to them, svadhā, salutation', with the number of aṅjalis given after each: wife (1), son (1), daughter (1), paternal uncle (3), maternal uncle (3), brother (3), stepbrother (3), paternal aunt (1), maternal aunt (1), one's own sister (1), stepsister (1), father-in-law (3), teacher (3), teacher's wife (2), pupil (3), friend (3), and trusted associate (3).
+tel: పదిహేడు వాక్యములు, అన్నియు 'ఫలానా గోత్రుడు, మా ఫలానావారు, వసురూపుడు తృప్తి పొందుగాక; ఈ తిలసహిత జలము — వారికి స్వధా, నమస్కారము' అను రూపమున, ప్రతిదాని తరువాత అంజలుల సంఖ్యతో: భార్య (౧), కుమారుడు (౧), కుమార్తె (౧), పితృవ్యుడు (౩), మాతులుడు (౩), సోదరుడు (౩), సాపత్నసోదరుడు (౩), మేనత్త (౧), పిన్ని (౧), సోదరి (౧), సాపత్నసోదరి (౧), మామ (౩), గురువు (౩), ఆచార్యపత్ని (౨), శిష్యుడు (౩), సఖుడు (౩), ఆప్తపురుషుడు (౩).
+hi: सत्रह वाक्य-पंक्तियाँ, सभी 'अमुक गोत्रवाले हमारे अमुक, वसुरूप तृप्त हों; यह तिलसहित जल — उनके लिये स्वधा, नमस्कार' इस रूपमें, प्रत्येकके बाद अञ्जलिकी संख्यासहित: पत्नी (१), पुत्र (१), पुत्री (१), पितृव्य—चाचा (३), मातुल—मामा (३), भाई (३), सौतेला भाई (३), बुआ (१), मौसी (१), अपनी बहिन (१), सौतेली बहिन (१), श्वशुर (३), गुरु (३), आचार्यपत्नी (२), शिष्य (३), सखा (३) तथा आप्तपुरुष (३)।
+
+--- unit 23 | section: Tarpaṇa of all beings ---
+vidhi:
+Then, being savya (yajñopavīta on the left shoulder) and facing east, pour water while reciting this śloka.
+deva:
+देवासुरास्तथा यक्षा नागा गन्धर्वराक्षसाः ।
+पिशाचा गुह्यकाः सिद्धाः कूष्माण्डास्तरवः खगाः ॥
+जलेचरा भूनिलया वाय्वाधाराश्च जन्तवः ।
+प्रीतिमेते प्रयान्त्वाशु मद्दत्तेनाम्बुनाखिलाः ॥
+iast:
+devāsurāstathā yakṣā nāgā gandharvarākṣasāḥ |
+piśācā guhyakāḥ siddhāḥ kūṣmāṇḍāstaravaḥ khagāḥ ||
+jalecarā bhūnilayā vāyvādhārāśca jantavaḥ |
+prītimete prayāntvāśu maddattenāmbunākhilāḥ ||
+en: Gods and asuras, yakṣas, nāgas, gandharvas and rākṣasas, piśācas, guhyakas, siddhas, kūṣmāṇḍas, trees and birds; creatures moving in water, dwelling on earth, and sustained by air — may all of these swiftly come to satisfaction by this water I have given.
+tel: దేవతలు, అసురులు, యక్షులు, నాగులు, గంధర్వులు, రాక్షసులు, పిశాచములు, గుహ్యకులు, సిద్ధులు, కూష్మాండులు, వృక్షములు, పక్షులు; జలచరములు, భూమిపై నివసించునవి, వాయువును ఆధారముగా కలవి — ఈ ప్రాణులన్నియు నేనిచ్చిన ఈ జలముచేత శీఘ్రముగా తృప్తిని పొందుగాక.
+hi: देवता, असुर, यक्ष, नाग, गन्धर्व, राक्षस, पिशाच, गुह्यक, सिद्ध, कूष्माण्ड, वृक्षवर्ग, पक्षी, जलचर तथा थलचर जीव और वायुके आधारपर रहनेवाले जन्तु—ये सभी मेरे दिये हुए जलसे शीघ्र तृप्त हों।
+
+--- unit 24 | section: Tarpaṇa of all beings ---
+vidhi:
+Then become apasavya, face south, and pour water from the pitṛ-tīrtha while reciting these ślokas. [Per the Pāraskara-gṛhyasūtra the tarpaṇa-prayoga prescribes becoming apasavya at this point.]
+deva:
+नरकेषु समस्तेषु यातनासु च ये स्थिताः ।
+तेषामाप्यायनायैतद्दीयते सलिलं मया ॥
+येऽबान्धवा बान्धवाश्च येऽन्यजन्मनि बान्धवाः ।
+ते तृप्तिमखिला यान्तु ये चास्मत्तोऽभिवाञ्छन्ति ॥
+ये मे कुले लुप्तपिण्डाः पुत्रदारविवर्जिताः ।
+तेषां हि दत्तमक्षय्यमिदमस्तु तिलोदकम् ॥
+iast:
+narakeṣu samasteṣu yātanāsu ca ye sthitāḥ |
+teṣāmāpyāyanāyaitaddīyate salilaṁ mayā ||
+ye'bāndhavā bāndhavāśca ye'nyajanmani bāndhavāḥ |
+te tṛptimakhilā yāntu ye cāsmatto'bhivāñchanti ||
+ye me kule luptapiṇḍāḥ putradāravivarjitāḥ |
+teṣāṁ hi dattamakṣayyamidamastu tilodakam ||
+en: Those who dwell in all the hells and in their torments — for their sustenance this water is given by me. Those who are not my kin and those who are, and those who were my kin in another birth, and all who desire water of me — let them all come to satisfaction. And for those in my line whose piṇḍa has lapsed, who are without wife or son — let this sesame water given by me be inexhaustible.
+tel: సమస్త నరకములయందు, యాతనలయందు ఉన్నవారి పోషణ కొరకు ఈ జలమును నేనిచ్చుచున్నాను. బంధువులు కానివారు, బంధువులు, అన్యజన్మలో బంధువులైనవారు, నానుండి జలమును కోరువారు — వారందరు తృప్తిని పొందుదురు గాక. నా వంశములో పిండము లుప్తమైనవారు, పుత్రదారరహితులు — వారికి నేనిచ్చిన ఈ తిలోదకము అక్షయమగుగాక.
+hi: जो समस्त नरकों तथा वहाँकी यातनाओंमें पड़े-पड़े दुःख भोग रहे हैं, उनको पुष्ट तथा शान्त करनेकी इच्छासे मैं यह जल देता हूँ। जो मेरे बान्धव न रहे हों, जो इस जन्ममें बान्धव रहे हों अथवा किसी दूसरे जन्ममें मेरे बान्धव रहे हों, वे सब तथा इनके अतिरिक्त भी जो मुझसे जल पानेकी इच्छा रखते हों, वे भी मेरे दिये हुए जलसे तृप्त हों। जो मेरे कुलमें पिण्डदान और स्त्री-पुत्रसे रहित हों, उनके लिये मेरे द्वारा दिया गया यह तिलमिश्रित जल अक्षय हो।
+
+--- unit 25 | section: Tarpaṇa of all beings ---
+vidhi:
+The closing verses of the general tarpaṇa, poured in the same apasavya posture.
+deva:
+आब्रह्मस्तम्बपर्यन्तं देवर्षिपितृमानवाः ।
+तृप्यन्तु पितरः सर्वे मातृमातामहादयः ॥
+अतीतकुलकोटीनां सप्तद्वीपनिवासिनाम् ।
+आब्रह्मभुवनाल्लोकादिदमस्तु तिलोदकम् ॥
+iast:
+ābrahmastambaparyantaṁ devarṣipitṛmānavāḥ |
+tṛpyantu pitaraḥ sarve mātṛmātāmahādayaḥ ||
+atītakulakoṭīnāṁ saptadvīpanivāsinām |
+ābrahmabhuvanāllokādidamastu tilodakam ||
+en: From Brahmā down to the blade of grass — gods, ṛṣis, forefathers and men: let all the forefathers be satisfied, with mothers and maternal grandfathers and the rest. For the crores of past generations dwelling in the seven continents, up to the world of Brahmā — let this sesame water be theirs.
+tel: బ్రహ్మనుండి తృణపర్యంతము — దేవతలు, ఋషులు, పితరులు, మానవులు: మాతలు, మాతామహులు మొదలగువారితో సహా పితరులందరు తృప్తి పొందుదురు గాక. సప్తద్వీపములయందు నివసించు గతించిన కోట్లాది తరములవారికి, బ్రహ్మలోకపర్యంతము — ఈ తిలోదకము వారిదగుగాక.
+hi: ब्रह्माजीसे लेकर कीटतकके जितने जीव हैं, वे तथा देवता, ऋषि, पितर, मनुष्य और माता, नाना आदि पितृगण—ये सभी तृप्त हों। मेरे कुलकी बीती हुई करोड़ों पीढ़ियोंमें उत्पन्न हुए जो-जो पितर ब्रह्मलोकपर्यन्त सात द्वीपोंके भीतर कहीं भी निवास करते हों, उनकी तृप्तिके लिये मेरा दिया हुआ यह तिलमिश्रित जल उन्हें प्राप्त हो।
+
+--- unit 26 | section: Wringing of the cloth, and Bhīṣma-tarpaṇa ---
+vidhi:
+Vastra-niṣpīḍana. Then fold the cloth four times over, dip it in water, take it out, and wring it out on the ground to your left, apasavya, reciting this mantra; let the wrung water fall into the water already offered in the tarpaṇa. [If an annual śrāddha or similar rite for a departed member of the household is being performed, the vastra-niṣpīḍana must not be done.] Per Yogiyājñavalkya, the water that comes from the wrung cloth is the share of those beings who live on the bather's leavings, so it is not to be wrung at the bathing place itself; per Vṛddhayogī, one must not wring the cloth until the tarpaṇa of the ṛṣis and forefathers has been done, since until then the bather himself is not properly bathed. Another smṛti: fold the cloth four times, wring it outside the water, place it on the left, do ācamana twice, and one becomes pure.
+deva:
+ये चास्माकं कुले जाता अपुत्रा गोत्रिणो मृताः ।
+ते गृह्णन्तु मया दत्तं वस्त्रनिष्पीडनोदकम् ॥
+iast:
+ye cāsmākaṁ kule jātā aputrā gotriṇo mṛtāḥ |
+te gṛhṇantu mayā dattaṁ vastraniṣpīḍanodakam ||
+en: Those born in our line who died sonless, of our gotra — let them receive this water of the wrung cloth, given by me.
+tel: మా వంశమున జన్మించి, పుత్రులు లేకుండ మరణించిన మా గోత్రీయులు — నేనిచ్చిన ఈ వస్త్రనిష్పీడనోదకమును గ్రహించెదరు గాక.
+hi: जो हमारे कुलमें उत्पन्न हुए, अपुत्र मरे हुए सगोत्रजन हैं, वे मेरे दिये हुए इस वस्त्रनिष्पीडनके जलको ग्रहण करें।
+
+--- unit 27 | section: Wringing of the cloth, and Bhīṣma-tarpaṇa ---
+vidhi:
+Bhīṣma-tarpaṇa. Then face south and, holding kuśa in the hand as for the pitṛtarpaṇa, offer water mixed with sesame from the pitṛ-tīrtha to Bhīṣma, the lifelong celibate and foremost of devotees.
+deva:
+वैयाघ्रपदगोत्राय साङ्कृतिप्रवराय च ।
+गङ्गापुत्राय भीष्माय प्रदास्येऽहं तिलोदकम् ॥
+अपुत्राय ददाम्येतत्सलिलं भीष्मवर्मणे ।
+iast:
+vaiyāghrapadagotrāya sāṅkṛtipravarāya ca |
+gaṅgāputrāya bhīṣmāya pradāsye'haṁ tilodakam ||
+aputrāya dadāmyetatsalilaṁ bhīṣmavarmaṇe |
+en: To him of the Vaiyāghrapada gotra and the Sāṅkṛti pravara, to Bhīṣma the son of Gaṅgā, I shall give this sesame water. I give this water to Bhīṣmavarman, who is without a son.
+tel: వైయాఘ్రపద గోత్రుడు, సాంకృతి ప్రవరుడు, గంగాపుత్రుడైన భీష్మునకు ఈ తిలోదకమును ఇచ్చుచున్నాను. పుత్రులు లేని భీష్మవర్మకు ఈ జలమును ఇచ్చుచున్నాను.
+hi: वैयाघ्रपद गोत्र तथा साङ्कृति प्रवरवाले गङ्गापुत्र भीष्मको मैं तिलोदक प्रदान करूँगा। अपुत्र भीष्मवर्माको मैं यह जल देता हूँ।
+
+--- unit 28 | section: Arghyadāna ---
+vidhi:
+Arghyadāna. Then place the yajñopavīta on the left shoulder, face east, do ācamana with pure water and perform prāṇāyāma. Fill a vessel with pure water, and with the ring finger draw a six-petalled lotus in the middle of it; put white sandal, unbroken rice, flowers and tulasī leaves into it. In a second vessel draw a six-petalled lotus with sandal, invoke and worship Brahmā and the other gods in it in the order of the directions beginning with the east, and then offer arghya to those worshipped gods with the water of the first vessel. These are the six arghya mantras (units 28–33), each closed with its own namaḥ and pūjā formula.
+deva:
+ॐ ब्रह्म जज्ञानं प्रथमं पुरस्ताद्वि सीमतः सुरुचो वेन आवः ।
+स बुध्न्या उपमा अस्य विष्ठाः सतश्च योनिमसतश्च वि वः ॥
+ॐ ब्रह्मणे नमः । ब्रह्माणं पूजयामि ॥
+iast:
+oṁ brahma jajñānaṁ prathamaṁ purastādvi sīmataḥ suruco vena āvaḥ |
+sa budhnyā upamā asya viṣṭhāḥ sataśca yonimasataśca vi vaḥ ||
+oṁ brahmaṇe namaḥ | brahmāṇaṁ pūjayāmi ||
+en: Brahman, born first in the east, was revealed by Vena from the shining boundary. He disclosed the deepest and the highest stations of this world, and the womb of the existent and the non-existent. Salutation to Brahmā; I worship Brahmā.
+tel: తూర్పున మొదట పుట్టిన బ్రహ్మమును వేనుడు ప్రకాశమానమైన సీమనుండి ఆవిష్కరించెను. అతడు ఈ జగత్తుయొక్క అధోభాగములను, ఉపరిస్థానములను, సత్తు అసత్తుల యోనిని వెల్లడించెను. బ్రహ్మకు నమస్కారము; బ్రహ్మను పూజించుచున్నాను.
+hi: सर्वप्रथम पूर्व दिशासे प्रकट होनेवाले आदित्यरूप ब्रह्मने भूगोलके मध्यभागसे आरम्भ करके इन समस्त सुन्दर कान्तिवाले लोकोंको अपने प्रकाशसे व्यक्त किया है तथा वह अत्यन्त कमनीय आदित्य इस जगत्की निवासस्थानभूत अवकाशयुक्त दिशाओंको, विद्यमान—मूर्त पदार्थके स्थानोंको और अमूर्त वायु आदिके उत्पत्तिस्थानोंको भी प्रकाशित करता है। ब्रह्माको नमस्कार है; मैं ब्रह्माका पूजन करता हूँ।
+
+--- unit 29 | section: Arghyadāna ---
+deva:
+ॐ इदं विष्णुर्विचक्रमे त्रेधा नि दधे पदम् । समूढमस्य पाꣳसुरे स्वाहा ॥
+ॐ विष्णवे नमः । विष्णुं पूजयामि ॥
+iast:
+oṁ idaṁ viṣṇurvicakrame tredhā ni dadhe padam | samūḍhamasya pāṁsure svāhā ||
+oṁ viṣṇave namaḥ | viṣṇuṁ pūjayāmi ||
+en: Viṣṇu strode across this world; in three places he set down his foot. All is gathered up in his dust — svāhā. Salutation to Viṣṇu; I worship Viṣṇu.
+tel: విష్ణువు ఈ జగత్తును ఆక్రమించెను; మూడు స్థానములయందు తన పాదమును ఉంచెను. సమస్తము అతని ధూళియందు కూడియున్నది — స్వాహా. విష్ణువునకు నమస్కారము; విష్ణువును పూజించుచున్నాను.
+hi: सर्वव्यापी त्रिविक्रम (वामन) अवतारधारी भगवान् विष्णुने इस चराचर जगत्को विभक्त करके [चरणोंसे] आक्रान्त किया है। उन्होंने पृथ्वी, आकाश और द्युलोक—इन तीनों स्थानोंमें अपना चरण स्थापित किया है। इन विष्णुभगवान्के चरणमें समस्त विश्व अन्तर्भूत है। हम इनके निमित्त स्वाहा (हविष्यदान) करते हैं। विष्णुको नमस्कार है; मैं विष्णुका पूजन करता हूँ।
+
+--- unit 30 | section: Arghyadāna ---
+deva:
+ॐ नमस्ते रुद्र मन्यव उतो त इषवे नमः । बाहुभ्यामुत ते नमः ॥
+ॐ रुद्राय नमः । रुद्रं पूजयामि ॥
+iast:
+oṁ namaste rudra manyava uto ta iṣave namaḥ | bāhubhyāmuta te namaḥ ||
+oṁ rudrāya namaḥ | rudraṁ pūjayāmi ||
+en: Salutation, O Rudra, to your wrath, and salutation to your arrow; and salutation to your two arms. Salutation to Rudra; I worship Rudra.
+tel: ఓ రుద్రా! నీ మన్యువునకు నమస్కారము, నీ బాణమునకు నమస్కారము; నీ రెండు భుజములకును నమస్కారము. రుద్రునకు నమస్కారము; రుద్రుని పూజించుచున్నాను.
+hi: हे रुद्र! आपके क्रोध और बाणको नमस्कार है तथा आपकी दोनों भुजाओंको नमस्कार है। रुद्रको नमस्कार है; मैं रुद्रका पूजन करता हूँ।
+
+--- unit 31 | section: Arghyadāna ---
+deva:
+ॐ भूर्भुवः स्वः तत्सवितुर्वरेण्यं भर्गो देवस्य धीमहि । धियो यो नः प्रचोदयात् ॥
+ॐ सवित्रे नमः । सवितारं पूजयामि ॥
+iast:
+oṁ bhūrbhuvaḥ svaḥ tatsaviturvareṇyaṁ bhargo devasya dhīmahi | dhiyo yo naḥ pracodayāt ||
+oṁ savitre namaḥ | savitāraṁ pūjayāmi ||
+en: Oṁ, earth, mid-air, heaven: we meditate on that adorable splendour of the god Savitṛ; may he impel our understandings. Salutation to Savitṛ; I worship Savitṛ.
+tel: ఓం భూర్భువః స్వః. సవితృదేవుని ఆ వరణీయమైన తేజస్సును ధ్యానించుచున్నాము; అతడు మా బుద్ధులను ప్రేరేపించుగాక. సవితకు నమస్కారము; సవితను పూజించుచున్నాను.
+hi: हम स्थावर-जंगमरूप सम्पूर्ण विश्वको उत्पन्न करनेवाले उन निरतिशय प्रकाशमय सूर्यस्वरूप परमेश्वरके भजनेयोग्य तेजका ध्यान करते हैं, जो कि हमारी बुद्धियोंको सत्कर्मोंकी ओर प्रेरित करते रहते हैं। सविताको नमस्कार है; मैं सविताका पूजन करता हूँ।
+
+--- unit 32 | section: Arghyadāna ---
+deva:
+ॐ मित्रस्य चर्षणीधृतोऽवो देवस्य सानसि । द्युम्नं चित्रश्रवस्तमम् ॥
+ॐ मित्राय नमः । मित्रं पूजयामि ॥
+iast:
+oṁ mitrasya carṣaṇīdhṛto'vo devasya sānasi | dyumnaṁ citraśravastamam ||
+oṁ mitrāya namaḥ | mitraṁ pūjayāmi ||
+en: The protection of the god Mitra, who upholds men, is bestowing; his glory is of the most wonderful renown. Salutation to Mitra; I worship Mitra.
+tel: మనుష్యులను ధరించు మిత్రదేవుని రక్షణము ఫలప్రదమైనది; అతని ద్యుమ్నము అత్యంత చిత్రమైన కీర్తి కలది. మిత్రునకు నమస్కారము; మిత్రుని పూజించుచున్నాను.
+hi: मनुष्योंका पोषण करनेवाले दीप्तिमान् मित्रदेवताका यह रक्षण-कार्य सनातन, फलप्रसिद्ध, विचित्र तथा श्रवण करनेके योग्य है। मित्रको नमस्कार है; मैं मित्रका पूजन करता हूँ।
+
+--- unit 33 | section: Arghyadāna ---
+deva:
+ॐ इमं मे वरुण श्रुधी हवमद्या च मृडय । त्वामवस्युरा चके ॥
+ॐ वरुणाय नमः । वरुणं पूजयामि ॥
+iast:
+oṁ imaṁ me varuṇa śrudhī havamadyā ca mṛḍaya | tvāmavasyurā cake ||
+oṁ varuṇāya namaḥ | varuṇaṁ pūjayāmi ||
+en: O Varuṇa, hear this call of mine, and be gracious today; desiring protection, I have called upon you. Salutation to Varuṇa; I worship Varuṇa.
+tel: ఓ వరుణా! నా ఈ ఆహ్వానమును వినుము, నేడు అనుగ్రహించుము; రక్షణమును కోరుచు నిన్ను ఆహ్వానించితిని. వరుణునకు నమస్కారము; వరుణుని పూజించుచున్నాను.
+hi: हे संसार-सागरके अधिपति वरुणदेव! अपनी रक्षाके लिये मैं आपको बुलाना चाहता हूँ, आप मेरे इस आवाहनको सुनिये और [यहाँ शीघ्र पधारकर] आज हमें सब प्रकारसे सुखी कीजिये। वरुणको नमस्कार है; मैं वरुणका पूजन करता हूँ।
+
+--- unit 34 | section: Sūryopasthāna and salutations ---
+vidhi:
+Sūryopasthāna. Then salute and pray to the sun with this mantra.
+deva:
+ॐ अदृश्रमस्य केतवो वि रश्मयो जनाꣳ२ अनु । भ्राजन्तो अग्नयो यथा ।
+उपयामगृहीतोऽसि सूर्याय त्वा भ्राजायैष ते योनिः सूर्याय त्वा भ्राजाय ।
+सूर्य भ्राजिष्ठ भ्राजिष्ठस्त्वं देवेष्वसि भ्राजिष्ठोऽहं मनुष्येषु भूयासम् ॥
+स शुचिषद्वसुरन्तरिक्षसद्धोता वेदिषदतिथिर्दुरोणसत् ।
+नृषद्वरसदृतसद्व्योमसदब्जा गोजा ऋतजा अद्रिजा ऋतं बृहत् ॥
+iast:
+oṁ adṛśramasya ketavo vi raśmayo janāṁ2 anu | bhrājanto agnayo yathā |
+upayāmagṛhīto'si sūryāya tvā bhrājāyaiṣa te yoniḥ sūryāya tvā bhrājāya |
+sūrya bhrājiṣṭha bhrājiṣṭhastvaṁ deveṣvasi bhrājiṣṭho'haṁ manuṣyeṣu bhūyāsam ||
+sa śuciṣadvasurantarikṣasaddhotā vediṣadatithirduroṇasat |
+nṛṣadvarasadṛtasadvyomasadabjā gojā ṛtajā adrijā ṛtaṁ bṛhat ||
+en: His banners have been seen, his rays spread out among men, blazing like fires. You are taken up by the upayāma vessel: you for Sūrya, for splendour; this is your womb — you for Sūrya, for splendour. O Sun, most brilliant: you are the most brilliant among the gods; may I be the most brilliant among men. He is the destroyer of pride, dwelling in purity; the Vasu dwelling in the mid-region; the hotṛ dwelling at the altar; the guest dwelling in the house; dwelling among men, in the best place, in the sacrifice, in the sky; born of water, born of the cow, born of ṛta, born of the mountain — he is the great ṛta.
+tel: ఇతని కేతువులు, కిరణములు మనుష్యులయందు ప్రసరించి కనబడినవి, ప్రజ్వలించు అగ్నులవలె. నీవు ఉపయామపాత్రచేత గ్రహింపబడితివి: సూర్యుని కొరకు, భ్రాజస్సు కొరకు నిన్ను గ్రహించుచున్నాను; ఇది నీ స్థానము. ఓ సూర్యా! నీవు దేవతలలో అత్యంత భ్రాజిష్ఠుడవు; నేను మనుష్యులలో అత్యంత భ్రాజిష్ఠుడనగుదును గాక. అతడు శుచియందున్నవాడు, అంతరిక్షమునందున్న వసువు, వేదియందున్న హోత, గృహమునందున్న అతిథి; నృషత్తు, వరసత్తు, ఋతసత్తు, వ్యోమసత్తు; అబ్జుడు, గోజుడు, ఋతజుడు, అద్రిజుడు — అతడే బృహత్తైన ఋతము.
+hi: प्रज्ञाके हेतुभूत एवं सम्पूर्ण पदार्थोंका ज्ञान करानेवाली इन सूर्यदेवकी किरणें समस्त प्राणियोंके भीतर विशेषरूपसे अनुगत (व्याप्त) देखी गयी हैं, जैसे देदीप्यमान अग्नि सर्वत्र व्याप्त देखी जाती है। हे सोम! तुम उपयामपात्रद्वारा गृहीत हो, मैं दीप्तिमान् सूर्यदेवके निमित्त तुम्हें ग्रहण करता हूँ। यह तुम्हारा स्थान है। हे अत्यन्त देदीप्यमान सूर्यदेव! जिस प्रकार तुम सब देवताओंमें अत्यन्त प्रकाशमान हो उसी प्रकार तुम्हारे प्रकाशसे मैं भी मनुष्योंमें अत्यन्त प्रकाशमान होऊँ। हे सूर्यभगवान्! आप अहंकारका नाश करनेवाले (हंस), प्रकाशमें गमन करनेवाले (शुचिषत्), अपनेमें सबको निवासित करनेवाले (वसु), वायुरूपसे अन्तरिक्षमें गमन करनेवाले (अन्तरिक्षसत्), देवोंको बुलानेवाले (होता), अग्निरूपसे वेदीपर स्थित होनेवाले (वेदिषत्), सबके पूजनीय (अतिथि), यज्ञशालामें आहवनीयादि अग्निरूपसे प्राप्त होनेवाले (दुरोणसत्), प्राणरूपसे मनुष्योंमें विचरनेवाले (नृषत्), श्रेष्ठ स्थानोंमें गमन करनेवाले (वरसत्), यज्ञमें प्राप्त होनेवाले (ऋतसत्) और आकाशमें विचरनेवाले (व्योमसत्) हैं तथा आप जलमें उत्पन्न होनेवाले (अब्जा), चार प्रकारके प्राणियोंके रूपमें पृथ्वीपर उत्पन्न होनेवाले (गोजा), सत्यसे उत्पन्न होनेवाले (ऋतजा), पर्वतोंमें उत्पन्न होनेवाले (अद्रिजा) एवं सत्यस्वरूप और महान् हैं। मैं आपको प्रणाम करता हूँ।
+
+--- unit 35 | section: Sūryopasthāna and salutations ---
+vidhi:
+Then salute the deities of the directions, beginning with the east and proceeding in order.
+deva:
+ॐ इन्द्राय नमः प्राच्यै ॥ ॐ अग्नये नमः आग्नेय्यै ॥ ॐ यमाय नमः दक्षिणायै ॥ ॐ निर्ऋतये नमः नैर्ऋत्यै ॥ ॐ वरुणाय नमः पश्चिमायै ॥ ॐ वायवे नमः वायव्यै ॥ ॐ सोमाय नमः उदीच्यै ॥ ॐ ईशानाय नमः ऐशान्यै ॥ ॐ ब्रह्मणे नमः ऊर्ध्वायै ॥ ॐ अनन्ताय नमः अधरायै ॥
+iast:
+oṁ indrāya namaḥ prācyai || oṁ agnaye namaḥ āgneyyai || oṁ yamāya namaḥ dakṣiṇāyai || oṁ nirṛtaye namaḥ nairṛtyai || oṁ varuṇāya namaḥ paścimāyai || oṁ vāyave namaḥ vāyavyai || oṁ somāya namaḥ udīcyai || oṁ īśānāya namaḥ aiśānyai || oṁ brahmaṇe namaḥ ūrdhvāyai || oṁ anantāya namaḥ adharāyai ||
+en: Ten salutations, each pairing a guardian with his quarter: Indra with the east, Agni with the south-east, Yama with the south, Nirṛti with the south-west, Varuṇa with the west, Vāyu with the north-west, Soma with the north, Īśāna with the north-east, Brahmā with the zenith, and Ananta with the nadir.
+tel: పది నమస్కారములు, ప్రతిదియు దిక్పాలకుని ఆ దిక్కుతో జతపరచును: ఇంద్రుడు తూర్పు, అగ్ని ఆగ్నేయము, యముడు దక్షిణము, నిరృతి నైరృతి, వరుణుడు పశ్చిమము, వాయువు వాయవ్యము, సోముడు ఉత్తరము, ఈశానుడు ఈశాన్యము, బ్రహ్మ ఊర్ధ్వము, అనంతుడు అధరము.
+hi: दस नमस्कार, प्रत्येकमें दिक्पाल तथा उनकी दिशा: इन्द्र—पूर्व, अग्नि—आग्नेय, यम—दक्षिण, निर्ऋति—नैर्ऋत्य, वरुण—पश्चिम, वायु—वायव्य, सोम—उत्तर, ईशान—ऐशान्य, ब्रह्मा—ऊर्ध्व तथा अनन्त—अधर।
+
+--- unit 36 | section: Sūryopasthāna and salutations ---
+vidhi:
+Then make salutation in the water with these.
+deva:
+1. ॐ ब्रह्मणे नमः ।
+2. ॐ अग्नये नमः ।
+3. ॐ पृथिव्यै नमः ।
+4. ॐ ओषधिभ्यो नमः ।
+5. ॐ वाचे नमः ।
+6. ॐ वाचस्पतये नमः ।
+7. ॐ महद्भ्यो नमः ।
+8. ॐ विष्णवे नमः ।
+9. ॐ अद्भ्यो नमः ।
+10. ॐ अपाम्पतये नमः ।
+11. ॐ वरुणाय नमः ।
+iast:
+1. oṁ brahmaṇe namaḥ |
+2. oṁ agnaye namaḥ |
+3. oṁ pṛthivyai namaḥ |
+4. oṁ oṣadhibhyo namaḥ |
+5. oṁ vāce namaḥ |
+6. oṁ vācaspataye namaḥ |
+7. oṁ mahadbhyo namaḥ |
+8. oṁ viṣṇave namaḥ |
+9. oṁ adbhyo namaḥ |
+10. oṁ apāmpataye namaḥ |
+11. oṁ varuṇāya namaḥ |
+en: Eleven salutations: to Brahmā, to Agni, to the Earth, to the herbs, to Speech, to the lord of Speech, to the great ones, to Viṣṇu, to the waters, to the lord of the waters, and to Varuṇa.
+tel: పదకొండు నమస్కారములు: బ్రహ్మకు, అగ్నికి, పృథివికి, ఓషధులకు, వాక్కుకు, వాచస్పతికి, మహత్తులకు, విష్ణువునకు, జలములకు, అపాంపతికి, వరుణునకు.
+hi: ग्यारह नमस्कार: ब्रह्माको, अग्निको, पृथिवीको, ओषधियोंको, वाणीको, वाचस्पतिको, महत्को, विष्णुको, जलको, अपाम्पतिको तथा वरुणको।
+
+--- unit 37 | section: Mouth-rinsing, dismissal, offering ---
+vidhi:
+Mukhamārjana. Then recite this mantra and wash the mouth with pure water.
+deva:
+ॐ सं वर्चसा पयसा सं तनूभिरगन्महि मनसा सꣳ शिवेन ।
+त्वष्टा सुदत्रो विदधातु रायोऽनुमार्ष्टु तन्वो यद्विलिष्टम् ॥
+iast:
+oṁ saṁ varcasā payasā saṁ tanūbhiraganmahi manasā saṁ śivena |
+tvaṣṭā sudatro vidadhātu rāyo'numārṣṭu tanvo yadviliṣṭam ||
+en: We have come together with lustre, with milk, with sound bodies, with an auspicious mind. Let Tvaṣṭṛ the good giver bestow riches, and smooth away whatever is deficient in our bodies.
+tel: తేజస్సుతో, పాలతో, దృఢమైన శరీరములతో, శివమైన మనస్సుతో మేము కూడితిమి. సుదాతయైన త్వష్ట సంపదలను ఇచ్చుగాక, మా శరీరములయందు లోపమైనదానిని సరిదిద్దుగాక.
+hi: हम ब्रह्मतेजसे, क्षीर आदि रससे, कर्म करनेमें समर्थ सुदृढ़ अंगोंसे और शान्त मनसे संयुक्त हों। सम्यक् प्रकारसे दान करनेवाले त्वष्टा देवता हमें धन दें और हमारे शरीरमें जो शक्ति आदिकी न्यूनता आ गयी है, उसका मार्जन करें।
+
+--- unit 38 | section: Mouth-rinsing, dismissal, offering ---
+vidhi:
+Visarjana. Recite this mantra and dismiss the gods.
+deva:
+ॐ देवा गातुविदो गातुं वित्त्वा गातुमित । मनसस्पत इमं देव यज्ञꣳ स्वाहा वाते धाः ॥
+iast:
+oṁ devā gātuvido gātuṁ vittvā gātumita | manasaspata imaṁ deva yajñaṁ svāhā vāte dhāḥ ||
+en: O gods who know the way — having found the way, go by the way. O lord of the mind, O god, place this sacrifice, with svāhā, in the wind.
+tel: మార్గము తెలిసిన దేవతలారా! మార్గమును తెలిసికొని మార్గమున వెళ్ళుడు. ఓ మనస్సునకు అధిపతియైన దేవా! ఈ యజ్ఞమును స్వాహాతో వాయువునందు నిలుపుము.
+hi: हे यज्ञवेत्ता देवताओ! आपलोग हमारे इस तर्पणरूपी यज्ञको समाप्त जानकर अपने गन्तव्यमार्गको पधारें। हे चित्तके प्रवर्तक परमेश्वर! मैं इस यज्ञको आपके हाथोंमें अर्पण करता हूँ। आप इसे वायुदेवतामें स्थापित करें।
+
+--- unit 39 | section: Mouth-rinsing, dismissal, offering ---
+vidhi:
+Samarpaṇa. Recite this sentence and offer the whole act of tarpaṇa to the Lord.
+deva:
+अनेन यथाशक्तिकृतेन देवर्षिमनुष्यपितृतर्पणाख्येन कर्मणा भगवान् मम समस्तपितृस्वरूपी जनार्दनवासुदेवः प्रीयतां न मम ।
+1. ॐ विष्णवे नमः ।
+2. ॐ विष्णवे नमः ।
+3. ॐ विष्णवे नमः ।
+॥ ॐ तत्सद्ब्रह्मार्पणमस्तु ॥
+iast:
+anena yathāśaktikṛtena devarṣimanuṣyapitṛtarpaṇākhyena karmaṇā bhagavān mama samastapitṛsvarūpī janārdanavāsudevaḥ prīyatāṁ na mama |
+1. oṁ viṣṇave namaḥ |
+2. oṁ viṣṇave namaḥ |
+3. oṁ viṣṇave namaḥ |
+|| oṁ tatsadbrahmārpaṇamastu ||
+en: By this act called the tarpaṇa of gods, ṛṣis, men and forefathers, done to the best of my power, may the Lord Janārdana Vāsudeva, who is the very form of all my forefathers, be pleased; it is not mine. Salutation to Viṣṇu, salutation to Viṣṇu, salutation to Viṣṇu. Oṁ tat sat — let it be an offering to Brahman.
+tel: యథాశక్తిగా చేసిన ఈ దేవర్షిమనుష్యపితృతర్పణమను కర్మచేత, నా సమస్త పితృస్వరూపుడైన జనార్దన వాసుదేవ భగవానుడు ప్రీతుడగుగాక; ఇది నాది కాదు. విష్ణువునకు నమస్కారము, విష్ణువునకు నమస్కారము, విష్ణువునకు నమస్కారము. ఓం తత్సత్ — బ్రహ్మార్పణమగుగాక.
+hi: यथाशक्ति किये हुए इस देवर्षिमनुष्यपितृतर्पण नामक कर्मसे मेरे समस्त पितृस्वरूपी भगवान् जनार्दन वासुदेव प्रसन्न हों; यह मेरा नहीं है। ॐ विष्णवे नमः। ॐ विष्णवे नमः। ॐ विष्णवे नमः। ॐ तत्सत् ब्रह्मार्पण हो।

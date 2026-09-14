@@ -1,0 +1,496 @@
+Title: Sandhyopāsana-vidhi
+Devanāgarī: संध्योपासनविधि
+Telugu: సంధ్యోపాసనవిధి
+
+Author: Anonymous (traditional smārta ritual manual). This redaction edited by M.M. Paṇḍita Vidyādhara Śarmā Gauḍa (Vedācārya), Paṇḍita Madanamohana Śāstrī and Pāṇḍeya Paṇḍita Rāmanārāyaṇadatta Śāstrī for Gītā Press.
+
+Type: vidhi (ritual manual) — not a stotra. See "Format note" below.
+
+Recension / śākhā: **North Indian smārta, Vājasaneyi (Śukla-Yajurveda) based — the Mādhyandina-tradition form.** This is important and is not a formality: sandhyāvandana is śākhā-specific, and this file is NOT the universal or only form of the rite. Gītā Press, Gorakhpur is a North Indian house, and this volume's Vedic citations are overwhelmingly to the Vājasaneyi Saṁhitā (यजु० = VS 36.3, 11.50–52, 20.20–21, 7.41–42 and the rest), which is the Śukla Yajurveda followed in the north in its Mādhyandina śākhā. Several core mantras are cited instead to the **Taittirīya Āraṇyaka** (तै० आ० प्र० १०) — the prāṇāyāma mantra, sūryaśca mā manyuśca, āpaḥ punantu, agniśca mā manyuśca, uttame śikhare. That is not a defect in the book: TĀ prapāṭhaka 10 (the Mahānārāyaṇa Upaniṣad) is the common source of sandhyā mantras across traditions. But it means this file must be described as Vājasaneyi-based rather than Mādhyandina throughout.
+
+**Southern (Taittirīya / Kṛṣṇa-Yajurveda) practice differs and is deliberately NOT represented here.** A user following the Taittirīya sandhyāvandanam should not use this file: the mantra selection, the sequence and the accented recitation all differ. That recension belongs in its own file, from its own source, and must never be merged into or harmonised with this one. See the śākhā rule in the repo-root `CLAUDE.md`.
+
+Source / recension: Gītā Press, Gorakhpur, book code 210, "संध्योपासनविधि, तर्पण एवं बलिवैश्वदेवविधि (मन्त्रानुवादसहित)", saṁ. 2064 twelfth reprint (ISBN 81-293-0220-9), pp. 3–20, read from the page images of a scan of the printed book (not from OCR). A public copy of the same edition is on archive.org as `byyw_sandhya-upasan-vidhi-aur-tarpan-evam-bali-viswa-dev-vidhi-edited-by-vidyadhar-sh` (creator 'Gita Press, Gorakhpur'), which also carries a `_djvu.txt` OCR; that OCR was NOT used here and, per the standing warning about Devanāgarī OCR dropping lines, should be treated as needing verification if ever consulted. Per this corpus's sourcing rule, Gītā Press is the authority where a Gītā Press edition exists, so this book is the base text, not a witness to be outvoted.
+
+Independent collation: every mantra the book cites to the Śukla Yajurveda was collated word-for-word against the Mādhyandina Vājasaneyi-Saṁhitā on sa.wikisource.org (शुक्लयजुर्वेदः, adhyāyas 1, 2, 5, 7, 8, 11, 13, 16, 17, 19, 20, 21, 31, 32, 33, 36, fetched via the MediaWiki API), a genuinely independent digital lineage carrying the Uvaṭa–Mahīdhara commentary alongside the saṁhitā text. Every reading matched: VS 36.3, 36.24, 11.50–52, 20.20, 20.21, 7.41, 7.42, 1.31, 17.19, 2.21, 8.21. The one discrepancy found was in the Wikisource file's own verse numbering, not in the text (its chapter 19 markers skip 19.67), and the Gītā Press citation numbers are correct against standard VS numbering.
+
+Not independently collated: the mantras the book cites to the Taittirīya Āraṇyaka (prapāṭhaka 10) — the prāṇāyāma mantra, sūryaśca mā manyuśca, āpaḥ punantu, agniśca mā manyuśca, uttame śikhare. GRETIL lists the Taittirīya Āraṇyaka as restricted/TITUS-proprietary with no downloadable file, so no second witness was reachable for these. They stand on the Gītā Press printing alone and are flagged here rather than passed off as collated. Same for the Kātyāyana-pariśiṣṭa-sūtra line (antaścarasi bhūteṣu) and the Āhnikaprakāśa verse in the footnote.
+
+Verse count: 36 units (mantras and mantra-groups). This is not a verse count in the stotra sense — the work is prose vidhi punctuated by mantras, and the unit numbering below is this corpus's, not the book's; the book numbers nothing.
+
+Format note: this is the corpus's first vidhi file, and the five-field per-verse block does not fit ritual prose unchanged. The extension is one field, `vidhi:`, carrying the ritual instruction that governs the mantra — what to do, when, facing which way, how many times — drawn from the book's own Hindi prose. Everything else is unchanged: deva / iast / en / tel / hi per unit, one line per field, IAST generated mechanically from the Devanāgarī to corpus convention. No new format was invented beyond that single field. The `hi:` field follows the book's own Hindi anuvāda closely, since a Gītā Press Hindi rendering is itself authoritative here; `en:` and `tel:` are rendered from the Sanskrit against that anuvāda.
+
+Sections:
+पूर्वाङ्ग — Preliminaries: pavitrī, yajñopavīta, āsana, tilaka (units 1–5)
+आचमन एवं संकल्प — Ācamana and saṅkalpa (units 6–9)
+प्राणायाम — Prāṇāyāma (units 10–13)
+मार्जन एवं अघमर्षण — Mārjana and aghamarṣaṇa, the water rites (units 14–21)
+सूर्यार्घ्य एवं सूर्योपस्थान — Arghya and sūryopasthāna (units 22–27)
+गायत्री — Gāyatrī: āvāhana, praṇāma, japa (units 28–30)
+उत्तराङ्ग — Concluding rites: pradakṣiṇā, nivedana, visarjana, samarpaṇa (units 31–36)
+
+Blurb: Sandhyāvandana is the daily worship done at dawn, at noon and at dusk. This is the smārta form that Gītā Press has printed for about a hundred years. Most of the rite is not praise. It is a set of acts done with water. The worshipper touches water to the lips, sprinkles water on the head, and offers water towards the sun. Water is also thrown to the left side, to carry away his sins. During the rite he invokes Gāyatrī Devī, salutes her, recites her mantra one hundred and eight times, and at the end respectfully sends her back to her peak on Mount Meru. The book gives three separate sets of mantras, one for each of the three times of the day (units 14 to 17). Some points of practice are not agreed upon by all. The book records these in brackets, and this file keeps them. They are: whether aṅganyāsa should be done at all, whether the evening arghya may be poured into water, and what should be done when no water is available.
+
+--- unit 1 | section: Preliminaries ---
+vidhi:
+In the brāhma muhūrta, while four ghaṭīs of night remain, rise, recall the Lord, bathe, put on clean cloth, and sit in a pure and solitary place on a seat of kuśa or a blanket, facing east, north-east or north. [At all three sandhyās one should sit facing these directions; only the offering of arghya to the sun, the sūryopasthāna and the Gāyatrī japa must be done facing the sun.] Wear the pavitrī — a ring plaited of three kuśa blades on the left hand and two on the right — with this mantra. Where kuśa is unavailable a gold, silver or copper ring serves.
+deva:
+ॐ पवित्रे स्थो वैष्णव्यौ सवितुर्वः प्रसव उत्पुनाम्यच्छिद्रेण पवित्रेण सूर्यस्य रश्मिभिः ।
+तस्य ते पवित्रपते पवित्रपूतस्य यत्कामः पुने तच्छकेयम् ॥
+iast:
+oṁ pavitre stho vaiṣṇavyau saviturvaḥ prasava utpunāmyacchidreṇa pavitreṇa sūryasya raśmibhiḥ |
+tasya te pavitrapate pavitrapūtasya yatkāmaḥ pune tacchakeyam ||
+en: O you two purifiers, you belong to Viṣṇu. In the impulsion of Savitṛ I purify you with the flawless purifier, with the rays of the sun. O lord of the purifier, purified by that purifier of yours — whatever I purify myself for, may I have the power to accomplish it.
+tel: ఓ పవిత్రద్వయమా! మీరిద్దరూ విష్ణుసంబంధులు. సవితృదేవుని ప్రేరణలో సూర్యకిరణాలైన నిర్దోషమైన పవిత్రముచేత మిమ్ములను శుద్ధి చేయుచున్నాను. ఓ పవిత్రపతీ! నీ పవిత్రముచేత శుద్ధుడనైన నేను ఏ కోరికతో శుద్ధి పొందుచున్నానో, దానిని సాధించు శక్తి నాకు కలుగుగాక.
+hi: हे पवित्र करने वाले युगल कुशमय पवित्रको! तुम दोनों यज्ञसे सम्बन्ध रखने वाले हो। सविताकी प्रेरणासे सूर्यकी किरणरूप छिद्ररहित पवित्रसे मैं तुम्हें पवित्र करता हूँ। हे पवित्रपते! तुम्हारे पवित्रसे पूत होकर मैं जिस कामनासे शुद्ध होता हूँ, उसे पूर्ण करनेमें समर्थ होऊँ।
+
+--- unit 2 | section: Preliminaries ---
+vidhi:
+Utter the Gāyatrī with praṇava and the vyāhṛtis, then tie the śikhā — or, if it is already tied, merely touch it. A pair of clean yajñopavītas must be worn at all times. This mantra is for putting on a new yajñopavīta, which is required when the old one is soiled, forgotten during evacuation, dropped or broken: after bathing, sit on the āsana, do ācamana, take up the yajñopavīta and recite it. Then meditate on its nine threads as Oṁkāra, Agni, Sarpa, Soma, Pitṛ, Prajāpati, Vāyu, Yama and Viśvedeva in order, and its three knots as Brahmā, Viṣṇu and Rudra. Recite the Gāyatrī at least twenty times after wearing it (thirty if bali-vaiśvadeva is to be performed), then remove the old one over the head with 'samudraṁ gaccha svāhā' and cast it into water. Only after this is one entitled to sandhyā.
+deva:
+ॐ यज्ञोपवीतं परमं पवित्रं प्रजापतेर्यत्सहजं पुरस्तात् ।
+आयुष्यमग्र्यं प्रतिमुञ्च शुभ्रं यज्ञोपवीतं बलमस्तु तेजः ॥
+यज्ञोपवीतमसि यज्ञस्य त्वा यज्ञोपवीतेनोपनह्यामि ।
+iast:
+oṁ yajñopavītaṁ paramaṁ pavitraṁ prajāpateryatsahajaṁ purastāt |
+āyuṣyamagryaṁ pratimuñca śubhraṁ yajñopavītaṁ balamastu tejaḥ ||
+yajñopavītamasi yajñasya tvā yajñopavītenopanahyāmi |
+en: The yajñopavīta is supremely pure; it was born with Prajāpati at the beginning. Put on this bright thread that bestows long life and precedence — may the yajñopavīta be strength and splendour to me. You are the sacred thread; I bind you with the thread of sacrifice.
+tel: యజ్ఞోపవీతము పరమ పవిత్రమైనది, ఆదిలో ప్రజాపతితో కూడ సహజముగా పుట్టినది. ఆయుష్యమును, అగ్రస్థానమును ఇచ్చు ఈ శుభ్రమైన యజ్ఞోపవీతమును ధరించుము — యజ్ఞోపవీతము నాకు బలమును తేజస్సును కలిగించుగాక. నీవు యజ్ఞోపవీతమవు; యజ్ఞముయొక్క యజ్ఞోపవీతముచేత నిన్ను ధరించుచున్నాను.
+hi: यज्ञोपवीत परम पवित्र है, जो प्रजापतिके साथ ही आदिमें उत्पन्न हुआ। आयु देनेवाले, श्रेष्ठ एवं शुभ्र इस यज्ञोपवीतको धारण करो — यज्ञोपवीत मेरे लिये बल और तेज हो। तू यज्ञोपवीत है; यज्ञके यज्ञोपवीतसे मैं तुझे धारण करता हूँ।
+
+--- unit 3 | section: Preliminaries ---
+vidhi:
+Besides the washed cloth on the body an upper cloth — a sheet or towel — must be kept on. Where there is no upper cloth, wear one more yajñopavīta, making three in all. Then keep pure water in a vessel, lift it in the left hand, and with the kuśa in the right hand sprinkle water over your own body while reciting this.
+deva:
+ॐ अपवित्रः पवित्रो वा सर्वावस्थां गतोऽपि वा ।
+यः स्मरेत्पुण्डरीकाक्षं स बाह्याभ्यन्तरः शुचिः ॥
+iast:
+oṁ apavitraḥ pavitro vā sarvāvasthāṁ gato'pi vā |
+yaḥ smaretpuṇḍarīkākṣaṁ sa bāhyābhyantaraḥ śuciḥ ||
+en: Impure or pure, or fallen into whatever state at all — whoever calls to mind the lotus-eyed Lord becomes clean outside and within.
+tel: అపవిత్రుడైనను, పవిత్రుడైనను, ఏ అవస్థలో ఉన్నను — పుండరీకాక్షుడైన భగవంతుని ఎవడు స్మరించునో, అతడు బాహ్యమునను అంతరమునను శుద్ధుడగును.
+hi: मनुष्य अपवित्र हो या पवित्र अथवा किसी भी दशामें स्थित हो, जो पुण्डरीकाक्ष (कमलनयन) भगवान् विष्णुका स्मरण करता है, वह बाहर और भीतर सब ओरसे शुद्ध हो जाता है।
+
+--- unit 4 | section: Preliminaries ---
+vidhi:
+Then sprinkle water on the seat and touch it with the right hand, reciting this.
+deva:
+ॐ पृथ्वि त्वया धृता लोका देवि त्वं विष्णुना धृता ।
+त्वं च धारय मां देवि पवित्रं कुरु चासनम् ॥
+iast:
+oṁ pṛthvi tvayā dhṛtā lokā devi tvaṁ viṣṇunā dhṛtā |
+tvaṁ ca dhāraya māṁ devi pavitraṁ kuru cāsanam ||
+en: O Earth, the worlds are borne up by you, and you, goddess, are borne up by Viṣṇu. Bear me too, O goddess, and make this seat pure.
+tel: ఓ పృథ్వీదేవీ! లోకములన్నియు నీచేత ధరింపబడినవి, నీవు విష్ణువుచేత ధరింపబడితివి. ఓ దేవీ! నన్ను కూడ ధరించుము, ఈ ఆసనమును పవిత్రము చేయుము.
+hi: हे पृथ्वी देवि! तुमने सम्पूर्ण लोकोंको धारण कर रखा है और भगवान् विष्णुने तुम्हें धारण किया है। हे देवि! तुम मुझे धारण करो और मेरे आसनको पवित्र कर दो।
+
+--- unit 5 | section: Preliminaries ---
+vidhi:
+After this apply the tilaka — bhasma, sandal and so on according to taste and to what one's śāstra prescribes. The word ūrdhvapuṇḍra in this verse from the Āhnikaprakāśa stands for tilaka of every kind: the sense is that ūrdhvapuṇḍra, tripuṇḍra and the rest are always to be made from tīrtha-clay, sandal, ash or water as the occasion requires. Wear only what is the god's prasāda; never what has been ground for one's own sake.
+deva:
+मृत्तिका चन्दनं चैव भस्म तोयं चतुर्थकम् ।
+एभिर्द्रव्यैर्यथाकालमूर्ध्वपुण्ड्रं भवेत् सदा ॥
+iast:
+mṛttikā candanaṁ caiva bhasma toyaṁ caturthakam |
+ebhirdravyairyathākālamūrdhvapuṇḍraṁ bhavet sadā ||
+en: Clay, sandal, ash, and water as the fourth — from these substances, according to the occasion, the ūrdhvapuṇḍra is always to be made.
+tel: మృత్తిక, చందనము, భస్మము, నాలుగవదిగా జలము — ఈ ద్రవ్యములచేత కాలానుగుణముగా ఊర్ధ్వపుండ్రము ఎల్లప్పుడు ధరింపవలెను.
+hi: मिट्टी, चन्दन, भस्म और चौथा जल — इन द्रव्योंसे यथासमय सदा ऊर्ध्वपुण्ड्र (तिलक) करना चाहिये।
+
+--- unit 6 | section: Ācamana and saṅkalpa ---
+vidhi:
+Then do ācamana three times, once with each of these three mantras, using water made pure by the pavitrī. During ācamana the hands must be inside the knees and the face turned east, north-east or north. A brāhmaṇa takes water enough to reach the heart, a kṣatriya enough to reach the throat, a vaiśya enough to reach the palate. Do not open the lips wide; keep the fingers joined, with thumb and little finger held apart; do not stand, do not laugh; the water must have no froth or bubbles in it. Drink from the brāhma-tīrtha, at the root of the thumb.
+deva:
+1. ॐ केशवाय नमः ।
+2. ॐ नारायणाय नमः ।
+3. ॐ माधवाय नमः ।
+iast:
+1. oṁ keśavāya namaḥ |
+2. oṁ nārāyaṇāya namaḥ |
+3. oṁ mādhavāya namaḥ |
+en: Salutation to Keśava. Salutation to Nārāyaṇa. Salutation to Mādhava.
+tel: కేశవునకు నమస్కారము. నారాయణునకు నమస్కారము. మాధవునకు నమస్కారము.
+hi: केशवको नमस्कार है। नारायणको नमस्कार है। माधवको नमस्कार है।
+
+--- unit 7 | section: Ācamana and saṅkalpa ---
+vidhi:
+Having done ācamana three times, recite this and wash the hand. Then wipe the lips twice with the root of the thumb and wash the hand again. The root of the thumb is called the brāhma-tīrtha. Then touch the face and the other parts with the wetted fingers. Touch the mouth with the middle and ring fingers. Touch the nostrils with the index finger and thumb. Touch the eyes with the middle finger and thumb. Touch the ears with the ring finger and thumb. Touch the navel with the little finger and thumb. Touch the heart with the whole right hand. Touch the head with all the fingers. Touch both shoulders with all five fingers.
+deva:
+ॐ गोविन्दाय नमः ।
+iast:
+oṁ govindāya namaḥ |
+en: Salutation to Govinda.
+tel: గోవిందునకు నమస్కారము.
+hi: गोविन्दको नमस्कार है।
+
+--- unit 8 | section: Ācamana and saṅkalpa ---
+vidhi:
+Some use the Gāyatrī mantra for ash and sandal, and those bound to a sampradāya should use the mantras their sampradāya's usage prescribes. The mantra given here is for ordinary smārta persons. Consecrate the ash with 'oṁ agniriti bhasma…', then apply it: on the forehead with 'tryāyuṣaṁ jamadagneḥ', on the throat with 'kaśyapasya tryāyuṣam', at the root of both arms with 'yaddevānāṁ tryāyuṣam', and on the heart with 'tanno astu tryāyuṣam'.
+deva:
+ॐ अग्निरिति भस्म वायुरिति भस्म जलमिति भस्म स्थलमिति भस्म व्योमेति भस्म सर्वꣳ ह वा इदं भस्म मन एतानि चक्षूꣳषि भस्म ।
+iast:
+oṁ agniriti bhasma vāyuriti bhasma jalamiti bhasma sthalamiti bhasma vyometi bhasma sarvaṁ ha vā idaṁ bhasma mana etāni cakṣūṁṣi bhasma |
+en: Fire is ash, wind is ash, water is ash, earth is ash, ether is ash; all this indeed is ash — mind, and these eyes, are ash.
+tel: అగ్ని భస్మము, వాయువు భస్మము, జలము భస్మము, స్థలము భస్మము, ఆకాశము భస్మము; ఇదంతయు నిశ్చయముగా భస్మమే — మనస్సు, ఈ కన్నులు కూడ భస్మమే.
+hi: अग्नि भस्म है, वायु भस्म है, जल भस्म है, स्थल भस्म है, आकाश भस्म है; यह सब कुछ भस्म ही है — मन तथा ये नेत्र भी भस्म हैं।
+
+--- unit 9 | section: Ācamana and saṅkalpa ---
+vidhi:
+Then take water in the hand, recite this saṅkalpa, and let the water fall to the ground. In place of 'amuka' insert the actual saṁvatsara, month, pakṣa, tithi, weekday and gotra; a brāhmaṇa uses 'śarmā' after his name, a kṣatriya 'varmā', a vaiśya 'gupta'; and say 'prātaḥ', 'mādhyāhna' or 'sāyaṁ' according to the hour.
+deva:
+हरिः ॐ तत्सदद्यैतस्य श्रीब्रह्मणो द्वितीयपरार्धे श्रीश्वेतवाराहकल्पे जम्बूद्वीपे भरतखण्डे आर्यावर्तैकदेशान्तर्गते पुण्यक्षेत्रे कलियुगे कलिप्रथमचरणे अमुकसंवत्सरे अमुकमासे अमुकपक्षे अमुकतिथौ अमुकवासरे अमुकगोत्रोत्पन्नः अमुकशर्माहं ममोपात्तदुरितक्षयपूर्वकं श्रीपरमेश्वरप्रीत्यर्थं प्रातःसन्ध्योपासनं करिष्ये ।
+iast:
+hariḥ oṁ tatsadadyaitasya śrībrahmaṇo dvitīyaparārdhe śrīśvetavārāhakalpe jambūdvīpe bharatakhaṇḍe āryāvartaikadeśāntargate puṇyakṣetre kaliyuge kaliprathamacaraṇe amukasaṁvatsare amukamāse amukapakṣe amukatithau amukavāsare amukagotrotpannaḥ amukaśarmāhaṁ mamopāttaduritakṣayapūrvakaṁ śrīparameśvaraprītyarthaṁ prātaḥsandhyopāsanaṁ kariṣye |
+en: Hari Oṁ Tat Sat. It is now the second half of the life of Brahmā, in the Śveta-Vārāha kalpa, in the Kali age, in its first quarter. The place is the continent Jambū, the land of Bhārata, in a holy region within Āryāvarta. The date is such a year, month, fortnight, lunar day and weekday. I, so-and-so Śarmā, born of such a gotra, will now perform the dawn sandhyā worship. I do this for the destruction of the sins I have incurred, and for the pleasure of the supreme Lord.
+tel: హరిః ఓం తత్సత్. ఇప్పుడు బ్రహ్మదేవుని ద్వితీయపరార్ధమున, శ్వేతవరాహకల్పమున, జంబూద్వీపమున, భరతఖండమున, ఆర్యావర్తములోని పుణ్యక్షేత్రమున, కలియుగ ప్రథమచరణమున, ఫలానా సంవత్సర-మాస-పక్ష-తిథి-వాసరములందు, ఫలానా గోత్రమున జన్మించిన ఫలానా శర్మ అను నేను, నా పాపముల క్షయము కొరకు, పరమేశ్వరుని ప్రీతి కొరకు ప్రాతఃసంధ్యోపాసనమును చేయుచున్నాను.
+hi: हरिः ॐ तत्सत्। आज श्रीब्रह्माजीके द्वितीय परार्धमें, श्वेतवाराहकल्पमें, जम्बूद्वीपके भरतखण्डमें, आर्यावर्तके अन्तर्गत पुण्यक्षेत्रमें, कलियुगके प्रथम चरणमें, अमुक संवत्सर-मास-पक्ष-तिथि-वारमें, अमुक गोत्रमें उत्पन्न मैं अमुक शर्मा, अपने पापोंके क्षयपूर्वक श्रीपरमेश्वरकी प्रसन्नताके लिये प्रातःकालकी सन्ध्योपासना करूँगा।
+
+--- unit 10 | section: Prāṇāyāma ---
+vidhi:
+Then recite this viniyoga, and after it recite the mantra of unit 11 once and do ācamana once.
+deva:
+ऋतं चेति त्र्यृचस्य माधुच्छन्दसोऽघमर्षण ऋषिरनुष्टुप् छन्दो भाववृत्तं दैवतमपामुपस्पर्शने विनियोगः ।
+iast:
+ṛtaṁ ceti tryṛcasya mādhucchandaso'ghamarṣaṇa ṛṣiranuṣṭup chando bhāvavṛttaṁ daivatamapāmupasparśane viniyogaḥ |
+en: Of the three-verse hymn beginning 'ṛtaṁ ca', the ṛṣi is Aghamarṣaṇa Mādhucchandasa, the metre anuṣṭup, the deity Bhāvavṛtta; its application is in the touching of water.
+tel: 'ఋతం చ' అను త్ర్యృచమునకు ఋషి మాధుచ్ఛందసుడైన అఘమర్షణుడు, ఛందస్సు అనుష్టుప్, దేవత భావవృత్తము; అపాముపస్పర్శనమునందు వినియోగము.
+hi: 'ऋतं च' इस त्र्यृचके ऋषि माधुच्छन्दस अघमर्षण हैं, छन्द अनुष्टुप् है, देवता भाववृत्त है; अपाम् उपस्पर्शनमें इसका विनियोग है।
+
+--- unit 11 | section: Prāṇāyāma ---
+vidhi:
+Recite this once and do ācamana once. Its sense: after the great dissolution, at the beginning of this mahākalpa, from the Supreme Self shining on every side as tapas were born ṛta (true resolve) and satya (truthful speech); from that same Self night and day became manifest, and from it the watery ocean arose; after the ocean came the year, holder of days and nights, bringing under its sway the whole world of moving and unmoving beings that live by the blink of an eye; and then the Lord who upholds all fashioned sun, moon, heaven, earth, the mid-region and the world of light as they had been in the kalpa before.
+deva:
+ॐ ऋतं च सत्यं चाभीद्धात्तपसोऽध्यजायत । ततो रात्र्यजायत । ततः समुद्रो अर्णवः ।
+समुद्रादर्णवादधि संवत्सरो अजायत । अहोरात्राणि विदधद्विश्वस्य मिषतो वशी ।
+सूर्याचन्द्रमसौ धाता यथापूर्वमकल्पयत् । दिवं च पृथिवीं चान्तरिक्षमथो स्वः ॥
+iast:
+oṁ ṛtaṁ ca satyaṁ cābhīddhāttapaso'dhyajāyata | tato rātryajāyata | tataḥ samudro arṇavaḥ |
+samudrādarṇavādadhi saṁvatsaro ajāyata | ahorātrāṇi vidadhadviśvasya miṣato vaśī |
+sūryācandramasau dhātā yathāpūrvamakalpayat | divaṁ ca pṛthivīṁ cāntarikṣamatho svaḥ ||
+en: Ṛta and satya were born from kindled tapas; thence was night born; thence the ocean of waters. From the ocean of waters the year was born, ordaining days and nights, master of all that blinks. The Ordainer fashioned sun and moon as before, and heaven, and earth, and the mid-region, and the world of light.
+tel: ప్రజ్వలించిన తపస్సునుండి ఋతము, సత్యము పుట్టినవి; దానినుండి రాత్రి పుట్టినది; దానినుండి జలమయమైన సముద్రము. జలసముద్రమునుండి సంవత్సరము పుట్టినది, అది అహోరాత్రములను ఏర్పరచుచు, రెప్పపాటుగల సమస్త ప్రాణులకు అధిపతియైనది. ధాత సూర్యచంద్రులను పూర్వమువలెనే కల్పించెను, ద్యులోకమును, పృథివిని, అంతరిక్షమును, స్వర్లోకమును కూడ.
+hi: प्रकाशमान तपरूप परमात्मासे ऋत (सत्यसंकल्प) और सत्य (यथार्थ भाषण)-की उत्पत्ति हुई। उसीसे रात्रि-दिन प्रकट हुए तथा उसीसे जलमय समुद्रका आविर्भाव हुआ। जलमय समुद्रकी उत्पत्तिके पश्चात् दिनों और रात्रियोंको धारण करनेवाला कालस्वरूप संवत्सर प्रकट हुआ, जो पलक मारनेवाले समस्त संसारको अपने अधीन रखनेवाला है। इसके बाद सबको धारण करनेवाले परमेश्वरने सूर्य, चन्द्रमा, द्युलोक, पृथिवी, अन्तरिक्ष तथा स्वर्लोककी भी पूर्वकल्पके अनुसार सृष्टि की।
+
+--- unit 12 | section: Prāṇāyāma ---
+vidhi:
+Then recite the Gāyatrī preceded by praṇava and sprinkle water on all four sides of yourself for protection. Then recite this viniyoga, close the eyes, and perform prāṇāyāma with the mantra of unit 13. The method: close the right nostril with the right thumb and draw the breath in through the left, meditating on Viṣṇu, dark as a blue lotus petal, four-armed, in the region of the navel, and recite the prāṇāyāma mantra three times — this is pūraka. Then close the left nostril also with ring and little fingers and hold the breath until the mantra has been recited three times [or once, as one is able], meditating on four-faced Brahmā of mixed red-and-white hue seated on the lotus in the heart — this is kumbhaka. Then lift the thumb and let the breath out slowly through the right nostril until the mantra has been recited three [or one] times, meditating on Śaṅkara, white as pure crystal, three-eyed — this is recaka. All three together make one prāṇāyāma.
+deva:
+ॐकारस्य ब्रह्मा ऋषिर्दैवी गायत्री छन्दः परमात्मा देवता सप्तव्याहृतीनां प्रजापतिर्ऋषिर्गायत्र्युष्णिगनुष्टुब्बृहतीपङ्क्तित्रिष्टुब्जगत्यश्छन्दांस्यग्निवायुसूर्यबृहस्पतिवरुणेन्द्रविश्वेदेवा देवताः, तत्सवितुरिति विश्वामित्र ऋषिर्गायत्री छन्दः सविता देवता, आपोज्योतिरिति शिरसः प्रजापतिर्ऋषिर्यजुश्छन्दो ब्रह्माग्निवायुसूर्या देवताः प्राणायामे विनियोगः ।
+iast:
+oṁkārasya brahmā ṛṣirdaivī gāyatrī chandaḥ paramātmā devatā saptavyāhṛtīnāṁ prajāpatirṛṣirgāyatryuṣṇiganuṣṭubbṛhatīpaṅktitriṣṭubjagatyaśchandāṁsyagnivāyusūryabṛhaspativaruṇendraviśvedevā devatāḥ, tatsavituriti viśvāmitra ṛṣirgāyatrī chandaḥ savitā devatā, āpojyotiriti śirasaḥ prajāpatirṛṣiryajuśchando brahmāgnivāyusūryā devatāḥ prāṇāyāme viniyogaḥ |
+en: Of the Oṁkāra the ṛṣi is Brahmā, the metre divine Gāyatrī, the deity the Supreme Self. Of the seven vyāhṛtis the ṛṣi is Prajāpati, the metres are gāyatrī, uṣṇik, anuṣṭup, bṛhatī, paṅkti, triṣṭup and jagatī, and the deities Agni, Vāyu, Sūrya, Bṛhaspati, Varuṇa, Indra and the Viśvedevas. Of 'tatsavituḥ' the ṛṣi is Viśvāmitra, the metre gāyatrī, the deity Savitṛ. Of the śiras 'āpo jyotiḥ' the ṛṣi is Prajāpati, the metre yajus, the deities Brahmā, Agni, Vāyu and Sūrya. The application is in prāṇāyāma.
+tel: ఓంకారమునకు ఋషి బ్రహ్మ, ఛందస్సు దైవీ గాయత్రి, దేవత పరమాత్మ. సప్తవ్యాహృతులకు ఋషి ప్రజాపతి, ఛందస్సులు గాయత్రి-ఉష్ణిక్-అనుష్టుప్-బృహతి-పంక్తి-త్రిష్టుప్-జగతి, దేవతలు అగ్ని-వాయు-సూర్య-బృహస్పతి-వరుణ-ఇంద్ర-విశ్వేదేవులు. 'తత్సవితుః' అనుదానికి ఋషి విశ్వామిత్రుడు, ఛందస్సు గాయత్రి, దేవత సవిత. 'ఆపోజ్యోతిః' అను శిరస్సునకు ఋషి ప్రజాపతి, ఛందస్సు యజుస్సు, దేవతలు బ్రహ్మ-అగ్ని-వాయు-సూర్యులు. ప్రాణాయామమునందు వినియోగము.
+hi: ॐकारके ऋषि ब्रह्मा, छन्द दैवी गायत्री और देवता परमात्मा हैं। सात व्याहृतियोंके ऋषि प्रजापति, छन्द गायत्री-उष्णिक्-अनुष्टुप्-बृहती-पङ्क्ति-त्रिष्टुप्-जगती और देवता अग्नि-वायु-सूर्य-बृहस्पति-वरुण-इन्द्र-विश्वेदेव हैं। 'तत्सवितुः'के ऋषि विश्वामित्र, छन्द गायत्री, देवता सविता हैं। 'आपोज्योति' इस शिरके ऋषि प्रजापति, छन्द यजुः और देवता ब्रह्मा-अग्नि-वायु-सूर्य हैं। प्राणायाममें विनियोग है।
+
+--- unit 13 | section: Prāṇāyāma ---
+vidhi:
+This is the prāṇāyāma mantra, recited three times in pūraka, three (or once) in kumbhaka and three (or once) in recaka.
+deva:
+ॐ भूः ॐ भुवः ॐ स्वः ॐ महः ॐ जनः ॐ तपः ॐ सत्यम् ।
+ॐ तत्सवितुर्वरेण्यं भर्गो देवस्य धीमहि । धियो यो नः प्रचोदयात् ।
+ॐ आपो ज्योती रसोऽमृतं ब्रह्म भूर्भुवः स्वरोम् ॥
+iast:
+oṁ bhūḥ oṁ bhuvaḥ oṁ svaḥ oṁ mahaḥ oṁ janaḥ oṁ tapaḥ oṁ satyam |
+oṁ tatsaviturvareṇyaṁ bhargo devasya dhīmahi | dhiyo yo naḥ pracodayāt |
+oṁ āpo jyotī raso'mṛtaṁ brahma bhūrbhuvaḥ svarom ||
+en: Oṁ bhūḥ, oṁ bhuvaḥ, oṁ svaḥ, oṁ mahaḥ, oṁ janaḥ, oṁ tapaḥ, oṁ satyam. We meditate on that adorable splendour of the god Savitṛ; may he impel our understandings. Oṁ — the waters, the light, the essence, the immortal, Brahman, bhūḥ bhuvaḥ svaḥ — Oṁ.
+tel: ఓం భూః, ఓం భువః, ఓం స్వః, ఓం మహః, ఓం జనః, ఓం తపః, ఓం సత్యమ్. సవితృదేవుని ఆ వరణీయమైన తేజస్సును ధ్యానించుచున్నాము; అతడు మా బుద్ధులను ప్రేరేపించుగాక. ఓం — జలము, జ్యోతి, రసము, అమృతము, బ్రహ్మము, భూర్భువఃస్వః — ఓం.
+hi: ॐ भूः, ॐ भुवः, ॐ स्वः, ॐ महः, ॐ जनः, ॐ तपः, ॐ सत्यम्। हम स्थावर-जंगमरूप सम्पूर्ण विश्वको उत्पन्न करनेवाले उन निरतिशय प्रकाशमय परमेश्वरके भजनेयोग्य तेजका ध्यान करते हैं, जो हमारी बुद्धियोंको सत्कर्मोंकी ओर प्रेरित करते हैं और जो भूः, भुवः, स्वः, महः, जन, तप और सत्य नामवाले समस्त लोकोंमें व्याप्त हैं तथा जो सच्चिदानन्दस्वरूप जलरूपसे जगत्का पालन करनेवाले, अनन्त तेजके धाम, रसमय, अमृतमय और भूर्भुवःस्वःस्वरूप ब्रह्म हैं।
+
+--- unit 14 | section: Mārjana and aghamarṣaṇa ---
+vidhi:
+Read this viniyoga, then recite the mantra of unit 15 and do ācamana once. This is the dawn form: the ācamana mantra differs at noon and dusk (units 16 and 17), though the rest of the sequence does not.
+deva:
+सूर्यश्च मेति नारायण ऋषिः प्रकृतिश्छन्दः सूर्यमन्युमन्युपतयो रात्रिश्च देवता अपामुपस्पर्शने विनियोगः ।
+iast:
+sūryaśca meti nārāyaṇa ṛṣiḥ prakṛtiśchandaḥ sūryamanyumanyupatayo rātriśca devatā apāmupasparśane viniyogaḥ |
+en: Of 'sūryaśca mā', the ṛṣi is Nārāyaṇa, the metre prakṛti, the deities Sūrya, Manyu, the lords of Manyu, and Night; the application is in the touching of water.
+tel: 'సూర్యశ్చ మా' అనుదానికి ఋషి నారాయణుడు, ఛందస్సు ప్రకృతి, దేవతలు సూర్యుడు, మన్యువు, మన్యుపతులు, రాత్రి; అపాముపస్పర్శనమునందు వినియోగము.
+hi: 'सूर्यश्च मा' इसके ऋषि नारायण, छन्द प्रकृति और देवता सूर्य, मन्यु, मन्युपति तथा रात्रि हैं; अपाम् उपस्पर्शनमें विनियोग है।
+
+--- unit 15 | section: Mārjana and aghamarṣaṇa ---
+vidhi:
+At dawn only, recite this and do ācamana once.
+deva:
+ॐ सूर्यश्च मा मन्युश्च मन्युपतयश्च मन्युकृतेभ्यः पापेभ्यो रक्षन्ताम् ।
+यद्रात्र्या पापमकार्षं मनसा वाचा हस्ताभ्यां पद्भ्यामुदरेण शिश्ना रात्रिस्तदवलुम्पतु ।
+यत्किंच दुरितं मयि इदमहं माममृतयोनौ सूर्ये ज्योतिषि जुहोमि स्वाहा ॥
+iast:
+oṁ sūryaśca mā manyuśca manyupatayaśca manyukṛtebhyaḥ pāpebhyo rakṣantām |
+yadrātryā pāpamakārṣaṁ manasā vācā hastābhyāṁ padbhyāmudareṇa śiśnā rātristadavalumpatu |
+yatkiṁca duritaṁ mayi idamahaṁ māmamṛtayonau sūrye jyotiṣi juhomi svāhā ||
+en: May Sūrya, and Manyu, and the lords of Manyu guard me from the sins born of wrath. Whatever sin I have committed in the night by mind, speech, hands, feet, belly or generative organ — may Night wipe it away. Whatever evil is in me, I offer that, and myself, into the sun, the light, the womb of immortality — svāhā.
+tel: సూర్యుడు, మన్యువు, మన్యుపతులు క్రోధమువలన కలిగిన పాపములనుండి నన్ను రక్షించుగాక. రాత్రి యందు మనస్సుచేత, వాక్కుచేత, చేతులచేత, పాదములచేత, ఉదరముచేత, శిశ్నముచేత నేను ఏ పాపము చేసితినో, దానిని రాత్రి తొలగించుగాక. నాయందు ఏ దురితము కలదో, దానిని, నన్ను కూడ, అమృతమునకు యోనియైన సూర్యజ్యోతియందు హోమము చేయుచున్నాను — స్వాహా.
+hi: सूर्य, क्रोधके अभिमानी देवता और क्रोधके स्वामी — ये सभी क्रोधवश किये हुए पापोंसे मेरी रक्षा करें। रातमें मैंने मन, वाणी, हाथ, पैर, उदर और शिश्न (उपस्थ) इन्द्रियोंसे जो पाप किये हों, उन सबको रात्रिकालाभिमानी देवता नष्ट करें। जो कुछ भी पाप मुझमें वर्तमान है, इसे और इसके कर्तृत्वका अभिमान रखनेवाले अपनेको मैं मोक्षके कारणभूत प्रकाशमय सूर्यरूप परमेश्वरमें हवन करता हूँ। इसका भलीभाँति हवन हो जाय।
+
+--- unit 16 | section: Mārjana and aghamarṣaṇa ---
+vidhi:
+At noon, this viniyoga and this mantra replace units 14–15. Read the viniyoga, then recite the mantra and do ācamana once. Viniyoga: 'āpaḥ punantviti nārāyaṇa ṛṣiranuṣṭup chanda āpaḥ pṛthivī brahmaṇaspatirbrahmā ca devatā apāmupasparśane viniyogaḥ.'
+deva:
+ॐ आपः पुनन्तु पृथिवीं पृथिवी पूता पुनातु माम् ।
+पुनन्तु ब्रह्मणस्पतिर्ब्रह्मापूता पुनातु माम् ।
+यदुच्छिष्टमभोज्यं यद्वा दुश्चरितं मम ।
+सर्वं पुनन्तु मामापोऽसतां च प्रतिग्रहꣳ स्वाहा ॥
+iast:
+oṁ āpaḥ punantu pṛthivīṁ pṛthivī pūtā punātu mām |
+punantu brahmaṇaspatirbrahmāpūtā punātu mām |
+yaducchiṣṭamabhojyaṁ yadvā duścaritaṁ mama |
+sarvaṁ punantu māmāpo'satāṁ ca pratigrahaṁ svāhā ||
+en: May the waters purify the earth; may the earth, purified, purify me. May Brahmaṇaspati purify me; may the purified word of Brahman purify me. Whatever leavings or forbidden food I have taken, whatever I have done ill, and whatever gift I have accepted from the unworthy — may the waters purify me of all of it — svāhā.
+tel: జలములు పృథివిని పవిత్రము చేయుగాక; పవిత్రమైన పృథివి నన్ను పవిత్రము చేయుగాక. బ్రహ్మణస్పతి నన్ను పవిత్రము చేయుగాక; పూతమైన బ్రహ్మము నన్ను పవిత్రము చేయుగాక. నేను ఏ ఉచ్ఛిష్టమును, అభోజ్యమును భుజించితినో, ఏ దుశ్చరితము చేసితినో, నీచులనుండి ఏ దానము గ్రహించితినో — వాటన్నిటినుండి జలములు నన్ను పవిత్రము చేయుగాక — స్వాహా.
+hi: जल पृथिवीको पवित्र करे। पवित्र हुई पृथिवी मुझे पवित्र करे। वेदोंके पति परमात्मा मुझे शुद्ध करें। मैंने जो कभी किसी भी प्रकारका उच्छिष्ट या अभक्ष्य भक्षण किया हो अथवा इसके अतिरिक्त भी मेरे जो पाप हों, उन सबको दूर करके जल मुझे शुद्ध कर दे तथा नीच पुरुषोंसे लिये हुए दानरूप दोषको भी दूर करके जल मुझे पवित्र करे।
+
+--- unit 17 | section: Mārjana and aghamarṣaṇa ---
+vidhi:
+At dusk, this viniyoga and this mantra replace units 14–15. Viniyoga: 'agniśca meti nārāyaṇa ṛṣiḥ prakṛtiśchando'gnimanyumanyupatayo'haśca devatā apāmupasparśane viniyogaḥ.' Read it, then recite the mantra and do ācamana once.
+deva:
+ॐ अग्निश्च मा मन्युश्च मन्युपतयश्च मन्युकृतेभ्यः पापेभ्यो रक्षन्ताम् ।
+यदह्ना पापमकार्षं मनसा वाचा हस्ताभ्यां पद्भ्यामुदरेण शिश्ना अहस्तदवलुम्पतु ।
+यत्किंच दुरितं मयि इदमहं माममृतयोनौ सत्ये ज्योतिषि जुहोमि स्वाहा ॥
+iast:
+oṁ agniśca mā manyuśca manyupatayaśca manyukṛtebhyaḥ pāpebhyo rakṣantām |
+yadahnā pāpamakārṣaṁ manasā vācā hastābhyāṁ padbhyāmudareṇa śiśnā ahastadavalumpatu |
+yatkiṁca duritaṁ mayi idamahaṁ māmamṛtayonau satye jyotiṣi juhomi svāhā ||
+en: May Agni, and Manyu, and the lords of Manyu guard me from the sins born of wrath. Whatever sin I have committed by day by mind, speech, hands, feet, belly or generative organ — may Day wipe it away. Whatever evil is in me, I offer that, and myself, into the truth, the light, the womb of immortality — svāhā.
+tel: అగ్ని, మన్యువు, మన్యుపతులు క్రోధమువలన కలిగిన పాపములనుండి నన్ను రక్షించుగాక. పగటియందు మనస్సుచేత, వాక్కుచేత, చేతులచేత, పాదములచేత, ఉదరముచేత, శిశ్నముచేత నేను ఏ పాపము చేసితినో, దానిని పగలు తొలగించుగాక. నాయందు ఏ దురితము కలదో, దానిని, నన్ను కూడ, అమృతమునకు యోనియైన సత్యజ్యోతియందు హోమము చేయుచున్నాను — స్వాహా.
+hi: अग्नि, क्रोधके अभिमानी देवता और क्रोधके स्वामी — ये सभी क्रोधवश किये हुए पापोंसे मेरी रक्षा करें। दिनमें मैंने मन, वाणी, हाथ, पैर, उदर और शिश्न इन्द्रियसे जो पाप किये हों, उन सबको दिनके अभिमानी देवता नष्ट करें। जो कुछ भी पाप मुझमें वर्तमान है, इसे तथा इसके कर्तृत्वका अभिमान रखनेवाले अपनेको मैं मोक्षके कारणभूत सत्यस्वरूप प्रकाशमय परमेश्वरमें हवन करता हूँ।
+
+--- unit 18 | section: Mārjana and aghamarṣaṇa ---
+vidhi:
+Then read the viniyoga 'āpo hi ṣṭheti tryṛcasya sindhudvīpa ṛṣirgāyatrī chanda āpo devatā mārjane viniyogaḥ.' Then sprinkle water on the head while reciting seven of the nine pādas of these three ṛcs, pour water on the earth at the eighth, and at the ninth sprinkle the head again. The mārjana is to be done with three kuśa blades or three fingers.
+deva:
+ॐ आपो हि ष्ठा मयोभुवः । ॐ ता न ऊर्जे दधातन । ॐ महे रणाय चक्षसे ।
+ॐ यो वः शिवतमो रसः । ॐ तस्य भाजयतेह नः । ॐ उशतीरिव मातरः ।
+ॐ तस्मा अरं गमाम वः । ॐ यस्य क्षयाय जिन्वथ । ॐ आपो जनयथा च नः ।
+iast:
+oṁ āpo hi ṣṭhā mayobhuvaḥ | oṁ tā na ūrje dadhātana | oṁ mahe raṇāya cakṣase |
+oṁ yo vaḥ śivatamo rasaḥ | oṁ tasya bhājayateha naḥ | oṁ uśatīriva mātaraḥ |
+oṁ tasmā araṁ gamāma vaḥ | oṁ yasya kṣayāya jinvatha | oṁ āpo janayathā ca naḥ |
+en: Waters, you are indeed the bringers of well-being; sustain us for strength, for the sight of the great delight. That most auspicious essence of yours — give us a share of it here, like mothers eager to nurse. We would go straightway to that of yours for whose abode you quicken us; and, O waters, bring us to birth.
+tel: ఓ జలములారా! మీరు నిజముగా సుఖమును కలిగించువారు; బలము కొరకు, మహారమణీయమైన దర్శనము కొరకు మమ్ములను పోషించుడు. మీ యందలి అత్యంత శివమైన రసమును, పాలిచ్చుటకు ఉత్సాహపడు తల్లులవలె, ఇచ్చట మాకు పంచియిండు. మీరు దేని కొరకు ప్రేరేపింతురో దానిని పొందుటకు మేము సిద్ధముగా వత్తుము; ఓ జలములారా, మమ్ములను జన్మింపజేయుడు.
+hi: हे जल! तुम निश्चय ही कल्याणकारी हो, अतः बलकी वृद्धिके लिये तथा अत्यन्त रमणीय परमात्मदर्शनके लिये तुम हमारा पालन करो। जिस प्रकार पुत्रोंकी तुष्टि चाहनेवाली माताएँ उन्हें अपने स्तनोंका दुग्ध पान कराती हैं, उसी प्रकार तुम्हारा जो परम कल्याणमय रस है, उसके भागी हमें बनाओ। हे जल! जगत्के जीवनाधारभूत जिस रसके एक अंशसे तुम समस्त विश्वको तृप्त करते हो, उस रसकी पूर्णताको हम प्राप्त करें। हे जल! तुम हमें उस रसका भोक्ता बनाओ।
+
+--- unit 19 | section: Mārjana and aghamarṣaṇa ---
+vidhi:
+Then read the viniyoga 'drupadādivetyasya sarasvatīndrā ṛṣayo'nuṣṭup chanda āpo devatāḥ śiraḥseke viniyogaḥ.' Then take water in the left hand, cover it with the right, consecrate it with this mantra and sprinkle it on the head.
+deva:
+ॐ द्रुपदादिव मुमुचानः स्विन्नः स्नातो मलादिव ।
+पूतं पवित्रेणेवाज्यमापः शुन्धन्तु मैनसः ॥
+iast:
+oṁ drupadādiva mumucānaḥ svinnaḥ snāto malādiva |
+pūtaṁ pavitreṇevājyamāpaḥ śundhantu mainasaḥ ||
+en: As one released from the stake, as a man drenched in sweat is cleansed of grime by bathing, as ghee is clarified by the strainer — so let the waters cleanse me of sin.
+tel: బంధమునుండి విడుదల పొందినవానివలె, చెమటతో తడిసినవాడు స్నానముచేత మలమునుండి శుద్ధుడైనట్లు, పవిత్రముచేత ఆజ్యము శుద్ధమైనట్లు — జలములు నన్ను పాపమునుండి శుద్ధి చేయుగాక.
+hi: जैसे पादुकासे अलग होता हुआ मनुष्य पादुकाके मलादि दोषोंसे मुक्त हो जाता है, जिस प्रकार पसीनेसे भीगा हुआ पुरुष स्नान करनेके पश्चात् मैलसे रहित होता है तथा जैसे पवित्रक आदिसे घी शुद्ध हो जाता है, उसी प्रकार जल मुझे पापोंसे शुद्ध करे।
+
+--- unit 20 | section: Mārjana and aghamarṣaṇa ---
+vidhi:
+Then read again the viniyoga 'ṛtaṁ cetyasya tryṛcasya mādhucchandaso'ghamarṣaṇa ṛṣiranuṣṭup chando bhāvavṛttaṁ daivatamaghamarṣaṇe viniyogaḥ.' Then take water in the right hand, hold it to the nostrils, and, holding the breath if possible, recite the aghamarṣaṇa mantra three times or once, meanwhile forming the thought that this water is entering by the left nostril, driving the sin of the inner organ out through the right; then, without looking at the water, throw it away to the left [or imagine a slab of stone on the left and the sin dashed to pieces upon it]. The mantra is that of unit 11: 'oṁ ṛtaṁ ca satyaṁ cābhīddhāttapaso'dhyajāyata…', whose meaning is given there.
+deva:
+ऋतं चेत्यस्य त्र्यृचस्य माधुच्छन्दसोऽघमर्षण ऋषिरनुष्टुप् छन्दो भाववृत्तं दैवतमघमर्षणे विनियोगः ।
+iast:
+ṛtaṁ cetyasya tryṛcasya mādhucchandaso'ghamarṣaṇa ṛṣiranuṣṭup chando bhāvavṛttaṁ daivatamaghamarṣaṇe viniyogaḥ |
+en: Of the three-verse hymn beginning 'ṛtaṁ ca', the ṛṣi is Aghamarṣaṇa Mādhucchandasa, the metre anuṣṭup, the deity Bhāvavṛtta; its application is in the aghamarṣaṇa, the effacing of sin.
+tel: 'ఋతం చ' అను త్ర్యృచమునకు ఋషి మాధుచ్ఛందసుడైన అఘమర్షణుడు, ఛందస్సు అనుష్టుప్, దేవత భావవృత్తము; అఘమర్షణమునందు వినియోగము.
+hi: 'ऋतं च' इस त्र्यृचके ऋषि माधुच्छन्दस अघमर्षण, छन्द अनुष्टुप् और देवता भाववृत्त हैं; अघमर्षणमें इसका विनियोग है।
+
+--- unit 21 | section: Mārjana and aghamarṣaṇa ---
+vidhi:
+Then read the viniyoga 'antaścarasīti tiraścīna ṛṣiranuṣṭup chanda āpo devatā apāmupasparśane viniyogaḥ.' Then recite this mantra once and do ācamana once.
+deva:
+ॐ अन्तश्चरसि भूतेषु गुहायां विश्वतोमुखः ।
+त्वं यज्ञस्त्वं वषट्कार आपो ज्योती रसोऽमृतम् ॥
+iast:
+oṁ antaścarasi bhūteṣu guhāyāṁ viśvatomukhaḥ |
+tvaṁ yajñastvaṁ vaṣaṭkāra āpo jyotī raso'mṛtam ||
+en: You move within all beings, in the cave of the heart, facing every way. You are the sacrifice, you are the vaṣaṭkāra; you are the waters, the light, the essence, the immortal.
+tel: ఓ జలరూప పరమాత్మా! నీవు సమస్త ప్రాణులలోని హృదయగుహయందు సంచరించుచున్నావు, నీకు అన్ని వైపుల ముఖములు కలవు. నీవే యజ్ఞము, నీవే వషట్కారము, నీవే జలము, జ్యోతి, రసము, అమృతము.
+hi: हे जलरूप परमात्मन्! तुम समस्त प्राणियोंके भीतर उनकी हृदयरूप गुहामें विचरते हो, तुम्हारा सब ओर मुख है; तुम्हीं यज्ञ हो, तुम्हीं वषट्कार हो और तुम्हीं जल, प्रकाश, रस एवं अमृत हो।
+
+--- unit 22 | section: Arghya and sūryopasthāna ---
+vidhi:
+Then read the viniyoga for the arghya [oṁkārasya brahmā ṛṣiḥ … sūryārghyadāne viniyogaḥ]. Then stand before the sun on one heel raised, or on one foot, or on half of one foot, and with the Gāyatrī preceded by praṇava and the vyāhṛtis recited three times, offer arghya three times to the sun with water holding flowers. At dawn and noon the arghya is given standing; at dusk it is given seated, and the water must be poured on the ground and never into water. At noon the arghya is given only once, at dawn and dusk three times each. If there is no water, wash a clod of earth well and pour the arghya-water over that. After offering, say 'brahmasvarūpiṇe sūryanārāyaṇāya idamarghyaṁ dattaṁ na mama' — at noon 'viṣṇusvarūpiṇe', at dusk 'rudrasvarūpiṇe'.
+deva:
+ॐ भूर्भुवः स्वः तत्सवितुर्वरेण्यं भर्गो देवस्य धीमहि । धियो यो नः प्रचोदयात् ॥
+iast:
+oṁ bhūrbhuvaḥ svaḥ tatsaviturvareṇyaṁ bhargo devasya dhīmahi | dhiyo yo naḥ pracodayāt ||
+en: Oṁ, earth, mid-air, heaven: we meditate on that adorable splendour of the god Savitṛ; may he impel our understandings.
+tel: ఓం భూర్భువః స్వః. సవితృదేవుని ఆ వరణీయమైన తేజస్సును ధ్యానించుచున్నాము; అతడు మా బుద్ధులను ప్రేరేపించుగాక.
+hi: हम स्थावर-जंगमरूप सम्पूर्ण विश्वको उत्पन्न करनेवाले उन निरतिशय प्रकाशमय परमेश्वरके भजनेयोग्य तेजका ध्यान करते हैं, जो हमारी बुद्धियोंको सत्कर्मोंकी ओर प्रेरित करते हैं।
+
+--- unit 23 | section: Arghya and sūryopasthāna ---
+vidhi:
+Then read the viniyoga for the sūryopasthāna ['udvayamiti … sūryopasthāne viniyogaḥ']. Then, standing at dawn, seated at dusk, and standing with both arms raised at noon, join the palms, look toward the sun if possible, and salute him with the four mantras beginning 'udvayam' (units 23–26). Then circumambulate the sun once where you stand, bow, and sit down. [At noon one should also recite, so far as one can, the Gāyatrī, the Vibhrāṭ anuvāka, the Puruṣasūkta, the Śivasaṅkalpa and the Maṇḍala-brāhmaṇa.]
+deva:
+ॐ उद्वयं तमसस्परि स्वः पश्यन्त उत्तरम् ।
+देवं देवत्रा सूर्यमगन्म ज्योतिरुत्तमम् ॥
+iast:
+oṁ udvayaṁ tamasaspari svaḥ paśyanta uttaram |
+devaṁ devatrā sūryamaganma jyotiruttamam ||
+en: Rising out of the darkness, beholding the higher light above, we have come to Sūrya, the god among gods, the highest light.
+tel: చీకటిని దాటి, పైనున్న ఉత్తమమైన స్వర్గజ్యోతిని చూచుచు, దేవతలలో దేవుడైన సూర్యుని, సర్వోత్తమమైన జ్యోతిని మేము పొందితిమి.
+hi: हम अन्धकारसे ऊपर उठकर उत्तम स्वर्गलोकको तथा देवताओंमें अत्यन्त उत्कृष्ट सूर्यदेवको भलीभाँति देखते हुए उस सर्वोत्तम ज्योतिर्मय परमात्माको प्राप्त हुए।
+
+--- unit 24 | section: Arghya and sūryopasthāna ---
+deva:
+ॐ उदु त्यं जातवेदसं देवं वहन्ति केतवः ।
+दृशे विश्वाय सूर्यम् ॥
+iast:
+oṁ udu tyaṁ jātavedasaṁ devaṁ vahanti ketavaḥ |
+dṛśe viśvāya sūryam ||
+en: Upward the rays bear that god Jātavedas, the sun, that the whole world may see him.
+tel: పుట్టిన సమస్త ప్రాణులను ఎరిగిన ఆ జాతవేదస్సైన సూర్యదేవుని కిరణములు, సమస్త జగత్తు దర్శించుటకై, పైకి తీసికొనిపోవుచున్నవి.
+hi: उत्पन्न हुए समस्त प्राणियोंके ज्ञाता उन सूर्यदेवको छन्दोमय अश्व सम्पूर्ण जगत्को उनका दर्शन कराने [या दृष्टि प्रदान करने]-के लिये ऊपर-ही-ऊपर शीघ्रगतिसे लिये जा रहे हैं।
+
+--- unit 25 | section: Arghya and sūryopasthāna ---
+deva:
+ॐ चित्रं देवानामुदगादनीकं चक्षुर्मित्रस्य वरुणस्याग्नेः ।
+आप्रा द्यावापृथिवी अन्तरिक्षꣳ सूर्य आत्मा जगतस्तस्थुषश्च ॥
+iast:
+oṁ citraṁ devānāmudagadanīkaṁ cakṣurmitrasya varuṇasyāgneḥ |
+āprā dyāvāpṛthivī antarikṣaṁ sūrya ātmā jagatastasthuṣaśca ||
+en: The wonderful host of the gods has risen — the eye of Mitra, Varuṇa and Agni. He has filled heaven, earth and the mid-region: the sun is the self of all that moves and all that stands.
+tel: దేవతల అద్భుతమైన తేజఃపుంజము ఉదయించినది — మిత్ర, వరుణ, అగ్నుల నేత్రము. అతడు ద్యులోకమును, పృథివిని, అంతరిక్షమును నింపెను: సూర్యుడు చరాచరజగత్తునకు ఆత్మ.
+hi: जो तेजोमयी किरणोंके पुञ्ज हैं, मित्र, वरुण तथा अग्नि आदि देवताओं एवं समस्त विश्वके नेत्र हैं और स्थावर तथा जंगम—सबके अन्तर्यामी आत्मा हैं, वे भगवान् सूर्य आकाश, पृथ्वी और अन्तरिक्षलोकको अपने प्रकाशसे पूर्ण करते हुए आश्चर्यरूपसे उदित हुए हैं।
+
+--- unit 26 | section: Arghya and sūryopasthāna ---
+deva:
+ॐ तच्चक्षुर्देवहितं पुरस्ताच्छुक्रमुच्चरत् ।
+पश्येम शरदः शतं जीवेम शरदः शतꣳ शृणुयाम शरदः शतं प्र ब्रवाम शरदः शतमदीनाः स्याम शरदः शतं भूयश्च शरदः शतात् ॥
+iast:
+oṁ taccakṣurdevahitaṁ purastācchukramuccarat |
+paśyema śaradaḥ śataṁ jīvema śaradaḥ śataṁ śṛṇuyāma śaradaḥ śataṁ pra bravāma śaradaḥ śatamadīnāḥ syāma śaradaḥ śataṁ bhūyaśca śaradaḥ śatāt ||
+en: That eye set in place for the gods rises bright in the east. May we see a hundred autumns, live a hundred autumns, hear a hundred autumns, speak a hundred autumns, be undiminished a hundred autumns — and more than a hundred autumns.
+tel: దేవతల హితము కొరకు నిలిపిన ఆ నేత్రము తూర్పున ప్రకాశముగా ఉదయించుచున్నది. మేము నూరు శరత్తులు చూతుము గాక, నూరు శరత్తులు జీవింతుము గాక, నూరు శరత్తులు విందుము గాక, నూరు శరత్తులు మాటలాడుదుము గాక, నూరు శరత్తులు దీనులము కాకుందుము గాక — నూరు శరత్తులకంటె ఎక్కువ కాలము కూడ.
+hi: देवता आदि सम्पूर्ण जगत्का हित करनेवाले और सबके नेत्ररूप वे तेजोमय भगवान् सूर्य पूर्व दिशासे उदित हो रहे हैं। [उनके प्रसादसे] हम सौ वर्षोंतक देखते रहें, सौ वर्षोंतक जीते रहें, सौ वर्षोंतक सुनते रहें, सौ वर्षोंतक हममें बोलनेकी शक्ति रहे तथा सौ वर्षोंतक हम कभी दीन-दशाको न प्राप्त हों; इतना ही नहीं, सौ वर्षोंसे अधिक कालतक भी हम देखें, जीवें, सुनें, बोलें एवं कभी दीन न हों।
+
+--- unit 27 | section: Arghya and sūryopasthāna ---
+vidhi:
+Some recensions mention aṅganyāsa at this point, but the Dharmasindhu and similar works call this act optional; whether or not to do it is therefore left free. For those who wish to, the six mantra-phrases are given here. Utter the first and touch the heart with the five fingers of the right hand; utter the second and touch the head; the third, the śikhā; the fourth — touch the left shoulder with the fingers of the right hand and the right shoulder with the fingers of the left; the fifth, touch both eyes; and at the sixth, carry the right hand from the left side round to the back and forward again on the right, and clap the left palm with the index and middle fingers.
+deva:
+ॐ हृदयाय नमः ॥१॥ ॐ भूः शिरसे स्वाहा ॥२॥ ॐ भुवः शिखायै वषट् ॥३॥
+ॐ स्वः कवचाय हुम् ॥४॥ ॐ भूर्भुवः स्वः नेत्राभ्यां वौषट् ॥५॥ ॐ भूर्भुवः स्वः अस्त्राय फट् ॥६॥
+iast:
+oṁ hṛdayāya namaḥ ||1|| oṁ bhūḥ śirase svāhā ||2|| oṁ bhuvaḥ śikhāyai vaṣaṭ ||3||
+oṁ svaḥ kavacāya hum ||4|| oṁ bhūrbhuvaḥ svaḥ netrābhyāṁ vauṣaṭ ||5|| oṁ bhūrbhuvaḥ svaḥ astrāya phaṭ ||6||
+en: Oṁ, to the heart, salutation. Oṁ bhūḥ, to the head, svāhā. Oṁ bhuvaḥ, to the crest-lock, vaṣaṭ. Oṁ svaḥ, to the armour, hum. Oṁ bhūr bhuvaḥ svaḥ, to the two eyes, vauṣaṭ. Oṁ bhūr bhuvaḥ svaḥ, to the weapon, phaṭ.
+tel: ఓం హృదయమునకు నమస్కారము. ఓం భూః శిరస్సునకు స్వాహా. ఓం భువః శిఖకు వషట్. ఓం స్వః కవచమునకు హుమ్. ఓం భూర్భువః స్వః నేత్రములకు వౌషట్. ఓం భూర్భువః స్వః అస్త్రమునకు ఫట్.
+hi: ॐ हृदयको नमः। ॐ भूः शिरको स्वाहा। ॐ भुवः शिखाको वषट्। ॐ स्वः कवचको हुम्। ॐ भूर्भुवः स्वः नेत्रोंको वौषट्। ॐ भूर्भुवः स्वः अस्त्रको फट्।
+
+--- unit 28 | section: Gāyatrī ---
+vidhi:
+Then read the viniyoga 'tejo'sīti dhāma nāmāsītyasya ca parameṣṭhī prajāpatirṛṣiryajuṣṭriṣṭubbṛhatī gāyatrī chandasī savitā devatā gāyatryāvāhane viniyogaḥ', and with this mantra invoke the goddess Gāyatrī with reverence.
+deva:
+ॐ तेजोऽसि शुक्रमस्यमृतमसि । धाम नामासि प्रियं देवानामनाधृष्टं देवयजनमसि ॥
+iast:
+oṁ tejo'si śukramasyamṛtamasi | dhāma nāmāsi priyaṁ devānāmanādhṛṣṭaṁ devayajanamasi ||
+en: You are splendour, you are bright, you are the immortal. You are the abode, you are the name, dear to the gods, unassailable; you are the place of the gods' worship.
+tel: ఓ గాయత్రీ దేవీ! నీవు తేజస్సవు, శుద్ధమైనదానవు, అమృతమవు. నీవే పరమధామము, నామరూపమవు, దేవతలకు ప్రియమైనదానవు, ఎవరిచేతను పరాభవింపబడనిదానవు, దేవయజనమవు.
+hi: हे सूर्यस्वरूपा गायत्री देवि! तुम देदीप्यमान तेजोमयी हो, शुद्ध हो और अमृत (नित्य ब्रह्मरूपा) हो। तुम्हीं परम धाम और नामरूप हो। तुम्हारा किसीसे भी पराभव नहीं होता। तुम देवताओंकी प्रिय और उनके यजनकी साधनभूता हो। मैं तुम्हारा आवाहन करता हूँ।
+
+--- unit 29 | section: Gāyatrī ---
+vidhi:
+Then read the viniyoga 'gāyatryasīti vivasvān ṛṣiḥ svarāṇmahāpaṅktiśchandaḥ paramātmā devatā gāyatryupasthāne viniyogaḥ', and salute the Gāyatrī with this mantra.
+deva:
+ॐ गायत्र्यस्येकपदी द्विपदी त्रिपदी चतुष्पदपदसि न हि पद्यसे ।
+नमस्ते तुरीयाय दर्शताय पदाय परोरजसेऽसावदो मा प्रापत् ॥
+iast:
+oṁ gāyatryasyekapadī dvipadī tripadī catuṣpadapadasi na hi padyase |
+namaste turīyāya darśatāya padāya parorajase'sāvado mā prāpat ||
+en: O Gāyatrī, you are of one foot, of two feet, of three feet, of four feet; and you are footless, for you are not attained by any foot. Salutation to your fourth foot, the one that may be seen, beyond the realm of dust. May that yonder never come upon me.
+tel: ఓ గాయత్రీ! నీవు ఏకపదివి, ద్విపదివి, త్రిపదివి, చతుష్పదివి; నీవు అపదవి, ఏ పాదముచేతను పొందబడవు. రజస్సునకు అతీతమైన, దర్శనీయమైన నీ తురీయపాదమునకు నమస్కారము. ఆ పాపము నన్ను చేరకుండుగాక.
+hi: हे गायत्री! तुम त्रिभुवनरूप प्रथम चरणसे एकपदी हो; ऋक्, यजुः एवं सामरूप द्वितीय चरणसे द्विपदी हो; प्राण, अपान तथा व्यानरूप तृतीय चरणसे त्रिपदी हो और तुरीय ब्रह्मरूप चतुर्थ चरणसे चतुष्पदी हो। निर्गुणस्वरूपसे अचिन्त्य होनेके कारण तुम 'अपद्' हो, अतएव मन-बुद्धिके अगोचर होनेसे तुम सबके लिये प्राप्य नहीं हो। तुम्हारे दर्शनीय चतुर्थ पदको, जो प्रपञ्चसे परे वर्तमान शुद्ध परब्रह्मरूप है, नमस्कार है। तुम्हारी प्राप्तिमें विघ्न डालनेवाले वे राग-द्वेष, काम-क्रोध आदिरूप पाप मेरे पास न पहुँच सकें।
+
+--- unit 30 | section: Gāyatrī ---
+vidhi:
+Then read the viniyoga for the japa ['… savitā devatā jape viniyogaḥ'] and recite the Gāyatrī at least one hundred and eight times, counting on a mālā; the more, the better. It is best if, while reciting, meditation on the Gāyatrī's luminous form and enquiry into the mantra's meaning continue together.
+deva:
+ॐ भूर्भुवः स्वः तत्सवितुर्वरेण्यं भर्गो देवस्य धीमहि । धियो यो नः प्रचोदयात् ॐ ॥
+iast:
+oṁ bhūrbhuvaḥ svaḥ tatsaviturvareṇyaṁ bhargo devasya dhīmahi | dhiyo yo naḥ pracodayāt oṁ ||
+en: Oṁ, earth, mid-air, heaven: we meditate on that adorable splendour of the god Savitṛ; may he impel our understandings. Oṁ.
+tel: ఓం భూర్భువః స్వః. సవితృదేవుని ఆ వరణీయమైన తేజస్సును ధ్యానించుచున్నాము; అతడు మా బుద్ధులను ప్రేరేపించుగాక. ఓం.
+hi: हम स्थावर-जंगमरूप सम्पूर्ण विश्वको उत्पन्न करनेवाले उन निरतिशय प्रकाशमय परमेश्वरके भजनेयोग्य तेजका ध्यान करते हैं, जो हमारी बुद्धियोंको सत्कर्मोंकी ओर प्रेरित करते हैं तथा जो भूर्लोक, भुवर्लोक और स्वर्लोकरूप सच्चिदानन्दमय परब्रह्म हैं।
+
+--- unit 31 | section: Concluding rites ---
+vidhi:
+Then read the viniyoga 'viśvataścakṣuriti bhauvana ṛṣistriṣṭup chando viśvakarmā devatā sūryapradakṣiṇāyāṁ viniyogaḥ', and with this mantra, standing where you are, circumambulate the sun once.
+deva:
+ॐ विश्वतश्चक्षुरुत विश्वतोमुखो विश्वतोबाहुरुत विश्वतस्पात् ।
+सं बाहुभ्यां धमति सं पतत्रैर्द्यावाभूमी जनयन् देव एकः ॥
+iast:
+oṁ viśvataścakṣuruta viśvatomukho viśvatobāhuruta viśvataspāt |
+saṁ bāhubhyāṁ dhamati saṁ patatrairdyāvābhūmī janayan deva ekaḥ ||
+en: Eyed on every side, faced on every side, armed on every side, footed on every side — the one god, bringing heaven and earth to birth, welds them together with his arms and with his wings.
+tel: అన్ని వైపుల కన్నులు కలవాడు, అన్ని వైపుల ముఖములు కలవాడు, అన్ని వైపుల భుజములు కలవాడు, అన్ని వైపుల పాదములు కలవాడు — ఆ ఏకైక దేవుడు ద్యావాపృథివులను సృజించుచు, భుజములచేతను పక్షములచేతను వాటిని కలుపుచున్నాడు.
+hi: वे एकमात्र परमात्मा पृथ्वी और आकाशकी रचना करते समय धर्माधर्मरूप भुजाओं और पतनशील पञ्चमहाभूतोंसे संगत होते हैं। तात्पर्य यह कि धर्माधर्मरूप निमित्त और पञ्चभूतरूप उपादान कारणोंसे अन्य साधनकी सहायता लिये बिना ही सबकी सृष्टि करते हैं। उनके सब ओर नेत्र हैं, सब ओर मुख हैं, सब ओर भुजाएँ हैं और सब ओर चरण हैं।
+
+--- unit 32 | section: Concluding rites ---
+vidhi:
+The paurāṇika verse for the pradakṣiṇā is this.
+deva:
+यानि कानि च पापानि जन्मान्तरकृतानि च ।
+तानि तानि प्रणश्यन्ति प्रदक्षिणपदे पदे ॥
+iast:
+yāni kāni ca pāpāni janmāntarakṛtāni ca |
+tāni tāni praṇaśyanti pradakṣiṇapade pade ||
+en: Whatever sins there are, and those committed in other births — all of them perish at every step of the circumambulation.
+tel: ఏ ఏ పాపములు కలవో, జన్మాంతరములలో చేసినవి కూడ — అవి అన్నియు ప్రదక్షిణముయొక్క అడుగడుగునకు నశించును.
+hi: जो कोई भी पाप हैं और जो जन्मान्तरोंमें किये गये हैं, वे सब प्रदक्षिणाके पद-पदपर नष्ट हो जाते हैं।
+
+--- unit 33 | section: Concluding rites ---
+vidhi:
+Then sit down and read the viniyoga 'oṁ devā gātuvida iti manasaspatirṛṣirvirāḍanuṣṭup chando vāto devatā japanivedane viniyogaḥ'. Then recite this mantra and bow. After it say: 'anena yathāśaktikṛtena gāyatrījapākhyena karmaṇā bhagavān sūryanārāyaṇaḥ prīyatāṁ na mama' — by this act of Gāyatrī japa, done to the best of my power, may the Lord Sūryanārāyaṇa be pleased; it is not mine.
+deva:
+ॐ देवा गातुविदो गातुं वित्त्वा गातुमित । मनसस्पत इमं देव यज्ञꣳ स्वाहा वाते धाः ॥
+iast:
+oṁ devā gātuvido gātuṁ vittvā gātumita | manasaspata imaṁ deva yajñaṁ svāhā vāte dhāḥ ||
+en: O gods who know the way — having found the way, go by the way. O lord of the mind, O god, place this sacrifice, with svāhā, in the wind.
+tel: మార్గము తెలిసిన దేవతలారా! మార్గమును తెలిసికొని మార్గమున వెళ్ళుడు. ఓ మనస్సునకు అధిపతియైన దేవా! ఈ యజ్ఞమును స్వాహాతో వాయువునందు నిలుపుము.
+hi: हे यज्ञवेत्ता देवताओ! आपलोग हमारे इस जपरूपी यज्ञको पूर्ण हुआ जानकर अपने गन्तव्य मार्गको पधारें। हे चित्तके प्रवर्तक परमेश्वर! मैं इस जप-यज्ञको आपके हाथोंमें अर्पण करता हूँ। आप इसे वायुदेवतामें स्थापित करें।
+
+--- unit 34 | section: Concluding rites ---
+vidhi:
+Then read the viniyoga 'uttame śikhara iti vāmadeva ṛṣiranuṣṭup chando gāyatrī devatā gāyatrīvisarjane viniyogaḥ', and with this mantra dismiss the goddess Gāyatrī.
+deva:
+ॐ उत्तमे शिखरे देवि भूम्यां पर्वतमूर्धनि ।
+ब्राह्मणेभ्योऽभ्यनुज्ञाता गच्छ देवि यथासुखम् ॥
+iast:
+oṁ uttame śikhare devi bhūmyāṁ parvatamūrdhani |
+brāhmaṇebhyo'bhyanujñātā gaccha devi yathāsukham ||
+en: O goddess, on the highest peak, on the crown of the mountain upon the earth — dismissed with the leave of the brāhmaṇas, go, goddess, in whatever ease you please.
+tel: ఓ దేవీ! భూమిపై పర్వతశిఖరమునందలి ఉత్తమమైన శిఖరమునకు — బ్రాహ్మణులచేత అనుజ్ఞ పొంది, ఓ దేవీ, సుఖముగా వెళ్ళుము.
+hi: हे गायत्री देवि! अब तुम अपने उपासक ब्राह्मणोंसे उनकी अनुमति लेकर भूमिपर स्थित जो मेरुनामक पर्वत है, उसकी चोटीपर विद्यमान जो सुरम्य शिखर है, वही तुम्हारा वासस्थान है; उसमें निवास करनेके लिये सुखपूर्वक जाओ।
+
+--- unit 35 | section: Concluding rites ---
+vidhi:
+Then recite this sentence and offer the whole act of sandhyopāsana to the supreme Lord.
+deva:
+अनेन सन्ध्योपासनाख्येन कर्मणा श्रीपरमेश्वरः प्रीयतां न मम । ॐ तत्सद्ब्रह्मार्पणमस्तु ।
+iast:
+anena sandhyopāsanākhyena karmaṇā śrīparameśvaraḥ prīyatāṁ na mama | oṁ tatsadbrahmārpaṇamastu |
+en: By this act called sandhyopāsana may the blessed supreme Lord be pleased; it is not mine. Oṁ tat sat — let it be an offering to Brahman.
+tel: సంధ్యోపాసనమను ఈ కర్మచేత శ్రీపరమేశ్వరుడు ప్రీతుడగుగాక; ఇది నాది కాదు. ఓం తత్సత్ — బ్రహ్మార్పణమగుగాక.
+hi: इस सन्ध्योपासना नामक कर्मसे श्रीपरमेश्वर प्रसन्न हों; यह मेरा नहीं है। ॐ तत्सत् — ब्रह्मार्पण हो।
+
+--- unit 36 | section: Concluding rites ---
+vidhi:
+Then call the Lord to mind with this verse and the closing salutations, and the sandhyā is complete.
+deva:
+यस्य स्मृत्या च नामोक्त्या तपोयज्ञक्रियादिषु ।
+न्यूनं सम्पूर्णतां याति सद्यो वन्दे तमच्युतम् ॥
+1. ॐ विष्णवे नमः ॥
+2. ॐ विष्णवे नमः ॥
+3. ॐ विष्णवे नमः ॥
+॥ श्रीविष्णुस्मरणात्परिपूर्णतास्तु ॥
+iast:
+yasya smṛtyā ca nāmoktyā tapoyajñakriyādiṣu |
+nyūnaṁ sampūrṇatāṁ yāti sadyo vande tamacyutam ||
+1. oṁ viṣṇave namaḥ ||
+2. oṁ viṣṇave namaḥ ||
+3. oṁ viṣṇave namaḥ ||
+|| śrīviṣṇusmaraṇātparipūrṇatāstu ||
+en: By calling him to mind and uttering his name, whatever is deficient in austerities, sacrifices and rites at once becomes complete — I bow to that Acyuta. Salutation to Viṣṇu, salutation to Viṣṇu, salutation to Viṣṇu. By the remembrance of Śrī Viṣṇu let there be completeness.
+tel: ఎవని స్మరణచేతను, నామోచ్చారణచేతను తపస్సు, యజ్ఞము, క్రియలు మొదలగువాటియందలి లోపము వెంటనే పరిపూర్ణతను పొందునో, ఆ అచ్యుతునికి నమస్కరించుచున్నాను. విష్ణువునకు నమస్కారము, విష్ణువునకు నమస్కారము, విష్ణువునకు నమస్కారము. శ్రీవిష్ణుస్మరణముచేత పరిపూర్ణత కలుగుగాక.
+hi: जिनके स्मरण और नामोच्चारणसे तप, यज्ञ, क्रिया आदिमें रह गयी न्यूनता तत्काल पूर्णताको प्राप्त हो जाती है, उन अच्युतको मैं नमस्कार करता हूँ। ॐ विष्णवे नमः। ॐ विष्णवे नमः। ॐ विष्णवे नमः। श्रीविष्णुके स्मरणसे परिपूर्णता हो।

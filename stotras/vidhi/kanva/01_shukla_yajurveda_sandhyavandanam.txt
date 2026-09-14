@@ -1,0 +1,1411 @@
+Title: Śukla-Yajurveda Sandhyāvandanam (Kāṇva śākhā)
+Devanāgarī: शुक्लयजुर्वेद सन्ध्यावन्दनम् (काण्वशाखा)
+Telugu: శుక్ల యజుర్వేద సంధ్యావందనం (కాణ్వ శాఖ)
+
+Author: Anonymous (traditional Kāṇva smārta rite). No compiler is named. The order of service is the received Kātyāyana-sūtra sequence, and the base text says so on its first line: `कात्यायन सूत्रानुसारम्`. The mantras are drawn from the Śukla-Yajurveda, from the Ṛgveda, and — for the two aghamarṣaṇa mantras, which the text itself cites — from the Taittirīya Brāhmaṇa.
+
+Type: vidhi (ritual manual) — not a stotra. Uses the one-extra-field vidhi format documented in `../madhyandina/01_sandhyopasana_vidhi.txt`: a `vidhi:` field carrying the ritual instruction, then deva / iast / en / tel / hi.
+
+Recension / śākhā: **Kāṇva (Śukla-Yajurveda), Kātyāyana Sūtra.** This is not inferred. The rite states it in its own abhivādana at unit 63: `शुक्ल यजुर्वेदान्तर्गत काण्व शाखाध्यायी कात्यायन सूत्रः` — "a student of the Kāṇva branch within the Śukla-Yajurveda, of the Kātyāyana Sūtra". The Śukla-Yajurveda has two living śākhās, and this is the southern one. **This file is therefore NOT the northern Śukla-Yajurveda rite, and it is not the form printed in Gītā Press book 210.** That book is Vājasaneyi **Mādhyandina**, whose own abhivādana reads `वाजसनेयि माध्यान्दिनीय शाखाध्यायी`, and it stands in this corpus at `../madhyandina/01_sandhyopasana_vidhi.txt`. The two are the daily rite of two different communities of the same Veda. **They must never be merged, harmonised or collated against each other, and no accent may pass between them.** A worshipper who follows the Mādhyandina rite should not use this file, and a worshipper who follows this one should not use that. The southern Kṛṣṇa-Yajurveda rite is again a third thing and stands at `../taittiriya/01_krishna_yajurveda_sandhyavandanam.txt`; the Ṛgvedic rite is at `../rigveda/01_rigveda_sandhyavandanam.txt`.
+
+Accent: **present throughout — 657 marks.** Udātta `॑` (U+0951) and anudātta `॒` (U+0952) as printed, and the double svarita as `᳚` (U+1CDA), which is how the base text itself writes it. The guttural nasal before a spirant is given as `ग्ं` (U+0917 + U+094D + U+0902), the spelling used in `../taittiriya/`, romanised `gṁ`. **The base text spells that one sound in seven different ways on a single page** — `ग्` + zero-width joiner + anusvāra (9 times), `ग्ग्` + joiner + anusvāra (5), plain `ग्ं` (5), `ग्ं` with an anudātta after it (1), `ग्` followed only by an accent mark (2), `ग्ग्` or `ग्` before a space (3), and `ग्ग्` + joiner before a sibilant (1). All 26 sites are written `ग्ं` here, and where an accent mark stood inside the cluster it is placed after it, which is the spelling the sibling Taittirīya files use. **No accent was added, inferred, moved between syllables or reconstructed at any point.** The accent count was measured rather than assumed: 293 udātta, 360 anudātta and 4 double svarita in the source, and 293, 360 and 4 in this file. There are no zero-width joiners and no zero-width non-joiners anywhere in this file; the source's 16 joiners were all inside the nasal clusters and one `र्ह` ligature, and carry no sound.
+
+**How the Devanāgarī is written, and why it looks unusual.** This tradition prints the anusvāra as it is actually pronounced, assimilated to the consonant that follows it, and marks the join with a hyphen: `ओ-ङ्केशवाय` for `ओं केशवाय`, `ओ-म्भुवः` for `ओं भुवः`, `त्व-ञ्च` for `त्वं च`, and a candrabindu on a following semivowel, `ॐ-वँन्दे` for `ॐ वन्दे`. **That orthography is the base text's own and is transcribed exactly**, in `deva:` and in `iast:` alike, so that the two fields stay in step. It is not a defect and it has not been normalised away. The reader who wants the plain spelling will find it in the sibling witness named below, which prints the same rite with the anusvāra written plainly.
+
+Source / recension: base text `https://vignanam.org/devanagari/shukla-yajurveda-sandhya-vandanam.html` (fetched 2026-09-12; 28,964 Devanāgarī characters, 657 accent marks, 415 lines of content). It is native Devanāgarī and declares itself "शुद्ध देवनागरी with the right anusvaras marked", so **nothing in the `deva:` column is transliterated by us** — unlike the Taittirīya files in this corpus, whose source exists only in Telugu script. That page is reachable only through `vignanam.org/sitemap.xml`, whose `<loc>` values are relative paths; a request for the site's Devanāgarī index returns HTTP 403.
+
+Independent collation: **three further witnesses, and the first thing to say is which of them is genuinely independent.**
+
+**(1) `https://stotranidhi.com/shukla-yajurveda-sandhya-vandanam-in-telugu/`** (fetched 2026-09-12; 15,191 Telugu characters, 658 accent marks; the page exists in Telugu script only). It carries the same rite and names the same śākhā. It was transliterated to Devanāgarī and compared against the base text character by character, with the two texts' notation collapsed to a common form. **They agree at 99.67%, and the only two differences of substance are the page titles and a line of site navigation.** They differ instead in how they write the text: stotranidhi prints the anusvāra plainly where vignanam assimilates it, uses Telugu digits for the twenty-four ācamana names where vignanam uses Latin ones, and writes visarga with an ASCII colon. **Two sites agreeing that closely are evidence of one underlying text, not of two editorial lineages**, and this file does not claim otherwise. Note also that the shared reading corrected below is shared by both of them, which points the same way.
+
+**(2) A printed manual: `https://www.shuklayajurveda.org/SandhyaVadhanam.pdf`** (fetched 2026-09-12, 170,600 bytes; Devanāgarī in a legacy display font with a Roman transliteration printed beneath each mantra, which is what was read). This is a genuinely separate editorial lineage. It opens with the same Yājñavalkya verse `vandehaṁ maṅgalātmānaṁ`, which is the mark of this tradition, and agrees on the sequence and on the sages, deities and metres — `āpo hiṣṭheti mahāmantrasya sindhudvīpa ṛṣiḥ, āpo devatāḥ, gāyatrī chandaḥ, mārjane viniyogaḥ`. It differs in extent, and those differences are listed below.
+
+**(3) A second printed manual: `http://www.srimatham.com/uploads/5/5/4/9/5549439/sandhya.pdf`**, *Kṛṣṇa & Śukla Yajur Veda Sandhyā vandana*, Pandit Sri Rama, January 2015 (fetched 2026-09-12; clean Unicode IAST). Its second part is the southern Śukla-Yajurveda rite. It does not name its śākhā, so it is cited here as what it is — a South Indian Śukla-Yajurveda manual — rather than as a Kāṇva edition. It agrees on the twenty-four hand positions word for word and on `gāyatryasyekapadī dvipadī tripadī catuṣpadya padasi`, and differs elsewhere as listed below.
+
+**(4) vignanam.org's accented Devanāgarī Taittirīya Brāhmaṇa pāṭha page for 2.6**, used **only** for the two mantras the base text itself cites to that Brāhmaṇa at units 21 and 22, and for nothing else. This is the case CLAUDE.md allows: the volume's own editorial choice to take a mantra from another śākhā's corpus, recorded rather than hidden. The Brāhmaṇa page reads `पू॒त-म्प॒वित्रे॑णे॒वाज्य᳚म् । आपः॑ शुन्धन्तु॒ मैन॑सः` and `सु॒मि॒त्रा न॒ आप॒ ओष॑धय-स्सन्तु । दु॒र्मि॒त्रास्तस्मै॑ भूयासुः । यो᳚-ऽस्मा-न्द्वेष्टि॑ । य-ञ्च॑ व॒य-न्द्वि॒ष्मः` — **identical to the base text mark for mark**, apart from the one reading corrected below.
+
+**No Gītā Press witness applies.** Gītā Press is a northern house and publishes the Mādhyandina rite, not this one. Under the standing rule an edition in the wrong śākhā is not a weaker witness but no witness at all, so book 210 was not used and not consulted for a single reading here. **sanskritdocuments.org's `shuklayajurvedIyasandhyA` is likewise not a witness to this file**: its abhivādana reads `shuklayajurvedAntargata vAjasaneyi mAdhyAndinIya shAkhAdhyAyI`, so it is the northern rite, and it carries no accent in any case.
+
+**No accented Kāṇva Saṁhitā was reachable.** GRETIL lists one Vājasaneyi Saṁhitā and sanskritdocuments has no Kāṇva saṁhitā at all. The accent in this file therefore rests on the base text, confirmed by its Telugu twin and, for the two Brāhmaṇa mantras, by the śākhā corpus page named above. **The accented Mādhyandina saṁhitā on sa.wikisource.org was deliberately not used.** It is a different śākhā of the same Veda, and its accent must not be laid on a Kāṇva mantra. That is the whole point of the rule.
+
+Corrections applied to the base text, with the count. **(1) One reading, settled by the text's own citation.** At unit 22 both websites print `दु॒र्मि॒त्रास्तस्मै॑ भुयासुः` with a short `u`. The word is the precative `भूयासुः` and the base text cites this mantra to Taittirīya Brāhmaṇa 2.6.6.3, where the accented pāṭha edition reads `भूयासुः`. The long vowel is restored. This is the only reading changed in the file. **(2) Sixteen zero-width joiners and thirteen zero-width spaces removed.** Fifteen of the joiners sat inside the guttural-nasal clusters described above and one inside a `र्ह` ligature; the zero-width spaces sat inside `र्ष` and at two word joins, where they do the work of the hyphen the text uses elsewhere, and the hyphen is written at those two places. None of them spells a sound. **(3) The base text's Telugu ritual glosses moved out of the mantra text and into the `vidhi:` field, where instructions belong** — `(చే.)` "do", printed as `(चे.)` five times after `आचम्य` and `प्राणानायम्य`, and the nine sprinkling directions `(पादमुल पै)`, `(शिरस्सु पै)` and `(हृदयमु पै)`, "on the feet", "on the head", "on the heart", at unit 15. They are Telugu words printed in Devanāgarī letters, and they are instructions, not mantra. **No other change was made to the source's readings.**
+
+Recension note: **every difference found between the witnesses is listed here, and none has been reconciled away.**
+
+**(1) The base text is a Devanāgarī transliteration of a Telugu original, and says so by accident.** Four of its section headings carry Telugu inflection — `मार्जनमु`, `अर्घ्यप्रदानमु`, `सूर्योपस्थानमु` for `मार्जनम्` and the rest, `गायत्री मुद्रलु` and `उत्तर मुद्रलु` with the Telugu plural, and `प्रवरलु चू.` for "see the pravaras". They are transcribed as printed in the text and the reader-facing section names are given in English. Its description of the midday goddess likewise reads `यव्वन रूपा`, using the Telugu word for youth in place of Sanskrit `यौवन`. Left as printed.
+
+**(2) Printing slips in the base text that no witness settles, all left as printed and none corrected.** `सर्वर्थसिद्धिकरी` at the midday tarpaṇa against `सर्वार्थसिद्धिकरी` in the same list at the other two times; `भूर्भवस्स्वः` in one tarpaṇa line against `भूर्भुवस्स्वः` everywhere else; `आवहनीयाग्नि` for `आहवनीयाग्नि`; `हबोध्युरुशग्ं स` at unit 36, where the received text of that verse reads `इह बोध्युरुशꣳस`; `मृलय` for `मृळय` in the same unit; and `ब्रह्मादैव तमुच्यते` at unit 54. Each is a defect of one letter or one syllable, the Telugu witness carries every one of them too, and none of the three printed manuals covers those passages, so there is nothing to correct them against. They are recorded, not repaired.
+
+**(3) The shuklayajurveda.org manual gives twelve ācamana names where this text gives twenty-four**, and it prints the body-touching for each one — right cheek, left cheek, right eye, left eye, and so on — where the base text prints only the numbered names. It also adds a Vināyaka verse, `śuklāmbaradharaṁ viṣṇum`, which the base text does not have at this point, and it directs that ācamana be done twice. **Nothing was imported from it.**
+
+**(4) The same manual writes `oṁ suvaḥ` plainly** in the prāṇāyāma vyāhṛtis where the base text writes the guttural nasal `ओग्ं सुवः`. A real difference of recitation, recorded and not reconciled.
+
+**(5) The srimatham manual gives a different meditation verse.** It reads `bālāṁ vidyāṁ tu gāyatrīṁ lohitāṁ caturānanaṁ` in the morning, with separate verses for midday and evening, where this text has the single verse `मुक्ताविद्रुमहेमनीलधवल-च्छायैर्मुखैस्त्रीक्षणैः` for all three times. Both stand.
+
+**(6) The closing hand positions differ in three of eight.** This text reads `सुरभिः ज्ञान चक्रे च योनिः कूर्मो-ऽथ पङ्कजम् । लिङ्ग-न्निर्याण मुद्रा`; the srimatham manual reads `surabhi, jñānam, vairāgyaṁ, yoniḥ, śaṅkhaḥ, paṅkajam, liṅgam, nirvāṇam` — vairāgya, śaṅkha and nirvāṇa for cakra, kūrma and niryāṇa. The twenty-four positions of unit 49 agree in both, name for name. Not reconciled.
+
+**(7) The valedictory verse differs in two places.** This text reads `ब्राह्मणे॑भ्यो-ऽभ्य॑नुज्ञा॒ता॒ ग॒च्छ दे॑वि य॒था सु॑खम्`; the srimatham manual reads `brāhmaṇebhyo hyanujñātā gaccha devī yathā sukham`. Both stand.
+
+**(8) The srimatham manual has no sandhyā-tarpaṇa and no Gāyatrī tarpaṇa**, which are units 30 to 32 and 54 to 57 here, and it closes with `anena sandhyopāsanākhyena karmaṇā śrī parameśvaraḥ prīyatāṁ na mama`, which this text does not print. This is a difference in the extent of two manuals of one tradition, not a variant reading, and nothing was filled in from either side.
+
+**(9) Where the same mantra stands in a sibling file of this corpus, the two are not the same text and were not compared for accent.** `आपो हिष्ठा`, the Gāyatrī, `उत्तमे शिखरे`, `उदुत्यं जातवेदसम्`, `चित्रं देवानाम्` and `आ कृष्णेन` all occur in `../madhyandina/`, `../taittiriya/` and `../rigveda/` as well. They belong to four different rites of four different śākhās. **No accent, reading or pāda division was carried between them in either direction.** The Ṛgvedic file reads `आकृ॒ष्णेन॒ रज॑सा` and the Taittirīya `आ स॒त्येन॒ रज॑सा`; this file reads `आकृ॒ष्णेन॒ रज॑सा` with the Ṛgveda, and that is what its own source prints, not an import.
+
+Not collated: the saṅkalpa and abhivādana sentences of units 12, 24, 37, 51, 54 and 63, the descriptions of the goddess at the three times in unit 43, the lists of hand positions in units 49 and 53, and the two closing verses of unit 65. These are ritual Sanskrit and paddhati prose rather than Veda, they are unaccented in the source, and no printed edition of each was consulted; they stand on the base text and its Telugu twin alone.
+
+Verse count: 65 units. Not a verse count in the stotra sense — the work is an order of service punctuated by mantras, and the numbering is this corpus's, not the source's. The source prints the rite as one continuous page under twenty-one headings.
+
+Sections:
+गुरुवन्दनम् — Salutation to the teachers (units 1–4)
+मानसस्नानम् — Mental bath (units 5–6)
+आचमनम् — Ācamana (units 7–8)
+भूमिप्रार्थना — Prayer to the earth (unit 9)
+प्राणायामः — Prāṇāyāma (units 10–11)
+सङ्कल्पः — Saṅkalpa (unit 12)
+मार्जनम् — Mārjana (units 13–15)
+मन्त्राचमनम् — Mantrācamana (units 16–18)
+पुनर्मार्जनम् — Punar-mārjana (units 19–20)
+अघमर्षणम् — Aghamarṣaṇa (units 21–23)
+अर्घ्यप्रदानम् — Offering of water to the sun (units 24–28)
+भूप्रदक्षिणा — Circumambulation (unit 29)
+सन्ध्यातर्पणम् — Sandhyā tarpaṇa (units 30–32)
+सूर्योपस्थानम् — Standing before the sun (units 33–36)
+गायत्री — The Gāyatrī (units 37–50)
+जपावसानम् — Closing the recitation (units 51–53)
+गायत्रीतर्पणम् — Gāyatrī tarpaṇa (units 54–57)
+दिङ्नमस्कारः — Salutation to the quarters (units 58–59)
+उद्वासनम् — Taking leave of the goddess (unit 60)
+जपनिवेदनम् — Dedication of the recitation (units 61–62)
+अभिवादनम् — Abhivādana and dedication (units 63–65)
+
+Blurb: Sandhyāvandana is the daily worship performed at dawn, at midday and at dusk. This file gives the rite as it is followed by the Kāṇva branch of the Śukla-Yajurveda, which is the southern branch of that Veda. It is not the only form of the rite. The northern branch of the same Veda, the Kṛṣṇa-Yajurveda and the Ṛgveda each have their own, and those are kept as separate files. The worshipper sips water, prays to the earth, controls the breath, states his intention, and sprinkles himself with water. He then drinks water with a mantra, washes away his wrongdoing, and offers water to the sun. He offers water to the deities of the hour, stands before the sun, and recites the Gāyatrī. At the close he offers water to the Gāyatrī, bows to the ten quarters, takes leave of the goddess, gives the recitation to the deity of that time, and announces his descent and his branch of the Veda. The Devanāgarī here is printed in the manner of this tradition, which writes the anusvāra as it is actually pronounced and joins it to the word that follows.
+
+--- unit 1 | section: Salutation to the teachers ---
+vidhi:
+The rite opens with a salutation to the teachers. Sit facing east in the morning, north at midday and west in the evening.
+deva:
+श्री गुरुभ्यो नमः । हरिः ओम् ॥
+iast:
+śrī gurubhyo namaḥ | hariḥ om ||
+en: Salutations to the teachers. Hariḥ Om.
+tel: గురువులకు నమస్కారము. హరిః ఓం.
+hi: गुरुओं को नमस्कार। हरिः ओम्।
+
+--- unit 2 | section: Salutation to the teachers ---
+vidhi:
+Two verses to Yājñavalkya, the sage of this branch of the Veda. He is saluted first because the Śukla-Yajurveda was received through him.
+deva:
+ॐ-वँन्दे-ऽह-म्मङ्गलात्मान-म्भास्वन्तं-वेँदविग्रहम् ।
+याज्ञवल्क्य-म्मुनिश्रेष्ठ-ञ्जिष्णुं हरिहर प्रभुम् ॥
+जितेन्द्रिय-ञ्जितक्रोधं सदाध्यानपरायणम् ।
+आनन्दनिलयं-वँन्दे योगानन्द मुनीश्वरम् ॥
+iast:
+oṁ-vam̐nde-'ha-mmaṅgalātmāna-mbhāsvantaṁ-vem̐davigraham |
+yājñavalkya-mmuniśreṣṭha-ñjiṣṇuṁ harihara prabhum ||
+jitendriya-ñjitakrodhaṁ sadādhyānaparāyaṇam |
+ānandanilayaṁ-vam̐nde yogānanda munīśvaram ||
+en: I bow to him whose nature is auspicious, who is radiant, who is the Veda itself in form. I bow to Yājñavalkya, the best of sages, the victorious one, the lord who is Hari and Hara together. He has conquered his senses and his anger. He is always absorbed in meditation. I bow to Yogānanda, the lord of sages, whose dwelling is bliss.
+tel: మంగళ స్వరూపుడు, ప్రకాశవంతుడు, వేదమే రూపమైన వానికి నమస్కారము. మునిశ్రేష్ఠుడు, జయశీలుడు, హరిహర ప్రభువు అయిన యాజ్ఞవల్క్యునికి నమస్కారము. ఇంద్రియములను క్రోధమును జయించినవాడు. ఎల్లప్పుడు ధ్యానమునందు నిమగ్నుడు. ఆనందమే నివాసమైన యోగానంద మునీశ్వరునికి నమస్కారము.
+hi: जो मंगलस्वरूप हैं, तेजस्वी हैं, वेद के ही स्वरूप हैं, उन्हें नमस्कार। जो मुनिश्रेष्ठ हैं, विजयी हैं, हरि और हर दोनों के प्रभु हैं, उन याज्ञवल्क्य को नमस्कार। उन्होंने इंद्रियों और क्रोध को जीत लिया है। वे सदा ध्यान में लगे रहते हैं। जिनका निवास आनंद है, उन योगानंद मुनीश्वर को नमस्कार।
+
+--- unit 3 | section: Salutation to the teachers ---
+vidhi:
+The fruit of reciting the twelve names of the teacher.
+deva:
+एव-न्द्वादश नामानि त्रिसन्ध्या यः पठेन्नरः ।
+योगीश्वर प्रसादेन विद्यावा-न्धनवा-न्भवेत् ॥
+iast:
+eva-ndvādaśa nāmāni trisandhyā yaḥ paṭhennaraḥ |
+yogīśvara prasādena vidyāvā-ndhanavā-nbhavet ||
+en: These are the twelve names. The man who recites them at the three sandhyās becomes learned and prosperous by the grace of the lord of yogins.
+tel: ఇవి పన్నెండు నామములు. మూడు సంధ్యలలో వీటిని పఠించు వాడు యోగీశ్వరుని అనుగ్రహముతో విద్యావంతుడు, ధనవంతుడు అగును.
+hi: ये बारह नाम हैं। जो मनुष्य तीनों संध्याओं में इनका पाठ करता है, वह योगीश्वर की कृपा से विद्यावान और धनवान होता है।
+
+--- unit 4 | section: Salutation to the teachers ---
+vidhi:
+Salute the sages of this branch of the Veda and then the teacher. Kaṇva and Kātyāyana are the sages whose names this tradition carries.
+deva:
+ॐ श्री याज्ञवल्क्य गुरुभ्यो नमः ।
+कण्वकात्यायनादि महर्षिभ्यो नमः ॥
+गुरुर्ब्रह्म गुरुर्विष्णुः गुरुर्देवो महेश्वरः ।
+गुरुस्साक्षा-त्परब्रह्म तस्मै श्री गुरवे नमः ॥
+गुरवे सर्वलोकाना-म्भिषजे भवरोगिणाम् ।
+निधये सर्वविद्याना-न्दक्षिणामूर्तये नमः ॥
+iast:
+oṁ śrī yājñavalkya gurubhyo namaḥ |
+kaṇvakātyāyanādi maharṣibhyo namaḥ ||
+gururbrahma gururviṣṇuḥ gururdevo maheśvaraḥ |
+gurussākṣā-tparabrahma tasmai śrī gurave namaḥ ||
+gurave sarvalokānā-mbhiṣaje bhavarogiṇām |
+nidhaye sarvavidyānā-ndakṣiṇāmūrtaye namaḥ ||
+en: Om, salutations to the teacher Yājñavalkya. Salutations to Kaṇva, to Kātyāyana and to the other great sages. The teacher is Brahmā. The teacher is Viṣṇu. The teacher is the lord Maheśvara. The teacher is the supreme Brahman itself. To that teacher I bow. He is the physician of all the worlds, who are sick with the disease of birth. He is the treasury of all knowledge. To Dakṣiṇāmūrti I bow.
+tel: ఓం, గురువైన యాజ్ఞవల్క్యునికి నమస్కారము. కణ్వ, కాత్యాయన మొదలైన మహర్షులకు నమస్కారము. గురువు బ్రహ్మ. గురువు విష్ణువు. గురువు మహేశ్వర దేవుడు. గురువు సాక్షాత్తు పరబ్రహ్మము. ఆ గురువుకు నమస్కారము. సంసార రోగముతో బాధపడు లోకములన్నిటికి ఆయనే వైద్యుడు. సకల విద్యలకు ఆయనే నిధి. దక్షిణామూర్తికి నమస్కారము.
+hi: ओम्, गुरु याज्ञवल्क्य को नमस्कार। कण्व, कात्यायन आदि महर्षियों को नमस्कार। गुरु ब्रह्मा हैं। गुरु विष्णु हैं। गुरु महेश्वर देव हैं। गुरु साक्षात् परब्रह्म हैं। उन गुरु को नमस्कार। जो संसार रोग से पीड़ित सब लोकों के वैद्य हैं। जो सब विद्याओं के निधि हैं। उन दक्षिणामूर्ति को नमस्कार।
+
+--- unit 5 | section: Mental bath ---
+vidhi:
+The mental bath. It is recited before the rite as a prayer for purity.
+deva:
+अपवित्रः पवित्रो वा सर्वावस्था-ङ्गतो-ऽपि वा ।
+यस्स्मरेत्पुण्डरीकाक्षं स बाह्याभ्यन्तरश्शुचिः ॥
+पुण्डरीकाक्ष पुण्डरीकाक्ष पुण्डरीकाक्षाय नमः ॥
+iast:
+apavitraḥ pavitro vā sarvāvasthā-ṅgato-'pi vā |
+yassmaretpuṇḍarīkākṣaṁ sa bāhyābhyantaraśśuciḥ ||
+puṇḍarīkākṣa puṇḍarīkākṣa puṇḍarīkākṣāya namaḥ ||
+en: Whether a man is pure or impure, and in whatever state he may be, he who remembers the lotus-eyed Lord becomes clean within and without. Puṇḍarīkākṣa, Puṇḍarīkākṣa, salutations to Puṇḍarīkākṣa.
+tel: పవిత్రుడైనను, అపవిత్రుడైనను, ఏ స్థితిలో ఉన్నను, పుండరీకాక్షుని స్మరించువాడు లోపల బయట శుచి యగును. పుండరీకాక్ష, పుండరీకాక్ష, పుండరీకాక్షునికి నమస్కారము.
+hi: पवित्र हो या अपवित्र, किसी भी अवस्था में हो, जो पुंडरीकाक्ष का स्मरण करता है वह भीतर और बाहर से शुद्ध हो जाता है। पुंडरीकाक्ष, पुंडरीकाक्ष, पुंडरीकाक्ष को नमस्कार।
+
+--- unit 6 | section: Mental bath ---
+vidhi:
+The name of the Lord is itself the bath.
+deva:
+गोविन्देति सदास्नान-ङ्गोविन्देति सदा जपः ।
+गोविन्देति सदा ध्यानं सदा गोविन्द कीर्तनम् ॥
+iast:
+govindeti sadāsnāna-ṅgovindeti sadā japaḥ |
+govindeti sadā dhyānaṁ sadā govinda kīrtanam ||
+en: To say Govinda is always the bath. To say Govinda is always the recitation. To say Govinda is always the meditation. To sing of Govinda is always the praise.
+tel: గోవింద అనుటయే ఎల్లప్పుడు స్నానము. గోవింద అనుటయే ఎల్లప్పుడు జపము. గోవింద అనుటయే ఎల్లప్పుడు ధ్యానము. గోవిందుని కీర్తించుటయే ఎల్లప్పుడు స్తుతి.
+hi: गोविंद कहना ही सदा स्नान है। गोविंद कहना ही सदा जप है। गोविंद कहना ही सदा ध्यान है। गोविंद का कीर्तन ही सदा स्तुति है।
+
+--- unit 7 | section: Ācamana ---
+vidhi:
+Sip water once at each of the first three names.
+deva:
+ओ-ङ्केशवाय स्वाहा ओ-न्नारायणाय स्वाहा ओ-म्माधवाय स्वाहा
+iast:
+o-ṅkeśavāya svāhā o-nnārāyaṇāya svāhā o-mmādhavāya svāhā
+en: Om, to Keśava, svāhā. Om, to Nārāyaṇa, svāhā. Om, to Mādhava, svāhā.
+tel: ఓం, కేశవునికి స్వాహా. ఓం, నారాయణునికి స్వాహా. ఓం, మాధవునికి స్వాహా.
+hi: ओम्, केशव को स्वाहा। ओम्, नारायण को स्वाहा। ओम्, माधव को स्वाहा।
+
+--- unit 8 | section: Ācamana ---
+vidhi:
+The remaining twenty-one names follow, each with namaḥ. The base text numbers all twenty-four together and prints no further instruction for them.
+deva:
+ओ-ङ्गोविन्दाय नमः ॐ-विँष्णवे नमः ओ-म्मधुसूदनाय नमः ओ-न्त्रिविक्रमाय नमः ॐ-वाँमनाय नमः ॐ श्रीधराय नमः ॐ हृषीकेशाय नमः ओ-म्पद्मनाभाय नमः ओ-न्दामोदराय नमः ॐ सङ्कर्षणाय नमः ॐ-वाँसुदेवाय नमः ओ-म्प्रद्युम्नाय नमः ॐ अनिरुद्धाय नमः ओ-म्पुरुषोत्तमाय नमः ॐ अथोक्षजाय नमः ओ-न्नारसिंहाय नमः ॐ अच्युताय नमः ओ-ञ्जनार्दनाय नमः ॐ उपेन्द्राय नमः ॐ हरये नमः ॐ श्री कृष्णाय नमः
+iast:
+o-ṅgovindāya namaḥ oṁ-vim̐ṣṇave namaḥ o-mmadhusūdanāya namaḥ o-ntrivikramāya namaḥ oṁ-vām̐manāya namaḥ oṁ śrīdharāya namaḥ oṁ hṛṣīkeśāya namaḥ o-mpadmanābhāya namaḥ o-ndāmodarāya namaḥ oṁ saṅkarṣaṇāya namaḥ oṁ-vām̐sudevāya namaḥ o-mpradyumnāya namaḥ oṁ aniruddhāya namaḥ o-mpuruṣottamāya namaḥ oṁ athokṣajāya namaḥ o-nnārasiṁhāya namaḥ oṁ acyutāya namaḥ o-ñjanārdanāya namaḥ oṁ upendrāya namaḥ oṁ haraye namaḥ oṁ śrī kṛṣṇāya namaḥ
+en: Salutations to Govinda, to Viṣṇu, to Madhusūdana, to Trivikrama, to Vāmana, to Śrīdhara, to Hṛṣīkeśa, to Padmanābha, to Dāmodara, to Saṅkarṣaṇa, to Vāsudeva, to Pradyumna, to Aniruddha, to Puruṣottama, to Adhokṣaja, to Nārasiṁha, to Acyuta, to Janārdana, to Upendra, to Hari, and to Śrī Kṛṣṇa.
+tel: గోవిందునికి, విష్ణువుకు, మధుసూదనునికి, త్రివిక్రమునికి, వామనునికి, శ్రీధరునికి, హృషీకేశునికి, పద్మనాభునికి, దామోదరునికి, సంకర్షణునికి, వాసుదేవునికి, ప్రద్యుమ్నునికి, అనిరుద్ధునికి, పురుషోత్తమునికి, అధోక్షజునికి, నారసింహునికి, అచ్యుతునికి, జనార్దనునికి, ఉపేంద్రునికి, హరికి, శ్రీ కృష్ణునికి నమస్కారము.
+hi: गोविंद को, विष्णु को, मधुसूदन को, त्रिविक्रम को, वामन को, श्रीधर को, हृषीकेश को, पद्मनाभ को, दामोदर को, संकर्षण को, वासुदेव को, प्रद्युम्न को, अनिरुद्ध को, पुरुषोत्तम को, अधोक्षज को, नारसिंह को, अच्युत को, जनार्दन को, उपेंद्र को, हरि को और श्री कृष्ण को नमस्कार।
+
+--- unit 9 | section: Prayer to the earth ---
+vidhi:
+A prayer to the earth before sitting down. The first line names the sage, the deity and the metre of the verse, and the act in which it is used. Such a line stands before most mantras in this rite.
+deva:
+पृथिवीत्यस्य, मेरुपृष्ठ ऋषिः, कूर्मो देवता, सुतल-ञ्छन्दः, आसने विनियोगः ।
+ओ-म्पृथ्वी त्वया धृता लोका देवि त्वं-विँष्णुना धृता ।
+त्व-ञ्च धारय मा-न्देवि पवित्र-ङ्कुरु चासनम् ।
+iast:
+pṛthivītyasya, merupṛṣṭha ṛṣiḥ, kūrmo devatā, sutala-ñchandaḥ, āsane viniyogaḥ |
+o-mpṛthvī tvayā dhṛtā lokā devi tvaṁ-vim̐ṣṇunā dhṛtā |
+tva-ñca dhāraya mā-ndevi pavitra-ṅkuru cāsanam |
+en: For the verse beginning pṛthivī the sage is Merupṛṣṭha, the deity is the tortoise, the metre is sutala, and the use is for the seat. Om, Earth, the worlds are borne by you, and you are borne by Viṣṇu. Bear me also, O goddess, and make this seat pure.
+tel: పృథివీ అను మంత్రమునకు మేరుపృష్ఠుడు ఋషి, కూర్మము దేవత, సుతలము ఛందస్సు, ఆసనమునందు వినియోగము. ఓం, భూదేవి, లోకములు నీచేత భరించబడినవి, నీవు విష్ణువుచేత భరించబడినావు. దేవీ, నన్నును భరించుము, ఈ ఆసనమును పవిత్రము చేయుము.
+hi: पृथिवी इस मंत्र के ऋषि मेरुपृष्ठ, देवता कूर्म, छंद सुतल, और विनियोग आसन में है। ओम्, हे पृथ्वी, लोक तुमसे धारण किए गए हैं, और तुम विष्णु से धारण की गई हो। हे देवी, मुझे भी धारण करो और इस आसन को पवित्र करो।
+
+--- unit 10 | section: Prāṇāyāma ---
+vidhi:
+The sages, deities and metres of the prāṇāyāma mantras. The praṇava, the seven vyāhṛtis, the Gāyatrī and the śiras-mantra are named one after another.
+deva:
+प्रणवस्य परब्रह्म ऋषिः, परमात्मा देवता, दैवी गायत्री छन्दः ।
+सप्तानां-व्याँहृतीना-म्प्रजापति ऋषिः, अग्नि-वायु-सूर्य-बृहस्पति-वरुणेन्द्र-विश्वेदेवा देवताः, गायत्र्युष्णिक् अनुष्टुप् बृहती पङ्क्तिः, त्रिष्टुब्जगत्यश्छन्दांसि ।
+तत्सवितुरित्यस्य विश्वामित्र ऋषिः, सविता देवता, गायत्री छन्दः ।
+शिरोमन्त्रस्य प्रजापति ऋषिः, ब्रह्म-अग्नि-वायु-सूर्या देवताः, यजुश्छन्दः ।
+प्राणायामे विनियोगः ।
+iast:
+praṇavasya parabrahma ṛṣiḥ, paramātmā devatā, daivī gāyatrī chandaḥ |
+saptānāṁ-vyām̐hṛtīnā-mprajāpati ṛṣiḥ, agni-vāyu-sūrya-bṛhaspati-varuṇendra-viśvedevā devatāḥ, gāyatryuṣṇik anuṣṭup bṛhatī paṅktiḥ, triṣṭubjagatyaśchandāṁsi |
+tatsaviturityasya viśvāmitra ṛṣiḥ, savitā devatā, gāyatrī chandaḥ |
+śiromantrasya prajāpati ṛṣiḥ, brahma-agni-vāyu-sūryā devatāḥ, yajuśchandaḥ |
+prāṇāyāme viniyogaḥ |
+en: For the praṇava the sage is the supreme Brahman, the deity is the supreme Self, and the metre is the divine Gāyatrī. For the seven vyāhṛtis the sage is Prajāpati; the deities are Agni, Vāyu, Sūrya, Bṛhaspati, Varuṇa, Indra and the Viśvedevas; and the metres are gāyatrī, uṣṇik, anuṣṭup, bṛhatī, paṅkti, triṣṭup and jagatī. For the verse beginning tatsavituḥ the sage is Viśvāmitra, the deity is Savitā, and the metre is gāyatrī. For the śiras-mantra the sage is Prajāpati; the deities are Brahman, Agni, Vāyu and Sūrya; and the metre is yajus. The use is in prāṇāyāma.
+tel: ప్రణవమునకు పరబ్రహ్మ ఋషి, పరమాత్మ దేవత, దైవీ గాయత్రి ఛందస్సు. ఏడు వ్యాహృతులకు ప్రజాపతి ఋషి; అగ్ని, వాయు, సూర్య, బృహస్పతి, వరుణ, ఇంద్ర, విశ్వేదేవతలు దేవతలు; గాయత్రి, ఉష్ణిక్, అనుష్టుప్, బృహతి, పంక్తి, త్రిష్టుప్, జగతి ఛందస్సులు. తత్సవితుః అను మంత్రమునకు విశ్వామిత్రుడు ఋషి, సవిత దేవత, గాయత్రి ఛందస్సు. శిరోమంత్రమునకు ప్రజాపతి ఋషి; బ్రహ్మ, అగ్ని, వాయు, సూర్యులు దేవతలు; యజుస్సు ఛందస్సు. ప్రాణాయామమునందు వినియోగము.
+hi: प्रणव के ऋषि परब्रह्म, देवता परमात्मा, छंद दैवी गायत्री है। सात व्याहृतियों के ऋषि प्रजापति; देवता अग्नि, वायु, सूर्य, बृहस्पति, वरुण, इंद्र और विश्वेदेव; छंद गायत्री, उष्णिक्, अनुष्टुप्, बृहती, पंक्ति, त्रिष्टुप् और जगती हैं। तत्सवितुः मंत्र के ऋषि विश्वामित्र, देवता सविता, छंद गायत्री है। शिरोमंत्र के ऋषि प्रजापति; देवता ब्रह्म, अग्नि, वायु और सूर्य; छंद यजुस् है। विनियोग प्राणायाम में है।
+
+--- unit 11 | section: Prāṇāyāma ---
+vidhi:
+Close the nostrils with the thumb and the ring finger and recite this while the breath is held. Three rounds are done.
+deva:
+ओ-म्भूः । ओ-म्भुवः॑ । ओग्ं सुवः॑ । ओ-म्महः॑ । ओ-ञ्जनः॑ । ओ-न्तपः॑ । ओग्ं सत्यम् ।
+ओ-न्तत्स॑वि॒तुर्वरे॑ण्य॒-म्भर्गो॑ दे॒वस्य॑ धीमहि । धियो॒ यो नः॑ प्रचो॒दया॑त् ॥
+ॐ आपो॒ ज्योती॒ रसो॒मृत॒-म्ब्रह्म॒ भूर्भुव॒स्स्व॒रोम् ।
+iast:
+o-mbhūḥ | o-mbhuvaḥ | ogṁ suvaḥ | o-mmahaḥ | o-ñjanaḥ | o-ntapaḥ | ogṁ satyam |
+o-ntatsaviturvareṇya-mbhargo devasya dhīmahi | dhiyo yo naḥ pracodayāt ||
+oṁ āpo jyotī rasomṛta-mbrahma bhūrbhuvassvarom |
+en: Om, the earth. Om, the mid-region. Om, the heavens. Om, the great world. Om, the world of men. Om, the world of austerity. Om, the world of truth. Om, we meditate on that adorable light of the divine Creator. May he set our thoughts in motion. Om, the waters, the light, the essence, the nectar of immortality, Brahman, the earth, the mid-region and the heavens — Om.
+tel: ఓం, భూమి. ఓం, అంతరిక్షము. ఓం, స్వర్గము. ఓం, మహర్లోకము. ఓం, జనలోకము. ఓం, తపోలోకము. ఓం, సత్యలోకము. ఓం, ఆ దివ్య సవితృ దేవుని పూజనీయ తేజస్సును ధ్యానించుచున్నాము. ఆయన మా బుద్ధులను ప్రేరేపించును గాక. ఓం, జలము, జ్యోతి, రసము, అమృతము, బ్రహ్మము, భూమి, అంతరిక్షము, స్వర్గము — ఓం.
+hi: ओम्, भूमि। ओम्, अंतरिक्ष। ओम्, स्वर्ग। ओम्, महर्लोक। ओम्, जनलोक। ओम्, तपोलोक। ओम्, सत्यलोक। ओम्, उस दिव्य सविता देव के पूजनीय तेज का हम ध्यान करते हैं। वे हमारी बुद्धि को प्रेरित करें। ओम्, जल, ज्योति, रस, अमृत, ब्रह्म, भूमि, अंतरिक्ष और स्वर्ग — ओम्।
+
+--- unit 12 | section: Saṅkalpa ---
+vidhi:
+State the intention. The blanks are filled with the place, the year, the season, the month, the fortnight, the day and the star, and with the worshipper’s own gotra and name. The last words are chosen according to the time of day.
+deva:
+मम उपात्त समस्त दुरितक्षय द्वारा श्रीपरमेश्वरमुद्दिश्य श्रीपरमेश्वर प्रीत्यर्थं शुभे शोभने मुहूर्ते श्री महाविष्णोराज्ञया प्रवर्तमानस्य अद्य ब्रह्मणः द्वितीय परार्थे श्वेतवराह कल्पे वैवस्वत मन्वन्तरे कलियुगे प्रथमपादे जम्बूद्वीपे भारतवर्षे भरतखण्डे मेरोर्दक्षिण दिग्भागे श्रीशैलस्य …… प्रदेशे ……, …… नद्योः मध्य प्रदेशे मङ्गल गृहे अस्मिन् वर्तमन व्यावहरिक चान्द्रमानेन स्वस्ति श्री …….. (1) नाम सं-वँत्सरे …… अयने(2) …… ऋतौ (3) …… मासे(4) …… पक्षे (5) …… तिथौ (6) …… वासरे (7) …… नक्षत्रे (8) …… योगे (9) …… करण (10) एव-ङ्गुण विशेषण विशिष्टायां शुभतिथौ श्रीमान् …… गोत्रः …… नामधेयः (श्रीमतः …… गोत्रस्य …… नामधेयस्य मम धर्मपत्नी समेतस्य) श्री परमेश्वर प्रीत्यर्थ-म्मम श्रौत स्मार्त नित्य कर्मानुष्ठान योग्यता फलसिद्ध्यर्थ-म्प्रातः/माध्याह्निक/सायं सन्ध्यां उपासिष्ये ॥
+iast:
+mama upātta samasta duritakṣaya dvārā śrīparameśvaramuddiśya śrīparameśvara prītyarthaṁ śubhe śobhane muhūrte śrī mahāviṣṇorājñayā pravartamānasya adya brahmaṇaḥ dvitīya parārthe śvetavarāha kalpe vaivasvata manvantare kaliyuge prathamapāde jambūdvīpe bhāratavarṣe bharatakhaṇḍe merordakṣiṇa digbhāge śrīśailasya …… pradeśe ……, …… nadyoḥ madhya pradeśe maṅgala gṛhe asmin vartamana vyāvaharika cāndramānena svasti śrī …….. (1) nāma saṁ-vam̐tsare …… ayane(2) …… ṛtau (3) …… māse(4) …… pakṣe (5) …… tithau (6) …… vāsare (7) …… nakṣatre (8) …… yoge (9) …… karaṇa (10) eva-ṅguṇa viśeṣaṇa viśiṣṭāyāṁ śubhatithau śrīmān …… gotraḥ …… nāmadheyaḥ (śrīmataḥ …… gotrasya …… nāmadheyasya mama dharmapatnī sametasya) śrī parameśvara prītyartha-mmama śrauta smārta nitya karmānuṣṭhāna yogyatā phalasiddhyartha-mprātaḥ/mādhyāhnika/sāyaṁ sandhyāṁ upāsiṣye ||
+en: For the removal of all the wrong I have done, and for the pleasure of the supreme Lord, at this auspicious hour, in this present age and place, being of such a gotra and such a name, and in order to become fit to perform the daily duties laid down by the Veda and by tradition, I shall now worship the morning, midday or evening sandhyā.
+tel: నేను చేసిన సమస్త దురితముల క్షయము కొరకు, శ్రీ పరమేశ్వర ప్రీతి కొరకు, ఈ శుభ ముహూర్తమునందు, ఈ కాలమునందు ఈ ప్రదేశమునందు, ఈ గోత్రము ఈ నామము కలవాడనై, శ్రౌత స్మార్త నిత్య కర్మలను ఆచరించుటకు యోగ్యత సిద్ధించుటకై, ప్రాతః / మాధ్యాహ్నిక / సాయం సంధ్యను ఉపాసించుచున్నాను.
+hi: मेरे किए हुए सब दुरितों के क्षय के लिए, श्री परमेश्वर की प्रीति के लिए, इस शुभ मुहूर्त में, इस काल और इस स्थान में, इस गोत्र और इस नाम वाला मैं, श्रौत और स्मार्त नित्य कर्मों के करने की योग्यता के लिए, प्रातः / माध्याह्निक / सायं संध्या की उपासना करता हूँ।
+
+--- unit 13 | section: Mārjana ---
+vidhi:
+Invoke the holy rivers in the water before sprinkling.
+deva:
+गङ्गे च यमुने कृष्णे गोदावरी सरस्वती ।
+नर्मदे सिन्धु कावेरी जले-ऽस्मिन् सन्निधि-ङ्कुरु ॥
+iast:
+gaṅge ca yamune kṛṣṇe godāvarī sarasvatī |
+narmade sindhu kāverī jale-'smin sannidhi-ṅkuru ||
+en: O Gaṅgā, Yamunā, Kṛṣṇā, Godāvarī, Sarasvatī, Narmadā, Sindhu and Kāverī, be present in this water.
+tel: ఓ గంగా, యమునా, కృష్ణా, గోదావరీ, సరస్వతీ, నర్మదా, సింధూ, కావేరీ, ఈ జలములో సన్నిధి కలిగి ఉండుడు.
+hi: हे गंगा, यमुना, कृष्णा, गोदावरी, सरस्वती, नर्मदा, सिंधु और कावेरी, इस जल में सन्निधि करो।
+
+--- unit 14 | section: Mārjana ---
+vidhi:
+The sage, deity and metre of the three ṛcs used for sprinkling.
+deva:
+आपोहिष्ठेति तिसृणाम्, सिन्धुद्वीप ऋषिः, आपो देवता, गायत्री छन्दः, मार्जने विनियोगः ।
+iast:
+āpohiṣṭheti tisṛṇām, sindhudvīpa ṛṣiḥ, āpo devatā, gāyatrī chandaḥ, mārjane viniyogaḥ |
+en: For the three verses beginning āpo hi ṣṭhā the sage is Sindhudvīpa, the deity is the Waters, the metre is gāyatrī, and the use is in sprinkling.
+tel: ఆపోహిష్ఠా అను మూడు మంత్రములకు సింధుద్వీపుడు ఋషి, ఆపస్సు దేవత, గాయత్రి ఛందస్సు, మార్జనమునందు వినియోగము.
+hi: आपोहिष्ठा इन तीन मंत्रों के ऋषि सिंधुद्वीप, देवता आपः, छंद गायत्री, और विनियोग मार्जन में है।
+
+--- unit 15 | section: Mārjana ---
+vidhi:
+Sprinkle water with each of the nine lines. The base text marks the place for each one: the feet, then the head, then the heart, then the head, the heart, the feet, the heart, the feet, and last the head.
+deva:
+ॐ आपो॒ हिष्ठा म॑यो॒भुवः॑ ।
+ओ-न्ता न॑ ऊ॒र्जे द॑धातन ।
+ओ-म्म॒हेरणा॑य॒ चक्ष॑से ।
+ॐ-योँ व॑श्शि॒वत॑मो॒ रसः॑ ।
+ओ-न्तस्य॑ भाजयते॒ ह नः॑ ।
+ॐ उ॒श॒तीरि॑व मा॒त॑रः ।
+ओ-न्तस्मा॒ अर॑ङ्गमामवः ।
+ॐ-यँस्य॒ क्षया॑य॒ जिन्व॑थ ।
+ॐ आपो॑ ज॒नय॑था च नः ।
+iast:
+oṁ āpo hiṣṭhā mayobhuvaḥ |
+o-ntā na ūrje dadhātana |
+o-mmaheraṇāya cakṣase |
+oṁ-yom̐ vaśśivatamo rasaḥ |
+o-ntasya bhājayate ha naḥ |
+oṁ uśatīriva mātaraḥ |
+o-ntasmā araṅgamāmavaḥ |
+oṁ-yam̐sya kṣayāya jinvatha |
+oṁ āpo janayathā ca naḥ |
+en: O waters, you are the giver of happiness. Grant us strength. Grant us the sight of great joy. Give us here a share of that most auspicious essence of yours, like loving mothers. We come to you for that purpose for which you refresh us. O waters, you also bring us to birth.
+tel: ఓ జలములారా, మీరు సుఖమును కలిగించువారు. మాకు బలమును ఇండు. గొప్ప ఆనందము యొక్క దర్శనమును ఇండు. ప్రేమగల తల్లుల వలె, మీ మంగళకరమైన రసములో మాకు ఇక్కడ భాగమును ఇండు. మీరు ఏ కార్యము కొరకు మమ్ము తృప్తిపరచుదురో, ఆ కార్యము కొరకు మీ వద్దకు వచ్చినాము. ఓ జలములారా, మీరే మమ్ము పుట్టించుచున్నారు.
+hi: हे जल, तुम सुख देने वाले हो। हमें बल दो। महान आनंद का दर्शन दो। प्रेममयी माताओं के समान, अपने उस अत्यंत मंगल रस में हमें यहाँ भाग दो। जिस कार्य के लिए तुम हमें तृप्त करते हो, उसी के लिए हम तुम्हारे पास आए हैं। हे जल, तुम हमें जन्म भी देते हो।
+
+--- unit 16 | section: Mantrācamana ---
+vidhi:
+In the morning. The sage, deity and metre are named first, then the mantra is recited and the water is drunk.
+deva:
+(प्रातः काले)
+सूर्यश्चेति मन्त्रस्य, उपनिषद्याज्ञवल्क्य ऋषिः, सूर्यो देवता, अनुष्टु-प्छन्दः, उदक प्राशने विनियोगः ।
+ॐ सूर्यश्च मा मन्युश्च मन्युपतयश्च मन्यु॑कृते॒भ्यः ।
+पापेभ्यो॑ रक्ष॒न्ताम् । यद्रात्र्या पाप॑मका॒र्षम् ।
+मनसा वाचा॑ हस्ता॒भ्याम् । पद्भ्यामुदरे॑ण शि॒श्ना ।
+रात्रि॒स्तद॑वलु॒म्पतु । यत्किञ्च॑ दुरि॒त-म्मयि॑ ।
+इ॒दम॒ह-म्माममृत॑यो॒नौ ।
+सूर्ये ज्योतिषि जुहो॑मि स्वा॒हा ।
+iast:
+(prātaḥ kāle)
+sūryaśceti mantrasya, upaniṣadyājñavalkya ṛṣiḥ, sūryo devatā, anuṣṭu-pchandaḥ, udaka prāśane viniyogaḥ |
+oṁ sūryaśca mā manyuśca manyupatayaśca manyukṛtebhyaḥ |
+pāpebhyo rakṣantām | yadrātryā pāpamakārṣam |
+manasā vācā hastābhyām | padbhyāmudareṇa śiśnā |
+rātristadavalumpatu | yatkiñca durita-mmayi |
+idamaha-mmāmamṛtayonau |
+sūrye jyotiṣi juhomi svāhā |
+en: For the mantra beginning sūryaśca the sage is Yājñavalkya of the Upaniṣad, the deity is Sūrya, the metre is anuṣṭup, and the use is in drinking water. Om. May Sūrya, and Manyu, and the lords of Manyu guard me from the wrong that anger has done. Whatever wrong I did in the night, by mind, by speech, by the hands, by the feet, by the belly, by the organ — may the night take it away. Whatever evil is in me, I offer here into Sūrya, the light, the source of immortality, svāhā.
+tel: సూర్యశ్చ అను మంత్రమునకు ఉపనిషద్యాజ్ఞవల్క్యుడు ఋషి, సూర్యుడు దేవత, అనుష్టుప్ ఛందస్సు, ఉదక ప్రాశనమునందు వినియోగము. ఓం. సూర్యుడు, మన్యువు, మన్యుపతులు నన్ను క్రోధము చేసిన పాపముల నుండి రక్షించుదురు గాక. రాత్రి యందు మనసుతో, మాటతో, చేతులతో, పాదములతో, ఉదరముతో, శిశ్నముతో నేను చేసిన పాపమును రాత్రి తొలగించును గాక. నాలో ఏ దురితము ఉన్నదో, దానిని అమృతమునకు మూలమైన సూర్య జ్యోతియందు హోమము చేయుచున్నాను, స్వాహా.
+hi: सूर्यश्च इस मंत्र के ऋषि उपनिषद्याज्ञवल्क्य, देवता सूर्य, छंद अनुष्टुप्, और विनियोग जल पीने में है। ओम्। सूर्य, मन्यु और मन्युपति मुझे क्रोध से किए पापों से रक्षा करें। रात में मन से, वाणी से, हाथों से, पैरों से, उदर से, शिश्न से जो पाप मैंने किया, उसे रात्रि हर ले। मुझमें जो दुरित है, उसे अमृत के स्रोत सूर्य ज्योति में मैं हवन करता हूँ, स्वाहा।
+
+--- unit 17 | section: Mantrācamana ---
+vidhi:
+At midday. A different mantra is used, and the water is drunk in the same way.
+deva:
+(मध्याह्न काले)
+आपः पुनन्त्विति मन्त्रस्य, नारायण ऋषिः, आपो देवता, गायत्री छन्दः, उदक प्राशने विनियोगः ।
+आपः॑ पुनन्तु पृथि॒वी-म्पृथि॒वी पू॒ता पु॑नातु॒ माम् ।
+पु॒नन्तु॒ ब्रह्म॑ण॒स्पति॒र्ब्रह्म॑पू॒ता पु॑नातु माम् ॥
+यदुच्छि॑ष्टमभो᳚ज्य॒-ञ्च यद्वा॑ दु॒श्चरि॑त॒-म्मम॑ ।
+सर्व॑-म्पुनन्तु॒ मामापो॑-ऽस॒ता-ञ्च॑ प्रति॒ग्रह॒ग्ं स्वाहा᳚ ॥
+iast:
+(madhyāhna kāle)
+āpaḥ punantviti mantrasya, nārāyaṇa ṛṣiḥ, āpo devatā, gāyatrī chandaḥ, udaka prāśane viniyogaḥ |
+āpaḥ punantu pṛthivī-mpṛthivī pūtā punātu mām |
+punantu brahmaṇaspatirbrahmapūtā punātu mām ||
+yaducchiṣṭamabhojya-ñca yadvā duścarita-mmama |
+sarva-mpunantu māmāpo-'satā-ñca pratigrahagṁ svāhā ||
+en: For the mantra beginning āpaḥ punantu the sage is Nārāyaṇa, the deity is the Waters, the metre is gāyatrī, and the use is in drinking water. May the waters purify the earth. May the earth, being purified, purify me. May they purify the lord of prayer. May prayer, being purified, purify me. Whatever is left over and not fit to eat, and whatever ill conduct is mine, and whatever I have taken from the unworthy — may the waters purify me of all of it, svāhā.
+tel: ఆపః పునంతు అను మంత్రమునకు నారాయణుడు ఋషి, ఆపస్సు దేవత, గాయత్రి ఛందస్సు, ఉదక ప్రాశనమునందు వినియోగము. జలములు భూమిని పవిత్రము చేయును గాక. పవిత్రమైన భూమి నన్ను పవిత్రము చేయును గాక. అవి బ్రహ్మణస్పతిని పవిత్రము చేయును గాక. పవిత్రమైన బ్రహ్మము నన్ను పవిత్రము చేయును గాక. మిగిలిన అభోజ్యమైనది, నా దుష్ప్రవర్తన, అయోగ్యుల నుండి నేను స్వీకరించినది — అన్నిటి నుండి జలములు నన్ను పవిత్రము చేయును గాక, స్వాహా.
+hi: आपः पुनंतु इस मंत्र के ऋषि नारायण, देवता आपः, छंद गायत्री, और विनियोग जल पीने में है। जल पृथ्वी को पवित्र करें। पवित्र हुई पृथ्वी मुझे पवित्र करे। वे ब्रह्मणस्पति को पवित्र करें। पवित्र हुआ ब्रह्म मुझे पवित्र करे। जो उच्छिष्ट और अभोज्य है, जो मेरा दुराचरण है, और जो मैंने अयोग्य से लिया है — उन सबसे जल मुझे पवित्र करें, स्वाहा।
+
+--- unit 18 | section: Mantrācamana ---
+vidhi:
+In the evening. Agni stands where Sūrya stood in the morning, and the day where the night stood.
+deva:
+(साय-ङ्काले)
+अग्निश्चेति मन्त्रस्य, याज्ञवल्क्य उपनिषदृषिः, अग्निर्देवता, अनुष्टु-प्छन्दः, उदक प्राशने विनियोगः ।
+अग्निश्च मा मन्युश्च मन्युपतयश्च मन्यु॑कृते॒भ्यः ।
+पापेभ्यो॑ रक्ष॒न्ताम् । यदह्ना पाप॑मका॒र्षम् ।
+मनसा वाचा॑ हस्ता॒भ्याम् । पद्भ्यामुदरे॑ण शि॒श्ना ।
+अह॒स्तद॑वलु॒म्पतु । यत्किञ्च॑ दुरि॒त-म्मयि॑ ।
+इ॒दम॒ह-म्माममृत॑यो॒नौ । सत्ये ज्योतिषि जुहो॑मि स्वा॒हा ।
+iast:
+(sāya-ṅkāle)
+agniśceti mantrasya, yājñavalkya upaniṣadṛṣiḥ, agnirdevatā, anuṣṭu-pchandaḥ, udaka prāśane viniyogaḥ |
+agniśca mā manyuśca manyupatayaśca manyukṛtebhyaḥ |
+pāpebhyo rakṣantām | yadahnā pāpamakārṣam |
+manasā vācā hastābhyām | padbhyāmudareṇa śiśnā |
+ahastadavalumpatu | yatkiñca durita-mmayi |
+idamaha-mmāmamṛtayonau | satye jyotiṣi juhomi svāhā |
+en: For the mantra beginning agniśca the sage is Yājñavalkya of the Upaniṣad, the deity is Agni, the metre is anuṣṭup, and the use is in drinking water. May Agni, and Manyu, and the lords of Manyu guard me from the wrong that anger has done. Whatever wrong I did in the day, by mind, by speech, by the hands, by the feet, by the belly, by the organ — may the day take it away. Whatever evil is in me, I offer here into truth, the light, the source of immortality, svāhā.
+tel: అగ్నిశ్చ అను మంత్రమునకు ఉపనిషద్యాజ్ఞవల్క్యుడు ఋషి, అగ్ని దేవత, అనుష్టుప్ ఛందస్సు, ఉదక ప్రాశనమునందు వినియోగము. అగ్ని, మన్యువు, మన్యుపతులు నన్ను క్రోధము చేసిన పాపముల నుండి రక్షించుదురు గాక. పగటి యందు మనసుతో, మాటతో, చేతులతో, పాదములతో, ఉదరముతో, శిశ్నముతో నేను చేసిన పాపమును పగలు తొలగించును గాక. నాలో ఏ దురితము ఉన్నదో, దానిని అమృతమునకు మూలమైన సత్య జ్యోతియందు హోమము చేయుచున్నాను, స్వాహా.
+hi: अग्निश्च इस मंत्र के ऋषि उपनिषद्याज्ञवल्क्य, देवता अग्नि, छंद अनुष्टुप्, और विनियोग जल पीने में है। अग्नि, मन्यु और मन्युपति मुझे क्रोध से किए पापों से रक्षा करें। दिन में मन से, वाणी से, हाथों से, पैरों से, उदर से, शिश्न से जो पाप मैंने किया, उसे दिन हर ले। मुझमें जो दुरित है, उसे अमृत के स्रोत सत्य ज्योति में मैं हवन करता हूँ, स्वाहा।
+
+--- unit 19 | section: Punar-mārjana ---
+vidhi:
+Do ācamana again, then sprinkle a second time. The Gāyatrī is recited first.
+deva:
+आचम्य ॥
+ओ-म्भूर्भुव॒स्स्वः॑ ।
+तत्स॑वि॒तुर्वरे॑ण्य॒-म्भर्गो॑ दे॒वस्य॑ धीमहि ।
+धियो॒ यो नः॑ प्रचो॒दया॑त् ॥
+iast:
+ācamya ||
+o-mbhūrbhuvassvaḥ |
+tatsaviturvareṇya-mbhargo devasya dhīmahi |
+dhiyo yo naḥ pracodayāt ||
+en: Having performed ācamana. Om, the earth, the mid-region, the heavens. We meditate on that adorable light of the divine Creator. May he set our thoughts in motion.
+tel: ఆచమనము చేసి. ఓం, భూమి, అంతరిక్షము, స్వర్గము. ఆ దివ్య సవితృ దేవుని పూజనీయ తేజస్సును ధ్యానించుచున్నాము. ఆయన మా బుద్ధులను ప్రేరేపించును గాక.
+hi: आचमन करके। ओम्, भूमि, अंतरिक्ष, स्वर्ग। उस दिव्य सविता देव के पूजनीय तेज का हम ध्यान करते हैं। वे हमारी बुद्धि को प्रेरित करें।
+
+--- unit 20 | section: Punar-mārjana ---
+vidhi:
+The same three verses of the Waters are now recited joined together, without the nine separate sprinklings.
+deva:
+आपो॒ हिष्ठा म॑यो॒भुव॒स्ता न॑ ऊ॒र्जे द॑धातन ।
+म॒हेरणा॑य॒ चक्ष॑से ।
+यो व॑श्शि॒वत॑मो रस॒स्तस्य॑ भाजयते॒ ह नः॑ ।
+उ॒श॒तीरि॑व मा॒त॑रः ।
+तस्मा॒ अर॑ङ्गमामवो॒ यस्य॒ क्षया॑य॒ जिन्व॑थ ।
+आपो॑ ज॒नय॑था च नः ।
+iast:
+āpo hiṣṭhā mayobhuvastā na ūrje dadhātana |
+maheraṇāya cakṣase |
+yo vaśśivatamo rasastasya bhājayate ha naḥ |
+uśatīriva mātaraḥ |
+tasmā araṅgamāmavo yasya kṣayāya jinvatha |
+āpo janayathā ca naḥ |
+en: O waters, you are the giver of happiness. Grant us strength. Grant us the sight of great joy. Give us here a share of that most auspicious essence of yours, like loving mothers. We come to you for that purpose for which you refresh us. O waters, you also bring us to birth.
+tel: ఓ జలములారా, మీరు సుఖమును కలిగించువారు. మాకు బలమును ఇండు. గొప్ప ఆనందము యొక్క దర్శనమును ఇండు. ప్రేమగల తల్లుల వలె, మీ మంగళకరమైన రసములో మాకు ఇక్కడ భాగమును ఇండు. మీరు ఏ కార్యము కొరకు మమ్ము తృప్తిపరచుదురో, ఆ కార్యము కొరకు మీ వద్దకు వచ్చినాము. ఓ జలములారా, మీరే మమ్ము పుట్టించుచున్నారు.
+hi: हे जल, तुम सुख देने वाले हो। हमें बल दो। महान आनंद का दर्शन दो। प्रेममयी माताओं के समान, अपने उस अत्यंत मंगल रस में हमें यहाँ भाग दो। जिस कार्य के लिए तुम हमें तृप्त करते हो, उसी के लिए हम तुम्हारे पास आए हैं। हे जल, तुम हमें जन्म भी देते हो।
+
+--- unit 21 | section: Aghamarṣaṇa ---
+vidhi:
+The washing away of wrong. The base text cites the Taittirīya Brāhmaṇa for this mantra.
+deva:
+॥ अघमर्षणम् ॥
+द्रुपदा दिवेत्यस्य मन्त्रस्य, कोकिल राजपुत्र ऋषिः, आपो देवता, अनुष्टु-प्छन्दः, अघमर्षणे विनियोगः ।
+ओ-न्द्रु॒प॒दा दि॑व मुञ्चतु । द्रु॒प॒दा दि॒वेन्मु॑मुचा॒नः ।
+स्वि॒न्न-स्स्ना॒त्वी मला॑दिव । पू॒त-म्प॒वित्रे॑णे॒वाज्य᳚म् ।
+आपः॑ शुन्धन्तु॒ मैन॑सः । (तै.ब्रा.2.6.6.4)
+iast:
+|| aghamarṣaṇam ||
+drupadā divetyasya mantrasya, kokila rājaputra ṛṣiḥ, āpo devatā, anuṣṭu-pchandaḥ, aghamarṣaṇe viniyogaḥ |
+o-ndrupadā diva muñcatu | drupadā divenmumucānaḥ |
+svinna-ssnātvī malādiva | pūta-mpavitreṇevājyam |
+āpaḥ śundhantu mainasaḥ | (tai.brā.2.6.6.4)
+en: For the mantra beginning drupadā diva the sage is Kokila Rājaputra, the deity is the Waters, the metre is anuṣṭup, and the use is in aghamarṣaṇa. Om. As one released from the wooden post, as one who has bathed and is freed of sweat and dirt, as butter purified by the strainer — so may the waters cleanse me of wrong.
+tel: ద్రుపదా దివ అను మంత్రమునకు కోకిల రాజపుత్రుడు ఋషి, ఆపస్సు దేవత, అనుష్టుప్ ఛందస్సు, అఘమర్షణమునందు వినియోగము. ఓం. కొయ్య కట్టు నుండి విడువబడిన వాని వలె, స్నానము చేసి చెమట మురికి పోగొట్టుకొనిన వాని వలె, జల్లెడతో శుద్ధి చేసిన నెయ్యి వలె, జలములు నా పాపమును కడుగును గాక.
+hi: द्रुपदा दिव इस मंत्र के ऋषि कोकिल राजपुत्र, देवता आपः, छंद अनुष्टुप्, और विनियोग अघमर्षण में है। ओम्। जैसे काठ के बंधन से छूटा हुआ, जैसे स्नान कर पसीने और मैल से मुक्त हुआ, जैसे छाननी से शुद्ध किया घृत — वैसे ही जल मेरे पाप को धो दें।
+
+--- unit 22 | section: Aghamarṣaṇa ---
+vidhi:
+A sprinkling for the ending of enmity.
+deva:
+शत्रुक्षयार्थ मार्जनम् ॥
+सुमित्रान इत्यस्य मन्त्रस्य, प्रजापति ऋषिः, आपो देवता, अनुष्टु-प्छन्दः, शत्रुक्षयार्थे विनियोगः ।
+ॐ सु॒मि॒त्रा न॒ आप॒ ओष॑धय-स्सन्तु । दु॒र्मि॒त्रास्तस्मै॑ भूयासुः ।
+यो᳚-ऽस्मान्द्वेष्टि॑ । य-ञ्च॑ व॒य-न्द्वि॒ष्मः । (तै.ब्रा.2.6.6.3)
+iast:
+śatrukṣayārtha mārjanam ||
+sumitrāna ityasya mantrasya, prajāpati ṛṣiḥ, āpo devatā, anuṣṭu-pchandaḥ, śatrukṣayārthe viniyogaḥ |
+oṁ sumitrā na āpa oṣadhaya-ssantu | durmitrāstasmai bhūyāsuḥ |
+yo-'smāndveṣṭi | ya-ñca vaya-ndviṣmaḥ | (tai.brā.2.6.6.3)
+en: For the mantra beginning sumitrā naḥ the sage is Prajāpati, the deity is the Waters, the metre is anuṣṭup, and the use is for the ending of enmity. Om. May the waters and the plants be friendly to us. May they be unfriendly to him who hates us, and to him whom we hate.
+tel: సుమిత్రా నః అను మంత్రమునకు ప్రజాపతి ఋషి, ఆపస్సు దేవత, అనుష్టుప్ ఛందస్సు, శత్రుక్షయమునందు వినియోగము. ఓం. జలములు, ఓషధులు మాకు మిత్రులు అగును గాక. మమ్ము ద్వేషించువానికి, మేము ద్వేషించువానికి అవి శత్రువులు అగును గాక.
+hi: सुमित्रा नः इस मंत्र के ऋषि प्रजापति, देवता आपः, छंद अनुष्टुप्, और विनियोग शत्रुक्षय में है। ओम्। जल और औषधियाँ हमारे मित्र हों। जो हमसे द्वेष करता है और जिससे हम द्वेष करते हैं, उनके लिए वे अमित्र हों।
+
+--- unit 23 | section: Aghamarṣaṇa ---
+vidhi:
+A sprinkling for the ending of wrongdoing.
+deva:
+पापक्षयार्थ मार्जनम् ॥
+इदमाप इत्यस्य मन्त्रस्य, उचक्थ्य ऋषिः, आपो देवता, अनुष्टु-प्छन्दः, दुरितक्षयार्थ मार्जने विनियोगः ।
+ॐ इ॒दमा॑पः॒ प्रव॑हत॒ यत्कि-ञ्च॑ दुरि॒त-म्मयि॑ ।
+यद्वा॒हम॑भिदु॒द्रोह॒ यद्वा॑ शे॒प उ॒तानृ॑तम् ॥
+iast:
+pāpakṣayārtha mārjanam ||
+idamāpa ityasya mantrasya, ucakthya ṛṣiḥ, āpo devatā, anuṣṭu-pchandaḥ, duritakṣayārtha mārjane viniyogaḥ |
+oṁ idamāpaḥ pravahata yatki-ñca durita-mmayi |
+yadvāhamabhidudroha yadvā śepa utānṛtam ||
+en: For the mantra beginning idam āpaḥ the sage is Ucakthya, the deity is the Waters, the metre is anuṣṭup, and the use is in sprinkling for the ending of wrongdoing. Om, waters, carry away whatever evil is in me, and whatever wrong I have done in enmity, and whatever I have cursed, and whatever untruth I have spoken.
+tel: ఇదమాప అను మంత్రమునకు ఉచక్థ్యుడు ఋషి, ఆపస్సు దేవత, అనుష్టుప్ ఛందస్సు, దురితక్షయ మార్జనమునందు వినియోగము. ఓం, జలములారా, నాలో ఉన్న దురితమును, ద్రోహముతో నేను చేసినదానిని, నేను శపించినదానిని, నేను పలికిన అసత్యమును కొట్టుకొని పోవునట్లు చేయుడు.
+hi: इदमापः इस मंत्र के ऋषि उचक्थ्य, देवता आपः, छंद अनुष्टुप्, और विनियोग दुरितक्षय मार्जन में है। ओम्, हे जल, मुझमें जो दुरित है, जो मैंने द्रोह से किया, जो शाप दिया, और जो असत्य कहा, उस सबको बहा ले जाओ।
+
+--- unit 24 | section: Offering of water to the sun ---
+vidhi:
+Stand and do ācamana and prāṇāyāma again, then state the intention. The words in brackets are said only when the sandhyā is performed after its proper hour, and a further offering is then made to make up for the delay.
+deva:
+आचम्य ॥
+प्राणानायम्य ॥
+पूर्वोक्त एव-ङ्गुण विशेषण विशिष्टायां शुभतिथौ (कालातिक्रमणदोष निवृत्यर्थ-म्प्रायश्चित्तार्घ्य पूर्वक) प्रातः/माध्याह्निक/सायं सन्ध्याङ्ग अर्घ्यप्रदान-ङ्करिष्ये ॥
+iast:
+ācamya ||
+prāṇānāyamya ||
+pūrvokta eva-ṅguṇa viśeṣaṇa viśiṣṭāyāṁ śubhatithau (kālātikramaṇadoṣa nivṛtyartha-mprāyaścittārghya pūrvaka) prātaḥ/mādhyāhnika/sāyaṁ sandhyāṅga arghyapradāna-ṅkariṣye ||
+en: Having performed ācamana. Having performed prāṇāyāma. At this auspicious hour already named, and preceded by the atoning offering for the fault of letting the hour pass, I shall now make the offering of water that belongs to the morning, midday or evening sandhyā.
+tel: ఆచమనము చేసి. ప్రాణాయామము చేసి. ముందు చెప్పిన ఈ శుభ ముహూర్తమునందు, కాలాతిక్రమణ దోష నివృత్తి కొరకు ప్రాయశ్చిత్తార్ఘ్యము పూర్వకముగా, ప్రాతః / మాధ్యాహ్నిక / సాయం సంధ్యాంగమైన అర్ఘ్యప్రదానము చేయుచున్నాను.
+hi: आचमन करके। प्राणायाम करके। पहले कहे हुए इस शुभ मुहूर्त में, कालातिक्रमण दोष की निवृत्ति के लिए प्रायश्चित्त अर्घ्य के साथ, प्रातः / माध्याह्निक / सायं संध्या के अंग रूप अर्घ्यप्रदान करता हूँ।
+
+--- unit 25 | section: Offering of water to the sun ---
+vidhi:
+Raise the water in both palms and pour it out with the Gāyatrī. The offering is made to the sun.
+deva:
+भूर्भुवस्स्वरिति महाव्याहृतीनाम्, परमेष्ठी प्रजापति ऋषिः, अग्नि-वायु-सूर्या देवताः, गायत्र्युष्णिक् अनुष्टुप्छन्दांसि ।
+तत्सवितुरित्यस्य, विश्वामित्र ऋषिः, सविता देवता, गायत्री छन्दः, अर्घ्यप्रदाने विनियोगः ।
+ओ-म्भूर्भुव॒स्स्वः॑ । ओ-न्तत्स॑वितु॒र्वरे॑ण्य॒म् । भर्गो॑ दे॒वस्य॑ धी॒महि । धियो॒ यो नः॑ प्रचो॒दया॑त् ॥
+श्री पद्मिनी उषा सौज्ञा छाया समेत श्री सूर्यनारायण परब्रह्मणे नमः । इदमर्घ्यं समर्पयामि ।
+iast:
+bhūrbhuvassvariti mahāvyāhṛtīnām, parameṣṭhī prajāpati ṛṣiḥ, agni-vāyu-sūryā devatāḥ, gāyatryuṣṇik anuṣṭupchandāṁsi |
+tatsaviturityasya, viśvāmitra ṛṣiḥ, savitā devatā, gāyatrī chandaḥ, arghyapradāne viniyogaḥ |
+o-mbhūrbhuvassvaḥ | o-ntatsaviturvareṇyam | bhargo devasya dhīmahi | dhiyo yo naḥ pracodayāt ||
+śrī padminī uṣā saujñā chāyā sameta śrī sūryanārāyaṇa parabrahmaṇe namaḥ | idamarghyaṁ samarpayāmi |
+en: For the three great vyāhṛtis the sage is Parameṣṭhī Prajāpati; the deities are Agni, Vāyu and Sūrya; and the metres are gāyatrī, uṣṇik and anuṣṭup. For the verse beginning tatsavituḥ the sage is Viśvāmitra, the deity is Savitā, the metre is gāyatrī, and the use is in the offering of water. Om, the earth, the mid-region, the heavens. We meditate on that adorable light of the divine Creator. May he set our thoughts in motion. Salutations to the supreme Brahman in the form of Sūryanārāyaṇa, together with Padminī, Uṣā, Sañjñā and Chāyā. I offer this water.
+tel: మూడు మహావ్యాహృతులకు పరమేష్ఠీ ప్రజాపతి ఋషి; అగ్ని, వాయు, సూర్యులు దేవతలు; గాయత్రి, ఉష్ణిక్, అనుష్టుప్ ఛందస్సులు. తత్సవితుః అను మంత్రమునకు విశ్వామిత్రుడు ఋషి, సవిత దేవత, గాయత్రి ఛందస్సు, అర్ఘ్యప్రదానమునందు వినియోగము. ఓం, భూమి, అంతరిక్షము, స్వర్గము. ఆ దివ్య సవితృ దేవుని పూజనీయ తేజస్సును ధ్యానించుచున్నాము. ఆయన మా బుద్ధులను ప్రేరేపించును గాక. పద్మినీ, ఉషా, సంజ్ఞా, ఛాయా సమేతుడైన శ్రీ సూర్యనారాయణ పరబ్రహ్మకు నమస్కారము. ఈ అర్ఘ్యమును సమర్పించుచున్నాను.
+hi: तीन महाव्याहृतियों के ऋषि परमेष्ठी प्रजापति; देवता अग्नि, वायु और सूर्य; छंद गायत्री, उष्णिक् और अनुष्टुप् हैं। तत्सवितुः मंत्र के ऋषि विश्वामित्र, देवता सविता, छंद गायत्री, और विनियोग अर्घ्यप्रदान में है। ओम्, भूमि, अंतरिक्ष, स्वर्ग। उस दिव्य सविता देव के पूजनीय तेज का हम ध्यान करते हैं। वे हमारी बुद्धि को प्रेरित करें। पद्मिनी, उषा, संज्ञा और छाया सहित श्री सूर्यनारायण परब्रह्म को नमस्कार। यह अर्घ्य समर्पित करता हूँ।
+
+--- unit 26 | section: Offering of water to the sun ---
+vidhi:
+In the morning the atoning offering is made to Uṣas. The figure in brackets is the number of times the Gāyatrī is then recited with the offering.
+deva:
+(प्रातः काले)
+उषस्त इत्यस्य मन्त्रस्य, गौतम ऋषिः, उषो देवता, उष्णिक्छन्दः, प्रायश्चित्तार्घ्य प्रदाने विनियोगः ।
+ॐ उष॒स्तच्चि॒त्रमाभ॑रा॒स्मभ्यं॑-वाँजनीवति येनतो॒क-ञ्च॒ तन॑य-ञ्च॒ धाम॑हे ॥
+श्री पद्मिनी उषा सौज्ञा छाया समेत श्री सूर्यनारायण परब्रह्मणे नमः । इदमर्घ्यं समर्पयामि ।
+ओ-म्भूः । ओ-म्भुवः॑ । ओग्ं सुवः॑ । ओ-न्तत्स॑वितु॒र्वरे॑ण्य॒म् । भ॒र्गो॑ दे॒वस्य॑ धी॒महि । धियो॒ योनः॑ प्रचो॒दया॑त् ॥ [3]
+iast:
+(prātaḥ kāle)
+uṣasta ityasya mantrasya, gautama ṛṣiḥ, uṣo devatā, uṣṇikchandaḥ, prāyaścittārghya pradāne viniyogaḥ |
+oṁ uṣastaccitramābharāsmabhyaṁ-vām̐janīvati yenatoka-ñca tanaya-ñca dhāmahe ||
+śrī padminī uṣā saujñā chāyā sameta śrī sūryanārāyaṇa parabrahmaṇe namaḥ | idamarghyaṁ samarpayāmi |
+o-mbhūḥ | o-mbhuvaḥ | ogṁ suvaḥ | o-ntatsaviturvareṇyam | bhargo devasya dhīmahi | dhiyo yonaḥ pracodayāt || [3]
+en: For the mantra beginning uṣas te the sage is Gautama, the deity is Uṣas, the metre is uṣṇik, and the use is in the atoning offering of water. Om, Uṣas, rich in strength, bring to us that bright wealth by which we may hold our children and our children’s children. Salutations to the supreme Brahman in the form of Sūryanārāyaṇa, together with Padminī, Uṣā, Sañjñā and Chāyā. I offer this water. Om, the earth. Om, the mid-region. Om, the heavens. We meditate on that adorable light of the divine Creator. May he set our thoughts in motion. Three times.
+tel: ఉషస్తే అను మంత్రమునకు గౌతముడు ఋషి, ఉషస్సు దేవత, ఉష్ణిక్ ఛందస్సు, ప్రాయశ్చిత్తార్ఘ్య ప్రదానమునందు వినియోగము. ఓం, బలము గల ఉషస్సు దేవీ, సంతానమును మనుమలను మేము పొందునట్లు ఆ ప్రకాశమైన సంపదను మాకు తెమ్ము. పద్మినీ, ఉషా, సంజ్ఞా, ఛాయా సమేతుడైన శ్రీ సూర్యనారాయణ పరబ్రహ్మకు నమస్కారము. ఈ అర్ఘ్యమును సమర్పించుచున్నాను. ఓం, భూమి. ఓం, అంతరిక్షము. ఓం, స్వర్గము. ఆ దివ్య సవితృ దేవుని పూజనీయ తేజస్సును ధ్యానించుచున్నాము. ఆయన మా బుద్ధులను ప్రేరేపించును గాక. మూడు సారులు.
+hi: उषस्ते इस मंत्र के ऋषि गौतम, देवता उषा, छंद उष्णिक्, और विनियोग प्रायश्चित्त अर्घ्यप्रदान में है। ओम्, हे बलवती उषा, वह उज्ज्वल संपत्ति हमें दो जिससे हम संतान और पौत्रों को धारण करें। पद्मिनी, उषा, संज्ञा और छाया सहित श्री सूर्यनारायण परब्रह्म को नमस्कार। यह अर्घ्य समर्पित करता हूँ। ओम्, भूमि। ओम्, अंतरिक्ष। ओम्, स्वर्ग। उस दिव्य सविता देव के पूजनीय तेज का हम ध्यान करते हैं। वे हमारी बुद्धि को प्रेरित करें। तीन बार।
+
+--- unit 27 | section: Offering of water to the sun ---
+vidhi:
+At midday the atoning offering is made to the sun himself, and the Gāyatrī is recited once.
+deva:
+(मध्याह्न काले)
+आकृष्णेनेत्यस्य मन्त्रस्य, हिरण्य स्तूप ऋषिः, सूर्यो देवता, त्रिष्टुप्छन्दः, प्रायश्चित्तार्घ्य प्रदाने विनियोगः ॥
+ॐ आकृ॒ष्णेन॒ रज॑सा॒ वर्त॑मानो निवे॒शय॑न्न॒मृत॒-म्मर्त्य॑ञ्च ।
+हि॒र॒ण्यये॑न सवि॒ता रथे॒ना-ऽऽदे॒वो या॑ति॒भुव॑नानि॒ पश्यन्॑ ॥
+श्री पद्मिनी उषा सौज्ञा छाया समेत श्री सूर्यनारायण परब्रह्मणे नमः । इदमर्घ्यं समर्पयामि ।
+ओ-म्भूः । ओ-म्भुवः॑ । ओग्ं सुवः॑ । ओ-न्तत्स॑वितु॒र्वरे॑ण्य॒म् । भ॒र्गो॑ दे॒वस्य॑ धी॒महि । धियो॒ योनः॑ प्रचो॒दया॑त् ॥ [1]
+iast:
+(madhyāhna kāle)
+ākṛṣṇenetyasya mantrasya, hiraṇya stūpa ṛṣiḥ, sūryo devatā, triṣṭupchandaḥ, prāyaścittārghya pradāne viniyogaḥ ||
+oṁ ākṛṣṇena rajasā vartamāno niveśayannamṛta-mmartyañca |
+hiraṇyayena savitā rathenā-''devo yātibhuvanāni paśyan ||
+śrī padminī uṣā saujñā chāyā sameta śrī sūryanārāyaṇa parabrahmaṇe namaḥ | idamarghyaṁ samarpayāmi |
+o-mbhūḥ | o-mbhuvaḥ | ogṁ suvaḥ | o-ntatsaviturvareṇyam | bhargo devasya dhīmahi | dhiyo yonaḥ pracodayāt || [1]
+en: For the mantra beginning ākṛṣṇena the sage is Hiraṇyastūpa, the deity is Sūrya, the metre is triṣṭup, and the use is in the atoning offering of water. Om, moving through the dark region, laying to rest the immortal and the mortal alike, Savitā comes in his golden chariot, beholding all the worlds. Salutations to the supreme Brahman in the form of Sūryanārāyaṇa, together with Padminī, Uṣā, Sañjñā and Chāyā. I offer this water. Om, the earth. Om, the mid-region. Om, the heavens. We meditate on that adorable light of the divine Creator. May he set our thoughts in motion. Once.
+tel: ఆకృష్ణేన అను మంత్రమునకు హిరణ్యస్తూపుడు ఋషి, సూర్యుడు దేవత, త్రిష్టుప్ ఛందస్సు, ప్రాయశ్చిత్తార్ఘ్య ప్రదానమునందు వినియోగము. ఓం, చీకటి ప్రదేశములో సంచరించుచు, అమృతమును మర్త్యమును నిద్రపుచ్చుచు, సవిత దేవుడు బంగారు రథముపై లోకములన్నిటిని చూచుచు వచ్చుచున్నాడు. పద్మినీ, ఉషా, సంజ్ఞా, ఛాయా సమేతుడైన శ్రీ సూర్యనారాయణ పరబ్రహ్మకు నమస్కారము. ఈ అర్ఘ్యమును సమర్పించుచున్నాను. ఓం, భూమి. ఓం, అంతరిక్షము. ఓం, స్వర్గము. ఆ దివ్య సవితృ దేవుని పూజనీయ తేజస్సును ధ్యానించుచున్నాము. ఆయన మా బుద్ధులను ప్రేరేపించును గాక. ఒకసారి.
+hi: आकृष्णेन इस मंत्र के ऋषि हिरण्यस्तूप, देवता सूर्य, छंद त्रिष्टुप्, और विनियोग प्रायश्चित्त अर्घ्यप्रदान में है। ओम्, अंधकार के प्रदेश में चलते हुए, अमृत और मर्त्य दोनों को विश्राम देते हुए, सविता स्वर्ण रथ पर सब लोकों को देखते हुए आते हैं। पद्मिनी, उषा, संज्ञा और छाया सहित श्री सूर्यनारायण परब्रह्म को नमस्कार। यह अर्घ्य समर्पित करता हूँ। ओम्, भूमि। ओम्, अंतरिक्ष। ओम्, स्वर्ग। उस दिव्य सविता देव के पूजनीय तेज का हम ध्यान करते हैं। वे हमारी बुद्धि को प्रेरित करें। एक बार।
+
+--- unit 28 | section: Offering of water to the sun ---
+vidhi:
+In the evening the atoning offering is made to Rātri, and the Gāyatrī is recited three times.
+deva:
+(साय-ङ्काले)
+आरात्रीत्यस्य मन्त्रस्य, कशिपा भरद्वाज दुहिता ऋषिः, रात्रिर्देवता, पथ्भ्या बृहती छन्दः, प्रायश्चितार्घ्य प्रदाने विनियोगः ।
+ॐ आरा॑त्रि॒ पार्थि॑व॒ग्ं॒ रजः॑ पि॒तुर॑ प्रायि॒ धाम॑भिः । दि॒व-स्सदा॑ग्ंसि बृह॒ती विति॑ष्ठस॒ आत्वे॒षं-वँ॑र्तते॒ त॑मः ॥
+श्री पद्मिनी उषा सौज्ञा छाया समेत श्री सूर्यनारायण परब्रह्मणे नमः । इदमर्घ्यं समर्पयामि ।
+ओ-म्भूः । ओ-म्भुवः॑ । ओग्ं सुवः॑ । ओ-न्तत्स॑वितु॒र्वरे॑ण्य॒म् । भ॒र्गो॑ दे॒वस्य॑ धी॒महि । धियो॒ योनः॑ प्रचो॒दया॑त् ॥ [3]
+iast:
+(sāya-ṅkāle)
+ārātrītyasya mantrasya, kaśipā bharadvāja duhitā ṛṣiḥ, rātrirdevatā, pathbhyā bṛhatī chandaḥ, prāyaścitārghya pradāne viniyogaḥ |
+oṁ ārātri pārthivagṁ rajaḥ pitura prāyi dhāmabhiḥ | diva-ssadāgṁsi bṛhatī vitiṣṭhasa ātveṣaṁ-vam̐rtate tamaḥ ||
+śrī padminī uṣā saujñā chāyā sameta śrī sūryanārāyaṇa parabrahmaṇe namaḥ | idamarghyaṁ samarpayāmi |
+o-mbhūḥ | o-mbhuvaḥ | ogṁ suvaḥ | o-ntatsaviturvareṇyam | bhargo devasya dhīmahi | dhiyo yonaḥ pracodayāt || [3]
+en: For the mantra beginning ā rātri the sage is Kaśipā, daughter of Bharadvāja, the deity is Rātri, the metre is pathyā bṛhatī, and the use is in the atoning offering of water. Om, Night, you have filled the earthly region with your forms, taking the place of your father. You stand spread out on high. You send the shining darkness towards us. Salutations to the supreme Brahman in the form of Sūryanārāyaṇa, together with Padminī, Uṣā, Sañjñā and Chāyā. I offer this water. Om, the earth. Om, the mid-region. Om, the heavens. We meditate on that adorable light of the divine Creator. May he set our thoughts in motion. Three times.
+tel: ఆరాత్రి అను మంత్రమునకు భరద్వాజ పుత్రిక కశిపా ఋషి, రాత్రి దేవత, పథ్యా బృహతి ఛందస్సు, ప్రాయశ్చిత్తార్ఘ్య ప్రదానమునందు వినియోగము. ఓం, రాత్రి దేవీ, తండ్రి స్థానమును తీసికొని నీ రూపములతో భూ ప్రదేశమును నింపినావు. పైన వ్యాపించి నిలిచియున్నావు. ప్రకాశించు చీకటిని మా వైపు పంపుచున్నావు. పద్మినీ, ఉషా, సంజ్ఞా, ఛాయా సమేతుడైన శ్రీ సూర్యనారాయణ పరబ్రహ్మకు నమస్కారము. ఈ అర్ఘ్యమును సమర్పించుచున్నాను. ఓం, భూమి. ఓం, అంతరిక్షము. ఓం, స్వర్గము. ఆ దివ్య సవితృ దేవుని పూజనీయ తేజస్సును ధ్యానించుచున్నాము. ఆయన మా బుద్ధులను ప్రేరేపించును గాక. మూడు సారులు.
+hi: आ रात्रि इस मंत्र के ऋषि भरद्वाज की पुत्री कशिपा, देवता रात्रि, छंद पथ्या बृहती, और विनियोग प्रायश्चित्त अर्घ्यप्रदान में है। ओम्, हे रात्रि, पिता का स्थान लेकर तुमने अपने रूपों से पृथ्वी के प्रदेश को भर दिया है। तुम ऊपर फैली हुई खड़ी हो। तुम चमकते अंधकार को हमारी ओर भेजती हो। पद्मिनी, उषा, संज्ञा और छाया सहित श्री सूर्यनारायण परब्रह्म को नमस्कार। यह अर्घ्य समर्पित करता हूँ। ओम्, भूमि। ओम्, अंतरिक्ष। ओम्, स्वर्ग। उस दिव्य सविता देव के पूजनीय तेज का हम ध्यान करते हैं। वे हमारी बुद्धि को प्रेरित करें। तीन बार।
+
+--- unit 29 | section: Circumambulation ---
+vidhi:
+Turn round once where you stand, saying this line.
+deva:
+असावादित इत्यस्य मन्त्रस्य, ब्रह्मा ऋषिः, आदित्यो देवता, अनुष्टु-प्छन्दः, भू प्रदक्षिणे विनियोग ।
+अ॒सावा॑दि॒त्यो ब्र॒ह्म ॥
+iast:
+asāvādita ityasya mantrasya, brahmā ṛṣiḥ, ādityo devatā, anuṣṭu-pchandaḥ, bhū pradakṣiṇe viniyoga |
+asāvādityo brahma ||
+en: For the mantra beginning asāv ādityaḥ the sage is Brahmā, the deity is Āditya, the metre is anuṣṭup, and the use is in turning round. That sun yonder is Brahman.
+tel: అసావాదిత్య అను మంత్రమునకు బ్రహ్మ ఋషి, ఆదిత్యుడు దేవత, అనుష్టుప్ ఛందస్సు, భూ ప్రదక్షిణమునందు వినియోగము. ఆ ఆదిత్యుడే బ్రహ్మము.
+hi: असावादित्य इस मंत्र के ऋषि ब्रह्मा, देवता आदित्य, छंद अनुष्टुप्, और विनियोग भू प्रदक्षिण में है। वह आदित्य ही ब्रह्म है।
+
+--- unit 30 | section: Sandhyā tarpaṇa ---
+vidhi:
+The offering of water at the morning sandhyā. Release water once at each name.
+deva:
+(प्रातः काले)
+गायत्र्या, व्यास ऋषिः, ब्रह्मा देवता, गायत्री छन्दः, प्रात-स्सन्ध्या तर्पणे विनियोगः ।
+ओ-म्भूः पुरुषस्तृप्यताम्
+ॐ ऋग्वेदस्तृप्यताम्
+ओ-म्मण्डलस्तृप्यताम्
+ॐ हिरण्यगर्भरूपी तृप्यताम्
+ॐ आत्मा तृप्यताम्
+ओ-ङ्गायत्री तृप्यताम्
+ॐ-वेँदमाता तृप्यताम्
+ॐ साङ्कृती तृप्यताम्
+ॐ सन्ध्या तृप्यताम्
+ओ-ङ्कुमारी तृप्यताम्
+ओ-म्ब्राह्मी तृप्यताम्
+ॐ उषस्तृप्यताम्
+ओ-न्निर्मृजी तृप्यताम्
+ॐ सर्वार्थसिद्धिकरी तृप्यताम्
+ॐ सर्वमन्त्राधिपतिस्तृप्यताम्
+ओ-म्भूर्भवस्स्वः पुरुषस्तृप्यताम्
+iast:
+(prātaḥ kāle)
+gāyatryā, vyāsa ṛṣiḥ, brahmā devatā, gāyatrī chandaḥ, prāta-ssandhyā tarpaṇe viniyogaḥ |
+o-mbhūḥ puruṣastṛpyatām
+oṁ ṛgvedastṛpyatām
+o-mmaṇḍalastṛpyatām
+oṁ hiraṇyagarbharūpī tṛpyatām
+oṁ ātmā tṛpyatām
+o-ṅgāyatrī tṛpyatām
+oṁ-vem̐damātā tṛpyatām
+oṁ sāṅkṛtī tṛpyatām
+oṁ sandhyā tṛpyatām
+o-ṅkumārī tṛpyatām
+o-mbrāhmī tṛpyatām
+oṁ uṣastṛpyatām
+o-nnirmṛjī tṛpyatām
+oṁ sarvārthasiddhikarī tṛpyatām
+oṁ sarvamantrādhipatistṛpyatām
+o-mbhūrbhavassvaḥ puruṣastṛpyatām
+en: For the Gāyatrī the sage is Vyāsa, the deity is Brahmā, the metre is gāyatrī, and the use is in the tarpaṇa of the morning sandhyā. May the Person of the earth be satisfied. May the Ṛgveda be satisfied. May the orb be satisfied. May he whose form is Hiraṇyagarbha be satisfied. May the Self be satisfied. May Gāyatrī be satisfied. May the Mother of the Veda be satisfied. May Sāṅkṛtī be satisfied. May Sandhyā be satisfied. May Kumārī be satisfied. May Brāhmī be satisfied. May Uṣas be satisfied. May Nirmṛjī be satisfied. May she who grants every purpose be satisfied. May the lord of all mantras be satisfied. May the Person of the earth, the mid-region and the heavens be satisfied.
+tel: గాయత్రికి వ్యాసుడు ఋషి, బ్రహ్మ దేవత, గాయత్రి ఛందస్సు, ప్రాతఃసంధ్యా తర్పణమునందు వినియోగము. భూః పురుషుడు తృప్తి పొందును గాక. ఋగ్వేదము తృప్తి పొందును గాక. మండలము తృప్తి పొందును గాక. హిరణ్యగర్భ రూపుడు తృప్తి పొందును గాక. ఆత్మ తృప్తి పొందును గాక. గాయత్రి తృప్తి పొందును గాక. వేదమాత తృప్తి పొందును గాక. సాంకృతి తృప్తి పొందును గాక. సంధ్య తృప్తి పొందును గాక. కుమారి తృప్తి పొందును గాక. బ్రాహ్మి తృప్తి పొందును గాక. ఉషస్సు తృప్తి పొందును గాక. నిర్మృజి తృప్తి పొందును గాక. సర్వార్థసిద్ధికరి తృప్తి పొందును గాక. సర్వమంత్రాధిపతి తృప్తి పొందును గాక. భూర్భువస్సువః పురుషుడు తృప్తి పొందును గాక.
+hi: गायत्री के ऋषि व्यास, देवता ब्रह्मा, छंद गायत्री, और विनियोग प्रातःसंध्या तर्पण में है। भूः पुरुष तृप्त हों। ऋग्वेद तृप्त हो। मंडल तृप्त हो। हिरण्यगर्भ रूप तृप्त हों। आत्मा तृप्त हो। गायत्री तृप्त हों। वेदमाता तृप्त हों। सांकृति तृप्त हों। संध्या तृप्त हों। कुमारी तृप्त हों। ब्राह्मी तृप्त हों। उषा तृप्त हों। निर्मृजी तृप्त हों। सर्वार्थसिद्धिकरी तृप्त हों। सर्वमंत्राधिपति तृप्त हों। भूर्भुवःस्वः पुरुष तृप्त हों।
+
+--- unit 31 | section: Sandhyā tarpaṇa ---
+vidhi:
+The same offering at midday. The names change with the hour.
+deva:
+(मध्याह्न काले)
+सावित्र्याः, कश्यप ऋषिः, रुद्रो देवता, त्रिष्टु-प्छन्दः, माध्याह्निक सन्ध्या तर्पणे विनियोगः ।
+ओ-म्भुवः पुरुषस्तृप्यताम्
+ॐ-यँजुर्वेदस्तृप्यताम्
+ओ-म्मण्डलस्तृप्यताम्
+ॐ रुद्ररूपी तृप्यताम्
+ॐ अनन्तरात्मा तृप्यताम्
+ॐ सावित्री तृप्यताम्
+ॐ-वेँदमाता तृप्यताम्
+ॐ साङ्कृती तृप्यताम्
+ॐ सन्ध्या तृप्यताम्
+ॐ-युँवती तृप्यताम्
+ॐ रौद्री तृप्यताम्
+ॐ उषस्तृप्यताम्
+ओ-न्निर्मृजी तृप्यताम्
+ॐ सर्वर्थसिद्धिकरी तृप्यताम्
+ॐ सर्वमन्त्राधिपतिस्तृप्यताम्
+ओ-म्भूर्भुवस्स्वः पुरुषस्तृप्यताम्
+iast:
+(madhyāhna kāle)
+sāvitryāḥ, kaśyapa ṛṣiḥ, rudro devatā, triṣṭu-pchandaḥ, mādhyāhnika sandhyā tarpaṇe viniyogaḥ |
+o-mbhuvaḥ puruṣastṛpyatām
+oṁ-yam̐jurvedastṛpyatām
+o-mmaṇḍalastṛpyatām
+oṁ rudrarūpī tṛpyatām
+oṁ anantarātmā tṛpyatām
+oṁ sāvitrī tṛpyatām
+oṁ-vem̐damātā tṛpyatām
+oṁ sāṅkṛtī tṛpyatām
+oṁ sandhyā tṛpyatām
+oṁ-yum̐vatī tṛpyatām
+oṁ raudrī tṛpyatām
+oṁ uṣastṛpyatām
+o-nnirmṛjī tṛpyatām
+oṁ sarvarthasiddhikarī tṛpyatām
+oṁ sarvamantrādhipatistṛpyatām
+o-mbhūrbhuvassvaḥ puruṣastṛpyatām
+en: For Sāvitrī the sage is Kaśyapa, the deity is Rudra, the metre is triṣṭup, and the use is in the tarpaṇa of the midday sandhyā. May the Person of the mid-region be satisfied. May the Yajurveda be satisfied. May the orb be satisfied. May he whose form is Rudra be satisfied. May the endless Self be satisfied. May Sāvitrī be satisfied. May the Mother of the Veda be satisfied. May Sāṅkṛtī be satisfied. May Sandhyā be satisfied. May Yuvatī be satisfied. May Raudrī be satisfied. May Uṣas be satisfied. May Nirmṛjī be satisfied. May she who grants every purpose be satisfied. May the lord of all mantras be satisfied. May the Person of the earth, the mid-region and the heavens be satisfied.
+tel: సావిత్రికి కశ్యపుడు ఋషి, రుద్రుడు దేవత, త్రిష్టుప్ ఛందస్సు, మాధ్యాహ్నిక సంధ్యా తర్పణమునందు వినియోగము. భువః పురుషుడు తృప్తి పొందును గాక. యజుర్వేదము తృప్తి పొందును గాక. మండలము తృప్తి పొందును గాక. రుద్ర రూపుడు తృప్తి పొందును గాక. అనంతరాత్మ తృప్తి పొందును గాక. సావిత్రి తృప్తి పొందును గాక. వేదమాత తృప్తి పొందును గాక. సాంకృతి తృప్తి పొందును గాక. సంధ్య తృప్తి పొందును గాక. యువతి తృప్తి పొందును గాక. రౌద్రి తృప్తి పొందును గాక. ఉషస్సు తృప్తి పొందును గాక. నిర్మృజి తృప్తి పొందును గాక. సర్వార్థసిద్ధికరి తృప్తి పొందును గాక. సర్వమంత్రాధిపతి తృప్తి పొందును గాక. భూర్భువస్సువః పురుషుడు తృప్తి పొందును గాక.
+hi: सावित्री के ऋषि कश्यप, देवता रुद्र, छंद त्रिष्टुप्, और विनियोग माध्याह्निक संध्या तर्पण में है। भुवः पुरुष तृप्त हों। यजुर्वेद तृप्त हो। मंडल तृप्त हो। रुद्र रूप तृप्त हों। अनंतरात्मा तृप्त हो। सावित्री तृप्त हों। वेदमाता तृप्त हों। सांकृति तृप्त हों। संध्या तृप्त हों। युवती तृप्त हों। रौद्री तृप्त हों। उषा तृप्त हों। निर्मृजी तृप्त हों। सर्वार्थसिद्धिकरी तृप्त हों। सर्वमंत्राधिपति तृप्त हों। भूर्भुवःस्वः पुरुष तृप्त हों।
+
+--- unit 32 | section: Sandhyā tarpaṇa ---
+vidhi:
+The same offering in the evening.
+deva:
+(सायन्त्र काले)
+सरस्वत्या, वशिष्ठ ऋषिः, विष्णुर्देवता जगती छन्दः, सायं सन्ध्या तर्पणे विनियोगः ।
+ओग्ं स्वः पुरुषस्तृप्यताम्
+ॐ सामवेदस्तृप्यताम्
+ओ-म्मण्डलस्तृप्यताम्
+ॐ-विँष्णुरूपी तृप्यताम्
+ओ-म्परमात्मा तृप्यताम्
+ॐ सरस्वती तृप्यताम्
+ॐ-वेँदमाता तृप्यताम्
+ॐ साङ्कृती तृप्यताम्
+ॐ सन्ध्या तृप्यताम्
+ॐ-वृँद्धा तृप्यताम्
+ॐ-वैँष्णवी तृप्यताम्
+ॐ उषस्तृप्यताम्
+ओ-न्निर्मृजी तृप्यताम्
+ॐ सर्वार्थसिद्धिकरी तृप्यताम्
+ॐ सर्वमन्त्राधिपतिस्तृप्यताम्
+ओ-म्भूर्भुवस्स्वः पुरुष स्तृप्यताम्
+iast:
+(sāyantra kāle)
+sarasvatyā, vaśiṣṭha ṛṣiḥ, viṣṇurdevatā jagatī chandaḥ, sāyaṁ sandhyā tarpaṇe viniyogaḥ |
+ogṁ svaḥ puruṣastṛpyatām
+oṁ sāmavedastṛpyatām
+o-mmaṇḍalastṛpyatām
+oṁ-vim̐ṣṇurūpī tṛpyatām
+o-mparamātmā tṛpyatām
+oṁ sarasvatī tṛpyatām
+oṁ-vem̐damātā tṛpyatām
+oṁ sāṅkṛtī tṛpyatām
+oṁ sandhyā tṛpyatām
+oṁ-vṛm̐ddhā tṛpyatām
+oṁ-vaim̐ṣṇavī tṛpyatām
+oṁ uṣastṛpyatām
+o-nnirmṛjī tṛpyatām
+oṁ sarvārthasiddhikarī tṛpyatām
+oṁ sarvamantrādhipatistṛpyatām
+o-mbhūrbhuvassvaḥ puruṣa stṛpyatām
+en: For Sarasvatī the sage is Vasiṣṭha, the deity is Viṣṇu, the metre is jagatī, and the use is in the tarpaṇa of the evening sandhyā. May the Person of the heavens be satisfied. May the Sāmaveda be satisfied. May the orb be satisfied. May he whose form is Viṣṇu be satisfied. May the supreme Self be satisfied. May Sarasvatī be satisfied. May the Mother of the Veda be satisfied. May Sāṅkṛtī be satisfied. May Sandhyā be satisfied. May Vṛddhā be satisfied. May Vaiṣṇavī be satisfied. May Uṣas be satisfied. May Nirmṛjī be satisfied. May she who grants every purpose be satisfied. May the lord of all mantras be satisfied. May the Person of the earth, the mid-region and the heavens be satisfied.
+tel: సరస్వతికి వశిష్ఠుడు ఋషి, విష్ణువు దేవత, జగతి ఛందస్సు, సాయం సంధ్యా తర్పణమునందు వినియోగము. స్వః పురుషుడు తృప్తి పొందును గాక. సామవేదము తృప్తి పొందును గాక. మండలము తృప్తి పొందును గాక. విష్ణు రూపుడు తృప్తి పొందును గాక. పరమాత్మ తృప్తి పొందును గాక. సరస్వతి తృప్తి పొందును గాక. వేదమాత తృప్తి పొందును గాక. సాంకృతి తృప్తి పొందును గాక. సంధ్య తృప్తి పొందును గాక. వృద్ధ తృప్తి పొందును గాక. వైష్ణవి తృప్తి పొందును గాక. ఉషస్సు తృప్తి పొందును గాక. నిర్మృజి తృప్తి పొందును గాక. సర్వార్థసిద్ధికరి తృప్తి పొందును గాక. సర్వమంత్రాధిపతి తృప్తి పొందును గాక. భూర్భువస్సువః పురుషుడు తృప్తి పొందును గాక.
+hi: सरस्वती के ऋषि वसिष्ठ, देवता विष्णु, छंद जगती, और विनियोग सायं संध्या तर्पण में है। स्वः पुरुष तृप्त हों। सामवेद तृप्त हो। मंडल तृप्त हो। विष्णु रूप तृप्त हों। परमात्मा तृप्त हो। सरस्वती तृप्त हों। वेदमाता तृप्त हों। सांकृति तृप्त हों। संध्या तृप्त हों। वृद्धा तृप्त हों। वैष्णवी तृप्त हों। उषा तृप्त हों। निर्मृजी तृप्त हों। सर्वार्थसिद्धिकरी तृप्त हों। सर्वमंत्राधिपति तृप्त हों। भूर्भुवःस्वः पुरुष तृप्त हों।
+
+--- unit 33 | section: Standing before the sun ---
+vidhi:
+Stand facing the sun. These two verses are recited at all three times.
+deva:
+उदुत्य मित्यस्याः, प्रस्कण्वृषिः, सविता देवता, गायत्री छन्दः ।
+चित्र-न्देवानामित्यस्याः, कुत्स ऋषिः, सूर्यो देवता, त्रिष्टुप्छन्दः, सूर्योपस्थाने विनियोगः ॥
+ॐ उदु॒त्य-ञ्जा॒तवे॑दस-न्दे॒वं-वँ॑हन्ति के॒तवः॑। दृ॒शे विश्वा॑य॒ सूर्य॑म् ॥
+ओ-ञ्चि॒त्र-न्दे॒वाना॒मुद॑गा॒दनी॑क॒-ञ्चक्षु॑र्मि॒त्रस्य॒ वरु॑णस्या॒ग्नेः । आप्रा॒द्यावा॑ पृथि॒वी अ॒न्तरि॑क्ष॒ग्ं॒ सूर्य॑ आ॒त्मा जग॑दस्त॒स्थुष॑श्च ॥
+iast:
+udutya mityasyāḥ, praskaṇvṛṣiḥ, savitā devatā, gāyatrī chandaḥ |
+citra-ndevānāmityasyāḥ, kutsa ṛṣiḥ, sūryo devatā, triṣṭupchandaḥ, sūryopasthāne viniyogaḥ ||
+oṁ udutya-ñjātavedasa-ndevaṁ-vam̐hanti ketavaḥ| dṛśe viśvāya sūryam ||
+o-ñcitra-ndevānāmudagādanīka-ñcakṣurmitrasya varuṇasyāgneḥ | āprādyāvā pṛthivī antarikṣagṁ sūrya ātmā jagadastasthuṣaśca ||
+en: For the verse beginning ud u tyam the sage is Praskaṇva, the deity is Savitā, and the metre is gāyatrī. For the verse beginning citraṁ devānām the sage is Kutsa, the deity is Sūrya, the metre is triṣṭup, and the use is in standing before the sun. Om, the rays bear upward that god who knows all that is born, that all may see the sun. The bright banner of the gods has risen. It is the eye of Mitra, of Varuṇa and of Agni. The sun has filled heaven and earth and the mid-region. He is the Self of all that moves and all that stands still.
+tel: ఉదుత్యం అను మంత్రమునకు ప్రస్కణ్వుడు ఋషి, సవిత దేవత, గాయత్రి ఛందస్సు. చిత్రం దేవానాం అను మంత్రమునకు కుత్సుడు ఋషి, సూర్యుడు దేవత, త్రిష్టుప్ ఛందస్సు, సూర్యోపస్థానమునందు వినియోగము. ఓం, జాతవేదుడైన ఆ దేవుని కిరణములు పైకి మోసుకొని పోవుచున్నవి, విశ్వమంతయు సూర్యుని చూచుటకు. దేవతల ప్రకాశమైన పతాకము ఉదయించినది. అది మిత్ర, వరుణ, అగ్నుల నేత్రము. సూర్యుడు ఆకాశమును, భూమిని, అంతరిక్షమును నింపినాడు. చరాచరములకు ఆయనే ఆత్మ.
+hi: उदुत्यं इस मंत्र के ऋषि प्रस्कण्व, देवता सविता, छंद गायत्री। चित्रं देवानां इस मंत्र के ऋषि कुत्स, देवता सूर्य, छंद त्रिष्टुप्, और विनियोग सूर्योपस्थान में है। ओम्, जातवेद उस देव को किरणें ऊपर ले जाती हैं, जिससे सब सूर्य को देखें। देवताओं की उज्ज्वल पताका उदित हुई है। वह मित्र, वरुण और अग्नि का नेत्र है। सूर्य ने आकाश, पृथ्वी और अंतरिक्ष को भर दिया है। चर और अचर सबका वही आत्मा है।
+
+--- unit 34 | section: Standing before the sun ---
+vidhi:
+In the morning four further verses are added.
+deva:
+(प्रातः काले)
+ओ-म्मित्रस्येत्यादि चतुर्णाम्, विश्वामित्र ऋषिः, लिङ्गोक्ता देवताः, गायत्री बृहत्यनुष्टुप् धृतयश्छन्दांसि, सूर्योपस्थाने विनियोगः ।
+ओ-म्मि॒त्रस्य॑ चर्षणी॒ दृतोवो॑ दे॒वस्य॑सान॒सि द्यु॒म्न-ञ्चि॒त्र स्र॑वस्तमम् ॥
+ओ-न्दे॒वस्त्वा॑ सवि॒तोद्व॑पतु सुपा॒णिस्स्व॑ज्गु॒रिस्सु॑ बा॒हुरु॒तशक्त्या॑ । अव्य॑थमाना पृथि॒व्या माशा॒दिश॒ आपृ॑ण ॥
+ॐ उ॒त्थाय॑ बृह॒ती भ॒वो दु॑त्तिष्ठध्रु॒वात्वम् । मित्रै॒तान्त॑ उ॒खा-म्परि॑ददा॒म्यभि॑त्या ए॒षा माभे॑दि ॥
+ॐ-वँस॑व॒स्त्वा छृ॑न्दन्तु गाय॒त्रेण॒ छन्द॑साज्गिर॒स्व द्रु॒द्रास्त्वा छृ॑न्दन्तु॒ त्रैष्टु॑भेन॒ छन्द॑साज्गिर॒स्वत् ।
+आ॒दि॒त्यास्त्वा छृ॑न्दन्तु॒ जाग॑तेन॒ छन्द॑साज्गिर॒स्व द्विश्वे॑त्वा दे॒वावै॑श्वान॒रा आछृ॑न्द॒न्त्वानु॑ष्टुभेन॒ छन्द॑साज्गिर॒स्वत् ॥
+iast:
+(prātaḥ kāle)
+o-mmitrasyetyādi caturṇām, viśvāmitra ṛṣiḥ, liṅgoktā devatāḥ, gāyatrī bṛhatyanuṣṭup dhṛtayaśchandāṁsi, sūryopasthāne viniyogaḥ |
+o-mmitrasya carṣaṇī dṛtovo devasyasānasi dyumna-ñcitra sravastamam ||
+o-ndevastvā savitodvapatu supāṇissvajgurissu bāhurutaśaktyā | avyathamānā pṛthivyā māśādiśa āpṛṇa ||
+oṁ utthāya bṛhatī bhavo duttiṣṭhadhruvātvam | mitraitānta ukhā-mparidadāmyabhityā eṣā mābhedi ||
+oṁ-vam̐savastvā chṛndantu gāyatreṇa chandasājgirasva drudrāstvā chṛndantu traiṣṭubhena chandasājgirasvat |
+ādityāstvā chṛndantu jāgatena chandasājgirasva dviśvetvā devāvaiśvānarā āchṛndantvānuṣṭubhena chandasājgirasvat ||
+en: For the four verses beginning mitrasya the sage is Viśvāmitra, the deities are those named in the verses, the metres are gāyatrī, bṛhatī, anuṣṭup and dhṛti, and the use is in standing before the sun. Om, the glory of Mitra, the god who sustains men, is nourishing, bright and most renowned. Om, may the god Savitā set you up with his fair hand, his strong arm and his power. Do not suffer, O earth, but fill the quarters and the regions. Om, rise up and become great. Stand firm. O friend, they give you this vessel. Let this not be broken. Om, may the Vasus cover you with the gāyatrī metre; may the Rudras cover you with the traiṣṭubha metre; may the Ādityas cover you with the jāgata metre; and may all the Vaiśvānara gods cover you with the ānuṣṭubha metre.
+tel: మిత్రస్య మొదలైన నాలుగు మంత్రములకు విశ్వామిత్రుడు ఋషి, మంత్రములలో చెప్పిన దేవతలు, గాయత్రి బృహతి అనుష్టుప్ ధృతి ఛందస్సులు, సూర్యోపస్థానమునందు వినియోగము. ఓం, మనుష్యులను పోషించు మిత్ర దేవుని కీర్తి పుష్టికరము, ప్రకాశమానము, అత్యంత ప్రసిద్ధము. ఓం, సవిత దేవుడు తన మంచి చేతితో, బలమైన బాహువుతో, శక్తితో నిన్ను నిలబెట్టును గాక. భూమీ, బాధపడకుము, దిక్కులను ప్రదేశములను నింపుము. ఓం, లేచి గొప్పవాడవు కమ్ము. స్థిరముగా నిలువుము. మిత్రమా, వారు నీకు ఈ పాత్రను ఇచ్చుచున్నారు. ఇది భగ్నము కాకుండును గాక. ఓం, వసువులు గాయత్రి ఛందస్సుతో నిన్ను కప్పుదురు గాక; రుద్రులు త్రైష్టుభ ఛందస్సుతో కప్పుదురు గాక; ఆదిత్యులు జాగత ఛందస్సుతో కప్పుదురు గాక; వైశ్వానర దేవతలందరు ఆనుష్టుభ ఛందస్సుతో కప్పుదురు గాక.
+hi: मित्रस्य आदि चार मंत्रों के ऋषि विश्वामित्र, देवता मंत्रों में कहे गए, छंद गायत्री, बृहती, अनुष्टुप् और धृति, और विनियोग सूर्योपस्थान में है। ओम्, मनुष्यों का पालन करने वाले मित्र देव की कीर्ति पुष्टिकारक, उज्ज्वल और अत्यंत प्रसिद्ध है। ओम्, सविता देव अपने सुंदर हाथ, बलवान बाहु और शक्ति से तुम्हें स्थापित करें। हे पृथ्वी, दुख न पाओ, दिशाओं और प्रदेशों को भर दो। ओम्, उठकर महान बनो। स्थिर रहो। हे मित्र, वे तुम्हें यह पात्र देते हैं। यह भग्न न हो। ओम्, वसु तुम्हें गायत्री छंद से ढकें; रुद्र त्रैष्टुभ छंद से ढकें; आदित्य जागत छंद से ढकें; और सब वैश्वानर देव आनुष्टुभ छंद से ढकें।
+
+--- unit 35 | section: Standing before the sun ---
+vidhi:
+At midday four verses are used, and the last of them is the prayer for a hundred years.
+deva:
+(मध्याह्न काले)
+उद्वयमुदित्यमितिद्वयो, प्रस्कण्व ऋषिः, सविता देवता, प्रथमस्यानुष्टुप्छन्दः, द्वितीयस्य गायत्री छन्दः,
+चित्र-न्देवानामित्यस्य, कुत्स ऋषिः, सविता देवता, त्रिष्टुप्छन्दः, तच्चक्षुरित्यस्य, दध्यङ्गाथर्वण ऋषिः, सूर्यो देवता, पङ्क्तिश्छन्दः, सूर्योपस्थाने विनियोगः ॥
+ॐ उद्व॒य-न्तम॑स॒स्परि॒स्वः॒ पश्य॑न्त॒ उत्त॑रम् ।
+दे॒व-न्दे॑व॒त्रा सूर्य॒ मग॑न्म॒ ज्योति॑रुत्त॒मम् ॥
+ॐ उदु॒त्य-ञ्जा॒तवे॑दस-न्दे॒वं-वँ॑हन्ति के॒तवः॑ ।
+दृ॒शे विश्वा॑य॒ सूर्य॑म् ॥
+ओ-ञ्चि॒त्र-न्दे॒वाना॒मुद॑गा॒दनी॑क॒-ञ्चक्षु॑र्मि॒त्रस्य॒ वरु॑णस्या॒ग्नेः ।
+आप्रा॒द्यावा॑ पृथि॒वी अ॒न्तरि॑क्ष॒ग्ं॒ सूर्य॑ आ॒त्मा ज॑गदस्त॒स्थुष॑श्च ॥
+ओ-न्तच्चक्षु॑र्दे॒वहि॑त-म्पु॒रस्ता॑च्छु॒क्र मु॒च्चर॑त् ।
+पश्ये॒म श॒रद॑श्श॒त-ञ्जीवे॑म श॒रद॑श्श॒तग्ं शृणु॑याम श॒रद॑श्श॒तम् ॥
+iast:
+(madhyāhna kāle)
+udvayamudityamitidvayo, praskaṇva ṛṣiḥ, savitā devatā, prathamasyānuṣṭupchandaḥ, dvitīyasya gāyatrī chandaḥ,
+citra-ndevānāmityasya, kutsa ṛṣiḥ, savitā devatā, triṣṭupchandaḥ, taccakṣurityasya, dadhyaṅgātharvaṇa ṛṣiḥ, sūryo devatā, paṅktiśchandaḥ, sūryopasthāne viniyogaḥ ||
+oṁ udvaya-ntamasasparisvaḥ paśyanta uttaram |
+deva-ndevatrā sūrya maganma jyotiruttamam ||
+oṁ udutya-ñjātavedasa-ndevaṁ-vam̐hanti ketavaḥ |
+dṛśe viśvāya sūryam ||
+o-ñcitra-ndevānāmudagādanīka-ñcakṣurmitrasya varuṇasyāgneḥ |
+āprādyāvā pṛthivī antarikṣagṁ sūrya ātmā jagadastasthuṣaśca ||
+o-ntaccakṣurdevahita-mpurastācchukra muccarat |
+paśyema śaradaśśata-ñjīvema śaradaśśatagṁ śṛṇuyāma śaradaśśatam ||
+en: For the two verses beginning ud vayam and ud u tyam the sage is Praskaṇva, the deity is Savitā, the metre of the first is anuṣṭup and of the second gāyatrī. For the verse beginning citraṁ devānām the sage is Kutsa, the deity is Savitā, the metre is triṣṭup. For the verse beginning tac cakṣuḥ the sage is Dadhyaṅ Ātharvaṇa, the deity is Sūrya, the metre is paṅkti, and the use is in standing before the sun. Om, rising out of the darkness and beholding the higher light, we have reached the sun, the god among gods, the highest light. Om, the rays bear upward that god who knows all that is born, that all may see the sun. The bright banner of the gods has risen. It is the eye of Mitra, of Varuṇa and of Agni. The sun has filled heaven and earth and the mid-region. He is the Self of all that moves and all that stands still. Om, may that eye, set in the east by the gods, rise up bright. May we see a hundred autumns. May we live a hundred autumns. May we hear a hundred autumns.
+tel: ఉద్వయం, ఉదుత్యం అను రెండు మంత్రములకు ప్రస్కణ్వుడు ఋషి, సవిత దేవత, మొదటిదానికి అనుష్టుప్, రెండవదానికి గాయత్రి ఛందస్సు. చిత్రం దేవానాం అను మంత్రమునకు కుత్సుడు ఋషి, సవిత దేవత, త్రిష్టుప్ ఛందస్సు. తచ్చక్షుః అను మంత్రమునకు దధ్యఙ్ ఆథర్వణుడు ఋషి, సూర్యుడు దేవత, పంక్తి ఛందస్సు, సూర్యోపస్థానమునందు వినియోగము. ఓం, చీకటి నుండి పైకి లేచి ఉత్తమమైన జ్యోతిని చూచుచు, దేవతలలో దేవుడైన సూర్యుని, ఉత్తమ జ్యోతిని పొందినాము. ఓం, జాతవేదుడైన ఆ దేవుని కిరణములు పైకి మోసుకొని పోవుచున్నవి, విశ్వమంతయు సూర్యుని చూచుటకు. దేవతల ప్రకాశమైన పతాకము ఉదయించినది. అది మిత్ర, వరుణ, అగ్నుల నేత్రము. సూర్యుడు ఆకాశమును, భూమిని, అంతరిక్షమును నింపినాడు. చరాచరములకు ఆయనే ఆత్మ. ఓం, దేవతలు తూర్పున ఉంచిన ఆ నేత్రము ప్రకాశముతో ఉదయించును గాక. నూరు శరత్తులు చూతుము గాక. నూరు శరత్తులు జీవింతుము గాక. నూరు శరత్తులు విందుము గాక.
+hi: उद्वयं और उदुत्यं इन दो मंत्रों के ऋषि प्रस्कण्व, देवता सविता, पहले का छंद अनुष्टुप् और दूसरे का गायत्री। चित्रं देवानां मंत्र के ऋषि कुत्स, देवता सविता, छंद त्रिष्टुप्। तच्चक्षुः मंत्र के ऋषि दध्यङ् आथर्वण, देवता सूर्य, छंद पंक्ति, और विनियोग सूर्योपस्थान में है। ओम्, अंधकार से ऊपर उठकर उत्तम ज्योति को देखते हुए, हम देवताओं में देव सूर्य को, उत्तम ज्योति को प्राप्त हुए। ओम्, जातवेद उस देव को किरणें ऊपर ले जाती हैं, जिससे सब सूर्य को देखें। देवताओं की उज्ज्वल पताका उदित हुई है। वह मित्र, वरुण और अग्नि का नेत्र है। सूर्य ने आकाश, पृथ्वी और अंतरिक्ष को भर दिया है। चर और अचर सबका वही आत्मा है। ओम्, देवताओं द्वारा पूर्व में स्थापित वह नेत्र उज्ज्वल होकर उदित हो। हम सौ शरद देखें। हम सौ शरद जीवें। हम सौ शरद सुनें।
+
+--- unit 36 | section: Standing before the sun ---
+vidhi:
+In the evening two verses to Varuṇa are used in place of the verses to the sun.
+deva:
+(साय-ङ्काले)
+इम-म्मे वरुण तत्वायामीत्यनयोश्शुनश्शेफ ऋषिः, वरुणो देवता, गायत्री त्रिष्टुभौ छन्दसि, सूर्योपस्धाने विनियोगः ॥
+ॐ इ॒म-म्मे॑ वरुण श्रुधी॒हव॑म॒द्या च॑ मृलय । त्वाम॑व॒स्युराच॑के ॥
+ओ-न्तत्वा॑यामि॒ ब्रह्म॑णा॒ वन्द॑मान॒स्तदाशा॑स्ते॒ यज॑मानो ह॒विर्भिः॑ ।
+अहे॑लमानो वरुणे॒ हबो॒ध्युरु॑शग्ं स॒ मा न॒ आयुः॒ प्रमो॑षीः ॥
+iast:
+(sāya-ṅkāle)
+ima-mme varuṇa tatvāyāmītyanayośśunaśśepha ṛṣiḥ, varuṇo devatā, gāyatrī triṣṭubhau chandasi, sūryopasdhāne viniyogaḥ ||
+oṁ ima-mme varuṇa śrudhīhavamadyā ca mṛlaya | tvāmavasyurācake ||
+o-ntatvāyāmi brahmaṇā vandamānastadāśāste yajamāno havirbhiḥ |
+ahelamāno varuṇe habodhyuruśagṁ sa mā na āyuḥ pramoṣīḥ ||
+en: For the two verses beginning imaṁ me varuṇa and tat tvā yāmi the sage is Śunaḥśepa, the deity is Varuṇa, the metres are gāyatrī and triṣṭup, and the use is in standing before the sun. Om, Varuṇa, hear this call of mine, and be gracious today. I come to you longing for your protection. Om, I approach you with this prayer and with praise. The sacrificer asks the same of you with his offerings. Be here without anger, Varuṇa. You who are widely praised, do not take away our life.
+tel: ఇమం మే వరుణ, తత్త్వా యామి అను రెండు మంత్రములకు శునశ్శేపుడు ఋషి, వరుణుడు దేవత, గాయత్రి త్రిష్టుప్ ఛందస్సులు, సూర్యోపస్థానమునందు వినియోగము. ఓం, వరుణదేవా, నా ఈ పిలుపును వినుము, నేడు దయ చూపుము. రక్షణను కోరి నీ వద్దకు వచ్చుచున్నాను. ఓం, ఈ ప్రార్థనతో స్తుతితో నిన్ను చేరుచున్నాను. యజమానుడు హవిస్సులతో నిన్ను అదే కోరుచున్నాడు. వరుణదేవా, కోపము లేక ఇక్కడ ఉండుము. విస్తారముగా స్తుతింపబడువాడా, మా ఆయువును తీసివేయకుము.
+hi: इमं मे वरुण और तत्त्वा यामि इन दो मंत्रों के ऋषि शुनःशेप, देवता वरुण, छंद गायत्री और त्रिष्टुप्, और विनियोग सूर्योपस्थान में है। ओम्, हे वरुण, मेरी यह पुकार सुनो और आज कृपा करो। रक्षा की इच्छा से मैं तुम्हारे पास आता हूँ। ओम्, इस प्रार्थना और स्तुति से तुम्हारे पास आता हूँ। यजमान भी हवियों से तुमसे वही माँगता है। हे वरुण, बिना क्रोध यहाँ रहो। हे बहुप्रशंसित, हमारी आयु न छीनो।
+
+--- unit 37 | section: The Gāyatrī ---
+vidhi:
+Do ācamana and prāṇāyāma again. Then ask the spirits who bear the ground to stand aside, and state the intention to recite the Gāyatrī.
+deva:
+आचम्य ॥
+प्राणानायम्य ॥
+उग्रभूतपिशाचास्ते इत्येते भूमि भारकाः ।
+भूतानामविरोधेन ब्रह्म कर्म समारभे ॥
+पूर्वोक्त एव-ङ्गुण विशेषण विशिष्टायां शुभतिथौ यथा शक्ति प्रातः/मध्याह्निक/सायं सन्ध्याङ्ग गायत्री मन्त्र जप-ङ्करिष्ये ॥
+iast:
+ācamya ||
+prāṇānāyamya ||
+ugrabhūtapiśācāste ityete bhūmi bhārakāḥ |
+bhūtānāmavirodhena brahma karma samārabhe ||
+pūrvokta eva-ṅguṇa viśeṣaṇa viśiṣṭāyāṁ śubhatithau yathā śakti prātaḥ/madhyāhnika/sāyaṁ sandhyāṅga gāyatrī mantra japa-ṅkariṣye ||
+en: Having performed ācamana. Having performed prāṇāyāma. You fierce beings and spirits who bear the weight of the earth, I begin this work of Brahman without hindrance to you. At this auspicious hour already named, I shall now recite the Gāyatrī mantra of the morning, midday or evening sandhyā, as far as I am able.
+tel: ఆచమనము చేసి. ప్రాణాయామము చేసి. భూమి భారమును మోయు ఉగ్రమైన భూత పిశాచములారా, మీకు విరోధము లేకుండా ఈ బ్రహ్మ కర్మను ఆరంభించుచున్నాను. ముందు చెప్పిన ఈ శుభ ముహూర్తమునందు, శక్తి కొలది ప్రాతః / మాధ్యాహ్నిక / సాయం సంధ్యాంగమైన గాయత్రీ మంత్ర జపమును చేయుచున్నాను.
+hi: आचमन करके। प्राणायाम करके। हे पृथ्वी का भार वहन करने वाले उग्र भूत और पिशाच, तुम्हें बाधा न देते हुए मैं यह ब्रह्म कर्म आरंभ करता हूँ। पहले कहे हुए इस शुभ मुहूर्त में, शक्ति के अनुसार प्रातः / माध्याह्निक / सायं संध्या के अंग रूप गायत्री मंत्र जप करता हूँ।
+
+--- unit 38 | section: The Gāyatrī ---
+vidhi:
+Invite the goddess. The first mantra is said while the hands are joined.
+deva:
+गायत्र्यावाहनम् ।
+ॐ ओजो॑-ऽसि॒ सहो॑-ऽसि॒ बलम॑सि॒ भ्राजो॑-ऽसि दे॒वाना॒-न्धाम॒नामा॑सि विश्व॑मसि वि॒श्वायु॒-स्सर्व॑मसि स॒र्वायुरभिभूरोम् । गायत्रीमावा॑हया॒मि॒ । सावित्रीमावा॑हया॒मि॒ । सरस्वतीमावा॑हया॒मि॒ । छन्दर्षीनावा॑हया॒मि॒ । श्रियमावा॑हया॒मि॒ ॥
+iast:
+gāyatryāvāhanam |
+oṁ ojo-'si saho-'si balamasi bhrājo-'si devānā-ndhāmanāmāsi viśvamasi viśvāyu-ssarvamasi sarvāyurabhibhūrom | gāyatrīmāvāhayāmi | sāvitrīmāvāhayāmi | sarasvatīmāvāhayāmi | chandarṣīnāvāhayāmi | śriyamāvāhayāmi ||
+en: The invocation of Gāyatrī. Om, you are strength. You are victory. You are power. You are splendour. You are the abode and the name of the gods. You are all. You are the life of all. You are everything. You are the life of everything. You are the all-conquering. Om. I invoke Gāyatrī. I invoke Sāvitrī. I invoke Sarasvatī. I invoke the metres and the sages. I invoke prosperity.
+tel: గాయత్రీ ఆవాహనము. ఓం, నీవు ఓజస్సు. నీవు సహస్సు. నీవు బలము. నీవు భ్రాజస్సు. నీవు దేవతల ధామము, నామము. నీవు విశ్వము. నీవు విశ్వమునకు ఆయువు. నీవు సర్వము. నీవు సర్వమునకు ఆయువు. నీవు అభిభూతము. ఓం. గాయత్రిని ఆవాహన చేయుచున్నాను. సావిత్రిని ఆవాహన చేయుచున్నాను. సరస్వతిని ఆవాహన చేయుచున్నాను. ఛందస్సులను ఋషులను ఆవాహన చేయుచున్నాను. శ్రీని ఆవాహన చేయుచున్నాను.
+hi: गायत्री का आवाहन। ओम्, तुम ओज हो। तुम सह हो। तुम बल हो। तुम भ्राज हो। तुम देवताओं का धाम और नाम हो। तुम विश्व हो। तुम विश्व की आयु हो। तुम सर्व हो। तुम सर्व की आयु हो। तुम अभिभू हो। ओम्। गायत्री का आवाहन करता हूँ। सावित्री का आवाहन करता हूँ। सरस्वती का आवाहन करता हूँ। छंदों और ऋषियों का आवाहन करता हूँ। श्री का आवाहन करता हूँ।
+
+--- unit 39 | section: The Gāyatrī ---
+vidhi:
+The full description of the goddess, said as one sentence. It names her metre, her sage, her deity, her limbs, her colour, her gotra and the twenty-four syllables of her mantra.
+deva:
+गा॒यत्र्या गायत्री छन्दो विश्वामित्र ऋषि-स्सविता देवता अग्निर्मुख-म्ब्रह्माशिरः विष्णुर्हृदयग्ं रुद्रश्शिखा पृथिवी योनिः प्राणापानव्यानोदान समानास्सप्राणा-श्श्वेतवर्णा साङ्ख्यायन सगोत्रा गायत्री चतुर्विग्ंशत्यक्षरा त्रिपदा॑ षट्कु॒क्षिः॒ पञ्चशीर्षोपनयने वि॑नियो॒गः॒ ॥
+iast:
+gāyatryā gāyatrī chando viśvāmitra ṛṣi-ssavitā devatā agnirmukha-mbrahmāśiraḥ viṣṇurhṛdayagṁ rudraśśikhā pṛthivī yoniḥ prāṇāpānavyānodāna samānāssaprāṇā-śśvetavarṇā sāṅkhyāyana sagotrā gāyatrī caturvigṁśatyakṣarā tripadā ṣaṭkukṣiḥ pañcaśīrṣopanayane viniyogaḥ ||
+en: For Gāyatrī the metre is gāyatrī, the sage is Viśvāmitra, the deity is Savitā. Agni is her mouth, Brahmā her head, Viṣṇu her heart, Rudra her crest, the earth her source. The five breaths are her breaths. She is white in colour, of the Sāṅkhyāyana gotra. She has twenty-four syllables, three feet, six bellies and five heads, and her use is in the investiture with the sacred thread.
+tel: గాయత్రికి గాయత్రి ఛందస్సు, విశ్వామిత్రుడు ఋషి, సవిత దేవత. అగ్ని ముఖము, బ్రహ్మ శిరస్సు, విష్ణువు హృదయము, రుద్రుడు శిఖ, పృథివి యోని. పంచ ప్రాణములే ప్రాణములు. శ్వేత వర్ణము, సాంఖ్యాయన గోత్రము. ఇరువది నాలుగు అక్షరములు, మూడు పాదములు, ఆరు కుక్షులు, ఐదు శిరస్సులు కలది, ఉపనయనమునందు వినియోగము.
+hi: गायत्री का छंद गायत्री, ऋषि विश्वामित्र, देवता सविता है। अग्नि मुख, ब्रह्मा शिर, विष्णु हृदय, रुद्र शिखा, पृथ्वी योनि है। पाँच प्राण ही उसके प्राण हैं। श्वेत वर्ण, सांख्यायन गोत्र। चौबीस अक्षर, तीन पाद, छह कुक्षि और पाँच शिर वाली है, और उपनयन में उसका विनियोग है।
+
+--- unit 40 | section: The Gāyatrī ---
+vidhi:
+The verse that calls the goddess to come.
+deva:
+आयात्वित्यनुवाकस्य, वामदेव ऋषिः, गायत्री देवता, अनुष्टु-प्छन्दः, गायत्र्यावाहने विनियोगः ॥
+ॐ आया॑तु॒ वर॑दा दे॒वी॒ अ॒क्षर॑-म्ब्रह्म॒ सम्मि॑तम् ।
+गा॒य॒त्री॑-ञ्छन्द॑सा-म्मा॒ते॒द-म्ब्र॑ह्म जु॒षस्व॑ नः ।
+iast:
+āyātvityanuvākasya, vāmadeva ṛṣiḥ, gāyatrī devatā, anuṣṭu-pchandaḥ, gāyatryāvāhane viniyogaḥ ||
+oṁ āyātu varadā devī akṣara-mbrahma sammitam |
+gāyatrī-ñchandasā-mmāteda-mbrahma juṣasva naḥ |
+en: For the anuvāka beginning āyātu the sage is Vāmadeva, the deity is Gāyatrī, the metre is anuṣṭup, and the use is in the invocation of Gāyatrī. Om, may the goddess come, the giver of boons, who is equal to the imperishable Brahman. O Gāyatrī, mother of the metres, accept this prayer of ours.
+tel: ఆయాతు అను అనువాకమునకు వామదేవుడు ఋషి, గాయత్రి దేవత, అనుష్టుప్ ఛందస్సు, గాయత్రీ ఆవాహనమునందు వినియోగము. ఓం, వరములిచ్చు దేవి, అక్షరమైన బ్రహ్మముతో సమానమైనది, రావలెను. ఛందస్సులకు తల్లియైన గాయత్రీ, మా ఈ ప్రార్థనను స్వీకరించుము.
+hi: आयातु इस अनुवाक के ऋषि वामदेव, देवता गायत्री, छंद अनुष्टुप्, और विनियोग गायत्री आवाहन में है। ओम्, वर देने वाली देवी आएँ, जो अक्षर ब्रह्म के समान हैं। हे छंदों की माता गायत्री, हमारी यह प्रार्थना स्वीकार करो।
+
+--- unit 41 | section: The Gāyatrī ---
+vidhi:
+A second verse of invocation. It is said while the sacred thread is held.
+deva:
+तेजो-ऽसीत्यस्य मन्त्रस्य, प्रजापति ऋषिः, सौवर्ण-न्निष्क-न्देवता, अनुष्टु-प्छन्दः, गायत्र्यावाहने विनियोगः ॥
+ओ-न्तेजो॑-ऽसि शु॒क्रम॒मृत॑मायु॒ष्पा आयु॑र्मेपाहि ।
+दे॒वस्य॑त्वा सवि॒तुः प्र॑स॒वे॒-ऽश्विनो॑र्बा॒हुभ्या॑-म्पू॒ष्णो हस्ता॑भ्या॒माद॑धे ॥
+iast:
+tejo-'sītyasya mantrasya, prajāpati ṛṣiḥ, sauvarṇa-nniṣka-ndevatā, anuṣṭu-pchandaḥ, gāyatryāvāhane viniyogaḥ ||
+o-ntejo-'si śukramamṛtamāyuṣpā āyurmepāhi |
+devasyatvā savituḥ prasave-'śvinorbāhubhyā-mpūṣṇo hastābhyāmādadhe ||
+en: For the mantra beginning tejo’si the sage is Prajāpati, the deity is the golden ornament, the metre is anuṣṭup, and the use is in the invocation of Gāyatrī. Om, you are brightness. You are pure. You are the nectar of immortality. You are the guardian of life. Guard my life. At the urging of the god Savitā, I take you with the arms of the Aśvins and with the hands of Pūṣan.
+tel: తేజోఽసి అను మంత్రమునకు ప్రజాపతి ఋషి, సౌవర్ణ నిష్కము దేవత, అనుష్టుప్ ఛందస్సు, గాయత్రీ ఆవాహనమునందు వినియోగము. ఓం, నీవు తేజస్సు. నీవు శుక్రము. నీవు అమృతము. నీవు ఆయువును కాపాడువాడవు. నా ఆయువును కాపాడుము. సవిత దేవుని ప్రేరణతో, అశ్వినుల బాహువులతో, పూషుని హస్తములతో నిన్ను గ్రహించుచున్నాను.
+hi: तेजोऽसि इस मंत्र के ऋषि प्रजापति, देवता सौवर्ण निष्क, छंद अनुष्टुप्, और विनियोग गायत्री आवाहन में है। ओम्, तुम तेज हो। तुम शुक्र हो। तुम अमृत हो। तुम आयु के रक्षक हो। मेरी आयु की रक्षा करो। सविता देव की प्रेरणा से, अश्विनों की बाहुओं और पूषा के हाथों से तुम्हें ग्रहण करता हूँ।
+
+--- unit 42 | section: The Gāyatrī ---
+vidhi:
+A prayer to the goddess.
+deva:
+प्रार्थन ॥
+गायत्र्यस्येकपदी द्विपदी त्रिपदी चतुष्पद्य पदसि न हि पद्यसे ।
+नमस्ते तुरीयाय दर्शताय पदाय परोरजसेसावदो मा प्रापत् ।
+iast:
+prārthana ||
+gāyatryasyekapadī dvipadī tripadī catuṣpadya padasi na hi padyase |
+namaste turīyāya darśatāya padāya parorajasesāvado mā prāpat |
+en: The prayer. O Gāyatrī, you are of one foot, of two feet, of three feet, of four feet. You are without feet, for you cannot be measured by steps. Salutations to your fourth foot, which is seen beyond the region of dust. May the enemy never cross it.
+tel: ప్రార్థన. ఓ గాయత్రీ, నీవు ఏకపది, ద్విపది, త్రిపది, చతుష్పది. నీవు పదము లేనిదానవు, ఏలయన నిన్ను పదములతో కొలువలేము. రజస్సునకు అవల కనబడు నీ నాలుగవ పాదమునకు నమస్కారము. శత్రువు దానిని దాటకుండును గాక.
+hi: प्रार्थना। हे गायत्री, तुम एकपदी, द्विपदी, त्रिपदी, चतुष्पदी हो। तुम पदरहित हो, क्योंकि तुम पदों से नापी नहीं जाती। रजस् के परे दिखने वाले तुम्हारे चौथे पाद को नमस्कार। शत्रु उसे पार न करे।
+
+--- unit 43 | section: The Gāyatrī ---
+vidhi:
+The goddess is described differently at each of the three times. Recite the description that belongs to the hour.
+deva:
+(प्रातः काले)
+प्रात-स्सन्ध्या, गायत्री नामा, रक्तवर्णा, हंसवाहना, ब्रह्महृदया, बाल रूपा, आवहनीयाग्निरूपस्थाना, भूरायतना, जाग्रद्वद्धृतिः, प्रातस्सवने ऋग्वेदे विनियोगः ।
+(मध्याह्न काले)
+माध्याह्निक सन्ध्या, सावित्री नामा, श्वेतवर्णा, वृषभ वाहना, रुद्रहृदया, यव्वन रूपा, गार्हपत्याग्निरूपस्थाना, अन्तरिक्षायतना, स्वप्नवद्धृतिः, माध्याह्निक सवने यजुर्वेदे विनियोगः ।
+(साय-ङ्काले)
+सायं सन्ध्या, सरस्वती नामा, कृष्णवर्णा, गरुड वाहना, विष्णु हृदया, वृद्धरूपा, दक्षिणाग्निरूपस्थाना, द्यौरायतना, सुषुप्तिवद्धृतिः, सायंसवने सामवेदे विनियोगः ।
+iast:
+(prātaḥ kāle)
+prāta-ssandhyā, gāyatrī nāmā, raktavarṇā, haṁsavāhanā, brahmahṛdayā, bāla rūpā, āvahanīyāgnirūpasthānā, bhūrāyatanā, jāgradvaddhṛtiḥ, prātassavane ṛgvede viniyogaḥ |
+(madhyāhna kāle)
+mādhyāhnika sandhyā, sāvitrī nāmā, śvetavarṇā, vṛṣabha vāhanā, rudrahṛdayā, yavvana rūpā, gārhapatyāgnirūpasthānā, antarikṣāyatanā, svapnavaddhṛtiḥ, mādhyāhnika savane yajurvede viniyogaḥ |
+(sāya-ṅkāle)
+sāyaṁ sandhyā, sarasvatī nāmā, kṛṣṇavarṇā, garuḍa vāhanā, viṣṇu hṛdayā, vṛddharūpā, dakṣiṇāgnirūpasthānā, dyaurāyatanā, suṣuptivaddhṛtiḥ, sāyaṁsavane sāmavede viniyogaḥ |
+en: In the morning: the morning sandhyā, named Gāyatrī, red in colour, borne by the swan, having Brahmā for her heart, in the form of a child, standing in the form of the āvahanīya fire, dwelling in the earth, of the nature of waking, used at the morning pressing, in the Ṛgveda. At midday: the midday sandhyā, named Sāvitrī, white in colour, borne by the bull, having Rudra for her heart, in the form of a young woman, standing in the form of the gārhapatya fire, dwelling in the mid-region, of the nature of dream, used at the midday pressing, in the Yajurveda. In the evening: the evening sandhyā, named Sarasvatī, dark in colour, borne by Garuḍa, having Viṣṇu for her heart, in the form of an aged woman, standing in the form of the southern fire, dwelling in the heavens, of the nature of deep sleep, used at the evening pressing, in the Sāmaveda.
+tel: ప్రాతఃకాలమునందు: ప్రాతఃసంధ్య, గాయత్రి అను పేరు, రక్త వర్ణము, హంస వాహనము, బ్రహ్మ హృదయము, బాల రూపము, ఆవహనీయాగ్ని రూపమున నిలుచునది, భూమి నివాసము, జాగ్రదవస్థ, ప్రాతఃసవనమునందు ఋగ్వేదమునందు వినియోగము. మధ్యాహ్నమునందు: మాధ్యాహ్నిక సంధ్య, సావిత్రి అను పేరు, శ్వేత వర్ణము, వృషభ వాహనము, రుద్ర హృదయము, యౌవన రూపము, గార్హపత్యాగ్ని రూపమున నిలుచునది, అంతరిక్ష నివాసము, స్వప్నావస్థ, మాధ్యాహ్నిక సవనమునందు యజుర్వేదమునందు వినియోగము. సాయంకాలమునందు: సాయం సంధ్య, సరస్వతి అను పేరు, కృష్ణ వర్ణము, గరుడ వాహనము, విష్ణు హృదయము, వృద్ధ రూపము, దక్షిణాగ్ని రూపమున నిలుచునది, ద్యులోక నివాసము, సుషుప్త్యవస్థ, సాయం సవనమునందు సామవేదమునందు వినియోగము.
+hi: प्रातःकाल में: प्रातःसंध्या, नाम गायत्री, रक्त वर्ण, हंस वाहन, ब्रह्मा हृदय, बाल रूप, आवहनीय अग्नि के रूप में स्थित, भूमि में निवास, जागृत अवस्था, प्रातःसवन में ऋग्वेद में विनियोग। मध्याह्न में: माध्याह्निक संध्या, नाम सावित्री, श्वेत वर्ण, वृषभ वाहन, रुद्र हृदय, यौवन रूप, गार्हपत्य अग्नि के रूप में स्थित, अंतरिक्ष में निवास, स्वप्न अवस्था, माध्याह्निक सवन में यजुर्वेद में विनियोग। सायंकाल में: सायं संध्या, नाम सरस्वती, कृष्ण वर्ण, गरुड वाहन, विष्णु हृदय, वृद्ध रूप, दक्षिण अग्नि के रूप में स्थित, द्युलोक में निवास, सुषुप्ति अवस्था, सायं सवन में सामवेद में विनियोग।
+
+--- unit 44 | section: The Gāyatrī ---
+vidhi:
+Said at all three times.
+deva:
+(त्रिकाले)
+आगच्छ वरदे देवि जपे मे सन्निधौ भव ।
+गायन्त-न्त्रायसे यस्माद्गायत्री त्वमुदाहृता ॥
+iast:
+(trikāle)
+āgaccha varade devi jape me sannidhau bhava |
+gāyanta-ntrāyase yasmādgāyatrī tvamudāhṛtā ||
+en: At all three times: Come, O goddess who grants boons, and be present near me in my recitation. Because you protect the one who sings, you are called Gāyatrī.
+tel: మూడు కాలములలో: వరములిచ్చు దేవీ, రమ్ము, నా జపమునందు నా దగ్గర ఉండుము. గాయకుని రక్షించుటవలన నీవు గాయత్రి అని పిలువబడుచున్నావు.
+hi: तीनों कालों में: हे वर देने वाली देवी, आओ और मेरे जप में मेरे पास रहो। क्योंकि तुम गाने वाले की रक्षा करती हो, इसलिए तुम गायत्री कही जाती हो।
+
+--- unit 45 | section: The Gāyatrī ---
+vidhi:
+Place the syllables of the mantra on the body, on the fingers and on the limbs. Touch each part as its words are said.
+deva:
+न्यासम् ॥
+ओ-म्भूरिति पादयोः ।
+ओ-म्भुवरिति जङ्घयोः ।
+ओग्ं स्वरिति जान्वोः ।
+ओ-म्मह इति जठरे ।
+ओ-ञ्जन इति कण्ठे ।
+ओ-न्तप इति मुखे ।
+ओग्ं सत्यमिति शिरसि ।
+ओ-म्भूः अङ्गुष्ठाभ्या-न्नमः ।
+ओ-म्भुवः तर्जनीभ्या-न्नमः ।
+ओग्ं स्वः मध्यमाभ्या-न्नमः ।
+ओ-न्तत्सवितुर्वरेण्यं अनामिकाभ्या-न्नमः ।
+ओ-म्भर्गो देवस्य धीमहि कनिष्ठिकाभ्या-न्नमः ।
+ओ-न्धियो यो नः प्रचोदया-त्करतल करपृष्ठाभ्या-न्नमः ।
+ओ-म्भूः हृदयाय नमः ।
+ओ-म्भुव-श्शिरसे स्वाहा ।
+ओग्ं स्व-श्शिखायै वषट् ।
+ओ-न्तत्सवितुर्वरेण्य-ङ्कवचाय हुम् ।
+ओ-म्भर्गो देवस्य धीमहि नेत्रत्रयाय वौषट् ।
+ओ-न्धियो यो नः प्रचोदयात् अस्त्राय फट् ।
+ओ-म्भूर्भवस्स्वरोमिति दिग्बन्धः ।
+iast:
+nyāsam ||
+o-mbhūriti pādayoḥ |
+o-mbhuvariti jaṅghayoḥ |
+ogṁ svariti jānvoḥ |
+o-mmaha iti jaṭhare |
+o-ñjana iti kaṇṭhe |
+o-ntapa iti mukhe |
+ogṁ satyamiti śirasi |
+o-mbhūḥ aṅguṣṭhābhyā-nnamaḥ |
+o-mbhuvaḥ tarjanībhyā-nnamaḥ |
+ogṁ svaḥ madhyamābhyā-nnamaḥ |
+o-ntatsaviturvareṇyaṁ anāmikābhyā-nnamaḥ |
+o-mbhargo devasya dhīmahi kaniṣṭhikābhyā-nnamaḥ |
+o-ndhiyo yo naḥ pracodayā-tkaratala karapṛṣṭhābhyā-nnamaḥ |
+o-mbhūḥ hṛdayāya namaḥ |
+o-mbhuva-śśirase svāhā |
+ogṁ sva-śśikhāyai vaṣaṭ |
+o-ntatsaviturvareṇya-ṅkavacāya hum |
+o-mbhargo devasya dhīmahi netratrayāya vauṣaṭ |
+o-ndhiyo yo naḥ pracodayāt astrāya phaṭ |
+o-mbhūrbhavassvaromiti digbandhaḥ |
+en: The placing. Om bhūḥ on the feet. Om bhuvaḥ on the shins. Om suvaḥ on the knees. Om mahaḥ on the belly. Om janaḥ on the throat. Om tapaḥ on the mouth. Om satyam on the head. Om bhūḥ, salutations with the thumbs. Om bhuvaḥ, salutations with the index fingers. Om suvaḥ, salutations with the middle fingers. Om tatsavitur vareṇyam, salutations with the ring fingers. Om bhargo devasya dhīmahi, salutations with the little fingers. Om dhiyo yo naḥ pracodayāt, salutations with the palms and the backs of the hands. Om bhūḥ to the heart. Om bhuvaḥ to the head, svāhā. Om suvaḥ to the crest, vaṣaṭ. Om tatsavitur vareṇyam to the armour, hum. Om bhargo devasya dhīmahi to the three eyes, vauṣaṭ. Om dhiyo yo naḥ pracodayāt to the weapon, phaṭ. Om bhūrbhuvaḥsuvarom — the binding of the quarters.
+tel: న్యాసము. ఓం భూః పాదములలో. ఓం భువః జంఘలలో. ఓం సువః మోకాళ్ళలో. ఓం మహః జఠరములో. ఓం జనః కంఠములో. ఓం తపః ముఖములో. ఓం సత్యం శిరసులో. ఓం భూః అంగుష్ఠములతో నమస్కారము. ఓం భువః తర్జనులతో నమస్కారము. ఓం సువః మధ్యమలతో నమస్కారము. ఓం తత్సవితుర్వరేణ్యం అనామికలతో నమస్కారము. ఓం భర్గో దేవస్య ధీమహి కనిష్ఠికలతో నమస్కారము. ఓం ధియో యో నః ప్రచోదయాత్ కరతల కరపృష్ఠములతో నమస్కారము. ఓం భూః హృదయమునకు నమస్కారము. ఓం భువః శిరసునకు స్వాహా. ఓం సువః శిఖకు వషట్. ఓం తత్సవితుర్వరేణ్యం కవచమునకు హుం. ఓం భర్గో దేవస్య ధీమహి నేత్రత్రయమునకు వౌషట్. ఓం ధియో యో నః ప్రచోదయాత్ అస్త్రమునకు ఫట్. ఓం భూర్భువస్సువరోం — దిగ్బంధము.
+hi: न्यास। ओम् भूः पैरों में। ओम् भुवः जंघाओं में। ओम् सुवः घुटनों में। ओम् महः जठर में। ओम् जनः कंठ में। ओम् तपः मुख में। ओम् सत्यम् शिर में। ओम् भूः अंगुष्ठों से नमस्कार। ओम् भुवः तर्जनियों से नमस्कार। ओम् सुवः मध्यमाओं से नमस्कार। ओम् तत्सवितुर्वरेण्यं अनामिकाओं से नमस्कार। ओम् भर्गो देवस्य धीमहि कनिष्ठिकाओं से नमस्कार। ओम् धियो यो नः प्रचोदयात् करतल और करपृष्ठ से नमस्कार। ओम् भूः हृदय को नमस्कार। ओम् भुवः शिर को स्वाहा। ओम् सुवः शिखा को वषट्। ओम् तत्सवितुर्वरेण्यं कवच को हुम्। ओम् भर्गो देवस्य धीमहि तीन नेत्रों को वौषट्। ओम् धियो यो नः प्रचोदयात् अस्त्र को फट्। ओम् भूर्भुवःसुवरोम् — दिग्बंध।
+
+--- unit 46 | section: The Gāyatrī ---
+vidhi:
+Meditate on the goddess in this form.
+deva:
+गायत्री ध्यानम् ॥
+मुक्ताविद्रुमहेमनीलधवल-च्छायैर्मुखैस्त्रीक्षणैः ।
+युक्तामिन्दुनिबद्धरत्नमकुटा-न्तत्त्वार्थ वर्णात्मिकाम् ॥
+गायत्रीं-वँरदा-ऽभया-ऽङ्कुश कशाश्शुभ्र-ङ्कपाल-ङ्गदाम् ।
+शङ्ख-ञ्चक्रमथा-ऽरविन्दयुगलं हस्तैर्वहन्ती-म्भजे ॥
+iast:
+gāyatrī dhyānam ||
+muktāvidrumahemanīladhavala-cchāyairmukhaistrīkṣaṇaiḥ |
+yuktāmindunibaddharatnamakuṭā-ntattvārtha varṇātmikām ||
+gāyatrīṁ-vam̐radā-'bhayā-'ṅkuśa kaśāśśubhra-ṅkapāla-ṅgadām |
+śaṅkha-ñcakramathā-'ravindayugalaṁ hastairvahantī-mbhaje ||
+en: The meditation on Gāyatrī. I worship Gāyatrī, who has five faces of the colour of pearl, coral, gold, sapphire and white, each with three eyes; who wears a crown set with jewels and with the moon; whose syllables are the meaning of the truth itself; and who bears in her hands the boon and the sign of safety, the goad and the whip, the bright skull and the mace, the conch, the discus and the two lotuses.
+tel: గాయత్రీ ధ్యానము. ముత్యము, పగడము, బంగారము, నీలము, తెలుపు వర్ణముల ఐదు ముఖములు కలది, ప్రతి ముఖమునకు మూడు కన్నులు కలది; చంద్రుడు రత్నములు పొదిగిన కిరీటము ధరించినది; అక్షరములే తత్త్వార్థమైనది; వరద అభయ ముద్రలు, అంకుశము కశ, ప్రకాశమైన కపాలము గద, శంఖము చక్రము, రెండు పద్మములు హస్తములలో ధరించినది — ఆ గాయత్రిని సేవించుచున్నాను.
+hi: गायत्री का ध्यान। मोती, मूँगा, स्वर्ण, नील और श्वेत वर्ण के पाँच मुख वाली, प्रत्येक मुख में तीन नेत्रों वाली; चंद्र और रत्नों से जड़ा मुकुट धारण करने वाली; जिसके अक्षर ही तत्त्व का अर्थ हैं; और जो हाथों में वरद तथा अभय, अंकुश और कशा, उज्ज्वल कपाल और गदा, शंख, चक्र तथा दो कमल धारण करती हैं — उन गायत्री की मैं उपासना करता हूँ।
+
+--- unit 47 | section: The Gāyatrī ---
+vidhi:
+Offer the five services with the five syllables. Each syllable stands for one of the elements.
+deva:
+लमित्यादि पञ्चपूजा ॥
+ल-म्पृथिवीतत्त्वात्मिकायै गायत्री देवतायै नमः ।
+गन्ध-म्परिकल्पयामि ॥
+हं आकाशतत्त्वात्मिकायै गायत्री देवतायै नमः ।
+पुष्प-म्परिकल्पयामि ॥
+यं-वाँयुतत्त्वात्मिकायै गायत्री देवतायै नमः ।
+धूप-म्परिकल्पयामि ॥
+रं-वँह्नितत्त्वात्मिकायै गायत्री देवतायै नमः ।
+दीप-म्परिकल्पयामि ॥
+वं अमृततत्त्वात्मिकायै गायत्री देवतायै नमः ।
+नैवेद्य-म्परिकल्पयामि ॥
+सं सर्वतत्त्वात्मिकायै गायत्री देवतायैनमः ।
+सर्वोपचारा-न्परिकल्पयामि॥
+iast:
+lamityādi pañcapūjā ||
+la-mpṛthivītattvātmikāyai gāyatrī devatāyai namaḥ |
+gandha-mparikalpayāmi ||
+haṁ ākāśatattvātmikāyai gāyatrī devatāyai namaḥ |
+puṣpa-mparikalpayāmi ||
+yaṁ-vām̐yutattvātmikāyai gāyatrī devatāyai namaḥ |
+dhūpa-mparikalpayāmi ||
+raṁ-vam̐hnitattvātmikāyai gāyatrī devatāyai namaḥ |
+dīpa-mparikalpayāmi ||
+vaṁ amṛtatattvātmikāyai gāyatrī devatāyai namaḥ |
+naivedya-mparikalpayāmi ||
+saṁ sarvatattvātmikāyai gāyatrī devatāyainamaḥ |
+sarvopacārā-nparikalpayāmi||
+en: The five offerings beginning with laṁ. Laṁ, salutations to the goddess Gāyatrī whose nature is the element of earth. I offer sandal paste. Haṁ, salutations to the goddess Gāyatrī whose nature is the element of space. I offer flowers. Yaṁ, salutations to the goddess Gāyatrī whose nature is the element of air. I offer incense. Raṁ, salutations to the goddess Gāyatrī whose nature is the element of fire. I offer the lamp. Vaṁ, salutations to the goddess Gāyatrī whose nature is the element of nectar. I offer food. Saṁ, salutations to the goddess Gāyatrī whose nature is all the elements. I offer all the services.
+tel: లం మొదలైన పంచపూజ. లం, పృథివీ తత్త్వ స్వరూపిణియైన గాయత్రీ దేవతకు నమస్కారము. గంధమును సమర్పించుచున్నాను. హం, ఆకాశ తత్త్వ స్వరూపిణియైన గాయత్రీ దేవతకు నమస్కారము. పుష్పములను సమర్పించుచున్నాను. యం, వాయు తత్త్వ స్వరూపిణియైన గాయత్రీ దేవతకు నమస్కారము. ధూపమును సమర్పించుచున్నాను. రం, వహ్ని తత్త్వ స్వరూపిణియైన గాయత్రీ దేవతకు నమస్కారము. దీపమును సమర్పించుచున్నాను. వం, అమృత తత్త్వ స్వరూపిణియైన గాయత్రీ దేవతకు నమస్కారము. నైవేద్యమును సమర్పించుచున్నాను. సం, సర్వ తత్త్వ స్వరూపిణియైన గాయత్రీ దేవతకు నమస్కారము. సర్వోపచారములను సమర్పించుచున్నాను.
+hi: लं आदि पंचपूजा। लं, पृथ्वी तत्त्व स्वरूपिणी गायत्री देवता को नमस्कार। गंध समर्पित करता हूँ। हं, आकाश तत्त्व स्वरूपिणी गायत्री देवता को नमस्कार। पुष्प समर्पित करता हूँ। यं, वायु तत्त्व स्वरूपिणी गायत्री देवता को नमस्कार। धूप समर्पित करता हूँ। रं, वह्नि तत्त्व स्वरूपिणी गायत्री देवता को नमस्कार। दीप समर्पित करता हूँ। वं, अमृत तत्त्व स्वरूपिणी गायत्री देवता को नमस्कार। नैवेद्य समर्पित करता हूँ। सं, सर्व तत्त्व स्वरूपिणी गायत्री देवता को नमस्कार। सब उपचार समर्पित करता हूँ।
+
+--- unit 48 | section: The Gāyatrī ---
+vidhi:
+The sages, deities and metres are named once more before the recitation itself.
+deva:
+प्रणवस्य परब्रह्म ऋषिः, परमात्मा देवता, दैवी गायत्री छन्दः ।
+भूर्भुवस्स्वरिति महाव्याहृतीना-म्परमेष्ठी प्रजापति ऋषिः, अग्नि-वायु-सूर्या देवताः, गायत्र्युष्णिगनुष्टु-प्छन्दांसि ।
+गायत्र्या विश्वामित्र ऋषिः, सविता देवता, गायत्री छन्दः ।
+iast:
+praṇavasya parabrahma ṛṣiḥ, paramātmā devatā, daivī gāyatrī chandaḥ |
+bhūrbhuvassvariti mahāvyāhṛtīnā-mparameṣṭhī prajāpati ṛṣiḥ, agni-vāyu-sūryā devatāḥ, gāyatryuṣṇiganuṣṭu-pchandāṁsi |
+gāyatryā viśvāmitra ṛṣiḥ, savitā devatā, gāyatrī chandaḥ |
+en: For the praṇava the sage is the supreme Brahman, the deity is the supreme Self, and the metre is the divine Gāyatrī. For the great vyāhṛtis beginning bhūrbhuvaḥsuvaḥ the sage is Parameṣṭhī Prajāpati; the deities are Agni, Vāyu and Sūrya; and the metres are gāyatrī, uṣṇik and anuṣṭup. For the Gāyatrī the sage is Viśvāmitra, the deity is Savitā, and the metre is gāyatrī.
+tel: ప్రణవమునకు పరబ్రహ్మ ఋషి, పరమాత్మ దేవత, దైవీ గాయత్రి ఛందస్సు. భూర్భువస్సువః అను మహావ్యాహృతులకు పరమేష్ఠీ ప్రజాపతి ఋషి; అగ్ని, వాయు, సూర్యులు దేవతలు; గాయత్రి, ఉష్ణిక్, అనుష్టుప్ ఛందస్సులు. గాయత్రికి విశ్వామిత్రుడు ఋషి, సవిత దేవత, గాయత్రి ఛందస్సు.
+hi: प्रणव के ऋषि परब्रह्म, देवता परमात्मा, छंद दैवी गायत्री है। भूर्भुवःसुवः इन महाव्याहृतियों के ऋषि परमेष्ठी प्रजापति; देवता अग्नि, वायु और सूर्य; छंद गायत्री, उष्णिक् और अनुष्टुप्। गायत्री के ऋषि विश्वामित्र, देवता सविता, छंद गायत्री है।
+
+--- unit 49 | section: The Gāyatrī ---
+vidhi:
+The twenty-four hand positions shown during the recitation. The base text lists their names only.
+deva:
+गायत्री मुद्रलु ॥
+सुमुखं सम्पुट-ञ्चैव विततं-विँस्तृत-न्तथा ।
+द्विमुख-न्त्रिमुख-ञ्चैव चतुः पञ्चमुख-न्तथा ॥
+षण्मुखो-ऽधोमुख-ञ्चैव व्यापिकाञ्जलिक-न्तथा ।
+शकटं-यँमपाश-ञ्च ग्रथितं सम्मुखोन्मुखम् ॥
+प्रलम्ब-म्मुष्टिक-ञ्चैव मत्स्यः कूर्मो वराहकम् ।
+सिंहाक्रान्त-म्महाक्रान्त-म्मुद्गर-म्पल्लव-न्तथा ॥
+iast:
+gāyatrī mudralu ||
+sumukhaṁ sampuṭa-ñcaiva vitataṁ-vim̐stṛta-ntathā |
+dvimukha-ntrimukha-ñcaiva catuḥ pañcamukha-ntathā ||
+ṣaṇmukho-'dhomukha-ñcaiva vyāpikāñjalika-ntathā |
+śakaṭaṁ-yam̐mapāśa-ñca grathitaṁ sammukhonmukham ||
+pralamba-mmuṣṭika-ñcaiva matsyaḥ kūrmo varāhakam |
+siṁhākrānta-mmahākrānta-mmudgara-mpallava-ntathā ||
+en: The Gāyatrī hand positions. Sumukha, sampuṭa, vitata, vistṛta, dvimukha, trimukha, four-faced, five-faced, six-faced, adhomukha, vyāpikāñjalika, śakaṭa, yamapāśa, grathita, sammukhonmukha, pralamba, muṣṭika, matsya, kūrma, varāhaka, siṁhākrānta, mahākrānta, mudgara and pallava.
+tel: గాయత్రీ ముద్రలు. సుముఖము, సంపుటము, వితతము, విస్తృతము, ద్విముఖము, త్రిముఖము, చతుర్ముఖము, పంచముఖము, షణ్ముఖము, అధోముఖము, వ్యాపికాంజలికము, శకటము, యమపాశము, గ్రథితము, సమ్ముఖోన్ముఖము, ప్రలంబము, ముష్టికము, మత్స్యము, కూర్మము, వరాహకము, సింహాక్రాంతము, మహాక్రాంతము, ముద్గరము, పల్లవము.
+hi: गायत्री मुद्राएँ। सुमुख, संपुट, वितत, विस्तृत, द्विमुख, त्रिमुख, चतुर्मुख, पंचमुख, षण्मुख, अधोमुख, व्यापिकांजलिक, शकट, यमपाश, ग्रथित, सम्मुखोन्मुख, प्रलंब, मुष्टिक, मत्स्य, कूर्म, वराहक, सिंहाक्रांत, महाक्रांत, मुद्गर और पल्लव।
+
+--- unit 50 | section: The Gāyatrī ---
+vidhi:
+The Gāyatrī itself. Recite it as many times as you are able. One hundred and eight, or twenty-eight, or ten times is the usual count.
+deva:
+गायत्री मन्त्रम् ॥
+ओ-म्भूर्भुव॒स्स्वः॑ । तत्स॑वि॒तुर्वरे॑ण्य॒-म्भर्गो॑ दे॒वस्य॑ धीमहि ।
+धियो॒ यो नः॑ प्रचो॒दया॑त् ॥
+iast:
+gāyatrī mantram ||
+o-mbhūrbhuvassvaḥ | tatsaviturvareṇya-mbhargo devasya dhīmahi |
+dhiyo yo naḥ pracodayāt ||
+en: The Gāyatrī mantra. Om, the earth, the mid-region, the heavens. We meditate on that adorable light of the divine Creator. May he set our thoughts in motion.
+tel: గాయత్రీ మంత్రము. ఓం, భూమి, అంతరిక్షము, స్వర్గము. ఆ దివ్య సవితృ దేవుని పూజనీయ తేజస్సును ధ్యానించుచున్నాము. ఆయన మా బుద్ధులను ప్రేరేపించును గాక.
+hi: गायत्री मंत्र। ओम्, भूमि, अंतरिक्ष, स्वर्ग। उस दिव्य सविता देव के पूजनीय तेज का हम ध्यान करते हैं। वे हमारी बुद्धि को प्रेरित करें।
+
+--- unit 51 | section: Closing the recitation ---
+vidhi:
+State the intention to close the recitation.
+deva:
+पूर्वोक्त एव-ङ्गुण विशेषण विशिष्टायां शुभ तिथौ गायत्री जपोपसंहार-ङ्करिष्ये ।
+अस्य श्री गायत्री महामन्त्रस्य, विश्वामित्र ऋषिः, सविता देवता, गायत्री छन्दः, मम जपोपसंहारे विनियोगः ।
+iast:
+pūrvokta eva-ṅguṇa viśeṣaṇa viśiṣṭāyāṁ śubha tithau gāyatrī japopasaṁhāra-ṅkariṣye |
+asya śrī gāyatrī mahāmantrasya, viśvāmitra ṛṣiḥ, savitā devatā, gāyatrī chandaḥ, mama japopasaṁhāre viniyogaḥ |
+en: At this auspicious hour already named, I shall now complete the recitation of the Gāyatrī. For this great mantra of Gāyatrī the sage is Viśvāmitra, the deity is Savitā, the metre is gāyatrī, and the use is in the completing of my recitation.
+tel: ముందు చెప్పిన ఈ శుభ తిథియందు గాయత్రీ జపోపసంహారమును చేయుచున్నాను. ఈ శ్రీ గాయత్రీ మహామంత్రమునకు విశ్వామిత్రుడు ఋషి, సవిత దేవత, గాయత్రి ఛందస్సు, జపోపసంహారమునందు వినియోగము.
+hi: पहले कहे हुए इस शुभ तिथि में गायत्री जप का उपसंहार करता हूँ। इस श्री गायत्री महामंत्र के ऋषि विश्वामित्र, देवता सविता, छंद गायत्री, और विनियोग मेरे जप के उपसंहार में है।
+
+--- unit 52 | section: Closing the recitation ---
+vidhi:
+The same placing on the body is done again, and it ends by releasing the quarters instead of binding them.
+deva:
+ओ-म्भूरिति पादयोः ।
+ओ-म्भुवरिति जङ्घयोः ।
+ओग्ं स्वरिति जान्वोः ।
+ओ-म्मह इति जठरे ।
+ओ-ञ्जन इति कण्ठे ।
+ओ-न्तप इति मुखे ।
+ओग्ं सत्यमिति शिरसि ।
+ओ-म्भूः अङ्गुष्ठाभ्या-न्नमः ।
+ओ-म्भुवः तर्जनीभ्या-न्नमः ।
+ओग्ं स्वः मध्यमाभ्या-न्नमः ।
+ओ-न्तत्सवितुर्वरेण्यं अनामिकाभ्या-न्नमः ।
+ओ-म्भर्गो देवस्य धीमहि कनिष्ठिकाभ्या-न्नमः ।
+ओ-न्धियो यो नः प्रचोदया-त्करतल करपृष्ठाभ्या-न्नमः ।
+ओ-म्भूः हृदयाय नमः ।
+ओ-म्भुव-श्शिरसे स्वाहा ।
+ओग्ं स्व-श्शिखायै वषट् ।
+ओ-न्तत्सवितुर्वरेण्य-ङ्कवचाय हुम् ।
+ओ-म्भर्गो देवस्य धीमहि नेत्रत्रयाय वौषट् ।
+ओ-न्धियो यो नः प्रचोदयात् अस्त्राय फट् ।
+भूर्भुवस्स्वरोमिति दिग्विमोकः ।
+iast:
+o-mbhūriti pādayoḥ |
+o-mbhuvariti jaṅghayoḥ |
+ogṁ svariti jānvoḥ |
+o-mmaha iti jaṭhare |
+o-ñjana iti kaṇṭhe |
+o-ntapa iti mukhe |
+ogṁ satyamiti śirasi |
+o-mbhūḥ aṅguṣṭhābhyā-nnamaḥ |
+o-mbhuvaḥ tarjanībhyā-nnamaḥ |
+ogṁ svaḥ madhyamābhyā-nnamaḥ |
+o-ntatsaviturvareṇyaṁ anāmikābhyā-nnamaḥ |
+o-mbhargo devasya dhīmahi kaniṣṭhikābhyā-nnamaḥ |
+o-ndhiyo yo naḥ pracodayā-tkaratala karapṛṣṭhābhyā-nnamaḥ |
+o-mbhūḥ hṛdayāya namaḥ |
+o-mbhuva-śśirase svāhā |
+ogṁ sva-śśikhāyai vaṣaṭ |
+o-ntatsaviturvareṇya-ṅkavacāya hum |
+o-mbhargo devasya dhīmahi netratrayāya vauṣaṭ |
+o-ndhiyo yo naḥ pracodayāt astrāya phaṭ |
+bhūrbhuvassvaromiti digvimokaḥ |
+en: Om bhūḥ on the feet. Om bhuvaḥ on the shins. Om suvaḥ on the knees. Om mahaḥ on the belly. Om janaḥ on the throat. Om tapaḥ on the mouth. Om satyam on the head. Om bhūḥ, salutations with the thumbs. Om bhuvaḥ, salutations with the index fingers. Om suvaḥ, salutations with the middle fingers. Om tatsavitur vareṇyam, salutations with the ring fingers. Om bhargo devasya dhīmahi, salutations with the little fingers. Om dhiyo yo naḥ pracodayāt, salutations with the palms and the backs of the hands. Om bhūḥ to the heart. Om bhuvaḥ to the head, svāhā. Om suvaḥ to the crest, vaṣaṭ. Om tatsavitur vareṇyam to the armour, hum. Om bhargo devasya dhīmahi to the three eyes, vauṣaṭ. Om dhiyo yo naḥ pracodayāt to the weapon, phaṭ. Bhūrbhuvaḥsuvarom — the releasing of the quarters.
+tel: ఓం భూః పాదములలో. ఓం భువః జంఘలలో. ఓం సువః మోకాళ్ళలో. ఓం మహః జఠరములో. ఓం జనః కంఠములో. ఓం తపః ముఖములో. ఓం సత్యం శిరసులో. ఓం భూః అంగుష్ఠములతో నమస్కారము. ఓం భువః తర్జనులతో నమస్కారము. ఓం సువః మధ్యమలతో నమస్కారము. ఓం తత్సవితుర్వరేణ్యం అనామికలతో నమస్కారము. ఓం భర్గో దేవస్య ధీమహి కనిష్ఠికలతో నమస్కారము. ఓం ధియో యో నః ప్రచోదయాత్ కరతల కరపృష్ఠములతో నమస్కారము. ఓం భూః హృదయమునకు నమస్కారము. ఓం భువః శిరసునకు స్వాహా. ఓం సువః శిఖకు వషట్. ఓం తత్సవితుర్వరేణ్యం కవచమునకు హుం. ఓం భర్గో దేవస్య ధీమహి నేత్రత్రయమునకు వౌషట్. ఓం ధియో యో నః ప్రచోదయాత్ అస్త్రమునకు ఫట్. భూర్భువస్సువరోం — దిగ్విమోకము.
+hi: ओम् भूः पैरों में। ओम् भुवः जंघाओं में। ओम् सुवः घुटनों में। ओम् महः जठर में। ओम् जनः कंठ में। ओम् तपः मुख में। ओम् सत्यम् शिर में। ओम् भूः अंगुष्ठों से नमस्कार। ओम् भुवः तर्जनियों से नमस्कार। ओम् सुवः मध्यमाओं से नमस्कार। ओम् तत्सवितुर्वरेण्यं अनामिकाओं से नमस्कार। ओम् भर्गो देवस्य धीमहि कनिष्ठिकाओं से नमस्कार। ओम् धियो यो नः प्रचोदयात् करतल और करपृष्ठ से नमस्कार। ओम् भूः हृदय को नमस्कार। ओम् भुवः शिर को स्वाहा। ओम् सुवः शिखा को वषट्। ओम् तत्सवितुर्वरेण्यं कवच को हुम्। ओम् भर्गो देवस्य धीमहि तीन नेत्रों को वौषट्। ओम् धियो यो नः प्रचोदयात् अस्त्र को फट्। भूर्भुवःसुवरोम् — दिग्विमोक।
+
+--- unit 53 | section: Closing the recitation ---
+vidhi:
+Eight further hand positions are shown at the close. The base text lists their names only.
+deva:
+उत्तर मुद्रलु ॥
+सुरभिः ज्ञान चक्रे च योनिः कूर्मो-ऽथ पङ्कजम् ।
+लिङ्ग-न्निर्याण मुद्रा चेत्यष्टमुद्राः प्रकीर्तिताः ।
+iast:
+uttara mudralu ||
+surabhiḥ jñāna cakre ca yoniḥ kūrmo-'tha paṅkajam |
+liṅga-nniryāṇa mudrā cetyaṣṭamudrāḥ prakīrtitāḥ |
+en: The closing hand positions. Surabhi, jñāna, cakra, yoni, kūrma, paṅkaja, liṅga and niryāṇa — these eight are the hand positions declared.
+tel: ఉత్తర ముద్రలు. సురభి, జ్ఞానము, చక్రము, యోని, కూర్మము, పంకజము, లింగము, నిర్యాణము — ఈ ఎనిమిది ముద్రలు చెప్పబడినవి.
+hi: उत्तर मुद्राएँ। सुरभि, ज्ञान, चक्र, योनि, कूर्म, पंकज, लिंग और निर्याण — ये आठ मुद्राएँ कही गई हैं।
+
+--- unit 54 | section: Gāyatrī tarpaṇa ---
+vidhi:
+State the intention, then name the sage, the deity and the metre of the offering.
+deva:
+॥ गायत्री तर्पणम् ॥
+पूर्वोक्त एव-ङ्गुण विशेषण विशिष्ठायां शुभ तिथौ सवितृप्रीति योगाय गायत्री तर्पणमह-ङ्करिष्ये ।
+ऋषिर्व्यास-स्समुद्दिष्टो ब्रह्मादैव तमुच्यते ।
+छन्दो गायत्रक-ञ्चैव विनियोगस्तु तर्पणे ॥
+iast:
+|| gāyatrī tarpaṇam ||
+pūrvokta eva-ṅguṇa viśeṣaṇa viśiṣṭhāyāṁ śubha tithau savitṛprīti yogāya gāyatrī tarpaṇamaha-ṅkariṣye |
+ṛṣirvyāsa-ssamuddiṣṭo brahmādaiva tamucyate |
+chando gāyatraka-ñcaiva viniyogastu tarpaṇe ||
+en: At this auspicious hour already named, and for the pleasure of Savitā, I shall now perform the tarpaṇa of Gāyatrī. The sage declared is Vyāsa, the deity is Brahmā, the metre is gāyatrī, and the use is in the tarpaṇa.
+tel: ముందు చెప్పిన ఈ శుభ తిథియందు, సవితృ ప్రీతి కొరకు గాయత్రీ తర్పణమును చేయుచున్నాను. వ్యాసుడు ఋషి అని చెప్పబడినది, బ్రహ్మ దేవత, గాయత్రకము ఛందస్సు, తర్పణమునందు వినియోగము.
+hi: पहले कहे हुए इस शुभ तिथि में, सविता की प्रीति के लिए गायत्री तर्पण करता हूँ। ऋषि व्यास कहे गए हैं, देवता ब्रह्मा, छंद गायत्रक, और विनियोग तर्पण में है।
+
+--- unit 55 | section: Gāyatrī tarpaṇa ---
+vidhi:
+Release water once at each name. The first eight join a world to a body of learning.
+deva:
+ओ-म्भूः पुरुष ऋग्वेदस्तृप्यताम्
+ओ-म्भुवः पुरुष यजुर्वेदस्तृप्यताम्
+ओग्ं स्वः पुरुष सामवेदस्तृप्यताम्
+ओ-म्महः पुरुष अथर्वणवेदस्तृप्यताम्
+ओ-ञ्जनः पुरुष इतिहासपुराणस्तृप्यताम्
+ओ-न्तपः पुरुष सर्वागमस्तृप्यताम्
+ॐ सत्य-म्पुरुष सत्यलोकस्तृप्यताम्
+ओ-म्भूर्भुव-स्स्वः पुरुष मण्डलान्तर्गतस्तृप्यताम्
+iast:
+o-mbhūḥ puruṣa ṛgvedastṛpyatām
+o-mbhuvaḥ puruṣa yajurvedastṛpyatām
+ogṁ svaḥ puruṣa sāmavedastṛpyatām
+o-mmahaḥ puruṣa atharvaṇavedastṛpyatām
+o-ñjanaḥ puruṣa itihāsapurāṇastṛpyatām
+o-ntapaḥ puruṣa sarvāgamastṛpyatām
+oṁ satya-mpuruṣa satyalokastṛpyatām
+o-mbhūrbhuva-ssvaḥ puruṣa maṇḍalāntargatastṛpyatām
+en: Om, may the Person of the earth and the Ṛgveda be satisfied. Om, may the Person of the mid-region and the Yajurveda be satisfied. Om, may the Person of the heavens and the Sāmaveda be satisfied. Om, may the Person of the great world and the Atharvaveda be satisfied. Om, may the Person of the world of men and the histories and Purāṇas be satisfied. Om, may the Person of the world of austerity and all the āgamas be satisfied. Om, may the Person of truth and the world of truth be satisfied. Om, may the Person of the earth, the mid-region and the heavens, who is within the orb, be satisfied.
+tel: ఓం, భూః పురుషుడు, ఋగ్వేదము తృప్తి పొందును గాక. ఓం, భువః పురుషుడు, యజుర్వేదము తృప్తి పొందును గాక. ఓం, స్వః పురుషుడు, సామవేదము తృప్తి పొందును గాక. ఓం, మహః పురుషుడు, అథర్వణ వేదము తృప్తి పొందును గాక. ఓం, జనః పురుషుడు, ఇతిహాస పురాణములు తృప్తి పొందును గాక. ఓం, తపః పురుషుడు, సర్వాగమములు తృప్తి పొందును గాక. ఓం, సత్యం పురుషుడు, సత్యలోకము తృప్తి పొందును గాక. ఓం, మండలాంతర్గతుడైన భూర్భువస్సువః పురుషుడు తృప్తి పొందును గాక.
+hi: ओम्, भूः पुरुष और ऋग्वेद तृप्त हों। ओम्, भुवः पुरुष और यजुर्वेद तृप्त हों। ओम्, स्वः पुरुष और सामवेद तृप्त हों। ओम्, महः पुरुष और अथर्ववेद तृप्त हों। ओम्, जनः पुरुष और इतिहास-पुराण तृप्त हों। ओम्, तपः पुरुष और सब आगम तृप्त हों। ओम्, सत्यं पुरुष और सत्यलोक तृप्त हों। ओम्, मंडल के भीतर स्थित भूर्भुवःस्वः पुरुष तृप्त हों।
+
+--- unit 56 | section: Gāyatrī tarpaṇa ---
+vidhi:
+The goddess is then satisfied in her four measures.
+deva:
+ओ-म्भूरेकपदा गायत्री तृप्यताम्
+ओ-म्भुवः द्विपदा गायत्री तृप्यताम्
+ओग्ं स्वः त्रिपदा गायत्री तृप्यताम्
+ओ-म्भूर्भुवस्स्व-श्चतुष्पदा गायत्री तृप्यताम्
+iast:
+o-mbhūrekapadā gāyatrī tṛpyatām
+o-mbhuvaḥ dvipadā gāyatrī tṛpyatām
+ogṁ svaḥ tripadā gāyatrī tṛpyatām
+o-mbhūrbhuvassva-ścatuṣpadā gāyatrī tṛpyatām
+en: Om, may Gāyatrī of one foot be satisfied. Om, may Gāyatrī of two feet be satisfied. Om, may Gāyatrī of three feet be satisfied. Om, may Gāyatrī of four feet be satisfied.
+tel: ఓం, ఏకపద గాయత్రి తృప్తి పొందును గాక. ఓం, ద్విపద గాయత్రి తృప్తి పొందును గాక. ఓం, త్రిపద గాయత్రి తృప్తి పొందును గాక. ఓం, చతుష్పద గాయత్రి తృప్తి పొందును గాక.
+hi: ओम्, एकपदा गायत्री तृप्त हों। ओम्, द्विपदा गायत्री तृप्त हों। ओम्, त्रिपदा गायत्री तृप्त हों। ओम्, चतुष्पदा गायत्री तृप्त हों।
+
+--- unit 57 | section: Gāyatrī tarpaṇa ---
+vidhi:
+Twelve names of the goddess close the offering.
+deva:
+ॐ उषस्तृप्यताम्
+ओ-ङ्गायत्री तृप्यताम्
+ॐ सावित्री तृप्यताम्
+ॐ सरस्वती तृप्यताम्
+ॐ-वेँदमाता तृप्यताम्
+ओ-म्पृथिवी तृप्यताम्
+ओ-ञ्जया तृप्यताम्
+ओ-ङ्कौशिकी तृप्यताम्
+ॐ साङ्कृति तृप्यताम्
+ॐ सर्वापराजिता तृप्यताम्
+ॐ सहस्रमूर्तिस्तृप्यताम्
+ॐ आनन्दमूर्तिस्तृप्यताम् ।
+iast:
+oṁ uṣastṛpyatām
+o-ṅgāyatrī tṛpyatām
+oṁ sāvitrī tṛpyatām
+oṁ sarasvatī tṛpyatām
+oṁ-vem̐damātā tṛpyatām
+o-mpṛthivī tṛpyatām
+o-ñjayā tṛpyatām
+o-ṅkauśikī tṛpyatām
+oṁ sāṅkṛti tṛpyatām
+oṁ sarvāparājitā tṛpyatām
+oṁ sahasramūrtistṛpyatām
+oṁ ānandamūrtistṛpyatām |
+en: Om, may Uṣas be satisfied. Om, may Gāyatrī be satisfied. Om, may Sāvitrī be satisfied. Om, may Sarasvatī be satisfied. Om, may the Mother of the Veda be satisfied. Om, may the Earth be satisfied. Om, may Jayā be satisfied. Om, may Kauśikī be satisfied. Om, may Sāṅkṛti be satisfied. Om, may Sarvāparājitā be satisfied. Om, may she of a thousand forms be satisfied. Om, may she whose form is bliss be satisfied.
+tel: ఓం, ఉషస్సు తృప్తి పొందును గాక. ఓం, గాయత్రి తృప్తి పొందును గాక. ఓం, సావిత్రి తృప్తి పొందును గాక. ఓం, సరస్వతి తృప్తి పొందును గాక. ఓం, వేదమాత తృప్తి పొందును గాక. ఓం, పృథివి తృప్తి పొందును గాక. ఓం, జయ తృప్తి పొందును గాక. ఓం, కౌశికి తృప్తి పొందును గాక. ఓం, సాంకృతి తృప్తి పొందును గాక. ఓం, సర్వాపరాజిత తృప్తి పొందును గాక. ఓం, సహస్రమూర్తి తృప్తి పొందును గాక. ఓం, ఆనందమూర్తి తృప్తి పొందును గాక.
+hi: ओम्, उषा तृप्त हों। ओम्, गायत्री तृप्त हों। ओम्, सावित्री तृप्त हों। ओम्, सरस्वती तृप्त हों। ओम्, वेदमाता तृप्त हों। ओम्, पृथ्वी तृप्त हों। ओम्, जया तृप्त हों। ओम्, कौशिकी तृप्त हों। ओम्, सांकृति तृप्त हों। ओम्, सर्वापराजिता तृप्त हों। ओम्, सहस्रमूर्ति तृप्त हों। ओम्, आनंदमूर्ति तृप्त हों।
+
+--- unit 58 | section: Salutation to the quarters ---
+vidhi:
+Bow to each quarter in turn, and to the god who guards it.
+deva:
+ओ-म्प्राच्यै दिशे नमः । इन्द्राय नमः ।
+ॐ आग्नेयै दिशे नमः । अग्नये नमः ।
+ओ-न्दक्षिणायै दिशे नमः । यमाय नमः ।
+ओ-न्नैर्-ऋत्यै दिशे नमः । निर्-ऋतये नमः ।
+ओ-म्प्रतीच्यै दिशे नमः । वरुणाय नमः ।
+ॐ-वाँयुव्यै दिशे नमः । वायवे नमः ।
+ॐ उदीच्यै दिशे नमः । कुबेराय नमः ।
+ॐ ईशान्यै दिशे नमः । ईश्वराय नमः ।
+ॐ ऊर्ध्वायै दिशे नमः । ब्रह्मणे नमः ।
+ॐ अधरायै दिशे नमः । अनन्ताय नमः ।
+iast:
+o-mprācyai diśe namaḥ | indrāya namaḥ |
+oṁ āgneyai diśe namaḥ | agnaye namaḥ |
+o-ndakṣiṇāyai diśe namaḥ | yamāya namaḥ |
+o-nnair-ṛtyai diśe namaḥ | nir-ṛtaye namaḥ |
+o-mpratīcyai diśe namaḥ | varuṇāya namaḥ |
+oṁ-vām̐yuvyai diśe namaḥ | vāyave namaḥ |
+oṁ udīcyai diśe namaḥ | kuberāya namaḥ |
+oṁ īśānyai diśe namaḥ | īśvarāya namaḥ |
+oṁ ūrdhvāyai diśe namaḥ | brahmaṇe namaḥ |
+oṁ adharāyai diśe namaḥ | anantāya namaḥ |
+en: Om, salutations to the eastern quarter. Salutations to Indra. Om, salutations to the south-eastern quarter. Salutations to Agni. Om, salutations to the southern quarter. Salutations to Yama. Om, salutations to the south-western quarter. Salutations to Nirṛti. Om, salutations to the western quarter. Salutations to Varuṇa. Om, salutations to the north-western quarter. Salutations to Vāyu. Om, salutations to the northern quarter. Salutations to Kubera. Om, salutations to the north-eastern quarter. Salutations to Īśvara. Om, salutations to the upward quarter. Salutations to Brahmā. Om, salutations to the downward quarter. Salutations to Ananta.
+tel: ఓం, తూర్పు దిక్కునకు నమస్కారము. ఇంద్రునికి నమస్కారము. ఓం, ఆగ్నేయ దిక్కునకు నమస్కారము. అగ్నికి నమస్కారము. ఓం, దక్షిణ దిక్కునకు నమస్కారము. యమునికి నమస్కారము. ఓం, నైరృతి దిక్కునకు నమస్కారము. నిరృతికి నమస్కారము. ఓం, పశ్చిమ దిక్కునకు నమస్కారము. వరుణునికి నమస్కారము. ఓం, వాయువ్య దిక్కునకు నమస్కారము. వాయువుకు నమస్కారము. ఓం, ఉత్తర దిక్కునకు నమస్కారము. కుబేరునికి నమస్కారము. ఓం, ఈశాన్య దిక్కునకు నమస్కారము. ఈశ్వరునికి నమస్కారము. ఓం, ఊర్ధ్వ దిక్కునకు నమస్కారము. బ్రహ్మకు నమస్కారము. ఓం, అధో దిక్కునకు నమస్కారము. అనంతునికి నమస్కారము.
+hi: ओम्, पूर्व दिशा को नमस्कार। इंद्र को नमस्कार। ओम्, आग्नेय दिशा को नमस्कार। अग्नि को नमस्कार। ओम्, दक्षिण दिशा को नमस्कार। यम को नमस्कार। ओम्, नैर्ऋत्य दिशा को नमस्कार। निर्ऋति को नमस्कार। ओम्, पश्चिम दिशा को नमस्कार। वरुण को नमस्कार। ओम्, वायव्य दिशा को नमस्कार। वायु को नमस्कार। ओम्, उत्तर दिशा को नमस्कार। कुबेर को नमस्कार। ओम्, ईशान दिशा को नमस्कार। ईश्वर को नमस्कार। ओम्, ऊर्ध्व दिशा को नमस्कार। ब्रह्मा को नमस्कार। ओम्, अधो दिशा को नमस्कार। अनंत को नमस्कार।
+
+--- unit 59 | section: Salutation to the quarters ---
+vidhi:
+Then bow to the goddess, to the gods, to the sages, to the teachers and to the parents.
+deva:
+ॐ सन्ध्यायै नमः
+ओ-ङ्गायत्र्यै नमः
+ॐ सावित्र्यै नमः
+ॐ सरस्वत्यै नमः
+ॐ सर्वेभ्यो देवताभ्यो नमः
+ओ-न्देवेभ्यो नमः ।
+ॐ ऋषिभ्यो नमः
+ओ-म्मुनिभ्यो नमः
+ओ-ङ्गुरुभ्यो नमः
+ओ-म्पितृभ्यो नमः
+ओ-म्मातृभ्यो नमः
+ओ-न्नमो नमः इति ।
+iast:
+oṁ sandhyāyai namaḥ
+o-ṅgāyatryai namaḥ
+oṁ sāvitryai namaḥ
+oṁ sarasvatyai namaḥ
+oṁ sarvebhyo devatābhyo namaḥ
+o-ndevebhyo namaḥ |
+oṁ ṛṣibhyo namaḥ
+o-mmunibhyo namaḥ
+o-ṅgurubhyo namaḥ
+o-mpitṛbhyo namaḥ
+o-mmātṛbhyo namaḥ
+o-nnamo namaḥ iti |
+en: Om, salutations to Sandhyā. Om, salutations to Gāyatrī. Om, salutations to Sāvitrī. Om, salutations to Sarasvatī. Om, salutations to all the deities. Om, salutations to the gods. Om, salutations to the sages. Om, salutations to the silent ones. Om, salutations to the teachers. Om, salutations to the forefathers. Om, salutations to the mothers. Om, salutations and salutations again.
+tel: ఓం, సంధ్యకు నమస్కారము. ఓం, గాయత్రికి నమస్కారము. ఓం, సావిత్రికి నమస్కారము. ఓం, సరస్వతికి నమస్కారము. ఓం, సర్వ దేవతలకు నమస్కారము. ఓం, దేవతలకు నమస్కారము. ఓం, ఋషులకు నమస్కారము. ఓం, మునులకు నమస్కారము. ఓం, గురువులకు నమస్కారము. ఓం, పితరులకు నమస్కారము. ఓం, మాతృదేవతలకు నమస్కారము. ఓం, మరల మరల నమస్కారము.
+hi: ओम्, संध्या को नमस्कार। ओम्, गायत्री को नमस्कार। ओम्, सावित्री को नमस्कार। ओम्, सरस्वती को नमस्कार। ओम्, सब देवताओं को नमस्कार। ओम्, देवों को नमस्कार। ओम्, ऋषियों को नमस्कार। ओम्, मुनियों को नमस्कार। ओम्, गुरुओं को नमस्कार। ओम्, पितरों को नमस्कार। ओम्, माताओं को नमस्कार। ओम्, बार बार नमस्कार।
+
+--- unit 60 | section: Taking leave of the goddess ---
+vidhi:
+Ask the goddess to return to her own place.
+deva:
+उत्तमेत्यनुवाकस्य, वामदेव ऋषिः, गायत्री देवता, अनुष्टु-प्छन्दः, उद्वासने विनियोगः ॥
+ॐ उ॒त्तमे॑ शिख॑रे देवी भू॒म्या-म्प॑र्वत॒मूर्ध॑नि ।
+ब्राह्मणे॑भ्यो-ऽभ्य॑नुज्ञा॒ता॒ ग॒च्छ दे॑वि य॒था सु॑खम् ॥
+iast:
+uttametyanuvākasya, vāmadeva ṛṣiḥ, gāyatrī devatā, anuṣṭu-pchandaḥ, udvāsane viniyogaḥ ||
+oṁ uttame śikhare devī bhūmyā-mparvatamūrdhani |
+brāhmaṇebhyo-'bhyanujñātā gaccha devi yathā sukham ||
+en: For the anuvāka beginning uttame the sage is Vāmadeva, the deity is Gāyatrī, the metre is anuṣṭup, and the use is in taking leave. Om, O goddess, on the highest peak of the earth, on the summit of the mountain, permitted by the brāhmaṇas, go as you please.
+tel: ఉత్తమే అను అనువాకమునకు వామదేవుడు ఋషి, గాయత్రి దేవత, అనుష్టుప్ ఛందస్సు, ఉద్వాసనమునందు వినియోగము. ఓం, దేవీ, భూమి యొక్క ఉత్తమ శిఖరమునందు, పర్వత శిఖరమునందు, బ్రాహ్మణులచే అనుజ్ఞ పొందినదానవై సుఖముగా వెళ్ళుము.
+hi: उत्तमे इस अनुवाक के ऋषि वामदेव, देवता गायत्री, छंद अनुष्टुप्, और विनियोग उद्वासन में है। ओम्, हे देवी, पृथ्वी के उत्तम शिखर पर, पर्वत की चोटी पर, ब्राह्मणों की अनुज्ञा पाकर सुख से जाओ।
+
+--- unit 61 | section: Dedication of the recitation ---
+vidhi:
+Offer the recitation itself.
+deva:
+॥जप निवेदनम् ॥
+देवा गातु विद इत्यस्य मन्त्रस्य, मनसस्पत ऋषिः, वातो देवता, विराट् छन्दः, जपनिवेदने विनियोगः॥
+ओ-न्देवा॑गातु विदोगा॒तु मि॒त्वागा॒तु मि॑त ।
+मन॑सस्पत इ॒म-न्दे॑व य॒ज्ञग्ं स्वाहा॒ वाते॑थाः ॥
+iast:
+||japa nivedanam ||
+devā gātu vida ityasya mantrasya, manasaspata ṛṣiḥ, vāto devatā, virāṭ chandaḥ, japanivedane viniyogaḥ||
+o-ndevāgātu vidogātu mitvāgātu mita |
+manasaspata ima-ndeva yajñagṁ svāhā vātethāḥ ||
+en: The dedication of the recitation. For the mantra beginning devā gātuvidaḥ the sage is Manasaspati, the deity is Vāta, the metre is virāṭ, and the use is in the dedication of the recitation. Om, you gods who know the way, knowing the way, lead us on the way. O lord of the mind, set this sacrifice of the gods well. Svāhā to Vāta.
+tel: జప నివేదనము. దేవా గాతువిదః అను మంత్రమునకు మనసస్పతి ఋషి, వాతము దేవత, విరాట్ ఛందస్సు, జప నివేదనమునందు వినియోగము. ఓం, మార్గము తెలిసిన దేవతలారా, మార్గమును తెలిసి మమ్ము మార్గములో నడిపించుడు. ఓ మనస్సునకు ప్రభువా, ఈ దేవ యజ్ఞమును చక్కగా నిలుపుము. వాతమునకు స్వాహా.
+hi: जप निवेदन। देवा गातुविदः इस मंत्र के ऋषि मनसस्पति, देवता वात, छंद विराट्, और विनियोग जप निवेदन में है। ओम्, हे मार्ग जानने वाले देवो, मार्ग जानकर हमें मार्ग पर ले चलो। हे मन के स्वामी, इस देव यज्ञ को भली भाँति स्थापित करो। वात को स्वाहा।
+
+--- unit 62 | section: Dedication of the recitation ---
+vidhi:
+Then say the verse that belongs to the hour, giving the recitation to the deity of that time.
+deva:
+(प्रातः काले)
+प्रातस्सन्ध्याङ्ग भूतेन गायत्र्यास्तु जपेन च ।
+सा-ऽष्टेन शत सङ्ख्येन ब्रह्म मे प्रियतां रविः ॥
+(मध्याह्न काले)
+मध्याह्न सन्ध्याङ्गत्वेन गायत्र्या जपितेन च ।
+यथा सङ्ख्येन जपेन रुद्रो मे प्रियतां रविः ॥
+(साय-ङ्काले)
+सायं सन्ध्याङ्ग भूतेन गायत्र्यास्तु जपेन च ।
+सा-ऽष्टेन शत सङ्ख्येन ब्रह्म मे प्रियतां रविः ॥
+iast:
+(prātaḥ kāle)
+prātassandhyāṅga bhūtena gāyatryāstu japena ca |
+sā-'ṣṭena śata saṅkhyena brahma me priyatāṁ raviḥ ||
+(madhyāhna kāle)
+madhyāhna sandhyāṅgatvena gāyatryā japitena ca |
+yathā saṅkhyena japena rudro me priyatāṁ raviḥ ||
+(sāya-ṅkāle)
+sāyaṁ sandhyāṅga bhūtena gāyatryāstu japena ca |
+sā-'ṣṭena śata saṅkhyena brahma me priyatāṁ raviḥ ||
+en: In the morning: by this recitation of the Gāyatrī, which is a limb of the morning sandhyā, made one hundred and eight times, may Brahmā, who is the sun, be pleased with me. At midday: by this recitation of the Gāyatrī, which is a limb of the midday sandhyā, made to the proper count, may Rudra, who is the sun, be pleased with me. In the evening: by this recitation of the Gāyatrī, which is a limb of the evening sandhyā, made one hundred and eight times, may Brahmā, who is the sun, be pleased with me.
+tel: ప్రాతఃకాలమునందు: ప్రాతఃసంధ్యకు అంగమైన ఈ గాయత్రీ జపము నూట ఎనిమిది సారులు చేయబడినది, దీనిచేత సూర్యుడైన బ్రహ్మ నాయందు ప్రీతి చెందును గాక. మధ్యాహ్నమునందు: మధ్యాహ్న సంధ్యకు అంగమైన ఈ గాయత్రీ జపము యథా సంఖ్యగా చేయబడినది, దీనిచేత సూర్యుడైన రుద్రుడు నాయందు ప్రీతి చెందును గాక. సాయంకాలమునందు: సాయం సంధ్యకు అంగమైన ఈ గాయత్రీ జపము నూట ఎనిమిది సారులు చేయబడినది, దీనిచేత సూర్యుడైన బ్రహ్మ నాయందు ప్రీతి చెందును గాక.
+hi: प्रातःकाल में: प्रातःसंध्या के अंग रूप यह गायत्री जप एक सौ आठ बार किया गया, इससे सूर्य रूप ब्रह्मा मुझ पर प्रसन्न हों। मध्याह्न में: मध्याह्न संध्या के अंग रूप यह गायत्री जप यथासंख्य किया गया, इससे सूर्य रूप रुद्र मुझ पर प्रसन्न हों। सायंकाल में: सायं संध्या के अंग रूप यह गायत्री जप एक सौ आठ बार किया गया, इससे सूर्य रूप ब्रह्मा मुझ पर प्रसन्न हों।
+
+--- unit 63 | section: Abhivādana and dedication ---
+vidhi:
+Announce your descent. The blanks are filled with the worshipper’s own pravaras, gotra and name. This is the line in which the tradition names itself.
+deva:
+॥ प्रवर ॥
+प्रवरलु चू. ॥
+चतुस्सागर पर्यन्त-ङ्गोब्राह्मणेभ्य-श्शुभ-म्भवतु । ………. प्रवरान्वित ………… गोत्र-श्शुक्ल यजुर्वेदान्तर्गत काण्व शाखाध्यायी कात्यायन सूत्रः ………. शर्मा-ऽह-म्भो अभिवादये ॥
+iast:
+|| pravara ||
+pravaralu cū. ||
+catussāgara paryanta-ṅgobrāhmaṇebhya-śśubha-mbhavatu | ………. pravarānvita ………… gotra-śśukla yajurvedāntargata kāṇva śākhādhyāyī kātyāyana sūtraḥ ………. śarmā-'ha-mbho abhivādaye ||
+en: The pravara. May there be good fortune for the cows and the brāhmaṇas as far as the four oceans. I am of such pravaras and of such a gotra, a student of the Kāṇva branch within the Śukla-Yajurveda, of the Kātyāyana Sūtra, and my name is such. I salute you.
+tel: ప్రవర. చతుస్సాగర పర్యంతము గోవులకు బ్రాహ్మణులకు శుభము కలుగును గాక. ఇట్టి ప్రవరలు కలవాడను, ఇట్టి గోత్రము కలవాడను, శుక్ల యజుర్వేదాంతర్గత కాణ్వ శాఖాధ్యాయిని, కాత్యాయన సూత్రుడను, ఇట్టి నామము కలవాడను. నమస్కరించుచున్నాను.
+hi: प्रवर। चार समुद्रों तक गौओं और ब्राह्मणों का कल्याण हो। मैं इन प्रवरों वाला, इस गोत्र वाला, शुक्ल यजुर्वेद के अंतर्गत काण्व शाखा का अध्येता, कात्यायन सूत्र वाला, इस नाम वाला हूँ। मैं अभिवादन करता हूँ।
+
+--- unit 64 | section: Abhivādana and dedication ---
+vidhi:
+Bow to the brāhmaṇas and the gods of every world.
+deva:
+समर्पणम् ।
+आसत्यलोकात्पाताला-दालोकालोकपर्वतात् ।
+ये सन्ति ब्राह्मणादेवास्तेभ्यो नित्य-न्नमो नमः ॥
+iast:
+samarpaṇam |
+āsatyalokātpātālā-dālokālokaparvatāt |
+ye santi brāhmaṇādevāstebhyo nitya-nnamo namaḥ ||
+en: The dedication. From the world of Brahmā down to the nether world, and as far as the mountain that bounds the light, to all the brāhmaṇas and gods who dwell there, salutations again and again.
+tel: సమర్పణము. సత్యలోకము నుండి పాతాళము వరకు, లోకాలోక పర్వతము వరకు, అక్కడ ఉన్న బ్రాహ్మణులకు దేవతలకు నిత్యము మరల మరల నమస్కారము.
+hi: समर्पण। सत्यलोक से पाताल तक, और लोकालोक पर्वत तक, जो ब्राह्मण और देव वहाँ हैं, उन्हें नित्य बार बार नमस्कार।
+
+--- unit 65 | section: Abhivādana and dedication ---
+vidhi:
+Ask the earth to forgive the touch of the feet. This is the last act of the rite.
+deva:
+विष्णुपत्नीसमुद्भूते शङ्खवर्णे महीतले ।
+अनेकरत्नसम्पन्ने भूमिदेवि नमो-ऽस्तु ते ॥
+समुद्रवसने देवि पर्वतस्तनमण्डले ।
+विष्णुपत्नी नमस्तुभ्य-म्पादस्पर्श-ङ्क्षमस्व मे ॥
+iast:
+viṣṇupatnīsamudbhūte śaṅkhavarṇe mahītale |
+anekaratnasampanne bhūmidevi namo-'stu te ||
+samudravasane devi parvatastanamaṇḍale |
+viṣṇupatnī namastubhya-mpādasparśa-ṅkṣamasva me ||
+en: O earth, born with the wife of Viṣṇu, of the colour of the conch, rich in many jewels, salutations to you, goddess of the earth. O goddess clothed in the ocean, whose breasts are the mountains, wife of Viṣṇu, salutations to you. Forgive me the touch of my feet.
+tel: విష్ణుపత్నితో పుట్టినదానా, శంఖ వర్ణము కలదానా, అనేక రత్నములతో నిండినదానా, భూదేవీ, నీకు నమస్కారము. సముద్రమే వస్త్రముగా కలదానా, పర్వతములే స్తనములుగా కలదానా, విష్ణుపత్నీ, నీకు నమస్కారము. నా పాద స్పర్శను క్షమించుము.
+hi: हे विष्णुपत्नी के साथ उत्पन्न, शंख वर्ण वाली, अनेक रत्नों से भरी, हे भूमिदेवी, तुम्हें नमस्कार। हे समुद्र रूपी वस्त्र वाली, पर्वत रूपी स्तनों वाली, हे विष्णुपत्नी, तुम्हें नमस्कार। मेरे चरणों के स्पर्श को क्षमा करो।

@@ -1,0 +1,512 @@
+Title: Yajñopavīta-dhāraṇa Vidhi (Taittirīya)
+Devanāgarī: यज्ञोपवीतधारणविधिः
+Telugu: యజ్ఞోపవీత ధారణ విధిః
+
+Author: Anonymous (traditional Taittirīya smārta rite). No compiler is named. The Vedic mantras are from the Taittirīya Āraṇyaka and the Taittirīya Brāhmaṇa, and the base text prints its own citations for two of them.
+
+Type: vidhi (ritual manual) — not a stotra. Uses the one-extra-field vidhi format documented in `../madhyandina/01_sandhyopasana_vidhi.txt`: a `vidhi:` field carrying the ritual instruction, then deva / iast / en / tel / hi.
+
+Recension / śākhā: **Taittirīya (Kṛṣṇa-Yajurveda) — the South Indian form.** This is not inferred: the base text cites `(तै.आ.४-४२-४)` for the water mantra and `(तै.ब्रा.३-७-६-२२)` for the mantra said to the sun, it writes the guttural nasal in the Taittirīya manner, and its ācamana is the twenty-four-name series of this tradition. **This file is not the universal form of the rite.** Northern practice follows the Mādhyandina form and uses the Pāraskara sequence; the corpus's Mādhyandina material is in `../madhyandina/`. The two are the practice of different communities and are not collated against each other. The sandhyāvandana of this same tradition is at `01_krishna_yajurveda_sandhyavandanam.txt` and its brahmayajña at `02_brahma_yajna_vidhi.txt`.
+
+Accent: **present in the Vedic mantras — 298 marks.** Parity with the source was measured rather than assumed: 298 in, 298 out. Udātta `॑` (U+0951) and anudātta `॒` (U+0952) as printed, and the double svarita as `᳚` (U+1CDA). The guttural nasal before a spirant is written `ग्ं` (U+0917 + U+094D + U+0902), as in the two sibling files of this folder, and romanised `gṁ`. The base text writes it `ग्ं`, and once as `ग्` followed only by an accent (`गृध्रा॑णा॒ग्॒`); there are **eight such sites** and all eight are written `ग्ं` here, with any accent that stood inside the cluster placed after it. **No accent was added, inferred, moved between syllables or reconstructed at any point.** The ritual prose — the saṅkalpas, the invocations into the nine strands, the sixteen services and the verses said over the worn thread — is unaccented in the source and is unaccented here. There are no zero-width joiners and no zero-width non-joiners in this file.
+
+Source / recension: base text `https://stotranidhi.com/hi/yagnopaveetha-dharana-vidhi-in-sanskrit/` (fetched 2026-09-12; native accented Devanāgarī, 5,514 Devanāgarī characters, 298 accent marks, 128 lines). The page exists in five scripts, and per the sourcing rule those are **one witness, not five**.
+
+Independent collation: **three witnesses.**
+
+**(1) `https://vignanam.org/devanagari/yagnopavita-dharana.html`** (fetched 2026-09-12; 17,108 Devanāgarī characters) — a separate site and a separate editorial lineage, and a **much shorter and differently arranged rite**. It is printed in the southern Śukla-Yajurveda manner, with the anusvāra assimilated and hyphenated (`ओ-ङ्केशवाय`), and it cites `(तै. अर. 10-27)` and `ऋ.वे. - 10.59.6`. Its differences are listed in the Recension note.
+
+**(2) The accented Taittirīya Āraṇyaka on sanskritdocuments.org** (`doc_veda/taittirIyaAraNyaka.html`, fetched 2026-09-12; 236,935 Devanāgarī characters, 37,630 accent marks), for the water mantra of unit 5, **at exactly the place the base text cites**: the Āraṇyaka numbers it `०। ४। ४२। ९२–९३`. Confirmed there.
+
+**(3) The accented Taittirīya Brāhmaṇa on sanskritdocuments.org** (`doc_veda/taittirIyabrAhmaNam.html`, fetched 2026-09-12; 562,095 Devanāgarī characters, 90,803 accent marks), for the mantra said to the sun at unit 11, **again at exactly the place the base text cites** — the Brāhmaṇa numbers it `३। ७। ६। २२`. Confirmed there, with six differences listed below.
+
+**No Gītā Press witness applies.** Gītā Press publishes the northern rite, and under the standing rule an edition in the wrong śākhā is not a weaker witness but no witness at all.
+
+Corrections applied to the base text. **Ten occurrences of the ASCII colon `:` (U+003A) standing where the visarga `ः` (U+0903) belongs** — the systematic defect already recorded for that site — in `के॒तव॑:`, `तेज॑:`, `सुव॑:`, `न॑:`, `रस॑:` and the like. All ten corrected. No other change was made to the source's readings.
+
+Recension note: **every difference found between the witnesses is listed here, and none has been reconciled away.**
+
+**(1) The Brāhmaṇa and the manual differ in six places in the mantra to the sun**, at unit 11. The accented Brāhmaṇa reads `हृ॒द्रो॒गं` where the base text reads `हृद्रो॒गं`, one anudātta more; `हरि॒माण᳚म्` where the base text reads `हरि॒माणं᳚`, the same sign one letter earlier; **`हारिद्र॒वेषु॑` where the base text reads `हरिद्र॒वेषु॑`**, a difference of the word itself; `आदि॒त्यः । विश्वे॑न` where the base text runs the sandhi together as `आदि॒त्यो विश्वे॑न`; **`मम॑ र॒न्धयन्॑` where the base text reads `मह्यं॑ रं॒धय॒न्`**; and **`द्वि॒ष॒तो र॑धम्` where the base text reads `द्वि॒ष॒ते र॑धम्`**. The base text's readings are kept throughout, because it is a ritual manual quoting the passage in its own pāṭha, and the Brāhmaṇa's are given here so that a reciter who follows the pāṭha can find them. The Brāhmaṇa also continues the passage beyond where the manual stops.
+
+**(2) The Āraṇyaka runs the water mantra together where the manual splits it.** The Āraṇyaka reads `म॑यो॒भुव॒स्ता न॑`, `यो वः॑ शि॒वत॑मो॒ रस॒स्तस्य॑` and `तस्मा॒ अरं॑ गमाम वो॒ यस्य॒`; the manual prints `म॑यो॒भुव॑ः । ता न॑`, `यो व॑श्शि॒वत॑मो॒ रस॑ः । तस्य॑` and `तस्मा॒ अरं॑ गमाम वः । यस्य॒`. **This is a pāṭha difference within one śākhā, not a variant reading**, and it is exactly the case the svara rule warns not to mistake for cross-śākhā contamination. One genuine accent difference stands beside it: the Āraṇyaka reads `मा॒तरः॑` where the manual reads `मा॒त॑रः`. Not reconciled.
+
+**(3) The second manual is a much shorter rite.** It has nine numbered sections against this one's twenty-two units. **It does not have** the invocation of the nine deities into the nine strands, the three knot mantras to Brahmā, Viṣṇu and Rudra, the sixteen services offered to the thread, the showing of the thread to the sun, the second and third threads, the recitation of the Gāyatrī, or the long release mantra `समुद्रं गच्छ स्वाहा`. **It has** a driving-away of the spirits, a prāṇapratiṣṭhā using Ṛgveda 10.59.6 and `अमृतं वै प्राणाः`, an abhivādana, and a closing samarpaṇa with `यस्य स्मृत्या` and `कायेन वाचा`. **Nothing was imported from it in either direction.** This is a difference in the extent of two manuals of one tradition.
+
+**(4) The two manuals give the mantra a different metre.** The base text reads `परमेष्ठी ऋषिः, परब्रह्म परमात्मा देवता, त्रिष्टुप् छंदः`; the second manual reads `परमेष्टि परब्रह्मर्​षिः, परमात्म देवता, देवी गायत्रीच्छन्दः`. **A real disagreement about the viniyoga, deliberately not reconciled.**
+
+**(5) `(गृहस्थः प्रति – )`, "for the householder", is printed twice in the base text** — once before the second thread and once before the third — and the second of the two stands before the line `आचम्य`, where it reads oddly. It is transcribed as printed at units 14 and 15. The second manual has neither.
+
+**(6) The base text writes `त्स` where the second manual and the Brāhmaṇa write `थ्स`** (`तत्सवितुर्` against `तथ्सवितुर्`). The same cluster is discussed in `02_brahma_yajna_vidhi.txt` in this folder, where two independent Taittirīya editions spell it `थ्स`; it is the tradition's own spelling of that sound, and each edition is left as it prints it.
+
+Not collated: the long release mantra `समुद्रं गच्छ स्वाहा` at unit 21, which was searched for in both the accented Āraṇyaka and the accented Brāhmaṇa and found in neither, so it stands on the base text alone; the four verses said over the worn thread at units 19 and 20; the invocations into the nine strands and the three cords at unit 6; the sixteen services at unit 10; and the saṅkalpa sentences. These are ritual Sanskrit and paddhati prose rather than Veda, they are unaccented in the source, and no second edition of each was consulted. The Gāyatrī dhyāna verse at unit 17 is the same verse that stands at unit 46 of `../kanva/01_shukla_yajurveda_sandhyavandanam.txt`; the two files print it from their own sources and neither was used to correct the other.
+
+Verse count: 22 units. Not a verse count in the stotra sense — the work is an order of service punctuated by mantras, and the numbering is this corpus's, not the source's.
+
+Sections:
+आरम्भः — The beginning (unit 1)
+आचमनम् — Ācamana (unit 2)
+प्राणायामः — Prāṇāyāma (unit 3)
+सङ्कल्पः — Saṅkalpa (unit 4)
+जलाभिमन्त्रणम् — Consecrating the water (unit 5)
+नवतन्तुदेवताह्वानम् — The deities of the threads (unit 6)
+ग्रन्थित्रयम् — The three knots (units 7–9)
+षोडशोपचारपूजा — Worship of the thread (unit 10)
+सूर्यदर्शनम् — Showing the thread to the sun (units 11–12)
+यज्ञोपवीतधारणम् — Wearing the new thread (units 13–15)
+गायत्रीजपः — Recitation of the Gāyatrī (units 16–18)
+जीर्णविसर्जनम् — Giving up the old thread (units 19–21)
+समापनम् — Close (unit 22)
+
+Blurb: This is the rite for putting on a new sacred thread. It is performed once a year at the Upākarma, and again whenever the thread becomes worn or unclean. The order of the rite matters. The worshipper first sips water, controls the breath and states his intention. He then consecrates the new thread with water, invokes a deity into each of its nine strands and a Veda into each of its three cords, and invokes Brahmā, Viṣṇu and Rudra into its three knots. He worships the thread with the sixteen services, shows it to the sun, and only then puts it on. A householder wears a second thread, and a third in place of the upper garment. He recites the Gāyatrī ten times so that the mantra takes hold in the new thread. **The old thread is taken off last, never first**, so that he is never without one. He speaks to it with respect, thanks it for the years it has carried him, and lets it go.
+
+--- unit 1 | section: The beginning ---
+vidhi:
+The rite begins with the salutation and the verse to Gaṇeśa.
+deva:
+हरिः ओं । श्री गणेशाय नमः । श्री गुरुभ्यो नमः ।
+शुक्लाम्बरधरं विष्णुं शशिवर्णं चतुर्भुजं ।
+प्रसन्नवदनं ध्यायेत्सर्व विघ्नोपशांतये ॥
+iast:
+hariḥ oṁ | śrī gaṇeśāya namaḥ | śrī gurubhyo namaḥ |
+śuklāmbaradharaṁ viṣṇuṁ śaśivarṇaṁ caturbhujaṁ |
+prasannavadanaṁ dhyāyetsarva vighnopaśāṁtaye ||
+en: Hariḥ Om. Salutations to Gaṇeśa. Salutations to the teachers. Let us meditate on Viṣṇu, who wears white garments, who is of the colour of the moon, who has four arms and a gracious face, for the removal of every obstacle.
+tel: హరిః ఓం. గణేశునికి నమస్కారము. గురువులకు నమస్కారము. తెల్లని వస్త్రములు ధరించిన, చంద్ర వర్ణుడైన, నాలుగు భుజములు కల, ప్రసన్న ముఖము కల విష్ణువును సమస్త విఘ్నముల నివారణ కొరకు ధ్యానించుదుము.
+hi: हरिः ओम्। गणेश को नमस्कार। गुरुओं को नमस्कार। श्वेत वस्त्र धारण किए, चंद्र वर्ण वाले, चार भुजाओं और प्रसन्न मुख वाले विष्णु का सब विघ्नों की शांति के लिए हम ध्यान करें।
+
+--- unit 2 | section: Ācamana ---
+vidhi:
+Sip water at the first three names, then say the remaining names.
+deva:
+आचम्य –
+ओं केशवाय स्वाहा ।
+ओं नारायणाय स्वाहा ।
+ओं माधवाय स्वाहा ।
+ओं गोविंदाय नमः । ओं विष्णवे नमः ।
+ओं मधुसूदनाय नमः । ओं त्रिविक्रमाय नमः ।
+ओं वामनाय नमः । ओं श्रीधराय नमः ।
+ओं हृषीकेशाय नमः । ओं पद्मनाभाय नमः ।
+ओं दामोदराय नमः । ओं संकर्षणाय नमः ।
+ओं वासुदेवाय नमः । ओं प्रद्युम्नाय नमः ।
+ओं अनिरुद्धाय नमः । ओं पुरुषोत्तमाय नमः ।
+ओं अथोक्षजाय नमः । ओं नारसिंहाय नमः ।
+ओं अच्युताय नमः । ओं जनार्दनाय नमः ।
+ओं उपेंद्राय नमः । ओं हरये नमः ।
+ओं श्री कृष्णाय नमः ।
+iast:
+ācamya –
+oṁ keśavāya svāhā |
+oṁ nārāyaṇāya svāhā |
+oṁ mādhavāya svāhā |
+oṁ goviṁdāya namaḥ | oṁ viṣṇave namaḥ |
+oṁ madhusūdanāya namaḥ | oṁ trivikramāya namaḥ |
+oṁ vāmanāya namaḥ | oṁ śrīdharāya namaḥ |
+oṁ hṛṣīkeśāya namaḥ | oṁ padmanābhāya namaḥ |
+oṁ dāmodarāya namaḥ | oṁ saṁkarṣaṇāya namaḥ |
+oṁ vāsudevāya namaḥ | oṁ pradyumnāya namaḥ |
+oṁ aniruddhāya namaḥ | oṁ puruṣottamāya namaḥ |
+oṁ athokṣajāya namaḥ | oṁ nārasiṁhāya namaḥ |
+oṁ acyutāya namaḥ | oṁ janārdanāya namaḥ |
+oṁ upeṁdrāya namaḥ | oṁ haraye namaḥ |
+oṁ śrī kṛṣṇāya namaḥ |
+en: Having performed ācamana. Om, to Keśava, svāhā. Om, to Nārāyaṇa, svāhā. Om, to Mādhava, svāhā. Salutations to Govinda, to Viṣṇu, to Madhusūdana, to Trivikrama, to Vāmana, to Śrīdhara, to Hṛṣīkeśa, to Padmanābha, to Dāmodara, to Saṅkarṣaṇa, to Vāsudeva, to Pradyumna, to Aniruddha, to Puruṣottama, to Adhokṣaja, to Nārasiṁha, to Acyuta, to Janārdana, to Upendra, to Hari, and to Śrī Kṛṣṇa.
+tel: ఆచమనము చేసి. ఓం, కేశవునికి స్వాహా. ఓం, నారాయణునికి స్వాహా. ఓం, మాధవునికి స్వాహా. గోవిందునికి, విష్ణువుకు, మధుసూదనునికి, త్రివిక్రమునికి, వామనునికి, శ్రీధరునికి, హృషీకేశునికి, పద్మనాభునికి, దామోదరునికి, సంకర్షణునికి, వాసుదేవునికి, ప్రద్యుమ్నునికి, అనిరుద్ధునికి, పురుషోత్తమునికి, అధోక్షజునికి, నారసింహునికి, అచ్యుతునికి, జనార్దనునికి, ఉపేంద్రునికి, హరికి, శ్రీ కృష్ణునికి నమస్కారము.
+hi: आचमन करके। ओम्, केशव को स्वाहा। ओम्, नारायण को स्वाहा। ओम्, माधव को स्वाहा। गोविंद को, विष्णु को, मधुसूदन को, त्रिविक्रम को, वामन को, श्रीधर को, हृषीकेश को, पद्मनाभ को, दामोदर को, संकर्षण को, वासुदेव को, प्रद्युम्न को, अनिरुद्ध को, पुरुषोत्तम को, अधोक्षज को, नारसिंह को, अच्युत को, जनार्दन को, उपेंद्र को, हरि को और श्री कृष्ण को नमस्कार।
+
+--- unit 3 | section: Prāṇāyāma ---
+vidhi:
+Close the nostrils and recite this while the breath is held.
+deva:
+प्राणायामम् –
+ओं भूः । ओं भुवः । ओग्ं सुवः । ओं महः । ओं जनः । ओं तपः । ओग्ं सत्यं । ओं तत्सवितुर्वरेण्यं भर्गो देवस्य धीमहि धियो यो नः प्रचोदयात् । ओमापो ज्योती रसोमृतं ब्रह्म भूर्भुवस्सुवरोम् ।
+iast:
+prāṇāyāmam –
+oṁ bhūḥ | oṁ bhuvaḥ | ogṁ suvaḥ | oṁ mahaḥ | oṁ janaḥ | oṁ tapaḥ | ogṁ satyaṁ | oṁ tatsaviturvareṇyaṁ bhargo devasya dhīmahi dhiyo yo naḥ pracodayāt | omāpo jyotī rasomṛtaṁ brahma bhūrbhuvassuvarom |
+en: Om, the earth. Om, the mid-region. Om, the heavens. Om, the great world. Om, the world of men. Om, the world of austerity. Om, the world of truth. Om, we meditate on that adorable light of the divine Creator. May he set our thoughts in motion. Om, the waters, the light, the essence, the nectar of immortality, Brahman, the earth, the mid-region and the heavens — Om.
+tel: ఓం, భూమి. ఓం, అంతరిక్షము. ఓం, స్వర్గము. ఓం, మహర్లోకము. ఓం, జనలోకము. ఓం, తపోలోకము. ఓం, సత్యలోకము. ఓం, ఆ దివ్య సవితృ దేవుని పూజనీయ తేజస్సును ధ్యానించుచున్నాము. ఆయన మా బుద్ధులను ప్రేరేపించును గాక. ఓం, జలము, జ్యోతి, రసము, అమృతము, బ్రహ్మము, భూమి, అంతరిక్షము, స్వర్గము — ఓం.
+hi: ओम्, भूमि। ओम्, अंतरिक्ष। ओम्, स्वर्ग। ओम्, महर्लोक। ओम्, जनलोक। ओम्, तपोलोक। ओम्, सत्यलोक। ओम्, उस दिव्य सविता देव के पूजनीय तेज का हम ध्यान करते हैं। वे हमारी बुद्धि को प्रेरित करें। ओम्, जल, ज्योति, रस, अमृत, ब्रह्म, भूमि, अंतरिक्ष और स्वर्ग — ओम्।
+
+--- unit 4 | section: Saṅkalpa ---
+vidhi:
+State the intention. The blanks are filled with the place, the time, and the worshipper’s own gotra and name.
+deva:
+संकल्पम् –
+मम उपात्त समस्त दुरितक्षय द्वारा श्री परमेश्वरमुद्दिश्य श्री परमेश्वर प्रीत्यर्थं शुभाभ्यां शुभे शोभने मुहूर्ते श्री महाविष्णोराज्ञया प्रवर्तमानस्य अद्य ब्रह्मणः द्वितीय परार्थे श्वेतवराह कल्पे वैवस्वत मन्वंतरे कलियुगे प्रथमपादे जंबूद्वीपे भारतवर्षे भरतखंडे मेरोः _____ दिग्भागे श्रीशैलस्य ___ प्रदेशे ___, ___ नद्योः मध्य प्रदेशे शोभन गृहे समस्त देवता ब्राह्मण आचार्य हरिहर गुरु चरण सन्निधौ अस्मिन् वर्तमन व्यावहरिक चांद्रमानेन श्री ____ नाम संवत्सरे ___ अयने ___ ऋतौ ___ मासे ___ पक्षे ___ तिथौ ___ वासरे ___ नक्षत्रे ___ योगे ___ करण एवं गुण विशेषण विशिष्टायां शुभतिथौ श्रीमान् ___ गोत्रस्य ___ नामधेयस्य मम श्रौत स्मार्त नित्य नैमित्तिक काम्य कर्मानुष्ठान योग्यता सिद्ध्यर्थं ब्रह्मतेजोऽभिवृद्ध्यर्थं नूतन यज्ञोपवीत धारणं करिष्ये ॥
+iast:
+saṁkalpam –
+mama upātta samasta duritakṣaya dvārā śrī parameśvaramuddiśya śrī parameśvara prītyarthaṁ śubhābhyāṁ śubhe śobhane muhūrte śrī mahāviṣṇorājñayā pravartamānasya adya brahmaṇaḥ dvitīya parārthe śvetavarāha kalpe vaivasvata manvaṁtare kaliyuge prathamapāde jaṁbūdvīpe bhāratavarṣe bharatakhaṁḍe meroḥ _____ digbhāge śrīśailasya ___ pradeśe ___, ___ nadyoḥ madhya pradeśe śobhana gṛhe samasta devatā brāhmaṇa ācārya harihara guru caraṇa sannidhau asmin vartamana vyāvaharika cāṁdramānena śrī ____ nāma saṁvatsare ___ ayane ___ ṛtau ___ māse ___ pakṣe ___ tithau ___ vāsare ___ nakṣatre ___ yoge ___ karaṇa evaṁ guṇa viśeṣaṇa viśiṣṭāyāṁ śubhatithau śrīmān ___ gotrasya ___ nāmadheyasya mama śrauta smārta nitya naimittika kāmya karmānuṣṭhāna yogyatā siddhyarthaṁ brahmatejo'bhivṛddhyarthaṁ nūtana yajñopavīta dhāraṇaṁ kariṣye ||
+en: Saṅkalpa. For the removal of all the wrong I have done, and for the pleasure of the supreme Lord, at this auspicious hour, in this present age and place, being of such a gotra and such a name, in order to become fit to perform the daily, the occasional and the desired rites laid down by the Veda and by tradition, and for the increase of the power of Brahman in me, I shall now put on the new sacred thread.
+tel: సంకల్పము. నేను చేసిన సమస్త దురితముల క్షయము కొరకు, శ్రీ పరమేశ్వర ప్రీతి కొరకు, ఈ శుభ ముహూర్తమునందు, ఈ కాలమునందు ఈ ప్రదేశమునందు, ఈ గోత్రము ఈ నామము కలవాడనై, శ్రౌత స్మార్త నిత్య నైమిత్తిక కామ్య కర్మలను ఆచరించుటకు యోగ్యత సిద్ధించుటకై, బ్రహ్మ తేజస్సు వృద్ధి కొరకై, నూతన యజ్ఞోపవీత ధారణము చేయుచున్నాను.
+hi: संकल्प। मेरे किए हुए सब दुरितों के क्षय के लिए, श्री परमेश्वर की प्रीति के लिए, इस शुभ मुहूर्त में, इस काल और इस स्थान में, इस गोत्र और इस नाम वाला मैं, श्रौत, स्मार्त, नित्य, नैमित्तिक और काम्य कर्मों के करने की योग्यता के लिए और ब्रह्मतेज की वृद्धि के लिए नूतन यज्ञोपवीत धारण करता हूँ।
+
+--- unit 5 | section: Consecrating the water ---
+vidhi:
+Sprinkle the new thread with water made holy by this mantra. The base text cites the Taittirīya Āraṇyaka for it.
+deva:
+यज्ञोपवीत जलाभिमंत्रणम् –
+ओं आपो॒ हि ष्ठा म॑यो॒भुव॑ः । ता न॑ ऊ॒र्जे द॑धातन ।
+म॒हे रणा॑य॒ चक्ष॑से ।
+यो व॑श्शि॒वत॑मो॒ रस॑ः । तस्य॑ भाजयते॒ह न॑ः ।
+उ॒श॒तीरि॑व मा॒त॑रः ।
+तस्मा॒ अरं॑ गमाम वः । यस्य॒ क्षया॑य॒ जिन्व॑थ ।
+आपो॑ ज॒नय॑था च नः ॥ (तै.आ.४-४२-४)
+iast:
+yajñopavīta jalābhimaṁtraṇam –
+oṁ āpo hi ṣṭhā mayobhuvaḥ | tā na ūrje dadhātana |
+mahe raṇāya cakṣase |
+yo vaśśivatamo rasaḥ | tasya bhājayateha naḥ |
+uśatīriva mātaraḥ |
+tasmā araṁ gamāma vaḥ | yasya kṣayāya jinvatha |
+āpo janayathā ca naḥ || (tai.ā.4-42-4)
+en: Consecration of the water for the sacred thread. Om, waters, you are the giver of happiness. Grant us strength. Grant us the sight of great joy. Give us here a share of that most auspicious essence of yours, like loving mothers. We come to you for that purpose for which you refresh us. O waters, you also bring us to birth.
+tel: యజ్ఞోపవీత జలాభిమంత్రణము. ఓం, జలములారా, మీరు సుఖమును కలిగించువారు. మాకు బలమును ఇండు. గొప్ప ఆనందము యొక్క దర్శనమును ఇండు. ప్రేమగల తల్లుల వలె, మీ మంగళకరమైన రసములో మాకు ఇక్కడ భాగమును ఇండు. మీరు ఏ కార్యము కొరకు మమ్ము తృప్తిపరచుదురో, ఆ కార్యము కొరకు మీ వద్దకు వచ్చినాము. ఓ జలములారా, మీరే మమ్ము పుట్టించుచున్నారు.
+hi: यज्ञोपवीत के जल का अभिमंत्रण। ओम्, हे जल, तुम सुख देने वाले हो। हमें बल दो। महान आनंद का दर्शन दो। प्रेममयी माताओं के समान, अपने उस अत्यंत मंगल रस में हमें यहाँ भाग दो। जिस कार्य के लिए तुम हमें तृप्त करते हो, उसी के लिए हम तुम्हारे पास आए हैं। हे जल, तुम हमें जन्म भी देते हो।
+
+--- unit 6 | section: The deities of the threads ---
+vidhi:
+The sacred thread is made of three cords, and each cord of three strands. Invoke one deity into each of the nine strands, and one Veda into each of the three cords.
+deva:
+नवतंतु देवताह्वानं ।
+ओंकारं प्रथमतंतौ आवाहयामि ।
+अग्निं द्वितीयतंतौ आवाहयामि ।
+सर्पं (नागं) तृतीयतंतौ आवाहयामि ।
+सोमं चतुर्थतंतौ आवाहयामि ।
+पितॄन् पंचमतंतौ आवाहयामि ।
+प्रजापतिं षष्ठतंतौ आवाहयामि ।
+वायुं सप्तमतंतौ आवाहयामि ।
+सूर्यं अष्टमतंतौ आवाहयामि ।
+विश्वेदेवान् नवमतंतौ आवाहयामि ।
+ब्रह्मदैवत्यं ऋग्वेदं प्रथम दोरके आवाहयामि ।
+विष्णुदैवत्यं यजुर्वेदं द्वितीय दोरके आवाहयामि ।
+रुद्रदैवत्यं सामवेदं तृतीयदोरके आवाहयामि ।
+iast:
+navataṁtu devatāhvānaṁ |
+oṁkāraṁ prathamataṁtau āvāhayāmi |
+agniṁ dvitīyataṁtau āvāhayāmi |
+sarpaṁ (nāgaṁ) tṛtīyataṁtau āvāhayāmi |
+somaṁ caturthataṁtau āvāhayāmi |
+pitṝn paṁcamataṁtau āvāhayāmi |
+prajāpatiṁ ṣaṣṭhataṁtau āvāhayāmi |
+vāyuṁ saptamataṁtau āvāhayāmi |
+sūryaṁ aṣṭamataṁtau āvāhayāmi |
+viśvedevān navamataṁtau āvāhayāmi |
+brahmadaivatyaṁ ṛgvedaṁ prathama dorake āvāhayāmi |
+viṣṇudaivatyaṁ yajurvedaṁ dvitīya dorake āvāhayāmi |
+rudradaivatyaṁ sāmavedaṁ tṛtīyadorake āvāhayāmi |
+en: Invocation of the deities of the nine strands. I invoke Oṁkāra into the first strand. I invoke Agni into the second. I invoke the serpent into the third. I invoke Soma into the fourth. I invoke the forefathers into the fifth. I invoke Prajāpati into the sixth. I invoke Vāyu into the seventh. I invoke Sūrya into the eighth. I invoke the Viśvedevas into the ninth. I invoke the Ṛgveda, whose deity is Brahmā, into the first cord. I invoke the Yajurveda, whose deity is Viṣṇu, into the second cord. I invoke the Sāmaveda, whose deity is Rudra, into the third cord.
+tel: నవతంతు దేవతాహ్వానము. ఓంకారమును మొదటి తంతువునందు ఆవాహన చేయుచున్నాను. అగ్నిని రెండవ తంతువునందు ఆవాహన చేయుచున్నాను. సర్పమును మూడవ తంతువునందు ఆవాహన చేయుచున్నాను. సోముని నాలుగవ తంతువునందు ఆవాహన చేయుచున్నాను. పితరులను ఐదవ తంతువునందు ఆవాహన చేయుచున్నాను. ప్రజాపతిని ఆరవ తంతువునందు ఆవాహన చేయుచున్నాను. వాయువును ఏడవ తంతువునందు ఆవాహన చేయుచున్నాను. సూర్యుని ఎనిమిదవ తంతువునందు ఆవాహన చేయుచున్నాను. విశ్వేదేవతలను తొమ్మిదవ తంతువునందు ఆవాహన చేయుచున్నాను. బ్రహ్మ దైవతమైన ఋగ్వేదమును మొదటి దోరకమునందు ఆవాహన చేయుచున్నాను. విష్ణు దైవతమైన యజుర్వేదమును రెండవ దోరకమునందు ఆవాహన చేయుచున్నాను. రుద్ర దైవతమైన సామవేదమును మూడవ దోరకమునందు ఆవాహన చేయుచున్నాను.
+hi: नौ तंतुओं के देवताओं का आवाहन। ओंकार को पहले तंतु में आवाहन करता हूँ। अग्नि को दूसरे में। सर्प को तीसरे में। सोम को चौथे में। पितरों को पाँचवें में। प्रजापति को छठे में। वायु को सातवें में। सूर्य को आठवें में। विश्वेदेवों को नौवें में। ब्रह्मा देवता वाले ऋग्वेद को पहले दोरक में आवाहन करता हूँ। विष्णु देवता वाले यजुर्वेद को दूसरे दोरक में। रुद्र देवता वाले सामवेद को तीसरे दोरक में।
+
+--- unit 7 | section: The three knots ---
+vidhi:
+Invoke Brahmā into the first knot with this ṛc.
+deva:
+ओं ब्र॒ह्मादे॒वानां᳚ पद॒वीः क॑वी॒नामृषि॒र्विप्रा॑णां महि॒षो मृ॒गाणा᳚म् ।
+श्ये॒नो गृध्रा॑णा॒ग्ं॒ स्वधि॑ति॒र्वना॑ना॒ग्ं॒ सोम॑ः प॒वित्र॒मत्ये॑ति॒ रेभन्न्॑ ॥
+ब्रह्मादेवानामिति ब्रह्मणे नमः – प्रथमग्रंथौ ब्रह्माणमावाहयामि ।
+iast:
+oṁ brahmādevānāṁ padavīḥ kavīnāmṛṣirviprāṇāṁ mahiṣo mṛgāṇām |
+śyeno gṛdhrāṇāgṁ svadhitirvanānāgṁ somaḥ pavitramatyeti rebhann ||
+brahmādevānāmiti brahmaṇe namaḥ – prathamagraṁthau brahmāṇamāvāhayāmi |
+en: Om, Brahman is the leader of the gods, the sage among the wise, the inspired among the priestly, the buffalo among wild animals, the eagle among vultures, the axe among the forests. Soma passes through the strainer, singing aloud. Saying "brahmādevānām", salutations to Brahmā — I invoke Brahmā into the first knot.
+tel: ఓం, బ్రహ్మము దేవతలకు పదవి చూపునది, కవులలో ఋషి, విప్రులలో విప్రుడు, మృగములలో మహిషము, గృధ్రములలో శ్యేనము, వనములలో స్వధితి. సోముడు పవిత్రమును దాటి ధ్వనించుచు పోవుచున్నాడు. బ్రహ్మాదేవానాం అని బ్రహ్మకు నమస్కారము — మొదటి గ్రంథియందు బ్రహ్మను ఆవాహన చేయుచున్నాను.
+hi: ओम्, ब्रह्म देवताओं का पदवी दिखाने वाला है, कवियों में ऋषि, विप्रों में विप्र, मृगों में महिष, गृध्रों में श्येन, वनों में स्वधिति। सोम पवित्र को पार कर गाता हुआ जाता है। ब्रह्मादेवानाम् कहकर ब्रह्मा को नमस्कार — पहले ग्रंथि में ब्रह्मा का आवाहन करता हूँ।
+
+--- unit 8 | section: The three knots ---
+vidhi:
+Invoke Viṣṇu into the second knot with this ṛc.
+deva:
+ओं इ॒दं विष्णु॒र्विच॑क्रमे त्रे॒धा निद॑धेप॒दम् ।
+समू॑ढमस्यपाग्ं सु॒रे ।
+इदं विष्णुरिति विष्णवे नमः – द्वितीयग्रंथौ विष्णुमावाहयामि ।
+iast:
+oṁ idaṁ viṣṇurvicakrame tredhā nidadhepadam |
+samūḍhamasyapāgṁ sure |
+idaṁ viṣṇuriti viṣṇave namaḥ – dvitīyagraṁthau viṣṇumāvāhayāmi |
+en: Om, Viṣṇu strode across this world. Three times he set down his foot. The whole of it is gathered in his dust. Saying "idaṁ viṣṇuḥ", salutations to Viṣṇu — I invoke Viṣṇu into the second knot.
+tel: ఓం, విష్ణువు ఈ లోకమును ఆక్రమించెను. మూడు సారులు తన పాదమును ఉంచెను. అంతయు ఆయన ధూళియందు కూడియున్నది. ఇదం విష్ణుః అని విష్ణువుకు నమస్కారము — రెండవ గ్రంథియందు విష్ణువును ఆవాహన చేయుచున్నాను.
+hi: ओम्, विष्णु ने इस लोक को नाप लिया। तीन बार उन्होंने अपना पद रखा। सब कुछ उनकी धूलि में समाया हुआ है। इदं विष्णुः कहकर विष्णु को नमस्कार — दूसरे ग्रंथि में विष्णु का आवाहन करता हूँ।
+
+--- unit 9 | section: The three knots ---
+vidhi:
+Invoke Rudra into the third knot with this ṛc.
+deva:
+ओं कद्रु॒द्राय॒ प्रचे॑तसे मी॒ढुष्ट॑माय॒ तव्य॑से ।
+वो॒चेम॒ शन्त॑मग्ं हृ॒दे ।
+कद्रुद्रायमिति रुद्राय नमः – तृतीयग्रंथौ रुद्रमावाहयामि ।
+iast:
+oṁ kadrudrāya pracetase mīḍhuṣṭamāya tavyase |
+vocema śantamagṁ hṛde |
+kadrudrāyamiti rudrāya namaḥ – tṛtīyagraṁthau rudramāvāhayāmi |
+en: Om, what shall we speak to Rudra, the wise, the most bountiful, the strongest? Let us speak what is most healing to his heart. Saying "kadrudrāya", salutations to Rudra — I invoke Rudra into the third knot.
+tel: ఓం, ప్రచేతసుడు, మీఢుష్టముడు, తవ్యసుడు అయిన రుద్రునికి ఏమి పలుకుదుము? ఆయన హృదయమునకు అత్యంత శాంతికరమైనది పలుకుదుము. కద్రుద్రాయ అని రుద్రునికి నమస్కారము — మూడవ గ్రంథియందు రుద్రుని ఆవాహన చేయుచున్నాను.
+hi: ओम्, प्रचेता, मीढुष्टम और तव्यस रुद्र से हम क्या कहें? उनके हृदय को जो सबसे शांतिकर हो वही कहें। कद्रुद्राय कहकर रुद्र को नमस्कार — तीसरे ग्रंथि में रुद्र का आवाहन करता हूँ।
+
+--- unit 10 | section: Worship of the thread ---
+vidhi:
+Offer the sixteen services to the deities now present in the thread.
+deva:
+यज्ञोपवीत षोडशोपचार पूज ।
+ओं प्रणवाद्यावाहित देवताभ्यो नमः – ध्यायामि ।
+ओं प्रणवाद्यावाहित देवताभ्यो नमः – आवाहयामि ।
+ओं प्रणवाद्यावाहित देवताभ्यो नमः – पाद्यं समर्पयामि ।
+ओं प्रणवाद्यावाहित देवताभ्यो नमः – अर्घ्यं समर्पयामि ।
+ओं प्रणवाद्यावाहित देवताभ्यो नमः – आचमनीयं समर्पयामि ।
+ओं प्रणवाद्यावाहित देवताभ्यो नमः – स्नानं समर्पयामि ।
+ओं प्रणवाद्यावाहित देवताभ्यो नमः – वस्त्रयुग्मं समर्पयामि ।
+ओं प्रणवाद्यावाहित देवताभ्यो नमः – यज्ञोपवीतं समर्पयामि ।
+ओं प्रणवाद्यावाहित देवताभ्यो नमः – गंधं समर्पयामि ।
+ओं प्रणवाद्यावाहित देवताभ्यो नमः – पुष्पाणि समर्पयामि ।
+ओं प्रणवाद्यावाहित देवताभ्यो नमः – धूपमाघ्रापयामि ।
+ओं प्रणवाद्यावाहित देवताभ्यो नमः – दीपं दर्शयामि ।
+ओं प्रणवाद्यावाहित देवताभ्यो नमः – नैवेद्यं समर्पयामि ।
+ओं प्रणवाद्यावाहित देवताभ्यो नमः – तांबूलं समर्पयामि ।
+ओं प्रणवाद्यावाहित देवताभ्यो नमः – कर्पूरनीराजनं समर्पयामि ।
+ओं प्रणवाद्यावाहित देवताभ्यो नमः – मंत्रपुष्पं समर्पयामि ।
+ओं प्रणवाद्यावाहित देवताभ्यो नमः – आत्मप्रदक्षिण नमस्कारान् समर्पयामि ।
+iast:
+yajñopavīta ṣoḍaśopacāra pūja |
+oṁ praṇavādyāvāhita devatābhyo namaḥ – dhyāyāmi |
+oṁ praṇavādyāvāhita devatābhyo namaḥ – āvāhayāmi |
+oṁ praṇavādyāvāhita devatābhyo namaḥ – pādyaṁ samarpayāmi |
+oṁ praṇavādyāvāhita devatābhyo namaḥ – arghyaṁ samarpayāmi |
+oṁ praṇavādyāvāhita devatābhyo namaḥ – ācamanīyaṁ samarpayāmi |
+oṁ praṇavādyāvāhita devatābhyo namaḥ – snānaṁ samarpayāmi |
+oṁ praṇavādyāvāhita devatābhyo namaḥ – vastrayugmaṁ samarpayāmi |
+oṁ praṇavādyāvāhita devatābhyo namaḥ – yajñopavītaṁ samarpayāmi |
+oṁ praṇavādyāvāhita devatābhyo namaḥ – gaṁdhaṁ samarpayāmi |
+oṁ praṇavādyāvāhita devatābhyo namaḥ – puṣpāṇi samarpayāmi |
+oṁ praṇavādyāvāhita devatābhyo namaḥ – dhūpamāghrāpayāmi |
+oṁ praṇavādyāvāhita devatābhyo namaḥ – dīpaṁ darśayāmi |
+oṁ praṇavādyāvāhita devatābhyo namaḥ – naivedyaṁ samarpayāmi |
+oṁ praṇavādyāvāhita devatābhyo namaḥ – tāṁbūlaṁ samarpayāmi |
+oṁ praṇavādyāvāhita devatābhyo namaḥ – karpūranīrājanaṁ samarpayāmi |
+oṁ praṇavādyāvāhita devatābhyo namaḥ – maṁtrapuṣpaṁ samarpayāmi |
+oṁ praṇavādyāvāhita devatābhyo namaḥ – ātmapradakṣiṇa namaskārān samarpayāmi |
+en: The sixteen services to the sacred thread. Salutations to the deities invoked beginning with the praṇava — I meditate on you. I invite you. I offer water for the feet. I offer the welcome offering. I offer water for sipping. I offer the bath. I offer the pair of garments. I offer the sacred thread. I offer sandal paste. I offer flowers. I offer incense. I show the lamp. I offer food. I offer betel. I offer the waving of camphor. I offer the flower of mantras. I offer circumambulation and salutation.
+tel: యజ్ఞోపవీతమునకు షోడశోపచార పూజ. ప్రణవము మొదలుకొని ఆవాహన చేయబడిన దేవతలకు నమస్కారము — ధ్యానించుచున్నాను. ఆవాహన చేయుచున్నాను. పాద్యమును సమర్పించుచున్నాను. అర్ఘ్యమును సమర్పించుచున్నాను. ఆచమనీయమును సమర్పించుచున్నాను. స్నానమును సమర్పించుచున్నాను. వస్త్రయుగ్మమును సమర్పించుచున్నాను. యజ్ఞోపవీతమును సమర్పించుచున్నాను. గంధమును సమర్పించుచున్నాను. పుష్పములను సమర్పించుచున్నాను. ధూపమును సమర్పించుచున్నాను. దీపమును చూపుచున్నాను. నైవేద్యమును సమర్పించుచున్నాను. తాంబూలమును సమర్పించుచున్నాను. కర్పూర నీరాజనమును సమర్పించుచున్నాను. మంత్రపుష్పమును సమర్పించుచున్నాను. ఆత్మప్రదక్షిణ నమస్కారములను సమర్పించుచున్నాను.
+hi: यज्ञोपवीत की षोडशोपचार पूजा। प्रणव से आरंभ कर आवाहित देवताओं को नमस्कार — ध्यान करता हूँ। आवाहन करता हूँ। पाद्य समर्पित करता हूँ। अर्घ्य समर्पित करता हूँ। आचमनीय समर्पित करता हूँ। स्नान समर्पित करता हूँ। वस्त्रयुग्म समर्पित करता हूँ। यज्ञोपवीत समर्पित करता हूँ। गंध समर्पित करता हूँ। पुष्प समर्पित करता हूँ। धूप समर्पित करता हूँ। दीप दिखाता हूँ। नैवेद्य समर्पित करता हूँ। ताम्बूल समर्पित करता हूँ। कर्पूर नीराजन समर्पित करता हूँ। मंत्रपुष्प समर्पित करता हूँ। आत्मप्रदक्षिण और नमस्कार समर्पित करता हूँ।
+
+--- unit 11 | section: Showing the thread to the sun ---
+vidhi:
+Face the sun and recite this. The base text cites the Taittirīya Brāhmaṇa for it.
+deva:
+सूर्यनारायण दर्शनम् –
+(तै.ब्रा.३-७-६-२२)
+ओं उ॒द्यन्न॒द्य मि॑त्रमहः आ॒रोह॒न्नुत्त॑रां॒ दिव᳚म् ।
+हृद्रो॒गं मम॑ सूर्य ह॒रि॒माणं॑ च नाशय ।
+शुके॑षु मे हरि॒माणं᳚ रो॒प॒णाका॑सु दध्मसि ।
+अथो॑ हरिद्र॒वेषु॑ मे ह॒रि॒माणं॒ निद॑ध्मसि ।
+उद॑गाद॒यमा॑दि॒त्यो विश्वे॑न॒ सह॑सा स॒ह ।
+द्वि॒षन्तं॒ मह्यं॑ रं॒धय॒न् मो अ॒हं द्वि॑ष॒ते र॑धम् ॥
+iast:
+sūryanārāyaṇa darśanam –
+(tai.brā.3-7-6-22)
+oṁ udyannadya mitramahaḥ ārohannuttarāṁ divam |
+hṛdrogaṁ mama sūrya harimāṇaṁ ca nāśaya |
+śukeṣu me harimāṇaṁ ropaṇākāsu dadhmasi |
+atho haridraveṣu me harimāṇaṁ nidadhmasi |
+udagādayamādityo viśvena sahasā saha |
+dviṣantaṁ mahyaṁ raṁdhayan mo ahaṁ dviṣate radham ||
+en: Beholding Sūryanārāyaṇa. Om, rising today, O friend of light, and climbing to the higher sky, take away the sickness of my heart, O Sun, and take away my pallor. We lay my pallor on the parrots, and on the ropaṇākā birds. We lay my pallor on the turmeric plants. This sun has risen with all his strength, subduing him who hates me. Let me not be subdued by the one I hate.
+tel: సూర్యనారాయణ దర్శనము. ఓం, నేడు ఉదయించుచు, ఓ మిత్రమహుడా, ఉత్తర ఆకాశమునకు ఎక్కుచు, సూర్యా, నా హృద్రోగమును తొలగించుము, నా పాండురోగమును తొలగించుము. నా పాండురోగమును చిలుకలయందు, రోపణాకా పక్షులయందు ఉంచుచున్నాము. నా పాండురోగమును పసుపు మొక్కలయందు ఉంచుచున్నాము. ఈ ఆదిత్యుడు తన బలముతో ఉదయించి నన్ను ద్వేషించువానిని అణచును. నేను ద్వేషించువానిచేత నేను అణచబడకుందును గాక.
+hi: सूर्यनारायण का दर्शन। ओम्, आज उदित होते हुए, हे मित्रमह, ऊपर के आकाश पर चढ़ते हुए, हे सूर्य, मेरे हृदय रोग को दूर करो और मेरे पीलेपन को हर लो। मेरे पीलेपन को हम तोतों पर और रोपणाका पक्षियों पर रखते हैं। मेरे पीलेपन को हम हरिद्रा के पौधों पर रखते हैं। यह आदित्य अपने सब बल के साथ उदित हुआ है और मेरे द्वेषी को वश में करता है। जिससे मैं द्वेष करता हूँ उससे मैं वश में न होऊँ।
+
+--- unit 12 | section: Showing the thread to the sun ---
+vidhi:
+Hold the thread up towards the sun.
+deva:
+यज्ञोपवीतं सूर्याय दर्शयित्वा ।
+उदु॒ त्यं जा॒तवे॑दसं दे॒वं व॑हन्ति के॒तव॑ः ।
+दृ॒शे विश्वा॑य सूर्यम् ॥
+iast:
+yajñopavītaṁ sūryāya darśayitvā |
+udu tyaṁ jātavedasaṁ devaṁ vahanti ketavaḥ |
+dṛśe viśvāya sūryam ||
+en: Having shown the sacred thread to the sun. The rays bear upward that god who knows all that is born, that all may see the sun.
+tel: యజ్ఞోపవీతమును సూర్యునికి చూపి. జాతవేదుడైన ఆ దేవుని కిరణములు పైకి మోసుకొని పోవుచున్నవి, విశ్వమంతయు సూర్యుని చూచుటకు.
+hi: यज्ञोपवीत को सूर्य को दिखाकर। जातवेद उस देव को किरणें ऊपर ले जाती हैं, जिससे सब सूर्य को देखें।
+
+--- unit 13 | section: Wearing the new thread ---
+vidhi:
+State the intention again, then put on the first thread while reciting the mantra.
+deva:
+आचम्य ॥
+पुनः संकल्पम् –
+पूर्वोक्त एवं गुण विशेषण विशिष्टायां शुभ तिथौ मम श्रौत स्मार्त नित्य नैमित्तिक कर्मानुष्ठान योग्यता सिद्ध्यर्थं नूतन यज्ञोपवीत धारणं करिष्ये ॥
+अस्य यज्ञोपवीतमिति मंत्रस्य परमेष्ठी ऋषिः, परब्रह्म परमात्मा देवता, त्रिष्टुप् छंदः, यज्ञोपवीतधारणे विनियोगः ॥
+ओं य॒ज्ञो॒प॒वी॒तं प॒रमं॑ पवि॒त्रं
+प्र॒जाप॑ते॒र्यत्स॒हजं॑ पु॒रस्ता᳚त् ।
+आयु॑ष्यमग्र्यं॒ प्र॒ति मुं॑च शु॒भ्रं
+य॑ज्ञोपवी॒तं ब॒लम॑स्तु॒ तेज॑ः ॥
+iast:
+ācamya ||
+punaḥ saṁkalpam –
+pūrvokta evaṁ guṇa viśeṣaṇa viśiṣṭāyāṁ śubha tithau mama śrauta smārta nitya naimittika karmānuṣṭhāna yogyatā siddhyarthaṁ nūtana yajñopavīta dhāraṇaṁ kariṣye ||
+asya yajñopavītamiti maṁtrasya parameṣṭhī ṛṣiḥ, parabrahma paramātmā devatā, triṣṭup chaṁdaḥ, yajñopavītadhāraṇe viniyogaḥ ||
+oṁ yajñopavītaṁ paramaṁ pavitraṁ
+prajāpateryatsahajaṁ purastāt |
+āyuṣyamagryaṁ prati muṁca śubhraṁ
+yajñopavītaṁ balamastu tejaḥ ||
+en: Having performed ācamana. The saṅkalpa again. At this auspicious hour already named, in order to become fit to perform the daily and the occasional rites laid down by the Veda and by tradition, I shall now put on the new sacred thread. For the mantra beginning yajñopavītam the sage is Parameṣṭhī, the deity is the supreme Brahman, the supreme Self, the metre is triṣṭup, and the use is in the wearing of the sacred thread. Om, the sacred thread is supreme and purifying. It was born together with Prajāpati in the beginning. Put on this bright thread, which is the first giver of long life. May the sacred thread be strength and splendour to you.
+tel: ఆచమనము చేసి. మరల సంకల్పము. ముందు చెప్పిన ఈ శుభ తిథియందు, శ్రౌత స్మార్త నిత్య నైమిత్తిక కర్మలను ఆచరించుటకు యోగ్యత సిద్ధించుటకై, నూతన యజ్ఞోపవీత ధారణము చేయుచున్నాను. యజ్ఞోపవీతం అను మంత్రమునకు పరమేష్ఠి ఋషి, పరబ్రహ్మ పరమాత్మ దేవత, త్రిష్టుప్ ఛందస్సు, యజ్ఞోపవీత ధారణమునందు వినియోగము. ఓం, యజ్ఞోపవీతము పరమమైనది, పవిత్రమైనది. ప్రజాపతితో కూడ ఆదియందు పుట్టినది. ఆయువును ఇచ్చు ఈ శుభ్రమైన దానిని ధరించుము. యజ్ఞోపవీతము నీకు బలము తేజస్సు అగును గాక.
+hi: आचमन करके। पुनः संकल्प। पहले कहे हुए इस शुभ तिथि में, श्रौत, स्मार्त, नित्य और नैमित्तिक कर्मों के करने की योग्यता के लिए नूतन यज्ञोपवीत धारण करता हूँ। यज्ञोपवीतम् इस मंत्र के ऋषि परमेष्ठी, देवता परब्रह्म परमात्मा, छंद त्रिष्टुप्, और विनियोग यज्ञोपवीत धारण में है। ओम्, यज्ञोपवीत परम और पवित्र है। वह प्रजापति के साथ आदि में उत्पन्न हुआ। आयु देने वाले इस शुभ्र को धारण करो। यज्ञोपवीत तुम्हें बल और तेज दे।
+
+--- unit 14 | section: Wearing the new thread ---
+vidhi:
+The householder puts on a second thread, with the same mantra.
+deva:
+आचम्य ॥
+(गृहस्थः प्रति – )
+पूर्वोक्त एवं गुण विशेषण विशिष्टायां शुभ तिथौ मम उद्वाहानंतर (गार्हस्थ्य) कर्मानुष्ठान योग्यता सिद्ध्यर्थं द्वितीय यज्ञोपवीत धारणं करिष्ये ॥
+ओं य॒ज्ञो॒प॒वी॒तं प॒रमं॑ पवि॒त्रं
+प्र॒जाप॑ते॒र्यत्स॒हजं॑ पु॒रस्ता᳚त् ।
+आयु॑ष्यमग्र्यं॒ प्र॒ति मुं॑च शु॒भ्रं
+य॑ज्ञोपवी॒तं ब॒लम॑स्तु॒ तेज॑ः ॥
+iast:
+ācamya ||
+(gṛhasthaḥ prati – )
+pūrvokta evaṁ guṇa viśeṣaṇa viśiṣṭāyāṁ śubha tithau mama udvāhānaṁtara (gārhasthya) karmānuṣṭhāna yogyatā siddhyarthaṁ dvitīya yajñopavīta dhāraṇaṁ kariṣye ||
+oṁ yajñopavītaṁ paramaṁ pavitraṁ
+prajāpateryatsahajaṁ purastāt |
+āyuṣyamagryaṁ prati muṁca śubhraṁ
+yajñopavītaṁ balamastu tejaḥ ||
+en: Having performed ācamana. For the householder. At this auspicious hour already named, in order to become fit to perform the duties of the household life that follow marriage, I shall now put on a second sacred thread. Om, the sacred thread is supreme and purifying. It was born together with Prajāpati in the beginning. Put on this bright thread, which is the first giver of long life. May the sacred thread be strength and splendour to you.
+tel: ఆచమనము చేసి. గృహస్థునికి. ముందు చెప్పిన ఈ శుభ తిథియందు, వివాహానంతరము గార్హస్థ్య కర్మలను ఆచరించుటకు యోగ్యత సిద్ధించుటకై, రెండవ యజ్ఞోపవీత ధారణము చేయుచున్నాను. ఓం, యజ్ఞోపవీతము పరమమైనది, పవిత్రమైనది. ప్రజాపతితో కూడ ఆదియందు పుట్టినది. ఆయువును ఇచ్చు ఈ శుభ్రమైన దానిని ధరించుము. యజ్ఞోపవీతము నీకు బలము తేజస్సు అగును గాక.
+hi: आचमन करके। गृहस्थ के लिए। पहले कहे हुए इस शुभ तिथि में, विवाह के बाद गार्हस्थ्य कर्मों के करने की योग्यता के लिए दूसरा यज्ञोपवीत धारण करता हूँ। ओम्, यज्ञोपवीत परम और पवित्र है। वह प्रजापति के साथ आदि में उत्पन्न हुआ। आयु देने वाले इस शुभ्र को धारण करो। यज्ञोपवीत तुम्हें बल और तेज दे।
+
+--- unit 15 | section: Wearing the new thread ---
+vidhi:
+A third thread is put on in place of the upper garment, with the same mantra.
+deva:
+(गृहस्थः प्रति – )
+आचम्य ॥
+पूर्वोक्त एवं गुण विशेषण विशिष्टायां शुभ तिथौ उत्तरीयार्थं तृतीय यज्ञोपवीतधारणं करिष्ये ॥
+ओं य॒ज्ञो॒प॒वी॒तं प॒रमं॑ पवि॒त्रं
+प्र॒जाप॑ते॒र्यत्स॒हजं॑ पु॒रस्ता᳚त् ।
+आयु॑ष्यमग्र्यं॒ प्र॒ति मुं॑च शु॒भ्रं
+य॑ज्ञोपवी॒तं ब॒लम॑स्तु॒ तेज॑ः ॥
+iast:
+(gṛhasthaḥ prati – )
+ācamya ||
+pūrvokta evaṁ guṇa viśeṣaṇa viśiṣṭāyāṁ śubha tithau uttarīyārthaṁ tṛtīya yajñopavītadhāraṇaṁ kariṣye ||
+oṁ yajñopavītaṁ paramaṁ pavitraṁ
+prajāpateryatsahajaṁ purastāt |
+āyuṣyamagryaṁ prati muṁca śubhraṁ
+yajñopavītaṁ balamastu tejaḥ ||
+en: For the householder. Having performed ācamana. At this auspicious hour already named, I shall now put on a third sacred thread, which stands in place of the upper garment. Om, the sacred thread is supreme and purifying. It was born together with Prajāpati in the beginning. Put on this bright thread, which is the first giver of long life. May the sacred thread be strength and splendour to you.
+tel: గృహస్థునికి. ఆచమనము చేసి. ముందు చెప్పిన ఈ శుభ తిథియందు, ఉత్తరీయము కొరకు మూడవ యజ్ఞోపవీత ధారణము చేయుచున్నాను. ఓం, యజ్ఞోపవీతము పరమమైనది, పవిత్రమైనది. ప్రజాపతితో కూడ ఆదియందు పుట్టినది. ఆయువును ఇచ్చు ఈ శుభ్రమైన దానిని ధరించుము. యజ్ఞోపవీతము నీకు బలము తేజస్సు అగును గాక.
+hi: गृहस्थ के लिए। आचमन करके। पहले कहे हुए इस शुभ तिथि में, उत्तरीय के लिए तीसरा यज्ञोपवीत धारण करता हूँ। ओम्, यज्ञोपवीत परम और पवित्र है। वह प्रजापति के साथ आदि में उत्पन्न हुआ। आयु देने वाले इस शुभ्र को धारण करो। यज्ञोपवीत तुम्हें बल और तेज दे।
+
+--- unit 16 | section: Recitation of the Gāyatrī ---
+vidhi:
+State the intention to recite the Gāyatrī, so that the mantra takes hold in the new thread.
+deva:
+आचम्य ॥
+पूर्वोक्त एवं गुण विशेषण विशिष्टायां शुभ तिथौ नूतन यज्ञोपवीते मंत्र सिद्ध्यर्थं यथाशक्ति गायत्री मंत्रजपं करिष्ये ॥
+iast:
+ācamya ||
+pūrvokta evaṁ guṇa viśeṣaṇa viśiṣṭāyāṁ śubha tithau nūtana yajñopavīte maṁtra siddhyarthaṁ yathāśakti gāyatrī maṁtrajapaṁ kariṣye ||
+en: Having performed ācamana. At this auspicious hour already named, and so that the mantra may take hold in the new sacred thread, I shall now recite the Gāyatrī as far as I am able.
+tel: ఆచమనము చేసి. ముందు చెప్పిన ఈ శుభ తిథియందు, నూతన యజ్ఞోపవీతమునందు మంత్రము సిద్ధించుటకై, శక్తి కొలది గాయత్రీ మంత్ర జపమును చేయుచున్నాను.
+hi: आचमन करके। पहले कहे हुए इस शुभ तिथि में, नए यज्ञोपवीत में मंत्र की सिद्धि के लिए, शक्ति के अनुसार गायत्री मंत्र का जप करता हूँ।
+
+--- unit 17 | section: Recitation of the Gāyatrī ---
+vidhi:
+Meditate on the goddess in this form.
+deva:
+गायत्री ध्यानम् –
+मुक्ता विद्रुम हेम नील धवळच्छायैर्मुखैस्त्रीक्षणैः
+युक्तामिंदु निबद्ध रत्नमकुटां तत्त्वार्थ वर्णात्मिकाम् ।
+गायत्रीं वरदाभयांकुश कशाः शुभ्रं कपालं गदां
+शंखं चक्रमथारविंदयुगळं हस्तैर्वहंतीं भजे ॥
+iast:
+gāyatrī dhyānam –
+muktā vidruma hema nīla dhavaḻacchāyairmukhaistrīkṣaṇaiḥ
+yuktāmiṁdu nibaddha ratnamakuṭāṁ tattvārtha varṇātmikām |
+gāyatrīṁ varadābhayāṁkuśa kaśāḥ śubhraṁ kapālaṁ gadāṁ
+śaṁkhaṁ cakramathāraviṁdayugaḻaṁ hastairvahaṁtīṁ bhaje ||
+en: The meditation on Gāyatrī. I worship Gāyatrī, who has five faces of the colour of pearl, coral, gold, sapphire and white, each with three eyes; who wears a crown set with jewels and with the moon; whose syllables are the meaning of the truth itself; and who bears in her hands the boon and the sign of safety, the goad and the whip, the bright skull and the mace, the conch, the discus and the two lotuses.
+tel: గాయత్రీ ధ్యానము. ముత్యము, పగడము, బంగారము, నీలము, తెలుపు వర్ణముల ఐదు ముఖములు కలది, ప్రతి ముఖమునకు మూడు కన్నులు కలది; చంద్రుడు రత్నములు పొదిగిన కిరీటము ధరించినది; అక్షరములే తత్త్వార్థమైనది; వరద అభయ ముద్రలు, అంకుశము కశ, ప్రకాశమైన కపాలము గద, శంఖము చక్రము, రెండు పద్మములు హస్తములలో ధరించినది — ఆ గాయత్రిని సేవించుచున్నాను.
+hi: गायत्री का ध्यान। मोती, मूँगा, स्वर्ण, नील और श्वेत वर्ण के पाँच मुख वाली, प्रत्येक मुख में तीन नेत्रों वाली; चंद्र और रत्नों से जड़ा मुकुट धारण करने वाली; जिसके अक्षर ही तत्त्व का अर्थ हैं; और जो हाथों में वरद तथा अभय, अंकुश और कशा, उज्ज्वल कपाल और गदा, शंख, चक्र तथा दो कमल धारण करती हैं — उन गायत्री की मैं उपासना करता हूँ।
+
+--- unit 18 | section: Recitation of the Gāyatrī ---
+vidhi:
+Recite the Gāyatrī ten times.
+deva:
+दश गायत्री जपं –
+ओं भूर्भुव॒स्सुव॑ः । तत्स॑वितु॒र्वरे᳚ण्य॒म् । भर्गो॑ दे॒वस्य॑ धी॒महि ।
+धियो॒ यो न॑ः प्रचो॒दया᳚त् ॥
+iast:
+daśa gāyatrī japaṁ –
+oṁ bhūrbhuvassuvaḥ | tatsaviturvareṇyam | bhargo devasya dhīmahi |
+dhiyo yo naḥ pracodayāt ||
+en: Ten recitations of the Gāyatrī. Om, the earth, the mid-region, the heavens. We meditate on that adorable light of the divine Creator. May he set our thoughts in motion.
+tel: పది గాయత్రీ జపము. ఓం, భూమి, అంతరిక్షము, స్వర్గము. ఆ దివ్య సవితృ దేవుని పూజనీయ తేజస్సును ధ్యానించుచున్నాము. ఆయన మా బుద్ధులను ప్రేరేపించును గాక.
+hi: दस गायत्री जप। ओम्, भूमि, अंतरिक्ष, स्वर्ग। उस दिव्य सविता देव के पूजनीय तेज का हम ध्यान करते हैं। वे हमारी बुद्धि को प्रेरित करें।
+
+--- unit 19 | section: Giving up the old thread ---
+vidhi:
+Only now is the old thread taken off. State the intention and say these two verses to it.
+deva:
+आचम्य ॥
+पूर्वोक्त एवं गुण विशेषण विशिष्टायां शुभ तिथौ जीर्णयज्ञोपवीत विसर्जनं करिष्ये ।
+उपवीतं छिन्नतंतुं जीर्णं कश्मलदूषितम् ।
+विसृजामि यशो ब्रह्मवर्चो दीर्घायुरस्तु मे ॥
+एतावद्दिन पर्यंतं ब्रह्मत्वं धारितं मया ।
+जीर्णत्वात् त्वत् परित्यागो गच्छ सूत्र यथा सुखम् ॥
+iast:
+ācamya ||
+pūrvokta evaṁ guṇa viśeṣaṇa viśiṣṭāyāṁ śubha tithau jīrṇayajñopavīta visarjanaṁ kariṣye |
+upavītaṁ chinnataṁtuṁ jīrṇaṁ kaśmaladūṣitam |
+visṛjāmi yaśo brahmavarco dīrghāyurastu me ||
+etāvaddina paryaṁtaṁ brahmatvaṁ dhāritaṁ mayā |
+jīrṇatvāt tvat parityāgo gaccha sūtra yathā sukham ||
+en: Having performed ācamana. At this auspicious hour already named, I shall now give up the worn sacred thread. I give up this thread, whose strands are broken, which is worn out and soiled. May glory, the power of Brahman and long life be mine. Until this day the state of Brahman was borne by me through you. Because you are worn out I let you go. Go as you please, O thread.
+tel: ఆచమనము చేసి. ముందు చెప్పిన ఈ శుభ తిథియందు, జీర్ణ యజ్ఞోపవీత విసర్జనము చేయుచున్నాను. తంతువులు తెగిన, జీర్ణమైన, మాలిన్యముతో కలుషితమైన ఈ ఉపవీతమును విడుచుచున్నాను. యశస్సు, బ్రహ్మవర్చస్సు, దీర్ఘాయువు నాకు కలుగును గాక. ఇంతవరకు నీ ద్వారా బ్రహ్మత్వమును నేను ధరించితిని. జీర్ణమైనందున నిన్ను విడుచుచున్నాను. ఓ సూత్రమా, సుఖముగా వెళ్ళుము.
+hi: आचमन करके। पहले कहे हुए इस शुभ तिथि में, जीर्ण यज्ञोपवीत का विसर्जन करता हूँ। जिसके तंतु टूट गए हैं, जो जीर्ण और मलिन है, उस उपवीत को मैं छोड़ता हूँ। यश, ब्रह्मवर्चस् और दीर्घायु मुझे मिले। आज तक तुम्हारे द्वारा मैंने ब्रह्मत्व धारण किया। जीर्ण होने से तुम्हें छोड़ता हूँ। हे सूत्र, सुख से जाओ।
+
+--- unit 20 | section: Giving up the old thread ---
+vidhi:
+A further verse said to the worn thread.
+deva:
+यज्ञोपवीतं यदि जीर्णवंतं
+वेदांत नित्यं परब्रह्म सत्यम् ।
+आयुष्यमग्र्यं प्रतिमुंच शुभ्रं
+यज्ञोपवीतं विसृजस्तुतेजः ॥
+iast:
+yajñopavītaṁ yadi jīrṇavaṁtaṁ
+vedāṁta nityaṁ parabrahma satyam |
+āyuṣyamagryaṁ pratimuṁca śubhraṁ
+yajñopavītaṁ visṛjastutejaḥ ||
+en: If the sacred thread has grown old — the Vedānta is eternal, the supreme Brahman is true. Put on the bright thread that is the first giver of long life, and let the old thread go with its splendour.
+tel: యజ్ఞోపవీతము జీర్ణమైనచో — వేదాంతము నిత్యము, పరబ్రహ్మము సత్యము. ఆయువును ఇచ్చు శుభ్రమైన దానిని ధరించుము, పాత యజ్ఞోపవీతమును తేజస్సుతో విడుచుము.
+hi: यदि यज्ञोपवीत जीर्ण हो गया हो — वेदांत नित्य है, परब्रह्म सत्य है। आयु देने वाले शुभ्र को धारण करो, और पुराने यज्ञोपवीत को उसके तेज सहित छोड़ो।
+
+--- unit 21 | section: Giving up the old thread ---
+vidhi:
+Then say the long mantra of release and take the old thread off.
+deva:
+जीर्णयज्ञोपवीत विसर्जन मंत्रम् –
+स॒मु॒द्रं ग॑च्छ॒ स्वाहा॑ऽन्तरि॑क्षं गच्छ॒ स्वाहा॑ दे॒वग्ं स॑वि॒तारं॑ गच्छ॒ स्वाहा॑ऽहोरा॒त्रे ग॑च्छ॒ स्वाहा॑ मि॒त्रावरु॑णौ गच्छ॒ स्वाहा॒ सोमं॑ गच्छ॒ स्वाहा॑ य॒ज्ञं ग॑च्छ॒ स्वाहा॒ छन्दाग्ं॑सि गच्छ॒ स्वाहा॒ द्यावा॑ पृथि॒वी ग॑च्छ॒ स्वाहा॒ नभो॑ दि॒व्यं ग॑च्छ॒ स्वाहा॒ऽग्निं वै᳚श्वान॒रं ग॑च्छ॒ स्वाहा॒ऽद्भ्यस्त्वौष॑धीभ्यो॒ मनो॑ मे॒ हार्दि॑ यच्छ त॒नूं त्वचं॑ पु॒त्रं नप्ता॑रमशीय॒ शुग॑सि॒ तम॒भि शो॑च॒ यो᳚ऽस्मान् द्वेष्टि॒ यं च॑ व॒यं द्वि॒ष्मो धाम्नो॑धाम्नो राजन्नि॒तो व॑रुण नो मुञ्च॒ यदापो॒ अंघ्नि॑या॒ वरु॒णेति॒ शपा॑महे॒ ततो॑ वरुण नो मुञ्च ॥
+इति जीर्ण यज्ञोपवीतं विसृजेत् ।
+iast:
+jīrṇayajñopavīta visarjana maṁtram –
+samudraṁ gaccha svāhā'ntarikṣaṁ gaccha svāhā devagṁ savitāraṁ gaccha svāhā'horātre gaccha svāhā mitrāvaruṇau gaccha svāhā somaṁ gaccha svāhā yajñaṁ gaccha svāhā chandāgṁsi gaccha svāhā dyāvā pṛthivī gaccha svāhā nabho divyaṁ gaccha svāhā'gniṁ vaiśvānaraṁ gaccha svāhā'dbhyastvauṣadhībhyo mano me hārdi yaccha tanūṁ tvacaṁ putraṁ naptāramaśīya śugasi tamabhi śoca yo'smān dveṣṭi yaṁ ca vayaṁ dviṣmo dhāmnodhāmno rājannito varuṇa no muñca yadāpo aṁghniyā varuṇeti śapāmahe tato varuṇa no muñca ||
+iti jīrṇa yajñopavītaṁ visṛjet |
+en: The mantra for releasing the worn sacred thread. Go to the ocean, svāhā. Go to the mid-region, svāhā. Go to the god Savitā, svāhā. Go to day and night, svāhā. Go to Mitra and Varuṇa, svāhā. Go to Soma, svāhā. Go to the sacrifice, svāhā. Go to the metres, svāhā. Go to heaven and earth, svāhā. Go to the divine sky, svāhā. Go to Agni Vaiśvānara, svāhā. From the waters and from the plants, give me back my mind and my heart, my body and my skin. May I obtain a son and a grandson. You are grief. Burn him who hates me and him whom I hate. O king Varuṇa, release us from every bond. Whatever we swear falsely by the waters, saying "by Varuṇa" — from that, O Varuṇa, release us. So let the worn sacred thread be given up.
+tel: జీర్ణ యజ్ఞోపవీత విసర్జన మంత్రము. సముద్రమునకు వెళ్ళుము, స్వాహా. అంతరిక్షమునకు వెళ్ళుము, స్వాహా. సవితృ దేవునికి వెళ్ళుము, స్వాహా. అహోరాత్రములకు వెళ్ళుము, స్వాహా. మిత్రావరుణులకు వెళ్ళుము, స్వాహా. సోమునికి వెళ్ళుము, స్వాహా. యజ్ఞమునకు వెళ్ళుము, స్వాహా. ఛందస్సులకు వెళ్ళుము, స్వాహా. ద్యావాపృథివులకు వెళ్ళుము, స్వాహా. దివ్యమైన ఆకాశమునకు వెళ్ళుము, స్వాహా. అగ్ని వైశ్వానరునికి వెళ్ళుము, స్వాహా. జలముల నుండి ఓషధుల నుండి నా మనస్సును, హృదయమును, శరీరమును, చర్మమును నాకు ఇమ్ము. పుత్రుని పౌత్రుని పొందుదును గాక. నీవు శోకము. నన్ను ద్వేషించువానిని, నేను ద్వేషించువానిని దహించుము. ఓ వరుణ రాజా, ప్రతి బంధము నుండి మమ్ము విడిపించుము. జలములపై వరుణుని పేరు చెప్పి మేము ఏ అసత్యము శపథము చేసినను, దాని నుండి వరుణా, మమ్ము విడిపించుము. ఇట్లు జీర్ణ యజ్ఞోపవీతమును విడువవలెను.
+hi: जीर्ण यज्ञोपवीत के विसर्जन का मंत्र। समुद्र को जाओ, स्वाहा। अंतरिक्ष को जाओ, स्वाहा। सविता देव को जाओ, स्वाहा। दिन और रात को जाओ, स्वाहा। मित्र और वरुण को जाओ, स्वाहा। सोम को जाओ, स्वाहा। यज्ञ को जाओ, स्वाहा। छंदों को जाओ, स्वाहा। द्यावापृथिवी को जाओ, स्वाहा। दिव्य आकाश को जाओ, स्वाहा। अग्नि वैश्वानर को जाओ, स्वाहा। जल और औषधियों से मेरा मन और हृदय, शरीर और त्वचा मुझे लौटा दो। मैं पुत्र और पौत्र प्राप्त करूँ। तुम शोक हो। जो मुझसे द्वेष करता है और जिससे मैं द्वेष करता हूँ, उसे जलाओ। हे राजा वरुण, हर बंधन से हमें मुक्त करो। जल पर वरुण के नाम से जो असत्य शपथ हम करते हैं, उससे हे वरुण हमें मुक्त करो। इस प्रकार जीर्ण यज्ञोपवीत का विसर्जन करना चाहिए।
+
+--- unit 22 | section: Close ---
+vidhi:
+Sip water once more and give the rite over.
+deva:
+आचम्य ॥
+ओं तत्सत् ब्रह्मार्पणमस्तु ॥
+iast:
+ācamya ||
+oṁ tatsat brahmārpaṇamastu ||
+en: Having performed ācamana. Om, that is the truth. Let this be an offering to Brahman.
+tel: ఆచమనము చేసి. ఓం తత్సత్. ఇది బ్రహ్మార్పణము అగును గాక.
+hi: आचमन करके। ओम् तत् सत्। यह ब्रह्म को अर्पण हो।
