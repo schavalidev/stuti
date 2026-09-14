@@ -1,0 +1,253 @@
+Title: Samantra Snāna-vidhi — the daily bath with its mantras, in the Vaikhānasa form
+Devanāgarī: समन्त्रस्नानविधिः (वैखानसः)
+Telugu: సమంత్ర స్నాన విధి (వైఖానస సంప్రదాయము)
+
+Author: Anonymous as to the compilation. The volume gathers its matter from named authorities and quotes each by name — Manu, Atri, Mārkaṇḍeya, Śaunaka, Bodhāyana, the Marīci-paṭala, the Vaikhānasa sūtra and its bhāṣya, and a commentator the book calls Dīkṣitīya. No composer is claimed for the ślokas or for the mantras.
+
+Type: vidhi (ritual manual) — not a stotra. Uses the one-extra-field vidhi format documented in `../madhyandina/01_sandhyopasana_vidhi.txt`: a `vidhi:` field carrying the ritual instruction, then deva / iast / en / tel / hi.
+
+Recension / śākhā: **Taittirīya (Kṛṣṇa-Yajurveda).** The Vaikhānasas are Taittirīyins, which is why the file sits in this folder beside the other Taittirīya material. The folder is divided by śākhā, and the śākhā here is the same one.
+
+Recension / paddhati: **Vaikhānasa, and not smārta. This is the point of the file and it must not be mistaken.** The volume heads its every page `श्रीवैखानसशास्त्र ग्रन्थस्थ`, it opens the rite by saluting `श्री विखनस गुरुभ्यो नमः`, and its saṅkalpa is the Vaikhānasa one — the bath is declared to be a limb of the worship of the Lord, done at his command as service to him, and the resolve is closed as a sāttvika saṅkalpa made by the strength of the Lord. **A worshipper who follows the smārta practice will not recognise this and should not use it.** The smārta forms are in `../samanya/` and in `../madhyandina/`, and the smārta Taittirīya sandhyāvandana is at `01_krishna_yajurveda_sandhyavandanam.txt` in this folder. These are the observances of different communities, not variant readings of one text, and **nothing here was filled in or corrected from the smārta side.**
+
+**The corpus held no Vaikhānasa material before this file.**
+
+Accent: **none, in the source.** The volume prints its Vedic mantras without svara marks throughout, and units 6, 7 and 8 are therefore unaccented here. All eight page images were examined for accent marks and none carries any. **No accent was added, inferred or reconstructed.** The mantras of units 6 and 7 are Taittirīya Āraṇyaka material and are accented in an accented edition of that śākhā; a worshipper who wants the marking must go to such an edition, and this file does not supply it.
+
+Source / recension: base text is *Āhnikāmṛtam* of Vāsudeva Bhaṭṭācārya, a Telugu Vaikhānasa āhnika, archive.org item `ahnika-mrutamu-by-vesudeva-bhattacharya-in-telugu`. The rite is the chapter headed `समन्त्र स्नानविधिः`, which runs from page 14 to page 18 of the volume. **Those pages, and the two before them, were read as page images at 400 dpi and transcribed from the images, not from the OCR.** The item's `_djvu.txt` was fetched first, was found to break conjuncts and to confuse `గ`, `ద` and `ధ`, and was used only to find the chapter. The Devanāgarī column is a machine transliteration of that Telugu by `bin/tel2dev.py`, and the IAST is generated from the Devanāgarī by `bin/dev2iast.py`; neither tool changes a word.
+
+**The saṅkalpa is elided in the source, and nothing was supplied.** The volume prints the frame of unit 4 with its own rows of dots in three places — after `श्री लक्ष्मीवल्लभारंभां`, inside the `शुक्लांबरधरं` verse, and, most importantly, between `अस्य श्री भगवतो महा पुरुषस्य` and `अस्यां शुभतिथौ`, which is where the deśa-kāla body of the saṅkalpa belongs. The book expects the reciter to know that passage and does not print it. **Those dots are reproduced here exactly where the book puts them.** No frame was taken from any other book, and none from the smārta side, because a Vaikhānasa saṅkalpa filled out from a smārta manual would be something no tradition recites. The gap is real and the file names it.
+
+Independent collation: **none was found, and the search is recorded here so that it is not repeated.** No second Vaikhānasa āhnika was found on archive.org. GRETIL was searched for `vaikhanasa` and holds no āhnika of this tradition. The nibandhas already fetched for this folder's neighbours — the *Dharmasindhu*, the *Nirṇayasindhu* and the Gītā Press *Nityakarma-Pūjāprakāśa* — are smārta works and are **not** witnesses to a Vaikhānasa rite; under the paddhati rule above they cannot be used to correct it, and they were not. **So this file rests on one edition, and that is stated plainly rather than dressed up.**
+
+Recension note: two passages of this chapter also stand elsewhere in the corpus, from other editions, and the readings differ. **Nothing was reconciled, no brackets were used, and no other file was altered.**
+
+**(1) The classification of baths.** Unit 1 gives the bath as twofold, gauṇa and mukhya, and then divides the chief kind, the vāruṇa, into six — nitya, naimittika, kāmya, kriyāṅga, malāpakarṣaṇa and kriyā. `../samanya/09_snana_bheda_bhasma_gomaya_mrittika_varuna_panchagavya.txt`, written from Gītā Press and the *Dharmasindhu*, gives a **sevenfold** classification instead, by the means used — māntra, bhauma, āgneya, vāyavya, divya, vāruṇa and mānasa. **These are two different classifications and not two readings of one.** One divides by the means, the other divides the water bath by the occasion. The vāruṇa bath is the single term the two share. The two files should be read together and neither supersedes the other.
+
+**(2) The verse of the five limbs of the bath.** Unit 3 closes with it, and this volume reads `संकल्प सूक्त पठने मार्जनं चाघमर्षणं । तर्पणं पितृदेवानां स्नानं पंचांगमुच्यते ॥`. `../samanya/06_tungabhadra_pushkara_snana_sankalpa.txt` opens with the same verse from a Telugu Puṣkara booklet, which reads `संकल्पः सूक्तपठनं मार्जनं चाघमर्षणं । देवादि तर्पणं चैव स्नानं पंचांगमुत्तमं ॥`. The five limbs are the same five in both. The second half differs in two places — `तर्पणं पितृदेवानां` against `देवादि तर्पणं चैव`, and `पंचांगमुच्यते` against `पंचांगमुत्तमं`. **This is a difference between two editions and not a spelling**, so it is recorded here and is not bracketed, and the Puṣkara file was not touched.
+
+**(3) A third overlap, smaller.** Unit 8 carries the river-invocation `गंगेच यमुने चैव गोदावरि सरस्वति`, which the corpus holds in several places, and which `../samanya/05_nadi_snana_sankalpa_ganga.txt` discusses at length and deliberately leaves out of that file, because Gītā Press puts it in the kalaśa-pūjā and not in the bath. **Here the verse belongs to the bath**, and the reason is that this volume puts it there: the worshipper draws a square on the water with his hand and calls the rivers into it. Both placements are correct, each in its own tradition.
+
+All three overlaps are logged in `../../DEDUP_AUDIT.md`.
+
+Cross-reference: `../samanya/09_snana_bheda_bhasma_gomaya_mrittika_varuna_panchagavya.txt` for the sevenfold classification. `../samanya/06_tungabhadra_pushkara_snana_sankalpa.txt` for the five-limbs verse and the Puṣkara bath in the southern smārta form. `../samanya/05_nadi_snana_sankalpa_ganga.txt` for the daily river bath in the northern form. `05_malapakarshana_snana_vidhi.txt` in this folder is the malāpakarṣaṇa bath of the image in the smārta Taittirīya form, and is a different rite from the malāpakarṣaṇa bath named at unit 2 here, which is a bath of the worshipper's own body. **None of these supersedes any other.**
+
+Blurb: This file gives the daily bath as the Vaikhānasa tradition keeps it. It is not the smārta form. It opens with the verses that say what a man gains by bathing every day, and that no rite may be done without a bath. It then sets out the kinds of bath and says which bath is meant on which occasion. The worshipper wears the pavitrī rings on both hands, does ācamana twice, and makes the saṅkalpa, in which he says that he takes this bath as a limb of the worship of the Lord and at his command. He is told where to face and in what water to bathe. He then goes to the water and asks it to carry away his wrongdoing, bows to Varuṇa and asks for the tīrtha, sprinkles himself with water and earth, and enters the river. Standing in water up to the navel he goes under four times, meditating on Vāsudeva in the midst of the sun's orb and on the stream from his feet falling upon his own head. He draws a square on the water and calls the seven rivers into it, asks the Lord's leave to use his tīrtha, and goes under four times more. He then offers water to the gods, to the sages and to the forefathers, each from its own part of the hand, and comes out.
+
+Sections:
+स्नानस्तुतिः — What the daily bath gives, and that no rite is done without it (unit 1)
+स्नानभेदाः — The six kinds of the water bath, each defined (unit 2)
+सूत्रं मनुवचनं च — The sūtra, the verse of Manu and the five limbs of the bath (unit 3)
+सङ्कल्पः — Saṅkalpa (unit 4)
+स्नानविधानम् — Where to face, and in what water (unit 5)
+जलाभिगमनम् — Going to the water (unit 6)
+वरुणप्रपत्तिः — Bowing to Varuṇa and asking for the tīrtha (unit 7)
+अवगाहनम् — Entering the water, the meditation and the calling of the rivers (unit 8)
+स्नानाङ्गतर्पणम् — The tarpaṇa that is a limb of the bath (unit 9)
+
+Unit count: 9 units — five of verses and instruction, one saṅkalpa, and three of mantras said at the water.
+
+--- unit 1 | section: What the daily bath gives, and that no rite is done without it ---
+vidhi:
+These verses are not recited at the bath. They state what the daily bath gives and why no rite may be done without it, and they are given so that the worshipper knows what he is doing.
+deva:
+श्लो॥ नित्यं दशस्नान परस्य साधो रूपंच तेजश्च यशश्च शौचं ।
+आयुष्य मारोग्यमलोलुपत्वं दुस्स्वप्ननाशंच तपश्चमेधां ॥
+श्लो॥ याम्यंहि यातना दुःखं प्रातः स्नायी नपश्यति ।
+अस्नात्वा नाचरेत्कर्म जपहोमादि किंचन ॥
+शोक दुस्स्वप्नहंस्नानं मोक्षदंह्लादनं तथा ।
+स्नानंच द्विविधं प्रोक्तं गौण मुख्यप्रभेदतः ॥
+तयोस्तु वारुणं मुख्यं षड्विधं तत्पुन स्स्मृतम् ।
+नित्यं नैमित्तिकं काम्यं क्रियांगं मलकर्षणम् ॥
+क्रिया स्नानंतथाषष्ठं षोढास्नानं प्रकीर्तितम् ॥
+iast:
+ślo|| nityaṁ daśasnāna parasya sādho rūpaṁca tejaśca yaśaśca śaucaṁ |
+āyuṣya mārogyamalolupatvaṁ dussvapnanāśaṁca tapaścamedhāṁ ||
+ślo|| yāmyaṁhi yātanā duḥkhaṁ prātaḥ snāyī napaśyati |
+asnātvā nācaretkarma japahomādi kiṁcana ||
+śoka dussvapnahaṁsnānaṁ mokṣadaṁhlādanaṁ tathā |
+snānaṁca dvividhaṁ proktaṁ gauṇa mukhyaprabhedataḥ ||
+tayostu vāruṇaṁ mukhyaṁ ṣaḍvidhaṁ tatpuna ssmṛtam |
+nityaṁ naimittikaṁ kāmyaṁ kriyāṁgaṁ malakarṣaṇam ||
+kriyā snānaṁtathāṣaṣṭhaṁ ṣoḍhāsnānaṁ prakīrtitam ||
+en: For a good man given to the daily bath there is beauty, brightness, good name, cleanness, long life, health, freedom from greed, the ending of bad dreams, austerity and understanding. He who bathes in the morning does not see the pain and torment of the world of Yama. Without bathing let him do no rite at all — no recitation, no offering into fire, nothing. The bath takes away sorrow and bad dreams, it gives release, and it gives ease. The bath is said to be of two kinds, the secondary and the chief. Of these the chief is the water bath, and that again is remembered as sixfold: the daily bath, the bath for an occasion, the bath taken for a wish, the bath that is a limb of a rite, the bath that removes dirt, and, as the sixth, the bath at the end of a rite. So the bath is declared to be of six kinds.
+tel: ప్రతిదినము స్నానము చేయు సజ్జనునకు రూపము, తేజస్సు, కీర్తి, శుచిత్వము, ఆయువు, ఆరోగ్యము, లోభము లేకుండుట, దుఃస్వప్నముల నాశనము, తపస్సు, మేధస్సు కలుగును. ప్రాతఃకాలమున స్నానము చేయువాడు యమలోకపు యాతనను, దుఃఖమును చూడడు. స్నానము చేయకుండ జపము, హోమము మొదలైన ఏ కర్మమును చేయరాదు. స్నానము శోకమును దుఃస్వప్నమును పోగొట్టును, మోక్షమును ఇచ్చును, ఆహ్లాదమును కలిగించును. స్నానము గౌణము, ముఖ్యము అని రెండు విధములు. వానిలో వారుణ స్నానమే ముఖ్యమైనది. అది మరల ఆరు విధములు — నిత్యము, నైమిత్తికము, కామ్యము, క్రియాంగము, మలకర్షణము, క్రియా స్నానము. ఇట్లు షోఢా స్నానము చెప్పబడినది.
+hi: प्रतिदिन स्नान करने वाले सज्जन को रूप, तेज, यश, शुचिता, आयु, आरोग्य, निर्लोभता, दुःस्वप्नों का नाश, तप और मेधा प्राप्त होते हैं। प्रातःस्नान करने वाला यमलोक की यातना और दुःख नहीं देखता। स्नान किए बिना जप, होम आदि कोई कर्म न करे। स्नान शोक और दुःस्वप्न को हरता है, मोक्ष देता है और आह्लाद देता है। स्नान दो प्रकार का कहा गया है — गौण और मुख्य। इनमें वारुण स्नान मुख्य है, और वह फिर छह प्रकार का माना गया है — नित्य, नैमित्तिक, काम्य, क्रियांग, मलकर्षण और क्रिया स्नान। इस प्रकार षोढा स्नान कहा गया है।
+
+--- unit 2 | section: The six kinds of the water bath, each defined ---
+vidhi:
+These verses define each of the six kinds of the water bath named in the previous unit. They are not recited. Read them to know which bath the occasion asks for.
+deva:
+प्रातः स्नानंतदर्धंतु नित्य स्नानं प्रकीर्तितं ।
+चंडाळ शवशूद्रादीन् स्पृष्ट्वा स्नातां रजस्वलां ॥
+स्नानार्हस्तुयदा स्नाति स्नानं नैमित्तिकं हितत् ।
+वृष्ट्या स्नानादिकं यत्तु दैवज्ञ तिथिचोदितं ॥
+तद्धिकाम्यं समुद्दिष्टं ना कामस्तत् प्रयोजयेत् ।
+जप्तु कामः पवित्राणि ह्यर्चिष्यन् देवताः पितॄन् ॥
+स्नानं समाचरेद्यत्तुक्रियांगं तद्विदुर्बुधाः ।
+मलापकर्षणं नाम स्नानमभ्यंग पूर्वकं ॥
+प्रेत कार्येषु सर्वत्र क्रियांत स्नानमुच्यते ॥
+iast:
+prātaḥ snānaṁtadardhaṁtu nitya snānaṁ prakīrtitaṁ |
+caṁḍāḻa śavaśūdrādīn spṛṣṭvā snātāṁ rajasvalāṁ ||
+snānārhastuyadā snāti snānaṁ naimittikaṁ hitat |
+vṛṣṭyā snānādikaṁ yattu daivajña tithicoditaṁ ||
+taddhikāmyaṁ samuddiṣṭaṁ nā kāmastat prayojayet |
+japtu kāmaḥ pavitrāṇi hyarciṣyan devatāḥ pitṝn ||
+snānaṁ samācaredyattukriyāṁgaṁ tadvidurbudhāḥ |
+malāpakarṣaṇaṁ nāma snānamabhyaṁga pūrvakaṁ ||
+preta kāryeṣu sarvatra kriyāṁta snānamucyate ||
+en: Half of the morning bath is called the daily bath. When one who is fit to bathe bathes after touching an outcaste, a dead body, a śūdra or the like, or a woman in her season who has bathed, that is the bath for an occasion, and it is good. The bath and the rest that is prescribed for rain, or by an astrologer, or by a tithi, is declared to be the bath taken for a wish; one who has no such wish does not use it. When a man who wishes to recite, or to make the mantras pure, or to worship the gods and the forefathers, takes a bath, the wise know that to be the bath that is a limb of a rite. The bath that removes dirt is the one preceded by rubbing with oil. In all the rites for one who has departed, the bath at the end is spoken of.
+tel: ప్రాతః స్నానములో సగము నిత్య స్నానమని చెప్పబడును. చండాలుని, శవమును, శూద్రుని మొదలైనవారిని, లేదా స్నానము చేసిన రజస్వలను స్పృశించిన పిమ్మట స్నానార్హుడు స్నానము చేసినచో అది నైమిత్తిక స్నానము; అది హితమైనది. వర్షమును బట్టి, దైవజ్ఞుని మాటను బట్టి, తిథిని బట్టి చెప్పబడిన స్నానము కామ్య స్నానము; కోరిక లేనివాడు దానిని చేయడు. జపము చేయగోరువాడు, మంత్రములను పవిత్రము చేయగోరువాడు, దేవతలను పితరులను అర్చింపగోరువాడు చేయు స్నానమును క్రియాంగ స్నానమని పండితులు ఎరుగుదురు. అభ్యంగము చేసిన పిమ్మటి స్నానము మలాపకర్షణము. ప్రేత కార్యములన్నిటి చివర చేయు స్నానమును క్రియాంత స్నానమందురు.
+hi: प्रातःस्नान का आधा नित्य स्नान कहा जाता है। चाण्डाल, शव, शूद्र आदि को, अथवा स्नान की हुई रजस्वला को छूने के बाद जो स्नान के योग्य व्यक्ति स्नान करता है, वह नैमित्तिक स्नान है और हितकर है। वर्षा के कारण, दैवज्ञ के कहने से, अथवा तिथि के कहने से जो स्नान आदि किया जाता है वह काम्य कहा गया है; जिसकी कामना न हो वह उसे न करे। जो जप करना चाहता है, मन्त्रों को पवित्र करना चाहता है, अथवा देवताओं और पितरों की अर्चना करना चाहता है, उसका स्नान क्रियांग स्नान है, ऐसा विद्वान् जानते हैं। अभ्यंग के बाद का स्नान मलापकर्षण कहलाता है। प्रेतकार्यों के अन्त में जो स्नान होता है वह क्रियान्त स्नान कहा जाता है।
+
+--- unit 3 | section: The sūtra, the verse of Manu and the five limbs of the bath ---
+vidhi:
+The sūtra names the five kinds of bath for men of the four āśramas, and the bhāṣya says that the abhiṣeka meant here is the water bath, that is, bathing by going into the water. Wear the pavitrī rings on both hands and do ācamana twice. The verse of Manu says that a bath made without a saṅkalpa bears no fruit, and the verse after it names the five limbs of the bath.
+deva:
+सूत्रंः अथ चतुराश्रमिणां स्नानविधि रभिषेकं दिव्यं वा यव्यमाग्नेयं गुर्वनुज्ञा इति पंचधा भवंतीति । अभिषेकं वारुणं अवगाहन स्नानमिति भाष्ये तत्प्रकारमाह । उभय पवित्रपाणिः द्विराचम्य ॥
+मनुः श्लो॥ असंकल्प्य तुयः कुर्यात् स्नानदानव्रतानिच ।
+अन्यानि पुण्यकर्माणि विफलानि भवंति हि ॥
+संकल्प सूक्त पठने मार्जनं चाघमर्षणं ।
+तर्पणं पितृदेवानां स्नानं पंचांगमुच्यते ॥
+iast:
+sūtraṁḥ atha caturāśramiṇāṁ snānavidhi rabhiṣekaṁ divyaṁ vā yavyamāgneyaṁ gurvanujñā iti paṁcadhā bhavaṁtīti | abhiṣekaṁ vāruṇaṁ avagāhana snānamiti bhāṣye tatprakāramāha | ubhaya pavitrapāṇiḥ dvirācamya ||
+manuḥ ślo|| asaṁkalpya tuyaḥ kuryāt snānadānavratānica |
+anyāni puṇyakarmāṇi viphalāni bhavaṁti hi ||
+saṁkalpa sūkta paṭhane mārjanaṁ cāghamarṣaṇaṁ |
+tarpaṇaṁ pitṛdevānāṁ snānaṁ paṁcāṁgamucyate ||
+en: The sūtra: now, for men of the four āśramas the rule of bathing is fivefold — the abhiṣeka, the divine, the yavya, the fiery, and by the leave of the teacher. In the bhāṣya it is said that the abhiṣeka is the water bath, that is, bathing by going into the water, and the manner of it is told there. With the pavitrī on both hands, having done ācamana twice. Manu says: he who does the bath, the gift and the vows, and the other meritorious acts, without first making a saṅkalpa, finds them all fruitless. The saṅkalpa, the reciting of the sūkta, the mārjana, the aghamarṣaṇa and the tarpaṇa of the forefathers and the gods — the bath is said to have these five limbs.
+tel: సూత్రము — నాలుగు ఆశ్రమములవారికి స్నాన విధి అభిషేకము, దివ్యము, యవ్యము, ఆగ్నేయము, గురువు అనుజ్ఞ అని అయిదు విధములు. అభిషేకము అనగా వారుణము, అనగా నీటిలో మునిగి చేయు స్నానమని భాష్యమున చెప్పి దాని ప్రకారమును తెలిపిరి. రెండు చేతులయందు పవిత్రములు ధరించి రెండు సార్లు ఆచమనము చేయవలెను. మనువు చెప్పెను — సంకల్పము చేయకుండ స్నానము, దానము, వ్రతములు, ఇతర పుణ్య కర్మములు చేసినచో అవి విఫలములగును. సంకల్పము, సూక్త పఠనము, మార్జనము, అఘమర్షణము, పితృదేవతల తర్పణము — ఈ అయిదు అంగములు గల స్నానమే పంచాంగ స్నానమని చెప్పబడును.
+hi: सूत्र — चारों आश्रमवालों के लिए स्नानविधि पाँच प्रकार की है: अभिषेक, दिव्य, यव्य, आग्नेय और गुरु की अनुज्ञा। भाष्य में कहा है कि अभिषेक वारुण है, अर्थात् जल में डूबकर किया जाने वाला स्नान, और वहीं उसकी विधि बताई है। दोनों हाथों में पवित्री धारण कर दो बार आचमन करे। मनु कहते हैं — जो संकल्प किए बिना स्नान, दान, व्रत और अन्य पुण्यकर्म करता है, उसके वे सब निष्फल हो जाते हैं। संकल्प, सूक्त का पाठ, मार्जन, अघमर्षण और पितृदेवताओं का तर्पण — इन पाँच अंगों वाला स्नान पंचांग स्नान कहा जाता है।
+
+--- unit 4 | section: Saṅkalpa ---
+vidhi:
+Say this. The rows of dots are the book's own: it does not print the deśa-kāla passage of the saṅkalpa in this place, and the reciter supplies it from the form he has been taught. Then do prāṇāyāma according to your strength.
+deva:
+हरिः ओं । अस्मद्गुरुभ्यो नमः । अस्मत्परमगुरुभ्यो नमः । श्री विखनस गुरुभ्यो नमः । श्री लक्ष्मीवल्लभारंभां ...... वंदे गुरुपरंपराम् । आसन मंत्रस्य - यथाबलं प्राणायामं कुर्यात् ।
+श्लो॥ शुक्लां बरधरं विष्णुं ...... विष्वक्सेनंत माश्रये ।
+श्री गोविंद गोविंद, अस्य श्री भगवतो महा पुरुषस्य । ...... अस्यां शुभतिथौ श्रीमन्नारायण प्रीत्यर्थं । भगवदाज्ञा कैंकर्य रूप भगवदाराधनांगभूतं प्रातस्स्नानमहं करिष्ये । भगवतोबलेनेति सात्त्विक संकल्पं कृत्वा ॥
+iast:
+hariḥ oṁ | asmadgurubhyo namaḥ | asmatparamagurubhyo namaḥ | śrī vikhanasa gurubhyo namaḥ | śrī lakṣmīvallabhāraṁbhāṁ ...... vaṁde guruparaṁparām | āsana maṁtrasya - yathābalaṁ prāṇāyāmaṁ kuryāt |
+ślo|| śuklāṁ baradharaṁ viṣṇuṁ ...... viṣvaksenaṁta māśraye |
+śrī goviṁda goviṁda, asya śrī bhagavato mahā puruṣasya | ...... asyāṁ śubhatithau śrīmannārāyaṇa prītyarthaṁ | bhagavadājñā kaiṁkarya rūpa bhagavadārādhanāṁgabhūtaṁ prātassnānamahaṁ kariṣye | bhagavatobaleneti sāttvika saṁkalpaṁ kṛtvā ||
+en: Hari oṁ. Salutations to our teachers. Salutations to the teachers of our teachers. Salutations to the teacher Vikhanas. I bow to the line of teachers, beginning with the Lord of Lakṣmī — I bow to the line of teachers. For the āsana mantra, do prāṇāyāma according to your strength. Verse: he who wears the white garment, who is Viṣṇu — I take refuge in Viṣvaksena. Śrī Govinda, Govinda. Of this Lord, the great Puruṣa — on this auspicious tithi, for the pleasure of Śrīman Nārāyaṇa, I shall now take the morning bath, which is a limb of the worship of the Lord and is service done at his command. Having made the sāttvika saṅkalpa with the words, by the strength of the Lord.
+tel: హరిః ఓం. మా గురువులకు నమస్కారము. మా పరమ గురువులకు నమస్కారము. శ్రీ విఖనస గురువులకు నమస్కారము. శ్రీ లక్ష్మీవల్లభునితో ఆరంభమైన గురు పరంపరకు నమస్కరించుచున్నాను. ఆసన మంత్రమునకు — శక్తి కొలది ప్రాణాయామము చేయవలెను. శ్లోకము — శుక్లాంబరధరుడైన విష్ణువును ... విష్వక్సేనుని ఆశ్రయించుచున్నాను. శ్రీ గోవింద గోవింద. ఈ శ్రీ భగవంతుడైన మహా పురుషుని ... ఈ శుభ తిథియందు శ్రీమన్నారాయణుని ప్రీతి కొరకు, భగవంతుని ఆజ్ఞ ప్రకారము కైంకర్య రూపమైన భగవదారాధనకు అంగమైన ప్రాతః స్నానమును చేయుచున్నాను. భగవంతుని బలముచేత అని సాత్త్విక సంకల్పము చేసి.
+hi: हरिः ओं। हमारे गुरुओं को नमस्कार। हमारे परम गुरुओं को नमस्कार। श्री विखनस गुरु को नमस्कार। श्री लक्ष्मीवल्लभ से आरम्भ होने वाली गुरुपरम्परा को मैं नमस्कार करता हूँ। आसन मन्त्र के लिए — यथाशक्ति प्राणायाम करे। श्लोक — शुक्लाम्बरधर विष्णु को ... विष्वक्सेन का आश्रय लेता हूँ। श्री गोविन्द गोविन्द। इन श्री भगवान् महापुरुष के ... इस शुभ तिथि को, श्रीमन्नारायण की प्रसन्नता के लिए, भगवान् की आज्ञा से कैंकर्य रूप भगवदाराधन का अंग जो प्रातःस्नान है, वह मैं करता हूँ। भगवान् के बल से — ऐसा सात्त्विक संकल्प करके।
+
+--- unit 5 | section: Where to face, and in what water ---
+vidhi:
+These verses state the rule. The householder and the forest-dweller bathe in the morning and at midday, the ascetic three times a day, and the student once. Face the current in a river, and in a tank face the side where the deity is. Elsewhere face the sun, and at night face the fire. Water near an image of Viṣṇu is as good as the Gaṅgā, whether it is clean or not.
+deva:
+श्लो॥ प्रातर्माध्यं दिन स्नानं वानप्रस्थ गृहस्थ योः ॥
+यतेस्त्रि षवण स्नानंस कृत्तु ब्रह्मचारिणाम् ॥
+स्रोतसोभिमुख स्तत्रखाते देवमुख स्तथा ।
+श्लो॥ अन्यत्रार्क मुख स्स्नायाद्रात्रौचेदग्नि सन्निधौ ।
+अप्रवाहोदक स्नानं विप्रपादावसेचनं ॥
+गायत्र्याजपमर्घ्यंच आदित्याभि मुखश्चरेत् ।
+जलं शुद्धमशुद्धंवा विष्णुवास्तु समीपतः ॥
+विष्णु गंगासमंतोयं महापातक नाशनम् ।
+नातिक्रमेद्ध दंसिंधुं नानुष्ठातुंन दींतरेत् ॥
+iast:
+ślo|| prātarmādhyaṁ dina snānaṁ vānaprastha gṛhastha yoḥ ||
+yatestri ṣavaṇa snānaṁsa kṛttu brahmacāriṇām ||
+srotasobhimukha statrakhāte devamukha stathā |
+ślo|| anyatrārka mukha ssnāyādrātraucedagni sannidhau |
+apravāhodaka snānaṁ viprapādāvasecanaṁ ||
+gāyatryājapamarghyaṁca ādityābhi mukhaścaret |
+jalaṁ śuddhamaśuddhaṁvā viṣṇuvāstu samīpataḥ ||
+viṣṇu gaṁgāsamaṁtoyaṁ mahāpātaka nāśanam |
+nātikrameddha daṁsiṁdhuṁ nānuṣṭhātuṁna dīṁtaret ||
+en: The bath of the morning and of midday is for the forest-dweller and the householder. For the ascetic the bath is at three times of day, and for the student once. There he faces the current; in a dug tank he faces the side where the deity is. Elsewhere let him bathe facing the sun, and at night, if it is near a fire, facing that. Bathing in water that does not flow, washing the feet of a brāhmaṇa, the recitation of the Gāyatrī and the offering of arghya — these he does facing the sun. Water is clean or unclean, but if it is near an image of Viṣṇu, that water is equal to the Gaṅgā and destroys great wrongs. Let him not cross the flowing river beyond his measure, and let him not swim across while an observance is upon him.
+tel: వానప్రస్థునకును గృహస్థునకును ప్రాతః కాలమునందును మధ్యాహ్నమునందును స్నానము. యతికి మూడు కాలములయందు, బ్రహ్మచారికి ఒక సారి. నదియందు ప్రవాహమునకు ఎదురుగా, తవ్విన తటాకమునందు దేవత ఉన్న వైపునకు అభిముఖముగా నిలువవలెను. ఇతర చోట్ల సూర్యునికి ఎదురుగా, రాత్రి అగ్ని సన్నిధి ఉన్నచో దానికి ఎదురుగా స్నానము చేయవలెను. ప్రవాహము లేని నీటిలో స్నానము, బ్రాహ్మణుని పాదములు కడుగుట, గాయత్రీ జపము, అర్ఘ్యము — ఇవి సూర్యునికి అభిముఖముగా చేయవలెను. నీరు శుద్ధమైనను అశుద్ధమైనను, విష్ణు సన్నిధిలో ఉన్నచో ఆ నీరు గంగతో సమానము; అది మహా పాతకములను నశింపజేయును. ప్రవహించు నదిని మితిమీరి దాటరాదు, అనుష్ఠానము ఉండగా ఈదరాదు.
+hi: वानप्रस्थ और गृहस्थ के लिए प्रातः और मध्याह्न का स्नान है। यति के लिए तीन काल में, ब्रह्मचारी के लिए एक बार। नदी में प्रवाह की ओर मुख करे, खोदे हुए तालाब में उस ओर जहाँ देवता हो। अन्यत्र सूर्य की ओर मुख करके स्नान करे, और रात्रि में यदि अग्नि पास हो तो उसकी ओर। प्रवाहरहित जल में स्नान, ब्राह्मण के चरण धोना, गायत्री का जप और अर्घ्य — ये सूर्य की ओर मुख करके करे। जल शुद्ध हो या अशुद्ध, यदि विष्णु के समीप हो तो वह जल गंगा के समान है और महापातकों का नाश करता है। बहती नदी को मर्यादा से अधिक न लाँघे, और अनुष्ठान रहते हुए तैरकर पार न करे।
+
+--- unit 6 | section: Going to the water ---
+vidhi:
+Go towards the water saying this.
+deva:
+सूत्रंः इदमापः प्रवहते त्यभिगम्य -
+मंत्रः इदमापः प्रवहता वद्यंच मलंचयत् । यद्वाभि रुद्रहान्नृता यद्वाशेपो अभीरुणं । आपो मातस्मादेनसो विश्वान्मुंचं त्वग्ं हसः । निर्मा मुंचामिशपथान्निर्मा वरुणादधि । निर्मायमस्य पड्बिशात् सर्वस्माद्देव किल्बिषात् । इदमापः प्रणीत भेषजं तन्मे वरुणं नमः ॥
+इति जलसमीपं गत्वा । हिरण्य शृंगमिति प्रणम्य ॥
+iast:
+sūtraṁḥ idamāpaḥ pravahate tyabhigamya -
+maṁtraḥ idamāpaḥ pravahatā vadyaṁca malaṁcayat | yadvābhi rudrahānnṛtā yadvāśepo abhīruṇaṁ | āpo mātasmādenaso viśvānmuṁcaṁ tvagṁ hasaḥ | nirmā muṁcāmiśapathānnirmā varuṇādadhi | nirmāyamasya paḍbiśāt sarvasmāddeva kilbiṣāt | idamāpaḥ praṇīta bheṣajaṁ tanme varuṇaṁ namaḥ ||
+iti jalasamīpaṁ gatvā | hiraṇya śṛṁgamiti praṇamya ||
+en: The sūtra: approach saying, this, O waters. Mantra: this, O waters, carry away — whatever in me is blameworthy and whatever is dirt. Whatever falsehood I have spoken, and whatever curse. O waters, mother, free me from that wrong, from all of it, from every sin. I free myself from the curse, I free myself from Varuṇa, I free myself from the noose of Yama, and from every fault against the gods. These waters, O Varuṇa, are the healing that is brought forward; to you is salutation. Having gone to the water with these words, bow saying, the golden-horned.
+tel: సూత్రము — ఇదమాపః ప్రవహత అని చెప్పుచు నీటి వైపునకు వెళ్లవలెను. మంత్రము — ఓ జలములారా, నాయందు నిందనీయమైనది, మలినమైనది ఏదియో దానిని కొనిపోవుడు. నేను పలికిన అసత్యము, శాపము ఏదియో దానిని కూడ. ఓ తల్లియైన జలములారా, ఆ పాపము నుండి, సమస్త పాపము నుండి నన్ను విడిపించుడు. శాపము నుండి, వరుణుని నుండి, యముని పాశము నుండి, దేవతల యెడల చేసిన సమస్త కిల్బిషము నుండి నన్ను విడిపించుకొనుచున్నాను. ఓ జలములారా, మీరు తెచ్చిన ఔషధము ఇది; వరుణునకు నమస్కారము. ఇట్లు చెప్పుచు జల సమీపమునకు వెళ్లి, హిరణ్య శృంగము అని ప్రణామము చేయవలెను.
+hi: सूत्र — इदमापः प्रवहत कहते हुए जल की ओर जाए। मन्त्र — हे जलो, मुझमें जो निन्दनीय है और जो मल है, उसे बहा ले जाओ। जो असत्य मैंने कहा और जो शाप, वह भी। हे माता जलो, उस पाप से, सब पाप से मुझे मुक्त करो। शाप से, वरुण से, यम के पाश से और देवताओं के प्रति किए सब किल्बिष से मैं अपने को मुक्त करता हूँ। हे जलो, यह तुम्हारा लाया हुआ औषध है; वरुण को नमस्कार। ऐसा कहकर जल के समीप जाकर, हिरण्यशृंग कहकर प्रणाम करे।
+
+--- unit 7 | section: Bowing to Varuṇa and asking for the tīrtha ---
+vidhi:
+Come to the water's edge and bow, saying this.
+deva:
+मंत्रः हिरण्य शृंगं वरुणं प्रपद्ये तीर्थं मे देहियाचतः । यन्मयाभुक्त मसाधूनां पापेभ्यश्च प्रतिग्रहः । यन्मे मनसा वाचा कर्मणावा दुष्कृतं कृतम् । तन्न इंद्रोवरुणो बृहस्पति स्सविताच पुनंतु पुनः पुनः । सुमित्रान आप ओषधयस्संतु दुर्मित्रा स्तस्मै भूयासुर्यो स्मान् द्वेष्टियं चवयं द्विष्मः । नमो अग्नये अप्सुमते नम इंद्राय नमो वरुणाय नमो वारुण्यै नमो अद्भ्यः । यदपां क्रूरं यद मेध्यं यदशांतं तदपगच्छतात् । अत्याशनादति पानाद्यच्च उग्रात्प्रति ग्रहात् । तन्मे वरुणो राजा पाणिना ह्यवमर्शतु । सो हमपापो विरजोनिर्मुक्तो मुक्तकिल्बिषः । नाकस्य पृष्ठ मारुह्यगच्छेद्ब्रह्म सलोकताम् । इमम्मे गंगे यमुने सरस्वति शुतुद्रि स्तोमग्ं सचतापरुष्णिया । असिक्निया मरुद्वृधे वितस्तयार्जीकीये शृणुह्यासुषोमया ॥
+iast:
+maṁtraḥ hiraṇya śṛṁgaṁ varuṇaṁ prapadye tīrthaṁ me dehiyācataḥ | yanmayābhukta masādhūnāṁ pāpebhyaśca pratigrahaḥ | yanme manasā vācā karmaṇāvā duṣkṛtaṁ kṛtam | tanna iṁdrovaruṇo bṛhaspati ssavitāca punaṁtu punaḥ punaḥ | sumitrāna āpa oṣadhayassaṁtu durmitrā stasmai bhūyāsuryo smān dveṣṭiyaṁ cavayaṁ dviṣmaḥ | namo agnaye apsumate nama iṁdrāya namo varuṇāya namo vāruṇyai namo adbhyaḥ | yadapāṁ krūraṁ yada medhyaṁ yadaśāṁtaṁ tadapagacchatāt | atyāśanādati pānādyacca ugrātprati grahāt | tanme varuṇo rājā pāṇinā hyavamarśatu | so hamapāpo virajonirmukto muktakilbiṣaḥ | nākasya pṛṣṭha māruhyagacchedbrahma salokatām | imamme gaṁge yamune sarasvati śutudri stomagṁ sacatāparuṣṇiyā | asikniyā marudvṛdhe vitastayārjīkīye śṛṇuhyāsuṣomayā ||
+en: Mantra: I take refuge in Varuṇa of the golden horn. Give me the tīrtha, for I ask it. Whatever I have eaten of the food of the unrighteous, and whatever I have taken from them; whatever wrong I have done by mind, by speech or by act — of that may Indra, Varuṇa, Bṛhaspati and Savitṛ make us clean, again and again. May the waters and the plants be kind to us; may they be unkind to him who hates us and to him whom we hate. Salutations to Agni who is in the waters, salutations to Indra, salutations to Varuṇa, salutations to the consort of Varuṇa, salutations to the waters. Whatever in the waters is harsh, whatever is unclean, whatever is unquiet — let that go away. What comes of eating too much, of drinking too much, and of taking a gift from a hard man — let king Varuṇa wipe that away with his hand. So may I become free of wrong, free of stain, released, freed of every fault. May I rise to the height of heaven and reach the world of Brahman. Come to me, O Gaṅgā, Yamunā, Sarasvatī, Śutudrī and Paruṣṇī with your praise; O Asiknī, Marudvṛdhā, Vitastā and Ārjīkīyā, hear me together with the Suṣomā.
+tel: మంత్రము — హిరణ్య శృంగము గల వరుణుని శరణు పొందుచున్నాను. అడుగుచున్న నాకు తీర్థమును ఇమ్ము. అసాధువుల అన్నమును నేను భుజించినది, వారి నుండి ప్రతిగ్రహము తీసుకొనినది, మనస్సుచేత వాక్కుచేత కర్మముచేత నేను చేసిన దుష్కృతము — దానిని ఇంద్రుడు, వరుణుడు, బృహస్పతి, సవిత మరల మరల పవిత్రము చేయుదురు గాక. జలములు ఓషధులు మాకు మిత్రములగుదురు గాక; మమ్ము ద్వేషించువానికిని, మేము ద్వేషించువానికిని అమిత్రములగుదురు గాక. జలమునందున్న అగ్నికి నమస్కారము, ఇంద్రునకు నమస్కారము, వరుణునకు నమస్కారము, వారుణికి నమస్కారము, జలములకు నమస్కారము. జలములయందు క్రూరమైనది, అమేధ్యమైనది, అశాంతమైనది ఏదియో అది తొలగిపోవుగాక. అతిగా భుజించుటచేత, అతిగా త్రాగుటచేత, ఉగ్రుని నుండి ప్రతిగ్రహము తీసుకొనుటచేత కలిగినదానిని వరుణ రాజు తన చేతితో తుడిచివేయుగాక. అట్లు నేను పాపము లేనివాడను, రజస్సు లేనివాడను, విముక్తుడను, కిల్బిషము లేనివాడను అగుదును. స్వర్గము పైకి ఎక్కి బ్రహ్మ సాలోక్యమును పొందుదును. ఓ గంగా, యమునా, సరస్వతీ, శుతుద్రీ, పరుష్ణీ — మీ స్తోమముతో నా వద్దకు రండు. ఓ అసిక్నీ, మరుద్వృధా, వితస్తా, ఆర్జీకీయా — సుషోమతో కూడి నా మాట వినుడు.
+hi: मन्त्र — स्वर्ण के सींग वाले वरुण की मैं शरण लेता हूँ। माँगने वाले मुझे तीर्थ दो। असाधुओं का जो अन्न मैंने खाया, उनसे जो प्रतिग्रह लिया, और मन, वाणी या कर्म से जो दुष्कृत मैंने किया — उससे इन्द्र, वरुण, बृहस्पति और सविता हमें बार-बार पवित्र करें। जल और ओषधियाँ हमारी मित्र हों; जो हमसे द्वेष करता है और जिससे हम द्वेष करते हैं, उसके लिए अमित्र हों। जल में रहने वाले अग्नि को नमस्कार, इन्द्र को नमस्कार, वरुण को नमस्कार, वारुणी को नमस्कार, जलों को नमस्कार। जलों में जो क्रूर है, जो अमेध्य है, जो अशान्त है, वह दूर हो जाए। अधिक खाने से, अधिक पीने से, और उग्र से प्रतिग्रह लेने से जो हुआ, उसे राजा वरुण अपने हाथ से पोंछ दें। इस प्रकार मैं पापरहित, रजरहित, मुक्त और किल्बिषरहित हो जाऊँ। स्वर्ग के पृष्ठ पर चढ़कर ब्रह्म के सालोक्य को प्राप्त करूँ। हे गंगा, यमुना, सरस्वती, शुतुद्री और परुष्णी, अपने स्तोम के साथ मेरे पास आओ; हे असिक्नी, मरुद्वृधा, वितस्ता और आर्जीकीया, सुषोमा के साथ मेरी सुनो।
+
+--- unit 8 | section: Entering the water, the meditation and the calling of the rivers ---
+vidhi:
+Sprinkle yourself with water mixed with earth, saying the first mantra. Then go into the water saying the second, stand where it reaches the navel, and go under four times. While under the water meditate in the words of the verses that follow. Then fill the joined hands and pour the water on your own head, which sets aside the bath of a crow. Draw a square on the water with the joined hands and call the rivers into it with the verse. Then take the water of that square in the joined hands and pour it on your head four times, and ask the Lord's leave with the last verse. Close the two ears and the two nostrils with the thumbs and the middle fingers, breathe out slowly, and go under four times more, meditating as before. One who has touched something impure goes under thirteen times first, in one breath, and then does the four in the proper way.
+deva:
+खंडः आपः पुनात्विति समृदोदके नाभ्युक्ष्य ।
+मंत्रः आपः पुनातु पृथिवी सर्वं पुनातु धरणी । सर्वपूता माग्ं सर्वपापैः पुनातु ॥
+खंडः इद मापश्शिवा इति विगाह्य सुस्नाति ।
+मंत्रः इदमापश्शिवा शिवतमाश्शांताः ...... रश्मिभिः ॥
+इति नाभि दघ्नतीर्थे चतुर्निमज्ज्य ॥
+श्लो॥ हृत्थितं सर्वभूतानां रविमंडल मध्यगम् ।
+नील जीमूत संकाशं वासुदेवं चतुर्भुजम् ॥
+शंखचक्र गदापद्म धारिणं वनमालिनम् ।
+तत्पादोदकजां धारां निपतंतीं स्वमूर्धनि ॥
+चिंतये द्ब्रह्म रंध्रेण प्रविशंतीं स्वकांतनूम् ।
+तया प्रक्षाळितं सर्वं स्वदेहं परिचिंतयेत् ॥
+इदं स्नानं वरं मंत्रात् सहस्रादधिकं मतम् ।
+ध्यात्वा गंगां हरेः पादात् पतमानां स्वमूर्धनि ॥
+प्रपूर्य्वांजलिना सिंचेत् काकस्नान विसर्जनम् ॥
+गंगेचयमुने चैव गोदावरि सरस्वति ।
+नर्मदे सिंधु कावेरि जले स्मिन् सन्निधिं कुरु ॥
+समस्त जगदाधार शंखचक्र गदाधर ।
+देव, देहि महानुज्ञां युष्मत्तीर्थनिषेवणे ॥
+iast:
+khaṁḍaḥ āpaḥ punātviti samṛdodake nābhyukṣya |
+maṁtraḥ āpaḥ punātu pṛthivī sarvaṁ punātu dharaṇī | sarvapūtā māgṁ sarvapāpaiḥ punātu ||
+khaṁḍaḥ ida māpaśśivā iti vigāhya susnāti |
+maṁtraḥ idamāpaśśivā śivatamāśśāṁtāḥ ...... raśmibhiḥ ||
+iti nābhi daghnatīrthe caturnimajjya ||
+ślo|| hṛtthitaṁ sarvabhūtānāṁ ravimaṁḍala madhyagam |
+nīla jīmūta saṁkāśaṁ vāsudevaṁ caturbhujam ||
+śaṁkhacakra gadāpadma dhāriṇaṁ vanamālinam |
+tatpādodakajāṁ dhārāṁ nipataṁtīṁ svamūrdhani ||
+ciṁtaye dbrahma raṁdhreṇa praviśaṁtīṁ svakāṁtanūm |
+tayā prakṣāḻitaṁ sarvaṁ svadehaṁ pariciṁtayet ||
+idaṁ snānaṁ varaṁ maṁtrāt sahasrādadhikaṁ matam |
+dhyātvā gaṁgāṁ hareḥ pādāt patamānāṁ svamūrdhani ||
+prapūryvāṁjalinā siṁcet kākasnāna visarjanam ||
+gaṁgecayamune caiva godāvari sarasvati |
+narmade siṁdhu kāveri jale smin sannidhiṁ kuru ||
+samasta jagadādhāra śaṁkhacakra gadādhara |
+deva, dehi mahānujñāṁ yuṣmattīrthaniṣevaṇe ||
+en: The section: sprinkle yourself with water mixed with earth, saying, may the waters purify. Mantra: may the waters purify, may the earth purify all, may the ground purify. May it purify me, made wholly clean of all wrongs. The section: go in saying, these waters are kind, and bathe well. Mantra: these waters are kind, most kind, quiet — with their rays. With these words, go under four times in water that reaches the navel. Verse: he who stands in the heart of all beings, who is in the midst of the orb of the sun, who is like a dark rain-cloud, Vāsudeva of the four arms, who holds the conch, the discus, the mace and the lotus, and who wears the forest garland — let him think of the stream born of the water of his feet falling upon his own head, entering by the opening of the head and filling his whole body, and let him think of his whole body washed clean by it. This bath is better than a mantra, and is held to be worth more than a thousand. Having meditated on the Gaṅgā falling from the feet of Hari upon his own head, let him fill the joined hands and pour, which sets aside the bath of a crow. O Gaṅgā, Yamunā, Godāvarī, Sarasvatī, Narmadā, Sindhu and Kāverī, be present in this water. Upholder of the whole world, bearer of the conch, the discus and the mace — O Lord, give me your great leave to use your tīrtha.
+tel: ఖండము — ఆపః పునాతు అని మట్టి కలిపిన నీటితో ప్రోక్షించుకొనవలెను. మంత్రము — జలములు పవిత్రము చేయుగాక, పృథివి అంతను పవిత్రము చేయుగాక, ధరణి పవిత్రము చేయుగాక. సమస్త పాపముల నుండి పూర్తిగా పవిత్రుడనైన నన్ను పవిత్రము చేయుగాక. ఖండము — ఇదమాపః శివా అని నీటిలో దిగి బాగుగా స్నానము చేయవలెను. మంత్రము — ఈ జలములు శివములు, అత్యంత శివములు, శాంతములు ... కిరణములతో. ఇట్లు నాభి వరకు గల తీర్థమునందు నాలుగు సార్లు మునుగవలెను. శ్లోకము — సమస్త ప్రాణుల హృదయమునందున్నవాడును, సూర్య మండల మధ్యమునందున్నవాడును, నీల మేఘ సదృశుడును, చతుర్భుజుడును, శంఖ చక్ర గదా పద్మములను ధరించినవాడును, వనమాలిని అయిన వాసుదేవుని ధ్యానించి, ఆయన పాదోదకము నుండి పుట్టిన ధారను తన శిరస్సుపై పడుచున్నట్లును, బ్రహ్మ రంధ్రము ద్వారా తన శరీరమునందు ప్రవేశించుచున్నట్లును, దానిచేత తన దేహమంతయు ప్రక్షాళితమైనట్లును చింతించవలెను. ఈ స్నానము మంత్ర స్నానము కంటె శ్రేష్ఠమైనది, వేయింటి కంటె అధికమని చెప్పబడినది. హరి పాదము నుండి తన శిరస్సుపై పడుచున్న గంగను ధ్యానించి, దోసిలి నిండ నీరు తీసుకొని పోయవలెను; ఇది కాక స్నానమును తొలగించును. ఓ గంగా, యమునా, గోదావరీ, సరస్వతీ, నర్మదా, సింధూ, కావేరీ — ఈ జలమునందు సన్నిధి ఉండుడు. సమస్త జగత్తునకు ఆధారమైనవాడా, శంఖ చక్ర గదలను ధరించినవాడా, ఓ దేవా, నీ తీర్థమును సేవించుటకు నాకు మహా అనుజ్ఞను ఇమ్ము.
+hi: खण्ड — आपः पुनातु कहकर मिट्टी मिले जल से प्रोक्षण करे। मन्त्र — जल पवित्र करें, पृथिवी सब कुछ पवित्र करे, धरणी पवित्र करे। सब पापों से पूर्ण पवित्र हुए मुझे वह पवित्र करे। खण्ड — इदमापः शिवा कहकर जल में उतरकर भलीभाँति स्नान करे। मन्त्र — ये जल शिव हैं, अत्यन्त शिव हैं, शान्त हैं ... रश्मियों से। इस प्रकार नाभि तक के तीर्थ में चार बार डुबकी लगाए। श्लोक — जो सब प्राणियों के हृदय में स्थित है, सूर्यमण्डल के मध्य में है, नीले मेघ के समान है, चतुर्भुज वासुदेव है, जो शंख, चक्र, गदा और पद्म धारण करता है और वनमाला पहनता है — उसके चरणोदक से उत्पन्न धारा को अपने सिर पर गिरती हुई, ब्रह्मरन्ध्र से अपने शरीर में प्रवेश करती हुई, और उससे अपने सारे शरीर को धुला हुआ चिन्तन करे। यह स्नान मन्त्र से श्रेष्ठ है और सहस्र से अधिक माना गया है। हरि के चरण से अपने सिर पर गिरती गंगा का ध्यान करके अंजलि भरकर सींचे; इससे काकस्नान का निवारण होता है। हे गंगा, यमुना, गोदावरी, सरस्वती, नर्मदा, सिन्धु और कावेरी, इस जल में सन्निधि करो। हे समस्त जगत् के आधार, शंख-चक्र-गदाधर, हे देव, अपने तीर्थ के सेवन के लिए मुझे महान् अनुज्ञा दो।
+
+--- unit 9 | section: The tarpaṇa that is a limb of the bath ---
+vidhi:
+Stand facing east in water up to the navel, do ācamana once, and offer water to the gods from the tip of the fingers, holding the hand upwards and towards the east. Then wear the sacred thread in the ordinary way and offer to the sages from the side of the hand, holding it sideways and towards the north. Then wear the sacred thread over the right shoulder and offer to the forefathers from the base of the thumb, facing south and holding the hand downwards. Do ācamana after. Then take water in the joined hands, say the closing verse, and throw the water outside the river. Come out, sit facing south, and dry the head and the body with two separate dry cloths. Do not shake the hair out.
+deva:
+देवेन तीर्थेन प्राच्यामूर्ध्वं भूर्देवां स्तर्पयामि । भुवर्देवां स्तर्पयामि । सुवर्देवां स्तर्पयामि । भूर्भुव स्सुवर्देवां स्तर्पयामीति तर्पयित्वा, अथनिवीती, उत्तरस्यांतिर्यक् आर्षेण तीर्थेन ।
+भूः ऋषीं स्तर्पयामि । भुवः ऋषीं स्तर्पयामि । सुवः ऋषीं स्तर्पयामि । भूर्भुवस्सुवः ऋषीं स्तर्पयामीति तर्पयित्वा । अथ प्राचीनावीती, दक्षिणस्या मधः पैतृकतीर्थेन ।
+भूः पितॄं स्तर्पयामि । भुवः पितॄं स्तर्पयामि । सुवः पितॄं स्तर्पयामि । भूर्भुवस्सुवः पितॄं स्तर्पयामीति दक्षिण मुखस्तत्तत्तीर्थेन गृहीत्वा संतर्प्याचम्य ।
+श्लो॥ यन्मया दुष्कृतं तोये शारीरमल संचितं ।
+तस्य पापविशुद्ध्यर्थं यक्ष्माणं तर्पयाम्यहम् ॥
+iast:
+devena tīrthena prācyāmūrdhvaṁ bhūrdevāṁ starpayāmi | bhuvardevāṁ starpayāmi | suvardevāṁ starpayāmi | bhūrbhuva ssuvardevāṁ starpayāmīti tarpayitvā, athanivītī, uttarasyāṁtiryak ārṣeṇa tīrthena |
+bhūḥ ṛṣīṁ starpayāmi | bhuvaḥ ṛṣīṁ starpayāmi | suvaḥ ṛṣīṁ starpayāmi | bhūrbhuvassuvaḥ ṛṣīṁ starpayāmīti tarpayitvā | atha prācīnāvītī, dakṣiṇasyā madhaḥ paitṛkatīrthena |
+bhūḥ pitṝṁ starpayāmi | bhuvaḥ pitṝṁ starpayāmi | suvaḥ pitṝṁ starpayāmi | bhūrbhuvassuvaḥ pitṝṁ starpayāmīti dakṣiṇa mukhastattattīrthena gṛhītvā saṁtarpyācamya |
+ślo|| yanmayā duṣkṛtaṁ toye śārīramala saṁcitaṁ |
+tasya pāpaviśuddhyarthaṁ yakṣmāṇaṁ tarpayāmyaham ||
+en: With the part of the hand that belongs to the gods, holding it upwards and towards the east: I offer water to the gods of the earth. I offer water to the gods of the mid-region. I offer water to the gods of heaven. I offer water to the gods of the earth, the mid-region and heaven. Having so offered, and wearing the sacred thread in the ordinary way, with the part of the hand that belongs to the sages, holding it sideways and towards the north: I offer water to the sages of the earth. I offer water to the sages of the mid-region. I offer water to the sages of heaven. I offer water to the sages of the earth, the mid-region and heaven. Having so offered, and wearing the sacred thread over the right shoulder, with the part of the hand that belongs to the forefathers, holding it downwards and towards the south: I offer water to the forefathers of the earth. I offer water to the forefathers of the mid-region. I offer water to the forefathers of heaven. I offer water to the forefathers of the earth, the mid-region and heaven. Facing south and taking the water each time from the proper part of the hand, having so offered, do ācamana. Verse: whatever wrong I have done, gathered as the dirt of the body, in this water — for the cleansing of that wrong I offer water to Yakṣmā.
+tel: దైవ తీర్థముచేత, చేతిని పైకి ఎత్తి తూర్పు వైపునకు — భూలోక దేవతలకు తర్పణము ఇచ్చుచున్నాను. భువర్లోక దేవతలకు తర్పణము ఇచ్చుచున్నాను. సువర్లోక దేవతలకు తర్పణము ఇచ్చుచున్నాను. భూర్భువస్సువర్లోక దేవతలకు తర్పణము ఇచ్చుచున్నాను. ఇట్లు తర్పణము ఇచ్చి, నివీతిగా, చేతిని అడ్డముగా పట్టి ఉత్తరమునకు, ఆర్ష తీర్థముచేత — భూః ఋషులకు తర్పణము ఇచ్చుచున్నాను. భువః ఋషులకు, సువః ఋషులకు, భూర్భువస్సువః ఋషులకు తర్పణము ఇచ్చుచున్నాను. ఇట్లు తర్పణము ఇచ్చి, ప్రాచీనావీతిగా, చేతిని క్రిందికి పట్టి దక్షిణమునకు, పైతృక తీర్థముచేత — భూః పితరులకు తర్పణము ఇచ్చుచున్నాను. భువః పితరులకు, సువః పితరులకు, భూర్భువస్సువః పితరులకు తర్పణము ఇచ్చుచున్నాను. దక్షిణాభిముఖుడై ఆయా తీర్థముల నుండి నీరు తీసుకొని తర్పణము ఇచ్చి ఆచమనము చేయవలెను. శ్లోకము — శరీర మలముచేత కూడిన ఏ దుష్కృతమును నేను ఈ నీటియందు చేసితినో, ఆ పాపము శుద్ధి అగుట కొరకు యక్ష్మకు తర్పణము ఇచ్చుచున్నాను.
+hi: देव तीर्थ से, हाथ ऊपर करके पूर्व की ओर — भूलोक के देवताओं को तर्पण करता हूँ। भुवर्लोक के देवताओं को तर्पण करता हूँ। सुवर्लोक के देवताओं को तर्पण करता हूँ। भूर्भुवःसुवर्लोक के देवताओं को तर्पण करता हूँ। इस प्रकार तर्पण करके, निवीती होकर, हाथ को तिरछा रखकर उत्तर की ओर, आर्ष तीर्थ से — भूः ऋषियों को तर्पण करता हूँ। भुवः ऋषियों को, सुवः ऋषियों को, भूर्भुवःसुवः ऋषियों को तर्पण करता हूँ। इस प्रकार तर्पण करके, प्राचीनावीती होकर, हाथ नीचे करके दक्षिण की ओर, पैतृक तीर्थ से — भूः पितरों को तर्पण करता हूँ। भुवः पितरों को, सुवः पितरों को, भूर्भुवःसुवः पितरों को तर्पण करता हूँ। दक्षिण की ओर मुख करके उन-उन तीर्थों से जल लेकर तर्पण करके आचमन करे। श्लोक — शरीर के मल से संचित जो दुष्कृत मैंने इस जल में किया, उस पाप की शुद्धि के लिए मैं यक्ष्मा को तर्पण करता हूँ।
