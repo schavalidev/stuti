@@ -95,226 +95,677 @@ code { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: .
 
 <section class="release">
   <div class="rail">
-    <div class="ver">0.9.95</div>
-    <div class="date">4 – 12 September 2026</div>
-    <div class="rail-note">The prototype, ported — and a first Android build in hand.</div>
+    <div class="ver">0.9.103</div>
+    <div class="date">15 September 2026</div>
+    <div class="rail-note">A rite the corpus already held in three places, and a printed book nobody had opened.</div>
   </div>
   <div class="release-body">
-
+    <h2 class="release-title">The southern tarpaṇam gets its own book</h2>
     <div class="entry">
-      <div class="entry-head"><span class="tag tag-chg">Changed</span><h3>The designer's 0.9.90–0.9.94 lands in the app</h3></div>
-      <p>The designer handed over her whole Claude Design project rather than an export, and the project root turned out to be five versions ahead of the export folder inside it: the export stopped at 0.9.89 while the root carried the beta latch, the provenance footnote, the counting of screens and scripts, the installable manifest and icons, the phone-edge gutter, the searchable deity shelf, the olive nomu lens and the Telugu rewrite. The handoff was assembled from the root's working files, taking every file the app's own page loads and the docs beside them, and the pipeline ran over it. Two new shapes the pipeline had not met: a store and a screen sharing the name stuti-tithis, which the same-name step now finds by looking rather than by list, and a module-local function the prototype then publishes on window, which the transform turned into a self-alias export and the collision step now rewrites. Every seam found its anchor in the new reader. Her changelog is the base of this file again, with the port's own arc kept above it as 0.9.95; her CLAUDE.md typography notes came across too. Three things the port decided for itself. The app's own safe-area padding now uses only Capacitor's variable, since her bars carry the notch inset themselves on the web. The launcher icon and the install manifest take her icons and colours. And the offline worker now registers only on the web: inside the app every file is already on the phone, and its precache was the reason the first launch or two after an update still showed the previous build.</p>
+      <div class="entry-head"><span class="tag tag-add">Added</span><h3>The Āpastamba amāvāsyā tarpaṇam, from a printed booklet read page by page</h3></div>
+      <p>The southern counterpart to the northern tarpaṇa file was assumed to be missing, and it was not: the daily deva-ṛṣi-pitṛ tarpaṇa of this tradition has stood all along inside the brahmayajña file, because in the Āpastamba tradition it is the second half of that rite and not a separate work. What was genuinely absent was the rite of the new moon day. It is now <code>vidhi/taittiriya/07_tarpana_vidhi.txt</code>, twenty-six units, from the Bhavani Book Centre's <span class="lit">Āpastamba Smārta Amāvāsyai Tarppaṇam</span>. That booklet's scan carries an OCR that returns no Sanskrit whatever, so all thirty-six pages were read as images.</p>
     </div>
     <div class="entry">
-      <div class="entry-head"><span class="tag tag-fix">Fixed</span><h3>What a review of the re-port turned up</h3></div>
-      <p>Five readers went over the port with one lens each and two more tried to refute what they found. What survived, and was fixed: the ledger and the Today band subscribed to their stores through window, which the port never publishes, so neither refreshed when a bead was counted or a plan advanced, and had not since the first port; saving a personal tithi called a reminder hook the same way and never armed it; the pipeline read a shared plain function as a global and passed, which would have thrown the moment a plan sitting opened, so an unresolved name now fails the pipeline and a shared function is exported and imported instead; the offline precache had swollen to every image in the folder, and now holds only the shell, everything else caching the first time it is shown; the install manifest and the page head were hand-typed copies that had drifted from hers, and now read her file; the reader's chip row could not scroll to the Record chip in Telugu, and the learn bar's Record toggle showed no state and could not stop what it started; a declined Record left the next plain Follow recording unasked; the beta latch closed the keyboard on every wrong word and, after three, said write to us with nowhere to write; and Follow's Telugu used words her 0.9.94 pass had retired, so its shared words now come from her table and the rest were respelled to her voice. One decision the port made for the founder: a phone that had finished onboarding before the latch existed is let through without being asked, since the founder invited it in person; every new install sees the gate.</p>
-      <div class="entry-head"><span class="tag tag-fix">Fixed</span><h3>The latch says how to ask for the word</h3></div>
-      <p>Two questions from the re-port were answered. The designer's project root is the only design source from now on: her export folder was a second full copy of the app kept in step by hand, and it fell behind exactly as a second copy does, so she hands over the whole project and the port assembles its input from the files her page loads. And the latch keeps letting through any device that had already finished onboarding: a gate is there to stop strangers, not to re-check the households already inside, and asking them for a word they were never sent would turn an update into a lockout. The one cost of that is a reinstall or a cleared browser, which makes a trusted tester a stranger again. So the gate no longer waits for three wrong tries before offering an address; from the first glance it says, in the reader's script, that whoever does not have the word can write to feedback@stuti.app, and the link opens a mail with the subject filled in.</p>
-      <div class="entry-head"><span class="tag tag-fix">Fixed</span><h3>Why a tab press felt slow</h3></div>
-      <p>The press itself was instant; what followed was not. Today and the pañcāṅga each ran a blocking task of two to eight seconds after the tap, measured on the built bundle, while Nitya and the library switched at once. The cause was in the vrata engine: every vrata's find is an ephemeris search, and nothing remembered its answer, so Today asked for the whole upcoming list five times per render — the parva card, the day's vratas, the preparations twice, the festive tint — and the calendar asked once per month and then computed a full pañcāṅga day for each of its thirty cells. Two memos now sit in the port's perf seam: a vrata's find is remembered until the Settings prefs, the place, or the personal tithis change, and a civil day's pañcāṅga is remembered the same way, with the instant form that names the tithi prevailing right now left uncached. The same tab presses now finish in well under a fifth of a second.</p>
-      <div class="entry-head"><span class="tag tag-add">Added</span><h3>The log relay: what goes wrong on a phone arrives by itself</h3></div>
-      <p>Until now a fault on a tester's phone reached the makers as a message, followed by a request for files, followed by an upload by hand. The app now sends them itself. A crash note carries the page's error and stack, the last forty console warnings, the build's own diagnostics block and the last dozen counter events, at most three per launch. Every Follow session of eight seconds or more sends its log — what was heard, where the light went — and on the phone the audio the ears heard alongside it, when it is under twelve megabytes, so a real chant can be replayed on a desk for tuning as the maker has been doing from hand-shared files. The road is a small Netlify function that writes into the makers' own Google Drive folder with a credential that lives only in the site's environment: nothing on the phone signs into anything, and a random eight-character device id is all that tells one phone's sessions from another's — no name, no account, and never the text being read. The switch is in Settings under About, on by default for the beta and worded in the reader's own script; a dev server on localhost never sends. Text that cannot leave for want of a network waits in a small queue for the next launch. Until the site is given its credential the function answers that it is not configured and the app stays quiet, so the road can be opened without another release; the setup is written down in <code>stuti-app/docs/log-relay.md</code>.</p>
-      <div class="entry-head"><span class="tag tag-add">Added</span><h3>The journal: a tester's path through the app, by itself</h3></div>
-      <p>The relay knew crashes and Follow sessions; the counter knew a dozen verbs and kept them to itself. Between them lay everything a tester actually does. The journal keeps that as one line per event with the seconds since launch: each screen, each tapped control by the label it shows, each of the counter's events, and every task that held the page for more than half a second, which would have named the slow tabs of this same day without anyone having to report them. It leaves the phone through the relay every ten minutes of use once twenty lines have gathered, whenever the app goes to the background, and at the next launch for whatever the last one left behind, so a tester who puts the phone down mid-flow still sends the flow. The same switch in Settings governs it, and what it writes is the label on a control, never a typed word or a verse.</p>
-      <div class="entry-head"><span class="tag tag-fix">Fixed</span><h3>What the first night of relayed logs taught the relay</h3></div>
-      <p>Two phones sent sixty-odd journals and two Follow sessions overnight, and two of the relay's own habits showed. A session that the reciter then kept lost its audio: the relay read the session's file only after posting the log, and Keep had moved the file to the recitations shelf two seconds earlier, so the one session worth hearing was the one that arrived without sound. The audio is now read first and posted after. And every trip to the background flushed a journal even when nothing had happened since the last one, which filled the folder with files that said only "show" and "hide"; a flush now waits until it has a screen, a tap, a count, or a slow task to report. What the logs said about the app itself is written in the makers' notes: no crash and no slow task on either phone beyond the first Home paint, the latch's button working on the Pixel, and one Follow session where the ears, held to the stotra's own vocabulary, heard a whole earlier line in a later one and the light stepped back three lines for a few seconds.</p>
-    <div class="entry">
-      <div class="entry-head"><span class="tag tag-fix">Fixed</span><h3>The bells were reckoned and then dropped on the floor</h3></div>
-      <p>Nobody was getting a reminder, and the reason was the last inch. The nudge rings its cues with the browser's own <code>new Notification(...)</code>, which is honest on a desktop tab and absent from the Android WebView entirely — so on the phone every cue was computed correctly, found due, and then discarded at a support check that could never pass. Worse, the reminder sheet read the same answer and told the reciter their device did not support notifications, which put the fault on the phone. The cues now go to Android's own alarm table instead: a week is laid out ahead and re-laid every time the app is opened, so a bell arrives with Stuti closed and survives a reboot. Nothing about what is due moved — the cue registry still answers that and the nudge still words it, so a cue from the OS reads exactly like one from an open tab, and the page timer stands down while the OS holds the week rather than ringing it twice. The sheet's closing note, written for the web, now says what is actually true on a phone, and points at the phone's settings rather than the browser's when the bells have been refused. The horizon is a week and no more: sunrise moves, vows fall due, and a repeating alarm whose words slowly stop being true would be a worse promise than silence. On the web nothing changed — reminders there still need the tab open, and still say so.</p>
+      <div class="entry-head"><span class="tag tag-add">Added</span><h3>The nine ṛcs the web pages do not print</h3></div>
+      <p>The one web source for this rite gives the formulae and nothing else. The printed booklet says three Vedic ṛcs before the offering to each of the six men — <span class="lit">udīratām</span>, <span class="lit">aṅgiraso naḥ</span> and <span class="lit">āyantu naḥ</span> for the father, the <span class="lit">madhu</span> verses for the great-grandfather, and the rest — and it sets the forefathers on a bundle of darbha, seats them, salutes them standing at the end and returns them to their place. None of that is anywhere on the web page. Seven differences between the two are itemised in the file and not one of them is reconciled, because they are two shapes of one rite and not two readings of one text.</p>
     </div>
     <div class="entry">
-      <div class="entry-head"><span class="tag tag-fix">Fixed</span><h3>A bell set after its own hour, and a screen that would not say so</h3></div>
-      <p>The first evening on the native cues brought a report of silence, and the relay answered it: the journal showed the sāyaṃ bell being switched on at 6:52pm, and the plate behind it showed that evening's window had opened at 5:13pm and was already in prāyaścitta. The cue had been in the past for nearly two hours; there was nothing to ring, and the next one it could ring was the following evening. Nothing was broken — but the plate's confirmation said only that the reminder was set, and still promised it would arrive "while Stuti is open", which stopped being the phone's truth the day before. It now names the hour it will actually ring at: which juncture, today or tomorrow or the weekday, the lead if one is chosen, and that it arrives with Stuti closed. Its two refusals stop speaking of browsers and sites and point at the phone's own settings. And the journal now records each laying — how many cues went into the alarm table, how many were already held, how many stale ones were dropped, and when the next one falls — because the night this was reported the log could say the bells were permitted but not whether a single one had been laid, which is the only question that matters when a reciter reports silence.</p>
-      <div class="entry-head"><span class="tag tag-fix">Fixed</span><h3>The bell's note kept naming a cue after its hour had passed</h3></div>
-      <p>A reciter switched the mādhyāhnika bell on at half past ten and read the plate's note at a quarter past eleven, with the window open: "Next: Mādhyāhnika, today 10:47". The note had been true when written and nothing refreshed it — it stayed until tapped, while the plate above it moved on to the running juncture, and the two disagreed on the same screen. The note now keeps step with the plate's own minute tick, so once a cue's moment passes it names the one after it; and where a lead is chosen it says when the window itself opens, so "15 min before" has a number beside it.</p>
+      <div class="entry-head"><span class="tag tag-fix">Noted</span><h3>Two sites, one lineage</h3></div>
+      <p>vignanam's Devanāgarī page for this rite looks like a second witness and is not one. It is a machine transliteration of the Telugu page, down to that page's Telugu ritual directions rendered letter for letter into Devanāgarī, so that <span class="lit">తలమీద నీళ్ళను జల్లుకోండి</span> stands in its Sanskrit column as <span class="lit">तलमीद नील्लनु जल्लुकोण्डि</span>. Counting it would have turned one source into two. The same site's Taittirīya pāṭha pages remain a real accented witness, and six passages were lifted from them by machine; the trap is the paddhati pages, not the Veda pages.</p>
     </div>
     <div class="entry">
-      <div class="entry-head"><span class="tag tag-fix">Fixed</span><h3>The search could not hear, and would not say so</h3></div>
-      <p>A tester tapped the microphone on the search screen five times in twenty-seven seconds, watched it light and go out with nothing in the box, and typed the name instead; the journal has all five taps. The fault was a misreading of the Android plugin's contract, written down in this app's own shim. The plugin sends "stopped" from the moment the <em>speaker</em> stops talking, not the moment the recogniser finishes — and the recogniser's best and final transcript arrives after that, on the same channel the partial guesses come down. The shim treated "stopped" as the end, closed its listeners, and so kept a half-heard partial where there was one and nothing at all where the phrase was short enough that none had arrived yet. It now waits out that gap and takes the final word, which is both later and better. The other half was worse: when the recogniser fails outright — a language the phone does not hold, a busy recogniser, no network — the plugin reports it by rejecting a call it has already answered, so the rejection falls on the floor and no event of any kind is sent. Nothing reached the app, and the button simply stayed lit until a twenty-second timer gave up in silence. The plugin's own listening flag is the one thing that does change, so it is now watched, and a session that ends without a word ends in a second or so and says so. The button has always had a way to show a failure; until now it was never told of one.</p>
-      <div class="entry-head"><span class="tag tag-fix">Fixed</span><h3>A phone asked for a language it does not have</h3></div>
-      <p>The search asks the recogniser for the reading script's own language, Telugu for a Telugu reader, which is right when the phone holds it and the silent failure above when it does not. Where a device will say which languages it has, one it does not have now falls back to the nearest it does, and the fallback is written to the journal. Nothing is lost by it: a spoken hymn name is folded to one key before search matches it, so Telugu ears and Hindi ears land on the same stotra.</p>
+      <div class="entry-head"><span class="tag tag-fix">Noted</span><h3>Four mantras stay unaccented, and the file says why</h3></div>
+      <p>All eighty accented Taittirīya pāṭha pages were fetched and searched for every mantra this rite uses. Four are in none of them, because they belong to the Āpastamba domestic mantra collection rather than to the Saṁhitā, Brāhmaṇa or Āraṇyaka, and no machine-readable accented edition of that collection was found. The accented Ṛgveda carries three of them and was deliberately left alone: taking Ṛgvedic marking into a Taittirīya file is the one thing the cross-recension rule exists to prevent. The marks are therefore absent, and their absence is recorded rather than filled.</p>
     </div>
     <div class="entry">
-      <div class="entry-head"><span class="tag tag-fix">Fixed</span><h3>The search was measuring a Telugu word with a Roman ruler</h3></div>
-      <p>A screenshot settled what a description could not: the word in the box was నామ, typed in Telugu, and one hymn came back where the Roman nama returned twenty. The word-by-word matcher introduced a few days ago carries thresholds — how much of a word must be typed before it may match inside another — and every one of them was counted in characters. An abugida does not spend characters the way the Latin alphabet does: నామ and नाम are three characters each where nama is four, because a consonant carries its own vowel and a vowel sign only replaces it. So a Telugu reader was being asked for more than a Roman one before the search would look inside a name, and the only hymn it would answer with was the one whose name simply begins with the word. Worse, this was a step backwards: the plain substring search that came before had found all nineteen. Length is now counted so that the same word is the same length in any script — a consonant or an independent vowel worth two, the marks that hang off it worth none, which puts an Indic word within a letter of its own romanisation. నామ answers with nineteen, the Viṣṇu Sahasranāma fourth, and so does नाम; and a three-letter Roman fragment is still held to the same bar it was, so "ram" still answers with Rāma's seven hymns rather than every stotram in the library.</p>
-    </div>
-    <div class="entry">
-      <div class="entry-head"><span class="tag tag-fix">Fixed</span><h3>What a hymn is filed under was outranking what it is called</h3></div>
-      <p>Reported as the search only matching whole words: type "nama" and the Viṣṇu Sahasranāma does not appear. It did match — it was sixteenth of twenty, which in a window showing three at a time is the same thing as not being there. The cause was in the weighing. A hymn was scored against one long string holding its name, its form, its deity and its author all together, so the form could outrank the name: every Nāmāvali is FILED as "Nāmāvali", which begins with the letters typed and scores as a strong match, while the Viṣṇu Sahasranāma only carries them inside its own name and scores as a weak one. Eleven indexes therefore stood in front of the text being looked for. The name is now weighed on its own and what a hymn is filed under counts for rather less — a reciter is reaching for the name; the filing is only how the thing was shelved. And because Sanskrit builds by suffix, a name that ENDS in what was typed now counts for more than one that merely contains it, so sahasranāma and śatanāma come before śatanāmāvali. "Nama" now answers with Nāma Rāmāyaṇam, then the sahasranāmas, the Viṣṇu among them fifth. Everything that was found before is still found, and "shiva sahasranama" still answers with nothing rather than the Viṣṇu one.</p>
-    </div>
-    <div class="entry">
-      <div class="entry-head"><span class="tag tag-fix">Fixed</span><h3>The search microphone was hanging up on people before they spoke</h3></div>
-      <p>Reported as unreliable — sometimes it hears you, mostly it does not — and the relayed journals named it in one line each. Nine of twelve failed searches ended at exactly one-point-two seconds, while every search that worked took between two-point-nine and four-and-a-half, because a reciter taps the microphone and <em>then</em> begins to speak. One-point-two seconds was not the phone giving up. It was this app's own watchdog, firing on its second poll.</p>
-      <p>That watchdog was added a day earlier for a real fault — the speech plugin reports an error by answering a question it has already answered, so the error reaches nobody and the button stays lit with nothing to show. Having no error to listen for, the watchdog polled the plugin's own record of whether it was listening, and treated that going quiet as the error arriving. It was never that: the plugin lowers the same flag when the speaker merely pauses, which is an ordinary thing and indistinguishable from this side. So the watchdog was hanging up on the reciter far more often than it ever caught a fault. It is gone. The session now simply waits eight seconds for a first word — comfortably past the four-and-a-half the working sessions needed — and gives up if none comes. The error it used to catch now costs that wait instead, which is the right trade: the fault was rare and the cure was breaking every other search. Every ending also tells the plugin to stop now, so a session given up on cannot leave the microphone open.</p>
-      <p>Driven against a stand-in for the plugin, a reciter who starts speaking three seconds after tapping: before, "no-speech" and the phrase thrown away; now, the phrase.</p>
-    </div>
-    <div class="entry">
-      <div class="entry-head"><span class="tag tag-fix">Fixed</span><h3>Two pieces of text at the same weight, one behind the other, read as damage</h3></div>
-      <p>The window was made see-through by simply thinning its ground, and the result was not a window but a collision: the reciter's own screen is words, a list of stotra names is words, and at the same size and weight neither one is in front. What the ask actually said was that what is behind must be seen and need not be legible — and blurring is exactly that sentence. So the screen behind now goes softly out of focus while the search is open. Everything is still there: the sky, the colours, the shapes of the cards, where the reciter's place is. Only the words have become texture, which is the one state in which they cannot fight with the words on top. The tab bar sits outside the softening and stays sharp.</p>
-      <p>The tidier way to say this would have been a frosted window — <code>backdrop-filter</code> on the panel, blurring only what falls behind it. That was written, and then withdrawn, because it could not be verified: the property computes correctly on the desk and never composites there, so there was no way to know what the phone would actually draw without shipping it and asking. A blur on the screen itself renders everywhere and could be seen working before it left. It also softens the whole screen rather than a window-shaped hole in it, which reads better — there is no hard edge where focus changes.</p>
-      <div class="entry-head"><span class="tag tag-fix">Fixed</span><h3>Every frosted surface in the app was flat, and had been since the port</h3></div>
-      <p>Found while chasing the above: the sky plate on Home, the masa cards, the lens bar — every surface the designer frosted computes to no blur at all in the built app. The prototype writes its frosting the careful way, the standard property and the vendor-prefixed one beside it, which is good hygiene in a hand-served page and wrong through this build. The minifier knows the two names are one property, sees the same value twice, and keeps the later of them — the prefixed one — as the author's evident choice. Chrome 148 and the Android WebView built on it do not support that prefixed name at all, so the only declaration to survive the build was the one that does nothing. Left alone the minifier does the right thing, emitting both spellings from the standard one, so the pipeline now strips the hand-written prefix from the copied stylesheets on its way through. Ten declarations across the app, frosted again.</p>
-    </div>
-    <div class="entry">
-      <div class="entry-head"><span class="tag tag-chg">Changed</span><h3>The search is a window in the middle of the screen, not a panel at the top of it</h3></div>
-      <p>Three tries to find the right shape for this. It began as a screen of its own, which replaced the one it was opened from. Then a sheet — but opaque and full-bleed, which is a screen wearing a sheet's name. Then a panel dropped from the top over a dimmed screen, which read as a panel and not as something laid over the reciter's place. What was wanted is a window: it sits in the middle, the screen behind is left exactly as it was rather than dimmed, and the window's own ground is thin enough to read that screen through — not legibly, and not meant to be. Nothing about it blurs what is behind, because blurring would undo the one thing the window is for. What the reciter has to read keeps nearly all of its ground: the search field and the result cards, because a card thin enough to see the screen through is a card that cannot be read either, and the card is what she came for. The window grows with its results to three-quarters of the screen and then scrolls inside itself, so there is always a border of the reciter's own place around it; tapping that border closes the search.</p>
-    </div>
-    <div class="entry">
-      <div class="entry-head"><span class="tag tag-fix">Fixed</span><h3>The microphone that stayed on after the reciter walked away</h3></div>
-      <p>Tap the search microphone, think better of it, move to another tab — and the green dot stayed lit with the app on a different screen. Opening a microphone is not instant: the plugin is asked whether it is available, then for permission, then which languages the phone holds, and each of those is a round trip. A reciter who changes their mind is gone long before the last of them answers, and the code that tears the session down ran to completion while those questions were still in the air — after which the answers arrived and the session went on to open the microphone anyway, with nothing left alive to close it. Every step now looks to see whether it is still wanted before taking the next, and a session abandoned on the way out says stop to the plugin rather than start. Driven against a stand-in for the plugin: tapping and leaving sixty milliseconds later used to open the microphone three hundred milliseconds after that and leave it open; it now never opens at all.</p>
-      <div class="entry-head"><span class="tag tag-chg">Changed</span><h3>The search sheet was a new screen wearing a sheet's name</h3></div>
-      <p>Yesterday's sheet was opaque and full-bleed, which looks exactly like the screen it replaced — the only clue it was not one was the bottom nav. The panel now takes the height it needs and no more, dropping from the top with the search bar and whatever results there are, and the screen it was opened from stays where it was, dimmed, beneath it; a long list of results is capped so a strip of that screen always shows. Tapping the dimmed part closes the search, as tapping outside a sheet does everywhere else in the app.</p>
-      <div class="entry-head"><span class="tag tag-chg">Changed</span><h3>Dictating over a query that is already there</h3></div>
-      <p>Tapping the microphone with something already typed left it sitting in the box while the new words arrived, and nothing said which of them the results belonged to. The box is now emptied the moment the microphone opens, so what comes back is only what was said. A dictation that hears nothing — a refused microphone, a room too quiet — gives back what was typed rather than charging the reciter for trying.</p>
-    </div>
-    <div class="entry">
-      <div class="entry-head"><span class="tag tag-fix">Fixed</span><h3>A stotra you cannot name exactly is a stotra you cannot find</h3></div>
-      <p>Searching for "vishnu sahasranamam" returned nothing at all. The catalogue calls it Viṣṇu Sahasranāma Stotram, and the search asked only one question of every hymn: does the folded query appear, whole and unbroken, inside its names? The run breaks at that last m, and the stotra may as well not have been there. It was a fair question to ask of someone who already knew the title. The query is now read as words instead of as a run: every word must be answered somewhere in the hymn's names — its title in three scripts, its deity, its form, its author — but a word may be answered by one that begins the same way (sahasra for sahasranāma), by one it sits inside (nama), or by one it is a letter or two away from (sahasranamam). What comes back is ordered by how well it answered, so an exact title still arrives first and the near ones follow it rather than nothing following at all. Three spellings that used to find nothing — vishnu sahasranamam, lalitha sahasranamam, ganesh pancharatnam, subramanya bhujangam — now find their stotra, and nothing that used to be found stopped being found. The ordering gained more than the matching did: "ram" used to answer with fifty-three hymns, because ram sits inside Stotram, and now answers with the seven that are Rāma's.</p>
-      <div class="entry-head"><span class="tag tag-fix">Fixed</span><h3>The microphone on the home bar asked to be tapped twice</h3></div>
-      <p>Tapping it opened the search and waited, with its own microphone to tap again. The intent had been written on both sides all along — the home bar navigates with a voice flag, and the search hands that flag to its microphone as the instruction to start listening on arrival — but the router in between builds each route from a fixed list of fields, and the voice flag was not one of them. It was dropped in the crossing, every time, so the button had never once started by itself. The flag now survives the trip. One thing that follows from it: arriving by voice no longer gives the text box focus, because raising the keyboard over a screen the reciter is talking to helps nobody. Tapping the bar itself still opens the search to be typed in, focused, as before.</p>
-      <div class="entry-head"><span class="tag tag-chg">Changed</span><h3>The search opens over the screen, not instead of it</h3></div>
-      <p>It used to be a screen of its own: opening it from Home replaced Home, and closing it rebuilt Home from the top. It is now a sheet laid over whatever called it — the library stays behind the library's search, Home behind Home's, the tab of the screen underneath stays lit, and the bar it was opened from is still where it was when the sheet closes. The sheet is opaque rather than translucent, because a list of results read over a page of text is a list nobody can read.</p>
-    </div>
-    <div class="entry">
-      <div class="entry-head"><span class="tag tag-fix">Fixed</span><h3>The white screen the voice fix shipped with</h3></div>
-      <p>The build that carried the fix above would not start: it installed, opened on white, and stayed there. The cause was one import. The shim that wraps the phone's recogniser is the first thing the app loads, on purpose, so that the browser's speech object is replaced before anything can read it — which means every module the shim imports is initialised ahead of the ported app's own, in an order the port was never generated in. Giving it a line to the journal pulled the journal in, and behind it the relay, the build block and everything under them; one of those reads the build block's support address as it loads, found it half-built, and threw before the first screen was drawn. The shim now reaches the journal through the window, where the journal leaves it on starting, and imports nothing from the app at all — which is the rule that file was already keeping and that nothing had written down. The note at its head says so now. The lesson is cheaper than the bug: the built bundle is loaded and its console read before a build goes out, which takes seconds and would have caught this one.</p>
-    </div>
-    <div class="entry">
-      <div class="entry-head"><span class="tag tag-fix">Fixed</span><h3>The light stood still while the reciter went on</h3></div>
-      <p>Two real sessions said the same thing. Through a hundred and thirteen seconds of the Viṣṇu Sahasranāma the light moved ten times; through nine minutes of the Āditya Hṛdayam, eight. Replaying both logs against the engine on a desk reproduced them to the line and showed that the matcher was not wrong — every place it chose was the right one — it was simply not allowed to choose. The window it searched reached four lines past the light, and each line skipped inside that window cost a fixed penalty, so a reciter whose ears are caught one word in five falls out of range within half a verse and stays there. The Viṣṇu log has the ears naming <em>puṣkarākṣo</em> and <em>vanamālī</em> correctly at forty-nine and fifty-one seconds, twelve lines past a light that had not moved since the twenty-third. So the window is no longer a constant. It opens with the wait and the cost of skipping falls with it, until after half a minute of silence the light can catch up with most of a page; a light that is keeping pace resets the wait on every move and never sees any of this. The same three sessions now track fourteen, nineteen and forty-eight moves, all forward, every new stop landing on the line the ears had actually named — and the session that was already tracking well is unchanged, which is the test that matters.</p>
-    </div>
-    <div class="entry">
-      <div class="entry-head"><span class="tag tag-fix">Fixed</span><h3>A recording of twenty verses claimed to know all hundred and seventy</h3></div>
-      <p>Listen plays a kept recitation and walks the light down the text beside it, from a table of where the light went while it was being recorded. That table has always had one entry per line, because that is what the reader checks it against — and the lines the ears never caught were filled in by sharing out the gap between the ones they did. The filling-in is fair over a verse or two. It is a fiction over a hundred and fifty: a recitation begun at verse eighty still produced a full table, so playing it back swept the light through the first seventy-nine verses before the first word was out. The journal of the eleventh has a reciter tapping the same line seven times in seventeen seconds during playback, which is what that looks like from the other side. A cue table is now offered only when the light really walked the hymn from its head to its end and stopped often enough on the way to have measured something; a recitation that does not is still kept, still played and still shared from the shelf, and simply makes no claim about where in the text the voice is. Tables already on the shelf are judged by the count they saved. Within a table, the gaps are now shared out by how long each line takes to say rather than equally, since a half-line takes half the time of a full one and an even share ran ahead of the short lines and behind the long ones the whole way down.</p>
-    </div>
-    </div>    <h2 class="release-title">Off the seventy-seven script tags, into a real build — and onto a phone</h2>
-    <div class="entry">
-      <div class="entry-head"><span class="tag tag-add">Added</span><h3>The Vite + TypeScript port (<code>stuti-app/</code>)</h3></div>
-      <p>Every plain <code>.js</code> and <code>.jsx</code> file became an ES module, in the exact load order <code>Stuti.html</code> always used, with <code>window.X</code> globals replaced by real imports — the phase the handoff called the port's foundation. Written as a small pipeline of scripts rather than by hand, because the alternative was retyping 1.7 MB of Sanskrit, Telugu and Hindi text and trusting nothing got mistranscribed along the way; the scripts live in <code>tools/codemod/</code> and rerun cleanly if the prototype's source ever moves again. <code>stuti-boot.js</code> and the CDN copies of React and Babel it fetched at runtime are gone — Vite compiles JSX at build time now, which is one less thing that can fail without wifi in the pūjā room.</p>
-    </div>
-    <div class="entry">
-      <div class="entry-head"><span class="tag tag-fix">Fixed</span><h3>Three bugs the port surfaced that predate it</h3></div>
-      <p>The shared-script-scope the prototype relied on hid a few things a real module graph can't: <code>PracticeView</code> read a <code>lens</code> variable that was never in its scope, which would throw the moment anyone opened a practice's detail screen — dead code until now, not dead by design. <code>FlowText</code>'s memoised wrapper was being discarded in favour of the unmemoised function on export, quietly costing the re-renders the memo existed to avoid. And <code>stuti-remind.jsx</code>'s public <code>fmtNudgeTime</code> name pointed at nothing, its local function having been exported under a rename the old global scope papered over. All three are what they were designed to be again.</p>
-    </div>
-    <div class="entry">
-      <div class="entry-head"><span class="tag tag-add">Added</span><h3>Android, via Capacitor — first signed build</h3></div>
-      <p>A dedicated release keystore, a Capacitor shell around the Vite build, and a from-scratch command-line Android toolchain (no Android Studio) — JDK 21, the SDK's own cmdline-tools, nothing else. <code>vite-plugin-pwa</code> replaces the hand-written <code>stuti-sw.js</code> with the same intent: precache the app shell, cache-first for fonts and emblems, so a closed tab and a closed pūjā-room door mean the same thing to the app either way. Onboarding, the home pañcāṅga card, the saṅkalpa sheet, library and reader all checked against a live dev server and render correctly — the parity baseline the handoff asked for.</p>
-      <div class="metrics">
-        <div class="metric"><div class="metric-n">112</div><div class="metric-l">source files ported to modules</div></div>
-        <div class="metric"><div class="metric-n">7</div><div class="metric-l">same-named .js/.jsx pairs disambiguated</div></div>
-        <div class="metric"><div class="metric-n">40 MB</div><div class="metric-l">signed app-release.apk, first build</div></div>
-      </div>
-    </div>
-    <div class="entry">
-      <div class="entry-head"><span class="tag tag-add">Added</span><h3>One repo for both halves — <code>github.com/schavalidev/stuti</code></h3></div>
-      <p>The designer keeps exporting from Claude Design and the port has to keep up, so the two now live side by side on <code>main</code>: <code>design_handoff_stuti/</code> exactly as exported (a future export drops straight in), <code>stuti-app/</code> generated from it. That only works if regenerating is safe, and it wasn't — a rerun of the pipeline had already erased the entry point once and would have taken every later hand-fix with it. So the pipeline now owns the whole result: the entry files come from templates, every after-the-fact fix is a scripted step that fails loud on an unexpected anchor, the load order is read from the prototype's own <code>Stuti.html</code> rather than copied out of it, and a removed source file removes its module. <code>tools/codemod/.ported-at</code> records which design commit <code>src/</code> came from; <code>tools/check-design-updates.sh</code> compares that against the remote and lists what the designer has pushed since. Signing keys and their passwords are ignored by name and were checked to be, before the first commit.</p>
-    </div>
-    <div class="entry">
-      <div class="entry-head"><span class="tag tag-add">Added</span><h3>The web build, live — <code>stuti-app.netlify.app</code></h3></div>
-      <p>The installable half of "both": the same Vite build, served over HTTPS so the service worker and the manifest do their work and Android Chrome offers Add to Home Screen. <code>netlify.toml</code> at the repo root drives it, so a site linked to the GitHub repo redeploys on every push as well. The first deploy built cleanly and then failed looking for <code>Stuti/dist</code>: with the config at the root, <code>publish</code> resolves against the root even when <code>base</code> is set — it has to name <code>stuti-app/dist</code> outright. The service worker is served with <code>no-cache</code> so a deploy can reach devices that already hold the previous one. One more thing the first deploy exposed: the manifest pointed at the 320×96 wordmark declared as a 512-pixel icon, and Android Chrome checks the real dimensions before it offers Add to Home Screen. The icon is now the kalasha — the brand mark the home page already preloads — in the manifest sizes plus a maskable variant inset on cream so the circular crop keeps the leaves, and the same source feeds every Android launcher density and the splash, replacing Capacitor's placeholder.</p>
-    </div>
-    <div class="entry">
-      <div class="entry-head"><span class="tag tag-fix">Fixed</span><h3>Voice search in the Android app did nothing when tapped</h3></div>
-      <p>The mic button relies on the browser's Web Speech API, and Android's WebView is a convincing liar about it: it exposes <code>webkitSpeechRecognition</code> as a constructor, so the button drew, but there is no speech backend behind it, so <code>start()</code> failed on the spot — the error state flashed for a second and cleared, which reads as nothing at all. On the web build in Chrome the same code works. Rather than edit the generated <code>stuti-voice.tsx</code>, a hand-authored shim imported first by the entry point installs an adapter with the same shape — <code>lang</code>, interim results, the three callbacks, <code>start</code>, <code>abort</code> — over the platform's own recognizer through <code>@capacitor-community/speech-recognition</code>, and the microphone permission joins the manifest. In a browser the shim is inert. The first cut of that adapter had a second bug of its own, found on the phone: the recognizer audibly started and nothing reached the field. With partial results on, the plugin resolves <code>start()</code> immediately and delivers every result — the final one included — through its <code>partialResults</code> listener, ending with a <code>listeningState: stopped</code> event; the adapter had taken the resolved <code>start()</code> as "finished" and removed its listeners before a word arrived. It now waits for <code>stopped</code>.</p>
-    </div>
-    <div class="entry">
-      <div class="entry-head"><span class="tag tag-fix">Fixed</span><h3>Top bars under the status bar; an invisible listening pulse</h3></div>
-      <p>Two things a prototype built for a browser tab could not know. <code>index.html</code> asks for <code>viewport-fit=cover</code>, and Capacitor 8 on a current Android WebView takes that at its word: it pads nothing and publishes the system-bar insets as <code>--safe-area-inset-*</code> for the page to apply. The design applies only the bottom one, for the tab bar, so every top bar sat under the clock — one padding rule on the app shell, in a hand-authored sheet loaded after the design's, fixes all screens. And the mic's pulse ring never showed, on the web either: its colours are <code>--accent-soft</code> and <code>--accent-ink</code>, which the pigment sheet defines only inside deity- and lens-tinted containers, and the search bar sits outside all of them, so the ring drew in an invalid colour. Root-level fallbacks in gold; a tinted ancestor still wins by inheritance, so tinted screens are unchanged. Worth folding into the design's own <code>stuti-pigment.css</code> next time it's touched.</p>
-    </div>
-    <div class="entry">
-      <div class="entry-head"><span class="tag tag-fix">Fixed</span><h3>Recording your own recitation (Learn) refused the microphone in the Android app</h3></div>
-      <p>The recorder uses the browser's <code>getUserMedia</code>, and in the Android app that request goes through Capacitor's WebView, which asks the system for two permissions on the page's behalf — <code>RECORD_AUDIO</code> and <code>MODIFY_AUDIO_SETTINGS</code> — and grants the page only if it holds both. The manifest declared the first; the second is an ordinary install-time permission, but undeclared it reads as refused, so the page was denied and the Learn strip fell into its "microphone unavailable" state. Voice search never noticed because it talks to the platform recognizer directly, not through the WebView's media path. One manifest line.</p>
-    </div>
-    <div class="entry">
-      <div class="entry-head"><span class="tag tag-add">Added</span><h3>Follow — the reader listens, and the light keeps pace with your chanting</h3></div>
-      <p>A mic in the reader's tools panel. While it is on, the app listens continuously and moves the word-by-word light to wherever you are in the text, teleprompter-fashion. The recogniser is the phone's own, hearing Sanskrit through Hindi or Telugu ears (whichever the reading script is), so nothing it returns is trusted as spelling: both what is heard and every word of the text are folded to a consonant skeleton with the confusable pairs merged — aspirates, ś/ṣ/s, retroflex and dental, v and b — so that <code>namaḥ</code>, <code>नमः</code>, <code>నమః</code> and a misheard <code>namah</code> are one key. The last few heard words are matched against runs of the text measured in letters rather than words, because the recogniser and the text segment a compound differently. Nearby positions are tried first with a modest bar; when nothing clears it for a few beats the light freezes and says so, and from then on the whole text is searched with a higher bar and a longer run, so a mistake, a conversation, a repeated verse or a skipped one all re-sync, forwards or back, once you are audibly chanting the text again. Reaching the last word marks the recitation in the ledger as a finished reading does. The engine is pure logic, testable without a microphone; the reader gains only a hook, a button and a status chip through the port pipeline, and the design file is untouched. Honest expectations: clear, unhurried chanting of the text as written tracks well; fast chanting lags, and long compounds are the weak spot. A refused microphone is said out loud in the chip for a few seconds rather than swallowed — the first cut hid it, which is the same silence the voice-search button once suffered from.</p>
-    </div>
-    <div class="entry">
-      <div class="entry-head"><span class="tag tag-chg">Changed</span><h3>Follow's mic sits by the title; a panel move, tried and reverted</h3></div>
-      <p>The Follow mic left the tools panel for the title row, beside the favourite mark, where the reciter's eye already is when they open a text. A phone-width rule that moved the tools panels to the bottom of the screen for thumb reach shipped in the same build and was reverted the next day at the founder's request — the panels sit where the design puts them. Reachability of that top-edge panel on tall phones remains a design question for the prototype, not something the app overrides.</p>
-    </div>
-    <div class="entry">
-      <div class="entry-head"><span class="tag tag-chg">Changed</span><h3>Follow gets proper ears on Android: a streaming recogniser that never closes the mic</h3></div>
-      <p>The first Follow used the phone's system recogniser, which is built for dictating a sentence: it ends its session at every pause, and reopening it costs a chime, a quarter-second in which the first syllables of the next phrase go unheard, and the loss of everything it had learned about the phrase before. Chanting is nothing but pauses, so the mic seemed to flicker on and off and the light fell behind — the founder's exact report. The good voice-driven teleprompters solve this with a streaming, on-device recogniser, and so does this build: Vosk, in a small native plugin of the app's own, fed continuously and reporting words as they arrive, with the alignment engine unchanged behind it. Its language model is the one cost, and it is opt-in by construction — nothing downloads until someone taps Follow and agrees to a prompt that names the size (45 MB Hindi, 61 MB Telugu; Roman-script readers get Hindi, since the sounds are the same and an English model has no Sanskrit in it) and suggests Wi-Fi; "Not now" leaves the phone exactly as it was, and once fetched the model lives in the app's private storage and works offline. Voice search keeps the system recogniser, which is right for a short query. The web build keeps the browser's own recogniser, restarted after each pause as before. The engine's native library first arrived for seven processor families, MIPS included, and doubled the APK; phones use two, so only those ship — 60 MB rather than 80.</p>
-    </div>
-    <div class="entry">
-      <div class="entry-head"><span class="tag tag-chg">Changed</span><h3>Follow shows what it hears; the timed transport steps aside while it listens</h3></div>
-      <p>Two things the second Follow build taught. The chip now carries a second line with the last words the recogniser reported, as every voice teleprompter does — the reciter sees they are heard, and when the line stays empty that says the ears are silent rather than the matcher lost, which is the diagnosis the founder's phone could not otherwise give (this Mac has never been able to read it). And while Follow is on, the reciter bar at the bottom — play, speed, loop, the transport of the timed recitation — is hidden: it moves the same light by a clock, and two hands on one light is exactly the confusion that was reported. Checked on this side with the Hindi model over synthesised Sanskrit: free decoding gives a usable near-miss transcript, while constraining the model to the stotra's own vocabulary drops most Sanskrit words as unknown, so free decoding stays.</p>
-    </div>
-    <div class="entry">
-      <div class="entry-head"><span class="tag tag-fix">Fixed</span><h3>Follow heard you all along; it was the matcher that gave up</h3></div>
-      <p>An Android emulator finally gave this Mac the phone's logs, and they cleared the ears: the streaming recogniser was up, the words were crossing into the page, the chip was showing them. The light stayed put because of how misses were counted. The recogniser reports a partial every fifth of a second, most of them re-spellings of the word still being said, and every one that failed to fit counted as a miss, so three noisy partials, well under a second, tipped the engine into "lost", where the bar for a re-find was set for a text-book transcript and Hindi ears hearing Sanskrit never clear it. A miss now counts only when a fresh word has arrived and still fits nowhere, and it takes five of them. Matching itself is looser in the right way: every suffix of the last few heard words is tried, so a junk word the recogniser drops between two real ones no longer poisons the run, and the bar scales with how much was heard. Hysteresis keeps it from twitching: a single word can carry the light on within the current line or the next, but a longer jump forward, or any step back, needs a run of words, and on a near-tie the position just ahead wins. Replayed against the Aṣṭakam it walks verse to verse and lands the refrain each time; against the Vakratuṇḍa verse it moves word by word to the end.</p>
-    </div>
-    <div class="entry">
-      <div class="entry-head"><span class="tag tag-chg">Changed</span><h3>Follow listens for the stotra's own words; a long press on the mic shares the session</h3></div>
-      <p>Left to itself, a Hindi recogniser hears a stotra as the nearest Hindi it knows, and nearest by its language model, which prefers common words to similar-sounding ones: "bheda-bhinnaṁ" came back as बेडमिंटन. Voice teleprompters solve this by biasing the recogniser toward the script, and Vosk allows exactly that, a grammar of the words it may output. So before Follow starts, the app reads the model's word list once (a hundred and eighty thousand words, read straight out of the graph file), and for every word of the text picks the vocabulary words that sound most like it, breaking long compounds into the pieces the recogniser could say them in. The result is a few hundred words, the stotra's own sounds, and the recogniser's choices are already close to the text before the matcher sees them. On the same synthesised recitation the light now touches every line of the first two verses instead of skipping half of them. The audio loop is the app's own now, in tenth-of-a-second chunks for a quicker partial, and it keeps a copy of the session's sound in the cache: a long press on the mic offers the audio and a log of what was heard and where the light went to any app that takes files, so a real chant from the founder's phone can be replayed on a desk and the matcher tuned against it rather than against a synthesiser. The web build cannot be biased this way; the browser's recogniser takes no grammar.</p>
-    </div>
-    <div class="entry">
-      <div class="entry-head"><span class="tag tag-chg">Changed</span><h3>The light leads by a word, and never twitches back</h3></div>
-      <p>Tested on the web, Follow lit each word only after it had been fully said, and now and then hopped a word back and forward again. Both are the recogniser's nature showing through: it can only name a word once it has heard the whole of it, and it revises a phrase as it goes, so "sadā gaṇeśaṁ na…" becomes "sadā gaṇeśaṁ" a beat later. A teleprompter's job is to show what comes next, so the light now sits one word past the last word heard, on the word about to be said, which also swallows most of the browser recogniser's own delay. And a small step back is ignored outright: the light moves forward, or, after being lost, to wherever the reciter turns out to be, but never back a word or two because a partial was re-spelled.</p>
-    </div>
-    <div class="entry">
-      <div class="entry-head"><span class="tag tag-fix">Fixed</span><h3>Telugu ears went almost silent under the grammar</h3></div>
-      <p>Reading in Telugu on the phone, Follow caught the first word and then nothing. Two causes, both from the Hindi-shaped thinking of the previous build. The grammar that helps Hindi ears so much was also handed to the Telugu ones, and Telugu does not need it: Telugu is full of Sanskrit and the Telugu model already knows most of a stotra's words outright (on a synthesised Vakratuṇḍa it returns "kuru me deva sarva kāryeṣu sarvadā śuklāmbaradharaṁ viṣṇuṁ" word for word), so a grammar only took its language model away and made it name what it could not place "[unk]". Telugu decoding is free again, Hindi keeps its grammar, and "[unk]" is treated as silence rather than a word. Then the matcher: Telugu ears on a compound-heavy verse catch one word in three, and a lone word was not allowed to carry the light more than a line ahead, nor to re-find it once lost. Now a long, unmistakable word may, the near window reaches four lines ahead, and when the only rivals for a place are identical (the refrain every verse ends on) the nearest one ahead of the light wins instead of the tie refusing the move. The fold also learned the short e and o that Telugu has and Devanāgarī does not.</p>
-    </div>
-    <div class="entry">
-      <div class="entry-head"><span class="tag tag-add">Added</span><h3>The chip shows the microphone's level and the recogniser's raw words</h3></div>
-      <p>Telugu on the phone heard nothing at all in the previous build, and the chip could not say which link was silent: the microphone, the model, or the matcher. Now it can. On Android a small bar beside the heard line rises and falls with the microphone, so a dead mic looks different from a recogniser that hears sound and makes nothing of it; and the heard line shows the recogniser's words as they came, "[unk]" included, so a model that is placing every sound as unknown says so on screen. The matcher still treats "[unk]" as silence. Both also go into the session log a long press on the mic shares.</p>
-    </div>
-    <div class="entry">
-      <div class="entry-head"><span class="tag tag-fix">Fixed</span><h3>Telugu readers get the Hindi ears: the first Follow tuned on a real chant</h3></div>
-      <p>The founder shared a session from the phone: fifty-five seconds of the Liṅgāṣṭakam in Telugu script, the microphone healthy throughout. On that recording the Telugu model returns one word. The Hindi model returns seventy-odd results, and with the grammar built for the Liṅgāṣṭakam it transcribes the first verse almost whole — "surā racita liṅgam, nirmala bhāsita śobhita liṅgam, janma vināśaka liṅgam, namāmi sadāśiva liṅgam" — and the engine walks it line by line into the second verse with the light leading. So every script now uses the Hindi ears with the grammar; the matching was always script-blind, and now the ears are too. The Telugu model, which did so well on a synthesiser, does not know chanting, and no amount of matcher tuning would have changed that. Two smaller things the shared session exposed: the audio file's header was only written when a session ended, so one shared while still listening did not open, and now the header is kept current while recording and a share closes the session first.</p>
-    </div>
-    <div class="entry">
-      <div class="entry-head"><span class="tag tag-fix">Fixed</span><h3>The model prompt came back in a loop</h3></div>
-      <p>In Telugu script the download prompt returned as soon as the download finished. The previous build changed which model the download fetches (Hindi, for every script) but not which model the recogniser asks to start with, which still followed the script, so it looked for the Telugu model, found none, and asked again. Both now make the same choice from the same place.</p>
-    </div>
-    <div class="entry">
-      <div class="entry-head"><span class="tag tag-fix">Fixed</span><h3>Compound lines stalled the light; going back to the first line was refused</h3></div>
-      <p>A second session from the phone, three minutes of the Liṅgāṣṭakam with two deliberate restarts from the top, showed both. The stall was a bug older than every tuning before it: the text run compared against the heard tail was never trimmed to the heard length, so "liṅgam" was measured against the whole of "nirmalabhāsitaśobhitaliṅgam" and could only ever match a short word. Every compound-heavy line waited for the recogniser to produce something else. A second, smaller cause: the text writes the line ends with anusvāra, "liṅgaṁ", and the ears say "liṅgam", and the fold kept those apart; anusvāra is now the nasal of what follows inside a word and m at its end, as it is said. The restart failed because the matcher only ever compared against the ends of words, so the first sounds of a line could not match a line's start. Every line's head is now compared as well, and one short exact word may send the light back to the first line (the restart every reciter makes), while any other jump needs a longer run and a clear winner; far from the light an identical fit does count as a rival, so the refrain cannot teleport it. Replayed, the light walks the recording line by line and returns to the top at both restarts.</p>
-    </div>
-    <div class="entry">
-      <div class="entry-head"><span class="tag tag-fix">Fixed</span><h3>Stotras whose stanzas end on the same lines; audio dropped while the ears were busy</h3></div>
-      <p>The founder tried the Candraśekharāṣṭakam, where every stanza ends on the same line, and the light hopped a stanza ahead at each refrain. The session log showed why: the recogniser sends a partial and then a final that repeats it, and the engine took the repeat as new evidence, found the light already past this stanza's refrain, and moved it to the next identical one. The same words that moved the light a moment ago are no longer evidence at all. And a fit that skips lines must now be clearly better than one that does not: the refrain fits the next stanza's as well as this one's, give or take the words before it, and that give-or-take used to decide. While lost, forward still beats back. Two more things from the same session. Words inside a long compound ("rajatādri" in the middle of a line) could never move the light, because only the ends and heads of words were compared; the middle of a word is now searched too, a little more strictly. And the phone's recording was half a minute shorter than the session, which means the recogniser fell behind on a hard stretch and the microphone's small buffer dropped what it could not hold. The microphone is now read on its own thread into a queue with a five-second buffer behind it, and the recogniser takes from the queue: it may lag for a moment, but nothing is lost, and the log notes how far behind it got.</p>
-    </div>
-    <div class="entry">
-      <div class="entry-head"><span class="tag tag-chg">Changed</span><h3>The ears drop a final nasal; the light listens for the start of a word</h3></div>
-      <p>A fifth session, the Candraśekharāṣṭakam again, showed the body of a stanza going unlit even where the recogniser had clearly caught a word of it. Two reasons. The recogniser hears "śobhita" for śobhitaṁ and "liṅga" for liṅgaṁ as often as not, and the text's final nasal made the two miss; when what was heard has no final nasal, the text's is left off before comparing. And the first sounds of a compound are the ones the ears catch most reliably ("bhavanā" for bhavanāśanaṁ), yet only the ends of words, and the heads of lines, were compared; the head of any word ahead of the light is compared now, and the head of the word the light is already on simply holds it there. Alongside, a partial that only re-spells its last word no longer counts as evidence — the light moves on a new word, or on an utterance's final say — which stops a line end from being lit twice as "liṅga" becomes "liṅgam". On every session recorded so far the light now moves forward only, apart from the two deliberate restarts, which it still catches.</p>
-    </div>
-    <div class="entry">
-      <div class="entry-head"><span class="tag tag-fix">Fixed</span><h3>A shared session sometimes had the audio but not the log</h3></div>
-      <p>The audio was kept on disk from the first, but the log of what was heard and where the light went lived in the page, and a reader reopened before the long press had a fresh, empty one. The log is now written to disk line by line as the session runs, and a share offers whatever is there.</p>
-    </div>
-    <div class="entry">
-      <div class="entry-head"><span class="tag tag-fix">Fixed</span><h3>A false restart on two fragments</h3></div>
-      <p>Tested on the Āditya Hṛdayam, the light tracked nine lines closely and then snapped to the top. The log showed "nama" and "savā", the recogniser's two fragments of sanātanam, whose keys together happen to spell the first four letters of the first line, "namassavitre". A restart may still be called by one short exact word, but a run of fragments must be six letters long, and a jump to the top within four seconds of the light moving on is not a restart at all. The engine now keeps the caller's clock rather than its own, so the replays that verify each change judge the timing rule with the session's real timestamps.</p>
-    </div>
-    <div class="entry">
-      <div class="entry-head"><span class="tag tag-add">Added</span><h3>Record a recitation while the light follows, keep it, hear it back as Listen</h3></div>
-      <p>The founder asked for what a reciter would expect: read the whole stotra aloud, have the light keep pace, and be able to find the recording afterwards. Follow already had the ears and, on Android, already kept the session's audio for diagnosis, so recording is Follow with one more button. Tap the mic beside the title, tap Record in the chip, and chant: the chip turns red, counts the seconds, shows the microphone's level, and the light walks the text as it does in Follow. Stop, and the chip asks whether to keep it, naming its length, how many lines the ears caught, and where it will live: on this phone only, under this stotra, nothing uploaded. Kept, it appears as a ● with a count beside the title, which opens the shelf: each recitation with its date, length, lines and size, playable, shareable to any app, deletable after a second tap. The moments the light entered each line become the recording's cue table, so the kept recitation registers itself as the hymn's recording and the designer's Listen mode, which had been waiting for studio audio, appears in the learn bar and plays the reciter's own voice with the right line lit. Lines the ears missed are placed between their neighbours. On the web the same flow records through the browser and keeps the file in the browser's own storage. On Android the files live in the app's private storage as plain WAV with a small sidecar naming the hymn and the cues.</p>
-    </div>
-    <div class="entry">
-      <div class="entry-head"><span class="tag tag-fix">Fixed</span><h3>Record and compare filed every take under the wrong line and lost it</h3></div>
-      <p>An audit of the designer's per-line recorder, run as four readers and four bug hunters over the code, found why it seemed not to work: when a turn ended by the clock, the reader moved to the next line before the recorder had closed, so the take was banked under the line that came next and then erased when that line's own turn began. In the hands-free flow nothing survived. A seam script now repairs the generated code without editing it by hand: a take is stamped with its line when the microphone opens and banked under that line whatever happens meanwhile, a turn that ends while the microphone is still opening is cancelled cleanly, the discard flag reaches the recorder, each turn of Repeat ×N is its own take, a pause returns to the top of the line so resuming does not re-record the take on screen, the playback bar measures against the take's own length because the browser's recording format reports none, and a closed take is shown only on its own line. On screen, the Record toggle says its name and turns red with a pulse while armed, the your-turn cue with its "I said it" stays visible while recording instead of being replaced, a refused microphone no longer disables the toggle for the sitting, and its note now tells an Android reciter where to allow it. The fifteen-second cap became a sixty-second safety stop, since a slow line at half speed ran past it.</p>
-    </div>
-    <div class="entry">
-      <div class="entry-head"><span class="tag tag-chg">Changed</span><h3>One Record, not two</h3></div>
-      <p>Tested on the phone, the founder went Learn → Repeat → Record, the designer's per-line drill, and found the light driven by a timer, a transport bar that belonged to that timer, and no file at the end. The voice-tracked recording lived behind the mic beside the title, a second recorder on the same screen. There is one now. A Record chip sits in the reader's main row beside Learn, and the Record toggle inside the learn bar starts the same thing: Follow with the file kept, the light on the reciter's voice, the transport stood down. Per-line compare stays reachable only as the take strip after a turn. The note after keeping no longer fades; it stays until dismissed and opens the shelf with one tap, so where the recording went is never a question.</p>
-    </div>
-    <div class="entry">
-      <div class="entry-head"><span class="tag tag-fix">Fixed</span><h3>The Record chip was clipped in Telugu</h3></div>
-      <p>In the reader's chip row the new Record chip sat last and, in Telugu where the labels run wide, was squeezed and cut off with no way to reach it. Chips in that row no longer shrink, and the row scrolls to it.</p>
-    </div>
-    <div class="entry">
-      <div class="entry-head"><span class="tag tag-chg">Changed</span><h3>The APK loses two thirds of its weight</h3></div>
-      <p>Seventy-odd megabytes, and three things made most of it. The eight ink emblems were the designer's twelve-hundred-pixel exports, two and a half megabytes each, shown as tiles a quarter that size; a script now keeps a 720-pixel, palette-reduced copy in the app, and the emblems folder went from twenty-nine megabytes to six. The Vosk recogniser was packed for two processor families; every phone since 2017 is 64-bit, so the 32-bit copy is gone. And two source images of mine that nothing referenced were still shipping. Twenty-six megabytes now, same key, same everything.</p>
-    </div>
-    <div class="entry">
-      <div class="entry-head"><span class="tag tag-chg">Next</span><h3>What this build still doesn't do</h3></div>
-      <p>Sign-in, sync, dāna and reminders behave exactly as the prototype's own tracker already describes them — local-only, honestly so. Real accounts and cross-device sync are the next milestone, once a Supabase project exists to point them at, and they go in new modules that wrap the generated stores, never in the generated files themselves. The collaborative setup's last piece landed after this build: a scheduled task runs <code>check-design-updates.sh</code> every morning at nine and reports what the designer has pushed since the last port — reporting only, never re-porting on its own, so a design change still becomes a build only when someone asks for one.</p>
+      <div class="entry-head"><span class="tag tag-chg">Changed</span><h3>The vidhi README says where the Taittirīya tarpaṇa lives</h3></div>
+      <p>This session began by looking for a file that was already written under another name, which is a cost worth spending once and not twice. The folder's README now states, before anything else about the rite, that the daily tarpaṇa is units 42 to 49 of the brahmayajña file, that the sandhyā's short one is unit 23 of the sandhyāvandana file, and that only the new moon rite needed a file of its own.</p>
     </div>
   </div>
 </section>
+
+<section class="release">
+  <div class="rail">
+    <div class="ver">0.9.102</div>
+    <div class="date">13 September 2026</div>
+    <div class="rail-note">A list that leaves out what every pūjā begins with is not a list.</div>
+  </div>
+  <div class="release-body">
+    <h2 class="release-title">Vināyaka Cavitī gets its vidhānam</h2>
+    <div class="entry">
+      <div class="entry-head"><span class="tag tag-chg">Changed</span><h3>The handoff folder is retired; the root is the one copy</h3></div>
+      <p>The repo package was a second copy of the app inside the same project, and it had fallen a fortnight behind — the compass, the eclipse engine, the pitṛ register and a dozen more files existed at the root and nowhere in it. A copy that must be remembered will be forgotten. The folder is gone. <code>REPO-LAYOUT.md</code> now says which root file lands in <code>app/</code>, <code>docs/</code>, <code>design/</code> or <code>legacy-akshara/</code>, and the README that opened the package sits at the root as <code>HANDOFF.md</code>. The stotra corpus and the reference notes go into the same repo straight from the user's disk.</p>
+    </div>
+    <div class="entry">
+      <div class="entry-head"><span class="tag tag-chg">Changed</span><h3>The tarpaṇa vidhi asks which tarpaṇam it is</h3></div>
+      <p>The scroll printed all six saṅkalpas one after another — nitya, darśa, grahaṇa, saṅkramaṇa, mahālaya, puṣkara — because the sheet it was keyed from has no way to ask. A reciter standing with water in his hand had to read five that did not apply to find the one that did. The reader now asks on opening, offers the one the day calls for, and shows that saṅkalpa alone. The choice stands in a bar over the text and can be changed there, and it is kept only for the day it was made.</p>
+    </div>
+    <div class="entry">
+      <div class="entry-head"><span class="tag tag-add">Added</span><h3>The rivers have a plate of their own</h3></div>
+      <p>The nadī shelf set its name as type where the other niches carry a painting. Gaṅgā, bearing the lotus and pouring the stream, now stands in the shelf's disc and at the head of its page, in the same round colour treatment.</p>
+    </div>
+    <div class="entry">
+      <div class="entry-head"><span class="tag tag-add">Added</span><h3>The forefathers have a plate of their own</h3></div>
+      <p>The pitṛ niche was the one shelf with no painting, so its tile set its name as type and its two pages opened on an eyebrow. A drawn plate — three elders in white, framed in lotus — now stands in the shelf's disc and at the head of the pitṛ pañcāṅgam and the register, in the same round colour treatment the other niches use.</p>
+    </div>
+    <div class="entry">
+      <div class="entry-head"><span class="tag tag-fix">Fixed</span><h3>A written name opened an empty sheet</h3></div>
+      <p>Every name was being filed without an id, because the draft the editor handed over carried its own empty one. A name could then not be addressed: tapping it opened a blank sheet instead of what the house had written, and the cross beside it had nothing to remove. Names already on file have been given ids.</p>
+    </div>
+    <div class="entry">
+      <div class="entry-head"><span class="tag tag-fix">Fixed</span><h3>A married aunt keeps her husband's gotra</h3></div>
+      <p>పిన్ని, పెద్దమ్మ took the mother's line's gotra, and మేనత్త the house's, as though neither had married. Both slots now ask for the gotra and leave it where the house writes it.</p>
+    </div>
+    <div class="entry">
+      <div class="entry-head"><span class="tag tag-ch">Changed</span><h3>A name can be struck out where it stands, and any keyboard is accepted</h3></div>
+      <p>Removing a name meant opening it and finding the button at the foot of the sheet, so a register once written could not easily be cleared. Every name now carries a cross beside it. And the one name box takes whichever keyboard is to hand: a name typed in Telugu while the app is in Hindi, or the other way round, is written into the script on the screen when you leave the box. Where a relation can only be one person, a second name written earlier is collapsed into the first — three grandfathers standing in one slot is not a register anyone can read from.</p>
+    </div>
+    <div class="entry">
+      <div class="entry-head"><span class="tag tag-ch">Changed</span><h3>One name box in the register, and no second father</h3></div>
+      <p>The register asked for a name twice — once in the script, once in English letters — and a reciter had to work out which box was which. There is one box now. A name typed in English letters is spelt into the script the line reads; a name typed in Telugu or Hindi stands as it was written. A father, a grandfather, a great-grandfather, a mother and her line, a wife and her parents can only be one person, so those slots stop offering another row once the name is written. Sons, daughters, brothers, sisters, uncles, aunts and teachers still take as many as a house needs. The line of the house is now called మా కుటుంబం.</p>
+    </div>
+    <div class="entry">
+      <div class="entry-head"><span class="tag tag-fix">Fixed</span><h3>An audit of the name spelling, forty-five names deep</h3></div>
+      <p>పరమేశ్వర came out పరమేస్వర, and the fault was not one entry. Three kinds of error were behind nearly all of it. An s standing before a v or a w is శ in these names, not స. A name-part joined after a consonant was taking the standing vowel rather than its mātrā, so సుందర and అమ్మ met as సుందర్అమ్మ. And the long vowels that English spelling simply drops — నాథ, పూర్ణ, ఆచార్యులు, నాగమణి — had nothing to restore them. The engine now carries a joined part's vowel as a mātrā, the -అయ్య ending is read from -aiah, and some seventy names were written into the table and checked one by one.</p>
+    </div>
+    <div class="entry">
+      <div class="entry-head"><span class="tag tag-fix">Fixed</span><h3>The words a house types into a name were spelt wrong</h3></div>
+      <p>Chandra came out చన్ద్ర, with the conjunct where the anusvāra belongs, and thithi came out తితీ — on an English keyboard "th" stands for both త and థ, and the table guessed the wrong one. The words a house actually writes are now spelt as they are said: తిథి, జన్మ, ఆబ్దికం, తర్పణం, శ్రాద్ధం, జయంతి, అమావాస్య, పూర్ణిమ, and the kin terms — అమ్మ, నాన్న, తాత, అమ్మమ్మ, పిన్ని, అక్క, అన్న and the rest.</p>
+    </div>
+    <div class="entry">
+      <div class="entry-head"><span class="tag tag-ch">Changed</span><h3>The three languages are named as their readers name them</h3></div>
+      <p>Screens spoke of Roman, IAST and Devanāgarī — the names of scripts, not of languages anyone asks for. Everywhere the reader chooses or is told a language, it is now Telugu, English or Hindi.</p>
+    </div>
+    <div class="entry">
+      <div class="entry-head"><span class="tag tag-fix">Fixed</span><h3>The two name fields in the register did not move together</h3></div>
+      <p>A name in the register is one name in two hands: the Roman spelling a reciter types, and the script form the line reads. Editing the Roman left the script field as it was, so the field above could say one name while the line read another. The script form is now spelt from the Roman as it is typed. A script form the house wrote itself is left alone.</p>
+    </div>
+    <div class="entry">
+      <div class="entry-head"><span class="tag tag-fix">Fixed</span><h3>A house tithi kept only one name, in whatever letters it was typed</h3></div>
+      <p>A name entered as "amma janma thithi" stayed in English letters on the Telugu screen, above a Telugu tithi line. Each tithi now holds a name in all three scripts, from one typing: the name is typed on the English keyboard everyone has, and spelt into Devanāgarī and Telugu as it is typed. Either script form can be corrected by hand, and a corrected one is then left alone.</p>
+    </div>
+    <div class="entry">
+      <div class="entry-head"><span class="tag tag-fix">Fixed</span><h3>The season's wash ended in a straight line across a card</h3></div>
+      <p>The tint that carries the ṛtu behind the pañcāṅga is drawn one screen tall. Scrolled past, its lower edge cut across whatever card happened to be there, so a card read as two colours. The wash now fades out before it ends, and the edge is gone.</p>
+    </div>
+    <div class="entry">
+      <div class="entry-head"><span class="tag tag-chg">Changed</span><h3>The vratam's saṅkalpa is filled from what the app knows</h3></div>
+      <p>Tarpaṇam has read its saṅkalpa from the day and the flyleaf for a while; the vratam printed dashes. Its own clause now stands filled — saṁvatsara, ayana, ṛtu, māsa, pakṣa, tithi, vāra and nakṣatra reckoned for today at the reciter's place, the gotra and nāma from the flyleaf, the deśa settled to the one that applies instead of the printed either-or. The vratam's own long intention and the deity named at its close are untouched; only the blanks were filled. The wife's gotra and name are not asked for, so those two blanks stay as printed.</p>
+    </div>
+    <div class="entry">
+      <div class="entry-head"><span class="tag tag-add">Added</span><h3>Śrī Varasiddhi Vināyaka Vratam, in sixty units</h3></div>
+      <p>The Gaṇeśa Caturthī page carried a విధానం pill that said coming soon. It now opens the whole Smārta order of service in the reader — the opening verses, the ācamana of twenty-four names, the saṅkalpa, the kalaśa with its Taittirīya Āraṇyaka passage, the installation of breath in the clay, the sixteen services, the aṣṭottara in full, the dismissal, the Saṅkaṭanāśana stotra, the kathā of the Syamantaka jewel, and the Telugu maṅgaḷam. Devanāgarī, IAST, Telugu and an English gloss, each unit carrying the instruction that goes with it. The Puruṣasūkta stands where the source stands it, by its opening and closing words only.</p>
+    </div>
+    <div class="entry">
+      <div class="entry-head"><span class="tag tag-chg">Changed</span><h3>The counted offerings are named</h3></div>
+      <p>The patrī list gave the leaves and nothing else. All three counted offerings now stand on the page, each under the name it is offered with — twenty-one leaves, twenty-one flowers, twenty-one pairs of dūrvā.</p>
+    </div>
+    <div class="entry">
+      <div class="entry-head"><span class="tag tag-chg">Changed</span><h3>Pañcāmṛta stands on every vratam's samagri</h3></div>
+      <p>Milk, curd, ghee, honey and sugar are wanted at the abhiṣeka of every vratam in the app, and the shopping list named them nowhere. They now stand on all nine lists, after the turmeric and kumkum, where the mūrti still opens the list.</p>
+    </div>
+    <div class="entry">
+      <div class="entry-head"><span class="tag tag-add">Added</span><h3>Gaṇeśa Caturthī names its patrī</h3></div>
+      <p>The samagri said "the twenty-one leaves" and left the household to remember them. The page now lists all twenty-one by name, Sanskrit and Telugu together — mācīpatra and davanam, sindhuvāra and vāvili — numbered in the order they are offered. Tulasī stands among them, with a line saying it is offered to Gaṇeśa on this day and no other.</p>
+    </div>
+    <div class="entry">
+      <div class="entry-head"><span class="tag tag-chg">Changed</span><h3>What to gather comes before what to do</h3></div>
+      <p>The samagri sat ten screens below the vidhi, though it is the part that is only useful beforehand. The list — and the patrī with it — now stands directly under the day's opening, above the procedure.</p>
+    </div>
+    <div class="entry">
+      <div class="entry-head"><span class="tag tag-chg">Changed</span><h3>Panakam and vaḍapappu are offered at every vratam</h3></div>
+      <p>Jaggery water and soaked moong go before the deity in a south Indian house on every festival and vratam, and only Gaṇeśa Caturthī named them — there as though they belonged to Bhādrapada's heat. They now stand first in the naivedya of all nine vrathams that carry one.</p>
+    </div>
+    <div class="entry">
+      <div class="entry-head"><span class="tag tag-fix">Fixed</span><h3>The pin sits on the gear's line</h3></div>
+      <p>The reader's pin rode six pixels from the top of the frame while the settings gear sat on the masthead's line, so the two controls read as belonging to different bars. The pin now centres where the gear does.</p>
+    </div>
+  </div>
+</section>
+
+<section class="release">
+  <div class="rail">
+    <div class="ver">0.9.101</div>
+    <div class="date">12 September 2026</div>
+    <div class="rail-note">The app knew the gotra and the hour, and printed dashes anyway.</div>
+  </div>
+  <div class="release-body">
+    <h2 class="release-title">The tarpaṇam says your family's names</h2>
+    <div class="entry">
+      <div class="entry-head"><span class="tag tag-chg">Changed</span><h3>The tarpaṇa days are a tab on the month</h3></div>
+      <p>The ninety-six days and the days ahead sat on a page behind a door in the pitṛ tab, one tap past a month that could already mark them. They are a fourth tab under the same month — పంచాంగం, మా తిథులు, పితృ పంచాంగం, తర్పణ దినాలు — and the grid keeps its tarpaṇa marks while it is open. The page itself remains, for anyone arriving from elsewhere.</p>
+    </div>
+    <div class="entry">
+      <div class="entry-head"><span class="tag tag-chg">Changed</span><h3>A niche without a painting keeps the disc</h3></div>
+      <p>A deity with no portrait — the pitṛ devatas among them — set its name as loose type on the tile's glass, so it read as a different kind of tile beside its neighbours. The name now sits on the same white disc the paintings sit in, at the same size, with the same ring and the same tilt.</p>
+    </div>
+    <div class="entry">
+      <div class="entry-head"><span class="tag tag-fix">Fixed</span><h3>Grahaṇa and the ingress reach Coming up</h3></div>
+      <p>Grahaṇa Tarpaṇam was computed, marked on the calendar and carried its own saṅkalpa, but never appeared in the Pitṛ page's list of days ahead: that list was drawn from the named parvas, and an eclipse is not a tithi. The eclipse days are now found ahead — asked only at pūrṇimā and amāvāsyā, where an eclipse can fall — and stand in the list with the parvas. Each says which one it is: khagrāsa sūrya, khaṇḍa candra. The next saṅkrānti pitṛ-kārya stands there too; the other eleven are a monthly rule and would bury the parvas.</p>
+    </div>
+    <div class="entry">
+      <div class="entry-head"><span class="tag tag-chg">Changed</span><h3>Relation 47 is the guru</h3></div>
+      <p>The register called it "Teacher". A guru is not an adhyāpaka, and the English word was doing the wrong work in a list of the dead one offers water to. It reads Guru.</p>
+    </div>
+    <div class="entry">
+      <div class="entry-head"><span class="tag tag-chg">Changed</span><h3>Every date is picked on the house calendar</h3></div>
+      <p>The day of death in the pitṛ register, and a vow's from and to, opened the browser's own date box — a white grid in system blue, which knows nothing of tithis and answers to no colour in the app. They now open the house month: the same cells, the same moon marks, the same gold, and the tithi of the chosen day named under the field.</p>
+    </div>
+    <div class="entry">
+      <div class="entry-head"><span class="tag tag-fix">Fixed</span><h3>The compass belongs to the home greeting</h3></div>
+      <p>The dial was drawn beside the place chip wherever that chip stood, so it turned up on the pañcāṅga and in Settings. It is asked for when the day begins, and now shows only there.</p>
+    </div>
+    <div class="entry">
+      <div class="entry-head"><span class="tag tag-fix">Fixed</span><h3>The sahasranāma's part row sits in the middle, and its search moves up</h3></div>
+      <p>On a sahasranāma the row of parts — pūrva, nāmāvali · nāmalu, uttara — leaned left, because the names-list button at its end took a share of the row. The button now stands in the right corner on its own, and the three parts are centred. The find-my-place search on these pages moves to the top bar, beside the settings pin, so the controls row has room. And a long compound name no longer runs off the right edge of the page; the line breaks inside the column.</p>
+    </div>
+    <div class="entry">
+      <div class="entry-head"><span class="tag tag-chg">Changed</span><h3>The vidhānam, one tap from the title</h3></div>
+      <p>Each vrata, nomu and pārāyaṇa page now carries a "విధానం ›" pill at the right of its title. It opens the rite's full vidhānam in the reader — saṅkalpa and all, as Pitṛ Tarpaṇa Vidhiḥ already reads. A rite names its text by hymn id as <code>vidhiText</code>; until that text is in the library the pill stands marked as coming and does not answer a press. The pārāyaṇa page also gains the deity's seal beside its title, as the vrata and nomu pages have. And the Nitya tab opens on recitation every time the app is refreshed; the lens chosen is kept only for the session.</p>
+    </div>
+    <div class="entry">
+      <div class="entry-head"><span class="tag tag-add">Added</span><h3>The ending the name takes, on the flyleaf</h3></div>
+      <p>The saṅkalpa closed on "…nāmadheyasya aham" for everyone, because the flyleaf never asked what a printed sheet asks: śarmā, varmā, gupta or dāsa. The flyleaf now offers the four, and none, wherever it is filled — first run, the saṅkalpa sheet, Settings — and the clause reads "bhāradvāja-gotrasya śrīkṛṣṇa-śarmaṇaḥ aham" when one is chosen. The choice is optional; left alone, the sentence stands as before. A woman's clause keeps nāmadheyāyāḥ.</p>
+    </div>
+    <div class="entry">
+      <div class="entry-head"><span class="tag tag-add">Added</span><h3>A compass beside the place</h3></div>
+      <p>A rite faces a direction, and in a new town the reciter does not know where east is. A small dial now sits beside the place name: tap it once and it turns with the phone, north as the long mark, east as the accent dot. On iPhone the first tap asks for the sensor. Where the device gives no heading the dial removes itself rather than stand still and lie.</p>
+    </div>
+    <div class="entry">
+      <div class="entry-head"><span class="tag tag-fix">Fixed</span><h3>A Roman name in a Telugu saṅkalpa</h3></div>
+      <p>A flyleaf holding the reciter's name only in Roman put "Srikrishna" in Roman letters into the middle of the Telugu saṅkalpa, because there was nothing to convert. The name is now spelt into the script from its Roman letters — శ్రీకృష్ణ — with the common name-parts spelt as they are said: Venkata Subrahmanyam reads వేంకట సుబ్రహ్మణ్యం, Venkateswara Rao reads వేంకటేశ్వర రావు, Ramesh reads రమేశ. The same spelling now fills a pitṛ register line whose name was written only in Roman, where the Telugu line used to stand blank. Where a spelling comes out wrong, the name field in the script outranks it.</p>
+    </div>
+    <div class="entry">
+      <div class="entry-head"><span class="tag tag-chg">Changed</span><h3>Bells on the left, and on every rite</h3></div>
+      <p>On the tarpaṇa-days page the śrāddha groups had a bell and the upcoming rites did not, and the bell sat at the right edge beside the badge and the question mark. Every row on the page now carries a bell, and all of them stand at the left, before the name, so the eye finds them in one place. On the house-tithi tab, "ఈ రోజు మనది ఏమీ లేదు" was set at the size of a tithi name; a sentence now reads at the size of the rest of the card.</p>
+    </div>
+    <div class="entry">
+      <div class="entry-head"><span class="tag tag-add">Added</span><h3>The nine graha janma dinams</h3></div>
+      <p>A printed table from a Satyanārāyaṇa vratakalpa gives, for each graha, the gotra ṛṣi, the month and tithi, the weekday, the nakṣatra and the saṁvatsara of its birth. It is now in <code>stuti-graha-janma.js</code> and read in two places. On the Navagraha shelf it stands as a foldable table above the index; choosing one graha's form narrows it to that row. Each row shows the next date its tithi falls on and carries the same bell a vrata does. The nine tithis also join the vrata list as quiet entries: they mark the calendar month and can be kept, but they do not take the home card from the day's own parva. Ravi's day is Māgha śukla saptamī, which the calendar already knows as Ratha Saptamī; both marks stand.</p>
+    </div>
+    <div class="entry">
+      <div class="entry-head"><span class="tag tag-fix">Fixed</span><h3>The register door fell out of the pitṛ tab</h3></div>
+      <p>The two doors were put in one card, and the card was given <code>overflow:hidden</code> for its rounded corners. Inside the calendar's flex column that let the card shrink to its borders, two pixels tall, with both doors inside it and none of them visible. The card no longer shrinks.</p>
+    </div>
+    <div class="entry">
+      <div class="entry-head"><span class="tag tag-chg">Changed</span><h3>The pitṛ tab, in two cards</h3></div>
+      <p>The tab held four cards in four styles: the day, a tinted row for the next tarpaṇam, the register door with its sentence and count, and the calendar door repeating the very date the row above had just given. Now there are two. The day card carries the next tarpaṇam under a hairline, and the two doors sit as rows of one card — the register named plainly with the instruction beneath, the calendar door saying only where it goes.</p>
+    </div>
+    <div class="entry">
+      <div class="entry-head"><span class="tag tag-add">Added</span><h3>A line folds</h3></div>
+      <p>Five lines of the register ran as one long page, and a reciter with only the paternal line to write scrolled past the other four every time. Each line's heading is now a button: tap it and the slots below fold away, leaving the name and its count. The fold is remembered on the device, so the page opens the way it was left.</p>
+    </div>
+    <div class="entry">
+      <div class="entry-head"><span class="tag tag-chg">Changed</span><h3>The register is read at arm's length</h3></div>
+      <p>Each of the thirty-three slots stood as its own small block — a grey relation, a blank line, a grey action — with a dashed rule and a hand's width of air between it and the next, so a phone showed five relations a screen and an elder had to lean in to read them. A slot is now one row: the relation in full ink on the left, "పేరు వ్రాయండి" on the right, a single hairline below. A written name sits under its relation at reading size. The type came up a step everywhere, the line heading heavier, and the page shows twice as much without crowding. The name sheet had the opposite fault: its fields stacked with no room between them, so each label sat on the input above it. Every field now has its own breath, and labels and inputs read at the same size as the page.</p>
+    </div>
+    <div class="entry">
+      <div class="entry-head"><span class="tag tag-chg">Changed</span><h3>A vidhi is no longer a library book</h3></div>
+      <p>The tarpaṇa scroll opened with the saṅkalpa frame as it is printed on paper: śubhe śobhane muhūrte, then a row of dashes for the year, the ayana, the ṛtu, the month, the tithi. The app had computed all of it for this place an hour earlier and put it on the home card. It printed the dashes because the text was a transcription and nothing joined the two. The scroll now opens with the saṅkalpa for today, at the reciter's own place, ending in their own gotra and nāma from the flyleaf. The blanks are filled on the way to the reader, never in the source file, which stays the transcription it was keyed as.</p>
+      <p>The builder moved out of the home card's view-model into <code>stuti-sankalpa.js</code>, because the next vidhis — Vināyaka vratam, nitya pūjā — open the same way, and a second copy of a twelve-clause sentence drifts within a month. Adding one of them needs a line naming which verse carries the saṅkalpa. Nothing else about the text changes.</p>
+    </div>
+    <div class="entry">
+      <div class="entry-head"><span class="tag tag-add">Added</span><h3>The pitṛ register: the names the rite asks for</h3></div>
+      <p>A paddhati sheet prints "asmat pitaraṁ … gotraṁ … śarmaṇaṁ" because print cannot know whose house is holding it. A family fills those two blanks aloud, from memory, every time. They can now be written down once. Thirty-three slots, one for each recipient, in the order the rite names them, grouped by the line each recipient stands in: the father's line, the mother's father's line, this house, the wife's father's line, and the teachers. A name written here stands in the verse where the blank was.</p>
+      <p>Most of the thirty-three will stay empty, and that is the ordinary state of this register — a house writes the near dead first and adds a line when someone asks for it. Nothing is required, nothing turns red, and no recipient is dropped because a slot is blank: where there is no name the printed blank stands, which is what a reciter is used to. Only the departed are named; a living father is not offered tarpaṇam, so there is no place here to record one.</p>
+      <p>The reciter's own gotra is offered for their own paternal line, where it is the definition of the line and not an assumption. Everything else is asked — a mother's natal gotra, a wife's father's, a teacher's — asked once per line, then offered to the rest of that line. The ending the name takes is one household setting, with the three that stand in śarmaṇaṁ's place for the other varṇas, as the sheet's own note gives them.</p>
+    </div>
+    <div class="entry">
+      <div class="entry-head"><span class="tag tag-add">Added</span><h3>The declined form is shown, and can be corrected</h3></div>
+      <p>The text needs the accusative, and the ending turns on varṇa and on gender. The app builds it — Bhāradvāja gotraṁ Rāmaśāstriśarmaṇaṁ — and shows it as the line will read before anything is kept. It will sometimes be wrong about a particular family's name, and a generated form that is wrong about someone's father is worse than a blank, so every entry can carry the form the house actually says aloud. Nothing is generated silently.</p>
+    </div>
+    <div class="entry">
+      <div class="entry-head"><span class="tag tag-add">Added</span><h3>One death date, two uses</h3></div>
+      <p>A register entry can carry the day and, if it is known, the hour of death. The hour matters: a śrāddha is named by the tithi running at the moment of death, not by the tithi at that day's sunrise, which after nightfall is often already the next one. Given the hour, the register creates the ābdikam record itself rather than asking the house to enter the same death a second time in the tithi book — and removing a name removes the date with it, since a date in the calendar for a name nobody can find is worse than no date.</p>
+    </div>
+    <div class="entry">
+      <div class="entry-head"><span class="tag tag-add">Added</span><h3>Where the words came from, said quietly</h3></div>
+      <p>A filled line carries a small note under the verse saying it came from the register, and a tap opens it at that recipient. A line still blank says so, without asking to be filled. The register is reached from the vidhi at the place where the blank stands, which is the only moment a reciter has a reason to open it, and from the pitṛ calendar for anyone who is not in the middle of the rite.</p>
+    </div>
+    <div class="entry">
+      <div class="entry-head"><span class="tag tag-chg">Changed</span><h3>It stays on the device</h3></div>
+      <p>The flyleaf keeps the reciter's own name on the device and out of the push payload, on the grounds that a cue server has no business knowing anyone's gotra. This register is the most private thing the app will ever hold, and keeps the same rule for a stronger reason. Local storage, this device, never synced, never sent. The family that wrote it can read it and print it; it goes nowhere else.</p>
+    </div>
+    <div class="entry">
+      <div class="entry-head"><span class="tag tag-chg">Changed</span><h3>One month, three questions</h3></div>
+      <p>The calendar page ran as one long scroll — the month, the day's pañcāṅga, then the house's own tithis a long way below — while the pitṛ calendar sat on a separate page behind a door. Two of the three lived together and the third lived elsewhere, and the tithis were a list of dates that never appeared on a month.</p>
+      <p>The month now stays at the top of the screen and three tabs sit under it: పంచాంగం, మా తిథులు, పితృ పంచాంగం. What changes is the marks on the days and what is said about the selected day. Switch a tab and the month has not moved and the day is still chosen — you are asking a different question about the same day, which is what a person actually does. Under the grid the tabs read as questions about this month; above it they would have read as three separate places, and three separate places would have meant three month grids to keep alike.</p>
+      <p>The house's own days stay faintly marked under the pañcāṅga, so they are seen before anyone thinks to tap a tab. The pitṛ tab holds the month; the pitṛ page keeps the ritual profile and the ninety-six occasions — the tab answers which day, the page answers for whom.</p>
+    </div>
+    <div class="entry">
+      <div class="entry-head"><span class="tag tag-fix">Fixed</span><h3>The next tarpaṇam, read from the same place as the dots</h3></div>
+      <p>Standing on 12 September, the pitṛ tab said the next tarpaṇam was 10 October while its own grid had a mark on the 17th. The next-rite lookup walks the named parvas; the mahālaya pakṣa is not one of them, and neither is Saṅkrānti Pitṛ-kārya. Adding the pakṣa as a special case closed one gap and left the other — which was the lesson: a list of exceptions is not a fix. The card now reads forward from the same call that marks the days, so the two cannot disagree, and a run of consecutive days is named as the span it is.</p>
+      <p>It is a card rather than a sentence, and tapping it opens that day. The door to the tarpaṇa days sat two hundred pixels below that card naming a different day, because it asked the old question at its own call site — so the scan now lives in the tarpaṇa module as one function and both read it. One answer in the code, not two implementations that happen to agree.</p>
+      <p>And the lens survives a trip to the register. The register is reached from the pitṛ tab, so returning to the pañcāṅga tab dropped the question the reciter was asking on the way out.</p>
+    </div>
+    <div class="entry">
+      <div class="entry-head"><span class="tag tag-fix">Fixed</span><h3>The register and the tarpaṇa days pointed at each other</h3></div>
+      <p>Leaving the register told the screen it returned to that the register was where it had come from — so that screen's own back button came straight back, and there was no way out but the tab bar. Going back no longer sends a return address.</p>
+    </div>
+    <div class="entry">
+      <div class="entry-head"><span class="tag tag-chg">Changed</span><h3>Adding a tithi belongs to the tithi tab</h3></div>
+      <p>"ఈ రోజు తిథి జోడించు" sat on the pañcāṅga day, from before the tabs existed, when that was the only day panel there was. It is on మా తిథులు now, where the day's own tithis are, so the pañcāṅga is back to being what it is.</p>
+    </div>
+    <div class="entry">
+      <div class="entry-head"><span class="tag tag-add">Added</span><h3>A bell beside each śrāddha group</h3></div>
+      <p>The ninety-six occasions were a list to read and nothing more: a house that keeps the twelve amāvāsyas, or the manvādis, had to remember them itself. Each group now carries the same bell the vratas and nomus have, and a watched group reaches the daily digest and the Sādhana list like anything else kept.</p>
+      <p>A group is a set of days rather than one recurring day, so the bell could not reuse the vrata machinery as it stood — the keep record grew a mode that asks the group for its own dates and owes the nearest one ahead. The bell sits outside the expander, because watching a group and reading what is in it are not the same gesture.</p>
+    </div>
+    <div class="entry">
+      <div class="entry-head"><span class="tag tag-fix">Fixed</span><h3>An opened slot is not a name</h3></div>
+      <p>Tapping "పేరు వ్రాయండి" wrote the row to the register before a single letter was typed, so anyone who opened a slot and thought better of it left a blank behind — and the count claimed it: three names written, one of them nobody. The draft now lives in the sheet and reaches the register only when it is kept. Closing by the × or the scrim leaves nothing, and a draft that was never a record offers no "remove" button, because there is nothing to remove.</p>
+    </div>
+    <div class="entry">
+      <div class="entry-head"><span class="tag tag-fix">Fixed</span><h3>One name is ఒక పేరు</h3></div>
+      <p>The count said "ముప్పై మూడులో 1 పేర్లు వ్రాశారు" — the plural for one, and in Hindi a plural verb for one. It now reads ముప్పై మూడులో ఒక పేరు వ్రాశారు. This is the app counting somebody's dead; it can be asked to count in the reader's own grammar.</p>
+    </div>
+    <div class="entry">
+      <div class="entry-head"><span class="tag tag-chg">Changed</span><h3>The register says what to put in it</h3></div>
+      <p>The door read "పితృ సూచి · మీ సూచి · ముప్పై మూడులో 3 పేర్లు వ్రాశారు" — a name, a count, and no instruction. Someone opening the pitṛ tab for the first time had no way to know it wanted the family and relatives they offer tarpaṇam to, each with their gotra. The door now asks for exactly that, and the register's own opening line says it again with the gotra named.</p>
+    </div>
+    <div class="entry">
+      <div class="entry-head"><span class="tag tag-chg">Changed</span><h3>One door to the register, not three</h3></div>
+      <p>The register had grown a door on the pitṛ tab and another on the tarpaṇa-days page below it — the same door twice, a screen apart. The tab keeps it, the page loses it.</p>
+    </div>
+    <div class="entry">
+      <div class="entry-head"><span class="tag tag-chg">Changed</span><h3>The pitṛ day says three things</h3></div>
+      <p>A day under the pitṛ tab used to repeat the tithi and the pakṣa that the pañcāṅga tab had already given, which pushed the register off the bottom of the screen. It now says whether there is a tarpaṇam, names the next one if there is not, and opens the register. Nothing else. The tithi is one tab away and this tab's work is the names.</p>
+      <p>An earlier draft of that panel labelled an ordinary śukla pāḍyami "pāḍyami tarpaṇam" — a rite that does not exist, invented so the mock could keep the same day selected across all three tabs. Tarpaṇam falls on amāvāsya, on the parvas, and through the mahālaya pakṣa, and on every other day the honest answer is that there is none.</p>
+    </div>
+    <div class="entry">
+      <div class="entry-head"><span class="tag tag-chg">Changed</span><h3>The register is a page; one name is a sheet</h3></div>
+      <p>Two different things were fused into one bottom sheet, and the tell was that tapping a name replaced the list inside it — a page transition happening inside a popup. Thirty-three slots in five groups, browsed slowly and returned to over years, is page material; it was a fourteen-hundred-pixel scroll inside a four-hundred-pixel box. Writing one name is sheet material: six fields, opened from the verse where the blank stands, closed back into the rite.</p>
+      <p>So the register is now a screen of its own, reached from the pitṛ calendar and from the vidhi. Every line stands open — the room is the reason to have a page — with the slots laid two to a row where the width allows, a count on each line that has names, and the gotra of a line asked once at its head. Writing a name stays a sheet, and now opens over the page or straight over the scroll, so a reciter at verse seventeen never leaves the rite; the sheet carries one link to the whole register for anyone who wants it. The saṅkalpa verse's note goes where it belongs, to the saṅkalpa details, rather than to a register of the dead.</p>
+    </div>
+    <div class="entry">
+      <div class="entry-head"><span class="tag tag-add">Added</span><h3>śarmāṇaṁ — the ending the name takes</h3></div>
+      <p>Śarman is an -an stem, so the accusative takes the long vowel: ātmānam, brahmāṇam, śarmāṇam. Many printed sheets give the short śarmaṇam, and for a while the app offered both rather than rule between them. That was the wrong kind of humility — there is one right form, and a row of near-identical options is not a choice anyone in a house would want to make. The ending row now carries śarmāṇaṁ, varmāṇaṁ, guptaṁ and dāsaṁ. The transcription itself is untouched: it prints what its sheet prints.</p>
+    </div>
+    <div class="entry">
+      <div class="entry-head"><span class="tag tag-add">Added</span><h3>śrīśailasya īśānya-pradeśe — the kṣetra a place is reckoned from</h3></div>
+      <p>The deśa clause named a kṣetra only for the thirty-eight tīrthas that have one of their own, so a saṅkalpa said in Elūru named no kṣetra at all. That is not how the clause works: a rite said away from a tīrtha still names one — the nearest, and the direction from it. The app now says śrīśailasya īśānya-pradeśe for Elūru, kāñcyāḥ īśānya-pradeśe for Madras, pañcavaṭyāḥ nairṛtya-pradeśe for Bombay. Thirty anchors carry their own genitive and their own coordinates, because neither the genitive of a place name nor its standing as an anchor is derivable from geometry; the bearing is computed, in the eight directions with the koṇas under their own names. The kṣetra now stands before the river, as a printed sheet has it.</p>
+      <p>Where a local sheet settles the reading, it outranks the bearing. Elūru is two hundred and fifty kilometres from Śrīśailam and barely seventeen degrees north of due east, which computes as pūrva while the sheets there say īśānya. A printed sheet is evidence; a protractor is not, so the reading is named for that place and the geometry stands aside.</p>
+    </div>
+    <div class="entry">
+      <div class="entry-head"><span class="tag tag-add">Added</span><h3>The nāma, in both hands</h3></div>
+      <p>The flyleaf held one name field, so a reciter who wrote "Srikrishna" in Roman had a Roman word standing in the middle of their Telugu saṅkalpa — Telugu and Devanāgarī convert between themselves, but neither can be derived from Roman. The flyleaf now keeps the nāma twice, as the pitṛ register keeps every name twice, and asks for whichever hand is missing: the Roman form of a name written in Telugu, or the mūla script of a name written in Roman. Each script is then read from the field that holds it.</p>
+    </div>
+    <div class="entry">
+      <div class="entry-head"><span class="tag tag-chg">Changed</span><h3>The register stopped explaining itself</h3></div>
+      <p>The register opened by telling the reciter that the printed sheet cannot know their house. They know. Said out loud to a person about to name their own dead, it reads as a lecture, and faintly as an insult. The line now says what the screen does and nothing more: a name written here is read in the tarpaṇa line, and a slot left empty keeps the line as it is printed. The note about a name missing from a script lost its explanation the same way. Added to the project notes: never tell the reader what they already know — say what the screen does, not why it needs to exist.</p>
+    </div>
+    <div class="entry">
+      <div class="entry-head"><span class="tag tag-fix">Fixed</span><h3>A Roman word in the middle of a Telugu saṅkalpa</h3></div>
+      <p>The saṅkalpa's closing clause came out as "Bharadwaja-గోత్రస్య" — the gotra in Roman letters inside a Telugu sentence. Same cause as the register's: the builder matched the gotra list on a fold that only stripped diacritics, so the ordinary Roman spelling missed the list and the raw typed word was used in place of భారద్వాజ. The builder now matches on the register's tolerant fold, and a nāma written in Telugu or Devanāgarī is rendered in the script being read rather than left as typed.</p>
+    </div>
+    <div class="entry">
+      <div class="entry-head"><span class="tag tag-fix">Fixed</span><h3>Telugu that was English in Telugu letters</h3></div>
+      <p>The register's header was assembled from pieces — a count, the word for "written", a middle dot, the words for "of thirty-three" — and came out as "1 వ్రాసినవి · ముప్పై మూడులో", which is English word order in Telugu script and means very little. Its title had the same fault. Both are now written as whole sentences in each language: ముప్పై మూడులో 1 పేరు వ్రాశారు, under కర్మకు కావలసిన పేర్లు. A few other strings in the register were tightened the same way. The rule is written into the project notes: every language's line is composed in that language, as one sentence, with the number placed where that language places it — never joined from fragments and never translated word for word.</p>
+    </div>
+    <div class="entry">
+      <div class="entry-head"><span class="tag tag-fix">Fixed</span><h3>Bharadwaja and Bhāradvāja are one gotra</h3></div>
+      <p>The clause is built from the gotra list, matched on a fold that only stripped diacritics. A flyleaf holding the ordinary Roman spelling — Bharadwaja — missed the list, and a miss meant the Devanāgarī half of the clause came out empty: the reciter wrote their father's name and the Telugu sheet they were reading from kept its dashes, with nothing saying why. The fold now folds the spellings of one name onto one key — w and v, the three s-es, the aspirates, doubled vowels.</p>
+      <p>And where a name genuinely exists in only one script, the app no longer pretends otherwise. The Devanāgarī cannot be derived from a name typed in Roman, so that line keeps its printed blank and the note under it says the line is still blank instead of claiming the words came from the register. In the register itself the panel that showed the wording used to render empty in that case; it now says the name is not written in this script yet and opens the field to write it.</p>
+    </div>
+  </div>
+</section>
+
+<section class="release">
+  <div class="rail">
+    <div class="ver">0.9.100</div>
+    <div class="date">12 September 2026</div>
+    <div class="rail-note">The card knew the day and the hour, and said the procedure was somebody else's business.</div>
+  </div>
+  <div class="release-body">
+    <h2 class="release-title">Pitṛ Tarpaṇam gets a procedure it can hold</h2>
+    <div class="entry">
+      <div class="entry-head"><span class="tag tag-add">Added</span><h3>Three shelves more: the rivers, the nine grahas, the other gods</h3></div>
+      <p>The deity grid ended in a dashed tile that said other devas were coming. A reciter looking for the Gaṅgā verse said at the bath, or a Śani kavaca on a Saturday, was told to wait. Three shelves now stand on the grid in place of that promise. Nadī Devatās holds the river texts, grouped by river: Gaṅgā, Yamunā, Narmadā, and the Ṛgvedic hymn that names them all. Navagrahas holds the nine, with a form for each graha, so a kavaca is found by the graha it is for. Itara Devatās holds the gods who have texts but no shelf of their own — Agni, Bhūmi, Dhanvantari, Kubera, Tulasī. The titles are catalogued with their sources; the full texts follow as they are collated, and each row says so rather than pretending otherwise.</p>
+    </div>
+    <div class="entry">
+      <div class="entry-head"><span class="tag tag-chg">Changed</span><h3>Pitarulu, named as devatās</h3></div>
+      <p>The forefathers' shelf was labelled Pitṛs — పితరులు. On a grid of devatās that reads as a category apart. It now reads Pitṛ Devatās, పితృ దేవతలు, which is what a household calls them when it offers them water.</p>
+    </div>
+    <div class="entry">
+      <div class="entry-head"><span class="tag tag-add">Added</span><h3>One household's tarpaṇa prayoga, kept whole and named</h3></div>
+      <p>The Pitṛ Tarpaṇam card computed the amāvāsyā, computed aparāhṇa, and then told the reciter that the procedure was prayoga-specific and to go ask their elders. That is the honest answer and it is also a dead end: a reciter standing at the water with a plate of sesame needs something to read. A Telugu paddhati sheet — Rajasekharuni Vijay Śarma's — has been transcribed in full and added as a worked example, attributed as such. Eleven steps from ācamya to savyaṁ, the six saṅkalpas the occasion decides between (nitya, amāvāsyā, grahaṇa, saṅkramaṇa, mahālayam, puṣkara), and the thirty-three recipients in order with their gotra blanks, their vasu, rudra and āditya rūpas, and the sapatnīkaṁ and sabhartṛkaṁ qualifiers. Stuti stays prayoga-neutral: this is an example of a procedure, not a ruling on one, and the card says so above the source line.</p>
+    </div>
+    <div class="entry">
+      <div class="entry-head"><span class="tag tag-chg">Changed</span><h3>The reader is an elder, not a scholar</h3></div>
+      <p>The new tarpaṇa text introduced itself by listing who receives the water: father, mother, their parents, the wife, the son, the daughter, the teacher, and then — for the sake of a closing beat — "the man who once lent you money." That list is a list of the dead. It is not a place for a turn of phrase. The fault was not one word but a register: long sentences with a second thought hung off a dash, a clause piled on a clause, and a writer more interested in the shape of the line than in the person reading it while holding a plate of sesame.</p>
+      <p>A rule now governs every string the app says in its own voice. Short sentences. Plain words. No clever ending. Respect for everyone a rite names, without exception. Nothing left ambiguous that a reciter must act on. Formal, but not stiff and never casual. The pitṛ material has been rewritten to it end to end — the scroll's opening and note, the rite cards' taglines, who may perform them, why they are kept, the ten steps of the procedure, and the sources. The rule is written into the project notes so it holds for what comes next.</p>
+    </div>
+    <div class="entry">
+      <div class="entry-head"><span class="tag tag-add">Added</span><h3>Tarpaṇam becomes a genre, with a scroll to read from</h3></div>
+      <p>A card is something you read about a rite; at the water, with a plate of sesame and one hand occupied, what is wanted is something to read from — the text itself. Pitṛ Tarpaṇa Vidhiḥ is now a text like any other — it opens in the reader, scrolls in Telugu, Devanāgarī or roman, keeps its place between sessions and runs at whatever pace the reciter has set. Fifty verses in five movements: ācamana and the preliminaries, the six saṅkalpas, the turn of the thread and the āvāhana, the thirty-three names, and the closing. Tarpaṇa stands as its own genre in the library beside Sūktam and Stotram, so a rite never sorts in among the hymns of praise.</p>
+    </div>
+    <div class="entry">
+      <div class="entry-head"><span class="tag tag-fix">Fixed</span><h3>A card that says "coming soon" above ten steps of the thing</h3></div>
+      <p>The vidhānam placeholder row stood at the top of every vrata and festival card regardless of what the card held, so the moment Pitṛ Tarpaṇam got a real procedure it announced that its procedure was coming soon and then printed it, under the same heading, an inch below. The placeholder now stands only where nothing has been keyed — and when a rite has neither a procedure pending nor a pārāyaṇa, the row's whole block steps aside instead of leaving an empty rule.</p>
+    </div>
+    <div class="entry">
+      <div class="entry-head"><span class="tag tag-fix">Fixed</span><h3>The pitṛ shelf now holds the pitṛ rites</h3></div>
+      <p>The four tarpaṇams were filed under Viṣṇu — a leftover from the days before the forefathers had a tile of their own — so a reciter who opened the pitṛ shelf looking for Pitṛ Tarpaṇam found five hymns and no rite, and the rite's own "go to the shelf" link led to Viṣṇu. They are filed under the pitṛs now, so the shelf and the rite point at each other. The rites themselves stay in the pitṛ calendar, where a reciter looks for a day; the shelf stays an index of texts, which is what a shelf is for.</p>
+    </div>
+    <div class="entry">
+      <div class="entry-head"><span class="tag tag-add">Added</span><h3>Two sections the vrata view did not have</h3></div>
+      <p>A saṅkalpa that changes with the occasion and a list of recipients that runs to thirty-three names do not fit in a vidhi step or a naivedya row. Both are now their own section in the vrata renderer — <code>sankalpas</code> and <code>recipients</code> — so any rite that turns on whom the offering is made to can say it plainly, in the same typographic register as the rest of the card.</p>
+    </div>
+    <div class="entry">
+      <div class="entry-head"><span class="tag tag-fix">Fixed</span><h3>Tālam had no name in Telugu or Devanāgarī</h3></div>
+      <p>Genre headings are drawn from a table of names in all three scripts, and a genre missing from that table falls back to its roman key — so a Telugu shelf read తాళం's heading as TĀLAM, in Latin letters, among fourteen Telugu ones. Tālam now has its names and its place in the canonical order, between Kṛti and Gītā. Every other genre, form and title in the corpus was checked the same way: nothing else is missing a script.</p>
+    </div>
+    <div class="entry">
+      <div class="entry-head"><span class="tag tag-add">Added</span><h3>A shelf's genres can be folded away</h3></div>
+      <p>Hanumān's shelf runs to forty texts under eight genre headings, and a reciter who wants the aṣṭakams has to scroll past the whole sahasranāma section to reach them. Each genre heading on a deity's index is now a control: tap it and its texts fold away, leaving the heading and a count of what is inside. The arrangement is kept per deity, so a shelf opens the way it was left. Folded texts keep their folio numbers — the numbering runs over the whole shelf, not over what happens to be showing.</p>
+    </div>
+  </div>
+</section>
+
+<section class="release">
+  <div class="rail">
+    <div class="ver">0.9.99</div>
+    <div class="date">11 September 2026</div>
+    <div class="rail-note">Two entries in the year are moments, and the almanac had only rows for days.</div>
+  </div>
+  <div class="release-body">
+    <h2 class="release-title">The kṣaṇa gets a card</h2>
+    <div class="entry">
+      <div class="entry-head"><span class="tag tag-fix">Fixed</span><h3>The Nitya tab opens on Recitation again</h3></div>
+      <p>Nitya remembers which lens was last open, so that a reader or counter opened from Sādhana returns to Sādhana. The memory was also answering the tab press, which is a different question: someone who once looked at the nomulu found Nitya opening on the nomulu ever after. The tab now always opens on Recitation, which is the tab's job; the memory is kept for the return path alone.</p>
+    </div>
+    <div class="entry">
+      <div class="entry-head"><span class="tag tag-fix">Fixed</span><h3>The saṅkrānti is named in Telugu, and the eclipse takes a capital</h3></div>
+      <p>The card was building a saṅkrānti's name by joining the zodiac label to the word — and the zodiac label is a nominative. That gave మకరం సంక్రాంతి, సింహం సంక్రాంతి, two words standing side by side with nothing holding them. All twelve names are now written whole in each language, so the compound form is the one that appears: మకర సంక్రాంతి. The eclipse's type word is stored lowercase because it is usually read mid-sentence; at the head of a title — on the card, on the home plate and in the pañcāṅga row — it now takes its capital.</p>
+    </div>
+    <div class="entry">
+      <div class="entry-head"><span class="tag tag-fix">Fixed</span><h3>The Telugu glosses stop addressing the Goddess as a girl</h3></div>
+      <p>The feminine vocative in the Devī glosses had been built on <code>-దానా</code> — నివసించుదానా, ప్రసాదించుదానా — which is how one calls a child or a servant, not how one addresses Lakṣmī or Annapūrṇā. Every such address across the Devī hymns, the Kāśī and Mahālakṣmī sets and the shared Hindi-core glosses now reads <code>-దానవు</code>, the predicative "you are she who…", which carries the praise without the familiarity. Two occurrences were left standing: in the nōmu kathās a god speaks to a village girl as ఓ చిన్నదానా, and there the register is the point.</p>
+    </div>
+    <div class="entry">
+      <div class="entry-head"><span class="tag tag-add">Added</span><h3>One card for the grahaṇa and the saṅkrānti alike</h3></div>
+      <p>Almost everything in this almanac is a tithi — an angle, running from an hour to an hour, belonging to whichever day was holding it at the deciding moment. Two things are not. A saṅkrānti is the instant the sun leaves one rāśi; a grahaṇa is the instant a shadow touches a disc and the instant it lets go. Neither can be found by a tithi rule, and neither is really a day: each is a moment with a window around it, and the window is the observance. That shared shape is now a module and one card. <code>STUTI_KSHANA</code> normalises both into the same five things a reader needs — the moment, the marks either side of it, the window the rite is kept in, whether any of it clears this horizon, and the ground the rule rests on — and the card that draws them never learns which it is holding. The line of time scales to its event, so a two-minute annular and a five-hour penumbral each fill the width they are given.</p>
+    </div>
+    <div class="entry">
+      <div class="entry-head"><span class="tag tag-add">Added</span><h3>The saṅkrānti puṇyakāla, computed rather than implied</h3></div>
+      <p>The tarpaṇa engine has been naming a saṅkrānti puṇyakāla since it landed and had no way to compute one: its window function knows the fifths of the day and the muhūrtas, and an ingress is neither. The kṣaṇa module owns the rule now — sixteen ghaṭikās either side of the crossing, clipped to that day's own light — and the engine asks it instead of falling silent. The judgement the rule actually turns on is the one printed almanacs make: a crossing after sunset moves its puṇyakāla to the next morning, which is why Makara Saṅkrānti is sometimes the fourteenth of January and sometimes the fifteenth. The card says which day it is holding and why, and it says plainly that how many ghaṭikās the puṇyakāla runs differs by saṅkrānti and by school rather than dressing sixteen up as settled.</p>
+    </div>
+    <div class="entry">
+      <div class="entry-head"><span class="tag tag-chg">Changed</span><h3>The app stops writing like a commentary</h3></div>
+      <p>A rule that says "the bath, the japa and the dāna belong to the span" has told the reader what category the hours fall into and not what to do in them. The guidance now speaks: do not eat and do not do pūjā while the eclipse lasts; bathe when it begins, at sparśa; do japa and give dāna through it; bathe again after mokṣa, and only then eat — the two baths named separately, because they are two acts and one sentence had been carrying both. The same pass went through the app's own Hindi and Telugu wherever it was addressing the reader rather than translating a verse: एवं and तथा became और, अतः became इसलिए, किन्तु became लेकिन, अथवा became या, के पश्चात् became के बाद, and आज का कर्तव्य became आज क्या करना है. About eighty substitutions across the interface strings, the month and library and pārāyaṇa notes, and the website's copy.</p>
+      <p>Two things were deliberately left alone. The hymn glosses and the nōmu kathās keep their register — a verse translation and a traditional story are not the app talking, and colloquialising them would be an error rather than a kindness — as do Sanskrit headings, the saṅkalpa segments and the nāmāvalīs. And the spelling went the other way from where it started: चाहिए and के लिए are the modern forms against the older चाहिये and लिये, the corpus was already forty-two to eight in favour of लिए, so the standardisation was reversed to follow the app rather than the śāstra.</p>
+    </div>
+    <div class="entry">
+      <div class="entry-head"><span class="tag tag-fix">Fixed</span><h3>An upacchāyā grahaṇa is not a grahaṇa for the vrata</h3></div>
+      <p>The eclipse module gated lunar events at one degree of node distance against the solar one and six tenths, which is tighter than the penumbra reaches — two of 2027's four eclipses were invisible to the app before they were ever computed. Widening the gate found them, and immediately asserted a nine-hour fast for an eclipse nobody can see. The penumbral case now carries its marks, its band and its magnitude and nothing else: no kept window, no sūtaka, no rules, and a caveat saying the moon passes through the outer shadow only, the dimming is below what the eye can catch, and the day names it because it is a fact about the sky. The tarpaṇa engine skips it on the same grounds.</p>
+    </div>
+    <div class="entry">
+      <div class="entry-head"><span class="tag tag-chg">Changed</span><h3>The grahaṇa row opens instead of ending the sentence</h3></div>
+      <p>The eclipse row on the pañcāṅga card could give a name, a percentage and a span, and then the reader had nowhere to go for the part that matters — sparśa, madhya, mokṣa, the sūtaka before the touch, and the hours the bath and the japa belong to. It is a tap now, and an ingress day grows a row of its own beside it. An eclipse below the horizon still gets its card, and the card still says that nothing falls due here: it is named because it is a fact about the sky, not because it is an obligation.</p>
+    </div>
+  </div>
+</section>
+
+<section class="release">
+  <div class="rail">
+    <div class="ver">0.9.98</div>
+    <div class="date">11 September 2026</div>
+    <div class="rail-note">Four rites named their hour and offered nothing to say.</div>
+  </div>
+  <div class="release-body">
+    <h2 class="release-title">The pitṛ rites get their texts</h2>
+    <div class="entry">
+      <div class="entry-head"><span class="tag tag-add">Added</span><h3>Five pitṛ texts, from the corpus folder</h3></div>
+      <p>The tarpaṇa engine could say which day carried the amāvāsyā and at what hour the rite belonged, and then had nothing for the reciter to actually say: its <code>stotras</code> list was empty because the corpus held no pitṛ text. It holds five now, all sourced and collated on the desktop side, and all five are in the app: the Rucistava (Garuḍa Purāṇa 89.51–60, Gītā Press), the longer Ruci hymn that precedes it in the same passage (89.13–48, GRETIL governing), the Vājasaneyi Pitṛ Sūktam (VS 19.49–61, Gītā Press text with accent laid on from the same śākhā's saṁhitā), the Ṛgvedic one (ṚV 10.15, Śākala, accented), and Brahmā's short hymn from the Bṛhaddharma Purāṇa. Each carries Devanāgarī, IAST and all three glosses; accent sits in the Devanāgarī and stays out of the transliteration, as the vidhi files set it.</p>
+    </div>
+    <div class="entry">
+      <div class="entry-head"><span class="tag tag-chg">Changed</span><h3>The two sūktas are two hymns, and the app says so</h3></div>
+      <p>The Yajurvedic and Ṛgvedic Pitṛ Sūktas share four mantras and differ in the rest; they are the hymns of two Vedas, not variants of one. They are catalogued separately, titled by their Veda, and each one's note says which recension it is and what was collated against what — so a reciter of either tradition can tell at a glance whether a text is theirs. The Gītā Press prohibition on these recitations in the preta-śrāddha, before sapiṇḍīkaraṇa, now travels with the texts that carry it rather than living only in the source folder.</p>
+    </div>
+    <div class="entry">
+      <div class="entry-head"><span class="tag tag-chg">Changed</span><h3>The forefathers are in the pool without being on the shelf</h3></div>
+      <p>A text needs a deity to live in the hymn pool, and the forefathers are not one of the eight. Rather than force them onto the deity grid — where they would have read as a ninth god — they enter as a hidden entry: the reader, search and the vrata resolver find them exactly as they find any hymn, and the three grids that draw the shelf skip them. The vrata guide, meanwhile, answered "also recite" with a link to the deity's whole shelf; it now names the day's own texts first, as chips that open the reader, which every guide with a filled list gains and not only the tarpaṇa ones.</p>
+    </div>
+    <div class="entry">
+      <div class="entry-head"><span class="tag tag-chg">Changed</span><h3>And now the older diaspora, and the neighbours</h3></div>
+      <p>Europe and Southeast Asia still left out the places Hindus have recited in for a century and more: Durban, Port Louis, Nadi, Chaguanas, Georgetown, Paramaribo — and, closer to home, the towns of Nepal, Sri Lanka, Bangladesh and Pakistan, which a Frankfurt-shaped extract had no reason to include. Eleven country blocks join on the same terms as the rest, taking the lazy-loaded file from 40,990 places across 71 countries to 42,563 across 82. The row shape, the search order and the curated list's precedence are untouched; only the data grew.</p>
+    </div>
+    <div class="entry">
+      <div class="entry-head"><span class="tag tag-chg">Changed</span><h3>The gazetteer reaches Europe and Southeast Asia</h3></div>
+      <p>The long-tail place list covered India, the Anglophone diaspora and the Gulf, which left a reciter in Frankfurt or Kuala Lumpur typing a city the app had never heard of. A fresh GeoNames extract adds Europe and Southeast Asia on the same terms as the rest — population 5,000 and up, plus administrative centres above 500 — taking the lazy-loaded file from 18,029 places to 40,990 across 71 countries. The row shape is unchanged (<code>name|lat|lon|admin|tz</code>, country carried by the block), and the search itself was left alone: India still wins an equal match, and the curated eager list still suppresses its own duplicates, which is why Zürich and Singapore answer from the small set rather than the large one.</p>
+    </div>
+  </div>
+</section>
+
+<section class="release">
+  <div class="rail">
+    <div class="ver">0.9.97</div>
+    <div class="date">10 September 2026</div>
+    <div class="rail-note">Forty taps to cross the range is not a control.</div>
+  </div>
+  <div class="release-body">
+    <h2 class="release-title">The reciter's pace is set in one gesture</h2>
+    <div class="entry">
+      <div class="entry-head"><span class="tag tag-fix">Fixed</span><h3>The cache no longer depends on being remembered</h3></div>
+      <p>The vrata list is answered once per civil day, because asking eighty entries when they next fall scans the ephemeris eighty times and costs three quarters of a second — far too much for a card that renders on every visit to the home. But the first version keyed that cache on a counter bumped by one store's subscription, which is a trap with a fuse on it: data arriving by any path that does not emit on that store would sit invisible until midnight, and the next person to add a source would have no way to know. The key is now a fingerprint of everything the answer actually depends on — the day, the length of the vrata list (modules register their own entries after the file loads, as the tarpaṇa rites do), the reckoning preferences that move a date, and the house's own tithis field by field. Anything that can change an answer changes the key, including code written later.</p>
+    </div>
+    <div class="entry">
+      <div class="entry-head"><span class="tag tag-chg">Changed</span><h3>The day's limbs fold away, and the pitṛ calendar has a way back</h3></div>
+      <p>The pañcāṅga sheet listed all twenty-five limbs of the day whether or not anyone had asked a question, and beneath them sat the house's tithis and the pitṛ calendar — so the tab opened three screens deep. It now shows the head and the first six limbs with "the remaining nineteen limbs" under them, and remembers which way you left it; the observances still show either way, since what a day is kept as is the one thing that is never a detail. The three cards below also stopped disagreeing about their own edges — the pitṛ door now sits in the same gutter, radius and shadow as the tithi card above it — and the day's "add a tithi" button became the sign alone, since a labelled twin of it sat one card below and two identical buttons a screen apart read as a mistake. The pitṛ calendar, meanwhile, had no way back at all — it now carries the same topbar and back arrow every other inner screen has, and its title moved there rather than repeating itself in the body.</p>
+    </div>
+    <div class="entry">
+      <div class="entry-head"><span class="tag tag-chg">Changed</span><h3>A tarpaṇam is not a festival, and no longer looks like one</h3></div>
+      <p>The tarpaṇa card borrowed Viṣṇu's gold wash from the deity it is filed under, which made a rite of water and sesame read like a celebration. It is now ash on parchment — mixed from the ink itself, so no new colour enters the palette — with the kicker in the same grey. The "why this date?" pill also went: it read as a second action competing with the card's own, and is now the same small "?" the sandhyā plate carries.</p>
+    </div>
+    <div class="entry">
+      <div class="entry-head"><span class="tag tag-add">Added</span><h3>A pitṛ calendar, and every computed date made to account for itself</h3></div>
+      <p>Working from the tarpaṇa ritual-logic spec, the engine now keeps a rite's day, its hour and its procedure as three separate facts, because they are three separate questions. Every rite carries a decision kāla — the instant that settles which civil day it is — a performance kāla for the window it is kept in, a badge, and the sources its rule rests on; a "Why this date?" drawer on the card and in the new pitṛ calendar shows all of it, down to the tithi found at the tested hour and a link to the chapter it comes from. Kṛṣṇāṅgāraka Caturdaśī joins the list as the second Yama day — a Tuesday fallen on the dark fourteenth, in any month — and because the overlap tie-break belongs to a published pañcāṅga and not to us, the drawer shows the caturdaśī's own span across that Tuesday and says the rule is source-specific rather than ruling on it. Bhīṣmāṣṭamī does the same where aṣṭamī covers two days: both candidates are named and the schools are said to differ. Daylight is now divided into its five parts properly, with kutapa and rohiṇa as muhūrtas eight and nine, so aparāhṇa is a span of the day's own light rather than an hour on a clock.</p>
+    </div>
+    <div class="entry">
+      <div class="entry-head"><span class="tag tag-add">Added</span><h3>The ninety-six, as a calendar to read rather than ninety-six alarms</h3></div>
+      <p>The śāstra counts ninety-six occasions on which a śrāddha or a tila tarpaṇa may be kept, and the temptation is to turn them into ninety-six notifications. They are a classification, not a list of duties, so the pitṛ calendar lays them out grouped and dated for the year — the twelve amāvāsyās, the twelve saṅkrāntis with their puṇyakāla, the Bhādrapada dark fortnight tithi by tithi, vyatīpāta and vaidhṛti found by scanning the year's yogas rather than its tithis, the fourteen manvādis, the four yugādis, the aṣṭakā triads, and the named cases. Nothing here rings a bell. Gajacchāyā is left to an authoritative pañcāṅga, as the spec asks. A śrāddha record of your own whose tithi falls inside the fortnight is called out at the top, since that is the one part of the ninety-six that is about your house.</p>
+    </div>
+    <div class="entry">
+      <div class="entry-head"><span class="tag tag-add">Added</span><h3>Veda, śākhā, sūtra, gotra and pravara — asked, never assumed</h3></div>
+      <p>Five optional fields in the almanac settings. Upākarman is not one day for everyone — Yajurvedins commonly keep Śrāvaṇa Pūrṇimā, Ṛgvedins the Śravaṇa nakṣatra day, Sāmavedins a Hasta day in Bhādrapada — so until a Veda is named the app declines to print a Kāṇḍarṣi date instead of guessing one. Gotra and pravara are kept because a saṅkalpa says them aloud. Stuti stays prayoga-neutral by choice: what is shown is the day-selection the traditions agree on, and the procedure — recipient order, tīrtha, yajñopavīta position, añjali count, whether sesame is used that weekday — is pointed at your family's paddhati rather than invented. Nothing asks whether a father is living; that rule is real but it is one input among several, and it is not a switch that hides a rite.</p>
+    </div>
+    <div class="entry">
+      <div class="entry-head"><span class="tag tag-fix">Fixed</span><h3>The day and the hour now agree about where you are</h3></div>
+      <p>The tarpaṇa day was first reckoned at the Ujjain reference while its window was drawn from the reciter's own sunrise — for a rite whose day is decided by a mid-afternoon instant, that is precisely the one-day error the reckoning exists to avoid, and it would have shown a reciter in Texas the wrong day with a Texan clock beside it. The amāvāsyā-at-aparāhṇa test now runs at the chosen place, both caches drop when the place changes, and the answer is memoised per day and place: the card, the calendar and the bell ask the same question several times a render, and it used to walk the ephemeris every time. While there, the vrata list itself — eighty entries, each scanning its own month — went from three quarters of a second per call to nothing, cached for the day and dropped when a house tithi is edited.</p>
+    </div>
+    <div class="entry">
+      <div class="entry-head"><span class="tag tag-add">Added</span><h3>The tarpaṇa days, and the hour that decides which day they are</h3></div>
+      <p>Pitṛ tarpaṇam belongs to every amāvāsyā, and the app had no card for it. Adding one is not the hard part: the day is. An amāvāsyā that has ended by early afternoon does not carry the offering — the new moon still running when the sun crosses into the fourth part of the day does, which is often the civil day <em>before</em> the one a pañcāṅga prints as amāvāsyā. So the rite is reckoned at aparāhṇa, not at sunrise: this September the tithi turns at 10:34 in the morning, so the tarpaṇam is the 10th while Polāla Amāvāsyā, which is reckoned at sunrise, is the 11th. Both are right, and they are not the same question. Yama tarpaṇam joins it on Naraka Caturdaśī — anchored to Dīpāvalī's own amāvāsyā so the two festivals cannot drift apart, but with the day reckoned rather than subtracted: the oil bath wants caturdaśī running at aruṇodaya, and in the common case where caturdaśī and amāvāsyā share a civil day, "the day before Dīpāvalī" is a trayodaśī morning. Bhīṣma tarpaṇam on Bhīṣmāṣṭamī at madhyāhna — the one tarpaṇam with no lineage test, since Bhīṣma died sonless and anyone may give his arghya. Each carries its vidhi, its samagri and what to avoid, and each says whose practice it follows.</p>
+    </div>
+    <div class="entry">
+      <div class="entry-head"><span class="tag tag-add">Added</span><h3>A bell on its own hour, for those who want one</h3></div>
+      <p>The tarpaṇa reminder is off until asked for, and when asked for it does not ride in the morning digest: it rings at the start of the rite's own window — 1:16 pm at Eluru this month, not six o'clock — because a cue for a two-o'clock aparāhṇa delivered at dawn is both early and, by the time it matters, forgotten. It is also independent of the daily reading cue; wanting this bell is not wanting that one. The card appears either way.</p>
+    </div>
+    <div class="entry">
+      <div class="entry-head"><span class="tag tag-fix">Fixed</span><h3>Amāvāsyā and Pūrṇimā have no fortnight</h3></div>
+      <p>The tithi sheet asked for a pakṣa beside a tithi of Amāvāsyā — a question with no answer, since the new moon closes the dark fortnight and the full moon the bright one; naming one is redundant at best and contradictory at worst. The pakṣa field now steps aside once the fifteenth is chosen, and both days stand in the tithi list by name so they can still be told apart. The rule line already read "Śrāvaṇa Amāvāsyā" without a pakṣa; the controls now agree with it.</p>
+    </div>
+    <div class="entry">
+      <div class="entry-head"><span class="tag tag-chg">Changed</span><h3>The pañcāṅga opens on today, every time</h3></div>
+      <p>The browsed month was kept for six hours so that returning to the tab landed where you left off. But a pañcāṅga is asked what today is far more often than where you were, and coming back to November while it is September reads as the app being wrong about the date. The month and the selected day are now session state only: leaving the tab drops them, and re-entering always opens on today.</p>
+    </div>
+    <div class="entry">
+      <div class="entry-head"><span class="tag tag-chg">Changed</span><h3>The tithi sheet's place field reaches the same 18,000, and stops shoving the form down</h3></div>
+      <p>A śrāddha is remembered at the village it happened in, so the place field on the tithi sheet now searches the gazetteer as well. A pick there is stored as the record's own latitude and longitude — which the sheet already persisted for hand-typed coordinates — and carries its own zone rather than borrowing the nearest listed city's clock. The field also stopped growing: opening it pushed the latitude and longitude rows half a screen down, so the list now floats over the form and a tap outside closes it. Its placeholder no longer advertises 559 cities, which stopped being the limit.</p>
+    </div>
+    <div class="entry">
+      <div class="entry-head"><span class="tag tag-add">Added</span><h3>Eighteen thousand places, and none of them on the cold start</h3></div>
+      <p>The curated list of 559 places is ordered for a picker — the cities a reciter is likely to be in, with regions spelled the way the app spells them — and that is exactly why it could not also be a gazetteer: it does not hold the mandal town next to Bellampalli, nor Coppell, which is where the reciter who says “Dallas” actually lives. So the long tail became a second file: 18,029 GeoNames places across India, the United States, the United Kingdom, Canada, Australia and the Gulf, kept packed as text and fetched the first time someone types three letters, never on load. Indian results carry the app's own spellings (Telaṅgāṇā, not Telangana) and India sorts first on an equal match. Each place brings its IANA zone, from which the standard offset is derived rather than assumed — so Brisbane is +10 and Coppell is −6 without a table to maintain. A place already in the curated list is suppressed by position and not by spelling \u2014 a same-named row within 25km is the same town, which keeps Coppell from appearing twice while leaving Philadelphia, Mississippi in the list. Choosing one stores it in the same slot a detected position uses, so the junctures, the vows, the nudges and the deśa clause all read the new coordinates without knowing a gazetteer exists.</p>
+    </div>
+    <div class="entry">
+      <div class="entry-head"><span class="tag tag-chg">Changed</span><h3>The speed pill opens a sheet with a rail and the paces one actually uses</h3></div>
+      <p>Pace moved in twentieths of a step, so going from a learner's crawl to a familiar brisk reading meant a dozen taps on a 30px button while the recitation carried on. The pill in the reciter bar now shows only the current multiple and opens a small sheet above it: a rail that can be dragged or arrowed across the whole 0.5–2.5 range, the same − and + for fine work, and five presets — 0.75, 1, 1.25, 1.5, 2 — for the speeds a reciter names rather than dials. The pace is also said in a word beneath, so the number is not the only thing to read.</p>
+    </div>
+  </div>
+</section>
+
+<section class="release">
+  <div class="rail">
+    <div class="ver">0.9.96</div>
+    <div class="date">9 September 2026</div>
+    <div class="rail-note">A compound is many words wearing one space.</div>
+  </div>
+  <div class="release-body">
+    <h2 class="release-title">The first-word veil stops uncovering a whole line</h2>
+    <div class="entry">
+      <div class="entry-head"><span class="tag tag-fix">Fixed</span><h3>The monsoon fell on half the screen</h3></div>
+      <p>Bhādrapada is a transition month: it carries the rains and Śarad's first leaves at once, and a mixed month runs each layer at half strength so the two do not fight. The drops, though, were placed at a fixed stride — the fourth percent, the eleventh, the eighteenth — which spans the width only when all fourteen are drawn. At seven, the whole shower fell in the left half of the screen and the right half stayed dry. Spacing is now derived from however many drops there are, as Śarad's leaves and Hemanta's frost already were; Vasanta's petals had the same fault and are fixed with it.</p>
+    </div>
+    <div class="entry">
+      <div class="entry-head"><span class="tag tag-chg">Changed</span><h3>The calendar holds its place for the day, not for ever</h3></div>
+      <p>The browsed month and day were remembered indefinitely, so a reciter who looked ahead to Kārtika once opened the calendar in Kārtika for weeks. The position is now stamped when it is written and honoured for six hours: leave the tab and come back and the month being read is still there; open the app tomorrow and it stands on today, which is where an almanac ought to open.</p>
+    </div>
+    <div class="entry">
+      <div class="entry-head"><span class="tag tag-chg">Changed</span><h3>Nomu, in English, is both one and many</h3></div>
+      <p>The English interface had been pluralising a Telugu word twice over — "Nomulu of the month", "All nomulu", "{n} nomulu" — where an English sentence wants the bare noun, as sādhana and japa already are. Every roman label now reads nomu; Telugu keeps nomulu and nomu as the sentence asks, and Devanāgarī keeps नोमु.</p>
+    </div>
+    <div class="entry">
+      <div class="entry-head"><span class="tag tag-add">Added</span><h3>The Navarātris say what is still being prepared</h3></div>
+      <p>Four Navarātris stand in the year — Vasanta, Śyāmalā, Śāradīya and Vārāhī — and three of them carried a rule, a tagline and a stotra list with nothing about how the nine nights are actually kept. A silent gap reads as an oversight, so each page now closes with what is being prepared: the full vidhi day by day, ghaṭasthāpana to the ninth night, and the Saptaśatī pārāyaṇa divided over the nine nights. Śāradīya, which already carries its vidhi, names only the pārāyaṇa.</p>
+    </div>
+    <div class="entry">
+      <div class="entry-head"><span class="tag tag-fix">Fixed</span><h3>Pāḍyami, which is what the day is actually called</h3></div>
+      <p>A Telugu house does not keep pratipada, vidhitīya or caturthī — it keeps pāḍyami, vidiya, tadiya and chaviti. The Telugu word was right on the pañcāṅga all along, but the roman line printed under it fell back to the Sanskrit, so the day read "పాడ్యమి / Pratipadā" and the two halves disagreed. The four tithis that go by a different word, and pauṇami with them, now carry the romanised Telugu name and use it whenever the app is read in Telugu; Devanāgarī and roman keep the Sanskrit, which is what those two are for.</p>
+    </div>
+    <div class="entry">
+      <div class="entry-head"><span class="tag tag-fix">Fixed</span><h3>The lens medallion lay across the first two lines</h3></div>
+      <p>The plate hung in the pārāyaṇa, vratālu, parva and nomulu headers was 142px in a band 104px tall, so a third of it stood outside the header and pressed on whatever the lens opened with — on pārāyaṇa, straight through the note explaining that these are schedules and not texts, and tight enough against the search field to crowd it. The plate is now sized to its band, the band reserves its full height, and the field's right margin follows it down.</p>
+    </div>
+    <div class="entry">
+      <div class="entry-head"><span class="tag tag-chg">Changed</span><h3>A second day getting ready is a card, not a footnote</h3></div>
+      <p>Two windows can stand open at once — Śrāvaṇa Śukravāram on Friday and a vrata behind it — and the card showed the first with its checklist and dismissed the rest as a grey line reading "and 1 more". It named nothing, counted nothing, and could not be pressed, which is precisely how the second day gets overlooked: the reciter has no way to learn what it is without going to the calendar and working it out. Every open window now gets its own card, running under the leader in a quieter, tighter form — the name, the weekday, the days remaining, what is still to be gathered, and its own close mark. The eyebrow on the first speaks for the stack, so three open days read as one block rather than three announcements.</p>
+    </div>
+    <div class="entry">
+      <div class="entry-head"><span class="tag tag-fix">Fixed</span><h3>Gaṇeśa sat further back than the other seven</h3></div>
+      <p>The eight portraits are painted at one canvas size, but not to one framing: Śiva, Devī and the rest are half-figures that reach the edges, while Gaṇapati was drawn as a whole seated mūrti on his lotus, occupying about seven-tenths of the width with cream on all sides. Every frame the app crops him into — the shelf tile's ring, the round plate on the deity page — is therefore honest and wrong: he is smaller than his neighbours because his painting is smaller inside itself, and he read as the one deity standing at the back of the room. The plate is now cropped to the figure, at the same measure the others were painted to, so the eight sit at one scale wherever they appear together. The deity page's own watermark plate, which is drawn from a different set of files, is given the same difference back in its width.</p>
+    </div>
+    <div class="entry">
+      <div class="entry-head"><span class="tag tag-fix">Fixed</span><h3>Sanskrit's hyphens are word boundaries too</h3></div>
+      <p>The sitting's deepest veil counted words by the spaces between them, which is a Latin habit. In a saṁskṛta line a compound arrives hyphen-joined — devarāja-sevyamāna-pāvanāṅghri-paṅkajaṁ is one space-word and most of the line — so "first word" handed back nearly everything and the reciter had nothing left to recall. The veil now treats a hyphen as a boundary: the first member of the compound stands, the rest of it goes under dots with the words that follow.</p>
+    </div>
+    <div class="entry">
+      <div class="entry-head"><span class="tag tag-add">Added</span><h3>The getting-ready card can be put away</h3></div>
+      <p>A card that cannot be closed is an instruction, not an offering — and three days of the same reminder on a household that has already shopped is nagging. The card now carries a close mark, and closing it asks the only question that matters: should it come back tomorrow, or should a notification come instead and the card wait for the day itself. Either way it is away only until a named day, and the choice is kept per occurrence, so next year's Chavithi starts unhidden.</p>
+    </div>
+    <div class="entry">
+      <div class="entry-head"><span class="tag tag-fix">Fixed</span><h3>Rādhā Aṣṭamī said nothing plainly</h3></div>
+      <p>Its line read "A fortnight after the midnight birth, the one who is asked for before he is" — allusion where a reader needed a fact. It never named Rādhā, never named Kṛṣṇa, and left the pronoun to be guessed. The line now says what the day is: her birthday, a fortnight after his, and her name spoken before his. The Telugu was rewritten to match rather than translated from the riddle.</p>
+    </div>
+    <div class="entry">
+      <div class="entry-head"><span class="tag tag-chg">Changed</span><h3>The week strip names its days</h3></div>
+      <p>Su, Mo, Tu asked the eye to decode where three letters simply read. The Roman strip now says Sun, Mon, Tue, and the bead relaxes into a pill wide enough to hold them — the same shape the Telugu and Devanāgarī vāras already took, since a lone akṣara never told śukra from śani either.</p>
+    </div>
+    <div class="entry">
+      <div class="entry-head"><span class="tag tag-chg">Changed</span><h3>Two headings of the same size, one under the other</h3></div>
+      <p>On an empty Nitya screen the topbar said "Daily recitation" in the display face and the card beneath said "Build your daily recitation" at all but the same size — two titles competing for the same job. The invitation now steps down to a line of body weight, so the screen has one heading and one thing to do.</p>
+    </div>
+    <div class="entry">
+      <div class="entry-head"><span class="tag tag-fix">Fixed</span><h3>A finished recitation reopened at its own end</h3></div>
+      <p>The reader saves the line the reciter left on, and a reading carried to the last line saved that line — so opening the stotra the next morning landed on śubham with nothing left to say. A place on the final line now reads as finished rather than interrupted: the mark is cleared and the text opens at its beginning, or at the first movement a customised recitation includes.</p>
+    </div>
+    <div class="entry">
+      <div class="entry-head"><span class="tag tag-fix">Fixed</span><h3>Subrahmaṇya ran into Sūrya's tile</h3></div>
+      <p>Pinching the deity shelf to four columns shrinks the tile but not the longest name on it, and the name plate is set on one line — so Subrahmaṇya spilled past its own frame onto the neighbour beside it. At four-up the names now wrap inside the plate and the tile clips its own contents, which is all the four-column shelf ever needed.</p>
+    </div>
+    <div class="entry">
+      <div class="entry-head"><span class="tag tag-chg">Changed</span><h3>The month's observances stop pretending to be buttons</h3></div>
+      <p>Cāturmāsya, Varalakṣmī Vratam and the rest sat in outlined pills under Śrāvaṇa, which in this app means a thing you press — and pressing them did nothing but open the month, same as anywhere else on the card. They are now set as a plain interpuncted list: the same names, saying what they are rather than offering what they cannot.</p>
+    </div>
+    <div class="entry">
+      <div class="entry-head"><span class="tag tag-fix">Fixed</span><h3>The current-month card never caught the light</h3></div>
+      <p>The hero carries the same glass and the same press handlers as the month tiles below it, but its sheen rule was written after the one that moves the band and at equal weight, so the highlight stayed parked off-frame. The sweep is restated for both month cards, and the hero lifts a hair under the finger the way its smaller siblings do.</p>
+    </div>
+    <div class="entry">
+      <div class="entry-head"><span class="tag tag-fix">Fixed</span><h3>The Other Devas ring outgrew its tile</h3></div>
+      <p>The ninth tile's dashed circle was sized to the full width of the tile, which leaves no room for the two-line name beneath it — so the ring pushed out past the square it belongs in. It is now sized to the height it can have, and the tile holds ring and name together.</p>
+    </div>
+    <div class="entry">
+      <div class="entry-head"><span class="tag tag-chg">Changed</span><h3>The Library tab returns to its default lens</h3></div>
+      <p>The library remembers its open lens so a back arrow from a stotra lands where the reciter was — right, but it also meant pressing Library from another tab reopened whatever shelf was left showing days ago. The tab press already clears the open detail; it now clears the lens too, so the Library always opens where its default says, while back-arrows inside it still return exactly where they left.</p>
+    </div>
+    <div class="entry">
+      <div class="entry-head"><span class="tag tag-chg">Changed</span><h3>The sādhana arrows line up</h3></div>
+      <p>Sandhyā Vandanam carries a ? beside its arrow and Nitya Pūjā does not, and the ? was placed after the arrow — so the two cards' arrows sat in different columns and the eye had to hunt for the one control both rows share. The ? now comes first and the arrow is always last, one under the other.</p>
+    </div>
+    <div class="entry">
+      <div class="entry-head"><span class="tag tag-chg">Changed</span><h3>A vrata day leads with its rite, not with a deity's shelf</h3></div>
+      <p>On the days whose own vidhi is not yet written — Polāla Amāvāsya among them — the only thing the page offered was the Deva's page of stotras, which answers what to read and not what to do. The observance is the rite. Those pages now put the Pūjā Vidhānam first, as the order of worship to follow on the day, and the deity's stotras move under "Also recite" where they belong: additional, not primary. Where a vrata carries its own vidhi, that vidhi still leads and nothing changes.</p>
+    </div>
+    <div class="entry">
+      <div class="entry-head"><span class="tag tag-chg">Changed</span><h3>Adding a tithi stops hiding at the foot of the pañcāṅga</h3></div>
+      <p>The one control that lets a house record its own day sat below the sandhyā table, the tithi note and the model caveat — a dashed outline at the very bottom of a card most reciters never scroll to the end of. It now rides in the day's header beside Back to today, where the date it would be filed under is already in view.</p>
+    </div>
+    <div class="entry">
+      <div class="entry-head"><span class="tag tag-chg">Changed</span><h3>The vidhi comes before the reading about the vidhi</h3></div>
+      <p>Gaṇeśa Caturthī opened with why it is kept and how the day runs, and the actual order of the rite lay past the samagri list, three screens down — the one thing a reciter standing before the maṇḍapa needs at once. Vidhi now sits directly under the day's date, and the significance, timeline and samagri follow it.</p>
+    </div>
+    <div class="entry">
+      <div class="entry-head"><span class="tag tag-chg">Changed</span><h3>The tithi sheet stops opening a blue browser calendar</h3></div>
+      <p>Choosing the date a tithi is counted from handed the reciter the browser's own date popup — system blue, system type, sitting over the parchment like a window from another program. The mālā's picker, drawn in the app's ink and accent, now takes that field too; it learned to allow a future date, which a japa entry never needs but an ābdikam may.</p>
+    </div>
+    <div class="entry">
+      <div class="entry-head"><span class="tag tag-chg">Changed</span><h3>The picker's month and year are chosen, not stepped to</h3></div>
+      <p>The picker had one arrow each way, which is enough for a japa entry logged yesterday and useless for a janma tithi forty years back — reaching it meant five hundred taps. The head now carries a month and a year to choose from, the year list running back one hundred and thirty years, and the arrows stay for the next month over.</p>
+    </div>
+    <div class="entry">
+      <div class="entry-head"><span class="tag tag-add">Added</span><h3>A remembered date is read at the place it happened</h3></div>
+      <p>A tithi is not a property of a date alone: it is whatever was running at that place's sunrise, and a birth in Chicago can fall on a different tithi than the same instant read from Bengaluru. The sheet took the civil date and read it against wherever the reciter lives now. It now asks where the day happened — the almanac's own city list, defaulting to the current place — and computes the māsa, pakṣa and tithi from there; the answer is stored with the record, so editing it later reads the same way.</p>
+    </div>
+    <div class="entry">
+      <div class="entry-head"><span class="tag tag-add">Added</span><h3>The place is typed, and there are a hundred and fifty more of them</h3></div>
+      <p>A dropdown of two hundred cities is a scroll, not a choice. The place field is now a search — city, region or the names a place also goes by — and the almanac's gazetteer grew by 152 entries: district towns across every Indian state that had only its capital listed, and the American metros where the diaspora actually keeps these days, from Plano to Princeton to Honolulu.</p>
+    </div>
+    <div class="entry">
+      <div class="entry-head"><span class="tag tag-add">Added</span><h3>A śrāddha is named by the hour, not the day</h3></div>
+      <p>The sheet read the tithi at the sunrise of the date entered, which is the right rule for a janma tithi — the day is named by what it held at daybreak — and the wrong one for an ābdikam. Śrāddha takes the tithi that was running at the moment of death, and a death at eleven at night is very often already under the next tithi; entering the date alone put the ābdikam a day early for every such passing. The śrāddha kind now asks the hour, reads the tithi at that instant in the death place's own zone, and stores it. Left blank it falls back to the sunrise reading, so nothing already recorded changes under the reciter.</p>
+      <p>The annual date itself was already chosen correctly — śrāddha records carry the aparāhṇa rule, so the day picked each year is the one whose fourth fifth of daylight holds the tithi, not the one that merely began with it.</p>
+      <p>The janma tithi is offered the same field, marked optional: most families remember only the day, and the sunrise reading is the right answer for them — but where the hour of birth is written down, a late-night birth belongs to the tithi that was running, and now says so.</p>
+    </div>
+    <div class="entry">
+      <div class="entry-head"><span class="tag tag-fix">Fixed</span><h3>The picker would not shut, and took half the sheet</h3></div>
+      <p>Opened inside the tithi sheet the calendar had no way out: the scrim that closes it when floating is clipped away by the scrolling sheet around it, so a press elsewhere did nothing. It now watches for a press outside itself, answers Escape, and carries a close button in its own header. It was also drawn at full wall-calendar scale in a field-sized slot — the inline picker is now compact, and the date and the place sit side by side, which is one question asked once.</p>
+    </div>
+    <div class="entry">
+      <div class="entry-head"><span class="tag tag-add">Added</span><h3>The suburbs, which is where people actually live</h3></div>
+      <p>A gazetteer of metros answers the wrong question: nobody was born in "Seattle" or "Dallas" — they were born in Kirkland, in Coppell, in South Jordan. Ninety-seven suburb-level entries now sit alongside the metros, each carrying the metro it belongs to as a search alias, so typing Dallas still finds Frisco and Coppell. Sunrise differs by a minute or two across a metro, which matters exactly when a tithi turns near dawn.</p>
+    </div>
+    <div class="entry">
+      <div class="entry-head"><span class="tag tag-add">Added</span><h3>Bellampally, and every village that is in no gazetteer</h3></div>
+      <p>A hundred and seven Telaṅgāṇa and Āndhra mandal towns joined the list — Bellampally, Mancherial, Chennūr, Korutla, Miryālagūḍa, Bhadrāchalam, the Godāvari delta towns, and the kṣetras a family names its days after: Basara, Medāram, Śrīśailam, Ahobilam, Draksharamam, Annavaram, Simhāchalam. But a list is never finished, so the place field now ends with an escape: a village not listed can be given its own latitude and longitude, and the clock it keeps is taken from the nearest listed city — which is exactly right, since a timezone is a wide thing and a sunrise is not.</p>
+    </div>
+    <div class="entry">
+      <div class="entry-head"><span class="tag tag-chg">Changed</span><h3>An ābdikam is not a to-do, and stops being reminded like one</h3></div>
+      <p>A personal tithi rode the same rails as any vrata: a dot on the calendar, the parva card on the morning of, and one line inside the daily digest the day before. Everything wrong with that is in the last part — a śrāddha needs a priest reached, samagri gathered, leave taken, and a bundled line at six the morning before is too late for all of it, besides reading as a chore next to "day three of the pāṭha".</p>
+      <p>So: two warnings instead of one. A quiet notice further out — seven days for a śrāddha, three for a janma tithi, settable per record — and the day-before reminder as before. The notice fires on its own day only; a week of daily nudges is not a warning. And a person's day now rings alone, titled with the person's name rather than "Stuti", in the register its kind asks for: a śrāddha named plainly and never cheerfully, a living person's janma tithi allowed to be warm.</p>
+      <p>The run-up also stands on the home screen for the whole notice window — a low line under the parva card giving the name, the tithi, the date and the days remaining, opening to the hour the rite is kept at: the aparāhṇa window computed for that specific day, which until now the reciter could only learn once the day had arrived.</p>
+    </div>
+  </div>
+</section>
+
+<section class="release">
+  <div class="rail">
+    <div class="ver">0.9.95</div>
+    <div class="date">8 September 2026</div>
+    <div class="rail-note">The one entry in an almanac that changes with the city, not the day.</div>
+  </div>
+  <div class="release-body">
+    <h2 class="release-title">The pañcāṅga computes grahaṇa</h2>
+    <div class="entry">
+      <div class="entry-head"><span class="tag tag-chg">Added</span><h3>Eclipses, computed rather than tabulated</h3></div>
+      <p>Every limb the app computed until now is an angle: a tithi is a difference of longitudes, a nakṣatra a longitude alone. An eclipse is the one thing in a pañcāṅga that longitude cannot answer — the moon passes the sun twelve times a year and stands opposite it twelve more, and whether either is a grahaṇa turns on how far it stands from the ecliptic at that instant, on how far away both bodies are, and for a solar eclipse on where the observer stands, since the moon's parallax is a full degree, four times its own diameter. So the app said nothing about the one day a vrata is kept by the clock. A new engine places sun and moon as points in space from the ephemeris longitudes and their own distance series, places the reciter on the spheroid, and differences the two directions from her position rather than from the earth's centre; the eclipse is the moment the discs overlap and the contacts fall out of the same separation. It answers with the type — khagrāsa, valayākāra, khaṇḍa, upacchāyā — the magnitude, the fraction of the disc covered, and the hours it is actually above the horizon here. A grahaṇa forbids food and worship through its span, the bath and japa belong to it, and Grahaṇa Gaurī Nomu is kept from the moment the sun is seized: all of those want the hour in this city, which is precisely what a printed global table cannot give.</p>
+    </div>
+    <div class="entry">
+      <div class="entry-head"><span class="tag tag-chg">Added</span><h3>And an eclipse nobody here can see is still named</h3></div>
+      <p>An eclipse the city misses had two ways of reading wrongly. Left to local geometry alone, the discs still overlap in a direction that lies under the reciter's feet — so a total eclipse over Spain came back as a modest partial, described as it would have looked through the earth. Asked at the point the moon stands overhead, a grazing Antarctic annular vanished entirely, because for such an eclipse the shadow axis passes near the limb and the sub-lunar point sees nothing. The engine now draws the axis from the sun through the moon and finds where it meets the globe — the true intersection when there is one, the nearest surface point when it misses — and names the eclipse from there. The day says a total or annular grahaṇa is running elsewhere on the earth and that nothing of it clears this horizon, so no vrata falls due; the pañcāṅga card carries the row above the limbs on the four tithis a year that can hold one, and is asked for nothing on the other twenty-six.</p>
+    </div>
+  </div>
+</section>
+
 <section class="release">
   <div class="rail">
     <div class="ver">0.9.94</div>
@@ -323,6 +774,14 @@ code { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: .
   </div>
   <div class="release-body">
     <h2 class="release-title">Nitya's nomulu shelf is kept in olive</h2>
+    <div class="entry">
+      <div class="entry-head"><span class="tag tag-fix">Fixed</span><h3>The beta latch greeted invited households in Devanāgarī</h3></div>
+      <p>The latch stands before onboarding, so nobody has chosen a language yet — but it was falling back to Devanāgarī, which meant the very first screen a new household saw asked for the word in a script most of them had not asked for. It now opens in English, and only shows itself in Telugu or Devanāgarī to a device that has already been through onboarding and picked one.</p>
+    </div>
+    <div class="entry">
+      <div class="entry-head"><span class="tag tag-fix">Fixed</span><h3>The tools panel dropped behind the status bar</h3></div>
+      <p>The pinned form of the tools bar had been taught the notch inset, but the dropping form — the one the pin button opens — was still hung at the very top of the frame with nothing but its own ten pixels of padding. On a notched phone that put its first row of controls under the status clock: it read as floating oddly high, and the taps went to the system, not the app. It now carries the same inset the pinned bar does, and the pin button in its corner comes down with it.</p>
+    </div>
     <div class="entry">
       <div class="entry-head"><span class="tag tag-fix">Changed</span><h3>The notification sheet stopped being a rival set of switches</h3></div>
       <p>Once the bell arrived on the pañcāṅga card and the sandhyā plate, the sheet was quietly holding a second copy of both — the same two settings reachable from two places with nothing to say they were the same setting, and a wall of undifferentiated toggles in between. The sheet is now banded by where a cue comes from: the daily reading cue, special days, the sandhyā junctures, the vratham list, progress, and the quiet hours that govern all of them. The two bands that mirror a card's bell say so in a line beneath the caption, so a reciter who set it at the card recognises it here instead of wondering which one wins. The “what arrives” preview moved out of the daily cue's own fields, where it had been hiding whenever the daily switch was off — even with three sandhyā cues live — and now closes the sheet as a summary of everything set above it.</p>

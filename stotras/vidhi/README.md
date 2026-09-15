@@ -111,6 +111,43 @@ Two recension differences from the Mādhyandina set were found and **deliberatel
 reconciled**: `जाते` for `देवि` in the Gāyatrī dismissal verse, and `आपो॒ हिष्ठा` as one word
 where the north splits `आपो हि ष्ठा`. Both are correct in their own tradition.
 
+- `07_tarpana_vidhi.txt` — 26 units, written 2026-09-15.
+
+The **naimittika** offering of water to the forefathers: the Āpastamba amāvāsyā tila-tarpaṇa, done
+on the new moon day and on the śrāddha day, in the Mahālaya fortnight, at the month's saṅkramaṇa
+and at an eclipse. Base text the printed booklet *Āpastamba Smārta Amāvāsyai Tarppaṇam*, Bhavani
+Book Centre, Madras (archive.org `hzzj_amavasya-tarpanam-apastamba-bhavani-book-center-tamil`),
+**read as page images** — its OCR returns no Sanskrit at all. The booklet prints its Sanskrit in
+**Tamil script**, which does not distinguish the stop series, so the Devanāgarī of every item the
+collating witness also carries is transliterated from the Telugu of
+`stotranidhi.com/pitru-tila-tarpanam-in-telugu/` instead, and the file says so.
+
+**vignanam.org's `shraddha-pitru-tarpana-vidhi` page is not a second witness**: it is a machine
+transliteration of that stotranidhi page, down to the Telugu ritual instructions rendered letter
+for letter into Devanāgarī. The two sites are one lineage. Seven differences between the printed
+booklet and the Telugu page are itemised in the file and **none is reconciled**; the largest is
+that the booklet says three Vedic ṛcs before the offering to each of the six men and the Telugu
+page says none. **161 accent marks**, in six units only, all machine-lifted from vignanam's
+accented Taittirīya Saṁhitā and Brāhmaṇa pāṭha. Four of the rite's mantras are in none of the 80
+accented Taittirīya pāṭha pages — they belong to the Āpastamba gṛhya mantra collection — and are
+therefore given **without marks**; the accented Ṛgveda carries three of them and was deliberately
+not used.
+
+**Where the Taittirīya tarpaṇa already lives, so that no session looks for it twice.** This folder
+holds three different tarpaṇas and they are not versions of one another:
+
+- The **daily** deva-ṛṣi-pitṛ tarpaṇa of this tradition is **`02_brahma_yajna_vidhi.txt`, units
+  42–49**. In the Āpastamba tradition it is the second half of the brahmayajña and is not a
+  separate work, which is why there is no separate daily tarpaṇa file here. That, and not `07`, is
+  what answers to `madhyandina/03_tarpana_vidhi.txt` for the daily rite.
+- The short **sandhyāṅga** tarpaṇa — Sandhyā, Gāyatrī, Brāhmī, Nimṛjī — is
+  **`01_krishna_yajurveda_sandhyavandanam.txt`, unit 23**.
+- The **naimittika** amāvāsyā tarpaṇa is `07_tarpana_vidhi.txt`.
+
+`samanya/10_pushkara_pitru_tarpanam.txt` holds the Puṣkara form of the rite, with the long list of
+further relations that the Telugu witness of `07` also carries and that the printed booklet does
+not; it is not repeated in `07`.
+
 Do not populate this folder further by adapting the Mādhyandina files.
 
 ## `samanya/` — rites that are not śākhā-specific

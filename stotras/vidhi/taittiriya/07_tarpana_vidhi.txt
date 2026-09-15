@@ -1,0 +1,509 @@
+Title: Tarpaṇa-vidhi (Āpastamba-smārta Amāvāsyā Tila-tarpaṇam)
+Devanāgarī: तर्पण-विधिः (आपस्तम्बस्मार्त अमावास्या तिलतर्पणम्)
+Telugu: తర్పణ-విధి (ఆపస్తంబ స్మార్త అమావాస్య తిలతర్పణము)
+
+Author: Anonymous (the received rite of the Āpastamba sūtra). The base text of this file was compiled by Paiṅkānāḍu Veṅkaṭarāma Śāstrigaḷ, who is named on its page 8 as the compiler, and published by Patthaṅgi Aruṇācalam of the Bhavani Book Centre, Madras.
+
+Type: vidhi (ritual manual) — not a stotra. Uses the one-extra-field vidhi format documented in `../madhyandina/01_sandhyopasana_vidhi.txt`: a `vidhi:` field carrying the ritual instruction, then deva / iast / en / tel / hi.
+
+Recension / śākhā: **South Indian smārta, Kṛṣṇa-Yajurveda, Taittirīya śākhā, Āpastamba sūtra.** The base text says so on its own title page: आपस्तम्ब स्मार्त अमावास्यै तर्प्पणम्. This is the naimittika rite, done on the new moon day and on the other occasions the base text lists — the śrāddha day, the Mahālaya fortnight, the month's saṅkramaṇa, and an eclipse of the sun or the moon. **It is not the daily tarpaṇa.** See the cross-references below.
+
+**This file is not a version of `../madhyandina/03_tarpana_vidhi.txt` and was not derived from it.** That is the northern Vājasaneyi rite, and nothing in it was consulted while this file was written. The two are the practice of different communities and neither supersedes the other.
+
+Accent: **present in six units and absent everywhere else, and the difference is the point.** 161 accent marks in the units — 66 udātta `॑` (U+0951), 91 anudātta `॒` (U+0952) and 4 dīrgha svarita `᳚` (U+1CDA) — standing in units 7, 11, 12, 15, 17 and 22. Those six passages are Vedic mantras that are printed with svara in the accented Taittirīya pāṭha, and **every one of them was lifted into this file by machine from that pāṭha and never typed**: `idam pitṛbhyo namo astvadya`, `udīratām avara utparāsaḥ` and `aṅgiraso naḥ pitaro navagvāḥ` from Taittirīya Saṁhitā 2.6; the three madhu verses from Taittirīya Saṁhitā 4.2; `namo vaḥ pitaro rasāya` from Taittirīya Saṁhitā 3.2; and `pitṛbhyaḥ svadhāvibhyaḥ svadhā namaḥ` from Taittirīya Brāhmaṇa 2.6. The source pages are vignanam.org's accented Devanāgarī Taittirīya pāṭha, which is a same-śākhā witness in an editorial lineage of its own. Two changes were made to the lifted strings and both were counted: **2 bracketed pada-repetitions and 2 anuvāka numerals** were removed, being that page's recitational apparatus and not text; and **1 site where it spells the nasal before a spirant with a zero-width space** was written `ग्ं`, which is the spelling the sibling files in this folder use. Nothing else in those six passages was altered by a character.
+
+**No accent was supplied anywhere else, and the places where it is missing were checked rather than assumed.** All 80 of vignanam.org's accented Taittirīya Saṁhitā, Brāhmaṇa and Āraṇyaka pāṭha pages were fetched and searched for every mantra in this rite. Four of them are not printed there at all: `āyantu naḥ pitaraḥ somyāsaḥ`, `āyāta pitaraḥ somyā gambhīraiḥ`, `ūrjaṁ vahantīr amṛtam` and `ye ceha pitaro ye ca neha`. They belong to the Āpastamba gṛhya mantra collection, which is where a domestic rite draws its mantras from, and no machine-readable accented edition of that collection was found. **They are therefore given here without marks.** The accented Ṛgveda carries three of them and was deliberately not used, because importing Ṛgvedic marking into a Taittirīya file is exactly what the cross-recension rule forbids. One related finding is recorded rather than acted on: where this rite says `āyāta pitaraḥ somyā gambhīraiḥ pathibhiḥ pūrvyaiḥ`, the Taittirīya Saṁhitā at 1.8 prints the dismissal form `pareta pitaraḥ somyā gambhīraiḥ pathibhiḥ pūrvyaiḥ` with a different second half. The two are not the same verse and the Saṁhitā's marks were not carried over.
+
+Source / recension: **base text is the printed booklet *Āpastamba Smārta Amāvāsyai Tarppaṇam*, Bhavani Book Centre, 19 Station Road, West Mambalam, Madras 33**, archive.org item `hzzj_amavasya-tarpanam-apastamba-bhavani-book-center-tamil` (36 pages; the amāvāsyā rite runs from page 12 to page 23, and pages 6 to 8 carry the compiler's preface and his rules on who is to perform the rite). **The whole book was read as page images.** Its `_djvu.txt` OCR is unusable — it returns broken Latin fragments and no Sanskrit at all — so nothing in this file comes from it.
+
+**A limitation of the base text, stated plainly because it bears on every line.** The booklet prints its Sanskrit **in Tamil script**, which does not distinguish the voiced, unvoiced and aspirated stops from one another. A Devanāgarī spelling cannot be read off such a page the way it can be read off a Telugu or Kannada one. So wherever the base text and the collating witness carry the same item, the Devanāgarī here is the machine transliteration of the **Telugu** witness by `bin/tel2dev.py`, and the base text is used for the order of service, the wording and the ritual direction. Where an item is in the base text alone — the saṅkalpa of unit 5, the invocation and seat of units 7 to 10, the tarpaṇa formulae, the dismissal of unit 24 — the Devanāgarī is the standard Sanskrit orthography of formulae the witness prints in a script that under-determines them, and the `vidhi:` field of each such unit says that the material comes from the base text. This is recorded as a weakness of the file, not passed over.
+
+Independent collation: **one collating witness, and it is one lineage and not two.**
+
+`stotranidhi.com/pitru-tila-tarpanam-in-telugu/`, Telugu script only, fetched 2026-09-15. Unlike the Taittirīya sandhyāvandana page of `01_krishna_yajurveda_sandhyavandanam.txt`, **this page is clean: zero Latin-`o`-for-anusvāra defects and zero zero-width joiners**, so nothing had to be repaired before transliterating it.
+
+**vignanam.org's `devanagari/shraddha-pitru-tarpana-vidhi.html` is not a second witness to this rite and must not be counted as one.** It is a machine transliteration of that same stotranidhi page: it carries the page's *Telugu ritual instructions* transliterated letter for letter into Devanāgarī, so that `తలమీద నీళ్ళను జల్లుకోండి` stands in its Devanāgarī column as `तलमीद नील्लनु जल्लुकोण्डि`, which is not Sanskrit and not an instruction anyone could follow. The two sites are one lineage. This is worth knowing in advance, because vignanam is a genuine accented Devanāgarī source for the Taittirīya pāṭha and it is easy to assume the same of its paddhati pages.
+
+**Seven differences between the two witnesses, itemised, and none of them reconciled.** They are large, and a reader should know the rite has two shapes.
+
+**(1) The saṅkalpa.** The base text names all twelve of the two lines and says `amāvāsyā puṇya kāle tilatarpaṇaṁ kariṣye`. The Telugu witness says only `asmat pitṝn uddiśya asmat pitṝṇāṁ puṇyalokāvāptyarthaṁ pitṛ tarpaṇaṁ kariṣye`. The base text's form is at unit 5; the other is recorded here and not carried into the line, because a bracketed variant needs to be the same clause and these are not.
+
+**(2) The invocation on the kūrca, and the seat.** The base text sets a kūrca for each line and invokes the forefathers onto it with `āyāta pitaraḥ somyā`, then gives them a seat with `śakṛdācchinnaṁ barhiḥ`. **The Telugu witness has neither.** Units 7 to 10 are from the base text.
+
+**(3) The nine ṛcs.** The base text says three ṛcs before the offering to each of the three men of a line — `udīratām`, `aṅgiraso naḥ` and `āyantu naḥ` for the father; `ūrjaṁ vahantīḥ`, `pitṛbhyaḥ svadhāvibhyaḥ` and `ye ceha pitaro` for the grandfather; the three madhu verses for the great-grandfather — and repeats the same nine for the mother's father's line. **The Telugu witness has none of them.** This is the largest difference between the two, and it is what makes the base text the fuller rite.
+
+**(4) The pitṛ-upasthāna.** The base text stands the worshipper up at the end and has him say `namo vaḥ pitaro rasāya`. **The Telugu witness has no upasthāna.** Unit 22 is from the base text.
+
+**(5) The dismissal.** The base text returns the forefathers to their place from the kūrca. **The Telugu witness has no dismissal.** Unit 24 is from the base text.
+
+**(6) The kāruṇya tarpaṇa.** The Telugu witness offers water, after the forefathers, to thirty-four further relations by name — wife, son, brother, daughter, sister, father's brother, mother's brother, son-in-law, daughter-in-law, father-in-law, mother-in-law, teacher and the rest. **The base text has no such list**, and confines the rite to the twelve of the two lines and then to those who are known and not known. That list is not in this file. It already stands, from two printed Telugu witnesses of its own, at `../samanya/10_pushkara_pitru_tarpanam.txt`, and putting it here would duplicate that file.
+
+**(7) The water pressed from the cloth.** The Telugu witness closes with `ye ke cāsmat kule jātāḥ`, for those of the family who left no son. **The base text does not have it.** It is kept here, at unit 25, and the `vidhi:` field says whose it is.
+
+Two smaller differences are noted in the `vidhi:` fields rather than here: the base text abbreviates the ācamana to three names where the Telugu witness gives twenty-four, and the Telugu witness offers to a stepmother where the base text does not.
+
+**No Gītā Press witness applies to this file.** Gītā Press publishes the northern Vājasaneyi rite, and an edition in the wrong śākhā is not a weaker witness but no witness at all. Its text is in this repository already, in its own folder, at `../madhyandina/03_tarpana_vidhi.txt`, and the two were not collated against each other at any point.
+
+Other sources searched and set aside, so that a later session need not search them again. `ebook-upayogiapps-com-read-deva-rishi-pitri-tarpana-vidhi` on archive.org has the right title but prints the northern saṅkalpa word for word and is the Gītā Press text. `apastamba-yajur-veda-trikaala-sandhyaavandanam` is genuinely Taittirīya but its tarpaṇa is only a Keśavādi one, unaccented. `vavilla_vaari_sandhya_vandanam` (Vavilla Ramaswamy Sastrulu and Sons) and `SandhyavandanaBhashyam_201704` (1916) are both in the right śākhā, but their Telugu OCR is destroyed and each carries only the short sandhyāṅga tarpaṇa. `apastambiya-purvaprayoga` is a real Āpastamba prayoga, but its tarpaṇa is the kāṇḍarṣi tarpaṇa of the upanayana. `ypoe-bodhayana-amavasya-tarpanam-by-s-sambandha-gurukka` is the same rite in the **Bodhāyana** sūtra, which is a different sūtra of the same śākhā and so belongs in a file of its own, not in this one. The two documents at parasakthifamily.org are headed for this very sūtra and confirm the order of service, but they are in phonetic English only and are a community compilation, so they were not used for any reading.
+
+Adhikāra — what the witnesses actually say, and what they do not say. This is recorded because the question is asked often and is usually answered from hearsay.
+
+**The living father is the restriction both witnesses state, and they state it first.** The base text heads a section on page 7 तர்ப்பணம் செய்ய வேண்டியவர்கள், those who are to perform the tarpaṇa, and its first sentence is that **only those whose father is no longer living are qualified to perform it**. The Telugu witness opens with the same rule as its first line on the page. The base text adds, on pages 7 and 8, that the mother's father's line is not offered to while the mother's father is living, and that when the father's father is living the offering moves up a generation, to the father, the grandfather's father and his father. `../02_brahma_yajna_vidhi.txt` unit 47 records from its own second witness that a man whose father is living does not wear the sacred thread over the right shoulder and holds it with the right thumb instead — that is, he makes the deva and ṛṣi offerings and not the pitṛ offering.
+
+**The Veda ties the rite to the sacred thread, which is to say to the upanayana.** Taittirīya Āraṇyaka 2, the svādhyāya-brāhmaṇa, was read for this file at vignanam.org's accented pāṭha page. Its first anuvāka says `प्रसृतो ह वै यज्ञोपवीतिनो यज्ञोऽप्रसृतोऽनुपवीतिनः` — the sacrifice of one who wears the yajñopavīta is carried through; that of one who does not wear it is not. The same anuvāka defines the three positions of the thread, upavīta, prācīnāvīta and nivīta, on which this whole rite turns. That is the ground of the restriction to the initiated, and it is a Vedic statement and not a later one.
+
+**Varṇa appears only as a change of one word, and not as a bar.** Both witnesses give the same rule: a brāhmaṇa says `śarmāṇam` in the formula, a kṣatriya `varmāṇam`, a vaiśya `guptam`. The same rule stands in the northern manual at `../madhyandina/03_tarpana_vidhi.txt` unit 1.
+
+**Nothing read for this file prescribes anything for women, for boys before the upanayana, or for śūdras, and the absence is reported as an absence.** Neither witness mentions them. The Āpastamba Smārta Prayoga (archive.org `ApastamaSmartaPrayoga`) was fetched and searched, and its discussion of tarpaṇa concerns only the tarpaṇa that is a limb of the śrāddha. No nibandha was reached on the question. A community document at parasakthifamily.org does make a general statement about who should perform the rite, and it is **deliberately not used here**, because it is not an edition and this file does not fill a gap in its witnesses from a source it would not otherwise cite.
+
+Cross-references, in both directions, because the Taittirīya tarpaṇa is in three places in this corpus and they are three different rites.
+
+- **The daily deva-ṛṣi-pitṛ tarpaṇa of this tradition is at `02_brahma_yajna_vidhi.txt`, units 42 to 49.** In the Āpastamba tradition that rite is the second half of the brahmayajña and is not a separate work, which is why this folder has no separate daily tarpaṇa file. That is the file which answers to `../madhyandina/03_tarpana_vidhi.txt` for the daily rite. **This file does not repeat it and does not supersede it.**
+- **The short tarpaṇa that is a limb of the sandhyā — Sandhyā, Gāyatrī, Brāhmī and Nimṛjī — is at `01_krishna_yajurveda_sandhyavandanam.txt`, unit 23.**
+- **`../samanya/10_pushkara_pitru_tarpanam.txt`** is the offering of water to the forefathers on the bank of a river in her Puṣkara, from two printed Telugu witnesses. It holds the long list of further relations that the Telugu witness of this file also carries and this file does not.
+- **`../samanya/01_gayatri_tarpanam.txt`** and **`../samanya/02_bhishmashtami_tarpanam.txt`** are other tarpaṇas that are not śākhā-specific.
+
+Verse count: 26 units. This is not a verse count in the stotra sense. The work is ritual prose punctuated by mantras, and the numbering is this corpus's and not the book's.
+
+Sections:
+पूर्वाङ्गम् — The preliminaries: purification, ācamana, the pavitrī and prāṇāyāma (units 1–4)
+सङ्कल्पः — The resolve and the salutation (units 5–6)
+आवाहनम् आसनं च — The arghya vessel, the invocation on the kūrca, and the seat (units 7–10)
+पितृवर्गतर्पणम् — The offering to the father's line (units 11–18)
+मातामहवर्गतर्पणम् — The offering to the mother's father's line (units 19–20)
+समापनम् — The closing: the unknown forefathers, the upasthāna, the dismissal and the water on the kuśa (units 21–26)
+
+Blurb: On the new moon day a man offers water to his forefathers. This file gives what is said. The rite is done after the bath and after the midday sandhyā. He sits facing south, wears a ring of darbha grass on his ring finger, does ācamana and prāṇāyāma, and makes his resolve. He then moves the sacred thread from the left shoulder to the right, which is the position kept through the whole offering. He sets a bundle of darbha grass on the ground for his father's line and another for his mother's father's line, and invites his forefathers to come and be seated there. He offers water mixed with black sesame seeds, three times to each forefather in turn, naming the gotra and the name of each. Six forefathers are named in his father's line and six in his mother's father's line. Before the offering to each of the men, a Vedic verse is said. At the end he offers to those of both lines whom he knows and those whom he does not know, salutes them standing, and returns them to their place. The last offering is water on the kuśa grass, for those who have no mother, no father and no kinsman to offer for them. **Only a man whose father is no longer living performs this rite.**
+--- unit 1 | section: Preliminaries ---
+vidhi:
+The rite is done on the new moon day, after the bath and after the midday sandhyā, in dry washed cloth. Sit facing south. Sprinkle water on the head and say this. Both witnesses begin here.
+deva:
+शिवाय गुरवे नमः |
+अपवित्रः पवित्रोवा सर्वावस्थां गतोऽपि वा |
+यः स्मरेत् पुण्डरीकाक्षं स बाह्याभ्यन्तरः शुचिः ||
+पुण्डरीकाक्ष पुण्डरीकाक्ष पुण्डरीकाक्ष ||
+शुक्लाम्बरधरं विष्णुं शशिवर्णं चतुर्भुजं |
+प्रसन्नवदनं ध्यायेत् सर्व विघ्नोपशान्तये ||
+वक्रतुण्ड महाकाय कोटिसूर्यसमप्रभ |
+निर्विघ्नं कुरु मे देव सर्वकार्येषु सर्वदा ||
+ओं श्री महागणाधिपतये नमः |
+iast:
+śivāya gurave namaḥ |
+apavitraḥ pavitrovā sarvāvasthāṁ gato'pi vā |
+yaḥ smaret puṇḍarīkākṣaṁ sa bāhyābhyantaraḥ śuciḥ ||
+puṇḍarīkākṣa puṇḍarīkākṣa puṇḍarīkākṣa ||
+śuklāmbaradharaṁ viṣṇuṁ śaśivarṇaṁ caturbhujaṁ |
+prasannavadanaṁ dhyāyet sarva vighnopaśāntaye ||
+vakratuṇḍa mahākāya koṭisūryasamaprabha |
+nirvighnaṁ kuru me deva sarvakāryeṣu sarvadā ||
+oṁ śrī mahāgaṇādhipataye namaḥ |
+en: Salutation to Śiva, who is the teacher. Whether a man is pure or impure, and in whatever state he may be, if he remembers the lotus-eyed Lord he becomes clean without and within. Lotus-eyed Lord, lotus-eyed Lord, lotus-eyed Lord. He who wears white cloth, who pervades all, whose colour is that of the moon, who has four arms and a gracious face — let him be meditated upon, so that every obstacle may be stilled. O Lord of the curved trunk and the great body, whose light is that of ten million suns, make all my works free of obstacles at all times. Salutation to the great lord of the hosts.
+tel: శివునకు, గురువునకు నమస్కారము. పవిత్రుడైనను, అపవిత్రుడైనను, ఏ స్థితియందు ఉన్నను, పుండరీకాక్షుని స్మరించినవాడు లోపల వెలుపల శుద్ధుడగును. పుండరీకాక్ష, పుండరీకాక్ష, పుండరీకాక్ష. తెల్లని వస్త్రము ధరించినవాడు, సర్వవ్యాపి, చంద్రుని వంటి వర్ణము గలవాడు, నాలుగు భుజములు గలవాడు, ప్రసన్నమైన ముఖము గలవాడు — విఘ్నములన్నియు శాంతించుటకు ఆయనను ధ్యానించవలెను. వక్రమైన తొండము, గొప్ప శరీరము గలవాడా, కోటి సూర్యుల కాంతి గలవాడా, నా కార్యములన్నిటిని ఎల్లప్పుడును నిర్విఘ్నముగా చేయుము. శ్రీ మహాగణాధిపతికి నమస్కారము.
+hi: शिवको, जो गुरु हैं, नमस्कार। पवित्र हो या अपवित्र, किसी भी अवस्थामें हो, जो पुण्डरीकाक्षका स्मरण करता है वह भीतर और बाहर शुद्ध हो जाता है। पुण्डरीकाक्ष, पुण्डरीकाक्ष, पुण्डरीकाक्ष। श्वेत वस्त्र धारण करनेवाले, सर्वव्यापी, चन्द्रमाके समान वर्णवाले, चार भुजावाले और प्रसन्न मुखवाले — सब विघ्नोंकी शान्तिके लिये उनका ध्यान करना चाहिये। हे वक्रतुण्ड, हे महाकाय, करोड़ों सूर्योंके समान कान्तिवाले देव, मेरे सब कार्योंको सदा निर्विघ्न कीजिये। श्री महागणाधिपतिको नमस्कार।
+
+--- unit 2 | section: Preliminaries ---
+vidhi:
+Ācamana. The base text gives the twenty-four names. The Tamil manual abbreviates this to the first three names only, and that difference is not reconciled here.
+deva:
+ओं केशवाय स्वाहा | ओं नारायणाय स्वाहा | ओं माधवाय स्वाहा |
+ओं गोविन्दाय नमः | ओं विष्णवे नमः | ओं मधुसूदनाय नमः | ओं त्रिविक्रमाय नमः |
+ओं वामनाय नमः | ओं श्रीधराय नमः | ओं हृषीकेशाय नमः | ओं पद्मनाभाय नमः |
+ओं दामोदराय नमः | ओं सङ्कर्षणाय नमः | ओं वासुदेवाय नमः | ओं प्रद्युम्नाय नमः |
+ओं अनिरुद्धाय नमः | ओं पुरुषोत्तमाय नमः | ओं अधोक्षजाय नमः | ओं नारसिंहाय नमः |
+ओं अच्युताय नमः | ओं जनार्दनाय नमः | ओं उपेन्द्राय नमः | ओं हरये नमः |
+ओं श्री कृष्णाय नमः |
+iast:
+oṁ keśavāya svāhā | oṁ nārāyaṇāya svāhā | oṁ mādhavāya svāhā |
+oṁ govindāya namaḥ | oṁ viṣṇave namaḥ | oṁ madhusūdanāya namaḥ | oṁ trivikramāya namaḥ |
+oṁ vāmanāya namaḥ | oṁ śrīdharāya namaḥ | oṁ hṛṣīkeśāya namaḥ | oṁ padmanābhāya namaḥ |
+oṁ dāmodarāya namaḥ | oṁ saṅkarṣaṇāya namaḥ | oṁ vāsudevāya namaḥ | oṁ pradyumnāya namaḥ |
+oṁ aniruddhāya namaḥ | oṁ puruṣottamāya namaḥ | oṁ adhokṣajāya namaḥ | oṁ nārasiṁhāya namaḥ |
+oṁ acyutāya namaḥ | oṁ janārdanāya namaḥ | oṁ upendrāya namaḥ | oṁ haraye namaḥ |
+oṁ śrī kṛṣṇāya namaḥ |
+en: Ācamana, the sipping of water. Water is sipped three times with the first three names, and the remaining names are said while touching the parts of the body in order. Each name is a name of the Lord: Keśava, Nārāyaṇa, Mādhava, Govinda, Viṣṇu, Madhusūdana, Trivikrama, Vāmana, Śrīdhara, Hṛṣīkeśa, Padmanābha, Dāmodara, Saṅkarṣaṇa, Vāsudeva, Pradyumna, Aniruddha, Puruṣottama, Adhokṣaja, Nārasiṁha, Acyuta, Janārdana, Upendra, Hari, Śrī Kṛṣṇa.
+tel: ఆచమనము. మొదటి మూడు నామములతో మూడుసార్లు నీరు త్రాగవలెను. మిగిలిన నామములను చెప్పుచు శరీరావయవములను క్రమముగా తాకవలెను. ఒక్కొక్క నామము భగవంతుని నామమే: కేశవ, నారాయణ, మాధవ, గోవింద, విష్ణు, మధుసూదన, త్రివిక్రమ, వామన, శ్రీధర, హృషీకేశ, పద్మనాభ, దామోదర, సంకర్షణ, వాసుదేవ, ప్రద్యుమ్న, అనిరుద్ధ, పురుషోత్తమ, అధోక్షజ, నారసింహ, అచ్యుత, జనార్దన, ఉపేంద్ర, హరి, శ్రీకృష్ణ.
+hi: आचमन। पहले तीन नामोंसे तीन बार जल पीना चाहिये, और शेष नाम कहते हुए क्रमसे शरीरके अङ्गोंका स्पर्श करना चाहिये। हर एक नाम भगवान्का ही नाम है: केशव, नारायण, माधव, गोविन्द, विष्णु, मधुसूदन, त्रिविक्रम, वामन, श्रीधर, हृषीकेश, पद्मनाभ, दामोदर, सङ्कर्षण, वासुदेव, प्रद्युम्न, अनिरुद्ध, पुरुषोत्तम, अधोक्षज, नारसिंह, अच्युत, जनार्दन, उपेन्द्र, हरि, श्रीकृष्ण।
+
+--- unit 3 | section: Preliminaries ---
+vidhi:
+Wearing the pavitrī. The pavitrī is a ring made of three darbha blades, worn on the ring finger. Darbha blades are also spread under the seat, and two more are held with the pavitrī. Then throw unbroken rice behind you.
+deva:
+ओं पवित्रवन्तः परिवाजमासते पितैषां प्रत्नो अभि रक्षति व्रतम् |
+महस्समुद्रं वरुणस्तिरो दधे धीरा इच्छेकुर्धरुणेष्वारभम् ||
+पवित्रं ते विततं ब्रह्मणस्पते प्रभुर्गात्राणि पर्येषि विश्वतः |
+अतप्ततनूर्न तदामो अश्नुते शृतास इद्वहन्तस्तत्समाशत ||
+पवित्रं धृत्वा ||
+उत्तिष्ठन्तु भूतपिशाचाः एते भूमिभारकाः |
+एतेषामविरोधेन ब्रह्मकर्म समारभे ||
+iast:
+oṁ pavitravantaḥ parivājamāsate pitaiṣāṁ pratno abhi rakṣati vratam |
+mahassamudraṁ varuṇastiro dadhe dhīrā icchekurdharuṇeṣvārabham ||
+pavitraṁ te vitataṁ brahmaṇaspate prabhurgātrāṇi paryeṣi viśvataḥ |
+ataptatanūrna tadāmo aśnute śṛtāsa idvahantastatsamāśata ||
+pavitraṁ dhṛtvā ||
+uttiṣṭhantu bhūtapiśācāḥ ete bhūmibhārakāḥ |
+eteṣāmavirodhena brahmakarma samārabhe ||
+en: The purifiers sit about the strainer; their ancient father guards their observance. Varuṇa has set the great sea apart; the wise were able to draw it down into its supports. Your strainer is spread wide, O Lord of prayer; as master you move about the limbs on every side. He whose body is not heated, being raw, does not reach it; only those who are cooked, carrying it, have attained it. Having worn the pavitrī. Let the beings and the spirits who are a burden to the earth rise and go. Without opposing them, I begin this work of the Veda.
+tel: పవిత్రము గలవారు పవిత్రపాత్ర చుట్టు కూర్చుందురు; వారి పురాతనుడైన తండ్రి వారి వ్రతమును కాపాడును. వరుణుడు గొప్ప సముద్రమును వేరుగా ఉంచెను; ధీరులు దానిని ఆధారములయందు తెచ్చుకొనగలిగిరి. బ్రహ్మణస్పతీ, నీ పవిత్రము విస్తరించి యున్నది; ప్రభువువై నీవు అన్ని వైపుల అవయవములను పొందుచున్నావు. పక్వము కాని శరీరము గలవాడు దానిని పొందడు; పక్వమైనవారే దానిని మోసి పొందిరి. పవిత్రమును ధరించి. భూమికి భారమైన భూతపిశాచములు లేచి పోవును గాక. వారికి విరోధము లేకుండా ఈ బ్రహ్మకర్మను ఆరంభించుచున్నాను.
+hi: पवित्रवाले पवित्रके चारों ओर बैठते हैं; उनका पुरातन पिता उनके व्रतकी रक्षा करता है। वरुणने महान् समुद्रको अलग रखा; धीर पुरुष उसे आधारोंमें ला सके। हे ब्रह्मणस्पते, आपका पवित्र फैला हुआ है; आप प्रभु होकर सब ओरसे अङ्गोंमें व्याप्त होते हैं। जिसका शरीर तपा नहीं, वह कच्चा होनेसे उसे नहीं पाता; जो पक्व हैं, वे ही उसे धारण कर प्राप्त हुए हैं। पवित्री धारण करके। भूमिको भार देनेवाले भूत-पिशाच उठकर चले जायँ। उनका विरोध किये बिना मैं यह ब्रह्मकर्म आरम्भ करता हूँ।
+
+--- unit 4 | section: Preliminaries ---
+vidhi:
+Prāṇāyāma, three times.
+deva:
+ओं भूः | ओं भुवः | ओं सुवः | ओं महः |
+ओं जनः | ओं तपः | ओं सत्यं |
+ओं तत्सवितुर्वरेण्यं भर्गो देवस्य धीमहि |
+धियो यो नः प्रचोदयात् |
+ओमापो ज्योती रसोमृतं ब्रह्म भूर्भुवस्सुवरोम् |
+iast:
+oṁ bhūḥ | oṁ bhuvaḥ | oṁ suvaḥ | oṁ mahaḥ |
+oṁ janaḥ | oṁ tapaḥ | oṁ satyaṁ |
+oṁ tatsaviturvareṇyaṁ bhargo devasya dhīmahi |
+dhiyo yo naḥ pracodayāt |
+omāpo jyotī rasomṛtaṁ brahma bhūrbhuvassuvarom |
+en: Oṁ, earth. Oṁ, mid-air. Oṁ, the world of light. Oṁ, the great. Oṁ, the world of men. Oṁ, austerity. Oṁ, truth. We meditate on that adorable splendour of the god Savitṛ; may he impel our understandings. Oṁ — the waters, the light, the essence, the immortal, Brahman; earth, mid-air, the world of light — Oṁ.
+tel: ఓం భూః. ఓం భువః. ఓం సువః. ఓం మహః. ఓం జనః. ఓం తపః. ఓం సత్యం. సవితృదేవుని ఆ వరణీయమైన తేజస్సును ధ్యానించుచున్నాము; ఆయన మన బుద్ధులను ప్రేరేపించును గాక. ఓం — జలము, జ్యోతి, రసము, అమృతము, బ్రహ్మము; భూః, భువః, సువః — ఓం.
+hi: ॐ भूः। ॐ भुवः। ॐ सुवः। ॐ महः। ॐ जनः। ॐ तपः। ॐ सत्यम्। सविता देवके उस वरणीय तेजका हम ध्यान करते हैं; वे हमारी बुद्धियोंको प्रेरित करें। ॐ — जल, ज्योति, रस, अमृत, ब्रह्म; भूः, भुवः, सुवः — ॐ।
+
+--- unit 5 | section: Saṅkalpa ---
+vidhi:
+The saṅkalpa, in the form the Tamil manual prints. It names all twelve of the two lines and says that the offering is of sesame and water. Put the sacred thread over the right shoulder at the word prācīnāvītī. In place of the blanks say the actual year, ayana, season, month, fortnight, lunar day and weekday. The base text's saṅkalpa is much shorter and names no one: it says only that the worshipper offers water to his forefathers so that they may reach a world of merit. That difference is not reconciled.
+deva:
+श्री गोविन्द गोविन्द गोविन्द | अद्य श्री भगवतः महापुरुषस्य विष्णोराज्ञया प्रवर्तमानस्य अद्य ब्रह्मणः द्वितीय परार्धे श्वेतवराह कल्पे वैवस्वत मन्वन्तरे कलियुगे प्रथमे पादे जम्बूद्वीपे भरतवर्षे भरतखण्डे मेरोः दक्षिणे पार्श्वे शकाब्दे अस्मिन् वर्तमाने व्यावहारिके प्रभवादीनां षष्ट्याः संवत्सराणां मध्ये ___ नाम संवत्सरे ___ अयने ___ ऋतौ ___ मासे कृष्ण पक्षे अमावास्यायां पुण्यतिथौ ___ वासर युक्तायां नक्षत्र युक्तायां विष्णुयोग विष्णुकरण एवं गुण विशेषण विशिष्टायां अस्यां अमावास्यायां पुण्यतिथौ || प्राचीनावीती || वसुरुद्रादित्य स्वरूपाणां अस्मत् पितृ पितामह प्रपितामहानां मातृ पितामही प्रपितामहीनां सपत्नीक मातामह मातुः पितामह मातुः प्रपितामहानां उभयवंश पितॄणां अक्षय्य तृप्त्यर्थं अमावास्या पुण्य काले तिलतर्पणं करिष्ये ||
+iast:
+śrī govinda govinda govinda | adya śrī bhagavataḥ mahāpuruṣasya viṣṇorājñayā pravartamānasya adya brahmaṇaḥ dvitīya parārdhe śvetavarāha kalpe vaivasvata manvantare kaliyuge prathame pāde jambūdvīpe bharatavarṣe bharatakhaṇḍe meroḥ dakṣiṇe pārśve śakābde asmin vartamāne vyāvahārike prabhavādīnāṁ ṣaṣṭyāḥ saṁvatsarāṇāṁ madhye ___ nāma saṁvatsare ___ ayane ___ ṛtau ___ māse kṛṣṇa pakṣe amāvāsyāyāṁ puṇyatithau ___ vāsara yuktāyāṁ nakṣatra yuktāyāṁ viṣṇuyoga viṣṇukaraṇa evaṁ guṇa viśeṣaṇa viśiṣṭāyāṁ asyāṁ amāvāsyāyāṁ puṇyatithau || prācīnāvītī || vasurudrāditya svarūpāṇāṁ asmat pitṛ pitāmaha prapitāmahānāṁ mātṛ pitāmahī prapitāmahīnāṁ sapatnīka mātāmaha mātuḥ pitāmaha mātuḥ prapitāmahānāṁ ubhayavaṁśa pitṝṇāṁ akṣayya tṛptyarthaṁ amāvāsyā puṇya kāle tilatarpaṇaṁ kariṣye ||
+en: Śrī Govinda, Govinda, Govinda. Today, under the command of the Lord Viṣṇu, the great Person, by which all things proceed: in the second half of the life of Brahmā, in the Śveta-Varāha kalpa, in the age of Manu Vaivasvata, in the Kali age, in its first quarter; in the continent Jambū, in the land of Bhārata, in the region of Bhārata, on the southern side of Meru; in this current year of the Śaka reckoning, in such a year among the sixty beginning with Prabhava, in such an ayana, in such a season, in such a month, in the dark fortnight, on the new moon day, on such a weekday and under such a star, on this auspicious new moon day so described. Now the sacred thread is worn over the right shoulder. My father, my father's father and his father, my mother, my father's mother and her mother's mother, my mother's father with his wife, my mother's father's father and his father — all these of both lines are in the form of the Vasus, the Rudras and the Ādityas. For their unfailing satisfaction, at this holy hour of the new moon, I shall offer sesame and water.
+tel: శ్రీ గోవింద గోవింద గోవింద. మహాపురుషుడైన శ్రీ విష్ణువు ఆజ్ఞచేత సర్వము నడచుచుండగా, ఈనాడు బ్రహ్మదేవుని ద్వితీయ పరార్ధమున, శ్వేతవరాహ కల్పమున, వైవస్వత మన్వంతరమున, కలియుగ ప్రథమ పాదమున, జంబూద్వీపమున, భరతవర్షమున, భరతఖండమున, మేరువునకు దక్షిణ భాగమున, ప్రస్తుత శకవర్షమున, ప్రభవ మొదలైన అరువది సంవత్సరములలో ఫలానా సంవత్సరమున, ఫలానా అయనమున, ఋతువున, మాసమున, కృష్ణ పక్షమున, అమావాస్య పుణ్యతిథియందు, ఫలానా వారమున, నక్షత్రమున — ఈ గుణవిశేషణములచేత విశిష్టమైన ఈ అమావాస్య పుణ్యతిథియందు. ఇప్పుడు యజ్ఞోపవీతమును కుడి భుజము మీదుగా వేసుకొనవలెను. వసు, రుద్ర, ఆదిత్య స్వరూపులైన నా తండ్రి, తాత, ముత్తాత; తల్లి, నాయనమ్మ, ముత్తవ్వ; భార్యతో కూడిన మాతామహుడు, తల్లి తాత, తల్లి ముత్తాత — ఉభయ వంశముల ఈ పితృదేవతల అక్షయమైన తృప్తి కొరకు, ఈ అమావాస్య పుణ్యకాలమున తిలతర్పణమును చేయుచున్నాను.
+hi: श्री गोविन्द, गोविन्द, गोविन्द। महापुरुष श्रीविष्णुकी आज्ञासे सब कुछ चल रहा है; आज ब्रह्माजीके द्वितीय परार्धमें, श्वेतवराह कल्पमें, वैवस्वत मन्वन्तरमें, कलियुगके प्रथम चरणमें, जम्बूद्वीपमें, भरतवर्षमें, भरतखण्डमें, मेरुके दक्षिण भागमें, वर्तमान शक वर्षमें, प्रभव आदि साठ संवत्सरोंमेंसे अमुक संवत्सरमें, अमुक अयन, ऋतु, मासमें, कृष्ण पक्षमें, अमावास्या पुण्यतिथिमें, अमुक वार और अमुक नक्षत्रमें — इन गुण-विशेषणोंसे विशिष्ट इस अमावास्या पुण्यतिथिमें। अब यज्ञोपवीत दाहिने कन्धेपर किया जाता है। वसु, रुद्र और आदित्यके स्वरूप मेरे पिता, पितामह, प्रपितामह; माता, पितामही, प्रपितामही; पत्नीसहित मातामह, माताके पितामह और प्रपितामह — दोनों वंशोंके इन पितरोंकी अक्षय तृप्तिके लिये इस अमावास्याके पुण्य कालमें मैं तिल और जलका तर्पण करूँगा।
+
+--- unit 6 | section: Saṅkalpa ---
+vidhi:
+The salutation, from the base text. The Tamil manual says this only at the end of the rite.
+deva:
+ईशानः पितृरूपेण महादेवो महेश्वरः |
+प्रीयतां भगवानीशः परमात्मा सदाशिवः ||
+देवताभ्यः पितृभ्यश्च महायोगिभ्य एव च |
+नमस्स्वाहायै स्वधायै नित्यमेव नमो नमः ||
+मन्त्रमध्ये क्रियामध्ये विष्णोस्स्मरण पूर्वकं |
+यत्किञ्चित्क्रियते कर्म तत्कोटि गुणितं भवेत् ||
+विष्णुर्विष्णुर्विष्णुः ||
+iast:
+īśānaḥ pitṛrūpeṇa mahādevo maheśvaraḥ |
+prīyatāṁ bhagavānīśaḥ paramātmā sadāśivaḥ ||
+devatābhyaḥ pitṛbhyaśca mahāyogibhya eva ca |
+namassvāhāyai svadhāyai nityameva namo namaḥ ||
+mantramadhye kriyāmadhye viṣṇossmaraṇa pūrvakaṁ |
+yatkiñcitkriyate karma tatkoṭi guṇitaṁ bhavet ||
+viṣṇurviṣṇurviṣṇuḥ ||
+en: Īśāna, who is Mahādeva and Maheśvara, stands in the form of the forefathers. May the Lord, the supreme self, Sadāśiva, be pleased. To the gods, to the forefathers and to the great yogins, salutation; to Svāhā and to Svadhā, salutation for ever, salutation. Whatever work is done in the middle of a mantra or in the middle of a rite, if Viṣṇu is first remembered, becomes ten million times as much. Viṣṇu, Viṣṇu, Viṣṇu.
+tel: మహాదేవుడు, మహేశ్వరుడు అయిన ఈశానుడు పితృరూపమున నిలిచియున్నాడు. పరమాత్ముడైన సదాశివుడు ప్రీతి చెందును గాక. దేవతలకు, పితృదేవతలకు, మహాయోగులకు నమస్కారము; స్వాహాకు, స్వధాకు నిత్యము నమస్కారము, నమస్కారము. మంత్రము మధ్యను, క్రియ మధ్యను, విష్ణువును స్మరించి చేసిన కర్మ కోటి రెట్లగును. విష్ణు, విష్ణు, విష్ణు.
+hi: महादेव और महेश्वर ईशान पितृरूपसे स्थित हैं। परमात्मा सदाशिव भगवान् प्रसन्न हों। देवताओंको, पितरोंको और महायोगियोंको नमस्कार; स्वाहा और स्वधाको नित्य नमस्कार, नमस्कार। मन्त्रके बीचमें या क्रियाके बीचमें विष्णुका स्मरण करके जो भी कर्म किया जाता है, वह करोड़ गुना हो जाता है। विष्णु, विष्णु, विष्णु।
+
+--- unit 7 | section: Invocation and seat ---
+vidhi:
+The arghya vessel. Put sandal, unbroken rice and one darbha blade into it. The second of these two verses stands accented in the Taittirīya Saṁhitā and is given here in that accentuation, lifted from the Saṁhitā text. The first verse is not printed in that Saṁhitā and is given without marks.
+deva:
+अर्घ्यपात्रयोः अमी गन्धाः | पुष्पार्था इमे अक्षताः | अमी कुशाः |
+ओं आयन्तु नः पितरस्सोम्यासोग्निष्वात्ताः पथिभिर्देव यानैः |
+अस्मिन् यज्ञे स्वधया मदं त्वधि बृवन्तु ते अवन्त्व स्मान् ||
+इ॒द-म्पि॒तृभ्यो॒ नमो॑ अस्त्व॒द्य ये पूर्वा॑सो॒ य उप॑रास ई॒युः । ये पार्थि॑वे॒ रज॒स्या निष॑त्ता॒ ये वा॑ नू॒नग्ं सु॑वृ॒जना॑सु वि॒क्षु ||
+पितृदेवताभ्यो नमः |
+iast:
+arghyapātrayoḥ amī gandhāḥ | puṣpārthā ime akṣatāḥ | amī kuśāḥ |
+oṁ āyantu naḥ pitarassomyāsogniṣvāttāḥ pathibhirdeva yānaiḥ |
+asmin yajñe svadhayā madaṁ tvadhi bṛvantu te avantva smān ||
+ida-mpitṛbhyo namo astvadya ye pūrvāso ya uparāsa īyuḥ | ye pārthive rajasyā niṣattā ye vā nūnagṁ suvṛjanāsu vikṣu ||
+pitṛdevatābhyo namaḥ |
+en: These are the fragrances for the arghya vessel. These unbroken grains stand for flowers. These are the kuśa blades. Let our forefathers come, the ones dear to Soma, who have eaten by the fire, along the paths the gods travel. Let them rejoice at this offering with the svadhā call, let them speak for us, let them protect us. Let this salutation be to the forefathers today — to those who went before and to those who came after, to those who are seated in the earthly air and to those who are among the good peoples. Salutation to the forefathers.
+tel: ఇవి అర్ఘ్యపాత్రకు గంధములు. పుష్పముల స్థానమున ఈ అక్షతలు. ఇవి కుశలు. సోమునికి ప్రియులై, అగ్నిచేత భుజించినవారై, దేవయాన మార్గములచేత మన పితృదేవతలు వచ్చుదురు గాక. ఈ యజ్ఞమునందు స్వధాతో వారు తృప్తి పొంది, మా పక్షమున మాటలాడి, మమ్ము రక్షింతురు గాక. ఈనాడు పితృదేవతలకు ఈ నమస్కారము ఉండును గాక — ముందు వెళ్ళినవారికి, తరువాత వచ్చినవారికి, భూమి యొక్క రజస్సునందు కూర్చున్నవారికి, మంచి జనములయందు ఉన్నవారికి. పితృదేవతలకు నమస్కారము.
+hi: ये अर्घ्यपात्रके लिये गन्ध हैं। पुष्पके स्थानपर ये अक्षत हैं। ये कुश हैं। सोमके प्रिय, अग्निसे भोजन किये हुए हमारे पितर देवयान मार्गोंसे यहाँ आवें। इस यज्ञमें स्वधाके साथ तृप्त होकर हमारे पक्षमें कहें और हमारी रक्षा करें। आज पितरोंको यह नमस्कार हो — जो पहले गये और जो पीछे आये, जो पृथिवीके रजमें बैठे हैं और जो अच्छे लोगोंमें हैं, उन सबको।
+
+--- unit 8 | section: Invocation and seat ---
+vidhi:
+The invocation on the kūrca. A kūrca is a bundle of darbha. Spread darbha blades from east to west on clean ground or on a silver, brass or copper plate, and set the kūrca on them with its tip to the south. One kūrca is set for the father's line and another for the mother's father's line. Everything in this unit and the two that follow comes from the Tamil manual. The base text has no invocation on a kūrca at all.
+deva:
+आयात पितरः सोम्या गम्भीरैः पथिभिः पूर्व्यैः |
+प्रजामस्मभ्यं ददतो रयिं च दीर्घायुत्वं च शतसारदं च |
+अस्मिन् कूर्चे वर्ग द्वय पितॄन् आवाहयामि ||
+iast:
+āyāta pitaraḥ somyā gambhīraiḥ pathibhiḥ pūrvyaiḥ |
+prajāmasmabhyaṁ dadato rayiṁ ca dīrghāyutvaṁ ca śatasāradaṁ ca |
+asmin kūrce varga dvaya pitṝn āvāhayāmi ||
+en: Come, forefathers dear to Soma, along the deep and ancient paths, giving us offspring and wealth and long life and a hundred autumns. On this kūrca I invoke the forefathers of both lines.
+tel: సోమునికి ప్రియులైన పితృదేవతలారా, గంభీరములైన ప్రాచీన మార్గములచేత రండు; మాకు సంతానమును, సంపదను, దీర్ఘాయువును, నూరు శరత్తులను ఇచ్చుచు రండు. ఈ కూర్చమునందు ఉభయ వంశముల పితృదేవతలను ఆవాహనము చేయుచున్నాను.
+hi: हे सोमके प्रिय पितरो, गम्भीर और प्राचीन मार्गोंसे आइये; हमें सन्तान, धन, दीर्घ आयु और सौ शरद् देते हुए आइये। इस कूर्चपर मैं दोनों वंशोंके पितरोंका आवाहन करता हूँ।
+
+--- unit 9 | section: Invocation and seat ---
+vidhi:
+The two invocation formulae. In place of the blanks say the gotra and the name. A brāhmaṇa says śarmāṇam, a kṣatriya varmāṇam, a vaiśya guptam. The women of a line are invoked together with the men of that line.
+deva:
+___ गोत्रान् ___ शर्मणः वसुरुद्रादित्य स्वरूपान् अस्मत् पितृ पितामह प्रपितामहान् आवाहयामि |
+___ गोत्राः ___ दाः वसुरुद्रादित्य स्वरूपाः अस्मत् मातृ पितामही प्रपितामहीश्च आवाहयामि |
+___ गोत्रान् ___ शर्मणः वसुरुद्रादित्य स्वरूपान् सपत्नीक मातामह मातुः पितामह मातुः प्रपितामहान् आवाहयामि ||
+iast:
+___ gotrān ___ śarmaṇaḥ vasurudrāditya svarūpān asmat pitṛ pitāmaha prapitāmahān āvāhayāmi |
+___ gotrāḥ ___ dāḥ vasurudrāditya svarūpāḥ asmat mātṛ pitāmahī prapitāmahīśca āvāhayāmi |
+___ gotrān ___ śarmaṇaḥ vasurudrāditya svarūpān sapatnīka mātāmaha mātuḥ pitāmaha mātuḥ prapitāmahān āvāhayāmi ||
+en: Of such a gotra, by such names, in the form of the Vasus, the Rudras and the Ādityas — I invoke my father, my father's father and his father. Of such a gotra, by such names, in the same forms — I invoke my mother, my father's mother and her mother's mother. Of such a gotra, by such names, in the same forms — I invoke my mother's father with his wife, my mother's father's father and his father.
+tel: ఫలానా గోత్రము గలవారు, ఫలానా పేరు గలవారు, వసురుద్రాదిత్య స్వరూపులు అయిన నా తండ్రిని, తాతను, ముత్తాతను ఆవాహనము చేయుచున్నాను. ఫలానా గోత్రము గలవారు, ఫలానా పేరు గలవారు, అవే స్వరూపములు గలవారు అయిన నా తల్లిని, నాయనమ్మను, ముత్తవ్వను ఆవాహనము చేయుచున్నాను. అటులనే భార్యతో కూడిన మాతామహుని, తల్లి తాతను, తల్లి ముత్తాతను ఆవాహనము చేయుచున్నాను.
+hi: अमुक गोत्रवाले, अमुक नामवाले, वसु-रुद्र-आदित्यके स्वरूप मेरे पिता, पितामह और प्रपितामहका आवाहन करता हूँ। अमुक गोत्रवाली, अमुक नामवाली, उन्हीं स्वरूपोंवाली मेरी माता, पितामही और प्रपितामहीका आवाहन करता हूँ। इसी प्रकार पत्नीसहित मातामह, माताके पितामह और माताके प्रपितामहका आवाहन करता हूँ।
+
+--- unit 10 | section: Invocation and seat ---
+vidhi:
+The seat. Take a few darbha blades and lay them down with this. Then say that everything needed for the worship is given, and put sesame on the kūrca.
+deva:
+शकृदाच्छिन्नं बर्हिरूर्णमृदु स्योनं पितृभ्यस्त्वा बर्हामि अहं अस्मिन् सीदन्तु मे पितरः सोम्याः पितामहाः प्रपितामहाश्च अनुगैः सह |
+इदमासनम् |
+सकलाराधनैः स्वर्चितम् ||
+iast:
+śakṛdācchinnaṁ barhirūrṇamṛdu syonaṁ pitṛbhyastvā barhāmi ahaṁ asmin sīdantu me pitaraḥ somyāḥ pitāmahāḥ prapitāmahāśca anugaiḥ saha |
+idamāsanam |
+sakalārādhanaiḥ svarcitam ||
+en: Sacred grass, cut at one stroke, soft as wool and pleasant — I spread you for the forefathers. Let my forefathers dear to Soma, and my grandfathers and their fathers, be seated here with those who follow them. This is the seat. It is well worshipped with every service.
+tel: ఒక్కసారిగా కోసిన దర్భ, ఉన్నివలె మృదువైనది, సుఖమైనది — పితృదేవతల కొరకు నిన్ను పరచుచున్నాను. సోమునికి ప్రియులైన నా పితరులు, తాతలు, ముత్తాతలు తమ అనుచరులతో కూడ ఇచట కూర్చుందురు గాక. ఇది ఆసనము. సకల ఆరాధనలచేత ఇది చక్కగా పూజింపబడినది.
+hi: एक ही बारमें काटा हुआ, ऊनके समान कोमल और सुखद कुश — मैं पितरोंके लिये तुम्हें बिछाता हूँ। सोमके प्रिय मेरे पितर, पितामह और प्रपितामह अपने अनुगामियोंके साथ यहाँ विराजें। यह आसन है। सब आराधनाओंसे यह सुपूजित है।
+
+--- unit 11 | section: The father's line ---
+vidhi:
+The first of the three ṛcs for the father. It stands accented in the Taittirīya Saṁhitā and is given here in that accentuation, lifted from the Saṁhitā text. Offer the water through the pitṛ-tīrtha, which is the base of the thumb, three times at each formula. Touch sesame with the right thumb. Offer only for those who are no longer living.
+deva:
+उदी॑रता॒मव॑र॒ उ-त्परा॑स॒ उन्म॑द्ध्य॒माः पि॒तरः॑ सो॒म्यासः॑ । असुं॒-ँय ई॒युर॑ वृ॒का ऋ॑त॒ज्ञास्ते नो॑-ऽवन्तु पि॒तरो॒ हवे॑षु ||
+___ गोत्रान् ___ शर्मणः वसुरूपान् अस्मत् पितॄन् स्वधा नमस्तर्पयामि तर्पयामि तर्पयामि ||
+iast:
+udīratāmavara u-tparāsa unmaddhyamāḥ pitaraḥ somyāsaḥ | asuṁ-m̐ya īyura vṛkā ṛtajñāste no-'vantu pitaro haveṣu ||
+___ gotrān ___ śarmaṇaḥ vasurūpān asmat pitṝn svadhā namastarpayāmi tarpayāmi tarpayāmi ||
+en: Let them rise up — the lower, the higher and the middle forefathers, those dear to Soma, who went to the breath of life, who are without harm and who know the truth. Let those forefathers protect us at our calls. Of such a gotra, by such a name, in the form of the Vasus — to my father I offer water with the svadhā call and with salutation; I offer, I offer.
+tel: క్రింది, పైని, మధ్యలోని పితృదేవతలు, సోమునికి ప్రియులైనవారు, ప్రాణమునకు వెళ్ళినవారు, హింస లేనివారు, ఋతమును ఎరిగినవారు — వారు లేచుదురు గాక. ఆ పితృదేవతలు మా పిలుపులయందు మమ్ము రక్షింతురు గాక. ఫలానా గోత్రము, ఫలానా పేరు గల, వసురూపుడైన నా తండ్రికి స్వధా నమస్సుతో తర్పణము ఇచ్చుచున్నాను; ఇచ్చుచున్నాను; ఇచ్చుచున్నాను.
+hi: नीचेके, ऊपरके और बीचके पितर, जो सोमके प्रिय हैं, जो प्राणको गये, जो हिंसारहित और ऋतके ज्ञाता हैं — वे उठें। वे पितर हमारी पुकारोंमें हमारी रक्षा करें। अमुक गोत्रवाले, अमुक नामवाले, वसुरूप मेरे पिताको स्वधा और नमस्कारके साथ तर्पण देता हूँ; देता हूँ; देता हूँ।
+
+--- unit 12 | section: The father's line ---
+vidhi:
+The second ṛc for the father, also lifted accented from the Taittirīya Saṁhitā.
+deva:
+अङ्गि॑रसो नः पि॒तरो॒ नव॑ग्वा॒ अथ॑र्वाणो॒ भृग॑व-स्सो॒म्यासः॑ । तेषां᳚-वँ॒यग्ं सु॑म॒तौ य॒ज्ञिया॑ना॒मपि॑ भ॒द्रे सौ॑मन॒से स्या॑म ||
+___ गोत्रान् ___ शर्मणः वसुरूपान् अस्मत् पितॄन् स्वधा नमस्तर्पयामि तर्पयामि तर्पयामि ||
+iast:
+aṅgiraso naḥ pitaro navagvā atharvāṇo bhṛgava-ssomyāsaḥ | teṣāṁ-vam̐yagṁ sumatau yajñiyānāmapi bhadre saumanase syāma ||
+___ gotrān ___ śarmaṇaḥ vasurūpān asmat pitṝn svadhā namastarpayāmi tarpayāmi tarpayāmi ||
+en: The Aṅgirases are our forefathers, and the Navagvas, the Atharvans and the Bhṛgus, all dear to Soma. May we stand in the good favour of those who are worthy of worship, and in their kind regard. Of such a gotra, by such a name, in the form of the Vasus — to my father I offer water with the svadhā call and with salutation; I offer, I offer.
+tel: అంగిరసులు మన పితృదేవతలు; నవగ్వులు, అథర్వణులు, భృగువులు — అందరును సోమునికి ప్రియులు. యజనార్హులైన వారి సుమతియందును, వారి భద్రమైన సౌమనస్యమునందును మనము ఉందుము గాక. ఫలానా గోత్రము, ఫలానా పేరు గల, వసురూపుడైన నా తండ్రికి స్వధా నమస్సుతో తర్పణము ఇచ్చుచున్నాను; ఇచ్చుచున్నాను; ఇచ్చుచున్నాను.
+hi: अङ्गिरा हमारे पितर हैं; नवग्व, अथर्वा और भृगु भी, जो सब सोमके प्रिय हैं। यजनके योग्य उन पितरोंकी सुमतिमें और उनके भद्र सौमनस्यमें हम रहें। अमुक गोत्रवाले, अमुक नामवाले, वसुरूप मेरे पिताको स्वधा और नमस्कारके साथ तर्पण देता हूँ; देता हूँ; देता हूँ।
+
+--- unit 13 | section: The father's line ---
+vidhi:
+The third ṛc for the father. This verse is not printed in the Taittirīya Saṁhitā, Brāhmaṇa or Āraṇyaka as those are published in accented form, so it is given here without accent marks. It is the same verse the base text uses at the arghya.
+deva:
+आयन्तु नः पितरस्सोम्यासोग्निष्वात्ताः पथिभिर्देव यानैः |
+अस्मिन् यज्ञे स्वधया मदं त्वधि बृवन्तु ते अवन्त्व स्मान् ||
+___ गोत्रान् ___ शर्मणः वसुरूपान् अस्मत् पितॄन् स्वधा नमस्तर्पयामि तर्पयामि तर्पयामि ||
+iast:
+āyantu naḥ pitarassomyāsogniṣvāttāḥ pathibhirdeva yānaiḥ |
+asmin yajñe svadhayā madaṁ tvadhi bṛvantu te avantva smān ||
+___ gotrān ___ śarmaṇaḥ vasurūpān asmat pitṝn svadhā namastarpayāmi tarpayāmi tarpayāmi ||
+en: Let our forefathers come, the ones dear to Soma, who have eaten by the fire, along the paths the gods travel. Let them rejoice at this offering with the svadhā call, let them speak for us, let them protect us. Of such a gotra, by such a name, in the form of the Vasus — to my father I offer water with the svadhā call and with salutation; I offer, I offer.
+tel: సోమునికి ప్రియులై, అగ్నిచేత భుజించినవారై, దేవయాన మార్గములచేత మన పితృదేవతలు వచ్చుదురు గాక. ఈ యజ్ఞమునందు స్వధాతో తృప్తి పొంది, మా పక్షమున మాటలాడి, మమ్ము రక్షింతురు గాక. ఫలానా గోత్రము, ఫలానా పేరు గల, వసురూపుడైన నా తండ్రికి స్వధా నమస్సుతో తర్పణము ఇచ్చుచున్నాను; ఇచ్చుచున్నాను; ఇచ్చుచున్నాను.
+hi: सोमके प्रिय, अग्निसे भोजन किये हुए हमारे पितर देवयान मार्गोंसे आवें। इस यज्ञमें स्वधासे तृप्त होकर हमारे पक्षमें कहें और हमारी रक्षा करें। अमुक गोत्रवाले, अमुक नामवाले, वसुरूप मेरे पिताको स्वधा और नमस्कारके साथ तर्पण देता हूँ; देता हूँ; देता हूँ।
+
+--- unit 14 | section: The father's line ---
+vidhi:
+The first ṛc for the father's father. This verse belongs to the Āpastamba gṛhya mantra collection and is not printed in the accented Taittirīya Saṁhitā, Brāhmaṇa or Āraṇyaka, so it is given without accent marks.
+deva:
+ऊर्जं वहन्तीरमृतं घृतं पयः कीलालं परिस्रुतम् |
+स्वधास्थ तर्पयत मे पितॄन् ||
+___ गोत्रान् ___ शर्मणः रुद्ररूपान् अस्मत् पितामहान् स्वधा नमस्तर्पयामि तर्पयामि तर्पयामि ||
+iast:
+ūrjaṁ vahantīramṛtaṁ ghṛtaṁ payaḥ kīlālaṁ parisrutam |
+svadhāstha tarpayata me pitṝn ||
+___ gotrān ___ śarmaṇaḥ rudrarūpān asmat pitāmahān svadhā namastarpayāmi tarpayāmi tarpayāmi ||
+en: You waters carry strength, the immortal, clarified butter, milk, sweet drink and the flowing juice. You are the svadhā; satisfy my forefathers. Of such a gotra, by such a name, in the form of the Rudras — to my father's father I offer water with the svadhā call and with salutation; I offer, I offer.
+tel: ఓ జలములారా, మీరు ఊర్జమును, అమృతమును, ఘృతమును, పాలను, కీలాలమును, పరిస్రుతమును మోయుచున్నారు. మీరే స్వధా; నా పితృదేవతలను తృప్తిపరచుడు. ఫలానా గోత్రము, ఫలానా పేరు గల, రుద్రరూపుడైన నా తాతకు స్వధా నమస్సుతో తర్పణము ఇచ్చుచున్నాను; ఇచ్చుచున్నాను; ఇచ్చుచున్నాను.
+hi: हे जलो, तुम ऊर्जा, अमृत, घृत, दूध, कीलाल और परिस्रुत ले चलते हो। तुम्हीं स्वधा हो; मेरे पितरोंको तृप्त करो। अमुक गोत्रवाले, अमुक नामवाले, रुद्ररूप मेरे पितामहको स्वधा और नमस्कारके साथ तर्पण देता हूँ; देता हूँ; देता हूँ।
+
+--- unit 15 | section: The father's line ---
+vidhi:
+The second ṛc for the father's father. It stands accented in the Taittirīya Brāhmaṇa and is given here in that accentuation, lifted from the Brāhmaṇa text.
+deva:
+पि॒तृभ्यः॑ स्वधा॒विभ्यः॑ स्व॒धा नमः॑ । पि॒ता॒म॒हेभ्यः॑ स्वधा॒विभ्यः॑ स्व॒धा नमः॑ । प्रपि॑तामहेभ्य-स्स्वधा॒विभ्यः॑ स्व॒धा नमः॑ । अक्ष॑-न्पि॒तरः ||
+___ गोत्रान् ___ शर्मणः रुद्ररूपान् अस्मत् पितामहान् स्वधा नमस्तर्पयामि तर्पयामि तर्पयामि ||
+iast:
+pitṛbhyaḥ svadhāvibhyaḥ svadhā namaḥ | pitāmahebhyaḥ svadhāvibhyaḥ svadhā namaḥ | prapitāmahebhya-ssvadhāvibhyaḥ svadhā namaḥ | akṣa-npitaraḥ ||
+___ gotrān ___ śarmaṇaḥ rudrarūpān asmat pitāmahān svadhā namastarpayāmi tarpayāmi tarpayāmi ||
+en: To the fathers who hold the svadhā, the svadhā and salutation. To the grandfathers who hold the svadhā, the svadhā and salutation. To the great-grandfathers who hold the svadhā, the svadhā and salutation. The forefathers have eaten. Of such a gotra, by such a name, in the form of the Rudras — to my father's father I offer water with the svadhā call and with salutation; I offer, I offer.
+tel: స్వధను కలిగిన పితరులకు స్వధా నమస్కారము. స్వధను కలిగిన పితామహులకు స్వధా నమస్కారము. స్వధను కలిగిన ప్రపితామహులకు స్వధా నమస్కారము. పితృదేవతలు భుజించిరి. ఫలానా గోత్రము, ఫలానా పేరు గల, రుద్రరూపుడైన నా తాతకు స్వధా నమస్సుతో తర్పణము ఇచ్చుచున్నాను; ఇచ్చుచున్నాను; ఇచ్చుచున్నాను.
+hi: स्वधावाले पितरोंको स्वधा और नमस्कार। स्वधावाले पितामहोंको स्वधा और नमस्कार। स्वधावाले प्रपितामहोंको स्वधा और नमस्कार। पितरोंने भोजन किया। अमुक गोत्रवाले, अमुक नामवाले, रुद्ररूप मेरे पितामहको स्वधा और नमस्कारके साथ तर्पण देता हूँ; देता हूँ; देता हूँ।
+
+--- unit 16 | section: The father's line ---
+vidhi:
+The third ṛc for the father's father. This verse also belongs to the Āpastamba gṛhya mantra collection and is not printed in the accented Taittirīya pāṭha, so it is given without accent marks.
+deva:
+ये चेह पितरो ये च नेह यांश्च विद्म यां उ च न प्रविद्म |
+अग्ने तान् वेत्थ यदि ते जातवेदः स्वधाभिर्यज्ञं सुकृतं जुषस्व ||
+___ गोत्रान् ___ शर्मणः रुद्ररूपान् अस्मत् पितामहान् स्वधा नमस्तर्पयामि तर्पयामि तर्पयामि ||
+iast:
+ye ceha pitaro ye ca neha yāṁśca vidma yāṁ u ca na pravidma |
+agne tān vettha yadi te jātavedaḥ svadhābhiryajñaṁ sukṛtaṁ juṣasva ||
+___ gotrān ___ śarmaṇaḥ rudrarūpān asmat pitāmahān svadhā namastarpayāmi tarpayāmi tarpayāmi ||
+en: Those forefathers who are here and those who are not here, those whom we know and those whom we do not know — you know them, O Agni, knower of all that is born. Accept with the svadhā calls this offering well made. Of such a gotra, by such a name, in the form of the Rudras — to my father's father I offer water with the svadhā call and with salutation; I offer, I offer.
+tel: ఇచట ఉన్న పితృదేవతలును, ఇచట లేని పితృదేవతలును, మనకు తెలిసినవారును, తెలియనివారును — ఓ జాతవేదుడైన అగ్నీ, వారిని నీవు ఎరుగుదువు. స్వధలచేత చక్కగా చేసిన ఈ యజ్ఞమును స్వీకరించుము. ఫలానా గోత్రము, ఫలానా పేరు గల, రుద్రరూపుడైన నా తాతకు స్వధా నమస్సుతో తర్పణము ఇచ్చుచున్నాను; ఇచ్చుచున్నాను; ఇచ్చుచున్నాను.
+hi: जो पितर यहाँ हैं और जो यहाँ नहीं हैं, जिन्हें हम जानते हैं और जिन्हें नहीं जानते — हे जातवेदा अग्नि, आप उन्हें जानते हैं। स्वधाओंसे इस सुकृत यज्ञको स्वीकार कीजिये। अमुक गोत्रवाले, अमुक नामवाले, रुद्ररूप मेरे पितामहको स्वधा और नमस्कारके साथ तर्पण देता हूँ; देता हूँ; देता हूँ।
+
+--- unit 17 | section: The father's line ---
+vidhi:
+The three ṛcs for the father's grandfather. They are the madhu verses, and they stand accented in the Taittirīya Saṁhitā; they are given here in that accentuation, lifted from the Saṁhitā text. One ṛc is said before each of the three offerings.
+deva:
+मधु॒ वाता॑ ऋताय॒ते मधु॑ क्षरन्ति॒ सिन्ध॑वः । माद्ध्वी᳚र्न-स्स॒न्त्वोष॑धीः ॥ मधु॒ नक्त॑मु॒तोषसि॒ मधु॑म॒-त्पार्थि॑व॒ग्ं॒ रजः॑ । मधु॒ द्यौर॑स्तु नः पि॒ता ॥ मधु॑मा-न्नो॒ वन॒स्पति॒-र्मधु॑माग्ं अस्तु॒ सूर्यः॑ । माद्ध्वी॒र्गावो॑ भवन्तु नः ||
+___ गोत्रान् ___ शर्मणः आदित्यरूपान् अस्मत् प्रपितामहान् स्वधा नमस्तर्पयामि तर्पयामि तर्पयामि ||
+iast:
+madhu vātā ṛtāyate madhu kṣaranti sindhavaḥ | māddhvīrna-ssantvoṣadhīḥ || madhu naktamutoṣasi madhuma-tpārthivagṁ rajaḥ | madhu dyaurastu naḥ pitā || madhumā-nno vanaspati-rmadhumāgṁ astu sūryaḥ | māddhvīrgāvo bhavantu naḥ ||
+___ gotrān ___ śarmaṇaḥ ādityarūpān asmat prapitāmahān svadhā namastarpayāmi tarpayāmi tarpayāmi ||
+en: Sweet are the winds for the man who keeps the truth; sweetness the rivers pour. May the plants be sweet for us. Sweet is the night and sweet the dawn; sweet is the earthly air; sweet be the sky, our father. Sweet for us is the tree of the forest, sweet be the sun, sweet be our cattle. Of such a gotra, by such a name, in the form of the Ādityas — to my father's grandfather I offer water with the svadhā call and with salutation; I offer, I offer.
+tel: ఋతమును పాటించువానికి వాయువులు మధురములు; నదులు మాధుర్యమును కురియును. ఓషధులు మనకు మధురములగును గాక. రాత్రి మధురము, ఉషస్సు మధురము; భూమి యొక్క రజస్సు మధురము; మన తండ్రియైన ద్యులోకము మధురమగును గాక. వనస్పతి మనకు మధురము, సూర్యుడు మధురమగును గాక, మన గోవులు మధురములగును గాక. ఫలానా గోత్రము, ఫలానా పేరు గల, ఆదిత్యరూపుడైన నా ముత్తాతకు స్వధా నమస్సుతో తర్పణము ఇచ్చుచున్నాను; ఇచ్చుచున్నాను; ఇచ్చుచున్నాను.
+hi: ऋतका पालन करनेवालेके लिये वायु मधुर हैं; नदियाँ मधु बरसाती हैं। औषधियाँ हमारे लिये मधुर हों। रात्रि मधुर है और उषा मधुर; पार्थिव रज मधुर है; हमारे पिता द्युलोक मधुर हों। वनस्पति हमारे लिये मधुर है, सूर्य मधुर हों, हमारी गौएँ मधुर हों। अमुक गोत्रवाले, अमुक नामवाले, आदित्यरूप मेरे प्रपितामहको स्वधा और नमस्कारके साथ तर्पण देता हूँ; देता हूँ; देता हूँ।
+
+--- unit 18 | section: The father's line ---
+vidhi:
+The women of the father's line. No ṛc is said for them in either witness. Three offerings are made at each name. Say sāpatnīmātaram in the same way if a stepmother is no longer living; the base text has this and the Tamil manual does not.
+deva:
+___ गोत्राः ___ दाः वसुरूपाः अस्मत् मातरं स्वधा नमस्तर्पयामि तर्पयामि तर्पयामि |
+___ गोत्राः ___ दाः रुद्ररूपाः अस्मत् पितामहीं स्वधा नमस्तर्पयामि तर्पयामि तर्पयामि |
+___ गोत्राः ___ दाः आदित्यरूपाः अस्मत् प्रपितामहीं स्वधा नमस्तर्पयामि तर्पयामि तर्पयामि ||
+iast:
+___ gotrāḥ ___ dāḥ vasurūpāḥ asmat mātaraṁ svadhā namastarpayāmi tarpayāmi tarpayāmi |
+___ gotrāḥ ___ dāḥ rudrarūpāḥ asmat pitāmahīṁ svadhā namastarpayāmi tarpayāmi tarpayāmi |
+___ gotrāḥ ___ dāḥ ādityarūpāḥ asmat prapitāmahīṁ svadhā namastarpayāmi tarpayāmi tarpayāmi ||
+en: Of such a gotra, by such a name, in the form of the Vasus — to my mother I offer water with the svadhā call and with salutation, three times. In the form of the Rudras — to my father's mother, three times. In the form of the Ādityas — to my father's grandmother, three times.
+tel: ఫలానా గోత్రము, ఫలానా పేరు గల, వసురూపిణి అయిన నా తల్లికి స్వధా నమస్సుతో మూడుసార్లు తర్పణము ఇచ్చుచున్నాను. రుద్రరూపిణి అయిన నాయనమ్మకు మూడుసార్లు. ఆదిత్యరూపిణి అయిన ముత్తవ్వకు మూడుసార్లు.
+hi: अमुक गोत्रवाली, अमुक नामवाली, वसुरूपा मेरी माताको स्वधा और नमस्कारके साथ तीन बार तर्पण देता हूँ। रुद्ररूपा पितामहीको तीन बार। आदित्यरूपा प्रपितामहीको तीन बार।
+
+--- unit 19 | section: The mother's father's line ---
+vidhi:
+The mother's father's line. The Tamil manual repeats the same nine ṛcs in the same order for this line, three for each of the three men, and they are not written out again here. Its note says that some hold that this line is not offered to while the mother's father is living. The three offerings are made at each name.
+deva:
+___ गोत्रान् ___ शर्मणः वसुरूपान् अस्मत् मातामहान् स्वधा नमस्तर्पयामि तर्पयामि तर्पयामि |
+___ गोत्रान् ___ शर्मणः रुद्ररूपान् अस्मत् मातुः पितामहान् स्वधा नमस्तर्पयामि तर्पयामि तर्पयामि |
+___ गोत्रान् ___ शर्मणः आदित्यरूपान् अस्मत् मातुः प्रपितामहान् स्वधा नमस्तर्पयामि तर्पयामि तर्पयामि ||
+iast:
+___ gotrān ___ śarmaṇaḥ vasurūpān asmat mātāmahān svadhā namastarpayāmi tarpayāmi tarpayāmi |
+___ gotrān ___ śarmaṇaḥ rudrarūpān asmat mātuḥ pitāmahān svadhā namastarpayāmi tarpayāmi tarpayāmi |
+___ gotrān ___ śarmaṇaḥ ādityarūpān asmat mātuḥ prapitāmahān svadhā namastarpayāmi tarpayāmi tarpayāmi ||
+en: Of such a gotra, by such a name, in the form of the Vasus — to my mother's father I offer water with the svadhā call and with salutation, three times. In the form of the Rudras — to my mother's father's father, three times. In the form of the Ādityas — to my mother's father's grandfather, three times.
+tel: ఫలానా గోత్రము, ఫలానా పేరు గల, వసురూపుడైన నా మాతామహునకు స్వధా నమస్సుతో మూడుసార్లు తర్పణము ఇచ్చుచున్నాను. రుద్రరూపుడైన తల్లి తాతకు మూడుసార్లు. ఆదిత్యరూపుడైన తల్లి ముత్తాతకు మూడుసార్లు.
+hi: अमुक गोत्रवाले, अमुक नामवाले, वसुरूप मेरे मातामहको स्वधा और नमस्कारके साथ तीन बार तर्पण देता हूँ। रुद्ररूप माताके पितामहको तीन बार। आदित्यरूप माताके प्रपितामहको तीन बार।
+
+--- unit 20 | section: The mother's father's line ---
+vidhi:
+The women of the mother's father's line. Three offerings are made at each name.
+deva:
+___ गोत्राः ___ दाः वसुरूपाः अस्मत् मातामहीं स्वधा नमस्तर्पयामि तर्पयामि तर्पयामि |
+___ गोत्राः ___ दाः रुद्ररूपाः अस्मत् मातुः पितामहीं स्वधा नमस्तर्पयामि तर्पयामि तर्पयामि |
+___ गोत्राः ___ दाः आदित्यरूपाः अस्मत् मातुः प्रपितामहीं स्वधा नमस्तर्पयामि तर्पयामि तर्पयामि ||
+iast:
+___ gotrāḥ ___ dāḥ vasurūpāḥ asmat mātāmahīṁ svadhā namastarpayāmi tarpayāmi tarpayāmi |
+___ gotrāḥ ___ dāḥ rudrarūpāḥ asmat mātuḥ pitāmahīṁ svadhā namastarpayāmi tarpayāmi tarpayāmi |
+___ gotrāḥ ___ dāḥ ādityarūpāḥ asmat mātuḥ prapitāmahīṁ svadhā namastarpayāmi tarpayāmi tarpayāmi ||
+en: Of such a gotra, by such a name, in the form of the Vasus — to my mother's mother I offer water with the svadhā call and with salutation, three times. In the form of the Rudras — to my mother's father's mother, three times. In the form of the Ādityas — to my mother's father's grandmother, three times.
+tel: ఫలానా గోత్రము, ఫలానా పేరు గల, వసురూపిణి అయిన నా మాతామహికి స్వధా నమస్సుతో మూడుసార్లు తర్పణము ఇచ్చుచున్నాను. రుద్రరూపిణి అయిన తల్లి నాయనమ్మకు మూడుసార్లు. ఆదిత్యరూపిణి అయిన తల్లి ముత్తవ్వకు మూడుసార్లు.
+hi: अमुक गोत्रवाली, अमुक नामवाली, वसुरूपा मेरी मातामहीको स्वधा और नमस्कारके साथ तीन बार तर्पण देता हूँ। रुद्ररूपा माताकी पितामहीको तीन बार। आदित्यरूपा माताकी प्रपितामहीको तीन बार।
+
+--- unit 21 | section: Closing ---
+vidhi:
+The offering to those of both lines who are known and those who are not known, and the closing satisfaction. Say the ūrjaṁ vahantīḥ verse again here, and release sesame and water as before.
+deva:
+ज्ञाताज्ञात वर्गद्वय पितॄन् स्वधा नमस्तर्पयामि तर्पयामि तर्पयामि |
+ऊर्जं वहन्तीरमृतं घृतं पयः कीलालं परिस्रुतम् |
+स्वधास्थ तर्पयत मे पितॄन् |
+तृप्यत तृप्यत ||
+iast:
+jñātājñāta vargadvaya pitṝn svadhā namastarpayāmi tarpayāmi tarpayāmi |
+ūrjaṁ vahantīramṛtaṁ ghṛtaṁ payaḥ kīlālaṁ parisrutam |
+svadhāstha tarpayata me pitṝn |
+tṛpyata tṛpyata ||
+en: To the forefathers of both lines, those who are known and those who are not known, I offer water with the svadhā call and with salutation; I offer, I offer. You waters carry strength, the immortal, clarified butter, milk, sweet drink and the flowing juice. You are the svadhā; satisfy my forefathers. Be satisfied, be satisfied.
+tel: తెలిసిన, తెలియని ఉభయ వంశముల పితృదేవతలకు స్వధా నమస్సుతో మూడుసార్లు తర్పణము ఇచ్చుచున్నాను. ఓ జలములారా, మీరు ఊర్జమును, అమృతమును, ఘృతమును, పాలను, కీలాలమును, పరిస్రుతమును మోయుచున్నారు. మీరే స్వధా; నా పితృదేవతలను తృప్తిపరచుడు. తృప్తి పొందుడు, తృప్తి పొందుడు.
+hi: ज्ञात और अज्ञात, दोनों वंशोंके पितरोंको स्वधा और नमस्कारके साथ तीन बार तर्पण देता हूँ। हे जलो, तुम ऊर्जा, अमृत, घृत, दूध, कीलाल और परिस्रुत ले चलते हो। तुम्हीं स्वधा हो; मेरे पितरोंको तृप्त करो। तृप्त हों, तृप्त हों।
+
+--- unit 22 | section: Closing ---
+vidhi:
+The pitṛ-upasthāna. Put the sacred thread back over the left shoulder, stand, and join the hands. This passage stands accented in the Taittirīya Saṁhitā and is given here in that accentuation, lifted from the Saṁhitā text. The base text has no upasthāna.
+deva:
+नमो॑ वः पितरो॒ रसा॑य॒ नमो॑ वः पितर॒-श्शुष्मा॑य॒ नमो॑ वः पितरो जी॒वाय॒ नमो॑ वः पितर-स्स्व॒धायै॒ नमो॑ वः पितरो म॒न्यवे॒ नमो॑ वः पितरो घो॒राय॒ पित॑रो॒ नमो॑ वो॒ य ए॒तस्मि॑न् ँलो॒केस्थ यु॒ष्माग्ंस्ते-ऽनु॒ ये᳚-ऽस्मिन् ँलो॒के मा-न्ते-ऽनु॒ य ए॒तस्मि॑न् ँलो॒के स्थ यू॒य-न्तेषां॒-वँसि॑ष्ठा भूयास्त॒ ये᳚-ऽस्मिन् ँलो॒के॑-ऽह-न्तेषां॒-वँसि॑ष्ठो भूयास॒-म् ||
+देवताभ्यः पितृभ्यश्च महायोगिभ्य एव च |
+नमस्स्वधायै स्वाहायै नित्यमेव नमो नमः ||
+iast:
+namo vaḥ pitaro rasāya namo vaḥ pitara-śśuṣmāya namo vaḥ pitaro jīvāya namo vaḥ pitara-ssvadhāyai namo vaḥ pitaro manyave namo vaḥ pitaro ghorāya pitaro namo vo ya etasmin m̐lokestha yuṣmāgṁste-'nu ye-'smin m̐loke mā-nte-'nu ya etasmin m̐loke stha yūya-nteṣāṁ-vam̐siṣṭhā bhūyāsta ye-'smin m̐loke-'ha-nteṣāṁ-vam̐siṣṭho bhūyāsa-m ||
+devatābhyaḥ pitṛbhyaśca mahāyogibhya eva ca |
+namassvadhāyai svāhāyai nityameva namo namaḥ ||
+en: Salutation to you, forefathers, for the sap of life. Salutation to you, forefathers, for strength. Salutation to you, forefathers, for life. Salutation to you, forefathers, for the svadhā. Salutation to you, forefathers, for zeal. Salutation to you, forefathers, for what is awful. Forefathers, salutation to you. You who are in that world, may those in this world follow you; you who are in that world, may I be the best of them. To the gods, to the forefathers and to the great yogins, salutation; to Svadhā and to Svāhā, salutation for ever, salutation.
+tel: పితృదేవతలారా, రసము కొరకు మీకు నమస్కారము. శుష్మము కొరకు నమస్కారము. జీవము కొరకు నమస్కారము. స్వధ కొరకు నమస్కారము. మన్యువు కొరకు నమస్కారము. ఘోరము కొరకు నమస్కారము. పితృదేవతలారా, మీకు నమస్కారము. ఆ లోకమునందు ఉన్న మిమ్ము ఈ లోకమునందు ఉన్నవారు అనుసరింతురు గాక; ఆ లోకమునందు ఉన్న వారిలో నేను శ్రేష్ఠుడనగుదును గాక. దేవతలకు, పితృదేవతలకు, మహాయోగులకు నమస్కారము; స్వధాకు, స్వాహాకు నిత్యము నమస్కారము, నమస్కారము.
+hi: हे पितरो, रसके लिये आपको नमस्कार। शुष्मके लिये नमस्कार। जीवनके लिये नमस्कार। स्वधाके लिये नमस्कार। मन्युके लिये नमस्कार। घोरके लिये नमस्कार। हे पितरो, आपको नमस्कार। जो उस लोकमें हैं, इस लोकवाले उनका अनुसरण करें; उस लोकवालोंमें मैं श्रेष्ठ होऊँ। देवताओंको, पितरोंको और महायोगियोंको नमस्कार; स्वधा और स्वाहाको नित्य नमस्कार, नमस्कार।
+
+--- unit 23 | section: Closing ---
+vidhi:
+Returning the forefathers to their place. Put the sacred thread over the right shoulder again. Go round the kūrca three times, then part the kūrca, release the sesame water, and lay it on the ground. This is from the Tamil manual; the base text has no dismissal.
+deva:
+आयात पितरः सोम्या गम्भीरैः पथिभिः पूर्व्यैः |
+प्रजामस्मभ्यं ददतो रयिं च दीर्घायुत्वं च शतसारदं च |
+अस्मात् कूर्चात् वर्गद्वय पितॄन् यथास्थानं प्रतिष्ठापयामि ||
+iast:
+āyāta pitaraḥ somyā gambhīraiḥ pathibhiḥ pūrvyaiḥ |
+prajāmasmabhyaṁ dadato rayiṁ ca dīrghāyutvaṁ ca śatasāradaṁ ca |
+asmāt kūrcāt vargadvaya pitṝn yathāsthānaṁ pratiṣṭhāpayāmi ||
+en: Come, forefathers dear to Soma, along the deep and ancient paths, giving us offspring and wealth and long life and a hundred autumns. From this kūrca I establish the forefathers of both lines in their own place.
+tel: సోమునికి ప్రియులైన పితృదేవతలారా, గంభీరములైన ప్రాచీన మార్గములచేత రండు; మాకు సంతానమును, సంపదను, దీర్ఘాయువును, నూరు శరత్తులను ఇచ్చుచు రండు. ఈ కూర్చము నుండి ఉభయ వంశముల పితృదేవతలను వారి స్థానమునందు ప్రతిష్ఠించుచున్నాను.
+hi: हे सोमके प्रिय पितरो, गम्भीर और प्राचीन मार्गोंसे आइये; हमें सन्तान, धन, दीर्घ आयु और सौ शरद् देते हुए आइये। इस कूर्चसे दोनों वंशोंके पितरोंको उनके स्थानमें प्रतिष्ठित करता हूँ।
+
+--- unit 24 | section: Closing ---
+vidhi:
+The water on the kuśa, for those who have no one of their own. Both witnesses have this and it is the last offering of the rite.
+deva:
+एषान्न माता न पिता न बन्धुः नान्य गोत्रिणः |
+ते सर्वे तृप्तिमायान्तु मयोत्सृष्टैः कुशोदकैः ||
+तृप्यत तृप्यत तृप्यत तृप्यत तृप्यत |
+iast:
+eṣānna mātā na pitā na bandhuḥ nānya gotriṇaḥ |
+te sarve tṛptimāyāntu mayotsṛṣṭaiḥ kuśodakaiḥ ||
+tṛpyata tṛpyata tṛpyata tṛpyata tṛpyata |
+en: For these there is no mother, no father, no kinsman, and no one of another gotra. Let all of them come to satisfaction through this water on the kuśa that I release. Be satisfied, be satisfied, be satisfied, be satisfied, be satisfied.
+tel: వీరికి తల్లి లేదు, తండ్రి లేదు, బంధువు లేదు, అన్య గోత్రులును లేరు. నేను విడిచిన ఈ కుశోదకముచేత వారందరును తృప్తి పొందుదురు గాక. తృప్తి పొందుడు, తృప్తి పొందుడు, తృప్తి పొందుడు, తృప్తి పొందుడు, తృప్తి పొందుడు.
+hi: इनका न माता है, न पिता, न बन्धु, और न कोई अन्य गोत्रवाला। मेरे द्वारा छोड़े गये इस कुशोदकसे वे सब तृप्ति पावें। तृप्त हों, तृप्त हों, तृप्त हों, तृप्त हों, तृप्त हों।
+
+--- unit 25 | section: Closing ---
+vidhi:
+The water pressed from the cloth, for those of the family who left no son. Wear the sacred thread like a garland, pour water on its knots, wring it out and touch the eyes with it. This is in the base text only; the Tamil manual does not have it.
+deva:
+ये के चास्मत्कुले जाताः अपुत्राः गोत्रिणो मृताः |
+ते गृह्णन्तु मया दत्तं वस्त्रनिष्पीडनोदकम् |
+iast:
+ye ke cāsmatkule jātāḥ aputrāḥ gotriṇo mṛtāḥ |
+te gṛhṇantu mayā dattaṁ vastraniṣpīḍanodakam |
+en: Those born in our family who have gone without a son, and those of our gotra who have gone — let them receive this water which I give, pressed from the cloth.
+tel: మన కులమునందు పుట్టి పుత్రులు లేకుండా గతించినవారును, మన గోత్రమునందు గతించినవారును — నేను ఇచ్చుచున్న ఈ వస్త్రనిష్పీడనోదకమును స్వీకరింతురు గాక.
+hi: हमारे कुलमें जन्मे जो पुत्रहीन चले गये और हमारे गोत्रके जो चले गये — वे मेरे दिये हुए इस वस्त्रनिष्पीडनके जलको ग्रहण करें।
+
+--- unit 26 | section: Closing ---
+vidhi:
+The close. Put the sacred thread back over the left shoulder, do ācamana, take off the pavitrī and do ācamana again. The Tamil manual ends by directing that betel leaf and a gift be given to the teacher with respect, and salutation made to him. The verses of this unit are in the base text only.
+deva:
+कायेन वाचा मनसैन्द्रियैर्वा
+बुद्ध्यात्मना वा प्रकृतेस्स्वभावात् |
+करोमि यद्यत्सकलं परस्मै
+नारायणायेति समर्पयामि ||
+नमो ब्रह्मण्यदेवाय गो ब्राह्मण हिताय च |
+जगद्धिताय कृष्णाय गोविन्दाय नमो नमः ||
+पवित्रं विसृज्य |
+ओं शान्तिः शान्तिः शान्तिः |
+ओं तत्सत् ब्रह्मार्पणमस्तु ||
+iast:
+kāyena vācā manasaindriyairvā
+buddhyātmanā vā prakṛtessvabhāvāt |
+karomi yadyatsakalaṁ parasmai
+nārāyaṇāyeti samarpayāmi ||
+namo brahmaṇyadevāya go brāhmaṇa hitāya ca |
+jagaddhitāya kṛṣṇāya govindāya namo namaḥ ||
+pavitraṁ visṛjya |
+oṁ śāntiḥ śāntiḥ śāntiḥ |
+oṁ tatsat brahmārpaṇamastu ||
+en: Whatever I do with the body, with speech, with the mind or with the senses, with the understanding or with the self, or by the natural working of my own nature — all of it I offer to the supreme, to Nārāyaṇa. Salutation to the God who is well disposed to the Veda, to him who is the good of cows and of brāhmaṇas, to Kṛṣṇa who is the good of the world, to Govinda, salutation, salutation. Having taken off the pavitrī. Oṁ, peace, peace, peace. Oṁ Tat Sat. Let this be an offering to Brahman.
+tel: శరీరముచేత, వాక్కుచేత, మనస్సుచేత, ఇంద్రియములచేత, బుద్ధిచేత, ఆత్మచేత, లేక ప్రకృతి స్వభావముచేత నేను ఏమి చేయుచున్నానో అది అంతయు పరమాత్ముడైన నారాయణునకు సమర్పించుచున్నాను. బ్రహ్మణ్యదేవునకు నమస్కారము; గోవులకును బ్రాహ్మణులకును హితుడైనవానికి, జగత్తునకు హితుడైన కృష్ణునకు, గోవిందునకు నమస్కారము, నమస్కారము. పవిత్రమును విడిచి. ఓం శాంతిః శాంతిః శాంతిః. ఓం తత్సత్. ఇది బ్రహ్మార్పణమగును గాక.
+hi: शरीरसे, वाणीसे, मनसे, इन्द्रियोंसे, बुद्धिसे, आत्मासे अथवा प्रकृतिके स्वभावसे मैं जो कुछ करता हूँ, वह सब परमात्मा नारायणको समर्पित करता हूँ। ब्रह्मण्यदेवको नमस्कार; गौ और ब्राह्मणोंके हितकारीको, जगत्के हितकारी कृष्णको, गोविन्दको नमस्कार, नमस्कार। पवित्री उतारकर। ॐ शान्तिः शान्तिः शान्तिः। ॐ तत्सत्। यह ब्रह्मार्पण हो।
