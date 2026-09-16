@@ -1,5 +1,6 @@
 import React from "react";
 import { STUTI_BUILD } from "./stuti-build";
+import { sendFeedback, FB_SENT } from "./stuti-feedback-send";
 import { STUTI_COUNT } from "./stuti-count";
 import { STUTI_DANA } from "./stuti-dana-core";
 import { STUTI_L } from "./stuti-i18n";
@@ -59,8 +60,10 @@ function FeedbackSheet({ lang = "deva", onClose, kind: kind0, about }) {
   const subject = "[Stuti] " + L.t("fbKind_" + kind, "roman");
   const body = () => text.trim() + "\n\n—\n" + facts() + (reply.trim() ? "\nreply to: " + reply.trim() : "");
 
-  const send = () => {
-    if (!text.trim()) return;
+  const send = async () => {
+    if (!text.trim() || sent === "sending") return;
+    setSent("sending");
+    if (await sendFeedback(kind, subject, body())) { setSent("server"); setText(""); count(); return; }
     const href = "mailto:" + FB_TO + "?subject=" + encodeURIComponent(subject) + "&body=" + encodeURIComponent(body());
     try { window.location.href = href; setSent("mail"); count(); } catch (e) { setSent("fail"); }
   };
@@ -114,7 +117,7 @@ function FeedbackSheet({ lang = "deva", onClose, kind: kind0, about }) {
               <button className="dana-cta" disabled={!text.trim()} onClick={send}>{L.t("fbSend", lang)}</button>
               <button className="dana-later" onClick={copy}>{L.t("fbCopy", lang)}</button>
             </div>
-            {sent && <p className="fb-done">{L.t(sent === "copied" ? "fbCopied" : sent === "mail" ? "fbHanded" : "fbFailed", lang)}</p>}
+            {sent && sent !== "sending" && <p className="fb-done">{sent === "server" ? (FB_SENT[lang] || FB_SENT.roman) : L.t(sent === "copied" ? "fbCopied" : sent === "mail" ? "fbHanded" : "fbFailed", lang)}</p>}
           </div>
         </div>
       </div>

@@ -1,0 +1,186 @@
+import React from "react";
+import { AccountView as DesignAccountView } from "./stuti-account";
+import { useDana } from "./stuti-dana";
+import { STUTI_L } from "./stuti-i18n";
+import { Icon } from "./stuti-icons";
+import { STUTI_CLOUD_AUTH as A } from "./stuti-cloud";
+
+/* ============================================================
+   STUTI — the account screen, against a real server
+   Hand-authored. The designer's AccountView (stuti-account.tsx)
+   asks for a handle and a name and signs in at once, because
+   nothing checked. A real sign-in has a second step — the code
+   that arrives by mail or SMS — so this screen keeps her layout,
+   classes and words, and adds that step and an honest sync line.
+   Until stuti-cloud-config.ts is filled in it hands over to her
+   screen unchanged. Placed by tools/codemod/fix-account-seam.mjs.
+   ============================================================ */
+const { useState, useEffect } = React;
+
+/* the few words the design has no key for yet */
+const W: Record<string, Record<string, string>> = {
+  lede:      { roman: "With an account, your reading position, vows and lamp are kept safe and are the same on every phone you sign in on.", deva: "खाते से आपका पढ़ने का स्थान, व्रत और दीप सुरक्षित रहते हैं, और जिस फोन पर भी साइन इन करें, वहाँ वही मिलते हैं।", telugu: "ఖాతాతో మీ పఠన స్థానం, వ్రతాలు, దీపం భద్రంగా ఉంటాయి; మీరు సైన్ ఇన్ చేసే ప్రతి ఫోన్‌లోనూ అవే ఉంటాయి." },
+  codeSent:  { roman: "We have sent a code to {h}. Type it here.", deva: "{h} पर एक कोड भेजा है। उसे यहाँ लिखिये।", telugu: "{h} కి ఒక కోడ్ పంపాము. దాన్ని ఇక్కడ రాయండి." },
+  codeLbl:   { roman: "The code", deva: "कोड", telugu: "కోడ్" },
+  sendCode:  { roman: "Send the code", deva: "कोड भेजिये", telugu: "కోడ్ పంపండి" },
+  verify:    { roman: "Sign in", deva: "साइन इन", telugu: "సైన్ ఇన్" },
+  back:      { roman: "Use a different number or address", deva: "दूसरा नम्बर या पता", telugu: "వేరే నంబరు లేదా చిరునామా" },
+  failed:    { roman: "That did not work. Please check and try again.", deva: "यह नहीं हुआ। देखकर फिर से कोशिश कीजिये।", telugu: "కుదరలేదు. సరిచూసి మళ్ళీ ప్రయత్నించండి." },
+  wait:      { roman: "One moment…", deva: "एक क्षण…", telugu: "ఒక్క క్షణం…" },
+  s_syncing: { roman: "Syncing now.", deva: "अभी सिंक हो रहा है।", telugu: "ఇప్పుడు సింక్ అవుతోంది." },
+  s_synced:  { roman: "Your data is saved to your account and kept the same on every phone you sign in on.", deva: "आपका डेटा आपके खाते में सुरक्षित है, और जिस फोन पर भी साइन इन करें, वहाँ वही रहेगा।", telugu: "మీ వివరాలు మీ ఖాతాలో భద్రంగా ఉన్నాయి. మీరు సైన్ ఇన్ చేసే ప్రతి ఫోన్‌లోనూ అవే ఉంటాయి." },
+  s_offline: { roman: "No connection. Changes are kept on this phone and will be sent when the connection returns.", deva: "इंटरनेट नहीं है। बदलाव इसी फोन पर रखे हैं और इंटरनेट आने पर भेजे जायेंगे।", telugu: "ఇంటర్నెట్ లేదు. మార్పులు ఈ ఫోన్‌లోనే ఉన్నాయి, కనెక్షన్ రాగానే పంపబడతాయి." },
+  s_error:   { roman: "Syncing did not complete. It will try again.", deva: "सिंक पूरा नहीं हुआ। फिर से कोशिश होगी।", telugu: "సింక్ పూర్తి కాలేదు. మళ్ళీ ప్రయత్నిస్తుంది." },
+  carryVows: { roman: "Vows, plans and reminders", deva: "व्रत, अभ्यास और स्मारक", telugu: "వ్రతాలు, అభ్యాసం, రిమైండర్‌లు" },
+  syncNow:   { roman: "Sync now", deva: "अभी सिंक करें", telugu: "ఇప్పుడు సింక్ చేయండి" },
+  realNote:  { roman: "Your account is kept on our server. Only you can read your data. The name and gotra in the saṅkalpa stay on this phone and are never sent.", deva: "आपका खाता हमारे सर्वर पर है। आपका डेटा केवल आप देख सकते हैं। संकल्प का नाम और गोत्र इसी फोन पर रहते हैं, कभी भेजे नहीं जाते।", telugu: "మీ ఖాతా మా సర్వర్‌లో ఉంది. మీ వివరాలు మీరు మాత్రమే చూడగలరు. సంకల్పంలోని పేరు, గోత్రం ఈ ఫోన్‌లోనే ఉంటాయి, ఎక్కడికీ పంపబడవు." },
+};
+const w = (k: string, lang: string) => (W[k] && (W[k][lang] || W[k].roman)) || k;
+
+function useCloudSession() {
+  const [s, setS] = useState(() => A.get());
+  const [, bump] = React.useReducer((x: number) => x + 1, 0);
+  useEffect(() => A.subscribe((v) => { setS(v); bump(); }), []);
+  return s;
+}
+
+function CloudAccountView({ go, lang = "deva", backView = "settings" }: any) {
+  const L = STUTI_L;
+  const session = useCloudSession();
+  const lamp = useDana();
+  const [method, setMethod] = useState<null | "google" | "phone" | "email">(null);
+  const [handle, setHandle] = useState("");
+  const [name, setName] = useState("");
+  const [code, setCode] = useState("");
+  const [step, setStep] = useState<"handle" | "code">("handle");
+  const [busy, setBusy] = useState(false);
+  const [err, setErr] = useState("");
+  const script = lang === "telugu" ? { fontFamily: "var(--font-telugu)" } : lang === "deva" ? { fontFamily: "var(--font-deva)" } : undefined;
+  const P = A.providers();
+
+  const handleOk = method === "email" ? /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(handle.trim())
+    : method === "phone" ? handle.replace(/[^\d]/g, "").length >= 10 : false;
+
+  const run = async (f: () => Promise<{ ok: boolean; error?: string }>, next?: () => void) => {
+    setBusy(true); setErr("");
+    try { const r = await f(); if (r.ok) { next && next(); } else setErr(w("failed", lang)); }
+    catch (e) { setErr(w("failed", lang)); }
+    setBusy(false);
+  };
+
+  const state = A.syncState();
+  const methods = ([["google", "accGoogle", "globe"], ["phone", "accPhone", "phone"], ["email", "accEmail", "mail"]] as const).filter(([k]) => (P as any)[k]);
+
+  return (
+    <div className="view libhub scroll">
+      <div className="topbar">
+        <button className="icon-btn" onClick={() => go(backView)} aria-label={STUTI_L.a("aBack")}><Icon name="back" /></button>
+        <div className="topbar-title display">{L.t("account", lang)}</div>
+        <span style={{ width: 44 }} />
+      </div>
+
+      <div className="lens-pad">
+        {session ? (
+          <React.Fragment>
+            <section className="acc-card">
+              <div className="acc-seal"><Icon name="lotus" size={26} /></div>
+              <div className="acc-who">
+                <div className="acc-name display" style={script}>{session.name || L.t("accNoName", lang)}</div>
+                <div className="acc-handle">{session.handle || L.t("accVia", lang).replace("{p}", L.t("accProv_" + session.provider, lang))}</div>
+              </div>
+            </section>
+
+            <section className="set-sect">
+              <div className="eyebrow set-cap">{L.t("accSyncCap", lang)}</div>
+              <p className="set-note">{w("s_" + (state === "signedOut" || state === "off" ? "syncing" : state), lang)}</p>
+              <div className="acc-rows">
+                {["accCarryPlace", "carryVows", "accCarryPlus"].map(k => (
+                  <div className="acc-row" key={k}>
+                    <span className="acc-row-mark"><Icon name={state === "synced" ? "check" : "clock"} size={14} /></span>
+                    <span>{W[k] ? w(k, lang) : L.t(k, lang)}</span>
+                  </div>
+                ))}
+              </div>
+              {state !== "syncing" && <button className="dana-later" onClick={() => A.syncNow()}>{w("syncNow", lang)}</button>}
+            </section>
+
+            <section className="set-sect">
+              <div className="eyebrow set-cap">{L.t("danaCap", lang)}</div>
+              <p className="set-note">{lamp ? L.t("danaRowLit", lang) : L.t("accPlusNone", lang)}</p>
+            </section>
+
+            <button className="acc-out" onClick={() => { A.signOut(); setStep("handle"); setMethod(null); setCode(""); }}>{L.t("accSignOut", lang)}</button>
+            <p className="acc-fine">{w("realNote", lang)}</p>
+          </React.Fragment>
+        ) : (
+          <React.Fragment>
+            <p className="acc-lede">{w("lede", lang)}</p>
+
+            {step === "handle" && (
+              <div className="acc-methods">
+                {methods.map(([k, key, icon]) => (
+                  <button key={k} className={"acc-method" + (method === k ? " on" : "")} disabled={busy}
+                    onClick={() => { setErr(""); if (k === "google") run(() => A.google()); else setMethod(k); }}>
+                    <Icon name={icon} size={18} /> {L.t(key, lang)}
+                  </button>
+                ))}
+              </div>
+            )}
+
+            {method && method !== "google" && step === "handle" && (
+              <div className="acc-form">
+                <label className="acc-field">
+                  <span>{L.t(method === "phone" ? "accPhoneLbl" : "accEmailLbl", lang)}</span>
+                  <input value={handle} onChange={e => setHandle(e.target.value)}
+                    inputMode={method === "phone" ? "tel" : "email"} autoComplete={method === "phone" ? "tel" : "email"}
+                    placeholder={method === "phone" ? "+91" : "name@example.com"} />
+                </label>
+                <label className="acc-field">
+                  <span>{L.t("accNameLbl", lang)}</span>
+                  <input value={name} onChange={e => setName(e.target.value)} placeholder={L.t("accNamePh", lang)} />
+                </label>
+                <button className="dana-cta" disabled={!handleOk || busy}
+                  onClick={() => run(() => A.sendCode(method, handle), () => setStep("code"))}>
+                  {busy ? w("wait", lang) : w("sendCode", lang)}
+                </button>
+              </div>
+            )}
+
+            {method && method !== "google" && step === "code" && (
+              <div className="acc-form">
+                <p className="set-note">{w("codeSent", lang).replace("{h}", handle.trim())}</p>
+                <label className="acc-field">
+                  <span>{w("codeLbl", lang)}</span>
+                  <input value={code} onChange={e => setCode(e.target.value)} inputMode="numeric" autoComplete="one-time-code" autoFocus maxLength={10} />
+                </label>
+                <button className="dana-cta" disabled={code.replace(/\D/g, "").length < 6 || busy}
+                  onClick={() => run(() => A.verify(method, handle, code, name))}>
+                  {busy ? w("wait", lang) : w("verify", lang)}
+                </button>
+                <button className="dana-later" onClick={() => { setStep("handle"); setCode(""); setErr(""); }}>{w("back", lang)}</button>
+              </div>
+            )}
+
+            {err && <p className="fb-done">{err}</p>}
+
+            <div className="acc-carry">
+              <div className="eyebrow">{L.t("accCarryCap", lang)}</div>
+              <ul>
+                <li>{L.t("accCarryPlace", lang)}</li>
+                <li>{w("carryVows", lang)}</li>
+                <li>{L.t("accCarryPlus", lang)}</li>
+              </ul>
+              <p className="acc-fine">{w("realNote", lang)}</p>
+            </div>
+          </React.Fragment>
+        )}
+      </div>
+    </div>
+  );
+}
+
+function AccountView(props: any) {
+  return A.configured() ? <CloudAccountView {...props} /> : <DesignAccountView {...props} />;
+}
+
+export { AccountView };

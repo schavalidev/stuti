@@ -11,6 +11,8 @@
 //       with the account's email as Editor
 // and STUTI_DRIVE_FOLDER — the folder id (the tail of its Drive URL).
 //
+// Feedback from the app's sheet arrives as feedback-<device>-<time>-<kind>.txt.
+//
 // Requests: POST JSON
 //   { name, mime, text }                → written as a file (≤ 4 MB)
 //   { name, mime, size, resumable: true } → { url } to PUT the bytes to
@@ -19,7 +21,7 @@
 import { createSign } from "node:crypto";
 
 const MAX_TEXT = 4 * 1024 * 1024, MAX_BLOB = 40 * 1024 * 1024;
-const PREFIXES = ["crash-", "follow-", "note-", "recitation-", "journal-"];
+const PREFIXES = ["crash-", "follow-", "note-", "recitation-", "journal-", "feedback-"];
 // ...and the signed build itself, published from the maker's machine so a
 // tester can install it from the same folder their logs arrive in. Named
 // exactly rather than by prefix: this endpoint carries no credential, and a

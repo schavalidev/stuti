@@ -1,6 +1,7 @@
 import { Icon } from "./stuti-icons";
 import React from "react";
 import { STUTI_BUILD } from "./stuti-build";
+import { AccountRow } from "./stuti-account-row";
 import { RelayRow } from "./stuti-relay-ui";
 import { STUTI_DANA } from "./stuti-dana-core";
 import { DanaSheet, useDana } from "./stuti-dana";
@@ -318,7 +319,7 @@ function SettingsView({ go, lang, setLang, uiLang, setUiLang, theme, toggleTheme
             <FlyleafBlock lang={uiLang} />
             {/* honest about the account: none exists yet, and the row says so
                rather than inviting a sign-in that verifies nothing */}
-            <SetRow label={L.t("accComing", uiLang)} sub={L.t("accComingSub", uiLang)} />
+            <AccountRow lang={uiLang} Row={SetRow} go={go} />
             <SetRow label={L.t(given ? "danaRowLit" : "danaRowAsk", uiLang)}
               sub={given ? ((given.name || L.t("danaLampNoName", uiLang)) + " · " + L.t("danaPreviewShort", uiLang)) : L.t("danaRowSub", uiLang)}
               onClick={() => setDanaOpen(true)}>

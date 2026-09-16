@@ -2,7 +2,7 @@ import { DeityView, ReaderView } from "./stuti-reader";
 import { DeityTile, FavButton, Flame, Icon, Seal, deityStyle } from "./stuti-icons";
 import ReactDOM from "react-dom/client";
 import React from "react";
-import { AccountView } from "./stuti-account";
+import { AccountView } from "./stuti-account-cloud";
 import { CalendarView } from "./stuti-calendar";
 import { STUTI } from "./stuti-data";
 import { HomeA, todayInfo } from "./stuti-home";

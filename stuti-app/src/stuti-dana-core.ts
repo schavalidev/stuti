@@ -1,3 +1,4 @@
+import { STUTI_RAZORPAY_IDS } from "./stuti-cloud-config";
 /* ============================================================
    STUTI — dakṣiṇā, and what it lights
    Nothing in this app is withheld. The texts, the scripts, the
@@ -20,7 +21,7 @@
    each created for exactly that amount, so Razorpay enforces it server-side
    and no secret key ever needs to live in this file. Leave a slot blank to
    keep that amount's sheet exactly as it reads today. */
-export const STUTI_RAZORPAY = { day: "", month: "", year: "", patron: "" };
+export const STUTI_RAZORPAY = STUTI_RAZORPAY_IDS;
 
 export const STUTI_DANA = (function () {
   const subs = new Set();

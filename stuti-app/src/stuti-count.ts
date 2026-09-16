@@ -8,6 +8,7 @@
    so a tester can read exactly what would have been sent
    (STUTI_COUNT.recent()). Respects the browser's Do Not Track.
    ============================================================ */
+import { countSink, countSinkOn } from "./stuti-count-sink";
 export const STUTI_COUNT = (function () {
   const ENDPOINT = window.STUTI_COUNT_ENDPOINT || null;
   const DOMAIN = (window as any).STUTI_COUNT_DOMAIN || location.hostname || "stuti";
@@ -32,6 +33,7 @@ export const STUTI_COUNT = (function () {
     const ev = { n: name, p: clean(props), t: Date.now() };
     buf.push(ev); if (buf.length > 60) buf.shift();
     try { sessionStorage.setItem(KEY, JSON.stringify(buf)); } catch (e) {}
+    countSink(name, ev.p);
     if (ENDPOINT) {
       try {
         const body = JSON.stringify({ name: name, url: location.origin + "/" + (ev.p.screen || ""), domain: DOMAIN, props: ev.p });
@@ -43,7 +45,7 @@ export const STUTI_COUNT = (function () {
   }
 
   const recent = () => buf.slice();
-  const state = () => (dnt ? "dnt" : ENDPOINT ? "on" : "local");
+  const state = () => (dnt ? "dnt" : ENDPOINT || countSinkOn() ? "on" : "local");
 
   window.addEventListener("appinstalled", () => hit("install"));
   hit("app_open", { screen: (location.hash || "").replace(/^#\/?/, "") || "home" });

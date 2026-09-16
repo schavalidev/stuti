@@ -1,7 +1,7 @@
 import { DeityView, ReaderView } from "./stuti-reader";
 import { DeityTile, FavButton, Icon, Seal, deityStyle } from "./stuti-icons";
 import React from "react";
-import { AccountView } from "./stuti-account";
+import { AccountView } from "./stuti-account-cloud";
 import { CalendarView } from "./stuti-calendar";
 import { STUTI_COUNT } from "./stuti-count";
 import { STUTI } from "./stuti-data";

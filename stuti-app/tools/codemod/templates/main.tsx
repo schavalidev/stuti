@@ -1,4 +1,5 @@
 import "./stuti-voice-shim"; // must come first: replaces window.SpeechRecognition in the native app
+import "./stuti-sync-hook"; // before any store writes: stamps the reciter's own keys so they can sync
 import { Capacitor } from "@capacitor/core";
 import ReactDOM from "react-dom/client";
 import App from "./stuti-main";
@@ -7,6 +8,9 @@ import { registerKept } from "./stuti-recitations"; // kept recitations become e
 import { installRelay } from "./stuti-relay"; // crash notes and Follow sessions go to the makers' Drive folder
 import { installJournal } from "./stuti-journal"; // screens, taps and slow tasks, flushed to the same folder
 import { installNotify } from "./stuti-notify"; // on the phone the OS holds the cues, so they arrive with the app closed
+import { installCloud } from "./stuti-cloud"; // the account, sync and the cue record, when Supabase is configured
+import { applyCachedCorrections, refreshCorrections } from "./stuti-corrections"; // verse corrections published without a release
+import { STUTI_BUILD } from "./stuti-build";
 import "./stuti.css";
 import "./stuti-components.css";
 import "./stuti-palette.css";
@@ -25,6 +29,9 @@ try {
   if (prefs && prefs.onboarded && !localStorage.getItem("stuti-beta-key")) localStorage.setItem("stuti-beta-key", "1");
 } catch (e) {}
 
+applyCachedCorrections();
+(window as any).STUTI_BUILD_LABEL = STUTI_BUILD.label();   // the analytics sink names the build, nothing else about the device
+
 ReactDOM.createRoot(document.getElementById("root")!).render(<App />);
 
 /* arm the daily bell once the app is mounted (offline caching + push are
@@ -35,6 +42,8 @@ registerKept();
 installRelay();
 installJournal();
 installNotify();
+installCloud();
+refreshCorrections();
 (window as any).STUTI_COUNT_DOMAIN = "stuti-app.netlify.app";   // one site for the counters, phone and web alike
 
 /* The offline worker is for the web. Inside the Android app every file is

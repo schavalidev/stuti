@@ -27,6 +27,9 @@ node fix-search-seam.mjs
 node fix-perf-seam.mjs
 node fix-relay-seam.mjs
 node fix-notify-seam.mjs
+node fix-account-seam.mjs
+node fix-feedback-seam.mjs
+node fix-dana-seam.mjs
 node setup-entry.mjs
 node fix-backdrop-prefix.mjs
 node fix-missing-imports.mjs

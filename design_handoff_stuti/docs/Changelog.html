@@ -95,6 +95,45 @@ code { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: .
 
 <section class="release">
   <div class="rail">
+    <div class="ver">0.9.104</div>
+    <div class="date">16 September 2026</div>
+    <div class="rail-note">The seams the design left for a server, filled — and every one of them still switched off until the project exists.</div>
+  </div>
+  <div class="release-body">
+    <h2 class="release-title">A server behind the account, the feedback and the verses</h2>
+    <div class="entry">
+      <div class="entry-head"><span class="tag tag-add">Added</span><h3>Feedback arrives instead of waiting in a mail app</h3></div>
+      <p>The feedback sheet handed its message to the reciter's mail app because the app had nowhere to send it, and a message that still needs a second Send is often never sent. Send now goes through the log relay into the makers' Drive folder, beside the testers' logs, as <code>feedback-&lt;device&gt;-&lt;time&gt;-&lt;kind&gt;.txt</code>, carrying the same text the sheet shows. The mail app is still there as the fallback when the relay cannot be reached, and it is also what happens until the relay's new file kind is deployed.</p>
+    </div>
+    <div class="entry">
+      <div class="entry-head"><span class="tag tag-add">Added</span><h3>A real account, and sync that keeps every store's own key</h3></div>
+      <p>The account was a stub that recorded whatever was typed. Now there is a Supabase account behind it: an email or SMS code, or Google, which opens in the system browser on the phone and returns through the app's own link. The designer's screen needed a second step for the code, so a hand-authored screen keeps her layout and words, adds that step, and hands back to her screen untouched whenever the project is not configured. Sync does not replace any store. Each store goes on writing its own localStorage key, and a watcher installed before the first store loads stamps every key that belongs to the reciter. Those keys then travel as one row each, and the newer stamp wins. The server also refuses an older stamp, so a phone that was offline for a week cannot overwrite what was done since. On a device's first sign-in its existing beta data is offered to the account, and a copy the account already holds from another phone wins. Because the stores read their keys only once, at start, a copy pulled from elsewhere takes effect at the next reload. That reload happens when the app is put away, never in front of the reciter, except straight after sign-in, when the reload is what they are waiting for.</p>
+    </div>
+    <div class="entry">
+      <div class="entry-head"><span class="tag tag-chg">Changed</span><h3>The name and gotra stay on the phone, sync included</h3></div>
+      <p>The first draft of the sync list included the flyleaf. The saṅkalpa panel tells the reciter in so many words that name and gotra are sent nowhere, and an account would have quietly broken that promise. The flyleaf and its older keys are now kept out of sync by name. The account screen, which the design had saying the saṅkalpa's details travel, now says they stay.</p>
+    </div>
+    <div class="entry">
+      <div class="entry-head"><span class="tag tag-add">Added</span><h3>The cue record lives on the server</h3></div>
+      <p>A push sender cannot work out sandhyā times from a phone's localStorage. <code>STUTI_PUSH.record()</code> already described what it would need: the place and its zone, sandhyā reminders, quiet hours, the digest hour, the almanac settings and the vows. That record is now kept in <code>stuti_cue_prefs</code>, one row per device, and rewritten only when it changes. No sender has been written yet; this is the data one will read.</p>
+    </div>
+    <div class="entry">
+      <div class="entry-head"><span class="tag tag-add">Added</span><h3>A verse can be corrected without a release</h3></div>
+      <p>The corpus stays baked in, because it is what works with no network in the pūjā room. Moving 1.7 MB to a fetched file would have given that up to fix a handful of words. Instead a correction is a published row naming the hymn, the verse, the field, the text as it reads now and the text it should read. Every app lays these rows over its corpus before the first screen and keeps them for offline use. A row applies only while the verse still reads exactly what the row replaces, so once the corpus itself carries the fix the row does nothing. Hymns keyed without verse numbers are addressed by position, which a first test caught: the lookup matched no verse at all until position was accepted.</p>
+    </div>
+    <div class="entry">
+      <div class="entry-head"><span class="tag tag-add">Added</span><h3>The counters have somewhere to go</h3></div>
+      <p><code>STUTI_COUNT</code> already chose the twelve events and the few facts each may carry. It only lacked a destination. Events are now batched into <code>stuti_events</code> with the day, the platform and the build, and nothing else: no device, no account, no time of day. The table accepts inserts from anyone and can be read only from the dashboard.</p>
+    </div>
+    <div class="entry">
+      <div class="entry-head"><span class="tag tag-chg">Changed</span><h3>Every public server value in one hand-authored file</h3></div>
+      <p>The Razorpay button ids sat inside a generated file, so filling them in would have been undone by the next port. They now live in <code>stuti-cloud-config.ts</code>, beside the Supabase address and its public key, and a codemod step points the generated file at them. The server setup, the correction workflow and <code>tools/ship.sh</code> (the APK and the web from one build, behind one yes) are written up in <code>stuti-app/docs/backend.md</code>.</p>
+    </div>
+  </div>
+</section>
+
+<section class="release">
+  <div class="rail">
     <div class="ver">0.9.103</div>
     <div class="date">15 September 2026</div>
     <div class="rail-note">A rite the corpus already held in three places, and a printed book nobody had opened.</div>
