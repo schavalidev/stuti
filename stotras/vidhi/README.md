@@ -129,9 +129,10 @@ booklet and the Telugu page are itemised in the file and **none is reconciled**;
 that the booklet says three Vedic ṛcs before the offering to each of the six men and the Telugu
 page says none. **161 accent marks**, in six units only, all machine-lifted from vignanam's
 accented Taittirīya Saṁhitā and Brāhmaṇa pāṭha. Four of the rite's mantras are in none of the 80
-accented Taittirīya pāṭha pages — they belong to the Āpastamba gṛhya mantra collection — and are
-therefore given **without marks**; the accented Ṛgveda carries three of them and was deliberately
-not used.
+accented Taittirīya pāṭha pages and are therefore given **without marks**. Where they stand in
+other collections is cited in the file's header from fetched pages: only one of them,
+`ye ceha pitaro`, is in the Ṛgveda (10.15.13); the others are in the Vājasaneyi Saṁhitā or the
+Atharvaveda, and none of those marks was used.
 
 **Where the Taittirīya tarpaṇa already lives, so that no session looks for it twice.** This folder
 holds three different tarpaṇas and they are not versions of one another:
