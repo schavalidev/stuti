@@ -183,6 +183,7 @@ function VrataDetail({ vrataId, go, lang, onBack }) {
               <h1 className="deity-hero-name display" style={{ fontFamily: font }}>{vp3(v.name, lang)}</h1>
               <div className="deity-hero-epithet">{vp3(vRule(v), lang)}</div>
             </div>
+            {window.VidhiJump && <window.VidhiJump hymnId={v.vidhiText} deity={v.deity} go={go} lang={lang} />}
           </div>
           <p className="deity-hero-line">{vp3(v.tagline, lang)}</p>
           {date && (
@@ -198,7 +199,127 @@ function VrataDetail({ vrataId, go, lang, onBack }) {
           </div>
         </header>
 
+        {/* the two things a reciter opens the page for: the vidhānam of the day and,
+           where the day carries one, its pārāyaṇa. Both stand at the top rather
+           than under the reading; neither is written yet, so both say so. */}
+        {(!v.vidhi || v.parayana) && (
+        <div className="vr-sect vr-open">
+          {/* the placeholder only stands where no procedure has been keyed yet — a
+             rite that carries its own vidhi says so ten steps further down */}
+          {!v.vidhi && (
+          <div className="vr-open-row is-soon" aria-disabled="true">
+            <span className="vr-open-mark"><Icon name="diya" size={22} /></span>
+            <span className="vr-row-body">
+              <span className="vr-row-name display" style={{ fontFamily: font }}>{L.t("vidhanamOpen", lang)}</span>
+              <span className="vr-row-rule">{L.t("vidhanamOpenSub", lang)}</span>
+            </span>
+            <span className="vr-open-soon">{L.t("comingSoon", lang)}</span>
+          </div>
+          )}
+          {v.parayana && (
+            <div className="vr-open-row is-soon" aria-disabled="true">
+              <span className="vr-open-mark"><Icon name="book" size={22} /></span>
+              <span className="vr-row-body">
+                <span className="vr-row-name display" style={{ fontFamily: font }}>{vp3(v.parayana.name, lang)}</span>
+                <span className="vr-row-rule">{vp3(v.parayana.sub, lang)}</span>
+              </span>
+              <span className="vr-open-soon">{L.t("comingSoon", lang)}</span>
+            </div>
+          )}
+        </div>
+        )}
+
         {v.brief && <div className="vr-brief">{L.t("vrataBrief", lang)}</div>}
+
+        {v.samagri && <SamagriList vrataId={v.id} items={v.samagri} lang={lang} />}
+
+        {v.patri && (
+          <div className="vr-sect">
+            <div className="eyebrow">{L.t("patri", lang)}</div>
+            <div className="vr-patri-sub">{L.t("patriLeaves", lang)}</div>
+            <ol className="vr-patri">
+              {v.patri.map((p, i) => (
+                <li key={i}><span className="vr-patri-n">{i + 1}</span><span className="vr-patri-name">{vp3(p, lang)}</span></li>
+              ))}
+            </ol>
+            {v.pushpa && (
+              <React.Fragment>
+                <div className="vr-patri-sub">{L.t("patriFlowers", lang)}</div>
+                <ol className="vr-patri">
+                  {v.pushpa.map((p, i) => (
+                    <li key={i}><span className="vr-patri-n">{i + 1}</span><span className="vr-patri-name">{vp3(p, lang)}</span></li>
+                  ))}
+                </ol>
+              </React.Fragment>
+            )}
+            {v.durva && (
+              <React.Fragment>
+                <div className="vr-patri-sub">{L.t("patriDurva", lang)}</div>
+                <ol className="vr-patri">
+                  {v.durva.map((p, i) => (
+                    <li key={i}><span className="vr-patri-n">{i + 1}</span><span className="vr-patri-name">{vp3(p, lang)}</span></li>
+                  ))}
+                </ol>
+              </React.Fragment>
+            )}
+            {v.patriNote && <p className="vr-para" style={{ marginTop: 10 }}>{vp3(v.patriNote, lang)}</p>}
+          </div>
+        )}
+
+        {v.vidhi && (
+          <div className="vr-sect" id={"vidhi-" + v.id}>
+            <div className="eyebrow">{L.t("vidhi", lang)}</div>
+            <ol className="vr-vidhi">
+              {v.vidhi.map((s, i) => (
+                <li key={i}>
+                  <span className="vr-vidhi-n">{i + 1}</span>
+                  <span className="vr-vidhi-body">
+                    <span className="vr-vidhi-step display" style={{ fontFamily: font }}>{vp3(s.step, lang)}</span>
+                    <span className="vr-vidhi-detail">{vp3(s.detail, lang)}</span>
+                    {s.mantra && (
+                      <div className="vr-vidhi-verse" style={{ fontFamily: font }}>
+                        <p className="vr-vidhi-verse-text">{vp3(s.mantra, lang)}</p>
+                        {s.mantraMeaning && <p className="vr-vidhi-verse-meaning">{vp3(s.mantraMeaning, lang)}</p>}
+                      </div>
+                    )}
+                  </span>
+                </li>
+              ))}
+            </ol>
+          </div>
+        )}
+
+        {v.sankalpas && (
+          <div className="vr-sect">
+            <div className="eyebrow">{L.t("sankalpas", lang)}</div>
+            <div className="vr-sank">
+              {v.sankalpas.map((s, i) => (
+                <div key={i} className="vr-sank-row">
+                  <span className="vr-sank-when display" style={{ fontFamily: font }}>{vp3(s.when, lang)}</span>
+                  <span className="vr-sank-text">{vp3(s.text, lang)}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+        )}
+
+        {v.recipients && (
+          <div className="vr-sect">
+            <div className="eyebrow">{L.t("recipients", lang)}</div>
+            {v.recipientsNote && <p className="vr-para">{vp3(v.recipientsNote, lang)}</p>}
+            <div className="vr-recip">
+              {v.recipients.map((r, i) => (
+                <div key={i} className="vr-recip-row">
+                  <span className="vr-recip-head">
+                    <span className="vr-recip-name">{vp3(r.name, lang)}</span>
+                    <span className="vr-recip-kin">{vp3(r.kin, lang)}</span>
+                  </span>
+                  <span className="vr-recip-form">{vp3(r.form, lang)}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+        )}
 
         {v.significance && (
           <div className="vr-sect">
@@ -221,24 +342,6 @@ function VrataDetail({ vrataId, go, lang, onBack }) {
           </div>
         )}
 
-        {v.samagri && <SamagriList vrataId={v.id} items={v.samagri} lang={lang} />}
-
-        {v.vidhi && (
-          <div className="vr-sect">
-            <div className="eyebrow">{L.t("vidhi", lang)}</div>
-            <ol className="vr-vidhi">
-              {v.vidhi.map((s, i) => (
-                <li key={i}>
-                  <span className="vr-vidhi-n">{i + 1}</span>
-                  <span className="vr-vidhi-body">
-                    <span className="vr-vidhi-step display" style={{ fontFamily: font }}>{vp3(s.step, lang)}</span>
-                    <span className="vr-vidhi-detail">{vp3(s.detail, lang)}</span>
-                  </span>
-                </li>
-              ))}
-            </ol>
-          </div>
-        )}
 
         {v.naivedya && (
           <div className="vr-sect">
@@ -254,8 +357,23 @@ function VrataDetail({ vrataId, go, lang, onBack }) {
           </div>
         )}
 
+        {/* the texts the day names, opened straight into the reader; the deity's
+           own shelf stays below it for everything else */}
         <div className="vr-sect">
-          <div className="eyebrow">{L.t("toRecite", lang)}</div>
+          <div className="eyebrow">{L.t("alsoRecite", lang)}</div>
+          {(() => {
+            const LB = window.STUTI_LIB;
+            const named = (LB && LB.resolveStotras ? LB.resolveStotras(v.stotras) : []).filter((h) => h && !h.catalog);
+            if (!named.length) return null;
+            return (
+              <div className="parva-chips" style={{ marginBottom: 12 }}>
+                {named.map((h) => (
+                  <button key={h.id} className="parva-chip" style={{ fontFamily: vFont(lang) }}
+                    onClick={() => go("reader", { deity: h.deity, hymn: h.id, from: "browse" })}>{L.hymnTitle(h, lang)}</button>
+                ))}
+              </div>
+            );
+          })()}
           <window.DeityLink d={d} go={go} lang={lang} />
         </div>
 
