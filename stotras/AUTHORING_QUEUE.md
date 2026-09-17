@@ -3618,3 +3618,19 @@ so nobody retyped them. Working files are kept under `bin/cache/gautami_pushkara
 **Still open.** The *Dharmasindhu*'s `gauṇa-snāna` section (mantra-, gāyatra-, āgneya-,
 kāpila-snāna) is unwritten — its Sanskrit is unrecoverable in that scan and only the Marathi
 translation carries the sense. Worth assigning if a better copy turns up.
+
+## 2026-09-17 — vrata-list gaps: three pūjās queued
+
+The design's vrata list (`design_handoff_stuti/app/stuti-vrata-data.js`, 35 entries) was checked
+against `puja/`. Only four entries have a vrata vidhāna of their own (Gaṇeśa Caturthī, Varalakṣmī,
+Maṅgaḷa Gaurī, Nāga Pañcamī); seventeen fall back on the deity's ṣoḍaśopacāra; fourteen have
+nothing. These three close the largest part of that gap, in this order:
+
+- [ ] **Satyanārāyaṇa vrata kalpa** → `puja/vrata/06_satyanarayana_vrata_kalpam.txt`. Base: a clean
+  Telugu print in the South Indian paddhati (Vratha Ratnākaram vol. 2 is the coverage map, its OCR
+  broken). Witnesses: the Revā-khaṇḍa kathā (not in GRETIL's genuine Revākhaṇḍa — it is in the
+  Veṅkaṭeśvara-press "5.3" text), Gītā Press 1367 (Hindi kathā only).
+- [ ] **Ekādaśī vrata** → `puja/vrata/`. Covers the design's Ekādaśī entry. Gītā Press 1162 is a
+  Hindi kathā witness only.
+- [ ] **Viṣṇu ṣoḍaśopacāra pūjā** → `puja/smarta/`, with a Paurāṇika twin. Serves Paraśurāma,
+  Vāmana and Hayagrīva jayantīs in place of the nitya-pūjā `06`.
