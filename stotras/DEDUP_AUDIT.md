@@ -594,3 +594,10 @@ and Bṛhaddaivajñarañjana nibandhas.
   out of that file, because its Gītā Press source puts the verse in the invocation of the waters
   into the kalaśa at a pūjā and not in the bath. **Both placements are correct, each in its own
   tradition**, and the two files now say so.
+- **The Guru Stotram and the Dakṣiṇāmūrti Stotram inside the Guru pāda pūjā.**
+  `puja/smarta/52_guru_paduka_puja.txt` (and its Paurāṇika twin) opens with both hymns as its
+  book prints them: units 1–15 are `guru/19_guru_stotram.txt` with verses 14 and 15 in the other
+  order, and units 22–31 are `shiva/11_dakshinamurthy_ashtakam.txt`, differing only in sandhi and
+  spacing. The pūjā adds six Dakṣiṇāmūrti dhyāna verses the corpus does not otherwise hold. The
+  translations were taken from `19` and `11`; neither file was changed. **A rite that embeds two
+  hymns, not a duplicate. All three files stand.**
