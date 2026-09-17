@@ -10,28 +10,32 @@ from pauranika_common import *
 OUTDIR = pathlib.Path(sys.argv[1]).resolve()
 ONLY = sys.argv[2:]  # optional stems
 LABEL = re.compile(r'^\S+\s*[—–]$|^\(.*\)$')
+RESIDUAL = re.compile(r'^\S+\s*[—–]$|^\(.*\)$|^इति |मिति |^\S*\s*[—–]$')
+HEADPAREN = {'deva': re.compile(r'\s*\((?:ओं|ॐ)\s[^)]*\)'), 'iast': re.compile(r'\s*\((?:oṁ|om)\s[^)]*\)'),
+  'en': re.compile(r'\s*\(O[ṁm],?\s[^)]*\)'), 'tel': re.compile(r'\s*\(ఓం[^)]*\)'), 'hi': re.compile(r'\s*\((?:ओम्|ओं|ॐ)[,\s][^)]*\)')}
+BRACKET = re.compile(r'\s*\[[^\]]*\]')
 VIN = re.compile(r'प्राणायामे विनियोगः|गायत्री छन्दः|गायत्री चन्दः')
 
 TR = {  # a translation sentence that renders a Vedic segment
- 'en': re.compile(r'svāhā|bhūrbhuv|know that Person|Let Brahmā purify|sacred power we purify|earth, (mid-air|air|sky)|god Savit|of the god Sav|impel|set our thoughts|sprinkle you|In the evening|'
-    r'underlayer|spread beneath|couch of|covering (of|upon)|cover of|Let there be the deathless|nectar of immortality|'
+ 'en': re.compile(r'svāhā|peace, peace, peace|yajñopavīta is supremely pure|Put on this bright thread|born with Prajāpati|See the other hymns|bhūrbhuv|know that Person|Let Brahmā purify|sacred power we purify|earth, (mid-air|air|sky)|god Savit|of the god Sav|impel us|impel our|set our thoughts|sprinkle you|In the evening|'
+    r'underlayer|spread beneath|couch of|covering of the deathless|covering of the nectar|covering upon the nectar|cover of that nectar|Let there be the deathless|May there be the nectar of immortality|'
     r'Waters, you are|most kindly essence|come readily to you|flower of the waters|flower of the waters|who knows thus|'
     r'mother of mantras|We call upon you|O lord of the sacred word, h|may we know|we know|three-eyed one, the fragrant|'
     r'this great Person|golden-arm|Person of a thousand|supreme station|goddess Sarasvatī, r|Person indeed is all|'
     r'Whom the Ordainer|Whoever calls upon you, O god|as Pūṣan|that Sarasvatī of ours|\(Ṛgveda|leader of life|Long may we see|'
     r'giver of favour|breaths are truly|calls the breaths|(out|in|up|down|diffused|even|equalising|upward|outward|downward)[- ]?breath|'
     r'—\s*O[ṁm]\.$|^O[ṁm]\.$|moon indeed', re.I),
- 'tel': re.compile(r'స్వాహా|భూర్భువ|పురుషుని ఎరుగు|బ్రహ్మను మేము పవిత్రం|సవితృదేవుని|ప్రేరేపించ|ప్రోక్షించుచున్నాను|పరిషించు|సాయంకాల|అమృతమగు|ఉపస్తరణ|అపిధాన|ఆపిధాన|'
+ 'tel': re.compile(r'స్వాహా|శాంతిః శాంతిః శాంతిః|యజ్ఞోపవీతం పరమ పవిత్రమైనది|ఆయుష్యాన్ని ఇచ్చే ఈ శుభ్రమైన|ప్రజాపతితో కూడ సహజంగా|వేద సూక్తము|భూర్భువ|పురుషుని ఎరుగు|బ్రహ్మను మేము పవిత్రం|సవితృదేవుని|మమ్ము ప్రేరేపించ|మమ్ములను ప్రేరేపించ|బుద్ధులను ప్రేరేపించ|ప్రోక్షించుచున్నాను|పరిషించు|సాయంకాల|అమృతమగు|ఉపస్తరణ|అపిధాన|ఆపిధాన|'
     r'జలములారా|సుఖాన్ని కలిగించువారు|శుభకరమైన ఆ రసా|నివాసానికి మీరు|జలాల పుష్ప|చంద్రుడే జలాల|ఇలా ఎవడు తెలుసుకుంటాడో|'
     r'మంత్రమాత|గణపతివైన నిన్ను|గణములకు అధిపతివైన|బ్రహ్మణస్పతీ|కవులలో కవివి|మా మొర విని|ఎరుగుదుము|ఎఱుగుదుము|త్ర్యంబకుని|'
     r'ఆదిత్యవర్ణుడు|హిరణ్యబాహు|వేయి తలల|పరమపదము|వాజినీవతి|పురుషుడే ఇదంతా|ధాత పూర్వమే|\(ఋగ్వేద|ధనము పణముగా|పూషుని వలె|'
     r'భయంకరమును, బంగారు|ప్రాణనాయకా|ఉదయించుచున్న సూర్యుని|అనుమతీ|ప్రాణాలే అమృత|ప్రాణములే|ప్రాణమునకు|అపానమునకు|వ్యానమునకు|'
     r'ఉదానమునకు|సమానమునకు|ప్రాణాయ స్వాహా|—\s*ఓం\.$|^ఓం\.$'),
- 'hi': re.compile(r'स्वाहा|भूर्भुवः|भूर्भुवस्सुव|पुरुष को जान|सवितादेव|सवितृ देव|प्रेरित कर|परिषिञ्चित|परिसिञ्चित|सायंकाल|अमृत हो|उपस्तरण|अपिधान|आपिधान|'
+ 'hi': re.compile(r'स्वाहा|शान्तिः शान्तिः शान्तिः|यज्ञोपवीत परम पवित्र है|आयु देनेवाले इस शुभ्र|प्रजापति के साथ सहज|वेद सूक्त देखिए|भूर्भुवः|भूर्भुवस्सुव|पुरुष को जान|सवितादेव|सवितृ देव|हमें प्रेरित कर|बुद्धियों को प्रेरित|परिषिञ्चित|परिसिञ्चित|सायंकाल|अमृत हो|उपस्तरण|अपिधान|आपिधान|'
     r'आच्छादन हैं|हे जल!|सुख देनेवाले हो|अत्यन्त कल्याणकारी रस|जिसके निवास के लिये|जल के पुष्प|चन्द्रमा ही जल|जो ऐसा जानता|'
     r'मन्त्रमाता|गणपति रूप आपका|गणों के अधिपति|ब्रह्मणस्प|कवियों के कवि|रक्षाओं सहित|हम जानें|हम जानते हैं|त्र्यम्बक की|'
     r'आदित्यवर्ण|हिरण्यबाहु|सहस्र शीर्ष|परम पद|वाजिनीवती|पुरुष ही यह सब|धाता ने|\(ऋग्वेद|जो धन के दा|पूषा की भाँति|घोरा|'
-    r'प्राणों के नेता|उदय होते हुए सूर्य|हे अनुमति|प्राण ही अमृत|(प्राण|अपान|व्यान|उदान|समान) को|—\s*(ओम्|ॐ)।$|^(ओम्|ॐ)।$'),
+    r'प्राणों के नेता|उदय होते हुए सूर्य|हे अनुमति|प्राण ही अमृत|(?:^|ॐ |ओम् )(प्राण|अपान|व्यान|उदान|समान) को(?: स्वाहा|[;।])|—\s*(ओम्|ॐ)।$|^(ओम्|ॐ)।$'),
 }
 ACAMANA = {  # the first three names take नमः
  'en': [('Oṁ, to Keśava, svāhā.', 'Oṁ, salutation to Keśava.'), ('To Nārāyaṇa, svāhā.', 'Salutation to Nārāyaṇa.'),
@@ -50,6 +54,28 @@ PRANAYAMA = {
  'hi': "श्वास को भीतर लेना, रोकना, और उसके पश्चात् छोड़ना — इसी को प्राणायाम कहा गया है। "
        "इसे समस्त देवता नमस्कार करते हैं।",
 }
+CUT = {  # reviewed cut points: number of leading translation sentences that render the Vedic block
+ '17_shiva_shodashopachara_puja:34': {'tel': 4, 'hi': 4},
+ '18_mahalakshmi_visesha_shodashopachara_puja:8': {'en': 2, 'tel': 2},
+ '18_mahalakshmi_visesha_shodashopachara_puja:10': {'en': 3, 'tel': 3},
+ '19_durga_shodashopachara_puja:11': {'en': 2, 'tel': 2},
+ '19_durga_shodashopachara_puja:13': {'en': 3, 'tel': 3},
+ '19_durga_shodashopachara_puja:16': {'en': 2},
+ '19_durga_shodashopachara_puja:36': {'tel': 2, 'hi': 2},
+ '22_surya_shodashopachara_puja:2': {'en': 5},
+ '22_surya_shodashopachara_puja:28': {'en': 5, 'tel': 5, 'hi': 5},
+}
+NO_VEDIC_TRANSLATION = {'24_anaghashtami_vrata_kalpam'}   # this source leaves its Vedic lines untranslated
+HEADLINE = re.compile(r'^\S+(?: \S+)?\s*[—–]\s*$')
+LABELSPLIT = re.compile(r'^([^—–]{1,40}[—–]\s*)')
+
+def proportional_cut(ss, vch, tch):
+    tot = sum(len(x) for x in ss); target = tot * vch / tch; acc = 0; best = (1e9, 0)
+    for k in range(len(ss) + 1):
+        best = min(best, (abs(acc - target), k))
+        if k < len(ss): acc += len(ss[k])
+    return best[1]
+
 APPARATUS = re.compile(
     r'stotranidhi|Gītā Press|vignanam|this page|the page|the source|the print|pages|recorded, not reconciled|'
     r'corrected|see the header|accent|svara|witness|recension|transmitted|as printed|the folder|this folder|'
@@ -97,20 +123,56 @@ def build(f):
                 for a, b in reps:
                     if fld in u: u[fld] = u[fld].replace(a, b)
             log.append(f"{n}: ācamana — स्वाहा → नमः"); out.append(u); continue
+        # a service heading carrying a Vedic incipit in brackets: "आवाहनम् – (ओं सद्योजातं प्रपद्यामि)"
+        if any(re.search(r'[—–]\s*\((?:ओं|ॐ)\s', l) for l in dl):
+            for fld, rx in HEADPAREN.items():
+                if fld in u: u[fld] = rx.sub('', u[fld])
+            deva = u['deva']; dl = deva.split('\n'); il = u.get('iast', '').split('\n')
+            if len(il) != len(dl): il = [None] * len(dl)
+            log.append(f"{n}: Vedic incipit removed from the service heading")
+        if any(l.strip().startswith('[*') and is_vedic(l) for l in dl):
+            for fld in ('en', 'tel', 'hi'):
+                if fld in u: u[fld] = BRACKET.sub('', u[fld])
+            nd2 = []; skip = False
+            for d, i in zip(dl, il):
+                if d.strip().startswith('[*'): skip = True
+                if not skip: nd2.append((d, i))
+                if skip and '*]' in d: skip = False
+            dl = [d for d, _ in nd2]; il = [i for _, i in nd2]
+            u['deva'] = '\n'.join(dl)
+            if None not in il: u['iast'] = '\n'.join(il)
+            log.append(f"{n}: bracketed Vedic mantra removed")
+        if any(re.search(r'पश्यतु', norm(l)) for l in dl):
+            for fld in ('en', 'tel', 'hi'):
+                if fld in u: u[fld] = BRACKET.sub('', u[fld])
         if not any(is_vedic(l) for l in dl):
             out.append(u); continue
+        keep = [not (re.match(r'^\[.*\]$', norm(d).strip()) and is_vedic(d)) for d in dl]
+        dl = [d for d, k_ in zip(dl, keep) if k_]; il = [i for i, k_ in zip(il, keep) if k_]
         nd, ni, touched = [], [], 0
         for d, i in zip(dl, il):
             d2, i2, t = strip_line(d, i)
             touched += t
             if d2: nd.append(d2); ni.append(i2)
-        if not nd or all(LABEL.match(norm(x).strip()) for x in nd):
+        if not nd or all(RESIDUAL.search(norm(x).strip()) for x in nd):
             log.append(f"{n}: dropped — wholly Vedic ({norm(dl[0])[:40]})"); continue
         u['deva'] = '\n'.join(nd)
         if None not in ni: u['iast'] = '\n'.join(ni)
+        stem = pathlib.Path(f).stem
+        body = [(l, is_vedic(l)) for l in dl if l.strip() and not HEADLINE.match(norm(l).strip())]
+        pat = ''.join('V' if v else '.' for _, v in body)
+        prefix = f in TIER_C and re.fullmatch(r'V+\.+', pat) and not re.search(r'प्राणाय स्वाहा|अमृतोपस्तरण', norm(deva))
         for fld in ('en', 'tel', 'hi'):
             if fld in u:
                 ss = sents(u[fld], fld)
+                if prefix and stem not in NO_VEDIC_TRANSLATION:
+                    vch = sum(len(norm(l)) for l, v in body if v); tch = sum(len(norm(l)) for l, _ in body)
+                    k = CUT.get(f"{stem}:{n}", {}).get(fld, proportional_cut(ss, vch, tch))
+                    has_head = bool(dl) and bool(HEADLINE.match(norm(dl[0]).strip()))
+                    head = LABELSPLIT.match(ss[0]).group(1) if (has_head and k and ss and LABELSPLIT.match(ss[0])) else ''
+                    kept = ss[k:]
+                    if not kept: raise SystemExit(f"{f} unit {n}: every {fld} sentence dropped")
+                    u[fld] = (head + ' '.join(kept)).strip(); continue
                 kept = [s for s in ss if not TR[fld].search(s)]
                 if not kept: raise SystemExit(f"{f} unit {n}: every {fld} sentence dropped")
                 u[fld] = ' '.join(kept)
@@ -118,6 +180,8 @@ def build(f):
         out.append(u)
     for u in out:
         if u.get('vidhi'): u['vidhi'] = clean_prose(u['vidhi'])
+        if 'deva' in u:
+            u['deva'] = '\n'.join(ACC.sub('', l) if NOT_VEDIC.search(norm(l)) else l for l in u['deva'].split('\n'))
     # ---- verify
     bad = []
     for u in out:
@@ -283,7 +347,7 @@ def render(f, fields, out, pdf):
 
 OUTDIR.mkdir(parents=True, exist_ok=True)
 report = {}
-for f in FILES:
+for f in FILES + TIER_C:
     stem = pathlib.Path(f).stem
     if ONLY and stem not in ONLY: continue
     raw = (ROOT / f).read_text(encoding='utf-8')

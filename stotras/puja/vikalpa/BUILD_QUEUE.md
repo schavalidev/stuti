@@ -109,3 +109,21 @@ complete āgamokta ṣoḍaśopacāra in a masculine form (Śiva-pūjā) and a f
 with the rule that the same verses serve any deity once gender and number are changed. Also still
 to do: a corpus file for `smarta/14`, and an audit of `puja/vrata/` and every rite written since
 2026-09-13, none of which the audit above covered.
+
+## Progress — 2026-09-17, second pass
+
+**Built: the seven of Tier C** as well — `smarta/07`, `08`, `17`, `18`, `19`, `22`, `24`. The fear
+recorded above did not come true: in all seven, a Paurāṇika verse already stands at every service
+beside the sūkta ṛc, so the Gītā Press āgamokta verses were not needed and nothing was supplied.
+Where the ṛc is gone, the service keeps its Paurāṇika verse; at the bath of `07` and `08` it keeps
+the nāma-mantra, which Gītā Press 592 allows. The translation of each ṛc was cut at a point read and
+confirmed by eye for every unit, because sūkta translations cannot be found by pattern.
+
+**Found and fixed across all 24:** Vedic text printed without accent, which the first pass could not
+see — the yajñopavīta mantra in seven files, the closing `ॐ शान्तिः शान्तिः शान्तिः` in fifteen, a Śrī
+Sūkta ṛc in `07`, and the last Puruṣa Sūkta ṛc in `24`. The build now checks every line against
+every accented line in `puja/`, `veda/` and `vidhi/`, with the anusvāra and nasal-conjunct spellings
+treated as one.
+
+**Still to do:** a corpus file for `smarta/14`; `vaishnava/02`; and the audit of `puja/vrata/` and of
+every rite written since 2026-09-13.
