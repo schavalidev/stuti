@@ -10,7 +10,14 @@
    Sync is local-first. Every store keeps writing its own
    localStorage key as it always has; stuti-sync-hook.ts stamps
    the ones that belong to the reciter, and this file carries
-   those keys to one row each in `stuti_kv`, newest stamp winning.
+   those keys to one row each in `stuti_kv`, newest stamp winning —
+   except for the reciter's record (japa, the thread, vows, plans,
+   keeps, the ledger…). When this phone and the account hold two
+   different records, nothing is merged and nothing is overwritten:
+   sync stops in state "conflict" and the account screen asks which
+   to keep. That happens on a device's first sign-in when both sides
+   already hold practice, and later for any record key changed on
+   both sides since they last agreed.
    A copy pulled from another phone is written straight into
    localStorage, and because the stores read their keys once at
    start, the app reloads the next time it is put away — never in
@@ -47,7 +54,7 @@ export function cloud(): SupabaseClient | null {
 /* ---------------- the account ---------------- */
 export type Provider = "google" | "phone" | "email";
 type Shape = { provider: Provider; name: string; handle: string; id: string; at: number; stub: false };
-type SyncState = "off" | "signedOut" | "syncing" | "synced" | "offline" | "error";
+type SyncState = "off" | "signedOut" | "syncing" | "synced" | "offline" | "error" | "conflict";
 
 let session: Session | null = null;
 let state: SyncState = configured() ? "signedOut" : "off";
@@ -111,13 +118,26 @@ async function google(): Promise<{ ok: boolean; error?: string }> {
   return { ok: true };
 }
 
-async function signOut() {
+async function signOut(scope: "global" | "local" = "global") {
   const c = cloud();
-  if (c) { try { await c.auth.signOut(); } catch (e) {} }
-  session = null;
+  if (c) { try { await c.auth.signOut({ scope }); } catch (e) {} }
+  session = null; pending = null;
   try { rawRemove.call(localStorage, CURSOR); } catch (e) {}
   setState(configured() ? "signedOut" : "off");
   emit();
+}
+
+/* Removes the account and everything the server holds under it (the
+   cascade in schema.sql). What is on this phone stays: the reciter's
+   practice was theirs before the account and remains so after it. */
+async function deleteAccount(): Promise<{ ok: boolean; error?: string }> {
+  const c = cloud(); if (!c || !session) return { ok: false, error: "off" };
+  const { error } = await c.rpc("stuti_delete_my_account");
+  if (error) return { ok: false, error: error.message };
+  for (const k of [CURSOR, FIRST, CUE_SENT]) { try { rawRemove.call(localStorage, k); } catch (e) {} }
+  const m = readMeta(); delete m.base; writeMeta(m);
+  await signOut("local");      // the user is gone server-side; only the local session is left to drop
+  return { ok: true };
 }
 
 async function rename(name: string) {
@@ -133,8 +153,11 @@ export const STUTI_CLOUD_AUTH = {
   providers: () => CFG.providers,
   /* kept for the stub's callers: a real sign-in cannot happen in one call */
   signIn: (provider: Provider) => (provider === "google" ? google() : Promise.resolve({ ok: false, error: "use sendCode" })),
-  sendCode, verify, google, signOut, rename,
+  sendCode, verify, google, signOut: () => signOut(), rename, deleteAccount,
   syncState: () => (snap ? state : configured() ? "signedOut" : "off"),
+  /** the two records awaiting a choice, summarised for the screen; null when none */
+  conflict: () => (pending && snap ? { whole: pending.whole, keys: pending.keys.length, here: pending.here, account: pending.account } : null),
+  resolve: (keep: "phone" | "account") => resolve(keep),
   syncNow: () => sync(true),
   subscribe: (fn: (s: Shape | null) => void) => { subs.add(fn); return () => { subs.delete(fn); }; },
 };
@@ -144,23 +167,74 @@ const CURSOR = "stuti-sync-cursor";      // the newest server updated_at seen, p
 const FIRST = "stuti-sync-joined";       // the user id this device's existing data was first merged into
 let busy = false, again = false, reloadOnHide = false, timer: any = null;
 
+/* The reciter's record: what they did, as against how the app is set up.
+   These are never settled by clock alone. Settings (theme, script, font
+   size, reading positions…) still go to the newer stamp. */
+const RECORD_EXACT = new Set(["stuti-favs", "stuti-favs-week", "stuti-japa", "stuti-plans", "stuti-thread", "stuti-vows",
+  "stuti-watch", "stuti-keep", "stuti-my-tithis", "stuti-pitru-register", "stuti-dana", "stuti-ledger"]);
+const isRecord = (k: string) => RECORD_EXACT.has(k) || k.startsWith("stuti-practice-");
+const empty = (v: string | null | undefined) => v == null || v === "" || v === "{}" || v === "[]" || v === "null";
+
+type Row = { key: string; value: string | null; ts: number };
+export type Summary = { japa: number; days: number; vows: number; favs: number; last: number };
+type Pending = { whole: boolean; keys: string[]; remote: Record<string, Row>; here: Summary; account: Summary };
+let pending: Pending | null = null;
+
+function summarise(get: (k: string) => string | null | undefined, stamps: number[]): Summary {
+  const j = (k: string) => { try { return JSON.parse(get(k) || "null"); } catch (e) { return null; } };
+  const japa = j("stuti-japa"), thread = j("stuti-thread"), vows = j("stuti-vows"), favs = j("stuti-favs");
+  let total = 0;
+  if (japa && typeof japa === "object") for (const id of Object.keys(japa)) total += Number(japa[id] && japa[id].total) || 0;
+  let days = 0;
+  if (thread && typeof thread === "object") for (const d of Object.keys(thread)) { const r = thread[d]; if (r && ((r.r && r.r.length) || (r.p && r.p.length) || r.j > 0)) days++; }
+  return { japa: total, days, vows: Array.isArray(vows) ? vows.length : 0, favs: Array.isArray(favs) ? favs.length : 0,
+    last: stamps.filter((x) => x > 1).reduce((a, b) => Math.max(a, b), 0) };
+}
+
+function hold(whole: boolean, keys: string[], remote: Record<string, Row>, meta: { ts: Record<string, number> }) {
+  pending = {
+    whole, keys, remote,
+    here: summarise((k) => localStorage.getItem(k), keys.map((k) => meta.ts[k] || 0)),
+    account: summarise((k) => (remote[k] ? remote[k].value : null), keys.map((k) => (remote[k] ? remote[k].ts : 0))),
+  };
+  setState("conflict");
+}
+
 async function sync(interactive = false) {
   const c = cloud(); if (!c || !session) return;
   if (busy) { again = true; return; }
   busy = true; setState("syncing");
   const uid = session.user.id;
+  let held = false;
   try {
     const meta = readMeta();
+    const base = meta.base || (meta.base = {});
 
-    /* the first time this device meets this account, everything already on
-       it is offered up — stamped 1, so any copy the account already holds
-       (from a phone that has been syncing) wins, and anything the account
-       lacks is filled from here. Keys the hook has stamped keep their real time. */
     let joined = ""; try { joined = localStorage.getItem(FIRST) || ""; } catch (e) {}
     if (joined !== uid) {
-      for (let i = 0; i < localStorage.length; i++) {
-        const k = localStorage.key(i);
-        if (k && syncs(k)) { if (!meta.ts[k]) meta.ts[k] = 1; if (meta.dirty.indexOf(k) === -1) meta.dirty.push(k); }
+      /* The first time this device meets this account. Read everything the
+         account holds; if both sides carry a record and they differ, stop and
+         ask. Otherwise everything here is offered up, and where the account
+         already has something, its copy is taken (stamped 1 here, so it wins);
+         where it has nothing, this phone's copy fills it. */
+      const { data: all, error } = await c.from("stuti_kv").select("key,value,ts").eq("user_id", uid).limit(5000);
+      if (error) throw error;
+      const remote: Record<string, Row> = {};
+      for (const r of all || []) if (syncs(r.key)) remote[r.key] = { key: r.key, value: r.value, ts: Number(r.ts) || 0 };
+      const local: string[] = [];
+      for (let i = 0; i < localStorage.length; i++) { const k = localStorage.key(i); if (k && syncs(k)) local.push(k); }
+
+      const clash = local.some((k) => isRecord(k) && remote[k] && !empty(remote[k].value) && !empty(localStorage.getItem(k)) && remote[k].value !== localStorage.getItem(k));
+      if (clash) {
+        const keys = Array.from(new Set([...local, ...Object.keys(remote)])).filter((k) => isRecord(k) && (!empty(localStorage.getItem(k)) || (remote[k] && !empty(remote[k].value))));
+        hold(true, keys, remote, meta);
+        held = true;
+        return;
+      }
+      for (const k of local) {
+        if (remote[k] && !empty(remote[k].value)) meta.ts[k] = 1;
+        else if (!meta.ts[k]) meta.ts[k] = 1;
+        if (meta.dirty.indexOf(k) === -1) meta.dirty.push(k);
       }
       try { rawRemove.call(localStorage, CURSOR); } catch (e) {}
     }
@@ -172,37 +246,49 @@ async function sync(interactive = false) {
     const { data: rows, error } = await q;
     if (error) throw error;
     const remoteTs: Record<string, number> = {};
+    const clashes: Record<string, Row> = {};
     let changed = 0;
     for (const r of rows || []) {
-      remoteTs[r.key] = Number(r.ts) || 0;
+      const rts = Number(r.ts) || 0;
+      remoteTs[r.key] = rts;
       if (r.updated_at > cursor) cursor = r.updated_at;
       if (!syncs(r.key)) continue;
-      const mine = meta.ts[r.key] || 0;
-      if (remoteTs[r.key] <= mine) continue;
       const cur = localStorage.getItem(r.key);
+      /* a record key changed on both sides since they last agreed */
+      if (isRecord(r.key) && meta.dirty.indexOf(r.key) !== -1 && base[r.key] !== undefined && rts > base[r.key] && cur !== r.value) {
+        clashes[r.key] = { key: r.key, value: r.value, ts: rts };
+        continue;
+      }
+      const mine = meta.ts[r.key] || 0;
+      if (rts <= mine) continue;
       if (r.value === null) { if (cur !== null) { rawRemove.call(localStorage, r.key); changed++; } }
       else if (cur !== r.value) { rawSet.call(localStorage, r.key, r.value); changed++; }
-      meta.ts[r.key] = remoteTs[r.key];
+      meta.ts[r.key] = rts; base[r.key] = rts;
       meta.dirty = meta.dirty.filter((k) => k !== r.key);
     }
 
     /* push what changed here and is still newer than the server's copy */
-    const out = meta.dirty.filter((k) => syncs(k) && !(remoteTs[k] >= (meta.ts[k] || 0) && remoteTs[k] !== undefined))
+    const out = meta.dirty.filter((k) => syncs(k) && !clashes[k] && !(remoteTs[k] >= (meta.ts[k] || 0) && remoteTs[k] !== undefined))
       .map((k) => ({ user_id: uid, key: k, value: localStorage.getItem(k), ts: meta.ts[k] || Date.now() }));
     for (let i = 0; i < out.length; i += 200) {
       const { error: e2 } = await c.from("stuti_kv").upsert(out.slice(i, i + 200), { onConflict: "user_id,key" });
       if (e2) throw e2;
     }
+    for (const o of out) base[o.key] = o.ts;
     const sent = new Set(out.map((o) => o.key));
     const now = readMeta();                        // a store may have written while we were away on the network
     now.dirty = now.dirty.filter((k) => !sent.has(k) || (now.ts[k] || 0) > (meta.ts[k] || 0));
     for (const k of Object.keys(meta.ts)) if (!now.ts[k] || now.ts[k] < meta.ts[k]) now.ts[k] = meta.ts[k];
+    now.base = { ...(now.base || {}), ...base };
     writeMeta(now);
-    if (cursor) rawSet.call(localStorage, CURSOR, cursor);
+    /* while a clash waits, the cursor stays put so the account's copy is read again next time */
+    const clashKeys = Object.keys(clashes);
+    if (cursor && !clashKeys.length) rawSet.call(localStorage, CURSOR, cursor);
     rawSet.call(localStorage, FIRST, uid);
 
     await sendCueRecord(c, uid);
-    setState("synced");
+    if (clashKeys.length) { hold(false, clashKeys, clashes, now); held = true; }
+    else { pending = null; setState("synced"); }
 
     if (changed) {
       if (interactive || document.visibilityState === "hidden") location.reload();
@@ -212,7 +298,49 @@ async function sync(interactive = false) {
     setState(navigator.onLine === false || /fetch|network/i.test(String(e && e.message)) ? "offline" : "error");
   } finally {
     busy = false;
-    if (again) { again = false; schedule(1500); }
+    if (again && !held) { again = false; schedule(1500); }
+    else again = false;
+  }
+}
+
+/* The reciter has chosen. The chosen record applies whole across the keys in
+   question: nothing from the other side is kept alongside it. */
+async function resolve(keep: "phone" | "account"): Promise<{ ok: boolean; error?: string }> {
+  const c = cloud(); const p = pending;
+  if (!c || !session || !p) return { ok: false, error: "nothing to resolve" };
+  const uid = session.user.id;
+  const meta = readMeta(); const base = meta.base || (meta.base = {});
+  try {
+    if (keep === "phone") {
+      const rows = p.keys.map((k) => {
+        const ts = Math.max(Date.now(), (p.remote[k] ? p.remote[k].ts : 0) + 1);   // the server keeps only a newer stamp
+        return { user_id: uid, key: k, value: localStorage.getItem(k), ts };
+      });
+      for (let i = 0; i < rows.length; i += 200) {
+        const { error } = await c.from("stuti_kv").upsert(rows.slice(i, i + 200), { onConflict: "user_id,key" });
+        if (error) throw error;
+      }
+      for (const r of rows) { meta.ts[r.key] = r.ts; base[r.key] = r.ts; }
+    } else {
+      for (const k of p.keys) {
+        const r = p.remote[k];
+        if (r && r.value !== null) rawSet.call(localStorage, k, r.value); else rawRemove.call(localStorage, k);
+        if (r) { meta.ts[k] = r.ts; base[k] = r.ts; } else { delete meta.ts[k]; delete base[k]; }
+      }
+    }
+    meta.dirty = meta.dirty.filter((k) => p.keys.indexOf(k) === -1);
+    writeMeta(meta);
+    pending = null;
+    if (keep === "account") {
+      /* the stores read their keys once at start; finish joining, then start afresh */
+      rawSet.call(localStorage, FIRST, uid);
+      location.reload();
+      return { ok: true };
+    }
+    await sync(true);
+    return { ok: true };
+  } catch (e: any) {
+    return { ok: false, error: String(e && e.message) };
   }
 }
 const schedule = (ms = 4000) => { clearTimeout(timer); timer = setTimeout(() => sync(), ms); };

@@ -1,0 +1,10 @@
+/* Hand-authored, for stuti-account-cloud.tsx: the keep-which choice and account deletion. */
+.cf-pair{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:12px}
+.cf-card{padding:14px;border-radius:var(--r-md);background:var(--surface);border:1px solid var(--line);box-shadow:var(--shadow-sm)}
+.cf-title{font-size:1rem;color:var(--ink);margin-bottom:8px}
+.cf-row{display:flex;justify-content:space-between;gap:8px;font-size:.8125rem;line-height:1.7;color:var(--ink-soft)}
+.cf-row b{color:var(--ink);font-weight:500}
+.cf-actions{display:flex;flex-direction:column;gap:8px;margin-top:12px}
+.cf-del{margin-top:28px}
+.acc-out.cf-danger{margin-top:10px;color:var(--accent);border-color:color-mix(in oklab,var(--accent) 40%,var(--line))}
+@media (max-width:360px){.cf-pair{grid-template-columns:1fr}}

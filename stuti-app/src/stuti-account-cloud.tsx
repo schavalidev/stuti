@@ -3,7 +3,8 @@ import { AccountView as DesignAccountView } from "./stuti-account";
 import { useDana } from "./stuti-dana";
 import { STUTI_L } from "./stuti-i18n";
 import { Icon } from "./stuti-icons";
-import { STUTI_CLOUD_AUTH as A } from "./stuti-cloud";
+import { STUTI_CLOUD_AUTH as A, type Summary } from "./stuti-cloud";
+import "./stuti-account-cloud.css";
 
 /* ============================================================
    STUTI — the account screen, against a real server
@@ -33,6 +34,27 @@ const W: Record<string, Record<string, string>> = {
   s_error:   { roman: "Syncing did not complete. It will try again.", deva: "सिंक पूरा नहीं हुआ। फिर से कोशिश होगी।", telugu: "సింక్ పూర్తి కాలేదు. మళ్ళీ ప్రయత్నిస్తుంది." },
   carryVows: { roman: "Vows, plans and reminders", deva: "व्रत, अभ्यास और स्मारक", telugu: "వ్రతాలు, అభ్యాసం, రిమైండర్‌లు" },
   syncNow:   { roman: "Sync now", deva: "अभी सिंक करें", telugu: "ఇప్పుడు సింక్ చేయండి" },
+  s_conflict: { roman: "This phone and your account hold different records. Choose which to keep.", deva: "इस फोन और आपके खाते में अलग-अलग रिकॉर्ड हैं। कौन-सा रखना है, चुनिये।", telugu: "ఈ ఫోన్‌లోనూ మీ ఖాతాలోనూ వేర్వేరు వివరాలు ఉన్నాయి. ఏది ఉంచాలో ఎంచుకోండి." },
+  cfCap:     { roman: "Which record to keep", deva: "कौन-सा रिकॉर्ड रखें", telugu: "ఏ వివరాలు ఉంచాలి" },
+  cfNote:    { roman: "The one you keep replaces the other completely. They are not combined. The one you do not keep cannot be recovered.", deva: "जो आप रखेंगे, वह दूसरे की जगह पूरी तरह ले लेगा। दोनों जोड़े नहीं जाते। जो नहीं रखेंगे, वह वापस नहीं मिलेगा।", telugu: "మీరు ఉంచేవి మిగతా వాటి స్థానాన్ని పూర్తిగా తీసుకుంటాయి. రెండూ కలపబడవు. ఉంచనివి తిరిగి రావు." },
+  cfPhone:   { roman: "This phone", deva: "यह फोन", telugu: "ఈ ఫోన్" },
+  cfAcct:    { roman: "Your account", deva: "आपका खाता", telugu: "మీ ఖాతా" },
+  cfKeepPhone: { roman: "Keep this phone's record", deva: "इस फोन का रिकॉर्ड रखें", telugu: "ఈ ఫోన్ వివరాలు ఉంచండి" },
+  cfKeepAcct:  { roman: "Keep the account's record", deva: "खाते का रिकॉर्ड रखें", telugu: "ఖాతా వివరాలు ఉంచండి" },
+  cfSure:    { roman: "The other record will be removed. Are you sure?", deva: "दूसरा रिकॉर्ड हट जायेगा। क्या आप निश्चित हैं?", telugu: "మరొకటి తొలగిపోతుంది. మీరు నిశ్చయించుకున్నారా?" },
+  cfYes:     { roman: "Yes, keep it", deva: "हाँ, यही रखें", telugu: "అవును, ఇదే ఉంచండి" },
+  cancel:    { roman: "Cancel", deva: "रहने दें", telugu: "వద్దు" },
+  mJapa:     { roman: "Japa counted", deva: "जप की गिनती", telugu: "జప సంఖ్య" },
+  mDays:     { roman: "Days of practice", deva: "अभ्यास के दिन", telugu: "అభ్యాస దినాలు" },
+  mVows:     { roman: "Vows", deva: "व्रत", telugu: "వ్రతాలు" },
+  mFavs:     { roman: "Favourites", deva: "प्रिय स्तोत्र", telugu: "ఇష్టమైనవి" },
+  mLast:     { roman: "Last changed", deva: "अंतिम बदलाव", telugu: "చివరి మార్పు" },
+  delCap:    { roman: "Delete the account", deva: "खाता हटाएँ", telugu: "ఖాతా తొలగించండి" },
+  delNote:   { roman: "This removes your account and everything kept on our server under it. What is on this phone stays on this phone.", deva: "इससे आपका खाता और हमारे सर्वर पर उसमें रखा सब कुछ हट जाता है। इस फोन पर जो है, वह इसी फोन पर रहता है।", telugu: "దీనితో మీ ఖాతా, మా సర్వర్‌లో దానిలో ఉన్నదంతా తొలగిపోతుంది. ఈ ఫోన్‌లో ఉన్నది ఈ ఫోన్‌లోనే ఉంటుంది." },
+  delBtn:    { roman: "Delete my account", deva: "मेरा खाता हटाएँ", telugu: "నా ఖాతా తొలగించండి" },
+  delSure:   { roman: "This cannot be undone. Delete the account and its data on the server?", deva: "यह वापस नहीं होगा। खाता और सर्वर पर उसका डेटा हटा दें?", telugu: "ఇది తిరిగి రాదు. ఖాతాను, సర్వర్‌లోని దాని వివరాలను తొలగించాలా?" },
+  delYes:    { roman: "Yes, delete it", deva: "हाँ, हटा दें", telugu: "అవును, తొలగించండి" },
+  delDone:   { roman: "Your account has been deleted.", deva: "आपका खाता हटा दिया गया।", telugu: "మీ ఖాతా తొలగించబడింది." },
   realNote:  { roman: "Your account is kept on our server. Only you can read your data. The name and gotra in the saṅkalpa stay on this phone and are never sent.", deva: "आपका खाता हमारे सर्वर पर है। आपका डेटा केवल आप देख सकते हैं। संकल्प का नाम और गोत्र इसी फोन पर रहते हैं, कभी भेजे नहीं जाते।", telugu: "మీ ఖాతా మా సర్వర్‌లో ఉంది. మీ వివరాలు మీరు మాత్రమే చూడగలరు. సంకల్పంలోని పేరు, గోత్రం ఈ ఫోన్‌లోనే ఉంటాయి, ఎక్కడికీ పంపబడవు." },
 };
 const w = (k: string, lang: string) => (W[k] && (W[k][lang] || W[k].roman)) || k;
@@ -42,6 +64,19 @@ function useCloudSession() {
   const [, bump] = React.useReducer((x: number) => x + 1, 0);
   useEffect(() => A.subscribe((v) => { setS(v); bump(); }), []);
   return s;
+}
+
+function Record({ title, s, lang }: { title: string; s: Summary; lang: string }) {
+  const loc = lang === "telugu" ? "te-IN" : lang === "deva" ? "hi-IN" : "en-IN";
+  const n = (x: number) => x.toLocaleString(loc);
+  const rows: [string, string][] = [["mJapa", n(s.japa)], ["mDays", n(s.days)], ["mVows", n(s.vows)], ["mFavs", n(s.favs)]];
+  if (s.last) rows.push(["mLast", new Date(s.last).toLocaleDateString(loc, { day: "numeric", month: "short", year: "numeric" })]);
+  return (
+    <div className="cf-card">
+      <div className="cf-title display">{title}</div>
+      {rows.map(([k, v]) => <div className="cf-row" key={k}><span>{w(k, lang)}</span><b>{v}</b></div>)}
+    </div>
+  );
 }
 
 function CloudAccountView({ go, lang = "deva", backView = "settings" }: any) {
@@ -55,6 +90,9 @@ function CloudAccountView({ go, lang = "deva", backView = "settings" }: any) {
   const [step, setStep] = useState<"handle" | "code">("handle");
   const [busy, setBusy] = useState(false);
   const [err, setErr] = useState("");
+  const [choose, setChoose] = useState<null | "phone" | "account">(null);
+  const [delAsk, setDelAsk] = useState(false);
+  const [deleted, setDeleted] = useState(false);
   const script = lang === "telugu" ? { fontFamily: "var(--font-telugu)" } : lang === "deva" ? { fontFamily: "var(--font-deva)" } : undefined;
   const P = A.providers();
 
@@ -69,6 +107,7 @@ function CloudAccountView({ go, lang = "deva", backView = "settings" }: any) {
   };
 
   const state = A.syncState();
+  const conflict = A.conflict();
   const methods = ([["google", "accGoogle", "globe"], ["phone", "accPhone", "phone"], ["email", "accEmail", "mail"]] as const).filter(([k]) => (P as any)[k]);
 
   return (
@@ -90,6 +129,31 @@ function CloudAccountView({ go, lang = "deva", backView = "settings" }: any) {
               </div>
             </section>
 
+            {conflict && (
+              <section className="set-sect cf">
+                <div className="eyebrow set-cap">{w("cfCap", lang)}</div>
+                <p className="set-note">{w("s_conflict", lang)}</p>
+                <div className="cf-pair">
+                  <Record title={w("cfPhone", lang)} s={conflict.here} lang={lang} />
+                  <Record title={w("cfAcct", lang)} s={conflict.account} lang={lang} />
+                </div>
+                <p className="acc-fine">{w("cfNote", lang)}</p>
+                {!choose ? (
+                  <div className="cf-actions">
+                    <button className="dana-cta" onClick={() => setChoose("phone")}>{w("cfKeepPhone", lang)}</button>
+                    <button className="dana-cta" onClick={() => setChoose("account")}>{w("cfKeepAcct", lang)}</button>
+                  </div>
+                ) : (
+                  <div className="cf-actions">
+                    <p className="set-note">{w(choose === "phone" ? "cfKeepPhone" : "cfKeepAcct", lang)} — {w("cfSure", lang)}</p>
+                    <button className="dana-cta" disabled={busy} onClick={() => run(() => A.resolve(choose), () => setChoose(null))}>{busy ? w("wait", lang) : w("cfYes", lang)}</button>
+                    <button className="dana-later" disabled={busy} onClick={() => setChoose(null)}>{w("cancel", lang)}</button>
+                  </div>
+                )}
+                {err && <p className="fb-done">{err}</p>}
+              </section>
+            )}
+
             <section className="set-sect">
               <div className="eyebrow set-cap">{L.t("accSyncCap", lang)}</div>
               <p className="set-note">{w("s_" + (state === "signedOut" || state === "off" ? "syncing" : state), lang)}</p>
@@ -101,7 +165,7 @@ function CloudAccountView({ go, lang = "deva", backView = "settings" }: any) {
                   </div>
                 ))}
               </div>
-              {state !== "syncing" && <button className="dana-later" onClick={() => A.syncNow()}>{w("syncNow", lang)}</button>}
+              {state !== "syncing" && state !== "conflict" && <button className="dana-later" onClick={() => A.syncNow()}>{w("syncNow", lang)}</button>}
             </section>
 
             <section className="set-sect">
@@ -111,9 +175,28 @@ function CloudAccountView({ go, lang = "deva", backView = "settings" }: any) {
 
             <button className="acc-out" onClick={() => { A.signOut(); setStep("handle"); setMethod(null); setCode(""); }}>{L.t("accSignOut", lang)}</button>
             <p className="acc-fine">{w("realNote", lang)}</p>
+
+            <section className="set-sect cf-del">
+              <div className="eyebrow set-cap">{w("delCap", lang)}</div>
+              <p className="set-note">{w("delNote", lang)}</p>
+              {!delAsk ? (
+                <button className="acc-out cf-danger" onClick={() => { setErr(""); setDelAsk(true); }}>{w("delBtn", lang)}</button>
+              ) : (
+                <div className="cf-actions">
+                  <p className="set-note">{w("delSure", lang)}</p>
+                  <button className="acc-out cf-danger" disabled={busy}
+                    onClick={() => run(() => A.deleteAccount(), () => { setDelAsk(false); setDeleted(true); setStep("handle"); setMethod(null); setCode(""); })}>
+                    {busy ? w("wait", lang) : w("delYes", lang)}
+                  </button>
+                  <button className="dana-later" disabled={busy} onClick={() => setDelAsk(false)}>{w("cancel", lang)}</button>
+                </div>
+              )}
+              {delAsk && err && <p className="fb-done">{err}</p>}
+            </section>
           </React.Fragment>
         ) : (
           <React.Fragment>
+            {deleted && <p className="set-note">{w("delDone", lang)}</p>}
             <p className="acc-lede">{w("lede", lang)}</p>
 
             {step === "handle" && (

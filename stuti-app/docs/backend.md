@@ -46,6 +46,21 @@ The cue record (`stuti_cue_prefs`, one row per device): place and time zone,
 sandhyā reminders, quiet hours, digest hour, almanac settings, vows. It is what
 a push sender will read; there is no sender yet.
 
+### When two records differ
+
+Practice keys (japa, thread, vows, plans, keep, favourites, ledger, pitṛ register,
+my tithis, watch, lamp, `stuti-practice-*`) are never settled by clock. If a device's
+first sign-in finds a different record on both sides, or a practice key changed on
+both phones since they last agreed, sync stops in state `conflict` and the account
+screen asks which to keep. The chosen side replaces the other whole. Settings keys
+still take the newer stamp.
+
+### Deleting an account
+
+Settings → Account → Delete my account calls `stuti_delete_my_account()` (in
+`schema.sql`), which removes the caller from `auth.users`; every table cascades.
+The phone's own data is kept. Re-run `schema.sql` on an existing project to add it.
+
 ## 3. Correcting a verse without a release
 
 Table Editor → `stuti_corrections` → Insert row:

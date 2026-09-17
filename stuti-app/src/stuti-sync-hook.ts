@@ -28,7 +28,9 @@ const PREFIX = ["stuti-pos-", "stuti-practice-"];   // a reading position per hy
 export const syncs = (k: string) => EXACT.has(k) || PREFIX.some((p) => k.startsWith(p));
 
 const META = "stuti-sync-meta";
-type Meta = { ts: Record<string, number>; dirty: string[] };
+/* ts: when each key last changed here; dirty: changed and not yet sent;
+   base: the stamp both sides last agreed on, so a key changed on both since can be told apart */
+export type Meta = { ts: Record<string, number>; dirty: string[]; base?: Record<string, number> };
 
 const proto = Storage.prototype;
 export const rawSet = proto.setItem;

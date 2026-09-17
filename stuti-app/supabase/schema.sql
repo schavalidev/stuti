@@ -113,3 +113,19 @@ create or replace view public.stuti_events_daily with (security_invoker = true) 
   select day, name, props->>'screen' as screen, props->>'script' as script, platform, count(*) as n
   from public.stuti_events group by 1,2,3,4,5 order by 1 desc, 6 desc;
 revoke all on public.stuti_events_daily from anon, authenticated;
+
+-- ---------------------------------------------------------------------------
+-- 5. Deleting an account (stuti-cloud.ts → deleteAccount). The app holds only
+--    the anon key, which cannot remove a user; this function runs as its owner
+--    and removes exactly the caller. Every table above references auth.users
+--    on delete cascade, so the synced keys and cue records go with it.
+--    Counters and corrections hold no user and are untouched.
+-- ---------------------------------------------------------------------------
+create or replace function public.stuti_delete_my_account() returns void
+  language plpgsql security definer set search_path = '' as $$
+begin
+  if auth.uid() is null then raise exception 'not signed in'; end if;
+  delete from auth.users where id = auth.uid();
+end $$;
+revoke all on function public.stuti_delete_my_account() from public, anon;
+grant execute on function public.stuti_delete_my_account() to authenticated;
