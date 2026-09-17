@@ -95,3 +95,17 @@ The mantras here are Tāntric bīja-mantras, not Vedic — `ह्रीं`, `�
 - `puja/smarta/23_mahaganapati_chaturavrutti_tarpanam.txt` — Śrī Mahāgaṇapati Caturāvṛtti Tarpaṇam  
   21 units, 0 accent marks. vyāhṛti / prāṇāyāma
 
+
+## Progress — 2026-09-17
+
+**Built: all 17 of Tier B**, as corpus files in `puja/pauranika/smarta/` and `puja/pauranika/vaishnava/`
+under the same names as their Vedic originals, which are unchanged and kept for the initiated. PDFs
+of all 17 are in `../pauranika_puja_pdfs/` at the repository root. Generator:
+`bin/pauranika_puja.py`. The prāṇāhuti was removed without substitute, on the user's decision.
+
+**Still to build: the seven of Tier C** — `smarta/07`, `08`, `17`, `18`, `19`, `22`, `24`. The
+substitute verses for these exist in print: Gītā Press *Nitya Karma Pūjā Prakāśa* (592) gives a
+complete āgamokta ṣoḍaśopacāra in a masculine form (Śiva-pūjā) and a feminine form (Durgā-pūjā),
+with the rule that the same verses serve any deity once gender and number are changed. Also still
+to do: a corpus file for `smarta/14`, and an audit of `puja/vrata/` and every rite written since
+2026-09-13, none of which the audit above covered.
