@@ -140,6 +140,147 @@ the dvitīyā, and Rāma's dolotsava from the tṛtīyā for a month.
 ### The nimba mantra
 
 The verse asked after is **not in any printed nibandha searched.** It is not in the Dharmasindhu,
+which prescribes the nimba-patra-āśana but prints no mantra for it. It is not in the Vratarāja,
+whose own `संवत्सरारम्भविधिः` (`vrataraj-of-vishvanath-sharma-with-bhasha-tika-by-madhavacharya-khemraj`,
+pp. 65–67, lines 4612–4712 of the text layer) was read through for this: that section takes its whole
+vidhi from the Brahmapurāṇa — the udayikī pratipad, the śānti, the worship of Brahmā, and the long
+`नमो ब्रह्मणे तुभ्यम्` prayer to the divisions of time — and it names no nimba-eating and carries no
+verse for one. It is not in the Nirṇayasindhu (`xqwn_nirnaya-sindhu-…`), whose `वत्सरारम्भः` passage
+likewise prints none; that book's one occurrence of `निम्बपत्राणि` is Yājñavalkya on the chewing of
+nīm leaves at the house door after a cremation, a different act altogether. It is not in Hemādri,
+nor in Vratha Ratnākaramu 1–2 or Āru Vratālu — the `నింబ` hits in those Telugu prints are all
+tree-lists in pūjā material, not this. Full-text searches on archive.org for both incipits return
+nothing.
+
+**No printed witness was found.** What follows is the verse as it circulates, recorded because the
+day is kept with it, and marked unverified.
+
+The text is stotranidhi's, from `stotranidhi.com/ugadi-slokas-in-telugu/`, where it stands as the
+"Ugādi prasāda-prāśana śloka" and cites no book:
+
+- **deva** — शतायुर्वज्रदेहाय सर्वसम्पत्कराय च ।
+  सर्वारिष्टविनाशाय निम्बकन्दलभक्षणम् ॥
+- **iast** — śatāyurvajradehāya sarvasampatkarāya ca |
+  sarvāriṣṭavināśāya nimbakandalabhakṣaṇam ||
+- **tel** — శతాయుర్వజ్రదేహాయ సర్వసంప(సమ్ప)త్కరాయ చ ।
+  సర్వారిష్టవినాశాయ నింబ(నిమ్బ)కంద(కన్ద)లభక్షణమ్ ॥
+- **en** — For a hundred years of life, for a body hard as the vajra, for every kind of wealth, and
+  for the destruction of every affliction, this eating of the nīm shoot.
+- **hi** — सौ वर्ष की आयु के लिये, वज्र के समान दृढ़ शरीर के लिये, सब प्रकार की सम्पत्ति के लिये और सब
+  अरिष्टों के नाश के लिये यह नीम के कोंपल का भक्षण है।
+
+Two readings differ, and both should be known.
+
+- **The incipit.** It is `शतायुर्वज्रदेहाय`, not `निम्बकुसुमसम्भूतं`. The second is a separate
+  circulating opening, kept on hindupad under the title "Nimba Kusuma Bakshanam" and repeated on the
+  recipe and festival sites; it belongs to the same act but is not this verse's first pāda.
+- **What is eaten.** stotranidhi's fourth pāda reads `निम्बकन्दल` — the kandaḷa, the new shoot.
+  Elsewhere the same pāda is printed `निम्बकदल` (nimbakadala), and elsewhere again
+  `निम्बकुसुम` (nimbakusuma), the flower. The three are not a spelling matter: the shoot and the
+  flower are different offerings, and the Telugu practice of the day, which puts both the vēpa
+  flower and the tender leaf into the pacaḍi, will support either. Since no print decides it, none
+  is preferred here.
+
+The circulated text was found on stotranidhi, hindupad, great-indian-knowledge and the festival and
+recipe sites, and in that last group in Roman transliteration only. Not one of them names a source.
+The Dharmasindhu, which is the authority for the day, prescribes only `निम्बपत्राशन`, the eating of
+the leaf, and gives it no mantra at all. **Unverified. Do not write it into a file as a sourced
+text.**
+
+### The pañcāṅga-śravaṇa and its phala
+
+The Dharmasindhu prescribes the hearing (`वत्सरादिफलश्रवण`) and prints **no phala verse**. Neither
+does the Vratarāja's saṁvatsarārambha section, nor the Nirṇayasindhu's; archive.org's full text
+returns nothing for the incipit. **No printed witness was found for this verse either.** It is
+recorded here on the same terms as the nimba mantra.
+
+The text as it circulates, taken from the vedvikas pañcāṅga post (`vedvikas.blogspot.com`, Vijaya
+saṁvatsara, 2013), which cites no book:
+
+- **deva** — तिथेश्च श्रियमाप्नोति वारादायुष्यवर्धनम् ।
+  नक्षत्राद्धरते पापं योगाद्रोगनिवारणम् ॥
+  करणात्कार्यसिद्धिश्च पञ्चाङ्गफलमुत्तमम् ॥
+- **iast** — titheśca śriyamāpnoti vārādāyuṣyavardhanam |
+  nakṣatrāddharate pāpaṁ yogādroganivāraṇam ||
+  karaṇātkāryasiddhiśca pañcāṅgaphalamuttamam ||
+- **tel** — తిథేశ్చ శ్రియమాప్నోతి వారాదాయుష్యవర్ధనమ్ ।
+  నక్షత్రాద్ధరతే పాపం యోగాద్రోగనివారణమ్ ॥
+  కరణాత్కార్యసిద్ధిశ్చ పంచాంగ(పఞ్చాఙ్గ)ఫలముత్తమమ్ ॥
+- **en** — From the tithi one gains prosperity, from the vāra the lengthening of life; the nakṣatra
+  takes away sin, the yoga wards off disease, and from the karaṇa comes the accomplishment of one's
+  work — this is the highest fruit of the pañcāṅga.
+- **hi** — तिथि से सम्पत्ति मिलती है, वार से आयु बढ़ती है, नक्षत्र पाप हरता है, योग रोग दूर करता है और
+  करण से कार्य सिद्ध होता है — यही पञ्चाङ्ग का उत्तम फल है।
+
+The verse is unstable in the sources: the last line is printed sometimes as a third half-verse, as
+here, and sometimes with `करणं कार्यसिद्धिं च`. Search results also attach a further line giving the
+fruit of the hearing as a bath in the Gaṅgā, which the pages that print the verse itself do not
+carry; that line is not recorded here. It was found on the vedvikas post, on religionworld and on
+the Ugādi festival pages, and in Roman transliteration on the rest. None of them names a source.
+**Unverified. Do not write it into a file as a sourced text.**
+
+### The pārāyaṇa
+
+The passage carries its own reading: verses 3 to 13 are the **Indrāṇī story** — Śacī's tying of the
+rakṣā on Indra's right hand on the paurṇamāsī of a twelve-year deva-asura war, and Indra's victory
+— told by Kṛṣṇa to Yudhiṣṭhira, and closing `एष प्रभावो रक्षायाः कथितस्ते युधिष्ठिर ॥ जयदः सुखदश्चैव
+पुत्रारोग्यधनप्रदः` (v. 13). That is the day's kathā, in the same 803–804 spread.
+
+### Upākarma
+
+The task took the upākarma to be already in the corpus. **It is not.** `stotras/vidhi/` has no
+upākarma or utsarjana file in any śākhā, and a search of the whole of `stotras/` for the word in
+Devanāgarī, Telugu and transliteration turns up only passing mentions — in
+`vidhi/taittiriya/03_yajnopavita_dharana_vidhi.txt`, in
+`puja/vrata/06_satyanarayana_vrata_kalpam.txt`, and in the queue entry itself. The Dharmasindhu
+treats upākarma and utsarjana as a nirṇaya of their own (lines 3748–3757), a Vedic karma with its
+own prāyaścitta, which is why it sits outside the vrata literature. If the day is to be complete,
+the upākarma is a separate piece of work and a śākhā-specific one.
+
+### Also on this day
+
+The Dharmasindhu (lines 3620–3626, Śrāvaṇa section) makes Śrāvaṇa paurṇamāsī the **catch-all day
+for pavitrāropaṇa**: Viṣṇu's on the pāraṇā dvādaśī, Śiva's on the caturdaśī, aṣṭamī or the
+paurṇamāsī, and for Devī, Gaṇeśa, Durgā and the rest on their own tithis — `तत्तत्तिथिष्वसंभवे
+सर्वदेवानां श्रावणपौर्णमास्यां कार्यम्`, failing which Kārtikī is the outer limit. The same page prints
+the pavitra-making in detail (the number of threads and knots for the uttama, madhyama and
+kaniṣṭha pavitra) and the adhivāsana verse `क्रियालोपविधानार्थं यत्त्वया विहितं प्रभो ...`, which in that
+OCR is broken and not usable as text.
+
+---
+
+## 2. Ugādi — the saṁvatsarādi
+
+### What is done
+
+The clearest printed statement of the day is the **Dharmasindhu, dvitīya-paricchheda, the Caitra
+month**, printed **pp. 31–32** (the heading `द्वितीयपरिच्छेदः ३१` stands at line 3041), in the
+marginal rubric `वत्सरारम्भनिर्णयः` at lines 3056–3062. The year begins on Caitra śukla pratipat,
+and the udayikī pratipad is the one taken. The list of what belongs to the day is given twice over,
+because the text is deciding what happens when Caitra is a mala-māsa:
+
+- **तैलाभ्यङ्ग** — the oil bath, done for the sake of the year's beginning. The text makes it
+  obligatory, not optional: `अस्यां तैलाभ्यङ्गो नित्यः, अकरणे प्रत्यवायोक्तेः` (line 3062) — it is nitya
+  on this day, because failing to do it is said to bring harm. When Caitra is intercalary the
+  tailābhyaṅga goes to the śuddha pratipat, on the authority of the Madhukośa.
+- **the saṅkalpa naming the new year** — `नूतनवत्सरनामकीर्तन`, spoken in the saṅkalpa (line 3059).
+  The Dharmasindhu names the act but prints no saṅkalpa formula for it.
+- **ध्वजारोपण** at every house — `प्रतिगृहं ध्वजारोपण` (line 3060).
+- **निम्बपत्राशन** — the eating of the neem leaf (line 3060).
+- **वत्सरादिफलश्रवण** — the hearing of the year's phala, that is the pañcāṅga-śravaṇa (line 3060).
+- **नवरात्रारम्भ** — the Vasanta Navarātri begins on the same pratipat, and its pāraṇā and the rest
+  follow the Śāradā Navarātra.
+- **प्रपादान** — the setting up of the water-booth for the four hot months, with the verse printed
+  at lines 3066–3068 and the giving-mantra `एष धर्मघटो दत्तो ब्रह्मविष्णुशिवात्मकः । अस्य प्रदानात्सकला
+  मम सन्तु मनोरथाः`. The OCR of both is broken; the sense is legible, the text is not.
+
+The same pratipat is also a **kalpādi**, and the text goes on to the Caitra Gaurī-vrata (a couple
+worshipped together for the month, with curds, milk, ghee and honey given up), the Candra-vrata on
+the dvitīyā, and Rāma's dolotsava from the tṛtīyā for a month.
+
+### The nimba mantra
+
+The verse asked after is **not in any printed nibandha searched.** It is not in the Dharmasindhu,
 which prescribes the nimba-patra-āśana but prints no mantra for it; not in the Vratarāja; not in
 Hemādri; and not in Vratha Ratnākaramu 1–2 or Āru Vratālu — the `నింబ` hits in those Telugu prints
 are all tree-lists in pūjā material, not this.
@@ -524,5 +665,6 @@ Still missing, and each a separate piece of work:
   Paraśurāma arghya (Dharmasindhu p. 27), the two Vāmana arghyas and the Vāmana pūjā and dāna
   mantras (Dharmasindhu p. 58), and the rakṣābandhana v. 26 (Vratarāja p. 803, one damaged pāda).
 - **Two verses with no printed witness at all**: the Ugādi nimba-prāśana śloka, and the
-  pañcāṅga-phala verse. Both are in current use and neither should be given a source it does not
-  have.
+  pañcāṅga-phala verse. Both are in current use, and both are now recorded in the Ugādi section
+  above in the form in which they circulate, marked unverified. Neither should be given a source it
+  does not have.
