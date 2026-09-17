@@ -3632,5 +3632,5 @@ nothing. These three close the largest part of that gap, in this order:
   Veṅkaṭeśvara-press "5.3" text), Gītā Press 1367 (Hindi kathā only).
 - [x] ~~**Ekādaśī vrata**~~ SKIPPED 17 Sep 2026 (user: Ekādaśī has no pūjā of its own; the day is a fast, and the entry falls back on the Viṣṇu pūjā). Searched: stotranidhi, Āru Vratālu, Vratha Ratnākaram 1–2, TTD Ekādaśī Māhātmyam, dli 333460 — no printed vidhāna. → `puja/vrata/`. Covers the design's Ekādaśī entry. Gītā Press 1162 is a
   Hindi kathā witness only.
-- [ ] **Viṣṇu ṣoḍaśopacāra pūjā** → `puja/smarta/`, with a Paurāṇika twin. Serves Paraśurāma,
+- [x] SKIPPED 17 Sep 2026 (user: Viṣṇu's pūjā is the Kṛṣṇa or Rāma pūjā; no separate Viṣṇu ṣoḍaśopacāra exists in print, so none is made). **Viṣṇu ṣoḍaśopacāra pūjā** → `puja/smarta/`, with a Paurāṇika twin. Serves Paraśurāma,
   Vāmana and Hayagrīva jayantīs in place of the nitya-pūjā `06`.
