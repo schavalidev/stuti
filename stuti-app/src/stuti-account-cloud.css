@@ -8,3 +8,11 @@
 .cf-del{margin-top:28px}
 .acc-out.cf-danger{margin-top:10px;color:var(--accent);border-color:color-mix(in oklab,var(--accent) 40%,var(--line))}
 @media (max-width:360px){.cf-pair{grid-template-columns:1fr}}
+
+/* the feedback inbox (stuti-feedback-inbox.tsx) */
+.fbi-tabs{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px}
+.fbi-item{margin-top:12px;padding:14px;border-radius:var(--r-md);background:var(--surface);border:1px solid var(--line)}
+.fbi-meta{display:flex;flex-direction:column;gap:2px;font-size:.8125rem;color:var(--ink-faint)}
+.fbi-meta b{color:var(--ink);font-weight:500;font-size:.9375rem}
+.fbi-body{margin-top:10px;white-space:pre-wrap;overflow-wrap:anywhere;font-size:.875rem;line-height:1.6;color:var(--ink-soft)}
+.fbi-acts{display:flex;flex-wrap:wrap;gap:4px 12px;margin-top:8px}

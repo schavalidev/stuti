@@ -129,3 +129,56 @@ begin
 end $$;
 revoke all on function public.stuti_delete_my_account() from public, anon;
 grant execute on function public.stuti_delete_my_account() to authenticated;
+
+-- ---------------------------------------------------------------------------
+-- 6. Feedback (stuti-feedback-send.ts): every message from the sheet, kept so
+--    it can be reviewed in the app (stuti-feedback-inbox.tsx). Anyone may add a
+--    row; only the people listed in stuti_admins may read one, and they may
+--    change nothing but its status. The relay also mails each message to the
+--    support address and files it in Drive; this table is the list to work from.
+-- ---------------------------------------------------------------------------
+create table if not exists public.stuti_admins (
+  user_id uuid primary key references auth.users(id) on delete cascade,
+  note    text
+);
+alter table public.stuti_admins enable row level security;   -- no policies: read only through the function below
+
+create or replace function public.stuti_is_admin() returns boolean
+  language sql stable security definer set search_path = '' as $$
+  select exists (select 1 from public.stuti_admins where user_id = auth.uid());
+$$;
+revoke all on function public.stuti_is_admin() from public, anon;
+grant execute on function public.stuti_is_admin() to authenticated;
+
+create table if not exists public.stuti_feedback (
+  id         bigint generated always as identity primary key,
+  created_at timestamptz not null default now(),
+  user_id    uuid references auth.users(id) on delete set null default auth.uid(),
+  kind       text not null check (kind in ('problem','idea','text')),
+  subject    text check (length(subject) <= 200),
+  body       text not null check (length(body) between 1 and 20000),
+  build      text check (length(build) <= 60),
+  platform   text check (length(platform) <= 12),
+  status     text not null default 'new' check (status in ('new','seen','done'))
+);
+create index if not exists stuti_feedback_status on public.stuti_feedback (status, created_at desc);
+
+create or replace function public.stuti_feedback_in() returns trigger language plpgsql as $$
+begin
+  new.created_at := now(); new.status := 'new';
+  new.user_id := auth.uid();        -- the caller, or null when signed out; never a claimed id
+  return new;
+end $$;
+drop trigger if exists stuti_feedback_in on public.stuti_feedback;
+create trigger stuti_feedback_in before insert on public.stuti_feedback
+  for each row execute function public.stuti_feedback_in();
+
+alter table public.stuti_feedback enable row level security;
+drop policy if exists "anyone sends" on public.stuti_feedback;
+create policy "anyone sends" on public.stuti_feedback for insert to anon, authenticated with check (true);
+drop policy if exists "admins read" on public.stuti_feedback;
+create policy "admins read" on public.stuti_feedback for select to authenticated using (public.stuti_is_admin());
+drop policy if exists "admins mark" on public.stuti_feedback;
+create policy "admins mark" on public.stuti_feedback for update to authenticated using (public.stuti_is_admin()) with check (public.stuti_is_admin());
+revoke update on public.stuti_feedback from anon, authenticated;
+grant update (status) on public.stuti_feedback to authenticated;

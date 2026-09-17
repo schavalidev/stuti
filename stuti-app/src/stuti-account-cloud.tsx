@@ -5,6 +5,7 @@ import { STUTI_L } from "./stuti-i18n";
 import { Icon } from "./stuti-icons";
 import { STUTI_CLOUD_AUTH as A, type Summary } from "./stuti-cloud";
 import "./stuti-account-cloud.css";
+import { FeedbackInbox, useIsAdmin } from "./stuti-feedback-inbox";
 
 /* ============================================================
    STUTI — the account screen, against a real server
@@ -108,6 +109,7 @@ function CloudAccountView({ go, lang = "deva", backView = "settings" }: any) {
 
   const state = A.syncState();
   const conflict = A.conflict();
+  const admin = useIsAdmin(session ? session.id : null);
   const methods = ([["google", "accGoogle", "globe"], ["phone", "accPhone", "phone"], ["email", "accEmail", "mail"]] as const).filter(([k]) => (P as any)[k]);
 
   return (
@@ -172,6 +174,8 @@ function CloudAccountView({ go, lang = "deva", backView = "settings" }: any) {
               <div className="eyebrow set-cap">{L.t("danaCap", lang)}</div>
               <p className="set-note">{lamp ? L.t("danaRowLit", lang) : L.t("accPlusNone", lang)}</p>
             </section>
+
+            {admin && <FeedbackInbox lang={lang} />}
 
             <button className="acc-out" onClick={() => { A.signOut(); setStep("handle"); setMethod(null); setCode(""); }}>{L.t("accSignOut", lang)}</button>
             <p className="acc-fine">{w("realNote", lang)}</p>

@@ -88,10 +88,23 @@ Read them in the SQL editor: `select * from stuti_events_daily;`
 
 ## 5. Feedback
 
-The sheet's Send posts to the relay, which writes `feedback-<device>-<time>-<kind>.txt`
-into the Drive folder beside the logs. If the relay cannot be reached the mail app
-opens, as before. The relay change deploys with the next Netlify deploy; until then
-Send falls back to mail.
+Send does two things at once, and either arriving counts as sent; the mail app
+opens only when neither can be reached.
+
+- **The relay** mails the message to the support address and writes
+  `feedback-<device>-<time>-<kind>.txt` into the Drive folder beside the logs.
+  Mail needs three Netlify environment variables: `RESEND_API_KEY` (resend.com,
+  free tier), `STUTI_FEEDBACK_TO` (the support address) and `STUTI_FEEDBACK_FROM`
+  (a sender on a domain verified in Resend; without it Resend's test sender is
+  used, which only delivers to the Resend account's own address). The subject is
+  the kind and the build. Relay changes go live with the next Netlify deploy.
+- **The table** `stuti_feedback` gets a row when Supabase is configured. Anyone
+  can add one; only accounts in `stuti_admins` can read them or change their status.
+
+To review in the app: sign in, copy your user id from Authentication → Users,
+then Table Editor → `stuti_admins` → insert a row with that `user_id`. The account
+screen then shows a Feedback section with the inbox: New, Seen and Done, and
+buttons to move each message between them.
 
 ## 6. Giving
 

@@ -11,7 +11,14 @@
 //       with the account's email as Editor
 // and STUTI_DRIVE_FOLDER — the folder id (the tail of its Drive URL).
 //
-// Feedback from the app's sheet arrives as feedback-<device>-<time>-<kind>.txt.
+// Feedback from the app's sheet arrives as feedback-<device>-<time>-<kind>.txt,
+// and is also mailed to the support address when these are set:
+//   RESEND_API_KEY       — a Resend API key (resend.com, free tier)
+//   STUTI_FEEDBACK_TO    — where it goes (the support address)
+//   STUTI_FEEDBACK_FROM  — a sender on a domain verified in Resend;
+//       defaults to Resend's test sender, which only delivers to the
+//       Resend account's own address
+// The mail does not wait on Drive: either one arriving is a success.
 //
 // Requests: POST JSON
 //   { name, mime, text }                → written as a file (≤ 4 MB)
@@ -65,10 +72,18 @@ export default async (req) => {
   if (req.method === "OPTIONS") return new Response(null, { status: 204, headers: cors(origin) });
   if (req.method !== "POST") return reply(405, { error: "POST only" }, origin);
   const folder = process.env.STUTI_DRIVE_FOLDER;
-  if (!folder || !(process.env.STUTI_DRIVE_OAUTH || process.env.STUTI_DRIVE_SA)) return reply(503, { error: "relay not configured" }, origin);
+  const drive = !!(folder && (process.env.STUTI_DRIVE_OAUTH || process.env.STUTI_DRIVE_SA));
   let q; try { q = await req.json(); } catch (e) { return reply(400, { error: "bad json" }, origin); }
   const name = String(q.name || "").replace(/[^A-Za-z0-9._-]/g, "_").slice(0, 120);
   if (!BUILD.test(name) && !PREFIXES.some((p) => name.startsWith(p))) return reply(400, { error: "unknown kind" }, origin);
+
+  if (name.startsWith("feedback-")) {
+    const mailed = await mailFeedback(q, name);
+    if (!drive) return mailed ? reply(200, { mailed: true }, origin) : reply(503, { error: "relay not configured" }, origin);
+    const filed = await fileText(folder, name, "text/plain", String(q.text || ""));
+    return mailed || filed.ok ? reply(200, { mailed, filed: filed.ok }, origin) : reply(502, { error: filed.error }, origin);
+  }
+  if (!drive) return reply(503, { error: "relay not configured" }, origin);
   const mime = /^[a-z]+\/[a-z0-9.+-]+$/i.test(q.mime || "") ? q.mime : "text/plain";
   const meta = JSON.stringify({ name, parents: [folder], mimeType: mime });
   let token; try { token = await accessToken(); } catch (e) { return reply(502, { error: String(e.message || e) }, origin); }
@@ -85,16 +100,42 @@ export default async (req) => {
     return reply(200, { url: r.headers.get("location") }, origin);
   }
 
-  const text = String(q.text || "");
-  if (!text) return reply(400, { error: "empty" }, origin);
-  if (Buffer.byteLength(text) > MAX_TEXT) return reply(413, { error: "size" }, origin);
+  const filed = await fileText(folder, name, mime, String(q.text || ""));
+  return filed.ok ? reply(200, filed.json, origin) : reply(filed.status, { error: filed.error }, origin);
+};
+
+async function fileText(folder, name, mime, text) {
+  if (!text) return { ok: false, status: 400, error: "empty" };
+  if (Buffer.byteLength(text) > MAX_TEXT) return { ok: false, status: 413, error: "size" };
+  let token; try { token = await accessToken(); } catch (e) { return { ok: false, status: 502, error: String(e.message || e) }; }
+  const auth = { Authorization: "Bearer " + token };
+  const meta = JSON.stringify({ name, parents: [folder], mimeType: mime });
   const boundary = "stuti" + Math.random().toString(36).slice(2);
   const body = `--${boundary}\r\nContent-Type: application/json; charset=UTF-8\r\n\r\n${meta}\r\n--${boundary}\r\nContent-Type: ${mime}; charset=UTF-8\r\n\r\n${text}\r\n--${boundary}--`;
   const r = await fetch("https://www.googleapis.com/upload/drive/v3/files?uploadType=multipart&supportsAllDrives=true&fields=id,name", {
     method: "POST", body, headers: { ...auth, "Content-Type": `multipart/related; boundary=${boundary}` },
   });
-  if (!r.ok) return reply(502, { error: "drive " + r.status + " " + (await r.text()).slice(0, 200) }, origin);
-  return reply(200, await r.json(), origin);
-};
+  if (!r.ok) return { ok: false, status: 502, error: "drive " + r.status + " " + (await r.text()).slice(0, 200) };
+  return { ok: true, json: await r.json() };
+}
+
+/* One plain-text mail per message. The subject carries the kind and the build,
+   so the inbox sorts itself; the body is exactly what the sheet showed. */
+async function mailFeedback(q, name) {
+  const key = process.env.RESEND_API_KEY, to = process.env.STUTI_FEEDBACK_TO;
+  if (!key || !to) return false;
+  const text = String(q.text || "");
+  if (!text || Buffer.byteLength(text) > 20000) return false;
+  const clean = (s, n) => String(s || "").replace(/[\r\n]+/g, " ").slice(0, n);
+  const subject = [clean(q.subject, 120) || "[Stuti] feedback", clean(q.build, 60)].filter(Boolean).join(" · ");
+  try {
+    const r = await fetch("https://api.resend.com/emails", {
+      method: "POST",
+      headers: { Authorization: "Bearer " + key, "Content-Type": "application/json" },
+      body: JSON.stringify({ from: process.env.STUTI_FEEDBACK_FROM || "Stuti <onboarding@resend.dev>", to: [to], subject, text: text + "\n\n" + name + "\n" }),
+    });
+    return r.ok;
+  } catch (e) { return false; }
+}
 
 export const config = { path: "/.netlify/functions/relay" };
