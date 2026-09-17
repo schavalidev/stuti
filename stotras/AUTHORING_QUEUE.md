@@ -3626,7 +3626,7 @@ against `puja/`. Only four entries have a vrata vidhāna of their own (Gaṇeśa
 Maṅgaḷa Gaurī, Nāga Pañcamī); seventeen fall back on the deity's ṣoḍaśopacāra; fourteen have
 nothing. These three close the largest part of that gap, in this order:
 
-- [ ] **Satyanārāyaṇa vrata kalpa** → `puja/vrata/06_satyanarayana_vrata_kalpam.txt`. Base: a clean
+- [x] **Satyanārāyaṇa vrata kalpa** → `puja/vrata/06_satyanarayana_vrata_kalpam.txt`. Base: a clean
   Telugu print in the South Indian paddhati (Vratha Ratnākaram vol. 2 is the coverage map, its OCR
   broken). Witnesses: the Revā-khaṇḍa kathā (not in GRETIL's genuine Revākhaṇḍa — it is in the
   Veṅkaṭeśvara-press "5.3" text), Gītā Press 1367 (Hindi kathā only).
