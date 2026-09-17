@@ -3630,7 +3630,7 @@ nothing. These three close the largest part of that gap, in this order:
   Telugu print in the South Indian paddhati (Vratha Ratnākaram vol. 2 is the coverage map, its OCR
   broken). Witnesses: the Revā-khaṇḍa kathā (not in GRETIL's genuine Revākhaṇḍa — it is in the
   Veṅkaṭeśvara-press "5.3" text), Gītā Press 1367 (Hindi kathā only).
-- [ ] **Ekādaśī vrata** → `puja/vrata/`. Covers the design's Ekādaśī entry. Gītā Press 1162 is a
+- [x] ~~**Ekādaśī vrata**~~ SKIPPED 17 Sep 2026 (user: Ekādaśī has no pūjā of its own; the day is a fast, and the entry falls back on the Viṣṇu pūjā). Searched: stotranidhi, Āru Vratālu, Vratha Ratnākaram 1–2, TTD Ekādaśī Māhātmyam, dli 333460 — no printed vidhāna. → `puja/vrata/`. Covers the design's Ekādaśī entry. Gītā Press 1162 is a
   Hindi kathā witness only.
 - [ ] **Viṣṇu ṣoḍaśopacāra pūjā** → `puja/smarta/`, with a Paurāṇika twin. Serves Paraśurāma,
   Vāmana and Hayagrīva jayantīs in place of the nitya-pūjā `06`.
