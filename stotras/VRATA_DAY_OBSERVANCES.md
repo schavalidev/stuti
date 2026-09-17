@@ -578,6 +578,16 @@ the other two need their page images read first.
 line 29552), and then the **Vāmana-dvādaśī-vrata-kathā**, the Bali story in fifty-one verses, lines
 29556–29646.
 
+**Added 18 Sep 2026, after the day was authored as `puja/vrata/11_vamana_jayanti_puja.txt`.** The
+page images were read, and they correct three readings above, each of which came from OCR rather
+than from the page. The Vratarāja's arghya ends `रमया सहितो हरे`, with Ramā, not `रसया`. The
+Dharmasindhu's first arghya reads `नमस्ते पद्मनाभाय नमस्ते जलशायिने । तुभ्यमर्घ्यं प्रयच्छामि
+बालवामनरूपिणे`, and it has a second one after it, `नमः शार्ङ्गधनुर्बाणपाणये वामनाय च । यज्ञभुक्फलदात्रे
+च वामनाय नमो नमः`. The Telugu print's `त्रिपादूर्ध्व` is the Vedic pratīka that stands before its
+arghya, not the arghya itself; the verse is `गन्धपुष्पफलैर्युक्तं हेमपात्रे निवेदितं । स्वर्गङ्गासलिलं
+पुण्यमर्घ्यं स्वीकुरु केशव`. The Telugu print's rite is also a full vidhāna in its own right, and the
+same rite stands in Sanskrit in a second Vratarāja scan; the two are one witness, not two.
+
 ---
 
 ## 5. Guru Pūrṇimā
