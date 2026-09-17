@@ -148,3 +148,20 @@ Paurāṇika anuṣṭubh, and was kept.
 
 **Still to do:** a corpus file for `smarta/14` Vināyaka Caviti; and the 26 RESERVED rites once another
 session writes them.
+
+## Progress — 2026-09-17, fourth pass
+
+**Built: `smarta/14` Vināyaka Caviti** as a corpus file. Every written rite that carries Vedic text now
+has its Paurāṇika twin: **29 files**.
+
+**Independent review:** three reviewers re-read all 29 files. Found and fixed: a full translation of
+Durgā Sūkta ṛc 1 in `smarta/08`; stray `ओम् ॥` lines left by removed ṛcs in `07` and `08`; four
+saṅkalpas (`18`, `19`, `22`, `24`) still naming the Śrī Sūkta or Puruṣa Sūkta as the method of the rite;
+about a dozen vidhi notes and two Blurbs still describing removed mantras.
+
+**Known and left, not Vedic:** some numbered lists now begin at 2 where a Vedic first item was removed
+(`smarta/01` units 29, 30, 35; `02` unit 24; `04` unit 34). `vrata/05` unit 59 lacks the first line of
+its verse — the Vedic original has the same gap, so it is a gap in the source, not in this build.
+
+**Still to do:** the 26 RESERVED rites, once another session writes them — run `bin/pauranika_puja.py`
+on each, read its verse lines, and add any corrections to `bin/pauranika_post_edits.py`.

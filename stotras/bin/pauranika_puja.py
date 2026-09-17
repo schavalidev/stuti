@@ -6,7 +6,7 @@ accent mark or translation of a Vedic line is left in the reader's text.
 """
 import html, json, subprocess
 from pauranika_common import *
-from pauranika_post_edits import apply_post_edits
+from pauranika_post_edits import apply_post_edits, fix_blurb
 
 OUTDIR = pathlib.Path(sys.argv[1]).resolve()
 ONLY = sys.argv[2:]  # optional stems
@@ -421,12 +421,14 @@ def render(f, fields, out, pdf):
 
 OUTDIR.mkdir(parents=True, exist_ok=True)
 report = {}
-for f in FILES + TIER_C + VRATA:
+for f in FILES + TIER_C + VRATA + ['puja/smarta/14_vinayaka_chaviti_vrata.txt']:
     stem = pathlib.Path(f).stem
     if ONLY and stem not in ONLY: continue
     raw = (ROOT / f).read_text(encoding='utf-8')
     fields, out, log, bad = (build_manual if f in VRATA else build)(f)
     out = apply_post_edits(pathlib.Path(f).stem, out, log)
+    bad = [b for b in bad if any(u['n'] == b[0] and b[2][:30] in u.get(b[1], '') for u in out)]
+    fields = dict(fields); fields['Blurb'] = fix_blurb(fields.get('Blurb', ''))
     tag = 'vaishnava_' if 'vaishnava' in f else ''
     report[stem] = {'log': log, 'bad': bad, 'units_in': None, 'units_out': len(out)}
     if bad:

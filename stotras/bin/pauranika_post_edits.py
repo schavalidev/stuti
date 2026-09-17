@@ -12,7 +12,21 @@ HEAD = [  # "recitation of hymns and sūktas" becomes "recitation of hymns" once
  ('deva', r'स्तोत्र[-/]सूक्त पठनम्', 'स्तोत्र पठनम्'), ('iast', r'stotra[-/]sūkta paṭhanam', 'stotra paṭhanam'),
  ('tel', r'స్తోత్ర[-/]సూక్త పఠనం', 'స్తోత్ర పఠనం'),
 ]
+INCIPIT = [('en', r'(?i)^\([^)]*puruṣa ?sūkta[^)]*\)\s*', ''), ('tel', r'^\([^)]*పురుషసూక్త[^)]*\)\s*', ''), ('hi', r'^\([^)]*पुरुषसूक्त[^)]*\)\s*', '')]
 POST_EDITS = {
+ '14_vinayaka_chaviti_vrata': {
+   9: [('en', r'Oṁ, to Keśava, svāhā; to Nārāyaṇa, svāhā; to Mādhava, svāhā', 'Oṁ, salutation to Keśava; to Nārāyaṇa; to Mādhava')],
+   19: [('deva', r'इत्याद्येन ', ''), ('iast', r'ityādyena ', ''),
+        ('en', r'(breath\.) O Anumati.*?welfare\. (Having performed the installation of the breath) with this and what follows,', r'\1 \2,'),
+        ('tel', r'(చేస్తాను\.) .*?ఇవి మొదలైనవాటితో ', r'\1 '), ('hi', r'(करूँगा।) .*?इत्यादि से ', r'\1 ')],
+   23: INCIPIT,
+   24: INCIPIT,
+   25: INCIPIT,
+   26: INCIPIT,
+   28: INCIPIT,
+   30: INCIPIT,
+   31: INCIPIT,
+   54: [('en', r'^With the sacrifice.*?abide\. ', ''), ('tel', r'^యజ్ఞముచేత.*?ఉన్నారో\. ', ''), ('hi', r'^यज्ञ से देवताओं.*?करते हैं। ', '')]},
  '04_ganapati_nitya_puja': {56: HEAD + [
    ('deva', r'गणपति अथर्वशीर्षम् । ', ''), ('iast', r'gaṇapati atharvaśīrṣam \| ', ''),
    ('en', r'Recitation of hymns and sūktas — the Gaṇapati Atharvaśīrṣa; ', 'Recitation of hymns — '),
@@ -88,4 +102,48 @@ def apply_post_edits(stem, out, log):
         kept.append(u)
     missing = set(plan) - seen
     if missing: raise SystemExit(f"post-edit units not found in {stem}: {sorted(missing)}")
+    return apply_global(kept)
+
+
+# Dangling references found by the independent second reading (2026-09-17). Applied to every unit;
+# they only remove words that describe a mantra no longer present.
+GLOBAL = {
+ 'deva': [(r'^\s*(ओम्|ॐ|ओं)\s*॥\s*$\n?', ''), (r'(श्री ?सूक्त|पुरुषसूक्त) विधानेन ', '')],
+ 'iast': [(r'^\s*(om|oṁ)\s*\|\|\s*$\n?', ''), (r'(śrī ?sūkta|puruṣasūkta) vidhānena ', '')],
+ 'en':   [(r',? according to the rule of the (Śrī|Puruṣa) Sūkta', '')],
+ 'tel':  [(r'(శ్రీ ?సూక్త|పురుషసూక్త) విధానముచే ', '')],
+ 'hi':   [(r'(श्री ?सूक्त|पुरुषसूक्त) के विधान से ', '')],
+ 'vidhi': [
+   (r' The mantra is the yajñopavīta verse\.', ''), (r' The full rite says the yajñopavīta verse here\.', ''),
+   (r', with the yajñopavīta verse', ''), (r' Recorded, not imported\.', ''),
+   (r' The same act, differently named — recorded, not harmonised\.', ''),
+   (r'the threefold peace and ', ''), (r', and the rite ends with the threefold peace', ''),
+   (r',? and the closing peace', ''), (r', and the peace', ''),
+   (r' — and here, instead of the eight-limbed prostration.*$', '.'),
+   (r'^Agni Jātavedas is asked to bring Lakṣmī near\.', 'Meditation on Lakṣmī.'),
+   (r' The verse turns on.*$', ''),
+   (r' The mantra of the waters is spoken first, and then the verse of the rite\.', ''),
+   (r' The five faces of Śiva are addressed in turn.*$', ''),
+   (r'^The offering of the food into the five breaths\.', 'The close of the food-offering.'),
+   (r'^The five offerings to the five breaths, with water given in between\.', 'Water is given between the mouthfuls.'),
+ ],
+}
+BLURB = [(r' Three things set this rite apart\.', ''), (r' And after the salutations', ' After the salutations'),
+         (r' The salutation itself keeps an old healing verse[^.]*\.', ''), (r' the putting on of the pavitra,', '')]
+
+def apply_global(out):
+    kept = []
+    for u in out:
+        for fld, rules in GLOBAL.items():
+            if fld in u:
+                for pat, rep in rules:
+                    u[fld] = re.sub(pat, rep, u[fld], flags=re.M).strip()
+        if not u.get('deva', '').strip():
+            continue          # a unit left with nothing but a bare praṇava
+        kept.append(u)
     return kept
+
+def fix_blurb(b):
+    for pat, rep in BLURB:
+        b = re.sub(pat, rep, b)
+    return b
