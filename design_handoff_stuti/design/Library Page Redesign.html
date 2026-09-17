@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="design_doc_mode" content="canvas" />
+<title>Stuti · Library page directions</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Marcellus&family=Mukta:wght@300;400;500;600;700&family=Noto+Sans+Devanagari:wght@400;500;600;700&family=Tiro+Devanagari+Sanskrit&display=swap');
+:root{--deva:'Noto Sans Devanagari','Mukta',sans-serif;--tiro:'Tiro Devanagari Sanskrit','Noto Sans Devanagari',serif;--disp:'Marcellus',Georgia,serif;--ui:'Mukta',system-ui,sans-serif;
+--ink:#2B2017;--ink2:#584B3E;--ink3:#6F6356;--line:rgba(43,32,23,.10);--gold:#B07A2B;--goldd:#8A5A18;--surf:#FFFDF8;
+--acc36:oklch(.58 .13 36);--soft36:oklch(.92 .045 36);--ink36:oklch(.42 .12 36)}
+body{font-family:var(--ui);font-style:normal;color:var(--ink)}
+*{font-style:normal}
+a{color:#8A5A18}a:hover{color:#B07A2B}
+.cap{position:absolute;width:390px;color:#2f2a24;font-size:15px;font-weight:600;letter-spacing:.02em}
+.cap small{display:block;font-weight:400;color:#75705f;font-size:12.5px;line-height:1.5;margin-top:3px;text-wrap:pretty}
+.ph{position:absolute;width:390px;height:844px;border-radius:46px;overflow:hidden;box-shadow:0 2px 0 rgba(255,255,255,.6) inset,0 40px 90px -34px rgba(35,24,8,.45),0 0 0 1px rgba(35,24,8,.08);display:flex;flex-direction:column;background:radial-gradient(120% 80% at 50% 0%,rgba(255,228,168,.5),transparent 60%),linear-gradient(180deg,#F2E6D2,#F7EFE2 30%)}
+.sbar{flex:none;height:50px;display:flex;align-items:center;justify-content:space-between;padding:14px 30px 0;font-size:15px;font-weight:600;letter-spacing:.02em}
+.body{flex:1;min-height:0;overflow:hidden;display:flex;flex-direction:column}
+.body>*{flex:none}
+.tabs{position:absolute;left:0;right:0;bottom:0;display:grid;grid-template-columns:repeat(4,1fr);gap:5px;padding:9px 12px 24px;background:linear-gradient(0deg,#FBF4E8,rgba(251,244,232,.7));border-top:1px solid rgba(43,32,23,.06)}
+.tab{min-height:52px;border-radius:15px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:3px;font-size:12px;font-weight:600;color:#6F6356}
+.tab.on{color:var(--ink36);background:var(--soft36)}
+.tab svg{display:block}
+.eyeb{font-size:12px;letter-spacing:.2em;text-transform:uppercase;font-weight:600;color:#6F6356}
+/* per-deity accent (day theme formulas from stuti.css; Śiva chroma ×0.15) */
+.dy{--acc:oklch(.58 .13 var(--h));--soft:oklch(.92 .045 var(--h));--aink:oklch(.42 .12 var(--h))}
+.dga{--h:14}.dde{--h:344}.dvi{--h:224}.dsu{--h:130}.dsy{--h:78}.dgu{--h:295}.dha{--h:26}
+.dsh{--acc:oklch(.58 .0195 210);--soft:oklch(.92 .00675 210);--aink:oklch(.42 .018 210)}
+.dseal{border-radius:50%;background:var(--soft);border:1.5px solid color-mix(in oklab,var(--acc) 45%,transparent);display:grid;place-items:center;flex:none}
+.dseal img{width:82%;height:82%;object-fit:contain;display:block}
+/* shared top bar */
+.lbar{display:flex;align-items:center;justify-content:space-between;padding:8px 18px 4px 24px}
+.lbar .tt{font-family:var(--disp);font-size:24px;letter-spacing:.01em}
+.icb{width:46px;height:46px;border-radius:50%;display:grid;place-items:center;color:#584B3E}
+/* lens pills (current) */
+.lens{display:flex;gap:8px;padding:8px 18px 12px;overflow:hidden}
+.lpill{flex:none;display:inline-flex;align-items:center;gap:7px;height:42px;padding:0 16px;border-radius:999px;border:1px solid var(--line);background:var(--surf);color:#584B3E;font-weight:600;font-size:14.5px}
+.lpill svg{opacity:.8}
+.lpill.on{background:var(--acc36);color:#fff;border-color:transparent;box-shadow:0 8px 18px -12px rgba(58,40,20,.5)}
+.lpill.on svg{opacity:1}
+/* hymn card (E recents) */
+.hcard{display:flex;align-items:center;gap:10px;background:var(--surf);border:1px solid var(--line);border-radius:18px;padding:13px 14px 13px 16px;box-shadow:0 8px 22px -18px rgba(58,40,20,.35)}
+.hcard .tx{flex:1;min-width:0}
+.hcard .ld{font-family:var(--deva);font-size:21px;line-height:1.3;color:var(--aink)}
+.hcard .mt{display:flex;align-items:center;gap:8px;color:#6F6356;font-size:13px;margin-top:3px}
+.hcard .mt i{width:4px;height:4px;border-radius:50%;background:currentColor}
+/* ============ A · current ============ */
+.fA .grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;padding:14px 18px 0}
+.fA .gt{background:var(--surf);border:1px solid var(--line);border-radius:18px;padding:22px 12px 18px;display:flex;flex-direction:column;align-items:center;gap:9px;box-shadow:0 8px 22px -18px rgba(58,40,20,.35)}
+.fA .gt .dseal{width:96px;height:96px}
+.fA .gt .nm{font-family:var(--deva);font-size:21px;line-height:1.2}
+/* ============ B · devakoṣṭha — sandstone dusk ============ */
+.fB{background:radial-gradient(120% 80% at 50% 0%,rgba(209,148,72,.4),transparent 62%),linear-gradient(180deg,#E7D0A9,#EFDFC0 34%)}
+.fB .tabs{background:linear-gradient(0deg,#F0DFBE,rgba(240,223,190,.72));border-top-color:rgba(74,52,30,.08)}
+.fB .lpill{border-color:rgba(74,52,30,.14)}
+.fB .grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;padding:14px 18px 0}
+.fB .nch{position:relative;border-radius:88px 88px 16px 16px;border:1px solid var(--line);background:linear-gradient(180deg,var(--soft),#FFFDF8 78%);padding:20px 10px 15px;text-align:center;box-shadow:0 8px 22px -18px rgba(58,40,20,.3)}
+.fB .nch::before{content:"";position:absolute;inset:6px 6px auto;bottom:6px;border-radius:82px 82px 11px 11px;border:1px solid rgba(43,32,23,.07);pointer-events:none}
+.fB .nch img{width:106px;display:block;margin:0 auto}
+.fB .nch .nm{font-family:var(--deva);font-size:22px;line-height:1.15;margin-top:4px}
+.fB .nch .ct{font-size:12.5px;font-weight:600;color:#6F6356;margin-top:3px}
+.fB .nch.kept{border-color:color-mix(in oklab,var(--gold) 55%,transparent)}
+.fB .kmark{position:absolute;top:11px;left:50%;transform:translateX(-50%) rotate(45deg);width:7px;height:7px;background:var(--gold)}
+/* ============ C · sabhā — night theme ============ */
+.fC{background:radial-gradient(120% 80% at 50% 0%,oklch(.33 .05 70 / .5),transparent 60%),linear-gradient(180deg,#261D11,#1F170D 32%);color:#F0E6D3}
+.fC .sbar{color:#F6EBD6}
+.fC .lbar .tt{color:#F3E9D7}
+.fC .icb{color:#CBBBA1}
+.fC .eyeb{color:#A8977E}
+.fC .dy{--acc:oklch(.74 .13 var(--h));--soft:oklch(.30 .06 var(--h));--aink:oklch(.82 .11 var(--h))}
+.fC .dsh{--acc:oklch(.74 .0195 210);--soft:oklch(.30 .009 210);--aink:oklch(.82 .0165 210)}
+.fC .tabs{background:linear-gradient(0deg,#241B10,rgba(36,27,16,.78));border-top-color:rgba(246,235,215,.07)}
+.fC .tab{color:#A8977E}
+.fC .tab.on{color:#E2B266;background:rgba(226,178,102,.13)}
+.fC .seg{display:grid;grid-template-columns:repeat(4,1fr);gap:3px;margin:6px 18px 2px;padding:4px;border-radius:999px;background:rgba(246,235,215,.07)}
+.fC .seg span{height:36px;display:grid;place-items:center;border-radius:999px;font-size:13.5px;font-weight:600;color:#A8977E}
+.fC .seg .on{background:#33281A;color:#E2B266}
+.fC .rows{padding:2px 18px 0}
+.fC .row{display:flex;align-items:center;gap:13px;padding:9px 4px;border-top:1px solid rgba(246,235,215,.08)}
+.fC .row:first-child{border-top:none}
+.fC .dseal{width:50px;height:50px}
+.fC .bd{flex:1;min-width:0}
+.fC .nm{font-family:var(--deva);font-size:21px;line-height:1.2;display:flex;align-items:center;gap:7px;color:#F0E6D3}
+.fC .nm i{width:6px;height:6px;background:#E2B266;transform:rotate(45deg)}
+.fC .ep{font-size:12.5px;color:#A8977E;margin-top:1px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.fC .ct{flex:none;min-width:34px;height:28px;padding:0 10px;border-radius:999px;background:var(--soft);color:var(--aink);display:grid;place-items:center;font-size:13.5px;font-weight:700}
+.fC .chev{color:#7D6F5C;flex:none}
+.fC .more{display:flex;align-items:center;gap:12px;margin:14px 18px 0;padding:13px 14px;border-radius:16px;background:#2C2214;border:1px solid rgba(246,235,215,.09)}
+.fC .mico{width:42px;height:42px;border-radius:13px;background:rgba(226,178,102,.14);color:#E2B266;display:grid;place-items:center;flex:none}
+.fC .more .m1{font-family:var(--deva);font-size:18px;color:#F0E6D3}
+.fC .more .m2{font-size:12.5px;color:#A8977E;margin-top:1px}
+/* ============ D · granthasūcī — turmeric & sindūra ============ */
+.fD{background:radial-gradient(120% 70% at 50% 0%,rgba(224,182,98,.32),transparent 60%),linear-gradient(180deg,#F1E0B7,#F3E4C0 30%)}
+.fD .hd{padding:0 30px}
+.fD .eyeb{color:#A34A28}
+.fD .nm{font-family:var(--tiro);font-size:48px;line-height:1.15;margin-top:2px}
+.fD .rm{font-family:var(--disp);font-size:14px;letter-spacing:.14em;text-transform:uppercase;color:#584B3E;margin-top:2px}
+.fD .drule{margin:14px 0 0;border-top:1px solid rgba(163,74,40,.55);position:relative}
+.fD .drule::after{content:"";position:absolute;left:0;right:0;top:2px;border-top:1px solid rgba(163,74,40,.26)}
+.fD .strip{display:flex;align-items:center;gap:8px;padding:13px 30px 2px;overflow:hidden}
+.fD .all{flex:none;height:40px;padding:0 16px;border-radius:999px;background:#6B3320;color:#F6E7C9;display:inline-flex;align-items:center;font-family:var(--deva);font-size:16px}
+.fD .dseal{width:40px;height:40px}
+.fD .ix{padding:2px 30px 0}
+.fD .sec{font-size:11.5px;letter-spacing:.22em;text-transform:uppercase;font-weight:700;color:#A34A28;padding:15px 0 3px}
+.fD .en{display:flex;align-items:baseline;gap:10px;padding:9px 0;border-bottom:1px solid rgba(74,52,30,.11)}
+.fD .no{font-family:var(--deva);font-size:14px;color:#B3502B;width:16px;flex:none}
+.fD .dd{width:9px;height:9px;border-radius:50%;background:var(--acc);flex:none;align-self:center}
+.fD .ti .d{font-family:var(--tiro);font-size:21px;line-height:1.25;color:var(--ink)}
+.fD .ti .r{font-size:12.5px;color:#6F6356;margin-top:1px;letter-spacing:.02em}
+.fD .dl{flex:1;border-bottom:2px dotted rgba(74,52,30,.24);margin:0 2px 6px}
+.fD .vc{font-size:13px;font-weight:600;color:#584B3E;white-space:nowrap}
+.fD .tab.on{color:#8A3D20;background:rgba(163,74,40,.12)}
+/* ============ E · praveśa — uṣas dawn ============ */
+.fE{background:radial-gradient(130% 72% at 50% -10%,oklch(.87 .09 52 / .95),transparent 58%),linear-gradient(180deg,#F5DCBE,#F7EFE2 48%)}
+.fE .hd{padding:2px 30px 0;text-align:center}
+.fE .eyeb{color:oklch(.5 .12 38)}
+.fE .nm{font-family:var(--tiro);font-size:44px;line-height:1.15;margin-top:2px}
+.fE .st{font-size:13.5px;color:#6F6356;margin-top:3px}
+.fE .find{display:flex;align-items:center;gap:11px;height:56px;margin:16px 24px 0;padding:0 18px;border-radius:999px;background:var(--surf);border:1.5px solid rgba(122,63,36,.18);box-shadow:0 16px 34px -20px rgba(96,48,18,.5);color:#584B3E}
+.fE .find .phld{flex:1;font-size:15.5px;color:#9a8c7a;text-align:left}
+.fE .find .mic{color:var(--goldd)}
+.fE .hint{text-align:center;font-size:12.5px;color:#9a8c7a;margin-top:9px}
+.fE .hint b{font-family:var(--deva);font-weight:500;color:#8a7a68}
+.fE .sgrid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px 6px;padding:20px 24px 0}
+.fE .sc{display:flex;flex-direction:column;align-items:center;gap:6px}
+.fE .dseal{width:56px;height:56px}
+.fE .sc .nm2{font-family:var(--deva);font-size:13.5px;color:var(--ink2);line-height:1.1}
+.fE .brow{text-align:center;font-size:13.5px;color:#6F6356;padding:16px 0 2px}
+.fE .brow a{font-weight:600;text-decoration:none;border-bottom:1px solid rgba(138,90,24,.35)}
+.fE .list{padding:8px 24px 0;display:flex;flex-direction:column;gap:10px}
+.fE .go{width:38px;height:38px;border-radius:50%;display:grid;place-items:center;color:var(--aink);background:var(--soft);flex:none}
+/* ===== second band: deity pigment re-selections ===== */
+.kh .dga,.kh-c.dga{--soft:oklch(.92 .04 48);--aink:oklch(.46 .125 40);--acc:oklch(.6 .12 42)}
+.kh .dsh,.kh-c.dsh{--soft:oklch(.925 .006 230);--aink:oklch(.44 .015 230);--acc:oklch(.6 .015 230)}
+.kh .dde,.kh-c.dde{--soft:oklch(.925 .034 18);--aink:oklch(.44 .13 18);--acc:oklch(.58 .13 18)}
+.kh .dvi,.kh-c.dvi{--soft:oklch(.925 .024 262);--aink:oklch(.42 .085 262);--acc:oklch(.58 .08 262)}
+.kh .dsu,.kh-c.dsu{--soft:oklch(.925 .028 185);--aink:oklch(.45 .07 188);--acc:oklch(.6 .07 188)}
+.kh .dsy,.kh-c.dsy{--soft:oklch(.93 .05 92);--aink:oklch(.5 .105 82);--acc:oklch(.66 .11 88)}
+.kh .dgu,.kh-c.dgu{--soft:oklch(.925 .024 330);--aink:oklch(.43 .08 330);--acc:oklch(.58 .08 330)}
+.kh .dha,.kh-c.dha{--soft:oklch(.92 .036 62);--aink:oklch(.46 .085 58);--acc:oklch(.6 .09 60)}
+.rt .dga,.rt-c.dga{--aink:oklch(.4 .13 40)}.rt .dsh,.rt-c.dsh{--aink:oklch(.38 .02 230)}.rt .dde,.rt-c.dde{--aink:oklch(.38 .135 15)}.rt .dvi,.rt-c.dvi{--aink:oklch(.36 .1 262)}
+.rt .dsu,.rt-c.dsu{--aink:oklch(.4 .08 188)}.rt .dsy,.rt-c.dsy{--aink:oklch(.45 .11 80)}.rt .dgu,.rt-c.dgu{--aink:oklch(.38 .09 330)}.rt .dha,.rt-c.dha{--aink:oklch(.42 .1 58)}
+.rt .dseal{background:oklch(.945 .012 85);border-color:color-mix(in oklab,var(--aink) 38%,transparent)}
+.rt .gt .nm{color:var(--aink)}
+.cn .dseal{background:oklch(.93 .022 85);border-color:rgba(176,122,43,.42)}
+/* pigment board */
+.board{position:absolute;width:900px;background:var(--surf);border:1px solid var(--line);border-radius:24px;padding:26px 30px 28px;box-shadow:0 30px 70px -40px rgba(35,24,8,.4)}
+.board .bh{display:grid;grid-template-columns:150px 118px 118px 118px 1fr;gap:0 14px;font-size:11.5px;letter-spacing:.16em;text-transform:uppercase;font-weight:700;color:#8a7a68;padding-bottom:10px;border-bottom:1px solid var(--line)}
+.board .br{display:grid;grid-template-columns:150px 118px 118px 118px 1fr;gap:0 14px;align-items:center;padding:8px 0;border-bottom:1px solid rgba(43,32,23,.06)}
+.board .bn{font-family:var(--deva);font-size:20px}
+.board .bn small{display:block;font-family:var(--ui);font-size:11.5px;color:#9a8c7a;letter-spacing:.02em}
+.chip{height:44px;border-radius:12px;display:grid;place-items:center;font-family:var(--deva);font-size:19px;background:var(--soft);color:var(--aink);border:1.5px solid color-mix(in oklab,var(--acc) 40%,transparent)}
+.cur{--soft:oklch(.92 .045 var(--h));--aink:oklch(.42 .12 var(--h));--acc:oklch(.58 .13 var(--h))}
+.cur.dsh{--soft:oklch(.92 .00675 210);--aink:oklch(.42 .018 210);--acc:oklch(.58 .0195 210)}
+.chip.rc{background:oklch(.945 .012 85);border-color:color-mix(in oklab,var(--aink) 40%,transparent)}
+.board .pg{font-size:13px;color:#584B3E;line-height:1.45}
+.board .pg b{font-weight:600;color:var(--ink)}
+</style>
+</head>
+<body>
+<div class="cap" style="left:40px;top:10px;width:1240px"><span style="font-size:22px;font-family:Marcellus,serif;font-weight:400">Stuti — Library page, five directions</span><small style="font-size:13.5px;max-width:1180px">The root of the Library tab: one pool of 111 texts across eight deities, re-sliced by lens — the same pool in every frame so the structures compare honestly. A is the shipping screen. B and C re-dress the deity grid (presence versus density), D flips the root to a printed index of texts, E opens with search. Each frame also wears a palette from the app's own world: A the shipping day theme, B a sandstone dusk, C the night theme as built, D turmeric paper with sindūra rubrics, E a dawn wash for the hour it opens. Mix and match freely — B pairs with the deity page's garbhagṛha, D with its granthasūcī. A second band below re-selects the deity pigments themselves.</small></div>
+
+<!-- ============ A ============ -->
+<div class="cap" style="left:40px;top:120px">A · Current<small>Reference. Lens pills, a seal grid, collections below the fold. Calm — but eight identical circles say nothing: no counts, no weight, and the deities you keep look like everyone else's.</small></div>
+<div class="ph fA" style="left:40px;top:196px">
+  <div class="sbar"><span>06:12</span><svg width="64" height="13" viewBox="0 0 64 13" fill="none"><rect x="0" y="6" width="3" height="6" rx="1" fill="#2B2017"/><rect x="5" y="4" width="3" height="8" rx="1" fill="#2B2017"/><rect x="10" y="2" width="3" height="10" rx="1" fill="#2B2017"/><path d="M22 5c2.8-2.7 7.2-2.7 10 0" stroke="#2B2017" stroke-width="1.8" stroke-linecap="round"/><path d="M24.6 8c1.6-1.5 4.2-1.5 5.8 0" stroke="#2B2017" stroke-width="1.8" stroke-linecap="round"/><circle cx="27.5" cy="10.8" r="1.3" fill="#2B2017"/><rect x="40" y="2.5" width="20" height="9" rx="2.6" stroke="#2B2017" stroke-opacity=".4"/><rect x="42" y="4.5" width="13" height="5" rx="1.3" fill="#2B2017"/><rect x="61" y="5" width="2" height="4" rx="1" fill="#2B2017" fill-opacity=".4"/></svg></div>
+  <div class="body">
+    <div class="lbar"><span class="tt">Library</span><span class="icb"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.8-3.8"/></svg></span></div>
+    <div class="lens">
+      <div class="lpill on"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="4" y="4" width="7" height="7" rx="2"/><rect x="13" y="4" width="7" height="7" rx="2"/><rect x="4" y="13" width="7" height="7" rx="2"/><rect x="13" y="13" width="7" height="7" rx="2"/></svg>Deity</div>
+      <div class="lpill"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M9 6h11M9 12h11M9 18h11M4.5 6h.01M4.5 12h.01M4.5 18h.01"/></svg>Type</div>
+      <div class="lpill"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="8"/><path d="M12 8v4l2.6 2.6"/></svg>Vratas</div>
+      <div class="lpill"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 5l6 6-9 9H4v-6z"/><path d="M11 7l6 6"/></svg>Author</div>
+    </div>
+    <div class="grid">
+      <div class="gt dy dga"><span class="dseal"><img src="emblems/ganesha-face-day.png" alt="" /></span><span class="nm">गणेश</span></div>
+      <div class="gt dy dsh"><span class="dseal"><img src="emblems/shiva-face-day.png" alt="" /></span><span class="nm">शिव</span></div>
+      <div class="gt dy dde"><span class="dseal"><img src="emblems/devi-face-day.png" alt="" /></span><span class="nm">देवी</span></div>
+      <div class="gt dy dvi"><span class="dseal"><img src="emblems/vishnu-face-day.png" alt="" /></span><span class="nm">विष्णु</span></div>
+      <div class="gt dy dsu"><span class="dseal"><img src="emblems/subrahmanya-face-day.png" alt="" /></span><span class="nm">सुब्रह्मण्य</span></div>
+      <div class="gt dy dsy"><span class="dseal"><img src="emblems/surya-face-day.png" alt="" /></span><span class="nm">सूर्य</span></div>
+      <div class="gt dy dgu"><span class="dseal"><img src="emblems/guru-face-day.png" alt="" /></span><span class="nm">गुरु</span></div>
+      <div class="gt dy dha"><span class="dseal"><img src="emblems/hanuman-face-day.png" alt="" /></span><span class="nm">हनुमान्</span></div>
+    </div>
+  </div>
+  <div class="tabs">
+    <div class="tab"><svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M4 11l8-7 8 7"/><path d="M6 10v9h12v-9"/></svg><span>Today</span></div>
+    <div class="tab"><svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="2.4"/><path d="M12 9.6c0-2.6-1-4.6-2.7-4.6S6.6 7.5 8 9.7M12 9.6c0-2.6 1-4.6 2.7-4.6S17.4 7.5 16 9.7M9.6 13.4c-2.2 1.3-4.5 1.2-5.4-.2S4.7 9.5 7.2 9M14.4 13.4c2.2 1.3 4.5 1.2 5.4-.2S19.3 9.5 16.8 9M10.7 14.8c-.8 2.5-.2 4.7 1.3 4.7s2.1-2.2 1.3-4.7"/></svg><span>Nitya</span></div>
+    <div class="tab on"><svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5.5A2 2 0 0 1 6 4h5v15H6a2 2 0 0 0-2 1.2z"/><path d="M20 5.5A2 2 0 0 0 18 4h-5v15h5a2 2 0 0 1 2 1.2z"/></svg><span>Library</span></div>
+    <div class="tab"><svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><rect x="3.5" y="4.5" width="17" height="16" rx="2.5"/><path d="M3.5 9.5h17M8 3v3M16 3v3"/></svg><span>Calendar</span></div>
+  </div>
+</div>
+
+<!-- ============ B ============ -->
+<div class="cap" style="left:510px;top:120px">B · Devakoṣṭha<small>Shrine niches on a sandstone-dusk ground: full emblems, per-deity tint, counts, a gold mark on kept deities. Structure untouched; pairs with deity-page B.</small></div>
+<div class="ph fB" style="left:510px;top:196px">
+  <div class="sbar"><span>06:12</span><svg width="64" height="13" viewBox="0 0 64 13" fill="none"><rect x="0" y="6" width="3" height="6" rx="1" fill="#2B2017"/><rect x="5" y="4" width="3" height="8" rx="1" fill="#2B2017"/><rect x="10" y="2" width="3" height="10" rx="1" fill="#2B2017"/><path d="M22 5c2.8-2.7 7.2-2.7 10 0" stroke="#2B2017" stroke-width="1.8" stroke-linecap="round"/><path d="M24.6 8c1.6-1.5 4.2-1.5 5.8 0" stroke="#2B2017" stroke-width="1.8" stroke-linecap="round"/><circle cx="27.5" cy="10.8" r="1.3" fill="#2B2017"/><rect x="40" y="2.5" width="20" height="9" rx="2.6" stroke="#2B2017" stroke-opacity=".4"/><rect x="42" y="4.5" width="13" height="5" rx="1.3" fill="#2B2017"/><rect x="61" y="5" width="2" height="4" rx="1" fill="#2B2017" fill-opacity=".4"/></svg></div>
+  <div class="body">
+    <div class="lbar"><span class="tt">Library</span><span class="icb"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.8-3.8"/></svg></span></div>
+    <div class="lens">
+      <div class="lpill on"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="4" y="4" width="7" height="7" rx="2"/><rect x="13" y="4" width="7" height="7" rx="2"/><rect x="4" y="13" width="7" height="7" rx="2"/><rect x="13" y="13" width="7" height="7" rx="2"/></svg>Deity</div>
+      <div class="lpill"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M9 6h11M9 12h11M9 18h11M4.5 6h.01M4.5 12h.01M4.5 18h.01"/></svg>Type</div>
+      <div class="lpill"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="8"/><path d="M12 8v4l2.6 2.6"/></svg>Vratas</div>
+      <div class="lpill"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 5l6 6-9 9H4v-6z"/><path d="M11 7l6 6"/></svg>Author</div>
+    </div>
+    <div class="grid">
+      <div class="nch dy dga kept"><span class="kmark"></span><img src="emblems/ganesha-face-inkday.png" alt="" /><div class="nm">गणेश</div><div class="ct">11 texts</div></div>
+      <div class="nch dy dde kept"><span class="kmark"></span><img src="emblems/devi-face-inkday.png" alt="" /><div class="nm">देवी</div><div class="ct">34 texts</div></div>
+      <div class="nch dy dsh"><img src="emblems/shiva-face-inkday.png" alt="" /><div class="nm">शिव</div><div class="ct">19 texts</div></div>
+      <div class="nch dy dvi"><img src="emblems/vishnu-face-inkday.png" alt="" /><div class="nm">विष्णु</div><div class="ct">21 texts</div></div>
+      <div class="nch dy dsu"><img src="emblems/subrahmanya-face-inkday.png" alt="" /><div class="nm">सुब्रह्मण्य</div><div class="ct">7 texts</div></div>
+      <div class="nch dy dha"><img src="emblems/hanuman-face-inkday.png" alt="" /><div class="nm">हनुमान्</div><div class="ct">8 texts</div></div>
+    </div>
+  </div>
+  <div class="tabs">
+    <div class="tab"><svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M4 11l8-7 8 7"/><path d="M6 10v9h12v-9"/></svg><span>Today</span></div>
+    <div class="tab"><svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="2.4"/><path d="M12 9.6c0-2.6-1-4.6-2.7-4.6S6.6 7.5 8 9.7M12 9.6c0-2.6 1-4.6 2.7-4.6S17.4 7.5 16 9.7M9.6 13.4c-2.2 1.3-4.5 1.2-5.4-.2S4.7 9.5 7.2 9M14.4 13.4c2.2 1.3 4.5 1.2 5.4-.2S19.3 9.5 16.8 9M10.7 14.8c-.8 2.5-.2 4.7 1.3 4.7s2.1-2.2 1.3-4.7"/></svg><span>Nitya</span></div>
+    <div class="tab on"><svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5.5A2 2 0 0 1 6 4h5v15H6a2 2 0 0 0-2 1.2z"/><path d="M20 5.5A2 2 0 0 0 18 4h-5v15h5a2 2 0 0 1 2 1.2z"/></svg><span>Library</span></div>
+    <div class="tab"><svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><rect x="3.5" y="4.5" width="17" height="16" rx="2.5"/><path d="M3.5 9.5h17M8 3v3M16 3v3"/></svg><span>Calendar</span></div>
+  </div>
+</div>
+
+<!-- ============ C ============ -->
+<div class="cap" style="left:980px;top:120px">C · Sabhā<small>All eight on one screen, in the night theme — the hall at 4 a.m. Epithets teach who is who, counts give weight, kept deities rise; pills shrink to a segmented group-by.</small></div>
+<div class="ph fC" style="left:980px;top:196px">
+  <div class="sbar"><span>06:12</span><svg width="64" height="13" viewBox="0 0 64 13" fill="none"><rect x="0" y="6" width="3" height="6" rx="1" fill="#F6EBD6"/><rect x="5" y="4" width="3" height="8" rx="1" fill="#F6EBD6"/><rect x="10" y="2" width="3" height="10" rx="1" fill="#F6EBD6"/><path d="M22 5c2.8-2.7 7.2-2.7 10 0" stroke="#F6EBD6" stroke-width="1.8" stroke-linecap="round"/><path d="M24.6 8c1.6-1.5 4.2-1.5 5.8 0" stroke="#F6EBD6" stroke-width="1.8" stroke-linecap="round"/><circle cx="27.5" cy="10.8" r="1.3" fill="#F6EBD6"/><rect x="40" y="2.5" width="20" height="9" rx="2.6" stroke="#F6EBD6" stroke-opacity=".4"/><rect x="42" y="4.5" width="13" height="5" rx="1.3" fill="#F6EBD6"/><rect x="61" y="5" width="2" height="4" rx="1" fill="#F6EBD6" fill-opacity=".4"/></svg></div>
+  <div class="body">
+    <div class="lbar"><span class="tt">Library</span><span class="icb"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.8-3.8"/></svg></span></div>
+    <div class="seg"><span class="on">Deity</span><span>Type</span><span>Vratas</span><span>Author</span></div>
+    <div style="padding:12px 30px 5px"><span class="eyeb">8 deities · 111 texts</span></div>
+    <div class="rows">
+      <div class="row dy dga"><span class="dseal"><img src="emblems/ganesha-face-night.png" alt="" /></span><div class="bd"><div class="nm">गणेश<i></i></div><div class="ep">Remover of obstacles</div></div><span class="ct">11</span><svg class="chev" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 5l7 7-7 7"/></svg></div>
+      <div class="row dy dde"><span class="dseal"><img src="emblems/devi-face-night.png" alt="" /></span><div class="bd"><div class="nm">देवी<i></i></div><div class="ep">The Mother · Śakti</div></div><span class="ct">34</span><svg class="chev" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 5l7 7-7 7"/></svg></div>
+      <div class="row dy dsh"><span class="dseal"><img src="emblems/shiva-face-night.png" alt="" /></span><div class="bd"><div class="nm">शिव</div><div class="ep">The auspicious one</div></div><span class="ct">19</span><svg class="chev" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 5l7 7-7 7"/></svg></div>
+      <div class="row dy dvi"><span class="dseal"><img src="emblems/vishnu-face-night.png" alt="" /></span><div class="bd"><div class="nm">विष्णु</div><div class="ep">The preserver</div></div><span class="ct">21</span><svg class="chev" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 5l7 7-7 7"/></svg></div>
+      <div class="row dy dsu"><span class="dseal"><img src="emblems/subrahmanya-face-night.png" alt="" /></span><div class="bd"><div class="nm">सुब्रह्मण्य</div><div class="ep">Skanda · Murugan</div></div><span class="ct">7</span><svg class="chev" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 5l7 7-7 7"/></svg></div>
+      <div class="row dy dsy"><span class="dseal"><img src="emblems/surya-face-night.png" alt="" /></span><div class="bd"><div class="nm">सूर्य</div><div class="ep">The radiant sun</div></div><span class="ct">6</span><svg class="chev" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 5l7 7-7 7"/></svg></div>
+      <div class="row dy dgu"><span class="dseal"><img src="emblems/guru-face-night.png" alt="" /></span><div class="bd"><div class="nm">गुरु</div><div class="ep">The teacher, the light</div></div><span class="ct">5</span><svg class="chev" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 5l7 7-7 7"/></svg></div>
+      <div class="row dy dha"><span class="dseal"><img src="emblems/hanuman-face-night.png" alt="" /></span><div class="bd"><div class="nm">हनुमान्</div><div class="ep">Añjaneya, the devoted</div></div><span class="ct">8</span><svg class="chev" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 5l7 7-7 7"/></svg></div>
+    </div>
+    <div class="more"><span class="mico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="2.4"/><path d="M12 9.6c0-2.6-1-4.6-2.7-4.6S6.6 7.5 8 9.7M12 9.6c0-2.6 1-4.6 2.7-4.6S17.4 7.5 16 9.7M9.6 13.4c-2.2 1.3-4.5 1.2-5.4-.2S4.7 9.5 7.2 9M14.4 13.4c2.2 1.3 4.5 1.2 5.4-.2S19.3 9.5 16.8 9M10.7 14.8c-.8 2.5-.2 4.7 1.3 4.7s2.1-2.2 1.3-4.7"/></svg></span><div style="flex:1"><div class="m1">नित्य अनुष्ठानम्</div><div class="m2">Daily practices, step by step</div></div><svg class="chev" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 5l7 7-7 7"/></svg></div>
+  </div>
+  <div class="tabs">
+    <div class="tab"><svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M4 11l8-7 8 7"/><path d="M6 10v9h12v-9"/></svg><span>Today</span></div>
+    <div class="tab"><svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="2.4"/><path d="M12 9.6c0-2.6-1-4.6-2.7-4.6S6.6 7.5 8 9.7M12 9.6c0-2.6 1-4.6 2.7-4.6S17.4 7.5 16 9.7M9.6 13.4c-2.2 1.3-4.5 1.2-5.4-.2S4.7 9.5 7.2 9M14.4 13.4c2.2 1.3 4.5 1.2 5.4-.2S19.3 9.5 16.8 9M10.7 14.8c-.8 2.5-.2 4.7 1.3 4.7s2.1-2.2 1.3-4.7"/></svg><span>Nitya</span></div>
+    <div class="tab on"><svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5.5A2 2 0 0 1 6 4h5v15H6a2 2 0 0 0-2 1.2z"/><path d="M20 5.5A2 2 0 0 0 18 4h-5v15h5a2 2 0 0 1 2 1.2z"/></svg><span>Library</span></div>
+    <div class="tab"><svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><rect x="3.5" y="4.5" width="17" height="16" rx="2.5"/><path d="M3.5 9.5h17M8 3v3M16 3v3"/></svg><span>Calendar</span></div>
+  </div>
+</div>
+
+<!-- ============ D ============ -->
+<div class="cap" style="left:1450px;top:120px">D · Granthasūcī<small>Texts become the library; deities shrink to a filter strip. A pothī index on turmeric paper, sindūra rubrics for headings and numerals. Sibling of deity-page D.</small></div>
+<div class="ph fD" style="left:1450px;top:196px">
+  <div class="sbar"><span>06:12</span><svg width="64" height="13" viewBox="0 0 64 13" fill="none"><rect x="0" y="6" width="3" height="6" rx="1" fill="#2B2017"/><rect x="5" y="4" width="3" height="8" rx="1" fill="#2B2017"/><rect x="10" y="2" width="3" height="10" rx="1" fill="#2B2017"/><path d="M22 5c2.8-2.7 7.2-2.7 10 0" stroke="#2B2017" stroke-width="1.8" stroke-linecap="round"/><path d="M24.6 8c1.6-1.5 4.2-1.5 5.8 0" stroke="#2B2017" stroke-width="1.8" stroke-linecap="round"/><circle cx="27.5" cy="10.8" r="1.3" fill="#2B2017"/><rect x="40" y="2.5" width="20" height="9" rx="2.6" stroke="#2B2017" stroke-opacity=".4"/><rect x="42" y="4.5" width="13" height="5" rx="1.3" fill="#2B2017"/><rect x="61" y="5" width="2" height="4" rx="1" fill="#2B2017" fill-opacity=".4"/></svg></div>
+  <div class="body">
+    <div class="hd" style="display:flex;align-items:flex-start;justify-content:space-between;padding-top:6px">
+      <div><span class="eyeb">Granthālaya · 111 texts</span><div class="nm">ग्रन्थसूची</div><div class="rm">The index of texts</div></div>
+      <span class="icb" style="margin:2px -10px 0 0"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.8-3.8"/></svg></span>
+    </div>
+    <div class="hd"><div class="drule"></div></div>
+    <div class="strip">
+      <span class="all">सर्व</span>
+      <span class="dseal dy dga"><img src="emblems/ganesha-face-day.png" alt="" /></span>
+      <span class="dseal dy dsh"><img src="emblems/shiva-face-day.png" alt="" /></span>
+      <span class="dseal dy dde"><img src="emblems/devi-face-day.png" alt="" /></span>
+      <span class="dseal dy dvi"><img src="emblems/vishnu-face-day.png" alt="" /></span>
+      <span class="dseal dy dsu"><img src="emblems/subrahmanya-face-day.png" alt="" /></span>
+      <span class="dseal dy dsy"><img src="emblems/surya-face-day.png" alt="" /></span>
+      <span class="dseal dy dgu"><img src="emblems/guru-face-day.png" alt="" /></span>
+      <span class="dseal dy dha"><img src="emblems/hanuman-face-day.png" alt="" /></span>
+    </div>
+    <div class="ix">
+      <div class="sec">Sahasranāma · the thousand names</div>
+      <div class="en dy dde"><span class="no">१</span><span class="dd"></span><div class="ti"><div class="d">ललितासहस्रनामस्तोत्रम्</div><div class="r">Lalitā Sahasranāma · Devī</div></div><div class="dl"></div><span class="vc">182 verses</span></div>
+      <div class="en dy dvi"><span class="no">२</span><span class="dd"></span><div class="ti"><div class="d">विष्णुसहस्रनामस्तोत्रम्</div><div class="r">Viṣṇu Sahasranāma · Viṣṇu</div></div><div class="dl"></div><span class="vc">108 verses</span></div>
+      <div class="sec">Aṣṭakam · eight-verse praise</div>
+      <div class="en dy dsh"><span class="no">३</span><span class="dd"></span><div class="ti"><div class="d">लिङ्गाष्टकम्</div><div class="r">Liṅgāṣṭakam · Śiva</div></div><div class="dl"></div><span class="vc">8 verses</span></div>
+      <div class="en dy dde"><span class="no">४</span><span class="dd"></span><div class="ti"><div class="d">महालक्ष्म्यष्टकम्</div><div class="r">Mahālakṣmī Aṣṭakam · Devī</div></div><div class="dl"></div><span class="vc">8 verses</span></div>
+      <div class="en dy dsh"><span class="no">५</span><span class="dd"></span><div class="ti"><div class="d">रुद्राष्टकम्</div><div class="r">Rudrāṣṭakam · Śiva · Tulsīdās</div></div><div class="dl"></div><span class="vc">9 verses</span></div>
+      <div class="sec">Stotra · hymns of praise</div>
+      <div class="en dy dde"><span class="no">६</span><span class="dd"></span><div class="ti"><div class="d">कनकधारास्तोत्रम्</div><div class="r">Kanakadhārā · Devī · Śaṅkarācārya</div></div><div class="dl"></div><span class="vc">21 verses</span></div>
+      <div class="en dy dsh"><span class="no">७</span><span class="dd"></span><div class="ti"><div class="d">शिवपञ्चाक्षरस्तोत्रम्</div><div class="r">Pañcākṣara · Śiva · Śaṅkarācārya</div></div><div class="dl"></div><span class="vc">6 verses</span></div>
+      <div class="en dy dsy"><span class="no">८</span><span class="dd"></span><div class="ti"><div class="d">आदित्यहृदयम्</div><div class="r">Āditya Hṛdayam · Sūrya</div></div><div class="dl"></div><span class="vc">31 verses</span></div>
+    </div>
+  </div>
+  <div class="tabs" style="background:linear-gradient(0deg,#EEDCB2,rgba(238,220,178,.72))">
+    <div class="tab"><svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M4 11l8-7 8 7"/><path d="M6 10v9h12v-9"/></svg><span>Today</span></div>
+    <div class="tab"><svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="2.4"/><path d="M12 9.6c0-2.6-1-4.6-2.7-4.6S6.6 7.5 8 9.7M12 9.6c0-2.6 1-4.6 2.7-4.6S17.4 7.5 16 9.7M9.6 13.4c-2.2 1.3-4.5 1.2-5.4-.2S4.7 9.5 7.2 9M14.4 13.4c2.2 1.3 4.5 1.2 5.4-.2S19.3 9.5 16.8 9M10.7 14.8c-.8 2.5-.2 4.7 1.3 4.7s2.1-2.2 1.3-4.7"/></svg><span>Nitya</span></div>
+    <div class="tab on"><svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5.5A2 2 0 0 1 6 4h5v15H6a2 2 0 0 0-2 1.2z"/><path d="M20 5.5A2 2 0 0 0 18 4h-5v15h5a2 2 0 0 1 2 1.2z"/></svg><span>Library</span></div>
+    <div class="tab"><svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><rect x="3.5" y="4.5" width="17" height="16" rx="2.5"/><path d="M3.5 9.5h17M8 3v3M16 3v3"/></svg><span>Calendar</span></div>
+  </div>
+</div>
+
+<!-- ============ E ============ -->
+<div class="cap" style="left:1920px;top:120px">E · Praveśa<small>Search as the front door, under an uṣas dawn wash. One field over any script, seals in a row, the texts last held beneath. Flirts with Today's job.</small></div>
+<div class="ph fE" style="left:1920px;top:196px">
+  <div class="sbar"><span>06:12</span><svg width="64" height="13" viewBox="0 0 64 13" fill="none"><rect x="0" y="6" width="3" height="6" rx="1" fill="#2B2017"/><rect x="5" y="4" width="3" height="8" rx="1" fill="#2B2017"/><rect x="10" y="2" width="3" height="10" rx="1" fill="#2B2017"/><path d="M22 5c2.8-2.7 7.2-2.7 10 0" stroke="#2B2017" stroke-width="1.8" stroke-linecap="round"/><path d="M24.6 8c1.6-1.5 4.2-1.5 5.8 0" stroke="#2B2017" stroke-width="1.8" stroke-linecap="round"/><circle cx="27.5" cy="10.8" r="1.3" fill="#2B2017"/><rect x="40" y="2.5" width="20" height="9" rx="2.6" stroke="#2B2017" stroke-opacity=".4"/><rect x="42" y="4.5" width="13" height="5" rx="1.3" fill="#2B2017"/><rect x="61" y="5" width="2" height="4" rx="1" fill="#2B2017" fill-opacity=".4"/></svg></div>
+  <div class="body">
+    <div class="hd">
+      <span class="eyeb">Granthālaya</span>
+      <div class="nm">ग्रन्थालयः</div>
+      <div class="st">111 texts · 8 deities · every script</div>
+    </div>
+    <div class="find">
+      <svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.8-3.8"/></svg>
+      <span class="phld">Find a stotra, a deity, an author…</span>
+      <svg class="mic" width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="3" width="6" height="11" rx="3"/><path d="M5.5 11.5a6.5 6.5 0 0 0 13 0M12 18v3"/></svg>
+    </div>
+    <div class="hint">kanakadhārā or <b>कनकधारा</b> — any script finds it</div>
+    <div class="sgrid">
+      <div class="sc dy dga"><span class="dseal"><img src="emblems/ganesha-face-day.png" alt="" /></span><span class="nm2">गणेश</span></div>
+      <div class="sc dy dsh"><span class="dseal"><img src="emblems/shiva-face-day.png" alt="" /></span><span class="nm2">शिव</span></div>
+      <div class="sc dy dde"><span class="dseal"><img src="emblems/devi-face-day.png" alt="" /></span><span class="nm2">देवी</span></div>
+      <div class="sc dy dvi"><span class="dseal"><img src="emblems/vishnu-face-day.png" alt="" /></span><span class="nm2">विष्णु</span></div>
+      <div class="sc dy dsu"><span class="dseal"><img src="emblems/subrahmanya-face-day.png" alt="" /></span><span class="nm2">सुब्रह्मण्य</span></div>
+      <div class="sc dy dsy"><span class="dseal"><img src="emblems/surya-face-day.png" alt="" /></span><span class="nm2">सूर्य</span></div>
+      <div class="sc dy dgu"><span class="dseal"><img src="emblems/guru-face-day.png" alt="" /></span><span class="nm2">गुरु</span></div>
+      <div class="sc dy dha"><span class="dseal"><img src="emblems/hanuman-face-day.png" alt="" /></span><span class="nm2">हनुमान्</span></div>
+    </div>
+    <div class="brow">Or browse by <a>type</a> · <a>vrata</a> · <a>author</a></div>
+    <div style="padding:14px 30px 4px"><span class="eyeb">Picked up recently</span></div>
+    <div class="list">
+      <div class="hcard dy dde"><div class="tx"><div class="ld">कनकधारास्तोत्रम्</div><div class="mt"><span>Left at verse 12 of 21</span><i></i><span>Devī</span></div></div><span class="go"><svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5.5v13l11-6.5z"/></svg></span></div>
+      <div class="hcard dy dsh"><div class="tx"><div class="ld">शिवपञ्चाक्षरस्तोत्रम्</div><div class="mt"><span>Completed yesterday</span><i></i><span>Śiva</span></div></div><span class="go"><svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5.5v13l11-6.5z"/></svg></span></div>
+    </div>
+  </div>
+  <div class="tabs">
+    <div class="tab"><svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M4 11l8-7 8 7"/><path d="M6 10v9h12v-9"/></svg><span>Today</span></div>
+    <div class="tab"><svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="2.4"/><path d="M12 9.6c0-2.6-1-4.6-2.7-4.6S6.6 7.5 8 9.7M12 9.6c0-2.6 1-4.6 2.7-4.6S17.4 7.5 16 9.7M9.6 13.4c-2.2 1.3-4.5 1.2-5.4-.2S4.7 9.5 7.2 9M14.4 13.4c2.2 1.3 4.5 1.2 5.4-.2S19.3 9.5 16.8 9M10.7 14.8c-.8 2.5-.2 4.7 1.3 4.7s2.1-2.2 1.3-4.7"/></svg><span>Nitya</span></div>
+    <div class="tab on"><svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5.5A2 2 0 0 1 6 4h5v15H6a2 2 0 0 0-2 1.2z"/><path d="M20 5.5A2 2 0 0 0 18 4h-5v15h5a2 2 0 0 1 2 1.2z"/></svg><span>Library</span></div>
+    <div class="tab"><svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><rect x="3.5" y="4.5" width="17" height="16" rx="2.5"/><path d="M3.5 9.5h17M8 3v3M16 3v3"/></svg><span>Calendar</span></div>
+  </div>
+</div>
+<!-- ============ second band: deity pigments ============ -->
+<div class="cap" style="left:40px;top:1130px;width:1240px"><span style="font-size:22px;font-family:Marcellus,serif;font-weight:400">The deity pigments, re-selected</span><small style="font-size:13.5px;max-width:1180px">The current hues were chosen by iconography — each is right alone, but fed through one formula and spread evenly round the wheel they render as eight candy pastels: a sweet box, not a shrine shelf. Three re-selections on the shipping layout, so only the color changes; emblems in plain ink so the swatches alone speak — production would re-tint the emblem set. F grinds a color per deity from one mineral paint-box, G removes deity color from the root, H moves it from fill to ink. The board at right compares every swatch.</small></div>
+
+<div class="cap" style="left:40px;top:1260px">F · Khanija<small>Same slots, hand-ground pigments: sindūra, vibhūti, kuṅkuma, nīla, mayūra, haridrā, drākṣā, gairika. Chroma evened, warmth shared — identity without candy.</small></div>
+<div class="ph fA kh" style="left:40px;top:1336px">
+  <div class="sbar"><span>06:12</span><svg width="64" height="13" viewBox="0 0 64 13" fill="none"><rect x="0" y="6" width="3" height="6" rx="1" fill="#2B2017"/><rect x="5" y="4" width="3" height="8" rx="1" fill="#2B2017"/><rect x="10" y="2" width="3" height="10" rx="1" fill="#2B2017"/><path d="M22 5c2.8-2.7 7.2-2.7 10 0" stroke="#2B2017" stroke-width="1.8" stroke-linecap="round"/><path d="M24.6 8c1.6-1.5 4.2-1.5 5.8 0" stroke="#2B2017" stroke-width="1.8" stroke-linecap="round"/><circle cx="27.5" cy="10.8" r="1.3" fill="#2B2017"/><rect x="40" y="2.5" width="20" height="9" rx="2.6" stroke="#2B2017" stroke-opacity=".4"/><rect x="42" y="4.5" width="13" height="5" rx="1.3" fill="#2B2017"/><rect x="61" y="5" width="2" height="4" rx="1" fill="#2B2017" fill-opacity=".4"/></svg></div>
+  <div class="body">
+    <div class="lbar"><span class="tt">Library</span><span class="icb"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.8-3.8"/></svg></span></div>
+    <div class="lens">
+      <div class="lpill on"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="4" y="4" width="7" height="7" rx="2"/><rect x="13" y="4" width="7" height="7" rx="2"/><rect x="4" y="13" width="7" height="7" rx="2"/><rect x="13" y="13" width="7" height="7" rx="2"/></svg>Deity</div>
+      <div class="lpill"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M9 6h11M9 12h11M9 18h11M4.5 6h.01M4.5 12h.01M4.5 18h.01"/></svg>Type</div>
+      <div class="lpill"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="8"/><path d="M12 8v4l2.6 2.6"/></svg>Vratas</div>
+      <div class="lpill"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 5l6 6-9 9H4v-6z"/><path d="M11 7l6 6"/></svg>Author</div>
+    </div>
+    <div class="grid">
+      <div class="gt dga"><span class="dseal"><img src="emblems/ganesha-face-inkday.png" alt="" /></span><span class="nm">गणेश</span></div>
+      <div class="gt dsh"><span class="dseal"><img src="emblems/shiva-face-inkday.png" alt="" /></span><span class="nm">शिव</span></div>
+      <div class="gt dde"><span class="dseal"><img src="emblems/devi-face-inkday.png" alt="" /></span><span class="nm">देवी</span></div>
+      <div class="gt dvi"><span class="dseal"><img src="emblems/vishnu-face-inkday.png" alt="" /></span><span class="nm">विष्णु</span></div>
+      <div class="gt dsu"><span class="dseal"><img src="emblems/subrahmanya-face-inkday.png" alt="" /></span><span class="nm">सुब्रह्मण्य</span></div>
+      <div class="gt dsy"><span class="dseal"><img src="emblems/surya-face-inkday.png" alt="" /></span><span class="nm">सूर्य</span></div>
+      <div class="gt dgu"><span class="dseal"><img src="emblems/guru-face-inkday.png" alt="" /></span><span class="nm">गुरु</span></div>
+      <div class="gt dha"><span class="dseal"><img src="emblems/hanuman-face-inkday.png" alt="" /></span><span class="nm">हनुमान्</span></div>
+    </div>
+  </div>
+  <div class="tabs">
+    <div class="tab"><svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M4 11l8-7 8 7"/><path d="M6 10v9h12v-9"/></svg><span>Today</span></div>
+    <div class="tab"><svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="2.4"/><path d="M12 9.6c0-2.6-1-4.6-2.7-4.6S6.6 7.5 8 9.7M12 9.6c0-2.6 1-4.6 2.7-4.6S17.4 7.5 16 9.7M9.6 13.4c-2.2 1.3-4.5 1.2-5.4-.2S4.7 9.5 7.2 9M14.4 13.4c2.2 1.3 4.5 1.2 5.4-.2S19.3 9.5 16.8 9M10.7 14.8c-.8 2.5-.2 4.7 1.3 4.7s2.1-2.2 1.3-4.7"/></svg><span>Nitya</span></div>
+    <div class="tab on"><svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5.5A2 2 0 0 1 6 4h5v15H6a2 2 0 0 0-2 1.2z"/><path d="M20 5.5A2 2 0 0 0 18 4h-5v15h5a2 2 0 0 1 2 1.2z"/></svg><span>Library</span></div>
+    <div class="tab"><svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><rect x="3.5" y="4.5" width="17" height="16" rx="2.5"/><path d="M3.5 9.5h17M8 3v3M16 3v3"/></svg><span>Calendar</span></div>
+  </div>
+</div>
+
+<div class="cap" style="left:510px;top:1260px">G · Candana<small>No deity color at the root: sandalwood tint and a brass line for every seal; the accent begins inside the deity's own page. A shelf of one metal.</small></div>
+<div class="ph fA cn" style="left:510px;top:1336px">
+  <div class="sbar"><span>06:12</span><svg width="64" height="13" viewBox="0 0 64 13" fill="none"><rect x="0" y="6" width="3" height="6" rx="1" fill="#2B2017"/><rect x="5" y="4" width="3" height="8" rx="1" fill="#2B2017"/><rect x="10" y="2" width="3" height="10" rx="1" fill="#2B2017"/><path d="M22 5c2.8-2.7 7.2-2.7 10 0" stroke="#2B2017" stroke-width="1.8" stroke-linecap="round"/><path d="M24.6 8c1.6-1.5 4.2-1.5 5.8 0" stroke="#2B2017" stroke-width="1.8" stroke-linecap="round"/><circle cx="27.5" cy="10.8" r="1.3" fill="#2B2017"/><rect x="40" y="2.5" width="20" height="9" rx="2.6" stroke="#2B2017" stroke-opacity=".4"/><rect x="42" y="4.5" width="13" height="5" rx="1.3" fill="#2B2017"/><rect x="61" y="5" width="2" height="4" rx="1" fill="#2B2017" fill-opacity=".4"/></svg></div>
+  <div class="body">
+    <div class="lbar"><span class="tt">Library</span><span class="icb"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.8-3.8"/></svg></span></div>
+    <div class="lens">
+      <div class="lpill on"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="4" y="4" width="7" height="7" rx="2"/><rect x="13" y="4" width="7" height="7" rx="2"/><rect x="4" y="13" width="7" height="7" rx="2"/><rect x="13" y="13" width="7" height="7" rx="2"/></svg>Deity</div>
+      <div class="lpill"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M9 6h11M9 12h11M9 18h11M4.5 6h.01M4.5 12h.01M4.5 18h.01"/></svg>Type</div>
+      <div class="lpill"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="8"/><path d="M12 8v4l2.6 2.6"/></svg>Vratas</div>
+      <div class="lpill"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 5l6 6-9 9H4v-6z"/><path d="M11 7l6 6"/></svg>Author</div>
+    </div>
+    <div class="grid">
+      <div class="gt"><span class="dseal"><img src="emblems/ganesha-face-inkday.png" alt="" /></span><span class="nm">गणेश</span></div>
+      <div class="gt"><span class="dseal"><img src="emblems/shiva-face-inkday.png" alt="" /></span><span class="nm">शिव</span></div>
+      <div class="gt"><span class="dseal"><img src="emblems/devi-face-inkday.png" alt="" /></span><span class="nm">देवी</span></div>
+      <div class="gt"><span class="dseal"><img src="emblems/vishnu-face-inkday.png" alt="" /></span><span class="nm">विष्णु</span></div>
+      <div class="gt"><span class="dseal"><img src="emblems/subrahmanya-face-inkday.png" alt="" /></span><span class="nm">सुब्रह्मण्य</span></div>
+      <div class="gt"><span class="dseal"><img src="emblems/surya-face-inkday.png" alt="" /></span><span class="nm">सूर्य</span></div>
+      <div class="gt"><span class="dseal"><img src="emblems/guru-face-inkday.png" alt="" /></span><span class="nm">गुरु</span></div>
+      <div class="gt"><span class="dseal"><img src="emblems/hanuman-face-inkday.png" alt="" /></span><span class="nm">हनुमान्</span></div>
+    </div>
+  </div>
+  <div class="tabs">
+    <div class="tab"><svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M4 11l8-7 8 7"/><path d="M6 10v9h12v-9"/></svg><span>Today</span></div>
+    <div class="tab"><svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="2.4"/><path d="M12 9.6c0-2.6-1-4.6-2.7-4.6S6.6 7.5 8 9.7M12 9.6c0-2.6 1-4.6 2.7-4.6S17.4 7.5 16 9.7M9.6 13.4c-2.2 1.3-4.5 1.2-5.4-.2S4.7 9.5 7.2 9M14.4 13.4c2.2 1.3 4.5 1.2 5.4-.2S19.3 9.5 16.8 9M10.7 14.8c-.8 2.5-.2 4.7 1.3 4.7s2.1-2.2 1.3-4.7"/></svg><span>Nitya</span></div>
+    <div class="tab on"><svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5.5A2 2 0 0 1 6 4h5v15H6a2 2 0 0 0-2 1.2z"/><path d="M20 5.5A2 2 0 0 0 18 4h-5v15h5a2 2 0 0 1 2 1.2z"/></svg><span>Library</span></div>
+    <div class="tab"><svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><rect x="3.5" y="4.5" width="17" height="16" rx="2.5"/><path d="M3.5 9.5h17M8 3v3M16 3v3"/></svg><span>Calendar</span></div>
+  </div>
+</div>
+
+<div class="cap" style="left:980px;top:1260px">H · Ratna<small>Color moves from fill to ink: parchment seals, a thin gem ring, the name set in the deity's deep stone. The quietest surface that still tells them apart.</small></div>
+<div class="ph fA rt" style="left:980px;top:1336px">
+  <div class="sbar"><span>06:12</span><svg width="64" height="13" viewBox="0 0 64 13" fill="none"><rect x="0" y="6" width="3" height="6" rx="1" fill="#2B2017"/><rect x="5" y="4" width="3" height="8" rx="1" fill="#2B2017"/><rect x="10" y="2" width="3" height="10" rx="1" fill="#2B2017"/><path d="M22 5c2.8-2.7 7.2-2.7 10 0" stroke="#2B2017" stroke-width="1.8" stroke-linecap="round"/><path d="M24.6 8c1.6-1.5 4.2-1.5 5.8 0" stroke="#2B2017" stroke-width="1.8" stroke-linecap="round"/><circle cx="27.5" cy="10.8" r="1.3" fill="#2B2017"/><rect x="40" y="2.5" width="20" height="9" rx="2.6" stroke="#2B2017" stroke-opacity=".4"/><rect x="42" y="4.5" width="13" height="5" rx="1.3" fill="#2B2017"/><rect x="61" y="5" width="2" height="4" rx="1" fill="#2B2017" fill-opacity=".4"/></svg></div>
+  <div class="body">
+    <div class="lbar"><span class="tt">Library</span><span class="icb"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.8-3.8"/></svg></span></div>
+    <div class="lens">
+      <div class="lpill on"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="4" y="4" width="7" height="7" rx="2"/><rect x="13" y="4" width="7" height="7" rx="2"/><rect x="4" y="13" width="7" height="7" rx="2"/><rect x="13" y="13" width="7" height="7" rx="2"/></svg>Deity</div>
+      <div class="lpill"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M9 6h11M9 12h11M9 18h11M4.5 6h.01M4.5 12h.01M4.5 18h.01"/></svg>Type</div>
+      <div class="lpill"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="8"/><path d="M12 8v4l2.6 2.6"/></svg>Vratas</div>
+      <div class="lpill"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 5l6 6-9 9H4v-6z"/><path d="M11 7l6 6"/></svg>Author</div>
+    </div>
+    <div class="grid">
+      <div class="gt dga"><span class="dseal"><img src="emblems/ganesha-face-inkday.png" alt="" /></span><span class="nm">गणेश</span></div>
+      <div class="gt dsh"><span class="dseal"><img src="emblems/shiva-face-inkday.png" alt="" /></span><span class="nm">शिव</span></div>
+      <div class="gt dde"><span class="dseal"><img src="emblems/devi-face-inkday.png" alt="" /></span><span class="nm">देवी</span></div>
+      <div class="gt dvi"><span class="dseal"><img src="emblems/vishnu-face-inkday.png" alt="" /></span><span class="nm">विष्णु</span></div>
+      <div class="gt dsu"><span class="dseal"><img src="emblems/subrahmanya-face-inkday.png" alt="" /></span><span class="nm">सुब्रह्मण्य</span></div>
+      <div class="gt dsy"><span class="dseal"><img src="emblems/surya-face-inkday.png" alt="" /></span><span class="nm">सूर्य</span></div>
+      <div class="gt dgu"><span class="dseal"><img src="emblems/guru-face-inkday.png" alt="" /></span><span class="nm">गुरु</span></div>
+      <div class="gt dha"><span class="dseal"><img src="emblems/hanuman-face-inkday.png" alt="" /></span><span class="nm">हनुमान्</span></div>
+    </div>
+  </div>
+  <div class="tabs">
+    <div class="tab"><svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M4 11l8-7 8 7"/><path d="M6 10v9h12v-9"/></svg><span>Today</span></div>
+    <div class="tab"><svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="2.4"/><path d="M12 9.6c0-2.6-1-4.6-2.7-4.6S6.6 7.5 8 9.7M12 9.6c0-2.6 1-4.6 2.7-4.6S17.4 7.5 16 9.7M9.6 13.4c-2.2 1.3-4.5 1.2-5.4-.2S4.7 9.5 7.2 9M14.4 13.4c2.2 1.3 4.5 1.2 5.4-.2S19.3 9.5 16.8 9M10.7 14.8c-.8 2.5-.2 4.7 1.3 4.7s2.1-2.2 1.3-4.7"/></svg><span>Nitya</span></div>
+    <div class="tab on"><svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5.5A2 2 0 0 1 6 4h5v15H6a2 2 0 0 0-2 1.2z"/><path d="M20 5.5A2 2 0 0 0 18 4h-5v15h5a2 2 0 0 1 2 1.2z"/></svg><span>Library</span></div>
+    <div class="tab"><svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><rect x="3.5" y="4.5" width="17" height="16" rx="2.5"/><path d="M3.5 9.5h17M8 3v3M16 3v3"/></svg><span>Calendar</span></div>
+  </div>
+</div>
+
+<div class="cap" style="left:1450px;top:1260px;width:900px">Pigment board<small>Every swatch side by side — the current formula against the khanija grind and the ratna ink. Softs share one lightness, inks one depth; the wheel is walked unevenly on purpose.</small></div>
+<div class="board" style="left:1450px;top:1336px">
+  <div class="bh"><span>Deity</span><span>Current</span><span>F · Khanija</span><span>H · Ratna ink</span><span>Pigment</span></div>
+  <div class="br"><div class="bn">गणेश<small>Gaṇeśa</small></div><div class="chip cur dga" style="--h:14">अ</div><div class="chip kh-c dga">अ</div><div class="chip rc rt-c dga">अ</div><div class="pg"><b>Sindūra</b> — the vermilion he is smeared with; pulled from pink toward flame.</div></div>
+  <div class="br"><div class="bn">शिव<small>Śiva</small></div><div class="chip cur dsh">अ</div><div class="chip kh-c dsh">अ</div><div class="chip rc rt-c dsh">अ</div><div class="pg"><b>Vibhūti</b> — sacred ash, kept deliberately near-neutral as it is now.</div></div>
+  <div class="br"><div class="bn">देवी<small>Devī</small></div><div class="chip cur dde" style="--h:344">अ</div><div class="chip kh-c dde">अ</div><div class="chip rc rt-c dde">अ</div><div class="pg"><b>Kuṅkuma</b> — from cool rose to the true red of the kumkum dish.</div></div>
+  <div class="br"><div class="bn">विष्णु<small>Viṣṇu</small></div><div class="chip cur dvi" style="--h:224">अ</div><div class="chip kh-c dvi">अ</div><div class="chip rc rt-c dvi">अ</div><div class="pg"><b>Nīla</b> — manuscript indigo, dustier and deeper than screen blue.</div></div>
+  <div class="br"><div class="bn">सुब्रह्मण्य<small>Subrahmaṇya</small></div><div class="chip cur dsu" style="--h:130">अ</div><div class="chip kh-c dsu">अ</div><div class="chip rc rt-c dsu">अ</div><div class="pg"><b>Mayūra</b> — leaf green shifted to peacock-neck verdigris.</div></div>
+  <div class="br"><div class="bn">सूर्य<small>Sūrya</small></div><div class="chip cur dsy" style="--h:78">अ</div><div class="chip kh-c dsy">अ</div><div class="chip rc rt-c dsy">अ</div><div class="pg"><b>Haridrā</b> — turmeric rather than gold, so it stops competing with the app's brass.</div></div>
+  <div class="br"><div class="bn">गुरु<small>Guru</small></div><div class="chip cur dgu" style="--h:295">अ</div><div class="chip kh-c dgu">अ</div><div class="chip rc rt-c dgu">अ</div><div class="pg"><b>Drākṣā</b> — violet warmed to wine; the only cool left is Viṣṇu's.</div></div>
+  <div class="br" style="border-bottom:none"><div class="bn">हनुमान्<small>Hanumān</small></div><div class="chip cur dha" style="--h:26">अ</div><div class="chip kh-c dha">अ</div><div class="chip rc rt-c dha">अ</div><div class="pg"><b>Gairika</b> — geru red-ochre, the wash of his own mūrtis.</div></div>
+</div>
+</body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="day" data-lang="roman" data-ui-lang="roman" data-palette="unified" data-seal="ratna">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Today's pañcāṅga · Stuti</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link rel="stylesheet" href="stuti.css" />
+<link rel="stylesheet" href="stuti-components.css" />
+<link rel="stylesheet" href="stuti-palette.css" />
+<link rel="stylesheet" href="site.css" />
+</head>
+<body data-page="almanac">
+<div class="wrap">
+  <div class="page-head">
+    <span class="eyebrow eyebrow-a" data-t="almEyebrow">The day, before the hymn</span>
+    <h1 data-t="almHead">Today's pañcāṅga</h1>
+    <p data-t="almLede">All five limbs with their closing hours, the sun and the moon, and the two windows to keep clear of.</p>
+  </div>
+  <div class="almanac-grid">
+    <section id="panch"></section>
+    <div style="display:flex;flex-direction:column;gap:14px">
+      <div id="plate"></div>
+      <div class="note" data-th="plateNote"><b>The three bands</b> are the window's uttama, madhyama and adhama parts; the tick is the hour standing now.</div>
+      <div class="note" data-th="almComputed"><b>Computed, not tabulated.</b> The app carries the same sheet with no signal, and a reminder at each juncture. <a href="get.html">What the app adds</a></div>
+      <a class="ghost" href="library.html" style="align-self:flex-start" data-t="findRecite">Find something to recite</a>
+    </div>
+  </div>
+</div>
+<div style="height:70px"></div>
+<script src="stuti-translit.js"></script>
+<script src="stuti-texts.js"></script>
+<script src="stuti-prefs.js"></script>
+<script src="stuti-ephemeris.js"></script>
+<script src="stuti-sankranti-data.js"></script>
+<script src="stuti-reckoning.js"></script>
+<script src="stuti-sankalpa-data.js"></script>
+<script src="stuti-panchanga-engine.js"></script>
+<script src="stuti-sandhya.js"></script>
+<script src="site-i18n.js"></script>
+<script src="site-lib.js"></script>
+<script src="site-panch.js"></script>
+<script>
+/* the sheet, and the plate lifted out of the sky without it — both are written
+   in the chosen script and for the chosen place, so both are redrawn together */
+var ALM=function(){
+  window.SITE_PANCH(document.getElementById("panch"),{});
+  var d=document.createElement("div");window.SITE_SKY(d,"");
+  var plate=d.querySelector(".sky-plate"),box=document.getElementById("plate");
+  box.className="site-accent";box.innerHTML="";
+  if(plate){plate.style.margin="0";box.appendChild(plate);}
+};
+ALM();
+/* the sheet is written in the script you chose and for the place you chose, so
+   both changes redraw it — half its rows switch by CSS, the tithi does not.
+   Registered before the chrome, which runs the listeners once for a remembered script. */
+window.SITE_ONLANG=(window.SITE_ONLANG||[]).concat(ALM);
+window.SITE_ONLOC=(window.SITE_ONLOC||[]).concat(ALM);
+</script>
+<script src="site-chrome.js"></script>
+</body>
+</html>

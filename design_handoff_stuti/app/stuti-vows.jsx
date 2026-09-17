@@ -281,8 +281,8 @@ function VowSheet({ lang = "deva", onClose }) {
           )}
           {o.range && (
             <div className="vow-nest vow-range">
-              <label className="vow-date"><span>{L.t("vowFrom", lang)}</span><input type="date" value={from} min={todayKey} onChange={(e) => { const v = e.target.value; setFrom(v); if (v > to) setTo(v); }} /></label>
-              <label className="vow-date"><span>{L.t("vowTo", lang)}</span><input type="date" value={to} min={from} onChange={(e) => setTo(e.target.value)} /></label>
+              <label className="vow-date"><span>{L.t("vowFrom", lang)}</span><window.HouseDate value={from} lang={lang} min={todayKey} onChange={(v) => { setFrom(v); if (v > to) setTo(v); }} /></label>
+              <label className="vow-date"><span>{L.t("vowTo", lang)}</span><window.HouseDate value={to} lang={lang} min={from} onChange={(v) => setTo(v)} /></label>
             </div>
           )}
           </section>

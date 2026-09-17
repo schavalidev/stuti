@@ -29,7 +29,12 @@
    ============================================================ */
 window.STUTI_FLYLEAF = (function () {
   const KEY = "stuti-flyleaf";
-  const DEF = { gotra: "", nama: "", gender: "male", karma: "parayana", frame: "", desa: "", asked: "" };
+  /* The nāma is kept twice, and for the same reason the register keeps a
+     name twice: Telugu and Devanāgarī are one text in two hands, so either
+     converts to the other, but a name typed in Roman cannot be turned into
+     either. Without the second field a reciter who wrote "Srikrishna" got a
+     Roman word standing in the middle of a Telugu saṅkalpa. */
+  const DEF = { gotra: "", nama: "", namaAlt: "", gender: "male", varna: "", karma: "parayana", frame: "", desa: "", asked: "" };
   /* the six loose keys the saṅkalpa sheet used to write, read once and folded in */
   const OLD = { gotra: "stuti-gotra", nama: "stuti-nama", gender: "stuti-gender",
                 karma: "stuti-karma", frame: "stuti-frame", desa: "stuti-desa" };

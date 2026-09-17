@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="day">
+<head>
+<meta charset="utf-8">
+<title>Season Hue Review — ṛtu palette</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Marcellus&family=Mukta:wght@300;400;500;600&family=Noto+Sans+Devanagari:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{--font-display:'Marcellus',Georgia,serif;--font-ui:'Mukta',system-ui,sans-serif;--font-deva:'Noto Sans Devanagari','Mukta',sans-serif}
+[data-theme="day"]{--bg:#F7EFE2;--bg-warm:#F2E6D2;--surface:#FFFDF8;--surface-2:#FBF4E8;--ink:#2B2017;--ink-soft:#584B3E;--ink-faint:#6F6356;--line:rgba(43,32,23,0.10);--line-2:rgba(43,32,23,0.06);--gold:#B07A2B;--gold-deep:#8A5A18}
+[data-theme="night"]{--bg:#14110C;--bg-warm:#1A150E;--surface:#211B13;--surface-2:#271F16;--ink:#F4EAD7;--ink-soft:#C2B197;--ink-faint:#9C8B72;--line:rgba(244,234,215,0.13);--line-2:rgba(244,234,215,0.07);--gold:#E2B266;--gold-deep:#E7C079}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--font-ui);font-weight:300;-webkit-font-smoothing:antialiased}
+a{color:var(--gold-deep);text-decoration-thickness:1px;text-underline-offset:2px}a:hover{color:var(--gold)}
+.wrap{max-width:1180px;margin:0 auto;padding:44px 32px 90px}
+header{display:flex;flex-direction:column;gap:14px;padding-bottom:26px;border-bottom:1px solid var(--line)}
+h1{font-family:var(--font-display);font-weight:400;font-size:34px;margin:0;letter-spacing:.01em}
+.lede{margin:0;max-width:66ch;color:var(--ink-soft);font-size:15.5px;line-height:1.65;text-wrap:pretty}
+.controls{display:flex;gap:10px;align-items:center;margin-top:4px}
+.tgl{display:flex;gap:2px;padding:3px;background:var(--surface-2);border:1px solid var(--line);border-radius:999px}
+.tgl button{font:inherit;font-size:13px;padding:6px 15px;border:0;border-radius:999px;background:transparent;color:var(--ink-faint);cursor:pointer}
+.tgl button.on{background:color-mix(in oklab,var(--gold) 13%,var(--surface));color:var(--gold-deep);box-shadow:inset 0 0 0 1.5px color-mix(in oklab,var(--gold) 40%,transparent)}
+h2{font-family:var(--font-display);font-weight:400;font-size:22px;margin:44px 0 4px;letter-spacing:.01em}
+.note{margin:0 0 20px;max-width:70ch;color:var(--ink-faint);font-size:14px;line-height:1.6;text-wrap:pretty}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.cell{position:relative;overflow:hidden;border-radius:12px;border:1px solid var(--line);background:linear-gradient(180deg,var(--bg-warm),var(--bg) 40%);min-height:158px;display:flex;flex-direction:column;justify-content:flex-end;padding:14px}
+.wash{position:absolute;inset:0;z-index:0;background:linear-gradient(180deg,color-mix(in oklab,var(--rtu) 26%,transparent),transparent 60%)}
+.amb{position:absolute;inset:0;z-index:1;overflow:hidden;pointer-events:none;opacity:.6}
+.amb.shimmer{background:radial-gradient(40% 60% at 82% 6%,color-mix(in oklab,var(--rtu) 40%,transparent),transparent 70%);animation:pcShimmer 5.5s ease-in-out infinite}
+.amb.mist{background:linear-gradient(180deg,transparent,color-mix(in oklab,var(--rtu) 22%,transparent) 60%,transparent);animation:pcShimmer 7s ease-in-out infinite}
+@keyframes pcShimmer{0%,100%{opacity:.5}50%{opacity:.95}}
+.amb span{position:absolute}
+.amb.rain span{top:-14%;width:1.5px;height:18px;border-radius:1px;background:linear-gradient(180deg,transparent,color-mix(in oklab,var(--rtu) 70%,transparent));animation:pcRain linear infinite}
+@keyframes pcRain{0%{transform:translateY(-20px);opacity:0}12%{opacity:.6}100%{transform:translateY(200px);opacity:0}}
+.amb.petals span,.amb.leaves span{top:-10%;width:8px;height:8px;border-radius:60% 0 60% 0;animation:pcFall linear infinite}
+.amb.petals span{background:color-mix(in oklab,var(--rtu) 70%,transparent)}
+.amb.leaves span{width:9px;height:7px;border-radius:0 70% 0 70%;background:color-mix(in oklab,var(--rtu) 72%,transparent)}
+@keyframes pcFall{0%{transform:translateY(-14px) rotate(0)}12%{opacity:.75}100%{transform:translateY(210px) rotate(220deg);opacity:0}}
+.glyph{position:absolute;top:12px;right:13px;z-index:2;color:var(--rtu)}
+.cap{position:relative;z-index:2;display:flex;flex-direction:column;gap:2px}
+.cap b{font-family:var(--font-display);font-weight:400;font-size:17px}
+.cap .dev{font-family:var(--font-deva);font-size:13px;color:var(--ink-soft)}
+.cap .hex{font-size:11.5px;letter-spacing:.09em;text-transform:uppercase;color:var(--ink-faint);font-variant-numeric:tabular-nums}
+.rowlabel{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin:0 0 10px}
+.rowlabel div{font-size:11.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-faint)}
+.rowlabel div b{display:block;font-family:var(--font-display);font-weight:400;font-size:15px;letter-spacing:.01em;text-transform:none;color:var(--ink);margin-bottom:3px}
+.side{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;align-items:start}
+.chips{display:flex;flex-wrap:wrap;gap:7px;margin-top:9px}
+.chip{width:26px;height:26px;border-radius:6px;border:1px solid var(--line-2)}
+.verdict{margin-top:52px;padding:24px 26px;border:1px solid var(--line);border-radius:14px;background:var(--surface)}
+.verdict h3{font-family:var(--font-display);font-weight:400;font-size:19px;margin:0 0 10px}
+.verdict p{margin:0 0 12px;color:var(--ink-soft);font-size:15px;line-height:1.7;max-width:74ch;text-wrap:pretty}
+.verdict p:last-child{margin-bottom:0}
+.verdict strong{font-weight:500;color:var(--ink)}em{font-style:normal;font-weight:500;color:var(--ink)}
+@media (max-width:820px){.grid,.rowlabel,.side{grid-template-columns:1fr}.wrap{padding:28px 18px 60px}}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header>
+<h1>Season hues — the last cool colours</h1>
+<p class="lede">Four of the six ṛtu hues are cool: two blues, a blue-grey, and a hot pink. They were picked as weather, not as pigment, and they sit on parchment beside a gold-and-red chrome. The question is whether representational exemption covers them — rain really is blue — or whether they should be ground finer like the deity hues were.</p>
+<div class="controls">
+<div class="tgl" id="theme"><button data-t="day" class="on">Day</button><button data-t="night">Night</button></div>
+</div>
+</header>
+
+<h2>A · Current</h2>
+<p class="note">As shipped. Śiśira and Varṣā are near-identical steel blues; Hemanta's grey is the only truly neutral thing in the app; Vasanta's pink is the highest-chroma hue anywhere outside a deity page.</p>
+<div class="grid" id="gA"></div>
+
+<h2>B · Pigment</h2>
+<p class="note">Same six identities, moved onto dyestuffs the manuscripts actually used: indigo instead of steel blue, madder rose instead of fuchsia, ash instead of blue-grey. Chroma down about a third — the same treatment the deity hues got.</p>
+<div class="grid" id="gB"></div>
+
+<h2>C · Warm</h2>
+<p class="note">One family. The season is told by the glyph and the motion; hue only says how hot or how dim. Nothing cool survives — including the rain.</p>
+<div class="grid" id="gC"></div>
+
+<h2>Side by side — Varṣā, the hard case</h2>
+<p class="note">Monsoon is where the three schemes disagree most, because falling water is the one motif whose colour is not decorative.</p>
+<div class="side" id="hard"></div>
+
+<div class="verdict">
+<h3>What I'd do</h3>
+<p><strong>B.</strong> The exemption we wrote covers what colour means — sky, sun, moon, rain — not how loud it is. Rain stays blue in B; it just stops being a UI blue. C loses the one thing the ṛtu strip is for: you should know the season from across the room, and an olive monsoon and an ash winter are the same card.</p>
+<p>Two fixes to make either way, independent of the hue question: <strong>Śiśira and Varṣā are too close</strong> to tell apart at a glance — late winter should be the pale one and monsoon the deep one, not two mid blues. And every hue is written <strong>twice</strong>, once in the JSX table and once in the ambient CSS, so a change today means editing two files and hoping they match. They should be six tokens next to the deity hues.</p>
+</div>
+</div>
+
+<script>
+const RTU=[
+ {n:"Śiśira",dev:"शिशिर",gl:"Late winter",kind:"sun-cold",A:"#7ea8c9",B:"#8AA0BE",C:"#A9A08C"},
+ {n:"Vasanta",dev:"वसन्त",gl:"Spring",kind:"blossom",A:"#df8fb6",B:"#D08A9C",C:"#C08A78"},
+ {n:"Grīṣma",dev:"ग्रीष्म",gl:"Summer",kind:"sun-hot",A:"#e59a34",B:"#D8932F",C:"#C9862B"},
+ {n:"Varṣā",dev:"वर्षा",gl:"Monsoon",kind:"rain",A:"#5f8aa8",B:"#4F6E96",C:"#8A7E62"},
+ {n:"Śarad",dev:"शरद्",gl:"Autumn",kind:"leaf",A:"#cf9a3f",B:"#C08A38",C:"#B07A2B"},
+ {n:"Hemanta",dev:"हेमन्त",gl:"Early winter",kind:"mist",A:"#9aa9b4",B:"#A9A296",C:"#9C907C"},
+];
+function sun(rays,r){let g=`<circle cx="16" cy="16" r="${r}" fill="currentColor"/>`;for(let i=0;i<8;i++){const a=i*Math.PI/4;g+=`<line x1="${16+Math.cos(a)*(r+2)}" y1="${16+Math.sin(a)*(r+2)}" x2="${16+Math.cos(a)*(r+2+rays)}" y2="${16+Math.sin(a)*(r+2+rays)}" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/>`}return g}
+const CLOUD='<path d="M8 21 q-3 0 -3 -3 q0 -3 3 -3 q0.4 -4 4.5 -4 q3.7 0 4.4 3.4 q0.6 -0.4 1.6 -0.4 q2.5 0 2.5 2.5 q2 0.2 2 2.3 q0 2.6 -2.8 2.6 Z" fill="currentColor"/>';
+function glyph(kind){let inner="";
+ if(kind==="sun-hot")inner=sun(6,6.5);
+ else if(kind==="sun-cold")inner=sun(3,6);
+ else if(kind==="blossom"){inner='<g fill="currentColor">';for(let i=0;i<5;i++){const a=i*2*Math.PI/5-Math.PI/2,x=16+Math.cos(a)*6.4,y=16+Math.sin(a)*6.4;inner+=`<ellipse cx="${x}" cy="${y}" rx="3.4" ry="5.2" transform="rotate(${a*180/Math.PI+90} ${x} ${y})" opacity="0.9"/>`}inner+='<circle cx="16" cy="16" r="2.6"/></g>'}
+ else if(kind==="rain"){inner="<g>"+CLOUD;[10,15.5,21].forEach(x=>{inner+=`<line x1="${x}" y1="23" x2="${x-1.6}" y2="28" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" opacity="0.8"/>`});inner+="</g>"}
+ else if(kind==="leaf")inner='<g fill="currentColor"><path d="M23 7 C13 8 8 14 8 22 C8 24 9 25 11 25 C20 25 25 17 25 9 C25 8 24 7 23 7 Z" opacity="0.92"/><path d="M20 11 L11.5 22.5" stroke="var(--surface)" stroke-width="1.4" fill="none" stroke-linecap="round"/></g>';
+ else if(kind==="mist")inner='<g stroke="currentColor" stroke-width="2.1" stroke-linecap="round" fill="none"><path d="M6 11 q5 -2.5 10 0 t10 0" opacity="0.45"/><path d="M6 16 q5 -2.5 10 0 t10 0" opacity="0.75"/><path d="M6 21 q5 -2.5 10 0 t10 0" opacity="0.55"/></g>';
+ return `<svg width="30" height="30" viewBox="0 0 32 32" fill="none" aria-hidden="true">${inner}</svg>`}
+function ambient(kind){
+ if(kind==="sun-hot")return '<div class="amb shimmer"></div>';
+ if(kind==="mist")return '<div class="amb mist"></div>';
+ if(kind==="rain"){let s="";for(let i=0;i<12;i++)s+=`<span style="left:${(i*9+4)%100}%;animation-delay:${(i%9)*0.24}s;animation-duration:${0.9+(i%4)*0.18}s"></span>`;return `<div class="amb rain">${s}</div>`}
+ if(kind==="blossom"||kind==="leaf"){const cls=kind==="blossom"?"petals":"leaves",n=kind==="blossom"?6:5;let s="";for(let i=0;i<n;i++)s+=`<span style="left:${(i*17+8)%100}%;animation-delay:${i*1.1}s;animation-duration:${5.5+(i%3)*1.2}s"></span>`;return `<div class="amb ${cls}">${s}</div>`}
+ return ""}
+function cell(r,k){return `<div class="cell" style="--rtu:${r[k]}">${ambient(r.kind)}<div class="wash"></div><div class="glyph">${glyph(r.kind)}</div><div class="cap"><b>${r.n}</b><span class="dev">${r.dev} · ${r.gl}</span><span class="hex">${r[k]}</span></div></div>`}
+["A","B","C"].forEach(k=>{document.getElementById("g"+k).innerHTML=RTU.map(r=>cell(r,k)).join("")});
+const v=RTU[3],names={A:"Current",B:"Pigment",C:"Warm"},sub={A:"steel blue",B:"indigo",C:"wet clay"};
+document.getElementById("hard").innerHTML=["A","B","C"].map(k=>`<div><div style="font-size:11.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-faint);margin-bottom:8px"><b style="display:block;font-family:var(--font-display);font-weight:400;font-size:15px;letter-spacing:.01em;text-transform:none;color:var(--ink);margin-bottom:3px">${names[k]}</b>${sub[k]}</div>${cell(v,k)}</div>`).join("");
+document.getElementById("theme").addEventListener("click",e=>{const b=e.target.closest("button");if(!b)return;document.documentElement.dataset.theme=b.dataset.t;[...e.currentTarget.children].forEach(c=>c.classList.toggle("on",c===b))});
+</script>
+</body>
+</html>

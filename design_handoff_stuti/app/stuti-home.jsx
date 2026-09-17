@@ -120,13 +120,13 @@ function usePanchangaVM(lang, sk, deity) {
   const samv = window.samvatsaraFor(now);
   const dateStr = now.toLocaleDateString(dateLocale, { weekday: "long", day: "numeric", month: "long" });
 
-  const pick = o => L === "telugu" ? { main: o.tel, sub: o.iast } : L === "roman" ? { main: o.iast, sub: null } : { main: o.deva, sub: o.iast };
+  const pick = o => L === "telugu" ? { main: o.tel, sub: o.telIast || o.iast } : L === "roman" ? { main: o.iast, sub: null } : { main: o.deva, sub: o.iast };
   const samvTel = TR.convert(samv[1], "telugu");
   const varaGraha = SK_CONST.VARA_GRAHA[pa.varaIdx] || SK_CONST.VARA_GRAHA[0];
   const varaP = pick({ iast: varaGraha.iast, deva: varaGraha.deva, tel: varaGraha.tel });
   const nakP = pick(pa.nak), masaP = pick(window.masaShown(pa)), rituP = pick(pa.ritu), ayanaP = pick(pa.ayana);
   const samvP = pick({ iast: samv[0], deva: samv[1], tel: samvTel });
-  const tithiP = pick({ iast: pa.tithiName, deva: pa.tithiDeva, tel: pa.tithiTel });
+  const tithiP = pick({ iast: pa.tithiName, deva: pa.tithiDeva, tel: pa.tithiTel, telIast: pa.tithiTelIast });
   const pakshaP = pick({ iast: pa.paksha, deva: pa.pakshaDeva, tel: pa.pakshaTel });
   const localName = (iast, deva) => L === "telugu" ? TR.convert(deva || iast, "telugu") : L === "deva" ? (deva || iast) : iast;
   const yogaV = localName(pa.yoga, SK_CONST.YOGA_DEVA[pa.yoga]);
@@ -198,6 +198,41 @@ function usePanchangaVM(lang, sk, deity) {
     { key: "durmuhurta", vals: pa.durmuhurta ? pa.durmuhurta.map(fmtWindow) : ["—"], active: pa.durmuhurta ? pa.durmuhurta.some(inWindow) : false },
   ];
 
+  /* a grahaṇa, on the four days a year one can fall. It stands with the
+     limbs rather than under Caution: the hours are not to be avoided, they
+     are to be kept — and when nothing of it clears this horizon the row
+     says that instead of printing an hour nobody here will see. */
+  const gr = pa.grahana;
+  const grLocal = (o) => L === "telugu" ? o.tel : L === "deva" ? o.deva : o.iast;
+  const grahana = !gr ? null : {
+    key: "grahana",
+    /* the type belongs in the name, not in the Roman-only gloss: khagrāsa
+       and upacchāyā are the whole distinction, and a Telugu reader was
+       being shown neither */
+    main: (() => { const s = grLocal(gr.typeName) + " " + grLocal(gr.name); return s.charAt(0).toUpperCase() + s.slice(1); })(),
+    sub: gr.kind === "solar"
+      ? Math.round(gr.obscuration * 100) + "% of the disc"
+      : "magnitude " + gr.magnitude.toFixed(2),
+    till: gr.visible
+      ? `${PA.fmtTime(gr.seenFromMin)} – ${PA.fmtTime(gr.seenToMin)}`
+      : I18.t("grahanaUnseen", L),
+    caution: gr.visible,
+    script: true,
+    open: "grahana",
+  };
+
+  /* the two instants of the year that are not tithis are computed together,
+     and the row only has to say which one stands today */
+  const kshList = window.STUTI_KSHANA ? window.STUTI_KSHANA.forDay(pa.date, loc, pa) : [];
+  const skr = kshList.find(x => x.kind === "sankranti") || null;
+  const sankranti = !skr ? null : {
+    key: "sankranti",
+    main: grLocal(skr.name),
+    till: skr.kept ? `${PA.fmtTime(skr.kept.start)} \u2013 ${PA.fmtTime(skr.kept.end)}` : null,
+    script: true,
+    open: "sankranti",
+  };
+
   const ayanaLocIast = isUttar ? "Uttar\u0101ya\u1e47e" : "Dak\u1e63i\u1e47\u0101yane";
   const ayanaLocDeva = isUttar ? "\u0909\u0924\u094d\u0924\u0930\u093e\u092f\u0923\u0947" : "\u0926\u0915\u094d\u0937\u093f\u0923\u093e\u092f\u0928\u0947";
   const gotraObj = SK_CONST.GOTRAS.find(g => skFold(g[0]) === skFold(sk.gotra));
@@ -213,7 +248,11 @@ function usePanchangaVM(lang, sk, deity) {
     : [seg("जम्बूद्वीपे, भारतवर्षे, भरतखण्डे, मेरोः दक्षिण-दिग्भागे,", "jambū-dvīpe, bhārata-varṣe, bharata-khaṇḍe, meroḥ dakṣiṇa-digbhāge,")];
   const saura = typeof window.manaSys === "function" && window.manaSys() === "saura";
   const sd = saura && PA.solarDate ? PA.solarDate(now) : null;
-  const skSegs = [
+  /* the saṅkalpa itself now lives in STUTI_SANKALPA — one builder for the home
+     card, the flyleaf sheet, and every vidhi that opens with it */
+  const skSegs = window.STUTI_SANKALPA
+    ? window.STUTI_SANKALPA.segs({ date: now, loc, pa, sk, deity, saura })
+    : [
     seg("ॐ श्री", "Oṃ Śrī"),
     seg("मम उपात्त-समस्त-दुरितक्षयद्वारा श्रीपरमेश्वर-प्रीत्यर्थं,", "mama upātta-samasta-durita-kṣaya-dvārā śrī-parameśvara-prītyarthaṃ,"),
     seg("शुभे शोभने मुहूर्ते,", "śubhe śobhane muhūrte,"),
@@ -256,7 +295,7 @@ function usePanchangaVM(lang, sk, deity) {
   return {
     L, pa, dateStr,
     tithi: { main: tithiP.main, paksha: pa.soloTithi ? null : pakshaP.main, full: pa.soloTithi ? pa.tithiName : `${pa.paksha} ${pa.tithiName}`, ends: endsStr },
-    coord, sun, yk, caution,
+    coord, sun, yk, caution, grahana, sankranti, kshList,
     muNow,
     skSegs, segText, skPlain, rahuStr: fmtWindow(pa.rahu),
     desaLine: DS ? (L === "telugu" ? TR.convert(DS.describe(loc, "deva"), "telugu") : DS.describe(loc, L === "roman" ? "iast" : "deva")) : "",
@@ -272,6 +311,79 @@ function usePanchangaVM(lang, sk, deity) {
    many-day parva says which day this is. ---- */
 /* per-festival artwork, when it exists: id → image path. Empty for now. */
 const PARVA_ART = { shivaratri: "assets/parva-shiva.png", navaratri: "assets/parva-devi.png", "vasanta-navaratri": "assets/parva-devi.png", "ganesha-chaturthi": "assets/parva-ganesha.png", "hanuman-jayanti": "assets/parva-hanuman.png", "dattatreya-jayanti": "assets/parva-guru.png" };
+/* The lead-up strip. A person's day is announced before it arrives — not as a
+   card shouting on the morning of, but a quiet line standing for the whole
+   notice window, carrying the two things the week actually needs: the hour the
+   rite is kept at, and (for a śrāddha) the samagri to gather. */
+function TithiAhead({ go, lang }) {
+  const L = lang || "deva", T = L === "telugu" ? "tel" : L === "roman" ? "roman" : "deva";
+  const TT = window.STUTI_TITHIS, V = window.STUTI_VRATA, PA = window.AKSHARA_PANCHANGA;
+  const { loc } = window.useLoc();
+  const [, bump] = React.useState(0);
+  const [open, setOpen] = React.useState(null);
+  React.useEffect(() => TT ? TT.subscribe(() => bump((n) => n + 1)) : undefined, []);
+  if (!TT || !V) return null;
+  const today = new Date(); today.setHours(0, 0, 0, 0);
+  let rows = [];
+  try {
+    rows = TT.list().map((r) => {
+      const v = TT.asVrata(r); let d = null;
+      try { d = V.nextDate(v, today); } catch (e) {}
+      if (!d) return null;
+      const away = Math.round((new Date(d.getFullYear(), d.getMonth(), d.getDate()) - today) / 86400000);
+      const notice = TT.noticeOf(r);
+      /* today's own day belongs to the parva card above — this is the run-up */
+      if (away <= 0 || notice <= 0 || away > notice) return null;
+      return { r, v, d, away, k: TT.KINDS[r.kind] || TT.KINDS.other };
+    }).filter(Boolean).sort((a, b) => a.away - b.away);
+  } catch (e) { return null; }
+  if (!rows.length) return null;
+  const locale = L === "telugu" ? "te-IN" : L === "deva" ? "hi-IN" : "en-IN";
+  const inDays = (n) => n === 1 ? (L === "telugu" ? "రేపు" : L === "deva" ? "कल" : "tomorrow")
+    : (L === "telugu" ? n + " రోజుల్లో" : L === "deva" ? n + " दिन में" : n + " days");
+  return (
+    <section className="ta-strip">
+      {rows.map(({ r, v, d, away, k }) => {
+        const kala = (() => {
+          try {
+            const pa = PA.forDay(d, loc);
+            if (pa.sunrise == null || pa.sunset == null) return null;
+            const frac = k.rule === "aparahna" ? [0.6, 0.8] : [0, 0.05];
+            const a = pa.sunrise + (pa.sunset - pa.sunrise) * frac[0], b = pa.sunrise + (pa.sunset - pa.sunrise) * frac[1];
+            return k.rule === "aparahna" ? PA.fmtTime(a) + " – " + PA.fmtTime(b) : PA.fmtTime(pa.sunrise);
+          } catch (e) { return null; }
+        })();
+        const isOpen = open === r.id;
+        return (
+          <div key={r.id} className={"ta-row" + (k.tone === "grave" ? " grave" : "")}>
+            <button className="ta-main" onClick={() => setOpen(isOpen ? null : r.id)} aria-expanded={isOpen}>
+              <span className="ta-away">{inDays(away)}</span>
+              <span className="ta-body">
+                <span className="ta-name">{r.name || k.label[T]}</span>
+                <span className="ta-meta">{k.label[T]} · {d.toLocaleDateString(locale, { weekday: "short", day: "numeric", month: "long" })}</span>
+              </span>
+              <span className="ta-chev"><Icon name="chev" size={16} /></span>
+            </button>
+            {isOpen && (
+              <div className="ta-open">
+                <div className="ta-line"><span>{ttAheadT("rule", L)}</span><b>{window.STUTI_TITHIS.ruleText(r)[T === "tel" ? "tel" : T === "roman" ? "roman" : "deva"]}</b></div>
+                {kala && <div className="ta-line"><span>{ttAheadT(k.rule === "aparahna" ? "aparahna" : "atSunrise", L)}</span><b>{kala}</b></div>}
+                <button className="ta-go" onClick={() => go("vrata", { vrata: v.id })}>{ttAheadT("open", L)}</button>
+              </div>
+            )}
+          </div>
+        );
+      })}
+    </section>
+  );
+}
+const TA_T = {
+  rule:      { roman: "Tithi", deva: "तिथि", telugu: "తిథి" },
+  aparahna:  { roman: "Aparāhṇa", deva: "अपराह्ण", telugu: "అపరాహ్ణం" },
+  atSunrise: { roman: "Sunrise", deva: "सूर्योदय", telugu: "సూర్యోదయం" },
+  open:      { roman: "Open the day", deva: "दिन खोलें", telugu: "ఆ రోజు చూడండి" },
+};
+const ttAheadT = (k, lg) => (TA_T[k] || {})[lg === "telugu" ? "telugu" : lg === "deva" ? "deva" : "roman"] || TA_T[k].roman;
 function ParvaCard({ go, lang }) {
   const V = window.STUTI_VRATA;
   const [, bump] = React.useState(0);
@@ -287,10 +399,13 @@ function ParvaOne({ hit, go, lang }) {
   const { loc } = window.useLoc();
   const V = window.STUTI_VRATA, PA = window.AKSHARA_PANCHANGA;
   const [editing, setEditing] = React.useState(false);
+  const [why, setWhy] = React.useState(false);
   const v = hit.v, T = L === "telugu" ? "tel" : L === "roman" ? "roman" : "deva";
   const name = v.name[T] || v.name.roman;
   const KALA = {
-    madhyahna: { roman: "Madhyāhna pūjā", deva: "मध्यध्न पूजी", tel: "మధ్యాహ్న పూజ" },
+    madhyahna: { roman: "Madhyāhna pūjā", deva: "मध्याह्न पूजा", tel: "మధ్యాహ్న పూజ" },
+    aparahna:  { roman: "Aparāhṇa kāla",   deva: "अपराह्ण काल", tel: "అపరాహ్ణ కాలం" },
+    arunodaya: { roman: "Before sunrise",  deva: "अरुणोदय",     tel: "అరుణోదయం" },
     pradosha:  { roman: "Pradoṣa kāla",   deva: "प्रदोष कल", tel: "ప్రదోష కాలం" },
     nishitha:  { roman: "Niśītha kāla",   deva: "नशीथ कल", tel: "నిశీథ కాలం" },
   };
@@ -315,13 +430,21 @@ function ParvaOne({ hit, go, lang }) {
   const openVrata = () => go("browse", { libSub: { kind: "vrata", key: v.id, returnTo: "home" } });
   const k = hit.eve
     ? (L === "telugu" ? "రేపు" : L === "deva" ? "कल" : "Tomorrow")
+    : v.kind === "tarpana"
+      ? (L === "telugu" ? "తర్పణం · ఈ రోజు" : L === "deva" ? "तर्पणम् · आज" : "Tarpaṇam · today")
     : v.personal && window.STUTI_TITHIS
       ? (window.STUTI_TITHIS.KINDS[v.kind] || window.STUTI_TITHIS.KINDS.other).label[T] + " · " + (L === "telugu" ? "ఇవాళ" : L === "deva" ? "आज" : "today")
       : (L === "telugu" ? "పర్వం · ఇవాళ" : L === "deva" ? "पर्व · आज" : "Parva · today");
   const art = PARVA_ART[v.id];
   const open = v.personal ? () => setEditing(true) : openVrata;
   return (
-    <div className={"parva-card" + (hit.eve ? " is-eve" : "")} style={deityStyle(v.deity)}>
+    <div className={"parva-card" + (hit.eve ? " is-eve" : "") + (v.kind === "tarpana" ? " is-tarpana" : "")}
+      style={v.kind === "tarpana"
+        /* a tarpaṇam is not a deity's festival, and borrowing Viṣṇu's gold made it
+           read as one. Its own tone: river-slate at low chroma — water, ash and
+           darbha rather than kumkum. */
+        ? { "--deity-hue": 214, "--deity-chroma": 0.045 }
+        : deityStyle(v.deity)}>
       <button className="parva-main" onClick={open}>
         {art && <img className="parva-art" src={art} alt="" />}
         <span className="parva-body">
@@ -338,6 +461,16 @@ function ParvaOne({ hit, go, lang }) {
           ))}
         </div>
       )}
+      {/* a computed day owes an account of itself — which kāla decided it, and
+          on whose authority. The same "?" the sandhyā plate carries — a full
+          pill read as a second action beside the card's own. */}
+      {v.kind === "tarpana" && !hit.eve && window.TarpanaWhy && (
+        <button className="icon-btn parva-why" aria-label={window.piT ? window.piT("why", L) : "Why this date?"}
+          title={window.piT ? window.piT("why", L) : "Why this date?"}
+          style={{ position: "absolute", right: 10, top: 10, width: 26, height: 26, minWidth: 26, borderRadius: "50%", background: "var(--surface-2)", border: "1px solid var(--line)", color: "var(--ink-soft)", fontSize: "0.8125rem", fontWeight: 600, zIndex: 3 }}
+          onClick={(e) => { e.stopPropagation(); setWhy(true); }}>?</button>
+      )}
+      {why && window.TarpanaWhy && <window.TarpanaWhy id={v.id} date={hit.date} lang={L} onClose={() => setWhy(false)} />}
       {editing && v.personal && <window.TithiSheet lang={L} rec={v.rec} onClose={() => setEditing(false)} />}
     </div>
   );
@@ -433,7 +566,9 @@ function HomeA({ go, lang, overlayEl }) {
     if (N.permission() === "granted") { fire(); setNote(on); }
     else N.ask().then(p => { if (p === "granted") { fire(); setNote(on); } else setNote("Allow notifications in your browser to receive the pañcāṅga."); });
   };
-  const rows = [...vm.coord, ...vm.sun.slice(0, 2)];
+  const rows = [...(vm.grahana ? [vm.grahana] : []), ...(vm.sankranti ? [vm.sankranti] : []), ...vm.coord, ...vm.sun.slice(0, 2)];
+  const [ksh, setKsh] = React.useState(null);
+  const openKsh = (kind) => setKsh((vm.kshList || []).find(x => x.kind === kind) || null);
   const moreRows = [...vm.sun.slice(2), ...vm.yk, ...vm.caution.map(it => ({ ...it, caution: it.active }))];
   return (
     <div className="view home home-a scroll" style={deityStyle(deity)}>
@@ -462,6 +597,7 @@ function HomeA({ go, lang, overlayEl }) {
 
       <PreviewPill go={go} lang={L} />
       <ParvaCard go={go} lang={L} />
+      <TithiAhead go={go} lang={L} />
 
       <section className="rhb-card">
         <div className="eyebrow rhb-eyebrow" style={{ color: "var(--accent-ink)" }}>
@@ -492,10 +628,10 @@ function HomeA({ go, lang, overlayEl }) {
         </div>
         <div className="rhb-rows">
           {rows.map(it => {
-            const tappable = it.active !== undefined;
+            const tappable = it.active !== undefined || !!it.open;
             const Tag = tappable ? "button" : "div";
             return (
-            <Tag className={"rhb-row" + (it.caution ? " caution" : "") + (tappable ? " rhb-row-btn" : "")} data-k={it.key} key={it.key} onClick={tappable ? () => explainRow(it) : undefined}>
+            <Tag className={"rhb-row" + (it.caution ? " caution" : "") + (tappable ? " rhb-row-btn" : "")} data-k={it.key} key={it.key} onClick={tappable ? () => (it.open ? openKsh(it.open) : explainRow(it)) : undefined}>
               <span className="rhb-row-k">{t(it.key)}</span>
               <span className="rhb-row-v" style={it.script ? { fontFamily: sFont(L) } : undefined}>
                 {it.vals
@@ -508,6 +644,7 @@ function HomeA({ go, lang, overlayEl }) {
             );
           })}
         </div>
+        {ksh && <window.KshanaCard k={ksh} date={vm.pa.date} lang={L} onClose={() => setKsh(null)} />}
         <RoutineVrata go={go} lang={L} />
         <button className="rhb-more-toggle" aria-expanded={moreOpen} onClick={() => setMoreOpen(o => !o)}>
           <span>{moreOpen ? t("rhbLess") : t("rhbMore")}</span>
@@ -516,10 +653,10 @@ function HomeA({ go, lang, overlayEl }) {
         {moreOpen && (
           <div className="rhb-rows">
             {moreRows.map(it => {
-              const tappable = it.active !== undefined;
+              const tappable = it.active !== undefined || !!it.open;
               const Tag = tappable ? "button" : "div";
               return (
-              <Tag className={"rhb-row" + (it.caution ? " caution" : "") + (tappable ? " rhb-row-btn" : "")} data-k={it.key} key={it.key} onClick={tappable ? () => explainRow(it) : undefined}>
+              <Tag className={"rhb-row" + (it.caution ? " caution" : "") + (tappable ? " rhb-row-btn" : "")} data-k={it.key} key={it.key} onClick={tappable ? () => (it.open ? openKsh(it.open) : explainRow(it)) : undefined}>
                 <span className="rhb-row-k">{t(it.key)}</span>
                 <span className="rhb-row-v" style={it.script ? { fontFamily: sFont(L) } : undefined}>
                   {it.vals
@@ -734,7 +871,7 @@ function DailyCard({ go, lang = "deva", from = "daily" }) {
       <div className="week-strip">
         {WEEKDAY_KEYS.map((k, i) => (
           <button key={i} className={"week-day" + (i === viewDay ? " on" : "") + (i === today ? " is-today" : "")}
-            onClick={() => setViewDay(i)}>{lang === "telugu" ? WEEKDAY_SHORT_TE[i] : lang === "deva" ? WEEKDAY_SHORT_DEVA[i] : L.t(k, lang).slice(0, 2)}</button>
+            onClick={() => setViewDay(i)}>{lang === "telugu" ? WEEKDAY_SHORT_TE[i] : lang === "deva" ? WEEKDAY_SHORT_DEVA[i] : L.t(k, lang).slice(0, 3)}</button>
         ))}
       </div>
       <div className="daily-list">

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="design_doc_mode" content="canvas" />
+<title>Deity tile options</title>
+<link rel="stylesheet" href="stuti.css" />
+<style>
+body{margin:0;font-family:var(--font-ui);color:var(--ink)}
+a,a:hover{color:var(--gold-deep)}
+.frame{position:absolute;width:390px;background:var(--bg);border-radius:22px;padding:22px 18px 26px;box-shadow:var(--shadow)}
+.frame.night{background:#14110C;color:#fff}.frame.night p{color:rgba(255,255,255,.76)}
+.frame h2{margin:0 0 4px;font-family:var(--font-display);font-weight:600;font-size:1.25rem}
+.frame p{margin:0 0 16px;font-size:.8125rem;line-height:1.45;color:var(--ink-soft)}
+.grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px}
+.t{position:relative;border:0;padding:0;margin:0;background:none;cursor:pointer;text-align:center;overflow:hidden;font:inherit;color:inherit;-webkit-tap-highlight-color:transparent}
+.t img{display:block;pointer-events:none}
+.nm{font-family:var(--font-display);font-size:1rem;line-height:1.2;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+[data-theme="day"] .t,[data-theme="night"] .t{--accent:oklch(0.58 0.13 var(--h));--accent-soft:oklch(0.92 0.045 var(--h));--accent-ink:oklch(0.42 0.12 var(--h))}
+[data-theme="night"] .t{--accent:oklch(0.74 0.13 var(--h));--accent-soft:color-mix(in oklab,oklch(0.60 0.14 var(--h)) 14%,var(--surface-2));--accent-ink:oklch(0.82 0.11 var(--h))}
+
+/* A — Slab: thick bevelled block, painting on top face, name engraved on the front edge */
+.a{aspect-ratio:1/1;border-radius:6px;background:var(--accent-soft);transform:perspective(700px) rotateX(var(--rx,0deg)) rotateY(var(--ry,0deg));transition:transform .4s var(--ease-out),box-shadow .4s;box-shadow:0 10px 0 -2px color-mix(in oklab,var(--accent) 55%,#3a2a18),0 12px 0 -2px color-mix(in oklab,var(--accent) 30%,#000),0 24px 30px -18px rgba(58,40,20,.6);animation:rise .6s var(--ease-out) backwards}
+.a .pic{position:absolute;inset:0;overflow:hidden;border-radius:6px;background:oklch(.955 .014 82)}
+.a img{position:absolute;left:50%;top:50%;width:140%;aspect-ratio:1;object-fit:cover;transform:translate(-50%,-52%)}
+.a .nm{position:absolute;left:0;right:0;bottom:0;padding:5px 4px 4px;font-size:.875rem;background:color-mix(in oklab,var(--accent) 88%,#000);color:#fff;letter-spacing:.01em}
+.a.is-tilt{box-shadow:0 14px 0 -2px color-mix(in oklab,var(--accent) 55%,#3a2a18),0 16px 0 -2px color-mix(in oklab,var(--accent) 30%,#000),0 34px 40px -20px rgba(58,40,20,.7)}
+
+/* B — Lacquer: painting bleeds full, glassy sheen sweep, hairline gold inner frame */
+.b{aspect-ratio:4/5;border-radius:12px;background:oklch(.955 .014 82);box-shadow:var(--shadow),inset 0 0 0 1px rgba(255,255,255,.6);transform:perspective(700px) rotateX(var(--rx,0deg)) rotateY(var(--ry,0deg)) translateY(var(--lift,0));transition:transform .4s var(--ease-out);animation:rise .6s var(--ease-out) backwards}
+.b img{position:absolute;left:50%;top:50%;width:150%;aspect-ratio:1;object-fit:cover;transform:translate(calc(-50% + var(--mx,0)*-8px),calc(-52% + var(--my,0)*-8px));transition:transform .4s var(--ease-out)}
+.b::before{content:"";position:absolute;inset:6px;border:1px solid color-mix(in oklab,var(--gold) 70%,transparent);border-radius:8px;z-index:2;pointer-events:none}
+.b::after{content:"";position:absolute;inset:0;z-index:2;pointer-events:none;background:linear-gradient(115deg,transparent 30%,rgba(255,255,255,.55) 45%,rgba(255,255,255,0) 60%);transform:translateX(-120%);transition:transform .7s var(--ease-out)}
+.b.is-tilt::after{transform:translateX(120%)}
+.b.is-tilt{--lift:-4px}
+.b .nm{position:absolute;left:6px;right:6px;bottom:6px;z-index:3;padding:24px 6px 8px;color:#2B2017;background:linear-gradient(to top,oklch(.965 .012 82) 40%,transparent)}
+
+/* C — Frame & mat: museum mount, painting square inside, name on the mat, deity colour as thin frame */
+.c{aspect-ratio:4/5;border-radius:4px;background:var(--surface);padding:8px 8px 0;box-shadow:0 0 0 3px color-mix(in oklab,var(--accent) 75%,#2B2017),0 0 0 4px rgba(255,255,255,.5),var(--shadow);transform:perspective(700px) rotateX(var(--rx,0deg)) rotateY(var(--ry,0deg));transition:transform .4s var(--ease-out);animation:rise .6s var(--ease-out) backwards;display:flex;flex-direction:column;align-items:stretch}
+.c .pic{position:relative;aspect-ratio:1/1;overflow:hidden;border-radius:2px;background:oklch(.955 .014 82);box-shadow:inset 0 2px 6px rgba(40,28,16,.35)}
+.c img{position:absolute;left:50%;top:50%;width:130%;aspect-ratio:1;object-fit:cover;transform:translate(-50%,-50%)}
+.c .nm{flex:1;display:grid;place-items:center;padding:6px 2px 7px;font-size:.9375rem;color:var(--accent-ink)}
+
+/* D — Polaroid stack: photo prints tossed on the table, each tilted a hair, straightens under the finger */
+.d{aspect-ratio:1/1.12;background:#fff;padding:6px 6px 0;border-radius:2px;box-shadow:0 1px 2px rgba(0,0,0,.2),0 14px 26px -16px rgba(58,40,20,.7);transform:rotate(var(--tw,0deg)) perspective(700px) rotateX(var(--rx,0deg)) rotateY(var(--ry,0deg));transition:transform .45s var(--ease-out),box-shadow .45s;animation:toss .7s var(--ease-out) backwards;display:flex;flex-direction:column}
+.d.is-tilt{--tw:0deg!important;z-index:2;box-shadow:0 2px 3px rgba(0,0,0,.25),0 30px 40px -20px rgba(58,40,20,.8)}
+.d .pic{position:relative;aspect-ratio:1/1;overflow:hidden;background:oklch(.955 .014 82)}
+.d img{position:absolute;left:50%;top:50%;width:132%;aspect-ratio:1;object-fit:cover;transform:translate(-50%,-50%)}
+.d .nm{flex:1;display:grid;place-items:center;font-size:.9375rem;color:#2B2017;padding:4px 0 6px}
+.night .d{background:#EDE6D6}
+
+/* E — Flip tile: painting on the front, name + epithet on the back; hover/tap flips it */
+.e{aspect-ratio:1/1;perspective:700px;background:none;overflow:visible;animation:rise .6s var(--ease-out) backwards}
+.e .in{position:absolute;inset:0;transform-style:preserve-3d;transition:transform .7s var(--ease-out)}
+.e.is-tilt .in{transform:rotateY(180deg)}
+.e .f,.e .k{position:absolute;inset:0;border-radius:14px;backface-visibility:hidden;-webkit-backface-visibility:hidden;overflow:hidden}
+.e .k{opacity:0;transition:opacity 0s .35s}.e.is-tilt .k{opacity:1}.e.is-tilt .f{opacity:0;transition:opacity 0s .35s}
+.e .f{background:oklch(.955 .014 82);box-shadow:var(--shadow-sm),inset 0 0 0 1px rgba(255,255,255,.6)}
+.e .f img{position:absolute;left:50%;top:50%;width:140%;aspect-ratio:1;object-fit:cover;transform:translate(-50%,-50%)}
+.e .k{transform:rotateY(180deg);background:linear-gradient(160deg,color-mix(in oklab,var(--accent) 88%,#000),color-mix(in oklab,var(--accent) 70%,#000));color:#fff;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:3px;padding:8px;box-shadow:var(--shadow-sm)}
+.e .k .nm{font-size:1.125rem}
+.e .k small{font-size:.6875rem;opacity:.85;line-height:1.3}
+.e .f .nm{position:absolute;left:0;right:0;bottom:0;padding:22px 6px 8px;color:#2B2017;background:linear-gradient(to top,oklch(.965 .012 82) 40%,transparent)}
+
+@keyframes rise{from{opacity:0;transform:perspective(700px) rotateX(14deg) translateY(18px)}to{opacity:1;transform:perspective(700px) rotateX(0) translateY(0)}}
+@keyframes toss{from{opacity:0;transform:rotate(calc(var(--tw,0deg)*3)) translateY(30px) scale(.9)}to{opacity:1;transform:rotate(var(--tw,0deg)) translateY(0) scale(1)}}
+</style>
+</head>
+<body data-theme="day">
+<div class="frame" style="left:40px;top:40px" data-theme="day"><h2>A · Slab</h2><p>A thick block with a real edge. The painting is the top face; the name is set into the front lip in the deity's own colour. Tilts toward the finger.</p><div class="grid" data-style="a"></div></div>
+<div class="frame" style="left:480px;top:40px" data-theme="day"><h2>B · Lacquer</h2><p>Full-bleed painting under glass: a hairline gold inner frame, parallax, and a light that sweeps across when touched. Closest to what is live, minus the stone frame.</p><div class="grid" data-style="b"></div></div>
+<div class="frame" style="left:920px;top:40px" data-theme="day"><h2>C · Frame &amp; mat</h2><p>A museum mount: thin coloured frame, square window, the name printed on the mat below. Calm and flat-ish; the depth is in the frame and the recessed window.</p><div class="grid" data-style="c"></div></div>
+<div class="frame" style="left:40px;top:640px" data-theme="day"><h2>D · Prints on the table</h2><p>Each tile is a photo print tossed down at a slight angle. Touch one and it straightens and lifts. The most playful of the five.</p><div class="grid" data-style="d"></div></div>
+<div class="frame" style="left:480px;top:640px" data-theme="day"><h2>E · Flip</h2><p>Square, painting on the front. Hover or press and it turns over to a solid colour back with the name and epithet.</p><div class="grid" data-style="e"></div></div>
+<div class="frame night" style="left:920px;top:640px" data-theme="night"><h2>B · Lacquer, at night</h2><p>The same tile on the dark theme — the painting stays lit, the frame goes to brass.</p><div class="grid" data-style="b"></div></div>
+<script>
+const D=[["ganesha","Gaṇeśa","Remover of obstacles",14],["shiva","Śiva","The auspicious one",210],["devi","Devī","The Mother, Śakti",344],["vishnu","Viṣṇu","The preserver",224],["subrahmanya","Subrahmaṇya","Skanda · Murugan",130],["surya","Sūrya","The radiant sun",78],["guru","Guru","The teacher",295],["hanuman","Hanumān","Añjaneya",30]];
+const COL={devi:1,ganesha:1,shiva:1,vishnu:1,subrahmanya:1,guru:1};
+const src=(id,night)=>COL[id]?`emblems/${id}-face-colour.png`:`emblems/${id}-face-inkday.png`;
+const tw=[-3,2,-1.5,2.5,-2,1,-2.5,3];
+document.querySelectorAll('.grid').forEach(g=>{const s=g.dataset.style;const night=g.closest('.frame').classList.contains('night');
+D.forEach(([id,nm,ep,h],i)=>{const b=document.createElement('button');b.className='t '+s;b.style.setProperty('--h',h);b.style.animationDelay=(40+i*60)+'ms';if(s==='d')b.style.setProperty('--tw',tw[i]+'deg');
+const img=`<img src="${src(id,night)}" alt="" draggable="false">`;
+if(s==='a')b.innerHTML=`<div class="pic">${img}</div><div class="nm">${nm}</div>`;
+else if(s==='b')b.innerHTML=`${img}<div class="nm">${nm}</div>`;
+else if(s==='c'||s==='d')b.innerHTML=`<div class="pic">${img}</div><div class="nm">${nm}</div>`;
+else if(s==='e')b.innerHTML=`<div class="in"><div class="f">${img}<div class="nm">${nm}</div></div><div class="k"><div class="nm">${nm}</div><small>${ep}</small></div></div>`;
+b.addEventListener('pointermove',e=>{const r=b.getBoundingClientRect();const x=(e.clientX-r.left)/r.width-.5,y=(e.clientY-r.top)/r.height-.5;b.style.setProperty('--mx',x.toFixed(3));b.style.setProperty('--my',y.toFixed(3));b.style.setProperty('--ry',(x*14).toFixed(2)+'deg');b.style.setProperty('--rx',(-y*14).toFixed(2)+'deg');b.classList.add('is-tilt')});
+const rest=()=>{['--mx','--my','--rx','--ry'].forEach(p=>b.style.removeProperty(p));b.classList.remove('is-tilt')};
+b.addEventListener('pointerleave',rest);b.addEventListener('pointercancel',rest);
+g.appendChild(b)})});
+</script>
+</body>
+</html>

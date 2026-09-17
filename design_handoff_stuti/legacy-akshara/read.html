@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="day" data-lang="roman" data-ui-lang="roman" data-palette="unified" data-seal="ratna">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>The reader · Stuti</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link rel="stylesheet" href="stuti.css" />
+<link rel="stylesheet" href="stuti-components.css" />
+<link rel="stylesheet" href="stuti-palette.css" />
+<link rel="stylesheet" href="site.css" />
+</head>
+<body data-page="read">
+<div class="wrap">
+  <a class="crumb" href="library.html"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 6l-6 6 6 6"/></svg><span data-t="fLibrary">The library</span></a>
+  <div class="reader-wrap" style="margin-top:22px">
+    <div class="site-reader site-accent" id="reader">
+      <div class="site-reader-head">
+        <span class="seal" id="readerSeal"></span>
+        <div style="min-width:0"><div class="t" id="readerTitle">—</div><div class="s" id="readerSub"></div></div>
+        <div class="n" id="readerCount"></div>
+      </div>
+      <div class="site-reader-body" id="readerBody"></div>
+      <div class="site-reader-foot">
+        <button class="site-play" id="playBtn" aria-label="Play or pause" data-ta="playPause"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5.5v13l11-6.5z"/></svg></button>
+        <button class="chip chip-ico" id="prevBtn" aria-label="Previous verse" data-ta="prevVerse"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 6l-6 6 6 6"/></svg></button>
+        <button class="chip chip-ico" id="nextBtn" aria-label="Next verse" data-ta="nextVerse"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6l6 6-6 6"/></svg></button>
+        <span class="site-scrub" id="scrub" title="Jump to a verse" data-tt="scrubTitle"><span id="scrubFill" style="width:0%"></span></span>
+        <button class="chip" id="speedBtn" title="How fast the lines advance" data-tt="speedTitle">1.0×</button>
+        <button class="chip" id="loopBtn" title="Repeat this verse" data-tt="loopTitle">loop</button>
+        <button class="chip chip-lock" id="shareBtn" data-ta="shareLock" data-tt="shareLock"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4.5" y="10.5" width="15" height="10" rx="2.4"/><path d="M8 10.5V8a4 4 0 0 1 8 0v2.5"/></svg><span data-t="shareLbl">Share</span></button>
+        <button class="chip chip-lock" id="printBtn" data-ta="printLock" data-tt="printLock"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4.5" y="10.5" width="15" height="10" rx="2.4"/><path d="M8 10.5V8a4 4 0 0 1 8 0v2.5"/></svg><span data-t="printLbl">Print</span></button>
+      </div>
+    </div>
+    <div class="note" id="readerMiss" hidden style="margin-top:22px" data-th="readerMiss"><b>That link does not name a text the website carries.</b> <a href="library.html">The library lists them all</a></div>
+    <div class="note note-lim" id="limNote" hidden data-th="limLockNote"></div>
+    <div class="reader-nav" id="readerNav"></div>
+    <div class="note" style="margin-top:26px" data-th="readerNote">Space plays and pauses; the arrow keys step verses, and the bar jumps. <a href="get.html#account">An account carries your place to the app</a></div>
+  </div>
+</div>
+<div style="height:70px"></div>
+<script src="stuti-translit.js"></script>
+<script src="stotra-index-data.js"></script>
+<script src="stuti-names-lalita.js"></script>
+<script src="stuti-hindi-names-lalita.js"></script>
+<script src="stuti-names-vishnu.js"></script>
+<script src="stuti-hindi-names-vishnu.js"></script>
+<script src="stuti-names-ganesha.js"></script>
+<script src="stuti-data.js"></script>
+<script src="stuti-text-shiva.js"></script>
+<script src="stuti-text-shiva2.js"></script>
+<script src="stuti-text-shiva3.js"></script>
+<script src="stuti-text-devi.js"></script>
+<script src="stuti-text-devi2.js"></script>
+<script src="stuti-text-devi3.js"></script>
+<script src="stuti-text-devi4.js"></script>
+<script src="stuti-text-vishnu.js"></script>
+<script src="stuti-text-vishnu2.js"></script>
+<script src="stuti-text-hanuman.js"></script>
+<script src="stuti-text-ganesha.js"></script>
+<script src="stuti-text-ganesha2.js"></script>
+<script src="stuti-text-ganesha3.js"></script>
+<script src="stuti-text-ganesha4.js"></script>
+<script src="stuti-text-guru.js"></script>
+<script src="stuti-text-guru2.js"></script>
+<script src="stuti-text-subrahmanya.js"></script>
+<script src="stuti-text-subrahmanya2.js"></script>
+<script src="stuti-text-subrahmanya3.js"></script>
+<script src="stuti-text-subrahmanya4.js"></script>
+<script src="stuti-text-subrahmanya5.js"></script>
+<script src="stuti-text-subrahmanya6.js"></script>
+<script src="stuti-text-subrahmanya7.js"></script>
+<script src="stuti-text-subrahmanya8.js"></script>
+<script src="stuti-text-subrahmanya9.js"></script>
+<script src="stuti-text-subrahmanya10.js"></script>
+<script src="stuti-texts.js"></script>
+<script src="stuti-hindi-shiva.js"></script>
+<script src="stuti-hindi-core.js"></script>
+<script src="stuti-hindi-ganesha2.js"></script>
+<script src="stuti-hindi-subrahmanya.js"></script>
+<script src="stuti-hindi-ganesha.js"></script>
+<script src="stuti-hindi-sahasra.js"></script>
+<script src="stuti-library-data.js"></script>
+<script src="site-i18n.js"></script>
+<script src="site-lib.js"></script>
+<script src="site-panch.js"></script>
+<script src="site-read.js"></script>
+<script src="site-chrome.js"></script>
+</body>
+</html>

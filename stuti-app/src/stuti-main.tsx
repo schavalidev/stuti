@@ -14,6 +14,8 @@ import { STUTI_LIB } from "./stuti-library-data";
 import { LibraryHub } from "./stuti-library";
 import { STUTI_NUDGE } from "./stuti-nudge";
 import { Onboarding } from "./stuti-onboard";
+import { PitruRegisterView } from "./stuti-pitru-register";
+import { PitruCalendarView } from "./stuti-pitru";
 import { PlanView, PlansView } from "./stuti-plans";
 import { NityaView, PracticeView, PracticesView, SandhyaNoteView } from "./stuti-practice";
 import { STUTI_PREFS } from "./stuti-prefs";
@@ -332,7 +334,7 @@ function BrowseView({ go, lang = "deva" }) {
         <button className="icon-btn" onClick={() => go("search", { from: "browse" })} aria-label={L.t("search", lang)}><Icon name="search" /></button>
       </div>
       <div className="tile-grid browse-grid lib-deity-grid lib-deity-grid-3">
-        {S.deities.map((d, i) => (
+        {S.deities.filter((d) => !d.hidden).map((d, i) => (
           <DeityTile key={d.id} d={d} lang={lang} i={i} onClick={() => go("deity", { deity: d.id, from: "browse" })}>
             <span className="niche-count">{L.hymnsCount(S.hymnsForDeity(d.id).length, lang)}</span>
           </DeityTile>
@@ -469,7 +471,10 @@ function TabBar({ view, from, ret, go, lang = "deva" }) {
       <button className={"tab" + (onHome ? " tab-on" : "")} onClick={() => go("home")}>
         <Icon name="home" size={25} /><span>{L.t("today", lang)}</span>
       </button>
-      <button className={"tab" + (onNitya ? " tab-on" : "")} onClick={() => go("daily")}>
+      {/* the tab always opens on Recitation — the remembered lens is for returning
+          from a reader or counter, not for the tab press. The stamp makes a second
+          press reset too, when the reciter has moved to another lens since. */}
+      <button className={"tab" + (onNitya ? " tab-on" : "")} onClick={() => go("daily", { lens: "patha", lensAt: Date.now() })}>
         <Icon name="diya" size={25} filled={true} /><span>{L.t("nitya", lang)}</span>
       </button>
       <button className={"tab" + (onLib ? " tab-on" : "")} onClick={() => go("browse", { reset: true })}>
@@ -564,17 +569,17 @@ function App() {
      to Nitya — so opening either from the home lost your place. `from` is
      carried on the navigation itself and never inherited. */
   const go = (view, payload = {}) => {
-    const order = { home: 0, daily: 1, browse: 2, calendar: 2, settings: 2, plans: 2, practices: 3, practice: 3, japa: 3, plan: 3, deity: 3, search: 3, sandhyaNote: 3, reader: 4 };
+    const order = { home: 0, daily: 1, browse: 2, calendar: 2, settings: 2, plans: 2, practices: 3, practice: 3, japa: 3, plan: 3, deity: 3, search: 3, sandhyaNote: 3, pitruRegister: 4, reader: 4 };
     setDir(order[view] >= order[route.view] ? "fwd" : "back");
     /* A tab is a way home to its own root, so tapping Library from inside a
        type/author/vrata detail must drop that detail — but a back arrow
        RETURNING to the library must not, or it lands the reciter one level
        above where they were. Both arrive as `go("browse")`, so intent has
        to be stated rather than guessed from the destination. */
-    if (payload.reset) setLibSub(null);
+    if (payload.reset) { setLibSub(null); setLibLens(LENS_FROM_LABEL[t.defaultLens] || "deity"); }
     if (payload.libSub) setLibSub(payload.libSub);
     if (payload.libLens) setLibLens(payload.libLens);
-    setRoute(r => ({ view, from: payload.from, ret: payload.ret, deity: payload.deity ?? r.deity, hymn: payload.hymn ?? r.hymn, practice: payload.practice ?? r.practice, plan: payload.plan ?? r.plan, weekday: payload.weekday, voice: payload.voice }));
+    setRoute(r => ({ view, from: payload.from, ret: payload.ret, deity: payload.deity ?? r.deity, hymn: payload.hymn ?? r.hymn, practice: payload.practice ?? r.practice, plan: payload.plan ?? r.plan, lens: payload.lens, lensAt: payload.lensAt, weekday: payload.weekday, voice: payload.voice }));
   };
 
   const openToday = () => {
@@ -606,12 +611,14 @@ function App() {
   let body;
   if (rv === "home") body = <Home key="home" go={go} openToday={openToday} lang={lang} overlayEl={overlayEl} />;
   else if (rv === "browse") body = <LibraryHub key="browse" go={go} lang={lang} tileMode={tileMode} lens={libLens} setLens={setLibLens} sub={libSub} setSub={setLibSub} />;
-  else if (rv === "daily") body = <NityaView key="daily" go={go} lang={lang} showPractices={false} openRemind={() => setRemindOpen(true)} initLens={route.lens} />;
+  else if (rv === "daily") body = <NityaView key="daily" go={go} lang={lang} showPractices={false} openRemind={() => setRemindOpen(true)} initLens={route.lens} initLensAt={route.lensAt} />;
   else if (rv === "practices") body = <PracticesView key="practices" go={go} lang={lang} />;
   else if (rv === "japa") body = <JapaView key="japa" go={go} lang={lang} />;
   else if (rv === "plans") body = <PlansView key="plans" go={go} lang={lang} />;
   else if (rv === "plan" && route.plan) body = <PlanView key={"pl" + route.plan} hymnId={route.plan} go={go} lang={lang} backView={route.from || "daily"} />;
   else if (rv === "calendar") body = <CalendarView key="calendar" go={go} lang={lang} />;
+  else if (rv === "pitru") body = <PitruCalendarView key="pitru" go={go} lang={lang} backView={route.from || "calendar"} />;
+  else if (rv === "pitruRegister") body = <PitruRegisterView key="pitruRegister" go={go} lang={lang} backView={route.from || "calendar"} />;
   else if (rv === "account") body = <AccountView key="account" go={go} lang={lang} backView={route.from || "settings"} />;
   else if (rv === "settings") body = <SettingsView key="settings" go={go} lang={lang} setLang={setLang} uiLang={uiLang} setUiLang={setUiLang} theme={theme} toggleTheme={toggleTheme} openRemind={() => setRemindOpen(true)} backView={route.from || "home"} />;
   else if (rv === "practice") { const p = STUTI_LIB.practiceById(route.practice); body = p ? <PracticeView key={"p" + p.id} practice={p} go={go} lang={lang} backView={route.from || "daily"} /> : <Home key="home" go={go} openToday={openToday} lang={lang} overlayEl={overlayEl} />; }
@@ -625,7 +632,7 @@ function App() {
   const appPanelBody = (
     <React.Fragment>
       <button className="icon-btn" onClick={() => { if (!panelPin) setPanelOpen(false); go("settings", { from: route.view }); }}
-        aria-label={STUTI_L.t("settings", lang)} title={STUTI_L.t("settings", lang)}>
+        aria-label={STUTI_L.t("settings", lang)}>
         <Icon name="gear" size={20} />
       </button>
       <ScriptSeg lang={lang} setLang={setLang} />
@@ -637,7 +644,7 @@ function App() {
       <button className="icon-btn" onClick={toggleTheme} aria-label={STUTI_L.a("dayNight")}>
         <Icon name={theme === "night" ? "sun" : "moon"} size={20} />
       </button>
-      <button className={"icon-btn rd-pin-btn" + (panelPin ? " is-on" : "")} onClick={togglePanelPin} aria-pressed={panelPin} aria-label="Pin" title="Pin">
+      <button className={"icon-btn rd-pin-btn" + (panelPin ? " is-on" : "")} onClick={togglePanelPin} aria-pressed={panelPin} aria-label="Pin">
         <Icon name="pin" size={19} />
       </button>
     </React.Fragment>
@@ -652,7 +659,7 @@ function App() {
         {route.view === "home" && (
           <div className="brandbar">
             <button className="icon-btn brandbar-cog" onClick={() => go("settings", { from: route.view })}
-              aria-label={STUTI_L.t("settings", lang)} title={STUTI_L.t("settings", lang)}>
+              aria-label={STUTI_L.t("settings", lang)}>
               <Icon name="cog" size={20} />
             </button>
             <div className="brand">

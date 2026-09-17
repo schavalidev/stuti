@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="day">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Stuti · Verse font options</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Marcellus&family=Mukta:wght@300;400;500;600;700&family=Tiro+Devanagari+Sanskrit&family=Noto+Serif+Devanagari:wght@400;500;600&family=Eczar:wght@400;500;600&family=Martel:wght@400;600&family=Noto+Sans+Devanagari:wght@400;500;600&family=Baloo+2:wght@400;500;600&family=Tiro+Telugu&family=Noto+Serif+Telugu:wght@400;500;600&family=Suranna&family=Ramaraja&family=Noto+Sans+Telugu:wght@400;500;600&family=Mallanna&family=Gurajada&display=swap" />
+<style>
+  :root, [data-theme="day"] {
+    --bg:        #F7EFE2;
+    --bg-warm:   #F2E6D2;
+    --surface:   #FFFDF8;
+    --surface-2: #FBF4E8;
+    --ink:       #2B2017;
+    --ink-soft:  #6E5E4E;
+    --ink-faint: #9A8A78;
+    --line:      rgba(43,32,23,0.10);
+    --line-2:    rgba(43,32,23,0.06);
+    --gold:      #B07A2B;
+    --gold-deep: #8A5A18;
+    --gold-soft: #F0DFBE;
+    --shadow-sm: 0 8px 22px -14px rgba(58,40,20,0.40);
+    --shadow:    0 20px 50px -22px rgba(58,40,20,0.40), 0 4px 14px -8px rgba(58,40,20,0.30);
+    --glow:      radial-gradient(120% 70% at 50% 0%, rgba(255,228,168,0.55), transparent 60%);
+    color-scheme: light;
+  }
+  [data-theme="night"] {
+    --bg:        #14110C;
+    --bg-warm:   #1A150E;
+    --surface:   #211B13;
+    --surface-2: #271F16;
+    --ink:       #F4EAD7;
+    --ink-soft:  #C2B197;
+    --ink-faint: #897962;
+    --line:      rgba(244,234,215,0.13);
+    --line-2:    rgba(244,234,215,0.07);
+    --gold:      #E2B266;
+    --gold-deep: #E7C079;
+    --gold-soft: rgba(226,178,102,0.16);
+    --shadow-sm: 0 10px 26px -16px rgba(0,0,0,0.7);
+    --shadow:    0 26px 60px -24px rgba(0,0,0,0.72), 0 6px 18px -10px rgba(0,0,0,0.6);
+    --glow:      radial-gradient(120% 70% at 50% 0%, rgba(226,178,102,0.20), transparent 62%);
+    color-scheme: dark;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
+  html, body { min-height: 100%; }
+  body {
+    font-family: 'Mukta', system-ui, sans-serif;
+    background: var(--glow), var(--bg);
+    background-attachment: fixed;
+    color: var(--ink);
+    font-size: 17px;
+    line-height: 1.55;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+    transition: background 420ms cubic-bezier(.22,.61,.36,1), color 420ms ease;
+    padding-bottom: 96px;
+  }
+  a { color: var(--gold-deep); }
+  a:hover { color: var(--gold); }
+
+  .wrap { max-width: 1120px; margin: 0 auto; padding: 0 24px; }
+
+  /* ---------- top bar ---------- */
+  .topbar {
+    position: sticky; top: 0; z-index: 20;
+    background: color-mix(in oklab, var(--bg) 88%, transparent);
+    backdrop-filter: blur(14px) saturate(1.1);
+    -webkit-backdrop-filter: blur(14px) saturate(1.1);
+    border-bottom: 1px solid var(--line);
+  }
+  .topbar-inner {
+    max-width: 1120px; margin: 0 auto; padding: 14px 24px;
+    display: flex; align-items: center; gap: 18px; flex-wrap: wrap;
+  }
+  .brand { display: flex; align-items: baseline; gap: 10px; margin-right: auto; }
+  .brand .mark { font-family: 'Marcellus', serif; font-size: 21px; letter-spacing: .02em; color: var(--ink); }
+  .brand .mark .om { color: var(--gold-deep); }
+  .brand .sub { font-size: 12.5px; letter-spacing: .2em; text-transform: uppercase; color: var(--ink-faint); font-weight: 600; }
+
+  .ctrls { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; }
+  .seg { display: inline-flex; background: var(--surface-2); border: 1px solid var(--line); border-radius: 999px; padding: 3px; gap: 2px; }
+  .seg button {
+    font: inherit; font-size: 13.5px; font-weight: 600; color: var(--ink-soft);
+    border: none; background: none; cursor: pointer; padding: 7px 14px; border-radius: 999px;
+    display: inline-flex; align-items: center; gap: 6px; transition: all 180ms ease; white-space: nowrap;
+  }
+  .seg button:hover { color: var(--ink); }
+  .seg button[aria-pressed="true"] { background: var(--surface); color: var(--gold-deep); box-shadow: var(--shadow-sm); }
+  .ctrl-label { font-size: 11.5px; letter-spacing: .16em; text-transform: uppercase; color: var(--ink-faint); font-weight: 700; margin-right: 2px; }
+
+  /* ---------- hero ---------- */
+  header.hero { padding: 44px 0 8px; }
+  .eyebrow { font-size: 12.5px; letter-spacing: .24em; text-transform: uppercase; font-weight: 700; color: var(--gold-deep); }
+  h1.title { font-family: 'Marcellus', serif; font-weight: 400; font-size: clamp(30px, 4.6vw, 46px); line-height: 1.08; margin: 12px 0 14px; letter-spacing: .005em; }
+  .lede { max-width: 660px; color: var(--ink-soft); font-size: 17.5px; }
+  .lede b { color: var(--ink); font-weight: 600; }
+
+  /* ---------- section ---------- */
+  .section { padding: 30px 0 8px; }
+  .section-head { display: flex; align-items: baseline; gap: 14px; border-bottom: 1px solid var(--line); padding-bottom: 14px; margin-bottom: 22px; flex-wrap: wrap; }
+  .section-head .script-native { font-size: 30px; color: var(--gold-deep); line-height: 1; }
+  .section-head .deva-native { font-family: 'Tiro Devanagari Sanskrit', serif; }
+  .section-head .tel-native  { font-family: 'Tiro Telugu', serif; }
+  .section-head h2 { font-family: 'Marcellus', serif; font-weight: 400; font-size: 26px; letter-spacing: .01em; }
+  .section-head .meta { margin-left: auto; font-size: 13.5px; color: var(--ink-faint); }
+
+  /* ---------- grid + cards ---------- */
+  .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(470px, 1fr)); gap: 18px; }
+  @media (max-width: 560px) { .grid { grid-template-columns: 1fr; } }
+
+  .card {
+    position: relative; background: var(--surface); border: 1px solid var(--line);
+    border-radius: 20px; padding: 22px 24px 24px; box-shadow: var(--shadow-sm);
+    transition: border-color 220ms ease, box-shadow 220ms ease, transform 220ms ease;
+  }
+  .card:hover { box-shadow: var(--shadow); transform: translateY(-2px); }
+  .card.selected { border-color: color-mix(in oklab, var(--gold) 62%, transparent); box-shadow: 0 0 0 2px color-mix(in oklab, var(--gold) 40%, transparent), var(--shadow); }
+
+  .card-head { display: flex; align-items: flex-start; gap: 12px; margin-bottom: 16px; }
+  .card-name { font-family: 'Marcellus', serif; font-size: 20px; line-height: 1.15; color: var(--ink); }
+  .card-note { font-size: 13px; color: var(--ink-faint); margin-top: 3px; }
+  .chips { margin-left: auto; display: flex; flex-direction: column; align-items: flex-end; gap: 8px; flex: none; }
+  .chip-now { font-size: 10.5px; letter-spacing: .14em; text-transform: uppercase; font-weight: 700; color: var(--gold-deep); background: var(--gold-soft); border: 1px solid color-mix(in oklab, var(--gold) 30%, transparent); padding: 4px 9px; border-radius: 999px; white-space: nowrap; }
+
+  .pick {
+    font: inherit; font-size: 13px; font-weight: 600; cursor: pointer; white-space: nowrap;
+    color: var(--ink-soft); background: var(--surface-2); border: 1px solid var(--line);
+    padding: 8px 14px; border-radius: 999px; display: inline-flex; align-items: center; gap: 7px; transition: all 160ms ease;
+  }
+  .pick:hover { color: var(--ink); border-color: color-mix(in oklab, var(--gold) 40%, transparent); }
+  .pick .tick { width: 15px; height: 15px; display: inline-grid; place-items: center; }
+  .pick .tick svg { width: 15px; height: 15px; opacity: 0; transition: opacity 160ms ease; }
+  .card.selected .pick { color: #fff; background: var(--gold-deep); border-color: var(--gold-deep); }
+  [data-theme="night"] .card.selected .pick { color: #1A150E; }
+  .card.selected .pick .tick svg { opacity: 1; }
+  .card.selected .pick .lbl-pick { display: none; }
+  .pick .lbl-chosen { display: none; }
+  .card.selected .pick .lbl-chosen { display: inline; }
+
+  .specimen { --sz: 34px; }
+  .verse { color: var(--ink); font-weight: 400; line-height: 1.72; font-size: var(--sz); word-break: break-word; }
+  .verse .l2 { display: block; }
+  .iast { margin-top: 12px; font-family: 'Mukta', sans-serif; font-size: calc(13px + var(--sz) * 0.055); color: var(--ink-faint); line-height: 1.5; font-weight: 400; }
+
+  /* fine-print footnote row */
+  .note { margin-top: 26px; color: var(--ink-faint); font-size: 13.5px; max-width: 720px; }
+
+  /* ---------- summary bar ---------- */
+  .summary {
+    position: fixed; left: 0; right: 0; bottom: 0; z-index: 30;
+    background: color-mix(in oklab, var(--surface) 92%, transparent);
+    backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px);
+    border-top: 1px solid var(--line); box-shadow: 0 -12px 40px -24px rgba(0,0,0,.4);
+  }
+  .summary-inner { max-width: 1120px; margin: 0 auto; padding: 14px 24px; display: flex; align-items: center; gap: 22px; flex-wrap: wrap; }
+  .pick-readout { display: flex; gap: 26px; flex-wrap: wrap; align-items: center; }
+  .pick-readout .pr { display: flex; align-items: baseline; gap: 9px; }
+  .pick-readout .pr .k { font-size: 11px; letter-spacing: .16em; text-transform: uppercase; color: var(--ink-faint); font-weight: 700; }
+  .pick-readout .pr .v { font-family: 'Marcellus', serif; font-size: 18px; color: var(--ink); }
+  .pick-readout .pr .v.empty { font-family: 'Mukta', sans-serif; font-size: 14px; color: var(--ink-faint); font-weight: 500; }
+  .summary .hint { margin-left: auto; font-size: 13.5px; color: var(--ink-soft); max-width: 360px; text-align: right; }
+  .summary .hint b { color: var(--gold-deep); font-weight: 700; }
+
+  .reset { font: inherit; font-size: 12.5px; font-weight: 600; color: var(--ink-faint); background: none; border: none; cursor: pointer; text-decoration: underline; text-underline-offset: 3px; }
+  .reset:hover { color: var(--ink); }
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <div class="topbar-inner">
+    <div class="brand">
+      <span class="mark">Stuti&nbsp;<span class="om">·</span>&nbsp;स्तुति</span>
+      <span class="sub">Verse fonts</span>
+    </div>
+    <div class="ctrls">
+      <span class="ctrl-label">Verse</span>
+      <div class="seg" id="sample-seg">
+        <button data-sample="A" aria-pressed="true">Vakratuṇḍa</button>
+        <button data-sample="B" aria-pressed="false">Dense conjuncts</button>
+      </div>
+      <span class="ctrl-label">Size</span>
+      <div class="seg" id="size-seg">
+        <button data-size="26" aria-pressed="false">S</button>
+        <button data-size="34" aria-pressed="true">M</button>
+        <button data-size="44" aria-pressed="false">L</button>
+        <button data-size="56" aria-pressed="false">XL</button>
+      </div>
+      <div class="seg" id="theme-seg">
+        <button data-theme-set="day" aria-pressed="true">☀ Day</button>
+        <button data-theme-set="night" aria-pressed="false">☾ Night</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="wrap">
+  <header class="hero">
+    <div class="eyebrow">Typefaces · choose a reading script font</div>
+    <h1 class="title">Pick the fonts the verses are set in</h1>
+    <p class="lede">Every candidate below shows the <b>same real verse</b>, so you can compare how each renders conjuncts, vowel signs and the daṇḍa. Toggle <b>day / night</b> and <b>size</b> to judge at true reading scale. Tap <b>Use this</b> on your favourite for each script — I'll wire the winners into the app.</p>
+  </header>
+
+  <section class="section">
+    <div class="section-head">
+      <span class="script-native deva-native">देवनागरी</span>
+      <h2>Devanagari — Sanskrit &amp; Hindi</h2>
+      <span class="meta">Used for the śloka body and titles</span>
+    </div>
+    <div class="grid" id="grid-deva"></div>
+  </section>
+
+  <section class="section">
+    <div class="section-head">
+      <span class="script-native tel-native">తెలుగు</span>
+      <h2>Telugu</h2>
+      <span class="meta">Derived from the verse, same corpus</span>
+    </div>
+    <div class="grid" id="grid-telugu"></div>
+  </section>
+
+  <p class="note">All faces are open-source (Google Fonts) and carry the full character set these verses need. “In use” marks what the app ships with today. Nothing here changes the app yet — it's a chooser; once you pick, tell me and I'll set them.</p>
+</div>
+
+<div class="summary">
+  <div class="summary-inner">
+    <div class="pick-readout">
+      <div class="pr"><span class="k">Devanagari</span><span class="v empty" id="pick-deva">—</span></div>
+      <div class="pr"><span class="k">Telugu</span><span class="v empty" id="pick-telugu">—</span></div>
+      <button class="reset" id="reset-btn" hidden>Clear picks</button>
+    </div>
+    <div class="hint" id="hint">Tap <b>Use this</b> under your favourite in each script.</div>
+  </div>
+</div>
+
+<script src="stuti-translit.js"></script>
+<script>
+(function () {
+  var TICK = '<span class="tick"><svg viewBox="0 0 20 20" fill="none"><path d="M4 10.5l4 4 8-9" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span>';
+
+  /* --- real verse samples (Devanagari is source of truth) --- */
+  var SAMPLES = {
+    A: {
+      deva: ["वक्रतुण्ड महाकाय सूर्यकोटिसमप्रभ।", "निर्विघ्नं कुरु मे देव सर्वकार्येषु सर्वदा॥"],
+      iast: "vakratuṇḍa mahākāya sūrya-koṭi-samaprabha · nirvighnaṁ kuru me deva sarva-kāryeṣu sarvadā"
+    },
+    B: {
+      deva: ["नागेन्द्रहाराय त्रिलोचनाय", "भस्माङ्गरागाय महेश्वराय॥"],
+      iast: "nāgendra-hārāya tri-locanāya · bhasmāṅga-rāgāya maheśvarāya"
+    }
+  };
+
+  function toTelugu(s) {
+    return (window.STUTI_TRANSLIT && window.STUTI_TRANSLIT.convert) ? window.STUTI_TRANSLIT.convert(s, "telugu") : s;
+  }
+
+  /* --- candidate faces --- */
+  var DEVA = [
+    { fam: "Tiro Devanagari Sanskrit", note: "Traditional manuscript serif — calm, ceremonial", current: true },
+    { fam: "Noto Serif Devanagari",    note: "Clean modern serif, crisp conjuncts, very legible" },
+    { fam: "Eczar",                    note: "Warm reading serif with strong stroke contrast" },
+    { fam: "Martel",                   note: "Humanist serif — soft, bookish, gentle weight" },
+    { fam: "Noto Sans Devanagari",     note: "Clean sans — maximum clarity for elder eyes" },
+    { fam: "Baloo 2",                  note: "Rounded & friendly — warm, approachable, informal" }
+  ];
+  var TELUGU = [
+    { fam: "Tiro Telugu",       note: "Traditional serif — calm, ceremonial", current: true },
+    { fam: "Noto Serif Telugu", note: "Clean modern serif, even rhythm, very legible" },
+    { fam: "Suranna",           note: "Elegant traditional serif — refined, literary" },
+    { fam: "Ramaraja",          note: "Classic calligraphic contour, gentle old-print feel" },
+    { fam: "Noto Sans Telugu",  note: "Clean sans — maximum clarity for elder eyes" },
+    { fam: "Mallanna",          note: "Warm humanist sans — soft, contemporary" }
+  ];
+
+  var state = {
+    sample: localStorage.getItem("stuti-fc-sample") || "A",
+    size: parseInt(localStorage.getItem("stuti-fc-size"), 10) || 34,
+    theme: localStorage.getItem("stuti-fc-theme") || "day",
+    deva: localStorage.getItem("stuti-fontpick-deva") || "",
+    telugu: localStorage.getItem("stuti-fontpick-telugu") || ""
+  };
+
+  function makeCard(face, script) {
+    var card = document.createElement("div");
+    card.className = "card";
+    card.dataset.fam = face.fam;
+    card.dataset.script = script;
+
+    var head = document.createElement("div");
+    head.className = "card-head";
+    var titleWrap = document.createElement("div");
+    var nm = document.createElement("div"); nm.className = "card-name"; nm.textContent = face.fam;
+    var nt = document.createElement("div"); nt.className = "card-note"; nt.textContent = face.note;
+    titleWrap.appendChild(nm); titleWrap.appendChild(nt);
+    var chips = document.createElement("div"); chips.className = "chips";
+    if (face.current) { var c = document.createElement("span"); c.className = "chip-now"; c.textContent = "In use"; chips.appendChild(c); }
+    var pick = document.createElement("button");
+    pick.className = "pick";
+    pick.innerHTML = TICK + '<span class="lbl-pick">Use this</span><span class="lbl-chosen">Chosen</span>';
+    pick.addEventListener("click", function (e) { e.stopPropagation(); choose(script, face.fam); });
+    chips.appendChild(pick);
+    head.appendChild(titleWrap); head.appendChild(chips);
+
+    var spec = document.createElement("div"); spec.className = "specimen";
+    var verse = document.createElement("div"); verse.className = "verse";
+    verse.style.fontFamily = "'" + face.fam + "', serif";
+    var l1 = document.createElement("span"); l1.className = "l1";
+    var l2 = document.createElement("span"); l2.className = "l2";
+    verse.appendChild(l1); verse.appendChild(l2);
+    var iast = document.createElement("div"); iast.className = "iast";
+    spec.appendChild(verse); spec.appendChild(iast);
+
+    card.appendChild(head); card.appendChild(spec);
+    card.addEventListener("click", function () { choose(script, face.fam); });
+    return card;
+  }
+
+  function build() {
+    var gd = document.getElementById("grid-deva");
+    var gt = document.getElementById("grid-telugu");
+    gd.innerHTML = ""; gt.innerHTML = "";
+    DEVA.forEach(function (f) { gd.appendChild(makeCard(f, "deva")); });
+    TELUGU.forEach(function (f) { gt.appendChild(makeCard(f, "telugu")); });
+    renderText(); applyTheme(); applySize(); applySelections(); syncButtons();
+  }
+
+  function renderText() {
+    var s = SAMPLES[state.sample];
+    var telL1 = toTelugu(s.deva[0]), telL2 = toTelugu(s.deva[1]);
+    document.querySelectorAll('#grid-deva .verse').forEach(function (v) {
+      v.querySelector(".l1").textContent = s.deva[0] + " ";
+      v.querySelector(".l2").textContent = s.deva[1];
+    });
+    document.querySelectorAll('#grid-telugu .verse').forEach(function (v) {
+      v.querySelector(".l1").textContent = telL1 + " ";
+      v.querySelector(".l2").textContent = telL2;
+    });
+    document.querySelectorAll('.iast').forEach(function (el) { el.textContent = s.iast; });
+  }
+
+  function applyTheme() { document.documentElement.setAttribute("data-theme", state.theme); }
+  function applySize() { document.querySelectorAll(".specimen").forEach(function (el) { el.style.setProperty("--sz", state.size + "px"); }); }
+
+  function applySelections() {
+    document.querySelectorAll(".card").forEach(function (card) {
+      var chosen = state[card.dataset.script] === card.dataset.fam;
+      card.classList.toggle("selected", chosen);
+    });
+    var pd = document.getElementById("pick-deva"), pt = document.getElementById("pick-telugu");
+    pd.textContent = state.deva || "—"; pd.classList.toggle("empty", !state.deva);
+    pt.textContent = state.telugu || "—"; pt.classList.toggle("empty", !state.telugu);
+    var any = state.deva || state.telugu;
+    document.getElementById("reset-btn").hidden = !any;
+    var hint = document.getElementById("hint");
+    if (state.deva && state.telugu) hint.innerHTML = 'Great — tell me <b>“use these”</b> and I\'ll set them in the app.';
+    else if (any) hint.innerHTML = 'One more — pick a font for the other script too.';
+    else hint.innerHTML = 'Tap <b>Use this</b> under your favourite in each script.';
+  }
+
+  function choose(script, fam) {
+    state[script] = (state[script] === fam) ? "" : fam;
+    localStorage.setItem("stuti-fontpick-" + script, state[script]);
+    applySelections();
+  }
+
+  function syncButtons() {
+    document.querySelectorAll('#sample-seg button').forEach(function (b) { b.setAttribute("aria-pressed", b.dataset.sample === state.sample); });
+    document.querySelectorAll('#size-seg button').forEach(function (b) { b.setAttribute("aria-pressed", String(parseInt(b.dataset.size,10) === state.size)); });
+    document.querySelectorAll('#theme-seg button').forEach(function (b) { b.setAttribute("aria-pressed", b.dataset.themeSet === state.theme); });
+  }
+
+  document.getElementById("sample-seg").addEventListener("click", function (e) {
+    var b = e.target.closest("button"); if (!b) return;
+    state.sample = b.dataset.sample; localStorage.setItem("stuti-fc-sample", state.sample); renderText(); syncButtons();
+  });
+  document.getElementById("size-seg").addEventListener("click", function (e) {
+    var b = e.target.closest("button"); if (!b) return;
+    state.size = parseInt(b.dataset.size, 10); localStorage.setItem("stuti-fc-size", state.size); applySize(); syncButtons();
+  });
+  document.getElementById("theme-seg").addEventListener("click", function (e) {
+    var b = e.target.closest("button"); if (!b) return;
+    state.theme = b.dataset.themeSet; localStorage.setItem("stuti-fc-theme", state.theme); applyTheme(); syncButtons();
+  });
+  document.getElementById("reset-btn").addEventListener("click", function () {
+    state.deva = ""; state.telugu = "";
+    localStorage.removeItem("stuti-fontpick-deva"); localStorage.removeItem("stuti-fontpick-telugu");
+    applySelections();
+  });
+
+  build();
+})();
+</script>
+</body>
+</html>

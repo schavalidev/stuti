@@ -1,5 +1,7 @@
 # Handoff: Stuti (स्तुति) — from design prototype to production app
 
+> **Where the files are.** This project root is the single copy of the app. There is no `app/` or `docs/` folder here; `REPO-LAYOUT.md` says which root file goes where in the repo `schavalidev/stuti`. Every path below written as `app/…` or `docs/…` means the repo path; the same file sits at the project root with the same name.
+
 ## What this is
 
 Stuti is a devotional companion app for Hindu households: a corpus of stotras and sahasranāmas in Devanāgarī, Telugu and Roman (IAST) script; a reader with per-verse meanings; a pañcāṅga (Hindu almanac) computed on-device; japa counting, recitation plans, vrata/nomu observance trackers; and a "practice ledger" of what the household has done. Interface language switches between English, Hindi and Telugu.

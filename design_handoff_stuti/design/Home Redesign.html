@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="design_doc_mode" content="canvas" />
+<title>Stuti · Home redesign</title>
+<link rel="stylesheet" href="stuti.css" />
+<link rel="stylesheet" href="stuti-components.css" />
+<link rel="stylesheet" href="home-redesign.css" />
+</head>
+<body>
+<div id="mountA" class="rh-mount"></div>
+<div id="mountB" class="rh-mount"></div>
+<div id="mountC" class="rh-mount"></div>
+
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+<script src="stotra-index-data.js"></script>
+<script src="stuti-data.js"></script>
+<script src="stuti-library-data.js"></script>
+<script src="stuti-i18n.js"></script>
+<script src="stuti-store.js"></script>
+<script src="stuti-reckoning.js"></script>
+<script src="stuti-sankalpa-data.js"></script>
+<script src="stuti-prefs.js"></script>
+<script src="stuti-ephemeris.js"></script>
+<script src="stuti-panchanga-engine.js"></script>
+<script src="stuti-desa.js"></script>
+<script src="stuti-translit.js"></script>
+<script src="stuti-boot.js"></script>
+<script>StutiBoot.load([
+  "stuti-icons.jsx",
+  "stuti-panchanga.jsx",
+  "stuti-home.jsx",
+  "home-redesign.jsx"
+]);</script>
+</body>
+</html>

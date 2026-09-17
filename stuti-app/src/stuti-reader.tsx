@@ -8,12 +8,15 @@ import { STUTI } from "./stuti-data";
 import { FeedbackSheet } from "./stuti-feedback";
 import { FindStrip } from "./stuti-find";
 import { FlowText } from "./stuti-flow";
+import { GrahaJanmaTable } from "./stuti-graha-janma";
 import { STUTI_BIND, STUTI_L, STUTI_MEAN } from "./stuti-i18n";
 import { STUTI_PADA } from "./stuti-lexicon";
 import { STUTI_LIB } from "./stuti-library-data";
 import { LimitSheet } from "./stuti-limits";
 import { PadaSheet } from "./stuti-pada";
 import { OverlayPortal } from "./stuti-picker";
+import { STUTI_PITRU } from "./stuti-pitru-register-core";
+import { RgSlotSheet, rgT } from "./stuti-pitru-register";
 import { LearnButton } from "./stuti-plans";
 import { STUTI_PROOF } from "./stuti-proof";
 import { STUTI_RECITE } from "./stuti-recite";
@@ -21,10 +24,12 @@ import { RecordStrip, useRecTake } from "./stuti-record";
 import { STUTI_THREAD } from "./stuti-sadhana";
 import { ShareSheet, printStotra } from "./stuti-share";
 import { STUTI_PROGRESS } from "./stuti-store";
+import { TarpanaOccasionBar, TarpanaOccasionSheet, toTarpanaGuess, toTarpanaHidden, toTarpanaRead, toTarpanaWrite } from "./stuti-tarpana-occasion";
 import { STUTI_RITUAL } from "./stuti-texts";
 import { nityaQueue } from "./stuti-nitya-queue";
 import { useFollow, FollowButton, FollowChip, RecitationsButton, RecordChip } from "./stuti-follow";
 import { STUTI_TRANSLIT } from "./stuti-translit";
+import { STUTI_FILL } from "./stuti-vidhi-fill";
 import { VoiceButton } from "./stuti-voice";
 
 /* ============================================================
@@ -33,7 +38,7 @@ import { VoiceButton } from "./stuti-voice";
    up as it is "recited", with transliteration & meaning as
    layers the user can lift on or off.
    ============================================================ */
-const { useState, useEffect, useLayoutEffect, useRef, useCallback } = React;
+const { useState, useEffect, useLayoutEffect, useRef, useCallback, useMemo } = React;
 
 /* the title + font for the reader's chosen script */
 function hymnTitle(h, lang) {
@@ -409,6 +414,22 @@ function DeityView({ deity, go, lang = "deva", showFormCounts = true, defaultFor
   };
   const PART_LABEL = { purva: "gsPurva", stotram: "gsNamavali", uttara: "gsUttara" };
 
+  /* a shelf of forty is easier to walk when a genre can be folded away; the
+     fold is remembered per deity so a reader's own arrangement survives */
+  const foldKey = "stuti-fold-" + deity.id;
+  const [folded, setFolded] = useState(() => {
+    try { return new Set(JSON.parse(localStorage.getItem(foldKey) || "[]")); } catch (e) { return new Set(); }
+  });
+  useEffect(() => {
+    try { setFolded(new Set(JSON.parse(localStorage.getItem("stuti-fold-" + deity.id) || "[]"))); } catch (e) { setFolded(new Set()); }
+  }, [deity.id]);
+  const toggleFold = (t) => setFolded(prev => {
+    const next = new Set(prev);
+    next.has(t) ? next.delete(t) : next.add(t);
+    try { localStorage.setItem(foldKey, JSON.stringify([...next])); } catch (e) {}
+    return next;
+  });
+
   let n = 0;
   const entry = (h) => {
     const no = folio(++n);
@@ -460,7 +481,7 @@ function DeityView({ deity, go, lang = "deva", showFormCounts = true, defaultFor
       <button className="icon-btn gs-back" onClick={() => go(backView, { from: retView })} aria-label={STUTI_L.a("aBackDeities")}>
         <Icon name="back" />
       </button>
-      <div className="gs-wm"><Emblem d={deity} variant="ink" /></div>
+      <div className={"gs-wm gs-wm-d-" + deity.id}><Emblem d={deity} variant="ink" /></div>
       <header className="gs-head gs-head-nb">
         <h1 className="gs-name display" style={{ fontFamily: indexFont }}>{L.name(deity, lang)}</h1>
         <div className="gs-rom">{L.name(deity, "roman")} — {L.epithet(deity, "roman")}<span className="gs-count">– {allHymns.length}</span></div>
@@ -470,6 +491,7 @@ function DeityView({ deity, go, lang = "deva", showFormCounts = true, defaultFor
       {hasForms && (
         <FormSelector forms={forms} value={form} onChange={setForm} lang={lang} showCounts={false} variant="printed" />
       )}
+      {deity.id === "navagraha" && GrahaJanmaTable && <div className="gs-ix"><GrahaJanmaTable lang={lang} form={form} /></div>}
 
       <div className="vr-find vr-find-compact gs-find">
         <div className="search-field search-field-sm">
@@ -490,10 +512,16 @@ function DeityView({ deity, go, lang = "deva", showFormCounts = true, defaultFor
         <div className="gs-ix">
           {groups.map(g => {
             const s = section(g.type);
+            const shut = folded.has(g.type);
+            if (shut) n += g.rows.length;
             return (
               <React.Fragment key={g.type}>
-                <div className="gs-sec">{s.name}{s.note ? <React.Fragment> · <span className="gs-sec-note">{s.note}</span></React.Fragment> : null}</div>
-                {g.rows.map(entry)}
+                <button className={"gs-sec gs-sec-btn" + (shut ? " shut" : "")} onClick={() => toggleFold(g.type)} aria-expanded={!shut}>
+                  <span className="gs-sec-caret" aria-hidden="true" />
+                  <span className="gs-sec-name">{s.name}{s.note ? <React.Fragment> · <span className="gs-sec-note">{s.note}</span></React.Fragment> : null}</span>
+                  <span className="gs-sec-n">{g.rows.length}</span>
+                </button>
+                {shut ? null : g.rows.map(entry)}
               </React.Fragment>
             );
           })}
@@ -675,7 +703,23 @@ function useScrub(onSeek) {
    from all of them, so reciting today's stotra ended on a deity you had
    never opened. It now returns to `backView`, and hands that screen its own
    origin back as `from` so the chain holds for two hops. */
-function ReaderView({ hymn, deity, go, theme, toggleTheme, lang, setLang, backView = "deity", retView }) {
+function ReaderView({ hymn: rawHymn, deity, go, theme, toggleTheme, lang, setLang, backView = "deity", retView }) {
+  /* A vidhi is printed with blanks — the saṅkalpa's hour, the gotra and name of
+     each person the tarpaṇam addresses. The app knows both, so the text the
+     reciter is handed has them filled in. Done here rather than at load, so a
+     name written this morning shows in the line at once. The filled copy keeps
+     the id, the sections and the verse count: everything the reader remembers
+     about this text still holds. */
+  const [regTick, setRegTick] = useState(0);
+  useEffect(() => {
+    if (!STUTI_PITRU) return;
+    return STUTI_PITRU.subscribe(() => setRegTick((n) => n + 1));
+  }, []);
+  const [regOpen, setRegOpen] = useState(null);   // slot id, or "" for the whole register
+  const hymn = useMemo(
+    () => (STUTI_FILL ? STUTI_FILL.hymn(rawHymn, { lang }) : rawHymn),
+    [rawHymn, regTick, lang]
+  );
   const LINE_MS = 3600;                       // fallback dwell; real dwell scales with line length
   const SIZES = [0.9, 1, 1.15, 1.3, 1.5];     // reader text-size steps
   const [showMeaning, setShowMeaning] = useState(false);
@@ -712,6 +756,7 @@ function ReaderView({ hymn, deity, go, theme, toggleTheme, lang, setLang, backVi
     const saved = parseFloat(localStorage.getItem("stuti-speed"));
     return (nityaQueue.getAuto() && nityaQueue.getSpeed()) || (Number.isFinite(saved) ? saved : 1);
   });
+  const [speedOpen, setSpeedOpen] = useState(false);
   const [loopMode, setLoopMode] = useState("off"); // off | all | verse (verse = drill one verse)
   /* ---- nitya parayana queue: after this stotra ends, count down and open the next ---- */
   const nq = nityaQueue.get();
@@ -727,7 +772,10 @@ function ReaderView({ hymn, deity, go, theme, toggleTheme, lang, setLang, backVi
   const [active, setActive] = useState(() => {   // resume where the reciter left off
     const total = (hymn.verses || []).reduce((n, v) => n + v.deva.split("\n").length, 0);
     const s = parseInt(localStorage.getItem("stuti-pos-" + hymn.id), 10);
-    if (Number.isFinite(s) && s >= 0 && s < total) return s;
+    /* a place saved on the last line means the recitation was finished, not
+       left half-said — reopening starts it again from the top */
+    if (Number.isFinite(s) && s >= 0 && s < total - 1) return s;
+    if (Number.isFinite(s) && s >= total - 1) { try { localStorage.removeItem("stuti-pos-" + hymn.id); } catch (e) {} }
     /* no saved place — a customised recitation (Nitya's builder) starts at its
        first included movement rather than the pūrva pīṭhikā every hymn opens
        with by default */
@@ -772,13 +820,28 @@ function ReaderView({ hymn, deity, go, theme, toggleTheme, lang, setLang, backVi
      for the reciter who knows the text and wants a page that turns itself */
   const [drift, setDrift] = useState(() => localStorage.getItem("stuti-drift") === "1");
 
+  /* A vidhi that prints one saṅkalpa per occasion is asked, not scrolled: the
+     reader says which tarpaṇam this is, and the other five are put away. */
+  const occText = hymn.occasions === "tarpana";
+  const [occId, setOccId] = useState(() => (occText ? toTarpanaRead() : null));
+  const [occAsk, setOccAsk] = useState(false);
+  useEffect(() => { if (occText && !occId) setOccAsk(true); }, [occText, hymn.id]);
+  const occHide = React.useMemo(
+    () => (occText && occId && occId !== "all" ? toTarpanaHidden(hymn, occId) : null),
+    [occText, occId, hymn.id]
+  );
+  const pickOcc = (id) => { setOccId(id); toTarpanaWrite(id); setOccAsk(false); };
+
   // Flatten every verse into a single sequence of recitable lines.
   const ritualSet = STUTI_RITUAL ? STUTI_RITUAL(hymn) : null;
   const hasRitual = !!(ritualSet && ritualSet.size);
   const hidRitual = !ritualOn && hasRitual ? ritualSet : null;
+  const hidAll = hidRitual || occHide
+    ? new Set([...(hidRitual || []), ...(occHide || [])])
+    : null;
   const lines = [];
   hymn.verses.forEach((v, vi) => {
-    if (hidRitual && hidRitual.has(vi)) return;
+    if (hidAll && hidAll.has(vi)) return;
     const dv = v.deva.split("\n");
     const it = v.iast.split("\n");
     dv.forEach((d, li) => lines.push({ vi, li, last: li === dv.length - 1, deva: d, iast: it[li] || "" }));
@@ -1171,7 +1234,7 @@ function ReaderView({ hymn, deity, go, theme, toggleTheme, lang, setLang, backVi
   };
   const pageVerse = (dir) => {
     const sc = scrollRef.current; if (!sc) return;
-    const vis = hymn.verses.map((v, i) => i).filter(i => !hidRitual || !hidRitual.has(i));
+    const vis = hymn.verses.map((v, i) => i).filter(i => !hidAll || !hidAll.has(i));
     const k = vis.indexOf(flowAt.current);
     const target = vis[Math.max(0, Math.min(vis.length - 1, (k < 0 ? 0 : k) + dir))];
     const el = sc.querySelector('.flow-v[data-vi="' + target + '"]');
@@ -1225,7 +1288,14 @@ function ReaderView({ hymn, deity, go, theme, toggleTheme, lang, setLang, backVi
   };
   const SPEED_MIN = 0.5, SPEED_MAX = 2.5, SPEED_STEP = 0.05;
   const SPEEDS = [SPEED_MIN, SPEED_MAX];
+  const SPEED_PRESETS = [0.75, 1, 1.25, 1.5, 2];
+  const putSpeed = (n) => setSpeed(() => { const v = Math.round(Math.max(SPEED_MIN, Math.min(SPEED_MAX, n)) * 20) / 20; try { localStorage.setItem("stuti-speed", v); } catch (e) {} return v; });
   const stepSpeed = (d) => setSpeed(s => { const n = Math.round(Math.max(SPEED_MIN, Math.min(SPEED_MAX, s + d * SPEED_STEP)) * 100) / 100; localStorage.setItem("stuti-speed", n); return n; });
+  const speedFrac = (speed - SPEED_MIN) / (SPEED_MAX - SPEED_MIN);
+  const speedScrub = useScrub(f => putSpeed(SPEED_MIN + f * (SPEED_MAX - SPEED_MIN)));
+  /* the pace in a word, so the number is not the only thing to read */
+  const speedWord = STUTI_L.t(speed < 0.9 ? "spdSlow" : speed <= 1.1 ? "spdNormal" : speed <= 1.6 ? "spdBrisk" : "spdSwift", lang);
+  const showSpeed = (n) => String(Math.round(n * 100) / 100);
   const seekLine = (f) => {
     if (scrollOn) { const sc = scrollRef.current; if (sc) pageTo(f * (sc.scrollHeight - sc.clientHeight)); return; }
     setActive(Math.max(0, Math.min(lines.length - 1, Math.round(f * (lines.length - 1)))));
@@ -1308,7 +1378,7 @@ function ReaderView({ hymn, deity, go, theme, toggleTheme, lang, setLang, backVi
         <Icon name={theme === "night" ? "sun" : "moon"} size={20} />
       </button>
       <button className={"icon-btn rd-pin-btn" + (panelPin ? " is-on" : "")} onClick={togglePanelPin} aria-pressed={panelPin}
-        aria-label="Pin" title="Pin">
+        aria-label="Pin">
         <Icon name="pin" size={19} />
       </button>
     </React.Fragment>
@@ -1323,12 +1393,18 @@ function ReaderView({ hymn, deity, go, theme, toggleTheme, lang, setLang, backVi
         <div className="reader-topbar-title">
           <div className="reader-topbar-name display">{hymnTitle(hymn, lang)}<FavButton id={hymn.id} size={21} /><FollowButton follow={follow} lang={lang} /><RecitationsButton follow={follow} lang={lang} /></div>
         </div>
+        {parts && <button className={"icon-btn rd-top-find" + (findOpen ? " is-on" : "")} onClick={() => setFindOpen(o => !o)} aria-expanded={findOpen}
+          aria-label={STUTI_L.t("findPlace", lang)}>
+          <Icon name="search" size={19} />
+        </button>}
         {/* settings in the corner; when the panel is pinned it carries its own gear */}
         {!panelPin ? <button className="icon-btn" onClick={() => setPanelOpen(v => !v)} aria-expanded={panelOpen}
           aria-label={STUTI_L.t("readAs", lang)} title={STUTI_L.t("readAs", lang)}>
           <Icon name="pin" size={19} />
         </button> : <span className="rd-topbar-pad" aria-hidden="true" />}
       </div>
+      {occText && occId && <TarpanaOccasionBar occId={occId} lang={lang} onOpen={() => setOccAsk(true)} />}
+      {occText && occAsk && <TarpanaOccasionSheet occId={occId} lang={lang} onPick={pickOcc} onClose={() => (occId ? setOccAsk(false) : pickOcc(toTarpanaGuess(new Date())))} />}
 
       {/* line three — how the text reads. Three controls, no scroller: the two
          views share one glyph pair and only the chosen one says its name. */}
@@ -1370,10 +1446,10 @@ function ReaderView({ hymn, deity, go, theme, toggleTheme, lang, setLang, backVi
             </button>
           </div>
         )}
-        <button className={"icon-btn rd-story-end" + (findOpen ? " is-on" : "")} onClick={() => setFindOpen(o => !o)} aria-expanded={findOpen}
-          aria-label={STUTI_L.t("findPlace", lang)} title={STUTI_L.t("findPlace", lang)}>
+        {!parts && <button className={"icon-btn rd-story-end" + (findOpen ? " is-on" : "")} onClick={() => setFindOpen(o => !o)} aria-expanded={findOpen}
+          aria-label={STUTI_L.t("findPlace", lang)}>
           <Icon name="search" size={19} />
-        </button>
+        </button>}
       </div>
 
       {/* line four — the nyāsa, on the two or three texts that have one. Its own
@@ -1506,7 +1582,7 @@ function ReaderView({ hymn, deity, go, theme, toggleTheme, lang, setLang, backVi
             at={curLine ? { vi: curLine.vi, li: curLine.li } : null}
             word={word} lit={(playing && !drifting) || follow.on} masked={flowMask} hint={hint} peek={peek}
             onPick={flowPick} onWord={flowWord} onSeen={flowSeen}
-            ritual={hidRitual} ritualOn={ritualOn} onRitual={toggleRitual}
+            ritual={hidRitual} ritualOn={ritualOn} onRitual={toggleRitual} hide={occHide}
             onOpenNames={() => setNamesOpen(true)}
             scrollRef={scrollRef} hush={hush} plain={scrollOn} />
           <div className="rd-proof-flow"><ProofLine proof={proof} lang={lang} onReport={() => setFbOpen(true)} /></div>
@@ -1588,6 +1664,17 @@ function ReaderView({ hymn, deity, go, theme, toggleTheme, lang, setLang, backVi
                     <Icon name="next" size={14} /> {STUTI_L.t("ritualSkip", lang)}
                   </button>
                 )}
+                {/* where the words in this line came from, said quietly, with the
+                    register one tap away. A blank line says it is still blank
+                    rather than asking to be filled. */}
+                {v.fill && !masked && (
+                  <button className={"verse-fill" + (v.fill.kind === "blank" ? " is-blank" : "")}
+                    onClick={() => v.fill.slot ? setRegOpen(v.fill.slot) : go("settings", { from: "reader" })}>
+                    {v.fill.kind === "blank" ? rgT("stillBlank", lang)
+                      : v.fill.kind === "sankalpa" ? STUTI_L.t("flTitle", lang)
+                      : rgT("fromReg", lang)}
+                  </button>
+                )}
                 {padaHint && !masked && (
                   <div className="pd-hint"><Icon name="lotus" size={15} /> {STUTI_L.t("tapWordHint", lang)}</div>
                 )}
@@ -1661,6 +1748,8 @@ function ReaderView({ hymn, deity, go, theme, toggleTheme, lang, setLang, backVi
           </div>
         </div>
       )}
+      {regOpen && <RgSlotSheet slot={regOpen} lang={lang} onClose={() => setRegOpen(null)}
+        onOpenAll={() => { setRegOpen(null); go("pitruRegister", { from: "reader" }); }} />}
       {limAsk && <LimitSheet lang={lang} onClose={() => setLimAsk(false)} />}
       {fbOpen && <FeedbackSheet lang={lang} kind="text" about={hymn.title} onClose={() => setFbOpen(false)} />}
       {namesOpen && <OverlayPortal><NamesSheet hymn={hymn} lang={lang} onClose={() => setNamesOpen(false)} /></OverlayPortal>}
@@ -1707,12 +1796,32 @@ function ReaderView({ hymn, deity, go, theme, toggleTheme, lang, setLang, backVi
             <button className={"reciter-step" + (scrollOn ? " is-verse" : "")} onClick={() => step(1)} aria-label={STUTI_L.a(scrollOn ? "aNextVerse" : "aNextLine")}><Icon name="next" size={24} /></button>
           </div>
 
-          <div className="reciter-speed" role="group" aria-label={STUTI_L.a("aSpeed")}>
-            <button type="button" onClick={() => stepSpeed(-1)} disabled={speed <= SPEEDS[0]} aria-label="−">−</button>
-            <span>{speed.toFixed(2).replace(/0$/, "")}×</span>
-            <button type="button" onClick={() => stepSpeed(1)} disabled={speed >= SPEEDS[SPEEDS.length - 1]} aria-label="+">+</button>
-          </div>
+          <button type="button" className={"reciter-speed" + (speedOpen ? " on" : "")} onClick={() => setSpeedOpen(o => !o)}
+            aria-label={STUTI_L.a("aSpeed")} aria-expanded={speedOpen}>
+            <span>{showSpeed(speed)}×</span>
+          </button>
         </div>
+        {speedOpen && (
+          <div className="spd-strip" role="group" aria-label={STUTI_L.a("aSpeed")}>
+              <div className="spd-row">
+                <button type="button" className="spd-rnd" onClick={() => stepSpeed(-1)} disabled={speed <= SPEED_MIN} aria-label="−">−</button>
+                <div className={"spd-track" + (speedScrub.drag ? " scrubbing" : "")} ref={speedScrub.ref} {...speedScrub.handlers}
+                  role="slider" tabIndex={0} aria-label={STUTI_L.a("aSpeed")}
+                  aria-valuemin={SPEED_MIN} aria-valuemax={SPEED_MAX} aria-valuenow={speed}
+                  onKeyDown={e => { if (e.key === "ArrowRight") stepSpeed(1); if (e.key === "ArrowLeft") stepSpeed(-1); }}>
+                  <span style={{ width: `${speedFrac * 100}%` }} />
+                  <i className="spd-knob" style={{ left: `${speedFrac * 100}%` }} />
+                </div>
+                <button type="button" className="spd-rnd" onClick={() => stepSpeed(1)} disabled={speed >= SPEED_MAX} aria-label="+">+</button>
+              </div>
+              <div className="spd-chips">
+                {SPEED_PRESETS.map(p => (
+                  <button key={p} type="button" className={"spd-chip" + (Math.abs(p - speed) < 0.001 ? " on" : "")} onClick={() => putSpeed(p)}>{showSpeed(p)}×</button>
+                ))}
+                <span className="spd-word">{speedWord}</span>
+              </div>
+          </div>
+        )}
       </div>
     </div>
   );

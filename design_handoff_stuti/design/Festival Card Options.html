@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="day" data-palette="unified" data-ui-lang="roman" data-lang="roman" data-pigment="on" data-deity="ganesha" style="--deity-hue:36">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="design_doc_mode" content="canvas" />
+<title>Stuti · Festival-day card options</title>
+<link rel="stylesheet" href="stuti.css" />
+<link rel="stylesheet" href="stuti-components.css" />
+<link rel="stylesheet" href="stuti-palette.css" />
+<link rel="stylesheet" href="stuti-pigment.css" />
+<style>
+html,body{background:transparent}
+body{font-family:var(--font-ui);color:var(--ink);font-style:normal}
+a{color:var(--accent-ink)}a:hover{color:var(--accent)}
+.cap{position:absolute;width:390px;color:var(--ink);font-size:15px;font-weight:600;letter-spacing:.02em}
+.cap small{display:block;font-weight:400;color:var(--ink-faint);font-size:12.5px;line-height:1.5;margin-top:4px;text-wrap:pretty}
+.ph{position:absolute;width:390px;border-radius:38px;overflow:hidden;background:radial-gradient(120% 70% at 50% 0%,rgba(255,228,168,.5),transparent 60%),linear-gradient(180deg,#F2E6D2,#F7EFE2 30%);box-shadow:0 40px 90px -34px rgba(35,24,8,.45),0 0 0 1px rgba(35,24,8,.08);padding:18px 20px 26px}
+.greet{display:flex;align-items:baseline;justify-content:space-between;padding:6px 2px 14px;color:var(--ink-soft);font-size:1.0625rem}
+.greet b{font-weight:500;color:var(--ink)}
+.search{display:flex;align-items:center;gap:11px;min-height:48px;padding:0 18px;margin-bottom:14px;border-radius:999px;background:var(--surface);border:1px solid var(--line);color:var(--ink-faint);font-size:1rem}
+.rhb-card{margin:0}
+.rhb-eyebrow{color:var(--accent-ink)}
+.rhb-tithi,.rhb-tithi.roman{font-family:var(--font-display);font-weight:400;font-size:2.125rem}
+.moon{width:62px;height:62px;border-radius:50%;flex:none;background:radial-gradient(circle at 38% 40%,#F6E7C6,#D9B978 70%,#B79452);box-shadow:inset -14px 0 0 0 rgba(43,32,23,.18)}
+.rhb-foot{all:unset;box-sizing:border-box;display:flex;align-items:center;justify-content:space-between;gap:14px;width:100%;min-height:56px;padding:12px 2px;margin-top:2px;border-top:1px solid var(--line);text-align:left;color:var(--ink);cursor:pointer}
+.chev{flex:none;color:var(--ink-faint)}
+
+/* ---- the festival sub-card: one component, three placements ---- */
+.parva{--p:oklch(0.58 0.13 var(--deity-hue));position:relative;display:flex;align-items:center;gap:14px;text-align:left;color:var(--ink);cursor:pointer;border:0;font:inherit;background:color-mix(in oklab,var(--p) 9%,var(--surface));border-radius:var(--r-md);padding:12px 14px 12px 12px;width:100%;box-sizing:border-box}
+.parva::before{content:"";position:absolute;inset:0;border-radius:inherit;border:1px solid color-mix(in oklab,var(--p) 28%,transparent);pointer-events:none}
+.parva img{width:46px;height:46px;object-fit:contain;flex:none;filter:drop-shadow(0 3px 5px rgba(58,40,20,.25))}
+.parva-body{flex:1;min-width:0;display:flex;flex-direction:column;gap:2px}
+.parva-k{font-size:.72rem;letter-spacing:.2em;text-transform:uppercase;font-weight:700;color:color-mix(in oklab,var(--p) 80%,var(--ink))}
+.parva-n{font-family:var(--font-display);font-size:1.375rem;line-height:1.15;color:var(--ink)}
+.parva-s .nw{white-space:nowrap}
+.parva-s{font-size:.875rem;color:var(--ink-soft);line-height:1.4;text-wrap:pretty}
+.parva-chips{display:flex;flex-wrap:wrap;gap:6px;margin-top:8px}
+.chip{display:inline-flex;align-items:center;gap:6px;min-height:32px;padding:0 12px;border-radius:999px;background:var(--surface);border:1px solid color-mix(in oklab,var(--p) 30%,var(--line));font-size:.8438rem;font-weight:500;color:var(--ink);white-space:nowrap}
+.chip svg{color:var(--accent-ink)}
+
+/* A — band at the head of the card */
+.optA .parva{margin:12px 0 4px}
+.optA .rhb-date{margin-top:14px}
+/* B — inset row between hero and rows */
+.optB .parva{margin:16px 0 2px}
+.optB .rhb-rows{margin-top:10px}
+/* C — standalone card above pañcāṅga */
+.festcard{--p:oklch(0.58 0.13 var(--deity-hue));position:relative;overflow:hidden;background:var(--surface);border:1px solid var(--line);border-radius:var(--r-lg);box-shadow:var(--shadow);padding:18px 18px 16px;margin-bottom:16px}
+.festcard::before{content:"";position:absolute;inset:0;background:radial-gradient(90% 120% at 100% 0%,color-mix(in oklab,var(--p) 22%,transparent),transparent 60%);pointer-events:none}
+.festcard>*{position:relative}
+.fc-top{display:flex;align-items:flex-start;justify-content:space-between;gap:12px}
+.fc-k{font-size:.8438rem;letter-spacing:.22em;text-transform:uppercase;font-weight:600;color:var(--accent-ink)}
+.fc-n{font-family:var(--font-display);font-size:2rem;line-height:1.1;margin-top:8px;color:var(--ink)}
+.fc-deva{font-family:var(--font-deva);font-size:1.25rem;color:var(--ink-soft);margin-top:4px}
+.fc-s{font-size:.9375rem;color:var(--ink-soft);line-height:1.45;margin-top:10px;text-wrap:pretty}
+.fc-when{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-top:14px;padding-top:12px;border-top:1px solid var(--line-2)}
+.fc-when-k{font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;font-weight:700;color:var(--ink-faint)}
+.fc-when-v{font-size:1.125rem;color:var(--ink);font-variant-numeric:tabular-nums}
+.festcard img{width:74px;height:74px;object-fit:contain;flex:none;filter:drop-shadow(0 6px 10px rgba(58,40,20,.3))}
+.fc-cta{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-top:14px;min-height:50px;padding:5px 5px 5px 16px;border-radius:999px;background:var(--accent);color:#fff;font-weight:600;font-size:1rem}
+.fc-cta span:last-child{width:40px;height:40px;border-radius:50%;background:rgba(255,255,255,.18);display:flex;align-items:center;justify-content:center}
+.optC .rhb-card{padding-bottom:6px}
+.faint{color:var(--ink-faint);font-size:.8125rem;text-align:center;padding:14px 0 0}
+</style>
+</head>
+<body>
+
+<div class="cap" style="left:40px;top:40px">A · Band at the head of the pañcāṅga card<small>The festival announces the day before the date does. One tinted strip, deity-hued, with the pūjā window; tapping opens the vrata page. Zero extra scroll — the card grows by one row.</small></div>
+<div class="ph optA" style="left:40px;top:130px">
+<div class="greet"><span>Śubhodayam, <b>Anasuya</b></span><span>Hyderabad</span></div>
+<div class="search"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"></circle><path d="m20 20-3.5-3.5"></path></svg>Find a stotra, deity, or day</div>
+<section class="rhb-card">
+<div class="eyebrow rhb-eyebrow"><span>Today's Pañcāṅga</span></div>
+<button class="parva">
+<img src="assets/kalasha-sm.png" alt="" />
+<span class="parva-body"><span class="parva-k">Parva · today</span><span class="parva-n">Gaṇeśa Caturthī</span><span class="parva-s">Madhyāhna pūjā · <span class="nw">11:24 – 1:52</span></span></span>
+<svg class="chev" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m9 6 6 6-6 6"></path></svg>
+</button>
+<div class="rhb-date">Monday, 14 September 2026</div>
+<div class="rhb-hero"><div class="moon"></div><div><div class="rhb-tithi roman"><span style="margin-right:.35em">Śukla ·</span>Caturthī</div><div class="rhb-tithi-sub">until 3:41 pm, then Pañcamī</div></div></div>
+<div class="rhb-rows">
+<div class="rhb-row"><span class="rhb-row-k">Māsa</span><span class="rhb-row-v">Bhādrapada</span></div>
+<div class="rhb-row"><span class="rhb-row-k">Nakṣatra</span><span class="rhb-row-v">Hasta<small>until 7:10 pm</small></span></div>
+<div class="rhb-row"><span class="rhb-row-k">Sunrise</span><span class="rhb-row-v">6:02 am</span></div>
+</div>
+<button class="rhb-foot"><span class="rhb-foot-body"><span class="rhb-foot-k">Saṅkalpa</span><span class="rhb-foot-v">Set for today</span></span><svg class="chev" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m9 6 6 6-6 6"></path></svg></button>
+</section>
+</div>
+
+<div class="cap" style="left:500px;top:40px">B · Sub-card below the tithi<small>The tithi stays the hero; the festival reads as its consequence — "Caturthī, and so Gaṇeśa Caturthī." Hymn chips open the reader directly. Costs the most height.</small></div>
+<div class="ph optB" style="left:500px;top:130px">
+<div class="greet"><span>Śubhodayam, <b>Anasuya</b></span><span>Hyderabad</span></div>
+<div class="search"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"></circle><path d="m20 20-3.5-3.5"></path></svg>Find a stotra, deity, or day</div>
+<section class="rhb-card">
+<div class="eyebrow rhb-eyebrow"><span>Today's Pañcāṅga</span></div>
+<div class="rhb-date">Monday, 14 September 2026</div>
+<div class="rhb-hero"><div class="moon"></div><div><div class="rhb-tithi roman"><span style="margin-right:.35em">Śukla ·</span>Caturthī</div><div class="rhb-tithi-sub">until 3:41 pm, then Pañcamī</div></div></div>
+<div class="parva" role="button">
+<img src="assets/kalasha-sm.png" alt="" />
+<span class="parva-body"><span class="parva-k">Parva</span><span class="parva-n">Gaṇeśa Caturthī</span><span class="parva-s">Bhādrapada Śukla Caturthī — the pūjā is kept at noon, 11:24 – 1:52.</span>
+<span class="parva-chips"><span class="chip"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M4 19V5a2 2 0 0 1 2-2h13v16H6a2 2 0 0 0-2 2Z"></path></svg>Vakratuṇḍa</span><span class="chip"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M4 19V5a2 2 0 0 1 2-2h13v16H6a2 2 0 0 0-2 2Z"></path></svg>Atharvaśīrṣa</span><span class="chip">Pūjā steps</span></span></span>
+</div>
+<div class="rhb-rows">
+<div class="rhb-row"><span class="rhb-row-k">Māsa</span><span class="rhb-row-v">Bhādrapada</span></div>
+<div class="rhb-row"><span class="rhb-row-k">Nakṣatra</span><span class="rhb-row-v">Hasta<small>until 7:10 pm</small></span></div>
+<div class="rhb-row"><span class="rhb-row-k">Sunrise</span><span class="rhb-row-v">6:02 am</span></div>
+</div>
+<button class="rhb-foot"><span class="rhb-foot-body"><span class="rhb-foot-k">Saṅkalpa</span><span class="rhb-foot-v">Set for today</span></span><svg class="chev" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m9 6 6 6-6 6"></path></svg></button>
+</section>
+</div>
+
+<div class="cap" style="left:960px;top:40px">C · Its own card, above the pañcāṅga<small>The festival owns the top of Home for the day, the pañcāṅga sits beneath unchanged. Loudest, and the only one with room for the Devanāgarī name and a single action. Shown only on singular annual days — never for weekly or monthly vratas.</small></div>
+<div class="ph optC" style="left:960px;top:160px">
+<div class="greet"><span>Śubhodayam, <b>Anasuya</b></span><span>Hyderabad</span></div>
+<div class="search"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"></circle><path d="m20 20-3.5-3.5"></path></svg>Find a stotra, deity, or day</div>
+<section class="festcard">
+<div class="fc-top"><div><div class="fc-k">Today · Parva</div><div class="fc-n">Gaṇeśa Caturthī</div><div class="fc-deva">गणेश चतुर्थी</div></div><img src="assets/kalasha-sm.png" alt="" /></div>
+<div class="fc-s">Bhādrapada Śukla Caturthī. Unbaked clay, dūrvā grass, and twenty-one modakas — the pūjā belongs to the noon hour.</div>
+<div class="fc-when"><span class="fc-when-k">Madhyāhna pūjā</span><span class="fc-when-v">11:24 am – 1:52 pm</span></div>
+<div class="fc-cta"><span>Begin with Vakratuṇḍa</span><span><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="m9 6 6 6-6 6"></path></svg></span></div>
+</section>
+<section class="rhb-card">
+<div class="eyebrow rhb-eyebrow"><span>Today's Pañcāṅga</span></div>
+<div class="rhb-date">Monday, 14 September 2026</div>
+<div class="rhb-hero"><div class="moon"></div><div><div class="rhb-tithi roman"><span style="margin-right:.35em">Śukla ·</span>Caturthī</div><div class="rhb-tithi-sub">until 3:41 pm, then Pañcamī</div></div></div>
+<div class="rhb-rows">
+<div class="rhb-row"><span class="rhb-row-k">Māsa</span><span class="rhb-row-v">Bhādrapada</span></div>
+<div class="rhb-row"><span class="rhb-row-k">Nakṣatra</span><span class="rhb-row-v">Hasta<small>until 7:10 pm</small></span></div>
+</div>
+<div class="faint">…rows continue</div>
+</section>
+</div>
+
+</body>
+</html>

@@ -18,7 +18,12 @@ export const STUTI_PREFS = (function () {
                              reminder but a wrong one, so it falls silent instead. Off by
                              default — prātaḥ can open at 5:10 in June, and a reciter who never
                              heard that cue would blame the app, not the setting. */
-                          quiet: { on: false, from: "21:30", to: "05:30" } },
+                          quiet: { on: false, from: "21:30", to: "05:30" },
+                          /* the tarpaṇa bell — pitṛ tarpaṇam every amāvāsyā, plus the yama
+                             and bhīṣma days. Off by default: the card says the day either
+                             way, and a monthly notification about an ancestral rite is for
+                             those who asked for it. */
+                          tarpana: false },
                 /* how lunar months are named: amānta (Deccan, south, west) counts
                    a month from new moon; pūrṇimānta (north, east) from full moon.
                    Same days either way — different names through the dark fortnight. */
@@ -32,13 +37,18 @@ export const STUTI_PREFS = (function () {
                 /* whether the saṅkalpa names the lunar month or the solar one —
                    cāndramāna across most of the north and Deccan, sauramāna in
                    Tamil Nāḍu, Kerala, Bengal, Assam and Odisha */
-                mana: "candra" };
+                mana: "candra",
+                /* the reciter's ritual profile — what a prayoga needs to know and a
+                   saṅkalpa says aloud. Every field optional; empty means the app
+                   names no day and guesses no name. */
+                ritual: { veda: "", shakha: "", sutra: "", gotra: "", pravara: "" } };
   let p;
   try { p = Object.assign({}, DEF, JSON.parse(localStorage.getItem(KEY) || "{}")); } catch (e) { p = Object.assign({}, DEF); }
   if (!Array.isArray(p.kept)) p.kept = [];
   p.remind = Object.assign({}, DEF.remind, p.remind || {});
   p.remind.sandhya = Object.assign({}, DEF.remind.sandhya, p.remind.sandhya || {});
   p.remind.quiet = Object.assign({}, DEF.remind.quiet, p.remind.quiet || {});
+  p.ritual = Object.assign({}, DEF.ritual, p.ritual || {});
   const subs = new Set();
   function save() {
     try { localStorage.setItem(KEY, JSON.stringify(p)); } catch (e) {}

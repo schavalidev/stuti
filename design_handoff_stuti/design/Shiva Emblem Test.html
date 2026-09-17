@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="design_doc_mode" content="canvas" />
+<title>Śiva — white emblem test</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Marcellus&family=Mukta:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+<style>
+  :root {
+    --font-display: 'Marcellus', Georgia, serif;
+    --font-ui: 'Mukta', system-ui, sans-serif;
+    --surface: #FFFDF8; --ink: #2B2017; --ink-soft: #6E5E4E; --ink-faint: #9A8A78;
+    --line: rgba(43,32,23,0.10); --gold: #B07A2B; --gold-deep: #8A5A18;
+  }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; }
+  body { font-family: var(--font-ui); position: relative; width: 1520px; height: 1200px; color: var(--ink); }
+  a { color: var(--gold-deep); } a:hover { color: var(--gold); }
+
+  .frame {
+    position: absolute; background: var(--surface);
+    border: 1px solid var(--line); border-radius: 22px;
+    box-shadow: 0 30px 70px -34px rgba(58,40,20,0.45), 0 6px 18px -12px rgba(58,40,20,0.30);
+    padding: 40px 44px 44px;
+  }
+  .kicker { font-size: 12px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--ink-faint); font-weight: 600; margin: 0 0 10px; }
+  .frame h2 { font-family: var(--font-display); font-weight: 400; font-size: 29px; line-height: 1.12; margin: 0 0 8px; letter-spacing: 0.01em; }
+  .frame p.lede { margin: 0; font-size: 15px; line-height: 1.55; color: var(--ink-soft); max-width: 58ch; }
+  .frame p.lede b { color: var(--ink); font-weight: 600; }
+
+  .seal { display: grid; place-items: center; border-radius: 50%; flex: none; overflow: hidden; }
+  .seal .mark { display: block; object-fit: contain; }
+  /* Śiva palettes — karpūra-gaura (white / ash), not blue */
+  .s-ash  { background: #ECEDEF; border: 1.5px solid #C7C9CF; }
+  .s-ring { background: #ECEDEF; border: 2px solid #5285C4; }          /* Nīlakaṇṭha ring nod */
+  .s-dark { background: #2C2A2E; border: 1.5px solid rgba(255,255,255,0.22); }
+
+  .opts { display: flex; gap: 34px; margin-top: 30px; }
+  .opt { display: flex; flex-direction: column; align-items: center; gap: 14px; width: 150px; }
+  .opt .cap { text-align: center; font-size: 12.5px; color: var(--ink-faint); line-height: 1.4; }
+  .opt .cap b { display: block; color: var(--ink); font-size: 14px; font-weight: 600; font-family: var(--font-display); margin-bottom: 2px; }
+
+  .row { display: flex; align-items: flex-end; gap: 28px; }
+  .sz { display: flex; flex-direction: column; align-items: center; gap: 10px; }
+  .sz .lbl { font-size: 11px; color: var(--ink-faint); }
+  .band { border-radius: 16px; padding: 22px 26px 18px; background: #17151A; margin-top: 20px; }
+  .band .lbl { color: #8A8792; }
+  .sub { font-size: 12px; letter-spacing: 0.05em; color: var(--ink-faint); margin: 0 0 6px; text-transform: uppercase; font-weight: 600; }
+
+  .tiles { display: flex; gap: 16px; margin-top: 8px; }
+  .gtile { display: flex; flex-direction: column; align-items: center; gap: 12px; padding: 22px 26px 18px; border-radius: 18px; background: var(--surface); border: 1.5px solid var(--line); }
+  .gtile.dark { background: #211E22; border-color: rgba(255,255,255,0.12); }
+  .gtile .gname { font-family: var(--font-display); font-size: 20px; color: var(--ink); }
+  .gtile.dark .gname { color: #EDEBEF; }
+  .gtile .gcount { font-size: 12.5px; color: var(--ink-faint); }
+  .hymn-row { display: flex; align-items: center; gap: 14px; margin-top: 14px; padding: 13px 16px; border-radius: 14px; background: var(--surface); border: 1.5px solid var(--line); width: 380px; }
+  .hymn-row .ht { font-family: var(--font-display); font-size: 18px; color: #565961; line-height: 1.15; }
+  .hymn-row .hs { font-size: 12px; color: var(--ink-faint); margin-top: 2px; }
+  .hymn-row .play { margin-left: auto; color: #6E7178; flex: none; }
+</style>
+</head>
+<body>
+
+  <!-- FRAME 1 · the correction + three treatments -->
+  <section class="frame" style="left: 60px; top: 60px; width: 660px;">
+    <p class="kicker">Śiva · corrected colour</p>
+    <h2>White, not blue</h2>
+    <p class="lede">Śiva is <b>karpūra-gauram</b> — camphor-white, ash-smeared. Only the throat is blue: <b>Nīlakaṇṭha</b>. So the medallion reads white / ash, and I keep blue as an optional accent on the ring rather than the body. Three ways to sit it in the seal:</p>
+    <div class="opts">
+      <div class="opt">
+        <div class="seal s-ash" style="width:96px;height:96px"><img class="mark" src="emblems/shiva-mark-ash.png" style="width:74%;height:74%"></div>
+        <div class="cap"><b>Ash on pale</b>austere, silver-grey on cool white</div>
+      </div>
+      <div class="opt">
+        <div class="seal s-dark" style="width:96px;height:96px"><img class="mark" src="emblems/shiva-mark-white.png" style="width:74%;height:74%"></div>
+        <div class="cap"><b>White on ash-dark</b>literal camphor-white</div>
+      </div>
+      <div class="opt">
+        <div class="seal s-ring" style="width:96px;height:96px"><img class="mark" src="emblems/shiva-mark-ash.png" style="width:74%;height:74%"></div>
+        <div class="cap"><b>Nīlakaṇṭha ring</b>white body, blue-throat nod</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FRAME 2 · sizes -->
+  <section class="frame" style="left: 760px; top: 60px; width: 700px;">
+    <p class="kicker">Legibility</p>
+    <h2>Across the app’s sizes</h2>
+    <p class="sub" style="margin-top:20px;">Ash on pale</p>
+    <div class="row" id="row-ash"></div>
+    <div class="band">
+      <p class="sub" style="color:#8A8792;">White on ash-dark</p>
+      <div class="row" id="row-white"></div>
+    </div>
+  </section>
+
+  <!-- FRAME 3 · in context -->
+  <section class="frame" style="left: 760px; top: 500px; width: 700px;">
+    <p class="kicker">In context</p>
+    <h2>On the tile &amp; row</h2>
+    <div class="tiles" style="margin-top:24px;">
+      <div class="gtile">
+        <div class="seal s-ash" style="width:66px;height:66px"><img class="mark" src="emblems/shiva-mark-ash.png" style="width:74%;height:74%"></div>
+        <div class="gname">Śiva</div><div class="gcount">31 hymns</div>
+      </div>
+      <div class="gtile dark">
+        <div class="seal s-dark" style="width:66px;height:66px"><img class="mark" src="emblems/shiva-mark-white.png" style="width:74%;height:74%"></div>
+        <div class="gname">Śiva</div><div class="gcount">31 hymns</div>
+      </div>
+    </div>
+    <div class="hymn-row">
+      <div class="seal s-ash" style="width:40px;height:40px"><img class="mark" src="emblems/shiva-mark-ash.png" style="width:74%;height:74%"></div>
+      <div><div class="ht">Śiva Pañcākṣara Stotra</div><div class="hs">Śiva · Stotra</div></div>
+      <span class="play"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" stroke="none"><path d="M8 5.5v13l11-6.5z"/></svg></span>
+    </div>
+    <div class="hymn-row">
+      <div class="seal s-ring" style="width:40px;height:40px"><img class="mark" src="emblems/shiva-mark-ash.png" style="width:74%;height:74%"></div>
+      <div><div class="ht">Mṛtyuñjaya Mantra</div><div class="hs">Mṛtyuñjaya · Mantra</div></div>
+      <span class="play"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" stroke="none"><path d="M8 5.5v13l11-6.5z"/></svg></span>
+    </div>
+  </section>
+
+<script>
+const sizes = [72, 56, 40, 30];
+const mk = (s, variant, img) =>
+  `<div class="sz"><div class="seal ${variant}" style="width:${s}px;height:${s}px"><img class="mark" src="emblems/shiva-mark-${img}.png" style="width:74%;height:74%"></div><span class="lbl">${s}px</span></div>`;
+document.getElementById('row-ash').innerHTML   = sizes.map(s => mk(s, 's-ash',  'ash')).join('');
+document.getElementById('row-white').innerHTML = sizes.map(s => mk(s, 's-dark', 'white')).join('');
+</script>
+</body>
+</html>

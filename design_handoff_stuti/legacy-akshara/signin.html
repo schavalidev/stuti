@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="day" data-lang="roman" data-ui-lang="roman" data-palette="unified" data-seal="ratna">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Sign in · Stuti</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link rel="stylesheet" href="stuti.css" />
+<link rel="stylesheet" href="stuti-components.css" />
+<link rel="stylesheet" href="stuti-palette.css" />
+<link rel="stylesheet" href="site.css" />
+</head>
+<body data-page="signin">
+<div class="wrap">
+  <div class="page-head">
+    <span class="eyebrow eyebrow-a" data-t="siEyebrow">Where an account earns itself</span>
+    <h1 data-t="siHead">Sign in</h1>
+    <p data-t="siLede">Reading needs no account. This one keeps what has to outlive a browser — your place in a text, the rounds you have kept, and the two lines the saṅkalpa cannot compute for you.</p>
+  </div>
+  <div class="sign-two">
+    <div class="sign-card" id="signCard">
+      <div class="sign-rail">
+        <span class="sign-rail-step on" id="siRail1"><i class="sign-rail-n">1</i><span data-t="siStep1">Account</span></span>
+        <span class="sign-rail-bar"></span>
+        <span class="sign-rail-step" id="siRail2"><i class="sign-rail-n">2</i><span data-t="siStep2">Saṅkalpa</span></span>
+        <span class="sign-rail-bar"></span>
+        <span class="sign-rail-step" id="siRail3"><i class="sign-rail-n">3</i><span data-t="siStep3">Begin</span></span>
+      </div>
+      <section class="sign-step" data-step="who">
+        <h2 class="sign-h" data-t="siS1H">One address, one code</h2>
+        <p class="sign-p" data-t="siS1P">No password to remember. A six-digit code arrives once and then expires.</p>
+        <label class="sign-field">
+          <span class="sign-label" data-t="siWho">Phone or email</span>
+          <input class="sign-in" id="siWhoIn" type="text" autocomplete="email" spellcheck="false" placeholder="you@example.com · +91 98765 43210" />
+        </label>
+        <p class="sign-err" id="siWhoErr" hidden data-t="siWhoBad">That reads as neither a phone number nor an email address.</p>
+        <div class="sign-acts">
+          <button class="cta" id="siSend" type="button"><span data-t="siSend">Send a one-time code</span><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h13M13 6l6 6-6 6"/></svg></button>
+          <a class="sign-quiet" href="library.html" data-t="siNoAcct">Read without an account</a>
+        </div>
+      </section>
+      <section class="sign-step" data-step="code" hidden>
+        <h2 class="sign-h" data-t="siS2H">The six digits</h2>
+        <p class="sign-p"><span data-t="siSentTo">Sent to</span> <b id="siSentId"></b></p>
+        <div class="sign-code" id="siCode">
+          <input inputmode="numeric" maxlength="1" aria-label="Digit 1" />
+          <input inputmode="numeric" maxlength="1" aria-label="Digit 2" />
+          <input inputmode="numeric" maxlength="1" aria-label="Digit 3" />
+          <input inputmode="numeric" maxlength="1" aria-label="Digit 4" />
+          <input inputmode="numeric" maxlength="1" aria-label="Digit 5" />
+          <input inputmode="numeric" maxlength="1" aria-label="Digit 6" />
+        </div>
+        <div class="sign-acts">
+          <button class="cta" id="siVerify" type="button" disabled><span data-t="siVerify">Verify</span><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h13M13 6l6 6-6 6"/></svg></button>
+          <button class="sign-quiet" id="siResend" type="button" data-t="siResend">Send it again</button>
+          <button class="sign-quiet" id="siOther" type="button" data-t="siOther">Use another address</button>
+        </div>
+        <p class="sign-demo" data-t="siDemo">A design prototype — any six digits will do.</p>
+      </section>
+      <section class="sign-step" data-step="flyleaf" hidden>
+        <h2 class="sign-h" data-t="siS3H">Two lines the saṅkalpa cannot compute</h2>
+        <p class="sign-p" data-t="siS3P">The saṃvatsara, the māsa, the tithi and the deśa are already set for today. Only these two are yours to say.</p>
+        <label class="sign-field">
+          <span class="sign-label" data-t="siNamaL">Your nāma</span>
+          <input class="sign-in" id="siNama" type="text" autocomplete="name" data-tp="siNamaPh" placeholder="The name you are called by in the rite" />
+        </label>
+        <div class="sign-field">
+          <span class="sign-label" data-t="siGotraL">Your gotra</span>
+          <div class="sign-auto" id="siGotraWrap">
+            <input class="sign-in" id="siGotra" type="text" autocomplete="off" spellcheck="false" role="combobox" aria-expanded="false" aria-autocomplete="list" data-tp="siGotraPh" placeholder="Start typing — Bhāradvāja, Kāśyapa…" />
+            <span class="sign-auto-echo" id="siGotraEcho"></span>
+            <div class="sign-auto-menu" id="siGotraMenu" role="listbox" hidden></div>
+          </div>
+          <button class="sign-dunno" id="siDunno" type="button" data-t="siDunno">Don’t know it? Kāśyapa is the accepted answer.</button>
+        </div>
+        <div class="sign-field">
+          <span class="sign-label" data-t="siRecitL">The clause is declined for</span>
+          <div class="sign-seg" id="siGender" role="group">
+            <button type="button" data-g="male" data-t="siMale">Male · gotrasya</button>
+            <button type="button" data-g="female" data-t="siFemale">Female · gotrāyāḥ</button>
+          </div>
+        </div>
+        <div class="sign-line" id="siLine"></div>
+        <div class="sign-acts">
+          <button class="cta" id="siKeep" type="button" disabled><span data-t="siKeep">Keep these</span><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h13M13 6l6 6-6 6"/></svg></button>
+          <button class="sign-quiet" id="siSkip" type="button" data-t="siSkip">Skip — add them later</button>
+        </div>
+        <p class="sign-demo" data-t="siPrivate">Kept in this browser, and in the app you install. The gotra and nāma are never sent anywhere.</p>
+      </section>
+      <section class="sign-step" data-step="done" hidden>
+        <div class="sign-who" id="siWhoRow"></div>
+        <h2 class="sign-h" id="siDoneH"></h2>
+        <p class="sign-p" id="siDoneP"></p>
+        <div class="sign-clause" id="siClause"></div>
+        <div class="sign-acts" id="siDoneActs"></div>
+      </section>
+    </div>
+    <aside class="sign-side">
+      <div class="pane">
+        <span class="limb-label" data-t="siKnownCap">What today already knows</span>
+        <div class="sign-known" id="siKnown"></div>
+        <div class="sign-place" id="siPlace"></div>
+      </div>
+      <div class="pane">
+        <span class="limb-label" data-t="whySignIn">Why sign in</span>
+        <ul class="sign-feat">
+          <li><h4 data-t="acct1">Your place, in both rooms</h4><p data-t="acct1P">The verse you left in the pūjā room is the verse waiting at the desk.</p></li>
+          <li><h4 data-t="acct2">A thread that survives a new phone</h4><p data-t="acct2P">Japa rounds, pārāyaṇa days and a vow kept are held for you.</p></li>
+          <li><h4 data-t="acct3">The saṅkalpa remembers you</h4><p data-t="acct3P">Nāma, gotra and deśa are said once, not typed every morning.</p></li>
+        </ul>
+      </div>
+      <div class="note" data-th="siNoteFoot"><b>Nothing is required to read.</b> Every text, the calendar and the pañcāṅga stay open without an account.</div>
+    </aside>
+  </div>
+</div>
+<div style="height:70px"></div>
+<script src="stuti-translit.js"></script>
+<script src="stuti-prefs.js"></script>
+<script src="stuti-ephemeris.js"></script>
+<script src="stuti-sankranti-data.js"></script>
+<script src="stuti-reckoning.js"></script>
+<script src="stuti-panchanga-engine.js"></script>
+<script src="stuti-sankalpa-data.js"></script>
+<script src="stuti-desa.js"></script>
+<script src="stuti-flyleaf.js"></script>
+<script src="site-i18n.js"></script>
+<script src="site-lib.js"></script>
+<script src="site-panch.js"></script>
+<script src="site-signin.js"></script>
+<script src="site-chrome.js"></script>
+</body>
+</html>

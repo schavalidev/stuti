@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="day">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Stuti · Welcome note</title>
+<link rel="stylesheet" href="stuti.css" />
+<link rel="stylesheet" href="stuti-ops.css" />
+<style>
+.note{margin-top:34px;padding:34px 36px 30px;border:1px solid var(--line);border-radius:18px;background:var(--surface);max-width:66ch}
+.note p{font-size:16.5px;line-height:1.7;color:var(--ink);margin:0 0 16px;text-wrap:pretty}
+.note h3{margin:26px 0 8px}
+.note ul,.note ol{margin:0 0 16px;padding-left:22px}
+.note li{font-size:16px;line-height:1.65;color:var(--ink);margin-top:6px;text-wrap:pretty}
+.note code{font-size:.93em;padding:1px 7px;border-radius:5px;background:color-mix(in oklab,var(--ink) 7%,transparent);color:var(--ink)}
+.key{display:inline-block;font-family:var(--font-display);font-size:22px;letter-spacing:.06em;padding:4px 16px;border-radius:10px;background:color-mix(in oklab,var(--gold) 16%,var(--surface-2));color:var(--gold-deep)}
+.fill{border-bottom:1.5px dashed color-mix(in oklab,var(--gold) 60%,transparent);color:var(--gold-deep);padding:0 4px}
+.tools{display:flex;gap:10px;margin-top:22px;flex-wrap:wrap}
+.tools button{min-height:44px;padding:0 18px;border-radius:999px;border:1px solid var(--line);background:var(--surface);color:var(--ink);font:600 14px var(--font-ui);cursor:pointer}
+.tools button:hover{border-color:color-mix(in oklab,var(--gold) 40%,var(--line));color:var(--gold-deep)}
+.pre-note{margin-top:22px;font-size:14.5px;line-height:1.6;color:var(--ink-soft);max-width:66ch}
+</style>
+</head>
+<body class="ops">
+<div class="page">
+<div class="top">
+<div class="brand"><svg width="20" height="23" viewBox="0 0 24 28" fill="none" aria-hidden="true"><path d="M12 1.5c2.6 3.2 5.4 5.7 5.4 9.4A5.4 5.4 0 0 1 12 16.3a5.4 5.4 0 0 1-5.4-5.4C6.6 7.2 9.4 4.7 12 1.5z" fill="var(--accent)"></path><path d="M12 6.2c1.3 1.7 2.7 3 2.7 4.9A2.7 2.7 0 0 1 12 13.8a2.7 2.7 0 0 1-2.7-2.7c0-1.9 1.4-3.2 2.7-4.9z" fill="color-mix(in oklab, var(--accent) 30%, #fff)"></path></svg><span class="brand-name">Stuti</span><span class="brand-dev">स्तुति</span></div>
+<button class="theme-btn" id="tt" aria-label="Day or night"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 14.5A8 8 0 1 1 9.5 4a6.3 6.3 0 0 0 10.5 10.5z"></path></svg></button>
+</div>
+<nav class="ops-nav"><a href="Stuti.html">The app</a><a href="Launch Plan.html">Launch plan</a><a href="Launch Tracker.html">Launch tracker</a><a href="Founders Guide 4 Weeks.html">4-week guide</a><a href="Work Items.html">Work items</a><a href="Daily Plan.html">Daily plan</a><a class="here" href="Welcome Note.html">Welcome note</a><a href="Pending.html">Pending</a><a href="Changelog.html">Changelog</a></nav>
+
+<div class="head">
+<div class="eyebrow">Beta · Sunday 6 September</div>
+<h1>The note testers receive</h1>
+<p class="lede">Sent with the invite, by WhatsApp or mail. Warm, short, honest — it says what works, what is deliberately absent, why to install, what is counted, and how to write back. Fill the link before sending; the passcode and address are read from the build.</p>
+<div class="tools"><button id="copy">Copy as plain text</button><button id="wa">Copy for WhatsApp</button></div>
+<p class="pre-note">Work item B3. The two copies differ only in formatting — WhatsApp gets bold markers and shorter line breaks.</p>
+</div>
+
+<article class="note" id="note">
+<p>Namaste,</p>
+<p>Thank you for agreeing to try Stuti before anyone else does. It is a small app for reading stotras — in Telugu, Devanāgarī or Roman letters, with the day's tithi and the vratas of the month alongside. It was built for the elders in our own family first, so if something is hard to read or hard to reach, that is a fault in the app, not in you. Please say so.</p>
+
+<h3>Getting in</h3>
+<ol>
+<li>Open <span class="fill" data-fill="link">https://‹link›</span> on your phone.</li>
+<li>When asked for a word, type <span class="key" data-gate>matsya</span> — it is the same for everyone invited, and asked only once.</li>
+<li>Answer the few questions it asks: your script, the deities you keep, your town for the almanac.</li>
+</ol>
+
+<h3>Please install it</h3>
+<p>Stuti works in the browser, but it is meant to sit on your home screen like any other app — it opens faster, fills the screen, and reads without a network once it has loaded once.</p>
+<ul>
+<li><b>iPhone / iPad</b> — in Safari, tap the Share button (the square with an arrow), then <b>Add to Home Screen</b>, then Add.</li>
+<li><b>Android</b> — in Chrome, tap the three dots at the top right, then <b>Add to Home screen</b> or <b>Install app</b>.</li>
+</ul>
+
+<h3>What is there</h3>
+<ul>
+<li>A library of about seventy stotras, each readable in three scripts, with meanings where we have them.</li>
+<li>A saṅkalpa and nitya page for the day, the pañcāṅga for your town, and guides to the vratas, nomus and months.</li>
+<li>Your reading place, saved texts and practice are kept on this phone only — nothing leaves it.</li>
+</ul>
+
+<h3>What is not there, on purpose</h3>
+<ul>
+<li>No audio yet. Recordings will come when we have ones worth your ears.</li>
+<li>No account or sign-in. Practice stays on the device; if you change phones, Settings has a way to carry it across.</li>
+<li>Reminders ring only while Stuti is open. Proper notifications need a server we have not built.</li>
+<li>Many texts still carry a note saying they await proof against a printed source. If you know a text well and spot an error, that is the most valuable thing you can tell us.</li>
+</ul>
+
+<h3>What we count</h3>
+<p>Only which screens are opened and which features are used — never which text you read, never your name, never a verse. If your browser sends a do-not-track signal, we count nothing at all.</p>
+
+<h3>Three small asks this week</h3>
+<ol>
+<li>Read one text a day, in your own script.</li>
+<li>Open the guide for the nearest vrata.</li>
+<li>Search for a text you already know by heart, and tell us if it is wrong.</li>
+</ol>
+
+<h3>Writing back</h3>
+<p>The easiest way is the <b>Write to us</b> door in Settings — it attaches the build and your screen size so we can reproduce what you saw. Or mail <span data-support>feedback@stuti.app</span> directly. We reply within <span data-days>three</span> days. Praise is nice; a screenshot of something broken is better.</p>
+
+<p>With gratitude,<br /><span class="fill" data-fill="name">‹your name›</span></p>
+</article>
+
+</div>
+<script src="stuti-build.js"></script>
+<script src="stuti-ops.js"></script>
+<script>
+(function(){
+  var B = window.STUTI_BUILD || {};
+  var g = document.querySelector('[data-gate]'); if (g && B.GATE) g.textContent = B.GATE;
+  var s = document.querySelector('[data-support]'); if (s && B.SUPPORT) s.textContent = B.SUPPORT;
+  var d = document.querySelector('[data-days]'); if (d && B.REPLY_DAYS) d.textContent = ['zero','one','two','three','four','five','six','seven'][B.REPLY_DAYS] || B.REPLY_DAYS;
+  document.querySelectorAll('.fill').forEach(function(el){
+    var k = 'stuti-welcome-' + el.dataset.fill;
+    var v = localStorage.getItem(k); if (v) el.textContent = v;
+    el.contentEditable = 'true'; el.spellcheck = false;
+    el.addEventListener('input', function(){ localStorage.setItem(k, el.textContent.trim()); });
+  });
+  function text(wa){
+    var out = [];
+    document.querySelectorAll('#note > *').forEach(function(n){
+      var tag = n.tagName;
+      var t = function(el){ var s = el.innerText.replace(/\s+\n/g,'\n').trim(); if (wa) el.querySelectorAll('b').forEach(function(b){ s = s.replace(b.innerText, '*' + b.innerText + '*'); }); return s; };
+      if (tag === 'H3') out.push((wa ? '*' + n.innerText.trim() + '*' : n.innerText.trim().toUpperCase()));
+      else if (tag === 'UL') out.push([].map.call(n.children, function(li){ return '• ' + t(li); }).join('\n'));
+      else if (tag === 'OL') out.push([].map.call(n.children, function(li, i){ return (i+1) + '. ' + t(li); }).join('\n'));
+      else out.push(t(n));
+    });
+    return out.join('\n\n');
+  }
+  function copy(btn, wa){
+    var s = text(wa), old = btn.textContent;
+    navigator.clipboard.writeText(s).then(function(){ btn.textContent = 'Copied'; setTimeout(function(){ btn.textContent = old; }, 1400); });
+  }
+  document.getElementById('copy').onclick = function(){ copy(this, false); };
+  document.getElementById('wa').onclick = function(){ copy(this, true); };
+})();
+</script>
+</body>
+</html>

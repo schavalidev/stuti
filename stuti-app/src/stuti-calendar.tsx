@@ -6,8 +6,11 @@ import { masaMixFor } from "./stuti-masa";
 import { STUTI_MUHURTA } from "./stuti-muhurta";
 import { AKSHARA_PANCHANGA } from "./stuti-panchanga-engine";
 import { LocationControl, MoonPhase, RTU_VIS, SK_CONST, SeasonAmbient, samvatsaraFor, useLoc } from "./stuti-panchanga";
+import { PitruRegisterDoor } from "./stuti-pitru-register";
+import { PitruDaysBody, piT } from "./stuti-pitru";
 import { masaShown } from "./stuti-reckoning";
 import { STUTI_SANDHYA } from "./stuti-sandhya-core";
+import { STUTI_TARPANA } from "./stuti-tarpana";
 import { STUTI_TITHIS } from "./stuti-tithis-core";
 import { MyTithisCard, TithiSheet, ttT } from "./stuti-tithis";
 import { STUTI_TRANSLIT } from "./stuti-translit";
@@ -20,6 +23,10 @@ import { STUTI_VRATA } from "./stuti-vrata-data";
    and observances. Built on AKSHARA_PANCHANGA, location-aware.
    ============================================================ */
 const { useState: useCS, useMemo: useCM, useRef: useCR, useEffect: useCE } = React;
+/* The register is opened from the pitṛ tab, so coming back to the pañcāṅga tab
+   would lose the question the reciter was asking. Held outside the component,
+   which unmounts on that trip. */
+let calLens = "panchanga";
 
 /* the Indic columns name the vāra rather than abbreviating it to one akshara —
    a lone శ or श does not tell śukra from śani */
@@ -34,19 +41,23 @@ function calFont(s) {
 }
 
 function CalendarView({ go, lang = "deva" }) {
-  const P = AKSHARA_PANCHANGA, L = STUTI_L, TR = STUTI_TRANSLIT, V = STUTI_VRATA;
+  const P = AKSHARA_PANCHANGA, L = STUTI_L, TR = STUTI_TRANSLIT, V = STUTI_VRATA, TP = STUTI_TARPANA;
   const { loc } = useLoc();
   const today = new Date(); today.setHours(0, 0, 0, 0);
-  const [cursor, setCursor] = useCS(() => {
-    try { const s = JSON.parse(localStorage.getItem("stuti-cal-cursor")); if (s && Number.isInteger(s.y) && Number.isInteger(s.m)) return s; } catch (e) {}
-    return { y: today.getFullYear(), m: today.getMonth() };
-  });
-  const [sel, setSel] = useCS(() => {
-    try { const s = localStorage.getItem("stuti-cal-sel"); if (s) { const d = new Date(s); if (!isNaN(d)) return d; } } catch (e) {}
-    return new Date(today);
-  });
-  useCE(() => { try { localStorage.setItem("stuti-cal-cursor", JSON.stringify(cursor)); } catch (e) {} }, [cursor]);
-  useCE(() => { try { localStorage.setItem("stuti-cal-sel", sel.toISOString()); } catch (e) {} }, [sel]);
+  /* The browsed month is session state and nothing more. It used to be kept in
+     localStorage for six hours so returning to the tab landed where you left
+     off, but a pañcāṅga is asked "what is today" far more often than "where
+     was I", and coming back to a stale month reads as the app being wrong
+     about the date. Leaving the tab unmounts this view, so the cursor and the
+     selected day are simply today again on every entry. */
+  const [cursor, setCursor] = useCS(() => ({ y: today.getFullYear(), m: today.getMonth() }));
+  const [sel, setSel] = useCS(() => new Date(today));
+  /* The month is the screen; the lens is what is being asked of it. Kept in
+     state and not in the route, so a lens is a question about the month rather
+     than a place to navigate to — the grid, the cursor and the selected day
+     all survive the switch untouched. */
+  const [lens, setLensRaw] = useCS(calLens);
+  const setLens = (v) => { calLens = v; setLensRaw(v); };
   const [pickerOpen, setPickerOpen] = useCS(false);
   const [pickYear, setPickYear] = useCS(() => today.getFullYear());
   const [yearOpen, setYearOpen] = useCS(false);
@@ -57,7 +68,7 @@ function CalendarView({ go, lang = "deva" }) {
     if (el) yearListRef.current.scrollTop = el.offsetTop - yearListRef.current.clientHeight / 2 + el.offsetHeight / 2;
   }, [yearOpen]);
   const dateLocale = lang === "telugu" ? "te-IN" : lang === "deva" ? "hi-IN" : undefined;
-  const pick = (o) => lang === "telugu" ? { main: o.tel, sub: o.iast } : lang === "roman" ? { main: o.iast, sub: null } : { main: o.deva, sub: o.iast };
+  const pick = (o) => lang === "telugu" ? { main: o.tel, sub: o.telIast || o.iast } : lang === "roman" ? { main: o.iast, sub: null } : { main: o.deva, sub: o.iast };
   const sameDay = (a, b) => a && b && a.getFullYear() === b.getFullYear() && a.getMonth() === b.getMonth() && a.getDate() === b.getDate();
 
   const first = new Date(cursor.y, cursor.m, 1);
@@ -139,17 +150,27 @@ function CalendarView({ go, lang = "deva" }) {
       const date = new Date(cursor.y, cursor.m, d);
       const pa = P.forDay(date, loc);
       const fests = (V && monthFestMap[V.dayKey(date)]) || [];
-      arr.push({ d, date, phase: pa.phase, isFull: pa.tithiIndex === 14, isNew: pa.tithiIndex === 29, vrata: pa.observances.some(o => o.kind === "vrata"), fest: fests.length > 0 });
+      /* the house's own days and the tarpaṇa days are read here so the grid can
+         mark them, which no lens could do while they lived in lists below */
+      const mine = fests.some((f) => f.personal);
+      let tarp = false;
+      try { tarp = !!(TP && TP.occasionsOn(date, loc) || []).length; } catch (e) {}
+      arr.push({ d, date, phase: pa.phase, isFull: pa.tithiIndex === 14, isNew: pa.tithiIndex === 29, vrata: pa.observances.some(o => o.kind === "vrata"), fest: fests.length > 0, mine, tarp });
     }
     return arr;
   }, [cursor.y, cursor.m, loc, monthFestMap]);
   const selFests = (V && monthFestMap[V.dayKey(sel)]) || [];
+  const selMine = selFests.filter((f) => f.personal);
+  const selTarp = useCM(() => { try { return TP.occasionsOn(sel, loc) || []; } catch (e) { return []; } }, [sel, loc]);
+  /* one implementation, in STUTI_TARPANA — the door below this card reads the
+     same call, so the two cannot state different days */
+  const nextTarp = useCM(() => { try { return TP.nextOccasion(sel, loc); } catch (err) { return null; } }, [sel, loc]);
 
   // selected-day detail
   const pa = P.forDay(sel, loc);
   const samv = samvatsaraFor(sel);
   const samvP = pick({ iast: samv[0], deva: samv[1], tel: TR.convert(samv[1], "telugu") });
-  const tithiP = pick({ iast: pa.tithiName, deva: pa.tithiDeva, tel: pa.tithiTel });
+  const tithiP = pick({ iast: pa.tithiName, deva: pa.tithiDeva, tel: pa.tithiTel, telIast: pa.tithiTelIast });
   const pakshaP = pick({ iast: pa.paksha, deva: pa.pakshaDeva, tel: pa.pakshaTel });
   const vara = SK_CONST.VARA_GRAHA[pa.varaIdx];
   /* a limb without its ending is half the answer — a printed pañcāṅga
@@ -296,6 +317,17 @@ function CalendarView({ go, lang = "deva" }) {
   ].concat(winRows).concat(syRows);
   /* the tithi's closing hour rides with the tithi itself, as on the home card */
   const untilW = L.t("untilTime", lang);
+  /* The day's limbs run to two dozen rows, and under them sit the house's own
+     tithis and the pitṛ calendar — so the sheet opened three screens deep on a
+     day nobody had asked a question about. Collapsed it keeps the head and the
+     first handful of limbs; the rest is one tap away, and the choice is
+     remembered. */
+  const [detailOpen, setDetailOpen] = useCS(() => { try { return localStorage.getItem("stuti-cal-detail") === "open"; } catch (e) { return false; } });
+  useCE(() => { try { localStorage.setItem("stuti-cal-detail", detailOpen ? "open" : "shut"); } catch (e) {} }, [detailOpen]);
+  const firstSec = rows.findIndex((r) => r.sec);
+  const cut = firstSec > 0 ? Math.min(firstSec, 6) : 6;
+  const shownRows = detailOpen ? rows : rows.slice(0, cut);
+
   const tEnd = P.fmtTime(pa.tithiEndMin) + (pa.tithiEndsTomorrow ? " (" + L.t("tomorrowShort", lang) + ")" : "");
   const endsStr = (from(pa.tithiStartMin).trim() + " ").replace(/^ $/, "")
     + (lang === "roman" ? untilW + " " + tEnd : tEnd + " " + untilW);
@@ -379,7 +411,7 @@ function CalendarView({ go, lang = "deva" }) {
                   <div className="eyebrow sr-cap">{L.t("srDays", lang)} <i>{dayHits.length}</i></div>
                   <div className="cal-fest-card" style={{ margin: 0 }}>
                     {dayHits.map(({ date, p, away }) => {
-                      const tp = pick({ iast: p.tithiName, deva: p.tithiDeva, tel: p.tithiTel }), pp = pick({ iast: p.paksha, deva: p.pakshaDeva, tel: p.pakshaTel });
+                      const tp = pick({ iast: p.tithiName, deva: p.tithiDeva, tel: p.tithiTel, telIast: p.tithiTelIast }), pp = pick({ iast: p.paksha, deva: p.pakshaDeva, tel: p.pakshaTel });
                       const obs = p.observances.map((o) => (lang === "deva" ? (o.deva || o.name) : o.name)).join(" · ");
                       return (
                         <button key={date.toDateString()} className="cal-sr-day" onClick={() => jumpTo(date)}>
@@ -452,20 +484,34 @@ function CalendarView({ go, lang = "deva" }) {
       </div>
       <div className="cal-grid">
         {Array.from({ length: startDow }).map((_, i) => <div key={"b" + i} className="cal-cell cal-cell-empty" />)}
-        {days.map(({ d, date, phase, isFull, isNew, vrata, fest }) => (
+        {days.map(({ d, date, phase, isFull, isNew, vrata, fest, mine, tarp }) => (
           <button key={d} className={"cal-cell" + (sameDay(date, sel) ? " sel" : "") + (sameDay(date, today) ? " today" : "")}
             onClick={() => setSel(new Date(date))}>
             <span className="cal-daynum">{d}</span>
             <span className="cal-marks">
               {(isFull || isNew) && <MoonPhase phase={phase} size={13} />}
-              {fest && <span className="cal-dot cal-dot-fest" />}
-              {!fest && vrata && <span className="cal-dot" />}
+              {lens === "panchanga" && fest && <span className="cal-dot cal-dot-fest" />}
+              {lens === "panchanga" && !fest && vrata && <span className="cal-dot" />}
+              {/* the house's own days stay faintly marked under the pañcāṅga,
+                  so they are seen before anyone thinks to tap a tab */}
+              {lens === "panchanga" && mine && <span className="cal-dot cal-dot-mine is-faint" />}
+              {lens === "tithis" && mine && <span className="cal-dot cal-dot-mine" />}
+              {(lens === "pitru" || lens === "tarpana") && tarp && <span className="cal-dot cal-dot-pitru" />}
             </span>
           </button>
         ))}
       </div>
 
-      {selFests.length > 0 && (
+      {/* the month is never tabbed away from: the tabs sit under it and change
+          what is being asked of it */}
+      <div className="cal-lenses" role="tablist">
+        {[["panchanga", L.t("calendar", lang)], ["tithis", ttT("cap", lang)], ["pitru", piT ? piT("cap", lang) : "Pitṛ"], ["tarpana", piT ? piT("title", lang) : "Tarpaṇa"]].map(([id, label]) => (
+          <button key={id} role="tab" aria-selected={lens === id} className={"cal-lens" + (lens === id ? " on" : "")}
+            style={{ fontFamily: calFont(lang) }} onClick={() => setLens(id)}>{label}</button>
+        ))}
+      </div>
+
+      {lens === "panchanga" && selFests.length > 0 && (
         <div className="cal-fest-card">
           {selFests.map(v => (
             <button key={v.id} className={"cal-fest-item" + (v.personal ? " is-mine" : "")} onClick={() => v.personal ? setTithiSheet({ rec: v.rec }) : go("browse", { libSub: { kind: "vrata", key: v.id, returnTo: "calendar" } })}>
@@ -480,6 +526,7 @@ function CalendarView({ go, lang = "deva" }) {
         </div>
       )}
 
+      {lens === "panchanga" && (
       <section className="cal-detail">
         <div className="cal-detail-head">
           <MoonPhase phase={pa.phase} size={44} />
@@ -488,15 +535,17 @@ function CalendarView({ go, lang = "deva" }) {
             <div className="cal-detail-tithi" style={{ fontFamily: calFont(lang) }}>{tithiLine}</div>
             <div className="cal-detail-ends">{endsStr}</div>
           </div>
-          {!sameDay(sel, today) && (
-            <button className="cal-today-btn" onClick={jumpToday}>
-              <Icon name="prev" size={13} />{L.t("backToToday", lang)}
-            </button>
-          )}
+          <div className="cal-detail-acts">
+            {!sameDay(sel, today) && (
+              <button className="cal-today-btn" onClick={jumpToday}>
+                <Icon name="prev" size={13} />{L.t("backToToday", lang)}
+              </button>
+            )}
+          </div>
         </div>
 
         <div className="cal-detail-grid">
-          {rows.map(r => r.sec ? (
+          {shownRows.map(r => r.sec ? (
             <div className="pdrow pdrow-sec" key={r.k}><span className="eyebrow">{L.t(r.sec, lang)}</span></div>
           ) : (
             <div className={"pdrow" + (r.tone ? " pdrow-" + r.tone : "") + (r.now ? " now" : "")} key={r.k}>
@@ -510,6 +559,18 @@ function CalendarView({ go, lang = "deva" }) {
             </div>
           ))}
         </div>
+        {rows.length > shownRows.length && (
+          <button className="cal-detail-more" onClick={() => setDetailOpen(true)}>
+            {L.t("calMoreLimbs", lang).replace("{n}", rows.length - shownRows.length)}
+            <Icon name="chev" size={14} />
+          </button>
+        )}
+        {detailOpen && (
+          <button className="cal-detail-more is-open" onClick={() => setDetailOpen(false)}>
+            {L.t("calFewerLimbs", lang)}
+            <Icon name="chev" size={14} />
+          </button>
+        )}
 
         {pa.observances.length > 0 ? (
           <div className="cal-obs">
@@ -517,13 +578,80 @@ function CalendarView({ go, lang = "deva" }) {
               <div className="pd-obs" key={o.id}><b>{lang === "deva" ? (o.deva || o.name) : o.name}</b> — {o.note}</div>
             ))}
           </div>
-        ) : (
+        ) : detailOpen ? (
           <div className="cal-detail-note">{L.t("ordinaryDay", lang)}</div>
-        )}
-        <div className="cal-detail-note">{L.t("panchangaNote", lang)}</div>
-        <button className="tt-addhere" onClick={() => setTithiSheet({ seedDate: sel })}><Icon name="plus" size={15} />{ttT("addHere", lang)}</button>
+        ) : null}
+        {detailOpen && <div className="cal-detail-note">{L.t("panchangaNote", lang)}</div>}
       </section>
-      <MyTithisCard lang={lang} onJump={jumpTo} />
+      )}
+
+      {lens === "tithis" && (
+        <React.Fragment>
+          <section className="cal-detail">
+            <div className="cal-detail-head">
+              <div className="cal-detail-headbody">
+                <div className="cal-detail-date">{selDateStr}</div>
+                <div className={"cal-detail-tithi" + (selMine.length ? "" : " is-none")} style={{ fontFamily: calFont(lang) }}>
+                  {selMine.length ? selMine.map((f) => nameOf(f.name)).join(" · ") : ttT("noneToday", lang)}
+                </div>
+              </div>
+              <div className="cal-detail-acts">
+                {!sameDay(sel, today) && (
+                  <button className="cal-today-btn" onClick={jumpToday}>
+                    <Icon name="prev" size={13} />{L.t("backToToday", lang)}
+                  </button>
+                )}
+                <button className="cal-today-btn tt-addhere-sm cal-add-here" onClick={() => setTithiSheet({ seedDate: sel })}>
+                  <Icon name="plus" size={15} />{ttT("addHere", lang)}
+                </button>
+              </div>
+            </div>
+          </section>
+          <MyTithisCard lang={lang} onJump={jumpTo} />
+        </React.Fragment>
+      )}
+
+      {lens === "pitru" && (
+        <React.Fragment>
+          {/* three lines and a door. The tithi and the pakṣa are one tab away;
+              repeating them here would only push the register off the screen. */}
+          <section className="cal-detail cal-pit">
+            <div className="cal-detail-date">{selDateStr}</div>
+            <div className="cal-pit-say" style={{ fontFamily: calFont(lang) }}>
+              {selTarp.length ? selTarp.map((o) => nameOf(o.name)).join(" · ") : piT("noneToday", lang)}
+            </div>
+            {nextTarp && (
+              <button className="cal-pit-nextrow" onClick={() => jumpTo(nextTarp.date)}>
+                <span className="cal-pit-nextbody">
+                  <span className="eyebrow">{piT("nextCap", lang)}</span>
+                  <span className="cal-pit-nextname" style={{ fontFamily: calFont(lang) }}>{nameOf(nextTarp.name)}</span>
+                  <span className="cal-pit-nextwhen">
+                    {nextTarp.last
+                      ? piT("spanIs", lang)
+                          .replace("__", nextTarp.date.toLocaleDateString(dateLocale, { day: "numeric", month: "long" }))
+                          .replace("@@", nextTarp.last.toLocaleDateString(dateLocale, { day: "numeric", month: "long" }))
+                      : nextTarp.date.toLocaleDateString(dateLocale, { weekday: "long", day: "numeric", month: "long" })}
+                    {" · " + awayStr(V.daysAway(nextTarp.date))}
+                  </span>
+                </span>
+                <Icon name="next" size={16} />
+              </button>
+            )}
+          </section>
+          <div className="cal-pit-doors">
+            {PitruRegisterDoor && <PitruRegisterDoor lang={lang} onOpen={() => go("pitruRegister", { from: "calendar" })} />}
+          </div>
+        </React.Fragment>
+      )}
+
+      {/* the tarpaṇa days, in the month they belong to — the page they used to
+          sit behind said the same thing a tap further away */}
+      {lens === "tarpana" && PitruDaysBody && (
+        <React.Fragment>
+          <p className="pit-lede pit-lede-sm cal-tarp-lede">{piT("lede", lang)}</p>
+          <PitruDaysBody lang={lang} />
+        </React.Fragment>
+      )}
       {tithiSheet && <TithiSheet lang={lang} rec={tithiSheet.rec} seedDate={tithiSheet.seedDate} onClose={() => setTithiSheet(null)} />}
       </React.Fragment>
       )}

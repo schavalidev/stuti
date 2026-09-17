@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="design_doc_mode" content="canvas" />
+<title>Stuti · Home design directions</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Marcellus&family=Mukta:wght@300;400;500;600;700&family=Noto+Sans+Devanagari:wght@400;500;600;700&family=Tiro+Devanagari+Sanskrit&display=swap');
+:root{--deva:'Noto Sans Devanagari','Mukta',sans-serif;--tiro:'Tiro Devanagari Sanskrit','Noto Sans Devanagari',serif;--disp:'Marcellus',Georgia,serif;--ui:'Mukta',system-ui,sans-serif}
+body{font-family:var(--ui);font-style:normal}
+.cap{position:absolute;width:390px;color:#2f2a24;font-size:15px;font-weight:600;letter-spacing:.02em}
+.cap small{display:block;font-weight:400;color:#75705f;font-size:12.5px;line-height:1.5;margin-top:3px;text-wrap:pretty}
+.ph{position:absolute;width:390px;height:844px;border-radius:46px;overflow:hidden;box-shadow:0 2px 0 rgba(255,255,255,.6) inset,0 40px 90px -34px rgba(35,24,8,.45),0 0 0 1px rgba(35,24,8,.08);display:flex;flex-direction:column}
+.sbar{flex:none;height:52px;display:flex;align-items:center;justify-content:space-between;padding:14px 30px 0;font-size:15px;font-weight:600;letter-spacing:.02em}
+.sbar svg{display:block}
+.tabs{position:absolute;left:0;right:0;bottom:0;display:grid;grid-template-columns:repeat(3,1fr);gap:6px;padding:9px 14px 26px}
+.tab{min-height:54px;border-radius:16px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:3px;font-size:12.5px;font-weight:600}
+.tab svg{display:block}
+.chev{flex:none}
+.body{flex:1;min-height:0;overflow:hidden;display:flex;flex-direction:column}
+
+/* ============ A · Current (reference) ============ */
+.fA{background:radial-gradient(120% 80% at 50% 0%,rgba(255,228,168,.55),transparent 60%),linear-gradient(180deg,#F2E6D2,#F7EFE2 30%);color:#2B2017}
+.fA .body{padding:6px 20px 0}
+.fA .greet{display:flex;align-items:center;justify-content:space-between;font-size:19px;color:#584B3E;padding:6px 2px 14px}
+.fA .loc{display:inline-flex;align-items:center;gap:6px;font-size:13.5px;font-weight:600;color:#6F6356;border:1.5px solid rgba(43,32,23,.12);border-radius:999px;padding:5px 12px;background:#FFFDF8}
+.fA .search{display:flex;align-items:center;gap:11px;min-height:50px;padding:0 18px;margin-bottom:13px;border-radius:999px;background:#FFFDF8;border:1.5px solid rgba(43,32,23,.10);color:#6F6356;font-size:16px}
+.fA .search svg{color:#8a5a2b}
+.fA .card{background:#FFFDF8;border:1px solid rgba(43,32,23,.10);border-radius:26px;padding:18px 18px 6px;box-shadow:0 20px 50px -22px rgba(58,40,20,.4),0 4px 14px -8px rgba(58,40,20,.3)}
+.fA .eyebrow{font-size:12.5px;letter-spacing:.22em;text-transform:uppercase;font-weight:600;color:#8a6a3a}
+.fA .date{font-size:16px;color:#584B3E;margin-top:4px}
+.fA .hero{display:flex;align-items:center;gap:18px;margin:16px 0 4px}
+.fA .tithi{font-family:var(--deva);font-size:44px;line-height:1;color:#7a5310;font-weight:500}
+.fA .tsub{font-size:15px;color:#584B3E;margin-top:7px}
+.fA .rows{margin-top:14px}
+.fA .row{display:flex;align-items:center;justify-content:space-between;gap:18px;padding:11px 2px;border-top:1px solid rgba(43,32,23,.06)}
+.fA .row:first-child{border-top:none}
+.fA .k{font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:#6F6356;font-weight:700;display:inline-flex;align-items:center;gap:9px}
+.fA .v{text-align:right;font-size:20px;line-height:1.15}
+.fA .v.deva{font-family:var(--deva)}
+.fA .v small{display:block;font-size:12.5px;color:#584B3E;margin-top:2px;letter-spacing:0}
+.fA .caution .k{color:#a04a35}.fA .caution .k::before{content:"";width:7px;height:7px;border-radius:50%;background:#C0392B}
+.fA .cta{display:flex;align-items:center;justify-content:center;gap:11px;min-height:56px;margin-top:14px;border-radius:999px;background:#B07A2B;color:#fff;font-weight:700;font-size:17px;box-shadow:0 8px 22px -14px rgba(58,40,20,.4)}
+.fA .sy{margin-top:12px;padding:12px 18px;border-radius:18px;background:#FFFDF8;border:1px solid rgba(43,32,23,.10);display:flex;align-items:center;justify-content:space-between;gap:10px}
+.fA .sy b{font-size:16px;color:#8A5A18;font-weight:600;font-family:var(--deva)}
+.fA .sy span{font-size:13px;color:#584B3E}
+.fA .tabs{background:#FBF4E8;border-top:1px solid rgba(43,32,23,.06)}
+.fA .tab{color:#6F6356}.fA .tab.on{color:#7a4d16;background:#F3E3C6}
+
+/* ============ B · Gilt Edition ============ */
+.fB{background:radial-gradient(120% 70% at 50% 0%,rgba(255,231,180,.6),transparent 62%),linear-gradient(180deg,#F5EBD9,#F8F1E3 34%);color:#2B2017}
+.fB .body{padding:4px 22px 0}
+.fB .greet{display:flex;align-items:baseline;justify-content:space-between;padding:4px 2px 2px}
+.fB .greet b{font-family:var(--tiro);font-weight:400;font-size:23px;color:#3A2E1F}
+.fB .loc{font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:#8a6a3a;font-weight:600;display:inline-flex;gap:6px;align-items:center}
+.fB .search{display:flex;align-items:center;gap:10px;min-height:42px;padding:0 4px;margin:0 0 14px;border-bottom:1px solid rgba(138,90,24,.35);color:#7d7161;font-size:15.5px}
+.fB .search svg{color:#8A5A18}
+.fB .card{position:relative;background:linear-gradient(180deg,#FFFEFA,#FDF8EE);border:1px solid rgba(138,90,24,.30);border-radius:20px;padding:18px 20px 6px;box-shadow:0 24px 50px -30px rgba(58,40,20,.45)}
+.fB .card::before{content:"";position:absolute;inset:5px;border:1px solid rgba(138,90,24,.16);border-radius:15px;pointer-events:none}
+.fB .eyerule{display:flex;align-items:center;gap:12px;justify-content:center}
+.fB .eyerule::before,.fB .eyerule::after{content:"";height:1px;flex:1;background:linear-gradient(90deg,transparent,rgba(138,90,24,.4));}
+.fB .eyerule::after{background:linear-gradient(90deg,rgba(138,90,24,.4),transparent)}
+.fB .eyebrow{font-size:11.5px;letter-spacing:.26em;text-transform:uppercase;font-weight:600;color:#8A5A18;white-space:nowrap}
+.fB .date{text-align:center;font-family:var(--disp);font-size:17px;color:#584B3E;margin-top:8px;letter-spacing:.04em}
+.fB .hero{display:flex;align-items:center;justify-content:center;gap:16px;margin:14px 0 2px;text-align:left}
+.fB .ring{width:64px;height:64px;border-radius:50%;border:1px solid rgba(138,90,24,.4);display:grid;place-items:center;position:relative}
+.fB .ring::before{content:"";position:absolute;inset:-5px;border-radius:50%;border:1px dashed rgba(138,90,24,.25)}
+.fB .tithi{font-family:var(--tiro);font-size:40px;line-height:1.1;color:#2B2017}
+.fB .tsub{font-size:13px;letter-spacing:.16em;text-transform:uppercase;color:#8a6a3a;font-weight:600}
+.fB .rows{margin-top:10px}
+.fB .row{display:flex;align-items:baseline;gap:10px;padding:9px 2px;border-top:1px solid rgba(138,90,24,.12)}
+.fB .k{font-size:11.5px;letter-spacing:.16em;text-transform:uppercase;color:#7C6A4E;font-weight:600;white-space:nowrap}
+.fB .lead{flex:1;border-bottom:1px dotted rgba(138,90,24,.35);transform:translateY(-4px)}
+.fB .v{font-size:18.5px;color:#2B2017;text-align:right}
+.fB .v.deva{font-family:var(--tiro);font-size:20px}
+.fB .v small{font-size:12px;color:#7C6A4E;margin-left:7px}
+.fB .caution .k{color:#A2432E}.fB .caution .v{color:#8E3A26}
+.fB .cta{display:flex;align-items:center;justify-content:center;gap:10px;min-height:54px;margin-top:14px;border-radius:999px;background:linear-gradient(180deg,#C08A3E,#9A671D);border:1px solid #7E5314;box-shadow:0 1px 0 rgba(255,240,200,.55) inset,0 12px 26px -14px rgba(110,72,16,.55);color:#FFF9EC;font-weight:600;font-size:16.5px;letter-spacing:.03em}
+.fB .sy{margin-top:12px;display:flex;align-items:center;justify-content:space-between;gap:10px;padding:11px 4px 0;border-top:1px solid rgba(138,90,24,.18)}
+.fB .sy b{font-family:var(--tiro);font-weight:400;font-size:18px;color:#7A4D16}
+.fB .sy span{font-size:13px;color:#584B3E}
+.fB .badge{font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;color:#8A5A18;border:1px solid rgba(138,90,24,.4);border-radius:999px;padding:3px 9px;font-weight:600}
+.fB .tabs{background:linear-gradient(180deg,rgba(248,241,227,0),#F4EAD6 40%);border-top:1px solid rgba(138,90,24,.2)}
+.fB .tab{color:#7C6A4E}.fB .tab.on{color:#7A4D16;background:none}
+.fB .tab.on i{width:22px;height:1.5px;background:#9A671D;border-radius:2px;margin-top:2px}
+
+/* ============ C · Manuscript Folio ============ */
+.fC{background:#F3E9D5;color:#2A2115;position:relative}
+.fC::before{content:"";position:absolute;inset:0;opacity:.05;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='2'/%3E%3C/filter%3E%3Crect width='140' height='140' filter='url(%23n)'/%3E%3C/svg%3E");pointer-events:none}
+.fC .folio{position:absolute;inset:64px 16px 14px;border:1px solid rgba(42,33,21,.22);pointer-events:none}
+.fC .folio::before,.fC .folio::after{content:"";position:absolute;width:14px;height:14px;border-color:#B03A22;border-style:solid}
+.fC .folio::before{top:-5px;left:-5px;border-width:2px 0 0 2px}
+.fC .folio::after{bottom:-5px;right:-5px;border-width:0 2px 2px 0}
+.fC .body{padding:26px 34px 0;text-align:center;position:relative}
+.fC .datecap{font-size:11.5px;letter-spacing:.3em;text-transform:uppercase;color:#6E5F49;font-weight:600}
+.fC .drule{display:block;width:120px;margin:12px auto 0;border-top:1px solid rgba(42,33,21,.4);position:relative;padding-top:2px}
+.fC .drule::after{content:"";display:block;border-top:1px solid rgba(42,33,21,.22)}
+.fC .tithi{font-family:var(--tiro);font-size:52px;line-height:1.15;margin-top:22px;color:#241A0E}
+.fC .tithi-r{font-size:13px;letter-spacing:.26em;text-transform:uppercase;color:#B03A22;font-weight:600;margin-top:4px}
+.fC .masa{font-family:var(--tiro);font-size:19px;color:#584B3E;margin-top:10px}
+.fC .orn{color:#B03A22;font-size:15px;margin:16px 0 4px;letter-spacing:.6em;text-indent:.6em}
+.fC .grid{display:grid;grid-template-columns:1fr 1fr;margin-top:8px;border-top:1px solid rgba(42,33,21,.18)}
+.fC .cell{padding:13px 6px 11px;border-bottom:1px solid rgba(42,33,21,.12)}
+.fC .cell:nth-child(odd){border-right:1px solid rgba(42,33,21,.12)}
+.fC .ck{font-size:10.5px;letter-spacing:.22em;text-transform:uppercase;color:#B03A22;font-weight:700}
+.fC .cv{font-family:var(--tiro);font-size:21px;margin-top:3px;color:#241A0E}
+.fC .cv small{display:block;font-family:var(--ui);font-size:11.5px;color:#6E5F49;margin-top:1px;letter-spacing:.02em}
+.fC .sy{margin-top:14px;font-size:14px;color:#584B3E}
+.fC .sy b{font-family:var(--tiro);font-weight:400;color:#241A0E;font-size:16.5px}
+.fC .cta{display:inline-flex;align-items:center;gap:10px;margin:16px auto 0;padding:13px 26px;border:1px solid #B03A22;border-radius:2px;color:#8F2E1A;font-size:13px;letter-spacing:.22em;text-transform:uppercase;font-weight:700;background:rgba(176,58,34,.05)}
+.fC .search{display:flex;align-items:center;gap:9px;justify-content:center;margin-top:16px;font-size:13.5px;color:#6E5F49;letter-spacing:.06em}
+.fC .tabs{grid-template-columns:repeat(3,1fr);padding-bottom:24px;background:linear-gradient(180deg,rgba(243,233,213,0),#EFE3CB 46%)}
+.fC .tab{color:#6E5F49;font-size:11.5px;letter-spacing:.18em;text-transform:uppercase;font-weight:700;gap:6px}
+.fC .tab.on{color:#8F2E1A}
+.fC .tab.on::after{content:"";width:5px;height:5px;border-radius:50%;background:#B03A22}
+
+/* ============ D · Dawn Liturgy ============ */
+.fD{background:#FDF9F1;color:#2B2017}
+.fD .sky{position:relative;flex:none;height:346px;background:linear-gradient(180deg,#232849 0%,#3E3A63 26%,#8C5560 52%,#D08355 72%,#EEB169 88%,#F7CE81 100%);color:#FFF7E8;padding:0 22px}
+.fD .sky .sbar{padding:14px 8px 0;color:#F7EEDC}
+.fD .sun{position:absolute;left:50%;bottom:38px;width:54px;height:54px;margin-left:-27px;border-radius:50%;background:radial-gradient(circle at 50% 42%,#FFF3D0,#F5B95A 62%,rgba(245,185,90,0));box-shadow:0 0 60px 22px rgba(247,206,129,.55)}
+.fD .arc{position:absolute;left:24px;right:24px;bottom:64px;height:150px;border:1px dashed rgba(255,244,220,.4);border-bottom:none;border-radius:170px 170px 0 0}
+.fD .arc i{position:absolute;width:7px;height:7px;border-radius:50%;background:#FFEFC4;box-shadow:0 0 8px 2px rgba(255,239,196,.8)}
+.fD .greet{display:flex;align-items:baseline;justify-content:space-between;margin-top:10px}
+.fD .greet b{font-family:var(--tiro);font-weight:400;font-size:24px}
+.fD .loc{font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,247,232,.85);font-weight:600;display:inline-flex;gap:6px;align-items:center}
+.fD .sygl{position:absolute;left:22px;right:22px;bottom:-58px;background:rgba(255,253,248,.92);border:1px solid rgba(255,255,255,.7);border-radius:22px;padding:16px 18px 14px;box-shadow:0 26px 50px -24px rgba(46,32,14,.5)}
+.fD .sygl .eyebrow{font-size:11px;letter-spacing:.24em;text-transform:uppercase;font-weight:700;color:#A2622A}
+.fD .sygl .jname{display:flex;align-items:baseline;justify-content:space-between;margin-top:5px}
+.fD .sygl .jname b{font-family:var(--tiro);font-weight:400;font-size:26px;color:#2B2017}
+.fD .sygl .jname span{font-size:13px;color:#584B3E}
+.fD .track{margin-top:11px;height:5px;border-radius:99px;background:rgba(138,90,24,.16);position:relative}
+.fD .track i{position:absolute;left:0;top:0;bottom:0;width:34%;border-radius:99px;background:linear-gradient(90deg,#D9A254,#B07A2B)}
+.fD .tick{display:flex;justify-content:space-between;font-size:11.5px;color:#8a7a64;margin-top:6px;letter-spacing:.04em}
+.fD .below{padding:74px 22px 0}
+.fD .trow{display:flex;align-items:center;justify-content:space-between;gap:14px}
+.fD .tithi{font-family:var(--tiro);font-size:34px;line-height:1.1;color:#2B2017}
+.fD .tsub{font-size:13px;color:#584B3E;margin-top:3px}
+.fD .grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:18px}
+.fD .tile{background:#FFFDF8;border:1px solid rgba(43,32,23,.09);border-radius:16px;padding:12px 14px;box-shadow:0 10px 24px -18px rgba(58,40,20,.4)}
+.fD .tk{font-size:10.5px;letter-spacing:.18em;text-transform:uppercase;color:#8a6a3a;font-weight:700}
+.fD .tv{font-size:18px;margin-top:3px}
+.fD .tv.deva{font-family:var(--deva);font-weight:500}
+.fD .tv small{font-size:12px;color:#6F6356;margin-left:6px}
+.fD .tile.caution{border-color:rgba(192,57,43,.25)}.fD .tile.caution .tk{color:#A2432E}
+.fD .cta{display:flex;align-items:center;justify-content:center;gap:10px;min-height:56px;margin-top:18px;border-radius:999px;background:#B07A2B;color:#fff;font-weight:700;font-size:16.5px;box-shadow:0 12px 26px -14px rgba(110,72,16,.5)}
+.fD .tabs{background:rgba(253,249,241,.94);border-top:1px solid rgba(43,32,23,.07)}
+.fD .tab{color:#6F6356}.fD .tab.on{color:#7a4d16;background:#F5E7CC}
+
+/* ============ E · Lamp-lit Night ============ */
+.fE{background:radial-gradient(140% 60% at 50% -6%,rgba(226,178,102,.22),transparent 58%),linear-gradient(180deg,#171208,#100C06 46%);color:#F4EAD7}
+.fE .sbar{color:#E9DCBF}
+.fE .body{padding:2px 26px 0;text-align:center}
+.fE .greet{display:flex;align-items:baseline;justify-content:space-between;text-align:left;padding:8px 0 2px}
+.fE .greet b{font-family:var(--tiro);font-weight:400;font-size:22px;color:#F0E3C4}
+.fE .loc{font-size:11.5px;letter-spacing:.16em;text-transform:uppercase;color:#9C8B72;font-weight:600}
+.fE .moonwrap{position:relative;width:180px;height:180px;margin:14px auto 0}
+.fE .halo{position:absolute;border-radius:50%;border:1px solid rgba(226,178,102,.16)}
+.fE .halo.h1{inset:0}.fE .halo.h2{inset:-22px;border-color:rgba(226,178,102,.09)}
+.fE .moon{position:absolute;inset:24px;filter:drop-shadow(0 0 34px rgba(239,208,128,.35))}
+.fE .tithi{font-family:var(--tiro);font-size:44px;line-height:1.15;margin-top:14px;color:#F2E2B8}
+.fE .tsub{font-size:12.5px;letter-spacing:.24em;text-transform:uppercase;color:#B79B62;font-weight:600;margin-top:4px}
+.fE .date{font-size:14px;color:#9C8B72;margin-top:8px}
+.fE .rows{margin-top:14px;border-top:1px solid rgba(226,178,102,.18);text-align:left}
+.fE .row{display:flex;align-items:baseline;justify-content:space-between;gap:14px;padding:11px 2px;border-bottom:1px solid rgba(226,178,102,.1)}
+.fE .k{font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:#9C8B72;font-weight:600}
+.fE .v{font-size:18px;color:#F4EAD7}
+.fE .v.deva{font-family:var(--tiro);font-size:19.5px}
+.fE .v small{font-size:12px;color:#9C8B72;margin-left:7px}
+.fE .caution .k{color:#D98973}.fE .caution .v{color:#EFB4A4}
+.fE .cta{display:flex;align-items:center;justify-content:center;gap:10px;min-height:54px;margin-top:14px;border-radius:999px;border:1px solid rgba(226,178,102,.55);color:#EFD080;font-weight:600;font-size:16.5px;letter-spacing:.03em;background:linear-gradient(180deg,rgba(226,178,102,.14),rgba(226,178,102,.05));box-shadow:0 0 34px -10px rgba(226,178,102,.35)}
+.fE .tabs{background:linear-gradient(180deg,rgba(16,12,6,0),#14100A 40%);border-top:1px solid rgba(226,178,102,.14)}
+.fE .tab{color:#9C8B72}.fE .tab.on{color:#EFD080;background:rgba(226,178,102,.1)}
+
+/* ============ F · Quiet Luxury ============ */
+.fF{background:#FBF7EE;color:#241C12}
+.fF .body{padding:8px 30px 0}
+.fF .meta{display:flex;align-items:baseline;justify-content:space-between;padding:12px 0 0;font-size:11.5px;letter-spacing:.24em;text-transform:uppercase;color:#7C6E5A;font-weight:600}
+.fF .lock{margin-top:34px}
+.fF .lk-deva{font-family:var(--tiro);font-size:56px;line-height:1.12;color:#241C12}
+.fF .lk-r{font-family:var(--disp);font-size:17px;letter-spacing:.22em;text-transform:uppercase;color:#8A5A18;margin-top:10px}
+.fF .lk-sub{font-size:14.5px;color:#6E6250;margin-top:14px;display:flex;align-items:center;gap:9px}
+.fF .rule{border:none;border-top:1px solid rgba(36,28,18,.16);margin:24px 0 0}
+.fF .rows{margin-top:4px}
+.fF .row{display:flex;align-items:baseline;justify-content:space-between;gap:16px;padding:12px 0;border-bottom:1px solid rgba(36,28,18,.09)}
+.fF .row:last-child{border-bottom:none}
+.fF .k{font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:#7C6E5A;font-weight:600}
+.fF .v{font-size:19px;color:#241C12}
+.fF .v.deva{font-family:var(--tiro);font-size:20px}
+.fF .v small{font-size:12.5px;color:#7C6E5A;margin-left:8px}
+.fF .caution .v{color:#93401F}
+.fF .cta{display:inline-flex;align-items:center;gap:12px;margin-top:20px;font-size:13.5px;letter-spacing:.24em;text-transform:uppercase;font-weight:700;color:#8A5A18;padding-bottom:6px;border-bottom:1.5px solid rgba(138,90,24,.5)}
+.fF .sy{margin-top:16px;font-size:14px;color:#6E6250}
+.fF .sy b{font-weight:600;color:#241C12}
+.fF .tabs{background:rgba(251,247,238,.95)}
+.fF .tab{color:#7C6E5A;font-size:11px;letter-spacing:.22em;text-transform:uppercase;font-weight:700;gap:6px}
+.fF .tab.on{color:#241C12}
+.fF .tab.on::before{content:"";width:5px;height:5px;border-radius:50%;background:#8A5A18}
+</style>
+</head>
+<body>
+<div class="cap" style="left:40px;top:-88px;width:900px"><span style="font-size:22px;font-family:Marcellus,serif;font-weight:400">Stuti — Home screen directions</span><small style="font-size:13.5px;max-width:720px">Same day, same content, six treatments — 6 August 2026, Āṣāḍha Kṛṣṇa Aṣṭamī, morning. A is the current screen for reference. B–F each buy premium a different way: finish, ritual formality, scene light, ceremony at night, restraint.</small></div>
+
+<!-- ================= A · CURRENT ================= -->
+<div class="cap" style="left:40px;top:6px">A · Current<small>Reference — the screen as it ships today.</small></div>
+<div class="ph fA" style="left:40px;top:80px">
+  <div class="sbar"><span>06:12</span><svg width="64" height="13" viewBox="0 0 64 13" fill="none"><rect x="0" y="6" width="3" height="6" rx="1" fill="#2B2017"/><rect x="5" y="4" width="3" height="8" rx="1" fill="#2B2017"/><rect x="10" y="2" width="3" height="10" rx="1" fill="#2B2017"/><path d="M22 5c2.8-2.7 7.2-2.7 10 0" stroke="#2B2017" stroke-width="1.8" stroke-linecap="round"/><path d="M24.6 8c1.6-1.5 4.2-1.5 5.8 0" stroke="#2B2017" stroke-width="1.8" stroke-linecap="round"/><circle cx="27.5" cy="10.8" r="1.3" fill="#2B2017"/><rect x="40" y="2.5" width="20" height="9" rx="2.6" stroke="#2B2017" stroke-opacity=".4"/><rect x="42" y="4.5" width="13" height="5" rx="1.3" fill="#2B2017"/><rect x="61" y="5" width="2" height="4" rx="1" fill="#2B2017" fill-opacity=".4"/></svg></div>
+  <div class="body">
+    <div class="greet"><span>सुप्रभातम्</span><span class="loc"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21s-7-5.6-7-11a7 7 0 0 1 14 0c0 5.4-7 11-7 11z"/><circle cx="12" cy="10" r="2.6"/></svg>Hyderabad</span></div>
+    <div class="search"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.2-3.2"/></svg><span>Search all texts</span></div>
+    <div class="card">
+      <div class="eyebrow">Today&rsquo;s pañcāṅga</div>
+      <div class="date">Thursday 6 August</div>
+      <div class="hero">
+        <svg width="60" height="60" viewBox="0 0 64 64"><circle cx="32" cy="32" r="29" fill="#F4CB5C"/><path d="M32 3a29 29 0 0 1 0 58a9 29 0 0 0 0-58z" fill="#927A59"/><circle cx="32" cy="32" r="29" fill="none" stroke="rgba(43,32,23,.18)" stroke-width="1.5"/></svg>
+        <div><div class="tithi">कृष्ण अष्टमी</div><div class="tsub">4:12 pm तक</div></div>
+      </div>
+      <div class="rows">
+        <div class="row"><span class="k">Māsa</span><span class="v deva">आषाढ</span></div>
+        <div class="row"><span class="k">Nakṣatra</span><span class="v deva">भरणी<small>11:38 pm तक</small></span></div>
+        <div class="row"><span class="k">Sunrise</span><span class="v">5:58 am</span></div>
+        <div class="row"><span class="k">Sunset</span><span class="v">6:54 pm</span></div>
+        <div class="row caution"><span class="k">Rāhu kāla</span><span class="v">1:30 – 3:00 pm</span></div>
+      </div>
+    </div>
+    <div class="cta"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 3v3M12 18v3M3 12h3M18 12h3M5.6 5.6l2.1 2.1M16.3 16.3l2.1 2.1M5.6 18.4l2.1-2.1M16.3 7.7l2.1-2.1"/></svg>Make today&rsquo;s saṅkalpa</div>
+    <div class="sy"><div><b>प्रातः सन्ध्या</b><span> · now</span></div><span>5:34 – 6:46 am</span></div>
+  </div>
+  <div class="tabs">
+    <div class="tab on"><svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"><circle cx="12" cy="12" r="4.4"/><path d="M12 2.5v2.6M12 18.9v2.6M2.5 12h2.6M18.9 12h2.6M5.2 5.2l1.9 1.9M16.9 16.9l1.9 1.9M5.2 18.8l1.9-1.9M16.9 7.1l1.9-1.9"/></svg><span>Today</span></div>
+    <div class="tab"><svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5.5A2.5 2.5 0 0 1 6.5 3H20v15.5H6.5A2.5 2.5 0 0 0 4 21z"/><path d="M4 18.5A2.5 2.5 0 0 1 6.5 16H20"/></svg><span>Library</span></div>
+    <div class="tab"><svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3c1 3-3 4.5-3 8a3 3 0 0 0 6 .2c1.8 1.4 2 3.8.8 5.8"/><path d="M12 21a6 6 0 0 0 6-6c0-4-3.5-6-4-9-2 1.5-2.5 3-2.5 4.5C9 9 7 11 7 15a5.8 5.8 0 0 0 5 6z"/></svg><span>Practice</span></div>
+  </div>
+</div>
+
+<!-- ================= B · GILT EDITION ================= -->
+<div class="cap" style="left:530px;top:6px">B · Gilt Edition<small>Same bones, finer cloth: Tiro serif Devanagari, double-keyline card, dotted leaders, engraved gold CTA.</small></div>
+<div class="ph fB" style="left:530px;top:80px">
+  <div class="sbar"><span>06:12</span><svg width="64" height="13" viewBox="0 0 64 13" fill="none"><rect x="0" y="6" width="3" height="6" rx="1" fill="#2B2017"/><rect x="5" y="4" width="3" height="8" rx="1" fill="#2B2017"/><rect x="10" y="2" width="3" height="10" rx="1" fill="#2B2017"/><path d="M22 5c2.8-2.7 7.2-2.7 10 0" stroke="#2B2017" stroke-width="1.8" stroke-linecap="round"/><path d="M24.6 8c1.6-1.5 4.2-1.5 5.8 0" stroke="#2B2017" stroke-width="1.8" stroke-linecap="round"/><circle cx="27.5" cy="10.8" r="1.3" fill="#2B2017"/><rect x="40" y="2.5" width="20" height="9" rx="2.6" stroke="#2B2017" stroke-opacity=".4"/><rect x="42" y="4.5" width="13" height="5" rx="1.3" fill="#2B2017"/><rect x="61" y="5" width="2" height="4" rx="1" fill="#2B2017" fill-opacity=".4"/></svg></div>
+  <div class="body">
+    <div class="greet"><b>सुप्रभातम्</b><span class="loc"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21s-7-5.6-7-11a7 7 0 0 1 14 0c0 5.4-7 11-7 11z"/><circle cx="12" cy="10" r="2.6"/></svg>Hyderabad</span></div>
+    <div class="search"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.2-3.2"/></svg><span>Search all texts</span></div>
+    <div class="card">
+      <div class="eyerule"><span class="eyebrow">Today&rsquo;s pañcāṅga</span></div>
+      <div class="date">Thursday 6 August</div>
+      <div class="hero">
+        <span class="ring"><svg width="40" height="40" viewBox="0 0 64 64"><circle cx="32" cy="32" r="29" fill="#EFC964"/><path d="M32 3a29 29 0 0 1 0 58a9 29 0 0 0 0-58z" fill="#9B8258"/></svg></span>
+        <div><div class="tithi">कृष्ण अष्टमी</div><div class="tsub" style="margin-top:3px">Ends 4:12 pm</div></div>
+      </div>
+      <div class="rows">
+        <div class="row"><span class="k">Māsa</span><span class="lead"></span><span class="v deva">आषाढ</span></div>
+        <div class="row"><span class="k">Nakṣatra</span><span class="lead"></span><span class="v deva">भरणी<small>11:38 pm</small></span></div>
+        <div class="row"><span class="k">Sunrise</span><span class="lead"></span><span class="v">5:58 am</span></div>
+        <div class="row"><span class="k">Sunset</span><span class="lead"></span><span class="v">6:54 pm</span></div>
+        <div class="row caution"><span class="k">Rāhu kāla</span><span class="lead"></span><span class="v">1:30 – 3:00 pm</span></div>
+      </div>
+    </div>
+    <div class="cta"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 3v3M12 18v3M3 12h3M18 12h3M5.6 5.6l2.1 2.1M16.3 16.3l2.1 2.1M5.6 18.4l2.1-2.1M16.3 7.7l2.1-2.1"/></svg>Make today&rsquo;s saṅkalpa</div>
+    <div class="sy"><div><b>प्रातः सन्ध्या</b> <span>5:34 – 6:46 am</span></div><span class="badge">Now open</span></div>
+  </div>
+  <div class="tabs">
+    <div class="tab on"><svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"><circle cx="12" cy="12" r="4.4"/><path d="M12 2.5v2.6M12 18.9v2.6M2.5 12h2.6M18.9 12h2.6M5.2 5.2l1.9 1.9M16.9 16.9l1.9 1.9M5.2 18.8l1.9-1.9M16.9 7.1l1.9-1.9"/></svg><span>Today</span><i></i></div>
+    <div class="tab"><svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5.5A2.5 2.5 0 0 1 6.5 3H20v15.5H6.5A2.5 2.5 0 0 0 4 21z"/><path d="M4 18.5A2.5 2.5 0 0 1 6.5 16H20"/></svg><span>Library</span></div>
+    <div class="tab"><svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3c1 3-3 4.5-3 8a3 3 0 0 0 6 .2c1.8 1.4 2 3.8.8 5.8"/><path d="M12 21a6 6 0 0 0 6-6c0-4-3.5-6-4-9-2 1.5-2.5 3-2.5 4.5C9 9 7 11 7 15a5.8 5.8 0 0 0 5 6z"/></svg><span>Practice</span></div>
+  </div>
+</div>
+
+<!-- ================= C · MANUSCRIPT FOLIO ================= -->
+<div class="cap" style="left:1020px;top:6px">C · Manuscript Folio<small>Cards dissolved into one rubricated page: sindoor accents, folio corners, centred pothi typography.</small></div>
+<div class="ph fC" style="left:1020px;top:80px">
+  <div class="sbar"><span>06:12</span><svg width="64" height="13" viewBox="0 0 64 13" fill="none"><rect x="0" y="6" width="3" height="6" rx="1" fill="#2A2115"/><rect x="5" y="4" width="3" height="8" rx="1" fill="#2A2115"/><rect x="10" y="2" width="3" height="10" rx="1" fill="#2A2115"/><path d="M22 5c2.8-2.7 7.2-2.7 10 0" stroke="#2A2115" stroke-width="1.8" stroke-linecap="round"/><path d="M24.6 8c1.6-1.5 4.2-1.5 5.8 0" stroke="#2A2115" stroke-width="1.8" stroke-linecap="round"/><circle cx="27.5" cy="10.8" r="1.3" fill="#2A2115"/><rect x="40" y="2.5" width="20" height="9" rx="2.6" stroke="#2A2115" stroke-opacity=".4"/><rect x="42" y="4.5" width="13" height="5" rx="1.3" fill="#2A2115"/><rect x="61" y="5" width="2" height="4" rx="1" fill="#2A2115" fill-opacity=".4"/></svg></div>
+  <div class="folio"></div>
+  <div class="body">
+    <div class="datecap">Thursday · 6 August · Hyderabad</div>
+    <span class="drule"></span>
+    <div class="tithi">कृष्ण अष्टमी</div>
+    <div class="tithi-r">Kṛṣṇa Aṣṭamī · ends 4:12 pm</div>
+    <div class="masa">आषाढमासे · वर्षा ऋतौ · पराभव संवत्सरे</div>
+    <div class="orn">❁</div>
+    <div class="grid">
+      <div class="cell"><div class="ck">Nakṣatra</div><div class="cv">भरणी<small>till 11:38 pm</small></div></div>
+      <div class="cell"><div class="ck">Vāsara</div><div class="cv">गुरुवासरः<small>Bṛhaspati</small></div></div>
+      <div class="cell"><div class="ck">Sūryodaya</div><div class="cv" style="font-family:var(--disp)">5:58<small>sunset 6:54 pm</small></div></div>
+      <div class="cell"><div class="ck">Rāhu kāla</div><div class="cv" style="font-family:var(--disp);color:#8F2E1A">1:30 – 3:00<small>avoid this hour</small></div></div>
+    </div>
+    <div class="sy"><b>प्रातः सन्ध्या</b> is open · 5:34 – 6:46 am</div>
+    <div><span class="cta">॥ Make today&rsquo;s saṅkalpa ॥</span></div>
+    <div class="search"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.2-3.2"/></svg>Search all texts</div>
+  </div>
+  <div class="tabs">
+    <div class="tab on"><span>Today</span></div>
+    <div class="tab"><span>Library</span></div>
+    <div class="tab"><span>Practice</span></div>
+  </div>
+</div>
+
+<!-- ================= D · DAWN LITURGY ================= -->
+<div class="cap" style="left:1510px;top:6px">D · Dawn Liturgy<small>The sky is the header — a real dawn gradient with the sun on its arc; the open sandhyā leads, almanac follows as tiles.</small></div>
+<div class="ph fD" style="left:1510px;top:80px">
+  <div class="sky">
+    <div class="sbar"><span>06:12</span><svg width="64" height="13" viewBox="0 0 64 13" fill="none"><rect x="0" y="6" width="3" height="6" rx="1" fill="#F7EEDC"/><rect x="5" y="4" width="3" height="8" rx="1" fill="#F7EEDC"/><rect x="10" y="2" width="3" height="10" rx="1" fill="#F7EEDC"/><path d="M22 5c2.8-2.7 7.2-2.7 10 0" stroke="#F7EEDC" stroke-width="1.8" stroke-linecap="round"/><path d="M24.6 8c1.6-1.5 4.2-1.5 5.8 0" stroke="#F7EEDC" stroke-width="1.8" stroke-linecap="round"/><circle cx="27.5" cy="10.8" r="1.3" fill="#F7EEDC"/><rect x="40" y="2.5" width="20" height="9" rx="2.6" stroke="#F7EEDC" stroke-opacity=".5"/><rect x="42" y="4.5" width="13" height="5" rx="1.3" fill="#F7EEDC"/><rect x="61" y="5" width="2" height="4" rx="1" fill="#F7EEDC" fill-opacity=".5"/></svg></div>
+    <div class="greet"><b>सुप्रभातम्</b><span class="loc"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21s-7-5.6-7-11a7 7 0 0 1 14 0c0 5.4-7 11-7 11z"/><circle cx="12" cy="10" r="2.6"/></svg>Hyderabad</span></div>
+    <div class="arc"><i style="left:12%;bottom:34px"></i></div>
+    <div class="sun"></div>
+    <div class="sygl">
+      <div class="eyebrow">Prātaḥ-sandhyā · open now</div>
+      <div class="jname"><b>प्रातः सन्ध्या</b><span>34 min left</span></div>
+      <div class="track"><i></i></div>
+      <div class="tick"><span>5:34</span><span>best before sunrise</span><span>6:46</span></div>
+    </div>
+  </div>
+  <div class="below">
+    <div class="trow">
+      <div><div class="tithi">कृष्ण अष्टमी</div><div class="tsub">Thursday 6 August · Āṣāḍha · ends 4:12 pm</div></div>
+      <svg width="46" height="46" viewBox="0 0 64 64"><circle cx="32" cy="32" r="29" fill="#F4CB5C"/><path d="M32 3a29 29 0 0 1 0 58a9 29 0 0 0 0-58z" fill="#927A59"/><circle cx="32" cy="32" r="29" fill="none" stroke="rgba(43,32,23,.18)" stroke-width="1.5"/></svg>
+    </div>
+    <div class="grid">
+      <div class="tile"><div class="tk">Nakṣatra</div><div class="tv deva">भरणी<small>11:38 pm</small></div></div>
+      <div class="tile"><div class="tk">Vāsara</div><div class="tv deva">गुरुवासरः</div></div>
+      <div class="tile"><div class="tk">Sun</div><div class="tv">5:58 – 6:54</div></div>
+      <div class="tile caution"><div class="tk">Rāhu kāla</div><div class="tv">1:30 – 3:00</div></div>
+    </div>
+    <div class="cta"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 3v3M12 18v3M3 12h3M18 12h3M5.6 5.6l2.1 2.1M16.3 16.3l2.1 2.1M5.6 18.4l2.1-2.1M16.3 7.7l2.1-2.1"/></svg>Make today&rsquo;s saṅkalpa</div>
+  </div>
+  <div class="tabs">
+    <div class="tab on"><svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"><circle cx="12" cy="12" r="4.4"/><path d="M12 2.5v2.6M12 18.9v2.6M2.5 12h2.6M18.9 12h2.6M5.2 5.2l1.9 1.9M16.9 16.9l1.9 1.9M5.2 18.8l1.9-1.9M16.9 7.1l1.9-1.9"/></svg><span>Today</span></div>
+    <div class="tab"><svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5.5A2.5 2.5 0 0 1 6.5 3H20v15.5H6.5A2.5 2.5 0 0 0 4 21z"/><path d="M4 18.5A2.5 2.5 0 0 1 6.5 16H20"/></svg><span>Library</span></div>
+    <div class="tab"><svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3c1 3-3 4.5-3 8a3 3 0 0 0 6 .2c1.8 1.4 2 3.8.8 5.8"/><path d="M12 21a6 6 0 0 0 6-6c0-4-3.5-6-4-9-2 1.5-2.5 3-2.5 4.5C9 9 7 11 7 15a5.8 5.8 0 0 0 5 6z"/></svg><span>Practice</span></div>
+  </div>
+</div>
+
+<!-- ================= E · LAMP-LIT NIGHT ================= -->
+<div class="cap" style="left:2000px;top:6px">E · Lamp-lit Night<small>The night theme made ceremonial: the moon as the hero jewel, haloed like a lamp, gold hairlines on lacquer.</small></div>
+<div class="ph fE" style="left:2000px;top:80px">
+  <div class="sbar"><span>19:32</span><svg width="64" height="13" viewBox="0 0 64 13" fill="none"><rect x="0" y="6" width="3" height="6" rx="1" fill="#E9DCBF"/><rect x="5" y="4" width="3" height="8" rx="1" fill="#E9DCBF"/><rect x="10" y="2" width="3" height="10" rx="1" fill="#E9DCBF"/><path d="M22 5c2.8-2.7 7.2-2.7 10 0" stroke="#E9DCBF" stroke-width="1.8" stroke-linecap="round"/><path d="M24.6 8c1.6-1.5 4.2-1.5 5.8 0" stroke="#E9DCBF" stroke-width="1.8" stroke-linecap="round"/><circle cx="27.5" cy="10.8" r="1.3" fill="#E9DCBF"/><rect x="40" y="2.5" width="20" height="9" rx="2.6" stroke="#E9DCBF" stroke-opacity=".4"/><rect x="42" y="4.5" width="13" height="5" rx="1.3" fill="#E9DCBF"/><rect x="61" y="5" width="2" height="4" rx="1" fill="#E9DCBF" fill-opacity=".4"/></svg></div>
+  <div class="body">
+    <div class="greet"><b>शुभ सन्ध्या</b><span class="loc">Hyderabad</span></div>
+    <div class="moonwrap">
+      <span class="halo h1"></span><span class="halo h2"></span>
+      <svg class="moon" width="132" height="132" viewBox="0 0 64 64"><circle cx="32" cy="32" r="29" fill="#EFD080"/><path d="M32 3a29 29 0 0 1 0 58a9 29 0 0 0 0-58z" fill="#2A2113"/></svg>
+    </div>
+    <div class="tithi">कृष्ण अष्टमी</div>
+    <div class="tsub">Āṣāḍha · ends 4:12 pm</div>
+    <div class="date">Thursday 6 August · Parābhava saṁvatsara</div>
+    <div class="rows">
+      <div class="row"><span class="k">Nakṣatra</span><span class="v deva">भरणी<small>11:38 pm</small></span></div>
+      <div class="row"><span class="k">Moonrise</span><span class="v">10:57 pm</span></div>
+      <div class="row"><span class="k">Sāyaṁ sandhyā</span><span class="v">6:30 – 7:18 pm<small>open</small></span></div>
+      <div class="row caution"><span class="k">Rāhu kāla</span><span class="v">passed</span></div>
+    </div>
+    <div class="cta"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 3v3M12 18v3M3 12h3M18 12h3M5.6 5.6l2.1 2.1M16.3 16.3l2.1 2.1M5.6 18.4l2.1-2.1M16.3 7.7l2.1-2.1"/></svg>Make today&rsquo;s saṅkalpa</div>
+  </div>
+  <div class="tabs">
+    <div class="tab on"><svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"><circle cx="12" cy="12" r="4.4"/><path d="M12 2.5v2.6M12 18.9v2.6M2.5 12h2.6M18.9 12h2.6M5.2 5.2l1.9 1.9M16.9 16.9l1.9 1.9M5.2 18.8l1.9-1.9M16.9 7.1l1.9-1.9"/></svg><span>Today</span></div>
+    <div class="tab"><svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5.5A2.5 2.5 0 0 1 6.5 3H20v15.5H6.5A2.5 2.5 0 0 0 4 21z"/><path d="M4 18.5A2.5 2.5 0 0 1 6.5 16H20"/></svg><span>Library</span></div>
+    <div class="tab"><svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3c1 3-3 4.5-3 8a3 3 0 0 0 6 .2c1.8 1.4 2 3.8.8 5.8"/><path d="M12 21a6 6 0 0 0 6-6c0-4-3.5-6-4-9-2 1.5-2.5 3-2.5 4.5C9 9 7 11 7 15a5.8 5.8 0 0 0 5 6z"/></svg><span>Practice</span></div>
+  </div>
+</div>
+
+<!-- ================= F · QUIET LUXURY ================= -->
+<div class="cap" style="left:2490px;top:6px">F · Quiet Luxury<small>Everything removed but the day itself: no cards, one gold accent, wide margins, a single table.</small></div>
+<div class="ph fF" style="left:2490px;top:80px">
+  <div class="sbar"><span>06:12</span><svg width="64" height="13" viewBox="0 0 64 13" fill="none"><rect x="0" y="6" width="3" height="6" rx="1" fill="#241C12"/><rect x="5" y="4" width="3" height="8" rx="1" fill="#241C12"/><rect x="10" y="2" width="3" height="10" rx="1" fill="#241C12"/><path d="M22 5c2.8-2.7 7.2-2.7 10 0" stroke="#241C12" stroke-width="1.8" stroke-linecap="round"/><path d="M24.6 8c1.6-1.5 4.2-1.5 5.8 0" stroke="#241C12" stroke-width="1.8" stroke-linecap="round"/><circle cx="27.5" cy="10.8" r="1.3" fill="#241C12"/><rect x="40" y="2.5" width="20" height="9" rx="2.6" stroke="#241C12" stroke-opacity=".4"/><rect x="42" y="4.5" width="13" height="5" rx="1.3" fill="#241C12"/><rect x="61" y="5" width="2" height="4" rx="1" fill="#241C12" fill-opacity=".4"/></svg></div>
+  <div class="body">
+    <div class="meta"><span>Thu 6 August</span><span>Hyderabad</span></div>
+    <div class="lock">
+      <div class="lk-deva">कृष्ण<br/>अष्टमी</div>
+      <div class="lk-r">Kṛṣṇa Aṣṭamī</div>
+      <div class="lk-sub"><svg width="22" height="22" viewBox="0 0 64 64"><circle cx="32" cy="32" r="28" fill="none" stroke="#241C12" stroke-width="3"/><path d="M32 4a28 28 0 0 1 0 56a9 28 0 0 0 0-56z" fill="#241C12"/></svg><span>Āṣāḍha · waning · ends 4:12 pm</span></div>
+    </div>
+    <hr class="rule"/>
+    <div class="rows">
+      <div class="row"><span class="k">Nakṣatra</span><span class="v deva">भरणी<small>11:38 pm</small></span></div>
+      <div class="row"><span class="k">Vāsara</span><span class="v deva">गुरुवासरः</span></div>
+      <div class="row"><span class="k">Sun</span><span class="v">5:58 – 6:54</span></div>
+      <div class="row"><span class="k">Sandhyā</span><span class="v">now open<small>till 6:46</small></span></div>
+      <div class="row caution"><span class="k">Rāhu kāla</span><span class="v">1:30 – 3:00</span></div>
+    </div>
+    <div><span class="cta">Make today&rsquo;s saṅkalpa<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></div>
+    <div class="sy">Today asks: <b>आदित्यहृदयम्</b> · daily vow</div>
+  </div>
+  <div class="tabs">
+    <div class="tab on"><span>Today</span></div>
+    <div class="tab"><span>Library</span></div>
+    <div class="tab"><span>Practice</span></div>
+  </div>
+</div>
+</body>
+</html>

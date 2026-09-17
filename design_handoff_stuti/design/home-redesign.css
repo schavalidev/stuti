@@ -1,0 +1,151 @@
+/* ============================================================
+   STUTI — Home redesign exploration
+   Three directions for the Today screen, shown as live phone
+   frames on the canvas. Reuses the app's tokens + component
+   classes (.eyebrow, .limb, .sk-*, .pcard-tithi-*, .tabbar…).
+   Full pañcāṅga is always visible; saṅkalpa is collapsible.
+   ============================================================ */
+
+body { background: #e7e1d4; min-width: 1620px; min-height: 1010px; }
+a { color: var(--accent-ink); text-decoration: none; }
+a:hover { color: var(--gold-deep); }
+
+/* ---------- canvas frames ---------- */
+.rh-mount { position: absolute; }
+#mountA { left: 64px; top: 64px; }
+#mountB { left: 600px; top: 64px; }
+#mountC { left: 1136px; top: 64px; }
+.rh-frame { width: 412px; }
+.rh-frame-label { font-family: var(--font-display); font-size: 20px; color: #3a2c1c; margin: 0 0 3px 6px; letter-spacing: 0.01em; }
+.rh-frame-sub { font-size: 13px; color: #756652; margin: 0 0 14px 6px; line-height: 1.45; max-width: 388px; text-wrap: pretty; }
+
+/* ---------- the phone ---------- */
+.rh-phone {
+  width: 412px; height: 868px; border: 11px solid #17130d; border-radius: 46px;
+  overflow: hidden; position: relative; display: flex; flex-direction: column;
+  background: linear-gradient(180deg, var(--bg-warm), var(--bg) 30%);
+  box-shadow: 0 44px 90px -34px rgba(40,25,8,0.55), 0 0 0 1px rgba(0,0,0,0.25);
+}
+.rh-view { position: relative; flex: 1; min-height: 0; display: flex; flex-direction: column; }
+.rh-scroll { flex: 1; min-height: 0; overflow-y: auto; -webkit-overflow-scrolling: touch; scrollbar-width: none; }
+.rh-scroll::-webkit-scrollbar { width: 0; }
+.rh-home { padding: 4px 18px 40px; display: flex; flex-direction: column; }
+.rh-home > * { flex-shrink: 0; }
+
+/* compact reading-script segmented control in the brand bar */
+.rh-scriptseg { display: inline-flex; gap: 2px; background: var(--surface); border: 1.5px solid var(--line); border-radius: 999px; padding: 3px; }
+.rh-scriptseg button { min-height: 34px; padding: 0 11px; border-radius: 999px; font: inherit; font-size: 13.5px; font-weight: 600; color: var(--ink-soft); transition: background var(--fast), color var(--fast); }
+.rh-scriptseg button.on { background: var(--accent); color: #fff; }
+[data-theme="night"] .rh-scriptseg button.on { color: #1b150d; }
+
+/* shared chevron rotation on collapsible heads */
+.rh-chev { display: inline-flex; transition: transform var(--fast) var(--ease); }
+.is-open .rh-chev, .open > .rh-chev { transform: rotate(180deg); }
+
+/* the shared saṅkalpa body sits flush inside each container */
+.rh-sk .sk-form { margin-top: 2px; }
+
+/* ============================================================
+   A — Almanac (sectioned editorial card, accordion saṅkalpa)
+   ============================================================ */
+.rha-card {
+  position: relative; overflow: hidden; margin-top: 2px;
+  background: var(--surface); border: 1px solid var(--line);
+  border-radius: var(--r-lg); padding: 20px 18px; box-shadow: var(--shadow);
+}
+.rha-card > * { position: relative; z-index: 1; }
+.rha-card .pcard-glow { z-index: 0; }
+.rha-sect { margin-top: 15px; padding-top: 14px; border-top: 1px solid var(--line); }
+.rha-sect-h { display: flex; align-items: center; gap: 10px; font-size: 11px; letter-spacing: 0.17em; text-transform: uppercase; color: var(--ink-faint); font-weight: 700; margin-bottom: 12px; }
+.rha-sect-h::after { content: ""; flex: 1; height: 1px; background: var(--line-2); }
+.rha-limbs { display: grid; grid-template-columns: repeat(3, 1fr); gap: 15px 8px; }
+.rha-rows { display: flex; flex-direction: column; }
+.rha-row { display: flex; align-items: baseline; justify-content: space-between; gap: 14px; padding: 9px 0; border-bottom: 1px solid var(--line-2); }
+.rha-row:last-child { border-bottom: none; padding-bottom: 0; }
+.rha-row:first-child { padding-top: 0; }
+.rha-row-k { display: inline-flex; align-items: center; gap: 8px; font-size: 13.5px; color: var(--ink-soft); font-weight: 600; }
+.rha-row-v { font-size: 16px; color: var(--ink); text-align: right; font-variant-numeric: tabular-nums; overflow-wrap: anywhere; }
+.rha-row.caution .rha-row-k::before { content: ""; width: 7px; height: 7px; border-radius: 50%; background: color-mix(in oklab, #c0392b 70%, var(--accent)); flex: none; }
+.rha-obs { margin-top: 15px; padding: 12px 14px; border-radius: var(--r-md); background: var(--accent-soft); color: var(--accent-ink); font-size: 13.5px; line-height: 1.5; text-wrap: pretty; }
+.rha-obs b { font-weight: 700; }
+.rha-skbar {
+  display: flex; align-items: center; justify-content: space-between; gap: 12px; width: 100%;
+  margin-top: 16px; padding: 14px 16px; border-radius: var(--r-md);
+  border: 1px solid var(--line); background: var(--surface-2);
+  color: var(--accent-ink); font-weight: 700; font-size: 15.5px; transition: background var(--fast), border-color var(--fast);
+}
+.rha-skbar:active { transform: scale(0.99); }
+.rha-skbar.is-open { background: var(--accent-soft); border-color: transparent; }
+.rha-skbar-l { display: inline-flex; align-items: center; gap: 10px; }
+.rha-skbody { margin-top: 12px; animation: viewIn var(--fast) var(--ease-out) both; }
+
+/* ============================================================
+   B — Calm (airy full list, saṅkalpa bottom sheet)
+   ============================================================ */
+.rhb-card { margin-top: 2px; background: var(--surface); border: 1px solid var(--line); border-radius: var(--r-lg); padding: 20px 18px 6px; box-shadow: var(--shadow); }
+.rhb-date { font-size: 16px; color: var(--ink-soft); margin-top: 4px; }
+.rhb-hero { display: flex; align-items: center; gap: 18px; margin: 16px 0 4px; }
+.rhb-tithi { line-height: 1; color: var(--accent-ink); font-size: 46px; }
+.rhb-tithi.roman { font-family: var(--font-display); font-size: 40px; }
+.rhb-tithi-sub { font-size: 15px; color: var(--ink-soft); margin-top: 7px; font-variant-numeric: tabular-nums; text-wrap: pretty; }
+.rhb-rows { margin-top: 18px; display: flex; flex-direction: column; }
+.rhb-row { display: flex; align-items: center; justify-content: space-between; gap: 18px; padding: 15px 2px; border-top: 1px solid var(--line-2); }
+.rhb-row:first-child { border-top: none; }
+.rhb-row-k { display: inline-flex; align-items: center; gap: 9px; font-size: 12px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--ink-faint); font-weight: 700; }
+.rhb-row.caution .rhb-row-k { color: color-mix(in oklab, #c0392b 60%, var(--ink-faint)); }
+.rhb-row.caution .rhb-row-k::before { content: ""; width: 7px; height: 7px; border-radius: 50%; background: color-mix(in oklab, #c0392b 68%, var(--accent)); flex: none; }
+.rhb-row-v { text-align: right; color: var(--ink); font-size: 21px; line-height: 1.15; font-variant-numeric: tabular-nums; min-width: 0; }
+.rhb-row-v small { display: block; margin-top: 3px; font-size: 12.5px; font-weight: 400; letter-spacing: 0; color: var(--ink-soft); }
+.rhb-cta {
+  display: flex; align-items: center; justify-content: center; gap: 11px; width: 100%; min-height: 58px;
+  margin-top: 24px; border-radius: 999px; background: var(--accent); color: #fff;
+  font-weight: 700; font-size: 17px; box-shadow: var(--shadow-sm); transition: transform var(--fast) var(--ease), filter var(--fast);
+}
+.rhb-cta:active { transform: scale(0.98); filter: brightness(1.04); }
+[data-theme="night"] .rhb-cta { color: #1b150d; }
+
+/* the sheet + scrim live in the phone-level overlay layer */
+.rh-overlay { position: absolute; inset: 0; z-index: 40; pointer-events: none; }
+.rhb-scrim { position: absolute; inset: 0; background: var(--scrim); opacity: 0; pointer-events: none; transition: opacity var(--med) var(--ease); }
+.rhb-scrim.on { opacity: 1; pointer-events: auto; }
+.rhb-sheet {
+  position: absolute; left: 0; right: 0; bottom: 0; max-height: 90%;
+  display: flex; flex-direction: column; background: var(--surface);
+  border-radius: 28px 28px 0 0; box-shadow: 0 -30px 60px -18px rgba(0,0,0,0.45);
+  transform: translateY(101%); transition: transform var(--med) var(--ease-out); pointer-events: auto;
+}
+.rhb-sheet.on { transform: none; }
+.rhb-grab { width: 44px; height: 5px; border-radius: 999px; background: var(--line); margin: 12px auto 2px; flex: none; }
+.rhb-sheet-head { display: flex; align-items: center; justify-content: space-between; padding: 8px 20px 14px; border-bottom: 1px solid var(--line-2); }
+.rhb-sheet-title { font-size: 23px; font-weight: 400; }
+.rhb-sheet-x { flex: none; width: 40px; height: 40px; border-radius: 50%; display: grid; place-items: center; background: var(--surface-2); color: var(--ink-soft); font-size: 22px; line-height: 1; }
+.rhb-sheet-x:active { transform: scale(0.92); }
+.rhb-sheet-body { overflow-y: auto; padding: 16px 20px calc(24px + env(safe-area-inset-bottom)); scrollbar-width: none; }
+.rhb-sheet-body::-webkit-scrollbar { width: 0; }
+
+/* ============================================================
+   C — Grid (compact stat dashboard, persistent expandable saṅkalpa)
+   ============================================================ */
+.rhc-card { margin-top: 2px; background: var(--surface); border: 1px solid var(--line); border-radius: var(--r-lg); padding: 16px; box-shadow: var(--shadow); }
+.rhc-hero { display: flex; align-items: center; gap: 13px; margin-bottom: 14px; }
+.rhc-hero-body { min-width: 0; }
+.rhc-date { font-size: 13.5px; color: var(--ink-soft); }
+.rhc-tithi { line-height: 1.04; color: var(--accent-ink); font-size: 30px; }
+.rhc-tithi.roman { font-family: var(--font-display); font-size: 27px; }
+.rhc-ends { font-size: 12.5px; color: var(--ink-soft); font-variant-numeric: tabular-nums; margin-top: 2px; }
+.rhc-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1px; background: var(--line); border: 1px solid var(--line); border-radius: var(--r-md); overflow: hidden; }
+.rhc-cell { background: var(--surface); padding: 11px 13px; min-width: 0; }
+.rhc-cell.wide { grid-column: 1 / -1; }
+.rhc-cell-k { font-size: 10.5px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--ink-faint); font-weight: 700; }
+.rhc-cell-v { font-size: 16px; color: var(--ink); margin-top: 3px; line-height: 1.18; font-variant-numeric: tabular-nums; overflow-wrap: anywhere; }
+.rhc-cell-v small { color: var(--ink-soft); font-size: 12px; }
+.rhc-cell.caution { background: color-mix(in oklab, #c0392b 7%, var(--surface)); }
+.rhc-cell.caution .rhc-cell-k { color: color-mix(in oklab, #c0392b 60%, var(--ink-faint)); }
+.rhc-cell.caution .rhc-cell-v { color: color-mix(in oklab, #c0392b 46%, var(--ink)); }
+.rhc-obs { margin-top: 12px; display: flex; flex-wrap: wrap; gap: 6px; }
+.rhc-obs span { font-size: 12px; padding: 5px 11px; border-radius: 999px; background: var(--accent-soft); color: var(--accent-ink); font-weight: 600; }
+.rhc-sk { margin-top: 14px; border: 1px solid var(--line); border-radius: var(--r-md); background: var(--surface-2); overflow: hidden; }
+.rhc-sk-head { display: flex; align-items: center; justify-content: space-between; width: 100%; padding: 14px 16px; color: var(--accent-ink); font-weight: 700; font-size: 15.5px; }
+.rhc-sk-head-l { display: inline-flex; align-items: center; gap: 10px; }
+.rhc-sk-body { padding: 2px 16px 16px; }
+.rhc-sk-peek { padding: 0 16px 15px; font-size: 14px; color: var(--ink-soft); line-height: 1.5; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }

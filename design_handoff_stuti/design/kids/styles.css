@@ -1,0 +1,227 @@
+/* ============================================================
+   KATHĀ — Akshara for young minds
+   Bright, friendly design tokens. Off-white page, popping colors.
+   ============================================================ */
+:root {
+  --bg:        #FFFCF5;   /* warm off-white page */
+  --bg-soft:   #FFF7E9;   /* gentle tint band */
+  --card:      #FFFFFF;
+  --ink:       #2E2A3A;   /* soft dark plum */
+  --ink-soft:  #6A6577;
+  --ink-faint: #A29DAE;
+
+  /* popping colors — heritage pastels */
+  --marigold:  #E0973F;
+  --coral:     #DC7E6C;
+  --pink:      #D274A2;
+  --teal:      #3FA89D;
+  --blue:      #6E81D2;
+  --green:     #66AE80;
+  --yellow:    #E6C25C;
+  --purple:    #9A86D4;
+  --sky:       #6CB6D6;
+
+  /* wood (bookcase) — soft blonde */
+  --wood:      #DCBE8C;
+  --wood-d:    #C2A066;
+  --wood-l:    #EAD3A6;
+  --shelf-back:#FBF2DF;
+
+  --ring: rgba(46,42,58,0.10);
+  --line: rgba(46,42,58,0.10);
+
+  --font-display: "Poppins", system-ui, sans-serif;
+  --font-body:    "Nunito", system-ui, sans-serif;
+  --font-deva:    "Baloo 2", system-ui, sans-serif;
+
+  --type-scale: 1;
+  --r-lg: 28px;
+  --r-md: 20px;
+  --r-sm: 14px;
+  --maxw: 1200px;
+
+  --shadow-sm: 0 2px 6px rgba(46,42,58,0.06), 0 10px 24px rgba(46,42,58,0.06);
+  --shadow-md: 0 6px 14px rgba(46,42,58,0.08), 0 22px 50px rgba(46,42,58,0.12);
+  --shadow-pop: 0 10px 0 rgba(0,0,0,0.04);
+}
+
+* { box-sizing: border-box; }
+html, body {
+  margin: 0; padding: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: var(--font-body);
+  -webkit-font-smoothing: antialiased;
+}
+::selection { background: rgba(76,107,255,0.2); }
+a { color: inherit; text-decoration: none; }
+button { font-family: inherit; cursor: pointer; }
+
+h1,h2,h3 { font-family: var(--font-display); font-weight: 700; line-height: 1.05; margin: 0; letter-spacing: -0.01em; }
+.deva { font-family: var(--font-deva); font-weight: 600; }
+
+.wrap { max-width: var(--maxw); margin: 0 auto; padding: 0 36px; }
+@media (max-width: 720px){ .wrap { padding: 0 20px; } }
+
+.eyebrow {
+  font-family: var(--font-body);
+  font-weight: 800;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  font-size: calc(0.74rem * var(--type-scale));
+}
+
+/* pill buttons */
+.btn {
+  display: inline-flex; align-items: center; gap: 0.5em;
+  font-family: var(--font-body); font-weight: 800;
+  font-size: calc(1rem * var(--type-scale));
+  padding: 0.7em 1.5em; border-radius: 999px; border: 0;
+  white-space: nowrap;
+  transition: transform .16s ease, box-shadow .16s ease, background .16s ease;
+}
+.btn:active { transform: translateY(1px); }
+.btn-primary { background: var(--blue); color: #fff; box-shadow: 0 6px 0 rgba(76,107,255,0.28); }
+.btn-primary:hover { transform: translateY(-2px); box-shadow: 0 9px 0 rgba(76,107,255,0.28); }
+.btn-sun { background: var(--marigold); color: #fff; box-shadow: 0 6px 0 rgba(255,158,27,0.3); }
+.btn-sun:hover { transform: translateY(-2px); box-shadow: 0 9px 0 rgba(255,158,27,0.3); }
+.btn-ghost { background: #fff; color: var(--ink); border: 2px solid var(--line); }
+.btn-ghost:hover { transform: translateY(-2px); border-color: var(--ink-faint); }
+
+.chip {
+  display: inline-flex; align-items: center; gap: 0.45em;
+  font-family: var(--font-body); font-weight: 700;
+  font-size: calc(0.95rem * var(--type-scale));
+  padding: 0.5em 1.05em; border-radius: 999px;
+  border: 2px solid var(--line); background: #fff; color: var(--ink-soft);
+  transition: border-color .15s ease, color .15s ease, transform .15s ease; white-space: nowrap;
+}
+.chip:hover { border-color: var(--ink-faint); color: var(--ink); }
+.chip[data-active="true"] { color: #fff; border-color: transparent; }
+
+@keyframes popIn { from { transform: translateY(16px) scale(.99); } to { transform: none; } }
+.pop { animation: popIn .5s cubic-bezier(.2,.8,.3,1) both; }
+@keyframes floaty { 0%,100%{ transform: translateY(0); } 50%{ transform: translateY(-9px); } }
+.float { animation: floaty 4s ease-in-out infinite; }
+@keyframes spinSlow { to { transform: rotate(360deg); } }
+.spin { animation: spinSlow 40s linear infinite; transform-origin: center; }
+
+::-webkit-scrollbar { width: 12px; height: 12px; }
+::-webkit-scrollbar-thumb { background: #FFE3AE; border-radius: 99px; border: 3px solid var(--bg); }
+::-webkit-scrollbar-thumb:hover { background: var(--marigold); }
+
+input::placeholder { color: var(--ink-faint); }
+select { cursor: pointer; font-family: var(--font-body); font-weight: 700; }
+
+/* card hovers */
+.story-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-md); border-color: transparent; }
+.theme-card:hover { transform: translateY(-4px) rotate(-0.6deg); box-shadow: var(--shadow-md); }
+
+/* page-turn arrows */
+.page-arrow {
+  width: 56px; height: 56px; flex: none; border-radius: 50%;
+  border: 2px solid var(--line); background: #fff; color: var(--ink);
+  display: grid; place-items: center; box-shadow: var(--shadow-sm);
+  transition: transform .15s ease, background .15s ease, color .15s ease;
+}
+.page-arrow:hover { transform: scale(1.08); background: var(--marigold); color: #fff; border-color: transparent; }
+.page-arrow:active { transform: scale(.96); }
+
+/* sparkle toggle */
+.no-sparkle .sparkles { display: none; }
+
+/* story-detail page */
+.meta-pill {
+  display: inline-flex; align-items: center; gap: 7px;
+  font-family: var(--font-body); font-weight: 800; font-size: 14px; color: var(--ink-soft);
+  background: #fff; border: 2px solid var(--line); border-radius: 999px; padding: 8px 15px; white-space: nowrap;
+}
+@media (max-width: 760px){
+  .katha-detail-grid { grid-template-columns: 1fr !important; gap: 28px !important; }
+  .katha-discover { grid-template-columns: 1fr !important; }
+}
+
+/* skeleton shimmer */
+.ksk { position: relative; overflow: hidden; background: #EFEAE0; }
+.ksk::after {
+  content: ""; position: absolute; inset: 0;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.7), transparent);
+  transform: translateX(-100%); animation: kshimmer 1.4s infinite;
+}
+@keyframes kshimmer { 100% { transform: translateX(100%); } }
+
+/* parent gate shake */
+@keyframes gateShake { 0%,100%{transform:translateX(0);} 20%,60%{transform:translateX(-8px);} 40%,80%{transform:translateX(8px);} }
+.gate-shake { animation: gateShake .45s; }
+
+/* festival cards + who avatars */
+.fest-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-md); border-color: transparent; }
+.who-av:hover { transform: scale(1.06); }
+
+/* ---------- Shelves (modern, floating) ---------- */
+.bookcase { background: none; padding: 0; box-shadow: none; border-radius: 0; }
+.bookcase-back { background: none; padding: 0; box-shadow: none; border-radius: 0; }
+.shelf { position: relative; }
+.shelf-books {
+  display: flex; align-items: flex-end; justify-content: flex-start;
+  gap: 30px; padding: 6px 2px 0;
+}
+.shelf-plank { /* hairline shelf + soft fade-out shadow */
+  height: 1px; margin: 0 0 42px; border: 0;
+  background: linear-gradient(90deg, transparent, var(--line) 7%, var(--line) 93%, transparent);
+  box-shadow: 0 10px 16px -10px rgba(70,58,45,0.22);
+}
+.shelf:last-child .shelf-plank { margin-bottom: 16px; }
+
+/* genre sections */
+.genre-section + .genre-section { margin-top: 30px; }
+.genre-label {
+  display: flex; align-items: center; gap: 12px;
+  padding: 0 2px 12px; margin-bottom: 20px;
+  border-bottom: 1px solid var(--line);
+}
+.genre-label .gl-ico { width: 30px; height: 30px; flex: none; border-radius: 9px; display: grid; place-items: center; }
+.genre-name { font-family: var(--font-body); font-weight: 700; font-size: 13.5px; color: var(--ink-faint); letter-spacing: 0.01em; white-space: nowrap; }
+.genre-deva { font-family: var(--font-deva); font-weight: 700; font-size: 23px; color: var(--ink); line-height: 1; white-space: nowrap; }
+.genre-count { margin-left: auto; font-family: var(--font-body); font-weight: 700; font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--ink-faint); white-space: nowrap; }
+
+/* sub-shelves within a genre */
+.subgenre-block { margin-top: 10px; }
+.subgenre-label { display: flex; align-items: center; gap: 9px; padding: 0 2px 10px; }
+.sg-dot { width: 9px; height: 9px; flex: none; border-radius: 50%; }
+.sg-name { font-family: var(--font-display); font-weight: 700; font-size: 15px; color: var(--ink); }
+.sg-deva { font-family: var(--font-deva); font-weight: 700; font-size: 14px; color: var(--ink-faint); }
+.sg-count { margin-left: 6px; font-family: var(--font-body); font-weight: 800; font-size: 11.5px; color: var(--ink-faint); }
+
+/* face-out book */
+.facebook {
+  position: relative; flex: none; border: 0; padding: 0; cursor: pointer;
+  background: none; width: 168px; text-align: left;
+  transition: transform .2s cubic-bezier(.2,.8,.3,1);
+}
+.facebook:hover { transform: translateY(-7px); }
+.facebook-cover {
+  position: relative; height: 152px; border-radius: 4px 12px 12px 4px; overflow: hidden;
+  box-shadow: 0 1px 2px rgba(80,60,35,0.12), 0 12px 22px -10px rgba(90,68,40,0.34);
+}
+.facebook-cover::before { /* subtle spine edge */
+  content: ""; position: absolute; left: 0; top: 0; bottom: 0; width: 6px; z-index: 2;
+  background: linear-gradient(90deg, rgba(0,0,0,0.13), rgba(0,0,0,0));
+}
+.facebook-heart {
+  position: absolute; top: 8px; right: 8px; z-index: 3; width: 30px; height: 30px; border-radius: 50%;
+  background: rgba(255,255,255,0.92); display: grid; place-items: center; box-shadow: 0 1px 3px rgba(0,0,0,0.16);
+  opacity: 0; transition: opacity .16s ease;
+}
+.facebook:hover .facebook-heart, .facebook-heart[data-on="true"] { opacity: 1; }
+.facebook-label { padding: 13px 2px 0; }
+.facebook-title {
+  font-family: var(--font-display); font-weight: 700; font-size: 16px; line-height: 1.15; color: var(--ink);
+  display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden;
+  min-height: 37px;  /* reserve 2 lines so every book is the same height */
+}
+.facebook-meta { display: flex; align-items: center; gap: 12px; margin-top: 7px; font-weight: 700; font-size: 12.5px; color: var(--ink-faint); }
+
+@media (max-width: 860px){
+  .katha-hero-grid { grid-template-columns: 1fr !important; }
+}

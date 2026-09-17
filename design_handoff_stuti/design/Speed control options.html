@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Recitation speed — options</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700&family=Spectral:ital,wght@0,300;0,400;0,500;0,600&family=Tiro+Telugu:ital@0;1&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="styles.css" />
+<style>
+  body { margin: 0; background: var(--paper); color: var(--ink); font-family: var(--font-body); }
+  .page { max-width: 980px; margin: 0 auto; padding: 56px 32px 96px; }
+  .eyebrow { font-size: 13px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--saffron); font-weight: 500; }
+  h1 { font-family: var(--font-display); font-weight: 600; font-size: 44px; margin: 10px 0 6px; letter-spacing: -0.01em; }
+  .lede { color: var(--ink-soft); font-size: 17px; max-width: 620px; line-height: 1.6; margin: 0 0 14px; }
+  .hint { color: var(--ink-faint); font-size: 14.5px; font-style: normal; }
+
+  .opt { margin-top: 40px; }
+  .opt-head { display: flex; align-items: center; gap: 14px; margin-bottom: 4px; }
+  .opt-tag { font-family: var(--font-display); font-size: 15px; font-weight: 700; color: var(--on-night); background: var(--maroon);
+             width: 30px; height: 30px; border-radius: 50%; display: grid; place-items: center; flex: none; }
+  .opt-name { font-family: var(--font-display); font-size: 25px; font-weight: 600; white-space: nowrap; }
+  .opt-desc { color: var(--ink-soft); font-size: 15px; line-height: 1.55; margin: 7px 0 0; max-width: 680px; }
+  .opt-desc b { color: var(--ink); font-weight: 600; }
+
+  /* night recite bar (mirrors the app) */
+  .bar { margin-top: 16px; background: var(--night); color: var(--on-night); border-radius: 8px; overflow: hidden;
+         box-shadow: var(--shadow-lift); }
+  .bar-prog { height: 3px; background: rgba(240,228,204,0.14); }
+  .bar-prog > i { display: block; height: 100%; background: var(--gold-bright); width: 38%; }
+  .bar-row { display: flex; align-items: center; gap: 18px; padding: 15px 22px; }
+  .play { width: 46px; height: 46px; border-radius: 50%; flex: none; border: 0; background: var(--gold-bright); color: var(--night);
+          display: grid; place-items: center; cursor: pointer; font-size: 18px; }
+  .now { min-width: 0; flex: 1; }
+  .now .nm { font-family: var(--font-tel), var(--font-display); font-size: 19px; color: var(--on-night); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .now .sub { font-size: 12.5px; color: var(--on-night-soft); margin-top: 2px; }
+  .ctl { flex: none; }
+
+  /* shared control bits */
+  .seg { display: flex; gap: 4px; background: rgba(240,228,204,0.08); border-radius: 999px; padding: 3px; }
+  .seg button { padding: 6px 12px; border-radius: 999px; border: 0; font: inherit; font-size: 13px; cursor: pointer;
+                background: transparent; color: var(--on-night-soft); transition: background .15s, color .15s; white-space: nowrap; }
+  .seg button[aria-pressed="true"] { background: var(--gold-bright); color: var(--night); }
+
+  .readout { font-family: var(--font-display); font-variant-numeric: tabular-nums; font-weight: 600; }
+
+  input[type=range] { -webkit-appearance: none; appearance: none; background: transparent; cursor: pointer; }
+  input[type=range]::-webkit-slider-runnable-track { height: 4px; border-radius: 999px;
+    background: linear-gradient(var(--gold-bright), var(--gold-bright)) no-repeat, rgba(240,228,204,0.18); background-size: var(--fill,50%) 100%; }
+  input[type=range]::-moz-range-track { height: 4px; border-radius: 999px; background: rgba(240,228,204,0.18); }
+  input[type=range]::-moz-range-progress { height: 4px; border-radius: 999px; background: var(--gold-bright); }
+  input[type=range]::-webkit-slider-thumb { -webkit-appearance: none; appearance: none; width: 16px; height: 16px; margin-top: -6px;
+    border-radius: 50%; background: var(--on-night); box-shadow: 0 0 0 1px rgba(0,0,0,0.2); }
+  input[type=range]::-moz-range-thumb { width: 16px; height: 16px; border: 0; border-radius: 50%; background: var(--on-night); }
+
+  .stepper { display: flex; align-items: center; gap: 2px; background: rgba(240,228,204,0.08); border-radius: 999px; padding: 3px; }
+  .stepper button { width: 32px; height: 32px; border-radius: 50%; border: 0; background: transparent; color: var(--on-night); font-size: 18px;
+                    cursor: pointer; display: grid; place-items: center; line-height: 1; }
+  .stepper button:hover { background: rgba(240,228,204,0.12); }
+  .stepper .val { min-width: 58px; text-align: center; font-size: 15px; }
+
+  .ticks { display: flex; justify-content: space-between; font-size: 10.5px; color: var(--on-night-soft); letter-spacing: .04em; margin-top: 5px; }
+
+  /* Option C — fine snap slider with nudge + presets */
+  .fine { display: flex; align-items: center; gap: 8px; }
+  .fine input[type=range] { flex: 1; min-width: 120px; }
+  .nudge { width: 30px; height: 30px; border-radius: 50%; border: 0; background: rgba(240,228,204,0.1); color: var(--on-night);
+           font-size: 18px; cursor: pointer; display: grid; place-items: center; line-height: 1; flex: none; transition: background .15s; }
+  .nudge:hover { background: rgba(240,228,204,0.2); }
+  .presets { display: flex; flex-wrap: wrap; gap: 5px; margin-top: 10px; }
+  .presets button { padding: 4px 10px; border-radius: 999px; border: 0; font: inherit; font-size: 12px; cursor: pointer;
+                    background: rgba(240,228,204,0.08); color: var(--on-night-soft); transition: background .15s, color .15s; }
+  .presets button:hover { background: rgba(240,228,204,0.16); }
+  .presets button[aria-pressed="true"] { background: var(--gold-bright); color: var(--night); }
+
+  .verdict { margin-top: 56px; padding: 22px 26px; background: var(--paper-2); border: 1px solid var(--line); border-left: 3px solid var(--maroon); border-radius: var(--radius); }
+  .verdict h3 { font-family: var(--font-display); font-size: 20px; margin: 0 0 8px; }
+  .verdict p { margin: 0; color: var(--ink-soft); font-size: 15.5px; line-height: 1.65; }
+  .verdict b { color: var(--ink); }
+</style>
+</head>
+<body>
+<div class="page">
+  <div class="eyebrow">Recitation · pacing control</div>
+  <h1>Four ways to set the speed</h1>
+  <p class="lede">Each control is live — tap, drag, and feel it. They all drive the same playback rate (which then scales per-name by length). The question is which <em>gesture</em> fits chanting best.</p>
+  <p class="hint">Current app uses a 3-chip toggle capped at 1.5×. All options below extend the range for advanced readers.</p>
+
+  <!-- OPTION A -->
+  <div class="opt">
+    <div class="opt-head"><span class="opt-tag">A</span><span class="opt-name">Extended presets</span></div>
+    <p class="opt-desc">The current segmented toggle, just with more named tempos up to <b>3×</b>. <b>Tappable mid-recitation</b>, repeatable, no fiddly aim. Familiar — it's what's there now.</p>
+    <div class="bar">
+      <div class="bar-prog"><i></i></div>
+      <div class="bar-row">
+        <button class="play">❚❚</button>
+        <div class="now"><div class="nm">శ్రీమాతా</div><div class="sub">Name 1 of 1000 · Lalitā Sahasranāma</div></div>
+        <div class="ctl"><div class="seg" id="segA"></div></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- OPTION B -->
+  <div class="opt">
+    <div class="opt-head"><span class="opt-tag">B</span><span class="opt-name">Continuous slider</span></div>
+    <p class="opt-desc">A bar from <b>0.5× to 3×</b> with a live readout. <b>Infinite fine control</b> — an advanced reader can settle on exactly 1.8×. Trade-off: harder to hit a precise value with a fingertip while reading.</p>
+    <div class="bar">
+      <div class="bar-prog"><i></i></div>
+      <div class="bar-row">
+        <button class="play">❚❚</button>
+        <div class="now"><div class="nm">శ్రీమాతా</div><div class="sub">Name 1 of 1000 · Lalitā Sahasranāma</div></div>
+        <div class="ctl" style="display:flex;align-items:center;gap:12px;min-width:230px;">
+          <input type="range" id="rngB" min="0.5" max="3" step="0.05" value="1" style="width:160px;" />
+          <span class="readout" id="outB" style="min-width:46px;">1.00×</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- OPTION C -->
+  <div class="opt">
+    <div class="opt-head"><span class="opt-tag">C</span><span class="opt-name">Snap slider <span style="font-size:14px;color:var(--saffron);font-weight:500;">· recommended</span></span></div>
+    <p class="opt-desc">A fine slider across the <b>full 0.5×–3× range in 0.05 steps</b>, with <b>−/+ buttons</b> on the slider to dial in exact custom tempos like <b>1.40× or 1.45×</b>. The <b>standard speeds sit below as tappable chips</b> — one tap snaps you back to a clean stop, and the active speed lights up. Drag for range, nudge for precision, tap for repeatability.</p>
+    <div class="bar">
+      <div class="bar-prog"><i></i></div>
+      <div class="bar-row">
+        <button class="play">❚❚</button>
+        <div class="now"><div class="nm">శ్రీమాతా</div><div class="sub">Name 1 of 1000 · Lalitā Sahasranāma</div></div>
+        <div class="ctl" style="min-width:300px;max-width:360px;">
+          <div class="fine">
+            <button class="nudge" id="cDn" aria-label="slower">−</button>
+            <input type="range" id="rngC" min="0.5" max="3" step="0.05" value="1" />
+            <button class="nudge" id="cUp" aria-label="faster">+</button>
+            <span class="readout" id="outC" style="min-width:52px;text-align:right;">1×</span>
+          </div>
+          <div class="presets" id="presetsC"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- OPTION D -->
+  <div class="opt">
+    <div class="opt-head"><span class="opt-tag">D</span><span class="opt-name">Stepper</span></div>
+    <p class="opt-desc">Minus / plus buttons nudge the tempo in <b>0.25× steps</b> (0.5×–3×). Compact, precise, one-handed. Slower to make a big jump, but never mis-tapped.</p>
+    <div class="bar">
+      <div class="bar-prog"><i></i></div>
+      <div class="bar-row">
+        <button class="play">❚❚</button>
+        <div class="now"><div class="nm">శ్రీమాతా</div><div class="sub">Name 1 of 1000 · Lalitā Sahasranāma</div></div>
+        <div class="ctl">
+          <div class="stepper">
+            <button id="dDn">−</button>
+            <span class="val readout" id="valD">1.5×</span>
+            <button id="dUp">+</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="verdict">
+    <h3>My recommendation</h3>
+    <p>For chanting, <b>C (snap slider)</b> now does exactly what you asked — many speeds on the drag, <b>−/+ for custom tempos</b> like 1.40× and 1.45×, and the <b>standard speeds as quick chips below</b> so a reader can always tap back to "their" speed. <b>A (extended presets)</b> is the safest, smallest change if you'd rather keep the current feel. Tell me <b>A, B, C, or D</b> (or a mix) and I'll roll it into all three recite bars.</p>
+  </div>
+</div>
+
+<script>
+  // Option A — presets
+  const A = [0.75, 1, 1.5, 2, 2.5, 3];
+  let aVal = 1;
+  const segA = document.getElementById('segA');
+  function renderA(){ segA.innerHTML = A.map(s=>`<button data-v="${s}" aria-pressed="${s===aVal}">${s}×</button>`).join(''); }
+  segA.addEventListener('click', e=>{ const b=e.target.closest('button'); if(!b) return; aVal=parseFloat(b.dataset.v); renderA(); });
+  renderA();
+
+  // Option B — continuous
+  const rngB = document.getElementById('rngB'), outB = document.getElementById('outB');
+  function updB(){ outB.textContent = parseFloat(rngB.value).toFixed(2)+'×';
+    rngB.style.setProperty('--fill', ((rngB.value-0.5)/(3-0.5)*100)+'%'); }
+  rngB.addEventListener('input', updB); updB();
+
+  // Option C — fine snap slider with nudge buttons + preset chips
+  const Cmin = 0.5, Cmax = 3, Cstep = 0.05;
+  const Cpresets = [0.75, 1, 1.25, 1.5, 1.75, 2, 2.5, 3];
+  const rngC = document.getElementById('rngC'), outC = document.getElementById('outC'), presetsC = document.getElementById('presetsC');
+  presetsC.innerHTML = Cpresets.map(v=>`<button data-v="${v}">${v}×</button>`).join('');
+  function fmtC(v){ return v.toFixed(2).replace(/0+$/,'').replace(/\.$/,'') + '×'; }
+  function updC(){
+    const v = parseFloat(rngC.value);
+    outC.textContent = fmtC(v);
+    rngC.style.setProperty('--fill', ((v-Cmin)/(Cmax-Cmin)*100)+'%');
+    presetsC.querySelectorAll('button').forEach(b=>
+      b.setAttribute('aria-pressed', Math.abs(parseFloat(b.dataset.v)-v) < 0.001));
+  }
+  rngC.addEventListener('input', updC);
+  presetsC.addEventListener('click', e=>{ const b=e.target.closest('button'); if(!b) return; rngC.value=b.dataset.v; updC(); });
+  function nudgeC(d){ let v=Math.round((parseFloat(rngC.value)+d)*100)/100; v=Math.min(Cmax,Math.max(Cmin,v)); rngC.value=v; updC(); }
+  document.getElementById('cDn').addEventListener('click', ()=>nudgeC(-Cstep));
+  document.getElementById('cUp').addEventListener('click', ()=>nudgeC(Cstep));
+  updC();
+
+  // Option D — stepper
+  const Dvals = [0.5,0.75,1,1.25,1.5,1.75,2,2.25,2.5,2.75,3];
+  let dIdx = 4; // 1.5
+  const valD = document.getElementById('valD');
+  function updD(){ valD.textContent = Dvals[dIdx]+'×'; }
+  document.getElementById('dDn').addEventListener('click', ()=>{ dIdx=Math.max(0,dIdx-1); updD(); });
+  document.getElementById('dUp').addEventListener('click', ()=>{ dIdx=Math.min(Dvals.length-1,dIdx+1); updD(); });
+  updD();
+
+  // play toggles (cosmetic)
+  document.querySelectorAll('.play').forEach(b=>b.addEventListener('click',()=>{ b.textContent = b.textContent==='❚❚' ? '▶' : '❚❚'; }));
+</script>
+</body>
+</html>

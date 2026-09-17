@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="design_doc_mode" content="canvas">
+<title>Beige + Pigment Exploration</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400..700&family=Noto+Sans:wght@400..700&family=Noto+Sans+Devanagari:wght@400;500;600&family=Noto+Sans+Telugu:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box;margin:0;font-style:normal}
+body{font-family:'Noto Sans','Noto Sans Telugu',system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+a{color:#8A5A18}a:hover{color:#B07A2B}
+.sec{position:absolute;width:880px;color:#2B2017}
+.sec h2{font-family:'Noto Serif',serif;font-weight:600;font-size:30px;letter-spacing:-.01em}
+.sec .k{font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:#8A5A18;font-weight:600;margin-bottom:8px}
+.sec p{margin-top:10px;font-size:15px;line-height:1.65;color:#584B3E;max-width:74ch;text-wrap:pretty}
+.cap{position:absolute;font-size:13px;letter-spacing:.02em;color:#584B3E;font-weight:600;display:flex;align-items:center;gap:8px;white-space:nowrap}
+.cap .sw{width:13px;height:13px;border-radius:4px;box-shadow:inset 0 0 0 1px rgba(0,0,0,.12)}
+.cap small{font-weight:400;color:#6F6356;font-size:12px}
+.ph{position:absolute;width:390px;height:800px;border-radius:36px;overflow:hidden;display:flex;flex-direction:column;color:var(--ink);background:linear-gradient(180deg,var(--bw),var(--bg) 30%);box-shadow:0 34px 80px -34px rgba(40,25,8,.45),0 0 0 1px rgba(0,0,0,.06);font-size:15px}
+.bar{display:flex;align-items:center;justify-content:space-between;padding:16px 20px 10px}
+.wm{font-family:'Noto Serif','Noto Sans Telugu',serif;font-size:24px;font-weight:600;color:#B07A2B}
+.ic{color:var(--soft);display:grid;place-items:center}
+.sky{position:relative;height:158px;margin:6px 0 0;overflow:hidden}
+.sky .sun{position:absolute;right:52px;bottom:34px;width:30px;height:30px;border-radius:50%;background:radial-gradient(circle at 40% 35%,#FBE29A,#F2C05A 65%,rgba(242,192,90,0));box-shadow:0 0 26px 10px rgba(244,200,100,.45)}
+.sky .greet{position:absolute;left:20px;top:24px;color:#FDF8EC;font-size:17px;font-weight:600;text-shadow:0 1px 8px rgba(20,30,45,.35)}
+.sky .loc{position:absolute;right:16px;top:22px;font-size:12px;color:#F2ECDD;background:rgba(30,45,66,.38);padding:4px 12px;border-radius:999px}
+.card{position:relative;margin:0 18px;background:var(--sf);border-radius:22px;box-shadow:0 16px 40px -20px rgba(40,25,8,.35);padding:16px 18px}
+.card.over{margin-top:-52px}
+.ey{font-size:11.5px;letter-spacing:.18em;text-transform:uppercase;font-weight:600;color:var(--faint)}
+.srow{display:flex;align-items:baseline;justify-content:space-between;gap:10px;margin-top:8px}
+.srow b{font-size:20px;font-weight:600}
+.srow span{font-size:16px;color:var(--soft)}
+.pbar{margin-top:12px;height:5px;border-radius:3px;background:color-mix(in oklab,currentColor 14%,transparent);position:relative;overflow:hidden}
+.pbar span{position:absolute;inset:0 auto 0 0;width:34%;border-radius:3px;background:var(--pb,var(--acc))}
+.meta{display:flex;justify-content:space-between;margin-top:9px;font-size:12.5px;color:var(--faint)}
+.meta .mid{color:var(--deep);font-weight:600}
+.search{margin:16px 18px 0;display:flex;align-items:center;gap:10px;background:var(--sf);border-radius:999px;padding:13px 18px;color:var(--faint);font-size:15px;box-shadow:0 8px 24px -16px rgba(40,25,8,.4)}
+.shelfhead{display:flex;align-items:baseline;justify-content:space-between;margin:22px 20px 10px}
+.shelfhead .more{font-size:13px;color:var(--deep);font-weight:600}
+.shelf{display:flex;gap:12px;margin:0 18px}
+.scard{flex:1;background:var(--sf);border-radius:18px;padding:14px 15px;box-shadow:0 10px 26px -18px rgba(40,25,8,.4)}
+.scard .dot{width:9px;height:9px;border-radius:50%;margin-bottom:9px;display:block}
+.scard b{font-size:15.5px;font-weight:600;display:block;line-height:1.35}
+.scard small{display:block;margin-top:4px;font-size:12px;color:var(--faint)}
+.scard .go{margin-top:10px;display:inline-block;font-size:12px;font-weight:600;padding:4px 11px;border-radius:999px}
+.tabs{margin-top:auto;display:flex;gap:6px;padding:10px 14px 20px;background:color-mix(in oklab,var(--sf) 78%,var(--bg));border-top:1px solid color-mix(in oklab,var(--ink) 7%,transparent)}
+.tab{flex:1;display:flex;flex-direction:column;align-items:center;gap:4px;padding:9px 4px;border-radius:15px;font-size:12px;color:var(--soft)}
+.tab.on{background:color-mix(in oklab,var(--acc) 15%,transparent);color:var(--deep);font-weight:600}
+.lt{font-family:'Noto Serif','Noto Sans Telugu',serif;font-size:25px;font-weight:600;margin:8px 20px 0}
+.band{margin:10px 18px 0;border-radius:22px;padding:18px 20px 16px;color:#F7EFE2;box-shadow:0 16px 40px -20px rgba(40,25,8,.5)}
+.band .lt{margin:0;color:#FBF4E8}
+.band .bey{font-size:11px;letter-spacing:.18em;text-transform:uppercase;font-weight:600;opacity:.75;margin-bottom:5px}
+.chips{display:flex;gap:8px;margin:14px 18px 0;overflow:hidden}
+.chip{white-space:nowrap;font-size:13.5px;padding:9px 16px;border-radius:999px;background:var(--sf);color:var(--soft);box-shadow:0 6px 18px -12px rgba(40,25,8,.4)}
+.chip.on{font-weight:600}
+.dgrid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:11px;margin:16px 18px 0}
+.dcell{background:var(--sf);border-radius:18px;padding:13px 8px 11px;text-align:center;box-shadow:0 10px 26px -18px rgba(40,25,8,.4)}
+.em{width:64px;height:64px;border-radius:50%;margin:0 auto;display:grid;place-items:center;font-family:'Noto Sans Devanagari',sans-serif;font-size:25px;font-weight:600}
+.dcell b{display:block;margin-top:8px;font-size:13.5px;font-weight:600;color:var(--soft)}
+.rtop{display:flex;align-items:center;gap:12px;padding:14px 18px 8px}
+.rtop b{font-size:17px;font-weight:600}
+.rtop small{display:block;font-size:12px;color:var(--faint);font-weight:400}
+.verse{margin:14px 18px 0;background:var(--sf);border-radius:22px;padding:20px;box-shadow:0 16px 40px -20px rgba(40,25,8,.35)}
+.vn{font-size:12px;font-weight:600;display:inline-block;padding:3px 11px;border-radius:999px}
+.deva{font-family:'Noto Sans Devanagari',sans-serif;font-size:19.5px;line-height:1.8;margin-top:14px;white-space:pre-line}
+.telv{font-family:'Noto Sans Telugu',sans-serif;font-size:16.5px;line-height:1.85;margin-top:14px;color:var(--soft);white-space:pre-line;border-top:1px solid color-mix(in oklab,var(--ink) 8%,transparent);padding-top:13px}
+.mean{margin-top:13px;font-size:13.5px;line-height:1.6;color:var(--faint)}
+.audio{margin:auto 18px 22px;display:flex;align-items:center;gap:13px;background:var(--sf);border-radius:999px;padding:11px 18px 11px 11px;box-shadow:0 14px 34px -18px rgba(40,25,8,.45)}
+.play{width:44px;height:44px;border-radius:50%;display:grid;place-items:center;color:#FFFDF6;flex:none}
+.audio .pbar{flex:1;margin:0}
+.audio small{font-size:12px;color:var(--faint);white-space:nowrap}
+.pal{position:absolute;width:390px;background:#FFFDF8;border-radius:26px;padding:22px 24px;box-shadow:0 34px 80px -34px rgba(40,25,8,.4),0 0 0 1px rgba(0,0,0,.05);color:#2B2017}
+.pal h3{font-family:'Noto Serif',serif;font-weight:600;font-size:18px}
+.pal p{margin-top:6px;font-size:13px;line-height:1.55;color:#6F6356}
+.prow{display:flex;align-items:center;gap:13px;margin-top:14px}
+.prow .big{width:46px;height:46px;border-radius:12px;flex:none}
+.prow b{font-size:14px;font-weight:600;display:block}
+.prow small{font-size:11.5px;color:#6F6356;letter-spacing:.06em;text-transform:uppercase}
+</style>
+</head>
+<body>
+<script>
+const BEIGE={bg:"#F7EFE2",bw:"#F2E6D2",sf:"#FFFDF8",ink:"#2B2017",soft:"#584B3E",faint:"#6F6356",acc:"#B07A2B",deep:"#8A5A18"};
+const PIG={
+ gold:{c:"#B07A2B",d:"#8A5A18",n:"Gold",note:"the chrome — stays"},
+ rose:{c:"#9C6170",d:"#7E4B59",n:"Madder rose",note:"vasanta's pigment, ground down"},
+ indigo:{c:"#5A6C85",d:"#46566D",n:"Indigo",note:"varṣā's blue as dye"},
+ teal:{c:"#567A7E",d:"#426266",n:"Peacock",note:"the one cool-green note"},
+ moss:{c:"#7B8158",d:"#616740",n:"Moss",note:"śarad's unturned leaf"},
+ violet:{c:"#7F7094",d:"#645678",n:"Violet",note:"the bloom violet, quieter"},
+ terra:{c:"#AA7051",d:"#8B563A",n:"Terracotta",note:"kumkuma warmth"},
+};
+const withAcc=(p)=>({...BEIGE,acc:p.c,deep:p.d});
+const vars=t=>`--bg:${t.bg};--bw:${t.bw};--sf:${t.sf};--ink:${t.ink};--soft:${t.soft};--faint:${t.faint};--acc:${t.acc};--deep:${t.deep}`;
+const I={
+ gear:'<svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="3.4"/><path d="M12 2.5v3M12 18.5v3M2.5 12h3M18.5 12h3M5.3 5.3l2.1 2.1M16.6 16.6l2.1 2.1M18.7 5.3l-2.1 2.1M7.4 16.6l-2.1 2.1"/></svg>',
+ moon:'<svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M20 14.5A8.5 8.5 0 0 1 9.5 4a8.5 8.5 0 1 0 10.5 10.5Z"/></svg>',
+ srch:'<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="10.5" cy="10.5" r="6.5"/><path d="M15.5 15.5 21 21"/></svg>',
+ back:'<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M14.5 5 8 12l6.5 7"/></svg>',
+ play:'<svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5.5v13l10.5-6.5Z"/></svg>',
+ home:'<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linejoin="round"><path d="M4 11.5 12 4.5l8 7"/><path d="M6.5 10v9.5h11V10"/></svg>',
+ flower:'<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><circle cx="12" cy="12" r="2.4"/><ellipse cx="12" cy="6.2" rx="2.3" ry="3.1"/><ellipse cx="12" cy="17.8" rx="2.3" ry="3.1"/><ellipse cx="6.2" cy="12" rx="3.1" ry="2.3"/><ellipse cx="17.8" cy="12" rx="3.1" ry="2.3"/></svg>',
+ book:'<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linejoin="round"><path d="M12 6.5C10.4 5 8 4.5 4.5 4.7V18c3.5-.2 5.9.3 7.5 1.8 1.6-1.5 4-2 7.5-1.8V4.7C16 4.5 13.6 5 12 6.5Z"/><path d="M12 6.5v13"/></svg>',
+ cal:'<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9"><rect x="4" y="5.5" width="16" height="14.5" rx="3"/><path d="M4 10h16M8.5 3.5v3.5M15.5 3.5v3.5"/></svg>'
+};
+const skyDay='linear-gradient(180deg,#3E6E9E,#6E97B8 34%,#C4BC9E 62%,#EED7A2 80%,#F3E4C0)';
+const tabs=(on)=>`<div class="tabs">${[["home","నేడు"],["flower","నిత్య"],["book","సంకలనం"],["cal","పంచాంగం"]].map(([k,l],i)=>`<div class="tab${i===on?" on":""}">${I[k]}<span>${l}</span></div>`).join("")}</div>`;
+const pill=(p,label)=>`<span class="go" style="color:${p.d};background:color-mix(in oklab, ${p.c} 14%, transparent)">${label}</span>`;
+function home(t,o={}){
+ const s=o.solid; // pigment object → sandhya card becomes a solid block
+ const d1=o.d1||PIG.terra, d2=o.d2||PIG.violet;
+ const sandhya = s
+ ?`<div class="card over" style="background:linear-gradient(160deg, ${s.c}, ${s.d});color:#F7EFE2"><div class="ey" style="color:rgba(247,239,226,.72)">సంధ్యావందనం</div><div class="srow"><b>సాయం సంధ్య</b><span style="color:rgba(247,239,226,.85)">7:44 pm వరకు</span></div><div class="pbar" style="--pb:#E9C87E;background:rgba(247,239,226,.22)"><span></span></div><div class="meta" style="color:rgba(247,239,226,.68)"><span>5:20 pm</span><span class="mid" style="color:#F0D9A2">ఉత్తమం 6:32 వరకు</span><span>7:44 pm</span></div></div>`
+ :`<div class="card over"><div class="ey">సంధ్యావందనం</div><div class="srow"><b>సాయం సంధ్య</b><span>7:44 pm వరకు</span></div><div class="pbar"${o.pb?` style="--pb:${o.pb}"`:""}><span></span></div><div class="meta"><span>5:20 pm</span><span class="mid">ఉత్తమం 6:32 వరకు</span><span>7:44 pm</span></div></div>`;
+ return `<div class="bar"><span class="ic">${I.gear}</span><span class="wm">స్తుతి</span><span class="ic">${I.moon}</span></div>
+ <div class="sky" style="background:${skyDay}"><span class="sun"></span><span class="greet">శుభ సాయంత్రం, Srikrishna</span><span class="loc">Bengaluru</span></div>
+ ${sandhya}
+ <div class="search">${I.srch} స్తోత్రాలు వెతకండి</div>
+ <div class="shelfhead"><span class="ey"${o.multi?` style="color:${PIG.moss.d}"`:""}>నిత్య పారాయణ</span><span class="more">అన్నీ</span></div>
+ <div class="shelf">
+ <div class="scard"><span class="dot" style="background:${d1.c}"></span><b>హనుమాన్ చాలీసా</b><small>Hanumān Cālīsā</small>${pill(o.multi?d1:PIG.gold,"కొనసాగించండి")}</div>
+ <div class="scard"><span class="dot" style="background:${d2.c}"></span><b>లలితా సహస్రనామం</b><small>Lalitā Sahasranāma</small>${pill(o.multi?d2:PIG.gold,"ప్రారంభించండి")}</div></div>
+ ${tabs(0)}`}
+function lib(t,o={}){
+ const mono=o.mono; // D1: emblems in the screen's own pigment
+ const D=[["గ","గణేశ",mono||PIG.terra],["దే","దేవి",mono||PIG.rose],["శి","శివ",mono||PIG.indigo],["వి","విష్ణు",mono||PIG.teal],["సు","సుబ్రహ్మణ్య",mono||PIG.moss],["ల","లక్ష్మి",mono||PIG.violet]];
+ const emFill=o.multi?12:8;
+ const chipset=o.multiChips
+ ?[["దేవత",PIG.rose],["రకం",PIG.indigo],["మాసం",PIG.moss],["వ్రతం",PIG.violet],["నోము",PIG.terra]].map(([l,p],i)=>`<span class="chip${i===0?" on":""}" style="${i===0?`color:${p.d};background:color-mix(in oklab, ${p.c} 15%, #FFFDF8);box-shadow:inset 0 0 0 1.5px color-mix(in oklab, ${p.c} 45%, transparent)`:`color:${p.d}`}">${l}</span>`).join("")
+ :["దేవత","రకం","మాసం","వ్రతం","నోము"].map((l,i)=>`<span class="chip${i===0?" on":""}"${i===0?` style="color:var(--deep);background:color-mix(in oklab, var(--acc) 15%, var(--sf));box-shadow:inset 0 0 0 1.5px color-mix(in oklab, var(--acc) 45%, transparent)"`:""}>${l}</span>`).join("");
+ const head=o.band
+ ?`<div class="band" style="background:linear-gradient(160deg, ${o.band.c}, ${o.band.d})"><div class="bey">గ్రంథాలయం · ౧౦౮ స్తోత్రాలు</div><div class="lt">సంకలనం</div></div>`
+ :`<div class="lt">సంకలనం</div>`;
+ return `<div class="bar"><span class="ic">${I.gear}</span><span class="wm">స్తుతి</span><span class="ic">${I.moon}</span></div>
+ ${head}
+ <div class="chips">${chipset}</div>
+ <div class="dgrid">${D.map(([g,n,p])=>`<div class="dcell"><span class="em" style="color:${p.d};background:color-mix(in oklab, ${p.c} ${emFill}%, var(--sf));box-shadow:inset 0 0 0 1.5px color-mix(in oklab, ${p.c} 35%, transparent)">${g}</span><b>${n}</b></div>`).join("")}</div>
+ ${tabs(2)}`}
+function reader(t,o={}){
+ const a=o.a||PIG.gold, s=o.solidAudio;
+ return `<div class="rtop"><span class="ic">${I.back}</span><div><b>హనుమత్ ధ్యానం</b><small>Hanumat Dhyānam · ౧/౧</small></div></div>
+ <div class="verse"><span class="vn" style="color:${a.d};background:color-mix(in oklab, ${a.c} 14%, transparent)">౧</span><div class="deva">मनोजवं मारुततुल्यवेगं
+जितेन्द्रियं बुद्धिमतां वरिष्ठम् ।
+वातात्मजं वानरयूथमुख्यं
+श्रीरामदूतं शरणं प्रपद्ये ॥</div><div class="telv">మనోజవం మారుతతుల్యవేగం
+జితేంద్రియం బుద్ధిమతాం వరిష్ఠమ్ ।
+వాతాత్మజం వానరయూథముఖ్యం
+శ్రీరామదూతం శరణం ప్రపద్యే ॥</div><div class="mean">Swift as thought, mighty as the wind, master of the senses, foremost of the wise — Rāma's messenger, in him I take refuge.</div></div>
+ <div class="audio"${s?` style="background:linear-gradient(160deg, ${s.c}, ${s.d})"`:""}><span class="play" style="background:${s?"rgba(247,239,226,.2)":a.c}">${I.play}</span><div class="pbar" style="--pb:${s?"#E9C87E":a.c};${s?"background:rgba(247,239,226,.22)":""}"><span></span></div><small${s?` style="color:rgba(247,239,226,.8)"`:""}>0:38 · 1×</small></div>`}
+let out="";
+const sec=(x,y,k,h,p)=>{out+=`<div class="sec" style="left:${x}px;top:${y}px"><div class="k">${k}</div><h2>${h}</h2><p>${p}</p></div>`};
+const frame=(x,y,t,sw,label,sub,inner)=>{out+=`<div class="cap" style="left:${x}px;top:${y-32}px"><span class="sw" style="background:${sw}"></span>${label}${sub?` <small>${sub}</small>`:""}</div><div class="ph" style="left:${x}px;top:${y}px;${vars(t)}">${inner}</div>`};
+// ---------- The paintbox ----------
+sec(40,40,"Beige stays · round two","The pigments",
+"The ground stays parchment everywhere — the beige is the app. Colour arrives as a small paintbox of manuscript pigments, all ground from hues already in the system: the ṛtu dyestuffs and the bloom shades, chroma held to the level of the current gold. Three ways to spend them, below.");
+out+=`<div class="pal" style="left:960px;top:30px"><h3>The paintbox</h3><p>Seven pigments, one saturation family — all dusted with parchment so none shouts past the gold.</p>${Object.values(PIG).map(p=>`<div class="prow"><span class="big" style="background:linear-gradient(160deg, ${p.c}, ${p.d})"></span><div><b>${p.n} <small style="font-weight:400;color:#6F6356">${p.c}</small></b><small>${p.note}</small></div></div>`).join("")}</div>`;
+// ---------- D1 ----------
+sec(40,700,"One pigment per place","D1 · Each screen owns a colour",
+"Home keeps gold. Every other tab owns one pigment and spends it the way home spends gold — active chip, progress, play button, nothing else. The screen tells you where you are by its colour before you read a word. Quietest of the three: one colour per screen, beige everywhere else.");
+let y=970;
+frame(40,y,BEIGE,PIG.gold.c,"Home — gold","the chrome, unchanged",home(BEIGE));
+frame(490,y,withAcc(PIG.indigo),PIG.indigo.c,"Library — indigo","one pigment, even the emblems",lib(withAcc(PIG.indigo),{mono:PIG.indigo}));
+frame(940,y,withAcc(PIG.rose),PIG.rose.c,"Reader — madder rose","",reader(withAcc(PIG.rose),{a:PIG.rose}));
+// ---------- D2 ----------
+sec(40,1890,"Many pigments, small doses","D2 · The illuminated margin",
+"Every screen keeps gold chrome, and content carries the whole paintbox in small strokes — each deity, each filter, each daily text has its own pigment, like rubrication in a manuscript margin. The most colour of the three options, but never a coloured surface: pigment lives only in dots, pills, chips and emblems on cream.");
+y=2160;
+frame(40,y,BEIGE,PIG.terra.c,"Home","each daily text keeps its own pigment",home(BEIGE,{multi:1,d1:PIG.terra,d2:PIG.violet}));
+frame(490,y,BEIGE,PIG.rose.c,"Library","six deities, six pigments — stronger fills",lib(BEIGE,{multi:1,multiChips:1}));
+frame(940,y,BEIGE,PIG.moss.c,"Reader — moss","",reader(BEIGE,{a:PIG.moss}));
+// ---------- D3 ----------
+sec(40,3080,"One deep block per screen","D3 · A single stone on the parchment",
+"Beige ground, gold chrome — and exactly one solid pigment block per screen, deep enough for cream text: the sandhyā card in indigo, the library masthead in madder, the audio bar in moss. One saturated object gives the pop without recolouring anything else; everything around it stays exactly today's app.");
+y=3350;
+frame(40,y,BEIGE,PIG.indigo.c,"Home — indigo sandhyā card","",home(BEIGE,{solid:PIG.indigo}));
+frame(490,y,BEIGE,PIG.rose.c,"Library — madder masthead","",lib(BEIGE,{band:PIG.rose}));
+frame(940,y,BEIGE,PIG.moss.c,"Reader — moss audio bar","",reader(BEIGE,{solidAudio:PIG.moss}));
+frame(1390,y,BEIGE,PIG.teal.c,"Home — teal, for range","same idea, different stone",home(BEIGE,{solid:PIG.teal}));
+document.body.innerHTML=out;
+</script>
+</body>
+</html>

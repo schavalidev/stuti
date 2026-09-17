@@ -105,12 +105,13 @@ function NomuDetail({ nomuId, go, lang, onBack }) {
               <h1 className="deity-hero-name display" style={{ fontFamily: font }}>{nomP(n.name, lang)}</h1>
               <div className="deity-hero-epithet">{nomP(n.when, lang)}</div>
             </div>
+            {window.VidhiJump && <window.VidhiJump hymnId={n.vidhiText} deity={n.deity} go={go} lang={lang} />}
           </div>
           <p className="deity-hero-line">{nomP(n.forwhat, lang)}</p>
         </header>
 
         {n.how && (
-          <div className="vr-sect">
+          <div className="vr-sect" id={"vidhi-" + n.id}>
             <div className="eyebrow">{L.t("vidhi", lang)}</div>
             <p className="vr-para">{nomP(n.how, lang)}</p>
           </div>

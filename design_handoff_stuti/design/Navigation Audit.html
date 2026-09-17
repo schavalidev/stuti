@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="day" data-lang="roman" data-ui-lang="roman" data-palette="unified" data-seal="ratna">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Buttons and navigation — audit · Stuti</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link rel="stylesheet" href="stuti.css" />
+<link rel="stylesheet" href="stuti-components.css" />
+<link rel="stylesheet" href="stuti-palette.css" />
+<link rel="stylesheet" href="site.css" />
+<style>
+.aud-wrap{max-width:1120px;margin:0 auto;padding:0 26px}
+.aud-sum{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin:26px 0 8px}
+.aud-sum div{background:var(--surface);border:1px solid var(--line);border-radius:var(--r-md);padding:15px 16px}
+.aud-sum b{display:block;font-family:var(--font-display);font-size:30px;line-height:1.1;color:var(--ink)}
+.aud-sum span{font-size:12px;letter-spacing:.13em;text-transform:uppercase;color:var(--ink-faint);font-weight:700}
+.aud-sec{margin:44px 0 0}
+.aud-sec > h2{font-family:var(--font-display);font-size:29px;margin:0 0 4px}
+.aud-sec > p{max-width:66ch;color:var(--ink-soft);margin:0 0 18px}
+.aud-tbl{display:flex;flex-direction:column;border:1px solid var(--line);border-radius:var(--r-md);overflow:hidden;background:var(--surface)}
+.aud-r{display:grid;grid-template-columns:1fr 1.05fr 1.5fr 116px;gap:18px;padding:15px 18px;border-top:1px solid var(--line-2);align-items:start}
+.aud-r:first-child{border-top:none}
+.aud-hd{background:var(--surface-2);font-size:11.5px;letter-spacing:.13em;text-transform:uppercase;color:var(--ink-faint);font-weight:700}
+.aud-what{font-weight:600;color:var(--ink);font-size:15px}
+.aud-what small{display:block;font-weight:400;color:var(--ink-faint);font-size:12.5px;margin-top:2px}
+.aud-c{font-size:13.7px;color:var(--ink-soft);line-height:1.5}
+.aud-c code,.aud-step code{font-size:12.4px;background:var(--surface-2);border:1px solid var(--line-2);border-radius:5px;padding:1px 5px}
+.aud-v{justify-self:end;display:inline-flex;align-items:center;gap:6px;padding:5px 11px;border-radius:999px;font-size:12px;font-weight:700;letter-spacing:.02em;white-space:nowrap;border:1px solid}
+.v-on{color:#2f6b3a;border-color:color-mix(in oklab,#2f6b3a 30%,transparent);background:color-mix(in oklab,#2f6b3a 8%,transparent)}
+.v-part{color:var(--gold-deep);border-color:color-mix(in oklab,var(--gold-deep) 34%,transparent);background:color-mix(in oklab,var(--gold-deep) 9%,transparent)}
+.v-off{color:#9a3520;border-color:color-mix(in oklab,#9a3520 28%,transparent);background:color-mix(in oklab,#9a3520 7%,transparent)}
+.v-int{color:var(--ink-faint);border-color:var(--line);background:var(--surface-2)}
+.aud-plan{counter-reset:step;display:flex;flex-direction:column;gap:10px;margin-top:18px}
+.aud-step{display:grid;grid-template-columns:38px 1fr;gap:14px;background:var(--surface);border:1px solid var(--line);border-radius:var(--r-md);padding:15px 17px}
+.aud-step::before{counter-increment:step;content:counter(step);font-family:var(--font-display);font-size:20px;color:var(--gold-deep);text-align:center;line-height:1.4}
+.aud-step h4{margin:0 0 3px;font-size:15.5px}
+.aud-step p{margin:0;font-size:13.7px;color:var(--ink-soft);max-width:82ch}
+.aud-step p + p{margin-top:6px}
+@media (max-width:1000px){.aud-r{grid-template-columns:1fr;gap:8px}.aud-v{justify-self:start}.aud-sum{grid-template-columns:1fr 1fr}.aud-hd{display:none}}
+</style>
+</head>
+<body data-page="audit">
+<div class="aud-wrap">
+  <div class="page-head">
+    <span class="eyebrow eyebrow-a">Every control on the website · 14 August 2026 · fixed the same day</span>
+    <h1>What each button does, and where every link lands</h1>
+    <p>Nine pages, read from the running code and probed in the browser: every anchor, every button, every keystroke the site listens for. Four verdicts — <b>works</b> (does what it looks like it does), <b>rough</b> (works, but leaves something behind: a stale label, a lost place, a URL that cannot be shared), <b>broken</b> (does not do what it says), and <b>one-way</b> (leaves the website with no way back). The audit was taken, then acted on: the rows below read as the site behaves now, and what is still open says why.</p>
+  </div>
+  <div class="aud-sum">
+    <div><b id="nOn">—</b><span>Works</span></div>
+    <div><b id="nPart">—</b><span>Rough</span></div>
+    <div><b id="nOff">—</b><span>Broken</span></div>
+    <div><b id="nInt">—</b><span>One-way</span></div>
+  </div>
+  <div id="secs"></div>
+  <div class="aud-sec">
+    <h2>What changed</h2>
+    <p>The audit was taken and then spent. Everything above that was a fault is fixed; three rows stay honest about what a website cannot answer for.</p>
+    <div class="aud-plan">
+      <div class="aud-step"><div><h4>The library has a history</h4>
+        <p>A drill-in is a <code>pushState</code> now, and a <code>popstate</code> listener reads <code>?lens=</code>, <code>?k=</code> and <code>?q=</code> back out — the reader was already written, only the writer was wrong. Probed: grid → Śiva → Back → grid → Forward → Śiva, and a vratam two levels deep unwinds one level at a time. Every lens row carries the URL it produces, so cmd-click and middle-click work, and the search query now lives in <code>?q=</code>.</p></div></div>
+      <div class="aud-step"><div><h4>The catalogued titles stop leaving the site</h4>
+        <p><code>readHref()</code> sends the 105 titles without verses to <code>get.html</code> — the page whose whole job is to explain why they wait in the app — instead of into the app build's library tab at no particular title. The “in the app” tag and the href now say the same thing.</p></div></div>
+      <div class="aud-step"><div><h4>The script switch reaches the whole page</h4>
+        <p>The home page is drawn by one <code>draw()</code> registered on both <code>SITE_ONLANG</code> and <code>SITE_ONLOC</code>; the almanac registers the same for its sheet; the reader re-renders its head as well as its verse. Featured titles, today's tile, the tithi headline and the prev/next text names all follow the pill.</p></div></div>
+      <div class="aud-step"><div><h4>Settings reports what it does</h4>
+        <p>“Where you left off” reads the record the reader writes, which now carries the title as well as the id and verse, and offers a link back to it. Day/Night goes through one <code>SITE_SETTHEME</code> in the masthead so the icon cannot disagree. The place chooser relabels itself on the way out and redraws on <code>SITE_ONLOC</code>.</p></div></div>
+      <div class="aud-step"><div><h4>Two pictures became controls</h4>
+        <p>The chip over the sky is the app's own place chooser, wearing the translucent styling it always had; the sandhyā plate opens the almanac it names. The reader's progress bar seeks, its lines take a pointer cursor, its speed chip labels itself from a table, and Space is left to whatever button has focus.</p></div></div>
+      <div class="aud-step"><div><h4>The way out, and the way past</h4>
+        <p>The changelog carries a line back to the website. A skip link sits ahead of the masthead, the current nav link carries <code>aria-current</code>, and the script and face buttons carry <code>aria-pressed</code>. The calendar marks the day whose sheet is open and keeps the month you were browsing through a script or place change.</p></div></div>
+      <div class="aud-step"><div><h4>What is deliberately still open</h4>
+        <p>The sandhyā plate's three times are fixed text — a computation, tracked in the parity audit, not a navigation fault. The calendar still has no route from a date to the vratam kept on it, for the same reason: the observance data is not loaded there. And <code>Stuti.html</code> and <code>Kids.html</code> remain one-way doors on purpose — they are the app, not a page of the site, and an app does not wear a back-to-the-website line.</p></div></div>
+    </div>
+  </div>
+  <div style="height:80px"></div>
+</div>
+<script>
+var DATA=[
+ {t:"The masthead and footer",note:"Rendered by site-chrome.js on all nine pages, so anything wrong here is wrong nine times. Every destination resolves — no 404 anywhere on the site.",rows:[
+  ["Flame + wordmark","<small>.brand</small>","<code>index.html</code>","Home from every page. The three script spellings swap with the script pill.","on"],
+  ["Seven nav links","<small>Home · Library · Stotras · Practice · Calendar · Settings · About</small>","the seven pages","All resolve. <code>data-page</code> lights the current one, and Calendar stays lit on the almanac through its <code>kin</code> list.","on"],
+  ["Nav, on the narrow","<small>≤1180px</small>","—","Wraps to a second scrollable row rather than collapsing into a menu — deliberate, and it holds down to 620px.","on"],
+  ["Nav, as markup","<small>aria-current · skip link</small>","—","The current link carries <code>aria-current=\"page\"</code>, the script and face buttons carry <code>aria-pressed</code>, and a skip link ahead of the masthead takes a keyboard past seven nav links in one tab.","on"],
+  ["Script pill","<small>అ · अ · A</small>","<code>data-lang</code> + localStorage","Sets the attribute, remembers it, and fires <code>SITE_ONLANG</code>. Every page that writes text out of the pool now listens: home, library, reader, calendar and almanac all redraw.","on"],
+  ["Day / night","<small>#themeBtn</small>","<code>data-theme</code> + localStorage","Swaps the attribute and its own icon; emblems follow as ink. No <code>aria-pressed</code>.","on"],
+  ["Get the app","<small>gold CTA</small>","<code>get.html</code>","Works from every page.","on"],
+  ["Footer · Read","<small>five links</small>","library · read · calendar · almanac · practice","All five land.","on"],
+  ["Footer · The app","<small>three links</small>","<code>get.html</code>, <code>#install</code>, <code>#account</code>","Both anchors exist on the page and scroll to the right block.","on"],
+  ["Footer · More","<small>four links</small>","about · settings · index · Changelog","All four land, and the changelog now carries a line back to the website beside its own face toggle.","on"]]},
+ {t:"Home",note:"index.html — 37 links, 6 buttons. The busiest page, and the one this audit changed most.",rows:[
+  ["The search bar","<small>.home-search</small>","<code>library.html</code>","Still an anchor, but it lands on <code>library.html?focus=1</code> and the real field takes focus on arrival, so the next keystroke searches.","on"],
+  ["Location chip","<small>over the sky</small>","the place chooser","It is the app's own <code>SITE_LOCPICK</code> now, wearing the translucent chip it always looked like: 203 cities, searchable, and the whole page recomputes for the one you pick.","on"],
+  ["Sandhyā plate","<small>Mādhyāhnika · till 4:10 pm</small>","<code>almanac.html</code>","The plate opens the day it names. Its three times are still fixed text — a computation the parity audit tracks, not a navigation fault.","part"],
+  ["The whole day, hour by hour","<small>.reader-nav</small>","<code>almanac.html</code>","Works.","on"],
+  ["Begin reciting","<small>gold CTA</small>","<code>read.html</code>","Works, and resumes the verse kept in this browser.","on"],
+  ["Browse the library","<small>ghost</small>","<code>library.html</code>","Works.","on"],
+  ["Today's shelf tile","<small>vāra deity</small>","<code>library.html?shelf=…</code>","Works — the library reads the legacy <code>?shelf=</code> as the deity lens.","on"],
+  ["The row beneath it","<small>one readable text</small>","<code>read.html?text=…</code>","Works.","on"],
+  ["Three featured cards","<small>longest texts</small>","<code>read.html?text=…</code>","Works, and the titles follow the script pill.","on"],
+  ["The whole library →","<small>.link-more</small>","<code>library.html</code>","Works.","on"],
+  ["Practice band","<small>three links</small>","practice · get · <code>get.html#account</code>","All three land.","on"],
+  ["Place chooser","<small>inside the pañcāṅga card</small>","re-renders the sheet","Opens, searches 203 cities, closes on pick and on click-away, Escape closes. The pick re-renders the card through <code>SITE_ONLOC</code>.","on"],
+  ["Script pill, on this page","<small>one draw(), two listeners</small>","—","The page is written by a single <code>draw()</code> that both the script pill and the place chooser call: featured titles, today's tile and the tithi headline all follow now.","on"],
+  ["The four facts","<small>13 · 438 · 118 · 3</small>","<code>library.html</code>","Computed from the pool, not typed. \u201c118 titles catalogued\u201d is the link it always read as; the other three stay quiet.","on"]]},
+ {t:"The library",note:"library.html — 37 links, 4 buttons, six lenses. Everything here is an anchor, and the browser's Back button now understands every one of them.",rows:[
+  ["Browser Back, inside the library","<small>history</small>","the slice you came from","A drill-in is a <code>pushState</code> now and a <code>popstate</code> listener reads the lens and key back out. Grid → Śiva → Back → grid → Forward → Śiva, and two levels deep in the vratams unwinds one level at a time.","on"],
+  ["Six lens tabs","<small>deity · type · vratam · nomu · pārāyaṇa · author</small>","<code>library.html?lens=…</code>","Real hrefs, so cmd-click opens a new tab; the plain click is intercepted and re-renders in place. The open lens keeps its underline through a search.","on"],
+  ["Eight deity tiles + Itara","<small>.gtile</small>","<code>?lens=deity&k=…</code>","Open the shelf with epithet, vāra and every title. Real href, intercepted click.","on"],
+  ["Type / author rows","<small>.lens-row</small>","<code>?lens=type&k=…</code>","Every row carries the URL it will produce, so cmd-click, middle-click and \u201copen in new tab\u201d all work; the plain click still re-renders in place.","on"],
+  ["Vratam / nomu / pārāyaṇa rows","<small>17 + the vows + the readings</small>","<code>?lens=vratam&k=…</code>","Same real hrefs — <code>?lens=vratam&k=ganesha-chaturthi</code> is a page that can be sent from the row rather than only after the click.","on"],
+  ["← All the shelves","<small>.lens-back</small>","<code>?lens=deity</code>","A real link to the lens root, and no longer the only way out — the browser's own Back works now.","on"],
+  ["Readable hymn card","<small>13 of 118</small>","<code>read.html?text=…</code>","Works.","on"],
+  ["Catalogued hymn card","<small>105 of 118, tagged \u201cin the app\u201d</small>","<code>get.html</code>","The card now opens the page whose whole job is to say why the title waits in the app, instead of dropping the visitor into the app build at no particular title.","on"],
+  ["Search field","<small>#libSearch</small>","live filter","Filters all 118 titles by name, author, type, deity and blurb on every keystroke, and the query is written into <code>?q=</code> — a reload, a bookmark or a sent link keeps the search.","on"],
+  ["Empty-search message","<small>\u201cNothing by that name\u201d</small>","<code>get.html</code>","The inline link works.","on"],
+  ["Observance sheet footer","<small>\u201cWhat the app adds\u201d</small>","<code>get.html</code>","Works.","on"],
+  ["Deep links","<small>?lens= · ?k= · ?shelf=</small>","—","All three are read on load, including the legacy <code>?shelf=</code>. Sending someone a lens works.","on"]]},
+ {t:"The reader",note:"read.html — 26 links, 9 buttons, and the only page that listens for keys.",rows:[
+  ["The library","<small>.crumb</small>","<code>library.html</code>","Returns to the slice you came from: the library remembers its own URL for the session, so a search or a vratam is what the crumb goes back to.","on"],
+  ["Play / pause","<small>#playBtn</small>","paced highlighting","Works. The icon swaps, the line advances, and it rolls into the next verse at the end.","on"],
+  ["Previous / next verse","<small>#prevBtn · #nextBtn</small>","verse ±1","Work, clamp at both ends, and restart the timer cleanly while playing.","on"],
+  ["The scrub bar","<small>#scrub</small>","a verse","Click anywhere along it to jump — half way through the Cālīsā lands on verse 22 of 44 — and it keeps the pace if it was playing.","on"],
+  ["Speed","<small>#speedBtn</small>","0.75 → 1 → 1.25 → 1.5","Cycles and applies, from a label table rather than <code>String()</code>, so a full round trip reads <code>1.0×</code> again. Its title names what it does.","on"],
+  ["Loop","<small>#loopBtn</small>","repeats the verse","Works, and its title says what it repeats: this verse, not the whole text.","on"],
+  ["Tap a line","<small>.line</small>","moves the lit line","Works, survives play, and the lines take a pointer cursor so they read as targets.","on"],
+  ["Space · ← · →","<small>keydown</small>","play/pause · verse ±1","All three work and are named in the note beneath. Space is left to whatever button has focus and only claimed when nothing else holds it; the arrows now keep the pace while playing.","on"],
+  ["Previous / next text","<small>#readerNav</small>","<code>read.html?text=…</code>","Work, in the reader's own sequence of the 13 readable texts, and the names follow the script pill.","on"],
+  ["an account carries it","<small>in the note</small>","<code>get.html#account</code>","Works.","on"],
+  ["An unknown ?text=","<small>bad or stale link</small>","the first text, with a notice","Still opens something to read, but says the link named no text the site carries and points at the library.","on"],
+  ["Script pill, on this page","<small>SITE_ONLANG: 1 listener</small>","—","Re-renders the whole reader — verse, title, blurb and both text links.","on"]]},
+ {t:"The calendar and the almanac",note:"calendar.html — 22 links, 38 buttons, one per date. almanac.html — 24 links, 5 buttons.",rows:[
+  ["Previous / next month","<small>[data-step]</small>","re-renders the grid","Work, and recompute every date's tithi from the ephemeris.","on"],
+  ["Month, after a script or place change","<small>redraw()</small>","the month you were on","The month being browsed and the open day are the element's own, so a script or place change redraws them instead of snapping back to today.","on"],
+  ["A date cell","<small>28–31 buttons</small>","the day's sheet, beside","Works, and the caption changes from \u201cToday's\u201d to \u201cThe day's\u201d. The picked cell is marked and carries <code>aria-current</code>, and the date is written into <code>?d=2026-08-09</code> so the sheet can be sent.","on"],
+  ["A date cell, as a shortcut","<small>vratam on the day</small>","—","No route from a date to what is recited on it, though the library carries all seventeen observances. The vrata data is not loaded on this page.","off"],
+  ["Place chooser","<small>in the sheet</small>","re-renders grid and sheet","Works on both pages; the pick is remembered for the whole site.","on"],
+  ["Almanac · script pill","<small>SITE_ONLANG: 0 listeners</small>","—","The sheet redraws on both the script pill and the place, so the headline and the saṅkalpa line follow the rows.","on"],
+  ["Almanac · sandhyā plate","<small>lifted out of the sky</small>","nothing, by design","The plate is lifted out of the sky without its link — it would only point at this page — and its fixed times remain the parity audit's item, not this one.","part"],
+  ["Almanac · two closing links","<small>ghost + note</small>","get · library","Both land.","on"]]},
+ {t:"Settings",note:"settings.html — 24 links, 11 buttons. Three of the five controls used to change something and then misreport it.",rows:[
+  ["Reading script","<small>three chips</small>","<code>data-lang</code>","Works, and syncs the masthead pill's own on-state — the one control that remembers to.","on"],
+  ["Day / night","<small>two chips</small>","<code>data-theme</code>","Both routes go through one <code>SITE_SETTHEME</code> in the masthead, so the icon and its label can no longer disagree with the page.","on"],
+  ["Where the day is computed","<small>the place chooser</small>","<code>stuti-site-loc</code>","Stores the city, relabels its own button on the way out, and the page redraws the chooser on <code>SITE_ONLOC</code> like every other sheet.","on"],
+  ["Where you left off","<small>#lastRead</small>","<code>read.html?text=…&v=…</code>","Reads the record the reader actually writes — which now carries the title, since this page loads no library to look one up in — and offers a link straight back to the verse.","on"],
+  ["Forget it","<small>#clearRead</small>","clears the key","Works, and takes the resume link away with the position it forgets.","on"],
+  ["What the app adds","<small>in the note</small>","<code>get.html</code>","Works.","on"]]},
+ {t:"Practice, About, Get",note:"The three pages that are mostly prose. Every link lands; the misses are links that should exist and do not.",rows:[
+  ["Practice · two closing acts","<small>cta + ghost</small>","get · library","Both land.","on"],
+  ["Practice · the three panes","<small>japa · pārāyaṇa · vratam</small>","<code>?lens=parayana</code> · <code>?lens=vratam</code> · <code>get.html</code>","Each pane opens what it describes: the pārāyaṇa lens, all seventeen vratams, and for japa the page that says why the counter is the app's.","on"],
+  ["About · what an account is for","<small>in a note</small>","<code>get.html#account</code>","Works.","on"],
+  ["About · read the changelog","<small>ghost</small>","<code>Changelog.html</code>","Lands, and the changelog now has a line back to the website.","on"],
+  ["Get · Install Stuti — free","<small>gold CTA</small>","<code>Stuti.html</code>","Opens the app build. No chrome, no link home.","int"],
+  ["Get · Kathā, for children","<small>ghost</small>","<code>Kids.html</code>","Opens the kids build. Same one-way door.","int"],
+  ["Get · three screen cards","<small>Nitya · Library · Calendar</small>","<code>Stuti.html#nitya</code> etc.","The hash routes are honoured on a cold load as well as on a change, so each card really does open its screen.","on"],
+  ["Get · the four-tab picture","<small>.tabbar</small>","nothing","Spans, by design — an illustration of the app's tab bar, not a control.","on"],
+  ["Get · the four chips","<small>offline · no ads · no account · public domain</small>","nothing","Inert badges, correctly.","on"]]}];
+var V={on:["Works","v-on"],part:["Rough","v-part"],off:["Broken","v-off"],int:["One-way","v-int"]};
+var n={on:0,part:0,off:0,int:0},out="";
+DATA.forEach(function(s){
+  out+='<div class="aud-sec"><h2>'+s.t+'</h2><p>'+s.note+'</p><div class="aud-tbl">'+
+    '<div class="aud-r aud-hd"><span>Control</span><span>Where it goes</span><span>What happens</span><span style="justify-self:end">Verdict</span></div>';
+  s.rows.forEach(function(r){
+    n[r[4]]++;
+    out+='<div class="aud-r"><div class="aud-what">'+r[0]+r[1]+'</div><div class="aud-c">'+r[2]+'</div><div class="aud-c">'+r[3]+'</div>'+
+      '<span class="aud-v '+V[r[4]][1]+'">'+V[r[4]][0]+'</span></div>';
+  });
+  out+='</div></div>';
+});
+document.getElementById("secs").innerHTML=out;
+document.getElementById("nOn").textContent=n.on;
+document.getElementById("nPart").textContent=n.part;
+document.getElementById("nOff").textContent=n.off;
+document.getElementById("nInt").textContent=n.int;
+</script>
+<script src="stuti-translit.js"></script>
+<script src="stuti-texts.js"></script>
+<script src="site-i18n.js"></script>
+<script src="site-lib.js"></script>
+<script src="site-chrome.js"></script>
+</body>
+</html>

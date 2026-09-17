@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Stuti — Market Analysis & Roadmap</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Marcellus&family=Mukta:wght@300;400;500;600;700&family=Noto+Sans+Telugu:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#F7EFE2;--bg-warm:#F2E6D2;--surface:#FFFDF8;--surface-2:#FBF4E8;--ink:#2B2017;--ink-soft:#6E5E4E;--ink-faint:#9A8A78;--line:rgba(43,32,23,.12);--line-2:rgba(43,32,23,.06);--gold:#B07A2B;--gold-deep:#8A5A18;--good:#4A6B3A;--bad:#96422A;--font-display:'Marcellus',Georgia,serif;--font-ui:'Mukta',system-ui,sans-serif}
+*{box-sizing:border-box;font-style:normal}
+html{scroll-behavior:auto}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--font-ui);font-size:16.5px;line-height:1.62;-webkit-font-smoothing:antialiased}
+a{color:var(--gold-deep);text-decoration:none;border-bottom:1px solid rgba(176,122,43,.35)}
+a:hover{color:var(--gold);border-bottom-color:var(--gold)}
+.page{max-width:760px;margin:0 auto;padding:64px 28px 90px}
+.kicker{font-size:12.5px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--gold-deep)}
+h1{font-family:var(--font-display);font-weight:400;font-size:clamp(2.1rem,5vw,3rem);line-height:1.08;margin:14px 0 10px}
+.lede{font-size:18.5px;color:var(--ink-soft);max-width:620px;margin:0 0 6px}
+.date{font-size:13.5px;color:var(--ink-faint);margin-top:14px}
+.rule{height:1px;background:var(--line);margin:44px 0 40px;position:relative}
+.rule::after{content:"॥";position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);background:var(--bg);padding:0 14px;color:var(--gold);font-size:15px}
+h2{font-family:var(--font-display);font-weight:400;font-size:1.72rem;line-height:1.15;margin:52px 0 6px}
+h2 .no{color:var(--gold);margin-right:10px;font-size:1.1rem;letter-spacing:.06em}
+h3{font-size:1.02rem;font-weight:700;margin:30px 0 8px;letter-spacing:.01em}
+p{margin:10px 0;text-wrap:pretty}
+.sub{color:var(--ink-soft)}
+.small{font-size:14px;color:var(--ink-faint)}
+ul{margin:10px 0;padding-left:22px}
+li{margin:7px 0}
+li::marker{color:var(--gold)}
+strong{font-weight:600}
+.stat-row{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:12px;margin:24px 0 8px}
+.stat{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:16px 18px 13px}
+.stat b{display:block;font-family:var(--font-display);font-weight:400;font-size:1.7rem;color:var(--gold-deep);line-height:1.1}
+.stat span{font-size:13px;color:var(--ink-soft);line-height:1.4;display:block;margin-top:4px}
+.seg{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:20px 22px;margin:14px 0}
+.seg h4{margin:0 0 2px;font-size:1.05rem;font-weight:700}
+.seg .who{font-size:13px;color:var(--gold-deep);font-weight:600;letter-spacing:.04em;text-transform:uppercase}
+.seg p{margin:6px 0 0;font-size:15.5px;color:var(--ink-soft)}
+.wl{display:grid;gap:12px;margin:18px 0}
+.wl-item{display:grid;grid-template-columns:26px 1fr;gap:12px;background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:15px 18px}
+.wl-item .mk{font-weight:700;font-size:15px;line-height:1.5}
+.works .mk{color:var(--good)}
+.fails .mk{color:var(--bad)}
+.wl-item h5{margin:0;font-size:15.5px;font-weight:700}
+.wl-item p{margin:3px 0 0;font-size:14.5px;color:var(--ink-soft)}
+.tier{margin:26px 0 34px}
+.tier-head{display:flex;align-items:baseline;gap:12px;border-bottom:2px solid var(--gold);padding-bottom:6px;margin-bottom:4px}
+.tier-head h3{margin:0;font-family:var(--font-display);font-weight:400;font-size:1.35rem}
+.tier-head span{font-size:13px;color:var(--ink-faint)}
+.feat{display:grid;grid-template-columns:1fr;border-bottom:1px solid var(--line-2);padding:14px 2px}
+.feat h5{margin:0 0 3px;font-size:15.5px;font-weight:700}
+.feat h5 .tag{display:inline-block;font-size:10.5px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--gold-deep);background:var(--bg-warm);border-radius:99px;padding:2px 9px;margin-left:8px;vertical-align:2px}
+.feat p{margin:0;font-size:14.5px;color:var(--ink-soft)}
+.callout{background:var(--bg-warm);border:1px solid var(--line);border-radius:16px;padding:20px 24px;margin:26px 0}
+.callout p{margin:6px 0}
+.tel{font-family:'Noto Sans Telugu',sans-serif}
+.footnote{margin-top:56px;padding-top:18px;border-top:1px solid var(--line);font-size:13px;color:var(--ink-faint);line-height:1.6}
+@media print{body{background:#fff}.page{padding:24px}}
+</style></head>
+<body><div class="page">
+
+<div class="kicker">Stuti · Product strategy</div>
+<h1>What to build next, and why</h1>
+<p class="lede">A read of the devotional-app market against what Stuti already is — a typography-first, Telugu-mūla recitation companion — and a tiered roadmap of features that fit it.</p>
+<p class="date">July 2026 · Sources: TechCrunch, Business Today, Sensor Tower via press, app-store listings & reviews</p>
+
+<div class="rule"></div>
+
+<h2><span class="no">01</span>The market is real, growing, and strangely empty in the middle</h2>
+<p>India's religious &amp; spiritual market was valued around <strong>$65B in 2024</strong>, projected toward <strong>$135B by 2033</strong> (IMARC). The app layer is the fastest-moving slice: in H1 2025 the top-10 religious apps in India grew <strong>60% in monthly active users</strong> while the global top-10 grew 15%.</p>
+<div class="stat-row">
+<div class="stat"><b>3.5M</b><span>Sri Mandir monthly actives; 40M+ downloads; ~55% six-month retention</span></div>
+<div class="stat"><b>₹7,000</b><span>diaspora ARPU vs ₹600–800 domestic — ~20% of Sri Mandir revenue from NRIs</span></div>
+<div class="stat"><b>$52M</b><span>raised by AppsForBharat alone; Vama at ₹19.5Cr FY25 revenue, 250+ temples</span></div>
+<div class="stat"><b>700M+</b><span>installs of YouVersion Bible — the playbook for habit-first scripture apps</span></div>
+</div>
+<p class="sub">Four distinct segments compete for the same devotee, and none of them does what Stuti does:</p>
+<div class="seg"><span class="who">Temple commerce — Sri Mandir, Vama, Utsav, DevDham</span><h4>Ritual as a service</h4><p>Online pujas, chadhava, prasad delivery, live darshan. Deep pockets, temple partnerships, festival-spike growth (Sri Mandir downloads +50% during Maha Kumbh). Their weakness: commerce-first feels transactional; users themselves say it lacks the presence of practice. Recitation is a content shelf, not a craft.</p></div>
+<div class="seg"><span class="who">Text libraries — Stotra Nidhi, Stotramala, Stotra Lahari</span><h4>The pandit's bookshelf</h4><p>Big corpora, multi-script (Telugu/Devanagari/IAST), favorites, font sizing, day/night. Loved and free — but utilitarian: static text dumps, audio often online-only, little meaning, zero learning support, dated UI. This is Stuti's nearest neighborhood, and it competes on completeness, not experience.</p></div>
+<div class="seg"><span class="who">Habit tools — japa counters, mala apps</span><h4>Count, streak, remind</h4><p>Tap counters with 108-cycles, daily goals, streaks, home-screen widgets, haptics, offline, no login. Tiny apps with fierce loyalty because they respect one job. Some drift into leaderboards and mini-games — engagement mechanics that sit uneasily on sādhana.</p></div>
+<div class="seg"><span class="who">The exemplar — YouVersion (Bible)</span><h4>Habit-first scripture</h4><p>Verse-of-the-day + streaks + 10,000 reading plans + audio + friends. Its plans — digestible daily chunks — are credited as the retention engine; it overtook Sri Mandir as India's #1 religious app in 2025. Nothing Hindu-devotional has seriously copied this playbook yet.</p></div>
+
+<h2><span class="no">02</span>What works in this market, and why</h2>
+<div class="wl works">
+<div class="wl-item"><span class="mk">✓</span><div><h5>A daily reason to open the app</h5><p>Panchāṅga, verse-of-the-day, today's observance. Utility creates the visit; content creates the stay. Stuti's location-aware panchāṅga is already this hook — it needs to be the front door every day, incl. notifications/widgets.</p></div></div>
+<div class="wl-item"><span class="mk">✓</span><div><h5>Audio with synced text</h5><p>The single most-marketed feature across every stotra app: listen while the line highlights, learn pronunciation by following along. Repeat-count playback (11×, 108×) is a standard expectation. Offline audio is repeatedly praised; online-only audio is a top complaint.</p></div></div>
+<div class="wl-item"><span class="mk">✓</span><div><h5>Plans, not libraries</h5><p>YouVersion's lesson: people don't retain on a bookshelf, they retain on a course — "40 days to learn the Lalitā Sahasranāma." Small daily chunks, visible progress, catch-up grace days.</p></div></div>
+<div class="wl-item"><span class="mk">✓</span><div><h5>Gentle streaks + reminders + widgets</h5><p>The core loop of every japa counter and of YouVersion. Cue (notification/widget) → action (recite) → reward (unbroken thread). It works because daily pāṭha is already culturally a vow — the app just witnesses it.</p></div></div>
+<div class="wl-item"><span class="mk">✓</span><div><h5>Multi-script and accuracy as trust</h5><p>Six-script verse display is a headline feature for NityaŚlokas; reviewers explicitly praise apps whose transliteration is more accurate than printed books, and swara-marked Vedic text is a differentiator. Accuracy is the moat text libraries actually compete on.</p></div></div>
+<div class="wl-item"><span class="mk">✓</span><div><h5>Diaspora willingness to pay</h5><p>NRI users pay ~10× domestic ARPU and grow 15% QoQ on Sri Mandir. They want connection to practice for themselves and their kids — Stuti's IAST mode, English meanings, and Kathā kids app aim squarely here.</p></div></div>
+<div class="wl-item"><span class="mk">✓</span><div><h5>Festival-clock growth</h5><p>Downloads and engagement spike around Kumbh, Navarātri, Śrāvaṇa. Apps that surface "what to recite today and why" convert those spikes into habits. Stuti's vratham procedures + calendar are the right asset.</p></div></div>
+</div>
+
+<h2><span class="no">03</span>What doesn't work, and why</h2>
+<div class="wl fails">
+<div class="wl-item"><span class="mk">✕</span><div><h5>Text dumps without meaning or structure</h5><p>Most library apps show a wall of verses. No sections, no story, no word meanings, no "why this hymn." Users learn to parrot, not to understand — and churn once they've saved a PDF elsewhere.</p></div></div>
+<div class="wl-item"><span class="mk">✕</span><div><h5>Ad-riddled single-stotra apps</h5><p>Thousands of one-hymn apps monetize interruptions inside prayer. Ratings stay high only until an ad breaks japa. An ad during recitation is a category-defining mistake — it converts trust to disgust instantly.</p></div></div>
+<div class="wl-item"><span class="mk">✕</span><div><h5>Commerce shoved into practice</h5><p>Puja-booking upsells inside a reading experience make the app feel like a storefront. Even Sri Mandir devotees say the digital experience lacks the temple's presence. Practice apps and commerce apps have different souls; mixing them costs the practice users.</p></div></div>
+<div class="wl-item"><span class="mk">✕</span><div><h5>Gamification that cheapens sādhana</h5><p>Leaderboards of chant counts, flower-catch mini-games, competitive japa. Engagement climbs short-term; seriousness leaves. Streaks work only when framed as a vow kept (guilt-free, with grace) — not a competition.</p></div></div>
+<div class="wl-item"><span class="mk">✕</span><div><h5>Online-only anything</h5><p>Recitation happens in pūjā rooms, flights, temples with no signal. Audio that needs internet is the most repeated complaint against Stotra Nidhi-class apps. Offline is table stakes.</p></div></div>
+<div class="wl-item"><span class="mk">✕</span><div><h5>No path from listener to reciter</h5><p>Every app plays audio at you; almost none help you graduate — slow-down, loop-a-verse, hide-and-recall, record-and-compare. The learning journey is the unserved job in the whole category.</p></div></div>
+</div>
+
+<div class="callout">
+<p><strong>Stuti's position, stated plainly:</strong> every competitor is either a temple storefront, a bookshelf, or a tally counter. Stuti is a <strong>recitation companion</strong> — mūla-accurate text in three scripts, paced word-highlighting, memorization masking, the story behind each hymn, a namāvalī browser, panchāṅga and vratham context, and a kids' wing. That combination doesn't exist in the market. The roadmap below deepens it rather than diluting it.</p>
+</div>
+
+<h2><span class="no">04</span>Roadmap</h2>
+
+<div class="tier"><div class="tier-head"><h3>Now — table stakes the market has set</h3><span>close the gaps competitors would name first</span></div>
+<div class="feat"><h5>Audio pāṭha, offline <span class="tag">Biggest gap</span></h5><p>One good reciter per text; verse-synced highlighting (the pacing engine already exists — drive it from audio timestamps instead of estimates); speed 0.5–1.5×; loop verse/section; repeat counts (1/3/11/108). Audio is the #1 marketed feature of every competitor and Stuti's largest missing piece.</p></div>
+<div class="feat"><h5>Install + offline (PWA)</h5><p>Add-to-home-screen, full offline corpus, instant load. Recitation contexts are offline contexts.</p></div>
+<div class="feat"><h5>The unbroken thread <span class="tag">Retention</span></h5><p>A gentle daily log: which pāṭha, how many days unbroken, with grace days framed as "the vow resumes" — never shame. Nitya checklists already exist; this stitches them into one visible thread with a calendar heat-strip.</p></div>
+<div class="feat"><h5>Reminders + home-screen widget</h5><p>"Your Hanumān Chālīsā awaits · Tuesday" — tithi-aware nudges (ekādaśī, pradoṣa, saṅkaṭahara caturthī) at the user's chosen hour. Widget shows today's tithi + the day's pāṭha.</p></div>
+<div class="feat"><h5>Japa counter</h5><p>A mala screen for the nāmāvalīs already in the app: tap/volume-button count, 108-cycle with haptic at completion, per-mantra totals, daily goal. Small build, huge daily-use surface.</p></div>
+<div class="feat"><h5>Corpus depth</h5><p>The pipeline (Telugu mūla → three scripts + meanings) is the asset — scale it. Priority queue by observance calendar: Viṣṇu/Lalitā/Śiva sahasranāmas ✓, next the weekday staples (Śiva Tāṇḍava, Kanakadhārā, Rāma Rakṣā, Subrahmaṇya Bhujaṅga, Sundarakāṇḍa selections).</p></div>
+<div class="feat"><h5>Share a verse</h5><p>A beautifully typeset verse card (script of choice + meaning, Stuti mark) shared to WhatsApp — the discovery channel for this audience; YouVersion's verse-sharing drives 200k+ shares/day.</p></div>
+</div>
+
+<div class="tier"><div class="tier-head"><h3>Next — the differentiators only Stuti can do</h3><span>deepen listener → reciter → knower</span></div>
+<div class="feat"><h5>Learning plans <span class="tag">Signature</span></h5><p>"Learn the Lalitā Sahasranāma in 40 days": daily chunk of names, listen → follow → masked recall (the masking mode already built) → review of yesterday via spaced repetition. Completion = the full pārāyaṇa on day 40. This is YouVersion's engine applied where it fits even better — memorization is already the cultural goal.</p></div>
+<div class="feat"><h5>Word-by-word meaning on tap</h5><p>Tap any word in a verse → padas split, gloss, and the same word elsewhere in the corpus. Turns reading into understanding; no competitor offers it.</p></div>
+<div class="feat"><h5>Record & compare</h5><p>Record your recitation over a verse, hear it against the reciter, see cadence alignment. The mic plumbing exists (recite mode); this makes practice measurable without gamifying it.</p></div>
+<div class="feat"><h5>Sankalpa scheduler</h5><p>A vow builder: "Every pradoṣa, Śiva aṣṭottara for 6 months." The panchāṅga engine computes the dates; the thread tracks the vow; the reminder wakes it. Marries Stuti's two halves (calendar + recitation) into one product idea nobody else has.</p></div>
+<div class="feat"><h5>Swara-marked Vedic texts</h5><p>Rudram/Chamakam, Puruṣa Sūktam with udātta/anudātta marks in all three scripts — the feature that wins the serious reciter and the hardest to copy.</p></div>
+<div class="feat"><h5>Family & kids bridge</h5><p>Kathā already exists — link it: a child profile inside Stuti with age-sized śloka plans (one verse a week), parent-visible progress. The diaspora parent is the buyer.</p></div>
+</div>
+
+<div class="tier"><div class="tier-head"><h3>Later — nice to haves, kept on a leash</h3><span>only after the core loop retains</span></div>
+<div class="feat"><h5>Group pārāyaṇa</h5><p>A shared count toward a collective vow (e.g. a family's koṭi-nāma saṅkalpa across a Navarātri) — presence without leaderboards.</p></div>
+<div class="feat"><h5>Teacher/paṭhaśālā mode</h5><p>A guru assigns a plan to students and sees their threads — Stotra Lahari's classes model, productized.</p></div>
+<div class="feat"><h5>Print-quality export</h5><p>A typeset PDF of any stotra in chosen script for the pūjā-room binder. Cheap to build on the existing typography, deeply on-brand.</p></div>
+<div class="feat"><h5>CarPlay / lock-screen audio, TV casting</h5><p>Commute japa and family-room pārāyaṇa.</p></div>
+<div class="feat"><h5>Pronunciation feedback</h5><p>On-device scoring of recorded recitation (syllable timing, long/short vowels). Powerful but hard; do after record-&-compare proves demand.</p></div>
+</div>
+
+<h2><span class="no">05</span>Monetization & principles</h2>
+<ul>
+<li><strong>Free forever:</strong> all texts, all scripts, panchāṅga, counter, one plan at a time. Trust is the product.</li>
+<li><strong>Stuti Poshaka (supporter), ~₹99/mo · $19/yr diaspora tier:</strong> full audio library offline, unlimited plans, family profiles, swara texts, print exports. Diaspora ARPU data says the yearly tier should be priced in dollars, not converted rupees.</li>
+<li><strong>Never:</strong> ads anywhere near text or audio; selling pujas; leaderboards of devotion; astrology upsells.</li>
+<li><strong>Risks to manage:</strong> audio production cost & reciter rights (commission one paṇḍita, own the masters); accuracy is the brand — every new text needs a proofing pass against the mūla; streak mechanics must stay grace-first or they curdle; scope creep toward commerce is the death path — the storefront players have $50M and temple contracts, don't fight them there.</li>
+</ul>
+
+<h2><span class="no">06</span>What to measure</h2>
+<ul>
+<li><strong>D30 thread rate</strong> — % of users with a ≥7-day unbroken thread in their first month (the retention metric that matters here; Sri Mandir's 55% six-month retention is the bar).</li>
+<li><strong>Plan completion</strong> — % who finish a 40-day plan; the compounding asset is people who now know a text by heart because of Stuti.</li>
+<li><strong>Verse cards shared / WAU</strong> — the organic growth engine.</li>
+<li><strong>Texts recited offline</strong> — proof the pūjā-room use case is real.</li>
+</ul>
+
+<p class="footnote">Market figures: TechCrunch (Jun 2025) on Sri Mandir/AppsForBharat and Sensor Tower H1-2025 religious-app data; Business Today (Jul 2025) citing IMARC market sizing; Vama FY25 press disclosures; YouVersion published install/plan counts; feature and complaint patterns from Google Play / App Store listings and reviews of Stotra Nidhi, Stotramala, Stotra Lahari, NityaŚlokas, and japa-counter apps. Figures are directional, compiled July 2026.</p>
+
+</div></body></html>

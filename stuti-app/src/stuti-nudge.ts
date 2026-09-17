@@ -8,6 +8,7 @@ import { STUTI_PREFS } from "./stuti-prefs";
 import { STUTI_PUSH } from "./stuti-push";
 import { STUTI_SANDHYA } from "./stuti-sandhya-core";
 import { STUTI_FAVS, STUTI_LOC, STUTI_PROGRESS } from "./stuti-store";
+import { STUTI_TITHIS } from "./stuti-tithis-core";
 import { STUTI_TRANSLIT } from "./stuti-translit";
 
 /* ============================================================
@@ -136,6 +137,10 @@ export const STUTI_NUDGE = (function () {
       else if (it.kind === "mytithi") {
         parts.push(it.name + " · " + (it.away === 0 ? L.t("vrataToday", lg) : it.away === 1 ? L.t("vrataTomorrow", lg) : L.t("vrataInDays", lg).replace("{n}", it.away)));
       }
+      else if (it.kind === "tarpana") {
+        const n = it.rite && it.rite.name;
+        parts.push(n ? (lg === "telugu" ? n.tel : lg === "deva" ? n.deva : n.roman) : L.t("tarpanaToday", lg));
+      }
       else if (it.kind === "tithi") {
         const o = it.obs;
         parts.push(lg === "telugu" ? TR.convert(o.deva || o.name, "telugu") : lg === "deva" ? (o.deva || o.name) : o.name);
@@ -168,6 +173,27 @@ export const STUTI_NUDGE = (function () {
       const k = cue.kala;
       title = S.name(k.label, lg);
       text = L.t("sandhyaNudge", lg) + " · " + P.fmtTime(((k.best.start % 1440) + 1440) % 1440) + " – " + P.fmtTime(((k.best.end % 1440) + 1440) % 1440);
+    } else if (cue.kind === "mytithi") {
+      /* the person is the title. Two registers: a śrāddha is named plainly and
+         never cheerfully; a living person's janma tithi may be warm. */
+      const it = cue.item || (cue.items || [])[0] || {};
+      const TT = STUTI_TITHIS, k = TT && TT.KINDS[it.tkind];
+      const kl = k ? (lg === "telugu" ? k.label.tel : lg === "deva" ? k.label.deva : k.label.roman) : "";
+      const locale = lg === "telugu" ? "te-IN" : lg === "deva" ? "hi-IN" : "en-IN";
+      const when = it.away === 0 ? L.t("vrataToday", lg) : it.away === 1 ? L.t("vrataTomorrow", lg)
+        : (it.date ? new Date(it.date).toLocaleDateString(locale, { weekday: "long", day: "numeric", month: "short" }) + " · " + L.t("vrataInDays", lg).replace("{n}", it.away) : "");
+      title = it.name || kl;
+      text = kl + (when ? " · " + when : "");
+    } else if (cue.kind === "tarpana") {
+      /* the rite and its window in one line — what to do, and by when */
+      const rt = cue.rite || {}, nm = rt.name || {};
+      const KALA = { aparahna: { roman: "Aparāhṇa", deva: "अपराह्ण", telugu: "అపరాహ్ణం" },
+                     madhyahna: { roman: "Madhyāhna", deva: "मध्याह्न", telugu: "మధ్యాహ్నం" },
+                     arunodaya: { roman: "Before sunrise", deva: "अरुणोदय", telugu: "అరుణోదయం" } };
+      const k = KALA[rt.kala] || KALA.aparahna, w = cue.window;
+      title = lg === "telugu" ? (nm.tel || nm.roman) : lg === "deva" ? (nm.deva || nm.roman) : nm.roman;
+      text = (lg === "telugu" ? k.telugu : lg === "deva" ? k.deva : k.roman)
+        + (w ? " · " + P.fmtTime(w.start) + " – " + P.fmtTime(w.end) : "");
     } else {
       const parts = digestParts(cue.items, lg);
       const one = (cue.items || []).filter((x) => x.kind === "vow" || x.kind === "plan");

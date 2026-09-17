@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="day">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Glyphs A · line + pigment</title>
+<link rel="stylesheet" href="stuti.css" />
+<style>
+body{background:var(--bg);color:var(--ink);font-family:var(--font-ui);margin:0;display:grid;place-items:center;min-height:100vh}
+a{color:var(--gold-deep)}a:hover{color:var(--gold)}
+.wrap{width:min(420px,92vw);display:flex;flex-direction:column;gap:26px;padding:30px 0}
+.cap{font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-faint)}
+.row{display:flex;gap:8px;flex-wrap:wrap}
+.pill{display:inline-flex;align-items:center;gap:7px;height:42px;padding:0 16px;border-radius:999px;border:1px solid var(--line);background:var(--surface);font-size:.9375rem;font-weight:600;color:var(--ink-soft);cursor:pointer;transition:all .18s}
+.pill svg{opacity:.95}
+.pill.on{background:color-mix(in oklab,var(--gold) 11%,var(--surface-2));color:var(--gold-deep);border-color:transparent;box-shadow:inset 0 0 0 1.5px color-mix(in oklab,var(--gold) 40%,transparent)}
+.p-patha svg{color:oklch(0.56 0.11 80)}.p-sadhana svg{color:oklch(0.58 0.13 15)}.p-japa svg{color:oklch(0.55 0.14 42)}.p-learn svg{color:oklch(0.50 0.09 215)}
+.pill.on svg{animation:pop .45s ease-out}
+.p-sadhana.on svg{animation:bloom .55s ease-out}.p-japa.on svg{animation:turn .55s ease-out}.p-learn.on svg{animation:kindle .6s ease-out}
+@keyframes pop{0%{transform:scale(.6)}60%{transform:scale(1.12)}100%{transform:scale(1)}}
+@keyframes bloom{0%{transform:scale(.4) rotate(-25deg)}60%{transform:scale(1.15) rotate(5deg)}100%{transform:none}}
+@keyframes turn{0%{transform:rotate(-180deg) scale(.7)}100%{transform:none}}
+@keyframes kindle{0%{transform:scale(.5) rotate(-20deg);opacity:.3}45%{transform:scale(1.25) rotate(8deg)}100%{transform:none;opacity:1}}
+.tabbar{display:grid;grid-template-columns:repeat(4,1fr);gap:6px;padding:8px 10px;background:var(--surface);border:1px solid var(--line);border-radius:18px}
+.tab{min-height:56px;border:0;border-radius:12px;background:none;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:3px;font-size:.8125rem;font-weight:600;color:var(--ink-faint);cursor:pointer;font-family:inherit}
+.tab.on{color:var(--gold-deep);background:color-mix(in oklab,var(--gold) 11%,var(--surface-2))}
+.tab.on svg{animation:rise .4s ease-out}
+.tab:nth-child(1).on svg{color:oklch(0.56 0.11 80)}.tab:nth-child(2).on svg{color:oklch(0.58 0.13 15)}.tab:nth-child(3).on svg{color:oklch(0.50 0.09 215)}.tab:nth-child(4).on svg{color:oklch(0.55 0.14 42)}
+@keyframes rise{0%{transform:translateY(4px) scale(.85);opacity:.4}60%{transform:translateY(-1px) scale(1.06)}100%{transform:none;opacity:1}}
+.note{font-size:13.5px;line-height:1.55;color:var(--ink-faint);max-width:40ch;text-wrap:pretty}
+</style>
+</head>
+<body>
+<div class="wrap">
+<div><div class="cap">Practice lenses — tap them</div>
+<div class="row" style="margin-top:10px" id="pills">
+<button class="pill p-patha on"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5.5A2 2 0 0 1 6 4h5v15H6a2 2 0 0 0-2 1.2z"></path><path d="M20 5.5A2 2 0 0 0 18 4h-5v15h5a2 2 0 0 1 2 1.2z"></path></svg>Recitation</button>
+<button class="pill p-sadhana"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20c-4 0-7-2.4-7-5.5 0 0 2.6.3 4.4 1.7M12 20c4 0 7-2.4 7-5.5 0 0-2.6.3-4.4 1.7"></path><path d="M12 20c-2.3 0-3.8-2.4-3.8-5.2 0-2.6 1.7-4.8 3.8-6.3 2.1 1.5 3.8 3.7 3.8 6.3C15.8 17.6 14.3 20 12 20z"></path></svg>Sādhana</button>
+<button class="pill p-japa"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 3l3 3-3 3"></path><path d="M20 6H8a4 4 0 0 0-4 4v1"></path><path d="M7 21l-3-3 3-3"></path><path d="M4 18h12a4 4 0 0 0 4-4v-1"></path></svg>Japa</button>
+<button class="pill p-learn"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l1.6 5.4L19 10l-5.4 1.6L12 17l-1.6-5.4L5 10l5.4-1.6z"></path></svg>Learn</button>
+</div></div>
+<div><div class="cap">Tab bar — tap them</div>
+<nav class="tabbar" style="margin-top:10px" id="tabs">
+<button class="tab on"><svg width="25" height="25" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 11l8-7 8 7"></path><path d="M6 10v9h12v-9"></path></svg><span>Today</span></button>
+<button class="tab"><svg width="25" height="25" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="2.4"></circle><path d="M12 9.6c0-2.6-1-4.6-2.7-4.6S6.6 7.5 8 9.7M12 9.6c0-2.6 1-4.6 2.7-4.6S17.4 7.5 16 9.7M9.6 13.4c-2.2 1.3-4.5 1.2-5.4-.2S4.7 9.5 7.2 9M14.4 13.4c2.2 1.3 4.5 1.2 5.4-.2S19.3 9.5 16.8 9M10.7 14.8c-.8 2.5-.2 4.7 1.3 4.7s2.1-2.2 1.3-4.7"></path></svg><span>Nitya</span></button>
+<button class="tab"><svg width="25" height="25" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5.5A2 2 0 0 1 6 4h5v15H6a2 2 0 0 0-2 1.2z"></path><path d="M20 5.5A2 2 0 0 0 18 4h-5v15h5a2 2 0 0 1 2 1.2z"></path></svg><span>Library</span></button>
+<button class="tab"><svg width="25" height="25" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3.5" y="4.5" width="17" height="16" rx="2.5"></rect><path d="M3.5 9.5h17M8 3v3M16 3v3"></path></svg><span>Calendar</span></button>
+</nav></div>
+<p class="note">A — the app's current line icons, each carrying a single pigment, with the selection motions. What is in the app today.</p>
+</div>
+<script>
+function wire(id){var el=document.getElementById(id);el.addEventListener("click",function(e){var b=e.target.closest("button");if(!b)return;el.querySelectorAll("button").forEach(function(x){x.classList.remove("on")});b.classList.add("on");});}
+wire("pills");wire("tabs");
+</script>
+</body>
+</html>

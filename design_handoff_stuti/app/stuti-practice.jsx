@@ -117,12 +117,13 @@ function PracticeCard({ p, go, lang, from = "daily" }) {
         <div className="practice-card-meta">{total} {L.t("stepsLabel", lang)}{done > 0 && <React.Fragment><span className="dot" /><span>{done}/{total}</span></React.Fragment>}</div>
         {done > 0 && <div className="practice-card-track"><span style={{ width: Math.max(6, pct) + "%" }} /></div>}
       </div>
-      <span className="practice-card-go"><Icon name="arrow" size={18} /></span>
       {p.id === "sandhya-vandanam" && (
         <button className="icon-btn" aria-label="How to perform sandhyā by your own sampradāya" title="How to perform sandhyā by your own sampradāya"
           style={{ flex: "none", width: 26, height: 26, minWidth: 26, borderRadius: "50%", background: "var(--surface-2)", border: "1px solid var(--line)", color: "var(--ink-soft)", fontSize: "0.8125rem", fontWeight: 700, display: "grid", placeItems: "center" }}
           onClick={(e) => { e.stopPropagation(); go("sandhyaNote", { from }); }}>?</button>
       )}
+      {/* the arrow sits last so every card's arrow lands in the same column */}
+      <span className="practice-card-go"><Icon name="arrow" size={18} /></span>
     </div>
   );
 }
@@ -145,18 +146,20 @@ const NITYA_LENSES = [
    Sādhana, not to Recitation. A route may name one outright (`initLens`) —
    a deep link from a notification, say — and that wins over the memory. */
 const NITYA_IDS = NITYA_LENSES.map((l) => l.id);
+/* the lens survives navigation within a session, not a refresh: the app
+   opens on recitation every time */
 function readNityaLens(init) {
   if (init && NITYA_IDS.indexOf(init) >= 0) return init;
-  try { const v = localStorage.getItem("stuti-nitya-lens"); if (v && NITYA_IDS.indexOf(v) >= 0) return v; } catch (e) {}
+  try { const v = sessionStorage.getItem("stuti-nitya-lens"); if (v && NITYA_IDS.indexOf(v) >= 0) return v; } catch (e) {}
   return "patha";
 }
-function NityaView({ go, lang = "deva", showPractices = true, openRemind, initLens }) {
+function NityaView({ go, lang = "deva", showPractices = true, openRemind, initLens, initLensAt }) {
   const L = window.STUTI_L, LIB = window.STUTI_LIB;
   const [lens0, setLens] = useStatePr(() => readNityaLens(initLens));
-  useEffectPr(() => { if (initLens) setLens(readNityaLens(initLens)); }, [initLens]);
+  useEffectPr(() => { if (initLens) { const v = readNityaLens(initLens); setLens(v); try { sessionStorage.setItem("stuti-nitya-lens", v); } catch (e) {} } }, [initLens, initLensAt]);
   /* the nomulu shelf is Telugu custom and hidden from the Devanāgarī interface, as in the library */
   const lens = lens0 === "nomu" && lang === "deva" ? "patha" : lens0;
-  const choose = React.useCallback((id) => { setLens(id); try { localStorage.setItem("stuti-nitya-lens", id); } catch (e) {} }, [setLens]);
+  const choose = React.useCallback((id) => { setLens(id); try { sessionStorage.setItem("stuti-nitya-lens", id); } catch (e) {} }, [setLens]);
   const viewRef = React.useRef(null);
   const trackRef = React.useRef(null);
   /* the bar's order is the reciter's: the library's own arrange gesture, on this bar */

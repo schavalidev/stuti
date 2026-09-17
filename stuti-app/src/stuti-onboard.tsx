@@ -27,9 +27,9 @@ const OB_SAMPLE = {
   roman:  "śrīgaṇeśāya namaḥ",
 };
 const OB_SCRIPTS = [
-  { k: "deva",   name: "Devanāgarī", native: "देवनागरी" },
-  { k: "telugu", name: "Telugu",     native: "తెలుగు" },
-  { k: "roman",  name: "Roman · IAST", native: "IAST" },
+  { k: "deva",   name: "Hindi",   native: "हिन्दी" },
+  { k: "telugu", name: "Telugu",  native: "తెలుగు" },
+  { k: "roman",  name: "English", native: "English" },
 ];
 
 function ObStep({ title, sub, children, lang }) {
@@ -125,7 +125,7 @@ function Onboarding({ lang, setLang, onDone }) {
           {i === 1 && (
             <ObStep lang={lang} title={L.t("obKeep", lang)} sub={L.t("obKeepSub", lang)}>
               <div className="ob-deities">
-                {S.deities.map((d) => (
+                {S.deities.filter((d) => !d.hidden && !d.notIshta).map((d) => (
                   <button key={d.id} className={"ob-deity" + (kept.indexOf(d.id) !== -1 ? " on" : "")}
                     style={deityStyle(d)} onClick={() => toggleKeep(d.id)} aria-pressed={kept.indexOf(d.id) !== -1}>
                     <Seal d={d} size={54} />

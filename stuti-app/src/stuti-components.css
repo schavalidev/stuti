@@ -139,7 +139,20 @@
 /* location control (chip + floating menu) — used in the home greeting.
    Scoped under .locctl so these win over the base .loc-menu rule
    (which sits later in the file and would otherwise force relative flow). */
-.locctl { position: relative; flex: none; }
+.locctl { position: relative; flex: none; display: inline-flex; align-items: center; gap: 8px; }
+/* the compass beside the place */
+.cp-dial{position:relative;width:34px;height:34px;min-width:34px;padding:0;border-radius:50%;border:1px solid var(--line);background:var(--surface-2);cursor:pointer;display:inline-flex;align-items:center;justify-content:center;overflow:hidden}
+.cp-ring{position:absolute;inset:0;transition:transform .25s ease-out}
+.cp-n{position:absolute;left:50%;top:3px;width:2px;height:9px;margin-left:-1px;background:var(--ink);border-radius:1px}
+.cp-e{position:absolute;top:50%;right:4px;width:5px;height:5px;margin-top:-2.5px;border-radius:50%;background:var(--accent-ink)}
+.cp-l{position:absolute;font-size:.5rem;line-height:1;color:var(--ink-faint);font-family:var(--font-ui)}
+.cp-l-n{left:50%;top:13px;transform:translateX(-50%)}
+.cp-l-e{top:50%;right:11px;transform:translateY(-50%)}
+.cp-pin{width:4px;height:4px;border-radius:50%;background:var(--ink-faint)}
+.cp-dial:not(.live) .cp-ring{opacity:.45}
+.cp-dial.live{border-color:color-mix(in oklab,var(--accent-ink) 40%,var(--line))}
+.sky .cp-dial{background:rgba(255,251,240,.16);border-color:rgba(255,251,240,.34)}
+.sky .cp-dial .cp-n{background:#FFF7E8}.sky .cp-dial .cp-l{color:rgba(255,247,232,.8)}
 .loc-scrim { position: fixed; inset: 0; z-index: 39; }
 .locctl .loc-menu {
   position: absolute; top: calc(100% + 8px); right: 0; z-index: 40;
@@ -237,14 +250,18 @@
    1/1 aspect ratio squares it */
 .niche-pic .niche-img--circle { width: 78%; height: auto; aspect-ratio: 1 / 1; border-radius: 50%; transform: translate(calc(-50% + var(--mx, 0) * -7px), calc(-56% + var(--my, 0) * -7px)) scale(var(--zoom, 1)); box-shadow: 0 0 0 1.5px var(--frame-c), 0 0 0 3px color-mix(in oklab, var(--accent) 55%, transparent); }
 [data-theme="night"] .niche-pic .niche-img--circle { box-shadow: 0 0 0 1.5px var(--frame-c), 0 0 0 3px color-mix(in oklab, var(--accent) 55%, transparent); }
+/* a niche with no painting: the headword typeset on the glass, above the name
+   plate, sitting where the image would be rather than pretending to be one */
+.niche-pic .niche-word { position: absolute; left: 50%; top: 50%; width: 78%; aspect-ratio: 1 / 1; border-radius: 50%; display: flex; align-items: center; justify-content: center; padding: 0 10%; box-sizing: border-box; background: #FCF7EF; transform: translate(calc(-50% + var(--mx, 0) * -7px), calc(-56% + var(--my, 0) * -7px)) scale(var(--zoom, 1)); transition: transform 420ms cubic-bezier(.2,.7,.2,1); text-align: center; font-size: 1.25rem; line-height: 1.2; color: color-mix(in oklab, var(--accent-ink) 82%, #3A2A18); text-wrap: balance; box-shadow: 0 0 0 1.5px var(--frame-c), 0 0 0 3px color-mix(in oklab, var(--accent) 55%, transparent); }
+.gtile-niche.is-tilt .niche-word { --zoom: 1.04; transition-duration: 120ms; }
 /* the name sits on a cream plate rising out of the painting's own ground.
    Dark ink in both themes: the tile is a lit painting, not part of the wall. */
 .niche-name { position: absolute; left: var(--frame); right: var(--frame); bottom: var(--frame); margin: 0; padding: 22px 8px 8px; text-align: center; color: #2B2017; border-radius: 0 0 calc(var(--rad) - var(--frame)) calc(var(--rad) - var(--frame)); background: linear-gradient(to top, #F7EADC 38%, color-mix(in oklab, #F7EADC 70%, transparent) 70%, transparent); pointer-events: none; }
 .niche-count { display: block; margin-top: 2px; font-family: var(--font-ui); font-size: 0.6875rem; letter-spacing: 0.02em; color: #584B3E; }
-.lib-deity-grid .gtile-niche .gtile-name { font-size: 1rem; line-height: 1.2; }
+.lib-deity-grid .gtile-niche .gtile-name { font-size: 1.1875rem; line-height: 1.2; }
 [data-theme] .lib-deity-grid .gtile-niche .gtile-name.niche-name { color: #2B2017; }
-.lib-deity-grid-2 .gtile-niche .gtile-name { font-size: 1.1875rem; padding-bottom: 12px; }
-.lib-deity-grid-4 .gtile-niche .gtile-name { font-size: 0.8125rem; padding: 18px 4px 6px; }
+.lib-deity-grid-2 .gtile-niche .gtile-name { font-size: 1.375rem; padding-bottom: 12px; }
+.lib-deity-grid-4 .gtile-niche .gtile-name { font-size: 0.9375rem; padding: 18px 4px 6px; }
 .lib-deity-grid-4 .niche-count { display: none; }
 /* a light that sweeps the glass once when the tile is touched */
 .niche-sheen { position: absolute; inset: var(--frame); border-radius: calc(var(--rad) - var(--frame)); overflow: hidden; pointer-events: none; z-index: 2; }
@@ -262,6 +279,11 @@
 .niche-sheen::before { transition-duration: 0ms !important; }
 .gtile-niche:hover .niche-sheen::before, .masa-tile:hover .niche-sheen::before, .masa-now:hover .niche-sheen::before, .is-tilt .niche-sheen::before, .is-sweep .niche-sheen::before { transition-duration: 1300ms !important; }
 @media (hover: hover) { .masa-tile:hover .niche-sheen::before, .masa-now:hover .niche-sheen::before, .gtile-niche:hover .niche-sheen::before { transform: translateX(70%); } .masa-tile:hover { transform: translateY(-3px); } }
+/* the month-card sheen rules are declared after the generic .is-sweep one and
+   at the same weight, so the band never left home — say it again, later */
+.masa-tile.is-sweep .niche-sheen::before, .masa-now.is-sweep .niche-sheen::before, .masa-tile.is-tilt .niche-sheen::before, .masa-now.is-tilt .niche-sheen::before { transform: translateX(70%); }
+.masa-now { transition: transform 420ms var(--ease-out); }
+.masa-now.is-tilt { transform: translateY(-2px); transition-duration: 120ms; }
 /* no arrival sweep on the tiles — the sheen moves only on hover or press */
 @keyframes sheenOnce { from { transform: translateX(-70%); } to { transform: translateX(70%); } }
 /* one plain frame for every deity — the paintings carry the colour, the frame
@@ -276,6 +298,9 @@
 [data-theme="night"] .niche-name { background: linear-gradient(to top, #E8DCC8 38%, color-mix(in oklab, #E8DCC8 70%, transparent) 70%, transparent); }
 /* the ninth, unstocked tile keeps the proportion so the shelf reads as one row */
 .lib-deity-grid .gtile-soon { aspect-ratio: 1 / 1; min-height: 0; border-radius: 12px; justify-content: center; }
+/* the ring was sized to the tile's full width, so with the name under it the
+   circle grew past the square it sits in */
+.lib-deity-grid .gtile-soon-ring { width: auto; height: 58%; max-width: 100%; flex: none; }
 @keyframes nicheRise { from { opacity: 0; transform: perspective(720px) rotateX(14deg) translateY(18px); } to { opacity: 1; transform: perspective(720px) rotateX(0deg) translateY(0); } }
 @media (prefers-reduced-motion: reduce) { .gtile-niche { animation: none; transform: none !important; } .niche-img, .niche-sheen::before { transition: none; } }
 
@@ -348,6 +373,7 @@
 .cal-view .cal-detail-date{font-size: 0.9375rem}
 .cal-view .cal-detail-ends{font-size: 0.9688rem}
 .cal-view .cal-detail-tithi{font-size: 1.625rem}
+.cal-view .cal-detail-tithi.is-none{font-size:1.125rem;line-height:1.5;color:var(--ink)}
 .cal-view .cal-today-btn{font-size: 0.9375rem}
 .cal-view .cal-detail .pdrow-k{font-size: 1.0625rem}
 .cal-view .cal-detail .pdrow-v{font-size: 1.3125rem}
@@ -388,7 +414,12 @@
 .masa-now-fill { display: block; height: 100%; border-radius: 2px; background: color-mix(in oklab, var(--rtu) 78%, var(--gold)); }
 .masa-now-left { font-size: 0.75rem; color: var(--ink-faint); white-space: nowrap; }
 .masa-now-marks { display: flex !important; flex-wrap: wrap; gap: 6px; margin-top: 15px; }
-.masa-mark { padding: 4px 10px; border-radius: 999px; font-size: 0.75rem; line-height: 1.35; color: var(--ink-soft); background: color-mix(in oklab, var(--rtu) 9%, var(--surface-2)); border: 1px solid color-mix(in oklab, var(--rtu) 20%, var(--line)); }
+/* these name the month's observances; they are not buttons, and a pill said
+   they were — the border and fill come off and they read as a written list */
+.masa-now-marks { gap: 6px 8px; }
+.masa-mark { padding: 0 !important; border: 0 !important; background: none !important; border-radius: 0 !important; }
+.masa-mark:not(:last-child)::after { content: "·"; margin-left: 8px; color: var(--ink-faint); }
+.masa-mark-legacy { padding: 4px 10px; border-radius: 999px; font-size: 0.75rem; line-height: 1.35; color: var(--ink-soft); background: color-mix(in oklab, var(--rtu) 9%, var(--surface-2)); border: 1px solid color-mix(in oklab, var(--rtu) 20%, var(--line)); }
 .masa-mark-span { color: color-mix(in oklab, var(--rtu) 55%, var(--ink)); border-color: color-mix(in oklab, var(--rtu) 38%, var(--line)); }
 /* the season header that opens each pair of months */
 .masa-rtu { display: flex; align-items: center; gap: 9px; margin: 22px 0 10px; color: color-mix(in oklab, var(--rtu) 58%, var(--ink)); }
@@ -725,6 +756,22 @@
 .reciter-speed button:active { background: var(--line-2); }
 .reciter-speed button:disabled { color: var(--ink-faint); opacity: 0.45; }
 .reciter-speed span { min-width: 34px; text-align: center; font-variant-numeric: tabular-nums; }
+/* the speed sheet — a slider with steppers, and the paces one taps most */
+.reciter-speed.on { color: var(--accent-ink); border-color: var(--accent-ink); }
+.spd-strip { display: flex; flex-direction: column; gap: 8px; padding: 8px 12px 10px; border-top: 1px solid var(--line); }
+.spd-row { display: flex; align-items: center; gap: 8px; }
+.spd-rnd { flex: 0 0 auto; width: 30px; height: 30px; display: grid; place-items: center; border-radius: 999px; border: 1px solid var(--line); background: var(--surface); color: var(--ink); font-size: 1.25rem; line-height: 1; }
+.spd-rnd:disabled { opacity: .4; }
+.spd-track { position: relative; flex: 1 1 auto; height: 18px; display: flex; align-items: center; touch-action: none; cursor: pointer; }
+.spd-track::before { content: ""; position: absolute; left: 0; right: 0; height: 5px; border-radius: 999px; background: var(--line-2); }
+.spd-track > span { position: absolute; left: 0; height: 5px; border-radius: 999px; background: var(--accent-ink); }
+.spd-knob { position: absolute; top: 50%; width: 14px; height: 14px; margin-left: -7px; border-radius: 999px; background: var(--accent-ink); transform: translateY(-50%); }
+.spd-track.scrubbing .spd-knob { transform: translateY(-50%) scale(1.15); }
+.spd-chips { display: flex; align-items: center; gap: 6px; }
+.spd-chips .spd-chip { flex: 1 1 0; }
+.spd-chip { height: 28px; border-radius: 999px; border: 1px solid var(--line); background: var(--surface); color: var(--ink); font-variant-numeric: tabular-nums; font-size: .8rem; padding: 0; }
+.spd-chip.on { background: var(--accent-ink); border-color: var(--accent-ink); color: var(--surface); }
+.spd-word { flex: 0 0 auto; padding-left: 4px; font-size: .72rem; color: var(--ink-faint); }
 
 /* lit flame gentle flicker */
 .flame-lit { animation: flicker 2.4s var(--ease) infinite; }
@@ -941,6 +988,9 @@
 .cal-view { container-type: size; }
 .cal-view .cal-season-in { height: 100cqh; }
 .cal-season-wash { z-index: 0; background: color-mix(in oklab, var(--rtu) 12%, transparent); }
+/* the wash is clipped to one screen's height, so scrolled content met its
+   bottom as a straight edge across a card — fade it out instead */
+.cal-season-wash { -webkit-mask-image: linear-gradient(to bottom, #000 46%, transparent 96%); mask-image: linear-gradient(to bottom, #000 46%, transparent 96%); }
 .cal-season-wash[data-mix] { background: linear-gradient(160deg, color-mix(in oklab, var(--rtu) 12%, transparent), color-mix(in oklab, var(--rtu-b) 12%, transparent)); }
 .cal-season-fg { z-index: 3; opacity: 1; filter: saturate(1.3); }
 .cal-season .pcard-ambient.rain span { height: 26px; width: 1.6px; animation-name: calRain; }
@@ -1177,9 +1227,136 @@ select.sk-input {
 .tt-row-date{flex:none;text-align:right;font-size:.9375rem;color:var(--ink);display:flex;flex-direction:column;gap:1px;font-variant-numeric:tabular-nums}
 .tt-row-date small{font-size:.75rem;color:var(--accent-ink);font-weight:600}
 .tt-addhere{display:flex;align-items:center;justify-content:center;gap:7px;width:100%;min-height:46px;margin-top:14px;border-radius:999px;border:1px dashed color-mix(in oklab,var(--accent) 45%,var(--line));background:var(--surface);color:var(--accent-ink);font-family:var(--font-ui);font-size:.9063rem;font-weight:600;cursor:pointer}
+.acc-field>span small{margin-left:6px;color:var(--ink-faint);font-size:.75rem;font-weight:400}
+/* the lead-up strip — quiet by design: it is a notice, not a summons */
+.ta-strip{display:flex;flex-direction:column;gap:8px;margin:14px 16px 0}
+.ta-row{border:1px solid var(--line);border-radius:var(--r-md);background:var(--surface-2);overflow:hidden}
+.ta-row.grave{border-color:color-mix(in oklab,var(--ink) 14%,var(--line))}
+.ta-main{display:flex;align-items:center;gap:12px;width:100%;padding:11px 13px;text-align:left;color:var(--ink)}
+.ta-away{flex:none;min-width:58px;font-size:.75rem;letter-spacing:.04em;text-transform:uppercase;color:var(--accent-ink)}
+.ta-row.grave .ta-away{color:var(--ink-soft)}
+.ta-body{flex:1;min-width:0;display:flex;flex-direction:column;gap:2px}
+.ta-name{font-size:.9375rem;color:var(--ink)}
+.ta-meta{font-size:.75rem;color:var(--ink-faint)}
+.ta-chev{flex:none;color:var(--ink-faint)}
+.ta-open{padding:2px 13px 12px;display:flex;flex-direction:column;gap:6px;border-top:1px solid var(--line-2)}
+.ta-line{display:flex;justify-content:space-between;gap:10px;padding-top:8px;font-size:.8125rem;color:var(--ink-faint)}
+.ta-line b{color:var(--ink);font-weight:500}
+.ta-go{align-self:flex-start;margin-top:4px;padding:7px 12px;border-radius:999px;border:1px solid var(--line);background:var(--bg);color:var(--accent-ink);font-size:.8125rem}
+.tt-row{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:10px;margin-top:12px}
+.tt-row .acc-field{margin-top:0}
+.tt-clock{display:flex;align-items:center;gap:8px}
+.tt-clock select{min-height:48px;padding:0 10px;border-radius:var(--r-sm);border:1px solid var(--line);background:var(--bg);color:var(--ink);font-family:var(--font-ui);font-size:1rem}
+.tt-clock>span{color:var(--ink-faint)}
+.tt-clock-clear{display:flex;align-items:center;justify-content:center;width:32px;height:32px;border-radius:999px;color:var(--ink-faint)}
+.tt-place{display:flex;align-items:center;justify-content:space-between;gap:10px;min-height:48px;padding:0 12px;border-radius:var(--r-sm);border:1px solid var(--line);background:var(--bg);color:var(--ink);font-family:var(--font-ui);font-size:.8125rem;text-align:left}
+.tt-place svg{flex:none;color:var(--ink-faint)}
+.tt-placewrap{position:relative}
+.tt-placescrim{position:fixed;inset:0;z-index:60}
+.tt-placebox-float{position:absolute;top:0;left:0;right:0;z-index:61;display:flex;flex-direction:column;max-height:min(58vh,340px);box-shadow:0 18px 40px -14px rgba(0,0,0,.28),0 2px 8px rgba(0,0,0,.06)}
+.tt-placecap{padding:8px 12px 4px;font-size:.6875rem;letter-spacing:.14em;text-transform:uppercase;font-weight:600;color:var(--ink-faint);background:var(--surface-2)}
+.tt-placebox{border:1px solid var(--line);border-radius:var(--r-sm);background:var(--bg);overflow:hidden}
+.tt-placesearch{display:flex;align-items:center;gap:8px;padding:0 12px;min-height:48px;border-bottom:1px solid var(--line-2);color:var(--ink-faint)}
+.tt-placesearch input{flex:1;border:0;background:none;font-family:var(--font-ui);font-size:.8125rem;color:var(--ink);outline:none}
+.tt-placelist{max-height:230px;overflow-y:auto}
+.tt-placebox-float .tt-placelist{flex:1;min-height:0;max-height:none;overscroll-behavior:contain}
+.tt-placerow{display:flex;flex-direction:column;align-items:flex-start;gap:1px;width:100%;padding:8px 12px;text-align:left;border-bottom:1px solid var(--line-2);color:var(--ink);font-size:.8125rem}
+.tt-placerow small{color:var(--ink-faint);font-size:.6875rem}
+.tt-placerow.on{background:var(--accent-soft);color:var(--accent-ink)}
+.tt-placecustom{background:var(--surface-2)}
+.tt-placecustom span{color:var(--accent-ink)}
+.tt-placenone{padding:14px 12px;color:var(--ink-faint);font-size:.875rem}
 .tt-rule{margin-top:4px;padding:14px;border-radius:var(--r-md);background:var(--surface-2);border:1px solid var(--line-2)}
 .tt-rule-v{font-size:1.25rem;color:var(--ink);margin-top:6px;line-height:1.3}
 .tt-selects{display:grid;grid-template-columns:1.4fr 1fr 1.2fr;gap:8px;margin-top:12px}
+/* the pitṛ calendar and the why-this-date drawer */
+.pit-view{padding:0 16px 96px;display:flex;flex-direction:column;gap:16px;min-height:0}
+.pit-head{padding:6px 2px 0}
+.pit-head h1{font-size:1.75rem;line-height:1.2;margin:6px 0 0;color:var(--ink);font-weight:400}
+.pit-lede{margin:10px 0 0;font-size:.9375rem;line-height:1.6;color:var(--ink-soft);max-width:56ch;text-wrap:pretty}
+.pit-lede-sm{font-size:.875rem;margin-top:8px}
+.pit-list{display:flex;flex-direction:column;margin-top:8px}
+.pit-row{display:flex;align-items:center;gap:10px;padding:11px 0;border-top:1px solid var(--line-2);flex-wrap:wrap}
+.pit-why{flex:none;width:26px;height:26px;min-width:26px;padding:0;border-radius:50%;border:1px solid var(--line);background:var(--surface-2);color:var(--ink-soft);font-size:.8125rem;font-weight:600;display:grid;place-items:center}
+.parva-card{position:relative}
+/* the tarpaṇa card: a tarpaṇam is not a deity's festival, and the gold wash
+   made it read as one. Ash on parchment — water, sesame and darbha — built
+   from the ink itself so no new hue enters the palette. */
+.parva-card.is-tarpana{background:color-mix(in oklab,var(--ink) 6%,var(--surface))}
+.parva-card.is-tarpana::before{border-color:color-mix(in oklab,var(--ink) 20%,transparent)}
+.parva-card.is-tarpana .parva-k{color:var(--ink-soft)}
+.parva-why{position:absolute;right:10px;top:10px;width:26px;height:26px;min-width:26px;padding:0;border-radius:50%;border:1px solid var(--line);background:color-mix(in oklab,var(--surface) 82%,transparent);color:var(--ink-soft);font-size:.8125rem;font-weight:600;display:grid;place-items:center;z-index:3}
+.pit-row:first-child{border-top:0}
+.pit-row-body{flex:1;min-width:0}
+.pit-row-name{font-size:1.0625rem;color:var(--ink);line-height:1.3}
+.pit-row-sub{margin-top:3px;font-size:.8125rem;color:var(--ink-faint)}
+.pit-row-acts{display:flex;align-items:center;gap:8px;flex:none;margin-left:auto}
+.pit-badge{display:inline-block;padding:3px 9px;border-radius:999px;font-size:.6875rem;font-weight:600;letter-spacing:.06em;text-transform:uppercase;background:var(--surface-2);color:var(--ink-soft);border:1px solid var(--line-2);white-space:nowrap}
+.pit-badge.is-core{background:color-mix(in oklab,var(--gold) 16%,transparent);color:var(--gold-deep);border-color:transparent}
+.pit-badge.is-personal{background:var(--accent-soft);color:var(--accent-ink);border-color:transparent}
+.pit-badge.is-flag{background:color-mix(in oklab,var(--ink) 7%,transparent);color:var(--ink-soft)}
+.pit-badges{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:14px}
+.pit-facts{display:flex;flex-direction:column;gap:1px;border-radius:var(--r-sm);overflow:hidden;background:var(--surface-2);border:1px solid var(--line-2)}
+.pit-fact{display:flex;align-items:baseline;justify-content:space-between;gap:12px;padding:11px 13px;background:var(--bg)}
+.pit-fact span{font-size:.8125rem;color:var(--ink-faint)}
+.pit-fact b{font-size:.9375rem;font-weight:600;color:var(--ink);text-align:right}
+.pit-src-row.is-plain{color:var(--ink-faint);cursor:default}
+/* the kṣaṇa line: one event laid on time, its window shaded under it */
+.ksh-line{margin:4px 0 20px;padding:0 6px}
+.ksh-track{position:relative;height:12px;border-radius:999px;background:var(--surface-2);border:1px solid var(--line-2);overflow:hidden}
+.ksh-band{position:absolute;top:0;bottom:0;background:color-mix(in oklab, var(--gold) 55%, transparent)}
+.ksh-band.is-punya{background:color-mix(in oklab, var(--gold) 45%, transparent)}
+.ksh-band.is-inner{background:color-mix(in oklab, var(--gold-deep) 72%, transparent)}
+.ksh-band.is-sutaka{background:repeating-linear-gradient(135deg,color-mix(in oklab,var(--ink-faint) 22%,transparent) 0 4px,transparent 4px 8px)}
+.ksh-lead{position:absolute;left:50%;width:1px;background:var(--line);margin-left:-.5px}
+.ksh-mark{position:absolute;top:-3px;bottom:-3px;width:2px;margin-left:-1px;background:var(--ink-soft)}
+.ksh-mark.is-peak{width:3px;margin-left:-1.5px;background:var(--ink)}
+.ksh-ticks{position:relative;margin-top:7px}
+.ksh-tick{position:absolute;transform:translateX(-50%);display:flex;flex-direction:column;align-items:center;gap:2px;white-space:nowrap}
+.ksh-tick.is-start{transform:none;align-items:flex-start}
+.ksh-tick.is-start .ksh-lead{left:0}
+.ksh-tick.is-end{transform:translateX(-100%);align-items:flex-end}
+.ksh-tick.is-end .ksh-lead{left:auto;right:0}
+.ksh-tick-t{font-size:.75rem;font-weight:600;color:var(--ink)}
+.ksh-tick-l{font-size:.6875rem;color:var(--ink-faint)}
+.ksh-caveat{margin:16px 0 0;padding:11px 13px;border-radius:var(--r-sm);background:var(--surface-2);border:1px solid var(--line-2);font-size:.875rem;line-height:1.5;color:var(--ink-soft);text-wrap:pretty}
+.ksh-rules{margin:16px 0 0;padding:0;list-style:none;display:flex;flex-direction:column;gap:10px}
+.ksh-rules li{position:relative;padding-left:16px;font-size:.9375rem;line-height:1.55;color:var(--ink);text-wrap:pretty}
+.ksh-rules li::before{content:"";position:absolute;left:0;top:.6em;width:5px;height:5px;border-radius:50%;background:var(--accent-ink)}
+.pit-cand{margin-top:14px;padding:12px 13px;border-radius:var(--r-sm);background:var(--surface-2);border:1px solid var(--line-2)}
+.pit-cand-days{display:flex;flex-direction:column;gap:4px;margin-top:6px;font-size:.9375rem;color:var(--ink)}
+.pit-rule{margin:14px 0 0;font-size:.9375rem;line-height:1.65;color:var(--ink-soft);text-wrap:pretty}
+.pit-src{margin-top:18px}
+.pit-src-row{display:flex;align-items:center;justify-content:space-between;gap:10px;padding:10px 0;border-top:1px solid var(--line-2);font-size:.8125rem;color:var(--accent-ink);text-decoration:none}
+.pit-mine{display:flex;flex-direction:column;gap:3px;margin-top:12px;padding:11px 13px;border-radius:var(--r-sm);background:var(--accent-soft)}
+.pit-mine span{font-size:.75rem;color:var(--accent-ink);letter-spacing:.06em;text-transform:uppercase;font-weight:600}
+.pit-mine b{font-size:.9375rem;color:var(--ink);font-weight:400}
+.pit-groups{display:flex;flex-direction:column;margin-top:12px}
+.pit-group{border-top:1px solid var(--line-2)}
+.pit-group:first-child{border-top:0}
+.pit-group-head{display:flex;align-items:center;justify-content:space-between;gap:10px;width:100%;padding:12px 0;text-align:left}
+.pit-group-name{font-size:1rem;color:var(--ink);min-width:0}
+.pit-group-meta{display:flex;align-items:center;gap:8px;flex:none;color:var(--ink-faint)}
+.pit-group-n{font-size:.8125rem;color:var(--ink-faint);font-variant-numeric:tabular-nums}
+.pit-group.on .pit-group-meta svg{transform:rotate(90deg)}
+.pit-group-body{padding:0 0 14px}
+.pit-note{margin:0 0 10px;font-size:.875rem;line-height:1.6;color:var(--ink-soft);text-wrap:pretty}
+.pit-days{display:flex;flex-wrap:wrap;gap:6px}
+.pit-day{display:flex;align-items:baseline;gap:6px;padding:5px 10px;border-radius:999px;background:var(--surface-2);border:1px solid var(--line-2);font-size:.8125rem;color:var(--ink);font-variant-numeric:tabular-nums}
+.pit-day i{color:var(--ink-faint);font-size:.75rem}
+.pit-empty{padding:14px 0;font-size:.875rem;color:var(--ink-faint)}
+.pit-door{display:flex;align-items:center;justify-content:space-between;gap:12px;width:calc(100% - 32px);margin:18px 16px 0;padding:16px;border-radius:var(--r-md);background:var(--surface);border:1px solid var(--line);box-shadow:var(--shadow-sm);color:var(--ink-faint);text-align:left}
+.pit-door>svg{transform:rotate(-90deg)}
+.cal-add-here{padding:0 13px;border-radius:999px;display:inline-flex;align-items:center;gap:6px;min-height:34px}
+.pit-door-body{display:flex;flex-direction:column;gap:3px;min-width:0}
+.pit-door-name{font-size:1.0625rem;line-height:1.5;color:var(--ink);text-wrap:pretty}
+.pit-door-sub{font-size:.8125rem;color:var(--ink-faint)}
+.cal-detail-more{display:flex;align-items:center;justify-content:center;gap:6px;width:100%;margin-top:10px;padding:11px 12px;border-radius:999px;background:var(--surface-2);border:1px solid var(--line-2);color:var(--accent-ink);font-size:.875rem;font-weight:600}
+.cal-detail-more svg{transform:rotate(90deg)}
+.cal-detail-more.is-open svg{transform:rotate(-90deg)}
+.set-input{width:100%;min-height:42px;padding:0 12px;border-radius:var(--r-sm);border:1px solid var(--line);background:var(--bg);color:var(--ink);font-family:var(--font-ui);font-size:.9375rem;outline:none}
+.set-input:focus{border-color:color-mix(in oklab,var(--gold) 45%,transparent)}
+.tt-selects.is-solo{grid-template-columns:1.4fr 1.4fr}
 .tt-selects label{display:flex;flex-direction:column;gap:4px;font-size:.75rem;color:var(--ink-faint);min-width:0}
 .tt-selects select{min-height:42px;padding:0 8px;border-radius:var(--r-sm);border:1px solid var(--line);background:var(--bg);color:var(--ink);font-size:.9375rem;min-width:0}
 .tt-next{margin-top:12px;font-size:.875rem;color:var(--accent-ink);font-weight:600}
@@ -1295,6 +1472,8 @@ select.sk-input {
 /* named vāras, not single aksharas: the bead becomes a pill wide enough for them */
 :is([data-lang="deva"], [data-lang="telugu"]) .week-strip { gap: 4px; }
 :is([data-lang="deva"], [data-lang="telugu"]) .week-strip .week-day { width: auto; min-width: 36px; padding: 0 9px; font-size: 0.9375rem; white-space: nowrap; }
+/* three-letter Roman vāras need more than a 36px bead */
+.week-strip .week-day { width: auto; min-width: 44px; padding: 0 8px; border-radius: 999px; white-space: nowrap; }
 .daily-row-body { flex: 1; min-width: 0; }
 .daily-row-title { font-size: 1.1875rem; line-height: 1.25; }
 .daily-row-meta { font-size: 0.9375rem; color: var(--ink-soft); }
@@ -1316,7 +1495,8 @@ select.sk-input {
   background: var(--surface-2); border: 1px dashed var(--line); border-radius: var(--r-lg);
   padding: 28px 24px; margin-bottom: 26px;
 }
-.daily-empty-title { font-size: 1.375rem; }
+/* subordinate to the screen title above it — an invitation, not a second heading */
+.daily-empty-title { font-size: 1.0625rem; font-weight: 600; color: var(--ink); }
 .daily-empty-line { color: var(--ink-soft); font-size: 1rem; margin-top: 6px; max-width: 46ch; text-wrap: pretty; }
 .inline-flower { color: var(--accent-ink); vertical-align: -3px; }
 .daily-empty-btn { margin-top: 18px; }
@@ -1368,7 +1548,7 @@ select.sk-input {
 .gs-head { position: relative; padding: 4px 6px 0; isolation: isolate; display: flex; flex-direction: column; align-items: flex-start; text-align: left; }
 .gs-head > h1, .gs-head > .gs-rom { max-width: 78%; }
 .gs-head > *:not(.gs-wm) { position: relative; z-index: 1; }
-.gs-head-nb { padding-top: 40px; margin-top: 0; }
+.gs-head-nb { padding-top: 14px; margin-top: 0; }
 .gs-back { position: absolute; top: 2px; left: 0; z-index: 20; }
 .gs-count { font-family: var(--font-body); font-size: 0.8rem; font-weight: 700; color: var(--gold-deep); margin-left: 8px; }
 [data-theme="night"] .gs-count { color: var(--gold); }
@@ -1378,6 +1558,11 @@ select.sk-input {
    than a watermark — so at night the art is held much fainter */
 [data-theme="night"] .gs-wm:not(.gs-wm-nomu):not(.gs-wm-vrata):not(.gs-wm-parva) { opacity: 0.13; }
 .gs-wm .emblem-img { width: 100%; height: auto; }
+/* the eight ink plates are one canvas size but not one framing: Gaṇapati is
+   drawn as a whole seated mūrti about seven-tenths of the width, where Śiva
+   and the rest reach both edges. At a fixed plate width he therefore reads
+   as the small deity — his box alone is given the difference back. */
+.gs-wm-d-ganesha { width: 254px; }
 /* a lens may carry a colour of its own — nomulu is red, the vow's own kuṅkuma.
    The unified palette declares --accent at the root, so a hue set on the lens
    body alone would inherit gold: the tokens have to be re-derived here, the
@@ -1423,8 +1608,11 @@ select.sk-input {
 /* the medallion used to overhang the head by 12–14px; once the head pinned under
    the lens pills the overhang showed through the bar's blur. It now sits flush
    with the head's top, and the pad's top padding above gives it the same air. */
-.nomu-lens-head :is(.gs-wm-vrata, .gs-wm-parva, .gs-wm-grantha) { top: 0; width: 142px; height: 142px; }
-.nomu-lens-head .gs-wm-nomu:not(.gs-wm-vrata):not(.gs-wm-parva):not(.gs-wm-grantha) { top: 0; width: 142px; height: 142px; }
+/* the plate was 142px in a band 104px tall, so 38px of it hung over whatever
+   the lens opened with — on pārāyaṇa, straight across the first two lines of
+   the note. It is now sized to the band it hangs in, and the band reserves it. */
+.nomu-lens-head :is(.gs-wm-vrata, .gs-wm-parva, .gs-wm-grantha) { top: 0; width: 116px; height: 116px; }
+.nomu-lens-head .gs-wm-nomu:not(.gs-wm-vrata):not(.gs-wm-parva):not(.gs-wm-grantha) { top: 0; width: 116px; height: 116px; }
 /* the right padding is what keeps the field clear of the plate. It is set on the
    two-class selector below, not here: .vr-find-compact's padding shorthand comes
    later in this sheet and at equal specificity zeroed it, so the field ran the
@@ -1433,16 +1621,16 @@ select.sk-input {
 /* nomulu: the cadence chips fill the space beside the plate, so the header
    does not also need to reserve a plate's worth of empty height under the
    field — two chips to a row, in the app's own pill, tight to the search */
-.nomu-lens-head .vr-find-side { min-height: 0; padding-bottom: 0; padding-right: 158px; }
+.nomu-lens-head .vr-find-side { min-height: 0; padding-bottom: 0; padding-right: 128px; }
 /* the band is as tall as the plate hanging in it, so the field sits in its
    middle rather than at its top with a strip of empty parchment underneath */
-.nomu-lens-head:has(:is(.gs-wm-vrata, .gs-wm-parva, .gs-wm-grantha)) .vr-find-side { min-height: 104px; align-items: center; }
+.nomu-lens-head:has(:is(.gs-wm-vrata, .gs-wm-parva, .gs-wm-grantha)) .vr-find-side { min-height: 116px; align-items: center; }
 .nomu-lens-head { padding-bottom: 6px; }
-.nomu-lens-head:has(.gs-wm-nomu:not(.gs-wm-vrata):not(.gs-wm-parva):not(.gs-wm-grantha)) { min-height: 104px; }
-.nomu-lens-head:has(:is(.gs-wm-vrata, .gs-wm-parva, .gs-wm-grantha)) { min-height: 104px; }
+.nomu-lens-head:has(.gs-wm-nomu:not(.gs-wm-vrata):not(.gs-wm-parva):not(.gs-wm-grantha)) { min-height: 122px; }
+.nomu-lens-head:has(:is(.gs-wm-vrata, .gs-wm-parva, .gs-wm-grantha)) { min-height: 122px; }
 .nomu-cad { display: flex; gap: 6px; margin: 4px 0 8px; max-width: 258px; }
 .nomu-cad .chip { min-height: 32px; padding: 0 10px; font-size: 0.8125rem; justify-content: center; text-align: center; white-space: nowrap; }
-.nomu-lens-head .vr-find-side .search-field { max-width: 260px; }
+.nomu-lens-head .vr-find-side .search-field { max-width: none; }
 .lens-pad > .nomu-lens-head { position: sticky; top: 94px; z-index: 4; background: var(--bg); margin: 0 calc(-1 * var(--bleed)); padding: 0 var(--bleed); }
 .gs-name { font-size: clamp(32px, 9.4vw, 42px); line-height: 1.15; font-weight: 400; margin-top: 0; }
 .gs-rom { font-family: var(--font-display); font-size: 0.9063rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--ink-soft); margin-top: 2px; }
@@ -1457,7 +1645,7 @@ select.sk-input {
 .fsel-index .fsel-item.soon { opacity: 0.72; }
 
 /* printed — deity page's own strip: no chrome, plain type on the card */
-.formbar-printed { position: static; margin: 0 -18px; background: none;  backdrop-filter: none; border-bottom: none; }
+.formbar-printed { position: static; margin: 10px -18px 0; background: none;  backdrop-filter: none; border-bottom: none; }
 .fsel-printed .fsel-track { padding: 0 18px 16px; }
 .fsel-printed .fsel-inner { gap: 20px; }
 .fsel-printed .fsel-item { flex: none; padding: 2px 0 6px; height: auto; border: none; border-bottom: 2px solid transparent; background: none; border-radius: 0; font-size: 1rem; font-weight: 500; color: var(--ink-faint); white-space: nowrap; }
@@ -1466,8 +1654,13 @@ select.sk-input {
 .fsel-printed .fsel-item.soon { opacity: 0.55; }
 
 .gs-ix { padding: 0 6px; }
-.gs-sec { font-size: 0.7188rem; letter-spacing: 0.22em; text-transform: uppercase; font-weight: 700; color: var(--gold-deep); padding: 20px 0 4px; }
+.gs-sec { font-size: 1.0625rem; letter-spacing: 0.22em; text-transform: uppercase; font-weight: 700; color: var(--gold-deep); padding: 20px 0 4px; }
 .gs-sec-note { font-weight: 600; opacity: 0.72; letter-spacing: 0.14em; }
+.gs-sec-btn { display: flex; align-items: center; gap: 8px; width: 100%; text-align: left; color: var(--gold-deep); }
+.gs-sec-caret { width: 8px; height: 8px; border-right: 1.5px solid currentColor; border-bottom: 1.5px solid currentColor; transform: rotate(45deg); margin-bottom: 3px; opacity: 0.7; transition: transform 0.18s ease; }
+.gs-sec-btn.shut .gs-sec-caret { transform: rotate(-45deg); margin-bottom: 0; }
+.gs-sec-n { margin-left: auto; font-weight: 600; letter-spacing: 0.08em; opacity: 0; transition: opacity 0.18s ease; }
+.gs-sec-btn.shut .gs-sec-n { opacity: 0.6; }
 .gs-en { display: flex; align-items: center; gap: 2px; border-bottom: 1px solid var(--line-2); }
 .gs-main { flex: 1; min-width: 0; display: flex; align-items: baseline; gap: 10px; padding: 11px 0; text-align: left; }
 .gs-no { flex: none; width: 18px; font-size: 0.875rem; color: var(--gold); font-variant-numeric: tabular-nums; }
@@ -1482,6 +1675,15 @@ select.sk-input {
 .gs-marks { flex: none; display: flex; align-items: center; gap: 2px; opacity: 0.78; }
 .gs-main:active { opacity: 0.65; }
 .gs-en-wrap.has-sub .gs-en { border-bottom: none; }
+/* the navagraha janma table, on the shelf */
+.gj-rows{display:flex;flex-direction:column}
+.gj-row{display:flex;align-items:center;gap:12px;padding:10px 0;border-bottom:1px solid var(--line-2)}
+.gj-body{flex:1;min-width:0;display:flex;flex-direction:column;gap:2px}
+.gj-graha{font-size:1.1875rem;line-height:1.3;color:var(--ink)}
+.gj-when{font-size:1rem;line-height:1.45;color:var(--ink)}
+.gj-meta{font-size:.9375rem;line-height:1.45;color:var(--ink-soft);text-wrap:pretty}
+.gj-side{flex:none;display:flex;align-items:center;gap:6px}
+.gj-next{font-size:.9375rem;color:var(--gold-deep);font-variant-numeric:tabular-nums;white-space:nowrap}
 .gs-sub-list { display: flex; flex-direction: column; padding: 0 0 10px 28px; border-bottom: 1px solid var(--line-2); }
 .gs-sub-row { display: flex; align-items: center; gap: 8px; }
 .gs-sub { flex: 1; display: flex; align-items: center; gap: 8px; padding: 0; background: none; border: none; text-align: left; color: var(--ink-soft); font-size: 1.1042rem; cursor: pointer; min-width: 0; }
@@ -1624,10 +1826,14 @@ select.sk-input {
 .lib-deity-grid-4 .gtile:not(.gtile-full) .gtile-name { font-size: 0.8125rem; }
 .lib-deity-grid-4 .gtile-full .gtile-name { padding: 14px 4px 6px; font-size: 0.8125rem; }
 .lib-deity-grid-4 .gtile-soon-tag { display: none; }
+/* a long vāra-name like Subrahmaṇya is wider than a quarter-column: at 4-up
+   every name wraps inside its own tile rather than running over its neighbour */
+.lib-deity-grid-4 .gtile-name { overflow-wrap: break-word; line-height: 1.15; max-width: 100%; font-size: 0.8125rem !important; }
+.lib-deity-grid-4 .gtile, .lib-deity-grid-4 .gtile-niche { overflow: hidden; }
 /* :not, because the full-picture tile is deliberately padding-free — a
    descendant selector here outranks .gtile-full and would inset the artwork */
 .lib-deity-grid .gtile:not(.gtile-full) { padding: 9px 5px 11px; gap: 5px; }
-.lib-deity-grid .gtile:not(.gtile-full) .gtile-name { font-size: 1rem; line-height: 1.25; }
+.lib-deity-grid .gtile:not(.gtile-full) .gtile-name { font-size: 1.1875rem; line-height: 1.25; }
 /* the plate's fade was sized for a two-up tile; at three-up it covered half of
    the picture it was meant to sit under */
 .lib-deity-grid .gtile-full .gtile-name { padding: 20px 8px 9px; font-size: 0.9688rem; }
@@ -2512,6 +2718,23 @@ button.lg-bar{background:none}
 html { accent-color: var(--accent); color-scheme: light; }
 html[data-theme="night"] { color-scheme: dark; }
 input:is([type="date"],[type="time"],[type="month"],[type="datetime-local"]) { accent-color: var(--accent); }
+/* ---------- the house date field (HouseDate) ---------- */
+.hd{position:relative;flex:1 1 0;min-width:0}
+.hd-face{display:flex;flex-direction:column;align-items:flex-start;gap:2px;width:100%;min-height:46px;padding:8px 14px;border-radius:14px;border:1px solid var(--line);background:var(--surface-2);color:var(--ink);font-family:var(--font-ui);font-size:0.9375rem;text-align:left;cursor:pointer}
+.hd-face.is-empty{color:var(--ink-faint)}
+.hd-face-tithi{font-size:0.75rem;color:var(--ink-soft)}
+.hd-scrim{position:fixed;inset:0;z-index:var(--z-pop,45)}
+.hd.open{z-index:calc(var(--z-pop,45) + 1)}
+.hd-pop{position:absolute;top:calc(100% + 8px);left:0;z-index:calc(var(--z-pop,45) + 2);width:min(320px,86vw);padding:10px 4px 6px;border-radius:18px;border:1px solid var(--line);background:var(--surface-2);box-shadow:var(--shadow)}
+.hd-nav{padding:0 10px 10px}
+.hd-title{font-size:1.0625rem}
+.hd-yearpick{position:relative}
+.hd-years{position:absolute;top:calc(100% + 6px);left:50%;transform:translateX(-50%);max-height:220px;overflow:auto;width:120px;padding:4px;border-radius:14px;border:1px solid var(--line);background:var(--surface-2);box-shadow:var(--shadow);z-index:2}
+.hd-year{display:block;width:100%;padding:7px 10px;border-radius:9px;background:none;border:0;color:var(--ink-soft);font:inherit;font-size:0.875rem;font-variant-numeric:tabular-nums;cursor:pointer}
+.hd-year.on{background:var(--accent-soft);color:var(--accent-ink)}
+.hd .cal-cell.is-out{opacity:.3;pointer-events:none}
+.hd-foot{display:flex;justify-content:space-between;gap:8px;padding:10px 14px 4px}
+.hd-foot-btn{padding:6px 12px;border-radius:999px;border:1px solid var(--line);background:none;color:var(--ink-soft);font-family:var(--font-ui);font-size:0.8125rem;cursor:pointer}
 .rm-time-custom { display: inline-flex; align-items: center; gap: 7px; color: var(--ink-faint); }
 .rm-time-custom input { border: 0; background: none; font: inherit; font-size: 0.9063rem; color: var(--ink-soft); outline: none; width: 88px; }
 .rm-quiet-field input[type="time"] { }
@@ -2635,6 +2858,15 @@ input:is([type="date"],[type="time"],[type="month"],[type="datetime-local"]) { a
    While that menu is open the row lets it through. */
 .reader-layers:has(.langpick.open){overflow:visible}
 .cal-today-btn{display:inline-flex;align-items:center;gap:5px}
+/* the day's two actions ride in the header — "add a tithi on this day" used to
+   sit at the very foot of a long pañcāṅga where nobody found it */
+.cal-detail-acts{margin-left:auto;align-self:flex-start;flex:none;display:flex;flex-direction:column;align-items:flex-end;gap:6px}
+.cal-detail-acts .cal-today-btn{margin-left:0}
+/* the column says flex-end; the pill's own align-self said flex-start and won,
+   which only showed once the add button shrank to a 34px sign and stopped
+   accidentally matching the pill's width */
+.cal-detail-acts>button{align-self:flex-end}
+.tt-addhere-sm{background:none;border:1px dashed color-mix(in oklab,var(--accent) 45%,var(--line));color:var(--accent-ink);white-space:nowrap}
 
 /* ---------- The thread, worn as a strip (Nitya, above both lenses) ---------- */
 .thread-strip{flex:none;padding:2px 18px 10px}
@@ -2697,10 +2929,19 @@ input:is([type="date"],[type="time"],[type="month"],[type="datetime-local"]) { a
 .mala-date svg{color:var(--ink-faint)}
 .daypick{position:relative;display:inline-flex}
 .daypick-pop{position:absolute;bottom:calc(100% + 8px);left:0;z-index:61;width:272px;padding:10px 10px 6px;background:var(--surface);border:1.5px solid var(--line);border-radius:var(--r-md);box-shadow:var(--shadow);animation:pickIn var(--fast) var(--ease-out)}
+.daypick-pop-down{position:static;bottom:auto;top:auto;width:100%;margin-top:8px;box-shadow:none;padding:10px}
+/* compact: the sheet's picker is a field, not a wall calendar */
+.daypick-pop-down .daypick-grid{gap:1px}
+.daypick-pop-down .daypick-day,.daypick-pop-down .daypick-dow{height:30px;font-size:.8125rem}
+.daypick-pop-down .daypick-head{margin-bottom:4px}
+.daypick-pop-down .daypick-month select{font-size:.875rem;padding:3px 4px;min-height:32px}
+.daypick-pop-down .daypick-foot{margin-top:4px}
+.daypick:has(.daypick-pop-down){display:flex;flex-direction:column;align-items:stretch}
 .daypick-head{display:flex;align-items:center;justify-content:space-between;gap:6px;margin-bottom:6px}
 .daypick-head .icon-btn{width:34px;height:34px}
 .daypick-head .icon-btn:disabled{opacity:.3;pointer-events:none}
-.daypick-month{font-family:var(--font-display);font-size:1rem;color:var(--ink);text-align:center;flex:1}
+.daypick-month{font-family:var(--font-display);font-size:1rem;color:var(--ink);text-align:center;flex:1;display:flex;justify-content:center;gap:6px}
+.daypick-month select{font:inherit;font-family:var(--font-ui);font-size:.9375rem;color:var(--ink);background:var(--surface-2);border:1px solid var(--line-2);border-radius:var(--r-sm);padding:5px 6px;max-width:9.5em}
 .daypick-grid{display:grid;grid-template-columns:repeat(7,1fr);gap:2px 0}
 .daypick-dow{text-align:center;font-size:.6875rem;letter-spacing:.06em;text-transform:uppercase;color:var(--ink-faint);padding:4px 0 6px}
 .daypick-day{height:34px;border-radius:50%;font-size:.9063rem;color:var(--ink);font-variant-numeric:tabular-nums;transition:background var(--fast),color var(--fast)}
@@ -2898,7 +3139,45 @@ input:is([type="date"],[type="time"],[type="month"],[type="datetime-local"]) { a
 .prep-name{font-size: 1.1875rem;line-height:1.2;color:var(--ink)}
 .prep-sub{font-size: 0.8125rem;color:var(--ink-soft);text-wrap:pretty}
 .prep-count{flex:none;font-size: 0.8438rem;color:var(--accent-ink);font-variant-numeric:tabular-nums;background:var(--accent-soft);border-radius:999px;padding:5px 11px}
+/* the vidhānam and the pārāyaṇa: what the page is opened for, at the top of it.
+   Until the texts are keyed they carry a soon tag and do not answer a press. */
+.vr-open{display:flex;flex-direction:column;gap:10px;margin-top:2px}
+/* the vidhi pill beside a rite's title */
+.deity-hero-row{align-items:center}
+.vidhi-jump{flex:none;margin-left:auto;align-self:flex-start;display:inline-flex;align-items:center;gap:4px;min-height:42px;padding:0 10px 0 16px;border-radius:999px;border:1px solid color-mix(in oklab,var(--accent-ink) 45%,transparent);background:var(--surface);box-shadow:var(--shadow-sm);color:var(--accent-ink);font:inherit;font-size:1rem;cursor:pointer;white-space:nowrap}
+.vidhi-jump:hover{background:var(--accent-soft)}
+.vidhi-jump svg{flex:none;transform:rotate(-90deg)}
+.vidhi-jump.is-soon{padding-right:14px;color:var(--ink-soft);border-color:var(--line);box-shadow:none;background:var(--surface-2);cursor:default}
+.vidhi-jump-soon{font-size:.6875rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--gold-deep);margin-left:4px}
+.vr-open-row{display:flex;align-items:center;gap:13px;width:100%;text-align:left;padding:13px 15px;border-radius:var(--r-md);background:var(--surface);border:1px solid var(--line);box-shadow:var(--shadow-sm)}
+.vr-open-row.is-soon{background:var(--surface-2);box-shadow:none;cursor:default}
+.vr-open-mark{flex:none;width:42px;height:42px;border-radius:50%;display:grid;place-items:center;background:var(--accent-soft);color:var(--accent-ink)}
+.vr-open-row.is-soon .vr-open-mark{opacity:.7}
+.vr-open-row .vr-row-body{flex:1;min-width:0;display:flex;flex-direction:column;gap:2px}
+.vr-open-row .vr-row-name{font-size:1.125rem;line-height:1.2;color:var(--ink)}
+.vr-open-row .vr-row-rule{font-size:0.8125rem;color:var(--ink-soft);text-wrap:pretty}
+.vr-open-soon{flex:none;font-size:0.75rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--gold-deep);background:var(--surface);border:1px solid var(--line);border-radius:999px;padding:5px 10px}
+[data-theme="night"] .vr-open-soon{color:var(--gold)}
 .prep-more{margin:6px 4px 0;font-size: 0.7813rem;color:var(--ink-faint)}
+/* a second window open at the same time is a card of its own, not a footnote:
+   "and 1 more" named nothing and could not be opened, which is how a day gets
+   overlooked. The following ones run under the first, quieter and tighter — the
+   eyebrow on the leader speaks for the whole stack. */
+.prep-card-next{margin-top:-8px}
+.prep-card-next .prep-card-main{padding:10px 15px;background:var(--surface-2);box-shadow:none}
+.prep-card-next .prep-mark{width:34px;height:34px}
+.prep-card-next .prep-name{font-size: 1.0625rem}
+.prep-card.has-x{position:relative}
+.prep-card.has-x .prep-card-main{padding-right:46px}
+.prep-card-x{position:absolute;top:4px;right:4px;z-index:2;width:36px;height:36px;display:grid;place-items:center;border:0;background:none;border-radius:50%;color:var(--ink-faint);cursor:pointer}
+.prep-card-x:active{background:var(--surface-2)}
+.prep-hide-opts{display:flex;flex-direction:column;gap:10px;padding:2px 0 6px}
+.prep-hide-opt{display:flex;align-items:flex-start;gap:13px;width:100%;text-align:left;padding:14px 15px;border-radius:var(--r-md);background:var(--surface);border:1px solid var(--line);cursor:pointer}
+.prep-hide-opt:active{transform:scale(.99)}
+.prep-hide-ico{flex:none;width:38px;height:38px;border-radius:50%;display:grid;place-items:center;background:var(--accent-soft);color:var(--accent-ink)}
+.prep-hide-txt{flex:1;min-width:0;display:flex;flex-direction:column;gap:3px}
+.prep-hide-lead{font-size: 1rem;color:var(--ink)}
+.prep-hide-sub{font-size: 0.8125rem;line-height:1.5;color:var(--ink-soft);text-wrap:pretty}
 .prep-bar{height:5px;border-radius:99px;background:var(--surface-2);border:1px solid var(--line-2);overflow:hidden;margin:6px 2px 0}
 .prep-bar span{display:block;height:100%;border-radius:99px;background:var(--accent);transition:width .35s ease}
 .prep-sheet-count{margin:7px 2px 0;font-size: 0.7813rem;color:var(--ink-soft);font-variant-numeric:tabular-nums}
@@ -2997,9 +3276,25 @@ input:is([type="date"],[type="time"],[type="month"],[type="datetime-local"]) { a
 .vr-vidhi-body{flex:1;min-width:0;display:flex;flex-direction:column;gap:3px}
 .vr-vidhi-step{font-size: 1.0625rem;color:var(--accent-ink);line-height:1.25}
 .vr-vidhi-detail{font-size: 0.9688rem;line-height:1.55;color:var(--ink);text-wrap:pretty}
+.vr-vidhi-verse{margin-top:6px;padding:10px 12px;border-left:2px solid var(--accent-soft);background:var(--surface)}
+.vr-vidhi-verse-text{font-size: 0.9688rem;line-height:1.6;color:var(--accent-ink);text-wrap:pretty;margin:0}
+.vr-vidhi-verse-meaning{font-size: 0.875rem;line-height:1.5;color:var(--ink-soft);text-wrap:pretty;margin:6px 0 0;font-family:var(--font-ui)}
 
-/* naivedya */
-.vr-naiv{display:flex;flex-direction:column}
+/* saṅkalpa variants + tarpaṇa recipients */
+.vr-sank{display:flex;flex-direction:column}
+.vr-sank-row{display:flex;flex-direction:column;gap:3px;padding:12px 0;border-top:1px solid var(--line-2)}
+.vr-sank-row:first-child{border-top:none;padding-top:0}
+.vr-sank-when{font-size:1.0625rem;color:var(--accent-ink);line-height:1.25}
+.vr-sank-text{font-size:0.9375rem;line-height:1.6;color:var(--ink);text-wrap:pretty}
+.vr-recip{display:flex;flex-direction:column}
+.vr-recip-row{display:flex;flex-direction:column;gap:2px;padding:10px 0;border-top:1px solid var(--line-2)}
+.vr-recip-row:first-child{border-top:none;padding-top:0}
+.vr-recip-head{display:flex;flex-wrap:wrap;align-items:baseline;gap:8px}
+.vr-recip-name{font-size:1rem;font-weight:600;color:var(--ink)}
+.vr-recip-kin{font-size:0.8125rem;color:var(--ink-soft)}
+.vr-recip-form{font-size:0.875rem;line-height:1.55;color:var(--ink-soft);text-wrap:pretty}
+
+/* naivedya */.vr-naiv{display:flex;flex-direction:column}
 .vr-naiv-row{display:flex;flex-direction:column;gap:2px;padding:11px 0;border-top:1px solid var(--line-2)}
 .vr-naiv-row:first-child{border-top:none;padding-top:0}
 .vr-naiv-item{font-size: 1rem;font-weight:600;color:var(--ink)}
@@ -3349,6 +3644,7 @@ button.set-row:active{transform:scale(.99)}
 .sky-mid-adhama{color:color-mix(in oklab,var(--caution) 62%,var(--ink))}
 /* prāyaścitta is real śāstra and useful when you are late, so it is stated —
    in gold, as information, not in the caution red of a warning */
+.sky-plate-note.sky-plate-rite{padding-right:34px}
 .sky-plate-note{margin-top:9px;font-size: 0.9063rem;line-height:1.5;color:var(--gold-deep);text-wrap:pretty}
 
 /* ---------- the saṅkalpa, closing the pañcāṅga card ----------
@@ -3399,7 +3695,7 @@ button.set-row:active{transform:scale(.99)}
 /* cap labels: a shared size floor for the roman script too — the per-class
    sizes above (9.5–12px) had drifted small; the indic override keeps its own
    larger size by higher specificity. Placed last to outrank scattered bases. */
-:is(.sky-plate-cap, .limb-label, .pdrow-now, .pd-cap, .sk-label, .rhb-row-k, .langpick-cap, .resume-cap, .foryou-today-cap, .week-today, .occ-katha-cap, .practice-note-cap, .preface-kicker, .st-kicker, .st-div, .thread-title, .plan-step-kind, .plan-badge, .vow-occ, .vow-label, .rm-quiet-field, .rm-notif-app, .loc-cap, .tb-miss-cap, .vr-tl-t, .set-soon, .coll-soon, .fsel-soon, .gs-sec, .fl-known-cap, .sy-grade) { font-size: 0.7813rem; }
+:is(.sky-plate-cap, .limb-label, .pdrow-now, .pd-cap, .sk-label, .rhb-row-k, .langpick-cap, .resume-cap, .foryou-today-cap, .week-today, .occ-katha-cap, .practice-note-cap, .preface-kicker, .st-kicker, .st-div, .thread-title, .plan-step-kind, .plan-badge, .vow-occ, .vow-label, .rm-quiet-field, .rm-notif-app, .loc-cap, .tb-miss-cap, .vr-tl-t, .set-soon, .coll-soon, .fsel-soon, .fl-known-cap, .sy-grade) { font-size: 0.7813rem; }
 /* `.japa-stat span` was inside that :is() list, and :is() takes the
    specificity of its most specific argument — one descendant compound made
    the whole list (0,1,1), so every single-class override of any of these
@@ -3451,7 +3747,7 @@ button.set-row:active{transform:scale(.99)}
 .flow-n-badge, .verse-n-badge { display: inline-grid; place-items: center; min-width: 20px; height: 20px; padding: 0 6px; margin-left: 8px; border-radius: 999px; background: var(--surface); border: 1.5px solid var(--line); color: var(--ink-soft); font-family: var(--font-ui); font-weight: 700; font-size: 0.885rem; font-variant-numeric: tabular-nums; white-space: nowrap; vertical-align: middle; }
 .verse-n-badge-lead { margin-left: 0; margin-right: 8px; }
 .flow-text { min-width: 0; display: flex; flex-direction: column; gap: 6px; }
-.flow-line .line-deva, .flow-line .line-telugu, .flow-line .line-iast-lead { text-align: left; overflow-wrap: break-word; text-wrap: pretty; }
+.flow-line .line-deva, .flow-line .line-telugu, .flow-line .line-iast-lead { text-align: left; overflow-wrap: anywhere; word-break: break-word; text-wrap: pretty; }
 .flow-line .line-deva { font-size: calc(38px * var(--rd-scale, 1) * var(--rd-fit, 1)); line-height: 1.58; }
 .flow-line .line-telugu { font-size: calc(27px * var(--rd-scale, 1) * var(--rd-fit, 1)); line-height: 1.7; }
 .flow-line .line-iast-lead { font-size: calc(22px * var(--rd-scale, 1) * var(--rd-fit, 1)); line-height: 1.5; }
@@ -3510,11 +3806,15 @@ button.set-row:active{transform:scale(.99)}
 .rd-toppanel .uilangbtn-g, .rd-toppanel .uilangbtn{font-size:1.1667rem}
 .rd-toppanel .rd-size button{min-width:32px;height:34px}
 .rd-toppanel.is-pinned{border-bottom:1px solid var(--line);margin:0 10px 0;padding-top:8px;flex:none;justify-content:flex-start;padding-right:56px}
-.app > .rd-toppanel.is-pinned .rd-pin-btn{position:absolute;top:6px;right:8px}
+/* the pin rides over the home masthead, so it centres on the gear's line
+   rather than on the frame's top edge: gear box centre is 34px down */
+.app > .rd-toppanel.is-pinned .rd-pin-btn{position:absolute;top:12px;right:8px}
 .rd-toppanel.is-drop .rd-pin-btn{position:absolute;top:10px;right:8px}
 .view.reader > .rd-toppanel.is-pinned{position:relative;margin:0}
 .view.reader > .rd-toppanel.is-pinned .rd-pin-btn{position:absolute;top:8px;right:12px}
-.app-gearrow{position:absolute;top:6px;right:8px;z-index:20;display:flex;justify-content:flex-end}
+/* the floating tools button rides over the masthead, so it centres on the
+   settings gear's line (its box centre is 39px down) rather than the frame edge */
+.app-gearrow{position:absolute;top:19px;right:8px;z-index:20;display:flex;justify-content:flex-end}
 .app-gearrow .icon-btn{width:40px;min-width:40px;height:40px;border-radius:999px;color:var(--ink-soft);background:color-mix(in oklab, var(--bg-warm) 55%, transparent)}
 .rd-toppanel-scrim{position:absolute;inset:0;background:rgba(20,12,6,.22);z-index:90;animation:rdScrimIn .18s var(--ease)}
 .rd-toppanel.is-drop{position:absolute;left:0;right:0;top:0;background:var(--bg-warm);border-bottom:1px solid var(--line);box-shadow:0 14px 30px rgba(0,0,0,.16);padding:10px 10px calc(10px + 2px);animation:rdTopIn .2s var(--ease)}
@@ -3580,7 +3880,8 @@ button.set-row:active{transform:scale(.99)}
 .verse-body { display: flex; flex-direction: column; gap: 10px; }
 
 .verse .line { text-align: left; }
-.verse .line-deva, .verse .line-telugu, .verse .line-iast-lead, .verse .line-iast { overflow-wrap: break-word; text-wrap: pretty; }
+.verse .line-deva, .verse .line-telugu, .verse .line-iast-lead, .verse .line-iast { overflow-wrap: anywhere; word-break: break-word; text-wrap: pretty; min-width: 0; max-width: 100%; }
+.verse, .verse .line, .flow-line, .flow-line .flow-text { min-width: 0; max-width: 100%; }
 .verse .verse-speaker { text-align: left; }
 .verse .verse-meaning { text-align: left; margin-top: 4px; }
 .verse .colophon, .verse .reader-end { text-align: center; }
@@ -3771,7 +4072,8 @@ button.set-row:active{transform:scale(.99)}
 .reader-layers.tight:has(.rd-pace) { overflow-x: auto; overflow-y: hidden; }
 /* the names glossary at the end of the parts row, against the right edge */
 .rd-parts { align-items: center; }
-.rd-parts .rd-parts-end { margin-left: auto; width: 40px; height: 40px; min-width: 40px; }
+.rd-parts .icon-btn.rd-parts-end { position: absolute !important; right: 12px; top: 50%; transform: translateY(-50%); margin: 0; width: 40px; height: 40px; min-width: 40px; }
+.rd-parts:has(.rd-parts-end) { padding-right: 60px; padding-left: 60px; }
 
 /* voice search */
 .voice-btn { flex: none; width: 34px; height: 34px; min-height: 0; border-radius: 50%; display: grid; place-items: center; color: var(--ink-soft); background: none; border: 0; cursor: pointer; transition: background var(--fast), color var(--fast), transform var(--fast); }
@@ -3883,12 +4185,124 @@ button.set-row:active{transform:scale(.99)}
 .app:not(:has(> .app-gearrow)) .topbar > .icon-btn:last-child { margin-right: -13px; }
 .reader-topbar > .icon-btn:first-child { margin-left: -9px; }
 .reader-topbar > .icon-btn:last-child { margin-right: -12px; }
-.app-gearrow { top: calc(6px + env(safe-area-inset-top)); }
+.app-gearrow { top: calc(19px + env(safe-area-inset-top)); }
 .brandbar { padding: calc(14px + env(safe-area-inset-top)) var(--gut) 8px; }
 .brandbar-cog { margin-left: -15px; }
 .rd-toppanel { padding-inline: 6px; }
 .rd-toppanel.is-pinned { margin: 0; padding: calc(8px + env(safe-area-inset-top)) 56px 6px 6px; }
-.app > .rd-toppanel.is-pinned .rd-pin-btn { right: 6px; top: calc(6px + env(safe-area-inset-top)); }
-.rd-toppanel.is-drop { padding-inline: 6px; }
-.rd-toppanel.is-drop .rd-pin-btn { right: 6px; }
+.app > .rd-toppanel.is-pinned .rd-pin-btn { right: 6px; top: calc(12px + env(safe-area-inset-top)); }
+/* the dropping panel is pinned to top:0 of the frame, so it too must carry the
+   notch inset — without it the first row of tools sits under the status bar,
+   where it reads as floating too high and the taps never reach it */
+.rd-toppanel.is-drop { padding: calc(10px + env(safe-area-inset-top)) 6px 12px; }
+.rd-toppanel.is-drop .rd-pin-btn { right: 6px; top: calc(10px + env(safe-area-inset-top)); }
 .reciter { padding-inline: var(--gut); }
+
+/* ---- the pitṛ register ---- */
+.verse-fill{display:flex;width:fit-content;align-items:center;gap:6px;margin:14px auto 0;padding:6px 13px;border:1px solid var(--line);border-radius:999px;background:var(--surface);font:inherit;font-size:.75rem;letter-spacing:.02em;color:var(--ink-faint);cursor:pointer}
+.verse-fill:hover{border-color:color-mix(in oklab,var(--accent-ink) 40%,var(--line));color:var(--accent-ink)}
+.verse-fill.is-blank{border-style:dashed}
+.rg-sheet .pd-body{padding-bottom:8px}
+.rg-lede{margin:2px 2px 10px;font-size:1rem;line-height:1.65;color:var(--ink-soft);text-wrap:pretty}
+.rg-lede-sm{font-size:.875rem;color:var(--ink-faint)}
+.rg-note{margin:9px 2px 0;font-size:.8125rem;line-height:1.6;color:var(--ink-faint);text-wrap:pretty}
+.rg-varna{margin:16px 0 6px;padding:14px;border-radius:var(--r-md);background:var(--surface-2);border:1px solid var(--line)}
+.rg-varna-row{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px}
+.rg-chip{padding:10px 15px;min-height:44px;border-radius:999px;border:1px solid var(--line);background:var(--surface);font:inherit;font-size:.875rem;color:var(--ink-soft);cursor:pointer}
+.rg-chip.on{background:var(--accent-soft);border-color:transparent;color:var(--accent-ink)}
+.rg-seed{margin:0 0 16px}
+/* the seed labels ("మామగారి గోత్రం") were falling back to the 10px chrome
+   size; they ask a question and read at the sheet's own size */
+.rg-card .rg-seed .sk-label, .rg-seed .sk-label{font-size:.9375rem;color:var(--ink-soft);letter-spacing:0;text-transform:none;font-weight:600}
+.rg-name{display:flex;align-items:center;justify-content:space-between;gap:10px;width:100%;padding:8px 0 8px 12px;background:none;border:0;border-left:2px solid var(--accent-soft);font:inherit;text-align:left;cursor:pointer;color:inherit;min-height:44px}
+.rg-nrow{display:flex;align-items:center;gap:4px}
+.rg-nrow .rg-name{flex:1;min-width:0}
+.rg-del{flex:none;display:grid;place-items:center;width:38px;height:38px;background:none;border:0;border-radius:999px;color:var(--ink-faint);cursor:pointer}
+.rg-del:hover{background:var(--accent-soft);color:var(--accent-ink)}
+.rg-name-txt{font-size:1.0625rem;line-height:1.5;min-width:0;color:var(--ink)}
+.rg-name>svg{flex:none;color:var(--ink-faint);transform:rotate(-90deg)}
+.rg-add{flex:none;margin:0;padding:6px 0;background:none;border:0;font:inherit;font-size:1rem;color:var(--accent-ink);cursor:pointer;min-height:44px}
+.rg-slot.has .rg-add{align-self:flex-start;margin-left:14px;font-size:.9375rem;min-height:40px}
+.rg-edit-rel{margin:2px 2px 18px;font-size:1.375rem;line-height:1.4}
+.rg-edit .sk-field{gap:8px;margin-bottom:18px}
+.rg-edit .sk-label{font-size:.9375rem;color:var(--ink-soft)}
+.rg-edit .sk-input{font-size:1.0625rem;min-height:48px}
+.rg-edit .rg-note{margin-top:8px;font-size:.9375rem;line-height:1.55}
+.rg-edit .rg-preview{margin:4px 0 18px}
+.rg-edit .rg-edit-acts{margin-top:8px}
+.rg-when{display:flex;gap:10px}
+.rg-when .sk-input{flex:1 1 0;min-width:0}
+.rg-preview{margin:18px 0 2px;padding:14px;border-radius:var(--r-md);background:var(--surface-2);border:1px solid var(--line)}
+.rg-preview-line{margin-top:8px;font-size:1.0625rem;line-height:1.75}
+.rg-link{margin-top:11px;background:none;border:0;padding:0;font:inherit;font-size:.8125rem;color:var(--accent-ink);cursor:pointer;border-bottom:1px solid color-mix(in oklab,var(--accent-ink) 30%,transparent)}
+.rg-edit-acts{display:flex;flex-wrap:wrap;gap:10px;margin:22px 0 8px}
+.rg-btn{padding:12px 20px;border-radius:999px;border:1px solid var(--line);background:var(--surface);font:inherit;font-size:.9375rem;cursor:pointer;min-height:46px}
+.rg-btn.is-keep{background:var(--accent-soft);border-color:transparent;color:var(--accent-ink)}
+.rg-btn.is-drop{color:var(--ink-faint)}
+.rg-note-lead{margin-top:9px;font-size:.8125rem;color:var(--ink-soft)}
+/* ---- the register, as a page ---- */
+.rg-view{padding-bottom:0}
+.rg-head{padding:18px 18px 6px}
+.rg-h1{margin:8px 0 0;font-size:1.375rem;font-weight:400;line-height:1.45;color:var(--ink);text-wrap:pretty}
+.rg-count{margin-top:6px;font-size:.9375rem;color:var(--ink-soft)}
+.rg-head .rg-lede{margin:10px 0 0;max-width:52ch}
+.rg-card{margin-top:12px}
+.rg-lcard{padding-top:14px}
+.rg-lhead{display:flex;align-items:center;gap:10px;width:100%;padding:4px 0 8px;margin:0;background:none;border:0;border-bottom:1px solid var(--ink-soft);font:inherit;text-align:left;color:inherit;cursor:pointer;min-height:48px}
+.rg-lhead>svg{flex:none;color:var(--ink-faint);transition:transform .18s;margin-left:auto}\n.rg-lcount+svg{margin-left:0}
+.rg-lcard.is-folded .rg-lhead{border-bottom:0;padding-bottom:4px}
+.rg-lcard.is-folded .rg-lhead>svg{transform:rotate(-90deg)}
+.rg-lcard.is-folded{padding-bottom:10px}
+.rg-lname{margin:0;font-size:1.25rem;font-weight:400;line-height:1.4;color:var(--ink)}
+.rg-lcount{margin-left:auto;padding:2px 10px;border-radius:999px;background:var(--accent-soft);color:var(--accent-ink);font-size:.875rem;font-variant-numeric:tabular-nums}
+.rg-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:0 28px}
+.rg-slot{display:flex;align-items:center;justify-content:space-between;gap:14px;min-height:52px;padding:4px 0;border-bottom:1px solid var(--line)}
+.rg-slot.has{flex-direction:column;align-items:stretch;gap:0;padding:8px 0 4px}
+.rg-grid>.rg-slot:last-child{border-bottom:0}
+.rg-slot-rel{font-size:1.0625rem;line-height:1.45;color:var(--ink)}
+.rg-slot.has .rg-slot-rel{font-size:.9375rem;color:var(--ink-soft);margin-bottom:2px}
+.rg-foot{margin:22px 18px 0;font-size:.875rem;line-height:1.6;color:var(--ink-faint);max-width:52ch;text-wrap:pretty}
+.rg-allnames{display:flex;align-items:center;gap:6px;width:100%;margin-top:20px;padding:14px 2px;background:none;border:0;border-top:1px solid var(--line);font:inherit;font-size:.9375rem;color:var(--accent-ink);cursor:pointer;min-height:48px}
+.rg-allnames>svg{transform:rotate(-90deg);margin-left:auto}
+@media (min-width:760px){.rg-head{padding:26px 26px 8px}.rg-h1{font-size:1.625rem}.rg-foot{margin-left:26px}}
+/* ---- the lenses, under the month ---- */
+.cal-lenses{display:flex;flex:none;align-items:flex-end;min-height:46px;gap:18px;margin:18px 16px 0;padding:0 2px;border-bottom:1px solid var(--line);overflow-x:auto;overflow-y:hidden;scrollbar-width:none;-ms-overflow-style:none}
+.cal-lenses::-webkit-scrollbar{display:none}
+.cal-lens{position:relative;flex:0 0 auto;white-space:nowrap;padding:10px 0 13px;background:none;border:0;font-family:var(--font-ui);font-size:1rem;line-height:1.5;color:var(--ink-faint);cursor:pointer;min-height:46px}
+.cal-lens.on{color:var(--ink)}
+.cal-lens.on::after{content:"";position:absolute;left:0;right:0;bottom:-1px;height:2px;background:var(--gold);border-radius:2px}
+.cal-dot-mine{background:var(--accent-ink)}
+.cal-dot-mine.is-faint{opacity:.45}
+.cal-dot-pitru{background:var(--ink-soft)}
+.cal-pit-say{margin-top:4px;font-size:1.125rem;line-height:1.5;color:var(--ink)}
+.cal-pit-nextrow{display:flex;align-items:center;gap:12px;width:100%;margin-top:14px;padding:12px 0 2px;border:0;border-top:1px solid var(--line);background:none;font:inherit;text-align:left;color:inherit;cursor:pointer;min-height:56px}
+.cal-pit-nextbody{display:flex;flex-direction:column;gap:2px;min-width:0;flex:1}
+.cal-pit-nextname{font-size:1.125rem;line-height:1.4;color:var(--accent-ink)}
+.cal-pit-nextwhen{font-size:.9375rem;line-height:1.5;color:var(--ink-soft)}
+.cal-pit-nextrow>svg{flex:none;color:var(--gold-deep)}
+.cal-pit-doors{display:flex;flex-direction:column;flex:none;margin:14px 16px 0;border-radius:var(--r-md);background:var(--surface);border:1px solid var(--line);box-shadow:var(--shadow-sm);overflow:hidden}
+.cal-pit-doors .pit-door{width:100%;margin:0;border:0;border-radius:0;box-shadow:none;padding:14px 16px;min-height:56px}
+.cal-pit-doors .pit-door+.pit-door{border-top:1px solid var(--line)}
+.cal-pit-doors .pit-door-name{font-size:1.0625rem;line-height:1.45}
+.cal-pit-doors .pit-door-sub{font-size:.9375rem;color:var(--ink-soft);line-height:1.5}
+.cal-pit-doors .pit-door-count{color:var(--ink-faint);font-size:.875rem}
+.cal-pit-next{margin-top:7px;font-size:.9375rem;line-height:1.6;color:var(--ink-soft);text-wrap:pretty}
+/* the bell beside a śrāddha group and an upcoming rite — on the left, where
+   every bell on this page sits; the head is a button, so the bell rides over it */
+.pit-group{position:relative}
+.pit-group-head{padding-left:48px;padding-right:0}
+.pit-group-bell{position:absolute;left:-2px;top:50%;transform:translateY(-50%);display:flex}
+.pit-group-bell .keep-bell{width:44px;height:44px;min-width:44px}
+.pit-group.on .pit-group-bell{top:4px;transform:none}
+.pit-group-body{padding-left:48px}
+.pit-row-bell{flex:none;display:flex;margin-left:-6px}
+.pit-row-bell .keep-bell{width:44px;height:44px;min-width:44px}
+
+.cal-tarp-lede{margin:14px 18px 0}
+
+.vr-patri{list-style:none;display:grid;grid-template-columns:repeat(auto-fill,minmax(190px,1fr));gap:2px 16px}
+.vr-patri li{display:flex;align-items:baseline;gap:9px;padding:7px 0;border-bottom:1px solid var(--line-2)}
+.vr-patri-n{flex:none;width:1.4em;text-align:right;font-size:0.75rem;color:var(--gold);font-variant-numeric:tabular-nums}
+.vr-patri-name{font-size:0.9375rem;line-height:1.5;color:var(--ink);text-wrap:pretty}
+.vr-patri-sub{margin:16px 0 6px;font-size:0.8125rem;letter-spacing:.06em;text-transform:uppercase;color:var(--ink-soft)}
+.vr-patri-sub:first-child{margin-top:4px}

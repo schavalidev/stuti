@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="day" data-ui-lang="telugu">
+<head>
+<meta charset="UTF-8" />
+<meta name="design_doc_mode" content="canvas" />
+<title>The pitṛ register — how it looks</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Mallanna&display=swap" />
+<link rel="stylesheet" href="stuti.css" />
+<link rel="stylesheet" href="stuti-components.css" />
+<link rel="stylesheet" href="stuti-palette.css" />
+<style>
+body{background:transparent;margin:0}
+.slot{position:absolute;width:390px}
+.fr{position:relative;width:390px;background:var(--bg);border:1px solid var(--line);border-radius:26px;overflow:hidden;box-shadow:0 18px 50px rgba(20,14,6,.10)}
+.fr-in{padding:22px 18px 26px}
+.fr-cap{display:block;margin:0 0 12px;font-family:var(--font-ui);font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:#8b7f6d}
+.fr-note{font-family:var(--font-ui);font-size:12.5px;line-height:1.6;color:#8b7f6d;margin:14px 0 0;text-wrap:pretty}
+
+.rd-stage{padding:26px 20px 30px;background:var(--bg)}
+.verse{margin:0}
+.line{padding:2px 0}
+.line-telugu{font-family:var(--font-telugu);font-size:1.0625rem;line-height:2.05;color:var(--ink)}
+.verse-count{font-family:var(--font-ui);font-size:.6875rem;letter-spacing:.1em;color:var(--ink-faint);margin-bottom:14px}
+.verse-meaning{margin-top:16px;font-size:.875rem;line-height:1.7;color:var(--ink-soft)}
+.doc-h1{position:absolute;left:0;top:-96px;margin:0;font-family:var(--font-display);font-size:30px;font-weight:400;color:var(--ink);white-space:nowrap}
+.sub{position:absolute;left:0;top:-56px;margin:0;font-family:var(--font-ui);font-size:14px;line-height:1.6;color:#8b7f6d;width:760px;text-wrap:pretty}
+</style>
+</head>
+<body>
+
+<div style="position:absolute;left:80px;top:120px;width:900px">
+  <h1 class="doc-h1">The pitṛ register</h1>
+  <p class="sub">The register is a page; writing one name is a sheet over it, or over the scroll. Four states, at the size they are read at, in Telugu.</p>
+</div>
+
+<!-- 1 · the register, as a page -->
+<div class="slot" style="left:80px;top:200px">
+  <div class="fr-cap">1 · The register — a page</div>
+  <div class="fr">
+    <div class="rg-view" style="padding:0 0 18px">
+      <div class="rg-head">
+        <div class="eyebrow" style="color:var(--accent-ink)">పితృ సూచి</div>
+        <h1 class="rg-h1 display">కర్మకు కావలసిన పేర్లు</h1>
+        <div class="rg-count">ముప్పై మూడులో 1 పేరు వ్రాశారు</div>
+        <p class="rg-lede">మీరు ఎవరెవరికి తర్పణం ఇస్తారో ఆ కుటుంబ సభ్యుల, బంధువుల పేర్లు గోత్రంతో సహా వ్రాయండి. ఇక్కడ వ్రాసిన పేరు తర్పణ పంక్తిలో చదవబడుతుంది; ఖాళీగా వదిలిన చోట పంక్తి అచ్చులో ఉన్నట్టే ఉంటుంది.</p>
+      </div>
+      <section class="tt-card rg-card">
+        <div class="eyebrow">పేరు చివర వచ్చే పదం</div>
+        <div class="rg-varna-row">
+          <button class="rg-chip on">శర్మణం</button>
+          <button class="rg-chip">శర్మాణం</button>
+          <button class="rg-chip">వర్మణం</button>
+          <button class="rg-chip">వర్మాణం</button>
+          <button class="rg-chip">గుప్తం</button>
+          <button class="rg-chip">దాసం</button>
+        </div>
+        <p class="rg-note">శర్మణం బ్రాహ్మణ రూపం; దాని స్థానంలో వచ్చే మూడింటిని పత్రపు సూచన చెబుతుంది. శర్మాణం, వర్మాణం అవే అంతాలు దీర్ఘంతో. రెండు పాఠాలూ ప్రచారంలో ఉన్నాయి.</p>
+      </section>
+      <section class="tt-card rg-card rg-lcard">
+        <div class="rg-lhead"><h2 class="rg-lname">తండ్రి వైపు</h2><span class="rg-lcount">1</span></div>
+        <div class="rg-grid">
+          <div class="rg-slot has"><div class="rg-slot-rel">తండ్రి</div><button class="rg-name"><span class="rg-name-txt">భారద్వాజ గోత్రం రామశాస్త్రిశర్మణం</span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"></path></svg></button><button class="rg-add">మరొక పేరు వ్రాయండి</button></div>
+          <div class="rg-slot"><div class="rg-slot-rel">తాత</div><button class="rg-add">పేరు వ్రాయండి</button></div>
+          <div class="rg-slot"><div class="rg-slot-rel">ముత్తాత</div><button class="rg-add">పేరు వ్రాయండి</button></div>
+          <div class="rg-slot"><div class="rg-slot-rel">తల్లి</div><button class="rg-add">పేరు వ్రాయండి</button></div>
+          <div class="rg-slot"><div class="rg-slot-rel">నాయనమ్మ</div><button class="rg-add">పేరు వ్రాయండి</button></div>
+          <div class="rg-slot"><div class="rg-slot-rel">ముత్తమ్మ</div><button class="rg-add">పేరు వ్రాయండి</button></div>
+          <div class="rg-slot"><div class="rg-slot-rel">సవతి తల్లి</div><button class="rg-add">పేరు వ్రాయండి</button></div>
+          <div class="rg-slot"><div class="rg-slot-rel">పెదనాన్న, బాబాయి</div><button class="rg-add">పేరు వ్రాయండి</button></div>
+          <div class="rg-slot"><div class="rg-slot-rel">మేనత్త</div><button class="rg-add">పేరు వ్రాయండి</button></div>
+        </div>
+      </section>
+      <section class="tt-card rg-card rg-lcard">
+        <div class="rg-lhead"><h2 class="rg-lname">తల్లి వైపు</h2></div>
+        <div class="sk-field rg-seed">
+          <label class="sk-label">తల్లి తండ్రి గోత్రం</label>
+          <input class="sk-input" value="" />
+          <p class="rg-note">ఒకసారే అడుగుతాము; ఆ వైపు మిగిలినవారికి అదే వర్తిస్తుంది.</p>
+        </div>
+        <div class="rg-grid">
+          <div class="rg-slot"><div class="rg-slot-rel">తల్లి తండ్రి</div><button class="rg-add">పేరు వ్రాయండి</button></div>
+          <div class="rg-slot"><div class="rg-slot-rel">తల్లి తాత</div><button class="rg-add">పేరు వ్రాయండి</button></div>
+          <div class="rg-slot"><div class="rg-slot-rel">అమ్మమ్మ</div><button class="rg-add">పేరు వ్రాయండి</button></div>
+          <div class="rg-slot"><div class="rg-slot-rel">మేనమామ</div><button class="rg-add">పేరు వ్రాయండి</button></div>
+        </div>
+      </section>
+      <p class="rg-foot">మరణించినవారి పేర్లే ఇక్కడ వ్రాయాలి. ఈ ఫోన్‌లో మాత్రమే ఉంటుంది. పేర్లు ఎక్కడికీ పంపబడవు.</p>
+    </div>
+  </div>
+  <p class="fr-note">Every line stands open: a page has the room the sheet did not, and this screen exists to be read down in the order the rite names them. Slots sit two to a row where the width allows. A written name shows the line as it will be read; an empty slot shows only the relation.</p>
+</div>
+
+<!-- 2 · writing a name -->
+<div class="slot" style="left:540px;top:200px">
+  <div class="fr-cap">2 · Writing a name — a sheet</div>
+  <div class="fr">
+  <div class="fr-in">
+    <div class="rg-edit">
+      <div class="rg-edit-rel">తండ్రి</div>
+      <div class="sk-field"><label class="sk-label">పేరు</label>
+        <input class="sk-input" value="రామశాస్త్రి" /></div>
+      <div class="sk-field"><label class="sk-label">రోమన్‌లో పేరు</label>
+        <input class="sk-input" value="Ramasastri" /></div>
+      <div class="sk-field"><label class="sk-label">గోత్రం</label>
+        <input class="sk-input" value="Bharadwaja" /></div>
+      <div class="sk-field"><label class="sk-label">మరణించిన రోజు</label>
+        <div class="rg-when"><input class="sk-input" value="14/02/2019" /><input class="sk-input" value="21:40" /></div>
+        <p class="rg-note">శ్రాద్ధం మరణ సమయంలో నడుస్తున్న తిథితో నిర్ణయింపబడుతుంది, ఆ రోజు సూర్యోదయంతో కాదు. గడియ ఆధారంగా తీసుకుని ప్రతి సంవత్సరపు ఆబ్దికం లెక్కించబడుతుంది.</p>
+      </div>
+      <div class="rg-preview">
+        <div class="eyebrow">పంక్తిలో ఇది చదవబడుతుంది</div>
+        <div class="rg-preview-line">భారద్వాజ గోత్రం రామశాస్త్రిశర్మణం</div>
+        <button class="rg-link">ఈ రూపాన్ని సరిదిద్దండి</button>
+      </div>
+      <div class="rg-edit-acts">
+        <button class="rg-btn is-keep">ఉంచండి</button>
+        <button class="rg-btn is-drop">ఈ పేరును తీసివేయండి</button>
+      </div>
+    </div>
+  </div>
+  </div>
+  <p class="fr-note">One name is a sheet, not a page — it opens from the verse where the blank stands, and the scroll stays behind it. The declined form is shown before anything is kept, and can be corrected. The gotra was typed "Bharadwaja" and still resolved to భారద్వాజ. The hour of death is what lets the ābdikam be found every year after.</p>
+</div>
+
+<!-- 3 · when a script is missing -->
+<div class="slot" style="left:1000px;top:200px">
+  <div class="fr-cap">3 · When the name is in Roman only</div>
+  <div class="fr">
+  <div class="fr-in">
+    <div class="rg-edit">
+      <div class="rg-edit-rel">అమ్మమ్మ</div>
+      <div class="sk-field"><label class="sk-label">పేరు</label>
+        <input class="sk-input" value="" /></div>
+      <div class="sk-field"><label class="sk-label">రోమన్‌లో పేరు</label>
+        <input class="sk-input" value="Sitamma" /></div>
+      <div class="sk-field"><label class="sk-label">గోత్రం</label>
+        <input class="sk-input" value="Kaundinya" /></div>
+      <div class="rg-preview">
+        <div class="eyebrow">పంక్తిలో ఇది చదవబడుతుంది</div>
+        <p class="rg-note rg-note-lead">ఈ పేరు ఈ లిపిలో లేదు. కింద వ్రాస్తే పంక్తి దానిని చదువుతుంది.</p>
+      </div>
+      <div class="sk-field"><label class="sk-label">మీరు పలికే పంక్తి</label>
+        <input class="sk-input" value="" />
+        <p class="rg-note">పేరు విభక్తిని యాప్ తయారుచేస్తుంది. మీ ఇంటి పేరులో అది తప్పైనచోట, మీరు పలికే రూపాన్నే వ్రాయండి.</p>
+      </div>
+      <div class="rg-edit-acts">
+        <button class="rg-btn is-keep">ఉంచండి</button>
+        <button class="rg-btn is-drop">ఈ పేరును తీసివేయండి</button>
+      </div>
+    </div>
+  </div>
+  </div>
+  <p class="fr-note">Roman cannot be turned into Telugu, so the app says which line will still show its blank and opens the field, rather than showing an empty panel or pretending the line was filled.</p>
+</div>
+
+<!-- 4 · in the scroll -->
+<div class="slot" style="left:1460px;top:200px">
+  <div class="fr-cap">4 · In the scroll</div>
+  <div class="fr">
+  <div class="rd-stage">
+    <div class="verse">
+      <div class="verse-count">7 / 50</div>
+      <div class="line-telugu">ఓం శ్రీ మమ ఉపాత్త-సమస్త-దురితక్షయద్వారా శ్రీపరమేశ్వర-ప్రీత్యర్థం, శుభే శోభనే ముహూర్తే, ఆద్య-బ్రహ్మణః ద్వితీయ-పరార్ధే, శ్వేత-వరాహ-కల్పే, వైవస్వత-మన్వన్తరే, కలియుగే, ప్రథమ-పాదే,<br />జమ్బూద్వీపే, భారతవర్షే, భరతఖణ్డే, మేరోః దక్షిణ-దిగ్భాగే, శ్రీశైలస్య ఈశాన్య-ప్రదేశే, కృష్ణా-గోదావర్యోః మధ్య-ప్రదేశే, అస్మిన్ వర్తమాన-వ్యావహారిక చాన్ద్రమానేన,<br />పరాభవ నామ సంవత్సరే, దక్షిణాయనే, వర్షా ఋతౌ, భాద్రపద మాసే, శుక్ల పక్షే, ద్వితీయా తిథౌ, స్థిర వాసరే, హస్త నక్షత్ర-యుక్తాయాం,<br />శుభయోగ-శుభకరణ-ఏవంగుణ-విశేషణ-విశిష్టాయాం అస్యాం శుభతిథౌ, భారద్వాజ-గోత్రస్య శ్రీకృష్ణ-నామధేయస్య అహమ్ ॥</div>
+      <button class="verse-fill">మీ సూచి నుండి</button>
+    </div>
+    <div style="height:26px;border-bottom:1px solid var(--line);margin:26px 0"></div>
+    <div class="verse">
+      <div class="verse-count">16 / 50</div>
+      <div class="line-telugu">అస్మత్ పితరం భారద్వాజ గోత్రం రామశాస్త్రిశర్మణం<br />వసురూపం స్వధా నమస్తర్పయామి ॥౩॥</div>
+      <div class="verse-meaning">నా తండ్రి — వసురూపుడు.</div>
+      <button class="verse-fill">మీ సూచి నుండి</button>
+    </div>
+    <div style="height:26px;border-bottom:1px solid var(--line);margin:26px 0"></div>
+    <div class="verse">
+      <div class="verse-count">17 / 50</div>
+      <div class="line-telugu">అస్మత్ పితామహం … గోత్రం … శర్మణం<br />రుద్రరూపం స్వధా నమస్తర్పయామి ॥౩॥</div>
+      <div class="verse-meaning">తాత — రుద్రరూపుడు.</div>
+      <button class="verse-fill is-blank">ఈ పంక్తి ఇంకా ఖాళీగా ఉంది</button>
+    </div>
+  </div>
+  </div>
+  <p class="fr-note">Verse 7 is today's saṅkalpa in full, as the builder prints it, at this place, ending in the reciter's own gotra and nāma. Verse 16 carries the name from the register. Verse 17 has none, so it stands exactly as printed and says so. Both notes open the register at that recipient.</p>
+</div>
+
+<template id="__bundler_thumbnail">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><rect width="100" height="100" fill="#FAF5EB"/><g fill="none" stroke="#8a6a2f" stroke-width="3" stroke-linecap="round"><path d="M50 30v40M34 44h32M38 58h24"/></g></svg>
+</template>
+</body>
+</html>

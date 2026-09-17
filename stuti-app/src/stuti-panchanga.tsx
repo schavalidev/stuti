@@ -1,5 +1,7 @@
 import { Icon } from "./stuti-icons";
 import React from "react";
+import { CompassDial } from "./stuti-compass";
+import { STUTI_GAZ } from "./stuti-gaz";
 import { STUTI_L } from "./stuti-i18n";
 import { AKSHARA_PANCHANGA } from "./stuti-panchanga-engine";
 import { STUTI_SK } from "./stuti-sankalpa-data";
@@ -121,7 +123,9 @@ function useLoc() {
 
 const locFold = (s) => STUTI_TRANSLIT.fold(s);
 
-function LocationControl() {
+/* compass: opt-in. The dial belongs beside the place on the home greeting,
+   where the day begins; it is not wanted in the pañcāṅga or settings. */
+function LocationControl({ compass }) {
   const { locId, detected, geo, loc, LOCS, setLocId, detect } = useLoc();
   const [open, setOpen] = usePS(false);
   const [q, setQ] = usePS("");
@@ -130,8 +134,27 @@ function LocationControl() {
     ? LOCS.filter(l => locFold(l.city + " " + l.region + " " + (l.alt || "")).indexOf(qf) !== -1).slice(0, 80)
     : LOCS.filter(l => l.top);
   const choose = (id) => { setLocId(id); setQ(""); setOpen(false); };
+
+  /* The curated list answers first and instantly. Anything it does not hold —
+     a mandal town, a village — comes from the gazetteer, which is fetched on
+     the first query of three letters and then answers from memory. */
+  const [tail, setTail] = usePS([]);
+  const [tailBusy, setTailBusy] = usePS(false);
+  usePE(() => {
+    const GZ = STUTI_GAZ;
+    if (!GZ || qf.length < 3) { setTail([]); setTailBusy(false); return; }
+    let live = true;
+    setTailBusy(true);
+    const t = setTimeout(() => {
+      GZ.search(q, 24).then((rows) => { if (live) { setTail(rows); setTailBusy(false); } });
+    }, 140);
+    return () => { live = false; clearTimeout(t); };
+  }, [qf]);
+  const pickPlace = (p) => { STUTI_LOC.pick(p); setQ(""); setOpen(false); };
+
   return (
     <div className={"locctl" + (open ? " open" : "")}>
+      {compass && CompassDial && <CompassDial lang={(() => { try { return localStorage.getItem("stuti-lang") || "deva"; } catch (e) { return "deva"; } })()} />}
       <button className="loc-chip" onClick={() => setOpen(o => !o)} aria-haspopup="listbox" aria-expanded={open}>
         {loc.city}
       </button>
@@ -143,7 +166,7 @@ function LocationControl() {
               <div className="loc-search">
                 <Icon name="search" size={16} />
                 <input value={q} onChange={e => setQ(e.target.value)} autoFocus
-                  placeholder={"Search " + LOCS.length + " cities"} autoComplete="off" spellCheck="false" />
+                  placeholder="Search any town" autoComplete="off" spellCheck="false" />
                 {q && <button className="loc-search-clear" onClick={() => setQ("")} aria-label={STUTI_L.a("aClear")}>×</button>}
               </div>
               <button className="loc-detect" onClick={() => detect(() => { setQ(""); setOpen(false); })} disabled={geo === "locating"}>
@@ -161,7 +184,7 @@ function LocationControl() {
             <div className="loc-list">
               {detected && !qf && (
                 <button className={"loc-detected" + (locId === "detected" ? " on" : "")} onClick={() => choose("detected")}>
-                  <span className="loc-detected-pin"><Icon name="locate" size={16} /></span>
+                  <span className="loc-detected-pin"><Icon name={detected.picked ? "search" : "locate"} size={16} /></span>
                   <span className="loc-detected-body">{detected.city}<i>{detected.region}</i></span>
                 </button>
               )}
@@ -171,10 +194,24 @@ function LocationControl() {
                   {l.city}<span>{l.region}</span>
                 </button>
               ))}
-              {qf && matches.length === 0 && (
-                <div className="loc-msg loc-none">No city by that name. Try the nearest large town, or detect your location.</div>
+              {qf.length >= 3 && tail.length > 0 && (
+                <React.Fragment>
+                  <div className="loc-cap">Every other place</div>
+                  {tail.map(p => (
+                    <button key={p.city + p.lat + p.lon} className="loc-opt" onClick={() => pickPlace(p)}>
+                      {p.city}<span>{p.region}</span>
+                    </button>
+                  ))}
+                </React.Fragment>
               )}
-              {!qf && <div className="loc-cap loc-cap-end">Type to search all {LOCS.length} places</div>}
+              {qf && matches.length === 0 && tail.length === 0 && (
+                <div className="loc-msg loc-none">
+                  {tailBusy ? "Searching every town we know…"
+                    : qf.length < 3 ? "Keep typing — three letters searches the whole gazetteer."
+                    : "No place by that name. Try the nearest large town, or detect your location."}
+                </div>
+              )}
+              {!qf && <div className="loc-cap loc-cap-end">Type three letters to search 18,000 towns across India and the diaspora</div>}
             </div>
           </div>
         </React.Fragment>
@@ -327,13 +364,18 @@ function SeasonAmbientOne({ kind, dense, mild, heat, sunStatic, sunBright, noSun
   const scale = (base) => mild ? Math.max(1, Math.round(base * (dense ? 0.5 : 0.2))) : dense ? Math.round(base * 2) : base;
   const n = scale;
   if (kind === "rain") {
+    /* the drops were placed at (i * 7 + 4)%, which spans the width only at full
+       count — a transition month halves the count and the shower then fell in
+       the left half of the screen alone. The spacing is derived from the count
+       instead, as Śarad's leaves and Hemanta's frost already are. */
+    const nd = n(14);
     return (
       <div className="pcard-ambient rain" aria-hidden="true">
         {[...Array(3)].map((_, i) => <span key={"c" + i} className="rain-cloud" style={{
           top: `${dense ? 3 + i * 5 : 4 + i * 9}%`, width: `${dense ? 18 + i * 5 : 34 + i * 10}%`, height: `${dense ? 4 + i : 14 + i * 3}%`,
           animationDelay: `${i * -14}s`, animationDuration: `${(dense ? 46 : 34) + i * 12}s`,
         }} />)}
-        {[...Array(n(14))].map((_, i) => <span key={i} style={{ left: `${(i * 7 + 4) % 100}%`, animationDelay: `${(i % 9) * 0.24}s`, animationDuration: `${(dense ? 1.5 : 0.9) + (i % 4) * 0.18}s` }} />)}
+        {[...Array(nd)].map((_, i) => <span key={i} style={{ left: `${((i + 0.5) * (96 / nd) + (i % 3) * 3) % 98}%`, animationDelay: `${(i % 9) * 0.24}s`, animationDuration: `${(dense ? 1.5 : 0.9) + (i % 4) * 0.18}s` }} />)}
       </div>
     );
   }
@@ -348,12 +390,13 @@ function SeasonAmbientOne({ kind, dense, mild, heat, sunStatic, sunBright, noSun
     );
   }
   if (kind === "blossom") {
+    const np = n(9);
     return (
       <div className="pcard-ambient bough" aria-hidden="true">
-        {[...Array(n(9))].map((_, i) => {
+        {[...Array(np)].map((_, i) => {
           const form = BLOOM_FORMS[i % BLOOM_FORMS.length], size = BLOOM_SIZES[form][i % 3];
           return <span key={i} className={"bough-petal " + form} style={{
-            left: `${(i * 11 + 4) % 94}%`, animationDelay: `${i * 1.3}s`, animationDuration: `${(dense ? 10 : 7) + (i % 4) * 1.4}s`,
+            left: `${((i + 0.4) * (92 / np) + (i % 3) * 5) % 94}%`, animationDelay: `${i * 1.3}s`, animationDuration: `${(dense ? 10 : 7) + (i % 4) * 1.4}s`,
             width: size, height: size, "--pet": BLOOM_SHADES[i % BLOOM_SHADES.length],
           }} />;
         })}
@@ -445,3 +488,5 @@ export { MoonPhase, samvatsaraFor, useLoc, LocationControl };
    without duplicating the source data. Behaviour of the card is unchanged. */
 export { RtuGlyph, AyanaGlyph, SeasonAmbient, RTU_VIS, Snowflake };
 export const SK_CONST = { GOTRAS, KARMAS, VARA_GRAHA, YOGA_DEVA, KARANA_DEVA };
+
+export { SK_DATA };

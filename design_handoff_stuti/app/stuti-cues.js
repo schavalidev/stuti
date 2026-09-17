@@ -176,9 +176,25 @@ window.STUTI_CUES = (function () {
         const v = TT.asVrata(r); let d = null; try { d = V.nextDate(v, now); } catch (e) {}
         if (!d) return;
         const away = Math.round((noon(d) - noon(now)) / DAY);
-        if (away < 0 || away > (r.lead == null ? 1 : r.lead)) return;
-        out.push({ kind: "mytithi", id: "mytithi-" + r.id, ref: r.id, name: r.name, tkind: r.kind, away, date: d, done: null, remind: true });
+        const lead = r.lead == null ? 1 : r.lead, notice = TT.noticeOf(r);
+        if (away < 0) return;
+        /* two windows: the near one every day inside the lead, and the notice
+           on its own day only — a week of daily reminders is not a warning */
+        const near = away <= lead, isNotice = notice > 0 && away === notice;
+        if (!near && !isNotice) return;
+        out.push({ kind: "mytithi", id: "mytithi-" + r.id + (near ? "" : "-notice"), ref: r.id, name: r.name, tkind: r.kind, stage: near ? "near" : "notice", away, date: d, done: null, remind: true });
       });
+    } catch (e) {}
+
+    /* the tarpaṇa days. The card names them for everyone; the bell is opt-in,
+       because a monthly notification about an ancestral rite is not something
+       to hand a reciter who did not ask for it. */
+    try {
+      const TP = window.STUTI_TARPANA;
+      if (TP && PA && ctx.place) {
+        const rite = TP.onDay(now, ctx.place);
+        if (rite) out.push({ kind: "tarpana", id: "tarpana-" + rite.id + "-" + key, ref: rite.id, rite: rite, done: null });
+      }
     } catch (e) {}
 
     /* an observance is not a debt — it is the day telling you what it is.
@@ -288,6 +304,24 @@ window.STUTI_CUES = (function () {
       } catch (e) {}
     }
 
+    /* a tarpaṇa day rings on its own hour, not in the morning digest — the
+       rite has a window, and a bell at six for a two-o'clock aparāhṇa is both
+       early and, by the time it matters, forgotten. Opt-in, and independent of
+       the daily reading cue: wanting this bell is not wanting that one. */
+    if (r.tarpana) {
+      try {
+        const TP = window.STUTI_TARPANA, V = ctx.engines.vrata;
+        const rite = TP && TP.onDay(now, ctx.place);
+        if (rite && V && tz != null) {
+          const w = V.kalaWindow(rite, now, ctx.place);
+          if (w) {
+            const at = new Date(Date.UTC(now.getFullYear(), now.getMonth(), now.getDate()) + (w.start - tz * 60) * 60000);
+            if (at > now && !inQuiet(at, q)) out.push(stamp({ id: "tarpana-" + rite.id, kind: "tarpana", at: at, ref: rite.id, rite: rite, window: w }));
+          }
+        }
+      } catch (e) {}
+    }
+
     if (r.on) {
       const [h, m] = (r.time || "06:00").split(":").map(Number);
       for (let off = 0; off <= 1; off++) {
@@ -301,10 +335,16 @@ window.STUTI_CUES = (function () {
         const items = obligations(Object.assign({}, ctx, { now: at }))
           .filter((o) => o.kind !== "sandhya" && !o.done)
           .filter((o) => o.kind !== "tithi" || r.tithi !== false)
+          .filter((o) => o.kind !== "tarpana" || r.tarpana === true)
           .filter((o) => o.kind !== "vow" || o.remind !== false)
           .filter((o) => o.kind !== "keep" || o.remind !== false);
         if (r.progress !== false) progress(Object.assign({}, ctx, { now: at })).forEach((p) => items.push(p));
-        out.push(stamp({ id: "daily", kind: "digest", at: at, held: held, items: items }));
+        /* a person's day rings alone. Bundled beside "day 3 of the pāṭha" it
+           reads as a chore, and it is not one. */
+        items.filter((o) => o.kind === "mytithi").forEach((o) => {
+          out.push(stamp({ id: o.id, kind: "mytithi", at: at, held: held, item: o, items: [o] }));
+        });
+        out.push(stamp({ id: "daily", kind: "digest", at: at, held: held, items: items.filter((o) => o.kind !== "mytithi") }));
         break;
       }
     }

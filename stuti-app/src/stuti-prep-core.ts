@@ -56,9 +56,24 @@ export const STUTI_PREP = (function () {
     return n;
   };
   const txt = (t, lang) => !t ? "" : ((lang === "telugu" ? (t.tel || t.roman) : t.roman) || "");
+  /* putting the card away — per occurrence, and only ever until a named day.
+     "again" brings the card back tomorrow; "notify" keeps it away until the
+     day itself and leaves a flag the notification scheduler reads. */
+  const sKey = (id, date) => "stuti-prep-snooze:" + id + ":" + iso(date);
+  const snooze = (id, date, mode, away) => {
+    const back = new Date(); back.setHours(0, 0, 0, 0);
+    back.setDate(back.getDate() + (mode === "notify" ? Math.max(1, away) : 1));
+    try { localStorage.setItem(sKey(id, date), JSON.stringify({ until: iso(back), notify: mode === "notify" })); } catch (e) {}
+  };
+  const snoozeOf = (id, date) => {
+    try { const o = JSON.parse(localStorage.getItem(sKey(id, date)) || "null"); return o && o.until ? o : null; }
+    catch (e) { return null; }
+  };
+  const hidden = (id, date) => { const s = snoozeOf(id, date); return !!s && s.until > iso(new Date()); };
+  const unsnooze = (id, date) => { try { localStorage.removeItem(sKey(id, date)); } catch (e) {} };
   /* enrolled occurrences whose window is open — today through LEAD days out */
   const windowOpen = () => !masterOn() ? [] :
-    V().upcoming(40).filter((x) => enrolled(x.v.id) && x.away >= 0 && x.away <= leadOf(x.v.id));
+    V().upcoming(40).filter((x) => enrolled(x.v.id) && x.away >= 0 && x.away <= leadOf(x.v.id) && !hidden(x.v.id, x.date));
   /* the soonest enrolled occurrence at any distance — the reminders preview */
   const nextEnrolled = () => V().upcoming(40).filter((x) => enrolled(x.v.id))[0] || null;
   function shareText(v, date, lang) {
@@ -68,5 +83,5 @@ export const STUTI_PREP = (function () {
     const lines = items(v).map((it) => (dn.indexOf(it.id) !== -1 ? "✓ " : "• ") + txt(it.text, lang));
     return name + " — " + ds + (lines.length ? "\n" + lines.join("\n") : "");
   }
-  return { LEAD, AUTO, masterOn, enrolled, setMaster, toggleVrata, items, done, toggleItem, txt, windowOpen, nextEnrolled, shareText };
+  return { LEAD, AUTO, masterOn, enrolled, setMaster, toggleVrata, items, done, toggleItem, txt, snooze, snoozeOf, hidden, unsnooze, windowOpen, nextEnrolled, shareText };
 })();

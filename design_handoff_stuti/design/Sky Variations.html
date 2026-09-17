@@ -1,0 +1,171 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="design_doc_mode" content="canvas">
+<title>Sky — design variations</title>
+<link rel="stylesheet" href="stuti.css">
+<link rel="stylesheet" href="stuti-components.css">
+<style>
+a{color:var(--accent-ink,#8a5a1e);text-decoration:none}a:hover{color:var(--gold-deep,#a06a10);text-decoration:underline}
+body{margin:0}
+.frame{position:absolute;width:430px;background:var(--bg,#F6EEDF);border-radius:22px;box-shadow:0 24px 60px -30px rgba(46,32,14,.45);padding:6px 18px 24px;overflow:visible}
+.frame-tag{position:absolute;top:-34px;left:4px;font-family:var(--font-ui);font-size:13px;letter-spacing:.12em;text-transform:uppercase;font-weight:700;color:#7a6647}
+.frame-sub{position:absolute;top:-34px;right:4px;font-family:var(--font-ui);font-size:12px;color:#a08e70}
+/* static demo bits */
+.sky{cursor:default}
+.demo-chip{display:inline-flex;align-items:center;min-height:34px;padding:0 14px;border-radius:999px;background:rgba(255,251,240,.16);border:1px solid rgba(255,251,240,.34);color:#FFF7E8;backdrop-filter:blur(6px);font-family:var(--font-ui);font-size:14px}
+.sky-greet{font-family:var(--font-telugu)}
+.demo-bell{display:inline-flex;align-items:center;justify-content:center;width:24px;height:24px;border-radius:50%;background:var(--accent,#8a5a1e);border:1px solid var(--accent,#8a5a1e);color:#fff;flex:none}
+/* ============ B. mural bands — flat stepped poster sky ============ */
+.v-band .sky-fill{background:linear-gradient(180deg,#3A78B4 0 26%,#6FA3CC 0 46%,#A9C6D4 0 64%,#D9D3B6 0 80%,#EFDFB6 0 92%,#F3E7C8 0)}
+.v-band .sky-sun{background:radial-gradient(circle,#F3A93C 0 58%,transparent 60%);box-shadow:0 0 0 7px rgba(243,169,60,.22),0 0 0 15px rgba(243,169,60,.1);animation:none;width:34px;height:34px}
+.v-band .sky-arc{border-style:solid;border-color:rgba(255,244,220,.32)}
+.v-band .sky-horizon{background:linear-gradient(180deg,transparent,rgba(20,12,4,.12))}
+/* ============ C. watercolor haze — soft wash, cloud drift ============ */
+.v-wash .sky-fill{background:linear-gradient(180deg,#1F2B52,#4A4E80 30%,#8A6C8F 56%,#D08670 78%,#EFA76B 92%,#F6C589)}
+.v-wash .sky-fill::before{content:"";opacity:1;position:absolute;inset:0 0 var(--sky-lap);background:
+ radial-gradient(120px 34px at 18% 44px,rgba(255,214,190,.4),transparent 70%),
+ radial-gradient(160px 40px at 66% 26px,rgba(255,200,190,.34),transparent 70%),
+ radial-gradient(140px 36px at 88% 62px,rgba(255,190,180,.3),transparent 70%),
+ radial-gradient(200px 60px at 40% 96px,rgba(255,180,150,.42),transparent 72%);
+ -webkit-mask-image:none;mask-image:none;filter:blur(3px)}
+.v-wash .sky-arc{display:none}
+.v-wash .sky-sun{width:40px;height:40px;filter:blur(.4px);background:radial-gradient(circle,#FFDCB0 0 26%,#F4914E 44%,#D9683C 58%,rgba(217,104,60,.4) 70%,rgba(217,104,60,.14) 84%,transparent 94%);box-shadow:0 0 52px 18px rgba(217,104,60,.38)}
+.v-wash .sky-horizon{background:linear-gradient(180deg,transparent,rgba(217,100,80,.35) 60%,rgba(20,12,4,.16))}
+/* ============ D. toraṇa — sky seen through a cusped arch ============ */
+.v-arch .sky-lid{height:170px}
+.v-arch .sky-fill{left:26px;right:26px;top:14px;border-radius:200px 200px 0 0;border:1.5px solid color-mix(in oklab,var(--gold,#C89B3C) 55%,transparent);box-shadow:0 0 0 6px color-mix(in oklab,var(--gold,#C89B3C) 14%,transparent)}
+.v-arch .sky-arc{display:none}
+.v-arch .sky-top{padding-top:20px}
+.v-arch .sky-greet{color:var(--ink,#2E2214);text-shadow:none}
+.v-arch .demo-chip{background:var(--surface,#FFFDF6);border-color:var(--line,#E4D8C0);color:var(--ink,#2E2214);backdrop-filter:none}
+.v-arch .sky-horizon{left:26px;right:26px}
+.v-arch{color:var(--ink,#2E2214)}
+/* ============ E. quiet field — near-solid, engraved arc ============ */
+.v-quiet .sky-fill{background:linear-gradient(180deg,#33608E,#4F7BA4 55%,#6E92AF 85%,#7E9DB4)}
+.v-quiet .sky-fill::before,.v-quiet .sky-fill::after{display:none}
+.v-quiet .sky-arc{border-style:solid;border-width:1px;border-color:rgba(255,247,231,.4);height:86px}
+.v-quiet .sky-sun{width:22px;height:22px;background:#FFEFC9;box-shadow:0 0 0 5px rgba(255,239,201,.18);animation:none}
+.v-quiet .sky-horizon{display:none}
+.v-quiet .sky-greet{font-size:1.15rem}
+/* ============ F. radiant horizon — light blooms up from the plate ============ */
+.v-glow .sky-fill{background:linear-gradient(180deg,#2F5E93,#5E8AB2 40%,#9FB9C4 66%,#EBD9A9 88%,#F7E7BC)}
+.v-glow .sky-fill::after{content:"";opacity:1;position:absolute;left:0;right:0;bottom:var(--sky-lap);height:110px;background:radial-gradient(80% 120px at 55% 100%,rgba(255,214,128,.75),rgba(255,214,128,.22) 55%,transparent 78%);-webkit-mask-image:none;mask-image:none;animation:none}
+.v-glow .sky-arc{border-color:rgba(255,244,220,.2)}
+.v-glow .sky-sun{width:44px;height:44px}
+/* ============ G. sun-dial — no sky at all, an engraved instrument ============ */
+.v-dial .sky-fill{background:none}
+.v-dial .sky-greet{color:var(--ink,#2E2214);text-shadow:none}
+.v-dial .demo-chip{background:var(--surface,#FFFDF6);border-color:var(--line,#E4D8C0);color:var(--ink,#2E2214);backdrop-filter:none}
+.dial-arc{position:absolute;left:50%;bottom:calc(var(--sky-lap) - 8px);transform:translateX(-50%);width:300px;height:150px;border:1.5px solid color-mix(in oklab,var(--gold,#C89B3C) 60%,transparent);border-bottom:none;border-radius:300px 300px 0 0}
+.dial-tick{position:absolute;width:1.5px;height:9px;background:color-mix(in oklab,var(--gold,#C89B3C) 55%,transparent);transform-origin:50% 158px;left:calc(50% - .75px);top:-4px}
+.dial-bead{position:absolute;width:26px;height:26px;border-radius:50%;background:radial-gradient(circle,#F2B14A 0 55%,#D98F2B 100%);box-shadow:0 0 22px 6px rgba(242,177,74,.45);transform:translate(-50%,-50%)}
+.dial-ends{position:absolute;bottom:calc(var(--sky-lap) + 8px);font-family:var(--font-ui);font-size:11px;color:var(--ink-faint,#a08e70)}
+/* ============ H. ribbon — the sky is a band, not a field ============ */
+.v-ribbon .sky-fill{background:none}
+.v-ribbon .sky-lid{height:132px}
+.v-ribbon .sky-greet{color:var(--ink,#2E2214);text-shadow:none}
+.v-ribbon .demo-chip{background:var(--surface,#FFFDF6);border-color:var(--line,#E4D8C0);color:var(--ink,#2E2214);backdrop-filter:none}
+.ribbon{position:absolute;left:18px;right:18px;bottom:calc(var(--sky-lap) + 4px);height:38px;border-radius:999px;background:linear-gradient(90deg,#F0B95E,#7FB2D6 30%,#3A78B4 50%,#7FB2D6 70%,#B0655A);box-shadow:inset 0 1px 3px rgba(20,12,4,.18)}
+.ribbon-sun{position:absolute;top:50%;transform:translate(-50%,-50%);width:24px;height:24px;border-radius:50%;background:radial-gradient(circle,#FFE9B8 0 30%,#F2A93C 70%);box-shadow:0 0 0 4px rgba(255,251,240,.55),0 0 16px 4px rgba(242,169,60,.5)}
+.ribbon-lbl{position:absolute;top:-18px;font-family:var(--font-ui);font-size:10.5px;letter-spacing:.08em;color:var(--ink-faint,#a08e70)}
+/* ============ I. rising sun — poster half-disc with flat rays ============ */
+.v-rise .sky-fill{background:linear-gradient(180deg,#F6EEDF,#F3E3BC)}
+.v-rise .sky-greet{color:var(--ink,#2E2214);text-shadow:none}
+.v-rise .demo-chip{background:var(--surface,#FFFDF6);border-color:var(--line,#E4D8C0);color:var(--ink,#2E2214);backdrop-filter:none}
+.rise-sun{position:absolute;left:50%;bottom:calc(var(--sky-lap) - 2px);transform:translateX(-50%);width:150px;height:75px;border-radius:150px 150px 0 0;background:linear-gradient(180deg,#F2B14A,#E08A2E);overflow:visible}
+.rise-ray{position:absolute;left:calc(50% - 1.75px);bottom:0;width:3.5px;height:100px;border-radius:3px;background:linear-gradient(0deg,transparent 62%,color-mix(in oklab,var(--gold,#C89B3C) 70%,transparent) 66%,color-mix(in oklab,var(--gold,#C89B3C) 70%,transparent) 92%,transparent);transform-origin:50% 100%}
+/* ============ J. tinted hour — the sky is a wash of light, sun a glyph ============ */
+.v-tint .sky-lid{height:118px}
+.v-tint .sky-fill{background:radial-gradient(140% 180px at 50% -40px,rgba(127,178,214,.55),rgba(233,225,198,.4) 60%,transparent)}
+.v-tint .sky-greet{color:var(--ink,#2E2214);text-shadow:none;display:inline-flex;align-items:center;gap:10px}
+.v-tint .demo-chip{background:var(--surface,#FFFDF6);border-color:var(--line,#E4D8C0);color:var(--ink,#2E2214);backdrop-filter:none}
+.tint-mark{display:inline-block;width:20px;height:20px;border-radius:50%;background:radial-gradient(circle,#FFE9B8 0 28%,#F2A93C 62%,transparent 70%);box-shadow:0 0 12px 3px rgba(242,169,60,.5);flex:none}
+.tint-line{position:absolute;left:18px;right:18px;bottom:calc(var(--sky-lap) + 10px);display:flex;justify-content:space-between;font-family:var(--font-ui);font-size:11px;color:var(--ink-faint,#a08e70)}
+/* ============ K. etching — monoline sun over a drawn horizon ============ */
+.v-etch .sky-fill{background:none}
+.v-etch .sky-greet{color:var(--ink,#2E2214);text-shadow:none}
+.v-etch .demo-chip{background:var(--surface,#FFFDF6);border-color:var(--line,#E4D8C0);color:var(--ink,#2E2214);backdrop-filter:none}
+.etch{position:absolute;left:0;right:0;bottom:calc(var(--sky-lap) - 12px);display:block}
+/* ============ L. eclipse — the sun stands behind the plate ============ */
+.v-eclipse .sky-lid{height:168px}
+.v-eclipse .sky-fill{background:linear-gradient(180deg,#2F5E93,#5E8AB2 46%,#9FB9C4 78%,#D8CDA6)}
+.v-eclipse .sky-arc{display:none}
+.v-eclipse .sky-sun{width:64px;height:64px}
+.v-eclipse .sky-horizon{display:none}
+</style>
+</head>
+<body>
+<script>
+const GREET = 'శుభ మధ్యాహ్నం, Srikrishna';
+function frame(x, y, cls, tag, sub, sunLeft, sunUp, extra) {
+  return `<div class="frame ${cls}" style="left:${x}px;top:${y}px">
+  <span class="frame-tag">${tag}</span><span class="frame-sub">${sub}</span>
+  <header class="sky sky-midday">
+    <div class="sky-lid">
+      <div class="sky-fill" aria-hidden="true">
+        <div class="sky-arc"></div>
+        <div class="sky-disc" style="left:${sunLeft}%;bottom:calc(var(--sky-lap) + ${sunUp}px)"><span class="sky-sun"></span></div>
+        <div class="sky-horizon"></div>
+      </div>
+      <div class="sky-top">
+        <span class="sky-greet">${GREET}</span>
+        <span class="demo-chip">Bengaluru</span>
+      </div>
+    </div>
+    <div class="sky-plate" style="position:relative">
+      <div class="sky-plate-cap">సంధ్యావందనం <span class="demo-bell"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8a6 6 0 0 0-12 0c0 7-3 9-3 9h18s-3-2-3-9"></path><path d="M13.7 21a2 2 0 0 1-3.4 0"></path></svg></span></div>
+      <div class="sky-plate-head"><b style="font-family:var(--font-telugu)">మాధ్యాహ్నికం</b><span class="sky-plate-till" style="font-family:var(--font-telugu)">4:02 pm వరకు</span></div>
+      <div class="sky-bar"><span class="sky-bar-track"><span class="sky-seg sky-seg-uttama" style="left:0;width:38%"></span><span class="sky-seg sky-seg-madhyama" style="left:38%;width:34%"></span><span class="sky-seg sky-seg-adhama" style="left:72%;width:28%"></span></span><span class="sky-bar-at" style="left:46%"></span></div>
+      <div class="sky-plate-foot"><span>11:48 am</span><span class="sky-plate-mid sky-mid-madhyama" style="font-family:var(--font-telugu)">మధ్యమ 2:10 pm వరకు</span><span>4:02 pm</span></div>
+    </div>
+  </header>
+  ${extra || ''}
+</div>`;
+}
+function bare(x, y, cls, tag, sub, art, glyph, disc) {
+  return `<div class="frame ${cls}" style="left:${x}px;top:${y}px">
+  <span class="frame-tag">${tag}</span><span class="frame-sub">${sub}</span>
+  <header class="sky">
+    <div class="sky-lid">
+      <div class="sky-fill" aria-hidden="true">${art}${disc || ''}</div>
+      <div class="sky-top">
+        <span class="sky-greet">${glyph ? '<span class="tint-mark"></span>' : ''}${GREET}</span>
+        <span class="demo-chip">Bengaluru</span>
+      </div>
+    </div>
+    ${PLATE}
+  </header>
+</div>`;
+}
+const PLATE = `<div class="sky-plate" style="position:relative">
+      <div class="sky-plate-cap">సంధ్యావందనం <span class="demo-bell"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8a6 6 0 0 0-12 0c0 7-3 9-3 9h18s-3-2-3-9"></path><path d="M13.7 21a2 2 0 0 1-3.4 0"></path></svg></span></div>
+      <div class="sky-plate-head"><b style="font-family:var(--font-telugu)">మాధ్యాహ్నికం</b><span class="sky-plate-till" style="font-family:var(--font-telugu)">4:02 pm వరకు</span></div>
+      <div class="sky-bar"><span class="sky-bar-track"><span class="sky-seg sky-seg-uttama" style="left:0;width:38%"></span><span class="sky-seg sky-seg-madhyama" style="left:38%;width:34%"></span><span class="sky-seg sky-seg-adhama" style="left:72%;width:28%"></span></span><span class="sky-bar-at" style="left:46%"></span></div>
+      <div class="sky-plate-foot"><span>11:48 am</span><span class="sky-plate-mid sky-mid-madhyama" style="font-family:var(--font-telugu)">మధ్యమ 2:10 pm వరకు</span><span>4:02 pm</span></div>
+    </div>`;
+document.body.innerHTML =
+  frame(60, 80, '', 'A — current', 'painterly gradient (as shipped)', 64, 34) +
+  frame(580, 80, 'v-band', 'B — mural bands', 'flat stepped colour, ringed sun', 64, 34) +
+  frame(1100, 80, 'v-wash', 'C — watercolor haze', 'soft wash, drifting cloud light', 64, 34) +
+  frame(60, 560, 'v-arch', 'D — toraṇa arch', 'sky held inside a gold-lined arch', 64, 36) +
+  frame(580, 560, 'v-quiet', 'E — quiet field', 'near-solid blue, engraved arc, small sun', 64, 38) +
+  frame(1100, 560, 'v-glow', 'F — radiant horizon', 'light blooms up from the plate line', 64, 34) +
+  bare(60, 1060, 'v-dial', 'G — sun-dial', 'no sky: the day as an engraved instrument', `
+    <div class="dial-arc">${[-72,-48,-24,0,24,48,72].map(a=>`<span class="dial-tick" style="transform:rotate(${a}deg)"></span>`).join('')}</div>
+    <div class="dial-bead" style="left:calc(50% + 42px);top:38px"></div>
+    <span class="dial-ends" style="left:44px">6:04 am</span><span class="dial-ends" style="right:44px">6:18 pm</span>`) +
+  bare(580, 1060, 'v-ribbon', 'H — day ribbon', 'the whole day as a band, sun riding it', `
+    <div class="ribbon"><span class="ribbon-lbl" style="left:2px">ఉదయం</span><span class="ribbon-lbl" style="right:2px">అస్తమయం</span><span class="ribbon-sun" style="left:56%"></span></div>`) +
+  bare(60, 1540, 'v-rise', 'I — rising sun', 'poster half-disc with flat rays', `
+    <div class="rise-sun">${[-64,-40,-18,0,18,40,64].map(a=>`<span class="rise-ray" style="transform:rotate(${a}deg)"></span>`).join('')}</div>`) +
+  bare(580, 1540, 'v-tint', 'J — tinted hour', 'sky as a wash of light; sun a glyph by the greeting', `
+    <div class="tint-line"><span>సూర్యోదయం 6:04</span><span>సూర్యాస్తమయం 18:18</span></div>`, true) +
+  bare(1100, 1060, 'v-etch', 'K — etching', 'monoline sun over a drawn horizon', `
+    <svg class="etch" width="100%" height="96" viewBox="0 0 430 96" fill="none" stroke="#B98A34" stroke-width="1.6" stroke-linecap="round"><line x1="0" y1="84" x2="430" y2="84"></line><circle cx="258" cy="46" r="17"></circle>${[0,30,60,90,120,150,180,210,240,270,300,330].map(a=>{const r=a*Math.PI/180,c=Math.cos(r),s=Math.sin(r);return `<line x1="${(258+c*24).toFixed(1)}" y1="${(46+s*24).toFixed(1)}" x2="${(258+c*31).toFixed(1)}" y2="${(46+s*31).toFixed(1)}"></line>`;}).join('')}<path d="M20 84 Q 40 72 62 84 M340 84 Q 366 68 394 84" stroke-opacity=".5"></path></svg>`) +
+  bare(1100, 1540, 'v-eclipse', 'L — eclipse', 'a big sun standing half behind the plate', '', false, `<div class="sky-disc" style="left:64%;bottom:calc(var(--sky-lap) - 16px)"><span class="sky-sun"></span></div>`);
+</script>
+</body>
+</html>

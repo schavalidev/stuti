@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Stuti · the kṣaṇa card</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Mallanna&display=swap" />
+<link rel="stylesheet" href="stuti.css" />
+<link rel="stylesheet" href="stuti-components.css" />
+<link rel="stylesheet" href="stuti-palette.css" />
+<link rel="stylesheet" href="stuti-pigment.css" />
+<style>
+body{background:var(--bg);color:var(--ink);font-family:var(--font-ui);margin:0;-webkit-font-smoothing:antialiased}
+.wrap{max-width:1180px;margin:0 auto;padding:38px 26px 90px}
+h1{font-family:var(--font-display);font-size:34px;margin:0;letter-spacing:-.01em}
+.lede{margin:12px 0 0;max-width:62ch;font-size:16px;line-height:1.65;color:var(--ink-soft);text-wrap:pretty}
+.bar{display:flex;gap:8px;flex-wrap:wrap;margin:24px 0 30px}
+.bar button{padding:8px 15px;border-radius:999px;border:1px solid var(--line);background:var(--surface);color:var(--ink-soft);font:inherit;font-size:13.5px;cursor:pointer}
+.bar button[aria-pressed="true"]{background:var(--surface-2);border-color:var(--gold-deep);color:var(--gold-deep);font-weight:600}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:26px;align-items:start}
+.cell{min-width:0}
+.cap{font-size:12px;letter-spacing:.09em;text-transform:uppercase;color:var(--ink-faint);margin-bottom:10px}
+.frame{position:relative;height:640px;border:1px solid var(--line);border-radius:var(--r-lg);overflow:hidden;background:var(--bg)}
+.frame .pd-wrap{position:absolute}
+.frame .pd-scrim{display:none}
+.frame .pd-sheet{max-height:100%;height:100%;border-radius:0;box-shadow:none;border-top:0}
+.miss{padding:20px;font-size:14px;color:var(--ink-faint)}
+a{color:var(--gold-deep)}a:hover{color:var(--gold)}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>The kṣaṇa card</h1>
+  <p class="lede">Two entries in the year are instants rather than days. One card draws either: the moment, the marks either side of it, the window the rite is kept in, whether any of it clears this horizon, and the ground the rule rests on.</p>
+  <div class="bar" id="bar"></div>
+  <div class="grid" id="root"></div>
+</div>
+
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+<script src="stuti-i18n.js"></script>
+<script src="stuti-prefs.js"></script>
+<script src="stuti-reckoning.js"></script>
+<script src="stuti-ephemeris.js"></script>
+<script src="stuti-eclipse.js"></script>
+<script src="stuti-kshana.js"></script>
+<script src="stuti-panchanga-engine.js"></script>
+<script type="text/babel" src="stuti-icons.jsx"></script>
+<script type="text/babel">
+/* the app frame owns an overlay host; this page has none, so the portal
+   renders in place and the frames below give each card its own box */
+window.OverlayPortal = ({ children }) => children;
+</script>
+<script type="text/babel" src="stuti-kshana.jsx"></script>
+<script type="text/babel">
+const LANGS = [["roman", "Roman"], ["deva", "देवनागरी"], ["telugu", "తెలుగు"]];
+/* three real days, computed here and not written down: a partial solar
+   eclipse, a crossing that falls after sunset and is therefore kept the
+   next morning, and one that is simply seen from the wrong hemisphere. */
+const CASES = [
+  { label: "Sūrya grahaṇa · 2 Aug 2027", date: new Date(2027, 7, 2), kind: "grahana" },
+  { label: "Makara Saṅkrānti · 15 Jan 2027", date: new Date(2027, 0, 15), kind: "sankranti" },
+  { label: "Candra grahaṇa · 21 Feb 2027", date: new Date(2027, 1, 21), kind: "grahana" },
+];
+
+function Cell({ c, lang }) {
+  const P = window.AKSHARA_PANCHANGA, K = window.STUTI_KSHANA;
+  const loc = P.locations[0];
+  const k = (K.forDay(c.date, loc) || []).find((x) => x.kind === c.kind) || null;
+  return (
+    <div className="cell">
+      <div className="cap">{c.label}</div>
+      <div className="frame">
+        {k ? <window.KshanaCard k={k} date={c.date} lang={lang} onClose={() => {}} />
+           : <div className="miss">Nothing of this kind falls on that day at {loc.city}.</div>}
+      </div>
+    </div>
+  );
+}
+
+function Demo() {
+  const [lang, setLang] = React.useState("roman");
+  React.useEffect(() => {
+    const bar = document.getElementById("bar");
+    bar.innerHTML = "";
+    LANGS.forEach(([id, label]) => {
+      const b = document.createElement("button");
+      b.textContent = label;
+      b.setAttribute("aria-pressed", String(id === lang));
+      b.onclick = () => setLang(id);
+      bar.appendChild(b);
+    });
+  }, [lang]);
+  return <React.Fragment>{CASES.map((c, i) => <Cell key={i} c={c} lang={lang} />)}</React.Fragment>;
+}
+
+ReactDOM.createRoot(document.getElementById("root")).render(<Demo />);
+</script>
+</body>
+</html>

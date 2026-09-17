@@ -188,5 +188,48 @@ window.STOTRA_INDEX = {
         ["Hanumān Aṣṭottara Śatanāmāvali", "हनुमदष्टोत्तरशतनामावलिः", "హనుమదష్టోత్తరశతనామావళి", ""],
         ["Hanumat Sahasranāma Stotram", "हनुमत्सहस्रनामस्तोत्रम्", "హనుమత్ సహస్రనామ స్తోత్రం", ""],
       ] },
+
+    { id: "nadi", name: "Nadī Devatās", deva: "नदी देवताः", tel: "నదీ దేవతలు", seed: "गं",
+      epithet: "The river goddesses — Gaṅgā, Yamunā, Narmadā", hue: 192,
+      list: [
+        ["Gaṅge Ca Yamune Caiva (snāna-śloka)", "गङ्गे च यमुने चैव", "గంగే చ యమునే చైవ", ""],
+        ["Gaṅgā Stotram (Devi Sureśvari)", "गङ्गास्तोत्रम्", "గంగా స్తోత్రం", "Ādi Śaṅkarācārya"],
+        ["Gaṅgāṣṭakam", "गङ्गाष्टकम्", "గంగాష్టకం", ""],
+        ["Gaṅgā Laharī", "गङ्गालहरी", "గంగా లహరి", "Jagannātha Paṇḍita"],
+        ["Gaṅgā Aṣṭottara Śatanāmāvali", "गङ्गाष्टोत्तरशतनामावलिः", "గంగాష్టోత్తరశతనామావళి", ""],
+        ["Gaṅgā Sahasranāma Stotram", "गङ्गासहस्रनामस्तोत्रम्", "గంగా సహస్రనామ స్తోత్రం", ""],
+        ["Yamunāṣṭakam", "यमुनाष्टकम्", "యమునాష్టకం", "Vallabhācārya"],
+        ["Narmadāṣṭakam", "नर्मदाष्टकम्", "నర్మదాష్టకం", "Ādi Śaṅkarācārya"],
+        ["Nadī Stuti Sūktam", "नदीस्तुतिसूक्तम्", "నదీ స్తుతి సూక్తం", "Ṛgveda 10.75 · Sindhukṣit"],
+      ] },
+
+    { id: "navagraha", name: "Navagrahas", deva: "नवग्रहाः", tel: "నవగ్రహాలు", seed: "ॐ",
+      epithet: "The nine grahas — Sun to Ketu", hue: 262,
+      list: [
+        ["Navagraha Stotram", "नवग्रहस्तोत्रम्", "నవగ్రహ స్తోత్రం", "Vyāsa"],
+        ["Navagraha Kavacam", "नवग्रहकवचम्", "నవగ్రహ కవచం", ""],
+        ["Nakṣatra Sūktam", "नक्षत्रसूक्तम्", "నక్షత్ర సూక్తం", "Taittirīya Brāhmaṇa"],
+        ["Daśaratha Kṛta Śani Stotram", "दशरथकृतशनिस्तोत्रम्", "దశరథకృత శని స్తోత్రం", "Daśaratha"],
+        ["Śani Vajrapañjara Kavacam", "शनिवज्रपञ्जरकवचम्", "శని వజ్రపంజర కవచం", ""],
+        ["Śani Aṣṭottara Śatanāmāvali", "शन्यष्टोत्तरशतनामावलिः", "శన్యష్టోత్తరశతనామావళి", ""],
+        ["Aṅgāraka Stotram", "अङ्गारकस्तोत्रम्", "అంగారక స్తోత్రం", ""],
+        ["Budha Kavacam", "बुधकवचम्", "బుధ కవచం", ""],
+        ["Bṛhaspati Kavacam", "बृहस्पतिकवचम्", "బృహస్పతి కవచం", ""],
+        ["Śukra Kavacam", "शुक्रकवचम्", "శుక్ర కవచం", ""],
+        ["Candra Kavacam", "चन्द्रकवचम्", "చంద్ర కవచం", ""],
+        ["Rāhu Kavacam", "राहुकवचम्", "రాహు కవచం", ""],
+        ["Ketu Kavacam", "केतुकवचम्", "కేతు కవచం", ""],
+      ] },
+
+    { id: "itara", name: "Itara Devatās", deva: "इतर देवताः", tel: "ఇతర దేవతలు", seed: "ॐ",
+      epithet: "The other gods — Agni, Bhūmi, Dhanvantari, Kubera", hue: 96,
+      list: [
+        ["Agni Sūktam", "अग्निसूक्तम्", "అగ్ని సూక్తం", "Ṛgveda 1.1"],
+        ["Bhū Sūktam", "भूसूक्तम्", "భూ సూక్తం", ""],
+        ["Manyu Sūktam", "मन्युसूक्तम्", "మన్యు సూక్తం", "Ṛgveda 10.83–84"],
+        ["Dhanvantari Stotram", "धन्वन्तरिस्तोत्रम्", "ధన్వంతరి స్తోత్రం", ""],
+        ["Kubera Aṣṭottara Śatanāmāvali", "कुबेराष्टोत्तरशतनामावलिः", "కుబేరాష్టోత్తరశతనామావళి", ""],
+        ["Tulasī Stotram", "तुलसीस्तोत्रम्", "తులసీ స్తోత్రం", ""],
+      ] },
   ]
 };

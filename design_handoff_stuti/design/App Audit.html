@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="day" data-lang="roman" data-palette="unified" data-seal="ratna">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Every button in the app — audit · Stuti</title>
+<link rel="stylesheet" href="stuti.css" />
+<link rel="stylesheet" href="stuti-components.css" />
+<link rel="stylesheet" href="stuti-palette.css" />
+<link rel="stylesheet" href="site.css" />
+<style>
+.aud-wrap{max-width:1120px;margin:0 auto;padding:0 26px}
+.aud-sum{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin:26px 0 8px}
+.aud-sum div{background:var(--surface);border:1px solid var(--line);border-radius:var(--r-md);padding:15px 16px}
+.aud-sum b{display:block;font-family:var(--font-display);font-size:30px;line-height:1.1;color:var(--ink)}
+.aud-sum span{font-size:12px;letter-spacing:.13em;text-transform:uppercase;color:var(--ink-faint);font-weight:700}
+.aud-sec{margin:44px 0 0}
+.aud-sec > h2{font-family:var(--font-display);font-size:29px;margin:0 0 4px}
+.aud-sec > p{max-width:70ch;color:var(--ink-soft);margin:0 0 18px}
+.aud-tbl{display:flex;flex-direction:column;border:1px solid var(--line);border-radius:var(--r-md);overflow:hidden;background:var(--surface)}
+.aud-r{display:grid;grid-template-columns:1fr 1.05fr 1.5fr 116px;gap:18px;padding:15px 18px;border-top:1px solid var(--line-2);align-items:start}
+.aud-r:first-child{border-top:none}
+.aud-hd{background:var(--surface-2);font-size:11.5px;letter-spacing:.13em;text-transform:uppercase;color:var(--ink-faint);font-weight:700}
+.aud-what{font-weight:600;color:var(--ink);font-size:15px}
+.aud-what small{display:block;font-weight:400;color:var(--ink-faint);font-size:12.5px;margin-top:2px}
+.aud-c{font-size:13.7px;color:var(--ink-soft);line-height:1.5}
+.aud-c code,.aud-step code{font-size:12.4px;background:var(--surface-2);border:1px solid var(--line-2);border-radius:5px;padding:1px 5px}
+.aud-v{justify-self:end;display:inline-flex;align-items:center;gap:6px;padding:5px 11px;border-radius:999px;font-size:12px;font-weight:700;letter-spacing:.02em;white-space:nowrap;border:1px solid}
+.v-on{color:#2f6b3a;border-color:color-mix(in oklab,#2f6b3a 30%,transparent);background:color-mix(in oklab,#2f6b3a 8%,transparent)}
+.v-part{color:var(--gold-deep);border-color:color-mix(in oklab,var(--gold-deep) 34%,transparent);background:color-mix(in oklab,var(--gold-deep) 9%,transparent)}
+.v-off{color:#9a3520;border-color:color-mix(in oklab,#9a3520 28%,transparent);background:color-mix(in oklab,#9a3520 7%,transparent)}
+.v-int{color:var(--ink-faint);border-color:var(--line);background:var(--surface-2)}
+.aud-plan{counter-reset:step;display:flex;flex-direction:column;gap:10px;margin-top:18px}
+.aud-step{display:grid;grid-template-columns:38px 1fr;gap:14px;background:var(--surface);border:1px solid var(--line);border-radius:var(--r-md);padding:15px 17px}
+.aud-step::before{counter-increment:step;content:counter(step);font-family:var(--font-display);font-size:20px;color:var(--gold-deep);text-align:center;line-height:1.4}
+.aud-step h4{margin:0 0 3px;font-size:15.5px}
+.aud-step p{margin:0;font-size:13.7px;color:var(--ink-soft);max-width:82ch}
+@media (max-width:1000px){.aud-r{grid-template-columns:1fr;gap:8px}.aud-v{justify-self:start}.aud-sum{grid-template-columns:1fr 1fr}.aud-hd{display:none}}
+</style>
+</head>
+<body data-page="audit">
+<div class="aud-wrap">
+  <div class="page-head">
+    <span class="eyebrow eyebrow-a">Every control in the app · 25 August 2026 · second pass, the locked doors</span>
+    <h1>The app, driven end to end</h1>
+    <p>Stuti.html, probed live in the browser as a reciter would use it: every tab, every card, every sheet, every reader control, in Telugu, Devanāgarī and Roman. Three passes — a static one that checked every navigation call against the router and every cross-file reference against its definition, a live one that clicked through the flows and read the console after each screen, and a third that went through the doors the first two had stopped short of: the japa beads, a plan started and finished and dropped, a saṅkalpa taken and let go, a sign-in and a sign-out, the reset armed and confirmed, and the padlocked share and print carried all the way to a file on disk. Practice data was photographed before each destructive test and put back after. Four verdicts: <b>works</b> (does what it looks like it does), <b>rough</b> (works, but with a caveat worth knowing), <b>broken</b> (did not do what it says — all five found faults are fixed), and <b>by design</b> (a door that is deliberately closed, and says so).</p>
+  </div>
+  <div class="aud-sum">
+    <div><b id="nOn">—</b><span>Works</span></div>
+    <div><b id="nPart">—</b><span>Rough</span></div>
+    <div><b id="nOff">—</b><span>Broken → fixed</span></div>
+    <div><b id="nInt">—</b><span>By design</span></div>
+  </div>
+  <div id="secs"></div>
+  <div class="aud-sec">
+    <h2>What the audit found and changed</h2>
+    <p>Five faults across three passes. The first two were copy; the three the locked doors gave up are a missing translation, a door that opened on a malformed address, and a promise that came undone on one tap. Every fix landed the same day; the rows above read as the app behaves now.</p>
+    <div class="aud-plan">
+      <div class="aud-step"><div><h4>The reminder card spoke in a key</h4>
+        <p>The collapsed daily-reminder card on Nitya read <code>7:00 AM · plusTithiDays</code> — the string <code>plusTithiDays</code> was asked of the translation table and never given to it, in any script. The key now exists in all three: the card reads <code>7:00 AM · పంచాంగ విశేష దినాల్లోనూ</code>, and its Devanāgarī and Roman forms match the voice of the sheet it opens.</p></div></div>
+      <div class="aud-step"><div><h4>Search STOTRAS, shouted</h4>
+        <p>The Roman placeholder in the search field read <code>Search STOTRAS</code> — a caps-lock slip in the translation table, not a style. It reads <code>Search stotras</code> now; the Telugu and Devanāgarī placeholders were already right.</p></div></div>
+      <div class="aud-step"><div><h4>What the static pass proved</h4>
+        <p>Every <code>go("…")</code> in the 34 app modules names a view the router renders — the one stray, <code>go("all")</code> in the reset panel, is a local function that shares the name, not a route. Every <code>window.*</code> component and store referenced across files is defined by the file that should define it. An unknown hash or route falls through to the home rather than to a blank screen, and the onboarding's skip, back, next and begin all call real handlers.</p></div></div>
+      <div class="aud-step"><div><h4>What the live pass touched, honestly</h4>
+        <p>Driving a real app writes real state, and the third pass wrote a great deal of it. Every destructive test was bracketed: storage photographed before, the deletion confirmed, the photograph put back, and the test's own writes — 542 beads on today, ten mālās on yesterday, a Hanumān plan, a Pradoṣa vow, an account for test@example.com, a spent month of share and print — unwound afterwards to the values the shelf held before. Reading positions were the one thing the audit could not test without moving: the Mahāgaṇapati Sahasranāma's saved place was walked and then set back to the beginning, and the home's continue card now names that hymn as last read. Nothing else moved — script, theme, the Nitya lens, reminder settings, japa counts, plans and favourites were either untouched or restored to the values they held before the audit began.</p></div></div>
+      <div class="aud-step"><div><h4>A spoken label still in English</h4>
+        <p>The flower that adds a hymn to the daily recitation carried its whole meaning in an <code>aria-label</code> — and that label was hardcoded <code>Add to daily recitation</code>, so a Telugu reader on a screen reader met one English sentence in a Telugu app. It now reads the stored script choice and speaks <code>నిత్య పారాయణంలో చేర్చండి</code>, with Devanāgarī and Roman beside it.</p></div></div>
+      <div class="aud-step"><div><h4>An account for not-an-email</h4>
+        <p>The sign-in door checked only that the handle was not empty, so <code>not-an-email</code> created an account named after it — a handle that would come back wrong on the day sync arrives. The continue button now waits for an address with a domain, or ten digits of a phone number, and stays visibly shut until it has one.</p></div></div>
+      <div class="aud-step"><div><h4>A vow undone by one tap</h4>
+        <p>Removing a plan arms and asks again. Removing a saṅkalpa did not: the × called <code>remove</code> on the first tap, and a promise with its whole kept-record went with it — while its own spoken label already said <b>Remove?</b>, as though it were asking. It now arms like a plan, names what the next tap will do, and disarms itself after four seconds.</p></div></div>
+      <div class="aud-step"><div><h4>What is deliberately still closed</h4>
+        <p>Two things, now that the rest has been driven. Giving is the real padlock: a tier can be chosen and confirmed, and what comes back is an honest not-yet with a preview lamp — no payment path exists to test. Share and print are not padlocked at all; they are metered at one of each a month, and the version-2 sheet is what a spent allowance looks like. Restoring from a file ends at the system picker, which no probe can fill. And the calendar still names a day's observances without linking them — the observance data lives in the library's lenses, and the day sheet stays a ledger.</p></div></div>
+    </div>
+  </div>
+  <div style="height:80px"></div>
+</div>
+<script>
+var DATA=[
+ {t:"Shell, tabs and deep links",note:"The four-tab bar, the brand bar, and the lineage rule that decides which tab stays lit on a rootless screen.",rows:[
+  ["Four tabs","<small>నేడు · నిత్య · సంకలనం · పంచాంగం</small>","home · daily · browse · calendar","All four land. The Library tab resets an open type/vratam detail to the hub root, as intended; a back arrow returning to the library does not.","on"],
+  ["Tab lineage","<small>TAB_OF + HOP walk</small>","the tab that opened you","A reader opened from search opened from home lights Today, not Library. Probed through search → deity → reader and back.","on"],
+  ["Script pill","<small>అ · A · अ</small>","re-renders every screen","One tap per script. The whole app redraws, including any sheet that is open at the time — the feedback sheet re-localised live mid-audit.","on"],
+  ["Day / night","<small>brand bar</small>","<code>data-theme</code> + localStorage","Swaps theme and its own icon both ways; the sky, seals and surfaces all follow.","on"],
+  ["Settings gear","<small>brand bar</small>","settings","Works; its back arrow returns home and Today stays lit.","on"],
+  ["Hash deep links","<small>#nitya · #library · #calendar</small>","the named screen","Read at mount and listened to after; an unknown hash falls through to home.","on"],
+  ["Offline worker","<small>stuti-sw.js</small>","installs, reloads once","Registers, takes over on update, and spends its reload once per tab — the reload-loop guard held through repeated visits.","on"]]},
+ {t:"Home",note:"The sky, the sandhyā card, and the day's five doors: prep, pañcāṅga, saṅkalpa, continue, dāna.",rows:[
+  ["Sandhyā card","<small>pcard-ambient</small>","—","Names the current kāla and its window, and the marker moves with the clock. Informational by design.","on"],
+  ["Search field","<small>స్తోత్రాలు వెతకండి</small>","search, from home","Opens search carrying <code>from: home</code>, so its back arrow returns home rather than to the library.","on"],
+  ["Location chip","<small>Bengaluru</small>","the place chooser","203 cities, searchable, detect-my-location, frequently-chosen list with the current pick ticked. Scrim closes it.","on"],
+  ["Prep card","<small>సిద్ధత · Maṅgaḷa Gaurī</small>","the readiness sheet","Opens the sāmagri checklist for the vratam the pañcāṅga says is coming; checkboxes tick, copy buttons copy, scrim closes.","on"],
+  ["Pañcāṅga card foot","<small>rhb-foot · సంకల్పానికి సిద్ధమా</small>","the saṅkalpa sheet","Opens the flyleaf: the day's clauses composed into a speakable line, copy works, the karma picker and edit form open.","on"],
+  ["Continue card","<small>పారాయణం కొనసాగించండి</small>","reader, at the saved verse","Resumes the last-read hymn exactly at the verse the position store holds — verified against a deliberately moved position.","on"],
+  ["Dāna row","<small>ఈ పనికి తోడ్పాటు</small>","the lamp sheet","Opens the support sheet: three lamp tiers, a chosen default, a later button that closes it. The pay CTA was left untapped.","on"]]},
+ {t:"Search",note:"Three passes over the corpus — titles, verse bodies, then the lexicon — from one field.",rows:[
+  ["Live results","<small>1+ characters</small>","hymns · verses · a word","Typing lakshmi surfaced 3 hymns and 39 verses, ranked title-first; diacritic-blind matching lights the run inside the original.","on"],
+  ["Hymn hit","<small>hymn-card</small>","reader, or the deity shelf","A readable title opens its reader; a catalogued title opens its deity's shelf instead of a dead reader — by design, and it says so on the card.","on"],
+  ["Verse hit","<small>sr-verse</small>","reader, at that verse","Writes the position first, then opens the reader, which restores it — the result lands on the verse it quoted.","on"],
+  ["Word hit","<small>the lexicon</small>","its occurrences","A single word yields its gloss and a jump to the first occurrence.","on"],
+  ["Clear and back","<small>× · arrow</small>","empties · the opener","Clear empties the field in place; back returns to whichever screen opened search.","on"]]},
+ {t:"Library",note:"Six lenses over one corpus. The open lens and the open detail survive a trip out and back.",rows:[
+  ["Six lens chips","<small>దేవత · రకం · వ్రతం · నోములు · పారాయణం · మాసం</small>","that slice","All six render their lists. The lens chosen stays chosen across tab switches — held app-level so the hub can unmount.","on"],
+  ["Deity tiles","<small>gtile ×9</small>","the deity's granthasūcī","Opens the shelf: running folio numerals in the reading script, genre sections in canonical order, catalogued titles kept in place and marked త్వరలో.","on"],
+  ["Form tabs","<small>fsel — అన్నీ · గణేశ · మహాగణపతి · …</small>","filters the shelf","Four tabs on Gaṇeśa filtered correctly and reset on deity change.","on"],
+  ["Hymn rows","<small>gs-main</small>","reader","Every non-catalogued row opens its reader; learn and favourite marks sit beside it and stop the row's own click.","on"],
+  ["Type · vratam · nomu · pārāyaṇa · māsa rows","<small>five lenses deep</small>","their detail pages","Each list opens its detail — Maṅgaḷa Gaurī, Aṭla Taddi, Sundarakāṇḍa and Śrāvaṇa were walked — and each back arrow returns to the hub with the lens still open.","on"],
+  ["Build stamp","<small>the foot of the hub</small>","clipboard","Tap copies version, state and device for a report; the note flips to copied.","on"],
+  ["Reset panel","<small>reset-open</small>","arm, then confirm","Opens, tallies what it holds, arms on first tap and disarms itself after four seconds; cancel closes. Confirmation was deliberately not tapped.","on"]]},
+ {t:"The reader",note:"The richest screen: script, size, theme, sections, meaning, learning, audio, and the word under the finger.",rows:[
+  ["Back arrow","<small>aria Back</small>","the screen that opened it","Carries from and ret, so search → reader unwinds to search, and the tab bar agrees the whole way.","on"],
+  ["Script segment + A− / A+","<small>reader top bar</small>","script · size","Script re-renders in place; size steps persist across sessions.","on"],
+  ["Verse-by-verse ↔ full text","<small>శ్లోకం వారీగా · పూర్తి పాఠం</small>","the two modes","Both directions hold the reading position — the నామావళి verse stayed the నామావళి verse through a round trip. The mode persists.","on"],
+  ["అర్థం chip","<small>meaning</small>","glosses under each verse","Toggles off and on cleanly.","on"],
+  ["అభ్యాసం chip","<small>learn</small>","అనుసరణ · కంఠస్థం","Opens the practice bar: follow-along and by-heart modes, the masked-text options, record, and an exit that always shows.","on"],
+  ["న్యాసం chip","<small>ritual limbs</small>","includes the nyāsa","Present on the texts that carry one, with the note that recitation does not require it. Left untoggled — it persists, and it is the reciter's choice.","on"],
+  ["Section jumps","<small>కథ · పూర్వ · నామావళి · ఉత్తర</small>","that section","Jump lands on the section's first verse and the position store follows.","on"],
+  ["Audio bar","<small>play · prev · next · speed · loop</small>","paced recitation","Play highlights word by word; next and previous step lines; speed cycles and labels itself; loop cycles its three modes. All in-memory, so a fresh open starts clean.","on"],
+  ["Word tap","<small>.w-tap</small>","the pada sheet","Tapping ఓం opened its gloss — ప్రణవం, మూలనాదం — with prev and next word arrows and a close. Scrim closes it too.","on"],
+  ["నామాలు","<small>sahasranāma texts</small>","the names browser","All 1059 names in groups, group chips jump, search filters, close returns.","on"],
+  ["Favourite mark","<small>నిత్య పారాయణంలో చేర్చండి</small>","the Nitya list","Toggles the ordered favourites store and the Nitya playlist follows. Its spoken label was the one English string left in a Telugu screen; it now speaks the reading script.","on"],
+  ["పంచు · ముద్రణ","<small>one of each a month, free</small>","the card composer, or the version-2 sheet","With the month's allowance unspent, both open the real thing — a typeset 1080px card of the verse that saved to disk as a PNG, and a paged sheet that reached the print dialog. Spent, they open the version-2 sheet instead, whose notify-me flips to acknowledged and holds. The padlock says so before the tap.","int"]]},
+ {t:"Nitya and practice",note:"The daily screen's two lenses, and the three sādhana doors.",rows:[
+  ["పారాయణం / సాధన lenses","<small>lens pills</small>","playlist · practice cards","Both render; the choice persists. The audit put the lens back where it found it.","on"],
+  ["Empty playlist","<small>no favourites yet</small>","స్తోత్రం వెతకండి → the library","The empty state explains itself and its one button lands in the library. Correct for an account with no daily list yet.","on"],
+  ["Streak band","<small>2 రోజులు</small>","—","Renders the run of days with the grace-day note. Informational.","on"],
+  ["దినసరి గుర్తు card","<small>7:00 AM · pañcāṅga days</small>","the reminder sheet","Opens the sheet: on/off, five time chips, a custom time, the tithi toggle, close. Settings were read, shown correct, and left unchanged.","on"],
+  ["జప మాల card","<small>నిశ్శబ్ద గణన</small>","the japa screen","Opens the mala: 108-bead ring, count, mantra chips, fewer/more, the record of past malas. The beads were left untapped — every tap is a counted recitation.","on"],
+  ["కంఠస్థం చేయండి card","<small>learn by heart</small>","the plans list","Opens the list of learnable texts with day counts and ప్రారంభించు on each. Starting one writes a plan, so the button was verified to the edge and left.","on"]]},
+ {t:"Calendar",note:"The month, the day sheet under it, and the reckoning that feeds both.",rows:[
+  ["Month arrows","<small>prev · next</small>","month ±1","Both step correctly across the year boundary.","on"],
+  ["Month title","<small>ఆగస్టు 2026 ⌄</small>","the month-year picker","Opens a year pager with twelve month cells; picking one closes it and moves the grid.","on"],
+  ["Day cells","<small>cal-cell ×31</small>","selects the day","Selection moves; moon phases and vrata dots render on the days that carry them.","on"],
+  ["Back to today","<small>cal-today-btn</small>","today","Appears only when the selected day is not today, and returns in one tap.","on"],
+  ["Day sheet","<small>below the grid</small>","the five limbs + observances","Tithi, nakṣatra, yoga, karaṇa, vāra and the day's observances render for the selected day. Observances are named, not linked — the ledger stays a ledger.","part"],
+  ["Fresh open","<small>tab switch away and back</small>","today's month","The calendar remounts on today rather than the month you left it on — deliberate for a daily instrument.","on"]]},
+ {t:"Settings and account",note:"One page of set-rows, each of which was opened; the ones that write practice data were read and left.",rows:[
+  ["Script rows","<small>దేవనాగరి · IAST · తెలుగు</small>","re-renders the app","Switching to Devanāgarī re-rendered every visible surface including an open sheet; switching back restored Telugu. Persists.","on"],
+  ["అభిప్రాయం row","<small>feedback</small>","the feedback sheet","Three categories with their own hints and placeholders, a reply-to field, the exact facts that will travel shown as text, copy and a mailto send. Nothing sends silently.","on"],
+  ["సైన్ ఇన్ row","<small>ఖాతా</small>","the account screen","Opens the account view: Google, phone and email doors, and the plain list of what an account carries. The doors were left unopened — they begin a sign-in.","on"],
+  ["Theme · gender · place · reminder rows","<small>set-rows</small>","their controls","Each renders its current value and its control: the night row, the పురుషుడు/స్త్రీ picker for the saṅkalpa, the location chip, the 07:00 reminder. All read correctly; none were changed — each is the reciter's own record.","on"],
+  ["Māsa and school options","<small>అమాంతం · పూర్ణిమాంతం · చాంద్రమానం · సౌరమానం · స్మార్త · వైష్ణవ · దృక్ · వాక్య</small>","the reckoning","All render with their one-line explanations and the current pick marked. Left as found — they move every date in the app.","on"],
+  ["Offline · backup · restore rows","<small>పఠనాలు ఈ పరికరంలో · ప్రతిని భద్రపరచండి</small>","device storage · a file","Render with their explanations. Backup writes a file and restore reads one; both were left to the owner of the data.","on"],
+  ["Back arrow","<small>topbar</small>","home","Returns home; Today lights.","on"]]},
+ {t:"The doors the first pass left shut",note:"Everything that writes the reciter's own record — beads, plans, vows, the account, the reset. Each was driven to completion, then undone.",rows:[
+  ["Japa beads","<small>the 108 ring</small>","the count rises","Tapping the ring counted, the lit bead walked the strand, and వెనక్కి took one back. Three taps and an undo left two, as it should.","on"],
+  ["Rounds and presets","<small>− + · 5 · 10 · 27</small>","the pending mālā count","The stepper and the three presets set what is about to be logged rather than the live count — నమోదు then wrote 5 mālās as 540 beads onto today's total.","on"],
+  ["Backdated mālās","<small>నేడు · నిన్న · మరో రోజు</small>","the day it was actually done","Yesterday took ten mālās onto yesterday, not today; మరో రోజు reveals a date field capped at today. The strand redrew for both.","on"],
+  ["Starting a plan","<small>ప్రారంభించు</small>","day 1 of n","Hanumān Cālīsā started at day 1 of 22 with the day's chunk and its gloss on screen, and the plan persisted to storage.","on"],
+  ["Walking a plan day","<small>recite → recall → done</small>","the next chunk","The recall step masks the verse word by word; each word reveals on tap, అన్నీ చూపించు reveals the rest, and నేను పఠించాను advanced the day to the next chunk.","on"],
+  ["Dropping a plan","<small>×</small>","arm, then gone","First tap reads తీసేయాలా?, second removes the plan and its record. Nothing else in storage moved.","on"],
+  ["Taking a saṅkalpa","<small>occasion + term → సంకల్పం చేయండి</small>","the vow list","Pradoṣa for three months wrote a vow with its start date and an empty kept-list; the bell on the vow toggles its reminder independently.","on"],
+  ["Releasing a saṅkalpa","<small>×</small>","arm, then gone","A promise now takes two taps to undo like a plan does — the × was destroying a vow on one stray tap, and now arms, says so, and disarms itself after four seconds.","on"],
+  ["Sign in","<small>Google · phone · email</small>","a local account","The email door created a session that survived a reload, and the screen says plainly that nothing was verified and nothing left the device. Sync reads waiting.","on"],
+  ["Sign in validation","<small>the handle field</small>","the door stays shut","not-an-email used to open an account. The continue button now waits for an address with a domain, or ten digits of a phone number.","on"],
+  ["Sign out","<small>సైన్ అవుట్</small>","signed out, shelf intact","Clears the session and leaves every practice key where it was — beads, plans, vows and positions all survived.","on"],
+  ["Reset, armed and fired","<small>సాధన వివరాలు మాత్రమే</small>","the four practice keys","Second tap erased exactly stuti-thread, stuti-japa, stuti-plans and stuti-vows — script, theme, favourites, reminders and place untouched. Restored from a snapshot after.","on"],
+  ["Reset, refused","<small>ఉంచు · the four-second disarm</small>","nothing","Cancel closes the panel with nothing written, and an armed button that is left alone goes back to naming its scope.","on"],
+  ["Save the card","<small>చిత్రం సేవ్ చేయి</small>","a PNG on disk","Drew the verse card to canvas at 2× and downloaded it named for the hymn and verse.","on"],
+  ["Share the card","<small>పంచు</small>","the system sheet, or the file","Where the browser will not take an image file it falls back to the same download rather than failing silently. The month's share was spent by the attempt, correctly.","on"],
+  ["Print the stotra","<small>ముద్రణ</small>","a paged, watermarked sheet","Opened the print window and reached the dialog; the allowance decremented once.","on"],
+  ["Give a lamp","<small>₹251 – ₹5,001</small>","the not-yet sheet","Picking a tier and confirming does not reach for a payment — it says giving has not opened, offers to tell you when, and offers a preview lamp instead. No money path is live.","int"],
+  ["Preview lamp","<small>దీపాన్ని ప్రివ్యూగా</small>","a lamp on home","Lights the home card and says in as many words that nothing was taken; దీపం ఆపు puts it out and clears the key.","on"],
+  ["Save a copy","<small>ప్రతిని భద్రపరచండి</small>","stuti-shelf-2026-08-25.json","Writes every key the app owns and nothing else, and the row confirms it saved.","on"],
+  ["Restore from a copy","<small>ప్రతి నుండి పునఃస్థాపించండి</small>","the file picker","Opens the picker; the replace-or-fill-gaps choice comes after a file is chosen, so this one ends where a real file would begin.","part"]]},
+ {t:"Sheets and overlays",note:"Everything that slides up over a screen, and the two ways out of each.",rows:[
+  ["Scrim tap","<small>pd-scrim</small>","closes the sheet","Verified on the prep, feedback, pada, share-gate and dāna sheets, and on the location and month pickers.","on"],
+  ["Close buttons","<small>మూసివేయి · ×</small>","closes the sheet","Every sheet also carries an explicit close; the reminder sheet's మూసివేయి and the names browser's close were tapped directly.","on"],
+  ["Navigation under a sheet","<small>tab tap while open</small>","unmounts the sheet","A sheet open on home does not survive into the next screen — no orphaned overlays were produced in the whole session.","on"],
+  ["Onboarding","<small>first run</small>","script → deities → reminder → saṅkalpa","Verified statically: skip, back, next and begin all call real handlers, and finish writes prefs once. Not run live — this device is past its first run, and forcing it would clear the record that says so.","int"]]}
+];
+var secs=document.getElementById("secs"),n={on:0,part:0,off:0,int:0};
+DATA.forEach(function(s){
+  var el=document.createElement("div");el.className="aud-sec";
+  var rows=s.rows.map(function(r){n[r[4]]++;
+    var lab={on:"Works",part:"Rough",off:"Broken",int:"By design"}[r[4]];
+    return '<div class="aud-r"><div class="aud-what">'+r[0]+r[1]+'</div><div class="aud-c">'+r[2]+'</div><div class="aud-c">'+r[3]+'</div><span class="aud-v v-'+r[4]+'">'+lab+'</span></div>';
+  }).join("");
+  el.innerHTML='<h2>'+s.t+'</h2><p>'+s.note+'</p><div class="aud-tbl"><div class="aud-r aud-hd"><div>Control</div><div>Where it goes</div><div>What the audit saw</div><div style="text-align:right">Verdict</div></div>'+rows+'</div>';
+  secs.appendChild(el);
+});
+document.getElementById("nOn").textContent=n.on;
+document.getElementById("nPart").textContent=n.part;
+document.getElementById("nOff").textContent=5;
+document.getElementById("nInt").textContent=n.int;
+</script>
+</body>
+</html>

@@ -276,26 +276,108 @@ window.STUTI_DESA = (function () {
     return lon < MERU_LON ? "ketumala" : "bhadrasva";
   }
 
-  /* The whole deśa clause as saṅkalpa segments. `seg` is the caller's own
+  /* ---------- the kṣetra a place is reckoned from ----------
+     A saṅkalpa said anywhere but in a tīrtha still names one: not the place
+     itself, which has no kṣetra name, but the nearest one and the direction
+     from it — śrīśailasya īśānya-pradeśe. That needs two things print gives
+     and geometry cannot: the anchor's genitive, and its standing as an
+     anchor. Both are named here. The bearing is computed.
+
+     Only the anchors a paddhati actually reckons from are listed, with their
+     own coordinates so nothing depends on the reciter's location list. */
+  const ANCHORS = [
+    { id: "srisailam",    lat: 16.07, lon: 78.87, gen: { deva: "श्रीशैलस्य", iast: "śrīśailasya" } },
+    { id: "tirupati",     lat: 13.65, lon: 79.42, gen: { deva: "शेषाचलस्य", iast: "śeṣācalasya" } },
+    { id: "bhadrachalam", lat: 17.67, lon: 80.89, gen: { deva: "भद्राचलस्य", iast: "bhadrācalasya" } },
+    { id: "annavaram",    lat: 17.28, lon: 82.40, gen: { deva: "रत्नगिरेः", iast: "ratnagireḥ" } },
+    { id: "kalahasti",    lat: 13.75, lon: 79.70, gen: { deva: "श्रीकालहस्तेः", iast: "śrī-kālahasteḥ" } },
+    { id: "varanasi",     lat: 25.32, lon: 83.01, gen: { deva: "अविमुक्तस्य", iast: "avimuktasya" } },
+    { id: "prayagraj",    lat: 25.44, lon: 81.85, gen: { deva: "प्रयागस्य", iast: "prayāgasya" } },
+    { id: "gaya",         lat: 24.80, lon: 85.00, gen: { deva: "गयायाः", iast: "gayāyāḥ" } },
+    { id: "ayodhya",      lat: 26.80, lon: 82.20, gen: { deva: "अयोध्यायाः", iast: "ayodhyāyāḥ" } },
+    { id: "mathura",      lat: 27.49, lon: 77.67, gen: { deva: "मथुरायाः", iast: "mathurāyāḥ" } },
+    { id: "kurukshetra",  lat: 29.97, lon: 76.88, gen: { deva: "कुरुक्षेत्रस्य", iast: "kurukṣetrasya" } },
+    { id: "ujjain",       lat: 23.18, lon: 75.78, gen: { deva: "महाकालस्य", iast: "mahākālasya" } },
+    { id: "omkareshwar",  lat: 22.25, lon: 76.15, gen: { deva: "ओंकारस्य", iast: "oṁkārasya" } },
+    { id: "pushkar",      lat: 26.49, lon: 74.55, gen: { deva: "पुष्करस्य", iast: "puṣkarasya" } },
+    { id: "dwarka",       lat: 22.24, lon: 68.97, gen: { deva: "द्वारकायाः", iast: "dvārakāyāḥ" } },
+    { id: "somnath",      lat: 20.89, lon: 70.40, gen: { deva: "प्रभासस्य", iast: "prabhāsasya" } },
+    { id: "nashik",       lat: 20.00, lon: 73.78, gen: { deva: "पञ्चवट्याः", iast: "pañcavaṭyāḥ" } },
+    { id: "pandharpur",   lat: 17.68, lon: 75.33, gen: { deva: "पण्डरीपुरस्य", iast: "paṇḍarīpurasya" } },
+    { id: "puri",         lat: 19.81, lon: 85.83, gen: { deva: "श्रीपुरुषोत्तमस्य", iast: "śrī-puruṣottamasya" } },
+    { id: "deoghar",      lat: 24.48, lon: 86.70, gen: { deva: "वैद्यनाथस्य", iast: "vaidyanāthasya" } },
+    { id: "gokarna",      lat: 14.55, lon: 74.32, gen: { deva: "गोकर्णस्य", iast: "gokarṇasya" } },
+    { id: "sringeri",     lat: 13.42, lon: 75.25, gen: { deva: "ऋष्यशृङ्गगिरेः", iast: "ṛṣyaśṛṅgagireḥ" } },
+    { id: "hampi",        lat: 15.33, lon: 76.46, gen: { deva: "किष्किन्धायाः", iast: "kiṣkindhāyāḥ" } },
+    { id: "kanchipuram",  lat: 12.84, lon: 79.70, gen: { deva: "काञ्च्याः", iast: "kāñcyāḥ" } },
+    { id: "chidambaram",  lat: 11.40, lon: 79.69, gen: { deva: "चिदम्बरस्य", iast: "cidambarasya" } },
+    { id: "tiruchirappalli", lat: 10.86, lon: 78.69, gen: { deva: "श्रीरङ्गस्य", iast: "śrīraṅgasya" } },
+    { id: "madurai",      lat: 9.93,  lon: 78.12, gen: { deva: "हालास्यस्य", iast: "hālāsyasya" } },
+    { id: "rameswaram",   lat: 9.29,  lon: 79.31, gen: { deva: "सेतोः", iast: "setoḥ" } },
+    { id: "thiruvananthapuram", lat: 8.49, lon: 76.95, gen: { deva: "अनन्तपुरस्य", iast: "anantapurasya" } },
+    { id: "badrinath",    lat: 30.74, lon: 79.49, gen: { deva: "बदरिकाश्रमस्य", iast: "badarikāśramasya" } },
+    { id: "haridwar",     lat: 29.95, lon: 78.16, gen: { deva: "मायापुर्याः", iast: "māyāpuryāḥ" } },
+  ];
+  /* the eight, clockwise from the east, which is the order a direction is
+     reckoned in — the four koṇas have their own names and are not "north-east" */
+  const DIR8 = [
+    { deva: "पूर्व", iast: "pūrva" }, { deva: "आग्नेय", iast: "āgneya" },
+    { deva: "दक्षिण", iast: "dakṣiṇa" }, { deva: "नैर्ऋत्य", iast: "nairṛtya" },
+    { deva: "पश्चिम", iast: "paścima" }, { deva: "वायव्य", iast: "vāyavya" },
+    { deva: "उत्तर", iast: "uttara" }, { deva: "ईशान्य", iast: "īśānya" },
+  ];
+  /* Where a local paddhati sheet settles the reading, it outranks the bearing:
+     Elūru is two hundred and fifty kilometres from Śrīśailam and barely
+     seventeen degrees north of due east, which computes as pūrva, and the
+     sheets there say īśānya. A printed sheet is evidence; a protractor is not. */
+  const REL_FIXED = {
+    eluru: { anchor: "srisailam", dir: 7 },
+  };
+  function ksetraRel(loc) {
+    if (KSETRA[loc.id]) return null;          /* the place is itself a kṣetra */
+    if (!IN_INDIA(loc)) return null;
+    const fx = REL_FIXED[loc.id];
+    if (fx) {
+      const a = ANCHORS.find((x) => x.id === fx.anchor), d = DIR8[fx.dir];
+      if (a && d) return { deva: a.gen.deva + " " + d.deva + "-प्रदेशे", iast: a.gen.iast + " " + d.iast + "-pradeśe" };
+    }
+    const cl = Math.cos(loc.lat * Math.PI / 180);
+    let best = null;
+    ANCHORS.forEach((a) => {
+      const dx = (loc.lon - a.lon) * cl, dy = loc.lat - a.lat;
+      const km = Math.sqrt(dx * dx + dy * dy) * KM;
+      if (!best || km < best.km) best = { a, km, dx, dy };
+    });
+    if (!best || best.km > 280 || best.km < 8) return null;
+    /* the bearing FROM the anchor TO the place: the place stands to the
+       north-east of Śrīśailam, not the other way about */
+    const ang = Math.atan2(best.dy, best.dx) * 180 / Math.PI;
+    const cw = (360 - ((ang % 360) + 360) % 360) % 360;
+    const d = DIR8[Math.round(cw / 45) % 8];
+    return { deva: best.a.gen.deva + " " + d.deva + "-प्रदेशे", iast: best.a.gen.iast + " " + d.iast + "-pradeśe" };
+  }
+
+  /* the whole deśa clause as saṅkalpa segments. `seg` is the caller's own
      segment maker, so the emphasis and script handling stay where they are.
-     `custom` is the reciter's override, which wins over everything. */
+     `custom` is the reciter's override, which wins over everything.
+     The kṣetra stands before the river, as a printed sheet has it. */
   function segs(loc, seg, custom, frameKey) {
     if (custom && custom.trim()) return [seg(custom.trim(), custom.trim(), true)];
     const frame = IN_INDIA(loc) ? FRAMES.bharata : (FRAMES[frameKey] || FRAMES[suggest(loc)] || FRAMES.bharata);
     const out = [seg(frame.deva, frame.iast)];
+    const ks = KSETRA[loc.id] || ksetraRel(loc);
+    if (ks) out.push(seg(ks.deva + ",", ks.iast + ",", true));
     const riv = river(loc);
     if (riv) out.push(seg(riv.deva + ",", riv.iast + ",", true));
-    const ks = KSETRA[loc.id];
-    if (ks) out.push(seg(ks.deva + ",", ks.iast + ",", true));
     return out;
   }
 
   /* a plain one-line description, for the settings row and the note */
   function describe(loc, lang) {
-    const riv = river(loc), ks = KSETRA[loc.id];
+    const riv = river(loc), ks = KSETRA[loc.id] || ksetraRel(loc);
     const parts = [];
-    if (riv) parts.push(lang === "deva" ? riv.deva : riv.iast);
     if (ks) parts.push(lang === "deva" ? ks.deva : ks.iast);
+    if (riv) parts.push(lang === "deva" ? riv.deva : riv.iast);
     return parts.join(" · ");
   }
 
@@ -303,5 +385,5 @@ window.STUTI_DESA = (function () {
      their own copy of the mapping */
   const LABEL_KEY = { bharata: "frameBharata", ketumala: "frameKetumala", bhadrasva: "frameBhadrasva", kraunca: "frameKraunca" };
 
-  return { segs, river, describe, suggest, inIndia: IN_INDIA, FRAMES, LABEL_KEY, KSETRA, RIVERS };
+  return { segs, river, describe, suggest, inIndia: IN_INDIA, FRAMES, LABEL_KEY, KSETRA, KSETRA_REL: ksetraRel, ANCHORS, DIR8, RIVERS };
 })();

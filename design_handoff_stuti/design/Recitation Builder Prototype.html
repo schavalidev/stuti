@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Recitation Builder — Prototype</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Marcellus&family=Mukta:wght@300;400;500;600;700&family=Noto+Sans+Telugu:wght@400;500;600;700&display=swap');
+:root{
+  --font-display:'Marcellus',Georgia,serif;
+  --font-ui:'Mukta','Noto Sans Telugu',system-ui,sans-serif;
+  --font-telugu:'Noto Sans Telugu','Mukta',sans-serif;
+  --bg:#F7EFE2;--bg-warm:#F2E6D2;--surface:#FFFDF8;--surface-2:#FBF4E8;
+  --ink:#2B2017;--ink-soft:#584B3E;--ink-faint:#6F6356;
+  --line:rgba(43,32,23,0.10);--line-2:rgba(43,32,23,0.06);
+  --gold:#B07A2B;--gold-deep:#8A5A18;
+  --shadow:0 20px 50px -22px rgba(58,40,20,0.40),0 4px 14px -8px rgba(58,40,20,0.30);
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);font-family:var(--font-ui);color:var(--ink)}
+.stage{max-width:430px;margin:0 auto;min-height:100vh;background:var(--bg);position:relative;overflow:hidden}
+.eyebrow{font-size:12px;letter-spacing:.09em;text-transform:uppercase;color:var(--ink-faint);font-weight:600}
+.topbar{padding:26px 20px 14px;display:flex;flex-direction:column;gap:4px}
+.topbar h1{font-family:var(--font-display);font-size:26px;margin:0;font-weight:400}
+.screen{display:none}
+.screen.on{display:block}
+
+/* ---- Nitya cards ---- */
+.nitya-list{padding:6px 16px 100px;display:flex;flex-direction:column;gap:12px}
+.nitya-card{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:16px 16px 14px;box-shadow:var(--shadow);position:relative;--hue:36;--accent:oklch(0.58 0.13 var(--hue));--accent-soft:oklch(0.92 0.045 var(--hue));--accent-ink:oklch(0.42 0.12 var(--hue))}
+.nitya-card.lalita{--hue:340}
+.nitya-card.vishnu{--hue:230}
+.nitya-top{display:flex;justify-content:space-between;align-items:flex-start;gap:10px}
+.nitya-title{font-family:var(--font-display);font-size:19px}
+.nitya-label{display:inline-block;margin-top:3px;font-size:12px;color:var(--accent-ink);background:var(--accent-soft);border-radius:100px;padding:2px 9px;font-weight:600}
+.nitya-edit{border:none;background:transparent;color:var(--ink-faint);font-size:13px;font-family:var(--font-ui);cursor:pointer;padding:6px 4px}
+.nitya-chips{display:flex;flex-wrap:wrap;gap:6px;margin-top:12px}
+.nitya-chip{font-size:12px;padding:4px 10px;border-radius:100px;background:var(--surface-2);color:var(--ink-soft);border:1px solid var(--line)}
+.nitya-chip.core{background:var(--accent-soft);color:var(--accent-ink);border-color:transparent;font-weight:600}
+.nitya-start{margin-top:14px;width:100%;border:none;border-radius:12px;padding:12px;font-family:var(--font-ui);font-weight:600;font-size:14.5px;background:var(--accent);color:#fff;cursor:pointer}
+.add-card{border:1.5px dashed var(--line);border-radius:16px;padding:22px 16px;text-align:center;color:var(--ink-faint);cursor:pointer;font-size:14px;background:transparent}
+.add-card b{display:block;color:var(--ink-soft);font-family:var(--font-display);font-size:16px;font-weight:400;margin-bottom:3px}
+.lib-card{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:16px;--hue:36;--accent:oklch(0.58 0.13 var(--hue));--accent-soft:oklch(0.92 0.045 var(--hue));--accent-ink:oklch(0.42 0.12 var(--hue))}
+.lib-card.lalita{--hue:340}.lib-card.vishnu{--hue:230}
+.lib-title{font-family:var(--font-display);font-size:18px;margin-bottom:12px}
+.lib-actions{display:flex;gap:8px}
+.lib-actions .btn{padding:11px}
+.lib-namavali{background:transparent;border:1.5px solid var(--accent-soft);color:var(--accent-ink)}
+
+/* ---- Sheet ---- */
+.sheet-wrap{position:absolute;inset:0;z-index:20;display:none}
+.sheet-wrap.on{display:block}
+.scrim{position:absolute;inset:0;background:rgba(30,20,10,.38)}
+.sheet{position:absolute;left:0;right:0;bottom:0;max-height:92%;background:var(--bg);border-radius:22px 22px 0 0;box-shadow:0 -10px 40px rgba(0,0,0,.25);display:flex;flex-direction:column;animation:up .28s ease;--hue:36;--accent:oklch(0.58 0.13 var(--hue));--accent-soft:oklch(0.92 0.045 var(--hue));--accent-ink:oklch(0.42 0.12 var(--hue))}
+@keyframes up{from{transform:translateY(24px);opacity:.4}to{transform:translateY(0);opacity:1}}
+.grip{width:38px;height:4px;background:var(--line);border-radius:4px;margin:10px auto 2px}
+.sheet-head{padding:6px 20px 12px;border-bottom:1px solid var(--line-2)}
+.sheet-head .eyebrow{color:var(--accent-ink)}
+.sheet-head h2{font-family:var(--font-display);font-size:22px;margin:2px 0 0;font-weight:400}
+.sheet-body{padding:16px 20px 26px;overflow-y:auto;flex:1}
+.sheet-x{position:absolute;top:14px;right:16px;border:none;background:var(--surface-2);width:30px;height:30px;border-radius:50%;font-size:16px;color:var(--ink-soft);cursor:pointer}
+
+.presets{display:flex;gap:8px;overflow-x:auto;padding-bottom:4px;margin-bottom:18px}
+.preset{flex:0 0 auto;padding:9px 14px;border-radius:100px;border:1px solid var(--line);background:var(--surface);font-size:13.5px;font-family:var(--font-ui);color:var(--ink-soft);cursor:pointer;white-space:nowrap}
+.preset.on{background:var(--accent);color:#fff;border-color:transparent;font-weight:600}
+
+.sec-list{display:flex;flex-direction:column;border-top:1px solid var(--line-2)}
+.sec-row{display:flex;align-items:center;justify-content:space-between;padding:13px 2px;border-bottom:1px solid var(--line-2)}
+.sec-row.core{opacity:1}
+.sec-name{font-size:15px}
+.sec-sub{font-size:12px;color:var(--ink-faint);margin-top:1px}
+.sec-locked{font-size:11px;color:var(--ink-faint);font-weight:600;text-transform:uppercase;letter-spacing:.05em}
+.toggle{width:42px;height:25px;border-radius:100px;background:var(--line);position:relative;border:none;cursor:pointer;flex:0 0 auto}
+.toggle .dot{position:absolute;top:2.5px;left:2.5px;width:20px;height:20px;border-radius:50%;background:var(--surface);box-shadow:0 1px 3px rgba(0,0,0,.25);transition:left .16s}
+.toggle.on{background:var(--accent)}
+.toggle.on .dot{left:19.5px}
+.toggle:disabled{cursor:default}
+
+.sheet-actions{display:flex;gap:10px;margin-top:22px}
+.btn{flex:1;border:none;border-radius:12px;padding:13px;font-family:var(--font-ui);font-weight:600;font-size:14.5px;cursor:pointer}
+.btn-primary{background:var(--accent);color:#fff}
+.btn-ghost{background:var(--surface-2);color:var(--ink-soft)}
+.label-edit{width:100%;margin-top:16px}
+.label-edit label{font-size:12px;color:var(--ink-faint);font-weight:600;display:block;margin-bottom:6px}
+.label-edit input{width:100%;padding:10px 12px;border:1px solid var(--line);border-radius:10px;font-family:var(--font-ui);font-size:14px;background:var(--surface)}
+.mode-seg{display:flex;gap:6px;margin-bottom:16px;background:var(--surface-2);border-radius:100px;padding:3px}
+.mode-seg button{flex:1;border:none;background:transparent;padding:8px 0;border-radius:100px;font-family:var(--font-ui);font-size:13px;font-weight:600;color:var(--ink-faint);cursor:pointer}
+.mode-seg button.on{background:var(--surface);color:var(--accent-ink);box-shadow:0 1px 4px rgba(0,0,0,.08)}
+.range-track{position:relative;padding:8px 2px 4px}
+.range-line{position:relative;display:flex;flex-direction:column;gap:0}
+.range-node{display:flex;align-items:center;gap:10px;padding:9px 2px;cursor:pointer;position:relative}
+.range-node .dot-node{width:11px;height:11px;border-radius:50%;background:var(--line);border:2px solid var(--surface);box-shadow:0 0 0 1px var(--line);flex:0 0 auto}
+.range-node.in .dot-node{background:var(--accent)}
+.range-node.edge .dot-node{background:var(--accent);box-shadow:0 0 0 3px var(--accent-soft)}
+.range-node .rn-bar{position:absolute;left:7px;top:-1px;bottom:-1px;width:2px;background:var(--line)}
+.range-node.in .rn-bar,.range-node.edge .rn-bar{background:var(--accent)}
+.range-node .rn-text{font-size:14.5px;color:var(--ink-soft)}
+.range-node.in .rn-text,.range-node.edge .rn-text{color:var(--ink);font-weight:600}
+.rn-tag{margin-left:auto;font-size:11px;font-weight:600;color:var(--accent-ink);background:var(--accent-soft);padding:2px 8px;border-radius:100px}
+.namavali-row{display:flex;align-items:center;justify-content:space-between;margin-top:16px;padding:12px 14px;background:var(--surface-2);border-radius:12px}
+.namavali-row .nr-name{font-size:14.5px}
+.namavali-row .nr-sub{font-size:12px;color:var(--ink-faint);margin-top:2px}
+
+/* ---- Reader mock ---- */
+.reader{position:absolute;inset:0;background:var(--surface);z-index:30;display:none;flex-direction:column}
+.reader.on{display:flex}
+.reader-top{display:flex;align-items:center;gap:10px;padding:14px 14px 8px}
+.reader-top button{border:none;background:var(--surface-2);width:32px;height:32px;border-radius:50%;font-size:15px;cursor:pointer}
+.reader-top .rt-title{font-family:var(--font-display);font-size:16px;flex:1}
+.rd-parts{display:flex;gap:6px;overflow-x:auto;padding:4px 14px 12px;border-bottom:1px solid var(--line-2)}
+.rd-part{flex:0 0 auto;padding:7px 12px;border-radius:100px;background:var(--surface-2);border:1px solid transparent;font-size:12.5px;color:var(--ink-soft);cursor:pointer;font-family:var(--font-ui)}
+.rd-part.on{background:var(--accent-soft);color:var(--accent-ink);font-weight:600;box-shadow:inset 0 0 0 1.5px color-mix(in oklab,var(--accent) 40%,transparent)}
+.reader-body{flex:1;overflow-y:auto;padding:20px 22px 60px;display:flex;flex-direction:column;align-items:center;text-align:center;gap:14px}
+.reader-sec-name{font-family:var(--font-display);font-size:22px;color:var(--accent-ink)}
+.reader-verse{font-size:17px;line-height:1.9;color:var(--ink);max-width:340px}
+.reader-hint{font-size:12.5px;color:var(--ink-faint);margin-top:6px}
+</style>
+</head>
+<body>
+<div class="stage" id="stage">
+
+  <div class="screen on" id="screen-nitya">
+    <div class="topbar"><div class="eyebrow">Nitya</div><h1>Daily recitations</h1></div>
+    <div class="nitya-list" id="nitya-list"></div>
+  </div>
+
+  <div class="screen" id="screen-library">
+    <div class="topbar"><button id="lib-back" style="align-self:flex-start;border:none;background:var(--surface-2);border-radius:100px;padding:6px 12px;font-size:13px;color:var(--ink-soft);cursor:pointer;margin-bottom:6px">← Nitya</button><div class="eyebrow">Library</div><h1>Add a recitation</h1></div>
+    <div class="nitya-list" id="library-list"></div>
+  </div>
+
+  <div class="sheet-wrap" id="sheet-wrap">
+    <div class="scrim" id="sheet-scrim"></div>
+    <div class="sheet">
+      <div class="grip"></div>
+      <button class="sheet-x" id="sheet-close">✕</button>
+      <div class="sheet-head">
+        <div class="eyebrow">Build this recitation</div>
+        <h2 id="sheet-title"></h2>
+      </div>
+      <div class="sheet-body">
+        <div class="mode-seg">
+          <button class="on" data-mode="toggle">Toggle each part</button>
+          <button data-mode="range">Pick a range</button>
+        </div>
+        <div id="mode-toggle">
+          <div class="presets" id="presets"></div>
+          <div class="sec-list" id="sec-list"></div>
+        </div>
+        <div id="mode-range" style="display:none">
+          <div class="range-track"><div class="range-line" id="range-line"></div></div>
+        </div>
+        <div class="label-edit">
+          <label>Label on the Nitya card</label>
+          <input id="label-input" placeholder="e.g. Quick, Full, Weekend">
+        </div>
+        <div class="sheet-actions">
+          <button class="btn btn-ghost" id="btn-start-now">Start now</button>
+          <button class="btn btn-primary" id="btn-pin">Add to Nitya</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="reader" id="reader">
+    <div class="reader-top">
+      <button id="reader-back">←</button>
+      <div class="rt-title" id="reader-title"></div>
+      <button id="reader-edit">⚙</button>
+    </div>
+    <div class="rd-parts" id="rd-parts"></div>
+    <div class="reader-body">
+      <div class="reader-sec-name" id="reader-sec-name"></div>
+      <div class="reader-verse" id="reader-verse"></div>
+      <div class="reader-hint">Tap a tab above to jump — only the sections you chose appear.</div>
+    </div>
+  </div>
+
+</div>
+<script>
+const SECTIONS = [
+  {key:"purva",   name:"Pūrvapīṭhikā",              sub:"the frame story",        core:false},
+  {key:"viniyoga",name:"Viniyoga",                  sub:"application formula",    core:false},
+  {key:"nyasa",   name:"Nyāsa · Pañcapūjā",          sub:"ritual placement",       core:false},
+  {key:"dhyanam", name:"Dhyānam",                    sub:"meditation verse",       core:false},
+  {key:"stotram", name:"Sahasranāma Stōtram",         sub:"the thousand-name hymn", core:true},
+  {key:"phala",   name:"Phalaśruti",                  sub:"fruits of recitation",  core:false},
+  {key:"ksama",   name:"Kṣamāprārthanā · Samarpaṇam", sub:"pardon and offering",   core:false},
+  {key:"namavali", name:"Nāmāvali",                    sub:"the 1000 names, said individually", core:false},
+];
+const LIBRARY = [
+  {stotraId:"vishnu", stotraName:"Viṣṇu Sahasranāma", hue:230},
+  {stotraId:"lalita", stotraName:"Lalitā Sahasranāma",  hue:340},
+];
+const PRESETS = [
+  {key:"full",   name:"Full",        set:["purva","viniyoga","nyasa","dhyanam","stotram","phala","ksama"]},
+  {key:"trad",   name:"Traditional", set:["viniyoga","dhyanam","stotram","phala","ksama"]},
+  {key:"quick",  name:"Quick",       set:["dhyanam","stotram","ksama"]},
+  {key:"custom", name:"Custom",      set:null},
+];
+const SAMPLE_VERSE = { deva:"॥ श्री विष्णुसहस्रनाम स्तोत्रम् ॥", en:"a sample line from the section — the reader shows the real verses here" };
+
+let nitya = [
+  {id:1, stotraId:"vishnu", stotraName:"Viṣṇu Sahasranāma", hue:230, label:"Full", sections:["purva","viniyoga","nyasa","dhyanam","stotram","phala","ksama"]},
+  {id:2, stotraId:"lalita", stotraName:"Lalitā Sahasranāma", hue:340, label:"Quick", sections:["stotram","ksama"]},
+];
+let editing = null; // {id|null, stotraId, stotraName, hue, sections:Set, label}
+let nextId = 3;
+
+function sectionsFor(ids){ return SECTIONS.filter(s=>ids.includes(s.key)); }
+
+function renderNitya(){
+  const list = document.getElementById("nitya-list");
+  list.innerHTML = "";
+  nitya.forEach(card=>{
+    const el = document.createElement("div");
+    el.className = "nitya-card " + card.stotraId;
+    el.style.setProperty("--hue", card.hue);
+    el.innerHTML = `
+      <div class="nitya-top">
+        <div>
+          <div class="nitya-title">${card.stotraName}</div>
+          <span class="nitya-label">${card.label}</span>
+        </div>
+        <button class="nitya-edit" data-edit="${card.id}">Edit</button>
+      </div>
+      <div class="nitya-chips">${sectionsFor(card.sections).map(s=>`<span class="nitya-chip${s.core?" core":""}">${s.name}</span>`).join("")}</div>
+      <button class="nitya-start" data-start="${card.id}">Start recitation</button>`;
+    list.appendChild(el);
+  });
+  const add = document.createElement("div");
+  add.className = "add-card"; add.id = "add-card";
+  add.innerHTML = `<b>+ Add a recitation</b>Pick a stotra and build its section set`;
+  list.appendChild(add);
+}
+
+const RANGE_ORDER = ["purva","viniyoga","nyasa","dhyanam","stotram","phala","ksama"];
+function rangeFromSections(secs){
+  const idxs = RANGE_ORDER.map((k,i)=>secs.includes(k)?i:-1).filter(i=>i>=0);
+  return idxs.length ? [Math.min(...idxs), Math.max(...idxs)] : [3,6];
+}
+function openSheetFor(card, lib){
+  editing = card ? {id:card.id, stotraId:card.stotraId, stotraName:card.stotraName, hue:card.hue, sections:new Set(card.sections), label:card.label}
+                 : {id:null, stotraId:lib.stotraId, stotraName:lib.stotraName, hue:lib.hue, sections:new Set(["dhyanam","stotram","ksama"]), label:"Custom"};
+  const [rs,re] = rangeFromSections([...editing.sections]);
+  editing.rangeStart = rs; editing.rangeEnd = re;
+  editing.mode = "toggle";
+  document.getElementById("sheet-title").textContent = editing.stotraName;
+  document.querySelector(".sheet").style.setProperty("--hue", editing.hue);
+  document.getElementById("label-input").value = editing.label;
+  setMode("toggle");
+  renderPresets(); renderSecList(); renderRange();
+  document.getElementById("sheet-wrap").classList.add("on");
+}
+function setMode(m){
+  editing.mode = m;
+  document.querySelectorAll(".mode-seg button").forEach(b=>b.classList.toggle("on", b.dataset.mode===m));
+  document.getElementById("mode-toggle").style.display = m==="toggle" ? "" : "none";
+  document.getElementById("mode-range").style.display = m==="range" ? "" : "none";
+}
+document.querySelectorAll(".mode-seg button").forEach(b=>b.onclick=()=>setMode(b.dataset.mode));
+function renderRange(){
+  const line = document.getElementById("range-line");
+  line.innerHTML = RANGE_ORDER.map((k,i)=>{
+    const s = SECTIONS.find(x=>x.key===k);
+    const inRange = i>=editing.rangeStart && i<=editing.rangeEnd;
+    const edge = i===editing.rangeStart || i===editing.rangeEnd;
+    return `<div class="range-node${inRange?" in":""}${edge?" edge":""}" data-i="${i}">
+      <span class="rn-bar"></span><span class="dot-node"></span>
+      <span class="rn-text">${s.name}</span>
+      ${i===editing.rangeStart?'<span class="rn-tag">Start</span>':i===editing.rangeEnd?'<span class="rn-tag">End</span>':''}
+    </div>`;
+  }).join("");
+  line.querySelectorAll("[data-i]").forEach(el=>el.onclick=()=>{
+    const i = +el.dataset.i;
+    const mid = (editing.rangeStart+editing.rangeEnd)/2;
+    if (i<=editing.rangeStart || (i<mid && i<editing.rangeEnd)) editing.rangeStart = Math.min(i, editing.rangeEnd);
+    else editing.rangeEnd = Math.max(i, editing.rangeStart);
+    renderRange();
+  });
+}
+function closeSheet(){ document.getElementById("sheet-wrap").classList.remove("on"); }
+
+function matchingPreset(){
+  const cur = [...editing.sections].sort().join(",");
+  for(const p of PRESETS){ if(p.set && [...p.set].sort().join(",")===cur) return p.key; }
+  return "custom";
+}
+function renderPresets(){
+  const wrap = document.getElementById("presets");
+  const active = matchingPreset();
+  wrap.innerHTML = PRESETS.map(p=>`<button class="preset${p.key===active?" on":""}" data-preset="${p.key}">${p.name}</button>`).join("");
+  wrap.querySelectorAll("[data-preset]").forEach(b=>b.onclick=()=>{
+    const p = PRESETS.find(x=>x.key===b.dataset.preset);
+    if(p.set) editing.sections = new Set(p.set);
+    if(p.key!=="custom") document.getElementById("label-input").value = p.name;
+    renderPresets(); renderSecList();
+  });
+}
+function renderSecList(){
+  const wrap = document.getElementById("sec-list");
+  wrap.innerHTML = SECTIONS.filter(s=>s.key!=="namavali").map(s=>{
+    const on = editing.sections.has(s.key);
+    return `<div class="sec-row${s.core?" core":""}">
+      <div><div class="sec-name">${s.name}</div><div class="sec-sub">${s.sub}</div></div>
+      ${s.core ? `<span class="sec-locked">Always on</span>` : `<button class="toggle${on?" on":""}" data-sec="${s.key}"><span class="dot"></span></button>`}
+    </div>`;
+  }).join("");
+  wrap.querySelectorAll("[data-sec]").forEach(b=>b.onclick=()=>{
+    const k = b.dataset.sec;
+    if(editing.sections.has(k)) editing.sections.delete(k); else editing.sections.add(k);
+    renderPresets(); renderSecList();
+  });
+}
+
+function currentSelection(){
+  let s;
+  if (editing.mode === "range"){
+    s = new Set(RANGE_ORDER.slice(editing.rangeStart, editing.rangeEnd+1));
+  } else {
+    s = new Set(editing.sections);
+  }
+  s.add("stotram");
+  return SECTIONS.filter(x=>s.has(x.key)).map(x=>x.key);
+}
+
+document.getElementById("sheet-close").onclick = closeSheet;
+document.getElementById("sheet-scrim").onclick = closeSheet;
+document.getElementById("add-card-proxy"); // no-op placeholder
+
+document.getElementById("btn-pin").onclick = ()=>{
+  const label = document.getElementById("label-input").value.trim() || "Custom";
+  const sections = currentSelection();
+  if(editing.id){
+    const card = nitya.find(c=>c.id===editing.id);
+    card.label = label; card.sections = sections;
+  } else {
+    nitya.push({id:nextId++, stotraId:editing.stotraId, stotraName:editing.stotraName, hue:editing.hue, label, sections});
+  }
+  closeSheet();
+  document.getElementById("screen-library").classList.remove("on");
+  document.getElementById("screen-nitya").classList.add("on");
+  renderNitya();
+};
+document.getElementById("btn-start-now").onclick = ()=>{
+  closeSheet();
+  openReader({stotraName:editing.stotraName, sections:currentSelection(), _editRef:editing});
+};
+
+function renderLibrary(){
+  const list = document.getElementById("library-list");
+  list.innerHTML = LIBRARY.map(s=>`
+    <div class="lib-card ${s.stotraId}">
+      <div class="lib-title">${s.stotraName}</div>
+      <div class="lib-actions">
+        <button class="btn btn-primary" data-build="${s.stotraId}">Build recitation</button>
+        <button class="btn lib-namavali" data-pin-namavali="${s.stotraId}">+ Nāmāvali</button>
+      </div>
+    </div>`).join("");
+}
+document.getElementById("lib-back").onclick = ()=>{
+  document.getElementById("screen-library").classList.remove("on");
+  document.getElementById("screen-nitya").classList.add("on");
+};
+document.body.addEventListener("click", e=>{
+  const buildBtn = e.target.closest("[data-build]");
+  const pinBtn = e.target.closest("[data-pin-namavali]");
+  const editBtn = e.target.closest("[data-edit]");
+  const startBtn = e.target.closest("[data-start]");
+  const addCard = e.target.closest("#add-card");
+  if(editBtn){ openSheetFor(nitya.find(c=>c.id==editBtn.dataset.edit)); }
+  if(startBtn){ const c = nitya.find(c=>c.id==startBtn.dataset.start); openReader(c); }
+  if(addCard){
+    document.getElementById("screen-nitya").classList.remove("on");
+    document.getElementById("screen-library").classList.add("on");
+    renderLibrary();
+  }
+  if(buildBtn){
+    const s = LIBRARY.find(x=>x.stotraId===buildBtn.dataset.build);
+    openSheetFor(null, s);
+  }
+  if(pinBtn){
+    const s = LIBRARY.find(x=>x.stotraId===pinBtn.dataset.pinNamavali);
+    nitya.push({id:nextId++, stotraId:s.stotraId, stotraName:s.stotraName, hue:s.hue, label:"Nāmāvali", sections:["namavali"]});
+    document.getElementById("screen-library").classList.remove("on");
+    document.getElementById("screen-nitya").classList.add("on");
+    renderNitya();
+  }
+});
+
+let readerCard = null;
+function openReader(card){
+  readerCard = card;
+  document.getElementById("reader-title").textContent = card.stotraName;
+  const secs = sectionsFor(card.sections);
+  const tabs = document.getElementById("rd-parts");
+  tabs.innerHTML = secs.map((s,i)=>`<button class="rd-part${i===0?" on":""}" data-tab="${s.key}">${s.name}</button>`).join("");
+  tabs.querySelectorAll("[data-tab]").forEach(b=>b.onclick=()=>{
+    tabs.querySelectorAll(".rd-part").forEach(x=>x.classList.remove("on"));
+    b.classList.add("on");
+    showSection(SECTIONS.find(s=>s.key===b.dataset.tab));
+  });
+  showSection(secs[0]);
+  document.getElementById("reader").classList.add("on");
+}
+function showSection(s){
+  document.getElementById("reader-sec-name").textContent = s.name;
+  document.getElementById("reader-verse").innerHTML = SAMPLE_VERSE.deva + "<br>" + SAMPLE_VERSE.en;
+}
+document.getElementById("reader-back").onclick = ()=>document.getElementById("reader").classList.remove("on");
+document.getElementById("reader-edit").onclick = ()=>{
+  document.getElementById("reader").classList.remove("on");
+  const card = nitya.find(c=>c===readerCard) || readerCard._editRef;
+  if(nitya.includes(readerCard)) openSheetFor(readerCard);
+  else openSheetFor(null);
+};
+
+renderNitya();
+</script>
+</body>
+</html>

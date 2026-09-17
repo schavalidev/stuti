@@ -139,11 +139,23 @@ export const STUTI_LOC = (function () {
       { enableHighAccuracy: false, timeout: 10000, maximumAge: 600000 }
     );
   }
+  /* A place typed into the search but absent from the curated list — a mandal
+     town, a village on the Godāvari — is stored in the same slot a detected
+     position uses, so every reader of STUTI_LOC (nudges, vows, sadhana, the
+     saṅkalpa) resolves it without knowing the gazetteer exists. `picked`
+     distinguishes it from a GPS fix for the chip's label. */
+  function pick(place) {
+    setDetected({ id: "detected", city: place.city, region: place.region,
+      lat: +Number(place.lat).toFixed(3), lon: +Number(place.lon).toFixed(3),
+      tz: place.tz == null ? 5.5 : place.tz, zone: place.zone || "Asia/Kolkata",
+      elev: 0, detected: false, picked: true });
+    setLocId("detected");
+  }
   return {
     getLocId: () => locId,
     getDetected: () => detected,
     getGeo: () => geo,
-    setLocId, setGeo, detect,
+    setLocId, setGeo, detect, pick,
     subscribe: (fn) => { subs.add(fn); return () => subs.delete(fn); },
   };
 })();

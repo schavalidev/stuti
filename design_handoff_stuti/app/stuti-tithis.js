@@ -17,11 +17,17 @@ window.STUTI_TITHIS = (function () {
   const fresh = () => { list = load(); };
 
   /* kinds: what the day is, which fixes the hour it is kept at and the tone */
+  /* kinds also fix how far ahead the day must be announced. An ābdikam is not
+     a to-do: a priest has to be reached, samagri gathered, leave taken — a line
+     at six the morning before is too late for all of it. So two warnings: a
+     quiet notice a week out, and the day-before one everything else uses. */
   const KINDS = {
-    janma:    { deity: "surya",  rule: "sunrise",  label: { roman: "Janma tithi", deva: "जन्म तिथि", tel: "జన్మ తిథి" } },
-    shraddha: { deity: "vishnu", rule: "aparahna", label: { roman: "Śrāddha · Ābdikam", deva: "श्राद्ध · आब्दिक", tel: "శ్రాద్ధం · ఆబ్దికం" } },
-    other:    { deity: "guru",   rule: "sunrise",  label: { roman: "Tithi", deva: "तिथि", tel: "తిథి" } },
+    janma:    { deity: "surya",  rule: "sunrise",  notice: 3, tone: "warm",  label: { roman: "Janma tithi", deva: "जन्म तिथि", tel: "జన్మ తిథి" } },
+    shraddha: { deity: "vishnu", rule: "aparahna", notice: 7, tone: "grave", label: { roman: "Śrāddha · Ābdikam", deva: "श्राद्ध · आब्दिक", tel: "శ్రాద్ధం · ఆబ్దికం" } },
+    other:    { deity: "guru",   rule: "sunrise",  notice: 0, tone: "plain", label: { roman: "Tithi", deva: "तिथि", tel: "తిథి" } },
   };
+  /* the record's own notice, or the kind's default when it never set one */
+  const noticeOf = (r) => (r && r.notice != null ? r.notice : ((KINDS[r && r.kind] || KINDS.other).notice));
   const MASA_NAMES = [
     { roman: "Caitra", deva: "चैत्र", tel: "చైత్ర" }, { roman: "Vaiśākha", deva: "वैशाख", tel: "వైశాఖ" }, { roman: "Jyeṣṭha", deva: "ज्येष्ठ", tel: "జ్యేష్ఠ" },
     { roman: "Āṣāḍha", deva: "आषाढ", tel: "ఆషాఢ" }, { roman: "Śrāvaṇa", deva: "श्रावण", tel: "శ్రావణ" }, { roman: "Bhādrapada", deva: "भाद्रपद", tel: "భాద్రపద" },
@@ -47,17 +53,29 @@ window.STUTI_TITHIS = (function () {
     };
   }
 
-  /* the record read off a civil date — the way most people know the day */
-  function fromDate(date, loc) {
+  /* The record read off a civil date. Two readings, and the difference is not
+     cosmetic: a birthday or a house-entry is named by the tithi the DAY held —
+     the one running at that place's sunrise. A śrāddha is named by the tithi
+     running at the MOMENT of death, which after nightfall is often already the
+     next one. Pass a time (minutes after local midnight) for the second. */
+  function fromDate(date, loc, timeMin) {
     const P = window.AKSHARA_PANCHANGA;
-    const pa = P.forDay(date, loc || (P.locations.find((l) => l.id === "ujjain") || P.locations[0]));
+    const place = loc || (P.locations.find((l) => l.id === "ujjain") || P.locations[0]);
+    let d = date, opts;
+    if (timeMin != null) {
+      const tz = P.effTz(place, date);
+      /* the instant is fixed at the DEATH place's zone, not the reader's */
+      const utcMs = Date.UTC(date.getFullYear(), date.getMonth(), date.getDate(), 0, 0, 0) + (timeMin - tz * 60) * 60000;
+      d = new Date(utcMs); opts = { instant: true };
+    }
+    const pa = P.forDay(d, place, opts);
     return { masa: pa.masaIdx, ti: pa.tithiIndex, adhika: !!pa.masaAdhika };
   }
 
   const byId = (id) => list.find((r) => r.id === id) || null;
   function add(rec) {
     fresh();
-    const r = Object.assign({ id: "t" + Date.now(), name: "", kind: "other", masa: 0, ti: 0, lead: 1, note: "", from: null }, rec);
+    const r = Object.assign({ id: "t" + Date.now(), name: "", names: null, kind: "other", masa: 0, ti: 0, lead: 1, note: "", from: null, time: null, place: null }, rec);
     list = list.concat([r]); save(); return r;
   }
   const patch = (id, p) => { fresh(); const r = byId(id); if (!r) return; Object.assign(r, p); save(); };
@@ -66,17 +84,33 @@ window.STUTI_TITHIS = (function () {
   /* the vrata the rest of the app sees */
   function asVrata(r) {
     const k = KINDS[r.kind] || KINDS.other;
-    const nm = r.name || k.label.roman;
+    /* the reciter's own words, one per script — a name typed in English letters
+       must not be what the Telugu screen shows. Any one that was filled stands
+       in for the ones that were not. */
+    const N = r.names || {};
+    const rm = (N.roman || r.name || "").trim();
+    /* a record written before the script fields existed holds English letters
+       only. They are spelt out rather than shown as they stand — a Telugu
+       screen must not read a name in English letters. */
+    const TR = window.STUTI_TRANSLIT;
+    const spell = (s) => { if (!TR || !s) return ""; const d = TR.romanToDeva(s); return { deva: d, tel: TR.convert(d, "telugu") }; };
+    const sp = spell(rm) || {};
+    const nm = { roman: (rm || k.label.roman).trim(),
+                 deva:  ((N.deva || "").trim() || sp.deva || k.label.deva).trim(),
+                 tel:   ((N.tel  || "").trim() || sp.tel  || k.label.tel).trim() };
     return {
       id: "my-" + r.id, personal: true, rec: r, deity: k.deity, kind: r.kind, brief: true,
-      name: { roman: nm, deva: nm, tel: nm },
+      name: nm,
       rule: ruleText(r),
       find: (y) => { const V = window.STUTI_VRATA; return V && V.lunarDay ? V.lunarDay(y, r.masa, r.ti, k.rule) : null; },
-      lead: 0, remindLead: r.lead == null ? 1 : r.lead,
+      lead: 0, remindLead: r.lead == null ? 1 : r.lead, notice: noticeOf(r), tone: k.tone,
       stotras: r.kind === "shraddha" ? [{ deity: "vishnu", m: "visnu sahasra" }] : r.kind === "janma" ? [{ deity: "surya", m: "aditya" }] : [],
     };
   }
   const vratas = () => list.map(asVrata);
 
-  return { KINDS, MASA_NAMES, PAKSHA, tithiName, ruleText, fromDate, list: () => list.slice(), byId, add, patch, remove, asVrata, vratas, subscribe: (fn) => { subs.add(fn); return () => subs.delete(fn); } };
+  /* the name to show on a screen in this language */
+  const nameIn = (r, lang) => { const v = asVrata(r).name; return lang === "telugu" ? v.tel : lang === "deva" ? v.deva : v.roman; };
+
+  return { KINDS, nameIn, noticeOf, MASA_NAMES, PAKSHA, tithiName, ruleText, fromDate, list: () => list.slice(), byId, add, patch, remove, asVrata, vratas, subscribe: (fn) => { subs.add(fn); return () => subs.delete(fn); } };
 })();

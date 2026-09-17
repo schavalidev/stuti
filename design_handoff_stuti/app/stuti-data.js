@@ -41,6 +41,29 @@ window.STUTI = (function () {
       epithet: "Añjaneya, the devoted",
       line: "The mighty son of the wind — Rāma's perfect servant, remover of sorrows.",
       hue: 26 },   // saffron
+    /* The forefathers are not a deity, but they do hold texts of their own and
+       a shelf tile is where a reciter looks for them. They stand on the grids
+       like any other niche; `notIshta` only keeps them out of the onboarding
+       question, which asks which deity you keep — not a question the pitṛs
+       are an answer to. */
+    { id: "pitr",        name: "Pitṛ Devatās", deva: "पितृ देवताः", tel: "పితృ దేవతలు",
+      epithet: "Pitarulu — the forefathers",
+      line: "The dead who have joined the ancestors — fed at the amāvāsyā, named at the śrāddha.",
+      hue: 168, notIshta: true },
+    /* Three more shelves that hold texts without being an iṣṭa-devatā: the
+       rivers, the nine grahas, and the gods who have no shelf of their own. */
+    { id: "nadi",        name: "Nadī Devatās", deva: "नदी देवताः", tel: "నదీ దేవతలు",
+      epithet: "The river goddesses",
+      line: "Gaṅgā, Yamunā, Narmadā and the rest — called into the water before the bath.",
+      hue: 192, notIshta: true },
+    { id: "navagraha",   name: "Navagrahas",   deva: "नवग्रहाः",  tel: "నవగ్రహాలు",
+      epithet: "The nine grahas",
+      line: "Sun to Ketu — the nine who govern the times, each with its own kavaca.",
+      hue: 262, notIshta: true },
+    { id: "itara",       name: "Itara Devatās", deva: "इतर देवताः", tel: "ఇతర దేవతలు",
+      epithet: "The other gods",
+      line: "Agni, Bhūmi, Dhanvantari, Kubera and others who hold texts but no shelf of their own.",
+      hue: 96, notIshta: true },
   ];
 
   /* ---- Hymns ---- every verse: deva / iast / en. ---- */
@@ -163,6 +186,30 @@ window.STUTI = (function () {
     },
   ];
 
+  /* The pitṛ texts. Their verses arrive from stuti-text-pitr.js, which binds
+     by deity + title, so the catalogue rows have to exist first. */
+  hymns.push(
+    { id: "pitr-rucistava", deity: "pitr", title: "Rucistava", tel: "రుచిస్తవం",
+      deva: "रुचिस्तवः", type: "Stotra", by: "Prajāpati Ruci · Garuḍa Purāṇa", blurb: "", verses: [] },
+    { id: "pitr-stotram-ruci", deity: "pitr", title: "Pitṛ Stotram (Ruci-kṛtam)", tel: "పితృ స్తోత్రం (రుచికృతం)",
+      deva: "पितृस्तोत्रम् (रुचिकृतम्)", type: "Stotra", by: "Prajāpati Ruci · Garuḍa Purāṇa", blurb: "", verses: [] },
+    { id: "pitr-suktam-vajasaneyi", deity: "pitr", title: "Pitṛ Sūktam (Vājasaneyi)", tel: "పితృ సూక్తం (శుక్లయజుర్వేదీయం)",
+      deva: "पितृसूक्तम् (शुक्लयजुर्वेदीय)", type: "Sūkta", by: "Vājasaneyi Saṁhitā 19.49–61", blurb: "", verses: [] },
+    { id: "pitr-suktam-rigveda", deity: "pitr", title: "Pitṛ Sūktam (Ṛgveda)", tel: "పితృ సూక్తం (ఋగ్వేదీయం)",
+      deva: "पितृसूक्तम् (ऋग्वेदीय)", type: "Sūkta", by: "Ṛgveda 10.15 · ṛṣi Śaṅkha Yāmāyana", blurb: "", verses: [] },
+    { id: "pitr-stotram-brahma", deity: "pitr", title: "Pitṛ Stotram (Brahma-kṛtam)", tel: "పితృ స్తోత్రం (బ్రహ్మకృతం)",
+      deva: "पितृस्तोत्रम् (ब्रह्मकृतम्)", type: "Stotra", by: "Brahmā · Bṛhaddharma Purāṇa", blurb: "", verses: [] },
+    /* not a hymn but a rite, and it belongs on the shelf all the same: what a
+       reciter needs at the water is a scroll to read from, not a card to read
+       about. Its own genre, so it never sorts in among the stotras. */
+    { id: "pitr-tarpana-vidhi", deity: "pitr", title: "Pitṛ Tarpaṇa Vidhiḥ", tel: "పితృ తర్పణ విధిః",
+      deva: "पितृ तर्पण विधिः", type: "Tarpaṇa", by: "Telugu paddhati · Rajasekharuni Vijay Śarma", blurb: "", verses: [] },
+    /* the same genre: the vratam's own order of service, read from while it is
+       performed. It opens from the Gaṇeśa Caturthī page. */
+    { id: "vinayaka-vrata-vidhi", deity: "ganesha", title: "Śrī Varasiddhi Vināyaka Vratam", tel: "శ్రీ వరసిద్ధి వినాయక వ్రతం",
+      deva: "श्री वरसिद्धि विनायक व्रतम्", type: "Vidhi", by: "Smārta paddhati · Telugu country", blurb: "", verses: [] }
+  );
+
   /* ---- Catalog ---- the fuller per-deity list from STOTRA_INDEX.
      Names only (title / deva / tel / author); full verse texts are
      added over time. Marked catalog:true so the UI can show them
@@ -242,6 +289,22 @@ window.STUTI = (function () {
       { id: "hanuman",     iast: "Hanumān",    deva: "हनुमान्",   tel: "హనుమాన్" },
       { id: "panchamukha", iast: "Pañcamukha", deva: "पञ्चमुख",   tel: "పంచముఖ" },
     ],
+    nadi: [
+      { id: "ganga",   iast: "Gaṅgā",     deva: "गङ्गा",     tel: "గంగా" },
+      { id: "yamuna",  iast: "Yamunā",    deva: "यमुना",     tel: "యమునా" },
+      { id: "narmada", iast: "Narmadā",   deva: "नर्मदा",     tel: "నర్మదా" },
+      { id: "nadi",    iast: "All rivers", deva: "सर्वनद्यः",  tel: "సర్వనదులు" },
+    ],
+    navagraha: [
+      { id: "navagraha", iast: "All nine",   deva: "नवग्रह",     tel: "నవగ్రహాలు" },
+      { id: "shani",     iast: "Śani",       deva: "शनि",        tel: "శని" },
+      { id: "angaraka",  iast: "Aṅgāraka",   deva: "अङ्गारक",    tel: "అంగారక" },
+      { id: "budha",     iast: "Budha",      deva: "बुध",        tel: "బుధ" },
+      { id: "brhaspati", iast: "Bṛhaspati",  deva: "बृहस्पति",   tel: "బృహస్పతి" },
+      { id: "shukra",    iast: "Śukra",      deva: "शुक्र",      tel: "శుక్ర" },
+      { id: "chandra",   iast: "Candra",     deva: "चन्द्र",      tel: "చంద్ర" },
+      { id: "rahuketu",  iast: "Rāhu & Ketu", deva: "राहु-केतु", tel: "రాహు, కేతు" },
+    ],
   };
 
   /* keyword → form matcher (title compared with diacritics stripped, lowercased).
@@ -290,6 +353,22 @@ window.STUTI = (function () {
     ] },
     hanuman: { fallback: "hanuman", named: [
       ["panchamukha", /pancamukha/],
+    ] },
+    /* Gaṅgā first: the snāna-śloka names every river, and the bath verse belongs
+       on Gaṅgā's shelf rather than Yamunā's. */
+    nadi: { fallback: "nadi", named: [
+      ["ganga",   /ganga|gange/],
+      ["yamuna",  /yamuna/],
+      ["narmada", /narmada/],
+    ] },
+    navagraha: { fallback: "navagraha", named: [
+      ["shani",     /sani/],
+      ["angaraka",  /angaraka|mangala/],
+      ["budha",     /budha/],
+      ["brhaspati", /brhaspati/],
+      ["shukra",    /sukra/],
+      ["chandra",   /candra/],
+      ["rahuketu",  /rahu|ketu/],
     ] },
   };
 

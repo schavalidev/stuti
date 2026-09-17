@@ -1,5 +1,32 @@
 apply plugin: 'com.android.application'
 
+/* The build number is tracked in stuti-app/build-number, one integer, so it
+   survives a fresh clone and an emptied builds/ — the Drive folder cannot be
+   listed (the relay is upload-only), so nothing else knows what the last
+   published build was. tools/release-apk.sh bumps it and names the APK
+   Stuti-v<N>.apk from the same value, which is why versionCode reads it here:
+   the number on the file and the number inside the APK are then the same one. */
+def stutiBuildNumber() {
+    def f = rootProject.file("../build-number")
+    if (!f.exists()) throw new GradleException("build-number missing at ${f}; see tools/release-apk.sh")
+    def n = f.text.trim()
+    if (!(n ==~ /\d+/)) throw new GradleException("build-number holds '${n}', expected one integer")
+    /* 0 means nobody has set it yet. tools/release-apk.sh refuses to publish
+       on 0; a debug build still needs a positive code, so floor it at 1. */
+    def v = n.toInteger()
+    return v > 0 ? v : 1
+}
+
+/* The version the reciter sees, read from the design's own build stamp so the
+   two cannot drift. Fails loud rather than shipping a stale number. */
+def stutiVersionName() {
+    def f = rootProject.file("../../design_handoff_stuti/app/stuti-build.js")
+    if (!f.exists()) throw new GradleException("stuti-build.js missing at ${f}")
+    def m = (f.text =~ /VERSION\s*=\s*"([^"]+)"/)
+    if (!m) throw new GradleException("no VERSION = \"…\" in stuti-build.js")
+    return m[0][1]
+}
+
 def keystorePropertiesFile = rootProject.file("keystore.properties")
 def keystoreProperties = new Properties()
 if (keystorePropertiesFile.exists()) {
@@ -13,8 +40,8 @@ android {
         applicationId "com.stuti.app"
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
-        versionCode 1
-        versionName "1.0"
+        versionCode stutiBuildNumber()
+        versionName stutiVersionName()
         ndk { abiFilters "arm64-v8a" }   // every phone since 2017 is 64-bit; the other ABIs doubled the APK
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         aaptOptions {

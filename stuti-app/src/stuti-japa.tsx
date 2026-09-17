@@ -245,46 +245,71 @@ function MalaEntry({ mid, lang, onDone }) {
 /* ---------------- A day, picked in the app's own colours ----------------
    The browser's date popup paints itself in system blue over the parchment;
    this one is drawn with the same ink, surface and accent as everything else. */
-function DayPick({ value, max, lang, onChange, label, bad }) {
+/* month and year are chosen, not stepped to: a janma tithi is decades back */
+function MONTHS_DP(locale) { return [0,1,2,3,4,5,6,7,8,9,10,11].map((m) => new Date(2023, m, 1).toLocaleDateString(locale, { month: "long" })); }
+function YEARS_DP(maxD) { const last = (maxD ? maxD.getFullYear() : new Date().getFullYear() + 5); const out = []; for (let y = last; y >= last - 130; y--) out.push(y); return out; }
+function DayPick({ value, max, lang, onChange, label, bad, place }) {
   const [open, setOpen] = useStateJ(false);
-  const parse = (k) => { const p = (k || max).split("-").map(Number); return new Date(p[0], p[1] - 1, p[2]); };
+  const parse = (k) => { const p = (k || max || new Date().toISOString().slice(0, 10)).split("-").map(Number); return new Date(p[0], p[1] - 1, p[2]); };
   const key = (d) => d.getFullYear() + "-" + String(d.getMonth() + 1).padStart(2, "0") + "-" + String(d.getDate()).padStart(2, "0");
   const sel = parse(value);
   const [view, setView] = useStateJ(() => new Date(sel.getFullYear(), sel.getMonth(), 1));
   const locale = lang === "telugu" ? "te-IN" : lang === "deva" ? "hi-IN" : undefined;
   const monthLabel = view.toLocaleDateString(locale, { month: "long", year: "numeric" });
-  const shown = sel.toLocaleDateString(locale, { day: "numeric", month: "short", year: "numeric" });
+  const shown = sel.toLocaleDateString(locale, { day: "numeric", month: "long", year: "numeric" });
   const dow = [0, 1, 2, 3, 4, 5, 6].map((i) => new Date(2023, 0, 1 + i).toLocaleDateString(locale, { weekday: "narrow" }));
   const first = view.getDay(), days = new Date(view.getFullYear(), view.getMonth() + 1, 0).getDate();
   const cells = [];
   for (let i = 0; i < first; i++) cells.push(null);
   for (let d = 1; d <= days; d++) cells.push(new Date(view.getFullYear(), view.getMonth(), d));
-  const maxD = parse(max);
-  const nextOk = new Date(view.getFullYear(), view.getMonth() + 1, 1) <= maxD;
+  /* max is optional: a japa entry cannot be in the future, a tithi can */
+  const todayD = new Date(); todayD.setHours(0, 0, 0, 0);
+  const todayK = key(todayD);
+  const maxD = max ? parse(max) : null;
+  const nextOk = !maxD || new Date(view.getFullYear(), view.getMonth() + 1, 1) <= maxD;
   const pick = (d) => { onChange(key(d)); setOpen(false); };
+  /* the scrim cannot close an inline picker — inside a scrolling sheet it is
+     clipped away — so the panel watches for a press outside itself */
+  const boxRef = window.React.useRef(null);
+  window.React.useEffect(() => {
+    if (!open) return;
+    const away = (e) => { if (boxRef.current && !boxRef.current.contains(e.target)) setOpen(false); };
+    const esc = (e) => { if (e.key === "Escape") setOpen(false); };
+    document.addEventListener("pointerdown", away, true);
+    document.addEventListener("keydown", esc);
+    return () => { document.removeEventListener("pointerdown", away, true); document.removeEventListener("keydown", esc); };
+  }, [open]);
   return (
-    <span className="daypick">
+    <span className="daypick" ref={boxRef}>
       <button type="button" className={"mala-date" + (bad ? " bad" : "")} aria-label={label} aria-expanded={open}
         onClick={() => { setView(new Date(sel.getFullYear(), sel.getMonth(), 1)); setOpen((o) => !o); }}>
         <Icon name="calendar" size={15} />{shown}
       </button>
       {open && <>
         <span className="cal-yearpick-scrim" onClick={() => setOpen(false)} />
-        <div className="daypick-pop" role="dialog" aria-label={label}>
+        <div className={"daypick-pop" + (place === "down" ? " daypick-pop-down" : "")} role="dialog" aria-label={label}>
           <div className="daypick-head">
             <button type="button" className="icon-btn" onClick={() => setView(new Date(view.getFullYear(), view.getMonth() - 1, 1))} aria-label={STUTI_L.a("aPrevMonth")}><span style={{ display: "inline-flex", transform: "rotate(90deg)" }}><Icon name="chev" size={16} /></span></button>
-            <span className="daypick-month">{monthLabel}</span>
+            <span className="daypick-month">
+              <select value={view.getMonth()} onChange={(e) => setView(new Date(view.getFullYear(), +e.target.value, 1))} aria-label={STUTI_L.a("aPrevMonth")}>
+                {MONTHS_DP(locale).map((m, i) => <option key={i} value={i}>{m}</option>)}
+              </select>
+              <select value={view.getFullYear()} onChange={(e) => setView(new Date(+e.target.value, view.getMonth(), 1))} aria-label="Year">
+                {YEARS_DP(maxD).map((y) => <option key={y} value={y}>{y}</option>)}
+              </select>
+            </span>
             <button type="button" className="icon-btn" disabled={!nextOk} onClick={() => setView(new Date(view.getFullYear(), view.getMonth() + 1, 1))} aria-label={STUTI_L.a("aNextMonth")}><span style={{ display: "inline-flex", transform: "rotate(-90deg)" }}><Icon name="chev" size={16} /></span></button>
+            <button type="button" className="icon-btn daypick-x" onClick={() => setOpen(false)} aria-label={STUTI_L.t("close", lang)}><Icon name="close" size={15} /></button>
           </div>
           <div className="daypick-grid">
             {dow.map((w, i) => <span key={"w" + i} className="daypick-dow">{w}</span>)}
             {cells.map((d, i) => d ? (
-              <button type="button" key={i} disabled={d > maxD}
-                className={"daypick-day" + (key(d) === value ? " on" : "") + (key(d) === max ? " today" : "")}
+              <button type="button" key={i} disabled={!!maxD && d > maxD}
+                className={"daypick-day" + (key(d) === value ? " on" : "") + (key(d) === todayK ? " today" : "")}
                 onClick={() => pick(d)}>{d.getDate()}</button>
             ) : <span key={i} />)}
           </div>
-          <div className="daypick-foot"><button type="button" onClick={() => pick(maxD)}>{STUTI_L.t("today", lang)}</button></div>
+          <div className="daypick-foot"><button type="button" onClick={() => pick(maxD || todayD)}>{STUTI_L.t("today", lang)}</button></div>
         </div>
       </>}
     </span>
@@ -422,4 +447,4 @@ function JapaView({ go, lang = "deva", embedded = false }) {
   );
 }
 
-export { ThreadCard, ThreadStrip, JapaEntryCard, JapaView, MalaEntry, JapaHistory, JAPA_THREADS };
+export { DayPick, ThreadCard, ThreadStrip, JapaEntryCard, JapaView, MalaEntry, JapaHistory, JAPA_THREADS };

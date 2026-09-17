@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="design_doc_mode" content="canvas" />
+<title>Deity marks — bīja vs emblem</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Marcellus&family=Mukta:wght@300;400;500;600;700&family=Noto+Sans+Devanagari:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<style>
+  :root {
+    --font-display: 'Marcellus', Georgia, serif;
+    --font-ui: 'Mukta', system-ui, sans-serif;
+    --font-deva: 'Noto Sans Devanagari', 'Mukta', sans-serif;
+    --deity-hue: 36;
+  }
+  /* --- tokens lifted verbatim from the app (stuti.css) --- */
+  [data-theme="day"] {
+    --surface: #FFFDF8; --surface-2: #FBF4E8;
+    --ink: #2B2017; --ink-soft: #6E5E4E; --ink-faint: #9A8A78;
+    --line: rgba(43,32,23,0.10); --line-2: rgba(43,32,23,0.06);
+    --gold: #B07A2B; --gold-deep: #8A5A18;
+    --accent:      oklch(0.58 0.13 var(--deity-hue));
+    --accent-soft: oklch(0.92 0.045 var(--deity-hue));
+    --accent-ink:  oklch(0.42 0.12 var(--deity-hue));
+  }
+  [data-theme="night"] {
+    --surface: #211B13; --surface-2: #271F16;
+    --ink: #F4EAD7; --ink-soft: #C2B197; --ink-faint: #897962;
+    --line: rgba(244,234,215,0.13); --line-2: rgba(244,234,215,0.07);
+    --gold: #E2B266; --gold-deep: #E7C079;
+    --accent:      oklch(0.74 0.13 var(--deity-hue));
+    --accent-soft: oklch(0.30 0.06 var(--deity-hue));
+    --accent-ink:  oklch(0.82 0.11 var(--deity-hue));
+  }
+  /* The derived accent tokens must be COMPUTED on the element that carries
+     --deity-hue. If they are declared only on [data-theme], var(--deity-hue)
+     is substituted there (= the :root fallback 36) and the resolved color
+     inherits down — so a descendant setting --deity-hue has no effect.
+     Re-derive on every hue-carrying container so each resolves its own hue. */
+  [data-theme="day"] :is(.row, .gtile, .hymn-row, .glyph, .seal) {
+    --accent:      oklch(0.58 0.13 var(--deity-hue));
+    --accent-soft: oklch(0.92 0.045 var(--deity-hue));
+    --accent-ink:  oklch(0.42 0.12 var(--deity-hue));
+  }
+  [data-theme="night"] :is(.row, .gtile, .hymn-row, .glyph, .seal) {
+    --accent:      oklch(0.74 0.13 var(--deity-hue));
+    --accent-soft: oklch(0.30 0.06 var(--deity-hue));
+    --accent-ink:  oklch(0.82 0.11 var(--deity-hue));
+  }
+
+  * { box-sizing: border-box; }
+  html, body { margin: 0; }
+  body {
+    font-family: var(--font-ui);
+    position: relative;
+    width: 1780px;
+    height: 1420px;
+  }
+  a { color: var(--gold-deep); }
+  a:hover { color: var(--gold); }
+
+  .frame {
+    position: absolute;
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: 22px;
+    box-shadow: 0 30px 70px -34px rgba(58,40,20,0.45), 0 6px 18px -12px rgba(58,40,20,0.30);
+    padding: 40px 44px 44px;
+    color: var(--ink);
+  }
+  .kicker {
+    font-size: 12px; letter-spacing: 0.18em; text-transform: uppercase;
+    color: var(--ink-faint); font-weight: 600; margin: 0 0 10px;
+  }
+  .frame h2 {
+    font-family: var(--font-display); font-weight: 400;
+    font-size: 30px; line-height: 1.12; margin: 0 0 8px; color: var(--ink);
+    letter-spacing: 0.01em;
+  }
+  .frame p.lede { margin: 0; font-size: 15.5px; line-height: 1.5; color: var(--ink-soft); max-width: 62ch; }
+  .frame p.lede b { color: var(--ink); font-weight: 600; }
+
+  /* the medallion — copied from .seal in stuti.css */
+  .seal {
+    display: grid; place-items: center; border-radius: 50%;
+    font-family: var(--font-deva);
+    background: var(--accent-soft); color: var(--accent-ink);
+    border: 1.5px solid color-mix(in oklab, var(--accent) 45%, transparent);
+    flex: none; line-height: 1;
+  }
+  .seal svg { width: 56%; height: 56%; display: block; }
+
+  /* comparison grid */
+  .cmp { display: grid; grid-template-columns: 1fr 1fr; gap: 30px 44px; margin-top: 30px; }
+  .row { display: flex; align-items: center; gap: 16px; }
+  .row-name { width: 132px; flex: none; }
+  .row-name .rn { font-family: var(--font-display); font-size: 21px; color: var(--accent-ink); line-height: 1.1; }
+  .row-name .rd { font-family: var(--font-deva); font-size: 14px; color: var(--ink-soft); margin-top: 3px; }
+  .swap { display: flex; align-items: center; gap: 12px; flex: 1; }
+  .cell { display: flex; flex-direction: column; align-items: center; gap: 7px; width: 96px; flex: none; }
+  .cell .cap { font-size: 11px; letter-spacing: 0.04em; color: var(--ink-faint); text-align: center; line-height: 1.25; }
+  .cell .cap b { display: block; color: var(--ink); font-weight: 600; letter-spacing: 0.01em; font-size: 12px; }
+  .arrow { color: var(--ink-faint); flex: none; display: grid; place-items: center; }
+  .collide { color: color-mix(in oklab, var(--accent-ink) 70%, transparent); }
+
+  .note-collision {
+    margin-top: 26px; padding: 14px 18px; border-radius: 14px;
+    background: var(--surface-2); border: 1px solid var(--line);
+    font-size: 14px; line-height: 1.5; color: var(--ink-soft);
+    display: flex; gap: 12px; align-items: flex-start;
+  }
+  .note-collision b { color: var(--ink); font-weight: 600; }
+  .om { font-family: var(--font-deva); }
+
+  /* in-context: browse tiles + hymn row (mirrors the app) */
+  .tiles { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-top: 26px; }
+  .gtile {
+    display: flex; flex-direction: column; align-items: center; gap: 12px;
+    padding: 24px 14px 20px; border-radius: 18px;
+    background: var(--surface); border: 1.5px solid var(--line);
+    text-align: center;
+  }
+  .gtile .gname { font-family: var(--font-display); font-size: 20px; color: var(--ink); }
+  .gtile .gcount { font-size: 12.5px; color: var(--ink-faint); }
+  .hymn-row {
+    display: flex; align-items: center; gap: 14px; margin-top: 16px;
+    padding: 14px 16px; border-radius: 14px;
+    background: var(--surface); border: 1.5px solid var(--line);
+  }
+  .hymn-row .ht { font-family: var(--font-display); font-size: 19px; color: var(--accent-ink); line-height: 1.15; }
+  .hymn-row .hs { font-size: 12.5px; color: var(--ink-faint); margin-top: 2px; }
+  .hymn-row .play { margin-left: auto; color: var(--accent); flex: none; }
+
+  /* legibility strips */
+  .strip { display: flex; gap: 18px; align-items: center; flex-wrap: wrap; margin-top: 8px; }
+  .strip.night { background: #17120B; border-radius: 16px; padding: 22px 24px; margin-top: 18px; }
+  .glyph-row { display: flex; gap: 22px; align-items: center; flex-wrap: wrap; }
+  .glyph { display: flex; flex-direction: column; align-items: center; gap: 8px; }
+  .glyph .bare { color: var(--accent-ink); }
+  .glyph .lbl { font-size: 11px; color: var(--ink-faint); }
+  .sub { font-size: 13px; color: var(--ink-faint); letter-spacing: 0.02em; margin: 22px 0 4px; }
+</style>
+</head>
+<body data-theme="day">
+
+  <!-- FRAME A · the comparison -->
+  <section class="frame" data-theme="day" style="left: 60px; top: 60px; width: 1020px;">
+    <p class="kicker">Proposal · deity marks</p>
+    <h2>From bīja to emblem</h2>
+    <p class="lede">Each deity’s medallion carries an <b>emblem</b> — its āyudha or attribute drawn in the same line register as the app’s icons — instead of the seed-syllable. Same ring, same per-deity hue; only the mark inside changes.</p>
+    <div class="cmp" id="cmp"></div>
+    <div class="note-collision">
+      <span class="om" style="font-size:22px; color:var(--ink);">ॐ</span>
+      <span>Two deities — <b>Śiva</b> and <b>Viṣṇu</b> — currently share the same bīja <span class="om">ॐ</span>, so their medallions are identical today. Distinct emblems tell them apart at a glance.</span>
+    </div>
+  </section>
+
+  <!-- FRAME B · in context -->
+  <section class="frame" data-theme="day" style="left: 1130px; top: 60px; width: 590px;">
+    <p class="kicker">In context</p>
+    <h2>Where the mark lives</h2>
+    <p class="lede">The medallion appears on the browse tiles, hymn rows, the reader hero and the weekday strip — one component, so this is a single swap.</p>
+    <div class="tiles" id="tiles"></div>
+    <div class="hymn-row" id="hymnrow"></div>
+  </section>
+
+  <!-- FRAME C · legibility -->
+  <section class="frame" data-theme="day" style="left: 1130px; top: 470px; width: 590px;">
+    <p class="kicker">At a glance</p>
+    <h2>Small sizes &amp; dark mode</h2>
+    <p class="lede">Emblems read at the smallest medallion size (the weekday strip) and hold up in the night theme, where the bīja can get delicate.</p>
+    <div class="sub">Weekday-strip size · 30px</div>
+    <div class="strip" id="strip-day"></div>
+    <div class="strip night" data-theme="night" id="strip-night"></div>
+    <div class="sub">The bare line icons · 26px</div>
+    <div class="glyph-row" id="glyphs"></div>
+  </section>
+
+  <!-- FRAME D · full set at medallion size -->
+  <section class="frame" data-theme="day" style="left: 1130px; top: 980px; width: 590px;">
+    <p class="kicker">The set</p>
+    <h2>Eight emblems, one family</h2>
+    <div class="glyph-row" id="fullset" style="margin-top:22px; gap:26px; justify-content:space-between;"></div>
+  </section>
+
+<script>
+/* ---- emblem line-art (viewBox 0 0 24 24, stroke = currentColor) ---- */
+const EMBLEMS = {
+  sun: '<circle cx="12" cy="12" r="4"/><path d="M12 2.5v2.6M12 18.9v2.6M4.6 4.6l1.9 1.9M17.5 17.5l1.9 1.9M2.5 12h2.6M18.9 12h2.6M4.6 19.4l1.9-1.9M17.5 6.5l1.9-1.9"/>',
+  damaru: '<ellipse cx="12" cy="5.6" rx="4.6" ry="1.5"/><ellipse cx="12" cy="18.4" rx="4.6" ry="1.5"/><path d="M7.4 5.6 Q 13 12 7.4 18.4"/><path d="M16.6 5.6 Q 11 12 16.6 18.4"/><path d="M10.2 12 L 8 10.9"/><path d="M13.8 12 L 16 13.1"/><circle cx="7.7" cy="10.7" r="0.95" fill="currentColor" stroke="none"/><circle cx="16.3" cy="13.3" r="0.95" fill="currentColor" stroke="none"/>',
+  trishula: '<path d="M12 8.4 V 21"/><path d="M12 8.4 V 2.8"/><path d="M12 2.8 L 10.9 4.4 M12 2.8 L 13.1 4.4"/><path d="M8.7 8.4 H 15.3"/><path d="M8.9 8.4 C 8.1 6, 8.3 4.2, 9 3.2"/><path d="M9 3.2 L 8.1 4.3"/><path d="M15.1 8.4 C 15.9 6, 15.7 4.2, 15 3.2"/><path d="M15 3.2 L 15.9 4.3"/>',
+  shankha: '<path d="M13.5 3.2 C 17.5 4.8 18.6 10 16.8 14.2 C 15.6 17 13 19.2 10.3 19.2 C 7.8 19.2 6.3 17.2 6.7 14.6 C 7.2 11 8.8 5 13.5 3.2 Z"/><path d="M8.6 16.4 C 10.6 17.8 13.4 17.6 15.2 15.8"/><path d="M13.2 6.6 C 15 6.9 15.4 8.8 14.2 9.7 C 13.4 10.3 12.3 9.8 12.5 8.8"/><path d="M8.2 12.6 C 10.3 13.6 13 13.3 15 12"/>',
+  vel: '<path d="M12 12 V 21"/><path d="M12 2.6 C 14.8 5.8, 14.8 9.4, 12 12 C 9.2 9.4, 9.2 5.8, 12 2.6 Z"/><path d="M12 4.2 V 11"/><path d="M10.7 12.2 H 13.3"/><path d="M10.9 14.4 H 13.1"/>',
+  modaka: '<path d="M12 3.4 C 13.6 6.5, 17 9, 17 13.2 C 17 16, 14.8 17.8, 12 17.8 C 9.2 17.8, 7 16, 7 13.2 C 7 9, 10.4 6.5, 12 3.4 Z"/><path d="M12 5 L 9.6 12.6 M12 5 V 13.2 M12 5 L 14.4 12.6"/><path d="M7.6 18 C 9.7 19.1, 14.3 19.1, 16.4 18"/>',
+  paduka: '<path d="M8.9 4.6 C 10.8 4.6, 11.4 7.2, 11.2 10.6 C 11 14.4, 10 18.8, 8.7 18.8 C 7.6 18.8, 7.1 15, 7.2 11.2 C 7.3 7.6, 7 4.6, 8.9 4.6 Z"/><path d="M8.9 7.6 V 6.5"/><circle cx="8.9" cy="5.7" r="0.95" fill="currentColor" stroke="none"/><path d="M15.1 4.6 C 13.2 4.6, 12.6 7.2, 12.8 10.6 C 13 14.4, 14 18.8, 15.3 18.8 C 16.4 18.8, 16.9 15, 16.8 11.2 C 16.7 7.6, 17 4.6, 15.1 4.6 Z"/><path d="M15.1 7.6 V 6.5"/><circle cx="15.1" cy="5.7" r="0.95" fill="currentColor" stroke="none"/>',
+  gada: '<path d="M12 11.6 V 19.6"/><circle cx="12" cy="20.5" r="1" fill="currentColor" stroke="none"/><circle cx="12" cy="7.2" r="4"/><path d="M9.9 10.4 C 10.6 11.7, 13.4 11.7, 14.1 10.4"/><circle cx="12" cy="2.5" r="0.95" fill="currentColor" stroke="none"/><path d="M12 3.2 V 3.9"/><path d="M8.5 6 C 10 7.5, 14 7.5, 15.5 6"/>'
+};
+
+function svg(name) {
+  return '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.85" stroke-linecap="round" stroke-linejoin="round">' + EMBLEMS[name] + '</svg>';
+}
+
+/* 8 deities — hue + bīja from stuti-data.js; emblem = proposal */
+const DEITIES = [
+  { id:'ganesha',     name:'Gaṇeśa',      deva:'गणेश',        seed:'गं',    hue:14,  emblem:'modaka',   ename:'Modaka' },
+  { id:'shiva',       name:'Śiva',        deva:'शिव',         seed:'ॐ',     hue:210, emblem:'damaru',   ename:'Ḍamaru', collide:true },
+  { id:'devi',        name:'Devī',        deva:'देवी',        seed:'दुं',   hue:344, emblem:'trishula', ename:'Triśūla' },
+  { id:'vishnu',      name:'Viṣṇu',       deva:'विष्णु',      seed:'ॐ',     hue:224, emblem:'shankha',  ename:'Śaṅkha', collide:true },
+  { id:'subrahmanya', name:'Subrahmaṇya', deva:'सुब्रह्मण्य',  seed:'सौं',  hue:130, emblem:'vel',      ename:'Vel' },
+  { id:'surya',       name:'Sūrya',       deva:'सूर्य',       seed:'ह्रां',  hue:78,  emblem:'sun',      ename:'Sūrya' },
+  { id:'guru',        name:'Guru',        deva:'गुरु',        seed:'ग्रां',  hue:295, emblem:'paduka',   ename:'Pādukā' },
+  { id:'hanuman',     name:'Hanumān',     deva:'हनुमान्',     seed:'हं',    hue:26,  emblem:'gada',     ename:'Gadā' },
+];
+
+function seal(d, size, mode) {
+  const inner = mode === 'emblem' ? svg(d.emblem) : d.seed;
+  const fs = Math.round(size * 0.42);
+  return '<div class="seal' + (mode === 'emblem' ? ' emblem' : '') + '" style="--deity-hue:' + d.hue + ';width:' + size + 'px;height:' + size + 'px;font-size:' + fs + 'px;">' + inner + '</div>';
+}
+
+/* comparison rows */
+document.getElementById('cmp').innerHTML = DEITIES.map(d => `
+  <div class="row" style="--deity-hue:${d.hue}">
+    <div class="row-name">
+      <div class="rn">${d.name}</div>
+      <div class="rd">${d.deva}</div>
+    </div>
+    <div class="swap">
+      <div class="cell">
+        ${seal(d, 58, 'bija')}
+        <div class="cap ${d.collide ? 'collide' : ''}">bīja${d.collide ? ' · shared' : ''}</div>
+      </div>
+      <div class="arrow"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h13M13 6l6 6-6 6"/></svg></div>
+      <div class="cell">
+        ${seal(d, 58, 'emblem')}
+        <div class="cap"><b>${d.ename}</b></div>
+      </div>
+    </div>
+  </div>`).join('');
+
+/* in-context tiles — the ॐ pair + Ganeśa */
+const showcase = ['ganesha','shiva','vishnu'].map(id => DEITIES.find(d => d.id === id));
+const counts = { ganesha: '24 hymns', shiva: '31 hymns', vishnu: '38 hymns' };
+document.getElementById('tiles').innerHTML = showcase.map(d => `
+  <div class="gtile" style="--deity-hue:${d.hue}">
+    ${seal(d, 66, 'emblem')}
+    <div class="gname">${d.name}</div>
+    <div class="gcount">${counts[d.id]}</div>
+  </div>`).join('');
+
+const hr = DEITIES.find(d => d.id === 'subrahmanya');
+const hrEl = document.getElementById('hymnrow');
+hrEl.style.setProperty('--deity-hue', hr.hue);
+hrEl.innerHTML = `
+  ${seal(hr, 40, 'emblem')}
+  <div>
+    <div class="ht">Ṣaḍānanaṁ Śaraṇam</div>
+    <div class="hs">Subrahmaṇya · Dhyāna-śloka</div>
+  </div>
+  <span class="play"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" stroke="none"><path d="M8 5.5v13l11-6.5z"/></svg></span>`;
+
+/* legibility strips at 30px */
+const stripHTML = DEITIES.map(d => seal(d, 30, 'emblem')).join('');
+document.getElementById('strip-day').innerHTML = stripHTML;
+document.getElementById('strip-night').innerHTML = stripHTML;
+
+/* bare glyphs at 26px */
+document.getElementById('glyphs').innerHTML = DEITIES.map(d => `
+  <div class="glyph" style="--deity-hue:${d.hue}">
+    <span class="bare"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.85" stroke-linecap="round" stroke-linejoin="round">${EMBLEMS[d.emblem]}</svg></span>
+    <span class="lbl">${d.ename}</span>
+  </div>`).join('');
+
+/* full set at medallion size */
+document.getElementById('fullset').innerHTML = DEITIES.map(d => `
+  <div class="glyph" style="--deity-hue:${d.hue}">
+    ${seal(d, 52, 'emblem')}
+    <span class="lbl">${d.name}</span>
+  </div>`).join('');
+</script>
+</body>
+</html>

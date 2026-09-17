@@ -39,8 +39,8 @@ function useFlyleaf() {
   useEffectF(() => F.subscribe(setE), []);
   const w = (k) => (v) => F.set({ [k]: v });
   return {
-    gotra: e.gotra, nama: e.nama, gender: e.gender, karma: e.karma, frame: e.frame, desa: e.desa,
-    setGotra: w("gotra"), setNama: w("nama"), setGender: w("gender"),
+    gotra: e.gotra, nama: e.nama, namaAlt: e.namaAlt, gender: e.gender, varna: e.varna || "", karma: e.karma, frame: e.frame, desa: e.desa,
+    setGotra: w("gotra"), setNama: w("nama"), setNamaAlt: w("namaAlt"), setGender: w("gender"), setVarna: w("varna"),
     setKarma: w("karma"), setFrame: w("frame"), setDesa: w("desa"),
     ready: !!(e.gotra || "").trim() && !!(e.nama || "").trim(),
   };
@@ -94,6 +94,10 @@ function FlyleafForm({ sk, lang, unknown }) {
   const L = STUTI_L, t = (k) => L.t(k, lang);
   const uid = React.useId();
   const male = sk.gender !== "female";
+  /* which hand the nāma was written in decides what the second field asks
+     for: a name in Telugu or Devanāgarī needs its Roman form, a name in
+     Roman needs the mūla script */
+  const indic = /[\u0900-\u097F\u0C00-\u0C7F]/.test(sk.nama || "");
   return (
     <div className="sk-form fl-form">
       <div className="sk-field">
@@ -104,6 +108,12 @@ function FlyleafForm({ sk, lang, unknown }) {
         <label className="sk-label" htmlFor={uid + "n"}>{t("namaL")}</label>
         <input id={uid + "n"} className="sk-input" value={sk.nama} onChange={(e) => sk.setNama(e.target.value)} placeholder="—" autoComplete="off" />
       </div>
+      {(sk.nama || "").trim() && (
+        <div className="sk-field">
+          <label className="sk-label" htmlFor={uid + "na"}>{t(indic ? "namaRomanL" : "namaScriptL")}</label>
+          <input id={uid + "na"} className="sk-input" value={sk.namaAlt} onChange={(e) => sk.setNamaAlt(e.target.value)} placeholder="—" autoComplete="off" />
+        </div>
+      )}
       <div className="sk-field">
         <span className="sk-label">{t("genderL")}</span>
         <div className="sk-seg">
@@ -111,6 +121,16 @@ function FlyleafForm({ sk, lang, unknown }) {
           <button className={!male ? "on" : ""} onClick={() => sk.setGender("female")}>{t("female")}</button>
         </div>
       </div>
+      {male && (
+        <div className="sk-field">
+          <span className="sk-label">{t("varnaL")}</span>
+          <div className="sk-seg fl-varna">
+            {[["", t("varnaNone")], ["brahmana", "śarma"], ["kshatriya", "varma"], ["vaishya", "gupta"], ["other", "dāsa"]].map(([id, lab]) => (
+              <button key={id} className={(sk.varna || "") === id ? "on" : ""} onClick={() => sk.setVarna(id)}>{id ? t("varna_" + id) : lab}</button>
+            ))}
+          </div>
+        </div>
+      )}
       {unknown !== false && !sk.gotra.trim() && (
         <button className="fl-unknown" onClick={() => sk.setGotra("Kāśyapa")}>{t("dontKnowGotra")}</button>
       )}

@@ -97,7 +97,10 @@ function KeepCard({ go, lang = "deva" }) {
   const font = L.font(lang);
   const items = K.list();
   const eng = K.engines();
-  const open = (k) => go("browse", { libSub: { kind: k.kind, key: k.ref, returnTo: "daily" } });
+  /* a śrāddha group is not a library entry — it lives on the pitṛ page */
+  const open = (k) => k.kind === "tarpana"
+    ? go("pitru", { from: "daily" })
+    : go("browse", { libSub: { kind: k.kind, key: k.ref, returnTo: "daily" } });
   const masaOf = (idx) => idx === "any" ? "any" : MA.list.find((m) => m.idx === idx);
   return (
     <div className="vows keep">
@@ -121,6 +124,18 @@ function KeepCard({ go, lang = "deva" }) {
               const m = k.masa != null && masaOf(k.masa);
               sub = m ? (m === "any" ? L.t("keepAnySub", lang) : L.t("keepMonthSub", lang).replace("{m}", kpMasaName(m, lang))) : L.t("keepPickMonth", lang);
               if (due && !k.kept) status = L.t("keepThisMonth", lang);
+            } else if (k.mode === "tarpana") {
+              /* a group is a set of days, not one recurring day — its next day
+                 is read from the group itself */
+              let nd = null;
+              try {
+                const y = new Date().getFullYear(), now = new Date();
+                const all = [];
+                for (const yy of [y, y + 1]) { const g = K.tarpanaGroup(k.ref, yy); if (g) (g.items || []).forEach((it) => it && it.date && all.push(it.date)); }
+                nd = all.filter((x) => x >= now).sort((a, b) => a - b)[0] || null;
+              } catch (e) {}
+              sub = (nd ? kpDate(nd, lang) + " · " : "") + L.t("keepVrataSub", lang).replace("{n}", k.lead);
+              if (due) status = due.away === 0 ? L.t("vrataToday", lang) : L.t("keepIn", lang).replace("{n}", due.away);
             } else {
               let nd = null; try { nd = eng.vrata.nextDate(s, new Date()); } catch (e) {}
               sub = (nd ? kpDate(nd, lang) + " · " : "") + L.t("keepVrataSub", lang).replace("{n}", k.lead);
@@ -133,7 +148,7 @@ function KeepCard({ go, lang = "deva" }) {
               <div key={k.id} className={"vow keep-row" + (due && !due.done ? " due" : "")} style={{ "--deity-hue": d ? d.hue : 36 }}>
                 <div className="vow-top">
                   <div className="vow-body">
-                    <div className="vow-occ">{k.kind === "vrata" ? L.t("lensVrata", lang) : L.t("lensNomu", lang)}{status ? " · " + status : ""}</div>
+                    <div className="vow-occ">{k.kind === "tarpana" ? (window.piT ? window.piT("cap", lang) : "Pitṛ") : k.kind === "vrata" ? L.t("lensVrata", lang) : L.t("lensNomu", lang)}{status ? " · " + status : ""}</div>
                     <button className="vow-hymn display" style={{ fontFamily: font }} onClick={() => open(k)}>{kpPick(s.name, lang)}</button>
                     <div className="vow-next">{sub}</div>
                   </div>

@@ -76,6 +76,42 @@ function SetChapter({ icon, title, children }) {
   );
 }
 
+/* ---- the ritual profile ----
+   Veda, śākhā and sūtra decide which day Upākarman is and which recipient
+   list a prayoga uses; gotra and pravara are what a saṅkalpa actually says
+   aloud. All five are optional and none of them gates a rite: where a field
+   is empty the app declines to name a day rather than picking one. */
+function RitualProfile({ uiLang }) {
+  const PR = STUTI_PREFS;
+  const [p, setP] = useStateS(() => (PR.get().ritual || {}));
+  useEffectS(() => PR.subscribe((x) => setP(x.ritual || {})), []);
+  const set = (k, v) => PR.set({ ritual: Object.assign({}, PR.get().ritual || {}, { [k]: v }) });
+  const tx = (roman, deva, tel) => uiLang === "telugu" ? tel : uiLang === "deva" ? deva : roman;
+  const FIELDS = [
+    { k: "veda", label: tx("Veda", "वेद", "వేదం"),
+      note: tx("Upākarman — and so the Kāṇḍarṣi tarpaṇam — falls on a different day for each Veda.", "उपाकर्म — और इसलिए काण्डर्षि तर्पण — प्रत्येक वेद के लिए भिन्न दिन पड़ता है।", "ఉపాకర్మ — తద్వారా కాండర్షి తర్పణం — ప్రతి వేదానికి వేరే రోజు వస్తుంది."),
+      ph: tx("Yajurveda", "यजुर्वेद", "యజుర్వేదం") },
+    { k: "shakha", label: tx("Śākhā", "शाखा", "శాఖ"), ph: tx("Taittirīya", "तैत्तिरीय", "తైత్తిరీయ") },
+    { k: "sutra", label: tx("Sūtra", "सूत्र", "సూత్రం"),
+      note: tx("Recipient order, tīrtha, and añjali count come from the sūtra's own prayoga, not from a general list.", "स्मरण-क्रम, तीर्थ और अञ्जलि-संख्या सूत्र के प्रयोग से आते हैं, किसी सामान्य सूची से नहीं।", "స్మరణ క్రమం, తీర్థం, అంజలుల సంఖ్య సూత్రపు ప్రయోగం నుండే వస్తాయి, సాధారణ జాబితా నుండి కాదు."),
+      ph: tx("Āpastamba", "आपस्तम्ब", "ఆపస్తంబ") },
+    { k: "gotra", label: tx("Gotra", "गोत्र", "గోత్రం"), ph: tx("Bhāradvāja", "भारद्वाज", "భారద్వాజ") },
+    { k: "pravara", label: tx("Pravara", "प्रवर", "ప్రవర"),
+      note: tx("Said in the saṅkalpa; kept here so it need not be recalled each time.", "सङ्कल्प में बोला जाता है; यहाँ रखा है जिससे हर बार स्मरण न करना पड़े।", "సంకల్పంలో చెబుతారు; ప్రతిసారి గుర్తు చేసుకోనవసరం లేకుండా ఇక్కడ ఉంచాం."),
+      ph: tx("Āṅgirasa · Bārhaspatya · Bhāradvāja", "आङ्गिरस · बार्हस्पत्य · भारद्वाज", "ఆంగిరస · బార్హస్పత్య · భారద్వాజ") },
+  ];
+  return (
+    <React.Fragment>
+      {FIELDS.map((f) => (
+        <SetField key={f.k} label={f.label} note={f.note}>
+          <input className="set-input" value={p[f.k] || ""} placeholder={f.ph} spellCheck="false"
+            onChange={(e) => set(f.k, e.target.value)} />
+        </SetField>
+      ))}
+    </React.Fragment>
+  );
+}
+
 function SetPanel({ children }) { return <div className="set-panel">{children}</div>; }
 
 /* a labelled control: the answer on the right, the reason below */
@@ -234,15 +270,15 @@ function SettingsView({ go, lang, setLang, uiLang, setUiLang, theme, toggleTheme
   const rm = prefs.remind || {};
 
   const scripts = [
-    { k: "deva", name: "देवनागरी", sub: "Devanāgarī" },
-    { k: "roman", name: "IAST", sub: "English" },
+    { k: "deva", name: "हिन्दी", sub: "Hindi" },
+    { k: "roman", name: "English", sub: "English" },
     { k: "telugu", name: "తెలుగు", sub: "Telugu" },
   ];
   const uiLangCustom = localStorage.getItem("stuti-ui-lang-custom") === "1";
   const uiLangOptions = [
     { k: "match", name: L.t("uiLangMatch", uiLang) },
-    { k: "deva", name: "देवनागरी", sub: "Devanāgarī" },
-    { k: "roman", name: "IAST", sub: "English" },
+    { k: "deva", name: "हिन्दी", sub: "Hindi" },
+    { k: "roman", name: "English", sub: "English" },
     { k: "telugu", name: "తెలుగు", sub: "Telugu" },
   ];
 
@@ -380,6 +416,10 @@ function SettingsView({ go, lang, setLang, uiLang, setUiLang, theme, toggleTheme
               <SetChoice value={reckoning} options={reckoningOptions} dropdown
                 onChange={(k) => PR.set({ reckoning: k })} />
             </SetField>
+            {/* the ritual profile. Every field optional — unset means the app
+                assumes nothing and says so on the card, rather than guessing a
+                śākhā's day or a gotra's name. */}
+            <RitualProfile uiLang={uiLang} />
             <SetField label={L.t("setAyanamsa", uiLang)}
               note={L.t(reckoning === "vakya" ? "ayanamsaVakya" : "ayanamsaNote", uiLang)}>
               <SetChoice value={prefs.ayanamsa || "lahiri"} options={ayanOptions} dropdown

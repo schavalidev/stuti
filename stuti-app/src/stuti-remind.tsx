@@ -311,6 +311,11 @@ function RemindSheet({ lang = "deva", onClose }) {
                 ))}
               </div>
             )}
+            <button className={"rm-toggle" + (r.tarpana ? " on" : "")} onClick={() => set({ tarpana: !r.tarpana })} role="switch" aria-checked={!!r.tarpana}>
+              <span>{L.t("tarpanaNudges", lang)}</span>
+              <span className="rm-switch"><i /></span>
+            </button>
+            <p className="rm-note" style={{ margin: "8px 2px 0" }}>{L.t("tarpanaNote", lang)}</p>
           </RemindGroup>
 
           <RemindGroup cap={L.t("remindSandhya", lang)} note={L.t("cueMirrorSandhya", lang)}>

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="day" data-lang="roman" data-ui-lang="roman" data-palette="unified" data-seal="ratna">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Settings · Stuti</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link rel="stylesheet" href="stuti.css" />
+<link rel="stylesheet" href="stuti-components.css" />
+<link rel="stylesheet" href="stuti-palette.css" />
+<link rel="stylesheet" href="site.css" />
+</head>
+<body data-page="settings">
+<div class="wrap">
+  <div class="page-head">
+    <span class="eyebrow eyebrow-a" data-t="setEyebrow">How the site reads</span>
+    <h1 data-t="navSettings">Settings</h1>
+    <p data-t="setLede">Kept in this browser. No account, nothing sent anywhere.</p>
+  </div>
+  <div class="set-grid">
+    <div class="pane">
+      <span class="limb-label" data-t="sScript">Reading script</span>
+      <h3 data-t="sScriptH">The script you read in</h3>
+      <p data-t="sScriptP">Devanāgarī is the source; Telugu and Roman are derived from it.</p>
+      <div class="set-row" id="setLang"></div>
+    </div>
+    <div class="pane">
+      <span class="limb-label" data-t="sUiLang">Interface language</span>
+      <h3 data-t="sUiLangH">What the buttons and pages say</h3>
+      <p data-t="sUiLangP">Separate from the reading script — Telugu verses can sit under an English interface, or the reverse.</p>
+      <div class="set-row" id="setUiLang"></div>
+    </div>
+    <div class="pane">
+      <span class="limb-label" data-t="sFace">Face</span>
+      <h3 data-t="sFaceH">Day or night</h3>
+      <p data-t="sFaceP">Parchment by day; a lamplit ground for the evening.</p>
+      <div class="set-row" id="setTheme"></div>
+    </div>
+    <div class="pane">
+      <span class="limb-label" data-t="sPlace">Almanac</span>
+      <h3 data-t="sPlaceH">Where the day is computed</h3>
+      <p data-t="sPlaceP">Sunrise, the tithi's turn and the sandhyā windows all follow it.</p>
+      <div class="set-row" id="setLoc"></div>
+    </div>
+    <div class="pane">
+      <span class="limb-label" data-t="sReck">Reckoning</span>
+      <h3 data-t="sReckH">How the day is cast</h3>
+      <p data-t="sReckP">Dr̥k follows the sky; vākya follows the Siddhānta's arithmetic. They can name a different tithi on the same morning.</p>
+      <div class="set-row" id="setReck"></div>
+      <div class="set-row" id="setAyan"></div>
+      <p class="set-note" id="ayanNote"></p>
+    </div>
+    <div class="pane">
+      <span class="limb-label" data-t="sMasa">Māsa</span>
+      <h3 data-t="sMasaH">How the months are named</h3>
+      <p data-t="sMasaP">Amānta counts from the new moon, pūrṇimānta from the full.</p>
+      <div class="set-row" id="setMasa"></div>
+      <p class="set-note" data-t="sMasaNote">These three are the app's own settings — set them here and it opens with them.</p>
+    </div>
+    <div class="pane">
+      <span class="limb-label" data-t="sPos">Reading position</span>
+      <h3 data-t="sPosH">Where you left off</h3>
+      <p data-t="sPosP">The verse you were on, in this browser only.</p>
+      <div class="set-row"><span class="chip" id="lastRead" data-t="nothingYet">Nothing yet</span><button class="ghost" id="clearRead" style="min-height:46px" data-t="forgetIt">Forget it</button></div>
+    </div>
+  </div>
+  <div class="note" style="margin-top:22px;max-width:640px" data-th="setAppNote"><b>In the app.</b> Reminders at each sandhyā, the texts held offline, the saṅkalpa flyleaf, and the japa and pārāyaṇa records. <a href="get.html">What the app adds</a></div>
+</div>
+<div style="height:70px"></div>
+<script src="stuti-translit.js"></script>
+<script src="stuti-texts.js"></script>
+<script src="stuti-prefs.js"></script>
+<script src="stuti-ephemeris.js"></script>
+<script src="stuti-sankranti-data.js"></script>
+<script src="stuti-reckoning.js"></script>
+<script src="stuti-panchanga-engine.js"></script>
+<script src="site-i18n.js"></script>
+<script src="site-lib.js"></script>
+<script src="site-panch.js"></script>
+<script src="site-settings.js"></script>
+<script src="site-chrome.js"></script>
+</body>
+</html>

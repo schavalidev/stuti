@@ -207,7 +207,7 @@ function SkyHeader({ lang = "deva", greeting, go }) {
             {greeting || L.greeting(lang)}
             {(() => { const n = ((STUTI_FLYLEAF && STUTI_FLYLEAF.get().nama) || "").trim(); return n ? ", " + n : ""; })()}
           </span>
-          <LocationControl />
+          <LocationControl compass />
         </div>
       </div>
 
@@ -231,18 +231,18 @@ function SkyHeader({ lang = "deva", greeting, go }) {
           {/* the hour is on one side or the other of sunrise/sunset, and the two
               Sūrya acts of the rite fall on opposite sides of it */}
           {st.rite === "arghya" && (
-            <div className="sky-plate-note sky-plate-rite" style={{ fontFamily: font, paddingRight: 44 }}>
+            <div className="sky-plate-note sky-plate-rite" style={{ fontFamily: font, width: "calc(100% - 44px)" }}>
               {L.t("riteArghya", lang).replace("{t}", clock(st.hinge))}
             </div>
           )}
           {st.rite === "upasthana" && (
-            <div className="sky-plate-note sky-plate-rite" style={{ fontFamily: font, paddingRight: 44 }}>
+            <div className="sky-plate-note sky-plate-rite" style={{ fontFamily: font, width: "calc(100% - 44px)" }}>
               {L.t("riteLatePray", lang)}
             </div>
           )}
           {/* the prāyaścitta stands alone only where there is no hinge line to
               carry it — otherwise the two lines argue over the same arghya */}
-          {st.prayaschitta && !st.rite && <div className="sky-plate-note" style={{ paddingRight: 44 }}>{L.t("prayaschitta", lang)}</div>}
+          {st.prayaschitta && !st.rite && <div className="sky-plate-note" style={{ width: "calc(100% - 44px)" }}>{L.t("prayaschitta", lang)}</div>}
           <button className="icon-btn" aria-label="How to perform sandhyā by your own sampradayā" title="How to perform sandhyā by your own sampradayā"
             style={{ position: "absolute", right: 10, bottom: 10, width: 26, height: 26, minWidth: 26, borderRadius: "50%", background: "var(--surface-2)", border: "1px solid var(--line)", color: "var(--ink-soft)", fontSize: "0.8125rem", fontWeight: 700, display: "grid", placeItems: "center" }}
             onClick={(e) => { e.stopPropagation(); if (go) go("sandhyaNote", { from: "home" }); }}>?</button>

@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="day">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Akshara · Parity Audit</title>
+<link rel="stylesheet" href="stuti.css" />
+<style>
+body{background:var(--bg);color:var(--ink);font-family:var(--font-ui);-webkit-font-smoothing:antialiased}
+.page{max-width:860px;margin:0 auto;padding:0 28px 120px}
+a{color:var(--gold-deep);text-decoration:none;border-bottom:1px solid color-mix(in oklab,var(--gold) 40%,transparent)}
+a:hover{color:var(--gold);border-bottom-color:var(--gold)}
+.top{display:flex;align-items:center;justify-content:space-between;gap:20px;padding:34px 0 0}
+.brand{display:flex;align-items:baseline;gap:11px}
+.brand-name{font-family:var(--font-display);font-size:20px;letter-spacing:.02em;color:var(--gold-deep)}
+.brand-dev{font-family:var(--font-deva);font-size:16px;color:var(--ink-faint)}
+.theme-btn{width:44px;height:44px;border:1px solid var(--line);border-radius:50%;background:var(--surface);color:var(--ink-soft);display:grid;place-items:center;cursor:pointer}
+.theme-btn:hover{border-color:color-mix(in oklab,var(--gold) 40%,var(--line));color:var(--gold-deep)}
+.head{padding:54px 0 36px;border-bottom:1px solid var(--line)}
+h1{font-family:var(--font-display);font-size:46px;line-height:1.1;margin:0;color:var(--ink);letter-spacing:-.01em}
+.lede{margin:16px 0 0;font-size:17px;line-height:1.65;color:var(--ink-soft);max-width:60ch;text-wrap:pretty}
+.metrics{display:flex;flex-wrap:wrap;gap:10px;margin-top:26px}
+.metric{flex:1 1 140px;padding:13px 15px;border-radius:var(--r-sm);background:var(--surface);border:1px solid var(--line)}
+.metric-n{font-family:var(--font-display);font-size:25px;color:var(--gold-deep);line-height:1.1}
+.metric-l{margin-top:4px;font-size:12.5px;line-height:1.45;color:var(--ink-faint)}
+section{padding:40px 0 8px;border-bottom:1px solid var(--line)}
+h2{font-family:var(--font-display);font-size:28px;line-height:1.25;margin:0;color:var(--ink);font-weight:400}
+.kicker{font-size:11.5px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--gold-deep);margin:0 0 10px}
+.sec-note{margin:10px 0 4px;font-size:15px;line-height:1.65;color:var(--ink-soft);max-width:62ch;text-wrap:pretty}
+.feat{display:grid;grid-template-columns:86px 1fr 100px;gap:18px;padding:20px 0;border-top:1px solid var(--line-2);align-items:start}
+.feat:first-of-type{border-top:0}
+.feats{margin-top:22px}
+.st{display:inline-block;padding:3px 10px;border-radius:999px;font-size:10.5px;font-weight:600;letter-spacing:.09em;text-transform:uppercase;white-space:nowrap;margin-top:3px}
+.st-miss{background:color-mix(in oklab,var(--ink) 8%,transparent);color:var(--ink-soft)}
+.st-part{background:color-mix(in oklab,var(--gold) 17%,transparent);color:var(--gold-deep)}
+.st-ok{background:color-mix(in oklab,var(--gold) 10%,transparent);color:var(--ink-faint)}
+.feat h3{font-family:var(--font-display);font-size:19.5px;line-height:1.3;margin:0;color:var(--ink);font-weight:500}
+.feat p{margin:7px 0 0;font-size:14.5px;line-height:1.65;color:var(--ink-soft);max-width:58ch;text-wrap:pretty}
+.eff{justify-self:end;text-align:right;font-size:12px;color:var(--ink-faint);line-height:1.45;padding-top:4px}
+.eff b{display:block;font-family:var(--font-display);font-size:19px;color:var(--gold-deep);font-weight:500}
+code{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:.86em;padding:1px 6px;border-radius:5px;background:var(--surface-2);border:1px solid var(--line-2);color:var(--ink)}
+.tel{font-family:var(--font-telugu)}.deva{font-family:var(--font-deva)}
+.done-list{margin:18px 0 30px;padding:0;list-style:none;display:grid;grid-template-columns:repeat(auto-fill,minmax(330px,1fr));gap:8px 26px}
+.done-list li{position:relative;padding-left:24px;font-size:14.5px;line-height:1.55;color:var(--ink-soft)}
+.done-list li::before{content:"✓";position:absolute;left:0;top:0;color:var(--gold-deep);font-weight:600}
+.phase{display:grid;grid-template-columns:64px 1fr;gap:18px;padding:18px 0;border-top:1px solid var(--line-2)}
+.phase:first-of-type{border-top:0}
+.phase-n{font-family:var(--font-display);font-size:26px;color:var(--gold-deep);line-height:1.1}
+.phase h3{font-family:var(--font-display);font-size:19px;margin:2px 0 0;color:var(--ink);font-weight:500}
+.phase p{margin:6px 0 0;font-size:14.5px;line-height:1.6;color:var(--ink-soft);max-width:60ch;text-wrap:pretty}
+.foot{padding:40px 0 0;font-size:14px;line-height:1.7;color:var(--ink-soft);max-width:58ch;text-wrap:pretty}
+@media (max-width:720px){.page{padding:0 20px 80px}h1{font-size:34px}.feat{grid-template-columns:1fr;gap:6px}.eff{justify-self:start;text-align:left}.eff b{display:inline;margin-right:6px}}
+</style>
+</head>
+<body>
+<div class="page">
+
+<div class="top">
+  <div class="brand"><span class="brand-name">Akshara ⇄ Stuti</span><span class="brand-dev">परीक्षा</span></div>
+  <button class="theme-btn" id="tt" aria-label="Day or night"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 14.5A8 8 0 1 1 9.5 4a6.3 6.3 0 0 0 10.5 10.5z" /></svg></button>
+</div>
+
+<div class="head">
+  <h1>The parity audit</h1>
+  <p class="lede">Stuti is the phone app; Akshara is the website. They have shared one almanac since 0.8 and one day-sheet since 0.9.0, and it is tempting to call that parity. It is not: everything the app does about practice — counting, keeping, planning, being reminded — stops at the phone. This audit sets each Stuti feature beside the website's answer to it, so the crossing can be planned rather than discovered.</p>
+  <div class="metrics">
+    <div class="metric"><div class="metric-n">31</div><div class="metric-l">features to cross, in six groups</div></div>
+    <div class="metric"><div class="metric-n">18</div><div class="metric-l">Stuti modules loadable as they are — no DOM in them</div></div>
+    <div class="metric"><div class="metric-n">8</div><div class="metric-l">engines the site already runs</div></div>
+    <div class="metric"><div class="metric-n">5</div><div class="metric-l">phases proposed</div></div>
+  </div>
+</div>
+
+<section>
+  <p class="kicker">Already shared — no work</p>
+  <h2>What crossed in 0.8 and 0.9.0</h2>
+  <p class="sec-note">The precedent for everything below: the engine is loaded as-is, and the screen is re-said in the site's own voice. Nothing here needs touching.</p>
+  <ul class="done-list">
+    <li>The ephemeris and all five limbs, with both ends of each</li>
+    <li>Seven kāla windows, moonrise and moonset, the running window</li>
+    <li>The saṅkalpa with its deśa clause, gotra and the sixty-year cycle</li>
+    <li>200 places, searchable, with detect-my-location</li>
+    <li>The four reckoning preferences, on shared keys — one reciter, one set of habits</li>
+    <li>The six saṅkrānti solar days, computed not pinned</li>
+    <li>Festival and vratham guides with samāgri lists</li>
+    <li>Reading in six scripts, with parallel layout</li>
+    <li>Daily recitation list — playlist, mālā and night styles, drag to re-thread</li>
+    <li>Bookmarks, mock recitation with speed, transpile caching via <code>StutiBoot</code></li>
+  </ul>
+</section>
+
+<section>
+  <p class="kicker">Group A — the practice layer</p>
+  <h2>The largest gap: the site has a library, not a practice</h2>
+  <p class="sec-note">All of Stuti's Nitya tab. The stores are plain modules — <code>stuti-store.js</code>, <code>stuti-sadhana.js</code> — so a household that counts on the phone should find the same counts on the site.</p>
+  <div class="feats">
+    <div class="feat"><span class="st st-miss">Missing</span><div><h3>Daily threads and the sādhana streak</h3><p>Per-hymn practice log: the unbroken thread, last sitting, lapses named by name rather than shown as a broken chain. The reckoning lives in <code>stuti-sadhana.js</code>; the site's daily list would gain a count and a thread under each entry.</p></div><div class="eff"><b>M</b>view re-said, store shared</div></div>
+    <div class="feat"><span class="st st-miss">Missing</span><div><h3>Japa — the mālā counter</h3><p>A counting page per deity thread: tap or hold to count, 108 to a round, sittings logged. On the site this is a full-screen quiet page, keyboard-friendly — space to count.</p></div><div class="eff"><b>M</b>view re-said</div></div>
+    <div class="feat"><span class="st st-miss">Missing</span><div><h3>Anuṣṭhāna plans</h3><p>Multi-day undertakings — the forty-day Hanumān Cālīsā and kin — with a day grid, today's portion, and the portion opening the reader at the right verses. Plan state is in the shared store.</p></div><div class="eff"><b>M</b>view re-said</div></div>
+    <div class="feat"><span class="st st-miss">Missing</span><div><h3>Vows</h3><p>A kept vrata — Ekādaśī, the Kārtika Mondays — as a standing commitment with its own switch, surfaced on the day it falls. Rides on data the site already loads.</p></div><div class="eff"><b>S</b></div></div>
+    <div class="feat"><span class="st st-miss">Missing</span><div><h3>The practice record</h3><p>What was recited when — the ledger behind the streaks, browsable by month. Same store; the site can afford a fuller table than the phone.</p></div><div class="eff"><b>S</b></div></div>
+    <div class="feat"><span class="st st-miss">Missing</span><div><h3>Practice guides, sandhyā first</h3><p>Step-by-step guides (<code>stuti-practice.jsx</code>, <code>stuti-sandhya.jsx</code>) — the sandhyā one keyed to the actual juncture windows the site already computes.</p></div><div class="eff"><b>M</b></div></div>
+  </div>
+</section>
+
+<section>
+  <p class="kicker">Group B — library lenses</p>
+  <h2>Two shelves the site does not have</h2>
+  <p class="sec-note">The data files are shared verbatim — <code>stuti-nomu-data.js</code>, <code>stuti-parayana-data.js</code> — and the guides reuse the vratham guide's own layout, so this group is mostly saying it in the site's type.</p>
+  <div class="feats">
+    <div class="feat"><span class="st st-miss">Missing</span><div><h3>Nomulu — the household vows</h3><p>Eight of them — <span class="tel">అట్లతద్ది</span>, <span class="tel">ఉప్పు నోము</span>, the Kārtika Mondays and kin — each with years kept, vidhi, vāyanam, the kathā told aloud, and the udyāpana. No computed dates, on purpose: the custom names its day the way an elder does.</p></div><div class="eff"><b>S</b>data shared</div></div>
+    <div class="feat"><span class="st st-miss">Missing</span><div><h3>Pārāyaṇa — reading undertakings</h3><p>Eight schedules — Sundarakāṇḍa, Devī Māhātmyam, the Gītā, the saptāha — each a schedule rather than a text: day-divisions the tradition allows, when it is begun, the niyama that holds it.</p></div><div class="eff"><b>S</b>data shared</div></div>
+    <div class="feat"><span class="st st-miss">Missing</span><div><h3>The full index, and the waiting list</h3><p>Stuti's library merges <code>stotra-index-data.js</code> — hundreds of stotras by name, per deity, while their texts are keyed and proofed — and the site never loads it, so its shelves show only the keyed few. With the index comes the waiting state: rather than a dead end, ask to be told when a text arrives (<code>stuti-watch.js</code>, <code>stuti-await.jsx</code>).</p></div><div class="eff"><b>S</b>data shared</div></div>
+    <div class="feat"><span class="st st-part">Partial</span><div><h3>A guide's foot points at its deity</h3><p>Stuti ended every vow and pārāyaṇa guide with one row — the seal and the name — opening the deity's page: the complete, self-updating answer to "what do I recite". The site's guides end with hand-picked lists, which are wrong the day the next hymn is added.</p></div><div class="eff"><b>S</b></div></div>
+  </div>
+</section>
+
+<section>
+  <p class="kicker">Group C — reader depth</p>
+  <h2>The reader reads; Stuti's also teaches</h2>
+  <div class="feats">
+    <div class="feat"><span class="st st-part">Partial</span><div><h3>Padārtha — word by word</h3><p>Tap any word for its meaning, what it is made of, and where else it stands in the corpus, occurrences tappable. The site has verse-level Telugu meanings for the Sahasranāma; the word lexicon (<code>stuti-lexicon.js</code>) and the sheet (<code>stuti-pada.jsx</code>) have not crossed.</p></div><div class="eff"><b>M</b>lexicon shared</div></div>
+    <div class="feat"><span class="st st-miss">Missing</span><div><h3>Learn modes — listen, repeat, memorize</h3><p>Three ways through a hymn: hear it, echo it line by line, and recall it with the line veiled. The site's recite bar plays straight through only.</p></div><div class="eff"><b>M</b></div></div>
+    <div class="feat"><span class="st st-miss">Missing</span><div><h3>Recording — hear your own turn</h3><p>Record a recitation against the text and play it back (<code>stuti-record.jsx</code>). Browser microphone permission is the only new ask.</p></div><div class="eff"><b>M</b></div></div>
+    <div class="feat"><span class="st st-part">Partial</span><div><h3>The flyleaf</h3><p>The saṅkalpa said before the text begins — name, gotra, intention — as the reader's opening page. The site says the saṅkalpa on the Pañcāṅga page but the reader starts cold; the flyleaf also carries the name the sky greets you by.</p></div><div class="eff"><b>S</b>store shared</div></div>
+    <div class="feat"><span class="st st-miss">Missing</span><div><h3>Sharing a verse</h3><p>A verse as a card — script, translation, the hymn's name — composed for sending (<code>stuti-share.jsx</code>).</p></div><div class="eff"><b>S</b></div></div>
+    <div class="feat"><span class="st st-miss">Missing</span><div><h3>Printing a stotra</h3><p>The reader's print button (<code>window.printStotra</code>) lays the hymn out as a clean sheet in the reading script, meanings included when they are showing. A website is where printing is most expected, and the site has no print path at all.</p></div><div class="eff"><b>S</b></div></div>
+    <div class="feat"><span class="st st-part">Partial</span><div><h3>The sahasranāma name glossaries</h3><p>The thousand names with Telugu and English glosses, in named groups, searchable inside the reader — <code>stuti-names-vishnu.js</code> and <code>stuti-names-lalita.js</code>. The site carries verse-level Telugu meanings for the Viṣṇu Sahasranāma only: no Lalitā set, no name-by-name gloss, no groups.</p></div><div class="eff"><b>S</b>data shared</div></div>
+    <div class="feat"><span class="st st-part">Partial</span><div><h3>Search that reads all the verses</h3><p>The site's verse search reads a sample pool — the Gītā chapter it ships — while titles, deities and stotras are fully indexed. Stuti searches every keyed verse. Point the site's pool at the shared text corpus.</p></div><div class="eff"><b>S</b></div></div>
+  </div>
+</section>
+
+<section>
+  <p class="kicker">Group D — a living Today</p>
+  <h2>The site reports the day; Stuti shows it</h2>
+  <div class="feats">
+    <div class="feat"><span class="st st-miss">Missing</span><div><h3>The sky header</h3><p>The header is the light actually outside: six phases of day, the disc where the sun genuinely is along its arc, stars after dusk (<code>stuti-sky.jsx</code>). On a wide screen this is a band rather than a phone card — the one piece that wants real re-design, not translation.</p></div><div class="eff"><b>M</b></div></div>
+    <div class="feat"><span class="st st-miss">Missing</span><div><h3>The six seasons as pigment and motion</h3><p>Ṛtu hues written once, weather drawn as paint — vasanta's flowering bough, varṣā's rain, hemanta's mist. Rides on the sky layer.</p></div><div class="eff"><b>M</b></div></div>
+    <div class="feat"><span class="st st-miss">Missing</span><div><h3>The sandhyā card</h3><p>The three junctures as windows that open and close, and the night the moon skips said plainly with the next rise beside it. The site computes all of it already and says none of it on Home.</p></div><div class="eff"><b>S</b>engine shared</div></div>
+    <div class="feat"><span class="st st-miss">Missing</span><div><h3>Greeted by name</h3><p>The flyleaf knows who is reciting — the saṅkalpa needs the name — so the greeting uses it. Free once the flyleaf crosses.</p></div><div class="eff"><b>S</b></div></div>
+    <div class="feat"><span class="st st-miss">Missing</span><div><h3>What is owed today</h3><p>One list computed from vows, plans, threads and marked tithis — <code>stuti-cues.js</code> answers it with <code>obligations()</code>, deliberately pure so page, worker and server agree. The site would show the list even where bells cannot ring.</p></div><div class="eff"><b>S</b>module shared</div></div>
+  </div>
+</section>
+
+<section>
+  <p class="kicker">Group E — reminders and preparation</p>
+  <h2>The app calls you back; the site waits to be visited</h2>
+  <div class="feats">
+    <div class="feat"><span class="st st-miss">Missing</span><div><h3>The reminder system</h3><p>A daily cue at a chosen hour, the sandhyā juncture bell (the only self-earned bell), quiet hours, a switch on each vow, lapses named. <code>stuti-remind.jsx</code> over <code>stuti-cues.js</code>; the settings surface crosses with it.</p></div><div class="eff"><b>M</b></div></div>
+    <div class="feat"><span class="st st-miss">Missing</span><div><h3>Vratham preparation, three days early</h3><p>The app watches ahead: three days before a watched festival, the gather-list surfaces with checkable samāgri (<code>stuti-prep.js</code>). Eight festivals watched by default, the rest opt-in. The site has the lists and shows them only on the day.</p></div><div class="eff"><b>S</b>data shared</div></div>
+    <div class="feat"><span class="st st-miss">Missing</span><div><h3>Web push</h3><p>The browser's version of the bell (<code>stuti-push.js</code>). Honest caveat: on a desktop browser permission is often denied or the tab is shut — which is exactly why the in-app owed-list above depends on none of it.</p></div><div class="eff"><b>L</b></div></div>
+  </div>
+</section>
+
+<section>
+  <p class="kicker">Group F — the system underneath</p>
+  <h2>First run, offline, language, night</h2>
+  <div class="feats">
+    <div class="feat"><span class="st st-miss">Missing</span><div><h3>First-run onboarding</h3><p>Who you are, where you are, which script — asked once, before the first recitation (<code>stuti-onboard.jsx</code>). The site currently asks nothing and defaults everything.</p></div><div class="eff"><b>S</b></div></div>
+    <div class="feat"><span class="st st-miss">Missing</span><div><h3>Offline</h3><p>A service worker, network-first, taking over as soon as the new build is ready (<code>stuti-sw.js</code>). An almanac consulted at five in the morning should not depend on the connection.</p></div><div class="eff"><b>M</b></div></div>
+    <div class="feat"><span class="st st-miss">Missing</span><div><h3>The interface in your language</h3><p>Stuti's chrome speaks Devanāgarī, Telugu or Roman (<code>stuti-i18n.js</code>); the site's chrome is English throughout, though its verses read in six scripts. Every label passes through <code>L.t()</code> once this crosses.</p></div><div class="eff"><b>M</b>strings shared</div></div>
+    <div class="feat"><span class="st st-miss">Missing</span><div><h3>A night theme, taken seriously</h3><p>The site has three paper palettes and no dark one. Stuti's 0.9.9 lesson applies from day one: night is re-drawn, not inverted — lit grounds for artwork, ink not fill for colour.</p></div><div class="eff"><b>M</b></div></div>
+    <div class="feat"><span class="st st-part">Partial</span><div><h3>The wordmark in your script</h3><p>Reading in Telugu or Devanāgarī, the brand should lead with <span class="tel">అక్షర</span> or <span class="deva">अक्षर</span> and keep the Latin as the companion. Follows the i18n work.</p></div><div class="eff"><b>S</b></div></div>
+  </div>
+</section>
+
+<section>
+  <p class="kicker">Deliberately not crossing</p>
+  <h2>What stays on the phone</h2>
+  <p class="sec-note">The four-tab bottom bar and its lineage routing — the site has a top nav and a footer, and the phone preview already frames the site when a phone is wanted. The day-and-night sky as a full-bleed backdrop may shrink to a band. Kids mode is its own app and its own audit. Everything else in Stuti is, on inspection, portable.</p>
+</section>
+
+<section style="border-bottom:0">
+  <p class="kicker">A suggested order</p>
+  <h2>Five crossings</h2>
+  <div class="feats">
+    <div class="phase"><div class="phase-n">1</div><div><h3>The practice layer</h3><p>Threads and streaks, japa, plans, vows, the record, the sandhyā guide. This is the actual ask — the rest decorates it. Load the stores first so phone and site count as one.</p></div></div>
+    <div class="phase"><div class="phase-n">2</div><div><h3>The two lenses and the waiting list</h3><p>Nomulu, pārāyaṇa, watch-this-stotra, and every guide's foot pointing at its deity. Cheapest group; data crosses verbatim.</p></div></div>
+    <div class="phase"><div class="phase-n">3</div><div><h3>Reader depth</h3><p>Padārtha, learn modes, the flyleaf, recording, sharing and printing, the name glossaries, and the search pool widened to the whole corpus.</p></div></div>
+    <div class="phase"><div class="phase-n">4</div><div><h3>The living Today</h3><p>Sky, seasons, the sandhyā card, the greeting, the owed-list. The one phase with real design work — the sky must be composed for a wide screen, not stretched.</p></div></div>
+    <div class="phase"><div class="phase-n">5</div><div><h3>Reminders, preparation, and the system</h3><p>Cues and quiet hours, the three-day prep nudge, onboarding, offline, the interface in three languages, night. Web push last — it is the only item needing anything beyond the browser.</p></div></div>
+  </div>
+</section>
+
+<p class="foot">Method note: statuses were read from the running code of both apps, not from memory — the site's router, its search pool, its theme table, and the phone's module list. Where the site half-has a thing, it is marked Partial and the missing half named. Effort is S, M, L for a working session, a day, and more than a day, in this codebase's terms.</p>
+
+</div>
+<script>
+const tt=document.getElementById("tt"),root=document.documentElement;
+const saved=localStorage.getItem("stuti-changelog-theme");
+if(saved)root.setAttribute("data-theme",saved);
+tt.addEventListener("click",()=>{const next=root.getAttribute("data-theme")==="night"?"day":"night";root.setAttribute("data-theme",next);localStorage.setItem("stuti-changelog-theme",next);});
+</script>
+</body>
+</html>

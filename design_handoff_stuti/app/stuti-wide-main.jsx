@@ -254,7 +254,7 @@ function BrowseView({ go, lang = "deva" }) {
         <button className="icon-btn" onClick={() => go("search", { from: "browse" })} aria-label={L.t("search", lang)}><Icon name="search" /></button>
       </div>
       <div className="tile-grid browse-grid lib-deity-grid lib-deity-grid-3">
-        {S.deities.map((d, i) => (
+        {S.deities.filter((d) => !d.hidden).map((d, i) => (
           <DeityTile key={d.id} d={d} lang={lang} i={i} onClick={() => go("deity", { deity: d.id, from: "browse" })}>
             <span className="niche-count">{L.hymnsCount(S.hymnsForDeity(d.id).length, lang)}</span>
           </DeityTile>
@@ -352,7 +352,7 @@ function TabBar({ view, from, ret, go, lang = "deva", theme, toggleTheme }) {
       <button className={"tab tab-home" + (onHome ? " tab-on" : "")} onClick={() => go("home")}>
         <Icon name="home" size={25} /><span>{L.t("today", lang)}</span>
       </button>
-      <button className={"tab" + (onNitya ? " tab-on" : "")} onClick={() => go("daily")}>
+      <button className={"tab" + (onNitya ? " tab-on" : "")} onClick={() => go("daily", { lens: "patha", lensAt: Date.now() })}>
         <Icon name="diya" size={25} filled={true} /><span>{L.t("nitya", lang)}</span>
       </button>
       <button className={"tab" + (onLib ? " tab-on" : "")} onClick={() => go("browse", { reset: true })}>
@@ -430,7 +430,7 @@ function App() {
        above where they were. Both arrive as `go("browse")`, so intent has
        to be stated rather than guessed from the destination. */
     if (payload.reset) setLibSub(null);
-    setRoute(r => ({ view, from: payload.from, ret: payload.ret, deity: payload.deity ?? r.deity, hymn: payload.hymn ?? r.hymn, practice: payload.practice ?? r.practice, plan: payload.plan ?? r.plan, weekday: payload.weekday }));
+    setRoute(r => ({ view, from: payload.from, ret: payload.ret, deity: payload.deity ?? r.deity, hymn: payload.hymn ?? r.hymn, practice: payload.practice ?? r.practice, plan: payload.plan ?? r.plan, lens: payload.lens, lensAt: payload.lensAt, weekday: payload.weekday }));
   };
 
   const openToday = () => {
@@ -448,7 +448,7 @@ function App() {
   if (route.view === "home") body = <Home key="home" go={go} openToday={openToday} lang={lang} overlayEl={overlayEl} />;
   else if (route.view === "browse") body = <window.LibraryHub key="browse" go={go} lang={lang} tileMode={tileMode} lens={libLens} setLens={setLibLens} sub={libSub} setSub={setLibSub} />;
   else if (route.view === "search") body = <SearchView key="search" go={go} lang={lang} backView={route.from || "browse"} weekday={route.weekday} voice={!!route.voice} />;
-  else if (route.view === "daily") body = <window.NityaView key="daily" go={go} lang={lang} showPractices={false} openRemind={() => setRemindOpen(true)} initLens={route.lens} />;
+  else if (route.view === "daily") body = <window.NityaView key="daily" go={go} lang={lang} showPractices={false} openRemind={() => setRemindOpen(true)} initLens={route.lens} initLensAt={route.lensAt} />;
   else if (route.view === "practices") body = <window.PracticesView key="practices" go={go} lang={lang} />;
   else if (route.view === "japa") body = <window.JapaView key="japa" go={go} lang={lang} />;
   else if (route.view === "plans") body = <window.PlansView key="plans" go={go} lang={lang} />;

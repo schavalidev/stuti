@@ -43,15 +43,16 @@ function HymnRow({ h, go, lang, showSeal = true, i = 0, from = "browse" }) {
 }
 
 /* ---------------- By deity (adaptive grid) ---------------- */
-function DeityLens({ go, lang, tileMode = "seal" }) {
+function DeityLens({ go, lang, tileMode = "seal", onOpenType }) {
   const S = window.STUTI, L = window.STUTI_L;
   /* every tile is the shared DeityTile; the old seal/full tweak no longer
      changes the shape */
   /* the deities the reciter said they keep stand first */
   const kept = window.STUTI_PREFS ? window.STUTI_PREFS.get().kept : [];
+  const shelf = S.deities.filter((d) => !d.hidden);
   const deities = kept.length
-    ? S.deities.slice().sort((a, b) => (kept.indexOf(b.id) !== -1) - (kept.indexOf(a.id) !== -1))
-    : S.deities;
+    ? shelf.slice().sort((a, b) => (kept.indexOf(b.id) !== -1) - (kept.indexOf(a.id) !== -1))
+    : shelf;
   /* pinch on the grid re-flows it, as a photo roll does: spread → fewer, larger
      tiles; pinch → more, smaller. Two to four across; the count sticks. */
   const [cols, setCols] = React.useState(() => { const v = +(localStorage.getItem("stuti.deityCols") || 3); return v >= 2 && v <= 4 ? v : 3; });
@@ -87,14 +88,8 @@ function DeityLens({ go, lang, tileMode = "seal" }) {
         {deities.map((d, i) => (
           <DeityTile key={d.id} d={d} lang={lang} i={i} kept={kept.indexOf(d.id) !== -1} onClick={() => go("deity", { deity: d.id, from: "browse" })} />
         ))}
-        {/* the ninth shelf: what is coming. A dashed ring rather than an emblem —
-            a drawn deity would promise a text that is not there yet, and eight
-            plus this one fills the three-up grid exactly. */}
-        <div className="gtile gtile-soon" aria-disabled="true">
-          <span className="gtile-soon-ring"><Icon name="grid" size={26} /></span>
-          <div className="gtile-name display" style={{ fontFamily: L.font(lang) }}>{L.t("otherDeities", lang)}</div>
-          <div className="gtile-soon-tag">{L.t("comingSoon", lang)}</div>
-        </div>
+        {/* the "other devas, soon" tile is gone: the rivers, the nine grahas and
+            the Itara shelf now stand on the grid as shelves of their own. */}
       </div>
 
       <div className="coll-list">
@@ -107,6 +102,26 @@ function DeityLens({ go, lang, tileMode = "seal" }) {
           </div>
           <span className="lens-row-chev"><Icon name="chev" size={18} /></span>
         </button>
+        <button className="coll-card" onClick={() => onOpenType && onOpenType("Sūkta")}>
+          <span className="coll-ico"><Icon name="list" size={24} filled={true} /></span>
+          <div className="coll-body">
+            <div className="coll-title display" style={{ fontFamily: L.font(lang) }}>{L.t("suktams", lang)}</div>
+            <div className="coll-sub">{L.t("suktamsSub", lang)}</div>
+          </div>
+          <span className="lens-row-chev"><Icon name="chev" size={18} /></span>
+        </button>
+        {/* the three long corpora. The rows stand now because a reciter looks
+            for them here; each says plainly that the text is not in yet. */}
+        {["puranas", "ramayanam", "mahabharatam"].map((k) => (
+          <div key={k} className="coll-card coll-card-soon" aria-disabled="true">
+            <span className="coll-ico"><Icon name="book" size={24} filled={true} /></span>
+            <div className="coll-body">
+              <div className="coll-title display" style={{ fontFamily: L.font(lang) }}>{L.t(k, lang)}</div>
+              <div className="coll-sub">{L.t(k + "Sub", lang)}</div>
+            </div>
+            <span className="coll-soon">{L.t("comingSoon", lang)}</span>
+          </div>
+        ))}
       </div>
       <div style={{ height: 32 }} />
     </div>
@@ -517,7 +532,7 @@ function LibraryHub({ go, lang = "deva", tileMode = "seal", lens = "deity", setL
   else if (lens === "masa") body = <window.MasaLens go={go} lang={lang} onOpen={(k) => setSub({ kind: "masa", key: k })} />;
   /* deity is the default and the fallback — an unrecognised lens must still
      render a library rather than an empty screen */
-  else body = <DeityLens go={go} lang={lang} tileMode={tileMode} />;
+  else body = <DeityLens go={go} lang={lang} tileMode={tileMode} onOpenType={(k) => setSub({ kind: "type", key: k })} />;
 
   return (
     <div className="view libhub scroll" ref={viewRef}>

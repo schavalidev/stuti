@@ -3,6 +3,7 @@ import { STUTI_BUILD } from "./stuti-build";
 import { STUTI_COUNT } from "./stuti-count";
 import { STUTI_L } from "./stuti-i18n";
 import { Flame, Icon } from "./stuti-icons";
+import { STUTI_PREFS } from "./stuti-prefs";
 
 /* ============================================================
    STUTI — the beta latch
@@ -15,8 +16,13 @@ import { Flame, Icon } from "./stuti-icons";
 const { useState: useGateS, useEffect: useGateE, useRef: useGateR } = React;
 
 const GATE_ASK: Record<string, string> = { roman: "Do not have the word? Write to", deva: "शब्द नहीं मिला? हमें लिखें:", telugu: "పదం లేదా? మాకు రాయండి:" };
-function GateScreen({ lang = "deva", onOpen }) {
+function GateScreen({ lang: langProp = "roman", onOpen }) {
   const L = STUTI_L, B = STUTI_BUILD;
+  /* The latch stands before onboarding, so no language has been chosen yet:
+     English is the default. Only a household that already picked a language
+     (onboarded) sees the latch in that language. */
+  let lang = "roman";
+  try { if (STUTI_PREFS && STUTI_PREFS.get().onboarded) lang = langProp; } catch (e) {}
   const [v, setV] = useGateS("");
   const [no, setNo] = useGateS(0);
   const ref = useGateR(null);

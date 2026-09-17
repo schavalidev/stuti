@@ -2,6 +2,7 @@ import { STUTI_NOMU } from "./stuti-nomu-data";
 import { AKSHARA_PANCHANGA } from "./stuti-panchanga-engine";
 import { STUTI_THREAD } from "./stuti-sadhana";
 import { STUTI_LOC } from "./stuti-store";
+import { STUTI_TARPANA } from "./stuti-tarpana";
 import { STUTI_VRATA } from "./stuti-vrata-data";
 
 /* ============================================================
@@ -46,7 +47,7 @@ export const STUTI_KEEP = (function () {
   }
   /* what the bell does with it: a daily nomu ticks; every other nomu is
      kept in a month; a vrata is watched for */
-  const modeFor = (kind, ref) => kind === "vrata" ? "vrata" : nomuCadence(STUTI_NOMU && STUTI_NOMU.get(ref)) === "daily" ? "daily" : "month";
+  const modeFor = (kind, ref) => kind === "tarpana" ? "tarpana" : kind === "vrata" ? "vrata" : nomuCadence(STUTI_NOMU && STUTI_NOMU.get(ref)) === "daily" ? "daily" : "month";
 
   const find = (kind, ref) => list.find((k) => k.kind === kind && k.ref === ref) || null;
   const byId = (id) => list.find((k) => k.id === id) || null;
@@ -78,7 +79,17 @@ export const STUTI_KEEP = (function () {
   }
 
   /* the nomu's and vrata's own records, resolved */
-  const subject = (k) => k.kind === "vrata" ? (STUTI_VRATA && (STUTI_VRATA.lookup ? STUTI_VRATA.lookup(k.ref) : STUTI_VRATA.byId[k.ref])) : (STUTI_NOMU && STUTI_NOMU.get(k.ref));
+  /* a śrāddha group resolves to its own record in the tarpaṇa classification,
+     so the Sādhana list can name what is being watched */
+  function tarpanaGroup(ref) {
+    const TP = STUTI_TARPANA; if (!TP) return null;
+    const y = new Date().getFullYear();
+    try {
+      const g = (TP.shannavati(y) || []).concat(TP.yogaDays ? (TP.yogaDays(y) || []) : []);
+      return g.find((x) => x.id === ref) || null;
+    } catch (e) { return null; }
+  }
+  const subject = (k) => k.kind === "tarpana" ? tarpanaGroup(k.ref) : k.kind === "vrata" ? (STUTI_VRATA && (STUTI_VRATA.lookup ? STUTI_VRATA.lookup(k.ref) : STUTI_VRATA.byId[k.ref])) : (STUTI_NOMU && STUTI_NOMU.get(k.ref));
   const hasUdyapana = (k) => { const n = k.kind === "nomu" && subject(k); return !!(n && n.udyapana && (n.udyapana.roman || n.udyapana.tel)); };
 
   /* ---- what one record asks of one day — pure, given the engines ----
@@ -112,6 +123,26 @@ export const STUTI_KEEP = (function () {
       } catch (e) {}
       return { state: "month", done: false, remind: first || closing };
     }
+    /* a group of śrāddha occasions — the twelve amāvāsyas, the mahālaya
+       pakṣa, the fourteen manvādis. Not one recurring day but a set, so the
+       group is asked for its own dates and the nearest one ahead is owed. */
+    if (k.mode === "tarpana") {
+      const TP = STUTI_TARPANA; if (!TP) return null;
+      let items = [];
+      try {
+        const y = d.getFullYear();
+        for (const yy of [y, y + 1]) {
+          const g = (TP.shannavati(yy, eng.place) || []).concat(TP.yogaDays ? (TP.yogaDays(yy, eng.place) || []) : []);
+          const hit = g.find((x) => x.id === k.ref);
+          if (hit) items = items.concat(hit.items || []);
+        }
+      } catch (e) { return null; }
+      const dates = items.map((it) => it && it.date).filter(Boolean).map(noon).filter((x) => x >= d).sort((a, b) => a - b);
+      if (!dates.length) return null;
+      const away = Math.round((dates[0] - d) / DAY);
+      if (away > k.lead) return null;
+      return { state: "vrata", away, date: dates[0], done: k.keptOn === dkey(dates[0]), remind: true };
+    }
     if (k.mode === "vrata") {
       const V = eng.vrata, v = V && (V.lookup ? V.lookup(k.ref) : V.byId[k.ref]); if (!v) return null;
       let nd; try { nd = V.nextDate(v, d); } catch (e) { return null; }
@@ -132,7 +163,7 @@ export const STUTI_KEEP = (function () {
   };
 
   return {
-    YEAR, DEFAULT_LEAD, NOMU_CADENCE, nomuCadence, modeFor, dkey,
+    YEAR, DEFAULT_LEAD, NOMU_CADENCE, nomuCadence, modeFor, dkey, tarpanaGroup,
     list: () => list.slice(), find, byId, subject, hasUdyapana,
     add, remove, patch, tick, markKept, keepVrataDay,
     setLead: (id, n) => patch(id, { lead: Math.max(0, n | 0) }),

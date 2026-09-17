@@ -8,8 +8,13 @@
    ============================================================ */
 const { useState: useGateS, useEffect: useGateE, useRef: useGateR } = React;
 
-function GateScreen({ lang = "deva", onOpen }) {
+function GateScreen({ lang: langProp = "roman", onOpen }) {
   const L = window.STUTI_L, B = window.STUTI_BUILD;
+  /* The latch stands before onboarding, so no language has been chosen yet:
+     English is the default. Only a household that already picked a language
+     (onboarded) sees the latch in that language. */
+  let lang = "roman";
+  try { if (window.STUTI_PREFS && window.STUTI_PREFS.get().onboarded) lang = langProp; } catch (e) {}
   const [v, setV] = useGateS("");
   const [no, setNo] = useGateS(0);
   const ref = useGateR(null);

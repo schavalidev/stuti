@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="design_doc_mode" content="canvas" />
+<title>Stuti · English font pairings v2</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;600&family=Cormorant+Garamond:wght@400;600;700&family=Noto+Serif:wght@400;500;600;700&family=Charis+SIL:wght@400;700&family=Gentium+Plus:wght@400;700&family=Gelasio:wght@400;600;700&family=Spectral:wght@400;500;600&family=Marcellus&family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Source+Sans+3:wght@400;500;600;700&family=Inter:wght@400;500;600;700&family=Noto+Sans:wght@400;500;600;700&family=Andika:wght@400;700&family=Noto+Sans+Display:wght@400;500;600;700&family=Noto+Sans+Devanagari:wght@400;500;600&display=swap" />
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-style:normal}
+:root{--bg:#F7EFE2;--bg-warm:#F2E6D2;--surface:#FFFDF8;--surface-2:#FBF4E8;--ink:#2B2017;--ink-soft:#584B3E;--ink-faint:#6F6356;--line:rgba(43,32,23,.10);--line-2:rgba(43,32,23,.06);--gold:#B07A2B;--gold-deep:#8A5A18;--shadow:0 20px 50px -22px rgba(58,40,20,.40),0 4px 14px -8px rgba(58,40,20,.30);--r-lg:26px;--r-md:18px;--deity-hue:36;--accent:oklch(.58 .13 var(--deity-hue));--accent-soft:oklch(.92 .045 var(--deity-hue));--accent-ink:oklch(.42 .12 var(--deity-hue));--font-deva:'Noto Sans Devanagari',sans-serif}
+a{color:var(--accent-ink);text-decoration:none}a:hover{color:var(--gold-deep)}
+.frame{position:absolute;width:440px;font-family:var(--font-ui);color:var(--ink);font-optical-sizing:auto}
+.tag{display:flex;flex-direction:column;gap:2px;margin-bottom:14px}
+.tag b{font-family:var(--font-display);font-size:22px;font-weight:var(--display-weight);letter-spacing:.2px}
+.tag span{font-size:12.5px;color:var(--ink-faint);letter-spacing:.06em;text-transform:uppercase}
+.phone{background:var(--bg);border:1px solid var(--line);border-radius:30px;box-shadow:var(--shadow);padding:24px 20px 28px;font-size:18px;line-height:1.55}
+.mast{display:flex;flex-direction:column;align-items:center;gap:6px;padding-bottom:18px;border-bottom:1px solid var(--line-2)}
+.wordmark{font-family:var(--font-display);font-size:34px;font-weight:var(--display-weight);letter-spacing:.5px}
+.greet{font-size:17px;color:var(--ink-soft)}
+.eyebrow{font-size:12.5px;letter-spacing:.11em;text-transform:uppercase;color:var(--ink-faint);font-weight:600}
+.plate{margin-top:20px;background:var(--surface);border:1px solid var(--line);border-radius:var(--r-lg);padding:18px 18px 20px;box-shadow:0 8px 22px -14px rgba(58,40,20,.4)}
+.plate-head{display:flex;align-items:baseline;justify-content:space-between;gap:12px;margin-top:8px}
+.plate-head b{font-family:var(--font-display);font-size:27px;font-weight:var(--display-weight);line-height:1.2}
+.till{font-size:15px;color:var(--ink-faint);font-variant-numeric:tabular-nums}
+.bar{margin-top:14px;height:8px;border-radius:99px;background:var(--bg-warm);position:relative;overflow:hidden}
+.bar i{position:absolute;inset:0 42% 0 0;background:linear-gradient(90deg,var(--accent-soft),var(--accent));border-radius:99px}
+.limbs{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:16px;padding-top:14px;border-top:1px solid var(--line-2)}
+.limb{display:flex;flex-direction:column;gap:3px}
+.limb span{font-size:11.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-faint)}
+.limb b{font-size:16px;font-weight:600;color:var(--ink-soft)}
+.verse{margin-top:22px;background:var(--surface-2);border:1px solid var(--line-2);border-radius:var(--r-md);padding:18px}
+.deva{font-family:var(--font-deva);font-size:22px;line-height:1.75}
+.iast{margin-top:10px;font-size:16.5px;color:var(--ink-soft);line-height:1.6}
+.gloss{margin-top:10px;font-size:16px;color:var(--ink-faint);line-height:1.6;text-wrap:pretty}
+.shelf{margin-top:26px;display:flex;flex-direction:column;gap:2px}
+.row{display:flex;align-items:center;gap:14px;padding:14px 4px;border-bottom:1px solid var(--line-2)}
+.row .n{font-family:var(--font-display);font-size:17px;color:var(--ink-faint);width:26px;font-variant-numeric:tabular-nums}
+.row .t{flex:1;display:flex;flex-direction:column;gap:1px}
+.row .t b{font-size:18px;font-weight:600;letter-spacing:.1px}
+.row .t span{font-size:14.5px;color:var(--ink-faint)}
+.btn{margin-top:22px;width:100%;height:60px;border-radius:99px;background:var(--ink);color:var(--bg);font-family:inherit;font-size:18px;font-weight:600;letter-spacing:.2px;display:flex;align-items:center;justify-content:center}
+.para{margin-top:20px;font-size:16.5px;line-height:1.62;color:var(--ink-soft);text-wrap:pretty}
+.strip{margin-top:16px;padding-top:12px;border-top:1px solid var(--line-2);display:flex;flex-direction:column;gap:5px}
+.strip span{font-size:11.5px;letter-spacing:.11em;text-transform:uppercase;color:var(--ink-faint);font-weight:600}
+.strip b{font-size:21px;font-weight:400;letter-spacing:.04em;color:var(--ink-soft);line-height:1.5}
+.strip b.sd{font-family:var(--font-display)}
+.strip b.su{font-family:var(--font-ui)}
+.note{margin-top:16px;font-size:14px;line-height:1.5;color:var(--ink-faint);text-wrap:pretty}
+.legend{position:absolute;left:60px;top:3160px;width:940px;font-family:'Source Sans 3',system-ui,sans-serif;color:var(--ink)}
+.legend h1{font-family:'EB Garamond',Georgia,serif;font-size:30px;font-weight:600;margin-bottom:10px}
+.legend p{font-size:17px;line-height:1.6;color:var(--ink-soft);text-wrap:pretty;margin-bottom:10px}
+.f-a{--font-display:'EB Garamond',Georgia,serif;--font-ui:'Source Sans 3',system-ui,sans-serif;--display-weight:600}
+.f-b{--font-display:'Cormorant Garamond',Georgia,serif;--font-ui:'Inter',system-ui,sans-serif;--display-weight:600}
+.f-c{--font-display:'Noto Serif',Georgia,serif;--font-ui:'Noto Sans',system-ui,sans-serif;--display-weight:600}
+.f-d{--font-display:'Charis SIL',Georgia,serif;--font-ui:'Andika',system-ui,sans-serif;--display-weight:700}
+.f-e{--font-display:'Gentium Plus',Georgia,serif;--font-ui:'Noto Sans Display',system-ui,sans-serif;--display-weight:700}
+.f-f{--font-display:'Gelasio',Georgia,serif;--font-ui:'Source Sans 3',system-ui,sans-serif;--display-weight:600}
+.f-g{--font-display:'Spectral',Georgia,serif;--font-ui:'Noto Sans',system-ui,sans-serif;--display-weight:600}
+.f-h{--font-display:'Marcellus',Georgia,serif;--font-ui:'Source Sans 3',system-ui,sans-serif;--display-weight:400}
+.f-i{--font-display:'Fraunces',Georgia,serif;--font-ui:'Inter',system-ui,sans-serif;--display-weight:600}
+</style>
+</head>
+<body>
+<div class="frame f-a" style="left:60px;top:60px">
+  <div class="tag"><b>EB Garamond + Source Sans 3</b><span>Classical old-style · IAST complete</span></div>
+  <div class="phone">
+    <div class="mast"><div class="wordmark">Stuti</div><div class="greet">Good morning, Srikrishna</div></div>
+    <div class="plate">
+      <div class="eyebrow">Sandhyā</div>
+      <div class="plate-head"><b>Prātaḥ Sandhyā</b><span class="till">till 11:06 am</span></div>
+      <div class="bar"><i></i></div>
+      <div class="limbs">
+        <div class="limb"><span>Tithi</span><b>Śukla Dvitīyā</b></div>
+        <div class="limb"><span>Nakṣatra</span><b>Uttara Phālgunī</b></div>
+        <div class="limb"><span>Yoga</span><b>Siddhi</b></div>
+      </div>
+    </div>
+    <div class="verse">
+      <div class="deva">वक्रतुण्ड महाकाय सूर्यकोटि समप्रभ ।</div>
+      <div class="iast">vakratuṇḍa mahākāya sūryakoṭi samaprabha ।</div>
+      <div class="gloss">O curved-trunked one, vast of body, radiant as ten million suns — make my every undertaking free of obstacle, always.</div>
+    </div>
+    <div class="shelf">
+      <div class="eyebrow" style="margin-bottom:8px">Nitya pārāyaṇa</div>
+      <div class="row"><span class="n">01</span><span class="t"><b>Gaṇapati Prārthana</b><span>4 verses · 2 min</span></span></div>
+      <div class="row"><span class="n">02</span><span class="t"><b>Viṣṇu Sahasranāma</b><span>1000 names · 32 min</span></span></div>
+      <div class="row"><span class="n">03</span><span class="t"><b>Lalitā Aṣṭottara</b><span>108 names · 9 min</span></span></div>
+    </div>
+    <div class="btn">Begin recitation</div>
+    <div class="para">The junctures are reckoned from today's sunrise at Hyderabad. A recitation begun inside the window carries the merit of the whole.</div>
+    <div class="strip"><span>Diacritics · display face</span><b class="sd">ā ī ū ṛ ṝ ḷ ṅ ñ ṭ ḍ ṇ ś ṣ ḥ ṁ ṃ</b></div>
+    <div class="strip"><span>Diacritics · UI face</span><b class="su">ā ī ū ṛ ṝ ḷ ṅ ñ ṭ ḍ ṇ ś ṣ ḥ ṁ ṃ</b></div>
+    <div class="note">EB Garamond is a Garamond revival: low contrast, small x-height, warm. Titles read as a printed book's rather than an inscription's. Both faces set every diacritic the corpus uses.</div>
+  </div>
+</div>
+<div class="frame f-b" style="left:560px;top:60px">
+  <div class="tag"><b>Cormorant Garamond + Inter</b><span>High contrast, elegant · IAST complete</span></div>
+  <div class="phone">
+    <div class="mast"><div class="wordmark">Stuti</div><div class="greet">Good morning, Srikrishna</div></div>
+    <div class="plate">
+      <div class="eyebrow">Sandhyā</div>
+      <div class="plate-head"><b>Prātaḥ Sandhyā</b><span class="till">till 11:06 am</span></div>
+      <div class="bar"><i></i></div>
+      <div class="limbs">
+        <div class="limb"><span>Tithi</span><b>Śukla Dvitīyā</b></div>
+        <div class="limb"><span>Nakṣatra</span><b>Uttara Phālgunī</b></div>
+        <div class="limb"><span>Yoga</span><b>Siddhi</b></div>
+      </div>
+    </div>
+    <div class="verse">
+      <div class="deva">वक्रतुण्ड महाकाय सूर्यकोटि समप्रभ ।</div>
+      <div class="iast">vakratuṇḍa mahākāya sūryakoṭi samaprabha ।</div>
+      <div class="gloss">O curved-trunked one, vast of body, radiant as ten million suns — make my every undertaking free of obstacle, always.</div>
+    </div>
+    <div class="shelf">
+      <div class="eyebrow" style="margin-bottom:8px">Nitya pārāyaṇa</div>
+      <div class="row"><span class="n">01</span><span class="t"><b>Gaṇapati Prārthana</b><span>4 verses · 2 min</span></span></div>
+      <div class="row"><span class="n">02</span><span class="t"><b>Viṣṇu Sahasranāma</b><span>1000 names · 32 min</span></span></div>
+      <div class="row"><span class="n">03</span><span class="t"><b>Lalitā Aṣṭottara</b><span>108 names · 9 min</span></span></div>
+    </div>
+    <div class="btn">Begin recitation</div>
+    <div class="para">The junctures are reckoned from today's sunrise at Hyderabad. A recitation begun inside the window carries the merit of the whole.</div>
+    <div class="strip"><span>Diacritics · display face</span><b class="sd">ā ī ū ṛ ṝ ḷ ṅ ñ ṭ ḍ ṇ ś ṣ ḥ ṁ ṃ</b></div>
+    <div class="strip"><span>Diacritics · UI face</span><b class="su">ā ī ū ṛ ṝ ḷ ṅ ñ ṭ ḍ ṇ ś ṣ ḥ ṁ ṃ</b></div>
+    <div class="note">The most refined of the set and the most fragile — hairlines thin out under 20px, so it works as display only. Inter beneath it is the most legible sans here and the most anonymous.</div>
+  </div>
+</div>
+<div class="frame f-c" style="left:1060px;top:60px">
+  <div class="tag"><b>Noto Serif + Noto Sans</b><span>One superfamily, most robust · IAST complete</span></div>
+  <div class="phone">
+    <div class="mast"><div class="wordmark">Stuti</div><div class="greet">Good morning, Srikrishna</div></div>
+    <div class="plate">
+      <div class="eyebrow">Sandhyā</div>
+      <div class="plate-head"><b>Prātaḥ Sandhyā</b><span class="till">till 11:06 am</span></div>
+      <div class="bar"><i></i></div>
+      <div class="limbs">
+        <div class="limb"><span>Tithi</span><b>Śukla Dvitīyā</b></div>
+        <div class="limb"><span>Nakṣatra</span><b>Uttara Phālgunī</b></div>
+        <div class="limb"><span>Yoga</span><b>Siddhi</b></div>
+      </div>
+    </div>
+    <div class="verse">
+      <div class="deva">वक्रतुण्ड महाकाय सूर्यकोटि समप्रभ ।</div>
+      <div class="iast">vakratuṇḍa mahākāya sūryakoṭi samaprabha ।</div>
+      <div class="gloss">O curved-trunked one, vast of body, radiant as ten million suns — make my every undertaking free of obstacle, always.</div>
+    </div>
+    <div class="shelf">
+      <div class="eyebrow" style="margin-bottom:8px">Nitya pārāyaṇa</div>
+      <div class="row"><span class="n">01</span><span class="t"><b>Gaṇapati Prārthana</b><span>4 verses · 2 min</span></span></div>
+      <div class="row"><span class="n">02</span><span class="t"><b>Viṣṇu Sahasranāma</b><span>1000 names · 32 min</span></span></div>
+      <div class="row"><span class="n">03</span><span class="t"><b>Lalitā Aṣṭottara</b><span>108 names · 9 min</span></span></div>
+    </div>
+    <div class="btn">Begin recitation</div>
+    <div class="para">The junctures are reckoned from today's sunrise at Hyderabad. A recitation begun inside the window carries the merit of the whole.</div>
+    <div class="strip"><span>Diacritics · display face</span><b class="sd">ā ī ū ṛ ṝ ḷ ṅ ñ ṭ ḍ ṇ ś ṣ ḥ ṁ ṃ</b></div>
+    <div class="strip"><span>Diacritics · UI face</span><b class="su">ā ī ū ṛ ṝ ḷ ṅ ñ ṭ ḍ ṇ ś ṣ ḥ ṁ ṃ</b></div>
+    <div class="note">Serif and sans are the same design at two ends, and the family already covers Devanāgarī and Telugu — so Latin, Devanāgarī and Telugu could share one set of proportions. Sturdy and slightly plain.</div>
+  </div>
+</div>
+<div class="frame f-d" style="left:1560px;top:60px">
+  <div class="tag"><b>Charis SIL + Andika</b><span>Scholarly, elder-first · IAST complete</span></div>
+  <div class="phone">
+    <div class="mast"><div class="wordmark">Stuti</div><div class="greet">Good morning, Srikrishna</div></div>
+    <div class="plate">
+      <div class="eyebrow">Sandhyā</div>
+      <div class="plate-head"><b>Prātaḥ Sandhyā</b><span class="till">till 11:06 am</span></div>
+      <div class="bar"><i></i></div>
+      <div class="limbs">
+        <div class="limb"><span>Tithi</span><b>Śukla Dvitīyā</b></div>
+        <div class="limb"><span>Nakṣatra</span><b>Uttara Phālgunī</b></div>
+        <div class="limb"><span>Yoga</span><b>Siddhi</b></div>
+      </div>
+    </div>
+    <div class="verse">
+      <div class="deva">वक्रतुण्ड महाकाय सूर्यकोटि समप्रभ ।</div>
+      <div class="iast">vakratuṇḍa mahākāya sūryakoṭi samaprabha ।</div>
+      <div class="gloss">O curved-trunked one, vast of body, radiant as ten million suns — make my every undertaking free of obstacle, always.</div>
+    </div>
+    <div class="shelf">
+      <div class="eyebrow" style="margin-bottom:8px">Nitya pārāyaṇa</div>
+      <div class="row"><span class="n">01</span><span class="t"><b>Gaṇapati Prārthana</b><span>4 verses · 2 min</span></span></div>
+      <div class="row"><span class="n">02</span><span class="t"><b>Viṣṇu Sahasranāma</b><span>1000 names · 32 min</span></span></div>
+      <div class="row"><span class="n">03</span><span class="t"><b>Lalitā Aṣṭottara</b><span>108 names · 9 min</span></span></div>
+    </div>
+    <div class="btn">Begin recitation</div>
+    <div class="para">The junctures are reckoned from today's sunrise at Hyderabad. A recitation begun inside the window carries the merit of the whole.</div>
+    <div class="strip"><span>Diacritics · display face</span><b class="sd">ā ī ū ṛ ṝ ḷ ṅ ñ ṭ ḍ ṇ ś ṣ ḥ ṁ ṃ</b></div>
+    <div class="strip"><span>Diacritics · UI face</span><b class="su">ā ī ū ṛ ṝ ḷ ṅ ñ ṭ ḍ ṇ ś ṣ ḥ ṁ ṃ</b></div>
+    <div class="note">Both are SIL faces built for exactly this: long Indic-transliteration text at reading sizes. Andika was drawn for literacy learners — unusually clear letterforms, the most elder-legible sans on the board.</div>
+  </div>
+</div>
+<div class="frame f-e" style="left:2060px;top:60px">
+  <div class="tag"><b>Gentium Plus + Noto Sans Display</b><span>Manuscript, literary · IAST complete</span></div>
+  <div class="phone">
+    <div class="mast"><div class="wordmark">Stuti</div><div class="greet">Good morning, Srikrishna</div></div>
+    <div class="plate">
+      <div class="eyebrow">Sandhyā</div>
+      <div class="plate-head"><b>Prātaḥ Sandhyā</b><span class="till">till 11:06 am</span></div>
+      <div class="bar"><i></i></div>
+      <div class="limbs">
+        <div class="limb"><span>Tithi</span><b>Śukla Dvitīyā</b></div>
+        <div class="limb"><span>Nakṣatra</span><b>Uttara Phālgunī</b></div>
+        <div class="limb"><span>Yoga</span><b>Siddhi</b></div>
+      </div>
+    </div>
+    <div class="verse">
+      <div class="deva">वक्रतुण्ड महाकाय सूर्यकोटि समप्रभ ।</div>
+      <div class="iast">vakratuṇḍa mahākāya sūryakoṭi samaprabha ।</div>
+      <div class="gloss">O curved-trunked one, vast of body, radiant as ten million suns — make my every undertaking free of obstacle, always.</div>
+    </div>
+    <div class="shelf">
+      <div class="eyebrow" style="margin-bottom:8px">Nitya pārāyaṇa</div>
+      <div class="row"><span class="n">01</span><span class="t"><b>Gaṇapati Prārthana</b><span>4 verses · 2 min</span></span></div>
+      <div class="row"><span class="n">02</span><span class="t"><b>Viṣṇu Sahasranāma</b><span>1000 names · 32 min</span></span></div>
+      <div class="row"><span class="n">03</span><span class="t"><b>Lalitā Aṣṭottara</b><span>108 names · 9 min</span></span></div>
+    </div>
+    <div class="btn">Begin recitation</div>
+    <div class="para">The junctures are reckoned from today's sunrise at Hyderabad. A recitation begun inside the window carries the merit of the whole.</div>
+    <div class="strip"><span>Diacritics · display face</span><b class="sd">ā ī ū ṛ ṝ ḷ ṅ ñ ṭ ḍ ṇ ś ṣ ḥ ṁ ṃ</b></div>
+    <div class="strip"><span>Diacritics · UI face</span><b class="su">ā ī ū ṛ ṝ ḷ ṅ ñ ṭ ḍ ṇ ś ṣ ḥ ṁ ṃ</b></div>
+    <div class="note">Gentium's diacritics are drawn, not composed, and it has the most manuscript character of the complete serifs. No 600 weight, so titles sit at 700.</div>
+  </div>
+</div>
+<div class="frame f-f" style="left:2560px;top:60px">
+  <div class="tag"><b>Gelasio + Source Sans 3</b><span>Sturdy at small sizes · IAST complete</span></div>
+  <div class="phone">
+    <div class="mast"><div class="wordmark">Stuti</div><div class="greet">Good morning, Srikrishna</div></div>
+    <div class="plate">
+      <div class="eyebrow">Sandhyā</div>
+      <div class="plate-head"><b>Prātaḥ Sandhyā</b><span class="till">till 11:06 am</span></div>
+      <div class="bar"><i></i></div>
+      <div class="limbs">
+        <div class="limb"><span>Tithi</span><b>Śukla Dvitīyā</b></div>
+        <div class="limb"><span>Nakṣatra</span><b>Uttara Phālgunī</b></div>
+        <div class="limb"><span>Yoga</span><b>Siddhi</b></div>
+      </div>
+    </div>
+    <div class="verse">
+      <div class="deva">वक्रतुण्ड महाकाय सूर्यकोटि समप्रभ ।</div>
+      <div class="iast">vakratuṇḍa mahākāya sūryakoṭi samaprabha ।</div>
+      <div class="gloss">O curved-trunked one, vast of body, radiant as ten million suns — make my every undertaking free of obstacle, always.</div>
+    </div>
+    <div class="shelf">
+      <div class="eyebrow" style="margin-bottom:8px">Nitya pārāyaṇa</div>
+      <div class="row"><span class="n">01</span><span class="t"><b>Gaṇapati Prārthana</b><span>4 verses · 2 min</span></span></div>
+      <div class="row"><span class="n">02</span><span class="t"><b>Viṣṇu Sahasranāma</b><span>1000 names · 32 min</span></span></div>
+      <div class="row"><span class="n">03</span><span class="t"><b>Lalitā Aṣṭottara</b><span>108 names · 9 min</span></span></div>
+    </div>
+    <div class="btn">Begin recitation</div>
+    <div class="para">The junctures are reckoned from today's sunrise at Hyderabad. A recitation begun inside the window carries the merit of the whole.</div>
+    <div class="strip"><span>Diacritics · display face</span><b class="sd">ā ī ū ṛ ṝ ḷ ṅ ñ ṭ ḍ ṇ ś ṣ ḥ ṁ ṃ</b></div>
+    <div class="strip"><span>Diacritics · UI face</span><b class="su">ā ī ū ṛ ṝ ḷ ṅ ñ ṭ ḍ ṇ ś ṣ ḥ ṁ ṃ</b></div>
+    <div class="note">Georgia's metrics with a warmer skeleton — high x-height, thick strokes, holds up at 15px where Cormorant collapses. The least ornamental of the complete serifs.</div>
+  </div>
+</div>
+<div class="frame f-g" data-row="2" style="left:60px;top:1600px">
+  <div class="tag"><b>Spectral + Noto Sans</b><span>Warm — one gap · IAST ṁ falls back in titles</span></div>
+  <div class="phone">
+    <div class="mast"><div class="wordmark">Stuti</div><div class="greet">Good morning, Srikrishna</div></div>
+    <div class="plate">
+      <div class="eyebrow">Sandhyā</div>
+      <div class="plate-head"><b>Prātaḥ Sandhyā</b><span class="till">till 11:06 am</span></div>
+      <div class="bar"><i></i></div>
+      <div class="limbs">
+        <div class="limb"><span>Tithi</span><b>Śukla Dvitīyā</b></div>
+        <div class="limb"><span>Nakṣatra</span><b>Uttara Phālgunī</b></div>
+        <div class="limb"><span>Yoga</span><b>Siddhi</b></div>
+      </div>
+    </div>
+    <div class="verse">
+      <div class="deva">वक्रतुण्ड महाकाय सूर्यकोटि समप्रभ ।</div>
+      <div class="iast">vakratuṇḍa mahākāya sūryakoṭi samaprabha ।</div>
+      <div class="gloss">O curved-trunked one, vast of body, radiant as ten million suns — make my every undertaking free of obstacle, always.</div>
+    </div>
+    <div class="shelf">
+      <div class="eyebrow" style="margin-bottom:8px">Nitya pārāyaṇa</div>
+      <div class="row"><span class="n">01</span><span class="t"><b>Gaṇapati Prārthana</b><span>4 verses · 2 min</span></span></div>
+      <div class="row"><span class="n">02</span><span class="t"><b>Viṣṇu Sahasranāma</b><span>1000 names · 32 min</span></span></div>
+      <div class="row"><span class="n">03</span><span class="t"><b>Lalitā Aṣṭottara</b><span>108 names · 9 min</span></span></div>
+    </div>
+    <div class="btn">Begin recitation</div>
+    <div class="para">The junctures are reckoned from today's sunrise at Hyderabad. A recitation begun inside the window carries the merit of the whole.</div>
+    <div class="strip"><span>Diacritics · display face</span><b class="sd">ā ī ū ṛ ṝ ḷ ṅ ñ ṭ ḍ ṇ ś ṣ ḥ ṁ ṃ</b></div>
+    <div class="strip"><span>Diacritics · UI face</span><b class="su">ā ī ū ṛ ṝ ḷ ṅ ñ ṭ ḍ ṇ ś ṣ ḥ ṁ ṃ</b></div>
+    <div class="note">The warmest book serif here, but ṁ — 147 occurrences in the corpus — is missing, so anusvāra in a title silently drops to Georgia. Fine if titles avoid it; not safe for verse.</div>
+  </div>
+</div>
+<div class="frame f-h" data-row="2" style="left:560px;top:1600px">
+  <div class="tag"><b>Marcellus + Source Sans 3</b><span>Today's face — largest gap · IAST 13 characters fall back</span></div>
+  <div class="phone">
+    <div class="mast"><div class="wordmark">Stuti</div><div class="greet">Good morning, Srikrishna</div></div>
+    <div class="plate">
+      <div class="eyebrow">Sandhyā</div>
+      <div class="plate-head"><b>Prātaḥ Sandhyā</b><span class="till">till 11:06 am</span></div>
+      <div class="bar"><i></i></div>
+      <div class="limbs">
+        <div class="limb"><span>Tithi</span><b>Śukla Dvitīyā</b></div>
+        <div class="limb"><span>Nakṣatra</span><b>Uttara Phālgunī</b></div>
+        <div class="limb"><span>Yoga</span><b>Siddhi</b></div>
+      </div>
+    </div>
+    <div class="verse">
+      <div class="deva">वक्रतुण्ड महाकाय सूर्यकोटि समप्रभ ।</div>
+      <div class="iast">vakratuṇḍa mahākāya sūryakoṭi samaprabha ।</div>
+      <div class="gloss">O curved-trunked one, vast of body, radiant as ten million suns — make my every undertaking free of obstacle, always.</div>
+    </div>
+    <div class="shelf">
+      <div class="eyebrow" style="margin-bottom:8px">Nitya pārāyaṇa</div>
+      <div class="row"><span class="n">01</span><span class="t"><b>Gaṇapati Prārthana</b><span>4 verses · 2 min</span></span></div>
+      <div class="row"><span class="n">02</span><span class="t"><b>Viṣṇu Sahasranāma</b><span>1000 names · 32 min</span></span></div>
+      <div class="row"><span class="n">03</span><span class="t"><b>Lalitā Aṣṭottara</b><span>108 names · 9 min</span></span></div>
+    </div>
+    <div class="btn">Begin recitation</div>
+    <div class="para">The junctures are reckoned from today's sunrise at Hyderabad. A recitation begun inside the window carries the merit of the whole.</div>
+    <div class="strip"><span>Diacritics · display face</span><b class="sd">ā ī ū ṛ ṝ ḷ ṅ ñ ṭ ḍ ṇ ś ṣ ḥ ṁ ṃ</b></div>
+    <div class="strip"><span>Diacritics · UI face</span><b class="su">ā ī ū ṛ ṝ ḷ ṅ ñ ṭ ḍ ṇ ś ṣ ḥ ṁ ṃ</b></div>
+    <div class="note">What the app ships now. Quiet and inscriptional at one weight, but its charset stops at Latin Extended-A: ṛ ṅ ṭ ḍ ṇ ṣ ḥ ṁ ṃ and more all fall back, which is why Prātaḥ Sandhyā looks mixed above.</div>
+  </div>
+</div>
+<div class="frame f-i" data-row="2" style="left:1060px;top:1600px">
+  <div class="tag"><b>Fraunces + Inter</b><span>Contemporary — two gaps · IAST ṅ ṁ fall back in titles</span></div>
+  <div class="phone">
+    <div class="mast"><div class="wordmark">Stuti</div><div class="greet">Good morning, Srikrishna</div></div>
+    <div class="plate">
+      <div class="eyebrow">Sandhyā</div>
+      <div class="plate-head"><b>Prātaḥ Sandhyā</b><span class="till">till 11:06 am</span></div>
+      <div class="bar"><i></i></div>
+      <div class="limbs">
+        <div class="limb"><span>Tithi</span><b>Śukla Dvitīyā</b></div>
+        <div class="limb"><span>Nakṣatra</span><b>Uttara Phālgunī</b></div>
+        <div class="limb"><span>Yoga</span><b>Siddhi</b></div>
+      </div>
+    </div>
+    <div class="verse">
+      <div class="deva">वक्रतुण्ड महाकाय सूर्यकोटि समप्रभ ।</div>
+      <div class="iast">vakratuṇḍa mahākāya sūryakoṭi samaprabha ।</div>
+      <div class="gloss">O curved-trunked one, vast of body, radiant as ten million suns — make my every undertaking free of obstacle, always.</div>
+    </div>
+    <div class="shelf">
+      <div class="eyebrow" style="margin-bottom:8px">Nitya pārāyaṇa</div>
+      <div class="row"><span class="n">01</span><span class="t"><b>Gaṇapati Prārthana</b><span>4 verses · 2 min</span></span></div>
+      <div class="row"><span class="n">02</span><span class="t"><b>Viṣṇu Sahasranāma</b><span>1000 names · 32 min</span></span></div>
+      <div class="row"><span class="n">03</span><span class="t"><b>Lalitā Aṣṭottara</b><span>108 names · 9 min</span></span></div>
+    </div>
+    <div class="btn">Begin recitation</div>
+    <div class="para">The junctures are reckoned from today's sunrise at Hyderabad. A recitation begun inside the window carries the merit of the whole.</div>
+    <div class="strip"><span>Diacritics · display face</span><b class="sd">ā ī ū ṛ ṝ ḷ ṅ ñ ṭ ḍ ṇ ś ṣ ḥ ṁ ṃ</b></div>
+    <div class="strip"><span>Diacritics · UI face</span><b class="su">ā ī ū ṛ ṝ ḷ ṅ ñ ṭ ḍ ṇ ś ṣ ḥ ṁ ṃ</b></div>
+    <div class="note">The most voice of any option and a real variable weight axis, but ṅ and ṁ drop to Georgia in titles, and the pair reads product-like — closer to a wellness app than a prayer book.</div>
+  </div>
+</div>
+<div class="legend">
+  <h1>Reading this board</h1>
+  <p>Every frame holds the same screen, so the only variable is type. The two diacritic strips near the bottom of each phone are the test that matters: the first is set in the display face, the second in the UI face. Any letter that jumps in weight or shape is falling back to Georgia or the system sans, not being drawn by the font.</p>
+  <p>The six frames on the top row set all twenty-two diacritics the corpus actually uses — measured, not assumed, including ṁ, which appears 147 times and is the character most Latin fonts omit. The three on the bottom row each have a gap, named in their caption; they are here because two of them are faces you already asked about.</p>
+  <p>The UI face is what sets transliteration, glosses, limb values and every screen label, so its coverage matters more than the display face's. A display face with gaps is survivable if titles avoid the missing letters — but Prātaḥ Sandhyā already contains one.</p>
+</div>
+</body>
+</html>

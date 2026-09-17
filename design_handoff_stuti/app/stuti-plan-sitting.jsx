@@ -60,7 +60,14 @@ function VeiledVerse({ text, level, lang, litLine }) {
               const isWord = /\p{L}/u.test(w);
               if (!isWord || level === 0) return <span key={wi} className="ps-w">{w}</span>;
               if (level === 1) { const ak = psAksharas(w); return <span key={wi} className="ps-w veil"><b>{ak[0]}</b><i>{"·".repeat(Math.max(2, Math.min(6, ak.length - 1)))}</i></span>; }
-              if (level === 2) return wi === 0 ? <span key={wi} className="ps-w">{w}</span> : <span key={wi} className="ps-w veil"><i>{"·".repeat(Math.max(2, Math.min(6, Array.from(w).length)))}</i></span>;
+              if (level === 2) {
+                if (wi !== 0) return <span key={wi} className="ps-w veil"><i>{"·".repeat(Math.max(2, Math.min(6, Array.from(w).length)))}</i></span>;
+                /* a hyphen-joined compound is many words: show only its first member */
+                const parts = w.split(/[-–—]/).filter(Boolean);
+                const head = parts[0];
+                const restLen = Array.from(w).length - Array.from(head).length;
+                return <span key={wi} className="ps-w">{head}{restLen > 0 ? <span className="veil"><i>{"·".repeat(Math.max(2, Math.min(6, restLen)))}</i></span> : null}</span>;
+              }
               return <span key={wi} className="ps-w veil"><i>{"·".repeat(Math.max(2, Math.min(6, Array.from(w).length)))}</i></span>;
             })}
           </div>

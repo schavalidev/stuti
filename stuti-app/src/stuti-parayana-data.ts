@@ -17,7 +17,7 @@ export const STUTI_PARAYANA = (function () {
   const list = [
     {
       id: "sundarakanda", deity: "hanuman",
-      name: { roman: "Sundarakāṇḍa Pārāyaṇa", deva: "सुन्दरकाण्ड पारायण", tel: "సుందరకాండ పారాయణం" },
+      name: { roman: "Vālmīki Sundarakāṇḍa Pārāyaṇa", deva: "वाल्मीकि सुन्दरकाण्ड पारायण", tel: "వాల్మీకి సుందరకాండ పారాయణం" },
       source: { roman: "Vālmīki Rāmāyaṇa · Book V", deva: "वाल्मीकि रामायण · पञ्चम काण्ड", tel: "వాల్మీకి రామాయణం · పంచమ కాండ" },
       span: { roman: "68 sargas", deva: "६८ सर्ग", tel: "68 సర్గలు" },
       tagline: { roman: "The one kāṇḍa in which nothing goes wrong — read when something has.", deva: "एकमात्र काण्ड जिसमें कुछ अशुभ नहीं होता — विपत्ति में यही पढ़ा जाता है।", tel: "ఏదీ చెడుగా జరగని ఒకే ఒక కాండ — కష్టం వచ్చినప్పుడు చదివేది ఇదే." },
@@ -30,7 +30,24 @@ export const STUTI_PARAYANA = (function () {
         { span: { roman: "Five days", deva: "पाँच दिन", tel: "అయిదు రోజులు" }, how: { roman: "Kept from a Tuesday to a Saturday, roughly fourteen sargas a day.", deva: "मङ्गलवार से शनिवार तक, प्रतिदिन लगभग चौदह सर्ग।", tel: "మంగళవారం నుంచి శనివారం వరకు, రోజుకు సుమారు పద్నాలుగు సర్గలు." } },
         { span: { roman: "Sixty-eight days", deva: "अड़सठ दिन", tel: "అరవై ఎనిమిది రోజులు" }, how: { roman: "One sarga a day — the slow reading, taken up when the parayana is for a standing difficulty rather than an occasion.", deva: "प्रतिदिन एक सर्ग — दीर्घ कष्ट हेतु मन्द पाठ।", tel: "రోజుకు ఒక సర్గ — సందర్భం కోసం కాక, నిలిచిన కష్టం కోసం చేసే మెల్లని పారాయణం." } },
       ],
-      when: { roman: "Begun on a Tuesday or Saturday; Hanumān Jayantī and the month of Mārgaśīrṣa are favoured.", deva: "मङ्गल अथवा शनिवार को आरम्भ; हनुमान् जयन्ती और मार्गशीर्ष श्रेष्ठ।", tel: "మంగళ లేదా శనివారం ప్రారంభం; హనుమజ్జయంతి, మార్గశిర మాసం శ్రేష్ఠం." },
+      when: { roman: "Begun on a Tuesday or Saturday; Hanumān Jayantī and the month of Mārgaśīrṣa are favoured.", deva: "मङ्गल या शनिवार को आरम्भ; हनुमान् जयन्ती और मार्गशीर्ष श्रेष्ठ।", tel: "మంగళ లేదా శనివారం ప్రారంభం; హనుమజ్జయంతి, మార్గశిర మాసం శ్రేష్ఠం." },
+    },
+    {
+      id: "manasa-sundarkand", deity: "hanuman",
+      name: { roman: "Mānasa Sundarkāṇḍ Pārāyaṇa", deva: "मानस सुन्दरकाण्ड पारायण", tel: "మానస సుందరకాండ పారాయణం" },
+      source: { roman: "Tulasīdāsa · Rāmacaritamānasa · Book V", deva: "तुलसीदास · रामचरितमानस · पञ्चम सोपान", tel: "తులసీదాసు · రామచరితమానస · పంచమ సోపానం" },
+      span: { roman: "60 dohās · 58 caupāī sets", deva: "६० दोहे · ५८ चौपाई", tel: "60 దోహాలు · 58 చౌపాయిలు" },
+      tagline: { roman: "The same journey as Vālmīki's, sung in Awadhi — short enough to be read whole in a morning.", deva: "वही यात्रा, अवधी में गायी गयी — एक प्रभात में सम्पूर्ण पाठ सम्भव।", tel: "వాల్మీకి చెప్పిన అదే ప్రయాణం, అవధిలో పాటగా — ఒక ఉదయంలో మొత్తం చదవగలిగేంత చిన్నది." },
+      gist: [
+        { roman: "Householders who keep a Sundarkāṇḍ pāṭh in north India mean this one. It is a fifth the length of Vālmīki's kāṇḍa, it is metrical, and it is meant to be sung — so a house reads it together where the Sanskrit would be read by one person.", deva: "उत्तर भारत में जो सुन्दरकाण्ड पाठ होता है, वह यही है। वाल्मीकि के काण्ड से पाँचवाँ भाग, छन्दोबद्ध, गाने योग्य — संस्कृत एक पढ़ता है, यह सारा घर मिलकर गाता है।", tel: "ఉత్తర భారతంలో సుందరకాండ పాఠం అంటే ఇదే. వాల్మీకి కాండలో అయిదో వంతు, ఛందోబద్ధం, పాడడానికి ఉద్దేశించినది — సంస్కృతం ఒక్కరు చదివితే, ఇది ఇల్లంతా కలిసి పాడుతుంది." },
+        { roman: "The reading opens with the Śrī Rāma Stuti and the maṅgalācaraṇa dohās, and closes with the Hanumān Cālīsā and an āratī. That closing is not optional in practice — it is how the pāṭh is known to be finished.", deva: "पाठ श्रीराम स्तुति और मङ्गलाचरण के दोहों से आरम्भ होता है, हनुमान् चालीसा तथा आरती से समाप्त। यह समापन व्यवहार में अनिवार्य है।", tel: "పాఠం శ్రీరామ స్తుతి, మంగళాచరణ దోహాలతో మొదలవుతుంది; హనుమాన్ చాలీసా, ఆరతితో ముగుస్తుంది. ఆచారంలో ఈ ముగింపు తప్పనిసరి — పాఠం పూర్తయిందని తెలిసేది ఇలానే." },
+      ],
+      schedules: [
+        { span: { roman: "One sitting", deva: "एक बैठक", tel: "ఒక కూర్చునేసారి" }, how: { roman: "The whole kāṇḍa in about two hours, commonly on a Tuesday or Saturday morning.", deva: "सम्पूर्ण काण्ड लगभग दो घण्टे में — प्रायः मङ्गल या शनिवार प्रातः।", tel: "మొత్తం కాండ సుమారు రెండు గంటల్లో — సాధారణంగా మంగళ లేదా శనివారం ఉదయం." } },
+        { span: { roman: "Nine days", deva: "नौ दिन", tel: "తొమ్మిది రోజులు" }, how: { roman: "A navāha of roughly seven dohās a day, for a saṅkalpa taken on a difficulty.", deva: "नवाह — प्रतिदिन लगभग सात दोहे; कष्ट-निवारण के संकल्प हेतु।", tel: "నవాహం — రోజుకు సుమారు ఏడు దోహాలు; కష్ట నివారణ సంకల్పం కోసం." } },
+        { span: { roman: "Forty days", deva: "चालीस दिन", tel: "నలభై రోజులు" }, how: { roman: "Once a day for a maṇḍala, closed with a Cālīsā pāṭh of a hundred and eight on the last day.", deva: "मण्डल भर प्रतिदिन एक पाठ; अन्तिम दिन एक सौ आठ चालीसा पाठ से समापन।", tel: "మండలం అంతా రోజుకు ఒకసారి; చివరి రోజు నూట ఎనిమిది చాలీసా పారాయణాలతో ముగింపు." } },
+      ],
+      when: { roman: "Tuesdays and Saturdays; Hanumān Jayantī, Rāma Navamī and the Śrāvaṇa Saturdays are favoured.", deva: "मङ्गल और शनिवार; हनुमान् जयन्ती, राम नवमी तथा श्रावण के शनिवार श्रेष्ठ।", tel: "మంగళ, శనివారాలు; హనుమజ్జయంతి, శ్రీరామనవమి, శ్రావణ శనివారాలు శ్రేష్ఠం." },
     },
     {
       id: "devi-mahatmyam", deity: "devi",
@@ -47,7 +64,7 @@ export const STUTI_PARAYANA = (function () {
         { span: { roman: "Three days", deva: "तीन दिन", tel: "మూడు రోజులు" }, how: { roman: "One carita a day — prathama, madhyama, uttama.", deva: "प्रतिदिन एक चरित — प्रथम, मध्यम, उत्तम।", tel: "రోజుకు ఒక చరితం — ప్రథమ, మధ్యమ, ఉత్తమ." } },
         { span: { roman: "One day", deva: "एक दिन", tel: "ఒక రోజు" }, how: { roman: "The whole seven hundred in a single sitting, usually on Aṣṭamī or Navamī.", deva: "एक ही आसन में सम्पूर्ण सप्तशती — प्रायः अष्टमी या नवमी को।", tel: "ఒకే ఆసనంలో మొత్తం సప్తశతి — సాధారణంగా అష్టమి లేదా నవమి నాడు." } },
       ],
-      when: { roman: "Śāradīya and Vāsantika Navarātri above all; also Aṣṭamī of any month.", deva: "शारदीय एवं वासन्तिक नवरात्रि; किसी भी मास की अष्टमी भी।", tel: "శారదీయ, వాసంతిక నవరాత్రులు ముఖ్యం; ఏ మాసపు అష్టమి అయినా." },
+      when: { roman: "Śāradīya and Vāsantika Navarātri above all; also Aṣṭamī of any month.", deva: "शारदीय और वासन्तिक नवरात्रि; किसी भी मास की अष्टमी भी।", tel: "శారదీయ, వాసంతిక నవరాత్రులు ముఖ్యం; ఏ మాసపు అష్టమి అయినా." },
     },
     {
       id: "bhagavad-gita", deity: "vishnu",
@@ -63,7 +80,7 @@ export const STUTI_PARAYANA = (function () {
         { span: { roman: "Seven days", deva: "सात दिन", tel: "ఏడు రోజులు" }, how: { roman: "1–3 · 4–6 · 7–9 · 10–11 · 12–14 · 15–16 · 17–18.", deva: "१–३ · ४–६ · ७–९ · १०–११ · १२–१४ · १५–१६ · १७–१८।", tel: "1–3 · 4–6 · 7–9 · 10–11 · 12–14 · 15–16 · 17–18." } },
         { span: { roman: "One day", deva: "एक दिन", tel: "ఒక రోజు" }, how: { roman: "Gītā Jayantī — Mārgaśīrṣa Śukla Ekādaśī — the whole read from dawn.", deva: "गीता जयन्ती — मार्गशीर्ष शुक्ल एकादशी — प्रातः से सम्पूर्ण पाठ।", tel: "గీతా జయంతి — మార్గశిర శుద్ధ ఏకాదశి — ఉదయం నుంచి మొత్తం." } },
       ],
-      when: { roman: "Any time; begun on Ekādaśī or Gītā Jayantī by custom.", deva: "कभी भी; प्रथानुसार एकादशी अथवा गीता जयन्ती से आरम्भ।", tel: "ఎప్పుడైనా; ఆచారంగా ఏకాదశి లేదా గీతా జయంతి నాడు ప్రారంభం." },
+      when: { roman: "Any time; begun on Ekādaśī or Gītā Jayantī by custom.", deva: "कभी भी; प्रथानुसार एकादशी या गीता जयन्ती से आरम्भ।", tel: "ఎప్పుడైనా; ఆచారంగా ఏకాదశి లేదా గీతా జయంతి నాడు ప్రారంభం." },
     },
     {
       id: "bhagavata-saptaha", deity: "vishnu",
@@ -78,7 +95,7 @@ export const STUTI_PARAYANA = (function () {
         { span: { roman: "Seven days", deva: "सात दिन", tel: "ఏడు రోజులు" }, how: { roman: "Skandhas 1–2 · 3 · 4–5 · 6–7 · 8–9 · 10 (pūrva) · 10 (uttara)–12.", deva: "स्कन्ध १–२ · ३ · ४–५ · ६–७ · ८–९ · १० (पूर्व) · १० (उत्तर)–१२।", tel: "స్కంధాలు 1–2 · 3 · 4–5 · 6–7 · 8–9 · 10 (పూర్వ) · 10 (ఉత్తర)–12." } },
         { span: { roman: "One month", deva: "एक मास", tel: "ఒక నెల" }, how: { roman: "Māsa pārāyaṇa — roughly one adhyāya a day through Kārtika or Śrāvaṇa.", deva: "मास-पारायण — कार्तिक या श्रावण भर प्रतिदिन लगभग एक अध्याय।", tel: "మాస పారాయణం — కార్తికం లేదా శ్రావణం అంతా రోజుకు సుమారు ఒక అధ్యాయం." } },
       ],
-      when: { roman: "Kārtika and Śrāvaṇa above all; also in the days after a death in the house.", deva: "कार्तिक एवं श्रावण; गृह में मृत्यु के पश्चात् भी।", tel: "కార్తికం, శ్రావణం ముఖ్యం; ఇంట్లో మరణం జరిగిన తర్వాత కూడా." },
+      when: { roman: "Kārtika and Śrāvaṇa above all; also in the days after a death in the house.", deva: "कार्तिक और श्रावण; गृह में मृत्यु के बाद भी।", tel: "కార్తికం, శ్రావణం ముఖ్యం; ఇంట్లో మరణం జరిగిన తర్వాత కూడా." },
     },
     {
       id: "vishnu-sahasranama-parayana", deity: "vishnu",
@@ -87,17 +104,17 @@ export const STUTI_PARAYANA = (function () {
       span: { roman: "108 ślokas · daily", deva: "१०८ श्लोक · नित्य", tel: "108 శ్లోకాలు · నిత్యం" },
       tagline: { roman: "The one pārāyaṇa meant to be daily rather than finished.", deva: "यही एकमात्र पारायण है जो समाप्त नहीं, नित्य होता है।", tel: "ముగించడానికి కాక, ప్రతిరోజూ చేయడానికి ఉద్దేశించిన ఒకే పారాయణం." },
       gist: [
-        { roman: "Half an hour a day, the same hour, for as long as the vow runs — that is the whole of it. Most houses keep it for a maṇḍala of forty-eight days, or on every Ekādaśī and Saturday, and a good number simply never stop.", deva: "प्रतिदिन आधा घण्टा, वही समय, जब तक संकल्प चले। प्रायः अड़तालीस दिन का मण्डल, अथवा प्रत्येक एकादशी और शनिवार; अनेक तो कभी नहीं छोड़ते।", tel: "రోజుకు అరగంట, అదే వేళ, సంకల్పం ఉన్నంత కాలం. చాలా ఇళ్లలో నలభై ఎనిమిది రోజుల మండలం, లేదా ప్రతి ఏకాదశి, శనివారం; కొందరు అసలు ఆపరు." },
+        { roman: "Half an hour a day, the same hour, for as long as the vow runs — that is the whole of it. Most houses keep it for a maṇḍala of forty-eight days, or on every Ekādaśī and Saturday, and a good number simply never stop.", deva: "प्रतिदिन आधा घण्टा, वही समय, जब तक संकल्प चले। प्रायः अड़तालीस दिन का मण्डल, या प्रत्येक एकादशी और शनिवार; अनेक तो कभी नहीं छोड़ते।", tel: "రోజుకు అరగంట, అదే వేళ, సంకల్పం ఉన్నంత కాలం. చాలా ఇళ్లలో నలభై ఎనిమిది రోజుల మండలం, లేదా ప్రతి ఏకాదశి, శనివారం; కొందరు అసలు ఆపరు." },
       ],
       schedules: [
         { span: { roman: "A maṇḍala — 48 days", deva: "मण्डल — ४८ दिन", tel: "మండలం — 48 రోజులు" }, how: { roman: "Once a day without a break; a missed day restarts the count in strict houses.", deva: "प्रतिदिन एक बार, बिना नागा; कठोर परम्परा में नागा होने पर गणना पुनः आरम्भ।", tel: "రోజుకు ఒకసారి, ఆపకుండా; కఠినంగా పాటించే ఇళ్లలో ఒక రోజు తప్పితే లెక్క మళ్లీ మొదటి నుంచి." } },
-        { span: { roman: "Ekādaśī and Saturday", deva: "एकादशी एवं शनिवार", tel: "ఏకాదశి, శనివారం" }, how: { roman: "The lighter keeping — twice a fortnight and once a week.", deva: "सरल रीति — पक्ष में दो बार, सप्ताह में एक बार।", tel: "తేలికైన పద్ధతి — పక్షానికి రెండుసార్లు, వారానికి ఒకసారి." } },
+        { span: { roman: "Ekādaśī and Saturday", deva: "एकादशी और शनिवार", tel: "ఏకాదశి, శనివారం" }, how: { roman: "The lighter keeping — twice a fortnight and once a week.", deva: "सरल रीति — पक्ष में दो बार, सप्ताह में एक बार।", tel: "తేలికైన పద్ధతి — పక్షానికి రెండుసార్లు, వారానికి ఒకసారి." } },
       ],
       when: { roman: "Begun on Ekādaśī, Vaikuṇṭha Ekādaśī above all.", deva: "एकादशी से आरम्भ, विशेषतः वैकुण्ठ एकादशी।", tel: "ఏకాదశి నాడు ప్రారంభం, ముఖ్యంగా వైకుంఠ ఏకాదశి." },
     },
     {
       id: "hanuman-chalisa-mandala", deity: "hanuman",
-      name: { roman: "Hanumān Cālīsā — forty days", deva: "हनुमान् चालीसा — चालीस दिन", tel: "హనుమాన్ చాలీసా — నలభై రోజులు" },
+      name: { roman: "Hanumān Cālīsā", deva: "हनुमान् चालीसा", tel: "హనుమాన్ చాలీసా" },
       source: { roman: "Tulasīdāsa · Awadhi", deva: "तुलसीदास · अवधी", tel: "తులసీదాసు · అవధి" },
       span: { roman: "40 verses · 40 days", deva: "४० चौपाई · ४० दिन", tel: "40 చౌపాయిలు · 40 రోజులు" },
       tagline: { roman: "Forty verses, eleven times a day, forty days — the count is the practice.", deva: "चालीस चौपाई, दिन में ग्यारह बार, चालीस दिन — गणना ही साधना है।", tel: "నలభై చౌపాయిలు, రోజుకు పదకొండుసార్లు, నలభై రోజులు — లెక్కే సాధన." },
@@ -106,7 +123,7 @@ export const STUTI_PARAYANA = (function () {
       ],
       schedules: [
         { span: { roman: "Forty days", deva: "चालीस दिन", tel: "నలభై రోజులు" }, how: { roman: "Eleven readings daily at a fixed hour, on the same seat, facing the same direction.", deva: "नियत समय, वही आसन, वही दिशा — प्रतिदिन ग्यारह पाठ।", tel: "నిర్ణీత వేళ, అదే ఆసనం, అదే దిక్కు — రోజుకు పదకొండు పారాయణాలు." } },
-        { span: { roman: "Tuesdays and Saturdays", deva: "मङ्गल एवं शनिवार", tel: "మంగళ, శనివారాలు" }, how: { roman: "Seven readings on the day; the ordinary household keeping.", deva: "उस दिन सात पाठ — सामान्य गृह-रीति।", tel: "ఆ రోజు ఏడు పారాయణాలు — సాధారణ ఇంటి ఆచారం." } },
+        { span: { roman: "Tuesdays and Saturdays", deva: "मङ्गल और शनिवार", tel: "మంగళ, శనివారాలు" }, how: { roman: "Seven readings on the day; the ordinary household keeping.", deva: "उस दिन सात पाठ — सामान्य गृह-रीति।", tel: "ఆ రోజు ఏడు పారాయణాలు — సాధారణ ఇంటి ఆచారం." } },
       ],
       when: { roman: "Begun on a Tuesday; Hanumān Jayantī and the Śrāvaṇa Saturdays are favoured.", deva: "मङ्गलवार से आरम्भ; हनुमान् जयन्ती और श्रावण के शनिवार श्रेष्ठ।", tel: "మంగళవారం ప్రారంభం; హనుమజ్జయంతి, శ్రావణ శనివారాలు శ్రేష్ఠం." },
     },
@@ -121,10 +138,10 @@ export const STUTI_PARAYANA = (function () {
         { roman: "Learn it from a teacher before undertaking it. The Rudram is Vedic — the svaras are the text, and a reading without them is not this pārāyaṇa.", deva: "गुरुमुख से सीखकर ही करें। रुद्रम् वैदिक है — स्वर ही पाठ हैं; स्वरहीन पाठ यह पारायण नहीं।", tel: "గురుముఖంగా నేర్చుకున్న తర్వాతే చేయాలి. రుద్రం వైదికం — స్వరాలే పాఠం; స్వరాలు లేని పఠనం ఈ పారాయణం కాదు." },
       ],
       schedules: [
-        { span: { roman: "One sitting", deva: "एक बैठक", tel: "ఒక కూర్చునేసారి" }, how: { roman: "An ekādaśinī with abhiṣeka — about two hours, commonly on a Monday or Pradoṣa.", deva: "अभिषेक सहित एक एकादशिनी — लगभग दो घण्टे, प्रायः सोमवार अथवा प्रदोष को।", tel: "అభిషేకంతో ఒక ఏకాదశిని — సుమారు రెండు గంటలు, సాధారణంగా సోమవారం లేదా ప్రదోషం." } },
-        { span: { roman: "Eleven days", deva: "ग्यारह दिन", tel: "పదకొండు రోజులు" }, how: { roman: "One ekādaśinī a day through Kārtika or the Śrāvaṇa Mondays, completing a Rudra.", deva: "कार्तिक अथवा श्रावण-सोमवारों में प्रतिदिन एक एकादशिनी — एक रुद्र पूर्ण।", tel: "కార్తికంలో లేదా శ్రావణ సోమవారాల్లో రోజుకు ఒక ఏకాదశిని — ఒక రుద్రం పూర్తి." } },
+        { span: { roman: "One sitting", deva: "एक बैठक", tel: "ఒక కూర్చునేసారి" }, how: { roman: "An ekādaśinī with abhiṣeka — about two hours, commonly on a Monday or Pradoṣa.", deva: "अभिषेक सहित एक एकादशिनी — लगभग दो घण्टे, प्रायः सोमवार या प्रदोष को।", tel: "అభిషేకంతో ఒక ఏకాదశిని — సుమారు రెండు గంటలు, సాధారణంగా సోమవారం లేదా ప్రదోషం." } },
+        { span: { roman: "Eleven days", deva: "ग्यारह दिन", tel: "పదకొండు రోజులు" }, how: { roman: "One ekādaśinī a day through Kārtika or the Śrāvaṇa Mondays, completing a Rudra.", deva: "कार्तिक या श्रावण-सोमवारों में प्रतिदिन एक एकादशिनी — एक रुद्र पूर्ण।", tel: "కార్తికంలో లేదా శ్రావణ సోమవారాల్లో రోజుకు ఒక ఏకాదశిని — ఒక రుద్రం పూర్తి." } },
       ],
-      when: { roman: "Kārtika and Śrāvaṇa Mondays, Pradoṣa, and Mahā Śivarātri.", deva: "कार्तिक एवं श्रावण के सोमवार, प्रदोष, महाशिवरात्रि।", tel: "కార్తిక, శ్రావణ సోమవారాలు, ప్రదోషం, మహాశివరాత్రి." },
+      when: { roman: "Kārtika and Śrāvaṇa Mondays, Pradoṣa, and Mahā Śivarātri.", deva: "कार्तिक और श्रावण के सोमवार, प्रदोष, महाशिवरात्रि।", tel: "కార్తిక, శ్రావణ సోమవారాలు, ప్రదోషం, మహాశివరాత్రి." },
     },
     {
       id: "lalita-parayana", deity: "devi",
@@ -133,7 +150,7 @@ export const STUTI_PARAYANA = (function () {
       span: { roman: "1000 names · weekly", deva: "१००० नाम · साप्ताहिक", tel: "1000 నామాలు · వారానికి" },
       tagline: { roman: "Fridays, and the Full Moon — the thousand names read at one sitting.", deva: "शुक्रवार और पूर्णिमा — एक ही बैठक में सहस्रनाम।", tel: "శుక్రవారాలు, పౌర్ణమి — ఒకే కూర్చునేసారి వెయ్యి నామాలు." },
       gist: [
-        { roman: "Read whole or not at all — the thousand names are one garland and the tradition does not divide them across days. What varies is how often: every Friday, every Full Moon, or daily for a maṇḍala of forty-eight.", deva: "सम्पूर्ण पढ़ें अथवा नहीं — सहस्रनाम एक ही माला है, दिनों में विभक्त नहीं होती। भेद केवल आवृत्ति में: प्रत्येक शुक्रवार, पूर्णिमा, अथवा अड़तालीस दिन नित्य।", tel: "మొత్తం చదవాలి, లేదా అసలు వద్దు — వెయ్యి నామాలు ఒకే మాల, రోజులుగా విభజించరు. మారేది ఎంత తరచుగా అన్నదే: ప్రతి శుక్రవారం, పౌర్ణమి, లేదా నలభై ఎనిమిది రోజులు నిత్యం." },
+        { roman: "Read whole or not at all — the thousand names are one garland and the tradition does not divide them across days. What varies is how often: every Friday, every Full Moon, or daily for a maṇḍala of forty-eight.", deva: "सम्पूर्ण पढ़ें या नहीं — सहस्रनाम एक ही माला है, दिनों में विभक्त नहीं होती। भेद केवल आवृत्ति में: प्रत्येक शुक्रवार, पूर्णिमा, या अड़तालीस दिन नित्य।", tel: "మొత్తం చదవాలి, లేదా అసలు వద్దు — వెయ్యి నామాలు ఒకే మాల, రోజులుగా విభజించరు. మారేది ఎంత తరచుగా అన్నదే: ప్రతి శుక్రవారం, పౌర్ణమి, లేదా నలభై ఎనిమిది రోజులు నిత్యం." },
       ],
       schedules: [
         { span: { roman: "Every Friday", deva: "प्रत्येक शुक्रवार", tel: "ప్రతి శుక్రవారం" }, how: { roman: "The common keeping — with kuṅkuma arcana where the household has the leisure.", deva: "सामान्य रीति — यथावकाश कुङ्कुम अर्चना सहित।", tel: "సాధారణ పద్ధతి — వీలుంటే కుంకుమార్చనతో." } },
@@ -158,7 +175,7 @@ export const STUTI_PARAYANA = (function () {
       deva: "नागा हो जाये तो स्पष्ट कहकर गणना पुनः आरम्भ करें — अपूर्ण दीर्घ पाठ से पूर्ण लघु पाठ श्रेष्ठ है।",
       tel: "ఒక రోజు తప్పితే స్పష్టంగా చెప్పి లెక్క మళ్లీ మొదలుపెట్టాలి — సగంలో వదిలిన పెద్ద పారాయణం కంటే పూర్తయిన చిన్నదే మేలు." },
     { roman: "Close with the phalaśruti, and give something away on the last day — food, a book, or the reading itself, aloud, to someone who cannot read it.",
-      deva: "फलश्रुति से समापन; अन्तिम दिन कुछ दान करें — अन्न, ग्रन्थ, अथवा किसी अपाठक को सस्वर पाठ।",
+      deva: "फलश्रुति से समापन; अन्तिम दिन कुछ दान करें — अन्न, ग्रन्थ, या किसी अपाठक को सस्वर पाठ।",
       tel: "ఫలశ్రుతితో ముగించాలి; చివరి రోజు ఏదైనా దానం — అన్నం, పుస్తకం, లేదా చదవలేని వారికి పైకి చదివి వినిపించడం." },
   ];
   const byId = {};

@@ -95,9 +95,13 @@ sub(
    them, so the flag was dropped in between and the mic never once started
    by itself. The reciter tapped a microphone and got a search box with a
    microphone to tap again. */
+/* Anchored on the tail of the field list, not on `plan`'s neighbour: the
+   14 Sep design export added `lens`/`lensAt` between the two and broke the
+   older anchor. `weekday` closes the list, so a field added before it no
+   longer matters. */
 sub(
-  `plan: payload.plan ?? r.plan, weekday: payload.weekday }));`,
-  `plan: payload.plan ?? r.plan, weekday: payload.weekday, voice: payload.voice }));`,
+  `weekday: payload.weekday }));`,
+  `weekday: payload.weekday, voice: payload.voice }));`,
   "the router's route fields",
 );
 

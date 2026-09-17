@@ -1,9 +1,10 @@
 import React from "react";
 import { STUTI } from "./stuti-data";
 import { STUTI_L } from "./stuti-i18n";
-import { DeityLink, Icon, deityStyle } from "./stuti-icons";
+import { DeityLink, Icon, Seal, deityStyle } from "./stuti-icons";
 import { STUTI_PARAYANA } from "./stuti-parayana-data";
 import { STUTI_TRANSLIT } from "./stuti-translit";
+import { VidhiJump } from "./stuti-vidhi-jump";
 import { VoiceButton } from "./stuti-voice";
 
 /* ============================================================
@@ -88,10 +89,12 @@ function ParayanaDetail({ parayanaId, go, lang, onBack }) {
       <div className="lens-pad">
         <header className="vr-hero">
           <div className="deity-hero-row">
+            <Seal d={d} size={56} />
             <div className="deity-hero-text">
               <h1 className="deity-hero-name display" style={{ fontFamily: font }}>{parP(p.name, lang)}</h1>
               <div className="deity-hero-epithet">{parP(p.source, lang)}</div>
             </div>
+            {VidhiJump && <VidhiJump hymnId={p.vidhiText} deity={p.deity} go={go} lang={lang} />}
           </div>
           <p className="deity-hero-line">{parP(p.tagline, lang)}</p>
           <div className="vr-meta">
@@ -127,7 +130,7 @@ function ParayanaDetail({ parayanaId, go, lang, onBack }) {
           </div>
         )}
 
-        <div className="vr-sect">
+        <div className="vr-sect" id={"vidhi-" + p.id}>
           <div className="eyebrow">{L.t("parayanaNiyama", lang)}</div>
           <ol className="vr-vidhi">
             {P.niyama.map((n, i) => (

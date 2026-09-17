@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="day" data-ui-lang="telugu">
+<head>
+<meta charset="UTF-8" />
+<meta name="design_doc_mode" content="canvas" />
+<title>The calendar — three ways to hold three things</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Mallanna&display=swap" />
+<link rel="stylesheet" href="stuti.css" />
+<link rel="stylesheet" href="stuti-components.css" />
+<link rel="stylesheet" href="stuti-palette.css" />
+<style>
+body{background:transparent;margin:0}
+.slot{position:absolute;width:390px}
+.fr{position:relative;width:390px;background:var(--bg);border:1px solid var(--line);border-radius:26px;overflow:hidden;box-shadow:0 18px 50px rgba(20,14,6,.10)}
+.fr-cap{display:block;margin:0 0 6px;font-family:var(--font-ui);font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:#8b7f6d}
+.fr-sub{margin:0 0 12px;font-family:var(--font-ui);font-size:13.5px;line-height:1.5;color:var(--ink);max-width:390px}
+.fr-note{font-family:var(--font-ui);font-size:12.5px;line-height:1.6;color:#8b7f6d;margin:14px 0 0;text-wrap:pretty}
+.fr-note b{color:var(--ink);font-weight:600}
+.doc-h1{position:absolute;left:0;top:-100px;margin:0;font-family:var(--font-display);font-size:30px;font-weight:400;color:var(--ink);white-space:nowrap}
+.d-flag{display:inline-block;margin:0 0 8px;padding:3px 10px;border-radius:999px;background:var(--accent-soft);color:var(--accent-ink);font-family:var(--font-ui);font-size:11px;letter-spacing:.07em;text-transform:uppercase}
+.sub{position:absolute;left:0;top:-58px;margin:0;font-family:var(--font-ui);font-size:14px;line-height:1.6;color:#8b7f6d;width:820px;text-wrap:pretty}
+.pad{padding:14px 0 20px}
+/* A · the lens strip */
+.lens-strip{display:flex;gap:6px;padding:4px 16px 12px;overflow:hidden}
+.lens-tab{flex:0 0 auto;padding:8px 15px;min-height:38px;border-radius:999px;border:1px solid var(--line);background:var(--surface);font-family:var(--font-telugu);font-size:.9375rem;color:var(--ink-soft);cursor:pointer;display:inline-flex;align-items:center;gap:7px}
+.lens-tab.on{background:var(--accent-soft);border-color:transparent;color:var(--accent-ink)}
+.lens-tab .n{font-family:var(--font-ui);font-size:.75rem;font-variant-numeric:tabular-nums;opacity:.75}
+/* B · underline tabs in the topbar */
+.tb2{display:flex;gap:22px;padding:2px 18px 0;border-bottom:1px solid var(--line)}
+.tb2 button{padding:0 0 11px;background:none;border:0;font-family:var(--font-telugu);font-size:1rem;color:var(--ink-faint);cursor:pointer;position:relative}
+.tb2 button.on{color:var(--ink)}
+.tb2 button.on::after{content:"";position:absolute;left:0;right:0;bottom:-1px;height:2px;background:var(--gold);border-radius:2px}
+/* C · marks legend, all in one scroll */
+.leg{display:flex;flex-wrap:wrap;gap:8px;padding:2px 16px 14px}
+.leg-item{display:inline-flex;align-items:center;gap:7px;padding:7px 13px;min-height:38px;border-radius:999px;border:1px solid var(--line);background:var(--surface);font-family:var(--font-telugu);font-size:.875rem;color:var(--ink-soft);cursor:pointer}
+.leg-item.off{opacity:.45}
+.leg-swatch{width:9px;height:9px;border-radius:50%;flex:none}
+.sec-head{display:flex;align-items:baseline;gap:10px;margin:22px 16px 0;padding-bottom:8px;border-bottom:1px solid var(--line)}
+.sec-head h2{margin:0;font-family:var(--font-telugu);font-size:1.0625rem;font-weight:400;color:var(--ink)}
+.sec-head .n{margin-left:auto;font-family:var(--font-ui);font-size:.75rem;color:var(--ink-faint)}
+.cal-cell .mk{width:5px;height:5px;border-radius:50%}
+.mk-tith{background:var(--accent-ink)}
+.mk-pitr{background:var(--ink-soft)}
+.day-tel{font-family:var(--font-telugu)}
+.mini-row{display:flex;align-items:center;gap:11px;padding:12px 0;border-bottom:1px solid var(--line-2)}
+.mini-row:last-child{border-bottom:0}
+.mini-row>span:not([class]){display:flex;flex-direction:column;gap:2px;min-width:0}
+.mini-name{display:block;font-family:var(--font-telugu);font-size:.9375rem;line-height:1.45;color:var(--ink)}
+.mini-sub{display:block;font-family:var(--font-ui);font-size:.75rem;line-height:1.4;color:var(--ink-faint)}
+.pit-say{font-family:var(--font-telugu);font-size:1rem;line-height:1.6;color:var(--ink)}
+.pit-next{margin-top:7px;font-family:var(--font-telugu);font-size:.9375rem;line-height:1.6;color:var(--ink-soft)}
+.pit-next b{color:var(--accent-ink);font-weight:600}
+.mini-date{margin-left:auto;font-family:var(--font-ui);font-size:.8125rem;color:var(--accent-ink);font-variant-numeric:tabular-nums}
+</style>
+</head>
+<body>
+
+<div style="position:absolute;left:80px;top:130px;width:900px">
+  <h1 class="doc-h1">Holding three calendars</h1>
+  <p class="sub">Pañcāṅgam, my tithis, pitṛ pañcāṅgam. Same month, three questions. Four ways to put them together — all shown on 12 September, with a janma tithi on the 8th and an ābdikam on the 21st. <b>D, on the lower row, is the one you described: the month on top, the tabs under it.</b></p>
+</div>
+
+<!-- A -->
+<div class="slot" style="left:80px;top:210px">
+  <div class="fr-cap">A · One calendar, three lenses</div>
+  <p class="fr-sub">The grid never moves. The tabs change what the days are marked with and what the panel says.</p>
+  <div class="fr"><div class="pad">
+    <div class="topbar"><div class="topbar-title display">పంచాంగం</div></div>
+    <div class="lens-strip">
+      <button class="lens-tab on">పంచాంగం</button>
+      <button class="lens-tab">మా తిథులు <span class="n">3</span></button>
+      <button class="lens-tab">పితృ</button>
+    </div>
+    <div class="cal-nav"><span class="cal-nav-title day-tel">సెప్టెంబరు 2026</span></div>
+    <div class="grid-a"></div>
+    <div class="cal-detail">
+      <div class="cal-detail-head">
+        <div class="cal-detail-headbody">
+          <div class="cal-detail-date">12 సెప్టెంబరు, శనివారం</div>
+          <div class="cal-detail-tithi day-tel">శుక్ల · పాడ్యమి</div>
+          <div class="cal-detail-ends">7:47 am వరకు</div>
+        </div>
+      </div>
+      <div class="cal-detail-grid">
+        <div class="pdrow"><span class="pdrow-k">నక్షత్రం</span><span class="pdrow-v day-tel">ఉత్తర ఫల్గుణి</span></div>
+        <div class="pdrow"><span class="pdrow-k">యోగం</span><span class="pdrow-v day-tel">శోభన</span></div>
+        <div class="pdrow"><span class="pdrow-k">సూర్యోదయం</span><span class="pdrow-v">6:02 am</span></div>
+      </div>
+    </div>
+  </div></div>
+  <p class="fr-note"><b>Switch a tab and you stay on the 12th</b> — a different question about the same day. Your tithis and tarpaṇa days finally appear <b>on</b> a month, which they never have. Cost: two of the three are behind a tab, so they are found by tapping rather than by scrolling past them.</p>
+</div>
+
+<!-- A2 -->
+<div class="slot" style="left:520px;top:210px">
+  <div class="fr-cap">A · the second lens</div>
+  <p class="fr-sub">Same grid, same day. Only the marks and the panel changed.</p>
+  <div class="fr"><div class="pad">
+    <div class="topbar"><div class="topbar-title display">మా తిథులు</div></div>
+    <div class="lens-strip">
+      <button class="lens-tab">పంచాంగం</button>
+      <button class="lens-tab on">మా తిథులు <span class="n">3</span></button>
+      <button class="lens-tab">పితృ</button>
+    </div>
+    <div class="cal-nav"><span class="cal-nav-title day-tel">సెప్టెంబరు 2026</span></div>
+    <div class="grid-a2"></div>
+    <div class="cal-detail">
+      <div class="cal-detail-head">
+        <div class="cal-detail-headbody">
+          <div class="cal-detail-date">12 సెప్టెంబరు, శనివారం</div>
+          <div class="cal-detail-tithi day-tel">ఈ రోజు ఏమీ లేదు</div>
+        </div>
+        <div class="cal-detail-acts">
+          <button class="cal-today-btn tt-addhere-sm cal-add-here">+ ఈ రోజు తిథి జోడించు</button>
+        </div>
+      </div>
+      <div class="cal-detail-grid" style="margin-top:18px">
+        <div class="mini-row"><span class="mk mk-tith" style="width:7px;height:7px"></span><span><span class="mini-name">అమ్మ జన్మ తిథి</span><span class="mini-sub">శ్రావణ · కృష్ణ ద్వాదశి</span></span><span class="mini-date">8 సెప్టెంబరు</span></div>
+        <div class="mini-row"><span class="mk mk-tith" style="width:7px;height:7px"></span><span><span class="mini-name">నాన్న ఆబ్దికం</span><span class="mini-sub">భాద్రపద · శుక్ల దశమి</span></span><span class="mini-date">21 సెప్టెంబరు</span></div>
+        <div class="mini-row"><span class="mk mk-tith" style="width:7px;height:7px"></span><span><span class="mini-name">తాత ఆబ్దికం</span><span class="mini-sub">ఆశ్వయుజ · కృష్ణ దశమి</span></span><span class="mini-date">30 అక్టోబరు</span></div>
+      </div>
+    </div>
+  </div></div>
+  <p class="fr-note">The list stays, under the month rather than instead of it. The <b>+</b> is now aimed at the day in hand and says so.</p>
+</div>
+
+<!-- A3 -->
+<div class="slot" style="left:960px;top:210px">
+  <div class="fr-cap">A · the third lens</div>
+  <p class="fr-sub">It says whether there is a tarpaṇam, names the next one, and opens the register. The tithi is the pañcāṅga tab's business.</p>
+  <div class="fr"><div class="pad">
+    <div class="topbar"><div class="topbar-title display">పితృ పంచాంగం</div></div>
+    <div class="lens-strip">
+      <button class="lens-tab">పంచాంగం</button>
+      <button class="lens-tab">మా తిథులు <span class="n">3</span></button>
+      <button class="lens-tab on">పితృ</button>
+    </div>
+    <div class="cal-nav"><span class="cal-nav-title day-tel">సెప్టెంబరు 2026</span></div>
+    <div class="grid-a3"></div>
+    <div class="cal-detail">
+      <div class="cal-detail-date">12 సెప్టెంబరు, శనివారం</div>
+      <div class="pit-say" style="margin-top:4px">ఈ రోజు తర్పణం లేదు.</div>
+      <div class="pit-next">తరువాతి తర్పణం మహాలయ పక్షం, <b>26 సెప్టెంబరు</b>.</div>
+    </div>
+    <div class="pit-door" style="margin-top:16px">
+      <span class="pit-door-body">
+        <span class="eyebrow">పితృ సూచి</span>
+        <span class="pit-door-name day-tel">మీ సూచి</span>
+        <span class="pit-door-sub">ముప్పై మూడులో 1 పేరు వ్రాశారు</span>
+      </span>
+      <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"></path></svg>
+    </div>
+  </div></div>
+  <p class="fr-note">Three lines and a door. The pakṣa and the tithi are not repeated here — they are one tab away, and this tab is for the register. On a tarpaṇa day the first line names the tarpaṇam instead.</p>
+</div>
+
+<!-- B -->
+<div class="slot" style="left:1400px;top:210px">
+  <div class="fr-cap">B · Three screens, tabbed</div>
+  <p class="fr-sub">Literally what you described: three tabs, each its own screen.</p>
+  <div class="fr"><div class="pad">
+    <div class="topbar"><div class="topbar-title display">పంచాంగం</div></div>
+    <div class="tb2">
+      <button>పంచాంగం</button>
+      <button class="on">మా తిథులు</button>
+      <button>పితృ పంచాంగం</button>
+    </div>
+    <div style="padding:18px 16px 0">
+      <p style="margin:0 0 4px;font-family:var(--font-ui);font-size:.8125rem;color:var(--ink-faint)">మీరు మూడు తిథులు ఉంచారు</p>
+    </div>
+    <section class="tt-card" style="margin-top:10px">
+      <div class="mini-row"><span><span class="mini-name">అమ్మ జన్మ తిథి</span><span class="mini-sub">శ్రావణ · కృష్ణ ద్వాదశి</span></span><span class="mini-date">8 సెప్టెంబరు</span></div>
+      <div class="mini-row"><span><span class="mini-name">నాన్న ఆబ్దికం</span><span class="mini-sub">భాద్రపద · శుక్ల దశమి</span></span><span class="mini-date">21 సెప్టెంబరు</span></div>
+      <div class="mini-row"><span><span class="mini-name">తాత ఆబ్దికం</span><span class="mini-sub">ఆశ్వయుజ · కృష్ణ దశమి</span></span><span class="mini-date">30 అక్టోబరు</span></div>
+      <button class="tt-add" style="margin-top:14px">+ తిథి జోడించు</button>
+    </section>
+    <div style="height:150px"></div>
+  </div></div>
+  <p class="fr-note">Clean and plain: each tab is one thing. But the month is gone from two of the three, and a tithi is a date — seeing it on the month is most of the value. Switching tabs loses the day you were looking at. <b>The month grid would also have to be built twice more</b>, which is the thing we just wrote a rule against.</p>
+</div>
+
+<!-- C -->
+<div class="slot" style="left:1840px;top:210px">
+  <div class="fr-cap">C · One scroll, marks you can turn off</div>
+  <p class="fr-sub">No tabs at all. One month carrying all three kinds of mark, and a row of switches for what shows.</p>
+  <div class="fr"><div class="pad">
+    <div class="topbar"><div class="topbar-title display">పంచాంగం</div></div>
+    <div class="cal-nav"><span class="cal-nav-title day-tel">సెప్టెంబరు 2026</span></div>
+    <div class="grid-c"></div>
+    <div class="leg">
+      <button class="leg-item"><span class="leg-swatch" style="background:var(--gold)"></span>వ్రతాలు</button>
+      <button class="leg-item"><span class="leg-swatch mk-tith"></span>మా తిథులు</button>
+      <button class="leg-item"><span class="leg-swatch mk-pitr"></span>తర్పణం</button>
+    </div>
+    <div class="cal-detail">
+      <div class="cal-detail-head">
+        <div class="cal-detail-headbody">
+          <div class="cal-detail-date">12 సెప్టెంబరు, శనివారం</div>
+          <div class="cal-detail-tithi day-tel">శుక్ల · పాడ్యమి</div>
+          <div class="cal-detail-ends">7:47 am వరకు</div>
+        </div>
+      </div>
+    </div>
+    <div class="sec-head"><h2>మా తిథులు</h2><span class="n">3</span></div>
+    <section class="tt-card" style="margin-top:8px">
+      <div class="mini-row"><span><span class="mini-name">అమ్మ జన్మ తిథి</span><span class="mini-sub">శ్రావణ · కృష్ణ ద్వాదశి</span></span><span class="mini-date">8 సెప్టెంబరు</span></div>
+      <div class="mini-row"><span><span class="mini-name">నాన్న ఆబ్దికం</span><span class="mini-sub">భాద్రపద · శుక్ల దశమి</span></span><span class="mini-date">21 సెప్టెంబరు</span></div>
+      <div class="mini-row"><span><span class="mini-name">తాత ఆబ్దికం</span><span class="mini-sub">ఆశ్వయుజ · కృష్ణ దశమి</span></span><span class="mini-date">30 అక్టోబరు</span></div>
+    </section>
+    <div class="sec-head"><h2>పితృ పంచాంగం</h2></div>
+    <div style="height:40px"></div>
+  </div></div>
+  <p class="fr-note">Nothing is hidden and nothing is found by tapping — everything is on the way down. Cost: the page gets long, the switches are a second vocabulary to learn, and one grid carrying three kinds of dot at once is busy on a crowded month.</p>
+</div>
+
+<!-- D -->
+<div class="slot" style="left:80px;top:1440px">
+  <span class="d-flag">What you described</span>
+  <div class="fr-cap">D · The month stays; the tabs sit under it</div>
+  <p class="fr-sub">One grid at the top, always. The three tabs sit below it and change what you read about the month.</p>
+  <div class="fr"><div class="pad">
+    <div class="topbar"><div class="topbar-title display">పంచాంగం</div></div>
+    <div class="cal-nav"><span class="cal-nav-title day-tel">సెప్టెంబరు 2026</span></div>
+    <div class="grid-d"></div>
+    <div class="tb2" style="margin-top:16px">
+      <button class="on">పంచాంగం</button>
+      <button>మా తిథులు</button>
+      <button>పితృ</button>
+    </div>
+    <div class="cal-detail" style="margin-top:16px">
+      <div class="cal-detail-head">
+        <div class="cal-detail-headbody">
+          <div class="cal-detail-date">12 సెప్టెంబరు, శనివారం</div>
+          <div class="cal-detail-tithi day-tel">శుక్ల · పాడ్యమి</div>
+          <div class="cal-detail-ends">7:47 am వరకు</div>
+        </div>
+      </div>
+      <div class="cal-detail-grid">
+        <div class="pdrow"><span class="pdrow-k">నక్షత్రం</span><span class="pdrow-v day-tel">ఉత్తర ఫల్గుణి</span></div>
+        <div class="pdrow"><span class="pdrow-k">యోగం</span><span class="pdrow-v day-tel">శోభన</span></div>
+        <div class="pdrow"><span class="pdrow-k">సూర్యోదయం</span><span class="pdrow-v">6:02 am</span></div>
+      </div>
+    </div>
+  </div></div>
+  <p class="fr-note">The calendar is never a thing you tab away from — it is the screen, and the tabs are what you ask of it. The marks follow the tab, so the month is still answering the question you picked.</p>
+</div>
+
+<!-- D2 -->
+<div class="slot" style="left:520px;top:1440px">
+  <div class="fr-cap">D · second tab</div>
+  <p class="fr-sub">The grid has not moved and the 12th is still selected. Only the marks and what is under the tabs changed.</p>
+  <div class="fr"><div class="pad">
+    <div class="topbar"><div class="topbar-title display">పంచాంగం</div></div>
+    <div class="cal-nav"><span class="cal-nav-title day-tel">సెప్టెంబరు 2026</span></div>
+    <div class="grid-d2"></div>
+    <div class="tb2" style="margin-top:16px">
+      <button>పంచాంగం</button>
+      <button class="on">మా తిథులు</button>
+      <button>పితృ</button>
+    </div>
+    <div class="cal-detail" style="margin-top:16px">
+      <div class="cal-detail-head">
+        <div class="cal-detail-headbody">
+          <div class="cal-detail-date">12 సెప్టెంబరు, శనివారం</div>
+          <div class="cal-detail-tithi day-tel">ఈ రోజు ఏమీ లేదు</div>
+        </div>
+        <div class="cal-detail-acts">
+          <button class="cal-today-btn tt-addhere-sm cal-add-here">+ ఈ రోజు తిథి జోడించు</button>
+        </div>
+      </div>
+      <div class="cal-detail-grid" style="margin-top:18px">
+        <div class="mini-row"><span class="mk mk-tith" style="width:7px;height:7px"></span><span><span class="mini-name">అమ్మ జన్మ తిథి</span><span class="mini-sub">శ్రావణ · కృష్ణ ద్వాదశి</span></span><span class="mini-date">8 సెప్టెంబరు</span></div>
+        <div class="mini-row"><span class="mk mk-tith" style="width:7px;height:7px"></span><span><span class="mini-name">నాన్న ఆబ్దికం</span><span class="mini-sub">భాద్రపద · శుక్ల దశమి</span></span><span class="mini-date">21 సెప్టెంబరు</span></div>
+        <div class="mini-row"><span class="mk mk-tith" style="width:7px;height:7px"></span><span><span class="mini-name">తాత ఆబ్దికం</span><span class="mini-sub">ఆశ్వయుజ · కృష్ణ దశమి</span></span><span class="mini-date">30 అక్టోబరు</span></div>
+      </div>
+    </div>
+  </div></div>
+  <p class="fr-note">The list a tithi tab would have shown on its own is here too — but now it sits under the month the dates belong to, and the two marked days are visible above it.</p>
+</div>
+
+<!-- D3 -->
+<div class="slot" style="left:960px;top:1440px">
+  <div class="fr-cap">D · third tab</div>
+  <p class="fr-sub">The same, with the tabs under the month.</p>
+  <div class="fr"><div class="pad">
+    <div class="topbar"><div class="topbar-title display">పంచాంగం</div></div>
+    <div class="cal-nav"><span class="cal-nav-title day-tel">సెప్టెంబరు 2026</span></div>
+    <div class="grid-d3"></div>
+    <div class="tb2" style="margin-top:16px">
+      <button>పంచాంగం</button>
+      <button>మా తిథులు</button>
+      <button class="on">పితృ</button>
+    </div>
+    <div class="cal-detail" style="margin-top:16px">
+      <div class="cal-detail-date">12 సెప్టెంబరు, శనివారం</div>
+      <div class="pit-say" style="margin-top:4px">ఈ రోజు తర్పణం లేదు.</div>
+      <div class="pit-next">తరువాతి తర్పణం మహాలయ పక్షం, <b>26 సెప్టెంబరు</b>.</div>
+    </div>
+    <div class="pit-door" style="margin-top:16px">
+      <span class="pit-door-body">
+        <span class="eyebrow">పితృ సూచి</span>
+        <span class="pit-door-name day-tel">మీ సూచి</span>
+        <span class="pit-door-sub">ముప్పై మూడులో 1 పేరు వ్రాశారు</span>
+      </span>
+      <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"></path></svg>
+    </div>
+  </div></div>
+  <p class="fr-note">Same as the lens option in what it shows — the difference is only where the tabs sit. Under the grid they read as <b>questions about this month</b>; above it they read as three separate places.</p>
+</div>
+
+<script>
+const DAYS = 30, START = 2; // 1 Sept 2026 is a Tuesday
+const TITH = { 8: 1, 21: 1 };            // the house's own days
+/* amāvāsya, and the mahālaya pakṣa — not an arbitrary day */
+const PITR = { 11: 1, 26: 1, 27: 1, 28: 1, 29: 1, 30: 1 };
+const VRAT = { 4: 1, 17: 1, 25: 1 };
+const MOON = { 11: 0.0, 26: 0.5 };   // amāvāsya and pūrṇimā
+/* the house's own moon — the markup of MoonPhase in stuti-panchanga.jsx,
+   written out as strings because this mock has no React */
+let mUid = 0;
+function moon(phase, size) {
+  size = size || 13;
+  const u = 'm' + (++mUid), r = size / 2;
+  const cos = Math.cos(2 * Math.PI * phase), rx = Math.abs(r * cos);
+  const waxing = phase < 0.5, gibbous = phase > 0.25 && phase < 0.75;
+  const semi = waxing ? 'M' + r + ',0 A' + r + ',' + r + ' 0 0 1 ' + r + ',' + size
+                      : 'M' + r + ',0 A' + r + ',' + r + ' 0 0 0 ' + r + ',' + size;
+  const sweep = waxing ? (gibbous ? 1 : 0) : (gibbous ? 0 : 1);
+  const term = 'A' + rx + ',' + r + ' 0 0 ' + sweep + ' ' + r + ',0';
+  const hx = waxing ? '68%' : '32%';
+  const mare = (cx, cy, rr) => '<circle cx="' + (r * cx) + '" cy="' + (r * cy) + '" r="' + (r * rr) + '"/>';
+  return '<svg class="moonp" width="' + size + '" height="' + size + '" viewBox="0 0 ' + size + ' ' + size + '" aria-hidden="true" style="flex:none;overflow:visible">' +
+    '<defs>' +
+      '<radialGradient id="ml' + u + '" cx="' + hx + '" cy="36%" r="80%">' +
+        '<stop offset="0%" stop-color="var(--moon-lit-hi)"/><stop offset="55%" stop-color="var(--moon-lit)"/><stop offset="100%" stop-color="var(--moon-lit-lo)"/></radialGradient>' +
+      '<radialGradient id="md' + u + '" cx="42%" cy="38%" r="85%">' +
+        '<stop offset="0%" stop-color="var(--moon-dark-hi)"/><stop offset="100%" stop-color="var(--moon-dark)"/></radialGradient>' +
+      '<filter id="mb' + u + '" x="-20%" y="-20%" width="140%" height="140%"><feGaussianBlur stdDeviation="' + Math.max(0.6, size / 46) + '"/></filter>' +
+      '<clipPath id="mc' + u + '"><circle cx="' + r + '" cy="' + r + '" r="' + r + '"/></clipPath>' +
+      '<radialGradient id="ms' + u + '" cx="38%" cy="34%" r="78%">' +
+        '<stop offset="0%" stop-color="#fff" stop-opacity="0.30"/><stop offset="40%" stop-color="#fff" stop-opacity="0"/>' +
+        '<stop offset="68%" stop-color="#000" stop-opacity="0"/><stop offset="100%" stop-color="#000" stop-opacity="0.48"/></radialGradient>' +
+      '<radialGradient id="mg' + u + '" cx="50%" cy="50%" r="50%">' +
+        '<stop offset="0%" stop-color="#fff" stop-opacity="0.75"/><stop offset="100%" stop-color="#fff" stop-opacity="0"/></radialGradient>' +
+    '</defs>' +
+    '<circle cx="' + r + '" cy="' + r + '" r="' + r + '" fill="url(#md' + u + ')"/>' +
+    '<g clip-path="url(#mc' + u + ')">' +
+      '<path d="' + semi + ' ' + term + ' Z" fill="url(#ml' + u + ')" filter="url(#mb' + u + ')"/>' +
+      '<g fill="var(--moon-mare)" opacity="0.4">' + mare(waxing ? 1.38 : 0.62, 0.68, 0.20) + mare(waxing ? 1.18 : 0.82, 1.22, 0.14) + mare(waxing ? 1.52 : 0.48, 1.06, 0.09) + '</g>' +
+    '</g>' +
+    '<circle cx="' + r + '" cy="' + r + '" r="' + r + '" fill="url(#ms' + u + ')"/>' +
+    '<ellipse cx="' + (r * 0.62) + '" cy="' + (r * 0.5) + '" rx="' + (r * 0.34) + '" ry="' + (r * 0.2) + '" fill="url(#mg' + u + ')" transform="rotate(-30 ' + (r * 0.62) + ' ' + (r * 0.5) + ')"/>' +
+    '<circle cx="' + r + '" cy="' + r + '" r="' + (r - 0.5) + '" fill="none" stroke="var(--moon-ring)" stroke-width="1"/>' +
+  '</svg>';
+}
+function grid(el, marks) {
+  let h = '<div class="cal-grid cal-wd-row">' + ['ఆది','సోమ','మంగళ','బుధ','గురు','శుక్ర','శని']
+    .map(w => '<div class="cal-wd day-tel">' + w + '</div>').join('') + '</div><div class="cal-grid">';
+  for (let i = 0; i < START; i++) h += '<div class="cal-cell cal-cell-empty"></div>';
+  for (let d = 1; d <= DAYS; d++) {
+    const cls = 'cal-cell' + (d === 12 ? ' sel today' : '');
+    let m = '';
+    if (marks.vrata && VRAT[d]) m += '<span class="cal-dot"></span>';
+    if (marks.tithi && TITH[d]) m += '<span class="mk mk-tith"></span>';
+    if (marks.pitr && PITR[d]) m += '<span class="mk mk-pitr"></span>';
+    if (marks.moon && MOON[d] != null) m = moon(MOON[d]) + m;
+    h += '<div class="' + cls + '"><span class="cal-daynum">' + d + '</span><span class="cal-marks">' + m + '</span></div>';
+  }
+  document.querySelector(el).innerHTML = h + '</div>';
+}
+grid('.grid-a',  { vrata: 1, moon: 1 });
+grid('.grid-a2', { tithi: 1 });
+grid('.grid-a3', { pitr: 1, moon: 1 });
+grid('.grid-c',  { vrata: 1, moon: 1, tithi: 1, pitr: 1 });
+grid('.grid-d',  { vrata: 1, moon: 1 });
+grid('.grid-d2', { tithi: 1 });
+grid('.grid-d3', { pitr: 1, moon: 1 });
+</script>
+
+<template id="__bundler_thumbnail">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><rect width="100" height="100" fill="#FAF5EB"/><g fill="none" stroke="#8a6a2f" stroke-width="2.6"><rect x="30" y="32" width="40" height="36" rx="5"/><path d="M30 44h40M43 32v-6M57 32v-6"/></g><circle cx="43" cy="56" r="3.4" fill="#8a6a2f"/></svg>
+</template>
+</body>
+</html>

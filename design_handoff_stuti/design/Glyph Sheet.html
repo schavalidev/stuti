@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="day" data-pigment="off">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Glyph sheet</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Mallanna&display=swap" />
+<link rel="stylesheet" href="stuti.css" />
+<link rel="stylesheet" href="stuti-components.css" />
+<link rel="stylesheet" href="stuti-palette.css" />
+<link rel="stylesheet" href="stuti-pigment.css" />
+<style>
+body{background:var(--surface);color:var(--ink-soft);font-family:var(--font-ui);margin:0}
+.gsheet{max-width:1040px;margin:0 auto;padding:40px 28px 72px}
+.gsheet h1{font-family:var(--font-display);font-weight:400;font-size:2rem;margin:0 0 6px;color:var(--ink);text-transform:none;letter-spacing:0}
+.gsh-lede{color:var(--ink-soft);max-width:56ch;line-height:1.6;margin:0 0 4px;font-size:0.95rem;text-transform:none;letter-spacing:0}
+.gsh-sec{margin-top:40px}
+.gsh-sec h2{font-family:var(--font-display);font-weight:400;font-size:1.15rem;margin:0 0 3px;color:var(--ink);text-transform:none;letter-spacing:0}
+.gsh-sub{color:var(--ink-faint);font-size:0.86rem;margin:0 0 18px;text-transform:none;letter-spacing:0;font-family:var(--font-ui)}
+.gsh-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(176px,1fr));gap:14px}
+.gsh-card{background:var(--surface-2);border:1px solid var(--line);border-radius:14px;padding:18px 14px 16px;display:flex;flex-direction:column;align-items:center;gap:12px;text-align:center}
+.gsh-pair{display:flex;align-items:center;justify-content:center;gap:14px}
+.gsh-cell{display:grid;place-items:center;width:56px;height:56px;border-radius:10px;background:var(--surface)}
+.gsh-cell.ink{color:var(--accent)}
+/* the sheet shows both renderings at once: the page is in ink mode, and each
+   pigment half re-declares the app's own data-pigment switch on itself */
+.gsh-cell.pig{}
+.gsh-nm{font-size:0.86rem;color:var(--ink);font-family:var(--font-ui);text-transform:none;letter-spacing:0.01em}
+.gsh-note{font-size:0.78rem;line-height:1.55;color:var(--ink-faint);font-family:var(--font-ui);text-transform:none;letter-spacing:0;text-wrap:pretty}
+.gsh-bar{display:flex;gap:10px;margin-top:20px}
+.gsh-bar button{font-family:var(--font-ui);font-size:0.85rem;padding:8px 14px;border-radius:999px;border:1px solid var(--line);background:var(--surface-2);color:var(--ink-soft);cursor:pointer}
+.gsh-bar button.on{background:var(--accent);border-color:var(--accent);color:var(--surface)}
+</style>
+</head>
+<body>
+<div id="root"></div>
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+<script type="text/babel" src="stuti-icons.jsx"></script>
+<script type="text/babel">
+const Icon = window.Icon;
+const RITE = [
+  ["diya", "Diyā", "The oil lamp — lit when chosen, the flame flickering and throwing a small warm glow.", true],
+  ["kalasha", "Kalaśa", "The pot set for saṅkalpa: mango leaves at the neck, a coconut crowning it, a red thread at the rim."],
+  ["mala", "Mālā", "The japa strand — vermilion beads with the sumeru knot where the count turns back."],
+  ["flower", "Hibiscus", "Five broad petals and the protruding stamen — the flower actually offered in pūjā. Recitation wears it."],
+  ["marigold", "Banti puvvu", "The packed marigold pompom strung for a vow, deep red. Nitya's nomulu wear it."],
+  ["lotus", "Padma", "Petals opening over water — the seat every stotra imagines its deity on."],
+  ["vayanam", "Vāyanam", "The tied plate handed on at a vow's close: turmeric, betel and fruit, banana leaves fanned beneath."],
+  ["spark", "Spark", "A peacock-blue eight-point star with a small glint inside — memorising, the thing that catches."],
+  ["pray", "Añjali", "Two palms joined. Line only — no pigment miniature."],
+];
+const HOUSEHOLD = [
+  ["home", "Home", "A vermilion roof over a gold wall, the door a lamp-lit gap."],
+  ["book", "Grantha", "Two gold leaves of a palm-leaf book, bound at the spine."],
+  ["calendar", "Pañcāṅga", "A gold-banded sheet of the almanac."],
+  ["grid", "Shelves", "Four squares in four pigments from the same jar."],
+  ["list", "List", "Gold bullet stones against grey rules."],
+];
+function Card({ name, label, note, filled }) {
+  return (
+    <div className="gsh-card">
+      <div className="gsh-pair">
+        <div className="gsh-cell pig" data-pigment="on"><Icon name={name} size={34} filled={filled} /></div>
+        <div className="gsh-cell ink" data-pigment="off"><Icon name={name} size={30} stroke={1.9} filled={filled} /></div>
+      </div>
+      <div className="gsh-nm">{label}</div>
+      <div className="gsh-note">{note}</div>
+    </div>
+  );
+}
+function Sheet() {
+  const [theme, setTheme] = React.useState("day");
+  React.useEffect(() => { document.documentElement.dataset.theme = theme; }, [theme]);
+  return (
+    <div className="gsheet">
+      <div className="gsh-head">
+        <h1>Glyph sheet</h1>
+        <p className="gsh-lede">Every glyph in the app carries two renderings: the full-colour pigment miniature, ground from the same jar as the palette, and the ink line beneath it. The Ink tweak swaps one for the other without a re-render. Each card shows both — pigment left, line right.</p>
+        <div className="gsh-bar">
+          <button className={theme === "day" ? "on" : ""} onClick={() => setTheme("day")}>Day</button>
+          <button className={theme === "night" ? "on" : ""} onClick={() => setTheme("night")}>Night</button>
+        </div>
+      </div>
+      <div className="gsh-sec">
+        <h2>Of the rite</h2>
+        <p className="gsh-sub">Drawn from what the observance actually asks for</p>
+        <div className="gsh-grid">{RITE.map((r) => <Card key={r[0]} name={r[0]} label={r[1]} note={r[2]} filled={r[3]} />)}</div>
+      </div>
+      <div className="gsh-sec">
+        <h2>Of the household</h2>
+        <p className="gsh-sub">Ordinary furniture, painted in the same pigments</p>
+        <div className="gsh-grid">{HOUSEHOLD.map((r) => <Card key={r[0]} name={r[0]} label={r[1]} note={r[2]} />)}</div>
+      </div>
+    </div>
+  );
+}
+ReactDOM.createRoot(document.getElementById("root")).render(<Sheet />);
+</script>
+</body>
+</html>

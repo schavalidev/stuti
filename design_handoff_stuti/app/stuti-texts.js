@@ -142,6 +142,7 @@ window.STUTI_TEXTS=[{"deities":["surya"],"title":"Āditya Hṛdayam","blurb":"Ag
       if (t.about) h.about = t.about;
       if (t.colophon) h.colophon = t.colophon;
       if (t.namesKey) h.namesKey = t.namesKey;
+      if (t.occasions) h.occasions = t.occasions;
     });
   });
 })();

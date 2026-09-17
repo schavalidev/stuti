@@ -106,7 +106,7 @@ const FlowVerseMemo = React.memo(FlowVerse, (a, b) =>
   a.on === b.on && a.activeLi === b.activeLi && a.word === b.word && a.lit === b.lit &&
   a.masked === b.masked && a.hint === b.hint);
 
-function FlowText({ hymn, lang, showMeaning, scale, at, word, lit, masked, hint, peek, onPick, onWord, onSeen, onOpenNames, ritual, ritualOn, onRitual, scrollRef, hush, plain }) {
+function FlowText({ hymn, lang, showMeaning, scale, at, word, lit, masked, hint, peek, onPick, onWord, onSeen, onOpenNames, ritual, ritualOn, onRitual, hide, scrollRef, hush, plain }) {
   const { useEffect, useLayoutEffect, useRef, useCallback } = React;
   const marks = useRef({});
   const setMark = useCallback((vi, el) => { marks.current[vi] = el; }, []);
@@ -200,6 +200,9 @@ function FlowText({ hymn, lang, showMeaning, scale, at, word, lit, masked, hint,
       {hymn.verses.map((v, vi) => {
         const sec = hymn.sections && v.s != null ? hymn.sections[v.s] : null;
         const prev = hymn.verses[vi - 1];
+        /* a verse the occasion does not use is simply not there — no band, no
+           offer to bring it in: the reciter already answered that question */
+        if (hide && hide.has(vi)) return null;
         const newSec = sec && (!prev || prev.s !== v.s);
         /* the nyāsa, left out of the reading: one band for the whole run of it,
            saying what it is and offering to bring it in */
@@ -259,7 +262,7 @@ function FlowText({ hymn, lang, showMeaning, scale, at, word, lit, masked, hint,
 const eqAt = (x, y) => (x ? !!y && x.vi === y.vi && x.li === y.li : !y);
 const FlowTextMemo = React.memo(FlowText, (a, b) =>
   a.hymn.id === b.hymn.id && a.lang === b.lang && a.showMeaning === b.showMeaning &&
-  a.scale === b.scale && a.ritualOn === b.ritualOn &&
+  a.scale === b.scale && a.ritualOn === b.ritualOn && a.hide === b.hide &&
   eqAt(a.at, b.at) && a.word === b.word && a.lit === b.lit &&
   a.masked === b.masked && a.hint === b.hint && a.peek === b.peek && a.plain === b.plain);
 

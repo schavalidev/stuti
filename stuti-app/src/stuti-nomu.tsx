@@ -6,6 +6,7 @@ import { STUTI_KEEP } from "./stuti-keep-core";
 import { KeepBell } from "./stuti-keep";
 import { STUTI_NOMU } from "./stuti-nomu-data";
 import { STUTI_TRANSLIT } from "./stuti-translit";
+import { VidhiJump } from "./stuti-vidhi-jump";
 import { VoiceButton } from "./stuti-voice";
 
 /* ============================================================
@@ -115,12 +116,13 @@ function NomuDetail({ nomuId, go, lang, onBack }) {
               <h1 className="deity-hero-name display" style={{ fontFamily: font }}>{nomP(n.name, lang)}</h1>
               <div className="deity-hero-epithet">{nomP(n.when, lang)}</div>
             </div>
+            {VidhiJump && <VidhiJump hymnId={n.vidhiText} deity={n.deity} go={go} lang={lang} />}
           </div>
           <p className="deity-hero-line">{nomP(n.forwhat, lang)}</p>
         </header>
 
         {n.how && (
-          <div className="vr-sect">
+          <div className="vr-sect" id={"vidhi-" + n.id}>
             <div className="eyebrow">{L.t("vidhi", lang)}</div>
             <p className="vr-para">{nomP(n.how, lang)}</p>
           </div>

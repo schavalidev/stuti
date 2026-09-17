@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="day">
+<head>
+<meta charset="UTF-8" />
+<meta name="design_doc_mode" content="canvas">
+<title>Reader — direction options</title>
+<link rel="stylesheet" href="stuti.css" />
+<link rel="stylesheet" href="stuti-components.css" />
+<link rel="stylesheet" href="stuti-palette.css" />
+<style>
+body{margin:0}
+.opt-label{position:absolute;top:-38px;left:0;font-family:var(--font-ui);font-size:15px;font-weight:700;color:#3a2c1a}
+.opt-sub{position:absolute;top:-18px;left:0;font-family:var(--font-ui);font-size:12.5px;color:#8a7860}
+.phone{width:390px;height:780px;border-radius:34px;overflow:hidden;box-shadow:0 30px 70px -30px rgba(40,25,8,0.5);display:flex;flex-direction:column;position:relative;background:var(--bg)}
+.icon-btn svg{display:block}
+.rd-mock-icons{display:flex;align-items:center;justify-content:center}
+.mock-verse-num{min-width:30px;height:30px;padding:0 11px;border-radius:999px;display:grid;place-items:center;margin:0 auto 12px;width:max-content;background:var(--accent-soft);color:var(--accent-ink);font-size:13px;font-weight:700}
+.mock-topbar-btn{width:42px;height:44px;border-radius:999px;border:none;background:transparent;color:var(--ink);display:grid;place-items:center;cursor:pointer}
+.mock-title{font-family:var(--font-display);font-size:28px;line-height:1.15;text-align:center}
+.mock-chip{height:34px;padding:0 14px;border-radius:999px;font-size:13.5px;font-weight:600;color:var(--ink-soft);border:1px solid var(--line);background:var(--surface);display:inline-flex;align-items:center;cursor:pointer}
+.mock-chip.on{color:var(--accent-ink);background:var(--accent-soft);border-color:color-mix(in oklab,var(--accent) 45%,var(--line))}
+.mock-chiprow{display:flex;gap:6px;padding:4px 16px 10px;flex-wrap:wrap}
+.mock-dots{display:flex;gap:7px;justify-content:center;padding:6px 16px 10px}
+.mock-dot{width:8px;height:8px;border-radius:50%;background:var(--line)}
+.mock-dot.done{background:color-mix(in oklab,var(--accent) 45%,var(--line))}
+.mock-dot.on{background:var(--accent);transform:scale(1.4)}
+.verse-deva{font-family:var(--font-deva);font-size:32px;line-height:1.62;color:var(--accent-ink);text-align:center}
+.verse-iast{font-family:var(--font-display);font-size:16px;color:var(--ink-soft);text-align:center;margin-top:6px}
+.verse-mean{font-size:15px;color:var(--ink-soft);line-height:1.55;text-align:center;margin-top:16px;padding:0 8px}
+.mock-stage{flex:1;display:flex;flex-direction:column;justify-content:center;padding:10px 20px 20px;overflow:hidden}
+.mock-reciter-row{display:flex;align-items:center;justify-content:space-between}
+.mock-center{display:flex;align-items:center;gap:14px}
+.mock-step{width:44px;height:44px;border-radius:50%;display:grid;place-items:center;color:var(--ink);background:var(--surface-2);border:1px solid var(--line);cursor:pointer}
+.mock-play{width:60px;height:60px;border-radius:50%;display:grid;place-items:center;background:var(--accent);color:#fff;box-shadow:var(--shadow-sm),0 0 0 5px color-mix(in oklab,var(--accent) 16%,transparent);cursor:pointer}
+.mock-aux{display:flex;flex-direction:column;align-items:center;gap:2px;min-width:56px;color:var(--ink-faint);font-size:12.5px;font-weight:600}
+.mock-progress{position:relative;height:18px;margin:0 2px 4px;display:flex;align-items:center}
+.mock-progress::before{content:"";position:absolute;left:0;right:0;height:4px;border-radius:4px;background:var(--line)}
+.mock-progress span{position:relative;display:block;height:4px;border-radius:4px;background:var(--accent)}
+.mock-reciter{flex:none;background:var(--surface);border-top:1px solid var(--line);padding:10px 16px 16px}
+</style>
+</head>
+<body>
+
+<div style="position:absolute;left:60px;top:70px" class="phone-wrap">
+<div class="opt-label">A · Folio unify</div>
+<div class="opt-sub">Reader's chrome adopts the library's own warm-wash header + a real card for the verse — same recipe, not a bespoke one</div>
+<div class="phone" data-theme="day" style="background:linear-gradient(180deg,#F5DCBE,var(--bg) 46%)">
+  <div style="display:flex;align-items:center;padding:14px 10px 10px">
+    <button class="mock-topbar-btn"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M15 6l-6 6 6 6"/></svg></button>
+    <div style="flex:1;padding-top:2px"><div class="mock-title">Lalitā Sahasranāma</div></div>
+    <button class="mock-topbar-btn"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21s-7-4.35-9.5-8.8C.7 8.4 2.6 5 6 5c2 0 3.3 1 4 2 0 0 1-2 4-2 3.4 0 5.3 3.4 3.5 7.2C19 16.65 12 21 12 21z"/></svg></button>
+  </div>
+  <div style="height:1.5px;background:linear-gradient(90deg,transparent,var(--gold) 20%,var(--gold) 80%,transparent);opacity:.55;margin:0 24px 6px"></div>
+  <div class="mock-chiprow" style="justify-content:center">
+    <span class="mock-chip on">Verse</span><span class="mock-chip">Full text</span><span class="mock-chip">Meaning</span><span class="mock-chip" style="color:var(--accent-ink);border-color:color-mix(in oklab,var(--accent) 45%,transparent);background:var(--accent-soft)">Learn</span>
+  </div>
+  <div class="mock-stage">
+    <div style="background:var(--surface);border:1px solid var(--line);border-radius:var(--r-lg);box-shadow:var(--shadow-sm);padding:26px 20px">
+      <div class="mock-verse-num">8 / 320</div>
+      <div class="verse-deva">श्री माता श्री महाराज्ञी<br/>श्रीमत्सिंहासनेश्वरी</div>
+      <div class="verse-iast">śrī mātā śrī mahārājñī<br/>śrīmatsiṁhāsaneśvarī</div>
+      <div class="verse-mean">The auspicious mother, the great queen, sovereign enthroned in splendour.</div>
+    </div>
+  </div>
+  <div class="mock-dots">
+    <span class="mock-dot done"></span><span class="mock-dot done"></span><span class="mock-dot on"></span><span class="mock-dot"></span><span class="mock-dot"></span><span class="mock-dot"></span>
+  </div>
+  <div class="mock-reciter">
+    <div class="mock-progress"><span style="width:38%"></span></div>
+    <div class="mock-reciter-row">
+      <div class="mock-aux">↻<span>Loop</span></div>
+      <div class="mock-center">
+        <div class="mock-step">⟨</div>
+        <div class="mock-play"><svg width="26" height="26" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5.5v13l11-6.5z"/></svg></div>
+        <div class="mock-step">⟩</div>
+      </div>
+      <div class="mock-aux">1×<span>Speed</span></div>
+    </div>
+  </div>
+</div>
+</div>
+
+<div style="position:absolute;left:520px;top:70px" id="opt-b">
+<div class="opt-label">B · Manuscript page</div>
+<div class="opt-sub">Flat chrome, hairlines only — the verse itself becomes a bordered card, the same weight as a hymn-card in the library list</div>
+<div class="phone" data-theme="day">
+  <div style="display:flex;align-items:center;padding:14px 10px 10px;border-bottom:1px solid var(--line)">
+    <button class="mock-topbar-btn"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M15 6l-6 6 6 6"/></svg></button>
+    <div style="flex:1"><div class="mock-title" style="font-size:24px">Lalitā Sahasranāma</div></div>
+    <button class="mock-topbar-btn"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21s-7-4.35-9.5-8.8C.7 8.4 2.6 5 6 5c2 0 3.3 1 4 2 0 0 1-2 4-2 3.4 0 5.3 3.4 3.5 7.2C19 16.65 12 21 12 21z"/></svg></button>
+  </div>
+  <div class="mock-chiprow" style="justify-content:center;padding-top:12px">
+    <span class="mock-chip on">Verse</span><span class="mock-chip">Full text</span><span class="mock-chip">Meaning</span><span class="mock-chip">Learn</span>
+  </div>
+  <div class="mock-stage">
+    <div style="background:var(--surface);border:1px solid var(--line);border-radius:var(--r-md);box-shadow:0 8px 22px -14px rgba(58,40,20,.3);padding:22px 18px;position:relative;overflow:hidden">
+      <div style="position:absolute;left:0;top:0;bottom:0;width:3px;background:var(--accent)"></div>
+      <div class="mock-verse-num">8 / 320</div>
+      <div class="verse-deva">श्री माता श्री महाराज्ञी<br/>श्रीमत्सिंहासनेश्वरी</div>
+      <div class="verse-iast">śrī mātā śrī mahārājñī<br/>śrīmatsiṁhāsaneśvarī</div>
+      <div class="verse-mean">The auspicious mother, the great queen, sovereign enthroned in splendour.</div>
+    </div>
+  </div>
+  <div class="mock-dots">
+    <span class="mock-dot done"></span><span class="mock-dot done"></span><span class="mock-dot on"></span><span class="mock-dot"></span><span class="mock-dot"></span><span class="mock-dot"></span>
+  </div>
+  <div class="mock-reciter" style="box-shadow:none">
+    <div class="mock-progress"><span style="width:38%"></span></div>
+    <div class="mock-reciter-row">
+      <div class="mock-aux">↻<span>Loop</span></div>
+      <div class="mock-center">
+        <div class="mock-step">⟨</div>
+        <div class="mock-play"><svg width="26" height="26" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5.5v13l11-6.5z"/></svg></div>
+        <div class="mock-step">⟩</div>
+      </div>
+      <div class="mock-aux">1×<span>Speed</span></div>
+    </div>
+  </div>
+</div>
+</div>
+
+<div style="position:absolute;left:60px;top:940px" id="opt-c">
+<div class="opt-label">C · Minimal focus</div>
+<div class="opt-sub">Chrome nearly disappears — plain background, text-style tabs, a floating reciter pill — the verse is the only thing with weight</div>
+<div class="phone" data-theme="day">
+  <div style="display:flex;align-items:center;padding:16px 14px 6px">
+    <button class="mock-topbar-btn"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M15 6l-6 6 6 6"/></svg></button>
+    <div style="flex:1"><div class="mock-title" style="font-size:22px;color:var(--ink-soft)">Lalitā Sahasranāma</div></div>
+    <button class="mock-topbar-btn"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21s-7-4.35-9.5-8.8C.7 8.4 2.6 5 6 5c2 0 3.3 1 4 2 0 0 1-2 4-2 3.4 0 5.3 3.4 3.5 7.2C19 16.65 12 21 12 21z"/></svg></button>
+  </div>
+  <div style="display:flex;gap:22px;justify-content:center;padding:10px 16px 4px">
+    <span style="font-size:13.5px;font-weight:700;color:var(--accent-ink);border-bottom:2px solid var(--accent);padding-bottom:6px">Verse</span>
+    <span style="font-size:13.5px;font-weight:700;color:var(--ink-faint);padding-bottom:6px">Full text</span>
+    <span style="font-size:13.5px;font-weight:700;color:var(--ink-faint);padding-bottom:6px">Meaning</span>
+    <span style="font-size:13.5px;font-weight:700;color:var(--ink-faint);padding-bottom:6px">Learn</span>
+  </div>
+  <div class="mock-stage" style="padding:20px 22px 26px">
+    <div class="mock-verse-num" style="background:transparent;color:var(--ink-faint)">8 / 320</div>
+    <div class="verse-deva" style="font-size:35px">श्री माता श्री महाराज्ञी<br/>श्रीमत्सिंहासनेश्वरी</div>
+    <div class="verse-iast" style="font-size:17px">śrī mātā śrī mahārājñī<br/>śrīmatsiṁhāsaneśvarī</div>
+    <div class="verse-mean">The auspicious mother, the great queen, sovereign enthroned in splendour.</div>
+  </div>
+  <div class="mock-dots">
+    <span class="mock-dot done"></span><span class="mock-dot done"></span><span class="mock-dot on"></span><span class="mock-dot"></span><span class="mock-dot"></span><span class="mock-dot"></span>
+  </div>
+  <div style="padding:0 18px 20px">
+    <div class="mock-reciter" style="border:1px solid var(--line);border-top:1px solid var(--line);border-radius:999px;box-shadow:var(--shadow-sm);padding:8px 20px 10px">
+      <div class="mock-progress" style="margin:0 4px 2px"><span style="width:38%"></span></div>
+      <div class="mock-reciter-row">
+        <div class="mock-aux">↻<span>Loop</span></div>
+        <div class="mock-center">
+          <div class="mock-step" style="background:transparent;border:none">⟨</div>
+          <div class="mock-play" style="width:52px;height:52px"><svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5.5v13l11-6.5z"/></svg></div>
+          <div class="mock-step" style="background:transparent;border:none">⟩</div>
+        </div>
+        <div class="mock-aux">1×<span>Speed</span></div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+
+<div style="position:absolute;left:520px;top:940px" id="opt-d">
+<div class="opt-label">D · Illuminated</div>
+<div class="opt-sub">Leans into the app's own ornament — a seal medallion by the title, a gold rule, an accent-tinted verse card, echoing the deity page's masthead</div>
+<div class="phone" data-theme="day">
+  <div style="display:flex;align-items:center;gap:10px;padding:16px 12px 10px">
+    <button class="mock-topbar-btn"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M15 6l-6 6 6 6"/></svg></button>
+    <div style="width:38px;height:38px;border-radius:50%;display:grid;place-items:center;background:var(--accent-soft);color:var(--accent-ink);font-family:var(--font-deva);font-size:17px;flex:none">श्री</div>
+    <div style="flex:1;padding-top:2px"><div class="mock-title" style="text-align:left;font-size:24px">Lalitā Sahasranāma</div></div>
+    <button class="mock-topbar-btn"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21s-7-4.35-9.5-8.8C.7 8.4 2.6 5 6 5c2 0 3.3 1 4 2 0 0 1-2 4-2 3.4 0 5.3 3.4 3.5 7.2C19 16.65 12 21 12 21z"/></svg></button>
+  </div>
+  <div style="height:1px;background:var(--gold);opacity:.4;margin:0 20px 8px"></div>
+  <div class="mock-chiprow" style="justify-content:center">
+    <span class="mock-chip on">Verse</span><span class="mock-chip">Full text</span><span class="mock-chip">Meaning</span><span class="mock-chip">Learn</span>
+  </div>
+  <div class="mock-stage">
+    <div style="background:color-mix(in oklab,var(--accent-soft) 55%,var(--surface));border:1px solid color-mix(in oklab,var(--gold) 30%,var(--line));border-radius:var(--r-lg);padding:26px 20px">
+      <div class="mock-verse-num">8 / 320</div>
+      <div class="verse-deva">श्री माता श्री महाराज्ञी<br/>श्रीमत्सिंहासनेश्वरी</div>
+      <div class="verse-iast">śrī mātā śrī mahārājñī<br/>śrīmatsiṁhāsaneśvarī</div>
+      <div class="verse-mean">The auspicious mother, the great queen, sovereign enthroned in splendour.</div>
+    </div>
+  </div>
+  <div class="mock-dots">
+    <span class="mock-dot done"></span><span class="mock-dot done"></span><span class="mock-dot on"></span><span class="mock-dot"></span><span class="mock-dot"></span><span class="mock-dot"></span>
+  </div>
+  <div class="mock-reciter">
+    <div class="mock-progress"><span style="width:38%"></span></div>
+    <div class="mock-reciter-row">
+      <div class="mock-aux">↻<span>Loop</span></div>
+      <div class="mock-center">
+        <div class="mock-step">⟨</div>
+        <div class="mock-play" style="box-shadow:var(--shadow-sm),0 0 0 8px color-mix(in oklab,var(--accent) 12%,transparent)"><svg width="26" height="26" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5.5v13l11-6.5z"/></svg></div>
+        <div class="mock-step">⟩</div>
+      </div>
+      <div class="mock-aux">1×<span>Speed</span></div>
+    </div>
+  </div>
+</div>
+</div>
+
+<template id="__bundler_thumbnail"><svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><rect width="100" height="100" fill="#B07A2B"/><text x="50" y="58" font-size="40" text-anchor="middle" fill="#fff" font-family="serif">श्री</text></svg></template>
+</body>
+</html>

@@ -158,11 +158,12 @@ const DEITY_EMBLEM = {
   surya: "emblems/surya-face",
   guru: "emblems/guru-face",
   hanuman: "emblems/hanuman-face",
+  nadi: "emblems/nadi-face",
 };
 
 /* deities whose seal shows the painting itself — full colour on its own
    ground, in place of the tinted plate + ratna stone */
-const DEITY_COLOUR = { devi: "emblems/devi-face-colour.png", ganesha: "emblems/ganesha-face-colour.png", shiva: "emblems/shiva-face-colour.png", vishnu: "emblems/vishnu-face-colour.png", subrahmanya: "emblems/subrahmanya-face-colour.png", guru: "emblems/guru-face-colour.png", hanuman: "emblems/hanuman-face-colour.png" };
+const DEITY_COLOUR = { devi: "emblems/devi-face-colour.png", ganesha: "emblems/ganesha-face-colour.png", shiva: "emblems/shiva-face-colour.png", vishnu: "emblems/vishnu-face-colour.png", subrahmanya: "emblems/subrahmanya-face-colour.png", guru: "emblems/guru-face-colour.png", hanuman: "emblems/hanuman-face-colour.png", pitr: "emblems/pitr-face-colour.png", nadi: "emblems/nadi-face-colour.png" };
 
 /* A reusable deity seal — the deity's drawn emblem, pre-tinted for day + night;
    CSS shows the right one. There is no bīja fallback: a seed syllable is
@@ -190,10 +191,20 @@ function Seal({ d, size = 56, fontScale = 0.42, style }) {
 /* Square portraits drawn for the shelf tile — the figure on its own cream
    ground with no circle, so the frame can crop it freely. Falls back to the
    round colour painting, then to the ink emblem. */
-const DEITY_PORTRAIT = { ganesha: "emblems/ganesha-portrait-v3.png", guru: "emblems/guru-portrait.png", hanuman: "emblems/hanuman-portrait.png", vishnu: "emblems/vishnu-portrait.png", surya: "emblems/surya-portrait.png", shiva: "emblems/shiva-portrait-v2.png", subrahmanya: "emblems/subrahmanya-portrait-v2.png", devi: "emblems/devi-portrait.png" };
-function Portrait({ d }) {
+const DEITY_PORTRAIT = { ganesha: "emblems/ganesha-portrait-v4.png", guru: "emblems/guru-portrait.png", hanuman: "emblems/hanuman-portrait.png", vishnu: "emblems/vishnu-portrait.png", surya: "emblems/surya-portrait.png", shiva: "emblems/shiva-portrait-v2.png", subrahmanya: "emblems/subrahmanya-portrait-v2.png", devi: "emblems/devi-portrait.png", pitr: "emblems/pitr-face-colour.png", nadi: "emblems/nadi-face-colour.png" };
+/* A niche with no painting shows its headword instead of borrowed artwork — a
+   typeset plate reads as a niche awaiting its image, which is the truth, where
+   another deity's emblem would read as a claim. */
+function isWordPlate(d) {
+  return !!(d && !DEITY_PORTRAIT[d.id] && !DEITY_COLOUR[d.id] && !DEITY_EMBLEM[d.id]);
+}
+function Portrait({ d, lang }) {
   const colour = d && (DEITY_PORTRAIT[d.id] || DEITY_COLOUR[d.id]);
   if (colour) return <img className={"niche-img niche-img--colour" + (DEITY_PORTRAIT[d.id] ? " niche-img--circle" : "")} src={colour} alt="" draggable="false" />;
+  if (d && !DEITY_EMBLEM[d.id]) {
+    const L = window.STUTI_L;
+    return <span className="niche-word display" style={{ fontFamily: L.font(lang) }}>{L.name(d, lang)}</span>;
+  }
   return <Emblem d={d} variant="ink" className="niche-img" />;
 }
 
@@ -226,9 +237,13 @@ function DeityTile({ d, lang, i = 0, kept = false, onClick, children }) {
   return (
     <button className={"gtile gtile-niche" + (kept ? " gtile-kept" : "")} style={{ ...deityStyle(d), "--i": i, animationDelay: `${40 + i * 55}ms` }}
       onPointerDown={tileDown} onPointerMove={tileTilt} onPointerLeave={tileRest} onPointerUp={tileRest} onPointerCancel={tileRest} onClick={onClick}>
-      <div className="niche-pic"><Portrait d={d} /></div>
+      <div className="niche-pic"><Portrait d={d} lang={lang} /></div>
       <div className="niche-sheen"></div>
-      <div className="gtile-name display niche-name" style={{ fontFamily: L.font(lang) }}>{L.name(d, lang)}{children}</div>
+      {/* a niche with no painting already carries its name as the plate itself —
+         the foot label would say it a second time */}
+      {isWordPlate(d) ? (children || null) : (
+        <div className="gtile-name display niche-name" style={{ fontFamily: L.font(lang) }}>{L.name(d, lang)}{children}</div>
+      )}
     </button>
   );
 }

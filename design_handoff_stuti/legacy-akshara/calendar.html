@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="day" data-lang="roman" data-ui-lang="roman" data-palette="unified" data-seal="ratna">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Calendar · Stuti</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link rel="stylesheet" href="stuti.css" />
+<link rel="stylesheet" href="stuti-components.css" />
+<link rel="stylesheet" href="stuti-palette.css" />
+<link rel="stylesheet" href="site.css" />
+</head>
+<body data-page="calendar">
+<div class="wrap">
+  <div class="page-head">
+    <span class="eyebrow eyebrow-a" data-t="calEyebrow">The month, tithi by tithi</span>
+    <h1 data-t="navCalendar">Calendar</h1>
+    <p data-t="calLede">Pick a day and its full sheet opens beside the month, computed for this place.</p>
+  </div>
+  <div class="cal-two">
+    <div class="cal-card" id="month"></div>
+    <section id="panch"></section>
+  </div>
+</div>
+<div style="height:70px"></div>
+<script src="stuti-translit.js"></script>
+<script src="stuti-texts.js"></script>
+<script src="stuti-prefs.js"></script>
+<script src="stuti-ephemeris.js"></script>
+<script src="stuti-sankranti-data.js"></script>
+<script src="stuti-reckoning.js"></script>
+<script src="stuti-sankalpa-data.js"></script>
+<script src="stuti-panchanga-engine.js"></script>
+<script src="site-i18n.js"></script>
+<script src="site-lib.js"></script>
+<script src="site-panch.js"></script>
+<script>
+(function(){
+  var m=document.getElementById("month"),p=document.getElementById("panch");
+  var P=new URLSearchParams(location.search),dq=P.get("d"),start=new Date();
+  if(dq&&/^\d{4}-\d{2}-\d{2}$/.test(dq)){var a=dq.split("-");start=new Date(+a[0],+a[1]-1,+a[2],9,0,0);}
+  function z(n){return (n<10?"0":"")+n;}
+  function stamp(d){return d.getFullYear()+"-"+z(d.getMonth()+1)+"-"+z(d.getDate());}
+  /* the open day belongs in the URL: a sheet someone is reading is a page they can send */
+  function show(d){window.SITE_PANCH(p,{date:d,cap:window.SITE_T(d.toDateString()===new Date().toDateString()?"todaysPanchanga":"daysPanchanga")});
+    history.replaceState(null,"","calendar.html?d="+stamp(d));}
+  m.__sel=start;
+  window.SITE_MONTH(m,new Date(start.getFullYear(),start.getMonth(),1),show);
+  show(start);
+  /* a script or place change redraws the month being browsed — not January of today */
+  var redraw=function(){window.SITE_MONTH(m,m.__ym||new Date(),show);show(m.__sel||new Date());};
+  window.SITE_ONLANG=(window.SITE_ONLANG||[]).concat(redraw);
+  window.SITE_ONLOC=(window.SITE_ONLOC||[]).concat(redraw);
+})();
+</script>
+<script src="site-chrome.js"></script>
+</body>
+</html>
