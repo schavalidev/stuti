@@ -6,6 +6,7 @@ accent mark or translation of a Vedic line is left in the reader's text.
 """
 import html, json, subprocess
 from pauranika_common import *
+from pauranika_post_edits import apply_post_edits
 
 OUTDIR = pathlib.Path(sys.argv[1]).resolve()
 ONLY = sys.argv[2:]  # optional stems
@@ -18,7 +19,7 @@ VIN = re.compile(r'प्राणायामे विनियोगः|ग�
 
 TR = {  # a translation sentence that renders a Vedic segment
  'en': re.compile(r'svāhā|peace, peace, peace|yajñopavīta is supremely pure|Put on this bright thread|born with Prajāpati|See the other hymns|bhūrbhuv|know that Person|Let Brahmā purify|sacred power we purify|earth, (mid-air|air|sky)|god Savit|of the god Sav|impel us|impel our|set our thoughts|sprinkle you|In the evening|'
-    r'underlayer|spread beneath|couch of|covering of the deathless|covering of the nectar|covering upon the nectar|cover of that nectar|Let there be the deathless|May there be the nectar of immortality|'
+    r'underlayer|spread beneath|couch of|covering of the deathless|covering of the nectar|covering of nectar|covering upon the nectar|cover of that nectar|Let there be the deathless|May there be the nectar of immortality|'
     r'Waters, you are|most kindly essence|come readily to you|flower of the waters|flower of the waters|who knows thus|'
     r'mother of mantras|We call upon you|O lord of the sacred word, h|may we know|we know|three-eyed one, the fragrant|'
     r'this great Person|golden-arm|Person of a thousand|supreme station|goddess Sarasvatī, r|Person indeed is all|'
@@ -76,6 +77,79 @@ def proportional_cut(ss, vch, tch):
         if k < len(ss): acc += len(ss[k])
     return best[1]
 
+
+# Vrata files carry one translation line per verse. Their Vedic lines were read one by one and the
+# decisions recorded here: (deva/iast line indices to drop, translation line indices to drop).
+# Indices count non-blank lines. Whatever survives still goes through segment removal and the
+# sentence patterns, so a half-line such as `अमृतापिधानमसि` inside a kept line is also removed.
+R = lambda a, b: list(range(a, b + 1))
+MANUAL = {
+ '02_kedareswara_vrata_kalpam': {
+   3: (R(0, 2), [0]), 5: (R(0, 6), [0, 1]),
+   14: ([1, 2], [0]), 15: ([1, 2], [0]), 16: ([1, 2], [0]), 17: (R(1, 6), [0, 1, 2]), 18: (R(1, 4), R(0, 3)), 19: ([1, 2], [0]),
+   20: (R(1, 6), [0, 1, 2]), 33: ([0, 1, 2, 3, 4, 5, 7, 8, 10], [0, 1, 2, 4, 5, 7]), 37: (R(0, 9), R(0, 4))},
+ '03_mangala_gauri_vrata_kalpam': {3: (R(0, 5), [0, 1]), 26: (R(0, 7), [0, 1, 2])},
+ '04_vaibhava_lakshmi_vrata_kalpam': {
+   3: (R(0, 5), [0, 1]), 4: ([], []),
+   **{n: ([0, 1], [0]) for n in (5, 6, 7, 12, 13, 14, 15, 17, 19, 22, 23, 24, 26, 27)},
+   8: (R(0, 2), [0]), 9: (R(0, 3), [0]), 25: (R(0, 5), R(0, 3)),
+   28: ([0, 1, 12, 13], [0, 4]), 41: ([3], [2])},
+ '05_ananta_padmanabha_vrata_kalpam': {
+   3: (R(7, 13), [3, 4]),
+   12: ([0, 1, 3, 5, 6, 8, 9, 10, 11, 12, 13, 15, 16, 17, 18, 20, 21], [0, 2, 4, 6, 7, 8, 10, 12]),
+   41: ([0, 1, 3, 5, 6, 8, 9, 10, 11, 12, 13, 15, 16, 17, 18, 20, 21], [0, 2, 4, 6, 7, 8, 10, 12]),
+   23: (R(3, 11), R(2, 6)), 26: ([1], [1]), 31: (R(0, 5), R(0, 3)),
+   53: (R(4, 12), R(4, 8)), 56: ([3, 4, 5], [3, 4]), 74: ([0, 1, 2, 3, 5], [0, 1, 2, 3, 5])},
+}
+VRATA = [f'puja/vrata/{k}.txt' for k in MANUAL]
+
+def build_manual(f):
+    raw, fields, units = load(f)
+    stem = pathlib.Path(f).stem; plan = MANUAL[stem]
+    log, out = [], []
+    for u in units:
+        n, u = u['n'], dict(u)
+        if n not in plan:
+            out.append(u); continue
+        D, E = plan[n]
+        nb = lambda k: [l for l in u.get(k, '').split('\n') if l.strip()]
+        dl, il = nb('deva'), nb('iast')
+        if len(dl) != len(il): raise SystemExit(f"{f} unit {n}: deva {len(dl)} lines, iast {len(il)}")
+        tr = {k: nb(k) for k in ('en', 'tel', 'hi')}
+        if len({len(v) for v in tr.values()}) != 1: raise SystemExit(f"{f} unit {n}: translation line counts differ")
+        nd, ni = [], []
+        for i, (d, ia) in enumerate(zip(dl, il)):
+            if i in D: continue
+            d2, i2, _ = strip_line(d, ia)
+            if d2: nd.append(d2); ni.append(i2)
+        for k, lines in tr.items():
+            kept = []
+            for j, line in enumerate(lines):
+                if j in E: continue
+                ss = [x for x in sents(line, k) if not TR[k].search(x)]
+                if ss: kept.append(' '.join(ss))
+            tr[k] = kept
+        if not nd or all(RESIDUAL.search(norm(x).strip()) for x in nd):
+            log.append(f"{n}: dropped — wholly Vedic"); continue
+        u['deva'], u['iast'] = '\n'.join(nd), '\n'.join(ni)
+        for k in tr: u[k] = '\n'.join(tr[k])
+        log.append(f"{n}: Vedic lines removed ({len(D)} lines, {len(E)} translation lines)")
+        out.append(u)
+    for u in out:
+        if u.get('vidhi'): u['vidhi'] = clean_prose(u['vidhi'])
+        if 'deva' in u:
+            u['deva'] = '\n'.join(ACC.sub('', l) if NOT_VEDIC.search(norm(l)) else l for l in u['deva'].split('\n'))
+    bad = []
+    for u in out:
+        for l in u.get('deva', '').split('\n'):
+            if l.strip() and (is_vedic(l) or '”' in l): bad.append((u['n'], 'deva', l[:60]))
+        if u['n'] not in plan: continue
+        for k in ('en', 'tel', 'hi'):
+            for line in u.get(k, '').split('\n'):
+                for x in sents(line, k):
+                    if TR[k].search(x): bad.append((u['n'], k, x[:60]))
+    return fields, out, log, bad
+
 APPARATUS = re.compile(
     r'stotranidhi|Gītā Press|vignanam|this page|the page|the source|the print|pages|recorded, not reconciled|'
     r'corrected|see the header|accent|svara|witness|recension|transmitted|as printed|the folder|this folder|'
@@ -93,7 +167,7 @@ def split_segs(line, delim):
 
 def strip_line(dl, il):
     """Remove Vedic daṇḍa-segments from one deva line and its IAST partner."""
-    ds = split_segs(dl, r'(\s*[।॥]+(?:\s*[०-९\d]+\s*[।॥]+)?\s*)')
+    ds = split_segs(dl, r'(\s*[।॥|]+(?:\s*[०-९\d]+\s*[।॥|]+)?\s*)')
     is_ = split_segs(il, r'(\s*\|+(?:\s*\d+\s*\|+)?\s*)') if il is not None else None
     vtags = [bool(seg.strip()) and is_vedic(seg) for seg, _ in ds]
     if not any(vtags): return dl, il, 0
@@ -347,18 +421,19 @@ def render(f, fields, out, pdf):
 
 OUTDIR.mkdir(parents=True, exist_ok=True)
 report = {}
-for f in FILES + TIER_C:
+for f in FILES + TIER_C + VRATA:
     stem = pathlib.Path(f).stem
     if ONLY and stem not in ONLY: continue
     raw = (ROOT / f).read_text(encoding='utf-8')
-    fields, out, log, bad = build(f)
+    fields, out, log, bad = (build_manual if f in VRATA else build)(f)
+    out = apply_post_edits(pathlib.Path(f).stem, out, log)
     tag = 'vaishnava_' if 'vaishnava' in f else ''
     report[stem] = {'log': log, 'bad': bad, 'units_in': None, 'units_out': len(out)}
     if bad:
         print(f"FAIL {stem}: {len(bad)} residue"); [print('    ', b) for b in bad[:12]]; continue
     pdf = OUTDIR / f"{tag}{stem}_pauranika.pdf"
     render(f, fields, out, pdf)
-    paddhati = 'vaishnava' if 'vaishnava' in f else 'smarta'
+    paddhati = 'vaishnava' if 'vaishnava' in f else ('vrata' if '/vrata/' in f else 'smarta')
     write_txt(f, raw, fields, out, log, ROOT / 'puja' / 'pauranika' / paddhati / pathlib.Path(f).name)
     json.dump(out, open(OUTDIR / f"{tag}{stem}_pauranika.json", 'w'), ensure_ascii=False, indent=1)
     print(f"ok   {stem}: {len(out)} units, {len(log)} changes -> {pdf.name}")

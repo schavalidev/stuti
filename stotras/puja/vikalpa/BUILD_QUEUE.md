@@ -127,3 +127,24 @@ treated as one.
 
 **Still to do:** a corpus file for `smarta/14`; `vaishnava/02`; and the audit of `puja/vrata/` and of
 every rite written since 2026-09-13.
+
+## Progress — 2026-09-17, third pass
+
+**Built: the four Vedic vratas** — `vrata/02` Kedāreśvara, `03` Maṅgaḷa Gaurī, `04` Vaibhava Lakṣmī,
+`05` Ananta Padmanābha — into `puja/pauranika/vrata/`. `vrata/01` Varalakṣmī carries no Vedic text and
+needs no second form. Their translations run one line per verse, so each Vedic line was decided by
+reading and recorded in `bin/pauranika_puja.py` (`MANUAL`).
+
+**Read by eye: every verse line of all 28 files** — 1,430 distinct lines. The accent check cannot see
+Vedic text that the source printed without accent, and the reading found a good deal of it: the whole
+pañcāmṛta bath in `vrata/02` and `05`, Ṛgveda 1.164.41 in `vrata/02`, an adaptation of Ṛgveda 1.50.11
+in `smarta/11` and `22`, a Puruṣa Sūkta line in `smarta/24`, the Mahānārāyaṇa tarpaṇa in `smarta/17`,
+and every instruction pointing the reader to a Vedic text. All removed; see `bin/pauranika_post_edits.py`.
+
+**Judgment calls, open to review:** the Ṛgveda 1.50.11 adaptation (`उद्यन्नद्य विवस्वान्…`) is recast in
+the third person and may be read as smṛti rather than śruti — it was removed as the safer course. The
+Anaghāṣṭamī verse `उपवीतं पवित्रं च सहजं यत्प्रजापतेः` echoes the yajñopavīta mantra but is itself a
+Paurāṇika anuṣṭubh, and was kept.
+
+**Still to do:** a corpus file for `smarta/14` Vināyaka Caviti; and the 26 RESERVED rites once another
+session writes them.
