@@ -3634,3 +3634,22 @@ nothing. These three close the largest part of that gap, in this order:
   Hindi kathā witness only.
 - [x] SKIPPED 17 Sep 2026 (user: Viṣṇu's pūjā is the Kṛṣṇa or Rāma pūjā; no separate Viṣṇu ṣoḍaśopacāra exists in print, so none is made). **Viṣṇu ṣoḍaśopacāra pūjā** → `puja/smarta/`, with a Paurāṇika twin. Serves Paraśurāma,
   Vāmana and Hayagrīva jayantīs in place of the nitya-pūjā `06`.
+
+## 2026-09-17 — remaining vrata-list gaps: triage
+
+Ten entries of `design_handoff_stuti/app/stuti-vrata-data.js` with no pūjā vidhāna, triaged against
+disk (nothing for any of them in `puja/`) and the cached OCR of Vratha Ratnākaramu 1–2, Āru Vratālu
+1999, the dli Telugu scans, the TTD Ekādaśī Māhātmyam, Dharmasindhu (1888) and Hemādri vol. 2, plus
+stotranidhi's vrata and pūjā lists. No (A) was found: no Telugu print carries a vidhāna for any of
+the ten. Nothing is to be authored from this section.
+
+- **Vaṭa Sāvitrī** (C). No Telugu print carries the banyan rite. Vratha Ratnākaramu vol. II pp. 264–276 carries *Sāvitrī Gaurī Vratam* (already recorded above, image-only, nine days, nine-knot toram), which is a different rite and must not be substituted. Dharmasindhu names vaṭasāvitrī (witness only). Needs the user's ruling: skip, or look further.
+- **Śītalā Saptamī** (C). No print anywhere searched; the two `శీతలా` hits are the nāma `ఇందుశీతలాయై` inside Lakṣmī nāmāvaḷis. A North Indian observance with no South Indian paddhati; the design itself describes it as aṣṭakam reading. Likely skip.
+- **Guru Pūrṇimā** (B). No pūjā of its own for a householder; Vyāsa-pūjā is the sannyāsin's cāturmāsya rite. Stotra-only, as the design's `brief` entry already is. If a fallback is wanted, `puja/smarta/31_dakshinamurti_shodashopachara_puja.txt` exists (user to choose).
+- **Rakṣā Bandhan · Śrāvaṇī** (B). Skip: thread-tying is a custom, and Śrāvaṇī is the upākarma, a Vedic karma, not a pūjā.
+- **Ugādi** (B). Skip: pacchadi and pañcāṅga śravaṇam, no pūjā in any print; the day's worship is the nitya pūjā `puja/smarta/01_nitya_puja_vidhanam.txt`.
+- **Sītā Navamī** (B). Falls back on `puja/smarta/43_rama_shodashopachara_puja.txt` (Paurāṇika twin present).
+- **Rādhā Aṣṭamī** (B). Falls back on `puja/smarta/36_krishna_shodashopachara_puja.txt` (Paurāṇika twin present).
+- **Hayagrīva Jayantī** (B). Viṣṇu jayantī → Kṛṣṇa `36` or Rāma `43`. Dharmasindhu records only the utpatti on Śrāvaṇa Pūrṇimā; no Hayagrīva pūjā file exists or is in print here.
+- **Paraśurāma Jayantī** (B). → Kṛṣṇa `36` or Rāma `43`. Dharmasindhu prescribes pūjā and an arghya at pradoṣa on Akṣaya Tṛtīyā, but no vidhāna.
+- **Vāmana Jayantī** (B). → Kṛṣṇa `36` or Rāma `43`. Dharmasindhu names the jayantī; the `వామన` hits in Vratha Ratnākaramu are nāmāvaḷi entries, not a vrata.
