@@ -1,48 +1,31 @@
-Title: Śrī Parameśvara Śīghra Pūjā Vidhānam
-Devanāgarī: श्री परमेश्वर शीघ्र पूजा विधानम्
-Telugu: శ్రీ పరమేశ్వర శీఘ్ర పూజా విధానం
+Title: Śrī Parameśvara Śīghra Pūjā Vidhānam — Paurāṇika Form, without Vedic Mantras
+
+Devanāgarī: श्री परमेश्वर शीघ्र पूजा विधानम् — पौराणिक पद्धतिः
+
+Telugu: శ్రీ పరమేశ్వర శీఘ్ర పూజా విధానం — పౌరాణిక పద్ధతి
 
 Author: Anonymous (received smārta household rite). No compiler is named and none should be inferred.
 
-Type: vidhi (ritual manual) — not a stotra. Uses the one-extra-field vidhi format documented in `../../vidhi/madhyandina/01_sandhyopasana_vidhi.txt`: a `vidhi:` field carrying the ritual instruction, then deva / iast / en / tel / hi.
+Type: vidhi (ritual manual) — not a stotra. The one-extra-field vidhi format: a `vidhi:` field carrying the ritual instruction, then deva / iast / en / tel / hi.
 
-Recension / paddhati: **Smārta, South Indian.** The Vaiṣṇava form of the opening is kept separately at `../vaishnava/01_purvanga_vidhanam.txt` and **the two must never be merged, harmonised or collated against each other.**
+Recension / paddhati: **Smārta, South Indian.** The Vaiṣṇava form of the opening is kept separately at `../../vaishnava/01_purvanga_vidhanam.txt` and **the two must never be merged, harmonised or collated against each other.**
 
-What it does not have: this is a **short worship of Śiva**, which the rite itself calls `लघुपूजा`, not a ṣoḍaśopacāra. Unlike `15`–`22` it **carries its own brief pūrvāṅga** — śuci, prayer, ācamana, the lamp, prāṇāyāma, a short saṅkalpa, the kalaśa and Gaṇapati — and then offers six services with the five-syllable mantra alone. It has no prāṇapratiṣṭhā, no āvāhana verse, no prāṇāhuti and no asking of pardon beyond one verse. For the full Śiva rites see `05_shiva_nitya_puja.txt` and `17_shiva_shodashopachara_puja.txt`; this file is not a recension of either and is not to be collated against them, except for the one lifted line named below.
+Note: **This is the Vedic-removed form, for a reciter for whom the upanayana saṁskāra has not been performed. The Vedic form is `../../smarta/41_parameshvara_shighra_puja_vidhanam.txt`, kept unchanged for the initiated. Neither file supersedes the other, and neither is ever to be deleted in favour of the other** (user, 2026-09-17). Generated mechanically from that file on 2026-09-17; not one Sanskrit word was composed. Every Vedic line was removed, and its translation removed with it. Where a unit held nothing but a Vedic mantra it was dropped. The ācamana takes `नमः` for `स्वाहा`, and the Vedic prāṇāyāma is replaced by the verse `पूरकं कुम्भकं चैव`, as in the other Paurāṇika forms. The mantra for wearing the sacred ash is wholly Vedic and its unit was dropped; it is not one of the services, so the rule of filling an emptied service does not reach it, and nothing was put in its place. The salutation keeps its nāma-mantra, and the six services were already offered with the name alone, so nothing was filled from Gītā Press. Changes by source unit: 4: ācamana — स्वाहा → नमः; 6: replaced — Vedic prāṇāyāma → पूरकं कुम्भकं चैव; 9: Vedic lines removed (गणपति प्रार्थना –); 10: dropped — wholly Vedic (भस्मधारण मन्त्रम् –); 19: Vedic lines removed (नमस्कारम् –); 20: Vedic lines removed (समर्पणम् –).
 
-Source / recension: base text `https://stotranidhi.com/hi/sri-parameshwara-seeghra-pooja-vidhanam-in-sanskrit/` (fetched 2026-09-17), a Devanāgarī page carrying accent marks on some of its Vedic mantras. Every `deva:` line was lifted from the fetched page by machine, by line range, and the build asserts that every line of the page is used exactly once. Every `iast:` field was generated from the Devanāgarī by `../../bin/dev2iast.py`; stotranidhi's own IAST was not used.
+Source / recension: the Vedic form named above, for every retained word. Substitutes: the prāṇāyāma verse `पूरकं कुम्भकं चैव` and the ācamana with `नमः` in place of `स्वाहा` follow `../../vikalpa/01_veda_mantra_vikalpa.txt`, where the gap in attestation of the prāṇāyāma verse is stated. Offering with the nāma-mantra alone where the Vedic mantra is removed is the rule of Gītā Press, Gorakhpur, Nitya Karma Pūjā Prakāśa (code 592), section `सर्वसामान्य देवी-देव-पूजाका विधान`: `केवल नाममन्त्रसे … 'नैवेद्य' आदि चढ़ाना चाहिये`.
 
-**Vedic lines the page prints without accent, replaced by the accented text of a Taittirīya witness.** Two passages on the page are Vedic but carry no svara. Per the rule that a Vedic mantra carries its accent where one is attested, the accented text was taken **by machine, byte for byte**, from an accented source in the Taittirīya śākhā, and the page's unaccented lines were set aside:
+Accent: none. Every accented or Vedic line of the Vedic form was removed.
 
-1. **The prāṇāyāma** (unit 6): the seven vyāhṛtis, the Gāyatrī and `ओमापो ज्योती रसोऽमृतं ब्रह्म`. Lifted from vignanam.org's accented Taittirīya Āraṇyaka 10 (Mahānārāyaṇa Upaniṣad), anuvāka 35, `https://vignanam.org/devanagari/kyta-10-maha-narayana-upanishad-krishna-yajurveda-taittiriya-aranyaka-patha-ambhasya-pare.html` (fetched 2026-09-17) — four lines for the page's four. vignanam's own orthography is kept exactly as it stands, including its hyphenated sandhi (`ओ-म्भूः`, `ओ-न्त-थ्स॑वि॒तुर्`), with only vignanam's anuvāka numeral `॥ 53 ॥` reduced to `॥`, which is how `01_nitya_puja_vidhanam.txt` and `04_ganapati_nitya_puja.txt` already carry the same lines. The page read `ओं भूः । ओं भुवः । ओं सुवः । ओं महः ।` / `ओं जनः । ओं तपः । ओं सत्यम् ।` / `ओं तत्सवितुर्वरेण्यं भर्गो देवस्य धीमहि धियो यो नः प्रचोदयात् ।` / `ओमापो ज्योती रसोमृतं ब्रह्म भूर्भुवस्सुवरोम् ।`. The words are the same; the page wrote plain `ओं` where the Āraṇyaka writes the guttural nasal `ओग्ं` before `सुवः` and `सत्यम्`, and `रसोमृतं` without the avagraha.
-2. **The Īśāna mantra** (unit 19), anuvāka 21. Lifted from `17_shiva_shodashopachara_puja.txt`, unit lines `ईशानः सर्व॑विद्या॒ना॒मीश्वरः सर्व॑भूता॒नां॒` / `ब्रह्माधि॑पति॒र्ब्रह्म॒णोऽधि॑पति॒र्ब्रह्मा॑ शि॒वो मे॑ अस्तु सदाशि॒वोम् ॥`, which is this same publisher's accented printing of the mantra in the same wording (visarga, not `स्स`); vignanam's anuvāka 21 was read as a check and has the accent in the same places. The page's three unaccented lines `ईशानः सर्वविद्यानां ईश्वरः सर्वभूतानां` / `ब्रह्माऽधिपतिर्-ब्रह्मणोऽधिपतिर्-ब्रह्मा` / `शिवो मे अस्तु सदाशिवोम् ॥` became two.
-
-Everything else Vedic on the page was already accented and stands exactly as printed: `गणानां त्वा` (unit 9), the Tryambaka mantra (unit 10), `अघोरेभ्यः` and `तत्पुरुषाय विद्महे` (unit 19), and the closing śānti (unit 20). The ācamana `स्वाहा` is a formula, not a mantra, and carries no accent anywhere.
-
-Defects in the base text, corrected with reasons:
-
-1. **`अथोक्षजाय` → `अधोक्षजाय`** (unit 4). The name is Adhokṣaja; `थ` for `ध` is a keying slip, and every other ācamana list in this folder reads `अधोक्षजाय`.
-2. **Visarga written as the ASCII colon `:`** in the accented lines was mapped to `ः` (4 places).
-
-Observed and deliberately **not** emended:
-
-- `दीपस्त्वं ब्रह्मरूपोसि` (unit 5), without the avagraha of `रूपोऽसि`.
-- `____ नामधेयाऽहं` (unit 7): the page leaves the blank for the worshipper's name and gives the feminine-looking `नामधेयाऽहं`; left as printed.
-- `पु॑ष्टि॒ वर्ध॑नम्` (unit 10) spaced where the mantra is one word, `पुष्टिवर्धनम्`.
-- `यत्पूजितं मयादेव` and `तदस्तुते` (unit 20), run together.
-
-Accent: **present on the Vedic mantras** — the prāṇāyāma (lifted, see above), `गणानां त्वा`, the Tryambaka mantra, `अघोरेभ्यः`, `तत्पुरुषाय विद्महे`, `ईशानः सर्वविद्यानाम्` (lifted) and the śānti. 95 marks in the units. Udātta `॑` (U+0951), anudātta `॒` (U+0952), dīrgha svarita `᳚` (U+1CDA). **No accent was inferred, derived or reconstructed**: every mark was either on the page or taken by machine from the named witness. A Paurāṇika form without the Vedic mantras is kept at `../pauranika/smarta/41_parameshvara_shighra_puja_vidhanam.txt`.
-
-Unit count: 20 units. Not a verse count in the stotra sense — the work is a prose order of service punctuated by mantras, and the numbering is this corpus's, not the source's.
+Unit count: 19 units.
 
 Sections:
-पूर्वाङ्गम् — The opening acts (units 1–10)
-ध्यानम् — Meditation and invocation (units 11–12)
-उपचाराः — The services (units 13–18)
-नमस्कारः — Salutation with the mantra-flower (unit 19)
-समर्पणम् — Dedication (unit 20)
+पूर्वाङ्गम् — The opening acts (units 1–9)
+ध्यानम् — Meditation and invocation (units 10–11)
+उपचाराः — The services (units 12–17)
+नमस्कारः — Salutation with the mantra-flower (unit 18)
+समर्पणम् — Dedication (unit 19)
 
-Blurb: This is a short worship of Śiva, the supreme lord, for a day when there is little time. It carries its own opening portion. The worshipper purifies himself, prays to the remover of obstacles and to the teacher, sips water with the names of Viṣṇu, lights the lamp, restrains the breath and makes a short resolution. He prays over the water-vessel and to Gaṇapati, and puts on the sacred ash. Śiva is meditated upon in two verses, as the five-faced lord and as the lord of Umā, and invoked into the image. Six services follow, each offered with the five-syllable mantra: the bath, sandal paste, a flower, incense, the lamp and food. The rite closes with salutation and the offering of its fruit to the lord.
+Blurb: The Vedic mantras are recited only by one for whom the upanayana saṁskāra has been performed. This form of the rite leaves them out, and where the rite needs a verse in their place, the Paurāṇika verse is given. The worship so performed is complete. The form with the Vedic mantras is kept separately, for those who have had the upanayana. This is a short worship of Śiva, the supreme lord, for a day when there is little time. It carries its own opening portion. The worshipper purifies himself, prays to the remover of obstacles and to the teacher, sips water with the names of Viṣṇu, lights the lamp, restrains the breath and makes a short resolution. He prays over the water-vessel and to Gaṇapati. Śiva is meditated upon in two verses, as the five-faced lord and as the lord of Umā, and invoked into the image. Six services follow, each offered with the five-syllable mantra: the bath, sandal paste, a flower, incense, the lamp and food. The rite closes with salutation and the offering of its fruit to the lord.
 
 --- unit 1 | section: पूर्वाङ्गम् ---
 vidhi:
@@ -106,9 +89,9 @@ vidhi:
 Ācamana. Twenty-four names of Viṣṇu: water is sipped at each of the first three, and the rest are said touching the parts of the body.
 deva:
 आचम्य –
-ओं केशवाय स्वाहा ।
-ओं नारायणाय स्वाहा ।
-ओं माधवाय स्वाहा ।
+ओं केशवाय नमः ।
+ओं नारायणाय नमः ।
+ओं माधवाय नमः ।
 ओं गोविन्दाय नमः । ओं विष्णवे नमः ।
 ओं मधुसूदनाय नमः । ओं त्रिविक्रमाय नमः ।
 ओं वामनाय नमः । ओं श्रीधराय नमः ।
@@ -122,9 +105,9 @@ deva:
 ओं श्री कृष्णाय नमः ।
 iast:
 ācamya –
-oṁ keśavāya svāhā |
-oṁ nārāyaṇāya svāhā |
-oṁ mādhavāya svāhā |
+oṁ keśavāya namaḥ |
+oṁ nārāyaṇāya namaḥ |
+oṁ mādhavāya namaḥ |
 oṁ govindāya namaḥ | oṁ viṣṇave namaḥ |
 oṁ madhusūdanāya namaḥ | oṁ trivikramāya namaḥ |
 oṁ vāmanāya namaḥ | oṁ śrīdharāya namaḥ |
@@ -136,9 +119,9 @@ oṁ adhokṣajāya namaḥ | oṁ nārasiṁhāya namaḥ |
 oṁ acyutāya namaḥ | oṁ janārdanāya namaḥ |
 oṁ upendrāya namaḥ | oṁ haraye namaḥ |
 oṁ śrī kṛṣṇāya namaḥ |
-en: Ācamana — Oṁ, to Keśava, svāhā. To Nārāyaṇa, svāhā. To Mādhava, svāhā. Salutation to Govinda, to Viṣṇu, to Madhusūdana, to Trivikrama, to Vāmana, to Śrīdhara, to Hṛṣīkeśa, to Padmanābha, to Dāmodara, to Saṅkarṣaṇa, to Vāsudeva, to Pradyumna, to Aniruddha, to Puruṣottama, to Adhokṣaja, to Nārasiṁha, to Acyuta, to Janārdana, to Upendra, to Hari, and to Śrī Kṛṣṇa.
-tel: ఆచమనము — ఓం కేశవునకు స్వాహా. నారాయణునకు స్వాహా. మాధవునకు స్వాహా. గోవిందునకు, విష్ణువునకు, మధుసూదనునకు, త్రివిక్రమునకు, వామనునకు, శ్రీధరునకు, హృషీకేశునకు, పద్మనాభునకు, దామోదరునకు, సంకర్షణునకు, వాసుదేవునకు, ప్రద్యుమ్నునకు, అనిరుద్ధునకు, పురుషోత్తమునకు, అధోక్షజునకు, నారసింహునకు, అచ్యుతునకు, జనార్దనునకు, ఉపేంద్రునకు, హరికి, శ్రీ కృష్ణునకు నమస్కారము.
-hi: आचमन — ओम् केशव को स्वाहा। नारायण को स्वाहा। माधव को स्वाहा। गोविन्द, विष्णु, मधुसूदन, त्रिविक्रम, वामन, श्रीधर, हृषीकेश, पद्मनाभ, दामोदर, संकर्षण, वासुदेव, प्रद्युम्न, अनिरुद्ध, पुरुषोत्तम, अधोक्षज, नारसिंह, अच्युत, जनार्दन, उपेन्द्र, हरि और श्री कृष्ण को नमस्कार।
+en: Ācamana — Oṁ, salutation to Keśava. Salutation to Nārāyaṇa. Salutation to Mādhava. Salutation to Govinda, to Viṣṇu, to Madhusūdana, to Trivikrama, to Vāmana, to Śrīdhara, to Hṛṣīkeśa, to Padmanābha, to Dāmodara, to Saṅkarṣaṇa, to Vāsudeva, to Pradyumna, to Aniruddha, to Puruṣottama, to Adhokṣaja, to Nārasiṁha, to Acyuta, to Janārdana, to Upendra, to Hari, and to Śrī Kṛṣṇa.
+tel: ఆచమనము — ఓం కేశవునకు నమస్కారము. నారాయణునకు నమస్కారము. మాధవునకు నమస్కారము. గోవిందునకు, విష్ణువునకు, మధుసూదనునకు, త్రివిక్రమునకు, వామనునకు, శ్రీధరునకు, హృషీకేశునకు, పద్మనాభునకు, దామోదరునకు, సంకర్షణునకు, వాసుదేవునకు, ప్రద్యుమ్నునకు, అనిరుద్ధునకు, పురుషోత్తమునకు, అధోక్షజునకు, నారసింహునకు, అచ్యుతునకు, జనార్దనునకు, ఉపేంద్రునకు, హరికి, శ్రీ కృష్ణునకు నమస్కారము.
+hi: आचमन — ओम् केशव को नमस्कार। नारायण को नमस्कार। माधव को नमस्कार। गोविन्द, विष्णु, मधुसूदन, त्रिविक्रम, वामन, श्रीधर, हृषीकेश, पद्मनाभ, दामोदर, संकर्षण, वासुदेव, प्रद्युम्न, अनिरुद्ध, पुरुषोत्तम, अधोक्षज, नारसिंह, अच्युत, जनार्दन, उपेन्द्र, हरि और श्री कृष्ण को नमस्कार।
 
 --- unit 5 | section: पूर्वाङ्गम् ---
 vidhi:
@@ -157,22 +140,16 @@ hi: दीपाराधन — ओम्। हे दीप, तुम ब्
 
 --- unit 6 | section: पूर्वाङ्गम् ---
 vidhi:
-Prāṇāyāma: the seven vyāhṛtis, the Gāyatrī and the closing formula, said while the breath is restrained.
+The breath is restrained — drawn in, held, and then let out, while this verse is recited.
 deva:
-प्राणायामम् –
-ओ-म्भूः । ओ-म्भुवः । ओग्ं सुवः । ओ-म्महः । ओ-ञ्जनः ।
-ओ-न्तपः । ओग्ं स॒त्यम् । ओ-न्त-थ्स॑वि॒तुर्वरे᳚ण्य॒-म्भर्गो॑ दे॒वस्य॑ धीमहि ।
-धियो॒ यो नः॑ प्रचो॒दया᳚त् ।
-ओमापो॒ ज्योती॒ रसो॒-ऽमृत॒-म्ब्रह्म॒ भूर्भुव॒स्सुव॒रोम् ॥
+पूरकं कुम्भकं चैव रेचकं तदनन्तरम् ।
+प्राणायाममिदं प्रोक्तं सर्वदेवनमस्कृतम् ॥
 iast:
-prāṇāyāmam –
-o-mbhūḥ | o-mbhuvaḥ | ogṁ suvaḥ | o-mmahaḥ | o-ñjanaḥ |
-o-ntapaḥ | ogṁ satyam | o-nta-thsaviturvareṇya-mbhargo devasya dhīmahi |
-dhiyo yo naḥ pracodayāt |
-omāpo jyotī raso-'mṛta-mbrahma bhūrbhuvassuvarom ||
-en: Prāṇāyāma — Oṁ, earth. Oṁ, mid-air. Oṁ, the world of light. Oṁ, the great. Oṁ, the world of beings. Oṁ, austerity. Oṁ, truth. Oṁ — that adorable splendour of the god Savitṛ, we meditate on it; may he impel our understandings. Oṁ — the waters, the light, the essence, the deathless, Brahman; earth, mid-air, heaven; Oṁ.
-tel: ప్రాణాయామము — ఓం భూః. ఓం భువః. ఓం సువః. ఓం మహః. ఓం జనః. ఓం తపః. ఓం సత్యం. ఓం — సవితృదేవుని ఆ వరణీయ తేజస్సును మేము ధ్యానించుచున్నాము; ఆయన మా బుద్ధులను ప్రేరేపించుగాక. ఓం — ఆపః, జ్యోతి, రసము, అమృతము, బ్రహ్మము; భూః, భువః, సువః; ఓం.
-hi: प्राणायाम — ओम् भूः। ओम् भुवः। ओम् सुवः। ओम् महः। ओम् जनः। ओम् तपः। ओम् सत्यम्। ओम् — सवितादेव के उस वरणीय तेज का हम ध्यान करते हैं; वे हमारी बुद्धियों को प्रेरित करें। ओम् — जल, ज्योति, रस, अमृत, ब्रह्म; भूः, भुवः, सुवः; ओम्।
+pūrakaṁ kumbhakaṁ caiva recakaṁ tadanantaram |
+prāṇāyāmamidaṁ proktaṁ sarvadevanamaskṛtam ||
+en: Drawing the breath in, holding it, and letting it out after that — this is called prāṇāyāma, and it is saluted by all the gods.
+tel: శ్వాసను లోనికి తీసుకోవడం, నిలిపి ఉంచడం, ఆ తరువాత విడిచిపెట్టడం — దీనినే ప్రాణాయామం అంటారు. దీనికి దేవతలందరూ నమస్కరిస్తారు.
+hi: श्वास को भीतर लेना, रोकना, और उसके पश्चात् छोड़ना — इसी को प्राणायाम कहा गया है। इसे समस्त देवता नमस्कार करते हैं।
 
 --- unit 7 | section: पूर्वाङ्गम् ---
 vidhi:
@@ -206,13 +183,9 @@ hi: कलश प्रार्थना — हे गंगा, यमुन�
 
 --- unit 9 | section: पूर्वाङ्गम् ---
 vidhi:
-Prayer to Gaṇapati: the Vedic mantra of Gaṇapati, Ṛgveda 2.23.1, then two verses and the offering of flowers and rice.
+Prayer to Gaṇapati: two verses and the offering of flowers and rice.
 deva:
 गणपति प्रार्थना –
-ओं ग॒णानां᳚ त्वा ग॒णप॑तिं हवामहे
-क॒विं क॑वी॒नामु॑प॒मश्र॑वस्तमम् ।
-ज्ये॒ष्ठ॒राजं॒ ब्रह्म॑णां ब्रह्मणस्पत॒
-आ न॑ः शृ॒ण्वन्नू॒तिभि॑स्सीद॒ साद॑नम् ॥
 अगजानन पद्मार्कं गजाननमहर्निशम् ।
 अनेकदं तं भक्तानां एकदन्तमुपास्महे ॥
 वक्रतुण्ड महाकाय कोटि सूर्य समप्रभ ।
@@ -220,35 +193,16 @@ deva:
 ओं श्री महागणपतये नमः सकल पूजार्थे पुष्पाऽक्षतान् समर्पयामि ।
 iast:
 gaṇapati prārthanā –
-oṁ gaṇānāṁ tvā gaṇapatiṁ havāmahe
-kaviṁ kavīnāmupamaśravastamam |
-jyeṣṭharājaṁ brahmaṇāṁ brahmaṇaspata
-ā naḥ śṛṇvannūtibhissīda sādanam ||
 agajānana padmārkaṁ gajānanamaharniśam |
 anekadaṁ taṁ bhaktānāṁ ekadantamupāsmahe ||
 vakratuṇḍa mahākāya koṭi sūrya samaprabha |
 nirvighnaṁ kuru me deva sarva kāryeṣu sarvadā ||
 oṁ śrī mahāgaṇapataye namaḥ sakala pūjārthe puṣpā'kṣatān samarpayāmi |
-en: Prayer to Gaṇapati — Oṁ. We call upon you, the lord of the gaṇas, the sage of sages, most renowned of all, the eldest king of the sacred words. O lord of the sacred word, hear us and come with your protections; be seated in this seat. We worship day and night the elephant-faced one, who is a sun to the lotus that is the face of Pārvatī, who gives much to his devotees, and who has one tusk. O god of the curved trunk and great body, bright as a crore of suns, make all my undertakings free from obstacles, always. Oṁ, salutation to Śrī Mahāgaṇapati. I offer flowers and unbroken rice for the whole worship.
-tel: గణపతి ప్రార్థన — ఓం. గణములకు అధిపతివైన నిన్ను, కవులలో కవివి, మిక్కిలి కీర్తి గలవాడవు, మంత్రములకు జ్యేష్ఠ రాజువు అయిన నిన్ను ఆహ్వానించుచున్నాము. ఓ బ్రహ్మణస్పతీ, మా మొర విని రక్షణలతో వచ్చి ఈ ఆసనమునందు కూర్చుండుము. పార్వతి ముఖపద్మమునకు సూర్యుడైనవాడును, భక్తులకు అనేకము ఇచ్చువాడును, ఏకదంతుడును అగు గజాననుని రాత్రింబవళ్ళు ఉపాసించుచున్నాము. వంకర తొండము, గొప్ప శరీరము గలవాడా, కోటి సూర్యుల కాంతి గలవాడా, ఓ దేవా, నా సర్వ కార్యములను ఎల్లప్పుడు నిర్విఘ్నముగా చేయుము. ఓం శ్రీ మహాగణపతికి నమస్కారము. సకల పూజార్థము పుష్పాక్షతలను సమర్పించుచున్నాను.
-hi: गणपति प्रार्थना — ओम्। गणों के अधिपति, कवियों के कवि, सबसे अधिक कीर्ति वाले, मन्त्रों के ज्येष्ठ राजा आपका हम आवाहन करते हैं। हे ब्रह्मणस्पति, हमारी सुनकर रक्षाओं सहित आइए और इस आसन पर विराजिए। पार्वती के मुखकमल के लिए सूर्य रूप, भक्तों को अनेक देने वाले, एकदन्त गजानन की हम दिन-रात उपासना करते हैं। हे वक्रतुण्ड, महाकाय, करोड़ सूर्यों के समान प्रभा वाले देव, मेरे सब कार्यों को सदा निर्विघ्न कीजिए। ओम् श्री महागणपति को नमस्कार। समस्त पूजा के लिए पुष्प और अक्षत समर्पित करता हूँ।
+en: Prayer to Gaṇapati — We worship day and night the elephant-faced one, who is a sun to the lotus that is the face of Pārvatī, who gives much to his devotees, and who has one tusk. O god of the curved trunk and great body, bright as a crore of suns, make all my undertakings free from obstacles, always. Oṁ, salutation to Śrī Mahāgaṇapati. I offer flowers and unbroken rice for the whole worship.
+tel: గణపతి ప్రార్థన — పార్వతి ముఖపద్మమునకు సూర్యుడైనవాడును, భక్తులకు అనేకము ఇచ్చువాడును, ఏకదంతుడును అగు గజాననుని రాత్రింబవళ్ళు ఉపాసించుచున్నాము. వంకర తొండము, గొప్ప శరీరము గలవాడా, కోటి సూర్యుల కాంతి గలవాడా, ఓ దేవా, నా సర్వ కార్యములను ఎల్లప్పుడు నిర్విఘ్నముగా చేయుము. ఓం శ్రీ మహాగణపతికి నమస్కారము. సకల పూజార్థము పుష్పాక్షతలను సమర్పించుచున్నాను.
+hi: गणपति प्रार्थना — पार्वती के मुखकमल के लिए सूर्य रूप, भक्तों को अनेक देने वाले, एकदन्त गजानन की हम दिन-रात उपासना करते हैं। हे वक्रतुण्ड, महाकाय, करोड़ सूर्यों के समान प्रभा वाले देव, मेरे सब कार्यों को सदा निर्विघ्न कीजिए। ओम् श्री महागणपति को नमस्कार। समस्त पूजा के लिए पुष्प और अक्षत समर्पित करता हूँ।
 
---- unit 10 | section: पूर्वाङ्गम् ---
-vidhi:
-The mantra for putting on the sacred ash: Ṛgveda 7.59.12, the Tryambaka mantra.
-deva:
-भस्मधारण मन्त्रम् –
-ओं त्र्य॑म्बकं यजामहे सुग॒न्धिं पु॑ष्टि॒ वर्ध॑नम् ।
-उ॒र्वा॒रु॒कमि॑व॒ बन्ध॑नान्मृ॒त्योर्मु॑क्षीय॒ माऽमृता᳚त् ॥
-iast:
-bhasmadhāraṇa mantram –
-oṁ tryambakaṁ yajāmahe sugandhiṁ puṣṭi vardhanam |
-urvārukamiva bandhanānmṛtyormukṣīya mā'mṛtāt ||
-en: The mantra for wearing the sacred ash — Oṁ. We worship the three-eyed one, the fragrant, who increases nourishment. As the cucumber is loosed from its stalk, may I be freed from death, and not from immortality.
-tel: భస్మధారణ మంత్రము — ఓం. సుగంధము గలవాడును, పుష్టిని వృద్ధి చేయువాడును అగు త్ర్యంబకుని పూజించుచున్నాము. దోసపండు తొడిమ నుండి విడిపోవునట్లు, మృత్యువు నుండి నేను విముక్తుడనగుదును గాక; అమృతత్వము నుండి కాదు.
-hi: भस्मधारण मन्त्र — ओम्। हम सुगन्धित, पुष्टि बढ़ाने वाले त्र्यम्बक का यजन करते हैं। जैसे ककड़ी अपने डंठल से छूट जाती है, वैसे मैं मृत्यु से मुक्त होऊँ, अमृत से नहीं।
-
---- unit 11 | section: ध्यानम् ---
+--- unit 10 | section: ध्यानम् ---
 vidhi:
 Meditation on Parameśvara, in two verses: first the five-faced lord with his ten weapons, then the lord of Umā.
 deva:
@@ -275,7 +229,7 @@ en: Meditation — I bow to the lord of Pārvatī: peaceful, seated in the lotus
 tel: ధ్యానము — శాంతుడును, పద్మాసనమునందు కూర్చున్నవాడును, చంద్రుని కిరీటమునందు ధరించినవాడును, ఐదు ముఖములు మూడు కన్నులు గలవాడును, కుడి వైపున శూలము, వజ్రము, ఖడ్గము, పరశువు, అభయము, ఎడమ వైపున నాగము, పాశము, ఘంట, ప్రళయాగ్ని, అంకుశము ధరించినవాడును, నానా అలంకారములతో కూడినవాడును, స్ఫటిక మణి వంటి కాంతి గలవాడును అగు పార్వతీశునకు నమస్కరించుచున్నాను. ఉమాపతియు, దేవతల గురువును అగు శంభునకు వందనము; జగత్కారణునకు వందనము. నాగభూషణునకు, మృగమును ధరించినవానికి వందనము; పశుపతికి వందనము. సూర్య చంద్ర అగ్నులు నేత్రములుగా గలవానికి వందనము; ముకుందప్రియునకు వందనము. భక్తజనులకు ఆశ్రయుడును వరదుడును అగువానికి వందనము; శివునకు, శంకరునకు వందనము.
 hi: ध्यान — शान्त, पद्मासन में स्थित, मुकुट में चन्द्रमा धारण करने वाले, पाँच मुख और तीन नेत्र वाले, दाहिनी ओर शूल, वज्र, खड्ग, परशु और अभय, तथा बाईं ओर नाग, पाश, घण्टा, प्रलय की अग्नि और अंकुश धारण करने वाले, नाना अलंकारों से युक्त, स्फटिक मणि के समान कान्ति वाले पार्वतीश को मैं नमस्कार करता हूँ। उमापति, देवताओं के गुरु शम्भु की वन्दना; जगत के कारण की वन्दना। सर्पों से भूषित, मृग धारण करने वाले की वन्दना; पशुपति की वन्दना। सूर्य, चन्द्र और अग्नि जिनके नेत्र हैं उनकी वन्दना; मुकुन्दप्रिय की वन्दना। भक्तजनों के आश्रय, वरद की वन्दना; शिव, शंकर की वन्दना।
 
---- unit 12 | section: ध्यानम् ---
+--- unit 11 | section: ध्यानम् ---
 vidhi:
 The lord is invoked into the image.
 deva:
@@ -286,7 +240,7 @@ en: In this image I invoke, establish and worship the lord Śrī Parameśvara.
 tel: ఈ ప్రతిమయందు శ్రీ పరమేశ్వర స్వామిని ఆవాహన చేయుచున్నాను, స్థాపించుచున్నాను, పూజించుచున్నాను.
 hi: इस प्रतिमा में श्री परमेश्वर स्वामी का आवाहन करता हूँ, स्थापन करता हूँ, पूजन करता हूँ।
 
---- unit 13 | section: उपचाराः ---
+--- unit 12 | section: उपचाराः ---
 vidhi:
 The token bath, offered with the five-syllable mantra alone.
 deva:
@@ -299,7 +253,7 @@ en: The token bath — Oṁ, salutation to Śiva. I offer the token bath.
 tel: ఔపచారిక స్నానము — ఓం నమః శివాయ. ఔపచారిక స్నానమును సమర్పించుచున్నాను.
 hi: औपचारिक स्नान — ओम् नमः शिवाय। औपचारिक स्नान समर्पित करता हूँ।
 
---- unit 14 | section: उपचाराः ---
+--- unit 13 | section: उपचाराः ---
 vidhi:
 Sandal paste, offered with the five-syllable mantra alone.
 deva:
@@ -312,7 +266,7 @@ en: Sandal paste — Oṁ, salutation to Śiva. I offer sandal paste.
 tel: గంధము — ఓం నమః శివాయ. గంధమును సమర్పించుచున్నాను.
 hi: गन्ध — ओम् नमः शिवाय। गन्ध समर्पित करता हूँ।
 
---- unit 15 | section: उपचाराः ---
+--- unit 14 | section: उपचाराः ---
 vidhi:
 A flower, offered with the five-syllable mantra alone.
 deva:
@@ -325,7 +279,7 @@ en: A flower — Oṁ, salutation to Śiva. I offer a flower.
 tel: పుష్పము — ఓం నమః శివాయ. పుష్పమును సమర్పించుచున్నాను.
 hi: पुष्प — ओम् नमः शिवाय। पुष्प समर्पित करता हूँ।
 
---- unit 16 | section: उपचाराः ---
+--- unit 15 | section: उपचाराः ---
 vidhi:
 Incense, offered with the five-syllable mantra alone.
 deva:
@@ -338,7 +292,7 @@ en: Incense — Oṁ, salutation to Śiva. I offer incense.
 tel: ధూపము — ఓం నమః శివాయ. ధూపమును సమర్పించుచున్నాను.
 hi: धूप — ओम् नमः शिवाय। धूप समर्पित करता हूँ।
 
---- unit 17 | section: उपचाराः ---
+--- unit 16 | section: उपचाराः ---
 vidhi:
 The lamp, offered with the five-syllable mantra alone.
 deva:
@@ -351,7 +305,7 @@ en: The lamp — Oṁ, salutation to Śiva. I offer the lamp.
 tel: దీపము — ఓం నమః శివాయ. దీపమును సమర్పించుచున్నాను.
 hi: दीप — ओम् नमः शिवाय। दीप समर्पित करता हूँ।
 
---- unit 18 | section: उपचाराः ---
+--- unit 17 | section: उपचाराः ---
 vidhi:
 The food offering, offered with the five-syllable mantra alone.
 deva:
@@ -364,48 +318,34 @@ en: The food offering — Oṁ, salutation to Śiva. I offer the food offering.
 tel: నైవేద్యము — ఓం నమః శివాయ. నైవేద్యమును సమర్పించుచున్నాను.
 hi: नैवेद्य — ओम् नमः शिवाय। नैवेद्य समर्पित करता हूँ।
 
---- unit 19 | section: नमस्कारः ---
+--- unit 18 | section: नमस्कारः ---
 vidhi:
-Salutation with the mantra-flower. Three Vedic mantras of the Mahānārāyaṇa Upaniṣad (anuvākas 19, 20 and 21): to the fierce forms of Rudra, the gāyatrī of Rudra, and to Īśāna. Then the salutation with the five-syllable mantra.
+Salutation with the mantra-flower, offered with the five-syllable mantra.
 deva:
 नमस्कारम् –
-ओं अ॒घोरे᳚भ्योऽथ॒ घोरे᳚भ्यो॒ घोर॒घोर॑तरेभ्यः ।
-सर्वे᳚भ्यः सर्व॒शर्वे᳚भ्यो॒ नम॑स्ते अस्तु रु॒द्ररू॑पेभ्यः ॥
-ओं तत्पुरु॑षाय वि॒द्महे॑ महादे॒वाय॑ धीमहि ।
-तन्नो॑ रुद्रः प्रचो॒दया᳚त् ॥
-ईशानः सर्व॑विद्या॒ना॒मीश्वरः सर्व॑भूता॒नां॒
-ब्रह्माधि॑पति॒र्ब्रह्म॒णोऽधि॑पति॒र्ब्रह्मा॑ शि॒वो मे॑ अस्तु सदाशि॒वोम् ॥
 ओं नमः शिवाय मन्त्रपुष्प सहित नमस्कारं समर्पयामि ।
 iast:
 namaskāram –
-oṁ aghorebhyo'tha ghorebhyo ghoraghoratarebhyaḥ |
-sarvebhyaḥ sarvaśarvebhyo namaste astu rudrarūpebhyaḥ ||
-oṁ tatpuruṣāya vidmahe mahādevāya dhīmahi |
-tanno rudraḥ pracodayāt ||
-īśānaḥ sarvavidyānāmīśvaraḥ sarvabhūtānāṁ
-brahmādhipatirbrahmaṇo'dhipatirbrahmā śivo me astu sadāśivom ||
 oṁ namaḥ śivāya mantrapuṣpa sahita namaskāraṁ samarpayāmi |
-en: Salutation — Oṁ. To those that are not fierce, and to those that are fierce, and to those more fierce than the fierce; to all of them, in every way, the destroyers — salutation to you who have the forms of Rudra. Oṁ. May we know that Supreme Person; let us meditate upon the great god; may Rudra impel us to that. Īśāna is the lord of all knowledge, the ruler of all beings, the lord of the Veda, the lord of Brahmā. May Brahmā, who is Śiva, be gracious to me, the ever-auspicious; Oṁ. Oṁ, salutation to Śiva. I offer salutation together with the mantra-flower.
-tel: నమస్కారము — ఓం. అఘోర రూపములకును, ఘోర రూపములకును, ఘోరములలో ఘోరతరమైన రూపములకును, సర్వత్ర సర్వ సంహారక రూపములకును — రుద్ర రూపములు గల నీకు నమస్కారము. ఓం. తత్పురుషుని ఎరుగుదుము. మహాదేవుని ధ్యానించుదుము. ఆ రుద్రుడు మమ్ము ప్రేరేపించుగాక. ఈశానుడు సర్వ విద్యలకు అధిపతి, సర్వ భూతములకు ఈశ్వరుడు, వేదమునకు అధిపతి, బ్రహ్మకు అధిపతి. శివరూపుడైన బ్రహ్మ నాకు సదాశివుడగుగాక; ఓం. ఓం నమః శివాయ. మంత్రపుష్ప సహిత నమస్కారమును సమర్పించుచున్నాను.
-hi: नमस्कार — ओम्। जो अघोर रूप हैं, जो घोर रूप हैं, जो घोरों से भी घोरतर रूप हैं, सर्वत्र सबका संहार करने वाले रूप हैं — रुद्ररूप आपको नमस्कार। ओम्। हम तत्पुरुष को जानें। महादेव का ध्यान करें। वे रुद्र हमें प्रेरित करें। ईशान सब विद्याओं के अधिपति हैं, सब भूतों के ईश्वर हैं, वेद के अधिपति हैं, ब्रह्मा के अधिपति हैं। शिवरूप ब्रह्मा मेरे लिए सदाशिव हों; ओम्। ओम् नमः शिवाय। मन्त्रपुष्प सहित नमस्कार समर्पित करता हूँ।
+en: Salutation — Oṁ, salutation to Śiva. I offer salutation together with the mantra-flower.
+tel: నమస్కారము — ఓం నమః శివాయ. మంత్రపుష్ప సహిత నమస్కారమును సమర్పించుచున్నాను.
+hi: नमस्कार — ओम् नमः शिवाय। मन्त्रपुष्प सहित नमस्कार समर्पित करता हूँ।
 
---- unit 20 | section: समर्पणम् ---
+--- unit 19 | section: समर्पणम् ---
 vidhi:
-The dedication: pardon is asked for what was lacking, the fruit of the worship is offered to Parameśvara, and the rite closes with peace.
+The dedication: pardon is asked for what was lacking, and the fruit of the worship is offered to Parameśvara.
 deva:
 समर्पणम् –
 मन्त्रहीनं क्रियाहीनं भक्तिहीनं महेश्वर ।
 यत्पूजितं मयादेव परिपूर्णं तदस्तुते ॥
 एतत्फलं श्री परमेश्वरार्पणमस्तु ।
 स्वस्ति ॥
-ओं शान्ति॒ः शान्ति॒ः शान्ति॑ः ।
 iast:
 samarpaṇam –
 mantrahīnaṁ kriyāhīnaṁ bhaktihīnaṁ maheśvara |
 yatpūjitaṁ mayādeva paripūrṇaṁ tadastute ||
 etatphalaṁ śrī parameśvarārpaṇamastu |
 svasti ||
-oṁ śāntiḥ śāntiḥ śāntiḥ |
-en: Dedication — Lacking in mantra, lacking in rite, lacking in devotion, O Maheśvara: whatever I have worshipped, O god, let it be made complete for you. Let this fruit be offered to Śrī Parameśvara. Well-being. Oṁ, peace, peace, peace.
-tel: సమర్పణము — ఓ మహేశ్వరా, ఓ దేవా, మంత్రహీనముగా, క్రియాహీనముగా, భక్తిహీనముగా నేను ఏది పూజించితినో అది నీకు పరిపూర్ణమగుగాక. ఈ ఫలము శ్రీ పరమేశ్వరునకు అర్పితమగుగాక. స్వస్తి. ఓం శాంతిః శాంతిః శాంతిః.
-hi: समर्पण — हे महेश्वर, हे देव, मन्त्रहीन, क्रियाहीन, भक्तिहीन जो कुछ मैंने पूजा है, वह आपके लिए परिपूर्ण हो। यह फल श्री परमेश्वर को अर्पित हो। स्वस्ति। ओम् शान्तिः शान्तिः शान्तिः।
+en: Dedication — Lacking in mantra, lacking in rite, lacking in devotion, O Maheśvara: whatever I have worshipped, O god, let it be made complete for you. Let this fruit be offered to Śrī Parameśvara. Well-being.
+tel: సమర్పణము — ఓ మహేశ్వరా, ఓ దేవా, మంత్రహీనముగా, క్రియాహీనముగా, భక్తిహీనముగా నేను ఏది పూజించితినో అది నీకు పరిపూర్ణమగుగాక. ఈ ఫలము శ్రీ పరమేశ్వరునకు అర్పితమగుగాక. స్వస్తి.
+hi: समर्पण — हे महेश्वर, हे देव, मन्त्रहीन, क्रियाहीन, भक्तिहीन जो कुछ मैंने पूजा है, वह आपके लिए परिपूर्ण हो। यह फल श्री परमेश्वर को अर्पित हो। स्वस्ति।

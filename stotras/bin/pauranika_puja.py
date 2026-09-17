@@ -355,10 +355,14 @@ def write_txt(f, raw, fields, out, log, dest):
              "unit held nothing but a Vedic mantra it was dropped, because a Paurāṇika verse already stands "
              "beside it. The prāṇāhuti at the naivedya was removed without substitute, on the user's decision "
              "(2026-09-17). Changes by source unit: " + "; ".join(log) + ".")
-    H.append("Source / recension: the Vedic form named above, for every retained word. Substitutes: the "
-             "prāṇāyāma verse `पूरकं कुम्भकं चैव` and the ācamana with `नमः` in place of `स्वाहा` follow "
-             "`../../vikalpa/01_veda_mantra_vikalpa.txt`, where the gap in attestation of the prāṇāyāma verse "
-             "is stated. Offering with the nāma-mantra alone where the Vedic mantra is removed is the rule of "
+    subs = [s for s, k in (("the prāṇāyāma verse `पूरकं कुम्भकं चैव`", "Vedic prāṇāyāma"),
+                           ("the ācamana with `नमः` in place of `स्वाहा`", "ācamana —")) if any(k in l for l in log)]
+    H.append("Source / recension: the Vedic form named above, for every retained word. " +
+             ("Substitutes: " + " and ".join(subs) + (" follow" if len(subs) > 1 else " follows") +
+              " `../../vikalpa/01_veda_mantra_vikalpa.txt`" +
+              (", where the gap in attestation of the prāṇāyāma verse is stated. " if subs[0].startswith("the prāṇāyāma") else ". ")
+              if subs else "") +
+             "Offering with the nāma-mantra alone where the Vedic mantra is removed is the rule of "
              "Gītā Press, Gorakhpur, *Nitya Karma Pūjā Prakāśa* (code 592), section `सर्वसामान्य देवी-देव-"
              "पूजाका विधान`: `केवल नाममन्त्रसे … 'नैवेद्य' आदि चढ़ाना चाहिये`.")
     H.append("Accent: none. Every accented line of the Vedic form was removed.")

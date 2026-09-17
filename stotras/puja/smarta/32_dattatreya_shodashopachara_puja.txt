@@ -1,1 +1,838 @@
-RESERVED 2026-09-12 — this file is being written by another Claude session from `https://stotranidhi.com/hi/sri-dattatreya-shodasopachara-puja-in-sanskrit/`. Do not write a file for this rite; it will be filled in shortly.
+Title: Śrī Dattātreya Ṣoḍaśopacāra Pūjā
+Devanāgarī: श्री दत्तात्रेय षोडशोपचार पूजा
+Telugu: శ్రీ దత్తాత్రేయ షోడశోపచార పూజ
+
+Author: Anonymous (received smārta household rite). No compiler is named and none should be inferred.
+
+Type: vidhi (ritual manual) — not a stotra. Uses the one-extra-field vidhi format documented in `../../vidhi/madhyandina/01_sandhyopasana_vidhi.txt`: a `vidhi:` field carrying the ritual instruction, then deva / iast / en / tel / hi.
+
+Recension / paddhati: **Smārta, South Indian.** The Vaiṣṇava form of the opening is kept separately at `../vaishnava/01_purvanga_vidhanam.txt` and **the two must never be merged, harmonised or collated against each other.**
+
+**This rite is built on the Puruṣa Sūkta.** The page's second saṅkalpa says the worship is performed `पुरुषसूक्त विधानेन`, and the claim holds: fifteen ṛcs of the Puruṣa Sūkta head fifteen services in the hymn's own order, from `सहस्रशीर्षा पुरुषः` at the invocation to `नाभ्या आसीदन्तरिक्षम्` at the betel. `वेदाहमेतं पुरुषं महान्तम्` heads the waving of the light and `धाता पुरस्तात्` the mantra-flower. It is the plan of `22_surya_shodashopachara_puja.txt`, used here for Dattātreya, with two changes of place: the ṛc `तस्माद्यज्ञात्सर्वहुतः ऋचः सामानि` heads the **ornaments** here, where `22` puts it at the unbroken rice, and the unbroken rice here has no ṛc. The ṛc `यज्ञेन यज्ञमयजन्त देवाः` is not used at any service.
+
+**What is Dattātreya's own:** a dhyāna of the six-armed form and a second dhyāna of the ascetic; an aṅga-pūjā of fifteen names, every one a name of Datta — born of Anasūyā, son of Atri, the three gods in one, the sinless one, the Avadhūta; a **Datta gāyatrī**, `दिगम्बराय विद्महे अवधूताय धीमहि तन्नो दत्तः प्रचोदयात्`, at the mantra-flower, which the page prints without accent and which is **not a Vedic mantra**; and four verses of prayer.
+
+The other Dattātreya rite in this folder, `24_anaghashtami_vrata_kalpam.txt`, is a vrata for Anagha and Anaghā and not this rite. They share the Puruṣa Sūkta plan and nothing else of note, and **neither is to be corrected from the other.** What this file does not have: **no pūrvāṅga of its own.** Use `03_purvanga_vidhanam.txt` before it, and then the turmeric Gaṇapati pūjā.
+
+Source / recension: base text `https://stotranidhi.com/hi/sri-dattatreya-shodasopachara-puja-in-sanskrit/` (fetched 2026-09-17 with `../../bin/fetch_source.py`, 240 lines), a Devanāgarī page carrying accent marks on its Vedic material. Every `deva:` line was placed by line number from the fetched file; none was typed.
+
+Independent collation.
+
+**The Vedic material** was compared by machine, line by line, against **`../../veda/taittiriya/01_purusha_suktam.txt`**, this corpus's accented Taittirīya Puruṣa Sūkta, a different editorial lineage. **Sixty-four of the sixty-eight accented lines in the Puruṣa Sūkta, `वेदाहमेतं` and `धाता पुरस्तात्` match it exactly, every accent included**, once the joiners noted below are removed. The prāṇapratiṣṭhā mantra, the Gāyatrī and the offerings to the five breaths match `19_durga_shodashopachara_puja.txt` exactly. Four lines differ, and are recorded here; **none was corrected**:
+
+- **`य॒दन्ने॑नाति॒रोह॑ति`** (unit 7) carries an anudātta on the first syllable that the witness does not. `24_anaghashtami_vrata_kalpam.txt` found the same mark on another page of this site.
+- **`इ॒ध्मश्श॒रद्ध॒विः`** (unit 12) where the witness reads `इ॒ध्मः श॒रद्ध॒विः` — the visarga written in sandhi before `श`, a difference of printing and not of reading.
+- **`प्रौक्षन्॑`** (unit 14) where the witness reads `प्रौक्षन्न्॑`, with the doubled nasal of Taittirīya recitation.
+- **`सम्भृ॑तं`** (unit 15), where the witness reads `संभृ॑तं` — the publisher's habit with anusvāra.
+
+**The second dhyāna verse** stands in `../../dattatreya/09_bhrigu_krita_dattatreya_stotram.txt` with the same first three lines; its last line there reads `आत्रेयं समुपास्महे` where this page reads `दत्तात्रेयमुपास्महे`. Recorded, not reconciled.
+
+**No independent edition of this pūjā was found.** Gītā Press's *Nitya Karma Pūjā Prakāśa* (code 592) was searched in full and does not name Dattātreya at all, and no other printed order of this rite was located. The dhyāna of the six-armed form, the aṅga-pūjā, the Datta gāyatrī and the upacāra verses rest on this page alone.
+
+Defects in the base text, corrected with reasons, because stotranidhi is a convenience source and not a critical edition:
+
+1. **Two zero-width joiners (U+200D) removed** from `प॒शूग्स्ताग्श्च॑क्रे` (unit 15). They are invisible, they change nothing on the page, and they break search and collation; the witness has none.
+2. **`फूगीफलैश्च` → `पूगीफलैश्च`** (unit 25). `फूगी` is not a word; the areca nut is `पूगीफल`, as the betel verses of `19` and `22` print it.
+
+Observed and deliberately **not** emended:
+
+- **`स्थिरोभव वरदोभव`** (unit 4) written without a space.
+- **`गृहाण भगवन् दत्तः`** (unit 14), a nominative where the verse wants the vocative `दत्त`.
+- **`धूपमाघ्राण दत्तेश`** (unit 21), where the imperative would be `आजिघ्र`.
+- **`शिरसां पूजयामि`** (unit 19), where the accusative plural is `शिरांसि`. No second witness prints this list.
+- **`व्यक्ताऽव्यक्तस्वरूपाय`** (unit 9), a dative among vocatives.
+- **`सुप्रीतो सुप्रसन्नो वरदो भवन्तु`** (unit 31), with `सुप्रीतो` for `सुप्रीतः` before a consonant and a plural verb with a singular subject; and **`स्वामि`** for `स्वामी` in the same line and in unit 32.
+- **`सम्युक्तं`** for `संयुक्तं`. This publisher writes anusvāra before a semivowel as `म्` throughout. It is an orthographic habit of the edition, not a defect.
+- Several upacāra verses do not scan — `रुद्राक्षहार नागेन्द्र मणिकङ्कण मुख्यानि` (unit 16) and `सर्वं पुष्पमाल्यादिकं परात्मन् प्रतिगृह्यताम्` (unit 18) among them. With no second witness there is nothing to restore them from, and they stand as printed.
+
+Accent: **present on the Vedic material** — the prāṇapratiṣṭhā mantra, fifteen ṛcs of the Puruṣa Sūkta, `वेदाहमेतं पुरुषं महान्तम्`, `धाता पुरस्तात्`, the Gāyatrī and the offerings to the five breaths. 334 accent marks stand in the units: udātta `॑` (U+0951), anudātta `॒` (U+0952), dīrgha svarita `᳚` (U+1CDA). The paurāṇika verses and the Datta gāyatrī are printed unaccented, which is right. **No accent was inferred, derived or reconstructed.** The accented lines are Taittirīya, the tradition of a South Indian smārta rite, so nothing crosses a śākhā boundary. Because the file carries Vedic mantras, its Paurāṇika form is kept at `../pauranika/smarta/32_dattatreya_shodashopachara_puja.txt`.
+
+**A defect of the source's Veda pages, corrected throughout.** stotranidhi writes final visarga in its accented mantras as the ASCII colon `:` rather than as `ः` (U+0903). Every such colon inside a `deva:` field here has been mapped to `ः`, and the `iast:` fields were generated after the mapping.
+
+**Never copy stotranidhi's IAST.** Every `iast:` field here was generated from the Devanāgarī by `../../bin/dev2iast.py`.
+
+Unit count: 32 units.
+
+Sections:
+पूर्वनिर्देशाः — Directions before beginning (unit 1)
+पुनः सङ्कल्पः — The second resolution (unit 2)
+प्राणप्रतिष्ठा — Placing of the life-breath (units 3–4)
+ध्यानम् — Meditation (unit 5)
+षोडशोपचार पूजा — The sixteen services (units 6–18, 21–26)
+अङ्गपूजा — Worship of the limbs, and the hundred and eight names (units 19–20)
+मन्त्रपुष्पम् — The mantra-flower (unit 27)
+प्रदक्षिणम् — Circumambulation and salutation (unit 28)
+उपचार पूजा — The royal services (unit 29)
+प्रार्थना — Prayer (unit 30)
+क्षमाप्रार्थना — Asking pardon, and the closing dedication (unit 31)
+तीर्थप्रसाद ग्रहणम् — Receiving the water and the prasāda (unit 32)
+
+Blurb: This is the worship of Śrī Dattātreya, the son of Atri and Anasūyā, in sixteen services. The page has no opening portion of its own. The worshipper first performs the pūrvāṅga and the turmeric Gaṇapati pūjā. The life-breath is then placed in the image, and Dattātreya is meditated upon in two verses: first with six arms, holding a rosary and a water-pot, a drum and a trident, a conch and a discus; then as the ascetic, bright with ashes, clothed in a tiger's skin, surrounded by the sages. The services are headed by the verses of the Puruṣa Sūkta, taken in the order of that hymn. His limbs are worshipped with fifteen of his names, and the mantra-flower is offered with his own gāyatrī. The rite closes with four verses of prayer, the asking of pardon, and the receiving of the water from his feet and of the food offered to him.
+
+--- unit 1 | section: पूर्वनिर्देशाः ---
+vidhi:
+Two directions, not texts. This page has no opening portion of its own. Use `03_purvanga_vidhanam.txt` first, and then the turmeric Gaṇapati pūjā.
+deva:
+पूर्वाङ्गं पश्यतु ॥
+हरिद्रा गणपति पूजा पश्यतु ॥
+iast:
+pūrvāṅgaṁ paśyatu ||
+haridrā gaṇapati pūjā paśyatu ||
+en: See the opening portion. See the pūjā of the turmeric Gaṇapati.
+tel: పూర్వాంగమును చూడుము. హరిద్రా గణపతి పూజను చూడుము.
+hi: पूर्वाङ्ग देखिए। हरिद्रा गणपति पूजा देखिए।
+
+--- unit 2 | section: पुनः सङ्कल्पः ---
+vidhi:
+The second resolution. It names the rule the rite follows, the rule of the Puruṣa Sūkta, which the sixteen services below bear out.
+deva:
+पुनः सङ्कल्पम् –
+पूर्वोक्त एवं गुण विशेषण विशिष्टायां शुभतिथौ मम सङ्कल्पित मनोवाञ्छाफल सिद्ध्यर्थं इष्टकाम्यार्थसिद्ध्यर्थं पुरुषसूक्त विधानेन श्री दत्तात्रेय स्वामि षोडशोपचार पूजां करिष्ये ॥
+iast:
+punaḥ saṅkalpam –
+pūrvokta evaṁ guṇa viśeṣaṇa viśiṣṭāyāṁ śubhatithau mama saṅkalpita manovāñchāphala siddhyarthaṁ iṣṭakāmyārthasiddhyarthaṁ puruṣasūkta vidhānena śrī dattātreya svāmi ṣoḍaśopacāra pūjāṁ kariṣye ||
+en: The second resolution — On this auspicious day, marked by the qualities already named, for the fulfilment of the wishes I have resolved upon in my mind, and for the attainment of the aims I desire, I shall perform the worship of Śrī Dattātreya Svāmī in sixteen services, according to the rule of the Puruṣa Sūkta.
+tel: పునః సంకల్పము — పూర్వమునందు చెప్పబడిన గుణ విశేషణములతో కూడిన ఈ శుభ తిథియందు, నేను సంకల్పించిన మనోవాంఛా ఫల సిద్ధి కొఱకును, ఇష్ట కామ్యార్థ సిద్ధి కొఱకును, పురుషసూక్త విధానముచే శ్రీ దత్తాత్రేయ స్వామి షోడశోపచార పూజను చేయుచున్నాను.
+hi: पुनः सङ्कल्प — पूर्वोक्त गुण विशेषणों से युक्त इस शुभ तिथि में, मेरे सङ्कल्पित मनोवाञ्छित फल की सिद्धि के लिए और इष्ट काम्य अर्थ की सिद्धि के लिए, पुरुषसूक्त के विधान से श्री दत्तात्रेय स्वामी की षोडशोपचार पूजा करूँगा।
+
+--- unit 3 | section: प्राणप्रतिष्ठा ---
+vidhi:
+The placing of the life-breath. The mantra is Ṛgveda 10.59.6 with a Brāhmaṇa formula after it, printed with full accent. The same mantra stands at unit 3 of `19_durga_shodashopachara_puja.txt`.
+deva:
+प्राणप्रतिष्ठा –
+ओं असु॑नीते॒ पुन॑र॒स्मासु॒ चक्षु॒ः
+पुन॑ः प्रा॒णमि॒ह नो᳚ धेहि॒ भोग᳚म् ।
+ज्योक्प॑श्येम॒ सूर्य॑मु॒च्चर᳚न्त॒
+मनु॑मते मृ॒डया᳚ नः स्व॒स्ति ।
+अ॒मृतं॒ वै प्रा॒णा अ॒मृत॒माप॑ः
+प्रा॒णाने॒व य॑थास्था॒नमुप॑ह्वयते ॥
+iast:
+prāṇapratiṣṭhā –
+oṁ asunīte punarasmāsu cakṣuḥ
+punaḥ prāṇamiha no dhehi bhogam |
+jyokpaśyema sūryamuccaranta
+manumate mṛḍayā naḥ svasti |
+amṛtaṁ vai prāṇā amṛtamāpaḥ
+prāṇāneva yathāsthānamupahvayate ||
+en: Placing of the life-breath — O Asunīti, give us back our sight, give us back our breath here, and give us enjoyment. Long may we see the sun rising. O Anumati, be gracious to us for our welfare. The breaths are the nectar of immortality, the waters are the nectar of immortality. He calls the breaths to their own places.
+tel: ప్రాణప్రతిష్ఠ — ఓ అసునీతీ, మాకు మరల చూపును ఇమ్ము, ఇచట మరల ప్రాణమును ఇమ్ము, భోగమును ఇమ్ము. ఉదయించుచున్న సూర్యుని మేము చిరకాలము చూచుచుందుము గాక. ఓ అనుమతీ, మా క్షేమము కొఱకు మమ్ము అనుగ్రహింపుము. ప్రాణములు అమృతము, జలములు అమృతము. ప్రాణములను వాటి స్థానములందు ఆహ్వానించుచున్నాడు.
+hi: प्राणप्रतिष्ठा — हे असुनीते, हमें पुनः दृष्टि दीजिए, यहाँ पुनः प्राण दीजिए, भोग दीजिए। उदय होते हुए सूर्य को हम चिरकाल तक देखें। हे अनुमते, हमारे कल्याण के लिए हम पर प्रसन्न होइए। प्राण अमृत हैं, जल अमृत है। वह प्राणों को उनके स्थानों पर बुलाता है।
+
+--- unit 4 | section: प्राणप्रतिष्ठा ---
+vidhi:
+Dattātreya is invoked into the image and asked to remain in it.
+deva:
+अस्मिन् बिम्बे श्रीदत्तात्रेय स्वामिनं आवाहयामि स्थापयामि पूजयामि ।
+स्थिरोभव वरदोभव सुप्रसन्नो भव स्थिरासनं कुरु प्रसीद प्रसीद ।
+iast:
+asmin bimbe śrīdattātreya svāminaṁ āvāhayāmi sthāpayāmi pūjayāmi |
+sthirobhava varadobhava suprasanno bhava sthirāsanaṁ kuru prasīda prasīda |
+en: In this image I invoke Śrī Dattātreya Svāmī, I establish him, I worship him. Be steady, be the giver of boons, be gracious. Take a firm seat. Be pleased, be pleased.
+tel: ఈ బింబమునందు శ్రీ దత్తాత్రేయ స్వామిని ఆవాహనము చేయుచున్నాను, స్థాపించుచున్నాను, పూజించుచున్నాను. స్థిరుడవు కమ్ము, వరదుడవు కమ్ము, సుప్రసన్నుడవు కమ్ము. స్థిరమైన ఆసనమును స్వీకరింపుము, ప్రసన్నుడవు కమ్ము, ప్రసన్నుడవు కమ్ము.
+hi: इस बिम्ब में श्री दत्तात्रेय स्वामी का आवाहन करता हूँ, स्थापना करता हूँ, पूजा करता हूँ। स्थिर होइए, वरद होइए, सुप्रसन्न होइए। स्थिर आसन कीजिए, प्रसन्न होइए, प्रसन्न होइए।
+
+--- unit 5 | section: ध्यानम् ---
+vidhi:
+The meditation, in two verses. The first describes the six-armed form; the second stands, with a different last line, in `../../dattatreya/09_bhrigu_krita_dattatreya_stotram.txt`.
+deva:
+ध्यानम् –
+माला कमण्डलुरधःकरपद्मयुग्मे
+मध्यस्थपाणियुगले डमरुत्रिशूले ।
+यन्न्यस्त ऊर्ध्वकरयोः शुभशङ्खचक्रे
+वन्दे तमत्रिवरदं भुजषट्कयुक्तम् ॥
+बालार्कप्रभमिन्द्रनीलजटिलं भस्माङ्गरागोज्ज्वलं
+शान्तं नादविलीनचित्तपवनं शार्दूलचर्माम्बरम् ।
+ब्रह्मज्ञैः सनकादिभिः परिवृतं सिद्धैः समाराधितं
+दत्तात्रेयमुपास्महे हृदि मुदा ध्येयं सदा योगिभिः ॥
+ओं श्रीदत्तात्रेयाय नमः ध्यायामि ।
+iast:
+dhyānam –
+mālā kamaṇḍaluradhaḥkarapadmayugme
+madhyasthapāṇiyugale ḍamarutriśūle |
+yannyasta ūrdhvakarayoḥ śubhaśaṅkhacakre
+vande tamatrivaradaṁ bhujaṣaṭkayuktam ||
+bālārkaprabhamindranīlajaṭilaṁ bhasmāṅgarāgojjvalaṁ
+śāntaṁ nādavilīnacittapavanaṁ śārdūlacarmāmbaram |
+brahmajñaiḥ sanakādibhiḥ parivṛtaṁ siddhaiḥ samārādhitaṁ
+dattātreyamupāsmahe hṛdi mudā dhyeyaṁ sadā yogibhiḥ ||
+oṁ śrīdattātreyāya namaḥ dhyāyāmi |
+en: Meditation — I salute him, the giver of boons to Atri, who has six arms: in his lower pair of lotus hands a rosary and a water-pot, in the middle pair a small drum and a trident, and in the upper pair the auspicious conch and discus. We worship Dattātreya in the heart with joy, he on whom yogis always meditate: shining like the morning sun, his matted hair dark as sapphire, bright with ashes smeared on his limbs, calm, his mind and breath dissolved in the inner sound, clothed in a tiger's skin, surrounded by Sanaka and the other knowers of Brahman, and worshipped by the perfected ones. Oṁ, salutation to Śrī Dattātreya. I meditate upon him.
+tel: ధ్యానము — క్రింది కరపద్మయుగ్మమునందు మాలను కమండలువును, మధ్య పాణియుగళమునందు డమరువును త్రిశూలమును, పై కరములయందు శుభమైన శంఖచక్రములను ధరించిన, ఆరు భుజములు కలిగిన అత్రివరదునికి నమస్కరించుచున్నాను. బాలసూర్యుని కాంతి కలవాడును, ఇంద్రనీలము వంటి జటలు కలవాడును, భస్మాంగరాగముచే ప్రకాశించువాడును, శాంతుడును, నాదమునందు లీనమైన చిత్తము ప్రాణము కలవాడును, పులిచర్మమును వస్త్రముగా ధరించినవాడును, సనకాది బ్రహ్మజ్ఞులచే పరివేష్టింపబడినవాడును, సిద్ధులచే ఆరాధింపబడువాడును, యోగులచే సదా ధ్యానింపదగినవాడును అగు దత్తాత్రేయుని హృదయమునందు సంతోషముతో ఉపాసించుచున్నాము. ఓం శ్రీ దత్తాత్రేయునికి నమస్కారము. ధ్యానించుచున్నాను.
+hi: ध्यान — जिनके नीचे के करकमलों में माला और कमण्डलु, बीच के हाथों में डमरु और त्रिशूल, और ऊपर के हाथों में शुभ शङ्ख और चक्र हैं, उन छह भुजाओं वाले अत्रिवरद की मैं वन्दना करता हूँ। बालसूर्य के समान प्रभा वाले, इन्द्रनील के समान जटाओं वाले, भस्म के अङ्गराग से उज्ज्वल, शान्त, नाद में लीन चित्त और प्राण वाले, शार्दूलचर्म का वस्त्र धारण करने वाले, सनक आदि ब्रह्मज्ञों से घिरे, सिद्धों से आराधित, योगियों के सदा ध्येय दत्तात्रेय की हम हृदय में आनन्द से उपासना करते हैं। ओम् श्री दत्तात्रेय को नमस्कार। ध्यान करता हूँ।
+
+--- unit 6 | section: षोडशोपचार पूजा ---
+vidhi:
+The invocation. From here the services are headed by the ṛcs of the Puruṣa Sūkta in the hymn's own order. This is its first ṛc.
+deva:
+आवाहनम् –
+स॒हस्र॑शीर्षा॒ पुरु॑षः ।
+स॒ह॒स्रा॒क्षः स॒हस्र॑पात् ।
+स भूमिं॑ वि॒श्वतो॑ वृ॒त्वा ।
+अत्य॑तिष्ठद्दशाङ्गु॒लम् ।
+ज्योतिः शान्तिं सर्वलोकान्तरस्थं
+ओङ्काराख्यं योगिहृद्ध्यानगम्यम् ।
+साङ्गं शक्तिं सायुधं भक्तिसेव्यं
+सर्वाकारं दत्तमावाहयामि ॥
+ओं श्रीदत्तात्रेयाय नमः आवाहयामि ।
+iast:
+āvāhanam –
+sahasraśīrṣā puruṣaḥ |
+sahasrākṣaḥ sahasrapāt |
+sa bhūmiṁ viśvato vṛtvā |
+atyatiṣṭhaddaśāṅgulam |
+jyotiḥ śāntiṁ sarvalokāntarasthaṁ
+oṅkārākhyaṁ yogihṛddhyānagamyam |
+sāṅgaṁ śaktiṁ sāyudhaṁ bhaktisevyaṁ
+sarvākāraṁ dattamāvāhayāmi ||
+oṁ śrīdattātreyāya namaḥ āvāhayāmi |
+en: Invocation — The Person has a thousand heads, a thousand eyes and a thousand feet. Covering the earth on every side, he stood beyond it by ten fingers' breadth. I invoke Datta, who has every form: the light, the peace, dwelling within all the worlds, named Oṁkāra, reached by meditation in the hearts of yogis, with his limbs, his power and his weapons, to be served with devotion. Oṁ, salutation to Śrī Dattātreya. I invoke him.
+tel: ఆవాహనము — పురుషునికి వేయి శిరస్సులు, వేయి కన్నులు, వేయి పాదములు. ఆయన భూమిని అన్ని వైపుల ఆవరించి పది అంగుళముల మేర దాటి నిలిచెను. జ్యోతియు శాంతియు, సర్వలోకముల లోపల ఉండువాడును, ఓంకారమను పేరు కలవాడును, యోగుల హృదయ ధ్యానముచే పొందదగినవాడును, అంగములతోను శక్తితోను ఆయుధములతోను కూడినవాడును, భక్తిచే సేవింపదగినవాడును, సర్వాకారుడును అగు దత్తుని ఆవాహనము చేయుచున్నాను. ఓం శ్రీ దత్తాత్రేయునికి నమస్కారము. ఆవాహనము చేయుచున్నాను.
+hi: आवाहन — पुरुष के सहस्र शीर्ष, सहस्र अक्ष और सहस्र पाद हैं। वे भूमि को सब ओर से घेरकर दस अङ्गुल आगे स्थित हुए। ज्योति, शान्ति, सब लोकों के भीतर स्थित, ओङ्कार नाम वाले, योगियों के हृदय के ध्यान से प्राप्य, अङ्गों, शक्ति और आयुधों सहित, भक्ति से सेव्य, सर्वाकार दत्त का मैं आवाहन करता हूँ। ओम् श्री दत्तात्रेय को नमस्कार। आवाहन करता हूँ।
+
+--- unit 7 | section: षोडशोपचार पूजा ---
+vidhi:
+The seat. The ṛc is the second of the Puruṣa Sūkta.
+deva:
+आसनम् –
+पुरु॑ष ए॒वेदग्ं सर्वम्᳚ ।
+यद्भू॒तं यच्च॒ भव्यम्᳚ ।
+उ॒तामृ॑त॒त्वस्येशा॑नः ।
+य॒दन्ने॑नाति॒रोह॑ति ।
+नवरत्नखचितं चापि मृदुतूल परिच्छदम् ।
+सिंहासनमिदं स्वामिन् स्वीकुरुष्व सुखासनम् ॥
+ओं श्रीदत्तात्रेयाय नमः नवरत्नखचित सिंहासनं समर्पयामि ।
+iast:
+āsanam –
+puruṣa evedagṁ sarvam |
+yadbhūtaṁ yacca bhavyam |
+utāmṛtatvasyeśānaḥ |
+yadannenātirohati |
+navaratnakhacitaṁ cāpi mṛdutūla paricchadam |
+siṁhāsanamidaṁ svāmin svīkuruṣva sukhāsanam ||
+oṁ śrīdattātreyāya namaḥ navaratnakhacita siṁhāsanaṁ samarpayāmi |
+en: Seat — The Person alone is all this, what has been and what is to be. He is the lord of immortality, and of that which grows by food. Set with the nine jewels, with a soft covering of cotton — accept this throne, O Lord, as a comfortable seat. Oṁ, salutation to Śrī Dattātreya. I offer a throne set with the nine jewels.
+tel: ఆసనము — పురుషుడే ఇదంతయు, జరిగినదియు జరుగబోవునదియు. ఆయన అమృతత్వమునకు ఈశానుడు, అన్నముచే వృద్ధి పొందు దానికిని. నవరత్నములు పొదిగినదియు, మెత్తని దూది పరుపు కలదియు అగు ఈ సింహాసనమును సుఖాసనముగా స్వీకరింపుము, ఓ స్వామీ. ఓం శ్రీ దత్తాత్రేయునికి నమస్కారము. నవరత్నఖచిత సింహాసనమును సమర్పించుచున్నాను.
+hi: आसन — पुरुष ही यह सब है, जो हुआ और जो होगा। वे अमृतत्व के ईशान हैं, और उसके भी जो अन्न से बढ़ता है। नवरत्नों से जड़ा, कोमल रुई के आवरण वाला यह सिंहासन सुखासन के रूप में स्वीकार कीजिए, हे स्वामिन्। ओम् श्री दत्तात्रेय को नमस्कार। नवरत्नजड़ित सिंहासन समर्पित करता हूँ।
+
+--- unit 8 | section: षोडशोपचार पूजा ---
+vidhi:
+Water for the feet. The ṛc is the third of the Puruṣa Sūkta.
+deva:
+पाद्यम् –
+ए॒तावा॑नस्य महि॒मा ।
+अतो॒ ज्यायाग्॑श्च॒ पूरु॑षः ।
+पादो᳚ऽस्य॒ विश्वा॑ भू॒तानि॑ ।
+त्रि॒पाद॑स्या॒मृतं॑ दि॒वि ।
+गुरुदेव नमस्तेऽस्तु नरकार्णवतारक ।
+पाद्यं गृहाण दत्तेश मम सौख्यं विवर्धय ॥
+ओं श्रीदत्तात्रेयाय नमः पादयोः पाद्यं समर्पयामि ।
+iast:
+pādyam –
+etāvānasya mahimā |
+ato jyāyāgśca pūruṣaḥ |
+pādo'sya viśvā bhūtāni |
+tripādasyāmṛtaṁ divi |
+gurudeva namaste'stu narakārṇavatāraka |
+pādyaṁ gṛhāṇa datteśa mama saukhyaṁ vivardhaya ||
+oṁ śrīdattātreyāya namaḥ pādayoḥ pādyaṁ samarpayāmi |
+en: Water for the feet — Such is his greatness, and the Person is greater still than this. All beings are one quarter of him; three quarters of him are immortal in heaven. Salutation to you, O divine teacher, who carry us across the ocean of hell. Accept this water for the feet, O lord Datta, and increase my well-being. Oṁ, salutation to Śrī Dattātreya. I offer water at his feet.
+tel: పాద్యము — ఇంత ఆయన మహిమ; పురుషుడు దీనికంటెను గొప్పవాడు. సమస్త భూతములు ఆయనలో ఒక పాదము; ఆయన మూడు పాదములు దివియందు అమృతము. ఓ గురుదేవా, నరకసముద్రమును దాటించువాడా, నీకు నమస్కారము. ఈ పాద్యమును గ్రహింపుము, ఓ దత్తేశా, నా సౌఖ్యమును వృద్ధిపరచుము. ఓం శ్రీ దత్తాత్రేయునికి నమస్కారము. పాదములకు పాద్యమును సమర్పించుచున్నాను.
+hi: पाद्य — इतनी ही इनकी महिमा है, और पुरुष इससे भी ज्येष्ठ हैं। सब भूत इनका एक पाद हैं; इनके तीन पाद द्यु में अमृत हैं। हे गुरुदेव, हे नरक-सागर से पार करने वाले, आपको नमस्कार। यह पाद्य ग्रहण कीजिए, हे दत्तेश, और मेरा सौख्य बढ़ाइए। ओम् श्री दत्तात्रेय को नमस्कार। चरणों में पाद्य समर्पित करता हूँ।
+
+--- unit 9 | section: षोडशोपचार पूजा ---
+vidhi:
+Water for the hands. The ṛc is the fourth of the Puruṣa Sūkta.
+deva:
+अर्घ्यम् –
+त्रि॒पादू॒र्ध्व उदै॒त्पुरु॑षः ।
+पादो᳚ऽस्ये॒हाऽऽभ॑वा॒त्पुन॑ः ।
+ततो॒ विष्व॒ङ्व्य॑क्रामत् ।
+सा॒श॒ना॒न॒श॒ने अ॒भि ।
+व्यक्ताऽव्यक्तस्वरूपाय भक्ताभीष्टप्रदायक ।
+मया निवेदितं भक्त्या अर्घ्योऽयं प्रतिगृह्यताम् ॥
+ओं श्रीदत्तात्रेयाय नमः हस्तयोरर्घ्यं समर्पयामि ।
+iast:
+arghyam –
+tripādūrdhva udaitpuruṣaḥ |
+pādo'syehā''bhavātpunaḥ |
+tato viṣvaṅvyakrāmat |
+sāśanānaśane abhi |
+vyaktā'vyaktasvarūpāya bhaktābhīṣṭapradāyaka |
+mayā niveditaṁ bhaktyā arghyo'yaṁ pratigṛhyatām ||
+oṁ śrīdattātreyāya namaḥ hastayorarghyaṁ samarpayāmi |
+en: Water for the hands — With three quarters the Person rose upward; one quarter of him came to be here again. Thence he spread out on every side, over what eats and what does not eat. O you whose form is both manifest and unmanifest, giver of what your devotees desire, let this water for the hands, offered by me with devotion, be accepted. Oṁ, salutation to Śrī Dattātreya. I offer water at his hands.
+tel: అర్ఘ్యము — పురుషుడు మూడు పాదములతో పైకి లేచెను; ఆయన ఒక పాదము ఇచట మరల కలిగెను. అటుపైన ఆయన అన్ని వైపుల వ్యాపించెను — తినునవియు తినకయుండునవియు అయిన వాటిపైన. వ్యక్తావ్యక్త స్వరూపుడా, భక్తుల అభీష్టములను ఇచ్చువాడా, భక్తితో నాచే నివేదింపబడిన ఈ అర్ఘ్యమును స్వీకరింపుము. ఓం శ్రీ దత్తాత్రేయునికి నమస్కారము. హస్తములకు అర్ఘ్యమును సమర్పించుచున్నాను.
+hi: अर्घ्य — तीन पाद से पुरुष ऊपर उठे; इनका एक पाद यहाँ पुनः हुआ। तब वे सब ओर फैल गए — जो खाता है और जो नहीं खाता, उन पर। हे व्यक्त और अव्यक्त स्वरूप वाले, हे भक्तों को अभीष्ट देने वाले, मेरे द्वारा भक्ति से निवेदित यह अर्घ्य स्वीकार कीजिए। ओम् श्री दत्तात्रेय को नमस्कार। हाथों में अर्घ्य समर्पित करता हूँ।
+
+--- unit 10 | section: षोडशोपचार पूजा ---
+vidhi:
+Water for sipping. The ṛc is the fifth of the Puruṣa Sūkta.
+deva:
+आचमनीयम् –
+तस्मा᳚द्वि॒राड॑जायत ।
+वि॒राजो॒ अधि॒ पूरु॑षः ।
+स जा॒तो अत्य॑रिच्यत ।
+प॒श्चाद्भूमि॒मथो॑ पु॒रः ।
+गोदावर्यास्तु यद्वारि सर्वपापहरं शुभम् ।
+तदिदं कल्पितं देव सम्यगाचम्यतां प्रभो ॥
+ओं श्रीदत्तात्रेयाय नमः मुखे आचमनीयं समर्पयामि ।
+iast:
+ācamanīyam –
+tasmādvirāḍajāyata |
+virājo adhi pūruṣaḥ |
+sa jāto atyaricyata |
+paścādbhūmimatho puraḥ |
+godāvaryāstu yadvāri sarvapāpaharaṁ śubham |
+tadidaṁ kalpitaṁ deva samyagācamyatāṁ prabho ||
+oṁ śrīdattātreyāya namaḥ mukhe ācamanīyaṁ samarpayāmi |
+en: Water for sipping — From him Virāṭ was born, and from Virāṭ the Person. Being born, he went beyond the earth, behind and before. The water of the Godāvarī, which takes away all sin and is auspicious, has been made ready, O god: sip it well, O Lord. Oṁ, salutation to Śrī Dattātreya. I offer water for his mouth.
+tel: ఆచమనీయము — ఆయననుండి విరాట్టు పుట్టెను, విరాట్టునుండి పురుషుడు. పుట్టి ఆయన భూమిని దాటెను — వెనుకను ముందును. సర్వపాపములను హరించునదియు శుభమైనదియు అగు గోదావరి జలము ఇదిగో సిద్ధము చేయబడినది, ఓ దేవా; చక్కగా ఆచమనము చేయుము, ఓ ప్రభూ. ఓం శ్రీ దత్తాత్రేయునికి నమస్కారము. ముఖమునకు ఆచమనీయమును సమర్పించుచున్నాను.
+hi: आचमनीय — उनसे विराट् उत्पन्न हुआ, और विराट् से पुरुष। उत्पन्न होकर वे भूमि से आगे बढ़ गए — पीछे और आगे। गोदावरी का जल, जो सब पापों को हरने वाला और शुभ है, यह तैयार किया गया है, हे देव; भली भाँति आचमन कीजिए, हे प्रभो। ओम् श्री दत्तात्रेय को नमस्कार। मुख में आचमनीय समर्पित करता हूँ।
+
+--- unit 11 | section: षोडशोपचार पूजा ---
+vidhi:
+The bath in the five nectars. This service has no ṛc.
+deva:
+पञ्चामृतस्नानम् –
+स्नानं पञ्चामृतैर्देव गृहाण पुरुषोत्तम ।
+अनाथनाथ सर्वज्ञ गीर्वाण प्रणति प्रिय ॥
+ओं श्रीदत्तात्रेयाय नमः पञ्चामृतस्नानं समर्पयामि ।
+iast:
+pañcāmṛtasnānam –
+snānaṁ pañcāmṛtairdeva gṛhāṇa puruṣottama |
+anāthanātha sarvajña gīrvāṇa praṇati priya ||
+oṁ śrīdattātreyāya namaḥ pañcāmṛtasnānaṁ samarpayāmi |
+en: Bath in the five nectars — Accept the bath in the five nectars, O god, O best of Persons, O protector of the helpless, O all-knowing one, who love the salutation of the gods. Oṁ, salutation to Śrī Dattātreya. I offer the bath in the five nectars.
+tel: పంచామృత స్నానము — ఓ దేవా, పురుషోత్తమా, అనాథనాథా, సర్వజ్ఞా, దేవతల ప్రణతిని ప్రీతితో స్వీకరించువాడా, పంచామృతములతో స్నానమును గ్రహింపుము. ఓం శ్రీ దత్తాత్రేయునికి నమస్కారము. పంచామృత స్నానమును సమర్పించుచున్నాను.
+hi: पञ्चामृत स्नान — हे देव, हे पुरुषोत्तम, हे अनाथों के नाथ, हे सर्वज्ञ, हे देवताओं के प्रणाम के प्रिय, पञ्चामृतों से स्नान ग्रहण कीजिए। ओम् श्री दत्तात्रेय को नमस्कार। पञ्चामृत स्नान समर्पित करता हूँ।
+
+--- unit 12 | section: षोडशोपचार पूजा ---
+vidhi:
+The bath in pure water. The ṛc is the sixth of the Puruṣa Sūkta.
+deva:
+शुद्धोदकस्नानम् –
+यत्पुरु॑षेण ह॒विषा᳚ ।
+दे॒वा य॒ज्ञमत॑न्वत ।
+व॒स॒न्तो अ॑स्यासी॒दाज्यम्᳚ ।
+ग्री॒ष्म इ॒ध्मश्श॒रद्ध॒विः ।
+गङ्गादि सर्वतीर्थेभ्यः आनीतं निर्मलं जलम् ।
+स्नानं कुरुष्व देवेश मया दत्तं महात्मने ॥
+ओं श्रीदत्तात्रेयाय नमः शुद्धोदक स्नानं समर्पयामि ।
+iast:
+śuddhodakasnānam –
+yatpuruṣeṇa haviṣā |
+devā yajñamatanvata |
+vasanto asyāsīdājyam |
+grīṣma idhmaśśaraddhaviḥ |
+gaṅgādi sarvatīrthebhyaḥ ānītaṁ nirmalaṁ jalam |
+snānaṁ kuruṣva deveśa mayā dattaṁ mahātmane ||
+oṁ śrīdattātreyāya namaḥ śuddhodaka snānaṁ samarpayāmi |
+en: Bath in pure water — When the gods spread out the sacrifice with the Person as the oblation, the spring was its clarified butter, the summer its fuel and the autumn its offering. Clear water brought from the Gaṅgā and all the holy fords, given by me — bathe in it, O lord of the gods, O great soul. Oṁ, salutation to Śrī Dattātreya. I offer the bath in pure water.
+tel: శుద్ధోదక స్నానము — దేవతలు పురుషుని హవిస్సుగా చేసి యజ్ఞమును విస్తరించినపుడు, వసంతము దానికి ఆజ్యము, గ్రీష్మము ఇధ్మము, శరత్తు హవిస్సు ఆయెను. గంగ మొదలగు సర్వ తీర్థములనుండి తెచ్చిన నిర్మలమైన జలము నాచే ఇవ్వబడినది; దానితో స్నానము చేయుము, ఓ దేవేశా, మహాత్మా. ఓం శ్రీ దత్తాత్రేయునికి నమస్కారము. శుద్ధోదక స్నానమును సమర్పించుచున్నాను.
+hi: शुद्धोदक स्नान — जब देवों ने पुरुष रूपी हवि से यज्ञ का विस्तार किया, तब वसन्त उसका आज्य, ग्रीष्म इध्म और शरद् हवि हुआ। गङ्गा आदि सब तीर्थों से लाया गया निर्मल जल मेरे द्वारा दिया गया है; उससे स्नान कीजिए, हे देवेश, हे महात्मन्। ओम् श्री दत्तात्रेय को नमस्कार। शुद्धोदक स्नान समर्पित करता हूँ।
+
+--- unit 13 | section: षोडशोपचार पूजा ---
+vidhi:
+The garment. The ṛc is the seventh of the Puruṣa Sūkta.
+deva:
+वस्त्रम् –
+स॒प्तास्या॑सन्परि॒धय॑ः ।
+त्रिः स॒प्त स॒मिध॑ः कृ॒ताः ।
+दे॒वा यद्य॒ज्ञं त॑न्वा॒नाः ।
+अब॑ध्न॒न्पुरु॑षं प॒शुम् ।
+वेदसूक्तसमायुक्ते यज्ञसामसमन्विते ।
+स्वर्गवर्गप्रदे देव वाससी तौ विनिर्मितौ ॥
+ओं श्रीदत्तात्रेयाय नमः वस्त्रयुग्मं समर्पयामि ।
+iast:
+vastram –
+saptāsyāsanparidhayaḥ |
+triḥ sapta samidhaḥ kṛtāḥ |
+devā yadyajñaṁ tanvānāḥ |
+abadhnanpuruṣaṁ paśum |
+vedasūktasamāyukte yajñasāmasamanvite |
+svargavargaprade deva vāsasī tau vinirmitau ||
+oṁ śrīdattātreyāya namaḥ vastrayugmaṁ samarpayāmi |
+en: Garment — Seven were the enclosing sticks of that sacrifice, and thrice seven the pieces of fuel made, when the gods, spreading out the sacrifice, bound the Person as the victim. O god, who give heaven and all its ranks, these two garments have been made, joined with the hymns of the Veda and with the sāmans of sacrifice. Oṁ, salutation to Śrī Dattātreya. I offer a pair of garments.
+tel: వస్త్రము — ఆ యజ్ఞమునకు ఏడు పరిధులు ఉండెను, ఇరువది ఒక్క సమిధలు చేయబడెను — దేవతలు యజ్ఞమును విస్తరించుచు పురుషుని పశువుగా బంధించినపుడు. ఓ దేవా, స్వర్గమును దాని వర్గములను ఇచ్చువాడా, వేదసూక్తములతోను యజ్ఞ సామములతోను కూడిన ఈ రెండు వస్త్రములు సిద్ధము చేయబడినవి. ఓం శ్రీ దత్తాత్రేయునికి నమస్కారము. వస్త్రయుగ్మమును సమర్పించుచున్నాను.
+hi: वस्त्र — उस यज्ञ के सात परिधि थे, और इक्कीस समिधाएँ बनाई गईं, जब देवों ने यज्ञ का तनन करते हुए पुरुष को पशु रूप में बाँधा। हे देव, हे स्वर्ग और उसके वर्ग देने वाले, वेदसूक्तों और यज्ञ के सामों से युक्त ये दोनों वस्त्र बनाए गए हैं। ओम् श्री दत्तात्रेय को नमस्कार। वस्त्रयुग्म समर्पित करता हूँ।
+
+--- unit 14 | section: षोडशोपचार पूजा ---
+vidhi:
+The sacred thread. The ṛc is the eighth of the Puruṣa Sūkta.
+deva:
+यज्ञोपवीतम् –
+तं य॒ज्ञं ब॒र्हिषि॒ प्रौक्षन्॑ ।
+पुरु॑षं जा॒तम॑ग्र॒तः ।
+तेन॑ दे॒वा अय॑जन्त ।
+सा॒ध्या ऋष॑यश्च॒ ये ।
+उपवीतं भवेन्नित्यं विधिरेष सनातनः ।
+गृहाण भगवन् दत्तः सर्वेष्टफलदो भव ॥
+ओं श्रीदत्तात्रेयाय नमः यज्ञोपवीतं समर्पयामि ।
+iast:
+yajñopavītam –
+taṁ yajñaṁ barhiṣi praukṣan |
+puruṣaṁ jātamagrataḥ |
+tena devā ayajanta |
+sādhyā ṛṣayaśca ye |
+upavītaṁ bhavennityaṁ vidhireṣa sanātanaḥ |
+gṛhāṇa bhagavan dattaḥ sarveṣṭaphalado bhava ||
+oṁ śrīdattātreyāya namaḥ yajñopavītaṁ samarpayāmi |
+en: Sacred thread — They sprinkled that sacrifice upon the sacred grass — the Person born at the beginning. With him the gods performed the sacrifice, and the Sādhyas and the seers. The sacred thread is to be worn always; this is the eternal rule. Accept it, O Lord Datta, and be the giver of every desired fruit. Oṁ, salutation to Śrī Dattātreya. I offer the sacred thread.
+tel: యజ్ఞోపవీతము — మొదట పుట్టిన పురుషుని — ఆ యజ్ఞమును — దర్భలపై ప్రోక్షించిరి. ఆయనతో దేవతలు యజ్ఞము చేసిరి, సాధ్యులును ఋషులును. ఉపవీతము నిత్యము ఉండవలెను; ఇది సనాతనమైన విధి. గ్రహింపుము, ఓ భగవాన్ దత్తా, సర్వ ఇష్ట ఫలములను ఇచ్చువాడవు కమ్ము. ఓం శ్రీ దత్తాత్రేయునికి నమస్కారము. యజ్ఞోపవీతమును సమర్పించుచున్నాను.
+hi: यज्ञोपवीत — उस यज्ञ को, अग्र में जात पुरुष को, बर्हि पर प्रोक्षित किया। उससे देवों ने यजन किया, और साध्यों तथा ऋषियों ने। उपवीत सदा धारण रहे; यह सनातन विधि है। ग्रहण कीजिए, हे भगवन् दत्त, और सब इष्ट फलों के दाता होइए। ओम् श्री दत्तात्रेय को नमस्कार। यज्ञोपवीत समर्पित करता हूँ।
+
+--- unit 15 | section: षोडशोपचार पूजा ---
+vidhi:
+Sandal-paste. The ṛc is the ninth of the Puruṣa Sūkta.
+deva:
+गन्धम् –
+तस्मा᳚द्य॒ज्ञात्स॑र्व॒हुत॑ः ।
+सम्भृ॑तं पृषदा॒ज्यम् ।
+प॒शूग्स्ताग्श्च॑क्रे वाय॒व्यान्॑ ।
+आ॒र॒ण्यान्ग्रा॒म्याश्च॒ ये ।
+श्रीखण्डं चन्दनं दिव्यं गन्धाढ्यं सुमनोहरम् ।
+विलेपनं गुरुश्रेष्ठ प्रीत्यर्थं प्रतिगृह्यताम् ॥
+ओं श्रीदत्तात्रेयाय नमः दिव्य श्रीचन्दनं समर्पयामि ।
+iast:
+gandham –
+tasmādyajñātsarvahutaḥ |
+sambhṛtaṁ pṛṣadājyam |
+paśūgstāgścakre vāyavyān |
+āraṇyāngrāmyāśca ye |
+śrīkhaṇḍaṁ candanaṁ divyaṁ gandhāḍhyaṁ sumanoharam |
+vilepanaṁ guruśreṣṭha prītyarthaṁ pratigṛhyatām ||
+oṁ śrīdattātreyāya namaḥ divya śrīcandanaṁ samarpayāmi |
+en: Sandal-paste — From that sacrifice, in which all was offered, the curds mixed with butter were gathered. He made those creatures of the air, and those of the forest and of the village. Divine sandal of the best kind, rich in fragrance and most pleasing — let this ointment be accepted for your pleasure, O best of teachers. Oṁ, salutation to Śrī Dattātreya. I offer divine sandal-paste.
+tel: గంధము — సర్వము హవనము చేయబడిన ఆ యజ్ఞమునుండి పృషదాజ్యము సంగ్రహింపబడెను. ఆయన వాయువునకు చెందిన పశువులను, అరణ్యమునకును గ్రామమునకును చెందినవానిని చేసెను. దివ్యమైనదియు, సుగంధముతో సమృద్ధమైనదియు, మిక్కిలి మనోహరమైనదియు అగు శ్రీఖండ చందన విలేపనమును ప్రీతి కొఱకు స్వీకరింపుము, ఓ గురుశ్రేష్ఠా. ఓం శ్రీ దత్తాత్రేయునికి నమస్కారము. దివ్య శ్రీచందనమును సమర్పించుచున్నాను.
+hi: गन्ध — उस सर्वहुत यज्ञ से पृषदाज्य सम्भृत हुआ। उन्होंने वायव्य पशुओं को तथा आरण्य और ग्राम्य पशुओं को बनाया। दिव्य श्रीखण्ड चन्दन, गन्ध से समृद्ध और सुमनोहर — यह विलेपन प्रीति के लिए स्वीकार कीजिए, हे गुरुश्रेष्ठ। ओम् श्री दत्तात्रेय को नमस्कार। दिव्य श्रीचन्दन समर्पित करता हूँ।
+
+--- unit 16 | section: षोडशोपचार पूजा ---
+vidhi:
+Ornaments. The ṛc is the tenth of the Puruṣa Sūkta.
+deva:
+आभरणम् –
+तस्मा᳚द्य॒ज्ञात्स॑र्व॒हुत॑ः ।
+ऋच॒ः सामा॑नि जज्ञिरे ।
+छन्दाग्ं॑सि जज्ञिरे॒ तस्मा᳚त् ।
+यजु॒स्तस्मा॑दजायत ।
+रुद्राक्षहार नागेन्द्र मणिकङ्कण मुख्यानि ।
+सर्वोत्तम भूषणानि गृहाण गुरुसत्तम ॥
+ओं श्रीदत्तात्रेयाय नमः नानाभरणानि समर्पयामि ।
+iast:
+ābharaṇam –
+tasmādyajñātsarvahutaḥ |
+ṛcaḥ sāmāni jajñire |
+chandāgṁsi jajñire tasmāt |
+yajustasmādajāyata |
+rudrākṣahāra nāgendra maṇikaṅkaṇa mukhyāni |
+sarvottama bhūṣaṇāni gṛhāṇa gurusattama ||
+oṁ śrīdattātreyāya namaḥ nānābharaṇāni samarpayāmi |
+en: Ornaments — From that sacrifice, in which all was offered, the ṛcs and the sāmans were born. The metres were born from it, and the yajus was born from it. A necklace of rudrākṣa, the lord of serpents, jewelled bracelets and the rest — accept these finest ornaments, O best of teachers. Oṁ, salutation to Śrī Dattātreya. I offer ornaments of many kinds.
+tel: ఆభరణము — సర్వము హవనము చేయబడిన ఆ యజ్ఞమునుండి ఋక్కులును సామములును పుట్టెను. ఛందస్సులు దానినుండి పుట్టెను, యజుస్సు దానినుండి పుట్టెను. రుద్రాక్ష హారము, నాగేంద్రుడు, మణికంకణములు మొదలగు సర్వోత్తమ భూషణములను గ్రహింపుము, ఓ గురుసత్తమా. ఓం శ్రీ దత్తాత్రేయునికి నమస్కారము. నానా ఆభరణములను సమర్పించుచున్నాను.
+hi: आभरण — उस सर्वहुत यज्ञ से ऋचाएँ और सामन् उत्पन्न हुए। छन्द उससे उत्पन्न हुए, और यजुस् उससे उत्पन्न हुआ। रुद्राक्ष का हार, नागेन्द्र, मणि के कङ्कण आदि सर्वोत्तम भूषण ग्रहण कीजिए, हे गुरुसत्तम। ओम् श्री दत्तात्रेय को नमस्कार। नाना आभरण समर्पित करता हूँ।
+
+--- unit 17 | section: षोडशोपचार पूजा ---
+vidhi:
+Unbroken rice. This service has no ṛc.
+deva:
+अक्षतान् –
+अक्षतान् धवलान् दिव्यान् तापसोत्तमपूजित ।
+अर्पयामि महाभक्त्या प्रसीद त्वं महामुने ॥
+ओं श्रीदत्तात्रेयाय नमः अक्षतान् समर्पयामि ।
+iast:
+akṣatān –
+akṣatān dhavalān divyān tāpasottamapūjita |
+arpayāmi mahābhaktyā prasīda tvaṁ mahāmune ||
+oṁ śrīdattātreyāya namaḥ akṣatān samarpayāmi |
+en: Unbroken rice — O you who are worshipped by the best of ascetics, I offer with great devotion these white and divine grains of unbroken rice. Be gracious, O great sage. Oṁ, salutation to Śrī Dattātreya. I offer unbroken rice.
+tel: అక్షతలు — తాపసోత్తములచే పూజింపబడువాడా, తెల్లనివియు దివ్యమైనవియు అగు ఈ అక్షతలను మహాభక్తితో అర్పించుచున్నాను. ప్రసన్నుడవు కమ్ము, ఓ మహామునీ. ఓం శ్రీ దత్తాత్రేయునికి నమస్కారము. అక్షతలను సమర్పించుచున్నాను.
+hi: अक्षत — हे श्रेष्ठ तपस्वियों से पूजित, ये धवल और दिव्य अक्षत मैं महाभक्ति से अर्पित करता हूँ। प्रसन्न होइए, हे महामुने। ओम् श्री दत्तात्रेय को नमस्कार। अक्षत समर्पित करता हूँ।
+
+--- unit 18 | section: षोडशोपचार पूजा ---
+vidhi:
+Flowers. The ṛc is the eleventh of the Puruṣa Sūkta.
+deva:
+पुष्पम् –
+तस्मा॒दश्वा॑ अजायन्त ।
+ये के चो॑भ॒याद॑तः ।
+गावो॑ ह जज्ञिरे॒ तस्मा᳚त् ।
+तस्मा᳚ज्जा॒ता अ॑जा॒वय॑ः ।
+मल्लिकादि सुगन्धीनि मालत्यादीनि वै प्रभो ।
+सर्वं पुष्पमाल्यादिकं परात्मन् प्रतिगृह्यताम् ॥
+ओं श्रीदत्तात्रेयाय नमः पुष्पं समर्पयामि ।
+iast:
+puṣpam –
+tasmādaśvā ajāyanta |
+ye ke cobhayādataḥ |
+gāvo ha jajñire tasmāt |
+tasmājjātā ajāvayaḥ |
+mallikādi sugandhīni mālatyādīni vai prabho |
+sarvaṁ puṣpamālyādikaṁ parātman pratigṛhyatām ||
+oṁ śrīdattātreyāya namaḥ puṣpaṁ samarpayāmi |
+en: Flowers — From it the horses were born, and all those that have teeth in both jaws. The cattle were born from it, and from it were born goats and sheep. Fragrant flowers, jasmine, mālatī and the rest, O Lord — all these flowers and garlands, O supreme Self, let them be accepted. Oṁ, salutation to Śrī Dattātreya. I offer flowers.
+tel: పుష్పములు — దానినుండి అశ్వములు పుట్టెను, రెండు దవడలయందును పండ్లు కలవన్నియు పుట్టెను. గోవులు దానినుండి పుట్టెను, మేకలును గొఱ్ఱెలును దానినుండి పుట్టెను. ఓ ప్రభూ, మల్లె మొదలగు సుగంధ పుష్పములను, మాలతి మొదలగువానిని, సర్వ పుష్పమాలికలను, ఓ పరమాత్మా, స్వీకరింపుము. ఓం శ్రీ దత్తాత్రేయునికి నమస్కారము. పుష్పమును సమర్పించుచున్నాను.
+hi: पुष्प — उससे अश्व उत्पन्न हुए, और वे सब जिनके दोनों ओर दाँत हैं। गौएँ उससे उत्पन्न हुईं, और उससे अज तथा अवि उत्पन्न हुए। हे प्रभो, मल्लिका आदि सुगन्धित और मालती आदि पुष्प, सब पुष्प और मालाएँ, हे परमात्मन्, स्वीकार कीजिए। ओम् श्री दत्तात्रेय को नमस्कार। पुष्प समर्पित करता हूँ।
+
+--- unit 19 | section: अङ्गपूजा ---
+vidhi:
+The worship of the limbs, with fifteen names of Dattātreya, from the feet to the whole body.
+deva:
+अथाङ्गपूज –
+ओं अनसूयागर्भसम्भूताय नमः – पादौ पूजयामि ।
+ओं अत्रिपुत्राय नमः – गुल्फौ पूजयामि ।
+ओं त्रिमूर्त्यात्मकमूर्तये नमः – जङ्घे पूजयामि ।
+ओं अनघाय नमः – जानुनी पूजयामि ।
+ओं अवधूताय नमः – ऊरू पूजयामि ।
+ओं सामगाय नमः – कटिं पूजयामि ।
+ओं आदिमध्यान्तरहिताय नमः – उदरं पूजयामि ।
+ओं महोरस्काय नमः – वक्षःस्थलं पूजयामि ।
+ओं शङ्खचक्रडमरुत्रिशूलकमण्डलुधारिणे नमः – पाणिं पूजयामि ।
+ओं षड्भुजाय नमः – बाहू पूजयामि ।
+ओं कम्बुकण्ठाय नमः – कण्ठं पूजयामि ।
+ओं सर्वतत्त्वप्रबोधकाय नमः – वक्त्राणि पूजयामि ।
+ओं नित्यानुग्रहदृष्टये नमः – नेत्राणि पूजयामि ।
+ओं सहस्रशिरसे नमः – शिरसां पूजयामि ।
+ओं सदसत्संशयविच्छेदकाय नमः – सर्वाण्यङ्गानि पूजयामि ।
+iast:
+athāṅgapūja –
+oṁ anasūyāgarbhasambhūtāya namaḥ – pādau pūjayāmi |
+oṁ atriputrāya namaḥ – gulphau pūjayāmi |
+oṁ trimūrtyātmakamūrtaye namaḥ – jaṅghe pūjayāmi |
+oṁ anaghāya namaḥ – jānunī pūjayāmi |
+oṁ avadhūtāya namaḥ – ūrū pūjayāmi |
+oṁ sāmagāya namaḥ – kaṭiṁ pūjayāmi |
+oṁ ādimadhyāntarahitāya namaḥ – udaraṁ pūjayāmi |
+oṁ mahoraskāya namaḥ – vakṣaḥsthalaṁ pūjayāmi |
+oṁ śaṅkhacakraḍamarutriśūlakamaṇḍaludhāriṇe namaḥ – pāṇiṁ pūjayāmi |
+oṁ ṣaḍbhujāya namaḥ – bāhū pūjayāmi |
+oṁ kambukaṇṭhāya namaḥ – kaṇṭhaṁ pūjayāmi |
+oṁ sarvatattvaprabodhakāya namaḥ – vaktrāṇi pūjayāmi |
+oṁ nityānugrahadṛṣṭaye namaḥ – netrāṇi pūjayāmi |
+oṁ sahasraśirase namaḥ – śirasāṁ pūjayāmi |
+oṁ sadasatsaṁśayavicchedakāya namaḥ – sarvāṇyaṅgāni pūjayāmi |
+en: Then the worship of the limbs — Salutation to him who was born of the womb of Anasūyā: I worship the feet. Salutation to the son of Atri: I worship the ankles. Salutation to him whose form is the three gods in one: I worship the shanks. Salutation to the sinless one: I worship the knees. Salutation to the Avadhūta: I worship the thighs. Salutation to the singer of the Sāma: I worship the waist. Salutation to him who has no beginning, middle or end: I worship the belly. Salutation to the broad-chested one: I worship the chest. Salutation to him who holds the conch, discus, drum, trident and water-pot: I worship the hands. Salutation to the six-armed one: I worship the arms. Salutation to him whose throat is like a conch: I worship the throat. Salutation to him who awakens every truth: I worship the faces. Salutation to him whose gaze is ever gracious: I worship the eyes. Salutation to the thousand-headed one: I worship the heads. Salutation to him who cuts through all doubt about what is and what is not: I worship all the limbs.
+tel: అథ అంగపూజ — అనసూయాగర్భసంభూతునికి నమస్కారము — పాదములను పూజించుచున్నాను. అత్రిపుత్రునికి నమస్కారము — చీలమండలను పూజించుచున్నాను. త్రిమూర్త్యాత్మకమూర్తికి నమస్కారము — పిక్కలను పూజించుచున్నాను. అనఘునికి నమస్కారము — మోకాళ్ళను పూజించుచున్నాను. అవధూతకు నమస్కారము — తొడలను పూజించుచున్నాను. సామగునికి నమస్కారము — కటిని పూజించుచున్నాను. ఆదిమధ్యాంతరహితునికి నమస్కారము — ఉదరమును పూజించుచున్నాను. మహోరస్కునికి నమస్కారము — వక్షఃస్థలమును పూజించుచున్నాను. శంఖ చక్ర డమరు త్రిశూల కమండలుధారికి నమస్కారము — హస్తములను పూజించుచున్నాను. షడ్భుజునికి నమస్కారము — బాహువులను పూజించుచున్నాను. కంబుకంఠునికి నమస్కారము — కంఠమును పూజించుచున్నాను. సర్వతత్త్వప్రబోధకునికి నమస్కారము — ముఖములను పూజించుచున్నాను. నిత్యానుగ్రహదృష్టికి నమస్కారము — నేత్రములను పూజించుచున్నాను. సహస్రశిరస్కునికి నమస్కారము — శిరస్సులను పూజించుచున్నాను. సదసత్సంశయవిచ్ఛేదకునికి నమస్కారము — సర్వాంగములను పూజించుచున్నాను.
+hi: अथ अङ्गपूजा — अनसूया के गर्भ से उत्पन्न को नमस्कार — चरणों की पूजा करता हूँ। अत्रिपुत्र को नमस्कार — गुल्फों की पूजा करता हूँ। त्रिमूर्त्यात्मक मूर्ति को नमस्कार — जङ्घाओं की पूजा करता हूँ। अनघ को नमस्कार — जानुओं की पूजा करता हूँ। अवधूत को नमस्कार — ऊरुओं की पूजा करता हूँ। सामग को नमस्कार — कटि की पूजा करता हूँ। आदि, मध्य और अन्त से रहित को नमस्कार — उदर की पूजा करता हूँ। महोरस्क को नमस्कार — वक्षःस्थल की पूजा करता हूँ। शङ्ख, चक्र, डमरु, त्रिशूल और कमण्डलु धारण करने वाले को नमस्कार — हाथों की पूजा करता हूँ। षड्भुज को नमस्कार — बाहुओं की पूजा करता हूँ। कम्बुकण्ठ को नमस्कार — कण्ठ की पूजा करता हूँ। सब तत्त्वों के प्रबोधक को नमस्कार — मुखों की पूजा करता हूँ। नित्य अनुग्रह दृष्टि वाले को नमस्कार — नेत्रों की पूजा करता हूँ। सहस्रशिर को नमस्कार — शिरों की पूजा करता हूँ। सत् और असत् के संशय का छेदन करने वाले को नमस्कार — सब अङ्गों की पूजा करता हूँ।
+
+--- unit 20 | section: अङ्गपूजा ---
+vidhi:
+The hundred and eight names. The page does not print the list; it sends the worshipper to it.
+deva:
+अथ अष्टोत्तरशतनाम पूजा –
+श्रीदत्तात्रेय अष्टोत्तरशतनामावली पश्यतु ॥
+iast:
+atha aṣṭottaraśatanāma pūjā –
+śrīdattātreya aṣṭottaraśatanāmāvalī paśyatu ||
+en: Then the worship with the hundred and eight names — See the list of the hundred and eight names of Śrī Dattātreya.
+tel: అథ అష్టోత్తరశతనామ పూజ — శ్రీ దత్తాత్రేయ అష్టోత్తరశతనామావళిని చూడుము.
+hi: अथ अष्टोत्तरशतनाम पूजा — श्री दत्तात्रेय अष्टोत्तरशतनामावली देखिए।
+
+--- unit 21 | section: षोडशोपचार पूजा ---
+vidhi:
+Incense. The ṛc is the twelfth of the Puruṣa Sūkta.
+deva:
+धूपम् –
+यत्पुरु॑षं॒ व्य॑दधुः ।
+क॒ति॒धा व्य॑कल्पयन् ।
+मुखं॒ किम॑स्य॒ कौ बा॒हू ।
+कावू॒रू पादा॑वुच्येते ।
+दशाङ्गं गुग्गुलोपेतं सुगन्धं सुमनोहरम् ।
+धूपमाघ्राण दत्तेश सर्वदेवनमस्कृत ॥
+ओं श्रीदत्तात्रेयाय नमः धूपमाघ्रापयामि ।
+iast:
+dhūpam –
+yatpuruṣaṁ vyadadhuḥ |
+katidhā vyakalpayan |
+mukhaṁ kimasya kau bāhū |
+kāvūrū pādāvucyete |
+daśāṅgaṁ guggulopetaṁ sugandhaṁ sumanoharam |
+dhūpamāghrāṇa datteśa sarvadevanamaskṛta ||
+oṁ śrīdattātreyāya namaḥ dhūpamāghrāpayāmi |
+en: Incense — When they divided the Person, into how many parts did they arrange him? What was his mouth, what his two arms, what are called his thighs and his feet? Of ten ingredients, with guggulu, fragrant and most pleasing — smell this incense, O lord Datta, saluted by all the gods. Oṁ, salutation to Śrī Dattātreya. I offer incense for him to smell.
+tel: ధూపము — పురుషుని విభజించినపుడు ఎన్ని విధములుగా ఆయనను కల్పించిరి? ఆయన ముఖమేది, ఆయన రెండు బాహువులేవి, ఆయన తొడలును పాదములును ఏవి అని చెప్పబడును? దశాంగముతోను గుగ్గిలముతోను కూడినదియు, సుగంధమైనదియు, మిక్కిలి మనోహరమైనదియు అగు ధూపమును ఆఘ్రాణింపుము, ఓ దత్తేశా, సర్వదేవతలచే నమస్కరింపబడువాడా. ఓం శ్రీ దత్తాత్రేయునికి నమస్కారము. ధూపమును ఆఘ్రాణింపజేయుచున్నాను.
+hi: धूप — जब उन्होंने पुरुष का विभाजन किया, तो कितने प्रकार से उनकी कल्पना की? उनका मुख क्या था, उनकी दोनों भुजाएँ क्या थीं, उनके ऊरु और चरण क्या कहे जाते हैं? दशाङ्ग और गुग्गुल से युक्त, सुगन्धित और सुमनोहर धूप को सूँघिए, हे दत्तेश, हे सब देवों से नमस्कृत। ओम् श्री दत्तात्रेय को नमस्कार। धूप आघ्रापित करता हूँ।
+
+--- unit 22 | section: षोडशोपचार पूजा ---
+vidhi:
+The lamp. The ṛc is the thirteenth of the Puruṣa Sūkta.
+deva:
+दीपम् –
+ब्रा॒ह्म॒णो᳚ऽस्य॒ मुख॑मासीत् ।
+बा॒हू रा॑ज॒न्य॑ः कृ॒तः ।
+ऊ॒रू तद॑स्य॒ यद्वैश्य॑ः ।
+प॒द्भ्याग्ं शू॒द्रो अ॑जायत ।
+घृतत्रिवर्तिसम्युक्तं वह्निनायोजितं प्रियम् ।
+दीपं गृहाण देवेश त्रैलोक्यतिमिरापह ॥
+ओं श्रीदत्तात्रेयाय नमः दीपं दर्शयामि ।
+धूपदीपानन्तरं शुद्धाचमनीयं समर्पयामि ।
+iast:
+dīpam –
+brāhmaṇo'sya mukhamāsīt |
+bāhū rājanyaḥ kṛtaḥ |
+ūrū tadasya yadvaiśyaḥ |
+padbhyāgṁ śūdro ajāyata |
+ghṛtatrivartisamyuktaṁ vahnināyojitaṁ priyam |
+dīpaṁ gṛhāṇa deveśa trailokyatimirāpaha ||
+oṁ śrīdattātreyāya namaḥ dīpaṁ darśayāmi |
+dhūpadīpānantaraṁ śuddhācamanīyaṁ samarpayāmi |
+en: Lamp — The brāhmaṇa was his mouth; the arms were made the kṣatriya; his thighs were the vaiśya; from his feet the śūdra was born. Joined with three wicks in ghee, lit with fire and dear to you — accept this lamp, O lord of the gods, who take away the darkness of the three worlds. Oṁ, salutation to Śrī Dattātreya. I show the lamp. After the incense and the lamp I offer pure water for sipping.
+tel: దీపము — బ్రాహ్మణుడు ఆయన ముఖము ఆయెను; బాహువులు రాజన్యుడు చేయబడెను; ఆయన తొడలు వైశ్యుడు; పాదములనుండి శూద్రుడు పుట్టెను. నేతితోను మూడు వత్తులతోను కూడినదియు, అగ్నితో వెలిగింపబడినదియు, ప్రియమైనదియు అగు దీపమును గ్రహింపుము, ఓ దేవేశా, ముల్లోకముల చీకటిని తొలగించువాడా. ఓం శ్రీ దత్తాత్రేయునికి నమస్కారము. దీపమును చూపుచున్నాను. ధూపదీపానంతరము శుద్ధ ఆచమనీయమును సమర్పించుచున్నాను.
+hi: दीप — ब्राह्मण उनका मुख था; बाहु राजन्य किए गए; उनके ऊरु वैश्य थे; चरणों से शूद्र उत्पन्न हुआ। घृत और तीन बत्तियों से युक्त, अग्नि से प्रज्वलित और प्रिय यह दीप ग्रहण कीजिए, हे देवेश, हे त्रैलोक्य के तिमिर को दूर करने वाले। ओम् श्री दत्तात्रेय को नमस्कार। दीप दिखाता हूँ। धूप और दीप के पश्चात् शुद्ध आचमनीय समर्पित करता हूँ।
+
+--- unit 23 | section: षोडशोपचार पूजा ---
+vidhi:
+The food-offering. The ṛc is the fourteenth of the Puruṣa Sūkta.
+deva:
+नैवेद्यम् –
+च॒न्द्रमा॒ मन॑सो जा॒तः ।
+चक्षो॒ः सूर्यो॑ अजायत ।
+मुखा॒दिन्द्र॑श्चा॒ग्निश्च॑ ।
+प्रा॒णाद्वा॒युर॑जायत ।
+भवदीय कृपायुक्तं सम्भावित निवेदितम् ।
+त्वमेव भोजनं भोक्ता सुरसोऽपि त्वमेव च ॥
+ओं श्रीदत्तात्रेयाय नमः नैवेद्यं समर्पयामि ।
+iast:
+naivedyam –
+candramā manaso jātaḥ |
+cakṣoḥ sūryo ajāyata |
+mukhādindraścāgniśca |
+prāṇādvāyurajāyata |
+bhavadīya kṛpāyuktaṁ sambhāvita niveditam |
+tvameva bhojanaṁ bhoktā suraso'pi tvameva ca ||
+oṁ śrīdattātreyāya namaḥ naivedyaṁ samarpayāmi |
+en: Food-offering — The moon was born from his mind; from his eye the sun was born. From his mouth came Indra and Agni; from his breath the wind was born. This food, made by your grace and offered as I was able — you alone are the food, you are the one who eats it, and you are its sweetness too. Oṁ, salutation to Śrī Dattātreya. I offer the food-offering.
+tel: నైవేద్యము — ఆయన మనస్సునుండి చంద్రుడు పుట్టెను; ఆయన కంటినుండి సూర్యుడు పుట్టెను. ముఖమునుండి ఇంద్రుడును అగ్నియు; ప్రాణమునుండి వాయువు పుట్టెను. నీ కృపతో కూడినదియు, నాకు సాధ్యమైనంతగా నివేదింపబడినదియు అగు దీనియందు — నీవే భోజనము, నీవే భోక్త, దాని రుచియు నీవే. ఓం శ్రీ దత్తాత్రేయునికి నమస్కారము. నైవేద్యమును సమర్పించుచున్నాను.
+hi: नैवेद्य — उनके मन से चन्द्रमा उत्पन्न हुआ; उनके चक्षु से सूर्य उत्पन्न हुआ। मुख से इन्द्र और अग्नि; प्राण से वायु उत्पन्न हुआ। आपकी कृपा से युक्त, यथासम्भव निवेदित इस अन्न में — आप ही भोजन हैं, आप ही भोक्ता हैं, और उसका रस भी आप ही हैं। ओम् श्री दत्तात्रेय को नमस्कार। नैवेद्य समर्पित करता हूँ।
+
+--- unit 24 | section: षोडशोपचार पूजा ---
+vidhi:
+The mantras said over the food. The Gāyatrī, the sprinkling of water about the dish, and the offerings to the five breaths. The words in round brackets give the form of the sprinkling used in the evening.
+deva:
+ओं भूर्भुव॒स्सुव॑ः । तत्स॑वि॒तुर्वरे᳚ण्यं॒ भर्गो॑ दे॒वस्य॑ धीमहि ।
+धियो॒ यो न॑ः प्रचो॒दया᳚त् ॥
+सत्यं त्वा ऋतेन परिषिञ्चामि ।
+(सायङ्काले – ऋतं त्वा सत्येन परिषिञ्चामि)
+अमृतमस्तु । अ॒मृ॒तो॒प॒स्तर॑णमसि ।
+ओं प्रा॒णाय॒ स्वाहा᳚ । ओं अ॒पा॒नाय॒ स्वाहा᳚ ।
+ओं व्या॒नाय॒ स्वाहा᳚ । ओं उ॒दा॒नाय॒ स्वाहा᳚ ।
+ओं स॒मा॒नाय॒ स्वाहा᳚ ।
+मध्ये मध्ये पानीयं समर्पयामि ।
+अ॒मृ॒ता॒पि॒धा॒नम॑सि । उत्तरापोशनं समर्पयामि ।
+हस्तौ प्रक्षालयामि । पादौ प्रक्षालयामि ।
+शुद्धाचमनीयं समर्पयामि ।
+iast:
+oṁ bhūrbhuvassuvaḥ | tatsaviturvareṇyaṁ bhargo devasya dhīmahi |
+dhiyo yo naḥ pracodayāt ||
+satyaṁ tvā ṛtena pariṣiñcāmi |
+(sāyaṅkāle – ṛtaṁ tvā satyena pariṣiñcāmi)
+amṛtamastu | amṛtopastaraṇamasi |
+oṁ prāṇāya svāhā | oṁ apānāya svāhā |
+oṁ vyānāya svāhā | oṁ udānāya svāhā |
+oṁ samānāya svāhā |
+madhye madhye pānīyaṁ samarpayāmi |
+amṛtāpidhānamasi | uttarāpośanaṁ samarpayāmi |
+hastau prakṣālayāmi | pādau prakṣālayāmi |
+śuddhācamanīyaṁ samarpayāmi |
+en: Oṁ, earth, air and heaven. We meditate upon the excellent light of the god Savitṛ. May he impel our thoughts. With truth I sprinkle you about. (In the evening — with right order I sprinkle you about.) Let it be nectar. You are the spread beneath the nectar. Oṁ, to the out-breath, svāhā. Oṁ, to the in-breath, svāhā. Oṁ, to the diffused breath, svāhā. Oṁ, to the up-breath, svāhā. Oṁ, to the even breath, svāhā. Between the courses I offer water. You are the covering upon the nectar. I offer the water taken after eating. I wash the hands. I wash the feet. I offer pure water for sipping.
+tel: ఓం భూర్భువస్సువః. సవితృదేవుని వరేణ్యమైన తేజస్సును ధ్యానించుచున్నాము. ఆయన మా బుద్ధులను ప్రేరేపించుగాక. సత్యముతో నిన్ను చుట్టూ ప్రోక్షించుచున్నాను. (సాయంకాలమునందు — ఋతముతో నిన్ను చుట్టూ ప్రోక్షించుచున్నాను.) అమృతమగుగాక. నీవు అమృతమునకు ఉపస్తరణమువు. ఓం ప్రాణమునకు స్వాహా. ఓం అపానమునకు స్వాహా. ఓం వ్యానమునకు స్వాహా. ఓం ఉదానమునకు స్వాహా. ఓం సమానమునకు స్వాహా. మధ్య మధ్య పానీయమును సమర్పించుచున్నాను. నీవు అమృతమునకు అపిధానమువు. ఉత్తరాపోశనమును సమర్పించుచున్నాను. హస్తములను కడుగుచున్నాను. పాదములను కడుగుచున్నాను. శుద్ధ ఆచమనీయమును సమర్పించుచున్నాను.
+hi: ओम् भूर्भुवः स्वः। हम सवितृ देव के वरेण्य तेज का ध्यान करते हैं। वे हमारी बुद्धियों को प्रेरित करें। सत्य से मैं तुम्हें परिसिञ्चित करता हूँ। (सायंकाल में — ऋत से मैं तुम्हें परिसिञ्चित करता हूँ।) अमृत हो। तुम अमृत का उपस्तरण हो। ओम् प्राण को स्वाहा। ओम् अपान को स्वाहा। ओम् व्यान को स्वाहा। ओम् उदान को स्वाहा। ओम् समान को स्वाहा। बीच-बीच में पानीय समर्पित करता हूँ। तुम अमृत का अपिधान हो। उत्तरापोशन समर्पित करता हूँ। हाथ धोता हूँ। चरण धोता हूँ। शुद्ध आचमनीय समर्पित करता हूँ।
+
+--- unit 25 | section: षोडशोपचार पूजा ---
+vidhi:
+Betel. The ṛc is the fifteenth of the Puruṣa Sūkta.
+deva:
+ताम्बूलम् –
+नाभ्या॑ आसीद॒न्तरि॑क्षम् ।
+शी॒र्ष्णो द्यौः सम॑वर्तत ।
+प॒द्भ्यां भूमि॒र्दिश॒ः श्रोत्रा᳚त् ।
+तथा॑ लो॒काग्ं अ॑कल्पयन् ।
+पूगीफलैश्च कर्पूरैः नागवल्लीदलैर्युतम् ।
+मुक्ताचूर्णसमायुक्तं ताम्बूलं प्रतिगृह्यताम् ॥
+ओं श्रीदत्तात्रेयाय नमः ताम्बूलं समर्पयामि ।
+iast:
+tāmbūlam –
+nābhyā āsīdantarikṣam |
+śīrṣṇo dyauḥ samavartata |
+padbhyāṁ bhūmirdiśaḥ śrotrāt |
+tathā lokāgṁ akalpayan |
+pūgīphalaiśca karpūraiḥ nāgavallīdalairyutam |
+muktācūrṇasamāyuktaṁ tāmbūlaṁ pratigṛhyatām ||
+oṁ śrīdattātreyāya namaḥ tāmbūlaṁ samarpayāmi |
+en: Betel — From his navel came the mid-air; from his head the heaven took shape; from his feet the earth, and the quarters from his ear. So they fashioned the worlds. With areca nuts and camphor, with leaves of the betel creeper, joined with powder of pearl — let this betel be accepted. Oṁ, salutation to Śrī Dattātreya. I offer betel.
+tel: తాంబూలము — ఆయన నాభినుండి అంతరిక్షము కలిగెను; శిరమునుండి ద్యులోకము ఏర్పడెను; పాదములనుండి భూమి, చెవినుండి దిక్కులు. ఇట్లు లోకములను కల్పించిరి. పోకచెక్కలతోను కర్పూరముతోను, నాగవల్లీ దళములతోను, ముత్యాల సున్నముతోను కూడిన ఈ తాంబూలమును స్వీకరింపుము. ఓం శ్రీ దత్తాత్రేయునికి నమస్కారము. తాంబూలమును సమర్పించుచున్నాను.
+hi: ताम्बूल — उनकी नाभि से अन्तरिक्ष हुआ; शीर्ष से द्यौ बना; चरणों से भूमि और श्रोत्र से दिशाएँ। इस प्रकार उन्होंने लोकों की कल्पना की। पूगीफल और कर्पूर सहित, नागवल्ली के दलों से युक्त, मुक्ता के चूर्ण से युक्त यह ताम्बूल स्वीकार कीजिए। ओम् श्री दत्तात्रेय को नमस्कार। ताम्बूल समर्पित करता हूँ।
+
+--- unit 26 | section: षोडशोपचार पूजा ---
+vidhi:
+The waving of the light. The ṛc is `वेदाहमेतं पुरुषं महान्तम्`, which follows the sixteen ṛcs in the Taittirīya text of the Puruṣa Sūkta.
+deva:
+नीराजनम् –
+वेदा॒हमे॒तं पुरु॑षं म॒हान्तम्᳚ ।
+आ॒दि॒त्यव॑र्णं॒ तम॑स॒स्तु पा॒रे ।
+सर्वा॑णि रू॒पाणि॑ वि॒चित्य॒ धीर॑ः ।
+नामा॑नि कृ॒त्वाऽभि॒वद॒न्॒ यदास्ते᳚ ।
+स्वस्तिरस्तु शुभमस्तु सर्वत्र मङ्गलानि च ।
+नित्यश्रीरस्तु दत्तेश नीराजनं प्रगृह्यताम् ॥
+ओं श्रीदत्तात्रेयाय नमः आनन्दमङ्गल नीराजनं दर्शयामि ।
+iast:
+nīrājanam –
+vedāhametaṁ puruṣaṁ mahāntam |
+ādityavarṇaṁ tamasastu pāre |
+sarvāṇi rūpāṇi vicitya dhīraḥ |
+nāmāni kṛtvā'bhivadan yadāste |
+svastirastu śubhamastu sarvatra maṅgalāni ca |
+nityaśrīrastu datteśa nīrājanaṁ pragṛhyatām ||
+oṁ śrīdattātreyāya namaḥ ānandamaṅgala nīrājanaṁ darśayāmi |
+en: Waving of the light — I know that great Person, of the colour of the sun, beyond the darkness. Knowing all forms apart and making their names, the wise one abides, uttering them. May there be well-being, may there be good, and blessings everywhere. May fortune be with you always, O lord Datta: let this waving of the light be accepted. Oṁ, salutation to Śrī Dattātreya. I show the waving of the light of joy and blessing.
+tel: నీరాజనము — చీకటికి ఆవల ఉన్న ఆదిత్యవర్ణుడైన ఆ మహాపురుషుని నేను ఎఱుగుదును. సర్వ రూపములను వేఱుగా ఎఱిగి, నామములను చేసి, ఆ ధీరుడు వానిని పలుకుచు ఉండును. స్వస్తి అగుగాక, శుభమగుగాక, అంతటను మంగళములు అగుగాక. నిత్యశ్రీ అగుగాక, ఓ దత్తేశా; ఈ నీరాజనమును గ్రహింపుము. ఓం శ్రీ దత్తాత్రేయునికి నమస్కారము. ఆనందమంగళ నీరాజనమును చూపుచున్నాను.
+hi: नीराजन — मैं उस महान् पुरुष को जानता हूँ, आदित्यवर्ण, तमस् के पार। सब रूपों को अलग-अलग जानकर और नाम बनाकर वह धीर उन्हें कहता हुआ स्थित है। स्वस्ति हो, शुभ हो, और सर्वत्र मङ्गल हों। नित्य श्री हो, हे दत्तेश; यह नीराजन ग्रहण कीजिए। ओम् श्री दत्तात्रेय को नमस्कार। आनन्दमङ्गल नीराजन दिखाता हूँ।
+
+--- unit 27 | section: मन्त्रपुष्पम् ---
+vidhi:
+The mantra-flower. The Vedic verse `धाता पुरस्तात्` comes first, then the Datta gāyatrī, which the page prints without accent, and two verses of offering.
+deva:
+मन्त्रपुष्पम् –
+धा॒ता पु॒रस्ता॒द्यमु॑दाज॒हार॑ ।
+श॒क्रः प्रवि॒द्वान्प्र॒दिश॒श्चत॑स्रः ।
+तमे॒वं वि॒द्वान॒मृत॑ इ॒ह भ॑वति ।
+नान्यः पन्था॒ अय॑नाय विद्यते ॥
+ओं दिगम्बराय विद्महे अवधूताय धीमहि तन्नो दत्तः प्रचोदयात् ॥
+अनसूयासुतो दत्तो ह्यत्रिपुत्रो महामुनिः ।
+इदं दिव्यं मन्त्रपुष्पं स्वीकुरुष्व नरोत्तम ॥
+भुक्तिमुक्तिप्रदाता च कार्तवीर्यवरप्रदः ।
+पुष्पाञ्जलिं गृहाणेदं निगमागमवन्दित ॥
+ओं श्रीदत्तात्रेयाय नमः मन्त्रपुष्पाणि समर्पयामि ।
+iast:
+mantrapuṣpam –
+dhātā purastādyamudājahāra |
+śakraḥ pravidvānpradiśaścatasraḥ |
+tamevaṁ vidvānamṛta iha bhavati |
+nānyaḥ panthā ayanāya vidyate ||
+oṁ digambarāya vidmahe avadhūtāya dhīmahi tanno dattaḥ pracodayāt ||
+anasūyāsuto datto hyatriputro mahāmuniḥ |
+idaṁ divyaṁ mantrapuṣpaṁ svīkuruṣva narottama ||
+bhuktimuktipradātā ca kārtavīryavarapradaḥ |
+puṣpāñjaliṁ gṛhāṇedaṁ nigamāgamavandita ||
+oṁ śrīdattātreyāya namaḥ mantrapuṣpāṇi samarpayāmi |
+en: The mantra-flower — Dhātṛ, who knew him of old, proclaimed him; and Śakra, who knew the four quarters well. He who knows him thus becomes immortal here. There is no other path for going. Oṁ, may we know the Digambara, may we meditate upon the Avadhūta; may Datta impel us. Datta, son of Anasūyā, son of Atri, great sage — accept this divine mantra-flower, O best of men. Giver of enjoyment and of freedom, who gave the boon to Kārtavīrya, praised by the Vedas and the Āgamas — accept this handful of flowers. Oṁ, salutation to Śrī Dattātreya. I offer the mantra-flowers.
+tel: మంత్రపుష్పము — పూర్వమే ఎఱిగిన ధాత ఆయనను ప్రకటించెను; నాలుగు దిక్కులను చక్కగా ఎఱిగిన శక్రుడును. ఆయనను ఇట్లు ఎఱిగినవాడు ఇచటనే అమృతుడగును. పోవుటకు వేఱు మార్గము లేదు. ఓం దిగంబరుని ఎఱుగుదుము, అవధూతను ధ్యానించుచున్నాము; దత్తుడు మమ్ము ప్రేరేపించుగాక. అనసూయాసుతుడును అత్రిపుత్రుడును మహామునియు అగు దత్తా, ఈ దివ్యమైన మంత్రపుష్పమును స్వీకరింపుము, ఓ నరోత్తమా. భుక్తిముక్తులను ఇచ్చువాడా, కార్తవీర్యునికి వరమిచ్చినవాడా, నిగమాగమములచే నమస్కరింపబడువాడా, ఈ పుష్పాంజలిని గ్రహింపుము. ఓం శ్రీ దత్తాత్రేయునికి నమస్కారము. మంత్రపుష్పములను సమర్పించుచున్నాను.
+hi: मन्त्रपुष्प — धाता ने, जो उन्हें पहले से जानता था, उनका उद्घोष किया; और शक्र ने, जो चारों दिशाओं का ज्ञाता था। जो उन्हें इस प्रकार जानता है वह यहीं अमृत हो जाता है। जाने के लिए दूसरा मार्ग नहीं है। ओम्, हम दिगम्बर को जानते हैं, अवधूत का ध्यान करते हैं; दत्त हमें प्रेरित करें। हे अनसूयासुत, अत्रिपुत्र, महामुनि दत्त, यह दिव्य मन्त्रपुष्प स्वीकार कीजिए, हे नरोत्तम। हे भुक्ति और मुक्ति के दाता, हे कार्तवीर्य को वर देने वाले, हे निगमों और आगमों से वन्दित, यह पुष्पाञ्जलि ग्रहण कीजिए। ओम् श्री दत्तात्रेय को नमस्कार। मन्त्रपुष्प समर्पित करता हूँ।
+
+--- unit 28 | section: प्रदक्षिणम् ---
+vidhi:
+Circumambulation and salutation.
+deva:
+प्रदक्षिण –
+यानि कानि च पापानि जन्मान्तरकृतानि च ।
+तानि तानि प्रणश्यन्ति प्रदक्षिण पदे पदे ॥
+पापोऽहं पापकर्माऽहं पापात्मा पापसम्भवः ।
+त्राहि मां कृपया देव शरणागतवत्सल ॥
+अन्यथा शरणं नास्ति त्वमेव शरणं मम ।
+तस्मात्कारुण्य भावेन रक्ष रक्ष श्रीदत्तेश ॥
+ओं श्रीदत्तात्रेयाय नमः आत्मप्रदक्षिण नमस्कारान् समर्पयामि ।
+iast:
+pradakṣiṇa –
+yāni kāni ca pāpāni janmāntarakṛtāni ca |
+tāni tāni praṇaśyanti pradakṣiṇa pade pade ||
+pāpo'haṁ pāpakarmā'haṁ pāpātmā pāpasambhavaḥ |
+trāhi māṁ kṛpayā deva śaraṇāgatavatsala ||
+anyathā śaraṇaṁ nāsti tvameva śaraṇaṁ mama |
+tasmātkāruṇya bhāvena rakṣa rakṣa śrīdatteśa ||
+oṁ śrīdattātreyāya namaḥ ātmapradakṣiṇa namaskārān samarpayāmi |
+en: Circumambulation — Whatever sins have been done, and those done in other births, all of them are destroyed at each step of the circumambulation. I am sinful, my deeds are sinful, my nature is sinful, I am born of sin. Save me in your mercy, O god, who love those who come to you for refuge. I have no other refuge; you alone are my refuge. Therefore, in your compassion, protect me, protect me, O Śrī Datteśa. Oṁ, salutation to Śrī Dattātreya. I offer circumambulation of myself and salutations.
+tel: ప్రదక్షిణము — జన్మాంతరములలో చేసినవియు, ఏ ఏ పాపములు కలవో, అవి అన్నియు ప్రదక్షిణము యొక్క ప్రతి అడుగునందును నశించును. నేను పాపిని, పాపకర్ముడను, పాపాత్ముడను, పాపమునుండి పుట్టినవాడను. ఓ దేవా, శరణాగతవత్సలా, కృపతో నన్ను రక్షింపుము. నాకు వేఱు శరణము లేదు; నీవే నాకు శరణము. కావున కారుణ్యభావముతో రక్షింపుము, రక్షింపుము, ఓ శ్రీ దత్తేశా. ఓం శ్రీ దత్తాత్రేయునికి నమస్కారము. ఆత్మప్రదక్షిణ నమస్కారములను సమర్పించుచున్నాను.
+hi: प्रदक्षिणा — जो कोई भी पाप किए गए हैं, और जो जन्मान्तरों में किए गए हैं, वे सब प्रदक्षिणा के पग-पग पर नष्ट हो जाते हैं। मैं पापी हूँ, पापकर्मा हूँ, पापात्मा हूँ, पाप से उत्पन्न हूँ। हे देव, हे शरणागतवत्सल, कृपा करके मेरी रक्षा कीजिए। मेरी और कोई शरण नहीं है; आप ही मेरी शरण हैं। इसलिए करुणाभाव से रक्षा कीजिए, रक्षा कीजिए, हे श्री दत्तेश। ओम् श्री दत्तात्रेय को नमस्कार। आत्मप्रदक्षिणा और नमस्कार समर्पित करता हूँ।
+
+--- unit 29 | section: उपचार पूजा ---
+vidhi:
+The royal services, offered in thought.
+deva:
+उपचार पूजा –
+ओं श्रीदत्तात्रेयाय नमः ।
+छत्रमाच्छादयामि । चामरैर्वीजयामि ।
+नृत्यं दर्शयामि । गीतं श्रावयामि ।
+वाद्यं घोषयामि । आन्दोलिकानारोहयामि ।
+अश्वानारोहयामि । गजानारोहयामि ।
+समस्त राजोपचार देवोपचार भक्त्युपचार शक्त्युपचार मन्त्रोपचार पूजाः समर्पयामि ॥
+iast:
+upacāra pūjā –
+oṁ śrīdattātreyāya namaḥ |
+chatramācchādayāmi | cāmarairvījayāmi |
+nṛtyaṁ darśayāmi | gītaṁ śrāvayāmi |
+vādyaṁ ghoṣayāmi | āndolikānārohayāmi |
+aśvānārohayāmi | gajānārohayāmi |
+samasta rājopacāra devopacāra bhaktyupacāra śaktyupacāra mantropacāra pūjāḥ samarpayāmi ||
+en: The services — Oṁ, salutation to Śrī Dattātreya. I hold up the parasol. I fan with the whisks. I show the dance. I cause the song to be heard. I sound the instruments. I seat him in the palanquin. I seat him upon the horse. I seat him upon the elephant. I offer the worship of all the services of a king, of a god, of devotion, of power and of mantra.
+tel: ఉపచార పూజ — ఓం శ్రీ దత్తాత్రేయునికి నమస్కారము. ఛత్రమును పట్టుచున్నాను. చామరములతో వీచుచున్నాను. నృత్యమును చూపుచున్నాను. గీతమును వినిపించుచున్నాను. వాద్యమును మ్రోగించుచున్నాను. ఆందోళికను ఎక్కించుచున్నాను. అశ్వములను ఎక్కించుచున్నాను. గజములను ఎక్కించుచున్నాను. సమస్త రాజోపచార దేవోపచార భక్త్యుపచార శక్త్యుపచార మంత్రోపచార పూజలను సమర్పించుచున్నాను.
+hi: उपचार पूजा — ओम् श्री दत्तात्रेय को नमस्कार। छत्र लगाता हूँ। चामरों से वीजन करता हूँ। नृत्य दिखाता हूँ। गीत सुनाता हूँ। वाद्य बजाता हूँ। आन्दोलिका पर आरोहण कराता हूँ। अश्वों पर आरोहण कराता हूँ। गजों पर आरोहण कराता हूँ। समस्त राजोपचार, देवोपचार, भक्त्युपचार, शक्त्युपचार और मन्त्रोपचार पूजाएँ समर्पित करता हूँ।
+
+--- unit 30 | section: प्रार्थना ---
+vidhi:
+The prayer, in four verses.
+deva:
+प्रार्थना –
+दत्तात्रेयं शिवं शान्तमिन्द्रनीलनिभं प्रभुम् ।
+आत्ममायारतं देवं अवधूतं दिगम्बरम् ॥
+नमो नमस्ते जगदेकनाथ
+नमो नमस्ते सुपवित्रगाथ ।
+नमो नमस्ते जगतामधीश
+नमो नमस्तेऽस्तु परावरेश ॥
+जटाधरं पाण्डुरङ्गं शूलहस्तं कृपानिधिम् ।
+सर्वरोगहरं देवं दत्तात्रेयमहं भजे ॥
+नमस्ते भगवन् देव दत्तात्रेय जगत्प्रभो ।
+सर्वबाधाप्रशमनं कुरु शान्तिं प्रयच्छ मे ॥
+iast:
+prārthanā –
+dattātreyaṁ śivaṁ śāntamindranīlanibhaṁ prabhum |
+ātmamāyārataṁ devaṁ avadhūtaṁ digambaram ||
+namo namaste jagadekanātha
+namo namaste supavitragātha |
+namo namaste jagatāmadhīśa
+namo namaste'stu parāvareśa ||
+jaṭādharaṁ pāṇḍuraṅgaṁ śūlahastaṁ kṛpānidhim |
+sarvarogaharaṁ devaṁ dattātreyamahaṁ bhaje ||
+namaste bhagavan deva dattātreya jagatprabho |
+sarvabādhāpraśamanaṁ kuru śāntiṁ prayaccha me ||
+en: Prayer — Dattātreya, auspicious and calm, the Lord, like a sapphire in hue, delighting in his own māyā, the god, the Avadhūta, clothed in the sky. Salutation, salutation to you, sole Lord of the world. Salutation, salutation to you, whose story is most pure. Salutation, salutation to you, ruler of the worlds. Salutation, salutation to you, Lord of the higher and the lower. I worship Dattātreya, the god who removes all disease, who wears matted hair, pale of body, trident in hand, a treasure of mercy. Salutation to you, Lord, god Dattātreya, master of the world. Quiet every trouble, and grant me peace.
+tel: ప్రార్థన — దత్తాత్రేయుని, శివుని, శాంతుని, ఇంద్రనీలము వంటి కాంతి కల ప్రభువును, ఆత్మమాయయందు రమించు దేవుని, అవధూతను, దిగంబరుని. జగదేకనాథా, నీకు నమో నమః. సుపవిత్రగాథా, నీకు నమో నమః. జగతామధీశా, నీకు నమో నమః. పరావరేశా, నీకు నమో నమః. జటాధరుని, పాండురంగుని, శూలహస్తుని, కృపానిధిని, సర్వరోగములను హరించు దేవుడైన దత్తాత్రేయుని నేను భజించుచున్నాను. ఓ భగవాన్, దేవా, దత్తాత్రేయా, జగత్ప్రభూ, నీకు నమస్కారము. సర్వబాధలను ఉపశమింపజేయుము, నాకు శాంతిని ప్రసాదింపుము.
+hi: प्रार्थना — दत्तात्रेय, शिव, शान्त, इन्द्रनील के समान प्रभु, आत्ममाया में रत देव, अवधूत, दिगम्बर। हे जगत् के एकमात्र नाथ, आपको बार-बार नमस्कार। हे अत्यन्त पवित्र गाथा वाले, आपको बार-बार नमस्कार। हे जगतों के अधीश, आपको बार-बार नमस्कार। हे पर और अवर के ईश, आपको बार-बार नमस्कार। जटाधारी, पाण्डुर अङ्ग वाले, शूलहस्त, कृपानिधि, सब रोगों को हरने वाले देव दत्तात्रेय का मैं भजन करता हूँ। हे भगवन्, हे देव दत्तात्रेय, हे जगत्प्रभो, आपको नमस्कार। सब बाधाओं को शान्त कीजिए और मुझे शान्ति दीजिए।
+
+--- unit 31 | section: क्षमाप्रार्थना ---
+vidhi:
+Asking pardon, and the closing dedication.
+deva:
+क्षमा प्रार्थना –
+यस्य स्मृत्या च नामोक्त्या तपः पूजा क्रियादिषु ।
+न्यूनं सम्पूर्णतां याति सद्यो वन्दे तमच्युतम् ॥
+मन्त्रहीनं क्रियाहीनं भक्तिहीनं जनार्दन ।
+यत्पूजितं मया देव परिपूर्णं तदस्तु ते ॥
+अनया ध्यान आवाहनादि षोडशोपचार पूजया भगवान् सर्वात्मकः श्रीदत्तात्रेय स्वामि सुप्रीतो सुप्रसन्नो वरदो भवन्तु ॥
+iast:
+kṣamā prārthanā –
+yasya smṛtyā ca nāmoktyā tapaḥ pūjā kriyādiṣu |
+nyūnaṁ sampūrṇatāṁ yāti sadyo vande tamacyutam ||
+mantrahīnaṁ kriyāhīnaṁ bhaktihīnaṁ janārdana |
+yatpūjitaṁ mayā deva paripūrṇaṁ tadastu te ||
+anayā dhyāna āvāhanādi ṣoḍaśopacāra pūjayā bhagavān sarvātmakaḥ śrīdattātreya svāmi suprīto suprasanno varado bhavantu ||
+en: Asking pardon — By remembering him and by uttering his name, whatever is lacking in austerity, worship and rite becomes complete at once; I salute that Acyuta. Whatever worship I have made, lacking in mantra, lacking in rite, lacking in devotion, O Janārdana, let it be made complete for you, O god. By this worship in sixteen services, beginning with meditation and invocation, may the Lord, the Self of all, Śrī Dattātreya Svāmī, be well pleased, gracious, and the giver of boons.
+tel: క్షమా ప్రార్థన — ఎవని స్మరణచేతను నామోచ్చారణచేతను తపస్సు పూజ క్రియాదులయందలి లోపము వెంటనే సంపూర్ణతను పొందునో, ఆ అచ్యుతునికి నమస్కరించుచున్నాను. మంత్రహీనముగను, క్రియాహీనముగను, భక్తిహీనముగను నాచే ఏ పూజ చేయబడినదో, ఓ జనార్దనా, ఓ దేవా, అది నీకు పరిపూర్ణమగుగాక. ఈ ధ్యాన ఆవాహనాది షోడశోపచార పూజచే సర్వాత్మకుడైన భగవాన్ శ్రీ దత్తాత్రేయ స్వామి సుప్రీతుడును సుప్రసన్నుడును వరదుడును అగుగాక.
+hi: क्षमा प्रार्थना — जिनके स्मरण और नाम के उच्चारण से तप, पूजा और क्रिया आदि में जो न्यून है वह तुरन्त सम्पूर्ण हो जाता है, उन अच्युत की मैं वन्दना करता हूँ। मन्त्रहीन, क्रियाहीन और भक्तिहीन जो पूजा मैंने की है, हे जनार्दन, हे देव, वह आपके लिए परिपूर्ण हो। इस ध्यान और आवाहन आदि षोडशोपचार पूजा से सर्वात्मक भगवान् श्री दत्तात्रेय स्वामी सुप्रीत, सुप्रसन्न और वरद हों।
+
+--- unit 32 | section: तीर्थप्रसाद ग्रहणम् ---
+vidhi:
+Receiving the water from Dattātreya's feet and the food offered to him, and the closing peace.
+deva:
+तीर्थम् –
+अकालमृत्युहरणं सर्वव्याधिनिवारणम् ।
+समस्तपापक्षयकरं श्रीदत्तात्रेय पादोदकं पावनं शुभम् ॥
+श्रीदत्तात्रेय स्वामि प्रसादं शिरसा गृह्णामि ॥
+ओं शान्तिः शान्तिः शान्तिः ॥
+iast:
+tīrtham –
+akālamṛtyuharaṇaṁ sarvavyādhinivāraṇam |
+samastapāpakṣayakaraṁ śrīdattātreya pādodakaṁ pāvanaṁ śubham ||
+śrīdattātreya svāmi prasādaṁ śirasā gṛhṇāmi ||
+oṁ śāntiḥ śāntiḥ śāntiḥ ||
+en: The holy water — It removes untimely death and wards off every disease. It destroys all sin. The water from the feet of Śrī Dattātreya is purifying and auspicious. I receive the prasāda of Śrī Dattātreya Svāmī upon my head. Oṁ, peace, peace, peace.
+tel: తీర్థము — అకాలమృత్యువును హరించునదియు, సర్వ వ్యాధులను నివారించునదియు, సమస్త పాపములను క్షయింపజేయునదియు, పవిత్రమును శుభమును అగు శ్రీ దత్తాత్రేయ పాదోదకము. శ్రీ దత్తాత్రేయ స్వామి ప్రసాదమును శిరస్సున గ్రహించుచున్నాను. ఓం శాంతిః శాంతిః శాంతిః.
+hi: तीर्थ — अकालमृत्यु को हरने वाला, सब व्याधियों का निवारण करने वाला, समस्त पापों का क्षय करने वाला, पावन और शुभ श्री दत्तात्रेय का पादोदक। श्री दत्तात्रेय स्वामी का प्रसाद शिर से ग्रहण करता हूँ। ओम् शान्तिः शान्तिः शान्तिः।

@@ -21,7 +21,7 @@ FILES = [
  'puja/smarta/13_navagraha_nitya_puja.txt', 'puja/smarta/15_mahaganapati_shodashopachara_puja.txt',
  'puja/smarta/16_anjaneya_shodashopachara_puja.txt', 'puja/smarta/20_saraswati_shodashopachara_puja.txt',
  'puja/smarta/21_subrahmanya_shodashopachara_puja.txt', 'puja/smarta/26_sravana_mangalagauri_vrata_kalpam.txt',
- 'puja/vaishnava/01_purvanga_vidhanam.txt']
+ 'puja/vaishnava/01_purvanga_vidhanam.txt', 'puja/vaishnava/02_vishvaksena_laghu_shodashopachara_puja.txt']
 # Paurāṇika lines a source happens to print with svara marks: kept, accent removed.
 ACTION = re.compile(r'उत्तरापोशनं समर्पयामि|हस्तौ प्रक्षा|पादौ प्रक्षा|शुद्धाचमनीयं|मध्ये मध्ये पानीयं')   # exempt from known_vedic only
 NOT_VEDIC = re.compile(r'अपवित्रः पवित्रो वा|सर्वावस्थां गतो|लक्ष्मीं क्षीरसमुद्र|दासीभूतसमस्त देव|पद्माक्षीं वरपद्म|श्रीदेवीं प्रणतो|दासीभूतसमस्त|श्रीमन्मन्दकटाक्ष|त्रैलोक्य कुटुम्बिनीं|त्रैलोक्य कुटुंबिनीं|सिद्धलक्ष्मीर्मोक्षलक्ष्मी|श्रीलक्ष्मीर्वरलक्ष्मी|गंभीरा वर्तनाभिः|या सा पद्मासनस्था|गम्भीरावर्तनाभिः|गम्भीरा वर्तनाभिः|लक्ष्मीर्दिव्यैर्गजेन्द्रैर्|नित्यं सा पद्महस्ता')
@@ -46,7 +46,8 @@ def sents(s, fld):
 TIER_C = ['puja/smarta/07_lakshmi_nitya_puja.txt','puja/smarta/08_durga_nitya_puja.txt',
  'puja/smarta/17_shiva_shodashopachara_puja.txt','puja/smarta/18_mahalakshmi_visesha_shodashopachara_puja.txt',
  'puja/smarta/19_durga_shodashopachara_puja.txt','puja/smarta/22_surya_shodashopachara_puja.txt',
- 'puja/smarta/24_anaghashtami_vrata_kalpam.txt']
+ 'puja/smarta/24_anaghashtami_vrata_kalpam.txt',
+ 'puja/smarta/42_haridra_ganapati_puja.txt','puja/smarta/43_rama_shodashopachara_puja.txt']
 
 def _key(s):
     s = norm(s)

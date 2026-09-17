@@ -1,1 +1,830 @@
-RESERVED 2026-09-12 — this file is being written by another Claude session from `https://stotranidhi.com/hi/sri-narasimha-shodasa-upachara-puja-in-sanskrit/`. Do not write a file for this rite; it will be filled in shortly.
+Title: Śrī Lakṣmī-Nṛsiṁha Ṣoḍaśopacāra Pūjā
+Devanāgarī: श्री लक्ष्मीनृसिंह षोडशोपचार पूजा
+Telugu: శ్రీ లక్ష్మీనృసింహ షోడశోపచార పూజ
+
+Author: Anonymous (received smārta household rite). No compiler is named and none should be inferred.
+
+Type: vidhi (ritual manual) — not a stotra. Uses the one-extra-field vidhi format documented in `../../vidhi/madhyandina/01_sandhyopasana_vidhi.txt`: a `vidhi:` field carrying the ritual instruction, then deva / iast / en / tel / hi.
+
+Recension / paddhati: **Smārta, South Indian.** The Vaiṣṇava form of the opening is kept separately at `../vaishnava/01_purvanga_vidhanam.txt` and **the two must never be merged, harmonised or collated against each other.** Although the deity is Vaiṣṇava, the rite is the smārta household order of this publisher, the same shape as `15`–`22`, and it names no Vaiṣṇava pūrvāṅga.
+
+What it does not have: **no pūrvāṅga of its own.** The rite begins at the second saṅkalpa and assumes the opening acts are done; use `03_purvanga_vidhanam.txt` before it. It has no sibling among `04`–`13`, so no second-recension question arises.
+
+Source / recension: base text `https://stotranidhi.com/hi/sri-narasimha-shodasa-upachara-puja-in-sanskrit/` (fetched 2026-09-17), a Devanāgarī page carrying accent marks on its Vedic mantras. Every `deva:` line was lifted from the fetched page by machine, by line range, and the build asserts that every line of the page is used exactly once. Every `iast:` field was generated from the Devanāgarī by `../../bin/dev2iast.py`; stotranidhi's own IAST was not used.
+
+The rite is of the **Puruṣa Sūkta kind**, as its saṅkalpa and dedication say: the sixteen ṛcs of the Taittirīya Puruṣa Sūkta head the sixteen services from the invocation to the waving of the light, one to each, and the Uttaranārāyaṇa verse `धाता पुरस्ताद्यमुदाजहार` stands at the mantra-flower. Two ṛcs are placed in a different order from the hymn: the service of sandal paste (unit 15) takes `तस्माद्यज्ञात्सर्वहुतः सम्भृतं पृषदाज्यम्` and the ornaments (unit 16) take `तस्माद्यज्ञात्सर्वहुतः ऋचः सामानि जज्ञिरे`, which is the hymn's own order. Nothing was moved.
+
+Independent collation: the sixteen ṛcs were compared, accent mark for accent mark, against `../../veda/taittiriya/01_purusha_suktam.txt`. That file's base text is stotranidhi's own Puruṣa Sūktam page, so this is a check of one publisher against itself, not an independent witness; for the one real difference it found, vignanam's accented Taittirīya Āraṇyaka 3 page, a separate lineage, was read as well. **One accent differs.** Unit 6 prints `य॒दन्ने॑नाति॒रोह॑ति`, with an anudātta on the first syllable; the Puruṣa Sūktam file and vignanam both read `यदन्ने॑नाति॒रोह॑ति`, without it. Recorded and **not corrected**: the mark stands as this page prints it. Every other difference is orthographic, not a reading: this page writes `सी॒दाज्यम्` and `सन्परि॒धयः` where the Sūktam file writes `ऽऽसी॒दाज्यम्` and `ऽऽसन्`; `इ॒ध्मश्श॒रद्ध॒विः` for `इ॒ध्मः श॒रद्ध॒विः`; `प्रौक्षन्॑` for `प्रौक्षन्न्॑`; `सम्भृ॑तं` for `संभृ॑तं`; and it joins `य॒ज्ञात्स॑र्व॒हुतः` and `आ॒र॒ण्यान्ग्रा॒म्याः` where the file spaces them. None of these was changed.
+
+Defects in the base text, corrected with reasons:
+
+1. **`विचित्रानि` → `विचित्राणि`** (unit 16). The retroflex `ṇ` is required after `r` in the same word; a keying slip.
+2. **`पूजयमि` → `पूजयामि`** (unit 18). A dropped `ā`; the other twenty lines of the same list spell it correctly.
+3. **`धुपोऽयं` → `धूपोऽयं`** (unit 20). A shortened vowel; the heading of the same unit reads `धूपम्`.
+4. **`अकालमृत्यहरणं` → `अकालमृत्युहरणं`** (unit 32). A dropped `u`, corrected the same way in `19`.
+5. **Visarga written as the ASCII colon `:`** inside the accented mantras was mapped to `ः` throughout (19 places), and **zero-width joiners** inside `प॒शूग्स्ताग्श्च॑क्रे` were removed (2), as in `03`.
+
+Observed and deliberately **not** emended, there being no second witness:
+
+- In the aṅga-pūjā (unit 18): `जङ्घैः` (instrumental plural) where the accusative dual `जङ्घे` is wanted; `ऊरूं` for `ऊरू`; `नेत्रौ` for `नेत्रे`.
+- `आचम्य तां` (unit 9), where `आचम्यताम्` is meant; `सुरसत्तमे` (unit 5) and `कमलापतिः` (unit 14) where vocatives are wanted; `नृसिंह परमेश्वरः` (unit 15); `माल्यतादीनि` (unit 17), which does not construe.
+- `सुप्रीता सुप्रसन्ना वरदा भवन्तु` (unit 31), feminine and plural of a masculine singular subject — the stock formula of the goddess rites carried over.
+- `इहत्र` (unit 22), `नमस्कारां` and `प्रणामोष्टाङ्गं` (unit 28), `पुरुषोत्तमा` (unit 30) and `शरणागतवत्सला` (unit 27) with long final vowels in vocatives.
+- `सम्युक्तं` for `संयुक्तं`: this publisher's regular habit of writing anusvāra before a semivowel as `म्`.
+
+Accent: **present on the Vedic mantras** — the prāṇapratiṣṭhā (Ṛgveda 10.59.6 and its formula), the sixteen ṛcs of the Puruṣa Sūkta, `आपो हि ष्ठा` at the bath, the Gāyatrī and the offerings to the five breaths at the naivedya, `धाता पुरस्तात्`, and the Nṛsiṁha gāyatrī `वज्रनखाय विद्महे` (Taittirīya Āraṇyaka 10). 378 marks in the units. Udātta `॑` (U+0951), anudātta `॒` (U+0952), dīrgha svarita `᳚` (U+1CDA). Every mark stands where the page put it; **no accent was inferred, derived or reconstructed.** Unaccented on the page and left so: the sprinkling formulas `सत्यं त्वा ऋतेन परिषिञ्चामि` and `अमृतमस्तु` (unit 23), and the closing `ओं शान्तिः शान्तिः शान्तिः` (unit 32). A Paurāṇika form without the Vedic mantras is kept at `../pauranika/smarta/40_narasimha_shodashopachara_puja.txt`.
+
+Unit count: 32 units. Not a verse count in the stotra sense — the work is a prose order of service punctuated by mantras, and the numbering is this corpus's, not the source's.
+
+Sections:
+पुनः सङ्कल्पः — The second resolution (unit 1)
+प्राणप्रतिष्ठा — Establishing the breath in the image (units 2–3)
+ध्यानम् — Meditation (unit 4)
+षोडशोपचार पूजा — The sixteen services (units 5–25)
+मन्त्रपुष्पम् — The mantra-flower (unit 26)
+नमस्कारः — Circumambulation and prostration (units 27–28)
+सर्वोपचाराः — The royal services (unit 29)
+क्षमाप्रार्थना — Asking pardon, and the closing dedication (units 30–31)
+तीर्थप्रसाद ग्रहणम् — Receiving the water and the prasāda (unit 32)
+
+Blurb: This is the worship of Śrī Lakṣmī-Nṛsiṁha in sixteen services, by the rule of the Puruṣa Sūkta. The worshipper first performs the opening portion of the pūjā. The rite begins with a second resolution before the image. The breath is established in the image, and the lord is invoked with his weapons, his mount and his retinue. He is meditated upon seated on the lion-throne, with Lakṣmī at his left side. Each of the sixteen services is headed by a verse of the Puruṣa Sūkta and followed by a verse of praise. Among them are the honey-mixture, the bath of five nectars, and the worship of his limbs with twenty of his names. The rite closes with circumambulation, prostration, the royal services, the asking of pardon, and the receiving of the water from his feet.
+
+--- unit 1 | section: पुनः सङ्कल्पः ---
+vidhi:
+The opening portion of the pūjā is already done. Before the image, the worshipper makes the resolution a second time. He names the rule the rite will follow: the Puruṣa Sūkta, one verse of which heads each service.
+deva:
+पुनः सङ्कल्पम् –
+पूर्वोक्त एवं गुण विशेषण विशिष्टायां शुभ तिथौ श्री लक्ष्मी समेत नृसिंह स्वामिनः अनुग्रहप्रसाद सिद्ध्यर्थं श्री लक्ष्मीनृसिंह स्वामिनः प्रीत्यर्थं पुरुष सूक्त विधानेन ध्यान आवाहनादि षोडशोपचार पूजां करिष्ये ।
+iast:
+punaḥ saṅkalpam –
+pūrvokta evaṁ guṇa viśeṣaṇa viśiṣṭāyāṁ śubha tithau śrī lakṣmī sameta nṛsiṁha svāminaḥ anugrahaprasāda siddhyarthaṁ śrī lakṣmīnṛsiṁha svāminaḥ prītyarthaṁ puruṣa sūkta vidhānena dhyāna āvāhanādi ṣoḍaśopacāra pūjāṁ kariṣye |
+en: The second resolution — On this auspicious day, marked by the qualities already named: for the attainment of the grace and favour of the lord Nṛsiṁha together with Lakṣmī, and for the pleasing of the lord Śrī Lakṣmī-Nṛsiṁha, I shall perform, by the rule of the Puruṣa Sūkta, the worship in sixteen services, beginning with meditation and invocation.
+tel: పునః సంకల్పము — పూర్వము చెప్పబడిన గుణ విశేషణములతో కూడిన ఈ శుభ తిథియందు, శ్రీ లక్ష్మీ సమేత నృసింహ స్వామి అనుగ్రహ ప్రసాద సిద్ధి కొఱకును, శ్రీ లక్ష్మీనృసింహ స్వామి ప్రీతి కొఱకును, పురుష సూక్త విధానముతో ధ్యాన ఆవాహనాది షోడశోపచార పూజను చేయుచున్నాను.
+hi: पुनः सङ्कल्प — पूर्वोक्त गुण विशेषणों से युक्त इस शुभ तिथि में, श्री लक्ष्मी सहित नृसिंह स्वामी के अनुग्रह और प्रसाद की सिद्धि के लिए, और श्री लक्ष्मीनृसिंह स्वामी की प्रीति के लिए, पुरुष सूक्त विधान से ध्यान और आवाहन आदि षोडशोपचार पूजा करूँगा।
+
+--- unit 2 | section: प्राणप्रतिष्ठा ---
+vidhi:
+The breath is established in the image, with the Vedic mantra Ṛgveda 10.59.6 and the formula that follows it.
+deva:
+प्राणप्रतिष्ठ –
+ओं असु॑नीते॒ पुन॑र॒स्मासु॒ चक्षु॒ः
+पुन॑ः प्रा॒णमि॒ह नो᳚ धेहि॒ भोग᳚म् ।
+ज्योक्प॑श्येम॒ सूर्य॑मु॒च्चर᳚न्त॒
+मनु॑मते मृ॒डया᳚ नः स्व॒स्ति ॥
+अ॒मृतं॒ वै प्रा॒णा अ॒मृत॒माप॑ः
+प्रा॒णाने॒व य॑थास्था॒नमुप॑ह्वयते ॥
+iast:
+prāṇapratiṣṭha –
+oṁ asunīte punarasmāsu cakṣuḥ
+punaḥ prāṇamiha no dhehi bhogam |
+jyokpaśyema sūryamuccaranta
+manumate mṛḍayā naḥ svasti ||
+amṛtaṁ vai prāṇā amṛtamāpaḥ
+prāṇāneva yathāsthānamupahvayate ||
+en: Establishing the breath — Oṁ. O leader of life, place sight in us again, place breath again in us here, and enjoyment. Long may we see the sun rising. O Anumati, be gracious to us, and grant us well-being. The breaths are truly the deathless; the waters are truly the deathless. He calls the breaths back, each to its own place.
+tel: ప్రాణప్రతిష్ఠ — ఓం. ఓ ప్రాణనాయకా, మాకు మరల చూపును ప్రసాదించు; ఇచట మాకు మరల ప్రాణమును, భోగమును ప్రసాదించు. ఉదయించుచున్న సూర్యుని మేము చిరకాలము చూచునట్లు చేయుము. ఓ అనుమతీ, మమ్ములను అనుగ్రహించి స్వస్తిని ప్రసాదించుము. ప్రాణములే అమృతము, జలములే అమృతము. ప్రాణములను వాటి వాటి స్థానములలో మరల ఆహ్వానించుచున్నాను.
+hi: प्राणप्रतिष्ठा — ओम्। हे प्राणों के नेता, हममें पुनः दृष्टि स्थापित कीजिए; यहाँ हममें पुनः प्राण और भोग स्थापित कीजिए। हम उदय होते हुए सूर्य को चिरकाल तक देखें। हे अनुमति, हम पर कृपा कीजिए और कल्याण दीजिए। प्राण ही अमृत हैं, जल ही अमृत हैं। वह प्राणों को उनके अपने स्थान पर पुनः बुलाता है।
+
+--- unit 3 | section: प्राणप्रतिष्ठा ---
+vidhi:
+The lord is invoked into the image with his limbs, weapons, mount, power and retinue, and asked to stay present until the worship ends.
+deva:
+साङ्गं सायुधं सवाहनं सशक्तिं सपरिवारसमेतं श्रीलक्ष्मी सहित नृसिंह स्वामिनं आवाहयामि स्थापयामि पूजयामि ॥
+स्थिरो भव वरदो भव सुमुखो भव सुप्रसन्नो भव स्थिरासनं कुरु प्रसीद प्रसीद ।
+स्वामिन् सर्वजगन्नाथ यावत्पूजावसानकम् ।
+तावत्त्वं प्रीतिभावेन बिम्बेऽस्मिन् सन्निधिं कुरु ॥
+iast:
+sāṅgaṁ sāyudhaṁ savāhanaṁ saśaktiṁ saparivārasametaṁ śrīlakṣmī sahita nṛsiṁha svāminaṁ āvāhayāmi sthāpayāmi pūjayāmi ||
+sthiro bhava varado bhava sumukho bhava suprasanno bhava sthirāsanaṁ kuru prasīda prasīda |
+svāmin sarvajagannātha yāvatpūjāvasānakam |
+tāvattvaṁ prītibhāvena bimbe'smin sannidhiṁ kuru ||
+en: With his limbs, with his weapons, with his mount, with his power and together with his retinue, I invoke, establish and worship the lord Nṛsiṁha with Śrī Lakṣmī. Be steady. Be the giver of boons. Be gracious of face. Be well pleased. Take a steady seat. Be gracious, be gracious. O lord, master of the whole world, for as long as the worship lasts, stay present in this image with love.
+tel: అంగములతోను, ఆయుధములతోను, వాహనముతోను, శక్తితోను, పరివారముతోను కూడిన శ్రీ లక్ష్మీ సహిత నృసింహ స్వామిని ఆవాహన చేయుచున్నాను, స్థాపించుచున్నాను, పూజించుచున్నాను. స్థిరుడవు కమ్ము. వరదుడవు కమ్ము. సుముఖుడవు కమ్ము. సుప్రసన్నుడవు కమ్ము. స్థిరమైన ఆసనమును చేయుము. ప్రసన్నుడవు కమ్ము, ప్రసన్నుడవు కమ్ము. ఓ స్వామీ, సర్వ జగన్నాథా, పూజ ముగియు వరకు ప్రీతితో ఈ బింబమునందు సన్నిధి చేయుము.
+hi: अंगों सहित, आयुधों सहित, वाहन सहित, शक्ति सहित और परिवार सहित श्री लक्ष्मी सहित नृसिंह स्वामी का आवाहन करता हूँ, स्थापन करता हूँ, पूजन करता हूँ। स्थिर होइए। वरद होइए। सुमुख होइए। सुप्रसन्न होइए। स्थिर आसन कीजिए। प्रसन्न होइए, प्रसन्न होइए। हे स्वामी, सर्व जगन्नाथ, जब तक पूजा समाप्त न हो, तब तक प्रेमभाव से इस बिम्ब में सन्निधि कीजिए।
+
+--- unit 4 | section: ध्यानम् ---
+vidhi:
+Meditation on Lakṣmī-Nṛsiṁha, seated on the lion-throne with Lakṣmī at his left side.
+deva:
+ध्यानम् –
+लक्ष्मीशोभितवामभागममलं सिंहासने सुन्दरं
+सव्ये चक्रधरं च निर्भयकरं वामेन चापं वरम् ।
+सर्वाधीशकृतान्तपत्रममलं श्रीवत्सवक्षःस्थलं
+वन्दे देवमुनीन्द्रवन्दितपदं लक्ष्मीनृसिंहं विभुम् ॥
+ओं श्री लक्ष्मीनृसिंहाय नमः ध्यायामि ध्यानम् समर्पयामि ।
+iast:
+dhyānam –
+lakṣmīśobhitavāmabhāgamamalaṁ siṁhāsane sundaraṁ
+savye cakradharaṁ ca nirbhayakaraṁ vāmena cāpaṁ varam |
+sarvādhīśakṛtāntapatramamalaṁ śrīvatsavakṣaḥsthalaṁ
+vande devamunīndravanditapadaṁ lakṣmīnṛsiṁhaṁ vibhum ||
+oṁ śrī lakṣmīnṛsiṁhāya namaḥ dhyāyāmi dhyānam samarpayāmi |
+en: Meditation — I bow to the all-pervading lord Lakṣmī-Nṛsiṁha: his left side made beautiful by Lakṣmī, spotless, handsome upon the lion-throne; holding the discus in his right hand with the gesture of fearlessness, and the excellent bow in his left; spotless, with the Śrīvatsa mark upon his chest; whose feet are honoured by the gods and the chief of sages. Oṁ, salutation to Śrī Lakṣmī-Nṛsiṁha. I meditate upon him and offer meditation.
+tel: ధ్యానము — లక్ష్మీదేవిచే శోభించు ఎడమ భాగము కలవాడును, నిర్మలుడును, సింహాసనముపై సుందరుడును, కుడి చేత చక్రమును అభయ ముద్రను, ఎడమ చేత శ్రేష్ఠమైన ధనుస్సును ధరించినవాడును, శ్రీవత్సము గల వక్షఃస్థలము కలవాడును, దేవతలచేతను మునీంద్రులచేతను వందింపబడిన పాదములు కలవాడును, సర్వవ్యాపియు అగు లక్ష్మీనృసింహునకు నమస్కరించుచున్నాను. ఓం శ్రీ లక్ష్మీనృసింహునకు నమస్కారము. ధ్యానించుచున్నాను, ధ్యానమును సమర్పించుచున్నాను.
+hi: ध्यान — जिनका वाम भाग लक्ष्मी से शोभित है, जो निर्मल हैं, सिंहासन पर सुन्दर हैं, दाहिने हाथ में चक्र और अभय तथा बाएँ हाथ में श्रेष्ठ धनुष धारण करते हैं, जिनके वक्षःस्थल पर श्रीवत्स है, जिनके चरण देवताओं और मुनीन्द्रों द्वारा वन्दित हैं, उन सर्वव्यापी लक्ष्मीनृसिंह की मैं वन्दना करता हूँ। ओम् श्री लक्ष्मीनृसिंह को नमस्कार। ध्यान करता हूँ, ध्यान समर्पित करता हूँ।
+
+--- unit 5 | section: षोडशोपचार पूजा ---
+vidhi:
+Invocation. From here each service is headed by one verse of the Puruṣa Sūkta, and followed by a verse of the Purāṇic kind and the name.
+deva:
+आवाहनम् –
+स॒हस्र॑शीर्षा॒ पुरु॑षः ।
+स॒ह॒स्रा॒क्षः स॒हस्र॑पात् ।
+स भूमिं॑ वि॒श्वतो॑ वृ॒त्वा ।
+अत्य॑तिष्ठद्दशाङ्गु॒लम् ॥
+आगच्छ देवदेवेश तेजोराशे जगत्पते ।
+क्रियमाणां मया पूजां गृहाण सुरसत्तमे ॥
+ओं श्री लक्ष्मीनृसिंहाय नमः आवाहयामि ।
+iast:
+āvāhanam –
+sahasraśīrṣā puruṣaḥ |
+sahasrākṣaḥ sahasrapāt |
+sa bhūmiṁ viśvato vṛtvā |
+atyatiṣṭhaddaśāṅgulam ||
+āgaccha devadeveśa tejorāśe jagatpate |
+kriyamāṇāṁ mayā pūjāṁ gṛhāṇa surasattame ||
+oṁ śrī lakṣmīnṛsiṁhāya namaḥ āvāhayāmi |
+en: Invocation — The Person has a thousand heads, a thousand eyes and a thousand feet. Covering the earth on every side, he stood beyond it by the breadth of ten fingers. Come, O Lord of the lords of the gods, mass of radiance, master of the world. Accept the worship I am performing, O best of the gods. Oṁ, salutation to Śrī Lakṣmī-Nṛsiṁha. I invoke him.
+tel: ఆవాహనము — పురుషునకు వేయి శిరస్సులు, వేయి కన్నులు, వేయి పాదములు. ఆయన భూమిని అన్ని వైపుల ఆవరించి, పది అంగుళముల మేర దానిని మించి నిలిచెను. ఓ దేవదేవేశా, తేజోరాశీ, జగత్పతీ, రమ్ము. నేను చేయుచున్న పూజను గ్రహింపుము, ఓ సురసత్తమా. ఓం శ్రీ లక్ష్మీనృసింహునకు నమస్కారము. ఆవాహన చేయుచున్నాను.
+hi: आवाहन — पुरुष के सहस्र सिर, सहस्र नेत्र और सहस्र चरण हैं। वह पृथ्वी को सब ओर से घेरकर उससे दस अंगुल ऊपर स्थित है। हे देवदेवेश, तेजोराशि, जगत्पति, पधारिए। मेरे द्वारा की जा रही पूजा ग्रहण कीजिए, हे सुरसत्तम। ओम् श्री लक्ष्मीनृसिंह को नमस्कार। आवाहन करता हूँ।
+
+--- unit 6 | section: षोडशोपचार पूजा ---
+vidhi:
+The seat.
+deva:
+आसनम् –
+पुरु॑ष ए॒वेदग्ं सर्वम्᳚ ।
+यद्भू॒तं यच्च॒ भव्यम्᳚ ।
+उ॒तामृ॑त॒त्वस्येशा॑नः ।
+य॒दन्ने॑नाति॒रोह॑ति ॥
+नाना रत्नसमायुक्तं कार्तस्वरविभूषितम् ।
+आसनं देवदेवेश प्रीत्यर्थं प्रतिगृह्यताम् ॥
+ओं श्री लक्ष्मीनृसिंहाय नमः नवरत्नखचित सुवर्ण सिंहासनं समर्पयामि ।
+iast:
+āsanam –
+puruṣa evedagṁ sarvam |
+yadbhūtaṁ yacca bhavyam |
+utāmṛtatvasyeśānaḥ |
+yadannenātirohati ||
+nānā ratnasamāyuktaṁ kārtasvaravibhūṣitam |
+āsanaṁ devadeveśa prītyarthaṁ pratigṛhyatām ||
+oṁ śrī lakṣmīnṛsiṁhāya namaḥ navaratnakhacita suvarṇa siṁhāsanaṁ samarpayāmi |
+en: The seat — The Person alone is all this, what has been and what is to be. He is the lord of immortality, and of all that grows by food. Set with many jewels and adorned with gold, O Lord of the lords of the gods, accept this seat for your pleasure. Oṁ, salutation to Śrī Lakṣmī-Nṛsiṁha. I offer a golden lion-throne set with the nine gems.
+tel: ఆసనము — ఉన్నదంతయు, గతించినదియు, రాబోవునదియు పురుషుడే. ఆయన అమృతత్వమునకు ప్రభువు, అన్నముచే పెరుగు సమస్తమునకును ప్రభువు. నానా రత్నములతో కూడిన, బంగారుతో అలంకరింపబడిన ఈ ఆసనమును, ఓ దేవదేవేశా, ప్రీతితో స్వీకరింపుము. ఓం శ్రీ లక్ష్మీనృసింహునకు నమస్కారము. నవరత్న ఖచిత సువర్ణ సింహాసనమును సమర్పించుచున్నాను.
+hi: आसन — जो कुछ हो चुका है और जो होने वाला है, यह सब पुरुष ही है। वह अमृतत्व का स्वामी है, और अन्न से बढ़ने वाले सबका भी। नाना रत्नों से युक्त, सुवर्ण से विभूषित यह आसन, हे देवदेवेश, प्रीतिपूर्वक ग्रहण कीजिए। ओम् श्री लक्ष्मीनृसिंह को नमस्कार। नवरत्नों से जड़ा सुवर्ण सिंहासन समर्पित करता हूँ।
+
+--- unit 7 | section: षोडशोपचार पूजा ---
+vidhi:
+Water for washing the feet.
+deva:
+पाद्यम् –
+ए॒तावा॑नस्य महि॒मा ।
+अतो॒ ज्यायाग्॑श्च॒ पूरु॑षः ।
+पादो᳚ऽस्य॒ विश्वा॑ भू॒तानि॑ ।
+त्रि॒पाद॑स्या॒मृतं॑ दि॒वि ॥
+गङ्गादि सर्वतीर्थेभ्यः मया प्रार्थनयाहृतम् ।
+लक्ष्मीनृसिंह पाद्यर्थं इदं तोयं गृहाण भोः ॥
+ओं श्री लक्ष्मीनृसिंहाय नमः पादयोः पाद्यं समर्पयामि ।
+iast:
+pādyam –
+etāvānasya mahimā |
+ato jyāyāgśca pūruṣaḥ |
+pādo'sya viśvā bhūtāni |
+tripādasyāmṛtaṁ divi ||
+gaṅgādi sarvatīrthebhyaḥ mayā prārthanayāhṛtam |
+lakṣmīnṛsiṁha pādyarthaṁ idaṁ toyaṁ gṛhāṇa bhoḥ ||
+oṁ śrī lakṣmīnṛsiṁhāya namaḥ pādayoḥ pādyaṁ samarpayāmi |
+en: Water for the feet — Such is his greatness, and the Person is greater still. All beings are one quarter of him; three quarters of him are the deathless in heaven. This water, brought by me with prayer from the Gaṅgā and all the holy waters, is for washing your feet, O Lakṣmī-Nṛsiṁha. Accept it. Oṁ, salutation to Śrī Lakṣmī-Nṛsiṁha. I offer water for the feet.
+tel: పాద్యము — ఇంతటిది ఆయన మహిమ; పురుషుడు దీనికంటెను గొప్పవాడు. సర్వ భూతములు ఆయనలో ఒక పాదము; ఆయన మూడు పాదములు ద్యులోకమునందు అమృతము. గంగ మొదలైన సర్వ తీర్థముల నుండి ప్రార్థనతో నేను తెచ్చిన ఈ జలమును, ఓ లక్ష్మీనృసింహా, పాదములు కడుగుటకు గ్రహింపుము. ఓం శ్రీ లక్ష్మీనృసింహునకు నమస్కారము. పాదములకు పాద్యమును సమర్పించుచున్నాను.
+hi: पाद्य — इतनी उसकी महिमा है, और पुरुष इससे भी बड़ा है। सब प्राणी उसका एक पाद हैं; उसके तीन पाद द्युलोक में अमृत हैं। गंगा आदि सब तीर्थों से मेरे द्वारा प्रार्थनापूर्वक लाया गया यह जल, हे लक्ष्मीनृसिंह, पाद्य के लिए ग्रहण कीजिए। ओम् श्री लक्ष्मीनृसिंह को नमस्कार। चरणों में पाद्य समर्पित करता हूँ।
+
+--- unit 8 | section: षोडशोपचार पूजा ---
+vidhi:
+Water offered to the hands.
+deva:
+अर्घ्यम् –
+त्रि॒पादू॒र्ध्व उदै॒त्पुरु॑षः ।
+पादो᳚ऽस्ये॒हाऽऽभ॑वा॒त्पुन॑ः ।
+ततो॒ विष्व॒ङ्व्य॑क्रामत् ।
+सा॒श॒ना॒न॒श॒ने अ॒भि ॥
+नमस्ते देवदेवेश नमस्ते धरणीधर ।
+नमस्ते कमलाकान्त गृहाणार्घ्यं नमोऽस्तु ते ॥
+ओं श्री लक्ष्मीनृसिंहाय नमः हस्तयोः अर्घ्यं समर्पयामि ।
+iast:
+arghyam –
+tripādūrdhva udaitpuruṣaḥ |
+pādo'syehā''bhavātpunaḥ |
+tato viṣvaṅvyakrāmat |
+sāśanānaśane abhi ||
+namaste devadeveśa namaste dharaṇīdhara |
+namaste kamalākānta gṛhāṇārghyaṁ namo'stu te ||
+oṁ śrī lakṣmīnṛsiṁhāya namaḥ hastayoḥ arghyaṁ samarpayāmi |
+en: Water for the hands — With three quarters the Person rose on high; one quarter of him came to be here again. From there he spread out on every side, over what eats and what does not eat. Salutation to you, Lord of the lords of the gods; salutation to you, bearer of the earth; salutation to you, beloved of Kamalā. Accept this water for the hands. Salutation to you. Oṁ, salutation to Śrī Lakṣmī-Nṛsiṁha. I offer water to the hands.
+tel: అర్ఘ్యము — మూడు పాదములతో పురుషుడు పైకి లేచెను; ఆయన ఒక పాదము ఇక్కడ మరల ఏర్పడెను. అక్కడి నుండి తినునవి తిననివి అగు సమస్తమునందు అన్ని వైపుల వ్యాపించెను. ఓ దేవదేవేశా, నీకు నమస్కారము. ఓ ధరణీధరా, నీకు నమస్కారము. ఓ కమలాకాంతా, నీకు నమస్కారము. అర్ఘ్యమును గ్రహింపుము. నీకు నమస్కారము. ఓం శ్రీ లక్ష్మీనృసింహునకు నమస్కారము. హస్తములకు అర్ఘ్యమును సమర్పించుచున్నాను.
+hi: अर्घ्य — तीन पादों से पुरुष ऊपर उठा; उसका एक पाद यहाँ फिर से प्रकट हुआ। वहाँ से वह खाने वाले और न खाने वाले सब में सब ओर फैल गया। हे देवदेवेश, आपको नमस्कार। हे धरणीधर, आपको नमस्कार। हे कमलाकान्त, आपको नमस्कार। अर्घ्य ग्रहण कीजिए। आपको नमस्कार। ओम् श्री लक्ष्मीनृसिंह को नमस्कार। हाथों में अर्घ्य समर्पित करता हूँ।
+
+--- unit 9 | section: षोडशोपचार पूजा ---
+vidhi:
+Water for sipping.
+deva:
+आचमनीयम् –
+तस्मा᳚द्वि॒राड॑जायत ।
+वि॒राजो॒ अधि॒ पूरु॑षः ।
+स जा॒तो अत्य॑रिच्यत ।
+प॒श्चाद्भूमि॒मथो॑ पु॒रः ॥
+कर्पूरवासितं तोयं मन्दाकिन्यः समाहृतम् ।
+आचम्य तां जगन्नाथ मया दत्तं हि भक्तितः ॥
+ओं श्री लक्ष्मीनृसिंहाय नमः मुखे आचमनीयं समर्पयामि ।
+iast:
+ācamanīyam –
+tasmādvirāḍajāyata |
+virājo adhi pūruṣaḥ |
+sa jāto atyaricyata |
+paścādbhūmimatho puraḥ ||
+karpūravāsitaṁ toyaṁ mandākinyaḥ samāhṛtam |
+ācamya tāṁ jagannātha mayā dattaṁ hi bhaktitaḥ ||
+oṁ śrī lakṣmīnṛsiṁhāya namaḥ mukhe ācamanīyaṁ samarpayāmi |
+en: Water for sipping — From him Virāṭ was born, and from Virāṭ the Person. As soon as he was born he reached beyond the earth, behind it and before it. Water scented with camphor, brought from the heavenly Gaṅgā and given by me with devotion: sip it, O master of the world. Oṁ, salutation to Śrī Lakṣmī-Nṛsiṁha. I offer water for sipping.
+tel: ఆచమనీయము — ఆయన నుండి విరాట్టు పుట్టెను; విరాట్టు నుండి పురుషుడు. పుట్టినంతనే ఆయన భూమిని వెనుకను ముందును మించి వ్యాపించెను. మందాకిని నుండి తెచ్చిన, కర్పూర వాసన గల, భక్తితో నేను ఇచ్చిన ఈ జలముతో, ఓ జగన్నాథా, ఆచమనము చేయుము. ఓం శ్రీ లక్ష్మీనృసింహునకు నమస్కారము. ముఖమునకు ఆచమనీయమును సమర్పించుచున్నాను.
+hi: आचमनीय — उससे विराट् उत्पन्न हुआ, और विराट् से पुरुष। उत्पन्न होते ही वह पृथ्वी के पीछे और आगे उससे परे फैल गया। मन्दाकिनी से लाया गया, कर्पूर से सुवासित, भक्ति से मेरे द्वारा दिया गया यह जल, हे जगन्नाथ, आचमन कीजिए। ओम् श्री लक्ष्मीनृसिंह को नमस्कार। मुख में आचमनीय समर्पित करता हूँ।
+
+--- unit 10 | section: षोडशोपचार पूजा ---
+vidhi:
+The honey-mixture.
+deva:
+मधुपर्कम् –
+नमः श्री वासुदेवाय तत्त्वज्ञानस्वरूपिणे ।
+मधुपर्कं गृहाणेदं श्रीलक्ष्मीपतये नमः ॥
+ओं श्री लक्ष्मीनृसिंहाय नमः मधुपर्कं समर्पयामि ।
+iast:
+madhuparkam –
+namaḥ śrī vāsudevāya tattvajñānasvarūpiṇe |
+madhuparkaṁ gṛhāṇedaṁ śrīlakṣmīpataye namaḥ ||
+oṁ śrī lakṣmīnṛsiṁhāya namaḥ madhuparkaṁ samarpayāmi |
+en: The honey-mixture — Salutation to Śrī Vāsudeva, whose nature is the knowledge of truth. Accept this honey-mixture. Salutation to the lord of Śrī Lakṣmī. Oṁ, salutation to Śrī Lakṣmī-Nṛsiṁha. I offer the honey-mixture.
+tel: మధుపర్కము — తత్త్వజ్ఞాన స్వరూపుడైన శ్రీ వాసుదేవునకు నమస్కారము. ఈ మధుపర్కమును గ్రహింపుము. శ్రీ లక్ష్మీపతికి నమస్కారము. ఓం శ్రీ లక్ష్మీనృసింహునకు నమస్కారము. మధుపర్కమును సమర్పించుచున్నాను.
+hi: मधुपर्क — तत्त्वज्ञानस्वरूप श्री वासुदेव को नमस्कार। यह मधुपर्क ग्रहण कीजिए। श्री लक्ष्मीपति को नमस्कार। ओम् श्री लक्ष्मीनृसिंह को नमस्कार। मधुपर्क समर्पित करता हूँ।
+
+--- unit 11 | section: षोडशोपचार पूजा ---
+vidhi:
+The bath of five nectars.
+deva:
+पञ्चामृत स्नानम् –
+दधि क्षीराज्य मधुभिः शर्करा फलमिश्रितम् ।
+पञ्चामृतस्नानमिदं गृहाण पुरुषोत्तम ॥
+ओं श्री लक्ष्मीनृसिंहाय नमः पञ्चामृत स्नानं समर्पयामि ।
+iast:
+pañcāmṛta snānam –
+dadhi kṣīrājya madhubhiḥ śarkarā phalamiśritam |
+pañcāmṛtasnānamidaṁ gṛhāṇa puruṣottama ||
+oṁ śrī lakṣmīnṛsiṁhāya namaḥ pañcāmṛta snānaṁ samarpayāmi |
+en: The bath of five nectars — Curd, milk, ghee and honey, mixed with sugar and fruit: accept this bath of five nectars, O Supreme Person. Oṁ, salutation to Śrī Lakṣmī-Nṛsiṁha. I offer the bath of five nectars.
+tel: పంచామృత స్నానము — పెరుగు, పాలు, నెయ్యి, తేనె, చక్కెర, ఫలములతో కలిపిన ఈ పంచామృత స్నానమును, ఓ పురుషోత్తమా, గ్రహింపుము. ఓం శ్రీ లక్ష్మీనృసింహునకు నమస్కారము. పంచామృత స్నానమును సమర్పించుచున్నాను.
+hi: पञ्चामृत स्नान — दही, दूध, घी और मधु, शर्करा और फल से मिश्रित यह पञ्चामृत स्नान, हे पुरुषोत्तम, ग्रहण कीजिए। ओम् श्री लक्ष्मीनृसिंह को नमस्कार। पञ्चामृत स्नान समर्पित करता हूँ।
+
+--- unit 12 | section: षोडशोपचार पूजा ---
+vidhi:
+The bath of pure water. The service is headed by its verse of the Puruṣa Sūkta; the three verses of the waters follow the verse of the Purāṇic kind. Then water for sipping after the bath.
+deva:
+शुद्धोदक स्नानम् –
+यत्पुरु॑षेण ह॒विषा᳚ ।
+दे॒वा य॒ज्ञमत॑न्वत ।
+व॒स॒न्तो अ॑स्यासी॒दाज्यम्᳚ ।
+ग्री॒ष्म इ॒ध्मश्श॒रद्ध॒विः ॥
+सुगन्धपुष्पसम्युक्तं पवित्रं विमलं जलम् ।
+स्नानार्थं हि मयानीतं स्वीकुरुष्व महामते ॥
+आपो॒ हिष्ठा म॑यो॒भुव॒स्ता न॑ ऊ॒र्जे द॑धातन ।
+म॒हेरणा॑य॒ चक्ष॑से ।
+यो व॑ः शि॒वत॑मो रस॒स्तस्य॑ भाजयते॒ ह न॑ः ।
+उ॒श॒तीरि॑व मा॒त॑रः ।
+तस्मा॒ अर॑ङ्गमामवो॒ यस्य॒ क्षया॑य॒ जिन्व॑थ ।
+आपो॑ ज॒नय॑था च नः ।
+ओं श्री लक्ष्मीनृसिंहाय नमः शुद्धोदक स्नानं समर्पयामि ।
+स्नानानन्तरं शुद्ध आचमनीयं समर्पयामि ।
+iast:
+śuddhodaka snānam –
+yatpuruṣeṇa haviṣā |
+devā yajñamatanvata |
+vasanto asyāsīdājyam |
+grīṣma idhmaśśaraddhaviḥ ||
+sugandhapuṣpasamyuktaṁ pavitraṁ vimalaṁ jalam |
+snānārthaṁ hi mayānītaṁ svīkuruṣva mahāmate ||
+āpo hiṣṭhā mayobhuvastā na ūrje dadhātana |
+maheraṇāya cakṣase |
+yo vaḥ śivatamo rasastasya bhājayate ha naḥ |
+uśatīriva mātaraḥ |
+tasmā araṅgamāmavo yasya kṣayāya jinvatha |
+āpo janayathā ca naḥ |
+oṁ śrī lakṣmīnṛsiṁhāya namaḥ śuddhodaka snānaṁ samarpayāmi |
+snānānantaraṁ śuddha ācamanīyaṁ samarpayāmi |
+en: The bath of pure water — When the gods performed the sacrifice with the Person as the offering, spring was its ghee, summer its fuel, and autumn its oblation. Pure, clear water, with fragrant flowers, brought by me for your bath: receive it, O great-minded one. Waters, you are the bringers of well-being; set us in strength, that we may see great joy. Let us share here in your most auspicious essence, as loving mothers share. To him we come readily, to whose abode you quicken us; O waters, make us fruitful. Oṁ, salutation to Śrī Lakṣmī-Nṛsiṁha. I offer the bath of pure water. After the bath I offer pure water for sipping.
+tel: శుద్ధోదక స్నానము — దేవతలు పురుషుని హవిస్సుగా చేసి యజ్ఞము చేసినప్పుడు, వసంతము దానికి నెయ్యి, గ్రీష్మము సమిధ, శరత్తు హవిస్సు అయ్యెను. సుగంధ పుష్పములతో కూడిన, పవిత్రమైన, నిర్మలమైన ఈ జలము నీ స్నానము కొఱకు నేను తెచ్చితిని; ఓ మహామతీ, స్వీకరింపుము. జలములారా, మీరు సుఖమును కలిగించువారు; గొప్ప ఆనందమును చూచుటకు మమ్ము బలమునందు నిలుపుడు. ప్రేమగల తల్లుల వలె, మీ యొక్క మిక్కిలి శుభకరమైన రసమును ఇక్కడ మాకు పంచుడు. ఎవని నివాసము కొఱకు మీరు మమ్ము ప్రేరేపించెదరో, ఆయన వద్దకు మేము శీఘ్రముగా వచ్చెదము; జలములారా, మమ్ము వృద్ధి పొందింపుడు. ఓం శ్రీ లక్ష్మీనృసింహునకు నమస్కారము. శుద్ధోదక స్నానమును సమర్పించుచున్నాను. స్నానానంతరము శుద్ధ ఆచమనీయమును సమర్పించుచున్నాను.
+hi: शुद्धोदक स्नान — जब देवताओं ने पुरुष को हवि बनाकर यज्ञ किया, तब वसन्त उसका घी, ग्रीष्म उसका ईंधन और शरद् उसकी हवि बने। सुगन्धित पुष्पों से युक्त, पवित्र और निर्मल यह जल मैं आपके स्नान के लिए लाया हूँ; हे महामते, स्वीकार कीजिए। हे जल, तुम सुख देने वाले हो; महान आनन्द देखने के लिए हमें शक्ति में स्थापित करो। प्रेम करने वाली माताओं की भाँति अपने अत्यन्त कल्याणकारी रस में हमें यहाँ भागी बनाओ। जिसके निवास के लिए तुम हमें प्रेरित करते हो, उसके पास हम शीघ्र आएँ; हे जल, हमें समृद्ध करो। ओम् श्री लक्ष्मीनृसिंह को नमस्कार। शुद्धोदक स्नान समर्पित करता हूँ। स्नान के बाद शुद्ध आचमनीय समर्पित करता हूँ।
+
+--- unit 13 | section: षोडशोपचार पूजा ---
+vidhi:
+The garment.
+deva:
+वस्त्रम् –
+स॒प्तास्या॑सन्परि॒धय॑ः ।
+त्रिः स॒प्त स॒मिध॑ः कृ॒ताः ।
+दे॒वा यद्य॒ज्ञं त॑न्वा॒नाः ।
+अब॑ध्न॒न्पुरु॑षं प॒शुम् ॥
+तप्तकाञ्चनसङ्काशं पीताम्बरमिदं हरे ।
+सङ्गृहाण जगन्नाथ नारायण नमोऽस्तु ते ॥
+ओं श्री लक्ष्मीनृसिंहाय नमः वस्त्रयुग्मं समर्पयामि ।
+iast:
+vastram –
+saptāsyāsanparidhayaḥ |
+triḥ sapta samidhaḥ kṛtāḥ |
+devā yadyajñaṁ tanvānāḥ |
+abadhnanpuruṣaṁ paśum ||
+taptakāñcanasaṅkāśaṁ pītāmbaramidaṁ hare |
+saṅgṛhāṇa jagannātha nārāyaṇa namo'stu te ||
+oṁ śrī lakṣmīnṛsiṁhāya namaḥ vastrayugmaṁ samarpayāmi |
+en: The garment — Seven were its enclosing sticks, and thrice seven its sticks of fuel, when the gods, spreading out the sacrifice, bound the Person as its victim. This yellow garment, like molten gold, O Hari — accept it, O master of the world. Salutation to you, Nārāyaṇa. Oṁ, salutation to Śrī Lakṣmī-Nṛsiṁha. I offer a pair of garments.
+tel: వస్త్రము — దేవతలు యజ్ఞమును విస్తరించుచు పురుషుని పశువుగా బంధించినప్పుడు, దానికి ఏడు పరిధులు, మూడు ఏడుల సమిధలు ఏర్పడెను. కరగిన బంగారము వంటి ఈ పీతాంబరమును, ఓ హరీ, ఓ జగన్నాథా, గ్రహింపుము. ఓ నారాయణా, నీకు నమస్కారము. ఓం శ్రీ లక్ష్మీనృసింహునకు నమస్కారము. వస్త్రయుగ్మమును సమర్పించుచున్నాను.
+hi: वस्त्र — जब देवताओं ने यज्ञ का विस्तार करते हुए पुरुष को पशु रूप में बाँधा, तब उसकी सात परिधियाँ थीं और तीन गुना सात समिधाएँ बनीं। तपे हुए सोने के समान यह पीताम्बर, हे हरि, हे जगन्नाथ, ग्रहण कीजिए। हे नारायण, आपको नमस्कार। ओम् श्री लक्ष्मीनृसिंह को नमस्कार। वस्त्रयुग्म समर्पित करता हूँ।
+
+--- unit 14 | section: षोडशोपचार पूजा ---
+vidhi:
+The sacred thread.
+deva:
+यज्ञोपवीतम् –
+तं य॒ज्ञं ब॒र्हिषि॒ प्रौक्षन्॑ ।
+पुरु॑षं जा॒तम॑ग्र॒तः ।
+तेन॑ दे॒वा अय॑जन्त ।
+सा॒ध्या ऋष॑यश्च॒ ये ॥
+ब्रह्मविष्णुमहेशश्च निर्मितं ब्रह्मसूत्रकम् ।
+उपवीतं मया दत्तं गृहाण कमलापतिः ॥
+ओं श्री लक्ष्मीनृसिंहाय नमः यज्ञोपवीतं समर्पयामि ।
+iast:
+yajñopavītam –
+taṁ yajñaṁ barhiṣi praukṣan |
+puruṣaṁ jātamagrataḥ |
+tena devā ayajanta |
+sādhyā ṛṣayaśca ye ||
+brahmaviṣṇumaheśaśca nirmitaṁ brahmasūtrakam |
+upavītaṁ mayā dattaṁ gṛhāṇa kamalāpatiḥ ||
+oṁ śrī lakṣmīnṛsiṁhāya namaḥ yajñopavītaṁ samarpayāmi |
+en: The sacred thread — They sprinkled on the sacred grass that sacrifice, the Person born in the beginning. With him the gods sacrificed, and the Sādhyas, and the seers. The sacred thread fashioned by Brahmā, Viṣṇu and Maheśa, given by me: accept it, O lord of Kamalā. Oṁ, salutation to Śrī Lakṣmī-Nṛsiṁha. I offer the sacred thread.
+tel: యజ్ఞోపవీతము — ఆదియందు పుట్టిన ఆ యజ్ఞరూపుడైన పురుషుని దర్భలపై ప్రోక్షించిరి. ఆయనతో దేవతలును సాధ్యులును ఋషులును యజ్ఞము చేసిరి. బ్రహ్మ విష్ణు మహేశ్వరులచే నిర్మింపబడిన, నేను ఇచ్చిన ఈ ఉపవీతమును, ఓ కమలాపతీ, గ్రహింపుము. ఓం శ్రీ లక్ష్మీనృసింహునకు నమస్కారము. యజ్ఞోపవీతమును సమర్పించుచున్నాను.
+hi: यज्ञोपवीत — आदि में उत्पन्न उस यज्ञरूप पुरुष को उन्होंने कुशों पर प्रोक्षित किया। उसी से देवताओं, साध्यों और ऋषियों ने यज्ञ किया। ब्रह्मा, विष्णु और महेश द्वारा निर्मित, मेरे द्वारा दिया गया यह उपवीत, हे कमलापति, ग्रहण कीजिए। ओम् श्री लक्ष्मीनृसिंह को नमस्कार। यज्ञोपवीत समर्पित करता हूँ।
+
+--- unit 15 | section: षोडशोपचार पूजा ---
+vidhi:
+Sandal paste.
+deva:
+गन्धम् –
+तस्मा᳚द्य॒ज्ञात्स॑र्व॒हुत॑ः ।
+सम्भृ॑तं पृषदा॒ज्यम् ।
+प॒शूग्स्ताग्श्च॑क्रे वाय॒व्यान्॑ ।
+आ॒र॒ण्यान्ग्रा॒म्याश्च॒ ये ॥
+चन्दनं शीतलं दिव्यं कस्तूरी कुङ्कुमं तथा ।
+ददामि तव प्रीत्यर्थं नृसिंह परमेश्वरः ॥
+ओं श्री लक्ष्मीनृसिंहाय नमः दिव्य श्री चन्दनं समर्पयामि ।
+iast:
+gandham –
+tasmādyajñātsarvahutaḥ |
+sambhṛtaṁ pṛṣadājyam |
+paśūgstāgścakre vāyavyān |
+āraṇyāngrāmyāśca ye ||
+candanaṁ śītalaṁ divyaṁ kastūrī kuṅkumaṁ tathā |
+dadāmi tava prītyarthaṁ nṛsiṁha parameśvaraḥ ||
+oṁ śrī lakṣmīnṛsiṁhāya namaḥ divya śrī candanaṁ samarpayāmi |
+en: Sandal paste — From that sacrifice, in which all was offered, the mixed ghee was gathered. He made the creatures of the air, and the beasts of the forest and of the village. Cool, divine sandal, with musk and kuṅkuma, I give for your pleasure, O Nṛsiṁha, supreme lord. Oṁ, salutation to Śrī Lakṣmī-Nṛsiṁha. I offer divine sandal paste.
+tel: గంధము — సర్వము హోమము చేయబడిన ఆ యజ్ఞము నుండి పృషదాజ్యము సంపాదింపబడెను. ఆయన వాయువునందు సంచరించు జీవులను, అడవి పశువులను, గ్రామ పశువులను సృష్టించెను. చల్లనైన దివ్యమైన చందనమును, కస్తూరి కుంకుమలను, ఓ నృసింహా, పరమేశ్వరా, నీ ప్రీతి కొఱకు ఇచ్చుచున్నాను. ఓం శ్రీ లక్ష్మీనృసింహునకు నమస్కారము. దివ్య శ్రీ చందనమును సమర్పించుచున్నాను.
+hi: गन्ध — जिसमें सब कुछ होमा गया, उस यज्ञ से पृषदाज्य एकत्र हुआ। उसने वायु में विचरने वाले प्राणियों को, और वन तथा ग्राम के पशुओं को रचा। शीतल, दिव्य चन्दन, कस्तूरी और कुंकुम, हे नृसिंह, परमेश्वर, आपकी प्रीति के लिए देता हूँ। ओम् श्री लक्ष्मीनृसिंह को नमस्कार। दिव्य श्री चन्दन समर्पित करता हूँ।
+
+--- unit 16 | section: षोडशोपचार पूजा ---
+vidhi:
+Ornaments.
+deva:
+आभरणम् –
+तस्मा᳚द्य॒ज्ञात्स॑र्व॒हुत॑ः ।
+ऋच॒ः सामा॑नि जज्ञिरे ।
+छन्दाग्ं॑सि जज्ञिरे॒ तस्मा᳚त् ।
+यजु॒स्तस्मा॑दजायत ॥
+भूषणानि विचित्राणि हेमरत्नमयानि च ।
+गृहाण भुवनाधार भुक्तिमुक्तिफलप्रद ॥
+ओं श्री लक्ष्मीनृसिंहाय नमः सर्वाभरणानि समर्पयामि ।
+iast:
+ābharaṇam –
+tasmādyajñātsarvahutaḥ |
+ṛcaḥ sāmāni jajñire |
+chandāgṁsi jajñire tasmāt |
+yajustasmādajāyata ||
+bhūṣaṇāni vicitrāṇi hemaratnamayāni ca |
+gṛhāṇa bhuvanādhāra bhuktimuktiphalaprada ||
+oṁ śrī lakṣmīnṛsiṁhāya namaḥ sarvābharaṇāni samarpayāmi |
+en: Ornaments — From that sacrifice, in which all was offered, the ṛcs and the sāmans were born. The metres were born from it, and from it the yajus was born. Ornaments of many kinds, made of gold and jewels — accept them, O support of the worlds, giver of the fruits of enjoyment and liberation. Oṁ, salutation to Śrī Lakṣmī-Nṛsiṁha. I offer all the ornaments.
+tel: ఆభరణములు — సర్వము హోమము చేయబడిన ఆ యజ్ఞము నుండి ఋక్కులును సామములును పుట్టెను. దాని నుండి ఛందస్సులు పుట్టెను; దాని నుండి యజుస్సు పుట్టెను. బంగారము రత్నములతో చేయబడిన విచిత్రమైన భూషణములను, ఓ భువనాధారా, భుక్తి ముక్తి ఫలములను ఇచ్చువాడా, గ్రహింపుము. ఓం శ్రీ లక్ష్మీనృసింహునకు నమస్కారము. సర్వ ఆభరణములను సమర్పించుచున్నాను.
+hi: आभरण — जिसमें सब कुछ होमा गया, उस यज्ञ से ऋचाएँ और साम उत्पन्न हुए। उससे छन्द उत्पन्न हुए, और उससे यजुस् उत्पन्न हुआ। सुवर्ण और रत्नों से बने विचित्र भूषण, हे भुवनाधार, भुक्ति और मुक्ति का फल देने वाले, ग्रहण कीजिए। ओम् श्री लक्ष्मीनृसिंह को नमस्कार। सब आभरण समर्पित करता हूँ।
+
+--- unit 17 | section: षोडशोपचार पूजा ---
+vidhi:
+Flowers.
+deva:
+पुष्पाणि –
+तस्मा॒दश्वा॑ अजायन्त ।
+ये के चो॑भ॒याद॑तः ।
+गावो॑ ह जज्ञिरे॒ तस्मा᳚त् ।
+तस्मा᳚ज्जा॒ता अ॑जा॒वय॑ः ॥
+माल्यादीनि सुगन्धानि माल्यतादीनि वै प्रभो ।
+मयाहृतानि पूजार्थं पुष्पाणि प्रतिगृह्यताम् ॥
+ओं श्री लक्ष्मीनृसिंहाय नमः नानाविध परिमल पत्र पुष्पाणि समर्पयामि ।
+iast:
+puṣpāṇi –
+tasmādaśvā ajāyanta |
+ye ke cobhayādataḥ |
+gāvo ha jajñire tasmāt |
+tasmājjātā ajāvayaḥ ||
+mālyādīni sugandhāni mālyatādīni vai prabho |
+mayāhṛtāni pūjārthaṁ puṣpāṇi pratigṛhyatām ||
+oṁ śrī lakṣmīnṛsiṁhāya namaḥ nānāvidha parimala patra puṣpāṇi samarpayāmi |
+en: Flowers — From it were born horses, and all creatures with teeth in both jaws. Cows were born from it, and from it were born goats and sheep. Fragrant garlands and other flowers, O lord, brought by me for the worship: let these flowers be accepted. Oṁ, salutation to Śrī Lakṣmī-Nṛsiṁha. I offer fragrant leaves and flowers of many kinds.
+tel: పుష్పములు — దాని నుండి గుఱ్ఱములు పుట్టెను, రెండు వరుసల పళ్ళు గల జీవులును పుట్టెను. దాని నుండి గోవులు పుట్టెను; దాని నుండి మేకలును గొఱ్ఱెలును పుట్టెను. ఓ ప్రభూ, సుగంధమైన మాలలు మొదలైనవి, పూజ కొఱకు నేను తెచ్చిన ఈ పుష్పములను స్వీకరింపుము. ఓం శ్రీ లక్ష్మీనృసింహునకు నమస్కారము. నానావిధ పరిమళ పత్ర పుష్పములను సమర్పించుచున్నాను.
+hi: पुष्प — उससे घोड़े उत्पन्न हुए, और दोनों ओर दाँतों वाले सब प्राणी। उससे गौएँ उत्पन्न हुईं, और उससे बकरियाँ और भेड़ें उत्पन्न हुईं। हे प्रभो, सुगन्धित माला आदि, पूजा के लिए मेरे द्वारा लाए गए ये पुष्प ग्रहण कीजिए। ओम् श्री लक्ष्मीनृसिंह को नमस्कार। नाना प्रकार के सुगन्धित पत्र और पुष्प समर्पित करता हूँ।
+
+--- unit 18 | section: षोडशोपचार पूजा ---
+vidhi:
+The worship of the limbs: each limb of the lord is worshipped with one of his names, from the feet to the head.
+deva:
+अथाङ्ग पूज –
+ओं नृसिंहाय नमः पादौ पूजयामि ।
+ओं करालाय नमः गुल्फौ पूजयामि ।
+ओं विकृताय नमः जानुनी पूजयामि ।
+ओं नखाङ्कुराय नमः जङ्घैः पूजयामि ।
+ओं प्रह्लादवरदाय नमः ऊरूं पूजयामि ।
+ओं श्रीमते नमः गुह्यं पूजयामि ।
+ओं अप्रमेयपराक्रमाय नमः जघनं पूजयामि ।
+ओं भक्तानामभयप्रदाय नमः कटिं पूजयामि ।
+ओं कुक्षिस्थाखिलभुवनाय नमः उदरं पूजयामि ।
+ओं सर्वरक्षाय नमः हृदयं पूजयामि ।
+ओं कपिलाय नमः पृष्ठदेहं पूजयामि ।
+ओं शङ्खचक्रगदाशार्ङ्गपाणये नमः बाहून् पूजयामि ।
+ओं स्थूलग्रीवाय नमः कण्ठं पूजयामि ।
+ओं ज्वालामुखाय नमः वक्त्रं पूजयामि ।
+ओं तीक्ष्णदंष्ट्राय नमः दन्तान् पूजयामि ।
+ओं ब्रह्मण्याय नमः नासिकां पूजयामि ।
+ओं भक्तवत्सलाय नमः श्रोत्रे पूजयामि ।
+ओं सोमसूर्याग्निलोचनाय नमः नेत्रौ पूजयामि ।
+ओं उग्राय नमः ललाटं पूजयामि ।
+ओं हृषीकेशाय नमः शिरः पूजयामि ।
+ओं श्री लक्ष्मीनृसिंहाय नमः सर्वाण्यङ्गानि पूजयामि ॥
+iast:
+athāṅga pūja –
+oṁ nṛsiṁhāya namaḥ pādau pūjayāmi |
+oṁ karālāya namaḥ gulphau pūjayāmi |
+oṁ vikṛtāya namaḥ jānunī pūjayāmi |
+oṁ nakhāṅkurāya namaḥ jaṅghaiḥ pūjayāmi |
+oṁ prahlādavaradāya namaḥ ūrūṁ pūjayāmi |
+oṁ śrīmate namaḥ guhyaṁ pūjayāmi |
+oṁ aprameyaparākramāya namaḥ jaghanaṁ pūjayāmi |
+oṁ bhaktānāmabhayapradāya namaḥ kaṭiṁ pūjayāmi |
+oṁ kukṣisthākhilabhuvanāya namaḥ udaraṁ pūjayāmi |
+oṁ sarvarakṣāya namaḥ hṛdayaṁ pūjayāmi |
+oṁ kapilāya namaḥ pṛṣṭhadehaṁ pūjayāmi |
+oṁ śaṅkhacakragadāśārṅgapāṇaye namaḥ bāhūn pūjayāmi |
+oṁ sthūlagrīvāya namaḥ kaṇṭhaṁ pūjayāmi |
+oṁ jvālāmukhāya namaḥ vaktraṁ pūjayāmi |
+oṁ tīkṣṇadaṁṣṭrāya namaḥ dantān pūjayāmi |
+oṁ brahmaṇyāya namaḥ nāsikāṁ pūjayāmi |
+oṁ bhaktavatsalāya namaḥ śrotre pūjayāmi |
+oṁ somasūryāgnilocanāya namaḥ netrau pūjayāmi |
+oṁ ugrāya namaḥ lalāṭaṁ pūjayāmi |
+oṁ hṛṣīkeśāya namaḥ śiraḥ pūjayāmi |
+oṁ śrī lakṣmīnṛsiṁhāya namaḥ sarvāṇyaṅgāni pūjayāmi ||
+en: The worship of the limbs — Oṁ, salutation to Nṛsiṁha: I worship the feet. To Karāla, the fearsome: the ankles. To Vikṛta, of changed form: the knees. To him whose nails are sharp as goads: the shanks. To the giver of boons to Prahlāda: the thighs. To the glorious one: the private parts. To him of immeasurable valour: the hips. To the giver of fearlessness to devotees: the waist. To him who holds all the worlds in his belly: the belly. To the protector of all: the heart. To Kapila, the tawny: the back. To him who holds conch, discus, mace and the Śārṅga bow: the arms. To the thick-necked one: the neck. To the flame-mouthed one: the face. To the sharp-toothed one: the teeth. To the friend of the brāhmaṇas: the nose. To him who loves his devotees: the ears. To him whose eyes are the moon, the sun and fire: the eyes. To the fierce one: the forehead. To Hṛṣīkeśa: the head. Oṁ, salutation to Śrī Lakṣmī-Nṛsiṁha. I worship all the limbs.
+tel: అంగ పూజ — ఓం నృసింహాయ నమః, పాదములను పూజించుచున్నాను. కరాలునకు: చీలమండలను. వికృతునకు: మోకాళ్ళను. నఖాంకురునకు: పిక్కలను. ప్రహ్లాద వరదునకు: తొడలను. శ్రీమంతునకు: గుహ్యమును. అప్రమేయ పరాక్రమునకు: జఘనమును. భక్తులకు అభయమిచ్చువానికి: కటిని. కుక్షియందు సర్వ భువనములు గలవానికి: ఉదరమును. సర్వ రక్షకునకు: హృదయమును. కపిలునకు: వీపును. శంఖ చక్ర గదా శార్ఙ్గ పాణికి: బాహువులను. స్థూల గ్రీవునకు: కంఠమును. జ్వాలా ముఖునకు: ముఖమును. తీక్ష్ణ దంష్ట్రునకు: దంతములను. బ్రహ్మణ్యునకు: ముక్కును. భక్తవత్సలునకు: చెవులను. సోమ సూర్య అగ్ని లోచనునకు: నేత్రములను. ఉగ్రునకు: లలాటమును. హృషీకేశునకు: శిరస్సును. ఓం శ్రీ లక్ష్మీనృసింహునకు నమస్కారము. సర్వ అంగములను పూజించుచున్నాను.
+hi: अंग पूजा — ओम् नृसिंह को नमस्कार, चरणों की पूजा करता हूँ। कराल को: टखनों की। विकृत को: घुटनों की। नखांकुर को: पिंडलियों की। प्रह्लादवरद को: जाँघों की। श्रीमान् को: गुह्य की। अप्रमेयपराक्रम को: जघन की। भक्तों को अभय देने वाले को: कटि की। जिनकी कुक्षि में सब भुवन हैं उन्हें: उदर की। सर्वरक्षक को: हृदय की। कपिल को: पीठ की। शंख, चक्र, गदा और शार्ङ्ग धारण करने वाले को: भुजाओं की। स्थूलग्रीव को: कण्ठ की। ज्वालामुख को: मुख की। तीक्ष्णदंष्ट्र को: दाँतों की। ब्रह्मण्य को: नासिका की। भक्तवत्सल को: कानों की। सोम, सूर्य और अग्नि जिनके नेत्र हैं उन्हें: नेत्रों की। उग्र को: ललाट की। हृषीकेश को: सिर की। ओम् श्री लक्ष्मीनृसिंह को नमस्कार। सब अंगों की पूजा करता हूँ।
+
+--- unit 19 | section: षोडशोपचार पूजा ---
+vidhi:
+The hundred and eight names. A direction, not a text: the names of Śrī Nṛsiṁha are recited here, each with a flower.
+deva:
+अष्टोत्तरशतनामावली –
+श्री नृसिंह अष्टोत्तरशतनामावली पश्यतु ।
+iast:
+aṣṭottaraśatanāmāvalī –
+śrī nṛsiṁha aṣṭottaraśatanāmāvalī paśyatu |
+en: The hundred and eight names — See the hundred and eight names of Śrī Nṛsiṁha.
+tel: అష్టోత్తరశతనామావళి — శ్రీ నృసింహ అష్టోత్తరశతనామావళిని చూడుము.
+hi: अष्टोत्तरशतनामावली — श्री नृसिंह अष्टोत्तरशतनामावली देखिए।
+
+--- unit 20 | section: षोडशोपचार पूजा ---
+vidhi:
+Incense.
+deva:
+धूपम् –
+यत्पुरु॑षं॒ व्य॑दधुः ।
+क॒ति॒धा व्य॑कल्पयन् ।
+मुखं॒ किम॑स्य॒ कौ बा॒हू ।
+कावू॒रू पादा॑वुच्येते ॥
+वनस्पत्युद्भवो दिव्यो गन्धाद्यो गन्ध उत्तमः ।
+नरसिंह महीपालो धूपोऽयं प्रतिगृह्यताम् ॥
+ओं श्री लक्ष्मीनृसिंहाय नमः धूपं समर्पयामि ।
+iast:
+dhūpam –
+yatpuruṣaṁ vyadadhuḥ |
+katidhā vyakalpayan |
+mukhaṁ kimasya kau bāhū |
+kāvūrū pādāvucyete ||
+vanaspatyudbhavo divyo gandhādyo gandha uttamaḥ |
+narasiṁha mahīpālo dhūpo'yaṁ pratigṛhyatām ||
+oṁ śrī lakṣmīnṛsiṁhāya namaḥ dhūpaṁ samarpayāmi |
+en: Incense — When they divided the Person, into how many parts did they arrange him? What was his mouth, what were his arms, and what are called his thighs and his feet? Born of the trees, divine, rich in scent, the finest of fragrances: O Narasiṁha, protector of the earth, let this incense be accepted. Oṁ, salutation to Śrī Lakṣmī-Nṛsiṁha. I offer incense.
+tel: ధూపము — పురుషుని విభజించినప్పుడు ఎన్ని విధములుగా కల్పించిరి? ఆయన ముఖము ఏది, బాహువులు ఏవి, తొడలు పాదములు ఏవి అని చెప్పబడును? వనస్పతుల నుండి పుట్టిన, దివ్యమైన, సుగంధము గల, ఉత్తమమైన ఈ ధూపమును, ఓ నరసింహా, మహీపాలా, స్వీకరింపుము. ఓం శ్రీ లక్ష్మీనృసింహునకు నమస్కారము. ధూపమును సమర్పించుచున్నాను.
+hi: धूप — जब उन्होंने पुरुष का विभाजन किया, तो उसे कितने प्रकार से कल्पित किया? उसका मुख क्या था, भुजाएँ क्या थीं, और उसकी जाँघें और चरण क्या कहे जाते हैं? वनस्पति से उत्पन्न, दिव्य, सुगन्ध से भरी, उत्तम यह धूप, हे नरसिंह, महीपाल, ग्रहण कीजिए। ओम् श्री लक्ष्मीनृसिंह को नमस्कार। धूप समर्पित करता हूँ।
+
+--- unit 21 | section: षोडशोपचार पूजा ---
+vidhi:
+The lamp.
+deva:
+दीपम् –
+ब्रा॒ह्म॒णो᳚ऽस्य॒ मुख॑मासीत् ।
+बा॒हू रा॑ज॒न्य॑ः कृ॒तः ।
+ऊ॒रू तद॑स्य॒ यद्वैश्य॑ः ।
+प॒द्भ्याग्ं शू॒द्रो अ॑जायत ॥
+भक्त्या दीपं प्रयच्छामि देवाय परमात्मने ।
+त्राहि मां नरकाद्घोरात् दिव्य ज्योतिर्नमोऽस्तु ते ॥
+ओं श्री लक्ष्मीनृसिंहाय नमः दीपं समर्पयामि ।
+iast:
+dīpam –
+brāhmaṇo'sya mukhamāsīt |
+bāhū rājanyaḥ kṛtaḥ |
+ūrū tadasya yadvaiśyaḥ |
+padbhyāgṁ śūdro ajāyata ||
+bhaktyā dīpaṁ prayacchāmi devāya paramātmane |
+trāhi māṁ narakādghorāt divya jyotirnamo'stu te ||
+oṁ śrī lakṣmīnṛsiṁhāya namaḥ dīpaṁ samarpayāmi |
+en: The lamp — The brāhmaṇa was his mouth; the rājanya was made his arms; his thighs were the vaiśya; and from his feet the śūdra was born. With devotion I give the lamp to the god, the Supreme Self. Save me from the terrible hell. Salutation to you, divine light. Oṁ, salutation to Śrī Lakṣmī-Nṛsiṁha. I offer the lamp.
+tel: దీపము — బ్రాహ్మణుడు ఆయన ముఖము; రాజన్యుడు బాహువులుగా చేయబడెను; వైశ్యుడు ఆయన తొడలు; పాదముల నుండి శూద్రుడు పుట్టెను. పరమాత్మ అయిన దేవునకు భక్తితో దీపమును ఇచ్చుచున్నాను. ఘోరమైన నరకము నుండి నన్ను రక్షింపుము. దివ్య జ్యోతీ, నీకు నమస్కారము. ఓం శ్రీ లక్ష్మీనృసింహునకు నమస్కారము. దీపమును సమర్పించుచున్నాను.
+hi: दीप — ब्राह्मण उसका मुख था; राजन्य उसकी भुजाएँ बनाया गया; वैश्य उसकी जाँघें था; और चरणों से शूद्र उत्पन्न हुआ। परमात्मा देव को मैं भक्ति से दीप देता हूँ। घोर नरक से मेरी रक्षा कीजिए। हे दिव्य ज्योति, आपको नमस्कार। ओम् श्री लक्ष्मीनृसिंह को नमस्कार। दीप समर्पित करता हूँ।
+
+--- unit 22 | section: षोडशोपचार पूजा ---
+vidhi:
+The food offering.
+deva:
+नैवेद्यम् –
+च॒न्द्रमा॒ मन॑सो जा॒तः ।
+चक्षो॒ः सूर्यो॑ अजायत ।
+मुखा॒दिन्द्र॑श्चा॒ग्निश्च॑ ।
+प्रा॒णाद्वा॒युर॑जायत ॥
+नैवेद्यं गृह्यतां देव भक्तिं मे अचलां कुरु ।
+ईप्सितं मे वरं देहि इहत्र च परां गतिम् ॥
+श्रीनृसिंह नमस्तुभ्यं महानैवेद्यमुत्तमम् ।
+सङ्गृहाण सुरश्रेष्ठ भुक्तिमुक्तिप्रदायकम् ॥
+ओं श्री लक्ष्मीनृसिंहाय नमः नैवेद्यं समर्पयामि ।
+iast:
+naivedyam –
+candramā manaso jātaḥ |
+cakṣoḥ sūryo ajāyata |
+mukhādindraścāgniśca |
+prāṇādvāyurajāyata ||
+naivedyaṁ gṛhyatāṁ deva bhaktiṁ me acalāṁ kuru |
+īpsitaṁ me varaṁ dehi ihatra ca parāṁ gatim ||
+śrīnṛsiṁha namastubhyaṁ mahānaivedyamuttamam |
+saṅgṛhāṇa suraśreṣṭha bhuktimuktipradāyakam ||
+oṁ śrī lakṣmīnṛsiṁhāya namaḥ naivedyaṁ samarpayāmi |
+en: The food offering — The moon was born from his mind, and from his eye the sun was born. From his mouth came Indra and Agni, and from his breath Vāyu was born. Let the food offering be accepted, O god. Make my devotion unwavering. Grant me the boon I desire, here and in the highest state beyond. O Śrī Nṛsiṁha, salutation to you. Accept this great and excellent food offering, O best of the gods, giver of enjoyment and liberation. Oṁ, salutation to Śrī Lakṣmī-Nṛsiṁha. I offer the food.
+tel: నైవేద్యము — ఆయన మనస్సు నుండి చంద్రుడు పుట్టెను; కన్ను నుండి సూర్యుడు పుట్టెను. ముఖము నుండి ఇంద్రుడును అగ్నియు, ప్రాణము నుండి వాయువు పుట్టెను. ఓ దేవా, నైవేద్యమును గ్రహింపుము. నా భక్తిని స్థిరముగా చేయుము. నేను కోరిన వరమును, ఇహమునందును పరమ గతిని ప్రసాదింపుము. ఓ శ్రీ నృసింహా, నీకు నమస్కారము. భుక్తి ముక్తులను ఇచ్చు ఈ ఉత్తమమైన మహానైవేద్యమును, ఓ సురశ్రేష్ఠా, గ్రహింపుము. ఓం శ్రీ లక్ష్మీనృసింహునకు నమస్కారము. నైవేద్యమును సమర్పించుచున్నాను.
+hi: नैवेद्य — उसके मन से चन्द्रमा उत्पन्न हुआ, और नेत्र से सूर्य। मुख से इन्द्र और अग्नि, और प्राण से वायु उत्पन्न हुआ। हे देव, नैवेद्य ग्रहण कीजिए। मेरी भक्ति को अचल कीजिए। मुझे मनचाहा वर दीजिए, और यहाँ तथा परम गति दीजिए। हे श्री नृसिंह, आपको नमस्कार। भुक्ति और मुक्ति देने वाला यह उत्तम महानैवेद्य, हे सुरश्रेष्ठ, ग्रहण कीजिए। ओम् श्री लक्ष्मीनृसिंह को नमस्कार। नैवेद्य समर्पित करता हूँ।
+
+--- unit 23 | section: षोडशोपचार पूजा ---
+vidhi:
+The mantras said over the food: the Gāyatrī, the sprinkling of water about the dish, and the offerings to the five breaths. The words in round brackets give the form of the sprinkling used in the evening.
+deva:
+ओं भूर्भुव॒स्सुव॑ः । तत्स॑वि॒तुर्वरे᳚ण्यं॒ भर्गो॑ दे॒वस्य॑ धीमहि ।
+धियो॒ यो न॑ः प्रचो॒दया᳚त् ॥
+सत्यं त्वा ऋतेन परिषिञ्चामि ।
+(सायङ्काले – ऋतं त्वा सत्येन परिषिञ्चामि)
+अमृतमस्तु । अ॒मृ॒तो॒प॒स्तर॑णमसि ।
+ओं प्रा॒णाय॒ स्वाहा᳚ । ओं अ॒पा॒नाय॒ स्वाहा᳚ ।
+ओं व्या॒नाय॒ स्वाहा᳚ । ओं उ॒दा॒नाय॒ स्वाहा᳚ ।
+ओं स॒मा॒नाय॒ स्वाहा᳚ ।
+मध्ये मध्ये पानीयं समर्पयामि ।
+अ॒मृ॒ता॒पि॒धा॒नम॑सि । उत्तरापोशनं समर्पयामि ।
+हस्तौ प्रक्षालयामि । पादौ प्रक्षालयामि ।
+शुद्धाचमनीयं समर्पयामि ।
+iast:
+oṁ bhūrbhuvassuvaḥ | tatsaviturvareṇyaṁ bhargo devasya dhīmahi |
+dhiyo yo naḥ pracodayāt ||
+satyaṁ tvā ṛtena pariṣiñcāmi |
+(sāyaṅkāle – ṛtaṁ tvā satyena pariṣiñcāmi)
+amṛtamastu | amṛtopastaraṇamasi |
+oṁ prāṇāya svāhā | oṁ apānāya svāhā |
+oṁ vyānāya svāhā | oṁ udānāya svāhā |
+oṁ samānāya svāhā |
+madhye madhye pānīyaṁ samarpayāmi |
+amṛtāpidhānamasi | uttarāpośanaṁ samarpayāmi |
+hastau prakṣālayāmi | pādau prakṣālayāmi |
+śuddhācamanīyaṁ samarpayāmi |
+en: Oṁ, earth, air and heaven. We meditate upon the excellent light of the god Savitṛ. May he impel our thoughts. With truth I sprinkle you about. (In the evening — with right order I sprinkle you about.) Let it be nectar. You are the spread beneath the nectar. Oṁ, to the out-breath, svāhā. Oṁ, to the in-breath, svāhā. Oṁ, to the diffused breath, svāhā. Oṁ, to the up-breath, svāhā. Oṁ, to the even breath, svāhā. Between the courses I offer water. You are the covering upon the nectar. I offer the water taken after eating. I wash the hands. I wash the feet. I offer pure water for sipping.
+tel: ఓం భూర్భువస్సువః. సవితృదేవుని వరేణ్యమైన తేజస్సును ధ్యానించుచున్నాము. ఆయన మా బుద్ధులను ప్రేరేపించుగాక. సత్యముతో నిన్ను చుట్టూ ప్రోక్షించుచున్నాను. (సాయంకాలమునందు — ఋతముతో నిన్ను చుట్టూ ప్రోక్షించుచున్నాను.) అమృతమగుగాక. నీవు అమృతమునకు ఉపస్తరణమువు. ఓం ప్రాణమునకు స్వాహా. ఓం అపానమునకు స్వాహా. ఓం వ్యానమునకు స్వాహా. ఓం ఉదానమునకు స్వాహా. ఓం సమానమునకు స్వాహా. మధ్య మధ్య పానీయమును సమర్పించుచున్నాను. నీవు అమృతమునకు అపిధానమువు. ఉత్తరాపోశనమును సమర్పించుచున్నాను. హస్తములను కడుగుచున్నాను. పాదములను కడుగుచున్నాను. శుద్ధ ఆచమనీయమును సమర్పించుచున్నాను.
+hi: ओम् भूर्भुवः स्वः। हम सवितृ देव के वरेण्य तेज का ध्यान करते हैं। वे हमारी बुद्धियों को प्रेरित करें। सत्य से मैं तुम्हें परिसिञ्चित करता हूँ। (सायंकाल में — ऋत से मैं तुम्हें परिसिञ्चित करता हूँ।) अमृत हो। तुम अमृत का उपस्तरण हो। ओम् प्राण को स्वाहा। ओम् अपान को स्वाहा। ओम् व्यान को स्वाहा। ओम् उदान को स्वाहा। ओम् समान को स्वाहा। बीच-बीच में पानीय समर्पित करता हूँ। तुम अमृत का अपिधान हो। उत्तरापोशन समर्पित करता हूँ। हाथ धोता हूँ। चरण धोता हूँ। शुद्ध आचमनीय समर्पित करता हूँ।
+
+--- unit 24 | section: षोडशोपचार पूजा ---
+vidhi:
+Betel.
+deva:
+ताम्बूलम् –
+नाभ्या॑ आसीद॒न्तरि॑क्षम् ।
+शी॒र्ष्णो द्यौः सम॑वर्तत ।
+प॒द्भ्यां भूमि॒र्दिश॒ः श्रोत्रा᳚त् ।
+तथा॑ लो॒काग्ं अ॑कल्पयन् ॥
+पूगीफल समायुक्तं नागवल्लीदलैर्युतम् ।
+येला लवङ्ग सम्युक्तं ताम्बूलं देव गृह्यताम् ॥
+ओं श्री लक्ष्मीनृसिंहाय नमः ताम्बूलं समर्पयामि ।
+iast:
+tāmbūlam –
+nābhyā āsīdantarikṣam |
+śīrṣṇo dyauḥ samavartata |
+padbhyāṁ bhūmirdiśaḥ śrotrāt |
+tathā lokāgṁ akalpayan ||
+pūgīphala samāyuktaṁ nāgavallīdalairyutam |
+yelā lavaṅga samyuktaṁ tāmbūlaṁ deva gṛhyatām ||
+oṁ śrī lakṣmīnṛsiṁhāya namaḥ tāmbūlaṁ samarpayāmi |
+en: Betel — From his navel came the mid-air; from his head the sky came forth; from his feet the earth, and the quarters from his ear. So they fashioned the worlds. With areca nut, with leaves of the betel creeper, with cardamom and clove: let this betel be accepted, O god. Oṁ, salutation to Śrī Lakṣmī-Nṛsiṁha. I offer betel.
+tel: తాంబూలము — ఆయన నాభి నుండి అంతరిక్షము కలిగెను; శిరస్సు నుండి ద్యులోకము ఏర్పడెను; పాదముల నుండి భూమి, చెవి నుండి దిక్కులు. ఈ విధముగా లోకములను కల్పించిరి. పోకచెక్కతో కూడిన, తమలపాకులతో కూడిన, యాలకులు లవంగములతో కూడిన ఈ తాంబూలమును, ఓ దేవా, గ్రహింపుము. ఓం శ్రీ లక్ష్మీనృసింహునకు నమస్కారము. తాంబూలమును సమర్పించుచున్నాను.
+hi: ताम्बूल — उसकी नाभि से अन्तरिक्ष हुआ; सिर से द्युलोक प्रकट हुआ; चरणों से पृथ्वी और कान से दिशाएँ। इस प्रकार उन्होंने लोकों की कल्पना की। सुपारी से युक्त, पान के पत्तों से युक्त, इलायची और लौंग से युक्त यह ताम्बूल, हे देव, ग्रहण कीजिए। ओम् श्री लक्ष्मीनृसिंह को नमस्कार। ताम्बूल समर्पित करता हूँ।
+
+--- unit 25 | section: षोडशोपचार पूजा ---
+vidhi:
+The waving of the camphor flame, then water for sipping and a salutation.
+deva:
+नीराजनम् –
+वेदा॒हमे॒तं पुरु॑षं म॒हान्तम्᳚ ।
+आ॒दि॒त्यव॑र्णं॒ तम॑स॒स्तु पा॒रे ।
+सर्वा॑णि रू॒पाणि॑ वि॒चित्य॒ धीर॑ः ।
+नामा॑नि कृ॒त्वाऽभि॒वद॒न्॒ यदास्ते᳚ ॥
+कर्पूरकं महाराज रम्भोद्भूतं च दीपकम् ।
+मङ्गलार्थं महीपाल सङ्गृहाण जगत्पते ॥
+ओं श्री लक्ष्मीनृसिंहाय नमः कर्पूर नीराजनं समर्पयामि ।
+नीराजनानन्तरं शुद्धाचमनीयं समर्पयामि । नमस्करोमि ।
+iast:
+nīrājanam –
+vedāhametaṁ puruṣaṁ mahāntam |
+ādityavarṇaṁ tamasastu pāre |
+sarvāṇi rūpāṇi vicitya dhīraḥ |
+nāmāni kṛtvā'bhivadan yadāste ||
+karpūrakaṁ mahārāja rambhodbhūtaṁ ca dīpakam |
+maṅgalārthaṁ mahīpāla saṅgṛhāṇa jagatpate ||
+oṁ śrī lakṣmīnṛsiṁhāya namaḥ karpūra nīrājanaṁ samarpayāmi |
+nīrājanānantaraṁ śuddhācamanīyaṁ samarpayāmi | namaskaromi |
+en: The waving of the light — I know this great Person, bright as the sun, beyond the darkness. The wise one, having shaped all forms and given them their names, abides calling them by those names. O great king, protector of the earth, master of the world: for auspiciousness, accept the camphor, and the lamp born of the plantain. Oṁ, salutation to Śrī Lakṣmī-Nṛsiṁha. I offer the waving of the camphor flame. After the waving of the light I offer pure water for sipping. I bow.
+tel: నీరాజనము — సూర్యుని వంటి వర్ణము గల, చీకటికి ఆవల నున్న ఈ మహాపురుషుని నేను ఎరుగుదును. ఆ ధీరుడు సర్వ రూపములను కల్పించి, వాటికి నామములను ఇచ్చి, వాటిని పిలుచుచు నిలిచియున్నాడు. ఓ మహారాజా, మహీపాలా, జగత్పతీ, మంగళము కొఱకు కర్పూరమును, అరటి నుండి పుట్టిన దీపమును గ్రహింపుము. ఓం శ్రీ లక్ష్మీనృసింహునకు నమస్కారము. కర్పూర నీరాజనమును సమర్పించుచున్నాను. నీరాజనానంతరము శుద్ధ ఆచమనీయమును సమర్పించుచున్నాను. నమస్కరించుచున్నాను.
+hi: नीराजन — मैं इस महान पुरुष को जानता हूँ, जो सूर्य के समान वर्ण वाला और अन्धकार से परे है। वह धीर सब रूपों को रचकर और उनके नाम रखकर उन्हें पुकारता हुआ स्थित है। हे महाराज, महीपाल, जगत्पति, मंगल के लिए कर्पूर और कदली से उत्पन्न दीप ग्रहण कीजिए। ओम् श्री लक्ष्मीनृसिंह को नमस्कार। कर्पूर नीराजन समर्पित करता हूँ। नीराजन के बाद शुद्ध आचमनीय समर्पित करता हूँ। नमस्कार करता हूँ।
+
+--- unit 26 | section: मन्त्रपुष्पम् ---
+vidhi:
+The mantra-flower. The direction in square brackets points to the full mantra-flower, which may be recited here. Then the verse of the Ordainer, the gāyatrī of Nṛsiṁha, and the offering with his name.
+deva:
+मन्त्रपुष्पम् –
+[ मन्त्रपुष्पं पश्यतु ॥ ]
+धा॒ता पु॒रस्ता॒द्यमु॑दाज॒हार॑ ।
+श॒क्रः प्रवि॒द्वान्प्र॒दिश॒श्चत॑स्रः ।
+तमे॒वं वि॒द्वान॒मृत॑ इ॒ह भ॑वति ।
+नान्यः पन्था॒ अय॑नाय विद्यते ॥
+ओं व॒ज्र॒न॒खाय॑ वि॒द्महे॑ तीक्ष्णद॒ग्ंष्ट्राय॑ धीमहि ।
+तन्नो॑ नारसिग्ंहः प्रचो॒दया᳚त् ॥
+ओं श्री लक्ष्मीनृसिंहाय नमः सुवर्ण दिव्य मन्त्रपुष्पं समर्पयामि ।
+iast:
+mantrapuṣpam –
+[ mantrapuṣpaṁ paśyatu || ]
+dhātā purastādyamudājahāra |
+śakraḥ pravidvānpradiśaścatasraḥ |
+tamevaṁ vidvānamṛta iha bhavati |
+nānyaḥ panthā ayanāya vidyate ||
+oṁ vajranakhāya vidmahe tīkṣṇadagṁṣṭrāya dhīmahi |
+tanno nārasigṁhaḥ pracodayāt ||
+oṁ śrī lakṣmīnṛsiṁhāya namaḥ suvarṇa divya mantrapuṣpaṁ samarpayāmi |
+en: The mantra-flower — [See the mantra-flower.] He whom the Ordainer proclaimed in the beginning, whom Śakra knew in all four quarters: one who knows him thus becomes immortal here. There is no other path for going. Oṁ. May we know him whose nails are like the thunderbolt; let us meditate upon him whose teeth are sharp; may Nārasiṁha impel us to that. Oṁ, salutation to Śrī Lakṣmī-Nṛsiṁha. I offer the golden, divine mantra-flower.
+tel: మంత్రపుష్పము — [మంత్రపుష్పమును చూడుము.] ధాత పూర్వమే ఎవనిని ప్రకటించెనో, శక్రుడు నాలుగు దిక్కులయందును ఎవనిని ఎరిగెనో, ఆయనను ఈ విధముగా ఎరిగినవాడు ఇక్కడనే అమృతుడగును. పోవుటకు వేరు మార్గము లేదు. ఓం. వజ్రనఖుని ఎరుగుదుము. తీక్ష్ణ దంష్ట్రుని ధ్యానించుదుము. ఆ నారసింహుడు మమ్ము ప్రేరేపించుగాక. ఓం శ్రీ లక్ష్మీనృసింహునకు నమస్కారము. సువర్ణ దివ్య మంత్రపుష్పమును సమర్పించుచున్నాను.
+hi: मन्त्रपुष्प — [मन्त्रपुष्प देखिए।] धाता ने आदि में जिसका वर्णन किया, शक्र ने चारों दिशाओं में जिसे जाना, उसे इस प्रकार जानने वाला यहीं अमृत हो जाता है। जाने के लिए दूसरा मार्ग नहीं है। ओम्। हम वज्रनख को जानें। तीक्ष्णदंष्ट्र का ध्यान करें। वे नारसिंह हमें प्रेरित करें। ओम् श्री लक्ष्मीनृसिंह को नमस्कार। सुवर्ण दिव्य मन्त्रपुष्प समर्पित करता हूँ।
+
+--- unit 27 | section: नमस्कारः ---
+vidhi:
+Circumambulation of oneself, turning in place, with three verses.
+deva:
+आत्मप्रदक्षिण नमस्कारम् –
+यानिकानि च पापानि जन्मान्तरकृतानि च ।
+तानि तानि प्रणश्यन्ति प्रदक्षिण पदे पदे ॥
+पापोऽहं पापकर्माऽहं पापात्मा पापसम्भव ।
+त्राहिमां कृपया देव शरणागतवत्सला ॥
+अन्यथा शरणं नास्ति त्वमेव शरणं मम ।
+तस्मात्कारुण्य भावेन रक्ष रक्ष रमापते ॥
+ओं श्री लक्ष्मीनृसिंहाय नमः आत्मप्रदक्षिण नमस्कारान् समर्पयामि ।
+iast:
+ātmapradakṣiṇa namaskāram –
+yānikāni ca pāpāni janmāntarakṛtāni ca |
+tāni tāni praṇaśyanti pradakṣiṇa pade pade ||
+pāpo'haṁ pāpakarmā'haṁ pāpātmā pāpasambhava |
+trāhimāṁ kṛpayā deva śaraṇāgatavatsalā ||
+anyathā śaraṇaṁ nāsti tvameva śaraṇaṁ mama |
+tasmātkāruṇya bhāvena rakṣa rakṣa ramāpate ||
+oṁ śrī lakṣmīnṛsiṁhāya namaḥ ātmapradakṣiṇa namaskārān samarpayāmi |
+en: Circumambulation and salutation — Whatever sins were done in other births, they are all destroyed at every step of the circumambulation. I am sinful, my deeds are sinful, my self is sinful, and I was born of sin. Save me in your mercy, O god, who love those who come to you for refuge. I have no other refuge; you alone are my refuge. Therefore, in your compassion, protect me, protect me, O lord of Ramā. Oṁ, salutation to Śrī Lakṣmī-Nṛsiṁha. I offer circumambulation and salutations.
+tel: ఆత్మప్రదక్షిణ నమస్కారము — జన్మాంతరములలో చేసిన ఏ ఏ పాపములు కలవో, అవి అన్నియు ప్రదక్షిణము యొక్క ప్రతి అడుగునందు నశించును. నేను పాపిని, పాపకర్మను, పాపాత్ముడను, పాపమునందు పుట్టినవాడను. ఓ దేవా, శరణాగతవత్సలా, కృపతో నన్ను రక్షింపుము. నాకు వేరు శరణము లేదు; నీవే నాకు శరణము. అందువలన కారుణ్య భావముతో, ఓ రమాపతీ, నన్ను రక్షింపుము, రక్షింపుము. ఓం శ్రీ లక్ష్మీనృసింహునకు నమస్కారము. ఆత్మప్రదక్షిణ నమస్కారములను సమర్పించుచున్నాను.
+hi: आत्मप्रदक्षिणा नमस्कार — जन्म-जन्मान्तर में किए गए जो-जो पाप हैं, वे सब प्रदक्षिणा के पग-पग पर नष्ट हो जाते हैं। मैं पापी हूँ, पापकर्मा हूँ, पापात्मा हूँ, पाप से उत्पन्न हूँ। हे शरणागतवत्सल देव, कृपा करके मेरी रक्षा कीजिए। मेरा दूसरा कोई शरण नहीं है; आप ही मेरे शरण हैं। इसलिए करुणाभाव से, हे रमापति, रक्षा कीजिए, रक्षा कीजिए। ओम् श्री लक्ष्मीनृसिंह को नमस्कार। आत्मप्रदक्षिणा नमस्कार समर्पित करता हूँ।
+
+--- unit 28 | section: नमस्कारः ---
+vidhi:
+Prostration with the whole body. The second verse names the eight limbs that touch the ground.
+deva:
+साष्टाङ्ग नमस्कारम् –
+नमः सर्वहितार्थाय जगदाधारहेतवे ।
+साष्टाङ्गोऽयं प्रणामस्ते प्रयत्नेन मयाकृतः ॥
+उरसा शिरसा दृष्ट्या मनसा वचसा तथा ।
+पद्भ्यां कराभ्यां जानुभ्यां प्रणामोष्टाङ्गं उच्यते ॥
+ओं श्री लक्ष्मीनृसिंहाय नमः साष्टाङ्ग नमस्कारां समर्पयामि ।
+iast:
+sāṣṭāṅga namaskāram –
+namaḥ sarvahitārthāya jagadādhārahetave |
+sāṣṭāṅgo'yaṁ praṇāmaste prayatnena mayākṛtaḥ ||
+urasā śirasā dṛṣṭyā manasā vacasā tathā |
+padbhyāṁ karābhyāṁ jānubhyāṁ praṇāmoṣṭāṅgaṁ ucyate ||
+oṁ śrī lakṣmīnṛsiṁhāya namaḥ sāṣṭāṅga namaskārāṁ samarpayāmi |
+en: Prostration — Salutation to him who is for the good of all, the ground and cause of the world. Let this prostration with eight limbs, made by me with care, be to you. With the chest, the head, the eyes, the mind, speech, the two feet, the two hands and the two knees: this is called the prostration with eight limbs. Oṁ, salutation to Śrī Lakṣmī-Nṛsiṁha. I offer prostrations.
+tel: సాష్టాంగ నమస్కారము — సర్వుల హితము కొఱకైనవాడును, జగత్తునకు ఆధారమును హేతువును అయిన దేవునకు నమస్కారము. ప్రయత్నముతో నేను చేసిన ఈ సాష్టాంగ ప్రణామము నీకగుగాక. వక్షస్సుతో, శిరస్సుతో, దృష్టితో, మనస్సుతో, వాక్కుతో, పాదములతో, కరములతో, మోకాళ్ళతో చేయు ప్రణామము సాష్టాంగము అని చెప్పబడును. ఓం శ్రీ లక్ష్మీనృసింహునకు నమస్కారము. సాష్టాంగ నమస్కారములను సమర్పించుచున్నాను.
+hi: साष्टांग नमस्कार — सबके हित के लिए, जगत के आधार और हेतु देव को नमस्कार। यत्न से मेरे द्वारा किया गया यह साष्टांग प्रणाम आपको हो। छाती, सिर, दृष्टि, मन, वाणी, दोनों चरण, दोनों हाथ और दोनों घुटनों से किया गया प्रणाम साष्टांग कहा जाता है। ओम् श्री लक्ष्मीनृसिंह को नमस्कार। साष्टांग नमस्कार समर्पित करता हूँ।
+
+--- unit 29 | section: सर्वोपचाराः ---
+vidhi:
+The royal services, offered in thought.
+deva:
+सर्वोपचाराः –
+ओं श्री लक्ष्मीनृसिंहाय नमः छत्रं आच्छादयामि ।
+ओं श्री लक्ष्मीनृसिंहाय नमः चामरैर्वीजयामि ।
+ओं श्री लक्ष्मीनृसिंहाय नमः नृत्यं दर्शयामि ।
+ओं श्री लक्ष्मीनृसिंहाय नमः गीतं श्रावयामि ।
+ओं श्री लक्ष्मीनृसिंहाय नमः आन्दोलिकान्नारोहयामि ।
+ओं श्री लक्ष्मीनृसिंहाय नमः अश्वानारोहयामि ।
+ओं श्री लक्ष्मीनृसिंहाय नमः गजानारोहयामि ।
+समस्त राजोपचारान् देवोपचारान् समर्पयामि ।
+iast:
+sarvopacārāḥ –
+oṁ śrī lakṣmīnṛsiṁhāya namaḥ chatraṁ ācchādayāmi |
+oṁ śrī lakṣmīnṛsiṁhāya namaḥ cāmarairvījayāmi |
+oṁ śrī lakṣmīnṛsiṁhāya namaḥ nṛtyaṁ darśayāmi |
+oṁ śrī lakṣmīnṛsiṁhāya namaḥ gītaṁ śrāvayāmi |
+oṁ śrī lakṣmīnṛsiṁhāya namaḥ āndolikānnārohayāmi |
+oṁ śrī lakṣmīnṛsiṁhāya namaḥ aśvānārohayāmi |
+oṁ śrī lakṣmīnṛsiṁhāya namaḥ gajānārohayāmi |
+samasta rājopacārān devopacārān samarpayāmi |
+en: All the services — Oṁ, salutation to Śrī Lakṣmī-Nṛsiṁha. I hold up the parasol. I fan him with the whisks. I show the dance. I cause the song to be heard. I seat him in the swing. I seat him upon horses. I seat him upon elephants. I offer all the services of a king and all the services of a god.
+tel: సర్వోపచారములు — ఓం శ్రీ లక్ష్మీనృసింహునకు నమస్కారము. ఛత్రమును పట్టుచున్నాను. చామరములతో వీచుచున్నాను. నృత్యమును చూపుచున్నాను. గీతమును వినిపించుచున్నాను. ఆందోళికను ఎక్కించుచున్నాను. అశ్వములను ఎక్కించుచున్నాను. గజములను ఎక్కించుచున్నాను. సమస్త రాజోపచారములను దేవోపచారములను సమర్పించుచున్నాను.
+hi: सर्वोपचार — ओम् श्री लक्ष्मीनृसिंह को नमस्कार। छत्र लगाता हूँ। चामरों से वीजन करता हूँ। नृत्य दिखाता हूँ। गीत सुनाता हूँ। आन्दोलिका पर आरोहण कराता हूँ। अश्वों पर आरोहण कराता हूँ। गजों पर आरोहण कराता हूँ। समस्त राजोपचार और देवोपचार समर्पित करता हूँ।
+
+--- unit 30 | section: क्षमाप्रार्थना ---
+vidhi:
+Asking pardon, in three verses.
+deva:
+क्षमा प्रार्थन –
+अपराध सहस्राणि क्रियन्तेऽहर्निशं मया ।
+दासोऽयमिति मां मत्वा क्षमस्व पुरुषोत्तमा ॥
+आवाहनं न जानामि न जानामि विसर्जनम् ।
+पूजाविधिं न जानामि क्षमस्व कमलापते ॥
+मन्त्रहीनं क्रियाहीनं भक्तिहीनं जनार्दन ।
+यत्पूजितं मया देव परिपूर्णं तदस्तुते ॥
+iast:
+kṣamā prārthana –
+aparādha sahasrāṇi kriyante'harniśaṁ mayā |
+dāso'yamiti māṁ matvā kṣamasva puruṣottamā ||
+āvāhanaṁ na jānāmi na jānāmi visarjanam |
+pūjāvidhiṁ na jānāmi kṣamasva kamalāpate ||
+mantrahīnaṁ kriyāhīnaṁ bhaktihīnaṁ janārdana |
+yatpūjitaṁ mayā deva paripūrṇaṁ tadastute ||
+en: Asking pardon — Thousands of offences are committed by me day and night. Thinking of me as your servant, forgive me, O Supreme Person. I do not know how to invoke you, and I do not know how to take leave of you. I do not know the rule of worship. Forgive me, O lord of Kamalā. Whatever I have worshipped, O Janārdana, O god, lacking in mantra, lacking in rite, lacking in devotion — let it be made complete for you.
+tel: క్షమా ప్రార్థన — రాత్రింబవళ్ళు నాచే వేలకొలది అపరాధములు చేయబడుచున్నవి. ఇతడు దాసుడు అని నన్ను భావించి, ఓ పురుషోత్తమా, క్షమింపుము. ఆవాహనము ఎఱుగను, విసర్జనము ఎఱుగను. పూజా విధిని ఎఱుగను. ఓ కమలాపతీ, క్షమింపుము. ఓ జనార్దనా, ఓ దేవా, మంత్రహీనముగా, క్రియాహీనముగా, భక్తిహీనముగా నేను ఏది పూజించితినో అది నీకు పరిపూర్ణమగుగాక.
+hi: क्षमा प्रार्थना — दिन-रात मेरे द्वारा सहस्रों अपराध किए जाते हैं। यह दास है, ऐसा मानकर, हे पुरुषोत्तम, मुझे क्षमा कीजिए। मैं आवाहन नहीं जानता, विसर्जन नहीं जानता। पूजा की विधि नहीं जानता। हे कमलापति, क्षमा कीजिए। हे जनार्दन, हे देव, मन्त्रहीन, क्रियाहीन, भक्तिहीन जो कुछ मैंने पूजा है, वह आपके लिए परिपूर्ण हो।
+
+--- unit 31 | section: क्षमाप्रार्थना ---
+vidhi:
+The closing dedication, which names the rule of the Puruṣa Sūkta a second time.
+deva:
+अनया पुरुषसूक्त विधान पूर्वक ध्यान आवाहनादि षोडशोपचार पूजया भगवान् सर्वात्मकः श्री लक्ष्मीनृसिंह स्वामी सुप्रीता सुप्रसन्ना वरदा भवन्तु ॥
+iast:
+anayā puruṣasūkta vidhāna pūrvaka dhyāna āvāhanādi ṣoḍaśopacāra pūjayā bhagavān sarvātmakaḥ śrī lakṣmīnṛsiṁha svāmī suprītā suprasannā varadā bhavantu ||
+en: By this worship in sixteen services, beginning with meditation and invocation, preceded by the rule of the Puruṣa Sūkta, may the Bhagavān, the Self of all, the lord Śrī Lakṣmī-Nṛsiṁha, be well pleased, gracious, and the giver of boons.
+tel: పురుషసూక్త విధాన పూర్వకమైన ఈ ధ్యాన ఆవాహనాది షోడశోపచార పూజచే సర్వాత్మకుడైన భగవంతుడు శ్రీ లక్ష్మీనృసింహ స్వామి సుప్రీతుడును సుప్రసన్నుడును వరదుడును అగుగాక.
+hi: पुरुषसूक्त विधान पूर्वक इस ध्यान और आवाहन आदि षोडशोपचार पूजा से सर्वात्मा भगवान श्री लक्ष्मीनृसिंह स्वामी सुप्रीत, सुप्रसन्न और वरद हों।
+
+--- unit 32 | section: तीर्थप्रसाद ग्रहणम् ---
+vidhi:
+Receiving the water from the lord's feet and the food offered to him, and the closing peace.
+deva:
+तीर्थप्रसाद ग्रहणम् –
+अकालमृत्युहरणं सर्वव्याधिनिवारणम् ।
+समस्तपापक्षयकरं श्री लक्ष्मीनृसिंह पादोदकं पावनं शुभम् ॥
+श्री लक्ष्मीनृसिंहाय नमः प्रसादं शिरसा गृह्णामि ।
+ओं शान्तिः शान्तिः शान्तिः ॥
+iast:
+tīrthaprasāda grahaṇam –
+akālamṛtyuharaṇaṁ sarvavyādhinivāraṇam |
+samastapāpakṣayakaraṁ śrī lakṣmīnṛsiṁha pādodakaṁ pāvanaṁ śubham ||
+śrī lakṣmīnṛsiṁhāya namaḥ prasādaṁ śirasā gṛhṇāmi |
+oṁ śāntiḥ śāntiḥ śāntiḥ ||
+en: Receiving the water and the prasāda — The water from the feet of Śrī Lakṣmī-Nṛsiṁha is purifying and auspicious. It removes untimely death, wards off every disease, and destroys all sin. Salutation to Śrī Lakṣmī-Nṛsiṁha. I receive the prasāda upon my head. Oṁ, peace, peace, peace.
+tel: తీర్థప్రసాద గ్రహణము — అకాల మృత్యువును హరించునదియు, సర్వ వ్యాధులను నివారించునదియు, సమస్త పాపములను క్షయింపజేయునదియు అగు శ్రీ లక్ష్మీనృసింహ పాదోదకము పావనమైనది, శుభమైనది. శ్రీ లక్ష్మీనృసింహునకు నమస్కారము. ప్రసాదమును శిరస్సున గ్రహించుచున్నాను. ఓం శాంతిః శాంతిః శాంతిః.
+hi: तीर्थप्रसाद ग्रहण — अकालमृत्यु को हरने वाला, सब व्याधियों का निवारण करने वाला, समस्त पापों का क्षय करने वाला श्री लक्ष्मीनृसिंह का पादोदक पावन और शुभ है। श्री लक्ष्मीनृसिंह को नमस्कार। प्रसाद शिर से ग्रहण करता हूँ। ओम् शान्तिः शान्तिः शान्तिः।

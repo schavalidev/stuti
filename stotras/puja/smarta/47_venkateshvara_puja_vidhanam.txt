@@ -1,1 +1,864 @@
-RESERVED 2026-09-12 — this file is being written by another Claude session from `https://stotranidhi.com/hi/sri-venkateshwara-puja-vidhanam-in-sanskrit/`. Do not write a file for this rite; it will be filled in shortly.
+Title: Śrī Veṅkaṭeśvara Pūjā Vidhānam
+Devanāgarī: श्री वेङ्कटेश्वर पूजा विधानम्
+Telugu: శ్రీ వేంకటేశ్వర పూజా విధానం
+
+Author: Anonymous (received smārta household rite). No compiler is named and none should be inferred.
+
+Type: vidhi (ritual manual) — not a stotra. Uses the one-extra-field vidhi format documented in `../../vidhi/madhyandina/01_sandhyopasana_vidhi.txt`: a `vidhi:` field carrying the ritual instruction, then deva / iast / en / tel / hi.
+
+Recension / paddhati: **Smārta, South Indian.** The page's opening directions send the worshipper to the smārta pūrvāṅga and to the Gaṇapati pūjā, not to the Viṣvaksena pūjā of `../vaishnava/01_purvanga_vidhanam.txt`, and it has none of the marks of the Vaiṣṇava opening. It is therefore filed as smārta, though its deity is Viṣṇu. **The two paddhatis must never be merged, harmonised or collated against each other.** This is the only pūjā of Śrī Veṅkaṭeśvara in this folder.
+
+**This rite is built on the Puruṣa Sūkta.** The second saṅkalpa says the worship follows `पुरुष सूक्त विधानेन`, and the claim holds: the first sixteen ṛcs of the Taittirīya Puruṣa Sūkta head sixteen services in the hymn's own order, from the invocation (ṛc 1) to the waving of the light (ṛc 16); ṛc 17 is recited at the mantra-flower and ṛc 18 at the leave-taking. The bath in the five nectars and the unbroken rice have no ṛc. The Lord is worshipped **with Padmāvatī** throughout. Its own material is a three-verse meditation, a twenty-one-name worship of the limbs, a prayer in three verses that salutes the Lord in his five forms (the supreme, the vyūha, the vibhava, the indweller and the image), and a closing verse of pardon addressed to Acyuta.
+
+What it does not have: **no pūrvāṅga of its own.** Use `03_purvanga_vidhanam.txt` before this file, and then the Gaṇapati pūjā. It does not print the hundred and eight names, and at the mantra-flower it sends the worshipper to the special mantra-flower without printing it.
+
+Source / recension: base text `https://stotranidhi.com/hi/sri-venkateshwara-puja-vidhanam-in-sanskrit/` (fetched 2026-09-17 with `../../bin/fetch_source.py`). Every `deva:` line was lifted from the fetched page by machine and none was retyped, with the single exception recorded below. The page has 251 lines and every one of them is accounted for in this file.
+
+Independent collation:
+
+- **The Puruṣa Sūkta ṛcs** were compared by machine, accent mark for accent mark, with `../../veda/taittiriya/01_purusha_suktam.txt`, this corpus's Taittirīya Puruṣa Sūkta, which was itself collated against the accented Taittirīya Āraṇyaka. Of the sixty-eight pādas of ṛcs 1–17, sixty-two match exactly. The six that differ are recorded here and **not corrected in either direction**: ṛc 2 reads `य॒दन्ने॑नाति॒रोह॑ति` here and `यदन्ने॑नाति॒रोह॑ति` there, a difference of one anudātta; ṛc 6 reads `अ॑स्यासी॒दाज्यम्᳚` and `इ॒ध्मश्श॒रद्ध॒विः` here against `अ॑स्याऽऽसी॒दाज्यम्᳚` and `इ॒ध्मः श॒रद्ध॒विः`; ṛc 7 reads `स॒प्तास्या॑सन्` against `स॒प्तास्या॑ऽऽसन्`; ṛc 8 reads `प्रौक्षन्॑` against `प्रौक्षन्न्॑`; and ṛc 9 reads `सम्भृ॑तं` against `संभृ॑तं`. Apart from that one anudātta, they are differences of spelling or of the marking of sandhi, not of the words recited.
+- **The prāṇapratiṣṭhā mantra** (unit 3) stands word for word, with the same accents, at unit 3 of `19_durga_shodashopachara_puja.txt`.
+- **The third meditation verse** (unit 5), `श्रीवेङ्कटाचलाधीशं`, opens `../../venkateswara/21_venkatesha_ashtottarashatanama_stotram.txt`. The first, `शान्ताकारं भुजगशयनं`, is the familiar meditation on Viṣṇu. The second was not found elsewhere in this corpus.
+- **The first verse of pardon** (unit 31), `यस्य स्मृत्या च नामोक्त्या`, stands in `../vrata/05_ananta_padmanabha_vrata_kalpam.txt` and in `../vrata/04_vaibhava_lakshmi_vrata_kalpam.txt`.
+
+**The one line not lifted from the page.** The eighteenth ṛc at the leave-taking (unit 34) is printed on the page **without any accent**, and in a broken spacing: `यज्ञेन यज्ञमयजन्त देवाः । तानि धर्माणि प्रथमा न्यासन् । तेहनाकं महिमानस्सचन्ते । यत्र पूर्वे साध्यास्सन्ति देवाः`. A Vedic mantra in this corpus must carry its accent, and no accent may be supplied by hand. The four pādas were therefore **taken by machine from verse 19 of `../../veda/taittiriya/01_purusha_suktam.txt`**, where they stand accented: `य॒ज्ञेन॑ य॒ज्ञम॑यजन्त दे॒वाः । तानि॒ धर्मा॑णि प्रथ॒मान्या॑सन् । ते ह॒ नाकं॑ महि॒मान॑ः सचन्ते । यत्र॒ पूर्वे॑ सा॒ध्याः सन्ति॑ दे॒वाः ॥`. The words are the same; only the spacing and the sandhi spelling of the page differ.
+
+Defects in the base text: **none corrected.** One invisible character was removed: a zero-width joiner (U+200D) inside `प॒शूग्‍स्ताग्‍श्च॑क्रे` in ṛc 9, which changes nothing on the page.
+
+Observed and deliberately **not** emended:
+
+- **`शरणगतवत्सल`** for `शरणागतवत्सल` (unit 6).
+- **`हैमोर्ध्वपुण्ड्र मजहन्मकुटं`** (unit 5), where the space falls inside the compound `हैमोर्ध्वपुण्ड्रमजहन्मकुटं`.
+- **`मातुरुत्सङ्ग संस्थित`** in the verse for the feet (unit 8), an image of the child Kṛṣṇa on his mother's lap, used here for Veṅkaṭeśvara. It is translated as it stands.
+- **`नूपुरे हारपद्मयोः`** in the ornament verse (unit 16), which does not construe cleanly; the translation gives the ornaments it names.
+- **`समस्तपापक्षयकरं श्रीश्रीनिवास पादोदकं पावनं शुभम्`** (unit 33), a line longer than the metre allows, as in `19`.
+- **`सुप्रीतो सुप्रसन्नो वरदो भवन्तु`** (unit 32), where `सुप्रीतः` and a singular verb are expected.
+- **`सम्युक्तं`** for `संयुक्तं`, this publisher's habit throughout.
+
+Accent: **present on the Vedic material** — ṛcs 1–18 of the Puruṣa Sūkta, the prāṇapratiṣṭhā mantra, the Gāyatrī, the formulas of the food-offering and the offerings to the five breaths. 352 marks in all: udātta `॑` (U+0951), anudātta `॒` (U+0952), dīrgha svarita `᳚` (U+1CDA). The paurāṇika verses are unaccented, which is normal. **No accent was inferred, derived or reconstructed.** Every ASCII colon standing for visarga on an accented line was converted to `ः` (U+0903), and none elsewhere. Every `iast:` field was generated from the Devanāgarī by `../../bin/dev2iast.py`. A Paurāṇika form of this rite, without the Vedic mantras, is kept at `../pauranika/smarta/47_venkateshvara_puja_vidhanam.txt`.
+
+Unit count: 34 units. Not a verse count in the stotra sense — the work is a prose order of service punctuated by mantras, and the numbering is this corpus's own.
+
+Sections:
+पूर्वनिर्देशाः — Directions before beginning (unit 1)
+पुनः सङ्कल्पः — The second resolution (unit 2)
+प्राणप्रतिष्ठा — Placing of the life-breath (units 3–4)
+ध्यानम् — Meditation (unit 5)
+षोडशोपचार पूजा — The sixteen services (units 6–26)
+मन्त्रपुष्पम् — The mantra-flower (unit 27)
+नमस्कारः — Circumambulation and salutation (unit 28)
+उपचार पूजा — The royal services (unit 29)
+प्रार्थना — Prayer (unit 30)
+क्षमाप्रार्थना — Asking pardon, and the closing dedication (units 31–32)
+तीर्थप्रसाद ग्रहणम् — Receiving the water and the prasāda (unit 33)
+उद्वासनम् — Leave-taking (unit 34)
+
+Blurb: This is the worship of Śrī Veṅkaṭeśvara, the Lord of the Seven Hills, together with Śrī Padmāvatī, in sixteen services. The worshipper first performs the opening portion and the pūjā of Gaṇapati. The life-breath is placed in the image, and the Lord is meditated upon in three verses: as Viṣṇu lying upon the serpent, as the smiling face of Śrī Veṅkaṭeśa, and as Śrīnivāsa on whose chest Śrī dwells. Every service is headed by a verse of the Puruṣa Sūkta, the hymn of the cosmic Person, taken in the order of that hymn, with a verse of praise after it. His limbs are worshipped with twenty-one names. The rite closes with the mantra-flower, circumambulation, the royal services, a prayer to the Lord in all his forms, the asking of pardon, the receiving of the water from his feet, and the leave-taking with the last verse of the hymn.
+
+--- unit 1 | section: पूर्वनिर्देशाः ---
+vidhi:
+Two directions, not texts. This rite has no opening portion of its own. Perform the pūrvāṅga first (`03_purvanga_vidhanam.txt`), and then the pūjā of the turmeric Gaṇapati.
+deva:
+पूर्वाङ्गं पश्यतु ॥
+हरिद्रा गणपति पूजा पश्यतु ॥
+iast:
+pūrvāṅgaṁ paśyatu ||
+haridrā gaṇapati pūjā paśyatu ||
+en: See the opening portion. See the pūjā of the turmeric Gaṇapati.
+tel: పూర్వాంగమును చూడుము. హరిద్రా గణపతి పూజను చూడుము.
+hi: पूर्वाङ्ग देखिए। हरिद्रा गणपति पूजा देखिए।
+
+--- unit 2 | section: पुनः सङ्कल्पः ---
+vidhi:
+The second resolution. It names the rule the rite follows, the rule of the Puruṣa Sūkta.
+deva:
+पुनः सङ्कल्पम् –
+पूर्वोक्त एवं गुण विशेषण विशिष्टायां शुभ तिथौ श्री वेङ्कटेश्वर स्वामिनः अनुग्रहप्रसाद सिद्ध्यर्थं श्री वेङ्कटेश्वर स्वामिनः प्रीत्यर्थं पुरुष सूक्त विधानेन ध्यान आवाहनादि षोडशोपचार पूजां करिष्ये ॥
+iast:
+punaḥ saṅkalpam –
+pūrvokta evaṁ guṇa viśeṣaṇa viśiṣṭāyāṁ śubha tithau śrī veṅkaṭeśvara svāminaḥ anugrahaprasāda siddhyarthaṁ śrī veṅkaṭeśvara svāminaḥ prītyarthaṁ puruṣa sūkta vidhānena dhyāna āvāhanādi ṣoḍaśopacāra pūjāṁ kariṣye ||
+en: The second resolution — On this auspicious day, marked by the qualities already named: for the attainment of the grace and favour of Śrī Veṅkaṭeśvara Svāmī, and for the pleasure of Śrī Veṅkaṭeśvara Svāmī, I shall perform, according to the rule of the Puruṣa Sūkta, the worship in sixteen services beginning with meditation and invocation.
+tel: పునః సంకల్పము — పూర్వమునందు చెప్పబడిన గుణ విశేషణములతో కూడిన ఈ శుభ తిథియందు — శ్రీ వేంకటేశ్వర స్వామి అనుగ్రహ ప్రసాద సిద్ధి కొఱకును, శ్రీ వేంకటేశ్వర స్వామి ప్రీతి కొఱకును, పురుషసూక్త విధానముచే ధ్యాన ఆవాహనాది షోడశోపచార పూజను చేసెదను.
+hi: पुनः सङ्कल्प — पूर्वोक्त गुण विशेषणों से युक्त इस शुभ तिथि में — श्री वेङ्कटेश्वर स्वामी के अनुग्रह और प्रसाद की सिद्धि के लिए, और श्री वेङ्कटेश्वर स्वामी की प्रीति के लिए, पुरुषसूक्त विधान से ध्यान और आवाहन आदि षोडशोपचार पूजा करूँगा।
+
+--- unit 3 | section: प्राणप्रतिष्ठा ---
+vidhi:
+The placing of the life-breath. The mantra is Ṛgveda 10.59.6 with a Brāhmaṇa formula after it. The same mantra stands at unit 3 of `19_durga_shodashopachara_puja.txt`.
+deva:
+प्राणप्रतिष्ठा –
+ओं असु॑नीते॒ पुन॑र॒स्मासु॒ चक्षु॒ः
+पुन॑ः प्रा॒णमि॒ह नो᳚ धेहि॒ भोग᳚म् ।
+ज्योक्प॑श्येम॒ सूर्य॑मु॒च्चर᳚न्त॒
+मनु॑मते मृ॒डया᳚ नः स्व॒स्ति ॥
+अ॒मृतं॒ वै प्रा॒णा अ॒मृत॒माप॑ः
+प्रा॒णाने॒व य॑थास्था॒नमुप॑ह्वयते ॥
+iast:
+prāṇapratiṣṭhā –
+oṁ asunīte punarasmāsu cakṣuḥ
+punaḥ prāṇamiha no dhehi bhogam |
+jyokpaśyema sūryamuccaranta
+manumate mṛḍayā naḥ svasti ||
+amṛtaṁ vai prāṇā amṛtamāpaḥ
+prāṇāneva yathāsthānamupahvayate ||
+en: Placing of the life-breath — O Asunīti, give us back our sight, give us back our breath here, and give us enjoyment. Long may we see the sun rising. O Anumati, be gracious to us for our welfare. The breaths are the nectar of immortality, the waters are the nectar of immortality. He calls the breaths to their own places.
+tel: ప్రాణప్రతిష్ఠ — ఓ అసునీతీ, మాకు మరల చూపును ఇమ్ము, ఇచట మరల ప్రాణమును ఇమ్ము, భోగమును ఇమ్ము. ఉదయించుచున్న సూర్యుని మేము చిరకాలము చూచుచుందుము గాక. ఓ అనుమతీ, మా క్షేమము కొఱకు మాయందు దయ చూపుము. ప్రాణములే అమృతము, జలములే అమృతము. ప్రాణములను వాటి వాటి స్థానములకు ఆహ్వానించుచున్నాడు.
+hi: प्राणप्रतिष्ठा — हे असुनीते, हमें पुनः दृष्टि दीजिए, यहाँ पुनः प्राण दीजिए, भोग दीजिए। उदय होते हुए सूर्य को हम चिरकाल तक देखें। हे अनुमते, हमारे कल्याण के लिए हम पर कृपा कीजिए। प्राण ही अमृत हैं, जल ही अमृत है। प्राणों को उनके अपने स्थानों पर बुलाता है।
+
+--- unit 4 | section: प्राणप्रतिष्ठा ---
+vidhi:
+The Lord is asked to be present in the image and to take a firm seat there.
+deva:
+श्री वेङ्कटेश्वर स्वामिने नमः आवाहयामि स्थापयामि पूजयामि ।
+स्थिरोभव वरदोभव सुप्रसन्नो भव स्थिरासनं कुरु प्रसीद प्रसीद ।
+iast:
+śrī veṅkaṭeśvara svāmine namaḥ āvāhayāmi sthāpayāmi pūjayāmi |
+sthirobhava varadobhava suprasanno bhava sthirāsanaṁ kuru prasīda prasīda |
+en: Salutation to Śrī Veṅkaṭeśvara Svāmī: I invoke him, I establish him, I worship him. Be steady, be the giver of boons, be well pleased. Take a firm seat. Be pleased, be pleased.
+tel: శ్రీ వేంకటేశ్వర స్వామికి నమస్కారము. ఆవాహన చేయుచున్నాను, స్థాపించుచున్నాను, పూజించుచున్నాను. స్థిరుడవు కమ్ము, వరదుడవు కమ్ము, సుప్రసన్నుడవు కమ్ము. స్థిరమైన ఆసనమును చేయుము. ప్రసన్నుడవు కమ్ము, ప్రసన్నుడవు కమ్ము.
+hi: श्री वेङ्कटेश्वर स्वामी को नमस्कार। आवाहन करता हूँ, स्थापन करता हूँ, पूजन करता हूँ। स्थिर होइए, वरद होइए, सुप्रसन्न होइए। स्थिर आसन ग्रहण कीजिए। प्रसन्न होइए, प्रसन्न होइए।
+
+--- unit 5 | section: ध्यानम् ---
+vidhi:
+The meditation, in three verses. The first is the well-known meditation on Viṣṇu; the second is on the face of Śrī Veṅkaṭeśa; the third is the opening verse of `../../venkateswara/21_venkatesha_ashtottarashatanama_stotram.txt`.
+deva:
+ध्यानम् –
+शान्ताकारं भुजगशयनं पद्मनाभं सुरेशं
+विश्वाकारं गगनसदृशं मेघवर्णं शुभाङ्गम् ।
+लक्ष्मीकान्तं कमलनयनं योगिहृद्ध्यानगम्यं
+वन्दे विष्णुं भवभयहरं सर्वलोकैकनाथम् ॥
+हैमोर्ध्वपुण्ड्र मजहन्मकुटं सुनासं
+मन्दस्मितं मकरकुण्डल चारुगण्डम् ।
+बिम्बाधरं बहुल दीर्घ कृपाकटाक्षं
+श्रीवेङ्कटेश मुखमात्मनि सन्निधत्ताम् ॥
+श्रीवेङ्कटाचलाधीशं श्रियाध्यासित वक्षसम् ।
+श्रितचेतनमन्दारं श्रीनिवासमहं भजे ॥
+ओं श्रीपद्मावती समेत श्रीवेङ्कटेश्वर स्वामिने नमः ध्यायामि ॥
+iast:
+dhyānam –
+śāntākāraṁ bhujagaśayanaṁ padmanābhaṁ sureśaṁ
+viśvākāraṁ gaganasadṛśaṁ meghavarṇaṁ śubhāṅgam |
+lakṣmīkāntaṁ kamalanayanaṁ yogihṛddhyānagamyaṁ
+vande viṣṇuṁ bhavabhayaharaṁ sarvalokaikanātham ||
+haimordhvapuṇḍra majahanmakuṭaṁ sunāsaṁ
+mandasmitaṁ makarakuṇḍala cārugaṇḍam |
+bimbādharaṁ bahula dīrgha kṛpākaṭākṣaṁ
+śrīveṅkaṭeśa mukhamātmani sannidhattām ||
+śrīveṅkaṭācalādhīśaṁ śriyādhyāsita vakṣasam |
+śritacetanamandāraṁ śrīnivāsamahaṁ bhaje ||
+oṁ śrīpadmāvatī sameta śrīveṅkaṭeśvara svāmine namaḥ dhyāyāmi ||
+en: Meditation — I bow to Viṣṇu: peaceful in form, lying upon the serpent, with the lotus at his navel, lord of the gods, whose form is the universe, who is like the sky, of the colour of a cloud, of auspicious limbs, the beloved of Lakṣmī, lotus-eyed, reached by yogins in meditation in the heart, remover of the fear of worldly existence, the one lord of all the worlds. May the face of Śrī Veṅkaṭeśa be present within me — with the golden upright mark on the forehead, the crown that never leaves him, the fine nose, the gentle smile, the cheeks made lovely by makara earrings, the lips red as the bimba fruit, and the wide, long glances full of mercy. I worship Śrīnivāsa, lord of the Veṅkaṭa hill, on whose chest Śrī dwells, the wish-granting tree for the beings who take refuge in him. Oṁ, salutation to Śrī Veṅkaṭeśvara Svāmī with Śrī Padmāvatī. I meditate upon him.
+tel: ధ్యానము — శాంతమైన ఆకారము కలవాడును, శేషశయనుడును, పద్మనాభుడును, దేవతలకు ఈశుడును, విశ్వమే ఆకారముగా కలవాడును, ఆకాశము వంటివాడును, మేఘవర్ణుడును, శుభమైన అంగములు కలవాడును, లక్ష్మీకాంతుడును, కమలనయనుడును, యోగుల హృదయమునందు ధ్యానముచే పొందదగినవాడును, సంసార భయమును హరించువాడును, సర్వలోకములకు ఏకైక నాథుడును అగు విష్ణువునకు నమస్కరించుచున్నాను. బంగారు ఊర్ధ్వపుండ్రము, ఎన్నడును విడువని కిరీటము, చక్కని ముక్కు, మందహాసము, మకర కుండలములచే అందమైన చెక్కిళ్ళు, దొండపండు వంటి పెదవి, విశాలమైన దీర్ఘమైన కృపాకటాక్షము కలిగిన శ్రీ వేంకటేశుని ముఖము నా అంతరంగమునందు సన్నిధి చేయుగాక. వేంకటాచలాధీశుడును, శ్రీ నివసించు వక్షస్సు కలవాడును, ఆశ్రయించిన జీవులకు మందార వృక్షము వంటివాడును అగు శ్రీనివాసుని నేను భజించుచున్నాను. ఓం శ్రీ పద్మావతీ సమేత శ్రీ వేంకటేశ్వర స్వామికి నమస్కారము. ధ్యానించుచున్నాను.
+hi: ध्यान — शान्त आकार वाले, शेषनाग पर शयन करने वाले, पद्मनाभ, देवताओं के ईश, विश्वरूप, आकाश के समान, मेघवर्ण, शुभ अङ्गों वाले, लक्ष्मीकान्त, कमलनयन, योगियों के हृदय में ध्यान से प्राप्त होने वाले, भवभय को हरने वाले, सब लोकों के एकमात्र नाथ विष्णु को मैं प्रणाम करता हूँ। स्वर्णिम ऊर्ध्वपुण्ड्र, कभी न छूटने वाला मुकुट, सुन्दर नासिका, मन्द मुस्कान, मकर कुण्डलों से सुन्दर कपोल, बिम्बफल के समान अधर, और विशाल लम्बे कृपाकटाक्ष वाला श्री वेङ्कटेश का मुख मेरे अन्तःकरण में विराजमान हो। वेङ्कटाचल के अधीश, जिनके वक्ष पर श्री विराजती हैं, शरणागत जीवों के लिए मन्दार वृक्ष के समान, उन श्रीनिवास का मैं भजन करता हूँ। ओम् श्री पद्मावती समेत श्री वेङ्कटेश्वर स्वामी को नमस्कार। ध्यान करता हूँ।
+
+--- unit 6 | section: षोडशोपचार पूजा ---
+vidhi:
+The invocation. From here each service is headed by a ṛc of the Puruṣa Sūkta in its Taittirīya form, taken in the hymn's own order. This is its first ṛc.
+deva:
+आवाहनम् –
+स॒हस्र॑शीर्षा॒ पुरु॑षः ।
+स॒ह॒स्रा॒क्षः स॒हस्र॑पात् ।
+स भूमिं॑ वि॒श्वतो॑ वृ॒त्वा ।
+अत्य॑तिष्ठद्दशाङ्गु॒लम् ।
+आवाहयामि सर्वेश श्रीनिवास रमापते ।
+कृपया देहि सान्निध्यं शरणगतवत्सल ॥
+ओं श्रीपद्मावती समेत श्रीवेङ्कटेश्वर स्वामिने नमः आवाहयामि ॥
+iast:
+āvāhanam –
+sahasraśīrṣā puruṣaḥ |
+sahasrākṣaḥ sahasrapāt |
+sa bhūmiṁ viśvato vṛtvā |
+atyatiṣṭhaddaśāṅgulam |
+āvāhayāmi sarveśa śrīnivāsa ramāpate |
+kṛpayā dehi sānnidhyaṁ śaraṇagatavatsala ||
+oṁ śrīpadmāvatī sameta śrīveṅkaṭeśvara svāmine namaḥ āvāhayāmi ||
+en: Invocation — The Puruṣa has a thousand heads, a thousand eyes and a thousand feet. He covered the earth on every side, and stood beyond it by ten fingers' breadth. I invoke you, O lord of all, Śrīnivāsa, husband of Ramā. In your mercy be present with me, O you who love those who take refuge in you. Oṁ, salutation to Śrī Veṅkaṭeśvara Svāmī with Śrī Padmāvatī. I invoke him.
+tel: ఆవాహనము — పురుషునికి వేయి శిరస్సులు, వేయి కన్నులు, వేయి పాదములు. ఆయన భూమిని అన్ని వైపుల నుండి ఆవరించి, దానిని పది అంగుళముల మేర దాటి నిలిచెను. ఓ సర్వేశా, శ్రీనివాసా, రమాపతీ, నిన్ను ఆవాహన చేయుచున్నాను. ఓ శరణాగత వత్సలా, కృపతో సాన్నిధ్యమును ఇమ్ము. ఓం శ్రీ పద్మావతీ సమేత శ్రీ వేంకటేశ్వర స్వామికి నమస్కారము. ఆవాహనము చేయుచున్నాను.
+hi: आवाहन — पुरुष के हजार सिर, हजार नेत्र और हजार पैर हैं। उन्होंने पृथ्वी को सब ओर से घेरकर, उससे दस अंगुल आगे स्थित हुए। हे सर्वेश, हे श्रीनिवास, हे रमापते, मैं आपका आवाहन करता हूँ। हे शरणागतवत्सल, कृपा करके सान्निध्य दीजिए। ओम् श्री पद्मावती समेत श्री वेङ्कटेश्वर स्वामी को नमस्कार। आवाहन करता हूँ।
+
+--- unit 7 | section: षोडशोपचार पूजा ---
+vidhi:
+The seat. The ṛc is the second of the Puruṣa Sūkta.
+deva:
+आसनम् –
+पुरु॑ष ए॒वेदग्ं सर्वम्᳚ ।
+यद्भू॒तं यच्च॒ भव्यम्᳚ ।
+उ॒तामृ॑त॒त्वस्येशा॑नः ।
+य॒दन्ने॑नाति॒रोह॑ति ।
+देव देव जगन्नाथ प्रणतक्लेशनाशक ।
+रत्नसिंहासनं दिव्यं गृहाण मधुसूदन ॥
+ओं श्री पद्मावती समेत श्री वेङ्कटेश्वर स्वामिने नमः आसनं समर्पयामि ॥
+iast:
+āsanam –
+puruṣa evedagṁ sarvam |
+yadbhūtaṁ yacca bhavyam |
+utāmṛtatvasyeśānaḥ |
+yadannenātirohati |
+deva deva jagannātha praṇatakleśanāśaka |
+ratnasiṁhāsanaṁ divyaṁ gṛhāṇa madhusūdana ||
+oṁ śrī padmāvatī sameta śrī veṅkaṭeśvara svāmine namaḥ āsanaṁ samarpayāmi ||
+en: Seat — The Puruṣa alone is all this — what has been and what is to come. He is the lord of immortality, and he is the lord of all that grows by food. O god of gods, lord of the world, destroyer of the sorrow of those who bow to you — accept this divine jewelled throne, O Madhusūdana. Oṁ, salutation to Śrī Veṅkaṭeśvara Svāmī with Śrī Padmāvatī. I offer a seat.
+tel: ఆసనము — ఈ సమస్తము పురుషుడే. జరిగినదియు, జరుగబోవునదియు ఆయనయే. ఆయన అమృతత్వమునకు ప్రభువు. అన్నముచేత పెరుగు సమస్తమునకును ఆయనయే ప్రభువు. ఓ దేవదేవా, జగన్నాథా, నమస్కరించువారి క్లేశమును నశింపజేయువాడా, ఈ దివ్యమైన రత్నసింహాసనమును గ్రహింపుము, ఓ మధుసూదనా. ఓం శ్రీ పద్మావతీ సమేత శ్రీ వేంకటేశ్వర స్వామికి నమస్కారము. ఆసనమును సమర్పించుచున్నాను.
+hi: आसन — यह सब कुछ पुरुष ही है। जो हो चुका है और जो होने वाला है, वह भी वही है। वे अमृतत्व के स्वामी हैं, और अन्न से बढ़ने वाले सब का भी स्वामी वही है। हे देवदेव, हे जगन्नाथ, हे प्रणतजनों के क्लेश का नाश करने वाले, यह दिव्य रत्नसिंहासन ग्रहण कीजिए, हे मधुसूदन। ओम् श्री पद्मावती समेत श्री वेङ्कटेश्वर स्वामी को नमस्कार। आसन समर्पित करता हूँ।
+
+--- unit 8 | section: षोडशोपचार पूजा ---
+vidhi:
+Water for the feet. The ṛc is the third of the Puruṣa Sūkta.
+deva:
+पाद्यम् –
+ए॒तावा॑नस्य महि॒मा ।
+अतो॒ ज्यायाग्॑श्च॒ पूरु॑षः ।
+पादो᳚ऽस्य॒ विश्वा॑ भू॒तानि॑ ।
+त्रि॒पाद॑स्या॒मृतं॑ दि॒वि ।
+वाञ्छितं कुरु मे देव दुष्कृतं च विनाशय ।
+पाद्यं गृहाण भगवान् मातुरुत्सङ्ग संस्थित ॥
+ओं श्रीपद्मावती समेत श्रीवेङ्कटेश्वर स्वामिने नमः पादयोः पाद्यं समर्पयामि ।
+iast:
+pādyam –
+etāvānasya mahimā |
+ato jyāyāgśca pūruṣaḥ |
+pādo'sya viśvā bhūtāni |
+tripādasyāmṛtaṁ divi |
+vāñchitaṁ kuru me deva duṣkṛtaṁ ca vināśaya |
+pādyaṁ gṛhāṇa bhagavān māturutsaṅga saṁsthita ||
+oṁ śrīpadmāvatī sameta śrīveṅkaṭeśvara svāmine namaḥ pādayoḥ pādyaṁ samarpayāmi |
+en: Water for the feet — Such is his greatness, and the Puruṣa is greater still. All beings are one quarter of him. Three quarters of him are undying, in heaven. Fulfil my wish, O god, and destroy my wrongdoing. Accept this water for the feet, O Lord who sat upon his mother's lap. Oṁ, salutation to Śrī Veṅkaṭeśvara Svāmī with Śrī Padmāvatī. I offer water at his feet.
+tel: పాద్యము — ఇది ఆయన మహిమ. పురుషుడు దీనికంటెను గొప్పవాడు. సమస్త ప్రాణులు ఆయనలో ఒక పాదము మాత్రమే. ఆయన మూడు పాదములు స్వర్గమునందు అమృతముగా ఉన్నవి. ఓ దేవా, నా కోరికను తీర్చుము, నా దుష్కృతమును నశింపజేయుము. తల్లి ఒడిలో కూర్చున్న ఓ భగవానుడా, ఈ పాద్యమును గ్రహింపుము. ఓం శ్రీ పద్మావతీ సమేత శ్రీ వేంకటేశ్వర స్వామికి నమస్కారము. పాదములకు పాద్యమును సమర్పించుచున్నాను.
+hi: पाद्य — यह उनकी महिमा है, और पुरुष इससे भी बड़े हैं। सारे प्राणी उनका एक ही चरण हैं। उनके तीन चरण द्युलोक में अमृत रूप से स्थित हैं। हे देव, मेरी इच्छा पूरी कीजिए और मेरे दुष्कृत का नाश कीजिए। माता की गोद में विराजे हे भगवन्, यह पाद्य ग्रहण कीजिए। ओम् श्री पद्मावती समेत श्री वेङ्कटेश्वर स्वामी को नमस्कार। चरणों में पाद्य समर्पित करता हूँ।
+
+--- unit 9 | section: षोडशोपचार पूजा ---
+vidhi:
+Water for the hands. The ṛc is the fourth of the Puruṣa Sūkta.
+deva:
+अर्घ्यम् –
+त्रि॒पादू॒र्ध्व उदै॒त्पुरु॑षः ।
+पादो᳚ऽस्ये॒हाऽऽभ॑वा॒त्पुन॑ः ।
+ततो॒ विष्व॒ङ्व्य॑क्रामत् ।
+सा॒श॒ना॒न॒श॒ने अ॒भि ।
+कुरुष्व मे दयां देव संसारार्तिभयापह ।
+कुसुमाक्षत सम्युक्तं गृहाणार्घ्यं नमोऽस्तु ते ॥
+ओं श्रीपद्मावती समेत श्रीवेङ्कटेश्वर स्वामिने नमः हस्तयोः अर्घ्यं समर्पयामि ॥
+iast:
+arghyam –
+tripādūrdhva udaitpuruṣaḥ |
+pādo'syehā''bhavātpunaḥ |
+tato viṣvaṅvyakrāmat |
+sāśanānaśane abhi |
+kuruṣva me dayāṁ deva saṁsārārtibhayāpaha |
+kusumākṣata samyuktaṁ gṛhāṇārghyaṁ namo'stu te ||
+oṁ śrīpadmāvatī sameta śrīveṅkaṭeśvara svāmine namaḥ hastayoḥ arghyaṁ samarpayāmi ||
+en: Water for the hands — With three quarters the Puruṣa rose upward. One quarter of him came to be here again. From there he spread out on every side, over that which eats and that which does not eat. Show me mercy, O god, remover of the pain and fear of worldly life. Accept this water for the hands, joined with flowers and unbroken rice. Salutation to you. Oṁ, salutation to Śrī Veṅkaṭeśvara Svāmī with Śrī Padmāvatī. I offer water at his hands.
+tel: అర్ఘ్యము — పురుషుడు మూడు పాదములతో పైకి లేచెను. ఆయన ఒక పాదము మరల ఇచ్చట కలిగెను. అచటినుండి ఆయన అన్ని వైపులకు వ్యాపించెను — తినునది, తినకయుండునది, రెంటిపైనను. ఓ దేవా, సంసార బాధను భయమును పోగొట్టువాడా, నాయందు దయ చూపుము. పుష్పములతోను అక్షతలతోను కూడిన ఈ అర్ఘ్యమును గ్రహింపుము. నీకు నమస్కారము. ఓం శ్రీ పద్మావతీ సమేత శ్రీ వేంకటేశ్వర స్వామికి నమస్కారము. హస్తములకు అర్ఘ్యమును సమర్పించుచున్నాను.
+hi: अर्घ्य — पुरुष तीन चरणों से ऊपर उठे। उनका एक चरण फिर यहाँ प्रकट हुआ। वहाँ से वे सब ओर फैल गए — जो खाता है और जो नहीं खाता, दोनों पर। हे देव, हे संसार की पीड़ा और भय को हरने वाले, मुझ पर दया कीजिए। पुष्प और अक्षत से युक्त यह अर्घ्य ग्रहण कीजिए। आपको नमस्कार। ओम् श्री पद्मावती समेत श्री वेङ्कटेश्वर स्वामी को नमस्कार। हाथों में अर्घ्य समर्पित करता हूँ।
+
+--- unit 10 | section: षोडशोपचार पूजा ---
+vidhi:
+Water for sipping. The ṛc is the fifth of the Puruṣa Sūkta.
+deva:
+आचमनीयम् –
+तस्मा᳚द्वि॒राड॑जायत ।
+वि॒राजो॒ अधि॒ पूरु॑षः ।
+स जा॒तो अत्य॑रिच्यत ।
+प॒श्चाद्भूमि॒मथो॑ पु॒रः ।
+नमः सत्याय शुद्धाय नित्याय ज्ञानरूपिणे ।
+गृहाणाचमनं देव सर्वलोकैकनायक ॥
+ओं श्रीपद्मावती समेत श्रीवेङ्कटेश्वर स्वामिने नमः मुखे आचमनीयं समर्पयामि ॥
+iast:
+ācamanīyam –
+tasmādvirāḍajāyata |
+virājo adhi pūruṣaḥ |
+sa jāto atyaricyata |
+paścādbhūmimatho puraḥ |
+namaḥ satyāya śuddhāya nityāya jñānarūpiṇe |
+gṛhāṇācamanaṁ deva sarvalokaikanāyaka ||
+oṁ śrīpadmāvatī sameta śrīveṅkaṭeśvara svāmine namaḥ mukhe ācamanīyaṁ samarpayāmi ||
+en: Water for sipping — From him Virāj was born, and from Virāj the Puruṣa again. Once born, he reached beyond the earth, behind and before. Salutation to the true one, the pure one, the eternal one, whose form is knowledge. Accept this water for sipping, O god, the one leader of all the worlds. Oṁ, salutation to Śrī Veṅkaṭeśvara Svāmī with Śrī Padmāvatī. I offer water for his mouth.
+tel: ఆచమనీయము — ఆయననుండి విరాట్టు జన్మించెను. విరాట్టునుండి మరల పురుషుడు జన్మించెను. జన్మించిన పిమ్మట ఆయన భూమిని వెనుకను ముందును దాటి వ్యాపించెను. సత్యుడును, శుద్ధుడును, నిత్యుడును, జ్ఞానరూపుడును అగు నీకు నమస్కారము. ఓ దేవా, సర్వలోకములకు ఏకైక నాయకుడా, ఆచమనమును గ్రహింపుము. ఓం శ్రీ పద్మావతీ సమేత శ్రీ వేంకటేశ్వర స్వామికి నమస్కారము. ముఖమునందు ఆచమనీయమును సమర్పించుచున్నాను.
+hi: आचमनीय — उनसे विराट् उत्पन्न हुए, और विराट् से फिर पुरुष उत्पन्न हुए। उत्पन्न होकर वे पृथ्वी से आगे और पीछे, दोनों ओर फैल गए। सत्य, शुद्ध, नित्य और ज्ञानरूप आपको नमस्कार। हे देव, हे सब लोकों के एकमात्र नायक, आचमन ग्रहण कीजिए। ओम् श्री पद्मावती समेत श्री वेङ्कटेश्वर स्वामी को नमस्कार। मुख में आचमनीय समर्पित करता हूँ।
+
+--- unit 11 | section: षोडशोपचार पूजा ---
+vidhi:
+The bath in the five nectars. No ṛc heads this service.
+deva:
+पञ्चामृतस्नानम् –
+दधि क्षीराज्य मधुभिः शर्करा फलमिश्रितम् ।
+पञ्चामृतस्नानमिदं गृहाण पुरुषोत्तम ॥
+ओं श्रीपद्मावती समेत श्रीवेङ्कटेश्वर स्वामिने नमः पञ्चामृत स्नानं समर्पयामि ॥
+iast:
+pañcāmṛtasnānam –
+dadhi kṣīrājya madhubhiḥ śarkarā phalamiśritam |
+pañcāmṛtasnānamidaṁ gṛhāṇa puruṣottama ||
+oṁ śrīpadmāvatī sameta śrīveṅkaṭeśvara svāmine namaḥ pañcāmṛta snānaṁ samarpayāmi ||
+en: Bath in the five nectars — Curd, milk, ghee and honey, with sugar, mixed with fruit — accept this bath in the five nectars, O Puruṣottama. Oṁ, salutation to Śrī Veṅkaṭeśvara Svāmī with Śrī Padmāvatī. I offer the bath in the five nectars.
+tel: పంచామృత స్నానము — పెరుగు, పాలు, నెయ్యి, తేనె, చక్కెర, ఫలములతో కలిపిన ఈ పంచామృత స్నానమును గ్రహింపుము, ఓ పురుషోత్తమా. ఓం శ్రీ పద్మావతీ సమేత శ్రీ వేంకటేశ్వర స్వామికి నమస్కారము. పంచామృత స్నానమును సమర్పించుచున్నాను.
+hi: पञ्चामृत स्नान — दधि, क्षीर, घृत और मधु, शर्करा और फल से मिश्रित — यह पञ्चामृत स्नान ग्रहण कीजिए, हे पुरुषोत्तम। ओम् श्री पद्मावती समेत श्री वेङ्कटेश्वर स्वामी को नमस्कार। पञ्चामृत स्नान समर्पित करता हूँ।
+
+--- unit 12 | section: षोडशोपचार पूजा ---
+vidhi:
+The bath in pure water. The ṛc is the sixth of the Puruṣa Sūkta.
+deva:
+शुद्धोदकस्नानम् –
+यत्पुरु॑षेण ह॒विषा᳚ ।
+दे॒वा य॒ज्ञमत॑न्वत ।
+व॒स॒न्तो अ॑स्यासी॒दाज्यम्᳚ ।
+ग्री॒ष्म इ॒ध्मश्श॒रद्ध॒विः ।
+गङ्गादि सर्वतीर्थेभ्यः समाहृतमिदं जलम् ।
+स्नानं स्वीकुरु देवेश भक्तचित्तस्थिरासन ॥
+ओं श्रीपद्मावती समेत श्रीवेङ्कटेश्वर स्वामिने नमः शुद्धोदक स्नानं समर्पयामि ॥
+iast:
+śuddhodakasnānam –
+yatpuruṣeṇa haviṣā |
+devā yajñamatanvata |
+vasanto asyāsīdājyam |
+grīṣma idhmaśśaraddhaviḥ |
+gaṅgādi sarvatīrthebhyaḥ samāhṛtamidaṁ jalam |
+snānaṁ svīkuru deveśa bhaktacittasthirāsana ||
+oṁ śrīpadmāvatī sameta śrīveṅkaṭeśvara svāmine namaḥ śuddhodaka snānaṁ samarpayāmi ||
+en: Bath in pure water — When the gods spread out the sacrifice with the Puruṣa as the offering, the spring was its clarified butter, the summer its firewood, and the autumn its oblation. This water gathered from the Gaṅgā and all the holy fords — accept the bath, O lord of the gods, you whose steady seat is the heart of your devotees. Oṁ, salutation to Śrī Veṅkaṭeśvara Svāmī with Śrī Padmāvatī. I offer the bath in pure water.
+tel: శుద్ధోదక స్నానము — దేవతలు పురుషుని హవిస్సుగా చేసి యజ్ఞమును విస్తరించినపుడు, వసంత ఋతువు ఆజ్యమాయెను, గ్రీష్మ ఋతువు సమిధయాయెను, శరదృతువు హవిస్సాయెను. గంగ మొదలగు సర్వ తీర్థములనుండి సేకరించిన ఈ జలముతో స్నానమును స్వీకరింపుము, ఓ దేవేశా, భక్తుల చిత్తమే స్థిరాసనముగా కలవాడా. ఓం శ్రీ పద్మావతీ సమేత శ్రీ వేంకటేశ్వర స్వామికి నమస్కారము. శుద్ధోదక స్నానమును సమర్పించుచున్నాను.
+hi: शुद्धोदक स्नान — जब देवताओं ने पुरुष को हवि बनाकर यज्ञ का विस्तार किया, तब वसन्त उसका घृत हुआ, ग्रीष्म उसकी समिधा हुई, और शरद् उसकी हवि हुई। गङ्गा आदि सब तीर्थों से एकत्र किए गए इस जल से स्नान स्वीकार कीजिए, हे देवेश, हे भक्तों के चित्त को स्थिर आसन बनाने वाले। ओम् श्री पद्मावती समेत श्री वेङ्कटेश्वर स्वामी को नमस्कार। शुद्धोदक स्नान समर्पित करता हूँ।
+
+--- unit 13 | section: षोडशोपचार पूजा ---
+vidhi:
+The garment. The ṛc is the seventh of the Puruṣa Sūkta.
+deva:
+वस्त्रम् –
+स॒प्तास्या॑सन्परि॒धय॑ः ।
+त्रिः स॒प्त स॒मिध॑ः कृ॒ताः ।
+दे॒वा यद्य॒ज्ञं त॑न्वा॒नाः ।
+अब॑ध्न॒न्पुरु॑षं प॒शुम् ।
+तप्तकाञ्चन सङ्काशं पीताम्बरमिदं हरे ।
+गृहाण श्रीजगन्नाथ श्रीनिवास नमोऽस्तु ते ॥
+ओं श्रीपद्मावती समेत श्रीवेङ्कटेश्वर स्वामिने नमः वस्त्रयुग्मं समर्पयामि ॥
+iast:
+vastram –
+saptāsyāsanparidhayaḥ |
+triḥ sapta samidhaḥ kṛtāḥ |
+devā yadyajñaṁ tanvānāḥ |
+abadhnanpuruṣaṁ paśum |
+taptakāñcana saṅkāśaṁ pītāmbaramidaṁ hare |
+gṛhāṇa śrījagannātha śrīnivāsa namo'stu te ||
+oṁ śrīpadmāvatī sameta śrīveṅkaṭeśvara svāmine namaḥ vastrayugmaṁ samarpayāmi ||
+en: Garment — Seven were the enclosing sticks of that sacrifice, and thrice seven the fuel sticks were made. When the gods performed the sacrifice, they bound the Puruṣa as the offering. This yellow garment, bright as molten gold, O Hari — accept it, O Śrī Jagannātha. Salutation to you, O Śrīnivāsa. Oṁ, salutation to Śrī Veṅkaṭeśvara Svāmī with Śrī Padmāvatī. I offer a pair of garments.
+tel: వస్త్రము — ఆ యజ్ఞమునకు ఏడు పరిధులు ఉండెను. ఇరువది ఒక్క సమిధలు చేయబడెను. దేవతలు యజ్ఞమును చేయునపుడు పురుషుని పశువుగా బంధించిరి. కాచిన బంగారము వంటి ఈ పీతాంబరమును, ఓ హరీ, గ్రహింపుము, ఓ శ్రీ జగన్నాథా. శ్రీనివాసా, నీకు నమస్కారము. ఓం శ్రీ పద్మావతీ సమేత శ్రీ వేంకటేశ్వర స్వామికి నమస్కారము. వస్త్రయుగ్మమును సమర్పించుచున్నాను.
+hi: वस्त्र — उस यज्ञ की सात परिधियाँ थीं, और इक्कीस समिधाएँ बनाई गईं। जब देवताओं ने यज्ञ किया, तब उन्होंने पुरुष को पशु रूप में बाँधा। तपाए हुए सोने के समान यह पीताम्बर, हे हरे, ग्रहण कीजिए, हे श्री जगन्नाथ। हे श्रीनिवास, आपको नमस्कार। ओम् श्री पद्मावती समेत श्री वेङ्कटेश्वर स्वामी को नमस्कार। वस्त्रयुग्म समर्पित करता हूँ।
+
+--- unit 14 | section: षोडशोपचार पूजा ---
+vidhi:
+The sacred thread. The ṛc is the eighth of the Puruṣa Sūkta.
+deva:
+यज्ञोपवीतम् –
+तं य॒ज्ञं ब॒र्हिषि॒ प्रौक्षन्॑ ।
+पुरु॑षं जा॒तम॑ग्र॒तः ।
+तेन॑ दे॒वा अय॑जन्त ।
+सा॒ध्या ऋष॑यश्च॒ ये ।
+वेङ्कटेश महादेव श्रियः कान्त जगद्विभो ।
+ब्रह्मसूत्रोत्तरीये तु गृहाण करुणापर ॥
+ओं श्रीपद्मावती समेत श्रीवेङ्कटेश्वर स्वामिने नमः यज्ञोपवीतं समर्पयामि ॥
+iast:
+yajñopavītam –
+taṁ yajñaṁ barhiṣi praukṣan |
+puruṣaṁ jātamagrataḥ |
+tena devā ayajanta |
+sādhyā ṛṣayaśca ye |
+veṅkaṭeśa mahādeva śriyaḥ kānta jagadvibho |
+brahmasūtrottarīye tu gṛhāṇa karuṇāpara ||
+oṁ śrīpadmāvatī sameta śrīveṅkaṭeśvara svāmine namaḥ yajñopavītaṁ samarpayāmi ||
+en: Sacred thread — They consecrated that sacrifice upon the sacred grass — the Puruṣa who was born at the very beginning. With him the gods performed the sacrifice, and so did the Sādhyas and the sages. O Veṅkaṭeśa, great god, husband of Śrī, all-pervading lord of the world, full of compassion — accept the sacred thread and the upper cloth. Oṁ, salutation to Śrī Veṅkaṭeśvara Svāmī with Śrī Padmāvatī. I offer the sacred thread.
+tel: యజ్ఞోపవీతము — మొదట జన్మించిన ఆ పురుషుని — ఆ యజ్ఞమును — దర్భలపై ప్రోక్షించిరి. ఆయనతో దేవతలు యజ్ఞము చేసిరి. సాధ్యులును ఋషులును కూడ చేసిరి. ఓ వేంకటేశా, మహాదేవా, శ్రీకాంతా, జగద్విభూ, కరుణాపరా, బ్రహ్మసూత్రమును ఉత్తరీయమును గ్రహింపుము. ఓం శ్రీ పద్మావతీ సమేత శ్రీ వేంకటేశ్వర స్వామికి నమస్కారము. యజ్ఞోపవీతమును సమర్పించుచున్నాను.
+hi: यज्ञोपवीत — सबसे पहले उत्पन्न हुए उस पुरुष को, उस यज्ञ को, उन्होंने कुश पर प्रोक्षित किया। उनसे देवताओं ने यज्ञ किया, और साध्यों तथा ऋषियों ने भी किया। हे वेङ्कटेश, हे महादेव, हे श्रीकान्त, हे जगद्विभो, हे करुणापर, ब्रह्मसूत्र और उत्तरीय ग्रहण कीजिए। ओम् श्री पद्मावती समेत श्री वेङ्कटेश्वर स्वामी को नमस्कार। यज्ञोपवीत समर्पित करता हूँ।
+
+--- unit 15 | section: षोडशोपचार पूजा ---
+vidhi:
+Sandal-paste. The ṛc is the ninth of the Puruṣa Sūkta.
+deva:
+गन्धम् –
+तस्मा᳚द्य॒ज्ञात्स॑र्व॒हुत॑ः ।
+सम्भृ॑तं पृषदा॒ज्यम् ।
+प॒शूग्स्ताग्श्च॑क्रे वाय॒व्यान्॑ ।
+आ॒र॒ण्यान्ग्रा॒म्याश्च॒ ये ।
+चन्दनागरु कस्तूरी घनसारसमन्वितम् ।
+गन्धं गृहाण गोविन्द परमामोदपूरितम् ॥
+ओं श्री पद्मावती समेत श्री वेङ्कटेश्वर स्वामिने नमः दिव्य परिमल गन्धान् समर्पयामि ॥
+iast:
+gandham –
+tasmādyajñātsarvahutaḥ |
+sambhṛtaṁ pṛṣadājyam |
+paśūgstāgścakre vāyavyān |
+āraṇyāngrāmyāśca ye |
+candanāgaru kastūrī ghanasārasamanvitam |
+gandhaṁ gṛhāṇa govinda paramāmodapūritam ||
+oṁ śrī padmāvatī sameta śrī veṅkaṭeśvara svāmine namaḥ divya parimala gandhān samarpayāmi ||
+en: Sandal-paste — From that sacrifice, offered in full, the sprinkled butter was gathered. He made from it the creatures of the air, those of the forest and those of the village. Joined with sandal, aloe-wood, musk and camphor, and full of the highest fragrance — accept this sandal-paste, O Govinda. Oṁ, salutation to Śrī Veṅkaṭeśvara Svāmī with Śrī Padmāvatī. I offer divine fragrant sandal-paste.
+tel: గంధము — సంపూర్ణముగా అర్పించబడిన ఆ యజ్ఞమునుండి పృషదాజ్యము సమకూడెను. దానినుండి ఆకాశచరములైన, అరణ్యమునందలి, గ్రామమునందలి పశువులను ఆయన సృజించెను. చందనము, అగరు, కస్తూరి, కర్పూరములతో కూడినదియు, పరమ సువాసనతో నిండినదియు అగు ఈ గంధమును గ్రహింపుము, ఓ గోవిందా. ఓం శ్రీ పద్మావతీ సమేత శ్రీ వేంకటేశ్వర స్వామికి నమస్కారము. దివ్య పరిమళ గంధమును సమర్పించుచున్నాను.
+hi: गन्ध — पूर्ण रूप से अर्पित उस यज्ञ से पृषदाज्य एकत्र हुआ। उससे उन्होंने वायु में विचरने वाले, वन के और ग्राम के पशुओं की रचना की। चन्दन, अगरु, कस्तूरी और कर्पूर से युक्त, परम सुगन्ध से भरा यह गन्ध ग्रहण कीजिए, हे गोविन्द। ओम् श्री पद्मावती समेत श्री वेङ्कटेश्वर स्वामी को नमस्कार। दिव्य परिमल गन्ध समर्पित करता हूँ।
+
+--- unit 16 | section: षोडशोपचार पूजा ---
+vidhi:
+The ornaments. The ṛc is the tenth of the Puruṣa Sūkta.
+deva:
+आभरणम् –
+तस्मा᳚द्य॒ज्ञात्स॑र्व॒हुत॑ः ।
+ऋच॒ः सामा॑नि जज्ञिरे ।
+छन्दाग्ं॑सि जज्ञिरे॒ तस्मा᳚त् ।
+यजु॒स्तस्मा॑दजायत ।
+केयूर कटके चैव हस्ते चित्राङ्गुलीयकं
+माणिक्योल्लासि मकुटं कुण्डले हारशोभितम् ।
+नाभौ नायक रत्नं च नूपुरे हारपद्मयोः
+अङ्गुली मुद्रिकाश्चैव गृह्यतां अस्मदर्पिताः ॥
+ओं श्रीपद्मावती समेत श्रीवेङ्कटेश्वर स्वामिने नमः आभरणानि समर्पयामि ॥
+iast:
+ābharaṇam –
+tasmādyajñātsarvahutaḥ |
+ṛcaḥ sāmāni jajñire |
+chandāgṁsi jajñire tasmāt |
+yajustasmādajāyata |
+keyūra kaṭake caiva haste citrāṅgulīyakaṁ
+māṇikyollāsi makuṭaṁ kuṇḍale hāraśobhitam |
+nābhau nāyaka ratnaṁ ca nūpure hārapadmayoḥ
+aṅgulī mudrikāścaiva gṛhyatāṁ asmadarpitāḥ ||
+oṁ śrīpadmāvatī sameta śrīveṅkaṭeśvara svāmine namaḥ ābharaṇāni samarpayāmi ||
+en: Ornaments — From that sacrifice, offered in full, the ṛcs and the sāmans were born. From it the metres were born, and from it the yajus came into being. Armlets and bracelets, a bright ring for the hand, a crown shining with rubies, earrings, a lovely necklace, the chief jewel at the navel, anklets, and rings for the fingers — let these, offered by us, be accepted. Oṁ, salutation to Śrī Veṅkaṭeśvara Svāmī with Śrī Padmāvatī. I offer the ornaments.
+tel: ఆభరణము — సంపూర్ణముగా అర్పించబడిన ఆ యజ్ఞమునుండి ఋక్కులును సామములును పుట్టెను. దానినుండి ఛందస్సులు పుట్టెను. దానినుండియే యజుస్సు కలిగెను. కేయూరములు, కడియములు, చేతికి చిత్రమైన ఉంగరము, మాణిక్యములతో ప్రకాశించు కిరీటము, కుండలములు, హారశోభ, నాభియందు నాయకరత్నము, నూపురములు, వ్రేళ్ళకు ఉంగరములు — మాచే అర్పింపబడిన వీటిని గ్రహింపుము. ఓం శ్రీ పద్మావతీ సమేత శ్రీ వేంకటేశ్వర స్వామికి నమస్కారము. ఆభరణములను సమర్పించుచున్నాను.
+hi: आभरण — पूर्ण रूप से अर्पित उस यज्ञ से ऋचाएँ और सामवेद के गान उत्पन्न हुए। उससे छन्द उत्पन्न हुए, और उसी से यजुस् उत्पन्न हुआ। केयूर और कङ्कण, हाथ में सुन्दर अँगूठी, माणिक्यों से चमकता मुकुट, कुण्डल और हार की शोभा, नाभि पर नायक रत्न, नूपुर, और उँगलियों की मुद्रिकाएँ — हमारे द्वारा अर्पित ये ग्रहण कीजिए। ओम् श्री पद्मावती समेत श्री वेङ्कटेश्वर स्वामी को नमस्कार। आभरण समर्पित करता हूँ।
+
+--- unit 17 | section: षोडशोपचार पूजा ---
+vidhi:
+Unbroken rice with turmeric. No ṛc heads this service.
+deva:
+अक्षतान् –
+गोविन्द परमानन्द हरिद्रा सहिताक्षतान् ।
+विश्वेश्वर विशालाक्ष गृहाण परमेश्वर ॥
+ओं श्री पद्मावती समेत श्री वेङ्कटेश्वर स्वामिने नमः अक्षतान् समर्पयामि ॥
+iast:
+akṣatān –
+govinda paramānanda haridrā sahitākṣatān |
+viśveśvara viśālākṣa gṛhāṇa parameśvara ||
+oṁ śrī padmāvatī sameta śrī veṅkaṭeśvara svāmine namaḥ akṣatān samarpayāmi ||
+en: Unbroken rice — O Govinda, O supreme bliss, O lord of the universe, O wide-eyed one, O supreme lord, accept these grains of unbroken rice with turmeric. Oṁ, salutation to Śrī Veṅkaṭeśvara Svāmī with Śrī Padmāvatī. I offer unbroken rice.
+tel: అక్షతలు — ఓ గోవిందా, పరమానందా, విశ్వేశ్వరా, విశాలాక్షా, పరమేశ్వరా, పసుపుతో కూడిన ఈ అక్షతలను గ్రహింపుము. ఓం శ్రీ పద్మావతీ సమేత శ్రీ వేంకటేశ్వర స్వామికి నమస్కారము. అక్షతలను సమర్పించుచున్నాను.
+hi: अक्षत — हे गोविन्द, हे परमानन्द, हे विश्वेश्वर, हे विशालाक्ष, हे परमेश्वर, हल्दी सहित ये अक्षत ग्रहण कीजिए। ओम् श्री पद्मावती समेत श्री वेङ्कटेश्वर स्वामी को नमस्कार। अक्षत समर्पित करता हूँ।
+
+--- unit 18 | section: षोडशोपचार पूजा ---
+vidhi:
+Flowers. The ṛc is the eleventh of the Puruṣa Sūkta.
+deva:
+पुष्पम् –
+तस्मा॒दश्वा॑ अजायन्त ।
+ये के चो॑भ॒याद॑तः ।
+गावो॑ ह जज्ञिरे॒ तस्मा᳚त् ।
+तस्मा᳚ज्जा॒ता अ॑जा॒वय॑ः ।
+सुगन्धीनि सुपुष्पाणि जाजीकुन्दमुखानि च ।
+मालती वकुलादीनि पूजार्थं प्रतिगृह्यताम् ॥
+ओं श्रीपद्मावती समेत श्रीवेङ्कटेश्वर स्वामिने नमः पुष्पं समर्पयामि ॥
+iast:
+puṣpam –
+tasmādaśvā ajāyanta |
+ye ke cobhayādataḥ |
+gāvo ha jajñire tasmāt |
+tasmājjātā ajāvayaḥ |
+sugandhīni supuṣpāṇi jājīkundamukhāni ca |
+mālatī vakulādīni pūjārthaṁ pratigṛhyatām ||
+oṁ śrīpadmāvatī sameta śrīveṅkaṭeśvara svāmine namaḥ puṣpaṁ samarpayāmi ||
+en: Flowers — From it horses were born, and every creature with two rows of teeth. From it cattle were born, and from it goats and sheep. Fragrant and fine flowers, jasmine, kunda and the rest, mālatī, vakula and others — accept them for the worship. Oṁ, salutation to Śrī Veṅkaṭeśvara Svāmī with Śrī Padmāvatī. I offer flowers.
+tel: పుష్పములు — దానినుండి గుఱ్ఱములు పుట్టెను. రెండు వరుసల దంతములు కల ప్రాణులన్నియు పుట్టెను. దానినుండి ఆవులు పుట్టెను. మేకలును గొఱ్ఱెలును కూడ దానినుండియే పుట్టెను. సుగంధమైన మంచి పుష్పములను, జాజి కుంద మొదలగువాటిని, మాలతి పొగడ మొదలగువాటిని పూజ కొఱకు గ్రహింపుము. ఓం శ్రీ పద్మావతీ సమేత శ్రీ వేంకటేశ్వర స్వామికి నమస్కారము. పుష్పములను సమర్పించుచున్నాను.
+hi: पुष्प — उससे घोड़े उत्पन्न हुए, और दोनों ओर दाँत वाले सब प्राणी उत्पन्न हुए। उससे गौएँ उत्पन्न हुईं, और उसी से बकरियाँ तथा भेड़ें उत्पन्न हुईं। सुगन्धित सुन्दर पुष्प, जाती, कुन्द आदि, मालती, बकुल आदि पूजा के लिए ग्रहण कीजिए। ओम् श्री पद्मावती समेत श्री वेङ्कटेश्वर स्वामी को नमस्कार। पुष्प समर्पित करता हूँ।
+
+--- unit 19 | section: षोडशोपचार पूजा ---
+vidhi:
+The worship of the limbs, twenty-one names. Each name is said, and the limb it names is worshipped.
+deva:
+अथाङ्ग पूजा –
+ओं श्रीवेङ्कटेश्वराय नमः – पादौ पूजयामि ।
+ओं श्रीवेङ्कटाचलाधीशाय नमः – गुल्फौ पूजयामि ।
+ओं श्रीप्रदायकाय नमः – जङ्घे पूजयामि ।
+ओं पद्मावतीपतये नमः – जानुनी पूजयामि ।
+ओं ज्ञानप्रदाय नमः – ऊरुं पूजयामि ।
+ओं श्रीनिवासाय नमः – कटिं पूजयामि ।
+ओं महाभागाय नमः – नाभिं पूजयामि ।
+ओं निर्मलाय नमः – उदरं पूजयामि ।
+ओं विशालहृदयाय नमः – हृदयं पूजयामि ।
+ओं परिशुद्धात्मने नमः – स्तनौ पूजयामि ।
+ओं पुरुषोत्तमाय नमः – भुजौ पूजयामि ।
+ओं स्वर्णहस्ताय नमः – हस्तौ पूजयामि ।
+ओं वरप्रदाय नमः – कण्ठं पूजयामि ।
+ओं लोकनाथाय नमः – स्कन्धौ पूजयामि ।
+ओं सर्वेश्वराय नमः – मुखं पूजयामि ।
+ओं रसज्ञाय नमः – नासिकां पूजयामि ।
+ओं पुण्यश्रवणकीर्तनाय नमः – श्रोत्रे पूजयामि ।
+ओं फुल्लाम्बुजविलोचनाय नमः – नेत्रे पूजयामि ।
+ओं वर्चस्विने नमः – ललाटं पूजयामि ।
+ओं सहस्रशीर्षाय नमः – शिरः पूजयामि ।
+ओं रम्य विग्रहाय नमः – सर्वाण्यङ्गानि पूजयामि ।
+ओं श्रीपद्मावती समेत श्रीवेङ्कटेश्वर स्वामिने नमः दिव्यसुन्दर विग्रहं पूजयामि ॥
+iast:
+athāṅga pūjā –
+oṁ śrīveṅkaṭeśvarāya namaḥ – pādau pūjayāmi |
+oṁ śrīveṅkaṭācalādhīśāya namaḥ – gulphau pūjayāmi |
+oṁ śrīpradāyakāya namaḥ – jaṅghe pūjayāmi |
+oṁ padmāvatīpataye namaḥ – jānunī pūjayāmi |
+oṁ jñānapradāya namaḥ – ūruṁ pūjayāmi |
+oṁ śrīnivāsāya namaḥ – kaṭiṁ pūjayāmi |
+oṁ mahābhāgāya namaḥ – nābhiṁ pūjayāmi |
+oṁ nirmalāya namaḥ – udaraṁ pūjayāmi |
+oṁ viśālahṛdayāya namaḥ – hṛdayaṁ pūjayāmi |
+oṁ pariśuddhātmane namaḥ – stanau pūjayāmi |
+oṁ puruṣottamāya namaḥ – bhujau pūjayāmi |
+oṁ svarṇahastāya namaḥ – hastau pūjayāmi |
+oṁ varapradāya namaḥ – kaṇṭhaṁ pūjayāmi |
+oṁ lokanāthāya namaḥ – skandhau pūjayāmi |
+oṁ sarveśvarāya namaḥ – mukhaṁ pūjayāmi |
+oṁ rasajñāya namaḥ – nāsikāṁ pūjayāmi |
+oṁ puṇyaśravaṇakīrtanāya namaḥ – śrotre pūjayāmi |
+oṁ phullāmbujavilocanāya namaḥ – netre pūjayāmi |
+oṁ varcasvine namaḥ – lalāṭaṁ pūjayāmi |
+oṁ sahasraśīrṣāya namaḥ – śiraḥ pūjayāmi |
+oṁ ramya vigrahāya namaḥ – sarvāṇyaṅgāni pūjayāmi |
+oṁ śrīpadmāvatī sameta śrīveṅkaṭeśvara svāmine namaḥ divyasundara vigrahaṁ pūjayāmi ||
+en: Then the worship of the limbs — Oṁ, salutation to Śrī Veṅkaṭeśvara: I worship the feet. To the lord of the Veṅkaṭa hill: the ankles. To the giver of fortune: the shanks. To the husband of Padmāvatī: the knees. To the giver of knowledge: the thighs. To Śrīnivāsa: the waist. To the most fortunate one: the navel. To the spotless one: the belly. To the large-hearted one: the heart. To the pure-souled one: the breast. To Puruṣottama: the upper arms. To the golden-handed one: the hands. To the giver of boons: the throat. To the lord of the world: the shoulders. To the lord of all: the face. To the knower of tastes: the nose. To him whom it is holy to hear of and to praise: the ears. To him whose eyes are like full-blown lotuses: the eyes. To the radiant one: the forehead. To the thousand-headed one: the head. To him of lovely form: I worship all the limbs. Oṁ, salutation to Śrī Veṅkaṭeśvara Svāmī with Śrī Padmāvatī. I worship his divine and beautiful form.
+tel: అంగ పూజ — ఓం శ్రీ వేంకటేశ్వరునకు నమస్కారము: పాదములను పూజించుచున్నాను. వేంకటాచలాధీశునకు: గుల్ఫములను. శ్రీప్రదాయకునకు: జంఘలను. పద్మావతీపతికి: జానువులను. జ్ఞానప్రదునకు: ఊరువులను. శ్రీనివాసునకు: కటిని. మహాభాగునకు: నాభిని. నిర్మలునకు: ఉదరమును. విశాలహృదయునకు: హృదయమును. పరిశుద్ధాత్మునకు: వక్షస్సును. పురుషోత్తమునకు: భుజములను. స్వర్ణహస్తునకు: హస్తములను. వరప్రదునకు: కంఠమును. లోకనాథునకు: స్కంధములను. సర్వేశ్వరునకు: ముఖమును. రసజ్ఞునకు: నాసికను. పుణ్యశ్రవణకీర్తనునకు: శ్రోత్రములను. ఫుల్లాంబుజ విలోచనునకు: నేత్రములను. వర్చస్వికి: లలాటమును. సహస్రశీర్షునకు: శిరస్సును. రమ్యవిగ్రహునకు: సర్వ అంగములను పూజించుచున్నాను. ఓం శ్రీ పద్మావతీ సమేత శ్రీ వేంకటేశ్వర స్వామికి నమస్కారము. దివ్యసుందర విగ్రహమును పూజించుచున్నాను.
+hi: अङ्ग पूजा — ओम् श्री वेङ्कटेश्वर को नमस्कार: चरणों की पूजा करता हूँ। वेङ्कटाचल के अधीश को: गुल्फों की। श्री देने वाले को: जङ्घाओं की। पद्मावतीपति को: जानुओं की। ज्ञान देने वाले को: ऊरुओं की। श्रीनिवास को: कटि की। महाभाग को: नाभि की। निर्मल को: उदर की। विशालहृदय को: हृदय की। परिशुद्धात्मा को: वक्ष की। पुरुषोत्तम को: भुजाओं की। स्वर्णहस्त को: हाथों की। वरप्रद को: कण्ठ की। लोकनाथ को: कन्धों की। सर्वेश्वर को: मुख की। रसज्ञ को: नासिका की। जिनका श्रवण और कीर्तन पुण्य है, उन्हें: कानों की। खिले कमल के समान नेत्रों वाले को: नेत्रों की। वर्चस्वी को: ललाट की। सहस्रशीर्ष को: शिर की। रम्य विग्रह वाले को: सब अङ्गों की पूजा करता हूँ। ओम् श्री पद्मावती समेत श्री वेङ्कटेश्वर स्वामी को नमस्कार। दिव्य सुन्दर विग्रह की पूजा करता हूँ।
+
+--- unit 20 | section: षोडशोपचार पूजा ---
+vidhi:
+The worship with the hundred and eight names. The names are not printed here; the worshipper is sent to the two lists of names.
+deva:
+अथ अष्टोत्तरशतनाम पूजा –
+श्री वेङ्कटेश्वर अष्टोत्तरशतनामावली पश्यतु ॥
+श्री पद्मावती अष्टोत्तरशतनामावलि पश्यतु ॥
+iast:
+atha aṣṭottaraśatanāma pūjā –
+śrī veṅkaṭeśvara aṣṭottaraśatanāmāvalī paśyatu ||
+śrī padmāvatī aṣṭottaraśatanāmāvali paśyatu ||
+en: Then the worship with the hundred and eight names — See the hundred and eight names of Śrī Veṅkaṭeśvara. See the hundred and eight names of Śrī Padmāvatī.
+tel: అష్టోత్తర శతనామ పూజ — శ్రీ వేంకటేశ్వర అష్టోత్తర శతనామావళిని చూడుము. శ్రీ పద్మావతీ అష్టోత్తర శతనామావళిని చూడుము.
+hi: अष्टोत्तरशतनाम पूजा — श्री वेङ्कटेश्वर अष्टोत्तरशतनामावली देखिए। श्री पद्मावती अष्टोत्तरशतनामावली देखिए।
+
+--- unit 21 | section: षोडशोपचार पूजा ---
+vidhi:
+Incense. The ṛc is the twelfth of the Puruṣa Sūkta.
+deva:
+धूपम् –
+यत्पुरु॑षं॒ व्य॑दधुः ।
+क॒ति॒धा व्य॑कल्पयन् ।
+मुखं॒ किम॑स्य॒ कौ बा॒हू ।
+कावू॒रू पादा॑वुच्येते ।
+दशाङ्गं गुग्गुलोपेतं गोघृतेन समन्वितम् ।
+धूपं गृहाण देवेश सर्वलोकनमस्कृत ॥
+ओं श्रीपद्मावती समेत श्रीवेङ्कटेश्वर स्वामिने नमः धूपं आघ्रापयामि ॥
+iast:
+dhūpam –
+yatpuruṣaṁ vyadadhuḥ |
+katidhā vyakalpayan |
+mukhaṁ kimasya kau bāhū |
+kāvūrū pādāvucyete |
+daśāṅgaṁ guggulopetaṁ goghṛtena samanvitam |
+dhūpaṁ gṛhāṇa deveśa sarvalokanamaskṛta ||
+oṁ śrīpadmāvatī sameta śrīveṅkaṭeśvara svāmine namaḥ dhūpaṁ āghrāpayāmi ||
+en: Incense — When they divided the Puruṣa, into how many parts did they arrange him? What became his mouth? What his two arms? What are called his thighs and his feet? Incense of the ten ingredients with guggulu, mixed with cow's ghee — accept this incense, O lord of the gods, saluted by all the worlds. Oṁ, salutation to Śrī Veṅkaṭeśvara Svāmī with Śrī Padmāvatī. I offer incense for him to smell.
+tel: ధూపము — వారు పురుషుని విభజించినపుడు ఎన్ని భాగములుగా కల్పించిరి? ఆయన ముఖము ఏది? ఆయన రెండు బాహువులు ఏవి? ఆయన ఊరువులు, పాదములు అని వేటిని చెప్పుదురు? గుగ్గులముతో కూడిన దశాంగమును, ఆవు నేతితో కలిపినదానిని, ఈ ధూపమును గ్రహింపుము, ఓ దేవేశా, సర్వలోకములచే నమస్కరింపబడువాడా. ఓం శ్రీ పద్మావతీ సమేత శ్రీ వేంకటేశ్వర స్వామికి నమస్కారము. ధూపమును ఆఘ్రాణింపజేయుచున్నాను.
+hi: धूप — जब उन्होंने पुरुष को विभक्त किया, तब कितने भागों में उनकी कल्पना की? उनका मुख क्या हुआ? उनकी दोनों भुजाएँ क्या हुईं? उनकी जंघाएँ और चरण किन्हें कहा जाता है? गुग्गुल सहित दशाङ्ग, गोघृत से युक्त यह धूप ग्रहण कीजिए, हे देवेश, हे सब लोकों द्वारा नमस्कृत। ओम् श्री पद्मावती समेत श्री वेङ्कटेश्वर स्वामी को नमस्कार। धूप आघ्रापित करता हूँ।
+
+--- unit 22 | section: षोडशोपचार पूजा ---
+vidhi:
+The lamp. The ṛc is the thirteenth of the Puruṣa Sūkta.
+deva:
+दीपम् –
+ब्रा॒ह्म॒णो᳚ऽस्य॒ मुख॑मासीत् ।
+बा॒हू रा॑ज॒न्य॑ः कृ॒तः ।
+ऊ॒रू तद॑स्य॒ यद्वैश्य॑ः ।
+प॒द्भ्याग्ं शू॒द्रो अ॑जायत ।
+त्रिलोकेश महादेव सर्वज्ञानप्रदायक ।
+दीपं दास्यामि देवेश रक्ष मां भक्तवत्सल ॥
+ओं श्रीपद्मावती समेत श्रीवेङ्कटेश्वर स्वामिने नमः दीपं दर्शयामि ॥
+धूपदीपानन्तरं शुद्धाचमनीयं समर्पयामि ।
+iast:
+dīpam –
+brāhmaṇo'sya mukhamāsīt |
+bāhū rājanyaḥ kṛtaḥ |
+ūrū tadasya yadvaiśyaḥ |
+padbhyāgṁ śūdro ajāyata |
+trilokeśa mahādeva sarvajñānapradāyaka |
+dīpaṁ dāsyāmi deveśa rakṣa māṁ bhaktavatsala ||
+oṁ śrīpadmāvatī sameta śrīveṅkaṭeśvara svāmine namaḥ dīpaṁ darśayāmi ||
+dhūpadīpānantaraṁ śuddhācamanīyaṁ samarpayāmi |
+en: Lamp — The brāhmaṇa was his mouth. The rājanya was made his arms. His thighs became the vaiśya. From his feet the śūdra was born. O lord of the three worlds, great god, giver of all knowledge — I shall give you this lamp, O lord of the gods. Protect me, O you who love your devotees. Oṁ, salutation to Śrī Veṅkaṭeśvara Svāmī with Śrī Padmāvatī. I show the lamp. After the incense and the lamp I offer pure water for sipping.
+tel: దీపము — బ్రాహ్మణుడు ఆయన ముఖమాయెను. రాజన్యుడు ఆయన బాహువులుగా చేయబడెను. ఆయన ఊరువులు వైశ్యుడాయెను. ఆయన పాదములనుండి శూద్రుడు జన్మించెను. ఓ త్రిలోకేశా, మహాదేవా, సర్వజ్ఞాన ప్రదాయకా, దీపమును నీకు ఇచ్చెదను, ఓ దేవేశా. ఓ భక్తవత్సలా, నన్ను రక్షింపుము. ఓం శ్రీ పద్మావతీ సమేత శ్రీ వేంకటేశ్వర స్వామికి నమస్కారము. దీపమును చూపుచున్నాను. ధూప దీపముల తరువాత శుద్ధ ఆచమనీయమును సమర్పించుచున్నాను.
+hi: दीप — ब्राह्मण उनका मुख हुआ। राजन्य उनकी भुजाएँ बनाया गया। उनकी जंघाएँ वैश्य हुईं। उनके चरणों से शूद्र उत्पन्न हुआ। हे त्रिलोकेश, हे महादेव, हे सर्वज्ञानप्रदायक, यह दीप मैं आपको दूँगा, हे देवेश। हे भक्तवत्सल, मेरी रक्षा कीजिए। ओम् श्री पद्मावती समेत श्री वेङ्कटेश्वर स्वामी को नमस्कार। दीप दिखाता हूँ। धूप और दीप के पश्चात् शुद्ध आचमनीय समर्पित करता हूँ।
+
+--- unit 23 | section: षोडशोपचार पूजा ---
+vidhi:
+The food-offering. The ṛc is the fourteenth of the Puruṣa Sūkta.
+deva:
+नैवेद्यम् –
+च॒न्द्रमा॒ मन॑सो जा॒तः ।
+चक्षो॒ः सूर्यो॑ अजायत ।
+मुखा॒दिन्द्र॑श्चा॒ग्निश्च॑ ।
+प्रा॒णाद्वा॒युर॑जायत ।
+सर्वभक्षैश्च भोज्यैश्च रसैः षड्भिः समन्वितम् ।
+नैवेद्यं तु मयानीतं गृहाण पुरुषोत्तम ॥
+ओं श्रीपद्मावती समेत श्रीवेङ्कटेश्वर स्वामिने नमः नैवेद्यं समर्पयामि ॥
+iast:
+naivedyam –
+candramā manaso jātaḥ |
+cakṣoḥ sūryo ajāyata |
+mukhādindraścāgniśca |
+prāṇādvāyurajāyata |
+sarvabhakṣaiśca bhojyaiśca rasaiḥ ṣaḍbhiḥ samanvitam |
+naivedyaṁ tu mayānītaṁ gṛhāṇa puruṣottama ||
+oṁ śrīpadmāvatī sameta śrīveṅkaṭeśvara svāmine namaḥ naivedyaṁ samarpayāmi ||
+en: Food-offering — The moon was born from his mind. The sun was born from his eye. From his mouth came Indra and Agni. From his breath Vāyu was born. Joined with every kind of food to chew and to eat, and with the six flavours — this food-offering has been brought by me. Accept it, O Puruṣottama. Oṁ, salutation to Śrī Veṅkaṭeśvara Svāmī with Śrī Padmāvatī. I offer the food-offering.
+tel: నైవేద్యము — ఆయన మనస్సునుండి చంద్రుడు జన్మించెను. ఆయన కన్నునుండి సూర్యుడు జన్మించెను. ఆయన ముఖమునుండి ఇంద్రుడును అగ్నియు కలిగిరి. ఆయన ప్రాణమునుండి వాయువు జన్మించెను. సర్వ భక్ష్య భోజ్యములతోను షడ్రసములతోను కూడిన ఈ నైవేద్యమును నేను తెచ్చితిని. గ్రహింపుము, ఓ పురుషోత్తమా. ఓం శ్రీ పద్మావతీ సమేత శ్రీ వేంకటేశ్వర స్వామికి నమస్కారము. నైవేద్యమును సమర్పించుచున్నాను.
+hi: नैवेद्य — उनके मन से चन्द्रमा उत्पन्न हुए। उनके नेत्र से सूर्य उत्पन्न हुए। उनके मुख से इन्द्र और अग्नि प्रकट हुए। उनके प्राण से वायु उत्पन्न हुए। सब भक्ष्य और भोज्य पदार्थों से और छह रसों से युक्त यह नैवेद्य मेरे द्वारा लाया गया है। ग्रहण कीजिए, हे पुरुषोत्तम। ओम् श्री पद्मावती समेत श्री वेङ्कटेश्वर स्वामी को नमस्कार। नैवेद्य समर्पित करता हूँ।
+
+--- unit 24 | section: षोडशोपचार पूजा ---
+vidhi:
+The consecration of the food and the offering of it to the five breaths. The Gāyatrī is recited and the food is sprinkled; the second formula is said in the evening.
+deva:
+ओं भूर्भुव॒स्सुव॑ः । तत्स॑वि॒तुर्वरे᳚ण्यं॒ भर्गो॑ दे॒वस्य॑ धीमहि ।
+धियो॒ यो न॑ः प्रचो॒दया᳚त् ॥
+सत्यं त्वा ऋतेन परिषिञ्चामि ।
+(सायङ्काले – ऋतं त्वा सत्येन परिषिञ्चामि)
+अमृतमस्तु । अ॒मृ॒तो॒प॒स्तर॑णमसि ।
+ओं प्रा॒णाय॒ स्वाहा᳚ । ओं अ॒पा॒नाय॒ स्वाहा᳚ ।
+ओं व्या॒नाय॒ स्वाहा᳚ । ओं उ॒दा॒नाय॒ स्वाहा᳚ ।
+ओं स॒मा॒नाय॒ स्वाहा᳚ ।
+मध्ये मध्ये पानीयं समर्पयामि ।
+अ॒मृ॒ता॒पि॒धा॒नम॑सि । उत्तरापोशनं समर्पयामि ।
+हस्तौ प्रक्षालयामि । पादौ प्रक्षालयामि ।
+शुद्धाचमनीयं समर्पयामि ।
+iast:
+oṁ bhūrbhuvassuvaḥ | tatsaviturvareṇyaṁ bhargo devasya dhīmahi |
+dhiyo yo naḥ pracodayāt ||
+satyaṁ tvā ṛtena pariṣiñcāmi |
+(sāyaṅkāle – ṛtaṁ tvā satyena pariṣiñcāmi)
+amṛtamastu | amṛtopastaraṇamasi |
+oṁ prāṇāya svāhā | oṁ apānāya svāhā |
+oṁ vyānāya svāhā | oṁ udānāya svāhā |
+oṁ samānāya svāhā |
+madhye madhye pānīyaṁ samarpayāmi |
+amṛtāpidhānamasi | uttarāpośanaṁ samarpayāmi |
+hastau prakṣālayāmi | pādau prakṣālayāmi |
+śuddhācamanīyaṁ samarpayāmi |
+en: Oṁ, earth, air and heaven. We meditate upon the excellent light of the god Savitṛ. May he impel our thoughts. With truth I sprinkle you about. (In the evening — with right order I sprinkle you about.) Let it be nectar. You are the spread beneath the nectar. Oṁ, to the out-breath, svāhā. Oṁ, to the in-breath, svāhā. Oṁ, to the diffused breath, svāhā. Oṁ, to the up-breath, svāhā. Oṁ, to the even breath, svāhā. Between the courses I offer water. You are the covering upon the nectar. I offer the water taken after eating. I wash the hands. I wash the feet. I offer pure water for sipping.
+tel: ఓం భూర్భువస్సువః. సవితృదేవుని శ్రేష్ఠమైన తేజస్సును ధ్యానించుచున్నాము. ఆయన మా బుద్ధులను ప్రేరేపించుగాక. సత్యముచే నిన్ను పరిషించుచున్నాను. (సాయంకాలమునందు — ఋతముచే నిన్ను పరిషించుచున్నాను.) అమృతమగుగాక. నీవు అమృతమునకు ఉపస్తరణమువు. ఓం ప్రాణాయ స్వాహా. ఓం అపానాయ స్వాహా. ఓం వ్యానాయ స్వాహా. ఓం ఉదానాయ స్వాహా. ఓం సమానాయ స్వాహా. మధ్య మధ్య పానీయమును సమర్పించుచున్నాను. నీవు అమృతమునకు అపిధానమువు. ఉత్తరాపోశనమును సమర్పించుచున్నాను. హస్తములను కడుగుచున్నాను. పాదములను కడుగుచున్నాను. శుద్ధ ఆచమనీయమును సమర్పించుచున్నాను.
+hi: ओम् भूर्भुवस्सुवः। सवितादेव के श्रेष्ठ तेज का हम ध्यान करते हैं। वे हमारी बुद्धियों को प्रेरित करें। सत्य से आपको परिषिञ्चित करता हूँ। (सायंकाल में — ऋत से आपको परिषिञ्चित करता हूँ।) अमृत हो। आप अमृत का उपस्तरण हैं। ओम् प्राण को स्वाहा। ओम् अपान को स्वाहा। ओम् व्यान को स्वाहा। ओम् उदान को स्वाहा। ओम् समान को स्वाहा। बीच-बीच में पानीय समर्पित करता हूँ। आप अमृत का अपिधान हैं। उत्तरापोशन समर्पित करता हूँ। हाथ धोता हूँ। पैर धोता हूँ। शुद्ध आचमनीय समर्पित करता हूँ।
+
+--- unit 25 | section: षोडशोपचार पूजा ---
+vidhi:
+Betel. The ṛc is the fifteenth of the Puruṣa Sūkta.
+deva:
+ताम्बूलम् –
+नाभ्या॑ आसीद॒न्तरि॑क्षम् ।
+शी॒र्ष्णो द्यौः सम॑वर्तत ।
+प॒द्भ्यां भूमि॒र्दिश॒ः श्रोत्रा᳚त् ।
+तथा॑ लो॒काग्ं अ॑कल्पयन् ।
+पूगीफलैः सकर्पूरैर्नागवल्ली दलैर्युतम् ।
+मुक्ताचूर्ण समायुक्तं ताम्बूलं प्रतिगृह्यताम् ॥
+ओं श्रीपद्मावती समेत श्रीवेङ्कटेश्वर स्वामिने नमः ताम्बूलं समर्पयामि ॥
+iast:
+tāmbūlam –
+nābhyā āsīdantarikṣam |
+śīrṣṇo dyauḥ samavartata |
+padbhyāṁ bhūmirdiśaḥ śrotrāt |
+tathā lokāgṁ akalpayan |
+pūgīphalaiḥ sakarpūrairnāgavallī dalairyutam |
+muktācūrṇa samāyuktaṁ tāmbūlaṁ pratigṛhyatām ||
+oṁ śrīpadmāvatī sameta śrīveṅkaṭeśvara svāmine namaḥ tāmbūlaṁ samarpayāmi ||
+en: Betel — From his navel came the mid-air. From his head the heaven came forth. From his feet came the earth, and from his ear the directions. In this way they fashioned the worlds. With areca nuts and camphor, with leaves of the betel creeper, and joined with lime of pearl — accept this betel. Oṁ, salutation to Śrī Veṅkaṭeśvara Svāmī with Śrī Padmāvatī. I offer betel.
+tel: తాంబూలము — ఆయన నాభినుండి అంతరిక్షము కలిగెను. ఆయన శిరస్సునుండి ద్యులోకము కలిగెను. ఆయన పాదములనుండి భూమియు, చెవులనుండి దిక్కులును కలిగెను. ఈ విధముగా వారు లోకములను కల్పించిరి. పోకచెక్కలతోను కర్పూరముతోను, తమలపాకులతోను కూడినదియు, ముత్యపు సున్నముతో కూడినదియు అగు ఈ తాంబూలమును గ్రహింపుము. ఓం శ్రీ పద్మావతీ సమేత శ్రీ వేంకటేశ్వర స్వామికి నమస్కారము. తాంబూలమును సమర్పించుచున్నాను.
+hi: ताम्बूल — उनकी नाभि से अन्तरिक्ष हुआ। उनके सिर से द्युलोक हुआ। उनके चरणों से पृथ्वी और कानों से दिशाएँ हुईं। इस प्रकार उन्होंने लोकों की रचना की। कर्पूर सहित सुपारी, पान के पत्तों और मोती के चूने से युक्त यह ताम्बूल ग्रहण कीजिए। ओम् श्री पद्मावती समेत श्री वेङ्कटेश्वर स्वामी को नमस्कार। ताम्बूल समर्पित करता हूँ।
+
+--- unit 26 | section: षोडशोपचार पूजा ---
+vidhi:
+The waving of the light. The ṛc is the sixteenth of the Puruṣa Sūkta.
+deva:
+नीराजनम् –
+वेदा॒हमे॒तं पुरु॑षं म॒हान्तम्᳚ ।
+आ॒दि॒त्यव॑र्णं॒ तम॑स॒स्तु पा॒रे ।
+सर्वा॑णि रू॒पाणि॑ वि॒चित्य॒ धीर॑ः ।
+नामा॑नि कृ॒त्वाऽभि॒वद॒न्॒ यदास्ते᳚ ।
+श्रियः कान्ताय कल्याण निधये निधयेर्थिनाम् ।
+श्रीवेङ्कटनिवासाय श्रीनिवासाय मङ्गलम् ॥
+ओं श्रीपद्मावती समेत श्रीवेङ्कटेश्वर स्वामिने नमः नीराजनं दर्शयामि ॥
+नीराजनानन्तरं शुद्धाचमनीयं समर्पयामि ।
+iast:
+nīrājanam –
+vedāhametaṁ puruṣaṁ mahāntam |
+ādityavarṇaṁ tamasastu pāre |
+sarvāṇi rūpāṇi vicitya dhīraḥ |
+nāmāni kṛtvā'bhivadan yadāste |
+śriyaḥ kāntāya kalyāṇa nidhaye nidhayerthinām |
+śrīveṅkaṭanivāsāya śrīnivāsāya maṅgalam ||
+oṁ śrīpadmāvatī sameta śrīveṅkaṭeśvara svāmine namaḥ nīrājanaṁ darśayāmi ||
+nīrājanānantaraṁ śuddhācamanīyaṁ samarpayāmi |
+en: Waving of the light — I know this great Puruṣa, shining like the sun, beyond the darkness. He is the steadfast one who has discerned all forms, given them their names, and speaks them as he abides. Auspiciousness to the husband of Śrī, the treasure of all that is good, the treasure of those who ask; auspiciousness to Śrīnivāsa, who dwells on Veṅkaṭa. Oṁ, salutation to Śrī Veṅkaṭeśvara Svāmī with Śrī Padmāvatī. I show the waving of the light. After the waving of the light I offer pure water for sipping.
+tel: నీరాజనము — చీకటికి అవతల సూర్యుని వలె ప్రకాశించు ఈ మహాపురుషుని నేను ఎఱుగుదును. ఆయన ధీరుడు. సమస్త రూపములను వేఱుపఱచి, వానికి నామములను ఇచ్చి, వానిని పలుకుచు ఆయన నిలిచియున్నాడు. శ్రీకాంతునకు, కల్యాణ నిధికి, యాచించువారికి నిధి అయినవానికి, వేంకటనివాసునకు, శ్రీనివాసునకు మంగళము. ఓం శ్రీ పద్మావతీ సమేత శ్రీ వేంకటేశ్వర స్వామికి నమస్కారము. నీరాజనమును చూపుచున్నాను. నీరాజనము తరువాత శుద్ధ ఆచమనీయమును సమర్పించుచున్నాను.
+hi: नीराजन — अन्धकार से परे सूर्य के समान प्रकाशमान इस महापुरुष को मैं जानता हूँ। वे धीर हैं। सब रूपों को पहचानकर, उनके नाम रखकर, उन्हें कहते हुए वे स्थित हैं। श्रीकान्त को, कल्याण के निधि को, याचकों के निधि को, वेङ्कटनिवास श्रीनिवास को मङ्गल हो। ओम् श्री पद्मावती समेत श्री वेङ्कटेश्वर स्वामी को नमस्कार। नीराजन दिखाता हूँ। नीराजन के पश्चात् शुद्ध आचमनीय समर्पित करता हूँ।
+
+--- unit 27 | section: मन्त्रपुष्पम् ---
+vidhi:
+The mantra-flower. The page first sends the worshipper to the special mantra-flower, then gives the seventeenth ṛc of the Puruṣa Sūkta and a verse offering the handful of flowers.
+deva:
+मन्त्रपुष्पम् –
+( विशेष मन्त्रपुष्पं पश्यतु ॥ )
+धा॒ता पु॒रस्ता॒द्यमु॑दाज॒हार॑ ।
+श॒क्रः प्रवि॒द्वान्प्र॒दिश॒श्चत॑स्रः ।
+तमे॒वं वि॒द्वान॒मृत॑ इ॒ह भ॑वति ।
+नान्यः पन्था॒ अय॑नाय विद्यते ।
+नानासुगन्धपुष्पाणि यथा कालोद्भवानि च ।
+पुष्पाञ्जलिं मया दत्तं गृहाण वेङ्कटेश्वर ॥
+ओं श्रीपद्मावती समेत श्रीवेङ्कटेश्वर स्वामिने नमः सुवर्ण दिव्य मन्त्रपुष्पं समर्पयामि ॥
+iast:
+mantrapuṣpam –
+( viśeṣa mantrapuṣpaṁ paśyatu || )
+dhātā purastādyamudājahāra |
+śakraḥ pravidvānpradiśaścatasraḥ |
+tamevaṁ vidvānamṛta iha bhavati |
+nānyaḥ panthā ayanāya vidyate |
+nānāsugandhapuṣpāṇi yathā kālodbhavāni ca |
+puṣpāñjaliṁ mayā dattaṁ gṛhāṇa veṅkaṭeśvara ||
+oṁ śrīpadmāvatī sameta śrīveṅkaṭeśvara svāmine namaḥ suvarṇa divya mantrapuṣpaṁ samarpayāmi ||
+en: The mantra-flower — (See the special mantra-flower.) The Ordainer brought him forth in the beginning, and Śakra knows him well in the four directions. He who knows him in this way becomes immortal here. There is no other path to go by. Many fragrant flowers, born each in its season — accept this handful of flowers given by me, O Veṅkaṭeśvara. Oṁ, salutation to Śrī Veṅkaṭeśvara Svāmī with Śrī Padmāvatī. I offer the golden and divine mantra-flower.
+tel: మంత్రపుష్పము — (విశేష మంత్రపుష్పమును చూడుము.) ధాత ఆయనను ముందుగా వెలువరించెను. శక్రుడు నాలుగు దిక్కులయందును ఆయనను బాగుగ ఎఱుగును. ఈ విధముగ ఆయనను ఎఱిగినవాడు ఇచ్చటనే అమృతుడగును. వెళ్ళుటకు వేఱొక మార్గము లేదు. ఆయా కాలములలో పుట్టిన నానా సుగంధ పుష్పములు — నాచే ఇవ్వబడిన ఈ పుష్పాంజలిని గ్రహింపుము, ఓ వేంకటేశ్వరా. ఓం శ్రీ పద్మావతీ సమేత శ్రీ వేంకటేశ్వర స్వామికి నమస్కారము. సువర్ణ దివ్య మంత్రపుష్పమును సమర్పించుచున్నాను.
+hi: मन्त्रपुष्प — (विशेष मन्त्रपुष्प देखिए।) धाता ने उन्हें पहले प्रकट किया। शक्र चारों दिशाओं में उन्हें भली भाँति जानते हैं। जो इस प्रकार उन्हें जानता है, वह यहीं अमृत हो जाता है। जाने के लिए दूसरा कोई मार्ग नहीं है। अपने-अपने समय में खिले नाना सुगन्धित पुष्प — मेरे द्वारा दी गई यह पुष्पाञ्जलि ग्रहण कीजिए, हे वेङ्कटेश्वर। ओम् श्री पद्मावती समेत श्री वेङ्कटेश्वर स्वामी को नमस्कार। सुवर्ण दिव्य मन्त्रपुष्प समर्पित करता हूँ।
+
+--- unit 28 | section: नमस्कारः ---
+vidhi:
+Circumambulation and salutation. The worshipper turns about himself in place and asks for protection.
+deva:
+प्रदक्षिण नमस्काराः –
+यानि कानि च पापानि जन्मान्तरकृतानि च ।
+तानि तानि प्रणश्यन्ति प्रदक्षिण पदे पदे ॥
+पापोऽहं पापकर्माऽहं पापात्मा पापसम्भवः ।
+त्राहि मां कृपया देव शरणागतवत्सल ॥
+अन्यथा शरणं नास्ति त्वमेव शरणं मम ।
+तस्मात्कारुण्य भावेन रक्ष रक्ष जनार्दन ॥
+ओं श्रीपद्मावती समेत श्रीवेङ्कटेश्वर स्वामिने नमः आत्मप्रदक्षिण नमस्कारान् समर्पयामि ॥
+iast:
+pradakṣiṇa namaskārāḥ –
+yāni kāni ca pāpāni janmāntarakṛtāni ca |
+tāni tāni praṇaśyanti pradakṣiṇa pade pade ||
+pāpo'haṁ pāpakarmā'haṁ pāpātmā pāpasambhavaḥ |
+trāhi māṁ kṛpayā deva śaraṇāgatavatsala ||
+anyathā śaraṇaṁ nāsti tvameva śaraṇaṁ mama |
+tasmātkāruṇya bhāvena rakṣa rakṣa janārdana ||
+oṁ śrīpadmāvatī sameta śrīveṅkaṭeśvara svāmine namaḥ ātmapradakṣiṇa namaskārān samarpayāmi ||
+en: Circumambulation and salutations — Whatever sins there are, and those done in other births, they all perish at every step of the circumambulation. I am sinful, my deeds are sinful, my nature is sinful, I am born of sin. Save me in your mercy, O god, O loving one to those who take refuge. There is no other refuge; you alone are my refuge. Therefore out of compassion protect me, protect me, O Janārdana. Oṁ, salutation to Śrī Veṅkaṭeśvara Svāmī with Śrī Padmāvatī. I offer circumambulation about myself and salutations.
+tel: ప్రదక్షిణ నమస్కారములు — ఏ ఏ పాపములు కలవో, జన్మాంతరములయందు చేయబడినవి కలవో, అవి అన్నియు ప్రదక్షిణము యొక్క అడుగడుగునను నశించును. నేను పాపిని, పాపకర్ముడను, పాపాత్ముడను, పాపమునుండి పుట్టినవాడను. కృపతో నన్ను రక్షింపుము, ఓ దేవా, శరణాగత వత్సలా. వేఱొక శరణము లేదు; నీవే నా శరణము. కావున కారుణ్య భావముతో నన్ను రక్షింపుము రక్షింపుము, ఓ జనార్దనా. ఓం శ్రీ పద్మావతీ సమేత శ్రీ వేంకటేశ్వర స్వామికి నమస్కారము. ఆత్మప్రదక్షిణ నమస్కారములను సమర్పించుచున్నాను.
+hi: प्रदक्षिण नमस्कार — जो कोई पाप हैं और जो जन्मान्तर में किए गए हैं, वे सब प्रदक्षिण के पद-पद पर नष्ट हो जाते हैं। मैं पापी हूँ, पापकर्मा हूँ, पापात्मा हूँ, पाप से उत्पन्न हूँ। कृपा से मेरी रक्षा कीजिए, हे देव, हे शरणागतवत्सल। अन्य कोई शरण नहीं; आप ही मेरी शरण हैं। अतः कारुण्य भाव से मेरी रक्षा कीजिए, रक्षा कीजिए, हे जनार्दन। ओम् श्री पद्मावती समेत श्री वेङ्कटेश्वर स्वामी को नमस्कार। आत्मप्रदक्षिण नमस्कार समर्पित करता हूँ।
+
+--- unit 29 | section: उपचार पूजा ---
+vidhi:
+The royal services, all offered under one name-mantra.
+deva:
+उपचार पूजा –
+ओं श्रीपद्मावती समेत श्रीवेङ्कटेश्वर स्वामिने नमः ।
+छत्रमाच्छादयामि । चामरैर्वीजयामि ।
+नृत्यं दर्शयामि । गीतं श्रावयामि ।
+वाद्यं घोषयामि । आन्दोलिकानारोहयामि ।
+अश्वानारोहयामि । गजानारोहयामि ।
+समस्त राजोपचार देवोपचार भक्त्युपचार शक्त्युपचार मन्त्रोपचार पूजाः समर्पयामि ॥
+iast:
+upacāra pūjā –
+oṁ śrīpadmāvatī sameta śrīveṅkaṭeśvara svāmine namaḥ |
+chatramācchādayāmi | cāmarairvījayāmi |
+nṛtyaṁ darśayāmi | gītaṁ śrāvayāmi |
+vādyaṁ ghoṣayāmi | āndolikānārohayāmi |
+aśvānārohayāmi | gajānārohayāmi |
+samasta rājopacāra devopacāra bhaktyupacāra śaktyupacāra mantropacāra pūjāḥ samarpayāmi ||
+en: The services — Oṁ, salutation to Śrī Veṅkaṭeśvara Svāmī with Śrī Padmāvatī. I hold up the parasol. I fan him with the whisks. I show the dance. I cause the song to be heard. I sound the instruments. I seat him in the palanquin. I seat him upon the horse. I seat him upon the elephant. I offer all the services of a king, of a god, of devotion, of power and of mantra.
+tel: ఉపచార పూజ — ఓం శ్రీ పద్మావతీ సమేత శ్రీ వేంకటేశ్వర స్వామికి నమస్కారము. ఛత్రమును పట్టుచున్నాను. చామరములతో వీచుచున్నాను. నృత్యమును చూపుచున్నాను. గీతమును వినిపించుచున్నాను. వాద్యమును మ్రోగించుచున్నాను. ఆందోళికను ఎక్కించుచున్నాను. అశ్వములను ఎక్కించుచున్నాను. గజములను ఎక్కించుచున్నాను. సమస్త రాజోపచార, దేవోపచార, భక్త్యుపచార, శక్త్యుపచార, మంత్రోపచార పూజలను సమర్పించుచున్నాను.
+hi: उपचार पूजा — ओम् श्री पद्मावती समेत श्री वेङ्कटेश्वर स्वामी को नमस्कार। छत्र लगाता हूँ। चामरों से वीजन करता हूँ। नृत्य दिखाता हूँ। गीत सुनाता हूँ। वाद्य बजाता हूँ। आन्दोलिका पर आरोहण कराता हूँ। अश्वों पर आरोहण कराता हूँ। गजों पर आरोहण कराता हूँ। समस्त राजोपचार, देवोपचार, भक्त्युपचार, शक्त्युपचार और मन्त्रोपचार पूजाएँ समर्पित करता हूँ।
+
+--- unit 30 | section: प्रार्थना ---
+vidhi:
+The prayer, in three verses, saluting the Lord in each of his five forms: the supreme, the vyūha, the vibhava, the indweller and the image.
+deva:
+प्रार्थना –
+ओं नमो देवदेवाय पूर्वदेवाय खड्गिने ।
+श्रीवत्साङ्काय च नमः परस्मै परमात्मने ॥
+नमः परस्मै व्यूहोपव्यूहान्तर विभूतये ।
+विभवाय नमस्तस्मै विश्वान्तर्यामिणेऽणवे ॥
+अर्चावताराय नमोऽजन्मने जन्मभाजिने ।
+मायाविने जगत् स्रष्ट्रे लक्ष्मीनारायणात्मने ॥
+iast:
+prārthanā –
+oṁ namo devadevāya pūrvadevāya khaḍgine |
+śrīvatsāṅkāya ca namaḥ parasmai paramātmane ||
+namaḥ parasmai vyūhopavyūhāntara vibhūtaye |
+vibhavāya namastasmai viśvāntaryāmiṇe'ṇave ||
+arcāvatārāya namo'janmane janmabhājine |
+māyāvine jagat sraṣṭre lakṣmīnārāyaṇātmane ||
+en: Prayer — Oṁ, salutation to the god of gods, the first god, the bearer of the sword, to him who is marked with the Śrīvatsa, to the supreme one, the supreme Self. Salutation to the supreme one whose glory is in the vyūha forms and in the forms within them; salutation to him in his descents; to the indweller of the universe, the subtle one. Salutation to him who has come down into the image; to the unborn one who takes birth; to the lord of māyā, the creator of the world, whose self is Lakṣmī-Nārāyaṇa.
+tel: ప్రార్థన — ఓం, దేవదేవునకు, పూర్వదేవునకు, ఖడ్గధారికి, శ్రీవత్స చిహ్నము కలవానికి, పరునకు, పరమాత్మకు నమస్కారము. వ్యూహ ఉపవ్యూహములయందు విభూతి కలిగిన పరునకు నమస్కారము; విభవ రూపునకు, విశ్వాంతర్యామికి, అణురూపునకు నమస్కారము. అర్చావతారునకు, జన్మలేనివాడై జన్మించువానికి, మాయావికి, జగత్స్రష్టకు, లక్ష్మీనారాయణ స్వరూపునకు నమస్కారము.
+hi: प्रार्थना — ओम्, देवदेव को, पूर्वदेव को, खड्गधारी को, श्रीवत्स चिह्न वाले को, पर को, परमात्मा को नमस्कार। व्यूह और उपव्यूहों में विभूति वाले पर को नमस्कार; विभव रूप को, विश्व के अन्तर्यामी को, अणुरूप को नमस्कार। अर्चावतार को, अजन्मा होकर जन्म लेने वाले को, मायावी को, जगत् के स्रष्टा को, लक्ष्मीनारायण स्वरूप को नमस्कार।
+
+--- unit 31 | section: क्षमाप्रार्थना ---
+vidhi:
+Asking pardon, in two verses.
+deva:
+क्षमा प्रार्थना –
+यस्य स्मृत्या च नामोक्त्या तपः पूजा क्रियादिषु ।
+न्यूनं सम्पूर्णतां याति सद्यो वन्दे तमच्युतम् ॥
+मन्त्रहीनं क्रियाहीनं भक्तिहीनं जनार्दन ।
+यत्पूजितं मया देव परिपूर्णं तदस्तु ते ॥
+iast:
+kṣamā prārthanā –
+yasya smṛtyā ca nāmoktyā tapaḥ pūjā kriyādiṣu |
+nyūnaṁ sampūrṇatāṁ yāti sadyo vande tamacyutam ||
+mantrahīnaṁ kriyāhīnaṁ bhaktihīnaṁ janārdana |
+yatpūjitaṁ mayā deva paripūrṇaṁ tadastu te ||
+en: Asking pardon — I bow at once to Acyuta, by remembering whom and by speaking whose name whatever is lacking in penance, worship and rites becomes complete. Lacking in mantra, lacking in rite, lacking in devotion, O Janārdana — whatever has been worshipped by me, O god, let it be complete for you.
+tel: క్షమా ప్రార్థన — ఎవని స్మరణముచేతను నామోచ్చారణముచేతను తపస్సు, పూజ, క్రియలు మొదలగువాటియందలి లోపము వెంటనే సంపూర్ణమగునో, ఆ అచ్యుతునకు నమస్కరించుచున్నాను. మంత్రహీనమును, క్రియాహీనమును, భక్తిహీనమును, ఓ జనార్దనా — నాచే పూజింపబడినది, ఓ దేవా, నీకు పరిపూర్ణమగుగాక.
+hi: क्षमा प्रार्थना — जिनके स्मरण और नाम के उच्चारण से तप, पूजा और क्रिया आदि में जो कमी है, वह तुरन्त पूर्ण हो जाती है, उन अच्युत को मैं प्रणाम करता हूँ। मन्त्रहीन, क्रियाहीन, भक्तिहीन, हे जनार्दन — जो कुछ मेरे द्वारा पूजित हुआ, हे देव, वह आपके लिए परिपूर्ण हो।
+
+--- unit 32 | section: क्षमाप्रार्थना ---
+vidhi:
+The closing dedication.
+deva:
+अनया ध्यान आवाहनादि षोडशोपचार पूजया भगवान् सर्वात्मकः श्रीपद्मावती समेत श्रीवेङ्कटेश्वर स्वामि सुप्रीतो सुप्रसन्नो वरदो भवन्तु ॥
+iast:
+anayā dhyāna āvāhanādi ṣoḍaśopacāra pūjayā bhagavān sarvātmakaḥ śrīpadmāvatī sameta śrīveṅkaṭeśvara svāmi suprīto suprasanno varado bhavantu ||
+en: By this worship in sixteen services beginning with meditation and invocation, may the Lord, the Self of all, Śrī Veṅkaṭeśvara Svāmī with Śrī Padmāvatī, be well pleased, gracious, and the giver of boons.
+tel: ఈ ధ్యాన ఆవాహనాది షోడశోపచార పూజచే సర్వాత్మకుడైన భగవానుడు శ్రీ పద్మావతీ సమేత శ్రీ వేంకటేశ్వర స్వామి సుప్రీతుడును, సుప్రసన్నుడును, వరదుడును అగుగాక.
+hi: इस ध्यान और आवाहन आदि षोडशोपचार पूजा से सर्वात्मा भगवान् श्री पद्मावती समेत श्री वेङ्कटेश्वर स्वामी सुप्रीत, सुप्रसन्न और वरद हों।
+
+--- unit 33 | section: तीर्थप्रसाद ग्रहणम् ---
+vidhi:
+Receiving the water from the Lord's feet and the food offered to him.
+deva:
+तीर्थम् –
+अकालमृत्युहरणं सर्वव्याधिनिवारणम् ।
+समस्तपापक्षयकरं श्रीश्रीनिवास पादोदकं पावनं शुभम् ॥
+श्रीवेङ्कटेश्वर स्वामि प्रसादं शिरसा गृह्णामि ॥
+iast:
+tīrtham –
+akālamṛtyuharaṇaṁ sarvavyādhinivāraṇam |
+samastapāpakṣayakaraṁ śrīśrīnivāsa pādodakaṁ pāvanaṁ śubham ||
+śrīveṅkaṭeśvara svāmi prasādaṁ śirasā gṛhṇāmi ||
+en: Receiving the water and the prasāda — It removes untimely death and wards off every disease. It destroys all sin. The water from the feet of Śrī Śrīnivāsa is purifying and auspicious. I receive the prasāda of Śrī Veṅkaṭeśvara Svāmī upon my head.
+tel: తీర్థప్రసాద గ్రహణము — అకాలమృత్యువును హరించునదియు, సర్వ వ్యాధులను నివారించునదియు, సమస్త పాపములను క్షయింపజేయునదియు అగు శ్రీ శ్రీనివాసుని పాదోదకము పావనమైనది, శుభమైనది. శ్రీ వేంకటేశ్వర స్వామి ప్రసాదమును శిరస్సుతో గ్రహించుచున్నాను.
+hi: तीर्थप्रसाद ग्रहण — अकालमृत्यु को हरने वाला, सब व्याधियों का निवारण करने वाला और समस्त पापों का क्षय करने वाला श्री श्रीनिवास का पादोदक पावन और शुभ है। श्री वेङ्कटेश्वर स्वामी का प्रसाद सिर से ग्रहण करता हूँ।
+
+--- unit 34 | section: उद्वासनम् ---
+vidhi:
+The leave-taking. The eighteenth ṛc of the Puruṣa Sūkta is recited, the Lord is sent back to his own place, and the rite closes with peace.
+deva:
+उद्वासनम् –
+य॒ज्ञेन॑ य॒ज्ञम॑यजन्त दे॒वाः ।
+तानि॒ धर्मा॑णि प्रथ॒मान्या॑सन् ।
+ते ह॒ नाकं॑ महि॒मान॑ः सचन्ते ।
+यत्र॒ पूर्वे॑ सा॒ध्याः सन्ति॑ दे॒वाः ॥
+ओं श्रीपद्मावती समेत श्रीवेङ्कटेश्वर स्वामिने नमः यथास्थानं उद्वासयामि ॥
+ओं शान्तिः शान्तिः शान्तिः ॥
+iast:
+udvāsanam –
+yajñena yajñamayajanta devāḥ |
+tāni dharmāṇi prathamānyāsan |
+te ha nākaṁ mahimānaḥ sacante |
+yatra pūrve sādhyāḥ santi devāḥ ||
+oṁ śrīpadmāvatī sameta śrīveṅkaṭeśvara svāmine namaḥ yathāsthānaṁ udvāsayāmi ||
+oṁ śāntiḥ śāntiḥ śāntiḥ ||
+en: Leave-taking — With the sacrifice the gods worshipped the sacrifice. These were the first ordinances. Those great ones reach the heaven where the ancient Sādhya gods dwell. Oṁ, salutation to Śrī Veṅkaṭeśvara Svāmī with Śrī Padmāvatī. I send him back to his own place. Oṁ, peace, peace, peace.
+tel: ఉద్వాసనము — దేవతలు యజ్ఞముచేతనే యజ్ఞమును ఆరాధించిరి. అవియే మొదటి ధర్మములు. ఆ మహిమ కలవారు, పూర్వపు సాధ్య దేవతలు ఉండు స్వర్గమును చేరుదురు. ఓం శ్రీ పద్మావతీ సమేత శ్రీ వేంకటేశ్వర స్వామికి నమస్కారము. యథాస్థానమునకు ఉద్వాసన చేయుచున్నాను. ఓం శాంతిః శాంతిః శాంతిః.
+hi: उद्वासन — देवताओं ने यज्ञ से ही यज्ञ की आराधना की। वही प्रथम धर्म थे। वे महिमावान् उस स्वर्ग को प्राप्त करते हैं जहाँ पूर्वकाल के साध्य देवता रहते हैं। ओम् श्री पद्मावती समेत श्री वेङ्कटेश्वर स्वामी को नमस्कार। यथास्थान उद्वासन करता हूँ। ओम् शान्तिः शान्तिः शान्तिः।

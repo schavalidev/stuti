@@ -14,6 +14,11 @@ HEAD = [  # "recitation of hymns and sūktas" becomes "recitation of hymns" once
 ]
 INCIPIT = [('en', r'(?i)^\([^)]*puruṣa ?sūkta[^)]*\)\s*', ''), ('tel', r'^\([^)]*పురుషసూక్త[^)]*\)\s*', ''), ('hi', r'^\([^)]*पुरुषसूक्त[^)]*\)\s*', '')]
 POST_EDITS = {
+ '43_rama_shodashopachara_puja': {30: [
+   ('deva', r'पुरुषसूक्त विधान पूर्वक ', ''), ('iast', r'puruṣasūkta vidhāna pūrvaka ', ''),
+   ('en', r' and performed according to the rule of the Puruṣa Sūkta', ''),
+   ('tel', r'పురుషసూక్త విధానపూర్వకముగా చేసిన ', ''), ('hi', r'पुरुषसूक्त के विधानपूर्वक की गई ', '')]},
+ '02_vishvaksena_laghu_shodashopachara_puja': {3: [('DROP',)]},
  '14_vinayaka_chaviti_vrata': {
    9: [('en', r'Oṁ, to Keśava, svāhā; to Nārāyaṇa, svāhā; to Mādhava, svāhā', 'Oṁ, salutation to Keśava; to Nārāyaṇa; to Mādhava')],
    19: [('deva', r'इत्याद्येन ', ''), ('iast', r'ityādyena ', ''),

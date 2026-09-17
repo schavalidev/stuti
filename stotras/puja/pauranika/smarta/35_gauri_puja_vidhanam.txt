@@ -1,39 +1,26 @@
-Title: Śrī Gaurī Pūjā Vidhānam
-Devanāgarī: श्री गौरी पूजा विधानम्
-Telugu: శ్రీ గౌరీ పూజా విధానం
+Title: Śrī Gaurī Pūjā Vidhānam — Paurāṇika Form, without Vedic Mantras
+
+Devanāgarī: श्री गौरी पूजा विधानम् — पौराणिक पद्धतिः
+
+Telugu: శ్రీ గౌరీ పూజా విధానం — పౌరాణిక పద్ధతి
 
 Author: Anonymous (received smārta household rite). No compiler is named and none should be inferred.
 
 Type: vidhi (ritual manual) — not a stotra. The one-extra-field vidhi format: a `vidhi:` field carrying the ritual instruction, then deva / iast / en / tel / hi.
 
-Recension / paddhati: **Smārta, South Indian.** The Vaiṣṇava form of the opening is kept separately at `../vaishnava/01_purvanga_vidhanam.txt` and **the two must never be merged, harmonised or collated against each other.**
+Recension / paddhati: **Smārta, South Indian.** The Vaiṣṇava form of the opening is kept separately at `../../vaishnava/01_purvanga_vidhanam.txt` and **the two must never be merged, harmonised or collated against each other.**
 
-**A deity-pūjā of Mahāgaurī, not a vrata.** It has no kathā and no vrata saṅkalpa, and it is not the Maṅgaḷagaurī vrata of `26_sravana_mangalagauri_vrata_kalpam.txt`, whose Gaurī verses are different. Its own features: a meditation that names Gaurī with the Mothers (`गौरी पद्मा शची मेधा …`, ending with the seven Mothers), and the same names offered one by one with `ओं श्रीं` at the flowers, twenty-four with Mahāgaurī; the services a married woman wears (thread of good fortune, turmeric, saffron, vermilion, collyrium); an offering of water to the gracious goddess (`प्रसन्नार्घ्यम्`) with the verse `हिमवद्भूधरसुते`; and a leave-taking.
+Note: **This is the Vedic-removed form, for a reciter for whom the upanayana saṁskāra has not been performed. The Vedic form is `../../smarta/35_gauri_puja_vidhanam.txt`, kept unchanged for the initiated. Neither file supersedes the other, and neither is ever to be deleted in favour of the other** (user, 2026-09-17). Generated mechanically from that file on 2026-09-17; not one Sanskrit word was composed. Every Vedic mantra was removed by daṇḍa-segment, and its translation removed with it. Where a unit held nothing but a Vedic mantra it was dropped, because a Paurāṇika verse already stands beside it. The prāṇāhuti at the naivedya was removed without substitute, on the user's decision (2026-09-17). Changes by source unit: 2: Vedic lines removed (प्राणप्रतिष्ठ –); 28: Vedic lines removed (ओं भूर्भुवस्सुवः । तत्सवितुर्वरेण्यं भर्); 41: Vedic lines removed (उद्वासनम् –).
 
-What it does not have: **no pūrvāṅga of its own.** Use `03_purvanga_vidhanam.txt` first, and the Gaṇapati pūjā.
+**Hand edits after generation (2026-09-17), English prose only.** The generator strips from the Blurb and the `vidhi:` fields every sentence that names the Gāyatrī, the Śrī Sūkta, a household or a unit, and here that left sentences without a subject or describing acts no longer in the text. The Blurb and the `vidhi:` fields of units 2 and 28 were rewritten to describe this form. No Sanskrit and no translation of Sanskrit was touched.
 
-Source / recension: base text `https://stotranidhi.com/hi/sri-gowri-pooja-vidhanam-in-sanskrit/` (fetched 2026-09-17 with `../../bin/fetch_source.py`), a Devanāgarī page carrying accent marks on its Vedic lines. Every `deva:` line was lifted from the fetched page by script; none was typed.
+No service was left empty: the only Vedic material is the prāṇapratiṣṭhā mantra and the mantras of the food-offering, and every service has its own Paurāṇika verse. **Two false alarms of the generator were overridden and are recorded:** the Mother `स्वाहा`, named in the dhyāna verse `देवसेना स्वधा स्वाहा` (unit 4) and in the name `ओं श्रीं स्वाहायै नमः` (unit 23), is a goddess and not the Vedic offering-call, so those lines were kept.
 
-Independent collation: **the Vedic lines only have a check, and it is not independent.** The prāṇapratiṣṭhā mantra (unit 2) and the Gāyatrī, sprinkling and offerings to the five breaths (unit 28) are byte for byte the lines of this site's Durgā page as kept in `19_durga_shodashopachara_puja.txt` units 3 and 31, which `19` itself checked against the Śrī Sūkta and Taittirīya material. That shows the lines were lifted without loss; it is the same publisher.
+Source / recension: the Vedic form named above, for every retained word. Substitutes: the prāṇāyāma verse `पूरकं कुम्भकं चैव` and the ācamana with `नमः` in place of `स्वाहा` follow `../../vikalpa/01_veda_mantra_vikalpa.txt`, where the gap in attestation of the prāṇāyāma verse is stated. Offering with the nāma-mantra alone where the Vedic mantra is removed is the rule of Gītā Press, Gorakhpur, Nitya Karma Pūjā Prakāśa (code 592), section `सर्वसामान्य देवी-देव-पूजाका विधान`: `केवल नाममन्त्रसे … 'नैवेद्य' आदि चढ़ाना चाहिये`.
 
-Not collated: every paurāṇika verse. The service verses were searched for across the corpus. Four stand in `19_durga_shodashopachara_puja.txt` in the same words (garment, sandal, incense, vermilion) and `अक्षतान् धवलाकारान्` in `05_shiva_nitya_puja.txt`; `या देवी सर्वभूतेषु मातृरूपेण` is the Devī Māhātmya's; the rest have no second witness in the corpus and stand on this page alone.
+Accent: none. Every accented line of the Vedic form was removed.
 
-Defects in the base text, corrected with reasons, because stotranidhi is a convenience source and not a critical edition:
-
-1. **`नेत्रायोः` → `नेत्रयोः`** (unit 20). The locative dual of `नेत्र` has a short `a`.
-2. **`भर्त्रासहपत्रिव्रते` → `भर्त्रासहपतिव्रते`** (unit 8). A stray `र्`; `पतिव्रते`, faithful wife, is the only word the context allows.
-3. **`शृति` → `श्रुति`** (unit 33). `शृति` is not a word; the verse lists `श्रुति स्मृति पुराणादि`.
-4. **`दसोऽयमिति` → `दासोऽयमिति`** (unit 36). A dropped `ā`; the same verse reads `दासोऽयमिति` on this site's Durgā and Gāyatrī pages.
-
-Observed and deliberately **not** emended: `सावित्रै` for `सावित्र्यै` (unit 23); `चेन्द्राणि` (unit 4); `प्रणताः स्मृताम्` (unit 3), where the Devī Māhātmya reads `प्रणताः स्म ताम्`; `कर्पूरज्योतिसमुत्पन्नं` (unit 20), where `19` prints `कर्पूरज्योतिमुत्पन्नं`; `पश्यमां`, `यान्तुदेवगणाः`, `साधुवाऽसाधुवा` and `तवपूजनम्` run together (units 32, 36, 38, 41); `देही` for `देहि` (unit 38); `सायादि प्रातरं` (unit 38); `ध्यानावहनादि` (unit 40); and the masculine `स्थिरो भव वरदो भव सुप्रसन्नो भव` and `सायुधं सवाहनं` for a goddess (unit 2). `सम्युक्तं` is this publisher's spelling of `संयुक्तं`.
-
-**Layout.** The twenty-four names at the flowers are numbered, one to a line (unit 23). No word was changed.
-
-Accent: **present on the two Vedic passages only** — the prāṇapratiṣṭhā mantra `असुनीते` (Ṛgveda 10.59.6 with a Brāhmaṇa formula) and the Gāyatrī, sprinkling and offerings to the five breaths at the food-offering. 75 marks, the same number the fetched page carries. Udātta `॑` (U+0951), anudātta `॒` (U+0952), dīrgha svarita `᳚` (U+1CDA). Every verse of the rite itself is paurāṇika and unaccented, which is normal and not a defect. **No accent was inferred, derived or reconstructed.**
-
-**A defect of the source's Veda pages, corrected throughout.** stotranidhi writes final visarga as the ASCII colon `:`. Every such colon was mapped to `ः` (U+0903) before the `iast:` fields were generated by `../../bin/dev2iast.py`.
-
-Unit count: 41 units. Not a verse count in the stotra sense — the work is a prose order of service punctuated by mantras, and the numbering is this corpus's own.
+Unit count: 41 units.
 
 Sections:
 पुनः सङ्कल्पः — The second resolution (unit 1)
@@ -46,7 +33,7 @@ Sections:
 सर्वोपचाराः — The royal services (unit 39)
 समर्पणम् — The closing dedication and leave-taking (units 40–41)
 
-Blurb: This is the worship of Śrī Mahāgaurī in sixteen services. It has no opening portion of its own. The worshipper first performs the opening portion and the worship of Gaṇapati, and then makes the resolution again, for the fulfilment of the wishes of the mind. The life-breath is placed in the image, and Gaurī is meditated upon together with the Mothers. Among the services are those a married woman wears: the thread of good fortune, turmeric, saffron, vermilion and collyrium. At the flowers, Gaurī and the Mothers are worshipped by twenty-four names. The rite closes with the mantra-flower, circumambulation, salutation, the asking of pardon, an offering of water to the gracious goddess, prayer, the royal services, and leave-taking.
+Blurb: The Vedic mantras are recited only by one for whom the upanayana saṁskāra has been performed. This form of the rite leaves them out, and where the rite needs a verse in their place, the Paurāṇika verse is given. The worship so performed is complete. The form with the Vedic mantras is kept separately, for those who have had the upanayana. This is the worship of Śrī Mahāgaurī in sixteen services. It has no opening portion of its own. The worshipper first performs the opening portion and the worship of Gaṇapati, and then makes the resolution again, for the fulfilment of the wishes of the mind. Gaurī is invoked into the image with her household, and meditated upon together with the Mothers. Among the services are those a married woman wears: the thread of good fortune, turmeric, saffron, vermilion and collyrium. At the flowers, Gaurī and the Mothers are worshipped by twenty-four names. The rite closes with the mantra-flower, circumambulation, salutation, the asking of pardon, an offering of water to the gracious goddess, prayer, the royal services, and leave-taking.
 
 --- unit 1 | section: पुनः सङ्कल्पः ---
 vidhi:
@@ -63,30 +50,18 @@ hi: पुनः सङ्कल्प — पूर्वोक्त गुण
 
 --- unit 2 | section: प्राणप्रतिष्ठा ---
 vidhi:
-The placing of the life-breath in the image. Then Mahāgaurī is invoked with her limbs, her weapons, her mount, her power, her husband, her children and her household.
+Mahāgaurī is invoked into the image with her limbs, her weapons, her mount, her power, her husband, her children and her household.
 deva:
 प्राणप्रतिष्ठ –
-ओं असु॑नीते॒ पुन॑र॒स्मासु॒ चक्षु॒ः
-पुन॑ः प्रा॒णमि॒ह नो᳚ धेहि॒ भोग᳚म् ।
-ज्योक्प॑श्येम॒ सूर्य॑मु॒च्चर᳚न्त॒
-मनु॑मते मृ॒डया᳚ नः स्व॒स्ति ॥
-अ॒मृतं॒ वै प्रा॒णा अ॒मृत॒माप॑ः
-प्रा॒णाने॒व य॑थास्था॒नमुप॑ह्वयते ॥
 श्रीमहागौरीं साङ्गां सायुधं सवाहनं सशक्ति पतिपुत्र परिवार समेतं श्रीमहागौरी देवतां आवाहयामि स्थापयामि पूजयामि ।
 स्थिरो भव वरदो भव सुप्रसन्नो भव स्थिरासनं कुरु ।
 iast:
 prāṇapratiṣṭha –
-oṁ asunīte punarasmāsu cakṣuḥ
-punaḥ prāṇamiha no dhehi bhogam |
-jyokpaśyema sūryamuccaranta
-manumate mṛḍayā naḥ svasti ||
-amṛtaṁ vai prāṇā amṛtamāpaḥ
-prāṇāneva yathāsthānamupahvayate ||
 śrīmahāgaurīṁ sāṅgāṁ sāyudhaṁ savāhanaṁ saśakti patiputra parivāra sametaṁ śrīmahāgaurī devatāṁ āvāhayāmi sthāpayāmi pūjayāmi |
 sthiro bhava varado bhava suprasanno bhava sthirāsanaṁ kuru |
-en: Placing of the life-breath — O Asunīti, give us back our sight, give us back our breath here, and give us enjoyment. Long may we see the sun rising. O Anumati, be gracious to us for our welfare. The breaths are nectar, the waters are nectar. He calls the breaths to their own places. Śrī Mahāgaurī, with her limbs, with her weapons, with her mount, with her power, together with her husband, her children and her household — the deity Śrī Mahāgaurī I invoke, I establish, I worship. Be steady, be the giver of boons, be gracious, take a firm seat.
-tel: ప్రాణప్రతిష్ఠ — ఓ అసునీతీ, మాకు మరల చూపును ఇమ్ము, ఇక్కడ మరల ప్రాణమును ఇమ్ము, భోగమును ఇమ్ము. ఉదయించుచున్న సూర్యుని మేము చిరకాలము చూచెదము గాక. ఓ అనుమతీ, మా క్షేమము కొఱకు మమ్ము అనుగ్రహింపుము. ప్రాణములు అమృతము, జలములు అమృతము. ప్రాణములను వాటి స్థానములకు ఆహ్వానించుచున్నాడు. అంగములతో, ఆయుధములతో, వాహనముతో, శక్తితో, పతి పుత్ర పరివారముతో కూడిన శ్రీ మహాగౌరీ దేవతను ఆవాహన చేయుచున్నాను, స్థాపించుచున్నాను, పూజించుచున్నాను. స్థిరముగా ఉండుము, వరములను ఇమ్ము, సుప్రసన్నవు కమ్ము, స్థిరమైన ఆసనమును స్వీకరింపుము.
-hi: प्राणप्रतिष्ठा — हे असुनीते, हमें पुनः दृष्टि दीजिए, यहाँ पुनः प्राण दीजिए, भोग दीजिए। उदय होते हुए सूर्य को हम चिरकाल तक देखें। हे अनुमते, हमारे कल्याण के लिए हम पर प्रसन्न होइए। प्राण अमृत हैं, जल अमृत है। वह प्राणों को उनके स्थानों पर बुलाता है। अङ्गों सहित, आयुधों सहित, वाहन सहित, शक्ति सहित, पति, पुत्र और परिवार सहित श्री महागौरी देवता का मैं आवाहन करता हूँ, स्थापना करता हूँ, पूजा करता हूँ। स्थिर होइए, वर देने वाली होइए, सुप्रसन्न होइए, स्थिर आसन ग्रहण कीजिए।
+en: Placing of the life-breath — Śrī Mahāgaurī, with her limbs, with her weapons, with her mount, with her power, together with her husband, her children and her household — the deity Śrī Mahāgaurī I invoke, I establish, I worship. Be steady, be the giver of boons, be gracious, take a firm seat.
+tel: ప్రాణప్రతిష్ఠ — అంగములతో, ఆయుధములతో, వాహనముతో, శక్తితో, పతి పుత్ర పరివారముతో కూడిన శ్రీ మహాగౌరీ దేవతను ఆవాహన చేయుచున్నాను, స్థాపించుచున్నాను, పూజించుచున్నాను. స్థిరముగా ఉండుము, వరములను ఇమ్ము, సుప్రసన్నవు కమ్ము, స్థిరమైన ఆసనమును స్వీకరింపుము.
+hi: प्राणप्रतिष्ठा — अङ्गों सहित, आयुधों सहित, वाहन सहित, शक्ति सहित, पति, पुत्र और परिवार सहित श्री महागौरी देवता का मैं आवाहन करता हूँ, स्थापना करता हूँ, पूजा करता हूँ। स्थिर होइए, वर देने वाली होइए, सुप्रसन्न होइए, स्थिर आसन ग्रहण कीजिए।
 
 --- unit 3 | section: ध्यानम् ---
 vidhi:
@@ -109,7 +84,7 @@ hi: ध्यान — ओङ्कार रूपी पिंजरे क�
 
 --- unit 4 | section: ध्यानम् ---
 vidhi:
-The mothers who are worshipped with Gaurī, named in one verse. The same names are offered one by one at the flowers (unit 23).
+The mothers who are worshipped with Gaurī, named in one verse.
 deva:
 गौरी पद्मा शची मेधा सावित्री विजया जया ।
 देवसेना स्वधा स्वाहा मातरो लोकमातरः ।
@@ -436,7 +411,7 @@ hi: पुष्प — हे अम्बिके, माला आदि स
 
 --- unit 23 | section: षोडशोपचार पूजा ---
 vidhi:
-The worship with twenty-four names, the mothers named in the meditation at unit 4, with the seed-syllable श्रीं. A flower is offered at each name.
+A flower is offered at each name.
 deva:
 1. ओं श्रीं गौर्यै नमः ।
 2. ओं श्रीं पद्मायै नमः ।
@@ -561,36 +536,20 @@ hi: नैवेद्य — छह स्वादों से युक्�
 
 --- unit 28 | section: षोडशोपचार पूजा ---
 vidhi:
-The food is sprinkled and offered with the Gāyatrī and the offerings to the five breaths, with water given in between.
+Water is given between the mouthfuls, and the hands and feet are washed.
 deva:
-ओं भूर्भुव॒स्सुव॑ः । तत्स॑वि॒तुर्वरे᳚ण्यं॒ भर्गो॑ दे॒वस्य॑ धीमहि ।
-धियो॒ यो न॑ः प्रचो॒दया᳚त् ॥
-सत्यं त्वा ऋतेन परिषिञ्चामि ।
-(सायङ्काले – ऋतं त्वा सत्येन परिषिञ्चामि)
-अमृतमस्तु । अ॒मृ॒तो॒प॒स्तर॑णमसि ।
-ओं प्रा॒णाय॒ स्वाहा᳚ । ओं अ॒पा॒नाय॒ स्वाहा᳚ ।
-ओं व्या॒नाय॒ स्वाहा᳚ । ओं उ॒दा॒नाय॒ स्वाहा᳚ ।
-ओं स॒मा॒नाय॒ स्वाहा᳚ ।
 मध्ये मध्ये पानीयं समर्पयामि ।
-अ॒मृ॒ता॒पि॒धा॒नम॑सि । उत्तरापोशनं समर्पयामि ।
+उत्तरापोशनं समर्पयामि ।
 हस्तौ प्रक्षालयामि । पादौ प्रक्षालयामि ।
 शुद्धाचमनीयं समर्पयामि ।
 iast:
-oṁ bhūrbhuvassuvaḥ | tatsaviturvareṇyaṁ bhargo devasya dhīmahi |
-dhiyo yo naḥ pracodayāt ||
-satyaṁ tvā ṛtena pariṣiñcāmi |
-(sāyaṅkāle – ṛtaṁ tvā satyena pariṣiñcāmi)
-amṛtamastu | amṛtopastaraṇamasi |
-oṁ prāṇāya svāhā | oṁ apānāya svāhā |
-oṁ vyānāya svāhā | oṁ udānāya svāhā |
-oṁ samānāya svāhā |
 madhye madhye pānīyaṁ samarpayāmi |
-amṛtāpidhānamasi | uttarāpośanaṁ samarpayāmi |
+uttarāpośanaṁ samarpayāmi |
 hastau prakṣālayāmi | pādau prakṣālayāmi |
 śuddhācamanīyaṁ samarpayāmi |
-en: Oṁ, earth, air and heaven. We meditate upon the excellent light of the god Savitṛ. May he impel our thoughts. With truth I sprinkle you about. (In the evening: with right order I sprinkle you about.) Let it be nectar. You are the spread beneath the nectar. Oṁ, to the out-breath, svāhā. Oṁ, to the in-breath, svāhā. Oṁ, to the diffused breath, svāhā. Oṁ, to the up-breath, svāhā. Oṁ, to the even breath, svāhā. Between the mouthfuls I offer water. You are the covering of the nectar. I offer the water taken after eating. I wash the hands. I wash the feet. I offer pure water for sipping.
-tel: ఓం భూర్భువస్సువః. సవితృదేవుని శ్రేష్ఠమైన తేజస్సును ధ్యానించుచున్నాము. ఆయన మా బుద్ధులను ప్రేరేపించుగాక. సత్యముతో నిన్ను చుట్టూ ప్రోక్షించుచున్నాను. (సాయంకాలమునందు: ఋతముతో నిన్ను చుట్టూ ప్రోక్షించుచున్నాను.) అమృతమగుగాక. నీవు అమృతమునకు ఉపస్తరణమువు. ఓం ప్రాణమునకు స్వాహా. ఓం అపానమునకు స్వాహా. ఓం వ్యానమునకు స్వాహా. ఓం ఉదానమునకు స్వాహా. ఓం సమానమునకు స్వాహా. మధ్య మధ్య పానీయమును సమర్పించుచున్నాను. నీవు అమృతమునకు అపిధానమువు. ఉత్తరాపోశనమును సమర్పించుచున్నాను. హస్తములను కడుగుచున్నాను. పాదములను కడుగుచున్నాను. శుద్ధ ఆచమనీయమును సమర్పించుచున్నాను.
-hi: ओम् भूर्भुवः स्वः। हम सवितृ देव के श्रेष्ठ तेज का ध्यान करते हैं। वे हमारी बुद्धियों को प्रेरित करें। सत्य से मैं तुम्हें परिसिञ्चित करता हूँ। (सायंकाल में: ऋत से मैं तुम्हें परिसिञ्चित करता हूँ।) अमृत हो। तुम अमृत का उपस्तरण हो। ओम् प्राण को स्वाहा। ओम् अपान को स्वाहा। ओम् व्यान को स्वाहा। ओम् उदान को स्वाहा। ओम् समान को स्वाहा। बीच-बीच में पानीय समर्पित करता हूँ। तुम अमृत का अपिधान हो। उत्तरापोशन समर्पित करता हूँ। हाथ धोता हूँ। चरण धोता हूँ। शुद्ध आचमनीय समर्पित करता हूँ।
+en: Between the mouthfuls I offer water. I offer the water taken after eating. I wash the hands. I wash the feet. I offer pure water for sipping.
+tel: మధ్య మధ్య పానీయమును సమర్పించుచున్నాను. ఉత్తరాపోశనమును సమర్పించుచున్నాను. హస్తములను కడుగుచున్నాను. పాదములను కడుగుచున్నాను. శుద్ధ ఆచమనీయమును సమర్పించుచున్నాను.
+hi: बीच-बीच में पानीय समर्पित करता हूँ। उत्तरापोशन समर्पित करता हूँ। हाथ धोता हूँ। चरण धोता हूँ। शुद्ध आचमनीय समर्पित करता हूँ।
 
 --- unit 29 | section: षोडशोपचार पूजा ---
 vidhi:
@@ -842,7 +801,6 @@ deva:
 श्रीमहागौरीं यथास्थानमुद्वासयामि ।
 शोभनार्थं पुनरागमनाय च ॥
 सर्वं श्रीमहागौरी देवता चरणारविन्दार्पणमस्तु ।
-ओं शान्तिः शान्तिः शान्तिः ॥
 iast:
 udvāsanam –
 yāntudevagaṇāḥ sarve pūjāmādāya māmakīm |
@@ -850,7 +808,6 @@ iṣṭakāmasamṛddhyarthaṁ punarāgamanāya ca ||
 śrīmahāgaurīṁ yathāsthānamudvāsayāmi |
 śobhanārthaṁ punarāgamanāya ca ||
 sarvaṁ śrīmahāgaurī devatā caraṇāravindārpaṇamastu |
-oṁ śāntiḥ śāntiḥ śāntiḥ ||
-en: Leave-taking — May all the hosts of the gods depart, taking my worship with them, for the fulfilment of what is desired and to come again. I return Śrī Mahāgaurī to her own place, for good and to come again. Let all be an offering at the lotus feet of the deity Śrī Mahāgaurī. Oṁ, peace, peace, peace.
-tel: ఉద్వాసనము — దేవగణములు అన్నియు నా పూజను తీసుకొని, కోరిన కోరికల సమృద్ధి కొఱకు, మరల వచ్చుట కొఱకు వెళ్ళుదురుగాక. శుభము కొఱకు, మరల వచ్చుట కొఱకు శ్రీ మహాగౌరిని యథాస్థానమునకు ఉద్వాసన చేయుచున్నాను. సర్వము శ్రీ మహాగౌరీ దేవత పాదపద్మములకు అర్పణమగుగాక. ఓం శాంతిః శాంతిః శాంతిః.
-hi: उद्वासन — सब देवगण मेरी पूजा लेकर, इच्छित कामनाओं की समृद्धि के लिए और फिर आने के लिए प्रस्थान करें। शुभ के लिए और फिर आने के लिए श्री महागौरी को उनके स्थान पर विदा करता हूँ। सब कुछ श्री महागौरी देवता के चरणकमलों में अर्पित हो। ओम् शान्तिः शान्तिः शान्तिः।
+en: Leave-taking — May all the hosts of the gods depart, taking my worship with them, for the fulfilment of what is desired and to come again. I return Śrī Mahāgaurī to her own place, for good and to come again. Let all be an offering at the lotus feet of the deity Śrī Mahāgaurī.
+tel: ఉద్వాసనము — దేవగణములు అన్నియు నా పూజను తీసుకొని, కోరిన కోరికల సమృద్ధి కొఱకు, మరల వచ్చుట కొఱకు వెళ్ళుదురుగాక. శుభము కొఱకు, మరల వచ్చుట కొఱకు శ్రీ మహాగౌరిని యథాస్థానమునకు ఉద్వాసన చేయుచున్నాను. సర్వము శ్రీ మహాగౌరీ దేవత పాదపద్మములకు అర్పణమగుగాక.
+hi: उद्वासन — सब देवगण मेरी पूजा लेकर, इच्छित कामनाओं की समृद्धि के लिए और फिर आने के लिए प्रस्थान करें। शुभ के लिए और फिर आने के लिए श्री महागौरी को उनके स्थान पर विदा करता हूँ। सब कुछ श्री महागौरी देवता के चरणकमलों में अर्पित हो।

@@ -1,1 +1,681 @@
-RESERVED 2026-09-12 — this file is being written by another Claude session from `https://stotranidhi.com/hi/naga-panchami-puja-vidhi-in-sanskrit/`. Do not write a file for this rite; it will be filled in shortly.
+Title: Nāga Pañcamī Pūjā Vidhi
+Devanāgarī: नाग पञ्चमी पूजा पद्धतिः
+Telugu: నాగ పంచమీ పూజా పద్ధతిః
+
+Author: Anonymous (received smārta household rite). No compiler is named and none should be inferred.
+
+Type: vidhi (ritual manual) — not a stotra. Uses the one-extra-field vidhi format documented in `../../vidhi/madhyandina/01_sandhyopasana_vidhi.txt`: a `vidhi:` field carrying the ritual instruction, then deva / iast / en / tel / hi.
+
+Recension / paddhati: **Smārta, South Indian.** The Vaiṣṇava form of the opening is kept separately at `../vaishnava/01_purvanga_vidhanam.txt` and **the two must never be merged, harmonised or collated against each other.** The rite is kept on the fifth day of the bright fortnight of Śrāvaṇa. It is listed as a vrata in `../vrata/README.md`, which records that it stands in this folder and not in `../vrata/`.
+
+**No other file in this corpus is a Nāga Pañcamī rite.** The Śrāvaṇa Maṅgaḷagaurī files (`26_sravana_mangalagauri_vrata_kalpam.txt`, `51_sravana_mangalagauri_vrata_challa.txt`, `../vrata/03_mangala_gauri_vrata_kalpam.txt`) belong to the same month but are a different observance.
+
+What this rite has: the thirteen serpent kings named in the meditation and **invoked one by one**, together with their wives, who receive their own offering of turmeric and kuṅkuma at the unbroken rice; madhuparka; ornaments; a **fourteen-name worship of the limbs**; the gift of gold; the royal services; a prayer asking for freedom from the fear of serpent poison; and a **verse for giving the vāyana**. It has **no pūrvāṅga of its own**: use `03_purvanga_vidhanam.txt` first, and then the Gaṇapati pūjā.
+
+Source / recension: base text `https://stotranidhi.com/hi/naga-panchami-puja-vidhi-in-sanskrit/` (fetched 2026-09-17, 167 lines), a **native Devanāgarī page**, so nothing here was transliterated by us. Every `deva:` line was taken from the fetched page by line number, not retyped. The page's last line, `इतर नागदेवता स्तोत्राणि पश्यतु ।`, is the site's link to its other serpent texts and not part of the rite; it is left out.
+
+Independent collation: **none was available, and this file rests on one editorial lineage.** Gītā Press *Nitya Karma Pūjā Prakāśa* (code 592, djvu text layer searched 2026-09-17) has no Nāga Pañcamī pūjā: `नाग` occurs in it only inside other words and in the tarpaṇa `नागास्तृप्यन्ताम्`. Gītā Press *Vrat Paricay* was not searched for this file. The page's upacāra verses were found nowhere else in this corpus. Two verses are common household verses and stand elsewhere: the circumambulation verse `यानि कानि च पापानि` and the dedication verse `यस्य स्मृत्या च नामोक्त्या`.
+
+Defects in the base text, corrected with reasons, because stotranidhi is a convenience source and not a critical edition:
+
+1. **`विशिष्टायं` → `विशिष्टायां`** (unit 2). The feminine locative agreeing with `शुभ तिथौ` needs the long vowel; the same site's other pūjā pages print `विशिष्टायां` in this formula.
+2. **`निवृति` → `निवृत्ति`** (unit 2). `निवृति` is not a Sanskrit word; the noun is `निवृत्ति`, 'removal'.
+3. **`वासुकीं` → `वासुकिं`** (unit 4). The accusative of `वासुकि` has a short `i`, and the page itself prints `वासुकिं` in the meditation (unit 3).
+
+Observed and deliberately **not** emended:
+
+- **`कालीयं`** in the meditation (unit 3) against **`कालियाय`, `कालियं`** in the invocation (unit 4) and the worship of the limbs (unit 18). Both spellings of the name are in use; the page is left as printed.
+- **`नागराजाः सुप्रीतो सुप्रसन्नो वरदो भवतु`** in the dedication (unit 32): a plural subject with singular words after it. The same formula was left as printed in `15_mahaganapati_shodashopachara_puja.txt` and `21_subrahmanya_shodashopachara_puja.txt`.
+- **`शिरं पूजयामि`** (unit 18) for `शिरः पूजयामि`. A common household form; there is no second witness.
+- **`लाजन्`** in the bracketed instruction (unit 22), for `लाजान्`. It stands inside an instruction, not a mantra, and is left.
+- **`दक्षिणम्`** as the heading of the gift (unit 25), and **`प्रदक्षिण`** as the heading of the circumambulation (unit 29). Headings, left as printed.
+- The ornament verse (unit 14) closes with a single daṇḍa where a double daṇḍa is expected. Left.
+- **`सम्युतम्`, `सम्युक्तं`** for `संयुतम्`, `संयुक्तं`. This publisher writes anusvāra before a semivowel as `म्` throughout. An orthographic habit of the edition, not a defect.
+
+Accent: **none. This rite contains no Vedic mantra.** Every verse is paurāṇika, and the page prints no svara mark; 0 accent characters were counted in the units. Since there is no Vedic mantra, **no Paurāṇika twin was written** in `../pauranika/smarta/`: this file can be used as it stands by a reciter for whom the upanayana saṁskāra has not been performed. The closing `ओं शान्तिः शान्तिः शान्तिः` is the common closing words of peace, not a mantra of the Veda.
+
+**Never copy stotranidhi's IAST.** Every `iast:` field here was generated from the Devanāgarī by `../../bin/dev2iast.py`.
+
+Unit count: 33 units. Not a verse count in the stotra sense — the work is a prose order of service punctuated by verses, and the numbering is this corpus's own.
+
+Sections:
+पूर्वनिर्देशाः — Directions before beginning (unit 1)
+पुनः सङ्कल्पः — The second resolution (unit 2)
+ध्यानम् — Meditation on the serpent kings (unit 3)
+षोडशोपचार पूजा — The sixteen services (units 4–17, 20–27)
+अङ्गपूजा — The worship of the limbs, and the hundred and eight names (units 18–19)
+राजोपचाराः — The royal services (unit 28)
+नमस्कारः — Circumambulation and salutation (units 29–30)
+क्षमाप्रार्थना — Prayer, asking pardon, and the dedication (units 31–32)
+वायनदानम् — The giving of the vāyana (unit 33)
+
+Blurb: This is the worship of the serpent deities on Nāga Pañcamī, the fifth day of the bright fortnight of Śrāvaṇa. It is done for the family, so that there may be no fear of serpents at any time. It has no opening portion of its own: the worshipper first performs the pūrvāṅga and the Gaṇapati pūjā. The thirteen serpent kings are named in the meditation — Ananta, Vāsuki, Śeṣa, Padma, Kambala, Kārkoṭaka, Bhujaṅga, Aśvatara, Dhṛtarāṣṭra, Śaṅkhapāla, Kālīya, Takṣaka and Piṅgala — and are worshipped together with their wives. They are invoked one by one, and the sixteen services follow, each with its own verse. The wives of the serpents are given turmeric and kuṅkuma. Fourteen limbs are worshipped by name, from the feet to the head. The prayer asks pardon for any fault in the worship, and asks that there may never be fear from the poison of serpents. The rite closes with the verse said when the vāyana is given.
+
+--- unit 1 | section: पूर्वनिर्देशाः ---
+vidhi:
+Two directions, not texts. This rite has no opening portion of its own. Use `03_purvanga_vidhanam.txt` first, and then the Gaṇapati pūjā (`42_haridra_ganapati_puja.txt` or `04_ganapati_nitya_puja.txt`).
+deva:
+पूर्वाङ्गं पश्यतु ॥
+श्री महागणपति पूजा (हरिद्रा गणपति पूजा) पश्यतु ॥
+iast:
+pūrvāṅgaṁ paśyatu ||
+śrī mahāgaṇapati pūjā (haridrā gaṇapati pūjā) paśyatu ||
+en: See the opening portion. See the pūjā of Śrī Mahāgaṇapati, that is, the pūjā of the turmeric Gaṇapati.
+tel: పూర్వాంగమును చూడుము. శ్రీ మహాగణపతి పూజను (హరిద్రా గణపతి పూజను) చూడుము.
+hi: पूर्वाङ्ग देखिए। श्री महागणपति पूजा (हरिद्रा गणपति पूजा) देखिए।
+
+--- unit 2 | section: पुनः सङ्कल्पः ---
+vidhi:
+The second resolution, naming the purpose of the rite: freedom from the fear of serpents. The serpent kings are then called into the image of the serpent.
+deva:
+पुनः सङ्कल्पम् –
+पूर्वोक्त एवं गुण विशेषण विशिष्टायां शुभ तिथौ मम सकुटुम्बस्य सपरिवारस्य सर्वदा सर्पभय निवृत्तिद्वारा सर्वाभीष्टसिद्ध्यर्थं नागदेवताप्रीत्यर्थं नागराजस्य षोडशोपचारपूजां करिष्ये ।
+अस्मिन् नागप्रतिमे नागराजान् आवाहयामि स्थापयामि पूजयामि ।
+iast:
+punaḥ saṅkalpam –
+pūrvokta evaṁ guṇa viśeṣaṇa viśiṣṭāyāṁ śubha tithau mama sakuṭumbasya saparivārasya sarvadā sarpabhaya nivṛttidvārā sarvābhīṣṭasiddhyarthaṁ nāgadevatāprītyarthaṁ nāgarājasya ṣoḍaśopacārapūjāṁ kariṣye |
+asmin nāgapratime nāgarājān āvāhayāmi sthāpayāmi pūjayāmi |
+en: The second resolution — On this auspicious day, marked by the qualities already named: for myself, with my family and my household, for the fulfilment of every wish through the removal of the fear of serpents at all times, and to please the serpent deities, I shall perform the worship of the king of serpents with sixteen services. In this image of the serpent I invoke the serpent kings, I establish them, and I worship them.
+tel: పునః సంకల్పము — పూర్వము చెప్పబడిన గుణ విశేషణములతో కూడిన ఈ శుభ తిథియందు, కుటుంబముతోను పరివారముతోను కూడిన నాకు ఎల్లప్పుడును సర్పభయము తొలగుట ద్వారా సకల అభీష్టములు సిద్ధించుట కొఱకును, నాగదేవతల ప్రీతి కొఱకును నాగరాజునకు షోడశోపచార పూజను చేయుచున్నాను. ఈ నాగప్రతిమయందు నాగరాజులను ఆవాహనము చేయుచున్నాను, స్థాపించుచున్నాను, పూజించుచున్నాను.
+hi: पुनः सङ्कल्प — पूर्वोक्त गुण विशेषणों से युक्त इस शुभ तिथि में, कुटुम्ब और परिवार सहित मेरे लिए सर्वदा सर्पभय की निवृत्ति के द्वारा सब अभीष्टों की सिद्धि के लिए, और नागदेवताओं की प्रसन्नता के लिए, मैं नागराज की षोडशोपचार पूजा करूँगा। इस नागप्रतिमा में नागराजों का आवाहन करता हूँ, स्थापना करता हूँ और पूजा करता हूँ।
+
+--- unit 3 | section: ध्यानम् ---
+vidhi:
+The meditation. The first two verses name the thirteen serpent kings, who are worshipped together with their wives. The third verse is the meditation on the king of serpents.
+deva:
+ध्यानम् –
+अनन्तं वासुकिं शेषं पद्मकम्बलकौ तथा ।
+तथा कार्कोटकं नागं भुजङ्गाश्वतरौ तथा ॥
+धृतराष्ट्रं शङ्खपालं कालीयं तक्षकं तथा ।
+पिङ्गलं च महानागं सपत्नीकान्प्रपूजयेत् ॥
+ब्रह्माण्डाधारभूतं च भुवनान्तरवासिनम् ।
+फणयुक्तमहं ध्याये नागराजं हरिप्रियम् ॥
+ओं नागराजेभ्यो नमः ध्यायामि ।
+iast:
+dhyānam –
+anantaṁ vāsukiṁ śeṣaṁ padmakambalakau tathā |
+tathā kārkoṭakaṁ nāgaṁ bhujaṅgāśvatarau tathā ||
+dhṛtarāṣṭraṁ śaṅkhapālaṁ kālīyaṁ takṣakaṁ tathā |
+piṅgalaṁ ca mahānāgaṁ sapatnīkānprapūjayet ||
+brahmāṇḍādhārabhūtaṁ ca bhuvanāntaravāsinam |
+phaṇayuktamahaṁ dhyāye nāgarājaṁ haripriyam ||
+oṁ nāgarājebhyo namaḥ dhyāyāmi |
+en: Meditation — Ananta, Vāsuki, Śeṣa, Padma and Kambala; the serpent Kārkoṭaka, Bhujaṅga and Aśvatara; Dhṛtarāṣṭra, Śaṅkhapāla, Kālīya and Takṣaka; and the great serpent Piṅgala — one should worship them together with their wives. I meditate on the king of serpents, who bears hoods, who is dear to Hari, who is the support of the universe, and who dwells within the worlds. Oṁ, salutation to the serpent kings: I meditate on them.
+tel: ధ్యానము — అనంతుడు, వాసుకి, శేషుడు, పద్ముడు, కంబలుడు, కార్కోటక నాగము, భుజంగుడు, అశ్వతరుడు, ధృతరాష్ట్రుడు, శంఖపాలుడు, కాళీయుడు, తక్షకుడు, మహానాగమైన పింగళుడు — వీరిని భార్యలతో కూడ పూజించవలెను. బ్రహ్మాండమునకు ఆధారమైనవాడును, లోకముల లోపల నివసించువాడును, పడగలు కలవాడును, హరికి ప్రియుడును అగు నాగరాజును నేను ధ్యానించుచున్నాను. ఓం నాగరాజులకు నమస్కారము, ధ్యానించుచున్నాను.
+hi: ध्यान — अनन्त, वासुकि, शेष, पद्म और कम्बल; कार्कोटक नाग, भुजङ्ग और अश्वतर; धृतराष्ट्र, शङ्खपाल, कालीय और तक्षक; तथा महानाग पिङ्गल — इन सबकी पत्नियों सहित पूजा करनी चाहिए। ब्रह्माण्ड के आधार, भुवनों के भीतर निवास करने वाले, फणों से युक्त, हरि के प्रिय नागराज का मैं ध्यान करता हूँ। ॐ नागराजों को नमस्कार, ध्यान करता हूँ।
+
+--- unit 4 | section: षोडशोपचार पूजा ---
+vidhi:
+The invocation. After the verse, each of the thirteen serpent kings is invoked by name, and then their wives. The name is printed Kāliya here, where the meditation prints Kālīya.
+deva:
+आवाहनम् –
+आगच्छानन्त देवेश काल पन्नगनायक ।
+अनन्तशयनीयं त्वां भक्त्या ह्यावाहयाम्यहम् ॥
+ओं अनन्ताय नमः अनन्तं आवाहयामि ।
+ओं वासुकये नमः वासुकिं आवाहयामि ।
+ओं शेषाय नमः शेषं आवाहयामि ।
+ओं पद्माय नमः पद्मं आवाहयामि ।
+ओं कम्बलाय नमः कम्बलं आवाहयामि ।
+ओं कार्कोटकाय नमः कार्कोटकं आवाहयामि ।
+ओं भुजङ्गाय नमः भुजङ्गं आवाहयामि ।
+ओं अश्वतराय नमः अश्वतरं आवाहयामि ।
+ओं धृतराष्ट्राय नमः धृतराष्ट्रं आवाहयामि ।
+ओं शङ्खपालाय नमः शङ्खपालं आवाहयामि ।
+ओं कालियाय नमः कालियं आवाहयामि ।
+ओं तक्षकाय नमः तक्षकं आवाहयामि ।
+ओं पिङ्गलाय नमः पिङ्गलं आवाहयामि ।
+नागपत्नीभ्यो नमः नागपत्नीः आवाहयामि ॥
+ओं नागराजेभ्यो नमः आवाहयामि ।
+iast:
+āvāhanam –
+āgacchānanta deveśa kāla pannaganāyaka |
+anantaśayanīyaṁ tvāṁ bhaktyā hyāvāhayāmyaham ||
+oṁ anantāya namaḥ anantaṁ āvāhayāmi |
+oṁ vāsukaye namaḥ vāsukiṁ āvāhayāmi |
+oṁ śeṣāya namaḥ śeṣaṁ āvāhayāmi |
+oṁ padmāya namaḥ padmaṁ āvāhayāmi |
+oṁ kambalāya namaḥ kambalaṁ āvāhayāmi |
+oṁ kārkoṭakāya namaḥ kārkoṭakaṁ āvāhayāmi |
+oṁ bhujaṅgāya namaḥ bhujaṅgaṁ āvāhayāmi |
+oṁ aśvatarāya namaḥ aśvataraṁ āvāhayāmi |
+oṁ dhṛtarāṣṭrāya namaḥ dhṛtarāṣṭraṁ āvāhayāmi |
+oṁ śaṅkhapālāya namaḥ śaṅkhapālaṁ āvāhayāmi |
+oṁ kāliyāya namaḥ kāliyaṁ āvāhayāmi |
+oṁ takṣakāya namaḥ takṣakaṁ āvāhayāmi |
+oṁ piṅgalāya namaḥ piṅgalaṁ āvāhayāmi |
+nāgapatnībhyo namaḥ nāgapatnīḥ āvāhayāmi ||
+oṁ nāgarājebhyo namaḥ āvāhayāmi |
+en: Invocation — Come, O Ananta, lord of the gods, lord of the serpents. With devotion I invoke you, on whom the Lord takes his rest. Oṁ, salutation to Ananta: I invoke Ananta. Salutation to Vāsuki: I invoke Vāsuki. Salutation to Śeṣa: I invoke Śeṣa. Salutation to Padma: I invoke Padma. Salutation to Kambala: I invoke Kambala. Salutation to Kārkoṭaka: I invoke Kārkoṭaka. Salutation to Bhujaṅga: I invoke Bhujaṅga. Salutation to Aśvatara: I invoke Aśvatara. Salutation to Dhṛtarāṣṭra: I invoke Dhṛtarāṣṭra. Salutation to Śaṅkhapāla: I invoke Śaṅkhapāla. Salutation to Kāliya: I invoke Kāliya. Salutation to Takṣaka: I invoke Takṣaka. Salutation to Piṅgala: I invoke Piṅgala. Salutation to the wives of the serpents: I invoke the wives of the serpents. Oṁ, salutation to the serpent kings: I invoke them.
+tel: ఆవాహనము — ఓ అనంతా, దేవేశా, పన్నగనాయకా, రమ్ము. శ్రీహరి శయనించు నిన్ను భక్తితో ఆవాహనము చేయుచున్నాను. ఓం అనంతునికి నమస్కారము, అనంతుని ఆవాహనము చేయుచున్నాను. వాసుకికి నమస్కారము, వాసుకిని ఆవాహనము చేయుచున్నాను. శేషునికి నమస్కారము, శేషుని ఆవాహనము చేయుచున్నాను. పద్మునికి నమస్కారము, పద్ముని ఆవాహనము చేయుచున్నాను. కంబలునికి నమస్కారము, కంబలుని ఆవాహనము చేయుచున్నాను. కార్కోటకునికి నమస్కారము, కార్కోటకుని ఆవాహనము చేయుచున్నాను. భుజంగునికి నమస్కారము, భుజంగుని ఆవాహనము చేయుచున్నాను. అశ్వతరునికి నమస్కారము, అశ్వతరుని ఆవాహనము చేయుచున్నాను. ధృతరాష్ట్రునికి నమస్కారము, ధృతరాష్ట్రుని ఆవాహనము చేయుచున్నాను. శంఖపాలునికి నమస్కారము, శంఖపాలుని ఆవాహనము చేయుచున్నాను. కాళియునికి నమస్కారము, కాళియుని ఆవాహనము చేయుచున్నాను. తక్షకునికి నమస్కారము, తక్షకుని ఆవాహనము చేయుచున్నాను. పింగళునికి నమస్కారము, పింగళుని ఆవాహనము చేయుచున్నాను. నాగపత్నులకు నమస్కారము, నాగపత్నులను ఆవాహనము చేయుచున్నాను. ఓం నాగరాజులకు నమస్కారము, ఆవాహనము చేయుచున్నాను.
+hi: आवाहन — हे अनन्त, हे देवेश, हे पन्नगनायक, आइए। भगवान् जिन पर शयन करते हैं, उन आपका मैं भक्ति से आवाहन करता हूँ। ॐ अनन्त को नमस्कार, अनन्त का आवाहन करता हूँ। वासुकि को नमस्कार, वासुकि का आवाहन करता हूँ। शेष को नमस्कार, शेष का आवाहन करता हूँ। पद्म को नमस्कार, पद्म का आवाहन करता हूँ। कम्बल को नमस्कार, कम्बल का आवाहन करता हूँ। कार्कोटक को नमस्कार, कार्कोटक का आवाहन करता हूँ। भुजङ्ग को नमस्कार, भुजङ्ग का आवाहन करता हूँ। अश्वतर को नमस्कार, अश्वतर का आवाहन करता हूँ। धृतराष्ट्र को नमस्कार, धृतराष्ट्र का आवाहन करता हूँ। शङ्खपाल को नमस्कार, शङ्खपाल का आवाहन करता हूँ। कालिय को नमस्कार, कालिय का आवाहन करता हूँ। तक्षक को नमस्कार, तक्षक का आवाहन करता हूँ। पिङ्गल को नमस्कार, पिङ्गल का आवाहन करता हूँ। नागपत्नियों को नमस्कार, नागपत्नियों का आवाहन करता हूँ। ॐ नागराजों को नमस्कार, आवाहन करता हूँ।
+
+--- unit 5 | section: षोडशोपचार पूजा ---
+vidhi:
+The seat.
+deva:
+आसनम् –
+नवनागकुलाधीश शेषोद्धारक काश्यप ।
+नानारत्नसमायुक्तमासनं प्रतिगृह्यताम् ॥
+ओं नागराजेभ्यो नमः आसनं समर्पयामि ।
+iast:
+āsanam –
+navanāgakulādhīśa śeṣoddhāraka kāśyapa |
+nānāratnasamāyuktamāsanaṁ pratigṛhyatām ||
+oṁ nāgarājebhyo namaḥ āsanaṁ samarpayāmi |
+en: Seat — O lord of the nine serpent clans, O Śeṣa who upholds the earth, O son of Kaśyapa, accept this seat set with many kinds of gems. Oṁ, salutation to the serpent kings: I offer a seat.
+tel: ఆసనము — ఓ నవనాగ కులాధీశా, భూమిని ఉద్ధరించు శేషా, కాశ్యపా, అనేక రత్నములతో కూడిన ఈ ఆసనమును స్వీకరింపుము. ఓం నాగరాజులకు నమస్కారము, ఆసనమును సమర్పించుచున్నాను.
+hi: आसन — हे नौ नागकुलों के स्वामी, हे पृथ्वी का उद्धार करने वाले शेष, हे काश्यप, अनेक रत्नों से युक्त यह आसन ग्रहण कीजिए। ॐ नागराजों को नमस्कार, आसन समर्पित करता हूँ।
+
+--- unit 6 | section: षोडशोपचार पूजा ---
+vidhi:
+Water for the feet.
+deva:
+पाद्यम् –
+अनन्तप्रिय शेषेश जगदाधारविग्रह ।
+पाद्यं गृहाण मद्दत्तं काद्रवेय नमोऽस्तु ते ॥
+ओं नागराजेभ्यो नमः पाद्यं समर्पयामि ।
+iast:
+pādyam –
+anantapriya śeṣeśa jagadādhāravigraha |
+pādyaṁ gṛhāṇa maddattaṁ kādraveya namo'stu te ||
+oṁ nāgarājebhyo namaḥ pādyaṁ samarpayāmi |
+en: Water for the feet — O Śeṣa, dear to Ananta, whose form is the support of the world, accept the water for the feet which I give. O son of Kadrū, salutation to you. Oṁ, salutation to the serpent kings: I offer water for the feet.
+tel: పాద్యము — ఓ అనంతప్రియా, శేషేశా, జగత్తునకు ఆధారమైన రూపము కలవాడా, నేను ఇచ్చు పాద్యమును స్వీకరింపుము. ఓ కాద్రవేయా, నీకు నమస్కారము. ఓం నాగరాజులకు నమస్కారము, పాద్యమును సమర్పించుచున్నాను.
+hi: पाद्य — हे अनन्तप्रिय, हे शेषेश, जगत् के आधार रूप वाले, मेरे दिए हुए पाद्य को ग्रहण कीजिए। हे कद्रूपुत्र, आपको नमस्कार है। ॐ नागराजों को नमस्कार, पाद्य समर्पित करता हूँ।
+
+--- unit 7 | section: षोडशोपचार पूजा ---
+vidhi:
+Water for the hands.
+deva:
+अर्घ्यम् –
+कश्यपानन्दजनक मुनिवन्दित भोः प्रभो ।
+अर्घ्यं गृहाण सर्वज्ञ सादरं शङ्करप्रिय ॥
+ओं नागराजेभ्यो नमः अर्घ्यं समर्पयामि ।
+iast:
+arghyam –
+kaśyapānandajanaka munivandita bhoḥ prabho |
+arghyaṁ gṛhāṇa sarvajña sādaraṁ śaṅkarapriya ||
+oṁ nāgarājebhyo namaḥ arghyaṁ samarpayāmi |
+en: Water for the hands — O lord, who brought joy to Kaśyapa, whom the sages salute, who know all things, dear to Śaṅkara, accept this water for the hands, given with respect. Oṁ, salutation to the serpent kings: I offer water for the hands.
+tel: అర్ఘ్యము — కశ్యపునకు ఆనందము కలిగించినవాడా, మునులచే నమస్కరింపబడినవాడా, ప్రభూ, సర్వజ్ఞా, శంకరప్రియా, ఆదరముతో ఇచ్చు ఈ అర్ఘ్యమును స్వీకరింపుము. ఓం నాగరాజులకు నమస్కారము, అర్ఘ్యమును సమర్పించుచున్నాను.
+hi: अर्घ्य — हे कश्यप को आनन्द देने वाले, मुनियों से वन्दित प्रभु, हे सर्वज्ञ, हे शङ्करप्रिय, आदर सहित यह अर्घ्य ग्रहण कीजिए। ॐ नागराजों को नमस्कार, अर्घ्य समर्पित करता हूँ।
+
+--- unit 8 | section: षोडशोपचार पूजा ---
+vidhi:
+Water for sipping.
+deva:
+आचमनम् –
+सहस्रफणिरूपेण वसुधोद्धारक प्रभो ।
+गृहाणाचमनं देव पावनं च सुशीतलम् ॥
+ओं नागराजेभ्यो नमः आचमनं समर्पयामि ।
+iast:
+ācamanam –
+sahasraphaṇirūpeṇa vasudhoddhāraka prabho |
+gṛhāṇācamanaṁ deva pāvanaṁ ca suśītalam ||
+oṁ nāgarājebhyo namaḥ ācamanaṁ samarpayāmi |
+en: Water for sipping — O lord, who in the form of a thousand hoods upholds the earth, O god, accept this water for sipping, pure and very cool. Oṁ, salutation to the serpent kings: I offer water for sipping.
+tel: ఆచమనము — వేయి పడగల రూపముతో భూమిని ఉద్ధరించు ప్రభూ, దేవా, పవిత్రమైనదియు చల్లనిదియు అగు ఈ ఆచమనమును స్వీకరింపుము. ఓం నాగరాజులకు నమస్కారము, ఆచమనమును సమర్పించుచున్నాను.
+hi: आचमन — हे सहस्र फणों के रूप से पृथ्वी का उद्धार करने वाले प्रभु, हे देव, पवित्र और शीतल यह आचमन ग्रहण कीजिए। ॐ नागराजों को नमस्कार, आचमन समर्पित करता हूँ।
+
+--- unit 9 | section: षोडशोपचार पूजा ---
+vidhi:
+Madhuparka, the offering of curd, honey and ghee.
+deva:
+मधुपर्कम् –
+कुमाररूपिणे तुभ्यं दधिमध्वाज्यसम्युतम् ।
+मधुपर्कं प्रदास्यामि सर्पराज नमोऽस्तु ते ॥
+ओं नागराजेभ्यो नमः मधुपर्कं समर्पयामि ।
+iast:
+madhuparkam –
+kumārarūpiṇe tubhyaṁ dadhimadhvājyasamyutam |
+madhuparkaṁ pradāsyāmi sarparāja namo'stu te ||
+oṁ nāgarājebhyo namaḥ madhuparkaṁ samarpayāmi |
+en: Madhuparka — To you, whose form is that of a youth, I shall offer madhuparka, mixed with curd, honey and ghee. O king of serpents, salutation to you. Oṁ, salutation to the serpent kings: I offer madhuparka.
+tel: మధుపర్కము — కుమార రూపము కల నీకు పెరుగు, తేనె, నెయ్యి కలిపిన మధుపర్కమును ఇచ్చుచున్నాను. ఓ సర్పరాజా, నీకు నమస్కారము. ఓం నాగరాజులకు నమస్కారము, మధుపర్కమును సమర్పించుచున్నాను.
+hi: मधुपर्क — कुमार रूप वाले आपको दही, मधु और घी से युक्त मधुपर्क दूँगा। हे सर्पराज, आपको नमस्कार है। ॐ नागराजों को नमस्कार, मधुपर्क समर्पित करता हूँ।
+
+--- unit 10 | section: षोडशोपचार पूजा ---
+vidhi:
+The bath of the five nectars.
+deva:
+पञ्चामृतस्नानम् –
+पयोदधिघृतं चैव मधुशर्करयान्वितम् ।
+पञ्चामृतस्नानमिदं स्वीकुरुष्व दयानिधे ॥
+ओं नागराजेभ्यो नमः पञ्चामृतस्नानं समर्पयामि ।
+iast:
+pañcāmṛtasnānam –
+payodadhighṛtaṁ caiva madhuśarkarayānvitam |
+pañcāmṛtasnānamidaṁ svīkuruṣva dayānidhe ||
+oṁ nāgarājebhyo namaḥ pañcāmṛtasnānaṁ samarpayāmi |
+en: Bath of the five nectars — Milk, curd and ghee, with honey and sugar: accept this bath of the five nectars, O ocean of compassion. Oṁ, salutation to the serpent kings: I offer the bath of the five nectars.
+tel: పంచామృత స్నానము — పాలు, పెరుగు, నెయ్యి, తేనె, చక్కెరలతో కూడిన ఈ పంచామృత స్నానమును స్వీకరింపుము, ఓ దయానిధీ. ఓం నాగరాజులకు నమస్కారము, పంచామృత స్నానమును సమర్పించుచున్నాను.
+hi: पञ्चामृत स्नान — दूध, दही, घी, मधु और शर्करा से युक्त यह पञ्चामृत स्नान स्वीकार कीजिए, हे दयानिधि। ॐ नागराजों को नमस्कार, पञ्चामृत स्नान समर्पित करता हूँ।
+
+--- unit 11 | section: षोडशोपचार पूजा ---
+vidhi:
+The bath of pure water, and water for sipping after the bath.
+deva:
+शुद्धोदकस्नानम् –
+गङ्गादिपुण्यतीर्थैस्त्वामभिषिञ्चेयमादरात् ।
+बलभद्रावतारेश नागेश श्रीपतेस्सखे ॥
+ओं नागराजेभ्यो नमः स्नानं समर्पयामि ।
+स्नानानन्तरं आचमनीयं समर्पयामि ।
+iast:
+śuddhodakasnānam –
+gaṅgādipuṇyatīrthaistvāmabhiṣiñceyamādarāt |
+balabhadrāvatāreśa nāgeśa śrīpatessakhe ||
+oṁ nāgarājebhyo namaḥ snānaṁ samarpayāmi |
+snānānantaraṁ ācamanīyaṁ samarpayāmi |
+en: Bath of pure water — With respect I bathe you with the waters of the Gaṅgā and the other holy rivers, O lord who came as Balabhadra, lord of serpents, friend of the Lord of Śrī. Oṁ, salutation to the serpent kings: I offer the bath. After the bath, I offer water for sipping.
+tel: శుద్ధోదక స్నానము — బలభద్రునిగా అవతరించిన ప్రభూ, నాగేశా, శ్రీపతికి సఖుడా, గంగ మొదలగు పుణ్యతీర్థముల జలముతో నిన్ను ఆదరముగా అభిషేకించుచున్నాను. ఓం నాగరాజులకు నమస్కారము, స్నానమును సమర్పించుచున్నాను. స్నానము తరువాత ఆచమనీయమును సమర్పించుచున్నాను.
+hi: शुद्धोदक स्नान — हे बलभद्र रूप में अवतार लेने वाले प्रभु, हे नागेश, हे श्रीपति के सखा, गङ्गा आदि पुण्य तीर्थों के जल से मैं आदर सहित आपका अभिषेक करता हूँ। ॐ नागराजों को नमस्कार, स्नान समर्पित करता हूँ। स्नान के बाद आचमनीय समर्पित करता हूँ।
+
+--- unit 12 | section: षोडशोपचार पूजा ---
+vidhi:
+The garments.
+deva:
+वस्त्रम् –
+कौशेययुग्मं देवेश प्रीत्या तव मयार्पितम् ।
+पन्नगाधीश नागेश तार्क्ष्यशत्रो नमोऽस्तु ते ॥
+ओं नागराजेभ्यो नमः वस्त्रयुग्मं समर्पयामि ।
+iast:
+vastram –
+kauśeyayugmaṁ deveśa prītyā tava mayārpitam |
+pannagādhīśa nāgeśa tārkṣyaśatro namo'stu te ||
+oṁ nāgarājebhyo namaḥ vastrayugmaṁ samarpayāmi |
+en: Garments — O lord of the gods, a pair of silk garments is offered to you by me with love. O ruler of serpents, lord of serpents, enemy of Garuḍa, salutation to you. Oṁ, salutation to the serpent kings: I offer a pair of garments.
+tel: వస్త్రము — ఓ దేవేశా, పట్టు వస్త్రముల జంటను ప్రీతితో నీకు సమర్పించితిని. ఓ పన్నగాధీశా, నాగేశా, గరుడునికి శత్రువైనవాడా, నీకు నమస్కారము. ఓం నాగరాజులకు నమస్కారము, వస్త్రయుగ్మమును సమర్పించుచున్నాను.
+hi: वस्त्र — हे देवेश, रेशमी वस्त्रों का जोड़ा प्रेम से आपको अर्पित किया है। हे पन्नगाधीश, हे नागेश, हे गरुड़ के शत्रु, आपको नमस्कार है। ॐ नागराजों को नमस्कार, वस्त्रयुग्म समर्पित करता हूँ।
+
+--- unit 13 | section: षोडशोपचार पूजा ---
+vidhi:
+The sacred thread. The verse describes a golden thread worn as a necklace.
+deva:
+यज्ञोपवीतम् –
+सुवर्णनिर्मितं सूत्रं ग्रथितकण्ठहारकम् ।
+अनेकरत्नैः खचितं सर्पराज नमोऽस्तु ते ॥
+ओं नागराजेभ्यो नमः यज्ञोपवीतं समर्पयामि ।
+iast:
+yajñopavītam –
+suvarṇanirmitaṁ sūtraṁ grathitakaṇṭhahārakam |
+anekaratnaiḥ khacitaṁ sarparāja namo'stu te ||
+oṁ nāgarājebhyo namaḥ yajñopavītaṁ samarpayāmi |
+en: Sacred thread — A thread made of gold, strung as a necklace for the throat, set with many gems: O king of serpents, salutation to you. Oṁ, salutation to the serpent kings: I offer the sacred thread.
+tel: యజ్ఞోపవీతము — బంగారముతో చేయబడినదియు, కంఠహారముగా కూర్చబడినదియు, అనేక రత్నములు పొదిగినదియు అగు సూత్రము. ఓ సర్పరాజా, నీకు నమస్కారము. ఓం నాగరాజులకు నమస్కారము, యజ్ఞోపవీతమును సమర్పించుచున్నాను.
+hi: यज्ञोपवीत — सोने से बना, कण्ठहार के रूप में गूँथा हुआ, अनेक रत्नों से जड़ा सूत्र। हे सर्पराज, आपको नमस्कार है। ॐ नागराजों को नमस्कार, यज्ञोपवीत समर्पित करता हूँ।
+
+--- unit 14 | section: षोडशोपचार पूजा ---
+vidhi:
+The ornaments.
+deva:
+आभरणम् –
+अनेकरत्नान्वितहेमकुण्डले
+माणिक्यसङ्काशित कङ्कणद्वयम् ।
+हैमाङ्गुलीयं कृतरत्नमुद्रिकं
+हैमं किरीटं फणिराज तेऽर्पितम् ।
+ओं नागराजेभ्यो नमः आभरणानि समर्पयामि ।
+iast:
+ābharaṇam –
+anekaratnānvitahemakuṇḍale
+māṇikyasaṅkāśita kaṅkaṇadvayam |
+haimāṅgulīyaṁ kṛtaratnamudrikaṁ
+haimaṁ kirīṭaṁ phaṇirāja te'rpitam |
+oṁ nāgarājebhyo namaḥ ābharaṇāni samarpayāmi |
+en: Ornaments — Golden earrings set with many gems, a pair of bracelets bright as rubies, a golden ring bearing a seal of gems, and a golden crown: these are offered to you, O king of serpents. Oṁ, salutation to the serpent kings: I offer the ornaments.
+tel: ఆభరణములు — అనేక రత్నములతో కూడిన బంగారు కుండలములు, మాణిక్యముల వలె ప్రకాశించు రెండు కంకణములు, రత్నముద్ర కల బంగారు ఉంగరము, బంగారు కిరీటము — ఓ ఫణిరాజా, ఇవి నీకు సమర్పించబడినవి. ఓం నాగరాజులకు నమస్కారము, ఆభరణములను సమర్పించుచున్నాను.
+hi: आभरण — अनेक रत्नों से युक्त सोने के कुण्डल, माणिक्य के समान चमकते दो कङ्कण, रत्नमुद्रा वाली सोने की अँगूठी और सोने का किरीट — हे फणिराज, ये आपको अर्पित हैं। ॐ नागराजों को नमस्कार, आभरण समर्पित करता हूँ।
+
+--- unit 15 | section: षोडशोपचार पूजा ---
+vidhi:
+The sandal paste.
+deva:
+गन्धम् –
+चन्दनागरुकस्तूरीघनसारसमन्वितम् ।
+गन्धं गृहाण देवेश सर्वगन्धमनोहर ॥
+ओं नागराजेभ्यो नमः गन्धं समर्पयामि ।
+iast:
+gandham –
+candanāgarukastūrīghanasārasamanvitam |
+gandhaṁ gṛhāṇa deveśa sarvagandhamanohara ||
+oṁ nāgarājebhyo namaḥ gandhaṁ samarpayāmi |
+en: Fragrance — O lord of the gods, lovely with every fragrance, accept this sandal paste mixed with aguru, musk and camphor. Oṁ, salutation to the serpent kings: I offer the sandal paste.
+tel: గంధము — ఓ దేవేశా, సర్వ సుగంధములతో మనోహరుడా, అగరు, కస్తూరి, కర్పూరములతో కూడిన ఈ గంధమును స్వీకరింపుము. ఓం నాగరాజులకు నమస్కారము, గంధమును సమర్పించుచున్నాను.
+hi: गन्ध — हे देवेश, सब सुगन्धों से मनोहर, अगरु, कस्तूरी और कपूर से युक्त यह चन्दन ग्रहण कीजिए। ॐ नागराजों को नमस्कार, गन्ध समर्पित करता हूँ।
+
+--- unit 16 | section: षोडशोपचार पूजा ---
+vidhi:
+The unbroken rice. Turmeric, kuṅkuma and the other adornments are then offered to the wives of the serpents.
+deva:
+अक्षतान् –
+अक्षतांश्च सुरश्रेष्ठ कुङ्कुमाक्तान्सुशोभितान् ।
+मया निवेदितान्भक्त्या गृहाण पवनाशन ॥
+ओं नागराजेभ्यो नमः अक्षतान् समर्पयामि ।
+नागपत्नीभ्यो नमः हरिद्राकुङ्कुमादि दिव्यालङ्कारांश्च समर्पयामि ।
+iast:
+akṣatān –
+akṣatāṁśca suraśreṣṭha kuṅkumāktānsuśobhitān |
+mayā niveditānbhaktyā gṛhāṇa pavanāśana ||
+oṁ nāgarājebhyo namaḥ akṣatān samarpayāmi |
+nāgapatnībhyo namaḥ haridrākuṅkumādi divyālaṅkārāṁśca samarpayāmi |
+en: Unbroken rice — O best of the gods, you who live on the wind, accept the unbroken rice, coloured with kuṅkuma and beautiful, which I offer with devotion. Oṁ, salutation to the serpent kings: I offer unbroken rice. Salutation to the wives of the serpents: I offer turmeric, kuṅkuma and the other divine adornments.
+tel: అక్షతలు — ఓ సురశ్రేష్ఠా, వాయువును ఆహారముగా కలవాడా, కుంకుమతో కలిపిన అందమైన అక్షతలను భక్తితో సమర్పించుచున్నాను, స్వీకరింపుము. ఓం నాగరాజులకు నమస్కారము, అక్షతలను సమర్పించుచున్నాను. నాగపత్నులకు నమస్కారము, పసుపు కుంకుమ మొదలగు దివ్య అలంకారములను సమర్పించుచున్నాను.
+hi: अक्षत — हे सुरश्रेष्ठ, हे पवन का आहार करने वाले, कुङ्कुम से रँगे सुन्दर अक्षत मैं भक्ति से अर्पित करता हूँ, इन्हें ग्रहण कीजिए। ॐ नागराजों को नमस्कार, अक्षत समर्पित करता हूँ। नागपत्नियों को नमस्कार, हल्दी, कुङ्कुम आदि दिव्य अलङ्कार समर्पित करता हूँ।
+
+--- unit 17 | section: षोडशोपचार पूजा ---
+vidhi:
+The flowers.
+deva:
+पुष्पम् –
+माल्यादीनि सुगन्धीनि मालत्यादीनि वै प्रभो ।
+मया हृतानि पूजार्थं पुष्पाणि स्वीकुरुष्व भो ॥
+ओं नागराजेभ्यो नमः पुष्पाणि समर्पयामि ।
+iast:
+puṣpam –
+mālyādīni sugandhīni mālatyādīni vai prabho |
+mayā hṛtāni pūjārthaṁ puṣpāṇi svīkuruṣva bho ||
+oṁ nāgarājebhyo namaḥ puṣpāṇi samarpayāmi |
+en: Flowers — O lord, garlands and fragrant flowers such as mālatī have been brought by me for the worship. Accept them. Oṁ, salutation to the serpent kings: I offer flowers.
+tel: పుష్పములు — ఓ ప్రభూ, పూజ కొఱకు మాలలను, మాలతి మొదలగు సుగంధ పుష్పములను తెచ్చితిని. వాటిని స్వీకరింపుము. ఓం నాగరాజులకు నమస్కారము, పుష్పములను సమర్పించుచున్నాను.
+hi: पुष्प — हे प्रभु, पूजा के लिए माला और मालती आदि सुगन्धित पुष्प मैं लाया हूँ। इन्हें स्वीकार कीजिए। ॐ नागराजों को नमस्कार, पुष्प समर्पित करता हूँ।
+
+--- unit 18 | section: अङ्गपूजा ---
+vidhi:
+The worship of the limbs, in fourteen names, from the feet to the head.
+deva:
+अथाङ्गपूजा –
+ओं सहस्रपादाय नमः पादौ पूजयामि ।
+ओं गूढगुल्फाय नमः गुल्फौ पूजयामि ।
+ओं हेमजङ्घाय नमः जङ्घे पूजयामि ।
+ओं मन्दगतये नमः जानुनी पूजयामि ।
+ओं पीताम्बरधराय नमः कटिं पूजयामि ।
+ओं गम्भीरनाभये नमः नाभिं पूजयामि ।
+ओं पवनाशनाय नमः उदरं पूजयामि ।
+ओं उरगाय नमः हस्तौ पूजयामि ।
+ओं कालियाय नमः भुजौ पूजयामि ।
+ओं कम्बुकण्ठाय नमः कण्ठं पूजयामि ।
+ओं विषवक्त्राय नमः वक्त्रं पूजयामि ।
+ओं फणभूषणाय नमः ललाटं पूजयामि ।
+ओं लक्ष्मणाय नमः शिरं पूजयामि ।
+ओं नागराजाय नमः सर्वाङ्गं पूजयामि ।
+iast:
+athāṅgapūjā –
+oṁ sahasrapādāya namaḥ pādau pūjayāmi |
+oṁ gūḍhagulphāya namaḥ gulphau pūjayāmi |
+oṁ hemajaṅghāya namaḥ jaṅghe pūjayāmi |
+oṁ mandagataye namaḥ jānunī pūjayāmi |
+oṁ pītāmbaradharāya namaḥ kaṭiṁ pūjayāmi |
+oṁ gambhīranābhaye namaḥ nābhiṁ pūjayāmi |
+oṁ pavanāśanāya namaḥ udaraṁ pūjayāmi |
+oṁ uragāya namaḥ hastau pūjayāmi |
+oṁ kāliyāya namaḥ bhujau pūjayāmi |
+oṁ kambukaṇṭhāya namaḥ kaṇṭhaṁ pūjayāmi |
+oṁ viṣavaktrāya namaḥ vaktraṁ pūjayāmi |
+oṁ phaṇabhūṣaṇāya namaḥ lalāṭaṁ pūjayāmi |
+oṁ lakṣmaṇāya namaḥ śiraṁ pūjayāmi |
+oṁ nāgarājāya namaḥ sarvāṅgaṁ pūjayāmi |
+en: Then the worship of the limbs — Salutation to the thousand-footed one: I worship the feet. To him whose ankles are hidden: I worship the ankles. To him whose shanks are golden: I worship the shanks. To him who moves slowly: I worship the knees. To him who wears yellow garments: I worship the waist. To him whose navel is deep: I worship the navel. To him who lives on the wind: I worship the belly. To him who moves on his breast: I worship the hands. To Kāliya: I worship the arms. To him whose throat is like a conch: I worship the throat. To him whose mouth bears poison: I worship the mouth. To him who is adorned with hoods: I worship the forehead. To Lakṣmaṇa: I worship the head. To the king of serpents: I worship the whole body.
+tel: అథాంగపూజ — సహస్రపాదునికి నమస్కారము, పాదములను పూజించుచున్నాను. గూఢగుల్ఫునికి నమస్కారము, చీలమండలను పూజించుచున్నాను. హేమజంఘునికి నమస్కారము, పిక్కలను పూజించుచున్నాను. మందగతికి నమస్కారము, మోకాళ్ళను పూజించుచున్నాను. పీతాంబరధారికి నమస్కారము, నడుమును పూజించుచున్నాను. గంభీరనాభికి నమస్కారము, నాభిని పూజించుచున్నాను. పవనాశనునికి నమస్కారము, ఉదరమును పూజించుచున్నాను. ఉరగునికి నమస్కారము, చేతులను పూజించుచున్నాను. కాళియునికి నమస్కారము, భుజములను పూజించుచున్నాను. కంబుకంఠునికి నమస్కారము, కంఠమును పూజించుచున్నాను. విషవక్త్రునికి నమస్కారము, ముఖమును పూజించుచున్నాను. ఫణభూషణునికి నమస్కారము, లలాటమును పూజించుచున్నాను. లక్ష్మణునికి నమస్కారము, శిరస్సును పూజించుచున్నాను. నాగరాజునకు నమస్కారము, సర్వాంగములను పూజించుచున్నాను.
+hi: अथाङ्गपूजा — सहस्रपाद को नमस्कार, चरणों की पूजा करता हूँ। गूढगुल्फ को नमस्कार, टखनों की पूजा करता हूँ। हेमजङ्घ को नमस्कार, पिण्डलियों की पूजा करता हूँ। मन्दगति को नमस्कार, घुटनों की पूजा करता हूँ। पीताम्बरधारी को नमस्कार, कमर की पूजा करता हूँ। गम्भीरनाभि को नमस्कार, नाभि की पूजा करता हूँ। पवनाशन को नमस्कार, उदर की पूजा करता हूँ। उरग को नमस्कार, हाथों की पूजा करता हूँ। कालिय को नमस्कार, भुजाओं की पूजा करता हूँ। कम्बुकण्ठ को नमस्कार, कण्ठ की पूजा करता हूँ। विषवक्त्र को नमस्कार, मुख की पूजा करता हूँ। फणभूषण को नमस्कार, ललाट की पूजा करता हूँ। लक्ष्मण को नमस्कार, सिर की पूजा करता हूँ। नागराज को नमस्कार, सब अङ्गों की पूजा करता हूँ।
+
+--- unit 19 | section: अङ्गपूजा ---
+vidhi:
+A direction, not a text. The hundred and eight names of the serpent deities are recited here.
+deva:
+अष्टोत्तरशतनाम पूजा –
+श्री नागदेवता अष्टोत्तरशतनामावली पश्यतु ।
+iast:
+aṣṭottaraśatanāma pūjā –
+śrī nāgadevatā aṣṭottaraśatanāmāvalī paśyatu |
+en: The worship with the hundred and eight names — See the Śrī Nāgadevatā Aṣṭottaraśatanāmāvalī.
+tel: అష్టోత్తరశతనామ పూజ — శ్రీ నాగదేవతా అష్టోత్తరశతనామావళిని చూడుము.
+hi: अष्टोत्तरशतनाम पूजा — श्री नागदेवता अष्टोत्तरशतनामावली देखिए।
+
+--- unit 20 | section: षोडशोपचार पूजा ---
+vidhi:
+The incense.
+deva:
+धूपम् –
+दशाङ्गं गुग्गुलोपेतं सुगन्धं च मनोहरम् ।
+धूपं दास्यामि नागेश कृपया त्वं गृहाण तम् ॥
+ओं नागराजेभ्यो नमः धूपमाघ्रापयामि ।
+iast:
+dhūpam –
+daśāṅgaṁ guggulopetaṁ sugandhaṁ ca manoharam |
+dhūpaṁ dāsyāmi nāgeśa kṛpayā tvaṁ gṛhāṇa tam ||
+oṁ nāgarājebhyo namaḥ dhūpamāghrāpayāmi |
+en: Incense — I shall offer incense of ten ingredients with guggulu, fragrant and pleasing. O lord of serpents, in your kindness accept it. Oṁ, salutation to the serpent kings: I offer the incense.
+tel: ధూపము — గుగ్గిలముతో కూడిన, సుగంధము కలిగిన, మనోహరమైన దశాంగ ధూపమును ఇచ్చుచున్నాను. ఓ నాగేశా, దయతో దానిని స్వీకరింపుము. ఓం నాగరాజులకు నమస్కారము, ధూపమును ఆఘ్రాణింపజేయుచున్నాను.
+hi: धूप — गुग्गुल से युक्त, सुगन्धित और मनोहर दशाङ्ग धूप दूँगा। हे नागेश, कृपा करके उसे ग्रहण कीजिए। ॐ नागराजों को नमस्कार, धूप सुँघाता हूँ।
+
+--- unit 21 | section: षोडशोपचार पूजा ---
+vidhi:
+The lamp.
+deva:
+दीपम् –
+घृताक्तवर्तिसम्युक्तमन्धकारविनाशकम् ।
+दीपं दास्यामि ते देव गृहाण मुदितो भव ॥
+ओं नागराजेभ्यो नमः दीपं दर्शयामि ।
+iast:
+dīpam –
+ghṛtāktavartisamyuktamandhakāravināśakam |
+dīpaṁ dāsyāmi te deva gṛhāṇa mudito bhava ||
+oṁ nāgarājebhyo namaḥ dīpaṁ darśayāmi |
+en: Lamp — I shall give you a lamp with a wick soaked in ghee, which destroys darkness. O god, accept it and be pleased. Oṁ, salutation to the serpent kings: I show the lamp.
+tel: దీపము — నేతిలో తడిపిన వత్తితో కూడినదియు, చీకటిని నశింపజేయునదియు అగు దీపమును నీకు ఇచ్చుచున్నాను. ఓ దేవా, దానిని స్వీకరించి సంతోషించుము. ఓం నాగరాజులకు నమస్కారము, దీపమును చూపుచున్నాను.
+hi: दीप — घी में भीगी बत्ती से युक्त, अन्धकार का नाश करने वाला दीप मैं आपको दूँगा। हे देव, उसे ग्रहण करके प्रसन्न होइए। ॐ नागराजों को नमस्कार, दीप दिखाता हूँ।
+
+--- unit 22 | section: षोडशोपचार पूजा ---
+vidhi:
+The food offering. The line in square brackets is an instruction printed within the text: milk, curd, ghee, sugar, pāyasa and puffed rice are offered. Drinking water is then given, with its own verse, and water for washing and sipping.
+deva:
+नैवेद्यम् –
+नैवेद्यं षड्रसोपेतं दधिमध्वाज्यसम्युतम् ।
+नानाभक्ष्यफलोपेतं गृहाणाभीष्टदायक ॥
+[क्षीरदधिघृतशर्करापायसलाजन् समर्प्य]
+ओं नागराजेभ्यो नमः नैवेद्यं समर्पयामि ।
+घनसारसुगन्धेन मिश्रितं पुष्पवासितम् ।
+पानीयं गृह्यतां देव शीतलं सुमनोहरम् ॥
+मध्ये मध्ये पानीयं समर्पयामि ।
+हस्तप्रक्षालनं समर्पयामि ।
+मुखप्रक्षालनं समर्पयामि ।
+आचमनीयं समर्पयामि ।
+iast:
+naivedyam –
+naivedyaṁ ṣaḍrasopetaṁ dadhimadhvājyasamyutam |
+nānābhakṣyaphalopetaṁ gṛhāṇābhīṣṭadāyaka ||
+[kṣīradadhighṛtaśarkarāpāyasalājan samarpya]
+oṁ nāgarājebhyo namaḥ naivedyaṁ samarpayāmi |
+ghanasārasugandhena miśritaṁ puṣpavāsitam |
+pānīyaṁ gṛhyatāṁ deva śītalaṁ sumanoharam ||
+madhye madhye pānīyaṁ samarpayāmi |
+hastaprakṣālanaṁ samarpayāmi |
+mukhaprakṣālanaṁ samarpayāmi |
+ācamanīyaṁ samarpayāmi |
+en: Food offering — O giver of what is desired, accept this food of six tastes, with curd, honey and ghee, with many kinds of sweets and fruits. [Milk, curd, ghee, sugar, pāyasa and puffed rice are offered.] Oṁ, salutation to the serpent kings: I offer the food. O god, accept this drinking water, mixed with fragrant camphor, scented with flowers, cool and very pleasing. Between the mouthfuls I offer drinking water. I offer water to wash the hands. I offer water to wash the mouth. I offer water for sipping.
+tel: నైవేద్యము — ఓ అభీష్టదాయకా, ఆరు రుచులు కలిగినదియు, పెరుగు తేనె నెయ్యిలతో కూడినదియు, అనేక భక్ష్యములు ఫలములతో కూడినదియు అగు ఈ నైవేద్యమును స్వీకరింపుము. [పాలు, పెరుగు, నెయ్యి, చక్కెర, పాయసము, పేలాలు సమర్పించవలెను.] ఓం నాగరాజులకు నమస్కారము, నైవేద్యమును సమర్పించుచున్నాను. ఓ దేవా, సుగంధమైన కర్పూరము కలిపినదియు, పుష్పవాసన కలదియు, చల్లనిదియు, మనోహరమైనదియు అగు ఈ పానీయమును స్వీకరింపుము. మధ్య మధ్య పానీయమును సమర్పించుచున్నాను. చేతులు కడుగుకొనుటకు నీటిని సమర్పించుచున్నాను. ముఖము కడుగుకొనుటకు నీటిని సమర్పించుచున్నాను. ఆచమనీయమును సమర్పించుచున్నాను.
+hi: नैवेद्य — हे अभीष्टदायक, छह रसों से युक्त, दही, मधु और घी सहित, अनेक भक्ष्य और फलों से युक्त यह नैवेद्य ग्रहण कीजिए। [दूध, दही, घी, शर्करा, पायस और लाजा अर्पित करें।] ॐ नागराजों को नमस्कार, नैवेद्य समर्पित करता हूँ। हे देव, सुगन्धित कपूर से मिला, पुष्पों से सुवासित, शीतल और मनोहर यह पानीय ग्रहण कीजिए। बीच-बीच में पानीय समर्पित करता हूँ। हाथ धोने का जल समर्पित करता हूँ। मुख धोने का जल समर्पित करता हूँ। आचमनीय समर्पित करता हूँ।
+
+--- unit 23 | section: षोडशोपचार पूजा ---
+vidhi:
+The fruits.
+deva:
+फलम् –
+बीजपूराम्रपनसखर्जूरी कदलीफलम् ।
+नारिकेलफलं दिव्यं गृहाण सुरपूजित ॥
+ओं नागराजेभ्यो नमः नानाविधफलानि समर्पयामि ।
+iast:
+phalam –
+bījapūrāmrapanasakharjūrī kadalīphalam |
+nārikelaphalaṁ divyaṁ gṛhāṇa surapūjita ||
+oṁ nāgarājebhyo namaḥ nānāvidhaphalāni samarpayāmi |
+en: Fruits — Citron, mango, jackfruit, dates, banana and the excellent coconut: accept these fruits, O you who are worshipped by the gods. Oṁ, salutation to the serpent kings: I offer fruits of many kinds.
+tel: ఫలములు — మాదీఫలము, మామిడి, పనస, ఖర్జూరము, అరటి, దివ్యమైన కొబ్బరికాయ — ఓ సురపూజితా, ఈ ఫలములను స్వీకరింపుము. ఓం నాగరాజులకు నమస్కారము, నానావిధ ఫలములను సమర్పించుచున్నాను.
+hi: फल — बिजौरा, आम, कटहल, खजूर, केला और दिव्य नारियल — हे सुरपूजित, ये फल ग्रहण कीजिए। ॐ नागराजों को नमस्कार, अनेक प्रकार के फल समर्पित करता हूँ।
+
+--- unit 24 | section: षोडशोपचार पूजा ---
+vidhi:
+The betel.
+deva:
+ताम्बूलम् –
+पूगीफलसमायुक्तं नागवल्लीदलैर्युतम् ।
+कर्पूरचूर्णसम्युक्तं ताम्बूलं प्रतिगृह्यताम् ॥
+ओं नागराजेभ्यो नमः ताम्बूलं समर्पयामि ।
+iast:
+tāmbūlam –
+pūgīphalasamāyuktaṁ nāgavallīdalairyutam |
+karpūracūrṇasamyuktaṁ tāmbūlaṁ pratigṛhyatām ||
+oṁ nāgarājebhyo namaḥ tāmbūlaṁ samarpayāmi |
+en: Betel — Accept this betel, with areca nut, with betel leaves, and with powdered camphor. Oṁ, salutation to the serpent kings: I offer betel.
+tel: తాంబూలము — పోకచెక్కలతో కూడినదియు, తమలపాకులతో కూడినదియు, కర్పూరపు పొడితో కూడినదియు అగు తాంబూలమును స్వీకరింపుము. ఓం నాగరాజులకు నమస్కారము, తాంబూలమును సమర్పించుచున్నాను.
+hi: ताम्बूल — सुपारी, पान के पत्तों और कपूर के चूर्ण से युक्त यह ताम्बूल ग्रहण कीजिए। ॐ नागराजों को नमस्कार, ताम्बूल समर्पित करता हूँ।
+
+--- unit 25 | section: षोडशोपचार पूजा ---
+vidhi:
+The gift of gold.
+deva:
+दक्षिणम् –
+सुवर्णं सर्वधातूनां श्रेष्ठं देयं च तत्सदा ।
+भक्त्या ददामि वरद स्वर्णवृद्धिं च देहि मे ॥
+ओं नागराजेभ्यो नमः सुवर्णपुष्पदक्षिणां समर्पयामि ।
+iast:
+dakṣiṇam –
+suvarṇaṁ sarvadhātūnāṁ śreṣṭhaṁ deyaṁ ca tatsadā |
+bhaktyā dadāmi varada svarṇavṛddhiṁ ca dehi me ||
+oṁ nāgarājebhyo namaḥ suvarṇapuṣpadakṣiṇāṁ samarpayāmi |
+en: Gift — Gold is the best of all metals, and it is always worthy to be given. I give it with devotion, O giver of boons. Grant me an increase of gold. Oṁ, salutation to the serpent kings: I offer a golden flower as the gift.
+tel: దక్షిణ — సర్వ లోహములలో బంగారము శ్రేష్ఠమైనది, ఎల్లప్పుడును ఇవ్వదగినది. ఓ వరదా, భక్తితో దానిని ఇచ్చుచున్నాను. నాకు సువర్ణ వృద్ధిని ప్రసాదింపుము. ఓం నాగరాజులకు నమస్కారము, సువర్ణ పుష్ప దక్షిణను సమర్పించుచున్నాను.
+hi: दक्षिणा — सब धातुओं में सोना श्रेष्ठ है और सदा देने योग्य है। हे वरद, मैं भक्ति से उसे देता हूँ। मुझे स्वर्ण की वृद्धि दीजिए। ॐ नागराजों को नमस्कार, सुवर्ण पुष्प दक्षिणा समर्पित करता हूँ।
+
+--- unit 26 | section: षोडशोपचार पूजा ---
+vidhi:
+The waving of the camphor light.
+deva:
+नीराजनम् –
+नीराजनं सुमङ्गल्यं कर्पूरेण समन्वितम् ।
+वह्निचन्द्रार्कसदृशं गृहाण दुरितापह ॥
+ओं नागराजेभ्यो नमः कर्पूरनीराजनं समर्पयामि ।
+iast:
+nīrājanam –
+nīrājanaṁ sumaṅgalyaṁ karpūreṇa samanvitam |
+vahnicandrārkasadṛśaṁ gṛhāṇa duritāpaha ||
+oṁ nāgarājebhyo namaḥ karpūranīrājanaṁ samarpayāmi |
+en: Waving of the light — Accept this most auspicious waving of the light with camphor, bright like fire, the moon and the sun, O remover of sin. Oṁ, salutation to the serpent kings: I offer the waving of the camphor light.
+tel: నీరాజనము — కర్పూరముతో కూడినదియు, అగ్ని చంద్ర సూర్యుల వలె ప్రకాశించునదియు, మిక్కిలి మంగళకరమైనదియు అగు నీరాజనమును స్వీకరింపుము, ఓ పాపహరా. ఓం నాగరాజులకు నమస్కారము, కర్పూర నీరాజనమును సమర్పించుచున్నాను.
+hi: नीराजन — कपूर से युक्त, अग्नि, चन्द्र और सूर्य के समान प्रकाशमान, अत्यन्त मङ्गलमय यह नीराजन ग्रहण कीजिए, हे पापहारी। ॐ नागराजों को नमस्कार, कर्पूर नीराजन समर्पित करता हूँ।
+
+--- unit 27 | section: षोडशोपचार पूजा ---
+vidhi:
+The offering of flowers with folded hands.
+deva:
+मन्त्रपुष्पम् –
+नानाकुसुमसम्युक्तं पुष्पाञ्जलिमिमं प्रभो ।
+कश्यपानन्दजनक सर्पराज गृहाण मे ॥
+ओं नागराजेभ्यो नमः मन्त्रपुष्पाञ्जलिं समर्पयामि ।
+iast:
+mantrapuṣpam –
+nānākusumasamyuktaṁ puṣpāñjalimimaṁ prabho |
+kaśyapānandajanaka sarparāja gṛhāṇa me ||
+oṁ nāgarājebhyo namaḥ mantrapuṣpāñjaliṁ samarpayāmi |
+en: The mantra-flower — O lord, who brought joy to Kaśyapa, O king of serpents, accept from me this handful of flowers of many kinds. Oṁ, salutation to the serpent kings: I offer the handful of flowers.
+tel: మంత్రపుష్పము — ఓ ప్రభూ, కశ్యపునకు ఆనందము కలిగించినవాడా, సర్పరాజా, నానావిధ పుష్పములతో కూడిన ఈ పుష్పాంజలిని నా నుండి స్వీకరింపుము. ఓం నాగరాజులకు నమస్కారము, మంత్రపుష్పాంజలిని సమర్పించుచున్నాను.
+hi: मन्त्रपुष्प — हे प्रभु, हे कश्यप को आनन्द देने वाले, हे सर्पराज, अनेक प्रकार के पुष्पों से युक्त यह पुष्पाञ्जलि मुझसे ग्रहण कीजिए। ॐ नागराजों को नमस्कार, मन्त्रपुष्पाञ्जलि समर्पित करता हूँ।
+
+--- unit 28 | section: राजोपचाराः ---
+vidhi:
+The royal services, offered together in one line.
+deva:
+छत्र-चामर-दर्पण-नृत्त-गीत-वाद्यान्दोलिकादि समस्तराजोपचारान् समर्पयामि ॥
+iast:
+chatra-cāmara-darpaṇa-nṛtta-gīta-vādyāndolikādi samastarājopacārān samarpayāmi ||
+en: I offer all the royal services: the parasol, the whisk, the mirror, dance, song, music, the swing and the rest.
+tel: ఛత్రము, చామరము, దర్పణము, నృత్తము, గీతము, వాద్యము, ఆందోళిక మొదలగు సమస్త రాజోపచారములను సమర్పించుచున్నాను.
+hi: छत्र, चामर, दर्पण, नृत्य, गीत, वाद्य, आन्दोलिका आदि समस्त राजोपचार समर्पित करता हूँ।
+
+--- unit 29 | section: नमस्कारः ---
+vidhi:
+Circumambulation.
+deva:
+प्रदक्षिण –
+यानि कानि च पापानि जन्मान्तरकृतानि च ।
+तानि तानि विनश्यन्तु प्रदक्षिण पदे पदे ॥
+ओं नागराजेभ्यो नमः प्रदक्षिणनमस्कारान् समर्पयामि ।
+iast:
+pradakṣiṇa –
+yāni kāni ca pāpāni janmāntarakṛtāni ca |
+tāni tāni vinaśyantu pradakṣiṇa pade pade ||
+oṁ nāgarājebhyo namaḥ pradakṣiṇanamaskārān samarpayāmi |
+en: Circumambulation — Whatever sins were done in former births, may all of them be destroyed at every step of the circumambulation. Oṁ, salutation to the serpent kings: I offer circumambulations and salutations.
+tel: ప్రదక్షిణ — పూర్వ జన్మలలో చేసిన పాపములు ఏవి ఉన్నవో, అవి అన్నియు ప్రదక్షిణలో అడుగడుగునకు నశించుగాక. ఓం నాగరాజులకు నమస్కారము, ప్రదక్షిణ నమస్కారములను సమర్పించుచున్నాను.
+hi: प्रदक्षिणा — पूर्व जन्मों में किए गए जो भी पाप हैं, वे सब प्रदक्षिणा के पग-पग पर नष्ट हो जाएँ। ॐ नागराजों को नमस्कार, प्रदक्षिणा और नमस्कार समर्पित करता हूँ।
+
+--- unit 30 | section: नमस्कारः ---
+vidhi:
+Salutation.
+deva:
+नमस्कारम् –
+नमस्ते सर्वलोकेश नमस्ते लोकवन्दित ।
+नमस्तेऽस्तु सदा नाग त्राहि मां दुःखसागरात् ॥
+ओं नागराजेभ्यो नमः नमस्कारान् समर्पयामि ।
+iast:
+namaskāram –
+namaste sarvalokeśa namaste lokavandita |
+namaste'stu sadā nāga trāhi māṁ duḥkhasāgarāt ||
+oṁ nāgarājebhyo namaḥ namaskārān samarpayāmi |
+en: Salutation — Salutation to you, lord of all the worlds. Salutation to you, whom the worlds worship. Salutation to you always, O serpent. Save me from the ocean of sorrow. Oṁ, salutation to the serpent kings: I offer salutations.
+tel: నమస్కారము — సర్వలోకేశా, నీకు నమస్కారము. లోకవందితా, నీకు నమస్కారము. ఓ నాగా, నీకు ఎల్లప్పుడును నమస్కారము. దుఃఖసాగరము నుండి నన్ను రక్షింపుము. ఓం నాగరాజులకు నమస్కారము, నమస్కారములను సమర్పించుచున్నాను.
+hi: नमस्कार — हे सर्वलोकेश, आपको नमस्कार। हे लोकवन्दित, आपको नमस्कार। हे नाग, आपको सदा नमस्कार हो। दुःख के सागर से मेरी रक्षा कीजिए। ॐ नागराजों को नमस्कार, नमस्कार समर्पित करता हूँ।
+
+--- unit 31 | section: क्षमाप्रार्थना ---
+vidhi:
+The prayer. The first verse asks pardon; the second asks for freedom from the fear of serpent poison, which is the purpose of this rite.
+deva:
+प्रार्थना –
+अज्ञानात् ज्ञानतो वापि यन्मया पूजनं कृतम् ।
+न्यूनातिरिक्तं तत्सर्वं भो नागाः क्षन्तुमर्हथ ॥
+युष्मत्प्रसादात्सफला मम सन्तु मनोरथाः ।
+सर्वदा मत्कृते मास्तु भयं सर्पविषोद्भवम् ॥
+iast:
+prārthanā –
+ajñānāt jñānato vāpi yanmayā pūjanaṁ kṛtam |
+nyūnātiriktaṁ tatsarvaṁ bho nāgāḥ kṣantumarhatha ||
+yuṣmatprasādātsaphalā mama santu manorathāḥ |
+sarvadā matkṛte māstu bhayaṁ sarpaviṣodbhavam ||
+en: Prayer — Whatever worship I have done, knowingly or unknowingly, O serpents, please forgive all that was too little or too much in it. By your grace may my wishes bear fruit. May there never be for me any fear arising from the poison of serpents.
+tel: ప్రార్థన — తెలిసియో తెలియకయో నేను చేసిన పూజలో తక్కువైనది గాని ఎక్కువైనది గాని ఏది ఉన్నదో, ఓ నాగులారా, దానిని అంతటిని క్షమించుడు. మీ అనుగ్రహముచే నా కోరికలు సఫలమగుగాక. నాకు ఎన్నడును సర్పవిషము వలన భయము లేకుండుగాక.
+hi: प्रार्थना — जाने या अनजाने मैंने जो पूजा की है, उसमें जो कुछ कम या अधिक हुआ हो, हे नागो, उस सबको क्षमा कीजिए। आपकी कृपा से मेरे मनोरथ सफल हों। मुझे कभी भी सर्पविष से उत्पन्न भय न हो।
+
+--- unit 32 | section: क्षमाप्रार्थना ---
+vidhi:
+The dedication of the worship.
+deva:
+समर्पणम् –
+यस्य स्मृत्या च नामोक्त्या तपः पूजा क्रियादिषु ।
+न्यूनं सम्पूर्णतां याति सद्यो वन्दे तमच्युतम् ॥
+अनया मया कृत षोडशोपचार पूजया नागराजाः सुप्रीतो सुप्रसन्नो वरदो भवतु ।
+iast:
+samarpaṇam –
+yasya smṛtyā ca nāmoktyā tapaḥ pūjā kriyādiṣu |
+nyūnaṁ sampūrṇatāṁ yāti sadyo vande tamacyutam ||
+anayā mayā kṛta ṣoḍaśopacāra pūjayā nāgarājāḥ suprīto suprasanno varado bhavatu |
+en: Dedication — By remembering him and by saying his name, whatever is lacking in austerity, worship and rites becomes complete at once. I salute that Acyuta. By this worship of sixteen services done by me, may the serpent kings be well pleased, gracious, and givers of boons.
+tel: సమర్పణము — ఎవని స్మరణచేతను నామోచ్చారణచేతను తపస్సు, పూజ, క్రియలు మొదలగువానిలో లోపించినది వెంటనే సంపూర్ణమగునో, ఆ అచ్యుతునికి నమస్కరించుచున్నాను. నేను చేసిన ఈ షోడశోపచార పూజచేత నాగరాజులు సుప్రీతులు, సుప్రసన్నులు, వరదులు అగుదురుగాక.
+hi: समर्पण — जिनके स्मरण और नाम लेने से तप, पूजा और क्रिया आदि में जो कमी हो वह तुरन्त पूर्ण हो जाती है, उन अच्युत की मैं वन्दना करता हूँ। मेरे द्वारा की गई इस षोडशोपचार पूजा से नागराज सुप्रीत, सुप्रसन्न और वरद हों।
+
+--- unit 33 | section: वायनदानम् ---
+vidhi:
+The verse said when the vāyana, the gift, is given. The rite then closes.
+deva:
+वायनदान मन्त्रः –
+नागेशः प्रतिगृह्णाति नागेशो वै ददाति च ।
+नागेशस्तारको द्वाभ्यां नागेशाय नमो नमः ॥
+ओं शान्तिः शान्तिः शान्तिः ।
+इति नागपञ्चमी पूजा समाप्ता ॥
+iast:
+vāyanadāna mantraḥ –
+nāgeśaḥ pratigṛhṇāti nāgeśo vai dadāti ca |
+nāgeśastārako dvābhyāṁ nāgeśāya namo namaḥ ||
+oṁ śāntiḥ śāntiḥ śāntiḥ |
+iti nāgapañcamī pūjā samāptā ||
+en: The verse for giving the vāyana — The lord of serpents receives, and the lord of serpents gives. The lord of serpents carries both across. Salutation again and again to the lord of serpents. Oṁ, peace, peace, peace. Here ends the Nāga Pañcamī pūjā.
+tel: వాయనదాన మంత్రము — నాగేశుడే స్వీకరించుచున్నాడు, నాగేశుడే ఇచ్చుచున్నాడు. ఇద్దరినీ తరింపజేయువాడు నాగేశుడే. నాగేశునికి మాటిమాటికి నమస్కారము. ఓం శాంతిః శాంతిః శాంతిః. ఇంతటితో నాగపంచమి పూజ సమాప్తము.
+hi: वायनदान मन्त्र — नागेश ही ग्रहण करते हैं और नागेश ही देते हैं। दोनों को तारने वाले नागेश हैं। नागेश को बार-बार नमस्कार। ॐ शान्तिः शान्तिः शान्तिः। इस प्रकार नागपञ्चमी पूजा समाप्त हुई।
