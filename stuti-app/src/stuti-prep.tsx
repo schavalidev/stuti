@@ -133,7 +133,7 @@ function printPrepPack(v, date, lang, items, done) {
   const w = window.open("", "_blank");
   if (!w) return;
   w.document.write('<!DOCTYPE html><html><head><meta charset="utf-8"><title>' + esc(prName(v, lang)) + ' — Stuti</title>'
-    + '<link href="https://fonts.googleapis.com/css2?family=Marcellus&family=Mukta:wght@400;600&family=Noto+Sans+Devanagari&family=Noto+Sans+Telugu&display=swap" rel="stylesheet">'
+    + '<link href="' + location.origin + '/fonts/google/fonts.css" rel="stylesheet">'
     + "<style>@page{size:letter;margin:18mm 16mm}*{box-sizing:border-box;font-style:normal}"
     + "body{margin:0;background:#fff;color:#2B2017;font-family:'Mukta',sans-serif}"
     + "header{text-align:center;border-bottom:1px solid rgba(43,32,23,.18);padding-bottom:14px;margin-bottom:24px}"
@@ -157,10 +157,49 @@ function printPrepPack(v, date, lang, items, done) {
   setTimeout(() => { try { w.focus(); w.print(); } catch (e) {} }, 700);
 }
 
+/* ---------------- putting the card away ----------------
+   Dismissing is never permanent: the only question is what happens tomorrow. */
+function PrepHideSheet({ occ, lang, onClose, onPick }) {
+  const L = STUTI_L;
+  const opt = (mode, icon, key) => (
+    <button className="prep-hide-opt" onClick={() => onPick(mode)}>
+      <span className="prep-hide-ico"><Icon name={icon} size={19} /></span>
+      <span className="prep-hide-txt">
+        <span className="prep-hide-lead">{L.t(key, lang)}</span>
+        <span className="prep-hide-sub">{L.t(key + "Sub", lang)}</span>
+      </span>
+    </button>
+  );
+  return (
+    <OverlayPortal>
+      <div className="pd-wrap">
+        <div className="pd-scrim" onClick={onClose} />
+        <div className="pd-sheet is-short" role="dialog" aria-label={L.t("prepHideCap", lang)}>
+          <div className="pd-grip" />
+          <button className="pd-x" onClick={onClose} aria-label={L.t("close", lang)}><Icon name="close" size={18} /></button>
+          <div className="rm-head">
+            <div className="eyebrow" style={{ color: "var(--accent-ink)" }}>{L.t("prepHideCap", lang)}</div>
+            <div className="rm-head-title display" style={{ fontFamily: L.font(lang) }}>{prName(occ.v, lang)}</div>
+            <div className="rm-head-sub">{L.t("prepHideAsk", lang)}</div>
+          </div>
+          <div className="pd-body">
+            <div className="prep-hide-opts">
+              {opt("again", "calendar", "prepHideAgain")}
+              {opt("notify", "bell", "prepHideNotify")}
+            </div>
+          </div>
+        </div>
+      </div>
+    </OverlayPortal>
+  );
+}
+
 /* ---------------- home card, shown while a window is open ---------------- */
 function HomePrepCard({ lang }) {
   const L = STUTI_L, P = STUTI_PREP;
   const [open, setOpen] = usePrS(null);
+  const [hide, setHide] = usePrS(null);
+  const [note, setNote] = usePrS("");
   const [, force] = usePrS(0);
   usePrE(() => STUTI_PREFS.subscribe(() => force((n) => n + 1)), []);
   let list = [];
@@ -171,7 +210,8 @@ function HomePrepCard({ lang }) {
   const left = its.length - done.length;
   return (
     <React.Fragment>
-      <section className="prep-card">
+      <section className="prep-card has-x">
+        <button className="prep-card-x" onClick={() => setHide(occ)} aria-label={L.t("prepHideCap", lang)}><Icon name="close" size={16} /></button>
         <button className="prep-card-main" onClick={() => setOpen(occ)}>
           <span className="prep-mark"><Icon name="calendar" size={19} /></span>
           <span className="prep-body">
@@ -184,9 +224,34 @@ function HomePrepCard({ lang }) {
           </span>
           {its.length > 0 && <span className="prep-count">{done.length}/{its.length}</span>}
         </button>
-        {list.length > 1 && <div className="prep-more">{L.t("bandMissMore", lang).replace("{n}", list.length - 1)}</div>}
       </section>
+      {list.slice(1).map((o) => {
+        const oi = P.items(o.v), od = P.done(o.v.id, o.date), ol = oi.length - od.length;
+        return (
+          <section className="prep-card prep-card-next has-x" key={o.v.id + o.away}>
+            <button className="prep-card-x" onClick={() => setHide(o)} aria-label={L.t("prepHideCap", lang)}><Icon name="close" size={15} /></button>
+            <button className="prep-card-main" onClick={() => setOpen(o)}>
+              <span className="prep-mark"><Icon name="calendar" size={16} /></span>
+              <span className="prep-body">
+                <span className="prep-name" style={{ fontFamily: L.font(lang) }}>{prName(o.v, lang)}</span>
+                <span className="prep-sub">
+                  {o.date.toLocaleDateString(prLocale(lang), { weekday: "long" })} · {prAway(o.away, lang)}
+                  {oi.length > 0 && " · " + (ol > 0 ? L.t("prepThings", lang).replace("{n}", ol) : L.t("samagriAll", lang))}
+                </span>
+              </span>
+              {oi.length > 0 && <span className="prep-count">{od.length}/{oi.length}</span>}
+            </button>
+          </section>
+        );
+      })}
       {open && <PrepSheet occ={open} lang={lang} onClose={() => { setOpen(null); force((n) => n + 1); }} />}
+      {hide && <PrepHideSheet occ={hide} lang={lang} onClose={() => setHide(null)}
+        onPick={(mode) => {
+          P.snooze(hide.v.id, hide.date, mode, hide.away);
+          setHide(null); setNote(L.t(mode === "notify" ? "prepHidNotify" : "prepHidTomorrow", lang));
+          setTimeout(() => setNote(""), 3200); force((n) => n + 1);
+        }} />}
+      {note && <div className="free-toast" role="status">{note}</div>}
     </React.Fragment>
   );
 }
@@ -237,4 +302,4 @@ function PrepCues({ lang }) {
   );
 }
 
-export { PrepSheet, HomePrepCard, PrepCues, printPrepPack };
+export { PrepSheet, PrepHideSheet, HomePrepCard, PrepCues, printPrepPack };

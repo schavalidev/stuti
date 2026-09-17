@@ -1,5 +1,5 @@
 /* The Settings row for the log relay (stuti-relay.ts): one switch, on by
-   default for the beta, in the reader's own interface script. Hand-authored;
+   default for test and beta builds and off for a release, in the reader's own interface script. Hand-authored;
    the settings seam places it under the support line. */
 import React from "react";
 import { enabled, setEnabled } from "./stuti-relay";

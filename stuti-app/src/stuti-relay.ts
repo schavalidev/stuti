@@ -10,7 +10,8 @@
    (netlify/functions/relay.mjs) that writes into the maker's Google
    Drive folder. No account on the phone, no name; the device carries a
    random id so one phone's sessions can be told from another's.
-   Off with the switch in Settings (stuti-relay = "0").
+   Controlled by the switch in Settings (stuti-relay): on by default for
+   test and beta builds, off by default for a release.
    ============================================================ */
 import { Capacitor } from "@capacitor/core";
 import { STUTI_BUILD } from "./stuti-build";
@@ -30,7 +31,13 @@ const bot = /HeadlessChrome|Lighthouse|bot\b/i.test(navigator.userAgent);   // N
 const active = () => !bot && (native || onSite || dev()) && enabled();
 const url = () => (onSite ? "" : SITE) + PATH;
 
-export const enabled = () => { try { return localStorage.getItem("stuti-relay") !== "0"; } catch (e) { return true; } };
+/* Consent. Testers of a test or beta build joined to send exactly this, so the
+   switch starts on for them. A release build starts it off: crash notes and,
+   above all, a recording of someone's voice leave the phone only after they
+   turn the switch on themselves (GDPR asks for that, and it is only right).
+   An explicit choice either way is kept across builds. */
+const byDefault = () => STUTI_BUILD.CHANNEL !== "release";
+export const enabled = () => { try { const v = localStorage.getItem("stuti-relay"); return v === null ? byDefault() : v === "1"; } catch (e) { return false; } };
 export const setEnabled = (on: boolean) => { try { localStorage.setItem("stuti-relay", on ? "1" : "0"); } catch (e) {} };
 
 export const deviceId = (() => {

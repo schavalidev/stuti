@@ -24,6 +24,7 @@
 - **All font choices go through the CSS tokens** (`--font-ui`, `--font-display`, `--font-deva`, `--font-telugu`, `--font-deva-serif`, `--font-telugu-serif` in `stuti.css`). Never hard-code a family name in a rule or a JSX `style={{ fontFamily }}`.
 - **Known inline-family exceptions** (they beat every stylesheet rule — check these FIRST when a font "won't change"): `stuti-sky.jsx` (sandhyā plate title + till, greeting), `home-redesign.jsx`/`stuti-flow.jsx` end-marks. If more are added, list them here.
 - **Alias trap:** `'Surasans02 Regular'` is one Regular.ttf registered across weight 300–700 — every weight renders as Regular. For a real bold, use the `'Surasans02'` family (has true faces at 300/400/500/700). Nothing heavier than 700 exists in any project font.
+- **Google Fonts are local** (17 Sep 2026): `stuti-app/tools/fonts-local.mjs` downloads them into `public/fonts/google/`, and `fix-local-fonts.mjs` strips the design's Google link. Never let a request to fonts.googleapis.com back in (GDPR). If the designer changes the font list, re-run `node tools/fonts-local.mjs` before the pipeline.
 - **When diagnosing, don't guess from CSS** — probe the live element's `getComputedStyle(el).fontFamily/fontWeight` plus `document.fonts.check()` in one shot; inline styles and `:is()` specificity make source-reading unreliable.
 
 ## Design updates

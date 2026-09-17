@@ -14,7 +14,7 @@
    Noto Sans Devanagari — clean, highly legible Devanagari for verses
    Noto Sans Telugu — clean, highly legible Telugu
 */
-@import url('https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400..700&family=Noto+Sans:wght@400..700&family=Marcellus&family=Mukta:wght@300;400;500;600;700&family=Noto+Sans+Devanagari:wght@400;500;600;700&family=Noto+Sans+Telugu:wght@300;400;500;600;700&family=Noto+Sans+Display:wght@400;500;600;700&family=Tiro+Devanagari+Sanskrit&family=Tiro+Telugu&display=swap');
+/* Google Fonts: served locally, linked from index.html (fix-local-fonts.mjs) */
 @font-face { font-family: 'KanakaDurga'; src: url('fonts/KanakaDurga.otf') format('opentype'); font-weight: 400; font-style: normal; font-display: swap; }
 @font-face { font-family: 'KanakaDurga'; src: url('fonts/KanakaDurga-Italic.otf') format('opentype'); font-weight: 400; font-style: italic; font-display: swap; }
 @font-face { font-family: 'SangamSans'; src: url('fonts/SangamSans-Light.ttf') format('truetype'); font-weight: 300; font-style: normal; font-display: swap; }
@@ -428,3 +428,20 @@ button { font-family: inherit; color: inherit; cursor: pointer; border: none; ba
 /* thin, unobtrusive scrollbars */
 .scroll { overflow-y: auto; -webkit-overflow-scrolling: touch; scrollbar-width: thin; overscroll-behavior: contain; }
 .scroll::-webkit-scrollbar { width: 0; }
+
+/* the forefathers' plate, at the head of the pitṛ pages */
+.pit-seal-row{display:flex;justify-content:center;margin:2px 0 14px}
+
+/* which tarpaṇam — the bar over the scroll, and the six on the sheet.
+   Type sizes in rem so the Telugu/Devanāgarī root bump reaches them. */
+.rd-occ-bar{display:flex;align-items:center;gap:10px;padding:8px 16px 9px;background:var(--accent-soft);border-bottom:1px solid color-mix(in oklab,var(--accent) 20%,transparent)}
+.rd-occ-name{flex:1;min-width:0;font-size:0.9375rem;color:var(--accent-ink);overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.rd-occ-change{flex:none;border:1px solid color-mix(in oklab,var(--accent) 34%,transparent);background:transparent;color:var(--accent-ink);font:inherit;font-size:0.8125rem;padding:5px 14px;min-height:44px;border-radius:999px;cursor:pointer}
+.tocc-list{display:flex;flex-direction:column;gap:8px}
+.tocc-row{display:grid;grid-template-columns:1fr auto;gap:4px 10px;text-align:left;background:var(--surface-2);border:1px solid var(--line);border-radius:14px;padding:13px 15px;font:inherit;color:var(--ink);cursor:pointer}
+.tocc-row.on{border-color:var(--accent);background:var(--accent-soft)}
+.tocc-row-name{font-size:1.0625rem;color:var(--ink)}
+.tocc-row-when{grid-column:1/-1;font-size:0.8438rem;color:var(--ink-soft);text-wrap:pretty}
+.tocc-row-today{grid-row:1;grid-column:2;align-self:center;white-space:nowrap;font-size:0.7188rem;letter-spacing:.08em;text-transform:uppercase;color:var(--accent-ink);border:1px solid color-mix(in oklab,var(--accent) 34%,transparent);border-radius:999px;padding:3px 8px}
+[data-ui-lang="telugu"] .tocc-row-today,[data-ui-lang="deva"] .tocc-row-today{letter-spacing:0;text-transform:none;font-size:calc(4px + 0.7188rem)}
+.tocc-row.is-all{background:transparent}

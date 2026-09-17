@@ -178,7 +178,7 @@ function printStotra(hymn, lang, withMeaning) {
   const w = window.open("", "_blank");
   if (!w) return;
   w.document.write('<!DOCTYPE html><html><head><meta charset="utf-8"><title>' + esc(L.hymnTitle(hymn, lang)) + ' — Stuti</title>'
-    + '<link href="https://fonts.googleapis.com/css2?family=Marcellus&family=Mukta:wght@400;600&family=Noto+Sans+Devanagari&family=Noto+Sans+Telugu&display=swap" rel="stylesheet">'
+    + '<link href="' + location.origin + '/fonts/google/fonts.css" rel="stylesheet">'
     + "<style>"
     + "@page{size:letter;margin:18mm 16mm}"
     + "*{box-sizing:border-box;font-style:normal}"

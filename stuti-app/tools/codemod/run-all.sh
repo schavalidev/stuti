@@ -30,6 +30,7 @@ node fix-notify-seam.mjs
 node fix-account-seam.mjs
 node fix-feedback-seam.mjs
 node fix-dana-seam.mjs
+node fix-local-fonts.mjs
 node setup-entry.mjs
 node fix-backdrop-prefix.mjs
 node fix-missing-imports.mjs
