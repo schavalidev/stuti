@@ -382,14 +382,23 @@ export const STUTI = (function () {
     return rules.fallback || "others";
   }
 
-  const seenKeys = new Set(hymns.map(h => h.deity + "|" + normTitle(h.title)));
+  /* A catalogue row is dropped when the curated shelf already carries that
+     text, and that comparison ignores anything in brackets: the index's
+     "Guru Stotram (Gurur Brahmā)" is the curated "Guru Stotram" under a fuller
+     name. Between two index rows the bracket is the whole distinction — the
+     Kumāra Stuti spoken by the devas is not the one spoken by the brāhmaṇa —
+     so those are compared whole. Compared loosely, the second of such a pair
+     is dropped, and a text written for it can then never be read. */
+  const curatedKeys = new Set(hymns.map(h => h.deity + "|" + normTitle(h.title)));
+  const indexKeys = new Set();
   if (STOTRA_INDEX) {
     STOTRA_INDEX.deities.forEach(d => {
       d.list.forEach(row => {
         const [iast, deva, tel, author] = row;
-        const key = d.id + "|" + normTitle(iast);
-        if (seenKeys.has(key)) return;
-        seenKeys.add(key);
+        if (curatedKeys.has(d.id + "|" + normTitle(iast))) return;
+        const key = d.id + "|" + slug(iast);
+        if (indexKeys.has(key)) return;
+        indexKeys.add(key);
         hymns.push({
           id: d.id + "-" + slug(iast),
           deity: d.id,

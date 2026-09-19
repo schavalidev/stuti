@@ -30,6 +30,7 @@ node fix-notify-seam.mjs
 node fix-account-seam.mjs
 node fix-feedback-seam.mjs
 node fix-dana-seam.mjs
+node fix-deeplink-seam.mjs
 node setup-entry.mjs
 # after setup-entry, which is what copies the design's CSS in: the fonts
 # step edits that copy, so running it first leaves it nothing to strip
@@ -41,3 +42,8 @@ node fix-missing-imports.mjs
 # ../check-design-updates.sh)
 git -C ../../.. log -1 --format=%H -- design_handoff_stuti/ > .ported-at 2>/dev/null || true
 echo "pipeline complete (ported design @ $(cut -c1-9 .ported-at 2>/dev/null || echo 'uncommitted'))"
+# last word, and they fail the run: src/ can name a painting that was never
+# copied into public/, and it can carry a finished text that no catalogue row
+# claims — in both cases the build is clean and the reader is short one thing
+node check-assets.mjs
+node check-links.mjs
