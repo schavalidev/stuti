@@ -192,6 +192,9 @@ window.STUTI_VRATA = (function () {
     /* ---------------------------------------------------------- */
     {
       id: "ganesha-chaturthi", deity: "ganesha",
+      /* the pill beside the title opens the vratam itself — the sixty units
+         read from while it is performed, not this guide to it */
+      vidhiText: "vinayaka-vrata-vidhi",
       name: { roman: "Gaṇeśa Caturthī", deva: "गणेश चतुर्थी", tel: "గణేశ చతుర్థి" },
       rule: { roman: "Bhādrapada · Śukla Caturthī", deva: "भाद्रपद शुक्ल चतुर्थी", tel: "భాద్రపద శుక్ల చతుర్థి" },
       find: (y) => lunar(y, MASA.bhadrapada, T.caturthi, "madhyahna"), kala: "madhyahna",
