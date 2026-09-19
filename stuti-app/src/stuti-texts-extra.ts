@@ -27,6 +27,9 @@ import { extra as x_devi4 } from "./stuti-text-devi4";
 import { extra as x_vishnu } from "./stuti-text-vishnu";
 import { extra as x_vishnu2 } from "./stuti-text-vishnu2";
 import { extra as x_hanuman } from "./stuti-text-hanuman";
+import { extra as x_vinayaka_vidhi } from "./stuti-text-vinayaka-vidhi";
+import { extra as x_tarpana_vidhi } from "./stuti-text-tarpana-vidhi";
+import { extra as x_pitr } from "./stuti-text-pitr";
 
 export const STUTI_TEXTS_EXTRA = [
   ...x_ganesha,
@@ -55,4 +58,7 @@ export const STUTI_TEXTS_EXTRA = [
   ...x_vishnu,
   ...x_vishnu2,
   ...x_hanuman,
+  ...x_vinayaka_vidhi,
+  ...x_tarpana_vidhi,
+  ...x_pitr,
 ];

@@ -1,7 +1,7 @@
 // Hand-scoped patches for the names transform.mjs deliberately skipped.
 // Idempotent-ish: re-running after a fresh transform.mjs pass is the
 // expected workflow (transform.mjs always regenerates src/ from source).
-import { readFileSync, writeFileSync } from "node:fs";
+import { readdirSync, readFileSync, writeFileSync } from "node:fs";
 import { join, dirname } from "node:path";
 import { fileURLToPath } from "node:url";
 
@@ -46,7 +46,9 @@ for (const file of ["stuti-hindi-names-lalita.ts", "stuti-hindi-names-vishnu.ts"
   wr(file, text);
 }
 
-// ---------- STUTI_TEXTS_EXTRA: 26 stuti-text-*.ts contributor files ----------
+// ---------- STUTI_TEXTS_EXTRA: the stuti-text-*.ts contributor files ----------
+// Every stuti-text-*.js in the design belongs here. `run-all.sh` checks the
+// two against each other, so a new deity file cannot be ported into silence.
 const EXTRA_FILES = [
   "stuti-text-ganesha","stuti-text-ganesha2","stuti-text-ganesha3","stuti-text-ganesha4",
   "stuti-text-guru","stuti-text-guru2",
@@ -56,12 +58,40 @@ const EXTRA_FILES = [
   "stuti-text-shiva","stuti-text-shiva2","stuti-text-shiva3",
   "stuti-text-devi","stuti-text-devi2","stuti-text-devi3","stuti-text-devi4",
   "stuti-text-vishnu","stuti-text-vishnu2","stuti-text-hanuman",
+  /* The three rite and pitṛ files. They contribute the same way every
+     deity file does, and were missing from this list: the port then left
+     them importing nothing, so the Vināyaka vratam, the tarpaṇa vidhi and
+     the five pitṛ texts shipped as empty catalog entries. */
+  "stuti-text-vinayaka-vidhi","stuti-text-tarpana-vidhi","stuti-text-pitr",
 ];
 // `.push(a, b, ...)` takes any number of arguments — most files push one
 // catalog entry, but at least one (stuti-text-devi) pushes two in the same
 // call. Wrapping the captured argument list in `[...]` handles either
 // case uniformly: `extra` is always an array now, spread into the
 // aggregate below instead of listed as one item per file.
+/* The list above is the whole of it. A deity file added to the design and
+   not added here would be ported into a module nothing imports, and its
+   texts would read "coming soon" in a build that carries them — which is
+   how the Vināyaka vratam, the tarpaṇa vidhi and the pitṛ texts went
+   missing. So the design directory is counted, and a mismatch stops the
+   port rather than shipping a silent hole. */
+{
+  const designed = readdirSync(join(HERE, "../../../design_handoff_stuti/app"))
+    .filter((f) => /^stuti-text-.*\.js$/.test(f))
+    .map((f) => f.replace(/\.js$/, ""))
+    .sort();
+  const listed = EXTRA_FILES.slice().sort();
+  const missing = designed.filter((b) => !listed.includes(b));
+  const extra = listed.filter((b) => !designed.includes(b));
+  if (missing.length || extra.length) {
+    throw new Error(
+      "EXTRA_FILES is out of step with design_handoff_stuti/app: " +
+      (missing.length ? "not listed here: " + missing.join(", ") + ". " : "") +
+      (extra.length ? "listed here but not in the design: " + extra.join(", ") + "." : "")
+    );
+  }
+}
+
 const RE_PUSH = /\(\s*window\.STUTI_TEXTS_EXTRA\s*=\s*window\.STUTI_TEXTS_EXTRA\s*\|\|\s*\[\]\s*\)\.push\(\s*([\s\S]*?)\s*\);?\s*$/;
 for (const base of EXTRA_FILES) {
   const file = base + ".ts";
@@ -89,4 +119,4 @@ wr("stuti-texts-extra.ts", extraHeader);
   wr("stuti-texts.ts", text);
 }
 
-console.log("special cases patched: STUTI_NAMES (4 files + 3 consumers), STUTI_TEXTS_EXTRA (27 files + 1 consumer)");
+console.log(`special cases patched: STUTI_NAMES (4 files + 3 consumers), STUTI_TEXTS_EXTRA (${EXTRA_FILES.length} files + 1 consumer)`);

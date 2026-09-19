@@ -12,9 +12,7 @@
    form — varmaṇaṁ, guptaṁ and dāsaṁ stand in their place for the
    other varṇas, as the section's own note says.
    ============================================================ */
-(window.STUTI_TEXTS_EXTRA = window.STUTI_TEXTS_EXTRA || []).push(
-
-{
+export const extra = [{
   deities: ["pitr"],
   occasions: "tarpana",
   title: "Pitṛ Tarpaṇa Vidhiḥ",
@@ -283,6 +281,4 @@
       en: "Return the yajñopavītam to the left shoulder. Touch the knot of the pavitram to the eyes and untwist it. Do ācamana. Set the darbha aside in a clean place.",
       tel: "యజ్ఞోపవీతమును ఎడమ భుజము పైకి మార్చుకోవాలి. పవిత్రపు ముడిని కళ్ళకద్దుకుని సవ్యము చేసుకోవాలి. ఆచమనం చేయాలి. దర్భను శుభ్రమైన చోట ఉంచాలి." }
   ]
-}
-
-);
+}];

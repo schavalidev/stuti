@@ -8,9 +8,7 @@
    variant of the other and neither fills the other's gaps.
    Accent is carried in `deva:` and omitted from `iast:`.
    ============================================================ */
-(window.STUTI_TEXTS_EXTRA = window.STUTI_TEXTS_EXTRA || []).push(
-
-{
+export const extra = [{
   deities: ["pitr"],
   title: "Rucistava",
   blurb: "A hymn sung on the knees before a wall of light. Ruci, an ascetic who had refused to marry, is told by his own dead forefathers that his refusal is dragging them down; he worships them on a river bank, the sky fills with radiance, and he sings — not to his own grandfathers but to the forefathers as a cosmic order, in whom the whole universe is Agni and Soma.",
@@ -563,6 +561,4 @@
       tel: "అనేక అపకర్మలు చేసినప్పటికీ తండ్రిని ఇలా స్తుతించే కుమారుడు ప్రాయశ్చిత్తం చేసినట్లుగానే నిశ్చయంగా సుఖి అవుతాడు. సదా తండ్రికి ప్రీతి కలిగించేవాడు సకల కర్మలకు అర్హుడవుతాడు.",
       hi: "जो पुत्र अनेक अपकर्म करके भी पिता की इस प्रकार स्तुति करता है, वह मानो प्रायश्चित्त करके निश्चय ही सुखी हो जाता है। सदा पिता को प्रसन्न करने वाला पुत्र सब कर्मों का अधिकारी होता है।" },
   ],
-},
-
-);
+},];
