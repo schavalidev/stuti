@@ -38,7 +38,12 @@ export default defineConfig({
           {
             urlPattern: ({ request }) => request.destination === 'font' || request.destination === 'image',
             handler: 'CacheFirst',
-            options: { cacheName: 'stuti-static', expiration: { maxEntries: 200 } },
+            // The fonts are content-hashed, so a new one is a new URL. The
+            // pictures are not: public/emblems/ serves each file under its own
+            // name, and a repainted emblem keeps that name. Cache-first with no
+            // age would show the old painting for as long as the phone kept the
+            // cache, so a copy is held for a month and then asked for again.
+            options: { cacheName: 'stuti-static', expiration: { maxEntries: 200, maxAgeSeconds: 30 * 24 * 60 * 60 } },
           },
         ],
       },

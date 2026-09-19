@@ -43,8 +43,13 @@ Never sent: the flyleaf (name, gotra — the saṅkalpa panel promises this), th
 session, device id, relay queue, beta latch, journal.
 
 The cue record (`stuti_cue_prefs`, one row per device): place and time zone,
-sandhyā reminders, quiet hours, digest hour, almanac settings, vows. It is what
-a push sender will read; there is no sender yet.
+reading script, sandhyā reminders, quiet hours, digest hour, almanac settings,
+vows (with the days each was kept), the memorisation plans and the japa counts,
+and the push subscription once there is one. The plans and the japa are there
+because they are what the cues about them are reckoned from — a plan's day and
+a thread gone quiet are bells, and a server cannot ring what it cannot count.
+No name, no gotra, no reading history, no favourites. It is what a push sender
+will read; there is no sender yet. (`STUTI_PUSH.record()` is the exact payload.)
 
 ### When two records differ
 

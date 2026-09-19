@@ -28,7 +28,21 @@ if (logPathArg) {
   try {
     log = exec("npx", ["tsc", "--noEmit", "-p", "tsconfig.app.json"], { cwd: APP, encoding: "utf8" });
   } catch (e) {
-    log = e.stdout || "";
+    log = String(e.stdout || "");
+    /* tsc reports each finding as `file(line,col): error TSxxxx`, so a non-zero
+       exit without one of those means it never typechecked anything: no
+       node_modules, a tsconfig it could not read, or — on a Mac, and this is
+       what happened — npx reaching /usr/bin/tsc, which is a different program
+       altogether and answers "this is not the tsc command you are looking for".
+       This step is the one thing standing between a missing import and a
+       ReferenceError in the built app, and a run that resolves nothing looks
+       exactly like a clean one. So it says so and stops. */
+    if (!/\.tsx?\(\d+,\d+\): error TS\d{4}/.test(log)) {
+      console.error("fix-missing-imports: tsc never typechecked — nothing was resolved, and an unresolved name is a blank screen.");
+      console.error("  it exited " + (e.status ?? "?") + " saying: " + (log.replace(/\u001b\[[0-9;]*m/g, "").trim().split("\n").filter(Boolean)[0] || e.message || "nothing"));
+      console.error("  run it from stuti-app/ with the app's dependencies installed (npm install), then run the pipeline again.");
+      process.exit(1);
+    }
   }
 }
 
