@@ -52,6 +52,24 @@ const native = () => Capacitor.isNativePlatform();
 let perm: string = "prompt";
 let laying = false;
 
+/* Exact alarms are a second permission, and Android 12 onwards does not
+   grant it with the notification one. The plugin's default is to schedule
+   exact, and when it may not, `schedule()` opens the system "Alarms &
+   reminders" screen itself — which on app open throws the reciter out of
+   Stuti into Android's settings, unasked, every time the week is re-laid.
+   So the week is laid inexact unless the permission is already held: a
+   cue may then drift a few minutes in doze, which is the honest cost of
+   not hijacking the screen. It is asked for once, in `ask()`, where the
+   reciter is the one switching a bell on. */
+const EXACT_ASKED = "stuti-cues-exact-asked";
+let exact = "denied";
+async function refreshExact() {
+  if (Capacitor.getPlatform() !== "android") { exact = "granted"; return exact; }
+  try { exact = (((await (LocalNotifications as any).checkExactNotificationSetting()) || {}).exact_alarm) || "denied"; }
+  catch (e) { exact = "denied"; }
+  return exact;
+}
+
 const lang = () => { try { return localStorage.getItem("stuti-lang") || "deva"; } catch (e) { return "deva"; } };
 
 /* a stable positive 32-bit id for a cue on a day — the same cue re-laid on
@@ -124,6 +142,16 @@ async function refresh() {
 async function ask() {
   if (!native()) return "unsupported";
   try { perm = (await LocalNotifications.requestPermissions()).display; } catch (e) {}
+  /* and, once, the alarm permission the junctures want — here and nowhere
+     else, because here the reciter has just asked for the bell themselves */
+  if (perm === "granted" && (await refreshExact()) !== "granted") {
+    let asked = false; try { asked = localStorage.getItem(EXACT_ASKED) === "1"; } catch (e) {}
+    if (!asked) {
+      try { localStorage.setItem(EXACT_ASKED, "1"); } catch (e) {}
+      try { await (LocalNotifications as any).changeExactNotificationSetting(); } catch (e) {}
+      await refreshExact();
+    }
+  }
   lay();
   return perm;
 }
@@ -157,6 +185,8 @@ async function lay() {
           body: w.text,
           channelId: CHANNEL,
           schedule: { at: new Date(c.at), allowWhileIdle: true },
+          /* never true unless the permission is already held: see refreshExact */
+          isExactNotification: exact === "granted",
           extra: { stuti: 1, cue: c.id, day: c.day, hymn: w.hymn ? { id: w.hymn.id, deity: w.hymn.deity } : null },
         };
       });
@@ -166,7 +196,7 @@ async function lay() {
        question that matters when a reciter reports silence */
     try {
       const next = cues[0];
-      journal("cues", "laid=" + fresh.length + " held=" + (cues.length - fresh.length) + " dropped=" + stale.length
+      journal("cues", "laid=" + fresh.length + " held=" + (cues.length - fresh.length) + " dropped=" + stale.length + " exact=" + exact
         + (next ? " next=" + next.id + "@" + new Date(next.at).toISOString() : " next=none"));
     } catch (e) {}
   } finally { laying = false; }
@@ -177,7 +207,15 @@ function routing() {
   try {
     LocalNotifications.addListener("localNotificationActionPerformed", (ev: any) => {
       const h = ev && ev.notification && ev.notification.extra && ev.notification.extra.hymn;
-      if (h && h.id && h.deity) { try { location.hash = "#reader/" + h.deity + "/" + h.id; } catch (e) {} }
+      if (!h || !h.id || !h.deity) return;
+      /* the shells listen for hashchange (tools/codemod/fix-deeplink-seam.mjs),
+         and setting a hash to what it already says raises no event — which is
+         exactly the case of the same hymn cued two mornings running */
+      const to = "#reader/" + h.deity + "/" + h.id;
+      try {
+        if (location.hash === to) window.dispatchEvent(new Event("hashchange"));
+        else location.hash = to;
+      } catch (e) {}
     });
   } catch (e) {}
 }
@@ -196,13 +234,14 @@ export async function installNotify() {
   routing();
   await channel();
   await refresh();
+  await refreshExact();
   lay();
   /* anything that changes what is due re-lays the week: the reminder sheet,
      a change of place, and every return to the app — which is also the only
      moment a phone that has been closed for days gets its horizon back */
   try { STUTI_PREFS.subscribe(() => lay()); } catch (e) {}
   try { STUTI_LOC.subscribe(() => lay()); } catch (e) {}
-  document.addEventListener("visibilitychange", () => { if (!document.hidden) refresh().then(lay); });
+  document.addEventListener("visibilitychange", () => { if (!document.hidden) refresh().then(refreshExact).then(lay); });
 }
 
 export const STUTI_NOTIFY = { installNotify, lay, ask, refresh, week, words, permission: () => owner.permission(), available: native };

@@ -407,7 +407,7 @@ function App() {
   const [lang, setLang] = useStateM(() => localStorage.getItem("stuti-lang") || "deva");
   const [uiLang, setUiLangRaw] = useStateM(() => localStorage.getItem("stuti-ui-lang") || localStorage.getItem("stuti-lang") || "deva");
   const setUiLang = (v) => { localStorage.setItem("stuti-ui-lang-custom", v === "match" ? "0" : "1"); setUiLangRaw(v === "match" ? lang : v); };
-  const [route, setRoute] = useStateM(() => ({ view: STUTI_ROUTE.view() || "home", deity: null, hymn: null, practice: null }));
+  const [route, setRoute] = useStateM(() => { const t = STUTI_ROUTE.target(); return { view: (t && t.view) || "home", deity: (t && t.deity) || null, hymn: (t && t.hymn) || null, practice: null }; });
   const [dir, setDir] = useStateM("fwd");
   const [overlayEl, setOverlayEl] = useStateM(null); // app-level host for the saṅkalpa bottom sheet
   const [onboarding, setOnboarding] = useStateM(() => !STUTI_PREFS.get().onboarded);
@@ -431,7 +431,10 @@ function App() {
   /* A screen can be linked to. The hash is read once at mount (above) and
      listened to after, since a hash change never reloads the document. */
   useEffectM(() => {
-    const on = () => { const v = STUTI_ROUTE.view(); if (v) go(v, v === "browse" ? { reset: true } : {}); };
+    const on = () => {
+      const t = STUTI_ROUTE.target(); if (!t) return;
+      go(t.view, t.view === "browse" ? { reset: true } : t.hymn ? { deity: t.deity, hymn: t.hymn, from: "home" } : {});
+    };
     window.addEventListener("hashchange", on);
     return () => window.removeEventListener("hashchange", on);
   }, [route.view]);

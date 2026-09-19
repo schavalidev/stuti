@@ -521,7 +521,7 @@ function App() {
      interface takes its own nudge in CSS ([data-ui-lang="deva"]) — keying this on
      the reading script blew up an English interface sitting over Hindi verses. */
   useEffectM(() => { try { localStorage.setItem("stuti-uiscale", String(uiScale)); } catch (e) {} document.documentElement.style.fontSize = (16 * uiScale) + "px"; }, [uiScale]);
-  const [route, setRoute] = useStateM(() => ({ view: hashView() || "home", deity: null, hymn: null, practice: null }));
+  const [route, setRoute] = useStateM(() => { const t = STUTI_ROUTE.target(); return { view: (t && t.view) || "home", deity: (t && t.deity) || null, hymn: (t && t.hymn) || null, practice: null }; });
   const [dir, setDir] = useStateM("fwd");
   const [overlayEl, setOverlayEl] = useStateM(null); // app-level host for the saṅkalpa bottom sheet
   const [onboarding, setOnboarding] = useStateM(() => !STUTI_PREFS.get().onboarded);
@@ -593,7 +593,10 @@ function App() {
      names rather than the home — so the hash is read once at mount (above)
      and listened to after, since a hash change never reloads the document. */
   useEffectM(() => {
-    const on = () => { const v = hashView(); if (v) go(v, v === "browse" ? { reset: true } : {}); };
+    const on = () => {
+      const t = STUTI_ROUTE.target(); if (!t) return;
+      go(t.view, t.view === "browse" ? { reset: true } : t.hymn ? { deity: t.deity, hymn: t.hymn, from: "home" } : {});
+    };
     window.addEventListener("hashchange", on);
     return () => window.removeEventListener("hashchange", on);
   }, [route.view]);

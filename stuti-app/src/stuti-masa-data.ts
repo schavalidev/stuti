@@ -257,6 +257,11 @@ export const STUTI_MASA = (function () {
     "hayagriva-jayanti": M.shravana, "raksha-bandhan": M.shravana, "vasanta-panchami": M.magha, "vasanta-navaratri": M.caitra,
     "shyamala-navaratri": M.magha, "varahi-navaratri": M.ashadha,
     "yama-tarpanam": M.ashvina, "bhishma-tarpanam": M.magha,
+    /* Kedāreśvara ends on Dīpāvali amāvāsyā, so it belongs to Āśvayuja;
+       Anaghāṣṭamī to Mārgaśīrṣa. Vaibhava Lakṣmī is "any": it is not
+       tied to a month at all, being kept on a number of Fridays the
+       worshipper settles on. */
+    "kedareshwara": M.ashvina, "anaghashtami": M.margashirsha, "vaibhava-lakshmi": "any",
   };
   const NOMU_MASA = {
     "atla-tadde": M.ashvina, "undralla-tadde": M.bhadrapada, "uppu-nomu": M.shravana,
