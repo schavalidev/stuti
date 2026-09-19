@@ -19,9 +19,12 @@ or `Blurb`.
      enough to *copy* one. Measured on daśaka 1: it dropped one line of ten verses outright and
      misread व as ब, ृ as ू and क्ष as र in eight places. **Read every line off the page image
      before writing it.**
-   - Page arithmetic: **scan page = printed page + 3** (printed 9 = scan 6, printed 13 = scan
-     10). The printed table of contents at the front gives a printed page for each of the
-     hundred daśakas, so the scan page for any daśaka follows from it directly.
+   - Page arithmetic: the offset between printed page and scan page **is not constant** — the
+     volume carries full-page colour plates that are not paginated, and each one shifts it.
+     Printed 9 = scan 6 and printed 13 = scan 10 (offset +3); four plates then fall at scan
+     14–17, and printed 17 = scan 18 (offset +1). Do not compute a page: find it. The reliable
+     way is to search `0639_djvu.xml` for the verse, which gives the scan page directly, and the
+     daśaka colophons (`… दशकं समाप्तम्`) are findable the same way — OCR recovers 89 of the 100.
 2. **GRETIL, `sa_nArAyaNabhaTTa-nArAyaNIya.xml`** — IAST, 1032 verses, `Nar_<skandha>.<daśaka>.
    <verse>`. A genuinely independent editorial lineage and the second witness for every file.
    Its data entry is careless (`mirmalaṁ` for `nirmalaṁ`, `cidjarbha` for `cidgarbha`,
@@ -61,8 +64,8 @@ from GRETIL.
 
 | | |
 |---|---|
-| Written | daśaka 1 |
-| Remaining | daśakas 2–100 |
+| Written | daśakas 1–2 |
+| Remaining | daśakas 3–100 |
 
 ## Open questions for the user
 
