@@ -29,7 +29,7 @@ Not collated: the hundred and eight names. At its aṣṭottara the rite points 
 
 Accent: **present throughout the Vedic portions, 322 marks**, which is correct — the Puruṣa Sūkta is Vedic and this source prints it accented, in the Taittirīya tradition that a Telugu smārta rite follows. Udātta `॑` (U+0951), anudātta `॒` (U+0952), dīrgha svarita `᳚` (U+1CDA). The rite's own verses, being stotra, are unaccented and are left so.
 
-Note on defects repaired in the base text, each counted. **The largest is systematic: the dīrgha svarita `᳚` is printed as a Latin right double quotation mark `”` (U+201D).** Twenty-five of those were converted. **Twelve further `”` in the same page are genuine closing quotation marks in the Telugu prose and were deliberately left alone** — the mark does both jobs on this page, and converting all of them would have put svaritas inside the story. The reading `”` = `᳚` is not a guess: `../../veda/taittiriya/01_purusha_suktam.txt` prints `सर्वम्᳚`, `भव्यम्᳚`, `पादो᳚ऽस्य॒` and `तस्मा᳚द्वि॒राड॑जायत` at exactly these places. Also repaired: **six Latin `o` for the anusvāra `ం`** inside Telugu words (`భూమి॑o`, `అమృత॑o`, `పురు॑ష॒o`, `ముఖ॒o`, `వరే᳚ణ్య॒o`), the same defect class as the twenty-nine repaired in `../../vidhi/taittiriya/01_krishna_yajurveda_sandhyavandanam.txt`; **two `గ్` followed by a zero-width joiner before a spirant**, which spell the guttural nasal and would otherwise have read as a bare `g`; **six places where the accent mark was written before the anusvāra** rather than after it, normalised to the order that same accented copy uses; and **six ASCII colons standing for visarga**, which `bin/tel2dev.py` maps. One further defect is corrected in the text and flagged at its unit: **the verse naming the eight powers prints `మహిమా` twice and omits `లఘిమా`**; the second word is `लघिमा` and is written so here.
+Note on defects repaired in the base text, each counted. **The largest is systematic: the dīrgha svarita `᳚` is printed as a Latin right double quotation mark `”` (U+201D).** Twenty-five of those were converted. **Twelve further `”` in the same page are genuine closing quotation marks in the Telugu prose and were deliberately left alone** — the mark does both jobs on this page, and converting all of them would have put svaritas inside the story. The reading `”` = `᳚` is not a guess: `../../veda/taittiriya/01_purusha_suktam.txt` prints `सर्वम्᳚`, `भव्यम्᳚`, `पादो᳚ऽस्य॒` and `तस्मा᳚द्वि॒राड॑जायत` at exactly these places. Also repaired: **six Latin `o` for the anusvāra `ం`** inside Telugu words (`భూమి॑o`, `అమృత॑o`, `పురు॑ష॒o`, `ముఖ॒o`, `వరే᳚ణ్య॒o`), the same defect class as the twenty-nine repaired in `../../vidhi/taittiriya/01_krishna_yajurveda_sandhyavandanam.txt`; **two `గ్` followed by a zero-width joiner before a spirant**, which spell the guttural nasal and would otherwise have read as a bare `g`; **six places where the accent mark was written before the anusvāra** rather than after it, normalised to the order that same accented copy uses; and **twenty ASCII colons standing for visarga**: six of them `bin/tel2dev.py` maps on its way from the Telugu, and **fourteen more stood in the Devanāgarī of the Puruṣa Sūkta** (`पुन॑:`, `परि॒धय॑:`, `स॒मिध॑:`, `स॑र्व॒हुत॑:` twice, `ऋच॒:`, `अ॑जा॒वय॑:`, `रा॑ज॒न्य॑:`, `यद्वैश्य॑:`, `चक्षो॒:`, `भूर्भुव॒स्सुव॑:`, `धियो॒ यो न॑:`, `दिश॒:`, `धीर॑:`) where the conversion had not reached them. Counted off the file as it now stands, not off the plan. One further defect is corrected in the text and flagged at its unit: **the verse naming the eight powers prints `మహిమా` twice and omits `లఘిమా`**; the second word is `लघिमा` and is written so here.
 
 Unit count: 53 units. The rite falls into the second resolve, the installing of the eight powers with the two principal pots and the installing of breath, the meditation, the sixteen services with the aṅga-pūjās and the hundred and eight names, the binding of the thread, the kathā in six parts, and the closing. The Puruṣa Sūkta is distributed one ṛc to each service, which is what the resolve itself declares.
 
@@ -397,7 +397,7 @@ vidhi:
 Arghya — water for the hands. The service opens with its ṛc of the Puruṣa Sūkta, then the rite's own verse. **The sūkta is accented here** and was collated ṛc by ṛc against the corpus's own Taittirīya copy; see the header.
 deva:
 त्रि॒पादू॒र्ध्व उदै॒त्पुरु॑षः ।
-पादो᳚ऽस्ये॒हाऽऽभ॑वा॒त्पुन॑: ।
+पादो᳚ऽस्ये॒हाऽऽभ॑वा॒त्पुन॑ः ।
 ततो॒ विष्व॒ङ्व्य॑क्रामत् ।
 सा॒श॒ना॒न॒श॒ने अ॒भि ।
 पद्मेन मालया चात्तौ भक्ताभीतिप्रदायकौ ।
@@ -495,8 +495,8 @@ hi: मातृ तीर्थ से, पद्म तीर्थ से, �
 vidhi:
 Vastra — the robe. The service opens with its ṛc of the Puruṣa Sūkta, then the rite's own verse. **The sūkta is accented here** and was collated ṛc by ṛc against the corpus's own Taittirīya copy; see the header.
 deva:
-स॒प्तास्या॑सन्परि॒धय॑: ।
-त्रिः स॒प्त स॒मिध॑: कृ॒ताः ।
+स॒प्तास्या॑सन्परि॒धय॑ः ।
+त्रिः स॒प्त स॒मिध॑ः कृ॒ताः ।
 दे॒वा यद्य॒ज्ञं त॑न्वा॒नाः ।
 अब॑ध्न॒न्पुरु॑षं प॒शुम् ।
 वल्कले रुचिरे सूक्ष्मे चित्र चित्र दशांचिते ।
@@ -541,7 +541,7 @@ hi: पवित्र और प्रजापति से सहज उप�
 vidhi:
 Gandha — sandal paste. The service opens with its ṛc of the Puruṣa Sūkta, then the rite's own verse. **The sūkta is accented here** and was collated ṛc by ṛc against the corpus's own Taittirīya copy; see the header.
 deva:
-तस्मा᳚द्य॒ज्ञात्स॑र्व॒हुत॑: ।
+तस्मा᳚द्य॒ज्ञात्स॑र्व॒हुत॑ः ।
 संभृ॑तं पृषदा॒ज्यम् ।
 प॒शूग्ंस्ताग्ंश्च॑क्रे वाय॒व्यान्॑ ।
 आ॒र॒ण्यान्ग्रा॒म्याश्च॒ ये ।
@@ -566,8 +566,8 @@ hi: कर्पूर मिले सद्गन्धों से अनघ
 vidhi:
 Ābharaṇa — the ornaments. The service opens with its ṛc of the Puruṣa Sūkta, then the rite's own verse. **The sūkta is accented here** and was collated ṛc by ṛc against the corpus's own Taittirīya copy; see the header.
 deva:
-तस्मा᳚द्य॒ज्ञात्स॑र्व॒हुत॑: ।
-ऋच॒: सामा॑नि जज्ञिरे ।
+तस्मा᳚द्य॒ज्ञात्स॑र्व॒हुत॑ः ।
+ऋच॒ः सामा॑नि जज्ञिरे ।
 छन्दाग्ं॑सि जज्ञिरे॒ तस्मा᳚त् ।
 यजु॒स्तस्मा॑दजायत ।
 शीर्षे कंठे बाहुयुग्मे मणिबंधद्वये तथा ।
@@ -626,7 +626,7 @@ deva:
 तस्मा॒दश्वा॑ अजायन्त ।
 ये के चो॑भ॒याद॑तः ।
 गावो॑ ह जज्ञिरे॒ तस्मा᳚त् ।
-तस्मा᳚ज्जा॒ता अ॑जा॒वय॑: ।
+तस्मा᳚ज्जा॒ता अ॑जा॒वय॑ः ।
 तत्तत् कालोत्थ पुष्पौघ मालाभिरनघाऽनघौ ।
 आपादशीर्षं संभूष्य पुनः पुष्पैः समर्चये ॥
 श्रीअनघादेवि समेत श्रीअनघस्वामिने नमः पुष्पाणि समर्पयामि ।
@@ -765,8 +765,8 @@ vidhi:
 Dīpa — the lamp. The service opens with its ṛc of the Puruṣa Sūkta, then the rite's own verse. **The sūkta is accented here** and was collated ṛc by ṛc against the corpus's own Taittirīya copy; see the header.
 deva:
 ब्रा॒ह्म॒णो᳚ऽस्य॒ मुख॑मासीत् ।
-बा॒हू रा॑ज॒न्य॑: कृ॒तः ।
-ऊ॒रू तद॑स्य॒ यद्वैश्य॑: ।
+बा॒हू रा॑ज॒न्य॑ः कृ॒तः ।
+ऊ॒रू तद॑स्य॒ यद्वैश्य॑ः ।
 प॒द्भ्याग्ं शू॒द्रो अ॑जायत ।
 यद्भासेदं जगद्भाति न दृश्येते तथापि यौ ।
 तावुभौ तत्त्वसंदीप्त्यै दीपैरुद्दीपयाम्यहम् ॥
@@ -790,14 +790,14 @@ vidhi:
 Naivedya — the food offering. The service opens with its ṛc of the Puruṣa Sūkta, then the rite's own verse. **The sūkta is accented here** and was collated ṛc by ṛc against the corpus's own Taittirīya copy; see the header.
 deva:
 च॒न्द्रमा॒ मन॑सो जा॒तः ।
-चक्षो॒: सूर्यो॑ अजायत ।
+चक्षो॒ः सूर्यो॑ अजायत ।
 मुखा॒दिन्द्र॑श्चा॒ग्निश्च॑ ।
 प्रा॒णाद्वा॒युर॑जायत ।
 राजान्नं बहुभक्ष्यात्तं नानोपस्कार पुष्कलम् ।
 नैवेद्यं श्रुतिसंवेद्यौ गृह्यतामनघौ मुदा ॥
 श्रीअनघादेवि समेत श्रीअनघस्वामिने नमः नैवेद्यं समर्पयामि ।
-ओं भूर्भुव॒स्सुव॑: । तत्स॑वितु॒र्वरे᳚ण्यं॒ भर्गो॑ दे॒वस्य॑ धी॒महि ।
-धियो॒ यो न॑: प्रचो॒दया᳚त् ॥
+ओं भूर्भुव॒स्सुव॑ः । तत्स॑वितु॒र्वरे᳚ण्यं॒ भर्गो॑ दे॒वस्य॑ धी॒महि ।
+धियो॒ यो न॑ः प्रचो॒दया᳚त् ॥
 सत्यं त्वा ऋतेन परिषिंचामि ।
 अमृतमस्तु । अ॒मृ॒तो॒प॒स्तर॑णमसि ।
 ओं प्रा॒णाय॒ स्वाहा᳚ । ओं अ॒पा॒नाय॒ स्वाहा᳚ । ओं व्या॒नाय॒ स्वाहा᳚ ।
@@ -832,7 +832,7 @@ Tāmbūla — the betel. The service opens with its ṛc of the Puruṣa Sūkta,
 deva:
 नाभ्या॑ आसीद॒न्तरि॑क्षम् ।
 शी॒र्ष्णो द्यौः सम॑वर्तत ।
-प॒द्भ्यां भूमि॒र्दिश॒: श्रोत्रा᳚त् ।
+प॒द्भ्यां भूमि॒र्दिश॒ः श्रोत्रा᳚त् ।
 तथा॑ लो॒काग्ं अ॑कल्पयन् ।
 अनघ स्वामि जनकप्रोद्धृतायुष्य तंत्रके ।
 प्रोक्तैः सुलक्षणैर्युक्तं तांबूलं प्रददेऽनघौ ॥
@@ -855,7 +855,7 @@ Nīrājana — the waving of lamps. The service opens with its ṛc of the Puru�
 deva:
 वेदा॒हमे॒तं पुरु॑षं म॒हान्तम्᳚ ।
 आ॒दि॒त्यव॑र्णं॒ तम॑स॒स्तु पा॒रे ।
-सर्वा॑णि रू॒पाणि॑ वि॒चित्य॒ धीर॑: ।
+सर्वा॑णि रू॒पाणि॑ वि॒चित्य॒ धीर॑ः ।
 नामा॑नि कृ॒त्वाऽभि॒वद॒न्॒ यदास्ते᳚ ।
 प्रभो समंतात् परिवर्तितैः श्री
 कर्पूर नीराजन दीप माल्यैः ।
