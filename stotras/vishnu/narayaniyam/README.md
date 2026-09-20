@@ -64,8 +64,8 @@ from GRETIL.
 
 | | |
 |---|---|
-| Written and read twice off the page | daśakas 1–64 |
-| Remaining | daśakas 65–100 |
+| Written and read twice off the page | daśakas 1–82 |
+| Remaining | daśakas 83–100 |
 
 ## Open questions for the user
 
