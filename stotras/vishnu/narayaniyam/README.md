@@ -64,10 +64,21 @@ from GRETIL.
 
 | | |
 |---|---|
-| Written | daśakas 1–2 |
-| Remaining | daśakas 3–100 |
+| Written and read twice off the page | daśakas 1–48 |
+| Remaining | daśakas 49–100 |
 
 ## Open questions for the user
+
+- **The print omits two verses that GRETIL carries, at daśaka 45.** GRETIL numbers twelve verses
+  there — the last two are `śākhāgre'tha vidhuṁ vilokya phalam`, the child asking for the moon as
+  a fruit, and `kiṁ kiṁ batedam iti saṁbhramabhājam`. Gītā Press 639 closes the daśaka after the
+  tenth verse with its colophon, and the daśakas on either side were checked on the page: 44 also
+  ends at ten, and 46 begins its own subject in anuṣṭubh. Neither verse appears anywhere else in
+  the volume. The file follows the print and records the absence, because the print is the
+  authority for this corpus. But a reciter whose text has twelve verses there will find two
+  missing, so the user may want them added from another witness — which would mean choosing a
+  second printed edition for those two verses alone. Any further case of this kind found in the
+  remaining daśakas will be listed here beside it.
 
 - **Pārāyaṇa apparatus.** Gītā Press 639 prints **no** pārāyaṇa-vidhi — it goes from the table of
   contents straight to the first śloka, unlike the Sundarakāṇḍa volume, which prints four pages
