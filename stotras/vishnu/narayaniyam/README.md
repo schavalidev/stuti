@@ -1,7 +1,9 @@
 # Nārāyaṇīyam — folder notes
 
 Melputtūr Nārāyaṇa Bhaṭṭatiri's Nārāyaṇīyam, composed before the image of Kṛṣṇa at Guruvāyūr
-in 1587: **100 daśakas, 1032 ślokas**, one file per daśaka, `001_…` to `100_…`. The work
+in 1587: **100 daśakas**, one file per daśaka, `001_…` to `100_…`. The Gītā Press volume numbers
+**1034 verses** across the hundred, which is the count these files carry and is read back off them
+rather than taken from the tradition's round figure. The work
 condenses the twelve books of the Bhāgavata Purāṇa and is divided, as the Bhāgavata is, into
 twelve *skandha-paricchedas*; the daśaka numbering runs straight through all twelve.
 
@@ -64,8 +66,8 @@ from GRETIL.
 
 | | |
 |---|---|
-| Written and read twice off the page | daśakas 1–82 |
-| Remaining | daśakas 83–100 |
+| Written and read twice off the page | all 100 daśakas, 1034 verses |
+| Remaining | nothing; see the open questions below |
 
 ## Open questions for the user
 

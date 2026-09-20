@@ -222,7 +222,9 @@ Stōtram (4) + Stuti + Dadhivāmana Stōtram · Paraśurāma Stōtram/Stuti/Aṣ
 (3) · Balarāma Stōtram + Kavacam (2) · Kalki Stōtram
 
 **Not on stotranidhi's Viṣṇu category but found on vignanam (supplement):** Nārāyaṇīyam
-(Melpathur Bhaṭṭatiri, 100 daśakas — batch as ONE work, not 100 titles) · Madhvācārya's
+(Melpathur Bhaṭṭatiri, 100 daśakas — **WRITTEN 19–20 Sep 2026 into its own folder
+`vishnu/narayaniyam/`, 100 files, 1034 verses, from the Gītā Press code 639 page images with
+GRETIL as the second witness; see that folder's README**) · Madhvācārya's
 Dvādaśa Stotra (12 parts — batch as one work) · Brahma Saṁhitā · Kuntī Stuti · Citrakētu/
 Ananta Stōtram · Haṁsaguhya Stōtram · Om Jaya Jagdish Hare (Hindi ārati, flag non-Sanskrit)
 
