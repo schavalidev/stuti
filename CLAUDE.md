@@ -16,6 +16,7 @@
 
 ## The port (`stuti-app/`)
 - `stuti-app/src/` is generated from `design_handoff_stuti/app/` by `stuti-app/tools/codemod/run-all.sh`. **Never hand-edit a generated file to add backend or sync logic** — a re-port overwrites it. Wrap the generated stores from new modules instead. Fixes to the *port itself* belong in the codemod scripts (the `fix-*.mjs` steps), which fail loud on an unexpected anchor rather than silently skipping.
+- **Code goes back to the design too** (22 Sep 2026). After changing a hand-authored module the design can run (Follow, recitations, search matcher), a seam's patch list, or a `@design` section of `stuti-app/src/stuti-app.css`, run `node stuti-app/tools/mirror-to-design.mjs design_handoff_stuti/app`, then upload the changed files to the designer's Claude Design project (the "Stuti" project, not "Copy of Stuti"). `--check` says whether anything would change. Files listed in `tools/codemod/mirrored.json` are written by the mirror and skipped by the port; never hand-edit them in the design. `tools/serve-design.mjs` serves the prototype for checking (the `stuti-design` preview entry).
 - After a design update: pull, run the pipeline, `npm run build`, `npx cap sync android`, then Gradle (see `README.md`). Android toolchain via `source stuti-app/tools/android-env.sh`.
 - The keystore and `android/keystore.properties` are gitignored; don't commit or paste them anywhere.
 - The changelog to update is `design_handoff_stuti/docs/Changelog.html`.
