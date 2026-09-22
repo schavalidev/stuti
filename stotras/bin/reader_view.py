@@ -44,7 +44,7 @@ SOURCING = re.compile(
     r"|\bpage images\b|\bPDF\b|\bthe source\b|\bthe print\b|\bsource page\b",
     re.I)
 
-VERSE_HEAD = re.compile(r"^--- verse (\d+)(?: \| section: ([^-]*?))? ---$", re.M)
+VERSE_HEAD = re.compile(r"^--- verse (\d+|none)(?: \| section: ([^-]*?))? ---$", re.M)
 
 
 def parse(text):
@@ -63,7 +63,9 @@ def parse(text):
         if m:
             fields[name] = m.group(1).strip()
     units = []
-    parts = re.split(r"^--- (?:verse|unit|passage) \d+[^\n]*---$", text, flags=re.M)[1:]
+    # `\d+|none` — a unit the source leaves unnumbered is written "verse none", and
+    # 929 of them across 428 files were being dropped here, 21 files rendering empty.
+    parts = re.split(r"^--- (?:verse|unit|passage) (?:\d+|none)[^\n]*---$", text, flags=re.M)[1:]
     for p in parts:
         u = {}
         for m in re.finditer(r"^(deva|iast|en|tel|hi|vidhi|variant):[ \n](.*?)(?=\n(?:deva|iast|en|tel|hi|vidhi|variant):|\Z)",
