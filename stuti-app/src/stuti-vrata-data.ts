@@ -7,7 +7,7 @@ import { AKSHARA_PANCHANGA } from "./stuti-panchanga-engine";
 import { STUTI_PARVA_EXTRA } from "./stuti-parva-data";
 import { STUTI_PREFS } from "./stuti-prefs";
 import { STUTI_PROV } from "./stuti-provenance";
-import { sampradaya } from "./stuti-reckoning";
+import { sampradaya as sampradaya__global } from "./stuti-reckoning";
 import { STUTI_SANKRANTI } from "./stuti-sankranti-data";
 import { STUTI_LOC } from "./stuti-store";
 import { STUTI_TARPANA_EXTRA } from "./stuti-tarpana";
@@ -132,7 +132,7 @@ export const STUTI_VRATA = (function () {
      prevailing at sunrise as it stands. Janmāṣṭamī divides the same way:
      Smārtas by aṣṭamī at niśītha, Vaiṣṇavas by aṣṭamī at sunrise. This is
      a genuine disagreement between schools, not an error in either. */
-  const sampradaya = () => (typeof sampradaya === "function" ? sampradaya() : "smarta");
+  const sampradaya = () => (typeof sampradaya__global === "function" ? sampradaya__global() : "smarta");
   /* whether the reciter keeps the southern (Deccan) dates: a Settings pick
      when made, else the chosen place — south of the Vindhyas, ~21.5°N */
   function southern() {
@@ -1500,19 +1500,6 @@ export const STUTI_VRATA = (function () {
     mod.bind({ lunar, monthStart });
     mod.entries.forEach((e) => vratas.push(e));
   });
-
-  /* the tarpaṇa days need one thing the parva dinams do not: `governed`,
-     because the amāvāsyā that carries pitṛ tarpaṇam is the one running at
-     aparāhṇa, and only that function knows how to ask. */
-  if (STUTI_TARPANA_EXTRA) {
-    STUTI_TARPANA_EXTRA.bind({ lunar, monthStart, governed, ref: REF });
-    STUTI_TARPANA_EXTRA.entries.forEach((e) => vratas.push(e));
-  }
-  /* the nine graha janma tithis — quiet marks, from stuti-graha-janma.js */
-  if (STUTI_GRAHA_JANMA_EXTRA) {
-    STUTI_GRAHA_JANMA_EXTRA.bind({ lunar });
-    STUTI_GRAHA_JANMA_EXTRA.entries.forEach((e) => vratas.push(e));
-  }
 
   /* ---- memo: a vrata's find(), remembered until its inputs change ---- */
   const FIND_CACHE = new Map<string, any>();

@@ -67,8 +67,14 @@ if (logPathArg) {
       const op = join(OUT, owner);
       let ot = readFileSync(op, "utf8");
       if (!new RegExp(`^export (?:function|const|let) ${n}\\b|^export \\{[^}]*\\b${n}\\b`, "m").test(ot)) writeFileSync(op, ot + `\nexport { ${n} };\n`);
-      t = t.replace(new RegExp(`\\bwindow\\.${n}\\b`, "g"), n);
-      t = `import { ${n} } from "./${owner.replace(/\.tsx?$/, "")}";\n` + t;
+      /* A reader that declares the same name itself (stuti-vrata-data's own
+         `const sampradaya = () => window.sampradaya ? window.sampradaya() : …`)
+         must not have the read rewritten to that local: the local would then
+         call itself until the stack ran out, which is what emptied the Vrata
+         and Parva shelves on 22 Sep 2026. The global comes in under an alias. */
+      const local = new RegExp(`\\b(?:const|let|var|function)\\s+${n}\\b`).test(t) ? `${n}__global` : n;
+      t = t.replace(new RegExp(`\\bwindow\\.${n}\\b`, "g"), local);
+      t = `import { ${n}${local === n ? "" : " as " + local} } from "./${owner.replace(/\.tsx?$/, "")}";\n` + t;
       rewired++;
     }
     writeFileSync(join(OUT, f), t);

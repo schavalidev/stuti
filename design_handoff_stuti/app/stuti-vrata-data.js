@@ -1486,19 +1486,6 @@ window.STUTI_VRATA = (function () {
     mod.entries.forEach((e) => vratas.push(e));
   });
 
-  /* the tarpaṇa days need one thing the parva dinams do not: `governed`,
-     because the amāvāsyā that carries pitṛ tarpaṇam is the one running at
-     aparāhṇa, and only that function knows how to ask. */
-  if (window.STUTI_TARPANA_EXTRA) {
-    window.STUTI_TARPANA_EXTRA.bind({ lunar, monthStart, governed, ref: REF });
-    window.STUTI_TARPANA_EXTRA.entries.forEach((e) => vratas.push(e));
-  }
-  /* the nine graha janma tithis — quiet marks, from stuti-graha-janma.js */
-  if (window.STUTI_GRAHA_JANMA_EXTRA) {
-    window.STUTI_GRAHA_JANMA_EXTRA.bind({ lunar });
-    window.STUTI_GRAHA_JANMA_EXTRA.entries.forEach((e) => vratas.push(e));
-  }
-
   /* ---- memo: a vrata's find(), remembered until its inputs change ---- */
   const FIND_CACHE = new Map();
   let FIND_STAMP = "";

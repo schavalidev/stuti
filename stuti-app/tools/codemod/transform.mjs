@@ -81,8 +81,15 @@ for (const file of ORDER) {
   for (const [sourceFile, names] of Object.entries(plan)) {
     for (const name of names) {
       if (SPECIAL.has(name)) continue;
-      (importsBySource[sourceFile] ||= new Set()).add(name);
-      text = text.replace(new RegExp(`\\bwindow\\.${name}\\b`, "g"), name);
+      /* A file that declares the name itself — stuti-vrata-data's own
+         `const sampradaya = () => window.sampradaya ? window.sampradaya() : …`,
+         a fallback for the global from stuti-reckoning — must not have the
+         read rewritten to that local: the local would call itself until the
+         stack ran out, which is what emptied the Vrata and Parva shelves on
+         22 Sep 2026. The global comes in under an alias instead. */
+      const local = new RegExp(`\\b(?:const|let|var|function)\\s+${name}\\b`).test(text) ? `${name}__global` : name;
+      (importsBySource[sourceFile] ||= new Set()).add(local === name ? name : `${name} as ${local}`);
+      text = text.replace(new RegExp(`\\bwindow\\.${name}\\b`, "g"), local);
     }
   }
 
