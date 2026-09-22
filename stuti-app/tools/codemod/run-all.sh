@@ -31,6 +31,7 @@ node fix-account-seam.mjs
 node fix-feedback-seam.mjs
 node fix-dana-seam.mjs
 node fix-deeplink-seam.mjs
+node fix-corpus-seam.mjs
 node setup-entry.mjs
 # after setup-entry, which is what copies the design's CSS in: the fonts
 # step edits that copy, so running it first leaves it nothing to strip

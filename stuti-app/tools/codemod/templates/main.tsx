@@ -9,7 +9,8 @@ import { installRelay } from "./stuti-relay"; // crash notes and Follow sessions
 import { installJournal } from "./stuti-journal"; // screens, taps and slow tasks, flushed to the same folder
 import { installNotify } from "./stuti-notify"; // on the phone the OS holds the cues, so they arrive with the app closed
 import { installCloud } from "./stuti-cloud"; // the account, sync and the cue record, when Supabase is configured
-import { applyCachedCorrections, refreshCorrections } from "./stuti-corrections"; // verse corrections published without a release
+import { applyCachedCorrections, refreshCorrections } from "./stuti-corrections";
+import { installCorpus } from "./stuti-corpus"; // texts fetched one at a time from the corpus host, kept on the device // verse corrections published without a release
 import { STUTI_BUILD } from "./stuti-build";
 import "./stuti.css";
 import "./stuti-components.css";
@@ -29,6 +30,7 @@ try {
   if (prefs && prefs.onboarded && !localStorage.getItem("stuti-beta-key")) localStorage.setItem("stuti-beta-key", "1");
 } catch (e) {}
 
+installCorpus();   // the fetched catalogue, when a corpus host is configured
 applyCachedCorrections();
 (window as any).STUTI_BUILD_LABEL = STUTI_BUILD.label();   // the analytics sink names the build, nothing else about the device
 

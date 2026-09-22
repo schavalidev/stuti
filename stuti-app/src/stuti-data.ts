@@ -446,5 +446,5 @@ export const STUTI = (function () {
     return { ...w, deity: deityById[w.deity] };
   }
 
-  return { deities, hymns, weekday, deityById, hymnsForDeity, hymnById, today, FORMS, formsForDeity };
+  return { deities, hymns, weekday, deityById, hymnsForDeity, hymnById, today, FORMS, formsForDeity, _corpus: { normTitle, slug, typeOf, assignForm } };
 })();

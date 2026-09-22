@@ -23,3 +23,9 @@ export const STUTI_CLOUD_CONFIG = {
 /* One Payment Button per amount, created in Razorpay → Payment Pages →
    Payment Buttons for exactly that amount. Blank keeps that amount a preview. */
 export const STUTI_RAZORPAY_IDS = { day: "", month: "", year: "", patron: "" };
+
+/* Where the fetched corpus lives (stuti-app/docs/corpus-delivery.md): a
+   static host with index.json and t/<id>.<hash>.json. Blank keeps the app
+   on its bundled texts alone. For a test, the localStorage key
+   "stuti-corpus-url" overrides this on one device. */
+export const STUTI_CORPUS_URL = "";

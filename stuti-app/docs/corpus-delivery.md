@@ -1,6 +1,16 @@
 # Corpus delivery — adding texts after the app is live
 
-A sketch, 22 September 2026. Nothing here is built yet.
+A sketch, 22 September 2026. Steps 1 and 3 of the order of work were built the same
+day: `stotras/bin/build_corpus.py`, `src/stuti-corpus.ts`, `tools/codemod/fix-corpus-seam.mjs`
+and `tools/serve-corpus.mjs` (a CORS static server for checking against the preview; the
+`stuti-corpus` entry in `.claude/launch.json`). Step 2, the host, is not chosen yet; until
+`STUTI_CORPUS_URL` is set the app is unchanged. On one device the localStorage key
+`stuti-corpus-url` overrides it for a test.
+
+Where the build departs from the sketch: the leak gate withholds a failing text and names it
+rather than refusing the whole build; `Published:` absent lists nothing unless `--publish-all`
+is passed, which it is for now since no file carries the field yet; a `names` table becomes a
+`names` array on the text rather than verses; a section tag in Devanāgarī goes in `deva`.
 
 ## The problem
 

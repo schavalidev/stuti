@@ -703,7 +703,9 @@ function useScrub(onSeek) {
    from all of them, so reciting today's stotra ended on a deity you had
    never opened. It now returns to `backView`, and hands that screen its own
    origin back as `from` so the chain holds for two hops. */
+import { useCorpusText } from "./stuti-corpus";
 function ReaderView({ hymn: rawHymn, deity, go, theme, toggleTheme, lang, setLang, backView = "deity", retView }) {
+  const corpusTick = useCorpusText(rawHymn);
   /* A vidhi is printed with blanks — the saṅkalpa's hour, the gotra and name of
      each person the tarpaṇam addresses. The app knows both, so the text the
      reciter is handed has them filled in. Done here rather than at load, so a
@@ -718,7 +720,7 @@ function ReaderView({ hymn: rawHymn, deity, go, theme, toggleTheme, lang, setLan
   const [regOpen, setRegOpen] = useState(null);   // slot id, or "" for the whole register
   const hymn = useMemo(
     () => (STUTI_FILL ? STUTI_FILL.hymn(rawHymn, { lang }) : rawHymn),
-    [rawHymn, regTick, lang]
+    [rawHymn, regTick, lang, corpusTick]
   );
   const LINE_MS = 3600;                       // fallback dwell; real dwell scales with line length
   const SIZES = [0.9, 1, 1.15, 1.3, 1.5];     // reader text-size steps
