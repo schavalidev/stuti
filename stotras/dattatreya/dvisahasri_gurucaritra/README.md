@@ -5,7 +5,7 @@ This is apparatus, not reader-facing text. Nothing here belongs in a file's `Tit
 
 Vāsudevānanda Sarasvatī's Sanskrit Guru Caritra, composed at Māṇgāv in 1884: the life of
 Śrīpāda Śrīvallabha and Nṛsiṁha Sarasvatī, told by Siddha to Nāmadhāraka. **23 adhyāyas,
-1,781 ślokas**, one file per adhyāya, in the corpus's five-field format.
+1,820 ślokas**, one file per adhyāya, in the corpus's five-field format.
 
 ## Why this recension and not another
 
@@ -17,7 +17,7 @@ are three different works rather than three editions of one:
 
 | work | division | ślokas |
 |---|---|---|
-| **Dvisāhasrī Gurucaritam** — this folder | 23 adhyāyas in three yogas | 1,781 |
+| **Dvisāhasrī Gurucaritam** — this folder | 23 adhyāyas in three yogas | 1,820 |
 | Gurusaṁhitā, alias Samaślokī Gurucaritra | 51 adhyāyas, tracking the Marathi | 6,471+ |
 | Gurucaritra-kāvya, alias Triśatikāvya | 3 śatakas | 300 |
 
@@ -39,9 +39,19 @@ supersede it.
 
 ## The name
 
-"Dvisāhasrī" means the two-thousand. The 23 adhyāyas hold 1,781 ślokas; with the Śrīgurustuti
+"Dvisāhasrī" means the two-thousand. The 23 adhyāyas hold 1,820 ślokas; with the Śrīgurustuti
 (112), the twelve opening ślokas and the Yogarahasya and Bodharahasya the total comes to
-about 2,000. The preface says the count reaches 2,000 once the uvāca-mantras and half-ślokas
+about 2,000.
+
+**The count was corrected from 1,781 on 2026-09-22, and how it was got wrong is worth
+recording.** The book's own table of contents gives each adhyāya's episodes with verse
+ranges, and summing the last range of each gave 1,781. That table is itself OCR and is
+truncated in six places: it ends adhyāya 3 at 57 where the colophon reads 58, adhyāya 7 at
+47 against 50, adhyāya 9 at 69 against 83, adhyāya 14 at 62, adhyāya 17 at 67 against 106,
+and adhyāya 23 at 118 against 119. The colophon count is taken, because the verse number
+standing immediately before each colophon is read identically by all four OCR passes. Use
+the contents table for the SECTIONS, which is what it is good for, and the colophon for the
+COUNT. The preface says the count reaches 2,000 once the uvāca-mantras and half-ślokas
 are counted in, "as is done for the Saptaśatī havana". The title is from Datta's own words to
 the author, *saṁhiteyaṁ dvisāhasrī*.
 
@@ -109,8 +119,15 @@ misfiles a third of the book.
 
 The book's own table of contents gives each adhyāya its name, its page range and its episodes
 with verse ranges. That table is parsed by `bin/gurucaritra/contents.py` and is the source of
-the `Sections:` field in each file — the divisions are the book's, not ours — and of the verse
-count each file is checked against.
+the `Sections:` field in each file — the divisions are the book's, not ours. It is **not** a
+reliable source for the verse count; see the note above. The count comes from the number
+standing immediately before each colophon, in `bin/cache/gurucaritra/truecounts.json`.
+
+**Several adhyāyas carry an interpolated verse**, printed and marked क्षेपकः by the edition.
+In adhyāya 1 it is unnumbered; in adhyāyas 10 and 12 it carries its own number ॥१॥ rather
+than continuing the chapter's sequence; in adhyāya 9 there are two, marked क्षेपकौ in the
+dual, and these are numbered 82 and 83 within the chapter. Each is kept where the print puts
+it and numbered as the print numbers it.
 
 ## Accent
 

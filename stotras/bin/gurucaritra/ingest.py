@@ -12,6 +12,10 @@ table of contents, because that is the check that matters.
 import argparse, json, sys
 from pathlib import Path
 
+# Gaps that are the print's own numbering, verified on the page image, not text
+# that is missing. Anything here has been looked at; nothing is assumed.
+KNOWN_JUMPS = {'13': set(range(33, 43))}
+
 BIN = Path(__file__).resolve().parents[1]
 CACHE = BIN / 'cache' / 'gurucaritra'
 
@@ -70,8 +74,14 @@ def main():
         units = ch.get('units') or []
         (CACHE / f'adh{n:02d}_units.json').write_text(
             json.dumps(units, ensure_ascii=False, indent=1), encoding='utf-8')
-        missing = [i for i in range(1, expected + 1)
-                   if i not in {v['num'] for v in ch['verses']}]
+        # `expected` is the LAST NUMBER the colophon carries, which is not the
+        # same as the verse count: this edition's numbering jumps in places
+        # (adhyāya 13 runs ||32|| straight to ||43||). A gap is reported so it
+        # can be checked against the page, never silently filled.
+        seen = {v['num'] for v in ch['verses']}
+        missing = [i for i in range(1, expected + 1) if i not in seen]
+        if str(n) in KNOWN_JUMPS:
+            missing = [i for i in missing if i not in KNOWN_JUMPS[str(n)]]
         no_tr = [v['num'] for v in ch['verses']
                  if v['num'] not in {u['num'] for u in units}]
         row = (f"adh {n:>2}: {got}/{expected} verses, {len(units)} translated, "
