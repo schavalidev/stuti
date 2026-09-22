@@ -1,9 +1,10 @@
 # Nārāyaṇīyam — folder notes
 
 Melputtūr Nārāyaṇa Bhaṭṭatiri's Nārāyaṇīyam, composed before the image of Kṛṣṇa at Guruvāyūr
-in 1587: **100 daśakas**, one file per daśaka, `001_…` to `100_…`. The Gītā Press volume numbers
-**1034 verses** across the hundred, which is the count these files carry and is read back off them
-rather than taken from the tradition's round figure. The work
+in 1587: **100 daśakas**, one file per daśaka, `001_…` to `100_…`. The folder holds **1036 verses**,
+counted off the built files. The Gītā Press volume numbers 1034 of them; the other two are the
+eleventh and twelfth of daśaka 45, which that volume does not print and which were added from the
+Trivandrum edition at the user's decision — see below. The work
 condenses the twelve books of the Bhāgavata Purāṇa and is divided, as the Bhāgavata is, into
 twelve *skandha-paricchedas*; the daśaka numbering runs straight through all twelve.
 
@@ -66,21 +67,22 @@ from GRETIL.
 
 | | |
 |---|---|
-| Written and read twice off the page | all 100 daśakas, 1034 verses |
+| Written and read twice off the page | all 100 daśakas, 1036 verses |
 | Remaining | nothing; see the open questions below |
 
 ## Open questions for the user
 
-- **The print omits two verses that GRETIL carries, at daśaka 45.** GRETIL numbers twelve verses
-  there — the last two are `śākhāgre'tha vidhuṁ vilokya phalam`, the child asking for the moon as
-  a fruit, and `kiṁ kiṁ batedam iti saṁbhramabhājam`. Gītā Press 639 closes the daśaka after the
-  tenth verse with its colophon, and the daśakas on either side were checked on the page: 44 also
-  ends at ten, and 46 begins its own subject in anuṣṭubh. Neither verse appears anywhere else in
-  the volume. The file follows the print and records the absence, because the print is the
-  authority for this corpus. But a reciter whose text has twelve verses there will find two
-  missing, so the user may want them added from another witness — which would mean choosing a
-  second printed edition for those two verses alone. Any further case of this kind found in the
-  remaining daśakas will be listed here beside it.
+- **Daśaka 45 — settled 22 September 2026, and the one place the files depart from Gītā Press.**
+  That volume closes the daśaka after the tenth verse. The user asked for the missing pair — the
+  child taking the moon for a fruit, and his father plunged for a moment in the ocean of Brahman —
+  and they now stand in the file as verses 11 and 12, printed from the Nārāyaṇīyam with the
+  Bhaktapriyā commentary, Trivandrum Sanskrit Series 18, 1912, printed page 177, read off the page
+  image. That edition numbers them 11 and 12 and closes with a colophon for a daśaka of twelve.
+  **It also marks both with an asterisk and footnotes them**: पद्यद्वयमिदं क. पुस्तके परं दृश्यते।
+  तत्रापि न व्याख्या दृश्यते। — the pair is found only in manuscript ka, and no commentary on it is
+  found even there. That is very likely why Gītā Press omits them, and the file's recension note
+  says so, so that nobody later mistakes the addition for the base text. Should another daśaka turn
+  out to be short in the same way, it is to be handled the same way and listed here.
 
 - **Pārāyaṇa apparatus.** Gītā Press 639 prints **no** pārāyaṇa-vidhi — it goes from the table of
   contents straight to the first śloka, unlike the Sundarakāṇḍa volume, which prints four pages
