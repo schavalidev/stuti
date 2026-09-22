@@ -3714,6 +3714,6 @@ Day numbers are the book's own saptāha-pāṭha-paddhati; see `00_parayana_vidh
 - [x] 21 भक्तिवर्णनम् — 103 ślokas, pp. 531–555  — ends day 6 of the saptāha
 - [x] 22 क्षत्रमाहात्म्यवर्णनम् — 102 ślokas, pp. 556–584
 - [x] 23 । — 118 ślokas, pp. 585–619  — ends day 7 of the saptāha
-- [ ] Śrīgurustuti (112 ślokas, stands before adhyāya 1)
-- [ ] Yogarahasya and Bodharahasya (read on the seventh day, after adhyāya 23)
-- [ ] Aparādha-kṣamāpana-stotra, `rasajñā vaśā` (read at the end of every day)
+- [x] Śrīgurustuti (112 ślokas, stands before adhyāya 1)
+- [x] Yogarahasya (43) and Bodharahasya (44), read on the seventh day after adhyāya 23
+- [x] Aparādha-kṣamāpana-stotra, `rasajñā vaśā` — NOT a separate file: it is Śrīgurustuti 43 onward, a titled section of that hymn

@@ -158,11 +158,11 @@ OCR vote and the author's own anvaya; the IAST is generated from that Devanāgar
 typed. The whole folder passes `bin/reader_view.py --audit` with no sourcing in any
 reader-facing field.
 
-**Still to write:** the Śrīgurustuti (112 ślokas, which stands before adhyāya 1 and is read
-at the start of every day of the saptāha), the Yogarahasya and the Bodharahasya (read on the
-seventh day after adhyāya 23), and the aparādha-kṣamāpana-stotra beginning rasajñā vaśā
-(read at the end of every day). Without these four the saptāha cannot be kept from this
-folder alone, so they are the next work.
+**The volume is complete.** 27 files, 2,017 units: the pārāyaṇa vidhi, the Śrīgurustuti (112), the 23 adhyāyas (1,809 verses and their interpolations), the Yogarahasya (43) and the Bodharahasya (44). The verses total 2,008, which is why the work is called the two-thousand. The closing colophon of the volume, after the Bodharahasya, reads *samāpto'yaṁ granthaḥ prīyatām anena śrīdattaḥ*.
+
+**The three pieces outside the adhyāyas stand on weaker evidence, and their files say so.** The four-pass OCR that served the chapters does not cover the front and back matter usably, so for the Śrīgurustuti, the Yogarahasya and the Bodharahasya the page image is the sole witness. Sixteen readings across the three could not be made out with confidence; each is recorded at the verse concerned rather than corrected into what the Sanskrit might be expected to say. Anyone who obtains a better scan should start there.
+
+**Where the daily stotra of apology stands.** The vidhi directs that the hymn beginning *rasajñā vaśā* be read at the end of every day. It is not a separate work: printed page 4 carries the heading (अपराधक्षमापनस्तोत्रम्) in brackets before verse 43 of the Śrīgurustuti, and the words the direction names it by open verse 44. A reciter finds it at Śrīgurustuti 43 onward; the corpus does not copy those verses out twice.
 
 The method is not optional here and is stated in `AUTHORING_QUEUE.md`: the page image
 settles every reading and the OCR is used only to find a page.
