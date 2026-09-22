@@ -36,8 +36,11 @@ def parse_verified(path):
                    'kshepaka': True}
             out.append(cur)
             continue
+        # A continuation line is more of the verse. Anything starting '#' or '^'
+        # is a note — one such note carried Devanāgarī and was being swallowed
+        # into the verse text, so the test is on the marker, not on the script.
         if cur is not None and line.startswith('  ') and DEVA.search(line) \
-                and not line.strip().startswith('^'):
+                and not line.lstrip().startswith(('^', '#')):
             cur['deva'].append(line.strip())
     return out
 
@@ -62,7 +65,7 @@ def main():
     tr = {}
     if a.tr:
         for u in json.loads(Path(a.tr).read_text(encoding='utf-8')):
-            tr[u['num']] = u
+            tr[u['num']] = u          # 'num' may be the string 'kshepaka'
     sections = {}
     if a.sections:
         sections = {int(k): v for k, v in
@@ -79,7 +82,7 @@ def main():
         if cur_section:
             head += f" | section: {cur_section}"
         head += ' ---'
-        u = tr.get(n, {})
+        u = tr.get('kshepaka' if v['kshepaka'] else n, {})
         if not v['kshepaka'] and not u:
             missing.append(n)
         body.append(
