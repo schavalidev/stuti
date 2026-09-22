@@ -768,13 +768,14 @@ export const STUTI_L = (function () {
     rhbMore:         { roman: "More", deva: "अधिक", telugu: "మరిన్ని" },
     rhbLess:         { roman: "Less", deva: "कम", telugu: "తక్కువ" },
     gotraHint:       { roman: "Start typing — Bhāradvāja, Kāśyapa…", deva: "लिखना शुरू करें — भारद्वाज, काश्यप…", telugu: "టైప్ చేయండి — బారద్వాజ, కాశ్యప…" },
+    namaHint:        { roman: "The name the saṅkalpa should speak", deva: "जो नाम संकल्प में बोला जाए", telugu: "సంకల్పంలో చెప్పవలసిన పేరు" },
     travelMoved:     { roman: "You are in {city}. Your place clause now reads:",
                        deva: "आप {city} में हैं। देश-वाक्य अब ऐसा होगा—",
                        telugu: "మీరు {city}లో ఉన్నారు. దేశ వాక్యం ఇప్పుడు ఇలా ఉంటుంది—" },
     obSankalpa:      { roman: "Your saṅkalpa", deva: "आपका सङ्कल्प", telugu: "మీ సంకల్పం" },
-    obSankalpaSub:   { roman: "Write it once; it appears in the saṅkalpa every day. You can add it later.",
-                       deva: "एक बार लिखें; रोज़ संकल्प में आ जाएगा। बाद में भी जोड़ सकते हैं।",
-                       telugu: "ఒక్కసారి రాస్తే చాలు; రోజూ సంకల్పంలో వస్తుంది. తర్వాత కూడా జోడించవచ్చు." },
+    obSankalpaSub:   { roman: "For your name to be spoken in the saṅkalpa at a pūjā, write your gotra and name here. Skip it now and add it in Settings whenever you like.",
+                       deva: "पूजा के संकल्प में आपका नाम आए, इसके लिए अपना गोत्र और नाम यहाँ लिखें। अभी छोड़ दें, बाद में सेटिंग्स में जोड़ सकते हैं।",
+                       telugu: "పూజలు చేసేటప్పుడు మీ సంకల్పంలో మీ పేరు రావాలంటే, మీ గోత్రం, పేరు ఇక్కడ రాయండి. ఇప్పుడు వదిలేసి, తర్వాత సెట్టింగ్స్‌లో చేర్చుకోవచ్చు." },
     obLater:         { roman: "I’ll add this later", deva: "बाद में जोड़ूँगा", telugu: "తర్వాత జోడిస్తాను" },
     desaFrameL:      { roman: "Cosmographic frame", deva: "द्वीप-वर्ष", telugu: "ద్వీప వర్ష" },
     frameBharata:    { roman: "Jambūdvīpa · Bhāratavarṣa", deva: "जम्बूद्वीप · भारतवर्ष", telugu: "జంబూద్వీపం · భారతవర్షం" },
@@ -802,6 +803,16 @@ export const STUTI_L = (function () {
     festSearchPh:   { roman: "Search festivals", deva: "पर्व खोजें", telugu: "పర్వాలు వెతకండి" },
     festNoMatch:    { roman: "No festival by that name", deva: "इस नाम का कोई पर्व नहीं", telugu: "ఆ పేరుతో పర్వం లేదు" },
     vrataComing:    { roman: "Coming up",   deva: "आगे",         telugu: "రాబోయేవి" },
+    vrataDayOf:     { roman: "Day {n} of {d}", deva: "{d} में {n}वाँ दिन", telugu: "{d} రోజుల్లో {n}వ రోజు" },
+    vrataEnds:      { roman: "ends {date}", deva: "{date} को समाप्त", telugu: "{date}తో ముగుస్తుంది" },
+    vrataBegins:    { roman: "begins {date}", deva: "{date} से आरम्भ", telugu: "{date}న మొదలు" },
+    vrataTabYear:   { roman: "By the year", deva: "वर्ष के क्रम से", telugu: "సంవత్సర క్రమంలో" },
+    vrataTabVow:    { roman: "Taken as a vow", deva: "सङ्कल्प से लिए जाने वाले", telugu: "సంకల్పంతో పట్టే వ్రతాలు" },
+    vrataGrpCycle:  { roman: "Begun on any week", deva: "किसी भी सप्ताह से आरम्भ", telugu: "ఏ వారంలోనైనా మొదలుపెట్టేవి" },
+    vrataGrpDiksha: { roman: "Dīkṣās", deva: "दीक्षाएँ", telugu: "దీక్షలు" },
+    vrataGrpFortnight: { roman: "Every fortnight", deva: "प्रत्येक पक्ष", telugu: "ప్రతి పక్షం" },
+    vrataGrpAny:    { roman: "Kept on any favourable day", deva: "किसी भी शुभ दिन", telugu: "ఏ శుభ దినంలోనైనా" },
+    vrataVowNote:   { roman: "These are not tied to a month. The bell asks which month you will keep one in.", deva: "ये किसी मास से बद्ध नहीं हैं। घण्टी पूछती है कि आप इसे किस मास में रखेंगे।", telugu: "ఇవి ఏ మాసానికీ కట్టుబడినవి కావు. గంట ఏ మాసంలో పట్టుతారో అడుగుతుంది." },
     vidhanamOpen:    { roman: "Vidhānam", deva: "विधानम्", telugu: "విధానం" },
     vidhanamOpenSub: { roman: "How the day is kept, step by step", deva: "यह दिन कैसे रखा जाता है, क्रम से", telugu: "ఈ రోజును ఎలా ఆచరించాలి, వరుసగా" },
     vrataSearchPh:  { roman: "Search vratas", deva: "व्रत खोजें", telugu: "వ్రతాలు వెతకండి" },
@@ -960,6 +971,11 @@ export const STUTI_L = (function () {
     keepLead:        { roman: "Remind", deva: "स्मरण", telugu: "గుర్తు" },
     keepLeadDays:    { roman: "{n} d", deva: "{n} दिन", telugu: "{n} రో" },
     keepIn:          { roman: "in {n} days", deva: "{n} दिन में", telugu: "{n} రోజుల్లో" },
+    keepBegunOn:     { roman: "Begun on", deva: "आरम्भ", telugu: "మొదలుపెట్టిన రోజు" },
+    keepBegin:       { roman: "Begin, and count the days", deva: "आरम्भ करें, दिन गिनें", telugu: "మొదలుపెట్టి రోజులు లెక్కపెట్టండి" },
+    keepSpanWeek:    { roman: "{w} {n} of {d}", deva: "{d} में {n}वाँ {w}", telugu: "{d} {w}ల్లో {n}వది" },
+    keepSpanDone:    { roman: "The count is complete", deva: "गिनती पूर्ण हुई", telugu: "లెక్క పూర్తయింది" },
+    keepSpanSub:     { roman: "Counted from {date} · ends {end}", deva: "{date} से गिनती · {end} को समाप्त", telugu: "{date} నుంచి లెక్క · {end}తో ముగుస్తుంది" },
     keepThisMonth:   { roman: "This month", deva: "इस मास", telugu: "ఈ మాసంలో" },
     keepTick:        { roman: "Done today", deva: "आज हुआ", telugu: "ఈ రోజు అయింది" },
     keepTicked:      { roman: "Kept today", deva: "आज पूर्ण", telugu: "ఈ రోజు నోచుకున్నారు" },
@@ -1029,6 +1045,7 @@ export const STUTI_L = (function () {
     lgNomus:     { roman: "Nomu", deva: "नोमु", telugu: "నోములు" },
     lgTicksN:    { roman: "{n} days", deva: "{n} दिन", telugu: "{n} రోజులు" },
     lgNomuDone:  { roman: "kept", deva: "पूर्ण", telugu: "పూర్తి" },
+    lgSpans:     { roman: "Counted vows", deva: "संख्या-व्रत", telugu: "సంఖ్యా వ్రతాలు" },
     lgVratas:    { roman: "Vratālu kept", deva: "व्रत निभाए", telugu: "నిలిపిన వ్రతాలు" },
     lgNoneYet:   { roman: "Nothing recorded in this span.", deva: "इस अवधि में कुछ दर्ज नहीं।", telugu: "ఈ కాలంలో ఏమీ నమోదు కాలేదు." },
     lgMore:      { roman: "{n} more", deva: "{n} और", telugu: "మరో {n}" },
@@ -1204,7 +1221,7 @@ export const STUTI_L = (function () {
     purva: 1, stotram: 1, viniyoga: 1, dhyanam: 1, namavali: 1, phala: 1, ksama: 1, uttara: 1,
     gsPurva: 1, gsNamavali: 1, gsUttara: 1, tabNamavali: 1, tabNamalu: 1,
   };
-  const readLang = () => { try { return localStorage.getItem("stuti-lang") || "deva"; } catch (e) { return "deva"; } };
+  const readLang = () => { try { return localStorage.getItem("stuti-lang") || "roman"; } catch (e) { return "roman"; } };
   const uiLang = () => {
     try {
       const a = document.documentElement.getAttribute("data-ui-lang");
@@ -1218,6 +1235,9 @@ export const STUTI_L = (function () {
   return {
     ui: uiLang,
     t: (key, lang) => pick(S[key], langFor(key, lang)) || key,
+    /* forces a language, ignoring the interface setting — the beta latch
+       stands in English for everyone, whatever the device has chosen */
+    tIn: (key, lang) => pick(S[key], lang) || key,
     /* spoken label — aria text is chrome, so it follows the interface language */
     a: (key) => pick(S[key], uiLang()) || key,
     name: (d, lang) => lang === "telugu" ? (d.tel || d.name) : lang === "deva" ? (d.deva || d.name) : d.name,

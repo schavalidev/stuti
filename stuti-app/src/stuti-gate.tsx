@@ -3,7 +3,6 @@ import { STUTI_BUILD } from "./stuti-build";
 import { STUTI_COUNT } from "./stuti-count";
 import { STUTI_L } from "./stuti-i18n";
 import { Flame, Icon } from "./stuti-icons";
-import { STUTI_PREFS } from "./stuti-prefs";
 
 /* ============================================================
    STUTI — the beta latch
@@ -18,11 +17,9 @@ const { useState: useGateS, useEffect: useGateE, useRef: useGateR } = React;
 const GATE_ASK: Record<string, string> = { roman: "Do not have the word? Write to", deva: "शब्द नहीं मिला? हमें लिखें:", telugu: "పదం లేదా? మాకు రాయండి:" };
 function GateScreen({ lang: langProp = "roman", onOpen }) {
   const L = STUTI_L, B = STUTI_BUILD;
-  /* The latch stands before onboarding, so no language has been chosen yet:
-     English is the default. Only a household that already picked a language
-     (onboarded) sees the latch in that language. */
-  let lang = "roman";
-  try { if (STUTI_PREFS && STUTI_PREFS.get().onboarded) lang = langProp; } catch (e) {}
+  /* The latch is always in English: it stands before the household's
+     language is known, and an invited reader arrives at it cold. */
+  const lang = "roman";
   const [v, setV] = useGateS("");
   const [no, setNo] = useGateS(0);
   const ref = useGateR(null);
@@ -37,17 +34,17 @@ function GateScreen({ lang: langProp = "roman", onOpen }) {
   useGateE(() => { if (ref.current) ref.current.focus(); }, []);
   const font = L.font(lang);
   return (
-    <div className="gate-wrap" role="dialog" aria-label={L.t("gateTitle", lang)}>
+    <div className="gate-wrap" role="dialog" aria-label={L.tIn("gateTitle", lang)}>
       <div className="gate-card">
         <div className="gate-brand"><Flame size={26} /><span className="display" style={{ fontFamily: font }}>{lang === "telugu" ? "స్తుతి" : lang === "deva" ? "स्तुति" : "Stuti"}</span></div>
-        <h1 className="gate-title display" style={{ fontFamily: font }}>{L.t("gateTitle", lang)}</h1>
-        <p className="gate-lede">{L.t("gateLede", lang)}</p>
+        <h1 className="gate-title display" style={{ fontFamily: font }}>{L.tIn("gateTitle", lang)}</h1>
+        <p className="gate-lede">{L.tIn("gateLede", lang)}</p>
         <form className="gate-form" onSubmit={(e) => { e.preventDefault(); tryIt(); }}>
           <input ref={ref} className={"gate-input" + (no ? " gate-shake" : "")} key={no} autoFocus value={v} onChange={(e) => setV(e.target.value)}
-            placeholder={L.t("gatePh", lang)} autoComplete="off" autoCapitalize="none" spellCheck="false" inputMode="text" aria-label={L.t("gatePh", lang)} />
-          <button className="gate-go" type="submit" disabled={!v.trim()}>{L.t("gateGo", lang)}<Icon name="arrow" size={17} /></button>
+            placeholder={L.tIn("gatePh", lang)} autoComplete="off" autoCapitalize="none" spellCheck="false" inputMode="text" aria-label={L.tIn("gatePh", lang)} />
+          <button className="gate-go" type="submit" disabled={!v.trim()}>{L.tIn("gateGo", lang)}<Icon name="arrow" size={17} /></button>
         </form>
-        <p className={"gate-note" + (no ? " is-no" : "")}>{no ? L.t(no > 2 ? "gateNoAgain" : "gateNo", lang) : L.t("gateHint", lang)}</p>
+        <p className={"gate-note" + (no ? " is-no" : "")}>{no ? L.tIn(no > 2 ? "gateNoAgain" : "gateNo", lang) : L.tIn("gateHint", lang)}</p>
         {B.SUPPORT && <a className="gate-mail" href={"mailto:" + B.SUPPORT + "?subject=" + encodeURIComponent("Stuti beta")}>{GATE_ASK[lang] || GATE_ASK.roman} {B.SUPPORT}</a>}
         <div className="gate-foot">{B.label()}</div>
       </div>

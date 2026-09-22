@@ -41,7 +41,7 @@ export const STUTI_PUSH = (function () {
     const pl = c.place, PA = c.engines.panchanga, pr = c.prefs || {};
     return {
       v: 1,
-      lang: (function () { try { return localStorage.getItem("stuti-lang") || "deva"; } catch (e) { return "deva"; } })(),
+      lang: (function () { try { return localStorage.getItem("stuti-lang") || "roman"; } catch (e) { return "roman"; } })(),
       /* the zone is what the server must keep; the offset below is only true
          for today, and a stored number goes wrong twice a year.
          `horizon`, not `elev`: what moves sunrise is the drop to the horizon

@@ -107,6 +107,13 @@ window.STUTI_LEDGER = (function () {
     try {
       const K = window.STUTI_KEEP;
       K.list().forEach((k) => {
+        /* a counted vow is a run of ticks, like a nomu; the last one completes it */
+        if (k.kind === "vrata" && k.mode === "span") {
+          const ticks = (k.ticks || []).filter(inSpan).length;
+          if (k.kept && inSpan(k.keptOn)) nomus.push({ k, on: k.keptOn, ticks, done: true, span: true });
+          else if (ticks) nomus.push({ k, ticks, done: false, span: true });
+          return;
+        }
         if (k.kind === "vrata") { if (inSpan(k.keptOn)) vratas.push({ k, on: k.keptOn }); return; }
         const ticks = (k.ticks || []).filter(inSpan).length;
         if (k.kept && inSpan(k.keptOn)) nomus.push({ k, on: k.keptOn, ticks, done: true });

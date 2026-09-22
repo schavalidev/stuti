@@ -285,7 +285,7 @@ function FavButton({ id, size = 24, className = "", lang, weekday }) {
   /* the label is spoken, not seen, so it still owes the reciter their own
      script — callers rarely pass lang, so fall back to the stored choice */
   let lg = lang;
-  if (!lg) { try { lg = localStorage.getItem("stuti-lang") || "deva"; } catch (e) { lg = "deva"; } }
+  if (!lg) { try { lg = localStorage.getItem("stuti-lang") || "roman"; } catch (e) { lg = "roman"; } }
   return (
     <button
       className={"fav-btn" + (on ? " on" : "") + (className ? " " + className : "")}

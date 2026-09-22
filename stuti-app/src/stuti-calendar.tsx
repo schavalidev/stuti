@@ -100,7 +100,7 @@ function CalendarView({ go, lang = "deva" }) {
       for (let i = 0; i < days; i++) {
         const day = new Date(d.getFullYear(), d.getMonth(), d.getDate() - lead + i);
         const key = V.dayKey(day);
-        (map[key] = map[key] || []).push(days > 1 ? Object.assign(Object.create(v), { dayNo: i + 1, days }) : v);
+        (map[key] = map[key] || []).push(days > 1 ? Object.assign(Object.create(v), { dayNo: i + 1, days, spanMid: !!v.quiet && i > 0 && i < days - 1 }) : v);
       }
     }
     return map;
@@ -155,7 +155,10 @@ function CalendarView({ go, lang = "deva" }) {
       const mine = fests.some((f) => f.personal);
       let tarp = false;
       try { tarp = !!(TP && TP.occasionsOn(date, loc) || []).length; } catch (e) {}
-      arr.push({ d, date, phase: pa.phase, isFull: pa.tithiIndex === 14, isNew: pa.tithiIndex === 29, vrata: pa.observances.some(o => o.kind === "vrata"), fest: fests.length > 0, mine, tarp });
+      /* a quiet span (a dīkṣā, a month of lamps) is listed on each of its days
+         but lights the dot only where it begins and ends; a dot on forty-one
+         days in a row says nothing */
+      arr.push({ d, date, phase: pa.phase, isFull: pa.tithiIndex === 14, isNew: pa.tithiIndex === 29, vrata: pa.observances.some(o => o.kind === "vrata"), fest: fests.some((f) => !f.spanMid), mine, tarp });
     }
     return arr;
   }, [cursor.y, cursor.m, loc, monthFestMap]);
@@ -194,7 +197,7 @@ function CalendarView({ go, lang = "deva" }) {
       : " " + P.fmtTime(min) + " " + L.t("fromTime", lang);
   };
   const span = (start, end) => from(start) + till(end);
-  /* yoga and karaṇa arrive as IAST; the Devānāgarī source is what the other
+  /* yoga and karaṇa arrive as IAST; the Devānāgarī source is what the other
      scripts derive from — the same path the home card takes */
   const YD = (SK_CONST && SK_CONST.YOGA_DEVA) || window.YOGA_DEVA || {};
   const KD = (SK_CONST && SK_CONST.KARANA_DEVA) || window.KARANA_DEVA || {};
@@ -667,3 +670,4 @@ function CalendarView({ go, lang = "deva" }) {
 }
 
 export { CalendarView };
+

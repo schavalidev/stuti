@@ -22,9 +22,9 @@ import { fmtNudgeTime } from "./stuti-remind";
 const { useState: useStateO } = React;
 
 const OB_SAMPLE = {
-  deva:   "श्रीगणेशाय नमः",
-  telugu: "శ్రీగణేశాయ నమః",
-  roman:  "śrīgaṇeśāya namaḥ",
+  deva:   "श्री गणेशाय नमः",
+  telugu: "శ్రీ గణేశాయ నమః",
+  roman:  "śrī gaṇeśāya namaḥ",
 };
 const OB_SCRIPTS = [
   { k: "deva",   name: "Hindi",   native: "हिन्दी" },
@@ -61,10 +61,10 @@ function ObPlace({ lang }) {
       </div>
       <button className="ob-detect" onClick={() => detect()} disabled={geo === "locating"}>
         <Icon name="locate" size={17} />
-        {geo === "locating" ? L.t("locating", lang) : L.t("useMyPlace", lang)}
+        {geo === "locating" ? L.tIn("locating", lang) : L.tIn("useMyPlace", lang)}
       </button>
-      {(geo === "denied" || geo === "error") && <div className="ob-place-note">{L.t("locDenied", lang)}</div>}
-      <div className="pd-cap">{L.t("orChooseCity", lang)}</div>
+      {(geo === "denied" || geo === "error") && <div className="ob-place-note">{L.tIn("locDenied", lang)}</div>}
+      <div className="pd-cap">{L.tIn("orChooseCity", lang)}</div>
       <div className="ob-cities">
         {rows.map((c) => (
           <button key={c.id} className={"ob-city" + (locId === c.id ? " on" : "")} onClick={() => setLocId(c.id)}>
@@ -104,12 +104,12 @@ function Onboarding({ lang, setLang, onDone }) {
       <div className="ob-sheet">
         <div className="ob-top">
           <div className="ob-brand"><Flame size={22} /><span className="ob-brand-name display">Stuti</span></div>
-          {i > 0 && <button className="ob-skip" onClick={finish}>{L.t("obSkip", lang)}</button>}
+          {i > 0 && <button className="ob-skip" onClick={finish}>{L.tIn("obSkip", lang)}</button>}
         </div>
 
         <div className="ob-scroll scroll">
           {i === 0 && (
-            <ObStep lang={lang} title={L.t("obReadIn", lang)} sub={L.t("obReadInSub", lang)}>
+            <ObStep lang={lang} title={L.tIn("obReadIn", lang)} sub={L.tIn("obReadInSub", lang)}>
               <div className="ob-scripts">
                 {OB_SCRIPTS.map((s) => (
                   <button key={s.k} className={"ob-script" + (lang === s.k ? " on" : "")} onClick={() => setLang(s.k)}>
@@ -123,7 +123,7 @@ function Onboarding({ lang, setLang, onDone }) {
           )}
 
           {i === 1 && (
-            <ObStep lang={lang} title={L.t("obKeep", lang)} sub={L.t("obKeepSub", lang)}>
+            <ObStep lang={lang} title={L.tIn("obKeep", lang)} sub={L.tIn("obKeepSub", lang)}>
               <div className="ob-deities">
                 {S.deities.filter((d) => !d.hidden && !d.notIshta).map((d) => (
                   <button key={d.id} className={"ob-deity" + (kept.indexOf(d.id) !== -1 ? " on" : "")}
@@ -138,13 +138,13 @@ function Onboarding({ lang, setLang, onDone }) {
           )}
 
           {i === 2 && (
-            <ObStep lang={lang} title={L.t("obPlace", lang)} sub={L.t("obPlaceSub", lang)}>
+            <ObStep lang={lang} title={L.tIn("obPlace", lang)} sub={L.tIn("obPlaceSub", lang)}>
               <ObPlace lang={lang} />
             </ObStep>
           )}
 
           {i === 3 && (
-            <ObStep lang={lang} title={L.t("obWhen", lang)} sub={L.t("obWhenSub", lang)}>
+            <ObStep lang={lang} title={L.tIn("obWhen", lang)} sub={L.tIn("obWhenSub", lang)}>
               <div className="ob-times">
                 {["05:30", "06:00", "06:30", "07:00", "18:30"].map((t) => (
                   <button key={t} className={"rm-time" + (remind.time === t && remind.on ? " on" : "")}
@@ -154,29 +154,29 @@ function Onboarding({ lang, setLang, onDone }) {
                 ))}
                 <label className="rm-time rm-time-custom">
                   <Icon name="clock" size={15} />
-                  <input type="time" value={remind.time} aria-label={L.t("atWhatHour", lang)}
+                  <input type="time" value={remind.time} aria-label={L.tIn("atWhatHour", lang)}
                     onChange={(e) => setRemind((r) => Object.assign({}, r, { time: e.target.value || "06:00", on: true }))} />
                 </label>
               </div>
               <button className={"rm-toggle rm-toggle-quiet" + (remind.tithi ? " on" : "")} role="switch" aria-checked={remind.tithi}
                 onClick={() => setRemind((r) => Object.assign({}, r, { tithi: !r.tithi }))}>
-                <span>{L.t("tithiNudges", lang)}</span>
+                <span>{L.tIn("tithiNudges", lang)}</span>
                 <span className="rm-switch"><i /></span>
               </button>
               <button className={"ob-none" + (remind.on ? "" : " on")} onClick={() => setRemind((r) => Object.assign({}, r, { on: false }))}>
-                {L.t("obNoReminder", lang)}
+                {L.tIn("obNoReminder", lang)}
               </button>
-              <div className="rm-note">{L.t("notifNote", lang)}</div>
+              <div className="rm-note">{L.tIn("notifNote", lang)}</div>
             </ObStep>
           )}
           {i === 4 && (
-            <ObStep lang={lang} title={L.t("obSankalpa", lang)} sub={L.t("obSankalpaSub", lang)}>
-              {/* show first, ask second. The app has already set twelve clauses
-                  for today at this reciter's place; having done that, it has
-                  earned the right to ask for the thirteenth. */}
-              <KnownClauses lang={lang} sk={sk} />
+            <ObStep lang={lang} title={L.tIn("obSankalpa", lang)} sub={L.tIn("obSankalpaSub", lang)}>
+              {/* ask first: the two fields are what this step is for. The
+                  twelve clauses the app has already set stand underneath as
+                  the answer to "where does this go". */}
               <FlyleafForm sk={sk} lang={lang} />
-              <button className="ob-none ob-later" onClick={finish}>{L.t("obLater", lang)}</button>
+              <KnownClauses lang={lang} sk={sk} />
+              <button className="ob-none ob-later" onClick={finish}>{L.tIn("obLater", lang)}</button>
             </ObStep>
           )}
         </div>
@@ -186,9 +186,9 @@ function Onboarding({ lang, setLang, onDone }) {
             {[0, 1, 2, 3, 4].map((n) => <span key={n} className={"ob-dot" + (n === i ? " on" : "")} />)}
           </div>
           <div className="ob-actions">
-            {i > 0 && <button className="ob-back" onClick={() => setI(i - 1)}>{L.t("obBack", lang)}</button>}
+            {i > 0 && <button className="ob-back" onClick={() => setI(i - 1)}>{L.tIn("obBack", lang)}</button>}
             <button className="ob-next" onClick={next}>
-              {i === last ? L.t("obBegin", lang) : L.t("obNext", lang)}
+              {i === last ? L.tIn("obBegin", lang) : L.tIn("obNext", lang)}
               <Icon name="arrow" size={17} />
             </button>
           </div>

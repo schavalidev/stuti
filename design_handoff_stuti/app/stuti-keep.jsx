@@ -54,6 +54,56 @@ function KeepBell({ kind, id, lang, size = 17 }) {
   );
 }
 
+/* ---------------- a counted vow: begun on a day, told by which day it is ---------------- */
+function kpSpanLine(K, k, lang) {
+  const L = window.STUTI_L, s = K.spanState(k); if (!s) return "";
+  const loc = lang === "telugu" ? "te-IN" : lang === "deva" ? "hi-IN" : "en-IN";
+  const ds = (d) => d.toLocaleDateString(loc, { day: "numeric", month: "short" });
+  if (k.kept || s.over) return L.t("keepSpanDone", lang) + (k.kept && K.hasUdyapana(k) ? " · " + L.t(k.udyapanaDone ? "keepUdyapanaDone" : "keepUdyapana", lang) : "");
+  if (s.before) return L.t("vrataBegins", lang).replace("{date}", ds(s.start)) + " · " + L.t("vrataEnds", lang).replace("{date}", ds(s.end));
+  const w = s.weekly != null ? s.start.toLocaleDateString(loc, { weekday: "long" }) : null;
+  const n = w ? L.t("keepSpanWeek", lang).replace("{w}", w).replace("{n}", s.n).replace("{d}", s.total)
+              : L.t("vrataDayOf", lang).replace("{n}", s.n).replace("{d}", s.total);
+  return n + " · " + L.t("vrataEnds", lang).replace("{date}", ds(s.end));
+}
+/* the start is picked on the house calendar; changing it restarts the count */
+function KeepSpan({ vrataId, lang, compact }) {
+  const K = useKeep(), L = window.STUTI_L;
+  const k = K.find("vrata", vrataId);
+  const sp = K.spanOf(vrataId); if (!sp) return null;
+  const due = k ? K.dueToday(k) : null;
+  const s = k ? K.spanState(k) : null;
+  const pct = s && !s.before ? Math.min(100, Math.round(s.n / s.total * 100)) : 0;
+  if (!k) return (
+    <div className="keep-span">
+      <button className="vow-do" onClick={() => { K.add("vrata", vrataId); kpArmReminders(); stutiToast(L.t("keepAdded", lang)); }}><Icon name="bell" size={15} /> {L.t("keepBegin", lang)}</button>
+    </div>
+  );
+  return (
+    <div className="keep-span">
+      <div className="keep-span-row">
+        <span className="keep-lead-label">{L.t("keepBegunOn", lang)}</span>
+        <window.HouseDate value={k.start} onChange={(key) => { if (key) K.setStart(k.id, key); }} lang={lang} ariaLabel={L.t("keepBegunOn", lang)} />
+      </div>
+      {!compact && <div className="keep-span-line">{kpSpanLine(K, k, lang)}</div>}
+      {!k.kept && <div className="keep-bar"><span style={{ width: pct + "%" }} /></div>}
+      {k.kept && K.hasUdyapana(k) && !k.udyapanaDone && (
+        <div className="vow-actions keep-actions">
+          <span className="keep-lead-label">{L.t("keepUdyapana", lang)}</span>
+          <button className="vow-keep" onClick={() => K.markUdyapana(k.id)}><Icon name="check" size={16} /> {L.t("keepUdyapanaDone", lang)}</button>
+        </div>
+      )}
+      {due && due.state === "span" && !k.kept && (
+        <div className="vow-actions keep-actions">
+          <button className={"vow-keep" + (due.done ? " kept" : "")} onClick={() => K.tick(k.id)} disabled={due.done}>
+            <Icon name="check" size={16} /> {due.done ? L.t("keepTicked", lang) : L.t("keepTick", lang)}
+          </button>
+        </div>
+      )}
+    </div>
+  );
+}
+
 /* ---------------- which month ---------------- */
 function KeepMonthSheet({ lang, onClose, onPick, current }) {
   const L = window.STUTI_L, MA = window.STUTI_MASA;
@@ -116,9 +166,12 @@ function KeepCard({ go, lang = "deva" }) {
             const s = K.subject(k); if (!s) return null;
             const d = window.STUTI.deityById[s.deity];
             const due = K.dueOn(k, new Date(), eng);
-            const udy = k.kept && k.kind === "nomu" && K.hasUdyapana(k) && !k.udyapanaDone;
+            const udy = k.kept && K.hasUdyapana(k) && !k.udyapanaDone;
             let sub = "", status = "";
-            if (k.mode === "daily") {
+            if (k.mode === "span") {
+              sub = kpSpanLine(K, k, lang);
+              if (due && due.state === "span") status = due.done ? L.t("keepTicked", lang) : L.t("vrataToday", lang);
+            } else if (k.mode === "daily") {
               sub = L.t("keepDailySub", lang).replace("{n}", k.ticks.length).replace("{t}", K.YEAR);
             } else if (k.mode === "month") {
               const m = k.masa != null && masaOf(k.masa);
@@ -159,6 +212,7 @@ function KeepCard({ go, lang = "deva" }) {
                   </div>
                 </div>
                 {pct !== null && !k.kept && <div className="keep-bar"><span style={{ width: pct + "%" }} /></div>}
+                {k.mode === "span" && <KeepSpan vrataId={k.ref} lang={lang} compact />}
                 <div className="vow-actions keep-actions">
                   {k.mode === "daily" && !k.kept && (
                     <button className={"vow-keep" + (due && due.done ? " kept" : "")} onClick={() => K.tick(k.id)} disabled={due && due.done}>
@@ -298,4 +352,4 @@ function NomuTracker({ go, lang = "telugu" }) {
   );
 }
 
-Object.assign(window, { KeepBell, KeepCard, KeepMonthSheet, NomuTracker, stutiToast });
+Object.assign(window, { KeepSpan,  KeepBell, KeepCard, KeepMonthSheet, NomuTracker, stutiToast });

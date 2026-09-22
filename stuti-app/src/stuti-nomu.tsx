@@ -5,6 +5,7 @@ import { DeityLink, Icon, Seal, deityStyle } from "./stuti-icons";
 import { STUTI_KEEP } from "./stuti-keep-core";
 import { KeepBell } from "./stuti-keep";
 import { STUTI_NOMU } from "./stuti-nomu-data";
+import { STUTI_PROV } from "./stuti-provenance";
 import { STUTI_TRANSLIT } from "./stuti-translit";
 import { VidhiJump } from "./stuti-vidhi-jump";
 import { VoiceButton } from "./stuti-voice";
@@ -152,6 +153,7 @@ function NomuDetail({ nomuId, go, lang, onBack }) {
         )}
 
         {n.caution && <div className="vr-caveat">{nomP(n.caution, lang)}</div>}
+        {n.prov && STUTI_PROV && <div className="vr-source vr-prov">{STUTI_PROV.line(n, lang)}</div>}
         <div className="vr-caveat">{L.t("nomuNote", lang)}</div>
 
         <div className="vr-sect">

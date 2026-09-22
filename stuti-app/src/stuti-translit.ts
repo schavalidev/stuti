@@ -38,11 +38,23 @@ export const STUTI_TRANSLIT = (function () {
 
   const MAPS = { telugu: TELUGU };
 
+  /* Telugu writes a class nasal before its own class consonant as the
+     anusvāra: तुङ्गभद्रा is తుంగభద్రా, not తుఙ్గభద్రా. Devanāgarī keeps
+     the nasal letter, so the derived Telugu has to make the exchange. */
+  const TEL_ANUSVARA = [
+    [/ఙ్(?=[కఖగఘ])/g, "ం"],
+    [/ఞ్(?=[చఛజఝ])/g, "ం"],
+    [/ణ్(?=[టఠడఢ])/g, "ం"],
+    [/న్(?=[తథదధ])/g, "ం"],
+    [/మ్(?=[పఫబభ])/g, "ం"],
+  ];
+
   function convert(text, script) {
     const m = MAPS[script];
     if (!m || !text) return text;
     let out = "";
     for (const ch of text) out += (m[ch] !== undefined ? m[ch] : ch);
+    if (script === "telugu") TEL_ANUSVARA.forEach(([re, to]) => { out = out.replace(re, to); });
     return out;
   }
 

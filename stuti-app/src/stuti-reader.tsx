@@ -563,7 +563,7 @@ function PartFavButton({ hymn, partKey, size }) {
   const [, force] = React.useReducer(x => x + 1, 0);
   const on = favs.has(hymn.id) && (partKey === "stotram" || (partKey === "purva" ? R.hasPurva(R.get(hymn.id)) : R.hasUttara(R.get(hymn.id))));
   const L = STUTI_L;
-  let lg; try { lg = localStorage.getItem("stuti-lang") || "deva"; } catch (e) { lg = "deva"; }
+  let lg; try { lg = localStorage.getItem("stuti-lang") || "roman"; } catch (e) { lg = "roman"; }
   const click = (e) => {
     e.stopPropagation();
     if (on) {

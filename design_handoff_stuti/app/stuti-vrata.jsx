@@ -32,8 +32,52 @@ function vAwayLabel(away, lang) {
   return L.t("vrataInDays", lang).replace("{n}", away);
 }
 
+/* a many-day span is told by its start; while it runs, by which day it is */
+function vSpanLabel(entry, lang) {
+  const L = window.STUTI_L;
+  if (entry.dayNo) return L.t("vrataDayOf", lang).replace("{n}", entry.dayNo).replace("{d}", entry.days) + " · " + L.t("vrataEnds", lang).replace("{date}", vDateStr(entry.date, lang));
+  return L.t("vrataBegins", lang).replace("{date}", vDateStr(entry.start, lang)) + " · " + vAwayLabel(entry.away, lang);
+}
+
+/* a festival of several named days is listed day by day: the parent row
+   carries the name and the span, each day below it its own line and date */
+function VrataSpanRows({ entry, lang, onOpen, no }) {
+  const S = window.STUTI, L = window.STUTI_L;
+  const v = entry.v, font = vFont(lang);
+  const end = new Date(entry.start.getFullYear(), entry.start.getMonth(), entry.start.getDate() + entry.days - 1);
+  const t0 = new Date(); t0.setHours(0, 0, 0, 0);
+  return (
+    <div className="gs-span">
+      <div className="gs-en">
+        {vIsVratam(v) && <window.KeepBell kind="vrata" id={v.id} lang={lang} />}
+        <button className="gs-main" onClick={() => onOpen(v.id)}>
+          <span className="gs-no" style={{ fontFamily: font }}>{String(no)}</span>
+          <span className="gs-ti"><span className="gs-d" style={{ fontFamily: font }}>{vp3(v.name, lang)}</span></span>
+          <span className="gs-dl" />
+          <span className="gs-vc">{vDateStr(entry.start, lang)} – {vDateStr(end, lang)}</span>
+        </button>
+      </div>
+      {v.dayLines.slice(0, entry.days).map((dl, i) => {
+        const d = new Date(entry.start.getFullYear(), entry.start.getMonth(), entry.start.getDate() + i);
+        const away = Math.round((d - t0) / 86400000);
+        const past = away < 0;
+        return (
+          <div key={i} className={"gs-en gs-en-day" + (past ? " soon" : "")}>
+            <button className="gs-main" onClick={() => onOpen(v.id)}>
+              <span className="gs-ti"><span className="gs-day-line">{vp3(dl, lang)}</span></span>
+              <span className="gs-dl" />
+              <span className={"gs-vc" + (!past && away <= 10 ? " gs-vc-soon" : "")}>{vDateStr(d, lang)}{past ? "" : " · " + vAwayLabel(away, lang)}</span>
+            </button>
+          </div>
+        );
+      })}
+    </div>
+  );
+}
+
 /* ---------------- one row in the lens: granthasūcī entry, not a card ---------------- */
 function VrataRow({ entry, lang, onOpen, no }) {
+  if (entry.days > 1 && entry.v.dayLines && entry.v.dayLines.length >= entry.days) return <VrataSpanRows entry={entry} lang={lang} onOpen={onOpen} no={no} />;
   const S = window.STUTI;
   const v = entry.v, d = S.deityById[v.deity];
   const soon = entry.away <= 10;
@@ -45,7 +89,7 @@ function VrataRow({ entry, lang, onOpen, no }) {
         <span className="gs-no" style={{ fontFamily: font }}>{String(no)}</span>
         <span className="gs-ti"><span className="gs-d" style={{ fontFamily: font }}>{vp3(v.name, lang)}</span></span>
         <span className="gs-dl" />
-        <span className={"gs-vc" + (soon ? " gs-vc-soon" : "")}>{vDateStr(entry.date, lang)} · {vAwayLabel(entry.away, lang)}</span>
+        <span className={"gs-vc" + (soon ? " gs-vc-soon" : "")}>{entry.days > 1 ? vSpanLabel(entry, lang) : vDateStr(entry.date, lang) + " · " + vAwayLabel(entry.away, lang)}</span>
       </button>
     </div>
   );
@@ -56,21 +100,49 @@ function VrataRow({ entry, lang, onOpen, no }) {
    samagri — and a parva is something the whole house observes; the same
    almanac finds both dates, so they share the row, the search and the guide,
    and differ only in which half of the pool they draw from. */
-const vIsVratam = (v) => v.kind === "vratam";
+const vIsVratam = (v) => (window.STUTI_PROV ? window.STUTI_PROV.isType(v, "vratam", "cycle", "diksha") : v.kind === "vratam");
+/* a vow bound to no month: begun on any week, kept every fortnight, or on any
+   favourable day. It has no place in a list ordered by date. */
+const vIsVow = (v) => !!(v.floating || v.optional || v.everyMonth || (window.STUTI_PROV && window.STUTI_PROV.isType(v, "diksha")));
+const vVowGroup = (v) => (v.optional && !v.floating ? "vrataGrpAny" : v.everyMonth ? "vrataGrpFortnight" : window.STUTI_PROV && window.STUTI_PROV.isType(v, "diksha") ? "vrataGrpDiksha" : "vrataGrpCycle");
+
+/* one row on the vow tab: name and rule, no date; a dīkṣā with a fixed span adds it */
+function VowRow({ v, lang, onOpen, no, entry }) {
+  const font = vFont(lang);
+  const span = entry && entry.days > 1 && !v.floating ? vSpanLabel(entry, lang) : null;
+  return (
+    <div className="gs-en">
+      <window.KeepBell kind="vrata" id={v.id} lang={lang} />
+      <button className="gs-main" onClick={() => onOpen(v.id)}>
+        <span className="gs-no" style={{ fontFamily: font }}>{String(no)}</span>
+        <span className="gs-ti">
+          <span className="gs-d" style={{ fontFamily: font }}>{vp3(v.name, lang)}</span>
+          <span className="gs-vow-rule">{vp3(vRule(v), lang)}</span>
+        </span>
+        {span && <span className="gs-dl" />}
+        {span && <span className="gs-vc">{span}</span>}
+      </button>
+    </div>
+  );
+}
 
 function VrataLens({ go, lang, onOpen, only = "vratam", ph = "vrataSearchPh", none = "vrataNoMatch" }) {
   const L = window.STUTI_L, V = window.STUTI_VRATA;
   useMasaSys();
   const [q, setQ] = useStateV2("");
+  const [tab, setTab] = useStateV2("year");
   const now = new Date();
-  const all = V.upcoming().filter((x) => (only === "vratam" ? vIsVratam(x.v) : !vIsVratam(x.v)));
+  const pool = V.upcoming().filter((x) => (only === "vratam" ? vIsVratam(x.v) : !vIsVratam(x.v)));
+  /* the vows bound to no month sit on their own tab; the dated list is annual */
+  const vows = only === "vratam" ? pool.filter((x) => vIsVow(x.v)) : [];
+  const all = only === "vratam" ? pool.filter((x) => !vIsVow(x.v)) : pool;
   /* the list is a calendar until someone types: then it is a name lookup,
      flat and date-ordered, because "when is Varalakṣmī" is the only
      question a search on this lens is ever asked. */
   const fold = (s) => (window.STUTI_TRANSLIT ? window.STUTI_TRANSLIT.fold(s) : String(s).toLowerCase());
   const qf = fold(q).trim();
-  const hits = qf ? all.filter((x) => fold([x.v.name.roman, x.v.name.deva, x.v.name.tel, vp3(vRule(x.v), lang) || ""].join(" ")).indexOf(qf) !== -1) : null;
-  const thisMonth = all.filter((x) => x.date.getFullYear() === now.getFullYear() && x.date.getMonth() === now.getMonth());
+  const hits = qf ? pool.filter((x) => fold([x.v.name.roman, x.v.name.deva, x.v.name.tel, vp3(vRule(x.v), lang) || ""].join(" ")).indexOf(qf) !== -1) : null;
+  const thisMonth = all.filter((x) => x.start.getFullYear() === now.getFullYear() && x.start.getMonth() === now.getMonth());
   const later = all.filter((x) => thisMonth.indexOf(x) === -1);
   const monthName = now.toLocaleDateString(vLocale(lang), { month: "long" });
   let n = 0;
@@ -96,11 +168,33 @@ function VrataLens({ go, lang, onOpen, only = "vratam", ph = "vrataSearchPh", no
         </div>
       </div>
 
+      {only === "vratam" && !hits && (
+        <div className="cal-lenses vr-tabs" role="tablist">
+          {[["year", "vrataTabYear"], ["vow", "vrataTabVow"]].map(([id, key]) => (
+            <button key={id} role="tab" aria-selected={tab === id} className={"cal-lens" + (tab === id ? " on" : "")} style={{ fontFamily: vFont(lang) }} onClick={() => setTab(id)}>{L.t(key, lang)}</button>
+          ))}
+        </div>
+      )}
+
       {hits ? (
         <div className="gs-ix">
           <div className="gs-sec">{hits.length ? L.t("vrataFound", lang).replace("{n}", hits.length) : L.t(none, lang)}</div>
-          {hits.map((x) => <VrataRow key={x.v.id} entry={x} lang={lang} onOpen={onOpen} no={++n} />)}
+          {hits.map((x) => (vIsVow(x.v) && only === "vratam" ? <VowRow key={x.v.id} v={x.v} entry={x} lang={lang} onOpen={onOpen} no={++n} /> : <VrataRow key={x.v.id} entry={x} lang={lang} onOpen={onOpen} no={++n} />))}
         </div>
+      ) : tab === "vow" && only === "vratam" ? (
+      <div className="gs-ix">
+        {["vrataGrpCycle", "vrataGrpDiksha", "vrataGrpFortnight", "vrataGrpAny"].map((g) => {
+          const rows = vows.filter((x) => vVowGroup(x.v) === g);
+          if (!rows.length) return null;
+          return (
+            <React.Fragment key={g}>
+              <div className="gs-sec">{L.t(g, lang)}</div>
+              {rows.map((x) => <VowRow key={x.v.id} v={x.v} entry={x} lang={lang} onOpen={onOpen} no={++n} />)}
+            </React.Fragment>
+          );
+        })}
+        <div className="vr-caveat">{L.t("vrataVowNote", lang)}</div>
+      </div>
       ) : (
       <div className="gs-ix">
         {thisMonth.length > 0 && (
@@ -114,7 +208,7 @@ function VrataLens({ go, lang, onOpen, only = "vratam", ph = "vrataSearchPh", no
       </div>
       )}
 
-      <div className="vr-caveat">{L.t("vrataDateNote", lang)}</div>
+      {tab !== "vow" && <div className="vr-caveat">{L.t("vrataDateNote", lang)}</div>}
       <div style={{ height: 32 }} />
     </div>
   );
@@ -192,6 +286,7 @@ function VrataDetail({ vrataId, go, lang, onBack }) {
               <span className={"vr-when-away" + (away <= 10 ? " soon" : "")}>{vAwayLabel(away, lang)}</span>
             </div>
           )}
+          {window.KeepSpan && window.STUTI_KEEP.spanOf(v.id) && <window.KeepSpan vrataId={v.id} lang={lang} />}
           <div className="vr-meta">
             <span>{vp3(v.duration, lang)}</span>
             <span className="dot" />
@@ -395,6 +490,7 @@ function VrataDetail({ vrataId, go, lang, onBack }) {
         )}
 
         {v.source && <div className="vr-source">{vp3(v.source, lang)}</div>}
+        {v.prov && window.STUTI_PROV && <div className="vr-source vr-prov">{window.STUTI_PROV.typeName(v, lang)} · {window.STUTI_PROV.line(v, lang)}</div>}
         {v.brief && !v.source && <div className="vr-caveat">{L.t("vrataNote", lang)}</div>}
         <div style={{ height: 40 }} />
       </div>

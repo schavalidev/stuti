@@ -275,20 +275,25 @@ window.STUTI_MASA = (function () {
      An annual vratam is also a day the calendar keeps, so it shows under
      parva dinālu too; only the recurring ones (everyMonth, or a weekly rule
      mapped to its month) are vows alone and stay out of the parva list. */
+  /* a record that names its own month (the backlog marks, the cycles and
+     dīkṣās) needs no row in the map above */
   function matchesMasa(v, idx) {
     if (v.everyMonth) return true;
-    const m = VRATA_MASA[v.id]; if (m == null || m === "any") return false;
+    const m = VRATA_MASA[v.id] != null ? VRATA_MASA[v.id] : v.masa; if (m == null || m === "any") return false;
     return Array.isArray(m) ? m.indexOf(idx) !== -1 : m === idx;
   }
   const WEEKLY = { "mangala-gauri": 1, "shravana-ravivaram": 1, "shravana-somavaram": 1 };
-  const annual = (v) => !v.everyMonth && !WEEKLY[v.id];
+  const annual = (v) => !v.everyMonth && !WEEKLY[v.id] && v.weekly === undefined;
+  /* a month's vratas are the ones that belong to it: an Ekādaśī or a Pradoṣa
+     falls every fortnight and a Satyanārāyaṇa on any Pūrṇimā, so they are
+     nobody's month and stay off every list */
   function vratasOf(idx) {
     const V = window.STUTI_VRATA; if (!V) return [];
-    return V.vratas.filter((v) => v.kind === "vratam" && matchesMasa(v, idx));
+    return V.vratas.filter((v) => v.kind === "vratam" && !v.everyMonth && matchesMasa(v, idx));
   }
   function parvasOf(idx) {
     const V = window.STUTI_VRATA; if (!V) return [];
-    return V.vratas.filter((v) => (v.kind !== "vratam" || annual(v)) && matchesMasa(v, idx));
+    return V.vratas.filter((v) => (v.kind !== "vratam" || annual(v)) && !v.everyMonth && matchesMasa(v, idx));
   }
   function nomuOf(idx) {
     const N = window.STUTI_NOMU; if (!N) return [];
@@ -358,5 +363,6 @@ window.STUTI_MASA = (function () {
     return null;
   }
 
+  if (window.STUTI_PROV) Object.keys(spans).forEach((k) => window.STUTI_PROV.stamp(spans[k], false));
   return { M, list, byId, spans, currentIdx, orderedList, vratasOf, parvasOf, nomuOf, parayanaOf, spansOf, rangeOf };
 })();

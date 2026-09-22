@@ -10,7 +10,6 @@ import { STUTI_L } from "./stuti-i18n";
 import { FavButton, Icon, Seal, deityStyle, useFavs } from "./stuti-icons";
 import { STUTI_KSHANA } from "./stuti-kshana-core";
 import { KshanaCard } from "./stuti-kshana";
-import { STUTI_LIB } from "./stuti-library-data";
 import { masaMixFor } from "./stuti-masa";
 import { nityaQueue } from "./stuti-nitya-queue";
 import { STUTI_MUHURTA } from "./stuti-muhurta";
@@ -461,8 +460,6 @@ function ParvaOne({ hit, go, lang }) {
     const dayOf = L === "telugu" ? `${hit.dayNo}వ రోజు / ${hit.days}` : L === "deva" ? `दिन ${hit.dayNo} / ${hit.days}` : `Day ${hit.dayNo} of ${hit.days}`;
     sub = `${dayOf} · ${sub}`;
   }
-  /* the hymns the vrata names, as chips that open the reader directly */
-  const hymns = hit.eve ? [] : (STUTI_LIB && STUTI_LIB.resolveStotras ? STUTI_LIB.resolveStotras(v.stotras) : []).slice(0, 3);
   const openVrata = () => go("browse", { libSub: { kind: "vrata", key: v.id, returnTo: "home" } });
   const k = hit.eve
     ? (L === "telugu" ? "రేపు" : L === "deva" ? "कल" : "Tomorrow")
@@ -490,13 +487,6 @@ function ParvaOne({ hit, go, lang }) {
         </span>
         <span className="parva-chev" aria-hidden="true"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="m9 6 6 6-6 6"></path></svg></span>
       </button>
-      {hymns.length > 0 && (
-        <div className="parva-chips">
-          {hymns.map((h) => (
-            <button key={h.id} className="parva-chip" style={{ fontFamily: sFont(L) }} onClick={() => go("reader", { deity: h.deity, hymn: h.id, from: "home" })}>{STUTI_L.hymnTitle(h, L)}</button>
-          ))}
-        </div>
-      )}
       {/* a computed day owes an account of itself — which kāla decided it, and
           on whose authority. The same "?" the sandhyā plate carries — a full
           pill read as a second action beside the card's own. */}

@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="day" data-lang="roman" data-ui-lang="roman" data-palette="unified" data-seal="ratna">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Stuti · స్తుతి · स्तुति — the hymns, the day, and your practice</title>
+<meta name="description" content="Stuti is a recitation companion. Hymns in Telugu, Devanāgarī and English with the meaning of every line, the day's pañcāṅga for your place, japa, pārāyaṇa and vratas. Free to read, offline." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous" />
+<link rel="icon" type="image/png" sizes="192x192" href="icons/icon-192.png" />
+<link rel="stylesheet" href="stuti.css" />
+<link rel="stylesheet" href="stuti-components.css" />
+<link rel="stylesheet" href="stuti-palette.css" />
+<style>
+html,body{height:auto;min-height:0}
+body{background:var(--glow),var(--bg);background-repeat:no-repeat;background-size:100% 900px,auto;color:var(--ink);font-family:var(--font-ui);text-rendering:optimizeLegibility}
+*{font-style:normal}
+a{color:var(--gold-deep);text-decoration:none}a:hover{color:var(--accent)}
+.cta,.cta:hover{color:#fff}[data-theme="night"] .cta,[data-theme="night"] .cta:hover{color:#1B150D}
+.ghost,.ghost:hover{color:inherit}
+h1,h2,h3{font-family:var(--font-display);font-weight:400;letter-spacing:.01em;text-wrap:balance;margin:0}
+p{margin:0}
+.wrap{max-width:1140px;margin:0 auto;padding:0 34px}
+.eyebrow{color:var(--accent-ink)}
+.deva{font-family:var(--font-deva)}.tel{font-family:var(--font-telugu)}
+/* masthead */
+.top{position:sticky;top:0;z-index:50;background:color-mix(in oklab,var(--bg) 88%,transparent);backdrop-filter:blur(14px) saturate(1.08);-webkit-backdrop-filter:blur(14px) saturate(1.08);border-bottom:1px solid var(--line-2)}
+.top .wrap{display:flex;align-items:center;gap:20px;padding-top:11px;padding-bottom:11px}
+.brand{display:flex;align-items:center;gap:10px;color:var(--accent-ink)}
+.brand .nm{font-family:var(--font-display);font-size:26px;letter-spacing:.02em}
+.brand .sc{font-family:var(--font-deva);font-size:17px;color:var(--ink-faint);margin-top:2px}
+.topnav{display:flex;gap:4px;margin-right:auto}
+.topnav a{font-size:15px;font-weight:600;color:var(--ink-soft);padding:9px 12px;border-radius:999px;transition:background var(--fast),color var(--fast)}
+.topnav a:hover{background:var(--surface-2);color:var(--ink)}
+.top .cta{min-height:46px;font-size:15px;padding:0 20px;gap:9px}
+.top .icon-btn{width:46px;height:46px;border:1px solid var(--line);background:var(--surface);color:var(--ink-soft);display:grid;place-items:center;cursor:pointer}
+.acts{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}
+/* phone frame */
+.phone{width:390px;height:780px;border-radius:44px;background:var(--ink);padding:12px;box-shadow:var(--shadow),0 0 0 1px rgba(0,0,0,.12);position:relative;flex:none}
+[data-theme="night"] .phone{background:#3A3129}
+.phone::before{content:"";position:absolute;top:22px;left:50%;transform:translateX(-50%);width:110px;height:30px;border-radius:999px;background:inherit;z-index:2}
+.phone iframe{display:block;width:100%;height:100%;border:0;border-radius:34px;background:var(--bg)}
+.phone-note{margin-top:14px;font-size:13.5px;color:var(--ink-faint);text-align:center;max-width:36ch;text-wrap:pretty;margin-inline:auto}
+/* hero */
+.hero{display:grid;grid-template-columns:1.1fr .9fr;gap:56px;align-items:center;padding:64px 34px 56px}
+.hero h1{font-size:clamp(2.4rem,4.4vw,3.9rem);line-height:1.04;margin-top:16px;max-width:15ch}
+.hero .lede{font-size:19px;line-height:1.55;color:var(--ink-soft);max-width:46ch;text-wrap:pretty;margin-top:22px}
+.hero-phone{display:flex;flex-direction:column;align-items:center}
+.scripts-line{display:flex;gap:14px;align-items:baseline;margin-top:26px;color:var(--ink-faint);font-size:15px}
+.scripts-line b{font-weight:400;color:var(--accent-ink);font-size:22px}
+.plain{display:flex;gap:26px;flex-wrap:wrap;margin-top:30px;padding-top:22px;border-top:1px solid var(--line-2)}
+.plain span{display:flex;align-items:center;gap:8px;font-size:15px;font-weight:600;color:var(--ink-soft)}
+.plain svg{color:var(--accent-ink);flex:none}
+/* bands */
+.band{padding:78px 0}
+.band-warm{background:linear-gradient(180deg,var(--bg-warm),var(--bg))}
+.sec-head{max-width:640px}
+.sec-head h2{font-size:clamp(1.95rem,3.2vw,2.7rem);line-height:1.1;margin-top:11px}
+.sec-head p{font-size:17.5px;line-height:1.62;color:var(--ink-soft);margin-top:14px;text-wrap:pretty}
+/* four tabs */
+.tabs4{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px;margin-top:40px}
+.pane{background:var(--surface);border:1px solid var(--line);border-radius:var(--r-md);padding:24px 22px 26px;box-shadow:var(--shadow-sm)}
+.pane .ico{width:48px;height:48px;border-radius:50%;background:var(--accent-soft);color:var(--accent-ink);display:grid;place-items:center}
+.pane h3{font-size:22px;line-height:1.2;margin-top:16px}
+.pane .k{font-size:15px;color:var(--ink-faint);margin-top:2px}
+.pane p{font-size:15.5px;line-height:1.58;color:var(--ink-soft);margin-top:10px;text-wrap:pretty}
+/* verse in three scripts */
+.verse3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;margin-top:40px}
+.vcard{background:var(--surface);border:1px solid var(--line);border-radius:var(--r-md);padding:24px 24px 26px;box-shadow:var(--shadow-sm)}
+.vcard .lab{font-size:.8438rem;letter-spacing:.22em;text-transform:uppercase;font-weight:700;color:var(--ink-faint)}
+.vcard .v{margin-top:16px;font-size:22px;line-height:1.6;color:var(--ink)}
+.vcard .v.tel{font-size:23px}
+.vcard .m{margin-top:16px;padding-top:14px;border-top:1px solid var(--line-2);font-size:15px;line-height:1.55;color:var(--ink-soft)}
+/* feature rows */
+.row{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center;padding:56px 0}
+.row+.row{border-top:1px solid var(--line-2)}
+.row.flip .copy{order:2}
+.row .copy h2{font-size:clamp(1.8rem,2.9vw,2.4rem);line-height:1.1;margin-top:11px}
+.row .copy p{font-size:17px;line-height:1.6;color:var(--ink-soft);margin-top:14px;text-wrap:pretty;max-width:46ch}
+.row ul{list-style:none;margin:22px 0 0;padding:0;display:flex;flex-direction:column;gap:12px}
+.row li{display:flex;gap:12px;align-items:flex-start;font-size:16px;line-height:1.5;color:var(--ink)}
+.row li .dot{flex:none;width:26px;height:26px;border-radius:50%;background:var(--accent-soft);color:var(--accent-ink);display:grid;place-items:center;margin-top:1px}
+.row .shot{display:flex;flex-direction:column;align-items:center}
+.row .phone{height:720px}
+/* promises */
+.prom{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px;margin-top:40px}
+.prom .pane h3{font-size:20px;margin-top:14px}
+/* kids + end */
+.kids{display:grid;grid-template-columns:1fr auto;gap:40px;align-items:center;background:var(--surface);border:1px solid var(--line);border-radius:var(--r-lg);padding:34px 36px;box-shadow:var(--shadow-sm)}
+.kids h2{font-size:clamp(1.6rem,2.4vw,2rem);line-height:1.15;margin-top:8px}
+.kids p{font-size:16.5px;line-height:1.6;color:var(--ink-soft);margin-top:10px;max-width:52ch;text-wrap:pretty}
+.end{text-align:center;padding:96px 34px}
+.end h2{font-size:clamp(2rem,3.6vw,3rem);line-height:1.08}
+.end p{font-size:17.5px;color:var(--ink-soft);margin-top:16px}
+.end .acts{justify-content:center}
+footer{border-top:1px solid var(--line-2);padding:34px 0 40px}
+footer .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;font-size:14px;color:var(--ink-faint)}
+footer nav{display:flex;gap:18px;flex-wrap:wrap}
+footer nav a{color:var(--ink-soft);font-weight:600}
+@media (max-width:980px){
+ .hero{grid-template-columns:1fr;padding-top:44px;gap:44px}
+ .hero h1{max-width:none}
+ .row{grid-template-columns:1fr;gap:36px;padding:44px 0}
+ .row.flip .copy{order:0}
+ .tabs4,.prom{grid-template-columns:repeat(2,minmax(0,1fr))}
+ .verse3{grid-template-columns:1fr}
+ .kids{grid-template-columns:1fr}
+ .topnav{display:none}
+}
+@media (max-width:560px){
+ .wrap,.hero,.end{padding-left:20px;padding-right:20px}
+ .phone{width:min(390px,100%);height:min(780px,180vw)}
+ .row .phone{height:min(720px,165vw)}
+ .tabs4,.prom{grid-template-columns:1fr}
+ .top .cta span{display:none}.top .cta{padding:0 14px}
+}
+</style>
+</head>
+<body>
+<header class="top">
+ <div class="wrap">
+  <a class="brand" href="#" aria-label="Stuti">
+   <svg width="26" height="30" viewBox="0 0 64 68" aria-hidden="true" style="color:var(--gold);flex:none"><path fill="currentColor" fill-rule="evenodd" d="M32 4C35.4 13.4 49 25.4 49 41.5 49 53.8 41.6 62.5 32 62.5 22.4 62.5 15 53.8 15 41.5 15 25.4 28.6 13.4 32 4ZM32 26.5C34 31.6 40.5 36 40.5 44.2 40.5 50.3 36.9 54.4 32 54.4 27.1 54.4 23.5 50.3 23.5 44.2 23.5 36 30 31.6 32 26.5Z"></path><circle cx="32" cy="45.8" r="4.2" fill="currentColor"></circle></svg>
+   <span class="nm">Stuti</span><span class="sc">स्तुति</span>
+  </a>
+  <nav class="topnav">
+   <a href="#screens">The app</a>
+   <a href="#scripts">Three scripts</a>
+   <a href="#practice">Practice</a>
+   <a href="#promises">How it is made</a>
+   <a href="index.html">Read on the web</a>
+  </nav>
+  <button class="icon-btn" id="themeBtn" aria-label="Switch to night"><svg id="themeIcon" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M20 14.5A8 8 0 1 1 9.5 4a6.3 6.3 0 0 0 10.5 10.5z"/></svg></button>
+  <a class="cta" href="Stuti.html"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v12M7 11l5 5 5-5M5 20h14"/></svg><span>Get the app</span></a>
+ </div>
+</header>
+
+<section class="hero wrap" id="main">
+ <div>
+  <span class="eyebrow">Free to read · Works offline</span>
+  <h1>The hymns, the day, and your practice. In one place.</h1>
+  <p class="lede">Stuti holds the stotras you recite, in the script you read. It knows today's tithi for your town. It counts your japa and keeps your vow.</p>
+  <div class="acts">
+   <a class="cta" href="Stuti.html"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v12M7 11l5 5 5-5M5 20h14"/></svg><span>Install Stuti</span></a>
+   <a class="ghost" href="index.html">Read on the web first</a>
+  </div>
+  <div class="scripts-line"><b class="tel">స్తుతి</b><b class="deva">स्तुति</b><b>Stuti</b><span>Telugu, Devanāgarī and English. Change with one tap.</span></div>
+  <div class="plain">
+   <span><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Works without internet</span>
+   <span><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>No account to read</span>
+   <span><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Large type, made for elders</span>
+  </div>
+ </div>
+ <div class="hero-phone">
+  <div class="phone"><iframe src="Stuti.html" title="Stuti, the app, running"></iframe></div>
+  <p class="phone-note">This is the app itself. Tap and try it.</p>
+ </div>
+</section>
+
+<section class="band" id="screens">
+ <div class="wrap">
+  <div class="sec-head">
+   <span class="eyebrow">Four tabs</span>
+   <h2>Four tabs, and that is the whole app.</h2>
+   <p>Nothing is hidden in a menu. Every screen is one tap from the bottom of the phone.</p>
+  </div>
+  <div class="tabs4">
+   <div class="pane">
+    <span class="ico"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M4 11l8-7 8 7"/><path d="M6 10v9h12v-9"/></svg></span>
+    <h3>Today</h3><p class="k tel">నేడు · <span class="deva">आज</span></p>
+    <p>The sky over your town, the next sandhyā, the tithi, and the festival that falls today.</p>
+   </div>
+   <div class="pane">
+    <span class="ico"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3c1.4 2.4 3 4 3 6.2A3 3 0 0 1 9 9.2C9 7 10.6 5.4 12 3z"/><path d="M6 20h12M8 20v-3h8v3"/></svg></span>
+    <h3>Nitya</h3><p class="k tel">నిత్య · <span class="deva">नित्य</span></p>
+    <p>Your daily recitation in the order you say it. Japa counted to 108. A pārāyaṇa in daily portions.</p>
+   </div>
+   <div class="pane">
+    <span class="ico"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5.5A2 2 0 0 1 6 4h5v15H6a2 2 0 0 0-2 1.2z"/><path d="M20 5.5A2 2 0 0 0 18 4h-5v15h5a2 2 0 0 1 2 1.2z"/></svg></span>
+    <h3>Library</h3><p class="k tel">సంకలనం · <span class="deva">संग्रह</span></p>
+    <p>Hymns by deity, by type, by month, by vrata and by festival. Every line with its meaning.</p>
+   </div>
+   <div class="pane">
+    <span class="ico"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="3.5" y="4.5" width="17" height="16" rx="2.5"/><path d="M3.5 9.5h17M8 3v3M16 3v3"/></svg></span>
+    <h3>Calendar</h3><p class="k tel">పంచాంగం · <span class="deva">पंचांग</span></p>
+    <p>Every festival and vrata on its real tithi, computed for your place. Moon, ekādaśī and pitṛ days marked.</p>
+   </div>
+  </div>
+ </div>
+</section>
+
+<section class="band band-warm" id="scripts">
+ <div class="wrap">
+  <div class="sec-head">
+   <span class="eyebrow">Three scripts, one text</span>
+   <h2>Read in the script you grew up with.</h2>
+   <p>The same verse, the same meaning, in Telugu, Devanāgarī or English letters. The whole app follows your choice.</p>
+  </div>
+  <div class="verse3">
+   <div class="vcard">
+    <div class="lab">Telugu</div>
+    <p class="v tel">శుక్లాంబరధరం విష్ణుం శశివర్ణం చతుర్భుజం ।<br>ప్రసన్నవదనం ధ్యాయేత్ సర్వవిఘ్నోపశాంతయే ॥</p>
+    <p class="m tel">తెల్లని వస్త్రాలు ధరించిన, చంద్రుని వంటి కాంతి గల, నాలుగు చేతుల, ప్రసన్న వదనుడైన విష్ణువును సర్వ విఘ్నాల శాంతికై ధ్యానించాలి.</p>
+   </div>
+   <div class="vcard">
+    <div class="lab">Devanāgarī</div>
+    <p class="v deva">शुक्लाम्बरधरं विष्णुं शशिवर्णं चतुर्भुजम् ।<br>प्रसन्नवदनं ध्यायेत् सर्वविघ्नोपशान्तये ॥</p>
+    <p class="m deva">श्वेत वस्त्र धारण किए, चन्द्र के समान कान्ति वाले, चार भुजाओं वाले, प्रसन्न मुख विष्णु का सभी विघ्नों की शान्ति के लिए ध्यान करें।</p>
+   </div>
+   <div class="vcard">
+    <div class="lab">English</div>
+    <p class="v">śuklāmbaradharaṁ viṣṇuṁ śaśivarṇaṁ caturbhujam ।<br>prasannavadanaṁ dhyāyet sarvavighnopaśāntaye ॥</p>
+    <p class="m">Meditate on Viṣṇu, robed in white, bright as the moon, four-armed, with a serene face, for the quieting of all obstacles.</p>
+   </div>
+  </div>
+ </div>
+</section>
+
+<section class="wrap" id="practice">
+ <div class="row">
+  <div class="copy">
+   <span class="eyebrow">The reader</span>
+   <h2>Recite with it, line by line.</h2>
+   <p>Press play and the verse lights up as it is read, at the pace you set. The meaning sits under each line. Repeat one verse, or the whole hymn.</p>
+   <ul>
+    <li><span class="dot"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></span>Mūla text, checked against the printed sources</li>
+    <li><span class="dot"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></span>Sahasranāmas as verses or as a list of names</li>
+    <li><span class="dot"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></span>Type as large as you need it</li>
+   </ul>
+  </div>
+  <div class="shot"><div class="phone"><iframe src="Stuti.html#library" loading="lazy" title="The Library"></iframe></div></div>
+ </div>
+ <div class="row flip">
+  <div class="copy">
+   <span class="eyebrow">Nitya</span>
+   <h2>Japa, pārāyaṇa and vows, kept for you.</h2>
+   <p>Touch the beads to count. Set a pārāyaṇa and the app gives you today's portion. Take a vow and the app knows which day it falls on.</p>
+   <ul>
+    <li><span class="dot"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></span>Japa māla to 108, with rounds</li>
+    <li><span class="dot"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></span>Pārāyaṇa in daily portions, with a tracker</li>
+    <li><span class="dot"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></span>Nōmulu, vratas and dīkṣās with their rules</li>
+   </ul>
+  </div>
+  <div class="shot"><div class="phone"><iframe src="Stuti.html#nitya" loading="lazy" title="Nitya"></iframe></div></div>
+ </div>
+ <div class="row">
+  <div class="copy">
+   <span class="eyebrow">Calendar</span>
+   <h2>The pañcāṅga for your town, not someone else's.</h2>
+   <p>Sunrise, tithi, nakṣatra, rāhu kāla and the sandhyā times are computed for the place you choose. Festivals fall on the day they fall for you.</p>
+   <ul>
+    <li><span class="dot"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></span>Any town in India or abroad</li>
+    <li><span class="dot"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></span>Pitṛ days and the tarpaṇa register</li>
+    <li><span class="dot"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></span>A reminder before each sandhyā, if you want one</li>
+   </ul>
+  </div>
+  <div class="shot"><div class="phone"><iframe src="Stuti.html#calendar" loading="lazy" title="The Calendar"></iframe></div></div>
+ </div>
+</section>
+
+<section class="band band-warm" id="promises">
+ <div class="wrap">
+  <div class="sec-head">
+   <span class="eyebrow">How it is made</span>
+   <h2>Made to be kept in the pūjā room.</h2>
+  </div>
+  <div class="prom">
+   <div class="pane"><span class="ico"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2.5l7 3v6c0 4.5-3 8.3-7 9-4-.7-7-4.5-7-9v-6z"/></svg></span><h3>Offline</h3><p>The whole library is on your phone. It reads without a signal.</p></div>
+   <div class="pane"><span class="ico"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M7.5 12.2l3.2 3.3L16.5 9"/></svg></span><h3>Free to read</h3><p>The hymns, the day and the calendar cost nothing today.</p></div>
+   <div class="pane"><span class="ico"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20c0-3.3 3.6-5 8-5s8 1.7 8 5"/><circle cx="12" cy="8" r="4"/></svg></span><h3>No account to read</h3><p>Sign in only if you want your place kept across two phones.</p></div>
+   <div class="pane"><span class="ico"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M6 4h9l3.5 3.5V20H6z"/><path d="M9.5 9h6M9.5 12.5h6M9.5 16h3.5"/></svg></span><h3>Public-domain texts</h3><p>Traditional hymns, with the source named on each.</p></div>
+  </div>
+ </div>
+</section>
+
+<section class="end">
+ <h2>Begin this evening's sandhyā with it.</h2>
+ <p>Nothing to sign up for.</p>
+ <div class="acts">
+  <a class="cta" href="Stuti.html"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v12M7 11l5 5 5-5M5 20h14"/></svg><span>Install Stuti</span></a>
+  <a class="ghost" href="Stuti - Tablet & Desktop.html">Open on tablet or desktop</a>
+ </div>
+</section>
+
+<footer>
+ <div class="wrap">
+  <span>© 2026 Stuti · స్తుతి · स्तुति</span>
+  <nav><a href="index.html">Read on the web</a><a href="about.html">About</a><a href="Changelog.html">Changelog</a><a href="get.html#account">Why sign in</a></nav>
+ </div>
+</footer>
+
+<script>
+(function(){
+var root=document.documentElement,btn=document.getElementById("themeBtn"),ico=document.getElementById("themeIcon");
+var moon='<path d="M20 14.5A8 8 0 1 1 9.5 4a6.3 6.3 0 0 0 10.5 10.5z"/>',sun='<circle cx="12" cy="12" r="4.2"/><path d="M12 2.5v2.5M12 19v2.5M4.4 4.4l1.8 1.8M17.8 17.8l1.8 1.8M2.5 12H5M19 12h2.5M4.4 19.6l1.8-1.8M17.8 6.2l1.8-1.8"/>';
+function apply(t){root.setAttribute("data-theme",t);var n=t==="night";ico.innerHTML=n?sun:moon;btn.setAttribute("aria-label",n?"Switch to day":"Switch to night");}
+try{var st=localStorage.getItem("stuti-site-theme");if(st)apply(st);}catch(e){}
+btn.addEventListener("click",function(){var t=root.getAttribute("data-theme")==="night"?"day":"night";apply(t);try{localStorage.setItem("stuti-site-theme",t);}catch(e){}});
+})();
+</script>
+</body>
+</html>

@@ -144,7 +144,7 @@ function LocationControl({ compass }) {
 
   return (
     <div className={"locctl" + (open ? " open" : "")}>
-      {compass && window.CompassDial && <window.CompassDial lang={(() => { try { return localStorage.getItem("stuti-lang") || "deva"; } catch (e) { return "deva"; } })()} />}
+      {compass && window.CompassDial && <window.CompassDial lang={(() => { try { return localStorage.getItem("stuti-lang") || "roman"; } catch (e) { return "roman"; } })()} />}
       <button className="loc-chip" onClick={() => setOpen(o => !o)} aria-haspopup="listbox" aria-expanded={open}>
         {loc.city}
       </button>

@@ -221,10 +221,81 @@ window.STUTI_VRATA = (function () {
         { roman: "Modaka or undrāḷḷu — twenty-one", tel: "మోదకాలు లేదా ఉండ్రాళ్ళు — ఇరవై ఒక్కటి" },
         { roman: "Banana stalks and mango leaves for the maṇḍapa", tel: "మండపానికి అరటి బోదెలు, మామిడి ఆకులు" },
         { roman: "Turmeric, kumkum, akṣata, sandal paste", tel: "పసుపు, కుంకుమ, అక్షతలు, గంధం" },
+        { roman: "Pañcāmṛta — milk, curd, ghee, honey, sugar", tel: "పంచామృతం — పాలు, పెరుగు, నెయ్యి, తేనె, పంచదార" },
         { roman: "Coconut, betel leaves and nuts, fruit, jaggery", tel: "కొబ్బరికాయ, తమలపాకులు, వక్కలు, పండ్లు, బెల్లం" },
         { roman: "Dhūpa, dīpa, ghee, camphor, cotton wicks", tel: "ధూపం, దీపం, నెయ్యి, కర్పూరం, వత్తులు" },
         { roman: "Kalaśa, new cloth, a small bell", tel: "కలశం, కొత్త వస్త్రం, చిన్న గంట" },
       ],
+      patri: [
+        { roman: "Sumukhāya — mācīpatram, davanam", tel: "సుముఖాయ — మాచీపత్రం, దవనం" },
+        { roman: "Gaṇādhipāya — bṛhatīpatram, vākuḍu", tel: "గణాధిపాయ — బృహతీపత్రం, వాకుడు" },
+        { roman: "Umāputrāya — bilvapatram, māredu", tel: "ఉమాపుత్రాయ — బిల్వపత్రం, మారేడు" },
+        { roman: "Gajānanāya — dūrvāyugmam, garika", tel: "గజాననాయ — దూర్వాయుగ్మం, గరిక" },
+        { roman: "Harasūnave — dattūrapatram, ummetta", tel: "హరసూనవే — దత్తూరపత్రం, ఉమ్మెత్త" },
+        { roman: "Lambodarāya — badarīpatram, regu", tel: "లంబోదరాయ — బదరీపత్రం, రేగు" },
+        { roman: "Guhāgrajāya — apāmārgapatram, uttareṇi", tel: "గుహాగ్రజాయ — అపామార్గపత్రం, ఉత్తరేణి" },
+        { roman: "Gajakarṇāya — tulasīpatram", tel: "గజకర్ణాయ — తులసీపత్రం" },
+        { roman: "Ekadantāya — cūtapatram, māmiḍi", tel: "ఏకదంతాయ — చూతపత్రం, మామిడి" },
+        { roman: "Vikaṭāya — karavīrapatram, ganneru", tel: "వికటాయ — కరవీరపత్రం, గన్నేరు" },
+        { roman: "Bhinnadantāya — viṣṇukrāntapatram", tel: "భిన్నదంతాయ — విష్ణుక్రాంతపత్రం" },
+        { roman: "Vaṭave — dāḍimīpatram, dānimma", tel: "వటవే — దాడిమీపత్రం, దానిమ్మ" },
+        { roman: "Sarveśvarāya — devadārupatram", tel: "సర్వేశ్వరాయ — దేవదారుపత్రం" },
+        { roman: "Phālacandrāya — maruvakapatram, maruvam", tel: "ఫాలచంద్రాయ — మరువకపత్రం, మరువం" },
+        { roman: "Herambāya — sindhuvārapatram, vāvili", tel: "హేరంబాయ — సింధువారపత్రం, వావిలి" },
+        { roman: "Śūrpakarṇāya — jājīpatram, jāji", tel: "శూర్పకర్ణాయ — జాజీపత్రం, జాజి" },
+        { roman: "Surāgrajāya — gaṇḍakīpatram, devakāñcanam", tel: "సురాగ్రజాయ — గండకీపత్రం, దేవకాంచనం" },
+        { roman: "Ibhavaktrāya — śamīpatram, jammi", tel: "ఇభవక్త్రాయ — శమీపత్రం, జమ్మి" },
+        { roman: "Vināyakāya — aśvatthapatram, rāvi", tel: "వినాయకాయ — అశ్వత్థపత్రం, రావి" },
+        { roman: "Surasevitāya — arjunapatram, maddi", tel: "సురసేవితాయ — అర్జునపత్రం, మద్ది" },
+        { roman: "Kapilāya — arkapatram, jillēḍu", tel: "కపిలాయ — అర్కపత్రం, జిల్లేడు" },
+      ],
+      pushpa: [
+        { roman: "Pañcāsya Gaṇapati — punnāga", tel: "పంచాస్య గణపతి — పున్నాగ" },
+        { roman: "Mahā Gaṇapati — mandāra", tel: "మహా గణపతి — మందార" },
+        { roman: "Dhīra Gaṇapati — dāḍimī", tel: "ధీర గణపతి — దాడిమీ" },
+        { roman: "Viṣvaksena Gaṇapati — vakula", tel: "విష్వక్సేన గణపతి — వకుళ" },
+        { roman: "Āmoda Gaṇapati — amṛṇāla, tāmara", tel: "ఆమోద గణపతి — అమృణాళ, తామర" },
+        { roman: "Pramatha Gaṇapati — pāṭalī", tel: "ప్రమథ గణపతి — పాటలీ" },
+        { roman: "Rudra Gaṇapati — droṇa", tel: "రుద్ర గణపతి — ద్రోణ" },
+        { roman: "Vidyā Gaṇapati — dhattūra", tel: "విద్యా గణపతి — ధత్తూర" },
+        { roman: "Vighna Gaṇapati — campaka", tel: "విఘ్న గణపతి — చంపక" },
+        { roman: "Durita Gaṇapati — rasāla", tel: "దురిత గణపతి — రసాల" },
+        { roman: "Kāmitārthaprada Gaṇapati — ketakī", tel: "కామితార్థప్రద గణపతి — కేతకీ" },
+        { roman: "Sammoha Gaṇapati — mādhavī", tel: "సమ్మోహ గణపతి — మాధవీ" },
+        { roman: "Viṣṇu Gaṇapati — śamyāka", tel: "విష్ణు గణపతి — శమ్యాక" },
+        { roman: "Īśa Gaṇapati — arka", tel: "ఈశ గణపతి — అర్క" },
+        { roman: "Gajāsya Gaṇapati — kalhāra", tel: "గజాస్య గణపతి — కల్హార" },
+        { roman: "Sarvasiddhi Gaṇapati — sevantikā", tel: "సర్వసిద్ధి గణపతి — సేవంతికా" },
+        { roman: "Vīra Gaṇapati — bilva", tel: "వీర గణపతి — బిల్వ" },
+        { roman: "Kandarpa Gaṇapati — karavīra", tel: "కందర్ప గణపతి — కరవీర" },
+        { roman: "Ucchiṣṭha Gaṇapati — kunda", tel: "ఉచ్ఛిష్ఠ గణపతి — కుంద" },
+        { roman: "Brahma Gaṇapati — pārijāta", tel: "బ్రహ్మ గణపతి — పారిజాత" },
+        { roman: "Jñāna Gaṇapati — jātī", tel: "జ్ఞాన గణపతి — జాతీ" },
+      ],
+      durva: [
+        { roman: "Gaṇādhipāya", tel: "గణాధిపాయ" },
+        { roman: "Pāśāṅkuśadharāya", tel: "పాశాంకుశధరాయ" },
+        { roman: "Ākhuvāhanāya", tel: "ఆఖువాహనాయ" },
+        { roman: "Vināyakāya", tel: "వినాయకాయ" },
+        { roman: "Īśaputrāya", tel: "ఈశపుత్రాయ" },
+        { roman: "Sarvasiddhipradāya", tel: "సర్వసిద్ధిప్రదాయ" },
+        { roman: "Ekadantāya", tel: "ఏకదంతాయ" },
+        { roman: "Ibhavaktrāya", tel: "ఇభవక్త్రాయ" },
+        { roman: "Mūṣakavāhanāya", tel: "మూషకవాహనాయ" },
+        { roman: "Kumāragurave", tel: "కుమారగురవే" },
+        { roman: "Kapilavarṇāya", tel: "కపిలవర్ణాయ" },
+        { roman: "Brahmacāriṇe", tel: "బ్రహ్మచారిణే" },
+        { roman: "Modakahastāya", tel: "మోదకహస్తాయ" },
+        { roman: "Suraśreṣṭhāya", tel: "సురశ్రేష్ఠాయ" },
+        { roman: "Gajanāsikāya", tel: "గజనాసికాయ" },
+        { roman: "Kapitthaphalapriyāya", tel: "కపిత్థఫలప్రియాయ" },
+        { roman: "Gajamukhāya", tel: "గజముఖాయ" },
+        { roman: "Suprasannāya", tel: "సుప్రసన్నాయ" },
+        { roman: "Surāgrajāya", tel: "సురాగ్రజాయ" },
+        { roman: "Umāputrāya", tel: "ఉమాపుత్రాయ" },
+        { roman: "Skandapriyāya", tel: "స్కందప్రియాయ" },
+      ],
+      patriNote: { roman: "Each leaf, each flower and each pair of dūrvā is offered under a name of its own. Tulasī stands among the leaves: it is offered to Gaṇeśa on this day alone, and on no other.", tel: "ప్రతి పత్రం, ప్రతి పుష్పం, ప్రతి దూర్వాయుగ్మం ఒకొక్క నామంతో సమర్పిస్తారు. పత్రాలలో తులసి ఉంది — గణేశునికి ఈ ఒక్క రోజున మాత్రమే తులసి సమర్పిస్తారు, మరే రోజునా కాదు." },
       vidhi: [
         { step: { roman: "Saṅkalpa", tel: "సంకల్పం" }, detail: { roman: "Seated facing east, state the year, māsa, pakṣa, tithi, your gotra and nāma, and the vow being kept.", tel: "తూర్పు ముఖంగా కూర్చుని సంవత్సరం, మాసం, పక్షం, తిథి, గోత్రనామాలు, చేయబోయే వ్రతం చెప్పుకోవాలి." } },
         { step: { roman: "Kalaśa & Prāṇa-pratiṣṭhā", tel: "కలశం, ప్రాణప్రతిష్ఠ" }, detail: { roman: "Establish the kalaśa, then invoke the living presence into the clay with the prāṇa-pratiṣṭhā mantra.", tel: "కలశ స్థాపన చేసి, ప్రాణప్రతిష్ఠ మంత్రంతో మట్టిలో చైతన్యాన్ని ఆవాహన చేయాలి." } },
@@ -235,8 +306,8 @@ window.STUTI_VRATA = (function () {
         { step: { roman: "Udvāsana", tel: "ఉద్వాసన" }, detail: { roman: "On the closing day, ask leave formally before immersing — the guest is seen off, not discarded.", tel: "చివరి రోజు నిమజ్జనానికి ముందు ఉద్వాసన చెప్పాలి — అతిథిని సాగనంపడం, వదిలేయడం కాదు." } },
       ],
       naivedya: [
+        { item: { roman: "Panakam & vaḍapappu", tel: "పానకం, వడపప్పు" }, note: { roman: "Jaggery water and soaked moong — offered in every household before the rest.", tel: "బెల్లం నీరు, నానబెట్టిన పెసరపప్పు — ప్రతి ఇంటిలో అన్నిటికన్నా ముందు సమర్పించేవి." } },
         { item: { roman: "Modaka / undrāḷḷu", tel: "మోదకం / ఉండ్రాళ్ళు" }, note: { roman: "Twenty-one, steamed, with a jaggery-coconut filling.", tel: "ఇరవై ఒక్కటి, ఆవిరిపై, బెల్లం-కొబ్బరి పూరణంతో." } },
-        { item: { roman: "Panakam & vaḍapappu", tel: "పానకం, వడపప్పు" }, note: { roman: "Jaggery water and soaked moong — offered in the heat of Bhādrapada.", tel: "బెల్లం నీరు, నానబెట్టిన పెసరపప్పు — భాద్రపద ఎండలో సమర్పణ." } },
         { item: { roman: "Fruit and jaggery", tel: "పండ్లు, బెల్లం" }, note: { roman: "Banana above all; no strong-smelling fruit.", tel: "ముఖ్యంగా అరటిపండు; ఘాటైన వాసన గల పండ్లు వద్దు." } },
       ],
       stotras: [{ deity: "ganesha", m: "vakratu" }, { deity: "ganesha", m: "atharva" }, { deity: "ganesha", m: "pancaratn" }, { deity: "ganesha", m: "sahasranama" }],
@@ -282,6 +353,7 @@ window.STUTI_VRATA = (function () {
         { roman: "Toraṃ — nine-strand thread with nine knots, one per woman", tel: "తోరం — తొమ్మిది పోగుల దారం, తొమ్మిది ముడులు, ఒక్కొక్కరికి ఒకటి" },
         { roman: "Mango leaves, coconut, banana stalks, lotus or any fragrant flowers", tel: "మామిడాకులు, కొబ్బరికాయ, అరటి బోదెలు, తామర లేదా సువాసన పూలు" },
         { roman: "Turmeric, kumkum, akṣata, sandal, camphor, ghee lamps", tel: "పసుపు, కుంకుమ, అక్షతలు, గంధం, కర్పూరం, నేతి దీపాలు" },
+        { roman: "Pañcāmṛta — milk, curd, ghee, honey, sugar", tel: "పంచామృతం — పాలు, పెరుగు, నెయ్యి, తేనె, పంచదార" },
         { roman: "Nine grains (navadhānya), rice, jaggery", tel: "నవధాన్యాలు, బియ్యం, బెల్లం" },
         { roman: "Tāmbūlam trays for the invited sumaṅgalis", tel: "పిలిచిన ముత్తైదువులకు తాంబూలం పళ్ళెములు" },
       ],
@@ -295,6 +367,7 @@ window.STUTI_VRATA = (function () {
         { step: { roman: "Ārati & tāmbūlam", tel: "హారతి, తాంబూలం" }, detail: { roman: "Conclude with ārati, then give tāmbūlam and kumkum to the sumaṅgalis before eating.", tel: "హారతితో ముగించి, భోజనానికి ముందు ముత్తైదువులకు తాంబూలం, కుంకుమ ఇవ్వాలి." } },
       ],
       naivedya: [
+        { item: { roman: "Panakam & vaḍapappu", tel: "పానకం, వడపప్పు" }, note: { roman: "Jaggery water and soaked moong — offered in every household before the rest.", tel: "బెల్లం నీరు, నానబెట్టిన పెసరపప్పు — ప్రతి ఇంటిలో అన్నిటికన్నా ముందు సమర్పించేవి." } },
         { item: { roman: "Pāyasam", tel: "పాయసం" }, note: { roman: "Rice or semiyā, in milk with jaggery.", tel: "బియ్యం లేదా సేమియా, పాలలో బెల్లంతో." } },
         { item: { roman: "Pulihora and garelu", tel: "పులిహోర, గారెలు" }, note: { roman: "The standard pair for a Lakṣmī pūjā.", tel: "లక్ష్మీ పూజకు సాధారణ జంట." } },
         { item: { roman: "Nine kinds of fruit", tel: "తొమ్మిది రకాల పండ్లు" }, note: { roman: "With jaggery and soaked moong.", tel: "బెల్లం, నానబెట్టిన పెసరపప్పుతో." } },
@@ -345,6 +418,7 @@ window.STUTI_VRATA = (function () {
         { roman: "Pañcāmṛta: milk, curd, ghee, honey, sugar", tel: "పంచామృతం: పాలు, పెరుగు, నెయ్యి, తేనె, పంచదార" },
         { roman: "Betel leaves and nuts, coconut, fruit, flowers", tel: "తమలపాకులు, వక్కలు, కొబ్బరికాయ, పండ్లు, పూలు" },
         { roman: "Dhūpa, dīpa, camphor; the Kathā in five chapters", tel: "ధూపం, దీపం, కర్పూరం; ఐదు అధ్యాయాల కథ" },
+        { roman: "Pañcāmṛta — milk, curd, ghee, honey, sugar", tel: "పంచామృతం — పాలు, పెరుగు, నెయ్యి, తేనె, పంచదార" },
       ],
       vidhi: [
         { step: { roman: "Saṅkalpa", tel: "సంకల్పం" }, detail: { roman: "State the day, the deity, and the wish or the thanksgiving for which the vrata is kept.", tel: "రోజు, దేవత, ఏ కోరిక లేదా కృతజ్ఞత కోసం వ్రతమో చెప్పుకోవాలి." } },
@@ -355,6 +429,7 @@ window.STUTI_VRATA = (function () {
         { step: { roman: "Ārati & prasāda", tel: "హారతి, ప్రసాదం" }, detail: { roman: "Conclude with ārati; distribute prasāda to everyone, including those passing by.", tel: "హారతితో ముగించి, వచ్చినవారందరికీ ప్రసాదం పంచాలి." } },
       ],
       naivedya: [
+        { item: { roman: "Panakam & vaḍapappu", tel: "పానకం, వడపప్పు" }, note: { roman: "Jaggery water and soaked moong — offered in every household before the rest.", tel: "బెల్లం నీరు, నానబెట్టిన పెసరపప్పు — ప్రతి ఇంటిలో అన్నిటికన్నా ముందు సమర్పించేవి." } },
         { item: { roman: "Sapāda-bhakṣya", tel: "సపాద భక్ష్యం" }, note: { roman: "Rava, sugar, ghee, banana and milk, each in the one-and-a-quarter measure.", tel: "రవ్వ, పంచదార, నెయ్యి, అరటిపండు, పాలు — ప్రతిదీ సపాద కొలతలో." } },
         { item: { roman: "Pañcāmṛta", tel: "పంచామృతం" }, note: { roman: "With tulasī set on top before offering.", tel: "సమర్పించే ముందు పైన తులసి ఉంచాలి." } },
         { item: { roman: "Fruit and betel", tel: "పండ్లు, తాంబూలం" }, note: { roman: "Banana especially — it is in the sapāda list.", tel: "ముఖ్యంగా అరటిపండు — సపాద జాబితాలో ఉంది." } },
@@ -376,6 +451,7 @@ window.STUTI_VRATA = (function () {
     /* ---------------------------------------------------------- */
     {
       id: "navaratri", deity: "devi",
+      parayana: { name: { roman: "Devī Māhātmyam · Saptaśatī", deva: "देवी माहात्म्यम् · सप्तशती", tel: "దేవీ మాహాత్మ్యం · సప్తశతి" }, sub: { roman: "Seven hundred verses, divided over the nine nights", deva: "सात सौ श्लोक, नौ रातों में विभाजित", tel: "ఏడు వందల శ్లోకాలు, తొమ్మిది రాత్రులకు విభజించి" } },
       name: { roman: "Śāradīya Navarātri", deva: "शारदीय नवरात्रि", tel: "శారదీయ నవరాత్రి" },
       rule: { roman: "Āśvayuja · Śukla Pratipadā to Navamī", deva: "आश्विन शुक्ल प्रतिपदा से नवमी", tel: "ఆశ్వయుజ శుక్ల పాడ్యమి నుండి నవమి" },
       find: (y) => lunar(y, MASA.ashvina, T.pratipada), days: 10,
@@ -415,6 +491,7 @@ window.STUTI_VRATA = (function () {
         { roman: "Nine sarees or cloth pieces for the daily alaṅkāra", tel: "రోజువారీ అలంకారానికి తొమ్మిది చీరలు లేదా వస్త్రాలు" },
         { roman: "Golu steps and the bommalu, if the household keeps them", tel: "కొలువు మెట్లు, బొమ్మలు — ఆచారం ఉన్న ఇళ్ళలో" },
         { roman: "Kumkum, turmeric, bangles and tāmbūlam for the sumaṅgalis", tel: "ముత్తైదువులకు కుంకుమ, పసుపు, గాజులు, తాంబూలం" },
+        { roman: "Pañcāmṛta — milk, curd, ghee, honey, sugar", tel: "పంచామృతం — పాలు, పెరుగు, నెయ్యి, తేనె, పంచదార" },
         { roman: "Flowers daily — different for each alaṅkāra", tel: "ప్రతిరోజు పూలు — అలంకారాన్ని బట్టి వేరు" },
       ],
       vidhi: [
@@ -426,6 +503,7 @@ window.STUTI_VRATA = (function () {
         { step: { roman: "Vijayadaśamī", tel: "విజయదశమి" }, detail: { roman: "Sarasvatī pūjā and akṣarābhyāsa in the morning; śamī pūjā and the crossing at dusk.", tel: "ఉదయం సరస్వతీ పూజ, అక్షరాభ్యాసం; సాయంత్రం శమీ పూజ, సీమోల్లంఘనం." } },
       ],
       naivedya: [
+        { item: { roman: "Panakam & vaḍapappu", tel: "పానకం, వడపప్పు" }, note: { roman: "Jaggery water and soaked moong — offered in every household before the rest.", tel: "బెల్లం నీరు, నానబెట్టిన పెసరపప్పు — ప్రతి ఇంటిలో అన్నిటికన్నా ముందు సమర్పించేవి." } },
         { item: { roman: "A different offering each day", tel: "ప్రతిరోజు వేరే నైవేద్యం" }, note: { roman: "Commonly pulihora, dadhyodanam, payasam, kesari, vada, chalimidi in turn.", tel: "సాధారణంగా పులిహోర, దద్ధ్యోదనం, పాయసం, కేసరి, గారె, చలిమిడి వరుసగా." } },
         { item: { roman: "Kadalī and jaggery", tel: "అరటిపండు, బెల్లం" }, note: { roman: "Offered every day without fail.", tel: "ప్రతిరోజు తప్పకుండా సమర్పణ." } },
         { item: { roman: "Sundal or guggillu", tel: "సుండల్ / గుగ్గిళ్ళు" }, note: { roman: "Soaked pulses, given to the sumaṅgalis with tāmbūlam.", tel: "నానబెట్టిన పప్పు ధాన్యాలు, ముత్తైదువులకు తాంబూలంతో." } },
@@ -471,6 +549,7 @@ window.STUTI_VRATA = (function () {
       ],
       samagri: [
         { roman: "Turmeric Gaurī, or a small silver/clay image", tel: "పసుపు గౌరి, లేదా చిన్న వెండి/మట్టి ప్రతిమ" },
+        { roman: "Pañcāmṛta — milk, curd, ghee, honey, sugar", tel: "పంచామృతం — పాలు, పెరుగు, నెయ్యి, తేనె, పంచదార" },
         { roman: "Sixteen each of: betel leaves, nuts, fruit, wicks, bangles, blouse pieces", tel: "పదహారేసి: తమలపాకులు, వక్కలు, పండ్లు, వత్తులు, గాజులు, రవికె గుడ్డలు" },
         { roman: "Green bangles and a green sari, if kept traditionally", tel: "ఆకుపచ్చ గాజులు, ఆకుపచ్చ చీర — సంప్రదాయంగా" },
         { roman: "Rice-flour lamp — the vrata's mark. The number of wicks follows your family's practice, not one rule; see the dīpa step.", tel: "బియ్యప్పిండి దీపం — వ్రత చిహ్నం. వత్తుల సంఖ్య మీ కుటుంబ ఆచారం ప్రకారం; ఒకే నియమం లేదు — దీప విధి చూడండి." },
@@ -486,6 +565,7 @@ window.STUTI_VRATA = (function () {
         { step: { roman: "Tāmbūlam", tel: "తాంబూలం" }, detail: { roman: "Give sixteen tāmbūlams to sumaṅgalis; the vrata is not complete without them.", tel: "ముత్తైదువులకు పదహారు తాంబూలాలు ఇవ్వాలి; అవి లేకుండా వ్రతం పూర్తికాదు." } },
       ],
       naivedya: [
+        { item: { roman: "Panakam & vaḍapappu", tel: "పానకం, వడపప్పు" }, note: { roman: "Jaggery water and soaked moong — offered in every household before the rest.", tel: "బెల్లం నీరు, నానబెట్టిన పెసరపప్పు — ప్రతి ఇంటిలో అన్నిటికన్నా ముందు సమర్పించేవి." } },
         { item: { roman: "Pūrṇam / chalimidi", tel: "పూర్ణం / చలిమిడి" }, note: { roman: "Jaggery and rice flour, sixteen pieces.", tel: "బెల్లం, బియ్యపు పిండి, పదహారు ముక్కలు." } },
         { item: { roman: "Pulihora", tel: "పులిహోర" }, note: { roman: "Offered in a leaf, never a metal plate, in many families.", tel: "చాలా ఇళ్ళలో ఆకులో సమర్పణ, లోహపు పళ్ళెంలో కాదు." } },
         { item: { roman: "Sixteen fruit", tel: "పదహారు పండ్లు" }, note: { roman: "Distributed with the tāmbūlam afterwards.", tel: "తరువాత తాంబూలంతో పంపిణీ." } },
@@ -515,6 +595,7 @@ window.STUTI_VRATA = (function () {
       who: { roman: "The household; kept for protection from serpents and the family's health.", tel: "ఇల్లంతా; సర్పభయ నివారణ, ఇంటి ఆరోగ్యం కోసం." },
       samagri: [
         { roman: "Turmeric mixed with sandal paste, to draw the nāgas", tel: "నాగులను గీయడానికి పసుపు కలిపిన చందనం" },
+        { roman: "Pañcāmṛta — milk, curd, ghee, honey, sugar", tel: "పంచామృతం — పాలు, పెరుగు, నెయ్యి, తేనె, పంచదార" },
         { roman: "Dūrvā grass, flowers, akṣatas", tel: "దూర్వాలు, పువ్వులు, అక్షతలు" },
         { roman: "Godhuma nūka (cracked wheat) for the naivedyam", tel: "నైవేద్యానికి గోధుమనూక" },
       ],
@@ -525,6 +606,7 @@ window.STUTI_VRATA = (function () {
         { step: { roman: "Naivedya", tel: "నైవేద్యం" }, detail: { roman: "Offer godhuma nūka as prasādam.", tel: "గోధుమనూక ప్రసాదమును నైవేద్యముగా పెట్టవలెను." } },
       ],
       naivedya: [
+        { item: { roman: "Panakam & vaḍapappu", tel: "పానకం, వడపప్పు" }, note: { roman: "Jaggery water and soaked moong — offered in every household before the rest.", tel: "బెల్లం నీరు, నానబెట్టిన పెసరపప్పు — ప్రతి ఇంటిలో అన్నిటికన్నా ముందు సమర్పించేవి." } },
         { item: { roman: "Godhuma nūka", tel: "గోధుమనూక" }, note: { roman: "Cracked wheat, offered after the nāga names are recited.", tel: "నాగ నామాలు ప్రార్థించిన తరువాత సమర్పించేది." } },
       ],
       source: { roman: "Follows a widely kept Telugu household vidhi; the nāga image and its names vary slightly by family line.", tel: "తెలుగు గృహాలలో విస్తృతంగా పాటించే విధి; నాగ చిత్రం, నామాలు కుటుంబాన్ని బట్టి కొద్దిగా మారవచ్చు." },
@@ -540,6 +622,7 @@ window.STUTI_VRATA = (function () {
       tagline: { roman: "Śītalā Devī, coolness itself — her aṣṭakam read, and what stays cool offered.", tel: "చల్లదనమే రూపమైన శీతలాదేవి — శీతలాష్టకం చదివి, చల్లని పదార్థాలు నివేదించడం." },
       who: { roman: "Kept for health; said to cool the body's three tāpas (afflictions).", tel: "ఆరోగ్యం కోసం చేసేది; త్రితాపములను చల్లార్చుతుందని విశ్వాసం." },
       naivedya: [
+        { item: { roman: "Panakam & vaḍapappu", tel: "పానకం, వడపప్పు" }, note: { roman: "Jaggery water and soaked moong — offered in every household before the rest.", tel: "బెల్లం నీరు, నానబెట్టిన పెసరపప్పు — ప్రతి ఇంటిలో అన్నిటికన్నా ముందు సమర్పించేవి." } },
         { item: { roman: "Dosakāya (yellow cucumber)", tel: "దోసకాయ" }, note: { roman: "The cooling fruit of her naivedya.", tel: "శీతల నైవేద్యంలో భాగం." } },
         { item: { roman: "Dadhyodanam (curd rice)", tel: "దధ్యోదనం" }, note: { roman: "Offered cool, never heated.", tel: "చల్లగానే సమర్పించాలి, వేడి చేయరాదు." } },
       ],
@@ -561,6 +644,7 @@ window.STUTI_VRATA = (function () {
         { roman: "A betel leaf and red sandal paste, to draw the sun's image", tel: "సూర్య బింబం గీయడానికి తమలపాకు, ఎర్రచందనం" },
         { roman: "Red flowers", tel: "ఎర్రని పువ్వులు" },
         { roman: "A ripe coconut and paṭikabellam (rock candy) for the naivedyam", tel: "నైవేద్యానికి ముదిరిన కొబ్బరికాయ, పటికబెల్లం" },
+        { roman: "Pañcāmṛta — milk, curd, ghee, honey, sugar", tel: "పంచామృతం — పాలు, పెరుగు, నెయ్యి, తేనె, పంచదార" },
       ],
       vidhi: [
         { step: { roman: "Dawn bath", tel: "ప్రాతఃస్నానం" }, detail: { roman: "Rise early and bathe in cold water.", tel: "ప్రాతఃకాలంలో లేచి చన్నీటి స్నానం చేయాలి." } },
@@ -625,6 +709,7 @@ window.STUTI_VRATA = (function () {
         { roman: "Water pot, to water the tree's root", tel: "చెట్టు వేరుకు నీరు పోయడానికి కలశం" },
         { roman: "Banyan leaf, mango, jackfruit, banana — seasonal fruit", tel: "మర్రి ఆకు, మామిడి, పనస, అరటి — కాలానుగుణ పండ్లు" },
         { roman: "Turmeric, kumkum, akṣata, flowers, sindūra", tel: "పసుపు, కుంకుమ, అక్షతలు, పూలు, సిందూరం" },
+        { roman: "Pañcāmṛta — milk, curd, ghee, honey, sugar", tel: "పంచామృతం — పాలు, పెరుగు, నెయ్యి, తేనె, పంచదార" },
         { roman: "Soaked chana and jaggery for the offering", tel: "సమర్పణకు నానబెట్టిన శనగలు, బెల్లం" },
       ],
       vidhi: [
@@ -636,6 +721,7 @@ window.STUTI_VRATA = (function () {
         { step: { roman: "Dāna & pāraṇa", tel: "దానం, పారణ" }, detail: { roman: "Give fruit and tāmbūlam to sumaṅgalis, then break the fast.", tel: "ముత్తైదువులకు పండ్లు, తాంబూలం ఇచ్చి, ఉపవాసం విరమించాలి." } },
       ],
       naivedya: [
+        { item: { roman: "Panakam & vaḍapappu", tel: "పానకం, వడపప్పు" }, note: { roman: "Jaggery water and soaked moong — offered in every household before the rest.", tel: "బెల్లం నీరు, నానబెట్టిన పెసరపప్పు — ప్రతి ఇంటిలో అన్నిటికన్నా ముందు సమర్పించేవి." } },
         { item: { roman: "Soaked chana with jaggery", tel: "నానబెట్టిన శనగలు, బెల్లం" }, note: { roman: "The standard offering at the tree.", tel: "చెట్టు వద్ద సాధారణ సమర్పణ." } },
         { item: { roman: "Seasonal fruit", tel: "కాలానుగుణ పండ్లు" }, note: { roman: "Mango and jackfruit especially — it is Jyeṣṭha.", tel: "ముఖ్యంగా మామిడి, పనస — జ్యేష్ఠ మాసం కదా." } },
         { item: { roman: "Rice with jaggery", tel: "బెల్లం అన్నం" }, note: { roman: "Offered at home before the fast is broken.", tel: "ఉపవాసం విరమించే ముందు ఇంట్లో సమర్పణ." } },
@@ -997,6 +1083,7 @@ window.STUTI_VRATA = (function () {
         { roman: "Clay lamps in quantity, sesame oil or ghee, cotton wicks", tel: "ప్రమిదెలు ఎక్కువగా, నువ్వుల నూనె లేదా నెయ్యి, వత్తులు" },
         { roman: "A Lakṣmī image or coin, a new red cloth, a kalaśa", tel: "లక్ష్మీ ప్రతిమ లేదా నాణెం, కొత్త ఎరుపు వస్త్రం, కలశం" },
         { roman: "Lotus or marigold, kaṅkuṃa and turmeric, rice grains for the paḍma", tel: "తామర లేదా బంతి, కుంకుమ, పసుపు, పద్మానికి బియ్యం" },
+        { roman: "Pañcāmṛta — milk, curd, ghee, honey, sugar", tel: "పంచామృతం — పాలు, పెరుగు, నెయ్యి, తేనె, పంచదార" },
         { roman: "Sesame oil and śīkākāi for the Caturdaśī bath", tel: "చతుర్దశి స్నానానికి నువ్వుల నూనె, శీకాయ" },
         { roman: "Sweets for the neighbours; a new account book if the house keeps one", tel: "ఇరుగుపొరుగుకి మిఠాయిలు; కొత్త లెక్కల పుస్తకం" },
       ],
@@ -1007,6 +1094,7 @@ window.STUTI_VRATA = (function () {
         { step: { roman: "Keep the lamps", tel: "దీపాలు నిలపండి" }, detail: { roman: "One lamp burns through the night; the rest are relit each evening to Kārtika Pūrṇimā in houses that keep the month.", tel: "ఒక దీపం రాత్రంతా; మిగతావి కార్తిక పౌర్ణమి వరకూ ప్రతి సాయంత్రం మళ్ళీ — మాసం పాటించే ఇళ్ళల్లో." } },
       ],
       naivedya: [
+        { item: { roman: "Panakam & vaḍapappu", tel: "పానకం, వడపప్పు" }, note: { roman: "Jaggery water and soaked moong — offered in every household before the rest.", tel: "బెల్లం నీరు, నానబెట్టిన పెసరపప్పు — ప్రతి ఇంటిలో అన్నిటికన్నా ముందు సమర్పించేవి." } },
         { item: { roman: "Ariselu and boorelu", tel: "అరిసెలు, బూరెలు" }, note: { roman: "The Telugu Dīpāvalī sweets; rice-flour and jaggery.", tel: "తెలుగు దీపావళి పిండివంటలు; బియ్యప్పిండి, బెల్లం." } },
         { item: { roman: "Kheer or pāyasam, dry fruit, puffed rice", tel: "పాయసం, ఎండు ఫలాలు, మరమరాలు" }, note: { roman: "Offered to Lakṣmī with the coins laid before her.", tel: "ఎదురుగా నాణేలు పెట్టి లక్ష్మికి సమర్పణ." } },
       ],
@@ -1225,7 +1313,7 @@ window.STUTI_VRATA = (function () {
       find: (y) => lunar(y, MASA.bhadrapada, 7),
       duration: { roman: "Midday", tel: "మధ్యాహ్నం" },
       who: { roman: "Kept in Vraja and by Vaiṣṇavas of the bhakti sampradāyas.", tel: "వ్రజంలో, భక్తి సంప్రదాయ వైష్ణవులలో." },
-      tagline: { roman: "A fortnight after the midnight birth, the one who is asked for before he is.", tel: "అర్ధరాత్రి జననం తరువాత పక్షానికి — కృష్ణునికి ముందు పేరు చెప్పబడేది." },
+      tagline: { roman: "Rādhā's birthday, a fortnight after Kṛṣṇa's. Her name is spoken before his.", tel: "కృష్ణ జన్మాష్టమి తరువాత పక్షం రోజులకు రాధ జన్మదినం. ఆమె పేరు కృష్ణుని పేరుకు ముందు చెబుతారు." },
       stotras: [{ deity: "vishnu", m: "madhura" }, { deity: "vishnu", m: "karnamrta" }],
     },
     {
@@ -1345,6 +1433,7 @@ window.STUTI_VRATA = (function () {
        ------------------------------------------------------------------ */
     {
       id: "vasanta-navaratri", deity: "devi", brief: true,
+      parayana: { name: { roman: "Devī Māhātmyam · Saptaśatī", deva: "देवी माहात्म्यम् · सप्तशती", tel: "దేవీ మాహాత్మ్యం · సప్తశతి" }, sub: { roman: "Seven hundred verses, divided over the nine nights", deva: "सात सौ श्लोक, नौ रातों में विभाजित", tel: "ఏడు వందల శ్లోకాలు, తొమ్మిది రాత్రులకు విభజించి" } },
       name: { roman: "Vasanta Navarātri", deva: "वसन्त नवरात्रि", tel: "వసంత నవరాత్రి" },
       rule: { roman: "Caitra · Śukla Pratipadā to Navamī — the first nine days of Vasanta", deva: "चैत्र शुक्ल प्रतिपदा से नवमी — वसन्त के प्रथम नौ दिन", tel: "చైత్ర శుక్ల పాడ్యమి నుండి నవమి — వసంతపు మొదటి తొమ్మిది రోజులు" },
       find: (y) => lunar(y, MASA.caitra, T.pratipada), days: 9,
@@ -1355,6 +1444,7 @@ window.STUTI_VRATA = (function () {
     },
     {
       id: "shyamala-navaratri", deity: "devi", brief: true,
+      parayana: { name: { roman: "Devī Māhātmyam · Saptaśatī", deva: "देवी माहात्म्यम् · सप्तशती", tel: "దేవీ మాహాత్మ్యం · సప్తశతి" }, sub: { roman: "Seven hundred verses, divided over the nine nights", deva: "सात सौ श्लोक, नौ रातों में विभाजित", tel: "ఏడు వందల శ్లోకాలు, తొమ్మిది రాత్రులకు విభజించి" } },
       name: { roman: "Śyāmalā Navarātri · Gupta Navarātri", deva: "श्यामला नवरात्रि · गुप्त नवरात्रि", tel: "శ్యామలా నవరాత్రి · గుప్త నవరాత్రి" },
       rule: { roman: "Māgha · Śukla Pratipadā to Navamī — the first nine days of Māgha", deva: "माघ शुक्ल प्रतिपदा से नवमी — माघ के प्रथम नौ दिन", tel: "మాఘ శుక్ల పాడ్యమి నుండి నవమి — మాఘపు మొదటి తొమ్మిది రోజులు" },
       find: (y) => lunar(y, MASA.magha, T.pratipada), days: 9,
@@ -1365,6 +1455,7 @@ window.STUTI_VRATA = (function () {
     },
     {
       id: "varahi-navaratri", deity: "devi", brief: true,
+      parayana: { name: { roman: "Devī Māhātmyam · Saptaśatī", deva: "देवी माहात्म्यम् · सप्तशती", tel: "దేవీ మాహాత్మ్యం · సప్తశతి" }, sub: { roman: "Seven hundred verses, divided over the nine nights", deva: "सात सौ श्लोक, नौ रातों में विभाजित", tel: "ఏడు వందల శ్లోకాలు, తొమ్మిది రాత్రులకు విభజించి" } },
       name: { roman: "Vārāhī Navarātri", deva: "वाराही नवरात्रि", tel: "వారాహీ నవరాత్రి" },
       rule: { roman: "Āṣāḍha · Śukla Pratipadā to Navamī — the first nine days of Āṣāḍha", deva: "आषाढ शुक्ल प्रतिपदा से नवमी — आषाढ के प्रथम नौ दिन", tel: "ఆషాఢ శుక్ల పాడ్యమి నుండి నవమి — ఆషాఢపు మొదటి తొమ్మిది రోజులు" },
       find: (y) => lunar(y, MASA.ashadha, T.pratipada), days: 9,
@@ -1386,6 +1477,26 @@ window.STUTI_VRATA = (function () {
     lunar.viddha = viddhaShift;
     window.STUTI_PARVA_EXTRA.bind({ lunar, monthStart });
     window.STUTI_PARVA_EXTRA.entries.forEach((e) => vratas.push(e));
+  }
+
+  /* fixed-count vows, dīkṣās, and the calendar backlog join the same way */
+  [window.STUTI_CYCLE_EXTRA, window.STUTI_DIKSHA_EXTRA, window.STUTI_BACKLOG_EXTRA].forEach((mod) => {
+    if (!mod) return;
+    mod.bind({ lunar, monthStart });
+    mod.entries.forEach((e) => vratas.push(e));
+  });
+
+  /* the tarpaṇa days need one thing the parva dinams do not: `governed`,
+     because the amāvāsyā that carries pitṛ tarpaṇam is the one running at
+     aparāhṇa, and only that function knows how to ask. */
+  if (window.STUTI_TARPANA_EXTRA) {
+    window.STUTI_TARPANA_EXTRA.bind({ lunar, monthStart, governed, ref: REF });
+    window.STUTI_TARPANA_EXTRA.entries.forEach((e) => vratas.push(e));
+  }
+  /* the nine graha janma tithis — quiet marks, from stuti-graha-janma.js */
+  if (window.STUTI_GRAHA_JANMA_EXTRA) {
+    window.STUTI_GRAHA_JANMA_EXTRA.bind({ lunar });
+    window.STUTI_GRAHA_JANMA_EXTRA.entries.forEach((e) => vratas.push(e));
   }
 
   /* ---- memo: a vrata's find(), remembered until its inputs change ---- */
@@ -1412,6 +1523,10 @@ window.STUTI_VRATA = (function () {
   };
   vratas.forEach((v) => memoFind(v));
   const byId = {};
+  /* every record takes its type, evidence grade and publication status from
+     the one table in stuti-provenance.js; a record that already says its type
+     keeps it */
+  if (window.STUTI_PROV) vratas.forEach((v) => window.STUTI_PROV.stamp(v, false));
   vratas.forEach((v) => { byId[v.id] = v; });
   /* the tarpaṇa days need one thing the parva dinams do not: `governed`,
      because the amāvāsyā that carries pitṛ tarpaṇam is the one running at
@@ -1463,6 +1578,11 @@ window.STUTI_VRATA = (function () {
     if (pa.sunrise == null || pa.sunset == null) return null;
     const day = pa.sunset - pa.sunrise;
     if (v.kala === "madhyahna") return { start: pa.sunrise + day * 0.4, end: pa.sunrise + day * 0.6 };
+    /* aparāhṇa is the fourth of the five parts of daylight — śrāddha's hour,
+       and the hour that decides which day an amāvāsyā tarpaṇam belongs to */
+    if (v.kala === "aparahna") return { start: pa.sunrise + day * 0.6, end: pa.sunrise + day * 0.8 };
+    /* aruṇodaya — the four ghaṭikās before sunrise, when the oil bath is taken */
+    if (v.kala === "arunodaya") return { start: pa.sunrise - 96, end: pa.sunrise };
     if (v.kala === "pradosha") return { start: pa.sunset, end: pa.sunset + 96 };
     if (v.kala === "nishitha") { const mid = pa.sunset + (1440 - day) / 2; return { start: mid - 24, end: mid + 24 }; }
     return null;
@@ -1508,21 +1628,50 @@ window.STUTI_VRATA = (function () {
 
   /* every vrata with its next date, soonest first. A running many-day parva
      reports away = 0 and which day of it this is; `date` stays the vrata's
-     own day (the pūjā day), `start` the first day of its span. */
+     own day (the pūjā day), `start` the first day of its span.
+     Answered once per civil day: the list is ~80 entries and each one scans
+     the ephemeris for its month, which is three quarters of a second — far
+     too much to pay on every render of a card that asks "what is today". */
+  /* The cache key is a fingerprint of everything the answer depends on, not a
+     counter someone has to remember to bump: the civil day, the length of the
+     vrata list (modules register their entries after this file loads — the
+     tarpaṇa rites do), the reckoning preferences that move a date, and the
+     house's own tithis field by field. Anything that can change an answer
+     changes the key, from any code path, including one written later.
+     The earlier version hung on a `rev` counter fed by one store's
+     subscription, which is exactly the trap it sounds like: data added by a
+     path that does not emit on that store would sit invisible until midnight. */
+  function upFingerprint() {
+    const parts = [dayKey(today()), vratas.length, sampradaya(), southern() ? "s" : "n"];
+    try { const p = window.STUTI_PREFS.get(); parts.push(p.masaSystem, p.reckoning, p.ayanamsa, p.mana, p.tradition || ""); } catch (e) {}
+    try {
+      const list = (window.STUTI_TITHIS && window.STUTI_TITHIS.list()) || [];
+      parts.push(list.length);
+      for (const r of list) parts.push(r.id + ":" + r.masa + ":" + r.ti + ":" + (r.lead == null ? "" : r.lead) + ":" + (r.notice == null ? "" : r.notice) + ":" + (r.kind || "") + ":" + (r.place || ""));
+    } catch (e) {}
+    return parts.join("|");
+  }
+  let upCache = null, upCacheKey = null;
   function upcoming(limit) {
-    const out = all().map((v) => {
-      const d = nextDate(v); if (!d) return null;
-      const lead = v.lead || 0, days = v.days || 1, start = addDays(d, -lead);
-      const raw = daysAway(start);
-      const running = raw <= 0 && -raw < days;
-      return { v, date: d, start, away: running ? 0 : raw, dayNo: running ? 1 - raw : null, days };
-    }).filter(Boolean).sort((a, b) => a.start - b.start);
-    return limit ? out.slice(0, limit) : out;
+    const k = upFingerprint();
+    if (upCacheKey !== k) {
+      upCacheKey = k;
+      upCache = all().map((v) => {
+        const d = nextDate(v); if (!d) return null;
+        const lead = v.lead || 0, days = v.days || 1, start = addDays(d, -lead);
+        const raw = daysAway(start);
+        const running = raw <= 0 && -raw < days;
+        return { v, date: d, start, away: running ? 0 : raw, dayNo: running ? 1 - raw : null, days };
+      }).filter(Boolean).sort((a, b) => a.start - b.start);
+    }
+    return limit ? upCache.slice(0, limit) : upCache.slice();
   }
 
   /* singular annual days only — the rule the petal drift and the home card
-     share. Weekly and fortnightly vratas recur too often to be an occasion. */
-  const isParva = (v) => v.weekly === undefined && !v.everyMonth && !v.quiet;
+     share. Weekly and fortnightly vratas recur too often to be an occasion,
+     unless the entry says otherwise: pitṛ tarpaṇam falls every amāvāsyā and
+     is still the thing that day is for, so it opts in with `parva: true`. */
+  const isParva = (v) => v.parva === true || (v.weekly === undefined && !v.everyMonth && !v.quiet);
   /* the parvas running today (the house's own first), else the one falling
      tomorrow (eve: true) — a list, since a janma tithi can share the day with
      Nāga Pañcamī */

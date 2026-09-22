@@ -128,7 +128,7 @@ function MasaLens({ lang, onOpen }) {
 
 /* a row pointing out of this page — vrata, nomu and pārāyaṇa detail
    already exist in their own lens, so a tap here just opens that */
-function MasaRefRow({ d, name, sub, lang, i, onClick }) {
+function MasaRefRow({ d, name, sub, lang, i, onClick, when }) {
   return (
     <button className="vr-row" style={{ ...deityStyle(d), animationDelay: `${40 + i * 40}ms` }} onClick={onClick}>
       <Seal d={d} size={40} />
@@ -136,9 +136,38 @@ function MasaRefRow({ d, name, sub, lang, i, onClick }) {
         <span className="vr-row-name display" style={{ fontFamily: maFont(lang) }}>{name}</span>
         <span className="vr-row-rule">{sub}</span>
       </span>
-      <span className="vr-row-when"><Icon name="chev" size={18} /></span>
+      <span className="vr-row-when">{when ? <b>{when}</b> : <Icon name="chev" size={18} />}</span>
     </button>
   );
+}
+
+/* the civil date a vrata falls on inside this month's real window; a
+   weekly one gives its first day, a span its first day too */
+function maDateIn(v, rng) {
+  if (!rng) return null;
+  /* the window's ends carry a clock time; a found date is midnight — compare days, not instants */
+  const day = (x) => new Date(x.getFullYear(), x.getMonth(), x.getDate());
+  const r0 = day(rng.start), r1 = day(rng.end);
+  const years = [r0.getFullYear(), r1.getFullYear()].filter((y, i, a) => a.indexOf(y) === i);
+  let inRange = null;
+  for (const y of years) {
+    let d; try { d = v.everyMonth ? null : v.find(y); } catch (e) { d = null; }
+    if (!d) continue;
+    d = day(d);
+    const s = new Date(d.getFullYear(), d.getMonth(), d.getDate() - (v.lead || 0));
+    const e = new Date(s.getFullYear(), s.getMonth(), s.getDate() + (v.days || 1) - 1);
+    if (s >= r0 && s <= r1) return s;
+    /* a span that began before this month opened and is still running: its
+       start is the date that answers "when", so that is what is shown */
+    if (s < r0 && e >= r0) return s;
+    if (!inRange && d >= r0 && d <= r1) inRange = d;
+  }
+  return inRange;
+}
+const maDateStr = (d, lang) => (d ? d.toLocaleDateString(lang === "telugu" ? "te-IN" : lang === "deva" ? "hi-IN" : "en-IN", { day: "numeric", month: "short" }) : null);
+/* rows carry their date and stand in date order; the undated go last */
+function maDated(list, rng) {
+  return list.map((v) => ({ v, d: maDateIn(v, rng) })).sort((a, b) => (a.d && b.d) ? a.d - b.d : a.d ? -1 : b.d ? 1 : 0);
 }
 
 function MasaDetail({ masaId, go, lang, onBack, onOpen }) {
@@ -146,12 +175,11 @@ function MasaDetail({ masaId, go, lang, onBack, onOpen }) {
   const m = MA.byId[masaId];
   if (!m) return null;
   const font = maFont(lang);
-  const vratas = MA.vratasOf(m.idx);
-  const parvas = MA.parvasOf(m.idx);
+  const rng = MA.rangeOf ? MA.rangeOf(m.idx) : null;
+  const vratas = maDated(MA.vratasOf(m.idx), rng);
+  const parvas = maDated(MA.parvasOf(m.idx), rng);
   const parayanas = MA.parayanaOf(m.idx);
   const nomus = MA.nomuOf(m.idx);
-  const recited = m.recite ? LIB.resolveStotras(m.recite) : [];
-  const rng = MA.rangeOf ? MA.rangeOf(m.idx) : null;
   const prog = maProgress(m.idx);
   const rtu = maRtu(m.id);
 
@@ -220,8 +248,8 @@ function MasaDetail({ masaId, go, lang, onBack, onOpen }) {
           <div className="md-list">
             <div className="eyebrow">{L.t("masaParvaHead", lang)}</div>
             <div className="vr-list">
-              {parvas.map((v, i) => (
-                <MasaRefRow key={v.id} d={S.deityById[v.deity]} name={maP(v.name, lang)} sub={maP(v.rule, lang)} lang={lang} i={i}
+              {parvas.map(({ v, d }, i) => (
+                <MasaRefRow key={v.id} d={S.deityById[v.deity]} name={maP(v.name, lang)} sub={maP(v.rule, lang)} lang={lang} i={i} when={maDateStr(d, lang)}
                   onClick={() => onOpen("vrata", v.id)} />
               ))}
             </div>
@@ -244,8 +272,8 @@ function MasaDetail({ masaId, go, lang, onBack, onOpen }) {
           <div className="md-list">
             <div className="eyebrow">{L.t("masaVrathaluHead", lang)}</div>
             <div className="vr-list">
-              {vratas.map((v, i) => (
-                <MasaRefRow key={v.id} d={S.deityById[v.deity]} name={maP(v.name, lang)} sub={maP(v.rule, lang)} lang={lang} i={i}
+              {vratas.map(({ v, d }, i) => (
+                <MasaRefRow key={v.id} d={S.deityById[v.deity]} name={maP(v.name, lang)} sub={maP(v.rule, lang)} lang={lang} i={i} when={maDateStr(d, lang)}
                   onClick={() => onOpen("vrata", v.id)} />
               ))}
             </div>
@@ -261,19 +289,6 @@ function MasaDetail({ masaId, go, lang, onBack, onOpen }) {
                   onClick={() => onOpen("parayana", p.id)} />
               ))}
             </div>
-          </div>
-        )}
-
-        {recited.length > 0 && (
-          <div className="md-card">
-            <div className="eyebrow">{L.t("toRecite", lang)}</div>
-            {recited.map((h, i) => h && (
-              <button key={i} className="pstep-recite" style={deityStyle(S.deityById[h.deity])}
-                onClick={() => go("reader", { deity: h.deity, hymn: h.id, from: "browse" })}>
-                <Icon name="play" size={13} />
-                <span style={{ fontFamily: font }}>{L.hymnTitle(h, lang)}</span>
-              </button>
-            ))}
           </div>
         )}
 

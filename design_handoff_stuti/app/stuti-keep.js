@@ -39,8 +39,17 @@ window.STUTI_KEEP = (function () {
     return "unspecified";
   }
   /* what the bell does with it: a daily nomu ticks; every other nomu is
-     kept in a month; a vrata is watched for */
-  const modeFor = (kind, ref) => kind === "tarpana" ? "tarpana" : kind === "vrata" ? "vrata" : nomuCadence(window.STUTI_NOMU && window.STUTI_NOMU.get(ref)) === "daily" ? "daily" : "month";
+     kept in a month; a vrata is watched for — unless it is bound to no
+     month (a Sapta Śanivāra, a Satyanārāyaṇa), when it too is kept in a
+     month of the reader's choosing */
+  /* a vow kept a set number of times — twenty-one days, seven Saturdays,
+     forty-one days of a dīkṣā — is begun on a day the reader names and counted
+     from it. `days` counts every day; `count` with `weekly` counts one weekday. */
+  const vrataRec = (ref) => { const V = window.STUTI_VRATA; return V && (V.lookup ? V.lookup(ref) : V.byId[ref]); };
+  const spanOf = (v) => v && ((v.days > 1 && (v.type === "cycle" || v.type === "diksha")) || (v.count > 1 && v.weekly != null)) ? { total: v.count || v.days, weekly: v.count ? v.weekly : null } : null;
+  const isSpan = (ref) => !!spanOf(vrataRec(ref));
+  const vrataFloats = (ref) => { const V = window.STUTI_VRATA, v = V && (V.lookup ? V.lookup(ref) : V.byId[ref]); return !!(v && (v.floating || v.optional)); };
+  const modeFor = (kind, ref) => kind === "tarpana" ? "tarpana" : kind === "vrata" ? (isSpan(ref) ? "span" : vrataFloats(ref) ? "month" : "vrata") : nomuCadence(window.STUTI_NOMU && window.STUTI_NOMU.get(ref)) === "daily" ? "daily" : "month";
 
   const find = (kind, ref) => list.find((k) => k.kind === kind && k.ref === ref) || null;
   const byId = (id) => list.find((k) => k.id === id) || null;
@@ -48,7 +57,8 @@ window.STUTI_KEEP = (function () {
   function add(kind, ref, opts) {
     fresh();
     if (find(kind, ref)) return find(kind, ref);
-    const rec = Object.assign({ id: "k" + Date.now(), kind, ref, mode: modeFor(kind, ref), lead: DEFAULT_LEAD, masa: null, start: dkey(), ticks: [], kept: false, keptOn: null, udyapanaDone: false }, opts || {});
+    const mode = modeFor(kind, ref);
+    const rec = Object.assign({ id: "k" + Date.now(), kind, ref, mode, lead: DEFAULT_LEAD, masa: null, start: mode === "span" ? spanDefaultStart(ref) : dkey(), ticks: [], kept: false, keptOn: null, udyapanaDone: false }, opts || {});
     list = list.concat([rec]); save(); return rec;
   }
   const remove = (id) => { fresh(); list = list.filter((k) => k.id !== id); save(); };
@@ -60,7 +70,8 @@ window.STUTI_KEEP = (function () {
     if (d > dkey()) return;
     k.ticks = k.ticks.indexOf(d) >= 0 ? k.ticks.filter((x) => x !== d) : k.ticks.concat([d]);
     if (k.ticks.indexOf(d) >= 0) { try { window.STUTI_THREAD.mark("p", "keep:" + id + ":" + d); } catch (e) {} }
-    if (k.ticks.length >= YEAR) k.kept = true, k.keptOn = d;
+    if (k.mode === "span") { const s = spanState(k, new Date(d + "T12:00:00")); if (s && s.n >= s.total && k.ticks.indexOf(d) >= 0) k.kept = true, k.keptOn = d; }
+    else if (k.ticks.length >= YEAR) k.kept = true, k.keptOn = d;
     save();
   }
   function markKept(id, on) {
@@ -83,7 +94,27 @@ window.STUTI_KEEP = (function () {
     } catch (e) { return null; }
   }
   const subject = (k) => k.kind === "tarpana" ? tarpanaGroup(k.ref) : k.kind === "vrata" ? (window.STUTI_VRATA && (window.STUTI_VRATA.lookup ? window.STUTI_VRATA.lookup(k.ref) : window.STUTI_VRATA.byId[k.ref])) : (window.STUTI_NOMU && window.STUTI_NOMU.get(k.ref));
-  const hasUdyapana = (k) => { const n = k.kind === "nomu" && subject(k); return !!(n && n.udyapana && (n.udyapana.roman || n.udyapana.tel)); };
+  const hasUdyapana = (k) => { const n = subject(k); if (!n) return false; if (k.kind === "vrata") return k.mode === "span" && n.udyapana === true; return !!(n.udyapana && (n.udyapana.roman || n.udyapana.tel)); };
+
+  /* where a span stands on a day: which occurrence, of how many, and its end */
+  function spanState(k, day) {
+    const v = vrataRec(k.ref), sp = spanOf(v); if (!sp || !k.start) return null;
+    const d = noon(day || new Date()), s0 = noon(new Date(k.start + "T12:00:00"));
+    const step = sp.weekly != null ? 7 : 1;
+    const end = new Date(s0.getTime() + (sp.total - 1) * step * DAY);
+    const diff = Math.round((d - s0) / DAY);
+    const n = diff < 0 ? 0 : Math.floor(diff / step) + 1;
+    const owed = diff >= 0 && n <= sp.total && diff % step === 0;
+    return { total: sp.total, weekly: sp.weekly, start: s0, end, n: Math.min(n, sp.total), before: diff < 0, over: n > sp.total, owed, away: diff < 0 ? -diff : 0 };
+  }
+  const spanDefaultStart = (ref) => {
+    const V = window.STUTI_VRATA, v = vrataRec(ref), sp = spanOf(v); if (!sp) return dkey();
+    const t = noon(new Date());
+    if (sp.weekly != null) { const d = new Date(t); while (d.getDay() !== sp.weekly) d.setDate(d.getDate() + 1); return dkey(d); }
+    if (v.floating) return dkey(t);
+    try { const nd = V.nextDate(v); if (nd) { const s = new Date(noon(nd).getTime() - ((v.lead || 0)) * DAY); return dkey(s); } } catch (e) {}
+    return dkey(t);
+  };
 
   /* ---- what one record asks of one day — pure, given the engines ----
      Returns null when nothing is owed, else { state, done, remind }.
@@ -92,10 +123,17 @@ window.STUTI_KEEP = (function () {
   function dueOn(k, day, eng) {
     const d = noon(day), key = dkey(d);
     if (k.kept) {
-      if (k.kind !== "nomu" || k.udyapanaDone || !hasUdyapana(k)) return null;
+      if (k.udyapanaDone || !hasUdyapana(k)) return null;
       const since = Math.round((d - noon(new Date(k.keptOn + "T12:00:00"))) / DAY);
       if (since < 1) return null;
       return { state: "udyapana", done: false, remind: since % 7 === 1 };
+    }
+    if (k.mode === "span") {
+      const s = spanState(k, d); if (!s) return null;
+      if (s.over) return null;
+      if (s.before) return s.away <= k.lead ? { state: "vrata", away: s.away, date: s.start, done: false, remind: true } : null;
+      if (!s.owed) return null;
+      return { state: "span", done: k.ticks.indexOf(key) >= 0, remind: true, n: s.n, total: s.total, end: s.end };
     }
     if (k.mode === "daily") return { state: "daily", done: k.ticks.indexOf(key) >= 0, remind: true, n: k.ticks.length };
     if (k.mode === "month") {
@@ -159,6 +197,8 @@ window.STUTI_KEEP = (function () {
     YEAR, DEFAULT_LEAD, NOMU_CADENCE, nomuCadence, modeFor, dkey, tarpanaGroup,
     list: () => list.slice(), find, byId, subject, hasUdyapana,
     add, remove, patch, tick, markKept, keepVrataDay,
+    spanOf: (ref) => spanOf(vrataRec(ref)), spanState, spanDefaultStart,
+    setStart: (id, key) => patch(id, { start: key, ticks: [], kept: false, keptOn: null }),
     setLead: (id, n) => patch(id, { lead: Math.max(0, n | 0) }),
     setMasa: (id, idx) => patch(id, { masa: idx }),
     markUdyapana: (id) => patch(id, { udyapanaDone: true }),

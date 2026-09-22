@@ -1,3 +1,5 @@
+import { STUTI_PROV } from "./stuti-provenance";
+
 // stuti-nomu-data.js  —  all 102 nomulu
 // STUTI_NOMU wrapper per spec.
 // Text object: { roman (English), deva (Devanagari placeholder), tel (Telugu) }
@@ -4088,6 +4090,7 @@ export const STUTI_NOMU = (function () {
   },
   ];
   const byId = {};
+  if (STUTI_PROV) list.forEach((n) => STUTI_PROV.stamp(n, true));
   list.forEach((n) => { byId[n.id] = n; });
   return { list, byId, get: (id) => byId[id] || null };
 })();

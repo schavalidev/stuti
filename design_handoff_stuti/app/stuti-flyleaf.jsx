@@ -94,12 +94,12 @@ function FlyleafForm({ sk, lang, unknown }) {
       </div>
       <div className="sk-field">
         <label className="sk-label" htmlFor={uid + "n"}>{t("namaL")}</label>
-        <input id={uid + "n"} className="sk-input" value={sk.nama} onChange={(e) => sk.setNama(e.target.value)} placeholder="—" autoComplete="off" />
+        <input id={uid + "n"} className="sk-input" value={sk.nama} onChange={(e) => sk.setNama(e.target.value)} placeholder={t("namaHint")} autoComplete="off" />
       </div>
       {(sk.nama || "").trim() && (
         <div className="sk-field">
           <label className="sk-label" htmlFor={uid + "na"}>{t(indic ? "namaRomanL" : "namaScriptL")}</label>
-          <input id={uid + "na"} className="sk-input" value={sk.namaAlt} onChange={(e) => sk.setNamaAlt(e.target.value)} placeholder="—" autoComplete="off" />
+          <input id={uid + "na"} className="sk-input" value={sk.namaAlt} onChange={(e) => sk.setNamaAlt(e.target.value)} placeholder={t("namaHint")} autoComplete="off" />
         </div>
       )}
       <div className="sk-field">

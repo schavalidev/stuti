@@ -141,6 +141,7 @@ function NomuDetail({ nomuId, go, lang, onBack }) {
         )}
 
         {n.caution && <div className="vr-caveat">{nomP(n.caution, lang)}</div>}
+        {n.prov && window.STUTI_PROV && <div className="vr-source vr-prov">{window.STUTI_PROV.line(n, lang)}</div>}
         <div className="vr-caveat">{L.t("nomuNote", lang)}</div>
 
         <div className="vr-sect">

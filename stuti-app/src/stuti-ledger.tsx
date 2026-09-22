@@ -295,7 +295,8 @@ function LedgerDetail({ lang, det, span, onOpen }) {
       )}
       {sect("lgLearnt", det.learnt.map((x) => li(x.id, hymn(x.id), null)))}
       {sect("lgDiksha", det.diksha.map((x) => li(x.v.id, vowName(x.v), L.t("lgKeptN", lang).replace("{n}", x.kept))))}
-      {sect("lgNomus", det.nomus.map((x) => li(x.k.id, keepName(x.k), x.done ? L.t("lgNomuDone", lang) : L.t("lgTicksN", lang).replace("{n}", x.ticks))))}
+      {sect("lgNomus", det.nomus.filter((x) => !x.span).map((x) => li(x.k.id, keepName(x.k), x.done ? L.t("lgNomuDone", lang) : L.t("lgTicksN", lang).replace("{n}", x.ticks))))}
+      {sect("lgSpans", det.nomus.filter((x) => x.span).map((x) => li(x.k.id, keepName(x.k), x.done ? L.t("keepSpanDone", lang) : L.t("lgTicksN", lang).replace("{n}", x.ticks))))}
       {sect("lgVratas", det.vratas.map((x) => li(x.k.id + x.on, keepName(x.k), new Date(x.on + "T12:00:00").toLocaleDateString(lgLoc(lang), { day: "numeric", month: "short" }))))}
     </div>
   );

@@ -141,18 +141,23 @@
    (which sits later in the file and would otherwise force relative flow). */
 .locctl { position: relative; flex: none; display: inline-flex; align-items: center; gap: 8px; }
 /* the compass beside the place */
-.cp-dial{position:relative;width:34px;height:34px;min-width:34px;padding:0;border-radius:50%;border:1px solid var(--line);background:var(--surface-2);cursor:pointer;display:inline-flex;align-items:center;justify-content:center;overflow:hidden}
+/* an instrument, not a hint: an opaque enamel face in a gold bezel, a
+   two-tone needle pivoting on the pin, and four rose marks at the rim.
+   The ring's box is the face inside the 1.5px bezel — 35px, centre 17.5 —
+   so the needle is centred from 50% rather than measured from the top. */
+.cp-dial{position:relative;width:38px;height:38px;min-width:38px;padding:0;border-radius:50%;border:1.5px solid var(--gold);background:var(--surface);box-shadow:inset 0 0 0 2px var(--surface-2),0 1px 2px rgba(60,44,24,.18);cursor:pointer;display:inline-flex;align-items:center;justify-content:center;overflow:hidden}
 .cp-ring{position:absolute;inset:0;transition:transform .25s ease-out}
-.cp-n{position:absolute;left:50%;top:3px;width:2px;height:9px;margin-left:-1px;background:var(--ink);border-radius:1px}
-.cp-e{position:absolute;top:50%;right:4px;width:5px;height:5px;margin-top:-2.5px;border-radius:50%;background:var(--accent-ink)}
-.cp-l{position:absolute;font-size:.5rem;line-height:1;color:var(--ink-faint);font-family:var(--font-ui)}
-.cp-l-n{left:50%;top:13px;transform:translateX(-50%)}
-.cp-l-e{top:50%;right:11px;transform:translateY(-50%)}
-.cp-pin{width:4px;height:4px;border-radius:50%;background:var(--ink-faint)}
-.cp-dial:not(.live) .cp-ring{opacity:.45}
-.cp-dial.live{border-color:color-mix(in oklab,var(--accent-ink) 40%,var(--line))}
-.sky .cp-dial{background:rgba(255,251,240,.16);border-color:rgba(255,251,240,.34)}
-.sky .cp-dial .cp-n{background:#FFF7E8}.sky .cp-dial .cp-l{color:rgba(255,247,232,.8)}
+/* the rose marks sit on the diagonals, clear of the needle and the east dot */
+.cp-ring::before,.cp-ring::after{content:"";position:absolute;left:50%;top:2px;bottom:2px;width:1px;margin-left:-.5px;background:linear-gradient(var(--ink-faint) 0 4px,transparent 4px calc(100% - 4px),var(--ink-faint) calc(100% - 4px) 100%);transform:rotate(45deg)}
+.cp-ring::after{transform:rotate(-45deg)}
+.cp-n{position:absolute;left:50%;top:50%;width:2.5px;height:20px;margin-left:-1.25px;transform:translateY(-50%);background:linear-gradient(var(--accent-ink) 0 50%,var(--ink) 50% 100%);border-radius:1.25px}
+.cp-e{position:absolute;top:50%;right:3.5px;width:4px;height:4px;margin-top:-2px;border-radius:50%;background:var(--gold)}
+.cp-l{position:absolute;font-size:.44rem;letter-spacing:.04em;line-height:1;color:var(--ink-soft);font-family:var(--font-ui);font-weight:600}
+.cp-l-n{left:50%;top:1px;transform:translateX(-50%)}
+.cp-l-e{top:50%;right:9px;transform:translateY(-50%)}
+.cp-pin{width:5px;height:5px;border-radius:50%;background:var(--ink);box-shadow:0 0 0 1.5px var(--surface)}
+.cp-dial.live{border-color:var(--accent-ink)}
+.sky .cp-dial{background:var(--surface);border-color:var(--gold);box-shadow:inset 0 0 0 2px var(--surface-2),0 1px 3px rgba(0,0,0,.28)}
 .loc-scrim { position: fixed; inset: 0; z-index: 39; }
 .locctl .loc-menu {
   position: absolute; top: calc(100% + 8px); right: 0; z-index: 40;
@@ -1667,9 +1672,14 @@ select.sk-input {
 .gs-ti { min-width: 0; flex: 0 1 auto; }
 .gs-d { display: block; font-size: 1.3125rem; line-height: 1.3; color: var(--ink); text-wrap: pretty; }
 .gs-dl { flex: 1 1 14px; min-width: 12px; border-bottom: 2px dotted color-mix(in oklab, var(--ink) 24%, transparent); margin: 0 2px 7px; }
-.gs-vc { flex: none; font-size: 0.8125rem; font-weight: 600; color: var(--ink-soft); white-space: nowrap; }
+.gs-vc { flex: none; max-width: 46%; font-size: 0.8125rem; font-weight: 600; color: var(--ink-soft); text-align: right; text-wrap: pretty; }
 .gs-en .seal { flex: none; margin-right: 2px; }
 .gs-vc-soon { color: var(--accent-ink); font-weight: 700; }
+.gs-vow-rule { display: block; margin-top: 3px; font-size: 0.875rem; line-height: 1.4; color: var(--ink-soft); text-wrap: pretty; }
+.vr-tabs { margin: 4px 16px 6px; }
+.gs-en-day .gs-main { padding-left: 34px; }
+.gs-day-line { display: block; font-size: 1rem; line-height: 1.4; color: var(--ink); text-wrap: pretty; }
+.gs-en-day .gs-dl { margin-bottom: 5px; }
 .gs-en.soon .gs-d { color: var(--ink-faint); }
 .gs-en.soon .gs-vc { color: var(--ink-faint); font-weight: 500; }
 .gs-marks { flex: none; display: flex; align-items: center; gap: 2px; opacity: 0.78; }
@@ -2243,6 +2253,11 @@ select.sk-input {
 .keep-bar{height:4px;border-radius:2px;margin-top:10px;background:color-mix(in oklab, var(--ink) 12%, transparent);overflow:hidden}
 .keep-bar span{display:block;height:100%;border-radius:2px;background:var(--accent)}
 .keep-actions{flex-wrap:wrap;align-items:center;gap:6px 8px}
+.keep-span{margin-top:12px}
+.vr-hero .keep-span{padding:12px 14px;border-radius:var(--r-md);background:var(--surface);border:1px solid var(--line)}
+.keep-span-row{display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+.keep-span-line{margin-top:8px;font-size:0.8438rem;color:var(--ink)}
+.keep-span .keep-bar{margin-top:10px}
 .keep-lead-label{font-size:0.7188rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-faint);margin-right:2px}
 .keep-lead{border:1px solid var(--line);background:var(--surface);color:var(--ink-soft);border-radius:999px;padding:6px 11px;font-family:var(--font-ui);font-size:0.8125rem;font-weight:600;cursor:pointer}
 .keep-lead.on{background:var(--accent);border-color:var(--accent);color:var(--surface)}
@@ -3310,6 +3325,7 @@ input:is([type="date"],[type="time"],[type="month"],[type="datetime-local"]) { a
 .vr-dont li::before{background:color-mix(in oklab,var(--caution) 70%,var(--ink-faint))}
 .vr-dont .eyebrow{color:color-mix(in oklab,var(--caution) 55%,var(--ink-soft))}
 .vr-source{margin-top:22px;padding-top:14px;border-top:1px dashed var(--line);font-size: 0.7813rem;line-height:1.55;color:var(--ink-soft);text-wrap:pretty}
+.vr-source+.vr-prov{margin-top:8px;padding-top:0;border-top:0}
 
 /* ---------- Settings ---------- */
 .set-sect{margin-top:26px}

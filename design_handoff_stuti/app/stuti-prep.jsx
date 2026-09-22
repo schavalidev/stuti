@@ -198,10 +198,12 @@ function HomePrepCard({ lang }) {
   const occ = list[0], v = occ.v;
   const its = P.items(v), done = P.done(v.id, occ.date);
   const left = its.length - done.length;
+  // On the day itself there is no tomorrow to ask about: the X just puts the card away.
+  const dismiss = (o) => { if (o.away <= 0) { P.snooze(o.v.id, o.date, "again", 0); force((n) => n + 1); } else setHide(o); };
   return (
     <React.Fragment>
       <section className="prep-card has-x">
-        <button className="prep-card-x" onClick={() => setHide(occ)} aria-label={L.t("prepHideCap", lang)}><Icon name="close" size={16} /></button>
+        <button className="prep-card-x" onClick={() => dismiss(occ)} aria-label={L.t("prepHideCap", lang)}><Icon name="close" size={16} /></button>
         <button className="prep-card-main" onClick={() => setOpen(occ)}>
           <span className="prep-mark"><Icon name="calendar" size={19} /></span>
           <span className="prep-body">
@@ -219,7 +221,7 @@ function HomePrepCard({ lang }) {
         const oi = P.items(o.v), od = P.done(o.v.id, o.date), ol = oi.length - od.length;
         return (
           <section className="prep-card prep-card-next has-x" key={o.v.id + o.away}>
-            <button className="prep-card-x" onClick={() => setHide(o)} aria-label={L.t("prepHideCap", lang)}><Icon name="close" size={15} /></button>
+            <button className="prep-card-x" onClick={() => dismiss(o)} aria-label={L.t("prepHideCap", lang)}><Icon name="close" size={15} /></button>
             <button className="prep-card-main" onClick={() => setOpen(o)}>
               <span className="prep-mark"><Icon name="calendar" size={16} /></span>
               <span className="prep-body">

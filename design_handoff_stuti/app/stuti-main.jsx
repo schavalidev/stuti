@@ -463,7 +463,13 @@ function App() {
   const [t, setTweak] = window.useTweaks(TWEAK_DEFAULTS);
   const tileMode = t.deityTile === "Full picture" ? "full" : "seal";
   const [theme, setTheme] = useStateM(() => localStorage.getItem("stuti-theme") || "day");
-  const [lang, setLang] = useStateM(() => localStorage.getItem("stuti-lang") || "deva");
+  /* Before first run is finished, no script has been deliberately chosen:
+     a stuti-lang left by an earlier session is not a choice. English stands
+     until step one is answered. */
+  const [lang, setLang] = useStateM(() => {
+    try { if (!window.STUTI_PREFS.get().onboarded) return "roman"; } catch (e) {}
+    return localStorage.getItem("stuti-lang") || "roman";
+  });
   /* the interface language: mirrors the reading script until a reciter sets
      it apart in Settings (stuti-ui-lang-custom), same rule the website uses */
   const [uiLang, setUiLangRaw] = useStateM(() => {
@@ -474,7 +480,8 @@ function App() {
       localStorage.setItem("stuti-ui-lang-custom", "0");
       localStorage.setItem("stuti-ui-lang-reset", "1");
     }
-    const rd = localStorage.getItem("stuti-lang") || "deva";
+    let rd = localStorage.getItem("stuti-lang") || "roman";
+    try { if (!window.STUTI_PREFS.get().onboarded) rd = "roman"; } catch (e) {}
     /* only an explicit Settings pick lets the chrome part from the script;
        without it the reading script wins on every load, not the stale store */
     return localStorage.getItem("stuti-ui-lang-custom") === "1"

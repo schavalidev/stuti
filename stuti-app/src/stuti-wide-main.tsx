@@ -13,8 +13,10 @@ import { STUTI_LIB } from "./stuti-library-data";
 import { LibraryHub } from "./stuti-library";
 import { STUTI_NUDGE } from "./stuti-nudge";
 import { Onboarding } from "./stuti-onboard";
+import { PitruRegisterView } from "./stuti-pitru-register";
+import { PitruCalendarView } from "./stuti-pitru";
 import { PlanView, PlansView } from "./stuti-plans";
-import { NityaView, PracticeView, PracticesView } from "./stuti-practice";
+import { NityaView, PracticeView, PracticesView, SandhyaNoteView } from "./stuti-practice";
 import { STUTI_PREFS } from "./stuti-prefs";
 import { RemindSheet } from "./stuti-remind";
 import { SettingsView } from "./stuti-settings";
@@ -338,12 +340,12 @@ const TAB_OF = {
   home: "home", settings: "home",
   daily: "nitya", japa: "nitya", plans: "nitya", plan: "nitya",
   browse: "lib", deity: "lib", reader: "lib", practices: "lib",
-  calendar: "cal",
+  calendar: "cal", pitru: "cal", pitruRegister: "cal",
 };
 /* Screens with no tab of their own. Each is reachable from four or five
    places, so it inherits the tab of whatever opened it; the value here is
    only the fallback for a screen that arrived with no origin recorded. */
-const HOP = { search: "browse", reader: "deity", deity: "browse", plan: "daily", practice: "daily" };
+const HOP = { search: "browse", reader: "deity", deity: "browse", plan: "daily", practice: "daily", sandhyaNote: "home" };
 function TabBar({ view, from, ret, go, lang = "deva", theme, toggleTheme }) {
   const L = STUTI_L;
   /* Which tab a screen belongs under. The rootless screens above answer it
@@ -404,8 +406,17 @@ function App() {
   const [t, setTweak] = useTweaks(TWEAK_DEFAULTS);
   const tileMode = t.deityTile === "Full picture" ? "full" : "seal";
   const [theme, setTheme] = useStateM(() => localStorage.getItem("stuti-theme") || "day");
-  const [lang, setLang] = useStateM(() => localStorage.getItem("stuti-lang") || "deva");
-  const [uiLang, setUiLangRaw] = useStateM(() => localStorage.getItem("stuti-ui-lang") || localStorage.getItem("stuti-lang") || "deva");
+  /* Before first run is finished, no script has been deliberately chosen:
+     a stuti-lang left by an earlier session is not a choice. English stands
+     until step one is answered. */
+  const [lang, setLang] = useStateM(() => {
+    try { if (!STUTI_PREFS.get().onboarded) return "roman"; } catch (e) {}
+    return localStorage.getItem("stuti-lang") || "roman";
+  });
+  const [uiLang, setUiLangRaw] = useStateM(() => {
+    try { if (!STUTI_PREFS.get().onboarded) return "roman"; } catch (e) {}
+    return localStorage.getItem("stuti-ui-lang") || localStorage.getItem("stuti-lang") || "roman";
+  });
   const setUiLang = (v) => { localStorage.setItem("stuti-ui-lang-custom", v === "match" ? "0" : "1"); setUiLangRaw(v === "match" ? lang : v); };
   const [route, setRoute] = useStateM(() => { const t = STUTI_ROUTE.target(); return { view: (t && t.view) || "home", deity: (t && t.deity) || null, hymn: (t && t.hymn) || null, practice: null }; });
   const [dir, setDir] = useStateM("fwd");
@@ -450,14 +461,16 @@ function App() {
      to Nitya — so opening either from the home lost your place. `from` is
      carried on the navigation itself and never inherited. */
   const go = (view, payload = {}) => {
-    const order = { home: 0, daily: 1, browse: 2, calendar: 2, settings: 2, plans: 2, practices: 3, practice: 3, japa: 3, plan: 3, deity: 3, search: 3, reader: 4 };
+    const order = { home: 0, daily: 1, browse: 2, calendar: 2, settings: 2, plans: 2, practices: 3, practice: 3, japa: 3, plan: 3, deity: 3, search: 3, sandhyaNote: 3, pitru: 3, account: 3, pitruRegister: 4, reader: 4 };
     setDir(order[view] >= order[route.view] ? "fwd" : "back");
     /* A tab is a way home to its own root, so tapping Library from inside a
        type/author/vrata detail must drop that detail — but a back arrow
        RETURNING to the library must not, or it lands the reciter one level
        above where they were. Both arrive as `go("browse")`, so intent has
        to be stated rather than guessed from the destination. */
-    if (payload.reset) setLibSub(null);
+    if (payload.reset) { setLibSub(null); setLibLens(LENS_FROM_LABEL[t.defaultLens] || "deity"); }
+    if (payload.libSub) setLibSub(payload.libSub);
+    if (payload.libLens) setLibLens(payload.libLens);
     setRoute(r => ({ view, from: payload.from, ret: payload.ret, deity: payload.deity ?? r.deity, hymn: payload.hymn ?? r.hymn, practice: payload.practice ?? r.practice, plan: payload.plan ?? r.plan, lens: payload.lens, lensAt: payload.lensAt, weekday: payload.weekday }));
   };
 
@@ -482,6 +495,9 @@ function App() {
   else if (route.view === "plans") body = <PlansView key="plans" go={go} lang={lang} />;
   else if (route.view === "plan" && route.plan) body = <PlanView key={"pl" + route.plan} hymnId={route.plan} go={go} lang={lang} backView={route.from || "daily"} />;
   else if (route.view === "calendar") body = <CalendarView key="calendar" go={go} lang={lang} />;
+  else if (route.view === "pitru" && PitruCalendarView) body = <PitruCalendarView key="pitru" go={go} lang={lang} backView={route.from || "calendar"} />;
+  else if (route.view === "pitruRegister" && PitruRegisterView) body = <PitruRegisterView key="pitruRegister" go={go} lang={lang} backView={route.from || "calendar"} />;
+  else if (route.view === "sandhyaNote" && SandhyaNoteView) body = <SandhyaNoteView key="sandhyaNote" go={go} lang={lang} backView={route.from || "home"} />;
   else if (route.view === "account") body = <AccountView key="account" go={go} lang={lang} backView={route.from || "settings"} />;
   else if (route.view === "settings") body = <SettingsView key="settings" go={go} lang={lang} setLang={setLang} uiLang={uiLang} setUiLang={setUiLang} theme={theme} toggleTheme={toggleTheme} openRemind={() => setRemindOpen(true)} />;
   else if (route.view === "practice") { const p = STUTI_LIB.practiceById(route.practice); body = p ? <PracticeView key={"p" + p.id} practice={p} go={go} lang={lang} backView={route.from || "daily"} /> : <Home key="home" go={go} openToday={openToday} lang={lang} overlayEl={overlayEl} />; }

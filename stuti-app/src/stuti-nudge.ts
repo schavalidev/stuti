@@ -72,7 +72,7 @@ export const STUTI_NUDGE = (function () {
     catch (e) { return Promise.resolve(Notification.permission); }
   }
 
-  const lang = () => { try { return localStorage.getItem("stuti-lang") || "deva"; } catch (e) { return "deva"; } };
+  const lang = () => { try { return localStorage.getItem("stuti-lang") || "roman"; } catch (e) { return "roman"; } };
 
   /* the reciter's own place — the almanac, and so the junctures, are cast for it */
   function place() {

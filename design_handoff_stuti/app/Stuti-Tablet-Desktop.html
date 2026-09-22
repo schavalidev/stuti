@@ -1,9 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+<link rel="preload" as="image" href="assets/kalasha-sm.png" />
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
 <title>Stuti · स्तुति · Tablet &amp; Desktop</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Mallanna&display=swap" />
 <link rel="manifest" href="manifest.webmanifest" />
 <meta name="theme-color" content="#FAF5EB" media="(prefers-color-scheme: light)" />
 <meta name="theme-color" content="#14110C" media="(prefers-color-scheme: dark)" />
@@ -16,6 +20,7 @@
 <link rel="stylesheet" href="stuti.css" />
 <link rel="stylesheet" href="stuti-components.css" />
 <link rel="stylesheet" href="stuti-palette.css" />
+<link rel="stylesheet" href="stuti-pigment.css" />
 <link rel="stylesheet" href="stuti-wide.css" />
 <link rel="stylesheet" href="stuti-code.css" />
 </head>
@@ -57,6 +62,9 @@
 <script src="stuti-text-vishnu.js"></script>
 <script src="stuti-text-vishnu2.js"></script>
 <script src="stuti-text-hanuman.js"></script>
+<script src="stuti-text-pitr.js"></script>
+<script src="stuti-text-tarpana-vidhi.js"></script>
+<script src="stuti-text-vinayaka-vidhi.js"></script>
 <script src="stuti-texts.js"></script>
 <script src="stuti-hindi-shiva.js"></script>
 <script src="stuti-hindi-core.js"></script>
@@ -64,6 +72,13 @@
 <script src="stuti-hindi-subrahmanya.js"></script>
 <script src="stuti-library-data.js"></script>
 <script src="stuti-sankranti-data.js"></script>
+<script src="stuti-parva-data.js"></script>
+<script src="stuti-cycle-data.js"></script>
+<script src="stuti-diksha-data.js"></script>
+<script src="stuti-backlog-data.js"></script>
+<script src="stuti-tarpana.js"></script>
+<script src="stuti-graha-janma.js"></script>
+<script src="stuti-provenance.js"></script>
 <script src="stuti-vrata-data.js"></script>
 <script src="stuti-nomu-data.js"></script>
 <script src="stuti-parayana-data.js"></script>
@@ -75,14 +90,19 @@
 <script src="stuti-hindi-ganesha.js"></script>
 <script src="stuti-hindi-sahasra.js"></script>
 <script src="stuti-store.js"></script>
+<script src="stuti-gaz.js"></script>
 <script src="stuti-recite.js"></script>
 <script src="stuti-reckoning.js"></script>
 <script src="stuti-sankalpa-data.js"></script>
+<script src="stuti-sankalpa.js"></script>
 <script src="stuti-watch.js"></script>
 <script src="stuti-prefs.js"></script>
 <script src="stuti-flyleaf.js"></script>
 <script src="stuti-sadhana.js"></script>
+<script src="stuti-festive.js"></script>
 <script src="stuti-ephemeris.js"></script>
+<script src="stuti-eclipse.js"></script>
+<script src="stuti-kshana.js"></script>
 <script src="stuti-panchanga-engine.js"></script>
 <script src="stuti-desa.js"></script>
 <script src="stuti-muhurta.js"></script>
@@ -91,6 +111,11 @@
 <script src="stuti-push.js"></script>
 <script src="stuti-nudge.js"></script>
 <script src="stuti-prep.js"></script>
+<script src="stuti-keep.js"></script>
+<script src="stuti-tithis.js"></script>
+<script src="stuti-pitru-register.js"></script>
+<script src="stuti-vidhi-fill.js"></script>
+<script src="stuti-ledger.js"></script>
 <script src="stuti-translit.js"></script>
 <script src="stuti-lexicon.js"></script>
 <script src="stuti-audio.js"></script>
@@ -101,6 +126,7 @@
 <script src="stuti-dana.js"></script>
 <script src="stuti-limits.js"></script>
 <script src="stuti-auth.js"></script>
+<script src="stuti-sync.js"></script>
 <script src="stuti-boot.js"></script>
 <script>StutiBoot.load([
   "tweaks-panel.jsx",
@@ -112,7 +138,10 @@
   "stuti-gate.jsx",
   "stuti-account.jsx",
   "stuti-picker.jsx",
+  "stuti-compass.jsx",
+  "stuti-vidhi-jump.jsx",
   "stuti-panchanga.jsx",
+  "stuti-datepick.jsx",
   "stuti-pada.jsx",
   "stuti-record.jsx",
   "stuti-await.jsx",
@@ -122,14 +151,24 @@
   "stuti-onboard.jsx",
   "stuti-flow.jsx",
   "stuti-find.jsx",
+  "stuti-flyleaf.jsx",
+  "stuti-pitru-register.jsx",
+  "stuti-graha-janma.jsx",
+  "stuti-tarpana-occasion.jsx",
   "stuti-follow.jsx",
   "stuti-reader.jsx",
-  "stuti-flyleaf.jsx",
   "stuti-sky.jsx",
+
   "stuti-home.jsx",
   "stuti-japa.jsx",
   "stuti-plans.jsx",
+  "stuti-plan-sitting.jsx",
   "stuti-vows.jsx",
+  "stuti-keep.jsx",
+  "stuti-tithis.jsx",
+  "stuti-pitru.jsx",
+  "stuti-kshana.jsx",
+  "stuti-ledger.jsx",
   "stuti-share.jsx",
   "stuti-vrata.jsx",
   "stuti-nomu.jsx",

@@ -4088,6 +4088,7 @@ window.STUTI_NOMU = (function () {
   },
   ];
   const byId = {};
+  if (window.STUTI_PROV) list.forEach((n) => window.STUTI_PROV.stamp(n, true));
   list.forEach((n) => { byId[n.id] = n; });
   return { list, byId, get: (id) => byId[id] || null };
 })();
