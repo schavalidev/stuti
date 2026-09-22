@@ -3673,3 +3673,47 @@ non-Telugu printed candidates awaiting the user's choice of base. Nothing is aut
 - **Hayagrīva Jayantī** (B). Viṣṇu jayantī → Kṛṣṇa `36` or Rāma `43`. Dharmasindhu records only the utpatti on Śrāvaṇa Pūrṇimā; no Hayagrīva pūjā file exists or is in print here.
 - **Paraśurāma Jayantī** (B). → Kṛṣṇa `36` or Rāma `43`. Dharmasindhu prescribes pūjā and an arghya at pradoṣa on Akṣaya Tṛtīyā, but no vidhāna.
 - [x] **Vāmana Jayantī vrata pūjā written 18 Sep 2026** → `puja/vrata/11_vamana_jayanti_puja.txt`, 26 units. **The earlier verdict on this line was wrong and is corrected here.** It said the day falls back on the Kṛṣṇa `36` or Rāma `43` pūjā, and that the `వామన` hits in Vratha Ratnākaramu are nāmāvaḷi entries and not a vrata. Neither is true. Three prints carry the day, and one carries it whole. Base: the **Vratarāja** of Viśvanātha, Khemraj ed., **printed pp. 629–632** (scan leaves n652–n655) — the Bhaviṣyottara vidhāna verses 30–47 and, under its own heading `अथ वामनपूजा`, a complete ṣoḍaśopacāra with a verse to each service, the aṅga-pūjā of the ten avatāras from the feet to the head, the prārthanā, and the śikya-dāna, closing `इति वामनपूजा समाप्ता`. Every Devanāgarī line was read off the page images. Witnesses: the **Dharmasindhu**, printed p. 130 (leaf n149), read off the page image; and **Vratha Ratnākaramu vol. 2**, which does carry a full వామనజయంతి vidhāna — a Puruṣasūkta-based rite that is a genuine second recension, not a nāmāvaḷi. The Vratarāja is kept as base and the file says why. **The three prints carry three different arghyas, and they were not collated into one**: the base's `सहस्रशीर्षा त्वं देव श्रवणर्क्षसमन्वितः` stands in the units, and the Dharmasindhu's two (`नमस्ते पद्मनाभाय नमस्ते जलशायिने` and `नमः शार्ङ्गधनुर्बाणपाणये वामनाय च`) and the Telugu print's (`त्रिपादूर्ध्व` followed by `गन्धपुष्पफलैर्युक्तं हेमपात्रे निवेदितं`) are recorded in the header as what those prints have. **Vedic: no** — every mantra of the rite is a Paurāṇika verse, so **no Paurāṇika twin was made and none is needed**. The one Vedic limb the base names, the homa with `इदं विष्णुर्विचक्रमे`, belongs to the udyāpana of the twelfth year and is named by its pratīka only. Two defects repaired (the compositor's `गृह्ण` for `गृहाण`, twice). Open [?]: none.
+
+## Śrī Gurucaritam (Dvisāhasrī) — the Sanskrit Guru Caritra
+
+Folder `dattatreya/dvisahasri_gurucaritra/`. 23 adhyāyas, 1,781 ślokas. Read its README
+before writing anything: the recension question is settled there and the trap about the
+chapter numbering restarting in each yoga is real.
+
+**Method, which is not optional here.** No witness of this work is clean. The base text is
+read off the PAGE IMAGES of the `Dwisahasri` PDF (`pdftoppm -r 190`, then look at the page),
+and every verse is checked against two things: the four-pass OCR vote of `DWISAHASRITeekaM`
+(`bin/gurucaritra/vote.py N`) and the author's own anvaya, which the edition prints beneath
+every śloka. The OCR is for finding a page, never for settling a reading — in adhyāya 1 it
+was wrong in about twenty places and the page was right in every one. `assemble.py` builds
+the file and generates the IAST from the Devanāgarī, so never type IAST by hand.
+
+Day numbers are the book's own saptāha-pāṭha-paddhati; see `00_parayana_vidhi.txt`.
+
+- [x] 00 Pārāyaṇa-vidhi — the saptāha order, from the book itself
+- [x] 01 चरितानुसंधानम् — 41 ślokas, pp. 34–62
+- [ ] 02 गुरुशिष्यचरितानुकथनम् — 63 ślokas, pp. 63–80
+- [ ] 03 दत्तावतारकथनम् — 57 ślokas, pp. 81–101
+- [ ] 04 दत्तलीलाकथनम् — 57 ślokas, pp. 102–143  — ends day 1 of the saptāha
+- [ ] 05 श्रीपादावतारः — 36 ślokas, pp. 144–159
+- [ ] 06 गोकर्णवर्णनम् — 54 ślokas, pp. 160–174
+- [ ] 07 श्रीपादमहिमावर्णनम् — 47 ślokas, pp. 175–187
+- [ ] 08 श्रीनृसिहसरस्वत्यवतारकथनम् — 77 ślokas, pp. 188–215
+- [ ] 09 तीर्थयात्रोदेशः — 69 ślokas, pp. 216–243  — ends day 2 of the saptāha
+- [ ] 10 गुरुभक्त्यनुशासनम् — 44 ślokas, pp. 244–255
+- [ ] 11 कृष्णाप्थगङ्गगसङ्गमोत्कर्षकथनम् — 55 ślokas, pp. 256–272
+- [ ] 12 प्रेतसंजीवनम् — 66 ślokas, pp. 273–294
+- [ ] 13 भीमामरजासङ्गमनिवासः — 49 ślokas, pp. 295–308
+- [ ] 14 वेदोपदेशः — 81 ślokas, pp. 309–329  — ends day 3 of the saptāha
+- [ ] 15 कर्मविपाकः — 81 ślokas, pp. 330–351
+- [ ] 16 मृतसंजीवनम् — 99 ślokas, pp. 352–383
+- [ ] 17 दम्पतीगुरुसंवादः — 67 ślokas, pp. 384–409  — ends day 4 of the saptāha
+- [ ] 18 कर्मकाण्डकथनम् — 188 ślokas, pp. 410–462
+- [ ] 19 भक्तिमहिमावर्णनम् — 116 ślokas, pp. 463–501  — ends day 5 of the saptāha
+- [ ] 20 भक्तिवर्णनम् — 111 ślokas, pp. 502–530
+- [ ] 21 भक्तिवर्णनम् — 103 ślokas, pp. 531–555  — ends day 6 of the saptāha
+- [ ] 22 क्षत्रमाहात्म्यवर्णनम् — 102 ślokas, pp. 556–584
+- [ ] 23 । — 118 ślokas, pp. 585–619  — ends day 7 of the saptāha
+- [ ] Śrīgurustuti (112 ślokas, stands before adhyāya 1)
+- [ ] Yogarahasya and Bodharahasya (read on the seventh day, after adhyāya 23)
+- [ ] Aparādha-kṣamāpana-stotra, `rasajñā vaśā` (read at the end of every day)

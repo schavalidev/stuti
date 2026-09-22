@@ -134,5 +134,9 @@ Cached sources are under `stotras/bin/cache/gurucaritra/`.
 
 ## Status
 
-Folder opened 2026-09-22. Structure, sources and the pārāyaṇa vidhi established; the 23
-adhyāya files are being written. `AUTHORING_QUEUE.md` carries one checkbox per adhyāya.
+Folder opened 2026-09-22. Structure, sources and the pārāyaṇa vidhi established.
+**Adhyāya 1 written** (42 units — 41 ślokas and one unnumbered interpolation).
+22 adhyāyas remain, plus the Śrīgurustuti, the two rahasyas and the
+aparādha-kṣamāpana-stotra. `AUTHORING_QUEUE.md` carries one checkbox per adhyāya and
+states the method, which is not optional here: the page image settles every reading, and
+the OCR is used only to find a page.
