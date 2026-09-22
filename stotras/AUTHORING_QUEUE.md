@@ -3692,28 +3692,28 @@ Day numbers are the book's own saptāha-pāṭha-paddhati; see `00_parayana_vidh
 
 - [x] 00 Pārāyaṇa-vidhi — the saptāha order, from the book itself
 - [x] 01 चरितानुसंधानम् — 41 ślokas, pp. 34–62
-- [ ] 02 गुरुशिष्यचरितानुकथनम् — 63 ślokas, pp. 63–80
-- [ ] 03 दत्तावतारकथनम् — 57 ślokas, pp. 81–101
-- [ ] 04 दत्तलीलाकथनम् — 57 ślokas, pp. 102–143  — ends day 1 of the saptāha
-- [ ] 05 श्रीपादावतारः — 36 ślokas, pp. 144–159
-- [ ] 06 गोकर्णवर्णनम् — 54 ślokas, pp. 160–174
-- [ ] 07 श्रीपादमहिमावर्णनम् — 47 ślokas, pp. 175–187
-- [ ] 08 श्रीनृसिहसरस्वत्यवतारकथनम् — 77 ślokas, pp. 188–215
-- [ ] 09 तीर्थयात्रोदेशः — 69 ślokas, pp. 216–243  — ends day 2 of the saptāha
-- [ ] 10 गुरुभक्त्यनुशासनम् — 44 ślokas, pp. 244–255
-- [ ] 11 कृष्णाप्थगङ्गगसङ्गमोत्कर्षकथनम् — 55 ślokas, pp. 256–272
-- [ ] 12 प्रेतसंजीवनम् — 66 ślokas, pp. 273–294
-- [ ] 13 भीमामरजासङ्गमनिवासः — 49 ślokas, pp. 295–308
-- [ ] 14 वेदोपदेशः — 81 ślokas, pp. 309–329  — ends day 3 of the saptāha
-- [ ] 15 कर्मविपाकः — 81 ślokas, pp. 330–351
-- [ ] 16 मृतसंजीवनम् — 99 ślokas, pp. 352–383
-- [ ] 17 दम्पतीगुरुसंवादः — 67 ślokas, pp. 384–409  — ends day 4 of the saptāha
-- [ ] 18 कर्मकाण्डकथनम् — 188 ślokas, pp. 410–462
-- [ ] 19 भक्तिमहिमावर्णनम् — 116 ślokas, pp. 463–501  — ends day 5 of the saptāha
-- [ ] 20 भक्तिवर्णनम् — 111 ślokas, pp. 502–530
-- [ ] 21 भक्तिवर्णनम् — 103 ślokas, pp. 531–555  — ends day 6 of the saptāha
-- [ ] 22 क्षत्रमाहात्म्यवर्णनम् — 102 ślokas, pp. 556–584
-- [ ] 23 । — 118 ślokas, pp. 585–619  — ends day 7 of the saptāha
+- [x] 02 गुरुशिष्यचरितानुकथनम् — 63 ślokas, pp. 63–80
+- [x] 03 दत्तावतारकथनम् — 57 ślokas, pp. 81–101
+- [x] 04 दत्तलीलाकथनम् — 57 ślokas, pp. 102–143  — ends day 1 of the saptāha
+- [x] 05 श्रीपादावतारः — 36 ślokas, pp. 144–159
+- [x] 06 गोकर्णवर्णनम् — 54 ślokas, pp. 160–174
+- [x] 07 श्रीपादमहिमावर्णनम् — 47 ślokas, pp. 175–187
+- [x] 08 श्रीनृसिहसरस्वत्यवतारकथनम् — 77 ślokas, pp. 188–215
+- [x] 09 तीर्थयात्रोदेशः — 69 ślokas, pp. 216–243  — ends day 2 of the saptāha
+- [x] 10 गुरुभक्त्यनुशासनम् — 44 ślokas, pp. 244–255
+- [x] 11 कृष्णाप्थगङ्गगसङ्गमोत्कर्षकथनम् — 55 ślokas, pp. 256–272
+- [x] 12 प्रेतसंजीवनम् — 66 ślokas, pp. 273–294
+- [x] 13 भीमामरजासङ्गमनिवासः — 49 ślokas, pp. 295–308
+- [x] 14 वेदोपदेशः — 81 ślokas, pp. 309–329  — ends day 3 of the saptāha
+- [x] 15 कर्मविपाकः — 81 ślokas, pp. 330–351
+- [x] 16 मृतसंजीवनम् — 99 ślokas, pp. 352–383
+- [x] 17 दम्पतीगुरुसंवादः — 67 ślokas, pp. 384–409  — ends day 4 of the saptāha
+- [x] 18 कर्मकाण्डकथनम् — 188 ślokas, pp. 410–462
+- [x] 19 भक्तिमहिमावर्णनम् — 116 ślokas, pp. 463–501  — ends day 5 of the saptāha
+- [x] 20 भक्तिवर्णनम् — 111 ślokas, pp. 502–530
+- [x] 21 भक्तिवर्णनम् — 103 ślokas, pp. 531–555  — ends day 6 of the saptāha
+- [x] 22 क्षत्रमाहात्म्यवर्णनम् — 102 ślokas, pp. 556–584
+- [x] 23 । — 118 ślokas, pp. 585–619  — ends day 7 of the saptāha
 - [ ] Śrīgurustuti (112 ślokas, stands before adhyāya 1)
 - [ ] Yogarahasya and Bodharahasya (read on the seventh day, after adhyāya 23)
 - [ ] Aparādha-kṣamāpana-stotra, `rasajñā vaśā` (read at the end of every day)

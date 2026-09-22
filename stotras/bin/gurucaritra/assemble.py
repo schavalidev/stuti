@@ -23,13 +23,17 @@ def parse_verified(path):
     for line in path.read_text(encoding='utf-8').split('\n'):
         if line.startswith('#'):
             continue
-        m = re.match(r'^(\d+)\s+\[(\d+)\]\s+(.*)$', line)
+        # `\s*` and `[^\]]*`: the number is padded to width 3, so a three-digit
+        # verse runs straight into the bracket (100[162]), and the page number
+        # inside it is printed in Devanāgarī numerals. Demanding a space and
+        # ASCII digits silently dropped every verse from 100 onward.
+        m = re.match(r'^(\d+)\s*\[([^\]]*)\]\s*(.*)$', line)
         if m:
             cur = {'num': int(m.group(1)), 'page': m.group(2),
                    'deva': [m.group(3).strip()], 'kshepaka': False}
             out.append(cur)
             continue
-        m = re.match(r'^--\s+\[(\d+)\]\s+(.*)$', line)
+        m = re.match(r'^--\s*\[([^\]]*)\]\s*(.*)$', line)
         if m:                                   # an unnumbered interpolation
             cur = {'num': None, 'page': m.group(1),
                    'deva': [re.sub(r'^\(क्षेपकः\)\s*', '', m.group(2)).strip()],
@@ -71,7 +75,7 @@ def main():
         sections = {int(k): v for k, v in
                     json.loads(Path(a.sections).read_text(encoding='utf-8')).items()}
 
-    body, missing = [], []
+    body, missing, kn = [], [], 0
     cur_section = None
     for v in verses:
         deva = '\n'.join(v['deva'])
@@ -82,7 +86,11 @@ def main():
         if cur_section:
             head += f" | section: {cur_section}"
         head += ' ---'
-        u = tr.get('kshepaka' if v['kshepaka'] else n, {})
+        if v['kshepaka']:
+            kn += 1
+            u = tr.get(f'kshepaka{kn}', tr.get('kshepaka', {}))
+        else:
+            u = tr.get(n, {})
         if not v['kshepaka'] and not u:
             missing.append(n)
         body.append(

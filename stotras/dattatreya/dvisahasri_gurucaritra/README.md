@@ -151,9 +151,18 @@ Cached sources are under `stotras/bin/cache/gurucaritra/`.
 
 ## Status
 
-Folder opened 2026-09-22. Structure, sources and the pārāyaṇa vidhi established.
-**Adhyāya 1 written** (42 units — 41 ślokas and one unnumbered interpolation).
-22 adhyāyas remain, plus the Śrīgurustuti, the two rahasyas and the
-aparādha-kṣamāpana-stotra. `AUTHORING_QUEUE.md` carries one checkbox per adhyāya and
-states the method, which is not optional here: the page image settles every reading, and
-the OCR is used only to find a page.
+**All 23 adhyāyas are written** (2026-09-22). 1,818 units in all: 1,809 verses, plus the
+interpolated verses the edition marks क्षेपक and prints without a number of their own.
+Every line of Devanāgarī was read off the page images and checked against the four-pass
+OCR vote and the author's own anvaya; the IAST is generated from that Devanāgarī and never
+typed. The whole folder passes `bin/reader_view.py --audit` with no sourcing in any
+reader-facing field.
+
+**Still to write:** the Śrīgurustuti (112 ślokas, which stands before adhyāya 1 and is read
+at the start of every day of the saptāha), the Yogarahasya and the Bodharahasya (read on the
+seventh day after adhyāya 23), and the aparādha-kṣamāpana-stotra beginning rasajñā vaśā
+(read at the end of every day). Without these four the saptāha cannot be kept from this
+folder alone, so they are the next work.
+
+The method is not optional here and is stated in `AUTHORING_QUEUE.md`: the page image
+settles every reading and the OCR is used only to find a page.
