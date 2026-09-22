@@ -76,3 +76,39 @@ def absolute(ordinal_word, yoga):
     if n > 13:                      # already an "āditaḥ" absolute number
         return n
     return n + YOGA_OFFSET.get(yoga, 0)
+
+
+# ---------------------------------------------------------------------------
+# Colophon anchors: one regex per adhyāya, each matching exactly ONCE PER PASS.
+#
+# Chapter regions are cut on these rather than on a running counter, because the
+# ordinal in a colophon is one of the things the OCR most often destroys — five
+# of the twenty-three fail in every pass. The chapter NAME is long and survives.
+# Three chapters need a hand-made anchor: the table of contents and the colophon
+# spell 11 and 13 differently, and 20 and 21 share the name भक्तिवर्णन and are
+# told apart by the within-yoga ordinal that follows it.
+ANCHORS = {
+    1:  r'चरितानुसंधानं\s*नाम',
+    2:  r'गुरुशिष्यचरितानुकथनं\s*नाम',
+    3:  r'दत्तावतारकथनं\s*नाम',
+    4:  r'दत्तलीलाकथनं\s*नाम',
+    5:  r'श्रीपादावतारो?\s*नाम',
+    6:  r'गोकर्णवर्णनं\s*नाम',
+    7:  r'श्रीपादमहिमावर्णनं\s*नाम',
+    8:  r'श्रीनृसिहसरस्वत्यवतारकथनं\s*नामा?',
+    9:  r'तीर्थयात्रोदेशो?\s*नाम',
+    10: r'गुरुभक्त्यनुशासनं\s*नाम',
+    11: r'सङ्गमोत्कर्षकथनं\s*नाम',
+    12: r'प्रेतसंजीवनं\s*नाम',
+    13: r'मरजासंगमनिवासो\s*नाम',
+    14: r'वेदोपदेशो?\s*नाम',
+    15: r'कर्मविपाको?\s*नाम',
+    16: r'मृतसंजीवनं\s*नाम',
+    17: r'दम्पतीगुरुसंवादो?\s*नाम',
+    18: r'कर्मकाण्डकथनं\s*नाम',
+    19: r'भक्तिमहिमावर्णनं\s*नाम',
+    20: r'भक्तिवर्णनं\s*नाम\s*द्वितीय',
+    21: r'आदित\S{0,3}\s*एकविंशोऽध्याय',
+    22: r'माहात्म्यवर्णनं\s*नाम',
+    23: r'आदित\S{0,3}त्रयोविंशोऽध्याय',
+}

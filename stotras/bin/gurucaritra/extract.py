@@ -23,9 +23,14 @@ from adhyaya import YOGA, ADITAH, ITI, ATHA, absolute, CONTENTS
 ANCHOR = 'नौम्युदेति'          # first word of adhyāya 1, once per pass
 END = re.compile(r'[।\|॥]{1,2}\s*([०-९]+)\s*[।\|॥]{1,2}\s*$')
 DEVA = re.compile(r'[ऀ-ॿ]')
+# Marathi commentary gives itself away by its own function words. These must be
+# anchored: an unanchored `त्या ` matches inside प्रकृत्या and `हा ` inside पापहा,
+# which silently dropped 7 of adhyāya 1's 41 ślokas before it was caught.
 MARATHI = re.compile(
-    r'(आहे|आहेत|असे|असा|अशी|याचा|याची|यांच्या|नाही|होते|केले|करून|करावे'
-    r'|जाणावे|समजावे|म्हणजे|पाहिजे|कोणी|त्या |हा |ही |हे |तर |मग |इथे|वाचा)')
+    r'(?<![\u0900-\u097f])'
+    r'(आहे|आहेत|असे|असा|अशी|नाही|होते|केले|करून|करावे|जाणावे|जाणावेत|समजावे'
+    r'|म्हणजे|पाहिजे|त्या|हा|ही|हे|तर|मग|इथे|वाचा|यांच्या|याचा|याची)'
+    r'(?![\u0900-\u097f])')
 DIGITS = str.maketrans('०१२३४५६७८९', '0123456789')
 
 
