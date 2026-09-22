@@ -11,19 +11,22 @@ import { readFileSync, writeFileSync } from "node:fs";
 import { join, dirname } from "node:path";
 import { fileURLToPath } from "node:url";
 
+import { patcher, isMain } from "./seam-lib.mjs";
+
 const HERE = dirname(fileURLToPath(import.meta.url));
 const SRC = join(HERE, "../../src");
 
-function patchFile(file, patches) {
-  let t = readFileSync(file, "utf8");
-  for (const [from, to, what] of patches) {
-    if (!t.includes(from)) throw new Error(`fix-record-seam: anchor not found in ${file} — ${what}`);
-    t = t.replace(from, to);
-  }
-  writeFileSync(file, t);
+/* the patches are data, so the design can be given the same ones
+   (../mirror-to-design.mjs); seam-lib decides applied / upstream / throw */
+function run(text, patches, mode, where) {
+  const p = patcher("fix-record-seam " + where, text, mode);
+  for (const [from, to, what] of patches) p.patch(from, to, what);
+  return p.text;
 }
+export const applyRecord = (text, mode = "port") => run(text, RECORD, mode, "stuti-record");
+export const applyReader = (text, mode = "port") => run(text, READER, mode, "stuti-reader");
 
-patchFile(join(SRC, "stuti-record.tsx"), [
+const RECORD = [
   [`const REC_CAP_MS = 15000;   // no turn of a single line runs longer than this`,
    `const REC_CAP_MS = 60000;   // a hard stop for a forgotten take; the turn's own timer ends a normal one`,
    "cap constant"],
@@ -64,9 +67,9 @@ patchFile(join(SRC, "stuti-record.tsx"), [
   [`      if (el.duration && !el.paused) { setFrac(el.currentTime / el.duration); raf = requestAnimationFrame(tick); }`,
    `      if (!el.paused) { setFrac(Math.min(1, (el.currentTime * 1000) / Math.max(1, take.ms || 0))); raf = requestAnimationFrame(tick); }`,
    "playback progress against the take's own length"],
-]);
+];
 
-patchFile(join(SRC, "stuti-reader.tsx"), [
+const READER = [
   // the end of a turn stops the mic whatever state it is in (an arming one included)
   [`    else if (rec.state === "recording") rec.stop();
   }, [speakingNow, recordOn]);`,
@@ -102,7 +105,13 @@ patchFile(join(SRC, "stuti-reader.tsx"), [
    `      ) : null}
       {repeatOn && playing ? (`,
    "cue alongside the strip"],
-]);
+];
+
+if (isMain(import.meta.url)) {
+for (const [name, apply] of [["stuti-record.tsx", applyRecord], ["stuti-reader.tsx", applyReader]]) {
+  const file = join(SRC, name);
+  writeFileSync(file, apply(readFileSync(file, "utf8")));
+}
 
 // the refusal note: the designer's copy was written for a web embed ("open the
 // app directly"); inside the app the reciter needs the settings path. The
@@ -120,3 +129,4 @@ patchFile(join(SRC, "stuti-reader.tsx"), [
 }
 
 console.log("record seam applied");
+}

@@ -18,7 +18,12 @@ const scripts = [...html.matchAll(/<script\s+src="([^"]+\.js)"/g)].map((m) => m[
 const loadBlock = html.match(/StutiBoot\.load\(\[([\s\S]*?)\]\)/);
 const jsx = loadBlock ? [...loadBlock[1].matchAll(/"([^"]+\.jsx)"/g)].map((m) => m[1]) : [];
 
-const order = [...scripts, ...jsx].filter((f) => f !== "stuti-boot.js" && !/^https?:/.test(f));
+/* Files the design carries FROM the code (../mirror-to-design.mjs writes
+   them): the app is built from their hand-authored sources in src/, so the
+   port must not regenerate them over those sources. */
+const MIRRORED = JSON.parse(readFileSync(join(HERE, "mirrored.json"), "utf8"));
+
+const order = [...scripts, ...jsx].filter((f) => f !== "stuti-boot.js" && !/^https?:/.test(f) && !MIRRORED.includes(f));
 if (existsSync(join(SRC, "stuti-wide-main.jsx")) && !order.includes("stuti-wide-main.jsx")) {
   order.push("stuti-wide-main.jsx");
 }

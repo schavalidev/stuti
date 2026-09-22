@@ -24,24 +24,27 @@ import { readFileSync, writeFileSync } from "node:fs";
 import { join, dirname } from "node:path";
 import { fileURLToPath } from "node:url";
 
+import { patcher, isMain } from "./seam-lib.mjs";
+
 const HERE = dirname(fileURLToPath(import.meta.url));
 const SRC = join(HERE, "../../src");
 const file = join(SRC, "stuti-main.tsx");
-
-let t = readFileSync(file, "utf8");
-const sub = (from, to, what) => {
-  if (!t.includes(from)) throw new Error(`fix-search-seam: anchor not found — ${what}`);
-  t = t.replace(from, to);
-};
 const voiceFile = join(SRC, "stuti-voice.tsx");
-function patchVoice(patches) {
-  let v = readFileSync(voiceFile, "utf8");
-  for (const [from, to, what] of patches) {
-    if (!v.includes(from)) throw new Error(`fix-search-seam: anchor not found in stuti-voice.tsx — ${what}`);
-    v = v.replace(from, to);
-  }
-  writeFileSync(voiceFile, v);
+
+/* the same patches go to the design's own files (../mirror-to-design.mjs);
+   seam-lib decides applied / upstream / throw for each */
+let VOICE = [];
+const patchVoice = (patches) => { VOICE = patches; };
+export function applyVoice(text, mode = "port") {
+  const p = patcher("fix-search-seam stuti-voice", text, mode);
+  for (const [from, to, what] of VOICE) p.patch(from, to, what);
+  return p.text;
 }
+
+export function applyMain(text, mode = "port") {
+const P = patcher("fix-search-seam", text, mode);
+const sub = (from, to, what, opts) => P.patch(from, to, what, opts);
+let rewired = 0;
 
 /* ---- 1. the matcher ---- */
 sub(
@@ -49,6 +52,7 @@ sub(
   `import { VoiceButton } from "./stuti-voice";
 import { matchScore, titleRank } from "./stuti-search-match";   // search seam: near spellings, not just exact runs`,
   "import of the matcher",
+  { port: true },
 );
 
 sub(
@@ -167,17 +171,25 @@ sub(
 );
 
 /* the rest of the chain follows the effective view too */
+{
+let t = P.text;
 const chainAt = t.indexOf(`  if (rv === "home")`);
 const chainEnd = t.indexOf(`  const showTabs = `, chainAt);
 if (chainAt < 0 || chainEnd < 0) throw new Error("fix-search-seam: anchor not found — the view chain's body");
 let chain = t.slice(chainAt, chainEnd);
 const searchLine = chain.split("\n").find((l) => l.includes(`body = <SearchView`));
-if (!searchLine) throw new Error("fix-search-seam: anchor not found — the search branch of the chain");
-chain = chain.replace(searchLine + "\n", "");            // the search is no longer a branch
-const rewired = chain.split(`route.view === `).length - 1;
-if (!rewired) throw new Error("fix-search-seam: anchor not found — nothing to rewire in the view chain");
-chain = chain.split(`route.view === `).join(`rv === `);
-t = t.slice(0, chainAt) + chain + t.slice(chainEnd);
+rewired = chain.split(`route.view === `).length - 1;
+/* a design that already carries the seam has no search branch and nothing
+   left to rewire; anything in between is a moved anchor */
+if (!searchLine && !rewired) P.stats.upstream++;
+else {
+  if (!searchLine) throw new Error("fix-search-seam: anchor not found — the search branch of the chain");
+  if (!rewired) throw new Error("fix-search-seam: anchor not found — nothing to rewire in the view chain");
+  chain = chain.replace(searchLine + "\n", "");            // the search is no longer a branch
+  chain = chain.split(`route.view === `).join(`rv === `);
+  P.text = t.slice(0, chainAt) + chain + t.slice(chainEnd);
+}
+}
 
 /* the screen behind softens while the search is open (CSS in stuti-app.css) */
 sub(
@@ -211,5 +223,12 @@ sub(
   "the tab bar's view",
 );
 
-writeFileSync(file, t);
-console.log(`search seam applied (view chain rewired: ${rewired})`);
+return { text: P.text, rewired };
+}
+
+if (isMain(import.meta.url)) {
+  const out = applyMain(readFileSync(file, "utf8"));
+  writeFileSync(file, out.text);
+  writeFileSync(voiceFile, applyVoice(readFileSync(voiceFile, "utf8")));
+  console.log(`search seam applied (view chain rewired: ${out.rewired})`);
+}

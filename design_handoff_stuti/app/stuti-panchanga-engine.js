@@ -794,7 +794,25 @@ window.AKSHARA_PANCHANGA = (function () {
   }
 
   /* ---------- The five limbs (+ derived) for one civil day ---------- */
+  /* a civil day's pañcāṅga, remembered: the calendar asks for thirty of
+     them per month and the engine takes tens of milliseconds for each. The
+     instant form (the tithi prevailing right now) is never cached. */
+  const DAY_CACHE = new Map();
+  let DAY_STAMP = "";
   function forDay(date, loc, opts) {
+    if (opts && opts.instant) return forDayRaw(date, loc, opts);
+    let stamp = "";
+    try { stamp = JSON.stringify(STUTI_PREFS.get()); } catch (e) {}
+    if (stamp !== DAY_STAMP) { DAY_STAMP = stamp; DAY_CACHE.clear(); }
+    const k = date.getFullYear() + "-" + date.getMonth() + "-" + date.getDate() + "|" + (loc && (loc.id || loc.lat + "," + loc.lon + "," + loc.tz)) + "|" + JSON.stringify(opts || null);
+    const hit = DAY_CACHE.get(k);
+    if (hit) return hit;
+    const r = forDayRaw(date, loc, opts);
+    if (DAY_CACHE.size > 1200) DAY_CACHE.clear();
+    DAY_CACHE.set(k, r);
+    return r;
+  }
+  function forDayRaw(date, loc, opts) {
     /* drik or vākya, before a single angle is asked for. The ephemeris holds
        the scheme as state so that nothing between here and the Rsine table
        has to carry it as an argument. */

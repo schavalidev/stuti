@@ -10,14 +10,16 @@ import { readFileSync, writeFileSync } from "node:fs";
 import { join, dirname } from "node:path";
 import { fileURLToPath } from "node:url";
 const HERE = dirname(fileURLToPath(import.meta.url));
+import { patcher, isMain } from "./seam-lib.mjs";
+/* the patches are data, so the design's own files can be given the same ones
+   (../mirror-to-design.mjs) */
+const APPLY = {};
 function patchFile(rel, edits) {
-  const file = join(HERE, "../../src", rel);
-  let t = readFileSync(file, "utf8");
-  for (const [from, to, what] of edits) {
-    if (!t.includes(from)) throw new Error(`fix-perf-seam: anchor not found in ${rel} — ${what}`);
-    t = t.replace(from, to);
-  }
-  writeFileSync(file, t);
+  APPLY[rel] = (text, mode = "port") => {
+    const p = patcher("fix-perf-seam " + rel, text, mode);
+    for (const [from, to, what, opts] of edits) p.patch(from, to, what, opts);
+    return p.text;
+  };
 }
 
 patchFile("stuti-vrata-data.ts", [
@@ -53,7 +55,7 @@ patchFile("stuti-vrata-data.ts", [
 
 patchFile("stuti-panchanga-engine.ts", [
   [`import { ayanSys, reckoning } from "./stuti-reckoning";`,
-   `import { ayanSys, reckoning } from "./stuti-reckoning";\nimport { STUTI_PREFS } from "./stuti-prefs";`, "prefs import for the day memo"],
+   `import { ayanSys, reckoning } from "./stuti-reckoning";\nimport { STUTI_PREFS } from "./stuti-prefs";`, "prefs import for the day memo", { port: true }],
   [`  function forDay(date, loc, opts) {`,
 `  /* a civil day's pañcāṅga, remembered: the calendar asks for thirty of
      them per month and the engine takes tens of milliseconds for each. The
@@ -75,4 +77,13 @@ patchFile("stuti-panchanga-engine.ts", [
   }
   function forDayRaw(date, loc, opts) {`, "the day memo wrapping forDay"],
 ]);
-console.log("perf seam applied");
+export const applyVrataData = (text, mode) => APPLY["stuti-vrata-data.ts"](text, mode);
+export const applyEngine = (text, mode) => APPLY["stuti-panchanga-engine.ts"](text, mode);
+
+if (isMain(import.meta.url)) {
+  for (const rel of Object.keys(APPLY)) {
+    const file = join(HERE, "../../src", rel);
+    writeFileSync(file, APPLY[rel](readFileSync(file, "utf8")));
+  }
+  console.log("perf seam applied");
+}

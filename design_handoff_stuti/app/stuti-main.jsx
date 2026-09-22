@@ -90,6 +90,7 @@ const srPadaGloss = (lk) => {
 function SearchView({ go, lang = "deva", backView = "browse", weekday, voice = false }) {
   const S = window.STUTI, L = window.STUTI_L, TR = window.STUTI_TRANSLIT, PADA = window.STUTI_PADA;
   const [q, setQ] = useStateM("");
+  const wasTyped = useRefM("");   // search seam: given back if a dictation hears nothing
   /* opened from the home, the search is a search for stotras and nothing
      else — festivals have their own place on the calendar */
   const stotraOnly = backView === "home" || backView === "daily";
@@ -103,22 +104,27 @@ function SearchView({ go, lang = "deva", backView = "browse", weekday, voice = f
   /* 1 — titles, deities, forms */
   const hymnHits = React.useMemo(() => {
     if (!live) return [];
-    const r = S.hymns.filter((h) => {
+    /* search seam: every word of the query must be answered somewhere in
+       the hymn's names, by a word that begins the same way, that carries it,
+       or that is a letter or two from it — so a reciter who does not know the
+       catalogue's exact title still finds the stotra */
+    const scored = [];
+    for (const h of S.hymns) {
       const d = S.deityById[h.deity];
-      return srFold([h.title, h.deva, h.tel, h.type, h.by, d && d.name, d && d.deva, d && d.tel, d && d.epithet].join(" ")).indexOf(qf) !== -1;
-    });
+      /* the hymn's own name, and separately what it is filed under: a match
+         on the name outweighs a match on the form or the deity */
+      const s = matchScore(qf, srFold([h.title, h.deva, h.tel].join(" ")),
+                               srFold([h.type, h.by, d && d.name, d && d.deva, d && d.tel, d && d.epithet].join(" ")));
+      if (s > 0) scored.push({ h, s });
+    }
+    const r = scored.map((x) => x.h);
+    const near = new Map(scored.map((x) => [x.h, x.s]));
     /* the word in the title outranks the word in the deity, type or author —
        searching "lakṣmī" should surface Lakṣmī Aṣṭakam before every hymn
        that merely belongs to her; a title that STARTS with the word beats
        one that carries it mid-name */
-    const rank = (h) => {
-      const t = srFold([h.title, h.deva, h.tel].join(" "));
-      const at = t.indexOf(qf);
-      if (at === -1) return 3;
-      if (at === 0) return 0;
-      return t[at - 1] === " " ? 1 : 2;
-    };
-    r.sort((a, b) => rank(a) - rank(b) || (a.catalog ? 1 : 0) - (b.catalog ? 1 : 0));
+    const rank = (h) => titleRank(qf, srFold([h.title, h.deva, h.tel].join(" ")));
+    r.sort((a, b) => rank(a) - rank(b) || (near.get(b) || 0) - (near.get(a) || 0) || (a.catalog ? 1 : 0) - (b.catalog ? 1 : 0));
     return r;
   }, [qf]);
 
@@ -172,9 +178,11 @@ function SearchView({ go, lang = "deva", backView = "browse", weekday, voice = f
         <button className="icon-btn" onClick={() => go(backView)} aria-label={window.STUTI_L.a("aBack")}><Icon name="back" /></button>
         <div className="search-field">
           <Icon name="search" size={18} />
-          <input className="search-input" value={q} onChange={(e) => setQ(e.target.value)} autoFocus
+          <input className="search-input" value={q} onChange={(e) => setQ(e.target.value)} autoFocus={!voice}
             placeholder={L.t("searchHint", lang)} autoComplete="off" spellCheck="false" enterKeyHint="search" />
-          <window.VoiceButton lang={lang} autoStart={voice} onInterim={setQ} onResult={setQ} />
+          <window.VoiceButton lang={lang} autoStart={voice} onInterim={setQ} onResult={setQ}
+            onStart={() => { wasTyped.current = q; setQ(""); }}
+            onNothing={() => setQ((cur) => cur || wasTyped.current)} />
           {q && <button className="search-clear" onClick={() => setQ("")} aria-label={window.STUTI_L.a("aClearSearch")}>×</button>}
         </div>
       </div>
@@ -483,7 +491,7 @@ function App() {
      interface takes its own nudge in CSS ([data-ui-lang="deva"]) — keying this on
      the reading script blew up an English interface sitting over Hindi verses. */
   useEffectM(() => { try { localStorage.setItem("stuti-uiscale", String(uiScale)); } catch (e) {} document.documentElement.style.fontSize = (16 * uiScale) + "px"; }, [uiScale]);
-  const [route, setRoute] = useStateM(() => ({ view: hashView() || "home", deity: null, hymn: null, practice: null }));
+  const [route, setRoute] = useStateM(() => { const t = STUTI_ROUTE.target(); return { view: (t && t.view) || "home", deity: (t && t.deity) || null, hymn: (t && t.hymn) || null, practice: null }; });
   const [dir, setDir] = useStateM("fwd");
   const [overlayEl, setOverlayEl] = useStateM(null); // app-level host for the saṅkalpa bottom sheet
   const [onboarding, setOnboarding] = useStateM(() => !window.STUTI_PREFS.get().onboarded);
@@ -541,7 +549,7 @@ function App() {
     if (payload.reset) { setLibSub(null); setLibLens(LENS_FROM_LABEL[t.defaultLens] || "deity"); }
     if (payload.libSub) setLibSub(payload.libSub);
     if (payload.libLens) setLibLens(payload.libLens);
-    setRoute(r => ({ view, from: payload.from, ret: payload.ret, deity: payload.deity ?? r.deity, hymn: payload.hymn ?? r.hymn, practice: payload.practice ?? r.practice, plan: payload.plan ?? r.plan, lens: payload.lens, lensAt: payload.lensAt, weekday: payload.weekday }));
+    setRoute(r => ({ view, from: payload.from, ret: payload.ret, deity: payload.deity ?? r.deity, hymn: payload.hymn ?? r.hymn, practice: payload.practice ?? r.practice, plan: payload.plan ?? r.plan, lens: payload.lens, lensAt: payload.lensAt, weekday: payload.weekday, voice: payload.voice }));
   };
 
   const openToday = () => {
@@ -555,7 +563,10 @@ function App() {
      names rather than the home — so the hash is read once at mount (above)
      and listened to after, since a hash change never reloads the document. */
   useEffectM(() => {
-    const on = () => { const v = hashView(); if (v) go(v, v === "browse" ? { reset: true } : {}); };
+    const on = () => {
+      const t = STUTI_ROUTE.target(); if (!t) return;
+      go(t.view, t.view === "browse" ? { reset: true } : t.hymn ? { deity: t.deity, hymn: t.hymn, from: "home" } : {});
+    };
     window.addEventListener("hashchange", on);
     return () => window.removeEventListener("hashchange", on);
   }, [route.view]);
@@ -565,24 +576,28 @@ function App() {
 
   const Home = window.HomeA;
 
+  /* search seam: the search is a sheet over the screen that called it, not
+     a screen of its own — so the chain below runs for that screen, and the
+     search is rendered on top of it further down */
+  const searchOpen = route.view === "search";
+  const rv = searchOpen ? (route.from || "browse") : route.view;
   let body;
-  if (route.view === "home") body = <Home key="home" go={go} openToday={openToday} lang={lang} overlayEl={overlayEl} />;
-  else if (route.view === "browse") body = <window.LibraryHub key="browse" go={go} lang={lang} tileMode={tileMode} lens={libLens} setLens={setLibLens} sub={libSub} setSub={setLibSub} />;
-  else if (route.view === "search") body = <SearchView key="search" go={go} lang={lang} backView={route.from || "browse"} weekday={route.weekday} voice={!!route.voice} />;
-  else if (route.view === "daily") body = <window.NityaView key="daily" go={go} lang={lang} showPractices={false} openRemind={() => setRemindOpen(true)} initLens={route.lens} initLensAt={route.lensAt} />;
-  else if (route.view === "practices") body = <window.PracticesView key="practices" go={go} lang={lang} />;
-  else if (route.view === "japa") body = <window.JapaView key="japa" go={go} lang={lang} />;
-  else if (route.view === "plans") body = <window.PlansView key="plans" go={go} lang={lang} />;
-  else if (route.view === "plan" && route.plan) body = <window.PlanView key={"pl" + route.plan} hymnId={route.plan} go={go} lang={lang} backView={route.from || "daily"} />;
-  else if (route.view === "calendar") body = <window.CalendarView key="calendar" go={go} lang={lang} />;
-  else if (route.view === "pitru") body = <window.PitruCalendarView key="pitru" go={go} lang={lang} backView={route.from || "calendar"} />;
-  else if (route.view === "pitruRegister") body = <window.PitruRegisterView key="pitruRegister" go={go} lang={lang} backView={route.from || "calendar"} />;
-  else if (route.view === "account") body = <window.AccountView key="account" go={go} lang={lang} backView={route.from || "settings"} />;
-  else if (route.view === "settings") body = <window.SettingsView key="settings" go={go} lang={lang} setLang={setLang} uiLang={uiLang} setUiLang={setUiLang} theme={theme} toggleTheme={toggleTheme} openRemind={() => setRemindOpen(true)} backView={route.from || "home"} />;
-  else if (route.view === "practice") { const p = window.STUTI_LIB.practiceById(route.practice); body = p ? <window.PracticeView key={"p" + p.id} practice={p} go={go} lang={lang} backView={route.from || "daily"} /> : <Home key="home" go={go} openToday={openToday} lang={lang} overlayEl={overlayEl} />; }
-  else if (route.view === "sandhyaNote") body = <window.SandhyaNoteView key="sandhyaNote" go={go} lang={lang} backView={route.from || "home"} />;
-  else if (route.view === "deity" && deity) body = <DeityView key={"d" + deity.id} deity={deity} go={go} lang={lang} backView={route.from || "browse"} retView={route.ret} />;
-  else if (route.view === "reader" && hymn && deity) body = <ReaderView key={"r" + hymn.id + (route.jump ? "-" + route.jump : "")} hymn={hymn} deity={deity} go={go} theme={theme} toggleTheme={toggleTheme} lang={lang} setLang={setLang} backView={route.from || "deity"} retView={route.ret} />;
+  if (rv === "home") body = <Home key="home" go={go} openToday={openToday} lang={lang} overlayEl={overlayEl} />;
+  else if (rv === "browse") body = <window.LibraryHub key="browse" go={go} lang={lang} tileMode={tileMode} lens={libLens} setLens={setLibLens} sub={libSub} setSub={setLibSub} />;
+  else if (rv === "daily") body = <window.NityaView key="daily" go={go} lang={lang} showPractices={false} openRemind={() => setRemindOpen(true)} initLens={route.lens} initLensAt={route.lensAt} />;
+  else if (rv === "practices") body = <window.PracticesView key="practices" go={go} lang={lang} />;
+  else if (rv === "japa") body = <window.JapaView key="japa" go={go} lang={lang} />;
+  else if (rv === "plans") body = <window.PlansView key="plans" go={go} lang={lang} />;
+  else if (rv === "plan" && route.plan) body = <window.PlanView key={"pl" + route.plan} hymnId={route.plan} go={go} lang={lang} backView={route.from || "daily"} />;
+  else if (rv === "calendar") body = <window.CalendarView key="calendar" go={go} lang={lang} />;
+  else if (rv === "pitru") body = <window.PitruCalendarView key="pitru" go={go} lang={lang} backView={route.from || "calendar"} />;
+  else if (rv === "pitruRegister") body = <window.PitruRegisterView key="pitruRegister" go={go} lang={lang} backView={route.from || "calendar"} />;
+  else if (rv === "account") body = <window.AccountView key="account" go={go} lang={lang} backView={route.from || "settings"} />;
+  else if (rv === "settings") body = <window.SettingsView key="settings" go={go} lang={lang} setLang={setLang} uiLang={uiLang} setUiLang={setUiLang} theme={theme} toggleTheme={toggleTheme} openRemind={() => setRemindOpen(true)} backView={route.from || "home"} />;
+  else if (rv === "practice") { const p = window.STUTI_LIB.practiceById(route.practice); body = p ? <window.PracticeView key={"p" + p.id} practice={p} go={go} lang={lang} backView={route.from || "daily"} /> : <Home key="home" go={go} openToday={openToday} lang={lang} overlayEl={overlayEl} />; }
+  else if (rv === "sandhyaNote") body = <window.SandhyaNoteView key="sandhyaNote" go={go} lang={lang} backView={route.from || "home"} />;
+  else if (rv === "deity" && deity) body = <DeityView key={"d" + deity.id} deity={deity} go={go} lang={lang} backView={route.from || "browse"} retView={route.ret} />;
+  else if (rv === "reader" && hymn && deity) body = <ReaderView key={"r" + hymn.id + (route.jump ? "-" + route.jump : "")} hymn={hymn} deity={deity} go={go} theme={theme} toggleTheme={toggleTheme} lang={lang} setLang={setLang} backView={route.from || "deity"} retView={route.ret} />;
   else body = <Home go={go} openToday={openToday} lang={lang} overlayEl={overlayEl} />;
 
   const showTabs = true;
@@ -639,11 +654,21 @@ function App() {
           </div>
         )}
 
-        <div className={"viewport " + (dir === "fwd" ? "d-fwd" : "d-back")}>
+        <div className={"viewport " + (dir === "fwd" ? "d-fwd" : "d-back") + (searchOpen ? " is-searching" : "")}>
           {body}
+          {/* search seam: over the screen, not instead of it — the softened
+              screen behind is still the screen, and tapping it closes the
+              search the way tapping outside any sheet does */}
+          {searchOpen && (
+            <div className="sr-scrim" onClick={() => go(route.from || "browse")}>
+              <div className="sr-sheet" onClick={(e) => e.stopPropagation()}>
+                <SearchView key="search" go={go} lang={lang} backView={route.from || "browse"} weekday={route.weekday} voice={!!route.voice} />
+              </div>
+            </div>
+          )}
         </div>
 
-        {showTabs && <TabBar view={route.view} from={route.from} ret={route.ret} go={go} lang={lang} />}
+        {showTabs && <TabBar view={rv} from={route.from} ret={route.ret} go={go} lang={lang} />}
 
         <div className="app-overlay" ref={setOverlayEl} />
 

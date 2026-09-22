@@ -11,19 +11,18 @@
 import { readFileSync, writeFileSync } from "node:fs";
 import { join, dirname } from "node:path";
 import { fileURLToPath } from "node:url";
+import { patcher, isMain } from "./seam-lib.mjs";
 const HERE = dirname(fileURLToPath(import.meta.url));
 
-function edit(file, pairs) {
-  const F = join(HERE, "../../src/" + file);
-  let t = readFileSync(F, "utf8");
-  for (const [from, to, what] of pairs) {
-    if (!t.includes(from)) throw new Error(`fix-deeplink-seam: anchor not found in ${file} — ${what}`);
-    t = t.replace(from, to);
-  }
-  writeFileSync(F, t);
-}
+/* the patches are data, so the design's own files can be given the same ones
+   (../mirror-to-design.mjs) */
+const run = (file, pairs) => (text, mode = "port") => {
+  const p = patcher("fix-deeplink-seam " + file, text, mode);
+  for (const [from, to, what] of pairs) p.patch(from, to, what);
+  return p.text;
+};
 
-edit("stuti-store.ts", [[
+const STORE = [[
   `  return {
     VIEW: VIEW,`,
   `  /* a hymn named in the URL: #reader/<deity>/<hymn>, which is what a tapped
@@ -41,7 +40,7 @@ edit("stuti-store.ts", [[
     VIEW: VIEW,
     target: target,`,
   "STUTI_ROUTE.target",
-]]);
+]];
 
 /* both shells: the hash is read once at mount and listened to after */
 const mount = (call) => [
@@ -57,6 +56,14 @@ const listen = (call) => [
     };`,
   "the hashchange listener",
 ];
-edit("stuti-main.tsx", [mount("hashView()"), listen("hashView()")]);
-edit("stuti-wide-main.tsx", [mount("STUTI_ROUTE.view()"), listen("STUTI_ROUTE.view()")]);
-console.log("deeplink seam applied");
+export const applyStore = run("stuti-store", STORE);
+export const applyMain = run("stuti-main", [mount("hashView()"), listen("hashView()")]);
+export const applyWideMain = run("stuti-wide-main", [mount("STUTI_ROUTE.view()"), listen("STUTI_ROUTE.view()")]);
+
+if (isMain(import.meta.url)) {
+  for (const [file, apply] of [["stuti-store.ts", applyStore], ["stuti-main.tsx", applyMain], ["stuti-wide-main.tsx", applyWideMain]]) {
+    const F = join(HERE, "../../src/" + file);
+    writeFileSync(F, apply(readFileSync(F, "utf8")));
+  }
+  console.log("deeplink seam applied");
+}

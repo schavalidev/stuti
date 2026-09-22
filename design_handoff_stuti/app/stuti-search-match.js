@@ -1,0 +1,182 @@
+/* ============================================================
+   Carried from the app's code: stuti-app/src/stuti-search-match.ts
+   Written by stuti-app/tools/mirror-to-design.mjs. Do not edit this copy —
+   the next run overwrites it. Change the source, then run the script.
+   The port skips this file (stuti-app/tools/codemod/mirrored.json): the
+   app is built from the source, not from here.
+   ============================================================ */
+(function () {
+/* ============================================================
+   STUTI — how close a typed query comes to a hymn
+   Hand-authored (never regenerated); wired into the generated search by
+   tools/codemod/fix-search-seam.mjs.
+
+   The search used to ask one question: does the folded query appear, whole
+   and unbroken, inside the folded title? That is a fair question only of
+   someone who already knows the title. A reciter looking for the Viṣṇu
+   Sahasranāma types "vishnu sahasranamam" and gets nothing, because the
+   catalogue calls it "Viṣṇu Sahasranāma Stotram" and the run breaks at the
+   m — one letter, and the stotra may as well not exist.
+
+   So the query is read as words instead of as a run. Every word must be
+   accounted for somewhere in the hymn's names — its title in three scripts,
+   its deity, its form, its author — but a word may be accounted for by a
+   word that merely begins the same way ("sahasra" for sahasranāma), by one
+   it sits inside ("nama" for sahasranāma), or by one it is a letter or two
+   away from ("sahasranamam" for sahasranāma). What comes back is ordered by
+   how well it answered, so the exact title still arrives first and the near
+   ones follow it rather than nothing following at all.
+
+   Everything here works on keys already folded by STUTI_TRANSLIT.fold, the
+   app's one spelling-tolerant fold (krishna/kṛṣṇa, sh/ś, doubles collapsed).
+   ============================================================ */
+/* how many single-letter edits turn a into b, capped: past the cap the
+   answer is only ever "too far", and stopping early keeps a whole catalogue
+   cheap to score on every keystroke */
+function within(a, b, cap) {
+    const m = a.length, n = b.length;
+    if (Math.abs(m - n) > cap)
+        return cap + 1;
+    let prev = new Array(n + 1), cur = new Array(n + 1);
+    for (let j = 0; j <= n; j++)
+        prev[j] = j;
+    for (let i = 1; i <= m; i++) {
+        cur[0] = i;
+        let best = i;
+        for (let j = 1; j <= n; j++) {
+            cur[j] = Math.min(prev[j] + 1, cur[j - 1] + 1, prev[j - 1] + (a[i - 1] === b[j - 1] ? 0 : 1));
+            if (cur[j] < best)
+                best = cur[j];
+        }
+        if (best > cap)
+            return cap + 1;
+        [prev, cur] = [cur, prev];
+    }
+    return prev[n];
+}
+/* How long a word is, counted so that the same word is the same length in
+   any script the reader types in.
+
+   An abugida writes a syllable in fewer characters than its romanisation:
+   నామ and नाम are three characters each where nama is four, because a
+   consonant carries its own vowel and a vowel sign only replaces it. Every
+   threshold below is a judgement about how much a reciter has typed, and
+   counting raw characters therefore asked more of a Telugu reader than of
+   one typing Roman — enough more that a search for నామ found only the one
+   hymn whose name begins with the word, while nama found twenty. So a
+   consonant or an independent vowel counts two, and the marks that hang off
+   it count none, which puts an Indic word within a letter of its own
+   romanisation. */
+const INDIC = /[ऀ-ॿఀ-౿]/;
+const INDIC_MARK = /[ऀ-ःऺ-ॏ॑-ॗ़ॢॣఀ-ఄా-ౖౢౣ]/;
+function effLen(s) {
+    if (!s)
+        return 0;
+    if (!INDIC.test(s))
+        return s.length;
+    let base = 0;
+    for (const ch of s)
+        if (!INDIC_MARK.test(ch))
+            base++;
+    return base * 2;
+}
+/* A longer word may be more misspelt than a short one before it stops being
+   the same word: "ram" and "rama" are different hymns, "sahasranamam" and
+   "sahasranama" are not. */
+const slack = (len) => (len >= 10 ? 2 : len >= 6 ? 1 : 0);
+const words = (s) => (s || "").split(/[^a-z0-9ऀ-ॿఀ-౿]+/).filter(Boolean);
+/** How well one query word is answered by one word of a hymn's names.
+    1 exact · .9 the name begins with it · .82 the name ends with it ·
+    .75 it sits inside the name · .6 near enough to be a misspelling · 0 no.
+
+    Ending counts for more than sitting in the middle because Sanskrit builds
+    by suffix: sahasranāma and śatanāma both END in the nāma someone typed,
+    while śatanāmāvali only contains it, and the first two are the texts they
+    were reaching for. */
+function wordScore(q, w) {
+    if (!q || !w)
+        return 0;
+    if (q === w)
+        return 1;
+    const ql = effLen(q);
+    if (w.startsWith(q) || q.startsWith(w))
+        return ql >= 3 ? 0.9 : 0;
+    if (ql >= 4 && w.indexOf(q) !== -1)
+        return w.endsWith(q) ? 0.82 : 0.75;
+    const s = slack(Math.max(ql, effLen(w)));
+    if (s && within(q, w, s) <= s)
+        return 0.6;
+    return 0;
+}
+/** How well a query answers a hymn: `title` is its own name in all three
+    scripts, `about` everything else it is filed under — its form, its deity,
+    its author. 0 means "not this one".
+
+    The two are weighed differently, and that is the point. A hymn's name is
+    what a reciter is reaching for; what it is filed under is only how it was
+    found. Scored as one string they compete, and the filing wins far too
+    often: every Nāmāvali is FILED as "Nāmāvali", which begins with the "nama"
+    someone typed, while the Viṣṇu Sahasranāma only carries those letters
+    inside its own name — so eleven Nāmāvalis stood in front of it, and the
+    text being looked for was sixteenth of twenty.
+
+    The exact old behaviour — the whole query as one unbroken run — still
+    scores highest, so nothing that used to come first stops coming first. */
+const ABOUT_WEIGHT = 0.6;
+function matchScore(qf, title, about = "") {
+    const qs = words(qf);
+    if (!qs.length)
+        return 0;
+    const tw = words(title), aw = words(about);
+    if (!tw.length && !aw.length)
+        return 0;
+    const run = (title + " " + about).indexOf(qf) !== -1;
+    let total = 0;
+    for (const q of qs) {
+        let best = 0;
+        for (const w of tw) {
+            const s = wordScore(q, w);
+            if (s > best)
+                best = s;
+            if (best === 1)
+                break;
+        }
+        if (best < 1)
+            for (const w of aw) {
+                const s = wordScore(q, w) * ABOUT_WEIGHT;
+                if (s > best)
+                    best = s;
+            }
+        /* one word of the query unaccounted for and this is a different hymn —
+           "shiva sahasranama" must not answer with the Viṣṇu one */
+        if (!best)
+            return 0;
+        total += best;
+    }
+    const avg = total / qs.length;
+    return run ? 1 + avg : avg;
+}
+/** Where in the hymn's own title the query falls — a title that STARTS with
+    the word beats one that carries it mid-name, and both beat a hymn matched
+    only through its deity or form. Lower is better, as the generated search
+    already expects. */
+function titleRank(qf, foldedTitle) {
+    const at = foldedTitle.indexOf(qf);
+    if (at === 0)
+        return 0;
+    if (at > 0)
+        return foldedTitle[at - 1] === " " ? 1 : 2;
+    const qs = words(qf), ws = words(foldedTitle);
+    if (!qs.length || !ws.length)
+        return 3;
+    let hit = 0;
+    for (const q of qs)
+        if (ws.some((w) => wordScore(q, w) >= 0.6))
+            hit++;
+    if (hit === qs.length)
+        return ws[0] && wordScore(qs[0], ws[0]) >= 0.6 ? 0 : 1;
+    return hit ? 2 : 3;
+}
+
+Object.assign(window, { effLen, wordScore, matchScore, titleRank });
+})();

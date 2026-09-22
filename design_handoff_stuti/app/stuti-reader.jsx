@@ -818,6 +818,8 @@ function ReaderView({ hymn: rawHymn, deity, go, theme, toggleTheme, lang, setLan
   const song = audioFor(hymn, lines.length);
   const hasAudio = !!song;                  // a recording exists, and it plays for anyone
   const A = window.STUTI_AUDIO;
+  /* Follow: the reader listens and the light keeps pace (hand-authored module) */
+  const follow = useFollow({ hymn, lines, lang, active, setActive, setWord, setPlaying, onDone: () => STUTI_THREAD.mark("r", hymn.id) });
 
   const scrollRef = useRef(null);
   const lineRefs = useRef([]);
@@ -928,6 +930,7 @@ function ReaderView({ hymn: rawHymn, deity, go, theme, toggleTheme, lang, setLan
 
   // reset per-line learn state
   useEffect(() => { setPhase("chant"); setPeek(false); setRepIter(1); }, [active, learnMode]);
+  useEffect(() => { if (!playing) setPhase("chant"); }, [playing]);
 
   /* the queue: arriving from the countdown, begin at once */
   useEffect(() => {
@@ -962,11 +965,12 @@ function ReaderView({ hymn: rawHymn, deity, go, theme, toggleTheme, lang, setLan
   useEffect(() => {
     if (!recordOn) return;
     if (speakingNow) { rec.clear(); rec.start(); }
-    else if (rec.state === "recording") rec.stop();
-  }, [speakingNow, recordOn]);
+    else rec.stop();
+  }, [speakingNow, recordOn, repIter]);   // each turn of Repeat xN is its own take
   useEffect(() => { if (!recordOn) rec.forget(); }, [recordOn]);
   useEffect(() => {
     if (!recordOn) return;
+    setMicNote(false);
     let live = true;
     const refuse = () => { if (live) { setMicNote(true); setRecordOn(false); } };
     const fp = document.featurePolicy || document.permissionsPolicy;
@@ -1346,14 +1350,14 @@ function ReaderView({ hymn: rawHymn, deity, go, theme, toggleTheme, lang, setLan
     </React.Fragment>
   );
   return (
-    <div className="view reader" style={deityStyle(deity, { flex: 1, "--rd-scale": fontScale })}>
+    <div className={"view reader" + (follow.on ? " is-following" : "")} style={deityStyle(deity, { flex: 1, "--rd-scale": fontScale })}>
       {panelPin && <div className="rd-toppanel is-pinned">{panelBody}</div>}
       <div className="topbar reader-topbar">
         <button className="icon-btn" onClick={() => go(backView, { deity: deity.id, from: retView })} aria-label={window.STUTI_L.a("aBack")}>
           <Icon name="back" />
         </button>
         <div className="reader-topbar-title">
-          <div className="reader-topbar-name display">{hymnTitle(hymn, lang)}<FavButton id={hymn.id} size={21} /></div>
+          <div className="reader-topbar-name display">{hymnTitle(hymn, lang)}<FavButton id={hymn.id} size={21} /><FollowButton follow={follow} lang={lang} /><RecitationsButton follow={follow} lang={lang} /></div>
         </div>
         {parts && <button className={"icon-btn rd-top-find" + (findOpen ? " is-on" : "")} onClick={() => setFindOpen(o => !o)} aria-expanded={findOpen}
           aria-label={window.STUTI_L.t("findPlace", lang)}>
@@ -1394,6 +1398,7 @@ function ReaderView({ hymn: rawHymn, deity, go, theme, toggleTheme, lang, setLan
         <button className={"chip chip-learn" + (learnOpen ? " chip-on" : "")} onClick={() => setLearnOpen(o => { const n = !o; if (!n) { setLearnMode(hasAudio ? "listen" : "repeat"); setPlaying(false); } return n; })}>
           {window.STUTI_L.t("learn", lang)}
         </button>
+        <RecordChip follow={follow} lang={lang} />
         {/* how the page moves — two named stops, only where there is a page to move */}
         {flow && !learnOpen && !namaluOpen && (
           <div className="rd-view rd-pace" role="tablist" aria-label={window.STUTI_L.t("paceLbl", lang)} title={window.STUTI_L.t(drift ? "driftNote" : "pointerNote", lang)}>
@@ -1468,6 +1473,7 @@ function ReaderView({ hymn: rawHymn, deity, go, theme, toggleTheme, lang, setLan
         </div>
       )}
 
+      {follow.showChip && <FollowChip follow={follow} lang={lang} />}
       {findOpen && (
         <window.FindStrip lines={lines} hymn={hymn} lang={lang} active={active} onPick={findPick} onClose={() => setFindOpen(false)} />
       )}
@@ -1489,9 +1495,9 @@ function ReaderView({ hymn: rawHymn, deity, go, theme, toggleTheme, lang, setLan
               </button>
             )}
             {learnMode === "repeat" && (
-              <button className={"rd-seg-rec" + (recordOn ? " on" : "")} onClick={() => setRecordOn(v => !v)}
-                disabled={micNote} aria-pressed={recordOn} aria-label={window.STUTI_L.t("recordTurn", lang)} title={window.STUTI_L.t("recordTurn", lang)}>
-                <Icon name="mic" size={17} />
+              <button className={"rd-seg-rec" + ((follow.supported ? follow.recOn : recordOn) ? " on" : "")} onClick={() => { if (!follow.supported) { setRecordOn(v => !v); return; } if (follow.recOn) { follow.stop(); return; } setLearnOpen(false); setPlaying(false); follow.record(); }}
+                aria-pressed={follow.supported ? follow.recOn : recordOn} aria-label={window.STUTI_L.t("recordTurn", lang)} title={window.STUTI_L.t("recordTurn", lang)}>
+                <Icon name="mic" size={17} /><span className="rd-seg-rec-lbl">{STUTI_L.t("recordTurn", lang)}</span>
               </button>
             )}
             {/* the plan is the third thing you can do with a text you are learning,
@@ -1540,7 +1546,7 @@ function ReaderView({ hymn: rawHymn, deity, go, theme, toggleTheme, lang, setLan
           <React.Fragment>
           <window.FlowText hymn={hymn} lang={lang} showMeaning={showMeaning} scale={fontScale}
             at={curLine ? { vi: curLine.vi, li: curLine.li } : null}
-            word={word} lit={playing && !drifting} masked={flowMask} hint={hint} peek={peek}
+            word={word} lit={(playing && !drifting) || follow.on} masked={flowMask} hint={hint} peek={peek}
             onPick={flowPick} onWord={flowWord} onSeen={flowSeen}
             ritual={hidRitual} ritualOn={ritualOn} onRitual={toggleRitual} hide={occHide}
             onOpenNames={() => setNamesOpen(true)}
@@ -1574,7 +1580,7 @@ function ReaderView({ hymn: rawHymn, deity, go, theme, toggleTheme, lang, setLan
                     const showNum = isLast && hymn.verses.length > 1 && !v.pr;
                     return (
                       <div key={li} ref={el => (lineRefs.current[idx] = el)}
-                        className={"line" + (on ? " line-on" : "") + (playing && !on ? " line-off" : "")}
+                        className={"line" + (on ? " line-on" : "") + ((playing || follow.on) && !on ? " line-off" : "")}
                         onClick={() => { if (masked) setPeek(true); setActive(idx); }}>
                         {(() => {
                           var mainText = window.STUTI_BIND(lang === "telugu" ? ((tdv && tdv[li]) || window.STUTI_TRANSLIT.convert(d, "telugu")) : lang === "deva" ? d : it[li]);
@@ -1594,7 +1600,7 @@ function ReaderView({ hymn: rawHymn, deity, go, theme, toggleTheme, lang, setLan
                           return <div className={mainCls}>{
                             masked ? <RecMasked text={mainText} hint={hint} />
                             : <React.Fragment>
-                                <WordRun text={bodyText} upto={on ? word : -1} lit={on && playing}
+                                <WordRun text={bodyText} upto={on ? word : -1} lit={on && (playing || follow.on)}
                                   onWord={(wi) => openPada(idx, wi)} />
                                 {markText && <span className="verse-end-mark">{"\u2002" + markText.replace(/\s+/g, "\u2009")}</span>}
                               </React.Fragment>
@@ -1661,7 +1667,7 @@ function ReaderView({ hymn: rawHymn, deity, go, theme, toggleTheme, lang, setLan
       </div>
 
       {/* Repeat mode: the your-turn strip, replaced by the take once there is one */}
-      {repeatOn && recordOn && (rec.take || rec.recording) ? (
+      {repeatOn && recordOn && rec.take && !rec.recording ? (
         <window.RecordStrip rec={rec} lang={lang}
           expectedMs={active >= 0 ? lineMs(active) / speed : 3000}
           beats={(() => {
@@ -1673,7 +1679,8 @@ function ReaderView({ hymn: rawHymn, deity, go, theme, toggleTheme, lang, setLan
             return durs.slice(0, -1).map(d => (acc += d) / total);
           })()}
           onAgain={() => { rec.clear(); setPhase("speak"); setPlaying(true); }} />
-      ) : repeatOn && playing ? (
+      ) : null}
+      {repeatOn && playing ? (
         <div className={"rd-speak" + (speaking ? " on" : "")}>
           <span className="rd-mic">
             <span className="rd-core">◉</span>

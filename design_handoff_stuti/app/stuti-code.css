@@ -1,20 +1,10 @@
 /* ============================================================
-   STUTI — app-shell overrides (hand-authored; loaded after the design's
-   stylesheets, never regenerated). Two things the prototype, built for
-   a browser tab, could not know about.
+   Carried from the app's code: the marked sections of
+   stuti-app/src/stuti-app.css. Written by stuti-app/tools/mirror-to-design.mjs.
+   Do not edit this copy — change the source, then run the script.
+   (The app's system-bar insets are not here: a browser tab has no bars.)
    ============================================================ */
 
-/* 1. System bars. index.html asks for viewport-fit=cover, and on a
-   current Android WebView Capacitor 8 honours that literally: it pads
-   nothing and publishes the insets as --safe-area-inset-* for the page
-   to apply. The design pads only the bottom (tab bar), so every top bar
-   sat under the status bar. One rule for all screens; env() covers iOS
-   Safari and any WebView that exposes the insets natively. */
-.app {
-  padding-top: var(--safe-area-inset-top, env(safe-area-inset-top, 0px)); /* the one carrier of the top inset: Capacitor's variable on the phone, env() on the web */
-}
-
-/* @design:begin — from here to the matching end is also carried by the design prototype (tools/mirror-to-design.mjs) */
 /* 2. The mic's listening pulse. Its colours are --accent-soft /
    --accent-ink, which the pigment sheet defines only inside deity- and
    lens-tinted containers; the search bar is outside all of them, so the
@@ -105,20 +95,6 @@
    it out for; it scrolls, as her own :has() rule does for a wrapped row */
 .reader-layers.tight:has(.chip-record) { overflow-x: auto; overflow-y: hidden; }
 
-/* @design:end */
-
-/* ---- the top inset, once ----
-   The designer's phone-edge rules (8 Sep 2026) give four bars their own
-   env(safe-area-inset-top). In this app the frame carries the inset for every
-   screen (above), so those bars take it off again: on a current WebView env()
-   is real and the two would stack, and on an older one env() is 0 and the
-   frame is all there is either way. */
-.topbar { padding-top: 8px; }
-.app-gearrow { top: 6px; }
-.brandbar { padding-top: 14px; }
-.rd-toppanel.is-pinned { padding-top: 8px; }
-.app > .rd-toppanel.is-pinned .rd-pin-btn { top: 6px; }
-/* @design:begin — from here to the matching end is also carried by the design prototype (tools/mirror-to-design.mjs) */
 .gate-mail { display: block; margin-top: 12px; font-size: 14px; line-height: 1.5; color: var(--ink-faint); }
 .gate-mail:hover, .gate-mail:focus-visible { color: var(--accent-ink); text-decoration: underline; text-underline-offset: 3px; }
 
@@ -182,4 +158,3 @@
 @keyframes srScrimIn { from { opacity: 0; } to { opacity: 1; } }
 @keyframes srSheetIn { from { opacity: 0; transform: scale(0.97); } to { opacity: 1; transform: none; } }
 @media (prefers-reduced-motion: reduce) { .sr-scrim, .sr-sheet { animation: none; } }
-/* @design:end */

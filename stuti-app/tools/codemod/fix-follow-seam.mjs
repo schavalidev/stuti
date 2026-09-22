@@ -7,19 +7,22 @@ import { readFileSync, writeFileSync } from "node:fs";
 import { join, dirname } from "node:path";
 import { fileURLToPath } from "node:url";
 
+import { patcher, isMain } from "./seam-lib.mjs";
+
 const HERE = dirname(fileURLToPath(import.meta.url));
 const FILE = join(HERE, "../../src/stuti-reader.tsx");
-let t = readFileSync(FILE, "utf8");
 
-function patch(from, to, what) {
-  if (!t.includes(from)) throw new Error(`fix-follow-seam: anchor not found — ${what}`);
-  t = t.replace(from, to);
-}
+/* the same patches go to the design's own reader (../mirror-to-design.mjs),
+   where the names below are globals and the import line has no meaning */
+export function applyFollow(text, mode = "port") {
+const P = patcher("fix-follow-seam", text, mode);
+const patch = (from, to, what, opts) => P.patch(from, to, what, opts);
 
 patch(
   `import { nityaQueue } from "./stuti-nitya-queue";`,
   `import { nityaQueue } from "./stuti-nitya-queue";\nimport { useFollow, FollowButton, FollowChip, RecitationsButton, RecordChip } from "./stuti-follow";`,
   "import line",
+  { port: true },
 );
 
 // after the reader has flattened `lines` (hooks must stay unconditional, so
@@ -89,5 +92,10 @@ patch(
   "learn-bar Record toggle pressed state",
 );
 
-writeFileSync(FILE, t);
-console.log("follow seam applied to stuti-reader.tsx");
+return P.text;
+}
+
+if (isMain(import.meta.url)) {
+  writeFileSync(FILE, applyFollow(readFileSync(FILE, "utf8")));
+  console.log("follow seam applied to stuti-reader.tsx");
+}

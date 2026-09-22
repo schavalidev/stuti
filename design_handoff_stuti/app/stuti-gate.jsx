@@ -8,6 +8,7 @@
    ============================================================ */
 const { useState: useGateS, useEffect: useGateE, useRef: useGateR } = React;
 
+const GATE_ASK = { roman: "Do not have the word? Write to", deva: "शब्द नहीं मिला? हमें लिखें:", telugu: "పదం లేదా? మాకు రాయండి:" };
 function GateScreen({ lang: langProp = "roman", onOpen }) {
   const L = window.STUTI_L, B = window.STUTI_BUILD;
   /* The latch stands before onboarding, so no language has been chosen yet:
@@ -35,11 +36,12 @@ function GateScreen({ lang: langProp = "roman", onOpen }) {
         <h1 className="gate-title display" style={{ fontFamily: font }}>{L.t("gateTitle", lang)}</h1>
         <p className="gate-lede">{L.t("gateLede", lang)}</p>
         <form className="gate-form" onSubmit={(e) => { e.preventDefault(); tryIt(); }}>
-          <input ref={ref} className={"gate-input" + (no ? " gate-shake" : "")} key={no} value={v} onChange={(e) => setV(e.target.value)}
+          <input ref={ref} className={"gate-input" + (no ? " gate-shake" : "")} key={no} autoFocus value={v} onChange={(e) => setV(e.target.value)}
             placeholder={L.t("gatePh", lang)} autoComplete="off" autoCapitalize="none" spellCheck="false" inputMode="text" aria-label={L.t("gatePh", lang)} />
           <button className="gate-go" type="submit" disabled={!v.trim()}>{L.t("gateGo", lang)}<window.Icon name="arrow" size={17} /></button>
         </form>
         <p className={"gate-note" + (no ? " is-no" : "")}>{no ? L.t(no > 2 ? "gateNoAgain" : "gateNo", lang) : L.t("gateHint", lang)}</p>
+        {B.SUPPORT && <a className="gate-mail" href={"mailto:" + B.SUPPORT + "?subject=" + encodeURIComponent("Stuti beta")}>{GATE_ASK[lang] || GATE_ASK.roman} {B.SUPPORT}</a>}
         <div className="gate-foot">{B.label()}</div>
       </div>
     </div>

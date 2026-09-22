@@ -174,8 +174,20 @@ window.STUTI_ROUTE = (function () {
     library: "browse", browse: "browse", calendar: "calendar", panchanga: "calendar",
     japa: "japa", plans: "plans", practices: "practices", settings: "settings",
   };
+  /* a hymn named in the URL: #reader/<deity>/<hymn>, which is what a tapped
+     cue writes (stuti-nudge.js in a tab, stuti-notify.ts on the phone) and
+     what a shared verse link carries. It is not a screen name, so view()
+     answers null for it and target() is what reads a link. */
+  function target() {
+    const h = (location.hash || "").replace(/^#\/?/, "");
+    const m = /^reader\/([A-Za-z0-9_-]+)\/([A-Za-z0-9_.-]+)$/i.exec(h);
+    if (m) return { view: "reader", deity: m[1], hymn: m[2] };
+    const v = VIEW[h.toLowerCase()];
+    return v ? { view: v, deity: null, hymn: null } : null;
+  }
   return {
     VIEW: VIEW,
+    target: target,
     /* the screen a URL names, or null — an unknown hash is not an error, it is
        just not a route, and the app stays where it was */
     view: function () {
