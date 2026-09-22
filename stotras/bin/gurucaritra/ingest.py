@@ -14,7 +14,7 @@ from pathlib import Path
 
 # Gaps that are the print's own numbering, verified on the page image, not text
 # that is missing. Anything here has been looked at; nothing is assumed.
-KNOWN_JUMPS = {'13': set(range(33, 43))}
+KNOWN_JUMPS = {'13': set(range(33, 43)), '18': {174}}
 
 BIN = Path(__file__).resolve().parents[1]
 CACHE = BIN / 'cache' / 'gurucaritra'
