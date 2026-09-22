@@ -21,9 +21,20 @@ ROOT = pathlib.Path(__file__).resolve().parent.parent
 DOC = ROOT / "PROJECT_TRACKING.md"
 ROW = re.compile(r'^(\|[^|\n]+\|\s*`([^`]+)`\s*\|\s*)(\d+)(\s*\|)', re.M)
 
+
+def corpus_txt(d):
+    """Every .txt that is corpus content.
+
+    `bin/cache/` holds fetched sources and working transcriptions. It is
+    gitignored and is not corpus text, but it is full of .txt, so counting it
+    made every run report a mismatch and list its files as untracked.
+    """
+    return [f for f in d.rglob("*.txt") if "bin/cache" not in f.as_posix()]
+
+
 def count(path):
     d = ROOT / path
-    return len(list(d.rglob("*.txt"))) if d.is_dir() else None
+    return len(corpus_txt(d)) if d.is_dir() else None
 
 def main(write=False):
     text = DOC.read_text(encoding="utf-8")
@@ -34,7 +45,7 @@ def main(write=False):
         else: seen.append(m.group(2))
 
     def own(p):
-        return len([f for f in (ROOT / p).rglob("*.txt")
+        return len([f for f in corpus_txt(ROOT / p)
                     if max((q for q in seen if str(f.relative_to(ROOT)).startswith(q)), key=len) == p])
 
     def sub(m):
@@ -46,9 +57,9 @@ def main(write=False):
 
     new = ROW.sub(sub, text)
     total = sum(own(p) for p in seen)
-    on_disk = len(list(ROOT.rglob("*.txt")))
+    on_disk = len(corpus_txt(ROOT))
     untracked = sorted({
-        str(f.relative_to(ROOT)) for f in ROOT.rglob("*.txt")
+        str(f.relative_to(ROOT)) for f in corpus_txt(ROOT)
         if not any(str(f.relative_to(ROOT)).startswith(p) for p in seen)
     })
 
