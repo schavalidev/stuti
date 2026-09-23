@@ -45,7 +45,7 @@ derivative, or a name-count short of literal 1000) · ❌ = unconfirmed / likely
 | Gaṇeśa | `ganesha/` | ✅ (multi) | Gaṇeśa Purāṇa, Upāsanā-khaṇḍa **+** alliterative "Gakāra" version, Rudrayāmala Tantra | 2 distinct texts, well-documented incl. a Bhāskararāya commentary on a subvariant |
 | Gaṅgā | `devi/ganga/` (planned) | ✅ | Skanda Purāṇa, Kāśī-khaṇḍa (Skanda–Agastya) | Text itself notes it has 997 names, not exactly 1000 |
 | Sūrya/Āditya | `navagraha/` | ✅ | Bhaviṣya Purāṇa (7th kalpa, Vyāsa) | Some scholarly ambiguity vs. Bhaviṣyottara Purāṇa as the precise sub-source |
-| Subrahmaṇya | `Subrahmanya/` | ✅ (multi) | Skanda Purāṇa (Mātṛkāmālikā) **+** Mārkaṇḍeya-attributed **+** Siddha Nāgārjuna Tantra **+** Śivarahasya Purāṇa | 4-5 distinct texts, best-attested minor-deity case |
+| Subrahmaṇya | `Subrahmanya/` | ✅ **written** | Skanda Purāṇa (Mātṛkāmālikā) **+** Mārkaṇḍeya-attributed **+** Siddha Nāgārjuna Tantra **+** Śivarahasya Purāṇa | 4-5 distinct texts, best-attested minor-deity case. The Mātṛkāmālikā is written as `Subrahmanya/54_subrahmanya_sahasranama_stotram.txt` (2026-09-23), from the 1899 Grantha-script print *Subrahmaṇya Sahasranāma Stotra Kadamba*; Gītā Press prints no Subrahmaṇya sahasranāma. The other three remain unwritten. |
 | Nṛsiṁha | `narasimha/` | ✅ | Narasiṁha Purāṇa, Narasiṁha-prādurbhāva section (Mārkaṇḍeya) | Cleanest single-source attestation in the whole audit |
 | Vēṅkaṭēśvara/Bālājī | `venkateswara/` | ✅ | Brahmāṇḍa Purāṇa, Veṅkaṭācala Māhātmya (Vasiṣṭha–Nārada) | A separate bare Sahasranāmāvalī (no verses) also exists |
 | Kṛṣṇa | `krishna/` | ✅ | Viṣṇudharmottara Purāṇa (Parāśara/Vyāsa/Śuka) | Independent of Viṣṇu Sahasranāma — different name-list |

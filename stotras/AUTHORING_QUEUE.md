@@ -3717,3 +3717,66 @@ Day numbers are the book's own saptāha-pāṭha-paddhati; see `00_parayana_vidh
 - [x] Śrīgurustuti (112 ślokas, stands before adhyāya 1)
 - [x] Yogarahasya (43) and Bodharahasya (44), read on the seventh day after adhyāya 23
 - [x] Aparādha-kṣamāpana-stotra, `rasajñā vaśā` — NOT a separate file: it is Śrīgurustuti 43 onward, a titled section of that hymn
+
+---
+
+## 2026-09-23 — Subrahmaṇya Sahasranāma (Mātṛkāmālikā)
+
+Written: `Subrahmanya/54_subrahmanya_sahasranama_stotram.txt` — 165 blocks, 1000 names,
+4 labelled extras, 11 `variant:` lines.
+
+**Gītā Press prints no Subrahmaṇya sahasranāma.** It is not in the *Sahasranāma Stotra
+Saṅgraha* (1594), whose 22 texts are now all written. So the corpus's standing authority
+was unavailable and a printed edition had to be found: ***Subrahmaṇya Sahasranāma Stotra
+Kadamba*, ed. Ko. Subrahmaṇya Śāstrī, 1899** (archive.org `in.ernet.dli.2015.495413`), a
+lithographed pocket book in **Grantha script** which — like Gītā Press — prints the stotram
+and then its nāmāvalī, and then nine further Subrahmaṇya texts.
+
+### Three lessons worth keeping
+
+**1. `pdftoppm` destroys a lithograph; `pdfimages` does not.** The first pass at this book
+concluded from `pdftoppm -r 200` renders that the print matched the 1000-name digital
+recension. That was wrong, and it was wrong because `pdftoppm` re-renders the page at the
+requested resolution and upsamples — the strokes that separate ந/த, ப/ய and ஷ/க்ஷ were
+simply gone. The PDF *stores* the scan as 600-dpi bitonal images; `pdfimages -png` extracts
+them untouched. Read at that size the print is a different text. **On any scanned book,
+extract with `pdfimages` and check the stored resolution with `pdfimages -list` before
+concluding anything from a page image.**
+
+**2. A script you cannot read can still be measured.** Five attempts to transcribe the
+1899 nāmāvalī failed, and said so — in this cursive hand the u-mātrā and the subscript ra
+are the same hook, so through pages of consecutive पु-/पू-/प्र- names a "reading" is the
+crib read back. But the list's *length* needed no reading: `scratchpad` `pitch.py`
+autocorrelates each column's horizontal ink profile to find the line pitch, then divides
+the inked span by it. 1168 lines over 28 pages; calibrated against the one running total
+the print itself states (300 names in 351 lines), that gives ≈1000 names and refutes an
+agent's estimate of ~50 extras. **When glyphs defeat you, count lines, pitch, columns.**
+
+**3. An agent that reads with the answer open will confirm the answer.** Several of these
+readings were later disowned by the agents themselves — "every reading I attempted turned
+out to be me inferring the name from the crib and then confirming it against the glyphs".
+Two contradictory reports on the same pages (one claiming six marginal counts at +17, one
+finding no foot numerals at all) came from the same pages at different resolutions. **Brief
+image-reading agents to transcribe first and diff second, and treat a confident divergence
+list from a hard scan as suspect until a second pass agrees.**
+
+### What the print gave that no website has
+
+A fuller nyāsa (fourteen extra names across the twelve placements); a **different and
+metrically sound second dhyāna verse**, `षड्वक्त्रं शिखिवाहनं त्रिनयनं…`; the nyāsa set
+**once**, not twice, so the uttara-nyāsa the websites repeat is not in the file; a fuller
+colophon naming the work as the Mātṛkāmālikā and closing शान्तिः ओम्; `बन्धनैः` for
+`बन्धनात्`; the masculine `परमैश्वर्यकारणः`, which both name-indexes independently support.
+The print does **not** carry the half-verse `अतुलश्चामृतोऽघोरो…` that one site brackets
+inside v. 4 — dropped, and kept as an extra.
+
+### Still open
+
+- The other three Subrahmaṇya sahasranāmas (Mārkaṇḍeya, Siddha Nāgārjuna Tantra,
+  Śivarahasya) are unwritten.
+- The **fuller Mātṛkāmālikā recension** (1107 names, five-verse phalaśruti) is a separate
+  text, not a variant of this one. Under the standing rule it wants its own file, not a
+  merge — four of its passages are in this file only as labelled extras.
+- The 1899 book's nine other Subrahmaṇya texts (aṣṭottaraśatanāma stotra and nāmāvalī,
+  aṣṭaka, mālā-mantra, mahimā, pūjāvidhāna, kavaca, stotra, and one whose title is
+  illegible) are unwritten; the contents page is PDF p. 81.
