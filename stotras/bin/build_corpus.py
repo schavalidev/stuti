@@ -165,6 +165,7 @@ def main():
     ap.add_argument("--publish-all", action="store_true", help="list every text, not only those marked Published:")
     ap.add_argument("--check", action="store_true", help="build nothing; report")
     ap.add_argument("--no-audit", action="store_true", help="list texts even where a reader field names a source (never for a real publish)")
+    ap.add_argument("--write-ids", action="store_true", help="after the gate passes, rewrite corpus-ids.json to the current ids (for an intended new text, tail rename or migrated retirement)")
     a = ap.parse_args()
 
     # The gate: the same sourcing regexp reader_view.py --audit uses, run over
@@ -204,6 +205,44 @@ def main():
         print(f"\nwithheld for a reader field that names a source ({len({l[0] for l in leaks})} texts; mend the header and rebuild):")
         for l in leaks[:40]: print("  ", *l)
         if len(leaks) > 40: print("   … and", len(leaks) - 40, "more")
+
+    # ---- identity gate (stuti-app/docs/corpus-identity.md) ----
+    # The id (folder + leading number) is frozen identity. This gate fails loud
+    # so a renumber or refile can never quietly orphan a reader's saved state,
+    # and no listed row can ship without a servable file.
+    def load_json(p, default):
+        return json.loads(p.read_text(encoding="utf-8")) if p.exists() else default
+    REDIR_PATH = ROOT / "corpus-redirects.json"
+    IDS_PATH = ROOT / "corpus-ids.json"
+    redirs = load_json(REDIR_PATH, [])
+    redir_from = {e.get("from") for e in redirs if e.get("from")}
+    fail = []
+    for e in redirs:
+        f, t = e.get("from"), e.get("to")
+        if not f: fail.append(f"redirect entry has no `from`: {e}")
+        elif f in ids: fail.append(f"redirect `from` still lives in the corpus (retire the file first): {f}")
+        if t and t not in ids: fail.append(f"redirect `to` is not a live id: {t}  (from {f})")
+    manifest = load_json(IDS_PATH, None)
+    if manifest is not None:
+        for old_id in manifest:
+            if old_id not in ids and old_id not in redir_from:
+                fail.append(f"id vanished with no redirect (a renumber/refile would orphan reader state): {old_id}  (was {manifest[old_id]})")
+    for r in rows:
+        if r["file"] not in bodies:
+            fail.append(f"listed row has no built file: {r['id']} -> {r['file']}")
+        if not r["file"].endswith("." + r["hash"] + ".json"):
+            fail.append(f"row hash does not match its file name: {r['id']}")
+    if fail:
+        print(f"\nIDENTITY GATE FAILED ({len(fail)}):")
+        for m in fail[:40]: print("  ✗", m)
+        if len(fail) > 40: print("   … and", len(fail) - 40, "more")
+        sys.exit(2)
+    if a.write_ids:
+        IDS_PATH.write_text(json.dumps({k: ids[k] for k in sorted(ids)}, ensure_ascii=False, indent=0), encoding="utf-8")
+        if not REDIR_PATH.exists():
+            REDIR_PATH.write_text("[]\n", encoding="utf-8")
+        print(f"wrote {IDS_PATH.name} ({len(ids)} ids)")
+
     if a.check:
         return
 
@@ -216,6 +255,7 @@ def main():
             fp.write_text(body, encoding="utf-8"); written += 1
     index = {"v": 1, "built": datetime.datetime.now(datetime.timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ"), "texts": rows}
     (out / "index.json").write_text(json.dumps(index, ensure_ascii=False, separators=(",", ":")), encoding="utf-8")
+    (out / "redirects.json").write_text(json.dumps(redirs, ensure_ascii=False, separators=(",", ":")), encoding="utf-8")
     ib = (out / "index.json").stat().st_size
     print(f"wrote {written} new text files under {out / 't'}; index.json {ib / 1e3:.0f} KB")
     if withheld and not a.publish_all:

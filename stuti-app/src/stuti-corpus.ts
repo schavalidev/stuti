@@ -22,6 +22,7 @@ type Row = { id: string; deity: string[]; title: string; deva: string; tel: stri
 type Doc = { id: string; hash: string; title: string; deva: string; tel: string; author: string; blurb: string; sections: any[]; verses: any[]; names?: any[] };
 
 const INDEX_KEY = "stuti-corpus-index", ETAG_KEY = "stuti-corpus-etag";
+const REDIR_KEY = "stuti-corpus-redirects", REDIR_APPLIED = "stuti-corpus-redirects-applied";
 const DB = "stuti-corpus", STORE = "texts";
 const RITUAL = /ny[āa]sa|dig-?bandha/i;   // the same test stuti-texts.ts applies to a section heading
 
@@ -47,42 +48,76 @@ const stored = new Set<string>();   // ids known to be on the device, for the of
 
 /* ---- the catalogue rows become hymns ---- */
 const byCorpusId: Record<string, any[]> = {};   // corpus id -> the hymn rows that carry it (one per shelf)
+const placed = new Set<string>();   // corpus ids already given a tile, so the two passes are idempotent
 
+/* Placement keys on the corpus id, never on the title. A row's id is unique by
+   construction (folder + leading number, frozen — see docs/corpus-identity.md),
+   so two rows can never collide, and the 152 texts the old title-join dropped
+   (the whole Gurucaritam, every recension set, both forms of every pūjā) each
+   keep their own tile. Title-match survives only as a claim-once bridge from a
+   corpus row to a pre-existing curated/seed entry, so a "coming soon" stub is
+   filled rather than duplicated beside its text. */
 function place(rows: Row[]) {
   const S: any = STUTI as any, X = S._corpus;
   if (!S || !X) return 0;
   const hymns: any[] = S.hymns;
-  /* the same join stuti-data.ts uses between the curated shelf and the index,
-     with one more allowance: the corpus writes the honorific ("Śrī Subrahmaṇya
-     Bhujaṅgam") where the shelf does not, and that is the same text */
+  /* the honorific allowance: the corpus writes "Śrī Subrahmaṇya Bhujaṅgam"
+     where a seed shelf does not, and that is the same text */
   const norm = (s: string) => X.normTitle(s).replace(/^(sri|shri)/, "");
-  const curated = new Map<string, any>();
-  hymns.forEach((h) => curated.set(h.deity + "|" + norm(h.title), h));
   const byId = new Map<string, any>(hymns.map((h) => [h.id, h]));
+
+  /* the seeds a corpus row may bridge onto: pre-existing hymns not already
+     carrying a corpus link (so a re-pass never re-bridges, and corpus-created
+     tiles from an earlier pass are not themselves treated as seeds) */
+  const seedKeys = new Map<string, any>();
+  hymns.forEach((h) => { if (!h.corpus) seedKeys.set(h.deity + "|" + norm(h.title), h); });
+
+  /* which row claims each seed: the first by file order, unless a later row has
+     a cleaner title (no bracket, no number), which is the general text of a set
+     rather than a named recension — "Durgā Stotram" fills the stub, not
+     "Durgā Stotram (Yudhiṣṭhira-kṛtam)" */
+  const isClean = (t: string) => !/[()\d]/.test(t);
+  const chosen = new Map<string, { id: string; clean: boolean }>();
+  for (const r of rows) for (const d of r.deity) {
+    const key = d + "|" + norm(r.title);
+    if (!seedKeys.has(key)) continue;
+    const c = isClean(r.title), prev = chosen.get(key);
+    if (!prev || (c && !prev.clean)) chosen.set(key, { id: r.id, clean: c });
+  }
+
   let added = 0;
   for (const r of rows) {
+    if (placed.has(r.id)) { (byCorpusId[r.id] || []).forEach((h) => (h.corpusHash = r.hash)); continue; }
+    let did = false;
     for (const d of r.deity) {
       if (!S.deityById[d]) continue;
       const key = d + "|" + norm(r.title);
-      const have = curated.get(key) || byId.get(d + "-" + X.slug(r.title));
-      if (have) {
-        /* the shelf already lists this text: a curated hymn keeps its own verses,
-           and a catalogue-only row ("coming soon") now has a text to fetch */
-        if (have.verses && have.verses.length) continue;
-        if (!have.corpus) { have.corpus = r.id; have.corpusHash = r.hash; have.catalog = false; (byCorpusId[r.id] ||= []).push(have); }
-        else if (have.corpus === r.id) have.corpusHash = r.hash;
-        continue;
+      const seed = seedKeys.get(key);
+      if (seed && chosen.get(key)?.id === r.id) {
+        /* bridge onto the seed. A seed that carries its own verses keeps them
+           and is left untouched — the corpus copy of the same text is ignored
+           on this shelf, and no duplicate tile is made. */
+        if (!(seed.verses && seed.verses.length)) {
+          if (!seed.corpus) { seed.corpus = r.id; seed.corpusHash = r.hash; seed.catalog = false; (byCorpusId[r.id] ||= []).push(seed); }
+          else seed.corpusHash = r.hash;
+        }
+        did = true; continue;
       }
+      /* its own tile, keyed on the id: slug of the title, disambiguated by the
+         (unique) corpus id if two titles slug alike */
+      let id = d + "-" + X.slug(r.title);
+      if (byId.has(id)) id = id + "-" + X.slug(r.id.replace(/\//g, "-"));
       const h: any = {
-        id: d + "-" + X.slug(r.title), deity: d, title: r.title, deva: r.deva, tel: r.tel,
+        id, deity: d, title: r.title, deva: r.deva, tel: r.tel,
         type: X.typeOf(r.title), by: r.author || "Traditional", blurb: "",
         catalog: false,   // not "soon": the text is there to fetch
         verses: [], corpus: r.id, corpusHash: r.hash, lang: r.lang, corpusType: r.type,
       };
       h.form = X.assignForm(d, r.title);
-      hymns.push(h); byId.set(h.id, h); curated.set(key, h); (byCorpusId[r.id] ||= []).push(h);
-      added++;
+      hymns.push(h); byId.set(id, h); (byCorpusId[r.id] ||= []).push(h);
+      did = true; added++;
     }
+    if (did) placed.add(r.id);
   }
   return added;
 }
@@ -99,15 +134,94 @@ function fill(h: any, doc: Doc) {
   delete h._ritual;   // STUTI_RITUAL caches on the hymn; the verses are new
 }
 
+/* ---- retirement: the redirect map (docs/corpus-identity.md) ----
+   A merge or refile retires an id; `redirects` carries from -> to (or to null
+   when a text was withdrawn with no successor), so a saved reference migrates
+   instead of dangling and an open lands on the successor instead of a 404. */
+let redirects: Record<string, string | null> = {};
+function resolveId(id: string | null | undefined): string | null {
+  if (!id) return null;
+  const seen = new Set<string>();
+  while (id != null && id in redirects && !seen.has(id)) { seen.add(id); id = redirects[id]; }
+  return id ?? null;
+}
+const hashStr = (s: string) => { let h = 0; for (let i = 0; i < s.length; i++) h = (h * 31 + s.charCodeAt(i)) | 0; return String(h); };
+
+/* Rewrite the reader-state keys that hold a hymn id. Only ids named in the map
+   are touched, so this is safe to run over keys that also hold other refs. */
+function migrateState(mapText: string) {
+  if (!redirects || !Object.keys(redirects).length) return;
+  let done = ""; try { done = localStorage.getItem(REDIR_APPLIED) || ""; } catch (e) {}
+  const stamp = hashStr(mapText);
+  if (done === stamp) return;
+  const idList = (key: string) => {
+    try {
+      const arr = JSON.parse(localStorage.getItem(key) || "[]");
+      if (!Array.isArray(arr)) return;
+      const out: any[] = []; const seen = new Set<string>();
+      for (const v of arr) {
+        if (typeof v !== "string") { out.push(v); continue; }
+        if (!(v in redirects)) { if (!seen.has(v)) { seen.add(v); out.push(v); } continue; }
+        const to = resolveId(v); if (to && !seen.has(to)) { seen.add(to); out.push(to); }
+      }
+      localStorage.setItem(key, JSON.stringify(out));
+    } catch (e) {}
+  };
+  const idScalar = (key: string) => {
+    try { const v = localStorage.getItem(key); if (v && v in redirects) { const to = resolveId(v); if (to) localStorage.setItem(key, to); else localStorage.removeItem(key); } } catch (e) {}
+  };
+  const refList = (key: string) => {
+    try {
+      const arr = JSON.parse(localStorage.getItem(key) || "[]");
+      if (!Array.isArray(arr)) return;
+      const out: any[] = [];
+      for (const it of arr) {
+        const ref = it && typeof it === "object" ? it.ref : null;
+        if (typeof ref === "string" && ref in redirects) { const to = resolveId(ref); if (to) out.push({ ...it, ref: to }); }
+        else out.push(it);
+      }
+      localStorage.setItem(key, JSON.stringify(out));
+    } catch (e) {}
+  };
+  ["stuti-favs", "stuti-favs-week", "stuti-watch"].forEach(idList);
+  ["stuti-last", "stuti-japa-last"].forEach(idScalar);
+  refList("stuti-keep");
+  try {
+    for (let i = localStorage.length - 1; i >= 0; i--) {
+      const k = localStorage.key(i); if (!k || !k.startsWith("stuti-pos-")) continue;
+      const from = k.slice("stuti-pos-".length);
+      if (!(from in redirects)) continue;
+      const to = resolveId(from), v = localStorage.getItem(k);
+      localStorage.removeItem(k);
+      if (to && v != null) localStorage.setItem("stuti-pos-" + to, v);
+    }
+  } catch (e) {}
+  try { localStorage.setItem(REDIR_APPLIED, stamp); } catch (e) {}
+}
+
+function loadRedirects(text: string) {
+  try {
+    const list = JSON.parse(text || "[]");
+    redirects = {};
+    if (Array.isArray(list)) for (const e of list) if (e && e.from) redirects[e.from] = e.to ?? null;
+    migrateState(text);
+  } catch (e) { redirects = {}; }
+}
+
 /* ---- the index ---- */
 export function applyCachedIndex() {
   if (!corpusOn()) return 0;
+  try { loadRedirects(localStorage.getItem(REDIR_KEY) || "[]"); } catch (e) {}
   try { const rows: Row[] = JSON.parse(localStorage.getItem(INDEX_KEY) || "[]"); return place(rows); } catch (e) { return 0; }
 }
 
 export async function refreshIndex() {
   if (!corpusOn()) return;
   try {
+    try {
+      const rr = await fetch(corpusUrl() + "/redirects.json", { cache: "no-cache" });
+      if (rr.ok) { const t = await rr.text(); try { localStorage.setItem(REDIR_KEY, t); } catch (e) {} loadRedirects(t); }
+    } catch (e) {}
     const r = await fetch(corpusUrl() + "/index.json", { cache: "no-cache" });
     if (!r.ok) return;
     const etag = r.headers.get("etag") || "";
@@ -122,13 +236,14 @@ export async function refreshIndex() {
 /* ---- one text ---- */
 const inflight: Record<string, Promise<Doc | null>> = {};
 export function corpusText(h: any): Promise<Doc | null> {
-  const id = h && h.corpus;
+  const rawId = h && h.corpus;
+  const id = resolveId(rawId);   // a retired id lands on its successor, not a 404
   if (!id) return Promise.resolve(null);
   if (inflight[id]) return inflight[id];
   inflight[id] = (async () => {
     let doc: Doc | null = null;
     try { doc = (await tx<any>("readonly", (s) => s.get(id)))?.doc || null; } catch (e) {}
-    const want = h.corpusHash;
+    const want = id === rawId ? h.corpusHash : undefined;   // a redirected id's hash is the successor's, not h's
     if (doc && (!want || doc.hash === want)) { stored.add(id); }
     else if (navigator.onLine !== false) {
       try {
@@ -146,13 +261,13 @@ export function corpusText(h: any): Promise<Doc | null> {
         }
       } catch (e) {}
     }
-    if (doc) (byCorpusId[id] || [h]).forEach((x) => fill(x, doc!));
+    if (doc) (byCorpusId[rawId] || [h]).forEach((x) => fill(x, doc!));
     delete inflight[id];
     return doc;
   })();
   return inflight[id];
 }
-export const corpusHas = (h: any) => !!(h && h.corpus && stored.has(h.corpus));
+export const corpusHas = (h: any) => { const id = resolveId(h && h.corpus); return !!(id && stored.has(id)); };
 
 /* The reader calls this once per hymn; it returns a tick that changes when
    the text arrives, so the reader re-reads the hymn it was handed. */
