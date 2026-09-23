@@ -55,6 +55,12 @@ function FlowVerse({ hymn, v, vi, numbered, lang, showMeaning, label, sub, sec, 
                other stotra gets its number the way its own mūla writes it:
                daṇḍa, number, daṇḍa, in the stotra's own script. */
             const namavali = hymn.type === "Nāmāvali";
+            /* the prefix badge is for a bare name-list, where a name has no
+               daṇḍa-numbered verse of its own. A verse-form stotra that happens
+               to be titled "…aṣṭottara…" carries its number as a suffix in the
+               mūla, so it needs no prefix — not even on its dhyānam. */
+            const suffixed = namavali && (hymn.verses || []).some(vv =>
+              /(\|\||[।॥])\s*[0-9०-९౦-౯]+\s*(\|\||[।॥])/.test((vv.iast || "") + " " + (vv.deva || "")));
             let main = STUTI_BIND(lang === "telugu" ? ((tdv && tdv[li]) || STUTI_TRANSLIT.convert(d, "telugu")) : lang === "deva" ? d : it[li]);
             if (showNum && !namavali && !/[|॥]\s*[0-9०-९౦-౯]+\s*[|॥]\s*$/.test(main.trim())) {
               const num = v.n ? v.n : vi + 1;
@@ -69,7 +75,7 @@ function FlowVerse({ hymn, v, vi, numbered, lang, showMeaning, label, sub, sec, 
             return (
               <div key={li} className={"flow-line" + (here ? " fl-on" : "")}>
                 <div className={cls}>
-                  {showNum && namavali && <span className="verse-n-badge verse-n-badge-lead">{v.n ? v.n : vi + 1}</span>}
+                  {showNum && namavali && !suffixed && <span className="verse-n-badge verse-n-badge-lead">{v.n ? v.n : vi + 1}</span>}
                   {masked ? <RecMasked text={main} hint={hint} />
                     : here ? <React.Fragment>
                         <WordRun text={bodyText} upto={lit ? word : -1} lit={lit} onWord={(wi) => onWord(vi, li, wi)} />
