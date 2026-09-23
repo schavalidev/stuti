@@ -18,7 +18,7 @@ import { useEffect, useState } from "react";
 import { STUTI } from "./stuti-data";
 import { STUTI_CORPUS_URL } from "./stuti-cloud-config";
 
-type Row = { id: string; deity: string[]; title: string; deva: string; tel: string; author: string; lang: string; type: string; units: number; sections: any[]; hash: string; bytes: number; file: string };
+type Row = { id: string; deity: string[]; title: string; deva: string; tel: string; author: string; lang: string; type: string; genre?: string; form?: string; set?: string; sort?: number; sakha?: string; first?: string; units: number; hash: string; bytes: number; file: string };
 type Doc = { id: string; hash: string; title: string; deva: string; tel: string; author: string; blurb: string; sections: any[]; verses: any[]; names?: any[] };
 
 const INDEX_KEY = "stuti-corpus-index", ETAG_KEY = "stuti-corpus-etag";
@@ -85,12 +85,24 @@ function place(rows: Row[]) {
     if (!prev || (c && !prev.clean)) chosen.set(key, { id: r.id, clean: c });
   }
 
+  /* fields the build now declares; the title guesses are the fallback only
+     (docs/corpus-presentation.md). A shelf-less text (deity []) still gets one
+     tile under "" so it is reachable through the genre lens and search, though
+     it appears on no deity grid. */
+  const carry = (h: any, r: Row) => {
+    if (r.set) h.set = r.set;
+    if (r.sakha) h.sakha = r.sakha;
+    if (typeof r.sort === "number") h.sort = r.sort;
+    if (r.first) h.first = r.first;
+  };
+
   let added = 0;
   for (const r of rows) {
     if (placed.has(r.id)) { (byCorpusId[r.id] || []).forEach((h) => (h.corpusHash = r.hash)); continue; }
     let did = false;
-    for (const d of r.deity) {
-      if (!S.deityById[d]) continue;
+    const shelves = r.deity && r.deity.length ? r.deity : [""];
+    for (const d of shelves) {
+      if (d && !S.deityById[d]) continue;
       const key = d + "|" + norm(r.title);
       const seed = seedKeys.get(key);
       if (seed && chosen.get(key)?.id === r.id) {
@@ -101,19 +113,21 @@ function place(rows: Row[]) {
           if (!seed.corpus) { seed.corpus = r.id; seed.corpusHash = r.hash; seed.catalog = false; (byCorpusId[r.id] ||= []).push(seed); }
           else seed.corpusHash = r.hash;
         }
+        carry(seed, r);
         did = true; continue;
       }
       /* its own tile, keyed on the id: slug of the title, disambiguated by the
          (unique) corpus id if two titles slug alike */
-      let id = d + "-" + X.slug(r.title);
+      let id = (d || "x") + "-" + X.slug(r.title);
       if (byId.has(id)) id = id + "-" + X.slug(r.id.replace(/\//g, "-"));
       const h: any = {
         id, deity: d, title: r.title, deva: r.deva, tel: r.tel,
-        type: X.typeOf(r.title), by: r.author || "Traditional", blurb: "",
+        type: r.genre || X.typeOf(r.title), by: r.author || "Traditional", blurb: "",
         catalog: false,   // not "soon": the text is there to fetch
         verses: [], corpus: r.id, corpusHash: r.hash, lang: r.lang, corpusType: r.type,
       };
-      h.form = X.assignForm(d, r.title);
+      h.form = r.form || X.assignForm(d, r.title);
+      carry(h, r);
       hymns.push(h); byId.set(id, h); (byCorpusId[r.id] ||= []).push(h);
       did = true; added++;
     }

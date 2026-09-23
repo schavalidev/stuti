@@ -24,7 +24,7 @@ Output:
 of the descriptive tail does not move the text. A file with no leading number
 keeps its whole stem.
 """
-import re, sys, json, hashlib, pathlib, datetime, argparse
+import re, sys, json, hashlib, pathlib, datetime, argparse, unicodedata
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent          # stotras/
 REPO = ROOT.parent
@@ -82,6 +82,33 @@ def first_word(v):
     return re.split(r"[\s,.;:(—–-]", v.strip(), 1)[0].lower() if v else ""
 
 
+# The reader's genre badge and the `type` lens. Ported verbatim from the app's
+# typeOf() (stuti-data.ts) so moving the derivation here changes no grouping;
+# the value now lives in the index instead of being guessed at runtime, and a
+# file may override it with a `Genre:` header. See docs/corpus-presentation.md.
+GENRES = {"Sahasranāma", "Nāmāvali", "Aṣṭakam", "Pañcaratna", "Kavaca", "Sūkta",
+          "Tarpaṇa", "Daṇḍaka", "Dhyāna-śloka", "Vandanā", "Stotra", "Kṛti",
+          "Tālam", "Gītā", "Upaniṣad"}
+SAKHAS = {"madhyandina", "taittiriya", "kanva", "rigveda"}
+
+
+def genre_of(title):
+    n = "".join(c for c in unicodedata.normalize("NFD", title or "") if unicodedata.category(c) != "Mn").lower()
+    if "sahasran" in n: return "Sahasranāma"
+    if any(x in n for x in ("ottara", "namavali", "satanam")): return "Nāmāvali"
+    if "ashtakam" in n or "astakam" in n: return "Aṣṭakam"
+    if "pancaratn" in n: return "Pañcaratna"
+    if "kavacam" in n: return "Kavaca"
+    if "suktam" in n: return "Sūkta"
+    if "dandakam" in n: return "Daṇḍaka"
+    if "gita" in n: return "Gītā"
+    if "upanisad" in n: return "Upaniṣad"
+    if "dhyana" in n: return "Dhyāna-śloka"
+    if "vatapi ganapatim" in n or "mahaganapatim manasa smarami" in n: return "Kṛti"
+    if "talam" in n: return "Tālam"
+    return "Stotra"
+
+
 def text_id(p):
     rel = p.relative_to(ROOT).with_suffix("")
     m = re.match(r"^(\d+)_", rel.name)
@@ -92,12 +119,28 @@ def build_one(p, text, id_override=None):
     f, _, head = RV.parse(text)
     fields = {k: f[k] for k in RV.READER_FIELDS if k in f}
     # build-only fields: read here, never emitted to the reader
-    shelves = [s.strip() for s in re.search(r"^Shelves: ?(.*)$", head, re.M).group(1).split(",")] \
-        if re.search(r"^Shelves: ?", head, re.M) else []
+    shelf_m = re.search(r"^Shelves: ?(.*)$", head, re.M)
+    shelves = [s.strip() for s in shelf_m.group(1).split(",")] if shelf_m else []
     published = re.search(r"^Published: ?(\S+)", head, re.M)
-
-    top = p.relative_to(ROOT).parts[0]
-    deity = [SHELF.get(top, "itara")] + [s for s in shelves if s and s not in (SHELF.get(top),)]
+    # step-2 presentation fields (docs/corpus-presentation.md); all optional
+    hdr = lambda name: (m.group(1).strip() if (m := re.search(r"^" + name + r": ?(.*)$", head, re.M)) else "")
+    parts = p.relative_to(ROOT).parts
+    top = parts[0]
+    # Shelves is authority when present; an explicit "none"/"-"/"" means no
+    # deity shelf (the generic vidhānam), which is a valid, tile-less text.
+    if shelf_m:
+        if " ".join(shelves).strip().lower() in ("", "none", "-"):
+            deity = []
+        else:
+            deity = [SHELF.get(top, "itara")] + [s for s in shelves if s and s != SHELF.get(top)]
+    else:
+        deity = [SHELF.get(top, "itara")]
+    genre = hdr("Genre") or genre_of(fields.get("Title", p.stem))
+    form = hdr("Form")
+    sett = hdr("Set")
+    sort = hdr("Sort")
+    # śākhā is carried by the folder split for the nitya-karma (vidhi/, veda/)
+    sakha = hdr("Sakha") or (parts[1] if top in ("vidhi", "veda") and len(parts) > 1 and parts[1] in SAKHAS else "")
     lang = LANG.get(first_word(fields.get("Language", "")), "sa")
     tw = first_word(fields.get("Type", ""))
     typ = "vidhi" if tw == "vidhi" else "sarga" if tw == "epic" else "names" if "Name count" in fields and "Verse count" not in fields else "stotra"
@@ -136,14 +179,25 @@ def build_one(p, text, id_override=None):
     h = hashlib.sha1(canon.encode("utf-8")).hexdigest()[:8]
     doc["hash"] = h
     body = json.dumps(doc, ensure_ascii=False, separators=(",", ":"))
+    # opening line (IAST only), for first-line search without a fetch; the
+    # matcher folds to IAST anyway, so one compact string covers it
+    first = (verses[0].get("iast", "") if verses else "").split("\n")[0][:80]
+    # The index row is the catalogue: list-only, no inline sections (they live
+    # in the text file). Slimming this is what keeps index.json small as the
+    # corpus grows (docs/corpus-presentation.md).
     row = {
         "id": doc["id"], "deity": deity, "title": doc["title"], "deva": doc["deva"], "tel": doc["tel"],
-        "author": doc["author"], "lang": lang, "type": typ,
-        "units": len(verses) + len(names), "sections": sections,
+        "author": doc["author"], "lang": lang, "type": typ, "genre": genre,
+        "units": len(verses) + len(names),
         "hash": h, "bytes": len(body.encode("utf-8")),
         "file": "t/" + doc["id"].replace("/", ".") + "." + h + ".json",
         "published": published.group(1) if published else None,
     }
+    if form: row["form"] = form
+    if sett: row["set"] = sett
+    if sort: row["sort"] = int(sort) if sort.lstrip("-").isdigit() else sort
+    if sakha: row["sakha"] = sakha
+    if first: row["first"] = first
     return row, body
 
 
@@ -153,7 +207,7 @@ def leaks_in(row, doc):
     for k in ("title", "deva", "tel", "author", "blurb"):
         v = (doc if k == "blurb" else row).get(k, "")
         if v and RV.SOURCING.search(v): hits.append((row["id"], k, RV.SOURCING.search(v).group(0)))
-    for s in row["sections"]:
+    for s in doc.get("sections", []):
         for v in s.values():
             if RV.SOURCING.search(v): hits.append((row["id"], "section", RV.SOURCING.search(v).group(0)))
     return hits
@@ -232,6 +286,10 @@ def main():
             fail.append(f"listed row has no built file: {r['id']} -> {r['file']}")
         if not r["file"].endswith("." + r["hash"] + ".json"):
             fail.append(f"row hash does not match its file name: {r['id']}")
+        if r.get("genre") not in GENRES:
+            fail.append(f"unknown genre {r.get('genre')!r}: {r['id']}  (allowed: {', '.join(sorted(GENRES))})")
+        if r.get("sakha") and r["sakha"] not in SAKHAS:
+            fail.append(f"unknown śākhā {r['sakha']!r}: {r['id']}")
     if fail:
         print(f"\nIDENTITY GATE FAILED ({len(fail)}):")
         for m in fail[:40]: print("  ✗", m)
@@ -253,7 +311,7 @@ def main():
         fp = out / file
         if not fp.exists():
             fp.write_text(body, encoding="utf-8"); written += 1
-    index = {"v": 1, "built": datetime.datetime.now(datetime.timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ"), "texts": rows}
+    index = {"v": 1, "schema": 2, "built": datetime.datetime.now(datetime.timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ"), "texts": rows}
     (out / "index.json").write_text(json.dumps(index, ensure_ascii=False, separators=(",", ":")), encoding="utf-8")
     (out / "redirects.json").write_text(json.dumps(redirs, ensure_ascii=False, separators=(",", ":")), encoding="utf-8")
     ib = (out / "index.json").stat().st_size
