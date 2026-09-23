@@ -1637,9 +1637,10 @@ function ReaderView({ hymn: rawHymn, deity, go, theme, toggleTheme, lang, setLan
                     const on = idx === active;
                     const isLast = li === dv.length - 1;
                     const showNum = isLast && hymn.verses.length > 1 && !v.pr;
+                    const cont = li > 0 && (/-\s*$/.test(dv[li - 1] || "") || /-\s*$/.test(it[li - 1] || ""));
                     return (
                       <div key={li} ref={el => (lineRefs.current[idx] = el)}
-                        className={"line" + (on ? " line-on" : "") + ((playing || follow.on) && !on ? " line-off" : "")}
+                        className={"line" + (on ? " line-on" : "") + ((playing || follow.on) && !on ? " line-off" : "") + (cont ? " line-cont" : "")}
                         onClick={() => { if (masked) setPeek(true); setActive(idx); }}>
                         {(() => {
                           var mainText = STUTI_BIND(lang === "telugu" ? ((tdv && tdv[li]) || STUTI_TRANSLIT.convert(d, "telugu")) : lang === "deva" ? d : it[li]);

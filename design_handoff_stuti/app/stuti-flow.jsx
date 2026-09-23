@@ -66,8 +66,9 @@ function FlowVerse({ hymn, v, vi, numbered, lang, showMeaning, label, sub, sec, 
             const markM = main.match(/\s*((?:\|\||[।॥])\s*[0-9०-९౦-౯]+\s*(?:\|\||[।॥]))\s*$/);
             const bodyText = markM ? main.slice(0, markM.index) : main;
             const markText = markM ? markM[1] : null;
+            const cont = li > 0 && (/-\s*$/.test(dv[li - 1] || "") || /-\s*$/.test(it[li - 1] || ""));
             return (
-              <div key={li} className={"flow-line" + (here ? " fl-on" : "")}>
+              <div key={li} className={"flow-line" + (here ? " fl-on" : "") + (cont ? " line-cont" : "")}>
                 <div className={cls}>
                   {showNum && namavali && !suffixed && <span className="verse-n-badge verse-n-badge-lead">{v.n ? v.n : vi + 1}</span>}
                   {masked ? <window.RecMasked text={main} hint={hint} />

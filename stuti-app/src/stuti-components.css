@@ -680,7 +680,10 @@
 .nm-mean { font-size: calc(0.9063rem * var(--rd-scale, 1) * var(--rd-fit, 1)); color: var(--ink-soft); margin-top: 5px; line-height: 1.5; text-wrap: pretty; }
 .nm-empty { padding: 40px 0; text-align: center; color: var(--ink-faint); }
 .verse-lines { display: flex; flex-direction: column; gap: 4px; }
-.line { text-align: center; padding: 12px 8px; border-radius: 14px; cursor: pointer; transition: opacity var(--med) var(--ease), transform var(--med) var(--ease); }
+.line { text-align: center; padding: 7px 8px; border-radius: 14px; cursor: pointer; transition: opacity var(--med) var(--ease), transform var(--med) var(--ease); }
+/* a pāda the source broke mid-word with a hyphen continues on the next line —
+   pull it up so the broken word reads as one, not as a paragraph break */
+.line.line-cont, .flow-line.line-cont { margin-top: -13px; padding-top: 0; }
 .line-deva { font-family: var(--font-deva-read); word-spacing: 0.18em; font-size: calc(38px * var(--rd-scale, 1) * var(--rd-fit, 1)); line-height: 1.62; color: var(--ink); transition: color var(--med); }
 .line-iast { font-family: var(--font-display); font-size: calc(17px * var(--rd-scale, 1) * var(--rd-fit, 1)); color: var(--ink-soft); margin-top: 6px; font-style: normal; }
 .line-iast-lead { font-family: var(--font-display); font-size: calc(26px * var(--rd-scale, 1) * var(--rd-fit, 1)); line-height: 1.5; color: var(--ink); font-style: normal; transition: color var(--med); }

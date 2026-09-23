@@ -48,8 +48,8 @@ patch(
 );
 // the other lines dim while following, as they do during playback
 patch(
-  `className={"line" + (on ? " line-on" : "") + (playing && !on ? " line-off" : "")}`,
-  `className={"line" + (on ? " line-on" : "") + ((playing || follow.on) && !on ? " line-off" : "")}`,
+  `className={"line" + (on ? " line-on" : "") + (playing && !on ? " line-off" : "") + (cont ? " line-cont" : "")}`,
+  `className={"line" + (on ? " line-on" : "") + ((playing || follow.on) && !on ? " line-off" : "") + (cont ? " line-cont" : "")}`,
   "verse-view line-off class",
 );
 
