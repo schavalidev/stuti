@@ -504,7 +504,7 @@ function DeityView({ deity, go, lang = "deva", showFormCounts = true, defaultFor
               <React.Fragment key={g.type}>
                 <button className={"gs-sec gs-sec-btn" + (shut ? " shut" : "")} onClick={() => toggleFold(g.type)} aria-expanded={!shut}>
                   <span className="gs-sec-caret" aria-hidden="true" />
-                  <span className="gs-sec-name">{s.name}{s.note ? <React.Fragment> · <span className="gs-sec-note">{s.note}</span></React.Fragment> : null}</span>
+                  <span className="gs-sec-name">{s.name}</span>
                   <span className="gs-sec-n">{g.rows.length}</span>
                 </button>
                 {shut ? null : g.rows.map(entry)}
