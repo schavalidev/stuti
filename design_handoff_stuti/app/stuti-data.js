@@ -277,7 +277,6 @@ window.STUTI = (function () {
     surya: [
       { id: "surya",     iast: "Sūrya",     deva: "सूर्य",     tel: "సూర్య" },
       { id: "aditya",    iast: "Āditya",    deva: "आदित्य",    tel: "ఆదిత్య" },
-      { id: "savitr",    iast: "Savitṛ",    deva: "सवितृ",     tel: "సవిత" },
     ],
     guru: [
       { id: "guru",       iast: "Guru",       deva: "गुरु",       tel: "గురు" },
@@ -343,7 +342,6 @@ window.STUTI = (function () {
     ] },
     surya: { fallback: "surya", named: [
       ["aditya",    /aditya/],
-      ["savitr",    /gayatri|savitr/],
     ] },
     guru: { fallback: "guru", named: [
       ["anagha",     /anagha/],
