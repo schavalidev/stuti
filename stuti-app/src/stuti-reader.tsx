@@ -464,7 +464,7 @@ function DeityView({ deity, go, lang = "deva", showFormCounts = true, defaultFor
               <div key={p.key} className="gs-sub-row">
                 <button className="gs-sub" onClick={() => openAt(h, p.at)}>
                   <span className="gs-sub-mark" />
-                  <span className="gs-sub-t" style={{ fontFamily: indexFont }}>{L.t(PART_LABEL[p.key], lang)}</span>
+                  <span className="gs-sub-t" style={{ fontFamily: indexFont }}>{L.t(p.label || PART_LABEL[p.key], lang)}</span>
                   <span className="gs-dl" />
                   {badge && <span className="gs-sub-badge">{badge}</span>}
                 </button>
@@ -567,10 +567,30 @@ function hymnParts(hymn) {
   let uttara = V.findIndex((v, i) => i > nama && /uttara|phalaśruti|fruits of recitation/i.test(roman(v) + " " + ((S[v.s] || {}).tel || "")));
   if (uttara < 0) return null;
   return [
-    { key: "purva",   at: 0 },
+    { key: "purva",   at: 0, label: purvaLabel(V, S, nama) },
     { key: "stotram", at: nama },
     { key: "uttara",  at: uttara },
   ];
+}
+
+/* What to call the movement before the names. Not every sahasranāma has a
+   pūrvapīṭhikā: eleven of them open straight into a viniyoga and a dhyāna, and
+   calling that a pūrvapīṭhikā names a frame story the text does not have. So the
+   opening is labelled for whatever is actually in it. Mirrors parts_of() in
+   stotras/bin/build_corpus.py — kept in step with it. */
+function purvaLabel(V, S, nama) {
+  const seen = new Set();
+  for (let i = 0; i < nama; i++) {
+    const r = ((S[V[i].s] || {}).roman || "").normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase();
+    if (/purva/.test(r)) return "gsPurva";          /* a real frame — keep the old name */
+    if (/viniyoga/.test(r)) seen.add("viniyoga");
+    else if (/nyasa/.test(r)) seen.add("viniyoga"); /* the nyāsas belong to the viniyoga */
+    else if (/dhyana/.test(r)) seen.add("dhyanam");
+  }
+  if (seen.has("viniyoga") && seen.has("dhyanam")) return "gsViniyogaDhyana";
+  if (seen.has("dhyanam")) return "dhyanam";
+  if (seen.has("viniyoga")) return "viniyoga";
+  return "gsPurva";
 }
 
 /* A section's "add to recitation" toggle. Sahasranāmāvali is the text's core

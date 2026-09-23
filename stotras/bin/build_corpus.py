@@ -113,7 +113,34 @@ def parts_of(title, verses, sections):
                    if i > nama and re.search(r"uttara|phalaśruti|fruits of recitation", roman(v), re.I)), -1)
     if uttara < 0:
         return None
-    return [{"key": "purva", "at": 0}, {"key": "stotram", "at": nama}, {"key": "uttara", "at": uttara}]
+    return [{"key": "purva", "at": 0, "label": _purva_label(verses, sections, nama)},
+            {"key": "stotram", "at": nama}, {"key": "uttara", "at": uttara}]
+
+
+def _purva_label(verses, sections, nama):
+    """What to call the movement before the names.
+
+    Not every sahasranāma has a pūrvapīṭhikā: eleven of them open straight into a
+    viniyoga and a dhyāna, and labelling that "Pūrvapīṭhikā" names a frame story
+    the text does not have. So the opening is labelled for whatever is in it.
+    Mirrors purvaLabel() in stuti-reader.jsx — kept in step with it."""
+    seen = set()
+    for v in verses[:nama]:
+        s = sections[v["s"]] if v.get("s") is not None and v["s"] < len(sections) else {}
+        r = _nfd_lower(s.get("roman", ""))
+        if "purva" in r:
+            return "gsPurva"          # a real frame — keep the old name
+        if "viniyoga" in r or "nyasa" in r:
+            seen.add("viniyoga")      # the nyāsas belong to the viniyoga
+        elif "dhyana" in r:
+            seen.add("dhyanam")
+    if "viniyoga" in seen and "dhyanam" in seen:
+        return "gsViniyogaDhyana"
+    if "dhyanam" in seen:
+        return "dhyanam"
+    if "viniyoga" in seen:
+        return "viniyoga"
+    return "gsPurva"
 
 
 def genre_of(title):

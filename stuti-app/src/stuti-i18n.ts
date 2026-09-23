@@ -573,6 +573,10 @@ export const STUTI_L = (function () {
     ksama:       { roman: "Kṣamāprārthanā-Samarpaṇam", deva: "क्षमाप्रार्थना-समर्पणम्", telugu: "క్షమాప్రార్థన-సమర్పణం" },
     uttara:      { roman: "Phalaśruti · Kṣamā", deva: "फलश्रुति · क्षमा", telugu: "ఫలశ్రుతి · క్షమ" },
     gsPurva:     { roman: "Pūrvapīṭhikā", deva: "पूर्वपीठिका", telugu: "పూర్వపీఠిక" },
+    /* Not every sahasranāma has a pūrvapīṭhikā. Where the opening movement is
+       only a viniyoga and a dhyāna, calling it a pūrvapīṭhikā names something
+       the text does not have — so the opening is labelled for what is in it. */
+    gsViniyogaDhyana: { roman: "Viniyoga · Dhyānam", deva: "विनियोग · ध्यानम्", telugu: "వినియోగం · ధ్యానం" },
     gsNamavali:  { roman: "Sahasranāmāvali", deva: "सहस्रनामावलि", telugu: "సహస్రనామావళి" },
     tabNamavali: { roman: "Nāmāvali", deva: "नामावलि", telugu: "నామావళి" },
     tabNamalu:   { roman: "Nāmalu", deva: "नामलु", telugu: "నామాలు" },
@@ -1238,7 +1242,7 @@ export const STUTI_L = (function () {
     /* the corpus's own section names — a Telugu reader wants these in Telugu
        however the chrome around them reads */
     purva: 1, stotram: 1, viniyoga: 1, dhyanam: 1, namavali: 1, phala: 1, ksama: 1, uttara: 1,
-    gsPurva: 1, gsNamavali: 1, gsUttara: 1, tabNamavali: 1, tabNamalu: 1,
+    gsPurva: 1, gsViniyogaDhyana: 1, gsNamavali: 1, gsUttara: 1, tabNamavali: 1, tabNamalu: 1,
   };
   const readLang = () => { try { return localStorage.getItem("stuti-lang") || "roman"; } catch (e) { return "roman"; } };
   const uiLang = () => {
