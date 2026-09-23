@@ -524,6 +524,9 @@ function DeityView({ deity, go, lang = "deva", showFormCounts = true, defaultFor
 function hymnParts(hymn) {
   const V = hymn.verses || [], S = hymn.sections || [];
   if (!/sahasran/i.test((hymn.title || "").normalize("NFD").replace(/[\u0300-\u036f]/g, ""))) return null;
+  // before the text is fetched there are no verses to inspect \u2014 use the split
+  // the build precomputed into the catalogue (docs/corpus-presentation.md)
+  if (!V.length && hymn.parts) return hymn.parts;
   const roman = v => ((S[v.s] || {}).roman || "");
   let nama = V.findIndex(v => v.nama || /thousand names|st[oō]tram|n[aā]m[aā]vali/i.test(roman(v)));
   if (nama <= 0) return null;

@@ -18,7 +18,7 @@ import { useEffect, useState } from "react";
 import { STUTI } from "./stuti-data";
 import { STUTI_CORPUS_URL } from "./stuti-cloud-config";
 
-type Row = { id: string; deity: string[]; title: string; deva: string; tel: string; author: string; lang: string; type: string; genre?: string; form?: string; set?: string; sort?: number; sakha?: string; first?: string; units: number; hash: string; bytes: number; file: string };
+type Row = { id: string; deity: string[]; title: string; deva: string; tel: string; author: string; lang: string; type: string; genre?: string; form?: string; set?: string; sort?: number; sakha?: string; first?: string; parts?: any[]; units: number; hash: string; bytes: number; file: string };
 type Doc = { id: string; hash: string; title: string; deva: string; tel: string; author: string; blurb: string; sections: any[]; verses: any[]; names?: any[] };
 
 const INDEX_KEY = "stuti-corpus-index", ETAG_KEY = "stuti-corpus-etag";
@@ -94,6 +94,7 @@ function place(rows: Row[]) {
     if (r.sakha) h.sakha = r.sakha;
     if (r.lang) h.lang = r.lang;
     if (r.form && !h.form) h.form = r.form;
+    if (r.parts) h.parts = r.parts;
     if (typeof r.sort === "number") h.sort = r.sort;
     if (r.first) h.first = r.first;
   };

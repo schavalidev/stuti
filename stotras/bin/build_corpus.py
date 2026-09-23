@@ -92,6 +92,30 @@ GENRES = {"Sahasranāma", "Nāmāvali", "Aṣṭakam", "Pañcaratna", "Kavaca", 
 SAKHAS = {"madhyandina", "taittiriya", "kanva", "rigveda"}
 
 
+def _nfd_lower(s):
+    return "".join(c for c in unicodedata.normalize("NFD", s or "") if unicodedata.category(c) != "Mn").lower()
+
+
+def parts_of(title, verses, sections):
+    """The Pūrva / Nāmāvali / Uttara split of a sahasranāma, precomputed so the
+    deity index can show it before the text is fetched. Mirrors hymnParts() in
+    stuti-reader.jsx — kept in step with it. Returns None when it does not apply."""
+    if "sahasran" not in _nfd_lower(title):
+        return None
+    def roman(v):
+        s = sections[v["s"]] if v.get("s") is not None and v["s"] < len(sections) else {}
+        return s.get("roman", "")
+    nama = next((i for i, v in enumerate(verses)
+                 if re.search(r"thousand names|st[oō]tram|n[aā]m[aā]vali", roman(v), re.I)), -1)
+    if nama <= 0:
+        return None
+    uttara = next((i for i, v in enumerate(verses)
+                   if i > nama and re.search(r"uttara|phalaśruti|fruits of recitation", roman(v), re.I)), -1)
+    if uttara < 0:
+        return None
+    return [{"key": "purva", "at": 0}, {"key": "stotram", "at": nama}, {"key": "uttara", "at": uttara}]
+
+
 def genre_of(title):
     n = "".join(c for c in unicodedata.normalize("NFD", title or "") if unicodedata.category(c) != "Mn").lower()
     if "sahasran" in n: return "Sahasranāma"
@@ -201,6 +225,8 @@ def build_one(p, text, id_override=None):
     if sort: row["sort"] = int(sort) if sort.lstrip("-").isdigit() else sort
     if sakha: row["sakha"] = sakha
     if first: row["first"] = first
+    pr = parts_of(doc["title"], verses, sections)
+    if pr: row["parts"] = pr    # sahasranāma Pūrva/Nāmāvali/Uttara split, shown before the text is fetched
     return row, body
 
 
