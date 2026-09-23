@@ -29,7 +29,7 @@ function pick3(o, lang) {
    cross-deity list still shows whose text it is */
 function HymnRow({ h, go, lang, showSeal = true, i = 0, from = "browse" }) {
   const S = STUTI, L = STUTI_L;
-  const d = S.deityById[h.deity];
+  const d = S.deityById[h.deity] || null;   // a shelf-less text (generic pūjā vidhānam) has no deity
   const font = L.font(lang);
   /* every list lens lives inside the library, and the library remembers its
      open detail — so back from the stotra returns to the list, not the root */
@@ -38,12 +38,11 @@ function HymnRow({ h, go, lang, showSeal = true, i = 0, from = "browse" }) {
     <div className={"hymn-card" + (h.catalog ? " hymn-card-soon" : "")}
       style={{ animationDelay: `${Math.min(i, 9) * 40}ms`, ...deityStyle(d) }}>
       <button className="hymn-card-main search-result" onClick={open}>
-        {showSeal && <Seal d={d} size={40} />}
+        {showSeal && d && <Seal d={d} size={40} />}
         <div className="search-result-body">
           <div className="hymn-card-lead" style={{ fontFamily: font, fontSize: 20, color: "var(--accent-ink)", lineHeight: 1.2, fontStyle: "normal" }}>{L.hymnTitle(h, lang)}</div>
           <div className="hymn-card-meta">
-            <span>{L.name(d, lang)}</span>
-            <span className="dot" />
+            {d && <React.Fragment><span>{L.name(d, lang)}</span><span className="dot" /></React.Fragment>}
             <span>{h.type}</span>
             {h.catalog && <React.Fragment><span className="dot" /><span style={{ fontStyle: "normal" }}>{L.t("textComingSoon", lang)}</span></React.Fragment>}
           </div>
@@ -233,7 +232,10 @@ function TypeLens({ go, lang, onOpen }) {
 
 function TypeDetail({ typeKey, go, lang, onBack }) {
   const L = STUTI_L, LIB = STUTI_LIB;
-  const hymns = LIB.hymnsOfType(typeKey);
+  /* order by the declared `sort` (decoupled from the id number), then keep
+     texts with their own verses before catalogue-only ones */
+  const hymns = LIB.hymnsOfType(typeKey).slice().sort((a, b) =>
+    ((a.sort == null ? 1e9 : a.sort) - (b.sort == null ? 1e9 : b.sort)) || ((a.catalog ? 1 : 0) - (b.catalog ? 1 : 0)));
   const label = LIB.TYPE_LABELS[typeKey];
   return (
     <div className="view libhub scroll">

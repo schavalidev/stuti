@@ -268,16 +268,15 @@ function SearchView({ go, lang = "deva", backView = "browse", weekday, voice = f
                 <div className="eyebrow sr-cap">{L.t("srHymns", lang)} <i>{hymnHits.length}</i></div>
                 <div className="hymn-list">
                   {hymnHits.slice(0, 30).map((h, i) => {
-                    const d = S.deityById[h.deity];
+                    const d = S.deityById[h.deity] || null;   // a shelf-less text has no deity
                     return (
                       <div key={h.id} className={"hymn-card" + (h.catalog ? " hymn-card-soon" : "")} style={{ animationDelay: `${Math.min(i, 8) * 45}ms`, ...deityStyle(d) }}>
                         <button className="hymn-card-main search-result" onClick={() => openHymn(h)}>
-                          <Seal d={d} size={40} />
+                          {d && <Seal d={d} size={40} />}
                           <div className="search-result-body">
                             <div className="hymn-card-lead" style={{ fontFamily: font, fontSize: 20, color: "var(--accent-ink)", lineHeight: 1.2, fontStyle: "normal" }}>{L.hymnTitle(h, lang)}</div>
                             <div className="hymn-card-meta">
-                              <span>{L.name(d, lang)}</span>
-                              <span className="dot" />
+                              {d && <React.Fragment><span>{L.name(d, lang)}</span><span className="dot" /></React.Fragment>}
                               <span>{h.type}</span>
                               {h.catalog && <React.Fragment><span className="dot" /><span style={{ fontStyle: "normal" }}>{L.t("textComingSoon", lang)}</span></React.Fragment>}
                             </div>

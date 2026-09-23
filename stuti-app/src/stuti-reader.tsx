@@ -380,7 +380,10 @@ function DeityView({ deity, go, lang = "deva", showFormCounts = true, defaultFor
   });
   const rank = t => { const i = typeOrder.indexOf(t); return i < 0 ? 99 : i; };
   groups.sort((a, b) => rank(a.type) - rank(b.type));
-  groups.forEach(g => g.rows.sort((a, b) => (a.catalog ? 1 : 0) - (b.catalog ? 1 : 0)));
+  /* declared `sort` first (decoupled from the id number, so the adhyāyas read
+     in order), then texts with their own verses before catalogue-only ones */
+  groups.forEach(g => g.rows.sort((a, b) =>
+    ((a.sort == null ? 1e9 : a.sort) - (b.sort == null ? 1e9 : b.sort)) || ((a.catalog ? 1 : 0) - (b.catalog ? 1 : 0))));
 
   const section = t => {
     const lab = (LIB && LIB.TYPE_LABELS && LIB.TYPE_LABELS[t]) || null;

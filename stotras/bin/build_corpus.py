@@ -251,7 +251,7 @@ def main():
     if empty:
         for e in empty[:10]: print("  no units:", e)
     by = {}
-    for r in rows: by[r["deity"][0]] = by.get(r["deity"][0], 0) + 1
+    for r in rows: by[r["deity"][0] if r["deity"] else "—"] = by.get(r["deity"][0] if r["deity"] else "—", 0) + 1
     print("  by shelf:", ", ".join(f"{k} {v}" for k, v in sorted(by.items(), key=lambda kv: -kv[1])))
     total = sum(len(b.encode("utf-8")) for b in bodies.values())
     print(f"  {len(bodies)} text files, {total / 1e6:.1f} MB; index rows {len(rows)}")
