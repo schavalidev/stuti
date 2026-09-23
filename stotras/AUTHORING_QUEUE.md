@@ -3748,9 +3748,18 @@ concluding anything from a page image.**
 are the same hook, so through pages of consecutive पु-/पू-/प्र- names a "reading" is the
 crib read back. But the list's *length* needed no reading: `scratchpad` `pitch.py`
 autocorrelates each column's horizontal ink profile to find the line pitch, then divides
-the inked span by it. 1168 lines over 28 pages; calibrated against the one running total
+the inked span by it. 1168 lines over 28 pages; calibrated against a running total
 the print itself states (300 names in 351 lines), that gives ≈1000 names and refutes an
 agent's estimate of ~50 extras. **When glyphs defeat you, count lines, pitch, columns.**
+
+A narrower task then did better than transcription ever would: the print carries a running
+count in the margin of nine of its 28 pages, and *numerals* are legible where names are not.
+They give 50, 69, 100, 106, 227, 300, 340, 380, 600 and — last — **976 on p. 50**. Page 51
+carries none, so the book never states its total. The ~30 names after 976 land the list at
+1006–1008, making the colophon's अष्टोत्तरसहस्रनामावली literal, and the numerals show how:
+the print runs 8 ahead of the digital index by p. 33 and 17 ahead by p. 39, then stops seven
+names short of its own stotram at the end. **Ask for the one thing on the page that is
+legible before asking for everything on it.**
 
 **3. An agent that reads with the answer open will confirm the answer.** Several of these
 readings were later disowned by the agents themselves — "every reading I attempted turned
