@@ -92,6 +92,8 @@ function place(rows: Row[]) {
   const carry = (h: any, r: Row) => {
     if (r.set) h.set = r.set;
     if (r.sakha) h.sakha = r.sakha;
+    if (r.lang) h.lang = r.lang;
+    if (r.form && !h.form) h.form = r.form;
     if (typeof r.sort === "number") h.sort = r.sort;
     if (r.first) h.first = r.first;
   };

@@ -44,6 +44,8 @@ function HymnRow({ h, go, lang, showSeal = true, i = 0, from = "browse" }) {
           <div className="hymn-card-meta">
             {d && <React.Fragment><span>{L.name(d, lang)}</span><span className="dot" /></React.Fragment>}
             <span>{h.type}</span>
+            {h.sakha && <React.Fragment><span className="dot" /><span>{L.sakha(h.sakha, lang)}</span></React.Fragment>}
+            {h.lang && h.lang !== "sa" && <React.Fragment><span className="dot" /><span>{L.langName(h.lang, lang)}</span></React.Fragment>}
             {h.catalog && <React.Fragment><span className="dot" /><span style={{ fontStyle: "normal" }}>{L.t("textComingSoon", lang)}</span></React.Fragment>}
           </div>
         </div>

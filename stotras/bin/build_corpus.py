@@ -141,7 +141,10 @@ def build_one(p, text, id_override=None):
     sort = hdr("Sort")
     # śākhā is carried by the folder split for the nitya-karma (vidhi/, veda/)
     sakha = hdr("Sakha") or (parts[1] if top in ("vidhi", "veda") and len(parts) > 1 and parts[1] in SAKHAS else "")
-    lang = LANG.get(first_word(fields.get("Language", "")), "sa")
+    # some vernacular files write the reader's Language field after the verses,
+    # outside the header parse() reads; look through the whole file for it
+    lang_src = fields.get("Language") or (m.group(1) if (m := re.search(r"^Language: ?(.*)$", text, re.M)) else "")
+    lang = LANG.get(first_word(lang_src), "sa")
     tw = first_word(fields.get("Type", ""))
     typ = "vidhi" if tw == "vidhi" else "sarga" if tw == "epic" else "names" if "Name count" in fields and "Verse count" not in fields else "stotra"
 

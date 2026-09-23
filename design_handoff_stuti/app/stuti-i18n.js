@@ -14,6 +14,8 @@ window.STUTI_L = (function () {
 
     allDeities:  { roman: "All Devas",  deva: "सभी देव",       telugu: "అన్ని దేవతలు" },
     seeAll:      { roman: "See all",      deva: "सब देखें",       telugu: "అన్నీ చూడండి" },
+    otherRecensions: { roman: "Other recensions", deva: "अन्य पाठान्तर", telugu: "ఇతర పాఠాంతరాలు" },
+    allLanguages:    { roman: "All languages",    deva: "सभी भाषाएँ",    telugu: "అన్ని భాషలు" },
     reciteTo:    { roman: "Recite to",    deva: "किसे स्तुति करें", telugu: "ఎవరిని స్తుతించాలి" },
     deities:     { roman: "Devas",      deva: "देवता",          telugu: "దేవతలు" },
     today:       { roman: "Today",        deva: "आज",            telugu: "నేడు" },
@@ -1202,6 +1204,23 @@ window.STUTI_L = (function () {
     "Viśvāmitra":          { deva: "विश्वामित्र",           telugu: "విశ్వామిత్ర" },
   };
 
+  /* the Vedic recension of a nitya-karma text (śākhā chip), and the language a
+     text was written in (text-language chip) — both from the corpus catalogue */
+  const SAKHA = {
+    taittiriya:  { roman: "Taittirīya",  deva: "तैत्तिरीय",   telugu: "తైత్తిరీయ" },
+    kanva:       { roman: "Kāṇva",       deva: "काण्व",       telugu: "కాణ్వ" },
+    madhyandina: { roman: "Mādhyandina", deva: "माध्यन्दिन",  telugu: "మాధ్యందిన" },
+    rigveda:     { roman: "Ṛgveda",      deva: "ऋग्वेद",      telugu: "ఋగ్వేద" },
+  };
+  const LANGNAME = {
+    sa:  { roman: "Sanskrit", deva: "संस्कृत", telugu: "సంస్కృతం" },
+    hi:  { roman: "Hindi",    deva: "हिन्दी",  telugu: "హిందీ" },
+    awa: { roman: "Awadhi",   deva: "अवधी",    telugu: "అవధీ" },
+    bra: { roman: "Braj",     deva: "ब्रज",    telugu: "బ్రజ్" },
+    ta:  { roman: "Tamil",    deva: "तमिऴ",    telugu: "తమిళం" },
+    te:  { roman: "Telugu",   deva: "तेलुगु",  telugu: "తెలుగు" },
+  };
+
   const pick = (o, lang) => o ? (o[lang] || o.roman) : "";
 
   /* The interface language is its own setting, and every screen has to honour it
@@ -1249,6 +1268,8 @@ window.STUTI_L = (function () {
       return a ? (a[lang] || name) : name;
     },
     hymnTitle: (h, lang) => lang === "telugu" ? (h.tel || h.title) : lang === "deva" ? (h.deva || h.title) : h.title,
+    sakha: (key, lang) => pick(SAKHA[key], lang) || key,
+    langName: (code, lang) => pick(LANGNAME[code], lang) || code,
     epithet: (d, lang) => pick(D[d.id] && D[d.id].epithet, lang) || d.epithet,
     line: (d, lang) => pick(D[d.id] && D[d.id].line, lang) || d.line,
     font: (lang) => lang === "telugu" ? "var(--font-telugu)" : lang === "deva" ? "var(--font-deva)" : "var(--font-display)",

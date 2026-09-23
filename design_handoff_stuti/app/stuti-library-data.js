@@ -48,6 +48,9 @@ window.STUTI_LIB = (function () {
       .map((t) => ({ type: t, count: counts[t], ...(TYPE_LABELS[t] || { deva: t, tel: t, note: "" }) }));
   }
   const hymnsOfType = (t) => S.hymns.filter((h) => h.type === t);
+  /* the other members of a recension set — the six Durgā stotras, the two
+     Cālīsās — linked by the catalogue's `set`; empty until a text carries one */
+  const siblingsOf = (h) => (!h || !h.set) ? [] : S.hymns.filter((x) => x.set === h.set && x.id !== h.id);
 
   /* ---------------- AUTHOR lens ---------------- */
   /* fold a `by` string to a primary attribution (drop "· source" tails) */
@@ -152,7 +155,7 @@ window.STUTI_LIB = (function () {
 
   return {
     // type
-    typeList, hymnsOfType, TYPE_LABELS,
+    typeList, hymnsOfType, siblingsOf, TYPE_LABELS,
     // author
     authorList, hymnsByAuthor, primaryAuthor,
     // weekday plan (still used by the deity-of-the-day reference)

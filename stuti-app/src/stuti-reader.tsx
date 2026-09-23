@@ -437,8 +437,9 @@ function DeityView({ deity, go, lang = "deva", showFormCounts = true, defaultFor
   const entry = (h) => {
     const no = folio(++n);
     const cfgParts = !h.catalog && hymnParts(h);
+    const sibs = (STUTI_LIB && STUTI_LIB.siblingsOf) ? STUTI_LIB.siblingsOf(h) : [];
     return (
-      <div key={h.id} className={"gs-en-wrap" + (cfgParts ? " has-sub" : "")}>
+      <div key={h.id} className={"gs-en-wrap" + ((cfgParts || sibs.length) ? " has-sub" : "")}>
         <div className={"gs-en" + (h.catalog ? " soon" : "")}>
           <button className="gs-main" onClick={() => go("reader", { hymn: h.id, deity: deity.id, from: "deity", ret: backView })}>
             <span className="gs-no" style={{ fontFamily: indexFont }}>{no}</span>
@@ -473,6 +474,22 @@ function DeityView({ deity, go, lang = "deva", showFormCounts = true, defaultFor
               </div>
             );
             })}
+          </div>
+        )}
+        {sibs.length > 0 && (
+          <div className="gs-sub-list">
+            <div className="gs-sub-row" style={{ opacity: 0.55 }}>
+              <span className="gs-sub-t" style={{ fontFamily: indexFont }}>{L.t("otherRecensions", lang)}</span>
+            </div>
+            {sibs.map(s => (
+              <div key={s.id} className="gs-sub-row">
+                <button className="gs-sub" onClick={() => go("reader", { hymn: s.id, deity: s.deity || deity.id, from: "deity", ret: backView })}>
+                  <span className="gs-sub-mark" />
+                  <span className="gs-sub-t" style={{ fontFamily: indexFont }}>{hymnTitle(s, lang)}</span>
+                  <span className="gs-dl" />
+                </button>
+              </div>
+            ))}
           </div>
         )}
       </div>
