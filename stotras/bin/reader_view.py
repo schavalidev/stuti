@@ -40,7 +40,7 @@ SOURCING = re.compile(
     r"https?://|\bwww\.|\.com\b|\.org\b|stotranidhi|sanskritdocuments|wikisource|\bGRETIL\b"
     r"|archive\.org|vignanam|vedicscriptures|muktabodha|\bTITUS\b|Gītā Press|Gita Press|Gorakhpur"
     r"|\bdjvu\b|\bOCR\b|transliterated by|proofread|\bcollat(?:e|ed|ion)\b|\bwitness(?:es)?\b"
-    r"|\brecension\b|\bbase[ -]text\b|critical edition|editorial lineage|\bitx\b"
+    r"|\bbase[ -]text\b|critical edition|editorial lineage|\bitx\b"
     r"|\bpage images\b|\bPDF\b|\bthe source\b|\bthe print\b|\bsource page\b",
     re.I)
 
