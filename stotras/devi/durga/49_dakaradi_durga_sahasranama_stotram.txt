@@ -8,11 +8,14 @@ Source / recension: **Gītā Press, Gorakhpur, "Sahasranāma Stotra Saṅgraha" 
 
 Recension note: **The 231-vs-232 verse discrepancy is the digital witness's, not Gītā Press's — sanskritdocuments prints its verse 78 twice**, byte for byte. That single dittography accounts for the whole difference and imposes a silent +1 offset on all its remaining verses; a collation run without correcting for it would report some 150 imaginary variants. Aligned properly (GP *n* = SD *n* for n ≤ 78, SD *n*+1 thereafter), the two differ substantively at **61 places**. Because a Gītā Press edition of this text exists, GP is the authority here and the default: 53 readings were kept from GP, 6 taken from SD, 2 were orthographic. — **But those six are not the digital text correcting Gītā Press.** Every locus where GP looked wrong was re-read on the page at 400 dpi, and in all six the Gītā Press page agrees with the digital witness: **the error was in this project's transcription of GP, not in GP.** Two causes, both properties of the volume's typeface — the **`प्त` ligature is very close to `स`** at ordinary resolution, which produced गुसि, मोक्षार्थि and प्रास for the printed **गुप्ति, मोक्षाप्ति, प्राप्त** (vv. 27, 188, 204); and the conjunct confusions `द्भ`→`द्ध` (v194) and `व`→`त्र` (v75). Eight readings were corrected accordingly. Verse 75 is the sharpest case: **neither transcribed witness was right** — the digital text's विद्भावा is corrupt and the first GP transcription's विद्रात्रा was a misreading, while GP's actual विद्रावा is confirmed independently by the volume's own index (entry 324). The internal cross-check had flagged the error before the image confirmed it: index entry 109 `दरीगुप्तिकौतुकाढ्यायै` matched nothing in the stotram until v27 was corrected. — sanskritdocuments also completes the final verse with a hemistich Gītā Press lacks (`स्तुतिसारो निगदितः किं भूयः श्रोतुमिच्छसि`); GP's v231 is a bare hemistich, and is printed here as GP has it. — **Eight index entries still do not match the stotram and are recorded rather than reconciled.** Four are a spelling split inside Gītā Press itself: the stotram writes the Aśvin name `दस्र` twelve times (vv. 113–117) but `दस्त्र` eight times (vv. 136–137), while its own nāmāvalī writes `दस्र` throughout, as does the digital witness. `दस्त्र` is not otherwise attested, but the page prints it consistently at that spot in both settings, so it is this edition's reading and not a slip; it is kept and flagged. The remaining four (index 592, 755, 766, 797) are single-syllable divergences between GP's two settings.
 
+**The Pūrvapīṭhikā is not Gītā Press's** (added 2026-09-24, on the user's decision). Gītā Press prints no frame for this text; it opens straight into the dhyāna. The four verses that now open the file are the Kulārṇava witness's — the Devī saying the thousand names were fashioned beforehand by Śiva (`शिवपूर्वविनिर्मितम्`), and Pārvatī then reciting them — and were noted in this header as a difference but never written into the text. **Two plain encoding slips in the witness are corrected**, भविश्यति → भविष्यति and the vocative देवि → देवी in v. 1 and v. 4. **One word is left broken as the witness has it:** v. 2 तच्चतान्, where the sense wants something like तान् श्रुतान्; no confident emendation offers itself, and the English says so. The witness also carries a prose viniyoga and a dhyāna of its own after this frame, which are not added here — Gītā Press's dhyāna stands.
+
 Verse count: **231**, plus one unnumbered four-line dhyāna verse. Verses 1–225 carry the names; `॥ फलश्रुतिः ॥` opens at 226 and runs to 231. Three printed irregularities are reproduced as printed rather than regularised, and all three are confirmed by the independent witness or are purely typographic: **v136 is set as three lines (six pādas), not two**; **v225 and v231 are single hemistichs**; **v226 is three lines**.
 
 Name count: **1000 as printed, but only 989 are names.** Entries 990–1000 are eleven repetitions of `दुर्गादेवी`, and Gītā Press states the reason in a footnote on the final page of the index: `एक सहस्रमें ग्यारह नाम कम होनेके कारण सहस्रसंख्यापूर्तिहेतु भगवतीके नामकी पुनरावृत्ति की गयी है।` — the list fell eleven short of a thousand, so the goddess's name was repeated to make the number up. That is the edition telling the reader plainly that it padded, and it is reported here rather than smoothed over. Fourteen further names recur elsewhere in the list, leaving **975 distinct names**. One numbering misprint: an entry on p. 130 is printed `३१२` where the sequence requires `३१९`, so `312` appears twice on the printed page; the index below is renumbered contiguously.
 
 Sections:
+పూర్వపీఠిక — Pūrvapīṭhikā (4 verses: the Devī tells that the names were fashioned beforehand by Śiva, and Pārvatī recites them)
 ధ్యానం — Dhyānam (one four-line verse of visualisation)
 స్తోత్రం — Stotram (vv. 1–225, the names)
 ఫలశ్రుతి — Phalaśruti (vv. 226–231)
@@ -20,6 +23,52 @@ Sections:
 నామావళి — Nāmāvalī (the 1000-entry archana index, in the dative)
 
 Blurb: This is a sahasranāma in which almost every one of the thousand names begins with the letter **द**. The names are arranged in long blocks that turn the same stem over and over. Among them are durgamārga, the hard road; dūradarśin, the devotee who sees far; darī, the mountain cave; dasra, the Aśvins; dakṣiṇācāra, the right-hand tantric rite; doṣā, the night and its worship; and Dadhīci, the sage. The single fixed opening letter is the method of the poem. The meaning comes from what changes against that fixed sound, so the work reads like a steady drumbeat rather than a list of epithets. The rule is broken exactly once. At verse 198 the name `जगदम्बिका`, meaning mother of the world, stands clearly outside the pattern. It does so consistently.
+
+--- verse 1 | section: Pūrvapīṭhikā ---
+deva:
+श्रीदेव्युवाच ।
+मम नामसहस्रं च शिवपूर्वविनिर्मितम् ।
+तत्पठ्यतां विधानेन तथा सर्वं भविष्यति ॥ १ ॥
+iast:
+śrīdevyuvāca |
+mama nāmasahasraṁ ca śivapūrvavinirmitam |
+tatpaṭhyatāṁ vidhānena tathā sarvaṁ bhaviṣyati || 1 ||
+en: Śrī Devī said: This thousand names of mine was fashioned beforehand by Śiva. Let it be recited according to the rule, and so everything will come to pass.
+tel: శ్రీదేవి ఇట్లనెను: నా ఈ నామసహస్రము శివునిచే ముందుగా నిర్మింపబడినది. దీనిని విధిప్రకారము పఠింపవలెను; అట్లయిన సమస్తము సిద్ధించును.
+hi: श्रीदेवी ने कहा: मेरा यह नामसहस्र शिव के द्वारा पहले ही रचा गया है। इसे विधिपूर्वक पढ़ा जाय, तब सब कुछ सिद्ध होगा।
+
+--- verse 2 | section: Pūrvapīṭhikā ---
+deva:
+इत्युक्त्वा पार्वती देवी श्रावयामास तच्चतान् ।
+तदेव नामसाहस्रं दकारादि वरानने ॥ २ ॥
+iast:
+ityuktvā pārvatī devī śrāvayāmāsa taccatān |
+tadeva nāmasāhasraṁ dakārādi varānane || 2 ||
+en: Having said this, the goddess Pārvatī caused them to hear it — that same thousand of names beginning with the letter da, O fair-faced one. (The witness's तच्चतान् is corrupt; no confident reading offers itself.)
+tel: ఇట్లు చెప్పి పార్వతీదేవి దానిని వారికి వినిపించెను — ఓ వరాననా, దకారముతో మొదలగు ఆ నామసహస్రమునే. (సాక్ష్యగ్రంథములోని తచ్చతాన్ అను పదము చెడినది; నిశ్చితమైన పాఠము దొరకలేదు.)
+hi: ऐसा कहकर पार्वती देवी ने उन्हें वह सुनाया — हे वरानने, दकार से आरम्भ होने वाला वही नामसहस्र। (साक्ष्य का तच्चतान् अशुद्ध है; कोई निश्चित पाठ नहीं मिलता।)
+
+--- verse 3 | section: Pūrvapīṭhikā ---
+deva:
+रोगदारिद्र्यदौर्भाग्यशोकदुःखविनाशकम् ।
+सर्वासां पूजितं नाम श्रीदुर्गा देवता मता ॥ ३ ॥
+iast:
+rogadāridryadaurbhāgyaśokaduḥkhavināśakam |
+sarvāsāṁ pūjitaṁ nāma śrīdurgā devatā matā || 3 ||
+en: It destroys disease, poverty, misfortune, sorrow and pain. Among all names it is the honoured one, and Śrī Durgā is held to be its deity.
+tel: ఇది రోగమును, దారిద్ర్యమును, దౌర్భాగ్యమును, శోకమును, దుఃఖమును నశింపజేయును. అన్ని నామములలో ఇది పూజితమైనది; శ్రీదుర్గయే దీని దేవత.
+hi: यह रोग, दरिद्रता, दुर्भाग्य, शोक और दुःख का नाश करता है। सब नामों में यह पूजित है, और श्रीदुर्गा इसकी देवता मानी गई हैं।
+
+--- verse 4 | section: Pūrvapīṭhikā ---
+deva:
+निजबीजं भवेद्बीजं मन्त्रं कीलकमुच्यते ।
+सर्वाशापूरणे देवि विनियोगः प्रकीर्तितः ॥ ४ ॥
+iast:
+nijabījaṁ bhavedbījaṁ mantraṁ kīlakamucyate |
+sarvāśāpūraṇe devi viniyogaḥ prakīrtitaḥ || 4 ||
+en: Her own seed-syllable is the bīja, and the mantra is called the kīlaka. For the fulfilling of every wish, O goddess, its application is declared.
+tel: ఆమె నిజబీజమే బీజము; మంత్రము కీలకమని చెప్పబడును. ఓ దేవీ, సర్వ కోరికల సిద్ధికై దీని వినియోగము చెప్పబడినది.
+hi: उनका निज बीज ही बीज है, और मन्त्र कीलक कहा जाता है। हे देवि, सब कामनाओं की पूर्ति के लिये इसका विनियोग कहा गया है।
 
 --- verse none | section: Dhyānam ---
 deva:
