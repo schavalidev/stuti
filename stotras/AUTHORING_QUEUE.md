@@ -3816,6 +3816,9 @@ also in the wrong place.**
 
 Also: `Sections` is a reader-visible field and several Extras lines in it were naming
 sanskritdocuments and Gītā Press outright — against the standing rule that sourcing never
-reaches the reciter. The eight files touched here are clean; **`bin/reader_view.py --audit`
-still reports 463 files with sourcing in a reader field**, most of it in `Author` and
-`Verse count`, and that sweep has not been done.
+reaches the reciter. The eight files touched here are clean. A parallel session ran the
+corpus-wide sweep the same day (commits `8fb6f94`…`da2c37f`), taking `bin/reader_view.py
+--audit` from 656 occurrences in 463 files to **277 in 244**, the remainder mostly in
+`Verse count` and `Author`. Two sessions were editing this repo at once today — see
+the standing note on parallel sessions — so check `git log` before assuming a sweep is
+still open.
