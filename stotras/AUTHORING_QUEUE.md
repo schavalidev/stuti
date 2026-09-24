@@ -3789,3 +3789,33 @@ inside v. 4 — dropped, and kept as an extra.
 - The 1899 book's nine other Subrahmaṇya texts (aṣṭottaraśatanāma stotra and nāmāvalī,
   aṣṭaka, mālā-mantra, mahimā, pūjāvidhāna, kavaca, stotra, and one whose title is
   illegible) are unwritten; the contents page is PDF p. 81.
+
+---
+
+## 2026-09-24 — the sahasranāma opening: label, and then the frame itself
+
+**The label.** The reader shows a sahasranāma in three movements and called the first
+"Pūrvapīṭhikā" whatever it held. Eleven of the twenty-five have no frame story, so the word
+promised a reciter something the text does not contain. The opening is now named from its own
+sections — `purvaLabel()` in `stuti-reader.jsx`, `_purva_label()` in `bin/build_corpus.py`,
+two implementations that must stay in step and were checked against all 25 files.
+
+**Then the better question, from the user: do those texts really have no pūrvapīṭhikā?**
+Mostly they do. Gītā Press prints no frame, but the witness collated against each one does —
+and in seven files those verses were already written down, sitting after the colophon as
+labelled extras. A frame whose whole job is to open the work was being shown after it ended.
+On the user's call they were promoted into a real Pūrvapīṭhikā at the front, and the Dākārādi
+Durgā's frame, noted in its header but never written down, was added from the Kulārṇava
+witness.
+
+**Worth keeping.** Twice today a fix was correct and still answered too small a question.
+The label fix was right about what Gītā Press prints and wrong about the text; it was the
+user asking "do these not have purvapeethika?" that turned a cosmetic fix into a real one.
+**When a defect looks like a labelling slip, check whether the thing being mislabelled is
+also in the wrong place.**
+
+Also: `Sections` is a reader-visible field and several Extras lines in it were naming
+sanskritdocuments and Gītā Press outright — against the standing rule that sourcing never
+reaches the reciter. The eight files touched here are clean; **`bin/reader_view.py --audit`
+still reports 463 files with sourcing in a reader field**, most of it in `Author` and
+`Verse count`, and that sweep has not been done.
