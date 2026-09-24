@@ -186,6 +186,30 @@ function wordDurations(text, total) {
 
 /* karaoke word run — lights each word as the recitation reaches it, so the
    reciter can follow along and learn word by word */
+/* Vedic svara marks (॑ ॒ ᳚ …) are combining marks stacked on a base akṣara;
+   a bare mark cannot be recoloured without detaching, so the accented akṣara
+   (base + its marks) is wrapped whole and tinted, lighting up every accented
+   syllable. See .svara in stuti-components.css. */
+const SVARA = /[̠̥̀́̍̎̐̑॑-॔᳐-᳿꣡-꣱]/;
+const COMB = /[̠̥̀́̍̎̐̑ऀ-ःऺ-ॏ॑-॔ॢॣ᳐-᳿‌‍꣠-ꣿఀ-ఄా-ౖౢౣ]/;
+// Devanāgarī shaping needs the marks of an akṣara in a fixed order: matra, then the
+// spacing mark (anusvāra/visarga), then the Vedic tone mark. A source that writes the tone
+// before the visarga (त॑ + ः) makes every font emit a dotted circle, so reorder each cluster.
+const SPACING_MARK = /[ऀ-ः]/;
+function orderCluster(c) {
+  if (c.length < 3) return c;
+  const a = [...c];
+  const marks = a.slice(1).sort((x, y) =>
+    (SPACING_MARK.test(x) ? 1 : SVARA.test(x) ? 2 : 0) -
+    (SPACING_MARK.test(y) ? 1 : SVARA.test(y) ? 2 : 0));
+  return a[0] + marks.join("");
+}
+function svaraSplit(tok) {
+  if (typeof tok !== "string" || !SVARA.test(tok)) return tok;
+  const cl = [];
+  for (const ch of tok) { if (cl.length && COMB.test(ch)) cl[cl.length - 1] += ch; else cl.push(ch); }
+  return cl.map((c0, i) => { const c = orderCluster(c0); return SVARA.test(c) ? <span key={i} className="svara">{c}</span> : c; });
+}
 function WordRun({ text, upto, lit, onWord }) {
   let wi = -1;
   return (
@@ -197,7 +221,7 @@ function WordRun({ text, upto, lit, onWord }) {
         const idx = wi;
         const cls = !lit ? "w" : idx < upto ? "w w-read" : idx === upto ? "w w-now" : "w w-next";
         return <span key={i} className={cls + (onWord ? " w-tap" : "")}
-          onClick={onWord ? (e) => { e.stopPropagation(); onWord(idx); } : undefined}>{tok}</span>;
+          onClick={onWord ? (e) => { e.stopPropagation(); onWord(idx); } : undefined}>{svaraSplit(tok)}</span>;
       })}
     </React.Fragment>
   );
@@ -1111,6 +1135,9 @@ function ReaderView({ hymn: rawHymn, deity, go, theme, toggleTheme, lang, setLan
     if (vi != null) { const i = lines.findIndex(l => l.vi === vi); if (i >= 0) setActive(i); }
   };
   const flow = mode === "flow";
+  /* a text that carries svara reads in the Vedic face (Tiro), which places the
+     accent marks on the akṣara instead of detaching them */
+  const hasSvara = (hymn.verses || []).some(v => SVARA.test(v.deva || ""));
   /* where flow's reading has got to — a ref plus a coarse state, so the part
      tabs can follow the scroll without re-rendering the column under it */
   const flowAt = useRef(0);
@@ -1618,7 +1645,7 @@ function ReaderView({ hymn: rawHymn, deity, go, theme, toggleTheme, lang, setLan
       )}
 
       {/* one verse at a time, or the whole text in one column */}
-      <div className={"reader-scroll scroll" + (flow ? " is-flow" : "")} ref={scrollRef}>
+      <div className={"reader-scroll scroll" + (flow ? " is-flow" : "") + (hasSvara ? " rd-vedic" : "")} ref={scrollRef}>
         {namaluOpen ? (
           <NamaluList hymn={hymn} lang={lang} />
         ) : flow ? (

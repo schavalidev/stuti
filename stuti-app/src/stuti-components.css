@@ -681,6 +681,11 @@
 .nm-empty { padding: 40px 0; text-align: center; color: var(--ink-faint); }
 .verse-lines { display: flex; flex-direction: column; gap: 4px; }
 .line { text-align: center; padding: 7px 8px; border-radius: 14px; cursor: pointer; transition: opacity var(--med) var(--ease), transform var(--med) var(--ease); }
+/* Vedic svara: tint the accented akṣara so the marks stand apart from the text */
+.svara { color: #b5651d; }
+/* accented Vedic texts read in a face that positions the svara marks properly */
+.rd-vedic .line-deva { font-family: var(--font-deva-vedic); }
+.rd-vedic .line-telugu { font-family: var(--font-telugu-vedic); }
 /* a pāda the source broke mid-word with a hyphen continues on the next line —
    pull it up so the broken word reads as one, not as a paragraph break */
 .line.line-cont, .flow-line.line-cont { margin-top: -13px; padding-top: 0; }

@@ -15,6 +15,24 @@
    verse the light is in re-renders as it moves.
    ============================================================ */
 
+/* svara colouring — the accented akṣara is wrapped whole (see stuti-reader.jsx) */
+const FL_SVARA = /[̠̥̀́̍̎̐̑॑-॔᳐-᳿꣡-꣱]/;
+const FL_COMB = /[̠̥̀́̍̎̐̑ऀ-ःऺ-ॏ॑-॔ॢॣ᳐-᳿‌‍꣠-ꣿఀ-ఄా-ౖౢౣ]/;
+const FL_SPACING = /[ऀ-ः]/;
+function orderCluster(c) {
+  if (c.length < 3) return c;
+  const a = [...c];
+  const marks = a.slice(1).sort((x, y) =>
+    (FL_SPACING.test(x) ? 1 : FL_SVARA.test(x) ? 2 : 0) -
+    (FL_SPACING.test(y) ? 1 : FL_SVARA.test(y) ? 2 : 0));
+  return a[0] + marks.join("");
+}
+function svaraSplit(tok) {
+  if (typeof tok !== "string" || !FL_SVARA.test(tok)) return tok;
+  const cl = [];
+  for (const ch of tok) { if (cl.length && FL_COMB.test(ch)) cl[cl.length - 1] += ch; else cl.push(ch); }
+  return cl.map((c0, i) => { const c = orderCluster(c0); return FL_SVARA.test(c) ? <span key={i} className="svara">{c}</span> : c; });
+}
 function FlowVerse({ hymn, v, vi, numbered, lang, showMeaning, label, sub, sec, on, activeLi, word, lit, masked, hint, ritualOn, onRitual, onPick, onWord, onOpenNames, setMark }) {
   const dv = v.deva.split("\n");
   const it = v.iast.split("\n");
@@ -76,7 +94,7 @@ function FlowVerse({ hymn, v, vi, numbered, lang, showMeaning, label, sub, sec, 
                         <window.WordRun text={bodyText} upto={lit ? word : -1} lit={lit} onWord={(wi) => onWord(vi, li, wi)} />
                         {markText && <span className="verse-end-mark">{"\u2002" + markText.replace(/\s+/g, "\u2009")}</span>}
                       </React.Fragment>
-                    : <React.Fragment>{bodyText}{markText && <span className="verse-end-mark">{"\u2002" + markText.replace(/\s+/g, "\u2009")}</span>}</React.Fragment>}
+                    : <React.Fragment>{svaraSplit(bodyText)}{markText && <span className="verse-end-mark">{"\u2002" + markText.replace(/\s+/g, "\u2009")}</span>}</React.Fragment>}
                 </div>
               </div>
             );
