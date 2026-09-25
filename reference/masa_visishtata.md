@@ -380,3 +380,7 @@ Research did not find one single dedicated "Phālguṇa Māhātmyam" text of the
 - **Mārgaśira**: the Bhagavad Gītā 10.35 self-declaration ("of months I am Mārgaśīrṣa") is textually solid and directly verifiable, but Dhanurmāsa ritual detail draws more on Śrīvaiṣṇava temple paddhati than on one dedicated Purāṇa māhātmya.
 
 **General caveat**: all Gregorian date ranges given per month are approximate and shift year to year with the lunisolar calendar; any specific year cited in a month's "basic info" is illustrative only, not a fixed annual date.
+
+---
+
+(Cross-reference added 25 Sep 2026: the audited Stuti Complete Parva Vrata Encyclopedia is written up separately, month by month with the verses, in `masa_encyclopedia.md`. Nothing above this line was changed.)
