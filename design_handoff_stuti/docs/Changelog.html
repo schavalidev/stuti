@@ -95,6 +95,25 @@ code { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: .
 
 <section class="release">
   <div class="rail">
+    <div class="ver">0.9.106</div>
+    <div class="date">1 October 2026</div>
+    <div class="rail-note">The Bhāgavata is begun, from the typesetter's own text of the Gītā Press edition, with the Gajendra Mokṣa.</div>
+  </div>
+  <div class="release-body">
+    <h2 class="release-title">The Śrīmad Bhāgavata begins, with the release of Gajendra</h2>
+    <div class="entry">
+      <div class="entry-head"><span class="tag tag-add">Added</span><h3>Gajendra Mokṣa, Bhāgavata 8.2–8.4, in three adhyāya files with meanings in three languages</h3></div>
+      <p>A new folder, <code>stotras/vishnu/bhagavata/</code>, holds the Bhāgavata one adhyāya to a file. It opens with the three chapters of the Gajendra story, 92 verses in all: the elephant seized in Varuṇa's lake (8.2), his hymn and his release (8.3), and the former lives of the elephant and the crocodile with the Lord's promise to those who recite the hymn at dawn (8.4). The Devanāgarī is the Gītā Press text letter for letter, with the edition's own older readings from its footnotes bracketed after the printed ones. The IAST is generated from the Devanāgarī, and every verse carries an English, Telugu and Hindi meaning. The files are numbered <code>0802</code>, <code>0803</code>, <code>0804</code> and not <code>08_02</code>. The corpus takes a text's identity from its leading number, and <code>08_</code> would have given all three the same one.</p>
+    </div>
+    <div class="entry">
+      <div class="entry-head"><span class="tag tag-add">Added</span><h3>A Chanakya decoder, calibrated against GRETIL, so the Gītā Press Bhāgavata is read from its own text layer</h3></div>
+      <p>The Gītā Press PDF of the Bhāgavata (code 26) is not a photograph. It carries the typesetter's own characters in the old 8-bit Chanakya font, so the text can be decoded exactly and not transcribed. The decoder built for the Sundarkāṇḍ in September was never saved, so <code>stotras/bin/bhagavata/chanakya.py</code> was written again and checked against GRETIL's Bhāgavata over the whole volume before any file was written. The comparison found the faults that a well-formedness check could not see. After a half-letter, the glyph that looks like <code>ो</code> is the stem with <code>े</code>, which alone had turned 729 words wrong (शोते for शेते). The anusvāra glyph straight after <code>ि</code> is only a wider hook, but after <code>ि</code> and a half-letter it is a real anusvāra. The reph can stand over a vowel. Long lines are condensed to a smaller point size, and a filter on the 16-point verse size had silently dropped them. With these fixed, 4,509 of 5,544 verses agree with GRETIL letter for letter once spacing and nasal spelling are set aside, and the rest are readings of the two editions. The TTD edition with Śrīdhara's, Vīrarāghava's and Vijayadhvaja's commentaries serves as a third witness where those two disagree. At 8.4.25 the three give three readings of the Lord's promise; the Gītā Press reading is kept and the others are recorded.</p>
+    </div>
+  </div>
+</section>
+
+<section class="release">
+  <div class="rail">
     <div class="ver">0.9.105</div>
     <div class="date">30 September 2026</div>
     <div class="rail-note">The encyclopaedia moves from a Word document into the reference layer, and two pilot vratas reach the app with their mantras.</div>
