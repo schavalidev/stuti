@@ -95,6 +95,37 @@ code { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: .
 
 <section class="release">
   <div class="rail">
+    <div class="ver">0.9.105</div>
+    <div class="date">30 September 2026</div>
+    <div class="rail-note">The encyclopaedia moves from a Word document into the reference layer, and two pilot vratas reach the app with their mantras.</div>
+  </div>
+  <div class="release-body">
+    <h2 class="release-title">The audited encyclopaedia enters the reference, and two vratas carry their verse</h2>
+    <div class="entry">
+      <div class="entry-head"><span class="tag tag-add">Added</span><h3>The Parva Vrata Encyclopaedia is written into the reference layer, month by month, in three languages</h3></div>
+      <p>The 121-entry encyclopaedia that was audited in its Word form now lives as <code>reference/masa_encyclopedia.md</code> with Telugu and Hindi companions. Each month lists its observances with date rules, and wherever the encyclopaedia gives a Sanskrit verse it is quoted in Devanagari and IAST. Where it gives none, the file says so. The existing <code>masa_visishtata</code> files are unchanged except for a cross-reference line at the end of the English file.</p>
+    </div>
+    <div class="entry">
+      <div class="entry-head"><span class="tag tag-add">Added</span><h3>Ugadi carries the verse recited when eating the pacchadi</h3></div>
+      <p>The Ugadi vrata entry, which was a stub, now has significance, timeline, samagri, vidhi, naivedya, dos and donts. The vidhi step for eating the pacchadi embeds the verse that is recited at that moment, in Devanagari, IAST and Telugu, with its meaning in all three languages. The source note says honestly that the verse is popularly linked to the Dharmasindhu but the exact chapter and verse have not been confirmed against the printed text.</p>
+    </div>
+    <div class="entry">
+      <div class="entry-head"><span class="tag tag-add">Added</span><h3>Raksha Bandhan enters the vrata guide with its mantra</h3></div>
+      <p>A new full entry for Raksha Bandhan, with the mantra recited when tying the thread. The entry covers multiple origin stories without singling one out, and the source note keeps the encyclopaedia's own caveat that the exact recension of the mantra has not been independently verified.</p>
+    </div>
+    <div class="entry">
+      <div class="entry-head"><span class="tag tag-fix">Fixed</span><h3>A field named <code>verse</code> collided with the same name used elsewhere</h3></div>
+      <p>Naming the new mantra field <code>verse</code> collided with an unrelated, differently shaped <code>verse</code> key already used elsewhere in the app. The collision caused a white screen in production. The field is now <code>mantra</code> and <code>mantraMeaning</code>, which have no collision.</p>
+    </div>
+    <div class="entry">
+      <div class="entry-head"><span class="tag tag-fix">Fixed</span><h3>The tarpana integration deferred its cross-reference to break a circular import</h3></div>
+      <p>The codemod turns the design's load-order separation of <code>stuti-vrata-data.js</code> and <code>stuti-tarpana.js</code> into a static circular import. The tarpana block now waits one microtask before reading the vrata exports, so both modules finish evaluating before the cross-reference runs.</p>
+    </div>
+  </div>
+</section>
+
+<section class="release">
+  <div class="rail">
     <div class="ver">0.9.104</div>
     <div class="date">16 September 2026</div>
     <div class="rail-note">The seams the design left for a server, filled — and every one of them still switched off until the project exists.</div>
