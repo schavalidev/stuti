@@ -25,24 +25,30 @@ def page_lines(page, pno):
                 if not s['text'].strip():
                     continue
                 font = s['font'].split('+')[-1]
-                rows.append((round(s['bbox'][1]), s['bbox'][0], s['bbox'][3], font, round(s['size'], 1), s['text']))
+                rows.append((round(s['bbox'][1]), s['bbox'][0], s['bbox'][2], font, round(s['size'], 1), s['text']))
     return rows
 
 
-def classify(font, size, x, y, top):
+def classify(font, size, x, y, top, x2=None, text=''):
     if y < top:
         return 'running'
     if font == 'DingbitsThree':
         return 'ornament'
     if font == 'ChanakyaItalic':
         return 'italic'
+    if font == 'ChanakyaBold' and size < 15 and text.strip().isdigit():
+        return 'sup'           # footnote numerals are set at 11.7, 12.2 and 14pt
     if font == 'ChanakyaBold' and size >= 17.6:
         return 'heading'
-    if font == 'ChanakyaBold' and size < 13.2:
-        return 'sup'
-    if font == 'ChanakyaBold' and x < 270:
+    if font == 'ChanakyaBold' and x < 270 and x2 is not None and x2 > 290:
+        # a centred line wider than the Sanskrit column: the Hindi subtitle of an adhyāya, or
+        # an invocation or end-mark (॥ श्रीगणेशाय नमः ॥, इति नवमः स्कन्धः समाप्तः)
+        return 'center'
+    if font == 'ChanakyaBold' and x < 270 and size >= 13.2:
         # 16pt normally; a line too long for the column is condensed to 14.3–15.6pt
         return 'verse'
+    if font == 'ChanakyaBold' and x < 270:
+        return 'center'
     if font == 'ChanakyaBold':
         return 'hindi'      # the Hindi column's bold speaker lines (श्रीशुकदेवजी कहते हैं—)
     if font == 'Chanakya' and size <= 14.1:
@@ -57,37 +63,40 @@ def extract(doc, first, last, split_x=270):
         page = doc[pno - 1]
         rows = page_lines(page, pno)
         items = []
-        for y, x, y2, font, size, t in rows:
-            k = classify(font, size, x, y, 60)
+        for y, x, x2, font, size, t in rows:
+            k = classify(font, size, x, y, 60, x2, t)
             if k in ('running', 'ornament'):
                 continue
             if k == 'hindi':
                 continue
-            items.append([y, x, k, font, size, t])
+            items.append([y, x, k, font, size, t, x2])
         # merge spans into lines: same kind and baseline within 7pt; superscripts join the
         # nearest line of verse afterwards, since they sit a few points above its baseline
         items.sort(key=lambda r: (r[0], r[1]))
         sups = [it for it in items if it[2] == 'sup']
-        lines = []
-        for y, x, k, font, size, t in items:
+        lines = []                          # [y, x, kind, parts, right edge]
+        for y, x, k, font, size, t, x2 in items:
             if k == 'sup':
                 continue
             if lines and abs(lines[-1][0] - y) <= 7 and lines[-1][2] == k:
                 lines[-1][3].append((x, t, k))
+                lines[-1][4] = max(lines[-1][4], x2)
                 continue
-            lines.append([y, x, k, [(x, t, k)]])
-        for y, x, k, font, size, t in sups:
+            lines.append([y, x, k, [(x, t, k)], x2])
+        for y, x, k, font, size, t, x2 in sups:
             near = [l for l in lines if l[2] == 'verse' and -3 <= l[0] - y <= 14]
             if near:
                 near[0][3].append((x, '⁽' + t.strip() + '⁾', 'sup'))
             else:
-                lines.append([y, x, 'sup', [(x, '⁽' + t.strip() + '⁾', 'sup')]])
+                lines.append([y, x, 'sup', [(x, '⁽' + t.strip() + '⁾', 'sup')], x2])
         lines.sort(key=lambda l: (l[0], l[1]))
-        # a Bold-16 line straight after a chapter heading is the edition's Hindi subtitle
-        for i in range(1, len(lines)):
-            if lines[i][2] == 'verse' and lines[i - 1][2] == 'heading':
-                lines[i][2] = 'subtitle'
-        for y, x, k, parts in lines:
+        for ln in lines:
+            # a short title centred over the column gap inside an adhyāya (वेणुगीत, महारास,
+            # वेदस्तुति): the whole line starts right of 240pt and crosses into the gap. Decided
+            # per line, not per span — in justified prose a single word can start that far right
+            if ln[2] == 'verse' and min(p[0] for p in ln[3]) >= 240 and ln[4] > 272:
+                ln[2] = 'section'
+        for y, x, k, parts, _ in lines:
             parts.sort()
             raw = ''
             for _, t, kk in parts:
@@ -107,6 +116,7 @@ def extract(doc, first, last, split_x=270):
             segs = raw.split('\x08')
             txt = ''.join(seg if n % 2 else decode(seg) for n, seg in enumerate(segs))
             txt = ' '.join(txt.split())
+            txt = re.sub(r'([०-९])ं', r'\1', txt)                   # a stray anusvāra glyph by a numeral (॥ ७ं)
             txt = re.sub(r' ([ंः])', r'\1', txt)                   # हरि ं → हरिं
             txt = re.sub(r'\s+([।॥])', r'\1', txt)                 # no space before a daṇḍa
             txt = re.sub(r'([।॥])(⁽\d+⁾)', r'\2\1', txt)          # marker before the daṇḍa
