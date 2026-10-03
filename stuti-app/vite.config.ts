@@ -43,6 +43,9 @@ export default defineConfig({
         // are kept out of the precache and cached when they are actually asked
         // for, which is what their loaders were written to expect.
         globIgnores: ['stuti-gazetteer.js', 'stuti-temples.js'],
+        // the bell with no page open: show a sealed push and route its tap
+        // (public/stuti-push-sw.js; the page half is src/stuti-webpush.ts)
+        importScripts: ['stuti-push-sw.js'],
         runtimeCaching: [
           {
             urlPattern: /\/stuti-(gazetteer|temples)\.js$/,

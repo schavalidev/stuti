@@ -12,7 +12,7 @@ can be checked rather than trusted.
 
 ---
 
-## A. The four switches
+## A. The five switches
 
 Everything in this section is built, tested and shipping switched off. Each waits
 on an account that only you can open; none of it is code.
@@ -66,6 +66,21 @@ The relay already files feedback into Drive; only the mail leg is unset.
 - [ ] `STUTI_FEEDBACK_FROM` — a sender on a domain verified in Resend, or Resend's
       test sender delivers only to your own address
 - [ ] Deploy, then send one real message from the app and confirm it arrives
+
+### A5. Web push — bells that reach a closed browser
+
+Built 3 October 2026 (S64); waits on A1. Procedure: `stuti-app/docs/backend.md` §7.
+The Android app does not need this: its bells are already laid in the OS.
+
+- [ ] `node stuti-app/tools/vapid-keys.mjs` — public key into `pushKey` in
+      `stuti-cloud-config.ts`, private key into Netlify as `STUTI_VAPID_PRIVATE`
+- [ ] Re-run `schema.sql` (adds section 7), then run `supabase/push-cron.sql`
+      (needs `pg_cron` and `pg_net`)
+- [ ] Deploy, then `select beat_at, beat_ok, note from stuti_push_sender;` reads
+      `beat_ok = true` within ten minutes
+- [ ] In Chrome on the live site: switch on a sandhyā bell, allow notifications,
+      close the tab, and see the bell arrive. Then the same in Firefox, and in
+      Safari from a home-screen install on an iPhone (iOS 16.4 or later)
 
 ---
 
@@ -123,20 +138,26 @@ last reviewed. Each needs one of: merge, cross-reference both, or leave apart.
 
 ### C1. Push that survives a closed app
 
-`stuti-app/src/stuti-push.ts` is 66 lines and holds the client half only:
-`subscribed()`, `subscription()`, `record()`. The server half does not exist.
-Scoped in `design_handoff_stuti/docs/Pending.html`; waits on A1.
+Built 3 October 2026 (S64), switched off until A5. The design's scope had a server
+reckon the cues from `stuti_cue_prefs`; that was decided against, because the cues
+read state that lives only on the device and a second copy of the almanac would
+disagree with the page. Instead the device seals its own week, as the phone lays
+its own week in the OS. `node stuti-app/tools/push-selftest.mjs` checks it.
 
-- [ ] Generate VAPID keys
-- [ ] Wire `PushManager.subscribe()` to the bell taps and the Settings reminder toggles
-- [ ] A scheduled function that computes, per subscriber, which cues fall due in the
-      next window — from `stuti_cue_prefs`, which already carries place, time zone,
-      sandhyā toggles, quiet hours and digest hour
-- [ ] The send step, `web-push` or the provider's REST API, against each due endpoint
-- [ ] A service-worker `push` handler to show the OS notification with no page open
-- [ ] A `notificationclick` handler to focus or open the app
-- [ ] Until all of it lands, the toggles must keep saying the bells ring only while
-      Stuti is open
+- [x] VAPID: `tools/vapid-keys.mjs` makes the pair; the sender checks the private
+      half belongs to the public half before it sends anything
+- [x] `PushManager.subscribe()` follows the reminder toggles, the place, the
+      notification permission and every return to the app (`src/stuti-webpush.ts`)
+- [x] The week is sealed on the device to the browser's own keys
+      (`src/stuti-push-seal.ts`, matches RFC 8291's example byte for byte, in Node
+      and in Chromium), so the server never holds a readable bell
+- [x] Queue and sender state in Supabase (`schema.sql` §7, run under PGlite: 26 checks)
+- [x] A cron in the database wakes the sender only when a bell is due
+      (`supabase/push-cron.sql`)
+- [x] The send step, with no dependency (`netlify/functions/push-send.mjs`)
+- [x] Service-worker `push` and `notificationclick` handlers (`public/stuti-push-sw.js`)
+- [x] The toggles say "only while open" until a server has actually accepted a week
+- [ ] Verified end to end on a real push service — needs A5
 
 ### C2. Recorded recitation
 
@@ -203,9 +224,8 @@ Drafted in the app's own voice at `stuti-app/docs/legal/privacy.html` and
 
 ## E. Release mechanics
 
-- [ ] `stuti-app/src/stuti-build.ts` is stamped `0.9.104` / `2026.09.16` while the
-      changelog is at `0.9.106` / 1 October. The stamp is stale and a tester's report
-      will name the wrong build
+- [x] Build stamp matches the changelog (0.9.107 / 2026.10.03, S64), and
+      `release-apk.sh` now refuses to build when they disagree
 - [ ] `GATE = "matsya"` — set to null for a public build
 - [ ] `CHANNEL = "beta"` — move to `release`
 - [ ] Keep the beta latch's grandfather clause in `main.tsx` for devices that finished

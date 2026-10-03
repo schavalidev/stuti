@@ -9,6 +9,7 @@ import { installRelay } from "./stuti-relay"; // crash notes and Follow sessions
 import { installJournal } from "./stuti-journal"; // screens, taps and slow tasks, flushed to the same folder
 import { installNotify } from "./stuti-notify"; // on the phone the OS holds the cues, so they arrive with the app closed
 import { installCloud } from "./stuti-cloud"; // the account, sync and the cue record, when Supabase is configured
+import { installWebPush } from "./stuti-webpush"; // on the web, a server keeps the week of bells so they reach a closed browser
 import { applyCachedCorrections, refreshCorrections } from "./stuti-corrections";
 import { installCorpus } from "./stuti-corpus"; // texts fetched one at a time from the corpus host, kept on the device // verse corrections published without a release
 import { STUTI_BUILD } from "./stuti-build";
@@ -45,6 +46,7 @@ installRelay();
 installJournal();
 installNotify();
 installCloud();
+installWebPush();
 refreshCorrections();
 (window as any).STUTI_COUNT_DOMAIN = "stuti-app.netlify.app";   // one site for the counters, phone and web alike
 

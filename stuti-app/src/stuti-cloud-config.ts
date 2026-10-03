@@ -18,6 +18,11 @@ export const STUTI_CLOUD_CONFIG = {
   /* which sign-in doors are switched on in Supabase → Authentication → Providers.
      Phone needs an SMS provider (MSG91, Twilio…) configured there first. */
   providers: { email: true, phone: false, google: false },
+  /* the public half of the VAPID pair (node tools/vapid-keys.mjs). Bells
+     reach a closed browser only when this and Supabase are both set, and the
+     private half is in Netlify as STUTI_VAPID_PRIVATE. Blank keeps the web
+     app ringing its bells only while it is open, as the beta does. */
+  pushKey: "",
 };
 
 /* One Payment Button per amount, created in Razorpay → Payment Pages →

@@ -9,6 +9,8 @@ import { AKSHARA_PANCHANGA } from "./stuti-panchanga-engine";
 import { STUTI_PREFS } from "./stuti-prefs";
 import { STUTI_SANDHYA } from "./stuti-sandhya-core";
 import { STUTI_LOC } from "./stuti-store";
+import { STUTI_PUSH } from "./stuti-push";
+import { STUTI_TITHIS } from "./stuti-tithis-core";
 
 /* ============================================================
    STUTI — the bell the phone rings
@@ -81,7 +83,11 @@ function slot(key: string) {
 }
 
 /* the words, taken from the same places the page takes them, so a cue that
-   arrives from the OS reads exactly like one that arrived from the tab */
+   arrives from the OS — or from the push server, which sends these same words
+   sealed (stuti-webpush.ts) — reads exactly like one that arrived from the tab.
+   Each branch follows STUTI_NUDGE.post. The two in the middle were missing:
+   a tarpaṇa bell fell through to the digest, found no items, and announced the
+   daily pāṭha instead of the rite and its window. */
 function words(cue: any) {
   const lg = lang(), L = STUTI_L, P = AKSHARA_PANCHANGA, SY = STUTI_SANDHYA;
   if (cue.kind === "sandhya") {
@@ -89,6 +95,29 @@ function words(cue: any) {
     return {
       title: "Stuti · " + SY.name(k.label, lg),
       text: L.t("sandhyaNudge", lg) + " · " + P.fmtTime(((k.best.start % 1440) + 1440) % 1440) + " – " + P.fmtTime(((k.best.end % 1440) + 1440) % 1440),
+      hymn: null as any,
+    };
+  }
+  if (cue.kind === "mytithi") {
+    /* the person is the title, as the page has it */
+    const it = cue.item || (cue.items || [])[0] || {};
+    const TT: any = STUTI_TITHIS, k = TT && TT.KINDS[it.tkind];
+    const kl = k ? (lg === "telugu" ? k.label.tel : lg === "deva" ? k.label.deva : k.label.roman) : "";
+    const locale = lg === "telugu" ? "te-IN" : lg === "deva" ? "hi-IN" : "en-IN";
+    const when = it.away === 0 ? L.t("vrataToday", lg) : it.away === 1 ? L.t("vrataTomorrow", lg)
+      : (it.date ? new Date(it.date).toLocaleDateString(locale, { weekday: "long", day: "numeric", month: "short" }) + " · " + L.t("vrataInDays", lg).replace("{n}", it.away) : "");
+    return { title: it.name || kl || "Stuti", text: kl + (when ? " · " + when : ""), hymn: null as any };
+  }
+  if (cue.kind === "tarpana") {
+    /* the rite and its window in one line — what to do, and by when */
+    const rt = cue.rite || {}, nm = rt.name || {};
+    const KALA: any = { aparahna: { roman: "Aparāhṇa", deva: "अपराह्ण", telugu: "అపరాహ్ణం" },
+                        madhyahna: { roman: "Madhyāhna", deva: "मध्याह्न", telugu: "మధ్యాహ్నం" },
+                        arunodaya: { roman: "Before sunrise", deva: "अरुणोदय", telugu: "అరుణోదయం" } };
+    const k = KALA[rt.kala] || KALA.aparahna, w = cue.window;
+    return {
+      title: (lg === "telugu" ? (nm.tel || nm.roman) : lg === "deva" ? (nm.deva || nm.roman) : nm.roman) || "Stuti",
+      text: (lg === "telugu" ? k.telugu : lg === "deva" ? k.deva : k.roman) + (w ? " · " + P.fmtTime(w.start) + " – " + P.fmtTime(w.end) : ""),
       hymn: null as any,
     };
   }
@@ -244,14 +273,26 @@ export async function installNotify() {
   document.addEventListener("visibilitychange", () => { if (!document.hidden) refresh().then(refreshExact).then(lay); });
 }
 
-export const STUTI_NOTIFY = { installNotify, lay, ask, refresh, week, words, permission: () => owner.permission(), available: native };
+export const STUTI_NOTIFY = { installNotify, lay, ask, refresh, week, words, slot, permission: () => owner.permission(), available: native };
+
+/* the web's own way of holding the week: a push subscription the server has
+   accepted a lay for (stuti-webpush.ts notes it only then) */
+const webOwns = () => { try { return !native() && STUTI_PUSH.subscribed(); } catch (e) { return false; } };
 
 /* What the reminder sheet may honestly say once the OS holds the cues. The
    generated copy is written for the web — "only while the app is open in a
    tab", "the browser's settings" — and is simply untrue on a phone. Kept
    here rather than in stuti-i18n.ts, which the port overwrites. */
 export function notifyNote(lang: string, perm: string) {
-  if (!native()) return null;
+  if (!native()) {
+    if (!webOwns() || perm !== "granted") return null;
+    const w = {
+      roman: "Cues are sent to this browser from Stuti's server, so they arrive with Stuti closed. The week ahead is sent again each time you open the app.",
+      deva: "सूचनाएँ स्तुति के सर्वर से इस ब्राउज़र को भेजी जाती हैं, इसलिए स्तुति बंद होने पर भी आती हैं। हर बार ऐप खोलने पर आगे का सप्ताह फिर से भेजा जाता है।",
+      telugu: "సూచనలు స్తుతి సర్వర్ నుండి ఈ బ్రౌజర్‌కు పంపబడతాయి, కాబట్టి స్తుతి మూసి ఉన్నా వస్తాయి. యాప్ తెరిచిన ప్రతిసారీ ముందున్న వారం మళ్లీ పంపబడుతుంది.",
+    };
+    return lang === "telugu" ? w.telugu : lang === "roman" ? w.roman : w.deva;
+  }
   const s = perm === "denied"
     ? {
         roman: "Notifications are turned off for Stuti. Allow them in the phone's settings, then reopen this panel.",
@@ -273,7 +314,7 @@ export function notifyNote(lang: string, perm: string) {
    possibly ring was the next day's. Nothing was broken and nothing was going
    to arrive, and the screen had no way to say so. */
 export function cueNote(count: number, lead: number) {
-  if (!native() || !count) return null;
+  if ((!native() && !webOwns()) || !count) return null;
   const soon = week().filter((c: any) => c.kind === "sandhya")[0];
   if (!soon) return "Set — but nothing falls in the next week. Check the quiet hours, which may be swallowing every chosen juncture.";
   const at = new Date(soon.at), now = new Date();
