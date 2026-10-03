@@ -91,3 +91,57 @@ decision (GP is base) while taking the sarga division from the witness that stat
   test removed the heading and colophon leakage that had shifted every sarga by one.
 - **Match by opening line, never by number.** Keying critical sargas by number gave 206 matches;
   keying them by opening line gave 1,385 from the same data.
+
+
+---
+
+# The build that writes the files (S59, 3 Oct 2026)
+
+The sections above record the 14 Sep 2026 start. What follows supersedes their plan. The user's
+decision stands: **Gītā Press is the base text**, here in the strict sense that every printed
+half-line is the print's own reading, established from the scans and read off the page image
+wherever the scans do not settle it.
+
+## Sources, all cached under `../cache/` (git-ignored)
+
+| what | where | used for |
+| --- | --- | --- |
+| Gītā Press Sanskrit-Hindi, vol 1 and 2: **every scan on archive.org**, 10 distinct scans of vol 1, 11 of vol 2 | `gitapress_ramayana/gp1_djvu.txt`, `gp2_djvu.txt`, `ocr/`, `ocr2/` | the text, voted across scans (`sources.OCR_SETS` names them; duplicates, a Hindi-only 1977 printing and a scan with no Devanāgarī text are left out) |
+| the primary scans' hOCR and page images | `gitapress_ramayana/hocr/`, `pages/` | line positions and crops for reading by eye |
+| Gītā Press's own ebook of the Hindi translation, archive.org `wg966` | `gitapress_ramayana/pdf/wg966.pdf` | the edition's sarga count and each sarga's verse count, in clean text. Its conjunct glyphs carry no Unicode, so words are broken, but numbers and headings survive |
+| IITK digital text, GitHub `Ashutosh-Vijay/Valmiki_Ramayan_Dataset` | `gitapress_ramayana/iitk_dataset.json` | the skeleton that says where each GP half-line is, and a witness. **Its Uttarakāṇḍa is the critical edition's text**, as is sa.wikisource's, so it is not used as skeleton there |
+| valmikiramayan.net Sanskrit pages (no Uttarakāṇḍa) | `southern/` | witness |
+| Baroda critical edition, GRETIL TEI | `sa_rAmAyaNa.xml` | witness |
+
+No born-digital Sanskrit text of the Gītā Press edition exists online (searched 3 Oct 2026:
+archive.org's "Text PDF" items are scans or Hindi-only ebooks, CorelDRAW page images, or
+Zamzar/calibre conversions of the Hindi ebook). stotranidhi carries Bāla, Ayodhyā, Araṇya,
+Kiṣkindhā and Yuddha but not the Uttarakāṇḍa; it is not used here.
+
+## Pipeline (run with `../.venv/bin/python`, which has rapidfuzz and Pillow)
+
+1. `fuse.py <kanda>` — aligns every scan's OCR to the skeleton half-line by half-line and votes
+   the print's reading. Status per half-line: `confirmed` (two scans reproduce the skeleton
+   exactly; three in the Uttarakāṇḍa), `voted`, `variant` (the scans agree on something other
+   than the skeleton: a real GP reading or an OCR error every scan shares), `doubt`. Also finds
+   GP-only half-lines, de-duplicates IITK's repeated merged entries, and records colophons.
+2. `structure.py <kanda>` — sargas and verse units. The cut points are fitted by dynamic
+   programming to the ebook's per-sarga verse counts, using the voted verse numbers and colophons.
+3. `packets.py <kanda>` — per sarga: what is accepted, and a crop of every other half-line from
+   the primary scan; `<sid>.toread.json` is the blind reader's packet (images only).
+4. Stage A, an agent: reads the crops blind and writes `<sid>.read.json`.
+5. `merge.py <kanda> <sid>` — a reading that agrees with a scan or with the skeleton settles the
+   half-line; anything else is a dispute.
+6. Stage C, an agent: settles disputes and structure against the page, gives the title and
+   colophon, writes `<sid>.final.json`.
+7. `write_sarga.py <kanda> <sid>` — writes the corpus file; refuses on an unsettled line, a broken
+   number run, or an unexplained count difference from the ebook.
+
+Traps already paid for:
+- **IITK's merged entries repeat the same block under every verse number they cover.** Drop
+  repeated entries at load (`sources.iitk`), and de-duplicate by printed line (`fuse.dedup`).
+- **The aligner must allow a long forward jump** (a Hindi block can run 180 lines) but punish a
+  backward one, and must not penalise distance while re-syncing.
+- **hOCR keeps headings and colophons in `ocr_header`/`ocr_textfloat`, not `ocr_line`.**
+- **The ebook writes verse ranges with an em-dash and wraps the closing ॥ onto the next line.**
+- **OCR reads GP's ज्ञ as श and ै as े in most scans**, so a scan majority is not proof.
