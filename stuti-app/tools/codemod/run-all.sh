@@ -47,5 +47,6 @@ echo "pipeline complete (ported design @ $(cut -c1-9 .ported-at 2>/dev/null || e
 # copied into public/, and it can carry a finished text that no catalogue row
 # claims — in both cases the build is clean and the reader is short one thing
 node check-assets.mjs
+node check-data.mjs
 node check-links.mjs
 node check-stamp.mjs

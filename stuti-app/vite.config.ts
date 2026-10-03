@@ -34,7 +34,21 @@ export default defineConfig({
       workbox: {
         maximumFileSizeToCacheInBytes: 6 * 1024 * 1024, // the ~1.7MB corpus bundles into a couple of JS chunks
         navigateFallback: '/index.html',
+        // The gazetteer and the temple index are the two files the app fetches
+        // only when something asks for them — a town typed into the place
+        // search, a reciter standing somewhere unpinned. Workbox's default glob
+        // sweeps every .js in the build, which had quietly put both of them in
+        // the precache: four megabytes downloaded on install, by every device,
+        // again on every deploy, for two files most sittings never touch. They
+        // are kept out of the precache and cached when they are actually asked
+        // for, which is what their loaders were written to expect.
+        globIgnores: ['stuti-gazetteer.js', 'stuti-temples.js'],
         runtimeCaching: [
+          {
+            urlPattern: /\/stuti-(gazetteer|temples)\.js$/,
+            handler: 'CacheFirst',
+            options: { cacheName: 'stuti-data', expiration: { maxEntries: 4, maxAgeSeconds: 90 * 24 * 60 * 60 } },
+          },
           {
             urlPattern: ({ request }) => request.destination === 'font' || request.destination === 'image',
             handler: 'CacheFirst',
