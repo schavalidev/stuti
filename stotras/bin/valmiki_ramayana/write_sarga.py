@@ -140,7 +140,15 @@ def write(k, sid, dry=False):
     title = f"Śrīmad Vālmīki Rāmāyaṇa — {KNAME[k]}, {label}: {fin['title_en']}"
     n, diff = compare(verses, k)
     t = m.get('tally', {})
-    settled = sum(1 for x in fin.get('lines', {}).values())
+    disputed = {d['id'] for d in m.get('disputes', [])}
+    written_ids = {l['id'] for v in verses for l in v['lines'] if l['id']}
+    settled = len(disputed & written_ids)
+    added = sum(1 for v in verses for l in v['lines'] if not l['id'])
+    dropped = len(set(fin.get('drop', [])))
+    base_ok = sum(1 for v in verses for l in v['lines'] if l['id'] and l['id'] not in disputed
+                  and (l['it'] or {}).get('basis') == 'scans+iitk')
+    read_ok = sum(1 for v in verses for l in v['lines'] if l['id'] and l['id'] not in disputed
+                  and (l['it'] or {}).get('basis') in ('reading+scan', 'reading+iitk'))
     scan = f"`{S.SCAN_ID[f'gp{vol}']}`"
     if k != 'uttara':
         src = (f"Base text and authority: the Gītā Press, Gorakhpur Śrīmad Vālmīkīya Rāmāyaṇa with Hindi "
@@ -154,7 +162,7 @@ def write(k, sid, dry=False):
                f"the verse numbering are the print's own, checked against Gītā Press's ebook of the Hindi translation "
                f"(archive.org `wg966`). Witnesses compared by machine: the IITK digital text (GitHub "
                f"Ashutosh-Vijay/Valmiki_Ramayan_Dataset), which follows the Southern vulgate; the Southern-lineage text "
-               f"of valmikiramayan.net as served at sanskritdocuments.org; and the Baroda critical edition (GRETIL "
+               f"of valmikiramayan.net as served at sanskritdocuments.org, used as an aid to reading the page; and the Baroda critical edition (GRETIL "
                f"`sa_rAmAyaNa.xml`, read from the TEI XML). The IAST was generated mechanically from the Devanāgarī "
                f"with `bin/dev2iast.py`. Tools: `bin/valmiki_ramayana/`.")
     else:
@@ -174,15 +182,24 @@ def write(k, sid, dry=False):
            f"witnesses' differences listed here were found by machine and have not been adjudicated or bracketed into the line."]
     rec.append(f"The print numbers {len(verses)} verses" +
                (f", as the Gītā Press ebook does." if eb == len(verses) else f"; the Gītā Press ebook's numbering ends at {eb}. {fin.get('count_explained','')}"))
-    rec.append(f"Of the {n['half']} half-lines, {t.get('scans+iitk', 0)} were confirmed by the scans and the IITK text together, "
-               f"{t.get('reading+scan', 0) + t.get('reading+iitk', 0)} were read off the page and confirmed by a scan or by the IITK text, "
-               f"and {settled} were settled against the page by reading it again with every witness in view.")
+    conf = 'the scans and the IITK text together' if k != 'uttara' else 'three scans agreeing exactly'
+    s1 = (f"Of the {n['half']} half-lines, {base_ok} were confirmed by {conf}, {read_ok} were read off the page and "
+          f"confirmed by a scan{' or by the IITK text' if k != 'uttara' else ''}, and {settled} were settled against the page "
+          f"by reading it again with every witness in view.")
+    if added:
+        s1 += f" {added} half-line{'s' if added > 1 else ''} that the scans' alignment missed {'were' if added > 1 else 'was'} read off the page and added."
+    if dropped:
+        s1 += f" {dropped} line{'s' if dropped > 1 else ''} that the machine had taken for verse {'were' if dropped > 1 else 'was'} left out after checking the page."
+    if t.get('qa_checked'):
+        s1 += (f" As a check on the first group, {t['qa_checked']} of its half-lines were also read blind off the page; "
+               f"{t['qa_checked'] - t.get('qa_mismatch', 0)} agreed.")
+    rec.append(s1)
     if k != 'uttara' and n['iitk']:
         rec.append(f"Compared with the IITK text, the print differs in wording, beyond spelling and spacing, at "
                    f"{'verses ' + ranges(diff.get('iitk', [])) if diff.get('iitk') else 'no verse'}.")
     if n['south']:
-        rec.append(f"The Southern text of valmikiramayan.net is printed word by word, so it is compared on letters alone; "
-                   f"it differs at {'verses ' + ranges(diff.get('south', [])) if diff.get('south') else 'no verse'}.")
+        rec.append("The Southern text of valmikiramayan.net prints each word separately with the sandhi undone, so it "
+                   "was used as an aid to reading the page and not compared by machine.")
     if n['crit']:
         rec.append(f"The critical edition carries {n['crit']} of these half-lines in recognisable form and differs from the "
                    f"print at {'verses ' + ranges(diff.get('crit', [])) if diff.get('crit') else 'none of them'}; "
@@ -200,7 +217,7 @@ def write(k, sid, dry=False):
             b = body(l['text'])
             deva.append(b + (' ॥' if i == len(v['lines']) - 1 else ' ।'))
         out += [f"--- verse {v['num']} ---", 'deva:'] + deva + ['iast:'] + [dev2iast(x) for x in deva] + ['']
-    out += ['--- verse none ---', 'deva:', colo + ' ॥', 'iast:', dev2iast(colo + ' ॥'), '']
+    out += ['--- verse none ---', 'deva:', colo, 'iast:', dev2iast(colo), '']
     name = f"{sid}_sarga_{sid}_{fin['slug']}.txt" if not prak else \
         f"{int(m['ebook_n'][1:]):02d}_prakshipta_sarga_{int(m['ebook_n'][1:]):02d}_{fin['slug']}.txt"
     path = os.path.join(folder(k, prak), name)

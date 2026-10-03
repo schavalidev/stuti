@@ -110,6 +110,7 @@ def build(k):
     summary = collections.Counter()
     # positions of colophons on the primary scan
     hcol = [j for j, (t, _, _) in enumerate(hl) if COLO.search(t)]
+    all_pk = []
     for s in d['sargas']:
         sid = f"{s['n']:0{width}d}"
         lines_out, last_leaf = [], None
@@ -224,7 +225,7 @@ def build(k):
               'machine_last': s['last'], 'anomalies': s['anomalies'],
               'heading_crop': head, 'heading_ocr': head_text, 'colophon_crop': colo,
               'colophon_ocr': colo_text, 'no_location': no_loc, 'verses': verses}
-        json.dump(pk, open(os.path.join(out_dir, f'{sid}.json'), 'w'), ensure_ascii=False, indent=1)
+        all_pk.append(pk)
         # the blind reader's packet: images only, never a candidate text for the line being read
         toread, flat = [], [it for v in verses for it in v['lines']]
         for x, it in enumerate(flat):
@@ -236,6 +237,18 @@ def build(k):
                 e['line_before'] = flat[x - 1]['gp'] if x > 0 else None
                 e['line_after'] = flat[x + 1]['gp'] if x + 1 < len(flat) else None
             toread.append(e)
+        # A hidden spot-check: six half-lines the machine accepted without reading are read blind
+        # with the rest. merge.py compares them; a mismatch becomes a dispute, and the rate
+        # measures how far the shortcut can be trusted.
+        import random
+        rnd = random.Random(f'{k}.{sid}')
+        pool = [it for it in flat if not it['read'] and it['loc']]
+        qa = rnd.sample(pool, min(6, len(pool)))
+        for it in qa:
+            it['qa'] = True
+            it['crop'] = C.line(vol, it['loc']['leaf'], it['loc']['bbox'], pad_y=22, pad_x=60, name=f"{it['id']}.png")
+            toread.append({'id': it['id'], 'image': it['crop']})
+        rnd.shuffle(toread)
         # sheets of eight plain line crops, numbered, so one look reads eight lines
         plain = [e for e in toread if 'note' not in e and e['image']]
         sheets = []
@@ -246,6 +259,22 @@ def build(k):
         json.dump({'kanda': k, 'sarga': s['n'], 'heading_image': head, 'colophon_image': colo,
                    'sheets': sheets, 'lines': [e for e in toread if e not in plain]},
                   open(os.path.join(out_dir, f'{sid}.toread.json'), 'w'), ensure_ascii=False, indent=1)
+    # Each sarga sees the edges of its neighbours: the machine's cut can put a sarga's first or
+    # last lines on the wrong side, and only the page (heading, colophon) settles it.
+    def edge(verses, which):
+        vs = verses[-3:] if which == 'tail' else verses[:3]
+        out = []
+        for v in vs:
+            for it in v['lines']:
+                crop = it.get('crop')
+                if not crop and it['loc']:
+                    crop = C.line(vol, it['loc']['leaf'], it['loc']['bbox'], pad_y=22, pad_x=60, name=f"{it['id']}.png")
+                out.append({'id': it['id'], 'gp': it['gp'], 'num': it['num'], 'crop': crop})
+        return out
+    for x, pk in enumerate(all_pk):
+        pk['prev_tail'] = edge(all_pk[x - 1]['verses'], 'tail') if x > 0 else []
+        pk['next_head'] = edge(all_pk[x + 1]['verses'], 'head') if x + 1 < len(all_pk) else []
+        json.dump(pk, open(os.path.join(out_dir, f"{pk['sid']}.json"), 'w'), ensure_ascii=False, indent=1)
     return summary
 
 if __name__ == '__main__':

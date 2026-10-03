@@ -92,12 +92,15 @@ def build(k):
         lo_i = allv[a - 1][-1]['pos'][0]; hi_i = allv[a][0]['pos'][0]
         return sum(v for bb, v in bvote.items() if lo_i - 2 <= bb <= hi_i + 1)
     COL = [min(colv(a), 6) for a in range(M + 1)]
+    ones = [x for x in range(M) if o[x] == 1 and (x + 1 < M and o[x + 1] == 2 or x + 2 < M and o[x + 2] in (2, 3))]
     def cost(a, b, kk):
         lst = bycol.get(a, [])
         match = _b.bisect_left(lst, b) - _b.bisect_left(lst, a)
         c = 2 * abs((b - a) - L[kk]) + (ints[b] - ints[a] - match)
         if a < M and o[a] == 1:
-            c -= 3
+            c -= 6
+        # a verse the scans number 1 inside the group is almost always the next sarga's opening
+        c += 4 * sum(1 for x in ones if a < x < b)
         return c - COL[a]
     INF = float('inf')
     W = 25

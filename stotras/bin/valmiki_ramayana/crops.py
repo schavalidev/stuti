@@ -25,7 +25,10 @@ def page(vol, leaf):
             data = urllib.request.urlopen(urllib.request.Request(url, headers={'User-Agent': 'curl/8.4.0'}),
                                           timeout=120).read()
             if len(data) > 20000:
-                open(p, 'wb').write(data)
+                tmp = p + f'.{os.getpid()}.part'
+                open(tmp, 'wb').write(data)
+                Image.open(tmp).load()            # a truncated download raises here
+                os.replace(tmp, p)                 # atomic: no reader ever sees half a page
                 return p
         except Exception:
             time.sleep(2 + 3 * t)
@@ -40,7 +43,16 @@ def line(vol, leaf, bbox, pad_y=40, pad_x=30, name=None):
         return out
     im = Image.open(page(vol, leaf))
     W, H = im.size
-    box = (max(0, x0 - pad_x), max(0, y0 - pad_y), min(W, x1 + pad_x), min(H, y1 + pad_y))
+    # the page is set in two columns; take the whole column, since the OCR sometimes splits a
+    # printed line and a box can stop short of its end (or of the verse number)
+    mid = W // 2
+    if x1 <= mid + 60:
+        cx0, cx1 = 20, mid + 25
+    elif x0 >= mid - 60:
+        cx0, cx1 = mid - 25, W - 20
+    else:
+        cx0, cx1 = 20, W - 20
+    box = (max(0, min(x0 - pad_x, cx0)), max(0, y0 - pad_y), min(W, max(x1 + pad_x, cx1)), min(H, y1 + pad_y))
     c = im.crop(box)
     c = c.resize((int(c.width * 1.5), int(c.height * 1.5)), Image.LANCZOS)
     c.save(out)
