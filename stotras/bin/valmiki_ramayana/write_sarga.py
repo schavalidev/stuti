@@ -123,6 +123,10 @@ def write(k, sid, dry=False):
     eb = m.get('ebook_last')
     if eb and len(verses) != eb and not fin.get('count_explained'):
         errs.append(f'{len(verses)} verses against the ebook\'s {eb}, and count_explained is not given')
+    disp_ids = {d['id'] for d in m.get('disputes', [])}
+    unchecked = sorted(disp_ids - set(fin.get('checked', [])) - set(fin.get('drop', [])))
+    if unchecked:
+        errs.append(f"disputed lines not listed in 'checked' (open each crop or page, then list it): {unchecked}")
     for f in ('title_en', 'slug', 'colophon'):
         if not fin.get(f):
             errs.append(f'final.json lacks {f}')
