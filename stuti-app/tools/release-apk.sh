@@ -53,6 +53,12 @@ say() { printf '\n=== %s\n' "$1"; }
 # ---- preflight: everything that can be known before a long build ----
 say "preflight"
 
+# the build must call itself what the changelog's newest release calls it.
+# The check used to run only at the end of a design port, so through a run of
+# releases with no port the stamp sat at 0.9.104 while the changelog moved on,
+# and every tester's report named a build nobody was holding.
+node "$ROOT/tools/codemod/check-stamp.mjs"
+
 [ -f "$NUMFILE" ] || { echo "no build-number at $NUMFILE" >&2; exit 1; }
 CUR="$(tr -d '[:space:]' < "$NUMFILE")"
 case "$CUR" in ''|*[!0-9]*) echo "build-number holds '$CUR', expected one integer" >&2; exit 1 ;; esac

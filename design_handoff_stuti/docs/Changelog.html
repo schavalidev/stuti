@@ -95,6 +95,21 @@ code { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: .
 
 <section class="release">
   <div class="rail">
+    <div class="ver">0.9.107</div>
+    <div class="date">3 October 2026</div>
+    <div class="rail-note">Bells that reach a closed browser, sealed on the device so the server that sends them cannot read them.</div>
+  </div>
+  <div class="release-body">
+    <h2 class="release-title">The bell rings with the browser shut</h2>
+    <div class="entry">
+      <div class="entry-head"><span class="tag tag-fix">Fixed</span><h3>The app named a build three releases old, because the only check on its stamp ran during a design port</h3></div>
+      <p>The stamp in <code>stuti-build.js</code> said 0.9.104 and the 16th of September while the changelog had reached 0.9.106, so the gate, the foot of the library, every feedback mail and every batch of counters named a build no tester was holding. The comparison that should have caught it already existed, but it ran only as the last step of a design port, and two weeks of releases went out with no port in between. The stamp now reads 0.9.107 and the 3rd of October, and the release script runs the same comparison before it builds anything, so an APK cannot be published under a stale name whether or not a port happened that week.</p>
+    </div>
+  </div>
+</section>
+
+<section class="release">
+  <div class="rail">
     <div class="ver">0.9.106</div>
     <div class="date">1 October 2026</div>
     <div class="rail-note">The Bhāgavata is laid down whole, from the typesetter's own text of the Gītā Press edition; the Gajendra Mokṣa carries its meanings.</div>
