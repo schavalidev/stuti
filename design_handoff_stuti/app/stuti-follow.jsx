@@ -93,8 +93,11 @@ const MODEL_LABEL = {
     te: { roman: "Telugu", deva: "तेलुगु", telugu: "తెలుగు" },
 };
 /* words the app already has are hers: the learn bar's Record and Stop, the
-   sheets' Close and Discard, the player's Play and Pause */
-const HERS = { record: "recordTurn", stopRec: "stopRec", close: "close", discard: "discardTake", play: "aPlay", pause: "aPause" };
+   sheets' Close and Discard, the player's Play and Pause, and the two words
+   of the face-down hold, which live in the app's strings so the switch reads
+   in the same voice as the rest of the chrome */
+const HERS = { record: "recordTurn", stopRec: "stopRec", close: "close", discard: "discardTake", play: "aPlay", pause: "aPause",
+    faceDown: "followFaceDown", held: "followHeld" };
 const t = (k, lang, vars = {}) => {
     if (HERS[k]) {
         try {
@@ -110,6 +113,26 @@ const t = (k, lang, vars = {}) => {
     return s;
 };
 const BrowserSR = () => window.SpeechRecognition || window.webkitSpeechRecognition || null;
+/* The phone laid face down on the mat holds the recitation. The reciter has
+   put it down to do an ācamana, to offer a flower, to answer the door, and
+   Follow used to run on without them and lose their place.
+   Off unless the reciter asks for it: a phone resting on a lap at an angle
+   must never stop the chant, and that is the common case. */
+const FACE_DOWN_PREF = "stuti.follow.faceDown";
+const FACE_DOWN_HOLD = 1000; // the tilt must last this long before it counts
+const FACE_DOWN_RESUME = 1200; // a beat after the pickup, so the voice is not met mid-syllable
+const FACE_DOWN_BAR = -0.8; // how far past level the screen must look down (about 37° short of flat)
+/* How far the screen is looking down, from the two angles that need no
+   compass: beta is the front-back tilt and gamma the left-right one, both
+   measured against gravity. The screen's normal points straight up when both
+   are zero, and its vertical component is cos(beta)·cos(gamma); -1 is the
+   screen flat against the floor, whichever way the phone is turned on it.
+   Alpha is deliberately not read here — without a magnetometer fix it is not
+   a heading at all, and nothing about this gesture needs one. */
+function screenUpness(beta, gamma) {
+    const r = Math.PI / 180;
+    return Math.cos(beta * r) * Math.cos(gamma * r);
+}
 function useFollow({ hymn, lines, lang, active, setActive, setWord, setPlaying, onDone }) {
     const [on, setOn] = React.useState(false);
     const [status, setStatus] = React.useState("idle");
@@ -134,6 +157,16 @@ function useFollow({ hymn, lines, lang, active, setActive, setWord, setPlaying, 
     const [kept, setKept] = React.useState(null);
     const [shelf, setShelf] = React.useState(false);
     const [recs, setRecs] = React.useState([]);
+    /* the face-down hold: the preference as the reciter left it, and whether
+       the recitation is waiting on the phone being turned over right now */
+    const [faceDown, setFaceDown] = React.useState(() => { try {
+        return localStorage.getItem(FACE_DOWN_PREF) === "1";
+    }
+    catch (e) {
+        return false;
+    } });
+    const [held, setHeld] = React.useState(false);
+    const heldByTilt = React.useRef(false);
     const armRec = React.useRef(false);
     const recT0 = React.useRef(0);
     const entered = React.useRef(new Map());
@@ -317,7 +350,9 @@ function useFollow({ hymn, lines, lang, active, setActive, setWord, setPlaying, 
                 restartTimer.current = setTimeout(listen, 800);
         }
     };
-    const begin = async () => {
+    /* `resume` picks the same session up where the hold left it: a new clock
+       and a fresh log would cut one sitting into pieces in the makers' record. */
+    const begin = async (resume = false) => {
         setPlaying(false);
         eng.current = new FollowEngine(lines);
         eng.current.seek(active < 0 ? 0 : active);
@@ -330,8 +365,12 @@ function useFollow({ hymn, lines, lang, active, setActive, setWord, setPlaying, 
         setEvents(0);
         setLevel(0);
         setRaw("");
-        t0.current = Date.now();
-        note("# Stuti Follow " + new Date().toISOString() + " hymn=" + (hymn && hymn.id) + " lang=" + lang + " ears=" + (native ? "vosk-" + voskLang : "browser"), true);
+        if (resume)
+            note("# resumed " + new Date().toISOString() + " — the phone was turned back over");
+        else {
+            t0.current = Date.now();
+            note("# Stuti Follow " + new Date().toISOString() + " hymn=" + (hymn && hymn.id) + " lang=" + lang + " ears=" + (native ? "vosk-" + voskLang : "browser"), true);
+        }
         grammar.current = null;
         if (native && voskLang === "hi") {
             /* the stotra's own sounds as the recogniser's vocabulary; built once
@@ -379,14 +418,19 @@ function useFollow({ hymn, lines, lang, active, setActive, setWord, setPlaying, 
         }
     };
     const dismiss = () => { armRec.current = false; setStatus("idle"); };
-    const stop = (why, silent = false) => {
+    /* `hold` means the phone has been turned over, not that the sitting is done.
+       The session is therefore left open: no log goes to the makers, and t0 and
+       the log keep running, so a reciter who sets the phone down four times
+       sends one session and not four — with four uploads of the audio behind
+       them, which on a phone is the expensive half. */
+    const stop = (why, silent = false, hold = false) => {
         const wasOn = onRef.current;
         onRef.current = false;
         setOn(false);
         endCapture(silent);
         /* the session goes to the makers by itself (stuti-relay.ts): the log,
            and on the phone the audio, so a real chant can be replayed for tuning */
-        if (wasOn && t0.current)
+        if (!hold && wasOn && t0.current)
             relayFollowSession({ hymn: (hymn && hymn.id) || "", lang, lines: log.current.slice(), seconds: (Date.now() - t0.current) / 1000, wav: true }).catch(() => { });
         armRec.current = false; // a Record that never began must not arm the next Follow
         if (restartTimer.current) {
@@ -406,8 +450,36 @@ function useFollow({ hymn, lines, lang, active, setActive, setWord, setPlaying, 
         else
             setStatus("idle");
     };
-    const toggle = () => (on ? stop() : start());
-    const showChip = on || !!keep || !!kept || shelf || ["denied", "unsupported", "needs-model", "downloading", "failed"].includes(status);
+    /* a tap on the mic is the reciter's own word on whether to listen, so it
+       always ends the hold: a pickup afterwards must not restart what they
+       themselves stopped */
+    const release = () => { heldByTilt.current = false; setHeld(false); };
+    const toggle = () => { release(); return on ? stop() : start(); };
+    const setFaceDownHold = async (next) => {
+        if (next) {
+            /* iOS hands out the tilt sensors only on request, and only from a real
+               tap — which is why the asking lives in this switch and not in an
+               effect that runs when the reader opens. */
+            const D = window.DeviceOrientationEvent;
+            if (D && typeof D.requestPermission === "function") {
+                try {
+                    if ((await D.requestPermission()) !== "granted")
+                        return;
+                }
+                catch (e) {
+                    return;
+                }
+            }
+        }
+        else
+            release();
+        setFaceDown(next);
+        try {
+            localStorage.setItem(FACE_DOWN_PREF, next ? "1" : "0");
+        }
+        catch (e) { }
+    };
+    const showChip = on || held || !!keep || !!kept || shelf || ["denied", "unsupported", "needs-model", "downloading", "failed"].includes(status);
     /* this hymn's kept recitations, refreshed whenever one is kept or deleted */
     React.useEffect(() => { refreshRecs(); return onRecitationsChange(refreshRecs); }, [hymn && hymn.id]); // eslint-disable-line react-hooks/exhaustive-deps
     React.useEffect(() => () => clearInterval(ticker.current), []);
@@ -423,8 +495,49 @@ function useFollow({ hymn, lines, lang, active, setActive, setWord, setPlaying, 
         stop();
         start();
     } }, [lang]); // eslint-disable-line react-hooks/exhaustive-deps
-    React.useEffect(() => () => stop(undefined, true), [hymn && hymn.id]); // leaving the text stops listening
+    React.useEffect(() => () => { release(); stop(undefined, true); }, [hymn && hymn.id]); // leaving the text stops listening
+    /* the ears are open, or waiting on the phone to be turned back over: watch
+       the tilt. Attached only in those two cases and only if asked for, and
+       taken down again with the listener's own timer, so a reader that is not
+       following costs nothing. Stopping and starting is the reciter's own pause
+       path (the mic button's), so the engine's place is kept the same way. */
+    React.useEffect(() => {
+        if (!faceDown || (!on && !held))
+            return;
+        let timer = null;
+        let want = held; // the state the tilt has been asking for since it last changed
+        const onTilt = (ev) => {
+            const b = ev.beta, g = ev.gamma;
+            if (b == null || g == null)
+                return;
+            const down = screenUpness(b, g) < FACE_DOWN_BAR;
+            if (down === want)
+                return; // already waiting on this, or nothing has changed
+            want = down;
+            clearTimeout(timer);
+            timer = setTimeout(() => {
+                /* a recitation being recorded is left alone: stopping would end the
+                   file and ask whether to keep it, which is not what setting the
+                   phone down means */
+                if (down) {
+                    if (onRef.current && !recT0.current) {
+                        heldByTilt.current = true;
+                        setHeld(true);
+                        stop(undefined, true, true);
+                    }
+                }
+                else if (heldByTilt.current) {
+                    heldByTilt.current = false;
+                    setHeld(false);
+                    begin(true);
+                }
+            }, down ? FACE_DOWN_HOLD : FACE_DOWN_RESUME);
+        };
+        window.addEventListener("deviceorientation", onTilt);
+        return () => { window.removeEventListener("deviceorientation", onTilt); clearTimeout(timer); };
+    }, [faceDown, on, held]); // eslint-disable-line react-hooks/exhaustive-deps
     return { on, status, pct, heard, events, level, raw, supported, native, showChip, voskLang, start, stop, toggle, download, dismiss, share,
+        faceDown, setFaceDownHold, held,
         recOn, elapsed, keep, kept, shelf, recs, record, doKeep, discardKeep, openShelf, closeShelf, dismissKept: () => setKept(null),
         lineCount: lines.length, activeLine: active, hymnTitle: (hymn && (hymn.title || hymn.id)) || "" };
 }
@@ -457,6 +570,14 @@ function FollowChip({ follow, lang }) {
           <button type="button" className="rd-follow-act primary" onClick={follow.download}>{t("download", lang)}</button>
           <button type="button" className="rd-follow-act" onClick={follow.dismiss}>{t("notNow", lang)}</button>
         </span>
+      </div>);
+    }
+    /* the phone is face down: the chip says so, and is there to be read the
+       moment it is turned over */
+    if (follow.held) {
+        return (<div className="rd-follow-chip is-held" role="status" aria-live="polite">
+        <span className="rd-follow-dot" aria-hidden="true"/>
+        <span className="rd-follow-text"><span>{t("held", lang)}</span></span>
       </div>);
     }
     if (follow.keep) {
@@ -493,6 +614,11 @@ function FollowChip({ follow, lang }) {
         {showHeard && <span className="rd-follow-heard">{follow.events ? "“" + (follow.raw || follow.heard) + "”" : "…"}</span>}
       </span>
       {showHeard && follow.native && (<span className="rd-follow-level" aria-hidden="true"><span style={{ transform: "scaleY(" + Math.max(0.08, follow.level) + ")" }}/></span>)}
+      {/* the hold's switch sits with Follow's other in-session control, where
+            a reciter who has just set the phone down once will look for it */}
+      {follow.on && (st === "listening" || st === "lost") && !follow.recOn && (<button type="button" className={"rd-follow-act face-down" + (follow.faceDown ? " on" : "")} onClick={() => follow.setFaceDownHold(!follow.faceDown)} aria-pressed={follow.faceDown}>
+          {t("faceDown", lang)}
+        </button>)}
       {follow.on && (st === "listening" || st === "lost" || st === "done") && (follow.recOn
             ? <button type="button" className="rd-follow-act rec on" onClick={() => follow.stop()} aria-label={t("stopRec", lang)}>■ {t("stopRec", lang)}</button>
             : <button type="button" className="rd-follow-act rec" onClick={follow.record} aria-label={t("recordTitle", lang)} title={t("recordTitle", lang)}>● {t("record", lang)}</button>)}

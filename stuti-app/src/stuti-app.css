@@ -65,6 +65,13 @@
 /* ---- recording a recitation (hand-authored, see stuti-follow.tsx) ---- */
 .rd-follow-act.rec { margin-left: 4px; white-space: nowrap; }
 .rd-follow-act.rec.on { background: color-mix(in oklab, #c0392b 18%, var(--surface)); color: #a5281c; border-color: color-mix(in oklab, #c0392b 40%, var(--line)); }
+/* the face-down hold: its switch reads as off until it is asked for, and the
+   chip while the phone lies on its face is quiet, not lost and not failed —
+   the recitation is waiting, which is a different thing from having gone wrong */
+.rd-follow-act.face-down { white-space: nowrap; }
+.rd-follow-act.face-down.on { background: var(--accent-soft); border-color: transparent; color: var(--accent-ink); }
+.rd-follow-chip.is-held .rd-follow-dot { background: var(--gold); animation: none; }
+.rd-follow-chip.is-held .rd-follow-text { color: var(--ink-soft); }
 .rd-follow-chip.is-recording .rd-follow-dot { background: #c0392b; }
 .rd-follow-chip.is-keep { gap: 6px; }
 .rd-follow-where { font-size: 12px; color: var(--ink-faint); }

@@ -103,6 +103,57 @@ function cpDir8(bearing) {
   return DIR[Math.round((((bearing - 90) % 360 + 360) % 360) / 45) % 8];
 }
 
+/* ---------- the rites and the directions they face ----------
+   The reason the dial exists at all. The bearings are the cardinal four, so
+   they are written as numbers and named out of DIR8 rather than spelled here
+   twice. Where a rite admits two seats — japa, and the seat of worship — the
+   second is carried as `alt` and both names are read out; the needle holds
+   the first, because a needle cannot point two ways and the east is the one
+   every paddhati names first. */
+const CP_RITE = [
+  { id: "riteSandhyaPratah", bearing: 90 },
+  { id: "riteSandhyaSayam",  bearing: 270 },
+  { id: "riteJapa",          bearing: 90,  alt: 0 },
+  { id: "riteTarpana",       bearing: 180 },
+  { id: "riteAsana",         bearing: 90,  alt: 0 },
+];
+
+/* ---------- the sun's bearing ----------
+   The pañcāṅga engine and the ephemeris give the sun's altitude and its
+   rise and set times, and neither exposes an azimuth, so the azimuth is
+   computed here: NOAA's apparent position, which is right to a fraction of
+   a degree — far finer than a phone's magnetometer, and finer than the
+   question of where to set a seat needs. Time enters as UTC only, so a
+   device whose clock is set to another zone still reads correctly. */
+function cpJD(date) { return date.getTime() / 86400000 + 2440587.5; }
+function cpSun(jd, lat, lon) {
+  const T = (jd - 2451545) / 36525;
+  const L0 = 280.46646 + T * (36000.76983 + T * 0.0003032);
+  const M = (357.52911 + T * (35999.05029 - T * 0.0001537)) * CP_D2R;
+  const C = Math.sin(M) * (1.914602 - T * (0.004817 + T * 0.000014))
+          + Math.sin(2 * M) * (0.019993 - T * 0.000101)
+          + Math.sin(3 * M) * 0.000289;
+  const om = (125.04 - 1934.136 * T) * CP_D2R;
+  const lam = (L0 + C - 0.00569 - 0.00478 * Math.sin(om)) * CP_D2R;
+  const eps = (23.439291 - T * (0.0130042 + T * (0.00000016 - T * 0.0000005)) + 0.00256 * Math.cos(om)) * CP_D2R;
+  const decl = Math.asin(Math.sin(eps) * Math.sin(lam));
+  const ra = Math.atan2(Math.cos(eps) * Math.sin(lam), Math.cos(lam)) * CP_R2D;
+  const gmst = 280.46061837 + 360.98564736629 * (jd - 2451545) + T * T * (0.000387933 - T / 38710000);
+  const H = ((gmst + lon - ra) % 360 + 540) % 360 - 180;   /* westward from the meridian */
+  const h = H * CP_D2R, p = lat * CP_D2R;
+  /* the azimuth is reckoned from the south westward, as the hour angle is,
+     and then turned to a compass bearing from the north */
+  const az = (Math.atan2(Math.sin(h), Math.cos(h) * Math.sin(p) - Math.tan(decl) * Math.cos(p)) * CP_R2D + 180 + 360) % 360;
+  const alt = Math.asin(Math.sin(p) * Math.sin(decl) + Math.cos(p) * Math.cos(decl) * Math.cos(h)) * CP_R2D;
+  /* where it crossed the horizon today, from the same declination: the
+     amplitude at the refracted horizon, east of north rising and as far
+     west of north setting. Inside a polar day or night there is no crossing. */
+  const h0 = -0.833 * CP_D2R;
+  const c = (Math.sin(decl) - Math.sin(p) * Math.sin(h0)) / (Math.cos(p) * Math.cos(h0));
+  const rise = Math.abs(c) > 1 ? null : Math.acos(c) * CP_R2D;
+  return { az, alt, rise, set: rise == null ? null : 360 - rise };
+}
+
 function CompassDial({ lang, loc }) {
   const has = typeof window !== "undefined" && "DeviceOrientationEvent" in window;
   const [on, setOn] = useCpS(() => { try { return localStorage.getItem("stuti-compass") === "1"; } catch (e) { return false; } });
@@ -110,6 +161,13 @@ function CompassDial({ lang, loc }) {
   const [sheet, setSheet] = useCpS(false);
   const [aimId, setAimId] = useCpS(() => { try { return localStorage.getItem("stuti-tirtha") || null; } catch (e) { return null; } });
   const [q, setQ] = useCpS("");
+  /* the pradakṣiṇā tally. How many rounds were asked for is worth keeping
+     between sittings; a half-walked round is not, so nothing else is stored. */
+  const [prad, setPrad] = useCpS(false);
+  const [laps, setLaps] = useCpS(0);
+  const [part, setPart] = useCpS(0);
+  const [target, setTarget] = useCpS(() => { try { return Number(localStorage.getItem("stuti-pradakshina")) || 108; } catch (e) { return 108; } });
+  const [tick, setTick] = useCpS(() => Date.now());
   const L = window.STUTI_L;
   const label = L && L.t ? L.t("compass", lang) : "Compass";
   const remember = (v) => { try { localStorage.setItem("stuti-compass", v ? "1" : "0"); } catch (e) {} };
@@ -151,6 +209,46 @@ function CompassDial({ lang, loc }) {
       DOE.requestPermission().then((r) => { if (r === "granted") { gotRef.current = false; setOn(true); remember(true); } }).catch(() => {});
     } else { gotRef.current = false; setOn(true); remember(true); }
   };
+  /* A round is the heading sweeping a whole turn in one sense. Successive
+     readings are differenced, each difference folded into −180…180 so the
+     wrap through north is not read as a leap, and the differences summed:
+     the sum is the turn walked, signed, and a reversal unwinds it. The
+     completed rounds do not unwind — a round once walked is walked — so the
+     tally is a high-water mark and the reversal eats the partial instead.
+     What this counts is the phone's heading, not the reciter's path: it is a
+     true pradakṣiṇā only while the phone is held the same way throughout. */
+  const pradRef = useCpR({ last: null, total: 0, done: 0 });
+  useCpE(() => {
+    if (!prad) return;
+    const r = pradRef.current;
+    /* the sensor going quiet loses the thread, so the next reading starts a
+       fresh difference rather than being measured against a stale heading */
+    if (hd == null) { r.last = null; return; }
+    if (r.last == null) { r.last = hd; return; }
+    let d = ((hd - r.last + 540) % 360) - 180;
+    r.last = hd;
+    if (Math.abs(d) > 170) return;          /* a jump that large is the sensor, not a step */
+    r.total += d;
+    const turned = Math.abs(r.total);
+    if (Math.floor(turned / 360) > r.done) r.done = Math.floor(turned / 360);
+    setLaps(r.done);
+    setPart(Math.max(0, Math.min(360, turned - r.done * 360)));
+  }, [hd, prad]);
+  const pradReset = () => { pradRef.current = { last: hd, total: 0, done: 0 }; setLaps(0); setPart(0); };
+  const pradToggle = () => { if (!prad) pradRef.current.last = hd; setPrad(!prad); };
+  const pradTarget = (n) => { setTarget(n); try { localStorage.setItem("stuti-pradakshina", String(n)); } catch (e) {} };
+
+  /* The sun moves a degree every four minutes, so the face is refreshed on
+     the minute rather than on every reading of the magnetometer. */
+  useCpE(() => {
+    const t = setInterval(() => setTick(Date.now()), 60000);
+    return () => clearInterval(t);
+  }, []);
+  const sun = useCpM(() => {
+    if (!loc || typeof loc.lat !== "number") return null;
+    return cpSun(cpJD(new Date(tick)), loc.lat, loc.lon);
+  }, [loc && loc.lat, loc && loc.lon, tick]);
+
   const keep = (id) => { setAimId(id); try { if (id) localStorage.setItem("stuti-tirtha", id); else localStorage.removeItem("stuti-tirtha"); } catch (e) {} };
 
   /* The list is worked out once per place, not once per heading: a reading
@@ -175,12 +273,12 @@ function CompassDial({ lang, loc }) {
   const nm = (r) => lang === "deva" ? r.deva
     : lang === "telugu" ? window.STUTI_TRANSLIT.convert(r.deva, "telugu")
     : r.roman;
-  const dirOf = (b) => {
+  const dirName = (b) => {
     const d = cpDir8(b);
     if (!d) return Math.round(b) + "°";
-    const s = lang === "deva" ? d.deva : lang === "telugu" ? window.STUTI_TRANSLIT.convert(d.deva, "telugu") : d.iast;
-    return s + " · " + Math.round(b) + "°";
+    return lang === "deva" ? d.deva : lang === "telugu" ? window.STUTI_TRANSLIT.convert(d.deva, "telugu") : d.iast;
   };
+  const dirOf = (b) => dirName(b) + " · " + Math.round(b) + "°";
 
   /* The ring already carries the heading, so the aiming needle inside it is
      turned by the bearing alone — and on a device with no sensor the ring
@@ -204,18 +302,19 @@ function CompassDial({ lang, loc }) {
           <span className="cp-l cp-l-n">{dirs[0]}</span>
           <span className="cp-l cp-l-e">{dirs[1]}</span>
           {aim && <span className="cp-aim" style={{ transform: `rotate(${aim.bearing.toFixed(1)}deg)` }} />}
+          {sun && sun.alt > -0.833 && <span className="cp-sun" style={{ transform: `rotate(${sun.az.toFixed(1)}deg)` }} />}
         </span>
         <span className="cp-pin" />
       </button>
       {sheet && (
         <Portal>
           <div className="tday-scrim" onClick={() => setSheet(false)} />
-          <div className="tday-sheet cp-sheet" role="dialog" aria-label={L.t("tirthaDik", lang)}>
+          <div className="tday-sheet cp-sheet" role="dialog" aria-label={L.t("dikSheet", lang)}>
             <div className="tday-grip" />
             <div className="tday-head">
               <div style={{ minWidth: 0 }}>
                 <div className="eyebrow">{label}</div>
-                <h3 className="tday-date" style={{ fontFamily: font }}>{L.t("tirthaDik", lang)}</h3>
+                <h3 className="tday-date" style={{ fontFamily: font }}>{L.t("dikSheet", lang)}</h3>
               </div>
               <button className="tday-x" onClick={() => setSheet(false)} aria-label={L.a("aClose")}>×</button>
             </div>
@@ -226,6 +325,81 @@ function CompassDial({ lang, loc }) {
                 <span className="cp-sw-v">{on ? (hd == null ? L.t("compassWait", lang) : Math.round(hd) + "°") : ""}</span>
               </button>
             )}
+            <div className="cp-cap" style={{ fontFamily: font }}>{L.t("riteDik", lang)}</div>
+            <div className="cp-list">
+              {CP_RITE.map((r) => (
+                <div className="cp-row cp-rite" key={r.id}>
+                  <span className="cp-mini" aria-hidden="true">
+                    <span className="cp-mini-n" style={{ transform: `rotate(${(r.bearing - (hd || 0)).toFixed(1)}deg)` }} />
+                  </span>
+                  <span className="cp-row-nm" style={{ fontFamily: font }}>{L.t(r.id, lang)}</span>
+                  <span className="cp-row-m">
+                    <i style={{ fontFamily: font }}>
+                      {dirName(r.bearing) + (r.alt == null ? "" : " / " + dirName(r.alt))}
+                    </i>
+                  </span>
+                </div>
+              ))}
+            </div>
+
+            {sun && (
+              <React.Fragment>
+                <div className="cp-cap" style={{ fontFamily: font }}>{L.t("sunDik", lang)}</div>
+                <div className="cp-list">
+                  <div className="cp-row cp-rite">
+                    <span className="cp-mini" aria-hidden="true">
+                      {sun.alt > -0.833 && <span className="cp-mini-s" style={{ transform: `rotate(${(sun.az - (hd || 0)).toFixed(1)}deg)` }} />}
+                    </span>
+                    <span className="cp-row-nm" style={{ fontFamily: font }}>{L.t("sunNow", lang)}</span>
+                    <span className="cp-row-m">
+                      {sun.alt > -0.833
+                        ? <i style={{ fontFamily: font }}>{dirOf(sun.az)}</i>
+                        : <i style={{ fontFamily: font }}>{L.t("sunBelow", lang)}</i>}
+                    </span>
+                  </div>
+                  {sun.rise != null && [{ k: "sunRisePt", b: sun.rise }, { k: "sunSetPt", b: sun.set }].map((s) => (
+                    <div className="cp-row cp-rite" key={s.k}>
+                      <span className="cp-mini" aria-hidden="true">
+                        <span className="cp-mini-n" style={{ transform: `rotate(${(s.b - (hd || 0)).toFixed(1)}deg)` }} />
+                      </span>
+                      <span className="cp-row-nm" style={{ fontFamily: font }}>{L.t(s.k, lang)}</span>
+                      <span className="cp-row-m"><i style={{ fontFamily: font }}>{dirOf(s.b)}</i></span>
+                    </div>
+                  ))}
+                </div>
+              </React.Fragment>
+            )}
+
+            <div className="cp-cap" style={{ fontFamily: font }}>{L.t("pradDik", lang)}</div>
+            {hd == null ? (
+              <div className="cp-note" style={{ fontFamily: font }}>{L.t("pradNeedsCompass", lang)}</div>
+            ) : (
+              <div className="cp-prad">
+                <div className="cp-prad-top">
+                  <span className="cp-prad-n">{laps}<span>/{target}</span></span>
+                  <div className="cp-prad-acts">
+                    <button type="button" className={"cp-prad-go" + (prad ? " on" : "")} onClick={pradToggle}>
+                      {prad ? L.t("pradStop", lang) : L.t("pradStart", lang)}
+                    </button>
+                    <button type="button" className="cp-prad-rs" onClick={pradReset}>{L.t("pradReset", lang)}</button>
+                  </div>
+                </div>
+                <div className="cp-prad-bar" aria-hidden="true">
+                  <span style={{ width: (part / 3.6).toFixed(1) + "%" }} />
+                </div>
+                <div className="cp-prad-tg">
+                  <span style={{ fontFamily: font }}>{L.t("pradTarget", lang)}</span>
+                  {[3, 9, 21, 108].map((n) => (
+                    <button type="button" key={n} className={"cp-tg" + (n === target ? " on" : "")}
+                      aria-pressed={n === target} onClick={() => pradTarget(n)}>{n}</button>
+                  ))}
+                </div>
+                {laps >= target && <div className="cp-prad-done" style={{ fontFamily: font }}>{L.t("pradDone", lang)}</div>}
+                <div className="cp-prad-say" style={{ fontFamily: font }}>{L.t("pradNote", lang)}</div>
+              </div>
+            )}
+
+            <div className="cp-cap" style={{ fontFamily: font }}>{L.t("tirthaDik", lang)}</div>
             <div className="cp-note" style={{ fontFamily: font }}>
               {L.t("tirthaNote", lang).replace("{place}", (loc && loc.city) || "")}
             </div>

@@ -232,6 +232,111 @@ function MalaEntry({ mid, lang, onDone }) {
   );
 }
 
+/* ---------------- Counted with the eyes closed ----------------
+   Japa is kept in the dark and with the eyes shut, and the one thing the ring
+   asks the eyes for is to find it and aim at it. So here the whole screen is
+   the bead: a touch anywhere tells one, and the answer comes back as a pulse
+   in the hand rather than as something to look at. A closed mālā pulses
+   differently, so a round is known to have closed without opening the eyes. */
+function MalaBlind({ mid, lang, onClose }) {
+  const L = window.STUTI_L, J = window.STUTI_JAPA;
+  const [said, setSaid] = useStateJ(0);                       // beads told in this sitting
+  const [today, setToday] = useStateJ(() => J.state(mid).today);
+  const [flash, setFlash] = useStateJ(false);
+  const lastT = useRefJ(0), flashT = useRefJ(null), lock = useRefJ(null);
+
+  /* Every bead goes into the japa store through the same bump() the ring uses.
+     There is then no second tally to hand over on the way out, and a sitting
+     that ends by the phone being taken away is still recorded to the day. */
+  const tell = () => {
+    const now = Date.now();
+    /* one touch of a palm or a thumb can land twice; a bead told twice in a
+       tenth of a second was never told twice */
+    if (now - lastT.current < 120) return;
+    lastT.current = now;
+    const tn = J.bump(mid);
+    if (tn == null) return;
+    setToday(tn);
+    setSaid((x) => x + 1);
+    const done = tn % 108 === 0;
+    /* navigator.vibrate does not exist on iOS Safari, where nothing can buzz
+       at all; everywhere else the pulse is the whole of the feedback. */
+    if (navigator.vibrate) { try { navigator.vibrate(done ? [90, 70, 90, 70, 190] : 14); } catch (e) {} }
+    if (done) { setFlash(true); clearTimeout(flashT.current); flashT.current = setTimeout(() => setFlash(false), 2200); }
+  };
+  const tellR = useRefJ(tell); tellR.current = tell;
+  const closeR = useRefJ(onClose); closeR.current = onClose;
+
+  useEffectJ(() => {
+    /* What a browser genuinely lets through: a Bluetooth page-turner or ring
+       clicker presents itself as a keyboard, so ArrowRight, PageDown and the
+       space bar do arrive, and those are the keys to rely on. The volume
+       rocker on a phone almost never does — Android and iOS answer it in the
+       system before the page is told — so AudioVolumeUp and the older
+       VolumeUp are listened for because a desktop or TV keyboard sometimes
+       does send them, and are never promised to the reciter. */
+    const KEYS = ["AudioVolumeUp", "AudioVolumeDown", "VolumeUp", "VolumeDown",
+                  "ArrowRight", "ArrowDown", "PageDown", "Enter", " ", "Spacebar"];
+    const onKey = (e) => {
+      if (e.key === "Escape") { closeR.current(); return; }
+      if (e.repeat || KEYS.indexOf(e.key) === -1) return;
+      e.preventDefault();                     // the space bar would scroll instead
+      tellR.current();
+    };
+    window.addEventListener("keydown", onKey);
+    return () => window.removeEventListener("keydown", onKey);
+  }, []);
+
+  useEffectJ(() => {
+    /* A screen that sleeps mid-mālā takes the bead with it: the phone wakes to
+       a lock screen, not to the counter. Wake Lock is Chromium-only, and the
+       browser drops the lock whenever the page is hidden, so it is asked for
+       again each time the page comes back, and released when the mode ends. */
+    let gone = false;
+    const take = () => {
+      if (!navigator.wakeLock || document.visibilityState !== "visible") return;
+      navigator.wakeLock.request("screen").then((s) => {
+        if (gone) { try { s.release(); } catch (e) {} return; }
+        lock.current = s;
+      }).catch(() => {});
+    };
+    take();
+    const onVis = () => { if (document.visibilityState === "visible" && (!lock.current || lock.current.released)) take(); };
+    document.addEventListener("visibilitychange", onVis);
+    return () => {
+      gone = true;
+      document.removeEventListener("visibilitychange", onVis);
+      if (lock.current) { try { lock.current.release(); } catch (e) {} lock.current = null; }
+      clearTimeout(flashT.current);
+    };
+  }, []);
+
+  const pos = today === 0 ? 0 : ((today - 1) % 108) + 1;
+  const malas = Math.floor(today / 108);
+  const font = L.font(lang);
+  const Portal = window.OverlayPortal || (({ children }) => children);
+  return (
+    <Portal>
+      <div className="japa-blind" role="button" tabIndex={0} aria-label={L.t("japaBlindHint", lang)}
+        onPointerDown={(e) => { if (e.target && e.target.closest && e.target.closest(".japa-blind-x")) return; tell(); }}>
+        <button type="button" className="japa-blind-x" style={{ fontFamily: font }}
+          onPointerDown={(e) => e.stopPropagation()} onClick={onClose}>{L.t("japaBlindExit", lang)}</button>
+        <div className="japa-blind-body">
+          <span className="japa-blind-count display">{pos}</span>
+          <span className="japa-blind-of">/ 108</span>
+          <span className="japa-blind-malas" style={{ fontFamily: font }}>{L.t(malas === 1 ? "japaBlindMala" : "japaBlindMalas", lang).replace("{n}", malas)}</span>
+          <span className="japa-blind-sitting" style={{ fontFamily: font }}>{L.t("japaBlindSitting", lang).replace("{n}", said)}</span>
+        </div>
+        <div className="japa-blind-foot">
+          <span className="japa-blind-hint" style={{ fontFamily: font }}>{L.t("japaBlindHint", lang)}</span>
+          <span className="japa-blind-keys" style={{ fontFamily: font }}>{L.t("japaBlindKeys", lang)}</span>
+        </div>
+        {flash && <span className="japa-blind-flash">॥ {L.t("malaDone", lang)} ॥</span>}
+      </div>
+    </Portal>
+  );
+}
+
 /* ---------------- A day, picked in the app's own colours ----------------
    The browser's date popup paints itself in system blue over the parchment;
    this one is drawn with the same ink, surface and accent as everything else. */
@@ -379,6 +484,12 @@ function JapaView({ go, lang = "deva", embedded = false }) {
     dots.push(<circle key={i} className={"japa-dot" + (i < pos ? " on" : "")} cx={160 + 138 * Math.cos(a)} cy={160 + 138 * Math.sin(a)} r={i % 27 === 0 ? 4.6 : 3.3} />);
   }
   const [byHand, setByHand] = useStateJ(false);
+  /* the eyes-closed counter writes to the same store, so coming back out of it
+     only means reading today's tally again */
+  const [blind, setBlind] = useStateJ(false);
+  const leaveBlind = () => { setBlind(false); setSt(window.STUTI_JAPA.state(m.id)); };
+  const blindBtn = <button className="chip" onClick={() => setBlind(true)}><BeadsGlyph size={15} /> {L.t("japaBlind", lang)}</button>;
+  const blindMode = blind ? <MalaBlind mid={m.id} lang={lang} onClose={leaveBlind} /> : null;
   const font = L.font(lang);
   const ring = (
     <button className="japa-ring" onPointerDown={(e) => { if (e.pointerType) count(); }} onClick={(e) => { if (e.detail === 0) count(); }} aria-label={L.t("tapToCount", lang)}>
@@ -409,11 +520,13 @@ function JapaView({ go, lang = "deva", embedded = false }) {
             <div className="japa-field-ring">{corners}{ring}</div>
             <div className="japa-actions">
               <button className="chip" onClick={undo} disabled={st.today === 0}><Icon name="back" size={15} /> {L.t("undoBead", lang)}</button>
+              {blindBtn}
             </div>
           </div>
         </div>
       </div>
       <MalaEntry mid={m.id} lang={lang} onDone={() => setSt(window.STUTI_JAPA.state(m.id))} />
+      {blindMode}
     </div>
   );
   return (
@@ -428,13 +541,15 @@ function JapaView({ go, lang = "deva", embedded = false }) {
         <div className="japa-field-ring">{corners}{ring}</div>
         <div className="japa-actions">
         <button className="chip" onClick={undo} disabled={st.today === 0}><Icon name="back" size={15} /> {L.t("undoBead", lang)}</button>
+        {blindBtn}
       </div>
       </div>
       <MalaEntry mid={m.id} lang={lang} onDone={() => setSt(window.STUTI_JAPA.state(m.id))} />
       <JapaHistory mid={m.id} lang={lang} />
       <div style={{ height: 90 }} />
+      {blindMode}
     </div>
   );
 }
 
-Object.assign(window, { DayPick, ThreadCard, ThreadStrip, JapaEntryCard, JapaView, MalaEntry, JapaHistory, JAPA_THREADS });
+Object.assign(window, { DayPick, ThreadCard, ThreadStrip, JapaEntryCard, JapaView, MalaEntry, MalaBlind, JapaHistory, JAPA_THREADS });

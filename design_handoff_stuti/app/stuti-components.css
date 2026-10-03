@@ -182,6 +182,37 @@
 .cp-row.on .cp-mini{border-color:var(--gold)}
 .cp-mini-n{position:absolute;left:50%;top:50%;width:0;height:0;margin-left:-2.5px;margin-top:-11px;border-left:2.5px solid transparent;border-right:2.5px solid transparent;border-bottom:11px solid var(--accent-ink);transform-origin:50% 100%;transition:transform .25s ease-out}
 .cp-row.on .cp-mini-n{border-bottom-color:var(--gold)}
+/* the sun is a disc at the rim, not a needle: it is a body standing in a
+   direction, and the eye should not read it as something chosen or aimed at */
+.cp-sun{position:absolute;inset:0;transform-origin:50% 50%;pointer-events:none;transition:transform .25s ease-out}
+.cp-sun::after{content:"";position:absolute;left:50%;top:2.5px;width:5px;height:5px;margin-left:-2.5px;border-radius:50%;background:var(--accent);box-shadow:0 0 0 1px var(--surface),0 0 3px 1px var(--accent-soft)}
+.cp-mini-s{position:absolute;inset:0;transform-origin:50% 50%;transition:transform .25s ease-out}
+.cp-mini-s::after{content:"";position:absolute;left:50%;top:2px;width:5px;height:5px;margin-left:-2.5px;border-radius:50%;background:var(--accent);box-shadow:0 0 0 1px var(--surface-2)}
+/* ---------- the rites, the sun and the pradakṣiṇā count ---------- */
+/* each block in the sheet carries its own caption, since the sheet now
+   answers more than one question */
+.cp-cap{padding:18px 2px 6px;font-size:0.8125rem;letter-spacing:.06em;text-transform:uppercase;color:var(--ink-faint);font-family:var(--font-ui);font-weight:600}
+/* a reference row, not a choice: the pointer and the pressed state would
+   promise a tap that does nothing */
+.cp-rite{cursor:default}
+.cp-prad{padding:4px 2px 2px}
+.cp-prad-top{display:flex;align-items:center;justify-content:space-between;gap:12px}
+.cp-prad-n{font-size:2rem;line-height:1;font-weight:600;font-variant-numeric:tabular-nums;color:var(--ink)}
+.cp-prad-n span{font-size:1.0625rem;font-weight:400;color:var(--ink-soft)}
+.cp-prad-acts{flex:none;display:flex;align-items:center;gap:8px}
+.cp-prad-go{min-height:var(--tap);padding:0 16px;border-radius:999px;border:1px solid var(--line);background:var(--surface-2);color:var(--ink);font-size:0.9375rem;font-weight:600}
+.cp-prad-go.on{background:var(--accent-soft);border-color:var(--accent);color:var(--accent-ink)}
+.cp-prad-rs{min-height:var(--tap);padding:0 12px;border-radius:999px;background:none;color:var(--ink-soft);font-size:0.9375rem}
+/* the partial turn: one bar filling once round, so a glance says how much of
+   the present circuit is walked */
+.cp-prad-bar{position:relative;height:4px;margin:12px 0 2px;border-radius:2px;background:var(--line);overflow:hidden}
+.cp-prad-bar span{position:absolute;left:0;top:0;bottom:0;border-radius:2px;background:var(--gold);transition:width .25s ease-out}
+.cp-prad-tg{display:flex;align-items:center;gap:8px;padding:10px 0 2px;flex-wrap:wrap}
+.cp-prad-tg>span{font-size:0.875rem;color:var(--ink-soft)}
+.cp-tg{min-width:38px;min-height:32px;padding:0 10px;border-radius:999px;border:1px solid var(--line);background:var(--surface-2);color:var(--ink-soft);font-size:0.9375rem;font-variant-numeric:tabular-nums}
+.cp-tg.on{border-color:var(--gold);background:var(--surface);color:var(--accent-ink);font-weight:600}
+.cp-prad-done{padding:8px 0 0;font-size:0.9375rem;font-weight:600;color:var(--accent-ink)}
+.cp-prad-say{padding:8px 0 2px;font-size:0.8125rem;line-height:1.45;color:var(--ink-faint);text-wrap:pretty}
 .loc-scrim { position: fixed; inset: 0; z-index: 39; }
 .locctl .loc-menu {
   position: absolute; top: calc(100% + 8px); right: 0; z-index: 40;
@@ -3002,6 +3033,24 @@ input:is([type="date"],[type="time"],[type="month"],[type="datetime-local"]) { a
 .daypick-foot button:hover{background:var(--accent-soft)}
 .mala-date.bad{border-color:color-mix(in oklab,var(--caution) 55%,var(--line))}
 .mala-bad{margin-top:10px;font-size: 0.8438rem;color:color-mix(in oklab,var(--caution) 62%,var(--ink))}
+
+/* ---------- The mālā counted with the eyes closed ----------
+   The screen stops being a page and becomes the bead, so nothing in here is
+   small, nothing is aimed at, and the only thing that is not a tap target is
+   the way out. */
+.japa-blind{position:fixed;inset:0;z-index:140;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:0;background:var(--surface);color:var(--ink);text-align:center;padding:calc(18px + env(safe-area-inset-top)) 18px calc(26px + env(safe-area-inset-bottom));touch-action:manipulation;-webkit-user-select:none;user-select:none;-webkit-tap-highlight-color:transparent;cursor:pointer}
+.japa-blind-x{position:absolute;top:calc(12px + env(safe-area-inset-top));right:14px;min-height:44px;padding:0 20px;border-radius:999px;background:var(--surface-2);border:1px solid var(--line);color:var(--accent-ink);font-weight:600;font-size:0.9375rem;cursor:pointer}
+.japa-blind-x:active{transform:scale(.97)}
+.japa-blind-body{display:flex;flex-direction:column;align-items:center;gap:2px;pointer-events:none}
+.japa-blind-count{font-size:clamp(5.5rem,34vw,11rem);line-height:1;color:var(--ink);font-variant-numeric:tabular-nums}
+.japa-blind-of{font-size:1.125rem;color:var(--ink-faint);letter-spacing:.06em}
+.japa-blind-malas{margin-top:14px;font-size:1.25rem;color:var(--accent-ink)}
+.japa-blind-sitting{margin-top:2px;font-size:0.9375rem;color:var(--ink-soft);font-variant-numeric:tabular-nums}
+.japa-blind-foot{position:absolute;left:18px;right:18px;bottom:calc(26px + env(safe-area-inset-bottom));display:flex;flex-direction:column;gap:5px;pointer-events:none}
+.japa-blind-hint{font-size:1rem;color:var(--ink-soft);text-wrap:pretty}
+.japa-blind-keys{font-size:0.8125rem;color:var(--ink-faint);line-height:1.45;text-wrap:pretty}
+.japa-blind-flash{position:absolute;top:12%;left:50%;transform:translateX(-50%);background:var(--accent);color:var(--surface);font-size:1rem;font-weight:600;letter-spacing:.04em;padding:9px 20px;border-radius:999px;white-space:nowrap;box-shadow:var(--shadow-sm);pointer-events:none}
+[data-theme="night"] .japa-blind-flash{color:#1b150d}
 
 /* ---------- What today asks (Nitya band) ---------- */
 .tb-card{background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:16px 16px 14px;display:flex;flex-direction:column;gap:2px}

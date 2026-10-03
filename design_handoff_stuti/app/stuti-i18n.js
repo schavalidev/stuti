@@ -54,6 +54,15 @@ window.STUTI_L = (function () {
     malas:       { roman: "mālās",            deva: "मालाएँ",       telugu: "మాలలు" },
     lifetime:    { roman: "Lifetime",         deva: "कुल",          telugu: "మొత్తం" },
     undoBead:    { roman: "Undo",             deva: "पीछे",         telugu: "వెనక్కి" },
+    /* japa with the eyes closed — the screen is the bead, so the labels are
+       read once before the eyes shut and never looked for again */
+    japaBlind:     { roman: "Count without looking", deva: "आँखें मूँदकर गिनें", telugu: "కళ్ళు మూసుకుని లెక్కించండి" },
+    japaBlindHint: { roman: "Touch anywhere to count a bead.", deva: "मनका गिनने हेतु कहीं भी स्पर्श करें।", telugu: "పూస లెక్కించడానికి ఎక్కడైనా తాకండి." },
+    japaBlindKeys: { roman: "A page-turner key also counts a bead.", deva: "पेज-टर्नर की कुंजी से भी एक मनका गिना जाता है।", telugu: "పేజ్-టర్నర్ కీ నొక్కినా ఒక పూస లెక్కలోకి వస్తుంది." },
+    japaBlindSitting: { roman: "{n} told in this sitting", deva: "इस बैठक में {n} जप", telugu: "ఈ బైఠకంలో {n} జపాలు" },
+    japaBlindMala:  { roman: "{n} mālā complete",  deva: "{n} माला पूर्ण",   telugu: "{n} మాల పూర్తయింది" },
+    japaBlindMalas: { roman: "{n} mālās complete", deva: "{n} मालाएँ पूर्ण", telugu: "{n} మాలలు పూర్తయ్యాయి" },
+    japaBlindExit: { roman: "Done",            deva: "पूर्ण",        telugu: "పూర్తి" },
 
     /* learn-by-heart plans */
     learnByHeart:   { roman: "Learn by heart",  deva: "कण्ठस्थ करें",  telugu: "కంఠస్థం చేయండి" },
@@ -218,12 +227,38 @@ window.STUTI_L = (function () {
     compass:        { roman: "Compass",       deva: "दिशा-सूचक",     telugu: "దిక్సూచి" },
     compassUse:     { roman: "Use the phone’s compass", deva: "फ़ोन का दिशा-सूचक चलाएँ", telugu: "ఫోన్ దిక్సూచి వాడండి" },
     compassWait:    { roman: "waiting",        deva: "प्रतीक्षा",       telugu: "వేచి ఉంది" },
+    dikSheet:       { roman: "Which way things lie", deva: "दिशाएँ",           telugu: "దిక్కులు" },
     tirthaDik:      { roman: "Which way the tīrthas lie", deva: "तीर्थों की दिशा", telugu: "తీర్థాల దిక్కు" },
     tirthaNote:     { roman: "Distance and direction from {place}, counted along the great circle. Choose one and its needle stays on the dial.",
                       deva: "{place} से दूरी और दिशा, महावृत्त के अनुसार। एक चुनें और उसकी सूई डायल पर बनी रहेगी।",
                       telugu: "{place} నుండి దూరం, దిక్కు — మహావృత్తం ప్రకారం. ఒకటి ఎంచుకుంటే దాని ముల్లు డయల్‌పై నిలుస్తుంది." },
     tirthaFind:     { roman: "Find a tīrtha", deva: "तीर्थ खोजें",      telugu: "తీర్థం వెతకండి" },
     tirthaNone:     { roman: "No tīrtha of that name here", deva: "इस नाम का तीर्थ यहाँ नहीं", telugu: "ఆ పేరుతో తీర్థం లేదు" },
+    /* the standing directions of the daily rites: the question the compass
+       was built for, since a rite faces a direction and a new town hides it */
+    riteDik:        { roman: "The directions the rites face", deva: "कर्मों की दिशाएँ", telugu: "కర్మల దిక్కులు" },
+    riteSandhyaPratah: { roman: "Morning sandhyā", deva: "प्रातः सन्ध्या",   telugu: "ప్రాతఃసంధ్య" },
+    riteSandhyaSayam:  { roman: "Evening sandhyā", deva: "सायं सन्ध्या",     telugu: "సాయంసంధ్య" },
+    riteJapa:       { roman: "Japa",             deva: "जप",              telugu: "జపం" },
+    riteTarpana:    { roman: "Tarpaṇa and pitṛ rites", deva: "तर्पण और पितृकर्म", telugu: "తర్పణం, పితృకర్మలు" },
+    riteAsana:      { roman: "Seat for worship", deva: "पूजा का आसन",      telugu: "పూజ ఆసనం" },
+    pradDik:        { roman: "Pradakṣiṇā count", deva: "प्रदक्षिणा गणना",   telugu: "ప్రదక్షిణ లెక్క" },
+    pradNote:       { roman: "Counted from the phone’s heading, so hold the phone the same way throughout the walk.",
+                      deva: "गणना फ़ोन की दिशा से होती है, अतः चलते समय फ़ोन को एक ही प्रकार से पकड़े रहें।",
+                      telugu: "లెక్క ఫోన్ దిక్కు ఆధారంగా జరుగుతుంది, కాబట్టి నడిచేటప్పుడు ఫోన్‌ను ఒకే విధంగా పట్టుకోండి." },
+    pradStart:      { roman: "Start counting",   deva: "गणना आरम्भ करें",   telugu: "లెక్క ప్రారంభించండి" },
+    pradStop:       { roman: "Pause",            deva: "रोकें",            telugu: "ఆపండి" },
+    pradReset:      { roman: "Reset",            deva: "फिर से",           telugu: "మొదటికి" },
+    pradNeedsCompass: { roman: "Switch the compass on to count pradakṣiṇā.",
+                      deva: "प्रदक्षिणा गिनने के लिए दिशा-सूचक चलाएँ।",
+                      telugu: "ప్రదక్షిణ లెక్కించడానికి దిక్సూచి ఆన్ చేయండి." },
+    pradTarget:     { roman: "How many",         deva: "कितनी",            telugu: "ఎన్ని" },
+    pradDone:       { roman: "The count is complete", deva: "गणना पूरी हुई", telugu: "లెక్క పూర్తయింది" },
+    sunDik:         { roman: "Where the sun is", deva: "सूर्य की दिशा",     telugu: "సూర్యుని దిక్కు" },
+    sunNow:         { roman: "Now",              deva: "अभी",              telugu: "ఇప్పుడు" },
+    sunRisePt:      { roman: "Rising point",     deva: "उदय-स्थान",        telugu: "ఉదయ స్థానం" },
+    sunSetPt:       { roman: "Setting point",    deva: "अस्त-स्थान",       telugu: "అస్తమయ స్థానం" },
+    sunBelow:       { roman: "Below the horizon now", deva: "अभी क्षितिज के नीचे", telugu: "ఇప్పుడు క్షితిజం క్రింద" },
     intentionL:     { roman: "Intention",     deva: "कर्म",           telugu: "కర్మ" },
     copy:           { roman: "Copy",          deva: "प्रतिलिपि",      telugu: "కాపీ" },
     copied:         { roman: "Copied",        deva: "प्रतिलिपि हुई",  telugu: "కాపీ అయింది" },
@@ -474,6 +509,10 @@ window.STUTI_L = (function () {
     micDenied:     { roman: "The microphone is not available — recording needs permission. Open the app directly and try again.",
                      deva: "माइक्रोफोन उपलब्ध नहीं — रिकॉर्डिंग के लिए अनुमति चाहिए। ऐप को सीधे खोलकर फिर से कोशिश करें।",
                      telugu: "మైక్రోఫోన్ అందుబాటులో లేదు — రెకార్డు చేయాలంటే అనుమతి కావాలి. యాప్‌ను నేరుగా తెరిచి మళ్ళీ చూడండి." },
+
+    /* Follow: the phone set down on the mat */
+    followFaceDown:     { roman: "Hold when face down", deva: "उलटा रखने पर रुके", telugu: "బోర్లించినప్పుడు ఆపు" },
+    followHeld:         { roman: "Waiting — the phone is face down", deva: "रुका हुआ — फ़ोन उलटा रखा है", telugu: "ఆగింది — ఫోన్ బోర్లించి ఉంది" },
 
     /* first run */
     obReadIn:     { roman: "How shall the verses read?", deva: "श्लोक किस लिपि में?", telugu: "శ్లోకాలు ఏ లిపిలో?" },
