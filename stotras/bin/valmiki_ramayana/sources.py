@@ -91,9 +91,17 @@ def ebook(k):
             n = f'P{num}'
         else:
             n = num
-        out.append({'n': n, 'title': title, 'labels': labels, 'last': max(nums, default=0),
+        out.append({'n': n, 'colophon_n': num, 'title': title, 'labels': labels, 'last': max(nums, default=0),
                     'line': head if head is not None else prev + 1})
         prev = ci
+    # Number the sargas by position, not by the colophon's numeral: the ebook has slips (in the
+    # Uttarakāṇḍa sarga 65 ends with a colophon numbered 66 and 66 with one numbered 65, and
+    # sarga 101's colophon reads एक सौ एकवाँ but is numbered 102). Its text order is right.
+    c = 0
+    for x in out:
+        if isinstance(x['n'], int) or x['n'] is None:
+            c += 1
+            x['n'] = c
     return out
 
 # ---------------------------------------------------------------- OCR streams

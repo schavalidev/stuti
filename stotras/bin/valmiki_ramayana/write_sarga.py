@@ -218,7 +218,9 @@ def write(k, sid, dry=False):
             deva.append(b + (' ॥' if i == len(v['lines']) - 1 else ' ।'))
         out += [f"--- verse {v['num']} ---", 'deva:'] + deva + ['iast:'] + [dev2iast(x) for x in deva] + ['']
     out += ['--- verse none ---', 'deva:', colo, 'iast:', dev2iast(colo), '']
-    name = f"{sid}_sarga_{sid}_{fin['slug']}.txt" if not prak else \
+    width = len(sid)
+    num = f"{m['ebook_n']:0{width}d}" if not prak else None    # the print's sarga number, not the packet index
+    name = f"{num}_sarga_{num}_{fin['slug']}.txt" if not prak else \
         f"{int(m['ebook_n'][1:]):02d}_prakshipta_sarga_{int(m['ebook_n'][1:]):02d}_{fin['slug']}.txt"
     path = os.path.join(folder(k, prak), name)
     if dry:
@@ -226,9 +228,10 @@ def write(k, sid, dry=False):
         return path
     os.makedirs(os.path.dirname(path), exist_ok=True)
     for old in os.listdir(os.path.dirname(path)):
-        if old.startswith(name.split('_sarga_')[0] + '_sarga_') and old != name:
+        if old.startswith(name.split('_sarga_')[0] + '_') and old != name and old.endswith('.txt'):
             os.remove(os.path.join(os.path.dirname(path), old))     # this pipeline's own earlier write
     open(path, 'w', encoding='utf-8').write('\n'.join(out).rstrip() + '\n')
+    open(base + '.written', 'w').write(os.path.relpath(path, ROOT))
     print('WROTE', os.path.relpath(path, ROOT), len(verses), 'verses')
     return path
 
