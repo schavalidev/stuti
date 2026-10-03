@@ -131,8 +131,8 @@ def write(k, sid, dry=False):
         return None
     prak = isinstance(m.get('ebook_n'), str) and m['ebook_n'].startswith('P')
     colo = body(fin['colophon'])
-    om = re.search(r'काण्डे\s*(.+?)\s*सर्ग[ःः]?', colo)
-    ordw = om.group(1).replace('ऽ', '').strip() if om else None
+    om = re.search(r'काण्डे\s*(ऽ?)\s*(.+?)\s*सर्ग[ःः]?', colo)
+    ordw = (('अ' if om.group(1) else '') + om.group(2).strip()) if om else None   # काण्डेऽष्टा… -> अष्टा…
     kdev = S.DEVA_NAME[k]
     devhead = f'श्रीमद्वाल्मीकीयरामायणे {kdev} {ordw} सर्गः' if ordw else f'श्रीमद्वाल्मीकीयरामायणे {kdev}'
     sno = m['sarga'] if not prak else m['ebook_n']
