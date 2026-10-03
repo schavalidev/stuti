@@ -241,6 +241,7 @@ export const STUTI_L = (function () {
     tplDeity:       { roman: "The deity",         deva: "देवता",            telugu: "దేవత" },
     tplSave:        { roman: "Pin it",            deva: "रखें",             telugu: "గుర్తుంచు" },
     tplHere:        { roman: "Pinned where you stand, to within {m} metres.", deva: "आप जहाँ खड़े हैं वहीं, {m} मीटर तक सही।", telugu: "మీరు నిలబడిన చోటే, {m} మీటర్ల వరకు సరి." },
+    tplNotRight:    { roman: "Not its name? Pin it", deva: "नाम ठीक नहीं? स्वयं रखें", telugu: "పేరు సరికాదా? మీరే గుర్తుంచండి" },
     tplAt:          { roman: "You are here",      deva: "आप यहाँ हैं",      telugu: "మీరు ఇక్కడ ఉన్నారు" },
     tplAll:         { roman: "All of this deity\u2019s stotras", deva: "इस देवता के सब स्तोत्र", telugu: "ఈ దేవత స్తోత్రాలన్నీ" },
     tplCount:       { roman: "Count pradak\u1e63i\u1e47\u0101", deva: "प्रदक्षिणा गिनें", telugu: "ప్రదక్షిణ లెక్కించు" },

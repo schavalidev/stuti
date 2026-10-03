@@ -515,12 +515,14 @@ function AtTempleCard({ go, lang }) {
   React.useEffect(() => TP.subscribe(() => force((n) => n + 1)), []);
   React.useEffect(() => {
     let live = true;
-    if (!TP.mayNotice() || TP.count() === 0) { setFound(null); return; }
-    TP.here().then((h) => { if (live && h) setFound(TP.at(h.lat, h.lon)); });
+    if (!TP.mayNotice()) { setFound(null); return; }
+    /* the reciter's own pins answer first; the index is only consulted when
+       none of them fits, and it is fetched only at that moment */
+    TP.here().then((h) => { if (!h || !live) return; TP.look(h.lat, h.lon).then((r) => { if (live) setFound(r); }); });
     return () => { live = false; };
   }, [TP.count(), TP.mayNotice()]);
   if (!found) return null;
-  const pin = found.pin;
+  const pin = found;
   const d = pin.deity ? S.deityById[pin.deity] : null;
   const hymns = d ? S.hymnsForDeity(d.id) : [];
   const font = L.font(lang);
@@ -547,6 +549,14 @@ function AtTempleCard({ go, lang }) {
           {L.t("tplCount", lang)}
         </button>
       </div>
+      {/* a name we guessed rather than were told: say whose it is, which the
+          licence of the map it came from requires, and offer the correction */}
+      {!found.mine && (
+        <div className="tpl-card-src">
+          <span>{found.credit}</span>
+          <button onClick={() => window.dispatchEvent(new Event("stuti-pin-here"))}>{L.t("tplNotRight", lang)}</button>
+        </div>
+      )}
     </section>
   );
 }

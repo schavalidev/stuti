@@ -80,6 +80,46 @@ window.STUTI_TEMPLE = (function () {
         { enableHighAccuracy: true, timeout: 12000, maximumAge: 120000 }
       );
     }),
+    /* ---------- the temples nobody here has pinned ----------
+       A pin only helps once it exists, and a reciter arriving at a temple for
+       the first time has not made one. OpenStreetMap knows forty-two thousand
+       Hindu temples by name; that index is a file of its own, fetched the
+       first time it is wanted and never on a cold start, exactly as the
+       gazetteer is. It is the reciter's own pins that answer first, because
+       they named the place themselves and we only guessed. */
+    idx: (function () {
+      let state = "idle", promise = null;
+      return {
+        ready: () => state === "ready",
+        load: () => {
+          if (promise) return promise;
+          state = "loading";
+          promise = new Promise((resolve) => {
+            const s = document.createElement("script");
+            s.src = "stuti-temples.js";
+            s.onload = () => { state = window.STUTI_TEMPLE_IDX ? "ready" : "error"; resolve(window.STUTI_TEMPLE_IDX || null); };
+            s.onerror = () => { state = "error"; resolve(null); };
+            document.head.appendChild(s);
+          });
+          return promise;
+        },
+      };
+    })(),
     subscribe: (fn) => { subs.add(fn); return () => subs.delete(fn); },
   };
 })();
+
+/* The whole question the home card asks: what place is this? A pin of the
+   reciter's own is the answer whenever there is one, because they named it;
+   otherwise the index is consulted, and what it returns is marked as a guess
+   so the card can credit OpenStreetMap and offer to pin it properly. */
+window.STUTI_TEMPLE.look = async function (lat, lon) {
+  const TP = window.STUTI_TEMPLE;
+  const mine = TP.at(lat, lon);
+  if (mine) return { name: mine.pin.name, deity: mine.pin.deity, m: mine.m, pin: mine.pin, mine: true };
+  const idx = await TP.idx.load();
+  if (!idx) return null;
+  const hit = idx.near(lat, lon, TP.NEAR_M);
+  if (!hit) return null;
+  return { name: hit.name, deity: hit.deity, m: hit.m, lat: hit.lat, lon: hit.lon, mine: false, credit: idx.credit };
+};

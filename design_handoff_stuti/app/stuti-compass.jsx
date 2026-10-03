@@ -265,7 +265,11 @@ function CompassDial({ lang, loc }) {
   useCpE(() => {
     const open = () => { setSheet(true); if (!prad) { pradRef.current.last = hd; setPrad(true); } };
     window.addEventListener("stuti-pradakshina", open);
-    return () => window.removeEventListener("stuti-pradakshina", open);
+    /* "that is not its name" on the home card: open the sheet and start the
+       pin, so the correction is one tap from the thing being corrected */
+    const pin = () => { setSheet(true); startPin(); };
+    window.addEventListener("stuti-pin-here", pin);
+    return () => { window.removeEventListener("stuti-pradakshina", open); window.removeEventListener("stuti-pin-here", pin); };
   }, [prad, hd]);
   const pradTarget = (n) => { setTarget(n); try { localStorage.setItem("stuti-pradakshina", String(n)); } catch (e) {} };
 
