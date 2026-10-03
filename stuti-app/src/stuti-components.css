@@ -158,6 +158,30 @@
 .cp-pin{width:5px;height:5px;border-radius:50%;background:var(--ink);box-shadow:0 0 0 1.5px var(--surface)}
 .cp-dial.live{border-color:var(--accent-ink)}
 .sky .cp-dial{background:var(--surface);border-color:var(--gold);box-shadow:inset 0 0 0 2px var(--surface-2),0 1px 3px rgba(0,0,0,.28)}
+/* the chosen tīrtha's needle: a gold pointer from the pin to the rim, turned
+   inside the ring so the heading it already carries is not applied twice */
+.cp-aim{position:absolute;left:50%;top:50%;width:0;height:0;margin-left:-3px;border-left:3px solid transparent;border-right:3px solid transparent;border-bottom:15px solid var(--gold);transform-origin:50% 100%;margin-top:-15px}
+/* ---------- the tīrtha sheet (opened from the dial) ---------- */
+.cp-sheet{gap:0}
+.cp-sw{margin-top:12px}
+.cp-sw-v{flex:none;font-variant-numeric:tabular-nums;color:var(--ink-soft);font-size:0.875rem}
+.cp-note{padding:12px 2px 2px;font-size:0.9375rem;line-height:1.45;color:var(--ink-soft);text-wrap:pretty}
+.cp-find{display:flex;align-items:center;gap:6px;margin:10px 0 2px;background:var(--surface-2);border:1px solid var(--line);border-radius:999px;padding:0 6px 0 14px}
+.cp-find input{flex:1;min-width:0;font:inherit;font-size:0.9375rem;background:none;border:0;outline:none;color:var(--ink);min-height:42px}
+.cp-find button{flex:none;width:30px;height:30px;border-radius:50%;background:var(--surface);color:var(--ink-soft);font-size:1.0625rem;line-height:1}
+.cp-list{gap:0}
+.cp-row{display:flex;align-items:center;gap:12px;width:100%;text-align:left;padding:11px 2px;border-bottom:1px solid var(--line-2);color:var(--ink)}
+.cp-row:last-child{border-bottom:none}
+.cp-row.on{color:var(--accent-ink)}
+.cp-row-nm{flex:1;min-width:0;font-size:1.0625rem;line-height:1.3}
+.cp-row-m{flex:none;display:flex;flex-direction:column;align-items:flex-end;gap:1px}
+.cp-row-m b{font-weight:600;font-size:0.9375rem;font-variant-numeric:tabular-nums}
+.cp-row-m i{font-style:normal;font-size:0.8125rem;color:var(--ink-soft)}
+/* a dial the size of a bead: the rim, and one needle on the bearing */
+.cp-mini{position:relative;flex:none;width:26px;height:26px;border-radius:50%;border:1px solid var(--line);background:var(--surface-2)}
+.cp-row.on .cp-mini{border-color:var(--gold)}
+.cp-mini-n{position:absolute;left:50%;top:50%;width:0;height:0;margin-left:-2.5px;margin-top:-11px;border-left:2.5px solid transparent;border-right:2.5px solid transparent;border-bottom:11px solid var(--accent-ink);transform-origin:50% 100%;transition:transform .25s ease-out}
+.cp-row.on .cp-mini-n{border-bottom-color:var(--gold)}
 .loc-scrim { position: fixed; inset: 0; z-index: 39; }
 .locctl .loc-menu {
   position: absolute; top: calc(100% + 8px); right: 0; z-index: 40;
