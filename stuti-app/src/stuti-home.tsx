@@ -26,6 +26,7 @@ import { SandhyaCard } from "./stuti-sandhya";
 import { STUTI_SANKALPA } from "./stuti-sankalpa";
 import { SkyHeader } from "./stuti-sky";
 import { STUTI_FAVS_WEEK, STUTI_PROGRESS } from "./stuti-store";
+import { STUTI_TEMPLE } from "./stuti-temple";
 import { STUTI_RITUAL } from "./stuti-texts";
 import { STUTI_TITHIS } from "./stuti-tithis-core";
 import { TithiSheet } from "./stuti-tithis";
@@ -536,6 +537,56 @@ function RoutineVrata({ go, lang }) {
 }
 
 /* ============ Home — "Today, first" (calm pañcāṅga + saṅkalpa sheet) ============ */
+/* ---------------- At a temple ----------------
+   A reciter standing in their own temple opens the app to recite something,
+   and the app can meet them there instead of asking. The pins are theirs
+   (stuti-temple.js); a fix is taken on opening only if they said it could be,
+   and only while there is at least one pin to match against.
+   This is a card that is absent far more often than it is present, which is
+   the point: it appears when it has something to say and never otherwise. */
+function AtTempleCard({ go, lang }) {
+  const L = STUTI_L, S = STUTI, TP = STUTI_TEMPLE;
+  const [found, setFound] = React.useState(null);
+  const [, force] = React.useState(0);
+  React.useEffect(() => TP.subscribe(() => force((n) => n + 1)), []);
+  React.useEffect(() => {
+    let live = true;
+    if (!TP.mayNotice() || TP.count() === 0) { setFound(null); return; }
+    TP.here().then((h) => { if (live && h) setFound(TP.at(h.lat, h.lon)); });
+    return () => { live = false; };
+  }, [TP.count(), TP.mayNotice()]);
+  if (!found) return null;
+  const pin = found.pin;
+  const d = pin.deity ? S.deityById[pin.deity] : null;
+  const hymns = d ? S.hymnsForDeity(d.id) : [];
+  const font = L.font(lang);
+  return (
+    <section className="tpl-card">
+      <div className="eyebrow">{L.t("tplAt", lang)}</div>
+      <h3 className="tpl-card-nm" style={{ fontFamily: font }}>{pin.name}</h3>
+      {d && <div className="tpl-card-d" style={{ fontFamily: font }}>{L.name(d, lang)}</div>}
+      <div className="tpl-card-acts">
+        {hymns.slice(0, 3).map((h) => (
+          <button key={h.id} className="tpl-card-go" style={{ fontFamily: font }}
+            onClick={() => go("reader", { deity: h.deity, hymn: h.id, from: "home" })}>
+            {L.hymnTitle(h, lang)}
+          </button>
+        ))}
+        {d && hymns.length > 3 && (
+          <button className="tpl-card-more" onClick={() => go("browse", { deity: d.id, returnTo: "home" })}>
+            {L.t("tplAll", lang)}
+          </button>
+        )}
+        {/* the counter lives on the compass, which already holds the heading */}
+        <button className="tpl-card-prad" style={{ fontFamily: font }}
+          onClick={() => window.dispatchEvent(new Event("stuti-pradakshina"))}>
+          {L.t("tplCount", lang)}
+        </button>
+      </div>
+    </section>
+  );
+}
+
 function HomeA({ go, lang, overlayEl }) {
   const L = lang || "deva";
   const t = k => STUTI_L.t(k, L);
@@ -618,6 +669,8 @@ function HomeA({ go, lang, overlayEl }) {
       <SkyHeader lang={L} go={go} />
 
       <HomeSearchBar go={go} lang={L} />
+
+      <AtTempleCard go={go} lang={L} />
 
       <HomePrepCard lang={L} />
 
@@ -932,4 +985,4 @@ function DailyView({ go, lang = "deva" }) {
   );
 }
 
-export { HomeA, todayInfo, DailyCard, DailyView, ContinueCard, HomeSearchBar };
+export { HomeA, AtTempleCard, todayInfo, DailyCard, DailyView, ContinueCard, HomeSearchBar };

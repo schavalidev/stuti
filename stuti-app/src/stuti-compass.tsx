@@ -1,7 +1,9 @@
 import React from "react";
+import { STUTI } from "./stuti-data";
 import { STUTI_DESA } from "./stuti-desa";
 import { STUTI_L } from "./stuti-i18n";
 import { OverlayPortal } from "./stuti-picker";
+import { STUTI_TEMPLE } from "./stuti-temple";
 import { STUTI_TRANSLIT } from "./stuti-translit";
 
 /* ============================================================
@@ -242,6 +244,37 @@ function CompassDial({ lang, loc }) {
   }, [hd, prad]);
   const pradReset = () => { pradRef.current = { last: hd, total: 0, done: 0 }; setLaps(0); setPart(0); };
   const pradToggle = () => { if (!prad) pradRef.current.last = hd; setPrad(!prad); };
+
+  /* ---------- the reciter's own temple ----------
+     Pinning takes a fresh fix rather than the chosen place: the place chip
+     may be a city picked from a list, and a temple is pinned by standing in
+     it. Nothing is written until the name is given, so a reciter who opens
+     the form and thinks better of it has left no trace of where they were. */
+  const [pinning, setPinning] = useCpS(null);      // null | "locating" | {lat,lon,acc} | "nofix"
+  const [pinName, setPinName] = useCpS("");
+  const [pinDeity, setPinDeity] = useCpS("");
+  const [pinTick, setPinTick] = useCpS(0);
+  useCpE(() => STUTI_TEMPLE.subscribe(() => setPinTick((n) => n + 1)), []);
+  const pins = STUTI_TEMPLE.all();
+  const startPin = async () => {
+    setPinning("locating"); setPinName(""); setPinDeity("");
+    const here = await STUTI_TEMPLE.here();
+    setPinning(here || "nofix");
+  };
+  const savePin = () => {
+    if (!pinName.trim() || !pinning || typeof pinning === "string") return;
+    STUTI_TEMPLE.add({ name: pinName, deity: pinDeity || null, lat: pinning.lat, lon: pinning.lon });
+    /* the first pin is the moment to ask, because it is the first time the
+       question means anything: there is now a place to be noticed at */
+    if (!STUTI_TEMPLE.asked()) STUTI_TEMPLE.setNotice(true);
+    setPinning(null); setPinName(""); setPinDeity("");
+  };
+  /* the home card hands the counter over when the reciter is at a temple */
+  useCpE(() => {
+    const open = () => { setSheet(true); if (!prad) { pradRef.current.last = hd; setPrad(true); } };
+    window.addEventListener("stuti-pradakshina", open);
+    return () => window.removeEventListener("stuti-pradakshina", open);
+  }, [prad, hd]);
   const pradTarget = (n) => { setTarget(n); try { localStorage.setItem("stuti-pradakshina", String(n)); } catch (e) {} };
 
   /* The sun moves a degree every four minutes, so the face is refreshed on
@@ -430,6 +463,38 @@ function CompassDial({ lang, loc }) {
               ))}
               {shown.length === 0 && <div className="tday-empty">{L.t("tirthaNone", lang)}</div>}
             </div>
+            <div className="cp-cap" style={{ fontFamily: font }}>{L.t("tplMine", lang)}</div>
+            {pins.map((p) => (
+              <div className="cp-tpl" key={p.id}>
+                <span className="cp-tpl-nm" style={{ fontFamily: font }}>{p.name}</span>
+                <span className="cp-tpl-d">{p.deity && STUTI.deityById[p.deity] ? L.name(STUTI.deityById[p.deity], lang) : ""}</span>
+                <button type="button" className="cp-tpl-x" onClick={() => STUTI_TEMPLE.remove(p.id)}
+                  aria-label={L.a("aClear")}>×</button>
+              </div>
+            ))}
+            {!pinning && (
+              <button type="button" className="cp-tpl-add" onClick={startPin} style={{ fontFamily: font }}>
+                {L.t("tplPin", lang)}
+              </button>
+            )}
+            {pinning === "locating" && <div className="cp-tpl-say" style={{ fontFamily: font }}>{L.t("tplLocating", lang)}</div>}
+            {pinning === "nofix" && <div className="cp-tpl-say" style={{ fontFamily: font }}>{L.t("tplNoFix", lang)}</div>}
+            {pinning && typeof pinning !== "string" && (
+              <div className="cp-tpl-form">
+                <input className="cp-tpl-in" value={pinName} onChange={(e) => setPinName(e.target.value)}
+                  placeholder={L.t("tplName", lang)} autoComplete="off" aria-label={L.t("tplName", lang)} />
+                <select className="cp-tpl-in" value={pinDeity} onChange={(e) => setPinDeity(e.target.value)}
+                  aria-label={L.t("tplDeity", lang)}>
+                  <option value="">{L.t("tplDeity", lang)}</option>
+                  {STUTI.deities.map((d) => <option key={d.id} value={d.id}>{L.name(d, lang)}</option>)}
+                </select>
+                <div className="cp-tpl-acts">
+                  <button type="button" className="cp-tpl-ok" onClick={savePin} disabled={!pinName.trim()}>{L.t("tplSave", lang)}</button>
+                  <button type="button" className="cp-tpl-no" onClick={() => setPinning(null)}>{L.a("close")}</button>
+                </div>
+                <div className="cp-tpl-say" style={{ fontFamily: font }}>{L.t("tplHere", lang).replace("{m}", Math.round(pinning.acc || 0))}</div>
+              </div>
+            )}
           </div>
         </Portal>
       )}

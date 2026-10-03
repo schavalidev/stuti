@@ -233,6 +233,17 @@ export const STUTI_L = (function () {
                       deva: "{place} से दूरी और दिशा, महावृत्त के अनुसार। एक चुनें और उसकी सूई डायल पर बनी रहेगी।",
                       telugu: "{place} నుండి దూరం, దిక్కు — మహావృత్తం ప్రకారం. ఒకటి ఎంచుకుంటే దాని ముల్లు డయల్‌పై నిలుస్తుంది." },
     tirthaFind:     { roman: "Find a tīrtha", deva: "तीर्थ खोजें",      telugu: "తీర్థం వెతకండి" },
+    tplMine:        { roman: "My temples",       deva: "मेरे मन्दिर",      telugu: "నా ఆలయాలు" },
+    tplPin:         { roman: "Pin this place as a temple", deva: "इस जगह को मन्दिर के रूप में रखें", telugu: "ఈ స్థలాన్ని ఆలయంగా గుర్తుంచు" },
+    tplLocating:    { roman: "Finding where you are\u2026", deva: "आप कहाँ हैं, देखा जा रहा है\u2026", telugu: "మీరు ఎక్కడ ఉన్నారో చూస్తోంది\u2026" },
+    tplNoFix:       { roman: "Your position could not be found. Try again outside the building.", deva: "आपकी जगह नहीं मिली। भवन के बाहर फिर देखें।", telugu: "మీ స్థానం దొరకలేదు. భవనం బయట మళ్ళీ చూడండి." },
+    tplName:        { roman: "Name of the temple", deva: "मन्दिर का नाम",   telugu: "ఆలయం పేరు" },
+    tplDeity:       { roman: "The deity",         deva: "देवता",            telugu: "దేవత" },
+    tplSave:        { roman: "Pin it",            deva: "रखें",             telugu: "గుర్తుంచు" },
+    tplHere:        { roman: "Pinned where you stand, to within {m} metres.", deva: "आप जहाँ खड़े हैं वहीं, {m} मीटर तक सही।", telugu: "మీరు నిలబడిన చోటే, {m} మీటర్ల వరకు సరి." },
+    tplAt:          { roman: "You are here",      deva: "आप यहाँ हैं",      telugu: "మీరు ఇక్కడ ఉన్నారు" },
+    tplAll:         { roman: "All of this deity\u2019s stotras", deva: "इस देवता के सब स्तोत्र", telugu: "ఈ దేవత స్తోత్రాలన్నీ" },
+    tplCount:       { roman: "Count pradak\u1e63i\u1e47\u0101", deva: "प्रदक्षिणा गिनें", telugu: "ప్రదక్షిణ లెక్కించు" },
     tirthaNone:     { roman: "No tīrtha of that name here", deva: "इस नाम का तीर्थ यहाँ नहीं", telugu: "ఆ పేరుతో తీర్థం లేదు" },
     /* the standing directions of the daily rites: the question the compass
        was built for, since a rite faces a direction and a new town hides it */
