@@ -16,6 +16,13 @@ function CompassDial({ lang }) {
   const label = L && L.t ? L.t("compass", lang) : "Compass";
   const remember = (v) => { try { localStorage.setItem("stuti-compass", v ? "1" : "0"); } catch (e) {} };
 
+  /* A dial is only a compass if its heading is counted from true north.
+     Chrome on Android gives that on deviceorientationabsolute, and on any
+     event that sets the absolute flag; plain deviceorientation counts alpha
+     from wherever the phone happened to lie when the page loaded, so taking
+     that reading would point the mark at a direction that is not north.
+     Both listeners stay — whichever carries a true heading is used. */
+  const gotRef = useCpR(false);
   useCpE(() => {
     if (!on || !has) return;
     let live = true;
@@ -23,24 +30,29 @@ function CompassDial({ lang }) {
       if (!live) return;
       let h = null;
       if (typeof e.webkitCompassHeading === "number" && !isNaN(e.webkitCompassHeading)) h = e.webkitCompassHeading;
-      else if (typeof e.alpha === "number") h = (360 - e.alpha) % 360;
-      if (h != null) setHd(h);
+      else if (e.absolute === true && typeof e.alpha === "number" && !isNaN(e.alpha)) h = (360 - e.alpha) % 360;
+      if (h == null) return;
+      gotRef.current = true;
+      setHd(h);
     };
     window.addEventListener("deviceorientationabsolute", handler, true);
     window.addEventListener("deviceorientation", handler, true);
     /* no reading in a while means the sensor is not giving one — the dial
-       stays, off, and the next tap asks again from a real gesture */
-    const t = setTimeout(() => { if (live && hd == null) { setOn(false); remember(false); } }, 5000);
+       stays, off, and the next tap asks again from a real gesture. Whether
+       one arrived is kept in a ref: a reading does not re-run this effect,
+       so the state read here would always be the null it was created with,
+       and the dial would put itself out five seconds after every tap. */
+    const t = setTimeout(() => { if (live && !gotRef.current) { setOn(false); remember(false); } }, 5000);
     return () => { live = false; clearTimeout(t); window.removeEventListener("deviceorientationabsolute", handler, true); window.removeEventListener("deviceorientation", handler, true); };
   }, [on]);
 
   if (!has) return null;
   const toggle = () => {
-    if (on) { setOn(false); setHd(null); remember(false); return; }
+    if (on) { setOn(false); setHd(null); gotRef.current = false; remember(false); return; }
     const DOE = window.DeviceOrientationEvent;
     if (DOE && typeof DOE.requestPermission === "function") {
-      DOE.requestPermission().then((r) => { if (r === "granted") { setOn(true); remember(true); } }).catch(() => {});
-    } else { setOn(true); remember(true); }
+      DOE.requestPermission().then((r) => { if (r === "granted") { gotRef.current = false; setOn(true); remember(true); } }).catch(() => {});
+    } else { gotRef.current = false; setOn(true); remember(true); }
   };
   const rot = hd == null ? 0 : -hd;
   const dirs = lang === "telugu" ? ["ఉ", "తూ"] : lang === "deva" ? ["उ", "पू"] : ["N", "E"];
