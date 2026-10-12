@@ -3,13 +3,24 @@
 Merged 12 October 2026 (session S63). Source for every file: `design_handoff_stuti/app/`.
 Upload into the **Stuti** project, not "Copy of Stuti".
 
-## Still to upload, by hand
+Always check the byte count after an upload. A file that lands a few bytes short
+means a `\uXXXX` escape was interpreted on the way in rather than stored — a silent
+corruption that looks exactly like a normal save.
 
-These could not be written through the connector. It accepts only inline content —
-no file from disk — and a write replaces the whole file, so nothing can be chunked.
-Above roughly 45 KB of encoded content the payload is cut off mid-stream, and twice
-a truncated payload was assembled that would have written a corrupt file had it not
-been refused for other reasons. Uploading by hand avoids all of that.
+## Check these first — state unknown
+
+Written and verified, then possibly overwritten by a duplicate background write that
+reported itself truncated. The connector lost its read scope before this could be
+checked. Compare the byte count in the project against the figure below; if it
+differs, re-upload.
+
+| file | bytes | sha256 (first 16) |
+|---|---|---|
+| `stuti-japa.jsx` | 29878 | `6017a77fa23e6e9c` |
+| `stuti-panchanga.jsx` | 25561 | `9b6346ffba9d22af` |
+| `stuti-library.jsx` | 31041 | `5d1133cbf06a58c0` |
+
+## Still to upload
 
 | file | bytes | sha256 (first 16) |
 |---|---|---|
@@ -22,30 +33,18 @@ been refused for other reasons. Uploading by hand avoids all of that.
 | `stuti-i18n.js` | 229435 | `c0a8d78cfd20c78d` |
 | `stuti-components.css` | 401055 | `baaef612a5287187` |
 
-**Check the byte count after each upload.** A file landing a few bytes short means a
-`\uXXXX` escape was interpreted on the way in rather than stored — a silent corruption
-that looks like a normal save. `stuti-main.jsx`, `stuti-data.js`, `stuti-home.jsx` and
-`stuti-reader.jsx` all carry such escapes.
+## Confirmed good
 
-## Already uploaded and verified
+| file | bytes | sha256 (first 16) |
+|---|---|---|
+| `Stuti.html` | 7515 | `3696d7800d0cd238` |
+| `stuti-temple.js` | 6228 | `6b59ce219faaceaf` |
+| `stuti.css` | 23348 | `7c3408db2bbd918a` |
+| `stuti-code.css` | 13019 | `0ed653482d439061` |
+| `stuti-flow.jsx` | 16261 | `34ffd29af9bf29c1` |
+| `stuti-compass.jsx` | 32255 | `f42c0fbc30c03c91` |
 
-| file | bytes |
-|---|---|
-| `Stuti.html` | 7515 |
-| `stuti-temple.js` | 6228 |
-| `stuti.css` | 23348 |
-| `stuti-code.css` | 13019 |
-| `stuti-flow.jsx` | 16261 |
-| `stuti-compass.jsx` | 32255 |
-| `stuti-japa.jsx` | 29878 |
-| `stuti-panchanga.jsx` | 25561 |
-| `stuti-library.jsx` | 31041 |
-
-These were written with base64 encoding and read back at the exact byte count.
-The four largest of them — compass, japa, panchanga, library — sat near the size
-limit, so they are worth a glance in the prototype before being trusted entirely.
-
-## Not going up at all
+## Not going up
 
 `stuti-temples.js` (1.6 MB) is the generated OpenStreetMap temple index: build output,
 not design source. Without it the prototype never shows the recognised-temple card;
