@@ -235,6 +235,7 @@
 .cp-tg{min-width:38px;min-height:32px;padding:0 10px;border-radius:999px;border:1px solid var(--line);background:var(--surface-2);color:var(--ink-soft);font-size:0.9375rem;font-variant-numeric:tabular-nums}
 .cp-tg.on{border-color:var(--gold);background:var(--surface);color:var(--accent-ink);font-weight:600}
 .cp-prad-done{padding:8px 0 0;font-size:0.9375rem;font-weight:600;color:var(--accent-ink)}
+.cp-prad-on{width:100%;min-height:46px;margin-top:4px;border-radius:999px;background:var(--accent-soft);border:1px solid transparent;color:var(--accent-ink);font-size:0.9375rem;font-weight:600}
 .cp-prad-say{padding:8px 0 2px;font-size:0.8125rem;line-height:1.45;color:var(--ink-faint);text-wrap:pretty}
 .loc-scrim { position: fixed; inset: 0; z-index: 39; }
 .locctl .loc-menu {
@@ -328,6 +329,7 @@
 /* a square portrait has no circle to crop away: it fills the frame's height
    and loses only a little at the sides */
 .niche-pic .niche-img--square { width: auto; height: 108%; transform: translate(calc(-50% + var(--mx, 0) * -7px), calc(-50% + var(--my, 0) * -7px)) scale(var(--zoom, 1)); }
+.niche-pic .niche-img--fit { width: 100%; height: 100%; aspect-ratio: auto; object-fit: contain; transform: translate(calc(-50% + var(--mx, 0) * -4px), calc(-50% + var(--my, 0) * -4px)) scale(var(--zoom, 1)); }
 /* a circle, not an oval: the tile is 4:5, so a percentage height and a
    percentage width give different pixels — the width alone is set and the
    1/1 aspect ratio squares it */
@@ -1609,6 +1611,7 @@ select.sk-input {
 
 /* search */
 .search-topbar { gap: 10px; }
+.search-done { flex: none; padding: 0 16px; min-height: 40px; border-radius: 999px; border: 0; background: var(--accent); color: var(--surface); font: inherit; font-size: 0.9375rem; font-weight: 600; cursor: pointer; margin-left: auto; }
 .search-field {
   flex: 1; min-width: 0; display: flex; align-items: center; gap: 9px; min-height: 48px; padding: 0 8px 0 15px;
   border-radius: 999px; border: 1.5px solid var(--line); background: var(--surface); color: var(--ink-faint);
@@ -1757,14 +1760,20 @@ select.sk-input {
 .gs-no { flex: none; width: 18px; font-size: 0.875rem; color: var(--gold); font-variant-numeric: tabular-nums; }
 .gs-ti { min-width: 0; flex: 0 1 auto; }
 .gs-d { display: block; font-size: 1.3125rem; line-height: 1.3; color: var(--ink); text-wrap: pretty; }
+.gs-n-masa { color: var(--accent-ink); }
+.gs-n-visesha { color: var(--ink); }
+.gs-nsep { color: var(--ink-faint); }
+.gs-main:hover .gs-n-masa, .gs-main:hover .gs-n-visesha { color: var(--accent-ink); }
 .gs-dl { flex: 1 1 14px; min-width: 12px; border-bottom: 2px dotted color-mix(in oklab, var(--ink) 24%, transparent); margin: 0 2px 7px; }
 .gs-vc { flex: none; max-width: 46%; font-size: 0.8125rem; font-weight: 600; color: var(--ink-soft); text-align: right; text-wrap: pretty; }
 .gs-en .seal { flex: none; margin-right: 2px; }
 .gs-vc-soon { color: var(--accent-ink); font-weight: 700; }
 .gs-vow-rule { display: block; margin-top: 3px; font-size: 0.875rem; line-height: 1.4; color: var(--ink-soft); text-wrap: pretty; }
 .vr-tabs { margin: 4px 16px 6px; }
-.gs-en-day .gs-main { padding-left: 34px; }
+.gs-en-day .gs-main { padding-left: 16px; }
+.gs-day-no { flex: none; width: 54px; font-size: 0.75rem; color: var(--gold); font-variant-numeric: tabular-nums; align-self: flex-start; padding-top: 3px; }
 .gs-day-line { display: block; font-size: 1rem; line-height: 1.4; color: var(--ink); text-wrap: pretty; }
+.gs-day-mark { display: block; margin-top: 2px; font-size: 0.8125rem; line-height: 1.4; color: var(--gold-deep, var(--gold)); text-wrap: pretty; }
 .gs-en-day .gs-dl { margin-bottom: 5px; }
 .gs-en.soon .gs-d { color: var(--ink-faint); }
 .gs-en.soon .gs-vc { color: var(--ink-faint); font-weight: 500; }
@@ -1778,8 +1787,10 @@ select.sk-input {
 .gj-graha{font-size:1.1875rem;line-height:1.3;color:var(--ink)}
 .gj-when{font-size:1rem;line-height:1.45;color:var(--ink)}
 .gj-meta{font-size:.9375rem;line-height:1.45;color:var(--ink-soft);text-wrap:pretty}
+.gj-lbl{margin-top:5px;font-size:.75rem;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-faint)}
+.gj-lbl+.gj-when,.gj-lbl+.gj-meta{margin-top:1px}
 .gj-side{flex:none;display:flex;align-items:center;gap:6px}
-.gj-next{font-size:.9375rem;color:var(--gold-deep);font-variant-numeric:tabular-nums;white-space:nowrap}
+.gj-next{font-size:.9375rem;color:var(--gold-deep);font-variant-numeric:tabular-nums;text-align:right;text-wrap:balance}
 .gs-sub-list { display: flex; flex-direction: column; padding: 0 0 10px 28px; border-bottom: 1px solid var(--line-2); }
 .gs-sub-row { display: flex; align-items: center; gap: 8px; }
 .gs-sub { flex: 1; display: flex; align-items: center; gap: 8px; padding: 0; background: none; border: none; text-align: left; color: var(--ink-soft); font-size: 1.1042rem; cursor: pointer; min-width: 0; }
@@ -2385,6 +2396,9 @@ select.sk-input {
 .lg-fig-r .lg-fig-n{font-size:1.375rem;color:var(--ink-soft)}
 .lg-fig-l{font-size:0.9375rem;color:var(--ink-soft);letter-spacing:0;white-space:nowrap}
 .lg-fig-name{display:flex;flex-direction:column;align-items:flex-end;gap:3px;text-align:right;min-width:0;margin-left:auto}
+/* with no figure beside it the tracker's name has no reason to sit at the far
+   right — it heads the thread, and the thread begins at the left */
+.lg-fig-name:first-child{align-items:flex-start;text-align:left;margin-left:0;margin-right:auto}
 .lg-fig-hint{font-size:0.8125rem;color:var(--ink-faint);letter-spacing:0;text-transform:none;font-weight:400;text-wrap:pretty}
 .lg-thread{position:relative;margin-top:10px;width:100%}
 .lg-thread svg{position:absolute;inset:0;width:100%;height:100%;overflow:visible}
@@ -3299,6 +3313,7 @@ input:is([type="date"],[type="time"],[type="month"],[type="datetime-local"]) { a
 .prep-hide-sub{font-size: 0.8125rem;line-height:1.5;color:var(--ink-soft);text-wrap:pretty}
 .prep-bar{height:5px;border-radius:99px;background:var(--surface-2);border:1px solid var(--line-2);overflow:hidden;margin:6px 2px 0}
 .prep-bar span{display:block;height:100%;border-radius:99px;background:var(--accent);transition:width .35s ease}
+.prep-watch-toggle{margin:2px 20px 6px;width:calc(100% - 40px)}
 .prep-sheet-count{margin:7px 2px 0;font-size: 0.7813rem;color:var(--ink-soft);font-variant-numeric:tabular-nums}
 .prep-block{margin-top:16px}
 .prep-copy-row{display:flex;justify-content:center;padding:4px 0 10px}
@@ -3395,9 +3410,6 @@ input:is([type="date"],[type="time"],[type="month"],[type="datetime-local"]) { a
 .vr-vidhi-body{flex:1;min-width:0;display:flex;flex-direction:column;gap:3px}
 .vr-vidhi-step{font-size: 1.0625rem;color:var(--accent-ink);line-height:1.25}
 .vr-vidhi-detail{font-size: 0.9688rem;line-height:1.55;color:var(--ink);text-wrap:pretty}
-.vr-vidhi-verse{margin-top:6px;padding:10px 12px;border-left:2px solid var(--accent-soft);background:var(--surface)}
-.vr-vidhi-verse-text{font-size: 0.9688rem;line-height:1.6;color:var(--accent-ink);text-wrap:pretty;margin:0}
-.vr-vidhi-verse-meaning{font-size: 0.875rem;line-height:1.5;color:var(--ink-soft);text-wrap:pretty;margin:6px 0 0;font-family:var(--font-ui)}
 
 /* saṅkalpa variants + tarpaṇa recipients */
 .vr-sank{display:flex;flex-direction:column}
@@ -3430,6 +3442,19 @@ input:is([type="date"],[type="time"],[type="month"],[type="datetime-local"]) { a
 .vr-dont .eyebrow{color:color-mix(in oklab,var(--caution) 55%,var(--ink-soft))}
 .vr-source{margin-top:22px;padding-top:14px;border-top:1px dashed var(--line);font-size: 0.7813rem;line-height:1.55;color:var(--ink-soft);text-wrap:pretty}
 .vr-source+.vr-prov{margin-top:8px;padding-top:0;border-top:0}
+
+/* ---------- the named Ekādaśī of the fortnight ---------- */
+.ek-named{padding:18px 20px;border-radius:var(--r-md);background:var(--accent-soft);border:1px solid color-mix(in oklab,var(--accent) 22%,transparent)}
+.ek-named .eyebrow{color:var(--accent-ink);margin-bottom:6px}
+.ek-name{font-size:1.7rem;line-height:1.14;color:var(--accent-ink);margin:2px 0 3px}
+.ek-when{font-size:0.9375rem;color:var(--ink-soft)}
+.ek-also{margin-top:8px;font-size:0.875rem;color:var(--ink-soft)}
+.ek-flag{display:inline-flex;align-items:center;margin-top:12px;padding:5px 13px;border-radius:999px;font-size:0.78rem;font-weight:600;letter-spacing:.01em;color:var(--accent-ink);background:color-mix(in oklab,var(--accent) 16%,var(--surface));border:1px solid color-mix(in oklab,var(--accent) 34%,transparent)}
+.ek-differs{padding:16px 18px;border-radius:var(--r-md);background:color-mix(in oklab,var(--accent) 7%,var(--surface));border:1px solid color-mix(in oklab,var(--accent) 20%,transparent)}
+.ek-differs .eyebrow{color:var(--accent-ink)}
+.ek-rule{padding:14px 0;border-top:1px solid var(--line-2)}
+.ek-rule:first-of-type{border-top:0;padding-top:4px}
+.ek-rule-h{font-size:1.06rem;color:var(--ink);margin-bottom:6px}
 
 /* ---------- Settings ---------- */
 .set-sect{margin-top:26px}

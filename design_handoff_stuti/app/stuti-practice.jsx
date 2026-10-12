@@ -36,11 +36,12 @@ function usePracticeCount(id, total) {
 /* The guide is a screen of its own, like a nomu's — reached with go("sandhyaNote",
    { from }), and back returns to whatever opened it. */
 function SandhyaNoteView({ go, lang, backView = "home" }) {
+  const L = window.STUTI_L;
   return (
     <div className="view libhub scroll">
       <div className="topbar">
         <button className="icon-btn" onClick={() => go(backView)} aria-label={window.STUTI_L.a("aBack")}><Icon name="back" /></button>
-        <div className="topbar-title display" style={{ fontFamily: "var(--font-telugu)" }}>సంధ్యావందనం</div>
+        <div className="topbar-title display" style={{ fontFamily: L.font(lang) }}>{L.t("sandhyaCap", lang)}</div>
         <div style={{ width: 40 }} />
       </div>
       <div className="lens-pad" style={{ fontFamily: "var(--font-telugu)", paddingTop: 18 }}>

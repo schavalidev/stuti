@@ -156,9 +156,9 @@ window.STUTI_MASA = (function () {
 
     { id: "ashvina", idx: M.ashvina, name: { roman: "Āśvayuja", deva: "आश्विन", tel: "ఆశ్వయుజ" }, greg: "Mid-September – mid-October",
       tagline: { roman: "Nine nights to the Mother, then the lamps of Dīpāvalī at the month's dark end.", deva: "माता के लिए नौ रातें, फिर मास के अन्त में दीपावली के दीप।", tel: "అమ్మవారికి తొమ్మిది రాత్రులు, మాసాంతంలో దీపావళి దీపాలు." },
-      gist: [{ roman: "Śāradīya Navarātri opens the month and closes Cāturmāsya's third leg with it; three weeks later the same fortnight ends in Dīpāvalī, so Āśvayuja carries the year's two brightest observances a breath apart, one of worship and one of light.",
-        deva: "शारदीय नवरात्रि मास का आरम्भ करती है और उसी के साथ चातुर्मास्य का तीसरा चरण पूर्ण करती है; तीन सप्ताह बाद वही पक्ष दीपावली पर समाप्त होता है — आश्विन वर्ष के दो सबसे उज्ज्वल पर्व एक साँस की दूरी पर रखता है, एक पूजा का, एक प्रकाश का।",
-        tel: "శారదీయ నవరాత్రి మాసాన్ని మొదలుపెడుతూనే చాతుర్మాస్యపు మూడో దశను ముగిస్తుంది; మూడు వారాల తర్వాత అదే పక్షం దీపావళితో ముగుస్తుంది — ఆశ్వయుజం సంవత్సరపు అత్యంత ప్రకాశవంతమైన రెండు పండుగలను ఒకదానికొకటి దగ్గరగా ఉంచుతుంది, ఒకటి పూజది, ఒకటి వెలుగుది." }],
+      gist: [{ roman: "Śarad Navarātri opens the month and closes Cāturmāsya's third leg with it; three weeks later the same fortnight ends in Dīpāvalī, so Āśvayuja carries the year's two brightest observances a breath apart, one of worship and one of light.",
+        deva: "शरद नवरात्रि मास का आरम्भ करती है और उसी के साथ चातुर्मास्य का तीसरा चरण पूर्ण करती है; तीन सप्ताह बाद वही पक्ष दीपावली पर समाप्त होता है — आश्विन वर्ष के दो सबसे उज्ज्वल पर्व एक साँस की दूरी पर रखता है, एक पूजा का, एक प्रकाश का।",
+        tel: "శరత్ నవరాత్రి మాసాన్ని మొదలుపెడుతూనే చాతుర్మాస్యపు మూడో దశను ముగిస్తుంది; మూడు వారాల తర్వాత అదే పక్షం దీపావళితో ముగుస్తుంది — ఆశ్వయుజం సంవత్సరపు అత్యంత ప్రకాశవంతమైన రెండు పండుగలను ఒకదానికొకటి దగ్గరగా ఉంచుతుంది, ఒకటి పూజది, ఒకటి వెలుగుది." }],
       nishtas: [{ span: "chaturmasya" }],
       dana: { roman: "New clothes and sweets for Dīpāvalī are given to the household help and to children too.",
         deva: "दीपावली पर नए वस्त्र और मिठाई घर में काम करने वालों और बच्चों को भी दी जाती है।",
@@ -249,14 +249,9 @@ window.STUTI_MASA = (function () {
     "skanda-shashti": M.kartika, "nrsimha-jayanti": M.vaisakha, "lalita-jayanti": M.magha,
     "sita-navami": M.vaisakha, "parashurama-jayanti": M.vaisakha, "vamana-jayanti": M.bhadrapada,
     "radha-ashtami": M.bhadrapada, "shankara-jayanti": M.vaisakha, "dattatreya-jayanti": M.margashirsha,
-    "hayagriva-jayanti": M.shravana, "raksha-bandhan": M.shravana, "vasanta-panchami": M.magha, "vasanta-navaratri": M.caitra,
+    "hayagriva-jayanti": M.shravana, "vasanta-panchami": M.magha, "vasanta-navaratri": M.caitra,
     "shyamala-navaratri": M.magha, "varahi-navaratri": M.ashadha,
     "yama-tarpanam": M.ashvina, "bhishma-tarpanam": M.magha,
-    /* Kedāreśvara ends on Dīpāvali amāvāsyā, so it belongs to Āśvayuja;
-       Anaghāṣṭamī to Mārgaśīrṣa. Vaibhava Lakṣmī is "any": it is not
-       tied to a month at all, being kept on a number of Fridays the
-       worshipper settles on. */
-    "kedareshwara": M.ashvina, "anaghashtami": M.margashirsha, "vaibhava-lakshmi": "any",
   };
   const NOMU_MASA = {
     "atla-tadde": M.ashvina, "undralla-tadde": M.bhadrapada, "uppu-nomu": M.shravana,

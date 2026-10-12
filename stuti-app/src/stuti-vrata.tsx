@@ -1,12 +1,13 @@
 import React from "react";
 import { STUTI } from "./stuti-data";
+import { STUTI_EKADASHI } from "./stuti-ekadashi-data";
 import { STUTI_L } from "./stuti-i18n";
 import { DeityLink, Icon, Seal, deityStyle } from "./stuti-icons";
 import { STUTI_KEEP } from "./stuti-keep-core";
 import { KeepBell, KeepSpan } from "./stuti-keep";
-import { STUTI_LIB } from "./stuti-library-data";
 import { STUTI_PREFS } from "./stuti-prefs";
 import { STUTI_PROV } from "./stuti-provenance";
+import { STUTI_PURNIMA } from "./stuti-purnima-data";
 import { masaSys } from "./stuti-reckoning";
 import { STUTI_TRANSLIT } from "./stuti-translit";
 import { VidhiJump } from "./stuti-vidhi-jump";
@@ -50,7 +51,10 @@ function vAwayLabel(away, lang) {
 /* a many-day span is told by its start; while it runs, by which day it is */
 function vSpanLabel(entry, lang) {
   const L = STUTI_L;
-  if (entry.dayNo) return L.t("vrataDayOf", lang).replace("{n}", entry.dayNo).replace("{d}", entry.days) + " · " + L.t("vrataEnds", lang).replace("{date}", vDateStr(entry.date, lang));
+  if (entry.dayNo) {
+    const end = new Date(entry.start.getFullYear(), entry.start.getMonth(), entry.start.getDate() + (entry.days || 1) - 1);
+    return L.t("vrataDayOf", lang).replace("{n}", entry.dayNo).replace("{d}", entry.days) + " · " + L.t("vrataEnds", lang).replace("{date}", vDateStr(end, lang));
+  }
   return L.t("vrataBegins", lang).replace("{date}", vDateStr(entry.start, lang)) + " · " + vAwayLabel(entry.away, lang);
 }
 
@@ -76,10 +80,15 @@ function VrataSpanRows({ entry, lang, onOpen, no }) {
         const d = new Date(entry.start.getFullYear(), entry.start.getMonth(), entry.start.getDate() + i);
         const away = Math.round((d - t0) / 86400000);
         const past = away < 0;
+        const dayNo = lang === "telugu" ? (i + 1) + "వ రోజు" : lang === "deva" ? "दिन " + (i + 1) : "Day " + (i + 1);
         return (
           <div key={i} className={"gs-en gs-en-day" + (past ? " soon" : "")}>
             <button className="gs-main" onClick={() => onOpen(v.id)}>
-              <span className="gs-ti"><span className="gs-day-line">{vp3(dl, lang)}</span></span>
+              <span className="gs-no gs-day-no" style={{ fontFamily: font }}>{dayNo}</span>
+              <span className="gs-ti">
+                <span className="gs-day-line">{vp3(dl, lang)}</span>
+                {dl.mark && <span className="gs-day-mark">{vp3(dl.mark, lang)}</span>}
+              </span>
               <span className="gs-dl" />
               <span className={"gs-vc" + (!past && away <= 10 ? " gs-vc-soon" : "")}>{vDateStr(d, lang)}{past ? "" : " · " + vAwayLabel(away, lang)}</span>
             </button>
@@ -91,6 +100,25 @@ function VrataSpanRows({ entry, lang, onOpen, no }) {
 }
 
 /* ---------------- one row in the lens: granthasūcī entry, not a card ---------------- */
+/* a full-moon row reads "[month] Pūrṇimā · [viśeṣa tithi]"; colour the
+   month's pūrṇimā apart from the day's own occasion so the eye finds the
+   month at once. Only when both halves are present — a plain name stays one
+   colour. */
+function vNameColored(name, lang) {
+  const txt = vp3(name, lang);
+  const fold = (s) => (STUTI_TRANSLIT ? STUTI_TRANSLIT.fold(s) : String(s).toLowerCase());
+  const isPur = (p) => fold(p).indexOf("purnima") !== -1 || /పౌర్ణమ|పూర్ణిమ|पूर्णिम/.test(p);
+  const parts = String(txt).split(" · ");
+  const masaIdx = parts.findIndex(isPur);
+  if (masaIdx === -1) return txt;
+  return parts.map((p, i) => (
+    <React.Fragment key={i}>
+      {i > 0 && <span className="gs-nsep"> · </span>}
+      <span className={i === masaIdx ? "gs-n-masa" : "gs-n-visesha"}>{p}</span>
+    </React.Fragment>
+  ));
+}
+
 function VrataRow({ entry, lang, onOpen, no }) {
   if (entry.days > 1 && entry.v.dayLines && entry.v.dayLines.length >= entry.days) return <VrataSpanRows entry={entry} lang={lang} onOpen={onOpen} no={no} />;
   const S = STUTI;
@@ -102,7 +130,7 @@ function VrataRow({ entry, lang, onOpen, no }) {
       {vIsVratam(v) && <KeepBell kind="vrata" id={v.id} lang={lang} />}
       <button className="gs-main" onClick={() => onOpen(v.id)}>
         <span className="gs-no" style={{ fontFamily: font }}>{String(no)}</span>
-        <span className="gs-ti"><span className="gs-d" style={{ fontFamily: font }}>{vp3(v.name, lang)}</span></span>
+        <span className="gs-ti"><span className="gs-d" style={{ fontFamily: font }}>{vNameColored(v.name, lang)}</span></span>
         <span className="gs-dl" />
         <span className={"gs-vc" + (soon ? " gs-vc-soon" : "")}>{entry.days > 1 ? vSpanLabel(entry, lang) : vDateStr(entry.date, lang) + " · " + vAwayLabel(entry.away, lang)}</span>
       </button>
@@ -141,10 +169,14 @@ function VowRow({ v, lang, onOpen, no, entry }) {
   );
 }
 
+/* the lens search query outlives a trip into a detail and back, so opening
+   an Ekādaśī from a search and returning lands on the same results */
+const vrataLensQ = {};
 function VrataLens({ go, lang, onOpen, only = "vratam", ph = "vrataSearchPh", none = "vrataNoMatch" }) {
   const L = STUTI_L, V = STUTI_VRATA;
   useMasaSys();
-  const [q, setQ] = useStateV2("");
+  const [q, setQ0] = useStateV2(() => vrataLensQ[only] || "");
+  const setQ = (val) => { const v = typeof val === "function" ? val(vrataLensQ[only] || "") : val; vrataLensQ[only] = v; setQ0(v); };
   const [tab, setTab] = useStateV2("year");
   const now = new Date();
   const pool = V.upcoming().filter((x) => (only === "vratam" ? vIsVratam(x.v) : !vIsVratam(x.v)));
@@ -155,9 +187,15 @@ function VrataLens({ go, lang, onOpen, only = "vratam", ph = "vrataSearchPh", no
      flat and date-ordered, because "when is Varalakṣmī" is the only
      question a search on this lens is ever asked. */
   const fold = (s) => (STUTI_TRANSLIT ? STUTI_TRANSLIT.fold(s) : String(s).toLowerCase());
-  const qf = fold(q).trim();
-  const hits = qf ? pool.filter((x) => fold([x.v.name.roman, x.v.name.deva, x.v.name.tel, vp3(vRule(x.v), lang) || ""].join(" ")).indexOf(qf) !== -1) : null;
-  const thisMonth = all.filter((x) => x.start.getFullYear() === now.getFullYear() && x.start.getMonth() === now.getMonth());
+  const qf = fold(q).trim().replace(/pournn?am[ia]|poornn?am[ia]|punn?am[ia]|purnami|pornima|pornami|punima|punami/g, "purnima");
+  const hayOf = (v) => { let h = fold([v.name.roman, v.name.deva, v.name.tel].filter(Boolean).join(" ")); if (h.indexOf("purnima") !== -1) h += " " + fold("poornima pournima pournami punnami poornnima pournnami"); return h; };
+  const hits = qf ? pool.filter((x) => hayOf(x.v).indexOf(qf) !== -1)
+    .sort((a, b) => (b.v.everyMonth ? 1 : 0) - (a.v.everyMonth ? 1 : 0)) : null;
+  /* a span that began last month but is still running belongs with this month,
+     not dumped into "coming" behind every later date */
+  const spanEndOf = (x) => new Date(x.start.getFullYear(), x.start.getMonth(), x.start.getDate() + (x.days || 1) - 1);
+  const inThisMonth = (x) => (x.start.getFullYear() === now.getFullYear() && x.start.getMonth() === now.getMonth()) || (x.dayNo && spanEndOf(x) >= now);
+  const thisMonth = all.filter(inThisMonth);
   const later = all.filter((x) => thisMonth.indexOf(x) === -1);
   const monthName = now.toLocaleDateString(vLocale(lang), { month: "long" });
   let n = 0;
@@ -267,6 +305,141 @@ function SamagriList({ vrataId, items, lang }) {
   );
 }
 
+/* ---------------- the named Ekādaśī of this fortnight ----------------
+   The Ekādaśī vratam is one row, but each fortnight's fast has its own
+   name, story and source — and a few are kept their own way. The page
+   reads the pañcāṅga for the coming Ekādaśī, names it, tells it, and
+   closes with the keeping shared by all twenty-six. */
+function EkadashiNamed({ v, lang, font }) {
+  const E = STUTI_EKADASHI, V = STUTI_VRATA;
+  if (!E) return null;
+  const named = E.byId(v.id);
+  const date = V.nextDate(v);
+  const ek = named || (date ? E.pick(date) : null);
+  if (!ek) return null;
+  const g = (o) => vp3(o, lang);
+  const lbl = (r, d, t) => (lang === "telugu" ? t : lang === "deva" ? d : r);
+  return (
+    <React.Fragment>
+      <div className="vr-sect ek-named">
+        <div className="eyebrow">{named ? lbl("The Ekādaśī", "एकादशी", "ఏకాదశి") : lbl("This fortnight’s Ekādaśī", "इस पक्ष की एकादशी", "ఈ పక్షపు ఏకాదశి")}</div>
+        <h2 className="ek-name display" style={{ fontFamily: font }}>{g(ek.name)}</h2>
+        <div className="ek-when">{g(ek.when)}</div>
+        {ek.also && <div className="ek-also">{lbl("Also", "अन्य नाम", "ఇతర పేర్లు")} · {g(ek.also)}</div>}
+        {ek.differs && <div className="ek-flag">{lbl("Kept its own way", "अपने ढंग से रखी जाती है", "దీనికి సొంత నియమం ఉంది")}</div>}
+      </div>
+      <div className="vr-sect">
+        <div className="eyebrow">{lbl("Introduction", "आरंभिक संवाद", "పూర్వభాగం")}</div>
+        <p className="vr-para">{g(ek.meaning)}</p>
+      </div>
+      <div className="vr-sect">
+        <div className="eyebrow">{lbl("The story", "कथा", "కథ")}</div>
+        <p className="vr-para">{g(ek.story)}</p>
+        <div className="vr-source" style={{ marginTop: 12 }}>{g(ek.source)}</div>
+      </div>
+      {ek.differs && ek.niyama && (
+        <div className="vr-sect ek-differs">
+          <div className="eyebrow">{lbl("How this one is kept", "इसका अपना नियम", "దీని ప్రత్యేక నియమం")}</div>
+          <p className="vr-para">{g(ek.niyama)}</p>
+        </div>
+      )}
+      <div className="vr-sect ek-shared">
+        <div className="eyebrow">{lbl("The keeping, for every Ekādaśī", "नियम, हर एकादशी के लिए", "ప్రతి ఏకాదశికీ నియమం")}</div>
+        {[["The fast", "उपवास", "ఉపవాసం", E.shared.fast],
+          ["Which day — the viddha rule", "कौन-सा दिन — विद्धा नियम", "ఏ రోజు — విద్ధ నియమం", E.shared.viddha],
+          ["Breaking the fast — the pāraṇa", "पारण", "పారణ", E.shared.parana]].map(([r, d, t, body], i) => (
+          <div className="ek-rule" key={i}>
+            <div className="ek-rule-h display" style={{ fontFamily: font }}>{lbl(r, d, t)}</div>
+            <p className="vr-para">{g(body)}</p>
+          </div>
+        ))}
+      </div>
+    </React.Fragment>
+  );
+}
+
+/* ---------------- the pūrṇimā of this month ----------------
+   Most full moons carry a story the elders tell — Hanumān on Caitra,
+   Vyāsa on Āṣāḍha, the three cities on Kārtika. A roster entry that
+   is a pūrṇimā, or a jayantī kept on one, opens with that month's
+   account; Satyanārāyaṇa opens with its own vratakathā instead. */
+function PurnimaNamed({ v, lang, font }) {
+  const Pu = STUTI_PURNIMA, V = STUTI_VRATA;
+  if (!Pu) return null;
+  const g = (o) => vp3(o, lang);
+  const lbl = (r, d, t) => (lang === "telugu" ? t : lang === "deva" ? d : r);
+  const paras = (s) => String(s || "").split(/\n\n+/).map((x) => x.trim()).filter(Boolean);
+  const Para = ({ src }) => paras(g(src)).map((p, i) => <p className="vr-para" key={i}>{p}</p>);
+
+  if (v.id === "satyanarayana") {
+    const s = Pu.satya;
+    return (
+      <React.Fragment>
+        <div className="vr-sect ek-named">
+          <div className="eyebrow">{lbl("The vratakathā", "व्रतकथा", "వ్రతకథ")}</div>
+          <h2 className="ek-name display" style={{ fontFamily: font }}>{g(s.name)}</h2>
+          <div className="ek-when">{g(s.lead)}</div>
+        </div>
+        {s.chapters.map((c, i) => (
+          <div className="vr-sect" key={i}>
+            <div className="eyebrow">{lbl("Chapter", "अध्याय", "అధ్యాయం")} {c.num}</div>
+            <div className="ek-rule-h display" style={{ fontFamily: font }}>{g(c.title)}</div>
+            <Para src={c.body} />
+          </div>
+        ))}
+        {s.niyama && g(s.niyama) && (
+          <div className="vr-sect ek-differs">
+            <div className="eyebrow">{lbl("How it is kept", "इसका नियम", "దీని నియమం")}</div>
+            <Para src={s.niyama} />
+          </div>
+        )}
+        <div className="vr-sect"><div className="vr-source">{g(s.source)}</div></div>
+      </React.Fragment>
+    );
+  }
+
+  const pur = Pu.forVrata(v.id) || (V.nextDate(v) ? Pu.pick(V.nextDate(v)) : null);
+  if (!pur) return null;
+  return (
+    <React.Fragment>
+      <div className="vr-sect ek-named">
+        <div className="eyebrow">{lbl("The Pūrṇimā", "पूर्णिमा", "పౌర్ణమి")}</div>
+        <h2 className="ek-name display" style={{ fontFamily: font }}>{g(pur.name)}</h2>
+        <div className="ek-when">{g(pur.when)}</div>
+      </div>
+      {g(pur.meaning) && (
+        <div className="vr-sect">
+          <div className="eyebrow">{lbl("Introduction", "आरंभिक संवाद", "పూర్వభాగం")}</div>
+          <Para src={pur.meaning} />
+        </div>
+      )}
+      <div className="vr-sect">
+        <div className="eyebrow">{lbl("The story", "कथा", "కథ")}</div>
+        <Para src={pur.story} />
+        <div className="vr-source" style={{ marginTop: 12 }}>{g(pur.source)}</div>
+      </div>
+      {g(pur.connection) && (
+        <div className="vr-sect">
+          <div className="eyebrow">{lbl("The full-moon connection", "पूर्णिमा से संबंध", "పౌర్ణమి సంబంధం")}</div>
+          <Para src={pur.connection} />
+        </div>
+      )}
+      {pur.festival && g(pur.festival) && (
+        <div className="vr-sect">
+          <div className="eyebrow">{lbl("The festival account", "उत्सव-परम्परा", "పండుగ కథ")}</div>
+          <Para src={pur.festival} />
+        </div>
+      )}
+      {pur.differs && pur.niyama && g(pur.niyama) && (
+        <div className="vr-sect ek-differs">
+          <div className="eyebrow">{lbl("How this one is kept", "इसका अपना नियम", "దీని నియమం")}</div>
+          <Para src={pur.niyama} />
+        </div>
+      )}
+    </React.Fragment>
+  );
+}
+
 /* ---------------- the guide ---------------- */
 function VrataDetail({ vrataId, go, lang, onBack }) {
   const S = STUTI, L = STUTI_L, V = STUTI_VRATA;
@@ -277,6 +450,10 @@ function VrataDetail({ vrataId, go, lang, onBack }) {
   const date = V.nextDate(v);
   const away = date ? V.daysAway(date) : null;
   const font = vFont(lang);
+  const E = STUTI_EKADASHI;
+  const isEk = !!(E && (v.id === "ekadashi" || E.byId(v.id) || v.asEkadashi));
+  const Pu = STUTI_PURNIMA;
+  const isPur = !isEk && !!(Pu && Pu.hasVrata(v.id));
 
   return (
     <div className="view libhub scroll" style={deityStyle(d, { flex: 1 })}>
@@ -292,7 +469,7 @@ function VrataDetail({ vrataId, go, lang, onBack }) {
               <h1 className="deity-hero-name display" style={{ fontFamily: font }}>{vp3(v.name, lang)}</h1>
               <div className="deity-hero-epithet">{vp3(vRule(v), lang)}</div>
             </div>
-            {VidhiJump && <VidhiJump hymnId={v.vidhiText} deity={v.deity} go={go} lang={lang} />}
+            {VidhiJump && !isEk && !isPur && <VidhiJump hymnId={v.vidhiText} deity={v.deity} go={go} lang={lang} />}
           </div>
           <p className="deity-hero-line">{vp3(v.tagline, lang)}</p>
           {date && (
@@ -312,11 +489,11 @@ function VrataDetail({ vrataId, go, lang, onBack }) {
         {/* the two things a reciter opens the page for: the vidhānam of the day and,
            where the day carries one, its pārāyaṇa. Both stand at the top rather
            than under the reading; neither is written yet, so both say so. */}
-        {(!v.vidhi || v.parayana) && (
+        {((!v.vidhi && !isEk && !isPur) || v.parayana) && (
         <div className="vr-sect vr-open">
           {/* the placeholder only stands where no procedure has been keyed yet — a
              rite that carries its own vidhi says so ten steps further down */}
-          {!v.vidhi && (
+          {!v.vidhi && !isEk && !isPur && (
           <div className="vr-open-row is-soon" aria-disabled="true">
             <span className="vr-open-mark"><Icon name="diya" size={22} /></span>
             <span className="vr-row-body">
@@ -339,7 +516,10 @@ function VrataDetail({ vrataId, go, lang, onBack }) {
         </div>
         )}
 
-        {v.brief && <div className="vr-brief">{L.t("vrataBrief", lang)}</div>}
+        {isEk && <EkadashiNamed v={v} lang={lang} font={font} />}
+        {isPur && <PurnimaNamed v={v} lang={lang} font={font} />}
+
+        {v.brief && !isEk && !isPur && <div className="vr-brief">{L.t("vrataBrief", lang)}</div>}
 
         {v.samagri && <SamagriList vrataId={v.id} items={v.samagri} lang={lang} />}
 
@@ -386,12 +566,6 @@ function VrataDetail({ vrataId, go, lang, onBack }) {
                   <span className="vr-vidhi-body">
                     <span className="vr-vidhi-step display" style={{ fontFamily: font }}>{vp3(s.step, lang)}</span>
                     <span className="vr-vidhi-detail">{vp3(s.detail, lang)}</span>
-                    {s.mantra && (
-                      <div className="vr-vidhi-verse" style={{ fontFamily: font }}>
-                        <p className="vr-vidhi-verse-text">{vp3(s.mantra, lang)}</p>
-                        {s.mantraMeaning && <p className="vr-vidhi-verse-meaning">{vp3(s.mantraMeaning, lang)}</p>}
-                      </div>
-                    )}
                   </span>
                 </li>
               ))}
@@ -467,23 +641,9 @@ function VrataDetail({ vrataId, go, lang, onBack }) {
           </div>
         )}
 
-        {/* the texts the day names, opened straight into the reader; the deity's
-           own shelf stays below it for everything else */}
+        {/* the app names no hymn for a day; the reader chooses from the deity's shelf */}
         <div className="vr-sect">
-          <div className="eyebrow">{L.t("alsoRecite", lang)}</div>
-          {(() => {
-            const LB = STUTI_LIB;
-            const named = (LB && LB.resolveStotras ? LB.resolveStotras(v.stotras) : []).filter((h) => h && !h.catalog);
-            if (!named.length) return null;
-            return (
-              <div className="parva-chips" style={{ marginBottom: 12 }}>
-                {named.map((h) => (
-                  <button key={h.id} className="parva-chip" style={{ fontFamily: vFont(lang) }}
-                    onClick={() => go("reader", { deity: h.deity, hymn: h.id, from: "browse" })}>{L.hymnTitle(h, lang)}</button>
-                ))}
-              </div>
-            );
-          })()}
+          <div className="eyebrow">{L.t("toRecite", lang)}</div>
           <DeityLink d={d} go={go} lang={lang} />
         </div>
 
@@ -505,8 +665,8 @@ function VrataDetail({ vrataId, go, lang, onBack }) {
         )}
 
         {v.source && <div className="vr-source">{vp3(v.source, lang)}</div>}
-        {v.prov && STUTI_PROV && <div className="vr-source vr-prov">{STUTI_PROV.typeName(v, lang)} · {STUTI_PROV.line(v, lang)}</div>}
-        {v.brief && !v.source && <div className="vr-caveat">{L.t("vrataNote", lang)}</div>}
+        {v.prov && STUTI_PROV && !isEk && <div className="vr-source vr-prov">{STUTI_PROV.typeName(v, lang)} · {STUTI_PROV.line(v, lang)}</div>}
+        {v.brief && !v.source && !isEk && <div className="vr-caveat">{L.t("vrataNote", lang)}</div>}
         <div style={{ height: 40 }} />
       </div>
     </div>

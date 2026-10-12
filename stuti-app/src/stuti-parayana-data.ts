@@ -64,7 +64,7 @@ export const STUTI_PARAYANA = (function () {
         { span: { roman: "Three days", deva: "तीन दिन", tel: "మూడు రోజులు" }, how: { roman: "One carita a day — prathama, madhyama, uttama.", deva: "प्रतिदिन एक चरित — प्रथम, मध्यम, उत्तम।", tel: "రోజుకు ఒక చరితం — ప్రథమ, మధ్యమ, ఉత్తమ." } },
         { span: { roman: "One day", deva: "एक दिन", tel: "ఒక రోజు" }, how: { roman: "The whole seven hundred in a single sitting, usually on Aṣṭamī or Navamī.", deva: "एक ही आसन में सम्पूर्ण सप्तशती — प्रायः अष्टमी या नवमी को।", tel: "ఒకే ఆసనంలో మొత్తం సప్తశతి — సాధారణంగా అష్టమి లేదా నవమి నాడు." } },
       ],
-      when: { roman: "Śāradīya and Vāsantika Navarātri above all; also Aṣṭamī of any month.", deva: "शारदीय और वासन्तिक नवरात्रि; किसी भी मास की अष्टमी भी।", tel: "శారదీయ, వాసంతిక నవరాత్రులు ముఖ్యం; ఏ మాసపు అష్టమి అయినా." },
+      when: { roman: "Śarad and Vāsantika Navarātri above all; also Aṣṭamī of any month.", deva: "शरद और वासन्तिक नवरात्रि; किसी भी मास की अष्टमी भी।", tel: "శరత్, వాసంతిక నవరాత్రులు ముఖ్యం; ఏ మాసపు అష్టమి అయినా." },
     },
     {
       id: "bhagavad-gita", deity: "vishnu",

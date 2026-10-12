@@ -24,6 +24,8 @@ function PrepSheet({ occ, lang, onClose }) {
   const [copied, setCopied] = usePrS(false);
   const [limAsk, setLimAsk] = usePrS(false);
   const [note, setNote] = usePrS("");
+  const [watch, setWatch] = usePrS(() => P.enrolled(v.id));
+  const toggleWatch = () => { P.toggleVrata(v.id); setWatch(P.enrolled(v.id)); };
   /* sharing and printing are open. The monthly meter that stood here was a
      placeholder for a paid plan nobody has decided on; until someone does,
      nothing in the app is held back. */
@@ -66,6 +68,10 @@ function PrepSheet({ occ, lang, onClose }) {
           <div className="rm-head-title display" style={{ fontFamily: L.font(lang) }}>{prName(v, lang)}</div>
           <div className="rm-head-sub">{dateStr} · {prAway(occ.away, lang)}</div>
         </div>
+        <button className={"rm-toggle prep-watch-toggle" + (watch ? " on" : "")} onClick={toggleWatch} role="switch" aria-checked={watch}>
+          <span>{L.t("prepWatchThis", lang)}</span>
+          <span className="rm-switch"><i /></span>
+        </button>
         <div className="pd-body scroll">
           {its.length ? (
             <React.Fragment>

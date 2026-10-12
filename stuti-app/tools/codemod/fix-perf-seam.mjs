@@ -47,7 +47,7 @@ patchFile("stuti-vrata-data.ts", [
     return v;
   };
   vratas.forEach((v) => memoFind(v));
-  const byId = {};`, "the find memo, before the id index"],
+  const byId = {};`, "the find memo, before the id index", { have: "const FIND_CACHE" }],
   [`  const personal = () => { try { return STUTI_TITHIS ? STUTI_TITHIS.vratas() : []; } catch (e) { return []; } };`,
    `  const personal = () => { try { return STUTI_TITHIS ? STUTI_TITHIS.vratas().map((v) => memoFind(v, JSON.stringify(v, (k, x) => (typeof x === "function" ? undefined : x)))) : []; } catch (e) { return []; } };`,
    "personal tithis memoised by their own rule"],

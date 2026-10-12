@@ -16,6 +16,7 @@ const TT = {
   empty:    { roman: "No tithis of your own yet.", deva: "अभी आपकी कोई तिथि नहीं।", telugu: "మీ తిథులు ఇంకా లేవు." },
   who:      { roman: "Whose day, or what", deva: "किसका दिन, या क्या — अंग्रेज़ी अक्षरों में", telugu: "ఎవరి రోజు, లేదా ఏమిటి — ఇంగ్లిష్ అక్షరాలలో" },
   whoPh:    { roman: "e.g. amma janma tithi", deva: "जैसे — amma janma tithi", telugu: "ఉదా. amma janma tithi" },
+  whoPhSh:  { roman: "e.g. nanna abdikam", deva: "जैसे — nanna abdikam", telugu: "ఉదా. nanna abdikam" },
   whoAlso:  { roman: "Written out in Hindi and Telugu too. Correct either one if it is wrong.", deva: "हिन्दी और तेलुगु में भी लिखा गया। कोई ठीक न हो तो सुधार लें।", telugu: "హిందీ, తెలుగులలో కూడా వ్రాయబడింది. సరిగా లేకపోతే సరిదిద్దండి." },
   nmRoman:  { roman: "In English", deva: "अंग्रेज़ी में", telugu: "ఇంగ్లిష్‌లో" },
   nmDeva:   { roman: "In Hindi", deva: "हिन्दी में", telugu: "హిందీలో" },
@@ -279,7 +280,7 @@ function TithiSheet({ lang = "deva", rec, seedDate, onClose }) {
             {kind === "shraddha" && <p className="fb-hint">{ttT("shraddhaNote", lang)}</p>}
             <label className="acc-field" style={{ marginTop: 14 }}>
               <span>{ttT("who", lang)}</span>
-              <input value={nm.roman} onChange={(e) => setNmK("roman", e.target.value)} placeholder={ttT("whoPh", lang)} />
+              <input value={nm.roman} onChange={(e) => setNmK("roman", e.target.value)} placeholder={ttT(kind === "shraddha" ? "whoPhSh" : "whoPh", lang)} />
             </label>
             <p className="fb-hint" style={{ margin: "10px 2px 0" }}>{ttT("whoAlso", lang)}</p>
             {["deva", "tel"].map((k) => (

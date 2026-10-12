@@ -58,9 +58,16 @@ export function patcher(seam, text, mode = "port") {
     get text() { return text; },
     set text(v) { text = v; },
     stats,
-    /** opts.port: true — this patch only makes sense in the port (an import line, say). */
+    /** opts.port: true — this patch only makes sense in the port (an import line, say).
+     *  opts.have: a short marker naming what this patch introduces. When the
+     *  design already carries the patch but has moved the anchor away from it,
+     *  the whole replacement no longer matches as one contiguous run and the
+     *  upstream test below cannot see it — it would then be applied a second
+     *  time, declaring the same consts twice. A marker the seam names itself
+     *  settles that case without weakening the anchor check for any other. */
     patch(from, to, what, opts = {}) {
       if (opts.port && mode !== "port") return;
+      if (opts.have && text.includes(opts.have)) { stats.upstream++; return; }
       if (mode === "port") {
         const bare = stripTs(to);
         const done = to.includes(from) ? text.includes(to) : !text.includes(from) && text.includes(to);

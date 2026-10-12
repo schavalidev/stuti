@@ -186,6 +186,11 @@ function CompassDial({ lang, loc }) {
      from wherever the phone happened to lie when the page loaded, so taking
      that reading would point the mark at a direction that is not north.
      Both listeners stay — whichever carries a true heading is used. */
+  /* What the sensor did when it was last asked: nothing yet, nothing at all
+     (a desktop, or a phone with no magnetometer — the watchdog finds this),
+     or refused. The counter needs this to say something true rather than ask
+     again for a thing that has already failed. */
+  const [sensorSays, setSensorSays] = useCpS(null);   // null | "none" | "refused"
   const gotRef = useCpR(false);
   useCpE(() => {
     if (!on || !has) return;
@@ -197,6 +202,7 @@ function CompassDial({ lang, loc }) {
       else if (e.absolute === true && typeof e.alpha === "number" && !isNaN(e.alpha)) h = (360 - e.alpha) % 360;
       if (h == null) return;
       gotRef.current = true;
+      setSensorSays(null);
       setHd(h);
     };
     window.addEventListener("deviceorientationabsolute", handler, true);
@@ -206,15 +212,18 @@ function CompassDial({ lang, loc }) {
        one arrived is kept in a ref: a reading does not re-run this effect,
        so the state read here would always be the null it was created with,
        and the dial would put itself out five seconds after every tap. */
-    const t = setTimeout(() => { if (live && !gotRef.current) { setOn(false); remember(false); } }, 5000);
+    const t = setTimeout(() => { if (live && !gotRef.current) { setOn(false); remember(false); setSensorSays("none"); } }, 5000);
     return () => { live = false; clearTimeout(t); window.removeEventListener("deviceorientationabsolute", handler, true); window.removeEventListener("deviceorientation", handler, true); };
   }, [on]);
 
   const sensor = () => {
     if (on) { setOn(false); setHd(null); gotRef.current = false; remember(false); return; }
+    setSensorSays(null);
     const DOE = window.DeviceOrientationEvent;
     if (DOE && typeof DOE.requestPermission === "function") {
-      DOE.requestPermission().then((r) => { if (r === "granted") { gotRef.current = false; setOn(true); remember(true); } }).catch(() => {});
+      DOE.requestPermission()
+        .then((r) => { if (r === "granted") { gotRef.current = false; setOn(true); remember(true); } else setSensorSays("refused"); })
+        .catch(() => setSensorSays("refused"));
     } else { gotRef.current = false; setOn(true); remember(true); }
   };
   /* A round is the heading sweeping a whole turn in one sense. Successive
@@ -415,7 +424,21 @@ function CompassDial({ lang, loc }) {
 
             <div className="cp-cap" style={{ fontFamily: font }}>{L.t("pradDik", lang)}</div>
             {hd == null ? (
-              <div className="cp-note" style={{ fontFamily: font }}>{L.t("pradNeedsCompass", lang)}</div>
+              <React.Fragment>
+                {sensorSays && (
+                  <div className="cp-note" style={{ fontFamily: font }}>
+                    {L.t(sensorSays === "refused" ? "pradRefused" : "pradNoSensor", lang)}
+                  </div>
+                )}
+                {/* The switch for the compass is three sections up this sheet under
+                    a different name, and a reciter about to walk should not have to
+                    go and find it. The switch also stands after a failure: a sensor
+                    that gave nothing once may give a reading later, and with the
+                    listener off nothing else can ever clear that verdict. */}
+                <button type="button" className="cp-prad-on" onClick={sensor} style={{ fontFamily: font }}>
+                  {L.t(on ? "compassWait" : sensorSays ? "pradTryAgain" : "pradNeedsCompass", lang)}
+                </button>
+              </React.Fragment>
             ) : (
               <div className="cp-prad">
                 <div className="cp-prad-top">

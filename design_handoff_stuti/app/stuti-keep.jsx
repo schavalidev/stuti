@@ -256,6 +256,22 @@ function ntShortDate(key, lang) {
   return new Date(key + "T12:00:00").toLocaleDateString(lang === "telugu" ? "te-IN" : lang === "deva" ? "hi-IN" : "en-IN", { day: "numeric", month: "short", year: "numeric" });
 }
 
+/* A vow's thread begins on the day it was taken up. The fortnight window is
+   anchored to that start while the vow is younger than it, so the beads fill
+   from the left instead of from the right edge backwards; once the vow
+   outgrows the window the thread slides with the days, as every thread does. */
+const NT_SPAN = 14, NT_DAY = 86400000;
+function ntWindow(start) {
+  if (!start) return undefined;
+  const s = new Date(start + "T12:00:00");
+  if (isNaN(s.getTime())) return undefined;
+  const age = Math.floor((Date.now() - s.getTime()) / NT_DAY);
+  if (age >= NT_SPAN - 1) return undefined;
+  const out = [];
+  for (let i = 0; i < NT_SPAN; i++) out.push(new Date(s.getTime() + i * NT_DAY));
+  return out;
+}
+
 function NomuTrackerRow({ k, lang, go, K, eng }) {
   const L = window.STUTI_L, MA = window.STUTI_MASA, S = window.STUTI;
   const [armed, setArmed] = useStateK(null);
@@ -294,7 +310,7 @@ function NomuTrackerRow({ k, lang, go, K, eng }) {
 
       {k.mode === "daily" && !k.kept && (
         <div className="nt-track">
-          <window.Thread read={(dd) => ({ v: k.ticks.indexOf(K.dkey(dd)) >= 0 ? 1 : 0 })} onDay={(x) => K.tick(k.id, x.key)} />
+          <window.Thread days={ntWindow(k.start)} read={(dd) => ({ v: k.ticks.indexOf(K.dkey(dd)) >= 0 ? 1 : 0 })} onDay={(x) => K.tick(k.id, x.key)} />
           <div className="nt-year">
             <div className="keep-bar"><span style={{ width: pct + "%" }} /></div>
             <span className="nt-track-n">{k.ticks.length}<i>/{K.YEAR}</i></span>
@@ -328,7 +344,7 @@ function NomuTracker({ go, lang = "telugu" }) {
   const font = L.font(lang);
   const items = K.list().filter((k) => k.kind === "nomu");
   const eng = K.engines();
-  const toLib = () => go("browse", { reset: true, libLens: "nomu" });
+  const toLib = () => go("browse", { reset: true, libLens: "nomu", libRet: "daily" });
   return (
     <div className="vows keep nt">
       <div className="vows-head">

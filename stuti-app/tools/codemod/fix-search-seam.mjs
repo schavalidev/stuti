@@ -150,8 +150,12 @@ sub(
   "the search's voice button",
 );
 sub(
-  `  const [q, setQ] = useStateM("");`,
-  `  const [q, setQ] = useStateM("");
+  /* The designer gave the query an initial value (12 Oct 2026), so the anchor
+     is the whole declaration as she now writes it. Matching the line and not
+     just its opening is deliberate: this step is the one that would silently
+     attach the ref to the wrong state if the shape of it ever changed again. */
+  `  const [q, setQ] = useStateM(() => initialQuery || "");`,
+  `  const [q, setQ] = useStateM(() => initialQuery || "");
   const wasTyped = useRefM("");   // search seam: given back if a dictation hears nothing`,
   "the search's query state",
 );
@@ -208,7 +212,7 @@ sub(
           {searchOpen && (
             <div className="sr-scrim" onClick={() => go(route.from || "browse")}>
               <div className="sr-sheet" onClick={(e) => e.stopPropagation()}>
-                <SearchView key="search" go={go} lang={lang} backView={route.from || "browse"} weekday={route.weekday} voice={!!route.voice} />
+                <SearchView key="search" go={go} lang={lang} backView={route.from || "browse"} weekday={route.weekday} voice={!!route.voice} initialQuery={route.q || ""} />
               </div>
             </div>
           )}

@@ -44,18 +44,31 @@ window.STUTI_BACKLOG_EXTRA = (function () {
     R("saubhagya-gauri", C, 2, "devi", "vratam", "Saubhāgya Gaurī Vratam", "सौभाग्य गौरी व्रतम्", "సౌభాగ్య గౌరీ వ్రతం"),
     R("matsya-jayanti", C, 2, "vishnu", "jayanti", "Matsya Jayantī", "मत्स्य जयन्ती", "మత్స్య జయంతి"),
     R("kamada-ekadashi", C, 10, "vishnu", "vratam", "Kāmadā Ekādaśī", "कामदा एकादशी", "కామదా ఏకాదశి"),
+    /* the second Ekādaśī of each month, which the list had been missing */
+    R("papamocani-ekadashi", C, 25, "vishnu", "vratam", "Pāpamocanī Ekādaśī", "पापमोचनी एकादशी", "పాపమోచని ఏకాదశి"),
+    R("varuthini-ekadashi", VA, 25, "vishnu", "vratam", "Varūthinī Ekādaśī", "वरूथिनी एकादशी", "వరూథినీ ఏకాదశి"),
+    R("apara-ekadashi", JY, 25, "vishnu", "vratam", "Aparā Ekādaśī", "अपरा एकादशी", "అపరా ఏకాదశి"),
+    R("yogini-ekadashi", AS, 25, "vishnu", "vratam", "Yoginī Ekādaśī", "योगिनी एकादशी", "యోగినీ ఏకాదశి"),
+    R("kamika-ekadashi", SR, 25, "vishnu", "vratam", "Kāmikā Ekādaśī", "कामिका एकादशी", "కామికా ఏకాదశి"),
+    R("pashankusha-ekadashi", AV, 10, "vishnu", "vratam", "Pāśāṅkuśā Ekādaśī", "पाशाङ्कुशा एकादशी", "పాశాంకుశా ఏకాదశి"),
+    R("indira-ekadashi", AV, 25, "vishnu", "vratam", "Indirā Ekādaśī", "इन्दिरा एकादशी", "ఇందిరా ఏకాదశి"),
+    R("rama-ekadashi", KA, 25, "vishnu", "vratam", "Ramā Ekādaśī", "रमा एकादशी", "రమా ఏకాదశి"),
+    R("utpanna-ekadashi", MA, 25, "vishnu", "vratam", "Utpannā Ekādaśī", "उत्पन्ना एकादशी", "ఉత్పన్నా ఏకాదశి"),
+    R("pausha-putrada-ekadashi", PU, 10, "vishnu", "vratam", "Pauṣa Putradā Ekādaśī", "पौष पुत्रदा एकादशी", "పుష్య పుత్రదా ఏకాదశి"),
+    R("saphala-ekadashi", PU, 25, "vishnu", "vratam", "Saphalā Ekādaśī", "सफला एकादशी", "సఫలా ఏకాదశి"),
+    R("shattila-ekadashi", MG, 25, "vishnu", "vratam", "Ṣaṭtilā Ekādaśī", "षट्तिला एकादशी", "షట్తిలా ఏకాదశి"),
     R("caitra-purnima", C, 14, "vishnu", "parva", "Caitra Pūrṇimā", "चैत्र पूर्णिमा", "చైత్ర పౌర్ణమి"),
     /* Vaiśākha */
     R("akshaya-tritiya", VA, 2, "vishnu", "parva", "Akṣaya Tṛtīyā", "अक्षय तृतीया", "అక్షయ తృతీయ"),
     R("ganga-saptami", VA, 6, "devi", "parva", "Gaṅgā Saptamī", "गङ्गा सप्तमी", "గంగా సప్తమి"),
     R("vasavi-jayanti", VA, 9, "devi", "jayanti", "Vāsavī Kanyakā Parameśvarī Jayantī", "वासवी कन्यका परमेश्वरी जयन्ती", "వాసవీ కన్యకా పరమేశ్వరీ జయంతి"),
     R("mohini-ekadashi", VA, 10, "vishnu", "vratam", "Mohinī Ekādaśī", "मोहिनी एकादशी", "మోహినీ ఏకాదశి"),
-    R("kurma-jayanti", VA, 14, "vishnu", "jayanti", "Kūrma Jayantī", "कूर्म जयन्ती", "కూర్మ జయంతి"),
-    R("buddha-purnima", VA, 14, "vishnu", "jayanti", "Buddha Pūrṇimā", "बुद्ध पूर्णिमा", "బుద్ధ పౌర్ణమి"),
-    R("annamacharya-jayanti", VA, 14, "guru", "jayanti", "Annamācārya Jayantī", "अन्नमाचार्य जयन्ती", "అన్నమాచార్య జయంతి"),
+    R("kurma-jayanti", VA, 14, "vishnu", "jayanti", "Vaiśākha Pūrṇimā · Kūrma Jayantī", "वैशाख पूर्णिमा · कूर्म जयन्ती", "వైశాఖ పౌర్ణమి · కూర్మ జయంతి"),
+    R("buddha-purnima", VA, 14, "vishnu", "jayanti", "Vaiśākha Pūrṇimā · Buddha Pūrṇimā", "वैशाख पूर्णिमा · बुद्ध पूर्णिमा", "వైశాఖ పౌర్ణమి · బుద్ధ పౌర్ణమి"),
+    R("annamacharya-jayanti", VA, 14, "guru", "jayanti", "Vaiśākha Pūrṇimā · Annamācārya Jayantī", "वैशाख पूर्णिमा · अन्नमाचार्य जयन्ती", "వైశాఖ పౌర్ణమి · అన్నమాచార్య జయంతి"),
     R("narada-jayanti", VA, 15, "guru", "jayanti", "Nārada Jayantī", "नारद जयन्ती", "నారద జయంతి"),
     /* Jyeṣṭha */
-    R("snana-yatra", JY, 14, "vishnu", "parva", "Jagannātha Snāna Yātrā", "जगन्नाथ स्नान यात्रा", "జగన్నాథ స్నాన యాత్ర"),
+    R("snana-yatra", JY, 14, "vishnu", "parva", "Jyeṣṭha Pūrṇimā · Jagannātha Snāna Yātrā", "ज्येष्ठ पूर्णिमा · जगन्नाथ स्नान यात्रा", "జ్యేష్ఠ పౌర్ణమి · జగన్నాథ స్నాన యాత్ర"),
     /* Āṣāḍha */
     R("devashayani-ekadashi", AS, 10, "vishnu", "vratam", "Devaśayanī Ekādaśī", "देवशयनी एकादशी", "దేవశయనీ ఏకాదశి"),
     /* Śrāvaṇa */
@@ -96,7 +109,7 @@ window.STUTI_BACKLOG_EXTRA = (function () {
       find: (y) => { const d = monthStart(y, MA); if (!d) return null; while (d.getDay() !== 4) d.setDate(d.getDate() + 1); return d; },
     }),
     R("mitra-saptami", MA, 6, "surya", "parva", "Mitra Saptamī", "मित्र सप्तमी", "మిత్ర సప్తమి"),
-    R("annapurna-jayanti", MA, 14, "devi", "jayanti", "Annapūrṇā Jayantī · Mārgaśīrṣa Pūrṇimā", "अन्नपूर्णा जयन्ती · मार्गशीर्ष पूर्णिमा", "అన్నపూర్ణా జయంతి · మార్గశిర పౌర్ణమి"),
+    R("annapurna-jayanti", MA, 14, "devi", "jayanti", "Mārgaśīrṣa Pūrṇimā · Annapūrṇā Jayantī", "मार्गशीर्ष पूर्णिमा · अन्नपूर्णा जयन्ती", "మార్గశిర పౌర్ణమి · అన్నపూర్ణా జయంతి"),
     /* Pauṣa */
     R("bhogi", PU, 0, "surya", "parva", "Bhogi", "भोगि", "భోగి", {
       rule: { roman: "The day before Makara Saṅkrānti", deva: "मकर सङ्क्रान्ति से एक दिन पूर्व", tel: "మకర సంక్రాంతికి ముందు రోజు" },
@@ -104,7 +117,7 @@ window.STUTI_BACKLOG_EXTRA = (function () {
     R("kanuma", PU, 0, "surya", "parva", "Kanuma · Mukkanuma", "कनुमा · मुक्कनुमा", "కనుమ · ముక్కనుమ", { days: 2,
       rule: { roman: "The two days after Makara Saṅkrānti", deva: "मकर सङ्क्रान्ति के बाद के दो दिन", tel: "మకర సంక్రాంతి తరువాతి రెండు రోజులు" },
       find: (y) => { try { const d = P().sankrantiDay(y, 9); if (!d) return null; const b = new Date(d); b.setDate(b.getDate() + 1); return b; } catch (e) { return null; } } }),
-    R("shakambhari-purnima", PU, 14, "devi", "parva", "Śākambharī Pūrṇimā", "शाकम्भरी पूर्णिमा", "శాకంభరీ పౌర్ణమి"),
+    R("shakambhari-purnima", PU, 14, "devi", "parva", "Pauṣa Pūrṇimā · Śākambharī Jayantī", "पौष पूर्णिमा · शाकम्भरी जयन्ती", "పుష్య పౌర్ణమి · శాకంభరీ జయంతి"),
     R("sakata-caturthi", PU, 18, "ganesha", "vratam", "Sakaṭa Caturthī", "सकट चौथ", "సకట చతుర్థి"),
     /* Māgha */
     R("magha-snana", MG, 0, "vishnu", "seasonal", "Māgha Snāna", "माघ स्नान", "మాఘ స్నానం", { days: 30, quiet: true,
@@ -116,8 +129,8 @@ window.STUTI_BACKLOG_EXTRA = (function () {
     R("vijaya-ekadashi", MG, 25, "vishnu", "vratam", "Vijayā Ekādaśī", "विजया एकादशी", "విజయా ఏకాదశి"),
     /* Phālguna */
     R("amalaki-ekadashi", PH, 10, "vishnu", "vratam", "Āmalakī Ekādaśī", "आमलकी एकादशी", "ఆమలకీ ఏకాదశి"),
-    R("lakshmi-jayanti", PH, 14, "devi", "jayanti", "Lakṣmī Jayantī", "लक्ष्मी जयन्ती", "లక్ష్మీ జయంతి"),
-    R("caitanya-jayanti", PH, 14, "vishnu", "jayanti", "Caitanya Mahāprabhu Jayantī", "चैतन्य महाप्रभु जयन्ती", "చైతన్య మహాప్రభు జయంతి"),
+    R("lakshmi-jayanti", PH, 14, "devi", "jayanti", "Phālguna Pūrṇimā · Lakṣmī Jayantī", "फाल्गुन पूर्णिमा · लक्ष्मी जयन्ती", "ఫాల్గుణ పౌర్ణమి · లక్ష్మీ జయంతి"),
+    R("caitanya-jayanti", PH, 14, "vishnu", "jayanti", "Phālguna Pūrṇimā · Caitanya Mahāprabhu Jayantī", "फाल्गुन पूर्णिमा · चैतन्य महाप्रभु जयन्ती", "ఫాల్గుణ పౌర్ణమి · చైతన్య మహాప్రభు జయంతి"),
   ];
 
   /* every backlog record is published as such: grade Q, status backlog */

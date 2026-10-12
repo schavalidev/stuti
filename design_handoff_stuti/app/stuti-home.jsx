@@ -907,16 +907,13 @@ function DailyCard({ go, lang = "deva", from = "daily" }) {
       </div>
 
       {items.length === 0 ? (
-        <React.Fragment>
-          <div className="daily-empty-title display" style={{ fontFamily: L.font(lang) }}>{L.t("buildDaily", lang)}</div>
-          <p className="daily-empty-line"><span className="inline-flower"><Icon name="flower" size={16} /></span> {L.t("offerFlowerLine", lang)}</p>
-        </React.Fragment>
+        <div className="daily-empty-title display" style={{ fontFamily: L.font(lang) }}>{L.t("buildDaily", lang)}</div>
       ) : null}
 
       <div className="daily-list">
         <button className="daily-add-row" onClick={() => go("search", { from: "daily" })}>
           <Icon name="search" size={18} />
-          <span>{L.t("findHymn", lang)} — {L.t("tapFlowerAdd", lang)}</span>
+          <span>{L.t("findHymn", lang)} — {L.t("tapFlowerAdd", lang).split("__")[0]}<Icon name="diya" size={18} filled className="inline-flower-icon" />{L.t("tapFlowerAdd", lang).split("__")[1]}</span>
         </button>
         {items.map(h => row(h, false))}
       </div>

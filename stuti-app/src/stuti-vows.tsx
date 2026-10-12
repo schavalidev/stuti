@@ -10,6 +10,7 @@ import { OverlayPortal } from "./stuti-picker";
 import { STUTI_JAPA, STUTI_THREAD, STUTI_VOWS } from "./stuti-sadhana";
 import { STUTI_FAVS } from "./stuti-store";
 import { STUTI_TRANSLIT } from "./stuti-translit";
+import { VoiceButton } from "./stuti-voice";
 
 /* ============================================================
    STUTI — saṅkalpa scheduler (vows)
@@ -150,7 +151,7 @@ function SearchSelect({ value, options, onChange, placeholder, font, ariaLabel }
   const showList = focused && q.trim().length > 0;
   const fold = STUTI_TRANSLIT.fold;
   const matches = showList
-    ? options.filter(o => fold(o.label + " " + (o.sub || "")).includes(fold(q.trim()))).slice(0, 8)
+    ? options.filter(o => fold(o.search || (o.label + " " + (o.sub || ""))).includes(fold(q.trim()))).slice(0, 8)
     : [];
   return (
     <div className="ssel">
@@ -162,6 +163,9 @@ function SearchSelect({ value, options, onChange, placeholder, font, ariaLabel }
           onFocus={() => setFocused(true)}
           onChange={(e) => setQ(e.target.value)}
           onBlur={() => setTimeout(() => setFocused(false), 120)} />
+        {VoiceButton && <VoiceButton lang={STUTI_L.ui()} size={16}
+          onInterim={(s) => { setFocused(true); setQ(s); }}
+          onResult={(s) => { setFocused(true); setQ(s); }} />}
       </div>
       {showList && (
         <div className="ssel-list">
@@ -231,7 +235,16 @@ function VowSheet({ lang = "deva", onClose }) {
             <React.Fragment>
               <label className="vow-label">{L.t("vowWhat", lang)}</label>
               <SearchSelect value={hymn} onChange={(v) => setHymn(v || hymn)} font={font} ariaLabel={L.t("vowWhat", lang)} placeholder={L.t("searchHint", lang)}
-                options={texts.map(h => ({ value: h.id, label: L.hymnTitle(h, lang), sub: L.name(S.deityById[h.deity], lang) + " \u00b7 " + L.versesCount(h.verses.length, lang) }))} />
+                options={texts.map(h => {
+                  const d = S.deityById[h.deity];
+                  return {
+                    value: h.id, label: L.hymnTitle(h, lang),
+                    sub: L.name(d, lang) + " \u00b7 " + L.versesCount(h.verses.length, lang),
+                    /* a title is searchable in every script it is written in,
+                       whichever script the screen is reading */
+                    search: [h.title, h.deva, h.tel, h.id, d && d.name, d && d.deva, d && d.tel].filter(Boolean).join(" "),
+                  };
+                })} />
             </React.Fragment>
           ) : (
             <React.Fragment>

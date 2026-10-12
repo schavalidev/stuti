@@ -502,7 +502,7 @@ function useLensArrange({ lenses, storageKey, lang = "deva" }) {
   return { order, ordered: order.map((id) => byId[id]).filter(Boolean), arranging, dragId, pill, note, exit };
 }
 
-function LibraryHub({ go, lang = "deva", tileMode = "seal", lens = "deity", setLens, sub = null, setSub }) {
+function LibraryHub({ go, lang = "deva", tileMode = "seal", lens = "deity", setLens, sub = null, setSub, ret = null }) {
   const L = window.STUTI_L;
   /* Hooks sit above the detail-view return on purpose: hooks declared after it
      change in number the moment a detail opens or closes, which React counts
@@ -517,7 +517,7 @@ function LibraryHub({ go, lang = "deva", tileMode = "seal", lens = "deity", setL
 
   // a detail view takes over the whole screen (its own back returns to the lens)
   if (sub) {
-    const back = () => sub.returnTo ? go(sub.returnTo, { reset: true }) : setSub(null);
+    const back = () => sub.returnTo ? (typeof sub.returnTo === "object" ? go(sub.returnTo.view, Object.assign({ reset: true }, sub.returnTo.params)) : go(sub.returnTo, { reset: true })) : setSub(null);
     if (sub.kind === "type") return <TypeDetail typeKey={sub.key} go={go} lang={lang} onBack={back} />;
     if (sub.kind === "parayana") return <window.ParayanaDetail parayanaId={sub.key} go={go} lang={lang} onBack={back} />;
     if (sub.kind === "vrata") return <window.VrataDetail vrataId={sub.key} go={go} lang={lang} onBack={back} />;
@@ -541,6 +541,7 @@ function LibraryHub({ go, lang = "deva", tileMode = "seal", lens = "deity", setL
   return (
     <div className="view libhub scroll" ref={viewRef}>
       <div className="topbar lens-topbar">
+        {ret && <button className="icon-btn" onClick={() => go(ret)} aria-label={L.a("aBack")}><Icon name="back" /></button>}
         <div className="topbar-title display">{L.t("library", lang)}</div>
         <button className="icon-btn" style={{ marginRight: 44 }} onClick={() => go("search", { from: "browse" })} aria-label={L.t("search", lang)}><Icon name="search" /></button>
       </div>
@@ -554,7 +555,7 @@ function LibraryHub({ go, lang = "deva", tileMode = "seal", lens = "deity", setL
                 className={"lens-pill" + (lens === l.id ? " on" : "") + (arr.dragId === l.id ? " dragging" : "")} data-lens={l.id}
                 {...arr.pill(l.id)}
                 onClick={() => { if (!arr.arranging) { setLens(l.id); setSub(null); } }}>
-                {l.icon === "kalasha" ? <img src="assets/kalasha-sm.png" alt="" width="20" height="20" loading="eager" decoding="sync" fetchPriority="high" style={{ objectFit: "contain" }} /> : l.id === "parayana" ? <img src="assets/parayana-glyph.png" alt="" width="20" height="20" style={{ objectFit: "contain" }} /> : <Icon name={l.icon} size={17} filled={l.icon === "diya"} />}
+                {l.icon === "kalasha" ? <img src="assets/kalasha-sm.png" alt="" width="20" height="20" loading="eager" decoding="sync" fetchpriority="high" style={{ objectFit: "contain" }} /> : l.id === "parayana" ? <img src="assets/parayana-glyph.png" alt="" width="20" height="20" style={{ objectFit: "contain" }} /> : <Icon name={l.icon} size={17} filled={l.icon === "diya"} />}
                 <span>{L.t(l.key, lang)}</span>
               </button>
             ))}

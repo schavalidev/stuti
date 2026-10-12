@@ -5,6 +5,7 @@ import { STUTI_AUDIO } from "./stuti-audio";
 import { AwaitingText } from "./stuti-await";
 import { STUTI_COUNT } from "./stuti-count";
 import { STUTI } from "./stuti-data";
+import { DeityJanmaTable } from "./stuti-deity-janma";
 import { FeedbackSheet } from "./stuti-feedback";
 import { FindStrip } from "./stuti-find";
 import { FlowText } from "./stuti-flow";
@@ -536,6 +537,7 @@ function DeityView({ deity, go, lang = "deva", showFormCounts = true, defaultFor
         <FormSelector forms={forms} value={form} onChange={setForm} lang={lang} showCounts={false} variant="printed" />
       )}
       {deity.id === "navagraha" && GrahaJanmaTable && <div className="gs-ix"><GrahaJanmaTable lang={lang} form={form} /></div>}
+      {deity.id !== "navagraha" && DeityJanmaTable && <div className="gs-ix"><DeityJanmaTable deity={deity.id} lang={lang} form={form} /></div>}
 
       <div className="vr-find vr-find-compact gs-find">
         <div className="search-field search-field-sm">

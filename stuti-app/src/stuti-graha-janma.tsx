@@ -20,11 +20,26 @@ function GrahaJanmaTable({ lang = "deva", form = "all" }) {
   const rows = G.byForm(form);
   if (!rows.length) return null;
   const font = gjFont(lang);
-  const key = "stuti-fold-graha-janma";
-  const [shut, setShut] = useGjS(() => { try { return localStorage.getItem(key) === "1"; } catch (e) { return false; } });
+  const lens = form || "all";
+  const key = "stuti-fold-graha-janma-" + lens;
+  /* the whole-shelf lenses open minimised; a single graha's tab opens showing its tithi */
+  const defaultShut = lens === "all" || lens === "navagraha";
+  const [shut, setShut] = useGjS(() => { try { const v = localStorage.getItem(key); return v === null ? defaultShut : v === "1"; } catch (e) { return defaultShut; } });
+  React.useEffect(() => {
+    let v = null; try { v = localStorage.getItem(key); } catch (e) {}
+    setShut(v === null ? defaultShut : v === "1");
+  }, [key]);
   const toggle = () => setShut((s) => { try { localStorage.setItem(key, s ? "0" : "1"); } catch (e) {} return !s; });
   const locale = lang === "telugu" ? "te-IN" : lang === "deva" ? "hi-IN" : "en-IN";
-  const next = (r) => { try { const v = V.lookup(G.vratId(r)); const d = v && V.nextDate(v); return d ? d.toLocaleDateString(locale, { day: "numeric", month: "short" }) : ""; } catch (e) { return ""; } };
+  /* the next time the tithi falls, counted from today — the year is named
+     when it is not this year, so a date that has passed cannot be read here */
+  const next = (r) => {
+    try {
+      const v = V.lookup(G.vratId(r)); const d = v && V.nextDate(v);
+      if (!d) return "";
+      return d.toLocaleDateString(locale, { day: "numeric", month: "long", year: "numeric" });
+    } catch (e) { return ""; }
+  };
   return (
     <div className="gj">
       <button className={"gs-sec gs-sec-btn" + (shut ? " shut" : "")} onClick={toggle} aria-expanded={!shut}>

@@ -14,6 +14,10 @@ const PIG_C = {
   gold: "oklch(0.62 0.12 80)", goldPale: "oklch(0.9 0.05 85)", goldMid: "oklch(0.84 0.07 80)", goldInk: "oklch(0.52 0.1 75)",
   rose: "oklch(0.68 0.13 15)", rosePale: "oklch(0.78 0.1 15)", roseInk: "oklch(0.53 0.14 18)",
   verm: "oklch(0.55 0.13 42)", peacock: "oklch(0.6 0.09 215)", peacockInk: "oklch(0.44 0.09 220)",
+  /* the learn glyph's orange: the warm family's mid step, between the gold of
+     ornament (hue 80) and the vermilion of kuṅkuma (42), so the spark sits in
+     the same palette without reading as the nomu's deep red bloom */
+  amber: "oklch(0.67 0.14 62)", amberInk: "oklch(0.5 0.12 58)",
   leaf: "oklch(0.62 0.1 145)", leafInk: "oklch(0.48 0.09 145)", glint: "oklch(0.88 0.09 85)",
 };
 function Icon({ name, size = 24, stroke = 2, filled = false }) {
@@ -60,7 +64,7 @@ function Icon({ name, size = 24, stroke = 2, filled = false }) {
     case "bell":   return <svg {...p}><path d="M6 9a6 6 0 1 1 12 0c0 5 2 6 2 6H4s2-1 2-6z" /><path d="M10 19a2 2 0 0 0 4 0" /></svg>;
     case "spark":  return pig2(p,
       <path d="M12 3l1.6 5.4L19 10l-5.4 1.6L12 17l-1.6-5.4L5 10l5.4-1.6z" />,
-      <React.Fragment><path d="M12 3l1.6 5.4L19 10l-5.4 1.6L12 17l-1.6-5.4L5 10l5.4-1.6z" fill={C.peacock} stroke={C.peacockInk} strokeWidth="1.3" /><path d="M12 7.4l.8 2.1 2.1.5-2.1.5-.8 2.1-.8-2.1-2.1-.5 2.1-.5z" fill={C.glint} /><circle cx="18.6" cy="4.6" r="1.2" fill={C.gold} /></React.Fragment>);
+      <React.Fragment><path d="M12 3l1.6 5.4L19 10l-5.4 1.6L12 17l-1.6-5.4L5 10l5.4-1.6z" fill={C.amber} stroke={C.amberInk} strokeWidth="1.3" /><path d="M12 7.4l.8 2.1 2.1.5-2.1.5-.8 2.1-.8-2.1-2.1-.5 2.1-.5z" fill={C.glint} /><circle cx="18.6" cy="4.6" r="1.2" fill={C.gold} /></React.Fragment>);
     case "warn":   return <svg {...p}><path d="M12 4l9 15.5H3z" /><path d="M12 10v4M12 17h.01" /></svg>;
     /* pigment rendering is a hibiscus — five broad petals and the tell-tale
        protruding stamen — the flower one actually offers in pūjā */
@@ -163,7 +167,7 @@ const DEITY_EMBLEM = {
 
 /* deities whose seal shows the painting itself — full colour on its own
    ground, in place of the tinted plate + ratna stone */
-const DEITY_COLOUR = { devi: "emblems/devi-face-colour.png", ganesha: "emblems/ganesha-face-colour.png", shiva: "emblems/shiva-face-colour.png", vishnu: "emblems/vishnu-face-colour.png", subrahmanya: "emblems/subrahmanya-face-colour.png", guru: "emblems/guru-face-colour.png", hanuman: "emblems/hanuman-face-colour.png", pitr: "emblems/pitr-face-colour.png", nadi: "emblems/nadi-face-colour.png" };
+const DEITY_COLOUR = { devi: "emblems/devi-face-colour.png", ganesha: "emblems/ganesha-face-colour.png", shiva: "emblems/shiva-face-colour.png", vishnu: "emblems/vishnu-face-colour.png", subrahmanya: "emblems/subrahmanya-face-colour.png", guru: "emblems/guru-face-colour.png", hanuman: "emblems/hanuman-face-colour.png", pitr: "emblems/pitr-face-colour.png", nadi: "emblems/nadi-face-colour.png", navagraha: "emblems/navagraha-face-colour.png" };
 
 /* A reusable deity seal — the deity's drawn emblem, pre-tinted for day + night;
    CSS shows the right one. There is no bīja fallback: a seed syllable is
@@ -191,7 +195,7 @@ function Seal({ d, size = 56, fontScale = 0.42, style }) {
 /* Square portraits drawn for the shelf tile — the figure on its own cream
    ground with no circle, so the frame can crop it freely. Falls back to the
    round colour painting, then to the ink emblem. */
-const DEITY_PORTRAIT = { ganesha: "emblems/ganesha-portrait-v4.png", guru: "emblems/guru-portrait.png", hanuman: "emblems/hanuman-portrait.png", vishnu: "emblems/vishnu-portrait.png", surya: "emblems/surya-portrait.png", shiva: "emblems/shiva-portrait-v2.png", subrahmanya: "emblems/subrahmanya-portrait-v2.png", devi: "emblems/devi-portrait.png", pitr: "emblems/pitr-face-colour.png", nadi: "emblems/nadi-face-colour.png" };
+const DEITY_PORTRAIT = { ganesha: "emblems/ganesha-portrait-v4.png", guru: "emblems/guru-portrait.png", hanuman: "emblems/hanuman-portrait.png", vishnu: "emblems/vishnu-portrait.png", surya: "emblems/surya-portrait.png", shiva: "emblems/shiva-portrait-v2.png", subrahmanya: "emblems/subrahmanya-portrait-v2.png", devi: "emblems/devi-portrait.png", pitr: "emblems/pitr-face-colour.png" };
 /* A niche with no painting shows its headword instead of borrowed artwork — a
    typeset plate reads as a niche awaiting its image, which is the truth, where
    another deity's emblem would read as a claim. */
@@ -200,7 +204,7 @@ function isWordPlate(d) {
 }
 function Portrait({ d, lang }) {
   const colour = d && (DEITY_PORTRAIT[d.id] || DEITY_COLOUR[d.id]);
-  if (colour) return <img className={"niche-img niche-img--colour" + (DEITY_PORTRAIT[d.id] ? " niche-img--circle" : "")} src={colour} alt="" draggable="false" />;
+  if (colour) return <img className={"niche-img niche-img--colour" + (DEITY_PORTRAIT[d.id] ? " niche-img--circle" : (d.id === "navagraha" || d.id === "nadi") ? " niche-img--fit" : "")} src={colour} alt="" draggable="false" />;
   if (d && !DEITY_EMBLEM[d.id]) {
     const L = window.STUTI_L;
     return <span className="niche-word display" style={{ fontFamily: L.font(lang) }}>{L.name(d, lang)}</span>;

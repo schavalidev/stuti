@@ -11,7 +11,13 @@
 const { useState: useFbS } = React;
 
 /* the address lives on the build stamp, beside the version — one door, named once */
-const FB_TO = window.STUTI_BUILD.SUPPORT;
+/* Read when the address is wanted, not when this file is first evaluated.
+   As a top-level constant it depended on stuti-build having finished, and in
+   the port that is a module graph rather than a list of script tags: build
+   reaches this file through nudge and home, so whichever of the two the
+   bundler ordered second saw the other half-built and read SUPPORT off
+   undefined — a white screen on load, and only in the built bundle. */
+const fbTo = () => { try { return window.STUTI_BUILD.SUPPORT; } catch (e) { return "feedback@stuti.app"; } };
 
 /* `kind` opens the sheet on one of the three doors; `about` names the text the
    message is about, so a correction sent from the reader arrives saying which
@@ -51,7 +57,7 @@ function FeedbackSheet({ lang = "deva", onClose, kind: kind0, about }) {
 
   const send = () => {
     if (!text.trim()) return;
-    const href = "mailto:" + FB_TO + "?subject=" + encodeURIComponent(subject) + "&body=" + encodeURIComponent(body());
+    const href = "mailto:" + fbTo() + "?subject=" + encodeURIComponent(subject) + "&body=" + encodeURIComponent(body());
     try { window.location.href = href; setSent("mail"); count(); } catch (e) { setSent("fail"); }
   };
   const count = () => { try { window.STUTI_COUNT.hit("feedback", { kind }); } catch (e) {} };

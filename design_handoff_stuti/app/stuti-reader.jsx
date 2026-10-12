@@ -502,6 +502,7 @@ function DeityView({ deity, go, lang = "deva", showFormCounts = true, defaultFor
         <FormSelector forms={forms} value={form} onChange={setForm} lang={lang} showCounts={false} variant="printed" />
       )}
       {deity.id === "navagraha" && window.GrahaJanmaTable && <div className="gs-ix"><window.GrahaJanmaTable lang={lang} form={form} /></div>}
+      {deity.id !== "navagraha" && window.DeityJanmaTable && <div className="gs-ix"><window.DeityJanmaTable deity={deity.id} lang={lang} form={form} /></div>}
 
       <div className="vr-find vr-find-compact gs-find">
         <div className="search-field search-field-sm">

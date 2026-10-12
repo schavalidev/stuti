@@ -1,5 +1,6 @@
 import { STUTI_BACKLOG_EXTRA } from "./stuti-backlog-data";
 import { STUTI_CYCLE_EXTRA } from "./stuti-cycle-data";
+import { STUTI_DEITY_JANMA_EXTRA } from "./stuti-deity-janma-core";
 import { STUTI_DIKSHA_EXTRA } from "./stuti-diksha-data";
 import { STUTI_EPHEM } from "./stuti-ephemeris";
 import { STUTI_GRAHA_JANMA_EXTRA } from "./stuti-graha-janma-core";
@@ -12,6 +13,7 @@ import { STUTI_SANKRANTI } from "./stuti-sankranti-data";
 import { STUTI_LOC } from "./stuti-store";
 import { STUTI_TARPANA_EXTRA } from "./stuti-tarpana";
 import { STUTI_TITHIS } from "./stuti-tithis-core";
+import { STUTI_TRANSLIT } from "./stuti-translit";
 
 /* ============================================================
    STUTI — Vratas & viśeṣa pūjās
@@ -206,10 +208,7 @@ export const STUTI_VRATA = (function () {
   const vratas = [
     /* ---------------------------------------------------------- */
     {
-      id: "ganesha-chaturthi", deity: "ganesha",
-      /* the pill beside the title opens the vratam itself — the sixty units
-         read from while it is performed, not this guide to it */
-      vidhiText: "vinayaka-vrata-vidhi",
+      id: "ganesha-chaturthi", deity: "ganesha", vidhiText: "vinayaka-vrata-vidhi",
       name: { roman: "Gaṇeśa Caturthī", deva: "गणेश चतुर्थी", tel: "గణేశ చతుర్థి" },
       rule: { roman: "Bhādrapada · Śukla Caturthī", deva: "भाद्रपद शुक्ल चतुर्थी", tel: "భాద్రపద శుక్ల చతుర్థి" },
       find: (y) => lunar(y, MASA.bhadrapada, T.caturthi, "madhyahna"), kala: "madhyahna",
@@ -467,22 +466,22 @@ export const STUTI_VRATA = (function () {
     {
       id: "navaratri", deity: "devi",
       parayana: { name: { roman: "Devī Māhātmyam · Saptaśatī", deva: "देवी माहात्म्यम् · सप्तशती", tel: "దేవీ మాహాత్మ్యం · సప్తశతి" }, sub: { roman: "Seven hundred verses, divided over the nine nights", deva: "सात सौ श्लोक, नौ रातों में विभाजित", tel: "ఏడు వందల శ్లోకాలు, తొమ్మిది రాత్రులకు విభజించి" } },
-      name: { roman: "Śāradīya Navarātri", deva: "शारदीय नवरात्रि", tel: "శారదీయ నవరాత్రి" },
+      name: { roman: "Śarad Navarātri", deva: "शरद नवरात्रि", tel: "శరత్ నవరాత్రి" },
       rule: { roman: "Āśvayuja · Śukla Pratipadā to Navamī", deva: "आश्विन शुक्ल प्रतिपदा से नवमी", tel: "ఆశ్వయుజ శుక్ల పాడ్యమి నుండి నవమి" },
       find: (y) => lunar(y, MASA.ashvina, T.pratipada), days: 10,
       /* the day's own line, for the home card while the nine nights run.
          Alaṅkāra orders differ by family; these are the Telugu smārta ones. */
       dayLines: [
-        { roman: "Ghaṭasthāpana · Śailaputrī", deva: "घटस्थापना · शैलपुत्री", tel: "ఘటస్థాపన · శైలపుత్రి" },
-        { roman: "Brahmacāriṇī", deva: "ब्रह्मचारिणी", tel: "బ్రహ్మచారిణి" },
-        { roman: "Candraghaṇṭā", deva: "चन्द्रघण्टा", tel: "చంద్రఘంట" },
-        { roman: "Kūṣmāṇḍā", deva: "कूष्माण्डा", tel: "కూష్మాండ" },
-        { roman: "Skandamātā · Lalitā Pañcamī", deva: "स्कन्दमाता · ललिता पञ्चमी", tel: "స్కందమాత · లలితా పంచమి" },
-        { roman: "Kātyāyanī", deva: "कात्यायनी", tel: "కాత్యాయని" },
-        { roman: "Kālarātri · Sarasvatī āvāhana", deva: "कालरात्रि · सरस्वती आवाहन", tel: "కాలరాత్రి · సరస్వతీ ఆవాహన" },
-        { roman: "Mahāgaurī · Durgāṣṭamī", deva: "महागौरी · दुर्गाष्टमी", tel: "మహాగౌరి · దుర్గాష్టమి" },
-        { roman: "Siddhidātrī · Mahānavamī, Āyudha pūjā", deva: "सिद्धिदात्री · महानवमी, आयुध पूजा", tel: "సిద్ధిదాత్రి · మహానవమి, ఆయుధ పూజ" },
-        { roman: "Vijayadaśamī · Śamī pūjā at dusk", deva: "विजयदशमी · सायं शमी पूजा", tel: "విజయదశమి · సాయంత్రం శమీ పూజ" },
+        { roman: "Bāla Tripurasundarī · Śailaputrī", deva: "बाल त्रिपुरसुन्दरी · शैलपुत्री", tel: "బాలా త్రిపురసుందరి · శైలపుత్రి", mark: { roman: "Ghaṭasthāpana", deva: "घटस्थापना", tel: "ఘటస్థాపన" } },
+        { roman: "Gaurī · Brahmacāriṇī", deva: "गौरी · ब्रह्मचारिणी", tel: "గౌరి · బ్రహ్మచారిణి" },
+        { roman: "Gāyatrī · Candraghaṇṭā", deva: "गायत्री · चन्द्रघण्टा", tel: "గాయత్రి · చంద్రఘంట" },
+        { roman: "Annapūrṇā · Kūṣmāṇḍā", deva: "अन्नपूर्णा · कूष्माण्डा", tel: "అన్నపూర్ణ · కూష్మాండ" },
+        { roman: "Lalitā Tripurasundarī · Skandamātā", deva: "ललिता त्रिपुरसुन्दरी · स्कन्दमाता", tel: "లలితా త్రిపురసుందరి · స్కందమాత", mark: { roman: "Lalitā Pañcamī", deva: "ललिता पञ्चमी", tel: "లలితా పంచమి" } },
+        { roman: "Sarasvatī · Kātyāyanī", deva: "सरस्वती · कात्यायनी", tel: "సరస్వతి · కాత్యాయని", mark: { roman: "Mūla nakṣatra · Sarasvatī pūjā", deva: "मूल नक्षत्र · सरस्वती पूजा", tel: "మూల నక్షత్రం · సరస్వతీ పూజ" } },
+        { roman: "Mahālakṣmī · Kālarātri", deva: "महालक्ष्मी · कालरात्रि", tel: "మహాలక్ష్మి · కాలరాత్రి" },
+        { roman: "Durgā · Mahāgaurī", deva: "दुर्गा · महागौरी", tel: "దుర్గ · మహాగౌరి", mark: { roman: "Durgāṣṭamī", deva: "दुर्गाष्टमी", tel: "దుర్గాష్టమి" } },
+        { roman: "Mahiṣāsuramardinī · Siddhidātrī", deva: "महिषासुरमर्दिनी · सिद्धिदात्री", tel: "మహిషాసురమర్దిని · సిద్ధిదాత్రి", mark: { roman: "Mahānavamī · Āyudha pūjā", deva: "महानवमी · आयुध पूजा", tel: "మహానవమి · ఆయుధ పూజ" } },
+        { roman: "Rājarājeśwarī · Vijayadaśamī", deva: "राजराजेश्वरी · विजयदशमी", tel: "రాజరాజేశ్వరి · విజయదశమి", mark: { roman: "Śamī pūjā at dusk", deva: "सायं शमी पूजा", tel: "సాయంత్రం శమీ పూజ" } },
       ],
       duration: { roman: "Nine nights, ten days with Vijayadaśamī", tel: "తొమ్మిది రాత్రులు, విజయదశమితో పది రోజులు" },
       tagline: { roman: "Nine nights to the Mother — Durgā, Lakṣmī and Sarasvatī, three nights each.",
@@ -515,6 +514,7 @@ export const STUTI_VRATA = (function () {
         { step: { roman: "Pāṭha", tel: "పారాయణం" }, detail: { roman: "Devī Māhātmyam or Lalitā Sahasranāma daily; many read one chapter of the Saptaśatī a night.", tel: "ప్రతిరోజు దేవీ మాహాత్మ్యం లేదా లలితా సహస్రనామం; కొందరు రోజుకు ఒక సప్తశతి అధ్యాయం." } },
         { step: { roman: "Kumārī pūjā", tel: "కుమారీ పూజ" }, detail: { roman: "Worship young girls as the goddess — commonly on Aṣṭamī, in some families each day.", tel: "బాలికలను అమ్మవారిగా పూజించాలి — సాధారణంగా అష్టమి నాడు, కొన్ని ఇళ్ళలో ప్రతిరోజు." } },
         { step: { roman: "Āyudha pūjā", tel: "ఆయుధ పూజ" }, detail: { roman: "On Navamī, lay out tools, instruments and books; clean them, garland them, let them rest.", tel: "నవమి నాడు పనిముట్లు, వాద్యాలు, పుస్తకాలు శుభ్రం చేసి, పూలదండలు వేసి, విశ్రాంతినివ్వాలి." } },
+        { step: { roman: "Sarasvatī pūjā", tel: "సరస్వతీ పూజ" }, detail: { roman: "Books and instruments are laid before the goddess on Mūla nakṣatra and worshipped; they are taken up again on Vijayadaśamī with the akṣarābhyāsa.", tel: "మూల నక్షత్రం నాడు పుస్తకాలను, వాద్యాలను అమ్మవారి ముందు ఉంచి పూజిస్తారు; విజయదశమి నాడు అక్షరాభ్యాసంతో వాటిని తిరిగి చేతబడతారు." } },
         { step: { roman: "Vijayadaśamī", tel: "విజయదశమి" }, detail: { roman: "Sarasvatī pūjā and akṣarābhyāsa in the morning; śamī pūjā and the crossing at dusk.", tel: "ఉదయం సరస్వతీ పూజ, అక్షరాభ్యాసం; సాయంత్రం శమీ పూజ, సీమోల్లంఘనం." } },
       ],
       naivedya: [
@@ -534,7 +534,7 @@ export const STUTI_VRATA = (function () {
         { roman: "Do not begin the golu after Pratipadā, nor dismantle it before Daśamī.", tel: "పాడ్యమి తరువాత కొలువు మొదలుపెట్టరాదు, దశమికి ముందు తీసేయరాదు." },
         { roman: "Do not cut hair or nails, and avoid meat, through the nine days.", tel: "తొమ్మిది రోజులూ జుట్టు, గోళ్ళు కత్తిరించరాదు; మాంసాహారం వద్దు." },
       ],
-      source: { roman: "Follows Telugu smārta practice. The alaṅkāra order differs sharply between Vijayawada, Mysore and Bengal — keep your family's.", tel: "తెలుగు స్మార్త ఆచారం. అలంకార క్రమం విజయవాడ, మైసూరు, బెంగాల్‌లలో చాలా భిన్నం — మీ కుటుంబ ఆచారమే పాటించండి." },
+      source: { roman: "The samagri and the keeping here are this house's practice. The alaṅkāra order differs sharply between families — keep your own.", tel: "ఇక్కడి సామగ్రి, ఆచారం ఈ ఇంటి సంప్రదాయం. అలంకార క్రమం కుటుంబాన్ని బట్టి చాలా భిన్నం — మీ ఆచారమే పాటించండి." },
     },
 
     /* ---------------------------------------------------------- */
@@ -756,256 +756,6 @@ export const STUTI_VRATA = (function () {
     },
 
     /* ------------------------------------------------------------------
-       Three rites whose kalpa was written out in full from a printed
-       Telugu source, and which the day-list had not carried at all. Each
-       is a vrata of its own genre — a toram rite, a weekly evening rite,
-       and the Dattātreya pair — and none of them falls back on another
-       deity's worship.
-       ------------------------------------------------------------------ */
-    {
-      id: "kedareshwara", deity: "shiva", kind: "vratam",
-      name: { roman: "Kedāreśvara Vratam", deva: "केदारेश्वर व्रतम्", tel: "కేదారేశ్వర వ్రతం" },
-      rule: { roman: "Āśvayuja · Śukla Aṣṭamī to Amāvāsyā", deva: "आश्विन शुक्ल अष्टमी से अमावास्या तक", tel: "ఆశ్వయుజ శుక్ల అష్టమి నుండి అమావాస్య వరకు" },
-      find: (y) => lunar(y, MASA.ashvina, T.amavasya),
-      days: 21, lead: 20,
-      duration: { roman: "Twenty-one days; the full worship is on the last of them", deva: "इक्कीस दिन; पूरी पूजा उनमें अन्तिम दिन होती है", tel: "ఇరవై ఒక్క రోజులు; పూర్తి పూజ చివరి రోజున" },
-      tagline: { roman: "Śiva and Gaurī worshipped as one, and a thread of twenty-one knots bound on the hand.",
-                 deva: "शिव और गौरी एक ही रूप में पूजित, और इक्कीस गाँठों का सूत्र हाथ पर बाँधा जाता है।",
-                 tel: "శివుడు గౌరి కలిసి ఒకే రూపంగా పూజలందుకుంటారు; ఇరవై ఒక్క ముడుల తోరం చేతికి కడతారు." },
-      who: { roman: "May be kept by anyone. In Telugu households married women keep it above all, and traditionally for twenty-one years.",
-             deva: "इसे कोई भी रख सकता है। तेलुगु घरों में इसे मुख्यतः सुहागिन स्त्रियाँ रखती हैं, और परम्परा से इक्कीस वर्ष तक।",
-             tel: "ఎవరైనా చేయవచ్చు. తెలుగు ఇళ్లలో ముఖ్యంగా ముత్తైదువలు చేస్తారు, సంప్రదాయంగా ఇరవై ఒక్క సంవత్సరాలు." },
-      significance: [
-        { roman: "Kedāreśvara is Śiva worshipped together with Gaurī, not apart from her. The rite is addressed to the pair as one.",
-          deva: "केदारेश्वर वे शिव हैं जो गौरी के साथ पूजे जाते हैं, उनसे अलग नहीं। यह विधि उस युगल को एक मानकर की जाती है।",
-          tel: "కేదారేశ్వరుడు అంటే గౌరితో కలిసి పూజలందుకునే శివుడు, ఆమెకు వేరుగా కాదు. ఈ వ్రతం ఆ దంపతులను ఒక్కటిగానే ఉద్దేశించినది." },
-        { roman: "The toram is the rite. Twenty-one knots are tied, one for each day kept, and each knot is worshipped by a name of Śiva before the thread is bound on the hand.",
-          deva: "तोरम् ही इस व्रत का मुख्य अङ्ग है। इक्कीस गाँठें बाँधी जाती हैं, प्रत्येक दिन के लिये एक, और हाथ पर सूत्र बाँधने से पूर्व हर गाँठ की पूजा शिव के एक नाम से होती है।",
-          tel: "తోరమే ఈ వ్రతానికి ప్రధానం. చేసిన ఒక్కొక్క రోజుకు ఒక్కొక్కటి చొప్పున ఇరవై ఒక్క ముడులు వేస్తారు; చేతికి కట్టుకునే ముందు ప్రతి ముడిని శివుని ఒక నామంతో పూజిస్తారు." },
-        { roman: "The story is of Pārvatī, passed over by the devotee Bhṛṅgiriṭi, who drew back her own power and left Kailāsa. Gautama taught her this vrata, and by keeping it she obtained half the body of Śiva.",
-          deva: "कथा पार्वती की है। भक्त भृङ्गिरिटि ने उन्हें छोड़कर केवल शिव की परिक्रमा की, तब वे अपनी शक्ति समेटकर कैलास से चली गईं। गौतम ने उन्हें यह व्रत सिखाया, और इसे रखकर उन्होंने शिव का आधा शरीर प्राप्त किया।",
-          tel: "కథ పార్వతీదేవిది. భృంగిరిటి అనే భక్తుడు ఆమెను విడిచి శివునికే ప్రదక్షిణ చేయగా, ఆమె తన శక్తిని ఉపసంహరించుకుని కైలాసాన్ని వీడింది. గౌతమ మహర్షి ఈ వ్రతాన్ని ఉపదేశించగా, దానిని ఆచరించి శివుని శరీరంలో సగభాగాన్ని పొందింది." },
-      ],
-      timeline: [
-        { t: { roman: "The first day", deva: "पहला दिन", tel: "మొదటి రోజు" },
-          d: { roman: "On the eighth of the bright fortnight take the resolve and begin. The observance is kept every day from then to the new moon.", deva: "शुक्ल पक्ष की अष्टमी को सङ्कल्प लेकर आरम्भ करें। वहाँ से अमावास्या तक प्रतिदिन इसे रखा जाता है।", tel: "శుక్ల పక్ష అష్టమి నాడు సంకల్పం చేసుకుని ప్రారంభించాలి. అక్కడి నుండి అమావాస్య వరకు ప్రతిరోజూ ఆచరించాలి." } },
-        { t: { roman: "Each day", deva: "प्रतिदिन", tel: "ప్రతిరోజు" },
-          d: { roman: "Bathe, light the lamp and worship Kedāreśvara. The vrata is the keeping of the days, not the last day alone.", deva: "स्नान कर दीप जलाएँ और केदारेश्वर की पूजा करें। व्रत इन दिनों को निभाना है, केवल अन्तिम दिन नहीं।", tel: "స్నానం చేసి దీపం వెలిగించి కేదారేశ్వరుని పూజించాలి. ఈ రోజులన్నీ ఆచరించడమే వ్రతం, చివరి రోజు మాత్రమే కాదు." } },
-        { t: { roman: "The last day", deva: "अन्तिम दिन", tel: "చివరి రోజు" },
-          d: { roman: "The full worship: the pot on a heap of grain, the sixteen services, the limbs by seventeen names, and the hundred and eight names of Śiva.", deva: "पूरी पूजा — अन्न की राशि पर कलश, षोडशोपचार, सत्रह नामों से अङ्गपूजा, और शिव के अष्टोत्तरशत नाम।", tel: "పూర్తి పూజ — ధాన్యపు రాశిపై కలశం, షోడశోపచారాలు, పదిహేడు నామాలతో అంగపూజ, శివుని అష్టోత్తర శతనామాలు." } },
-        { t: { roman: "The toram", deva: "तोरम्", tel: "తోరం" },
-          d: { roman: "Worship the twenty-one knots, one name to each, bind the thread on the hand, and give the vāyana and the image.", deva: "इक्कीस गाँठों की पूजा एक-एक नाम से करें, सूत्र हाथ पर बाँधें, और वायन तथा प्रतिमा का दान करें।", tel: "ఇరవై ఒక్క ముడులను ఒక్కొక్క నామంతో పూజించి, తోరాన్ని చేతికి కట్టుకుని, వాయనం, ప్రతిమ దానం ఇవ్వాలి." } },
-      ],
-      samagri: [
-        { roman: "A full pot, set on a heap of rice", deva: "अन्न की राशि पर रखा जाने वाला पूर्ण कलश", tel: "బియ్యపు రాశిపై ఉంచే పూర్ణ కలశం" },
-        { roman: "Twenty-one threads to wrap the pot, and silk to cover it", deva: "कलश लपेटने के लिये इक्कीस सूत्र, और ढकने के लिये रेशमी वस्त्र", tel: "కలశానికి చుట్టడానికి ఇరవై ఒక్క దారాలు, కప్పడానికి పట్టువస్త్రం" },
-        { roman: "A toram with twenty-one knots", deva: "इक्कीस गाँठों वाला तोरम्", tel: "ఇరవై ఒక్క ముడుల తోరం" },
-        { roman: "An image of Kedāreśvara, to be given away at the end", deva: "केदारेश्वर की प्रतिमा, जो अन्त में दान की जाती है", tel: "చివర దానం ఇవ్వడానికి కేదారేశ్వర ప్రతిమ" },
-        { roman: "Bilva leaves, flowers, turmeric, kumkum, akṣata, sandal paste", deva: "बिल्वपत्र, पुष्प, हल्दी, कुमकुम, अक्षत, चन्दन", tel: "బిల్వపత్రాలు, పూలు, పసుపు, కుంకుమ, అక్షతలు, గంధం" },
-        { roman: "Food of twenty-one kinds for the offering and the vāyana", deva: "नैवेद्य और वायन के लिये इक्कीस प्रकार के पदार्थ", tel: "నైవేద్యానికి, వాయనానికి ఇరవై ఒక్క రకాల పదార్థాలు" },
-        { roman: "Dhūpa, dīpa, ghee, camphor", deva: "धूप, दीप, घी, कर्पूर", tel: "ధూపం, దీపం, నెయ్యి, కర్పూరం" },
-      ],
-      vidhi: [
-        { step: { roman: "Saṅkalpa", deva: "सङ्कल्प", tel: "సంకల్పం" },
-          detail: { roman: "Take the resolve for the whole twenty-one days, for the household together; the rite is kept year after year.", deva: "पूरे इक्कीस दिनों का सङ्कल्प कुटुम्ब सहित लें; यह व्रत प्रति वर्ष किया जाता है।", tel: "ఇరవై ఒక్క రోజులకు కుటుంబ సమేతంగా సంకల్పం చెప్పుకోవాలి; ఈ వ్రతం ప్రతి సంవత్సరం చేసేది." } },
-        { step: { roman: "Kalaśa sthāpana", deva: "कलश स्थापन", tel: "కలశ స్థాపన" },
-          detail: { roman: "Set the full pot on a heap of grain in a clean place, wrap it with twenty-one threads and cover it with silk.", deva: "स्वच्छ स्थान पर अन्न की राशि पर पूर्ण कलश रखें, उसे इक्कीस सूत्रों से लपेटें और रेशमी वस्त्र से ढकें।", tel: "శుభ్రమైన చోట ధాన్యపు రాశిపై పూర్ణ కలశం ఉంచి, ఇరవై ఒక్క దారాలు చుట్టి, పట్టువస్త్రంతో కప్పాలి." } },
-        { step: { roman: "Āvāhana", deva: "आवाहन", tel: "ఆవాహనం" },
-          detail: { roman: "Invite Kedāreśvara into the pot together with Gaurī, and establish the breath.", deva: "गौरी सहित केदारेश्वर का कलश में आवाहन करें, और प्राणप्रतिष्ठा करें।", tel: "గౌరీ సమేతంగా కేదారేశ్వరుని కలశంలో ఆవాహన చేసి, ప్రాణప్రతిష్ఠ చేయాలి." } },
-        { step: { roman: "Ṣoḍaśopacāra", deva: "षोडशोपचार", tel: "షోడశోపచారం" },
-          detail: { roman: "The sixteen services, from the meditation to the prayer.", deva: "ध्यान से प्रार्थना तक षोडश उपचार।", tel: "ధ్యానం నుండి ప్రార్థన వరకు పదహారు ఉపచారాలు." } },
-        { step: { roman: "Aṅga-pūjā & aṣṭottara", deva: "अङ्गपूजा व अष्टोत्तर", tel: "అంగపూజ, అష్టోత్తరం" },
-          detail: { roman: "Worship the limbs by seventeen names, from the feet up to the crown of the head, then recite the hundred and eight names of Śiva.", deva: "चरणों से लेकर शिर तक सत्रह नामों से अङ्गपूजा करें, फिर शिव के अष्टोत्तरशत नाम पढ़ें।", tel: "పాదాల నుండి శిరస్సు వరకు పదిహేడు నామాలతో అంగపూజ చేసి, శివుని అష్టోత్తర శతనామాలు చదవాలి." } },
-        { step: { roman: "Sūtra-granthi pūjā", deva: "सूत्रग्रन्थि पूजा", tel: "సూత్రగ్రంథి పూజ" },
-          detail: { roman: "Worship the twenty-one knots of the toram, speaking one name of Śiva over each knot in turn.", deva: "तोरम् की इक्कीस गाँठों की पूजा करें, प्रत्येक गाँठ पर शिव का एक नाम बोलते हुए।", tel: "తోరంలోని ఇరవై ఒక్క ముడులను, ఒక్కొక్క ముడిపై శివుని ఒక్కొక్క నామం చెబుతూ పూజించాలి." } },
-        { step: { roman: "Toram & vāyanam", deva: "तोरम् व वायन", tel: "తోరం, వాయనం" },
-          detail: { roman: "Take up the thread, bind it on the hand, then give the vāyana and the image that was worshipped.", deva: "सूत्र लेकर हाथ पर बाँधें, फिर वायन और पूजित प्रतिमा का दान करें।", tel: "తోరాన్ని తీసుకుని చేతికి కట్టుకుని, వాయనం, పూజించిన ప్రతిమ దానం ఇవ్వాలి." } },
-      ],
-      naivedya: [
-        { item: { roman: "Food of twenty-one kinds", deva: "इक्कीस प्रकार के पदार्थ", tel: "ఇరవై ఒక్క రకాల పదార్థాలు" },
-          note: { roman: "The number twenty-one runs through the whole rite.", deva: "इक्कीस की संख्या पूरे व्रत में चलती है।", tel: "ఇరవై ఒకటి అనే సంఖ్య వ్రతమంతటా కనిపిస్తుంది." } },
-        { item: { roman: "Twenty-one sweet cakes", deva: "इक्कीस मीठे पूए", tel: "ఇరవై ఒక్క అప్పాలు" },
-          note: { roman: "Given as vāyana along with the image.", deva: "प्रतिमा के साथ वायन रूप में दिये जाते हैं।", tel: "ప్రతిమతో పాటు వాయనంగా ఇస్తారు." } },
-        { item: { roman: "Fruit and jaggery", deva: "फल और गुड़", tel: "పండ్లు, బెల్లం" },
-          note: { roman: "Offered with the naivedya.", deva: "नैवेद्य के साथ अर्पित।", tel: "నైవేద్యంతో పాటు సమర్పణ." } },
-      ],
-      stotras: [{ deity: "shiva", m: "lingastakam" }, { deity: "shiva", m: "bilvastakam" }, { deity: "devi", m: "gauri" }],
-      dos: [
-        { roman: "Keep every one of the twenty-one days, not the last day alone — the knots are counted for the days.", deva: "इक्कीसों दिन रखें, केवल अन्तिम दिन नहीं — गाँठें उन्हीं दिनों की गिनती हैं।", tel: "ఇరవై ఒక్క రోజులూ ఆచరించాలి, చివరి రోజు మాత్రమే కాదు — ముడులు ఆ రోజుల లెక్కే." },
-        { roman: "Worship Śiva and Gaurī together; the rite is addressed to the pair.", deva: "शिव और गौरी की एक साथ पूजा करें; यह विधि युगल को उद्दिष्ट है।", tel: "శివుని, గౌరిని కలిపి పూజించాలి; ఈ వ్రతం దంపతులను ఉద్దేశించినది." },
-        { roman: "Feed as many brāhmaṇas as the household can, twenty-one being the number the rite names.", deva: "घर जितने ब्राह्मणों को भोजन करा सके कराएँ; विधि में संख्या इक्कीस कही गई है।", tel: "ఇల్లు ఎంతమందికి వీలైతే అంతమంది బ్రాహ్మణులకు భోజనం పెట్టాలి; వ్రతంలో చెప్పిన సంఖ్య ఇరవై ఒకటి." },
-      ],
-      donts: [
-        { roman: "Do not let the last day's worship stand in for the twenty-one days; the vrata is the keeping of them.", deva: "अन्तिम दिन की पूजा को इक्कीस दिनों का स्थान न लेने दें; व्रत उन दिनों को निभाना है।", tel: "చివరి రోజు పూజ ఇరవై ఒక్క రోజులకు బదులు కాదు; ఆ రోజులు ఆచరించడమే వ్రతం." },
-        { roman: "Do not keep the worshipped image afterwards — it is given away with the vāyana.", deva: "पूजित प्रतिमा को बाद में अपने पास न रखें — वह वायन के साथ दान की जाती है।", tel: "పూజించిన ప్రతిమను తరువాత ఉంచుకోరాదు — వాయనంతో పాటు దానం ఇవ్వాలి." },
-        { roman: "Do not tie the toram with fewer knots than the days kept.", deva: "रखे गए दिनों से कम गाँठों का तोरम् न बाँधें।", tel: "ఆచరించిన రోజుల కన్నా తక్కువ ముడులతో తోరం కట్టరాదు." },
-      ],
-      source: { roman: "Follows the Telugu Smārta kalpa, collated against the printed Āru Vratālu, Rajahmundry 1999. The kalpa states the observance as Bhādrapada Śukla Aṣṭamī to the new moon; Telugu households keep it from Āśvayuja Śukla Aṣṭamī to Dīpāvali Amāvāsyā, which is the reckoning shown here. Both are traditional.",
-                deva: "तेलुगु स्मार्त कल्प के अनुसार, आरु व्रतालु (राजमहेन्द्री 1999) के मुद्रित पाठ से मिलान किया गया। कल्प इसे भाद्रपद शुक्ल अष्टमी से अमावास्या तक कहता है; तेलुगु घर इसे आश्विन शुक्ल अष्टमी से दीपावली अमावास्या तक रखते हैं, और यही गणना यहाँ दिखाई गई है। दोनों परम्परागत हैं।",
-                tel: "తెలుగు స్మార్త కల్పం ప్రకారం; ఆరు వ్రతాలు (రాజమహేంద్రవరం 1999) ముద్రిత పాఠంతో సరిచూడబడింది. కల్పం దీనిని భాద్రపద శుక్ల అష్టమి నుండి అమావాస్య వరకు అంటుంది; తెలుగు ఇళ్లలో ఆశ్వయుజ శుక్ల అష్టమి నుండి దీపావళి అమావాస్య వరకు ఆచరిస్తారు, ఇక్కడ చూపినది ఆ లెక్కే. రెండూ సంప్రదాయమే." },
-    },
-    {
-      id: "vaibhava-lakshmi", deity: "devi", kind: "vratam",
-      name: { roman: "Vaibhava Lakṣmī Vratam", deva: "वैभव लक्ष्मी व्रतम्", tel: "వైభవ లక్ష్మీ వ్రతం" },
-      rule: { roman: "Any Friday · after sunset", deva: "किसी भी शुक्रवार · सूर्यास्त के बाद", tel: "ఏ శుక్రవారమైనా · సూర్యాస్తమయం తరువాత" },
-      weekly: 5,
-      /* not fixed to any month: the worshipper resolves on a number of
-         weeks and keeps that many, so the window is the whole year */
-      window: (y) => [new Date(y, 0, 1), new Date(y, 11, 31)],
-      duration: { roman: "The evening; kept for four, nine, eleven or twenty-one weeks", deva: "सन्ध्या का समय; चार, नौ, ग्यारह अथवा इक्कीस सप्ताह तक", tel: "సాయంత్రం; నాలుగు, తొమ్మిది, పదకొండు లేదా ఇరవై ఒక్క వారాలు" },
-      tagline: { roman: "The evening vrata to Lakṣmī, kept week after week for a number settled on before the first one.",
-                 deva: "लक्ष्मी का सान्ध्य व्रत, जो पहले ही निश्चित की गई संख्या के अनुसार सप्ताह-दर-सप्ताह रखा जाता है।",
-                 tel: "లక్ష్మీదేవికి చేసే సాయంకాల వ్రతం; మొదటి వారానికి ముందే నిర్ణయించుకున్న సంఖ్య ప్రకారం వారం వారం ఆచరిస్తారు." },
-      who: { roman: "Kept by women of the household for its prosperity. The number of weeks is resolved on before the first one and is not changed later.",
-             deva: "घर की स्त्रियाँ इसे कुटुम्ब की समृद्धि के लिये रखती हैं। सप्ताहों की संख्या पहले सङ्कल्प में ही निश्चित होती है और बाद में बदली नहीं जाती।",
-             tel: "ఇంటి స్త్రీలు కుటుంబ అభివృద్ధి కోసం చేస్తారు. వారాల సంఖ్యను మొదటి సంకల్పంలోనే నిర్ణయించుకుంటారు, తరువాత మార్చరు." },
-      significance: [
-        { roman: "It is not tied to a month or a tithi. The worshipper settles on a number of weeks — four, nine, eleven or twenty-one — and keeps the vrata on that many Thursdays or Fridays.",
-          deva: "यह किसी मास या तिथि से बँधा नहीं है। साधक सप्ताहों की संख्या निश्चित करता है — चार, नौ, ग्यारह अथवा इक्कीस — और उतने ही गुरुवार या शुक्रवार इसे रखता है।",
-          tel: "ఇది ఏ మాసానికి, తిథికి కట్టుబడినది కాదు. వారాల సంఖ్యను — నాలుగు, తొమ్మిది, పదకొండు లేదా ఇరవై ఒకటి — నిర్ణయించుకుని, అన్ని గురువారాలు లేదా శుక్రవారాలు ఆచరిస్తారు." },
-        { roman: "The pot is the seat of the goddess here. There is no image: water, coins, the leaves of fruit trees and a coconut, and the breath established in it.",
-          deva: "यहाँ कलश ही देवी का आसन है। प्रतिमा नहीं होती — जल, सिक्के, फलवृक्षों के पत्ते और नारियल, और उसी में प्राणप्रतिष्ठा।",
-          tel: "ఇక్కడ కలశమే దేవి ఆసనం. ప్రతిమ ఉండదు — నీరు, నాణేలు, పండ్ల చెట్ల ఆకులు, కొబ్బరికాయ, వాటిలోనే ప్రాణప్రతిష్ఠ." },
-        { roman: "The story answers why wealth comes to some and not to others: Bhṛgu, whose anger drove Lakṣmī from Vaikuṇṭha; Suśarma, learned and poor by the deeds of an earlier birth; and four sisters whose husbands called the wealth their own doing and lost it.",
-          deva: "कथा यह बताती है कि धन किसी को क्यों मिलता है और किसी को नहीं — भृगु, जिनके क्रोध से लक्ष्मी वैकुण्ठ छोड़ गईं; सुशर्मा, जो विद्वान होकर भी पूर्वजन्म के कर्म से निर्धन रहा; और चार बहनें, जिनके पतियों ने धन को अपना कर्तृत्व कहा और उसे खो दिया।",
-          tel: "సంపద కొందరికి ఎందుకు వస్తుంది, కొందరికి ఎందుకు రాదు అన్నదానికి కథ సమాధానం చెబుతుంది — భృగువు కోపంతో లక్ష్మి వైకుంఠాన్ని వీడడం; విద్వాంసుడైనా పూర్వజన్మ కర్మవల్ల పేదవాడైన సుశర్మ; సంపద తమ ప్రతిభే అని చెప్పుకుని దానిని కోల్పోయిన నలుగురు అక్కచెల్లెళ్ల భర్తలు." },
-      ],
-      timeline: [
-        { t: { roman: "Morning", deva: "प्रातःकाल", tel: "ఉదయం" },
-          d: { roman: "Bathe, clean the north-east corner of the house, smear it and draw the muggu there.", deva: "स्नान करें, घर का ईशान कोण स्वच्छ कर लीपें और वहाँ रङ्गोली बनाएँ।", tel: "స్నానం చేసి, ఇంటి ఈశాన్య మూలను శుభ్రం చేసి, అలికి, ముగ్గు పెట్టాలి." } },
-        { t: { roman: "Through the day", deva: "दिन भर", tel: "పగలంతా" },
-          d: { roman: "Keep the fast until the evening.", deva: "सायङ्काल तक उपवास रखें।", tel: "సాయంత్రం వరకు ఉపవాసం ఉండాలి." } },
-        { t: { roman: "After sunset", deva: "सूर्यास्त के बाद", tel: "సూర్యాస్తమయం తరువాత" },
-          d: { roman: "Spread a new cloth in that corner, pour rice on it, set the pot, fill it with water, drop in coins, add the leaves and set a coconut on top.", deva: "उस कोने में नया वस्त्र बिछाएँ, उस पर चावल डालें, कलश रखें, जल भरें, सिक्के डालें, पत्ते लगाएँ और ऊपर नारियल रखें।", tel: "ఆ మూలలో కొత్త వస్త్రం పరిచి, దానిపై బియ్యం పోసి, కలశం ఉంచి, నీరు నింపి, నాణేలు వేసి, ఆకులు పెట్టి, పైన కొబ్బరికాయ ఉంచాలి." } },
-        { t: { roman: "The last week", deva: "अन्तिम सप्ताह", tel: "చివరి వారం" },
-          d: { roman: "Speak the udyāpana, and give the vāyana and tāmbūlam to five married women or more.", deva: "उद्यापन कहें, और वायन तथा ताम्बूल कम से कम पाँच सुहागिनों को दें।", tel: "ఉద్యాపనం చెప్పి, వాయనం, తాంబూలం కనీసం ఐదుగురు ముత్తైదువలకు ఇవ్వాలి." } },
-      ],
-      samagri: [
-        { roman: "A pot, and a new cloth to spread beneath it", deva: "कलश, और उसके नीचे बिछाने को नया वस्त्र", tel: "కలశం, దాని కింద పరచడానికి కొత్త వస్త్రం" },
-        { roman: "Rice to pour under the pot", deva: "कलश के नीचे डालने को चावल", tel: "కలశం కింద పోయడానికి బియ్యం" },
-        { roman: "Coins, according to one's means, for the water", deva: "सामर्थ्य के अनुसार जल में डालने को सिक्के", tel: "శక్తి కొలది నీటిలో వేయడానికి నాణేలు" },
-        { roman: "Leaves of fruit trees, and a coconut for the mouth of the pot", deva: "फलवृक्षों के पत्ते, और कलश के मुख पर नारियल", tel: "పండ్ల చెట్ల ఆకులు, కలశం మీద కొబ్బరికాయ" },
-        { roman: "Turmeric, kumkum, akṣata, flowers", deva: "हल्दी, कुमकुम, अक्षत, पुष्प", tel: "పసుపు, కుంకుమ, అక్షతలు, పూలు" },
-        { roman: "Sweet food for the offering", deva: "नैवेद्य के लिये मिष्टान्न", tel: "నైవేద్యానికి తీపి పదార్థం" },
-        { roman: "Vāyanam and tāmbūlam for the married women", deva: "सुहागिनों के लिये वायन और ताम्बूल", tel: "ముత్తైదువలకు వాయనం, తాంబూలం" },
-      ],
-      vidhi: [
-        { step: { roman: "Śuddhi", deva: "शुद्धि", tel: "శుద్ధి" },
-          detail: { roman: "Clean the north-east corner of the house, smear it, and draw the muggu.", deva: "घर का ईशान कोण स्वच्छ कर लीपें और रङ्गोली बनाएँ।", tel: "ఇంటి ఈశాన్య మూలను శుభ్రం చేసి, అలికి, ముగ్గు పెట్టాలి." } },
-        { step: { roman: "Kalaśa sthāpana", deva: "कलश स्थापन", tel: "కలశ స్థాపన" },
-          detail: { roman: "Spread the new cloth, pour rice, set the pot on it, fill it with water, drop in the coins, add the leaves and the coconut.", deva: "नया वस्त्र बिछाएँ, चावल डालें, उस पर कलश रखें, जल भरें, सिक्के डालें, पत्ते और नारियल लगाएँ।", tel: "కొత్త వస్త్రం పరిచి, బియ్యం పోసి, కలశం ఉంచి, నీరు నింపి, నాణేలు వేసి, ఆకులు, కొబ్బరికాయ పెట్టాలి." } },
-        { step: { roman: "Prāṇa-pratiṣṭhā", deva: "प्राणप्रतिष्ठा", tel: "ప్రాణప్రతిష్ఠ" },
-          detail: { roman: "Establish the breath in the pot; in this rite the pot is the seat of the goddess and the worship is offered into it.", deva: "कलश में प्राणप्रतिष्ठा करें; इस विधि में कलश ही देवी का आसन है और पूजा उसी में अर्पित होती है।", tel: "కలశంలో ప్రాణప్రతిష్ఠ చేయాలి; ఈ వ్రతంలో కలశమే దేవి ఆసనం, పూజ అందులోనే సమర్పిస్తారు." } },
-        { step: { roman: "Ṣoḍaśopacāra", deva: "षोडशोपचार", tel: "షోడశోపచారం" },
-          detail: { roman: "The sixteen services, each one offered with a verse of the Śrī Sūkta before it.", deva: "षोडश उपचार, प्रत्येक के पूर्व श्रीसूक्त का एक मन्त्र।", tel: "పదహారు ఉపచారాలు; ప్రతి ఉపచారానికి ముందు శ్రీసూక్తంలోని ఒక్కొక్క మంత్రం." } },
-        { step: { roman: "Aṅga-pūjā & aṣṭottara", deva: "अङ्गपूजा व अष्टोत्तर", tel: "అంగపూజ, అష్టోత్తరం" },
-          detail: { roman: "Worship the limbs by ten names from the feet up to the head, closing with one for all the limbs together, then the hundred and eight names of Lakṣmī.", deva: "चरणों से शिर तक दस नामों से अङ्गपूजा करें, अन्त में सर्वाङ्ग के लिये एक नाम, फिर लक्ष्मी के अष्टोत्तरशत नाम।", tel: "పాదాల నుండి శిరస్సు వరకు పది నామాలతో అంగపూజ చేసి, చివర సర్వాంగాలకు ఒక నామం, తరువాత లక్ష్మీ అష్టోత్తర శతనామాలు." } },
-        { step: { roman: "Naivedya & kathā", deva: "नैवेद्य व कथा", tel: "నైవేద్యం, కథ" },
-          detail: { roman: "Offer the sweet food, then read the story.", deva: "मिष्टान्न अर्पित करें, फिर कथा पढ़ें।", tel: "తీపి నైవేద్యం సమర్పించి, కథ చదవాలి." } },
-        { step: { roman: "Vāyanam & udyāpana", deva: "वायन व उद्यापन", tel: "వాయనం, ఉద్యాపనం" },
-          detail: { roman: "On the last week give the vāyana and tāmbūlam to at least five married women, and speak the udyāpana.", deva: "अन्तिम सप्ताह में कम से कम पाँच सुहागिनों को वायन और ताम्बूल दें, और उद्यापन कहें।", tel: "చివరి వారం కనీసం ఐదుగురు ముత్తైదువలకు వాయనం, తాంబూలం ఇచ్చి, ఉద్యాపనం చెప్పాలి." } },
-      ],
-      naivedya: [
-        { item: { roman: "Sweet food", deva: "मिष्टान्न", tel: "తీపి పదార్థం" },
-          note: { roman: "The offering of this rite is sweet, and it is made in the evening.", deva: "इस विधि का नैवेद्य मीठा होता है और सन्ध्या समय अर्पित किया जाता है।", tel: "ఈ వ్రత నైవేద్యం తీపిదే, సాయంత్రం సమర్పిస్తారు." } },
-        { item: { roman: "Fruit and jaggery", deva: "फल और गुड़", tel: "పండ్లు, బెల్లం" },
-          note: { roman: "Offered along with the sweet food.", deva: "मिष्टान्न के साथ अर्पित।", tel: "తీపి పదార్థంతో పాటు సమర్పణ." } },
-      ],
-      stotras: [{ deity: "devi", m: "sri suktam" }, { deity: "devi", m: "kanakadhara" }, { deity: "devi", m: "mahalaksmi" }, { deity: "devi", m: "laksmi astottara" }],
-      dos: [
-        { roman: "Settle the number of weeks before the first one, and keep that many.", deva: "पहले सप्ताह से पूर्व ही संख्या निश्चित करें, और उतने ही रखें।", tel: "మొదటి వారానికి ముందే సంఖ్య నిర్ణయించుకుని, అన్ని వారాలు చేయాలి." },
-        { roman: "Keep the fast until the evening; the worship is after the sun has set.", deva: "सायङ्काल तक उपवास रखें; पूजा सूर्यास्त के बाद होती है।", tel: "సాయంత్రం వరకు ఉపవాసం ఉండాలి; పూజ సూర్యాస్తమయం తరువాతే." },
-        { roman: "At the end pour the pot's water at the root of the nīm or the tulasī, keep the coin safely in the house, and give the rice to the birds.", deva: "अन्त में कलश का जल नीम अथवा तुलसी की जड़ में डालें, सिक्का घर में सुरक्षित रखें, और चावल पक्षियों को दें।", tel: "చివర కలశంలోని నీటిని వేప లేదా తులసి మొదట్లో పోయాలి, నాణేన్ని ఇంట్లో భద్రంగా ఉంచాలి, బియ్యాన్ని పక్షులకు వేయాలి." },
-      ],
-      donts: [
-        { roman: "Do not begin without saying how many weeks will be kept.", deva: "कितने सप्ताह रखने हैं यह कहे बिना आरम्भ न करें।", tel: "ఎన్ని వారాలు చేస్తామో చెప్పకుండా ప్రారంభించరాదు." },
-        { roman: "Do not throw away the water or the rice of the pot as waste.", deva: "कलश का जल अथवा चावल कूड़े की तरह न फेंकें।", tel: "కలశంలోని నీటిని, బియ్యాన్ని చెత్తలా పారవేయరాదు." },
-        { roman: "Do not call the wealth your own doing — the story of this vrata is about exactly that.", deva: "धन को अपना कर्तृत्व न कहें — इस व्रत की कथा इसी विषय पर है।", tel: "సంపద తమ ప్రతిభే అని చెప్పుకోరాదు — ఈ వ్రత కథ దాని గురించే." },
-      ],
-      source: { roman: "Follows the Telugu Smārta kalpa. The rule of the rite — the day, the number of weeks, the fast, the pot and the udyāpana — is given in the source only inside the story, where the old woman teaches the four sisters, and everything stated here comes from there.",
-                deva: "तेलुगु स्मार्त कल्प के अनुसार। विधि का नियम — दिन, सप्ताहों की संख्या, उपवास, कलश और उद्यापन — मूल में केवल कथा के भीतर मिलता है, जहाँ वृद्धा चार बहनों को सिखाती है, और यहाँ कहा गया सब वहीं से है।",
-                tel: "తెలుగు స్మార్త కల్పం ప్రకారం. వ్రత నియమం — రోజు, వారాల సంఖ్య, ఉపవాసం, కలశం, ఉద్యాపనం — మూలంలో కథలో మాత్రమే, వృద్ధురాలు నలుగురు అక్కచెల్లెళ్లకు చెప్పే చోటే ఉంది; ఇక్కడ చెప్పినదంతా అక్కడి నుండే." },
-    },
-    {
-      id: "anaghashtami", deity: "guru", kind: "vratam",
-      name: { roman: "Anaghāṣṭamī Vratam", deva: "अनघाष्टमी व्रतम्", tel: "అనఘాష్టమి వ్రతం" },
-      rule: { roman: "Mārgaśīrṣa · Kṛṣṇa Aṣṭamī", deva: "मार्गशीर्ष कृष्ण अष्टमी", tel: "మార్గశిర బహుళ అష్టమి" },
-      find: (y) => lunar(y, MASA.margashirsha, 22),
-      duration: { roman: "One day", deva: "एक दिन", tel: "ఒక రోజు" },
-      tagline: { roman: "Dattātreya as Anagha with Anaghā, and the eight powers of yoga worshipped as their children.",
-                 deva: "अनघा सहित अनघ रूप में दत्तात्रेय, और योग की आठ सिद्धियाँ उनकी सन्तान के रूप में पूजित।",
-                 tel: "అనఘాదేవితో కలిసి అనఘస్వామిగా దత్తాత్రేయుడు; యోగ అష్టసిద్ధులు ఆ దంపతుల సంతానంగా పూజలందుకుంటాయి." },
-      who: { roman: "Kept by the followers of Dattātreya, by the household together.",
-             deva: "दत्तात्रेय के अनुयायी कुटुम्ब सहित इसे रखते हैं।",
-             tel: "దత్తాత్రేయ భక్తులు కుటుంబ సమేతంగా చేస్తారు." },
-      significance: [
-        { roman: "Anagha is Dattātreya, the son of Atri and Anasūyā, and Anaghā is his wife. They are worshipped as a pair and not singly.",
-          deva: "अनघ ही दत्तात्रेय हैं, अत्रि और अनसूया के पुत्र, और अनघा उनकी पत्नी हैं। दोनों की पूजा युगल रूप में होती है, अलग-अलग नहीं।",
-          tel: "అనఘస్వామి అంటే అత్రి అనసూయల కుమారుడైన దత్తాత్రేయుడు, అనఘాదేవి ఆయన భార్య. వారిద్దరినీ దంపతులుగానే పూజిస్తారు, విడివిడిగా కాదు." },
-        { roman: "The eight attainments of yoga — aṇimā, laghimā, prāpti, prākāmya, mahimā, īśitva, vaśitva and kāmāvasāyitā — are installed on the eight petals of the lotus and worshipped as the children of the pair.",
-          deva: "योग की आठ सिद्धियाँ — अणिमा, लघिमा, प्राप्ति, प्राकाम्य, महिमा, ईशित्व, वशित्व और कामावसायिता — कमल की आठ पंखुड़ियों पर स्थापित कर युगल की सन्तान रूप में पूजी जाती हैं।",
-          tel: "యోగ అష్టసిద్ధులు — అణిమ, లఘిమ, ప్రాప్తి, ప్రాకామ్యం, మహిమ, ఈశిత్వం, వశిత్వం, కామావసాయిత — అష్టదళ పద్మంలోని ఎనిమిది దళాలపై స్థాపించి, ఆ దంపతుల సంతానంగా పూజిస్తారు." },
-        { roman: "The name is explained in the story. Agha is sin, which arises through mind, speech and deed; Anagha is he who destroys it. When the demons came, Datta did not fight them — he stopped them with the fire of his meditation.",
-          deva: "नाम का अर्थ कथा में दिया है। अघ का अर्थ पाप है, जो मन, वाणी और कर्म से उत्पन्न होता है; अनघ वे हैं जो उसे नष्ट करते हैं। दानव आए तब दत्त ने उनसे युद्ध नहीं किया — अपने तप की अग्नि से उन्हें रोक दिया।",
-          tel: "నామానికి అర్థం కథలోనే ఉంది. అఘం అంటే పాపం, అది మనస్సు, వాక్కు, కర్మల ద్వారా కలుగుతుంది; దానిని నశింపజేసేవాడు అనఘుడు. రాక్షసులు వచ్చినప్పుడు దత్తుడు వారితో యుద్ధం చేయలేదు — తన తపోగ్నితో వారిని నిలిపివేశాడు." },
-      ],
-      timeline: [
-        { t: { roman: "Morning", deva: "प्रातःकाल", tel: "ఉదయం" },
-          d: { roman: "Bathe, and draw the eight-petalled lotus in rice flour, turmeric and vermilion.", deva: "स्नान करें, और चावल के आटे, हल्दी तथा सिन्दूर से अष्टदल कमल बनाएँ।", tel: "స్నానం చేసి, బియ్యప్పిండి, పసుపు, కుంకుమతో అష్టదళ పద్మం వేయాలి." } },
-        { t: { roman: "Setting up", deva: "स्थापना", tel: "స్థాపన" },
-          d: { roman: "Set a pot on each petal, and the two principal pots in the middle for the pair.", deva: "प्रत्येक दल पर एक कलश रखें, और मध्य में युगल के लिये दो मुख्य कलश।", tel: "ప్రతి దళంపై ఒక కలశం, మధ్యలో దంపతుల కోసం రెండు ప్రధాన కలశాలు ఉంచాలి." } },
-        { t: { roman: "Worship", deva: "पूजा", tel: "పూజ" },
-          d: { roman: "Install the eight powers one by one, then the pair, and offer the sixteen services.", deva: "आठों सिद्धियों को एक-एक कर स्थापित करें, फिर युगल को, और षोडश उपचार अर्पित करें।", tel: "అష్టసిద్ధులను ఒక్కొక్కటిగా, తరువాత దంపతులను స్థాపించి, పదహారు ఉపచారాలు సమర్పించాలి." } },
-        { t: { roman: "Close", deva: "समापन", tel: "ముగింపు" },
-          d: { roman: "Bind the thread of three strands, read the story, and take the tīrtha.", deva: "तीन लड़ों का सूत्र बाँधें, कथा पढ़ें, और तीर्थ ग्रहण करें।", tel: "మూడు పోగుల తోరం కట్టుకుని, కథ చదివి, తీర్థం స్వీకరించాలి." } },
-      ],
-      samagri: [
-        { roman: "Rice flour, turmeric and vermilion for the eight-petalled lotus", deva: "अष्टदल कमल के लिये चावल का आटा, हल्दी और सिन्दूर", tel: "అష్టదళ పద్మానికి బియ్యప్పిండి, పసుపు, కుంకుమ" },
-        { roman: "Eight small pots for the petals, and two for the middle", deva: "दलों के लिये आठ छोटे कलश, और मध्य के लिये दो", tel: "దళాలకు ఎనిమిది చిన్న కలశాలు, మధ్యకు రెండు" },
-        { roman: "A thread of three strands, to bind on the hand", deva: "हाथ पर बाँधने को तीन लड़ों का सूत्र", tel: "చేతికి కట్టుకోవడానికి మూడు పోగుల తోరం" },
-        { roman: "Turmeric, kumkum, akṣata, sandal paste, flowers", deva: "हल्दी, कुमकुम, अक्षत, चन्दन, पुष्प", tel: "పసుపు, కుంకుమ, అక్షతలు, గంధం, పూలు" },
-        { roman: "Fruit, betel leaves and nuts, and the naivedya", deva: "फल, ताम्बूल, और नैवेद्य", tel: "పండ్లు, తమలపాకులు, వక్కలు, నైవేద్యం" },
-        { roman: "Dhūpa, dīpa, ghee, camphor", deva: "धूप, दीप, घी, कर्पूर", tel: "ధూపం, దీపం, నెయ్యి, కర్పూరం" },
-      ],
-      vidhi: [
-        { step: { roman: "Saṅkalpa", deva: "सङ्कल्प", tel: "సంకల్పం" },
-          detail: { roman: "Take the resolve, which itself names the method: the sixteen services are done by the way of the Puruṣa Sūkta.", deva: "सङ्कल्प लें, जो स्वयं विधि का नाम लेता है — षोडश उपचार पुरुषसूक्त के क्रम से किये जाते हैं।", tel: "సంకల్పం చెప్పుకోవాలి; విధానాన్ని అదే చెబుతుంది — పదహారు ఉపచారాలు పురుషసూక్త క్రమంలో చేస్తారు." } },
-        { step: { roman: "Siddhi-devatā sthāpana", deva: "सिद्धिदेवता स्थापन", tel: "సిద్ధిదేవతా స్థాపన" },
-          detail: { roman: "Install the eight powers on the eight petals, each called by a verse naming it a child of the pair, beginning with aṇimā on the north-east.", deva: "आठों सिद्धियों को आठ दलों पर स्थापित करें, प्रत्येक को उस श्लोक से बुलाएँ जो उसे युगल की सन्तान कहता है; आरम्भ ईशान कोण पर अणिमा से।", tel: "అష్టసిద్ధులను ఎనిమిది దళాలపై స్థాపించాలి; ఒక్కొక్కదానిని దంపతుల సంతానమని చెప్పే శ్లోకంతో ఆవాహన చేయాలి; ఈశాన్యంలో అణిమతో ప్రారంభం." } },
-        { step: { roman: "Prāṇa-pratiṣṭhā", deva: "प्राणप्रतिष्ठा", tel: "ప్రాణప్రతిష్ఠ" },
-          detail: { roman: "Set the two principal pots in the middle of the lotus and establish the breath in them.", deva: "कमल के मध्य में दो मुख्य कलश रखें और उनमें प्राणप्रतिष्ठा करें।", tel: "పద్మం మధ్యలో రెండు ప్రధాన కలశాలు ఉంచి, వాటిలో ప్రాణప్రతిష్ఠ చేయాలి." } },
-        { step: { roman: "Dhyāna", deva: "ध्यान", tel: "ధ్యానం" },
-          detail: { roman: "Meditate on Anagha together with Anaghā.", deva: "अनघा सहित अनघ का ध्यान करें।", tel: "అనఘాదేవితో కలిసి ఉన్న అనఘస్వామిని ధ్యానించాలి." } },
-        { step: { roman: "Ṣoḍaśopacāra", deva: "षोडशोपचार", tel: "షోడశోపచారం" },
-          detail: { roman: "The sixteen services, each one headed by a single verse of the Puruṣa Sūkta, taken in order from the first to the last.", deva: "षोडश उपचार, प्रत्येक के आरम्भ में पुरुषसूक्त का एक मन्त्र, प्रथम से अन्तिम तक क्रम से।", tel: "పదహారు ఉపచారాలు; ప్రతి ఉపచారానికి ముందు పురుషసూక్తంలోని ఒక్కొక్క మంత్రం, మొదటి నుండి చివరి వరకు వరుసగా." } },
-        { step: { roman: "Aṅga-pūjā & aṣṭottara", deva: "अङ्गपूजा व अष्टोत्तर", tel: "అంగపూజ, అష్టోత్తరం" },
-          detail: { roman: "Worship the limbs of both by sixteen names apiece, then the hundred and eight names.", deva: "दोनों के अङ्गों की पूजा सोलह-सोलह नामों से करें, फिर अष्टोत्तरशत नाम।", tel: "ఇద్దరి అంగాలను పదహారేసి నామాలతో పూజించి, తరువాత అష్టోత్తర శతనామాలు చదవాలి." } },
-        { step: { roman: "Tora-bandhanam & kathā", deva: "तोरबन्धन व कथा", tel: "తోరబంధనం, కథ" },
-          detail: { roman: "Bind the thread of three strands, then read the story in its six parts.", deva: "तीन लड़ों का सूत्र बाँधें, फिर छह भागों में कथा पढ़ें।", tel: "మూడు పోగుల తోరం కట్టుకుని, ఆరు భాగాల కథ చదవాలి." } },
-      ],
-      naivedya: [
-        { item: { roman: "Cooked rice with ghee", deva: "घी सहित अन्न", tel: "నేతితో అన్నం" },
-          note: { roman: "Offered to the pair in the middle of the lotus.", deva: "कमल के मध्य में युगल को अर्पित।", tel: "పద్మం మధ్యలో ఉన్న దంపతులకు సమర్పణ." } },
-        { item: { roman: "Fruit and jaggery", deva: "फल और गुड़", tel: "పండ్లు, బెల్లం" },
-          note: { roman: "Offered with the naivedya.", deva: "नैवेद्य के साथ अर्पित।", tel: "నైవేద్యంతో పాటు సమర్పణ." } },
-      ],
-      stotras: [{ deity: "guru", m: "guru stotram" }, { deity: "guru", m: "paduka" }, { deity: "guru", m: "guru gita" }],
-      dos: [
-        { roman: "Worship the pair together; the rite is addressed to both and not to Dattātreya alone.", deva: "युगल की एक साथ पूजा करें; यह विधि दोनों को उद्दिष्ट है, केवल दत्तात्रेय को नहीं।", tel: "దంపతులను కలిపి పూజించాలి; ఈ వ్రతం ఇద్దరినీ ఉద్దేశించినది, దత్తాత్రేయుని ఒక్కరినే కాదు." },
-        { roman: "Keep the order of the eight powers as the rite gives it, beginning at the north-east.", deva: "आठों सिद्धियों का क्रम विधि के अनुसार रखें, ईशान कोण से आरम्भ करते हुए।", tel: "అష్టసిద్ధుల క్రమాన్ని వ్రతం చెప్పినట్లే ఉంచాలి, ఈశాన్యం నుండి ప్రారంభించి." },
-        { roman: "Understand the name before the story is read: agha is sin, and Anagha is he who destroys it.", deva: "कथा पढ़ने से पूर्व नाम का अर्थ समझ लें — अघ पाप है, और अनघ उसे नष्ट करने वाले।", tel: "కథ చదివే ముందు నామార్థం తెలుసుకోవాలి — అఘం అంటే పాపం, దానిని నశింపజేసేవాడు అనఘుడు." },
-      ],
-      donts: [
-        { roman: "Do not leave out the eight powers; they are what marks this vrata off from any other Dattātreya worship.", deva: "आठों सिद्धियों को न छोड़ें; वही इस व्रत को अन्य दत्तात्रेय पूजा से अलग करती हैं।", tel: "అష్టసిద్ధులను వదిలేయరాదు; ఈ వ్రతాన్ని ఇతర దత్తాత్రేయ పూజల నుండి వేరు చేసేవి అవే." },
-        { roman: "Do not take up the Puruṣa Sūkta if it was not taught to you — the services may be offered by the names alone.", deva: "यदि पुरुषसूक्त आपको सिखाया नहीं गया तो उसे न लें — उपचार केवल नामों से भी अर्पित किये जा सकते हैं।", tel: "పురుషసూక్తం మీకు ఉపదేశించకపోతే దానిని చదవరాదు — ఉపచారాలను నామాలతో మాత్రమే కూడా సమర్పించవచ్చు." },
-        { roman: "Do not read the war of the story as a battle won by arms; the demons were stopped by meditation and by austerity.", deva: "कथा के युद्ध को शस्त्रों से जीता गया न समझें; दानव तप और ध्यान से रोके गए थे।", tel: "కథలోని యుద్ధాన్ని ఆయుధాలతో గెలిచినదిగా భావించరాదు; రాక్షసులను తపస్సు, ధ్యానమే నిలిపివేశాయి." },
-      ],
-      source: { roman: "Follows the Telugu Smārta kalpa of the Dattātreya tradition. The sixteen services are offered by the way of the Puruṣa Sūkta, one verse to each service, as the resolve itself declares.",
-                deva: "दत्तात्रेय सम्प्रदाय के तेलुगु स्मार्त कल्प के अनुसार। षोडश उपचार पुरुषसूक्त के क्रम से, प्रत्येक उपचार पर एक मन्त्र, जैसा सङ्कल्प स्वयं कहता है।",
-                tel: "దత్తాత్రేయ సంప్రదాయపు తెలుగు స్మార్త కల్పం ప్రకారం. సంకల్పమే చెప్పినట్లు, పదహారు ఉపచారాలు పురుషసూక్త క్రమంలో, ప్రతి ఉపచారానికి ఒక్కొక్క మంత్రంతో సమర్పిస్తారు." },
-    },
-
-    /* ------------------------------------------------------------------
        Carried over with their rule, their reason and their texts. The
        guide view renders only the sections a vrata actually has, so these
        stand as short entries until samagri and vidhi are written for them.
@@ -1161,7 +911,7 @@ export const STUTI_VRATA = (function () {
     },
     {
       id: "guru-purnima", deity: "guru", brief: true,
-      name: { roman: "Guru Pūrṇimā", deva: "गुरु पूर्णिमा", tel: "గురు పూర్ణిమ" },
+      name: { roman: "Āṣāḍha Pūrṇimā · Guru Pūrṇimā", deva: "आषाढ पूर्णिमा · गुरु पूर्णिमा", tel: "ఆషాఢ పౌర్ణమి · గురు పౌర్ణమి" },
       rule: { roman: "Āṣāḍha · Pūrṇimā", deva: "आषाढ पूर्णिमा", tel: "ఆషాఢ పౌర్ణమి" },
       find: (y) => lunar(y, MASA.ashadha, T.purnima),
       duration: { roman: "Forenoon", tel: "పూర్వాహ్ణం" },
@@ -1180,80 +930,13 @@ export const STUTI_VRATA = (function () {
       stotras: [{ deity: "surya", m: "aditya hrdayam" }, { deity: "surya", m: "suryastakam" }, { deity: "surya", m: "surya suktam" }],
     },
     {
-      id: "ugadi", deity: "vishnu",
+      id: "ugadi", deity: "vishnu", brief: true,
       name: { roman: "Ugādi", deva: "उगादि", tel: "ఉగాది" },
       rule: { roman: "Caitra · Śukla Pratipadā", deva: "चैत्र शुक्ल प्रतिपदा", tel: "చైత్ర శుక్ల పాడ్యమి" },
       find: (y) => lunar(y, MASA.caitra, T.pratipada),
-      duration: { roman: "The day — pañcāṅga śravaṇam by evening", deva: "पूरा दिन — सायंकाल तक पञ्चांग श्रवणम्", tel: "పగలు — సాయంత్రానికి పంచాంగ శ్రవణం" },
-      tagline: { roman: "The samvatsara opens — ugādi pacchadi, and the year read aloud.", deva: "संवत्सर का आरम्भ — उगादि पच्चडि, और वर्ष का पठन।", tel: "సంవత్సరాది — ఉగాది పచ్చడి, పంచాంగ శ్రవణం." },
-      who: { roman: "The Telugu and Kannada new year — the whole household.", deva: "तेलुगु और कन्नड नववर्ष — पूरा घर मिलकर मनाता है।", tel: "తెలుగు, కన్నడ నూతన సంవత్సరం — ఇల్లంతా కలిసి జరుపుకుంటారు." },
-      significance: [
-        { roman: "Caitra Śukla Pratipadā opens the new saṃvatsara. In the evening, the pañcāṅga for the coming year is read aloud to the household.",
-          deva: "चैत्र शुक्ल प्रतिपदा से नया संवत्सर आरम्भ होता है। सायंकाल परिवार को आने वाले वर्ष का पञ्चांग सुनाया जाता है।",
-          tel: "చైత్ర శుక్ల పాడ్యమితో కొత్త సంవత్సరం మొదలవుతుంది. సాయంత్రం కుటుంబానికి రాబోయే సంవత్సరపు పంచాంగం చదివి వినిపిస్తారు." },
-        { roman: "Ugādi pacchadi mixes six tastes in one dish. Families take this as a lesson that the year ahead will bring sweetness, bitterness, sourness, heat, tang and surprise together, not one alone.",
-          deva: "उगादि पच्चडि में छह स्वाद एक साथ मिलाए जाते हैं। परिवार इसे यह शिक्षा मानते हैं कि आने वाला वर्ष मिठास, कड़वाहट, खटास, तीखापन, कसैलापन और आश्चर्य — इन सबको एक साथ लाएगा, किसी एक को अकेला नहीं।",
-          tel: "ఉగాది పచ్చడిలో ఆరు రుచులు కలిపి చేస్తారు. రాబోయే సంవత్సరం తీపి, చేదు, పులుపు, కారం, వగరు, ఆశ్చర్యం — వీటన్నిటినీ కలిపి తెస్తుందని కుటుంబాలు దీన్ని ఒక పాఠంగా భావిస్తాయి." },
-        { roman: "Some say Brahmā began creation on this very day. The exact scripture and verse for this are not settled, so it is told as a well-known tradition, not a confirmed citation.",
-          deva: "कुछ लोग कहते हैं कि ब्रह्मा ने सृष्टि का आरम्भ इसी दिन किया था। इसका ठीक शास्त्र और श्लोक निश्चित नहीं है, इसलिए इसे सुप्रसिद्ध परम्परा के रूप में बताया जाता है, प्रमाणित उद्धरण के रूप में नहीं।",
-          tel: "బ్రహ్మదేవుడు సృష్టిని ఇదే రోజున ప్రారంభించాడని కొందరు చెబుతారు. దీనికి సరైన శాస్త్రం, శ్లోకం నిర్ధారణ కాలేదు కాబట్టి దీన్ని ప్రసిద్ధ సంప్రదాయంగా చెబుతారు, ధృవీకరించిన ఉల్లేఖనంగా కాదు." },
-      ],
-      timeline: [
-        { t: { roman: "The day before", deva: "पूर्व दिन", tel: "ముందు రోజు" },
-          d: { roman: "Clean the house, and gather neem flowers, raw mango, jaggery and the other tastes for the pacchadi.", deva: "घर की सफाई करें, और पच्चडि के लिए नीम के फूल, कच्चा आम, गुड़ और अन्य स्वाद इकट्ठे करें।", tel: "ఇల్లు శుభ్రం చేసుకుని, పచ్చడి కోసం వేప పువ్వు, లేత మామిడికాయ, బెల్లం, మిగతా రుచులను సిద్ధం చేసుకోవాలి." } },
-        { t: { roman: "Before sunrise", deva: "सूर्योदय से पूर्व", tel: "సూర్యోదయానికి ముందు" },
-          d: { roman: "Take an oil bath and wear new or freshly washed clothes.", deva: "तेल स्नान करें और नए या स्वच्छ धुले वस्त्र पहनें।", tel: "నూనె స్నానం చేసి, కొత్త లేదా శుభ్రంగా ఉతికిన బట్టలు ధరించాలి." } },
-        { t: { roman: "Morning", deva: "प्रातःकाल", tel: "ఉదయం" },
-          d: { roman: "Decorate the doorway with a mango-leaf toraṇam and a fresh muggu, and offer a simple pūjā to the family deity.", deva: "देहली को आम के पत्तों के तोरण और नई मुग्गु से सजाएँ, और कुलदेवता की सरल पूजा करें।", tel: "గడపకు మామిడాకుల తోరణం, కొత్త ముగ్గు వేసి, ఇష్టదైవానికి సాధారణ పూజ చేయాలి." } },
-        { t: { roman: "The pacchadi", deva: "पच्चडि का समय", tel: "పచ్చడి వేళ" },
-          d: { roman: "Recite the verse below, then taste the pacchadi together as a household, sharing it with everyone present.", deva: "नीचे दिया श्लोक पढ़कर, पूरा परिवार साथ में पच्चडि चखे, और उपस्थित सभी को बाँटे।", tel: "కింద ఇచ్చిన శ్లోకం చదివి, ఇల్లంతా కలిసి పచ్చడి రుచి చూసి, అక్కడున్న అందరికీ పంచాలి." } },
-        { t: { roman: "Evening", deva: "सायंकाल", tel: "సాయంత్రం" },
-          d: { roman: "Listen to the pañcāṅga śravaṇam — the new year's calendar and its indications, read out by an elder or a priest.", deva: "पञ्चांग श्रवणम् सुनें — नववर्ष का पञ्चांग और उसके संकेत, किसी बड़े या पुरोहित द्वारा सुनाए जाते हैं।", tel: "పంచాంగ శ్రవణం వినాలి — పెద్దలు లేదా పురోహితులు చదివి వినిపించే నూతన సంవత్సరపు పంచాంగం, దాని ఫలితాలు." } },
-      ],
-      samagri: [
-        { roman: "Neem flowers, raw mango pieces, jaggery, tamarind, salt, a little chilli or pepper, and a few drops of ghee — the six tastes of the pacchadi", deva: "नीम के फूल, कच्चे आम के टुकड़े, गुड़, इमली, नमक, थोड़ी मिर्च और कुछ बूँदें घी — पच्चडि के छह स्वाद", tel: "వేప పువ్వు, లేత మామిడి ముక్కలు, బెల్లం, చింతపండు, ఉప్పు, కొద్దిగా మిరపకాయ లేదా మిరియాలపొడి, కొన్ని నేతి బొట్లు — పచ్చడి ఆరు రుచులు" },
-        { roman: "Mango leaves and rice flour or colour powder for the doorway muggu", deva: "देहली की मुग्गु के लिए आम के पत्ते और चावल का आटा या रंग", tel: "గడప ముగ్గు కోసం మామిడాకులు, బియ్యప్పిండి లేదా రంగుల పొడి" },
-        { roman: "This year's pañcāṅgam, for the evening reading", deva: "सायं पठन हेतु इस वर्ष का पञ्चांग", tel: "సాయంత్రం చదవడానికి ఈ సంవత్సరపు పంచాంగం" },
-      ],
-      vidhi: [
-        { step: { roman: "Snānam", deva: "स्नानम्", tel: "స్నానం" },
-          detail: { roman: "Bathe before sunrise with sesame or coconut oil, then wear new or freshly washed clothes.", deva: "सूर्योदय से पूर्व तिल या नारियल तेल से स्नान करें, फिर नए या स्वच्छ धुले वस्त्र पहनें।", tel: "సూర్యోదయానికి ముందు నువ్వుల నూనె లేదా కొబ్బరి నూనెతో స్నానం చేసి, కొత్త లేదా శుభ్రమైన బట్టలు ధరించాలి." } },
-        { step: { roman: "Gṛha alaṅkāraṇam", deva: "गृह अलंकरणम्", tel: "గృహ అలంకరణం" },
-          detail: { roman: "Tie a toraṇam of mango leaves at the doorway and draw a fresh muggu, welcoming the new year into the house.", deva: "देहली पर आम के पत्तों का तोरण बाँधें और नई मुग्गु बनाएँ, घर में नववर्ष का स्वागत करते हुए।", tel: "గడపకు మామిడాకుల తోరణం కట్టి, కొత్త ముగ్గు వేయాలి — ఇంట్లోకి కొత్త సంవత్సరాన్ని ఆహ్వానిస్తూ." } },
-        { step: { roman: "Pacchadi bhakṣaṇam", deva: "पच्चडि भक्षणम्", tel: "పచ్చడి భక్షణం" },
-          detail: { roman: "Mix the neem flowers, raw mango, jaggery, tamarind, salt and chilli together. Recite the verse below, then eat it together as a family.",
-            deva: "नीम के फूल, कच्चा आम, गुड़, इमली, नमक और मिर्च को एक साथ मिलाएँ। नीचे दिया श्लोक पढ़कर, परिवार सहित इसे खाएँ।",
-            tel: "వేప పువ్వు, లేత మామిడి, బెల్లం, చింతపండు, ఉప్పు, మిరపకాయలను కలపాలి. కింది శ్లోకం చదివి, కుటుంబం అంతా కలిసి తినాలి." },
-          mantra: { deva: "शतायुष्यं वज्रदेहं ददात्यर्थं सुखानि च । सर्वारिष्टविनाशं च निम्बकन्दळभक्षणम् ॥",
-                   roman: "śatāyuṣyaṃ vajradehaṃ dadāty arthaṃ sukhāni ca | sarvāriṣṭavināśaṃ ca nimbakandaḷabhakṣaṇam ||",
-                   tel: "శతాయుష్యం వజ్రదేహం దదాత్యర్థం సుఖాని చ । సర్వారిష్టవినాశం చ నింబకందళభక్షణమ్ ॥" },
-          mantraMeaning: { roman: "The eating of this neem mixture gives long life, a body strong as a diamond, wealth, happiness, and the destruction of every misfortune.",
-                     deva: "इस नीम के मिश्रण का सेवन दीर्घायु, वज्र के समान दृढ़ शरीर, धन, सुख और सब अनिष्टों का नाश देता है।",
-                     tel: "ఈ వేప మిశ్రమాన్ని తినడం దీర్ఘాయువు, వజ్రం వంటి దృఢమైన శరీరం, సంపద, సుఖం, సమస్త అరిష్టాల నాశనాన్ని ఇస్తుంది." } },
-        { step: { roman: "Pañcāṅga śravaṇam", deva: "पञ्चांग श्रवणम्", tel: "పంచాంగ శ్రవణం" },
-          detail: { roman: "In the evening, listen to the new year's pañcāṅgam read aloud — the year's name, the rainfall and harvest it promises, and the good and difficult periods ahead.",
-            deva: "सायंकाल नववर्ष का पञ्चांग सुनें — वर्ष का नाम, वर्षा और फसल का संकेत, तथा आगे के शुभ और कठिन काल।",
-            tel: "సాయంత్రం నూతన సంవత్సరపు పంచాంగం వినాలి — సంవత్సరం పేరు, వర్షం, పంటల సూచన, ముందున్న శుభ, కష్ట కాలాలు." } },
-      ],
-      naivedya: [
-        { item: { roman: "Ugādi pacchadi", deva: "उगादि पच्चडि", tel: "ఉగాది పచ్చడి" },
-          note: { roman: "Placed at the doorstep or before the family deity first, then shared with everyone in the house, all six tastes together.",
-                  deva: "पहले देहली पर या कुलदेवता के समक्ष रखा जाता है, फिर घर के सभी लोगों को छहों स्वाद एक साथ बाँटे जाते हैं।",
-                  tel: "మొదట గడపన లేదా ఇష్టదైవం ముందు ఉంచి, తర్వాత ఇంట్లో అందరికీ ఆరు రుచులూ కలిపి పంచుతారు." } },
-      ],
-      dos: [
-        { roman: "Taste every one of the six flavours — do not eat only the sweet part and set the rest aside.", deva: "छहों स्वादों को अवश्य चखें — केवल मीठा भाग खाकर शेष न छोड़ें।", tel: "ఆరు రుచులూ తప్పక రుచి చూడాలి — తీపి భాగం మాత్రమే తిని మిగతాది వదిలేయకూడదు." },
-        { roman: "Share the pacchadi with everyone in the house, including guests and household help.", deva: "पच्चडि घर के सभी लोगों को बाँटें, अतिथियों और सहायकों सहित।", tel: "పచ్చడిని ఇంట్లో అందరికీ పంచాలి — అతిథులు, ఇంట్లో సహాయపడేవారితో సహా." },
-        { roman: "Listen to the pañcāṅga śravaṇam with the family before the day ends.", deva: "दिन समाप्त होने से पूर्व परिवार सहित पञ्चांग श्रवणम् सुनें।", tel: "రోజు ముగియకముందే కుటుంబంతో కలిసి పంచాంగ శ్రవణం వినాలి." },
-      ],
-      donts: [
-        { roman: "Do not skip the bitter or sour taste — the pacchadi is kept as one whole dish.", deva: "कड़वा या खट्टा स्वाद न छोड़ें — पच्चडि को एक सम्पूर्ण व्यंजन के रूप में रखा जाता है।", tel: "చేదు, పులుపు రుచులను వదిలేయరాదు — పచ్చడిని ఒక సంపూర్ణ వంటకంగానే ఉంచాలి." },
-        { roman: "Do not present the Brahmā-creation story as a settled scriptural fact; it is told as popular tradition.", deva: "ब्रह्मा की सृष्टि-कथा को निश्चित शास्त्रीय तथ्य के रूप में प्रस्तुत न करें; इसे प्रचलित परम्परा के रूप में ही बताएँ।", tel: "బ్రహ్మదేవుని సృష్టి కథను నిర్ధారిత శాస్త్ర విషయంగా చెప్పరాదు; దీన్ని ప్రచలిత సంప్రదాయంగానే చెప్పాలి." },
-        { roman: "Do not begin the year's first task grudgingly — the day is kept to enter the year with steadiness, not worry.", deva: "वर्ष का पहला कार्य अनिच्छा से आरम्भ न करें — यह दिन वर्ष में स्थिरता के साथ प्रवेश हेतु मनाया जाता है, चिन्ता के साथ नहीं।", tel: "సంవత్సరపు మొదటి పనిని అయిష్టంగా మొదలుపెట్టరాదు — ఈ రోజు స్థిరచిత్తంతో సంవత్సరంలోకి అడుగుపెట్టడానికే, ఆందోళనతో కాదు." },
-      ],
-      source: { roman: "Follows common Telugu and Kannada household practice for Ugādi. The pacchadi verse is traditional and widely recited; it is popularly linked to the Dharmasindhu, but its exact chapter and verse have not been independently confirmed against the printed text.",
-                deva: "तेलुगु और कन्नड घरों की सामान्य उगादि परम्परा का अनुसरण करता है। पच्चडि का श्लोक पारम्परिक है और व्यापक रूप से पढ़ा जाता है; इसे प्रायः धर्मसिन्धु से जोड़ा जाता है, परन्तु इसका ठीक अध्याय और श्लोक मुद्रित ग्रन्थ से स्वतन्त्र रूप से पुष्ट नहीं हुआ है।",
-                tel: "తెలుగు, కన్నడ ఇళ్లలో సాధారణ ఉగాది ఆచారాన్ని అనుసరిస్తుంది. పచ్చడి శ్లోకం సంప్రదాయమైనది, విస్తృతంగా పఠించబడుతుంది; దీన్ని సాధారణంగా ధర్మసింధువుతో ముడిపెడతారు, కానీ దాని ఖచ్చితమైన అధ్యాయం, శ్లోకం ముద్రిత గ్రంథం నుండి స్వతంత్రంగా ధృవీకరించబడలేదు." },
+      duration: { roman: "The day — pañcāṅga śravaṇam by evening", tel: "పగలు — సాయంత్రానికి పంచాంగ శ్రవణం" },
+      who: { roman: "The Telugu and Kannada new year — the whole household.", tel: "తెలుగు, కన్నడ నూతన సంవత్సరం — ఇల్లంతా." },
+      tagline: { roman: "The samvatsara opens — ugādi pacchadi, and the year read aloud.", tel: "సంవత్సరాది — ఉగాది పచ్చడి, పంచాంగ శ్రవణం." },
       stotras: [{ deity: "vishnu", m: "sahasranama" }],
     },
     {
@@ -1283,7 +966,7 @@ export const STUTI_VRATA = (function () {
     },
     {
       id: "lalita-jayanti", deity: "devi", brief: true,
-      name: { roman: "Lalitā Jayantī", deva: "ललिता जयन्ती", tel: "లలితా జయంతి" },
+      name: { roman: "Māgha Pūrṇimā · Lalitā Jayantī", deva: "माघ पूर्णिमा · ललिता जयन्ती", tel: "మాఘ పౌర్ణమి · లలితా జయంతి" },
       rule: { roman: "Māgha · Pūrṇimā", deva: "माघ पूर्णिमा", tel: "మాఘ పౌర్ణమి" },
       find: (y) => lunar(y, MASA.magha, T.purnima),
       duration: { roman: "One day, the sahasranāma at its centre", tel: "ఒక రోజు, మధ్యలో సహస్రనామ పారాయణం" },
@@ -1343,7 +1026,7 @@ export const STUTI_VRATA = (function () {
     },
     {
       id: "dattatreya-jayanti", deity: "guru", brief: true,
-      name: { roman: "Dattātreya Jayantī", deva: "दत्तात्रेय जयन्ती", tel: "దత్తాత్రేయ జయంతి" },
+      name: { roman: "Mārgaśīrṣa Pūrṇimā · Dattātreya Jayantī", deva: "मार्गशीर्ष पूर्णिमा · दत्तात्रेय जयन्ती", tel: "మార్గశిర పౌర్ణమి · దత్తాత్రేయ జయంతి" },
       rule: { roman: "Mārgaśīrṣa · Pūrṇimā", deva: "मार्गशीर्ष पूर्णिमा", tel: "మార్గశిర పౌర్ణమి" },
       find: (y) => lunar(y, MASA.margashirsha, T.purnima),
       duration: { roman: "Evening, at the rise of the full moon", tel: "సాయంత్రం, పూర్ణచంద్రోదయ వేళ" },
@@ -1352,77 +1035,8 @@ export const STUTI_VRATA = (function () {
       stotras: [{ deity: "guru", m: "guru stotram" }, { deity: "guru", m: "paduka" }, { deity: "guru", m: "guru gita" }],
     },
     {
-      id: "raksha-bandhan", deity: "vishnu",
-      name: { roman: "Rakṣā Bandhan · Śrāvaṇī", deva: "रक्षा बन्धन · श्रावणी", tel: "రక్షాబంధన్ · శ్రావణి" },
-      rule: { roman: "Śrāvaṇa · Pūrṇimā", deva: "श्रावण पूर्णिमा", tel: "శ్రావణ పౌర్ణమి" },
-      find: (y) => lunar(y, MASA.shravana, T.purnima),
-      duration: { roman: "The day — the thread is tied any time before dusk", deva: "पूरा दिन — सूत्र सायं से पूर्व किसी भी समय बाँधा जाता है", tel: "పగలు — దారం సాయంత్రానికి ముందు ఎప్పుడైనా కట్టవచ్చు" },
-      tagline: { roman: "A protective thread, tied with a blessing — kept between siblings, and in other bonds of trust besides.", deva: "आशीर्वाद सहित बाँधा गया रक्षा-सूत्र — भाई-बहन के बीच, और विश्वास के अन्य सम्बन्धों में भी।", tel: "ఆశీర్వాదంతో కట్టే రక్షాదారం — తోబుట్టువుల మధ్య, నమ్మకమున్న ఇతర బంధాలలో కూడా." },
-      who: { roman: "Kept between brothers and sisters; also between a priest and the one he guides, or any bond of trust and protection.", deva: "भाई-बहनों के बीच मनाया जाता है; पुरोहित और उसके यजमान के बीच, या विश्वास और रक्षा के किसी भी अन्य सम्बन्ध में भी।", tel: "అన్నదమ్ములు, అక్కచెల్లెళ్ల మధ్య పాటిస్తారు; పురోహితుడు, ఆయన నడిపించే వ్యక్తి మధ్య, లేదా నమ్మకం రక్షణ గల మరే బంధంలోనైనా." },
-      significance: [
-        { roman: "Tying a protective thread is a very old custom. A priest tying a thread on the one he guides, and a thread tied for protection before an undertaking, are both older than the sibling custom most widely kept today.",
-          deva: "रक्षा-सूत्र बाँधने की रीति अत्यन्त प्राचीन है। पुरोहित द्वारा अपने यजमान को सूत्र बाँधना, और किसी कार्य से पूर्व रक्षा हेतु सूत्र बाँधना — दोनों आज सर्वाधिक प्रचलित भाई-बहन की रीति से भी पुराने हैं।",
-          tel: "రక్షాదారం కట్టడం చాలా పురాతన ఆచారం. పురోహితుడు తాను నడిపించే వ్యక్తికి దారం కట్టడం, ఏదైనా కార్యానికి ముందు రక్షణ కోసం దారం కట్టడం — ఈ రెండూ ఈనాడు ఎక్కువగా పాటించే తోబుట్టువుల ఆచారం కన్నా పాతవి." },
-        { roman: "More than one story is told for how it began — Indra and Śacī, Kṛṣṇa and Draupadī, Yama and Yamunā, Lakṣmī and King Bali are all named in different places. None of these should be called the one original story.",
-          deva: "इसके आरम्भ की एक से अधिक कथाएँ कही जाती हैं — इन्द्र और शची, कृष्ण और द्रौपदी, यम और यमुना, लक्ष्मी और राजा बलि — भिन्न-भिन्न स्थानों में भिन्न-भिन्न कथाएँ मिलती हैं। इनमें से किसी एक को भी मूल कथा नहीं कहा जा सकता।",
-          tel: "దీని ఆరంభం గురించి ఒకటి కన్నా ఎక్కువ కథలు చెబుతారు — ఇంద్రుడు-శచీదేవి, కృష్ణుడు-ద్రౌపది, యముడు-యమున, లక్ష్మీదేవి-బలిచక్రవర్తి — వేర్వేరు చోట్ల వేర్వేరు కథలు కనిపిస్తాయి. వీటిలో దేనినీ అసలైన కథగా చెప్పలేము." },
-        { roman: "The thread stands for a promise on both sides: the one tying it asks for protection, and the one wearing it promises not to misuse the trust placed in it.",
-          deva: "यह सूत्र दोनों ओर से एक वचन है: बाँधने वाला रक्षा माँगता है, और पहनने वाला उस पर रखे गए विश्वास का दुरुपयोग न करने का वचन देता है।",
-          tel: "ఈ దారం రెండు వైపులా ఇచ్చే మాట — కట్టేవారు రక్షణ కోరతారు, ధరించేవారు తనపై ఉంచిన నమ్మకాన్ని దుర్వినియోగం చేయనని మాట ఇస్తారు." },
-      ],
-      timeline: [
-        { t: { roman: "Morning", deva: "प्रातःकाल", tel: "ఉదయం" },
-          d: { roman: "Bathe, and prepare the tray with the rākhī, kumkum, akṣata, a lamp and a sweet.", deva: "स्नान करें, और राखी, कुमकुम, अक्षत, दीप तथा मिठाई सहित थाली सजाएँ।", tel: "స్నానం చేసి, రాఖీ, కుంకుమ, అక్షతలు, దీపం, తీపి పదార్థంతో పళ్ళెం సిద్ధం చేసుకోవాలి." } },
-        { t: { roman: "Before tying", deva: "बाँधने से पूर्व", tel: "కట్టే ముందు" },
-          d: { roman: "Offer a short ārati, and apply a tilak of kumkum on the brother's forehead.", deva: "संक्षिप्त आरती करें, और भाई के माथे पर कुमकुम का तिलक लगाएँ।", tel: "చిన్న హారతి ఇచ్చి, సోదరుని నుదుటిపై కుంకుమ తిలకం పెట్టాలి." } },
-        { t: { roman: "The tying", deva: "बन्धन का समय", tel: "కట్టే వేళ" },
-          d: { roman: "Recite the verse below, then tie the thread on the right wrist.", deva: "नीचे दिया श्लोक पढ़कर, दाहिनी कलाई पर सूत्र बाँधें।", tel: "కింద ఇచ్చిన శ్లోకం చదివి, కుడి మణికట్టుకు దారం కట్టాలి." } },
-        { t: { roman: "Afterwards", deva: "तत्पश्चात्", tel: "తరువాత" },
-          d: { roman: "The brother promises protection and gives a gift; sweets are shared between them.", deva: "भाई रक्षा का वचन देकर उपहार देता है; दोनों मिठाई बाँटते हैं।", tel: "సోదరుడు రక్షణ మాట ఇచ్చి బహుమతి ఇస్తాడు; ఇద్దరూ తీపి పంచుకుంటారు." } },
-      ],
-      samagri: [
-        { roman: "Rākhī or a plain protective thread", deva: "राखी या साधारण रक्षा-सूत्र", tel: "రాఖీ లేదా సాధారణ రక్షాదారం" },
-        { roman: "Kumkum, akṣata and a small lamp for the tilak and ārati", deva: "तिलक और आरती हेतु कुमकुम, अक्षत तथा एक छोटा दीप", tel: "తిలకం, హారతి కోసం కుంకుమ, అక్షతలు, చిన్న దీపం" },
-        { roman: "A sweet, and a tray to hold everything", deva: "एक मिठाई, तथा सब कुछ रखने हेतु थाली", tel: "ఒక తీపి పదార్థం, అన్నీ ఉంచడానికి ఒక పళ్ళెం" },
-      ],
-      vidhi: [
-        { step: { roman: "Thāli sajjīkaraṇam", deva: "थाली सज्जीकरणम्", tel: "పళ్ళెం సిద్ధం చేయడం" },
-          detail: { roman: "Arrange the rākhī, kumkum, akṣata, lamp and sweet on a tray.", deva: "थाली में राखी, कुमकुम, अक्षत, दीप और मिठाई सजाएँ।", tel: "పళ్ళెంలో రాఖీ, కుంకుమ, అక్షతలు, దీపం, తీపిని అమర్చాలి." } },
-        { step: { roman: "Ārati & tilaka", deva: "आरती व तिलक", tel: "హారతి, తిలకం" },
-          detail: { roman: "Wave the lamp before the brother, and apply the tilak on his forehead.", deva: "भाई के सम्मुख दीप घुमाएँ, और उसके माथे पर तिलक लगाएँ।", tel: "సోదరుని ముందు దీపం చుట్టూ తిప్పి, నుదుటిపై తిలకం పెట్టాలి." } },
-        { step: { roman: "Rakṣā bandhanam", deva: "रक्षा बन्धनम्", tel: "రక్షాబంధనం" },
-          detail: { roman: "Recite the verse below, then tie the thread firmly on the right wrist.",
-                    deva: "नीचे दिया श्लोक पढ़कर, दाहिनी कलाई पर दृढ़ता से सूत्र बाँधें।",
-                    tel: "కింది శ్లోకం చదివి, కుడి మణికట్టుకు గట్టిగా దారం కట్టాలి." },
-          mantra: { deva: "येन बद्धो बली राजा दानवेन्द्रो महाबलः । तेन त्वामपि बध्नामि रक्षे मा चल मा चल ॥",
-                   roman: "yena baddho balī rājā dānavendro mahābalaḥ | tena tvām api badhnāmi rakṣe mā cala mā cala ||",
-                   tel: "యేన బద్ధో బలీ రాజా దానవేంద్రో మహాబలః । తేన త్వామపి బధ్నామి రక్షే మా చల మా చల ॥" },
-          mantraMeaning: { roman: "With the same protection that once bound the mighty King Bali, lord of the dānavas, I now bind you. O protection, stay firm; do not waver.",
-                     deva: "जिस रक्षा से महाबली दानवराज बलि बाँधे गए थे, उसी से मैं तुम्हें भी बाँधता हूँ। हे रक्षा, दृढ़ रहो; मत डिग।",
-                     tel: "మహాబలుడైన దానవరాజు బలిని బంధించిన అదే రక్షతో నిన్ను కూడా బంధిస్తున్నాను. ఓ రక్షా, స్థిరంగా ఉండు; చలించకు." } },
-        { step: { roman: "Āśīrvāda vinimayam", deva: "आशीर्वाद विनिमयम्", tel: "ఆశీర్వాద వినిమయం" },
-          detail: { roman: "The brother promises protection and offers a gift; the sweet is shared between them to close the rite.",
-                    deva: "भाई रक्षा का वचन देकर उपहार देता है; विधि के समापन पर मिठाई दोनों में बाँटी जाती है।",
-                    tel: "సోదరుడు రక్షణ మాట ఇచ్చి బహుమతి ఇస్తాడు; కార్యక్రమం ముగింపులో తీపిని ఇద్దరూ పంచుకుంటారు." } },
-      ],
-      dos: [
-        { roman: "Tie the thread with a clear blessing said aloud, not silently.", deva: "सूत्र बाँधते समय आशीर्वाद स्पष्ट स्वर में बोलें, मौन रहकर नहीं।", tel: "దారం కడుతున్నప్పుడు ఆశీర్వాదాన్ని బిగ్గరగా చెప్పాలి, మౌనంగా కాదు." },
-        { roman: "Let the bond include whoever the family considers a brother or sister, by blood or by closeness.", deva: "इस बन्धन में उन सभी को सम्मिलित करें जिन्हें परिवार भाई या बहन मानता है, चाहे रक्त-सम्बन्ध से हों या निकटता से।", tel: "రక్తసంబంధం ద్వారా అయినా, సాన్నిహిత్యం ద్వారా అయినా కుటుంబం సోదరుడు లేదా సోదరిగా భావించే వారందరినీ ఈ బంధంలో చేర్చుకోవాలి." },
-        { roman: "Keep the brother's promise of protection real, not just a form of words.", deva: "भाई का रक्षा का वचन केवल औपचारिक शब्द न होकर वास्तविक हो, इसका ध्यान रखें।", tel: "సోదరుని రక్షణ మాట కేవలం మాటలకే పరిమితం కాకుండా, నిజంగా నిలబెట్టుకునేలా చూసుకోవాలి." },
-      ],
-      donts: [
-        { roman: "Do not present any one of Indra-Śacī, Kṛṣṇa-Draupadī, Yama-Yamunā or Lakṣmī-Bali as the single original story — more than one account is honestly told.", deva: "इन्द्र-शची, कृष्ण-द्रौपदी, यम-यमुना अथवा लक्ष्मी-बलि में से किसी एक कथा को ही मूल कथा न बताएँ — इसकी एक से अधिक कथाएँ ईमानदारी से कही जाती हैं।", tel: "ఇంద్రుడు-శచీదేవి, కృష్ణుడు-ద్రౌపది, యముడు-యమున, లక్ష్మీదేవి-బలిచక్రవర్తి కథల్లో దేనినీ ఏకైక అసలు కథగా చెప్పరాదు — దీనికి ఒకటి కన్నా ఎక్కువ కథలు నిజాయితీగా చెప్పబడతాయి." },
-        { roman: "Do not call the rakṣā mantra a verified Vedic verse — it is a widely recited traditional mantra whose exact Purāṇic recension is not settled.", deva: "रक्षा-मन्त्र को प्रमाणित वैदिक श्लोक न कहें — यह व्यापक रूप से पढ़ा जाने वाला पारम्परिक मन्त्र है, जिसका ठीक पौराणिक पाठ निश्चित नहीं है।", tel: "రక్షామంత్రాన్ని ధృవీకరించిన వేద మంత్రంగా చెప్పరాదు — ఇది విస్తృతంగా పఠించే సంప్రదాయ మంత్రం, దీని ఖచ్చితమైన పౌరాణిక పాఠం నిర్ధారితం కాలేదు." },
-        { roman: "Do not limit the bond to blood siblings alone, where the family's own custom is wider.", deva: "जहाँ परिवार की अपनी रीति व्यापक हो, वहाँ इस बन्धन को केवल सगे भाई-बहनों तक सीमित न करें।", tel: "కుటుంబ ఆచారం విస్తృతంగా ఉన్నచోట, ఈ బంధాన్ని రక్తసంబంధమున్న సోదరులకే పరిమితం చేయరాదు." },
-      ],
-      source: { roman: "Follows widely kept North and Central Indian household practice, now common across most regions. The rakṣā mantra is traditional; its exact Bhaviṣya Purāṇa recension has not been independently verified against the printed text.",
-                deva: "उत्तर व मध्य भारत की व्यापक रूप से प्रचलित घरेलू रीति का अनुसरण करता है, जो अब अधिकांश क्षेत्रों में सामान्य है। रक्षा-मन्त्र पारम्परिक है; इसका ठीक भविष्य पुराण पाठ मुद्रित ग्रन्थ से स्वतन्त्र रूप से पुष्ट नहीं हुआ है।",
-                tel: "ఉత్తర, మధ్య భారతదేశంలో విస్తృతంగా పాటించే గృహాచారాన్ని అనుసరిస్తుంది, ఇప్పుడు చాలా ప్రాంతాల్లో సాధారణమైంది. రక్షామంత్రం సంప్రదాయమైనది; దీని ఖచ్చితమైన భవిష్య పురాణ పాఠం ముద్రిత గ్రంథం నుండి స్వతంత్రంగా ధృవీకరించబడలేదు." },
-      stotras: [{ deity: "vishnu", m: "sahasranama" }],
-    },
-    {
       id: "hayagriva-jayanti", deity: "vishnu", brief: true,
-      name: { roman: "Hayagrīva Jayantī", deva: "हयग्रीव जयन्ती", tel: "హయగ్రీవ జయంతి" },
+      name: { roman: "Śrāvaṇa Pūrṇimā · Hayagrīva Jayantī", deva: "श्रावण पूर्णिमा · हयग्रीव जयन्ती", tel: "శ్రావణ పౌర్ణమి · హయగ్రీవ జయంతి" },
       rule: { roman: "Śrāvaṇa · Pūrṇimā", deva: "श्रावण पूर्णिमा", tel: "శ్రావణ పౌర్ణమి" },
       find: (y) => lunar(y, MASA.shravana, T.purnima),
       duration: { roman: "Forenoon — the same day as the upākarma", tel: "పూర్వాహ్ణం — ఉపాకర్మ దినమే" },
@@ -1501,17 +1115,35 @@ export const STUTI_VRATA = (function () {
     mod.entries.forEach((e) => vratas.push(e));
   });
 
+  /* the tarpaṇa days need one thing the parva dinams do not: `governed`,
+     because the amāvāsyā that carries pitṛ tarpaṇam is the one running at
+     aparāhṇa, and only that function knows how to ask. */
+  if (STUTI_TARPANA_EXTRA) {
+    STUTI_TARPANA_EXTRA.bind({ lunar, monthStart, governed, ref: REF });
+    STUTI_TARPANA_EXTRA.entries.forEach((e) => vratas.push(e));
+  }
+  /* the nine graha janma tithis — quiet marks, from stuti-graha-janma.js */
+  if (STUTI_GRAHA_JANMA_EXTRA) {
+    STUTI_GRAHA_JANMA_EXTRA.bind({ lunar });
+    STUTI_GRAHA_JANMA_EXTRA.entries.forEach((e) => vratas.push(e));
+  }
+  /* the deity janma and āvirbhāva tithis that are not already parvas */
+  if (STUTI_DEITY_JANMA_EXTRA) {
+    STUTI_DEITY_JANMA_EXTRA.bind({ lunar });
+    STUTI_DEITY_JANMA_EXTRA.entries.forEach((e) => vratas.push(e));
+  }
+
   /* ---- memo: a vrata's find(), remembered until its inputs change ---- */
-  const FIND_CACHE = new Map<string, any>();
+  const FIND_CACHE = new Map();
   let FIND_STAMP = "";
   const findStamp = () => {
     try { return JSON.stringify(STUTI_PREFS.get()) + "|" + STUTI_LOC.getLocId() + "|" + JSON.stringify(STUTI_LOC.getDetected()); }
     catch (e) { return ""; }
   };
-  const memoFind = (v: any, extra = "") => {
+  const memoFind = (v, extra = "") => {
     if (!v || v.__memoFind || typeof v.find !== "function") return v;
     const raw = v.find;
-    v.find = function (...a: any[]) {
+    v.find = function (...a) {
       const s = findStamp();
       if (s !== FIND_STAMP) { FIND_STAMP = s; FIND_CACHE.clear(); }
       const k = v.id + "|" + extra + "|" + a.join(",");
@@ -1524,35 +1156,20 @@ export const STUTI_VRATA = (function () {
     return v;
   };
   vratas.forEach((v) => memoFind(v));
+  /* two sources can name the same day — a jayantī listed both in the deity
+     janma table and the backlog, say — so collapse by id, keeping the first
+     seen, before the list is ever counted or shown */
+  (function dedupe() {
+    const seen = new Set(); let w = 0;
+    for (let r = 0; r < vratas.length; r++) { const id = vratas[r].id; if (id && seen.has(id)) continue; if (id) seen.add(id); vratas[w++] = vratas[r]; }
+    vratas.length = w;
+  })();
   const byId = {};
   /* every record takes its type, evidence grade and publication status from
      the one table in stuti-provenance.js; a record that already says its type
      keeps it */
   if (STUTI_PROV) vratas.forEach((v) => STUTI_PROV.stamp(v, false));
   vratas.forEach((v) => { byId[v.id] = v; });
-  /* the tarpaṇa days need one thing the parva dinams do not: `governed`,
-     because the amāvāsyā that carries pitṛ tarpaṇam is the one running at
-     aparāhṇa, and only that function knows how to ask.
-     Deferred a microtask rather than read at the top level like the other
-     EXTRAs above: stuti-tarpana.js reads STUTI_VRATA back (for
-     `southern()`), so the two files each need something the other one
-     defines. A plain script tells them apart by load order, but the ported
-     bundle turns that into a real circular import, and the first one
-     evaluated would find the other's export still uninitialized. Waiting
-     one microtask runs after every module has finished loading, so the
-     cross-reference always resolves, and vratas/byId are still the same
-     array and object every caller already holds a reference to. */
-  Promise.resolve().then(() => {
-    if (STUTI_TARPANA_EXTRA) {
-      STUTI_TARPANA_EXTRA.bind({ lunar, monthStart, governed, ref: REF });
-      STUTI_TARPANA_EXTRA.entries.forEach((e) => { vratas.push(e); byId[e.id] = e; });
-    }
-  });
-  /* the nine graha janma tithis — quiet marks, from stuti-graha-janma.js */
-  if (STUTI_GRAHA_JANMA_EXTRA) {
-    STUTI_GRAHA_JANMA_EXTRA.bind({ lunar });
-    STUTI_GRAHA_JANMA_EXTRA.entries.forEach((e) => { vratas.push(e); byId[e.id] = e; });
-  }
   /* the house's own tithis, dressed as vratas — read live, since they are edited */
   const personal = () => { try { return STUTI_TITHIS ? STUTI_TITHIS.vratas().map((v) => memoFind(v, JSON.stringify(v, (k, x) => (typeof x === "function" ? undefined : x)))) : []; } catch (e) { return []; } };
   const all = () => vratas.concat(personal());
@@ -1665,6 +1282,29 @@ export const STUTI_VRATA = (function () {
         const running = raw <= 0 && -raw < days;
         return { v, date: d, start, away: running ? 0 : raw, dayNo: running ? 1 - raw : null, days };
       }).filter(Boolean).sort((a, b) => a.start - b.start);
+      /* two tables can name the same day under different ids — a jayantī in
+         the backlog and its deity-janma twin, say. Once dates are resolved,
+         a shared name on a shared day is one occasion: keep the first (the
+         base row sorts before its janma clone), drop the rest. Entries that
+         share a name but fall on different days — the two Gāyatrī Jayantīs —
+         keep their own rows. */
+      const seenND = new Set();
+      const fold = (s) => (STUTI_TRANSLIT ? STUTI_TRANSLIT.fold(s) : String(s || "").toLowerCase());
+      const dayKey = (d) => d.getFullYear() + "-" + d.getMonth() + "-" + d.getDate();
+      /* the deity-janma table clones a jayantī as `deity-janma-<id>` for days
+         it does not already own; when the day IS owned — annapurna-jayanti as
+         a parva and its janma twin both on Mārgaśīrṣa Pūrṇimā — the clone is
+         pure redundancy. Gather the plain ids present on each day, then drop a
+         janma clone whose base id already stands on that same day. */
+      const plainByDay = {};
+      upCache.forEach((u) => { if (!/^deity-janma-/.test(u.v.id || "")) (plainByDay[dayKey(u.date)] = plainByDay[dayKey(u.date)] || new Set()).add(u.v.id); });
+      upCache = upCache.filter((u) => {
+        const id = u.v.id || "";
+        if (/^deity-janma-/.test(id)) { const base = id.replace(/^deity-janma-/, ""); const set = plainByDay[dayKey(u.date)]; if (set && set.has(base)) return false; }
+        const nm = (u.v.name && u.v.name.roman) || id;
+        const key = fold(nm) + "|" + dayKey(u.date);
+        if (seenND.has(key)) return false; seenND.add(key); return true;
+      });
     }
     return limit ? upCache.slice(0, limit) : upCache.slice();
   }

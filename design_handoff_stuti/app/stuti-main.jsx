@@ -87,14 +87,14 @@ const srPadaGloss = (lk) => {
   return "";
 };
 
-function SearchView({ go, lang = "deva", backView = "browse", weekday, voice = false }) {
+function SearchView({ go, lang = "deva", backView = "browse", weekday, voice = false, initialQuery = "" }) {
   const S = window.STUTI, L = window.STUTI_L, TR = window.STUTI_TRANSLIT, PADA = window.STUTI_PADA;
-  const [q, setQ] = useStateM("");
+  const [q, setQ] = useStateM(() => initialQuery || "");
   const wasTyped = useRefM("");   // search seam: given back if a dictation hears nothing
   /* opened from the home, the search is a search for stotras and nothing
      else — festivals have their own place on the calendar */
   const stotraOnly = backView === "home" || backView === "daily";
-  const qf = srFold(q).trim();
+  const qf = srFold(q).trim().replace(/pournami|pournima|poornima|poornami|punnami|punnima|purnami|poornnima/g, "purnima");
   const raw = q.trim();
   const live = qf.length >= 1;
   /* one "search" per sitting, once the query is real — not a keystroke log */
@@ -150,9 +150,9 @@ function SearchView({ go, lang = "deva", backView = "browse", weekday, voice = f
   const festHits = React.useMemo(() => {
     const V = window.STUTI_VRATA;
     if (!live || !V || stotraOnly) return [];
-    const r = V.vratas.filter((v) => srFold([v.name.roman, v.name.deva, v.name.tel].join(" ")).indexOf(qf) !== -1);
+    const r = V.vratas.filter((v) => { let h = srFold([v.name.roman, v.name.deva, v.name.tel, v.also && [v.also.roman, v.also.deva, v.also.tel].join(" "), v.alias && v.alias.join(" ")].join(" ")); if (h.indexOf("purnima") !== -1) h += " poornima pournima pournami punnami poornnima"; return h.indexOf(qf) !== -1; });
     return r.map((v) => { const d = V.nextDate(v); return d ? { v, date: d, away: V.daysAway(d) } : null; })
-      .filter(Boolean).sort((a, b) => a.date - b.date);
+      .filter(Boolean).sort((a, b) => (a.v.id === "ekadashi" ? -1 : b.v.id === "ekadashi" ? 1 : a.date - b.date));
   }, [qf]);
   const font = L.font(lang);
   const openHymn = (h) => (h.catalog ? go("deity", { deity: h.deity, from: "search", ret: backView }) : go("reader", { deity: h.deity, hymn: h.id, from: "search", ret: backView }));
@@ -185,6 +185,7 @@ function SearchView({ go, lang = "deva", backView = "browse", weekday, voice = f
             onNothing={() => setQ((cur) => cur || wasTyped.current)} />
           {q && <button className="search-clear" onClick={() => setQ("")} aria-label={window.STUTI_L.a("aClearSearch")}>×</button>}
         </div>
+        <button className="search-done" onClick={() => go(backView)}>{L.t("lensArrDone", lang)}</button>
       </div>
       <div style={{ padding: "6px 18px 24px" }}>
         {!live ? (
@@ -220,7 +221,7 @@ function SearchView({ go, lang = "deva", backView = "browse", weekday, voice = f
                 <div className="eyebrow sr-cap">{L.t("srFestivals", lang)} <i>{festHits.length}</i></div>
                 <div className="cal-fest-card" style={{ margin: 0 }}>
                   {festHits.map(({ v, date, away }) => (
-                    <button key={v.id} className="cal-fest-item" onClick={() => go("browse", { libSub: { kind: "vrata", key: v.id, returnTo: backView } })}>
+                    <button key={v.id} className="cal-fest-item" onClick={() => go("browse", { libSub: { kind: "vrata", key: v.id, returnTo: { view: "search", params: { from: backView, q } } } })}>
                       <span className="cal-fest-dot" aria-hidden="true" />
                       <span className="cal-fest-body">
                         <span className="cal-fest-name" style={{ fontFamily: font }}>{lang === "telugu" ? v.name.tel : lang === "roman" ? v.name.roman : v.name.deva}</span>
@@ -510,6 +511,11 @@ function App() {
      hub unmounts on every trip out of the library and would forget them */
   const [libLens, setLibLens] = useStateM(() => LENS_FROM_LABEL[t.defaultLens] || "deity");
   const [libSub, setLibSub] = useStateM(null);
+  /* where the library was opened FROM, when something outside it sent the
+     reciter in — Nitya's nomulu shelf tapping "add a nomu", say. The library
+     is a tab root and so has no back arrow of its own; with this set it grows
+     one, and the reciter returns to the shelf they left. */
+  const [libRet, setLibRet] = useStateM(null);
   /* changing the default lens in Tweaks should move the library to it */
   useEffectM(() => { setLibLens(LENS_FROM_LABEL[t.defaultLens] || "deity"); setLibSub(null); }, [t.defaultLens]);
 
@@ -554,10 +560,11 @@ function App() {
        RETURNING to the library must not, or it lands the reciter one level
        above where they were. Both arrive as `go("browse")`, so intent has
        to be stated rather than guessed from the destination. */
-    if (payload.reset) { setLibSub(null); setLibLens(LENS_FROM_LABEL[t.defaultLens] || "deity"); }
+    if (payload.reset) { setLibSub(null); setLibLens(LENS_FROM_LABEL[t.defaultLens] || "deity"); setLibRet(null); }
     if (payload.libSub) setLibSub(payload.libSub);
     if (payload.libLens) setLibLens(payload.libLens);
-    setRoute(r => ({ view, from: payload.from, ret: payload.ret, deity: payload.deity ?? r.deity, hymn: payload.hymn ?? r.hymn, practice: payload.practice ?? r.practice, plan: payload.plan ?? r.plan, lens: payload.lens, lensAt: payload.lensAt, weekday: payload.weekday, voice: payload.voice }));
+    if (payload.libRet) setLibRet(payload.libRet);
+    setRoute(r => ({ view, from: payload.from, ret: payload.ret, q: payload.q, deity: payload.deity ?? r.deity, hymn: payload.hymn ?? r.hymn, practice: payload.practice ?? r.practice, plan: payload.plan ?? r.plan, lens: payload.lens, lensAt: payload.lensAt, weekday: payload.weekday, voice: payload.voice }));
   };
 
   const openToday = () => {
@@ -591,7 +598,7 @@ function App() {
   const rv = searchOpen ? (route.from || "browse") : route.view;
   let body;
   if (rv === "home") body = <Home key="home" go={go} openToday={openToday} lang={lang} overlayEl={overlayEl} />;
-  else if (rv === "browse") body = <window.LibraryHub key="browse" go={go} lang={lang} tileMode={tileMode} lens={libLens} setLens={setLibLens} sub={libSub} setSub={setLibSub} />;
+  else if (rv === "browse") body = <window.LibraryHub key="browse" go={go} lang={lang} tileMode={tileMode} lens={libLens} setLens={setLibLens} sub={libSub} setSub={setLibSub} ret={libRet} />;
   else if (rv === "daily") body = <window.NityaView key="daily" go={go} lang={lang} showPractices={false} openRemind={() => setRemindOpen(true)} initLens={route.lens} initLensAt={route.lensAt} />;
   else if (rv === "practices") body = <window.PracticesView key="practices" go={go} lang={lang} />;
   else if (rv === "japa") body = <window.JapaView key="japa" go={go} lang={lang} />;
@@ -670,7 +677,7 @@ function App() {
           {searchOpen && (
             <div className="sr-scrim" onClick={() => go(route.from || "browse")}>
               <div className="sr-sheet" onClick={(e) => e.stopPropagation()}>
-                <SearchView key="search" go={go} lang={lang} backView={route.from || "browse"} weekday={route.weekday} voice={!!route.voice} />
+                <SearchView key="search" go={go} lang={lang} backView={route.from || "browse"} weekday={route.weekday} voice={!!route.voice} initialQuery={route.q || ""} />
               </div>
             </div>
           )}
