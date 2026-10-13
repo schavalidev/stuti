@@ -47,7 +47,7 @@ Observed and deliberately **not** emended:
 
 Accent: **present only on the mantras of the food-offering** — the Gāyatrī, the sprinkling and the offerings to the five breaths. Udātta `॑` (U+0951), anudātta `॒` (U+0952), dīrgha svarita `᳚` (U+1CDA). **The Skanda Gāyatrī at unit 26 is printed unaccented, and it is left unaccented.** It could have been accented from the Taittirīya Āraṇyaka, where the same Gāyatrī stands marked, and doing that is exactly what `CLAUDE.md` forbids: accent is transcribed or absent, never supplied. The paurāṇika verses are unaccented, which is normal and not a defect.
 
-**A defect of the source's Veda pages, corrected throughout.** stotranidhi writes final visarga in its accented mantras as the ASCII colon `:` rather than as `ः` (U+0903) — `न॑:` for `न॑ः`. It looks right on the page and is wrong in the file: it breaks search, breaks collation against any real edition, and transliterates as a colon. Every such colon inside a `deva:` field here has been mapped to `ः`.
+**A defect of the source's Veda pages, corrected throughout.** stotranidhi writes final visarga in its accented mantras as the ASCII colon `:` rather than as `ः` (U+0903) — `न॑:` for `नः॑`. It looks right on the page and is wrong in the file: it breaks search, breaks collation against any real edition, and transliterates as a colon. Every such colon inside a `deva:` field here has been mapped to `ः`.
 
 **Never copy stotranidhi's IAST.** Its pages mark anusvāra `ṃ` and avagraha `’` where this corpus uses `ṁ` and `'`. Every `iast:` field here was generated from the Devanāgarī by `../../bin/dev2iast.py`.
 
@@ -476,8 +476,8 @@ hi: नैवेद्य — लेह्य, चोष्य, भोज्य 
 vidhi:
 The mantras said over the food. The Gāyatrī, the sprinkling of water about the dish, and the offerings to the five breaths. The words in round brackets give the form of the sprinkling used in the evening.
 deva:
-ओं भूर्भुव॒स्सुव॑ः । तत्स॑वि॒तुर्वरे᳚ण्यं॒ भर्गो॑ दे॒वस्य॑ धीमहि ।
-धियो॒ यो न॑ः प्रचो॒दया᳚त् ॥
+ओं भूर्भुव॒स्सुवः॑ । तत्स॑वि॒तुर्वरे᳚ण्यं॒ भर्गो॑ दे॒वस्य॑ धीमहि ।
+धियो॒ यो नः॑ प्रचो॒दया᳚त् ॥
 सत्यं त्वा ऋतेन परिषिञ्चामि ।
 (सायङ्काले – ऋतं त्वा सत्येन परिषिञ्चामि)
 अमृतमस्तु । अ॒मृ॒तो॒प॒स्तर॑णमसि ।

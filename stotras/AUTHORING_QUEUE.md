@@ -2412,7 +2412,7 @@ the accented **TĀ 10.2.16** on sanskritdocuments.org — same śākhā, separat
 seven ṛcs **agree character for character** once nasal and sandhi conventions are normalised. The
 gāyatrī was located accented in the gāyatrī-mālā at TĀ 10.1.
 
-**Adjudicated:** `अ॒स्मान् स्व॒स्तिभि॑ः` (stotranidhi) vs `अ॒स्मान्थ्स्व॒स्तिभि॑ः` (Āraṇyaka) — the
+**Adjudicated:** `अ॒स्मान् स्व॒स्तिभिः॑` (stotranidhi) vs `अ॒स्मान्थ्स्व॒स्तिभिः॑` (Āraṇyaka) — the
 Āraṇyaka form adopted, as the śākhā's own printed convention and the one `devi/durga/19` already
 carries. The accents are unaffected either way. **One defect corrected:** a zero-width joiner
 inside stotranidhi's `पर्‍ष॒दति॑`. No accent mark was added, inferred or moved.
@@ -3199,7 +3199,7 @@ from the same site's accented Devanāgarī pūjā page
 (`/hi/sri-durga-devi-shodashopachara-puja-in-sanskrit/`, 383 marks), which is where six
 sibling files of this folder already took these same mantras, in the same śākhā and paddhati.
 **Lesson, and it cost a defect:** the first pass typed those lines by hand and dropped the
-anudātta from `चक्षु॒ः`. Pulling the 13 lines from the fetched page by machine and diffing
+anudātta from `चक्षुः॒`. Pulling the 13 lines from the fetched page by machine and diffing
 against what had been typed found it. **Do not hand-type accented text when the source is
 already on disk — lift it and diff it.** Five ASCII colons for visarga were mapped in those
 lines, the defect class recorded in `19_durga_shodashopachara_puja.txt`.

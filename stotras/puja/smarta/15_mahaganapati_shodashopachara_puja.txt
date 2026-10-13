@@ -55,7 +55,7 @@ Observed and deliberately **not** emended, there being no second witness for the
 
 Accent: **present on the Vedic mantras** — the prāṇapratiṣṭhā, the two occurrences of `गणानां त्वा`, the Gāyatrī, and the prāṇāhuti series. 120 marks. Udātta `॑` (U+0951), anudātta `॒` (U+0952), dīrgha svarita `᳚` (U+1CDA). The paurāṇika ślokas are printed unaccented, which is normal and not a defect. **No accent was inferred, derived or reconstructed** — every mark stands where the source put it.
 
-**A defect of the source's Veda pages, corrected throughout.** stotranidhi writes final visarga in its accented mantras as the ASCII colon `:` rather than as `ः` (U+0903) — `चक्षु॒:` for `चक्षु॒ः`. It looks right on the page and is wrong in the file: it breaks search, breaks collation against any real edition, and transliterates as a colon. Every such colon inside a `deva:` field here has been mapped to `ः` and the affected `iast:` fields regenerated.
+**A defect of the source's Veda pages, corrected throughout.** stotranidhi writes final visarga in its accented mantras as the ASCII colon `:` rather than as `ः` (U+0903) — `चक्षु॒:` for `चक्षुः॒`. It looks right on the page and is wrong in the file: it breaks search, breaks collation against any real edition, and transliterates as a colon. Every such colon inside a `deva:` field here has been mapped to `ः` and the affected `iast:` fields regenerated.
 
 **Never copy stotranidhi's IAST.** Its pages mark anusvāra `ṃ` and avagraha `’` where this corpus uses `ṁ` and `'`. Every `iast:` field here was generated from the Devanāgarī by `../../bin/dev2iast.py`.
 
@@ -89,11 +89,11 @@ vidhi:
 The breath is established in the image. The mantra is Ṛgveda 10.59.6, a prayer for the return of sight, breath and life. It is accented as the source prints it. The daily rite at `04` has no such act.
 deva:
 प्राणप्रतिष्ठ —
-ओं असु॑नीते॒ पुन॑र॒स्मासु॒ चक्षु॒ः
-पुन॑ः प्रा॒णमि॒ह नो᳚ धेहि॒ भोग᳚म् ।
+ओं असु॑नीते॒ पुन॑र॒स्मासु॒ चक्षुः॒
+पुनः॑ प्रा॒णमि॒ह नो᳚ धेहि॒ भोग᳚म् ।
 ज्योक्प॑श्येम॒ सूर्य॑मु॒च्चर᳚न्त॒
 मनु॑मते मृ॒डया᳚ नः स्व॒स्ति ॥
-अ॒मृतं॒ वै प्रा॒णा अ॒मृत॒माप॑ः
+अ॒मृतं॒ वै प्रा॒णा अ॒मृत॒मापः॑
 प्रा॒णाने॒व य॑थास्था॒नमुप॑ह्वयते ॥
 iast:
 prāṇapratiṣṭha —
@@ -130,7 +130,7 @@ deva:
 ओं ग॒णानां᳚ त्वा ग॒णप॑तिग्ं हवामहे
 क॒विं क॑वी॒नामु॑प॒मश्र॑वस्तमम् ।
 ज्ये॒ष्ठ॒राजं॒ ब्रह्म॑णां ब्रह्मणस्पत॒
-आ न॑ः शृ॒ण्वन्नू॒तिभि॑ः सीद॒ साद॑नम् ॥
+आ नः॑ शृ॒ण्वन्नू॒तिभिः॑ सीद॒ साद॑नम् ॥
 iast:
 dhyānam —
 oṁ gaṇānāṁ tvā gaṇapatigṁ havāmahe
@@ -493,8 +493,8 @@ hi: नैवेद्य — चार प्रकार के अन्न �
 vidhi:
 The Gāyatrī is recited over the food, and the offering is encircled with water. The words change in the evening, and the source prints the evening form in brackets.
 deva:
-ओं भूर्भुव॒स्सुव॑ः । तत्स॑वि॒तुर्वरे᳚ण्यं॒ भर्गो॑ दे॒वस्य॑ धीमहि ।
-धियो॒ यो न॑ः प्रचो॒दया᳚त् ॥
+ओं भूर्भुव॒स्सुवः॑ । तत्स॑वि॒तुर्वरे᳚ण्यं॒ भर्गो॑ दे॒वस्य॑ धीमहि ।
+धियो॒ यो नः॑ प्रचो॒दया᳚त् ॥
 सत्यं त्वा ऋतेन परिषिञ्चामि ।
 (सायङ्काले – ऋतं त्वा सत्येन परिषिञ्चामि)
 अमृतमस्तु । अ॒मृ॒तो॒प॒स्तर॑णमसि ।
@@ -582,7 +582,7 @@ deva:
 ओं ग॒णानां᳚ त्वा ग॒णप॑तिं हवामहे
 क॒विं क॑वी॒नामु॑प॒मश्र॑वस्तमम् ।
 ज्ये॒ष्ठ॒राजं॒ ब्रह्म॑णां ब्रह्मणस्पत॒
-आ न॑ः शृ॒ण्वन्नू॒तिभि॑स्सीद॒ साद॑नम् ॥
+आ नः॑ शृ॒ण्वन्नू॒तिभि॑स्सीद॒ साद॑नम् ॥
 चतुर्वेदभवैर्मन्त्रैर्गाणपत्यैर्गजानन ।
 मन्त्रितानि गृहाण त्वं पुष्पपत्राणि विघ्नप ॥
 ओं श्रीमहागणपतये नमः मन्त्रपुष्पं समर्पयामि ।

@@ -49,7 +49,7 @@ Observed and deliberately **not** emended:
 
 Accent: **present on the Vedic material** — the ṛcs of the Śrī Sūkta, the prāṇapratiṣṭhā mantra, the Pavamāna verse at the garment, the Gāyatrī, the offerings to the five breaths, the Kātyāyanī Gāyatrī and the closing śānti. Udātta `॑` (U+0951), anudātta `॒` (U+0952), dīrgha svarita `᳚` (U+1CDA). The paurāṇika verses, including the four meditations, are printed unaccented, which is normal and not a defect. **No accent was inferred, derived or reconstructed.**
 
-**A defect of the source's Veda pages, corrected throughout.** stotranidhi writes final visarga in its accented mantras as the ASCII colon `:` rather than as `ः` (U+0903) — `चक्षु॒:` for `चक्षु॒ः`. It looks right on the page and is wrong in the file: it breaks search, breaks collation against any real edition, and transliterates as a colon. Every such colon inside a `deva:` field here has been mapped to `ः` and the affected `iast:` fields regenerated.
+**A defect of the source's Veda pages, corrected throughout.** stotranidhi writes final visarga in its accented mantras as the ASCII colon `:` rather than as `ः` (U+0903) — `चक्षु॒:` for `चक्षुः॒`. It looks right on the page and is wrong in the file: it breaks search, breaks collation against any real edition, and transliterates as a colon. Every such colon inside a `deva:` field here has been mapped to `ः` and the affected `iast:` fields regenerated.
 
 **Never copy stotranidhi's IAST.** Its pages mark anusvāra `ṃ` and avagraha `’` where this corpus uses `ṁ` and `'`. Every `iast:` field here was generated from the Devanāgarī by `../../bin/dev2iast.py`.
 
@@ -101,11 +101,11 @@ vidhi:
 The placing of the life-breath. The mantra is Ṛgveda 10.59.6 with a Brāhmaṇa formula after it, printed with full accent. The same mantra stands at unit 6 of `17_shiva_shodashopachara_puja.txt`.
 deva:
 प्राणप्रतिष्ठा –
-ओं असु॑नीते॒ पुन॑र॒स्मासु॒ चक्षु॒ः
-पुन॑ः प्रा॒णमि॒ह नो᳚ धेहि॒ भोग᳚म् ।
+ओं असु॑नीते॒ पुन॑र॒स्मासु॒ चक्षुः॒
+पुनः॑ प्रा॒णमि॒ह नो᳚ धेहि॒ भोग᳚म् ।
 ज्योक्प॑श्येम॒ सूर्य॑मु॒च्चर᳚न्त॒
 मनु॑मते मृ॒डया᳚ नः स्व॒स्ति ॥
-अ॒मृतं॒ वै प्रा॒णा अ॒मृत॒माप॑ः
+अ॒मृतं॒ वै प्रा॒णा अ॒मृत॒मापः॑
 प्रा॒णाने॒व य॑थास्था॒नमुप॑ह्वयते ॥
 iast:
 prāṇapratiṣṭhā –
@@ -373,7 +373,7 @@ deva:
 वस्त्रम् –
 उपै॑तु॒ मां दे॑वस॒खः की॒र्तिश्च॒ मणि॑ना स॒ह ।
 प्रा॒दु॒र्भू॒तोऽस्मि॑ राष्ट्रे॒ऽस्मि॒न् की॒र्तिमृद्धिं॑ द॒दातु॑ मे ॥
-अ॒भि वस्त्रा॑ सुवस॒नान्य॑र्षा॒भि धे॒नूः सु॒दुघा॑ः पू॒यमा॑नः ।
+अ॒भि वस्त्रा॑ सुवस॒नान्य॑र्षा॒भि धे॒नूः सु॒दुघाः॑ पू॒यमा॑नः ।
 अ॒भि च॒न्द्रा भर्त॑वे नो॒ हिर॑ण्या॒भ्यश्वा॑न्र॒थिनो॑ देव सोम ॥
 पट्टयुग्मं मया दत्तं कञ्चुकेन समन्वितम् ।
 परिधेहि कृपां कृत्वा मातर्दुर्गार्तिनाशिनी ॥
@@ -508,8 +508,8 @@ vidhi:
 The ornaments. The ṛc is the tenth of the Śrī Sūkta.
 deva:
 आभरणम् –
-मन॑स॒ः काम॒माकू॑तिं वा॒चः स॒त्यम॑शीमहि ।
-प॒शू॒नाग्ं रू॒पमन्न॑स्य॒ मयि॒ श्रीः श्र॑यतां॒ यश॑ः ॥
+मन॑सः॒ काम॒माकू॑तिं वा॒चः स॒त्यम॑शीमहि ।
+प॒शू॒नाग्ं रू॒पमन्न॑स्य॒ मयि॒ श्रीः श्र॑यतां॒ यशः॑ ॥
 हार कङ्कण केयूर मेखला कुण्डलादिभिः ।
 रत्नाढ्यं हीरकोपेतं भूषणं प्रतिगृह्यताम् ॥
 ओं श्रीदुर्गापरादेव्यै नमः आभरणानि समर्पयामि ।
@@ -612,7 +612,7 @@ vidhi:
 Incense. The ṛc is the twelfth of the Śrī Sūkta, addressed to the seer Ciklīta.
 deva:
 धूपम् –
-आप॑ः सृ॒जन्तु॑ स्निग्धा॒नि चि॒क्ली॒त व॑स मे॒ गृहे ।
+आपः॑ सृ॒जन्तु॑ स्निग्धा॒नि चि॒क्ली॒त व॑स मे॒ गृहे ।
 नि च॑ दे॒वीं मा॒तरं॒ श्रियं॑ वा॒सय॑ मे कु॒ले ॥
 वनस्पतिरसोद्भूतो गन्धाढ्यो गन्ध उत्तमः ।
 आघ्रेयः सर्वदेवानां धूपोऽयं प्रतिगृह्यताम् ॥
@@ -656,7 +656,7 @@ vidhi:
 The food-offering. The ṛc is the fourteenth of the Śrī Sūkta.
 deva:
 नैवेद्यम् –
-आ॒र्द्रां य॒ः करि॑णीं य॒ष्टिं सु॒वर्णां हे॑ममा॒लिनीम् ।
+आ॒र्द्रां यः॒ करि॑णीं य॒ष्टिं सु॒वर्णां हे॑ममा॒लिनीम् ।
 सू॒र्यां हि॒रण्म॑यीं ल॒क्ष्मीं जात॑वेदो म॒माव॑ह ॥
 शर्कराखण्डखाद्यानि दधिक्षीरघृतानि च ।
 आहारार्थं भक्ष्यभोज्यं नैवेद्यं प्रतिगृह्यताम् ॥
@@ -676,8 +676,8 @@ hi: नैवेद्य — हे जातवेदस्, आर्द्�
 vidhi:
 The mantras said over the food. The Gāyatrī, the sprinkling of water about the dish, and the offerings to the five breaths. The words in round brackets give the form of the sprinkling used in the evening.
 deva:
-ओं भूर्भुव॒स्सुव॑ः । तत्स॑वि॒तुर्वरे᳚ण्यं॒ भर्गो॑ दे॒वस्य॑ धीमहि ।
-धियो॒ यो न॑ः प्रचो॒दया᳚त् ॥
+ओं भूर्भुव॒स्सुवः॑ । तत्स॑वि॒तुर्वरे᳚ण्यं॒ भर्गो॑ दे॒वस्य॑ धीमहि ।
+धियो॒ यो नः॑ प्रचो॒दया᳚त् ॥
 सत्यं त्वा ऋतेन परिषिञ्चामि ।
 (सायङ्काले – ऋतं त्वा सत्येन परिषिञ्चामि)
 अमृतमस्तु । अ॒मृ॒तो॒प॒स्तर॑णमसि ।
@@ -940,7 +940,7 @@ deva:
 अकालमृत्युहरणम् सर्वव्याधिनिवारणम् ।
 समस्तपापक्षयकरं श्रीदुर्गापरादेवी पादोदकं पावनं शुभम् ॥
 श्रीमहाकाली श्रीमहालक्ष्मी श्रीमहासरस्वती स्वरूपिणी श्रीदुर्गा परादेव्यै नमः प्रसादं शिरसा गृह्णामि ।
-ओं शान्ति॒ः शान्ति॒ः शान्ति॑ः ॥
+ओं शान्तिः॒ शान्तिः॒ शान्तिः॑ ॥
 इतर वेद सूक्तानि पश्यतु ।
 iast:
 tīrthaprasāda grahaṇam –

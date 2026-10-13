@@ -251,7 +251,7 @@ what they may be flattened into.** Every deity page's saṅkalpa is now checked 
 ### A defect of the source, found late and corrected in all eight
 
 stotranidhi writes final visarga in its accented mantras as the **ASCII colon `:`** rather than
-as `ः` (U+0903) — `चक्षु॒:` for `चक्षु॒ः`. It looks right on the page and is wrong in the file:
+as `ः` (U+0903) — `चक्षु॒:` for `चक्षुः॒`. It looks right on the page and is wrong in the file:
 it breaks search, breaks collation against any real edition, and transliterates as a colon. It
 was caught while collating `20` against the Ṛgveda, where it was the **only** difference between
 the page and the Śākala text. Every such colon inside a `deva:` field of `15`–`22` has been

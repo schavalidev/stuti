@@ -24,7 +24,7 @@ Independent collation, in three parts.
 - **`श्रीर्मा॑दे॒वीर्जु॑षताम्`** in ṛc 3 against `श्रीर्मा॑ दे॒वीर्जु॑षताम्` — a word space only.
 - **`क्षुत्पि॑पा॒साम॑लां ज्ये॒ष्ठाम॑ल॒क्ष्मीं`** in ṛc 8, against `क्षु॒त्पि॒पा॒साम॑ला-ञ्ज्ये॒ष्ठाम॒ल॒क्षीर्`: the accent on the first word differs, and the page reads `अलक्ष्मीं` for `अलक्षीः`.
 - **`ई॒श्वरी॑ग्ं`** in ṛc 9 against `ई॒श्वरीग्ं॑` — the udātta sits before the nasal here and after it there.
-- **`मन॑स॒ः`** and **`यश॑ः`** in ṛc 10 against `मन॑सः॒` and `यशः॑`, the same mark on the other side of the visarga; and **`प॒शू॒नां`** against `प॒शू॒नाग्ं`.
+- **`मन॑सः॒`** and **`यशः॑`** in ṛc 10 against `मन॑सः॒` and `यशः॑`, the same mark on the other side of the visarga; and **`प॒शू॒नां`** against `प॒शू॒नाग्ं`.
 - **`वृ॒क्षोऽथ`** in ṛc 6 without the udātta the witness prints on `ऽथ॑`.
 - **`हि॑रण्यं॒ प्रभू॑तं॒`** in ṛc 15 against `हिर॑ण्य॒-म्प्रभू॑त॒` — the udātta falls on a different syllable of `हिरण्यम्`. At ṛc 2 the page prints `हिर॑ण्यं` as the witness does.
 - The ṛc at the waving of the light, `सम्राजं च विराजं च`, **is not printed in that file at all**, as `18` and `19` also found. It stands, with the same accent, in `19`.
@@ -55,7 +55,7 @@ Observed and deliberately **not** emended:
 
 Accent: **present on the Vedic material** — the prāṇapratiṣṭhā mantra, the fifteen ṛcs of the Śrī Sūkta and the ṛc `सम्राजं च विराजं च`. 312 accent marks stand in the units: udātta `॑` (U+0951), anudātta `॒` (U+0952), dīrgha svarita `᳚` (U+1CDA). The paurāṇika verses, the dhyāna, the name-mantra and the gāyatrī of Tripurā are printed unaccented, which is right. **No accent was inferred, derived or reconstructed.** The accented lines are Taittirīya, the tradition of a South Indian smārta rite, so nothing crosses a śākhā boundary. Because the file carries Vedic mantras, its Paurāṇika form is kept at `../pauranika/smarta/30_bala_tripurasundari_shodashopachara_puja.txt`.
 
-**A defect of the source's Veda pages, corrected throughout.** stotranidhi writes final visarga in its accented mantras as the ASCII colon `:` rather than as `ः` (U+0903) — `चक्षु॒:` for `चक्षु॒ः`. Every such colon inside a `deva:` field here has been mapped to `ः`, and the `iast:` fields were generated after the mapping.
+**A defect of the source's Veda pages, corrected throughout.** stotranidhi writes final visarga in its accented mantras as the ASCII colon `:` rather than as `ः` (U+0903) — `चक्षु॒:` for `चक्षुः॒`. Every such colon inside a `deva:` field here has been mapped to `ः`, and the `iast:` fields were generated after the mapping.
 
 **Never copy stotranidhi's IAST.** Every `iast:` field here was generated from the Devanāgarī by `../../bin/dev2iast.py`.
 
@@ -107,11 +107,11 @@ vidhi:
 The placing of the life-breath. The mantra is Ṛgveda 10.59.6 with a Brāhmaṇa formula after it, printed with full accent. The same mantra stands at unit 3 of `19_durga_shodashopachara_puja.txt`.
 deva:
 प्राणप्रतिष्ठा –
-ओं असु॑नीते॒ पुन॑र॒स्मासु॒ चक्षु॒ः
-पुन॑ः प्रा॒णमि॒ह नो᳚ धेहि॒ भोग᳚म् ।
+ओं असु॑नीते॒ पुन॑र॒स्मासु॒ चक्षुः॒
+पुनः॑ प्रा॒णमि॒ह नो᳚ धेहि॒ भोग᳚म् ।
 ज्योक्प॑श्येम॒ सूर्य॑मु॒च्चर᳚न्त॒
 मनु॑मते मृ॒डया᳚ नः स्व॒स्ति ।
-अ॒मृतं॒ वै प्रा॒णा अ॒मृत॒माप॑ः
+अ॒मृतं॒ वै प्रा॒णा अ॒मृत॒मापः॑
 प्रा॒णाने॒व य॑थास्था॒नमुप॑ह्वयते ॥
 iast:
 prāṇapratiṣṭhā –
@@ -407,8 +407,8 @@ vidhi:
 The thread of good fortune. The ṛc is the tenth of the Śrī Sūkta.
 deva:
 माङ्गल्यम् –
-मन॑स॒ः काम॒माकू॑तिं वा॒चः स॒त्यम॑शीमहि ।
-प॒शू॒नां रू॒पमन्न॑स्य॒ मयि॒ श्रीः श्र॑यतां॒ यश॑ः ॥
+मन॑सः॒ काम॒माकू॑तिं वा॒चः स॒त्यम॑शीमहि ।
+प॒शू॒नां रू॒पमन्न॑स्य॒ मयि॒ श्रीः श्र॑यतां॒ यशः॑ ॥
 शुद्धस्वर्णकृतं देवि माङ्गल्यं मङ्गलप्रदम् ।
 सर्वमङ्गलमाङ्गल्यं गृहाण त्रिपुरेश्वरि ॥
 ओं श्रीबालात्रिपुरसुन्दर्यै नमः मङ्गलसूत्रं समर्पयामि ।
@@ -464,7 +464,7 @@ vidhi:
 Incense. The ṛc is the twelfth of the Śrī Sūkta.
 deva:
 धूपम् –
-आप॑ः सृ॒जन्तु॑ स्नि॒ग्धा॒नि॒ चि॒क्ली॒त व॑स मे॒ गृहे ।
+आपः॑ सृ॒जन्तु॑ स्नि॒ग्धा॒नि॒ चि॒क्ली॒त व॑स मे॒ गृहे ।
 नि च॑ दे॒वीं मा॒तरं॒ श्रियं॑ वा॒सय॑ मे कु॒ले ॥
 दशाङ्गं गुग्गुलोपेतं सुगन्धं च मनोहरम् ।
 धूपं दास्यामि देवेशि गृहाण त्रिपुरेश्वरि ॥
@@ -508,7 +508,7 @@ vidhi:
 The food-offering. The ṛc is the fourteenth of the Śrī Sūkta.
 deva:
 नैवेद्यम् –
-आ॒र्द्रां य॒ः करि॑णीं य॒ष्टिं॒ सु॒व॒र्णां हे॑ममा॒लिनीम् ।
+आ॒र्द्रां यः॒ करि॑णीं य॒ष्टिं॒ सु॒व॒र्णां हे॑ममा॒लिनीम् ।
 सू॒र्यां हि॒रण्म॑यीं ल॒क्ष्मीं॒ जात॑वेदो म॒ आवह ॥
 नैवेद्यं षड्रसोपेतं दधिमध्वाज्यसम्युतम् ।
 नानाभक्ष्यफलोपेतं गृहाण त्रिपुरेश्वरि ॥
