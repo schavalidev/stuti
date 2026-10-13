@@ -95,6 +95,27 @@ code { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: .
 
 <section class="release">
   <div class="rail">
+    <div class="ver">0.9.108</div>
+    <div class="date">13 October 2026</div>
+    <div class="rail-note">The dotted ring in the accented hymns was never the font's doing, and the accent that could not be seen now has a face that shows it.</div>
+  </div>
+  <div class="release-body">
+    <h2 class="release-title">The Vedic accent, put right in the text and given a face that shows it</h2>
+    <div class="entry">
+      <div class="entry-head"><span class="tag tag-fix">Fixed</span><h3>A small dotted ring stood between the letter and the visarga in seven hundred and fifty places</h3></div>
+      <p>The marks of an akṣara have an order the writing system can draw: the vowel sign, then the anusvāra or visarga, then the Vedic tone mark. Fifty-five files held the tone mark first — <span lang="sa">ऋच॒ः</span> written with the anudātta before the two dots rather than after — and every font answers that by drawing a small dotted ring where it cannot shape what it has been given. This was put to four faces, the one the app uses and three others including the one <span class="lit">vignanam</span> sets its Veda pages in: all four draw the ring on the wrong order, and all four are clean on the right one. The ring was never a failing of the typography. It was the text.</p>
+      <p>The reader has been reordering each akṣara as it draws it since September, which hid the fault in the one place a hymn is recited from and nowhere else — the search results, the corpus build and the design prototype all still showed the ring. The files are right now, and that reordering becomes a safeguard rather than the only thing between a reciter and a broken letter. Nothing was added or removed anywhere: two characters change places, and the sweep refuses to write a file whose characters would differ. Which marks are tone marks took two corrections, both found by reading the output instead of trusting the rule. Treating the whole Vedic block as tone marks swallows a character that is a letter and not a mark at all, and undid the corpus's own spelling of the nasal before a spirant. Treating every combining mark as one then swallows the virāma, which stands before a nasal quite correctly in <span lang="sa">ग्ं</span>. The fetched sources are left as they were fetched; a witness is kept as it came.</p>
+    </div>
+    <div class="entry">
+      <div class="entry-head"><span class="tag tag-add">Added</span><h3>An accented hymn is set in a face built for Vedic Devanāgarī</h3></div>
+      <p>The anudātta is a bar beneath the letter, and beneath <span lang="sa">ु</span>, <span lang="sa">ू</span>, <span lang="sa">ृ</span> or a virāma the previous face drew it pressed against the vowel's tail, where at reading size it stopped reading as a mark at all. That is what the warm second colour was reaching for a month ago: the accents were coloured because they could not be found. The hymns are now set in Krishna Sanskrit, which drops the bar clear below every vowel tail at one depth, and which was built for Vedic text and tested by its authors against the Kṛṣṇa Yajurveda Taittirīya — the tradition most of this corpus's accented text belongs to. It is freely licensed, so it ships with the app and asks nothing of any other server. Siddhanta, which renders beautifully and is what <span class="lit">vignanam</span> uses, is licensed for non-commercial use only and could not be taken.</p>
+      <p>It is the accented hymns alone. One rule reads the Vedic face, and the reader applies it only where the text actually carries svara, so nothing else in the app changes its letters. Telugu keeps the face it had, there being no Telugu in the new one.</p>
+    </div>
+  </div>
+</section>
+
+<section class="release">
+  <div class="rail">
     <div class="ver">0.9.107</div>
     <div class="date">3 October 2026</div>
     <div class="rail-note">Bells that reach a closed browser, sealed on the device so the server that sends them cannot read them.</div>
