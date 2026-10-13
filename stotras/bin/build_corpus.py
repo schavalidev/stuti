@@ -35,7 +35,7 @@ import reader_view as RV
 SHELF = {
     "ganesha": "ganesha", "shiva": "shiva", "devi": "devi", "vishnu": "vishnu",
     "krishna": "vishnu", "rama": "vishnu", "narasimha": "vishnu", "venkateswara": "vishnu",
-    "bhagavadgita": "vishnu", "Subrahmanya": "subrahmanya", "guru": "guru",
+    "bhagavadgita": "vishnu", "ashtavakragita": "itara", "Subrahmanya": "subrahmanya", "guru": "guru",
     "dattatreya": "guru", "hanuman": "hanuman", "pitr": "pitr", "ganga": "nadi",
     "navagraha": "navagraha", "shani": "navagraha", "ayyappa": "itara", "brahma": "itara",
     "kubera": "itara", "misc_vedic": "itara", "veda": "itara", "puja": "itara", "vidhi": "itara",
