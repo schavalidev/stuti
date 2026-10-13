@@ -89,7 +89,7 @@ The Android app does not need this: its bells are already laid in the OS.
 The largest piece of work left, and it is a decision, not a build.
 Re-derive with `python3 stotras/bin/build_corpus.py --check`.
 
-Today: **1,528 files, 1,526 built, 0 listed.** Not one file carries a `Published:`
+Today: **1,528 files, 1,526 built, 0 listed** (the two that build to nothing are deliberate; see below). Not one file carries a `Published:`
 field, so the index has zero rows and nothing in the written corpus reaches a
 reader. The source-leak gate is clean — `--publish-all` withholds nothing for a
 reader field naming a source, so the 22 September backlog of 332 is closed.
@@ -106,6 +106,16 @@ reader field naming a source, so the 22 September backlog of 332 is closed.
       shelf-less generic vidhānam texts
 - [ ] Decide what the reader sees for a text whose meanings are not written yet
 
+**Settled, so not a box.** `build_corpus.py` reports two files with no units.
+Neither is a fault. One is a reservation stub whose transcription is still in
+progress, and it has its own box below. The other is permanent:
+`devi/main/03_anandalahari.txt` is a pointer, because the
+Ānandalaharī is not a separate work but verses 1–41 of the Saundaryalaharī, which
+is already written at `devi/lalita/14_saundarya_lahari.txt` — 103 verses, with
+Ānandalaharī carried as a named section and every one of those verses tagged to
+it. Duplicating the forty-one verses under a second title is what the pointer
+exists to prevent. Leave it unpublished and do not raise it again.
+
 ### Content still to write
 
 - [ ] Bhāgavata: meanings for 332 of 335 adhyāyas. Only 8.2, 8.3 and 8.4 carry them
@@ -114,8 +124,6 @@ reader field naming a source, so the 22 September backlog of 332 is closed.
       transcription from 400 dpi page images in progress, no text layer in the source
 - [ ] Minor deities absent from Gītā Press 1594 (Subrahmaṇya among them) need a
       printed edition found before their texts can be collated
-- [ ] `devi/main/03_anandalahari.txt` is a deliberate pointer with no verses — leave it
-      unpublished rather than fixing it
 
 ### Near-duplicate pairs awaiting a ruling
 
