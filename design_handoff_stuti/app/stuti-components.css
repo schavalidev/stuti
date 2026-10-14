@@ -761,8 +761,15 @@
 .nm-empty { padding: 40px 0; text-align: center; color: var(--ink-faint); }
 .verse-lines { display: flex; flex-direction: column; gap: 4px; }
 .line { text-align: center; padding: 7px 8px; border-radius: 14px; cursor: pointer; transition: opacity var(--med) var(--ease), transform var(--med) var(--ease); }
-/* Vedic svara: tint the accented akṣara so the marks stand apart from the text */
-.svara { color: #b5651d; }
+/* Vedic svara. The colour is in the font, not here: a combining mark is painted with
+   its base run's colour, so no span can tint the mark alone, and tinting the whole
+   akṣara made the accent read as a vowel sign. The faces carry COLR/CPAL and the
+   colours are supplied below by @font-palette-values in stuti.css. The .svara span
+   that stuti-reader still emits now only carries the cluster reordering; it sets no
+   colour. See tools/fonts-vedic.py. */
+.rd-vedic .line-deva, .rd-vedic .line-telugu { font-palette: --svara; }
+[data-theme="night"] .rd-vedic .line-deva, [data-theme="night"] .rd-vedic .line-telugu,
+.night .rd-vedic .line-deva, .night .rd-vedic .line-telugu { font-palette: --svara-night; }
 /* accented Vedic texts read in a face that positions the svara marks properly */
 .rd-vedic .line-deva { font-family: var(--font-deva-vedic); }
 .rd-vedic .line-telugu { font-family: var(--font-telugu-vedic); }

@@ -5,7 +5,7 @@
    and can serialise a small, non-personal snapshot to the clipboard.
    ============================================================ */
 window.STUTI_BUILD = (function () {
-  const VERSION = "0.9.108";
+  const VERSION = "0.9.109";
   const BUILD = "2026.10.13";
   const CHANNEL = "beta";                 // test | beta | release
   /* the beta latch — one shared word for invited households. Null opens the

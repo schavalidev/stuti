@@ -34,7 +34,13 @@
 @font-face { font-family: 'Surasans02'; src: url('fonts/Surasans02-Regular.ttf') format('truetype'); font-weight: 400; font-style: normal; font-display: swap; }
 @font-face { font-family: 'Surasans02'; src: url('fonts/Surasans02-Medium.ttf') format('truetype'); font-weight: 500; font-style: normal; font-display: swap; }
 @font-face { font-family: 'Surasans02'; src: url('fonts/Surasans02-Bold.ttf') format('truetype'); font-weight: 700; font-style: normal; font-display: swap; }
-@font-face { font-family: 'Krishna Sanskrit'; src: url('fonts/KrishnaSanskrit-Regular.woff2') format('woff2'); font-weight: 400; font-style: normal; font-display: swap; }
+@font-face { font-family: 'Krishna Sanskrit Vedic'; src: url('fonts/Krishna-Vedic.woff2') format('woff2'); font-weight: 400; font-style: normal; font-display: swap; }
+/* SAMPLE ONLY — the tone marks carry their own palette slot; the colours stay here. */
+@font-palette-values --svara { font-family: 'Krishna Sanskrit Vedic'; override-colors: 0 #C0392B, 1 #283A66, 2 #6B3FA0; }
+@font-palette-values --svara-night { font-family: 'Krishna Sanskrit Vedic'; override-colors: 0 #EF7668, 1 #97A6CC, 2 #BA94E0; }
+@font-face { font-family: 'Tiro Telugu Vedic'; src: url('fonts/TiroTelugu-Vedic.woff2') format('woff2'); font-weight: 400; font-style: normal; font-display: swap; }
+@font-palette-values --svara { font-family: 'Tiro Telugu Vedic'; override-colors: 0 #C0392B, 1 #283A66, 2 #6B3FA0; }
+@font-palette-values --svara-night { font-family: 'Tiro Telugu Vedic'; override-colors: 0 #EF7668, 1 #97A6CC, 2 #BA94E0; }
 @font-face { font-family: 'Surasans02 Regular'; src: url('fonts/Surasans02-Regular.ttf') format('truetype'); font-weight: 300 700; font-style: normal; font-display: swap; }
 
 :root {
@@ -48,8 +54,8 @@
      its anudatta hangs clear below ु ू ृ and the virama instead of crowding them,
      which is what made the mark hard to find in Tiro. Devanagari only — the Telugu
      Vedic face stays Tiro, which has no equivalent. */
-  --font-deva-vedic: 'Krishna Sanskrit', 'Tiro Devanagari Sanskrit', 'Noto Sans Devanagari', serif;
-  --font-telugu-vedic: 'Tiro Telugu', 'Noto Sans Telugu', serif;
+  --font-deva-vedic: 'Krishna Sanskrit Vedic', 'Tiro Devanagari Sanskrit', 'Noto Sans Devanagari', serif;
+  --font-telugu-vedic: 'Tiro Telugu Vedic', 'Tiro Telugu', 'Noto Sans Telugu', serif;
   --font-telugu: 'Surasans02 Regular', 'Mallanna', 'Noto Sans Telugu', 'Mukta', sans-serif;
   /* manuscript serifs — the printed index (deity page) sets its titles in these */
   --font-deva-serif: 'Noto Sans Devanagari', 'Tiro Devanagari Sanskrit', serif;
