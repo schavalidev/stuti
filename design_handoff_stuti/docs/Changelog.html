@@ -95,6 +95,26 @@ code { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: .
 
 <section class="release">
   <div class="rail">
+    <div class="ver">0.9.110</div>
+    <div class="date">15 October 2026</div>
+    <div class="rail-note">A name that no verse of the stotra contains, carried into the app from an online list and recited for months.</div>
+  </div>
+  <div class="release-body">
+    <h2 class="release-title">The Lalitā Sahasranāma's thousand names come from the corpus, not from the web</h2>
+    <div class="entry">
+      <div class="entry-head"><span class="tag tag-fix">Fixed</span><h3>Three names where the stotra has one</h3></div>
+      <p>A reciter noticed it on the page: the app read <span class="lit">tat</span>, <span class="lit">tvam</span>, <span class="lit">ayī</span> as three separate names, where śloka 91 plainly reads <span class="lit">tattvāsanā tattvamayī pañcakośāntarasthitā</span>. The cause was not a slip in the text. The app's thousand names were built from an online nāmāvalī, which splits that one word into three and makes up the shortfall elsewhere; the corpus file had been collated against the printed Gītā Press edition long ago and already read it correctly. The two had never been compared. They are now the same list.</p>
+      <p>Four other places moved with it, all of them the same kind of error in the same online source: <span class="lit">lolākṣī</span> and <span class="lit">kāmarūpiṇī</span> are two names, as are <span class="lit">haṁsavatī</span> and <span class="lit">mukhyaśaktisamanvitā</span>, and <span class="lit">śobhanā</span> and <span class="lit">sulabhā gatiḥ</span>; while <span class="lit">sādhu</span> and <span class="lit">ī</span> are not two names but one, <span class="lit">sādhvī</span>. The thousand still number a thousand, and from first to last they are now numbered as the printed edition numbers them.</p>
+    </div>
+    <div class="entry">
+      <div class="entry-head"><span class="tag tag-fix">Fixed</span><h3>Four readings corrected against the stotra's own text</h3></div>
+      <p>Where the name list disagreed with the verse it is drawn from, the verse decided: <span class="lit">dvijavṛnda</span> for <span class="lit">dvijabṛnda</span>, <span class="lit">bandhinyādi</span> for <span class="lit">bandinyādi</span>, <span class="lit">bhālasthā</span> for <span class="lit">phālasthā</span>, and <span class="lit">nirālambā</span> for <span class="lit">niralambā</span>. The per-śloka name counts, which decide how the chant is divided on the screen, were recomputed for every śloka the changes touched.</p>
+    </div>
+  </div>
+</section>
+
+<section class="release">
+  <div class="rail">
     <div class="ver">0.9.109</div>
     <div class="date">13 October 2026</div>
     <div class="rail-note">A work the reader could not find here at all, and a chapter of it that only one printed book still carries.</div>
