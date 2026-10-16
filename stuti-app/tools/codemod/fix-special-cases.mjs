@@ -46,6 +46,21 @@ for (const file of ["stuti-hindi-names-lalita.ts", "stuti-hindi-names-vishnu.ts"
   wr(file, text);
 }
 
+// ---------- the stuti-hindi-*.ts meaning files ----------
+// Each one runs as a closure that attaches v.hi / v.tel to the verses, and
+// inside that closure sets window.STUTI_HI_<NAME> = HI as a console handle
+// that nothing reads. transform.mjs rewrites every window.NAME = EXPR into
+// export const, which is not allowed inside a function; the files were never
+// imported until 17 Oct 2026, so the build never saw the fault. The handle
+// goes back onto window, where a console can still reach it.
+let hindiHandles = 0;
+for (const file of readdirSync(OUT).filter((f) => /^stuti-hindi-.*\.ts$/.test(f))) {
+  let text = rd(file);
+  const next = text.replace(/^([ \t]+)export const (\w+) = (\w+);$/gm, (_, ind, name, val) => { hindiHandles++; return `${ind}(window as any).${name} = ${val};`; });
+  if (/^[ \t]+export\s/m.test(next)) throw new Error(`${file}: an export is still nested inside the closure`);
+  if (next !== text) wr(file, next);
+}
+
 // ---------- STUTI_TEXTS_EXTRA: the stuti-text-*.ts contributor files ----------
 // Every stuti-text-*.js in the design belongs here. `run-all.sh` checks the
 // two against each other, so a new deity file cannot be ported into silence.
@@ -119,4 +134,4 @@ wr("stuti-texts-extra.ts", extraHeader);
   wr("stuti-texts.ts", text);
 }
 
-console.log(`special cases patched: STUTI_NAMES (4 files + 3 consumers), STUTI_TEXTS_EXTRA (${EXTRA_FILES.length} files + 1 consumer)`);
+console.log(`special cases patched: hindi handles ${hindiHandles}, STUTI_NAMES (4 files + 3 consumers), STUTI_TEXTS_EXTRA (${EXTRA_FILES.length} files + 1 consumer)`);

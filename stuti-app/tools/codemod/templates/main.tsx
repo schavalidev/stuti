@@ -3,6 +3,20 @@ import "./stuti-sync-hook"; // before any store writes: stamps the reciter's own
 import { Capacitor } from "@capacitor/core";
 import ReactDOM from "react-dom/client";
 import App from "./stuti-main";
+/* The Hindi and Telugu meanings. The prototype ran these as <script> tags
+   after stuti-data; each one attaches v.hi / v.tel to the verses of the
+   texts it covers and exports nothing, so nothing imported them and Vite
+   never bundled them — a Devanāgarī or Telugu reader got English for every
+   text here, in every build to 17 Oct 2026. They are imported for their
+   effect, in the order the prototype loaded them. */
+import "./stuti-hindi-names-vishnu";
+import "./stuti-hindi-names-lalita";
+import "./stuti-hindi-shiva";
+import "./stuti-hindi-core";
+import "./stuti-hindi-ganesha2";
+import "./stuti-hindi-subrahmanya";
+import "./stuti-hindi-ganesha";
+import "./stuti-hindi-sahasra";
 import { STUTI_NUDGE } from "./stuti-nudge";
 import { registerKept } from "./stuti-recitations"; // kept recitations become each hymn's Listen recording
 import { installRelay } from "./stuti-relay"; // crash notes and Follow sessions go to the makers' Drive folder

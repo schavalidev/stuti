@@ -240,7 +240,7 @@ import { STUTI } from "./stuti-data";
 
   };
 
-  export const STUTI_HI_SUBRAHMANYA = HI;
+  (window as any).STUTI_HI_SUBRAHMANYA = HI;
 
   const norm = (s) => (s || "").normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase().replace(/[^a-z0-9]/g, "");
 

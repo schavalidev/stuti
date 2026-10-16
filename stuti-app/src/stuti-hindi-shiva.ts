@@ -182,7 +182,7 @@ import { STUTI } from "./stuti-data";
 
   };
 
-  export const STUTI_HI_SHIVA = HI;
+  (window as any).STUTI_HI_SHIVA = HI;
 
   const norm = (s) => (s || "").normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase().replace(/[^a-z0-9]/g, "");
 
