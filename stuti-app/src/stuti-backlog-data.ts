@@ -41,24 +41,35 @@ export const STUTI_BACKLOG_EXTRA = (function () {
   }, extra || {});
   const C = 0, VA = 1, JY = 2, AS = 3, SR = 4, BH = 5, AV = 6, KA = 7, MA = 8, PU = 9, MG = 10, PH = 11;
 
+  /* A kṛṣṇa-pakṣa ekādaśī is named by its pūrṇimānta month in every list —
+     Ramā is Kārtika kṛṣṇa — while the roster finds a day by the amānta month
+     the engine reckons, which through the dark fortnight is one name behind.
+     So the row is written with the name's month, found a month earlier, and
+     labelled both ways: rule in amānta like the rest of the roster, ruleP
+     for a reciter who keeps pūrṇimānta. Until 17 Oct 2026 these rows were
+     found on the name's month as if it were amānta, and every one fell a
+     month late — Indirā on 5 November 2026, which is Ramā's day. */
+  const KE = (id, mP, roman, deva, tel) =>
+    R(id, (mP + 11) % 12, 25, "vishnu", "vratam", roman, deva, tel, { ruleP: ruleOf(mP, 25) });
+
   const entries = [
     /* Caitra */
     R("saubhagya-gauri", C, 2, "devi", "vratam", "Saubhāgya Gaurī Vratam", "सौभाग्य गौरी व्रतम्", "సౌభాగ్య గౌరీ వ్రతం"),
     R("matsya-jayanti", C, 2, "vishnu", "jayanti", "Matsya Jayantī", "मत्स्य जयन्ती", "మత్స్య జయంతి"),
     R("kamada-ekadashi", C, 10, "vishnu", "vratam", "Kāmadā Ekādaśī", "कामदा एकादशी", "కామదా ఏకాదశి"),
     /* the second Ekādaśī of each month, which the list had been missing */
-    R("papamocani-ekadashi", C, 25, "vishnu", "vratam", "Pāpamocanī Ekādaśī", "पापमोचनी एकादशी", "పాపమోచని ఏకాదశి"),
-    R("varuthini-ekadashi", VA, 25, "vishnu", "vratam", "Varūthinī Ekādaśī", "वरूथिनी एकादशी", "వరూథినీ ఏకాదశి"),
-    R("apara-ekadashi", JY, 25, "vishnu", "vratam", "Aparā Ekādaśī", "अपरा एकादशी", "అపరా ఏకాదశి"),
-    R("yogini-ekadashi", AS, 25, "vishnu", "vratam", "Yoginī Ekādaśī", "योगिनी एकादशी", "యోగినీ ఏకాదశి"),
-    R("kamika-ekadashi", SR, 25, "vishnu", "vratam", "Kāmikā Ekādaśī", "कामिका एकादशी", "కామికా ఏకాదశి"),
+    KE("papamocani-ekadashi", C, "Pāpamocanī Ekādaśī", "पापमोचनी एकादशी", "పాపమోచని ఏకాదశి"),
+    KE("varuthini-ekadashi", VA, "Varūthinī Ekādaśī", "वरूथिनी एकादशी", "వరూథినీ ఏకాదశి"),
+    KE("apara-ekadashi", JY, "Aparā Ekādaśī", "अपरा एकादशी", "అపరా ఏకాదశి"),
+    KE("yogini-ekadashi", AS, "Yoginī Ekādaśī", "योगिनी एकादशी", "యోగినీ ఏకాదశి"),
+    KE("kamika-ekadashi", SR, "Kāmikā Ekādaśī", "कामिका एकादशी", "కామికా ఏకాదశి"),
     R("pashankusha-ekadashi", AV, 10, "vishnu", "vratam", "Pāśāṅkuśā Ekādaśī", "पाशाङ्कुशा एकादशी", "పాశాంకుశా ఏకాదశి"),
-    R("indira-ekadashi", AV, 25, "vishnu", "vratam", "Indirā Ekādaśī", "इन्दिरा एकादशी", "ఇందిరా ఏకాదశి"),
-    R("rama-ekadashi", KA, 25, "vishnu", "vratam", "Ramā Ekādaśī", "रमा एकादशी", "రమా ఏకాదశి"),
-    R("utpanna-ekadashi", MA, 25, "vishnu", "vratam", "Utpannā Ekādaśī", "उत्पन्ना एकादशी", "ఉత్పన్నా ఏకాదశి"),
+    KE("indira-ekadashi", AV, "Indirā Ekādaśī", "इन्दिरा एकादशी", "ఇందిరా ఏకాదశి"),
+    KE("rama-ekadashi", KA, "Ramā Ekādaśī", "रमा एकादशी", "రమా ఏకాదశి"),
+    KE("utpanna-ekadashi", MA, "Utpannā Ekādaśī", "उत्पन्ना एकादशी", "ఉత్పన్నా ఏకాదశి"),
     R("pausha-putrada-ekadashi", PU, 10, "vishnu", "vratam", "Pauṣa Putradā Ekādaśī", "पौष पुत्रदा एकादशी", "పుష్య పుత్రదా ఏకాదశి"),
-    R("saphala-ekadashi", PU, 25, "vishnu", "vratam", "Saphalā Ekādaśī", "सफला एकादशी", "సఫలా ఏకాదశి"),
-    R("shattila-ekadashi", MG, 25, "vishnu", "vratam", "Ṣaṭtilā Ekādaśī", "षट्तिला एकादशी", "షట్తిలా ఏకాదశి"),
+    KE("saphala-ekadashi", PU, "Saphalā Ekādaśī", "सफला एकादशी", "సఫలా ఏకాదశి"),
+    KE("shattila-ekadashi", MG, "Ṣaṭtilā Ekādaśī", "षट्तिला एकादशी", "షట్తిలా ఏకాదశి"),
     R("caitra-purnima", C, 14, "vishnu", "parva", "Caitra Pūrṇimā", "चैत्र पूर्णिमा", "చైత్ర పౌర్ణమి"),
     /* Vaiśākha */
     R("akshaya-tritiya", VA, 2, "vishnu", "parva", "Akṣaya Tṛtīyā", "अक्षय तृतीया", "అక్షయ తృతీయ"),
@@ -84,7 +95,7 @@ export const STUTI_BACKLOG_EXTRA = (function () {
     R("swarna-gauri", BH, 2, "devi", "vratam", "Svarṇa Gaurī Vratam", "स्वर्ण गौरी व्रतम्", "స్వర్ణ గౌరీ వ్రతం"),
     R("rishi-panchami", BH, 4, "guru", "vratam", "Ṛṣi Pañcamī", "ऋषि पञ्चमी", "ఋషి పంచమి"),
     R("parivartini-ekadashi", BH, 10, "vishnu", "vratam", "Parivartinī Ekādaśī", "परिवर्तिनी एकादशी", "పరివర్తినీ ఏకాదశి"),
-    R("aja-ekadashi", BH, 25, "vishnu", "vratam", "Ajā Ekādaśī", "अजा एकादशी", "అజా ఏకాదశి"),
+    KE("aja-ekadashi", BH, "Ajā Ekādaśī", "अजा एकादशी", "అజా ఏకాదశి"),
     /* Āśvayuja */
     R("bathukamma", BH, 29, "devi", "regional", "Bathukamma", "बतुकम्मा", "బతుకమ్మ", { days: 9,
       rule: { roman: "Nine days from Mahālaya Amāvāsyā to Durgāṣṭamī — Telangana", deva: "महालय अमावस्या से दुर्गाष्टमी तक नौ दिन — तेलंगाणा", tel: "మహాలయ అమావాస్య నుంచి దుర్గాష్టమి దాకా తొమ్మిది రోజులు — తెలంగాణ" } }),
@@ -128,7 +139,7 @@ export const STUTI_BACKLOG_EXTRA = (function () {
     R("bhishmashtami", MG, 7, "vishnu", "parva", "Bhīṣmāṣṭamī", "भीष्माष्टमी", "భీష్మాష్టమి"),
     R("madhva-navami", MG, 8, "guru", "jayanti", "Madhva Navamī", "मध्व नवमी", "మధ్వ నవమి"),
     R("varaha-dvadashi", MG, 11, "vishnu", "jayanti", "Varāha Dvādaśī", "वराह द्वादशी", "వరాహ ద్వాదశి"),
-    R("vijaya-ekadashi", MG, 25, "vishnu", "vratam", "Vijayā Ekādaśī", "विजया एकादशी", "విజయా ఏకాదశి"),
+    KE("vijaya-ekadashi", PH, "Vijayā Ekādaśī", "विजया एकादशी", "విజయా ఏకాదశి"),
     /* Phālguna */
     R("amalaki-ekadashi", PH, 10, "vishnu", "vratam", "Āmalakī Ekādaśī", "आमलकी एकादशी", "ఆమలకీ ఏకాదశి"),
     R("lakshmi-jayanti", PH, 14, "devi", "jayanti", "Phālguna Pūrṇimā · Lakṣmī Jayantī", "फाल्गुन पूर्णिमा · लक्ष्मी जयन्ती", "ఫాల్గుణ పౌర్ణమి · లక్ష్మీ జయంతి"),
