@@ -98,6 +98,13 @@ for (const file of ORDER) {
     text = text.replace(new RegExp(`\\bwindow\\.${name}\\b`, "g"), name);
   }
 
+  // 3b) React itself. The prototype loads React as a page global, so a design
+  // file may reach for `window.React.useRef`; the Vite build has no such
+  // global, and the one place that did it (the japa day picker, 19 Sep to
+  // 17 Oct 2026) threw on first render and emptied the screen. A jsx module
+  // imports React below, so the bare name is always the right one here.
+  if (isJsx) text = text.replace(/\bwindow\.React\b/g, "React");
+
   // 4) header: React import for jsx (code uses React.foo as a real value,
   // not just JSX sugar) + one import per source file this one draws from
   let header = "";

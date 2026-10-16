@@ -375,8 +375,8 @@ function DayPick({ value, max, lang, onChange, label, bad, place }) {
   const pick = (d) => { onChange(key(d)); setOpen(false); };
   /* the scrim cannot close an inline picker — inside a scrolling sheet it is
      clipped away — so the panel watches for a press outside itself */
-  const boxRef = window.React.useRef(null);
-  window.React.useEffect(() => {
+  const boxRef = useRefJ(null);
+  useEffectJ(() => {
     if (!open) return;
     const away = (e) => { if (boxRef.current && !boxRef.current.contains(e.target)) setOpen(false); };
     const esc = (e) => { if (e.key === "Escape") setOpen(false); };
