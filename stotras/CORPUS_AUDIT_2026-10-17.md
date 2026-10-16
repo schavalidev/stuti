@@ -17,8 +17,9 @@ check can be done on those files alone.
 seconds and prints a summary; `--check iast` (or any check name) prints every finding of one kind;
 `--tsv out.tsv` writes them all. Nothing in it edits a file.
 
-**Nothing in the corpus text was changed by this audit.** The standing rule is that another
-session's file is reported, not edited. Two tool changes were made and are described at the end.
+**The audit itself changed no corpus text.** The standing rule is that another session's file is
+reported, not edited. The user then ruled on §6 the same day, and §7 records the 124 replacements
+applied on that ruling. Two tool changes were made and are described in §5.
 
 ---
 
@@ -374,7 +375,7 @@ is a design decision (a Tamil text in Tamil letters) that the app's `deva` label
    (finding 1a). This is the only behavioural change; `build_corpus.py` and `audit.py` inherit it.
 3. This document.
 
-## 6. The ruling this audit needs
+## 6. The ruling this audit needed
 
 The standing rule keeps this session from editing another session's file, so nothing in sections
 1b–1d, 2a, 2b or 2d is fixed. In order of harm to the reciter:
@@ -386,3 +387,162 @@ The standing rule keeps this session from editing another session's file, so not
 3. **1c, 2d** need re-transcription from the source.
 4. **1b (183 files)** and **1d (117 files)** are prose work and a strip sweep respectively.
 5. **2b-W (33 places)** need a witness each.
+
+---
+
+## 7. Applied on 17 Oct 2026, on the user's ruling
+
+The user ruled the same day: apply all three classes. 124 replacements in 74 files, each scoped
+to one unit and one field, each asserted to occur exactly once there before it was written. The
+listing below is the record. `corpus_lint.py` afterwards: `deva-akshara` 0 outside the printing
+conventions, `iast` down from 107 files to 64, all of them the W and C classes of §2b.
+
+Two changes of mind while applying, both from re-reading the pairs: `kāruṇya` (Dhanalakṣmī v14)
+and `saccidānanda` (Guruparamparā v40) were Devanāgarī faults, not IAST ones, and are under D;
+`rocanā-kuḍakumena` (Rājarājeśvarī Kavaca v149) was wrong in both fields and is now `kuṅkumena`
+in both; `urvī/ūrvi` (Rāmacandra Stuti v6) and `bhavāmś/bhavāṁś` (Tripurabhairavī v7) were left
+alone for a witness.
+
+**Devanāgarī faults (§2b-D) — 23**
+
+```
+devi/durga/10_durga_kavacam_brahmandamohanam.txt               verse 12     deva  नैऋत्यां  →  नैर्ऋत्यां
+devi/lakshmi/01_kanakadhara_stotram_shankara.txt               verse 5      deva  तटिदङ्गनेव  →  तडिदङ्गनेव
+devi/lakshmi/10_dhanalakshmi_stotram.txt                       verse 5      deva  श्रद्धधानानां  →  श्रद्दधानानां
+devi/lakshmi/10_dhanalakshmi_stotram.txt                       verse 14     deva  कारूण्य  →  कारुण्य
+devi/lalita/17_rajarajeshvari_kavacham.txt                     verse 79     deva  ऽङकुशः  →  ऽङ्कुशः
+devi/lalita/17_rajarajeshvari_kavacham.txt                     verse 149    deva  रोचनाकुडकुमेनैव  →  रोचनाकुङ्कुमेनैव
+ganga/05_ganga_kavacam.txt                                     verse 22     deva  र्ध्द्व  →  र्ध्व
+ganga/05_ganga_kavacam.txt                                     verse 28     deva  में  →  मे
+ganga/05_ganga_kavacam.txt                                     verse 40     deva  में  →  मे
+ganga/05_ganga_kavacam.txt                                     verse 29     deva  पृष्टं  →  पृष्ठं
+guru/04_sri_guruparampara_stotram.txt                          verse 37     deva  सद्ज्ञान  →  सज्ज्ञान
+guru/04_sri_guruparampara_stotram.txt                          verse 40     deva  सच्चिदनन्द  →  सच्चिदानन्द
+guru/17_guru_paduka_panchakam.txt                              verse 1      deva  भावितभ्याम्  →  भाविताभ्याम्
+hanuman/02_hanuman_chalisa.txt                                 verse 13     deva  वुर  →  उर
+hanuman/08_ekamukha_hanumat_kavacham.txt                       verse 18     deva  वीनाशनः  →  विनाशनः
+navagraha/02_navagraha_kavacham.txt                            verse 5      deva  धृवम्  →  ध्रुवम्
+navagraha/03_aditya_hridayam.txt                               verse 31     deva  रविरवददनिरीक्ष्य  →  रविरवदन्निरीक्ष्य
+rama/05_ramacandra_stuti.txt                                   verse 5      deva  भावल्लभं  →  भाववल्लभं
+shiva/04_shiva_kavacham.txt                                    verse 28     deva  विस्फरित  →  विस्फुरित
+shiva/04_shiva_kavacham.txt                                    verse 28     deva  मारयमाराय  →  मारयमारय
+shiva/15_shivaparadha_kshamapana_stotram.txt                   verse 5      deva  पूष्प  →  पुष्प
+vidhi/rigveda/01_rigveda_sandhyavandanam.txt                   unit 14      deva  संवथ्स॒रो  →  संवत्स॒रो
+devi/lalita/17_rajarajeshvari_kavacham.txt                     verse 149    iast  rocanākuḍkumenaiva  →  rocanākuṅkumenaiva
+```
+
+**Akṣaras that could not shape (§2a) — 20**
+
+```
+dattatreya/dvisahasri_gurucaritra/18_adhyaya_18_karmakandakathanam.txt verse 39     deva  द्ध्याान्  →  द्ध्यान्
+dattatreya/dvisahasri_gurucaritra/18_adhyaya_18_karmakandakathanam.txt verse 107    deva  द्र्याादौ  →  द्र्यादौ
+puja/vrata/06_satyanarayana_vrata_kalpam.txt                   unit 33      deva  वाहनांः।  →  वाहनां।
+puja/vrata/06_satyanarayana_vrata_kalpam.txt                   unit 91      deva  स्थित ंधनम्  →  स्थितं धनम्
+puja/pauranika/vrata/06_satyanarayana_vrata_kalpam.txt         unit 33      deva  वाहनांः।  →  वाहनां।
+puja/pauranika/vrata/06_satyanarayana_vrata_kalpam.txt         unit 91      deva  स्थित ंधनम्  →  स्थितं धनम्
+rama/sundarkand/03_dohas_11_15.txt                             verse 24     deva  माहींं  →  माहीं
+vidhi/taittiriya/06_vaikhanasa_samantra_snana_vidhi.txt        unit 3       deva  सूत्रंः अथ  →  सूत्रम् — अथ
+vidhi/taittiriya/06_vaikhanasa_samantra_snana_vidhi.txt        unit 6       deva  सूत्रंः इदमापः  →  सूत्रम् — इदमापः
+vishnu/bhagavata/0205_account_creation.txt                     verse 12     deva  भगवते़  →  भगवते
+vishnu/bhagavata/0332_course_those_go_path_smoke.txt           verse 2      deva  पितंॄश्च  →  पितॄंश्च
+vishnu/bhagavata/1083_draupadi_speaks_chief_queens_lord.txt    verse 12     deva  भ्रातंॄश्च  →  भ्रातॄंश्च
+vishnu/bhagavata/0412_kubera_boon_dhruva_dhruva_reaches.txt    verse 1      deva  बुद्ध ्य  →  बुद्ध्य
+vishnu/bhagavata/0416_bards_praise_king_prthu.txt              verse 13     deva  दण्ड ्यं  →  दण्ड्यं
+vishnu/bhagavata/0422_sanaka_other_sages_teach_king.txt        verse 32     deva  पे्रयस्  →  प्रेयस्
+vishnu/bhagavata/0609_slaying_visvarupa_defeat_gods_vrtrasura.txt verse 17     deva  दंष्टे्रण  →  दंष्ट्रेण
+vishnu/bhagavata/0706_prahlada_teaching_asura_boys.txt         verse 15     deva  र्तुः।ं  →  र्तुः।
+vishnu/bhagavata/0807_churning_ocean_begins_lord_sankara.txt   verse 17     deva  न्मू्र्ध्न  →  न्मूर्ध्न
+vishnu/bhagavata/1062_meeting_usa_aniruddha.txt                verse none   deva  स्कन्धे्र  →  स्कन्धे
+vishnu/bhagavata/0706_prahlada_teaching_asura_boys.txt         verse 15     iast  |ṁ  →  |
+```
+
+**IAST typos (§2b-I) — 69**
+
+```
+Subrahmanya/07_subrahmanya_kavaca_stotram.txt                  verse none   iast  bhūrbhuvassuvarometi  →  bhūrbhuvassuvaromiti
+Subrahmanya/07_subrahmanya_kavaca_stotram.txt                  verse none   iast  bhūrbhuvassuvarometi  →  bhūrbhuvassuvaromiti
+ayyappa/11_dharma_sastha_stuti_dasakam.txt                     verse 7      iast  bhavarogaṇivāraṇāya  →  bhavaroganivāraṇāya
+brahma/04_brahma_stavam_padmapurane.txt                        verse 14     iast  prabodhumicchanti  →  praboddhumicchanti
+devi/dasamahavidya/11_dhumavati_stotram.txt                    verse 2      iast  yamamahiṣamahāśaṛṅgamādāyapāṇau  →  yamamahiṣamahāśṛṅgamādāyapāṇau
+devi/dasamahavidya/21_tara_kavacam.txt                         verse 50     iast  vasedhdhruvam  →  vaseddhruvam
+devi/durga/03_argala_stotram.txt                               verse none   iast  sphuracchandrakalāratnamukuṭāṁ  →  sphuraccandrakalāratnamukuṭāṁ
+devi/durga/16_durga_candrakala_stutih.txt                      verse 3      iast  ekībhavadbhirudita'khilalokaguptyai  →  ekībhavadbhiruditā'khilalokaguptyai
+devi/durga/17_siddha_kunjika_stotram.txt                       verse 5      iast  stambhanocchāṭanādikam  →  stambhanoccāṭanādikam
+devi/durga/38_saptashati_pathavidhi.txt                        verse none   iast  amukābhukarāśistithiteṣu  →  amukābhukarāśisthiteṣu
+devi/gayatri/02_gayatri_kavacham_1.txt                         verse 5      iast  tatsaviturīti  →  tatsavituriti
+devi/gayatri/02_gayatri_kavacham_1.txt                         verse 6      iast  tatsaviturīti  →  tatsavituriti
+devi/gayatri/06_gayatri_kavacham_2.txt                         verse 12     iast  ūrvorokārarūpā  →  ūrvoroṅkārarūpā
+devi/gayatri/08_gayatri_lahari.txt                             verse 11     iast  tasmācharaṇamupayātaḥ  →  tasmāccharaṇamupayātaḥ
+devi/gayatri/08_gayatri_lahari.txt                             verse 17     iast  sahacarairtāraka  →  sahacaraistāraka
+devi/goda/01_goda_stuti.txt                                    verse 29     iast  vikasitabhakteruthhatāṁ  →  vikasitabhakterutthitāṁ
+devi/goda/01_goda_stuti.txt                                    verse 9      iast  himarucericha  →  himaruceriva
+devi/kalika/05_kali_stuti_brahma_krutam.txt                    verse 4      iast  atarkyarociraūrjitāṁ  →  atarkyarocirūrjitāṁ
+devi/lakshmi/07_sriguna_ratnakosha.txt                         verse 50     iast  pavanātmajāllaghutharā  →  pavanātmajāllaghutarā
+devi/lakshmi/17_lakshmi_lahari.txt                             verse 41     iast  paṇḍitarājaśrījagannāthavirachitā  →  paṇḍitarājaśrījagannāthaviracitā
+devi/lalita/12_tripurasundari_manasapuja_stotram.txt           verse 12     iast  prayatnasamyatendriyaiḥ  →  prayatnasaṁyatendriyaiḥ
+devi/lalita/14_saundarya_lahari.txt                            verse 12     iast  girishasāyujyapadavīm  →  giriśasāyujyapadavīm
+devi/lalita/14_saundarya_lahari.txt                            verse 51     iast  girishacarite  →  giriśacarite
+devi/lalita/14_saundarya_lahari.txt                            verse 78     iast  siddhergirishanayanānāṁ  →  siddhergiriśanayanānāṁ
+devi/lalita/17_rajarajeshvari_kavacham.txt                     verse 77     iast  vimalocchāṭane'vatu  →  vimaloccāṭane'vatu
+devi/lalita/18_sri_lalitha_hrudayam.txt                        verse 99     iast  kastūritilakāṅkitāṁ  →  kastūrītilakāṅkitāṁ
+devi/lalita/19_kamakshi_navaratnamalika_stotram.txt            verse 3      iast  śrīmacchinmaya  →  śrīmaccinmaya
+devi/lalita/24_rajni_stotram.txt                               verse 3      iast  danujarākṣasaduṣṭacetho  →  danujarākṣasaduṣṭaceto
+devi/main/12_indrakshi_stotram.txt                             verse none   iast  bhūrbhuvassuvarometi  →  bhūrbhuvassuvaromiti
+devi/main/12_indrakshi_stotram.txt                             verse none   iast  bhūrbhuvassuvarometi  →  bhūrbhuvassuvaromiti
+devi/main/24_jvalamukhi_stotram_1.txt                          verse 12     iast  koṭisahasrarśmisadṛśīṁ  →  koṭisahasraraśmisadṛśīṁ
+devi/main/24_jvalamukhi_stotram_1.txt                          verse 6      iast  smarāririvā  →  smarāririva
+devi/nadi/02_kaveri_stotram.txt                                verse 8      iast  munih  →  muniḥ
+devi/pratyangira/06_pratyangira_kavacam_2.txt                  verse 67     iast  hunedhyāna  →  huneddhyāna
+devi/saraswati/16_kamalajadayita_ashtakam.txt                  verse 8      iast  śrutimananididhyāsanānyāśu  →  śrutimanananididhyāsanānyāśu
+devi/syamala/03_syamala_kavacam.txt                            verse 24     iast  ḍādhiphānta  →  ḍādiphānta
+ganesha/18_ganesha_mahimna_stotram.txt                         verse 10     iast  sakṛtprocchairuccāritamiti  →  sakṛtproccairuccāritamiti
+ganesha/18_ganesha_mahimna_stotram.txt                         verse 14     iast  maṅgalanidhi-rdayāluherambo  →  maṅgalanidhi-rdayālurherambo
+ganesha/18_ganesha_mahimna_stotram.txt                         verse 23     iast  dayāluherambo  →  dayālurherambo
+ganesha/18_ganesha_mahimna_stotram.txt                         verse 29     iast  mamettthaṁ  →  mametthaṁ
+ganga/02_gangashtakam.txt                                      verse 1      iast  taralataratarṅge  →  taralatarataraṅge
+ganga/02_gangashtakam.txt                                      verse 8      iast  trijagadagahare  →  trijagadaghahare
+guru/04_sri_guruparampara_stotram.txt                          verse 32     iast  kāmadviradapañcāsyaramaṇīyakamandiram  →  kāmadviradapañcāsyarāmaṇīyakamandiram
+guru/05_jagadguru_ratnamala.txt                                verse 18     iast  satatāhitacandramauliṣevaḥ  →  satatāhitacandramaulisevaḥ
+guru/07_yatiraja_vimsati.txt                                   verse 1      iast  nom̐i som̐yavarayogipuṅgavam  →  naumi saumyavarayogipuṅgavam
+guru/07_yatiraja_vimsati.txt                                   verse 1      iast  yatirājavimśatim  →  yatirājaviṁśatim
+guru/07_yatiraja_vimsati.txt                                   verse 6      iast  śiṣṭāgragaṇẏajanasevyabhavatpadābje  →  śiṣṭāgragaṇyajanasevyabhavatpadābje
+hanuman/09_hanumadashtakam.txt                                 verse 2      iast  saṁsṛtitāpamahānaladagdhatanūruhamarmatanoraativelaṁ  →  saṁsṛtitāpamahānaladagdhatanūruhamarmatanorativelaṁ
+hanuman/11_vibhishana_krita_hanumat_stotram.txt                verse 15     iast  rāmabhaktirataya  →  rāmabhaktiratāya
+hanuman/11_vibhishana_krita_hanumat_stotram.txt                verse 17     iast  kilkilābubukoccāraghorśabdakarāya  →  kilkilābubukoccāraghoraśabdakarāya
+krishna/11_radha_stotram_uddhava_krtam.txt                     verse 1      iast  brahmādisuravindatam  →  brahmādisuravanditam
+krishna/11_radha_stotram_uddhava_krtam.txt                     verse 17     iast  māheśvaryaiḥ  →  māheśvaryai
+krishna/11_radha_stotram_uddhava_krtam.txt                     verse 25     iast  jalaśaityayauḥ  →  jalaśaityayoḥ
+krishna/11_radha_stotram_uddhava_krtam.txt                     verse 25     iast  sūryakayoryathā  →  sūryayoryathā
+krishna/11_radha_stotram_uddhava_krtam.txt                     verse 3      iast  tulasīvanavāsinya  →  tulasīvanavāsinyai
+krishna/16_gopala_vimshati.txt                                 verse 13     iast  vrajāṅgaṇānāṁ  →  vrajāṅganānāṁ
+kubera/01_sri_kubera_stotram.txt                               verse 2      iast  dharmaniratah  →  dharmanirataḥ
+navagraha/01_navagraha_stotram.txt                             verse 11     iast  bhaveddu:svapnanāśanam  →  bhavedduḥsvapnanāśanam
+shani/03_shani_mrityunjaya_stotram.txt                         verse 22     iast  ūrvorn yasecchaitramāsaṁ  →  ūrvornyaseccaitramāsaṁ
+shani/03_shani_mrityunjaya_stotram.txt                         verse 64     iast  tulocasthāya  →  tuloccasthāya
+shani/03_shani_mrityunjaya_stotram.txt                         verse 90     iast  sauriḥ japedetat  →  saurirjapedetat
+shiva/04_shiva_kavacham.txt                                    verse 12     iast  trilocanaścāruchaturmukho  →  trilocanaścārucaturmukho
+shiva/17_vaidyanathashtakam.txt                                verse 9      iast  mahārogunivāraṇam  →  mahāroganivāraṇam
+venkateswara/01_venkateswara_suprabhatam.txt                   verse 24     iast  varnin  →  varṇin
+venkateswara/03_venkateswara_prapatti.txt                      verse 1      iast  veṅkaṭaterviṣṇoḥ  →  veṅkaṭapaterviṣṇoḥ
+vidhi/madhyandina/01_sandhyopasana_vidhi.txt                   unit 25      iast  devānāmudagadanīkaṁ  →  devānāmudagādanīkaṁ
+vidhi/rigveda/01_rigveda_sandhyavandanam.txt                   unit 15      iast  tatsavituritysya  →  tatsaviturityasya
+vishnu/10_sankashtanashana_vishnu_stotram.txt                  verse 3      iast  ramāvallabhāyā'suräṇāṁ  →  ramāvallabhāyā'surāṇāṁ
+vishnu/13_vishnu_bhujanga_prayata_stotram.txt                  verse 10     iast  kaṣṭamekaḥ  →  kaṣṭameko
+```
+
+**IAST re-synced to the corrected Devanāgarī — 12**
+
+```
+navagraha/03_aditya_hridayam.txt                               verse 31     iast  ravir avadan nirīkṣya  →  raviravadannirīkṣya
+puja/pauranika/vrata/06_satyanarayana_vrata_kalpam.txt         unit 33      iast  sahavāhanāṁḥ  →  sahavāhanāṁ
+puja/vrata/06_satyanarayana_vrata_kalpam.txt                   unit 33      iast  sahavāhanāṁḥ  →  sahavāhanāṁ
+vidhi/taittiriya/06_vaikhanasa_samantra_snana_vidhi.txt        unit 3       iast  sūtraṁḥ  →  sūtram —
+vidhi/taittiriya/06_vaikhanasa_samantra_snana_vidhi.txt        unit 6       iast  sūtraṁḥ  →  sūtram —
+vishnu/bhagavata/0332_course_those_go_path_smoke.txt           verse 2      iast  pitaṁśca  →  pitṝṁśca
+vishnu/bhagavata/0412_kubera_boon_dhruva_dhruva_reaches.txt    verse 1      iast  pratibuddha ya  →  pratibuddhya
+vishnu/bhagavata/0416_bards_praise_king_prthu.txt              verse 13     iast  nādaṇḍa yaṁ  →  nādaṇḍyaṁ
+vishnu/bhagavata/0422_sanaka_other_sages_teach_king.txt        verse 32     iast  perayastvamātmanaḥ  →  preyastvamātmanaḥ
+vishnu/bhagavata/0609_slaying_visvarupa_defeat_gods_vrtrasura.txt verse 17     iast  raudradaṁṣṭeraṇa  →  raudradaṁṣṭreṇa
+vishnu/bhagavata/1062_meeting_usa_aniruddha.txt                verse none   iast  daśamaskandhera  →  daśamaskandhe
+vishnu/bhagavata/1083_draupadi_speaks_chief_queens_lord.txt    verse 12     iast  bhrātaṁśca  →  bhrātṝṁśca
+```
