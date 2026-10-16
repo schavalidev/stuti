@@ -18,7 +18,11 @@ obvious, but no fix was applied.
 
 ## 1. Stop the line — fix before anything is published again
 
-### 1.1 broken · "Add a tithi" and the japa back-entry white-screen the whole app
+_S77, 17 Oct 2026: 1.1, 1.2, 1.3, 1.4 and 1.8 are fixed and verified in the built bundle; 1.5, 1.6, 1.7 and 1.9 stand._
+
+### ~~1.1 broken · "Add a tithi" and the japa back-entry white-screen the whole app~~
+**Fixed** · fixed in S77 (b8f856d): the design uses its own React hooks and the transform rewrites any window.React.
+
 `stuti-app/src/stuti-japa.tsx:378-379` — `DayPick` calls `window.React.useRef` and
 `window.React.useEffect`. The prototype loads React as a global; the Vite build does not, so the
 component throws on first render and React unmounts everything. Reproduced in the built bundle:
@@ -32,13 +36,17 @@ It is in every APK since 19 September: `builds/Stuti-v51.apk` to `Stuti-v54.apk`
 live web is older still (1.9). The codemod has no step that rewrites `window.React`; the fix is
 a `fix-*.mjs` step (or `React.useRef` in the design file, then a re-port).
 
-### 1.2 broken · even past 1.1, the tithi sheet can never be saved
+### ~~1.2 broken · even past 1.1, the tithi sheet can never be saved~~
+**Fixed** · fixed in S77 (56d20aa): Save and the next-date preview read nm.roman.
+
 `stuti-tithis.tsx:377` — `disabled={!name.trim()}`; there is no `name` in `TithiSheet` (the typed
 name is `nm.roman`, line 192), so it reads `window.name`, which is `""`, and Save stays disabled
 forever. Same at line 259. Present in the design too. A śrāddha tithi can only enter through the
 pitṛ register's `linkTithi`; janma tithis and "other" days cannot be added at all.
 
-### 1.3 broken · every dark-fortnight ekādaśī is named one month late
+### ~~1.3 broken · every dark-fortnight ekādaśī is named one month late~~
+**Fixed** · fixed in S77 (530ffcb, b6e95aa): pick() matches kṛṣṇa ekādaśīs on the pūrṇimānta index, four entries got their missing month, and the backlog's twelve kṛṣṇa rows are found a month earlier with ruleP added; the list's dates came from those rows, not from pick().
+
 The vrata list shows Indirā Ekādaśī on 5 Nov 2026 and Ramā on 4 Dec; the pañcāṅga has Ramā on
 5 Nov and Indirā on 6 Oct. Cause: `stuti-ekadashi-data.ts:85-95` matches `e.key.masa` against
 `pa.masaIdx`, which is the **amānta** month (`stuti-panchanga-engine.ts:893-903`), while the
@@ -47,7 +55,9 @@ line 54). Śukla ekādaśīs are right (Pāśāṅkuśā 22 Oct); every kṛṣ�
 3 Jan, Saphalā on 2 Feb, Pāpamocanī on 2 May, Varūthinī on 1 Jun). Fix shape: for a kṛṣṇa
 pakṣa, match on `(masaIdx + 1) % 12` — the engine already computes this as `masaPurnimanta`.
 
-### 1.4 broken · the Hindi and Telugu meanings never load
+### ~~1.4 broken · the Hindi and Telugu meanings never load~~
+**Fixed** · fixed in S77 (a861d7f): side-effect imports in the entry template, and the port writes the files' console handles back onto window so they build.
+
 The eight `stuti-hindi-*.ts` modules (core, shiva, ganesha, ganesha2, subrahmanya, sahasra,
 names-lalita, names-vishnu) are ported but **nothing imports them**, so Vite never bundles them.
 They are side-effect scripts that attach `v.hi` / `v.tel` to each verse; the design ran them as
@@ -77,7 +87,9 @@ lit. From a vidhānam the Back arrow lands there, and the Library tab then reset
 reciter came from. Both exist in the design. Fix: `go("browse", {libSub: {kind: "vrata", key,
 returnTo: "home"}})` for the strip (the sibling cards do this), `from: "browse"` for the jump.
 
-### 1.8 broken for shipping · the build stamp disagrees with the changelog
+### ~~1.8 broken for shipping · the build stamp disagrees with the changelog~~
+**Fixed** · fixed in S77 (d6a3d83): stamp is 0.9.111 · 2026.10.17, the changelog's newest section.
+
 `Changelog.html:98-99` is at 0.9.110 · 15 Oct; `stuti-build.ts:15-16` and the design's
 `stuti-build.js:8-9` say 0.9.109 · 2026.10.13. `check-stamp.mjs` exits 1, so `release-apk.sh`
 and `ship.sh` refuse in preflight. One line in the design stamp, then a re-port.
