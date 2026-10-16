@@ -44,6 +44,14 @@ SOURCING = re.compile(
     r"|\bpage images\b|\bPDF\b|\bthe source\b|\bthe print\b|\bsource page\b",
     re.I)
 
+# What may follow the last unit of a file and is not part of it: a rule line, a known
+# field name, or the free-form editorial headings the files use (`Dedup:`, `Numbering:`,
+# `Colophon (unnumbered):`, `… note:`).
+TRAILING = re.compile(
+    r"^(?:-{3,}\s*$|(?:" + "|".join(re.escape(n) for n in READER_FIELDS + EDITORIAL_FIELDS)
+    + r"|Dedup|Cross-reference[^:\n]*|Colophon \([^)]*\)|Numbering|On numbering|On the count"
+    + r"|Counting|[A-Z][A-Za-z āīūṁṛṇśṣḍ/()-]{2,45} note):)", re.M)
+
 VERSE_HEAD = re.compile(r"^--- verse (\d+|none)(?: \| section: ([^-]*?))? ---$", re.M)
 
 
@@ -67,6 +75,12 @@ def parse(text):
     # 929 of them across 428 files were being dropped here, 21 files rendering empty.
     parts = re.split(r"^--- (?:verse|unit|passage) (?:\d+|none)[^\n]*---$", text, flags=re.M)[1:]
     for p in parts:
+        # Some 500 files carry editorial matter after the last unit — a `---` rule and then
+        # `Recension note:` and the like. Until 17 Oct 2026 that ran on into the last unit's
+        # final field and reached the reader inside `hi:`. The unit ends where that begins.
+        t = TRAILING.search(p)
+        if t:
+            p = p[: t.start()]
         u = {}
         for m in re.finditer(r"^(deva|iast|en|tel|hi|vidhi|variant):[ \n](.*?)(?=\n(?:deva|iast|en|tel|hi|vidhi|variant):|\Z)",
                              p, re.S | re.M):

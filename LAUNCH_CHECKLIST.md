@@ -91,8 +91,12 @@ Re-derive with `python3 stotras/bin/build_corpus.py --check`.
 
 Today: **1,528 files, 1,526 built, 0 listed** (the two that build to nothing are deliberate; see below). Not one file carries a `Published:`
 field, so the index has zero rows and nothing in the written corpus reaches a
-reader. The source-leak gate is clean — `--publish-all` withholds nothing for a
+reader. The header gate is clean — `--publish-all` withholds nothing for a
 reader field naming a source, so the 22 September backlog of 332 is closed.
+**But the gate checks headers only** (found 17 Oct 2026, S75): 183 files carry sourcing inside
+the `en`/`tel`/`hi`/`vidhi` fields themselves, and a parser fault had been appending the
+recension note to the last verse of 509 files. The parser is fixed; the 183 files are not. See
+`stotras/CORPUS_AUDIT_2026-10-17.md` §1b before publishing any of them.
 
 - [ ] Rule on the launch set: how wide, and where it stops. The standing advice is
       to launch narrow and finished, and to publish the roadmap so absence reads as
