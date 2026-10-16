@@ -243,7 +243,7 @@ function TithiSheet({ lang = "deva", rec, seedDate, onClose }) {
   const setTnum = (n) => setTi(paksha * 15 + n);
   const rule = T.ruleText({ masa, ti });
   const next = useMemoTT(() => {
-    try { const V = window.STUTI_VRATA; return V.nextDate(T.asVrata({ id: "x", name, kind, masa, ti })); } catch (e) { return null; }
+    try { const V = window.STUTI_VRATA; return V.nextDate(T.asVrata({ id: "x", name: nm.roman, kind, masa, ti })); } catch (e) { return null; }
   }, [masa, ti, kind]);
   const font = ttFont(lang);
   const save = () => {
@@ -361,7 +361,7 @@ function TithiSheet({ lang = "deva", rec, seedDate, onClose }) {
             <p className="fb-hint" style={{ margin: "8px 2px 0" }}>{ttT("noticeNote", lang)}</p>
             <div className="tt-actions">
               {editing && <button className="dana-later" onClick={del}>{ttT("del", lang)}</button>}
-              <button className="dana-cta" onClick={save} disabled={!name.trim()}>{ttT("save", lang)}</button>
+              <button className="dana-cta" onClick={save} disabled={!nm.roman.trim()}>{ttT("save", lang)}</button>
             </div>
           </div>
         </div>
