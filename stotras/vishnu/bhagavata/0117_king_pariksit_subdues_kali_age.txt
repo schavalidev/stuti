@@ -9,7 +9,7 @@ Type: Purāṇa (an adhyāya of the Śrīmad Bhāgavata, Skandha 1)
 
 Source / recension: Base text and authority: the Gītā Press, Gorakhpur Śrīmadbhāgavata Mahāpurāṇa with Hindi translation, Part 1 (Gītā Press code 26), archive.org item `shrimadbhagwat-mahapuran-bhag-1`, printed pages 162–168; the PDF page numbers are the printed ones. The PDF carries the typesetter's own text layer in the Chanakya font encoding, and the text was decoded from it by machine with `bin/bhagavata/chanakya.py`, not read off OCR or typed. The decoder was checked against GRETIL over all twelve skandhas before any file was written, and the differences that remain were sampled and found to be readings of the two editions. Second witness: GRETIL's `sa_bhAgavatapurANa.xml` (IAST, contributed by Ulrich Stiehl), a separate editorial lineage, compared verse by verse by machine. The TTD edition with the commentaries of Śrīdhara, Vīrarāghava and Vijayadhvaja (archive.org `Bhagavata_Purana_With_Multiple_Commentaries_TTD_Critical_Edition`) is the third witness where one is needed; it was not read for this file. The IAST was generated mechanically from the Devanāgarī with `bin/dev2iast.py`.
 
-Recension note: Text-only file, written 1 Oct 2026 at the user's instruction to lay down the whole Bhāgavata first: the English, Telugu and Hindi meanings are still to be added, and the witnesses' differences listed here have been recorded by machine and not yet adjudicated. The print is followed throughout. The print numbers 45 verses and GRETIL numbers 45. Of the 45 verses GRETIL has under the same number, 31 agree with the print letter for letter once spacing and the spelling of nasals are set aside; the rest differ: 3, 8, 9, 15, 21, 26, 27, 29, 30, 34, 36, 43, 44, 45. The edition's footnotes give these older printed readings (प्रा० पा०), which are not bracketed into the line: at 2, पीडितम्; at 3, कृशां; at 10, मातर्हिंस्यन्ते; at 11, राज्ञः; at 12, प्रा० पा० चतुष्पदः; at 18, यतस्व; at 29, प्रेक्ष्य; at 31, बद्धाञ्जलेस्ते; at 34, इष्टात्ममूर्ति०; at 36, क्व चाथ; at 39, मदः कामो; at 42, आस्थाय—४. प्रा० पा०—एतदध्यास्त. Spacing is the print's, as its text layer gives it; in a few places justification has left a space inside a word, and these are still to be closed when the verse is read. The speaker lines (श्रीशुक उवाच and the others) are printed in italic above the verse they introduce, and are given as its first line.
+Recension note: Meanings written 17 Oct 2026 (session S78). The differences between the witnesses listed below were read as the verses were glossed; except where this note says otherwise, each is a spelling, a sandhi or a word order of the two editions, none of them changes the sense, and the print's reading therefore stands unbracketed. The print is followed throughout. The print numbers 45 verses and GRETIL numbers 45. Of the 45 verses GRETIL has under the same number, 31 agree with the print letter for letter once spacing and the spelling of nasals are set aside; the rest differ: 3, 8, 9, 15, 21, 26, 27, 29, 30, 34, 36, 43, 44, 45. The edition's footnotes give these older printed readings (प्रा० पा०), which are not bracketed into the line: at 2, पीडितम्; at 3, कृशां; at 10, मातर्हिंस्यन्ते; at 11, राज्ञः; at 12, प्रा० पा० चतुष्पदः; at 18, यतस्व; at 29, प्रेक्ष्य; at 31, बद्धाञ्जलेस्ते; at 34, इष्टात्ममूर्ति०; at 36, क्व चाथ; at 39, मदः कामो; at 42, आस्थाय—४. प्रा० पा०—एतदध्यास्त. Spacing is the print's, as its text layer gives it. The speaker lines (श्रीशुक उवाच and the others) are printed in italic above the verse they introduce, and are given as its first line. A footnote's numeral keys it to one word, and which word that is cannot be told from the note alone, so those readings stay unbracketed until the page itself is read. Three spaces that justification had left inside a word were closed when the verses were read: verse 22 had अधर्मकृतःस्थानं for अधर्मकृतः स्थानं, verse 23 had चेतसोवचसश्चापि for चेतसो वचसश्चापि, and verse 36 had क्वचनवत्स्यामि for क्वचन वत्स्यामि.
 
 Verse count: 45, plus the closing colophon printed unnumbered.
 
@@ -22,6 +22,9 @@ iast:
 sūta uvāca
 tatra gomithunaṁ rājā hanyamānamanāthavat|
 daṇḍahastaṁ ca vṛṣalaṁ dadṛśe nṛpalāñchanam||
+en: Sūta said: There the king saw a cow and a bull being beaten as though they had no protector, and a śūdra with a staff in his hand, who bore the marks of a king.
+tel: సూతుడు పలికెను: అక్కడ రాజు, అనాథలవలె కొట్టబడుచున్న ఆవును, వృషభమును చూచెను; రాజు గుర్తులను ధరించి, చేతిలో దండము కలిగిన శూద్రుని చూచెను.
+hi: सूतजी ने कहा: वहाँ राजा ने अनाथ के समान पीटे जाते गाय और बैल को देखा, और हाथ में दण्ड लिये, राजा के चिह्न धारण किये एक शूद्र को देखा।
 
 --- verse 2 ---
 deva:
@@ -30,6 +33,9 @@ deva:
 iast:
 vṛṣaṁ mṛṇāladhavalaṁ mehantamiva bibhyatam|
 vepamānaṁ padaikena sīdantaṁ śūdratāḍitam||
+en: The bull was white as a lotus stalk and stood trembling, as though making water in fear; on one foot, struck by the śūdra, he was sinking down.
+tel: ఆ వృషభము మృణాలమువలె తెల్లనిది; భయముచే మూత్రము విడుచుచున్నట్లు వణకుచుండెను; శూద్రునిచే కొట్టబడి, ఒకే పాదముతో కుంగిపోవుచుండెను.
+hi: वह बैल मृणाल के समान श्वेत था; भय से मूत्र करता-सा काँप रहा था; और शूद्र से पीटा जाकर एक ही पैर से धँसता जा रहा था।
 
 --- verse 3 ---
 deva:
@@ -38,6 +44,9 @@ deva:
 iast:
 gāṁ ca dharmadughāṁ dīnāṁ bhṛśaṁ śūdrapadāhatām|
 vivatsāṁ sāśruvadanāṁ kṣāmāṁ yavasamicchatīm||
+en: And the cow, who gives milk for dharma, was wretched and struck hard by the śūdra's foot; she was without her calf, her face wet with tears, thin, and longing for a little grass.
+tel: ధర్మమునకు పాలిచ్చు ఆ ఆవు దీనముగా ఉండెను, శూద్రుని పాదముచే మిక్కిలి కొట్టబడెను; దూడ లేనిది, కన్నీటి ముఖము కలది, కృశించినది, కొంచెము గడ్డిని కోరునది.
+hi: धर्म के लिये दूध देनेवाली वह गौ दीन थी और शूद्र के पैर से बहुत पीटी गयी थी; बछड़े से रहित, अश्रुपूर्ण मुखवाली, क्षीण और थोड़े घास की इच्छा करती हुई।
 
 --- verse 4 ---
 deva:
@@ -46,6 +55,9 @@ deva:
 iast:
 papraccha rathamārūḍhaḥ kārtasvaraparicchadam|
 meghagambhīrayā vācā samāropitakārmukaḥ||
+en: Seated upon his chariot with its golden trappings, his bow strung, he asked in a voice deep as a cloud:
+tel: బంగారు పరిచ్ఛదము కలిగిన రథమును ఎక్కి, ధనువును ఎక్కుపెట్టి, మేఘమువలె గంభీరమైన మాటతో ఆయన అడిగెను:
+hi: सोने के परिच्छदवाले रथ पर आरूढ़ होकर, धनुष चढ़ाकर, मेघ के समान गम्भीर वाणी से उन्होंने पूछा:
 
 --- verse 5 ---
 deva:
@@ -54,6 +66,9 @@ deva:
 iast:
 kastvaṁ maccharaṇe loke balāddhaṁsyabalān balī|
 naradevo'si veṣeṇa naṭavatkarmaṇādvijaḥ||
+en: Who are you, that in this world under my protection beat the weak by force, strong as you are? By your dress you are a king among men; by your deeds you are no twice-born, like an actor in a part.
+tel: నా శరణమునందున్న ఈ లోకమున, బలవంతుడవై బలముచే బలహీనులను కొట్టు నీవు ఎవడవు? వేషముచే నీవు నరదేవుడవు; కర్మచే నటునివలె ద్విజుడవు కావు.
+hi: मेरी शरण में रहनेवाले इस लोक में, बलवान् होकर बल से निर्बलों को मारनेवाला तू कौन है? वेष से तू नरदेव है; कर्म से नट के समान द्विज नहीं है।
 
 --- verse 6 ---
 deva:
@@ -62,6 +77,9 @@ deva:
 iast:
 yastvaṁ kṛṣṇe gate dūraṁ saha gāṇḍīvadhanvanā|
 śocyo'syaśocyān rahasi praharan vadhamarhasi||
+en: Since Kṛṣṇa has gone far away with the wielder of the Gāṇḍīva, you are to be pitied; and striking in secret those who should not be struck, you deserve to be killed.
+tel: గాండీవధన్వునితో కూడ కృష్ణుడు దూరమునకు వెళ్ళినందున నీవు శోచ్యుడవు; రహస్యమున కొట్టకూడనివారిని కొట్టుచున్న నీవు వధకు అర్హుడవు.
+hi: गाण्डीवधन्वा के साथ श्रीकृष्ण के दूर चले जाने से तू शोच्य है; और एकान्त में अशोच्यों पर प्रहार करता तू वध के योग्य है।
 
 --- verse 7 ---
 deva:
@@ -70,6 +88,9 @@ deva:
 iast:
 tvaṁ vā mṛṇāladhavalaḥ pādairnyūnaḥ padā caran|
 vṛṣarūpeṇa kiṁ kaścid devo naḥ parikhedayan||
+en: And you, white as a lotus stalk, short of your feet and walking upon one — are you some god in the form of a bull, who grieves us?
+tel: మృణాలమువలె తెల్లనైన, పాదములు తగ్గిన, ఒక పాదముతో నడచు నీవు — వృషరూపమున మమ్ములను ఖేదపరచు ఏ దేవుడవైనను కాదా?
+hi: और मृणाल के समान श्वेत, पैरों से न्यून और एक पैर से चलनेवाला तू — वृष के रूप में हमें खेद देनेवाला कोई देव है?
 
 --- verse 8 ---
 deva:
@@ -78,6 +99,9 @@ deva:
 iast:
 na jātu pauravendrāṇāṁ dordaṇḍaparirambhite|
 bhūtale'nupatantyasmin vinā te prāṇināṁ śucaḥ||
+en: Never in this land, which is held in the arms of the kings of Puru's line, have the tears of living beings fallen, except yours.
+tel: పౌరవేంద్రుల దోర్దండములచే పరిరంభింపబడిన ఈ భూతలమునందు, నీవు తప్ప ప్రాణుల కన్నీరు ఎన్నడును రాలలేదు.
+hi: पौरवेन्द्रों के बाहुदण्डों से परिरम्भित इस भूतल पर, तुम्हारे सिवा प्राणियों के आँसू कभी नहीं गिरे।
 
 --- verse 9 ---
 deva:
@@ -86,6 +110,9 @@ deva:
 iast:
 mā saurabheyānuśuco vyetu te vṛṣalād bhayam|
 mā rodīramba bhadraṁ te khalānāṁ mayi śāstari||
+en: Son of Surabhi, do not grieve; let your fear of the low man go. Mother, do not weep; good will come to you, for I am here to punish the wicked.
+tel: సౌరభేయా, శోకించవద్దు; వృషలుని వలన నీ భయము తొలగును గాక. అమ్మా, రోదించవద్దు; నీకు శుభమగును; ఖలులను శాసించువాడను నేను ఉన్నాను.
+hi: हे सौरभेय, शोक न कर; वृषल से तेरा भय दूर हो। हे अम्ब, मत रो; तेरा कल्याण हो, क्योंकि खलों का शासक मैं हूँ।
 
 --- verse 10 ---
 deva:
@@ -94,6 +121,9 @@ deva:
 iast:
 yasya rāṣṭre prajāḥ sarvāstrasyante sādhvyasādhubhiḥ|
 tasya mattasya naśyanti kīrtirāyurbhago gatiḥ||
+en: In the realm of a king where all the people, who are good, are frightened by the wicked, his fame, his life, his fortune and his future are destroyed, for he is drunk with power.
+tel: ఏ రాజు రాష్ట్రమునందు సాధ్వులైన ప్రజలందరు అసాధువులచే భయపడుదురో, మదించిన ఆ రాజు కీర్తి, ఆయువు, భగము, గతి నశించును.
+hi: जिस राजा के राष्ट्र में साध्वी प्रजा असाधुओं से डरती है, उस मत्त राजा की कीर्ति, आयु, भग और गति नष्ट हो जाती है।
 
 --- verse 11 ---
 deva:
@@ -102,6 +132,9 @@ deva:
 iast:
 eṣa rājñāṁ paro dharmo hyārtānāmārtinigrahaḥ|
 ata enaṁ vadhiṣyāmi bhūtadruhamasattamam||
+en: This is the highest dharma of kings: to put down the pain of those who are in pain. Therefore I shall kill this basest of men, who does violence to living beings.
+tel: ఆర్తుల ఆర్తిని నిగ్రహించుటయే రాజులకు పరమధర్మము. కావున ప్రాణులకు ద్రోహము చేయు ఈ అసత్తముని నేను సంహరించెదను.
+hi: आर्तों की पीड़ा का निग्रह ही राजाओं का परम धर्म है। इसलिये प्राणियों का द्रोह करनेवाले इस असत्तम को मैं मार डालूँगा।
 
 --- verse 12 ---
 deva:
@@ -110,6 +143,9 @@ deva:
 iast:
 ko'vṛścat tava pādāṁstrīn saurabheya catuṣpada|
 mā bhūvaṁstvādṛśā rāṣṭre rājñāṁ kṛṣṇānuvartinām||
+en: Four-footed son of Surabhi, who cut off your three feet? May none like you be found in the kingdom of kings who follow Kṛṣṇa.
+tel: చతుష్పదుడవైన సౌరభేయా, నీ మూడు పాదములను ఎవడు ఖండించెను? కృష్ణుని అనుసరించు రాజుల రాష్ట్రమునందు నీవంటివారు ఉండకుందురు గాక.
+hi: हे चतुष्पद सौरभेय, तेरे तीन पैर किसने काटे? श्रीकृष्ण का अनुवर्तन करनेवाले राजाओं के राष्ट्र में तुझ जैसे न हों।
 
 --- verse 13 ---
 deva:
@@ -118,6 +154,9 @@ deva:
 iast:
 ākhyāhi vṛṣa bhadraṁ vaḥ sādhūnāmakṛtāgasām|
 ātmavairūpyakartāraṁ pārthānāṁ kīrtidūṣaṇam||
+en: Bull, tell me — may good come to you — who has made you thus misshapen, you who are good and have done no wrong? It is a stain upon the fame of the sons of Pṛthā.
+tel: వృషభా, నీకు శుభమగును; అపరాధము చేయని సాధువైన నీ రూపమును వికృతము చేసినవాడు ఎవడో చెప్పుము. అది పార్థుల కీర్తికి దోషము.
+hi: हे वृष, तेरा कल्याण हो; अपराध न करनेवाले साधु तेरे रूप को विकृत करनेवाला कौन है, बता। वह पार्थों की कीर्ति का दूषण है।
 
 --- verse 14 ---
 deva:
@@ -126,6 +165,9 @@ deva:
 iast:
 jane'nāgasyaghaṁ yuñjan sarvato'sya ca madbhayam|
 sādhūnāṁ bhadrameva syādasādhudamane kṛte||
+en: He who brings harm upon an innocent people has fear of me from every side. When the wicked are put down, it is good for the good.
+tel: అపరాధము లేని జనులకు పాపమును కలిగించువానికి అన్ని వైపుల నా వలన భయము ఉన్నది. అసాధువులను అణచినపుడు సాధువులకు శుభమే కలుగును.
+hi: निरपराध जनों पर पाप करनेवाले को सब ओर से मेरा भय है। असाधुओं के दमन से साधुओं का कल्याण ही होता है।
 
 --- verse 15 ---
 deva:
@@ -134,6 +176,9 @@ deva:
 iast:
 anāgassviha bhūteṣu ya āgaskṛnniraṅkuśaḥ|
 āhartāsmi bhujaṁ sākṣādamartyasyāpi sāṅgadam||
+en: Whoever here, unrestrained, does wrong to innocent beings — I shall strike off his arm with its armlets, even if he be an immortal.
+tel: ఇక్కడ అపరాధము లేని ప్రాణులకు, అంకుశము లేక అపరాధము చేయువాడు ఎవడైనను — అమర్త్యుడైనను — అంగదములతో కూడిన ఆయన భుజమును నేను ఖండించెదను.
+hi: यहाँ निरपराध प्राणियों पर, निरङ्कुश होकर जो अपराध करता है — चाहे वह अमर्त्य हो — उसकी अङ्गद सहित भुजा मैं काट डालूँगा।
 
 --- verse 16 ---
 deva:
@@ -142,6 +187,9 @@ deva:
 iast:
 rājño hi paramo dharmaḥ svadharmasthānupālanam|
 śāsato'nyān yathāśāstramanāpadyutpathāniha||
+en: The highest dharma of a king is to protect those who keep to their own duty, and to punish others as the scriptures lay down when they go upon wrong paths, except in a time of distress.
+tel: తన ధర్మమునందు నిలిచినవారిని పాలించుటయే రాజునకు పరమధర్మము; ఆపద కాని సమయమున, తప్పుదారిని పోవు ఇతరులను శాస్త్రము ప్రకారము శాసించుటయు.
+hi: अपने धर्म में स्थित जनों का पालन ही राजा का परम धर्म है; और आपत्ति के बिना, उत्पथगामी दूसरों का शास्त्र के अनुसार शासन करना।
 
 --- verse 17 ---
 deva:
@@ -152,6 +200,9 @@ iast:
 dharma uvāca
 etad vaḥ pāṇḍaveyānāṁ yuktamārtābhayaṁ vacaḥ|
 yeṣāṁ guṇagaṇaiḥ kṛṣṇo dautyādau bhagavān kṛtaḥ||
+en: Dharma said: These words, which give safety to those in pain, are fitting for you of the Pāṇḍava line, whose host of qualities made the blessed Kṛṣṇa your messenger and more.
+tel: ధర్మము పలికెను: ఆర్తులకు అభయమిచ్చు ఈ మాట పాండవవంశపు మీకు తగినది; మీ గుణగణములచే భగవంతుడైన కృష్ణుడే దౌత్యము మొదలైనవాటికి నియోగింపబడెను.
+hi: धर्म ने कहा: आर्तों को अभय देनेवाला यह वचन आप पाण्डववंशियों के योग्य है; जिनके गुणगणों से भगवान् श्रीकृष्ण ही दूत आदि बनाये गये।
 
 --- verse 18 ---
 deva:
@@ -160,6 +211,9 @@ deva:
 iast:
 na vayaṁ kleśabījāni yataḥ syuḥ puruṣarṣabha|
 puruṣaṁ taṁ vijānīmo vākyabhedavimohitāḥ||
+en: Bull among men, we do not know that Person from whom the seeds of our trouble come; we are bewildered by the differing words of the teachings.
+tel: పురుషర్షభా, క్లేశబీజములు ఎవని వలన కలుగునో ఆ పురుషుని మేము ఎరుగము; వాక్యభేదములచే మేము మోహితులమైతిమి.
+hi: हे पुरुषर्षभ, क्लेश के बीज जिससे होते हैं, उस पुरुष को हम नहीं जानते; वाक्यों के भेद से हम विमोहित हैं।
 
 --- verse 19 ---
 deva:
@@ -168,6 +222,9 @@ deva:
 iast:
 kecid vikalpavasanā āhurātmānamātmanaḥ|
 daivamanye pare karma svabhāvamapare prabhum||
+en: Some, who wear the garment of alternatives, say that the self is the cause of its own state; others say fate; others works; others nature; others the Lord.
+tel: వికల్పములనే వస్త్రముగా ధరించిన కొందరు, ఆత్మకు ఆత్మయే కారణమని చెప్పుదురు; ఇతరులు దైవమని, మరికొందరు కర్మమని, ఇతరులు స్వభావమని, మరికొందరు ప్రభువని చెప్పుదురు.
+hi: विकल्पों का वस्त्र पहने कुछ लोग आत्मा को ही आत्मा का कारण कहते हैं; दूसरे दैव, अन्य कर्म, कुछ स्वभाव और कुछ प्रभु को कहते हैं।
 
 --- verse 20 ---
 deva:
@@ -176,6 +233,9 @@ deva:
 iast:
 apratarkyādanirdeśyāditi keṣvapi niścayaḥ|
 atrānurūpaṁ rājarṣe vimṛśa svamanīṣayā||
+en: Some hold with certainty that it cannot be reasoned out and cannot be told. Royal sage, consider by your own judgement what is fitting here.
+tel: అది అప్రతర్క్యము, అనిర్దేశ్యమని కొందరు నిశ్చయించుచున్నారు. రాజర్షీ, ఇందు తగినదిని నీ బుద్ధితో విచారింపుము.
+hi: कुछ लोग निश्चय करते हैं कि वह अप्रतर्क्य और अनिर्देश्य है। हे राजर्षे, यहाँ जो उचित हो, उसे अपनी बुद्धि से विचारिये।
 
 --- verse 21 ---
 deva:
@@ -186,24 +246,33 @@ iast:
 sūta uvāca
 evaṁ dharme pravadati sa samrāḍ dvijasattama|
 samāhitena manasā vikhedaḥ paryacaṣṭa tam||
+en: Sūta said: Best of the twice-born, while Dharma spoke in this way, that emperor, with a mind at rest and free of distress, answered him.
+tel: సూతుడు పలికెను: ద్విజసత్తమా, ధర్మము ఈ విధముగా చెప్పుచున్నపుడు, సమాహితమైన మనస్సుతో, ఖేదము లేక ఆ సమ్రాట్టు ఆయనకు బదులు పలికెను.
+hi: सूतजी ने कहा: हे द्विजसत्तम, धर्म के इस प्रकार कहने पर, समाहित मन से और खेदरहित होकर उस सम्राट् ने उन्हें उत्तर दिया।
 
 --- verse 22 ---
 deva:
 राजोवाच
 धर्मं ब्रवीषि धर्मज्ञ धर्मोऽसि वृषरूपधृक्।
-यदधर्मकृतःस्थानं सूचकस्यापि तद्भवेत्॥
+यदधर्मकृतः स्थानं सूचकस्यापि तद्भवेत्॥
 iast:
 rājovāca
 dharmaṁ bravīṣi dharmajña dharmo'si vṛṣarūpadhṛk|
-yadadharmakṛtaḥsthānaṁ sūcakasyāpi tadbhavet||
+yadadharmakṛtaḥ sthānaṁ sūcakasyāpi tadbhavet||
+en: The king said: Knower of dharma, you speak dharma; you are Dharma himself in the form of a bull. The state of one who does unrighteousness would come also upon one who points him out.
+tel: రాజు పలికెను: ధర్మజ్ఞా, నీవు ధర్మమును చెప్పుచున్నావు; వృషరూపమును ధరించిన ధర్మమే నీవు. అధర్మము చేసినవాని స్థానము, సూచించినవానికి కూడ కలుగును.
+hi: राजा ने कहा: हे धर्मज्ञ, आप धर्म कहते हैं; वृष रूप धारण किये धर्म ही आप हैं। अधर्म करनेवाले का जो स्थान है, वही सूचक को भी हो जाता है।
 
 --- verse 23 ---
 deva:
 अथवा देवमायाया नूनं गतिरगोचरा।
-चेतसोवचसश्चापि भूतानामिति निश्चयः॥
+चेतसो वचसश्चापि भूतानामिति निश्चयः॥
 iast:
 athavā devamāyāyā nūnaṁ gatiragocarā|
-cetasovacasaścāpi bhūtānāmiti niścayaḥ||
+cetaso vacasaścāpi bhūtānāmiti niścayaḥ||
+en: Or else it is certain that the course of the Lord's māyā is beyond the reach of the mind and of speech for all beings.
+tel: లేక, దేవమాయ గతి ప్రాణులకు మనస్సుకును, వాక్కునకును అగోచరమని నిశ్చయము.
+hi: अथवा यह निश्चय है कि देवमाया की गति प्राणियों के मन और वाणी के लिये अगोचर है।
 
 --- verse 24 ---
 deva:
@@ -212,6 +281,9 @@ deva:
 iast:
 tapaḥ śaucaṁ dayā satyamiti pādāḥ kṛte kṛtāḥ|
 adharmāṁśaistrayo bhagnāḥ smayasaṅgamadaistava||
+en: Austerity, purity, compassion and truth are your feet, made so in the Kṛta age. Three of them have been broken by the parts of unrighteousness — pride, attachment and intoxication.
+tel: తపస్సు, శౌచము, దయ, సత్యము — ఇవి కృతయుగమున చేయబడిన నీ పాదములు. స్మయము, సంగము, మదము అను అధర్మాంశములచే వానిలో మూడు విరిగినవి.
+hi: तप, शौच, दया और सत्य — ये कृत युग में बने तुम्हारे पैर हैं। स्मय, सङ्ग और मद — इन अधर्म के अंशों से उनमें तीन टूट गये।
 
 --- verse 25 ---
 deva:
@@ -220,6 +292,9 @@ deva:
 iast:
 idānīṁ dharma pādaste satyaṁ nirvartayedyataḥ|
 taṁ jighṛkṣatyadharmo'yamanṛtenaidhitaḥ kaliḥ||
+en: Dharma, you have now one foot left, which is truth, by which you may still stand; and this unrighteousness, Kali, grown strong by untruth, wishes to seize it.
+tel: ధర్మమా, సత్యమను ఒక పాదము మాత్రము ఇప్పుడు నీకు మిగిలినది; దానిచే నీవు నిలువగలవు. అనృతముచే పెరిగిన ఈ అధర్మమైన కలి దానిని గ్రహించగోరుచున్నాడు.
+hi: हे धर्म, अब तुम्हारा एक पैर सत्य बचा है, जिससे तुम टिक सकते हो; और अनृत से बढ़ा यह अधर्म कलि उसे ग्रहण करना चाहता है।
 
 --- verse 26 ---
 deva:
@@ -228,6 +303,9 @@ deva:
 iast:
 iyaṁ ca bhūrbhagavatā nyāsitorubharā satī|
 śrīmadbhistatpadanyāsaiḥ sarvataḥ kṛtakautukā||
+en: And this earth, who is good, whose great burden the Lord has laid down, was made wonderful everywhere by the touch of his blessed feet.
+tel: భగవంతునిచే గొప్ప భారము తొలగింపబడిన ఈ సతియైన భూమి, ఆయన శ్రీమత్పాదముల స్పర్శచే అన్నివైపుల కౌతుకముతో నిండియుండెను.
+hi: भगवान् ने जिसका महान् भार उतार दिया, वह सती यह पृथ्वी उनके श्रीमान् चरणों के न्यास से सब ओर कौतुकमयी हो गयी थी।
 
 --- verse 27 ---
 deva:
@@ -236,6 +314,9 @@ deva:
 iast:
 śocatyaśrukalā sādhvī durbhagevojjhitādhunā|
 abrahmaṇyā nṛpavyājāḥ śūdrā bhokṣyanti māmiti||
+en: She grieves with tears, that good woman, abandoned now like one unlucky, thinking: śūdras without regard for brāhmaṇas, under the name of kings, will enjoy me.
+tel: "బ్రాహ్మణులను ఆదరించని శూద్రులు రాజుల పేరుతో నన్ను భోగించెదరు" అని తలంచుచు, ఇప్పుడు దుర్భగవలె విడువబడిన ఆ సాధ్వి కన్నీటితో శోకించుచున్నది.
+hi: "अब्रह्मण्य शूद्र राजा के नाम से मुझे भोगेंगे" — यह सोचकर, अब दुर्भगा के समान त्यक्त वह साध्वी आँसुओं से शोक करती है।
 
 --- verse 28 ---
 deva:
@@ -244,6 +325,9 @@ deva:
 iast:
 iti dharmaṁ mahīṁ caiva sāntvayitvā mahārathaḥ|
 niśātamādade khaḍgaṁ kalaye'dharmahetave||
+en: Having thus consoled Dharma and the earth, that great warrior drew his sharpened sword against Kali, the cause of unrighteousness.
+tel: ఈ విధముగా ధర్మమును, భూమిని ఓదార్చి, ఆ మహారథుడు అధర్మమునకు హేతువైన కలిని చంపుటకు పదునైన ఖడ్గమును చేపట్టెను.
+hi: इस प्रकार धर्म और पृथ्वी को सान्त्वना देकर, उस महारथ ने अधर्म के हेतु कलि के लिये निशित खड्ग उठाया।
 
 --- verse 29 ---
 deva:
@@ -252,6 +336,9 @@ deva:
 iast:
 taṁ jighāṁsumabhipretya vihāya nṛpalāñchanam|
 tatpādamūlaṁ śirasā samagād bhayavihvalaḥ||
+en: Knowing that he wished to kill him, Kali cast off the marks of a king and, overcome with fear, came with his head to the soles of his feet.
+tel: చంపగోరుచున్నాడని ఎరిగి, కలి రాజు గుర్తులను విడిచి, భయముచే విహ్వలుడై, శిరస్సుతో ఆయన పాదమూలమును చేరెను.
+hi: मारने की इच्छा जानकर, कलि ने राजा के चिह्न छोड़ दिये और भय से विह्वल होकर सिर से उनके चरणमूल में आ पड़ा।
 
 --- verse 30 ---
 deva:
@@ -260,6 +347,9 @@ deva:
 iast:
 patitaṁ pādayorvīkṣya kṛpayā dīnavatsalaḥ|
 śaraṇyo nāvadhīcchlokya āha cedaṁ hasanniva||
+en: Seeing him fallen at his feet, that compassionate one, who loves the poor, gives shelter and is worthy of praise, did not kill him, and said this, smiling as it were:
+tel: పాదములయందు పడినవానిని చూచి, దీనవత్సలుడు, శరణ్యుడు, శ్లోక్యుడైన ఆయన కృపతో అతనిని చంపలేదు; చిరునవ్వుతో ఇట్లు పలికెను:
+hi: चरणों में गिरे उसे देखकर, दीनवत्सल, शरण्य और श्लोक्य उन्होंने कृपा से उसे नहीं मारा, और मुस्कुराते हुए यह कहा:
 
 --- verse 31 ---
 deva:
@@ -274,6 +364,9 @@ na te guḍākeśayaśodharāṇāṁ
 baddhāñjalervai bhayamasti kiñcit|
 na vartitavyaṁ bhavatā kathañcana
 kṣetre madīye tvamadharmabandhuḥ||
+en: The king said: For one who stands with folded hands before those who hold the fame of Guḍākeśa there is nothing to fear. But you must not live in my realm in any way, for you are the friend of unrighteousness.
+tel: రాజు పలికెను: గుడాకేశుని యశస్సును ధరించినవారి ఎదుట చేతులు జోడించి నిలిచినవానికి ఏ భయమును లేదు. అయినను, అధర్మబంధువైన నీవు నా క్షేత్రమునందు ఏ విధముగను ఉండకూడదు.
+hi: राजा ने कहा: गुडाकेश का यश धारण करनेवालों के सामने बद्धाञ्जलि खड़े को कोई भय नहीं है। परन्तु अधर्म के बन्धु तू मेरे क्षेत्र में किसी प्रकार न रहे।
 
 --- verse 32 ---
 deva:
@@ -286,6 +379,9 @@ tvāṁ vartamānaṁ naradevadehe-
 ṣvanu pravṛtto'yamadharmapūgaḥ|
 lobho'nṛtaṁ cauryamanāryamaṁho
 jyeṣṭhā ca māyā kalahaśca dambhaḥ||
+en: If you dwell in the bodies of kings, this crowd of unrighteousness follows — greed, untruth, theft, ignoble deeds, sin, deceit which is their elder, quarrelling and hypocrisy.
+tel: నరదేవుల దేహములయందు నీవు ఉండినచో, ఈ అధర్మపూగము వెంట వచ్చును — లోభము, అనృతము, చౌర్యము, అనార్యమైన కర్మ, పాపము, వానికి జ్యేష్ఠయైన మాయ, కలహము, దంభము.
+hi: नरदेवों के देहों में तू रहेगा तो यह अधर्म-समूह साथ चलेगा — लोभ, अनृत, चोरी, अनार्य कर्म, पाप, उनकी ज्येष्ठा माया, कलह और दम्भ।
 
 --- verse 33 ---
 deva:
@@ -298,6 +394,9 @@ na vartitavyaṁ tadadharmabandho
 dharmeṇa satyena ca vartitavye|
 brahmāvarte yatra yajanti yajñai-
 ryajñeśvaraṁ yajñavitānavijñāḥ||
+en: Therefore, friend of unrighteousness, you must not dwell in Brahmāvarta, where one must live by dharma and by truth, and where those who know the spreading of the sacrifice worship the Lord of sacrifice with sacrifices;
+tel: కావున అధర్మబంధూ, ధర్మముచే సత్యముచే జీవించవలసిన బ్రహ్మావర్తమునందు — యజ్ఞవితానమును ఎరిగినవారు యజ్ఞములచే యజ్ఞేశ్వరుని ఆరాధించు అక్కడ — నీవు ఉండకూడదు;
+hi: इसलिये हे अधर्मबन्धो, धर्म और सत्य से रहने योग्य ब्रह्मावर्त में — जहाँ यज्ञ-वितान के ज्ञाता यज्ञों से यज्ञेश्वर की आराधना करते हैं — तुझे नहीं रहना चाहिये;
 
 --- verse 34 ---
 deva:
@@ -310,6 +409,9 @@ yasmin harirbhagavānijyamāna
 ijyāmūrtiryajatāṁśaṁ tanoti|
 kāmānamoghān sthirajaṅgamānā-
 mantarbahirvāyurivaiṣa ātmā||
+en: where the blessed Hari, being worshipped, who takes the form of the sacrifice, gives to those who worship their share and their desires unfailingly — he, the Self of all that stands and moves, who is within and without, like the wind.
+tel: ఎక్కడ ఆరాధింపబడిన భగవంతుడైన హరి, ఇజ్యామూర్తియై, యజించువారికి వారి అంశమును, కోరికలను అమోఘముగా ఇచ్చునో — స్థిరజంగమములకు లోపలను వెలుపలను వాయువువలె ఉన్న ఆ ఆత్మ.
+hi: जहाँ पूजित भगवान् श्रीहरि, इज्यामूर्ति होकर, यजन करनेवालों को उनका अंश और कामनाएँ अमोघ रूप से देते हैं — स्थिर और जङ्गम के भीतर-बाहर वायु के समान स्थित वे आत्मा।
 
 --- verse 35 ---
 deva:
@@ -320,16 +422,22 @@ iast:
 sūta uvāca
 parīkṣitaivamādiṣṭaḥ sa kalirjātavepathuḥ|
 tamudyatāsimāhedaṁ daṇḍapāṇimivodyatam||
+en: Sūta said: Thus commanded by Parīkṣit, Kali began to tremble; and to him, who had raised his sword like Death with his rod lifted, he said:
+tel: సూతుడు పలికెను: పరీక్షితునిచే ఈ విధముగా ఆదేశింపబడిన కలి వణకుట మొదలిడెను; దండపాణివలె ఖడ్గమును ఎత్తిన ఆయనతో ఇట్లు పలికెను:
+hi: सूतजी ने कहा: परीक्षित् के इस प्रकार आदेश देने पर कलि काँपने लगा; और दण्डपाणि के समान उद्यत खड्गवाले उनसे यह कहा:
 
 --- verse 36 ---
 deva:
 कलिरुवाच
-यत्र क्वचनवत्स्यामि सार्वभौम तवाज्ञया।
+यत्र क्वचन वत्स्यामि सार्वभौम तवाज्ञया।
 लक्षये तत्र तत्रापि त्वामात्तेषुशरासनम्॥
 iast:
 kaliruvāca
-yatra kvacanavatsyāmi sārvabhauma tavājñayā|
+yatra kvacana vatsyāmi sārvabhauma tavājñayā|
 lakṣaye tatra tatrāpi tvāmātteṣuśarāsanam||
+en: Kali said: Emperor, wherever I may dwell by your command, there too I see you with your bow and arrow taken up.
+tel: కలి పలికెను: సార్వభౌమా, నీ ఆజ్ఞచే నేను ఎక్కడ నివసించినను, అక్కడక్కడ కూడ బాణమును ధనువును చేపట్టిన నిన్నే నేను చూచుచున్నాను.
+hi: कलि ने कहा: हे सार्वभौम, आपकी आज्ञा से मैं जहाँ भी रहूँगा, वहाँ-वहाँ भी बाण और धनुष लिये आपको ही देखता हूँ।
 
 --- verse 37 ---
 deva:
@@ -338,6 +446,9 @@ deva:
 iast:
 tanme dharmabhṛtāṁ śreṣṭha sthānaṁ nirdeṣṭumarhasi|
 yatraiva niyato vatsya ātiṣṭhaṁste'nuśāsanam||
+en: Therefore, best of those who uphold dharma, be pleased to show me a place where I may dwell, bound by your rule, and so abide by your command.
+tel: కావున ధర్మమును ధరించువారిలో శ్రేష్ఠుడా, నీ అనుశాసనమునందే నిలిచి, నియతుడనై నేను నివసించు స్థానమును నాకు చూపుటకు నీవు అర్హుడవు.
+hi: इसलिये हे धर्मधारियों में श्रेष्ठ, आपके अनुशासन में स्थित रहकर नियत होकर मैं जहाँ रहूँ, वह स्थान बताने की कृपा कीजिये।
 
 --- verse 38 ---
 deva:
@@ -348,6 +459,9 @@ iast:
 sūta uvāca
 abhyarthitastadā tasmai sthānāni kalaye dadau|
 dyūtaṁ pānaṁ striyaḥ sūnā yatrādharmaścaturvidhaḥ||
+en: Sūta said: Thus prayed to, he gave Kali these places: gambling, drink, women and slaughter, in which unrighteousness is fourfold.
+tel: సూతుడు పలికెను: ఈ విధముగా ప్రార్థింపబడి, ఆయన కలికి ఈ స్థానములను ఇచ్చెను: ద్యూతము, పానము, స్త్రీలు, సూన — ఇందు అధర్మము నాలుగు విధములు.
+hi: सूतजी ने कहा: इस प्रकार प्रार्थना किये जाने पर उन्होंने कलि को ये स्थान दिये: द्यूत, पान, स्त्री और सूना — इनमें अधर्म चार प्रकार का है।
 
 --- verse 39 ---
 deva:
@@ -356,6 +470,9 @@ deva:
 iast:
 punaśca yācamānāya jātarūpamadātprabhuḥ|
 tato'nṛtaṁ madaṁ kāmaṁ rajo vairaṁ ca pañcamam||
+en: And when he asked again, the master gave him gold; and then untruth, intoxication, desire, passion and enmity, which is the fifth.
+tel: మరల యాచించినపుడు, ఆ ప్రభువు అతనికి బంగారమును ఇచ్చెను; అటుపిమ్మట అనృతము, మదము, కామము, రజస్సు, ఐదవదైన వైరమును ఇచ్చెను.
+hi: फिर याचना करने पर उस प्रभु ने उसे स्वर्ण दिया; और तदनन्तर अनृत, मद, काम, रज तथा पाँचवाँ वैर दिया।
 
 --- verse 40 ---
 deva:
@@ -364,6 +481,9 @@ deva:
 iast:
 amūni pañca sthānāni hyadharmaprabhavaḥ kaliḥ|
 auttareyeṇa dattāni nyavasat tannideśakṛt||
+en: In these five places Kali, who is born of unrighteousness, lived by the order of the son of Uttarā, which he obeyed.
+tel: అధర్మము వలన పుట్టిన కలి, ఔత్తరేయునిచే ఇవ్వబడిన ఈ ఐదు స్థానములయందు, ఆయన నిర్దేశమును పాలించుచు నివసించెను.
+hi: अधर्म से उत्पन्न कलि, औत्तरेय के दिये इन पाँच स्थानों में, उनके निर्देश का पालन करते हुए रहने लगा।
 
 --- verse 41 ---
 deva:
@@ -372,6 +492,9 @@ deva:
 iast:
 athaitāni na seveta bubhūṣuḥ puruṣaḥ kvacit|
 viśeṣato dharmaśīlo rājā lokapatirguruḥ||
+en: Therefore one who desires his own good should never resort to these — least of all a king who keeps to dharma, who is the lord of his people and their teacher.
+tel: కావున తన శ్రేయస్సును కోరు మనుష్యుడు ఎప్పుడును వానిని సేవించకూడదు; విశేషముగా ధర్మశీలుడు, లోకపతి, గురువైన రాజు సేవించకూడదు.
+hi: इसलिये अपना कल्याण चाहनेवाला मनुष्य इनका कभी सेवन न करे; विशेषतः धर्मशील, लोकपति और गुरु राजा न करे।
 
 --- verse 42 ---
 deva:
@@ -380,6 +503,9 @@ deva:
 iast:
 vṛṣasya naṣṭāṁstrīn pādān tapaḥ śaucaṁ dayāmiti|
 pratisaṁdadha āśvāsya mahīṁ ca samavardhayat||
+en: He joined again the bull's three lost feet — austerity, purity and compassion — and consoling the earth, he made her prosper.
+tel: వృషభుని నశించిన మూడు పాదములను — తపస్సు, శౌచము, దయను — ఆయన మరల కూర్చెను; భూమిని ఓదార్చి ఆమెను వృద్ధి చేసెను.
+hi: वृष के नष्ट हुए तीन पैरों — तप, शौच और दया — को उन्होंने फिर जोड़ा; और पृथ्वी को आश्वासन देकर उसे समृद्ध किया।
 
 --- verse 43 ---
 deva:
@@ -388,6 +514,9 @@ deva:
 iast:
 sa eṣa etarhyadhyāsta āsanaṁ pārthivocitam|
 pitāmahenopanyastaṁ rājñāraṇyaṁ vivikṣatā||
+en: He now sits upon that seat befitting a king of the earth, which his grandfather placed in his hands when that king wished to enter the forest.
+tel: అరణ్యమును ప్రవేశించగోరిన ఆ రాజుచే — పితామహునిచే — అప్పగింపబడిన, పార్థివునికి తగిన ఆ ఆసనమును ఈయన ఇప్పుడు అధిష్ఠించియున్నాడు.
+hi: वन में प्रवेश की इच्छा करनेवाले उस राजा — पितामह — ने जो आसन सौंपा, पार्थिव के योग्य उस आसन पर वे अब विराजते हैं।
 
 --- verse 44 ---
 deva:
@@ -396,6 +525,9 @@ deva:
 iast:
 āste'dhunā sa rājarṣiḥ kauravendraśriyollasan|
 gajāhvaye mahābhāgaścakravartī bṛhacchravāḥ||
+en: That royal sage, greatly blessed, the emperor of wide fame, lives now at Hastināpura, shining with the splendour of the lord of the Kurus.
+tel: మహాభాగుడు, బృహత్కీర్తి కలిగిన ఆ చక్రవర్తియైన రాజర్షి, కౌరవేంద్ర శ్రీతో ప్రకాశించుచు, ఇప్పుడు గజాహ్వయమునందు ఉన్నాడు.
+hi: महाभाग और बृहत् कीर्तिवाले वे चक्रवर्ती राजर्षि, कौरवेन्द्र की श्री से शोभित होकर, अब हस्तिनापुर में हैं।
 
 --- verse 45 ---
 deva:
@@ -404,9 +536,15 @@ deva:
 iast:
 itthambhūtānubhāvo'yamabhimanyusuto nṛpaḥ|
 yasya pālayataḥ kṣoṇīṁ yūyaṁ satrāya dīkṣitāḥ||
+en: Such is the greatness of this king, the son of Abhimanyu, under whose rule of the earth you have been consecrated for your sacrifice.
+tel: అభిమన్యుని కుమారుడైన ఈ రాజు ప్రభావము ఇట్టిది; ఈయన భూమిని పాలించుచున్నపుడే మీరు సత్రము కొరకు దీక్షితులైతిరి.
+hi: अभिमन्यु के पुत्र इस राजा का प्रभाव ऐसा है; इन्हीं के पृथ्वी-पालन के समय आप सत्र के लिये दीक्षित हुए हैं।
 
 --- verse none ---
 deva:
 इति श्रीमद्भागवते महापुराणे पारमहंस्यां संहितायां प्रथमस्कन्धे कलिनिग्रहो नाम सप्तदशोऽध्यायः॥ १७॥
 iast:
 iti śrīmadbhāgavate mahāpurāṇe pāramahaṁsyāṁ saṁhitāyāṁ prathamaskandhe kalinigraho nāma saptadaśo'dhyāyaḥ|| 17||
+en: Thus ends the seventeenth adhyāya, called the putting down of Kali, in the first skandha of the Śrīmad Bhāgavata Mahāpurāṇa, the saṁhitā of the paramahaṁsas.
+tel: ఇది శ్రీమద్భాగవత మహాపురాణమునందు, పరమహంసల సంహితయందు, ప్రథమస్కంధమునందు కలినిగ్రహమను సప్తదశాధ్యాయము.
+hi: इस प्रकार श्रीमद्भागवत महापुराण की परमहंसों की संहिता के प्रथम स्कन्ध में कलि-निग्रह नामक सत्रहवाँ अध्याय समाप्त हुआ।
