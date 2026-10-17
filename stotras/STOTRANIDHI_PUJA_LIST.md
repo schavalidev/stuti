@@ -1,14 +1,14 @@
 # stotranidhi pūjā vidhānas (fetched 17 Oct 2026, S81)
 
-Categories puja-vidhi-en and puja-vidhanam-en, 2 pages each, 40 posts. "have" = a file in puja/ or vidhi/ already covers it.
+Categories puja-vidhi-en and puja-vidhanam-en, 2 pages each, 40 posts. "have" = a file in puja/ or vidhi/ already covers it. The three marked "written S81" were missing on 17 Oct 2026 and were written the same day as puja/smarta/53, 54 and 55.
 
 1. Naga Panchami Puja Vidhi – nāga pañcamī pūjā paddhati — have — https://stotranidhi.com/en/naga-panchami-puja-vidhi-in-english/
 2. Panchamrutha Abhishekam Mantras – pañcāmṛtābhiṣeka mantrāḥ — have — https://stotranidhi.com/en/panchamrutha-abhishekam-mantras-in-english/
 3. Puja Vidhanam (Poorvangam – Smartha Paddhati) – pūjāvidhānam (pūrvāṅgam – smārtapaddhatiḥ) — have — https://stotranidhi.com/en/puja-vidhanam-poorvangam-in-english/
 4. Puja Vidhanam (Poorvangam – Vaishnava Paddhati) – pūjāvidhānam – pūrvāṅgam (vaiṣṇava paddhatiḥ) — have — https://stotranidhi.com/en/puja-vidhanam-poorvangam-vaishnava-paddhati-in-english/
 5. Purusha Sukta Sahita Sri Sukta Vidhana Puja – puruṣasūkta sahita śrīsūkta pūjā — have — https://stotranidhi.com/en/purusha-sukta-sahita-sri-sukta-vidhana-puja-in-english/
-6. Purusha Sukta Vidhana Purvaka Shodasopachara Puja – puruṣasūkta vidhāna pūrvaka ṣoḍaśopacāra pūjā — MISSING — https://stotranidhi.com/en/purusha-sukta-vidhana-purvaka-shodasopachara-puja-in-english/
-7. Sankatahara Chaturthi Puja Vidhanam – saṅkaṭahara caturthī pūjā vidhānam — MISSING — https://stotranidhi.com/en/sankatahara-chaturthi-puja-vidhanam-in-english/
+6. Purusha Sukta Vidhana Purvaka Shodasopachara Puja – puruṣasūkta vidhāna pūrvaka ṣoḍaśopacāra pūjā — written S81 — https://stotranidhi.com/en/purusha-sukta-vidhana-purvaka-shodasopachara-puja-in-english/
+7. Sankatahara Chaturthi Puja Vidhanam – saṅkaṭahara caturthī pūjā vidhānam — written S81 — https://stotranidhi.com/en/sankatahara-chaturthi-puja-vidhanam-in-english/
 8. Sri Anjaneya Shodasopachara Puja – śrī āñjaneya ṣoḍaśopacāra pūjā — have — https://stotranidhi.com/en/sri-anjaneya-shodasopachara-puja-in-english/
 9. Sri Ayyappa Shodasa Upchara Puja Vidhanam 2 – śrī ayyappa ṣoḍaśopacāra pūjā 2 — have — https://stotranidhi.com/en/sri-ayyappa-shodasa-upchara-puja-vidhanam-2-in-english/
 10. Sri Ayyappa Shodasopachara Puja 1 – śrī ayyappa ṣoḍaśopacāra pūjā – 1 — have — https://stotranidhi.com/en/sri-ayyappa-shodasopachara-puja-1-in-english/
@@ -36,7 +36,7 @@ Categories puja-vidhi-en and puja-vidhanam-en, 2 pages each, 40 posts. "have" = 
 32. Sri Shiva Shodasopachara Puja – śrī śiva ṣoḍaśopacāra pūjā — have — https://stotranidhi.com/en/sri-shiva-shodasopachara-puja-in-english/
 33. Sri Shyamala Devi Pooja Vidhanam – śrī śyāmalā dēvi ṣōḍaśōpacāra pūjā — have — https://stotranidhi.com/en/sri-shyamala-devi-pooja-vidhanam-in-english/
 34. Sri Subrahmanya Pooja Vidhanam – śrī subrahmaṇya ṣoḍaśopacāra pūjā — have — https://stotranidhi.com/en/sri-subrahmanya-pooja-vidhanam-in-english/
-35. Sri Sukta Vidhana Purvaka Shodasopachara Puja – śrīsūkta vidhāna pūrvaka ṣoḍaśopacāra pūjā — MISSING — https://stotranidhi.com/en/sri-sukta-vidhana-purvaka-shodasopachara-puja-in-english/
+35. Sri Sukta Vidhana Purvaka Shodasopachara Puja – śrīsūkta vidhāna pūrvaka ṣoḍaśopacāra pūjā — written S81 — https://stotranidhi.com/en/sri-sukta-vidhana-purvaka-shodasopachara-puja-in-english/
 36. Sri Surya Shodasopachara Puja – śrī sūryanārāyaṇa ṣoḍaśopacāra pūjā — have — https://stotranidhi.com/en/sri-surya-shodasopachara-puja-in-english/
 37. Sri Varahi Devi Shodasopachara Puja – śrī vārāhī ṣoḍaśopacāra pūjā — have — https://stotranidhi.com/en/sri-varahi-devi-shodasopachara-puja-in-english/
 38. Sri Venkateshwara Puja Vidhanam – śrī veṅkaṭeśvara ṣoḍaśopacāra pūjā — have — https://stotranidhi.com/en/sri-venkateshwara-puja-vidhanam-in-english/

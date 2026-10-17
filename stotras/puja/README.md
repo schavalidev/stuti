@@ -436,3 +436,32 @@ Three things about it, stated here so that browsing the tree is enough to find t
    end, a Vedic mantra heading each of their sixteen services; removing those leaves no rite behind.
    The file says so plainly and directs the reciter to the deity's nitya-pūjā instead — `05`, `07`,
    `08`, `11` — rather than pretending a verse-for-verse exchange is possible.
+
+## Added 2026-10-17 — the last three stotranidhi pūjā pages: `smarta/53`, `54`, `55`
+
+stotranidhi's two pūjā categories hold 40 pages, and on 17 October 2026 they were listed against this
+folder in `../STOTRANIDHI_PUJA_LIST.md`. Thirty-seven were already here. The three that were not are
+now written, and the list is complete.
+
+- `53_sankatahara_chaturthi_puja_vidhanam.txt` — 31 units, unaccented. The monthly Gaṇeśa rite of the
+  dark-fortnight fourth day: sixteen services each with a verse of its own ending `सङ्कटं मे निवारय`,
+  a sixteen-name flower worship, twenty-one dūrvā pairs, three upajāti verses of prayer, and **three
+  arghyas given seven times each — to the tithi, to Gaṇeśa, and to the moon with Rohiṇī**. The
+  sixteen names match `14` and `15`; the twenty-one dūrvā names are a different list from `14`'s and
+  both stand. No second witness was found for the service verses, and the header says so.
+- `54_purushasukta_vidhana_shodashopachara_puja.txt` — 30 units, 418 accent marks. The Puruṣa Sūkta
+  half of `48`: one ṛc of that hymn at each service, the same five-nectar bath, masculine prayer
+  verses, one blank for the Lord. The page prints the five offerings to the breaths unaccented, and
+  they are left so.
+- `55_srisukta_vidhana_shodashopachara_puja.txt` — 30 units, 466 accent marks. The Śrī Sūkta half of
+  `48`: one ṛc of that hymn at each service, feminine prayer verses, `राज्ञीयोपचारान् देव्योपचारान्`
+  at the royal services, a second offering of turmeric and kuṅkuma at the sandal-paste, and no
+  mantra at the mantra-flower.
+
+**`54` and `55` were collated by identity with `48`**: every accented line was checked by machine
+against the line `48` carries for the same service, and the handful that differ are named in each
+header (an `ओं` prefix, a space, zero-width joiners, line-breaks, and one honey-mantra accent). `48`'s
+collation against the Taittirīya and Ṛgvedic witnesses therefore carries over, and its numbered
+differences stand unchanged. The two pages share every non-hymn line with `48`, so the translations of
+those lines are `48`'s own, cut to one hymn. Neither file supersedes `48`, `18`, `19`, `22` or `37`.
+
