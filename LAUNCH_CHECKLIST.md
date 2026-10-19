@@ -22,15 +22,25 @@ Config: `stuti-app/src/stuti-cloud-config.ts`. Procedure: `stuti-app/docs/backen
 
 Blocks the other three in practice: real identity sits under all of them.
 
-- [ ] Create the project at supabase.com, region Mumbai (`ap-south-1`)
-- [ ] SQL Editor → run `stuti-app/supabase/schema.sql` (safe to re-run)
-- [ ] Paste Project URL into `supabaseUrl`
-- [ ] Paste the anon / publishable key into `supabaseAnonKey` (never `service_role`)
-- [ ] Authentication → URL Configuration → Site URL `https://stuti-app.netlify.app`
-- [ ] Redirect URLs: `https://stuti-app.netlify.app/**`, `http://localhost:4173/**`, `com.stuti.app://auth-callback`
-- [ ] Magic Link email template → show `{{ .Token }}`, because the app asks for six digits, not a link
-- [ ] Custom SMTP before any public release (the built-in mailer sends a few an hour)
-- [ ] Decide which doors open, and set the same in `providers`: email is on; phone needs an SMS provider plus DLT registration for Indian numbers; Google needs an OAuth client with redirect `https://<ref>.supabase.co/auth/v1/callback`
+- [x] Create the project at supabase.com — made 19 October 2026 (S83) in Singapore
+      (`ap-southeast-1`), not Mumbai: the sign-up form offered only the region group,
+      and ~50 ms on an occasional sync does not justify recreating it
+- [x] SQL Editor → run `stuti-app/supabase/schema.sql` (safe to re-run)
+- [x] Paste Project URL into `supabaseUrl`
+- [x] Paste the anon / publishable key into `supabaseAnonKey` (never `service_role`)
+- [x] Authentication → URL Configuration → Site URL `https://stuti-app.netlify.app`
+- [x] Redirect URLs: `https://stuti-app.netlify.app/**`, `http://localhost:4173/**`, `com.stuti.app://auth-callback`
+- [x] Magic Link email template → show `{{ .Token }}`, because the app asks for six digits, not a link
+- [x] Custom SMTP — Resend, 19 October 2026 (S83), `smtp.resend.com:465`, sending as
+      `no-reply@stutiapp.com`. Not optional in the end: Supabase now locks template
+      editing on the free plan until a sender of your own is connected, and its built-in
+      mailer reaches only your own address anyway. DKIM, SPF and DMARC are live on
+      Cloudflare and verified
+- [x] Decide which doors open — email only for the first launch (19 October 2026, S83).
+      Phone would need an SMS provider and DLT registration for Indian numbers, which is
+      paperwork and cost for no reach that email does not already have; Google can be
+      added later without anyone losing an account. `providers` in the config and the
+      project's own settings agree: email on, phone and Google off
 - [ ] Verify first sign-in on a device that already holds beta data — existing keys are offered to the account, and the conflict screen appears when two phones disagree
 - [ ] Insert your own `user_id` into `stuti_admins` so the in-app feedback inbox appears
 - [ ] Read the counters once: `select * from stuti_events_daily;`
