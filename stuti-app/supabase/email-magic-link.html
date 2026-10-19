@@ -4,50 +4,23 @@
      in for the first time gets the signup one. Found 19 October 2026 (S83) when
      the first real test mail arrived with the stock link in it.
 
-     The app asks for six digits, not a link: stuti-cloud.ts sends with
+     The app asks for digits, not a link: stuti-cloud.ts sends with
      signInWithOtp and reads them back with verifyOtp, so the body must show
-     {{ .Token }} and must not lead with {{ .ConfirmationURL }}. Kept here so
-     the wording is in the repository and not only in the dashboard.
+     {{ .Token }} and must not lead with {{ .ConfirmationURL }}.
+
+     Keep this markup plain. Supabase parses the template and falls back to its
+     own default without saying so when the parse fails — which is exactly what
+     happened to the first version of this file, whose nested tables and
+     style attributes broken across several lines were silently discarded. One
+     element per line, every style attribute on a single line, no comments
+     below this one, and test any change by actually signing in.
      Subject, both templates: Your Stuti sign-in code -->
-<table role="presentation" width="100%" cellpadding="0" cellspacing="0"
-       style="background:#faf7f2;padding:32px 0;">
-  <tr>
-    <td align="center">
-      <table role="presentation" width="100%" cellpadding="0" cellspacing="0"
-             style="max-width:440px;background:#ffffff;border:1px solid #e8e0d4;
-                    border-radius:10px;padding:32px;
-                    font-family:Georgia,'Times New Roman',serif;color:#2b2520;">
-        <tr>
-          <td style="font-size:20px;letter-spacing:0.08em;color:#8a6a3b;
-                     padding-bottom:20px;">STUTI</td>
-        </tr>
-        <tr>
-          <td style="font-size:16px;line-height:1.6;padding-bottom:24px;">
-            Namaste. Here is your sign-in code.
-          </td>
-        </tr>
-        <tr>
-          <td align="center" style="padding-bottom:24px;">
-            <div style="font-family:Menlo,Consolas,monospace;font-size:32px;
-                        letter-spacing:0.22em;color:#2b2520;background:#faf7f2;
-                        border:1px solid #e8e0d4;border-radius:8px;
-                        padding:16px 20px;">{{ .Token }}</div>
-          </td>
-        </tr>
-        <tr>
-          <td style="font-size:15px;line-height:1.6;padding-bottom:20px;">
-            Type these six digits into the app to sign in. The code is good for
-            one hour, and for one use.
-          </td>
-        </tr>
-        <tr>
-          <td style="font-size:14px;line-height:1.6;color:#6b6054;
-                     border-top:1px solid #e8e0d4;padding-top:20px;">
-            If you did not ask to sign in, nothing has happened and you may
-            ignore this message. No one can use the code but you.
-          </td>
-        </tr>
-      </table>
-    </td>
-  </tr>
-</table>
+<div style="background:#faf7f2;padding:32px 16px;font-family:Georgia,serif;color:#2b2520;">
+<div style="max-width:420px;margin:0 auto;background:#ffffff;border:1px solid #e8e0d4;border-radius:10px;padding:28px;">
+<p style="font-size:18px;letter-spacing:0.08em;color:#8a6a3b;margin:0 0 20px 0;">STUTI</p>
+<p style="font-size:16px;line-height:1.6;margin:0 0 20px 0;">Namaste. Here is your sign-in code.</p>
+<p style="font-family:monospace;font-size:30px;letter-spacing:0.2em;text-align:center;background:#faf7f2;border:1px solid #e8e0d4;border-radius:8px;padding:16px;margin:0 0 20px 0;">{{ .Token }}</p>
+<p style="font-size:15px;line-height:1.6;margin:0 0 20px 0;">Type these digits into the app to sign in. The code is good for one hour, and for one use.</p>
+<p style="font-size:14px;line-height:1.6;color:#6b6054;border-top:1px solid #e8e0d4;padding-top:18px;margin:0;">If you did not ask to sign in, nothing has happened and you may ignore this message. No one can use the code but you.</p>
+</div>
+</div>
