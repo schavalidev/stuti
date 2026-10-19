@@ -17,7 +17,7 @@ const { useState: useFbS } = React;
    reaches this file through nudge and home, so whichever of the two the
    bundler ordered second saw the other half-built and read SUPPORT off
    undefined — a white screen on load, and only in the built bundle. */
-const fbTo = () => { try { return window.STUTI_BUILD.SUPPORT; } catch (e) { return "feedback@stuti.app"; } };
+const fbTo = () => { try { return window.STUTI_BUILD.SUPPORT; } catch (e) { return "feedback@stutiapp.com"; } };
 
 /* `kind` opens the sheet on one of the three doors; `about` names the text the
    message is about, so a correction sent from the reader arrives saying which

@@ -13,7 +13,7 @@ window.STUTI_BUILD = (function () {
   const GATE = "matsya";
   /* where a message goes, and how soon a reply can be promised. One place, so
      the feedback sheet, Settings and the website cannot name different doors. */
-  const SUPPORT = "feedback@stuti.app";
+  const SUPPORT = "feedback@stutiapp.com";
   const REPLY_DAYS = 3;
 
   const label = () => "Stuti " + VERSION + " · " + BUILD + " · " + CHANNEL;

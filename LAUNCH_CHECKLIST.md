@@ -225,11 +225,29 @@ Drafted in the app's own voice at `stuti-app/docs/legal/privacy.html` and
 
 ### D3. Name, domain, licences
 
+**The domain is `stutiapp.com`** (decided 19 October 2026, S83). `stuti.app` was
+never available: it has been parked at a registrar by someone who is not running
+anything on it, and the address the app promised therefore could never have been
+had. The name itself stands — checked the same day, no app is called simply Stuti
+on either the Indian or the American App Store, nor on Play, and the near names
+(Stuti Sangrah, Ganpati Stuti) use the ordinary Sanskrit word descriptively, as
+anyone may. `SUPPORT` now reads `feedback@stutiapp.com` in the port and in the
+design's copy; the designer's own project still has the old address and needs the
+same one-line change on the next dump.
+
+The domain is now on the critical path, because Supabase will not let the free
+plan edit the sign-in email until a mail sender of our own is connected, and
+Resend will not send from a domain nobody owns. So no one can sign in until it
+is bought.
+
+- [ ] Buy `stutiapp.com` — blocks the sign-in email, and so blocks A1
 - [ ] Search the trademark register for "Stuti" in the relevant classes
-- [ ] Register the domain and the obvious variants
+- [ ] Reserve the app name in App Store Connect when the first build is submitted;
+      Apple holds names first-come from submission, not before
+- [ ] Register the obvious variants
 - [ ] Take the handle on every platform you might use
-- [ ] Verify `stuti.app` is yours — `SUPPORT` in `stuti-app/src/stuti-build.ts` already
-      promises `feedback@stuti.app` and a three-day reply
+- [ ] Verify `stutiapp.com` is yours — `SUPPORT` in `stuti-app/src/stuti-build.ts` already
+      promises `feedback@stutiapp.com` and a three-day reply
 - [ ] Check each bundled typeface for web-embedding rights, and each library's licence
 - [ ] One attributions page in the app
 
