@@ -41,6 +41,18 @@ Blocks the other three in practice: real identity sits under all of them.
       paperwork and cost for no reach that email does not already have; Google can be
       added later without anyone losing an account. `providers` in the config and the
       project's own settings agree: email on, phone and Google off
+- [ ] **Open, 19 October 2026 (S83): the sign-in mail still carries Supabase's stock
+      link, not our six digits.** The mail itself works — it arrives from
+      `no-reply@stutiapp.com` through Resend, so SMTP, DKIM, SPF and DMARC are all
+      proved. What does not work is the template. Both `Confirm signup` and `Magic
+      Link` hold our body with `{{ .Token }}`, saved (Save changes greyed out), and
+      Auth → Hooks is empty, so nothing is overriding them. Two leads, in order:
+      Supabase has a reported fault where it silently falls back to the default
+      template and writes `mailer: unable to fetch mail template` into the Auth logs,
+      so read those first; and the app's own path may not be the one we assume —
+      `stuti-cloud.ts:90` calls `signInWithOtp`, which is documented to use Magic
+      Link rather than Confirm signup, yet the mail that arrives says "finish signing
+      up", which is the signup template. One of those two is lying
 - [ ] Verify first sign-in on a device that already holds beta data — existing keys are offered to the account, and the conflict screen appears when two phones disagree
 - [ ] Insert your own `user_id` into `stuti_admins` so the in-app feedback inbox appears
 - [ ] Read the counters once: `select * from stuti_events_daily;`
