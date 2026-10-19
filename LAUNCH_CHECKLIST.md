@@ -37,8 +37,18 @@ Blocks the other three in practice: real identity sits under all of them.
 
 ### A2. Razorpay — giving
 
-Cannot start before the entity exists (D1). Longest lead on the page.
+**Not in the first launch** (decided 19 October 2026, S83). Giving is held back,
+which takes the entity, the bank account and KYC (D1) off the launch path
+entirely: none of it gates the release any more, and the accountant conversation
+can happen while the app is already out. What this section asks for still has to
+happen before any money is taken; it is simply no longer a launch blocker.
 
+The one thing this decision does add to the launch: the giving screen is still in
+the app, so it must either come out of the first build or read plainly as not yet
+open, so that nobody taps it and finds nothing behind it.
+
+- [ ] Remove the giving screen from the first build, or make it say plainly that
+      giving is not open yet
 - [ ] Razorpay account against the registered entity, KYC cleared
 - [ ] Payment Buttons → one fixed-amount button each for ₹251, ₹1,100, ₹2,500, ₹5,001
 - [ ] Paste the four `pl_…` ids into `STUTI_RAZORPAY_IDS` (`day`, `month`, `year`, `patron`)
@@ -182,7 +192,11 @@ its own week in the OS. `node stuti-app/tools/push-selftest.mjs` checks it.
 
 ## D. Legal, naming, and the things with lead times
 
-### D1. The entity — start first, it gates money
+### D1. The entity — it gates money, but no longer the launch
+
+Held back with giving (A2), decided 19 October 2026 (S83). Still the longest lead
+on the page, so it is worth starting early; it just does not stand in the way of
+the first release.
 
 - [ ] Take the entity question to a chartered accountant: sole proprietorship,
       private limited, or a trust / Section 8 company. The dāna model points at the
