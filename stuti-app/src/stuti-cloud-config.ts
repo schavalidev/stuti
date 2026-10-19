@@ -13,8 +13,8 @@
    stays a preview. See stuti-app/docs/backend.md.
    ============================================================ */
 export const STUTI_CLOUD_CONFIG = {
-  supabaseUrl: "",        // https://<ref>.supabase.co
-  supabaseAnonKey: "",    // Project Settings → API → anon / publishable key
+  supabaseUrl: "https://tusqpofqgneuhrmrmylf.supabase.co",
+  supabaseAnonKey: "sb_publishable_LQj3UJUL0-UlWBcBI1yEnQ_AbbiyVow",
   /* which sign-in doors are switched on in Supabase → Authentication → Providers.
      Phone needs an SMS provider (MSG91, Twilio…) configured there first. */
   providers: { email: true, phone: false, google: false },
