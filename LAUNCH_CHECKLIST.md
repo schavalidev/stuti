@@ -130,9 +130,14 @@ the `en`/`tel`/`hi`/`vidhi` fields themselves, and a parser fault had been appen
 recension note to the last verse of 509 files. The parser is fixed; the 183 files are not. See
 `stotras/CORPUS_AUDIT_2026-10-17.md` §1b before publishing any of them.
 
-- [ ] Rule on the launch set: how wide, and where it stops. The standing advice is
-      to launch narrow and finished, and to publish the roadmap so absence reads as
-      deliberate
+- [x] **Ruled 19 October 2026 (S83): the launch set is everything.** All 1,526 that
+      build, not a narrow first shelf. Two things follow, and neither blocks the
+      ruling. The 183 files that carry sourcing inside the `en`/`tel`/`hi`/`vidhi`
+      fields go out as they stand unless they are tidied first — the reciter is never
+      meant to see apparatus, so that tidying is now launch work, not someday work
+      (`CORPUS_AUDIT_2026-10-17.md` §1b). And 332 of the 335 Bhāgavata adhyāyas have
+      no meanings written, so the reader meets them as text alone; the box below about
+      what a meaningless text looks like is no longer hypothetical
 - [ ] Add `Published: <date>` to each text in that set
 - [ ] Run `build_corpus.py --write-ids` once the set is settled, so `corpus-ids.json`
       records the published identities
