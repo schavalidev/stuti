@@ -1,9 +1,14 @@
-<!-- Supabase → Authentication → Emails → Magic Link.
+<!-- Supabase → Authentication → Emails. This one body goes into BOTH the
+     "Magic Link" and the "Confirm signup" templates, because Supabase chooses
+     between them by whether the address is already known, and a reciter signing
+     in for the first time gets the signup one. Found 19 October 2026 (S83) when
+     the first real test mail arrived with the stock link in it.
+
      The app asks for six digits, not a link: stuti-cloud.ts sends with
      signInWithOtp and reads them back with verifyOtp, so the body must show
      {{ .Token }} and must not lead with {{ .ConfirmationURL }}. Kept here so
      the wording is in the repository and not only in the dashboard.
-     Subject: Your Stuti sign-in code -->
+     Subject, both templates: Your Stuti sign-in code -->
 <table role="presentation" width="100%" cellpadding="0" cellspacing="0"
        style="background:#faf7f2;padding:32px 0;">
   <tr>
