@@ -376,6 +376,40 @@ def propose_head(limit):
         print(f"\n[{path} line {a + 1} {field}]\n  was: {value[:200]}\n  now: {new[:200]}")
 
 
+MARKDOWN = re.compile(r"\*\*([^*\n]+)\*\*|`([^`\n]+)`|(?<![*\\w])\*([^*\n]+)\*(?![*\\w])")
+
+
+def unmark(value):
+    """Take out markers the app does not render, leaving the words alone.
+
+    The reader's app prints plain text, so `**bold**` reaches a reciter as four
+    asterisks and a backtick-quoted mantra as two backticks. Only the markers go;
+    not one character between them changes.
+    """
+    return MARKDOWN.sub(lambda m: m.group(1) or m.group(2) or m.group(3), value)
+
+
+def apply_markdown():
+    """Strip the markers from every field a reader is shown, header and verse."""
+    changed = files = 0
+    for path in sorted(ROOT.rglob("*.txt")):
+        lines = path.read_text(encoding="utf-8").splitlines()
+        spans = [(f, a, b) for f, a, b, v in head_blocks(path) if f in rv.READER_FIELDS]
+        spans += [(f, a, b) for f, a, b, v in blocks(path) if f in FIELDS]
+        touched = False
+        for f, a, b in spans:
+            for i in range(a, b + 1):
+                new = unmark(lines[i])
+                if new != lines[i]:
+                    lines[i] = new
+                    changed += 1
+                    touched = True
+        if touched:
+            path.write_text("\n".join(lines) + "\n", encoding="utf-8")
+            files += 1
+    return changed, files
+
+
 def main(args):
     mode = args[0] if args else "--list"
     if mode == "--list":
@@ -416,6 +450,9 @@ def main(args):
     elif mode == "--apply-head":
         changed, skipped = apply_head()
         print(f"cleared {changed} header fields; left {skipped} alone")
+    elif mode == "--markdown":
+        changed, files = apply_markdown()
+        print(f"stripped markers on {changed} lines in {files} files")
     elif mode == "--apply":
         changed, skipped = apply_cuts()
         print(f"cut {changed} tails; left {skipped} alone")
