@@ -84,7 +84,12 @@ Step 1 is done: `stotras/bin/build_corpus.py` exists and runs.
 - [ ] Create the R2 bucket (or equivalent static host)
 - [ ] Custom domain on it
 - [ ] CORS so the app's origin may fetch
-- [ ] Sync command in `stuti-app/tools/`, honouring the order: `t/` first, `index.json` last
+- [ ] Sync command in `stuti-app/tools/`, honouring the order: `t/` first, `index.json` last.
+      **It must upload only the files `index.json` names, or prune what it finds.** The build
+      writes a text as `t/<id>.<hash>.json` and does not remove the copy under the old hash, so
+      `corpus/t/` held 3,025 files on 20 October against 2,016 live rows — 1,009 of them stale
+      texts from earlier builds. Uploading the directory wholesale would put a thousand
+      superseded readings on the host, reachable by anyone who kept a link
 - [ ] Set `STUTI_CORPUS_URL`
 - [ ] Verify in the built bundle, on the phone, and offline after one read
 - [ ] Later, not for launch: seed in `public/corpus/`, drop the bundled text modules, per-deity keep
