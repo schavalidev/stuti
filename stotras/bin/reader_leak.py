@@ -169,6 +169,94 @@ def apply_cuts():
     return changed, skipped
 
 
+BRACKET = re.compile(r"\s*[(\[][^()\[\]]*[)\]]")
+# "… the words stand. — The verse is marked in the print as an addition …":
+# an em-dash after a full stop, introducing the editor talking about the text.
+DASH_TAIL = re.compile(r"(?<=[.।!?])\s+[—–-]\s+(?=[A-Zऀ-ॿఀ-౿(])")
+
+
+# Inside a bracket, the clause that talks about an edition: "printed as the
+# separate word oḍyāṇau", "SD reads kalāpinī", "the print omits this". A bracket
+# often holds a gloss for the reader and a note for the editor side by side —
+# `(lalāṭinī; SD reads kalāpinī)` — and only the second half should go.
+EDITORIAL = re.compile(
+    r"\bprint(?:ed|s)?\b|\breads?\b|\bomits?\b|\badds?\b|\bgives?\b|\bconfirms?\b"
+    r"|\bkept as\b|\brestored\b|\bcompounds?\b|\bconstrues?\b|\bvariant\b"
+    r"|\bsense uncertain\b|\bsee (?:the )?recension\b|\bflagged\b", re.I)
+
+
+def _bracket(m):
+    """Keep the clauses of a bracket that are for the reader, drop the rest."""
+    whole = m.group(0)
+    if not STRONG.search(whole) and not EDITORIAL.search(whole):
+        return whole
+    inner = whole.strip()[1:-1]
+    keep = [c.strip() for c in re.split(r"\s*;\s*", inner)
+            if c.strip() and not STRONG.search(c) and not EDITORIAL.search(c)]
+    if not keep:
+        return ""
+    lead = " " if whole.startswith(" ") else ""
+    return f"{lead}({'; '.join(keep)})"
+
+
+def strip_notes(value):
+    """Remove whole brackets that are source notes, and an editorial dash-tail.
+
+    Only a bracket that actually names a source goes: `(pīṭha)` and
+    `(siṁhaturaṅgā)` gloss the word for the reader and stay. A bracket is only
+    ever removed entire, so the sentence cannot be left half-closed.
+    """
+    out = BRACKET.sub(_bracket, value)
+    parts = DASH_TAIL.split(out)
+    if len(parts) > 1:
+        head, tail = parts[0], " ".join(parts[1:])
+        if STRONG.search(tail) and not STRONG.search(head) and head.strip():
+            out = head
+    out = re.sub(r"\s+([,;.])", r"\1", out)
+    return re.sub(r"\s{2,}", " ", out).strip()
+
+
+def apply_notes():
+    """Second pass: the sourcing inside a sentence rather than after it."""
+    changed = skipped = 0
+    by_file = collections.defaultdict(list)
+    for path, a, b, field, kind, old, kept, cut in places():
+        if kind in ("interior", "whole"):
+            by_file[path].append((a, b, field, old))
+    for path, rows in sorted(by_file.items()):
+        lines = path.read_text(encoding="utf-8").splitlines()
+        for a, b, field, old in sorted(rows, reverse=True):
+            new_value = strip_notes(old)
+            if not new_value or new_value == old or STRONG.search(new_value):
+                skipped += 1           # not fully cleared: leave it to be read
+                continue
+            head = f"{field}:"
+            first = lines[a][len(head):].strip()
+            body = ([first] if first else []) + lines[a + 1:b + 1]
+            if "\n".join(body).strip() != old:
+                skipped += 1
+                continue
+            wrapped = new_value.split("\n")
+            lines[a:b + 1] = ([f"{head} {wrapped[0]}"] + wrapped[1:]) if first else [head] + wrapped
+            changed += 1
+        path.write_text("\n".join(lines) + "\n", encoding="utf-8")
+    return changed, skipped
+
+
+def propose_notes(limit):
+    shown = 0
+    for path, a, b, field, kind, old, kept, cut in places():
+        if kind == "tail":
+            continue
+        new_value = strip_notes(old)
+        if not new_value or new_value == old or STRONG.search(new_value):
+            continue
+        shown += 1
+        if shown > limit:
+            break
+        print(f"\n[{path} line {a + 1} {field}]\n  was: {old[:260]}\n  now: {new_value[:260]}")
+
+
 def main(args):
     mode = args[0] if args else "--list"
     if mode == "--list":
@@ -199,6 +287,11 @@ def main(args):
             if kind == "tail":
                 continue
             print(f"\n[{kind} {p} line {a + 1} {f}]\n{old}")
+    elif mode == "--propose-notes":
+        propose_notes(int(args[1]) if len(args) > 1 else 20)
+    elif mode == "--apply-notes":
+        changed, skipped = apply_notes()
+        print(f"cleared {changed} fields; left {skipped} alone")
     elif mode == "--apply":
         changed, skipped = apply_cuts()
         print(f"cut {changed} tails; left {skipped} alone")
