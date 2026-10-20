@@ -313,7 +313,16 @@ def head_places():
 
 
 def strip_head(value):
-    """Take the sourcing out of a header field, keeping what it states."""
+    """Take the sourcing out of a header field, keeping what it states.
+
+    A `Sections:` field is one section to a line, so each line is cleared on its
+    own. Treating the whole field as one run made the bracket and fragment
+    checks fire on a line other than the one being changed, and the field came
+    back untouched.
+    """
+    if "\n" in value:
+        return "\n".join(strip_head(line) if HEAD_SOURCING.search(line) else line
+                          for line in value.split("\n"))
     out = BRACKET.sub(lambda m: "" if HEAD_SOURCING.search(m.group(0)) else m.group(0), value)
     out = re.sub(r",? (?:exactly )?as (?:printed|numbered|the source prints them|they stand)"
                  r"(?: in the (?:source|print))?", "", out, flags=re.I)
