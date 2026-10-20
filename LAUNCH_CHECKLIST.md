@@ -121,30 +121,31 @@ The Android app does not need this: its bells are already laid in the OS.
 The largest piece of work left, and it is a decision, not a build.
 Re-derive with `python3 stotras/bin/build_corpus.py --check`.
 
-Today: **1,528 files, 1,526 built, 0 listed** (the two that build to nothing are deliberate; see below). Not one file carries a `Published:`
-field, so the index has zero rows and nothing in the written corpus reaches a
-reader. The header gate is clean — `--publish-all` withholds nothing for a
-reader field naming a source, so the 22 September backlog of 332 is closed.
-**But the gate checks headers only** (found 17 Oct 2026, S75): 183 files carry sourcing inside
-the `en`/`tel`/`hi`/`vidhi` fields themselves, and a parser fault had been appending the
-recension note to the last verse of 509 files. The parser is fixed; the 183 files are not. See
-`stotras/CORPUS_AUDIT_2026-10-17.md` §1b before publishing any of them.
+Today: **2,018 files, 2,016 built, 2,016 listed** (3 October: 1,528 files, 0 listed) (the two that build to nothing are deliberate; see below).
+Every one of those 2,016 now carries a `Published:` date, so the index has a row for each
+and the written corpus reaches a reciter — it had zero rows on the morning of 20 October.
+**The reader fields are now clean** (20 October 2026, S83). The 183 files that carried
+sourcing inside `en`/`tel`/`hi`/`vidhi` are cleared — 673 places in all, by
+`stotras/bin/reader_leak.py`, which cuts what it can prove and hands the rest to a person;
+about 150 were rewritten by hand. The header fields went with them, 279 places down to one,
+and that one is the Gurucaritra calling the Self "the witness", which the audit's pattern
+cannot tell from a textual witness. The markdown markers a reader was seeing — `**bold**`
+and backticked mantras, 672 lines in 215 files — are gone too.
 
-- [x] **Ruled 19 October 2026 (S83): the launch set is everything.** All 1,526 that
-      build, not a narrow first shelf. Two things follow, and neither blocks the
-      ruling. The 183 files that carry sourcing inside the `en`/`tel`/`hi`/`vidhi`
-      fields go out as they stand unless they are tidied first — the reciter is never
-      meant to see apparatus, so that tidying is now launch work, not someday work
-      (`CORPUS_AUDIT_2026-10-17.md` §1b). And 332 of the 335 Bhāgavata adhyāyas have
+- [x] **Ruled 19 October 2026 (S83): the launch set is everything.** Everything that
+      builds, not a narrow first shelf — 2,016 texts as it turned out, the corpus
+      having grown since the count in this file was written. The tidying the ruling
+      implied was done first, on 20 October, and is described above. One thing still
+      follows from it: 332 of the 335 Bhāgavata adhyāyas have
       no meanings written, so the reader meets them as text alone; the box below about
       what a meaningless text looks like is no longer hypothetical
-- [ ] Add `Published: <date>` to each text in that set
-- [ ] Run `build_corpus.py --write-ids` once the set is settled, so `corpus-ids.json`
-      records the published identities
-- [ ] Confirm the shelf spread is what you intend. With everything published it is
-      vishnu 675, devi 359, itara 183, guru 77, subrahmanya 54, navagraha 49,
-      hanuman 34, shiva 34, ganesha 31, nadi 17, pitr 5, and 8 deliberately
-      shelf-less generic vidhānam texts
+- [x] Add `Published: <date>` to each text in that set — done 20 October 2026 (S83),
+      `Published: 2026-10-20` on all 2,016 texts that build
+- [x] Run `build_corpus.py --write-ids` — done 20 October 2026 (S83); 2,016 ids
+- [x] Shelf spread, as built 20 October 2026 (S83): vishnu 1141, devi 359, itara 207,
+      guru 77, subrahmanya 54, navagraha 49, hanuman 34, shiva 34, ganesha 31, nadi 17,
+      pitr 5, and 8 deliberately shelf-less generic vidhānam texts. Vishnu has nearly
+      doubled since 3 October: the Bhāgavata and the Vālmīki Rāmāyaṇa landed between
 - [ ] Decide what the reader sees for a text whose meanings are not written yet
 
 **Settled, so not a box.** `build_corpus.py` reports two files with no units.
