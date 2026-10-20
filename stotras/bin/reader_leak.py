@@ -59,6 +59,16 @@ def sentences(value):
     return [s for s in SPLIT.split(value.strip()) if s.strip()]
 
 
+# What an editorial note trails off with once the comparison is made. These
+# carry no site name and no press, so the flagged run does not reach the end of
+# the field and the tail rule alone will not fire — but they are plainly the
+# same note continuing, and they are for the editor.
+CLOSER = re.compile(
+    r"^(?:recorded|noted|flagged|reference list|see\b|this is recorded|the difference is)"
+    r"|not (?:reconciled|merged|harmonised|imported|adopted|emended)\b"
+    r"|\bis recorded\b|\bwas flagged\b|\bit is now attested\b", re.I)
+
+
 def classify(value):
     """Return (kind, kept, cut) for one field value."""
     ss = sentences(value)
@@ -68,6 +78,14 @@ def classify(value):
     if len(flagged) == len(ss):
         return "whole", "", value
     first = min(flagged)
+    rest = ss[first:]
+    # Everything from the first source sentence to the end is the note, so long
+    # as what follows it is either more of the note or one of its closers.
+    if first > 0 and all(STRONG.search(x) or CLOSER.search(x.strip()) for x in rest):
+        kept = " ".join(ss[:first]).strip()
+        if kept and not STRONG.search(kept) and \
+           kept.count("(") == kept.count(")") and kept.count("[") == kept.count("]"):
+            return "tail", kept, " ".join(rest).strip()
     if first == len(ss) - len(flagged):          # the flagged run is the tail
         kept = " ".join(ss[:first]).strip()
         # A full stop inside a bracket is not a sentence end. Splitting there
@@ -101,7 +119,9 @@ def blocks(path):
             continue
         field, rest = m.group(1), m.group(2).strip()
         j = i + 1
-        while j < len(lines) and not FIELD_LINE.match(lines[j]) and not lines[j].startswith("---"):
+        while (j < len(lines) and not FIELD_LINE.match(lines[j])
+               and not lines[j].startswith("---")
+               and not rv.TRAILING.match(lines[j])):
             j += 1
         body = [rest] if rest else []
         body += [l for l in lines[i + 1:j]]
