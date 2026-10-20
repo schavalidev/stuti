@@ -277,6 +277,96 @@ def propose_notes(limit):
         print(f"\n[{path} line {a + 1} {field}]\n  was: {old[:260]}\n  now: {new_value[:260]}")
 
 
+HEAD_FIELD = re.compile(r"^(" + "|".join(re.escape(n) for n in rv.READER_FIELDS + rv.EDITORIAL_FIELDS) + r"):(.*)$")
+# In a header the giveaway is softer than in a translation: "6 numbered verses
+# in the source", "as the print has them". reader_view's own pattern catches
+# those, and a count field has no ordinary use for the words.
+HEAD_SOURCING = rv.SOURCING
+
+
+def head_blocks(path):
+    """Yield (field, first line, last line, value) for the header fields only."""
+    lines = path.read_text(encoding="utf-8", errors="replace").splitlines()
+    i = 0
+    while i < len(lines):
+        if lines[i].startswith("---"):
+            break
+        m = HEAD_FIELD.match(lines[i])
+        if not m:
+            i += 1
+            continue
+        field, rest = m.group(1), m.group(2).strip()
+        j = i + 1
+        while (j < len(lines) and not HEAD_FIELD.match(lines[j])
+               and not lines[j].startswith("---") and lines[j].strip()):
+            j += 1
+        body = ([rest] if rest else []) + lines[i + 1:j]
+        yield field, i, j - 1, "\n".join(body).strip()
+        i = j
+
+
+def head_places():
+    for path in sorted(ROOT.rglob("*.txt")):
+        for field, a, b, value in head_blocks(path):
+            if field in rv.READER_FIELDS and value and HEAD_SOURCING.search(value):
+                yield path, a, b, field, value
+
+
+def strip_head(value):
+    """Take the sourcing out of a header field, keeping what it states."""
+    out = BRACKET.sub(lambda m: "" if HEAD_SOURCING.search(m.group(0)) else m.group(0), value)
+    out = re.sub(r",? (?:exactly )?as (?:printed|numbered|the source prints them|they stand)"
+                 r"(?: in the (?:source|print))?", "", out, flags=re.I)
+    out = re.sub(r",? (?:in|per|following|from) the (?:source|print)\b", "", out, flags=re.I)
+    out = re.sub(r"\s*—\s*(?:the|this) (?:source|print)\b[^.]*\.", ".", out, flags=re.I)
+    sentences = [x for x in SPLIT.split(out) if x.strip()]
+    keep = [x for x in sentences if not HEAD_SOURCING.search(x)]
+    if keep and len(keep) < len(sentences):
+        out = " ".join(keep)
+    out = re.sub(r"\s+([,;.])", r"\1", out)
+    out = re.sub(r"\(\s*\)", "", out)
+    out = re.sub(r"[ \t]{2,}", " ", out).strip(" ,;—-")
+    # Dropping a sentence can leave half of a bracket, or a fragment that begins
+    # mid-clause. Either means the split was wrong, so give the field back
+    # unchanged and let a person read it.
+    if out.count("(") != out.count(")") or out.count("[") != out.count("]"):
+        return value
+    if re.search(r"(?<=[.।!?])\s+[a-z0-9]", out):
+        return value
+    return out
+
+
+def apply_head():
+    changed = skipped = 0
+    by_file = collections.defaultdict(list)
+    for path, a, b, field, value in head_places():
+        by_file[path].append((a, b, field, value))
+    for path, rows in sorted(by_file.items()):
+        lines = path.read_text(encoding="utf-8").splitlines()
+        for a, b, field, old in sorted(rows, reverse=True):
+            new = strip_head(old)
+            if not new or new == old or HEAD_SOURCING.search(new):
+                skipped += 1
+                continue
+            wrapped = new.split("\n")
+            lines[a:b + 1] = [f"{field}: {wrapped[0]}"] + wrapped[1:]
+            changed += 1
+        path.write_text("\n".join(lines) + "\n", encoding="utf-8")
+    return changed, skipped
+
+
+def propose_head(limit):
+    shown = 0
+    for path, a, b, field, value in head_places():
+        new = strip_head(value)
+        if not new or new == value or HEAD_SOURCING.search(new):
+            continue
+        shown += 1
+        if shown > limit:
+            break
+        print(f"\n[{path} line {a + 1} {field}]\n  was: {value[:200]}\n  now: {new[:200]}")
+
+
 def main(args):
     mode = args[0] if args else "--list"
     if mode == "--list":
@@ -312,6 +402,11 @@ def main(args):
     elif mode == "--apply-notes":
         changed, skipped = apply_notes()
         print(f"cleared {changed} fields; left {skipped} alone")
+    elif mode == "--propose-head":
+        propose_head(int(args[1]) if len(args) > 1 else 15)
+    elif mode == "--apply-head":
+        changed, skipped = apply_head()
+        print(f"cleared {changed} header fields; left {skipped} alone")
     elif mode == "--apply":
         changed, skipped = apply_cuts()
         print(f"cut {changed} tails; left {skipped} alone")
