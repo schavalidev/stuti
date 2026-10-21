@@ -265,13 +265,25 @@ Drafted in the app's own voice at `stuti-app/docs/legal/privacy.html` and
 
 ### D3. Name, domain, licences
 
-**The domain is `stutiapp.com`** (decided 19 October 2026, S83). `stuti.app` was
-never available: it has been parked at a registrar by someone who is not running
-anything on it, and the address the app promised therefore could never have been
-had. The name itself stands — checked the same day, no app is called simply Stuti
-on either the Indian or the American App Store, nor on Play, and the near names
-(Stuti Sangrah, Ganpati Stuti) use the ordinary Sanskrit word descriptively, as
-anyone may. `SUPPORT` now reads `feedback@stutiapp.com` in the port and in the
+**The domain is `stutiapp.com`** (decided 19 October 2026, S83). `stuti.app` could
+not be had, and the address the app promised therefore never existed.
+
+**`stuti.app` is a live competing product, found 21 October 2026 (S83). This
+needs a decision.** On 19 October it was read as a parked domain with nothing on
+it; that was wrong, and the reading was made from a 200 response and the
+registrar's nameservers rather than from the page. The site is "Stuti, a Sadhaka
+product", © 2026: it teaches Viṣṇu and Lalitā Sahasranāma verse by verse, with
+word-by-word padacheda, adjustable tempo and daily review — the same ground this
+app stands on. Web practice is live, it says iOS and Android are in build, and it
+carries refund and delivery pages, so it takes money.
+
+What follows: the name is in active commercial use for a close product by a
+company that is ahead of us to the stores by its own account; the trademark
+search below is now a launch item rather than housekeeping; and a reciter
+searching for either will meet both. The store listings are still clear — checked
+19 October, no app is called simply Stuti on Play or on either App Store, and the
+near names (Stuti Sangrah, Ganpati Stuti) use the ordinary Sanskrit word
+descriptively, as anyone may. `SUPPORT` now reads `feedback@stutiapp.com` in the port and in the
 design's copy; the designer's own project still has the old address and needs the
 same one-line change on the next dump.
 
@@ -281,7 +293,11 @@ Resend will not send from a domain nobody owns. So no one can sign in until it
 is bought.
 
 - [ ] Buy `stutiapp.com` — blocks the sign-in email, and so blocks A1
-- [ ] Search the trademark register for "Stuti" in the relevant classes
+- [ ] **Decide whether the app keeps the name**, now that stuti.app is a live product
+      on the same ground (above). This gates the store listing, the icon and every page
+      that prints the name
+- [ ] Search the trademark register for "Stuti" in the relevant classes — and search
+      for Sadhaka's own filings while there
 - [ ] Reserve the app name in App Store Connect when the first build is submitted;
       Apple holds names first-come from submission, not before
 - [ ] Register the obvious variants
