@@ -9,7 +9,7 @@ Type: Purāṇa (an adhyāya of the Śrīmad Bhāgavata, Skandha 3)
 
 Source / recension: Base text and authority: the Gītā Press, Gorakhpur Śrīmadbhāgavata Mahāpurāṇa with Hindi translation, Part 1 (Gītā Press code 26), archive.org item `shrimadbhagwat-mahapuran-bhag-1`, printed pages 259–262; the PDF page numbers are the printed ones. The PDF carries the typesetter's own text layer in the Chanakya font encoding, and the text was decoded from it by machine with `bin/bhagavata/chanakya.py`, not read off OCR or typed. The decoder was checked against GRETIL over all twelve skandhas before any file was written, and the differences that remain were sampled and found to be readings of the two editions. Second witness: GRETIL's `sa_bhAgavatapurANa.xml` (IAST, contributed by Ulrich Stiehl), a separate editorial lineage, compared verse by verse by machine. The TTD edition with the commentaries of Śrīdhara, Vīrarāghava and Vijayadhvaja (archive.org `Bhagavata_Purana_With_Multiple_Commentaries_TTD_Critical_Edition`) is the third witness where one is needed; it was not read for this file. The IAST was generated mechanically from the Devanāgarī with `bin/dev2iast.py`.
 
-Recension note: Text-only file, written 1 Oct 2026 at the user's instruction to lay down the whole Bhāgavata first: the English, Telugu and Hindi meanings are still to be added, and the witnesses' differences listed here have been recorded by machine and not yet adjudicated. The print is followed throughout. The print numbers 40 verses and GRETIL numbers 40. Of the 40 verses GRETIL has under the same number, 30 agree with the print letter for letter once spacing and the spelling of nasals are set aside; the rest differ: 3, 4, 5, 11, 14, 21, 23, 25, 36, 38. Spacing is the print's, as its text layer gives it; in a few places justification has left a space inside a word, and these are still to be closed when the verse is read. The speaker lines (श्रीशुक उवाच and the others) are printed in italic above the verse they introduce, and are given as its first line.
+Recension note: Meanings written 17 Oct 2026 (session S78). The differences between the witnesses listed below were read as the verses were glossed; except where this note says otherwise, each is a spelling, a sandhi or a word order of the two editions, none of them changes the sense, and the print's reading therefore stands unbracketed. The print is followed throughout. The print numbers 40 verses and GRETIL numbers 40. Of the 40 verses GRETIL has under the same number, 30 agree with the print letter for letter once spacing and the spelling of nasals are set aside; the rest differ: 3, 4, 5, 11, 14, 21, 23, 25, 36, 38. Spacing is the print's, as its text layer gives it. The speaker lines (श्रीशुक उवाच and the others) are printed in italic above the verse they introduce, and are given as its first line. One space that justification had left inside a word was closed when the verses were read, confirmed against GRETIL: verse 1 had निशाम्यगतिमीश्वरः for निशाम्य गतिमीश्वरः. One akṣara was put right with it: verse 5 had यस्मिल्ँलोकाश्, with the anunāsika after the virāma consonant, where the l-sandhi is written यस्मिँल्लोकाश्; the IAST beside it was regenerated with bin/dev2iast.py. The print's own page was not re-read for it, and GRETIL writes the two words apart, so it does not settle the spelling.
 
 Verse count: 40, plus the closing colophon printed unnumbered.
 
@@ -19,11 +19,14 @@ Published: 2026-10-20
 deva:
 ऋषिरुवाच
 इति तासां स्वशक्तीनां सतीनामसमेत्य सः।
-प्रसुप्तलोकतन्त्राणां निशाम्यगतिमीश्वरः॥
+प्रसुप्तलोकतन्त्राणां निशाम्य गतिमीश्वरः॥
 iast:
 ṛṣiruvāca
 iti tāsāṁ svaśaktīnāṁ satīnāmasametya saḥ|
-prasuptalokatantrāṇāṁ niśāmyagatimīśvaraḥ||
+prasuptalokatantrāṇāṁ niśāmya gatimīśvaraḥ||
+en: The sage said: Thus the Lord, hearing the state of those powers of his, which were real but had not come together, and whose ordering of the worlds lay asleep —
+tel: ఋషి పలికెను: ఈ విధముగా, కలియక ఉన్న, సతియైన తన శక్తుల — లోకతంత్రము నిద్రించియున్న వాని — గతిని విని ఆ ఈశ్వరుడు,
+hi: ऋषि ने कहा: इस प्रकार, असमेत और सती अपनी शक्तियों की — जिनका लोक-तन्त्र सुप्त था — गति सुनकर वे ईश्वर,
 
 --- verse 2 ---
 deva:
@@ -32,6 +35,9 @@ deva:
 iast:
 kālasaṁjñāṁ tadā devīṁ bibhracchaktimurukramaḥ|
 trayoviṁśatitattvānāṁ gaṇaṁ yugapadāviśat||
+en: he of mighty stride then bore the power called the goddess Time, and entered at once the host of the twenty-three categories.
+tel: ఉరుక్రముడైన ఆయన అప్పుడు కాలము అను పేరు కలిగిన దేవిని — ఆ శక్తిని — ధరించి, ఇరువది మూడు తత్త్వముల గణమునందు ఒకేసారి ప్రవేశించెను.
+hi: उरुक्रम ने तब काल नामक देवी शक्ति को धारण करके, तेईस तत्त्वों के गण में युगपत् प्रवेश किया।
 
 --- verse 3 ---
 deva:
@@ -40,6 +46,9 @@ deva:
 iast:
 so'nupraviṣṭo bhagavāṁśceṣṭārūpeṇa taṁ gaṇam|
 bhinnaṁ saṁyojayāmāsa suptaṁ karma prabodhayan||
+en: Having entered that host, the Lord, in the form of their working, joined together what was divided, awakening the work that lay asleep.
+tel: ఆ గణమునందు ప్రవేశించిన భగవంతుడు, చేష్టారూపముచే, భిన్నమైనదిని కలిపెను; నిద్రించుచున్న కర్మను మేల్కొలిపెను.
+hi: उस गण में प्रविष्ट भगवान् ने, चेष्टा-रूप से, भिन्न को संयोजित किया; और सुप्त कर्म को जगाया।
 
 --- verse 4 ---
 deva:
@@ -48,14 +57,20 @@ deva:
 iast:
 prabuddhakarmā daivena trayoviṁśatiko gaṇaḥ|
 prerito'janayatsvābhirmātrābhiradhipūruṣam||
+en: The host of the twenty-three, its work awakened by fate and urged on, brought forth by its own subtle measures the Person of the universe.
+tel: దైవముచే కర్మ మేల్కొనిన ఆ ఇరువది మూడింటి గణము, ప్రేరేపింపబడి, తన మాత్రలచే అధిపూరుషుని జన్మింపజేసెను.
+hi: दैव से कर्म जाग्रत उस तेईस के गण ने, प्रेरित होकर, अपनी मात्राओं से अधिपुरुष को उत्पन्न किया।
 
 --- verse 5 ---
 deva:
 परेण विशता स्वस्मिन्मात्रया विश्वसृग्गणः।
-चुक्षोभान्योन्यमासाद्य यस्मिल्ँलोकाश्चराचराः॥
+चुक्षोभान्योन्यमासाद्य यस्मिँल्लोकाश्चराचराः॥
 iast:
 pareṇa viśatā svasminmātrayā viśvasṛggaṇaḥ|
-cukṣobhānyonyamāsādya yasmilm̐lokāścarācarāḥ||
+cukṣobhānyonyamāsādya yasmim̐llokāścarācarāḥ||
+en: When the Supreme had entered into it by his part, the host of the makers of the universe was stirred, meeting one another; and in it are the worlds with all that moves and does not move.
+tel: పరుడు మాత్రచే తనయందు ప్రవేశించినపుడు, విశ్వసృష్టికర్తల గణము ఒకదానితో మరియొకటి కలిసి కలవరపడెను; అందు చరాచరములైన లోకములు ఉన్నవి.
+hi: पर के मात्रा से स्वस्मिन् प्रवेश करने पर, विश्वस्रष्टाओं का गण एक-दूसरे से मिलकर क्षुब्ध हुआ; और जिसमें चराचर लोक हैं।
 
 --- verse 6 ---
 deva:
@@ -64,6 +79,9 @@ deva:
 iast:
 hiraṇmayaḥ sa puruṣaḥ sahasraparivatsarān|
 āṇḍakośa uvāsāpsu sarvasattvopabṛṁhitaḥ||
+en: That golden Person dwelt in the shell of the egg upon the waters for a thousand years, swelled with all beings.
+tel: హిరణ్మయుడైన ఆ పురుషుడు, సర్వసత్త్వములచే పెరిగినవాడై, వేయి సంవత్సరములు జలములయందు అండకోశమునందు నివసించెను.
+hi: हिरण्मय वह पुरुष, सब सत्त्वों से उपबृंहित, सहस्र वर्ष जल में अण्डकोश में रहा।
 
 --- verse 7 ---
 deva:
@@ -72,6 +90,9 @@ deva:
 iast:
 sa vai viśvasṛjāṁ garbho devakarmātmaśaktimān|
 vibabhājātmanā''tmānamekadhā daśadhā tridhā||
+en: He is the womb of the makers of the universe, having the powers of the gods, of work and of the self; and he divided himself by himself — into one, into ten, into three.
+tel: ఆయనే విశ్వసృష్టికర్తల గర్భము; దేవశక్తి, కర్మశక్తి, ఆత్మశక్తి కలవాడు; తన ఆత్మచే తన ఆత్మను ఒక విధముగా, పది విధములుగా, మూడు విధములుగా ఆయన విభజించెను.
+hi: वे ही विश्वस्रष्टाओं के गर्भ हैं; देव, कर्म और आत्म-शक्तिवाले; और उन्होंने अपने से अपने को एकधा, दशधा और त्रिधा विभक्त किया।
 
 --- verse 8 ---
 deva:
@@ -80,6 +101,9 @@ deva:
 iast:
 eṣa hyaśeṣasattvānāmātmāṁśaḥ paramātmanaḥ|
 ādyo'vatāro yatrāsau bhūtagrāmo vibhāvyate||
+en: This is the part of the Self of all beings without exception, of the Supreme Self, the first descent, in which this whole body of beings is shown forth.
+tel: ఇది అశేషమైన సత్త్వములకు, పరమాత్మకు ఆత్మాంశము; ఆద్యమైన అవతారము; అందు ఈ భూతసమూహము వ్యక్తమగుచున్నది.
+hi: यह अशेष सत्त्वों के और परमात्मा का आत्म-अंश है; आद्य अवतार, जिसमें यह भूत-ग्राम विभावित होता है।
 
 --- verse 9 ---
 deva:
@@ -88,6 +112,9 @@ deva:
 iast:
 sādhyātmaḥ sādhidaivaśca sādhibhūta iti tridhā|
 virāṭ prāṇo daśavidha ekadhā hṛdayena ca||
+en: He is of three kinds: with the self, with the gods, and with the elements. The Virāj is tenfold as breath, and onefold by the heart.
+tel: ఆయన మూడు విధములు: సాధ్యాత్ముడు, సాధిదైవుడు, సాధిభూతుడు. విరాట్టు ప్రాణముగా పది విధములు; హృదయముచే ఒక విధము.
+hi: वे तीन प्रकार हैं: साध्यात्म, साधिदैव और साधिभूत। विराट् प्राण रूप से दशविध है, और हृदय से एकधा।
 
 --- verse 10 ---
 deva:
@@ -96,6 +123,9 @@ deva:
 iast:
 smaran viśvasṛjāmīśo vijñāpitamadhokṣajaḥ|
 virājamatapatsvena tejasaiṣāṁ vivṛttaye||
+en: Remembering what the makers of the universe had made known to him, the Lord beyond the senses warmed the Virāj by his own splendour, for the unfolding of them.
+tel: విశ్వసృష్టికర్తలు తెలిపినదిని స్మరించుచు, అధోక్షజుడైన ఈశుడు, వారి వివృత్తి కొరకు తన తేజముచే విరాజును తపింపజేసెను.
+hi: विश्वस्रष्टाओं के विज्ञापित को स्मरण करते हुए, अधोक्षज ईश ने, उनकी विवृत्ति के लिये अपने तेज से विराट् को तपाया।
 
 --- verse 11 ---
 deva:
@@ -104,6 +134,9 @@ deva:
 iast:
 atha tasyābhitaptasya kati cāyatanāni ha|
 nirabhidyanta devānāṁ tāni me gadataḥ śṛṇu||
+en: Then, as he was thus warmed, how many seats of the gods were opened? Hear those from me as I tell them.
+tel: అట్లు తపింపజేయబడిన ఆయనయందు దేవతల ఆయతనములు ఎన్ని తెరచుకొనినవో — నేను చెప్పుచున్నపుడు వానిని వినుము.
+hi: इस प्रकार अभितप्त उनमें देवताओं के कितने आयतन खुले — मैं कहता हूँ, वे सुनिये।
 
 --- verse 12 ---
 deva:
@@ -112,6 +145,9 @@ deva:
 iast:
 tasyāgnirāsyaṁ nirbhinnaṁ lokapālo'viśatpadam|
 vācā svāṁśena vaktavyaṁ yayāsau pratipadyate||
+en: His mouth was opened, and fire, the guardian of the world, entered that place with his part, speech, by which he takes in what is to be spoken.
+tel: ఆయన ముఖము తెరచుకొనెను; లోకపాలకుడైన అగ్ని వాక్కు అను తన అంశముతో ఆ స్థానమునందు ప్రవేశించెను; దానిచే ఆయన వక్తవ్యమును గ్రహించును.
+hi: उनका आस्य खुला, और लोकपाल अग्नि वाक् रूप अपने अंश से उस पद में प्रविष्ट हुए; जिससे वे वक्तव्य को प्राप्त करते हैं।
 
 --- verse 13 ---
 deva:
@@ -120,6 +156,9 @@ deva:
 iast:
 nirbhinnaṁ tālu varuṇo lokapālo'viśaddhareḥ|
 jihvayāṁśena ca rasaṁ yayāsau pratipadyate||
+en: The palate of Hari was opened, and Varuṇa, the guardian of the world, entered it with his part, the tongue, by which he takes in taste.
+tel: హరి తాలువు తెరచుకొనెను; లోకపాలకుడైన వరుణుడు జిహ్వ అను అంశముతో అందు ప్రవేశించెను; దానిచే ఆయన రసమును గ్రహించును.
+hi: श्रीहरि का तालु खुला, और लोकपाल वरुण जिह्वा रूप अंश से उसमें प्रविष्ट हुए; जिससे वे रस को प्राप्त करते हैं।
 
 --- verse 14 ---
 deva:
@@ -128,6 +167,9 @@ deva:
 iast:
 nirbhinne aśvinau nāse viṣṇorāviśatāṁ padam|
 ghrāṇenāṁśena gandhasya pratipattiryato bhavet||
+en: The two nostrils were opened, and the Aśvins entered the place of Viṣṇu with their part, smell, from which comes the taking in of scent.
+tel: రెండు నాసికలు తెరచుకొనినవి; అశ్వినులు ఘ్రాణము అను అంశముతో విష్ణువు స్థానమునందు ప్రవేశించిరి; దాని వలన గంధము గ్రహణము కలుగును.
+hi: दोनों नासिकाएँ खुलीं, और अश्विन् घ्राण रूप अंश से विष्णु के पद में प्रविष्ट हुए; जिससे गन्ध की प्रतिपत्ति होती है।
 
 --- verse 15 ---
 deva:
@@ -136,6 +178,9 @@ deva:
 iast:
 nirbhinne akṣiṇī tvaṣṭā lokapālo'viśadvibhoḥ|
 cakṣuṣāṁśena rūpāṇāṁ pratipattiryato bhavet||
+en: The two eyes were opened, and Tvaṣṭā, the guardian of the world, entered the place of the all-pervading with his part, the eye, from which comes the taking in of forms.
+tel: రెండు కన్నులు తెరచుకొనినవి; లోకపాలకుడైన త్వష్టా చక్షువు అను అంశముతో ఆ విభుని స్థానమునందు ప్రవేశించెను; దాని వలన రూపముల గ్రహణము కలుగును.
+hi: दोनों नेत्र खुले, और लोकपाल त्वष्टा चक्षु रूप अंश से विभु के पद में प्रविष्ट हुए; जिससे रूपों की प्रतिपत्ति होती है।
 
 --- verse 16 ---
 deva:
@@ -144,6 +189,9 @@ deva:
 iast:
 nirbhinnānyasya carmāṇi lokapālo'nilo'viśat|
 prāṇenāṁśena saṁsparśaṁ yenāsau pratipadyate||
+en: His skin was opened, and the wind, the guardian of the world, entered it with his part, the breath, by which he takes in touch.
+tel: ఆయన చర్మములు తెరచుకొనినవి; లోకపాలకుడైన అనిలుడు ప్రాణము అను అంశముతో అందు ప్రవేశించెను; దానిచే ఆయన సంస్పర్శమును గ్రహించును.
+hi: उनका चर्म खुला, और लोकपाल अनिल प्राण रूप अंश से उसमें प्रविष्ट हुए; जिससे वे संस्पर्श को प्राप्त करते हैं।
 
 --- verse 17 ---
 deva:
@@ -152,6 +200,9 @@ deva:
 iast:
 karṇāvasya vinirbhinnau dhiṣṇyaṁ svaṁ viviśurdiśaḥ|
 śrotreṇāṁśena śabdasya siddhiṁ yena prapadyate||
+en: His two ears were opened, and the quarters entered their own seat with their part, hearing, by which he gains the taking in of sound.
+tel: ఆయన చెవులు తెరచుకొనినవి; దిక్కులు శ్రోత్రము అను అంశముతో తమ ధిష్ణ్యమునందు ప్రవేశించినవి; దానిచే శబ్దము సిద్ధి ఆయన పొందును.
+hi: उनके दोनों कान खुले, और दिशाएँ श्रोत्र रूप अंश से अपने धिष्ण्य में प्रविष्ट हुईं; जिससे वे शब्द की सिद्धि पाते हैं।
 
 --- verse 18 ---
 deva:
@@ -160,6 +211,9 @@ deva:
 iast:
 tvacamasya vinirbhinnāṁ viviśurdhiṣṇyamoṣadhīḥ|
 aṁśena romabhiḥ kaṇḍūṁ yairasau pratipadyate||
+en: His skin was opened, and the herbs entered their seat with their part, the hairs, by which he takes in itching.
+tel: ఆయన త్వక్కు తెరచుకొనెను; ఓషధులు రోమములు అను అంశముతో తమ ధిష్ణ్యమునందు ప్రవేశించినవి; వానిచే ఆయన కండూతిని గ్రహించును.
+hi: उनकी त्वचा खुली, और औषधियाँ रोम रूप अंश से अपने धिष्ण्य में प्रविष्ट हुईं; जिनसे वे कण्डू को प्राप्त करते हैं।
 
 --- verse 19 ---
 deva:
@@ -168,6 +222,9 @@ deva:
 iast:
 meḍhraṁ tasya vinirbhinnaṁ svadhiṣṇyaṁ ka upāviśat|
 retasāṁśena yenāsāvānandaṁ pratipadyate||
+en: His organ of generation was opened, and Ka entered his own seat with his part, the seed, by which he takes in delight.
+tel: ఆయన మేఢ్రము తెరచుకొనెను; కుడు రేతస్సు అను అంశముతో తన ధిష్ణ్యమునందు ప్రవేశించెను; దానిచే ఆయన ఆనందమును గ్రహించును.
+hi: उनका मेढ्र खुला, और क रेत रूप अंश से अपने धिष्ण्य में प्रविष्ट हुए; जिससे वे आनन्द को प्राप्त करते हैं।
 
 --- verse 20 ---
 deva:
@@ -176,6 +233,9 @@ deva:
 iast:
 gudaṁ puṁso vinirbhinnaṁ mitro lokeśa āviśat|
 pāyunāṁśena yenāsau visargaṁ pratipadyate||
+en: The anus of the Person was opened, and Mitra, the lord of the world, entered it with his part, the anus, by which he takes in the casting out.
+tel: పురుషుని గుదము తెరచుకొనెను; లోకేశుడైన మిత్రుడు పాయువు అను అంశముతో అందు ప్రవేశించెను; దానిచే ఆయన విసర్గమును గ్రహించును.
+hi: पुरुष का गुद खुला, और लोकेश मित्र पायु रूप अंश से उसमें प्रविष्ट हुए; जिससे वे विसर्ग को प्राप्त करते हैं।
 
 --- verse 21 ---
 deva:
@@ -184,6 +244,9 @@ deva:
 iast:
 hastāvasya vinirbhinnāvindraḥ svarpatirāviśat|
 vārtayāṁśena puruṣo yayā vṛtiṁ prapadyate||
+en: His two hands were opened, and Indra, the lord of heaven, entered them with his part, trade, by which the Person gains his living.
+tel: ఆయన చేతులు తెరచుకొనినవి; స్వర్గపతియైన ఇంద్రుడు వార్త అను అంశముతో అందు ప్రవేశించెను; దానిచే పురుషుడు వృత్తిని పొందును.
+hi: उनके दोनों हाथ खुले, और स्वर्पति इन्द्र वार्ता रूप अंश से उनमें प्रविष्ट हुए; जिससे पुरुष वृत्ति पाता है।
 
 --- verse 22 ---
 deva:
@@ -192,6 +255,9 @@ deva:
 iast:
 pādāvasya vinirbhinnau lokeśo viṣṇurāviśat|
 gatyā svāṁśena puruṣo yayā prāpyaṁ prapadyate||
+en: His two feet were opened, and Viṣṇu, the lord of the world, entered them with his part, movement, by which the Person reaches what is to be reached.
+tel: ఆయన పాదములు తెరచుకొనినవి; లోకేశుడైన విష్ణువు గతి అను అంశముతో అందు ప్రవేశించెను; దానిచే పురుషుడు ప్రాప్యమును పొందును.
+hi: उनके दोनों चरण खुले, और लोकेश विष्णु गति रूप अंश से उनमें प्रविष्ट हुए; जिससे पुरुष प्राप्य को पाता है।
 
 --- verse 23 ---
 deva:
@@ -200,6 +266,9 @@ deva:
 iast:
 buddhiṁ cāsya vinirbhinnāṁ vāgīśo dhiṣṇyamāviśat|
 bodhenāṁśena boddhavyapratipattiryato bhavet||
+en: His understanding was opened, and the lord of speech entered that seat with his part, awakening, from which comes the taking in of what is to be known.
+tel: ఆయన బుద్ధి తెరచుకొనెను; వాగీశుడు బోధము అను అంశముతో ఆ ధిష్ణ్యమునందు ప్రవేశించెను; దాని వలన బోద్ధవ్యము గ్రహణము కలుగును.
+hi: उनकी बुद्धि खुली, और वागीश बोध रूप अंश से उस धिष्ण्य में प्रविष्ट हुए; जिससे बोद्धव्य की प्रतिपत्ति होती है।
 
 --- verse 24 ---
 deva:
@@ -208,6 +277,9 @@ deva:
 iast:
 hṛdayaṁ cāsya nirbhinnaṁ candramā dhiṣṇyamāviśat|
 manasāṁśena yenāsau vikriyāṁ pratipadyate||
+en: His heart was opened, and the moon entered that seat with his part, the mind, by which he takes in change.
+tel: ఆయన హృదయము తెరచుకొనెను; చంద్రుడు మనస్సు అను అంశముతో ఆ ధిష్ణ్యమునందు ప్రవేశించెను; దానిచే ఆయన వికారమును గ్రహించును.
+hi: उनका हृदय खुला, और चन्द्रमा मन रूप अंश से उस धिष्ण्य में प्रविष्ट हुए; जिससे वे विक्रिया को प्राप्त करते हैं।
 
 --- verse 25 ---
 deva:
@@ -216,6 +288,9 @@ deva:
 iast:
 ātmānaṁ cāsya nirbhinnamabhimāno'viśatpadam|
 karmaṇāṁśena yenāsau kartavyaṁ pratipadyate||
+en: His self was opened, and the sense of "I" entered that place with its part, work, by which he takes in what is to be done.
+tel: ఆయన ఆత్మ తెరచుకొనెను; అభిమానము కర్మము అను అంశముతో ఆ పదమునందు ప్రవేశించెను; దానిచే ఆయన కర్తవ్యమును గ్రహించును.
+hi: उनका आत्मा खुला, और अभिमान कर्म रूप अंश से उस पद में प्रविष्ट हुआ; जिससे वे कर्तव्य को प्राप्त करते हैं।
 
 --- verse 26 ---
 deva:
@@ -224,6 +299,9 @@ deva:
 iast:
 sattvaṁ cāsya vinirbhinnaṁ mahāndhiṣṇyamupāviśat|
 cittenāṁśena yenāsau vijñānaṁ pratipadyate||
+en: His sattva was opened, and the mahat entered that seat with its part, thought, by which he takes in knowledge.
+tel: ఆయన సత్త్వము తెరచుకొనెను; మహత్తు చిత్తము అను అంశముతో ఆ ధిష్ణ్యమునందు ప్రవేశించెను; దానిచే ఆయన విజ్ఞానమును గ్రహించును.
+hi: उनका सत्त्व खुला, और महत् चित्त रूप अंश से उस धिष्ण्य में प्रविष्ट हुआ; जिससे वे विज्ञान को प्राप्त करते हैं।
 
 --- verse 27 ---
 deva:
@@ -232,6 +310,9 @@ deva:
 iast:
 śīrṣṇo'sya dyaurdharā padbhyāṁ khaṁ nābherudapadyata|
 guṇānāṁ vṛttayo yeṣu pratīyante surādayaḥ||
+en: From his head came heaven, from his feet the earth, from his navel the sky; and in them are seen the workings of the qualities, the gods and the rest.
+tel: ఆయన శిరస్సు నుండి ద్యులోకము, పాదముల నుండి ధర, నాభి నుండి ఆకాశము కలిగినవి; అందు గుణముల వృత్తులు — సురాదులు — ప్రతీతమగుచున్నారు.
+hi: उनके शीर्ष से द्यु, चरणों से धरा और नाभि से ख उत्पन्न हुआ; और जिनमें गुणों की वृत्तियाँ — सुर आदि — प्रतीत होती हैं।
 
 --- verse 28 ---
 deva:
@@ -240,6 +321,9 @@ deva:
 iast:
 ātyantikena sattvena divaṁ devāḥ prapedire|
 dharāṁ rajaḥsvabhāvena paṇayo ye ca tānanu||
+en: By sattva at its utmost the gods reached heaven; and those traders and the rest who follow them reached the earth by their nature of rajas.
+tel: ఆత్యంతికమైన సత్త్వముచే దేవతలు దివమును పొందిరి; రజఃస్వభావముచే పణయులు, వారిని అనుసరించువారు ధరను పొందిరి.
+hi: आत्यन्तिक सत्त्व से देव दिव को प्राप्त हुए; और रजःस्वभाव से पणि तथा उनके अनुगामी धरा को।
 
 --- verse 29 ---
 deva:
@@ -248,6 +332,9 @@ deva:
 iast:
 tārtīyena svabhāvena bhagavannābhimāśritāḥ|
 ubhayorantaraṁ vyoma ye rudrapārṣadāṁ gaṇāḥ||
+en: By the third nature, those hosts who are the companions of Rudra took refuge in the Lord's navel — the space between the two.
+tel: మూడవ స్వభావముచే, రుద్రుని పార్షదుల గణములు భగవంతుని నాభిని ఆశ్రయించిరి; అది ఆ ఇరువురి మధ్య ఉన్న వ్యోమము.
+hi: तृतीय स्वभाव से रुद्र के पार्षद-गण भगवान् की नाभि के आश्रित हुए; जो दोनों के बीच का व्योम है।
 
 --- verse 30 ---
 deva:
@@ -256,6 +343,9 @@ deva:
 iast:
 mukhato'vartata brahma puruṣasya kurūdvaha|
 yastūnmukhatvādvarṇānāṁ mukhyo'bhūdbrāhmaṇo guruḥ||
+en: From the mouth of the Person came the brāhmaṇa, best of the Kurus; and because he was of the mouth, the brāhmaṇa became the first among the varṇas and their teacher.
+tel: కురూద్వహా, పురుషుని ముఖము నుండి బ్రహ్మము కలిగెను; ముఖము నుండి కలిగినందున వర్ణములలో బ్రాహ్మణుడు ముఖ్యుడు, గురువు ఆయెను.
+hi: हे कुरूद्वह, पुरुष के मुख से ब्रह्म हुआ; और मुखत्व के कारण वर्णों में ब्राह्मण मुख्य और गुरु हुआ।
 
 --- verse 31 ---
 deva:
@@ -264,6 +354,9 @@ deva:
 iast:
 bāhubhyo'vartata kṣatraṁ kṣatriyastadanuvrataḥ|
 yo jātastrāyate varṇān pauruṣaḥ kaṇṭakakṣatāt||
+en: From his arms came the kṣatra, and the kṣatriya who follows it; and he, when born, protects the varṇas of the Person from the wounding of thorns.
+tel: ఆయన బాహువుల నుండి క్షత్రము కలిగెను; దానిని అనుసరించు క్షత్రియుడు కలిగెను; పుట్టినవాడై ఆయన, పౌరుషమైన వర్ణములను కంటకముల గాయము నుండి రక్షించును.
+hi: उनकी भुजाओं से क्षत्र हुआ, और उसका अनुव्रत क्षत्रिय; और जन्म लेकर वह पौरुष वर्णों की कण्टक-क्षत से रक्षा करता है।
 
 --- verse 32 ---
 deva:
@@ -272,6 +365,9 @@ deva:
 iast:
 viśo'vartanta tasyorvorlokavṛttikarīrvibhoḥ|
 vaiśyastadudbhavo vārtāṁ nṛṇāṁ yaḥ samavartayat||
+en: From the thighs of the all-pervading came the vaiśyas, who make the living of the world; and the vaiśya, born of them, carried on the trade of men.
+tel: ఆ విభుని తొడల నుండి లోకవృత్తిని చేయు విశ్యులు కలిగిరి; వాని వలన పుట్టిన వైశ్యుడు మనుష్యుల వార్తను నడిపెను.
+hi: विभु की जाँघों से लोक-वृत्ति करनेवाले विश् हुए; और उनसे उत्पन्न वैश्य ने मनुष्यों की वार्ता चलायी।
 
 --- verse 33 ---
 deva:
@@ -280,6 +376,9 @@ deva:
 iast:
 padbhyāṁ bhagavato jajñe śuśrūṣā dharmasiddhaye|
 tasyāṁ jātaḥ purā śūdro yadvṛttyā tuṣyate hariḥ||
+en: From the feet of the Lord was born service, for the accomplishing of dharma; and in it the śūdra was born of old, by whose way of living Hari is pleased.
+tel: భగవంతుని పాదముల నుండి ధర్మసిద్ధి కొరకు శుశ్రూష జన్మించెను; అందు పూర్వము శూద్రుడు పుట్టెను; అతని వృత్తిచే హరి సంతోషించును.
+hi: भगवान् के चरणों से धर्म-सिद्धि के लिये शुश्रूषा उत्पन्न हुई; और उसमें पूर्व काल में शूद्र हुआ, जिसकी वृत्ति से श्रीहरि सन्तुष्ट होते हैं।
 
 --- verse 34 ---
 deva:
@@ -288,6 +387,9 @@ deva:
 iast:
 ete varṇāḥ svadharmeṇa yajanti svaguruṁ harim|
 śraddhayā''tmaviśuddhyarthaṁ yajjātāḥ saha vṛttibhiḥ||
+en: These varṇas, by their own duty, worship Hari, their own teacher, with faith, for the purifying of the self; for they were born together with their ways of living.
+tel: ఈ వర్ణములు తమ ధర్మముచే, శ్రద్ధతో, ఆత్మవిశుద్ధి కొరకు తమ గురువైన హరిని ఆరాధించుచున్నవి; ఏలయనగా అవి తమ వృత్తులతో కూడ పుట్టినవి.
+hi: ये वर्ण अपने धर्म से, श्रद्धा से, आत्म-विशुद्धि के लिये अपने गुरु श्रीहरि की उपासना करते हैं; क्योंकि वे अपनी वृत्तियों के सहित उत्पन्न हुए।
 
 --- verse 35 ---
 deva:
@@ -296,6 +398,9 @@ deva:
 iast:
 etatkṣattarbhagavato daivakarmātmarūpiṇaḥ|
 kaḥ śraddadhyādupākartuṁ yogamāyābalodayam||
+en: Kṣattā, who would have the confidence to set out this rising of the power of the yoga-māyā of the Lord, whose form is the gods, works and the self?
+tel: క్షత్తా, దైవము, కర్మ, ఆత్మ రూపముగా కలిగిన భగవంతుని యోగమాయా బల ఉదయమును చెప్పుటకు ఎవడు సాహసించును?
+hi: हे क्षत्ता, दैव, कर्म और आत्म-रूपी भगवान् की योगमाया के बल के उदय को कहने का साहस कौन करे?
 
 --- verse 36 ---
 deva:
@@ -304,6 +409,9 @@ deva:
 iast:
 athāpi kīrtayāmyaṅga yathāmati yathāśrutam|
 kīrtiṁ hareḥ svāṁ satkartuṁ giramanyābhidhāsatīm||
+en: And yet, dear one, I shall tell it as my understanding reaches and as I have heard it, to make good my own speech, which otherwise would be untrue — the fame of Hari.
+tel: అయినను అయ్యా, నా బుద్ధి కొలది, విన్నదానిని అనుసరించి, హరి కీర్తిని నేను కీర్తించెదను; అన్యమైనచో అసత్యమగు నా వాక్కును సత్కరించుటకు.
+hi: फिर भी हे अङ्ग, अपनी मति और श्रुति के अनुसार मैं श्रीहरि की कीर्ति कहूँगा; जिससे अन्यथा असती होनेवाली अपनी वाणी को सत्कृत करूँ।
 
 --- verse 37 ---
 deva:
@@ -316,6 +424,9 @@ ekāntalābhaṁ vacaso nu puṁsāṁ
 suślokamaulerguṇavādamāhuḥ|
 śruteśca vidvadbhirupākṛtāyāṁ
 kathāsudhāyāmupasamprayogam||
+en: They say that the one sure gain of men's speech is the telling of the qualities of him whose crown is sweet verse; and of hearing, the joining with the nectar of the story which the learned have prepared.
+tel: సుశ్లోకమౌలియైన ఆయన గుణవాదమే మనుష్యుల వాక్కునకు ఏకాంతమైన లాభమని చెప్పుదురు; విద్వాంసులచే సిద్ధము చేయబడిన కథాసుధయందు ఉపసంప్రయోగము శ్రుతికి లాభమని చెప్పుదురు.
+hi: सुश्लोकमौलि के गुणवाद को ही पुरुषों की वाणी का एकान्त लाभ कहते हैं; और विद्वानों के द्वारा उपाकृत कथा-सुधा में उपसम्प्रयोग को श्रुति का।
 
 --- verse 38 ---
 deva:
@@ -324,6 +435,9 @@ deva:
 iast:
 ātmano'vasito vatsa mahimā kavinā''dinā|
 saṁvatsarasahasrānte dhiyā yogavipakvayā||
+en: Child, the greatness of the Self was measured by the first poet after a thousand years, with an understanding ripened by yoga.
+tel: వత్సా, వేయి సంవత్సరముల అంతమున, యోగముచే పక్వమైన బుద్ధితో, ఆది కవిచే ఆత్మ మహిమ అవసితమైనది.
+hi: हे वत्स, सहस्र वर्ष के अन्त में, योग से विपक्व बुद्धि से, आदि कवि ने आत्मा की महिमा का अवसान किया।
 
 --- verse 39 ---
 deva:
@@ -332,6 +446,9 @@ deva:
 iast:
 ato bhagavato māyā māyināmapi mohinī|
 yatsvayaṁ cātmavartmātmā na veda kimutāpare||
+en: Therefore the māyā of the Lord bewilders even those who wield māyā; for the Self himself does not know his own course — how much less others?
+tel: కావున భగవంతుని మాయ మాయావులకును మోహము కలిగించునది; ఆత్మయే తన ఆత్మ మార్గమును ఎరుగడు — ఇతరులను గూర్చి చెప్పనేల?
+hi: इसलिये भगवान् की माया मायावियों को भी मोहिनी है; क्योंकि आत्मा स्वयं अपना आत्म-वर्त्म नहीं जानते — तो दूसरों की बात ही क्या?
 
 --- verse 40 ---
 deva:
@@ -340,9 +457,15 @@ deva:
 iast:
 yato'prāpya nyavartanta vācaśca manasā saha|
 ahaṁ cānya ime devāstasmai bhagavate namaḥ||
+en: Salutation to that blessed Lord, from whom words with the mind turned back without reaching him — and I, and these other gods.
+tel: ఎవనిని పొందక వాక్కులు మనస్సుతో కూడ మరలిపోయినవో, నేనును, ఈ ఇతర దేవతలును మరలితిమో — ఆ భగవంతునికి నమస్కారము.
+hi: जिन्हें न पाकर वाणियाँ मन के सहित लौट आयीं, और मैं तथा ये अन्य देव भी — उन भगवान् को नमस्कार है।
 
 --- verse none ---
 deva:
 इति श्रीमद्भागवते महापुराणे पारमहंस्यां संहितायां तृतीयस्कन्धे षष्ठोऽध्यायः॥ ६॥
 iast:
 iti śrīmadbhāgavate mahāpurāṇe pāramahaṁsyāṁ saṁhitāyāṁ tṛtīyaskandhe ṣaṣṭho'dhyāyaḥ|| 6||
+en: Thus ends the sixth adhyāya in the third skandha of the Śrīmad Bhāgavata Mahāpurāṇa, the saṁhitā of the paramahaṁsas.
+tel: ఇది శ్రీమద్భాగవత మహాపురాణమునందు, పరమహంసల సంహితయందు, తృతీయస్కంధమునందు షష్ఠాధ్యాయము.
+hi: इस प्रकार श्रीमद्भागवत महापुराण की परमहंसों की संहिता के तृतीय स्कन्ध में छठा अध्याय समाप्त हुआ।
