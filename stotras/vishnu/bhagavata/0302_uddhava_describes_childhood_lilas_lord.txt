@@ -9,7 +9,7 @@ Type: Purāṇa (an adhyāya of the Śrīmad Bhāgavata, Skandha 3)
 
 Source / recension: Base text and authority: the Gītā Press, Gorakhpur Śrīmadbhāgavata Mahāpurāṇa with Hindi translation, Part 1 (Gītā Press code 26), archive.org item `shrimadbhagwat-mahapuran-bhag-1`, printed pages 241–245; the PDF page numbers are the printed ones. The PDF carries the typesetter's own text layer in the Chanakya font encoding, and the text was decoded from it by machine with `bin/bhagavata/chanakya.py`, not read off OCR or typed. The decoder was checked against GRETIL over all twelve skandhas before any file was written, and the differences that remain were sampled and found to be readings of the two editions. Second witness: GRETIL's `sa_bhAgavatapurANa.xml` (IAST, contributed by Ulrich Stiehl), a separate editorial lineage, compared verse by verse by machine. The TTD edition with the commentaries of Śrīdhara, Vīrarāghava and Vijayadhvaja (archive.org `Bhagavata_Purana_With_Multiple_Commentaries_TTD_Critical_Edition`) is the third witness where one is needed; it was not read for this file. The IAST was generated mechanically from the Devanāgarī with `bin/dev2iast.py`.
 
-Recension note: Text-only file, written 1 Oct 2026 at the user's instruction to lay down the whole Bhāgavata first: the English, Telugu and Hindi meanings are still to be added, and the witnesses' differences listed here have been recorded by machine and not yet adjudicated. The print is followed throughout. The print numbers 34 verses and GRETIL numbers 34. Of the 34 verses GRETIL has under the same number, 27 agree with the print letter for letter once spacing and the spelling of nasals are set aside; the rest differ: 1, 4, 6, 20, 22, 29, 34. The edition's footnotes give these older printed readings (प्रा० पा०), which are not bracketed into the line: at 27, व्यचरद् भुवि. Spacing is the print's, as its text layer gives it; in a few places justification has left a space inside a word, and these are still to be closed when the verse is read. The speaker lines (श्रीशुक उवाच and the others) are printed in italic above the verse they introduce, and are given as its first line.
+Recension note: Meanings written 17 Oct 2026 (session S78). The differences between the witnesses listed below were read as the verses were glossed; except where this note says otherwise, each is a spelling, a sandhi or a word order of the two editions, none of them changes the sense, and the print's reading therefore stands unbracketed. The print is followed throughout. The print numbers 34 verses and GRETIL numbers 34. Of the 34 verses GRETIL has under the same number, 27 agree with the print letter for letter once spacing and the spelling of nasals are set aside; the rest differ: 1, 4, 6, 20, 22, 29, 34. The edition's footnotes give these older printed readings (प्रा० पा०), which are not bracketed into the line: at 27, व्यचरद् भुवि. Spacing is the print's, as its text layer gives it. The speaker lines (श्रीशुक उवाच and the others) are printed in italic above the verse they introduce, and are given as its first line. A footnote's numeral keys it to one word, and which word that is cannot be told from the note alone, so those readings stay unbracketed until the page itself is read. One space that justification had left inside a word was closed when the verses were read: verse 4 had कृष्णाङ् घ्रिसुधया for कृष्णाङ्घ्रिसुधया.
 
 Verse count: 34, plus the closing colophon printed unnumbered.
 
@@ -24,6 +24,9 @@ iast:
 śrīśuka uvāca
 iti bhāgavataḥ pṛṣṭaḥ kṣattrā vārtāṁ priyāśrayām|
 prativaktuṁ na cotseha autkaṇṭhyātsmāriteśvaraḥ||
+en: Śrī Śuka said: Thus asked by the Kṣattā for news of the one he loved, the devotee could not answer, for his longing had brought the Lord to his mind.
+tel: శ్రీశుకుడు పలికెను: ఈ విధముగా క్షత్తచే ప్రియునికి సంబంధించిన వార్తను అడుగబడిన ఆ భాగవతుడు, ఉత్కంఠచే ఈశ్వరుడు స్మరణకు వచ్చినందున, బదులు చెప్పుటకు సమర్థుడు కాలేదు.
+hi: श्रीशुकदेवजी ने कहा: इस प्रकार क्षत्ता के प्रियाश्रित वार्ता पूछने पर वे भागवत उत्तर न दे सके, क्योंकि उत्कण्ठा से ईश्वर उनकी स्मृति में आ गये।
 
 --- verse 2 ---
 deva:
@@ -32,6 +35,9 @@ deva:
 iast:
 yaḥ pañcahāyano mātrā prātarāśāya yācitaḥ|
 tannaicchadracayan yasya saparyāṁ bālalīlayā||
+en: He who at five years, when his mother asked him to come to the morning meal, did not wish it, for he was making his worship in the play of a child —
+tel: ఐదు సంవత్సరముల వయస్సున, ప్రాతరాశమునకు రమ్మని తల్లి కోరినపుడు, బాలలీలచే ఆయనకు సపర్యను చేయుచు దానిని ఇష్టపడనివాడు —
+hi: पाँच वर्ष की अवस्था में, माता के प्रातराश के लिये बुलाने पर, बाल-लीला से उनकी सपर्या रचते हुए जिसने उसे न चाहा —
 
 --- verse 3 ---
 deva:
@@ -40,14 +46,20 @@ deva:
 iast:
 sa kathaṁ sevayā tasya kālena jarasaṁgataḥ|
 pṛṣṭo vārtāṁ pratibrūyādbhartuḥ pādāvanusmaran||
+en: how should he, grown old with time in that service, answer when he is asked for news, remembering the feet of his master?
+tel: ఆ సేవచే కాలక్రమమున ముసలితనమును పొందిన ఆయన, వార్తను అడుగబడినపుడు, యజమాని పాదములను స్మరించుచు ఎట్లు బదులు చెప్పును?
+hi: उस सेवा से काल क्रम से जरा को प्राप्त वे, वार्ता पूछे जाने पर, स्वामी के चरणों का स्मरण करते हुए कैसे उत्तर दें?
 
 --- verse 4 ---
 deva:
-स मुहूर्तमभूत्तूष्णीं कृष्णाङ् घ्रिसुधया भृशम्।
+स मुहूर्तमभूत्तूष्णीं कृष्णाङ्घ्रिसुधया भृशम्।
 तीव्रेण भक्तियोगेन निमग्नः साधु निर्वृतः॥
 iast:
-sa muhūrtamabhūttūṣṇīṁ kṛṣṇāṅ ghrisudhayā bhṛśam|
+sa muhūrtamabhūttūṣṇīṁ kṛṣṇāṅghrisudhayā bhṛśam|
 tīvreṇa bhaktiyogena nimagnaḥ sādhu nirvṛtaḥ||
+en: For a while he was silent, sunk deep in the nectar of Kṛṣṇa's feet by strong devotion, and wholly content.
+tel: ఒక ముహూర్తము ఆయన మౌనముగా ఉండెను; తీవ్రమైన భక్తియోగముచే కృష్ణుని పాదసుధయందు మిక్కిలి మునిగి, బాగుగా నిర్వృతుడాయెను.
+hi: एक मुहूर्त वे मौन रहे; तीव्र भक्तियोग से श्रीकृष्ण के चरण-सुधा में अत्यन्त निमग्न और भलीभाँति निर्वृत हुए।
 
 --- verse 5 ---
 deva:
@@ -56,6 +68,9 @@ deva:
 iast:
 pulakodbhinnasarvāṅgo muñcanmīladdṛśā śucaḥ|
 pūrṇārtho lakṣitastena snehaprasarasamplutaḥ||
+en: The hairs of all his limbs stood up; with closed eyes he let his tears flow; and Vidura saw that he had gained his purpose and was flooded with the rising of love.
+tel: సర్వాంగములయందు పులకలు కలిగినవి; కన్నులు మూసుకొని ఆయన కన్నీటిని విడిచెను; పూర్ణార్థుడై, స్నేహప్రసారముచే నిండినవాడని విదురుడు ఆయనను గుర్తించెను.
+hi: सब अङ्गों में रोमाञ्च हुआ; आँखें मूँदकर उन्होंने आँसू बहाये; और पूर्णार्थ तथा स्नेह के प्रसार से आप्लुत उन्हें विदुर ने लक्षित किया।
 
 --- verse 6 ---
 deva:
@@ -64,6 +79,9 @@ deva:
 iast:
 śanakairbhagavallokānnṛlokaṁ punarāgataḥ|
 vimṛjya netre viduraṁ pratyāhoddhava utsmayan||
+en: Slowly coming back from the world of the Lord to the world of men, he wiped his eyes and answered Vidura, smiling:
+tel: మెల్లగా భగవల్లోకము నుండి నృలోకమునకు మరల వచ్చి, కన్నులను తుడిచి, చిరునవ్వుతో ఉద్ధవుడు విదురునికి బదులు పలికెను:
+hi: धीरे-धीरे भगवान् के लोक से नृलोक में लौटकर, नेत्र पोंछकर, उत्स्मय होकर उद्धव ने विदुर को उत्तर दिया:
 
 --- verse 7 ---
 deva:
@@ -74,6 +92,9 @@ iast:
 uddhava uvāca
 kṛṣṇadyumaṇinimloce gīrṇeṣvajagareṇa ha|
 kiṁ nu naḥ kuśalaṁ brūyāṁ gataśrīṣu gṛheṣvaham||
+en: Uddhava said: When the sun that is Kṛṣṇa has set, and our houses have been swallowed by the serpent and their fortune gone, what good can I speak of to you?
+tel: ఉద్ధవుడు పలికెను: కృష్ణుడను సూర్యుడు అస్తమించినపుడు, మా గృహములు అజగరముచే మ్రింగబడి శ్రీని కోల్పోయినపుడు, నేను ఏ కుశలమును చెప్పగలను?
+hi: उद्धव ने कहा: श्रीकृष्ण रूपी सूर्य के अस्त हो जाने पर, और हमारे घरों के अजगर से निगले जाकर श्रीहीन हो जाने पर, मैं कौन सा कुशल कहूँ?
 
 --- verse 8 ---
 deva:
@@ -82,6 +103,9 @@ deva:
 iast:
 durbhago bata loko'yaṁ yadavo nitarāmapi|
 ye saṁvasanto na vidurhariṁ mīnā ivoḍupam||
+en: Alas, this world is unfortunate, and the Yadus most of all, who lived with Hari and did not know him, as fish do not know the moon.
+tel: అయ్యో, ఈ లోకము దుర్భాగ్యమైనది; యదువులు మరింతగా; హరితో కలిసి నివసించుచు ఆయనను ఎరుగలేదు — చంద్రుని చేపలు ఎరుగనట్లు.
+hi: हाय, यह लोक दुर्भग है, और यदु उससे भी अधिक; जो श्रीहरि के साथ रहते हुए भी उन्हें न जान सके — जैसे मछलियाँ चन्द्र को नहीं जानतीं।
 
 --- verse 9 ---
 deva:
@@ -90,6 +114,9 @@ deva:
 iast:
 iṅgitajñāḥ puruprauḍhā ekārāmāśca sātvatāḥ|
 sātvatāmṛṣabhaṁ sarve bhūtāvāsamamaṁsata||
+en: The Sātvatas knew his hints, were very wise and took their delight in him alone; and all of them held the bull of the Sātvatas to be the dwelling of all beings.
+tel: సాత్వతులు ఆయన ఇంగితమును ఎరిగినవారు, మిక్కిలి ప్రౌఢులు, ఆయనయందే ఏకారాములు; వారందరు సాత్వతులకు వృషభుడైన ఆయనను భూతావాసమని తలంచిరి.
+hi: सात्वत उनके इङ्गित के ज्ञाता, अति प्रौढ़ और उनमें ही एकाराम थे; और उन सबने सात्वतों के ऋषभ को भूतावास माना।
 
 --- verse 10 ---
 deva:
@@ -98,6 +125,9 @@ deva:
 iast:
 devasya māyayā spṛṣṭā ye cānyadasadāśritāḥ|
 bhrāmyate dhīrna tadvākyairātmanyuptātmano harau||
+en: Those who are touched by the māyā of the God rest upon what is other and unreal; but the understanding of one who has sown his self in Hari is not bewildered by their words.
+tel: ఆ దేవుని మాయచే తాకబడినవారు అన్యమైన అసత్తును ఆశ్రయించుచున్నారు; హరియందు తన ఆత్మను ఉప్తము చేసినవాని బుద్ధి వారి మాటలచే భ్రమించదు.
+hi: उस देव की माया से स्पृष्ट लोग अन्य असत् का आश्रय लेते हैं; परन्तु श्रीहरि में अपना आत्मा बो चुके की बुद्धि उनके वचनों से भ्रमित नहीं होती।
 
 --- verse 11 ---
 deva:
@@ -106,6 +136,9 @@ deva:
 iast:
 pradarśyātaptatapasāmavitṛptadṛśāṁ nṛṇām|
 ādāyāntaradhādyastu svabimbaṁ lokalocanam||
+en: He showed his own image, the eye of the world, to men who had done no austerity and whose sight was not satisfied; and then he took it away and vanished.
+tel: తపస్సు చేయనివారికి, తృప్తి పొందని దృష్టి కలిగిన మనుష్యులకు, లోకమునకు కన్నైన తన బింబమును చూపి, దానిని తీసుకొని ఆయన అంతర్ధానమయ్యెను.
+hi: जिन्होंने तप नहीं किया और जिनकी दृष्टि अतृप्त थी, उन मनुष्यों को लोक के नेत्र अपना बिम्ब दिखाकर, उसे लेकर वे अन्तर्धान हो गये।
 
 --- verse 12 ---
 deva:
@@ -118,6 +151,9 @@ yanmartyalīlaupayikaṁ svayoga-
 māyābalaṁ darśayatā gṛhītam|
 vismāpanaṁ svasya ca saubhagarddheḥ
 paraṁ padaṁ bhūṣaṇabhūṣaṇāṅgam||
+en: What he took up was fit for his play as a mortal, showing the power of his own yoga-māyā: a wonder even to himself in the fullness of his beauty, the highest state, whose limbs are the ornament of ornaments.
+tel: మర్త్యలీలకు తగినదిని, తన యోగమాయా బలమును చూపుచు ఆయన గ్రహించెను; తన సౌభాగ్య సమృద్ధియందు తనకే విస్మయమైనది, పరమపదమైనది, భూషణములకే భూషణమైన అంగములు కలిగినది.
+hi: मर्त्य-लीला के योग्य और अपनी योगमाया के बल को दिखानेवाला रूप उन्होंने ग्रहण किया; अपने सौभाग्य की ऋद्धि में अपने लिये भी विस्मयकर, परम पद, और जिसके अङ्ग भूषणों के भी भूषण हैं।
 
 --- verse 13 ---
 deva:
@@ -130,6 +166,9 @@ yaddharmasūnorbata rājasūye
 nirīkṣya dṛksvastyayanaṁ trilokaḥ|
 kārtsnyena cādyeha gataṁ vidhātu-
 rarvāksṛtau kauśalamityamanyata||
+en: Seeing him at the Rājasūya of Dharma's son, the three worlds held that sight to be a blessing; and they thought that here, in this lower creation, the whole skill of the Maker had come to its end.
+tel: ధర్మపుత్రుని రాజసూయమున ఆయనను చూచి, ఆ దృష్టి స్వస్త్యయనమని త్రిలోకము తలంచెను; అర్వాక్ సృష్టియందు విధాత కౌశలము ఇక్కడ పూర్తిగా వచ్చినదని భావించెను.
+hi: धर्मपुत्र के राजसूय में उन्हें देखकर त्रिलोक ने उस दृष्टि को स्वस्त्ययन माना; और अर्वाक् सृष्टि में विधाता का कौशल यहाँ पूर्ण रूप से आ गया, ऐसा समझा।
 
 --- verse 14 ---
 deva:
@@ -142,6 +181,9 @@ yasyānurāgaplutahāsarāsa-
 līlāvalokapratilabdhamānāḥ|
 vrajastriyo dṛgbhiranupravṛtta-
 dhiyo'vatasthuḥ kila kṛtyaśeṣāḥ||
+en: The women of Vraja, honoured by his playful glances full of love, by his laughter and his dancing, stood with their minds following him through their eyes, their tasks left unfinished.
+tel: అనురాగముతో నిండిన ఆయన హాసము, రాసము, లీలావలోకనములచే మానమును పొందిన వ్రజస్త్రీలు, కన్నులచే బుద్ధి ఆయనను అనుసరించుచుండగా, తమ పనులు మిగిలియుండగనే నిలిచిపోయిరి.
+hi: अनुराग से भरे उनके हास, रास और लीला-अवलोकन से मान पायी व्रज-स्त्रियाँ, नेत्रों से बुद्धि के अनुवर्तन करते, अपने कृत्य शेष रखकर खड़ी रह गयीं।
 
 --- verse 15 ---
 deva:
@@ -154,6 +196,9 @@ svaśāntarūpeṣvitaraiḥ svarūpai-
 rabhyardyamāneṣvanukampitātmā|
 parāvareśo mahadaṁśayukto
 hyajo'pi jāto bhagavān yathāgniḥ||
+en: When his own peaceful forms were troubled by the other forms, his self was moved to compassion; and the Lord of the high and the low, joined with the part of the mahat, though unborn, was born — as fire is.
+tel: శాంతమైన తన రూపములు ఇతర రూపములచే పీడింపబడినపుడు, ఆయన ఆత్మ అనుకంపను పొందెను; మహదంశముతో కూడిన ఆ పరావరేశుడు, అజుడైనను, అగ్నివలె జన్మించెను.
+hi: अपने शान्त रूपों के इतर रूपों से अभ्यर्दित होने पर उनका आत्मा अनुकम्पित हुआ; और महत् के अंश से युक्त वे परावरेश, अज होकर भी, अग्नि के समान जन्मे।
 
 --- verse 16 ---
 deva:
@@ -166,6 +211,9 @@ māṁ khedayatyetadajasya janma-
 viḍambanaṁ yadvasudevagehe|
 vraje ca vāso'ribhayādiva svayaṁ
 purād vyavātsīdyadanantavīryaḥ||
+en: This grieves my heart: the mockery of a birth for the Unborn in the house of Vasudeva; and his dwelling in Vraja as though in fear of an enemy, and his leaving the city himself — he whose power is endless.
+tel: ఇది నన్ను ఖేదపరచుచున్నది: వసుదేవుని ఇంట అజునికి జన్మ విడంబనము; శత్రుభయము వలననో అన్నట్లు వ్రజమునందు నివాసము; అనంతవీర్యుడైన ఆయన స్వయముగా పురమును విడిచిపోవుట.
+hi: यह मुझे खेद देता है: वसुदेव के घर अज का जन्म-विडम्बन; और शत्रु-भय के समान व्रज में निवास; तथा अनन्तवीर्य उनका स्वयं नगर छोड़ देना।
 
 --- verse 17 ---
 deva:
@@ -178,6 +226,9 @@ dunoti cetaḥ smarato mamaitad
 yadāha pādāvabhivandya pitroḥ|
 tātāmba kaṁsāduruśaṅkitānāṁ
 prasīdataṁ no'kṛtaniṣkṛtīnām||
+en: And this burns my heart when I remember it: what he said, bowing at the feet of his parents — Father, mother, be gracious to us, who have been in great fear of Kaṁsa and have not repaid you.
+tel: ఇది స్మరించుచున్న నా చిత్తమును దహించుచున్నది: తల్లిదండ్రుల పాదములకు నమస్కరించి ఆయన పలికిన మాట — "తాతా, అమ్మా, కంసుని వలన మిక్కిలి శంకించినవారము, నిష్కృతిని చేయనివారము; మమ్ములను అనుగ్రహింపుడు."
+hi: और स्मरण करते मेरे चित्त को यह दुनाता है: माता-पिता के चरणों में प्रणाम करके उन्होंने जो कहा — "हे तात, हे अम्ब, कंस से अत्यन्त शङ्कित और निष्कृति न किये हम पर प्रसन्न होइये।"
 
 --- verse 18 ---
 deva:
@@ -190,6 +241,9 @@ ko vā amuṣyāṅghrisarojareṇuṁ
 vismartumīśīta pumān vijighran|
 yo visphuradbhrūviṭapena bhūme-
 rbhāraṁ kṛtāntena tiraścakāra||
+en: Who that has once smelt the dust of his lotus feet could be able to forget it — he who, with the moving branch of his brow, swept away the burden of the earth by means of death?
+tel: ఆయన పాదసరోజ ధూళిని ఆఘ్రాణించిన మనుష్యుడు ఎవడు దానిని మరువగలడు? కదలుచున్న కనుబొమల కొమ్మచే, కృతాంతునిచే భూమి భారమును ఆయన తొలగించెను.
+hi: जिसने उनके चरण-सरोज की रज सूँघी, वह पुरुष उसे भूल कैसे सके? चलती भ्रू की शाखा से, कृतान्त के द्वारा उन्होंने भूमि का भार तिरस्कृत किया।
 
 --- verse 19 ---
 deva:
@@ -202,6 +256,9 @@ dṛṣṭā bhavadbhirnanu rājasūye
 caidyasya kṛṣṇaṁ dviṣato'pi siddhiḥ|
 yāṁ yoginaḥ saṁspṛhayanti samyag
 yogena kastadvirahaṁ saheta||
+en: You yourselves saw at the Rājasūya the perfection reached even by Caidya, who hated Kṛṣṇa — the perfection which yogīs long for by right yoga. Who, then, could bear his absence?
+tel: కృష్ణుని ద్వేషించిన చైద్యునికి కలిగిన సిద్ధిని రాజసూయమున మీరే చూచితిరి; సమ్యక్కుగా యోగముచే యోగులు ఆ సిద్ధిని కోరుచున్నారు. అట్టి ఆయన విరహమును ఎవడు సహించగలడు?
+hi: श्रीकृष्ण से द्वेष करनेवाले चैद्य को भी मिली सिद्धि आपने राजसूय में देखी; जिसकी योगी सम्यक् योग से स्पृहा करते हैं। तो उनका विरह कौन सहे?
 
 --- verse 20 ---
 deva:
@@ -214,6 +271,9 @@ tathaiva cānye naralokavīrā
 ya āhave kṛṣṇamukhāravindam|
 netraiḥ pibanto nayanābhirāmaṁ
 pārthāstrapūtāḥ padamāpurasya||
+en: And so too the other heroes of the world of men, who in battle drank with their eyes the lotus face of Kṛṣṇa, lovely to the eye; made pure by the weapons of Pṛthā's son, they reached his state.
+tel: అట్లే ఇతర నరలోక వీరులు, యుద్ధమున కన్నులకు ఆనందకరమైన కృష్ణుని ముఖారవిందమును కన్నులచే పానము చేయుచు, పార్థుని అస్త్రములచే పూతులై ఆయన పదమును పొందిరి.
+hi: वैसे ही अन्य नरलोक के वीर, युद्ध में नयनाभिराम श्रीकृष्ण के मुखारविन्द को नेत्रों से पीते हुए, पार्थ के अस्त्रों से पूत होकर उनका पद पा गये।
 
 --- verse 21 ---
 deva:
@@ -226,6 +286,9 @@ svayaṁ tvasāmyātiśayastryadhīśaḥ
 svārājyalakṣmyāptasamastakāmaḥ|
 baliṁ haradbhiściralokapālaiḥ
 kirīṭakoṭyeḍitapādapīṭhaḥ||
+en: He himself has no equal and none above him; he is the lord of the three; by the splendour of his own sovereignty his every desire is fulfilled; and the footstool of his feet is praised by the crowns of the guardians of the worlds, who bring him their tribute.
+tel: ఆయన స్వయముగా సమానము, అతిశయము లేనివాడు; త్రిలోకాధీశుడు; తన స్వారాజ్య లక్ష్మిచే సమస్త కామములు తీరినవాడు; బలిని తెచ్చు చిరకాల లోకపాలకుల కిరీట కోటులచే ఆయన పాదపీఠము కీర్తింపబడుచున్నది.
+hi: वे स्वयं असाम्य और अनतिशय हैं; त्र्यधीश हैं; अपनी स्वाराज्य-लक्ष्मी से जिनकी सब कामनाएँ पूर्ण हैं; और बलि लानेवाले चिरकालिक लोकपालों के मुकुट-कोटियों से उनका पादपीठ वन्दित है।
 
 --- verse 22 ---
 deva:
@@ -238,6 +301,9 @@ tattasya kaiṅkaryamalaṁ bhṛtānno
 viglāpayatyaṅga yadugrasenam|
 tiṣṭhanniṣaṇṇaṁ parameṣṭhidhiṣṇye
 nyabodhayaddeva nidhārayeti||
+en: Dear one, that service of his overwhelms us, his servants: that he stood and roused Ugrasena, who sat upon the seat of Parameṣṭhin, saying, "Lord, be pleased to attend."
+tel: అయ్యా, ఆయన ఆ కైంకర్యము భృత్యులమైన మమ్ములను విలపింపజేయుచున్నది: పరమేష్ఠి ఆసనమున కూర్చుండిన ఉగ్రసేనుని ఎదుట నిలిచి, "దేవా, నిర్ధారింపుము" అని ఆయన తెలిపెను.
+hi: हे अङ्ग, उनका वह कैङ्कर्य हमें, उनके भृत्यों को, विलाप कराता है: परमेष्ठी के आसन पर बैठे उग्रसेन के सामने खड़े होकर उन्होंने "हे देव, निर्धारित कीजिये" ऐसा सूचित किया।
 
 --- verse 23 ---
 deva:
@@ -250,6 +316,9 @@ aho bakī yaṁ stanakālakūṭaṁ
 jighāṁsayāpāyayadapyasādhvī|
 lebhe gatiṁ dhātryucitāṁ tato'nyaṁ
 kaṁ vā dayāluṁ śaraṇaṁ vrajema||
+en: How wonderful: Bakī, who out of the wish to kill gave him her breast smeared with deadly poison, though she was no good woman, obtained the state fit for a nurse. To whom else, more compassionate, should we go for refuge?
+tel: ఆశ్చర్యము: చంపగోరి స్తనమునందలి కాలకూటమును ఆయనకు త్రాగించిన బకి, సాధ్వి కాకున్నను, ధాత్రికి ఉచితమైన గతిని పొందెను. ఆయనకంటె దయాళువైన వేరొకరిని శరణు ఎవరిని పొందుదుము?
+hi: आश्चर्य: मारने की इच्छा से स्तन का कालकूट पिलानेवाली बकी, असाध्वी होकर भी, धात्री के योग्य गति पा गयी। उनसे अधिक दयालु और किसकी शरण लें?
 
 --- verse 24 ---
 deva:
@@ -262,6 +331,9 @@ manye'surān bhāgavatāṁstryadhīśe
 saṁrambhamārgābhiniviṣṭacittān|
 ye saṁyuge'cakṣata tārkṣyaputra-
 maṁse sunābhāyudhamāpatantam||
+en: I hold that the demons were devotees, whose minds were set upon the Lord of the three by the path of their rage; for in battle they saw the son of Tārkṣya coming at them with the discus upon his shoulder.
+tel: సంరంభ మార్గముచే త్ర్యధీశునియందు చిత్తము నిలిపిన ఆ అసురులు భాగవతులని నేను తలంచుచున్నాను; యుద్ధమున భుజమున సునాభాయుధము కలిగిన తార్క్ష్యపుత్రుని వారు చూచిరి.
+hi: संरम्भ के मार्ग से त्र्यधीश में चित्त लगानेवाले उन असुरों को मैं भागवत मानता हूँ; क्योंकि युद्ध में उन्होंने कन्धे पर सुनाभायुध लिये तार्क्ष्य-पुत्र को आते देखा।
 
 --- verse 25 ---
 deva:
@@ -270,6 +342,9 @@ deva:
 iast:
 vasudevasya devakyāṁ jāto bhojendrabandhane|
 cikīrṣurbhagavānasyāḥ śamajenābhiyācitaḥ||
+en: He was born of Vasudeva and Devakī in the prison of the lord of the Bhojas; the Lord, prayed to by the Unborn, wished to bring peace to her, the earth.
+tel: భోజేంద్రుని బంధనమునందు వసుదేవునికి దేవకియందు ఆయన జన్మించెను; అజునిచే ప్రార్థింపబడిన భగవంతుడు ఆమెకు — భూమికి — శమమును చేయగోరెను.
+hi: भोजेन्द्र के बन्धन में वसुदेव से देवकी के गर्भ में वे उत्पन्न हुए; और अज की प्रार्थना से भगवान् ने उसका — पृथ्वी का — शम करने की इच्छा की।
 
 --- verse 26 ---
 deva:
@@ -278,6 +353,9 @@ deva:
 iast:
 tato nandavrajamitaḥ pitrā kaṁsādvibibhyatā|
 ekādaśa samāstatra gūḍhārciḥ sabalo'vasat||
+en: Then he was taken from there to Nanda's Vraja by his father, who was afraid of Kaṁsa; and there for eleven years, his splendour hidden, he dwelt with Balarāma.
+tel: అటుపిమ్మట కంసునికి భయపడిన తండ్రిచే అక్కడి నుండి నందవ్రజమునకు ఆయన తేబడెను; అక్కడ పదునొకండు సంవత్సరములు, అర్చి గూఢముగా ఉండగా, బలరామునితో కూడ ఆయన నివసించెను.
+hi: तदनन्तर कंस से डरते पिता ने उन्हें वहाँ से नन्द के व्रज में पहुँचाया; और वहाँ ग्यारह वर्ष, अर्चि गूढ़ रखते हुए, बलराम के सहित वे रहे।
 
 --- verse 27 ---
 deva:
@@ -286,6 +364,9 @@ deva:
 iast:
 parīto vatsapairvatsāṁścārayan vyaharadvibhuḥ|
 yamunopavane kūjaddvijasaṁkulitāṅghripe||
+en: Surrounded by the boys who tend the calves, the all-pervading one tended the calves and played in the grove by the Yamunā, where the trees were crowded with cooing birds.
+tel: వత్సపాలకులచే చుట్టబడి, ఆ విభుడు దూడలను కాచుచు, కూజితము చేయు పక్షులతో నిండిన చెట్లు కలిగిన యమునా ఉపవనమునందు విహరించెను.
+hi: वत्सपालों से घिरे उन विभु ने बछड़े चराते हुए, कूजते पक्षियों से भरे वृक्षोंवाले यमुना के उपवन में विहार किया।
 
 --- verse 28 ---
 deva:
@@ -294,6 +375,9 @@ deva:
 iast:
 kaumārīṁ darśayaṁśceṣṭāṁ prekṣaṇīyāṁ vrajaukasām|
 rudanniva hasanmugdhabālasiṁhāvalokanaḥ||
+en: showing the doings of his childhood, which the people of Vraja delighted to see — weeping as it were, laughing, with the charming glance of a young lion.
+tel: వ్రజవాసులు చూడ ముచ్చటపడు కౌమార చేష్టలను చూపుచు — ఏడ్చుచున్నట్లు, నవ్వుచు, ముగ్ధమైన బాలసింహము చూపుతో.
+hi: व्रजवासियों के लिये प्रेक्षणीय कौमार चेष्टाएँ दिखाते हुए — रोते-से, हँसते हुए, और मुग्ध बाल-सिंह के अवलोकन से।
 
 --- verse 29 ---
 deva:
@@ -302,6 +386,9 @@ deva:
 iast:
 sa eva godhanaṁ lakṣmyā niketaṁ sitagovṛṣam|
 cārayannanugān gopān raṇadveṇurarīramat||
+en: He it was who, tending the wealth of cattle — the dwelling of Śrī, with its white bulls — gave delight to the cowherds who followed him, with his sounding flute.
+tel: శ్రీకి నిలయమైన, తెల్లని వృషభములు కలిగిన గోధనమును కాచుచు, ఆయనే, మ్రోగు వేణువుచే వెంట వచ్చు గోపాలకులను ఆనందింపజేసెను.
+hi: श्री के निकेत और श्वेत वृषभोंवाले गोधन को चराते हुए, उन्होंने ही रणती वेणु से अनुगामी गोपों को रमाया।
 
 --- verse 30 ---
 deva:
@@ -310,6 +397,9 @@ deva:
 iast:
 prayuktān bhojarājena māyinaḥ kāmarūpiṇaḥ|
 līlayā vyanudattāṁstān bālaḥ krīḍanakāniva||
+en: Those deceivers who could take any form at will, sent by the king of the Bhojas, he pushed away in play, as a child pushes away his toys.
+tel: భోజరాజుచే పంపబడిన, కోరిన రూపమును ధరించు ఆ మాయావులను, ఆటబొమ్మలను బాలుడు త్రోసివేయునట్లు ఆయన లీలగా త్రోసివేసెను.
+hi: भोजराज के भेजे, कामरूपी उन मायावियों को, खिलौनों को बालक के समान, उन्होंने लीला से हटा दिया।
 
 --- verse 31 ---
 deva:
@@ -318,6 +408,9 @@ deva:
 iast:
 vipannān viṣapānena nigṛhya bhujagādhipam|
 utthāpyāpāyayadgāvastattoyaṁ prakṛtisthitam||
+en: When the cows had fallen senseless from drinking the poison, he seized the lord of the serpents, raised them up, and made them drink that water, which had been brought back to its own nature.
+tel: విషమును త్రాగుటచే విపన్నులైన ఆవులను — భుజగాధిపతిని నిగ్రహించి, వానిని లేపి, ప్రకృతిస్థితమైన ఆ జలమును ఆయన త్రాగించెను.
+hi: विष-पान से विपन्न गौओं को — भुजगाधिप को वश में करके, उन्हें उठाकर, प्रकृतिस्थ उस जल को उन्होंने पिलाया।
 
 --- verse 32 ---
 deva:
@@ -326,6 +419,9 @@ deva:
 iast:
 ayājayadgosavena goparājaṁ dvijottamaiḥ|
 vittasya corubhārasya cikīrṣan sadvyayaṁ vibhuḥ||
+en: He had the king of the cowherds perform the Gosava sacrifice with the best of brāhmaṇas, the all-pervading one wishing that his great wealth should be well spent.
+tel: ఉరుభారమైన వित్తమునకు సద్వ్యయమును కోరి, ఆ విభుడు ద్విజోత్తములచే గోపరాజునకు గోసవ యజ్ఞమును చేయించెను.
+hi: उरुभार धन के सद्व्यय की इच्छा से, उन विभु ने द्विजोत्तमों से गोपराज का गोसव यज्ञ कराया।
 
 --- verse 33 ---
 deva:
@@ -334,6 +430,9 @@ deva:
 iast:
 varṣatīndre vrajaḥ kopādbhagnamāne'tivihvalaḥ|
 gotralīlātapatreṇa trāto bhadrānugṛhṇatā||
+en: When Indra rained upon Vraja in anger, his pride being broken, and Vraja was in great distress, it was saved by the mountain held up as an umbrella in play, by him who gives what is good.
+tel: మానము భంగమైనందున ఇంద్రుడు కోపముచే వర్షించినపుడు, మిక్కిలి విహ్వలమైన వ్రజము, భద్రమును అనుగ్రహించువానిచే, లీలగా గొడుగుగా ధరింపబడిన పర్వతముచే రక్షింపబడెను.
+hi: मान भङ्ग होने से इन्द्र के कोप से बरसने पर, अति विह्वल व्रज, भद्र का अनुग्रह करनेवाले के द्वारा, लीला से छत्र बनाये पर्वत से रक्षित हुआ।
 
 --- verse 34 ---
 deva:
@@ -342,9 +441,15 @@ deva:
 iast:
 śaracchaśikarairmṛṣṭaṁ mānayan rajanīmukham|
 gāyan kalapadaṁ reme strīṇāṁ maṇḍalamaṇḍanaḥ||
+en: Honouring the beginning of the night, washed clean by the rays of the autumn moon, he took his delight, singing in sweet notes, the ornament of the circle of women.
+tel: శరత్కాల చంద్రకిరణములచే కడగబడిన రజనీ ముఖమును గౌరవించుచు, కలపదములతో పాడుచు, స్త్రీల మండలమునకు అలంకారమైన ఆయన విహరించెను.
+hi: शरद् के चन्द्र-किरणों से मृष्ट रजनी-मुख का मान करते हुए, कल पदों से गाते हुए, स्त्रियों के मण्डल के मण्डन वे रमण किया।
 
 --- verse none ---
 deva:
 इति श्रीमद्भागवते महापुराणे पारमहंस्यां संहितायां तृतीयस्कन्धे विदुरोद्धवसंवादे द्वितीयोऽध्यायः॥ २॥
 iast:
 iti śrīmadbhāgavate mahāpurāṇe pāramahaṁsyāṁ saṁhitāyāṁ tṛtīyaskandhe viduroddhavasaṁvāde dvitīyo'dhyāyaḥ|| 2||
+en: Thus ends the second adhyāya, in the conversation of Vidura and Uddhava, in the third skandha of the Śrīmad Bhāgavata Mahāpurāṇa, the saṁhitā of the paramahaṁsas.
+tel: ఇది శ్రీమద్భాగవత మహాపురాణమునందు, పరమహంసల సంహితయందు, తృతీయస్కంధమునందు విదురోద్ధవ సంవాదమనే ద్వితీయాధ్యాయము.
+hi: इस प्रकार श्रीमद्भागवत महापुराण की परमहंसों की संहिता के तृतीय स्कन्ध में विदुर-उद्धव संवाद में दूसरा अध्याय समाप्त हुआ।
