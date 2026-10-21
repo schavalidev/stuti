@@ -81,15 +81,22 @@ open, so that nobody taps it and finds nothing behind it.
 Procedure: `stuti-app/docs/corpus-delivery.md`, "Order of work" step 2 onward.
 Step 1 is done: `stotras/bin/build_corpus.py` exists and runs.
 
-- [ ] Create the R2 bucket (or equivalent static host)
+- [ ] Create the R2 bucket (or equivalent static host). Then an R2 API token with
+      Object Read & Write, and export `R2_ACCOUNT_ID`, `R2_BUCKET`, `R2_ACCESS_KEY_ID`,
+      `R2_SECRET_ACCESS_KEY` — the sync command reads them from the environment and
+      nothing is written into the repo
 - [ ] Custom domain on it
 - [ ] CORS so the app's origin may fetch
-- [ ] Sync command in `stuti-app/tools/`, honouring the order: `t/` first, `index.json` last.
-      **It must upload only the files `index.json` names, or prune what it finds.** The build
-      writes a text as `t/<id>.<hash>.json` and does not remove the copy under the old hash, so
-      `corpus/t/` held 3,025 files on 20 October against 2,016 live rows — 1,009 of them stale
-      texts from earlier builds. Uploading the directory wholesale would put a thousand
-      superseded readings on the host, reachable by anyone who kept a link
+- [x] Sync command — `stuti-app/tools/sync-corpus.mjs`, written 21 October 2026 (S83).
+      No dependencies: it signs its own S3 requests, so there is nothing to install. It
+      uploads the texts first and `index.json` last, since the index is the only thing that
+      names a text's file; it sweeps superseded texts only after the index has stopped
+      naming them; and it uploads **only what `index.json` names**, because the build writes
+      a text as `t/<id>.<hash>.json` and never removes the copy under the old hash — on
+      20 October `corpus/t/` held 3,025 files against 2,016 live rows. `--to <dir>` rehearses
+      the whole selection without an account, and `--dry-run` says what it would send.
+      Proved locally: the built app fetched the index over CORS, cached all 2,016 rows, and
+      opened Bhāgavata 11.24 with its thirty verses from a text file
 - [ ] Set `STUTI_CORPUS_URL`
 - [ ] Verify in the built bundle, on the phone, and offline after one read
 - [ ] Later, not for launch: seed in `public/corpus/`, drop the bundled text modules, per-deity keep
