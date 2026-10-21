@@ -293,9 +293,10 @@ Resend will not send from a domain nobody owns. So no one can sign in until it
 is bought.
 
 - [ ] Buy `stutiapp.com` — blocks the sign-in email, and so blocks A1
-- [ ] **Decide whether the app keeps the name**, now that stuti.app is a live product
-      on the same ground (above). This gates the store listing, the icon and every page
-      that prints the name
+- [x] **Ruled 21 October 2026 (S83): the app keeps the name Stuti, for now.** Taken with
+      the competing product known and described above. "For now" is the user's own
+      wording, so the question is not closed — it is parked, and the trademark search
+      below is what would reopen it
 - [ ] Search the trademark register for "Stuti" in the relevant classes — and search
       for Sadhaka's own filings while there
 - [ ] Reserve the app name in App Store Connect when the first build is submitted;
