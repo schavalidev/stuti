@@ -9,7 +9,7 @@ Type: Purāṇa (an adhyāya of the Śrīmad Bhāgavata, Skandha 3)
 
 Source / recension: Base text and authority: the Gītā Press, Gorakhpur Śrīmadbhāgavata Mahāpurāṇa with Hindi translation, Part 1 (Gītā Press code 26), archive.org item `shrimadbhagwat-mahapuran-bhag-1`, printed pages 281–286; the PDF page numbers are the printed ones. The PDF carries the typesetter's own text layer in the Chanakya font encoding, and the text was decoded from it by machine with `bin/bhagavata/chanakya.py`, not read off OCR or typed. The decoder was checked against GRETIL over all twelve skandhas before any file was written, and the differences that remain were sampled and found to be readings of the two editions. Second witness: GRETIL's `sa_bhAgavatapurANa.xml` (IAST, contributed by Ulrich Stiehl), a separate editorial lineage, compared verse by verse by machine. The TTD edition with the commentaries of Śrīdhara, Vīrarāghava and Vijayadhvaja (archive.org `Bhagavata_Purana_With_Multiple_Commentaries_TTD_Critical_Edition`) is the third witness where one is needed; it was not read for this file. The IAST was generated mechanically from the Devanāgarī with `bin/dev2iast.py`.
 
-Recension note: Text-only file, written 1 Oct 2026 at the user's instruction to lay down the whole Bhāgavata first: the English, Telugu and Hindi meanings are still to be added, and the witnesses' differences listed here have been recorded by machine and not yet adjudicated. The print is followed throughout. The print numbers 41 verses and GRETIL numbers 41. Of the 41 verses GRETIL has under the same number, 32 agree with the print letter for letter once spacing and the spelling of nasals are set aside; the rest differ: 11, 12, 15, 16, 18, 20, 22, 36, 37. The edition's footnotes give these older printed readings (प्रा० पा०), which are not bracketed into the line: at 3, सूक्ष्मे स्थूले च; at 4, कालः स; at 5, अणू द्वौ द्व्यणुकः प्रोक्तः त्र०; at 5, जालाक्षार्करश्मिगतः; at 16, श्रुतम्; at 22, दृक्; at 23, वर्धते. Spacing is the print's, as its text layer gives it; in a few places justification has left a space inside a word, and these are still to be closed when the verse is read. The speaker lines (श्रीशुक उवाच and the others) are printed in italic above the verse they introduce, and are given as its first line.
+Recension note: Meanings written 22 Oct 2026 (session S78). The differences between the witnesses listed below were read as the verses were glossed; except where this note says otherwise, each is a spelling, a sandhi or a word order of the two editions, none of them changes the sense, and the print's reading therefore stands unbracketed. The print is followed throughout. The print numbers 41 verses and GRETIL numbers 41. Of the 41 verses GRETIL has under the same number, 32 agree with the print letter for letter once spacing and the spelling of nasals are set aside; the rest differ: 11, 12, 15, 16, 18, 20, 22, 36, 37. The edition's footnotes give these older printed readings (प्रा० पा०), which are not bracketed into the line: at 3, सूक्ष्मे स्थूले च; at 4, कालः स; at 5, अणू द्वौ द्व्यणुकः प्रोक्तः त्र०; at 5, जालाक्षार्करश्मिगतः; at 16, श्रुतम्; at 22, दृक्; at 23, वर्धते. Spacing is the print's, as its text layer gives it. The speaker lines (श्रीशुक उवाच and the others) are printed in italic above the verse they introduce, and are given as its first line. A footnote's numeral keys it to one word, and which word that is cannot be told from the note alone, so those readings stay unbracketed until the page itself is read. Six words were put right as the verses were read. At verse 5 justification had left a space inside जालार्करश्मि and at verse 6 inside भुङ्क्ते, and both spaces are closed here. At verses 3, 12, 36 and 39 the opposite had happened and the space between two words was lost, giving सौक्ष्म्येस्थौल्ये, चाहनीप्राहुः, द्वितीयस्यापिभारत and आण्डकोशोबहिः, which cannot be read as they stand; the space is restored in each. GRETIL agrees with all six corrected readings.
 
 Verse count: 41, plus the closing colophon printed unnumbered.
 
@@ -24,6 +24,9 @@ iast:
 maitreya uvāca
 caramaḥ sadviśeṣāṇāmaneko'saṁyutaḥ sadā|
 paramāṇuḥ sa vijñeyo nṛṇāmaikyabhramo yataḥ||
+en: Maitreya said: The last of the particular things that exist, which is not manifold and is never joined with another — that is to be known as the atom; from it comes men's mistaken sense of one whole.
+tel: మైత్రేయుడు పలికెను: ఉన్న విశేషములలో చివరిదైనది, అనేకము కానిది, ఎప్పుడును మరియొకదానితో కలియనిది — అది పరమాణువు అని తెలియవలెను; దాని నుండి మనుష్యులకు ఒక్కటే అను భ్రమ కలుగుచున్నది.
+hi: मैत्रेय ने कहा: सत् के विशेषों में जो चरम है, जो अनेक नहीं है और जो सदा असंयुत है — वह परमाणु जानना चाहिये; उससे मनुष्यों को ऐक्य का भ्रम होता है।
 
 --- verse 2 ---
 deva:
@@ -32,14 +35,20 @@ deva:
 iast:
 sata eva padārthasya svarūpāvasthitasya yat|
 kaivalyaṁ paramamahānaviśeṣo nirantaraḥ||
+en: Of the thing which truly is and stands in its own nature, that wholeness is the supreme great, which is without division and without any break.
+tel: నిజముగా ఉన్న, తన స్వరూపమునందు నిలిచిన పదార్థమునకు కలిగిన కైవల్యము పరమ మహత్తు; అది విశేషము లేనిది, ఎడము లేనిది.
+hi: जो सत् है और स्वरूप में अवस्थित है, उस पदार्थ का जो कैवल्य है, वह परम महान् है; वह अविशेष और निरन्तर है।
 
 --- verse 3 ---
 deva:
-एवं कालोऽप्यनुमितः सौक्ष्म्येस्थौल्ये च सत्तम।
+एवं कालोऽप्यनुमितः सौक्ष्म्ये स्थौल्ये च सत्तम।
 संस्थानभुक्त्या भगवानव्यक्तो व्यक्तभुग्विभुः॥
 iast:
-evaṁ kālo'pyanumitaḥ saukṣmyesthaulye ca sattama|
+evaṁ kālo'pyanumitaḥ saukṣmye sthaulye ca sattama|
 saṁsthānabhuktyā bhagavānavyakto vyaktabhugvibhuḥ||
+en: In this way time too is inferred, O best of the good, in the subtle and in the gross, by the consuming of forms. The blessed Lord, the mighty one, is unmanifest, and he consumes what is manifest.
+tel: సత్తమా, ఈ విధముగా కాలమును, సూక్ష్మమునందును స్థూలమునందును, సంస్థానములను భుజించుటచే ఊహింపబడును. విభువైన భగవంతుడు అవ్యక్తుడు; వ్యక్తమైనదిని ఆయన భుజించువాడు.
+hi: हे सत्तम, इस प्रकार काल भी, सौक्ष्म्य में और स्थौल्य में, संस्थान की भुक्ति से अनुमित होता है। विभु भगवान् अव्यक्त हैं, और व्यक्त के भोक्ता हैं।
 
 --- verse 4 ---
 deva:
@@ -48,22 +57,31 @@ deva:
 iast:
 sa kālaḥ paramāṇurvai yo bhuṅkte paramāṇutām|
 sato'viśeṣabhugyastu sa kālaḥ paramo mahān||
+en: That time is the atom indeed, which consumes the state of an atom; and that which consumes the undivided whole of what exists — that time is the supreme great.
+tel: పరమాణుత్వమును ఏది భుజించునో, ఆ కాలము పరమాణువే. ఉన్నదానియందు విశేషము లేనిదిని ఏది భుజించునో, ఆ కాలము పరమ మహత్తు.
+hi: जो परमाणुता को भोगता है, वह काल परमाणु ही है। और जो सत् के अविशेष को भोगता है, वह काल परम महान् है।
 
 --- verse 5 ---
 deva:
 अणुर्द्वौ परमाणू स्यात्त्रसरेणुस्त्रयः स्मृतः।
-जालार्क रश्म्यवगतः खमेवानुपतन्नगात्॥
+जालार्करश्म्यवगतः खमेवानुपतन्नगात्॥
 iast:
 aṇurdvau paramāṇū syāttrasareṇustrayaḥ smṛtaḥ|
-jālārka raśmyavagataḥ khamevānupatannagāt||
+jālārkaraśmyavagataḥ khamevānupatannagāt||
+en: Two atoms make an aṇu, and three are held to make a trasareṇu. That trasareṇu is seen in the sunbeam that enters a lattice, and it goes along following the sky.
+tel: రెండు పరమాణువులు ఒక అణువు అగును; మూడు త్రసరేణువు అని చెప్పబడినది. కిటికీ గుండా వచ్చు సూర్యకిరణమునందు అది కనబడుచు, ఆకాశమును అనుసరించి పోవుచున్నది.
+hi: दो परमाणु एक अणु होते हैं, और तीन त्रसरेणु कहे गये हैं। वह जाली से आये अर्क की रश्मि में दीखता है, और खम् का अनुपतन करते हुए जाता है।
 
 --- verse 6 ---
 deva:
-त्रसरेणुत्रिकं भुङ् क्ते यः कालः स त्रुटिः स्मृतः।
+त्रसरेणुत्रिकं भुङ्क्ते यः कालः स त्रुटिः स्मृतः।
 शतभागस्तु वेधः स्यात्तैस्त्रिभिस्तु लवः स्मृतः॥
 iast:
-trasareṇutrikaṁ bhuṅ kte yaḥ kālaḥ sa truṭiḥ smṛtaḥ|
+trasareṇutrikaṁ bhuṅkte yaḥ kālaḥ sa truṭiḥ smṛtaḥ|
 śatabhāgastu vedhaḥ syāttaistribhistu lavaḥ smṛtaḥ||
+en: The time which consumes three trasareṇus is called a truṭi. A hundredth part of it is a vedha, and three of those are said to make a lava.
+tel: మూడు త్రసరేణువులను ఏ కాలము భుజించునో, అది త్రుటి అని చెప్పబడినది. దానియందు నూరవ భాగము వేధము; అవి మూడు ఒక లవము అని చెప్పబడినది.
+hi: जो काल तीन त्रसरेणुओं को भोगता है, वह त्रुटि कहा गया है। उसका शत-भाग वेध है, और उनसे तीन मिलकर लव कहा गया है।
 
 --- verse 7 ---
 deva:
@@ -72,6 +90,9 @@ deva:
 iast:
 nimeṣastrilavo jñeya āmnātaste trayaḥ kṣaṇaḥ|
 kṣaṇān pañca viduḥ kāṣṭhāṁ laghu tā daśa pañca ca||
+en: Three lavas are to be known as a nimeṣa, and three of those are declared to be a kṣaṇa. Five kṣaṇas they know as a kāṣṭhā, and fifteen of those a laghu.
+tel: మూడు లవములు ఒక నిమేషము అని తెలియవలెను; అవి మూడు ఒక క్షణము అని చెప్పబడినది. ఐదు క్షణములను కాష్ఠ అని ఎరుగుదురు; అవి పదునైదు ఒక లఘువు.
+hi: तीन लव एक निमेष जानना चाहिये; और उनसे तीन क्षण कहे गये हैं। पाँच क्षणों को काष्ठा जानते हैं, और उनसे पन्द्रह लघु।
 
 --- verse 8 ---
 deva:
@@ -80,6 +101,9 @@ deva:
 iast:
 laghūni vai samāmnātā daśa pañca ca nāḍikā|
 te dve muhūrtaḥ praharaḥ ṣaḍyāmaḥ sapta vā nṛṇām||
+en: Fifteen laghus are declared to be a nāḍikā. Two of those make a muhūrta; and six or seven nāḍikās make a prahara, which is men's yāma.
+tel: పదునైదు లఘువులు ఒక నాడిక అని చెప్పబడినది. అవి రెండు ఒక ముహూర్తము; ఆరు లేక ఏడు నాడికలు ఒక ప్రహరము, అది మనుష్యులకు ఒక యామము.
+hi: पन्द्रह लघु एक नाडिका कही गयी है। उनसे दो एक मुहूर्त; और छह या सात नाडिकाएँ एक प्रहर, जो मनुष्यों का याम है।
 
 --- verse 9 ---
 deva:
@@ -88,6 +112,9 @@ deva:
 iast:
 dvādaśārdhapalonmānaṁ caturbhiścaturaṅgulaiḥ|
 svarṇamāṣaiḥ kṛtacchidraṁ yāvatprasthajalaplutam||
+en: The measure is a vessel of six palas, with a hole made in it by four māṣas of gold four fingers long, and it is filled by one prastha of water.
+tel: ఆ కొలత ఆరు పలముల పాత్ర; నాలుగు అంగుళముల పొడవైన నాలుగు బంగారు మాషములచే దానియందు రంధ్రము చేయబడును; ఒక ప్రస్థము నీటిచే అది నిండును.
+hi: वह मान छह पल का पात्र है; चार अङ्गुल लम्बे चार स्वर्ण-माषों से उसमें छिद्र किया जाता है; और एक प्रस्थ जल से वह भर जाता है।
 
 --- verse 10 ---
 deva:
@@ -96,6 +123,9 @@ deva:
 iast:
 yāmāścatvāraścatvāro martyānāmahanī ubhe|
 pakṣaḥ pañcadaśāhāni śuklaḥ kṛṣṇaśca mānada||
+en: Four yāmas and four yāmas are the day and the night of men, both of them. A fortnight is fifteen days, bright and dark, O giver of honour.
+tel: నాలుగు యామములు, నాలుగు యామములు మనుష్యులకు పగలు, రాత్రి — ఆ రెండు. పక్షము పదునైదు దినములు; అది శుక్లము, కృష్ణము, మానదా.
+hi: चार याम और चार याम मनुष्यों के दिन और रात, दोनों हैं। पक्ष पन्द्रह दिन का है — शुक्ल और कृष्ण, हे मानद।
 
 --- verse 11 ---
 deva:
@@ -104,14 +134,20 @@ deva:
 iast:
 tayoḥ samuccayo māsaḥ pitṝṇāṁ tadaharniśam|
 dvau tāvṛtuḥ ṣaḍayanaṁ dakṣiṇaṁ cottaraṁ divi||
+en: The joining of the two is a month, and that is the day and the night of the forefathers. Two months make a season, and six make a course of the sun — the southern and the northern in the sky.
+tel: ఆ రెంటి కలయిక ఒక మాసము; అది పితృదేవతలకు పగలు, రాత్రి. రెండు మాసములు ఒక ఋతువు; ఆరు ఒక అయనము — ఆకాశమునందు దక్షిణము, ఉత్తరము.
+hi: उन दोनों का समुच्चय एक मास है, और वह पितरों का अहर्निश है। दो मास एक ऋतु, और छह एक अयन — दिव् में दक्षिण और उत्तर।
 
 --- verse 12 ---
 deva:
-अयने चाहनीप्राहुर्वत्सरो द्वादश स्मृतः।
+अयने चाहनी प्राहुर्वत्सरो द्वादश स्मृतः।
 संवत्सरशतं नॄणां परमायुर्निरूपितम्॥
 iast:
-ayane cāhanīprāhurvatsaro dvādaśa smṛtaḥ|
+ayane cāhanī prāhurvatsaro dvādaśa smṛtaḥ|
 saṁvatsaraśataṁ nṝṇāṁ paramāyurnirūpitam||
+en: The two courses, they say, are the day and the night of the gods; and twelve months are said to be a year. A hundred years is settled as the longest life of men.
+tel: ఆ రెండు అయనములు దేవతలకు పగలు, రాత్రి అని చెప్పుదురు; పండ్రెండు మాసములు ఒక సంవత్సరము అని చెప్పబడినది. మనుష్యులకు నూరు సంవత్సరములు పరమాయువు అని నిరూపింపబడినది.
+hi: दोनों अयनों को अहनी कहते हैं; और बारह मास एक वत्सर कहा गया है। मनुष्यों की परम आयु सौ संवत्सर निरूपित है।
 
 --- verse 13 ---
 deva:
@@ -120,6 +156,9 @@ deva:
 iast:
 graharkṣatārācakrasthaḥ paramāṇvādinā jagat|
 saṁvatsarāvasānena paryetyanimiṣo vibhuḥ||
+en: He who stands in the circle of the planets, the lunar mansions and the stars goes round the world by the measures that begin with the atom, and completes the round at the end of a year — the Unblinking, the mighty one.
+tel: గ్రహములు, నక్షత్రములు, తారలు ఉన్న చక్రమునందు నిలిచినవాడు, పరమాణువు మొదలైన కొలతలచే జగత్తును తిరుగుచు, సంవత్సరము ముగియగా ఆ తిరుగుట పూర్తి చేయును — అనిమిషుడైన విభువు.
+hi: ग्रह, ऋक्ष और तारों के चक्र में स्थित वे, परमाणु आदि से जगत् की परिक्रमा करते हैं, और संवत्सर के अवसान से वह पूरी होती है — वे अनिमिष विभु।
 
 --- verse 14 ---
 deva:
@@ -128,6 +167,9 @@ deva:
 iast:
 saṁvatsaraḥ parivatsara iḍāvatsara eva ca|
 anuvatsaro vatsaraśca viduraivaṁ prabhāṣyate||
+en: Saṁvatsara, parivatsara, iḍāvatsara, anuvatsara and vatsara — Vidura, so are they spoken of.
+tel: సంవత్సరము, పరివత్సరము, ఇడావత్సరము, అనువత్సరము, వత్సరము — విదురా, ఈ విధముగా చెప్పబడుచున్నవి.
+hi: संवत्सर, परिवत्सर, इडावत्सर, अनुवत्सर और वत्सर — हे विदुर, इस प्रकार कहे जाते हैं।
 
 --- verse 15 ---
 deva:
@@ -140,6 +182,9 @@ yaḥ sṛjyaśaktimurudhocchvasayan svaśaktyā
 puṁso'bhramāya divi dhāvati bhūtabhedaḥ|
 kālākhyayā guṇamayaṁ kratubhirvitanvaṁ-
 stasmai baliṁ harata vatsarapañcakāya||
+en: He who, breathing out in many ways by his own power the power of what is to be created, runs in the sky for the deluding of man, himself the divider of beings; who under the name of time spreads out by the sacrifices all that is made of the qualities — to him, who is the five kinds of year, bring your offering.
+tel: సృజింపవలసిన శక్తిని తన శక్తిచే అనేక విధములుగా ఊర్పుచు, పురుషుని భ్రమింపజేయుటకు ఆకాశమునందు పరుగెత్తువాడు, భూతములను విభజించువాడు; కాలము అను పేరుతో, క్రతువులచే గుణమయమైనదిని విస్తరించువాడు — వత్సర పంచకమైన ఆయనకు బలిని సమర్పింపుడు.
+hi: जो सृज्य शक्ति को अपनी शक्ति से उरुधा उच्छ्वसित करते हुए, पुरुष के भ्रम के लिये दिव् में दौड़ते हैं, और भूतों के भेद हैं; जो काल नाम से क्रतुओं द्वारा गुणमय को वितत करते हैं — उन वत्सर-पञ्चक को बलि अर्पित करो।
 
 --- verse 16 ---
 deva:
@@ -150,6 +195,9 @@ iast:
 vidura uvāca
 pitṛdevamanuṣyāṇāmāyuḥ paramidaṁ smṛtam|
 pareṣāṁ gatimācakṣva ye syuḥ kalpād bahirvidaḥ||
+en: Vidura said: This has been said to be the longest life of the forefathers, the gods and men. Tell of the course of those above them, who go on beyond the kalpa and who know it.
+tel: విదురుడు పలికెను: పితృదేవతలకు, దేవతలకు, మనుష్యులకు ఇది పరమాయువు అని చెప్పబడినది. కల్పమునకు వెలుపల ఉండు, దానిని ఎరిగిన పరులైనవారి గతిని చెప్పుము.
+hi: विदुर ने कहा: पितर, देव और मनुष्यों की यह परम आयु कही गयी। जो कल्प से बाहर हैं और उसे जानते हैं, उन परों की गति कहिये।
 
 --- verse 17 ---
 deva:
@@ -158,6 +206,9 @@ deva:
 iast:
 bhagavān veda kālasya gatiṁ bhagavato nanu|
 viśvaṁ vicakṣate dhīrā yogarāddhena cakṣuṣā||
+en: You, sir, know the course of time, which belongs to the Lord; for the steadfast see the whole world with the eye that yoga has gained.
+tel: భగవంతునికి సంబంధించిన కాలము గతిని నీవు ఎరుగుదువు; ధీరులు యోగముచే సాధింపబడిన కన్నుచే విశ్వమును చూచుచున్నారు.
+hi: आप भगवान् के काल की गति जानते हैं; क्योंकि धीर लोग योग से राद्ध चक्षु से विश्व को देखते हैं।
 
 --- verse 18 ---
 deva:
@@ -168,6 +219,9 @@ iast:
 maitreya uvāca
 kṛtaṁ tretā dvāparaṁ ca kaliśceti caturyugam|
 divyairdvādaśabhirvarṣaiḥ sāvadhānaṁ nirūpitam||
+en: Maitreya said: Kṛta, Tretā, Dvāpara and Kali — this is the four-age; with its junctions it is settled as twelve thousand divine years.
+tel: మైత్రేయుడు పలికెను: కృతము, త్రేత, ద్వాపరము, కలి — ఇది చతుర్యుగము; సంధులతో కూడ పండ్రెండు వేల దివ్య సంవత్సరములు అని నిరూపింపబడినది.
+hi: मैत्रेय ने कहा: कृत, त्रेता, द्वापर और कलि — यह चतुर्युग है; अपनी सन्धियों के साथ बारह सहस्र दिव्य वर्ष निरूपित है।
 
 --- verse 19 ---
 deva:
@@ -176,6 +230,9 @@ deva:
 iast:
 catvāri trīṇi dve caikaṁ kṛtādiṣu yathākramam|
 saṁkhyātāni sahasrāṇi dviguṇāni śatāni ca||
+en: Four, three, two and one, in order, in the Kṛta and the rest — so many thousands are counted, and twice as many hundreds.
+tel: కృతము మొదలైన వానియందు వరుసగా నాలుగు, మూడు, రెండు, ఒకటి — అన్ని వేలు లెక్కింపబడినవి; వానికి రెట్టింపు నూరులు కూడ.
+hi: कृत आदि में क्रम से चार, तीन, दो और एक — इतने सहस्र संख्यात हैं, और उनसे द्विगुण शत भी।
 
 --- verse 20 ---
 deva:
@@ -184,6 +241,9 @@ deva:
 iast:
 saṁdhyāṁśayorantareṇa yaḥ kālaḥ śatasaṁkhyayoḥ|
 tamevāhuryugaṁ tajjñā yatra dharmo vidhīyate||
+en: The time which lies between the two twilight parts, each counted in hundreds, is what those who know call the yuga, in which dharma is laid down.
+tel: నూరుల లెక్క కలిగిన ఆ రెండు సంధ్యాంశములకు నడుమ ఉన్న కాలమునే, ధర్మము ఏర్పడు యుగము అని ఎరిగినవారు చెప్పుదురు.
+hi: शत-संख्यावाले दोनों सन्ध्यांशों के बीच जो काल है, उसी को जाननेवाले युग कहते हैं, जिसमें धर्म विधीयमान होता है।
 
 --- verse 21 ---
 deva:
@@ -192,6 +252,9 @@ deva:
 iast:
 dharmaścatuṣpānmanujān kṛte samanuvartate|
 sa evānyeṣvadharmeṇa vyeti pādena vardhatā||
+en: In the Kṛta, dharma with its four feet follows men fully. In the other ages it goes away a foot at a time, as unrighteousness grows.
+tel: కృతమునందు నాలుగు పాదములు కలిగిన ధర్మము మనుష్యులను పూర్తిగా అనుసరించును. ఇతర యుగములయందు అధర్మము పెరుగుచుండగా అదే ఒక్కొక్క పాదము తగ్గిపోవును.
+hi: कृत में चतुष्पाद् धर्म मनुष्यों का पूर्णतः अनुवर्तन करता है। अन्य युगों में अधर्म के बढ़ने से वही एक-एक पाद से व्येति होता है।
 
 --- verse 22 ---
 deva:
@@ -200,6 +263,9 @@ deva:
 iast:
 trilokyā yugasāhasraṁ bahirābrahmaṇo dinam|
 tāvatyeva niśā tāta yannimīlati viśvasṛk||
+en: A thousand four-ages, beyond the three worlds and reaching up to Brahmā, is his day; and the night is just as long, dear one, in which the maker of the world closes his eyes.
+tel: మూడు లోకములకు వెలుపల, బ్రహ్మ వరకు, వేయి యుగములు ఒక దినము; రాత్రియును అంతే, తాతా; అందు విశ్వమును సృజించువాడు కన్నులు మూసుకొనును.
+hi: त्रिलोकी से बाहर, ब्रह्मा तक, सहस्र युग एक दिन है; और रात भी उतनी ही है, हे तात, जिसमें विश्वस्रष्टा निमीलित होते हैं।
 
 --- verse 23 ---
 deva:
@@ -208,6 +274,9 @@ deva:
 iast:
 niśāvasāna ārabdho lokakalpo'nuvartate|
 yāvaddinaṁ bhagavato manūn bhuñjaṁścaturdaśa||
+en: At the end of the night the kalpa of the worlds begins and goes on through the day of the blessed one, as it takes in the fourteen Manus.
+tel: రాత్రి ముగియగా ఆరంభమైన లోక కల్పము, పదునాలుగు మనువులను భుజించుచు, భగవంతుని దినము అంతవరకు సాగును.
+hi: निशा के अवसान में आरब्ध लोक-कल्प, चौदह मनुओं को भुञ्जते हुए, भगवान् के दिन भर अनुवर्तन करता है।
 
 --- verse 24 ---
 deva:
@@ -218,6 +287,9 @@ iast:
 svaṁ svaṁ kālaṁ manurbhuṅkte sādhikāṁ hyekasaptatim|
 manvantareṣu manavastadvaṁśyā ṛṣayaḥ surāḥ|
 bhavanti caiva yugapatsureśāścānu ye ca tān||
+en: Each Manu takes his own time, which is a little more than seventy-one four-ages. In the manvantaras there come to be the Manus, the sages of their line, the gods, and at the same time the lords of the gods, and those who follow them.
+tel: ఒక్కొక్క మనువు తన కాలమును భుజించును; అది డెబ్బది ఒక్క యుగములకు కొంచెము అధికము. మన్వంతరములయందు మనువులు, ఆ వంశము ఋషులు, దేవతలు, ఒకేసారి దేవేంద్రులు, వారిని అనుసరించువారు కలుగుచున్నారు.
+hi: प्रत्येक मनु अपना-अपना काल भोगता है, जो इकहत्तर युगों से कुछ अधिक है। मन्वन्तरों में मनु, उनके वंश के ऋषि, देवता, और एक साथ ही सुरेश तथा उनके अनुगामी होते हैं।
 
 --- verse 25 ---
 deva:
@@ -226,6 +298,9 @@ deva:
 iast:
 eṣa dainandinaḥ sargo brāhmastrailokyavartanaḥ|
 tiryaṅ nṛpitṛdevānāṁ sambhavo yatra karmabhiḥ||
+en: This is the daily creation of Brahmā, in which the three worlds turn, and in which, by their works, animals, men, the forefathers and the gods come to be.
+tel: ఇది బ్రహ్మకు సంబంధించిన దైనందిన సర్గము; అందు మూడు లోకములు నడచును; అందు కర్మలచే తిర్యక్కులు, మనుష్యులు, పితృదేవతలు, దేవతలు కలుగుచున్నారు.
+hi: यह ब्रह्मा का दैनन्दिन सर्ग है, जिसमें त्रैलोक्य वर्तता है, और जिसमें कर्मों से तिर्यक्, नर, पितर और देवों का सम्भव होता है।
 
 --- verse 26 ---
 deva:
@@ -234,6 +309,9 @@ deva:
 iast:
 manvantareṣu bhagavān bibhratsattvaṁ svamūrtibhiḥ|
 manvādibhiridaṁ viśvamavatyuditapauruṣaḥ||
+en: In the manvantaras the blessed Lord, bearing goodness, protects this world by his own forms — the Manus and the others — his power having risen.
+tel: మన్వంతరములయందు భగవంతుడు సత్త్వమును ధరించి, మనువులు మొదలైన తన మూర్తులచే, పౌరుషము ఉదయించినవాడై ఈ విశ్వమును రక్షించుచున్నాడు.
+hi: मन्वन्तरों में भगवान् सत्त्व धारण करके, मनु आदि अपनी मूर्तियों से, उदित पौरुषवाले होकर इस विश्व का अवन करते हैं।
 
 --- verse 27 ---
 deva:
@@ -242,6 +320,9 @@ deva:
 iast:
 tamomātrāmupādāya pratisaṁruddhavikramaḥ|
 kālenānugatāśeṣa āste tūṣṇīṁ dinātyaye||
+en: Taking on a measure of darkness, his stride held back, with all things being gathered up by time, he remains silent at the ending of the day.
+tel: తమస్సు మాత్రను స్వీకరించి, విక్రమము నిరుద్ధమైనవాడై, కాలముచే అంతయు అనుగతమైనదై, దినము ముగియగా ఆయన మౌనముగా ఉండును.
+hi: तम की मात्रा ग्रहण करके, विक्रम प्रतिसंरुद्ध किये, और काल से सब कुछ अनुगत होने पर, वे दिन के अत्यय में तूष्णीं रहते हैं।
 
 --- verse 28 ---
 deva:
@@ -250,6 +331,9 @@ deva:
 iast:
 tamevānvapidhīyante lokā bhūrādayastrayaḥ|
 niśāyāmanuvṛttāyāṁ nirmuktaśaśibhāskaram||
+en: Along with him the three worlds, Bhūḥ and the rest, are covered over; and in the night that follows, the moon and the sun are gone from them.
+tel: ఆయనతో పాటు భూః మొదలైన మూడు లోకములు కప్పబడును; తరువాత వచ్చు రాత్రియందు వానికి చంద్రుడు, సూర్యుడు లేకుందురు.
+hi: उनके साथ ही भूः आदि तीन लोक अपिधीयमान होते हैं; और अनुवृत्त निशा में उनसे शशि और भास्कर निर्मुक्त हो जाते हैं।
 
 --- verse 29 ---
 deva:
@@ -258,6 +342,9 @@ deva:
 iast:
 trilokyāṁ dahyamānāyāṁ śaktyā saṅkarṣaṇāgninā|
 yāntyūṣmaṇā maharlokājjanaṁ bhṛgvādayo'rditāḥ||
+en: When the three worlds are being burnt by the fire of Saṅkarṣaṇa through his power, Bhṛgu and the others, troubled by the heat, go from Maharloka to Janaloka.
+tel: శక్తిచే సంకర్షణుని అగ్నిచే మూడు లోకములు కాలుచున్నప్పుడు, వేడిమిచే పీడింపబడిన భృగువు మొదలైనవారు మహర్లోకము నుండి జనలోకమునకు పోవుచున్నారు.
+hi: शक्ति से सङ्कर्षण की अग्नि द्वारा त्रिलोकी के दह्यमान होने पर, ऊष्मा से अर्दित भृगु आदि महर्लोक से जन को जाते हैं।
 
 --- verse 30 ---
 deva:
@@ -266,6 +353,9 @@ deva:
 iast:
 tāvattribhuvanaṁ sadyaḥ kalpāntaidhitasindhavaḥ|
 plāvayantyutkaṭāṭopacaṇḍavāteritormayaḥ||
+en: Then at once the oceans, swollen at the end of the kalpa, flood the three worlds, their waves driven by fierce winds of great uproar.
+tel: అప్పుడు వెంటనే, కల్పాంతమున పెరిగిన సముద్రములు మూడు లోకములను ముంచివేయును; గొప్ప ఆటోపము కలిగిన తీవ్రమైన గాలులచే వాని కెరటములు తరుమబడును.
+hi: तब सद्यः, कल्पान्त में एधित सिन्धु त्रिभुवन को प्लावित कर देते हैं; उत्कट आटोपवाले चण्ड वात से उनकी ऊर्मियाँ ईरित होती हैं।
 
 --- verse 31 ---
 deva:
@@ -274,6 +364,9 @@ deva:
 iast:
 antaḥ sa tasmin salila āste'nantāsano hariḥ|
 yoganidrānimīlākṣaḥ stūyamāno janālayaiḥ||
+en: Within that water Hari remains, seated upon Ananta, his eyes closed in the sleep of yoga, praised by those who dwell in Janaloka.
+tel: ఆ జలము లోపల హరి ఉండును; అనంతునిపై ఆసీనుడై, యోగనిద్రచే కన్నులు మూసుకొని, జనలోక నివాసులచే స్తుతింపబడుచు.
+hi: उस सलिल के भीतर हरि रहते हैं; अनन्त के आसन पर, योग-निद्रा से निमीलित नेत्रोंवाले, और जन-आलयों से स्तूयमान।
 
 --- verse 32 ---
 deva:
@@ -282,6 +375,9 @@ deva:
 iast:
 evaṁvidhairahorātraiḥ kālagatyopalakṣitaiḥ|
 apakṣitamivāsyāpi paramāyurvayaḥśatam||
+en: By days and nights of this kind, marked by the course of time, even his longest life, a hundred years, is as if worn away.
+tel: కాల గతిచే గుర్తింపబడిన ఇట్టి పగలు రాత్రులచే, ఆయన పరమాయువైన నూరు సంవత్సరములును క్షీణించినట్లే.
+hi: काल-गति से उपलक्षित ऐसे अहोरात्रों से, इनकी भी परम आयु, सौ वर्ष, अपक्षित के समान ही है।
 
 --- verse 33 ---
 deva:
@@ -290,6 +386,9 @@ deva:
 iast:
 yadardhamāyuṣastasya parārdhamabhidhīyate|
 pūrvaḥ parārdho'pakrānto hyaparo'dya pravartate||
+en: Half of that life is called a parārdha. The first parārdha has gone, and the second is now running.
+tel: ఆ ఆయువునందు సగమును పరార్ధము అని చెప్పుదురు. మొదటి పరార్ధము గడచినది; రెండవది ఇప్పుడు నడచుచున్నది.
+hi: उस आयु का जो अर्ध है, उसे परार्ध कहते हैं। पूर्व परार्ध अपक्रान्त हो गया, और अपर अब प्रवर्तित है।
 
 --- verse 34 ---
 deva:
@@ -298,6 +397,9 @@ deva:
 iast:
 pūrvasyādau parārdhasya brāhmo nāma mahānabhūt|
 kalpo yatrābhavadbrahmā śabdabrahmeti yaṁ viduḥ||
+en: At the beginning of the first parārdha there was the great kalpa named Brāhma, in which Brahmā came to be; him they know as the brahman that is sound.
+tel: మొదటి పరార్ధము ఆదియందు బ్రాహ్మము అను పేరు కలిగిన గొప్ప కల్పము ఉండెను; అందు బ్రహ్మ కలిగెను; ఆయననే శబ్దబ్రహ్మము అని ఎరుగుదురు.
+hi: पूर्व परार्ध के आदि में ब्राह्म नाम का महान् कल्प हुआ, जिसमें ब्रह्मा हुए; जिन्हें शब्दब्रह्म कहकर जानते हैं।
 
 --- verse 35 ---
 deva:
@@ -306,14 +408,20 @@ deva:
 iast:
 tasyaiva cānte kalpo'bhūd yaṁ pādmamabhicakṣate|
 yaddharernābhisarasa āsīllokasaroruham||
+en: And at the end of that same one there was the kalpa which they call the Pādma, in which the lotus of the worlds rose from the navel-lake of Hari.
+tel: దాని చివరను, పాద్మము అని చెప్పు కల్పము ఉండెను; అందు హరి నాభి సరస్సు నుండి లోక కమలము కలిగెను.
+hi: और उसी के अन्त में वह कल्प हुआ जिसे पाद्म कहते हैं, जिसमें हरि के नाभि-सरोवर से लोक-सरोरुह हुआ।
 
 --- verse 36 ---
 deva:
-अयं तु कथितः कल्पो द्वितीयस्यापिभारत।
+अयं तु कथितः कल्पो द्वितीयस्यापि भारत।
 वाराह इति विख्यातो यत्रासीत्सूकरो हरिः॥
 iast:
-ayaṁ tu kathitaḥ kalpo dvitīyasyāpibhārata|
+ayaṁ tu kathitaḥ kalpo dvitīyasyāpi bhārata|
 vārāha iti vikhyāto yatrāsītsūkaro hariḥ||
+en: And the kalpa now spoken of, O Bhārata, belongs to the second parārdha. It is known as the Vārāha, in which Hari became the boar.
+tel: భారతా, ఇప్పుడు చెప్పబడిన ఈ కల్పము రెండవ పరార్ధమునకు చెందినది. అది వారాహము అని ప్రసిద్ధము; అందు హరి వరాహమయ్యెను.
+hi: और हे भारत, जो यह कल्प कहा गया, वह द्वितीय परार्ध का है। वह वाराह नाम से विख्यात है, जिसमें हरि सूकर हुए।
 
 --- verse 37 ---
 deva:
@@ -322,6 +430,9 @@ deva:
 iast:
 kālo'yaṁ dviparārdhākhyo nimeṣa upacaryate|
 avyākṛtasyānantasya anāderjagadātmanaḥ||
+en: This time called the two parārdhas is reckoned as one blink of the eye for him who is unformed, endless, without beginning, the self of the world.
+tel: ద్విపరార్ధము అను పేరు కలిగిన ఈ కాలము, వ్యాకృతము కాని, అనంతుడైన, ఆది లేని, జగత్తునకు ఆత్మయైన ఆయనకు ఒక నిమేషముగా లెక్కింపబడును.
+hi: द्विपरार्ध नामक यह काल, अव्याकृत, अनन्त, अनादि और जगत् के आत्मा के लिये निमेष के रूप में उपचरित होता है।
 
 --- verse 38 ---
 deva:
@@ -330,14 +441,20 @@ deva:
 iast:
 kālo'yaṁ paramāṇvādirdviparārdhānta īśvaraḥ|
 naiveśituṁ prabhurbhūmna īśvaro dhāmamāninām||
+en: This time, which begins with the atom and ends with the two parārdhas, is the lord; yet it is not able to rule the Boundless, though it is lord of those who think the body their dwelling.
+tel: పరమాణువు మొదలై ద్విపరార్ధము వరకు ఉన్న ఈ కాలము ఈశ్వరుడు; అయినను భూమానైనవానిని శాసించుటకు దానికి శక్తి లేదు; ధామమే తమది అని తలచువారికి అది ఈశ్వరుడు.
+hi: यह काल, जो परमाणु से आरम्भ होकर द्विपरार्ध तक है, ईश्वर है; तथापि वह भूमा को ईशित करने में प्रभु नहीं है, और धाम को अपना माननेवालों का ईश्वर है।
 
 --- verse 39 ---
 deva:
 विकारैः सहितो युक्तैर्विशेषादिभिरावृतः।
-आण्डकोशोबहिरयं पञ्चाशत्कोटिविस्तृतः॥
+आण्डकोशो बहिरयं पञ्चाशत्कोटिविस्तृतः॥
 iast:
 vikāraiḥ sahito yuktairviśeṣādibhirāvṛtaḥ|
-āṇḍakośobahirayaṁ pañcāśatkoṭivistṛtaḥ||
+āṇḍakośo bahirayaṁ pañcāśatkoṭivistṛtaḥ||
+en: This shell of the egg, with its changes and all that goes with them, covered over by the particular elements and the rest, is outside; it stretches fifty crores.
+tel: వికారములతో, వానితో కూడినవానితో ఉన్న ఈ అండ కోశము, విశేషములు మొదలైన వానిచే కప్పబడినది, వెలుపల ఉన్నది; అది ఏబది కోట్ల మేర వ్యాపించినది.
+hi: विकारों और उनसे युक्त पदार्थों के साथ, और विशेष आदि से आवृत यह आण्ड-कोश बाहर है; वह पचास कोटि विस्तृत है।
 
 --- verse 40 ---
 deva:
@@ -346,6 +463,9 @@ deva:
 iast:
 daśottarādhikairyatra praviṣṭaḥ paramāṇuvat|
 lakṣyate'ntargatāścānye koṭiśo hyaṇḍarāśayaḥ||
+en: There, with the coverings each ten times greater, it has entered and is seen as if it were a single atom; and within, other masses of eggs are seen by crores.
+tel: అందు, పది రెట్లు ఎక్కువైన ఆవరణములతో ప్రవేశించినదై, అది ఒక పరమాణువువలె కనబడుచున్నది; లోపల ఉన్న ఇతర అండ రాశులు కోట్లకొలది కనబడుచున్నవి.
+hi: वहाँ, दशोत्तर अधिक आवरणों के साथ प्रविष्ट होकर, वह परमाणु के समान लक्षित होता है; और भीतर स्थित अन्य अण्ड-राशियाँ कोटिशः दीखती हैं।
 
 --- verse 41 ---
 deva:
@@ -354,9 +474,15 @@ deva:
 iast:
 tadāhurakṣaraṁ brahma sarvakāraṇakāraṇam|
 viṣṇordhāma paraṁ sākṣātpuruṣasya mahātmanaḥ||
+en: That they call the imperishable brahman, the cause of all causes, the highest abode of Viṣṇu — of the great Person himself.
+tel: దానిని అక్షర బ్రహ్మము అని, సర్వ కారణములకు కారణము అని చెప్పుదురు; అది విష్ణువు పరమ ధామము, మహాత్ముడైన పురుషునిదే.
+hi: उसे अक्षर ब्रह्म कहते हैं, और सब कारणों का कारण कहते हैं; वह विष्णु का परम धाम है, साक्षात् महात्मा पुरुष का।
 
 --- verse none ---
 deva:
 इति श्रीमद्भागवते महापुराणे पारमहंस्यां संहितायां तृतीयस्कन्धे एकादशोऽध्यायः॥ ११॥
 iast:
 iti śrīmadbhāgavate mahāpurāṇe pāramahaṁsyāṁ saṁhitāyāṁ tṛtīyaskandhe ekādaśo'dhyāyaḥ|| 11||
+en: Thus ends the eleventh adhyāya in the third skandha of the Śrīmad Bhāgavata Mahāpurāṇa, the saṁhitā of the paramahaṁsas.
+tel: ఇది శ్రీమద్భాగవత మహాపురాణమునందు, పరమహంసల సంహితయందు, తృతీయస్కంధమునందు ఏకాదశాధ్యాయము.
+hi: इस प्रकार श्रीमद्भागवत महापुराण की परमहंसों की संहिता के तृतीय स्कन्ध में ग्यारहवाँ अध्याय समाप्त हुआ।
