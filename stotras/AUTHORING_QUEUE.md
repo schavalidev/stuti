@@ -3833,7 +3833,7 @@ in Telugu script, Devanāgarī by `tel2dev.py`. Twenty-four worn words are marke
 verse carries six of them and is read through the author's tātparya. **Later the same day the rest followed:** the
 kathā, printed pp. 4–26 (90 verses, Kṛṣṇa to Yudhiṣṭhira, each with the author's Telugu tātparya kept as the
 `tel:` field), the Tuesday song, pp. 27–31 (56 stanzas, Telugu), and the Śrāvaṇa Friday song, pp. 32–33 (15
-stanzas). 196 units, 74 marked words. **Done.** What remains open is only the Maṅgaḷagaurī aṣṭottara the
-print points at and does not print. Page slices for reading: pdfimages -png, trim
+stanzas). 196 units, 74 marked words. **Done.** The Maṅgaḷagaurī aṣṭottara the print points at is now
+`devi/main/46_mangalagauri_ashtottarashatanamavali.txt` (stotranidhi, collated against Drik Panchang; 2026-10-22). Page slices for reading: pdfimages -png, trim
 250/350/200/250 px, cut into thirds at 2000 px wide.
 
