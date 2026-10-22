@@ -9,7 +9,7 @@ Type: Purāṇa (an adhyāya of the Śrīmad Bhāgavata, Skandha 6)
 
 Source / recension: Base text and authority: the Gītā Press, Gorakhpur Śrīmadbhāgavata Mahāpurāṇa with Hindi translation, Part 1 (Gītā Press code 26), archive.org item `shrimadbhagwat-mahapuran-bhag-1`, printed pages 791–800; the PDF page numbers are the printed ones. The PDF carries the typesetter's own text layer in the Chanakya font encoding, and the text was decoded from it by machine with `bin/bhagavata/chanakya.py`, not read off OCR or typed. The decoder was checked against GRETIL over all twelve skandhas before any file was written, and the differences that remain were sampled and found to be readings of the two editions. Second witness: GRETIL's `sa_bhAgavatapurANa.xml` (IAST, contributed by Ulrich Stiehl), a separate editorial lineage, compared verse by verse by machine. The TTD edition with the commentaries of Śrīdhara, Vīrarāghava and Vijayadhvaja (archive.org `Bhagavata_Purana_With_Multiple_Commentaries_TTD_Critical_Edition`) is the third witness where one is needed; it was not read for this file. The IAST was generated mechanically from the Devanāgarī with `bin/dev2iast.py`.
 
-Recension note: Text-only file, written 1 Oct 2026 at the user's instruction to lay down the whole Bhāgavata first: the English, Telugu and Hindi meanings are still to be added, and the witnesses' differences listed here have been recorded by machine and not yet adjudicated. The print is followed throughout. The print numbers 78 verses and GRETIL numbers 78. Of the 78 verses GRETIL has under the same number, 54 agree with the print letter for letter once spacing and the spelling of nasals are set aside; the rest differ: 7, 9, 12, 16, 17, 22, 28, 29, 36, 39, 42, 46, 47, 49, 50, 51, 52, 54, 55, 57, 63, 71, 73, 75. The edition's footnotes give these older printed readings (प्रा० पा०), which are not bracketed into the line: at 13, प्रह्लादं ह्लादमेव च; at 14, सती; at 16, सूर्यायां; at 22, मर्थदृक्; at 22, जयंस्तं निभृतेन तेजसा; at 37, दोऽसि यदि ब्रह्म०; at 37, हतपुत्रा; at 51, नार्द्रपादा; at 51, नापराह्वे वै नग्ना च न च; at 55, त्यभ्युपेत्या०; at 55, श्यपाद्गर्भ०; at 55, राजन्; at 56, चरद्धरिः. Spacing is the print's, as its text layer gives it; in a few places justification has left a space inside a word, and these are still to be closed when the verse is read. The speaker lines (श्रीशुक उवाच and the others) are printed in italic above the verse they introduce, and are given as its first line.
+Recension note: Meanings written 22 Oct 2026 (session S78). The differences between the witnesses listed below were read as the verses were glossed; except where this note says otherwise, each is a spelling, a sandhi or a word order of the two editions, none of them changes the sense, and the print's reading therefore stands unbracketed. The print is followed throughout. The print numbers 78 verses and GRETIL numbers 78. Of the 78 verses GRETIL has under the same number, 54 agree with the print letter for letter once spacing and the spelling of nasals are set aside; the rest differ: 7, 9, 12, 16, 17, 22, 28, 29, 36, 39, 42, 46, 47, 49, 50, 51, 52, 54, 55, 57, 63, 71, 73, 75. The edition's footnotes give these older printed readings (प्रा० पा०), which are not bracketed into the line: at 13, प्रह्लादं ह्लादमेव च; at 14, सती; at 16, सूर्यायां; at 22, मर्थदृक्; at 22, जयंस्तं निभृतेन तेजसा; at 37, दोऽसि यदि ब्रह्म०; at 37, हतपुत्रा; at 51, नार्द्रपादा; at 51, नापराह्वे वै नग्ना च न च; at 55, त्यभ्युपेत्या०; at 55, श्यपाद्गर्भ०; at 55, राजन्; at 56, चरद्धरिः. Spacing is the print's, as its text layer gives it. The speaker lines (श्रीशुक उवाच and the others) are printed in italic above the verse they introduce, and are given as its first line. A footnote's numeral keys it to one word, and which word that is cannot be told from the note alone, so those readings stay unbracketed until the page itself is read. Three lost spaces were closed as the verses were read, all of them places where the print's text layer had run two words together. At verse 10 the finite verb had been joined to the pronoun and the adverb to the noun, and they are separated here as kīrtayāmi te and yatra bhāgavataḥ; at verse 46 the relative pronoun had been joined to the particle, and it is separated here as yāni tu. GRETIL has a word boundary at each of the three places, and at each the first word carries its own ending and so cannot begin a compound. Two further readings were looked at and left as printed. At verse 45 the print spaces indrahā devabāndhavaḥ where GRETIL writes one compound, and the print's two words are followed: the son is a slayer of Indra and yet a friend of the gods. At verse 49 the print reads pibedañjalinā where GRETIL reads piben nāñjalinā, so the print allows water to be drunk from the joined palms where GRETIL forbids it, and the meanings follow the print. At verse 22 the print carries its own hyphen in bādarāyaṇi-rvaco, breaking one word across two lines, and that line structure is left as it stands.
 
 Verse count: 78, plus the closing colophon printed unnumbered.
 
@@ -24,6 +24,9 @@ iast:
 śrīśuka uvāca
 pṛśnistu patnī savituḥ sāvitrīṁ vyāhṛtiṁ trayīm|
 agnihotraṁ paśuṁ somaṁ cāturmāsyaṁ mahāmakhān||
+en: Śrī Śuka said: Pṛśni, the wife of Savitā, bore Sāvitrī, Vyāhṛti and Trayī, and also Agnihotra, Paśu, Soma, Cāturmāsya and the great sacrifices.
+tel: శ్రీశుకుడు పలికెను: సవిత పత్ని పృశ్ని సావిత్రిని, వ్యాహృతిని, త్రయిని, అగ్నిహోత్రమును, పశువును, సోమమును, చాతుర్మాస్యమును, మహాయజ్ఞములను కనెను.
+hi: श्रीशुकदेवजी ने कहा: सविता की पत्नी पृश्नि ने सावित्री, व्याहृति और त्रयी को तथा अग्निहोत्र, पशु, सोम, चातुर्मास्य और महायज्ञों को जन्म दिया।
 
 --- verse 2 ---
 deva:
@@ -32,6 +35,9 @@ deva:
 iast:
 siddhirbhagasya bhāryāṅga mahimānaṁ vibhuṁ prabhum|
 āśiṣaṁ ca varārohāṁ kanyāṁ prāsūta suvratām||
+en: Dear king, Siddhi, the wife of Bhaga, bore Mahimā, Vibhu and Prabhu, and also a daughter named Āśis, who was fair of form and firm in her vows.
+tel: రాజా, భగుని పత్ని సిద్ధి మహిమను, విభుని, ప్రభుని, మంచి రూపము కల, మంచి వ్రతము కల ఆశిస్ అను కన్యను కనెను.
+hi: हे राजन्, भग की पत्नी सिद्धि ने महिमा, विभु और प्रभु को तथा आशिस् नाम की एक कन्या को जन्म दिया, जो सुन्दर रूपवाली और उत्तम व्रतवाली थी।
 
 --- verse 3 ---
 deva:
@@ -40,6 +46,9 @@ deva:
 iast:
 dhātuḥ kuhūḥ sinīvālī rākā cānumatistathā|
 sāyaṁ darśamatha prātaḥ pūrṇamāsamanukramāt||
+en: Kuhū, Sinīvālī, Rākā and Anumati were the wives of Dhātā. They bore, in order, Sāyam, Darśa, Prātaḥ and Pūrṇamāsa.
+tel: ధాతకు కుహూ, సినీవాలి, రాక, అనుమతి అను పత్నులు ఉండిరి. వారు వరుసగా సాయమును, దర్శమును, ప్రాతస్సును, పూర్ణమాసమును కనిరి.
+hi: कुहू, सिनीवाली, राका और अनुमति धाता की पत्नियाँ थीं। उन्होंने क्रम से सायं, दर्श, प्रातः और पूर्णमास को जन्म दिया।
 
 --- verse 4 ---
 deva:
@@ -48,6 +57,9 @@ deva:
 iast:
 agnīn purīṣyānādhatta kriyāyāṁ samanantaraḥ|
 carṣaṇī varuṇasyāsīdyasyāṁ jāto bhṛguḥ punaḥ||
+en: The next one, Vidhātā, begot in Kriyā the fires called the Purīṣyas. Carṣaṇī was the wife of Varuṇa, and from her Bhṛgu was born again.
+tel: తరువాతివాడైన విధాత క్రియయందు పురీష్యులను అగ్నులను పుట్టించెను. చర్షణి వరుణుని పత్ని; ఆమెయందు భృగువు మరల జన్మించెను.
+hi: इनके बाद विधाता ने क्रिया के गर्भ से पुरीष्य नामक अग्नियों को उत्पन्न किया। चर्षणी वरुण की पत्नी थी, और उससे भृगु का पुनः जन्म हुआ।
 
 --- verse 5 ---
 deva:
@@ -56,6 +68,9 @@ deva:
 iast:
 vālmīkiśca mahāyogī valmīkādabhavatkila|
 agastyaśca vasiṣṭhaśca mitrāvaruṇayorṛṣī||
+en: And the great yogī Vālmīki, it is said, was born from an ant-hill. Agastya and Vasiṣṭha were the two sages born of Mitra and Varuṇa.
+tel: మహాయోగి వాల్మీకి వల్మీకమునుండి పుట్టెనని చెప్పుదురు. అగస్త్యుడు, వసిష్ఠుడు మిత్రావరుణులకు కలిగిన ఇద్దరు ఋషులు.
+hi: और महायोगी वाल्मीकि वल्मीक से उत्पन्न हुए, ऐसा कहा जाता है। अगस्त्य और वसिष्ठ मित्र तथा वरुण के दो ऋषि पुत्र थे।
 
 --- verse 6 ---
 deva:
@@ -64,6 +79,9 @@ deva:
 iast:
 retaḥ siṣicatuḥ kumbhe urvaśyāḥ sannidhau drutam|
 revatyāṁ mitra utsargamariṣṭaṁ pippalaṁ vyadhāt||
+en: In the presence of Urvaśī the seed of those two flowed, and they quickly poured it into a pot. Mitra begot in Revatī the sons Utsarga, Ariṣṭa and Pippala.
+tel: ఊర్వశి సన్నిధిలో ఆ ఇద్దరి రేతస్సు స్కలించెను; దానిని వారు వేగముగా కుంభమునందు పోసిరి. మిత్రుడు రేవతియందు ఉత్సర్గుని, అరిష్టుని, పిప్పలుని పుట్టించెను.
+hi: उर्वशी के सामने उन दोनों का रेतस् स्कलित हुआ, और उसे उन्होंने शीघ्र ही कुम्भ में डाल दिया। मित्र ने रेवती के गर्भ से उत्सर्ग, अरिष्ट और पिप्पल को उत्पन्न किया।
 
 --- verse 7 ---
 deva:
@@ -72,6 +90,9 @@ deva:
 iast:
 paulomyāmindra ādhatta trīn putrāniti naḥ śrutam|
 jayantamṛṣabhaṁ tāta tṛtīyaṁ mīḍhuṣaṁ prabhuḥ||
+en: Dear child, we have heard that lord Indra begot three sons in Paulomī: Jayanta, Ṛṣabha, and Mīḍhuṣa as the third.
+tel: నాయనా, ప్రభువైన ఇంద్రుడు పౌలోమియందు జయంతుని, ఋషభుని, మూడవవాడైన మీఢుషుని అను మూడు పుత్రులను పుట్టించెనని మేము వినియున్నాము.
+hi: हे तात, प्रभु इन्द्र ने पौलोमी के गर्भ से जयन्त, ऋषभ और तीसरे मीढुष - ये तीन पुत्र उत्पन्न किये, ऐसा हमने सुना है।
 
 --- verse 8 ---
 deva:
@@ -80,6 +101,9 @@ deva:
 iast:
 urukramasya devasya māyāvāmanarūpiṇaḥ|
 kīrtau patnyāṁ bṛhacchlokastasyāsan saubhagādayaḥ||
+en: Of the lord Urukrama, who by his māyā took the form of Vāmana, a son Bṛhacchloka was born of his wife Kīrti, and of Bṛhacchloka were born Saubhaga and the rest.
+tel: మాయచే వామనరూపమును ధరించిన ఉరుక్రమ దేవునికి కీర్తి అను పత్నియందు బృహచ్ఛ్లోకుడు కలిగెను; అతనికి సౌభగుడు మొదలైనవారు కలిగిరి.
+hi: माया से वामन रूप धारण करनेवाले उरुक्रम देव के कीर्ति नामक पत्नी से बृहच्छ्लोक हुए, और उनके सौभग आदि पुत्र हुए।
 
 --- verse 9 ---
 deva:
@@ -88,14 +112,20 @@ deva:
 iast:
 tatkarmaguṇavīryāṇi kāśyapasya mahātmanaḥ|
 paścādvakṣyāmahe'dityāṁ yathā vāvatatāra ha||
+en: The deeds, the qualities and the valour of that great soul, the son of Kaśyapa, and how he descended in Aditi, we shall tell later.
+tel: కశ్యపుని కుమారుడైన ఆ మహాత్ముని కర్మములను, గుణములను, వీర్యమును, ఆయన అదితియందు ఎట్లు అవతరించెనో, తరువాత చెప్పుదుము.
+hi: उस महात्मा कश्यप-पुत्र के कर्म, गुण और वीर्य, तथा वे अदिति के गर्भ से किस प्रकार अवतीर्ण हुए, यह आगे कहेंगे।
 
 --- verse 10 ---
 deva:
-अथ कश्यपदायादान् दैतेयान् कीर्तयामिते।
-यत्रभागवतः श्रीमान् प्रह्रादो बलिरेव च॥
+अथ कश्यपदायादान् दैतेयान् कीर्तयामि ते।
+यत्र भागवतः श्रीमान् प्रह्रादो बलिरेव च॥
 iast:
-atha kaśyapadāyādān daiteyān kīrtayāmite|
-yatrabhāgavataḥ śrīmān prahrādo balireva ca||
+atha kaśyapadāyādān daiteyān kīrtayāmi te|
+yatra bhāgavataḥ śrīmān prahrādo balireva ca||
+en: Now I shall tell you of the sons of Kaśyapa by Diti, among whom were the glorious Prahrāda, a devotee of the Lord, and Bali.
+tel: ఇప్పుడు కశ్యపునికి దితియందు కలిగిన దైతేయులను నీకు చెప్పుదును. వారిలో భగవద్భక్తుడైన శ్రీమంతుడు ప్రహ్రాదుడు, బలి ఉన్నారు.
+hi: अब मैं तुमसे कश्यप के दैत्य पुत्रों का वर्णन करता हूँ, जिनमें भगवान् के भक्त श्रीमान् प्रह्राद और बलि हुए।
 
 --- verse 11 ---
 deva:
@@ -104,6 +134,9 @@ deva:
 iast:
 diterdvāveva dāyādau daityadānavavanditau|
 hiraṇyakaśipurnāma hiraṇyākṣaśca kīrtitau||
+en: Diti had only two sons, honoured by the Daityas and the Dānavas. They are named Hiraṇyakaśipu and Hiraṇyākṣa.
+tel: దితికి ఇద్దరే పుత్రులు కలిగిరి; వారు దైత్యులచే, దానవులచే పూజింపబడిరి. వారు హిరణ్యకశిపుడు, హిరణ్యాక్షుడు అని చెప్పబడిరి.
+hi: दिति के केवल दो ही पुत्र हुए, जो दैत्यों और दानवों से वन्दित थे। वे हिरण्यकशिपु और हिरण्याक्ष नाम से कहे गये हैं।
 
 --- verse 12 ---
 deva:
@@ -112,6 +145,9 @@ deva:
 iast:
 hiraṇyakaśiporbhāryā kayādhurnāma dānavī|
 jambhasya tanayā dattā suṣuve caturaḥ sutān||
+en: The wife of Hiraṇyakaśipu was a Dānava woman named Kayādhu, the daughter of Jambha, who had been given to him. She bore four sons.
+tel: హిరణ్యకశిపుని భార్య కయాధువు అను దానవ స్త్రీ; ఆమె జంభుని కుమార్తె, అతనికి ఇవ్వబడినది. ఆమె నలుగురు పుత్రులను కనెను.
+hi: हिरण्यकशिपु की भार्या कयाधु नाम की दानवी थी, जो जम्भ की पुत्री थी और उसे दी गयी थी। उसने चार पुत्रों को जन्म दिया।
 
 --- verse 13 ---
 deva:
@@ -120,6 +156,9 @@ deva:
 iast:
 saṁhrādaṁ prāganuhrādaṁ hrādaṁ prahrādameva ca|
 tatsvasā siṁhikā nāma rāhuṁ vipracito'grahīt||
+en: They were Saṁhrāda first, then Anuhrāda, Hrāda and Prahrāda. Their sister, named Siṁhikā, conceived Rāhu by Vipracit.
+tel: మొదట సంహ్రాదుడు, తరువాత అనుహ్రాదుడు, హ్రాదుడు, ప్రహ్రాదుడు. వారి సోదరి సింహిక అను పేరు కలది; ఆమె విప్రచిత్తువలన రాహువును పొందెను.
+hi: पहले संह्राद, फिर अनुह्राद, ह्राद और प्रह्राद। उनकी बहिन सिंहिका नाम की थी; उसने विप्रचित् से राहु को प्राप्त किया।
 
 --- verse 14 ---
 deva:
@@ -128,6 +167,9 @@ deva:
 iast:
 śiro'haradyasya hariścakreṇa pibato'mṛtam|
 saṁhrādasya kṛtirbhāryāsūta pañcajanaṁ tataḥ||
+en: It was the head of that Rāhu that Hari cut off with his discus as he was drinking the nectar. Then Kṛti, the wife of Saṁhrāda, bore Pañcajana.
+tel: అమృతమును త్రాగుచున్న ఆ రాహువు శిరమును హరి చక్రముతో ఖండించెను. తరువాత సంహ్రాదుని భార్య కృతి పంచజనుని కనెను.
+hi: अमृत पीते हुए उस राहु का सिर श्रीहरि ने चक्र से काट दिया। उसके बाद संह्राद की भार्या कृति ने पञ्चजन को जन्म दिया।
 
 --- verse 15 ---
 deva:
@@ -136,6 +178,9 @@ deva:
 iast:
 hrādasya dhamanirbhāryāsūta vātāpimilvalam|
 yo'gastyāya tvatithaye pece vātāpimilvalaḥ||
+en: Dhamani, the wife of Hrāda, bore Vātāpi and Ilvala. It was this Ilvala who cooked Vātāpi for Agastya when Agastya came to him as a guest.
+tel: హ్రాదుని భార్య ధమని వాతాపిని, ఇల్వలుని కనెను. అతిథిగా వచ్చిన అగస్త్యునికై ఈ ఇల్వలుడే వాతాపిని వండెను.
+hi: ह्राद की भार्या धमनि ने वातापि और इल्वल को जन्म दिया। अतिथि के रूप में आये अगस्त्य के लिये इस इल्वल ने ही वातापि को पकाया था।
 
 --- verse 16 ---
 deva:
@@ -144,6 +189,9 @@ deva:
 iast:
 anuhrādasya sūrmyāyāṁ bāṣkalo mahiṣastathā|
 virocanastu prāhrādirdevyāstasyābhavadbaliḥ||
+en: Of Anuhrāda, by Sūrmī, were born Bāṣkala and Mahiṣa. Virocana was the son of Prahrāda, and to Virocana, by Devī, Bali was born.
+tel: అనుహ్రాదునికి సూర్మియందు బాష్కలుడు, మహిషుడు కలిగిరి. విరోచనుడు ప్రహ్రాదుని కుమారుడు; అతనికి దేవియందు బలి జన్మించెను.
+hi: अनुह्राद के सूर्मी से बाष्कल और महिष हुए। विरोचन प्रह्राद का पुत्र था, और उसके देवी नामक पत्नी से बलि का जन्म हुआ।
 
 --- verse 17 ---
 deva:
@@ -152,6 +200,9 @@ deva:
 iast:
 bāṇajyeṣṭhaṁ putraśatamaśanāyāṁ tato'bhavat|
 tasyānubhāvaḥ suślokyaḥ paścādevābhidhāsyate||
+en: To Bali, by Aśanā, were born a hundred sons, of whom Bāṇa was the eldest. The greatness of Bali is worthy of praise, and it will be told later.
+tel: బలికి అశనయందు బాణుడు మొదలైన నూరు పుత్రులు కలిగిరి. బలి ప్రభావము కీర్తింపదగినది; అది తరువాత చెప్పబడును.
+hi: बलि के अशना से बाण आदि सौ पुत्र हुए। बलि का प्रभाव प्रशंसा के योग्य है, और उसका वर्णन आगे किया जायगा।
 
 --- verse 18 ---
 deva:
@@ -160,6 +211,9 @@ deva:
 iast:
 bāṇa ārādhya giriśaṁ lebhe tadgaṇamukhyatām|
 yatpārśve bhagavānāste hyadyāpi purapālakaḥ||
+en: Bāṇa worshipped Giriśa and obtained the chief place among his attendants. Even to this day the Lord stays at his side as the guardian of his city.
+tel: బాణుడు గిరీశుని ఆరాధించి ఆయన గణములలో ముఖ్యత్వమును పొందెను. నేటికి కూడ భగవంతుడు అతని ప్రక్కనే ఉండి ఆ పురమును కాపాడుచున్నాడు.
+hi: बाण ने गिरीश की आराधना करके उनके गणों में मुख्यता प्राप्त की। आज भी भगवान् उसके पास रहकर उसके नगर के रक्षक बने हुए हैं।
 
 --- verse 19 ---
 deva:
@@ -168,6 +222,9 @@ deva:
 iast:
 marutaśca diteḥ putrāścatvāriṁśannavādhikāḥ|
 ta āsannaprajāḥ sarve nītā indreṇa sātmatām||
+en: The Maruts also were sons of Diti, forty-nine in number. All of them were without children, and Indra brought them to oneness with himself.
+tel: మరుత్తులు కూడ దితి పుత్రులు; వారు నలుబది తొమ్మిది మంది. వారందరు సంతానము లేనివారు; ఇంద్రుడు వారిని తనతో ఒకటిగా చేసికొనెను.
+hi: मरुत् भी दिति के पुत्र थे, जो उनचास थे। वे सब सन्तानहीन थे, और इन्द्र ने उन्हें अपने साथ एकता को प्राप्त कराया।
 
 --- verse 20 ---
 deva:
@@ -178,6 +235,9 @@ iast:
 rājovāca
 kathaṁ ta āsuraṁ bhāvamapohyautpattikaṁ guro|
 indreṇa prāpitāḥ sātmyaṁ kiṁ tatsādhu kṛtaṁ hi taiḥ||
+en: The king said: O teacher, how did they cast off the demoniac nature that was theirs from birth? How were they brought by Indra to oneness with him? What good deed had they done?
+tel: రాజు పలికెను: గురుదేవా, పుట్టుకతో వచ్చిన ఆసుర భావమును వారు ఎట్లు విడిచిరి? ఇంద్రుడు వారిని తనతో సాత్మ్యమును ఎట్లు పొందించెను? వారు చేసిన ఆ సాధు కర్మము ఏది?
+hi: राजा ने कहा: हे गुरो, जन्म से प्राप्त आसुर भाव को उन्होंने कैसे छोड़ दिया? इन्द्र ने उन्हें अपने साथ सात्म्य कैसे प्राप्त कराया? उनका वह कौन सा साधु कर्म था?
 
 --- verse 21 ---
 deva:
@@ -186,6 +246,9 @@ deva:
 iast:
 ime śraddadhate brahmannṛṣayo hi mayā saha|
 parijñānāya bhagavaṁstanno vyākhyātumarhasi||
+en: O brāhmaṇa, these sages, along with me, have faith in this. O lord, you should explain it to us, so that we may know it fully.
+tel: ఓ బ్రహ్మన్, ఈ ఋషులు నాతో కూడి ఇందు శ్రద్ధ కలిగియున్నారు. ఓ భగవంతుడా, పూర్ణముగా తెలిసికొనుటకై దానిని మాకు వివరింపవలెను.
+hi: हे ब्रह्मन्, ये ऋषि मेरे साथ इसमें श्रद्धा रखते हैं। हे भगवन्, पूरी जानकारी के लिये आप हमें इसका व्याख्यान कीजिये।
 
 --- verse 22 ---
 deva:
@@ -200,6 +263,9 @@ tadviṣṇurātasya sa bādarāyaṇi-
 rvaco niśamyādṛtamalpamarthavat|
 sabhājayansaṁnibhṛtena cetasā
 jagāda satrāyaṇa sarvadarśanaḥ||
+en: Sūta said: O Satrāyaṇa, the son of Bādarāyaṇa, who sees all things, heard these words of Viṣṇurāta, which were respectful, few and full of meaning. He praised them and then spoke with a composed mind.
+tel: సూతుడు పలికెను: ఓ సత్రాయణా, ఆదరముతో కూడిన, కొలది మాటలలో అర్థము కల విష్ణురాతుని ఆ వచనమును సర్వదర్శి యైన బాదరాయణి విని, దానిని మెచ్చుకొని, నిభృతమైన చిత్తముతో పలికెను.
+hi: सूतजी ने कहा: हे सत्रायण, आदरयुक्त, थोड़े और अर्थयुक्त विष्णुरात के उस वचन को सुनकर सर्वदर्शी बादरायणि ने उसकी प्रशंसा की और स्थिर चित्त से कहा।
 
 --- verse 23 ---
 deva:
@@ -210,6 +276,9 @@ iast:
 śrīśuka uvāca
 hataputrā ditiḥ śakrapārṣṇigrāheṇa viṣṇunā|
 manyunā śokadīptena jvalantī paryacintayat||
+en: Śrī Śuka said: The sons of Diti had been killed by Viṣṇu, who stood as the ally of Śakra. Burning with anger that grief had kindled, she thought in this way.
+tel: శ్రీశుకుడు పలికెను: శక్రునికి పార్ష్ణిగ్రాహుడైన విష్ణువుచే దితి పుత్రులు చంపబడిరి. శోకముచే రగిలిన క్రోధముతో మండుచు ఆమె ఇట్లు ఆలోచించెను.
+hi: श्रीशुकदेवजी ने कहा: शक्र के सहायक विष्णु के द्वारा दिति के पुत्र मारे गये थे। शोक से प्रज्वलित क्रोध से जलती हुई वह इस प्रकार सोचने लगी।
 
 --- verse 24 ---
 deva:
@@ -218,6 +287,9 @@ deva:
 iast:
 kadā nu bhrātṛhantāramindriyārāmamulbaṇam|
 aklinnahṛdayaṁ pāpaṁ ghātayitvā śaye sukham||
+en: When shall I have this slayer of his own brothers killed and sleep in peace? He is cruel, he delights in the senses, his heart is never softened, and he is a sinner.
+tel: తన సోదరులను చంపినవాడు, క్రూరుడు, ఇంద్రియములయందు రమించువాడు, కరుగని హృదయము కలవాడు, పాపి అగు అతనిని చంపించి నేను ఎప్పుడు సుఖముగా నిద్రించెదను?
+hi: अपने भाइयों का वध करनेवाला, उग्र, इन्द्रियों में रमनेवाला, कठोर हृदयवाला वह पापी - उसे मरवाकर मैं कब सुख से सोऊँगी?
 
 --- verse 25 ---
 deva:
@@ -226,6 +298,9 @@ deva:
 iast:
 kṛmiviḍbhasmasaṁjñā''sīdyasyeśābhihitasya ca|
 bhūtadhruk tatkṛte svārthaṁ kiṁ veda nirayo yataḥ||
+en: The body of one who is spoken of even as a lord comes at last to be called worms, or dung, or ashes. One who harms living beings for the sake of that body does not know his own good, for from such a deed comes hell.
+tel: ప్రభువు అని చెప్పబడినవాని శరీరము కూడ తుదకు క్రిములు, విష్ఠ, భస్మము అను పేరు పొందును. ఆ శరీరము కొఱకు ప్రాణులకు ద్రోహము చేయువాడు తన హితమును ఏమి తెలియును? దానినుండి నరకమే కలుగును.
+hi: जिसे ईश कहा जाता है, उसका शरीर भी अन्त में कृमि, विष्ठा या भस्म नाम पाता है। उस शरीर के लिये जो प्राणियों से द्रोह करता है, वह अपने हित को क्या जानता है? क्योंकि उससे नरक ही मिलता है।
 
 --- verse 26 ---
 deva:
@@ -234,6 +309,9 @@ deva:
 iast:
 āśāsānasya tasyedaṁ dhruvamunnaddhacetasaḥ|
 madaśoṣaka indrasya bhūyādyena suto hi me||
+en: This Indra hopes for enjoyment, his mind is swollen with pride, and he holds his place to be lasting. May I have a son by whom his pride is dried up.
+tel: ఈ ఇంద్రుడు భోగమును ఆశించుచున్నాడు; అతని చిత్తము గర్వముతో ఉబ్బినది; తన స్థానము శాశ్వతమని ఎంచుచున్నాడు. అతని మదమును ఎవడు ఎండగట్టునో అట్టి పుత్రుడు నాకు కలుగును గాక.
+hi: यह इन्द्र भोग की आशा करता है, उसका चित्त घमंड से भरा है, और वह अपने इस पद को स्थिर मानता है। मुझे ऐसा पुत्र हो जो उसके मद को सुखा दे।
 
 --- verse 27 ---
 deva:
@@ -242,6 +320,9 @@ deva:
 iast:
 iti bhāvena sā bharturācacārāsakṛtpriyam|
 śuśrūṣayānurāgeṇa praśrayeṇa damena ca||
+en: With this intention she did again and again what pleased her husband, with service, with love, with humility and with self-restraint.
+tel: ఈ భావముతో ఆమె సేవచే, అనురాగముచే, వినయముచే, దమముచే భర్తకు ప్రియమైనదానిని మాటిమాటికి చేసెను.
+hi: इस भाव से उसने सेवा, अनुराग, विनय और दम के द्वारा अपने पति का प्रिय बारम्बार किया।
 
 --- verse 28 ---
 deva:
@@ -250,6 +331,9 @@ deva:
 iast:
 bhaktyā paramayā rājan manojñairvalgubhāṣitaiḥ|
 mano jagrāha bhāvajñā susmitāpāṅgavīkṣaṇaiḥ||
+en: O king, she knew his mind, and with the highest devotion, with pleasing and sweet words, with gentle smiles and with sidelong glances, she won his heart.
+tel: రాజా, ఆమె అతని భావమును ఎఱిగినది; పరమ భక్తిచే, మనోజ్ఞములైన మంచి మాటలచే, చిరునవ్వుతో కూడిన కడగంటి చూపులచే అతని మనస్సును వశము చేసికొనెను.
+hi: हे राजन्, वह उसके भाव को जानती थी; परम भक्ति से, मनोहर और मीठे वचनों से, मन्द स्मित और कटाक्ष से उसने उसका मन हर लिया।
 
 --- verse 29 ---
 deva:
@@ -258,6 +342,9 @@ deva:
 iast:
 evaṁ striyā jaḍībhūto vidvānapi vidagdhayā|
 bāḍhamityāha vivaśo na taccitraṁ hi yoṣiti||
+en: Thus made dull by that clever woman, the learned sage lost his own will and said, "So be it." In a woman this is no wonder.
+tel: ఇట్లు ఆ నేర్పరియైన స్త్రీచే మొద్దుబారిన ఆ విద్వాంసుడు వశము కోల్పోయి "సరే" అని పలికెను. స్త్రీయందు ఇది ఆశ్చర్యము కాదు.
+hi: इस प्रकार उस चतुर स्त्री के द्वारा जड़ बना दिये गये वे विद्वान् विवश होकर "ऐसा ही हो" बोले। स्त्री के विषय में यह आश्चर्य नहीं है।
 
 --- verse 30 ---
 deva:
@@ -266,6 +353,9 @@ deva:
 iast:
 vilokyaikāntabhūtāni bhūtānyādau prajāpatiḥ|
 striyaṁ cakre svadehārdhaṁ yayā puṁsāṁ matirhṛtā||
+en: In the beginning Prajāpati saw that the creatures were alone, and so he made woman out of half of his own body. It is she by whom the minds of men are carried away.
+tel: మొదట ప్రజాపతి ప్రాణులు ఒంటరిగా ఉండుటను చూచి, తన దేహములో సగముగా స్త్రీని సృష్టించెను. ఆమెచేతనే పురుషుల బుద్ధి హరింపబడుచున్నది.
+hi: आदि में प्रजापति ने प्राणियों को एकान्त देखकर अपने शरीर के आधे भाग से स्त्री को बनाया। उसी के द्वारा पुरुषों की बुद्धि हर ली जाती है।
 
 --- verse 31 ---
 deva:
@@ -274,6 +364,9 @@ deva:
 iast:
 evaṁ śuśrūṣitastāta bhagavān kaśyapaḥ striyā|
 prahasya paramaprīto ditimāhābhinandya ca||
+en: Dear child, served in this way by his wife, the venerable Kaśyapa was greatly pleased. He smiled, praised Diti and spoke to her.
+tel: నాయనా, ఇట్లు స్త్రీచే సేవింపబడిన భగవంతుడైన కశ్యపుడు మిక్కిలి ప్రీతి చెందెను. అతడు నవ్వి, దితిని అభినందించి, ఆమెతో పలికెను.
+hi: हे तात, इस प्रकार स्त्री के द्वारा सेवा किये गये भगवान् कश्यप अत्यन्त प्रसन्न हुए। वे हँसकर दिति का अभिनन्दन करके उससे बोले।
 
 --- verse 32 ---
 deva:
@@ -284,6 +377,9 @@ iast:
 kaśyapa uvāca
 varaṁ varaya vāmoru prītaste'hamanindite|
 striyā bhartari suprīte kaḥ kāma iha cāgamaḥ||
+en: Kaśyapa said: O fair one, ask for a boon. O blameless lady, I am pleased with you. When the husband is well pleased, what desire of a woman remains out of reach?
+tel: కశ్యపుడు పలికెను: సుందరమైన ఊరువులు కలదానా, వరమును కోరుము. ఓ అనిందితా, నేను నీయందు ప్రీతి చెందితిని. భర్త మిక్కిలి ప్రసన్నుడైనపుడు స్త్రీకి దొరకని కోరిక ఏది?
+hi: कश्यप ने कहा: हे सुन्दरी, वर माँगो। हे अनिन्दिते, मैं तुमसे प्रसन्न हूँ। पति के अत्यन्त प्रसन्न होने पर स्त्री के लिये कौन सी कामना दुर्लभ रहती है?
 
 --- verse 33 ---
 deva:
@@ -292,6 +388,9 @@ deva:
 iast:
 patireva hi nārīṇāṁ daivataṁ paramaṁ smṛtam|
 mānasaḥ sarvabhūtānāṁ vāsudevaḥ śriyaḥ patiḥ||
+en: For women the husband is indeed held to be the highest deity. Vāsudeva, the lord of Śrī, dwells in the hearts of all beings.
+tel: స్త్రీలకు భర్తయే పరమ దైవమని చెప్పబడినది. శ్రీపతి యైన వాసుదేవుడు సర్వ ప్రాణుల హృదయములలో ఉండువాడు.
+hi: स्त्रियों के लिये पति ही परम देवता माना गया है। श्री के पति वासुदेव समस्त प्राणियों के हृदय में रहते हैं।
 
 --- verse 34 ---
 deva:
@@ -300,6 +399,9 @@ deva:
 iast:
 sa eva devatāliṅgairnāmarūpavikalpitaiḥ|
 ijyate bhagavān pumbhiḥ strībhiśca patirūpadhṛk||
+en: He alone, the blessed Lord, is worshipped by men through the emblems of the gods, which are distinguished by name and by form, and by women in the form of the husband.
+tel: ఆ భగవంతుడే నామరూపములచే వేఱువేఱుగా కల్పింపబడిన దేవతా లింగములద్వారా పురుషులచే పూజింపబడుచున్నాడు; స్త్రీలచే పతి రూపమును ధరించి పూజింపబడుచున్నాడు.
+hi: वही भगवान् नाम और रूप से भिन्न-भिन्न किये गये देवता-लिङ्गों के द्वारा पुरुषों से पूजे जाते हैं, और स्त्रियों से पति के रूप में पूजे जाते हैं।
 
 --- verse 35 ---
 deva:
@@ -308,6 +410,9 @@ deva:
 iast:
 tasmātpativratā nāryaḥ śreyaskāmāḥ sumadhyame|
 yajante'nanyabhāvena patimātmānamīśvaram||
+en: Therefore, O slender one, women who are devoted to their husbands and who desire what is good worship the husband with undivided mind, as their own self and as the Lord.
+tel: కావున ఓ సుమధ్యమా, శ్రేయమును కోరు పతివ్రతలైన స్త్రీలు భర్తను తమ ఆత్మగా, ఈశ్వరునిగా అనన్య భావముతో పూజించుచున్నారు.
+hi: इसलिये हे सुमध्यमे, कल्याण की इच्छा करनेवाली पतिव्रता स्त्रियाँ पति को अपना आत्मा और ईश्वर मानकर अनन्य भाव से पूजती हैं।
 
 --- verse 36 ---
 deva:
@@ -316,6 +421,9 @@ deva:
 iast:
 so'haṁ tvayārcito bhadre īdṛgbhāvena bhaktitaḥ|
 tatte sampādaye kāmamasatīnāṁ sudurlabham||
+en: O gentle lady, I have been worshipped by you with such a mind and with devotion. Therefore I shall fulfil that desire of yours, which is very hard for unchaste women to obtain.
+tel: ఓ భద్రా, ఇట్టి భావముతో, భక్తితో నీవు నన్ను ఆరాధించితివి. కావున అసతులకు మిక్కిలి దుర్లభమైన ఆ నీ కోరికను నేను తీర్చెదను.
+hi: हे भद्रे, ऐसे भाव से और भक्ति से तुमने मेरी पूजा की है। इसलिये असतियों के लिये अत्यन्त दुर्लभ उस तुम्हारी कामना को मैं पूरी करूँगा।
 
 --- verse 37 ---
 deva:
@@ -326,6 +434,9 @@ iast:
 ditiruvāca
 varado yadi me brahman putramindrahaṇaṁ vṛṇe|
 amṛtyuṁ mṛtaputrāhaṁ yena me ghātitau sutau||
+en: Diti said: O brāhmaṇa, if you are a giver of boons to me, then I ask for a son who will slay Indra and who cannot be killed. My sons are dead, for by Indra my two sons were made to be killed.
+tel: దితి పలికెను: ఓ బ్రహ్మన్, నీవు నాకు వరదుడవైతే, ఇంద్రుని చంపువాడు, మృత్యువు లేనివాడు అగు పుత్రుని కోరుచున్నాను. నా పుత్రులు చనిపోయిరి; అతనిచేతనే నా ఇద్దరు కుమారులు చంపబడిరి.
+hi: दिति ने कहा: हे ब्रह्मन्, यदि आप मुझे वर देनेवाले हैं, तो मैं ऐसा पुत्र माँगती हूँ जो इन्द्र का वध करे और जिसकी मृत्यु न हो। मेरे पुत्र मर गये हैं; उसी के द्वारा मेरे दोनों पुत्र मरवाये गये।
 
 --- verse 38 ---
 deva:
@@ -334,6 +445,9 @@ deva:
 iast:
 niśamya tadvaco vipro vimanāḥ paryatapyata|
 aho adharmaḥ sumahānadya me samupasthitaḥ||
+en: Hearing those words, the brāhmaṇa became downcast and grieved. "Alas, a very great sin has come upon me today.
+tel: ఆ మాటను విని ఆ బ్రాహ్మణుడు విమనస్కుడై పరితపించెను. "అయ్యో, ఈ రోజు నాకు మిక్కిలి గొప్ప అధర్మము వచ్చినది.
+hi: उस वचन को सुनकर वे ब्राह्मण उदास होकर सन्ताप करने लगे। "हाय, आज मुझ पर बहुत बड़ा अधर्म आ पड़ा है।
 
 --- verse 39 ---
 deva:
@@ -342,6 +456,9 @@ deva:
 iast:
 aho adyendriyārāmo yoṣinmayyeha māyayā|
 gṛhītacetāḥ kṛpaṇaḥ patiṣye narake dhruvam||
+en: Alas, today I have become one who delights in the senses. Here my mind has been seized by māyā in the form of woman. Wretched as I am, I shall surely fall into hell."
+tel: అయ్యో, ఈ రోజు నేను ఇంద్రియారాముడనైతిని. యోషిద్రూపమైన మాయచే ఇక్కడ నా చిత్తము పట్టుకొనబడినది. కృపణుడనైన నేను నిశ్చయముగా నరకమున పడెదను."
+hi: हाय, आज मैं इन्द्रियों में रमनेवाला हो गया। यहाँ स्त्री रूप माया से मेरा चित्त पकड़ लिया गया। मैं कृपण निश्चय ही नरक में गिरूँगा।"
 
 --- verse 40 ---
 deva:
@@ -350,6 +467,9 @@ deva:
 iast:
 ko'tikramo'nuvartantyāḥ svabhāvamiha yoṣitaḥ|
 dhiṅ māṁ batābudhaṁ svārthe yadahaṁ tvajitendriyaḥ||
+en: What fault is there in this woman, who only follows her own nature? Shame on me, who do not know my own good and who have not conquered my senses.
+tel: ఇక్కడ తన స్వభావమును అనుసరించు ఈ స్త్రీకి ఏ అపరాధము? తన హితమును ఎఱుగని, ఇంద్రియములను జయించని నాకు ధిక్కారము.
+hi: अपने स्वभाव का अनुसरण करनेवाली इस स्त्री का यहाँ क्या अपराध है? अपने हित को न जाननेवाले और इन्द्रियों को न जीतनेवाले मुझे धिक्कार है।
 
 --- verse 41 ---
 deva:
@@ -358,6 +478,9 @@ deva:
 iast:
 śaratpadmotsavaṁ vaktraṁ vacaśca śravaṇāmṛtam|
 hṛdayaṁ kṣuradhārābhaṁ strīṇāṁ ko veda ceṣṭitam||
+en: Their face is a festival like the autumn lotus, and their speech is nectar to the ear, but their heart is like the edge of a razor. Who can know the ways of women?
+tel: వారి ముఖము శరత్కాల పద్మమువలె ఉత్సవము; వారి మాట చెవులకు అమృతము; కాని వారి హృదయము కత్తి అంచు వంటిది. స్త్రీల చేష్టలను ఎవడు తెలియగలడు?
+hi: उनका मुख शरद् के कमल के समान उत्सव है, उनका वचन कानों के लिये अमृत है, परन्तु उनका हृदय छुरे की धार जैसा है। स्त्रियों की चेष्टा को कौन जानता है?
 
 --- verse 42 ---
 deva:
@@ -366,6 +489,9 @@ deva:
 iast:
 na hi kaścitpriyaḥ strīṇāmañjasā svāśiṣātmanām|
 patiṁ putraṁ bhrātaraṁ vā ghnantyarthe ghātayanti ca||
+en: Women whose very self is their own wish truly hold no one dear. For the sake of their own ends they kill a husband, a son or a brother, or have them killed.
+tel: తమ కోరికలే తమ ఆత్మగా కల స్త్రీలకు నిజముగా ఎవడును ప్రియుడు కాడు. తమ ప్రయోజనము కొఱకు వారు పతిని, పుత్రుని, సోదరుని చంపుదురు, చంపింతురు.
+hi: अपनी कामना ही जिनका आत्मा है, उन स्त्रियों को वास्तव में कोई प्रिय नहीं होता। अपने प्रयोजन के लिये वे पति, पुत्र अथवा भाई का वध करती हैं या करा देती हैं।
 
 --- verse 43 ---
 deva:
@@ -374,6 +500,9 @@ deva:
 iast:
 pratiśrutaṁ dadāmīti vacastanna mṛṣā bhavet|
 vadhaṁ nārhati cendro'pi tatredamupakalpate||
+en: I have promised, saying, "I shall give." That word of mine must not become false. And Indra too does not deserve to be killed. In this matter this course will serve.
+tel: "ఇచ్చెదను" అని నేను ప్రతిశ్రుతి చేసితిని; ఆ మాట అసత్యము కాకూడదు. ఇంద్రుడును వధకు అర్హుడు కాడు. ఈ విషయమున ఈ ఉపాయము తగినది.
+hi: "देता हूँ" ऐसा मैंने वचन दिया है; वह वचन मिथ्या न हो। और इन्द्र भी वध के योग्य नहीं है। इस विषय में यह उपाय ठीक बैठता है।
 
 --- verse 44 ---
 deva:
@@ -382,6 +511,9 @@ deva:
 iast:
 iti saṁcintya bhagavānmārīcaḥ kurunandana|
 uvāca kiñcit kupita ātmānaṁ ca vigarhayan||
+en: O delight of the Kurus, having thought in this way, the venerable son of Marīci spoke, a little angry, and blaming himself.
+tel: ఓ కురునందనా, ఇట్లు ఆలోచించి భగవంతుడైన మారీచుడు కొంత కోపముతో, తనను తాను నిందించుకొనుచు పలికెను.
+hi: हे कुरुनन्दन, इस प्रकार विचार करके भगवान् मारीच कुछ कुपित होकर और अपने को ही दोष देते हुए बोले।
 
 --- verse 45 ---
 deva:
@@ -392,16 +524,22 @@ iast:
 kaśyapa uvāca
 putraste bhavitā bhadre indrahā devabāndhavaḥ|
 saṁvatsaraṁ vratamidaṁ yadyañjo dhārayiṣyasi||
+en: Kaśyapa said: O gentle lady, you will have a son who will slay Indra and who will be a friend of the gods, if you keep this vrata properly for one year.
+tel: కశ్యపుడు పలికెను: ఓ భద్రా, ఈ వ్రతమును ఒక సంవత్సరము సరిగా ధరించినయెడల, ఇంద్రుని చంపువాడు, దేవతలకు బంధువు అగు పుత్రుడు నీకు కలుగును.
+hi: कश्यप ने कहा: हे भद्रे, यदि तुम इस व्रत को एक वर्ष तक ठीक से धारण करोगी, तो तुम्हें ऐसा पुत्र होगा जो इन्द्र का वध करनेवाला और देवताओं का बन्धु होगा।
 
 --- verse 46 ---
 deva:
 दितिरुवाच
 धारयिष्ये व्रतं ब्रह्मन्ब्रूहि कार्याणि यानि मे।
-यानि चेह निषिद्धानि न व्रतं घ्नन्ति यानितु॥
+यानि चेह निषिद्धानि न व्रतं घ्नन्ति यानि तु॥
 iast:
 ditiruvāca
 dhārayiṣye vrataṁ brahmanbrūhi kāryāṇi yāni me|
-yāni ceha niṣiddhāni na vrataṁ ghnanti yānitu||
+yāni ceha niṣiddhāni na vrataṁ ghnanti yāni tu||
+en: Diti said: O brāhmaṇa, I shall keep the vrata. Tell me what I must do, what is forbidden in it, and what does not break the vrata.
+tel: దితి పలికెను: ఓ బ్రహ్మన్, నేను వ్రతమును ధరించెదను. నాకు చేయవలసిన కార్యములను, ఇందు నిషిద్ధములైనవానిని, వ్రతమును చెఱచనివానిని చెప్పుము.
+hi: दिति ने कहा: हे ब्रह्मन्, मैं व्रत धारण करूँगी। मुझे जो करना चाहिये, जो इसमें निषिद्ध है, और जो व्रत को नष्ट नहीं करता, वह कहिये।
 
 --- verse 47 ---
 deva:
@@ -412,6 +550,9 @@ iast:
 kaśyapa uvāca
 na hiṁsyādbhūtajātāni na śapennānṛtaṁ vadet|
 nacchindyānnakharomāṇi na spṛśedyadamaṅgalam||
+en: Kaśyapa said: She should not harm any living beings. She should not curse anyone and should not speak untruth. She should not cut her nails or her hair, and should not touch anything inauspicious.
+tel: కశ్యపుడు పలికెను: ఆమె ప్రాణులను హింసించకూడదు; శపించకూడదు; అసత్యము పలుకకూడదు; గోళ్ళను, రోమములను కత్తిరించుకోకూడదు; అమంగళమైనదానిని తాకకూడదు.
+hi: कश्यप ने कहा: वह प्राणियों की हिंसा न करे, किसी को शाप न दे, असत्य न बोले, नख और रोम न काटे, और जो अमङ्गल हो उसे न छुए।
 
 --- verse 48 ---
 deva:
@@ -420,6 +561,9 @@ deva:
 iast:
 nāpsu snāyānna kupyeta na sambhāṣeta durjanaiḥ|
 na vasītādhautavāsaḥ srajaṁ ca vidhṛtāṁ kvacit||
+en: She should not bathe in water. She should not become angry and should not talk with wicked people. She should not wear unwashed clothes, nor a garland that another has already worn.
+tel: ఆమె నీటిలో స్నానము చేయకూడదు; కోపపడకూడదు; దుర్జనులతో మాటలాడకూడదు; కడగని వస్త్రమును ధరించకూడదు; ఇతరులు ధరించిన మాలను ఎప్పుడును ధరించకూడదు.
+hi: वह जल में स्नान न करे, क्रोध न करे, दुर्जनों से बातचीत न करे, बिना धुले वस्त्र न पहने, और दूसरे की पहनी हुई माला कभी न पहने।
 
 --- verse 49 ---
 deva:
@@ -428,6 +572,9 @@ deva:
 iast:
 nocchiṣṭaṁ caṇḍikānnaṁ ca sāmiṣaṁ vṛṣalāhṛtam|
 bhuñjītodakyayā dṛṣṭaṁ pibedañjalinā tvapaḥ||
+en: She should not eat the remnants of another's food, nor food offered to Caṇḍikā, nor food with flesh in it, nor food brought by a śūdra, nor food seen by a woman in her monthly period. But she may drink water from her joined palms.
+tel: ఆమె ఉచ్ఛిష్టమును, చండికకు నివేదించిన అన్నమును, మాంసముతో కూడినదానిని, శూద్రుడు తెచ్చినదానిని, ఉదక్యచే చూడబడినదానిని తినకూడదు. కాని అంజలితో నీటిని త్రాగవచ్చును.
+hi: वह उच्छिष्ट, चण्डिका को चढ़ाया हुआ अन्न, मांसयुक्त अन्न, शूद्र के लाये हुए अन्न और रजस्वला स्त्री के देखे हुए अन्न को न खाये। परन्तु अञ्जलि से जल पी सकती है।
 
 --- verse 50 ---
 deva:
@@ -436,6 +583,9 @@ deva:
 iast:
 nocchiṣṭāspṛṣṭasalilā sandhyāyāṁ muktamūrdhajā|
 anarcitāsaṁyatavāṅnāsaṁvītā bahiścared||
+en: She should not go outside with the remnants of food in her mouth, nor without having touched water, nor at the time of sandhyā, nor with her hair loose, nor without having worshipped, nor with unrestrained speech, nor without covering herself.
+tel: ఆమె ఉచ్ఛిష్టముతో, నీటిని తాకకుండ, సంధ్యాకాలమున, జుట్టు విరబోసుకొని, పూజ చేయకుండ, వాక్కును నిగ్రహించుకోకుండ, కప్పుకోకుండ బయట తిరుగకూడదు.
+hi: वह उच्छिष्ट मुख से, जल न छूकर, सन्ध्या के समय, खुले बालों से, पूजा न करके, वाणी को वश में न रखकर, और बिना ओढ़े बाहर न निकले।
 
 --- verse 51 ---
 deva:
@@ -444,6 +594,9 @@ deva:
 iast:
 nādhautapādāprayatā nārdrapānno udakśirāḥ|
 śayīta nāparāṅnānyairna nagnā na ca sandhyayoḥ||
+en: She should not lie down without washing her feet, nor while impure, nor with wet feet, nor with her head to the north, nor with her head to the west, nor with others, nor without clothing, nor at the two twilights.
+tel: ఆమె పాదములను కడుగుకోకుండ, అపవిత్రముగా, తడి పాదములతో, తల ఉత్తరమునకు పెట్టి, తల పశ్చిమమునకు పెట్టి, ఇతరులతో కూడి, వస్త్రము లేకుండ, రెండు సంధ్యలలో పండుకోకూడదు.
+hi: वह पैर न धोकर, अपवित्र रहकर, गीले पैरों से, सिर उत्तर की ओर करके, सिर पश्चिम की ओर करके, दूसरों के साथ, वस्त्र के बिना, और दोनों सन्ध्याओं में न सोये।
 
 --- verse 52 ---
 deva:
@@ -452,6 +605,9 @@ deva:
 iast:
 dhautavāsāḥ śucirnityaṁ sarvamaṅgalasaṁyutā|
 pūjayetprātarāśātprāggoviprān śriyamacyutam||
+en: Wearing washed clothes, always pure, and adorned with all auspicious things, she should worship the cows, the brāhmaṇas, Śrī and Acyuta before her morning meal.
+tel: కడిగిన వస్త్రములను ధరించి, ఎల్లప్పుడు శుచిగా ఉండి, సర్వ మంగళములతో కూడి, ఆమె ప్రాతఃకాలపు భోజనమునకు ముందు గోవులను, బ్రాహ్మణులను, శ్రీదేవిని, అచ్యుతుని పూజింపవలెను.
+hi: धुले वस्त्र पहनकर, सदा शुचि रहकर और सब मङ्गल वस्तुओं से युक्त होकर वह प्रातःकाल के भोजन से पहले गौओं, ब्राह्मणों, श्री और अच्युत की पूजा करे।
 
 --- verse 53 ---
 deva:
@@ -460,6 +616,9 @@ deva:
 iast:
 striyo vīravatīścārcetsraggandhabalimaṇḍanaiḥ|
 patiṁ cārcyopatiṣṭheta dhyāyetkoṣṭhagataṁ ca tam||
+en: She should also honour women whose husbands and sons are living, with garlands, with sandal paste, with offerings and with ornaments. Having worshipped her husband, she should attend upon him, and she should meditate upon the child who has come into her womb.
+tel: వీరవతులైన స్త్రీలను మాలలతో, గంధముతో, బలితో, అలంకారములతో ఆమె పూజింపవలెను. భర్తను పూజించి ఆయనకు సేవ చేయవలెను; కోష్ఠమునకు వచ్చిన ఆ శిశువును ధ్యానింపవలెను.
+hi: वह वीरवती स्त्रियों की माला, गन्ध, बलि और आभूषणों से पूजा करे। पति की पूजा करके उनकी सेवा में रहे, और गर्भ में आये उस पुत्र का ध्यान करे।
 
 --- verse 54 ---
 deva:
@@ -468,6 +627,9 @@ deva:
 iast:
 sāṁvatsaraṁ puṁsavanaṁ vratametadaviplutam|
 dhārayiṣyasi cettubhyaṁ śakrahā bhavitā sutaḥ||
+en: If you keep this year-long puṁsavana vrata without any break, you will have a son who will slay Śakra.
+tel: ఈ సాంవత్సరిక పుంసవన వ్రతమును ఎట్టి భంగము లేకుండ ధరించినయెడల, శక్రుని చంపు పుత్రుడు నీకు కలుగును.
+hi: यदि तुम इस सांवत्सरिक पुंसवन व्रत को बिना किसी विघ्न के धारण करोगी, तो तुम्हें शक्र का वध करनेवाला पुत्र होगा।
 
 --- verse 55 ---
 deva:
@@ -476,6 +638,9 @@ deva:
 iast:
 vāḍhamityabhipretyātha ditī rājan mahāmanāḥ|
 kāśyapaṁ garbhamādhatta vrataṁ cāñjo dadhāra sā||
+en: O king, the high-minded Diti agreed, saying, "So be it." She then received the seed of Kaśyapa in her womb and kept the vrata properly.
+tel: రాజా, మహామనస్కురాలైన దితి "సరే" అని అంగీకరించెను. తరువాత ఆమె కాశ్యప గర్భమును ధరించి, వ్రతమును సరిగా ఆచరించెను.
+hi: हे राजन्, महामना दिति ने "ऐसा ही हो" कहकर स्वीकार किया। उसके बाद उसने कश्यप के गर्भ को धारण किया और व्रत को ठीक से निभाया।
 
 --- verse 56 ---
 deva:
@@ -484,6 +649,9 @@ deva:
 iast:
 mātṛṣvasurabhiprāyamindra ājñāya mānada|
 śuśrūṣaṇenāśramasthāṁ ditiṁ paryacaratkaviḥ||
+en: O giver of honour, Indra came to know the intention of his mother's sister. Being far-seeing, he waited upon Diti, who was living in the hermitage, and served her.
+tel: ఓ మానదా, ఇంద్రుడు తన తల్లి సోదరి సంకల్పమును తెలిసికొనెను. కవియైన అతడు ఆశ్రమములో ఉన్న దితికి శుశ్రూష చేయుచు ఆమెను సేవించెను.
+hi: हे मानद, इन्द्र ने अपनी मौसी के अभिप्राय को जान लिया। वह दूरदर्शी आश्रम में रहनेवाली दिति की शुश्रूषा करके उसकी सेवा में लगा रहा।
 
 --- verse 57 ---
 deva:
@@ -492,6 +660,9 @@ deva:
 iast:
 nityaṁ vanātsumanasaḥ phalamūlasamitkuśān|
 patrāṅkuramṛdo'paśca kāle kāla upāharat||
+en: Every day he brought her, at the proper time, flowers from the forest, fruits, roots, firewood and kuśa grass, and leaves, sprouts, earth and water.
+tel: ప్రతిదినము అతడు సమయమునకు సమయమున అడవినుండి పుష్పములను, ఫలములను, మూలములను, సమిధలను, కుశలను, పత్రములను, అంకురములను, మృత్తికను, నీటిని తెచ్చి ఇచ్చెను.
+hi: वह प्रतिदिन समय-समय पर वन से फूल, फल, मूल, समिधा और कुश, तथा पत्ते, अङ्कुर, मिट्टी और जल लाकर देता रहा।
 
 --- verse 58 ---
 deva:
@@ -500,6 +671,9 @@ deva:
 iast:
 evaṁ tasyā vratasthāyā vratacchidraṁ harirnṛpa|
 prepsuḥ paryacarajjihmo mṛgaheva mṛgākṛtiḥ||
+en: O king, in this way Indra served her while she stood firm in her vrata, seeking some break in it. He acted with deceit, like a hunter of deer in the guise of a deer.
+tel: రాజా, ఇట్లు వ్రతమునందు నిలిచిన ఆమెకు ఇంద్రుడు సేవ చేయుచు, వ్రతములో లోపమును కోరుచుండెను. లేడి రూపము ధరించిన లేడి వేటగానివలె అతడు కపటముతో మెలగెను.
+hi: हे राजन्, इस प्रकार व्रत में स्थित उस दिति की सेवा करते हुए इन्द्र व्रत में छिद्र खोजता रहा। मृग के रूप में आये मृग-हन्ता के समान वह कपट से बरतता रहा।
 
 --- verse 59 ---
 deva:
@@ -508,6 +682,9 @@ deva:
 iast:
 nādhyagacchadvratacchidraṁ tatparo'tha mahīpate|
 cintāṁ tīvrāṁ gataḥ śakraḥ kena me syācchivaṁ tviha||
+en: O ruler of the earth, though he was intent upon it, he did not find any break in her vrata. Śakra fell into deep anxiety and thought, "By what means can good come to me in this matter?"
+tel: ఓ మహీపతీ, అందే నిమగ్నుడైనను అతడు ఆమె వ్రతములో లోపమును కనుగొనలేకపోయెను. శక్రుడు తీవ్రమైన చింతను పొంది, "ఇందు నాకు శుభము ఏ విధముగా కలుగును?" అని ఆలోచించెను.
+hi: हे महीपते, तत्पर रहकर भी उसे उसके व्रत में कोई छिद्र नहीं मिला। शक्र गहरी चिन्ता में पड़ गया और सोचा, "इस विषय में मेरा कल्याण किस उपाय से हो?"
 
 --- verse 60 ---
 deva:
@@ -516,6 +693,9 @@ deva:
 iast:
 ekadā sā tu sandhyāyāmucchiṣṭā vratakarśitā|
 aspṛṣṭavāryadhautāṅghriḥ suṣvāpa vidhimohitā||
+en: One day, worn thin by the vrata, she forgot the rule. She slept at the time of sandhyā with the remnants of food in her mouth, without touching water and without washing her feet.
+tel: ఒకనాడు వ్రతముచే కృశించిన ఆమె విధిని మఱచెను. ఉచ్ఛిష్టముతో, నీటిని తాకకుండ, పాదములను కడుగుకోకుండ ఆమె సంధ్యాకాలమున నిద్రించెను.
+hi: एक दिन व्रत से दुर्बल हुई वह विधि को भूल गयी। उच्छिष्ट मुख से, जल न छूकर और पैर न धोकर वह सन्ध्या के समय सो गयी।
 
 --- verse 61 ---
 deva:
@@ -524,6 +704,9 @@ deva:
 iast:
 labdhvā tadantaraṁ śakro nidrāpahṛtacetasaḥ|
 diteḥ praviṣṭa udaraṁ yogeśo yogamāyayā||
+en: Finding that opening, Śakra, the master of yoga, entered the womb of Diti by his yogamāyā while her mind was taken by sleep.
+tel: ఆ అవకాశమును పొంది, నిద్రచే చిత్తము హరింపబడిన దితి ఉదరములోనికి యోగేశుడైన శక్రుడు యోగమాయచే ప్రవేశించెను.
+hi: वह अवसर पाकर, निद्रा से जिसका चित्त हर लिया गया था, उस दिति के उदर में योगेश शक्र योगमाया से प्रवेश कर गया।
 
 --- verse 62 ---
 deva:
@@ -532,6 +715,9 @@ deva:
 iast:
 cakarta saptadhā garbhaṁ vajreṇa kanakaprabham|
 rudantaṁ saptadhaikaikaṁ mā rodīriti tān punaḥ||
+en: With his thunderbolt he cut the embryo, which shone like gold, into seven pieces. As each of the seven wept, he cut each one again into seven, saying, "Do not weep."
+tel: బంగారమువలె ప్రకాశించు ఆ గర్భమును అతడు వజ్రముతో ఏడు ముక్కలుగా చేసెను. ఏడుగురిలో ఒక్కొక్కరు ఏడ్చుచుండగా, "ఏడవకుము" అని పలికి వారిని మరల ఒక్కొక్కరిని ఏడుగా చేసెను.
+hi: सोने के समान चमकते उस गर्भ को उसने वज्र से सात टुकड़ों में काट दिया। सातों में से एक-एक रोने लगा, तब "मत रो" कहकर उसने उन्हें फिर एक-एक को सात-सात में काट दिया।
 
 --- verse 63 ---
 deva:
@@ -540,6 +726,9 @@ deva:
 iast:
 te tamūcuḥ pāṭyamānāḥ sarve prāñjalayo nṛpa|
 no jighāṁsasi kimindra bhrātaro marutastava||
+en: O king, as they were being cut, all of them joined their palms and said to him, "Why do you wish to kill us, O Indra? We, the Maruts, are your brothers."
+tel: రాజా, ఖండింపబడుచున్న వారందరు చేతులు జోడించి అతనితో పలికిరి: "ఇంద్రా, మమ్ములను ఎందుకు చంపగోరుచున్నావు? మరుత్తులమైన మేము నీ సోదరులము."
+hi: हे राजन्, काटे जाते हुए वे सब हाथ जोड़कर उससे बोले, "हे इन्द्र, हमें क्यों मारना चाहते हो? हम मरुत् तुम्हारे भाई हैं।"
 
 --- verse 64 ---
 deva:
@@ -548,6 +737,9 @@ deva:
 iast:
 mā bhaiṣṭa bhrātaro mahyaṁ yūyamityāha kauśikaḥ|
 ananyabhāvān pārṣadānātmano marutāṁ gaṇān||
+en: Then Kauśika said, "Do not fear. You are my brothers." He said this to the hosts of the Maruts, who had become his own attendants and bore love for him alone.
+tel: అపుడు కౌశికుడు "భయపడకుడు; మీరు నా సోదరులు" అని పలికెను. అనన్య భావముతో తనకే పార్షదులైన మరుత్తుల గణములతో అతడు ఇట్లు పలికెను.
+hi: तब कौशिक ने कहा, "डरो मत, तुम मेरे भाई हो।" जो अनन्य भाव से उसके ही पार्षद बन गये थे, उन मरुतों के गणों से उसने यह कहा।
 
 --- verse 65 ---
 deva:
@@ -556,6 +748,9 @@ deva:
 iast:
 na mamāra ditergarbhaḥ śrīnivāsānukampayā|
 bahudhā kuliśakṣuṇṇo drauṇyastreṇa yathā bhavān||
+en: The embryo of Diti did not die, though it was cut in many pieces by the thunderbolt, because of the mercy of Śrīnivāsa, just as you did not die when struck by the weapon of the son of Droṇa.
+tel: వజ్రముచే ఎన్నో ముక్కలుగా ఖండింపబడినను, శ్రీనివాసుని అనుకంపచే దితి గర్భము మరణించలేదు; ద్రౌణి అస్త్రముచే కొట్టబడినను మీరు మరణించనట్లే.
+hi: वज्र से बहुत प्रकार से काटे जाने पर भी श्रीनिवास की अनुकम्पा से दिति का गर्भ नहीं मरा, जैसे द्रोणपुत्र के अस्त्र से आहत होकर भी आप नहीं मरे।
 
 --- verse 66 ---
 deva:
@@ -564,6 +759,9 @@ deva:
 iast:
 sakṛdiṣṭvā''dipuruṣaṁ puruṣo yāti sāmyatām|
 saṁvatsaraṁ kiñcidūnaṁ dityā yaddharirarcitaḥ||
+en: A man who worships the Primal Person even once attains a state like his own. Diti had worshipped Hari for nearly a whole year.
+tel: ఆదిపురుషుని ఒక్కసారి పూజించినవాడే ఆయనతో సామ్యమును పొందును. దితి హరిని ఒక సంవత్సరమునకు కొంచెము తక్కువ కాలము ఆరాధించెను.
+hi: आदिपुरुष की एक बार भी पूजा करके पुरुष उनके समान स्थिति को प्राप्त कर लेता है। दिति ने एक वर्ष से कुछ कम समय तक श्रीहरि की आराधना की थी।
 
 --- verse 67 ---
 deva:
@@ -572,6 +770,9 @@ deva:
 iast:
 sajūrindreṇa pañcāśaddevāste maruto'bhavan|
 vyapohya mātṛdoṣaṁ te hariṇā somapāḥ kṛtāḥ||
+en: Together with Indra they became fifty gods, the Maruts. Hari removed the fault of their mother, and they were made drinkers of the soma.
+tel: ఇంద్రునితో కలిసి వారు యాభది మంది దేవతలు, మరుత్తులు ఐరి. హరి వారి మాతృదోషమును తొలగించి, వారిని సోమపానము చేయువారిగా చేసెను.
+hi: इन्द्र के साथ वे पचास देव मरुत् हुए। श्रीहरि ने उनके मातृदोष को दूर करके उन्हें सोमपान करनेवाला बना दिया।
 
 --- verse 68 ---
 deva:
@@ -580,6 +781,9 @@ deva:
 iast:
 ditirutthāya dadṛśe kumārānanalaprabhān|
 indreṇa sahitān devī paryatuṣyadaninditā||
+en: Diti rose and saw the boys shining like fire, standing together with Indra. That blameless lady was greatly pleased.
+tel: దితి లేచి, అగ్నివలె ప్రకాశించుచున్న ఆ కుమారులను ఇంద్రునితో కూడి ఉండగా చూచెను. అనిందితయైన ఆ దేవి మిక్కిలి సంతోషించెను.
+hi: दिति ने उठकर अग्नि के समान तेजस्वी उन कुमारों को इन्द्र के साथ देखा। वह अनिन्दिता देवी अत्यन्त प्रसन्न हुई।
 
 --- verse 69 ---
 deva:
@@ -588,6 +792,9 @@ deva:
 iast:
 athendramāha tātāhamādityānāṁ bhayāvaham|
 apatyamicchantyacaraṁ vratametatsuduṣkaram||
+en: Then she said to Indra: "Dear child, I kept this very hard vrata because I wished for a child who would bring fear to the Ādityas.
+tel: అపుడు ఆమె ఇంద్రునితో పలికెను: "నాయనా, ఆదిత్యులకు భయమును కలిగించు సంతానమును కోరి నేను మిక్కిలి దుష్కరమైన ఈ వ్రతమును ఆచరించితిని.
+hi: तब उसने इन्द्र से कहा, "हे तात, आदित्यों को भय देनेवाली सन्तान की इच्छा से मैंने यह अत्यन्त दुष्कर व्रत किया।
 
 --- verse 70 ---
 deva:
@@ -596,6 +803,9 @@ deva:
 iast:
 ekaḥ saṅkalpitaḥ putraḥ sapta saptābhavan katham|
 yadi te viditaṁ putra satyaṁ kathaya mā mṛṣā||
+en: One son was asked for. How did they become seven and seven? My son, if you know this, tell me the truth and do not speak falsely."
+tel: ఒక్క పుత్రుడే సంకల్పింపబడెను. వారు ఏడుగురు ఏడుగురుగా ఎట్లు ఐరి? కుమారా, ఇది నీకు తెలిసియుంటే సత్యమును చెప్పుము; అసత్యమును చెప్పకుము."
+hi: एक ही पुत्र का संकल्प किया गया था। वे सात-सात कैसे हो गये? हे पुत्र, यदि तुम्हें यह ज्ञात हो तो सत्य कहो, मिथ्या न कहो।"
 
 --- verse 71 ---
 deva:
@@ -606,6 +816,9 @@ iast:
 indra uvāca
 amba te'haṁ vyavasitamupadhāryāgato'ntikam|
 labdhāntaro'cchidaṁ garbhamarthabuddhirna dharmavit||
+en: Indra said: Mother, I came near to you when I came to know your resolve. Finding an opening, I cut the embryo. I was bent upon my own gain and did not know dharma.
+tel: ఇంద్రుడు పలికెను: అమ్మా, నీ సంకల్పమును తెలిసికొని నేను నీ దగ్గరకు వచ్చితిని. అవకాశమును పొంది గర్భమును ఖండించితిని. అర్థబుద్ధి కలవాడనైన నేను ధర్మమును ఎఱుగలేదు.
+hi: इन्द्र ने कहा: हे माता, आपका संकल्प जानकर मैं आपके पास आया। अवसर पाकर मैंने गर्भ को काट दिया। अर्थबुद्धि रखनेवाला मैं धर्म को नहीं जानता था।
 
 --- verse 72 ---
 deva:
@@ -614,6 +827,9 @@ deva:
 iast:
 kṛtto me saptadhā garbha āsan sapta kumārakāḥ|
 te'pi caikaikaśo vṛkṇāḥ saptadhā nāpi mamrire||
+en: The embryo was cut by me into seven, and there were seven boys. Each of them again was cut by me into seven, and still they did not die.
+tel: గర్భము నాచే ఏడుగా ఖండింపబడెను; ఏడుగురు కుమారులు ఐరి. వారును ఒక్కొక్కరు ఏడుగా ఖండింపబడిరి; అయినను మరణించలేదు.
+hi: गर्भ मेरे द्वारा सात प्रकार से काटा गया, और सात कुमार हो गये। वे भी एक-एक सात-सात प्रकार से काटे गये, फिर भी नहीं मरे।
 
 --- verse 73 ---
 deva:
@@ -622,6 +838,9 @@ deva:
 iast:
 tatastatparamāścaryaṁ vīkṣyādhyavasitaṁ mayā|
 mahāpuruṣapūjāyāḥ siddhiḥ kāpyanuṣaṅgiṇī||
+en: Then, seeing that great wonder, I came to this conclusion: this was some attendant fruit of the worship of the Great Person.
+tel: అపుడు ఆ పరమాశ్చర్యమును చూచి నేను ఇట్లు నిశ్చయించుకొంటిని: ఇది మహాపురుష పూజకు కలిగిన ఏదో అనుషంగికమైన సిద్ధి.
+hi: तब उस परम आश्चर्य को देखकर मैंने यह निश्चय किया: यह महापुरुष की पूजा का कोई आनुषङ्गिक फल है।
 
 --- verse 74 ---
 deva:
@@ -630,6 +849,9 @@ deva:
 iast:
 ārādhanaṁ bhagavata īhamānā nirāśiṣaḥ|
 ye tu necchantyapi paraṁ te svārthakuśalāḥ smṛtāḥ||
+en: Those who seek only the worship of the Lord, free of every desire, and who do not wish even for the highest state, are held to be skilled in their own true good.
+tel: కోరికలు లేనివారై భగవంతుని ఆరాధనమునే కోరుచు, పరమ పదమును కూడ కోరని వారే తమ స్వార్థమునందు నేర్పరులని చెప్పబడిరి.
+hi: जो निराशी होकर केवल भगवान् की आराधना चाहते हैं और परम पद को भी नहीं चाहते, वे ही अपने स्वार्थ में कुशल कहे गये हैं।
 
 --- verse 75 ---
 deva:
@@ -638,6 +860,9 @@ deva:
 iast:
 ārādhyātmapradaṁ devaṁ svātmānaṁ jagadīśvaram|
 ko vṛṇīte guṇasparśaṁ budhaḥ syānnarake'pi yat||
+en: Having worshipped the Lord who gives his own self, who is one's own self and the ruler of the world, what wise man would ask for the touch of the guṇas, which can be had even in hell?
+tel: తన ఆత్మను ఇచ్చువాడు, తన ఆత్మయే అయినవాడు, జగదీశ్వరుడు అగు దేవుని ఆరాధించి, నరకమునందును లభించు గుణస్పర్శను బుద్ధిమంతుడు ఎవడు కోరును?
+hi: जो अपने आत्मा को देनेवाले, अपने ही आत्मा और जगदीश्वर हैं, उन देव की आराधना करके कौन बुद्धिमान् उस गुणस्पर्श को माँगेगा, जो नरक में भी मिल जाता है?
 
 --- verse 76 ---
 deva:
@@ -646,6 +871,9 @@ deva:
 iast:
 tadidaṁ mama daurjanyaṁ bāliśasya mahīyasi|
 kṣantumarhasi mātastvaṁ diṣṭyā garbho mṛtotthitaḥ||
+en: O honoured lady, this wickedness of mine was the act of a fool. Mother, you should forgive me. By good fortune the child has risen again from death.
+tel: ఓ మహనీయా, బాలిశుడనైన నా ఈ దౌర్జన్యమును, అమ్మా, నీవు క్షమింపవలెను. అదృష్టముచే గర్భము మృతినుండి లేచినది.
+hi: हे महीयसि, मुझ बालिश के इस दौर्जन्य को, हे माता, आप क्षमा कीजिये। सौभाग्य से गर्भ मृत्यु से उठ खड़ा हुआ।
 
 --- verse 77 ---
 deva:
@@ -656,6 +884,9 @@ iast:
 śrīśuka uvāca
 indrastayābhyanujñātaḥ śuddhabhāvena tuṣṭayā|
 marudbhiḥ saha tāṁ natvā jagāma tridivaṁ prabhuḥ||
+en: Śrī Śuka said: She was pleased with him, for her heart was pure, and she gave him leave. Lord Indra bowed to her along with the Maruts and went to heaven.
+tel: శ్రీశుకుడు పలికెను: శుద్ధమైన భావముతో సంతోషించిన ఆమెచే అనుజ్ఞ పొందిన ప్రభువైన ఇంద్రుడు మరుత్తులతో కూడి ఆమెకు నమస్కరించి త్రిదివమునకు వెళ్ళెను.
+hi: श्रीशुकदेवजी ने कहा: शुद्ध भाव से प्रसन्न हुई उस दिति से अनुमति पाकर प्रभु इन्द्र मरुतों के साथ उसे प्रणाम करके त्रिदिव को चले गये।
 
 --- verse 78 ---
 deva:
@@ -664,9 +895,15 @@ deva:
 iast:
 evaṁ te sarvamākhyātaṁ yanmāṁ tvaṁ paripṛcchasi|
 maṅgalaṁ marutāṁ janma kiṁ bhūyaḥ kathayāmi te||
+en: Thus I have told you all that you asked of me. The birth of the Maruts is auspicious. What more shall I tell you?
+tel: నీవు నన్ను అడిగినది అంతయు ఇట్లు నీకు చెప్పబడినది. మరుత్తుల జన్మము మంగళకరము. ఇంకను నీకు ఏమి చెప్పుదును?
+hi: तुमने मुझसे जो पूछा, वह सब इस प्रकार तुमसे कह दिया। मरुतों का जन्म मङ्गलकारी है। अब और तुमसे क्या कहूँ?
 
 --- verse none ---
 deva:
 इति श्रीमद्भागवते महापुराणे पारमहंस्यां संहितायां षष्ठस्कन्धे मरुदुत्पत्तिकथनं नामाष्टादशोऽध्यायः॥ १८॥
 iast:
 iti śrīmadbhāgavate mahāpurāṇe pāramahaṁsyāṁ saṁhitāyāṁ ṣaṣṭhaskandhe marudutpattikathanaṁ nāmāṣṭādaśo'dhyāyaḥ|| 18||
+en: Thus ends the eighteenth adhyāya, called the account of the birth of the Maruts, in the sixth skandha of the Śrīmad Bhāgavata Mahāpurāṇa, the saṁhitā of the paramahaṁsas.
+tel: ఇది శ్రీమద్భాగవత మహాపురాణమునందు, పరమహంసల సంహితయందు, షష్ఠస్కంధమునందు మరుదుత్పత్తికథనమను అష్టాదశాధ్యాయము.
+hi: इस प्रकार श्रीमद्भागवत महापुराण की परमहंसों की संहिता के षष्ठ स्कन्ध में मरुत्-उत्पत्ति-कथन नामक अठारहवाँ अध्याय समाप्त हुआ।

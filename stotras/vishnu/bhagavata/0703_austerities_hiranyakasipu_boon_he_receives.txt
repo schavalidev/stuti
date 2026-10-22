@@ -9,7 +9,7 @@ Type: Purāṇa (an adhyāya of the Śrīmad Bhāgavata, Skandha 7)
 
 Source / recension: Base text and authority: the Gītā Press, Gorakhpur Śrīmadbhāgavata Mahāpurāṇa with Hindi translation, Part 1 (Gītā Press code 26), archive.org item `shrimadbhagwat-mahapuran-bhag-1`, printed pages 818–822; the PDF page numbers are the printed ones. The PDF carries the typesetter's own text layer in the Chanakya font encoding, and the text was decoded from it by machine with `bin/bhagavata/chanakya.py`, not read off OCR or typed. The decoder was checked against GRETIL over all twelve skandhas before any file was written, and the differences that remain were sampled and found to be readings of the two editions. Second witness: GRETIL's `sa_bhAgavatapurANa.xml` (IAST, contributed by Ulrich Stiehl), a separate editorial lineage, compared verse by verse by machine. The TTD edition with the commentaries of Śrīdhara, Vīrarāghava and Vijayadhvaja (archive.org `Bhagavata_Purana_With_Multiple_Commentaries_TTD_Critical_Edition`) is the third witness where one is needed; it was not read for this file. The IAST was generated mechanically from the Devanāgarī with `bin/dev2iast.py`.
 
-Recension note: Text-only file, written 1 Oct 2026 at the user's instruction to lay down the whole Bhāgavata first: the English, Telugu and Hindi meanings are still to be added, and the witnesses' differences listed here have been recorded by machine and not yet adjudicated. The print is followed throughout. The print numbers 38 verses and GRETIL numbers 38. Of the 38 verses GRETIL has under the same number, 24 agree with the print letter for letter once spacing and the spelling of nasals are set aside; the rest differ: 4, 8, 14, 15, 16, 18, 20, 21, 24, 29, 30, 31, 33, 34. The edition's footnotes give these older printed readings (प्रा० पा०), which are not bracketed into the line: at 7, स्तथा विभो; at 11, अन्यथैव. Spacing is the print's, as its text layer gives it; in a few places justification has left a space inside a word, and these are still to be closed when the verse is read. The speaker lines (श्रीशुक उवाच and the others) are printed in italic above the verse they introduce, and are given as its first line.
+Recension note: Meanings written 22 Oct 2026 (session S78). The differences between the witnesses listed below were read as the verses were glossed; except where this note says otherwise, each is a spelling, a sandhi or a word order of the two editions, none of them changes the sense, and the print's reading therefore stands unbracketed. The print is followed throughout. The print numbers 38 verses and GRETIL numbers 38. Of the 38 verses GRETIL has under the same number, 24 agree with the print letter for letter once spacing and the spelling of nasals are set aside; the rest differ: 4, 8, 14, 15, 16, 18, 20, 21, 24, 29, 30, 31, 33, 34. The edition's footnotes give these older printed readings (प्रा० पा०), which are not bracketed into the line: at 7, स्तथा विभो; at 11, अन्यथैव. Spacing is the print's, as its text layer gives it. The speaker lines (श्रीशुक उवाच and the others) are printed in italic above the verse they introduce, and are given as its first line. A footnote's numeral keys it to one word, and which word that is cannot be told from the note alone, so those readings stay unbracketed until the page itself is read.
 
 Verse count: 38, plus the closing colophon printed unnumbered.
 
@@ -24,6 +24,9 @@ iast:
 nārada uvāca
 hiraṇyakaśipū rājannajeyamajarāmaram|
 ātmānamapratidvandvamekarājaṁ vyadhitsata||
+en: Nārada said: O King, Hiraṇyakaśipu wished to make himself unconquerable, free from old age and death, without a rival, and the sole ruler.
+tel: నారదుడు పలికెను: రాజా! హిరణ్యకశిపుడు తనను ఎవరును జయించలేనివానిగా, ముసలితనము మరణము లేనివానిగా, ఎదురు లేనివానిగా, ఏకైక రాజుగా చేసుకొనగోరెను.
+hi: नारदजी ने कहा: राजन्! हिरण्यकशिपु ने अपने को अजेय, बुढ़ापे और मृत्यु से रहित, प्रतिद्वन्द्वी से रहित और एकमात्र राजा बनाना चाहा।
 
 --- verse 2 ---
 deva:
@@ -32,6 +35,9 @@ deva:
 iast:
 sa tepe mandaradroṇyāṁ tapaḥ paramadāruṇam|
 ūrdhvabāhurnabhodṛṣṭiḥ pādāṅguṣṭhāśritāvaniḥ||
+en: He performed a very severe austerity in a valley of the Mandara mountain. His arms were raised, his gaze was fixed on the sky, and he stood on the earth with the toe of one foot.
+tel: అతడు మందర పర్వతపు లోయలో మిక్కిలి కఠినమైన తపస్సు చేసెను. చేతులు పైకెత్తి, దృష్టిని ఆకాశముపై నిలిపి, కాలి బొటనవేలితో మాత్రమే నేలను ఆనుకొని నిలిచెను.
+hi: उसने मन्दर पर्वत की घाटी में अत्यन्त कठोर तपस्या की। उसकी भुजाएँ ऊपर उठी थीं, दृष्टि आकाश पर थी, और वह पैर के अँगूठे से पृथ्वी पर खड़ा था।
 
 --- verse 3 ---
 deva:
@@ -40,6 +46,9 @@ deva:
 iast:
 jaṭādīdhitibhī reje saṁvartārka ivāṁśubhiḥ|
 tasmiṁstapastapyamāne devāḥ sthānāni bhejire||
+en: He shone with the light of his matted hair, like the sun at the time of dissolution with its rays. While he performed that austerity, the gods returned to their own places.
+tel: జటల తేజముతో అతడు ప్రళయకాలపు సూర్యుడు కిరణములతో వెలుగునట్లు వెలిగెను. అతడు ఆ తపస్సు చేయుచున్నప్పుడు దేవతలు తమ తమ స్థానములను చేరుకొనిరి.
+hi: वह अपनी जटाओं के तेज से प्रलयकाल के सूर्य की किरणों के समान शोभित हुआ। जब वह उस तपस्या में लगा हुआ था, तब देवता अपने-अपने स्थानों पर चले गये।
 
 --- verse 4 ---
 deva:
@@ -48,6 +57,9 @@ deva:
 iast:
 tasya mūrdhnaḥ samudbhūtaḥ sadhūmo'gnistapomayaḥ|
 tiryagūrdhvamadholokānatapadviṣvagīritaḥ||
+en: From his head there rose a fire born of his austerity, together with smoke. Spreading on every side, it burned the worlds across, above and below.
+tel: అతని శిరస్సునుండి పొగతో కూడిన తపోమయమైన అగ్ని పుట్టెను. అది అన్ని దిక్కులకు వ్యాపించి, ప్రక్కల, పైన, క్రింద ఉన్న లోకములను కాల్చెను.
+hi: उसके सिर से धूम के साथ तपोमय अग्नि उठी। वह सब ओर फैलकर तिरछे, ऊपर और नीचे के लोकों को तपाने लगी।
 
 --- verse 5 ---
 deva:
@@ -56,6 +68,9 @@ deva:
 iast:
 cukṣubhurnadyudanvantaḥ sadvīpādriścacāla bhūḥ|
 nipetuḥ sagrahāstārā jajvaluśca diśo daśa||
+en: The rivers and the oceans were stirred up. The earth with its islands and mountains shook. The stars fell with the planets, and the ten directions blazed.
+tel: నదులు, సముద్రములు కలగిపోయెను. ద్వీపములతో పర్వతములతో కూడిన భూమి కదిలెను. గ్రహములతో పాటు నక్షత్రములు రాలిపడెను. పది దిక్కులు మండెను.
+hi: नदियाँ और समुद्र क्षुब्ध हो गये। द्वीपों और पर्वतों के साथ पृथ्वी हिल उठी। ग्रहों के साथ तारे गिर पड़े और दसों दिशाएँ जलने लगीं।
 
 --- verse 6 ---
 deva:
@@ -64,6 +79,9 @@ deva:
 iast:
 tena taptā divaṁ tyaktvā brahmalokaṁ yayuḥ surāḥ|
 dhātre vijñāpayāmāsurdevadeva jagatpate||
+en: Burned by that fire, the gods left heaven and went to Brahmaloka. There they made it known to the creator: O God of gods, O Lord of the world.
+tel: ఆ అగ్నిచే తపింపబడిన దేవతలు స్వర్గమును విడిచి బ్రహ్మలోకమునకు వెళ్లిరి. అచట సృష్టికర్తకు ఇట్లు తెలిపిరి: దేవదేవా! జగత్పతీ!
+hi: उस अग्नि से तपे हुए देवता स्वर्ग को छोड़कर ब्रह्मलोक गये। वहाँ उन्होंने विधाता से यह निवेदन किया: हे देवदेव! हे जगत्पते!
 
 --- verse 7 ---
 deva:
@@ -74,6 +92,9 @@ iast:
 daityendratapasā taptā divi sthātuṁ na śaknumaḥ|
 tasya copaśamaṁ bhūman vidhehi yadi manyase|
 lokā na yāvannaṅkṣyanti balihārāstavābhibhūḥ||
+en: Burned by the austerity of the lord of the Daityas, we are not able to remain in heaven. O boundless one, put an end to it, if you think it right. Act, O all-surpassing Lord, before the worlds that bring you offerings are destroyed.
+tel: దైత్యేంద్రుని తపస్సుచే తపింపబడి మేము స్వర్గమున నిలువలేకున్నాము. భూమన్! నీకు యుక్తమని తోచినచో దానిని ఉపశమింపజేయుము. ప్రభూ! నీకు బలులు అర్పించు ఈ లోకములు నశించకముందే దానిని చేయుము.
+hi: दैत्येन्द्र की तपस्या से तपे हुए हम स्वर्ग में नहीं ठहर सकते। हे भूमन्! यदि आप उचित समझें तो उसका उपशमन कीजिये। हे सर्वसमर्थ! आपको बलि अर्पित करनेवाले ये लोक नष्ट होने से पहले ही यह कीजिये।
 
 --- verse 8 ---
 deva:
@@ -82,6 +103,9 @@ deva:
 iast:
 tasyāyaṁ kila saṅkalpaścarato duścaraṁ tapaḥ|
 śrūyatāṁ kiṁ na viditastavāthāpi niveditaḥ||
+en: This, we have heard, is his resolve as he performs that austerity which is hard to perform. Let it be heard. What is not known to you? Still it is reported to you.
+tel: కష్టసాధ్యమైన తపస్సు చేయుచున్న అతని సంకల్పము ఇదియే అని మేము వినినాము. దానిని వినుము. నీకు తెలియనిది ఏది? అయినను నివేదించుచున్నాము.
+hi: दुष्कर तपस्या करनेवाले उसका संकल्प यही है, ऐसा हमने सुना है। उसे सुनिये। आपको कौन बात ज्ञात नहीं है? फिर भी निवेदन किया जाता है।
 
 --- verse 9 ---
 deva:
@@ -90,6 +114,9 @@ deva:
 iast:
 sṛṣṭvā carācaramidaṁ tapoyogasamādhinā|
 adhyāste sarvadhiṣṇyebhyaḥ parameṣṭhī nijāsanam||
+en: Having created this world of moving and unmoving beings by austerity, yoga and samādhi, Parameṣṭhī sits upon his own seat, which is above all other stations.
+tel: తపస్సు, యోగము, సమాధిచే ఈ చరాచర జగత్తును సృష్టించి, పరమేష్ఠి అన్ని స్థానములకు పైన ఉన్న తన ఆసనమున కూర్చుండియున్నాడు.
+hi: तप, योग और समाधि से इस चराचर जगत् की रचना करके परमेष्ठी सब स्थानों से ऊपर अपने आसन पर विराजमान हैं।
 
 --- verse 10 ---
 deva:
@@ -98,6 +125,9 @@ deva:
 iast:
 tadahaṁ vardhamānena tapoyogasamādhinā|
 kālātmanośca nityatvātsādhayiṣye tathā''tmanaḥ||
+en: Therefore I shall win that same seat for myself by austerity, yoga and samādhi that go on increasing, for time and the self are both without end.
+tel: కావున నేనును పెరుగుచున్న తపస్సు, యోగము, సమాధిచే ఆ ఆసనమును నాకు సాధించుకొందును. కాలమును ఆత్మయును నిత్యములు కావున ఇది సాధ్యము.
+hi: इसलिये मैं भी बढ़ती हुई तप, योग और समाधि से वही स्थान अपने लिये सिद्ध करूँगा, क्योंकि काल और आत्मा दोनों नित्य हैं।
 
 --- verse 11 ---
 deva:
@@ -106,6 +136,9 @@ deva:
 iast:
 anyathedaṁ vidhāsye'hamayathāpūrvamojasā|
 kimanyaiḥ kālanirdhūtaiḥ kalpānte vaiṣṇavādibhiḥ||
+en: By my own power I shall make this world otherwise, not as it was before. What are the other stations to me, the station of Viṣṇu and the rest, which time sweeps away at the end of the kalpa?
+tel: నా ఓజముచే ఈ జగత్తును మునుపటివలె కాక వేరుగా చేయుదును. కల్పాంతమున కాలముచే కొట్టుకొనిపోవు వైష్ణవము మొదలగు ఇతర పదవులతో నాకేమి పని?
+hi: मैं अपने ओज से इस जगत् को पहले की तरह नहीं, अन्य प्रकार से बनाऊँगा। कल्प के अन्त में काल के द्वारा उड़ा दिये जानेवाले वैष्णव आदि अन्य पदों से मुझे क्या प्रयोजन?
 
 --- verse 12 ---
 deva:
@@ -114,6 +147,9 @@ deva:
 iast:
 iti śuśruma nirbandhaṁ tapaḥ paramamāsthitaḥ|
 vidhatsvānantaraṁ yuktaṁ svayaṁ tribhuvaneśvara||
+en: This is his firm resolve, as we have heard. He has taken to the highest austerity. O Lord of the three worlds, do yourself at once what is fit.
+tel: ఇది అతని దృఢసంకల్పము అని మేము వినినాము. అతడు పరమ తపస్సును చేపట్టినాడు. త్రిభువనేశ్వరా! యుక్తమైనది నీవే వెంటనే చేయుము.
+hi: यह उसका दृढ़ निश्चय है, ऐसा हमने सुना है। उसने परम तपस्या ग्रहण की है। हे त्रिभुवनेश्वर! जो उचित हो वह आप स्वयं तुरन्त कीजिये।
 
 --- verse 13 ---
 deva:
@@ -122,6 +158,9 @@ deva:
 iast:
 tavāsanaṁ dvijagavāṁ pārameṣṭhyaṁ jagatpate|
 bhavāya śreyase bhūtyai kṣemāya vijayāya ca||
+en: O Lord of the world, your supreme seat stands for the growth, the good, the prosperity, the safety and the victory of the twice-born and of the cows.
+tel: జగత్పతీ! నీ పారమేష్ఠ్య ఆసనము ద్విజులకును గోవులకును అభివృద్ధికి, శ్రేయమునకు, సంపదకు, క్షేమమునకు, విజయమునకు నిలిచియున్నది.
+hi: हे जगत्पते! आपका परमेष्ठी-आसन द्विजों और गौओं की वृद्धि, कल्याण, सम्पत्ति, क्षेम और विजय के लिये है।
 
 --- verse 14 ---
 deva:
@@ -130,6 +169,9 @@ deva:
 iast:
 iti vijñāpito devairbhagavānātmabhūrnṛpa|
 parīto bhṛgudakṣādyairyayau daityeśvarāśramam||
+en: O King, thus informed by the gods, the self-born Lord, surrounded by Bhṛgu, Dakṣa and the others, went to the hermitage of the lord of the Daityas.
+tel: రాజా! దేవతలు ఇట్లు తెలుపగా, ఆత్మభూవైన భగవంతుడు భృగు, దక్ష మొదలగువారితో పరివేష్టితుడై దైత్యేశ్వరుని ఆశ్రమమునకు వెళ్లెను.
+hi: राजन्! देवताओं के इस प्रकार निवेदन करने पर आत्मभू भगवान् भृगु, दक्ष आदि से घिरे हुए दैत्येश्वर के आश्रम को गये।
 
 --- verse 15 ---
 deva:
@@ -138,6 +180,9 @@ deva:
 iast:
 na dadarśa praticchannaṁ valmīkatṛṇakīcakaiḥ|
 pipīlikābhirācīrṇamedastvaṅmāṁsaśoṇitam||
+en: He did not see him, for he was covered over by an ant-hill, by grass and by bamboo, and ants had eaten his fat, his skin, his flesh and his blood.
+tel: వల్మీకముతో, గడ్డితో, వెదురుతో కప్పబడియున్నందున బ్రహ్మ అతనిని చూడలేదు. చీమలు అతని మేదస్సును, చర్మమును, మాంసమును, రక్తమును తినివేసియుండెను.
+hi: वह वल्मीक, घास और बाँसों से ढका हुआ था, इसलिये उन्होंने उसे नहीं देखा। चींटियों ने उसकी मेद, त्वचा, मांस और रक्त खा लिया था।
 
 --- verse 16 ---
 deva:
@@ -146,6 +191,9 @@ deva:
 iast:
 tapantaṁ tapasā lokān yathābhrāpihitaṁ ravim|
 vilakṣya vismitaḥ prāha prahasan haṁsavāhanaḥ||
+en: He was heating the worlds with his austerity, like the sun hidden behind a cloud. Seeing him at last, the Lord who rides the swan was filled with wonder and spoke, smiling.
+tel: మేఘముచే కప్పబడిన సూర్యునివలె అతడు తపస్సుచే లోకములను తపింపజేయుచుండెను. అతనిని చూచి, హంసవాహనుడు ఆశ్చర్యపడి, నవ్వుచు ఇట్లు పలికెను.
+hi: वह मेघ से ढके हुए सूर्य के समान अपनी तपस्या से लोकों को तपा रहा था। उसे देखकर हंसवाहन भगवान् विस्मित हुए और हँसते हुए बोले।
 
 --- verse 17 ---
 deva:
@@ -156,6 +204,9 @@ iast:
 brahmovāca
 uttiṣṭhottiṣṭha bhadraṁ te tapaḥsiddho'si kāśyapa|
 varado'hamanuprāpto vriyatāmīpsito varaḥ||
+en: Brahmā said: Rise, rise. May it be well with you. O son of Kaśyapa, your austerity has borne its fruit. I have come to give a boon. Ask for the boon you desire.
+tel: బ్రహ్మ పలికెను: లెమ్ము, లెమ్ము. నీకు మేలు కలుగును. కాశ్యపా! నీ తపస్సు ఫలించినది. నేను వరమిచ్చువాడనై వచ్చితిని. కోరిన వరమును కోరుకొనుము.
+hi: ब्रह्माजी ने कहा: उठो, उठो। तुम्हारा कल्याण हो। हे काश्यप! तुम्हारी तपस्या सिद्ध हो गयी। मैं वर देने के लिये आया हूँ। जो वर चाहो वह माँग लो।
 
 --- verse 18 ---
 deva:
@@ -164,6 +215,9 @@ deva:
 iast:
 adrākṣamahametatte hṛtsāraṁ mahadadbhutam|
 daṁśabhakṣitadehasya prāṇā hyasthiṣu śerate||
+en: I have seen this strength of your heart, which is great and wonderful. Though biting insects have eaten your body, your life breath still rests in your bones.
+tel: నీ హృదయబలమును, ఈ గొప్ప అద్భుతమును నేను చూచితిని. కీటకములు నీ శరీరమును తినివేసినను, నీ ప్రాణములు ఎముకలలో నిలిచియున్నవి.
+hi: मैंने तुम्हारे हृदय का यह महान् और अद्भुत सार देखा है। दंशों ने तुम्हारा शरीर खा लिया, फिर भी तुम्हारे प्राण हड्डियों में ठहरे हुए हैं।
 
 --- verse 19 ---
 deva:
@@ -172,6 +226,9 @@ deva:
 iast:
 naitatpūrvarṣayaścakrurna kariṣyanti cāpare|
 niramburdhārayetprāṇān ko vai divyasamāḥ śatam||
+en: The sages of old did not do this, and no one else will do it. Who indeed could hold his life breath for a hundred years of the gods without water?
+tel: పూర్వర్షులు ఇట్టిది చేయలేదు, ఇతరులును చేయబోరు. నీరు లేకుండ నూరు దివ్య సంవత్సరములు ప్రాణములను ఎవరు ధరించగలరు?
+hi: ऐसा पूर्व के ऋषियों ने नहीं किया, और दूसरे भी नहीं करेंगे। जल के बिना सौ दिव्य वर्ष तक प्राणों को कौन धारण कर सकता है?
 
 --- verse 20 ---
 deva:
@@ -180,6 +237,9 @@ deva:
 iast:
 vyavasāyena te'nena duṣkareṇa manasvinām|
 taponiṣṭhena bhavatā jito'haṁ ditinandana||
+en: O son of Diti, by this resolve of yours, which even men of firm mind find hard, and by your steadfastness in austerity, I am won over.
+tel: దితినందనా! మనస్వులకును దుష్కరమైన ఈ నీ పట్టుదలచే, తపస్సునందలి నీ నిష్ఠచే నేను జయింపబడితిని.
+hi: हे दितिनन्दन! मनस्वी पुरुषों के लिये भी दुष्कर इस तुम्हारे प्रयत्न से और तपोनिष्ठ तुमसे मैं जीत लिया गया हूँ।
 
 --- verse 21 ---
 deva:
@@ -188,6 +248,9 @@ deva:
 iast:
 tatasta āśiṣaḥ sarvā dadāmyasurapuṅgava|
 martyasya te amartyasya darśanaṁ nāphalaṁ mama||
+en: Therefore, O best of the Asuras, I grant you all your wishes. You are mortal and I am not; my appearance before you cannot be without fruit.
+tel: కావున అసురపుంగవా! నీ ఆశీస్సులన్నియు ఇచ్చుచున్నాను. నీవు మర్త్యుడవు, నేను అమర్త్యుడను. నా దర్శనము ఫలము లేనిది కాదు.
+hi: इसलिये हे असुरपुंगव! मैं तुम्हें सारी आशिषें देता हूँ। तुम मर्त्य हो और मैं अमर्त्य हूँ। मेरा दर्शन फलरहित नहीं होता।
 
 --- verse 22 ---
 deva:
@@ -198,6 +261,9 @@ iast:
 nārada uvāca
 ityuktvā''dibhavo devo bhakṣitāṅgaṁ pipīlikaiḥ|
 kamaṇḍalujalenaukṣaddivyenāmogharādhasā||
+en: Nārada said: Having said this, the first-born Lord sprinkled his body, which the ants had eaten, with the divine water of his waterpot, whose gift never fails.
+tel: నారదుడు పలికెను: ఇట్లు పలికి, ఆదిభవుడైన దేవుడు, చీమలు తినివేసిన అతని శరీరమును, ఎన్నడును వ్యర్థము కాని దివ్యమైన కమండలు జలముచే తడిపెను.
+hi: नारदजी ने कहा: ऐसा कहकर आदिभव देव ने चींटियों से खाये हुए उसके शरीर को अपने कमण्डलु के दिव्य और अमोघ जल से सींचा।
 
 --- verse 23 ---
 deva:
@@ -208,6 +274,9 @@ iast:
 sa tatkīcakavalmīkāt sahaojobalānvitaḥ|
 sarvāvayavasampanno vajrasaṁhanano yuvā|
 utthitastaptahemābho vibhāvasurivaidhasaḥ||
+en: Then he rose up out of that ant-hill among the bamboos, filled with endurance, vigour and strength, complete in every limb, with a frame hard as a thunderbolt, young, shining like heated gold, like fire rising out of its fuel.
+tel: అంతట అతడు ఆ వెదురు వల్మీకమునుండి సహము, ఓజము, బలముతో కూడి, అన్ని అవయవములతో సంపన్నుడై, వజ్రము వంటి దేహము కలవాడై, యువకుడై, కాచిన బంగారమువలె ప్రకాశించుచు, కట్టెలనుండి పుట్టిన అగ్నివలె పైకి లేచెను.
+hi: तब वह उस बाँसों के वल्मीक से सह, ओज और बल से युक्त, सब अवयवों से सम्पन्न, वज्र जैसे दृढ़ शरीरवाला, युवा, तपाये हुए सोने के समान चमकता हुआ, काष्ठ से उठी अग्नि के समान उठ खड़ा हुआ।
 
 --- verse 24 ---
 deva:
@@ -216,6 +285,9 @@ deva:
 iast:
 sa nirīkṣyāmbare devaṁ haṁsavāhamavasthitam|
 nanāma śirasā bhūmau taddarśanamahotsavaḥ||
+en: Seeing the Lord who rides the swan standing in the sky, he bowed his head to the ground. That sight was a great festival for him.
+tel: ఆకాశమున నిలిచియున్న హంసవాహనుడైన దేవుని చూచి, అతడు శిరస్సుతో నేలపై నమస్కరించెను. ఆ దర్శనము అతనికి గొప్ప ఉత్సవమైనది.
+hi: आकाश में स्थित हंसवाहन देव को देखकर उसने पृथ्वी पर सिर से प्रणाम किया। वह दर्शन उसके लिये महान् उत्सव था।
 
 --- verse 25 ---
 deva:
@@ -224,6 +296,9 @@ deva:
 iast:
 utthāya prāñjaliḥ prahva īkṣamāṇo dṛśā vibhum|
 harṣāśrupulakodbhedo girā gadgadayāgṛṇāt||
+en: He stood up with his palms joined and his body bent low. Looking at the mighty Lord with his eyes, with tears of joy and with his hair standing on end, he praised him in a voice choked with feeling.
+tel: పిమ్మట లేచి, చేతులు జోడించి, వినయముతో వంగి, కన్నులతో విభుని చూచుచు, ఆనందబాష్పములతో, పులకలతో, గద్గద స్వరముతో అతడు స్తుతించెను.
+hi: वह उठकर हाथ जोड़े और विनय से झुका हुआ, आँखों से विभु को देखता हुआ, हर्ष के आँसुओं और रोमांच के साथ गद्गद वाणी से स्तुति करने लगा।
 
 --- verse 26 ---
 deva:
@@ -234,6 +309,9 @@ iast:
 hiraṇyakaśipuruvāca
 kalpānte kālasṛṣṭena yo'ndhena tamasā''vṛtam|
 abhivyanag jagadidaṁ svayaṁjyotiḥ svarociṣā||
+en: Hiraṇyakaśipu said: At the end of the kalpa this world was covered by the blinding darkness that time had brought. He who is light himself revealed it again by his own radiance.
+tel: హిరణ్యకశిపుడు పలికెను: కల్పాంతమున కాలము కల్పించిన గాఢాంధకారముచే కప్పబడిన ఈ జగత్తును, స్వయంజ్యోతియైన ఆయన తన తేజముచే తిరిగి ప్రకాశింపజేసెను.
+hi: हिरण्यकशिपु ने कहा: कल्प के अन्त में काल के द्वारा उत्पन्न अन्धकार से ढके हुए इस जगत् को, स्वयंज्योति भगवान् ने अपने तेज से प्रकट किया।
 
 --- verse 27 ---
 deva:
@@ -242,6 +320,9 @@ deva:
 iast:
 ātmanā trivṛtā cedaṁ sṛjatyavati lumpati|
 rajaḥ sattvatamodhāmne parāya mahate namaḥ||
+en: And by his own threefold power he creates this world, protects it and destroys it. Salutation to him, the supreme and the great, the abode of rajas, sattva and tamas.
+tel: ఆయన త్రివిధమైన తన శక్తిచే ఈ జగత్తును సృజించుచు, రక్షించుచు, నశింపజేయుచున్నాడు. రజస్సు, సత్త్వము, తమస్సులకు నిలయమైన, పరుడైన, మహత్తరుడైన ఆయనకు నమస్కారము.
+hi: और वे अपनी त्रिविध शक्ति से इस जगत् को रचते हैं, पालते हैं और नष्ट करते हैं। रज, सत्त्व और तम के धाम, पर और महान् उन्हें नमस्कार है।
 
 --- verse 28 ---
 deva:
@@ -250,6 +331,9 @@ deva:
 iast:
 nama ādyāya bījāya jñānavijñānamūrtaye|
 prāṇendriyamanobuddhivikārairvyaktimīyuṣe||
+en: Salutation to the first one, the seed of all, whose form is knowledge and discernment, who has become manifest through the changes of the vital airs, the senses, the mind and the intellect.
+tel: ఆద్యుడైన, బీజమైన, జ్ఞానవిజ్ఞానమూర్తియైన, ప్రాణములు, ఇంద్రియములు, మనస్సు, బుద్ధి అను వికారములచే వ్యక్తమైన ఆయనకు నమస్కారము.
+hi: आद्य, बीजरूप, ज्ञान और विज्ञान की मूर्ति, तथा प्राण, इन्द्रिय, मन और बुद्धि के विकारों से व्यक्त होनेवाले उन्हें नमस्कार है।
 
 --- verse 29 ---
 deva:
@@ -262,6 +346,9 @@ tvamīśiṣe jagatastasthuṣaśca
 prāṇena mukhyena patiḥ prajānām|
 cittasya cittermanaindriyāṇāṁ
 patirmahān bhūtaguṇāśayeśaḥ||
+en: You rule all that moves and all that stands still, through the chief vital air. You are the lord of all creatures. You are the lord of the mind, of its awareness, and of the senses. You are great, the lord of the elements, of the guṇas and of the inner faculties.
+tel: ముఖ్యమైన ప్రాణముచే నీవు చరములను, స్థిరములను పాలించుచున్నావు. ప్రజలకు నీవే పతి. చిత్తమునకు, దాని తెలివికి, మనస్సునకు, ఇంద్రియములకు నీవే పతి. నీవు మహాన్; భూతములకు, గుణములకు, అంతరాశయములకు ఈశుడు నీవే.
+hi: आप मुख्य प्राण के द्वारा चर और स्थिर सब पर शासन करते हैं। आप प्रजाओं के पति हैं। आप चित्त, चित्ति, मन और इन्द्रियों के पति हैं। आप महान् हैं, और भूतों, गुणों तथा अन्तःकरण के ईश हैं।
 
 --- verse 30 ---
 deva:
@@ -274,6 +361,9 @@ tvaṁ saptatantūn vitanoṣi tanvā
 trayyā cāturhotrakavidyayā ca|
 tvameka ātmā''tmavatāmanādi-
 ranantapāraḥ kavirantarātmā||
+en: With your body, which is the three Vedas, and with the knowledge of the four officiating priests, you spread out the seven sacrifices. You alone are the self of all who have a self. You are without beginning, without end or limit, the seer and the inner self.
+tel: త్రయీరూపమైన నీ శరీరముచే, చాతుర్హోత్ర విద్యచే నీవు సప్తతంతువులను విస్తరించుచున్నావు. ఆత్మవంతులకు ఆత్మ నీవొక్కడే. నీవు అనాదివాడవు, అంతము అంచు లేనివాడవు, కవియు అంతరాత్మయు నీవే.
+hi: त्रयीरूप अपने शरीर से और चातुर्होत्र विद्या से आप सात यज्ञों का विस्तार करते हैं। आत्मवानों के आत्मा आप एक ही हैं। आप अनादि, अनन्त और अपार हैं, कवि और अन्तरात्मा हैं।
 
 --- verse 31 ---
 deva:
@@ -286,6 +376,9 @@ tvameva kālo'nimiṣo janānā-
 māyurlavādyāvayavaiḥ kṣiṇoṣi|
 kūṭastha ātmā parameṣṭhyajo mahāṁ-
 stvaṁ jīvalokasya ca jīva ātmā||
+en: You alone are time, which never closes its eyes. With its parts, the lava and the rest, you wear away the life of all people. You are the unmoving self, the highest, unborn and great. You are also the life and the self of all living beings.
+tel: నిమిషము లేని కాలము నీవే. లవము మొదలగు దాని అవయవములచే నీవు జనుల ఆయువును క్షీణింపజేయుచున్నావు. నీవు కూటస్థుడైన ఆత్మ, పరమేష్ఠి, అజుడు, మహాన్. జీవలోకమునకు జీవుడును ఆత్మయును నీవే.
+hi: अनिमिष काल आप ही हैं। लव आदि उसके अवयवों से आप लोगों की आयु को क्षीण करते हैं। आप कूटस्थ आत्मा, परमेष्ठी, अज और महान् हैं। जीवलोक के जीव और आत्मा भी आप ही हैं।
 
 --- verse 32 ---
 deva:
@@ -298,6 +391,9 @@ tvattaḥ paraṁ nāparamapyaneja-
 dejacca kiñcid vyatiriktamasti|
 vidyāḥ kalāste tanavaśca sarvā
 hiraṇyagarbho'si bṛhattripṛṣṭhaḥ||
+en: Nothing is higher than you and nothing is lower. Nothing that moves and nothing that stands still is apart from you. The branches of knowledge and the arts are all your bodies. You are Hiraṇyagarbha, the great one who is beyond the three guṇas.
+tel: నీకంటె పరమైనది లేదు, అపరమైనది లేదు. కదలునది, కదలనిది ఏదియు నీకంటె వేరుగా లేదు. విద్యలు, కళలు అన్నియు నీ తనువులే. నీవే హిరణ్యగర్భుడు; మూడు గుణములకు అవ్వలి బృహత్తు నీవే.
+hi: आपसे बढ़कर कुछ नहीं है और आपसे नीचे भी कुछ नहीं है। जो चलता है और जो नहीं चलता, कुछ भी आपसे अलग नहीं है। विद्याएँ और कलाएँ सब आपकी ही तनुएँ हैं। आप ही हिरण्यगर्भ हैं और तीनों गुणों से परे बृहत् हैं।
 
 --- verse 33 ---
 deva:
@@ -310,6 +406,9 @@ vyaktaṁ vibho sthūlamidaṁ śarīraṁ
 yenendriyaprāṇamanoguṇāṁstvam|
 bhuṅkṣe sthito dhāmani pārameṣṭhye
 avyakta ātmā puruṣaḥ purāṇaḥ||
+en: O mighty Lord, this gross body is your manifest form. With it you enjoy the senses, the vital airs, the mind and the guṇas, while you remain seated in the highest abode. You are also the unmanifest self, the ancient Puruṣa.
+tel: విభో! ఈ స్థూల శరీరము నీ వ్యక్తరూపము. పారమేష్ఠ్య ధామమున నిలిచి, దానిచే నీవు ఇంద్రియములను, ప్రాణములను, మనస్సును, గుణములను అనుభవించుచున్నావు. అవ్యక్తమైన ఆత్మయు, పురాణపురుషుడును నీవే.
+hi: हे विभो! यह स्थूल शरीर आपका व्यक्त रूप है। परमेष्ठी धाम में स्थित होकर उसी से आप इन्द्रिय, प्राण, मन और गुणों को भोगते हैं। अव्यक्त आत्मा और पुराण पुरुष भी आप ही हैं।
 
 --- verse 34 ---
 deva:
@@ -318,6 +417,9 @@ deva:
 iast:
 anantāvyaktarūpeṇa yenedamakhilaṁ tatam|
 cidacicchaktiyuktāya tasmai bhagavate namaḥ||
+en: Salutation to that blessed Lord, who has spread out all this by his endless unmanifest form, and who holds the power of the conscious and of the unconscious.
+tel: అనంతమైన అవ్యక్తరూపముచే ఈ సమస్తమును వ్యాపించినవాడు, చిత్, అచిత్ శక్తులతో కూడినవాడు అగు ఆ భగవంతునికి నమస్కారము.
+hi: अनन्त अव्यक्त रूप से जिसने यह सब फैलाया है, और जो चित् और अचित् शक्ति से युक्त है, उस भगवान् को नमस्कार है।
 
 --- verse 35 ---
 deva:
@@ -326,6 +428,9 @@ deva:
 iast:
 yadi dāsyasyabhimatān varānme varadottama|
 bhūtebhyastvadvisṛṣṭebhyo mṛtyurmā bhūnmama prabho||
+en: O best of the givers of boons, if you will grant me the boons I desire, then, O Lord, let there be no death for me from any of the beings you have created.
+tel: వరదోత్తమా! నేను కోరిన వరములను నీవు ఇచ్చునెడల, ప్రభూ! నీవు సృష్టించిన భూతములవలన నాకు మరణము కలుగకుండవలెను.
+hi: हे वरदोत्तम! यदि आप मेरे मनचाहे वर देंगे, तो हे प्रभो! आपके रचे हुए प्राणियों से मेरी मृत्यु न हो।
 
 --- verse 36 ---
 deva:
@@ -334,6 +439,9 @@ deva:
 iast:
 nāntarbahirdivā naktamanyasmādapi cāyudhaiḥ|
 na bhūmau nāmbare mṛtyurna narairna mṛgairapi||
+en: Let there be no death for me inside or outside, by day or by night, from any other person, or from weapons, on the ground or in the sky, from men or from beasts.
+tel: లోపల, వెలుపల, పగలు, రాత్రి, ఇతరులవలన, ఆయుధములవలన, భూమిపై, ఆకాశమున, మనుష్యులవలన, మృగములవలన నాకు మరణము కలుగకూడదు.
+hi: भीतर या बाहर, दिन में या रात में, किसी दूसरे से या आयुधों से, पृथ्वी पर या आकाश में, मनुष्यों से या पशुओं से मेरी मृत्यु न हो।
 
 --- verse 37 ---
 deva:
@@ -342,6 +450,9 @@ deva:
 iast:
 vyasubhirvāsumadbhirvā surāsuramahoragaiḥ|
 apratidvandvatāṁ yuddhe aikapatyaṁ ca dehinām||
+en: Let there be no death for me from lifeless things or from living things, from gods, from Asuras or from the great serpents. Grant me also that I shall have no rival in battle, and sole lordship over all embodied beings.
+tel: ప్రాణము లేని వస్తువులవలన, ప్రాణము కలవారివలన, దేవతలవలన, అసురులవలన, మహాసర్పములవలన నాకు మరణము కలుగకూడదు. యుద్ధమున నాకు ఎదురు లేకుండునట్లును, దేహధారులందరిపై ఏకైక ఆధిపత్యమును ఇమ్ము.
+hi: प्राणरहित वस्तुओं से या प्राणवाले जीवों से, देवताओं, असुरों और महासर्पों से मेरी मृत्यु न हो। युद्ध में मुझे कोई प्रतिद्वन्द्वी न हो, और सब देहधारियों पर एक अधिपत्य मुझे दीजिये।
 
 --- verse 38 ---
 deva:
@@ -350,9 +461,15 @@ deva:
 iast:
 sarveṣāṁ lokapālānāṁ mahimānaṁ yathā''tmanaḥ|
 tapoyogaprabhāvāṇāṁ yanna riṣyati karhicit||
+en: Grant me also the greatness of all the guardians of the worlds, whose power comes from austerity and yoga, and your own greatness as well, a greatness that is never lost at any time.
+tel: తపోయోగ ప్రభావము కల లోకపాలకులందరి మహిమను, నీ మహిమను వలెనే నాకు ఇమ్ము. అది ఎన్నడును నశించనిది.
+hi: तप और योग के प्रभाववाले सब लोकपालों की महिमा, तथा आपकी अपनी महिमा के समान महिमा मुझे दीजिये, जो कभी नष्ट नहीं होती।
 
 --- verse none ---
 deva:
 इति श्रीमद्भागवते महापुराणे पारमहंस्यां संहितायां सप्तमस्कन्धे हिरण्यकशिपोर्वरयाचनं नाम तृतीयोऽध्यायः॥ ३॥
 iast:
 iti śrīmadbhāgavate mahāpurāṇe pāramahaṁsyāṁ saṁhitāyāṁ saptamaskandhe hiraṇyakaśiporvarayācanaṁ nāma tṛtīyo'dhyāyaḥ|| 3||
+en: Thus ends the third adhyāya, called the asking of the boon by Hiraṇyakaśipu, in the seventh skandha of the Śrīmad Bhāgavata Mahāpurāṇa, the saṁhitā of the paramahaṁsas.
+tel: ఇది శ్రీమద్భాగవత మహాపురాణమునందు, పరమహంసల సంహితయందు, సప్తమస్కంధమునందు హిరణ్యకశిపుని వరయాచనమను తృతీయాధ్యాయము.
+hi: इस प्रकार श्रीमद्भागवत महापुराण की परमहंसों की संहिता के सप्तम स्कन्ध में हिरण्यकशिपु-वरयाचन नामक तीसरा अध्याय समाप्त हुआ।
