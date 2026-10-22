@@ -1,4 +1,6 @@
-# Viṣṇu Sahasranāma — the whole stotra read against the corpus and against stotranidhi
+# Viṣṇu and Lalitā Sahasranāma — the whole stotras read against the corpus and against stotranidhi
+
+## Part one — Viṣṇu
 
 S89, 22 October 2026. Written after the reciter found lines missing while reciting in the app.
 
@@ -107,3 +109,71 @@ The comparison is a line diff over normalised text, not a reading of the verses,
 about what is present and absent and says nothing about sense. The scripts were written for this
 run and live in the session scratchpad, which does not survive; `stotras/bin/fetch_source.py` is
 what reaches stotranidhi, both pages, with no authentication.
+
+---
+
+# Part two — Lalitā
+
+Asked for after the Viṣṇu run, because the reciter found that the app gives the Lalitā names and
+then stops: the line that closes them, `इति श्रीब्रह्माण्डपुराणे उत्तरखण्डे`, is not there.
+
+- **COR** — `stotras/devi/lalita/36_lalita_sahasranama_stotram.txt`, 377 units.
+- **APP** — the `Lalitā Sahasranāma Stotram` entry in `stuti-texts.ts`: **20 units of text**, plus the
+  thousand names, which the reader lays out as ślokas using `slokaCounts` and `slokaLine1`.
+- **SN** — stotranidhi `/hi/sri-lalitha-sahasranama-stotram-in-sanskrit/` and
+  `…-uttarapeetika-in-sanskrit/`. Its Devanāgarī pūrvapīṭhikā page does not exist; the other two do.
+
+## What the app has, and what it has not
+
+Of the corpus's 377 units the app carries 32. Counted by unit:
+
+| corpus section | units | in the app |
+|---|---|---|
+| Dhyānam (pūrva) | 14 | 0 |
+| Pūrvapīṭhikā | 55 | 2 |
+| Nyāsaḥ | 15 | 1 |
+| Dhyānam | 4 | 4 |
+| Pañcapūjā | 10 | 4 (all six offerings are there; the rest are its headings) |
+| Stotram | 183 | 1 |
+| Colophon | 3 | 0 |
+| Phalaśrutiḥ | 89 | 16 |
+| Dhyānam (uttara) | 4 | 4 |
+
+**The colophon, which is what was noticed.** The corpus closes the names with
+`॥ इति श्रीब्रह्माण्ड पुराणे उत्तरखण्डे श्रीहयग्रीवागस्त्यसंवादे श्रीललितासहस्रनामस्तोत्रकथनं सम्पूर्णम् ॥`
+and stotranidhi with the same line carried further —
+`श्रीललिता रहस्यनामसाहस्र स्तोत्रकथनं नाम द्वितीयोऽध्यायः ॥`, which also says it is the second chapter.
+The app has neither, so the recitation ends on the last name and nothing closes it.
+
+**The whole pūrva frame.** All fourteen dhyāna verses before the dialogue, from
+`मातः श्रीललिते प्रसीद` and `गुरुर्ब्रह्मा गुरुर्विष्णुः` to the two verses that count the ślokas.
+The entire pūrvapīṭhikā, fifty-five units — Agastya's question, Hayagrīva's refusal and consent,
+the conditions of transmission, the account of how the hymn was composed by the Vāgdevīs. And
+fourteen of the fifteen nyāsa units: the app keeps only the single viniyoga line, which is the one
+stotranidhi's main page also carries.
+
+**The stotra itself as a text.** The corpus and stotranidhi both print the thousand names as 183
+ślokas in full sandhi — `कदम्बमञ्जरीक्लुप्तकर्णपूरमनोहरा`, not `कदम्बमञ्जरी` and `क्लुप्तकर्णपूरमनोहरा`
+one under the other. The app has only the name list, laid out in śloka shape. A reciter who learnt
+the ślokas is reading a nāmāvalī.
+
+**Most of the phalaśruti.** Sixteen units of eighty-nine. The app has the opening, the fruits, the
+ten sahasranāmas, the sealing verses; it has not the ritual instruction of the uttarapīṭhikā — when
+and how to recite, the cakrarāja worship, the gifts, the verses on the guru and on the three kinds
+of reciter.
+
+## Nothing is missing from the corpus
+
+Everything stotranidhi prints on both pages is in the corpus. The handful of lines a diff reports
+as stotranidhi's alone are its own section headings (`अथ स्तोत्रम् ।`), its wording of the viniyoga,
+its line breaks, and bracketed variants it marks in place (`[बन्धुरालका]` at 111, `[विशुक्र]` at 29) —
+which are the same two variants the corpus already carries, and one of which was settled against
+Bhāskararāya earlier the same day.
+
+## What follows from both parts
+
+The thousand names are sound in both hymns. What is thin is the frame around them, and in
+different ways: Viṣṇu has the frame and is missing pieces of it — two dhyāna verses, the
+ṛṣyādinyāsa, the primary ṣaḍaṅganyāsa, the saṅkalpa, the maṅgalācaraṇa — while Lalitā has almost
+none of it, and no closing line at all. In both the corpus already holds everything needed; nothing
+has to be sourced. Nothing in the app was changed in this run.
