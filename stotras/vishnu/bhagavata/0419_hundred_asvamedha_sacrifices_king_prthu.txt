@@ -9,7 +9,7 @@ Type: Purāṇa (an adhyāya of the Śrīmad Bhāgavata, Skandha 4)
 
 Source / recension: Base text and authority: the Gītā Press, Gorakhpur Śrīmadbhāgavata Mahāpurāṇa with Hindi translation, Part 1 (Gītā Press code 26), archive.org item `shrimadbhagwat-mahapuran-bhag-1`, printed pages 496–500; the PDF page numbers are the printed ones. The PDF carries the typesetter's own text layer in the Chanakya font encoding, and the text was decoded from it by machine with `bin/bhagavata/chanakya.py`, not read off OCR or typed. The decoder was checked against GRETIL over all twelve skandhas before any file was written, and the differences that remain were sampled and found to be readings of the two editions. Second witness: GRETIL's `sa_bhAgavatapurANa.xml` (IAST, contributed by Ulrich Stiehl), a separate editorial lineage, compared verse by verse by machine. The TTD edition with the commentaries of Śrīdhara, Vīrarāghava and Vijayadhvaja (archive.org `Bhagavata_Purana_With_Multiple_Commentaries_TTD_Critical_Edition`) is the third witness where one is needed; it was not read for this file. The IAST was generated mechanically from the Devanāgarī with `bin/dev2iast.py`.
 
-Recension note: Text-only file, written 1 Oct 2026 at the user's instruction to lay down the whole Bhāgavata first: the English, Telugu and Hindi meanings are still to be added, and the witnesses' differences listed here have been recorded by machine and not yet adjudicated. The print is followed throughout. The print numbers 42 verses and GRETIL numbers 42. Of the 42 verses GRETIL has under the same number, 40 agree with the print letter for letter once spacing and the spelling of nasals are set aside; the rest differ: 8, 14. The edition's footnotes give these older printed readings (प्रा० पा०), which are not bracketed into the line: at 13, सूचितं; at 15, हन्तुमत्रिर०; at 16, गृध्रराडिव रावणम्. Spacing is the print's, as its text layer gives it; in a few places justification has left a space inside a word, and these are still to be closed when the verse is read. The speaker lines (श्रीशुक उवाच and the others) are printed in italic above the verse they introduce, and are given as its first line.
+Recension note: Meanings written 22 Oct 2026 (session S78). The differences between the witnesses listed below were read as the verses were glossed; except where this note says otherwise, each is a spelling, a sandhi or a word order of the two editions, none of them changes the sense, and the print's reading therefore stands unbracketed. The print is followed throughout. The print numbers 42 verses and GRETIL numbers 42. Of the 42 verses GRETIL has under the same number, 40 agree with the print letter for letter once spacing and the spelling of nasals are set aside; the rest differ: 8, 14. The edition's footnotes give these older printed readings (प्रा० पा०), which are not bracketed into the line: at 13, सूचितं; at 15, हन्तुमत्रिर०; at 16, गृध्रराडिव रावणम्. Spacing is the print's, as its text layer gives it. The speaker lines (श्रीशुक उवाच and the others) are printed in italic above the verse they introduce, and are given as its first line. A footnote's numeral keys it to one word, and which word that is cannot be told from the note alone, so those readings stay unbracketed until the page itself is read. Four words were put right as the verses were read, each a space the print's text layer had swallowed at a word boundary where the print's own convention sets one: at verse 6 between योगेशाः and सनकादयः, at verse 7 between दोग्धि and स्माभीप्सितान्, at verse 8 between प्रासूयन्त and मधुच्युतः, and at verse 39 between कृत्वा and वात्सल्यं. GRETIL agrees with all four corrected readings. At verses 19 and 22 the print names Indra हरिः, which is one of his names; the three meanings say Indra, so that the reader does not take the word for Viṣṇu, who is named हरिः at verse 3 of this same adhyāya.
 
 Verse count: 42, plus the closing colophon printed unnumbered.
 
@@ -24,6 +24,9 @@ iast:
 maitreya uvāca
 athādīkṣata rājā tu hayamedhaśatena saḥ|
 brahmāvarte manoḥ kṣetre yatra prācī sarasvatī||
+en: Maitreya said: Then that king took the consecration for a hundred horse sacrifices, in Brahmāvarta, the field of Manu, where the Sarasvatī flows toward the east.
+tel: మైత్రేయుడు పలికెను: అటుపిమ్మట ఆ రాజు, సరస్వతి తూర్పునకు ప్రవహించు మనువు క్షేత్రమైన బ్రహ్మావర్తమున, నూఱు హయమేధములకు దీక్ష పూనెను.
+hi: मैत्रेय ने कहा: तब उस राजा ने, जहाँ सरस्वती पूर्व की ओर बहती है, उस मनु के क्षेत्र ब्रह्मावर्त में सौ हयमेधों के लिये दीक्षा ली।
 
 --- verse 2 ---
 deva:
@@ -32,6 +35,9 @@ deva:
 iast:
 tadabhipretya bhagavān karmātiśayamātmanaḥ|
 śatakraturna mamṛṣe pṛthoryajñamahotsavam||
+en: Understanding that this would go beyond his own deeds, the mighty Śatakratu could not bear the great festival of Pṛthu's sacrifice.
+tel: ఇది తన కర్మములను మించునని గ్రహించి, భగవంతుడైన శతక్రతువు పృథువు యజ్ఞ మహోత్సవమును సహింపలేకపోయెను.
+hi: यह अपने कर्मों से बढ़कर होगा, यह समझकर भगवान् शतक्रतु पृथु के यज्ञ-महोत्सव को सहन न कर सके।
 
 --- verse 3 ---
 deva:
@@ -40,6 +46,9 @@ deva:
 iast:
 yatra yajñapatiḥ sākṣādbhagavān harirīśvaraḥ|
 anvabhūyata sarvātmā sarvalokaguruḥ prabhuḥ||
+en: There the lord of the sacrifice himself, the blessed Lord Hari, the ruler, the self of all, the teacher of all the worlds, the master, was present.
+tel: అక్కడ యజ్ఞపతి సాక్షాత్తుగా, భగవంతుడైన హరి, ఈశ్వరుడు, సర్వాత్ముడు, సర్వలోక గురువు, ప్రభువు, తానే ఉండెను.
+hi: वहाँ यज्ञपति साक्षात् भगवान् हरि, ईश्वर, सर्वात्मा, सर्वलोकगुरु, प्रभु स्वयं उपस्थित थे।
 
 --- verse 4 ---
 deva:
@@ -48,6 +57,9 @@ deva:
 iast:
 anvito brahmaśarvābhyāṁ lokapālaiḥ sahānugaiḥ|
 upagīyamāno gandharvairmunibhiścāpsarogaṇaiḥ||
+en: He was accompanied by Brahmā and Śarva, and by the guardians of the worlds with their followers, and he was sung to by the Gandharvas, by the sages and by the hosts of Apsarases.
+tel: ఆయన బ్రహ్మ శర్వులతో, అనుచరులతో కూడిన లోకపాలకులతో కలిసియుండెను; గంధర్వులు, మునులు, అప్సరసల గణములు ఆయనను గానముచే కీర్తించుచుండిరి.
+hi: वे ब्रह्मा और शर्व के साथ थे, और अनुचरों सहित लोकपालों के साथ थे; गन्धर्व, मुनि और अप्सराओं के गण उनका गान कर रहे थे।
 
 --- verse 5 ---
 deva:
@@ -56,30 +68,42 @@ deva:
 iast:
 siddhā vidyādharā daityā dānavā guhyakādayaḥ|
 sunandanandapramukhāḥ pārṣadapravarā hareḥ||
+en: The Siddhas, the Vidyādharas, the Daityas, the Dānavas, the Guhyakas and the rest, and the foremost attendants of Hari headed by Sunanda and Nanda,
+tel: సిద్ధులు, విద్యాధరులు, దైత్యులు, దానవులు, గుహ్యకులు మొదలైనవారును, సునందుడు నందుడు మొదలైన హరి ప్రవర పార్షదులును,
+hi: सिद्ध, विद्याधर, दैत्य, दानव, गुह्यक आदि, तथा सुनन्द और नन्द आदि हरि के प्रवर पार्षद,
 
 --- verse 6 ---
 deva:
-कपिलो नारदो दत्तो योगेशाःसनकादयः।
+कपिलो नारदो दत्तो योगेशाः सनकादयः।
 तमन्वीयुर्भागवता ये च तत्सेवनोत्सुकाः॥
 iast:
-kapilo nārado datto yogeśāḥsanakādayaḥ|
+kapilo nārado datto yogeśāḥ sanakādayaḥ|
 tamanvīyurbhāgavatā ye ca tatsevanotsukāḥ||
+en: Kapila, Nārada, Datta, the lords of yoga headed by Sanaka, and those devotees of the Lord who were eager to serve him — all these followed him.
+tel: కపిలుడు, నారదుడు, దత్తుడు, సనకుడు మొదలైన యోగేశులు, ఆయన సేవకు ఉత్సాహము కలిగిన భాగవతులు — వారందరు ఆయనను అనుసరించిరి.
+hi: कपिल, नारद, दत्त, सनक आदि योगेश, और उनकी सेवा के लिये उत्सुक भागवत जन — ये सब उनके पीछे चले।
 
 --- verse 7 ---
 deva:
 यत्र धर्मदुघा भूमिः सर्वकामदुघा सती।
-दोग्धिस्माभीप्सितानर्थान् यजमानस्य भारत॥
+दोग्धि स्माभीप्सितानर्थान् यजमानस्य भारत॥
 iast:
 yatra dharmadughā bhūmiḥ sarvakāmadughā satī|
-dogdhismābhīpsitānarthān yajamānasya bhārata||
+dogdhi smābhīpsitānarthān yajamānasya bhārata||
+en: There, O Bhārata, the Earth, who yields dharma and who yields all that is desired, truly gave as milk the things that the sacrificer wished for.
+tel: ఓ భారతా, అక్కడ ధర్మమును ఇచ్చునదియు, కోరిన అన్నిటిని ఇచ్చునదియు అయిన భూమి, యజమానుడు కోరిన వస్తువులను నిజముగా పాలుగా ఇచ్చెను.
+hi: हे भारत, वहाँ धर्म को देने वाली और सब कामनाओं को देने वाली भूमि ने यजमान के चाहे हुए पदार्थों को सचमुच दूध के रूप में दिया।
 
 --- verse 8 ---
 deva:
 ऊहुः सर्वरसान्नद्यः क्षीरदध्यन्नगोरसान्।
-तरवो भूरिवर्ष्माणः प्रासूयन्तमधुच्युतः॥
+तरवो भूरिवर्ष्माणः प्रासूयन्त मधुच्युतः॥
 iast:
 ūhuḥ sarvarasānnadyaḥ kṣīradadhyannagorasān|
-taravo bhūrivarṣmāṇaḥ prāsūyantamadhucyutaḥ||
+taravo bhūrivarṣmāṇaḥ prāsūyanta madhucyutaḥ||
+en: The rivers brought all the juices — milk, curd, cooked food and the products of the cow. The trees, of great size and dripping honey, brought forth their fruit.
+tel: నదులు పాలు, పెరుగు, అన్నము, గోరసములు అను సర్వ రసములను తెచ్చినవి. పెద్ద ఎత్తు కలిగి, తేనె స్రవించు చెట్లు ఫలములను ఇచ్చినవి.
+hi: नदियाँ दूध, दही, अन्न और गोरस आदि सब रसों को लायीं। बड़े आकार वाले और मधु चुआने वाले वृक्षों ने फल दिये।
 
 --- verse 9 ---
 deva:
@@ -88,6 +112,9 @@ deva:
 iast:
 sindhavo ratnanikarān girayo'nnaṁ caturvidham|
 upāyanamupājahruḥ sarve lokāḥ sapālakāḥ||
+en: The seas brought heaps of jewels, the mountains brought food of the four kinds, and all the worlds with their guardians brought their gifts.
+tel: సముద్రములు రత్నముల రాశులను, పర్వతములు నాలుగు విధముల అన్నమును తెచ్చినవి; పాలకులతో కూడిన లోకములన్నియు ఉపాయనములను తెచ్చినవి.
+hi: समुद्रों ने रत्नों के ढेर, पर्वतों ने चार प्रकार का अन्न लाया; और पालकों सहित सब लोकों ने उपायन लाये।
 
 --- verse 10 ---
 deva:
@@ -96,6 +123,9 @@ deva:
 iast:
 iti cādhokṣajeśasya pṛthostu paramodayam|
 asūyan bhagavānindraḥ pratighātamacīkarat||
+en: Lord Indra envied this highest prosperity of Pṛthu, whose lord was Adhokṣaja, and so he made an obstruction.
+tel: అధోక్షజుడే ప్రభువుగా కలిగిన పృథువు ఈ పరమ అభివృద్ధిని చూచి భగవంతుడైన ఇంద్రుడు అసూయ చెంది, ప్రతిఘాతమును కలిగించెను.
+hi: अधोक्षज जिनके स्वामी थे, उस पृथु के इस परम उदय से भगवान् इन्द्र ने असूया की, और प्रतिघात किया।
 
 --- verse 11 ---
 deva:
@@ -104,6 +134,9 @@ deva:
 iast:
 carameṇāśvamedhena yajamāne yajuṣpatim|
 vainye yajñapaśuṁ spardhannapovāha tirohitaḥ||
+en: While Vainya was worshipping the lord of the yajus with the last of the horse sacrifices, Indra, contending with him, hid himself and carried off the sacrificial animal.
+tel: వైన్యుడు కడపటి అశ్వమేధముచే యజుష్పతిని ఆరాధించుచున్నప్పుడు, ఇంద్రుడు ఆయనతో స్పర్ధ పడి, మాయమై యజ్ఞ పశువును తీసికొనిపోయెను.
+hi: वैन्य अन्तिम अश्वमेध से यजुष्पति की आराधना कर रहे थे, तब इन्द्र ने उनसे स्पर्धा करके, छिपकर यज्ञपशु को हर लिया।
 
 --- verse 12 ---
 deva:
@@ -112,6 +145,9 @@ deva:
 iast:
 tamatrirbhagavānaikṣattvaramāṇaṁ vihāyasā|
 āmuktamiva pākhaṇḍaṁ yo'dharme dharmavibhramaḥ||
+en: The blessed Atri saw him hurrying through the sky, wearing the garb of a false creed, which is the appearance of dharma laid upon what is not dharma.
+tel: ఆకాశమున వేగముగా పోవుచున్న ఆయనను భగవంతుడైన అత్రి చూచెను; ఆయన అధర్మమున ధర్మమువలె తోచు పాఖండ వేషమును ధరించియుండెను.
+hi: भगवान् अत्रि ने उन्हें आकाश में शीघ्रता से जाते देखा; उन्होंने पाखण्ड का वेष धारण किया था, जो अधर्म में धर्म का भ्रम है।
 
 --- verse 13 ---
 deva:
@@ -120,6 +156,9 @@ deva:
 iast:
 atriṇā codito hantuṁ pṛthuputro mahārathaḥ|
 anvadhāvata saṁkruddhastiṣṭha tiṣṭheti cābravīt||
+en: Urged by Atri to kill him, the son of Pṛthu, the great chariot-warrior, ran after him in great anger, and said, Stand, stand.
+tel: అత్రిచే చంపుటకు ప్రేరేపింపబడి, మహారథుడైన పృథువు కుమారుడు మిక్కిలి కోపముతో ఆయనను వెంబడించి, నిలువుము నిలువుము అని పలికెను.
+hi: अत्रि से मारने के लिये कहे जाने पर, महारथ पृथुपुत्र अत्यन्त क्रुद्ध होकर उनके पीछे दौड़े और बोले, ठहरो, ठहरो।
 
 --- verse 14 ---
 deva:
@@ -128,6 +167,9 @@ deva:
 iast:
 taṁ tādṛśākṛtiṁ vīkṣya mene dharmaṁ śarīriṇam|
 jaṭilaṁ bhasmanācchannaṁ tasmai bāṇaṁ na muṁcati||
+en: But seeing him in such a form, with matted hair and covered with ashes, he thought that dharma had taken a body, and he did not release the arrow at him.
+tel: జడలు కట్టిన జుట్టుతో, భస్మముతో కప్పబడిన అట్టి ఆకృతిలో ఆయనను చూచి, ధర్మమే శరీరము ధరించినదని తలచి, ఆయనపై బాణమును విడువలేదు.
+hi: परन्तु जटाओं वाले और भस्म से ढके उस रूप को देखकर उसने समझा कि धर्म ने शरीर धारण किया है, और उस पर बाण नहीं छोड़ा।
 
 --- verse 15 ---
 deva:
@@ -136,6 +178,9 @@ deva:
 iast:
 vadhānnivṛttaṁ taṁ bhūyo hantave'triracodayat|
 jahi yajñahanaṁ tāta mahendraṁ vibudhādhamam||
+en: He had turned back from the killing, and Atri urged him again to kill: Strike down, my child, this slayer of the sacrifice, the great Indra, the lowest of the gods.
+tel: వధము నుండి మరలిన ఆయనను అత్రి మఱల చంపుటకు ప్రేరేపించెను: నాయనా, యజ్ఞమును చెఱచిన ఈ మహేంద్రుని, విబుధులలో అధముడైనవానిని చంపుము.
+hi: वध से लौट आये उसे अत्रि ने फिर मारने के लिये प्रेरित किया: हे तात, यज्ञ को नष्ट करने वाले इस महेन्द्र को, विबुधों में अधम को, मार डालो।
 
 --- verse 16 ---
 deva:
@@ -144,6 +189,9 @@ deva:
 iast:
 evaṁ vainyasutaḥ proktastvaramāṇaṁ vihāyasā|
 anvadravadabhikruddho rāvaṇaṁ gṛdhrarāḍiva||
+en: Thus addressed, the son of Vainya, greatly angered, ran after him as he hurried through the sky, as the king of the vultures once ran after Rāvaṇa.
+tel: ఇట్లు పలుకబడిన వైన్యుని కుమారుడు మిక్కిలి కోపించి, ఆకాశమున వేగముగా పోవుచున్న ఆయనను, గృధ్రరాజు రావణుని వెంబడించినట్లు వెంబడించెను.
+hi: इस प्रकार कहे जाने पर वैन्यपुत्र अत्यन्त क्रुद्ध होकर, आकाश में शीघ्रता से जाते हुए उनके पीछे दौड़े, जैसे गृध्रराज रावण के पीछे दौड़े थे।
 
 --- verse 17 ---
 deva:
@@ -152,6 +200,9 @@ deva:
 iast:
 so'śvaṁ rūpaṁ ca taddhitvā tasmā antarhitaḥ svarāṭ|
 vīraḥ svapaśumādāya pituryajñamupeyivān||
+en: Then the self-ruler gave up the horse and that form, and became unseen by him. The hero took his own animal and came to his father's sacrifice.
+tel: అప్పుడు ఆ స్వరాట్టు గుఱ్ఱమును, ఆ రూపమును విడిచి, ఆయనకు కనబడకుండ మాయమయ్యెను. ఆ వీరుడు తన పశువును తీసికొని తండ్రి యజ్ఞమునకు వచ్చెను.
+hi: तब उस स्वराट् ने घोड़े और उस रूप को छोड़कर उसके लिये अन्तर्हित हो गये। वीर अपना पशु लेकर पिता के यज्ञ में आया।
 
 --- verse 18 ---
 deva:
@@ -160,6 +211,9 @@ deva:
 iast:
 tattasya cādbhutaṁ karma vicakṣya paramarṣayaḥ|
 nāmadheyaṁ dadustasmai vijitāśva iti prabho||
+en: Seeing that wonderful deed of his, O lord, the great sages gave him the name Vijitāśva.
+tel: ఓ ప్రభూ, ఆయన ఆ అద్భుతమైన కర్మను చూచి, పరమ ఋషులు ఆయనకు విజితాశ్వుడు అను పేరును ఇచ్చిరి.
+hi: हे प्रभो, उसके उस अद्भुत कर्म को देखकर परम ऋषियों ने उसे विजिताश्व यह नाम दिया।
 
 --- verse 19 ---
 deva:
@@ -168,6 +222,9 @@ deva:
 iast:
 upasṛjya tamastīvraṁ jahārāśvaṁ punarhariḥ|
 caṣālayūpataśchanno hiraṇyaraśanaṁ vibhuḥ||
+en: Again Indra spread a thick darkness, and the mighty one, hidden by the caṣāla of the sacrificial post, carried off the horse that was bound with a golden rope.
+tel: ఇంద్రుడు మఱల దట్టమైన చీకటిని కప్పి, యూపస్తంభము చషాలము వెనుక దాగి, బంగారు త్రాటితో కట్టబడిన గుఱ్ఱమును ఆ విభువు తీసికొనిపోయెను.
+hi: इन्द्र ने फिर घना अन्धकार फैलाया, और वह विभु यूप के चषाल से छिपकर सोने की रशना से बँधे घोड़े को हर ले गया।
 
 --- verse 20 ---
 deva:
@@ -176,6 +233,9 @@ deva:
 iast:
 atriḥ sandarśayāmāsa tvaramāṇaṁ vihāyasā|
 kapālakhaṭvāṁgadharaṁ vīro nainamabādhata||
+en: Atri pointed him out as he hurried through the sky, bearing a skull and a club. But the hero did not strike him.
+tel: ఆకాశమున వేగముగా పోవుచు, కపాలమును ఖట్వాంగమును ధరించిన ఆయనను అత్రి చూపెను. కాని ఆ వీరుడు ఆయనను బాధింపలేదు.
+hi: अत्रि ने आकाश में शीघ्रता से जाते हुए, कपाल और खट्वांग धारण किये उन्हें दिखाया। परन्तु वीर ने उन पर प्रहार नहीं किया।
 
 --- verse 21 ---
 deva:
@@ -184,6 +244,9 @@ deva:
 iast:
 atriṇā coditastasmai sandadhe viśikhaṁ ruṣā|
 so'śvaṁ rūpaṁ ca taddhitvā tasthāvantarhitaḥ svarāṭ||
+en: Urged by Atri, he fitted an arrow at him in anger. Then the self-ruler gave up the horse and that form, and stood there unseen.
+tel: అత్రిచే ప్రేరేపింపబడి, ఆయన కోపముతో ఆయనపై బాణమును సంధించెను. అప్పుడు ఆ స్వరాట్టు గుఱ్ఱమును, ఆ రూపమును విడిచి, కనబడకుండ అక్కడ నిలిచెను.
+hi: अत्रि से प्रेरित होकर उसने क्रोध से उन पर बाण चढ़ाया। तब उस स्वराट् ने घोड़े और उस रूप को छोड़कर अन्तर्हित होकर वहाँ खड़े रहे।
 
 --- verse 22 ---
 deva:
@@ -192,6 +255,9 @@ deva:
 iast:
 vīraścāśvamupādāya pitṛyajñamathāvrajat|
 tadavadyaṁ hare rūpaṁ jagṛhurjñānadurbalāḥ||
+en: And the hero took the horse and then went to his father's sacrifice. Those who were weak in knowledge took up that blameworthy form of Indra.
+tel: ఆ వీరుడు గుఱ్ఱమును తీసికొని తండ్రి యజ్ఞమునకు వెళ్ళెను. జ్ఞానమున బలహీనులైనవారు ఇంద్రుని ఆ నిందింపదగిన రూపమును గ్రహించిరి.
+hi: और वीर घोड़े को लेकर पिता के यज्ञ में गया। ज्ञान में दुर्बल लोगों ने इन्द्र के उस निन्दनीय रूप को ग्रहण कर लिया।
 
 --- verse 23 ---
 deva:
@@ -200,6 +266,9 @@ deva:
 iast:
 yāni rūpāṇi jagṛhe indro hayajihīrṣayā|
 tāni pāpasya khaṇḍāni liṁgaṁ khaṇḍamihocyate||
+en: The forms that Indra took in his wish to steal the horse are pieces of sin. Here the word for a piece is used in the sense of a mark.
+tel: గుఱ్ఱమును దొంగిలింపగోరి ఇంద్రుడు ధరించిన ఆ రూపములు పాపము ముక్కలు. ఇక్కడ ముక్క అను మాట గుఱుతు అను అర్థమున చెప్పబడినది.
+hi: घोड़े को हरने की इच्छा से इन्द्र ने जो रूप ग्रहण किये, वे पाप के खण्ड हैं। यहाँ खण्ड शब्द लिंग अर्थात् चिह्न के अर्थ में कहा गया है।
 
 --- verse 24 ---
 deva:
@@ -208,6 +277,9 @@ deva:
 iast:
 evamindre haratyaśvaṁ vainyayajñajighāṁsayā|
 tadgṛhītavisṛṣṭeṣu pākhaṇḍeṣu matirnṛṇām||
+en: While Indra was thus carrying off the horse in his wish to destroy the sacrifice of Vainya, the minds of men turned to those false creeds that he had taken up and cast away.
+tel: వైన్యుని యజ్ఞమును చెఱచగోరి ఇంద్రుడు ఇట్లు గుఱ్ఱమును తీసికొనిపోవుచున్నప్పుడు, ఆయన ధరించి విడిచిన ఆ పాఖండములపై మనుష్యుల మతి మరలెను.
+hi: वैन्य के यज्ञ को नष्ट करने की इच्छा से इन्द्र इस प्रकार घोड़े को हर रहे थे, तब उनके ग्रहण किये और छोड़े हुए उन पाखण्डों की ओर मनुष्यों की मति गयी।
 
 --- verse 25 ---
 deva:
@@ -216,6 +288,9 @@ deva:
 iast:
 dharma ityupadharmeṣu nagnaraktapaṭādiṣu|
 prāyeṇa sajjate bhrāntyā peśaleṣu ca vāgmiṣu||
+en: Taking them for dharma, men mostly become attached in error to these lesser dharmas, to those who go naked and those who wear red cloth and the like, and to those who are clever and good at speech.
+tel: వానిని ధర్మమని తలచి, నగ్నముగా ఉండువారు, ఎఱ్ఱని వస్త్రము ధరించువారు మొదలైన ఉపధర్మములపైనను, నేర్పరులైన వాగ్ములపైనను మనుష్యులు చాలవఱకు భ్రాంతితో ఆసక్తులగుదురు.
+hi: उन्हें धर्म मानकर, नग्न रहने वाले और लाल वस्त्र पहनने वाले आदि उपधर्मों में, तथा चतुर और वाचाल लोगों में मनुष्य प्रायः भ्रान्ति से आसक्त हो जाते हैं।
 
 --- verse 26 ---
 deva:
@@ -224,6 +299,9 @@ deva:
 iast:
 tadabhijñāya bhagavān pṛthuḥ pṛthuparākramaḥ|
 indrāya kupito bāṇamādattodyatakārmukaḥ||
+en: Knowing this, the blessed Pṛthu, of great prowess, was angry with Indra. He took up an arrow and raised his bow.
+tel: ఇది తెలిసి, గొప్ప పరాక్రమము కలిగిన భగవంతుడైన పృథువు ఇంద్రునిపై కోపించెను. ఆయన బాణమును చేపట్టి ధనుస్సును ఎత్తెను.
+hi: यह जानकर, महान् पराक्रम वाले भगवान् पृथु इन्द्र पर क्रुद्ध हुए। उन्होंने बाण लिया और धनुष उठाया।
 
 --- verse 27 ---
 deva:
@@ -236,6 +314,9 @@ tamṛtvijaḥ śakravadhābhisandhitaṁ
 vicakṣya duṣprekṣyamasahyaraṁhasam|
 nivārayāmāsuraho mahāmate
 na yujyate'trānyavadhaḥ pracoditāt||
+en: The priests saw him set upon killing Śakra, hard to look upon, of unbearable speed, and they held him back: Ah, great-minded one, in this rite the killing of any being other than the one that is enjoined is not proper.
+tel: శక్రుని చంపుటకు సంకల్పించిన, చూడరాని, సహింపరాని వేగము కలిగిన ఆయనను చూచి ఋత్విజులు వారించిరి: ఓ మహామతీ, ఇక్కడ విధింపబడినవాని కాక వేఱొకరిని చంపుట తగదు.
+hi: शक्र को मारने का संकल्प किये हुए, दुष्प्रेक्ष्य और असह्य वेग वाले उन्हें देखकर ऋत्विजों ने रोका: अहो महामते, यहाँ प्रचोदित के अतिरिक्त किसी अन्य का वध उचित नहीं है।
 
 --- verse 28 ---
 deva:
@@ -248,6 +329,9 @@ vayaṁ marutvantamihārthanāśanaṁ
 hvayāmahe tvacchravasā hatatviṣam|
 ayātayāmopahavairanantaraṁ
 prasahya rājan juhavāma te'hitam||
+en: We shall call Indra, the lord of the Maruts, here, him who has destroyed our purpose and whose splendour has been struck down by your fame. With invocations that have not lost their power we shall at once overcome him, O King, and offer your enemy into the fire.
+tel: మా ప్రయోజనమును చెఱచిన, మీ కీర్తిచే తేజము నశించిన మరుత్వంతుడైన ఇంద్రుని ఇక్కడికి పిలుచుదుము. ఓ రాజా, శక్తి తగ్గని ఉపహవములచే వెంటనే ఆయనను లొంగదీసి మీ శత్రువును హోమము చేయుదుము.
+hi: हमारे अर्थ को नष्ट करने वाले, और आपके यश से तेज खोये हुए मरुत्वान् इन्द्र को हम यहाँ बुलायेंगे। हे राजन्, शक्ति न खोये हुए उपहवों से तुरन्त उन्हें वश में करके आपके अहित को हवन कर देंगे।
 
 --- verse 29 ---
 deva:
@@ -256,6 +340,9 @@ deva:
 iast:
 ityāmantrya kratupatiṁ vidurāsyartvijo ruṣā|
 srugghastāṁjuhvato'bhyetya svayambhūḥ pratyaṣedhata||
+en: Having addressed the lord of the sacrifice in this way, O Vidura, his priests in anger took the ladle in hand to make the offering. Then the self-born Brahmā came and forbade them.
+tel: ఓ విదురా, క్రతుపతితో ఇట్లు పలికి, ఆయన ఋత్విజులు కోపముతో జుహూ దండమును చేత పట్టి హోమము చేయబోయిరి. అప్పుడు స్వయంభువు వచ్చి వారిని వారించెను.
+hi: हे विदुर, क्रतुपति से इस प्रकार कहकर उनके ऋत्विज क्रोध से स्रुक् हाथ में लेकर हवन करने लगे। तब स्वयम्भू ने आकर उन्हें रोक दिया।
 
 --- verse 30 ---
 deva:
@@ -264,6 +351,9 @@ deva:
 iast:
 na vadhyo bhavatāmindro yadyajño bhagavattanuḥ|
 yaṁ jighāṁsatha yajñena yasyeṣṭāstanavaḥ surāḥ||
+en: Indra is not to be killed by you, for the sacrifice is a body of the Lord. You wish to kill by this sacrifice him whose own loved bodies are the gods.
+tel: ఇంద్రుడు మీచే చంపదగినవాడు కాడు, యజ్ఞము భగవంతుని శరీరమే. మీరు యజ్ఞముచే చంపగోరునది ఎవరినో, ఆ ఆయనకు దేవతలే ఇష్టమైన శరీరములు.
+hi: इन्द्र आपके द्वारा वध्य नहीं है, क्योंकि यज्ञ भगवान् का ही शरीर है। जिसे आप यज्ञ से मारना चाहते हैं, उसी के इष्ट शरीर ये देव हैं।
 
 --- verse 31 ---
 deva:
@@ -272,6 +362,9 @@ deva:
 iast:
 tadidaṁ paśyata mahaddharmavyatikaraṁ dvijāḥ|
 indreṇānuṣṭhitaṁ rājñaḥ karmaitadvijighāṁsatā||
+en: See this, O twice-born ones: a great breach of dharma has been brought about by Indra, who wishes to destroy this rite of the king.
+tel: ఓ ద్విజులారా, ఇది చూడుడు: రాజు ఈ కర్మను చెఱచగోరిన ఇంద్రునిచే గొప్ప ధర్మ వ్యతికరము కలిగింపబడినది.
+hi: हे द्विजों, इसे देखिये: राजा के इस कर्म को नष्ट करने की इच्छा वाले इन्द्र ने यह महान् धर्म-व्यतिकर किया है।
 
 --- verse 32 ---
 deva:
@@ -280,6 +373,9 @@ deva:
 iast:
 pṛthukīrteḥ pṛthorbhūyāttarhyekonaśatakratuḥ|
 alaṁ te kratubhiḥ sviṣṭairyadbhavānmokṣadharmavit||
+en: Let Pṛthu of wide fame have, then, one less than a hundred sacrifices. Enough for you of these rites well performed, for you are a knower of the dharma of liberation.
+tel: అట్లయిన పృథు కీర్తి కలిగిన పృథువునకు నూఱు కంటె ఒకటి తక్కువ క్రతువులు అగుగాక. బాగుగా చేసిన ఈ క్రతువులు మీకు చాలును, ఏలయన మీరు మోక్ష ధర్మమును ఎఱిగినవారు.
+hi: तो पृथुकीर्ति पृथु के सौ से एक कम क्रतु हो जायें। अच्छी तरह किये हुए इन क्रतुओं से आपका काम हो गया, क्योंकि आप मोक्षधर्म के ज्ञाता हैं।
 
 --- verse 33 ---
 deva:
@@ -288,6 +384,9 @@ deva:
 iast:
 naivātmane mahendrāya roṣamāhartumarhasi|
 ubhāvapi hi bhadraṁ te uttamaślokavigrahau||
+en: You should not bring anger against the great Indra, who is your own self. May it be well with you: both of you are forms of him who is praised by the best of hymns.
+tel: మీ ఆత్మయే అయిన మహేంద్రునిపై కోపము తెచ్చుకొనుట మీకు తగదు. మీకు మేలు కలుగును; మీరు ఇద్దఱును ఉత్తమశ్లోకుని విగ్రహములే.
+hi: अपने ही आत्मा महेन्द्र पर रोष लाना आपको उचित नहीं। आपका भला हो; आप दोनों ही उत्तमश्लोक के विग्रह हैं।
 
 --- verse 34 ---
 deva:
@@ -300,6 +399,9 @@ māsminmahārāja kṛthāḥ sma cintāṁ
 niśāmayāsmadvaca ādṛtātmā|
 yaddhyāyato daivahataṁ nu kartuṁ
 mano'tiruṣṭaṁ viśate tamo'ndham||
+en: O great King, do not grieve over this. Listen to our word with a respectful mind. The mind of one who broods on doing what fate has struck down grows very angry and enters a blind darkness.
+tel: ఓ మహారాజా, దీనిని గుఱించి చింత చేయకుము. ఆదర బుద్ధితో మా మాటను వినుము. దైవము భంగము చేసినదానిని చేయవలెనని ఆలోచించువాని మనసు మిక్కిలి కోపించి, గుడ్డి చీకటిలోనికి పోవును.
+hi: हे महाराज, इसके लिये चिन्ता न करें। आदरयुक्त मन से हमारा वचन सुनिये। दैव से नष्ट हुए को करने का ध्यान करने वाले का मन अति रुष्ट होकर अन्धे तमस् में प्रवेश करता है।
 
 --- verse 35 ---
 deva:
@@ -308,6 +410,9 @@ deva:
 iast:
 kraturviramatāmeṣa deveṣu duravagrahaḥ|
 dharmavyatikaro yatra pākhaṇḍairindranirmitaiḥ||
+en: Let this rite now cease. It presses hard upon the gods. In it there is a breach of dharma through the false creeds that Indra has made.
+tel: ఈ క్రతువు ఇప్పుడు ఆగుగాక. ఇది దేవతలపై కఠినముగా పట్టుబట్టుట. ఇంద్రుడు కల్పించిన పాఖండములచే ఇందు ధర్మ వ్యతికరము కలుగుచున్నది.
+hi: यह क्रतु अब रुक जाये। यह देवों पर कठिन आग्रह है। इन्द्र से रचे गये पाखण्डों से इसमें धर्म का व्यतिकर हो रहा है।
 
 --- verse 36 ---
 deva:
@@ -316,6 +421,9 @@ deva:
 iast:
 ebhirindropasaṁsṛṣṭaiḥ pākhaṇḍairhāribhirjanam|
 hriyamāṇaṁ vicakṣvainaṁ yaste yajñadhrugaśvamuṭ||
+en: Look upon these people, who are being carried away by these alluring false creeds that Indra has brought forth, he who harms the sacrifice and who has stolen the horse.
+tel: యజ్ఞమునకు హాని చేసి, గుఱ్ఱమును దొంగిలించిన ఇంద్రుడు కలిగించిన ఈ ఆకర్షించు పాఖండములచే కొనిపోబడుచున్న ఈ జనమును చూడుము.
+hi: जो यज्ञ का द्रोही है और घोड़े को हर ले गया, उस इन्द्र से रचे गये इन हरने वाले पाखण्डों से खिंचे जाते इस जन को देखिये।
 
 --- verse 37 ---
 deva:
@@ -328,6 +436,9 @@ bhavān paritrātumihāvatīrṇo
 dharmaṁ janānāṁ samayānurūpam|
 venāpacārādavaluptamadya
 taddehato viṣṇukalāsi vainya||
+en: You have come down here to save the dharma of the people, the dharma that is fitting for the time, which was destroyed by the misdeed of Vena. From his body you are born, O Vainya, and you are a part of Viṣṇu.
+tel: వేనుని అపచారముచే నశించిన, కాలమునకు తగిన జనుల ధర్మమును రక్షించుటకు మీరు ఇక్కడ అవతరించినారు. ఓ వైన్యా, ఆయన దేహము నుండి మీరు కలిగినారు, మీరు విష్ణు కల.
+hi: वेन के अपचार से नष्ट हुए, समय के अनुरूप जनों के धर्म की रक्षा के लिये आप यहाँ अवतीर्ण हुए हैं। हे वैन्य, उनके देह से आप हुए हैं, और आप विष्णु की कला हैं।
 
 --- verse 38 ---
 deva:
@@ -340,16 +451,22 @@ sa tvaṁ vimṛśyāsya bhavaṁ prajāpate
 saṅkalpanaṁ viśvasṛjāṁ pipīpṛhi|
 aindrīṁ ca māyāmupadharmamātaraṁ
 pracaṇḍapākhaṇḍapathaṁ prabho jahi||
+en: Therefore, O Prajāpati, consider the welfare of this world, and fulfil the will of the creators of the universe. And destroy, O Lord, the māyā of Indra, the mother of the lesser dharmas, the path of fierce false creeds.
+tel: కావున ఓ ప్రజాపతీ, ఈ లోకము మేలును ఆలోచించి, విశ్వ సృష్టికర్తల సంకల్పమును నెఱవేర్చుము. ఓ ప్రభూ, ఉపధర్మములకు తల్లియైన, ప్రచండ పాఖండ మార్గమైన ఐంద్ర మాయను నశింపజేయుము.
+hi: इसलिये हे प्रजापते, इस लोक के भव पर विचार कर विश्वसृष्टाओं के संकल्प को पूरा कीजिये। और हे प्रभो, उपधर्मों की माता, प्रचण्ड पाखण्ड के पथ रूप ऐन्द्री माया को नष्ट कीजिये।
 
 --- verse 39 ---
 deva:
 मैत्रेय उवाच
 इत्थं स लोकगुरुणा समादिष्टो विशाम्पतिः।
-तथा च कृत्वावात्सल्यं मघोनापि च सन्दधे॥
+तथा च कृत्वा वात्सल्यं मघोनापि च सन्दधे॥
 iast:
 maitreya uvāca
 itthaṁ sa lokaguruṇā samādiṣṭo viśāmpatiḥ|
-tathā ca kṛtvāvātsalyaṁ maghonāpi ca sandadhe||
+tathā ca kṛtvā vātsalyaṁ maghonāpi ca sandadhe||
+en: Maitreya said: Instructed in this way by the teacher of the world, the lord of the people did accordingly, and he made friendship with Maghavan as well.
+tel: మైత్రేయుడు పలికెను: లోక గురువుచే ఇట్లు ఆదేశింపబడి, ఆ విశాంపతి అట్లే చేసి, మఘవంతునితోను వాత్సల్యమును కుదుర్చుకొనెను.
+hi: मैत्रेय ने कहा: लोकगुरु से इस प्रकार आदेश पाकर उस विशाम्पति ने वैसा ही किया, और मघवान् के साथ भी वात्सल्य जोड़ लिया।
 
 --- verse 40 ---
 deva:
@@ -358,6 +475,9 @@ deva:
 iast:
 kṛtāvabhṛthasnānāya pṛthave bhūrikarmaṇe|
 varāndaduste varadā ye tadbarhiṣi tarpitāḥ||
+en: Pṛthu had taken the final bath of the sacrifice and had done much work. The givers of boons, who had been satisfied at that sacrifice, gave him boons.
+tel: పృథువు అవభృథ స్నానమును చేసి, గొప్ప కర్మను చేసియుండెను. ఆ యజ్ఞమున తృప్తి చెందిన వరదాతలు ఆయనకు వరములను ఇచ్చిరి.
+hi: पृथु ने अवभृथ स्नान कर लिया था और बहुत कर्म किया था। उस बर्हि में तृप्त हुए वरदाताओं ने उन्हें वर दिये।
 
 --- verse 41 ---
 deva:
@@ -366,6 +486,9 @@ deva:
 iast:
 viprāḥ satyāśiṣastuṣṭāḥ śraddhayā labdhadakṣiṇāḥ|
 āśiṣo yuyujuḥ kṣattarādirājāya satkṛtāḥ||
+en: O Kṣattā, the brāhmaṇas, whose blessings come true, who were pleased, who had received their gift with faith, and who had been honoured, laid their blessings upon the first king.
+tel: ఓ క్షత్తా, సత్యమైన ఆశీర్వచనములు కలిగిన, తృప్తి చెందిన, శ్రద్ధతో దక్షిణను పొందిన, సత్కరింపబడిన విప్రులు ఆ ఆది రాజునకు ఆశీర్వచనములను ఇచ్చిరి.
+hi: हे क्षत्ता, सत्य आशीष वाले, तुष्ट, श्रद्धा से दक्षिणा पाये हुए, और सत्कार पाये हुए विप्रों ने उस आदिराज को आशीष दीं।
 
 --- verse 42 ---
 deva:
@@ -374,9 +497,15 @@ deva:
 iast:
 tvayā''hūtā mahābāho sarva eva samāgatāḥ|
 pūjitā dānamānābhyāṁ pitṛdevarṣimānavāḥ||
+en: O mighty-armed one, all those who were called by you have come together. The forefathers, the gods, the sages and men have been honoured with gifts and with respect.
+tel: ఓ మహాబాహూ, మీరు పిలిచినవారందరు కలిసి వచ్చినారు. పితృదేవతలు, దేవతలు, ఋషులు, మానవులు దానముచేతను మానముచేతను పూజింపబడినారు.
+hi: हे महाबाहो, आपसे बुलाये हुए सब आ गये हैं। पितर, देव, ऋषि और मानव दान और मान से पूजित हुए हैं।
 
 --- verse none ---
 deva:
 इति श्रीमद्भागवते महापुराणे पारमहंस्यां संहितायां चतुर्थस्कन्धे पृथुविजये एकोनविंशोऽध्यायः॥ १९॥
 iast:
 iti śrīmadbhāgavate mahāpurāṇe pāramahaṁsyāṁ saṁhitāyāṁ caturthaskandhe pṛthuvijaye ekonaviṁśo'dhyāyaḥ|| 19||
+en: Thus ends the nineteenth adhyāya in the Victory of Pṛthu, in the fourth skandha of the Śrīmad Bhāgavata Mahāpurāṇa, the saṁhitā of the paramahaṁsas.
+tel: ఇది శ్రీమద్భాగవత మహాపురాణమునందు, పరమహంసల సంహితయందు, చతుర్థస్కంధమునందు, పృథువిజయమున ఏకోనవింశాధ్యాయము.
+hi: इस प्रकार श्रीमद्भागवत महापुराण की परमहंसों की संहिता के चतुर्थ स्कन्ध में, पृथुविजय में, उन्नीसवाँ अध्याय समाप्त हुआ।
