@@ -157,3 +157,157 @@ mahālakṣmyaṣṭakam, gaṇapati + atharvaśīrṣa is gaṇapatyatharvaśī
 title agreeing does not prove the two files carry the same recension, and list A should be checked
 text by text as each one is deleted, not trusted in bulk — the Viṣṇu and Lalitā audit is what that
 check looks like.
+
+
+---
+
+# The local test, 22 October 2026
+
+The corpus was built (`python3 stotras/bin/build_corpus.py` — 2,135 files, 2,016 listed, 91 MB),
+served by `stuti-app/tools/serve-corpus.mjs` on port 4175, and the built app was run against it
+with `localStorage["stuti-corpus-url"]` set to that origin. To let the corpus win for the
+forty-six, a scratch line in `stuti-texts.ts` withheld their compiled verses so the seam would
+bridge; it was reverted afterwards and nothing of it is committed.
+
+**It works.** The app fetched `index.json` (2,016 rows) and then, on opening a text, its document
+— `t/shiva.16.fec2d91e.json` for the Dvādaśa Jyotirliṅga Stotram, which went from the compiled four
+verses to the corpus's seventeen. The Viṣṇu Sahasranāma opened at 1 / 238 and begins where it
+should, with ॐ, श्रीपरमात्मने नमः and नारायणं नमस्कृत्य नरं चैव नरोत्तमम् — the maṅgalācaraṇa that was
+missing. The two absent dhyāna verses, the saṅkalpa and the colophon are all in the rendered page,
+and the readings are the corpus's: महेष्वासो, not the design's महेश्वासो, and महाह्रदो, not महाहृदो.
+
+## What each of the forty-six gains or loses
+
+App units against corpus units:
+
+```
+Annapūrṇā Stotram                            12     14  devi/annapurna/01
+Daṇḍapāṇi Pañcaratnam                         5      6  Subrahmanya/18
+Daṇḍāyudhapāṇyaṣṭakam                         9      9  Subrahmanya/19
+Devyaparādha Kṣamāpaṇa Stotram               12     13  devi/main/02
+Dvādaśa Jyotirliṅga Stotram                   4     17  shiva/16
+Gaṇeśa Aṣṭakam                               13      9  ganesha/01
+Gaṇeśa Kavacam                               27     27  ganesha/04
+Gaṇeśa Pañcaratnam                            6      6  ganesha/07
+Guha Pañcaratnam                              5      6  Subrahmanya/16
+Hanumān Cālīsā                               44     43  hanuman/02
+Jaya Skanda Stotram                          11     11  Subrahmanya/17
+Kanakadhārā Stotram                          21     24  devi/lakshmi/01
+Kumāra Kavacam                                1      1  Subrahmanya/13
+Kumāra Stutiḥ (Deva-kṛtam)                    5      6  Subrahmanya/14
+Kumāra Stutiḥ (Vipra-kṛtam)                  19      6  Subrahmanya/14
+Kārtikeya Karāvalamba Stotram                 5      6  Subrahmanya/09
+Kārtikeya Pañcakam                            6      6  Subrahmanya/10
+Kārtikeya Stotram                             6      7  Subrahmanya/11
+Kārtikeyāṣṭakam                               9     10  Subrahmanya/12
+Lalitā Pañcaratnam                            6      6  devi/lalita/01
+Lalitā Sahasranāma Stotram                   20   1377  devi/lalita/36
+Liṅgāṣṭakam                                   9      9  shiva/01
+Mahiṣāsuramardinī Stotram                    21     22  devi/main/01
+Mahāmṛtyuñjaya Stotram                       12     24  shiva/09
+Pitṛ Stotram (Brahma-kṛtam)                   9     36  pitr/02
+Pitṛ Stotram (Ruci-kṛtam)                    36     36  pitr/02
+Pitṛ Sūktam (Vājasaneyi)                     13     13  pitr/03
+Pitṛ Sūktam (Ṛgveda)                         14     14  pitr/04
+Rudrāṣṭakam                                   9      9  shiva/02
+Saṅkaṭanāśana Gaṇeśa Stotram                  8      8  ganesha/02
+Skanda Daṇḍakam                               2      3  Subrahmanya/23
+Skanda Stotram (Mahābhārate)                 19     19  Subrahmanya/05
+Skanda Ṣaṭkam                                 7      7  Subrahmanya/26
+Skandalaharī                                 31     31  Subrahmanya/30
+Subrahmaṇya Bhujaṅgam                        33     33  Subrahmanya/01
+Subrahmaṇya Maṅgalāṣṭakam                     9      9  Subrahmanya/38
+Subrahmaṇya Vajrapañjara Kavacam             26     27  Subrahmanya/08
+Svāminātha Pañcakam                           7      7  Subrahmanya/25
+Toṭakāṣṭakam                                  8      8  guru/14
+Umā Maheśvara Stotram                        13     13  shiva/21
+Viṣṇu Sahasranāma Stotram                   176   1238  vishnu/25
+Śaravaṇabhava Devaseneśa Ṣaṭkam               6      7  Subrahmanya/24
+Śiva Tāṇḍava Stotram                         15     15  shiva/06
+Śrī Hanumat Pañcaratnam                       6      6  hanuman/05
+Śrī Sūktam                                   19     36  devi/lakshmi/06
+Ṣaṇmukha Stotram                              9     10  Subrahmanya/22
+```
+
+Mostly the corpus has a unit or two more — a colophon, a closing verse. Five are much fuller:
+Dvādaśa Jyotirliṅga 4 → 17, Mahāmṛtyuñjaya 12 → 24, Śrī Sūktam 19 → 36, Pitṛ Stotram 9 → 36,
+Kanakadhārā 21 → 24. One is smaller: Gaṇeśa Aṣṭakam 13 → 9, which wants a look before it is
+switched. The two sahasranāmas gain their whole apparatus.
+
+## Four things the test turned up
+
+**Two of the forty-six are mispaired, so it is really forty-four.** *Kumāra Stutiḥ (Deva-kṛtam)*
+and *Kumāra Stutiḥ (Vipra-kṛtam)* both resolve to `Subrahmanya/14`, and *Pitṛ Stotram
+(Brahma-kṛtam)* and *Pitṛ Stotram (Ruci-kṛtam)* both to `pitr/02`. One corpus file cannot be two
+texts; one of each pair has no counterpart and belongs in list C.
+
+**The phalaśruti of the Viṣṇu Sahasranāma is hidden.** The reader hides a section whose heading
+matches `/nyāsa|dig-bandha/`, so that the japa apparatus does not get in a reciter's way. The
+corpus calls that section "Uttaranyāsaḥ, Phalaśrutiḥ", so the whole phalaśruti disappears behind
+the "include" control with the nyāsa. Three of the forty-six have sections hidden this way; only
+this one hides something that is not nyāsa.
+
+**The speaker marker shows raw.** The Viṣṇu document prints `श्रीवेदव्यास उवाच ---` thirteen times:
+the corpus's `---` reaches the reader as three hyphens where the app's own texts use an em dash.
+
+**Everything else renders.** All forty-six documents parse, none has an empty or missing verse, and
+every one carries its glosses.
+
+## Sweep
+
+```
+Annapūrṇā Stotram                           14 units  1 sections
+Daṇḍapāṇi Pañcaratnam                        6 units  2 sections
+Daṇḍāyudhapāṇyaṣṭakam                        9 units  2 sections
+Devyaparādha Kṣamāpaṇa Stotram              13 units  2 sections
+Dvādaśa Jyotirliṅga Stotram                 17 units  2 sections
+Gaṇeśa Aṣṭakam                               9 units  2 sections
+Gaṇeśa Kavacam                              27 units  0 sections
+Gaṇeśa Pañcaratnam                           6 units  0 sections
+Guha Pañcaratnam                             6 units  2 sections
+Hanumān Cālīsā                              43 units  2 sections
+Jaya Skanda Stotram                         11 units  3 sections
+Kanakadhārā Stotram                         24 units  4 sections
+Kumāra Kavacam                               1 units  1 sections
+Kumāra Stutiḥ (Deva-kṛtam)                   6 units  2 sections
+Kumāra Stutiḥ (Vipra-kṛtam)                  6 units  2 sections
+Kārtikeya Karāvalamba Stotram                6 units  2 sections
+Kārtikeya Pañcakam                           6 units  2 sections
+Kārtikeya Stotram                            7 units  3 sections
+Kārtikeyāṣṭakam                             10 units  3 sections
+Lalitā Pañcaratnam                           6 units  2 sections
+Lalitā Sahasranāma Stotram                 377 units  9 sections
+Liṅgāṣṭakam                                  9 units  2 sections
+Mahiṣāsuramardinī Stotram                   22 units  2 sections
+Mahāmṛtyuñjaya Stotram                      24 units  1 sections
+Pitṛ Stotram (Brahma-kṛtam)                 36 units  3 sections
+Pitṛ Stotram (Ruci-kṛtam)                   36 units  3 sections
+Pitṛ Sūktam (Vājasaneyi)                    13 units  1 sections
+Pitṛ Sūktam (Ṛgveda)                        14 units  1 sections
+Rudrāṣṭakam                                  9 units  2 sections
+Saṅkaṭanāśana Gaṇeśa Stotram                 8 units  0 sections
+Skanda Daṇḍakam                              3 units  3 sections
+Skanda Stotram (Mahābhārate)                19 units  3 sections
+Skanda Ṣaṭkam                                7 units  1 sections
+Skandalaharī                                31 units  0 sections
+Subrahmaṇya Bhujaṅgam                       33 units  2 sections
+Subrahmaṇya Maṅgalāṣṭakam                    9 units  2 sections
+Subrahmaṇya Vajrapañjara Kavacam            27 units  7 sections
+Svāminātha Pañcakam                          7 units  3 sections
+Toṭakāṣṭakam                                 8 units  0 sections
+Umā Maheśvara Stotram                       13 units  2 sections
+Viṣṇu Sahasranāma Stotram                  238 units 11 sections  speaker---:13
+Śaravaṇabhava Devaseneśa Ṣaṭkam              7 units  2 sections
+Śiva Tāṇḍava Stotram                        15 units  1 sections
+Śrī Hanumat Pañcaratnam                      6 units  1 sections
+Śrī Sūktam                                  36 units  2 sections
+Ṣaṇmukha Stotram                            10 units  3 sections
+
+empty or missing verses: 0
+hidden-as-ritual sections: 3
+   Lalitā Sahasranāma Stotram               Nyāsaḥ
+   Subrahmaṇya Vajrapañjara Kavacam         Nyāsaḥ
+   Viṣṇu Sahasranāma Stotram                Pūrvanyāsaḥ (ṛṣi-chandas-viniyogaḥ), Ṛṣyādinyāsaḥ, Karanyāsaḥ, Ṣaḍaṅganyāsaḥ, Uttaranyāsaḥ, Phalaśrutiḥ
+raw --- speaker markers: 1 texts
+   Viṣṇu Sahasranāma Stotram                13
+```
