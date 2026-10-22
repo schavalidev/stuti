@@ -9,7 +9,7 @@ Type: Purāṇa (an adhyāya of the Śrīmad Bhāgavata, Skandha 5)
 
 Source / recension: Base text and authority: the Gītā Press, Gorakhpur Śrīmadbhāgavata Mahāpurāṇa with Hindi translation, Part 1 (Gītā Press code 26), archive.org item `shrimadbhagwat-mahapuran-bhag-1`, printed pages 600–603; the PDF page numbers are the printed ones. The PDF carries the typesetter's own text layer in the Chanakya font encoding, and the text was decoded from it by machine with `bin/bhagavata/chanakya.py`, not read off OCR or typed. The decoder was checked against GRETIL over all twelve skandhas before any file was written, and the differences that remain were sampled and found to be readings of the two editions. Second witness: GRETIL's `sa_bhAgavatapurANa.xml` (IAST, contributed by Ulrich Stiehl), a separate editorial lineage, compared verse by verse by machine. The TTD edition with the commentaries of Śrīdhara, Vīrarāghava and Vijayadhvaja (archive.org `Bhagavata_Purana_With_Multiple_Commentaries_TTD_Critical_Edition`) is the third witness where one is needed; it was not read for this file. The IAST was generated mechanically from the Devanāgarī with `bin/dev2iast.py`.
 
-Recension note: Text-only file, written 1 Oct 2026 at the user's instruction to lay down the whole Bhāgavata first: the English, Telugu and Hindi meanings are still to be added, and the witnesses' differences listed here have been recorded by machine and not yet adjudicated. The print is followed throughout. The print numbers 19 verses and GRETIL numbers 19. Of the 19 verses GRETIL has under the same number, 15 agree with the print letter for letter once spacing and the spelling of nasals are set aside; the rest differ: 3, 10, 13, 17. The edition's footnotes give these older printed readings (प्रा० पा०), which are not bracketed into the line: at 15, को ह्यस्य; at 16, विशुद्धाचरितं पुंसां०; at 16, वावहितस्तस्मिन् वासुदेव; at 17, नैवाद्रियन्ते; at 17, भगवत्तत्त्वेनैव. Spacing is the print's, as its text layer gives it; in a few places justification has left a space inside a word, and these are still to be closed when the verse is read. The speaker lines (श्रीशुक उवाच and the others) are printed in italic above the verse they introduce, and are given as its first line.
+Recension note: Meanings written 22 Oct 2026 (session S78). The differences between the witnesses listed below were read as the verses were glossed; except where this note says otherwise, each is a spelling, a sandhi or a word order of the two editions, none of them changes the sense, and the print's reading therefore stands unbracketed. The print is followed throughout. The print numbers 19 verses and GRETIL numbers 19. Of the 19 verses GRETIL has under the same number, 15 agree with the print letter for letter once spacing and the spelling of nasals are set aside; the rest differ: 3, 10, 13, 17. The edition's footnotes give these older printed readings (प्रा० पा०), which are not bracketed into the line: at 15, को ह्यस्य; at 16, विशुद्धाचरितं पुंसां०; at 16, वावहितस्तस्मिन् वासुदेव; at 17, नैवाद्रियन्ते; at 17, भगवत्तत्त्वेनैव. Spacing is the print's, as its text layer gives it. The speaker lines (श्रीशुक उवाच and the others) are printed in italic above the verse they introduce, and are given as its first line. A footnote's numeral keys it to one word, and which word that is cannot be told from the note alone, so those readings stay unbracketed until the page itself is read. Five lost spaces were put right as the verses were read, each one a place where the print's text layer runs two words together after a vowel, an anusvāra or a visarga, which this print otherwise never does, and in each the first word carries its own case ending: at 2 between अनवस्थानस्य and शठकिरात, at 8 between मालेलिहानः and सह, at 10 between येन and ह and again between लोकविदूषकाः and प्रायेण, and at 16 between मीरितं and पुंसां. GRETIL reads all five as two words, and the edition's own footnote at 16 prints विशुद्धाचरितं पुंसां° as two words as well. At 7 आस्यकृताश्मकवल is left as the print has it, a compound that GRETIL merely spaces loosely. Verse 12 is a single line and ends without a daṇḍa in the print's own text layer, and it is left as printed.
 
 Verse count: 19, plus the closing colophon printed unnumbered.
 
@@ -26,18 +26,24 @@ rājovāca
 na nūnaṁ bhagava ātmārāmāṇāṁ yogasamīrita-
 jñānāvabharjitakarmabījānāmaiśvaryāṇi punaḥ
 kleśadāni bhavitumarhanti yadṛcchayopagatāni||
+en: The king said: Blessed one, those who delight in the self have burnt up the seeds of their works by the knowledge that yoga has kindled. Surely the powers that come to them unsought cannot become a cause of pain to them again.
+tel: రాజు పలికెను: భగవన్, యోగముచే ప్రేరేపింపబడిన జ్ఞానముచే కర్మబీజములను కాల్చివేసిన ఆత్మారాములకు, తమంతట తామే వచ్చిన ఐశ్వర్యములు మరల క్లేశమును ఇచ్చునవి కాజాలవు కదా.
+hi: राजा ने कहा: हे भगवन्, योग से प्रेरित ज्ञान के द्वारा कर्म-बीजों को भस्म कर चुके आत्माराम पुरुषों के लिये, अपने आप प्राप्त हुए ऐश्वर्य फिर क्लेश देनेवाले नहीं हो सकते।
 
 --- verse 2 ---
 deva:
 ऋषिरुवाच
 सत्यमुक्तं किन्त्विह वा एके न मनसोऽद्धा
-विश्रम्भमनवस्थानस्यशठकिरात इव
+विश्रम्भमनवस्थानस्य शठकिरात इव
 संगच्छन्ते॥
 iast:
 ṛṣiruvāca
 satyamuktaṁ kintviha vā eke na manaso'ddhā
-viśrambhamanavasthānasyaśaṭhakirāta iva
+viśrambhamanavasthānasya śaṭhakirāta iva
 saṁgacchante||
+en: The sage said: You have spoken the truth. Yet some here do not place real trust in the mind, which never stays steady, just as a man does not trust a cunning hunter.
+tel: ఋషి పలికెను: నీవు చెప్పినది నిజము. అయినను ఇక్కడ కొందరు, ఎప్పుడును స్థిరముగా ఉండని మనస్సుపై నిజమైన విశ్వాసమును ఉంచరు; శఠుడైన కిరాతునిపై విశ్వాసము ఉంచనట్లే.
+hi: ऋषि ने कहा: आपने सत्य कहा। परन्तु यहाँ कुछ लोग कभी स्थिर न रहनेवाले मन पर सच्चा विश्वास नहीं करते, जैसे कोई शठ किरात पर विश्वास नहीं करता।
 
 --- verse 3 ---
 deva:
@@ -48,6 +54,9 @@ iast:
 tathā coktam—
 na kuryātkarhicitsakhyaṁ manasi hyanavasthite|
 yadviśrambhāccirāccīrṇaṁ caskanda tapa aiśvaram||
+en: And so it has been said. One should never make friendship with the mind, for it does not stay still. By trusting it, even the lordly tapas practised for a long time was spilt.
+tel: అట్లే చెప్పబడినది. స్థిరముగా ఉండని మనస్సుతో ఎప్పుడును స్నేహము చేయకూడదు. దానిని నమ్ముటచే, చిరకాలము ఆచరించిన ఐశ్వరమైన తపము కూడ స్కలితమైనది.
+hi: और ऐसा कहा गया है। अनवस्थित मन के साथ कभी मित्रता न करे। उसका विश्वास करने से चिरकाल तक किया हुआ ऐश्वर तप भी स्खलित हो गया।
 
 --- verse 4 ---
 deva:
@@ -56,6 +65,9 @@ deva:
 iast:
 nityaṁ dadāti kāmasya cchidraṁ tamanu ye'rayaḥ|
 yoginaḥ kṛtamaitrasya patyurjāyeva puṁścalī||
+en: The mind of a yogin who has made friends with it always gives an opening to desire, and to the enemies that follow desire, as an unchaste wife gives her husband over to his enemies.
+tel: మనస్సుతో స్నేహము చేసిన యోగికి, ఆ మనస్సు కామమునకును, కామము వెనుక వచ్చు శత్రువులకును ఎల్లప్పుడు ఛిద్రమును ఇచ్చును; వ్యభిచారిణియైన భార్య తన పతిని శత్రువులకు అప్పగించునట్లే.
+hi: जिस योगी ने मन से मित्रता की है, उसका मन सदा काम को और काम के पीछे आनेवाले शत्रुओं को छिद्र देता है, जैसे व्यभिचारिणी स्त्री अपने पति को शत्रुओं के हाथ सौंप देती है।
 
 --- verse 5 ---
 deva:
@@ -64,6 +76,9 @@ deva:
 iast:
 kāmo manyurmado lobhaḥ śokamohabhayādayaḥ|
 karmabandhaśca yanmūlaḥ svīkuryātko nu tad budhaḥ||
+en: Desire, anger, pride, greed, sorrow, delusion, fear and the rest, and the bondage of works as well, have the mind for their root. What wise man would take that as his own?
+tel: కామము, క్రోధము, మదము, లోభము, శోకము, మోహము, భయము మొదలైనవియు, కర్మబంధమును — ఏది వీటికి మూలమో, ఆ మనస్సును ఏ బుద్ధిమంతుడు తనదిగా స్వీకరించును?
+hi: काम, क्रोध, मद, लोभ, शोक, मोह, भय आदि और कर्म-बन्धन — जिसका मूल यह मन है, उसे कौन बुद्धिमान् अपना बनावेगा?
 
 --- verse 6 ---
 deva:
@@ -80,6 +95,9 @@ bhagavatprabhāvo yogināṁ sāmparāyavidhimanu-
 śikṣayan svakalevaraṁ jihāsurātmanyātmānam
 asaṁvyavahitamanarthāntarabhāvenānvīkṣamāṇa uparatānu-
 vṛttirupararāma||
+en: Although he was the crown of all the rulers of the worlds, his power as the Lord was not recognised, for his dress, his speech and his conduct were those of an avadhūta and were strange, like those of a dull man. Teaching the yogins the rule for the last journey, he wished to give up his body. He saw his own self within himself, with nothing between and with nothing other than itself, and his outward action ceased. So he came to rest.
+tel: ఆయన సమస్త లోకపాలకులకు లలామము అయినను, జడునివలె విలక్షణమైన అవధూత వేషము, భాష, చరిత్రము కలవాడైనందున ఆయన భగవత్ప్రభావము గుర్తింపబడలేదు. యోగులకు సాంపరాయ విధిని నేర్పుచు ఆయన తన కళేబరమును విడువగోరెను. వ్యవధానము లేకుండను, వేరొక భావము లేకుండను తన ఆత్మను తనలోనే చూచుచు, బాహ్య ప్రవృత్తి ఉపరతము కాగా ఆయన ఉపరతుడు అయ్యెను.
+hi: वे समस्त लोकपालों के ललाम थे, तथापि जड़ के समान विलक्षण अवधूत-वेश, भाषा और आचरण के कारण उनका भगवत्-प्रभाव पहचाना न गया। योगियों को सांपराय-विधि सिखाते हुए उन्होंने अपना कलेवर छोड़ने की इच्छा की। बिना किसी व्यवधान और बिना किसी अन्य भाव के अपने आत्मा को अपने में ही देखते हुए, बाहरी प्रवृत्ति के शान्त होने पर वे उपरत हो गये।
 
 --- verse 7 ---
 deva:
@@ -96,14 +114,20 @@ jagatīmabhimānābhāsena saṁkramamāṇaḥ koṅkaveṅka-
 kuṭakāndakṣiṇakarṇāṭakāndeśān yadṛcchayopagataḥ
 kuṭakācalopavana āsyakṛtāśmakavala unmāda
 iva muktamūrdhajo'saṁvīta eva vicacāra||
+en: The Lord Ṛṣabha had thus been freed from the subtle body. By the lingering force of his yogamāyā his body moved over this earth with only the appearance of self-identification. Without purpose it came to the lands of Koṅka, Veṅka and Kuṭaka in southern Karṇāṭaka. In the grove of the Kuṭaka hill he put a mouthful of stone into his mouth, and like a madman, with his hair loose and with no cloth upon him, he wandered about.
+tel: ఈ విధముగా ముక్తలింగుడైన భగవంతుడు ఋషభుని దేహము, యోగమాయా వాసనచే అభిమానము యొక్క ఆభాస మాత్రముతో ఈ భూమిపై సంచరించెను. తమంతట తానే అది దక్షిణ కర్ణాటకమునందలి కొంక, వెంక, కుటక దేశములకు చేరెను. కుటకాచల ఉపవనమునందు ఆయన నోటిలో రాతి ముక్కను పెట్టుకొని, ఉన్మాదునివలె, కేశములు విరబోసుకొని, వస్త్రము లేకయే సంచరించెను.
+hi: इस प्रकार मुक्त-लिङ्ग हुए भगवान् ऋषभ का शरीर, योगमाया की वासना से अभिमान के आभास मात्र से इस पृथ्वी पर विचरता रहा। अपने आप वह दक्षिण कर्णाटक के कोंक, वेंक और कुटक देशों में पहुँचा। कुटकाचल के उपवन में उन्होंने मुँह में पत्थर का कवल रख लिया, और उन्मत्त के समान, केश खुले छोड़कर, बिना वस्त्र ही विचरते रहे।
 
 --- verse 8 ---
 deva:
 अथ समीरवेगविधूतवेणुविकर्षणजातोग्र-
-दावानलस्तद्वनमालेलिहानःसह तेन ददाह॥
+दावानलस्तद्वनमालेलिहानः सह तेन ददाह॥
 iast:
 atha samīravegavidhūtaveṇuvikarṣaṇajātogra-
-dāvānalastadvanamālelihānaḥsaha tena dadāha||
+dāvānalastadvanamālelihānaḥ saha tena dadāha||
+en: Then the bamboos were shaken by the force of the wind and rubbed against one another, and from this a fierce forest fire arose. It licked that forest and burnt it, and his body with it.
+tel: అటుపిమ్మట వాయువేగముచే కదిలిన వెదురులు ఒకదానితో ఒకటి రాసుకొనుటచే ఉగ్రమైన దావాగ్ని పుట్టెను. అది ఆ వనమును నాకుచు, ఆ దేహముతో కూడ దానిని దహించెను.
+hi: इसके पश्चात् वायु के वेग से हिले हुए बाँसों के परस्पर घर्षण से उग्र दावानल उत्पन्न हुआ। वह उस वन को चाटते हुए उस शरीर के साथ उसे जला दिया।
 
 --- verse 9 ---
 deva:
@@ -118,22 +142,28 @@ koṅkaveṅkakuṭakānāṁ rājārhannāmopaśikṣya
 kalāvadharma utkṛṣyamāṇe bhavitavyena vimohitaḥ
 svadharmapathamakutobhayamapahāya kupathapākhaṇḍamasa-
 mañjasaṁ nijamanīṣayā mandaḥ sampravartayiṣyate||
+en: A king of Koṅka, Veṅka and Kuṭaka named Arhat will hear of his conduct and will take it as his lesson. When unrighteousness grows strong in the Kali age, that dull-minded king, deluded by what is to come, will leave the path of his own dharma, which has nothing to fear from any side, and by his own notion will set going a false and ill-ordered teaching upon a wrong road.
+tel: ఆయన అనుచరితమును విని, కొంక, వెంక, కుటక దేశముల రాజు అర్హత్తు అను పేరు గలవాడు దానిని తన ఉపదేశముగా గ్రహించును. కలియుగమునందు అధర్మము పెరుగుచున్నప్పుడు, భవితవ్యముచే మోహితుడైన ఆ మందబుద్ధి, ఎటునుండియు భయము లేని తన ధర్మమార్గమును విడిచి, తన సొంత ఆలోచనచే కుమార్గమునందలి పాఖండమును, అసమంజసమైనదానిని ప్రవర్తింపజేయును.
+hi: उनके आचरण को सुनकर कोंक, वेंक और कुटक देशों का अर्हत् नामक राजा उसे अपनी शिक्षा बना लेगा। कलियुग में अधर्म के बढ़ने पर, भवितव्य से मोहित वह मन्दबुद्धि, किसी ओर से भी भय न रखनेवाले अपने धर्म-पथ को छोड़कर, अपनी ही बुद्धि से कुमार्ग के असमंजस पाखण्ड को चलावेगा।
 
 --- verse 10 ---
 deva:
-येनह वाव कलौ मनुजापसदा देवमायामोहिताः
+येन ह वाव कलौ मनुजापसदा देवमायामोहिताः
 स्वविधिनियोगशौचचारित्रविहीना देवहेलनान्यप-
 व्रतानि निजनिजेच्छया गृह्णाना अस्नान-
 अनाचमन-अशौच-केशोल्लुञ्चनादीनि कलिना
 अधर्मबहुलेनोपहतधियो ब्रह्मब्राह्मणयज्ञपुरुष-
-लोकविदूषकाःप्रायेण भविष्यन्ति॥
+लोकविदूषकाः प्रायेण भविष्यन्ति॥
 iast:
-yenaha vāva kalau manujāpasadā devamāyāmohitāḥ
+yena ha vāva kalau manujāpasadā devamāyāmohitāḥ
 svavidhiniyogaśaucacāritravihīnā devahelanānyapa-
 vratāni nijanijecchayā gṛhṇānā asnāna-
 anācamana-aśauca-keśolluñcanādīni kalinā
 adharmabahulenopahatadhiyo brahmabrāhmaṇayajñapuruṣa-
-lokavidūṣakāḥprāyeṇa bhaviṣyanti||
+lokavidūṣakāḥ prāyeṇa bhaviṣyanti||
+en: By that teaching, in the Kali age, the lowest of men, deluded by the māyā of the gods, will give up the rules laid down for them, their purity and their good conduct. By their own wish they will take up wrong observances that show contempt for the gods — not bathing, not sipping water, keeping no purity, pulling out the hair, and the like. Their understanding will be struck down by the Kali age, which is full of unrighteousness, and most of them will become revilers of the Veda, of the brāhmaṇas, of sacrifice, of the Person of sacrifice and of the righteous people.
+tel: ఆ ఉపదేశముచే, కలియుగమునందు దేవమాయచే మోహితులైన నీచ మనుష్యులు, తమకు విధింపబడిన నియోగమును, శౌచమును, చారిత్రమును విడిచిపెట్టుదురు. తమ తమ ఇచ్ఛచే వారు దేవతలను అవమానించు అపవ్రతములను — స్నానము చేయకుండుట, ఆచమనము చేయకుండుట, శుచిత్వము లేకుండుట, కేశములను పీకివేయుట మొదలైనవి — స్వీకరించుదురు. అధర్మము మెండుగా కలిగిన కలిచే వారి బుద్ధి దెబ్బతినును; వారిలో ఎక్కువమంది బ్రహ్మమును, బ్రాహ్మణులను, యజ్ఞమును, యజ్ఞపురుషుని, సజ్జనులను దూషించువారు అగుదురు.
+hi: उस उपदेश से, कलियुग में देवमाया से मोहित नीच मनुष्य अपने लिये नियत विधि-नियोग, शौच और चरित्र को छोड़ देंगे। अपनी-अपनी इच्छा से वे देवताओं का अनादर करनेवाले अपव्रत — स्नान न करना, आचमन न करना, शुचिता न रखना, केश उखाड़ना आदि — ग्रहण करेंगे। अधर्म से भरे कलि के कारण उनकी बुद्धि नष्ट हो जायगी, और उनमें से अधिकांश ब्रह्म, ब्राह्मण, यज्ञ, यज्ञपुरुष और सत्पुरुषों के निन्दक हो जायँगे।
 
 --- verse 11 ---
 deva:
@@ -144,12 +174,18 @@ iast:
 te ca hyarvāktanayā nijalokayātrayāndha-
 paramparayā''śvastāstamasyandhe svayameva
 prapatiṣyanti||
+en: Those men of later times, made easy by their own way of living and by a succession of blind leaders, will of themselves fall into blind darkness.
+tel: తరువాతి కాలపు ఆ జనులు, తమ లోకయాత్రచేతను, అంధుల పరంపరచేతను ఊరట పొంది, అంధకారమునందు తామే పడిపోవుదురు.
+hi: पीछे के समय के वे लोग, अपनी लोक-यात्रा से और अन्धों की परम्परा से आश्वस्त होकर, अन्धे अन्धकार में स्वयं ही गिर पड़ेंगे।
 
 --- verse 12 ---
 deva:
 अयमवतारो रजसोपप्लुतकैवल्योपशिक्षणार्थः
 iast:
 ayamavatāro rajasopaplutakaivalyopaśikṣaṇārthaḥ
+en: This descent of His was for the teaching of kaivalya to those who are overcome by rajas.
+tel: రజోగుణముచే ఆవరింపబడినవారికి కైవల్యమును ఉపదేశించుట కొరకే ఈ అవతారము.
+hi: रजोगुण से आप्लुत पुरुषों को कैवल्य की शिक्षा देने के लिये ही यह अवतार था।
 
 --- verse 13 ---
 deva:
@@ -164,6 +200,9 @@ aho bhuvaḥ saptasamudravatyā
 dvīpeṣu varṣeṣvadhipuṇyametat|
 gāyanti yatratyajanā murāreḥ
 karmāṇi bhadrāṇyavatāravanti||
+en: Verses in keeping with his qualities are sung. Among the islands and the lands of this earth, which has seven seas, this land is the most holy. Here the people sing the auspicious deeds of Murāri in His descents.
+tel: ఆయన గుణములకు అనుగుణమైన శ్లోకములను గానము చేయుచున్నారు. ఏడు సముద్రములు కలిగిన ఈ భూమియందలి ద్వీపములలోను వర్షములలోను ఈ వర్షమే అధిక పుణ్యము కలది. ఇక్కడి జనులు మురారి యొక్క అవతారములతో కూడిన మంగళకరమైన కర్మములను గానము చేయుచున్నారు.
+hi: उनके गुणों के अनुरूप श्लोक गाये जाते हैं। सात समुद्रोंवाली इस पृथ्वी के द्वीपों और वर्षों में यह वर्ष सबसे अधिक पुण्यवाला है। यहाँ के लोग मुरारि के अवतारोंवाले मङ्गलमय कर्मों का गान करते हैं।
 
 --- verse 14 ---
 deva:
@@ -176,6 +215,9 @@ aho nu vaṁśo yaśasāvadātaḥ
 praiyavrato yatra pumān purāṇaḥ|
 kṛtāvatāraḥ puruṣaḥ sa ādya-
 ścacāra dharmaṁ yadakarmahetum||
+en: How bright with fame is the line of Priyavrata, in which the ancient Person, that first Puruṣa Himself, made His descent and practised the dharma that brings freedom from works.
+tel: ప్రియవ్రతుని వంశము యశముచే ఎంత నిర్మలము! అందు పురాణపురుషుడైన ఆ ఆద్య పురుషుడే అవతారమును చేసి, కర్మమునుండి విముక్తిని కలిగించు ధర్మమును ఆచరించెను.
+hi: प्रियव्रत का वंश यश से कितना उज्ज्वल है! उसमें पुराण पुरुष, वह आद्य पुरुष ही अवतार लेकर अकर्म के हेतु धर्म का आचरण किया।
 
 --- verse 15 ---
 deva:
@@ -188,12 +230,15 @@ ko nvasya kāṣṭhāmaparo'nugacche-
 nmanorathenāpyabhavasya yogī|
 yo yogamāyāḥ spṛhayatyudastā
 hyasattayā yena kṛtaprayatnāḥ||
+en: What other yogin, who longs for the powers of yogamāyā, could follow the course of Him who is unborn, even in his thought? He cast those powers away as unreal, though they themselves made effort to come to Him.
+tel: యోగమాయల కొరకు స్పృహ కలిగిన వేరొక యోగి, జన్మ లేని ఆయన కాష్ఠను మనోరథముచేతనైనను ఎట్లు అనుసరించగలడు? ఆ యోగమాయలు తమంతట తామే ఆయనను పొందుటకు ప్రయత్నించినను, ఆయన వానిని అసత్తు అని త్రోసివేసెను.
+hi: योगमायाओं की स्पृहा करनेवाला दूसरा कौन योगी, अजन्मा उन भगवान् की काष्ठा का मनोरथ से भी अनुसरण कर सकता है? उन योगमायाओं ने स्वयं उन्हें पाने का प्रयत्न किया, तथापि उन्होंने उन्हें असत् मानकर दूर हटा दिया।
 
 --- verse 16 ---
 deva:
 इति ह स्म सकलवेदलोकदेवब्राह्मणगवां
 परमगुरोर्भगवत ऋषभाख्यस्य विशुद्धाचरित-
-मीरितंपुंसां समस्तदुश्चरिताभिहरणं
+मीरितं पुंसां समस्तदुश्चरिताभिहरणं
 परममहामङ्गलायनमिदमनुश्रद्धयोपचितयानु-
 शृणोत्याश्रावयति वावहितो भगवति तस्मिन्
 वासुदेव एकान्ततो भक्तिरनयोरपि समनु-
@@ -201,11 +246,14 @@ deva:
 iast:
 iti ha sma sakalavedalokadevabrāhmaṇagavāṁ
 paramagurorbhagavata ṛṣabhākhyasya viśuddhācarita-
-mīritaṁpuṁsāṁ samastaduścaritābhiharaṇaṁ
+mīritaṁ puṁsāṁ samastaduścaritābhiharaṇaṁ
 paramamahāmaṅgalāyanamidamanuśraddhayopacitayānu-
 śṛṇotyāśrāvayati vāvahito bhagavati tasmin
 vāsudeva ekāntato bhaktiranayorapi samanu-
 vartate||
+en: Thus has been told the pure conduct of the Lord named Ṛṣabha, who is the highest teacher of all the Vedas, of the worlds, of the gods, of the brāhmaṇas and of the cows. It takes away every evil deed of men, and it is the abode of the highest good fortune. Whoever listens to it with faith that keeps growing, and whoever recites it to others with attention, in both of them single-minded devotion to that Lord Vāsudeva arises.
+tel: ఈ విధముగా, సమస్త వేదములకు, లోకములకు, దేవతలకు, బ్రాహ్మణులకు, గోవులకు పరమగురువైన ఋషభుడు అను పేరు గల భగవంతుని విశుద్ధమైన ఆచరితము చెప్పబడినది. ఇది మనుష్యుల సమస్త దుశ్చరితములను హరించునది, పరమ మహామంగళమునకు నిలయమైనది. పెరుగుచున్న శ్రద్ధతో దీనిని వినువాడును, అవహితుడై ఇతరులకు వినిపించువాడును — ఆ ఇద్దరియందును ఆ భగవంతుడైన వాసుదేవునియందు ఏకాంతమైన భక్తి కలుగును.
+hi: इस प्रकार समस्त वेद, लोक, देवता, ब्राह्मण और गौओं के परम गुरु, ऋषभ नामवाले भगवान् का विशुद्ध आचरित कहा गया। यह मनुष्यों के समस्त दुश्चरितों को हरनेवाला और परम महामङ्गल का निवास है। जो इसे बढ़ती हुई श्रद्धा से सुनता है, और जो अवहित होकर दूसरों को सुनाता है — उन दोनों में उस भगवान् वासुदेव में एकान्त भक्ति उत्पन्न होती है।
 
 --- verse 17 ---
 deva:
@@ -222,6 +270,9 @@ snāpayantastayaiva parayā nirvṛttyā
 hyapavargamātyantikaṁ paramapuruṣārthamapi svayamāsāditaṁ
 no evādriyante bhagavadīyatvenaiva parisamāpta-
 sarvārthāḥ||
+en: The self is burnt without rest by the heat of saṁsāra with its many sins. In that devotion alone the wise bathe the self again and again. By that highest contentment they do not care even for final liberation, the highest aim of man, when it comes to them of itself, for all their aims are already fulfilled in belonging to the Lord.
+tel: వివిధమైన పాపములతో కూడిన సంసారపు పరితాపముచే ఆత్మ విరామము లేక తపింపబడుచున్నది. కవులు ఆ భక్తియందే దానిని మాటిమాటికి స్నానము చేయించుచున్నారు. ఆ పరమ నిర్వృతిచే, తమంతట తానే లభించిన ఆత్యంతిక అపవర్గమును, పరమ పురుషార్థమును కూడ వారు ఆదరించరు; భగవంతునికి చెందినవారు అగుటచే వారి అన్ని అర్థములు ఇదివరకే పూర్తియైనవి.
+hi: विविध पापोंवाले संसार के परिताप से आत्मा निरन्तर तपता रहता है। कवि उसी भक्ति में उसे बार-बार स्नान कराते हैं। उस परम निर्वृति के कारण, अपने आप प्राप्त हुए आत्यन्तिक अपवर्ग और परम पुरुषार्थ का भी वे आदर नहीं करते, क्योंकि भगवान् के हो जाने से उनके सब अर्थ पहले ही पूर्ण हो चुके हैं।
 
 --- verse 18 ---
 deva:
@@ -234,6 +285,9 @@ rājan patirgururalaṁ bhavatāṁ yadūnāṁ
 daivaṁ priyaḥ kulapatiḥ kva ca kiṅkaro vaḥ|
 astvevamaṅga bhagavān bhajatāṁ mukundo
 muktiṁ dadāti karhicitsma na bhaktiyogam||
+en: King, Mukunda is fully your master and your teacher. He is the deity of the Yadus, their dear one and the head of their house, and at times He has even been your servant. So let it be, my dear. To those who worship Him the Lord Mukunda gives liberation, but He never gives the yoga of devotion.
+tel: రాజా, ముకుందుడే మీకు పతియు గురువును చాలును. ఆయన యదువులకు దైవము, ప్రియుడు, కులపతి; ఒకప్పుడు మీకు కింకరుడును అయ్యెను. అంగా, అట్లే కావచ్చును. తనను భజించువారికి భగవంతుడైన ముకుందుడు ముక్తిని ఇచ్చును, కాని భక్తియోగమును ఎప్పుడును ఇవ్వడు.
+hi: हे राजन्, मुकुन्द ही आपके पति और गुरु पर्याप्त हैं। वे यदुओं के दैव, प्रिय और कुलपति हैं, और कहीं आपके किंकर भी हुए। हे अङ्ग, ऐसा ही हो। अपने भजन करनेवालों को भगवान् मुकुन्द मुक्ति देते हैं, परन्तु भक्तियोग कभी नहीं देते।
 
 --- verse 19 ---
 deva:
@@ -246,9 +300,15 @@ nityānubhūtanijalābhanivṛttatṛṣṇaḥ
 śreyasyatadracanayā cirasuptabuddheḥ|
 lokasya yaḥ karuṇayābhayamātmaloka-
 mākhyānnamo bhagavate ṛṣabhāya tasmai||
+en: His thirst was gone, for He knew His own fullness for ever. The understanding of the people had long been asleep to their own good, being busied with what is not the self. Out of compassion He made known to them the world of the self, where there is no fear. To that Lord Ṛṣabha be salutation.
+tel: నిత్యముగా అనుభవింపబడిన తన లాభముచే ఆయనకు తృష్ణ తొలగిపోయెను. ఆత్మ కానిదానియందు మునిగి, లోకముల బుద్ధి తమ శ్రేయమునందు చిరకాలము నిద్రించుచున్నది. కరుణచే ఆయన వారికి భయము లేని ఆత్మలోకమును తెలిపెను. ఆ భగవంతుడైన ఋషభునికి నమస్కారము.
+hi: नित्य अनुभूत अपने लाभ से उनकी तृष्णा निवृत्त हो गयी थी। अनात्म की रचना में लगे रहने से लोगों की बुद्धि अपने श्रेय में चिरकाल से सोयी हुई थी। करुणा से उन्होंने उन्हें अभय आत्मलोक का उपदेश किया। उन भगवान् ऋषभ को नमस्कार है।
 
 --- verse none ---
 deva:
 इति श्रीमद्भागवते महापुराणे पारमहंस्यां संहितायां पञ्चमस्कन्धे ऋषभदेवानुचरिते षष्ठोध्यायः॥ ६॥
 iast:
 iti śrīmadbhāgavate mahāpurāṇe pāramahaṁsyāṁ saṁhitāyāṁ pañcamaskandhe ṛṣabhadevānucarite ṣaṣṭhodhyāyaḥ|| 6||
+en: Thus ends the sixth adhyāya in the account of Ṛṣabhadeva in the fifth skandha of the Śrīmad Bhāgavata Mahāpurāṇa, the saṁhitā of the paramahaṁsas.
+tel: ఇది శ్రీమద్భాగవత మహాపురాణమునందు, పరమహంసల సంహితయందు, పంచమస్కంధమునందు ఋషభదేవానుచరితమునందు షష్ఠాధ్యాయము.
+hi: इस प्रकार श्रीमद्भागवत महापुराण की परमहंसों की संहिता के पञ्चम स्कन्ध में ऋषभदेवानुचरित में छठा अध्याय समाप्त हुआ।

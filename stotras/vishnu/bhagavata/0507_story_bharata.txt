@@ -9,7 +9,7 @@ Type: Purāṇa (an adhyāya of the Śrīmad Bhāgavata, Skandha 5)
 
 Source / recension: Base text and authority: the Gītā Press, Gorakhpur Śrīmadbhāgavata Mahāpurāṇa with Hindi translation, Part 1 (Gītā Press code 26), archive.org item `shrimadbhagwat-mahapuran-bhag-1`, printed pages 603–605; the PDF page numbers are the printed ones. The PDF carries the typesetter's own text layer in the Chanakya font encoding, and the text was decoded from it by machine with `bin/bhagavata/chanakya.py`, not read off OCR or typed. The decoder was checked against GRETIL over all twelve skandhas before any file was written, and the differences that remain were sampled and found to be readings of the two editions. Second witness: GRETIL's `sa_bhAgavatapurANa.xml` (IAST, contributed by Ulrich Stiehl), a separate editorial lineage, compared verse by verse by machine. The TTD edition with the commentaries of Śrīdhara, Vīrarāghava and Vijayadhvaja (archive.org `Bhagavata_Purana_With_Multiple_Commentaries_TTD_Critical_Edition`) is the third witness where one is needed; it was not read for this file. The IAST was generated mechanically from the Devanāgarī with `bin/dev2iast.py`.
 
-Recension note: Text-only file, written 1 Oct 2026 at the user's instruction to lay down the whole Bhāgavata first: the English, Telugu and Hindi meanings are still to be added, and the witnesses' differences listed here have been recorded by machine and not yet adjudicated. The print is followed throughout. The print numbers 14 verses and GRETIL numbers 14. Of the 14 verses GRETIL has under the same number, 9 agree with the print letter for letter once spacing and the spelling of nasals are set aside; the rest differ: 2, 3, 6, 9, 11. The edition's footnotes give these older printed readings (प्रा० पा०), which are not bracketed into the line: at 6, एवम्; at 7, कर्मविशुद्धिः सत्त्वस्यान्तर्हृदयाका०; at 7, विराजमान०; at 8, वसरो विभुज्यमानं तनयेभ्यः पितृ०; at 8, पुलहश्रममेष प्र०. Spacing is the print's, as its text layer gives it; in a few places justification has left a space inside a word, and these are still to be closed when the verse is read. The speaker lines (श्रीशुक उवाच and the others) are printed in italic above the verse they introduce, and are given as its first line.
+Recension note: Meanings written 22 Oct 2026 (session S78). The differences between the witnesses listed below were read as the verses were glossed; except where this note says otherwise, each is a spelling, a sandhi or a word order of the two editions, none of them changes the sense, and the print's reading therefore stands unbracketed. The print is followed throughout. The print numbers 14 verses and GRETIL numbers 14. Of the 14 verses GRETIL has under the same number, 9 agree with the print letter for letter once spacing and the spelling of nasals are set aside; the rest differ: 2, 3, 6, 9, 11. The edition's footnotes give these older printed readings (प्रा० पा०), which are not bracketed into the line: at 6, एवम्; at 7, कर्मविशुद्धिः सत्त्वस्यान्तर्हृदयाका०; at 7, विराजमान०; at 8, वसरो विभुज्यमानं तनयेभ्यः पितृ०; at 8, पुलहश्रममेष प्र०. Spacing is the print's, as its text layer gives it. The speaker lines (श्रीशुक उवाच and the others) are printed in italic above the verse they introduce, and are given as its first line. A footnote's numeral keys it to one word, and which word that is cannot be told from the note alone, so those readings stay unbracketed until the page itself is read. Five lost spaces were restored as the verses were read, each of them a place where the print's text layer ran two words together into a form that cannot be read: अजनाभं नामैतद्वर्षं at verse 3, नानायागेषु विरचिताङ्ग° at verse 6, अधिभुज्यमानं स्वतनयेभ्यो at verse 8, एवं निजरमणारुण° at verse 12, and धृतभगवद्व्रत ऐणेयाजिनवाससा° at verse 13. In each case the first word carries its own ending, which cannot begin a compound, and GRETIL has the two words separately. The print's own hyphenated उभयतो-नाभिभिर् at verse 10 is a compound the print writes whole and is left as printed, and so is पुलहाश्रमोपवन at verse 11, where GRETIL reads the locative पुलहाश्रमोपवने but has a word break in the same place.
 
 Verse count: 14, plus the closing colophon printed unnumbered.
 
@@ -26,6 +26,9 @@ iast:
 bharatastu mahābhāgavato yadā
 bhagavatāvanitalaparipālanāya sañcintitastadanu-
 śāsanaparaḥ pañcajanīṁ viśvarūpaduhitaramupayeme||
+en: Śuka said: Bharata was a great devotee of the Lord. When the Lord appointed him to protect the surface of the earth, he gave himself to that command, and he married Pañcajanī, the daughter of Viśvarūpa.
+tel: శుకుడు పలికెను: భరతుడు మహాభాగవతుడు. భగవంతుడు అతనిని భూతలమును పాలించుటకు నియమించినప్పుడు, అతడు ఆ ఆజ్ఞను పాలించుటయందే నిలిచి, విశ్వరూపుని కుమార్తెయైన పంచజనిని వివాహము చేసికొనెను.
+hi: शुक ने कहा: भरत महान् भगवद्भक्त थे। जब भगवान् ने उन्हें भूतल के पालन के लिये नियुक्त किया, तब वे उस आज्ञा के पालन में ही लगे रहे, और उन्होंने विश्वरूप की पुत्री पञ्चजनी से विवाह किया।
 
 --- verse 2 ---
 deva:
@@ -34,16 +37,22 @@ deva:
 iast:
 tasyāmu ha vā ātmajān kārtsnyenānurūpānātmanaḥ
 pañca janayāmāsa bhūtādiriva bhūtasūkṣmāṇi||
+en: In her he begot five sons, altogether like himself, as the first of the elements brings forth the subtle elements.
+tel: ఆమెయందు అతడు తనవంటి ఐదుగురు కుమారులను కనెను; భూతాది సూక్ష్మభూతములను పుట్టించునట్లు.
+hi: उनसे उन्होंने अपने ही समान पाँच पुत्र उत्पन्न किये, जैसे भूतादि सूक्ष्म भूतों को उत्पन्न करता है।
 
 --- verse 3 ---
 deva:
 सुमतिं राष्ट्रभृतं सुदर्शनमावरणं धूम्रकेतुमिति।
-अजनाभंनामैतद्वर्षं भारतमिति यत आरभ्य
+अजनाभं नामैतद्वर्षं भारतमिति यत आरभ्य
 व्यपदिशन्ति॥
 iast:
 sumatiṁ rāṣṭrabhṛtaṁ sudarśanamāvaraṇaṁ dhūmraketumiti|
-ajanābhaṁnāmaitadvarṣaṁ bhāratamiti yata ārabhya
+ajanābhaṁ nāmaitadvarṣaṁ bhāratamiti yata ārabhya
 vyapadiśanti||
+en: They were Sumati, Rāṣṭrabhṛt, Sudarśana, Āvaraṇa and Dhūmraketu. This land was named Ajanābha, and from his time people call it Bhārata.
+tel: వారు సుమతి, రాష్ట్రభృతుడు, సుదర్శనుడు, ఆవరణుడు, ధూమ్రకేతువు. ఈ వర్షమునకు అజనాభము అని పేరు; అతనినుండి మొదలుకొని దానిని భారతము అని వ్యవహరించుచున్నారు.
+hi: वे सुमति, राष्ट्रभृत, सुदर्शन, आवरण और धूम्रकेतु थे। इस वर्ष का नाम अजनाभ था; उनसे आरम्भ करके लोग इसे भारत कहते हैं।
 
 --- verse 4 ---
 deva:
@@ -54,6 +63,9 @@ iast:
 sa bahuvinmahīpatiḥ pitṛpitāmahavad
 uruvatsalatayā sve sve karmaṇi vartamānāḥ
 prajāḥ svadharmamanuvartamānaḥ paryapālayat||
+en: That lord of the earth knew much. Like his father and his grandfather, with great affection he followed his own duty, and he protected the people, who each stood in his own work.
+tel: ఆ మహీపతి బహుజ్ఞుడు. తండ్రి తాతలవలె, గొప్ప వాత్సల్యముతో అతడు తన ధర్మమును అనుసరించి, తమ తమ కర్మములయందు నిలిచిన ప్రజలను పాలించెను.
+hi: वे महीपति बहुज्ञ थे। पिता और पितामह के समान, बड़े वात्सल्य से वे अपने धर्म का अनुसरण करते हुए, अपने अपने कर्म में लगी प्रजा का पालन करते रहे।
 
 --- verse 5 ---
 deva:
@@ -68,10 +80,13 @@ ca bhagavantaṁ yajñakraturūpaṁ kratubhiruccāvacaiḥ
 śraddhayā''hṛtāgnihotradarśapūrṇamāsacāturmāsya-
 paśusomānāṁ prakṛtivikṛtibhiranusavanaṁ
 cāturhotravidhinā||
+en: He worshipped the blessed Lord, whose form is the sacrifice and the rite, with sacrifices great and small. With faith he gathered the materials and offered the agnihotra, the darśa and the pūrṇamāsa, the cāturmāsya, the animal and the soma offerings, in their basic forms and in their modified forms, at every season, by the rule of the four priests.
+tel: యజ్ఞక్రతురూపుడైన భగవంతుని అతడు చిన్న పెద్ద క్రతువులచే పూజించెను. శ్రద్ధతో ద్రవ్యములను సమకూర్చి, అగ్నిహోత్రము, దర్శము, పూర్ణమాసము, చాతుర్మాస్యము, పశు సోమ యాగములను, వాటి ప్రకృతి వికృతి రూపములతో, ప్రతి సవనమునందు, చాతుర్హోత్ర విధిచే అతడు ఆచరించెను.
+hi: यज्ञ और क्रतु जिनका रूप है, उन भगवान् की उन्होंने छोटे और बड़े क्रतुओं से उपासना की। श्रद्धा से द्रव्य जुटाकर अग्निहोत्र, दर्श, पूर्णमास, चातुर्मास्य, पशु और सोम याग, उनके प्रकृति और विकृति रूपों में, प्रत्येक सवन में, चातुर्होत्र विधि से किये।
 
 --- verse 6 ---
 deva:
-सम्प्रचरत्सु नानायागेषुविरचिताङ्ग-
+सम्प्रचरत्सु नानायागेषु विरचिताङ्ग-
 क्रियेष्वपूर्वं यत्तत्क्रियाफलं धर्माख्यं परे
 ब्रह्मणि यज्ञपुरुषे सर्वदेवतालिङ्गानां मन्त्राणा-
 मर्थनियामकतया साक्षात्कर्तरि परदेवताया
@@ -80,7 +95,7 @@ deva:
 यजमानो यज्ञभाजो देवांस्तान् पुरुषा-
 वयवेष्वभ्यध्यायत्॥
 iast:
-sampracaratsu nānāyāgeṣuviracitāṅga-
+sampracaratsu nānāyāgeṣu viracitāṅga-
 kriyeṣvapūrvaṁ yattatkriyāphalaṁ dharmākhyaṁ pare
 brahmaṇi yajñapuruṣe sarvadevatāliṅgānāṁ mantrāṇā-
 marthaniyāmakatayā sākṣātkartari paradevatāyā
@@ -88,6 +103,9 @@ bhagavati vāsudeva eva bhāvayamāna ātmanaipuṇya-
 mṛditakaṣāyo haviḥṣvadhvaryubhirgṛhyamāṇeṣu sa
 yajamāno yajñabhājo devāṁstān puruṣā-
 vayaveṣvabhyadhyāyat||
+en: The many sacrifices went forward and their subsidiary acts were duly arranged. Bharata held that the unseen fruit of the act, which is called dharma, belongs to the supreme Brahman, the Person of the sacrifice. All the mantras name the gods, and he is the one who settles their meaning, so he alone is the doer in person. Thus he held in his mind the blessed Vāsudeva, the highest deity. By his own skill his impurities were worn away. While the priests took up the oblations, he, the sacrificer, meditated on those gods who share in the sacrifice as limbs of that Person.
+tel: అనేక యాగములు సాగుచుండగా, వాటి అంగక్రియలు చక్కగా సమకూర్చబడెను. ఆ కర్మకు కలుగు అపూర్వమైన ఫలము, ధర్మమను పేరుగలది, యజ్ఞపురుషుడైన పరబ్రహ్మకు చెందునని భరతుడు భావించెను. సర్వదేవతలను తెలుపు మంత్రములకు అర్థమును నియమించువాడు ఆయనే కావున ఆయనే సాక్షాత్ కర్త. ఇట్లు పరదేవతయైన భగవంతుడు వాసుదేవునే అతడు మనస్సునందు నిలుపుకొనెను. తన నైపుణ్యముచే అతని కషాయములు క్షీణించెను. అధ్వర్యులు హవిస్సులను గ్రహించుచుండగా, యజమానుడైన అతడు యజ్ఞభాగమును పొందు ఆ దేవతలను ఆ పురుషుని అవయవములుగా ధ్యానించెను.
+hi: अनेक याग चल रहे थे और उनकी अङ्गक्रियाएँ ठीक से रची गयी थीं। उस कर्म का अपूर्व फल, जो धर्म कहलाता है, यज्ञपुरुष परब्रह्म का ही है, ऐसा भरत ने माना। सब देवताओं को बताने वाले मन्त्रों के अर्थ का नियामक वही हैं, इसलिये वही साक्षात् कर्ता हैं। इस प्रकार परदेवता भगवान् वासुदेव को ही उन्होंने मन में धारण किया। अपने नैपुण्य से उनके कषाय क्षीण हो गये। अध्वर्यु हवि ले रहे थे, और यजमान होकर उन्होंने यज्ञ का भाग पाने वाले उन देवताओं का उस पुरुष के अङ्गों के रूप में ध्यान किया।
 
 --- verse 7 ---
 deva:
@@ -106,20 +124,26 @@ bhagavati vāsudeve mahāpuruṣarūpopalakṣaṇe
 nijapuruṣahṛllikhitenātmani puruṣarūpeṇa
 virocamāna uccaistarāṁ bhaktiranudinamedhamānarayā-
 jāyata||
+en: In this way his acts grew pure, and his being grew pure. Within the space of his heart, which is the abode of Brahman, the blessed Vāsudeva stood. He bore the marks of the form of the Supreme Person, the Śrīvatsa, the Kaustubha, the garland of forest flowers, the discus, the conch and the mace, and he shone in his self in that form of the Person which is written on the hearts of his own devotees. In Bharata a very high devotion arose, and its force grew greater every day.
+tel: ఇట్లు అతని కర్మ శుద్ధమయ్యెను, సత్త్వము శుద్ధమయ్యెను. బ్రహ్మకు ఆశ్రయమైన అతని హృదయాకాశమునందు భగవంతుడు వాసుదేవుడు నిలిచెను. ఆయన మహాపురుషరూపముతో, శ్రీవత్సము, కౌస్తుభము, వనమాల, చక్రము, శంఖము, గదలతో ఒప్పుచు, తన భక్తుల హృదయములయందు లిఖించబడిన ఆ పురుషరూపముతో అతని ఆత్మయందు ప్రకాశించెను. భరతునియందు అత్యధికమైన భక్తి కలిగెను; దాని వేగము దినదినము వృద్ధి పొందెను.
+hi: इस प्रकार उनका कर्म शुद्ध हुआ और सत्त्व शुद्ध हुआ। ब्रह्म के आश्रय रूप उनके हृदयाकाश में भगवान् वासुदेव स्थित हुए। वे महापुरुष के रूप से युक्त थे, श्रीवत्स, कौस्तुभ, वनमाला, चक्र, शङ्ख और गदा से लक्षित थे, और अपने भक्तों के हृदय में लिखे हुए उस पुरुषरूप से उनकी आत्मा में प्रकाशित हुए। भरत में अत्यन्त ऊँची भक्ति उत्पन्न हुई, और उसका वेग दिन दिन बढ़ता गया।
 
 --- verse 8 ---
 deva:
 एवं वर्षायुतसहस्रपर्यन्तावसितकर्म-
-निर्वाणावसरोऽधिभुज्यमानंस्वतनयेभ्यो
+निर्वाणावसरोऽधिभुज्यमानं स्वतनयेभ्यो
 रिक्थं पितृपैतामहं यथादायं विभज्य स्वयं
 सकलसम्पन्निकेतात्स्वनिकेतात् पुलहाश्रमं
 प्रवव्राज॥
 iast:
 evaṁ varṣāyutasahasraparyantāvasitakarma-
-nirvāṇāvasaro'dhibhujyamānaṁsvatanayebhyo
+nirvāṇāvasaro'dhibhujyamānaṁ svatanayebhyo
 rikthaṁ pitṛpaitāmahaṁ yathādāyaṁ vibhajya svayaṁ
 sakalasampanniketātsvaniketāt pulahāśramaṁ
 pravavrāja||
+en: In this way ten million years passed, and the time came for his works to end. He divided the wealth of his father and his grandfather, which he had been enjoying, among his sons, each according to his share. Then he himself went forth from his own house, the seat of all prosperity, to the āśrama of Pulaha.
+tel: ఇట్లు కోటి సంవత్సరములు గడచి, అతని కర్మలు ముగియు సమయము వచ్చెను. తాను అనుభవించుచున్న పితృ పైతామహమైన ధనమును కుమారులకు వారి వారి భాగముల ప్రకారము పంచి, సకల సంపదలకు నిలయమైన తన గృహమునుండి అతడు పులహాశ్రమమునకు వెడలెను.
+hi: इस प्रकार एक करोड़ वर्ष बीते और उनके कर्मों के समाप्त होने का समय आया। जिस पितृ पैतामह धन का वे उपभोग कर रहे थे, उसे पुत्रों में उनके भाग के अनुसार बाँटकर, सब सम्पत्तियों के निकेत अपने घर से वे स्वयं पुलह के आश्रम को चले गये।
 
 --- verse 9 ---
 deva:
@@ -130,6 +154,9 @@ iast:
 yatra ha vāva bhagavān hariradyāpi
 tatratyānāṁ nijajanānāṁ vātsalyena saṁnidhāpyata
 icchārūpeṇa||
+en: There, even today, the blessed Lord Hari, out of affection for his own devotees who dwell in that place, makes himself present in the form that each of them desires.
+tel: అందు ఇప్పటికిని భగవంతుడైన హరి, అక్కడ ఉండు తన జనులయందు వాత్సల్యముచే, వారు కోరిన రూపముతో సన్నిధి కలిగించుచున్నాడు.
+hi: वहाँ आज भी भगवान् हरि, उस स्थान में रहने वाले अपने जनों पर वात्सल्य के कारण, उनकी इच्छा के रूप में सन्निधि करते हैं।
 
 --- verse 10 ---
 deva:
@@ -140,6 +167,9 @@ iast:
 yatrāśramapadānyubhayato-
 nābhibhirdṛṣaccakraiścakranadī nāma saritpravarā
 sarvataḥ pavitrīkaroti||
+en: There the best of rivers, called Cakranadī, purifies the grounds of the āśrama on every side with stone discs that bear a nave on both faces.
+tel: అందు చక్రనది అను సరిత్ప్రవర, ఇరువైపుల నాభులు కలిగిన రాతి చక్రములచే ఆశ్రమ స్థలములను అన్ని వైపుల పవిత్రము చేయుచున్నది.
+hi: वहाँ चक्रनदी नाम की सरित्प्रवरा, दोनों ओर नाभि वाले पत्थर के चक्रों से, आश्रम के स्थानों को सब ओर से पवित्र करती है।
 
 --- verse 11 ---
 deva:
@@ -156,6 +186,9 @@ tulasikāmbubhiḥ kandamūlaphalopahāraiśca
 samīhamāno bhagavata ārādhanaṁ vivikta
 uparataviṣayābhilāṣa upabhṛtopaśamaḥ parāṁ
 nirvṛtimavāpa||
+en: There in the grove at Pulaha's āśrama he was alone. In solitude he sought to worship the Lord with many kinds of flowers, with tender shoots, with tulasī leaves and with water, and with offerings of bulbs, roots and fruits. His longing for the objects of the senses ceased, peace came to him, and he reached the highest contentment.
+tel: పులహాశ్రమమునందలి ఉపవనమున అతడు ఒక్కడే ఉండెను. ఏకాంతమున, నానావిధ కుసుమములతో, చిగురులతో, తులసితో, జలముతో, కంద మూల ఫలముల ఉపహారములతో భగవంతుని ఆరాధింప యత్నించెను. విషయములయందు అతని అభిలాష ఉపశమించెను, శాంతి కలిగెను, అతడు పరమమైన నిర్వృతిని పొందెను.
+hi: पुलह के आश्रम के उपवन में वे अकेले थे। एकान्त में अनेक प्रकार के फूलों से, कोंपलों से, तुलसी से, जल से, और कन्द मूल फल के उपहारों से उन्होंने भगवान् की आराधना करने का यत्न किया। विषयों में उनकी अभिलाषा शान्त हो गयी, उपशम प्राप्त हुआ, और उन्होंने परम निर्वृति पायी।
 
 --- verse 12 ---
 deva:
@@ -163,7 +196,7 @@ deva:
 चर्यया भगवति प्रवर्धमानानुरागभरद्रुतहृदय-
 शैथिल्यः प्रहर्षवेगेनात्मन्युद्भिद्यमानरोमपुलक-
 कुलक औत्कण्ठ्यप्रवृत्तप्रणयबाष्पनिरुद्धा-
-वलोकनयन एवंनिजरमणारुणचरणारविन्दा-
+वलोकनयन एवं निजरमणारुणचरणारविन्दा-
 नुध्यानपरिचितभक्तियोगेन परिप्लुत-
 परमाह्लादगम्भीरहृदयह्रदावगाढधिषणस्तामपि
 क्रियमाणां भगवत्सपर्यां न सस्मार॥
@@ -172,24 +205,30 @@ tayetthamaviratapuruṣapari-
 caryayā bhagavati pravardhamānānurāgabharadrutahṛdaya-
 śaithilyaḥ praharṣavegenātmanyudbhidyamānaromapulaka-
 kulaka autkaṇṭhyapravṛttapraṇayabāṣpaniruddhā-
-valokanayana evaṁnijaramaṇāruṇacaraṇāravindā-
+valokanayana evaṁ nijaramaṇāruṇacaraṇāravindā-
 nudhyānaparicitabhaktiyogena paripluta-
 paramāhlādagambhīrahṛdayahradāvagāḍhadhiṣaṇastāmapi
 kriyamāṇāṁ bhagavatsaparyāṁ na sasmāra||
+en: By that unbroken service of the Person his love for the Lord grew. Under its weight his heart melted and grew soft. In the rush of his joy the hair of his body rose in rows. Tears of love came from his longing and closed the sight of his eyes. By the yoga of devotion, made familiar by constant thought of the red lotus feet of his own beloved Lord, his mind sank deep into the lake of his heart, which was filled and made deep with the highest delight. So he did not even remember the worship of the Lord that he was performing.
+tel: ఆ విరామము లేని పురుషపరిచర్యచే భగవంతునియందు అతని అనురాగము వృద్ధి పొందెను. దాని భారముచే అతని హృదయము కరిగి సడలెను. ప్రహర్ష వేగముచే అతని శరీరమున రోమములు పులకలుగా లేచెను. ఔత్కంఠ్యమున కలిగిన ప్రణయ బాష్పములు అతని కన్నుల చూపును ఆపెను. తన రమణుని అరుణ చరణారవిందములను నిరంతరము ధ్యానించుటచే పరిచితమైన భక్తియోగముచే, పరమమైన ఆహ్లాదముతో నిండి లోతైన అతని హృదయ హ్రదమున అతని బుద్ధి మునిగెను. అందుచే తాను చేయుచున్న భగవత్సపర్యను అతడు స్మరించలేదు.
+hi: उस निरन्तर पुरुषपरिचर्या से भगवान् में उनका अनुराग बढ़ता गया। उसके भार से उनका हृदय द्रवित होकर शिथिल हो गया। हर्ष के वेग से उनके शरीर में रोम पुलक बनकर उठ आये। औत्कण्ठ्य से उठे प्रणय के आँसुओं ने उनकी आँखों का देखना रोक दिया। अपने रमण के अरुण चरणकमलों के निरन्तर ध्यान से परिचित भक्तियोग के द्वारा, परम आह्लाद से भरे और गहरे अपने हृदय के हृद में उनकी बुद्धि डूब गयी। इसलिये जो भगवत्सपर्या वे कर रहे थे, उसका भी उन्हें स्मरण न रहा।
 
 --- verse 13 ---
 deva:
-इत्थं धृतभगवद्व्रतऐणेयाजिनवाससा-
+इत्थं धृतभगवद्व्रत ऐणेयाजिनवाससा-
 नुसवनाभिषेकार्द्रकपिशकुटिलजटाकलापेन च
 विरोचमानः सूर्यर्चा भगवन्तं हिरण्मयं
 पुरुषमुज्जिहाने सूर्यमण्डलेऽभ्युपतिष्ठन्नेतदु
 होवाच—॥
 iast:
-itthaṁ dhṛtabhagavadvrataaiṇeyājinavāsasā-
+itthaṁ dhṛtabhagavadvrata aiṇeyājinavāsasā-
 nusavanābhiṣekārdrakapiśakuṭilajaṭākalāpena ca
 virocamānaḥ sūryarcā bhagavantaṁ hiraṇmayaṁ
 puruṣamujjihāne sūryamaṇḍale'bhyupatiṣṭhannetadu
 hovāca—||
+en: In this way he held the vow of the Lord. He wore a garment of blackbuck hide, and the mass of his matted hair, tawny and curled, was wet from his bathing at every season, and he shone with it. With a hymn to the sun he stood in worship before the blessed Lord, the golden Person in the rising disc of the sun, and he said this:
+tel: ఇట్లు అతడు భగవద్వ్రతమును ధరించెను. కృష్ణజింక చర్మమును వస్త్రముగా ధరించి, ప్రతి సవనమునందలి అభిషేకముచే తడిసిన కపిల వర్ణపు వంకర జటాకలాపముతో అతడు ప్రకాశించెను. సూర్యర్క్కుతో, ఉదయించుచున్న సూర్యమండలమునందలి హిరణ్మయ పురుషుడైన భగవంతుని ఎదుట అతడు ఉపాసనకు నిలిచి, ఇట్లు పలికెను:
+hi: इस प्रकार उन्होंने भगवान् का व्रत धारण किया। कृष्णमृग के चर्म का वस्त्र पहने हुए, और प्रत्येक सवन के अभिषेक से भीगी कपिल रंग की घुँघराली जटाओं के समूह से वे शोभित हुए। सूर्य की ऋचा से, उदय होते सूर्यमण्डल में स्थित हिरण्मय पुरुष भगवान् के समीप उपासना में खड़े होकर उन्होंने यह कहा:
 
 --- verse 14 ---
 deva:
@@ -202,9 +241,15 @@ parorajaḥ saviturjātavedo
 devasya bhargo manasedaṁ jajāna|
 suretasādaḥ punarāviśya caṣṭe
 haṁsaṁ gṛdhrāṇaṁ nṛṣadriṅgirāmimaḥ||
+en: He is beyond rajas. The light of that God, the creator who knows all that is born, brought forth this world by the mind. With his own excellent seed he entered it again, and he beholds it. We go to that Haṁsa, who is longed for, who dwells within men and is reached by those who move toward him.
+tel: ఆయన రజస్సునకు అతీతుడు. సవితయై, పుట్టిన సమస్తమును ఎరిగిన ఆ దేవుని భర్గస్సు మనస్సుచే ఈ జగత్తును పుట్టించెను. తన ఉత్తమ రేతస్సుతో ఆయన మరల దానియందు ప్రవేశించి దానిని చూచుచున్నాడు. అభిలషింపబడువాడు, నరులయందు నివసించువాడు, తనవైపు కదలువారికి లభించువాడు అగు ఆ హంసను మేము చేరుచున్నాము.
+hi: वे रजस् से परे हैं। जो सविता हैं और जन्म लेने वाले सबको जानते हैं, उस देव के भर्ग ने मन से इस जगत् को उत्पन्न किया। अपने उत्तम रेतस् से वे उसमें फिर प्रवेश करके उसे देखते हैं। जिनकी अभिलाषा की जाती है, जो नरों में निवास करते हैं, और जो अपनी ओर चलने वालों को प्राप्त होते हैं, उस हंस को हम प्राप्त होते हैं।
 
 --- verse none ---
 deva:
 इति श्रीमद्भागवते महापुराणे पारमहंस्यां संहितायां पञ्चमस्कन्धे भरतचरिते भगवत्परिचर्यायां सप्तमोऽध्यायः॥ ७॥
 iast:
 iti śrīmadbhāgavate mahāpurāṇe pāramahaṁsyāṁ saṁhitāyāṁ pañcamaskandhe bharatacarite bhagavatparicaryāyāṁ saptamo'dhyāyaḥ|| 7||
+en: Thus ends the seventh adhyāya, on the service of the Lord, in the story of Bharata in the fifth skandha of the Śrīmad Bhāgavata Mahāpurāṇa, the saṁhitā of the paramahaṁsas.
+tel: ఇది శ్రీమద్భాగవత మహాపురాణమునందు, పరమహంసల సంహితయందు, పంచమస్కంధమునందు భరతచరితమునందు భగవత్పరిచర్యయను సప్తమోఽధ్యాయము.
+hi: इस प्रकार श्रीमद्भागवत महापुराण की परमहंसों की संहिता के पञ्चम स्कन्ध में भरतचरित में भगवत्परिचर्या नामक सातवाँ अध्याय समाप्त हुआ।
