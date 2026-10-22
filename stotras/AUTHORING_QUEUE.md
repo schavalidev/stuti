@@ -3824,3 +3824,14 @@ the standing note on parallel sessions — so check `git log` before assuming a 
 still open.
 
 - 2026-10-13 (S72) — **Aṣṭāvakra Gītā written in full**: new folder `ashtavakragita/`, 21 files, 304 verses, all five fields. Base text the printed Gītā Press *Gītā-Saṅgraha* pp. 472–536; collated against the Jālimsiṁh bhāṣā-ṭīkā of 1971 (243 of 304 verses recoverable from its scan) and against the John Richards e-text, which GRETIL and sa.wikisource carry in two scripts and which is therefore one witness. No critical edition of the work exists — GRETIL's whole index was searched. The Naval Kishor 1896 print was found, measured (24,358 Latin characters of noise against 89,821 Devanāgarī) and rejected as unusable. Two findings: Gītā Press alone carries the 21st prakaraṇa, the work's own index of chapters and verse counts, which is why the work is normally counted at 298 verses in 20 chapters; and that index says 10 verses for prakaraṇa 16 where the same volume prints 11, so its announced total of 303 is one short of the 304 it sets. The index chapter's OCR is damaged past repair and has no second witness, so its six verses were transcribed from the page images of leaves 535–536 directly. `bin/fill_iast.py` and `bin/reader_view.py --audit` both clean; tracking row added and `bin/recount.py --write` run.
+
+## 2026-10-22 — the Challa 1958 Maṅgaḷagaurī: the rite is written, the story is not
+
+`puja/smarta/51_sravana_mangalagauri_vrata_challa.txt` now holds the rite, printed pp. 1–4, 34 units, read
+from the 600 dpi page images of the user's PDF (`~/Downloads/Sravana Mangala Gouri Vratham.pdf`) and typed
+in Telugu script, Devanāgarī by `tel2dev.py`. Twenty-four worn words are marked ⟨?⟩ in the text; the second
+verse carries six of them and is read through the author's tātparya. **Still to do in the same file:** the
+kathā, printed pp. 4–26 (Sanskrit verses, Kṛṣṇa to Yudhiṣṭhira, each with the author's Telugu tātparya), the
+vrata song, pp. 29–31, and the Śrāvaṇa Friday song, p. 32. Page slices for reading: pdfimages -png, trim
+250/350/200/250 px, cut into thirds at 2000 px wide.
+
