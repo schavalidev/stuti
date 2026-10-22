@@ -9,7 +9,7 @@ Type: Purāṇa (an adhyāya of the Śrīmad Bhāgavata, Skandha 4)
 
 Source / recension: Base text and authority: the Gītā Press, Gorakhpur Śrīmadbhāgavata Mahāpurāṇa with Hindi translation, Part 1 (Gītā Press code 26), archive.org item `shrimadbhagwat-mahapuran-bhag-1`, printed pages 552–564; the PDF page numbers are the printed ones. The PDF carries the typesetter's own text layer in the Chanakya font encoding, and the text was decoded from it by machine with `bin/bhagavata/chanakya.py`, not read off OCR or typed. The decoder was checked against GRETIL over all twelve skandhas before any file was written, and the differences that remain were sampled and found to be readings of the two editions. Second witness: GRETIL's `sa_bhAgavatapurANa.xml` (IAST, contributed by Ulrich Stiehl), a separate editorial lineage, compared verse by verse by machine. The TTD edition with the commentaries of Śrīdhara, Vīrarāghava and Vijayadhvaja (archive.org `Bhagavata_Purana_With_Multiple_Commentaries_TTD_Critical_Edition`) is the third witness where one is needed; it was not read for this file. The IAST was generated mechanically from the Devanāgarī with `bin/dev2iast.py`.
 
-Recension note: Text-only file, written 1 Oct 2026 at the user's instruction to lay down the whole Bhāgavata first: the English, Telugu and Hindi meanings are still to be added, and the witnesses' differences listed here have been recorded by machine and not yet adjudicated. The print is followed throughout. The print numbers 85 verses and GRETIL numbers 85. Of the 85 verses GRETIL has under the same number, 60 agree with the print letter for letter once spacing and the spelling of nasals are set aside; the rest differ: 4, 7, 12, 13, 26, 28, 30, 33, 34, 46, 47, 49, 53, 54, 60, 62, 64, 65, 68, 76, 77, 79, 80, 82, 84. The edition's footnotes give these older printed readings (प्रा० पा०), which are not bracketed into the line: at 10, मिहोदिते; at 10, विचक्षे; at 27, च यथा समभिजायते; at 28, ल्लोकान् प्राप्नोति; at 29, कर्तृगुणं; at 54, रात्रादीन्कालविशेषान्विगणय्य; at 54, पृष्ठतः परोक्षमनु; at 67, बलाश्रयम्; at 68, बहुशो; at 69, वेह उप०; at 72, तथा; at 75, देहमुपादत्ते; at 79, तदपबाधार्थं; at 80, नृपमा०. Spacing is the print's, as its text layer gives it; in a few places justification has left a space inside a word, and these are still to be closed when the verse is read. The speaker lines (श्रीशुक उवाच and the others) are printed in italic above the verse they introduce, and are given as its first line.
+Recension note: Meanings written 22 Oct 2026 (session S78). The differences between the witnesses listed below were read as the verses were glossed; except where this note says otherwise, each is a spelling, a sandhi or a word order of the two editions, none of them changes the sense, and the print's reading therefore stands unbracketed. The print is followed throughout. The print numbers 85 verses and GRETIL numbers 85. Of the 85 verses GRETIL has under the same number, 60 agree with the print letter for letter once spacing and the spelling of nasals are set aside; the rest differ: 4, 7, 12, 13, 26, 28, 30, 33, 34, 46, 47, 49, 53, 54, 60, 62, 64, 65, 68, 76, 77, 79, 80, 82, 84. The edition's footnotes give these older printed readings (प्रा० पा०), which are not bracketed into the line: at 10, मिहोदिते; at 10, विचक्षे; at 27, च यथा समभिजायते; at 28, ल्लोकान् प्राप्नोति; at 29, कर्तृगुणं; at 54, रात्रादीन्कालविशेषान्विगणय्य; at 54, पृष्ठतः परोक्षमनु; at 67, बलाश्रयम्; at 68, बहुशो; at 69, वेह उप०; at 72, तथा; at 75, देहमुपादत्ते; at 79, तदपबाधार्थं; at 80, नृपमा०. Spacing is the print's, as its text layer gives it. The speaker lines (श्रीशुक उवाच and the others) are printed in italic above the verse they introduce, and are given as its first line. A footnote's numeral keys it to one word, and which word that is cannot be told from the note alone, so those readings stay unbracketed until the page itself is read. Seven words were put right as the verses were read. At verse 4 justification had left a space inside द्विहस्ताङ्घ्रिं and at verse 54 inside षडङ्घ्रिगण°, and both are closed here. At verses 2, 13, 40, 45 and 53 the space between two words was lost, which ran them together; it is restored at आत्मनः पुरम्, प्रवृत्तं च, सरितः परितः, व्यवच्छिन्नं भजन्तो and क्षुद्रं चरं. GRETIL agrees with all seven corrected readings. At verses 46, 47, 76 and 77 GRETIL carries a further half-verse that the print does not number here at all; the print is followed, and those four are part of the list of differing verses above. Verse 54 is the print's own prose gloss of the riddle of verse 53, headed [अस्यार्थः], and it is given as one unit with the hyphens its line breaks carry.
 
 Verse count: 85, plus the closing colophon printed unnumbered.
 
@@ -24,16 +24,22 @@ iast:
 prācīnabarhiruvāca
 bhagavaṁste vaco'smābhirna samyagavagamyate|
 kavayastadvijānanti na vayaṁ karmamohitāḥ||
+en: Prācīnabarhi said: Bhagavan, your words are not rightly understood by us. The wise understand them. We do not, for we are deluded by karma.
+tel: ప్రాచీనబర్హి పలికెను: భగవన్, మీ మాటలు మాకు సరిగా అర్థము కాలేదు. జ్ఞానులు వానిని తెలిసికొందురు. కర్మముచే మోహితులమైన మేము తెలిసికొనలేము.
+hi: प्राचीनबर्हि ने कहा: भगवन्, आपके वचन हमें ठीक से समझ में नहीं आते। ज्ञानी उन्हें जानते हैं। हम कर्म से मोहित हैं, इसलिए नहीं जानते।
 
 --- verse 2 ---
 deva:
 नारद उवाच
-पुरुषं पुरंजनं विद्याद्यद् व्यनक्त्यात्मनःपुरम्।
+पुरुषं पुरंजनं विद्याद्यद् व्यनक्त्यात्मनः पुरम्।
 एकद्वित्रिचतुष्पादं बहुपादमपादकम्॥
 iast:
 nārada uvāca
-puruṣaṁ puraṁjanaṁ vidyādyad vyanaktyātmanaḥpuram|
+puruṣaṁ puraṁjanaṁ vidyādyad vyanaktyātmanaḥ puram|
 ekadvitricatuṣpādaṁ bahupādamapādakam||
+en: Nārada said: Know the puruṣa to be Purañjana, because he makes manifest for himself a city, that is, a body with one foot, with two, with three, with four, with many feet, or with none.
+tel: నారదుడు పలికెను: పురుషుడే పురంజనుడని తెలిసికొనుము. అతడు తనకొఱకు ఒక నగరమును, అనగా ఒక దేహమును వెలయించుకొనును. అది ఒక పాదము, రెండు, మూడు, నాలుగు పాదములు కలది, అనేక పాదములు కలది, లేక పాదములు లేనిది.
+hi: नारद ने कहा: पुरुष को ही पुरंजन जानो, क्योंकि वह अपने लिए एक नगर, अर्थात् एक देह, प्रकट करता है। वह एक पाद वाला, दो, तीन, चार पाद वाला, बहुत पादों वाला, अथवा पाद-रहित होता है।
 
 --- verse 3 ---
 deva:
@@ -42,14 +48,20 @@ deva:
 iast:
 yo'vijñātāhṛtastasya puruṣasya sakheśvaraḥ|
 yanna vijñāyate pumbhirnāmabhirvā kriyāguṇaiḥ||
+en: He who was called Avijñāta is the friend and the lord of that puruṣa, because he is not known by men by names, or by actions, or by qualities.
+tel: అవిజ్ఞాతుడని చెప్పబడినవాడే ఆ పురుషునికి సఖుడు, ఈశ్వరుడు. ఏలయనగా అతడు నామములచేతను, క్రియలచేతను, గుణములచేతను మనుష్యులకు తెలియబడడు.
+hi: जो अविज्ञात कहा गया, वही उस पुरुष का सखा और ईश्वर है, क्योंकि वह नामों से, क्रियाओं से अथवा गुणों से मनुष्यों को ज्ञात नहीं होता।
 
 --- verse 4 ---
 deva:
 यदा जिघृक्षन् पुरुषः कार्त्स्न्येन प्रकृतेर्गुणान्।
-नवद्वारं द्विहस्ताङ् घ्रिं तत्रामनुतसाध्विति॥
+नवद्वारं द्विहस्ताङ्घ्रिं तत्रामनुतसाध्विति॥
 iast:
 yadā jighṛkṣan puruṣaḥ kārtsnyena prakṛterguṇān|
-navadvāraṁ dvihastāṅ ghriṁ tatrāmanutasādhviti||
+navadvāraṁ dvihastāṅghriṁ tatrāmanutasādhviti||
+en: When the puruṣa wished to seize the guṇas of prakṛti entirely, he saw there a city of nine gates with two hands and two feet, and he thought of it thus: this is good.
+tel: పురుషుడు ప్రకృతి గుణములను పూర్తిగా గ్రహింపగోరినప్పుడు, అక్కడ తొమ్మిది ద్వారములు కలిగి, రెండు చేతులు రెండు పాదములు కలిగిన నగరమును చూచి, ఇది మంచిది అని తలచెను.
+hi: जब पुरुष ने प्रकृति के गुणों को पूर्ण रूप से ग्रहण करना चाहा, तब उसने वहाँ नौ द्वारों वाले, दो हाथ और दो पाद वाले नगर को देखकर सोचा: यह अच्छा है।
 
 --- verse 5 ---
 deva:
@@ -58,6 +70,9 @@ deva:
 iast:
 buddhiṁ tu pramadāṁ vidyānmamāhamiti yatkṛtam|
 yāmadhiṣṭhāya dehe'smin pumān bhuṅkte'kṣabhirguṇān||
+en: Know the young woman to be buddhi, by whom the sense of mine and of I is made. Resting upon her, the puruṣa in this body enjoys the guṇas through the senses.
+tel: ఆ యువతియే బుద్ధి అని తెలిసికొనుము. నాది అను భావము, నేను అను భావము ఆమెచే కల్పింపబడును. ఆమెను ఆశ్రయించి పురుషుడు ఈ దేహమున ఇంద్రియములద్వారా గుణములను అనుభవించును.
+hi: उस युवती को बुद्धि जानो, जिसके द्वारा मेरा और मैं का भाव बनता है। उसका आश्रय लेकर पुरुष इस देह में इन्द्रियों से गुणों को भोगता है।
 
 --- verse 6 ---
 deva:
@@ -66,6 +81,9 @@ deva:
 iast:
 sakhāya indriyagaṇā jñānaṁ karma ca yatkṛtam|
 sakhyastadvṛttayaḥ prāṇaḥ paṁcavṛttiryathoragaḥ||
+en: The friends are the groups of the senses, and what they do is knowledge and action. The women friends are the workings of those senses. The serpent is prāṇa, which has five functions.
+tel: ఆ సఖులు ఇంద్రియ సమూహములు. వారు చేయునది జ్ఞానమును కర్మమును. ఆ సఖియలు ఆ ఇంద్రియముల వృత్తులు. ఆ సర్పము ఐదు వృత్తులు కలిగిన ప్రాణము.
+hi: वे सखा इन्द्रियों के समूह हैं, और उनका किया हुआ ज्ञान और कर्म है। वे सखियाँ उन इन्द्रियों की वृत्तियाँ हैं। वह सर्प पाँच वृत्तियों वाला प्राण है।
 
 --- verse 7 ---
 deva:
@@ -74,6 +92,9 @@ deva:
 iast:
 bṛhadbalaṁ mano vidyādubhayendriyanāyakam|
 paṁcālāḥ paṁca viṣayā yanmadhye navakhaṁ puram||
+en: Know Bṛhadbala to be the mind, the leader of both kinds of senses. The Pañcālas are the five objects of sense, and in the midst of them is the city of nine openings.
+tel: బృహద్బలుడే మనస్సు అని తెలిసికొనుము. అతడు రెండు విధముల ఇంద్రియములకు నాయకుడు. పంచాలములు ఐదు విషయములు. వాని మధ్యనే తొమ్మిది రంధ్రములు కలిగిన నగరము ఉన్నది.
+hi: बृहद्बल को मन जानो, जो दोनों प्रकार की इन्द्रियों का नायक है। पंचाल पाँच विषय हैं, और उनके मध्य में नौ छिद्रों वाला नगर है।
 
 --- verse 8 ---
 deva:
@@ -82,6 +103,9 @@ deva:
 iast:
 akṣiṇī nāsike karṇau mukhaṁ śiśnagudāviti|
 dve dve dvārau bahiryāti yastadindriyasaṁyutaḥ||
+en: The two eyes, the two nostrils, the two ears, the mouth, the organ of generation and the anus are the gates, two and two. Joined with those senses, he goes outward through them.
+tel: రెండు కన్నులు, రెండు నాసికలు, రెండు చెవులు, ముఖము, జననేంద్రియము, గుదము ఇవి రెండు రెండుగా ఉన్న ద్వారములు. ఆ ఇంద్రియములతో కూడి అతడు వానిద్వారా బయటికి పోవును.
+hi: दो आँखें, दो नासिकाएँ, दो कान, मुख, जननेन्द्रिय और गुदा ये दो-दो द्वार हैं। उन इन्द्रियों से युक्त होकर वह उनसे बाहर जाता है।
 
 --- verse 9 ---
 deva:
@@ -90,6 +114,9 @@ deva:
 iast:
 akṣiṇī nāsike āsyamiti paṁca puraḥ kṛtāḥ|
 dakṣiṇā dakṣiṇaḥ karṇa uttarā cottaraḥ smṛtaḥ||
+en: The two eyes, the two nostrils and the mouth, these five were set in front. The southern gate is the right ear, and the northern is known to be the left ear.
+tel: రెండు కన్నులు, రెండు నాసికలు, ముఖము ఈ ఐదు ముందువైపున ఉంచబడినవి. దక్షిణ ద్వారము కుడి చెవి. ఉత్తర ద్వారము ఎడమ చెవి అని చెప్పబడినది.
+hi: दो आँखें, दो नासिकाएँ और मुख, ये पाँच सामने बनाये गये। दक्षिण द्वार दाहिना कान है, और उत्तर द्वार बाँया कान कहा गया है।
 
 --- verse 10 ---
 deva:
@@ -100,6 +127,9 @@ iast:
 paścime ityadhodvārau gudaṁ śiśnamihocyate|
 khadyotā''virmukhī cātra netre ekatra nirmite|
 rūpaṁ vibhrājitaṁ tābhyāṁ vicaṣṭe cakṣuṣeśvaraḥ||
+en: The two gates below are called the western ones; here the anus and the organ of generation are meant. Khadyotā and Āvirmukhī here are the two eyes, made in one place. Vibhrājita is form, and through those two the lord of the city sees form with the eye.
+tel: క్రింద ఉన్న రెండు ద్వారములు పశ్చిమ ద్వారములని చెప్పబడినవి. ఇక్కడ గుదము, జననేంద్రియము అని అర్థము. ఖద్యోత, ఆవిర్ముఖి అనునవి ఒకే చోట చేయబడిన రెండు కన్నులు. విభ్రాజితము రూపము. ఆ రెండింటిద్వారా నగరాధిపతి కంటితో రూపమును చూచును.
+hi: नीचे के दो द्वार पश्चिम के कहे गये हैं; यहाँ गुदा और जननेन्द्रिय का अर्थ है। खद्योता और आविर्मुखी यहाँ एक ही स्थान पर बनी दो आँखें हैं। विभ्राजित रूप है, और उन दोनों से नगर का स्वामी नेत्र से रूप को देखता है।
 
 --- verse 11 ---
 deva:
@@ -108,6 +138,9 @@ deva:
 iast:
 nalinī nālinī nāse gandhaḥ saurabha ucyate|
 ghrāṇo'vadhūto mukhyāsyaṁ vipaṇo vāgrasavidrasaḥ||
+en: Nalinī and Nālinī are the two nostrils, and Saurabha is called smell. Avadhūta is the sense of smell. Mukhyā is the mouth. Vipaṇa is speech, and Rasavid is taste.
+tel: నలిని, నాలిని అనునవి రెండు నాసికలు. సౌరభము గంధము అని చెప్పబడినది. అవధూతుడు ఘ్రాణేంద్రియము. ముఖ్య అనునది నోరు. విపణుడు వాక్కు. రసవిదుడు రసము.
+hi: नलिनी और नालिनी दो नासिकाएँ हैं, और सौरभ गन्ध कहा गया है। अवधूत घ्राण-इन्द्रिय है। मुख्या मुख है। विपण वाणी है, और रसविद् रस है।
 
 --- verse 12 ---
 deva:
@@ -116,14 +149,20 @@ deva:
 iast:
 āpaṇo vyavahāro'tra citramandho bahūdanam|
 pitṛhūrdakṣiṇaḥ karṇa uttaro devahūḥ smṛtaḥ||
+en: Here Āpaṇa is the use of speech, and Bahūdana is food of many kinds. The right ear is Pitṛhū, and the left ear is known as Devahū.
+tel: ఇక్కడ ఆపణము వాక్కు వ్యవహారము. బహూదనము అనేక విధముల అన్నము. కుడి చెవి పితృహువు. ఎడమ చెవి దేవహువు అని చెప్పబడినది.
+hi: यहाँ आपण वाणी का व्यवहार है, और बहूदन अनेक प्रकार का अन्न है। दाहिना कान पितृहू है, और बाँया कान देवहू कहा गया है।
 
 --- verse 13 ---
 deva:
-प्रवृत्तंच निवृत्तं च शास्त्रं पंचालसंज्ञितम्।
+प्रवृत्तं च निवृत्तं च शास्त्रं पंचालसंज्ञितम्।
 पितृयानं देवयानं श्रोत्राच्छ्रुतधराद्व्रजेत्॥
 iast:
-pravṛttaṁca nivṛttaṁ ca śāstraṁ paṁcālasaṁjñitam|
+pravṛttaṁ ca nivṛttaṁ ca śāstraṁ paṁcālasaṁjñitam|
 pitṛyānaṁ devayānaṁ śrotrācchrutadharādvrajet||
+en: The śāstra of action and the śāstra of withdrawal are what bear the name Pañcāla. Through the ear, through Śrutadhara, he goes by the path of the forefathers and by the path of the gods.
+tel: ప్రవృత్తి శాస్త్రము, నివృత్తి శాస్త్రము ఇవియే పంచాలము అను పేరు కలవి. చెవిద్వారా, శ్రుతధరునిద్వారా అతడు పితృయానము మరియు దేవయానము అను మార్గములకు పోవును.
+hi: प्रवृत्ति-शास्त्र और निवृत्ति-शास्त्र ही पंचाल नाम वाले हैं। कान से, श्रुतधर से, वह पितृयान और देवयान मार्ग से जाता है।
 
 --- verse 14 ---
 deva:
@@ -132,6 +171,9 @@ deva:
 iast:
 āsurī meḍhramarvāgdvārvyavāyo grāmiṇāṁ ratiḥ|
 upastho durmadaḥ prokto nirṛtirguda ucyate||
+en: Āsurī is the organ of generation, the gate that faces downward. Grāmaka is sexual union, which is the delight of the village folk. Durmada is said to be the organ of generation, and Nirṛti is said to be the anus.
+tel: ఆసురి అనునది క్రిందివైపు చూచు ద్వారమైన జననేంద్రియము. గ్రామకము స్త్రీపురుష సంగమము. అది గ్రామవాసులకు ప్రియమైనది. దుర్మదుడు ఉపస్థేంద్రియము అని చెప్పబడినాడు. నిరృతి గుదము అని చెప్పబడినది.
+hi: आसुरी नीचे की ओर मुख वाला द्वार, अर्थात् जननेन्द्रिय है। ग्रामक स्त्री-पुरुष का संग है, जो ग्रामवासियों को प्रिय है। दुर्मद उपस्थ-इन्द्रिय कहा गया है, और निरृति गुदा कही गयी है।
 
 --- verse 15 ---
 deva:
@@ -140,6 +182,9 @@ deva:
 iast:
 vaiśasaṁ narakaṁ pāyurlubdhako'ndhau tu me śṛṇu|
 hastapādau pumāṁstābhyāṁ yukto yāti karoti ca||
+en: Vaiśasa is hell, and Lubdhaka is the anus. Now hear from me of the two blind ones. They are the hands and the feet. Joined with them the puruṣa goes and acts.
+tel: వైశసము నరకము. లుబ్ధకుడు పాయువు. ఇప్పుడు ఆ రెండు అంధులను గూర్చి నావలన వినుము. వారు చేతులు, పాదములు. వానితో కూడి పురుషుడు నడచును, పనులు చేయును.
+hi: वैशस नरक है, और लुब्धक पायु है। अब उन दो अन्धों के विषय में मुझसे सुनो। वे हाथ और पाद हैं। उनसे युक्त होकर पुरुष चलता है और कर्म करता है।
 
 --- verse 16 ---
 deva:
@@ -148,6 +193,9 @@ deva:
 iast:
 antaḥpuraṁ ca hṛdayaṁ viṣūcirmana ucyate|
 tatra mohaṁ prasādaṁ vā harṣaṁ prāpnoti tadguṇaiḥ||
+en: The inner apartment is the heart, and Viṣūcīna is said to be the mind. In it, by the qualities of the mind, he comes to delusion, or to calm, or to joy.
+tel: అంతఃపురము హృదయము. విషూచీనుడు మనస్సు అని చెప్పబడినాడు. దానియందు మనస్సు గుణములచే అతడు మోహమును, ప్రసన్నతను, లేక సంతోషమును పొందును.
+hi: अन्तःपुर हृदय है, और विषूचीन मन कहा गया है। उसमें मन के गुणों से वह मोह, प्रसाद अथवा हर्ष को प्राप्त होता है।
 
 --- verse 17 ---
 deva:
@@ -156,6 +204,9 @@ deva:
 iast:
 yathā yathā vikriyate guṇākto vikaroti vā|
 tathā tathopadraṣṭā''tmā tadvṛttīranukāryate||
+en: In whatever way the one who is smeared with the guṇas is changed, or works change, in that same way the ātmā, who only looks on, is made to follow those workings.
+tel: గుణములతో కలిసినవాడు ఏ విధముగా మారునో, లేక మార్పు కలిగించునో, ఆ విధముగానే కేవలము చూచుచుండు ఆత్మ ఆ వృత్తులను అనుసరింపజేయబడును.
+hi: गुणों से लिप्त जीव जैसे-जैसे बदलता है, अथवा बदलाव करता है, वैसे-वैसे केवल द्रष्टा आत्मा उन वृत्तियों का अनुकरण कराया जाता है।
 
 --- verse 18 ---
 deva:
@@ -164,6 +215,9 @@ deva:
 iast:
 deho rathastvindriyāśvaḥ saṁvatsararayo'gatiḥ|
 dvikarmacakrastriguṇadhvajaḥ paṁcāsubandhuraḥ||
+en: The body is the chariot, and the senses are its horses. The year is its speed, and yet it goes nowhere. The two kinds of karma are its wheels, the three guṇas are its banner, and the five prāṇas are its bindings.
+tel: దేహము రథము. ఇంద్రియములు దాని గుఱ్ఱములు. సంవత్సరము దాని వేగము. అయినను అది ఎక్కడికిని పోదు. రెండు విధముల కర్మములు దాని చక్రములు. మూడు గుణములు దాని ధ్వజము. ఐదు ప్రాణములు దాని బంధములు.
+hi: देह रथ है, और इन्द्रियाँ उसके घोड़े हैं। संवत्सर उसका वेग है, फिर भी वह कहीं नहीं जाता। दो प्रकार के कर्म उसके चक्र हैं, तीन गुण उसकी ध्वजा हैं, और पाँच प्राण उसके बन्धन हैं।
 
 --- verse 19 ---
 deva:
@@ -172,6 +226,9 @@ deva:
 iast:
 manoraśmirbuddhisūto hṛnnīḍo dvandvakūbaraḥ|
 paṁcendriyārthaprakṣepaḥ saptadhātuvarūthakaḥ||
+en: The mind is its reins, buddhi is its driver, and the heart is its seat. The pairs of pleasure and pain are its pole. The five objects of sense are its weapons, and the seven dhātus are its covering.
+tel: మనస్సు దాని పగ్గములు. బుద్ధి దాని సారథి. హృదయము దాని ఆసనము. సుఖదుఃఖ ద్వంద్వములు దాని కూబరము. ఐదు విషయములు దాని ఆయుధములు. ఏడు ధాతువులు దాని కవచము.
+hi: मन उसकी रस्सी है, बुद्धि उसका सारथि है, और हृदय उसका स्थान है। सुख-दुःख के द्वन्द्व उसका कूबर हैं। पाँच विषय उसके अस्त्र हैं, और सात धातु उसका आवरण हैं।
 
 --- verse 20 ---
 deva:
@@ -180,6 +237,9 @@ deva:
 iast:
 ākūtirvikramo bāhyo mṛgatṛṣṇāṁ pradhāvati|
 ekādaśendriyacamūḥ paṁcasūnāvinodakṛt||
+en: Effort is its outward movement, and it runs after a mirage. The eleven senses are its army, and it takes its pleasure in the five places of slaughter.
+tel: ఆకూతి అనగా ప్రయత్నము దాని బహిర్గమనము. అది ఎండమావి వెంట పరుగెత్తును. పదకొండు ఇంద్రియములు దాని సేన. ఐదు వధస్థానములలో అది వినోదించును.
+hi: आकूति अर्थात् प्रयत्न उसका बाहर का विक्रम है, और वह मृग-तृष्णा के पीछे दौड़ता है। ग्यारह इन्द्रियाँ उसकी सेना हैं, और पाँच वध-स्थानों में वह विनोद करता है।
 
 --- verse 21 ---
 deva:
@@ -190,6 +250,9 @@ iast:
 saṁvatsaraścaṇḍavegaḥ kālo yenopalakṣitaḥ|
 tasyāhānīha gandharvā gandharvyo rātrayaḥ smṛtāḥ|
 harantyāyuḥ parikrāntyā ṣaṣṭyuttaraśatatrayam||
+en: Caṇḍavega is the year, by which time is marked. Its days are the Gandharvas here, and its nights are known as the Gandharvīs. By going round they carry away life, and they are three hundred and sixty.
+tel: చండవేగుడు సంవత్సరము. దానిచే కాలము తెలియబడును. దాని పగటి రోజులు గంధర్వులు. దాని రాత్రులు గంధర్వులు అని చెప్పబడినవి. వారు తిరుగుచు ఆయువును హరించుదురు. వారు మూడువందల అరువది మంది.
+hi: चण्डवेग संवत्सर है, जिससे काल जाना जाता है। उसके दिन यहाँ गन्धर्व हैं, और उसकी रातें गन्धर्वियाँ कही गयी हैं। वे घूमते हुए आयु को हर लेते हैं, और वे तीन सौ साठ हैं।
 
 --- verse 22 ---
 deva:
@@ -198,6 +261,9 @@ deva:
 iast:
 kālakanyā jarā sākṣāllokastāṁ nābhinandati|
 svasāraṁ jagṛhe mṛtyuḥ kṣayāya yavaneśvaraḥ||
+en: Kālakanyā is old age herself, and the world does not welcome her. Yavaneśvara, who is death, took his own sister for the destruction of men.
+tel: కాలకన్య ముసలితనమే. లోకము ఆమెను ఆదరించదు. యవనేశ్వరుడైన మృత్యువు మనుష్యుల నాశనము కొఱకు తన సహోదరిని గ్రహించెను.
+hi: कालकन्या साक्षात् जरा है, और लोक उसका अभिनन्दन नहीं करता। यवनेश्वर मृत्यु ने मनुष्यों के नाश के लिए अपनी बहिन को ग्रहण किया।
 
 --- verse 23 ---
 deva:
@@ -206,6 +272,9 @@ deva:
 iast:
 ādhayo vyādhayastasya sainikā yavanāścarāḥ|
 bhūtopasargāśurayaḥ prajvāro dvividho jvaraḥ||
+en: His soldiers, the Yavanas who move about, are the ailments of the mind and the diseases of the body. Prajvāra is fever of the two kinds, and its speed is as swift as the afflictions that come from other beings.
+tel: అతని సైనికులైన, తిరుగాడు యవనులు మనస్సు ఆధులు, దేహము వ్యాధులు. ప్రజ్వారుడు రెండు విధముల జ్వరము. భూతములవలన కలుగు ఉపద్రవములవలె దాని వేగము తీవ్రము.
+hi: उसके सैनिक, घूमनेवाले यवन, मन की आधियाँ और देह की व्याधियाँ हैं। प्रज्वार दो प्रकार का ज्वर है, और भूतों से होनेवाले उपसर्गों के समान उसका वेग तीव्र है।
 
 --- verse 24 ---
 deva:
@@ -214,6 +283,9 @@ deva:
 iast:
 evaṁ bahuvidhairduḥkhairdaivabhūtātmasambhavaiḥ|
 kliśyamānaḥ śataṁ varṣaṁ dehe dehī tamovṛtaḥ||
+en: Afflicted in this way by many sorrows, which arise from fate, from other beings and from himself, the embodied one, covered by darkness, stays a hundred years in the body.
+tel: ఈ విధముగా దైవము వలన, భూతములవలన, తనవలన కలుగు అనేక విధముల దుఃఖములచే పీడింపబడుచు, అజ్ఞానముచే కప్పబడిన దేహి నూఱు సంవత్సరములు దేహమున ఉండును.
+hi: इस प्रकार दैव से, भूतों से और अपने से उत्पन्न अनेक प्रकार के दुःखों से क्लेश पाता हुआ, अन्धकार से ढका देही सौ वर्ष देह में रहता है।
 
 --- verse 25 ---
 deva:
@@ -222,6 +294,9 @@ deva:
 iast:
 prāṇendriyamanodharmānātmanyadhyasya nirguṇaḥ|
 śete kāmalavāndhyāyanmamāhamiti karmakṛt||
+en: Though he is without guṇas, he lays the properties of prāṇa, of the senses and of the mind upon himself, and lies down thinking of small drops of pleasure, doing karma and saying mine and I.
+tel: అతడు గుణములు లేనివాడైనను, ప్రాణము, ఇంద్రియములు, మనస్సు ధర్మములను తనపై ఆరోపించుకొని, చిన్న సుఖబిందువులను తలచుచు, నాది నేను అని చెప్పుచు కర్మము చేయుచు పరుండును.
+hi: वह निर्गुण होकर भी प्राण, इन्द्रियों और मन के धर्मों को अपने पर आरोपित करके, सुख के छोटे कणों का ध्यान करता हुआ, मेरा और मैं कहता हुआ कर्म करता हुआ सोता है।
 
 --- verse 26 ---
 deva:
@@ -230,6 +305,9 @@ deva:
 iast:
 yadā''tmānamavijñāya bhagavantaṁ paraṁ gurum|
 puruṣastu viṣajjeta guṇeṣu prakṛteḥ svadṛk||
+en: When the puruṣa, who sees by his own light, does not know himself, nor the Lord, the highest guru, and clings to the guṇas of prakṛti,
+tel: తన వెలుగుచే చూచు పురుషుడు తనను ఎఱుగక, పరమ గురువైన భగవంతుని ఎఱుగక, ప్రకృతి గుణములయందు ఆసక్తుడైనప్పుడు,
+hi: जब अपने प्रकाश से देखनेवाला पुरुष अपने को नहीं जानता, और परम गुरु भगवान् को नहीं जानता, और प्रकृति के गुणों में आसक्त हो जाता है,
 
 --- verse 27 ---
 deva:
@@ -238,6 +316,9 @@ deva:
 iast:
 guṇābhimānī sa tadā karmāṇi kurute'vaśaḥ|
 śuklaṁ kṛṣṇaṁ lohitaṁ vā yathākarmābhijāyate||
+en: then, taking the guṇas to be himself, he does karma without choice, and he is born white, or black, or red, according to his karma.
+tel: అప్పుడు గుణములను తనవిగా భావించి, అతడు తన ఇష్టము లేకుండ కర్మములు చేయును. తన కర్మమునకు అనుగుణముగా అతడు తెల్లగా, నల్లగా, లేక ఎఱుపుగా జన్మించును.
+hi: तब गुणों को अपना मानकर वह विवश होकर कर्म करता है, और अपने कर्म के अनुसार शुक्ल, कृष्ण अथवा लोहित होकर जन्म लेता है।
 
 --- verse 28 ---
 deva:
@@ -246,6 +327,9 @@ deva:
 iast:
 śuklātprakāśabhūyiṣṭhām̐llokānāpnoti karhicit|
 duḥkhodarkān kriyāyāsāṁstamaḥ śokotkaṭān kvacit||
+en: From the white he sometimes reaches worlds that are full of light. Sometimes he reaches worlds that end in sorrow, that are full of the toil of action, and that are dark and heavy with grief.
+tel: తెల్లని కర్మమువలన అతడు కొన్నిసారులు వెలుగు నిండిన లోకములను పొందును. కొన్నిసారులు దుఃఖముతో ముగియు, కర్మ శ్రమతో నిండిన, చీకటితోను శోకముతోను బరువైన లోకములను పొందును.
+hi: शुक्ल कर्म से वह कभी प्रकाश से भरे लोकों को पाता है। कभी उन लोकों को पाता है जिनका अन्त दुःख है, जो कर्म के परिश्रम से भरे हैं, और जो तम और शोक से भारी हैं।
 
 --- verse 29 ---
 deva:
@@ -254,6 +338,9 @@ deva:
 iast:
 kvacitpumān kvacicca strī kvacinnobhayamandhadhīḥ|
 devo manuṣyastiryagvā yathākarmaguṇaṁ bhavaḥ||
+en: Sometimes he is a man, sometimes a woman, and sometimes neither of the two, for his understanding is blind. He becomes a god, a man or an animal, according to his karma and his guṇa.
+tel: కొన్నిసారులు అతడు పురుషుడు, కొన్నిసారులు స్త్రీ, కొన్నిసారులు ఆ రెండును కాదు. అతని బుద్ధి అంధము. తన కర్మమునకు, గుణమునకు అనుగుణముగా అతడు దేవుడుగా, మనుష్యుడుగా, లేక తిర్యక్కుగా అగును.
+hi: कभी वह पुरुष होता है, कभी स्त्री, और कभी इन दोनों में से कोई नहीं, क्योंकि उसकी बुद्धि अन्धी है। अपने कर्म और गुण के अनुसार वह देव, मनुष्य अथवा तिर्यक् होता है।
 
 --- verse 30 ---
 deva:
@@ -262,6 +349,9 @@ deva:
 iast:
 kṣutparīto yathā dīnaḥ sārameyo gṛhaṁ gṛham|
 caran vindati yaddiṣṭaṁ daṇḍamodanameva vā||
+en: As a wretched dog, held by hunger, wanders from house to house and gets what is destined for it, a blow or a meal,
+tel: ఆకలిచే పట్టుబడిన దీనమైన కుక్క ఇంటింటికి తిరుగుచు, తనకు విధింపబడినది, దెబ్బయైనను అన్నమైనను, పొందునట్లు,
+hi: जैसे भूख से पीड़ित दीन कुत्ता घर-घर घूमता हुआ अपने लिए नियत वस्तु, दण्ड अथवा भोजन, पा लेता है,
 
 --- verse 31 ---
 deva:
@@ -270,6 +360,9 @@ deva:
 iast:
 tathā kāmāśayo jīva uccāvacapathā bhraman|
 uparyadho vā madhye vā yāti diṣṭaṁ priyāpriyam||
+en: so the jīva, whose seat is desire, wanders by high and low paths, and above, or below, or in the middle, reaches the pleasant or the unpleasant that is destined for him.
+tel: అట్లే కోరిక నిండిన జీవుడు ఎత్తు పల్లముల మార్గములలో తిరుగుచు, పైన, క్రింద, లేక నడుమ తనకు విధింపబడిన ఇష్టమైనది లేక అయిష్టమైనది పొందును.
+hi: वैसे ही काम से भरा जीव ऊँचे-नीचे मार्गों में भटकता हुआ, ऊपर, नीचे अथवा मध्य में अपने लिए नियत प्रिय अथवा अप्रिय को पाता है।
 
 --- verse 32 ---
 deva:
@@ -278,6 +371,9 @@ deva:
 iast:
 duḥkheṣvekatareṇāpi daivabhūtātmahetuṣu|
 jīvasya na vyavacchedaḥ syāccettattatpratikriyā||
+en: Of the sorrows that come from fate, from other beings and from himself, not even one is cut off for the jīva, if the only answer to them is a remedy for each one as it comes.
+tel: దైవమువలన, భూతములవలన, తనవలన కలుగు దుఃఖములలో ఒక్కటియు జీవునికి తొలగిపోదు. దానికి ఒక్కొక్కటిగా చేయు ప్రతిక్రియయే మిగిలినచో అట్లే అగును.
+hi: दैव से, भूतों से और अपने से होनेवाले दुःखों में से एक भी जीव का नहीं कटता, यदि उनका उत्तर केवल एक-एक की प्रतिक्रिया ही हो।
 
 --- verse 33 ---
 deva:
@@ -286,6 +382,9 @@ deva:
 iast:
 yathā hi puruṣo bhāraṁ śirasā gurumudvahan|
 taṁ skandhena sa ādhatte tathā sarvāḥ pratikriyāḥ||
+en: For as a man who carries a heavy load upon his head sets it upon his shoulder, so are all such remedies.
+tel: తలపై బరువైన మోపును మోయు మనుష్యుడు దానిని భుజముపై పెట్టుకొనునట్లే, అన్ని ప్రతిక్రియలును ఉన్నవి.
+hi: क्योंकि जैसे सिर पर भारी बोझ ढोनेवाला मनुष्य उसे कन्धे पर रख लेता है, वैसी ही सब प्रतिक्रियाएँ हैं।
 
 --- verse 34 ---
 deva:
@@ -294,6 +393,9 @@ deva:
 iast:
 naikāntataḥ pratīkāraḥ karmaṇāṁ karma kevalam|
 dvayaṁ hyavidyopasṛtaṁ svapne svapna ivānagha||
+en: The remedy for karma is not final, for it is only karma again. Both of them are brought on by ignorance, like a dream within a dream, O sinless one.
+tel: కర్మములకు ప్రతీకారము పూర్తిగా ముగింపు కాదు. అది మరల కర్మమే. ఓ పాపరహితుడా, ఆ రెండును అజ్ఞానముచే కలిగినవి. కలలో కల వంటివి.
+hi: कर्मों का प्रतीकार अन्तिम नहीं है, क्योंकि वह फिर कर्म ही है। हे अनघ, वे दोनों अविद्या से उपस्थित हैं, स्वप्न में स्वप्न के समान।
 
 --- verse 35 ---
 deva:
@@ -302,6 +404,9 @@ deva:
 iast:
 arthe hyavidyamāne'pi saṁsṛtirna nivartate|
 manasā liṁgarūpeṇa svapne vicarato yathā||
+en: Though the object does not exist, the round of birth does not cease, as it does not cease for one who wanders in a dream by the mind in its subtle form.
+tel: విషయము లేకున్నను సంసారము తొలగిపోదు. సూక్ష్మరూపమైన మనస్సుచే కలలో తిరుగువానికి అది తొలగిపోనట్లే.
+hi: वस्तु के न होने पर भी संसृति नहीं हटती, जैसे लिंग-रूप मन से स्वप्न में विचरनेवाले की नहीं हटती।
 
 --- verse 36 ---
 deva:
@@ -310,6 +415,9 @@ deva:
 iast:
 athātmano'rthabhūtasya yato'narthaparamparā|
 saṁsṛtistadvyavacchedo bhaktyā paramayā gurau||
+en: The self is itself the true good, and from the round of birth comes a long chain of ills for it. That round is cut off by the highest devotion to the guru.
+tel: ఆత్మయే నిజమైన ప్రయోజనము. సంసారమువలన దానికి అనర్థముల పరంపర కలుగును. ఆ సంసారము గురువునందు పరమ భక్తిచే తెగిపోవును.
+hi: आत्मा ही वास्तविक अर्थ है, और संसृति से उसके लिए अनर्थ की परम्परा आती है। वह संसृति गुरु में परम भक्ति से कट जाती है।
 
 --- verse 37 ---
 deva:
@@ -318,6 +426,9 @@ deva:
 iast:
 vāsudeve bhagavati bhaktiyogaḥ samāhitaḥ|
 sadhrīcīnena vairāgyaṁ jñānaṁ ca janayiṣyati||
+en: Bhakti-yoga, well fixed upon the blessed Vāsudeva, will give rise to detachment and to knowledge, both together.
+tel: భగవంతుడైన వాసుదేవునియందు చక్కగా నిలిపిన భక్తియోగము వైరాగ్యమును, జ్ఞానమును కలిపి కలిగించును.
+hi: भगवान् वासुदेव में समाहित भक्ति-योग वैराग्य और ज्ञान दोनों को साथ ही उत्पन्न करेगा।
 
 --- verse 38 ---
 deva:
@@ -326,6 +437,9 @@ deva:
 iast:
 so'cirādeva rājarṣe syādacyutakathāśrayaḥ|
 śṛṇvataḥ śraddadhānasya nityadā syādadhīyataḥ||
+en: O royal sage, before long that devotion will arise in one who takes shelter in the stories of Acyuta, who listens to them with faith and studies them always.
+tel: ఓ రాజర్షీ, అచ్యుతుని కథలను ఆశ్రయించి, శ్రద్ధతో వినుచు, ఎల్లవేళల వానిని పఠించువానికి ఆ భక్తి త్వరలోనే కలుగును.
+hi: हे राजर्षि, अच्युत की कथाओं का आश्रय लेनेवाले, श्रद्धा से सुननेवाले और सदा उनका अध्ययन करनेवाले को वह भक्ति शीघ्र ही प्राप्त होती है।
 
 --- verse 39 ---
 deva:
@@ -334,18 +448,24 @@ deva:
 iast:
 yatra bhāgavatā rājan sādhavo viśadāśayāḥ|
 bhagavadguṇānukathanaśravaṇavyagracetasaḥ||
+en: O king, where the devotees of the Lord are, who are good and clear in heart, whose minds are intent on the telling and the hearing of the qualities of the Lord,
+tel: ఓ రాజా, భగవద్భక్తులు, సాధువులు, నిర్మల హృదయులు, భగవంతుని గుణములను చెప్పుటయందును వినుటయందును మనస్సు నిలిపినవారు ఎక్కడ ఉందురో,
+hi: हे राजन्, जहाँ भगवान् के भक्त हैं, जो साधु और विशद हृदय वाले हैं, जिनका चित्त भगवान् के गुणों के कथन और श्रवण में लगा है,
 
 --- verse 40 ---
 deva:
 तस्मिन्महन्मुखरिता मधुभिच्चरित्र-
-पीयूषशेषसरितःपरितः स्रवन्ति।
+पीयूषशेषसरितः परितः स्रवन्ति।
 ता ये पिबन्त्यवितृषो नृप गाढकर्णै-
 स्तान्न स्पृशन्त्यशनतृड्भयशोकमोहाः॥
 iast:
 tasminmahanmukharitā madhubhiccaritra-
-pīyūṣaśeṣasaritaḥparitaḥ sravanti|
+pīyūṣaśeṣasaritaḥ paritaḥ sravanti|
 tā ye pibantyavitṛṣo nṛpa gāḍhakarṇai-
 stānna spṛśantyaśanatṛḍbhayaśokamohāḥ||
+en: there the rivers made loud by the great ones flow all around, rivers of the nectar left from the deeds of Madhubhit. O king, those who drink them with deep ears and are never satisfied are not touched by hunger, thirst, fear, grief or delusion.
+tel: అక్కడ మహాత్ముల ముఖమున పలికిన, మధుభిత్తు చరిత్రము అమృతశేషమైన నదులు నాలుగువైపుల ప్రవహించును. ఓ రాజా, తృప్తి పొందక, చెవులను గాఢముగా నిలిపి వానిని త్రాగువారిని ఆకలి, దప్పిక, భయము, శోకము, మోహము తాకవు.
+hi: वहाँ महात्माओं के मुख से मुखरित, मधुभित् के चरित्र की पीयूष-शेष नदियाँ चारों ओर बहती हैं। हे नृप, जो तृप्त हुए बिना गाढ़ कानों से उन्हें पीते हैं, उन्हें भूख, प्यास, भय, शोक और मोह नहीं छूते।
 
 --- verse 41 ---
 deva:
@@ -354,6 +474,9 @@ deva:
 iast:
 etairupadruto nityaṁ jīvalokaḥ svabhāvajaiḥ|
 na karoti harernūnaṁ kathāmṛtanidhau ratim||
+en: Struck always by these, which arise from its own nature, the world of living beings surely takes no delight in the ocean of the nectar of the stories of Hari.
+tel: తన స్వభావమువలన కలిగిన ఈ బాధలచే ఎల్లవేళల పీడింపబడుచు, జీవలోకము హరి కథామృత సముద్రమునందు ప్రీతిని నిశ్చయముగా పొందదు.
+hi: अपने स्वभाव से उत्पन्न इन्हीं से सदा पीड़ित जीव-लोक हरि की कथामृत-निधि में निश्चय ही प्रीति नहीं करता।
 
 --- verse 42 ---
 deva:
@@ -362,6 +485,9 @@ deva:
 iast:
 prajāpatipatiḥ sākṣādbhagavān giriśo manuḥ|
 dakṣādayaḥ prajādhyakṣā naiṣṭhikāḥ sanakādayaḥ||
+en: The lord of the Prajāpatis himself, the blessed Giriśa, Manu, Dakṣa and the other rulers of creatures, Sanaka and the others who hold to the vow,
+tel: ప్రజాపతులకు అధిపతియైన బ్రహ్మ, భగవంతుడైన గిరిశుడు, మనువు, దక్షుడు మొదలైన ప్రజాధ్యక్షులు, నైష్ఠికులైన సనకాదులు,
+hi: प्रजापतियों के स्वामी स्वयं ब्रह्मा, भगवान् गिरिश, मनु, दक्ष आदि प्रजाध्यक्ष, नैष्ठिक सनक आदि,
 
 --- verse 43 ---
 deva:
@@ -370,6 +496,9 @@ deva:
 iast:
 marīciratryaṅgirasau pulastyaḥ pulahaḥ kratuḥ|
 bhṛgurvasiṣṭha ityete madantā brahmavādinaḥ||
+en: Marīci, Atri, Aṅgiras, Pulastya, Pulaha, Kratu, Bhṛgu and Vasiṣṭha, these, with me last among them, are the speakers of brahman.
+tel: మరీచి, అత్రి, అంగిరసుడు, పులస్త్యుడు, పులహుడు, క్రతువు, భృగువు, వసిష్ఠుడు, ఇట్లు నేను చివరివాడుగా ఉన్న ఈ బ్రహ్మవాదులు,
+hi: मरीचि, अत्रि, अंगिरा, पुलस्त्य, पुलह, क्रतु, भृगु और वसिष्ठ, इस प्रकार मुझे अन्त में रखकर ये ब्रह्मवादी,
 
 --- verse 44 ---
 deva:
@@ -378,14 +507,20 @@ deva:
 iast:
 adyāpi vācaspatayastapovidyāsamādhibhiḥ|
 paśyanto'pi na paśyanti paśyantaṁ parameśvaram||
+en: even today these masters of speech, with tapas, with learning and with samādhi, though they see, do not see the Supreme Lord who sees.
+tel: ఈనాటికిని ఈ వాచస్పతులు తపస్సుచేతను, విద్యచేతను, సమాధిచేతను చూచుచున్నను, చూచుచున్న పరమేశ్వరుని చూడరు.
+hi: आज भी ये वाचस्पति तप से, विद्या से और समाधि से देखते हुए भी, देखनेवाले परमेश्वर को नहीं देखते।
 
 --- verse 45 ---
 deva:
 शब्दब्रह्मणि दुष्पारे चरन्त उरुविस्तरे।
-मन्त्रलिङ्गैर्व्यवच्छिन्नंभजन्तो न विदुः परम्॥
+मन्त्रलिङ्गैर्व्यवच्छिन्नं भजन्तो न विदुः परम्॥
 iast:
 śabdabrahmaṇi duṣpāre caranta uruvistare|
-mantraliṅgairvyavacchinnaṁbhajanto na viduḥ param||
+mantraliṅgairvyavacchinnaṁ bhajanto na viduḥ param||
+en: Moving in the śabda-brahman, which is hard to cross and very wide, and worshipping what the marks of the mantras divide, they do not know the Supreme.
+tel: దాటుటకు కష్టమైన, మిక్కిలి విస్తారమైన శబ్దబ్రహ్మమునందు సంచరించుచు, మంత్రముల లింగములచే విభజింపబడినదానిని సేవించుచు, వారు పరమమును తెలిసికొనరు.
+hi: दुष्पार और अत्यन्त विस्तृत शब्द-ब्रह्म में विचरते हुए, और मन्त्रों के लिंगों से विभक्त की उपासना करते हुए, वे परम को नहीं जानते।
 
 --- verse 46 ---
 deva:
@@ -394,6 +529,9 @@ deva:
 iast:
 yadā yamanugṛhṇāti bhagavānātmabhāvitaḥ|
 sa jahāti matiṁ loke vede ca pariniṣṭhitām||
+en: When the Lord, who is reached by one's own being, shows his grace to a man, that man gives up the settled opinion he has held in the world and in the Veda.
+tel: తన భావముచే పొందబడు భగవంతుడు ఎవనిని అనుగ్రహించునో, అతడు లోకమునందును వేదమునందును తాను నిలుపుకొనిన నిశ్చిత బుద్ధిని విడిచిపెట్టును.
+hi: आत्म-भाव से प्राप्त होनेवाले भगवान् जिस पर अनुग्रह करते हैं, वह लोक में और वेद में अपनी परिनिष्ठित बुद्धि को छोड़ देता है।
 
 --- verse 47 ---
 deva:
@@ -402,6 +540,9 @@ deva:
 iast:
 tasmātkarmasu barhiṣmannajñānādarthakāśiṣu|
 mārthadṛṣṭiṁ kṛthāḥ śrotrasparśiṣvaspṛṣṭavastuṣu||
+en: Therefore, O Barhiṣmān, do not set your eye on gain in rites which, through ignorance, only shine as gain, which touch the ear alone and do not touch the real thing.
+tel: కావున ఓ బర్హిష్మంతుడా, అజ్ఞానముచే ప్రయోజనమువలె మాత్రమే కనబడు కర్మములయందు, చెవికి మాత్రమే తాకి నిజమైన వస్తువును తాకని వానియందు, ప్రయోజన దృష్టిని ఉంచవలదు.
+hi: इसलिए हे बर्हिष्मन्, अज्ञान से अर्थ के समान ही चमकनेवाले कर्मों में, जो केवल कान को छूते हैं और वास्तविक वस्तु को नहीं छूते, अर्थ-दृष्टि न करो।
 
 --- verse 48 ---
 deva:
@@ -410,6 +551,9 @@ deva:
 iast:
 svaṁ lokaṁ na viduste vai yatra devo janārdanaḥ|
 āhurdhūmradhiyo vedaṁ sakarmakamatadvidaḥ||
+en: They do not know their own world, where the god Janārdana dwells. Their minds are darkened and they do not know him, and they call the Veda a thing of rites alone.
+tel: జనార్దన దేవుడు ఎక్కడ ఉన్నాడో ఆ తమ లోకమును వారు ఎఱుగరు. వారి బుద్ధి పొగచే కప్పబడినది. ఆయనను ఎఱుగక వారు వేదమును కర్మమాత్రమే అని చెప్పుదురు.
+hi: जहाँ देव जनार्दन हैं, उस अपने लोक को वे नहीं जानते। उनकी बुद्धि धूम्र है, और उन्हें न जानकर वे वेद को केवल कर्म वाला कहते हैं।
 
 --- verse 49 ---
 deva:
@@ -420,6 +564,9 @@ iast:
 āstīrya darbhaiḥ prāgagraiḥ kārtsnyena kṣitimaṇḍalam|
 stabdho bṛhadvadhānmānī karma nāvaiṣi yatparam|
 tatkarma haritoṣaṁ yatsā vidyā tanmatiryayā||
+en: You have covered the whole circle of the earth with darbha blades laid pointing east. You are stiff and proud from the great slaughter, and you do not know the karma that is higher than this. That alone is karma which pleases Hari, and that alone is knowledge by which the mind turns to him.
+tel: తూర్పువైపు కొనలు కలిగిన దర్భలతో భూమండలమును పూర్తిగా కప్పినవాడవు. పెద్ద వధమువలన గర్వించి బిగుసుకొని ఉన్నవాడవు. ఇంతకంటె మించిన కర్మమును ఎఱుగవు. హరికి సంతోషము కలిగించునదే కర్మము. ఏదిచే బుద్ధి ఆయనవైపు మొగ్గునో అదియే విద్య.
+hi: तुमने पूर्व की ओर नोक वाले दर्भों से सारे भूमण्डल को ढक दिया है। बड़े वध से गर्वित और स्तब्ध हो, और इससे ऊपर के कर्म को नहीं जानते। कर्म वही है जो हरि को प्रसन्न करे, और विद्या वही है जिससे बुद्धि उनकी ओर हो।
 
 --- verse 50 ---
 deva:
@@ -428,6 +575,9 @@ deva:
 iast:
 harirdehabhṛtāmātmā svayaṁ prakṛtirīśvaraḥ|
 tatpādamūlaṁ śaraṇaṁ yataḥ kṣemo nṛṇāmiha||
+en: Hari is the self of all who bear bodies. He is himself prakṛti and he is the lord. The sole of his foot is the refuge, for from it comes the welfare of men in this world.
+tel: హరి దేహధారులందరికి ఆత్మ. ఆయనయే ప్రకృతి, ఆయనయే ఈశ్వరుడు. ఆయన పాదమూలమే శరణము. ఏలయనగా దానివలననే ఈ లోకమున మనుష్యులకు క్షేమము కలుగును.
+hi: हरि देहधारियों की आत्मा हैं। वे स्वयं प्रकृति हैं और वे ही ईश्वर हैं। उनका पाद-मूल ही शरण है, क्योंकि उससे ही इस लोक में मनुष्यों का क्षेम होता है।
 
 --- verse 51 ---
 deva:
@@ -436,6 +586,9 @@ deva:
 iast:
 sa vai priyatamaścātmā yato na bhayamaṇvapi|
 iti veda sa vai vidvān yo vidvān sa gururhariḥ||
+en: He is the dearest of all and he is the self, and from him there is not the least fear. He who knows this is the one who truly knows, and he who knows is the guru, who is Hari himself.
+tel: ఆయనయే అత్యంత ప్రియమైనవాడు, ఆయనయే ఆత్మ. ఆయనవలన కొంచెమైనను భయము లేదు. ఇట్లు తెలిసినవాడే నిజముగా విద్వాంసుడు. తెలిసినవాడే గురువు, ఆ గురువు హరియే.
+hi: वे ही परम प्रिय हैं और वे ही आत्मा हैं, और उनसे अणु भर भी भय नहीं है। जो यह जानता है, वही वास्तव में विद्वान् है। और जो विद्वान् है, वही गुरु है, और वह गुरु हरि ही हैं।
 
 --- verse 52 ---
 deva:
@@ -446,18 +599,24 @@ iast:
 nārada uvāca
 praśna evaṁ hi saṁchinno bhavataḥ puruṣarṣabha|
 atra me vadato guhyaṁ niśāmaya suniścitam||
+en: Nārada said: In this way your question has been answered, O best of men. Now, as I speak, hear from me a secret thing that is well settled.
+tel: నారదుడు పలికెను: ఓ పురుషశ్రేష్ఠుడా, ఈ విధముగా మీ ప్రశ్న తీర్చబడినది. ఇప్పుడు నేను చెప్పుచుండగా, చక్కగా నిశ్చయింపబడిన రహస్యమును నావలన వినుము.
+hi: नारद ने कहा: हे पुरुषर्षभ, इस प्रकार आपका प्रश्न छिन्न हो गया। अब मैं कहता हूँ, सुनिश्चित गुह्य को मुझसे सुनिए।
 
 --- verse 53 ---
 deva:
-क्षुद्रंचरं सुमनसां शरणे मिथित्वा
+क्षुद्रं चरं सुमनसां शरणे मिथित्वा
 रक्तं षडङ्घ्रिगणसामसु लुब्धकर्णम्।
 अग्रे वृकानसुतृपोऽविगणय्य यान्तं
 पृष्ठे मृगं मृगय लुब्धकबाणभिन्नम्॥
 iast:
-kṣudraṁcaraṁ sumanasāṁ śaraṇe mithitvā
+kṣudraṁ caraṁ sumanasāṁ śaraṇe mithitvā
 raktaṁ ṣaḍaṅghrigaṇasāmasu lubdhakarṇam|
 agre vṛkānasutṛpo'vigaṇayya yāntaṁ
 pṛṣṭhe mṛgaṁ mṛgaya lubdhakabāṇabhinnam||
+en: Look behind you for the deer. It grazes on a little grass in a bower of flowers. It has mated there and is held fast. Its ears are greedy for the songs of the swarms of six-footed bees. It goes on without counting the wolves in front, who feed on life. And it is pierced by the hunter's arrow.
+tel: వెనుకవైపు ఆ మృగమును వెదకుము. అది పూల తోటలో కొంచెము గడ్డిని మేయుచున్నది. అక్కడ జతగూడి ఆసక్తమైనది. ఆఱు పాదముల తుమ్మెద గుంపుల పాటలకు దాని చెవులు లోభపడినవి. ముందు ఉన్న, ప్రాణములను తిను తోడేళ్ళను లెక్కింపక అది సాగిపోవుచున్నది. లుబ్ధకుని బాణముచే అది చీల్చబడినది.
+hi: पीछे की ओर उस मृग को खोजो। वह फूलों के बगीचे में थोड़ी घास चर रहा है। वहीं मिथुन कर चुका और आसक्त है। छह पाँव वाले भौंरों के समूहों के गान में उसके कान लुब्ध हैं। आगे खड़े, प्राण खानेवाले भेड़ियों को न गिनकर वह चला जा रहा है। और वह लुब्धक के बाण से भिन्न है।
 
 --- verse 54 ---
 deva:
@@ -465,7 +624,7 @@ deva:
 सुमनःसधर्मणां स्त्रीणां शरण आश्रमे
 पुष्पमधुगन्धवत्क्षुद्रतमं काम्यकर्मविपाकजं
 कामसुखलवं जैह्व्यौपस्थ्यादि विचिन्वन्तं
-मिथुनीभूय तदभिनिवेशितमनसं षडङ् घ्रिगण-
+मिथुनीभूय तदभिनिवेशितमनसं षडङ्घ्रिगण-
 सामगीतवदतिमनोहरवनितादिजनालापेष्वतितरा-
 मतिप्रलोभितकर्णमग्रे वृकयूथवदात्मन
 आयुर्हरतोऽहोरात्रान्तान्काललव-
@@ -478,7 +637,7 @@ iast:
 sumanaḥsadharmaṇāṁ strīṇāṁ śaraṇa āśrame
 puṣpamadhugandhavatkṣudratamaṁ kāmyakarmavipākajaṁ
 kāmasukhalavaṁ jaihvyaupasthyādi vicinvantaṁ
-mithunībhūya tadabhiniveśitamanasaṁ ṣaḍaṅ ghrigaṇa-
+mithunībhūya tadabhiniveśitamanasaṁ ṣaḍaṅghrigaṇa-
 sāmagītavadatimanoharavanitādijanālāpeṣvatitarā-
 matipralobhitakarṇamagre vṛkayūthavadātmana
 āyurharato'horātrāntānkālalava-
@@ -486,6 +645,9 @@ viśeṣānavigaṇayya gṛheṣu viharantaṁ pṛṣṭhata eva
 parokṣamanupravṛtto lubdhakaḥ kṛtānto'ntaḥśareṇa
 yamiha parāvidhyati tamimamātmānamaho rājan bhinna-
 hṛdayaṁ draṣṭumarhasīti||
+en: The meaning of it is this. In the hermitage, under the shelter of women who are like flowers, a man gathers the smallest drop of pleasure of the tongue and of the organ of generation, a drop that is born of the ripening of desired works and that is like the honey and the scent of flowers. He has mated and his mind is set upon that. His ears are drawn further and further by the talk of charming women and other people, talk that is like the sāma-song of the swarms of six-footed bees. He sports in his house, and does not count the days and the nights and the small divisions of time which, like a pack of wolves in front of him, carry away his life. The hunter, who is Death, has come up behind him unseen, and here he pierces him with his inner arrow. O king, you should see that this one, whose heart is pierced, is your own self.
+tel: దాని అర్థము ఇది. ఆశ్రమమున, పూవులవంటి స్త్రీల ఆశ్రయమున, మనుష్యుడు నాలుక యొక్కయు జననేంద్రియము యొక్కయు అత్యల్పమైన సుఖబిందువును ఏఱుకొనును. అది కామ్య కర్మముల ఫలమువలన పుట్టినది, పూవుల తేనె వాసనవంటిది. అతడు జతగూడి, దానియందే మనస్సును నిలిపినాడు. ఆఱు పాదముల తుమ్మెద గుంపుల సామగానమువంటి, మనోహరమైన స్త్రీలు మొదలైన జనుల మాటలచే అతని చెవులు మిక్కిలి లోభపడినవి. అతడు ఇంటియందు విహరించుచు, ముందు ఉన్న తోడేళ్ళ గుంపువలె తన ఆయువును హరించు పగలు రాత్రులను, కాల లవ విశేషములను లెక్కింపడు. కృతాంతుడైన లుబ్ధకుడు కనబడకుండ వెనుకనుండి వెంబడించి, ఇక్కడ తన లోపలి బాణముచే అతనిని గుచ్చును. ఓ రాజా, హృదయము చీల్చబడిన ఈతడు నీ ఆత్మయే అని చూడవలెను.
+hi: इसका अर्थ यह है। आश्रम में, फूलों के समान स्त्रियों के शरण में, मनुष्य जीभ और जननेन्द्रिय के अत्यन्त क्षुद्र सुख-कण को बीनता है, जो काम्य कर्मों के पाक से उत्पन्न है और फूलों के मधु तथा गन्ध के समान है। वह मिथुन कर चुका है और उसी में मन लगा चुका है। छह पाँव वाले भौंरों के समूहों के साम-गान के समान, मनोहर स्त्री आदि जनों के वचनों से उसके कान अत्यन्त लुब्ध हैं। वह घरों में विहार करता है, और आगे खड़े भेड़ियों के झुंड के समान अपनी आयु हरनेवाले दिन-रात तथा काल के छोटे-छोटे भेदों को नहीं गिनता। कृतान्त रूपी लुब्धक पीछे से अदृश्य होकर उसके पीछे लगा है, और यहीं अपने भीतरी बाण से उसे बेधता है। हे राजन्, जिसका हृदय बेधा गया है, इस को ही अपनी आत्मा देखना चाहिए।
 
 --- verse 55 ---
 deva:
@@ -498,6 +660,9 @@ sa tvaṁ vicakṣya mṛgaceṣṭitamātmano'nta-
 ścittaṁ niyaccha hṛdi karṇadhunīṁ ca citte|
 jahyaṁganāśramamasattamayūthagāthaṁ
 prīṇīhi haṁsaśaraṇaṁ virama krameṇa||
+en: Having seen the way of that deer, hold your mind within yourself, in the heart, and hold the river of the ear within the mind. Give up the household of women, which is the tale of the worst of herds. Take delight in the refuge of the swans, and withdraw step by step.
+tel: ఆ మృగము నడవడిని చూచి, నీ చిత్తమును హృదయమున, తనయందే నిలుపుకొనుము. చెవి ప్రవాహమును చిత్తమున నిలుపుము. అధమ గుంపుల కథయైన స్త్రీల ఆశ్రమమును విడిచిపెట్టుము. హంసల శరణమును ప్రీతితో సేవింపుము. క్రమముగా విరమించుము.
+hi: उस मृग की चेष्टा को देखकर अपने चित्त को हृदय में, अपने भीतर रोको, और कान की धुनी को चित्त में रोको। अधम यूथों की गाथा रूपी स्त्री-आश्रम को छोड़ दो। हंसों के शरण को प्रसन्न करो, और क्रम से विराम लो।
 
 --- verse 56 ---
 deva:
@@ -508,6 +673,9 @@ iast:
 rājovāca
 śrutamanvīkṣitaṁ brahman bhagavān yadabhāṣata|
 naitajjānantyupādhyāyāḥ kiṁ na brūyurviduryadi||
+en: The king said: What the blessed one has said, O brāhmaṇa, has been heard and considered. The teachers do not know this. If they knew it, why would they not say it?
+tel: రాజు పలికెను: ఓ బ్రాహ్మణుడా, భగవంతుడు చెప్పినది వినబడినది, పరిశీలింపబడినది. ఉపాధ్యాయులు దీనిని ఎఱుగరు. ఎఱిగినచో ఏల చెప్పకుందురు?
+hi: राजा ने कहा: हे ब्रह्मन्, भगवान् ने जो कहा, वह सुना और विचारा गया। उपाध्याय इसे नहीं जानते। यदि जानते, तो क्यों न कहते?
 
 --- verse 57 ---
 deva:
@@ -516,6 +684,9 @@ deva:
 iast:
 saṁśayo'tra tu me vipra saṁchinnastatkṛto mahān|
 ṛṣayo'pi hi muhyanti yatra nendriyavṛttayaḥ||
+en: The great doubt that they raised in me here has been cut off, O brāhmaṇa. In this matter even the sages are bewildered, where the working of the senses does not reach.
+tel: ఓ విప్రుడా, వారు కలిగించిన ఈ గొప్ప సందేహము ఇక్కడ తెగిపోయినది. ఇంద్రియ వృత్తులు చేరని ఈ విషయమున ఋషులును మోహము పొందుదురు.
+hi: हे विप्र, उनसे उत्पन्न मेरा यह बड़ा संशय यहाँ छिन्न हो गया। जहाँ इन्द्रियों की वृत्तियाँ नहीं पहुँचतीं, उस विषय में ऋषि भी मोह पाते हैं।
 
 --- verse 58 ---
 deva:
@@ -524,6 +695,9 @@ deva:
 iast:
 karmāṇyārabhate yena pumāniha vihāya tam|
 amutrānyena dehena juṣṭāni sa yadaśnute||
+en: A man begins works here with one body, and leaving it, in the other world with another body he eats what he has earned.
+tel: మనుష్యుడు ఇక్కడ ఒక దేహముచే కర్మములను ఆరంభించును. దానిని విడిచి, పరలోకమున వేఱొక దేహముచే తాను సంపాదించినదానిని అనుభవించును.
+hi: मनुष्य यहाँ जिस देह से कर्म आरम्भ करता है, उसे छोड़कर, परलोक में दूसरी देह से अपने अर्जित फल को भोगता है।
 
 --- verse 59 ---
 deva:
@@ -532,6 +706,9 @@ deva:
 iast:
 iti vedavidāṁ vādaḥ śrūyate tatra tatra ha|
 karma yatkriyate proktaṁ parokṣaṁ na prakāśate||
+en: So runs the word of those who know the Veda, heard here and there. But the karma that is done, of which they speak, is unseen and does not come to light.
+tel: వేదము ఎఱిగినవారి మాట ఇట్లు అక్కడక్కడ వినబడుచున్నది. కాని వారు చెప్పు ఆ చేయబడిన కర్మము కనబడదు, వెల్లడి కాదు.
+hi: वेद के जाननेवालों का यह वाद यहाँ-वहाँ सुना जाता है। परन्तु जो कर्म किया जाता है, जिसकी वे बात करते हैं, वह परोक्ष है और प्रकाशित नहीं होता।
 
 --- verse 60 ---
 deva:
@@ -542,6 +719,9 @@ iast:
 nārada uvāca
 yenaivārabhate karma tenaivāmutra tatpumān|
 bhuṅkte hyavyavadhānena liṁgena manasā svayam||
+en: Nārada said: With that very subtle body with which he begins karma here, the man enjoys it in the other world, with nothing between, by the mind itself.
+tel: నారదుడు పలికెను: ఇక్కడ ఏ లింగ శరీరముచే కర్మమును ఆరంభించునో, ఆ లింగముచేతనే, మనస్సుచేతనే, నడుమ ఏ అడ్డును లేక, పరలోకమున ఆ మనుష్యుడు దానిని అనుభవించును.
+hi: नारद ने कहा: यहाँ जिस लिंग-शरीर से वह कर्म आरम्भ करता है, उसी लिंग से, मन से ही, बिना किसी व्यवधान के, वह मनुष्य परलोक में उसे भोगता है।
 
 --- verse 61 ---
 deva:
@@ -550,6 +730,9 @@ deva:
 iast:
 śayānamimamutsṛjya śvasantaṁ puruṣo yathā|
 karmātmanyāhitaṁ bhuṅkte tādṛśenetareṇa vā||
+en: It is as a man leaves this body lying and breathing in sleep, and enjoys the karma laid up within himself, with a body like this one or with another.
+tel: నిద్రలో ఊపిరి పీల్చుచు పడుకొనిన ఈ దేహమును విడిచి, మనుష్యుడు తనయందు నిలువబడిన కర్మమును, ఇటువంటి దేహముచే లేక వేఱొక దేహముచే అనుభవించునట్లే ఇది.
+hi: जैसे मनुष्य सोती और श्वास लेती इस देह को छोड़कर, अपने में रखे कर्म को, इस जैसी देह से अथवा दूसरी देह से भोगता है।
 
 --- verse 62 ---
 deva:
@@ -558,6 +741,9 @@ deva:
 iast:
 mamaite manasā yadyadasāvahamiti bruvan|
 gṛhṇīyāttatpumān rāddhaṁ karma yena punarbhavaḥ||
+en: Saying with the mind that these are mine and that I am this, the man takes hold of whatever karma is accomplished, and by it there is birth again.
+tel: ఇవి నావి, నేను ఇతడు అని మనస్సుచే చెప్పుచు, ఆ మనుష్యుడు సిద్ధించిన కర్మమును ఏదైనను గ్రహించును. దానివలన మరల జన్మము కలుగును.
+hi: ये मेरे हैं और मैं यह हूँ, ऐसा मन से कहता हुआ वह मनुष्य जो-जो कर्म सिद्ध होता है उसे ग्रहण करता है, और उससे पुनः जन्म होता है।
 
 --- verse 63 ---
 deva:
@@ -566,6 +752,9 @@ deva:
 iast:
 yathānumīyate cittamubhayairindriyehitaiḥ|
 evaṁ prāgdehajaṁ karma lakṣyate cittavṛttibhiḥ||
+en: As the mind is known by inference from the acts of both kinds of senses, so the karma done in the earlier body is known from the workings of the mind.
+tel: రెండు విధముల ఇంద్రియముల చేష్టలవలన మనస్సు ఊహింపబడునట్లే, పూర్వ దేహమున చేయబడిన కర్మము చిత్త వృత్తులవలన తెలియబడును.
+hi: जैसे दोनों प्रकार की इन्द्रियों के कार्यों से मन का अनुमान होता है, वैसे ही पूर्व देह में किया कर्म चित्त की वृत्तियों से जाना जाता है।
 
 --- verse 64 ---
 deva:
@@ -574,6 +763,9 @@ deva:
 iast:
 nānubhūtaṁ kva cānena dehenādṛṣṭamaśrutam|
 kadācidupalabhyeta yadrūpaṁ yādṛgātmani||
+en: What has never been experienced by this body, never seen and never heard, would never be found in the mind in any form or in any manner.
+tel: ఈ దేహముచే ఎన్నడును అనుభవింపబడనిది, చూడబడనిది, వినబడనిది, ఏ రూపమునను ఏ విధమునను మనస్సున ఎన్నడును కనబడదు.
+hi: जो इस देह से कभी अनुभव नहीं किया गया, न देखा और न सुना गया, वह किसी रूप में और किसी प्रकार से मन में कभी नहीं मिलेगा।
 
 --- verse 65 ---
 deva:
@@ -582,6 +774,9 @@ deva:
 iast:
 tenāsya tādṛśaṁ rājam̐lliṁgino dehasambhavam|
 śraddhatsvānanubhūto'rtho na manaḥ spraṣṭumarhati||
+en: Therefore, O king, believe that such a thing in him, who has the subtle body, comes from an earlier body. A thing that was not experienced cannot touch the mind.
+tel: కావున ఓ రాజా, లింగ శరీరము కలిగిన అతనియందు అటువంటిది పూర్వ దేహమువలన కలిగినదని నమ్ముము. అనుభవింపబడని వస్తువు మనస్సును తాకలేదు.
+hi: इसलिए हे राजन्, लिंग-शरीर वाले उसमें वैसी वस्तु पूर्व देह से उत्पन्न है, यह श्रद्धा करो। जो अनुभव में नहीं आया, वह मन को छू नहीं सकता।
 
 --- verse 66 ---
 deva:
@@ -590,6 +785,9 @@ deva:
 iast:
 mana eva manuṣyasya pūrvarūpāṇi śaṁsati|
 bhaviṣyataśca bhadraṁ te tathaiva na bhaviṣyataḥ||
+en: The mind alone tells the earlier forms of a man, and the forms that are to come, and in the same way the forms that will not come. Blessings upon you.
+tel: మనస్సే మనుష్యుని పూర్వ రూపములను తెలుపును. రాబోవు రూపములను, అట్లే రాని రూపములను కూడ తెలుపును. నీకు మంగళము.
+hi: मन ही मनुष्य के पूर्व रूपों को कहता है, और आनेवाले रूपों को, तथा उसी प्रकार न आनेवाले रूपों को भी। तुम्हारा कल्याण हो।
 
 --- verse 67 ---
 deva:
@@ -598,6 +796,9 @@ deva:
 iast:
 adṛṣṭamaśrutaṁ cātra kvacinmanasi dṛśyate|
 yathā tathānumantavyaṁ deśakālakriyāśrayam||
+en: And if something never seen and never heard appears here in the mind at some time, even so it must be taken as resting on a place, a time and an action known before.
+tel: ఎన్నడును చూడబడనిది, వినబడనిది ఇక్కడ ఎప్పుడైనను మనస్సున కనబడినను, అది ఇంతకుముందు ఎఱిగిన దేశము, కాలము, క్రియలను ఆశ్రయించినదని ఊహింపవలెను.
+hi: और यदि कभी न देखी और न सुनी वस्तु यहाँ मन में दिख जाये, तो भी उसे पहले जाने हुए देश, काल और क्रिया पर आश्रित मानना चाहिए।
 
 --- verse 68 ---
 deva:
@@ -606,6 +807,9 @@ deva:
 iast:
 sarve kramānurodhena manasīndriyagocarāḥ|
 āyānti vargaśo yānti sarve samanaso janāḥ||
+en: All the objects of the senses come into the mind keeping their own order, and they go away in groups. All men have a mind.
+tel: ఇంద్రియ విషయములన్నియు తమ క్రమమును అనుసరించి మనస్సున ప్రవేశించును, గుంపులుగా వెడలిపోవును. మనుష్యులందరికి మనస్సు కలదు.
+hi: सब इन्द्रिय-विषय अपने क्रम के अनुसार मन में आते हैं, और वर्गों में चले जाते हैं। सब मनुष्य मन वाले हैं।
 
 --- verse 69 ---
 deva:
@@ -614,6 +818,9 @@ deva:
 iast:
 sattvaikaniṣṭhe manasi bhagavatpārśvavartini|
 tamaścandramasīvedamuparajyāvabhāsate||
+en: When the mind rests in sattva alone and stays at the side of the Lord, all this appears in it and colours it, as the dark mark appears on the moon.
+tel: మనస్సు సత్త్వమునందే నిలిచి, భగవంతుని ప్రక్కనే ఉన్నప్పుడు, చంద్రునియందు చీకటి మచ్చ కనబడునట్లే, ఇదియంతయు దానియందు అంటుకొని కనబడును.
+hi: जब मन केवल सत्त्व में स्थित हो और भगवान् के पार्श्व में रहे, तब चन्द्रमा में तम के समान यह सब उसमें लगकर प्रकाशित होता है।
 
 --- verse 70 ---
 deva:
@@ -622,6 +829,9 @@ deva:
 iast:
 nāhaṁ mameti bhāvo'yaṁ puruṣe vyavadhīyate|
 yāvad buddhimano'kṣārthaguṇavyūho hyanādimān||
+en: The feeling that I am not this body and that this is not mine is kept away from the puruṣa as long as this beginningless array of buddhi, of mind, of the senses, of their objects and of the guṇas remains.
+tel: నేను ఈ దేహము కాను, ఇది నాది కాదు అను భావము పురుషునికి అడ్డగింపబడును. బుద్ధి, మనస్సు, ఇంద్రియములు, విషయములు, గుణముల ఈ ఆదిలేని సముదాయము ఉన్నంతవఱకు ఇట్లే.
+hi: मैं यह देह नहीं हूँ और यह मेरा नहीं है, यह भाव पुरुष में व्यवधान पाता है, जब तक बुद्धि, मन, इन्द्रिय, विषय और गुणों का यह अनादि व्यूह बना रहता है।
 
 --- verse 71 ---
 deva:
@@ -630,6 +840,9 @@ deva:
 iast:
 suptimūrcchopatāpeṣu prāṇāyanavighātataḥ|
 nehate'hamiti jñānaṁ mṛtyuprajvārayorapi||
+en: In deep sleep, in a swoon, in great pain, when the course of prāṇa is cut off, and in death and in burning fever too, the knowledge that I am does not arise.
+tel: గాఢ నిద్రలో, మూర్ఛలో, తీవ్ర బాధలో, ప్రాణ గమనము అడ్డగింపబడినప్పుడు, మృత్యువునందును తీవ్ర జ్వరమునందును, నేను అను జ్ఞానము కలుగదు.
+hi: गाढ़ निद्रा में, मूर्छा में, बड़े ताप में, प्राण के मार्ग के रुक जाने से, और मृत्यु तथा प्रज्वार में भी, मैं हूँ, यह ज्ञान नहीं उठता।
 
 --- verse 72 ---
 deva:
@@ -638,6 +851,9 @@ deva:
 iast:
 garbhe bālye'pyapauṣkalyādekādaśavidhaṁ tadā|
 liṁgaṁ na dṛśyate yūnaḥ kuhvāṁ candramaso yathā||
+en: In the womb, and in childhood too, for want of full growth, the elevenfold subtle body of the young one is not then seen, as the moon is not seen on the night of the new moon.
+tel: గర్భమునందును, బాల్యమునందును, పూర్ణ వృద్ధి లేనందున, యువకుని పదకొండు విధముల లింగ శరీరము అప్పుడు కనబడదు. అమావాస్య రాత్రి చంద్రుడు కనబడనట్లే.
+hi: गर्भ में और बाल्य में भी, पूर्ण वृद्धि न होने से, युवक का ग्यारह प्रकार का लिंग तब नहीं दिखता, जैसे अमावस्या में चन्द्रमा नहीं दिखता।
 
 --- verse 73 ---
 deva:
@@ -646,6 +862,9 @@ deva:
 iast:
 arthe hyavidyamāne'pi saṁsṛtirna nivartate|
 dhyāyato viṣayānasya svapne'narthāgamo yathā||
+en: Though the object does not exist, the round of birth does not cease for one who dwells upon the objects of sense, as harm comes to a man in a dream.
+tel: విషయము లేకున్నను, విషయములను ధ్యానించువానికి సంసారము తొలగిపోదు. కలలో అనర్థము కలుగునట్లే.
+hi: वस्तु के न होने पर भी, विषयों का ध्यान करनेवाले की संसृति नहीं हटती, जैसे स्वप्न में अनर्थ आ जाता है।
 
 --- verse 74 ---
 deva:
@@ -654,6 +873,9 @@ deva:
 iast:
 evaṁ paṁcavidhaṁ liṁgaṁ trivṛt ṣoḍaśavistṛtam|
 eṣa cetanayā yukto jīva ityabhidhīyate||
+en: Thus the subtle body is of five kinds, of three strands, and spread out as sixteen. Joined with consciousness, this is called the jīva.
+tel: ఈ విధముగా లింగ శరీరము ఐదు విధములు, మూడు గుణములు కలది, పదునాఱుగా విస్తరించినది. చైతన్యముతో కూడిన ఇదియే జీవుడు అని చెప్పబడును.
+hi: इस प्रकार लिंग पाँच प्रकार का, तीन गुणों वाला, और सोलह रूप में विस्तृत है। चेतना से युक्त यही जीव कहा जाता है।
 
 --- verse 75 ---
 deva:
@@ -662,6 +884,9 @@ deva:
 iast:
 anena puruṣo dehānupādatte vimuṁcati|
 harṣaṁ śokaṁ bhayaṁ duḥkhaṁ sukhaṁ cānena vindati||
+en: By this the puruṣa takes on bodies and lets them go. By this he finds joy, grief, fear, sorrow and pleasure.
+tel: దానిచేతనే పురుషుడు దేహములను గ్రహించును, విడిచిపెట్టును. దానిచేతనే అతడు సంతోషమును, శోకమును, భయమును, దుఃఖమును, సుఖమును పొందును.
+hi: इसी से पुरुष देहों को ग्रहण करता है और छोड़ता है। इसी से वह हर्ष, शोक, भय, दुःख और सुख पाता है।
 
 --- verse 76 ---
 deva:
@@ -670,6 +895,9 @@ deva:
 iast:
 yathā tṛṇajalūkeyaṁ nāpayātyapayāti ca|
 na tyajenmriyamāṇo'pi prāgdehābhimatiṁ janaḥ||
+en: As this grass leech does not let go and yet moves on, so a man, even while he is dying, does not give up the sense of his former body,
+tel: ఈ గడ్డి జలూక విడువకయే ముందుకు సాగునట్లే, మనుష్యుడు చనిపోవుచున్నప్పుడును పూర్వ దేహమునందు తన అభిమానమును విడువడు,
+hi: जैसे यह तृण-जलूका छोड़ती नहीं और आगे बढ़ जाती है, वैसे ही मनुष्य मरते समय भी पूर्व देह के अभिमान को नहीं छोड़ता,
 
 --- verse 77 ---
 deva:
@@ -678,6 +906,9 @@ deva:
 iast:
 yāvadanyaṁ na vindeta vyavadhānena karmaṇām|
 mana eva manuṣyendra bhūtānāṁ bhavabhāvanam||
+en: until he finds another body through the intervening of his karmas. O lord of men, the mind alone is what brings beings into birth.
+tel: కర్మముల వ్యవధానముచే వేఱొక దేహమును పొందువఱకు ఇట్లే. ఓ మనుష్యేంద్రుడా, భూతములకు జన్మమును కలిగించునది మనస్సే.
+hi: जब तक कर्मों के व्यवधान से दूसरी देह न पा ले। हे मनुष्येन्द्र, भूतों के जन्म का कारण मन ही है।
 
 --- verse 78 ---
 deva:
@@ -686,6 +917,9 @@ deva:
 iast:
 yadākṣaiścaritān dhyāyan karmāṇyācinute'sakṛt|
 sati karmaṇyavidyāyāṁ bandhaḥ karmaṇyanātmanaḥ||
+en: When he dwells upon what the senses have done and gathers karma again and again, then, while karma and ignorance remain, there is bondage through karma for one who is not the body.
+tel: ఇంద్రియములు చేసినవానిని ధ్యానించుచు అతడు మరల మరల కర్మమును కూడబెట్టినప్పుడు, కర్మమును అజ్ఞానమును ఉన్నంతవఱకు, దేహము కానివానికి కర్మముచే బంధము కలుగును.
+hi: जब वह इन्द्रियों के किये हुए का ध्यान करता हुआ बार-बार कर्म संचित करता है, तब कर्म और अविद्या के रहते, जो देह नहीं है उसका कर्म से बन्धन होता है।
 
 --- verse 79 ---
 deva:
@@ -694,6 +928,9 @@ deva:
 iast:
 atastadapavādārthaṁ bhaja sarvātmanā harim|
 paśyaṁstadātmakaṁ viśvaṁ sthityutpattyapyayā yataḥ||
+en: Therefore, to put an end to that, worship Hari with your whole being, and see the universe as having him for its self, since from him come its standing, its birth and its end.
+tel: కావున దానిని తొలగించుటకు పూర్ణ హృదయముతో హరిని సేవింపుము. విశ్వము ఆయననే ఆత్మగా కలిగినదని చూడుము. ఏలయనగా ఆయనవలననే దాని స్థితి, పుట్టుక, నాశము కలుగును.
+hi: इसलिए उसको हटाने के लिए सर्वात्मा से हरि की उपासना करो, और विश्व को उन्हीं को आत्मा मानकर देखो, क्योंकि उन्हीं से उसकी स्थिति, उत्पत्ति और नाश होते हैं।
 
 --- verse 80 ---
 deva:
@@ -704,6 +941,9 @@ iast:
 maitreya uvāca
 bhāgavatamukhyo bhagavānnārado haṁsayorgatim|
 pradarśya hyamumāmantrya siddhalokaṁ tato'gamat||
+en: Maitreya said: The blessed Nārada, foremost among the devotees of the Lord, showed him the way of the two swans, took leave of him, and went from there to Siddhaloka.
+tel: మైత్రేయుడు పలికెను: భాగవతులలో ముఖ్యుడైన భగవంతుడు నారదుడు రెండు హంసల గతిని అతనికి చూపి, అతనివలన అనుమతి తీసికొని, అక్కడనుండి సిద్ధలోకమునకు వెళ్ళెను.
+hi: मैत्रेय ने कहा: भागवतों में मुख्य भगवान् नारद ने उन्हें दो हंसों की गति दिखाकर, उनसे विदा लेकर, वहाँ से सिद्धलोक को प्रयाण किया।
 
 --- verse 81 ---
 deva:
@@ -712,6 +952,9 @@ deva:
 iast:
 prācīnabarhī rājarṣiḥ prajāsargābhirakṣaṇe|
 ādiśya putrānagamattapase kapilāśramam||
+en: Prācīnabarhi, the royal sage, charged his sons with the creating and the guarding of the people, and went away to the hermitage of Kapila for tapas.
+tel: రాజర్షి ప్రాచీనబర్హి ప్రజల సృష్టిని, రక్షణను తన కుమారులకు ఆదేశించి, తపస్సుకొఱకు కపిలాశ్రమమునకు వెళ్ళెను.
+hi: राजर्षि प्राचीनबर्हि ने प्रजा के सर्जन और रक्षण का भार अपने पुत्रों को देकर, तप के लिए कपिल के आश्रम को प्रस्थान किया।
 
 --- verse 82 ---
 deva:
@@ -720,6 +963,9 @@ deva:
 iast:
 tatraikāgramanā vīro govindacaraṇāmbujam|
 vimuktasaṁgo'nubhajan bhaktyā tatsāmyatāmagāt||
+en: There, with his mind fixed on one point, the hero was free of attachment and worshipped the lotus feet of Govinda, and by devotion he came to be like him.
+tel: అక్కడ ఏకాగ్ర మనస్సుతో ఆ వీరుడు సంగమును విడిచి గోవిందుని పాద పద్మమును సేవించి, భక్తిచే ఆయనతో సమానమైన స్థితిని పొందెను.
+hi: वहाँ एकाग्र मन से उस वीर ने संग छोड़कर गोविन्द के चरण-कमल की उपासना की, और भक्ति से उनकी समानता को प्राप्त हुआ।
 
 --- verse 83 ---
 deva:
@@ -728,6 +974,9 @@ deva:
 iast:
 etadadhyātmapārokṣyaṁ gītaṁ devarṣiṇānagha|
 yaḥ śrāvayedyaḥ śṛṇuyātsa liṁgena vimucyate||
+en: O sinless one, this hidden teaching about the self was sung by the divine sage. He who has it recited and he who hears it is freed from the subtle body.
+tel: ఓ పాపరహితుడా, ఆత్మను గూర్చిన ఈ రహస్య బోధను దేవర్షి పాడెను. దీనిని వినిపించువాడును, వినువాడును లింగ శరీరమునుండి విడుదల పొందును.
+hi: हे अनघ, आत्मा के विषय का यह गुह्य ज्ञान देवर्षि ने गाया। जो इसे सुनाता है और जो सुनता है, वह लिंग से मुक्त हो जाता है।
 
 --- verse 84 ---
 deva:
@@ -740,6 +989,9 @@ etanmukundayaśasā bhuvanaṁ punānaṁ
 devarṣivaryamukhaniḥsṛtamātmaśaucam|
 yaḥ kīrtyamānamadhigacchati pārameṣṭhyaṁ
 nāsmin bhave bhramati muktasamastabandhaḥ||
+en: This teaching purifies the world with the fame of Mukunda, it came from the mouth of the best of the divine sages, and it cleanses the self. He who, as it is recited, reaches that highest state does not wander in this round of birth, and all his bonds are loosed.
+tel: ఈ బోధ ముకుందుని కీర్తిచే లోకమును పవిత్రము చేయును. ఇది దేవర్షి శ్రేష్ఠుని ముఖమునుండి వెడలినది. ఇది ఆత్మను శుద్ధి చేయును. ఇది కీర్తింపబడుచున్నప్పుడు ఆ పరమ స్థితిని పొందువాడు ఈ సంసారమున తిరుగడు. అతని బంధములన్నియు విడిపోవును.
+hi: यह ज्ञान मुकुन्द के यश से भुवन को पवित्र करता है, यह देवर्षि-वर्य के मुख से निकला है, और यह आत्मा को शुद्ध करता है। जो इसके कीर्तन के समय उस परमेष्ठ्य पद को पा लेता है, वह इस भव में नहीं भटकता, और उसके सब बन्धन छूट जाते हैं।
 
 --- verse 85 ---
 deva:
@@ -748,9 +1000,15 @@ deva:
 iast:
 adhyātmapārokṣyamidaṁ mayādhigatamadbhutam|
 evaṁ striyā''śramaḥ puṁsaśchinno'mutra ca saṁśayaḥ||
+en: This wonderful hidden teaching about the self has been learnt by me. In this way a man's shelter in woman is cut away, and so is his doubt about the next world.
+tel: ఆత్మను గూర్చిన ఈ అద్భుతమైన రహస్య బోధ నాచే పొందబడినది. ఈ విధముగా మనుష్యునికి స్త్రీయందు ఆశ్రయము తెగిపోవును. పరలోకమును గూర్చిన సందేహమును తెగిపోవును.
+hi: आत्मा के विषय का यह अद्भुत गुह्य ज्ञान मुझे प्राप्त हुआ। इस प्रकार मनुष्य का स्त्री-आश्रम छिन्न हो जाता है, और परलोक के विषय का संशय भी छिन्न हो जाता है।
 
 --- verse none ---
 deva:
 इति श्रीमद्भागवते महापुराणे पारमहंस्यां संहितायां चतुर्थस्कन्धे विदुरमैत्रेयसंवादे प्राचीनबर्हिर्नारदसंवादो नामैकोनत्रिंशोऽध्यायः॥ २९॥
 iast:
 iti śrīmadbhāgavate mahāpurāṇe pāramahaṁsyāṁ saṁhitāyāṁ caturthaskandhe viduramaitreyasaṁvāde prācīnabarhirnāradasaṁvādo nāmaikonatriṁśo'dhyāyaḥ|| 29||
+en: Thus ends the twenty-ninth adhyāya, named the conversation of Prācīnabarhi and Nārada, in the fourth skandha of the Śrīmad Bhāgavata Mahāpurāṇa, the saṁhitā of the paramahaṁsas, in the conversation of Vidura and Maitreya.
+tel: ఇది శ్రీమద్భాగవత మహాపురాణమునందు, పరమహంసల సంహితయందు, చతుర్థస్కంధమునందు విదుర మైత్రేయ సంవాదమునందు ప్రాచీనబర్హి నారద సంవాదము అను ఏకోనత్రింశోఽధ్యాయము.
+hi: इस प्रकार श्रीमद्भागवत महापुराण की परमहंसों की संहिता के चतुर्थ स्कन्ध में, विदुर-मैत्रेय संवाद में, प्राचीनबर्हि-नारद संवाद नामक उनतीसवाँ अध्याय समाप्त हुआ।
