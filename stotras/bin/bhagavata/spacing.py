@@ -12,6 +12,14 @@ edit, so the edit is copied rather than typed. It changes no file.
 
 The skandha and adhyāya are read from the file's name (SSAA_*).
 
+Two limits, both found by using it (22 Oct 2026). It only sees a break whose joined form is a
+whole GRETIL token, so a break inside a longer GRETIL compound is invisible to it: over 4.24 and
+4.25 it found one of the seven real breaks. And it looks only for spaces the print has and GRETIL
+lacks, never the opposite — the layer also swallows spaces, which is the commoner fault, and for
+those the signature is a word-final visarga, anusvāra or inflectional ending standing directly
+before a consonant. An empty report from this tool therefore means nothing on its own; scan the
+other way as well before concluding an adhyāya is clean.
+
 What it flags is every space that GRETIL does not have, shortest left half first. Most of those
 are not faults at all: the print separates पदम् and the next word where GRETIL runs them together
 (तावद् यावद्, अनुग्रहाद् भगवतः), and that is the print's spacing, not a broken word. A justification
