@@ -9,7 +9,7 @@ Type: Purāṇa (an adhyāya of the Śrīmad Bhāgavata, Skandha 3)
 
 Source / recension: Base text and authority: the Gītā Press, Gorakhpur Śrīmadbhāgavata Mahāpurāṇa with Hindi translation, Part 1 (Gītā Press code 26), archive.org item `shrimadbhagwat-mahapuran-bhag-1`, printed pages 370–373; the PDF page numbers are the printed ones. The PDF carries the typesetter's own text layer in the Chanakya font encoding, and the text was decoded from it by machine with `bin/bhagavata/chanakya.py`, not read off OCR or typed. The decoder was checked against GRETIL over all twelve skandhas before any file was written, and the differences that remain were sampled and found to be readings of the two editions. Second witness: GRETIL's `sa_bhAgavatapurANa.xml` (IAST, contributed by Ulrich Stiehl), a separate editorial lineage, compared verse by verse by machine. The TTD edition with the commentaries of Śrīdhara, Vīrarāghava and Vijayadhvaja (archive.org `Bhagavata_Purana_With_Multiple_Commentaries_TTD_Critical_Edition`) is the third witness where one is needed; it was not read for this file. The IAST was generated mechanically from the Devanāgarī with `bin/dev2iast.py`.
 
-Recension note: Text-only file, written 1 Oct 2026 at the user's instruction to lay down the whole Bhāgavata first: the English, Telugu and Hindi meanings are still to be added, and the witnesses' differences listed here have been recorded by machine and not yet adjudicated. The print is followed throughout. The print numbers 30 verses and GRETIL numbers 30. Of the 30 verses GRETIL has under the same number, 26 agree with the print letter for letter once spacing and the spelling of nasals are set aside; the rest differ: 6, 9, 23, 29. Spacing is the print's, as its text layer gives it; in a few places justification has left a space inside a word, and these are still to be closed when the verse is read. The speaker lines (श्रीशुक उवाच and the others) are printed in italic above the verse they introduce, and are given as its first line.
+Recension note: Meanings written 22 Oct 2026 (session S78). The differences between the witnesses listed below were read as the verses were glossed; except where this note says otherwise, each is a spelling, a sandhi or a word order of the two editions, none of them changes the sense, and the print's reading therefore stands unbracketed. The print is followed throughout. The print numbers 30 verses and GRETIL numbers 30. Of the 30 verses GRETIL has under the same number, 26 agree with the print letter for letter once spacing and the spelling of nasals are set aside; the rest differ: 6, 9, 23, 29. Spacing is the print's, as its text layer gives it. The speaker lines (श्रीशुक उवाच and the others) are printed in italic above the verse they introduce, and are given as its first line. Four words were put right as the verses were read, in each case a space swallowed at a line break. At verse 5 अत and एव had run together, at verse 11 सतो and बन्धुम्, and at verse 17 अनयोः and प्रभो; GRETIL reads two words at each of the three, and neither a vowel nor a visarga is ever run into the next word elsewhere in this print. The fourth is in the colophon, where कापिलेयोपाख्याने and सप्तविंशोऽध्यायः had run together; the companion colophon of adhyāya 25 in the same volume prints the space. At verse 29 the print reads स्वदृशा छिन्नसंशयः where GRETIL geminates to स्वदृशाच्छिन्न°, and the print stands.
 
 Verse count: 30, plus the closing colophon printed unnumbered.
 
@@ -24,6 +24,9 @@ iast:
 śrībhagavānuvāca
 prakṛtistho'pi puruṣo nājyate prākṛtairguṇaiḥ|
 avikārādakartṛtvānnirguṇatvājjalārkavat||
+en: The blessed Lord said: The puruṣa abides in prakṛti, yet he is not smeared by the guṇas of prakṛti. He does not change, he does not act, and he is without guṇa, like the sun reflected in water.
+tel: శ్రీభగవంతుడు పలికెను: పురుషుడు ప్రకృతియందు ఉన్నను ప్రాకృతమైన గుణములచే అంటబడడు. ఆయన వికారము లేనివాడు, కర్త కానివాడు, నిర్గుణుడు — నీటియందు కనబడు సూర్యునివలె.
+hi: श्रीभगवान् ने कहा: पुरुष प्रकृति में रहता है, तो भी प्राकृत गुणों से लिप्त नहीं होता। वह विकार से रहित, अकर्ता और निर्गुण है, जल में दीखते सूर्य के समान।
 
 --- verse 2 ---
 deva:
@@ -32,6 +35,9 @@ deva:
 iast:
 sa eṣa yarhi prakṛterguṇeṣvabhiviṣajjate|
 ahaṁkriyāvimūḍhātmā kartāsmītyabhimanyate||
+en: But when he becomes attached to the guṇas of prakṛti, his self is bewildered by the sense of doing, and he thinks that he himself is the doer.
+tel: కాని అతడు ప్రకృతి గుణములయందు ఆసక్తుడైనప్పుడు, అహంక్రియచే అతని ఆత్మ మోహము పొంది, నేనే కర్తను అని అభిమానించును.
+hi: किन्तु जब वह प्रकृति के गुणों में आसक्त हो जाता है, तब अहंक्रिया से उसका आत्मा मूढ़ हो जाता है, और वह मानता है कि मैं ही कर्ता हूँ।
 
 --- verse 3 ---
 deva:
@@ -40,6 +46,9 @@ deva:
 iast:
 tena saṁsārapadavīmavaśo'bhyetyanirvṛtaḥ|
 prāsaṁgikaiḥ karmadoṣaiḥ sadasanmiśrayoniṣu||
+en: By that he comes, helpless and without peace, upon the road of saṁsāra, and through the faults of the works that attach to him he is born in wombs that are mixed of the good and the bad.
+tel: దానిచే అతడు వశము లేక, నిర్వృతి లేక సంసారపథమును పొందును; తనకు అంటుకొను కర్మదోషములచే సత్తు అసత్తు కలిసిన యోనులయందు జన్మించును.
+hi: उससे वह विवश और अशान्त होकर संसार के मार्ग को प्राप्त होता है, और अपने साथ लगे कर्म-दोषों से सत् और असत् मिली योनियों में जन्म लेता है।
 
 --- verse 4 ---
 deva:
@@ -48,14 +57,20 @@ deva:
 iast:
 arthe hyavidyamāne'pi saṁsṛtirna nivartate|
 dhyāyato viṣayānasya svapne'narthāgamo yathā||
+en: Though the object is not really there, his wandering does not cease, because he keeps dwelling on the objects of sense. It is as when harm comes to a man in a dream.
+tel: విషయము నిజముగా లేకున్నను, అతడు విషయములను ధ్యానించుచుండుటచే సంసృతి తొలగదు. కలయందు అనర్థము వచ్చినట్లే ఇది.
+hi: अर्थ वस्तुतः न होने पर भी उसकी संसृति दूर नहीं होती, क्योंकि वह विषयों का ध्यान करता रहता है। जैसे स्वप्न में अनर्थ आ जाता है, वैसा ही यह है।
 
 --- verse 5 ---
 deva:
-अतएव शनैश्चित्तं प्रसक्तमसतां पथि।
+अत एव शनैश्चित्तं प्रसक्तमसतां पथि।
 भक्तियोगेन तीव्रेण विरक्त्या च नयेद्वशम्॥
 iast:
-ataeva śanaiścittaṁ prasaktamasatāṁ pathi|
+ata eva śanaiścittaṁ prasaktamasatāṁ pathi|
 bhaktiyogena tīvreṇa viraktyā ca nayedvaśam||
+en: For this very reason the mind, which clings to the path of what is unreal, should be brought slowly under control by intense bhakti yoga and by detachment.
+tel: అందుచేతనే అసత్తుల మార్గమునందు ఆసక్తమైన చిత్తమును, తీవ్రమైన భక్తియోగముచే, విరక్తిచే మెల్లమెల్లగా వశము చేసికొనవలెను.
+hi: इसी कारण असत् के मार्ग में लगे हुए चित्त को तीव्र भक्ति-योग से और विरक्ति से धीरे-धीरे वश में करना चाहिये।
 
 --- verse 6 ---
 deva:
@@ -64,6 +79,9 @@ deva:
 iast:
 yamādibhiryogapathairabhyasan śraddhayānvitaḥ|
 mayi bhāvena satyena matkathāśravaṇena ca||
+en: He should practise this by the paths of yoga, beginning with the restraints, and be full of faith, with true feeling for me, and by hearing the stories about me.
+tel: యమము మొదలైన యోగమార్గములచే అభ్యాసము చేయుచు, శ్రద్ధ కలిగి, నాయందు సత్యమైన భావముతో, నా కథలను వినుటచే ఇది సాధింపవలెను.
+hi: यम आदि योग के मार्गों से अभ्यास करता हुआ, श्रद्धा से युक्त होकर, मुझमें सच्चे भाव से, और मेरी कथाओं के श्रवण से यह करना चाहिये।
 
 --- verse 7 ---
 deva:
@@ -72,6 +90,9 @@ deva:
 iast:
 sarvabhūtasamatvena nirvaireṇāprasaṁgataḥ|
 brahmacaryeṇa maunena svadharmeṇa balīyasā||
+en: He should be even towards all beings, free of enmity and free of attachment, and should keep brahmacarya, silence, and his own dharma, which is the strongest help.
+tel: సర్వ భూతములయందు సమముగా ఉండవలెను, వైరము లేక, సంగము లేక ఉండవలెను; బ్రహ్మచర్యము, మౌనము, బలమైన స్వధర్మమును పట్టుకొనవలెను.
+hi: सब प्राणियों में सम रहना चाहिये, वैर से रहित और सङ्ग से रहित रहना चाहिये; ब्रह्मचर्य, मौन और बलवान् स्वधर्म को धारण करना चाहिये।
 
 --- verse 8 ---
 deva:
@@ -80,6 +101,9 @@ deva:
 iast:
 yadṛcchayopalabdhena santuṣṭo mitabhuṅ muniḥ|
 viviktaśaraṇaḥ śānto maitraḥ karuṇa ātmavān||
+en: He should be a sage, content with what comes of itself, eating little, dwelling in a solitary place, at peace, friendly, compassionate and self-possessed.
+tel: తనంతట తానే లభించినదానితో సంతుష్టుడై, మితముగా భుజించు మునియై, ఏకాంతమునందు ఉండి, శాంతుడై, మైత్రి కలిగి, కరుణ కలిగి, ఆత్మవంతుడై ఉండవలెను.
+hi: जो स्वयं मिल जाय उससे सन्तुष्ट, मिताहारी मुनि, एकान्त में रहनेवाला, शान्त, मैत्रीवाला, करुणावाला और आत्मवान् होना चाहिये।
 
 --- verse 9 ---
 deva:
@@ -88,6 +112,9 @@ deva:
 iast:
 sānubandhe ca dehe'sminnakurvannasadāgraham|
 jñānena dṛṣṭatattvena prakṛteḥ puruṣasya ca||
+en: He should not hold this body and what belongs to it to be real, for he has seen the truth of prakṛti and of puruṣa through knowledge.
+tel: జ్ఞానముచే ప్రకృతి పురుషుల తత్త్వమును చూచినవాడై, అనుబంధముతో కూడిన ఈ దేహమునందు అసత్తును సత్తుగా పట్టుకొనరాదు.
+hi: ज्ञान से प्रकृति और पुरुष का तत्त्व देख लेने पर, अनुबन्धवाले इस देह में असत् का आग्रह नहीं करना चाहिये।
 
 --- verse 10 ---
 deva:
@@ -96,14 +123,20 @@ deva:
 iast:
 nivṛttabuddhyavasthāno dūrībhūtānyadarśanaḥ|
 upalabhyātmanā''tmānaṁ cakṣuṣevārkamātmadṛk||
+en: Then the states of his buddhi cease, and the sight of anything else is far from him. He knows the self by the self, as one sees the sun with the eye, and he sees the self.
+tel: అప్పుడు అతని బుద్ధి అవస్థలు నివృత్తి పొందును; అన్యదర్శనము దూరమగును. కన్నుతో సూర్యుని చూచినట్లు, అతడు ఆత్మచే ఆత్మను తెలిసికొని ఆత్మను చూచును.
+hi: तब उसकी बुद्धि की अवस्थाएँ निवृत्त हो जाती हैं, और अन्य का दर्शन दूर हो जाता है। आँख से सूर्य को देखने के समान वह आत्मा से आत्मा को जानकर आत्मा को देखता है।
 
 --- verse 11 ---
 deva:
 मुक्तलिंगं सदाभासमसति प्रतिपद्यते।
-सतोबन्धुमसच्चक्षुः सर्वानुस्यूतमद्वयम्॥
+सतो बन्धुमसच्चक्षुः सर्वानुस्यूतमद्वयम्॥
 iast:
 muktaliṁgaṁ sadābhāsamasati pratipadyate|
-satobandhumasaccakṣuḥ sarvānusyūtamadvayam||
+sato bandhumasaccakṣuḥ sarvānusyūtamadvayam||
+en: He reaches that which is free of the subtle body, which shines as the real within the unreal, which is the friend of the real and the eye of the unreal, which runs through all and is without a second.
+tel: లింగమునుండి విడివడినది, అసత్తునందు సత్తువలె ప్రకాశించునది, సత్తునకు బంధువు, అసత్తునకు కన్ను, అన్నిటియందు అల్లుకొనినది, రెండవది లేనిది — అట్టిదానిని అతడు పొందును.
+hi: जो लिङ्ग से मुक्त है, असत् में सत् के समान भासता है, सत् का बन्धु और असत् का चक्षु है, सबमें अनुस्यूत है और अद्वय है — उसी को वह प्राप्त करता है।
 
 --- verse 12 ---
 deva:
@@ -112,6 +145,9 @@ deva:
 iast:
 yathā jalastha ābhāsaḥ sthalasthenāvadṛśyate|
 svābhāsena tathā sūryo jalasthena divi sthitaḥ||
+en: As the reflection standing in water is seen by the man standing on the bank, and as the sun standing in the sky is seen by its own reflection standing in water,
+tel: నీటియందు ఉన్న ప్రతిబింబము ఒడ్డున ఉన్నవానిచే చూడబడునట్లు, ఆకాశమునందు ఉన్న సూర్యుడు నీటియందు ఉన్న తన ప్రతిబింబముచే చూడబడునట్లు,
+hi: जैसे जल में रहा प्रतिबिम्ब किनारे पर खड़े व्यक्ति से देखा जाता है, और जैसे आकाश में रहा सूर्य जल में रहे अपने ही प्रतिबिम्ब से देखा जाता है,
 
 --- verse 13 ---
 deva:
@@ -120,6 +156,9 @@ deva:
 iast:
 evaṁ trivṛdahaṅkāro bhūtendriyamanomayaiḥ|
 svābhāsairlakṣito'nena sadābhāsena satyadṛk||
+en: so the threefold ahaṁkāra is known through its own reflections, which are made of the elements, the senses and the mind. And by that reflection of the real, the seer of the truth is known.
+tel: అట్లే మూడు విధములైన అహంకారము, భూతములు ఇంద్రియములు మనస్సు రూపమైన తన ప్రతిబింబములచే తెలియబడును. ఆ సదాభాసముచే సత్యమును చూచువాడు తెలియబడును.
+hi: इसी प्रकार त्रिविध अहङ्कार अपने ही आभासों से, जो भूत, इन्द्रिय और मन से बने हैं, जाना जाता है। और उस सत्-आभास से सत्य का द्रष्टा जाना जाता है।
 
 --- verse 14 ---
 deva:
@@ -128,6 +167,9 @@ deva:
 iast:
 bhūtasūkṣmendriyamanobuddhyādiṣviha nidrayā|
 līneṣvasati yastatra vinidro nirahaṁkriyaḥ||
+en: Here the subtle elements, the senses, the mind, the buddhi and the rest are dissolved in sleep, and the self is not seen. He who is there without sleep and without the sense of I,
+tel: ఇక్కడ భూతసూక్ష్మములు, ఇంద్రియములు, మనస్సు, బుద్ధి మొదలైనవి నిద్రచే లీనమై, ఆత్మ కనబడకుండినప్పుడు, అక్కడ నిద్ర లేక, అహంక్రియ లేక ఉండువాడు —
+hi: यहाँ भूत-सूक्ष्म, इन्द्रियाँ, मन, बुद्धि आदि निद्रा से लीन हो जाते हैं और आत्मा नहीं दीखता; उस समय जो वहाँ निद्रा से रहित और अहंक्रिया से रहित रहता है —
 
 --- verse 15 ---
 deva:
@@ -136,6 +178,9 @@ deva:
 iast:
 manyamānastadā''tmānamanaṣṭo naṣṭavanmṛṣā|
 naṣṭe'haṅkaraṇe draṣṭā naṣṭavitta ivāturaḥ||
+en: he then thinks of himself as lost, though he is not lost, and this is false. When the sense of I is gone, the seer is like a man in distress who has lost his wealth.
+tel: అప్పుడు అతడు నశించకున్నను నశించినవానివలె తనను మిథ్యగా తలంచును. అహంకరణము నశించినప్పుడు, ధనము పోయిన ఆతురునివలె ద్రష్ట ఉండును.
+hi: तब वह नष्ट न होने पर भी अपने को नष्ट के समान मिथ्या मान लेता है। अहंकरण के नष्ट होने पर द्रष्टा धन खोये हुए आतुर के समान होता है।
 
 --- verse 16 ---
 deva:
@@ -144,16 +189,22 @@ deva:
 iast:
 evaṁ pratyavamṛśyāsāvātmānaṁ pratipadyate|
 sāhaṅkārasya dravyasya yo'vasthānamanugrahaḥ||
+en: Thinking the matter over in this way, he comes to know the self. He sees that the standing of the substance that has the sense of I in it is itself a help to him.
+tel: ఇట్లు ప్రత్యవమర్శము చేసి అతడు ఆత్మను తెలిసికొనును. అహంకారముతో కూడిన ద్రవ్యము ఏ స్థితిలో ఉండుటయో, అదియే తనకు అనుగ్రహమని ఎరుగును.
+hi: इस प्रकार विचार करके वह आत्मा को जान लेता है। अहङ्कारवाले द्रव्य का जो अवस्थान है, वही उसके लिये अनुग्रह है, यह वह देखता है।
 
 --- verse 17 ---
 deva:
 देवहूतिरुवाच
 पुरुषं प्रकृतिर्ब्रह्मन्न विमुञ्चति कर्हिचित्।
-अन्योन्यापाश्रयत्वाच्च नित्यत्वादनयोःप्रभो॥
+अन्योन्यापाश्रयत्वाच्च नित्यत्वादनयोः प्रभो॥
 iast:
 devahūtiruvāca
 puruṣaṁ prakṛtirbrahmanna vimuñcati karhicit|
-anyonyāpāśrayatvācca nityatvādanayoḥprabho||
+anyonyāpāśrayatvācca nityatvādanayoḥ prabho||
+en: Devahūti said: O brahman, prakṛti never lets the puruṣa go, because the two rest upon each other and because both are eternal, O Lord.
+tel: దేవహూతి పలికెను: బ్రహ్మన్, ప్రకృతి పురుషుని ఎన్నడును విడిచిపెట్టదు; ఆ ఇరువురు ఒకరినొకరు ఆశ్రయించియున్నారు, ఇరువురును నిత్యులు, ప్రభూ.
+hi: देवहूति ने कहा: हे ब्रह्मन्, प्रकृति पुरुष को कभी नहीं छोड़ती, क्योंकि वे दोनों एक-दूसरे के आश्रित हैं और दोनों नित्य हैं, हे प्रभो।
 
 --- verse 18 ---
 deva:
@@ -162,6 +213,9 @@ deva:
 iast:
 yathā gandhasya bhūmeśca na bhāvo vyatirekataḥ|
 apāṁ rasasya ca yathā tathā buddheḥ parasya ca||
+en: Smell and earth have no being apart from each other, nor taste and water. It is the same with buddhi and the one who is beyond it.
+tel: గంధమునకు భూమికి వేరుపడి ఉండుట లేదు; జలమునకు రసమునకు కూడ అట్లే. బుద్ధికి, దానికి పరుడైనవానికి కూడ అట్లే.
+hi: गन्ध और पृथ्वी का एक-दूसरे से अलग भाव नहीं है, और जल और रस का भी नहीं। बुद्धि और उससे परे जो है, उनका भी वैसा ही है।
 
 --- verse 19 ---
 deva:
@@ -170,6 +224,9 @@ deva:
 iast:
 akartuḥ karmabandho'yaṁ puruṣasya yadāśrayaḥ|
 guṇeṣu satsu prakṛteḥ kaivalyaṁ teṣvataḥ katham||
+en: This bondage of works belongs to the puruṣa, who does nothing, and he is its support. So long as the guṇas of prakṛti remain, how can there be freedom from them?
+tel: ఈ కర్మబంధము అకర్తయైన పురుషునికి; అతడే దానికి ఆశ్రయము. ప్రకృతి గుణములు ఉన్నంత కాలము వానినుండి కైవల్యము ఎట్లు కలుగును?
+hi: यह कर्म-बन्ध अकर्ता पुरुष का है, और वही उसका आश्रय है। जब तक प्रकृति के गुण हैं, तब तक उनसे कैवल्य कैसे हो?
 
 --- verse 20 ---
 deva:
@@ -178,6 +235,9 @@ deva:
 iast:
 kvacittattvāvamarśena nivṛttaṁ bhayamulbaṇam|
 anivṛttanimittatvātpunaḥ pratyavatiṣṭhate||
+en: Sometimes the great fear ceases through the weighing of the truth. But since its cause has not ceased, it stands up again.
+tel: ఒక్కొకసారి తత్త్వమును విచారించుటచే ఉల్బణమైన భయము తొలగును. కాని దాని నిమిత్తము తొలగలేదు కావున అది మరల నిలుచును.
+hi: कभी तत्त्व के विचार से उल्बण भय निवृत्त हो जाता है। किन्तु उसका निमित्त निवृत्त नहीं हुआ, इसलिये वह फिर खड़ा हो जाता है।
 
 --- verse 21 ---
 deva:
@@ -188,6 +248,9 @@ iast:
 śrībhagavānuvāca
 animittanimittena svadharmeṇāmalātmanā|
 tīvrayā mayi bhaktyā ca śrutasambhṛtayā ciram||
+en: The blessed Lord said: By one's own dharma, done with a pure heart and asking no reward, and by intense bhakti to me, gathered from hearing the scriptures over a long time,
+tel: శ్రీభగవంతుడు పలికెను: ఫలమును కోరని నిమిత్తముతో, నిర్మలమైన మనస్సుతో చేయబడిన స్వధర్మముచే, శ్రుతిని వినుటచే చిరకాలము పోగుచేసికొనిన తీవ్రమైన నాయందలి భక్తిచే,
+hi: श्रीभगवान् ने कहा: फल की इच्छा से रहित निमित्तवाले, निर्मल मन से किये गये स्वधर्म से, और श्रुति के श्रवण से चिरकाल तक सञ्चित मुझमें तीव्र भक्ति से,
 
 --- verse 22 ---
 deva:
@@ -196,6 +259,9 @@ deva:
 iast:
 jñānena dṛṣṭatattvena vairāgyeṇa balīyasā|
 tapoyuktena yogena tīvreṇātmasamādhinā||
+en: by knowledge in which the truth has been seen, by strong detachment, and by yoga joined to tapas, with intense absorption in the self,
+tel: తత్త్వము చూడబడిన జ్ఞానముచే, బలమైన వైరాగ్యముచే, తపస్సుతో కూడిన యోగముచే, తీవ్రమైన ఆత్మసమాధిచే,
+hi: तत्त्व को देख लेनेवाले ज्ञान से, बलवान् वैराग्य से, तप से युक्त योग से, और तीव्र आत्म-समाधि से,
 
 --- verse 23 ---
 deva:
@@ -204,6 +270,9 @@ deva:
 iast:
 prakṛtiḥ puruṣasyeha dahyamānā tvaharniśam|
 tirobhavitrī śanakairagneryonirivāraṇiḥ||
+en: prakṛti, which is burnt day and night here for the puruṣa, slowly disappears, like the fire-drill which is the womb of fire.
+tel: ఇక్కడ పురుషుని కోసము రాత్రింబవళ్లు దహింపబడు ప్రకృతి, అగ్నికి యోనియైన అరణివలె మెల్లమెల్లగా తిరోహితమగును.
+hi: यहाँ पुरुष के लिये रात-दिन जलाई जानेवाली प्रकृति, अग्नि की योनि अरणि के समान धीरे-धीरे तिरोहित हो जाती है।
 
 --- verse 24 ---
 deva:
@@ -212,6 +281,9 @@ deva:
 iast:
 bhuktabhogā parityaktā dṛṣṭadoṣā ca nityaśaḥ|
 neśvarasyāśubhaṁ dhatte sve mahimni sthitasya ca||
+en: Her enjoyments have been used up, she has been given up, and her faults have been seen always. She brings no ill to the Lord, who stands in his own greatness.
+tel: ఆమె భోగములు అనుభవింపబడినవి, ఆమె పరిత్యజింపబడినది, ఆమె దోషములు ఎల్లవేళ చూడబడినవి. తన మహిమయందు నిలిచిన ఈశ్వరునికి ఆమె అశుభము కలిగించదు.
+hi: उसके भोग भोग लिये गये, वह त्याग दी गयी, और उसके दोष सदा देख लिये गये। अपनी महिमा में स्थित ईश्वर का वह अशुभ नहीं करती।
 
 --- verse 25 ---
 deva:
@@ -220,6 +292,9 @@ deva:
 iast:
 yathā hyapratibuddhasya prasvāpo bahvanarthabhṛt|
 sa eva pratibuddhasya na vai mohāya kalpate||
+en: Sleep brings much harm to the man who has not awakened. That same sleep does not bewilder the man who has awakened.
+tel: మేలుకొననివానికి నిద్ర అనేక అనర్థములను తెచ్చును. అదే నిద్ర మేలుకొనినవానికి మోహము కలిగించదు.
+hi: जो जागा नहीं है, उसके लिये स्वाप बहुत अनर्थ लानेवाला है। वही स्वाप जागे हुए के लिये मोह का कारण नहीं होता।
 
 --- verse 26 ---
 deva:
@@ -228,6 +303,9 @@ deva:
 iast:
 evaṁ viditatattvasya prakṛtirmayi mānasam|
 yuṁjato nāpakuruta ātmārāmasya karhicit||
+en: So prakṛti does no harm at any time to one who has known the truth in this way, who gives his mind to me, and who delights in the self.
+tel: ఇట్లు తత్త్వమును ఎరిగి, మనస్సును నాయందు జోడించి, ఆత్మారాముడైనవానికి ప్రకృతి ఎన్నడును అపకారము చేయదు.
+hi: इस प्रकार तत्त्व को जान लेने पर, मन को मुझमें लगाने पर, और आत्माराम होने पर, प्रकृति कभी अपकार नहीं करती।
 
 --- verse 27 ---
 deva:
@@ -236,6 +314,9 @@ deva:
 iast:
 yadaivamadhyātmarataḥ kālena bahujanmanā|
 sarvatra jātavairāgya ābrahmabhuvanānmuniḥ||
+en: When the sage has thus delighted in the self for a long time, over many births, and detachment has arisen in him towards everything up to the world of Brahmā,
+tel: ఇట్లు అధ్యాత్మమునందు రతుడై, అనేక జన్మల కాలములో, బ్రహ్మలోకము వరకు అన్నిటియందు వైరాగ్యము కలిగిన మునియై,
+hi: इस प्रकार अध्यात्म में रत होकर, बहुत जन्मों के काल में, ब्रह्मलोक तक सब में वैराग्य उत्पन्न हो जाने पर वह मुनि,
 
 --- verse 28 ---
 deva:
@@ -244,6 +325,9 @@ deva:
 iast:
 madbhaktaḥ pratibuddhārtho matprasādena bhūyasā|
 niḥśreyasaṁ svasaṁsthānaṁ kaivalyākhyaṁ madāśrayam||
+en: being my devotee, with the goal now clear to him through my abundant grace, he reaches the highest good, his own abode, which is called kaivalya and rests in me.
+tel: నా భక్తుడై, నా విస్తారమైన అనుగ్రహముచే ప్రయోజనము తెలిసికొని, నిఃశ్రేయసమైన, కైవల్యము అను పేరు కలిగిన, నాయందు ఆశ్రయము కలిగిన తన స్వస్థానమును అతడు పొందును.
+hi: मेरा भक्त होकर, मेरे बहुत अनुग्रह से प्रयोजन जान लेने पर, वह निःश्रेयस, कैवल्य नामवाले और मुझमें आश्रित अपने स्वस्थान को प्राप्त करता है।
 
 --- verse 29 ---
 deva:
@@ -252,6 +336,9 @@ deva:
 iast:
 prāpnotīhāṁjasā dhīraḥ svadṛśā chinnasaṁśayaḥ|
 yadgatvā na nivarteta yogī liṁgādvinirgame||
+en: He reaches it here readily, being steady and having cut his doubts by his own seeing. Going there, the yogin does not return when he leaves the subtle body.
+tel: ధీరుడై, తన దృష్టిచే సంశయములను ఛేదించుకొని, అతడు ఇక్కడే దానిని అంజసా పొందును. అక్కడికి వెళ్ళిన యోగి, లింగము విడిపోయినపిమ్మట మరల తిరిగిరాడు.
+hi: धीर होकर और अपनी दृष्टि से संशय काट लेने पर, वह यहीं अञ्जसा उसे प्राप्त कर लेता है। वहाँ जाकर योगी, लिङ्ग के छूट जाने पर, फिर नहीं लौटता।
 
 --- verse 30 ---
 deva:
@@ -264,9 +351,15 @@ yadā na yogopacitāsu ceto
 māyāsu siddhasya viṣajjate'ṅga|
 ananyahetuṣvatha me gatiḥ syād
 ātyantikī yatra na mṛtyuhāsaḥ||
+en: O dear one, when the mind of one who has gained perfection no longer clings to the powers that yoga has heaped up, which have no other cause than yoga itself, then my state is reached, the final state, where death does not laugh.
+tel: అంగా, యోగముచే పోగుపడిన, యోగము తప్ప వేరు కారణము లేని సిద్ధులయందు సిద్ధుని చిత్తము ఆసక్తి పొందకుండినప్పుడు, అప్పుడు ఆత్యంతికమైన నా గతి కలుగును; అక్కడ మృత్యువు నవ్వదు.
+hi: हे अङ्ग, योग से सञ्चित और योग के अतिरिक्त किसी अन्य कारणवाली न होनेवाली सिद्धियों में सिद्ध का चित्त जब आसक्त नहीं होता, तब मेरी आत्यन्तिक गति प्राप्त होती है, जहाँ मृत्यु की हँसी नहीं है।
 
 --- verse none ---
 deva:
-इति श्रीमद्भागवते महापुराणे पारमहंस्यां संहितायां तृतीयस्कन्धे कापिलेयोपाख्यानेसप्तविंशोऽध्यायः॥ २७॥
+इति श्रीमद्भागवते महापुराणे पारमहंस्यां संहितायां तृतीयस्कन्धे कापिलेयोपाख्याने सप्तविंशोऽध्यायः॥ २७॥
 iast:
-iti śrīmadbhāgavate mahāpurāṇe pāramahaṁsyāṁ saṁhitāyāṁ tṛtīyaskandhe kāpileyopākhyānesaptaviṁśo'dhyāyaḥ|| 27||
+iti śrīmadbhāgavate mahāpurāṇe pāramahaṁsyāṁ saṁhitāyāṁ tṛtīyaskandhe kāpileyopākhyāne saptaviṁśo'dhyāyaḥ|| 27||
+en: Thus ends the twenty-seventh adhyāya, in the story of Kapila, in the third skandha of the Śrīmad Bhāgavata Mahāpurāṇa, the saṁhitā of the paramahaṁsas.
+tel: ఇది శ్రీమద్భాగవత మహాపురాణమునందు, పరమహంసల సంహితయందు, తృతీయస్కంధమునందు కాపిలేయోపాఖ్యానమునందు సప్తవింశాధ్యాయము.
+hi: इस प्रकार श्रीमद्भागवत महापुराण की परमहंसों की संहिता के तृतीय स्कन्ध में, कापिलेय उपाख्यान में सत्ताईसवाँ अध्याय समाप्त हुआ।
