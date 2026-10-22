@@ -9,7 +9,7 @@ Type: Purāṇa (an adhyāya of the Śrīmad Bhāgavata, Skandha 4)
 
 Source / recension: Base text and authority: the Gītā Press, Gorakhpur Śrīmadbhāgavata Mahāpurāṇa with Hindi translation, Part 1 (Gītā Press code 26), archive.org item `shrimadbhagwat-mahapuran-bhag-1`, printed pages 543–545; the PDF page numbers are the printed ones. The PDF carries the typesetter's own text layer in the Chanakya font encoding, and the text was decoded from it by machine with `bin/bhagavata/chanakya.py`, not read off OCR or typed. The decoder was checked against GRETIL over all twelve skandhas before any file was written, and the differences that remain were sampled and found to be readings of the two editions. Second witness: GRETIL's `sa_bhAgavatapurANa.xml` (IAST, contributed by Ulrich Stiehl), a separate editorial lineage, compared verse by verse by machine. The TTD edition with the commentaries of Śrīdhara, Vīrarāghava and Vijayadhvaja (archive.org `Bhagavata_Purana_With_Multiple_Commentaries_TTD_Critical_Edition`) is the third witness where one is needed; it was not read for this file. The IAST was generated mechanically from the Devanāgarī with `bin/dev2iast.py`.
 
-Recension note: Text-only file, written 1 Oct 2026 at the user's instruction to lay down the whole Bhāgavata first: the English, Telugu and Hindi meanings are still to be added, and the witnesses' differences listed here have been recorded by machine and not yet adjudicated. The print is followed throughout. The print numbers 30 verses and GRETIL numbers 30. Of the 30 verses GRETIL has under the same number, 27 agree with the print letter for letter once spacing and the spelling of nasals are set aside; the rest differ: 1, 2, 8. The edition's footnotes give these older printed readings (प्रा० पा०), which are not bracketed into the line: at 12, आससादाथ वै; at 15, पुरीं; at 18, उपानीतं; at 20, दौर्भगेन. Spacing is the print's, as its text layer gives it; in a few places justification has left a space inside a word, and these are still to be closed when the verse is read. The speaker lines (श्रीशुक उवाच and the others) are printed in italic above the verse they introduce, and are given as its first line.
+Recension note: Meanings written 22 Oct 2026 (session S78). The differences between the witnesses listed below were read as the verses were glossed; except where this note says otherwise, each is a spelling, a sandhi or a word order of the two editions, none of them changes the sense, and the print's reading therefore stands unbracketed. The print is followed throughout. The print numbers 30 verses and GRETIL numbers 30. Of the 30 verses GRETIL has under the same number, 27 agree with the print letter for letter once spacing and the spelling of nasals are set aside; the rest differ: 1, 2, 8. The edition's footnotes give these older printed readings (प्रा० पा०), which are not bracketed into the line: at 12, आससादाथ वै; at 15, पुरीं; at 18, उपानीतं; at 20, दौर्भगेन. Spacing is the print's, as its text layer gives it. The speaker lines (श्रीशुक उवाच and the others) are printed in italic above the verse they introduce, and are given as its first line. A footnote's numeral keys it to one word, and which word that is cannot be told from the note alone, so those readings stay unbracketed until the page itself is read. One word was put right as the verses were read: at verse 8 the print's text layer had lost the space between पंचालपतिः and पुत्रान्, and it is restored here. GRETIL reads the two words apart. At verse 29 the print reads याहि, an imperative, where GRETIL divides the same letters as या हि; the print's reading stands.
 
 Verse count: 30, plus the closing colophon printed unnumbered.
 
@@ -24,6 +24,9 @@ iast:
 nārada uvāca
 itthaṁ puraṁjanaṁ samyagvaśamānīya vibhramaiḥ|
 puraṁjanī mahārāja reme ramayatī patim||
+en: Nārada said: Having thus brought Purañjana fully under her power by her charms, Purañjanī, O great king, took her pleasure while she gave pleasure to her husband.
+tel: నారదుడు పలికెను: ఓ మహారాజా, ఈ విధముగా విలాసములచే పురంజనుని పూర్తిగా తన వశము చేసికొని, పురంజని తన భర్తను రమింపజేయుచు తాను రమించెను.
+hi: नारद ने कहा: हे महाराज, इस प्रकार विभ्रमों से पुरंजन को पूरी तरह अपने वश में करके, पुरंजनी अपने पति को रमाती हुई स्वयं भी रमण करती रही।
 
 --- verse 2 ---
 deva:
@@ -32,6 +35,9 @@ deva:
 iast:
 sa rājā mahiṣīṁ rājan susnātāṁ rucirānanām|
 kṛtasvastyayanāṁ tṛptāmabhyanandadupāgatām||
+en: O king, that king welcomed the queen when she came to him, well bathed, with a bright face, having performed the auspicious rite, and satisfied.
+tel: ఓ రాజా, చక్కగా స్నానము చేసి, ప్రకాశించు ముఖముతో, స్వస్త్యయనమును చేసి, తృప్తి చెంది తన దగ్గరకు వచ్చిన మహిషిని ఆ రాజు అభినందించెను.
+hi: हे राजन्, अच्छी तरह स्नान किये हुए, प्रसन्न मुख वाली, स्वस्त्ययन कर चुकी और तृप्त हुई महिषी जब उसके पास आयी, तब उस राजा ने उसका अभिनन्दन किया।
 
 --- verse 3 ---
 deva:
@@ -44,6 +50,9 @@ tayopagūḍhaḥ parirabdhakandharo
 raho'numantrairapakṛṣṭacetanaḥ|
 na kālaraṁho bubudhe duratyayaṁ
 divā niśeti pramadāparigrahaḥ||
+en: Held in her embrace, his neck clasped by her, his mind drawn away by her words spoken in private, he who was in the hold of a woman did not know the course of time, which none can escape, nor whether it was day or night.
+tel: ఆమె కౌగిలిలో ఉండి, ఆమెచే మెడ చుట్టబడి, ఏకాంతములో ఆమె పలికిన మాటలచే మనస్సు లాగబడి, స్త్రీ వశమైన ఆ రాజు దాటశక్యము కాని కాలపు వేగమును ఎరుగలేదు; పగలా రాత్రియా అనియు ఎరుగలేదు.
+hi: उसके आलिङ्गन में रहकर, उसके द्वारा गला घेरे जाकर, एकान्त में कही गयी उसकी बातों से जिसका चित्त खिंच गया था, वह स्त्री के वश में पड़ा राजा दुर्लङ्घ्य काल के वेग को न जान सका, और यह भी न जाना कि दिन है या रात।
 
 --- verse 4 ---
 deva:
@@ -56,6 +65,9 @@ iast:
 mahārhatalpe mahiṣībhujopadhiḥ|
 tāmeva vīro manute paraṁ yata-
 stamo'bhibhūto na nijaṁ paraṁ ca yat||
+en: Lying upon a very costly couch, his pride swollen, holding himself great, with the queen's arm for his pillow, that hero held her alone to be the highest, for, overcome by darkness, he knew neither his own self nor what is above it.
+tel: మిక్కిలి విలువైన పరుపుపై పరుండి, మదము పెరిగి, తనను గొప్పవానిగా తలచి, మహిషి చేతిని తలగడగా చేసికొని, ఆ వీరుడు ఆమెనే పరమమని భావించెను; తమస్సుచే కప్పబడి, తన ఆత్మను, దానికంటె పరమమైనదానిని ఎరుగలేదు.
+hi: बहुत मूल्यवान् शय्या पर लेटे हुए, बढ़े हुए मद वाले, अपने को बड़ा माननेवाले उस वीर ने महिषी की भुजा को तकिया बनाकर उसी को परम माना; क्योंकि तमोगुण से ढका हुआ वह न अपने आत्मा को जानता था और न उससे परे जो है उसे।
 
 --- verse 5 ---
 deva:
@@ -64,6 +76,9 @@ deva:
 iast:
 tayaivaṁ ramamāṇasya kāmakaśmalacetasaḥ|
 kṣaṇārdhamiva rājendra vyatikrāntaṁ navaṁ vayaḥ||
+en: While he thus enjoyed himself with her, his mind stained by desire, his fresh youth passed away like half a moment, O best of kings.
+tel: ఈ విధముగా ఆమెతో రమించుచు, కామముచే మనస్సు మలినమైన అతనికి, ఓ రాజేంద్రా, నవయవ్వనము అర్ధక్షణమువలె గడచిపోయెను.
+hi: हे राजेन्द्र, इस प्रकार उसके साथ रमण करते हुए, काम से मलिन चित्त वाले उसकी नयी अवस्था आधे क्षण के समान बीत गयी।
 
 --- verse 6 ---
 deva:
@@ -72,6 +87,9 @@ deva:
 iast:
 tasyāmajanayatputrān puraṁjanyāṁ puraṁjanaḥ|
 śatānyekādaśa virāḍāyuṣo'rdhamathātyagāt||
+en: Purañjana begot eleven hundred sons in that Purañjanī. Then, O Virāṭ, half of his life was spent.
+tel: పురంజనుడు ఆ పురంజనియందు పదునొకండు వందల కుమారులను కలిగించెను. ఓ విరాట్టా, అంతలో అతని ఆయువులో సగము గడచిపోయెను.
+hi: पुरंजन ने उस पुरंजनी में ग्यारह सौ पुत्र उत्पन्न किये। हे विराट्, तब तक उसकी आयु का आधा भाग बीत गया।
 
 --- verse 7 ---
 deva:
@@ -80,14 +98,20 @@ deva:
 iast:
 duhitṝrdaśottaraśataṁ pitṛmātṛyaśaskarīḥ|
 śīlaudāryaguṇopetāḥ pauraṁjanyaḥ prajāpate||
+en: O Prajāpati, the daughters of Purañjana were a hundred and ten. They spread the fame of their father and mother, and they had good character, generosity and other virtues.
+tel: ఓ ప్రజాపతీ, పురంజనుని కుమార్తెలు నూట పదిమంది. వారు తండ్రి తల్లుల కీర్తిని పెంచువారు; శీలము, ఔదార్యము మొదలైన గుణములు కలవారు.
+hi: हे प्रजापते, पुरंजन की पुत्रियाँ एक सौ दस थीं। वे पिता और माता की कीर्ति बढ़ानेवाली थीं, और शील, औदार्य आदि गुणों से युक्त थीं।
 
 --- verse 8 ---
 deva:
-स पंचालपतिःपुत्रान् पितृवंशविवर्धनान्।
+स पंचालपतिः पुत्रान् पितृवंशविवर्धनान्।
 दारैः संयोजयामास दुहितॄः सदृशैर्वरैः॥
 iast:
-sa paṁcālapatiḥputrān pitṛvaṁśavivardhanān|
+sa paṁcālapatiḥ putrān pitṛvaṁśavivardhanān|
 dāraiḥ saṁyojayāmāsa duhitṝḥ sadṛśairvaraiḥ||
+en: That lord of the Pañcālas joined his sons, who increased their father's line, with wives, and his daughters with husbands who were their equals.
+tel: ఆ పంచాలపతి, తండ్రి వంశమును పెంచు తన కుమారులకు భార్యలను, కుమార్తెలకు తగిన వరులను కూర్చెను.
+hi: उस पञ्चालपति ने पिता के वंश को बढ़ानेवाले अपने पुत्रों का स्त्रियों से, और पुत्रियों का उनके योग्य वरों से सम्बन्ध कराया।
 
 --- verse 9 ---
 deva:
@@ -96,6 +120,9 @@ deva:
 iast:
 putrāṇāṁ cābhavan putrā ekaikasya śataṁ śatam|
 yairvai pauraṁjano vaṁśaḥ paṁcāleṣu samedhitaḥ||
+en: And to the sons there were born sons, a hundred to each one. By them the line of Purañjana grew great among the Pañcālas.
+tel: ఆ కుమారులకు ఒక్కొక్కరికి నూరు నూరు కుమారులు కలిగిరి. వారిచే పౌరంజన వంశము పంచాలదేశములలో మిక్కిలి వృద్ధి చెందెను.
+hi: उन पुत्रों के भी एक-एक के सौ-सौ पुत्र हुए। उनसे पौरंजन वंश पञ्चाल देशों में बहुत बढ़ गया।
 
 --- verse 10 ---
 deva:
@@ -104,6 +131,9 @@ deva:
 iast:
 teṣu tadrikthahāreṣu gṛhakośānujīviṣu|
 nirūḍhena mamatvena viṣayeṣvanvabadhyata||
+en: Through a deep-rooted sense of ownership in them, who took his wealth and lived upon his house and his treasury, he became bound to the objects of the senses.
+tel: తన సంపదను తీసికొను, ఇంటిని, కోశమును ఆశ్రయించి జీవించు వారియందు దృఢముగా పాతుకొనిన మమకారముచే, అతడు విషయములయందు బంధింపబడెను.
+hi: उसका धन लेनेवाले और उसके घर तथा कोश के सहारे जीनेवाले उन लोगों में गहरी जड़ पकड़े हुए ममत्व के कारण वह विषयों में बँध गया।
 
 --- verse 11 ---
 deva:
@@ -112,6 +142,9 @@ deva:
 iast:
 īje ca kratubhirghorairdīkṣitaḥ paśumārakaiḥ|
 devān pitṝn bhūtapatīnnānākāmo yathā bhavān||
+en: Being consecrated for them, he worshipped the gods, the forefathers and the lords of beings with cruel sacrifices in which animals are killed, holding many desires, as you do.
+tel: దీక్ష తీసికొని, పశువులను చంపు ఘోరమైన యజ్ఞములతో దేవతలను, పితృదేవతలను, భూతపతులను అతడు ఆరాధించెను; మీవలెనే అనేక కోరికలు కలిగి ఉండెను.
+hi: दीक्षा लेकर उसने पशुओं का वध करनेवाले घोर यज्ञों से देवताओं, पितरों और भूतपतियों की पूजा की, और आप ही की तरह अनेक कामनाएँ रखीं।
 
 --- verse 12 ---
 deva:
@@ -120,6 +153,9 @@ deva:
 iast:
 yukteṣvevaṁ pramattasya kuṭumbāsaktacetasaḥ|
 āsasāda sa vai kālo yo'priyaḥ priyayoṣitām||
+en: While he was thus heedless among those who were joined to him, his mind attached to his family, that time came upon him which is not welcome to those who love women.
+tel: ఈ విధముగా తనవారియందు మైమరచి, కుటుంబమునందు మనస్సు తగిలిన అతనికి, స్త్రీలయందు ప్రీతి కలవారికి ఇష్టము కాని ఆ కాలము వచ్చెను.
+hi: इस प्रकार अपने स्वजनों में प्रमत्त और कुटुम्ब में आसक्त चित्त वाले उस पर वह काल आ पहुँचा, जो स्त्रियों से प्रेम करनेवालों को प्रिय नहीं है।
 
 --- verse 13 ---
 deva:
@@ -128,6 +164,9 @@ deva:
 iast:
 caṇḍavega iti khyāto gandharvādhipatirnṛpa|
 gandharvāstasya balinaḥ ṣaṣṭyuttaraśatatrayam||
+en: O king, there was a lord of the Gandharvas, well known by the name Caṇḍavega. He had three hundred and sixty mighty Gandharvas.
+tel: ఓ నృపా, చండవేగుడు అని ప్రసిద్ధుడైన గంధర్వాధిపతి ఒకడు ఉండెను. అతనికి మూడు వందల అరువది బలవంతులైన గంధర్వులు ఉండిరి.
+hi: हे नृप, चण्डवेग नाम से प्रसिद्ध एक गन्धर्वाधिपति था। उसके तीन सौ साठ बलवान् गन्धर्व थे।
 
 --- verse 14 ---
 deva:
@@ -136,6 +175,9 @@ deva:
 iast:
 gandharvyastādṛśīrasya maithunyaśca sitāsitāḥ|
 parivṛttyā vilumpanti sarvakāmavinirmitām||
+en: He had as many Gandharva women also, white and black, who were their consorts. They go round in turn and plunder the city that is made of all enjoyments.
+tel: అతనికి తెల్లనివారు, నల్లనివారు అయిన అన్నియే గంధర్వ స్త్రీలును ఉండిరి; వారు ఆ గంధర్వుల భార్యలు. వారు వంతుల ప్రకారము తిరిగి, సమస్త భోగములతో నిర్మింపబడిన ఆ నగరమును దోచుకొనుచున్నారు.
+hi: उसके उतनी ही गन्धर्व स्त्रियाँ भी थीं, श्वेत और श्याम, जो उनकी सहचरी थीं। वे बारी-बारी से घूमकर सब भोगों से बनी हुई उस नगरी को लूटती हैं।
 
 --- verse 15 ---
 deva:
@@ -144,6 +186,9 @@ deva:
 iast:
 te caṇḍavegānucarāḥ puraṁjanapuraṁ yadā|
 hartumārebhire tatra pratyaṣedhatprajāgaraḥ||
+en: When those followers of Caṇḍavega began to carry off the city of Purañjana, Prajāgara there held them back.
+tel: ఆ చండవేగుని అనుచరులు పురంజనుని నగరమును కొల్లగొట్టుటకు మొదలుపెట్టినపుడు, అక్కడ ప్రజాగరుడు వారిని అడ్డుకొనెను.
+hi: जब वे चण्डवेग के अनुचर पुरंजन की नगरी को हरने लगे, तब वहाँ प्रजागर ने उन्हें रोका।
 
 --- verse 16 ---
 deva:
@@ -152,6 +197,9 @@ deva:
 iast:
 sa saptabhiḥ śataireko viṁśatyā ca śataṁ samāḥ|
 puraṁjanapurādhyakṣo gandharvairyuyudhe balī||
+en: That mighty warden of the city of Purañjana fought alone with the seven hundred and twenty Gandharvas for a hundred years.
+tel: పురంజనుని నగరమునకు అధ్యక్షుడైన ఆ బలవంతుడు ఒక్కడే ఏడు వందల ఇరువది గంధర్వులతో నూరు సంవత్సరములు యుద్ధము చేసెను.
+hi: पुरंजन की नगरी के अध्यक्ष उस बलवान् ने अकेले ही सात सौ बीस गन्धर्वों से सौ वर्ष तक युद्ध किया।
 
 --- verse 17 ---
 deva:
@@ -160,6 +208,9 @@ deva:
 iast:
 kṣīyamāṇe svasambandhe ekasmin bahubhiryudhā|
 cintāṁ parāṁ jagāmārtaḥ sarāṣṭrapurabāndhavaḥ||
+en: As his one kinsman was being worn down in battle by many, he, with his kingdom, his city and his kinsmen, was afflicted and fell into great anxiety.
+tel: తనవాడైన ఒక్కడు అనేకులచే యుద్ధములో క్షీణించుచుండగా, రాష్ట్రముతో, నగరముతో, బంధువులతో కూడిన అతడు ఆర్తుడై మిక్కిలి చింతను పొందెను.
+hi: अपना एक ही सम्बन्धी बहुतों के द्वारा युद्ध में क्षीण होने लगा, तब राष्ट्र, नगर और बन्धुओं के सहित वह आर्त होकर बड़ी चिन्ता में पड़ गया।
 
 --- verse 18 ---
 deva:
@@ -168,6 +219,9 @@ deva:
 iast:
 sa eva puryāṁ madhubhuk paṁcāleṣu svapārṣadaiḥ|
 upanītaṁ baliṁ gṛhṇan strījito nāvidadbhayam||
+en: He, enjoying his pleasures in the city among the Pañcālas, and taking through his attendants the tribute brought to him, was ruled by his wife and did not perceive the danger.
+tel: పంచాలదేశములలోని ఆ నగరమునందు భోగములను అనుభవించుచు, తన పరిజనులచే తెచ్చిన కప్పమును స్వీకరించుచు, స్త్రీవశుడైన అతడు భయమును గుర్తించలేదు.
+hi: पञ्चाल देशों की उस नगरी में भोग भोगता हुआ, और अपने पार्षदों के द्वारा लाये गये कर को लेता हुआ वह स्त्री के वश में था, और भय को न जान सका।
 
 --- verse 19 ---
 deva:
@@ -176,6 +230,9 @@ deva:
 iast:
 kālasya duhitā kācittrilokīṁ varamicchatī|
 paryaṭantī na barhiṣman pratyanandata kaścana||
+en: O Barhiṣmat, there was a certain daughter of Kāla who wandered through the three worlds wishing for a husband, and no one welcomed her.
+tel: ఓ బర్హిష్మంతుడా, కాలునికి ఒక కుమార్తె ఉండెను. ఆమె భర్తను కోరి ముల్లోకములను తిరుగుచుండెను; ఎవ్వరును ఆమెను ఆదరించలేదు.
+hi: हे बर्हिष्मन्, काल की एक कन्या थी, जो पति की इच्छा से तीनों लोकों में घूमती रही; किसी ने उसका अभिनन्दन नहीं किया।
 
 --- verse 20 ---
 deva:
@@ -184,6 +241,9 @@ deva:
 iast:
 daurbhāgyenātmano loke viśrutā durbhageti sā|
 yā tuṣṭā rājarṣaye tu vṛtādātpūrave varam||
+en: Because of her own ill fortune she was known in the world as Durbhagā. Having been chosen by the royal sage Pūru, she was pleased and gave him a boon.
+tel: తన దౌర్భాగ్యమువలన ఆమె లోకములో దుర్భగ అని ప్రసిద్ధి చెందెను. పూరుడు అను రాజర్షిచే స్వీకరింపబడి, ఆమె ప్రసన్నురాలై అతనికి వరమును ఇచ్చెను.
+hi: अपने दुर्भाग्य के कारण वह लोक में दुर्भगा नाम से प्रसिद्ध हुई। राजर्षि पूरु ने उसे स्वीकार किया, तब वह प्रसन्न हुई और उसने उसे वर दिया।
 
 --- verse 21 ---
 deva:
@@ -192,6 +252,9 @@ deva:
 iast:
 kadācidaṭamānā sā brahmalokānmahīṁ gatam|
 vavre bṛhadvrataṁ māṁ tu jānatī kāmamohitā||
+en: Once, as she was wandering, she came upon me, who had come down to the earth from Brahmaloka. Though she knew me to be of the great vow, she was deluded by desire and chose me.
+tel: ఒకప్పుడు ఆమె తిరుగుచు, బ్రహ్మలోకమునుండి భూమికి వచ్చిన నన్ను కలిసెను. నేను బృహద్వ్రతుడనని తెలిసియు, కామముచే మోహితురాలై ఆమె నన్ను వరించెను.
+hi: एक बार घूमती हुई वह मुझे मिली, जो ब्रह्मलोक से पृथ्वी पर आया था। मैं बृहद्व्रत हूँ, यह जानते हुए भी उसने काम से मोहित होकर मुझे वर लिया।
 
 --- verse 22 ---
 deva:
@@ -200,6 +263,9 @@ deva:
 iast:
 mayi saṁrabhya vipulamadācchāpaṁ suduḥsaham|
 sthātumarhasi naikatra madyācñāvimukho mune||
+en: She was angry with me, and in her great pride she gave a curse very hard to bear: O sage, you have turned away from my request, and therefore you shall not be able to stay in one place.
+tel: ఆమె నాపై కోపించి, గొప్ప మదముతో మిక్కిలి సహింపరాని శాపమును ఇచ్చెను: ఓ మునీ, నా కోరికను తిరస్కరించినందున నీవు ఒకే చోట ఉండజాలవు.
+hi: उसने मुझ पर क्रुद्ध होकर, बड़े मद से अत्यन्त दुःसह शाप दिया: हे मुने, तुम मेरी याचना से विमुख हुए हो, इसलिये एक स्थान पर नहीं ठहर सकोगे।
 
 --- verse 23 ---
 deva:
@@ -208,6 +274,9 @@ deva:
 iast:
 tato vihatasaṅkalpā kanyakā yavaneśvaram|
 mayopadiṣṭamāsādya vavre nāmnā bhayaṁ patim||
+en: Then the maiden, her resolve broken, went to the lord of the Yavanas, whom I had pointed out to her, and chose as her husband the one whose name is Bhaya.
+tel: పిమ్మట సంకల్పము విరిగిన ఆ కన్య, నేను చూపిన యవనేశ్వరుని చేరి, భయము అను పేరు కలవానిని భర్తగా వరించెను.
+hi: तब संकल्प टूट जाने पर वह कन्या, मेरे बताये हुए यवनेश्वर के पास जाकर, भय नाम वाले को पति रूप में चुना।
 
 --- verse 24 ---
 deva:
@@ -216,6 +285,9 @@ deva:
 iast:
 ṛṣabhaṁ yavanānāṁ tvāṁ vṛṇe vīrepsitaṁ patim|
 saṅkalpastvayi bhūtānāṁ kṛtaḥ kila na riṣyati||
+en: I choose you, the bull among the Yavanas, as my husband, you whom heroes desire. A purpose that beings set upon you surely never fails.
+tel: యవనులలో శ్రేష్ఠుడైన, వీరులు కోరు నిన్ను భర్తగా నేను వరించుచున్నాను. ప్రాణులు నీయందు చేసిన సంకల్పము నిశ్చయముగా వ్యర్థము కాదు.
+hi: यवनों में श्रेष्ठ, वीरों के द्वारा चाहे गये आपको मैं पति रूप में वरती हूँ। प्राणियों का आप में किया हुआ संकल्प निश्चय ही व्यर्थ नहीं होता।
 
 --- verse 25 ---
 deva:
@@ -224,6 +296,9 @@ deva:
 iast:
 dvāvimāvanuśocanti bālāvasadavagrahau|
 yallokaśāstropanataṁ na rāti na tadicchati||
+en: These two are childish and hold to what is not right, and they come to sorrow: the one who does not give what the world and the śāstras approve, and the one who does not wish for it.
+tel: ఈ ఇద్దరు బాలబుద్ధి కలవారు, అసత్తును పట్టుకొనినవారు, శోకమును పొందుదురు: లోకము, శాస్త్రము అంగీకరించినదానిని ఇవ్వనివాడు, దానిని కోరనివాడు.
+hi: ये दोनों बालबुद्धि और असत् का आग्रह करनेवाले शोक करते हैं: जो लोक और शास्त्र से अनुमत वस्तु को नहीं देता, और जो उसे नहीं चाहता।
 
 --- verse 26 ---
 deva:
@@ -232,6 +307,9 @@ deva:
 iast:
 atho bhajasva māṁ bhadra bhajantīṁ me dayāṁ kuru|
 etāvān pauruṣo dharmo yadārtānanukampate||
+en: Therefore accept me, O good one, and show mercy to me, for I seek you. This much is the duty of a man, that he has compassion upon those in distress.
+tel: అందుచేత, ఓ భద్రుడా, నన్ను స్వీకరింపుము; నిన్ను ఆశ్రయించిన నాపై దయ చూపుము. ఆర్తులయందు కరుణ చూపుటయే పురుషుని ధర్మము.
+hi: इसलिये हे भद्र, मुझे स्वीकार कीजिये, और आपको चाहनेवाली मुझ पर दया कीजिये। आर्तों पर करुणा करना ही पुरुष का धर्म है।
 
 --- verse 27 ---
 deva:
@@ -240,6 +318,9 @@ deva:
 iast:
 kālakanyoditavaco niśamya yavaneśvaraḥ|
 cikīrṣurdevaguhyaṁ sa sasmitaṁ tāmabhāṣata||
+en: Hearing the words spoken by Kālakanyā, the lord of the Yavanas wished to carry out the hidden purpose of the gods, and he smiled and spoke to her.
+tel: కాలకన్య పలికిన మాటలను విని, యవనేశ్వరుడు దేవతల గుప్తమైన కార్యమును చేయగోరి, చిరునవ్వుతో ఆమెతో ఇట్లు పలికెను.
+hi: कालकन्या के कहे वचन सुनकर यवनेश्वर ने देवताओं के गुप्त कार्य को करने की इच्छा से मुस्कराते हुए उससे कहा।
 
 --- verse 28 ---
 deva:
@@ -248,6 +329,9 @@ deva:
 iast:
 mayā nirūpitastubhyaṁ patirātmasamādhinā|
 nābhinandati loko'yaṁ tvāmabhadrāmasammatām||
+en: By meditation within myself I have found out a husband for you. This world does not welcome you, for you are not auspicious and are not approved by it.
+tel: ఆత్మసమాధిచే నేను నీకు భర్తను నిర్ణయించితిని. నీవు అభద్రురాలవు, ఈ లోకము అంగీకరించనిదానవు; అందుచేత ఈ లోకము నిన్ను అభినందించదు.
+hi: आत्मसमाधि के द्वारा मैंने तुम्हारे लिये पति का निरूपण कर लिया है। तुम अभद्रा और असम्मत हो, इसलिये यह लोक तुम्हारा अभिनन्दन नहीं करता।
 
 --- verse 29 ---
 deva:
@@ -256,6 +340,9 @@ deva:
 iast:
 tvamavyaktagatirbhuṅkṣva lokaṁ karmavinirmitam|
 yāhi me pṛtanāyuktā prajānāśaṁ praṇeṣyasi||
+en: Go unseen in your movement, and enjoy this world that is made by karma. Go joined with my army, and you shall lead the people to destruction.
+tel: ఎవరికిని కనబడని గతితో నీవు కర్మముచే నిర్మింపబడిన ఈ లోకమును అనుభవింపుము. నా సేనతో కూడి వెళ్ళుము; ప్రజల నాశనమును నడిపింతువు.
+hi: तुम अव्यक्त गति से कर्म से बने हुए इस लोक को भोगो। मेरी सेना के साथ जाओ, और तुम प्रजा का नाश करती जाओगी।
 
 --- verse 30 ---
 deva:
@@ -264,9 +351,15 @@ deva:
 iast:
 prajvāro'yaṁ mama bhrātā tvaṁ ca me bhaginī bhava|
 carāmyubhābhyāṁ loke'sminnavyakto bhīmasainikaḥ||
+en: This Prajvāra is my brother, and you become my sister. With you both I shall move about in this world unseen, with my dreadful soldiers.
+tel: ఈ ప్రజ్వారుడు నా సోదరుడు; నీవు నా సోదరివి కమ్ము. మీ ఇరువురితో కూడి, భయంకరమైన సైనికులతో, కనబడకుండ ఈ లోకమునందు నేను తిరుగుదును.
+hi: यह प्रज्वार मेरा भाई है, और तुम मेरी बहिन बनो। तुम दोनों के साथ मैं भयंकर सैनिकों को लेकर इस लोक में अव्यक्त रूप से विचरूँगा।
 
 --- verse none ---
 deva:
 इति श्रीमद्भागवते महापुराणे पारमहंस्यां संहितायां चतुर्थस्कन्धे पुरंजनोपाख्याने सप्तविंशोऽध्यायः॥ २७॥
 iast:
 iti śrīmadbhāgavate mahāpurāṇe pāramahaṁsyāṁ saṁhitāyāṁ caturthaskandhe puraṁjanopākhyāne saptaviṁśo'dhyāyaḥ|| 27||
+en: Thus ends the twenty-seventh adhyāya in the fourth skandha of the Śrīmad Bhāgavata Mahāpurāṇa, the saṁhitā of the paramahaṁsas, in the story of Purañjana.
+tel: ఇది శ్రీమద్భాగవత మహాపురాణమునందు, పరమహంసల సంహితయందు, చతుర్థస్కంధమునందు, పురంజనోపాఖ్యానమునందు సప్తవింశాధ్యాయము.
+hi: इस प्रकार श्रीमद्भागवत महापुराण की परमहंसों की संहिता के चतुर्थ स्कन्ध में, पुरंजन के उपाख्यान में सत्ताईसवाँ अध्याय समाप्त हुआ।
