@@ -97,7 +97,7 @@ code { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: .
   <div class="rail">
     <div class="ver">0.9.112</div>
     <div class="date">22 October 2026</div>
-    <div class="rail-note">The almanac measured against a published one, minute by minute, and two of the three faults it found set right.</div>
+    <div class="rail-note">The almanac measured against a published one, minute by minute, and the three faults it found set right.</div>
   </div>
   <div class="release-body">
     <h2 class="release-title">The pañcāṅga, checked to the minute</h2>
@@ -114,9 +114,8 @@ code { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: .
       <p>In the pūrṇimānta reckoning the dark fortnight takes the next month's name, and the engine stepped to the next name without asking whether the month it was leaving was adhika. The dark half of adhika Jyeṣṭha 2026 was therefore named Āṣāḍha, a month and a half early, where the published almanac keeps it Adhika Jyeṣṭha. An adhika month now keeps its own name through both fortnights in both reckonings, and the dark half of the month before it is the plain nija name, as Dṛk Pañcāṅga prints it.</p>
     </div>
     <div class="entry">
-      <div class="entry-head"><span class="tag tag-note">Open</span><h3>Saṅkrānti instants run ten to sixteen minutes early</h3></div>
-      <p>All four saṅkrāntis checked fall on the right civil day, but their instants are ten to sixteen minutes ahead of the published ones. About twenty-two arcseconds of that is a constant difference in the Lahiri ayanāṁśa's epoch value, which did not follow the nutation and so is not a missing term; the rest is the short solar series, which JPL shows running up to twenty-eight arcseconds ahead of the true sun. Settling the minute needs the ayanāṁśa fixed against the Indian Astronomical Ephemeris rather than against a website, and a fuller sun. Left open: the date is what the festival turns on, and the date is right.</p>
-    </div>
+      <div class="entry-head"><span class="tag tag-fix">Fixed</span><h3>The sun itself, and the ayanāṁśa, brought to the printed standard</h3></div>
+      <p>All four saṅkrāntis checked fell on the right civil day, but their instants ran ten to sixteen minutes ahead of the published ones. Two causes, both in the ephemeris. The sun was the short series of Meeus's chapter 25, good to a hundredth of a degree — a quarter of an hour at the sun's pace, and measured at up to 33″ against JPL Horizons; it is now the chapter 32 series (VSOP87 for the earth, truncated), which sits within 0.6″ of JPL on every one of 74 dates across 2025–2028. And the Lahiri ayanāṁśa was the mean value alone, where the Rashtriya Pañcāṅga prints the true one, nutation included: against its 24°12′35″ on 1 Caitra Śaka 1947 and 24°13′55″ on 1 Bhādra 1948 the engine read 2″ and 11″ low, the gap following the nutation; with the nutation added it reproduces both to within 2″. Tithi ends moved a few seconds earlier across the whole check and stay within two minutes of Dṛk Pañcāṅga everywhere. The saṅkrānti instants now stand four to six minutes before Dṛk Pañcāṅga's, which is where a sun agreeing with JPL and an ayanāṁśa agreeing with the Rashtriya Pañcāṅga lands; the printed Rashtriya Pañcāṅga's own saṅkrānti instants could not be reached online to close the last few minutes, and that is where the question now rests.</p>
   </div>
 </section>
 
