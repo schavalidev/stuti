@@ -9,7 +9,7 @@ Type: Purāṇa (an adhyāya of the Śrīmad Bhāgavata, Skandha 4)
 
 Source / recension: Base text and authority: the Gītā Press, Gorakhpur Śrīmadbhāgavata Mahāpurāṇa with Hindi translation, Part 1 (Gītā Press code 26), archive.org item `shrimadbhagwat-mahapuran-bhag-1`, printed pages 434–442; the PDF page numbers are the printed ones. The PDF carries the typesetter's own text layer in the Chanakya font encoding, and the text was decoded from it by machine with `bin/bhagavata/chanakya.py`, not read off OCR or typed. The decoder was checked against GRETIL over all twelve skandhas before any file was written, and the differences that remain were sampled and found to be readings of the two editions. Second witness: GRETIL's `sa_bhAgavatapurANa.xml` (IAST, contributed by Ulrich Stiehl), a separate editorial lineage, compared verse by verse by machine. The TTD edition with the commentaries of Śrīdhara, Vīrarāghava and Vijayadhvaja (archive.org `Bhagavata_Purana_With_Multiple_Commentaries_TTD_Critical_Edition`) is the third witness where one is needed; it was not read for this file. The IAST was generated mechanically from the Devanāgarī with `bin/dev2iast.py`.
 
-Recension note: Text-only file, written 1 Oct 2026 at the user's instruction to lay down the whole Bhāgavata first: the English, Telugu and Hindi meanings are still to be added, and the witnesses' differences listed here have been recorded by machine and not yet adjudicated. The print is followed throughout. The print numbers 61 verses and GRETIL numbers 61. Of the 61 verses GRETIL has under the same number, 44 agree with the print letter for letter once spacing and the spelling of nasals are set aside; the rest differ: 6, 14, 15, 20, 21, 25, 26, 31, 36, 37, 41, 43, 44, 46, 47, 48, 58. The edition's footnotes give these older printed readings (प्रा० पा०), which are not bracketed into the line: at 2, परेश; at 2, दण्डस्तु विधृतो; at 4, जक्षिति; at 9, शीर्ष्णीह; at 48, सान्निध्ये; at 52, देहात्मबुद्धिर्भूतानि; at 53, ण्यादिना; at 55, सान्निध्ये; at 56, देहात्मबुद्धिर्भूतानि; at 60, ण्यादिना. Spacing is the print's, as its text layer gives it; in a few places justification has left a space inside a word, and these are still to be closed when the verse is read. The speaker lines (श्रीशुक उवाच and the others) are printed in italic above the verse they introduce, and are given as its first line.
+Recension note: Meanings written 22 Oct 2026 (session S78). The differences between the witnesses listed below were read as the verses were glossed; except where this note says otherwise, each is a spelling, a sandhi or a word order of the two editions, none of them changes the sense, and the print's reading therefore stands unbracketed. The print is followed throughout. The print numbers 61 verses and GRETIL numbers 61. Of the 61 verses GRETIL has under the same number, 44 agree with the print letter for letter once spacing and the spelling of nasals are set aside; the rest differ: 6, 14, 15, 20, 21, 25, 26, 31, 36, 37, 41, 43, 44, 46, 47, 48, 58. The edition's footnotes give these older printed readings (प्रा० पा०), which are not bracketed into the line: at 2, परेश; at 2, दण्डस्तु विधृतो; at 4, जक्षिति; at 9, शीर्ष्णीह; at 48, सान्निध्ये; at 52, देहात्मबुद्धिर्भूतानि; at 53, ण्यादिना; at 55, सान्निध्ये; at 56, देहात्मबुद्धिर्भूतानि; at 60, ण्यादिना. Spacing is the print's, as its text layer gives it. The speaker lines (श्रीशुक उवाच and the others) are printed in italic above the verse they introduce, and are given as its first line. A footnote's numeral keys it to one word, and which word that is cannot be told from the note alone, so those readings stay unbracketed until the page itself is read. Two words were put right as the verses were read. At verse 20 justification had left a space inside अर्ककिरीटजुष्टो, and at verse 59 inside आवृङ्क्ते; both are closed here, and GRETIL reads each word whole. At verse 30 the print writes नात्मन् श्रितं with a space where GRETIL has nātman-śritaṁ as one compound. आत्मन् is a readable word form and the print prints such finals separately elsewhere, so the space is left as the print gives it. Verse 56 is printed in three pādas, and is given as the print has it.
 
 Verse count: 61, plus the closing colophon printed unnumbered.
 
@@ -24,6 +24,9 @@ iast:
 maitreya uvāca
 ityajenānunītena bhavena parituṣyatā|
 abhyadhāyi mahābāho prahasya śrūyatāmiti||
+en: Maitreya said: Aja asked him in this way, and Bhava was pleased. You of mighty arms, he smiled and said, "Listen."
+tel: మైత్రేయుడు పలికెను: అజుడు ఇట్లు ప్రార్థించగా భవుడు సంతోషించెను. మహాబాహూ, ఆయన నవ్వి "వినుడు" అని పలికెను.
+hi: मैत्रेय ने कहा: अज ने इस प्रकार अनुनय किया और भव सन्तुष्ट हुए। हे महाबाहो! वे हँसकर बोले, "सुनिए।"
 
 --- verse 2 ---
 deva:
@@ -34,6 +37,9 @@ iast:
 śrīmahādeva uvāca
 nāghaṁ prajeśa bālānāṁ varṇaye nānucintaye|
 devamāyābhibhūtānāṁ daṇḍastatra dhṛto mayā||
+en: Śrī Mahādeva said: "Lord of creatures, I do not speak of the offence of these children, nor do I keep it in mind. They were overcome by the māyā of the god. It was on that account that I laid the punishment upon them."
+tel: శ్రీమహాదేవుడు పలికెను: "ప్రజేశా, ఈ బాలుర అపరాధమును నేను చెప్పను, మనసులో ఉంచుకొనను. వారు దేవ మాయచే కప్పబడినవారు. అందుచేతనే నేను వారిపై దండమును మోపితిని."
+hi: श्रीमहादेव ने कहा: "प्रजेश! इन बालकों के अपराध को मैं न कहता हूँ और न मन में रखता हूँ। वे देव-माया से अभिभूत थे। इसी कारण मैंने उन पर दण्ड का प्रयोग किया।"
 
 --- verse 3 ---
 deva:
@@ -42,6 +48,9 @@ deva:
 iast:
 prajāpaterdagdhaśīrṣṇo bhavatvajamukhaṁ śiraḥ|
 mitrasya cakṣuṣekṣeta bhāgaṁ svaṁ barhiṣo bhagaḥ||
+en: "The head of Prajāpati has been burnt. Let the head of a goat be his head. Let Bhaga see his own share of the sacrifice with the eye of Mitra."
+tel: "ప్రజాపతి తల కాలిపోయినది. మేక తల ఆయనకు తలగా అగుగాక. భగుడు మిత్రుని కన్నుతో యజ్ఞమున తన భాగమును చూచుగాక."
+hi: "प्रजापति का सिर जल गया है। बकरे का सिर उनका सिर हो जाए। भग मित्र के नेत्र से यज्ञ में अपना भाग देखें।"
 
 --- verse 4 ---
 deva:
@@ -50,6 +59,9 @@ deva:
 iast:
 pūṣā tu yajamānasya dadbhirjakṣatu piṣṭabhuk|
 devāḥ prakṛtasarvāṁgā ye ma uccheṣaṇaṁ daduḥ||
+en: "Let Pūṣā eat with the teeth of the sacrificer, or else live on ground flour. Let those gods who gave me the remainder of the offering have all their limbs made whole."
+tel: "పూషా యజమానుని దంతములతో తినుగాక, లేక పిండిని ఆహారముగా తీసుకొనుగాక. నాకు ఉచ్ఛేషణమును ఇచ్చిన ఆ దేవతల అంగములు అన్నియు మరల పూర్ణము అగుగాక."
+hi: "पूषा यजमान के दाँतों से खाएँ, अथवा पिसा हुआ अन्न ही खाएँ। जिन देवताओं ने मुझे उच्छेषण दिया, उनके सब अंग फिर पूरे हो जाएँ।"
 
 --- verse 5 ---
 deva:
@@ -58,6 +70,9 @@ deva:
 iast:
 bāhubhyāmaśvinoḥ pūṣṇo hastābhyāṁ kṛtabāhavaḥ|
 bhavantvadhvaryavaścānye bastaśmaśrurbhṛgurbhavet||
+en: "Let the other adhvaryu priests have arms made for them from the arms of the Aśvins and the hands of Pūṣā. Let Bhṛgu have the beard of a goat."
+tel: "ఇతర అధ్వర్యులకు అశ్వినుల బాహువులతో, పూషా చేతులతో చేతులు ఏర్పడుగాక. భృగువునకు మేక గడ్డము కలుగుగాక."
+hi: "दूसरे अध्वर्युओं को अश्विनों की भुजाओं और पूषा के हाथों से हाथ मिल जाएँ। भृगु के बकरे की दाढ़ी हो जाए।"
 
 --- verse 6 ---
 deva:
@@ -68,6 +83,9 @@ iast:
 maitreya uvāca
 tadā sarvāṇi bhūtāni śrutvā mīḍhuṣṭamoditam|
 parituṣṭātmabhistāta sādhu sādhvityathābruvan||
+en: Maitreya said: Then all the beings heard what Mīḍhuṣṭama had said. Dear one, their minds were fully pleased, and they said, "Well done, well done."
+tel: మైత్రేయుడు పలికెను: అంతట సమస్త భూతములు మీఢుష్టముడు పలికినది వినెను. నాయనా, వారి మనస్సులు పూర్తిగా సంతోషించెను; "సాధు, సాధు" అని వారు పలికిరి.
+hi: मैत्रेय ने कहा: तब सब भूतों ने मीढुष्टम का कहा हुआ सुना। तात! उनके मन पूर्ण रूप से सन्तुष्ट हुए, और वे बोले, "साधु, साधु।"
 
 --- verse 7 ---
 deva:
@@ -76,6 +94,9 @@ deva:
 iast:
 tato mīḍhvāṁsamāmantrya śunāsīrāḥ saharṣibhiḥ|
 bhūyastaddevayajanaṁ samīḍhvadvedhaso yayuḥ||
+en: Then the gods, with the sages, took leave of Mīḍhvān. Together with Mīḍhvān and with Brahmā they went once more to that place of sacrifice.
+tel: అంతట దేవతలు ఋషులతో కూడి మీఢ్వానుని అనుమతి తీసుకొనిరి. మీఢ్వానునితో, బ్రహ్మతో కూడి వారు ఆ యజ్ఞ స్థానమునకు మరల వెళ్ళిరి.
+hi: तब देवताओं ने ऋषियों के साथ मीढ्वान् से विदा ली। मीढ्वान् और ब्रह्मा के साथ वे फिर उस यज्ञ-स्थान को गये।
 
 --- verse 8 ---
 deva:
@@ -84,6 +105,9 @@ deva:
 iast:
 vidhāya kārtsnyena ca tadyadāha bhagavān bhavaḥ|
 saṁdadhuḥ kasya kāyena savanīyapaśoḥ śiraḥ||
+en: They carried out in full what the blessed Bhava had said. They joined the head of the animal meant for the sacrifice to the body of Dakṣa.
+tel: భగవంతుడైన భవుడు చెప్పినది అంతయు వారు పూర్తిగా నిర్వర్తించిరి. సవనీయ పశువు తలను దక్షుని శరీరమునకు వారు అతికిరి.
+hi: भगवान् भव ने जो कहा था, वह सब उन्होंने पूरी तरह किया। सवनीय पशु का सिर उन्होंने दक्ष के शरीर से जोड़ दिया।
 
 --- verse 9 ---
 deva:
@@ -92,6 +116,9 @@ deva:
 iast:
 saṁdhīyamāne śirasi dakṣo rudrābhivīkṣitaḥ|
 sadyaḥ supta ivottasthau dadṛśe cāgrato mṛḍam||
+en: As the head was being joined, Rudra looked upon Dakṣa. At once Dakṣa rose, as a man rises from sleep, and he saw Mṛḍa before him.
+tel: తల అతికింపబడుచున్నప్పుడు రుద్రుడు దక్షుని చూచెను. నిద్ర నుండి లేచినవానివలె దక్షుడు వెంటనే లేచెను; తన ఎదుట మృడుని చూచెను.
+hi: सिर जोड़ा जा रहा था, तब रुद्र ने दक्ष पर दृष्टि डाली। सोये से उठे हुए के समान दक्ष तुरंत उठ खड़े हुए, और सामने मृड को देखा।
 
 --- verse 10 ---
 deva:
@@ -100,6 +127,9 @@ deva:
 iast:
 tadā vṛṣadhvajadveṣakalilātmā prajāpatiḥ|
 śivāvalokādabhavaccharaddhrada ivāmalaḥ||
+en: Until then the mind of Prajāpati had been soiled with hatred for him who bears the bull on his banner. By the look of Śiva it became clear, like a lake in autumn.
+tel: అంతవరకు ప్రజాపతి మనస్సు వృషధ్వజునిపై ద్వేషముతో మలినమై ఉండెను. శివుని చూపుచే అది శరత్కాలపు సరస్సువలె నిర్మలమైనది.
+hi: तब तक प्रजापति का मन वृषध्वज के द्वेष से मैला था। शिव की दृष्टि से वह शरद् के सरोवर के समान निर्मल हो गया।
 
 --- verse 11 ---
 deva:
@@ -108,6 +138,9 @@ deva:
 iast:
 bhavastavāya kṛtadhīrnāśaknodanurāgataḥ|
 autkaṇṭhyādbāṣpakalayā samparetāṁ sutāṁ smaran||
+en: He set his mind on praising Bhava, but he could not. Love filled him, his voice broke with tears out of longing, and he remembered his daughter who had departed.
+tel: భవుని స్తుతించుటకు ఆయన మనస్సు పెట్టెను, కాని చేయలేకపోయెను. అనురాగము ఆయనను నింపెను; ఉత్కంఠచే కన్నీటితో కంఠము మూసుకొనిపోయెను; గతించిన తన కుమార్తెను ఆయన జ్ఞాపకము చేసికొనెను.
+hi: भव की स्तुति में उन्होंने मन लगाया, पर कर न सके। अनुराग से भरकर, उत्कण्ठा के कारण आँसुओं से उनका गला रुँध गया, और उन्हें अपनी दिवंगत पुत्री का स्मरण हो आया।
 
 --- verse 12 ---
 deva:
@@ -116,6 +149,9 @@ deva:
 iast:
 kṛcchrātsaṁstabhya ca manaḥ premavihvalitaḥ sudhīḥ|
 śaśaṁsa nirvyalīkena bhāveneśaṁ prajāpatiḥ||
+en: With great effort that wise Prajāpati steadied his mind, though love overcame him. Then he praised the Lord with a feeling that held nothing false.
+tel: ప్రేమతో కలవరపడినను, బుద్ధిమంతుడైన ఆ ప్రజాపతి మిక్కిలి కష్టముతో మనస్సును నిలబెట్టుకొనెను. పిమ్మట కపటము లేని భావముతో ఈశుని స్తుతించెను.
+hi: प्रेम से विह्वल होने पर भी उन बुद्धिमान् प्रजापति ने बड़े कष्ट से मन को स्थिर किया। फिर निष्कपट भाव से उन्होंने ईश की स्तुति की।
 
 --- verse 13 ---
 deva:
@@ -130,6 +166,9 @@ bhūyānanugraha aho bhavatā kṛto me
 daṇḍastvayā mayi bhṛto yadapi pralabdhaḥ|
 na brahmabandhuṣu ca vāṁ bhagavannavajñā
 tubhyaṁ hareśca kuta eva dhṛtavrateṣu||
+en: Dakṣa said: "Great is the favour you have done me. The punishment you laid upon me was deserved, for I had mocked you. Blessed one, neither you nor Hari disregards those who are brāhmaṇas only in name. How then would you disregard those who are firm in their vows?"
+tel: దక్షుడు పలికెను: "మీరు నాకు చేసిన అనుగ్రహము గొప్పది. నేను మిమ్ములను పరిహసించితిని; కావున మీరు నాపై మోపిన దండము న్యాయమైనది. భగవంతుడా, పేరునకు మాత్రమే బ్రాహ్మణులైనవారిని మీరును, హరియును అవజ్ఞ చేయరు. అట్లయిన వ్రతము పట్టినవారిని మీరు ఎట్లు అవజ్ఞ చేయుదురు?"
+hi: दक्ष ने कहा: "आपने मुझ पर जो अनुग्रह किया, वह बड़ा है। मैंने आपका उपहास किया था, इसलिए आपने मुझ पर जो दण्ड रखा वह उचित ही था। भगवन्! नाममात्र के ब्राह्मणों की भी आप और हरि अवज्ञा नहीं करते। तब व्रतधारियों की अवज्ञा आप कैसे करेंगे?"
 
 --- verse 14 ---
 deva:
@@ -142,6 +181,9 @@ vidyātapovratadharān mukhataḥ sma viprān
 brahmā''tmatattvamavituṁ prathamaṁ tvamasrāk|
 tadbrāhmaṇān parama sarvavipatsu pāsi
 pālaḥ paśūniva vibho pragṛhītadaṇḍaḥ||
+en: "You first created from your mouth the brāhmaṇas, who hold knowledge, tapas and vows, so that the truth of brahman and of the self might be preserved. Supreme and mighty one, you therefore protect the brāhmaṇas in every danger, staff in hand, as a herdsman protects his cattle."
+tel: "బ్రహ్మము, ఆత్మ తత్త్వము కాపాడబడుటకై విద్య, తపము, వ్రతములు కలిగిన విప్రులను మీరు మొదట మీ ముఖము నుండి సృజించితిరి. పరమా, విభూ, అందుచే కాపరి దండము పట్టి పశువులను కాచినట్లు మీరు సమస్త ఆపదలలో బ్రాహ్మణులను కాచుచున్నారు."
+hi: "ब्रह्म और आत्मा के तत्त्व की रक्षा के लिए विद्या, तप और व्रत धारण करने वाले विप्रों को आपने पहले अपने मुख से रचा। परम! विभो! इसी से जैसे ग्वाला दण्ड लेकर पशुओं की रक्षा करता है, वैसे आप सब विपत्तियों में ब्राह्मणों की रक्षा करते हैं।"
 
 --- verse 15 ---
 deva:
@@ -154,6 +196,9 @@ yo'sau mayāviditatattvadṛśā sabhāyāṁ
 kṣipto duruktiviśikhairagaṇayya tanmām|
 arvāk patantamarhattamanindayāpād
 dṛṣṭyā''rdrayā sa bhagavān svakṛtena tuṣyet||
+en: "In the assembly I, whose sight did not know the truth, struck him with the arrows of harsh words. He paid no heed to that. I was falling down because I had slighted the most worthy one, and he protected me with his glance full of pity. May that blessed one be pleased by what he himself has done."
+tel: "తత్త్వమును ఎరుగని దృష్టి కలిగిన నేను సభలో కఠిన మాటల బాణములతో ఆయనను కొట్టితిని. ఆయన దానిని లెక్కచేయలేదు. అత్యంత పూజ్యుడైనవానిని నిందించుటచే క్రిందికి పడిపోవుచున్న నన్ను ఆయన కరుణతో నిండిన చూపుచే కాపాడెను. తాను చేసిన ఆ కార్యముచే ఆ భగవంతుడు సంతోషించుగాక."
+hi: "तत्त्व को न जानने वाली दृष्टि वाले मैंने सभा में कठोर वचनों के बाणों से उन पर प्रहार किया। उन्होंने उसकी गिनती नहीं की। अर्हत्तम की निन्दा से नीचे गिरते हुए मुझे उन्होंने अपनी आर्द्र दृष्टि से बचा लिया। अपने ही किये हुए उस कर्म से वे भगवान् प्रसन्न हों।"
 
 --- verse 16 ---
 deva:
@@ -164,6 +209,9 @@ iast:
 maitreya uvāca
 kṣamāpyaivaṁ sa mīḍhvāṁsaṁ brahmaṇā cānumantritaḥ|
 karma santānayāmāsa sopādhyāyartvigādibhiḥ||
+en: Maitreya said: Having asked the pardon of Mīḍhvān in this way, and being given leave by Brahmā, he carried the rite forward again, with the upādhyāya, the priests and the rest.
+tel: మైత్రేయుడు పలికెను: ఇట్లు మీఢ్వానుని క్షమాపణ కోరి, బ్రహ్మచే అనుమతి పొంది, ఆయన ఉపాధ్యాయునితో, ఋత్విజులతో, ఇతరులతో కూడి కర్మను మరల కొనసాగించెను.
+hi: मैत्रेय ने कहा: इस प्रकार मीढ्वान् से क्षमा माँगकर और ब्रह्मा से अनुमति पाकर उन्होंने उपाध्याय, ऋत्विज आदि के साथ कर्म को फिर आगे चलाया।
 
 --- verse 17 ---
 deva:
@@ -172,6 +220,9 @@ deva:
 iast:
 vaiṣṇavaṁ yajñasantatyai trikapālaṁ dvijottamāḥ|
 puroḍāśaṁ niravapan vīrasaṁsargaśuddhaye||
+en: For the sacrifice to go on, and to be cleansed of the touch of the Vīras, the best of the twice born offered a puroḍāśa cake in three vessels to Viṣṇu.
+tel: యజ్ఞము కొనసాగుటకు, వీరుల స్పర్శ నుండి శుద్ధి కలుగుటకు, ద్విజోత్తములు విష్ణువునకు మూడు కపాలములలో పురోడాశమును అర్పించిరి.
+hi: यज्ञ की सन्तति के लिए और वीरों के संसर्ग की शुद्धि के लिए द्विजोत्तमों ने विष्णु को तीन कपालों में पुरोडाश अर्पित किया।
 
 --- verse 18 ---
 deva:
@@ -180,6 +231,9 @@ deva:
 iast:
 adhvaryuṇā''ttahaviṣā yajamāno viśāmpate|
 dhiyā viśuddhayā dadhyau tathā prādurabhūddhariḥ||
+en: Lord of men, the adhvaryu took up the offering, and the sacrificer meditated with a cleansed mind. Then Hari appeared.
+tel: విశాంపతీ, అధ్వర్యుడు హవిస్సును తీసికొనెను; యజమానుడు శుద్ధమైన బుద్ధితో ధ్యానము చేసెను. అంతట హరి ప్రత్యక్షమయ్యెను.
+hi: हे विशाम्पते! अध्वर्यु ने हवि ग्रहण की, और यजमान ने विशुद्ध बुद्धि से ध्यान किया। तब हरि प्रकट हुए।
 
 --- verse 19 ---
 deva:
@@ -188,18 +242,24 @@ deva:
 iast:
 tadā svaprabhayāteṣāṁ dyotayantyā diśo daśa|
 muṣṇaṁsteja upānītastārkṣyeṇa stotravājinā||
+en: He was carried by Tārkṣya, whose wings are the hymns. His own light shone in the ten quarters and took away the light of all who were there.
+tel: స్తోత్రములే రెక్కలు కల తార్క్ష్యుడు ఆయనను మోసుకొని వచ్చెను. ఆయన స్వయం ప్రభ పది దిక్కులను ప్రకాశింపజేసి, అక్కడ ఉన్నవారి తేజమును హరించెను.
+hi: स्तोत्र ही जिसके पंख हैं, उस तार्क्ष्य पर वे लाये गये। उनकी अपनी प्रभा दसों दिशाओं को प्रकाशित करती हुई वहाँ उपस्थित सबका तेज हर रही थी।
 
 --- verse 20 ---
 deva:
-श्यामो हिरण्यरशनोऽर्क किरीटजुष्टो
+श्यामो हिरण्यरशनोऽर्ककिरीटजुष्टो
 नीलालकभ्रमरमण्डितकुण्डलास्यः।
 कम्ब्वब्जचक्रशरचापगदासिचर्म-
 व्यग्रैर्हिरण्मयभुजैरिव कर्णिकारः॥
 iast:
-śyāmo hiraṇyaraśano'rka kirīṭajuṣṭo
+śyāmo hiraṇyaraśano'rkakirīṭajuṣṭo
 nīlālakabhramaramaṇḍitakuṇḍalāsyaḥ|
 kambvabjacakraśaracāpagadāsicarma-
 vyagrairhiraṇmayabhujairiva karṇikāraḥ||
+en: He is dark in colour. His girdle is of gold, and he wears a crown bright as the sun. His face is adorned with earrings, and his dark curls are like bees. His golden arms were busy with the conch, the lotus, the discus, the arrow, the bow, the mace, the sword and the shield, and with them he looked like a karṇikāra tree in flower.
+tel: ఆయన శ్యామ వర్ణుడు. ఆయన మొలనూలు బంగారమైనది; సూర్యునివలె ప్రకాశించు కిరీటమును ఆయన ధరించియుండెను. ఆయన ముఖము కుండలములతో అలంకరింపబడియుండెను; నల్లని ముంగురులు తుమ్మెదలవలె ఉండెను. శంఖము, పద్మము, చక్రము, బాణము, ధనువు, గద, ఖడ్గము, డాలు పట్టిన ఆయన బంగారు బాహువులతో ఆయన పూచిన కర్ణికార వృక్షమువలె కనబడెను.
+hi: वे श्याम वर्ण के हैं। उनका कटिसूत्र स्वर्ण का है, और वे सूर्य के समान चमकता मुकुट धारण किये हैं। उनका मुख कुण्डलों से मण्डित है, और नीली अलकें भौंरों के समान हैं। शंख, कमल, चक्र, बाण, धनुष, गदा, खड्ग और ढाल से व्यग्र उनकी स्वर्णमय भुजाओं के साथ वे फूले हुए कर्णिकार वृक्ष के समान लग रहे थे।
 
 --- verse 21 ---
 deva:
@@ -212,6 +272,9 @@ vakṣasyadhiśritavadhūrvanamālyudāra-
 hāsāvalokakalayā ramayaṁśca viśvam|
 pārśvabhramadvyajanacāmararājahaṁsaḥ
 śvetātapatraśaśinopari rajyamānaḥ||
+en: Lakṣmī rests upon his breast, and he wears a garland of forest flowers. With his generous smile and his glance he gives joy to the whole world. Fans and cāmaras moved at his sides like royal swans, and above him the white umbrella shone like the moon.
+tel: ఆయన వక్షముపై లక్ష్మి నిలిచియుండును; ఆయన వనమాలను ధరించియుండును. తన ఉదారమైన నవ్వుతో, చూపుతో ఆయన విశ్వమునకు ఆనందము ఇచ్చుచుండెను. ఆయన ప్రక్కలయందు వీవనలు, చామరములు రాజహంసలవలె కదలుచుండెను; పైన తెల్లని గొడుగు చంద్రునివలె ప్రకాశించుచుండెను.
+hi: उनके वक्ष पर लक्ष्मी विराजती हैं, और वे वनमाला धारण किये हैं। अपनी उदार हँसी और दृष्टि से वे सारे विश्व को आनन्द दे रहे थे। उनके पार्श्व में व्यजन और चामर राजहंसों के समान हिल रहे थे, और ऊपर श्वेत छत्र चन्द्र के समान शोभित था।
 
 --- verse 22 ---
 deva:
@@ -220,6 +283,9 @@ deva:
 iast:
 tamupāgatamālakṣya sarve suragaṇādayaḥ|
 praṇemuḥ sahasotthāya brahmendratryakṣanāyakāḥ||
+en: Seeing that he had come, all the hosts of the gods and the others rose at once and bowed, with Brahmā, Indra and the three-eyed one at their head.
+tel: ఆయన వచ్చెనని చూచి, బ్రహ్మ, ఇంద్రుడు, త్ర్యక్షుడు ముందుండగా, సుర గణములు అందరు, ఇతరులు వెంటనే లేచి నమస్కరించిరి.
+hi: उन्हें आया देखकर ब्रह्मा, इन्द्र और त्र्यक्ष को आगे करके सब सुरगण और दूसरे तुरंत उठकर प्रणाम किये।
 
 --- verse 23 ---
 deva:
@@ -228,6 +294,9 @@ deva:
 iast:
 tattejasā hatarucaḥ sannajihvāḥ sasādhvasāḥ|
 mūrdhnā dhṛtāṁjalipuṭā upatasthuradhokṣajam||
+en: Their own light was overcome by his light. Their tongues were silent and they were filled with awe. They held their folded hands upon their heads and stood before Adhokṣaja.
+tel: ఆయన తేజముచే వారి కాంతి తగ్గిపోయెను. వారి నాలుకలు మూగబోయెను; వారు భయముతో నిండిరి. తలలపై దోసిలి పట్టి వారు అధోక్షజుని ఎదుట నిలిచిరి.
+hi: उनके तेज से इनकी रुचि हत हो गई। इनकी जीभें रुक गईं और वे सशंक हो गये। सिर पर अंजलि बाँधकर वे अधोक्षज के सामने खड़े हो गये।
 
 --- verse 24 ---
 deva:
@@ -236,6 +305,9 @@ deva:
 iast:
 apyarvāgvṛttayo yasya mahi tvātmabhuvādayaḥ|
 yathāmati gṛṇanti sma kṛtānugrahavigraham||
+en: Though their own powers reach only so far, Brahmā and the others praised his greatness as well as their understanding allowed. He had taken that form out of favour to them.
+tel: తమ శక్తులు ఇంత వరకే చేరునైనను, ఆత్మభువు మొదలగువారు తమ బుద్ధి కొలది ఆయన మహిమను స్తుతించిరి. వారిపై అనుగ్రహముచే ఆయన ఆ రూపమును ధరించియుండెను.
+hi: उनकी अपनी वृत्तियाँ सीमित होने पर भी आत्मभू आदि ने अपनी बुद्धि के अनुसार उनकी महिमा का गान किया। उन पर अनुग्रह करने के लिए ही उन्होंने वह विग्रह धारण किया था।
 
 --- verse 25 ---
 deva:
@@ -248,6 +320,9 @@ dakṣo gṛhītārhaṇasādanottamaṁ
 yajñeśvaraṁ viśvasṛjāṁ paraṁ gurum|
 sunandanandādyanugairvṛtaṁ mudā
 gṛṇan prapede prayataḥ kṛtāṁjaliḥ||
+en: The lord of sacrifice had taken the highest seat of honour. He is the supreme teacher of those who create the world, and Sunanda, Nanda and his other attendants stood around him. Dakṣa, with a controlled mind and with folded hands, praised him with joy and took refuge in him.
+tel: యజ్ఞేశ్వరుడు పూజకు ఉత్తమమైన ఆసనమును స్వీకరించియుండెను. ఆయన విశ్వ సృష్టికర్తలకు పరమ గురువు; సునందుడు, నందుడు మొదలగు అనుచరులు ఆయన చుట్టు నిలిచియుండిరి. నియమము కలిగి, దోసిలి కట్టి, దక్షుడు సంతోషముతో ఆయనను స్తుతించి ఆయనను ఆశ్రయించెను.
+hi: यज्ञेश्वर ने अर्हण का उत्तम आसन ग्रहण किया था। वे विश्व के स्रष्टाओं के परम गुरु हैं, और सुनन्द, नन्द आदि अनुचर उन्हें घेरे थे। दक्ष ने संयत होकर, हाथ जोड़कर, मुदित मन से उनका स्तवन किया और उनकी शरण ली।
 
 --- verse 26 ---
 deva:
@@ -262,6 +337,9 @@ dakṣa uvāca
 cinmātramekamabhayaṁ pratiṣidhya māyām|
 tiṣṭhaṁstayaiva puruṣatvamupetya tasyā-
 māste bhavānapariśuddha ivātmatantraḥ||
+en: Dakṣa said: "You are pure. In your own abode every state of the understanding has ceased. You are consciousness alone, you are one, and you are without fear. You keep māyā away, and yet you stand by that same māyā. You take the state of the Person and dwell in her. You rest upon yourself alone, and only seem not to be pure."
+tel: దక్షుడు పలికెను: "మీరు శుద్ధులు. మీ స్వధామమున బుద్ధి అవస్థలు అన్నియు ఉపశమించును. మీరు చిన్మాత్రులు, ఏకులు, అభయులు. మాయను మీరు నిరాకరింతురు, అయినను ఆ మాయచేతనే నిలిచియుందురు. పురుషత్వమును పొంది మీరు ఆమెయందు ఉందురు. మీరు ఆత్మతంత్రులు; అపరిశుద్ధులవలె మాత్రమే కనబడుదురు."
+hi: दक्ष ने कहा: "आप शुद्ध हैं। अपने धाम में बुद्धि की सारी अवस्थाएँ उपरत हो जाती हैं। आप चिन्मात्र, एक और अभय हैं। माया का आप निषेध करते हैं, फिर भी उसी माया से स्थित रहते हैं। पुरुषत्व को प्राप्त कर आप उसी में रहते हैं। आप आत्मतन्त्र हैं, और केवल अशुद्ध से दिखते हैं।"
 
 --- verse 27 ---
 deva:
@@ -276,6 +354,9 @@ tattvaṁ na te vayamanañjana rudraśāpāt
 karmaṇyavagrahadhiyo bhagavanvidāmaḥ|
 dharmopalakṣaṇamidaṁ trivṛdadhvarākhyaṁ
 jñātaṁ yadarthamadhidaivamadovyavasthāḥ||
+en: The priests said: "Unstained one, by the curse of Rudra our minds are held fast in rites. Blessed one, we do not know your true nature. This threefold rite called the sacrifice is only an outward mark of dharma. We have learnt what the rules about its presiding deities are for, and no more."
+tel: ఋత్విజులు పలికిరి: "అనంజనా, రుద్రుని శాపముచే మా బుద్ధి కర్మమునందే ఆగిపోయినది. భగవంతుడా, మేము మీ తత్త్వమును ఎరుగము. యజ్ఞము అను పేరుగల ఈ త్రివృత్తు ధర్మమునకు బాహ్య లక్షణము మాత్రమే. దాని అధిదైవముల ఏర్పాటులు ఏ ప్రయోజనమునకో అది మాత్రమే మేము తెలిసికొనియున్నాము."
+hi: ऋत्विजों ने कहा: "हे अनंजन! रुद्र के शाप से हमारी बुद्धि कर्म में ही अटक गई है। भगवन्! हम आपका तत्त्व नहीं जानते। यज्ञ नामक यह त्रिवृत् धर्म का बाहरी लक्षण ही है। उसके अधिदैव की व्यवस्थाएँ किस प्रयोजन के लिए हैं, इतना ही हमने जाना है।"
 
 --- verse 28 ---
 deva:
@@ -290,6 +371,9 @@ utpattyadhvanyaśaraṇa urukleśadurge'ntakogra-
 vyālānviṣṭe viṣayamṛgatṛṣyātmagehorubhāraḥ|
 dvandvaśvabhre khalamṛgabhaye śokadāve'jñasārthaḥ
 pādaukaste śaraṇada kadā yāti kāmopasṛṣṭaḥ||
+en: The members of the assembly said: "Giver of refuge, on the road of birth there is no shelter. It is a hard place full of great sorrow, and the fierce serpent of death lies upon it. The objects of the senses are the mirage, the house and the family are a heavy load, and the pairs of opposites are the pits. Wicked men are the beasts that bring fear, and grief is the forest fire. When will this company of the ignorant, driven by desire, reach the dwelling of your feet?"
+tel: సదస్యులు పలికిరి: "శరణదా, పుట్టుక అను దారిలో ఆశ్రయము లేదు. అది గొప్ప క్లేశములు కల దుర్గమ ప్రదేశము; అందు అంతకుడు అను భయంకరమైన సర్పము ఉండును. విషయములు ఎండమావి; ఇల్లు, సంసారము పెద్ద భారము; సుఖదుఃఖముల జంటలు గుంటలు. దుష్టులు భయము కలిగించు మృగములు; శోకము కార్చిచ్చు. కామముచే తరుమబడిన ఈ అజ్ఞుల బృందము మీ పాద నివాసమును ఎప్పుడు చేరును?"
+hi: सदस्यों ने कहा: "हे शरणद! जन्म के मार्ग में कोई आश्रय नहीं। वह बड़े क्लेशों से भरा दुर्गम स्थान है, और उसमें अन्तक रूपी भयंकर सर्प बसा है। विषय मृगतृष्णा हैं, घर और कुटुम्ब भारी बोझ हैं, और सुख-दुःख के द्वन्द्व गड्ढे हैं। दुष्ट भय देने वाले पशु हैं, और शोक दावाग्नि है। काम से खदेड़ा गया यह अज्ञों का समूह आपके चरणों के धाम को कब पाएगा?"
 
 --- verse 29 ---
 deva:
@@ -304,6 +388,9 @@ tava varada varāṅghrāvāśiṣehākhilārthe
 hyapi munibhirasaktairādareṇārhaṇīye|
 yadi racitadhiyaṁ māvidyaloko'paviddhaṁ
 japati na gaṇaye tattvatparānugraheṇa||
+en: Rudra said: "Giver of boons, your beautiful feet grant every object that is asked for here, and even the sages who are free from attachment worship them with reverence. If those who live in the world of ignorance call me one whose mind is set on rites, and reject me, I do not take it to heart, for I have the favour of those who are devoted to you."
+tel: రుద్రుడు పలికెను: "వరదా, ఇక్కడ కోరిన ప్రతి అర్థమును మీ శ్రేష్ఠమైన చరణములు ఇచ్చును; ఆసక్తి లేని మునులును ఆదరముతో వాటిని అర్హణ చేయుదురు. నేను కర్మమున బుద్ధి నిలిపినవాడనని అవిద్యా లోకము పలికి నన్ను విడనాడినను, నేను దానిని లెక్కచేయను; ఏలయన మీ భక్తుల అనుగ్రహము నాకు కలదు."
+hi: रुद्र ने कहा: "हे वरद! यहाँ माँगे हुए सब अर्थ आपके श्रेष्ठ चरण देते हैं, और अनासक्त मुनि भी आदर से उनकी अर्हणा करते हैं। यदि अविद्या का लोक मुझे कर्म में बुद्धि लगाने वाला कहकर त्याग दे, तो भी मैं उसकी गिनती नहीं करता, क्योंकि आपके भक्तों का अनुग्रह मुझे प्राप्त है।"
 
 --- verse 30 ---
 deva:
@@ -318,6 +405,9 @@ yanmāyayā gahanayāpahṛtātmabodhā
 brahmādayastanubhṛtastamasi svapantaḥ|
 nātman śritaṁ tava vidantyadhunāpi tattvaṁ
 so'yaṁ prasīdatu bhavān praṇatātmabandhuḥ||
+en: Bhṛgu said: "Brahmā and the others who bear bodies have had the knowledge of the self taken from them by your deep māyā, and they sleep in darkness. Even now they do not know your truth, which rests in the self. Be gracious to us. You are the friend of the self of those who bow to you."
+tel: భృగువు పలికెను: "మీ గహనమైన మాయచే బ్రహ్మ మొదలగు శరీరధారులు ఆత్మ బోధను కోల్పోయి, తమస్సున నిద్రించుచున్నారు. ఆత్మయందు నిలిచిన మీ తత్త్వమును వారు ఇప్పటికిని ఎరుగరు. మీరు ప్రసన్నులు కావలెను. ప్రణమిల్లినవారి ఆత్మకు మీరే బంధువు."
+hi: भृगु ने कहा: "आपकी गहन माया से ब्रह्मा आदि शरीरधारी आत्म-बोध खोकर तमस् में सो रहे हैं। आत्मा में स्थित आपके तत्त्व को वे अब भी नहीं जानते। आप प्रसन्न हों। प्रणत जनों के आत्मा के बन्धु आप ही हैं।"
 
 --- verse 31 ---
 deva:
@@ -332,6 +422,9 @@ naitatsvarūpaṁ bhavato'sau padārtha-
 bhedagrahaiḥ puruṣo yāvadīkṣet|
 jñānasya cārthasya guṇasya cāśrayo
 māyāmayād vyatirikto yatastvam||
+en: Brahmā said: "This is not your true form. A man who looks with the grasping of the differences of things cannot see that form, for you are the ground of knowledge, of the object and of the guṇa, and you stand apart from all that is made of māyā."
+tel: బ్రహ్మ పలికెను: "ఇది మీ స్వరూపము కాదు. పదార్థముల భేదములను పట్టుకొని చూచు పురుషుడు దానిని చూడలేడు; ఏలయన జ్ఞానమునకు, అర్థమునకు, గుణమునకు ఆశ్రయము మీరు, మాయామయమైన దానికి వేరుగా ఉన్నవారు మీరు."
+hi: ब्रह्मा ने कहा: "यह आपका स्वरूप नहीं है। पदार्थों के भेद को पकड़कर देखने वाला पुरुष उसे नहीं देख सकता, क्योंकि ज्ञान, अर्थ और गुण के आश्रय आप हैं, और मायामय से व्यतिरिक्त आप हैं।"
 
 --- verse 32 ---
 deva:
@@ -346,6 +439,9 @@ idamapyacyuta viśvabhāvanaṁ
 vapurānandakaraṁ manodṛśām|
 suravidviṭkṣapaṇairudāyudhai-
 rbhujadaṇḍairupapannamaṣṭabhiḥ||
+en: Indra said: "Acyuta, this body of yours also brings the world into being and gives joy to the mind and to the eye. It is furnished with eight strong arms which hold weapons raised and which destroy those who hate the gods."
+tel: ఇంద్రుడు పలికెను: "అచ్యుతా, మీ ఈ వపువు కూడ విశ్వమును భావింపజేయునది, మనస్సునకు కన్నులకు ఆనందము కలిగించునది. సుర ద్వేషులను నశింపజేయు, ఎత్తిన ఆయుధములు కల ఎనిమిది భుజ దండములతో ఇది కూడినది."
+hi: इन्द्र ने कहा: "हे अच्युत! आपका यह वपु भी विश्व को भावित करने वाला और मन तथा दृष्टि को आनन्द देने वाला है। सुर-विद्वेषियों का क्षय करने वाली, उठाये हुए आयुधों वाली आठ भुजदण्डों से यह युक्त है।"
 
 --- verse 33 ---
 deva:
@@ -360,6 +456,9 @@ yajño'yaṁ tava yajanāya kena sṛṣṭo
 vidhvastaḥ paśupatinādya dakṣakopāt|
 taṁ nastvaṁ śavaśayanābhaśāntamedhaṁ
 yajñātmannalinarucā dṛśā punīhi||
+en: The wives said: "This sacrifice was made by Ka for your worship. Today Paśupati has destroyed it through his anger against Dakṣa. The offering lies still, and the place is like a ground where the departed are laid. Self of the sacrifice, make it pure again with your glance, which has the beauty of the lotus."
+tel: పత్నులు పలికిరి: "మీ యజనము కొరకు ఈ యజ్ఞమును కుడు సృజించెను. దక్షునిపై కోపముచే ఈ దినము పశుపతి దానిని ధ్వంసము చేసెను. మేధము చల్లారిపోయినది; ఈ స్థానము గతించినవారిని ఉంచు చోటువలె కనబడుచున్నది. యజ్ఞాత్మా, కమలము సౌందర్యము కల మీ చూపుచే దానిని మరల పవిత్రము చేయుడు."
+hi: पत्नियों ने कहा: "यह यज्ञ क ने आपके यजन के लिए रचा था। आज दक्ष पर कोप से पशुपति ने इसे ध्वस्त कर दिया। मेध शान्त पड़ा है, और यह स्थान दिवंगत जनों को रखने के स्थान जैसा लगता है। हे यज्ञात्मन्! कमल की कान्ति वाली अपनी दृष्टि से इसे फिर पवित्र कीजिए।"
 
 --- verse 34 ---
 deva:
@@ -374,6 +473,9 @@ ananvitaṁ te bhagavan viceṣṭitaṁ
 yadātmanā''carasi hi karma nājyase|
 vibhūtaye yata upasedurīśvarīṁ
 na manyate svayamanuvartatīṁ bhavān||
+en: The sages said: "Blessed one, your acts are bound to nothing. You yourself perform works, and yet you are not touched by them. Others approach Lakṣmī for prosperity, and though she waits upon you of her own will, you take no account of it."
+tel: ఋషులు పలికిరి: "భగవంతుడా, మీ చేష్టితము దేనితోను కూడినది కాదు. మీరే కర్మను ఆచరింతురు, అయినను దానిచే అంటబడరు. ఐశ్వర్యము కొరకు ఇతరులు ఈశ్వరిని ఆశ్రయింతురు; ఆమె తనంతటనే మిమ్ములను అనుసరించుచున్నను మీరు దానిని లెక్కచేయరు."
+hi: ऋषियों ने कहा: "भगवन्! आपका विचेष्टित किसी से बँधा नहीं है। आप स्वयं कर्म करते हैं, फिर भी उससे लिप्त नहीं होते। विभूति के लिए दूसरे ईश्वरी की शरण लेते हैं, और वे स्वयं आपके पीछे चलती हैं, तो भी आप उसे नहीं मानते।"
 
 --- verse 35 ---
 deva:
@@ -388,6 +490,9 @@ ayaṁ tvatkathāmṛṣṭapīyūṣanadyāṁ
 manovāraṇaḥ kleśadāvāgnidagdhaḥ|
 tṛṣārto'vagāḍho na sasmāra dāvaṁ
 na niṣkrāmati brahmasampannavannaḥ||
+en: The Siddhas said: "This mind of ours is an elephant burnt by the forest fire of troubles. Worn with thirst, it has plunged into the river of nectar which is the telling of your story. It no longer remembers that fire, and it does not come out, as a man who has reached brahman does not come out."
+tel: సిద్ధులు పలికిరి: "క్లేశముల కార్చిచ్చుచే కాలిన మా మనస్సు అను ఏనుగు, దాహముతో బాధపడి, మీ కథ అను అమృత నదిలో మునిగినది. అది ఆ కార్చిచ్చును మరల జ్ఞాపకము చేసికొనదు; బ్రహ్మమును పొందినవాడు బయటికి రానట్లు అది బయటికి రాదు."
+hi: सिद्धों ने कहा: "क्लेश की दावाग्नि से जला हमारा मन रूपी हाथी, प्यास से व्याकुल होकर, आपकी कथा रूपी अमृत की नदी में डूब गया है। वह उस दावाग्नि को फिर याद नहीं करता, और जैसे ब्रह्म को प्राप्त पुरुष बाहर नहीं आता, वैसे वह बाहर नहीं आता।"
 
 --- verse 36 ---
 deva:
@@ -402,6 +507,9 @@ svāgataṁ te prasīdeśa tubhyaṁ namaḥ
 śrīnivāsa śriyā kāntayā trāhi naḥ|
 tvāmṛte'dhīśa nāṅgairmakhaḥ śobhate
 śīrṣahīnaḥ kabandho yathā pūruṣaḥ||
+en: The wife of the sacrificer said: "Welcome to you. Be gracious, Lord. Salutation to you. Śrīnivāsa, with Śrī your beloved, save us. Lord of all, without you the sacrifice is not beautiful even with all its limbs, just as a man's trunk without the head is not."
+tel: యజమాన పత్ని పలికెను: "మీకు స్వాగతము. ఈశా, ప్రసన్నులు కావలెను. మీకు నమస్కారము. శ్రీనివాసా, కాంత అయిన శ్రీతో కూడి మమ్ములను రక్షించుడు. అధీశా, మీరు లేక అంగములు అన్నియు ఉన్నను యజ్ఞము శోభించదు; తల లేని మనుష్యుని మొండెము శోభించనట్లే."
+hi: यजमान की पत्नी ने कहा: "आपका स्वागत है। हे ईश! प्रसन्न हों। आपको नमस्कार। हे श्रीनिवास! कान्ता श्री के साथ हमारी रक्षा कीजिए। हे अधीश! आपके बिना सब अंगों के होने पर भी यज्ञ शोभा नहीं पाता, जैसे सिर के बिना मनुष्य का कबन्ध शोभा नहीं पाता।"
 
 --- verse 37 ---
 deva:
@@ -416,6 +524,9 @@ dṛṣṭaḥ kiṁ no dṛgbhirasadgrahaistvaṁ
 pratyagdraṣṭā dṛśyate yena dṛśyam|
 māyā hyeṣā bhavadīyā hi bhūman
 yastvaṁ ṣaṣṭhaḥ paṁcabhirbhāsi bhūtaiḥ||
+en: The guardians of the worlds said: "Have we indeed seen you with these eyes of ours, which take hold only of what is unreal? You are the inner seer, and by you all that is seen is seen. Infinite one, it is your own māyā that you shine as the sixth together with the five elements."
+tel: లోకపాలకులు పలికిరి: "అసత్తును మాత్రమే పట్టుకొను మా కన్నులతో మేము మిమ్ములను నిజముగా చూచితిమా? మీరు ప్రత్యగ్ద్రష్ట; మీచేతనే దృశ్యము అంతయు చూడబడును. భూమన్, ఐదు భూతములతో కూడి మీరు ఆరవవారుగా ప్రకాశించుట మీ మాయయే."
+hi: लोकपालों ने कहा: "असत् को ही पकड़ने वाली अपनी इन आँखों से क्या हमने आपको देखा? आप प्रत्यग्द्रष्टा हैं, और आपसे ही सब दृश्य देखा जाता है। हे भूमन्! पाँच भूतों के साथ आपका छठे रूप में भासना आपकी ही माया है।"
 
 --- verse 38 ---
 deva:
@@ -430,6 +541,9 @@ preyānna te'nyo'styamutastvayi prabho
 viśvātmanīkṣenna pṛthagya ātmanaḥ|
 athāpi bhaktyeśatayopadhāvatā-
 mananyavṛttyānugṛhāṇa vatsala||
+en: The lords of yoga said: "Lord, no one is dearer to you than he who does not see himself as apart from you, the self of all. Even so, affectionate one, show your favour to those who come to you with devotion, holding you as their lord, and who turn to nothing else."
+tel: యోగేశ్వరులు పలికిరి: "ప్రభూ, విశ్వాత్ములైన మీ నుండి తనను వేరుగా చూడనివానికంటె మీకు ప్రియుడు మరి ఎవరును లేరు. అయినను వత్సలా, మిమ్ములను ఈశునిగా భావించి భక్తితో చేరువారిపై, మరి ఏదియు ఆశ్రయింపనివారిపై అనుగ్రహము చూపుడు."
+hi: योगेश्वरों ने कहा: "प्रभो! विश्वात्मा आपसे अपने को पृथक् न देखने वाले से बढ़कर आपका प्रिय कोई नहीं। तो भी हे वत्सल! जो भक्ति से, आपको ईश मानकर आपकी शरण आते हैं और अन्य किसी का आश्रय नहीं लेते, उन पर अनुग्रह कीजिए।"
 
 --- verse 39 ---
 deva:
@@ -442,6 +556,9 @@ jagadudbhavasthitilayeṣu daivato
 bahubhidyamānaguṇayā''tmamāyayā|
 racitātmabhedamataye svasaṁsthayā
 vinivartitabhramaguṇātmane namaḥ||
+en: "In the creation, the holding and the dissolution of the world he is the deity of them all. By his own māyā, whose guṇas take many divisions, he makes beings think of themselves as separate, and by his own abiding state he turns back that error and the guṇas. Salutation to him."
+tel: "జగత్తు పుట్టుట, నిలుచుట, లయమగుట వీటియందు ఆయనే దైవము. గుణములు అనేక విధముల విభజింపబడు తన ఆత్మ మాయచే ఆయన జీవులకు తమను వేరుగా భావించు బుద్ధిని కల్పించును; తన సంస్థితిచే ఆ భ్రమను, గుణములను ఆయన మరలించును. ఆయనకు నమస్కారము."
+hi: "जगत् की उत्पत्ति, स्थिति और लय में वे ही दैवत हैं। जिसके गुण अनेक रूपों में बँटते हैं, उस अपनी आत्म-माया से वे जीवों में भेद-बुद्धि रचते हैं, और अपनी संस्था से उस भ्रम तथा गुणों को लौटा देते हैं। उन्हें नमस्कार।"
 
 --- verse 40 ---
 deva:
@@ -452,6 +569,9 @@ iast:
 brahmovāca
 namaste śritasattvāya dharmādīnāṁ ca sūtaye|
 nirguṇāya ca yatkāṣṭhāṁ nāhaṁ vedāpare'pi ca||
+en: Brahmā said: Salutation to you who have taken up sattva and who bring forth dharma and the rest. Salutation to you who are without the guṇas, whose limit neither I nor the others know.
+tel: బ్రహ్మ పలికెను: సత్త్వమును ఆశ్రయించిన, ధర్మము మొదలగువాటిని పుట్టించు మీకు నమస్కారము. నిర్గుణులైన మీకు నమస్కారము; మీ కాష్ఠను నేనును ఇతరులును ఎరుగము.
+hi: ब्रह्मा ने कहा: सत्त्व का आश्रय लिये और धर्म आदि को उत्पन्न करने वाले आपको नमस्कार। निर्गुण आपको नमस्कार, जिनकी काष्ठा को न मैं जानता हूँ और न दूसरे।
 
 --- verse 41 ---
 deva:
@@ -466,6 +586,9 @@ yattejasāhaṁ susamiddhatejā
 havyaṁ vahe svadhvara ājyasiktam|
 taṁ yajñiyaṁ paṁcavidhaṁ ca paṁcabhiḥ
 sviṣṭaṁ yajurbhiḥ praṇato'smi yajñam||
+en: Agni said: By your light my own light is well kindled, and in a good sacrifice I carry the offering that is poured with ghee. You are the sacrifice, of five kinds, well offered with the five yajus formulas. I bow to you, who are the sacrifice.
+tel: అగ్ని పలికెను: మీ తేజముచే నా తేజము బాగుగా వెలుగును; మంచి యజ్ఞమున నేయి పోసిన హవ్యమును నేను మోయుదును. ఐదు విధములైన, ఐదు యజుస్సులతో బాగుగా అర్పింపబడిన ఆ యజ్ఞము మీరే. యజ్ఞ స్వరూపులైన మీకు నేను ప్రణమిల్లుచున్నాను.
+hi: अग्नि ने कहा: आपके तेज से मेरा तेज सुसमिद्ध होता है, और सुन्दर यज्ञ में घृत से सिक्त हव्य मैं वहन करता हूँ। पाँच प्रकार का, पाँच यजुओं से सुइष्ट वह यज्ञ आप ही हैं। यज्ञ-स्वरूप आपको मैं प्रणाम करता हूँ।
 
 --- verse 42 ---
 deva:
@@ -480,6 +603,9 @@ purā kalpāpāye svakṛtamudarīkṛtya vikṛtaṁ
 tvamevādyastasmin salila uragendrādhiśayane|
 pumān śeṣe siddhairhṛdi vimṛśitādhyātmapadaviḥ
 sa evādyākṣṇoryaḥ pathi carasi bhṛtyānavasi naḥ||
+en: The gods said: Of old, at the end of the kalpa, you took into your own belly this changing world which you had made. You alone were then the primal Person, lying upon the water on the king of the serpents. The Siddhas search in their hearts for the way to the inner self, and you are that way. You are the very same one who today walks before our eyes and protects us, your servants.
+tel: దేవతలు పలికిరి: పూర్వము కల్పము అంతమున, మీరు చేసిన ఈ వికృత జగత్తును మీ ఉదరమున నిలుపుకొనితిరి. అప్పుడు ఉరగేంద్రుని శయ్యపై నీటిపై పరుండిన ఆది పురుషుడు మీరే. సిద్ధులు హృదయమున అధ్యాత్మ మార్గమును విచారింతురు; ఆ మార్గము మీరే. ఈ దినము మా కన్నుల ఎదుట దారిలో నడచుచు, భృత్యులమైన మమ్ములను రక్షించునది ఆ మీరే.
+hi: देवताओं ने कहा: पहले कल्प के अन्त में अपने ही बनाये इस विकृत जगत् को आपने उदर में रख लिया। उस समय उरगेन्द्र की शय्या पर जल में सोये हुए आद्य पुरुष आप ही थे। सिद्ध हृदय में अध्यात्म के पथ का विचार करते हैं, और वह पथ आप हैं। आज हमारी आँखों के सामने मार्ग पर चलते हुए और हम भृत्यों की रक्षा करते हुए वही आप हैं।
 
 --- verse 43 ---
 deva:
@@ -494,6 +620,9 @@ aṁśāṁśāste deva marīcyādaya ete
 brahmendrādyā devagaṇā rudrapurogāḥ|
 krīḍābhāṇḍaṁ viśvamidaṁ yasya vibhūman
 tasmai nityaṁ nātha namaste karavāma||
+en: The Gandharvas said: God, Marīci and these others, Brahmā, Indra and the hosts of gods with Rudra at their head, are parts of your parts. Infinite one, this whole world is your plaything. Lord, we make our salutation to you for ever.
+tel: గంధర్వులు పలికిరి: దేవా, మరీచి మొదలగు ఇతరులు, బ్రహ్మ, ఇంద్రుడు మొదలగు దేవ గణములు, రుద్రుడు ముందుండగా ఉన్నవారు, అందరు మీ అంశములకు అంశములే. విభూమన్, ఈ విశ్వము అంతయు మీ క్రీడా భాండము. నాథా, మీకు మేము ఎల్లప్పుడు నమస్కారము చేయుదుము.
+hi: गन्धर्वों ने कहा: हे देव! मरीचि आदि ये और ब्रह्मा, इन्द्र आदि देवगण, जिनमें रुद्र आगे हैं, सब आपके अंशों के अंश हैं। हे विभूमन्! यह सारा विश्व आपका क्रीडा-भाण्ड है। हे नाथ! हम आपको सदा नमस्कार करते हैं।
 
 --- verse 44 ---
 deva:
@@ -508,6 +637,9 @@ tvanmāyayārthamabhipadya kalevare'smin
 kṛtvā mamāhamiti durmatirutpathaiḥ svaiḥ|
 kṣipto'pyasadviṣayalālasa ātmamohaṁ
 yuṣmatkathāmṛtaniṣevaka udvyudasyet||
+en: The Vidyādharas said: By your māyā a man takes this body for the self. He thinks of it as mine and as myself. His mind is set wrong, his own crooked ways cast him out, and he longs for things that are not real. Yet if he serves the nectar of the telling of your deeds, he throws off that delusion about the self.
+tel: విద్యాధరులు పలికిరి: మీ మాయచే మనుష్యుడు ఈ శరీరమునే ఆత్మగా గ్రహించును. ఇది నాది, ఇది నేను అని భావించును. ఆ దుర్మతి తన కుమార్గములచే వెలుపలికి నెట్టబడి, అసత్యమైన విషయములను ఆశించును. అయినను మీ కథ అను అమృతమును సేవించినచో ఆయన ఆ ఆత్మ మోహమును విడిచిపెట్టును.
+hi: विद्याधरों ने कहा: आपकी माया से मनुष्य इस कलेवर को ही आत्मा मान लेता है। वह इसे मेरा और मैं कहता है। वह दुर्मति अपने ही कुमार्गों से फेंका जाकर असत् विषयों की लालसा करता है। तो भी आपकी कथा के अमृत का सेवन करने पर वह उस आत्म-मोह को छोड़ देता है।
 
 --- verse 45 ---
 deva:
@@ -522,6 +654,9 @@ tvaṁ kratustvaṁ havistvaṁ hutāśaḥ svayaṁ
 tvaṁ hi mantraḥ samiddarbhapātrāṇi ca|
 tvaṁ sadasyartvijo dampatī devatā
 agnihotraṁ svadhā soma ājyaṁ paśuḥ||
+en: The brāhmaṇas said: You are the rite, you are the oblation, you are the fire that eats it. You yourself are the mantra, the firewood, the darbha grass and the vessels. You are the members of the assembly, the priests, the husband and wife who sacrifice, the deities, the agnihotra, the svadhā offering, the soma, the ghee and the animal.
+tel: బ్రాహ్మణులు పలికిరి: క్రతువు మీరు, హవిస్సు మీరు, దానిని తిను హుతాశనుడు మీరు. మంత్రము, సమిధలు, దర్భలు, పాత్రలు మీరే. సదస్యులు, ఋత్విజులు, యజించు దంపతులు, దేవతలు, అగ్నిహోత్రము, స్వధా, సోమము, ఆజ్యము, పశువు మీరే.
+hi: ब्राह्मणों ने कहा: क्रतु आप हैं, हवि आप हैं, उसे खाने वाला हुताश आप हैं। मन्त्र, समिधा, दर्भ और पात्र आप ही हैं। सदस्य, ऋत्विज, यजमान दम्पति, देवता, अग्निहोत्र, स्वधा, सोम, आज्य और पशु आप ही हैं।
 
 --- verse 46 ---
 deva:
@@ -534,6 +669,9 @@ tvaṁ purā gāṁ rasāyā mahāsūkaro
 daṁṣṭrayā padminīṁ vāraṇendro yathā|
 stūyamāno nadam̐llīlayā yogibhi-
 rvyujjahartha trayīgātra yajñakratuḥ||
+en: You of old, as the great boar, lifted the earth out of the waters with your tusk, as the king of elephants lifts up a lotus. The yogins praised you, and you roared in play. Body of the three Vedas, you raised her up, you who are the sacrifice and the rite.
+tel: పూర్వము మహా సూకరుడై, ఏనుగుల రాజు పద్మమును ఎత్తినట్లు, మీరు కోరతో భూమిని నీటి నుండి ఎత్తితిరి. యోగులు మిమ్ములను స్తుతించిరి; మీరు లీలగా గర్జించితిరి. త్రయీ గాత్రా, యజ్ఞ క్రతు స్వరూపులారా, మీరు ఆమెను పైకి ఎత్తితిరి.
+hi: पहले महासूकर बनकर, जैसे गजराज कमल को उठाता है, वैसे आपने दाढ़ से पृथ्वी को जल से ऊपर उठाया। योगियों ने आपका स्तवन किया, और आपने लीला से गर्जना की। हे त्रयी-गात्र! हे यज्ञ-क्रतु-स्वरूप! आपने उसे ऊपर उठाया।
 
 --- verse 47 ---
 deva:
@@ -546,6 +684,9 @@ sa prasīda tvamasmākamākāṅkṣatāṁ
 darśanaṁ te paribhraṣṭasatkarmaṇām|
 kīrtyamāne nṛbhirnāmni yajñeśa te
 yajñavighnāḥ kṣayaṁ yānti tasmai namaḥ||
+en: Be gracious then. We long to see you, and all our good works have come to nothing. Lord of sacrifice, when men speak your name, the obstacles to the sacrifice come to an end. Salutation to that name of yours.
+tel: కావున ప్రసన్నులు కావలెను. మీ దర్శనమును మేము కోరుచున్నాము; మా సత్కర్మలు అన్నియు చెడిపోయినవి. యజ్ఞేశా, నరులు మీ నామమును కీర్తించినప్పుడు యజ్ఞ విఘ్నములు నశించును. ఆ మీ నామమునకు నమస్కారము.
+hi: इसलिए आप प्रसन्न हों। हम आपके दर्शन की आकांक्षा करते हैं, और हमारे सत्कर्म सब नष्ट हो गये हैं। हे यज्ञेश! जब मनुष्य आपका नाम कीर्तन करते हैं, तब यज्ञ के विघ्न क्षय को प्राप्त होते हैं। उस नाम को नमस्कार।
 
 --- verse 48 ---
 deva:
@@ -556,6 +697,9 @@ iast:
 maitreya uvāca
 iti dakṣaḥ kaviryajñaṁ bhadra rudrāvamarśitam|
 kīrtyamāne hṛṣīkeśe saṁninye yajñabhāvane||
+en: Maitreya said: Gentle one, Hṛṣīkeśa, who gives the sacrifice its being, was praised in this way. The wise Dakṣa then brought together again the sacrifice that Rudra had struck down.
+tel: మైత్రేయుడు పలికెను: భద్రా, యజ్ఞమునకు భావము ఇచ్చు హృషీకేశుడు ఇట్లు కీర్తింపబడెను. అంతట కవి అయిన దక్షుడు రుద్రుడు ధ్వంసము చేసిన ఆ యజ్ఞమును మరల కూర్చెను.
+hi: मैत्रेय ने कहा: हे भद्र! यज्ञ को भाव देने वाले हृषीकेश का इस प्रकार कीर्तन हुआ। तब कवि दक्ष ने रुद्र से नष्ट उस यज्ञ को फिर जोड़ दिया।
 
 --- verse 49 ---
 deva:
@@ -564,6 +708,9 @@ deva:
 iast:
 bhagavān svena bhāgena sarvātmā sarvabhāgabhuk|
 dakṣaṁ babhāṣa ābhāṣya prīyamāṇa ivānagha||
+en: Sinless one, the blessed one is the self of all and the eater of every share. He took his own share, and as if pleased he called Dakṣa and spoke to him.
+tel: అనఘా, భగవంతుడు సర్వాత్ముడు, సమస్త భాగములను భుజించువాడు. ఆయన తన భాగమును స్వీకరించి, సంతోషించినవానివలె దక్షుని పిలిచి ఆయనతో మాటలాడెను.
+hi: हे अनघ! भगवान् सर्वात्मा और सब भागों के भोक्ता हैं। उन्होंने अपना भाग लेकर, प्रसन्न से होकर, दक्ष को बुलाकर उनसे कहा।
 
 --- verse 50 ---
 deva:
@@ -574,6 +721,9 @@ iast:
 śrībhagavānuvāca
 ahaṁ brahmā ca śarvaśca jagataḥ kāraṇaṁ param|
 ātmeśvara upadraṣṭā svayaṁdṛgaviśeṣaṇaḥ||
+en: The blessed Lord said: I, Brahmā and Śarva are the supreme cause of the world. I am the lord of the self, the witness, seeing by myself alone, and without any mark that sets me apart.
+tel: శ్రీభగవానుడు పలికెను: నేను, బ్రహ్మ, శర్వుడు జగత్తునకు పరమ కారణము. నేను ఆత్మేశ్వరుడను, ఉపద్రష్టను, స్వయముగా చూచువాడను, ఏ విశేషణము లేనివాడను.
+hi: श्रीभगवान् ने कहा: मैं, ब्रह्मा और शर्व जगत् के परम कारण हैं। मैं आत्मेश्वर, उपद्रष्टा, स्वयं-दृक् और अविशेषण हूँ।
 
 --- verse 51 ---
 deva:
@@ -582,6 +732,9 @@ deva:
 iast:
 ātmamāyāṁ samāviśya so'haṁ guṇamayīṁ dvija|
 sṛjan rakṣan haran viśvaṁ dadhre saṁjñāṁ kriyocitām||
+en: Twice born one, I enter my own māyā, which is made of the guṇas. Creating, protecting and withdrawing the world, I take the name that fits each act.
+tel: ద్విజా, గుణములతో చేసిన నా ఆత్మ మాయలో నేను ప్రవేశించెదను. విశ్వమును సృజించుచు, రక్షించుచు, హరించుచు, ఆ క్రియకు తగిన పేరును నేను ధరించెదను.
+hi: हे द्विज! गुणमयी अपनी आत्म-माया में प्रवेश करके, विश्व को रचते, पालते और हरते हुए मैं उस क्रिया के अनुरूप संज्ञा धारण करता हूँ।
 
 --- verse 52 ---
 deva:
@@ -590,6 +743,9 @@ deva:
 iast:
 tasmin brahmaṇyadvitīye kevale paramātmani|
 brahmarudrau ca bhūtāni bhedenājño'nupaśyati||
+en: That brahman is without a second, alone, the supreme self. The ignorant man looks upon Brahmā, Rudra and all beings as different from it.
+tel: ఆ బ్రహ్మము అద్వితీయము, కేవలము, పరమాత్మ. అజ్ఞుడు బ్రహ్మను, రుద్రుని, భూతములను దానికి భిన్నముగా చూచును.
+hi: वह ब्रह्म अद्वितीय, केवल और परमात्मा है। अज्ञ ब्रह्मा, रुद्र और भूतों को उससे भिन्न रूप में देखता है।
 
 --- verse 53 ---
 deva:
@@ -598,6 +754,9 @@ deva:
 iast:
 yathā pumānna svāṁgeṣu śiraḥpāṇyādiṣu kvacit|
 pārakyabuddhiṁ kurute evaṁ bhūteṣu matparaḥ||
+en: A man never thinks of his own limbs, his head, his hands and the rest, as belonging to another. He who holds me as the highest is the same towards all beings.
+tel: మనుష్యుడు తన అంగములను, తలను, చేతులను, ఇతరమైనవాటిని ఎప్పుడును పరులవి అని భావించడు. నన్ను పరముగా భావించువాడు భూతములయందు అట్లే ఉండును.
+hi: मनुष्य अपने अंगों, सिर, हाथ आदि को कभी पराया नहीं मानता। जो मुझे परम मानता है, वह भूतों के प्रति ऐसा ही रहता है।
 
 --- verse 54 ---
 deva:
@@ -606,6 +765,9 @@ deva:
 iast:
 trayāṇāmekabhāvānāṁ yo na paśyati vai bhidām|
 sarvabhūtātmanāṁ brahman sa śāntimadhigacchati||
+en: The nature of us three is one, and we are the self of all beings. Brāhmaṇa, he who does not see any difference among us gains peace.
+tel: మా మూడుగురి భావము ఒక్కటే; మేము సమస్త భూతములకు ఆత్మ. బ్రహ్మన్, మా మధ్య భేదమును చూడనివాడు శాంతిని పొందును.
+hi: हम तीनों का भाव एक है, और हम सब भूतों के आत्मा हैं। हे ब्रह्मन्! जो हममें भेद नहीं देखता, वह शान्ति पाता है।
 
 --- verse 55 ---
 deva:
@@ -616,6 +778,9 @@ iast:
 maitreya uvāca
 evaṁ bhagavatā''diṣṭaḥ prajāpatipatirharim|
 arcitvā kratunā svena devānubhayato'yajat||
+en: Maitreya said: Instructed in this way by the blessed one, the lord of the Prajāpatis worshipped Hari with his own rite. He then offered to the gods of both kinds.
+tel: మైత్రేయుడు పలికెను: ఇట్లు భగవంతుడిచే ఆదేశింపబడిన ప్రజాపతి పతి తన క్రతువుచే హరిని అర్చించెను. పిమ్మట ఉభయ విధములైన దేవతలకు ఆయన యజనము చేసెను.
+hi: मैत्रेय ने कहा: इस प्रकार भगवान् से आदिष्ट प्रजापति-पति ने अपने क्रतु से हरि की अर्चना की। फिर उन्होंने दोनों प्रकार के देवताओं का यजन किया।
 
 --- verse 56 ---
 deva:
@@ -626,6 +791,9 @@ iast:
 rudraṁ ca svena bhāgena hyupādhāvatsamāhitaḥ|
 karmaṇodavasānena somapānitarānapi|
 udavasya sahartvigbhiḥ sasnāvavabhṛthaṁ tataḥ||
+en: With a steady mind he approached Rudra with the share that is his. With the closing rite he honoured the other drinkers of the soma as well. Then, when the rite had been closed, he bathed in the avabhṛtha with the priests.
+tel: సమాహిత చిత్తముతో ఆయన రుద్రునికి చెందిన భాగముతో ఆయనను ఉపాసించెను. కర్మ ముగింపు క్రియచే ఇతర సోమపానులను కూడ ఆయన సత్కరించెను. పిమ్మట కర్మను ముగించి, ఋత్విజులతో కూడి అవభృథ స్నానము చేసెను.
+hi: समाहित चित्त से उन्होंने रुद्र के भाग से उनकी उपासना की। कर्म के उदवसान से उन्होंने दूसरे सोमपों का भी सत्कार किया। फिर कर्म समाप्त करके ऋत्विजों के साथ उन्होंने अवभृथ-स्नान किया।
 
 --- verse 57 ---
 deva:
@@ -634,6 +802,9 @@ deva:
 iast:
 tasmā apyanubhāvena svenaivāvāptarādhase|
 dharma eva matiṁ dattvā tridaśāste divaṁ yayuḥ||
+en: By his own power he had gained the fruit of the rite. The gods gave him a mind set upon dharma alone, and then they went to heaven.
+tel: తన అనుభావముచేతనే ఆయన కర్మ ఫలమును పొందియుండెను. త్రిదశులు ఆయనకు ధర్మమునందే బుద్ధిని ఇచ్చి, పిమ్మట దివమునకు వెళ్ళిరి.
+hi: अपने ही अनुभाव से उन्होंने कर्म का फल पा लिया था। त्रिदशों ने उन्हें धर्म में ही बुद्धि देकर, फिर दिव को प्रयाण किया।
 
 --- verse 58 ---
 deva:
@@ -642,14 +813,20 @@ deva:
 iast:
 evaṁ dākṣāyaṇī hitvā satī pūrvakalevaram|
 jajñe himavataḥ kṣetre menāyāmiti śuśruma||
+en: Thus Satī, the daughter of Dakṣa, left her former body. We have heard that she was born again in the land of Himavān, of Menā.
+tel: ఇట్లు దాక్షాయణి అయిన సతి తన పూర్వ శరీరమును వదలెను. ఆమె హిమవంతుని క్షేత్రమున మేనయందు మరల జన్మించెనని మేము వినియున్నాము.
+hi: इस प्रकार दाक्षायणी सती ने अपना पूर्व कलेवर छोड़ा। वे हिमवान् के क्षेत्र में मेना से फिर उत्पन्न हुईं, ऐसा हमने सुना है।
 
 --- verse 59 ---
 deva:
-तमेव दयितं भूय आवृङ् क्ते पतिमम्बिका।
+तमेव दयितं भूय आवृङ्क्ते पतिमम्बिका।
 अनन्यभावैकगतिं शक्तिः सुप्तेव पूरुषम्॥
 iast:
-tameva dayitaṁ bhūya āvṛṅ kte patimambikā|
+tameva dayitaṁ bhūya āvṛṅkte patimambikā|
 ananyabhāvaikagatiṁ śaktiḥ supteva pūruṣam||
+en: Ambikā chose that same beloved one again as her husband. He is her only goal, and her mind turns to no other. She is like the śakti that comes back to the Person when his sleep is over.
+tel: అంబిక ఆ ప్రియుడినే మరల పతిగా వరించెను. ఆయనే ఆమెకు ఏకైక గతి; ఆమె భావము మరి ఎటకును మరలదు. నిద్ర ముగిసిన పురుషుని చేరు శక్తివలె ఆమె ఉన్నది.
+hi: अम्बिका ने उन्हीं दयित को फिर पति रूप में वरण किया। वे ही उनकी एकमात्र गति हैं, और उनका भाव अन्यत्र नहीं जाता। सोये हुए पुरुष के पास लौटने वाली शक्ति के समान वे हैं।
 
 --- verse 60 ---
 deva:
@@ -658,6 +835,9 @@ deva:
 iast:
 etadbhagavataḥ śambhoḥ karma dakṣādhvaradruhaḥ|
 śrutaṁ bhāgavatācchiṣyāduddhavānme bṛhaspateḥ||
+en: This is the deed of the blessed Śambhu, who struck down the sacrifice of Dakṣa. I heard it from the devotee Uddhava, who was a pupil of Bṛhaspati.
+tel: దక్షుని యజ్ఞమును ధ్వంసము చేసిన భగవంతుడైన శంభుని కర్మ ఇది. బృహస్పతి శిష్యుడైన భాగవతుడు ఉద్ధవుని నుండి నేను ఇది వినితిని.
+hi: दक्ष के अध्वर को नष्ट करने वाले भगवान् शम्भु का यह कर्म है। बृहस्पति के शिष्य भागवत उद्धव से मैंने यह सुना।
 
 --- verse 61 ---
 deva:
@@ -670,9 +850,15 @@ idaṁ pavitraṁ paramīśaceṣṭitaṁ
 yaśasyamāyuṣyamaghaughamarṣaṇam|
 yo nityadā''karṇya naro'nukīrtayed
 dhunotyaghaṁ kaurava bhaktibhāvataḥ||
+en: This deed of the Lord is most holy. It gives fame and long life, and it wipes away a flood of sin. Kaurava, the man who hears it every day and tells it again with devotion shakes off his sin.
+tel: ఈశుని ఈ చేష్టితము పరమ పవిత్రమైనది. ఇది యశమును, ఆయువును ఇచ్చునది, పాప ప్రవాహమును తుడిచివేయునది. కౌరవా, ప్రతి దినము ఇది విని భక్తి భావముతో మరల కీర్తించు నరుడు తన పాపమును వదలించుకొనును.
+hi: ईश का यह चेष्टित परम पवित्र है। यह यश और आयु देता है, और पाप के समूह को मिटाता है। हे कौरव! जो मनुष्य प्रतिदिन इसे सुनकर भक्ति-भाव से इसका अनुकीर्तन करता है, वह अपना पाप धो देता है।
 
 --- verse none ---
 deva:
 इति श्रीमद्भागवते महापुराणे पारमहंस्यां संहितायां चतुर्थस्कन्धे दक्षयज्ञसंधानं नाम सप्तमोऽध्यायः॥ ७॥
 iast:
 iti śrīmadbhāgavate mahāpurāṇe pāramahaṁsyāṁ saṁhitāyāṁ caturthaskandhe dakṣayajñasaṁdhānaṁ nāma saptamo'dhyāyaḥ|| 7||
+en: Thus ends the seventh adhyāya, named the restoration of Dakṣa's sacrifice, in the fourth skandha of the Śrīmad Bhāgavata Mahāpurāṇa, the saṁhitā of the paramahaṁsas.
+tel: ఇది శ్రీమద్భాగవత మహాపురాణమునందు, పరమహంసల సంహితయందు, చతుర్థస్కంధమునందు దక్షయజ్ఞ సంధానము అను సప్తమాధ్యాయము.
+hi: इस प्रकार श्रीमद्भागवत महापुराण की परमहंसों की संहिता के चतुर्थ स्कन्ध में, दक्षयज्ञ-संधान नामक सातवाँ अध्याय समाप्त हुआ।

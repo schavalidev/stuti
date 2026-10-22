@@ -9,7 +9,7 @@ Type: Purāṇa (an adhyāya of the Śrīmad Bhāgavata, Skandha 3)
 
 Source / recension: Base text and authority: the Gītā Press, Gorakhpur Śrīmadbhāgavata Mahāpurāṇa with Hindi translation, Part 1 (Gītā Press code 26), archive.org item `shrimadbhagwat-mahapuran-bhag-1`, printed pages 400–404; the PDF page numbers are the printed ones. The PDF carries the typesetter's own text layer in the Chanakya font encoding, and the text was decoded from it by machine with `bin/bhagavata/chanakya.py`, not read off OCR or typed. The decoder was checked against GRETIL over all twelve skandhas before any file was written, and the differences that remain were sampled and found to be readings of the two editions. Second witness: GRETIL's `sa_bhAgavatapurANa.xml` (IAST, contributed by Ulrich Stiehl), a separate editorial lineage, compared verse by verse by machine. The TTD edition with the commentaries of Śrīdhara, Vīrarāghava and Vijayadhvaja (archive.org `Bhagavata_Purana_With_Multiple_Commentaries_TTD_Critical_Edition`) is the third witness where one is needed; it was not read for this file. The IAST was generated mechanically from the Devanāgarī with `bin/dev2iast.py`.
 
-Recension note: Text-only file, written 1 Oct 2026 at the user's instruction to lay down the whole Bhāgavata first: the English, Telugu and Hindi meanings are still to be added, and the witnesses' differences listed here have been recorded by machine and not yet adjudicated. The print is followed throughout. The print numbers 37 verses and GRETIL numbers 37. Of the 37 verses GRETIL has under the same number, 30 agree with the print letter for letter once spacing and the spelling of nasals are set aside; the rest differ: 7, 11, 12, 20, 22, 29, 37. The edition's footnotes give these older printed readings (प्रा० पा०), which are not bracketed into the line: at 10, दधिरो०; at 13, योगमार्गेण; at 13, पीले; at 14, नीरावगाहकपिशं जटिलं कुटिलालकम्. Spacing is the print's, as its text layer gives it; in a few places justification has left a space inside a word, and these are still to be closed when the verse is read. The speaker lines (श्रीशुक उवाच and the others) are printed in italic above the verse they introduce, and are given as its first line.
+Recension note: Meanings written 22 Oct 2026 (session S78). The differences between the witnesses listed below were read as the verses were glossed; except where this note says otherwise, each is a spelling, a sandhi or a word order of the two editions, none of them changes the sense, and the print's reading therefore stands unbracketed. The print is followed throughout. The print numbers 37 verses and GRETIL numbers 37. Of the 37 verses GRETIL has under the same number, 30 agree with the print letter for letter once spacing and the spelling of nasals are set aside; the rest differ: 7, 11, 12, 20, 22, 29, 37. The edition's footnotes give these older printed readings (प्रा० पा०), which are not bracketed into the line: at 10, दधिरो०; at 13, योगमार्गेण; at 13, पीले; at 14, नीरावगाहकपिशं जटिलं कुटिलालकम्. Spacing is the print's, as its text layer gives it. The speaker lines (श्रीशुक उवाच and the others) are printed in italic above the verse they introduce, and are given as its first line. A footnote's numeral keys it to one word, and which word that is cannot be told from the note alone, so those readings stay unbracketed until the page itself is read. One word was put right as the verses were read. At verse 4 justification had left a space inside अङ्घ्रिपानः, and it is closed here; GRETIL agrees with the corrected reading. One defect is left standing: at verse 12 the print's text layer gives प्रर्दश्य, which cannot be read, and GRETIL reads प्रदर्श्य. That is a misplaced reph and not a spacing fault, so the line is left as the layer gives it until the page itself is read, and the meaning here follows प्रदर्श्य.
 
 Verse count: 37, plus the closing colophon printed unnumbered.
 
@@ -28,6 +28,9 @@ evaṁ niśamya kapilasya vaco janitrī
 sā kardamasya dayitā kila devahūtiḥ|
 visrastamohapaṭalā tamabhipraṇamya
 tuṣṭāva tattvaviṣayāṅkitasiddhibhūmim||
+en: Maitreya said: Devahūti, his mother, the beloved wife of Kardama, heard the words of Kapila in this way. The veil of her delusion fell away. She bowed low to him and praised him, who is the ground of the attainments that bear the mark of the truth.
+tel: మైత్రేయుడు పలికెను: కర్దమునికి ప్రియమైన భార్య, ఆయన తల్లియైన దేవహూతి కపిలుని మాటలను ఈ విధముగా వినెను. ఆమె మోహపు తెర తొలగిపోయెను. ఆమె ఆయనకు నమస్కరించి, తత్త్వము యొక్క గుర్తు కలిగిన సిద్ధులకు భూమియైన ఆయనను స్తుతించెను.
+hi: मैत्रेय ने कहा: कर्दम की प्रिय पत्नी, उनकी माता देवहूति ने कपिल के वचन इस प्रकार सुने। उनका मोह का परदा गिर गया। उन्होंने उन्हें प्रणाम किया और तत्त्व के विषय से अंकित सिद्धियों की भूमि उनकी स्तुति की।
 
 --- verse 2 ---
 deva:
@@ -42,6 +45,9 @@ athāpyajo'ntaḥsalile śayānaṁ
 bhūtendriyārthātmamayaṁ vapuste|
 guṇapravāhaṁ sadaśeṣabījaṁ
 dadhyau svayaṁ yajjaṭharābjajātaḥ||
+en: Devahūti said: Your body lies within the water. It holds the elements, the senses, their objects and the self; it is the stream of the guṇas and the seed of all that exists. The unborn one, who himself was born of the lotus from your body, meditated upon it.
+tel: దేవహూతి పలికెను: మీ శరీరము జలము లోపల శయనించియున్నది. అది భూతములు, ఇంద్రియములు, వాని అర్థములు, ఆత్మతో కూడినది; అది గుణముల ప్రవాహము, ఉన్నదంతటికి బీజము. మీ ఉదరమునుండి వచ్చిన కమలమున పుట్టిన అజుడే దానిని ధ్యానించెను.
+hi: देवहूति ने कहा: आपका शरीर जल के भीतर शयन करता है। वह भूत, इन्द्रिय, अर्थ और आत्मा से युक्त है; वह गुणों का प्रवाह और समस्त सत् का बीज है। आपके उदर से उत्पन्न कमल से जन्मे अज ने स्वयं उसका ध्यान किया।
 
 --- verse 3 ---
 deva:
@@ -54,18 +60,24 @@ sa eva viśvasya bhavān vidhatte
 guṇapravāheṇa vibhaktavīryaḥ|
 sargādyanīho'vitathābhisandhi-
 rātmeśvaro'tarkyasahasraśaktiḥ||
+en: You yourself arrange this universe, and your power is divided by the stream of the guṇas. You have no wish of your own in creation and the rest, your purpose never fails, you are the lord of the self, and your thousand powers are beyond thought.
+tel: మీరే ఈ విశ్వమును నడిపించుచున్నారు; గుణ ప్రవాహముచే మీ శక్తి విభజింపబడినది. సృష్టి మొదలైన వానియందు మీకు కోరిక లేదు, మీ సంకల్పము ఎప్పుడును వ్యర్థము కాదు, మీరు ఆత్మేశ్వరులు, మీ వేయి శక్తులు ఊహకు అందనివి.
+hi: आप ही इस विश्व की व्यवस्था करते हैं, और गुणों के प्रवाह से आपका वीर्य विभक्त है। सर्ग आदि में आपकी कोई इच्छा नहीं है, आपका संकल्प कभी मिथ्या नहीं होता, आप आत्मा के ईश्वर हैं, और आपकी सहस्र शक्तियाँ तर्क से परे हैं।
 
 --- verse 4 ---
 deva:
 स त्वं भृतो मे जठरेण नाथ
 कथं नु यस्योदर एतदासीत्।
 विश्वं युगान्ते वटपत्र एकः
-शेते स्म मायाशिशुरङ् घ्रिपानः॥
+शेते स्म मायाशिशुरङ्घ्रिपानः॥
 iast:
 sa tvaṁ bhṛto me jaṭhareṇa nātha
 kathaṁ nu yasyodara etadāsīt|
 viśvaṁ yugānte vaṭapatra ekaḥ
-śete sma māyāśiśuraṅ ghripānaḥ||
+śete sma māyāśiśuraṅghripānaḥ||
+en: O lord, you were carried in my womb. How could that be, when this whole universe was within your own? At the end of the age you lie alone upon a banyan leaf, a child of māyā, holding your foot to your mouth.
+tel: నాథా, మీరు నా గర్భమునందు మోయబడితిరి. ఈ విశ్వమంతయు మీ ఉదరమునందు ఉండినది; అట్టిది ఎట్లు జరిగెను? యుగాంతమున మీరు ఒక్కరే మర్రి ఆకుపై, మాయా శిశువుగా, పాదమును నోటియందు ఉంచుకొని శయనించుచున్నారు.
+hi: हे नाथ, आप मेरे उदर से धारण किये गये। यह कैसे हुआ, जिनके उदर में यह सारा विश्व था? युग के अन्त में आप अकेले वट के पत्ते पर, माया के शिशु के रूप में, अपना चरण मुँह में लेकर शयन करते हैं।
 
 --- verse 5 ---
 deva:
@@ -78,6 +90,9 @@ tvaṁ dehatantraḥ praśamāya pāpmanāṁ
 nideśabhājāṁ ca vibho vibhūtaye|
 yathāvatārāstava sūkarādaya-
 stathāyamapyātmapathopalabdhaye||
+en: O mighty one, you take a body to quiet those who do wrong, and to raise up those who keep your command. Your descents as the boar and the rest were for this, and this one too is so that the path of the self may be found.
+tel: విభూ, పాపము చేయువారిని అణచుటకును, మీ ఆజ్ఞను పాలించువారి అభ్యుదయమునకును మీరు దేహమును ధరించుచున్నారు. వరాహము మొదలైన మీ అవతారములు అట్టివే; ఈ అవతారమును ఆత్మ మార్గము తెలియుటకే.
+hi: हे विभो, पाप करने वालों के शमन के लिये और आपकी आज्ञा मानने वालों के अभ्युदय के लिये आप देह धारण करते हैं। वराह आदि आपके अवतार ऐसे ही थे, और यह अवतार भी आत्मा के मार्ग की प्राप्ति के लिये है।
 
 --- verse 6 ---
 deva:
@@ -90,6 +105,9 @@ yannāmadheyaśravaṇānukīrtanād
 yatprahvaṇādyatsmaraṇādapi kvacit|
 śvādo'pi sadyaḥ savanāya kalpate
 kutaḥ punaste bhagavannu darśanāt||
+en: By hearing and repeating your name, by bowing to you, or even by remembering you once, one who eats the flesh of dogs becomes at once fit for the sacrifice. O Lord, how much more is gained by the sight of you.
+tel: మీ నామమును విని పలుకుట వలన, మీకు నమస్కరించుట వలన, ఒక్కసారి మిమ్ము స్మరించుట వలన, శ్వపచుడు కూడ వెంటనే యజ్ఞమునకు యోగ్యుడగును. భగవంతుడా, మీ దర్శనము వలన ఇంకెంత కలుగును.
+hi: आपके नाम के सुनने और कीर्तन से, आपको प्रणाम करने से, और कहीं एक बार स्मरण करने से भी श्वपच तुरन्त यज्ञ के योग्य हो जाता है। हे भगवन्, फिर आपके दर्शन से कितना अधिक मिलता है।
 
 --- verse 7 ---
 deva:
@@ -102,6 +120,9 @@ aho bata śvapaco'to garīyān
 yajjihvāgre vartate nāma tubhyam|
 tepustapaste juhuvuḥ sasnurāryā
 brahmānūcurnāma gṛṇanti ye te||
+en: Ah, one who eats the flesh of dogs, but on whose tongue your name rests, is greater than such a man. Those who utter your name have done tapas, have offered oblations, have bathed at the holy places, are noble, and have recited the Veda.
+tel: ఆహా, మీ నామము నాలుక కొనపై నిలిచిన శ్వపచుడు అతనికంటె గొప్పవాడు. మీ నామమును పలుకువారు తపస్సు చేసినవారు, హోమము చేసినవారు, తీర్థములలో స్నానము చేసినవారు, ఆర్యులు, వేదమును పఠించినవారు.
+hi: अहो, जिसकी जीभ के अग्र पर आपका नाम है, वह श्वपच उससे भी बड़ा है। जो आपका नाम लेते हैं, उन्होंने तप किया, हवन किया, तीर्थों में स्नान किया, वे आर्य हैं, और उन्होंने वेद का पाठ किया।
 
 --- verse 8 ---
 deva:
@@ -114,6 +135,9 @@ taṁ tvāmahaṁ brahma paraṁ pumāṁsaṁ
 pratyaksrotasyātmani saṁvibhāvyam|
 svatejasā dhvastaguṇapravāhaṁ
 vande viṣṇuṁ kapilaṁ vedagarbham||
+en: I bow to you, the supreme brahman, the Person, who is to be known in the self whose stream turns inward, and who by your own splendour have stilled the stream of the guṇas: to Viṣṇu, to Kapila, whose womb is the Veda.
+tel: లోపలికి తిరిగిన ప్రవాహము కలిగిన ఆత్మయందు తెలియదగిన, పరబ్రహ్మమైన, పురుషుడైన, తన తేజముచే గుణ ప్రవాహమును అణచిన మీకు నమస్కరించుచున్నాను: విష్ణువునకు, వేదగర్భుడైన కపిలునికి.
+hi: भीतर की ओर बहने वाले आत्मा में जानने योग्य, परम ब्रह्म, पुरुष, और अपने तेज से गुणों के प्रवाह को नष्ट करने वाले आपको मैं नमस्कार करती हूँ: विष्णु को, वेदगर्भ कपिल को।
 
 --- verse 9 ---
 deva:
@@ -124,6 +148,9 @@ iast:
 maitreya uvāca
 īḍito bhagavānevaṁ kapilākhyaḥ paraḥ pumān|
 vācāviklavayetyāha mātaraṁ mātṛvatsalaḥ||
+en: Maitreya said: Praised in this way, the blessed Lord named Kapila, the supreme Person, who loved his mother, spoke to her in a steady voice.
+tel: మైత్రేయుడు పలికెను: ఈ విధముగా స్తుతింపబడిన, కపిల అను పేరు కలిగిన పరమ పురుషుడైన భగవంతుడు, తల్లియందు ప్రేమ కలవాడై, తడబడని మాటతో ఆమెతో ఇట్లు పలికెను.
+hi: मैत्रेय ने कहा: इस प्रकार स्तुति किये हुए, कपिल नामक भगवान्, परम पुरुष, माता पर स्नेह रखने वाले, अविकल वाणी से माता से यह कहा।
 
 --- verse 10 ---
 deva:
@@ -134,6 +161,9 @@ iast:
 kapila uvāca
 mārgeṇānena mātaste susevyenoditena me|
 āsthitena parāṁ kāṣṭhāmacirādavarotsyasi||
+en: Kapila said: Mother, this path which I have told you is easy to follow. If you keep to it you will soon reach the highest goal.
+tel: కపిలుడు పలికెను: అమ్మా, నేను చెప్పిన ఈ మార్గము సులభముగా సేవింపదగినది. దానియందు నిలిచినచో నీవు త్వరలో పరమ కాష్ఠను చేరుదువు.
+hi: कपिल ने कहा: हे माता, मेरे कहे हुए यह मार्ग सुखपूर्वक सेवने योग्य है। उसमें स्थित रहकर तुम शीघ्र ही परम काष्ठा को प्राप्त करोगी।
 
 --- verse 11 ---
 deva:
@@ -142,6 +172,9 @@ deva:
 iast:
 śraddhatsvaitanmataṁ mahyaṁ juṣṭaṁ yadbrahmavādibhiḥ|
 yena māmabhavaṁ yāyā mṛtyumṛcchantyatadvidaḥ||
+en: Have faith in this teaching of mine, which those who speak of brahman have honoured. By it you will come to me, who am free of birth. Those who do not know it come to death.
+tel: బ్రహ్మవాదులు ఆదరించిన ఈ నా మతమును నమ్ముము. దానిచే నీవు జన్మము లేని నన్ను చేరుదువు. దీనిని ఎరుగనివారు మృత్యువును పొందుదురు.
+hi: ब्रह्म के वक्ताओं ने जिसका सेवन किया है, इस मेरे मत पर श्रद्धा रखो। उससे तुम अभव मुझको प्राप्त करोगी। जो इसे नहीं जानते, वे मृत्यु को प्राप्त होते हैं।
 
 --- verse 12 ---
 deva:
@@ -152,6 +185,9 @@ iast:
 maitreya uvāca
 iti prardaśya bhagavān satīṁ tāmātmano gatim|
 svamātrā brahmavādinyā kapilo'numato yayau||
+en: Maitreya said: Having shown his mother this true course of his own, Kapila took her leave, for she now spoke of brahman, and he departed.
+tel: మైత్రేయుడు పలికెను: తనకు సంబంధించిన ఈ సత్యమైన గతిని తల్లికి చూపి, బ్రహ్మవాదిని అయిన ఆమె అనుమతిని పొంది, కపిలుడు వెడలిపోయెను.
+hi: मैत्रेय ने कहा: अपनी वह सती गति माता को दिखाकर, ब्रह्मवादिनी अपनी माता की अनुमति लेकर कपिल चले गये।
 
 --- verse 13 ---
 deva:
@@ -160,6 +196,9 @@ deva:
 iast:
 sā cāpi tanayoktena yogādeśena yogayuk|
 tasminnāśrama āpīḍe sarasvatyāḥ samāhitā||
+en: She too took up yoga by the teaching her son had given. In that hermitage called Āpīḍa, on the bank of the Sarasvatī, she became collected in mind.
+tel: ఆమెయు కుమారుడు చెప్పిన యోగోపదేశముచే యోగమును చేపట్టెను. సరస్వతీ తీరమునందున్న ఆపీడము అను ఆ ఆశ్రమమునందు ఆమె సమాహిత మనస్సు కలదైనది.
+hi: वे भी पुत्र के कहे योग के उपदेश से योग में युक्त हुईं। सरस्वती के तट पर उस आपीड नामक आश्रम में वे समाहित हुईं।
 
 --- verse 14 ---
 deva:
@@ -168,6 +207,9 @@ deva:
 iast:
 abhīkṣṇāvagāhakapiśān jaṭilān kuṭilālakān|
 ātmānaṁ cogratapasā bibhratī cīriṇaṁ kṛśam||
+en: By bathing again and again her matted and curling locks had turned brown. By fierce tapas she bore a body that was thin and clothed in bark.
+tel: మాటిమాటికి స్నానము చేయుటచే ముడిపడి వంకరలు తిరిగిన ఆమె జటలు గోధుమ రంగునకు మారెను. తీవ్రమైన తపస్సుచే ఆమె దేహము కృశించి, నారబట్టలను ధరించెను.
+hi: बार-बार स्नान करने से उनकी उलझी और घुँघराली जटाएँ कपिश हो गयीं। उग्र तप से उन्होंने अपने शरीर को कृश और चीर वस्त्र वाला धारण किया।
 
 --- verse 15 ---
 deva:
@@ -176,6 +218,9 @@ deva:
 iast:
 prajāpateḥ kardamasya tapoyogavijṛmbhitam|
 svagārhasthyamanaupamyaṁ prārthyaṁ vaimānikairapi||
+en: The household of Prajāpati Kardama had come of his tapas and yoga. It was her own, it had no equal, and even those who travel in celestial cars would wish for it.
+tel: ప్రజాపతి కర్దముని తపస్సు యోగముచే కలిగిన ఆ గృహస్థ సంపద ఆమెదే. దానికి సాటి లేదు; విమానములలో తిరుగువారును దానిని కోరుదురు.
+hi: प्रजापति कर्दम के तप और योग से उत्पन्न वह गृहस्थी उनकी अपनी थी। उसकी कोई उपमा नहीं थी, और विमानों में चलने वाले भी उसकी प्रार्थना करते।
 
 --- verse 16 ---
 deva:
@@ -184,6 +229,9 @@ deva:
 iast:
 payaḥphenanibhāḥ śayyā dāntā rukmaparicchadāḥ|
 āsanāni ca haimāni susparśāstaraṇāni ca||
+en: The beds were like the foam of milk, made of ivory, with coverings of gold. The seats were of gold, with coverings soft to the touch.
+tel: పాలనురుగు వంటి పరుపులు, ఏనుగు దంతముతో చేసినవి, బంగారు కప్పులు కలిగినవి ఉండెను. ఆసనములు బంగారువి, మెత్తని పరుపులు కలిగినవి.
+hi: पलंग दूध के फेन के समान, हाथी दाँत के बने और सोने के आवरण वाले थे। आसन सोने के थे, और उन पर कोमल स्पर्श वाले बिछौने थे।
 
 --- verse 17 ---
 deva:
@@ -192,6 +240,9 @@ deva:
 iast:
 svacchasphaṭikakuḍyeṣu mahāmārakateṣu ca|
 ratnapradīpā ābhānti lalanāratnasaṁyutāḥ||
+en: On the walls of clear crystal and of great emerald, lamps of jewels shine, together with the women who are jewels themselves.
+tel: స్వచ్ఛమైన స్ఫటికము, గొప్ప మరకతములతో చేసిన గోడలపై రత్న దీపములు ప్రకాశించును; రత్నముల వంటి స్త్రీలు వానితో కూడి ఉండిరి.
+hi: स्वच्छ स्फटिक और महा मरकत की दीवारों पर रत्नों के दीप चमकते हैं, और उनके साथ रत्न रूप ललनाएँ रहती हैं।
 
 --- verse 18 ---
 deva:
@@ -200,6 +251,9 @@ deva:
 iast:
 gṛhodyānaṁ kusumitai ramyaṁ bahvamaradrumaiḥ|
 kūjadvihaṅgamithunaṁ gāyanmattamadhuvratam||
+en: The garden of the house was lovely with many flowering trees of the gods. Pairs of birds called there, and bees, drunk with honey, hummed their song.
+tel: ఇంటి తోట పూచిన పెక్కు దేవవృక్షములచే అందముగా ఉండెను. అందు పక్షుల జంటలు కూయుచుండెను; తేనెతో మత్తెక్కిన తుమ్మెదలు పాడుచుండెను.
+hi: घर का उद्यान फूले हुए बहुत से देववृक्षों से रमणीय था। वहाँ पक्षियों के जोड़े कूजते थे, और मधु से मत्त भौंरे गाते थे।
 
 --- verse 19 ---
 deva:
@@ -208,6 +262,9 @@ deva:
 iast:
 yatra praviṣṭamātmānaṁ vibudhānucarā jaguḥ|
 vāpyāmutpalagandhinyāṁ kardamenopalālitam||
+en: When she entered that garden, the attendants of the gods sang of her, as she bathed in the pool that was fragrant with lotuses, and there Kardama cherished her.
+tel: ఆ తోటలోనికి ఆమె ప్రవేశించినపుడు, దేవతల అనుచరులు ఆమెను గూర్చి పాడిరి; కలువల వాసన కలిగిన ఆ కొలనునందు కర్దముడు ఆమెను లాలించెను.
+hi: उस उद्यान में प्रवेश करने पर देवताओं के अनुचर उनका गान करते थे, और कमलों की गन्ध वाली उस वापी में कर्दम उनको लालन करते थे।
 
 --- verse 20 ---
 deva:
@@ -216,6 +273,9 @@ deva:
 iast:
 hitvā tadīpsitatamamapyākhaṇḍalayoṣitām|
 kiñciccakāra vadanaṁ putraviśleṣaṇāturā||
+en: She gave up that home, which even the wives of Indra desired most of all. Her face was somewhat changed, for she was stricken by the parting from her son.
+tel: ఇంద్రుని భార్యలకును మిగుల కోరదగిన ఆ గృహమును ఆమె విడిచెను. కుమారుని ఎడబాటుచే బాధపడి ఆమె ముఖము కొంత మారెను.
+hi: इन्द्र की पत्नियों को भी अत्यन्त अभीष्ट उस घर को उन्होंने छोड़ दिया। पुत्र के विछोह से आतुर होकर उनका मुख कुछ बदल गया।
 
 --- verse 21 ---
 deva:
@@ -224,6 +284,9 @@ deva:
 iast:
 vanaṁ pravrajite patyāvapatyavirahāturā|
 jñātatattvāpyabhūnnaṣṭe vatse gauriva vatsalā||
+en: Her husband had gone to the forest, and she was stricken by the parting from her child. Though she knew the truth, she became like a cow that has lost its calf and is full of love for it.
+tel: ఆమె భర్త అడవికి వెళ్ళెను; కుమారుని ఎడబాటుచే ఆమె బాధపడెను. తత్త్వమును ఎరిగినదైనను, దూడ పోయిన ఆవువలె ఆమె వాత్సల్యముతో నిండెను.
+hi: उनके पति वन को चले गये थे, और वे पुत्र के विरह से आतुर थीं। तत्त्व को जानती हुई भी वे खोये हुए बछड़े वाली गौ के समान वत्सल हो गयीं।
 
 --- verse 22 ---
 deva:
@@ -232,6 +295,9 @@ deva:
 iast:
 tameva dhyāyatī devamapatyaṁ kapilaṁ harim|
 babhūvācirato vatsa niḥspṛhā tādṛśe gṛhe||
+en: She meditated on that same god, her child Kapila, who is Hari. Soon, dear child, she had no longing left for such a home.
+tel: ఆమె తన కుమారుడైన, హరియే అయిన ఆ కపిల దేవుని ధ్యానించుచుండెను. నాయనా, కొలది కాలములోనే అట్టి గృహమునందు ఆమెకు కోరిక తొలగెను.
+hi: वे उसी देव, अपने पुत्र कपिल, जो हरि हैं, का ध्यान करती रहीं। हे वत्स, थोड़े ही समय में उन्हें ऐसे घर में कोई स्पृहा न रही।
 
 --- verse 23 ---
 deva:
@@ -240,6 +306,9 @@ deva:
 iast:
 dhyāyatī bhagavadrūpaṁ yadāha dhyānagocaram|
 sutaḥ prasannavadanaṁ samastavyastacintayā||
+en: She meditated on the form of the Lord, with its gracious face, which her son had named as the object of meditation. She held it in her thought both whole and part by part.
+tel: ధ్యానమునకు విషయమని కుమారుడు చెప్పిన, ప్రసన్నమైన ముఖము కలిగిన భగవంతుని రూపమును ఆమె ధ్యానించెను. దానిని మొత్తముగాను, అవయవములవారీగాను ఆమె మనస్సునందు నిలుపుకొనెను.
+hi: ध्यान का विषय जिसे पुत्र ने कहा था, उस प्रसन्न मुख वाले भगवान् के रूप का वे ध्यान करती रहीं। उसे वे समस्त रूप में और अंग-अंग के रूप में चिन्तन करती थीं।
 
 --- verse 24 ---
 deva:
@@ -248,6 +317,9 @@ deva:
 iast:
 bhaktipravāhayogena vairāgyeṇa balīyasā|
 yuktānuṣṭhānajātena jñānena brahmahetunā||
+en: She had the yoga that is a stream of devotion, strong detachment, and the knowledge born of right practice, which leads to brahman.
+tel: భక్తి ప్రవాహమైన యోగము, బలమైన వైరాగ్యము, సరియైన అనుష్ఠానమున పుట్టిన బ్రహ్మమునకు హేతువైన జ్ఞానము ఆమెకు కలిగెను.
+hi: भक्ति के प्रवाह रूप योग, बलवान् वैराग्य, और युक्त अनुष्ठान से उत्पन्न ब्रह्म का हेतु ज्ञान उन्हें प्राप्त हुआ।
 
 --- verse 25 ---
 deva:
@@ -256,6 +328,9 @@ deva:
 iast:
 viśuddhena tadā''tmānamātmanā viśvatomukham|
 svānubhūtyā tirobhūtamāyāguṇaviśeṣaṇam||
+en: Then with a wholly pure mind she saw the Self by her own self, facing every side, and by her own realisation the marks of māyā and of the guṇas had vanished.
+tel: అపుడు పూర్తిగా శుద్ధమైన మనస్సుతో ఆమె తన ఆత్మచే, అన్ని వైపుల ముఖము కలిగిన ఆత్మను చూచెను; తన అనుభవముచే మాయ గుణముల భేదములు అంతరించెను.
+hi: तब विशुद्ध मन से उन्होंने अपने आत्मा से उस विश्वतोमुख आत्मा को देखा, और अपनी अनुभूति से माया तथा गुणों के विशेषण तिरोहित हो गये।
 
 --- verse 26 ---
 deva:
@@ -264,6 +339,9 @@ deva:
 iast:
 brahmaṇyavasthitamatirbhagavatyātmasaṁśraye|
 nivṛttajīvāpattitvātkṣīṇakleśā''ptanirvṛtiḥ||
+en: Her mind stood fast in brahman, in the Lord who is the refuge of the self. The misfortune of the jīva had ceased in her, her afflictions were worn away, and she gained peace.
+tel: ఆత్మకు ఆశ్రయమైన భగవంతునియందు, బ్రహ్మమునందు ఆమె బుద్ధి నిలిచెను. జీవునికి కలుగు ఆపద ఆమెకు తొలగెను, క్లేశములు క్షీణించెను, ఆమెకు నిర్వృతి కలిగెను.
+hi: आत्मा के आश्रय भगवान् में, ब्रह्म में उनकी बुद्धि स्थित हो गयी। जीव की आपत्ति निवृत्त होने से उनके क्लेश क्षीण हुए और उन्हें निर्वृति प्राप्त हुई।
 
 --- verse 27 ---
 deva:
@@ -272,6 +350,9 @@ deva:
 iast:
 nityārūḍhasamādhitvātparāvṛttaguṇabhramā|
 na sasmāra tadā''tmānaṁ svapne dṛṣṭamivotthitaḥ||
+en: She was always settled in samādhi, and the delusion of the guṇas had turned away from her. She no longer remembered her own body, as one who has woken does not remember what was seen in a dream.
+tel: ఆమె ఎల్లప్పుడు సమాధియందు నిలిచి ఉండెను; గుణముల భ్రమ ఆమెనుండి మరలిపోయెను. నిద్ర లేచినవాడు కలలో చూచినది స్మరించనట్లు, ఆమె తన దేహమును ఇక స్మరించలేదు.
+hi: वे सदा समाधि में आरूढ़ रहने लगीं, और गुणों का भ्रम उनसे लौट गया। जगा हुआ मनुष्य स्वप्न में देखी वस्तु को याद नहीं रखता, वैसे ही उन्होंने अपने शरीर को फिर स्मरण नहीं किया।
 
 --- verse 28 ---
 deva:
@@ -280,6 +361,9 @@ deva:
 iast:
 taddehaḥ parataḥpoṣo'pyakṛśaścādhyasambhavāt|
 babhau malairavacchannaḥ sadhūma iva pāvakaḥ||
+en: Her body was nourished by others, yet it did not grow thin, for no distress of mind arose in her. Covered with dust, it shone like a fire that carries smoke.
+tel: ఆమె దేహము ఇతరులచే పోషింపబడినను కృశించలేదు, ఏలయనగా మనోవ్యధ ఆమెకు కలుగలేదు. మురికితో కప్పబడిన అది పొగతో కూడిన అగ్నివలె ప్రకాశించెను.
+hi: उनका शरीर दूसरों से पोषित होने पर भी कृश नहीं हुआ, क्योंकि उन्हें मन की व्यथा नहीं हुई। मलों से ढका हुआ वह धूम सहित अग्नि के समान शोभा पाता था।
 
 --- verse 29 ---
 deva:
@@ -288,6 +372,9 @@ deva:
 iast:
 svāṅgaṁ tapoyogamayaṁ muktakeśaṁ gatāmbaram|
 daivaguptaṁ na bubudhe vāsudevapraviṣṭadhīḥ||
+en: Her own body was made of tapas and yoga, her hair was loose and her garment had fallen away, and the gods guarded her. She did not notice it, for her mind had entered Vāsudeva.
+tel: తపస్సు యోగముతో కూడిన ఆమె దేహము, జుట్టు విడివడి, వస్త్రము జారిపోయి ఉండెను; దేవతలు ఆమెను కాపాడిరి. వాసుదేవునియందు బుద్ధి ప్రవేశించుట వలన ఆమె దానిని గమనించలేదు.
+hi: तप और योग से बना उनका शरीर, खुले केश और गिरे वस्त्र वाला था, और देव उसकी रक्षा करते थे। वासुदेव में बुद्धि प्रवेश कर जाने से उन्होंने उसे जाना ही नहीं।
 
 --- verse 30 ---
 deva:
@@ -296,6 +383,9 @@ deva:
 iast:
 evaṁ sā kapiloktena mārgeṇācirataḥ param|
 ātmānaṁ brahma nirvāṇaṁ bhagavantamavāpa ha||
+en: In this way, by the path Kapila had told, she soon reached the Supreme: the Self, brahman, nirvāṇa, the blessed Lord.
+tel: ఈ విధముగా కపిలుడు చెప్పిన మార్గముచే ఆమె కొలది కాలములోనే పరమమును చేరెను: ఆత్మను, బ్రహ్మమును, నిర్వాణమును, భగవంతుని.
+hi: इस प्रकार कपिल के कहे मार्ग से उन्होंने शीघ्र ही परम को प्राप्त किया: आत्मा को, ब्रह्म को, निर्वाण को, भगवान् को।
 
 --- verse 31 ---
 deva:
@@ -304,6 +394,9 @@ deva:
 iast:
 tadvīrāsītpuṇyatamaṁ kṣetraṁ trailokyaviśrutam|
 nāmnā siddhapadaṁ yatra sā saṁsiddhimupeyuṣī||
+en: O hero, the place where she attained perfection became a most holy field, and it is known in the three worlds by the name Siddhapada.
+tel: వీరా, ఆమె సంసిద్ధిని పొందిన ఆ స్థలము మిగుల పుణ్యమైన క్షేత్రమయ్యెను; అది సిద్ధపదము అను పేరుతో మూడు లోకములలో ప్రసిద్ధము.
+hi: हे वीर, जहाँ उन्होंने संसिद्धि पायी, वह क्षेत्र अत्यन्त पुण्य हुआ, और सिद्धपद नाम से तीनों लोकों में विख्यात है।
 
 --- verse 32 ---
 deva:
@@ -312,6 +405,9 @@ deva:
 iast:
 tasyāstadyogavidhutamārtyaṁ martyamabhūtsarit|
 srotasāṁ pravarā saumya siddhidā siddhasevitā||
+en: Her mortal body, whose mortality that yoga had shaken off, became a river. O gentle one, it is the best of streams, it gives perfection, and the siddhas resort to it.
+tel: ఆ యోగముచే మృత్యు స్వభావము తొలగిన ఆమె మర్త్య దేహము ఒక నదియైనది. సౌమ్యుడా, అది ప్రవాహములలో శ్రేష్ఠమైనది, సిద్ధిని ఇచ్చునది, సిద్ధులు సేవించునది.
+hi: उस योग से मर्त्यता धुल जाने पर उनका मर्त्य शरीर एक नदी हो गया। हे सौम्य, वह स्रोतों में श्रेष्ठ है, सिद्धि देने वाली है, और सिद्धों से सेवित है।
 
 --- verse 33 ---
 deva:
@@ -320,6 +416,9 @@ deva:
 iast:
 kapilo'pi mahāyogī bhagavān piturāśramāt|
 mātaraṁ samanujñāpya prāgudīcīṁ diśaṁ yayau||
+en: Kapila too, the great yogin, the blessed one, took his mother's leave and went from his father's hermitage towards the north east.
+tel: మహాయోగియైన భగవంతుడు కపిలుడును తల్లి అనుమతిని తీసికొని, తండ్రి ఆశ్రమమునుండి ఈశాన్య దిక్కునకు వెడలెను.
+hi: महायोगी भगवान् कपिल भी माता की अनुमति लेकर पिता के आश्रम से पूर्व-उत्तर दिशा को गये।
 
 --- verse 34 ---
 deva:
@@ -328,6 +427,9 @@ deva:
 iast:
 siddhacāraṇagandharvairmunibhiścāpsarogaṇaiḥ|
 stūyamānaḥ samudreṇa dattārhaṇaniketanaḥ||
+en: The siddhas, the cāraṇas, the gandharvas, the sages and the hosts of apsarases praised him, and the ocean gave him honour and a dwelling place.
+tel: సిద్ధులు, చారణులు, గంధర్వులు, మునులు, అప్సర గణములు ఆయనను స్తుతించిరి; సముద్రుడు ఆయనకు అర్హణను నివాసమును ఇచ్చెను.
+hi: सिद्ध, चारण, गन्धर्व, मुनि और अप्सराओं के गण उनकी स्तुति करते थे, और समुद्र ने उन्हें अर्हण तथा निकेतन दिया।
 
 --- verse 35 ---
 deva:
@@ -336,6 +438,9 @@ deva:
 iast:
 āste yogaṁ samāsthāya sāṁkhyācāryairabhiṣṭutaḥ|
 trayāṇāmapi lokānāmupaśāntyai samāhitaḥ||
+en: There he stays, settled in yoga and collected in mind, praised by the teachers of Sāṁkhya, for the peace of all three worlds.
+tel: అందు ఆయన యోగమును చేపట్టి, సమాహిత చిత్తుడై, సాంఖ్యాచార్యులచే స్తుతింపబడుచు, మూడు లోకముల ఉపశాంతికై ఉండెను.
+hi: वहाँ वे योग में स्थित होकर, समाहित होकर, सांख्य के आचार्यों से स्तुति किये जाते हुए, तीनों लोकों की उपशान्ति के लिये रहते हैं।
 
 --- verse 36 ---
 deva:
@@ -344,6 +449,9 @@ deva:
 iast:
 etannigaditaṁ tāta yatpṛṣṭo'haṁ tavānagha|
 kapilasya ca saṁvādo devahūtyāśca pāvanaḥ||
+en: Dear one, this has now been told, which you asked of me, O sinless one: the holy conversation of Kapila and of Devahūti.
+tel: నాయనా, అనఘా, నీవు నన్ను అడిగిన ఇది చెప్పబడినది: కపిలునికి దేవహూతికి జరిగిన పావనమైన సంవాదము.
+hi: हे तात, हे अनघ, जो तुमने मुझसे पूछा, वह यह कह दिया गया: कपिल और देवहूति का पावन संवाद।
 
 --- verse 37 ---
 deva:
@@ -356,9 +464,15 @@ ya idamanuśṛṇoti yo'bhidhatte
 kapilamunermatamātmayogaguhyam|
 bhagavati kṛtadhīḥ suparṇaketā-
 vupalabhate bhagavatpadāravindam||
+en: He who hears this, and he who speaks it, the teaching of the sage Kapila, the secret of the yoga of the self, sets his mind on the Lord whose banner is Garuḍa, and he obtains the lotus feet of the Lord.
+tel: ఆత్మయోగ రహస్యమైన కపిల ముని మతమును వినువాడు, చెప్పువాడు, గరుడ ధ్వజుడైన భగవంతునియందు బుద్ధిని నిలిపి, భగవంతుని పాద కమలమును పొందును.
+hi: जो इसे सुनता है और जो इसे कहता है, कपिल मुनि के इस आत्मयोग के रहस्य रूप मत को, वह गरुड़ ध्वज भगवान् में बुद्धि लगाकर भगवान् के पदारविन्द को प्राप्त करता है।
 
 --- verse none ---
 deva:
 इति श्रीमद्भागवते महापुराणे वैयासिक्यामष्टादशसाहस्र्यां पारमहंस्यां संहितायां तृतीयस्कन्धे कापिलेयोपाख्याने त्रयस्त्रिंशोऽध्यायः॥ ३३॥
 iast:
 iti śrīmadbhāgavate mahāpurāṇe vaiyāsikyāmaṣṭādaśasāhasryāṁ pāramahaṁsyāṁ saṁhitāyāṁ tṛtīyaskandhe kāpileyopākhyāne trayastriṁśo'dhyāyaḥ|| 33||
+en: Thus ends the thirty-third adhyāya in the Kāpileya narrative in the third skandha of the Śrīmad Bhāgavata Mahāpurāṇa, the work of Vyāsa in eighteen thousand verses, the saṁhitā of the paramahaṁsas.
+tel: ఇది వ్యాసుని రచనయైన, పదునెనిమిది వేల శ్లోకముల శ్రీమద్భాగవత మహాపురాణమునందు, పరమహంసల సంహితయందు, తృతీయస్కంధమునందు కాపిలేయోపాఖ్యానమునందు త్రయస్త్రింశాధ్యాయము.
+hi: इस प्रकार व्यास की रचना, अठारह हजार श्लोकों वाले श्रीमद्भागवत महापुराण की परमहंसों की संहिता के तृतीय स्कन्ध में कापिलेयोपाख्यान में तैंतीसवाँ अध्याय समाप्त हुआ।
