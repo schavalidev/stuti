@@ -97,6 +97,33 @@ code { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: .
   <div class="rail">
     <div class="ver">0.9.112</div>
     <div class="date">22 October 2026</div>
+    <div class="rail-note">The almanac measured against a published one, minute by minute, and two of the three faults it found set right.</div>
+  </div>
+  <div class="release-body">
+    <h2 class="release-title">The pañcāṅga, checked to the minute</h2>
+    <div class="entry">
+      <div class="entry-head"><span class="tag tag-note">Noted</span><h3>Ninety-six days against Dṛk Pañcāṅga, with JPL as referee</h3></div>
+      <p>The engine had been audited for its flows but never for its numbers. Twenty-four days across 2026 and 2027 — both Makara and Karka saṅkrāntis, the adhika Jyeṣṭha, Dīpāvali, Kārtika pūrṇimā, two days on which a tithi ends within an hour of sunrise, the next two eclipses, and the days the clocks change in New York and Sydney — were computed for Tirupati, Hyderabad, New York and Sydney and set beside the Dṛk Pañcāṅga page for each. Sunrise and sunset agree within a minute, every tithi, nakṣatra, yoga and karaṇa by name, their end times within two minutes, rāhu kāla, yamagaṇḍa, gulika and abhijit to the minute, and the month names and the adhika flag on every day. Moonrise and moonset differ from the published page by four to six minutes everywhere, but when JPL Horizons was asked where the moon's limb stood at each time, it stood with the engine. The whole account, and the command that re-runs it, is in <span class="lit">PANCHANGA_CHECK.md</span> at the root of the repository.</p>
+    </div>
+    <div class="entry">
+      <div class="entry-head"><span class="tag tag-fix">Fixed</span><h3>The day the clocks change was an hour out, everywhere outside India</h3></div>
+      <p>The engine read a place's clock offset once, at the midnight that opens the day, and used it for every minute that followed. On the Sunday that summer time ends, midnight still carries the summer offset, so New York on 1 November 2026 printed sunrise at 7:26 while every clock in the city read 6:26, and rāhu kāla, the tithi's end and the moonrise moved with it; the Sunday it begins ran the other way, an hour early; Sydney did the same in April and October. The offset is now read at the place's own noon, which lies past both switch hours, and each limb's end is converted with the offset in force at that instant — so a tithi ending in the hour that does not exist on the spring night now prints as the clock will show it. On the other three hundred and sixty-three days nothing moves.</p>
+    </div>
+    <div class="entry">
+      <div class="entry-head"><span class="tag tag-fix">Fixed</span><h3>The pūrṇimānta name in the dark half of an adhika month</h3></div>
+      <p>In the pūrṇimānta reckoning the dark fortnight takes the next month's name, and the engine stepped to the next name without asking whether the month it was leaving was adhika. The dark half of adhika Jyeṣṭha 2026 was therefore named Āṣāḍha, a month and a half early, where the published almanac keeps it Adhika Jyeṣṭha. An adhika month now keeps its own name through both fortnights in both reckonings, and the dark half of the month before it is the plain nija name, as Dṛk Pañcāṅga prints it.</p>
+    </div>
+    <div class="entry">
+      <div class="entry-head"><span class="tag tag-note">Open</span><h3>Saṅkrānti instants run ten to sixteen minutes early</h3></div>
+      <p>All four saṅkrāntis checked fall on the right civil day, but their instants are ten to sixteen minutes ahead of the published ones. About twenty-two arcseconds of that is a constant difference in the Lahiri ayanāṁśa's epoch value, which did not follow the nutation and so is not a missing term; the rest is the short solar series, which JPL shows running up to twenty-eight arcseconds ahead of the true sun. Settling the minute needs the ayanāṁśa fixed against the Indian Astronomical Ephemeris rather than against a website, and a fuller sun. Left open: the date is what the festival turns on, and the date is right.</p>
+    </div>
+  </div>
+</section>
+
+<section class="release">
+  <div class="rail">
+    <div class="ver">0.9.112</div>
+    <div class="date">22 October 2026</div>
     <div class="rail-note">The same comparison that found the Lalitā splits, run on Viṣṇu, which turned out to be sound.</div>
   </div>
   <div class="release-body">

@@ -601,13 +601,18 @@ export const AKSHARA_PANCHANGA = (function () {
   ];
 
   /* the real UTC offset for a place on a given day (DST-aware) */
+  /* one formatter per zone — effTz is now asked for every limb boundary of
+     every day the calendar draws, and building an Intl formatter each time
+     costs more than the ephemeris does */
+  const TZ_FMT = new Map();
   function effTz(loc, date) {
     if (!loc) return 0;
     if (loc.detected) return typeof loc.tz === "number" ? loc.tz : 0;
     if (!loc.zone) return loc.tz || 0;
     try {
-      const part = new Intl.DateTimeFormat("en-US", { timeZone: loc.zone, timeZoneName: "longOffset" })
-        .formatToParts(date || new Date()).find(p => p.type === "timeZoneName");
+      let fmt = TZ_FMT.get(loc.zone);
+      if (!fmt) { fmt = new Intl.DateTimeFormat("en-US", { timeZone: loc.zone, timeZoneName: "longOffset" }); TZ_FMT.set(loc.zone, fmt); }
+      const part = fmt.formatToParts(date || new Date()).find(p => p.type === "timeZoneName");
       const m = part && /GMT([+-])(\d{1,2})(?::(\d{2}))?/.exec(part.value);
       if (m) return (m[1] === "-" ? -1 : 1) * (Number(m[2]) + Number(m[3] || 0) / 60);
     } catch (e) {}
@@ -824,9 +829,16 @@ export const AKSHARA_PANCHANGA = (function () {
     if (STUTI_EPHEM && STUTI_EPHEM.setSystem) {
       STUTI_EPHEM.setSystem(typeof reckoning === "function" ? reckoning() : "drik");
     }
-    const TZ = effTz(loc, date);
     const y = date.getFullYear(), m = date.getMonth() + 1, d = date.getDate();
     const instant = opts && opts.instant;
+    /* The day's clock offset is read at the PLACE's local noon, not at the
+       instant `date` carries. `date` is midnight on the device's clock, and on
+       the day summer time begins or ends the offset at midnight is the old
+       one: New York on 1 Nov 2026 printed sunrise at 07:26 where every clock
+       in the city read 06:26, and Sydney on 4 Apr 2027 did the same (S88
+       check, PANCHANGA_CHECK.md). Noon is past both switch hours. */
+    const TZ = instant ? effTz(loc, date)
+      : effTz(loc, new Date(Date.UTC(y, m - 1, d, 12) - (typeof loc.tz === "number" ? loc.tz : 0) * 3600000));
     // Julian Day reckoned either at local noon (a civil day's tithi) or at the
     // exact moment carried by `date` (the tithi prevailing right now — what a
     // saṅkalpa actually names).
@@ -900,7 +912,12 @@ export const AKSHARA_PANCHANGA = (function () {
     const masaKshaya = ((r2 - r1 + 12) % 12) === 2;
     const masaKshayaName = masaKshaya ? MASA_LUNAR[(masaIdx + 1) % 12] : null;
     const masa = MASA_LUNAR[masaIdx];
-    const masaPurnimanta = MASA_LUNAR[(masaIdx + (tIndex >= 15 ? 1 : 0)) % 12];
+    /* The dark fortnight belongs to the NEXT month's name — unless this month
+       is adhika, when the whole adhika month keeps its own name in both
+       reckonings (Dṛk Pañcāṅga: Kṛṣṇa Daśamī of adhika Jyeṣṭha 2026 is
+       pūrṇimānta Adhika Jyeṣṭha, not Āṣāḍha; the dark fortnight of Vaiśākha
+       before it is plain Jyeṣṭha). So masaAdhika answers for both names. */
+    const masaPurnimanta = (tIndex >= 15 && !masaAdhika) ? MASA_LUNAR[(masaIdx + 1) % 12] : masa;
     /* a ṛtu is two solar signs, beginning with Vasanta at Mīna */
     const ritu = rituByName(RITU_SID[Math.floor(((sunRashi(EPH.toDate(jdRef), ayanFlavour) + 1) % 12) / 2)]) || RITU[m - 1];
 
@@ -917,10 +934,16 @@ export const AKSHARA_PANCHANGA = (function () {
     // when the tithi actually turns — found by bisection on the elongation,
     // so a nineteen-hour tithi and a twenty-six-hour one are both right
     const jdMidnight = julianDay(y, m, d, -TZ);          // local 00:00
+    /* A limb boundary is converted to clock minutes with the offset in force
+       AT THAT INSTANT, not the day's: a tithi ending at 02:02 standard time on
+       the night the clocks go forward is 03:02 on every clock, and the hour
+       between does not exist. On an ordinary day this is exactly (j −
+       midnight) × 1440, so nothing else moves. */
+    const jdUT0 = julianDay(y, m, d, 0);
+    const asMin = (j) => (j == null ? null : (j - jdUT0) * 1440 + effTz(loc, EPH.toDate(j)) * 60);
     const endJd = EPH.tithiEnd(jdRef);
-    const tithiEndMin = endJd != null ? (endJd - jdMidnight) * 1440 : null;
+    const tithiEndMin = asMin(endJd);
     const tithiEndsTomorrow = tithiEndMin != null && tithiEndMin >= 1440;
-    const asMin = (j) => (j == null ? null : (j - jdMidnight) * 1440);
     const nakEndMin = asMin(EPH.nakshatraEnd(jdRef, ayanFlavour));
     const yogaEndMin = asMin(EPH.yogaEnd(jdRef, ayanFlavour));
     const karanaEndMin = asMin(EPH.karanaEnd(jdRef));

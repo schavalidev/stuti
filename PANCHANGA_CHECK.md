@@ -2,6 +2,10 @@
 
 A measurement of `stuti-app/src/stuti-panchanga-engine.ts` (with `stuti-ephemeris.ts`, `stuti-eclipse.ts`, `stuti-muhurta.ts`) against drikpanchang.com, with JPL Horizons as the referee wherever the two disagreed. The engine was not changed. Settings were the defaults: Lahiri ayanāṁśa, dṛk reckoning, amānta months.
 
+## Addendum, same day: defects 1 and 3 fixed
+
+After the measurement below, `effTz` was changed to read the day's offset at the place's local noon and each limb boundary is converted with the offset in force at that instant; the pūrṇimānta name now keeps an adhika month's own name through both fortnights. Re-running the same 96 rows: sunrise, sunset and all limb ends within 2 minutes on 96 of 96, pūrṇimānta month 96 of 96, and the four DST days print what drikpanchang prints whichever zone the device is in. Defect 2 (saṅkrānti instants) is left open as described. The sections below are the measurement as it was made.
+
 ## Verdict in one paragraph
 
 On an ordinary day the engine matches drikpanchang to the minute: sunrise and sunset within one minute on 94 of 94 clean rows, every tithi, nakṣatra, yoga, karaṇa and both month names agree by name on all 96 rows, the end times within two minutes, and rāhu kāla, yamagaṇḍa, gulika and abhijit to the minute. Moonrise and moonset differ from drikpanchang by four to six minutes everywhere, but JPL Horizons sides with the engine, not with drikpanchang. Three real defects were found: **(1)** on a daylight-saving transition day every clock time of that day is one hour out, in the place itself, because one zone offset is sampled at midnight and used for the whole day; **(2)** saṅkrānti instants run 10–16 minutes ahead of drikpanchang, about 22″ of it a constant ayanāṁśa offset and the rest the low-precision sun; **(3)** in the dark fortnight of an adhika month the pūrṇimānta month name jumps a month ahead (Āṣāḍha where drikpanchang keeps Adhika Jyeṣṭha). No vākya source could be reached, so vākya tithi ends are unchecked.
