@@ -9,7 +9,7 @@ Type: Purāṇa (an adhyāya of the Śrīmad Bhāgavata, Skandha 5)
 
 Source / recension: Base text and authority: the Gītā Press, Gorakhpur Śrīmadbhāgavata Mahāpurāṇa with Hindi translation, Part 1 (Gītā Press code 26), archive.org item `shrimadbhagwat-mahapuran-bhag-1`, printed pages 668–671; the PDF page numbers are the printed ones. The PDF carries the typesetter's own text layer in the Chanakya font encoding, and the text was decoded from it by machine with `bin/bhagavata/chanakya.py`, not read off OCR or typed. The decoder was checked against GRETIL over all twelve skandhas before any file was written, and the differences that remain were sampled and found to be readings of the two editions. Second witness: GRETIL's `sa_bhAgavatapurANa.xml` (IAST, contributed by Ulrich Stiehl), a separate editorial lineage, compared verse by verse by machine. The TTD edition with the commentaries of Śrīdhara, Vīrarāghava and Vijayadhvaja (archive.org `Bhagavata_Purana_With_Multiple_Commentaries_TTD_Critical_Edition`) is the third witness where one is needed; it was not read for this file. The IAST was generated mechanically from the Devanāgarī with `bin/dev2iast.py`.
 
-Recension note: Text-only file, written 1 Oct 2026 at the user's instruction to lay down the whole Bhāgavata first: the English, Telugu and Hindi meanings are still to be added, and the witnesses' differences listed here have been recorded by machine and not yet adjudicated. The print is followed throughout. The print numbers 19 verses; GRETIL numbers 18, so from some point the two editions number the verses differently. Never match them by number. Of the 18 verses GRETIL has under the same number, 16 agree with the print letter for letter once spacing and the spelling of nasals are set aside; the rest differ: 1, 17. GRETIL has nothing under the numbers 19. The edition's footnotes give these older printed readings (प्रा० पा०), which are not bracketed into the line: at 4, वृषादिषु; at 4, विवर्धन्ते. Spacing is the print's, as its text layer gives it; in a few places justification has left a space inside a word, and these are still to be closed when the verse is read. The speaker lines (श्रीशुक उवाच and the others) are printed in italic above the verse they introduce, and are given as its first line.
+Recension note: Meanings written 22 Oct 2026 (session S78). The differences between the witnesses listed below were read as the verses were glossed; except where this note says otherwise, each is a spelling, a sandhi or a word order of the two editions, none of them changes the sense, and the print's reading therefore stands unbracketed. The print is followed throughout. The print numbers 19 verses; GRETIL numbers 18, so from some point the two editions number the verses differently. Never match them by number. Of the 18 verses GRETIL has under the same number, 16 agree with the print letter for letter once spacing and the spelling of nasals are set aside; the rest differ: 1, 17. GRETIL has nothing under the numbers 19. The edition's footnotes give these older printed readings (प्रा० पा०), which are not bracketed into the line: at 4, वृषादिषु; at 4, विवर्धन्ते. Spacing is the print's, as its text layer gives it. The speaker lines (श्रीशुक उवाच and the others) are printed in italic above the verse they introduce, and are given as its first line. A footnote's numeral keys it to one word, and which word that is cannot be told from the note alone, so those readings stay unbracketed until the page itself is read. Five words were put right as the verses were read. At verses 9, 11, 17 and 18 the space between two words had been lost, which ran them together into a form that cannot be read, and it is restored at प्रस्वापयति तत्र, वा निम्लोचन्ति, सूक्तवाकाय नियुक्ताः and चतुर्दश मासि; in each case the first word is a finite verb, an indeclinable or a word with its own ending, none of which can begin a compound, and GRETIL has the two words separately. At verse 19 justification had left a space inside भुङ्क्ते, and it is closed here; GRETIL numbers no verse here at all, but भुङ्क्ते is the only reading the letters allow, and GRETIL has that form of the verb in the same sense at 5.22.5 and 5.22.8. The print's own colophon runs over two lines and its line-break hyphen falls inside ज्योतिश्चक्र, which the text layer gives as ज्योति- श्चक्र; the layer is left as it stands and the word is read whole.
 
 Verse count: 19, plus the closing colophon printed unnumbered.
 
@@ -24,6 +24,9 @@ iast:
 śrīśuka uvāca
 etāvāneva bhūvalayasya saṁniveśaḥ
 pramāṇalakṣaṇato vyākhyātaḥ||
+en: Śrī Śuka said: Just this much is the arrangement of the circle of the earth, which has been explained according to its measure and its marks.
+tel: శ్రీశుకుడు పలికెను: భూవలయము యొక్క సంనివేశము ఇంతే; ప్రమాణము, లక్షణముల ప్రకారము అది వివరింపబడినది.
+hi: श्रीशुकदेवजी ने कहा: भूवलय का संनिवेश इतना ही है, जो प्रमाण और लक्षण के अनुसार समझाया गया।
 
 --- verse 2 ---
 deva:
@@ -34,6 +37,9 @@ iast:
 etena hi divo maṇḍalamānaṁ tadvida
 upadiśanti yathā dvidalayorniṣpāvādīnāṁ te
 antareṇāntarikṣaṁ tadubhayasandhitam||
+en: By this measure those who know it teach the measure of the circle of heaven also, for the two are alike, as the two halves of a split niṣpāva bean and the like are alike. Between the two lies the mid-region, which joins them both.
+tel: ఈ ప్రమాణముచేతనే ఆకాశమండలము కొలతను ఎరిగినవారు ఉపదేశించుచున్నారు; నిష్పావము మొదలైనవాటి రెండు పలుకులు ఒకదానివలె ఒకటి ఉన్నట్లే ఈ రెండును ఉన్నవి. ఆ రెండు నడుమ అంతరిక్షము కలదు; అది రెండిటిని కలుపునది.
+hi: इसी प्रमाण से उसके जाननेवाले आकाश के मण्डल का माप भी बताते हैं, क्योंकि निष्पाव आदि के दो दलों की तरह ये दोनों एक समान हैं। उन दोनों के बीच अन्तरिक्ष है, जो दोनों को जोड़ता है।
 
 --- verse 3 ---
 deva:
@@ -52,6 +58,9 @@ dakṣiṇāyanavaiṣuvatasaṁjñābhirmāndyaśaighryasamānābhi-
 rgatibhirārohaṇāvarohaṇasamānasthāneṣu yathāsavana-
 mabhipadyamāno makarādiṣu rāśiṣvahorātrāṇi
 dīrghahrasvasamānāni vidhatte||
+en: In the middle of it stands the blessed Lord who gives heat, the lord of all that gives heat. With his heat he warms the three worlds and with his own light he lights them up. By the courses named udagayana, dakṣiṇāyana and vaiṣuvata, which are slow, swift and even, he moves through the stations of ascent, of descent and of equality, each in its own season, and so in the signs beginning with Makara he makes the days and nights long, short and equal.
+tel: దాని నడుమ తపించు భగవంతుడు, తపించువాటికి పతి అయిన తపనుడు ఉన్నాడు. అతడు తన తాపముచే ముల్లోకములను తపింపజేయుచు, తన కాంతిచే వాటిని ప్రకాశింపజేయుచున్నాడు. ఉదగయనము, దక్షిణాయనము, వైషువతము అను పేరులు కలిగిన, మాంద్యము, శైఘ్ర్యము, సమానము అను గతులచే, ఆరోహణము, అవరోహణము, సమానము అను స్థానములయందు తన కాలము ప్రకారము సంచరించుచు, మకరము మొదలైన రాశులయందు అహోరాత్రములను దీర్ఘముగా, హ్రస్వముగా, సమానముగా చేయుచున్నాడు.
+hi: उसके मध्य में तपनेवाले भगवान्, तपनेवालों के पति तपन स्थित हैं। वे अपने ताप से तीनों लोकों को तपाते हैं और अपनी भा से उन्हें प्रकाशित करते हैं। उदगयन, दक्षिणायन और वैषुवत नामवाली, मन्द, शीघ्र और समान गतियों से वे आरोहण, अवरोहण और समान स्थानों में अपने-अपने समय के अनुसार चलते हुए, मकर आदि राशियों में अहोरात्रों को दीर्घ, ह्रस्व और समान करते हैं।
 
 --- verse 4 ---
 deva:
@@ -66,6 +75,9 @@ meṣatulayorvartate tadāhorātrāṇi samānāni bhavanti
 yadā vṛṣabhādiṣu pañcasu ca rāśiṣu carati
 tadāhānyeva vardhante hrasati ca māsi māsyekaikā
 ghaṭikā rātriṣu||
+en: When he is in Meṣa and Tulā, the days and the nights become equal. When he moves in the five signs beginning with Vṛṣabha, then the days alone increase, and in the nights one ghaṭikā is lost month by month.
+tel: అతడు మేషమునందును తులయందును ఉన్నపుడు అహోరాత్రములు సమానములు అగును. వృషభము మొదలైన ఐదు రాశులయందు సంచరించునపుడు పగళ్ళే పెరుగును, రాత్రులయందు నెలనెలకు ఒక్కొక్క ఘటిక తగ్గును.
+hi: जब वे मेष और तुला में रहते हैं, तब दिन और रात समान होते हैं। जब वृषभ आदि पाँच राशियों में चलते हैं, तब दिन ही बढ़ते हैं और रातों में महीने-महीने एक-एक घटिका घटती है।
 
 --- verse 5 ---
 deva:
@@ -76,6 +88,9 @@ iast:
 yadā vṛścikādiṣu
 pañcasu vartate tadāhorātrāṇi viparyayāṇi
 bhavanti||
+en: When he is in the five signs beginning with Vṛścika, then the days and the nights are the other way about.
+tel: వృశ్చికము మొదలైన ఐదు రాశులయందు ఉన్నపుడు అహోరాత్రములు దానికి విపరీతముగా అగును.
+hi: जब वे वृश्चिक आदि पाँच राशियों में रहते हैं, तब दिन और रात इसके उलटे होते हैं।
 
 --- verse 6 ---
 deva:
@@ -84,6 +99,9 @@ deva:
 iast:
 yāvaddakṣiṇāyanamahāni vardhante
 yāvadudagayanaṁ rātrayaḥ||
+en: The days increase until the dakṣiṇāyana; the nights increase until the udagayana.
+tel: దక్షిణాయనము వరకు పగళ్ళు పెరుగును; ఉదగయనము వరకు రాత్రులు పెరుగును.
+hi: दक्षिणायन तक दिन बढ़ते हैं; उदगयन तक रातें बढ़ती हैं।
 
 --- verse 7 ---
 deva:
@@ -104,6 +122,9 @@ nimlocanīṁ nāma uttarataḥ saumyāṁ vibhāvarīṁ nāma
 tāsūdayamadhyāhnāstamayaniśīthānīti bhūtānāṁ
 pravṛttinivṛttinimittāni samayaviśeṣeṇa
 meroścaturdiśam||
+en: In this way they declare the circuit round the Mānasottara mountain to be nine crore and fifty-one lakh yojanas. On that mountain, to the east of Meru, is the city of Indra named Devadhānī; to the south, the city of Yama named Saṁyamanī; to the west, the city of Varuṇa named Nimlocanī; to the north, the city of the Moon named Vibhāvarī. In these cities come sunrise, midday, sunset and midnight, which at their own times are the causes of the activity and the rest of all beings, in the four directions of Meru.
+tel: ఈ విధముగా మానసోత్తర పర్వతము చుట్టును తిరుగు మార్గము తొమ్మిది కోట్ల ఏబది ఒక్క లక్ష యోజనములని ఉపదేశించుచున్నారు. ఆ పర్వతముపై, మేరువునకు తూర్పున ఇంద్రుని పురము దేవధానీ అనునది; దక్షిణమున యముని పురము సంయమనీ అనునది; పశ్చిమమున వరుణుని పురము నిమ్లోచనీ అనునది; ఉత్తరమున చంద్రుని పురము విభావరీ అనునది. ఆ పురములయందు ఉదయము, మధ్యాహ్నము, అస్తమయము, నిశీథము కలుగుచున్నవి; అవి తమ కాలవిశేషముచే, మేరువు నాలుగు దిక్కులయందు ప్రాణుల ప్రవృత్తికి, నివృత్తికి కారణములు.
+hi: इस प्रकार मानसोत्तर पर्वत की परिक्रमा को नौ करोड़ इक्यावन लाख योजन बताते हैं। उस पर्वत पर मेरु से पूर्व इन्द्र की पुरी देवधानी नाम की है; दक्षिण में यम की पुरी संयमनी नाम की; पश्चिम में वरुण की पुरी निम्लोचनी नाम की; उत्तर में चन्द्र की पुरी विभावरी नाम की। उन पुरियों में उदय, मध्याह्न, अस्तमय और निशीथ होते हैं, जो अपने-अपने समय से मेरु की चारों दिशाओं में प्राणियों की प्रवृत्ति और निवृत्ति के कारण हैं।
 
 --- verse 8 ---
 deva:
@@ -114,18 +135,24 @@ iast:
 tatratyānāṁ divasamadhyaṅgata
 eva sadā''dityastapati savyenācalaṁ
 dakṣiṇena karoti||
+en: For the dwellers of each city the Sun always shines when he has come to the middle of their day; and he moves by the left and keeps the mountain on his right.
+tel: ఆ ఆ పురములవారికి వారి దినము నడుమకు వచ్చినపుడే ఆదిత్యుడు ఎల్లప్పుడు తపించుచున్నాడు; అతడు ఎడమవైపుగా సాగుచు పర్వతమును తన కుడివైపున ఉంచుకొనుచున్నాడు.
+hi: वहाँ के निवासियों के लिये सूर्य सदा उनके दिन के मध्य में आकर ही तपता है; और वह बायें से चलकर पर्वत को अपनी दाहिनी ओर करता है।
 
 --- verse 9 ---
 deva:
 यत्रोदेति तस्य ह समानसूत्रनिपाते
 निम्लोचति यत्र क्वचन स्यन्देनाभितपति
-तस्य हैष समानसूत्रनिपाते प्रस्वापयतितत्र
+तस्य हैष समानसूत्रनिपाते प्रस्वापयति तत्र
 गतं न पश्यन्ति ये तं समनुपश्येरन्॥
 iast:
 yatrodeti tasya ha samānasūtranipāte
 nimlocati yatra kvacana syandenābhitapati
-tasya haiṣa samānasūtranipāte prasvāpayatitatra
+tasya haiṣa samānasūtranipāte prasvāpayati tatra
 gataṁ na paśyanti ye taṁ samanupaśyeran||
+en: Where he rises, there he sets at the point that falls on the same line opposite it. Wherever he burns with his streaming heat, at the point that falls on the same line opposite it he puts beings to sleep. Those who were seeing him do not see him once he has gone there.
+tel: అతడు ఎచ్చట ఉదయించునో, దానికి ఒకే సూత్రముపై ఎదురుగా పడు చోట అస్తమించును. ఎచ్చట తన ప్రవాహమైన తాపముచే తపించునో, దానికి ఒకే సూత్రముపై ఎదురుగా పడు చోట ప్రాణులను నిద్రపోవునట్లు చేయును. అతనిని చూచుచున్నవారు, అతడు అచ్చటికి పోయిన తరువాత అతనిని చూడరు.
+hi: जहाँ वह उदय होता है, वहाँ से एक ही सूत्र पर पड़नेवाले सामने के स्थान में वह अस्त होता है। जहाँ वह अपने प्रवाहित ताप से तपाता है, उससे एक ही सूत्र पर पड़नेवाले सामने के स्थान में वह प्राणियों को सुला देता है। जो उसे देख रहे थे, वे उसके वहाँ चले जाने पर उसे नहीं देखते।
 
 --- verse 10 ---
 deva:
@@ -136,16 +163,22 @@ iast:
 yadā caindryāḥ puryāḥ pracalate pañcadaśa-
 ghaṭikābhiryāmyāṁ sapādakoṭidvayaṁ yojanānāṁ
 sārdhadvādaśalakṣāṇi sādhikāni copayāti||
+en: And when he moves from the city of Indra, in fifteen ghaṭikās he reaches the city of Yama, covering two and a quarter crore yojanas and twelve and a half lakh more, with something over.
+tel: ఐంద్రి పురమునుండి అతడు కదలినపుడు, పదిహేను ఘటికలలో యామ్య పురమును చేరును; అప్పుడు రెండు పావు కోట్ల యోజనములను, దానిపై పన్నెండున్నర లక్షలను, ఇంకను కొంత ఎక్కువను దాటును.
+hi: और जब वह ऐन्द्री पुरी से चलता है, तब पन्द्रह घटिका में याम्या पुरी पहुँचता है, और सवा दो करोड़ योजन तथा उस पर साढ़े बारह लाख, कुछ अधिक भी, पार करता है।
 
 --- verse 11 ---
 deva:
 एवं ततो वारुणीं सौम्यामैन्द्रीं च पुनस्तथान्ये
 च ग्रहाः सोमादयो नक्षत्रैः सह ज्योतिश्चक्रे
-समभ्युद्यन्ति सह वानिम्लोचन्ति॥
+समभ्युद्यन्ति सह वा निम्लोचन्ति॥
 iast:
 evaṁ tato vāruṇīṁ saumyāmaindrīṁ ca punastathānye
 ca grahāḥ somādayo nakṣatraiḥ saha jyotiścakre
-samabhyudyanti saha vānimlocanti||
+samabhyudyanti saha vā nimlocanti||
+en: In this way he goes from there to the city of Varuṇa, then to the city of the Moon, and again to the city of Indra. So too the other planets, the Moon and the rest, together with the lunar mansions, rise with him in the circle of lights, or set with him.
+tel: ఈ విధముగా అచ్చటనుండి వారుణి పురమునకు, సౌమ్య పురమునకు, మరల ఐంద్రి పురమునకు పోవును. అట్లే సోముడు మొదలైన ఇతర గ్రహములును, నక్షత్రములతో కలిసి, జ్యోతిశ్చక్రమునందు అతనితోపాటు ఉదయించుచున్నవి, లేక అతనితోపాటు అస్తమించుచున్నవి.
+hi: इस प्रकार वह वहाँ से वारुणी पुरी, सौम्या पुरी और फिर ऐन्द्री पुरी जाता है। वैसे ही सोम आदि अन्य ग्रह भी, नक्षत्रों के साथ, ज्योतिश्चक्र में उसके साथ उदय होते हैं या उसके साथ अस्त होते हैं।
 
 --- verse 12 ---
 deva:
@@ -158,6 +191,9 @@ evaṁ
 muhūrtena catustriṁśallakṣayojanānyaṣṭaśatādhikāni
 sauro rathastrayīmayo'sau catasṛṣu parivartate
 purīṣu||
+en: In this way, in one muhūrta this chariot of the Sun, which is made of the three Vedas, travels thirty-four lakh and eight hundred yojanas as it goes round the four cities.
+tel: ఈ విధముగా ఒక ముహూర్తములో త్రయీమయమైన ఈ సూర్యరథము ముప్పది నాలుగు లక్షల ఎనిమిది వందల యోజనములను సాగి, నాలుగు పురముల చుట్టును తిరుగుచున్నది.
+hi: इस प्रकार एक मुहूर्त में त्रयीमय यह सूर्य का रथ चौंतीस लाख आठ सौ योजन चलकर चारों पुरियों में घूमता है।
 
 --- verse 13 ---
 deva:
@@ -172,6 +208,9 @@ saṁvatsarātmakaṁ samāmananti tasyākṣo merormūrdhani
 kṛto mānasottare kṛtetarabhāgo yatra protaṁ
 ravirathacakraṁ tailayantracakravad bhramanmānasottaragirau
 paribhramati||
+en: They declare that its one wheel, which has twelve spokes, six rims and three hubs, is the year. Its axle has one end set on the summit of Meru and the other end set on Mānasottara; and the wheel of the Sun's chariot, which is fixed upon that axle, turns like the wheel of an oil press and goes round upon the Mānasottara mountain.
+tel: దాని ఒక్క చక్రము పన్నెండు ఆకులు, ఆరు నేములు, మూడు నాభులు కలిగి, సంవత్సరరూపమైనదని చెప్పుదురు. దాని అక్షము ఒక చివర మేరువు శిఖరముపై, రెండవ చివర మానసోత్తరముపై ఉంచబడినది. ఆ అక్షముపై ఉంచబడిన రవిరథచక్రము, నూనె గానుగ చక్రమువలె తిరుగుచు, మానసోత్తర పర్వతముపై చుట్టు తిరుగుచున్నది.
+hi: उसका एक चक्र, जिसमें बारह अरे, छः नेमि और तीन नाभि हैं, संवत्सररूप कहा जाता है। उसका अक्ष एक छोर पर मेरु के शिखर पर और दूसरे छोर पर मानसोत्तर पर रखा गया है; और उस अक्ष में जड़ा रवि के रथ का चक्र, तेल के यन्त्र के चक्र की तरह घूमता हुआ, मानसोत्तर पर्वत पर परिक्रमा करता है।
 
 --- verse 14 ---
 deva:
@@ -182,6 +221,9 @@ iast:
 tasminnakṣe kṛtamūlo
 dvitīyo'kṣasturyamānena sammitastailayantrākṣavad
 dhruve kṛtoparibhāgaḥ||
+en: A second axle has its lower end set on that axle. It measures a fourth part, and, like the axle of an oil press, its upper end is fixed on Dhruva.
+tel: ఆ అక్షముపై మూలము ఉంచబడిన రెండవ అక్షము కలదు. అది నాలుగవ భాగము కొలత కలది; నూనె గానుగ అక్షమువలె దాని పైభాగము ధ్రువునియందు ఉంచబడినది.
+hi: उस अक्ष में जिसका मूल रखा गया है, ऐसा दूसरा अक्ष है। वह चौथाई माप का है और तेल के यन्त्र के अक्ष की तरह उसका ऊपरी भाग ध्रुव में रखा गया है।
 
 --- verse 15 ---
 deva:
@@ -194,6 +236,9 @@ rathanīḍastu ṣaṭtriṁśallakṣayojanāyatastatturīya-
 bhāgaviśālastāvān ravirathayugo yatra
 hayāśchandonāmānaḥ saptāruṇayojitā vahanti
 devamādityam||
+en: The body of the chariot is thirty-six lakh yojanas in length and a fourth part of that in breadth, and the yoke of the Sun's chariot is of the same measure. There the seven horses named after the metres, yoked by Aruṇa, carry the god Āditya.
+tel: రథనీడము ముప్పది ఆరు లక్షల యోజనముల పొడవు కలది, దాని నాలుగవ భాగము వెడల్పు కలది; రవిరథము యుగమును అంతే కొలత కలది. అందు ఛందస్సుల పేరులు కలిగిన ఏడు గుఱ్ఱములు, అరుణునిచే కట్టబడి, దేవుడైన ఆదిత్యుని మోయుచున్నవి.
+hi: रथ का नीड छत्तीस लाख योजन लम्बा और उसका चौथाई भाग चौड़ा है, और रवि के रथ का युग भी उतने ही माप का है। वहाँ छन्दों के नामवाले सात घोड़े, अरुण के जोड़े हुए, देव आदित्य को ढोते हैं।
 
 --- verse 16 ---
 deva:
@@ -202,43 +247,58 @@ deva:
 iast:
 purastātsavituraruṇaḥ paścācca niyuktaḥ sautye
 karmaṇi kilāste||
+en: It is said that Aruṇa remains in front of the Sun, facing backwards, appointed to the work of the charioteer.
+tel: సవితకు ముందు, వెనుకకు ముఖము కలిగి, సారథి కర్మమునందు నియుక్తుడై అరుణుడు ఉన్నాడని చెప్పుదురు.
+hi: कहा जाता है कि सविता के आगे, पीछे की ओर मुख किये, सारथि के कर्म में नियुक्त अरुण रहता है।
 
 --- verse 17 ---
 deva:
 तथा वालखिल्या
 ऋषयः अङ्गुष्ठपर्वमात्राः षष्टिसहस्राणि पुरतः
-सूर्यं सूक्तवाकायनियुक्ताः संस्तुवन्ति॥
+सूर्यं सूक्तवाकाय नियुक्ताः संस्तुवन्ति॥
 iast:
 tathā vālakhilyā
 ṛṣayaḥ aṅguṣṭhaparvamātrāḥ ṣaṣṭisahasrāṇi purataḥ
-sūryaṁ sūktavākāyaniyuktāḥ saṁstuvanti||
+sūryaṁ sūktavākāya niyuktāḥ saṁstuvanti||
+en: So too the sages called Vālakhilyas, of the measure of a thumb joint, sixty thousand in number, appointed to the recitation of the sūkta, praise the Sun in front of him.
+tel: అట్లే వాలఖిల్యులు అను ఋషులు, బొటనవేలి కణుపు అంత కొలత కలవారు, అరువది వేలమంది, సూక్తవాకమునందు నియుక్తులై, సూర్యునికి ముందు నిలిచి అతనిని స్తుతించుచున్నారు.
+hi: वैसे ही वालखिल्य नामक ऋषि, अँगूठे के पर्व के बराबर, साठ हजार की संख्या में, सूक्तवाक में नियुक्त होकर सूर्य के आगे उसकी स्तुति करते हैं।
 
 --- verse 18 ---
 deva:
 तथान्ये च ऋषयो गन्धर्वाप्सरसो नागा
 ग्रामण्यो यातुधाना देवा इत्येकैकशो गणाः
-सप्त चतुर्दशमासि मासि भगवन्तं सूर्यमात्मानं
+सप्त चतुर्दश मासि मासि भगवन्तं सूर्यमात्मानं
 नानानामानं पृथङ् नानानामानः पृथक्कर्मभिर्द्वन्द्वश
 उपासते॥
 iast:
 tathānye ca ṛṣayo gandharvāpsaraso nāgā
 grāmaṇyo yātudhānā devā ityekaikaśo gaṇāḥ
-sapta caturdaśamāsi māsi bhagavantaṁ sūryamātmānaṁ
+sapta caturdaśa māsi māsi bhagavantaṁ sūryamātmānaṁ
 nānānāmānaṁ pṛthaṅ nānānāmānaḥ pṛthakkarmabhirdvandvaśa
 upāsate||
+en: So too others — sages, Gandharvas, Apsarases, Nāgas, Grāmaṇīs, Yātudhānas and gods — these groups, taken one by one, are seven, and in pairs fourteen. Month by month, two at a time, they worship the blessed Sun, the Self, who bears many names, each under a separate name; they themselves bear many names, and they worship with their separate works.
+tel: అట్లే ఇతరులు — ఋషులు, గంధర్వులు, అప్సరసలు, నాగులు, గ్రామణులు, యాతుధానులు, దేవతలు — ఈ గణములు ఒక్కొక్కటిగా ఏడు, జంటలుగా పదునాలుగు. నెలనెలకు రెండేసిగా వారు, అనేక నామములు కలిగిన భగవంతుడు సూర్యుని, ఆత్మను, వేరువేరు నామములతో ఉపాసించుచున్నారు; వారును అనేక నామములు కలవారు, వేరువేరు కర్మములతో ఉపాసించువారు.
+hi: वैसे ही दूसरे — ऋषि, गन्धर्व, अप्सराएँ, नाग, ग्रामणी, यातुधान और देव — ये गण एक-एक गिनने पर सात हैं और जोड़ों में चौदह। महीने-महीने दो-दो होकर वे अनेक नामवाले भगवान् सूर्य की, उस आत्मा की, अलग-अलग नामों से उपासना करते हैं; वे स्वयं भी अनेक नामवाले हैं और अपने-अपने कर्मों से उपासना करते हैं।
 
 --- verse 19 ---
 deva:
 लक्षोत्तरं सार्धनवकोटियोजन-
 परिमण्डलं भूवलयस्य क्षणेन सगव्यूत्युत्तरं
-द्विसहस्रयोजनानि स भुङ् क्ते॥
+द्विसहस्रयोजनानि स भुङ्क्ते॥
 iast:
 lakṣottaraṁ sārdhanavakoṭiyojana-
 parimaṇḍalaṁ bhūvalayasya kṣaṇena sagavyūtyuttaraṁ
-dvisahasrayojanāni sa bhuṅ kte||
+dvisahasrayojanāni sa bhuṅkte||
+en: The circuit of the circle of the earth is nine and a half crore yojanas and one lakh more; of it he traverses in a single moment two thousand yojanas and a gavyūti more.
+tel: భూవలయము పరిమండలము తొమ్మిదిన్నర కోట్ల యోజనములు, దానిపై ఒక లక్ష. అందులో ఒక క్షణములో అతడు రెండు వేల యోజనములను, దానిపై ఒక గవ్యూతిని దాటును.
+hi: भूवलय का परिमण्डल साढ़े नौ करोड़ योजन और उस पर एक लाख है; उसमें से वह एक क्षण में दो हजार योजन और उस पर एक गव्यूति भोगता है।
 
 --- verse none ---
 deva:
 इति श्रीमद्भागवते महापुराणे पारमहंस्यां संहितायां पञ्चमस्कन्धे ज्योति- श्चक्रसूर्यरथमण्डलवर्णनं नामैकविंशोऽध्यायः॥ २१॥
 iast:
 iti śrīmadbhāgavate mahāpurāṇe pāramahaṁsyāṁ saṁhitāyāṁ pañcamaskandhe jyoti- ścakrasūryarathamaṇḍalavarṇanaṁ nāmaikaviṁśo'dhyāyaḥ|| 21||
+en: Thus ends the twenty-first adhyāya, named the description of the circle of lights and of the orb of the Sun's chariot, in the fifth skandha of the Śrīmad Bhāgavata Mahāpurāṇa, the saṁhitā of the paramahaṁsas.
+tel: ఇది శ్రీమద్భాగవత మహాపురాణమునందు, పరమహంసల సంహితయందు, పంచమస్కంధమునందు, జ్యోతిశ్చక్రము సూర్యరథమండలము వర్ణనము అను ఏకవింశాధ్యాయము.
+hi: इस प्रकार श्रीमद्भागवत महापुराण की परमहंसों की संहिता के पञ्चम स्कन्ध में, ज्योतिश्चक्र और सूर्य के रथमण्डल के वर्णन नामक इक्कीसवाँ अध्याय समाप्त हुआ।
