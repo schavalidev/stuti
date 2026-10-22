@@ -9,7 +9,7 @@ Type: Purāṇa (an adhyāya of the Śrīmad Bhāgavata, Skandha 5)
 
 Source / recension: Base text and authority: the Gītā Press, Gorakhpur Śrīmadbhāgavata Mahāpurāṇa with Hindi translation, Part 1 (Gītā Press code 26), archive.org item `shrimadbhagwat-mahapuran-bhag-1`, printed pages 586–590; the PDF page numbers are the printed ones. The PDF carries the typesetter's own text layer in the Chanakya font encoding, and the text was decoded from it by machine with `bin/bhagavata/chanakya.py`, not read off OCR or typed. The decoder was checked against GRETIL over all twelve skandhas before any file was written, and the differences that remain were sampled and found to be readings of the two editions. Second witness: GRETIL's `sa_bhAgavatapurANa.xml` (IAST, contributed by Ulrich Stiehl), a separate editorial lineage, compared verse by verse by machine. The TTD edition with the commentaries of Śrīdhara, Vīrarāghava and Vijayadhvaja (archive.org `Bhagavata_Purana_With_Multiple_Commentaries_TTD_Critical_Edition`) is the third witness where one is needed; it was not read for this file. The IAST was generated mechanically from the Devanāgarī with `bin/dev2iast.py`.
 
-Recension note: Text-only file, written 1 Oct 2026 at the user's instruction to lay down the whole Bhāgavata first: the English, Telugu and Hindi meanings are still to be added, and the witnesses' differences listed here have been recorded by machine and not yet adjudicated. The print is followed throughout. The print numbers 20 verses; GRETIL numbers 18, so from some point the two editions number the verses differently. Never match them by number. Of the 18 verses GRETIL has under the same number, 2 agree with the print letter for letter once spacing and the spelling of nasals are set aside; the rest differ: 2, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18. GRETIL has nothing under the numbers 19, 20. Spacing is the print's, as its text layer gives it; in a few places justification has left a space inside a word, and these are still to be closed when the verse is read. The speaker lines (श्रीशुक उवाच and the others) are printed in italic above the verse they introduce, and are given as its first line.
+Recension note: Meanings written 22 Oct 2026 (session S78). The differences between the witnesses listed below were read as the verses were glossed; except where this note says otherwise, each is a spelling, a sandhi or a word order of the two editions, none of them changes the sense, and the print's reading therefore stands unbracketed. The print is followed throughout. The print numbers 20 verses; GRETIL numbers 18, so from some point the two editions number the verses differently. Never match them by number. Of the 18 verses GRETIL has under the same number, 2 agree with the print letter for letter once spacing and the spelling of nasals are set aside; the rest differ: 2, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18. GRETIL has nothing under the numbers 19, 20. Spacing is the print's, as its text layer gives it. The speaker lines (श्रीशुक उवाच and the others) are printed in italic above the verse they introduce, and are given as its first line. Six broken words were put right as the verses were read, each confirmed against GRETIL, which carries this adhyāya's verses 4 and 5 together under its own number 4. At 4 justification had split प्रकृति and आकृति down the middle, and both are closed here. At 7 the space was lost between भवत and इज्यया, at 12 between अपि and सकल, at 13 between धनः and फलीकरणम्, at 16 between चरणः and सदयम्; each is a case ending swallowed into the word after it. Two defects of the text layer are not spaces and stand uncorrected: at 13 the print gives धनदमिवधनःफलीकरणम् where GRETIL reads dhanadam ivādhanaḥ, so the print appears to have lost the ā of अधनः at its line break, and at 18 it gives आग्नीध्रीयेंऽशकलया, with the anusvāra standing before the avagraha instead of after it, where GRETIL reads āgnīdhrīye 'ṁśa-kalayā. Neither is a space, so neither was corrected by this pass, and the English follows the sense GRETIL and the print share.
 
 Verse count: 20, plus the closing colophon printed unnumbered.
 
@@ -24,6 +24,9 @@ iast:
 śrīśuka uvāca
 nābhirapatyakāmo'prajayā merudevyā bhagavantaṁ
 yajñapuruṣamavahitātmāyajata||
+en: Śuka said: Nābhi desired a son. Together with Merudevī, who had borne no child, he worshipped the blessed Lord, the Person of sacrifice, with a mind held in attention.
+tel: శుకుడు పలికెను: నాభి సంతానమును కోరెను. సంతానము లేని మేరుదేవితో కూడి, అవహితమైన మనస్సుతో ఆయన యజ్ఞపురుషుడైన భగవంతుని ఆరాధించెను.
+hi: शुक ने कहा: नाभि ने सन्तान की कामना की। सन्तानहीन मेरुदेवी के साथ, अवहित मन से उन्होंने यज्ञपुरुष भगवान् की आराधना की।
 
 --- verse 2 ---
 deva:
@@ -42,6 +45,9 @@ bhāgavatavātsalyatayā supratīka ātmānamaparājitaṁ
 nijajanābhipretārthavidhitsayā gṛhītahṛdayo
 hṛdayaṅgamaṁ manonayanānandanāvayavābhirāma-
 māviścakāra||
+en: He worshipped with faith and with a pure heart. While the pravargya rites were going forward, the Lord, who is hard to reach even by the right ordering of the material, the place, the time, the mantras, the priests and the gifts, showed himself out of his love for his devotee. His form was gracious. His heart was taken by the wish to do what his own servant desired. He showed his own self, which no one conquers, which goes straight to the heart, and whose limbs are beautiful and give joy to the mind and to the eyes.
+tel: శ్రద్ధతోడను విశుద్ధమైన భావముతోడను ఆయన యజించెను. ప్రవర్గ్య కర్మలు జరుగుచుండగా, ద్రవ్యము, దేశము, కాలము, మంత్రములు, ఋత్విజులు, దక్షిణల విధానము సరిగా కుదిరినను పొందుటకు దుర్లభుడైన భగవంతుడు భాగవతునియందలి వాత్సల్యముచేత ప్రత్యక్షమయ్యెను. ఆయన రూపము సుప్రతీకము. తన జనుడు కోరిన అర్థమును నెరవేర్చవలెనను కోరికచేత ఆయన హృదయము వశమయ్యెను. అపరాజితమైన, హృదయంగమమైన, మనస్సునకును కన్నులకును ఆనందమిచ్చు అభిరామమైన అవయవములు కల తన ఆత్మను ఆయన ఆవిష్కరించెను.
+hi: उन्होंने श्रद्धा और विशुद्ध भाव से यजन किया। प्रवर्ग्य कर्म चल रहे थे, तब द्रव्य, देश, काल, मन्त्र, ऋत्विज् और दक्षिणा के विधान के ठीक मिल जाने पर भी जिन्हें पाना कठिन है, वे भगवान् भक्त के प्रति वात्सल्य से प्रकट हुए। उनका रूप सुप्रतीक था। अपने जन की अभीष्ट बात पूरी करने की इच्छा से उनका हृदय वश में हो गया। अपराजित, हृदयंगम तथा मन और नेत्रों को आनन्द देने वाले अभिराम अंगों से युक्त अपने स्वरूप को उन्होंने प्रकट किया।
 
 --- verse 3 ---
 deva:
@@ -62,6 +68,9 @@ sphuṭakiraṇapravaramukuṭakuṇḍalakaṭakakaṭisūtra-
 hārakeyūranūpurādyaṅgabhūṣaṇavibhūṣitamṛtviksadasya-
 gṛhapatayo'dhanā ivottamadhanamupalabhya
 sabahumānamarhaṇenāvanataśīrṣāṇa upatasthuḥ||
+en: Then that Person beyond all others showed two pairs of arms. He was golden, and he wore a brown silk garment. On his chest the mark of the Śrīvatsa shone as his ornament. He was known by the best of conches, the lotus, the forest garland, the disc, the jewel of nectar, the mace and the rest. His limbs were adorned with a crown of clear rays, with earrings, bracelets, a waistband, a necklace, armlets, anklets and other ornaments. The priests, the members of the assembly and the master of the house found him as men without means find the highest wealth. They bowed their heads and stood before him with great respect, bearing the articles of worship.
+tel: అంతట ఆ పురుషవిశేషుడు రెండు జంటల భుజములను ఆవిష్కరించెను. ఆయన హిరణ్మయుడు, కపిశవర్ణపు పట్టువస్త్రమును ధరించినవాడు. ఆయన రొమ్ముపై శ్రీవత్సలలామము విలసిల్లెను. శ్రేష్ఠమైన శంఖము, పద్మము, వనమాల, చక్రము, అమృతమణి, గద మొదలగువానిచేత ఆయన గుర్తింపబడెను. స్ఫుటమైన కిరణములు కల శ్రేష్ఠమకుటము, కుండలములు, కటకములు, కటిసూత్రము, హారము, కేయూరములు, నూపురములు మొదలగు అంగభూషణములచేత ఆయన అవయవములు అలంకరింపబడెను. ఋత్విజులు, సదస్యులు, గృహపతి — ధనము లేనివారు ఉత్తమమైన ధనమును పొందినట్లు ఆయనను పొందిరి. అర్హణముతో శిరస్సులు వంచి మిక్కిలి గౌరవముతో వారు ఆయన ఎదుట నిలిచిరి.
+hi: तब उस पुरुषविशेष ने दो जोड़ी भुजाएँ प्रकट कीं। वे हिरण्मय थे और कपिश रंग का कौशेय वस्त्र धारण किये थे। उनके वक्ष पर श्रीवत्स का ललाम शोभित था। श्रेष्ठ शंख, कमल, वनमाला, चक्र, अमृतमणि, गदा आदि से वे पहचाने जाते थे। स्पष्ट किरणों वाले श्रेष्ठ मुकुट, कुण्डल, कटक, कटिसूत्र, हार, केयूर, नूपुर आदि अंगभूषणों से उनके अंग विभूषित थे। ऋत्विज्, सदस्य और गृहपति — निर्धन जैसे उत्तम धन पा जाते हैं, वैसे उन्हें पाकर — अर्घ्य-सामग्री लेकर सिर झुकाये बड़े आदर से उनके सामने खड़े हो गये।
 
 --- verse 4 ---
 deva:
@@ -69,15 +78,18 @@ deva:
 अर्हसि मुहुरर्हत्तमार्हणमस्माकमनुपथानां
 नमो नम इत्येतावत्सदुपशिक्षितं कोऽर्हति पुमान्
 प्रकृतिगुणव्यतिकरमतिरनीश ईश्वरस्य
-परस्य प्रकृ तिपुरुषयोरर्वाक्तनाभिर्नामरूपाकृ तिभी
+परस्य प्रकृतिपुरुषयोरर्वाक्तनाभिर्नामरूपाकृतिभी
 रूपनिरूपणम्॥
 iast:
 ṛtvija ūcuḥ
 arhasi muhurarhattamārhaṇamasmākamanupathānāṁ
 namo nama ityetāvatsadupaśikṣitaṁ ko'rhati pumān
 prakṛtiguṇavyatikaramatiranīśa īśvarasya
-parasya prakṛ tipuruṣayorarvāktanābhirnāmarūpākṛ tibhī
+parasya prakṛtipuruṣayorarvāktanābhirnāmarūpākṛtibhī
 rūpanirūpaṇam||
+en: The priests said: O most worthy of worship, you deserve our worship again and again. We walk upon your path, and all that the good have taught us is this: we bow to you, we bow. What man is able to set out your form? His understanding is confused by the guṇas of prakṛti, he has no power of his own, and he comes later than prakṛti and puruṣa. With names, with forms and with shapes he cannot describe the form of the supreme Lord, who is beyond them both.
+tel: ఋత్విజులు పలికిరి: ఓ అర్హత్తమా, మరల మరల మా పూజకు నీవు అర్హుడవు. మేము నీ మార్గమును అనుసరించువారము; సజ్జనులు మాకు నేర్పినది ఇంతే — నమస్కారము, నమస్కారము. నీ రూపమును నిరూపించుటకు ఏ పురుషుడు సమర్థుడు? అతని బుద్ధి ప్రకృతి గుణముల కలయికచేత కలగియుండును, అతడు అనీశుడు, ప్రకృతికిని పురుషునికిని తరువాతివాడు. నామములచేత, రూపములచేత, ఆకృతులచేత రెండింటికిని పరుడైన ఈశ్వరుని రూపమును అతడు నిరూపింపలేడు.
+hi: ऋत्विजों ने कहा: हे अर्हत्तम, आप बार-बार हमारी पूजा के योग्य हैं। हम आपके पथ के अनुगामी हैं, और सत्पुरुषों ने हमें इतना ही सिखाया है — नमस्कार, नमस्कार। आपके रूप का निरूपण कौन पुरुष कर सकता है? उसकी बुद्धि प्रकृति के गुणों के व्यतिकर से मोहित है, वह अनीश है और प्रकृति तथा पुरुष से अर्वाक्तन है। नाम, रूप और आकृति से वह उन दोनों से पर ईश्वर के रूप का निरूपण नहीं कर सकता।
 
 --- verse 5 ---
 deva:
@@ -86,6 +98,9 @@ deva:
 iast:
 sakalajananikāyavṛjina-
 nirasanaśivatamapravaraguṇagaṇaikadeśakathanādṛte||
+en: He can do this only by telling of one part of that host of your excellent qualities, which is most blessed and drives away the sin of the whole body of living beings.
+tel: సకల జననికాయముల పాపమును పోగొట్టు, అత్యంత శివమైన నీ శ్రేష్ఠగుణగణములలో ఒక భాగమును చెప్పుట తప్ప అతడు ఏమియు చేయజాలడు.
+hi: समस्त जनसमूह के पाप को दूर करने वाले, अत्यन्त कल्याणमय आपके श्रेष्ठ गुणसमूह के एक अंश के कथन के सिवा वह कुछ नहीं कर सकता।
 
 --- verse 6 ---
 deva:
@@ -96,14 +111,20 @@ iast:
 parijanānurāgaviracitaśabalasaṁśabdasalila-
 sitakisalayatulasikādūrvāṅkurairapi sambhṛtayā
 saparyayā kila parama parituṣyasi||
+en: O supreme one, you are well pleased even with worship that your own people gather in love — water offered with the sound of praise, white shoots, tulasī and sprouts of dūrva grass.
+tel: ఓ పరమా, నీ పరిజనులు అనురాగముతో సమకూర్చిన పూజతోడనే నీవు పరితృప్తుడవు అగుదువు — స్తుతిధ్వనితో సమర్పించిన జలము, తెల్లని చిగురులు, తులసి, దూర్వాంకురములు.
+hi: हे परम, आपके परिजनों ने अनुराग से जो सपर्या जुटायी — स्तुति के शब्द के साथ अर्पित जल, श्वेत किसलय, तुलसी और दूर्वा के अंकुर — उसी से आप परितुष्ट हो जाते हैं।
 
 --- verse 7 ---
 deva:
-अथानयापि न भवतइज्ययोरुभारभरया
+अथानयापि न भवत इज्ययोरुभारभरया
 समुचितमर्थमिहोपलभामहे॥
 iast:
-athānayāpi na bhavataijyayorubhārabharayā
+athānayāpi na bhavata ijyayorubhārabharayā
 samucitamarthamihopalabhāmahe||
+en: Then, even by this worship of you, which carries so great a burden, we do not see here anything that is worthy of you.
+tel: అంతట, ఇంత గొప్ప భారమును మోయు ఈ ఇజ్యచేతను నీకు తగిన అర్థమును ఇచట మేము కనుగొనలేదు.
+hi: तब इतने बड़े भार को वहन करने वाली इस इज्या से भी हम यहाँ आपके योग्य कोई अर्थ नहीं पाते।
 
 --- verse 8 ---
 deva:
@@ -116,6 +137,9 @@ iast:
 bobhūyamānāśeṣapuruṣārthasvarūpasya kintu
 nāthāśiṣa āśāsānānāmetadabhisaṁrādhanamātraṁ
 bhavitumarhati||
+en: In your own self all the ends of man are present at every rite, fully and with no difference at all. O Lord, for us who ask for blessings, this can be no more than a means of pleasing you.
+tel: ప్రతి సవనమునందును అశేషమైన పురుషార్థములు అన్నియు అంజసా, వ్యతిరేకము లేక నీ ఆత్మయందే ఉన్నవి. ఓ నాథా, ఆశీస్సులను కోరు మాకు ఇది నిన్ను ప్రసన్నము చేసికొను సాధనము మాత్రమే అగును.
+hi: प्रत्येक सवन में समस्त पुरुषार्थ पूर्ण रूप से, व्यतिरेक के बिना, आपके ही आत्मा में विद्यमान हैं। हे नाथ, आशीष चाहने वाले हमारे लिये यह आपको प्रसन्न करने का साधन मात्र ही हो सकता है।
 
 --- verse 9 ---
 deva:
@@ -128,6 +152,9 @@ tadyathā bāliśānāṁ svayamātmanaḥ śreyaḥ
 paramaviduṣāṁ paramaparamapuruṣa prakarṣakaruṇayā
 svamahimānaṁ cāpavargākhyamupakalpayiṣyan svayaṁ
 nāpacita evetaravadihopalakṣitaḥ||
+en: O supreme Person beyond the highest, we are like children and do not ourselves know what is truly good for us. By your great compassion you will bestow your own greatness, which is called release. Though you were not honoured as you deserve, you have shown yourself here, as another would.
+tel: ఓ పరమపరమపురుషా, మేము బాలిశులము, మాకు శ్రేయమేదో మేమే ఎఱుగము. నీ ప్రకృష్టమైన కరుణచేత అపవర్గము అను నీ మహిమను నీవు ఒసగుదువు. నీవు తగినట్లు పూజింపబడకున్నను, ఇతరులవలె ఇచట స్వయముగా కనబడితివి.
+hi: हे परमपरम पुरुष, हम बालिश हैं और अपना श्रेय स्वयं नहीं जानते। अपनी प्रकृष्ट करुणा से आप अपवर्ग नामक अपनी महिमा प्रदान करेंगे। यथायोग्य पूजित न होने पर भी आप दूसरों के समान यहाँ स्वयं प्रकट हुए हैं।
 
 --- verse 10 ---
 deva:
@@ -138,6 +165,9 @@ iast:
 athāyameva
 varo hyarhattama yarhi barhiṣi rājarṣervaradarṣabho
 bhavānnijapuruṣekṣaṇaviṣaya āsīt||
+en: O most worthy of worship, this itself is the boon. You who are the best of the givers of boons became visible to the eyes of your own servants here at the sacrifice of the royal sage.
+tel: ఓ అర్హత్తమా, ఇదియే వరము. వరదులలో శ్రేష్ఠుడవైన నీవు రాజర్షి యొక్క బర్హిస్సునందు నీ జనుల కన్నులకు విషయమైతివి.
+hi: हे अर्हत्तम, यही वर है। वरदों में श्रेष्ठ आप राजर्षि के बर्हि पर अपने जनों के नेत्रों के विषय बन गये।
 
 --- verse 11 ---
 deva:
@@ -150,32 +180,41 @@ asaṅganiśitajñānānalavidhūtāśeṣamalānāṁ
 bhavatsvabhāvānāmātmārāmāṇāṁ munīnāmanavarata-
 pariguṇitaguṇagaṇa paramamaṅgalāyanaguṇagaṇa-
 kathano'si||
+en: The sages count over your host of qualities without rest. Detachment has sharpened the fire of their knowledge, and in it every taint of theirs has been burnt away. Their nature has become yours and they take their joy in the self. O you whose qualities they tell, that host of qualities is the abode of the highest good.
+tel: మునులు నీ గుణగణమును ఎడతెగక పరిగణించుచున్నారు. అసంగముచేత పదునెక్కిన జ్ఞానాగ్నియందు వారి అశేషమలములు దహించుకొనిపోయినవి. వారి స్వభావము నీదే అయినది, వారు ఆత్మారాములు. ఓ గుణగణము చెప్పబడువాడా, ఆ గుణగణము పరమమంగళమునకు ఆలయము.
+hi: मुनि आपके गुणसमूह को निरन्तर गिनते रहते हैं। असंग से तीक्ष्ण हुई ज्ञान की अग्नि में उनके समस्त मल भस्म हो गये हैं। उनका स्वभाव आपका ही हो गया है और वे आत्माराम हैं। हे गुणगण कथनीय, वह गुणसमूह परम मंगल का आयतन है।
 
 --- verse 12 ---
 deva:
 अथ कथञ्चित्स्खलनक्षुत्पतनजृम्भण-
 दुरवस्थानादिषु विवशानां नः स्मरणाय
-ज्वरमरणदशायामपिसकलकश्मलनिरसनानि
+ज्वरमरणदशायामपि सकलकश्मलनिरसनानि
 तव गुणकृतनामधेयानि वचनगोचराणि
 भवन्तु॥
 iast:
 atha kathañcitskhalanakṣutpatanajṛmbhaṇa-
 duravasthānādiṣu vivaśānāṁ naḥ smaraṇāya
-jvaramaraṇadaśāyāmapisakalakaśmalanirasanāni
+jvaramaraṇadaśāyāmapi sakalakaśmalanirasanāni
 tava guṇakṛtanāmadheyāni vacanagocarāṇi
 bhavantu||
+en: We are not our own masters when we stumble, sneeze, fall, yawn, or are in any other hard state. May your names, which are made from your qualities, come within the reach of our speech at such times, so that we may remember you. They drive away every impurity, even in fever and in the last hour.
+tel: కాలుజారినప్పుడు, తుమ్మినప్పుడు, పడినప్పుడు, ఆవులించినప్పుడు, మరి ఏ దురవస్థయందైనను మేము వివశులము. నిన్ను స్మరించుటకు అట్టి వేళలందు నీ గుణములచేత ఏర్పడిన నామధేయములు మా వచనమునకు గోచరములగునుగాక. అవి జ్వరమునందును అంత్యదశయందును సకల కశ్మలములను పోగొట్టునవి.
+hi: फिसलने, छींकने, गिरने, जम्हाई लेने अथवा किसी भी दुरवस्था में हम विवश हो जाते हैं। आपका स्मरण करने के लिये उन समयों में आपके गुणों से बने नाम हमारी वाणी के गोचर हों। वे ज्वर और अन्तिम दशा में भी समस्त कश्मल को दूर करने वाले हैं।
 
 --- verse 13 ---
 deva:
 किञ्चायं राजर्षिरपत्यकामः प्रजां भवा-
 दृशीमाशासान ईश्वरमाशिषां स्वर्गापवर्गयोरपि
 भवन्तमुपधावति प्रजायामर्थप्रत्ययो धनदमिव-
-धनःफलीकरणम्॥
+धनः फलीकरणम्॥
 iast:
 kiñcāyaṁ rājarṣirapatyakāmaḥ prajāṁ bhavā-
 dṛśīmāśāsāna īśvaramāśiṣāṁ svargāpavargayorapi
 bhavantamupadhāvati prajāyāmarthapratyayo dhanadamiva-
-dhanaḥphalīkaraṇam||
+dhanaḥ phalīkaraṇam||
+en: Moreover, this royal sage desires a child. He asks for a son like yourself. You are the Lord of all blessings, of heaven and of release alike, and he runs to you with his mind set upon the gain of a son. He is like a man without means who goes to the giver of wealth and asks for husks.
+tel: మరియు ఈ రాజర్షి సంతానమును కోరుచున్నాడు. నీవంటి ప్రజను ఆయన ఆశించుచున్నాడు. ఆశీస్సులకును స్వర్గమునకును అపవర్గమునకును ఈశ్వరుడవైన నిన్ను, ప్రజయందే అర్థమున్నదను భావముతో ఆయన ఆశ్రయించుచున్నాడు. ధనము లేనివాడు ధనదునియొద్దకు వెళ్ళి పొట్టును అడుగునట్లు ఇది ఉన్నది.
+hi: और यह राजर्षि सन्तान की कामना करता है। वह आप जैसी प्रजा चाहता है। आशीषों, स्वर्ग तथा अपवर्ग के भी ईश्वर आप हैं, और वह प्रजा में ही अर्थ मानकर आपकी शरण में आता है। यह उस निर्धन के समान है जो धनद के पास जाकर फलीकरण माँगे।
 
 --- verse 14 ---
 deva:
@@ -188,6 +227,9 @@ ko vā iha
 te'parājito'parājitayā māyayānavasitapadavyā-
 nāvṛtamatirviṣayaviṣarayānāvṛtaprakṛtiranupāsita-
 mahaccaraṇaḥ||
+en: Who here is not conquered by your māyā, which no one conquers and whose course no one knows? Who has not served the feet of the great, so that his understanding is not covered over and his nature is not swept away by the rushing poison of the objects of sense?
+tel: ఎవరిచేతను జయింపబడని, దారి తెలియరాని నీ మాయచేత ఇచట జయింపబడనివాడు ఎవడు? మహాత్ముల చరణములను సేవింపనివాడై, బుద్ధి కప్పబడక, విషయవిషముల వేగముచేత స్వభావము కొట్టుకొనిపోకుండునవాడు ఎవడు?
+hi: किसी से न जीती जाने वाली और जिसका पद जाना न जा सके, ऐसी आपकी माया से यहाँ कौन अपराजित है? महापुरुषों के चरणों की सेवा न करके जिसकी बुद्धि आवृत न हो और जिसकी प्रकृति विषयविष के वेग से बह न जाय, ऐसा कौन है?
 
 --- verse 15 ---
 deva:
@@ -200,18 +242,24 @@ yadu ha vāva tava
 punaradabhrakartariha samāhūtastatrārthadhiyāṁ mandānāṁ
 nastadyaddevahelanaṁ devadevārhasi sāmyena sarvān
 prativoḍhumaviduṣām||
+en: O God of gods, you do nothing small, and you were called here. Our minds were set upon our own gain, and we are dull. In this we have slighted you. You should bear with all of us alike, for we do not know.
+tel: ఓ దేవదేవా, నీవు అల్పమైన పని చేయువాడవు కావు; ఇచటికి నీవు పిలువబడితివి. మా బుద్ధులు మా అర్థముపైనే నిలిచినవి, మేము మందులము. ఇందు మేము నిన్ను అవమానించితిమి. ఎఱుగని మా అందరిని సమానముగా నీవు క్షమింపవలెను.
+hi: हे देवदेव, आप अदभ्र कर्ता हैं, और यहाँ आप बुलाये गये। हमारी बुद्धि अपने ही अर्थ में लगी थी, और हम मन्द हैं। इसमें हमने आपकी हेलना की। न जानने वाले हम सब को आप समान भाव से सहन करें।
 
 --- verse 16 ---
 deva:
 श्रीशुक उवाच
 इति निगदेनाभिष्टूयमानो भगवान्
 अनिमिषर्षभो वर्षधराभिवादिताभिवन्दित-
-चरणःसदयमिदमाह॥
+चरणः सदयमिदमाह॥
 iast:
 śrīśuka uvāca
 iti nigadenābhiṣṭūyamāno bhagavān
 animiṣarṣabho varṣadharābhivāditābhivandita-
-caraṇaḥsadayamidamāha||
+caraṇaḥ sadayamidamāha||
+en: Śuka said: The blessed Lord, the chief of those who never close their eyes, was praised in this way in spoken words. The lord of the land had saluted and bowed to his feet. With kindness he said this.
+tel: శుకుడు పలికెను: ఈ విధముగా నిగదముచేత స్తుతింపబడిన భగవంతుడు, అనిమిషులలో శ్రేష్ఠుడు, వర్షధరునిచేత అభివాదము చేయబడి వందింపబడిన చరణములు కలవాడు, దయతో ఇట్లు పలికెను.
+hi: शुक ने कहा: इस प्रकार निगद से स्तुति किये जाने पर अनिमिषों में श्रेष्ठ भगवान्, जिनके चरणों का वर्षधर ने अभिवादन और वन्दन किया था, दयापूर्वक यह बोले।
 
 --- verse 17 ---
 deva:
@@ -228,6 +276,9 @@ varamasulabhamabhiyācito yadamuṣyātmajo mayā
 sadṛśo bhūyāditi mamāhamevābhirūpaḥ kaivalyā-
 dathāpi brahmavādo na mṛṣā bhavitumarhati mamaiva
 hi mukhaṁ yad dvijadevakulam||
+en: The blessed Lord said: O sages, your words never prove false, and you have asked me for a boon that is not easy to give — that a son like me be born to him. I alone am like myself, because I am one without a second. Yet the word of the brāhmaṇas must not prove false, for the company of the twice-born gods is my own mouth.
+tel: భగవంతుడు పలికెను: అయ్యో, ఓ ఋషులారా, మీ వాక్కు ఎన్నడును వ్యర్థము కాదు; సులభము కాని వరమును మీరు నన్ను అడిగితిరి — ఇతనికి నావంటి పుత్రుడు కలుగవలెనని. కైవల్యము వలన నాతో సరిపోలువాడు నేనే. అయినను బ్రహ్మవాదము మృష కాకూడదు, ఏలయన ద్విజదేవకులమే నా ముఖము.
+hi: भगवान् ने कहा: अहो, हे ऋषियो, आपकी वाणी कभी मिथ्या नहीं होती, और आपने मुझसे असुलभ वर माँगा है — कि इसका पुत्र मेरे समान हो। कैवल्य के कारण मेरे समान मैं ही हूँ। फिर भी ब्रह्मवाद मिथ्या नहीं होना चाहिये, क्योंकि द्विजदेवों का कुल मेरा ही मुख है।
 
 --- verse 18 ---
 deva:
@@ -236,6 +287,9 @@ deva:
 iast:
 tata āgnīdhrīyeṁ'śakalayāvatariṣyāmi
 ātmatulyamanupalabhamānaḥ||
+en: Therefore, as I find no one equal to myself, I shall come down by a portion of my own self in the line of Āgnīdhra.
+tel: కావున నాతో సమానమైనవానిని పొందకున్నాను గనుక, ఆగ్నీధ్రుని వంశమునందు నా అంశకళచేత నేనే అవతరించెదను.
+hi: इसलिये अपने समान किसी को न पाकर मैं आग्नीध्र के वंश में अपनी अंशकला से अवतरित होऊँगा।
 
 --- verse 19 ---
 deva:
@@ -246,6 +300,9 @@ iast:
 śrīśuka uvāca
 iti niśāmayantyā merudevyāḥ patimabhidhā-
 yāntardadhe bhagavān||
+en: Śuka said: Having said this to the husband of Merudevī, while she herself listened, the blessed Lord vanished.
+tel: శుకుడు పలికెను: మేరుదేవి వినుచుండగా ఆమె పతికి ఇట్లు చెప్పి భగవంతుడు అంతర్ధానమయ్యెను.
+hi: शुक ने कहा: मेरुदेवी के सुनते हुए उनके पति से यह कहकर भगवान् अन्तर्धान हो गये।
 
 --- verse 20 ---
 deva:
@@ -260,9 +317,15 @@ viṣṇudatta bhagavān paramarṣibhiḥ prasādito
 nābheḥ priyacikīrṣayā tadavarodhāyane merudevyāṁ
 dharmāndarśayitukāmo vātaraśanānāṁ śramaṇānāmṛṣī-
 ṇāmūrdhvamanthināṁ śuklayā tanuvāvatatāra||
+en: O Viṣṇudatta, at that very sacrifice the blessed Lord was made gracious by the great sages. Wishing to do what was dear to Nābhi, and wishing to show the ways of dharma of the ascetics who wear the wind for a garment, who have renounced and who keep their seed drawn upward, he came down in a pure body in Merudevī, who was within the inner apartments.
+tel: ఓ విష్ణుదత్తా, ఆ బర్హిస్సునందే పరమర్షులచేత భగవంతుడు ప్రసన్నుడు చేయబడెను. నాభికి ప్రియమును చేయగోరి, గాలినే వస్త్రముగా ధరించు, శ్రమణులైన, ఊర్ధ్వమంథులైన ఋషుల ధర్మములను చూపగోరి, అంతఃపురమునందున్న మేరుదేవియందు ఆయన శుక్లమైన తనువుతో అవతరించెను.
+hi: हे विष्णुदत्त, उसी बर्हि पर परम ऋषियों के द्वारा भगवान् प्रसन्न किये गये। नाभि का प्रिय करने की इच्छा से, तथा वायु को ही वस्त्र बनाने वाले, श्रमण और ऊर्ध्वमन्थी ऋषियों के धर्मों को दिखाने की इच्छा से, अन्तःपुर में रहने वाली मेरुदेवी में वे शुक्ल तनु से अवतरित हुए।
 
 --- verse none ---
 deva:
 इति श्रीमद्भागवते महापुराणे पारमहंस्यां संहितायां पञ्चमस्कन्धे नाभिचरिते ऋषभावतारो नाम तृतीयोऽध्यायः॥ ३॥
 iast:
 iti śrīmadbhāgavate mahāpurāṇe pāramahaṁsyāṁ saṁhitāyāṁ pañcamaskandhe nābhicarite ṛṣabhāvatāro nāma tṛtīyo'dhyāyaḥ|| 3||
+en: Thus ends the third adhyāya, called the descent of Ṛṣabha, in the account of Nābhi, in the fifth skandha of the Śrīmad Bhāgavata Mahāpurāṇa, the saṁhitā of the paramahaṁsas.
+tel: ఇది శ్రీమద్భాగవత మహాపురాణమునందు, పరమహంసల సంహితయందు, పంచమస్కంధమునందు, నాభిచరితమునందు ఋషభావతారము అను తృతీయాధ్యాయము.
+hi: इस प्रकार श्रीमद्भागवत महापुराण की परमहंसों की संहिता के पञ्चम स्कन्ध में, नाभि के चरित में ऋषभ का अवतार नाम का तीसरा अध्याय समाप्त हुआ।
