@@ -9,7 +9,7 @@ Type: Purāṇa (an adhyāya of the Śrīmad Bhāgavata, Skandha 6)
 
 Source / recension: Base text and authority: the Gītā Press, Gorakhpur Śrīmadbhāgavata Mahāpurāṇa with Hindi translation, Part 1 (Gītā Press code 26), archive.org item `shrimadbhagwat-mahapuran-bhag-1`, printed pages 765–767; the PDF page numbers are the printed ones. The PDF carries the typesetter's own text layer in the Chanakya font encoding, and the text was decoded from it by machine with `bin/bhagavata/chanakya.py`, not read off OCR or typed. The decoder was checked against GRETIL over all twelve skandhas before any file was written, and the differences that remain were sampled and found to be readings of the two editions. Second witness: GRETIL's `sa_bhAgavatapurANa.xml` (IAST, contributed by Ulrich Stiehl), a separate editorial lineage, compared verse by verse by machine. The TTD edition with the commentaries of Śrīdhara, Vīrarāghava and Vijayadhvaja (archive.org `Bhagavata_Purana_With_Multiple_Commentaries_TTD_Critical_Edition`) is the third witness where one is needed; it was not read for this file. The IAST was generated mechanically from the Devanāgarī with `bin/dev2iast.py`.
 
-Recension note: Text-only file, written 1 Oct 2026 at the user's instruction to lay down the whole Bhāgavata first: the English, Telugu and Hindi meanings are still to be added, and the witnesses' differences listed here have been recorded by machine and not yet adjudicated. The print is followed throughout. The print numbers 23 verses and GRETIL numbers 23. Of the 23 verses GRETIL has under the same number, 16 agree with the print letter for letter once spacing and the spelling of nasals are set aside; the rest differ: 2, 5, 10, 12, 15, 22, 23. Spacing is the print's, as its text layer gives it; in a few places justification has left a space inside a word, and these are still to be closed when the verse is read. The speaker lines (श्रीशुक उवाच and the others) are printed in italic above the verse they introduce, and are given as its first line.
+Recension note: Meanings written 22 Oct 2026 (session S78). The differences between the witnesses listed below were read as the verses were glossed; except where this note says otherwise, each is a spelling, a sandhi or a word order of the two editions, none of them changes the sense, and the print's reading therefore stands unbracketed. The print is followed throughout. The print numbers 23 verses and GRETIL numbers 23. Of the 23 verses GRETIL has under the same number, 16 agree with the print letter for letter once spacing and the spelling of nasals are set aside; the rest differ: 2, 5, 10, 12, 15, 22, 23. Spacing is the print's, as its text layer gives it. The speaker lines (श्रीशुक उवाच and the others) are printed in italic above the verse they introduce, and are given as its first line. Five lost spaces were put right as the verses were read. The print's text layer had run देवानुगाः into स्वयम् and प्रतिजग्मुः into स्वधिष्ण्यानि at verse 2, वृत्रहत्यां into क्व at verse 5, इन्द्रः into स्मासहत् at verse 11, and पर्वणि into पर्वणीन्द्रियम् at verse 23. GRETIL has a word break at each of these places, and in every one the first word carries its own case ending and so cannot be the first member of a compound. The repeated पर्वणि पर्वणि is printed apart in both the other places where this edition carries it. At verse 5 the print reads स्त्रीभूजलद्रुमैः where GRETIL reads स्त्रीभूद्रुमजलैः, the same four recipients in another order, and at verse 15 the print reads स चिन्तयन् where GRETIL reads सञ्चिन्तयन्; the print stands in both places.
 
 Verse count: 23, plus the closing colophon printed unnumbered.
 
@@ -24,14 +24,20 @@ iast:
 śrīśuka uvāca
 vṛtre hate trayo lokā vinā śakreṇa bhūrida|
 sapālā hyabhavan sadyo vijvarā nirvṛtendriyāḥ||
+en: Śrī Śuka said: O generous king, when Vṛtra was killed the three worlds and their guardians at once became free from distress, and their senses were at peace. Indra alone was not.
+tel: శ్రీశుకుడు పలికెను: ఓ ఉదారుడా, వృత్రుడు మరణించిన వెంటనే ముల్లోకములు, వాని పాలకులు బాధ నుండి విముక్తులైరి; వారి ఇంద్రియములు శాంతి పొందెను. ఇంద్రుడు మాత్రము అట్లు కాలేదు.
+hi: श्रीशुकदेवजी ने कहा: हे उदार राजन्, वृत्र के मारे जाने पर तीनों लोक और उनके लोकपाल तुरन्त ही दुःख से मुक्त हो गये, और उनकी इन्द्रियाँ शान्त हो गयीं। केवल इन्द्र ऐसे न हुए।
 
 --- verse 2 ---
 deva:
-देवर्षिपितृभूतानि दैत्या देवानुगाःस्वयम्।
-प्रतिजग्मुःस्वधिष्ण्यानि ब्रह्मेशेन्द्रादयस्ततः॥
+देवर्षिपितृभूतानि दैत्या देवानुगाः स्वयम्।
+प्रतिजग्मुः स्वधिष्ण्यानि ब्रह्मेशेन्द्रादयस्ततः॥
 iast:
-devarṣipitṛbhūtāni daityā devānugāḥsvayam|
-pratijagmuḥsvadhiṣṇyāni brahmeśendrādayastataḥ||
+devarṣipitṛbhūtāni daityā devānugāḥ svayam|
+pratijagmuḥ svadhiṣṇyāni brahmeśendrādayastataḥ||
+en: The gods, the sages, the forefathers and the other beings, the Daityas and the attendants of the gods, all went back of themselves to their own abodes. Brahmā, Śiva, Indra and the rest went then as well.
+tel: దేవతలు, ఋషులు, పితృదేవతలు, ఇతర భూతములు, దైత్యులు, దేవతల అనుచరులు అందరును తమంతట తామే తమ స్థానములకు మరలి పోయిరి. బ్రహ్మ, శివుడు, ఇంద్రుడు మొదలైనవారును అప్పుడే వెళ్ళిరి.
+hi: देवता, ऋषि, पितर और अन्य भूत, दैत्य और देवताओं के अनुचर — सब अपने-आप अपने स्थानों को लौट गये। ब्रह्मा, शिव, इन्द्र आदि भी तब ही चले गये।
 
 --- verse 3 ---
 deva:
@@ -42,6 +48,9 @@ iast:
 rājovāca
 indrasyānirvṛterhetuṁ śrotumicchāmi bho mune|
 yenāsan sukhino devā harerduḥkhaṁ kuto'bhavat||
+en: The king said: O sage, I wish to hear the reason why Indra had no peace. By that same deed the gods became happy. From where then did sorrow come to Indra?
+tel: రాజు పలికెను: ఓ మునీ, ఇంద్రునికి శాంతి లేకపోవుటకు కారణమును వినగోరుచున్నాను. ఆ కార్యముచేతనే దేవతలు సుఖులైరి. అట్టిచో ఇంద్రునికి దుఃఖము ఎక్కడి నుండి కలిగెను?
+hi: राजा ने कहा: हे मुने, इन्द्र को शान्ति न मिलने का कारण मैं सुनना चाहता हूँ। उसी कर्म से देवता सुखी हुए। तो इन्द्र को दुःख कहाँ से हुआ?
 
 --- verse 4 ---
 deva:
@@ -52,16 +61,22 @@ iast:
 śrīśuka uvāca
 vṛtravikramasaṁvignāḥ sarve devāḥ saharṣibhiḥ|
 tadvadhāyārthayannindraṁ naicchad bhīto bṛhadvadhāt||
+en: Śrī Śuka said: All the gods, along with the sages, were alarmed by the strength of Vṛtra, and they asked Indra to kill him. Indra was unwilling, for he was afraid of killing one who was great.
+tel: శ్రీశుకుడు పలికెను: వృత్రుని పరాక్రమముచే భయపడిన దేవతలందరును ఋషులతో కూడి వానిని చంపుమని ఇంద్రుని కోరిరి. గొప్పవానిని చంపుటకు భయపడి ఇంద్రుడు అంగీకరించలేదు.
+hi: श्रीशुकदेवजी ने कहा: वृत्र के पराक्रम से घबराये हुए सब देवताओं ने ऋषियों के साथ इन्द्र से उसका वध करने की प्रार्थना की। किसी महान् के वध से डरकर इन्द्र ने यह न चाहा।
 
 --- verse 5 ---
 deva:
 इन्द्र उवाच
 स्त्रीभूजलद्रुमैरेनो विश्वरूपवधोद्भवम्।
-विभक्तमनुगृह्णद्भिर्वृत्रहत्यांक्व मार्ज्म्यहम्॥
+विभक्तमनुगृह्णद्भिर्वृत्रहत्यां क्व मार्ज्म्यहम्॥
 iast:
 indra uvāca
 strībhūjaladrumaireno viśvarūpavadhodbhavam|
-vibhaktamanugṛhṇadbhirvṛtrahatyāṁkva mārjmyaham||
+vibhaktamanugṛhṇadbhirvṛtrahatyāṁ kva mārjmyaham||
+en: Indra said: The sin that came from the killing of Viśvarūpa was divided into parts, and women, the earth, the waters and the trees were gracious and took it upon themselves. Where now shall I wash away the killing of Vṛtra?
+tel: ఇంద్రుడు పలికెను: విశ్వరూపుని వధమువలన కలిగిన పాపము భాగములుగా విభజింపబడెను; స్త్రీలు, భూమి, జలములు, వృక్షములు దయతో దానిని తమపై తీసుకొనిరి. ఇప్పుడు వృత్రవధమును నేను ఎక్కడ కడుగుకొందును?
+hi: इन्द्र ने कहा: विश्वरूप के वध से उत्पन्न पाप बाँटा गया था, और स्त्री, पृथ्वी, जल तथा वृक्ष कृपा करके उसे अपने ऊपर ले लिये। अब वृत्र के वध को मैं कहाँ धोऊँ?
 
 --- verse 6 ---
 deva:
@@ -72,6 +87,9 @@ iast:
 śrīśuka uvāca
 ṛṣayastadupākarṇya mahendramidamabruvan|
 yājayiṣyāma bhadraṁ te hayamedhena mā sma bhaiḥ||
+en: Śrī Śuka said: The sages heard this and said to the great Indra: We shall have you perform the horse sacrifice. May it be well with you. Do not be afraid.
+tel: శ్రీశుకుడు పలికెను: ఋషులు ఇది విని మహేంద్రునితో ఇట్లనిరి: మేము నీకు అశ్వమేధయాగము చేయించెదము. నీకు మేలు కలుగును. భయపడవద్దు.
+hi: श्रीशुकदेवजी ने कहा: ऋषियों ने यह सुनकर महेन्द्र से यह कहा: हम आपसे अश्वमेध यज्ञ कराएँगे। आपका कल्याण हो। डरिये मत।
 
 --- verse 7 ---
 deva:
@@ -80,6 +98,9 @@ deva:
 iast:
 hayamedhena puruṣaṁ paramātmānamīśvaram|
 iṣṭvā nārāyaṇaṁ devaṁ mokṣyase'pi jagadvadhāt||
+en: By the horse sacrifice you will worship the Puruṣa, the supreme Self, the Lord, the god Nārāyaṇa. Then you will be freed even from the killing of the whole world.
+tel: అశ్వమేధయాగముచే పురుషుడైన, పరమాత్మయైన, ఈశ్వరుడైన నారాయణదేవుని పూజించెదవు. అంతట సమస్త జగత్తును చంపిన పాపము నుండియు విముక్తుడవు అగుదువు.
+hi: अश्वमेध यज्ञ से आप पुरुष, परमात्मा, ईश्वर नारायण देव की पूजा करेंगे। तब सम्पूर्ण जगत् के वध से भी मुक्त हो जाएँगे।
 
 --- verse 8 ---
 deva:
@@ -88,6 +109,9 @@ deva:
 iast:
 brahmahā pitṛhā goghno mātṛhā''cāryahāghavān|
 śvādaḥ pulkasako vāpi śuddhyeran yasya kīrtanāt||
+en: The killer of a brāhmaṇa, the killer of his father, the killer of a cow, the killer of his mother, the killer of his teacher, and any other sinful man, and even one who eats the flesh of a dog or one born a Pulkasa — all these are made pure by the singing of his name.
+tel: బ్రాహ్మణుని చంపినవాడు, తండ్రిని చంపినవాడు, గోవును చంపినవాడు, తల్లిని చంపినవాడు, ఆచార్యుని చంపినవాడు, ఇతర పాపులు, కుక్కమాంసము తినువాడు, పుల్కసుడు — వీరందరును ఆయన నామసంకీర్తనముచే శుద్ధులగుదురు.
+hi: ब्राह्मण का घातक, पिता का घातक, गौ का घातक, माता का घातक, आचार्य का घातक और दूसरे पापी, तथा कुत्ते का माँस खानेवाला या पुल्कस भी — ये सब उनके नाम के कीर्तन से शुद्ध हो जाते हैं।
 
 --- verse 9 ---
 deva:
@@ -100,6 +124,9 @@ tamaśvamedhena mahāmakhena
 śraddhānvito'smābhiranuṣṭhitena|
 hatvāpi sabrahma carācaraṁ tvaṁ
 na lipyase kiṁ khalanigraheṇa||
+en: You will worship him with faith through the great aśvamedha sacrifice performed by us. Then, even if you had killed the moving and the unmoving world together with the brāhmaṇas, no sin would touch you. What then is the restraining of one wicked being?
+tel: మేము చేయించు మహాయజ్ఞమైన అశ్వమేధముచే శ్రద్ధతో ఆయనను ఆరాధించెదవు. అప్పుడు బ్రాహ్మణులతో కూడిన చరాచర జగత్తును చంపినను నీకు పాపము అంటదు. దుష్టుని అణచుట ఎంత మాత్రము?
+hi: हमारे द्वारा कराये गये महायज्ञ अश्वमेध से श्रद्धापूर्वक आप उनकी आराधना करेंगे। तब ब्राह्मणों सहित चराचर जगत् का वध करके भी आपको पाप नहीं लगेगा। फिर एक दुष्ट के दमन की तो बात ही क्या?
 
 --- verse 10 ---
 deva:
@@ -110,14 +137,20 @@ iast:
 śrīśuka uvāca
 evaṁ sañcodito viprairmarutvānahanadripum|
 brahmahatyā hate tasminnāsasāda vṛṣākapim||
+en: Śrī Śuka said: Urged on in this way by the brāhmaṇas, Indra killed his enemy. When Vṛtra was killed, the sin of killing a brāhmaṇa came upon Indra.
+tel: శ్రీశుకుడు పలికెను: ఇట్లు బ్రాహ్మణులచే ప్రేరేపింపబడిన ఇంద్రుడు శత్రువును చంపెను. వాడు మరణించగా బ్రహ్మహత్యాపాపము ఇంద్రుని చేరెను.
+hi: श्रीशुकदेवजी ने कहा: इस प्रकार ब्राह्मणों से प्रेरित होकर इन्द्र ने शत्रु का वध किया। उसके मारे जाने पर ब्रह्महत्या इन्द्र के पास आ गयी।
 
 --- verse 11 ---
 deva:
-तयेन्द्रःस्मासहत् तापं निर्वृतिर्नामुमाविशत्।
+तयेन्द्रः स्मासहत् तापं निर्वृतिर्नामुमाविशत्।
 ह्रीमन्तं वाच्यतां प्राप्तं सुखयन्त्यपि नो गुणाः॥
 iast:
-tayendraḥsmāsahat tāpaṁ nirvṛtirnāmumāviśat|
+tayendraḥ smāsahat tāpaṁ nirvṛtirnāmumāviśat|
 hrīmantaṁ vācyatāṁ prāptaṁ sukhayantyapi no guṇāḥ||
+en: Indra bore the burning of that sin, and peace did not enter him. When a man of modesty has fallen into blame, even his good qualities give him no joy.
+tel: ఆ పాపమువలన కలిగిన తాపమును ఇంద్రుడు సహించెను; శాంతి ఆయనను చేరలేదు. లజ్జ కలవాడు నిందకు గురియైనపుడు ఆయన సద్గుణములును సుఖమును ఇవ్వవు.
+hi: उस पाप के ताप को इन्द्र ने सहा; शान्ति उन्हें न मिली। लज्जाशील पुरुष निन्दा को प्राप्त हो जाय, तो उसके गुण भी उसे सुख नहीं देते।
 
 --- verse 12 ---
 deva:
@@ -126,6 +159,9 @@ deva:
 iast:
 tāṁ dadarśānudhāvantīṁ cāṇḍālīmiva rūpiṇīm|
 jarayā vepamānāṅgīṁ yakṣmagrastāmasṛkpaṭām||
+en: He saw her running after him. She had taken a form like that of a Cāṇḍāla woman. Her limbs trembled with old age, she was afflicted with consumption, and her garment was stained with blood.
+tel: ఆమె తన వెంట పరుగెత్తుచుండుటను ఆయన చూచెను. ఆమె చండాల స్త్రీ వంటి రూపమును ధరించెను. ముదిమిచే ఆమె అవయవములు వణకుచుండెను, ఆమె క్షయరోగముచే పీడితయై యుండెను, ఆమె వస్త్రము రక్తముతో తడిసి యుండెను.
+hi: उसे अपने पीछे दौड़ती हुई इन्द्र ने देखा। उसने चाण्डाल स्त्री के समान रूप धारण किया था। बुढ़ापे से उसके अंग काँप रहे थे, वह क्षयरोग से पीड़ित थी, और उसका वस्त्र रक्त से सना था।
 
 --- verse 13 ---
 deva:
@@ -134,6 +170,9 @@ deva:
 iast:
 vikīrya palitān keśāṁstiṣṭha tiṣṭheti bhāṣiṇīm|
 mīnagandhyasugandhena kurvatīṁ mārgadūṣaṇam||
+en: Her grey hair was loose and scattered. She called out, Stop, stop. She smelled of fish, and with that foul smell she was defiling the road.
+tel: ఆమె తెల్లని వెండ్రుకలు చెదరి యుండెను. నిలువు, నిలువు అని ఆమె పలుకుచుండెను. ఆమెకు చేపల వాసన ఉండెను; ఆ దుర్గంధముచే ఆమె మార్గమును కలుషితము చేయుచుండెను.
+hi: उसके सफ़ेद बाल बिखरे हुए थे। ठहर, ठहर — ऐसा वह कह रही थी। उससे मछली की गन्ध आती थी, और उस दुर्गन्ध से वह मार्ग को दूषित कर रही थी।
 
 --- verse 14 ---
 deva:
@@ -142,6 +181,9 @@ deva:
 iast:
 nabho gato diśaḥ sarvāḥ sahasrākṣo viśāmpate|
 prāgudīcīṁ diśaṁ tūrṇaṁ praviṣṭo nṛpa mānasam||
+en: O lord of the people, the thousand-eyed Indra went into the sky and to all the quarters. O king, he went quickly towards the north-east and entered the Mānasa lake.
+tel: ఓ ప్రజాపాలకా, సహస్రాక్షుడైన ఇంద్రుడు ఆకాశమునకును, అన్ని దిక్కులకును పోయెను. ఓ రాజా, ఆయన వేగముగా ఈశాన్య దిక్కునకు పోయి మానససరోవరమును ప్రవేశించెను.
+hi: हे प्रजापालक, सहस्राक्ष इन्द्र आकाश में और सब दिशाओं में गये। हे राजन्, वे शीघ्र ही उत्तर-पूर्व दिशा की ओर जाकर मानसरोवर में प्रवेश कर गये।
 
 --- verse 15 ---
 deva:
@@ -154,6 +196,9 @@ sa āvasatpuṣkaranālatantū-
 nalabdhabhogo yadihāgnidūtaḥ|
 varṣāṇi sāhasramalakṣito'ntaḥ
 sa cintayan brahmavadhād vimokṣam||
+en: He lived inside the fibres of the lotus stalks there for a thousand years, and no one saw him. He had no enjoyment of food there, for it is Agni who carries it as messenger. There he thought of release from the killing of a brāhmaṇa.
+tel: ఆయన అచట పద్మనాళముల తంతువుల లోపల వేయి సంవత్సరములు ఎవ్వరికిని కనబడకుండ ఉండెను. అచట ఆయనకు భోగము లభించలేదు, ఏలయనగా దానిని దూతగా తెచ్చువాడు అగ్ని. బ్రహ్మహత్య నుండి విముక్తిని ఆయన అచట చింతించుచుండెను.
+hi: वे वहाँ कमल की नालों के तन्तुओं के भीतर एक सहस्र वर्ष तक किसी को न दिखते हुए रहे। वहाँ उन्हें भोग न मिला, क्योंकि उसे दूत बनकर पहुँचानेवाले अग्नि हैं। वहाँ वे ब्रह्महत्या से छूटने का विचार करते रहे।
 
 --- verse 16 ---
 deva:
@@ -166,6 +211,9 @@ tāvattriṇākaṁ nahuṣaḥ śaśāsa
 vidyātapoyogabalānubhāvaḥ|
 sa sampadaiśvaryamadāndhabuddhi-
 rnītastiraścāṁ gatimindrapatnyā||
+en: Meanwhile Nahuṣa ruled the three heavens by the power of his learning, his tapas and his yoga. His mind was blinded by the pride of wealth and lordship, and Indra's wife brought him to the state of a beast.
+tel: ఆ కాలమున నహుషుడు తన విద్య, తపస్సు, యోగముల బలముచే ముల్లోకముల స్వర్గమును పాలించెను. సంపద, ఐశ్వర్యముల మదముచే ఆయన బుద్ధి అంధమైపోయెను; ఇంద్రుని భార్య ఆయనను తిర్యగ్జంతువు స్థితికి చేర్చెను.
+hi: उस समय नहुष अपनी विद्या, तप और योग के बल से त्रिलोकी के स्वर्ग का शासन करता रहा। सम्पत्ति और ऐश्वर्य के मद से उसकी बुद्धि अन्धी हो गयी, और इन्द्र की पत्नी ने उसे तिर्यक् योनि की गति में पहुँचा दिया।
 
 --- verse 17 ---
 deva:
@@ -178,6 +226,9 @@ tato gato brahmagiropahūta
 ṛtambharadhyānanivāritāghaḥ|
 pāpastu digdevatayā hataujā-
 staṁ nābhyabhūdavitaṁ viṣṇupatnyā||
+en: Then Indra was called by the words of the brāhmaṇas and he went back. His sin had been removed by his meditation on Ṛtambhara. The sin, whose force the deity of that quarter had destroyed, did not overcome him, for the consort of Viṣṇu protected him.
+tel: అంతట బ్రాహ్మణుల పలుకులచే పిలువబడిన ఇంద్రుడు మరలి వచ్చెను. ఋతంభరుని ధ్యానముచే ఆయన పాపము తొలగిపోయెను. దిగ్దేవతచే బలము పోగొట్టుకొనిన ఆ పాపము ఆయనను ఆక్రమించలేదు, ఏలయనగా విష్ణుపత్ని ఆయనను రక్షించెను.
+hi: तब ब्राह्मणों के वचनों से बुलाये गये इन्द्र लौट आये। ऋतम्भर के ध्यान से उनका पाप दूर हो गया था। दिग्देवता ने जिसका बल नष्ट कर दिया था, वह पाप उन पर हावी न हुआ, क्योंकि विष्णु की पत्नी ने उनकी रक्षा की।
 
 --- verse 18 ---
 deva:
@@ -186,6 +237,9 @@ deva:
 iast:
 taṁ ca brahmarṣayo'bhyetya hayamedhena bhārata|
 yathāvaddīkṣayāñcakruḥ puruṣārādhanena ha||
+en: O descendant of Bharata, the brahmarṣis came to him and duly consecrated him for the horse sacrifice, which is the worship of the Puruṣa.
+tel: ఓ భరతవంశజా, బ్రహ్మర్షులు ఆయనను చేరి, పురుషుని ఆరాధనమైన అశ్వమేధయాగమునకు ఆయనను యథావిధిగా దీక్షితుని చేసిరి.
+hi: हे भरतवंशी, ब्रह्मर्षियों ने उनके पास आकर, पुरुष की आराधना रूप अश्वमेध यज्ञ के लिये उन्हें विधिपूर्वक दीक्षित किया।
 
 --- verse 19 ---
 deva:
@@ -194,6 +248,9 @@ deva:
 iast:
 athejyamāne puruṣe sarvadevamayātmani|
 aśvamedhe mahendreṇa vitate brahmavādibhiḥ||
+en: Then the Puruṣa, whose Self holds all the gods, was worshipped in the horse sacrifice which the great Indra spread out with the knowers of the Veda.
+tel: అంతట సర్వదేవతలను తన ఆత్మయందు కలిగిన పురుషుడు, మహేంద్రుడు వేదవేత్తలతో కూడి విస్తరించిన అశ్వమేధయాగమునందు ఆరాధింపబడెను.
+hi: तब सब देवताओं को अपने आत्मा में धारण करनेवाले पुरुष की, महेन्द्र ने वेदवेत्ताओं के साथ जो अश्वमेध यज्ञ फैलाया, उसमें आराधना हुई।
 
 --- verse 20 ---
 deva:
@@ -202,6 +259,9 @@ deva:
 iast:
 sa vai tvāṣṭravadho bhūyānapi pāpacayo nṛpa|
 nītastenaiva śūnyāya nīhāra iva bhānunā||
+en: O king, the killing of the son of Tvaṣṭā, and the heap of sin with it, however great, was brought to nothing by that sacrifice, as mist is brought to nothing by the sun.
+tel: ఓ రాజా, త్వష్ట కుమారుని వధము, దానితో కూడిన పాపరాశియు ఎంత గొప్పదైనను, సూర్యునిచే పొగమంచు వలె ఆ యజ్ఞముచేతనే శూన్యమైపోయెను.
+hi: हे राजन्, त्वष्टा के पुत्र का वध और उसके साथ का पाप-समूह कितना ही बड़ा हो, उसी यज्ञ से वह शून्य हो गया, जैसे सूर्य से कुहरा।
 
 --- verse 21 ---
 deva:
@@ -214,6 +274,9 @@ sa vājimedhena yathoditena
 vitāyamānena marīcimiśraiḥ|
 iṣṭvādhiyajñaṁ puruṣaṁ purāṇa-
 mindro mahānāsa vidhūtapāpaḥ||
+en: By the horse sacrifice, performed as prescribed and spread out by Marīci and the other sages, Indra worshipped the ancient Puruṣa who presides over sacrifice. His sin was shaken off and he became great.
+tel: మరీచి మొదలైనవారు శాస్త్రము చెప్పిన రీతిగా విస్తరించిన అశ్వమేధయాగముచే ఇంద్రుడు యజ్ఞాధిపతియైన పురాణపురుషుని ఆరాధించెను. ఆయన పాపము పోయెను, ఆయన గొప్పవాడయ్యెను.
+hi: मरीचि आदि के द्वारा शास्त्रोक्त रीति से फैलाये गये अश्वमेध यज्ञ से इन्द्र ने यज्ञ के अधिपति पुराणपुरुष की आराधना की। उनका पाप धुल गया और वे महान् हो गये।
 
 --- verse 22 ---
 deva:
@@ -226,21 +289,30 @@ idaṁ mahākhyānamaśeṣapāpmanāṁ
 prakṣālanaṁ tīrthapadānukīrtanam|
 bhaktyucchrayaṁ bhaktajanānuvarṇanaṁ
 mahendramokṣaṁ vijayaṁ marutvataḥ||
+en: This great narrative washes away all sins. It is the singing of him whose feet are the holy places. It raises devotion high. It describes those who are devoted to him. It tells of the release of the great Indra and of his victory.
+tel: ఈ మహా ఆఖ్యానము సమస్త పాపములను కడుగును. ఇది పాదములే తీర్థములైన ఆయన కీర్తనము. ఇది భక్తిని పెంచును. ఇది భక్తులను వర్ణించును. ఇది మహేంద్రుని విముక్తిని, ఆయన విజయమును చెప్పును.
+hi: यह महान् आख्यान सब पापों को धो देता है। यह उनका कीर्तन है जिनके चरण ही तीर्थ हैं। यह भक्ति को बढ़ाता है। यह भक्तों का वर्णन करता है। यह महेन्द्र की मुक्ति और उनकी विजय को कहता है।
 
 --- verse 23 ---
 deva:
 पठेयुराख्यानमिदं सदा बुधाः
-शृण्वन्त्यथो पर्वणिपर्वणीन्द्रियम्।
+शृण्वन्त्यथो पर्वणि पर्वणीन्द्रियम्।
 धन्यं यशस्यं निखिलाघमोचनं
 रिपुञ्जयं स्वस्त्ययनं तथाऽऽयुषम्॥
 iast:
 paṭheyurākhyānamidaṁ sadā budhāḥ
-śṛṇvantyatho parvaṇiparvaṇīndriyam|
+śṛṇvantyatho parvaṇi parvaṇīndriyam|
 dhanyaṁ yaśasyaṁ nikhilāghamocanaṁ
 ripuñjayaṁ svastyayanaṁ tathā''yuṣam||
+en: Let the wise always read this narrative, and let them hear it on each parvan day. It concerns Indra. It is blessed. It brings fame. It frees from every sin. It conquers enemies. It is a way to well-being, and it gives long life.
+tel: బుధులు ఈ ఆఖ్యానమును ఎల్లప్పుడు పఠించవలెను; పర్వదినమున పర్వదినమున వినవలెను. ఇది ఇంద్రునికి సంబంధించినది. ఇది ధన్యమైనది. ఇది యశస్సును ఇచ్చును. ఇది సమస్త పాపములను తొలగించును. ఇది శత్రువులను జయించును. ఇది మంగళకరమైనది, ఆయువును ఇచ్చునది.
+hi: बुद्धिमान् लोग इस आख्यान को सदा पढ़ें, और प्रत्येक पर्व के दिन इसे सुनें। यह इन्द्र से सम्बन्ध रखता है। यह धन्य है। यह यश देता है। यह सब पापों से छुड़ाता है। यह शत्रुओं को जीतता है। यह कल्याणकारी है, और आयु देता है।
 
 --- verse none ---
 deva:
 इति श्रीमद्भागवते महापुराणे पारमहंस्यां संहितायां षष्ठस्कन्धे इन्द्रविजयो नाम त्रयोदशोऽध्यायः॥ १३॥
 iast:
 iti śrīmadbhāgavate mahāpurāṇe pāramahaṁsyāṁ saṁhitāyāṁ ṣaṣṭhaskandhe indravijayo nāma trayodaśo'dhyāyaḥ|| 13||
+en: Thus ends the thirteenth adhyāya, called the victory of Indra, in the sixth skandha of the Śrīmad Bhāgavata Mahāpurāṇa, the saṁhitā of the paramahaṁsas.
+tel: ఇది శ్రీమద్భాగవత మహాపురాణమునందు, పరమహంసల సంహితయందు, షష్ఠస్కంధమునందు, ఇంద్రవిజయము అను త్రయోదశాధ్యాయము.
+hi: इस प्रकार श्रीमद्भागवत महापुराण की परमहंसों की संहिता के षष्ठ स्कन्ध में, इन्द्रविजय नाम का तेरहवाँ अध्याय समाप्त हुआ।

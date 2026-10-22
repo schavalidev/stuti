@@ -9,7 +9,7 @@ Type: Purāṇa (an adhyāya of the Śrīmad Bhāgavata, Skandha 6)
 
 Source / recension: Base text and authority: the Gītā Press, Gorakhpur Śrīmadbhāgavata Mahāpurāṇa with Hindi translation, Part 1 (Gītā Press code 26), archive.org item `shrimadbhagwat-mahapuran-bhag-1`, printed pages 757–760; the PDF page numbers are the printed ones. The PDF carries the typesetter's own text layer in the Chanakya font encoding, and the text was decoded from it by machine with `bin/bhagavata/chanakya.py`, not read off OCR or typed. The decoder was checked against GRETIL over all twelve skandhas before any file was written, and the differences that remain were sampled and found to be readings of the two editions. Second witness: GRETIL's `sa_bhAgavatapurANa.xml` (IAST, contributed by Ulrich Stiehl), a separate editorial lineage, compared verse by verse by machine. The TTD edition with the commentaries of Śrīdhara, Vīrarāghava and Vijayadhvaja (archive.org `Bhagavata_Purana_With_Multiple_Commentaries_TTD_Critical_Edition`) is the third witness where one is needed; it was not read for this file. The IAST was generated mechanically from the Devanāgarī with `bin/dev2iast.py`.
 
-Recension note: Text-only file, written 1 Oct 2026 at the user's instruction to lay down the whole Bhāgavata first: the English, Telugu and Hindi meanings are still to be added, and the witnesses' differences listed here have been recorded by machine and not yet adjudicated. The print is followed throughout. The print numbers 27 verses and GRETIL numbers 27. Of the 27 verses GRETIL has under the same number, 20 agree with the print letter for letter once spacing and the spelling of nasals are set aside; the rest differ: 1, 9, 10, 16, 17, 19, 21. Spacing is the print's, as its text layer gives it; in a few places justification has left a space inside a word, and these are still to be closed when the verse is read. The speaker lines (श्रीशुक उवाच and the others) are printed in italic above the verse they introduce, and are given as its first line.
+Recension note: Meanings written 22 Oct 2026 (session S78). The differences between the witnesses listed below were read as the verses were glossed; except where this note says otherwise, each is a spelling, a sandhi or a word order of the two editions, none of them changes the sense, and the print's reading therefore stands unbracketed. The print is followed throughout. The print numbers 27 verses and GRETIL numbers 27. Of the 27 verses GRETIL has under the same number, 20 agree with the print letter for letter once spacing and the spelling of nasals are set aside; the rest differ: 1, 9, 10, 16, 17, 19, 21. Spacing is the print's, as its text layer gives it. The speaker lines (श्रीशुक उवाच and the others) are printed in italic above the verse they introduce, and are given as its first line. Three words were put right as the verses were read, each confirmed against GRETIL. At verse 3 the space between ओजसा and राजन् had been swallowed, and a vocative run into an instrumental with its own case ending cannot be read as a compound, so it is restored. At verse 5 justification had left a space inside हृदि, and it is closed. At verse 27 the genitive चित्तस्य had swallowed the following न, and the space is restored. The print's spaced forms चेद् ग्राम्यसुखे at verse 5, अपासरद् भिन्नमुखः at verse 11 and यद् द्वेष at verse 22, and the line-break hyphens at verses 12, 14, 15, 17, 23 and 24, are left as printed. At verse 27 the न is read with Śrīdhara as denying the attachment, not the friendship.
 
 Verse count: 27, plus the closing colophon printed unnumbered.
 
@@ -24,6 +24,9 @@ iast:
 śrīśuka uvāca
 ta evaṁ śaṁsato dharmaṁ vacaḥ patyuracetasaḥ|
 naivāgṛhṇan bhayatrastāḥ palāyanaparā nṛpa||
+en: Śrī Śuka said: King, they were senseless with fear and bent on flight, and they did not take in the words of their lord, who was declaring dharma to them in this way.
+tel: శ్రీశుకుడు పలికెను: రాజా, భయముచే చేతనము కోల్పోయి పలాయనమునకు సిద్ధపడిన వారు, ఈ విధముగా ధర్మమును చెప్పుచున్న తమ పతి మాటను గ్రహింపలేదు.
+hi: श्रीशुकदेवजी ने कहा: हे नृप, भय से अचेत और भागने को तैयार उन्होंने, इस प्रकार धर्म कहते हुए अपने पति के वचन को ग्रहण ही नहीं किया।
 
 --- verse 2 ---
 deva:
@@ -32,14 +35,20 @@ deva:
 iast:
 viśīryamāṇāṁ pṛtanāmāsurīmasurarṣabhaḥ|
 kālānukūlaistridaśaiḥ kālyamānāmanāthavat||
+en: The army of the demons was breaking apart, and the gods, whom time now favoured, were driving it before them like a herd that has no master.
+tel: అసురసేన చెదిరిపోవుచుండెను; కాలము అనుకూలించిన దేవతలు దానిని నాథుడు లేని మందవలె తరుముచుండిరి.
+hi: असुरों की सेना विशीर्ण हो रही थी, और काल जिनके अनुकूल था वे देव उसे अनाथ के समान खदेड़ रहे थे।
 
 --- verse 3 ---
 deva:
 दृष्ट्वातप्यत संक्रुद्ध इन्द्रशत्रुरमर्षितः।
-तान्निवार्यौजसाराजन् निर्भर्त्स्येदमुवाच ह॥
+तान्निवार्यौजसा राजन् निर्भर्त्स्येदमुवाच ह॥
 iast:
 dṛṣṭvātapyata saṁkruddha indraśatruramarṣitaḥ|
-tānnivāryaujasārājan nirbhartsyedamuvāca ha||
+tānnivāryaujasā rājan nirbhartsyedamuvāca ha||
+en: Seeing this, that enemy of Indra burned within, greatly angered and unable to bear it. He held them back by his strength, king, rebuked them, and spoke these words.
+tel: దానిని చూచి ఆ ఇంద్రశత్రువు మిక్కిలి క్రుద్ధుడై, సహింపలేక లోపల తపించెను. రాజా, తన ఓజముతో వారిని ఆపి, గద్దించి ఈ మాట పలికెను.
+hi: यह देखकर वह इन्द्रशत्रु अत्यन्त क्रुद्ध और अमर्षित होकर भीतर जलने लगा। हे राजन्, उन्हें अपने ओज से रोककर, फटकारकर उसने यह वचन कहा।
 
 --- verse 4 ---
 deva:
@@ -48,14 +57,20 @@ deva:
 iast:
 kiṁ va uccaritairmāturdhāvadbhiḥ pṛṣṭhato hataiḥ|
 na hi bhītavadhaḥ ślāghyo na svargyaḥ śūramāninām||
+en: What are you worth, who are no more than your mother's refuse, who run away and are struck down from behind? For men who count themselves brave, the killing of one who is afraid brings neither praise nor heaven.
+tel: తల్లి మలము వంటివారు, పారిపోవువారు, వెనుక నుండి చంపబడువారు అయిన మీ వలన ఏమి ప్రయోజనము? తమను శూరులుగా భావించువారికి భయపడినవానిని చంపుట ప్రశంసనీయమూ కాదు, స్వర్గము ఇచ్చునదీ కాదు.
+hi: माता के मल जैसे, भागते हुए और पीछे से मारे जाते तुम लोगों से क्या? अपने को शूर माननेवालों के लिये डरे हुए का वध न श्लाघ्य है और न स्वर्ग देनेवाला।
 
 --- verse 5 ---
 deva:
-यदि वः प्रधने श्रद्धा सारं वा क्षुल्लका हृ दि।
+यदि वः प्रधने श्रद्धा सारं वा क्षुल्लका हृदि।
 अग्रे तिष्ठत मात्रं मे न चेद् ग्राम्यसुखे स्पृहा॥
 iast:
-yadi vaḥ pradhane śraddhā sāraṁ vā kṣullakā hṛ di|
+yadi vaḥ pradhane śraddhā sāraṁ vā kṣullakā hṛdi|
 agre tiṣṭhata mātraṁ me na ced grāmyasukhe spṛhā||
+en: Mean ones, if you have any faith in battle, or any strength in your hearts, stand before me for a moment, unless your longing is for the pleasures of the village.
+tel: క్షుద్రులారా, యుద్ధమునందు మీకు శ్రద్ధ ఉన్నచో, హృదయమున సారము ఉన్నచో, క్షణకాలము నా ఎదుట నిలువుడు; గ్రామ్య సుఖముపై కోరిక లేనిచో.
+hi: हे क्षुद्रों, यदि तुम्हें युद्ध में श्रद्धा है या हृदय में सार है, तो क्षणभर मेरे आगे ठहरो; यदि ग्राम्य सुख की स्पृहा न हो तो।
 
 --- verse 6 ---
 deva:
@@ -64,6 +79,9 @@ deva:
 iast:
 evaṁ suragaṇān kruddho bhīṣayan vapuṣā ripūn|
 vyanadat sumahāprāṇo yena lokā vicetasaḥ||
+en: Angered in this way, frightening the hosts of the gods, his enemies, with his form, he of very great strength roared, and at that roar the worlds lost their senses.
+tel: ఈ విధముగా క్రుద్ధుడై, శత్రువులైన దేవగణములను తన రూపముతో భయపెట్టుచు, మిక్కిలి మహాప్రాణుడైన అతడు గర్జించెను; దానిచే లోకములు చేతనము కోల్పోయెను.
+hi: इस प्रकार क्रुद्ध होकर, शत्रु देवगणों को अपने वपु से डराते हुए, उस सुमहाप्राण ने गर्जन किया, जिससे लोक विचेतन हो गये।
 
 --- verse 7 ---
 deva:
@@ -72,6 +90,9 @@ deva:
 iast:
 tena devagaṇāḥ sarve vṛtravisphoṭanena vai|
 nipeturmūrcchitā bhūmau yathaivāśaninā hatāḥ||
+en: By that thunder-crack of Vṛtra all the hosts of the gods fell senseless to the ground, as though struck by lightning.
+tel: వృత్రుని ఆ విస్ఫోటనముచే దేవగణములందరు మూర్ఛిల్లి, పిడుగుచే కొట్టబడినవారివలె నేలపై పడిపోయిరి.
+hi: वृत्र के उस विस्फोटन से सब देवगण मूर्च्छित होकर भूमि पर गिर पड़े, जैसे अशनि से मारे गये हों।
 
 --- verse 8 ---
 deva:
@@ -84,6 +105,9 @@ mamarda padbhyāṁ surasainyamāturaṁ
 nimīlitākṣaṁ raṇaraṅgadurmadaḥ|
 gāṁ kampayannudyataśūla ojasā
 nālaṁ vanaṁ yūthapatiryathonmadaḥ||
+en: Drunk with the field of battle, his trident raised, shaking the earth with his strength, he trampled under his feet the army of the gods, which lay stricken with its eyes closed, as a maddened leader of the herd tramples a thicket of reeds.
+tel: రణరంగమున మదించినవాడై, శూలము ఎత్తి, తన ఓజముతో భూమిని కంపింపజేయుచు, కన్నులు మూసుకొని ఆతురముగా పడియున్న దేవసేనను అతడు పాదములతో తొక్కివేసెను; ఉన్మత్తమైన యూథపతి రెల్లుపొదను తొక్కివేయునట్లు.
+hi: रणरंग में मद चढ़ाये, शूल उठाये, अपने ओज से पृथ्वी को कँपाते हुए उसने आँखें मूँदकर आतुर पड़ी देव-सेना को पैरों से रौंद डाला, जैसे उन्मत्त यूथपति नालवन को रौंद देता है।
 
 --- verse 9 ---
 deva:
@@ -96,6 +120,9 @@ vilokya taṁ vajradharo'tyamarṣitaḥ
 svaśatrave'bhidravate mahāgadām|
 cikṣepa tāmāpatatīṁ suduḥsahāṁ
 jagrāha vāmena kareṇa līlayā||
+en: Seeing him, the bearer of the vajra was greatly angered and hurled his great mace at his enemy, who was rushing upon him. Vṛtra caught that mace, hard to bear as it fell, with his left hand, and in play.
+tel: అతనిని చూచి వజ్రధారి మిక్కిలి అమర్షముతో, తనపై విరుచుకుపడుచున్న శత్రువుపై మహాగదను విసిరెను. పడుచున్న ఆ దుస్సహమైన గదను వృత్రుడు ఎడమ చేతితో లీలగా పట్టుకొనెను.
+hi: उसे देखकर वज्रधारी अत्यन्त अमर्षित हुए और अपने ऊपर दौड़ते शत्रु पर महागदा फेंकी। गिरती हुई उस दुःसह गदा को वृत्र ने बायें हाथ से लीला से पकड़ लिया।
 
 --- verse 10 ---
 deva:
@@ -108,6 +135,9 @@ sa indraśatruḥ kupito bhṛśaṁ tayā
 mahendravāhaṁ gadayogravikramaḥ|
 jaghāna kumbhasthala unnadan mṛdhe
 tatkarma sarve samapūjayannṛpa||
+en: King, that enemy of Indra, greatly angered, of fierce prowess, roaring in the battle, struck the mount of great Indra on the frontal bone with that mace; and all praised that deed.
+tel: రాజా, ఆ ఇంద్రశత్రువు మిక్కిలి కుపితుడై, ఉగ్రవిక్రముడై, రణమున గర్జించుచు, ఆ గదతో మహేంద్రుని వాహనమును కుంభస్థలమున కొట్టెను; ఆ కర్మను అందరు ప్రశంసించిరి.
+hi: हे राजन्, वह इन्द्रशत्रु अत्यन्त कुपित और उग्रविक्रम होकर, युद्ध में गर्जते हुए, उस गदा से महेन्द्र के वाहन को कुम्भस्थल पर मारा; उस कर्म की सबने प्रशंसा की।
 
 --- verse 11 ---
 deva:
@@ -120,6 +150,9 @@ airāvato vṛtragadābhimṛṣṭo
 vighūrṇito'driḥ kuliśāhato yathā|
 apāsarad bhinnamukhaḥ sahendro
 muñcannasṛk saptadhanurbhṛśārtaḥ||
+en: Airāvata, struck by Vṛtra's mace, was shaken as a mountain is shaken when the vajra strikes it. His face broken, pouring blood, in great pain, he drew back seven bow-lengths, and Indra with him.
+tel: వృత్రుని గదచే కొట్టబడిన ఐరావతము, వజ్రముచే కొట్టబడిన పర్వతమువలె కదలిపోయెను. ముఖము పగిలి, రక్తము కారుచు, మిక్కిలి బాధపడుచు, ఇంద్రునితో కూడ అది ఏడు ధనువుల దూరము వెనుకకు జరిగెను.
+hi: वृत्र की गदा से मारा हुआ ऐरावत, वज्र से आहत पर्वत के समान विघूर्णित हो गया। मुख फट गया, रक्त बहने लगा, अत्यन्त पीड़ित होकर वह इन्द्र के साथ सात धनुष पीछे हट गया।
 
 --- verse 12 ---
 deva:
@@ -132,6 +165,9 @@ na sannavāhāya viṣaṇṇacetase
 prāyuṅkta bhūyaḥ sa gadāṁ mahātmā|
 indro'mṛtasyandikarābhimarśa-
 vītavyathakṣatavāho'vatasthe||
+en: That great one did not use the mace again against Indra, whose mount had sunk down and whose mind was downcast. Indra stood firm, for the touch of his hand, which pours nectar, took away the pain of his wounded mount.
+tel: వాహనము కూలిపోయి మనస్సు కుంగిన ఇంద్రునిపై ఆ మహాత్ముడు మరల గదను ప్రయోగింపలేదు. అమృతము స్రవించు తన చేతి స్పర్శచే గాయపడిన వాహనము వ్యథ తీరినదై, ఇంద్రుడు నిలిచెను.
+hi: जिसका वाहन बैठ गया और चित्त विषण्ण हो गया, उस इन्द्र पर उस महात्मा ने फिर गदा का प्रयोग नहीं किया। अमृत बहानेवाले अपने हाथ के स्पर्श से क्षत वाहन की व्यथा दूर हो जाने पर इन्द्र खड़े हो गये।
 
 --- verse 13 ---
 deva:
@@ -144,6 +180,9 @@ sa taṁ nṛpendrāhavakāmyayā ripuṁ
 vajrāyudhaṁ bhrātṛhaṇaṁ vilokya|
 smaraṁśca tatkarma nṛśaṁsamaṁhaḥ
 śokena mohena hasañjagāda||
+en: Best of kings, seeing that enemy standing before him, wishing for battle, armed with the vajra, the slayer of his brother, and remembering that cruel and sinful deed, he laughed out of grief and bewilderment, and spoke.
+tel: నృపేంద్రా, యుద్ధము కోరి ఎదుట నిలిచిన ఆ శత్రువును — వజ్రాయుధుని, భ్రాతృఘాతకుని — చూచి, ఆ నృశంసమైన పాపకర్మను స్మరించుకొని, శోకముచే మోహముచే నవ్వుచు అతడు పలికెను.
+hi: हे नृपेन्द्र, युद्ध की इच्छा से सामने खड़े उस शत्रु को — वज्रायुध और भ्रातृघाती को — देखकर, और उस नृशंस पाप कर्म का स्मरण करके, शोक और मोह से हँसते हुए उसने कहा।
 
 --- verse 14 ---
 deva:
@@ -158,6 +197,9 @@ diṣṭyā bhavān me samavasthito ripu-
 ryo brahmahā guruhā bhrātṛhā ca|
 diṣṭyānṛṇo'dyāhamasattama tvayā
 macchūlanirbhinnadṛṣaddhṛdācirāt||
+en: Vṛtra said: By good fortune you stand before me, my enemy, who have killed a brāhmaṇa, killed your teacher, and killed my brother. Basest of men, by good fortune I shall soon be free of my debt to you, when my trident has split that heart of yours, which is hard as stone.
+tel: వృత్రుడు పలికెను: బ్రాహ్మణుని చంపినవాడు, గురువును చంపినవాడు, నా సోదరుని చంపినవాడు అయిన నీవు, నా శత్రువు, అదృష్టముచే నా ఎదుట నిలిచితివి. అసత్తమా, నా శూలముచే రాయివంటి నీ హృదయము చీల్చబడగా, అదృష్టముచే నేడు నేను త్వరలో నీ ఋణము తీరినవాడనగుదును.
+hi: वृत्र ने कहा: सौभाग्य से आप मेरे सामने उपस्थित हुए, मेरा वह शत्रु जो ब्रह्महत्या करनेवाला, गुरु का हन्ता और मेरे भाई का हन्ता है। हे असत्तम, सौभाग्य से आज मैं, मेरे शूल से तेरे पत्थर जैसे हृदय के विदीर्ण होने पर, शीघ्र ही तुझसे अनृण हो जाऊँगा।
 
 --- verse 15 ---
 deva:
@@ -170,6 +212,9 @@ yo no'grajasyātmavido dvijāte-
 rgurorapāpasya ca dīkṣitasya|
 viśrabhya khaḍgena śirāṁsyavṛścat
 paśorivākaruṇaḥ svargakāmaḥ||
+en: You longed for heaven and had no pity. You won his trust, and then with a sword you cut off the heads of our elder brother, who knew the self, who was a brāhmaṇa, your own teacher, sinless and consecrated, as though he were a sacrificial animal.
+tel: స్వర్గము కోరినవాడవై, కరుణ లేనివాడవై, నీవు నమ్మకము కలిగించి, ఆత్మజ్ఞుడు, ద్విజుడు, నీ గురువు, పాపరహితుడు, దీక్షితుడు అయిన మా అగ్రజుని శిరస్సులను పశువు శిరస్సువలె ఖడ్గముతో నరికితివి.
+hi: स्वर्ग की कामना से और करुणा से रहित होकर, तूने विश्वास दिलाकर, आत्मवेत्ता, द्विज, अपने गुरु, निष्पाप और दीक्षित हमारे अग्रज के सिरों को पशु के समान खड्ग से काट डाला।
 
 --- verse 16 ---
 deva:
@@ -182,6 +227,9 @@ hrīśrīdayākīrtibhirujjhitaṁ tvāṁ
 svakarmaṇā puruṣādaiśca garhyam|
 kṛcchreṇa macchūlavibhinnadeha-
 maspṛṣṭavahniṁ samadanti gṛdhrāḥ||
+en: Shame, fortune, pity and fame have left you, and by your own deed you are to be blamed even by the eaters of men. Your body, split by my trident and untouched by fire, the vultures will eat with difficulty.
+tel: లజ్జ, శ్రీ, దయ, కీర్తి నిన్ను విడిచినవి; నీ కర్మచే పురుషాదులకైనను నీవు గర్హ్యుడవు. నా శూలముచే చీల్చబడిన, అగ్ని తాకని నీ దేహమును గృధ్రములు కష్టముతో తినును.
+hi: लज्जा, श्री, दया और कीर्ति ने तुझे छोड़ दिया, और अपने कर्म से तू पुरुषादों के द्वारा भी गर्ह्य है। मेरे शूल से विदीर्ण और अग्नि से अस्पृष्ट तेरी देह को गीध कष्ट से खायेंगे।
 
 --- verse 17 ---
 deva:
@@ -194,6 +242,9 @@ anye'nu ye tveha nṛśaṁsamajñā
 ye hyudyatāstrāḥ praharanti mahyam|
 tairbhūtanāthān sagaṇān niśāta-
 triśūlanirbhinnagalairyajāmi||
+en: And the others here, senseless men who follow you in cruelty and who strike at me with raised weapons, I shall offer to the lords of the beings and their hosts, their throats pierced by my sharp trident.
+tel: ఇందు నీ వెంట నృశంసముగా నడచు అజ్ఞులు, ఎత్తిన ఆయుధములతో నాపై దాడి చేయువారు — వారి కంఠములను నా వాడి త్రిశూలముతో చీల్చి, వారిచే భూతనాథులను, వారి గణములను నేను పూజింతును.
+hi: और यहाँ जो दूसरे अज्ञ तेरे पीछे नृशंसता में चलते हैं और उठाये हुए अस्त्रों से मुझ पर प्रहार करते हैं, उनके गले अपने निशात त्रिशूल से विदीर्ण करके उनसे मैं भूतनाथों और उनके गणों का यजन करूँगा।
 
 --- verse 18 ---
 deva:
@@ -206,6 +257,9 @@ atho hare me kuliśena vīra
 hartā pramathyaiva śiro yadīha|
 tatrānṛṇo bhūtabaliṁ vidhāya
 manasvināṁ pādarajaḥ prapatsye||
+en: Or else, Hari, hero, if you crush my head with the vajra and take it off here, then I shall be free of my debt. I shall have made my body an offering to the beings, and I shall reach the dust of the feet of the high-minded.
+tel: లేదా, హరీ, వీరా, ఇందు నా శిరస్సును వజ్రముచే మథించి నీవు హరించినచో, అప్పుడు నేను ఋణవిముక్తుడనై, భూతములకు బలిని సమర్పించి, మనస్వుల పాదధూళిని పొందుదును.
+hi: अथवा हे हरे, हे वीर, यदि आप यहाँ मेरे सिर को वज्र से मथकर हर लें, तो वहाँ मैं अनृण होकर, भूतों को बलि देकर, मनस्वियों की पादरज को प्राप्त करूँगा।
 
 --- verse 19 ---
 deva:
@@ -218,6 +272,9 @@ sureśa kasmānna hinoṣi vajraṁ
 puraḥ sthite vairiṇi mayyamogham|
 mā saṁśayiṣṭhā na gadeva vajraṁ
 syānniṣphalaṁ kṛpaṇārtheva yācñā||
+en: Lord of the gods, why do you not hurl the unfailing vajra at me, your enemy, who stand before you? Do not doubt. The vajra will not be fruitless like the mace, nor like a plea made to a miser.
+tel: సురేశా, ఎదుట నిలిచిన శత్రువునైన నాపై అమోఘమైన వజ్రమును ఎందుకు ప్రయోగింపవు? సంశయించకుము. గదవలె వజ్రము నిష్ఫలము కాదు; కృపణునితో చేసిన యాచనవలె కాదు.
+hi: हे सुरेश, सामने खड़े शत्रु मुझ पर अमोघ वज्र को क्यों नहीं छोड़ते? संशय न करें। यह वज्र गदा की तरह निष्फल न होगा, और न कृपण से की गयी याचना की तरह।
 
 --- verse 20 ---
 deva:
@@ -230,6 +287,9 @@ nanveṣa vajrastava śakra tejasā
 harerdadhīcestapasā ca tejitaḥ|
 tenaiva śatruṁ jahi viṣṇuyantrito
 yato harirvijayaḥ śrīrguṇāstataḥ||
+en: Śakra, this vajra of yours is made keen by the power of Hari and by the tapas of Dadhīci. Guided by Viṣṇu, kill your enemy with it. Where Hari is, there are victory, fortune and every good quality.
+tel: శక్రా, నీ ఈ వజ్రము హరి తేజముచే, దధీచి తపస్సుచే తేజితమైనది. విష్ణువు నియమించినవాడవై దానితోనే శత్రువును చంపుము. ఎచ్చట హరి ఉన్నాడో, అచ్చట విజయము, శ్రీ, గుణములు ఉన్నవి.
+hi: हे शक्र, तुम्हारा यह वज्र हरि के तेज से और दधीचि के तप से तेजित है। विष्णु से नियन्त्रित होकर उसी से शत्रु को मारो। जहाँ हरि हैं, वहाँ विजय, श्री और गुण हैं।
 
 --- verse 21 ---
 deva:
@@ -242,6 +302,9 @@ ahaṁ samādhāya mano yathā''ha
 saṅkarṣaṇastaccaraṇāravinde|
 tvadvajraraṁholulitagrāmyapāśo
 gatiṁ muneryāmyapaviddhalokaḥ||
+en: As Saṅkarṣaṇa has said, I shall fix my mind on his lotus feet. The force of your vajra will break the bonds of my worldly life, and casting off these worlds, I shall reach the state of the sage.
+tel: సంకర్షణుడు చెప్పినట్లు, నేను ఆయన చరణారవిందములపై మనస్సును నిలిపి, నీ వజ్రవేగముచే గ్రామ్య పాశములు తెగినవాడనై, లోకములను విడిచి ముని గతిని పొందుదును.
+hi: जैसा संकर्षण ने कहा है, वैसे ही मैं उनके चरणारविन्द में मन लगाकर, तेरे वज्र के वेग से ग्राम्य पाश टूट जाने पर, लोकों को त्यागकर मुनि की गति को प्राप्त करूँगा।
 
 --- verse 22 ---
 deva:
@@ -254,6 +317,9 @@ puṁsāṁ kilaikāntadhiyāṁ svakānāṁ
 yāḥ sampado divi bhūmau rasāyām|
 na rāti yad dveṣa udvega ādhi-
 rmadaḥ kalirvyasanaṁ saṁprayāsaḥ||
+en: Śakra, to his own people, whose minds are fixed on him alone, he does not give the riches that are in heaven, on the earth and in the nether world, for out of them come hatred, agitation, anxiety, pride, quarrel, misfortune and hard striving.
+tel: ఏకాంత బుద్ధి కలిగిన తనవారైన పురుషులకు, స్వర్గమునందు, భూమిపైన, రసాతలమునందు ఉన్న సంపదలను ఆయన ఇవ్వడు; ఏలయన వాని నుండి ద్వేషము, ఉద్వేగము, ఆధి, మదము, కలి, వ్యసనము, సంప్రయాసము కలుగును.
+hi: एकान्त बुद्धिवाले अपने जनों को वे स्वर्ग में, भूमि पर और रसातल में जो सम्पदाएँ हैं, वे नहीं देते; क्योंकि उनसे द्वेष, उद्वेग, आधि, मद, कलि, व्यसन और संप्रयास होते हैं।
 
 --- verse 23 ---
 deva:
@@ -266,6 +332,9 @@ traivargikāyāsavighātamasmat-
 patirvidhatte puruṣasya śakra|
 tato'numeyo bhagavatprasādo
 yo durlabho'kiñcanagocaro'nyaiḥ||
+en: Śakra, our Lord puts an end to a man's striving after the three ends of life. From that the grace of the Lord may be known, a grace hard to win, which comes within the reach of those who have nothing and not of others.
+tel: శక్రా, మా పతి పురుషునికి త్రివర్గము కొరకైన ఆయాసమును భంగము చేయును. దానినుండియే భగవత్ప్రసాదమును ఊహింపవలెను; అది దుర్లభము, అకించనులకు మాత్రము గోచరము, ఇతరులకు కాదు.
+hi: हे शक्र, हमारे पति पुरुष के त्रिवर्ग के आयास का विघात करते हैं। उससे ही भगवान् के प्रसाद का अनुमान होता है, जो दुर्लभ है और अकिंचनों को गोचर है, दूसरों को नहीं।
 
 --- verse 24 ---
 deva:
@@ -278,6 +347,9 @@ ahaṁ hare tava pādaikamūla-
 dāsānudāso bhavitāsmi bhūyaḥ|
 manaḥ smaretāsupaterguṇāṁste
 gṛṇīta vāk karma karotu kāyaḥ||
+en: Hari, I shall become again the servant of the servants of those whose only support is your feet. Let my mind remember the qualities of you, the lord of life. Let my speech declare them, and let my body do the work.
+tel: హరీ, నీ పాదములే ఏకైక ఆధారమైనవారి దాసులకు దాసుడనై నేను మరల ఉందును. అసుపతియైన నీ గుణములను నా మనస్సు స్మరించుగాక, నా వాక్కు కీర్తించుగాక, నా శరీరము సేవ చేయుగాక.
+hi: हे हरे, आपके चरण ही जिनका एक आधार हैं, उनके दासों का दास मैं फिर बनूँगा। हे असुपति, आपके गुणों का मेरा मन स्मरण करे, मेरी वाणी उनका गान करे और मेरा शरीर कर्म करे।
 
 --- verse 25 ---
 deva:
@@ -290,6 +362,9 @@ na nākapṛṣṭhaṁ na ca pārameṣṭhyaṁ
 na sārvabhaumaṁ na rasādhipatyam|
 na yogasiddhīrapunarbhavaṁ vā
 samaṁjasa tvā virahayya kāṅkṣe||
+en: Just Lord, apart from you I do not wish for the heights of heaven, nor the station of Brahmā, nor rule over the whole earth, nor lordship of the nether world, nor the powers of yoga, nor release from birth.
+tel: సమంజసుడా, నిన్ను విడిచి నేను నాకపృష్ఠమును, పారమేష్ఠ్యమును, సార్వభౌమత్వమును, రసాతల ఆధిపత్యమును, యోగసిద్ధులను, అపునర్భవమును కోరను.
+hi: हे समंजस, आपको छोड़कर मैं न नाकपृष्ठ, न पारमेष्ठ्य, न सार्वभौम पद, न रसातल का आधिपत्य, न योगसिद्धियाँ और न अपुनर्भव चाहता हूँ।
 
 --- verse 26 ---
 deva:
@@ -302,21 +377,30 @@ ajātapakṣā iva mātaraṁ khagāḥ
 stanyaṁ yathā vatsatarāḥ kṣudhārtāḥ|
 priyaṁ priyeva vyuṣitaṁ viṣaṇṇā
 mano'ravindākṣa didṛkṣate tvām||
+en: Lotus-eyed Lord, as unfledged birds long for their mother, as young calves worn with hunger long for milk, as a sorrowing wife longs for her husband who has gone away, so my mind longs to see you.
+tel: అరవిందాక్షా, రెక్కలు రాని పక్షిపిల్లలు తల్లిని కోరునట్లు, ఆకలితో బాధపడు దూడలు పాలను కోరునట్లు, దూరదేశమున ఉన్న ప్రియుని విషణ్ణురాలైన ప్రియ కోరునట్లు, నా మనస్సు నిన్ను చూడగోరుచున్నది.
+hi: हे अरविन्दाक्ष, जैसे पंख न निकले पक्षी माता को, जैसे भूख से व्याकुल बछड़े दूध को, जैसे विषण्ण प्रिया परदेश गये प्रिय को चाहती है, वैसे ही मेरा मन आपको देखना चाहता है।
 
 --- verse 27 ---
 deva:
 ममोत्तमश्लोकजनेषु सख्यं
 संसारचक्रे भ्रमतः स्वकर्मभिः।
 त्वन्माययाऽऽत्मात्मजदारगेहे-
-ष्वासक्तचित्तस्यन नाथ भूयात्॥
+ष्वासक्तचित्तस्य न नाथ भूयात्॥
 iast:
 mamottamaślokajaneṣu sakhyaṁ
 saṁsāracakre bhramataḥ svakarmabhiḥ|
 tvanmāyayā''tmātmajadāragehe-
-ṣvāsaktacittasyana nātha bhūyāt||
+ṣvāsaktacittasya na nātha bhūyāt||
+en: Lord, I wander in the wheel of saṁsāra by my own deeds. Let me have friendship with those who praise the Lord of excellent fame, and let my mind, which your māyā has bound to this body, to sons, to wife and to home, be bound no more.
+tel: నాథా, నా కర్మలచే నేను సంసారచక్రమున తిరుగుచున్నాను. ఉత్తమశ్లోకుని జనులతో నాకు సఖ్యము కలుగుగాక; నీ మాయచే దేహమునందు, పుత్రులయందు, భార్యయందు, గృహమునందు ఆసక్తమైన నా చిత్తము అట్లు ఉండకుండుగాక.
+hi: हे नाथ, अपने कर्मों से मैं संसारचक्र में भ्रमण करता हूँ। उत्तमश्लोक भगवान् के जनों में मेरी मित्रता हो; और आपकी माया से देह, पुत्र, स्त्री तथा घर में आसक्त मेरा चित्त वैसा न रहे।
 
 --- verse none ---
 deva:
 इति श्रीमद्भागवते महापुराणे पारमहंस्यां संहितायां षष्ठस्कन्धे वृत्रस्येन्द्रोपदेशो नामैकादशोऽध्यायः॥ ११॥
 iast:
 iti śrīmadbhāgavate mahāpurāṇe pāramahaṁsyāṁ saṁhitāyāṁ ṣaṣṭhaskandhe vṛtrasyendropadeśo nāmaikādaśo'dhyāyaḥ|| 11||
+en: Thus ends the eleventh adhyāya, called the instruction given to Indra by Vṛtra, in the sixth skandha of the Śrīmad Bhāgavata Mahāpurāṇa, the saṁhitā of the paramahaṁsas.
+tel: ఇది శ్రీమద్భాగవత మహాపురాణమునందు, పరమహంసల సంహితయందు, షష్ఠస్కంధమునందు, వృత్రుడు ఇంద్రునికి చేసిన ఉపదేశము అను ఏకాదశాధ్యాయము.
+hi: इस प्रकार श्रीमद्भागवत महापुराण की परमहंसों की संहिता के षष्ठ स्कन्ध में, वृत्र का इन्द्र को उपदेश नाम का ग्यारहवाँ अध्याय समाप्त हुआ।

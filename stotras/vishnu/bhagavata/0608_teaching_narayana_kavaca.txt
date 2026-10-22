@@ -9,7 +9,7 @@ Type: Purāṇa (an adhyāya of the Śrīmad Bhāgavata, Skandha 6)
 
 Source / recension: Base text and authority: the Gītā Press, Gorakhpur Śrīmadbhāgavata Mahāpurāṇa with Hindi translation, Part 1 (Gītā Press code 26), archive.org item `shrimadbhagwat-mahapuran-bhag-1`, printed pages 738–743; the PDF page numbers are the printed ones. The PDF carries the typesetter's own text layer in the Chanakya font encoding, and the text was decoded from it by machine with `bin/bhagavata/chanakya.py`, not read off OCR or typed. The decoder was checked against GRETIL over all twelve skandhas before any file was written, and the differences that remain were sampled and found to be readings of the two editions. Second witness: GRETIL's `sa_bhAgavatapurANa.xml` (IAST, contributed by Ulrich Stiehl), a separate editorial lineage, compared verse by verse by machine. The TTD edition with the commentaries of Śrīdhara, Vīrarāghava and Vijayadhvaja (archive.org `Bhagavata_Purana_With_Multiple_Commentaries_TTD_Critical_Edition`) is the third witness where one is needed; it was not read for this file. The IAST was generated mechanically from the Devanāgarī with `bin/dev2iast.py`.
 
-Recension note: Text-only file, written 1 Oct 2026 at the user's instruction to lay down the whole Bhāgavata first: the English, Telugu and Hindi meanings are still to be added, and the witnesses' differences listed here have been recorded by machine and not yet adjudicated. The print is followed throughout. The print numbers 42 verses and GRETIL numbers 42. Of the 42 verses GRETIL has under the same number, 27 agree with the print letter for letter once spacing and the spelling of nasals are set aside; the rest differ: 1, 5, 8, 19, 21, 23, 24, 25, 27, 28, 32, 34, 35, 37, 40. Spacing is the print's, as its text layer gives it; in a few places justification has left a space inside a word, and these are still to be closed when the verse is read. The speaker lines (श्रीशुक उवाच and the others) are printed in italic above the verse they introduce, and are given as its first line.
+Recension note: Meanings written 22 Oct 2026 (session S78). The differences between the witnesses listed below were read as the verses were glossed; except where this note says otherwise, each is a spelling, a sandhi or a word order of the two editions, none of them changes the sense, and the print's reading therefore stands unbracketed. The print is followed throughout. The print numbers 42 verses and GRETIL numbers 42. Of the 42 verses GRETIL has under the same number, 27 agree with the print letter for letter once spacing and the spelling of nasals are set aside; the rest differ: 1, 5, 8, 19, 21, 23, 24, 25, 27, 28, 32, 34, 35, 37, 40. Spacing is the print's, as its text layer gives it. The speaker lines (श्रीशुक उवाच and the others) are printed in italic above the verse they introduce, and are given as its first line. Six places were put right as the verses were read, and the mantra text is otherwise exactly as printed. At verse 12 justification had left a space inside अङ्घ्रि in न्यस्ताङ् घ्रिपद्मः, and it is closed. Five spaces the text layer had swallowed are restored, each after a vowel where the first word carries its own ending and the joined form cannot be read: ममाख्याहिवर्म at verse 2, बुद्धस्तुपाखण्डगणात् at verse 19, वातसखोहुताशः at verse 23, ऽहोभ्यएव at verse 27 and व्याघ्रादिभ्यश्चकर्हिचित् at verse 37. GRETIL reads the word whole at verse 12 and has two words at each of the other five. The anusvāra the print writes before the avagraha in भूतेभ्योंऽहोभ्य at verse 27 is this edition's own spelling and is left exactly as printed. The spaces the print keeps where GRETIL joins, and the compounds it joins where GRETIL spaces them loosely (हरेर्नामरूपयानायुधानि and बुद्धीन्द्रियमनः प्राणान् at verse 30, श्रेयःप्रतीपकाः at verse 28), are the print's own and are left as printed.
 
 Verse count: 42, plus the closing colophon printed unnumbered.
 
@@ -24,14 +24,20 @@ iast:
 rājovāca
 yayā guptaḥ sahasrākṣaḥ savāhān ripusainikān|
 krīḍanniva vinirjitya trilokyā bubhuje śriyam||
+en: The king said: The thousand-eyed one was guarded by that armour. He conquered the enemy soldiers with their mounts as though in play, and enjoyed the fortune of the three worlds.
+tel: రాజు పలికెను: ఆ కవచముచే సహస్రాక్షుడు రక్షింపబడెను. అతడు వాహనములతో కూడిన శత్రుసైనికులను ఆటవలె జయించి, ముల్లోకముల సంపదను అనుభవించెను.
+hi: राजा ने कहा: उस कवच से सहस्राक्ष की रक्षा हुई। उसने वाहनों सहित शत्रु सैनिकों को खेल के समान जीतकर तीनों लोकों की लक्ष्मी का भोग किया।
 
 --- verse 2 ---
 deva:
-भगवंस्तन्ममाख्याहिवर्म नारायणात्मकम्।
+भगवंस्तन्ममाख्याहि वर्म नारायणात्मकम्।
 यथाऽऽततायिनः शत्रून्येन गुप्तोऽजयन्मृधे॥
 iast:
-bhagavaṁstanmamākhyāhivarma nārāyaṇātmakam|
+bhagavaṁstanmamākhyāhi varma nārāyaṇātmakam|
 yathā''tatāyinaḥ śatrūnyena gupto'jayanmṛdhe||
+en: Blessed one, tell me that armour whose soul is Nārāyaṇa. Tell me also how, guarded by it, he conquered in battle the enemies who had come to attack.
+tel: భగవన్, నారాయణస్వరూపమైన ఆ కవచమును నాకు చెప్పుము. దానిచే రక్షింపబడి అతడు ఆతతాయినులైన శత్రువులను యుద్ధమున ఎట్లు జయించెనో అదియు చెప్పుము.
+hi: हे भगवन्, नारायणस्वरूप उस वर्म को मुझे बताइये। और उससे रक्षित होकर उसने आततायी शत्रुओं को युद्ध में कैसे जीता, यह भी बताइये।
 
 --- verse 3 ---
 deva:
@@ -42,6 +48,9 @@ iast:
 śrīśuka uvāca
 vṛtaḥ purohitastvāṣṭro mahendrāyānupṛcchate|
 nārāyaṇākhyaṁ varmāha tadihaikamanāḥ śṛṇu||
+en: Śrī Śuka said: The son of Tvaṣṭā, who had been chosen as priest, told the armour called Nārāyaṇa to great Indra, who asked him for it. Hear it here with a single mind.
+tel: శ్రీశుకుడు పలికెను: పురోహితునిగా వరింపబడిన త్వాష్ట్రుడు, అడిగిన మహేంద్రునికి నారాయణము అను పేరు కలిగిన కవచమును చెప్పెను. దానిని ఇచట ఏకమనస్సుతో వినుము.
+hi: श्रीशुकदेवजी ने कहा: पुरोहित रूप में वरण किये गये त्वाष्ट्र ने, पूछनेवाले महेन्द्र को नारायण नामक वर्म बताया। उसे यहाँ एकमन होकर सुनो।
 
 --- verse 4 ---
 deva:
@@ -52,6 +61,9 @@ iast:
 viśvarūpa uvāca
 dhautāṅghripāṇirācamya sapavitra udaṅmukhaḥ|
 kṛtasvāṅgakaranyāso mantrābhyāṁ vāgyataḥ śuciḥ||
+en: Viśvarūpa said: With his feet and hands washed, having sipped water, wearing the pavitra, facing the north, having made the placing of the two mantras upon his own limbs and upon his hands, with speech restrained and pure,
+tel: విశ్వరూపుడు పలికెను: పాదములను చేతులను కడిగుకొని, ఆచమనము చేసి, పవిత్రము ధరించి, ఉత్తరముఖుడై, రెండు మంత్రములచే తన అంగములందును చేతులందును న్యాసమును చేసి, వాక్కును నిలిపి, శుచియై,
+hi: विश्वरूप ने कहा: पैर और हाथ धोकर, आचमन करके, पवित्र धारण करके, उत्तर की ओर मुख करके, दोनों मन्त्रों से अपने अङ्गों और हाथों में न्यास करके, वाणी को रोककर और शुचि होकर,
 
 --- verse 5 ---
 deva:
@@ -60,6 +72,9 @@ deva:
 iast:
 nārāyaṇamayaṁ varma sannahyed bhaya āgate|
 pādayorjānunorūrvorudare hṛdyathorasi||
+en: when fear has come he should put on the armour made of Nārāyaṇa. Upon the two feet, the two knees, the thighs, the belly, the heart, then the chest,
+tel: భయము వచ్చినప్పుడు నారాయణమయమైన కవచమును ధరించవలెను. రెండు పాదములయందు, రెండు మోకాళ్లయందు, తొడలయందు, ఉదరమునందు, హృదయమునందు, పిమ్మట వక్షమునందు,
+hi: भय आने पर नारायणमय वर्म को धारण करना चाहिये। दोनों पैरों में, दोनों घुटनों में, जाँघों में, उदर में, हृदय में, फिर वक्ष में,
 
 --- verse 6 ---
 deva:
@@ -68,6 +83,9 @@ deva:
 iast:
 mukhe śirasyānupūrvyādoṅkārādīni vinyaset|
 oṁ namo nārāyaṇāyeti viparyayamathāpi vā||
+en: upon the mouth and upon the head, in that order, he should place the syllables beginning with oṅkāra, that is, oṁ namo nārāyaṇāya; or else he should place them in the reverse order.
+tel: ముఖమునందు, శిరమునందు, ఈ క్రమముగా ఓంకారము మొదలైన అక్షరములను, అనగా ఓం నమో నారాయణాయ అను వానిని ఉంచవలెను; లేదా విపరీత క్రమమున ఉంచవలెను.
+hi: मुख में और सिर में, इसी क्रम से ओङ्कार आदि अक्षरों को, अर्थात् ओं नमो नारायणाय को रखना चाहिये; अथवा विपरीत क्रम से रखना चाहिये।
 
 --- verse 7 ---
 deva:
@@ -76,6 +94,9 @@ deva:
 iast:
 karanyāsaṁ tataḥ kuryād dvādaśākṣaravidyayā|
 praṇavādiyakārāntamaṅgulyaṅguṣṭhaparvasu||
+en: Then he should make the placing upon the hands with the twelve-syllable vidyā. He should place its syllables, from the praṇava to the syllable ya, upon the joints of the fingers and of the thumbs.
+tel: పిమ్మట ద్వాదశాక్షర విద్యచే కరన్యాసమును చేయవలెను. ప్రణవము మొదలు యకారము వరకు గల అక్షరములను వేళ్ల పర్వములందును బొటనవేళ్ల పర్వములందును ఉంచవలెను.
+hi: फिर द्वादशाक्षर विद्या से करन्यास करना चाहिये। प्रणव से लेकर यकार तक के अक्षरों को अँगुलियों और अँगूठों के पर्वों में रखना चाहिये।
 
 --- verse 8 ---
 deva:
@@ -84,6 +105,9 @@ deva:
 iast:
 nyaseddhṛdaya oṅkāraṁ vikāramanu mūrdhani|
 ṣakāraṁ tu bhruvormadhye ṇakāraṁ śikhayā diśet||
+en: He should place oṅkāra upon the heart and the syllable vi upon the head. The syllable ṣa he should place between the eyebrows, and the syllable ṇa he should assign to the tuft of hair.
+tel: హృదయమునందు ఓంకారమును, మూర్ధమునందు వికారమును ఉంచవలెను. షకారమును కనుబొమలనడుమ ఉంచవలెను, ణకారమును శిఖయందు నియోగించవలెను.
+hi: हृदय में ओङ्कार और मूर्धा में विकार को रखना चाहिये। षकार को भौंहों के बीच रखना चाहिये और णकार को शिखा में नियुक्त करना चाहिये।
 
 --- verse 9 ---
 deva:
@@ -92,6 +116,9 @@ deva:
 iast:
 vekāraṁ netrayoryuñjyānnakāraṁ sarvasandhiṣu|
 makāramastramuddiśya mantramūrtirbhaved budhaḥ||
+en: He should join the syllable ve to the two eyes and the syllable na to all the joints. The syllable ma he should assign as the weapon. So the wise man becomes the very form of the mantra.
+tel: వేకారమును రెండు కన్నులయందు, నకారమును సమస్త సంధులయందు చేర్చవలెను. మకారమును అస్త్రముగా నియోగించవలెను. ఇట్లు బుధుడు మంత్రమూర్తి అగును.
+hi: वेकार को दोनों नेत्रों में और नकार को सब सन्धियों में जोड़ना चाहिये। मकार को अस्त्र के रूप में नियुक्त करना चाहिये। इस प्रकार बुध मन्त्रमूर्ति हो जाता है।
 
 --- verse 10 ---
 deva:
@@ -100,6 +127,9 @@ deva:
 iast:
 savisargaṁ phaḍantaṁ tat sarvadikṣu vinirdiśet|
 oṁ viṣṇave nama iti||
+en: That syllable, with the visarga and with phaṭ at its end, he should assign to all the quarters. The mantra is: oṁ viṣṇave namaḥ.
+tel: ఆ అక్షరమును విసర్గతో, చివర ఫట్ తో కూడి, సమస్త దిక్కులయందు నియోగించవలెను. మంత్రము ఇది: ఓం విష్ణవే నమః.
+hi: उस अक्षर को विसर्ग के साथ और अन्त में फट् के साथ सब दिशाओं में नियुक्त करना चाहिये। मन्त्र यह है: ओं विष्णवे नमः।
 
 --- verse 11 ---
 deva:
@@ -108,18 +138,24 @@ deva:
 iast:
 ātmānaṁ paramaṁ dhyāyed dhyeyaṁ ṣaṭśaktibhiryutam|
 vidyātejastapomūrtimimaṁ mantramudāharet||
+en: He should meditate upon the supreme Self, who is to be meditated upon and who is joined with the six powers. Then he should utter this mantra, which is the very form of knowledge, splendour and tapas.
+tel: ధ్యేయుడును, ఆరు శక్తులతో కూడినవాడును అయిన పరమాత్మను ధ్యానించవలెను. పిమ్మట విద్య, తేజస్సు, తపస్సుల మూర్తియైన ఈ మంత్రమును ఉచ్చరించవలెను.
+hi: ध्येय और षट् शक्तियों से युक्त परम आत्मा का ध्यान करना चाहिये। फिर विद्या, तेज और तप की मूर्ति इस मन्त्र का उच्चारण करना चाहिये।
 
 --- verse 12 ---
 deva:
 ॐ हरिर्विदध्यान्मम सर्वरक्षां
-न्यस्ताङ् घ्रिपद्मः पतगेन्द्रपृष्ठे।
+न्यस्ताङ्घ्रिपद्मः पतगेन्द्रपृष्ठे।
 दरारिचर्मासिगदेषुचाप-
 पाशान् दधानोऽष्टगुणोऽष्टबाहुः॥
 iast:
 oṁ harirvidadhyānmama sarvarakṣāṁ
-nyastāṅ ghripadmaḥ patagendrapṛṣṭhe|
+nyastāṅghripadmaḥ patagendrapṛṣṭhe|
 darāricarmāsigadeṣucāpa-
 pāśān dadhāno'ṣṭaguṇo'ṣṭabāhuḥ||
+en: Oṁ. May Hari make every protection for me. His lotus feet are placed upon the back of the king of birds. He bears the conch, the discus, the shield, the sword, the mace, the arrow, the bow and the noose. He has eight qualities and eight arms.
+tel: ఓం. హరి నాకు సర్వరక్షణను చేయునుగాక. ఆయన చరణకమలములు పక్షిరాజు వెన్నుపై ఉంచబడినవి. ఆయన శంఖమును, చక్రమును, ఢాలును, ఖడ్గమును, గదను, బాణమును, ధనువును, పాశమును ధరించినవాడు. ఆయన ఎనిమిది గుణములు కలవాడు, ఎనిమిది బాహువులు కలవాడు.
+hi: ओं। हरि मेरी सब प्रकार रक्षा करें। उनके चरणकमल पक्षिराज की पीठ पर रखे हुए हैं। वे शङ्ख, चक्र, ढाल, खड्ग, गदा, बाण, धनुष और पाश धारण करते हैं। वे आठ गुणों और आठ बाहुओं से युक्त हैं।
 
 --- verse 13 ---
 deva:
@@ -132,6 +168,9 @@ jaleṣu māṁ rakṣatu matsyamūrti-
 ryādogaṇebhyo varuṇasya pāśāt|
 sthaleṣu māyāvaṭuvāmano'vyāt
 trivikramaḥ khe'vatu viśvarūpaḥ||
+en: In the waters may the Lord in the form of a fish protect me from the hosts of water creatures and from the noose of Varuṇa. On the land may Vāmana, the boy of māyā, protect me. In the sky may Trivikrama, whose form is the universe, protect me.
+tel: జలములయందు మత్స్యమూర్తి జలజంతువుల గుంపులనుండియు, వరుణుని పాశమునుండియు నన్ను రక్షించునుగాక. స్థలములయందు మాయావటువైన వామనుడు నన్ను రక్షించునుగాక. ఆకాశమునందు విశ్వరూపుడైన త్రివిక్రముడు నన్ను రక్షించునుగాక.
+hi: जलों में मत्स्यमूर्ति मुझे जलजन्तुओं के समूहों से और वरुण के पाश से बचायें। स्थलों में मायावटु वामन मेरी रक्षा करें। आकाश में विश्वरूप त्रिविक्रम मेरी रक्षा करें।
 
 --- verse 14 ---
 deva:
@@ -144,6 +183,9 @@ durgeṣvaṭavyājimukhādiṣu prabhuḥ
 pāyānnṛsiṁho'surayūthapāriḥ|
 vimuñcato yasya mahāṭṭahāsaṁ
 diśo vinedurnyapataṁśca garbhāḥ||
+en: In hard places, in the forest, at the front of battle and the like, may the mighty Nṛsiṁha, the enemy of the leaders of the asura hosts, protect me. When he let out his great laughter the quarters resounded and the unborn young fell from the wombs.
+tel: దుర్గములయందు, అడవియందు, యుద్ధముఖము మొదలైన చోట్లయందు, అసుర యూథపతుల శత్రువైన ప్రభువు నృసింహుడు నన్ను కాపాడునుగాక. ఆయన మహాట్టహాసమును విడిచినప్పుడు దిక్కులు మారుమోగెను, గర్భములు జారిపడెను.
+hi: दुर्गों में, अटवी में, युद्ध के मुख आदि स्थानों में असुर यूथपतियों के शत्रु प्रभु नृसिंह मेरी रक्षा करें। उन्होंने जब महा अट्टहास किया, तब दिशाएँ गूँज उठीं और गर्भ गिर पड़े।
 
 --- verse 15 ---
 deva:
@@ -156,6 +198,9 @@ rakṣatvasau mādhvani yajñakalpaḥ
 svadaṁṣṭrayonnītadharo varāhaḥ|
 rāmo'drikūṭeṣvatha vipravāse
 salakṣmaṇo'vyād bharatāgrajo'smān||
+en: On the road may that boar, who is the very form of sacrifice and who lifted up the earth upon his tusk, protect me. On the peaks of the mountains may Rāma protect me, and in a dwelling away from home may the elder brother of Bharata, with Lakṣmaṇa, protect us.
+tel: మార్గమునందు యజ్ఞస్వరూపుడును, తన దంతముతో భూమిని ఎత్తినవాడును అయిన ఆ వరాహము నన్ను రక్షించునుగాక. కొండ శిఖరములయందు రాముడు రక్షించునుగాక; పరదేశవాసమునందు లక్ష్మణునితో కూడిన భరతాగ్రజుడు మమ్ము రక్షించునుగాక.
+hi: मार्ग में यज्ञस्वरूप और अपनी दाढ़ से पृथ्वी को उठानेवाले वे वराह मेरी रक्षा करें। पर्वत के शिखरों पर राम रक्षा करें, और परदेश में निवास के समय लक्ष्मण सहित भरत के अग्रज हमारी रक्षा करें।
 
 --- verse 16 ---
 deva:
@@ -168,6 +213,9 @@ māmugradharmādakhilāt pramādā-
 nnārāyaṇaḥ pātu naraśca hāsāt|
 dattastvayogādatha yoganāthaḥ
 pāyād guṇeśaḥ kapilaḥ karmabandhāt||
+en: May Nārāyaṇa protect me from cruel observances and from every heedlessness, and may Nara protect me from mockery. May Datta, the lord of yoga, protect me from the want of yoga, and may Kapila, the lord of the guṇas, protect me from the bondage of action.
+tel: ఉగ్రమైన ధర్మమునుండియు, సమస్త ప్రమాదమునుండియు నారాయణుడు నన్ను కాపాడునుగాక; పరిహాసమునుండి నరుడు కాపాడునుగాక. అయోగమునుండి యోగనాథుడైన దత్తుడు, కర్మబంధమునుండి గుణేశుడైన కపిలుడు నన్ను కాపాడునుగాక.
+hi: उग्र धर्म से और सब प्रमाद से नारायण मेरी रक्षा करें, और हास से नर रक्षा करें। अयोग से योगनाथ दत्त, तथा कर्मबन्ध से गुणेश कपिल मेरी रक्षा करें।
 
 --- verse 17 ---
 deva:
@@ -180,6 +228,9 @@ sanatkumāro'vatu kāmadevā-
 ddhayaśīrṣā māṁ pathi devahelanāt|
 devarṣivaryaḥ puruṣārcanāntarāt
 kūrmo harirmāṁ nirayādaśeṣāt||
+en: May Sanatkumāra protect me from Kāmadeva. May Hayaśīrṣa protect me on the road from the neglect of the gods. May the best of the divine sages protect me from the lapses within the worship of the Lord. May Hari as the tortoise protect me from every hell.
+tel: కామదేవునినుండి సనత్కుమారుడు నన్ను కాపాడునుగాక. మార్గమునందు దేవహేలనమునుండి హయశీర్షుడు నన్ను కాపాడునుగాక. పురుషార్చనలోని లోపములనుండి దేవర్షివర్యుడు కాపాడునుగాక. సమస్త నరకమునుండి కూర్మరూపుడైన హరి నన్ను కాపాడునుగాక.
+hi: कामदेव से सनत्कुमार मेरी रक्षा करें। मार्ग में देवहेलन से हयशीर्ष मेरी रक्षा करें। पुरुष की अर्चना में हुए दोषों से देवर्षिवर्य रक्षा करें। सब निरय से कूर्मरूप हरि मेरी रक्षा करें।
 
 --- verse 18 ---
 deva:
@@ -192,18 +243,24 @@ dhanvantarirbhagavān pātvapathyād
 dvandvād bhayādṛṣabho nirjitātmā|
 yajñaśca lokādavatājjanāntād
 balo gaṇāt krodhavaśādahīndraḥ||
+en: May the blessed Dhanvantari protect me from what is unwholesome. May Ṛṣabha, who has conquered himself, protect me from the fear of the pairs of opposites. May Yajña protect me from the blame of people, may Bala protect me from the violence of men, and may the king of serpents protect me from the host of the Krodhavaśas.
+tel: అపథ్యమునుండి భగవంతుడైన ధన్వంతరి నన్ను కాపాడునుగాక. ద్వంద్వముల భయమునుండి నిర్జితాత్ముడైన ఋషభుడు కాపాడునుగాక. లోకాపవాదమునుండి యజ్ఞుడు, జనుల ఉపద్రవమునుండి బలుడు, క్రోధవశులను సర్పగణమునుండి అహీంద్రుడు నన్ను కాపాడునుగాక.
+hi: अपथ्य से भगवान् धन्वन्तरि मेरी रक्षा करें। द्वन्द्व के भय से निर्जितात्मा ऋषभ रक्षा करें। लोक के अपवाद से यज्ञ, मनुष्यों के उपद्रव से बल, और क्रोधवश नामक सर्पगण से अहीन्द्र मेरी रक्षा करें।
 
 --- verse 19 ---
 deva:
 द्वैपायनो भगवानप्रबोधाद्
-बुद्धस्तुपाखण्डगणात् प्रमादात्।
+बुद्धस्तु पाखण्डगणात् प्रमादात्।
 कल्किः कलेः कालमलात् प्रपातु
 धर्मावनायोरुकृतावतारः॥
 iast:
 dvaipāyano bhagavānaprabodhād
-buddhastupākhaṇḍagaṇāt pramādāt|
+buddhastu pākhaṇḍagaṇāt pramādāt|
 kalkiḥ kaleḥ kālamalāt prapātu
 dharmāvanāyorukṛtāvatāraḥ||
+en: May the blessed Dvaipāyana protect me from want of understanding, and Buddha from the heedlessness that comes of the hosts of heretics. May Kalki, who took a mighty avatāra for the guarding of dharma, protect me from the stain of the time of Kali.
+tel: అప్రబోధమునుండి భగవంతుడైన ద్వైపాయనుడు నన్ను కాపాడునుగాక; పాఖండగణమువలని ప్రమాదమునుండి బుద్ధుడు కాపాడునుగాక. ధర్మరక్షణకై గొప్ప అవతారమును తాల్చిన కల్కి కలికాలపు మలమునుండి నన్ను కాపాడునుగాక.
+hi: अप्रबोध से भगवान् द्वैपायन मेरी रक्षा करें, और पाखण्डगण के कारण होनेवाले प्रमाद से बुद्ध रक्षा करें। धर्म की रक्षा के लिये बड़ा अवतार लेनेवाले कल्कि कलि के कालमल से मेरी रक्षा करें।
 
 --- verse 20 ---
 deva:
@@ -216,6 +273,9 @@ māṁ keśavo gadayā prātaravyād
 govinda āsaṅgavamāttaveṇuḥ|
 nārāyaṇaḥ prāhṇa udāttaśakti-
 rmadhyandine viṣṇurarīndrapāṇiḥ||
+en: May Keśava with his mace protect me in the early morning, and Govinda, who holds the flute, in the forenoon. May Nārāyaṇa, whose power is lofty, protect me in the later forenoon, and Viṣṇu, with the chief of discs in his hand, at midday.
+tel: ప్రాతఃకాలమున గదను ధరించిన కేశవుడు నన్ను కాపాడునుగాక; సంగవకాలమున వేణువును ధరించిన గోవిందుడు కాపాడునుగాక. ప్రాహ్ణమున ఉదాత్తశక్తి కలిగిన నారాయణుడు, మధ్యాహ్నమున చక్రరాజమును చేత ధరించిన విష్ణువు నన్ను కాపాడునుగాక.
+hi: प्रातःकाल में गदा धारण किये केशव मेरी रक्षा करें, और सङ्गव के समय वेणु धारण किये गोविन्द रक्षा करें। प्राह्ण में उदात्त शक्तिवाले नारायण, और मध्यन्दिन में चक्रराज को हाथ में लिये विष्णु मेरी रक्षा करें।
 
 --- verse 21 ---
 deva:
@@ -228,6 +288,9 @@ devo'parāhṇe madhuhogradhanvā
 sāyaṁ tridhāmāvatu mādhavo mām|
 doṣe hṛṣīkeśa utārdharātre
 niśītha eko'vatu padmanābhaḥ||
+en: In the afternoon may the god who slew Madhu, with his fierce bow, protect me, and in the evening may Mādhava, who has three abodes, protect me. At nightfall may Hṛṣīkeśa protect me, and at midnight and in the depth of the night may Padmanābha alone protect me.
+tel: అపరాహ్ణమున ఉగ్రమైన ధనువు కలిగిన మధుహుడైన దేవుడు నన్ను కాపాడునుగాక; సాయంకాలమున త్రిధాముడైన మాధవుడు కాపాడునుగాక. ప్రదోషమున హృషీకేశుడు, అర్ధరాత్రియందును నిశీథమునందును ఒక్కడే పద్మనాభుడు నన్ను కాపాడునుగాక.
+hi: अपराह्ण में उग्र धनुषवाले मधुहा देव मेरी रक्षा करें, और सायंकाल में त्रिधामा माधव रक्षा करें। प्रदोष में हृषीकेश, तथा अर्धरात्रि और निशीथ में अकेले पद्मनाभ मेरी रक्षा करें।
 
 --- verse 22 ---
 deva:
@@ -240,18 +303,24 @@ iast:
 pratyūṣa īśo'sidharo janārdanaḥ|
 dāmodaro'vyādanusandhyaṁ prabhāte
 viśveśvaro bhagavān kālamūrtiḥ||
+en: In the last part of the night may the lord who bears the Śrīvatsa protect me, and before dawn may the lord Janārdana, who holds the sword, protect me. At daybreak may Dāmodara protect me, and at every juncture of the day may the blessed Viśveśvara, whose form is time.
+tel: అపరరాత్రమున శ్రీవత్సధాముడైన ఈశుడు నన్ను కాపాడునుగాక; ప్రత్యూషమున ఖడ్గధారియైన ఈశుడు జనార్దనుడు కాపాడునుగాక. ప్రభాతమున దామోదరుడు, ప్రతి సంధ్యయందును కాలమూర్తియైన భగవంతుడు విశ్వేశ్వరుడు నన్ను కాపాడునుగాక.
+hi: अपररात्र में श्रीवत्सधाम ईश मेरी रक्षा करें, और प्रत्यूष में खड्गधारी ईश जनार्दन रक्षा करें। प्रभात में दामोदर, और प्रत्येक सन्ध्या में कालमूर्ति भगवान् विश्वेश्वर मेरी रक्षा करें।
 
 --- verse 23 ---
 deva:
 चक्रं युगान्तानलतिग्मनेमि
 भ्रमत् समन्ताद् भगवत्प्रयुक्तम्।
 दन्दग्धि दन्दग्ध्यरिसैन्यमाशु
-कक्षं यथा वातसखोहुताशः॥
+कक्षं यथा वातसखो हुताशः॥
 iast:
 cakraṁ yugāntānalatigmanemi
 bhramat samantād bhagavatprayuktam|
 dandagdhi dandagdhyarisainyamāśu
-kakṣaṁ yathā vātasakhohutāśaḥ||
+kakṣaṁ yathā vātasakho hutāśaḥ||
+en: The discus, whose rim is sharp as the fire at the end of an age, turns on every side, sent forth by the Lord. Burn, burn up the army of the enemy at once, as the fire whose friend is the wind burns dry grass.
+tel: యుగాంత అగ్నివలె వాడియైన అంచు కలిగిన చక్రము, భగవంతునిచే ప్రయోగింపబడి అన్ని వైపుల తిరుగుచున్నది. వాయువు మిత్రుడైన అగ్ని ఎండుగడ్డిని కాల్చునట్లు, శత్రుసేనను వేగముగా కాల్చుము, కాల్చుము.
+hi: युगान्त की अग्नि के समान तीक्ष्ण नेमिवाला चक्र भगवान् के द्वारा प्रयुक्त होकर चारों ओर घूम रहा है। जैसे वायु का सखा अग्नि सूखी घास को जलाता है, वैसे ही शत्रु सेना को शीघ्र जला दे, जला दे।
 
 --- verse 24 ---
 deva:
@@ -264,6 +333,9 @@ gade'śanisparśanavisphuliṅge
 niṣpiṇḍhi niṣpiṇḍhyajitapriyāsi|
 kūṣmāṇḍavaināyakayakṣarakṣo-
 bhūtagrahāṁścūrṇaya cūrṇayārīn||
+en: O mace, whose sparks are like the touch of the thunderbolt, you are dear to Ajita. Crush, crush. Grind to powder, grind to powder the Kūṣmāṇḍas, the Vaināyakas, the Yakṣas, the Rākṣasas, the Bhūtas, the Grahas and my enemies.
+tel: ఓ గదా, పిడుగు తాకుడువలె స్ఫులింగములు కలిగిన నీవు అజితునికి ప్రియమైనదానవు. నలుగగొట్టుము, నలుగగొట్టుము. కూష్మాండులను, వైనాయకులను, యక్షులను, రాక్షసులను, భూతములను, గ్రహములను, శత్రువులను చూర్ణము చేయుము, చూర్ణము చేయుము.
+hi: हे गदा, अशनि के स्पर्श के समान स्फुलिङ्गोंवाली तू अजित की प्रिया है। कुचल दे, कुचल दे। कूष्माण्डों, वैनायकों, यक्षों, राक्षसों, भूतों, ग्रहों और शत्रुओं को चूर्ण कर दे, चूर्ण कर दे।
 
 --- verse 25 ---
 deva:
@@ -276,6 +348,9 @@ tvaṁ yātudhānapramathapretamātṛ-
 piśācavipragrahaghoradṛṣṭīn|
 darendra vidrāvaya kṛṣṇapūrito
 bhīmasvano'rerhṛdayāni kampayan||
+en: O best of conches, filled with the breath of Kṛṣṇa, with your terrible sound making the hearts of the enemy tremble, drive away the Yātudhānas, the Pramathas, the Pretas, the Mātṛs, the Piśācas, the Vipragrahas and those of dreadful sight.
+tel: ఓ శంఖరాజమా, కృష్ణుని ఊపిరిచే నిండినదానవై, భీకరమైన నాదముచే శత్రువుల హృదయములను కంపింపజేయుచు, యాతుధానులను, ప్రమథులను, ప్రేతములను, మాతృకలను, పిశాచములను, విప్రగ్రహములను, ఘోరదృష్టి కలవారిని పరిమార్చి తరిమివేయుము.
+hi: हे शङ्खराज, कृष्ण की फूँक से भरे हुए, भयङ्कर स्वन से शत्रु के हृदयों को कँपाते हुए, यातुधानों, प्रमथों, प्रेतों, मातृकाओं, पिशाचों, विप्रग्रहों और घोर दृष्टिवालों को भगा दे।
 
 --- verse 26 ---
 deva:
@@ -288,14 +363,20 @@ tvaṁ tigmadhārāsivarārisainya-
 mīśaprayukto mama chindhi chindhi|
 cakṣūṁṣi carmañchatacandra chādaya
 dviṣāmaghonāṁ hara pāpacakṣuṣām||
+en: O best of swords, of sharp edge, employed by the Lord, cut down, cut down the army of my enemy. O shield of a hundred moons, cover the eyes of my sinful foes; take away the sight of those whose eyes are evil.
+tel: ఓ వాడియైన అంచు కలిగిన ఖడ్గరాజమా, ఈశునిచే ప్రయోగింపబడి నా శత్రుసేనను ఛేదింపుము, ఛేదింపుము. ఓ శతచంద్రములు కలిగిన చర్మమా, పాపులైన శత్రువుల కన్నులను కప్పుము; పాపదృష్టి కలవారి చూపును హరింపుము.
+hi: हे तीक्ष्ण धारवाले असिवर, ईश के द्वारा प्रयुक्त होकर मेरे शत्रु की सेना को काट दे, काट दे। हे शतचन्द्र चर्म, अघी शत्रुओं के नेत्रों को ढक दे; पापदृष्टिवालों की दृष्टि को हर ले।
 
 --- verse 27 ---
 deva:
 यन्नो भयं ग्रहेभ्योऽभूत् केतुभ्यो नृभ्य एव च।
-सरीसृपेभ्यो दंष्ट्रिभ्यो भूतेभ्योंऽहोभ्यएव वा॥
+सरीसृपेभ्यो दंष्ट्रिभ्यो भूतेभ्योंऽहोभ्य एव वा॥
 iast:
 yanno bhayaṁ grahebhyo'bhūt ketubhyo nṛbhya eva ca|
-sarīsṛpebhyo daṁṣṭribhyo bhūtebhyoṁ'hobhyaeva vā||
+sarīsṛpebhyo daṁṣṭribhyo bhūtebhyoṁ'hobhya eva vā||
+en: The fear that has come to us from the Grahas, from the Ketus, from men, from creeping things, from the fanged beasts, from the Bhūtas and from sins,
+tel: గ్రహములవలన, కేతువులవలన, మనుష్యులవలన, పాములవలన, కోరలు కలిగిన జంతువులవలన, భూతములవలన, పాపములవలన మాకు కలిగిన భయము,
+hi: ग्रहों से, केतुओं से, मनुष्यों से, सरीसृपों से, दाँतवाले जन्तुओं से, भूतों से और पापों से हमें जो भय हुआ है,
 
 --- verse 28 ---
 deva:
@@ -304,6 +385,9 @@ deva:
 iast:
 sarvāṇyetāni bhagavannāmarūpāstrakīrtanāt|
 prayāntu saṁkṣayaṁ sadyo ye naḥ śreyaḥpratīpakāḥ||
+en: all of these, which stand against our good, may go at once to destruction by the proclaiming of the names, the forms and the weapons of the Lord.
+tel: మా శ్రేయమునకు ప్రతికూలమైన ఇవి అన్నియు, భగవంతుని నామములను, రూపములను, అస్త్రములను కీర్తించుటచే వెంటనే నాశమును పొందునుగాక.
+hi: हमारे श्रेय के प्रतीप ये सब, भगवान् के नाम, रूप और अस्त्र के कीर्तन से तुरन्त संक्षय को प्राप्त हों।
 
 --- verse 29 ---
 deva:
@@ -312,6 +396,9 @@ deva:
 iast:
 garuḍo bhagavān stotrastobhaśchandomayaḥ prabhuḥ|
 rakṣatvaśeṣakṛcchrebhyo viṣvaksenaḥ svanāmabhiḥ||
+en: May the blessed lord Garuḍa, who is praised in hymns and is made of the metres, and may Viṣvaksena, protect us from every hardship by their own names.
+tel: స్తోత్రములచే స్తుతింపబడువాడును, ఛందోమయుడును అయిన ప్రభువు భగవంతుడు గరుడుడు, విష్వక్సేనుడు, తమ నామములచే సమస్త కష్టములనుండి మమ్ము రక్షించునుగాక.
+hi: स्तोत्रों से स्तुत और छन्दोमय प्रभु भगवान् गरुड तथा विष्वक्सेन अपने नामों से हमें सब कृच्छ्रों से बचायें।
 
 --- verse 30 ---
 deva:
@@ -320,6 +407,9 @@ deva:
 iast:
 sarvāpadbhyo harernāmarūpayānāyudhāni naḥ|
 buddhīndriyamanaḥ prāṇān pāntu pārṣadabhūṣaṇāḥ||
+en: May the names, the forms, the vehicle, the weapons, the attendants and the ornaments of Hari protect our intellect, our senses, our mind and our life-breaths from all calamities.
+tel: హరి నామములు, రూపములు, వాహనము, ఆయుధములు, పార్షదులు, భూషణములు మా బుద్ధిని, ఇంద్రియములను, మనస్సును, ప్రాణములను సమస్త ఆపదలనుండి కాపాడునుగాక.
+hi: श्रीहरि के नाम, रूप, वाहन, आयुध, पार्षद और भूषण हमारी बुद्धि, इन्द्रियों, मन और प्राणों की सब आपदों से रक्षा करें।
 
 --- verse 31 ---
 deva:
@@ -328,6 +418,9 @@ deva:
 iast:
 yathā hi bhagavāneva vastutaḥ sadasacca yat|
 satyenānena naḥ sarve yāntu nāśamupadravāḥ||
+en: In truth the Lord alone is whatever is being and whatever is not being. By this truth may all our troubles come to destruction.
+tel: వాస్తవముగా సత్తును అసత్తును ఏది ఉన్నదో అది భగవంతుడే. ఈ సత్యముచే మా ఉపద్రవములన్నియు నాశమును పొందునుగాక.
+hi: वस्तुतः जो सत् और असत् है, वह भगवान् ही है। इस सत्य से हमारे सब उपद्रव नाश को प्राप्त हों।
 
 --- verse 32 ---
 deva:
@@ -336,6 +429,9 @@ deva:
 iast:
 yathaikātmyānubhāvānāṁ vikalparahitaḥ svayam|
 bhūṣaṇāyudhaliṅgākhyā dhatte śaktīḥ svamāyayā||
+en: For those who have known the oneness of the self he is himself free from all distinction, and yet by his own māyā he bears the powers that are called his ornaments, his weapons and his marks.
+tel: ఏకాత్మ్యమును ఎరిగినవారికి ఆయన తానే వికల్పరహితుడు; అయినను తన మాయచే భూషణములు, ఆయుధములు, లింగములు అను పేరు కలిగిన శక్తులను ధరించును.
+hi: ऐकात्म्य का अनुभव करनेवालों के लिये वे स्वयं विकल्परहित हैं; तथापि अपनी माया से भूषण, आयुध और लिङ्ग नामक शक्तियों को धारण करते हैं।
 
 --- verse 33 ---
 deva:
@@ -344,6 +440,9 @@ deva:
 iast:
 tenaiva satyamānena sarvajño bhagavān hariḥ|
 pātu sarvaiḥ svarūpairnaḥ sadā sarvatra sarvagaḥ||
+en: By that same truth may the all-knowing blessed Hari, who goes everywhere, always protect us on every side with all his forms.
+tel: ఆ సత్యప్రమాణముచేతనే సర్వజ్ఞుడు, సర్వగతుడు అయిన భగవంతుడు హరి తన సమస్త స్వరూపములచే మమ్ము ఎల్లప్పుడు అంతటను కాపాడునుగాక.
+hi: उसी सत्य के प्रमाण से सर्वज्ञ और सर्वग भगवान् हरि अपने सब स्वरूपों से हमारी सदा सब जगह रक्षा करें।
 
 --- verse 34 ---
 deva:
@@ -356,6 +455,9 @@ vidikṣu dikṣūrdhvamadhaḥ samantā-
 dantarbahirbhagavān nārasiṁhaḥ|
 prahāpayam̐llokabhayaṁ svanena
 svatejasā grastasamastatejāḥ||
+en: In the intermediate quarters, in the quarters, above, below, on every side, within and without, may the blessed Nārasiṁha protect us. By his roar he takes away the fear of the worlds, and by his own splendour he has swallowed up all other splendour.
+tel: విదిక్కులయందు, దిక్కులయందు, పైన, క్రింద, అన్ని వైపుల, లోపల, వెలుపల భగవంతుడు నారసింహుడు మమ్ము రక్షించునుగాక. ఆయన తన నాదముచే లోకముల భయమును పోగొట్టును, తన తేజముచే సమస్త తేజములను మింగినవాడు.
+hi: विदिशाओं में, दिशाओं में, ऊपर, नीचे, चारों ओर, भीतर और बाहर भगवान् नारसिंह हमारी रक्षा करें। वे अपने स्वन से लोकों के भय को दूर करते हैं, और अपने तेज से सब तेजों को ग्रस लिया है।
 
 --- verse 35 ---
 deva:
@@ -364,6 +466,9 @@ deva:
 iast:
 maghavannidamākhyātaṁ varma nārāyaṇātmakam|
 vijeṣyasyañjasā yena daṁśito'surayūthapān||
+en: Maghavān, this armour made of Nārāyaṇa has been told to you. Clad in it you will easily conquer the leaders of the asura hosts.
+tel: మఘవంతుడా, నారాయణస్వరూపమైన ఈ కవచము నీకు చెప్పబడినది. దీనిని ధరించి నీవు అసుర యూథపతులను సులభముగా జయింతువు.
+hi: हे मघवन्, नारायणस्वरूप यह वर्म तुम्हें बता दिया गया। इससे दंशित होकर तुम असुर यूथपतियों को सहज ही जीत लोगे।
 
 --- verse 36 ---
 deva:
@@ -372,14 +477,20 @@ deva:
 iast:
 etad dhārayamāṇastu yaṁ yaṁ paśyati cakṣuṣā|
 padā vā saṁspṛśet sadyaḥ sādhvasāt sa vimucyate||
+en: One who wears this looks upon another with his eye or touches him with his foot, and that one is at once freed from fear.
+tel: దీనిని ధరించినవాడు ఎవరిని కన్నులతో చూచునో, లేక పాదముతో తాకునో, వాడు వెంటనే భయమునుండి విడువబడును.
+hi: जो इसे धारण करता है, वह जिस किसी को नेत्र से देखता है या पैर से स्पर्श करता है, वह तुरन्त साध्वस से मुक्त हो जाता है।
 
 --- verse 37 ---
 deva:
 न कुतश्चिद् भयं तस्य विद्यां धारयतो भवेत्।
-राजदस्युग्रहादिभ्यो व्याघ्रादिभ्यश्चकर्हिचित्॥
+राजदस्युग्रहादिभ्यो व्याघ्रादिभ्यश्च कर्हिचित्॥
 iast:
 na kutaścid bhayaṁ tasya vidyāṁ dhārayato bhavet|
-rājadasyugrahādibhyo vyāghrādibhyaścakarhicit||
+rājadasyugrahādibhyo vyāghrādibhyaśca karhicit||
+en: For one who wears this vidyā there is no fear from anything at any time, neither from kings, from thieves, from the Grahas and the like, nor from tigers and other beasts.
+tel: ఈ విద్యను ధరించినవానికి ఎప్పుడును ఏదియు భయము కలుగదు; రాజులవలన, దొంగలవలన, గ్రహములు మొదలైన వానివలన, పులులు మొదలైన వానివలన ఎన్నడును భయము లేదు.
+hi: इस विद्या को धारण करनेवाले को कहीं से कभी भय नहीं होता; राजा, चोर, ग्रह आदि से और व्याघ्र आदि से भी कभी भय नहीं होता।
 
 --- verse 38 ---
 deva:
@@ -388,6 +499,9 @@ deva:
 iast:
 imāṁ vidyāṁ purā kaścit kauśiko dhārayan dvijaḥ|
 yogadhāraṇayā svāṅgaṁ jahau sa marudhanvani||
+en: In an earlier time a certain twice-born of the Kauśika line wore this vidyā. By the holding of yoga he gave up his body in a desert land.
+tel: పూర్వము కౌశిక వంశమువాడైన ఒక ద్విజుడు ఈ విద్యను ధరించెను. అతడు యోగధారణచే మరుభూమియందు తన శరీరమును విడిచెను.
+hi: पहले कौशिक वंश के किसी द्विज ने इस विद्या को धारण किया। उसने योगधारणा से मरुभूमि में अपना शरीर छोड़ दिया।
 
 --- verse 39 ---
 deva:
@@ -396,6 +510,9 @@ deva:
 iast:
 tasyopari vimānena gandharvapatirekadā|
 yayau citrarathaḥ strībhirvṛto yatra dvijakṣayaḥ||
+en: One day Citraratha, the lord of the Gandharvas, surrounded by women, went in his vimāna above that place, where the body of the twice-born had fallen away.
+tel: ఒకనాడు గంధర్వపతి చిత్రరథుడు స్త్రీలతో చుట్టుకొనబడి, ఆ ద్విజుని దేహము నశించిన ఆ చోటి మీదుగా విమానముతో వెళ్లెను.
+hi: एक दिन गन्धर्वपति चित्ररथ स्त्रियों से घिरा हुआ, जहाँ उस द्विज का देह नष्ट हुआ था, उस स्थान के ऊपर से विमान से गया।
 
 --- verse 40 ---
 deva:
@@ -406,6 +523,9 @@ iast:
 gaganānnyapatat sadyaḥ savimāno hyavākśirāḥ|
 sa vālakhilyavacanādasthīnyādāya vismitaḥ|
 prāsya prācīsarasvatyāṁ snātvā dhāma svamanvagāt||
+en: He fell at once from the sky with his vimāna, his head downward. Astonished, at the word of the Vālakhilyas he took up the bones, threw them into the eastward-flowing Sarasvatī, bathed, and went to his own abode.
+tel: అతడు విమానముతో కూడ తలక్రిందులై వెంటనే ఆకాశమునుండి పడెను. విస్మయము పొంది, వాలఖిల్యుల మాటచే ఎముకలను తీసికొని, తూర్పునకు పారు సరస్వతియందు వేసి, స్నానము చేసి, తన ధామమునకు వెళ్లెను.
+hi: वह विमान सहित तुरन्त आकाश से नीचे सिर होकर गिर पड़ा। विस्मित होकर वालखिल्यों के वचन से उसने हड्डियाँ लीं, उन्हें पूर्व की ओर बहनेवाली सरस्वती में डाला, स्नान किया और अपने धाम को चला गया।
 
 --- verse 41 ---
 deva:
@@ -416,6 +536,9 @@ iast:
 śrīśuka uvāca
 ya idaṁ śṛṇuyāt kāle yo dhārayati cādṛtaḥ|
 taṁ namasyanti bhūtāni mucyate sarvato bhayāt||
+en: Śrī Śuka said: Whoever hears this at the proper time, and whoever wears it with reverence, to him all beings bow, and he is freed from fear on every side.
+tel: శ్రీశుకుడు పలికెను: ఎవడు ఇది సమయమునందు వినునో, ఎవడు ఆదరముతో ధరించునో, వానికి సమస్త భూతములు నమస్కరించును, వాడు అంతటి భయమునుండి విడువబడును.
+hi: श्रीशुकदेवजी ने कहा: जो इसे समय पर सुनता है और जो आदर के साथ धारण करता है, उसे सब भूत नमस्कार करते हैं और वह सब ओर के भय से मुक्त हो जाता है।
 
 --- verse 42 ---
 deva:
@@ -424,9 +547,15 @@ deva:
 iast:
 etāṁ vidyāmadhigato viśvarūpācchatakratuḥ|
 trailokyalakṣmīṁ bubhuje vinirjitya mṛdhe'surān||
+en: Śatakratu obtained this vidyā from Viśvarūpa. He conquered the asuras in battle and enjoyed the fortune of the three worlds.
+tel: శతక్రతువు ఈ విద్యను విశ్వరూపునినుండి పొందెను. అతడు యుద్ధమున అసురులను జయించి ముల్లోకముల సంపదను అనుభవించెను.
+hi: शतक्रतु ने यह विद्या विश्वरूप से प्राप्त की। उसने युद्ध में असुरों को जीतकर त्रैलोक्य की लक्ष्मी का भोग किया।
 
 --- verse none ---
 deva:
 इति श्रीमद्भागवते महापुराणे पारमहंस्यां संहितायां षष्ठस्कन्धे नारायणवर्मकथनं नामाष्टमोऽध्यायः॥ ८॥
 iast:
 iti śrīmadbhāgavate mahāpurāṇe pāramahaṁsyāṁ saṁhitāyāṁ ṣaṣṭhaskandhe nārāyaṇavarmakathanaṁ nāmāṣṭamo'dhyāyaḥ|| 8||
+en: Thus ends the eighth adhyāya, named the telling of the Nārāyaṇa armour, in the sixth skandha of the Śrīmad Bhāgavata Mahāpurāṇa, the saṁhitā of the paramahaṁsas.
+tel: ఇది శ్రీమద్భాగవత మహాపురాణమునందు, పరమహంసల సంహితయందు, షష్ఠస్కంధమునందు, నారాయణవర్మకథనము అను అష్టమాధ్యాయము.
+hi: इस प्रकार श्रीमद्भागवत महापुराण की परमहंसों की संहिता के षष्ठ स्कन्ध में नारायणवर्म-कथन नामक आठवाँ अध्याय समाप्त हुआ।

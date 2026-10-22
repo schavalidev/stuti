@@ -9,7 +9,7 @@ Type: Purāṇa (an adhyāya of the Śrīmad Bhāgavata, Skandha 6)
 
 Source / recension: Base text and authority: the Gītā Press, Gorakhpur Śrīmadbhāgavata Mahāpurāṇa with Hindi translation, Part 1 (Gītā Press code 26), archive.org item `shrimadbhagwat-mahapuran-bhag-1`, printed pages 703–711; the PDF page numbers are the printed ones. The PDF carries the typesetter's own text layer in the Chanakya font encoding, and the text was decoded from it by machine with `bin/bhagavata/chanakya.py`, not read off OCR or typed. The decoder was checked against GRETIL over all twelve skandhas before any file was written, and the differences that remain were sampled and found to be readings of the two editions. Second witness: GRETIL's `sa_bhAgavatapurANa.xml` (IAST, contributed by Ulrich Stiehl), a separate editorial lineage, compared verse by verse by machine. The TTD edition with the commentaries of Śrīdhara, Vīrarāghava and Vijayadhvaja (archive.org `Bhagavata_Purana_With_Multiple_Commentaries_TTD_Critical_Edition`) is the third witness where one is needed; it was not read for this file. The IAST was generated mechanically from the Devanāgarī with `bin/dev2iast.py`.
 
-Recension note: Text-only file, written 1 Oct 2026 at the user's instruction to lay down the whole Bhāgavata first: the English, Telugu and Hindi meanings are still to be added, and the witnesses' differences listed here have been recorded by machine and not yet adjudicated. The print is followed throughout. The print numbers 49 verses and GRETIL numbers 49. Of the 49 verses GRETIL has under the same number, 37 agree with the print letter for letter once spacing and the spelling of nasals are set aside; the rest differ: 6, 15, 17, 21, 24, 27, 30, 31, 38, 40, 47, 49. Spacing is the print's, as its text layer gives it; in a few places justification has left a space inside a word, and these are still to be closed when the verse is read. The speaker lines (श्रीशुक उवाच and the others) are printed in italic above the verse they introduce, and are given as its first line.
+Recension note: Meanings written 22 Oct 2026 (session S78). The differences between the witnesses listed below were read as the verses were glossed; except where this note says otherwise, each is a spelling, a sandhi or a word order of the two editions, none of them changes the sense, and the print's reading therefore stands unbracketed. The print is followed throughout. The print numbers 49 verses and GRETIL numbers 49. Of the 49 verses GRETIL has under the same number, 37 agree with the print letter for letter once spacing and the spelling of nasals are set aside; the rest differ: 6, 15, 17, 21, 24, 27, 30, 31, 38, 40, 47, 49. Spacing is the print's, as its text layer gives it. The speaker lines (श्रीशुक उवाच and the others) are printed in italic above the verse they introduce, and are given as its first line. Five broken words were put right as the verses were read, each confirmed against GRETIL. At verse 17 justification had left a space inside ईशाङ्घ्रि, and it is closed. At verses 6, 45, 47 and 48 the space between two words was swallowed, and it is restored: न्यर्पितात्मानं | कृतमैत्रम्, दास्याः | पतिः, एवं | परमं and नेक्षितो | यमकिङ्करैः; the first word in each of these carries its own case ending or is an indeclinable, so none of them can begin a compound, and GRETIL has the break in every one, reading एतं for the print's एवं at verse 47. At verse 38 हित्वामिथ्यार्थधीर्मतिम् is joined in both witnesses and is left as printed. The print's speaker line at verse 39 reads श्रीशुकउवाच without the space it has at verses 1 and 20; GRETIL carries no speaker lines, so no second witness can adjudicate it, and the line is left exactly as printed while the meaning follows the only possible reading.
 
 Verse count: 49, plus the closing colophon printed unnumbered.
 
@@ -24,6 +24,9 @@ iast:
 śrīśuka uvāca
 evaṁ te bhagavaddūtā yamadūtābhibhāṣitam|
 upadhāryātha tān rājan pratyāhurnayakovidāḥ||
+en: Śrī Śuka said: O King, the messengers of the Lord, who know what is right, considered what the messengers of Yama had said, and then answered them.
+tel: శ్రీశుకుడు పలికెను: రాజా, నీతి ఎరిగిన ఆ భగవద్దూతలు యమదూతలు పలికిన మాటను ఆలోచించి, పిమ్మట వారికి బదులు చెప్పిరి.
+hi: श्रीशुकदेवजी ने कहा: हे राजन्, नीति के जानने वाले उन भगवान् के दूतों ने यमदूतों के कहे हुए को विचार कर फिर उन्हें उत्तर दिया।
 
 --- verse 2 ---
 deva:
@@ -34,6 +37,9 @@ iast:
 viṣṇudūtā ūcuḥ
 aho kaṣṭaṁ dharmadṛśāmadharmaḥ spṛśate sabhām|
 yatrādaṇḍyeṣvapāpeṣu daṇḍo yairdhriyate vṛthā||
+en: The messengers of Viṣṇu said: Alas, it is a hard thing that adharma touches the assembly of those who look to dharma, where punishment is laid without cause upon the sinless who do not deserve it.
+tel: విష్ణుదూతలు పలికిరి: అయ్యో, ధర్మమును చూచువారి సభను అధర్మము అంటుకొనుట కష్టమైన సంగతి; అందు దండనకు అర్హులు కాని నిష్పాపులపై వారిచే దండము వ్యర్థముగా మోపబడుచున్నది.
+hi: विष्णु के दूतों ने कहा: हाय, यह कष्ट की बात है कि धर्म को देखने वालों की सभा को अधर्म स्पर्श कर रहा है, जहाँ दण्ड के अयोग्य निष्पाप जनों पर उनके द्वारा व्यर्थ ही दण्ड धारण किया जाता है।
 
 --- verse 3 ---
 deva:
@@ -42,6 +48,9 @@ deva:
 iast:
 prajānāṁ pitaro ye ca śāstāraḥ sādhavaḥ samāḥ|
 yadi syātteṣu vaiṣamyaṁ kaṁ yānti śaraṇaṁ prajāḥ||
+en: If there is unevenness in those who are the fathers of the people, their rulers, good men and impartial, then to whom do the people go for shelter?
+tel: ప్రజలకు తండ్రులు, శాసించువారు, సాధువులు, సమముగా చూచువారు అయినవారిలో వైషమ్యము కలిగినచో, ప్రజలు ఎవరిని శరణు పొందుదురు?
+hi: जो प्रजा के पिता, शासक, साधु और समदर्शी हैं, यदि उनमें ही विषमता हो जाय, तो प्रजा किसकी शरण में जाय?
 
 --- verse 4 ---
 deva:
@@ -50,6 +59,9 @@ deva:
 iast:
 yadyadācarati śreyānitarastattadīhate|
 sa yatpramāṇaṁ kurute lokastadanuvartate||
+en: Whatever the better man does, another does the same. Whatever he sets up as the standard, the world follows that.
+tel: శ్రేష్ఠుడు ఏది ఏది ఆచరించునో, ఇతరుడు అదే అదే చేయును. అతడు ఏది ప్రమాణముగా చేయునో, లోకము దానిని అనుసరించును.
+hi: श्रेष्ठ पुरुष जो-जो आचरण करता है, दूसरा वही-वही करता है। वह जिसे प्रमाण बनाता है, लोक उसी का अनुसरण करता है।
 
 --- verse 5 ---
 deva:
@@ -58,14 +70,20 @@ deva:
 iast:
 yasyāṅke śira ādhāya lokaḥ svapiti nirvṛtaḥ|
 svayaṁ dharmamadharmaṁ vā na hi veda yathā paśuḥ||
+en: The world lays its head in his lap and sleeps content, and does not itself know dharma from adharma, like an animal.
+tel: లోకము ఎవరి ఒడిలో తలను ఉంచి నిశ్చింతగా నిద్రించునో, అది పశువు వలె తనంతట ధర్మమును, అధర్మమును ఎరుగదు.
+hi: लोक जिसकी गोद में सिर रखकर निश्चिन्त सोता है, वह पशु के समान स्वयं धर्म और अधर्म को नहीं जानता।
 
 --- verse 6 ---
 deva:
-स कथं न्यर्पितात्मानंकृतमैत्रमचेतनम्।
+स कथं न्यर्पितात्मानं कृतमैत्रमचेतनम्।
 विश्रम्भणीयो भूतानां सघृणो द्रोग्धुमर्हति॥
 iast:
-sa kathaṁ nyarpitātmānaṁkṛtamaitramacetanam|
+sa kathaṁ nyarpitātmānaṁ kṛtamaitramacetanam|
 viśrambhaṇīyo bhūtānāṁ saghṛṇo drogdhumarhati||
+en: How can he who should be trusted by living beings, and who is full of kindness, do harm to one who has given himself over to him, who has made friends with him, and who has no understanding of his own?
+tel: ప్రాణులు నమ్మదగినవాడు, కరుణ కలవాడు, తనను అర్పించుకొన్నవానికి, స్నేహము చేసికొన్నవానికి, తెలివి లేనివానికి ఎట్లు ద్రోహము చేయగలడు?
+hi: जो प्राणियों के विश्वास के योग्य है और दया से युक्त है, वह अपने को समर्पित कर चुके, मित्रता किये हुए और अचेतन पुरुष के साथ द्रोह कैसे कर सकता है?
 
 --- verse 7 ---
 deva:
@@ -74,6 +92,9 @@ deva:
 iast:
 ayaṁ hi kṛtanirveśo janmakoṭyaṁhasāmapi|
 yad vyājahāra vivaśo nāma svastyayanaṁ hareḥ||
+en: This man has made his atonement even for the sins of a crore of births, for, helpless as he was, he uttered the name of Hari, which is the way to well-being.
+tel: ఇతడు కోటి జన్మముల పాపములకు కూడ నిష్కృతి చేసికొనినవాడు; ఎందుకనగా వివశుడై ఉండియు స్వస్త్యయనమైన హరి నామమును అతడు పలికెను.
+hi: इस पुरुष ने करोड़ों जन्मों के पापों की भी निष्कृति कर ली, क्योंकि विवश होकर भी उसने हरि का वह नाम उच्चारण किया जो कल्याण का मार्ग है।
 
 --- verse 8 ---
 deva:
@@ -82,6 +103,9 @@ deva:
 iast:
 etenaiva hyaghono'sya kṛtaṁ syādaghaniṣkṛtam|
 yadā nārāyaṇāyeti jagāda caturakṣaram||
+en: By this alone the atonement for the sin of this sinful man was made, when he said, Nārāyaṇa, the name of four syllables.
+tel: పాపము కలిగిన ఇతనికి దీనిచేతనే పాపనిష్కృతి జరిగినది; ఎప్పుడు అతడు నాలుగు అక్షరముల నారాయణాయ అని పలికెనో అప్పుడే.
+hi: इसी से इस पापी पुरुष के पाप की निष्कृति हो गयी, जब उसने चार अक्षरों वाला नारायणाय यह नाम कहा।
 
 --- verse 9 ---
 deva:
@@ -90,6 +114,9 @@ deva:
 iast:
 stenaḥ surāpo mitradhrugbrahmahā gurutalpagaḥ|
 strīrājapitṛgohantā ye ca pātakino'pare||
+en: A thief, a drinker of liquor, one who betrays a friend, one who kills a brāhmaṇa, one who goes to the bed of his teacher, one who kills a woman, a king, a father or a cow, and others who commit great sins,
+tel: దొంగ, సురాపానము చేయువాడు, మిత్రునికి ద్రోహము చేయువాడు, బ్రహ్మహత్య చేయువాడు, గురుతల్పమునకు పోయినవాడు, స్త్రీని, రాజును, తండ్రిని, గోవును చంపినవాడు, ఇంకను ఇతర పాతకులు,
+hi: चोर, मदिरा पीने वाला, मित्र का द्रोह करने वाला, ब्राह्मण का वध करने वाला, गुरु की शय्या पर जाने वाला, स्त्री, राजा, पिता और गौ का हत्यारा, तथा और भी जो पातकी हैं,
 
 --- verse 10 ---
 deva:
@@ -98,6 +125,9 @@ deva:
 iast:
 sarveṣāmapyaghavatāmidameva suniṣkṛtam|
 nāmavyāharaṇaṁ viṣṇoryatastadviṣayā matiḥ||
+en: for all of these who bear sin this alone is the good atonement, the uttering of the name of Viṣṇu, because by it the mind is turned to him.
+tel: పాపము కలిగిన వారు అందరికిని ఇదే మంచి నిష్కృతి, విష్ణువు నామమును పలుకుటయే; ఎందుకనగా దానిచే మతి ఆయనపై నిలుచును.
+hi: पाप से युक्त इन सब के लिये यही उत्तम निष्कृति है, विष्णु के नाम का उच्चारण; क्योंकि उससे बुद्धि उन्हीं के विषय में हो जाती है।
 
 --- verse 11 ---
 deva:
@@ -110,6 +140,9 @@ na niṣkṛtairuditairbrahmavādibhi-
 stathā viśuddhyatyaghavān vratādibhiḥ|
 yathā harernāmapadairudāhṛtai-
 staduttamaślokaguṇopalambhakam||
+en: A sinful man is not purified by the atonements laid down by those who speak of Brahman, nor by vows and the rest, as he is purified by uttering the words of the name of Hari, which brings to him the qualities of him whose praise is the highest.
+tel: బ్రహ్మవాదులు చెప్పిన నిష్కృతులచే, వ్రతములు మొదలైన వానిచే పాపి అంతగా శుద్ధి పొందడు; ఉత్తమశ్లోకుని గుణములను అందించు హరి నామపదములను పలుకుటచే ఎంత శుద్ధి పొందునో అంతగా పొందడు.
+hi: ब्रह्मवादियों के कहे हुए निष्कृति-कर्मों से और व्रत आदि से पापी उतना शुद्ध नहीं होता, जितना हरि के नामपदों के उच्चारण से होता है, जो उत्तमश्लोक के गुणों को प्राप्त कराते हैं।
 
 --- verse 12 ---
 deva:
@@ -122,6 +155,9 @@ naikāntikaṁ taddhi kṛte'pi niṣkṛte
 manaḥ punardhāvati cedasatpathe|
 tatkarmanirhāramabhīpsatāṁ hare-
 rguṇānuvādaḥ khalu sattvabhāvanaḥ||
+en: That is not final, for even when the atonement has been made the mind runs again on the evil path. Therefore, for those who wish for the cutting away of karma, the telling of the qualities of Hari is what brings sattva into being.
+tel: అది ఆత్యంతికము కాదు; ఎందుకనగా నిష్కృతి చేసిన తరువాతను మనసు మరల అసత్పథమున పరుగెత్తును. కావున కర్మమును తొలగింపగోరు వారికి హరి గుణానువాదమే సత్త్వమును కలిగించునది.
+hi: वह आत्यन्तिक नहीं है, क्योंकि निष्कृति कर लेने पर भी मन फिर बुरे मार्ग पर दौड़ता है। इसलिये कर्म के निवारण की इच्छा रखने वालों के लिये हरि के गुणों का अनुवाद ही सत्त्व को उत्पन्न करने वाला है।
 
 --- verse 13 ---
 deva:
@@ -130,6 +166,9 @@ deva:
 iast:
 athainaṁ māpanayata kṛtāśeṣāghaniṣkṛtam|
 yadasau bhagavannāma mriyamāṇaḥ samagrahīt||
+en: Therefore do not take this man away. He has made atonement for all his sin without remainder, for while dying he took hold of the name of the Lord.
+tel: కావున ఇతనిని తీసుకొని పోవద్దు. ఇతడు శేషము లేకుండ తన పాపమునకు నిష్కృతి చేసికొనినవాడు; ఎందుకనగా మరణించుచు ఇతడు భగవన్నామమును గ్రహించెను.
+hi: इसलिये इसे न ले जाइये। इसने अपने सारे पाप की निष्कृति बिना शेष कर ली है, क्योंकि मरते समय इसने भगवान् का नाम ग्रहण किया।
 
 --- verse 14 ---
 deva:
@@ -138,6 +177,9 @@ deva:
 iast:
 sāṅketyaṁ pārihāsyaṁ vā stobhaṁ helanameva vā|
 vaikuṇṭhanāmagrahaṇamaśeṣāghaharaṁ viduḥ||
+en: Whether it is by way of a sign, or in jest, or as a filler in song, or even in contempt, the uttering of the name of Vaikuṇṭha is known to take away all sin.
+tel: సాంకేతికముగాను, పరిహాసముగాను, పాటలో పూరణముగాను, లేక అలక్ష్యముగాను కూడ వైకుంఠుని నామమును గ్రహించుట సమస్త పాపమును హరించునని ఎరుగుదురు.
+hi: सङ्केत से, हँसी से, गान में पूरण के रूप में, अथवा अवज्ञा से भी वैकुण्ठ के नाम का ग्रहण सारे पाप को हर लेता है, ऐसा जानते हैं।
 
 --- verse 15 ---
 deva:
@@ -146,6 +188,9 @@ deva:
 iast:
 patitaḥ skhalito bhagnaḥ sandaṣṭastapta āhataḥ|
 harirityavaśenāha pumānnārhati yātanām||
+en: A man who has fallen, or stumbled, or is broken, or bitten, or burnt, or struck, and says Hari even without meaning to, does not deserve torment.
+tel: పడినవాడు, జారినవాడు, విరిగినవాడు, కరవబడినవాడు, కాలినవాడు, కొట్టబడినవాడు, తెలియకుండగనే హరి అని పలికిన మనుష్యుడు యాతనకు అర్హుడు కాడు.
+hi: गिरा हुआ, फिसला हुआ, टूटा हुआ, काटा हुआ, जला हुआ अथवा मारा हुआ पुरुष यदि विवश होकर भी हरि कह दे, तो वह यातना के योग्य नहीं रहता।
 
 --- verse 16 ---
 deva:
@@ -154,14 +199,20 @@ deva:
 iast:
 gurūṇāṁ ca laghūnāṁ ca gurūṇi ca laghūni ca|
 prāyaścittāni pāpānāṁ jñātvoktāni maharṣibhiḥ||
+en: The great sages, knowing both the heavy and the light among sins, have told the heavy and the light atonements for them.
+tel: పాపములలో బరువైనవి, తేలికైనవి ఏవియో ఎరిగి, మహర్షులు వాటికి బరువైన, తేలికైన ప్రాయశ్చిత్తములను చెప్పిరి.
+hi: पापों में कौन भारी और कौन हलके हैं, यह जानकर महर्षियों ने उनके भारी और हलके प्रायश्चित्त कहे हैं।
 
 --- verse 17 ---
 deva:
 तैस्तान्यघानि पूयन्ते तपोदानजपादिभिः।
-नाधर्मजं तद्धृदयं तदपीशाङ् घ्रिसेवया॥
+नाधर्मजं तद्धृदयं तदपीशाङ्घ्रिसेवया॥
 iast:
 taistānyaghāni pūyante tapodānajapādibhiḥ|
-nādharmajaṁ taddhṛdayaṁ tadapīśāṅ ghrisevayā||
+nādharmajaṁ taddhṛdayaṁ tadapīśāṅghrisevayā||
+en: Those sins are purified by these means, by tapas, by giving, by japa and the rest. But the heart which is born of adharma is not purified by them; that too is purified by the service of the feet of the Lord.
+tel: తపము, దానము, జపము మొదలైన వానిచే ఆ పాపములు శుద్ధి అగును. కాని అధర్మము నుండి పుట్టిన ఆ హృదయము వాటిచే శుద్ధి కాదు; అదియు ఈశ్వరుని చరణసేవచే శుద్ధి అగును.
+hi: तप, दान, जप आदि से वे पाप शुद्ध हो जाते हैं। परन्तु अधर्म से उत्पन्न वह हृदय उनसे शुद्ध नहीं होता; वह भी ईश्वर के चरणों की सेवा से शुद्ध होता है।
 
 --- verse 18 ---
 deva:
@@ -170,6 +221,9 @@ deva:
 iast:
 ajñānādathavā jñānāduttamaślokanāma yat|
 saṅkīrtitamaghaṁ puṁso dahededho yathānalaḥ||
+en: The name of him whose praise is the highest, uttered whether in ignorance or in knowledge, burns away the sin of a man, as fire burns fuel.
+tel: తెలియక పలికినను, తెలిసి పలికినను, ఉత్తమశ్లోకుని నామము సంకీర్తనము చేయబడినచో, అగ్ని కట్టెలను కాల్చునట్లు మనుష్యుని పాపమును కాల్చివేయును.
+hi: अज्ञान से अथवा ज्ञान से उत्तमश्लोक का जो नाम सङ्कीर्तित होता है, वह मनुष्य के पाप को वैसे जला देता है जैसे अग्नि ईंधन को।
 
 --- verse 19 ---
 deva:
@@ -178,6 +232,9 @@ deva:
 iast:
 yathāgadaṁ vīryatamamupayuktaṁ yadṛcchayā|
 ajānato'pyātmaguṇaṁ kuryānmantro'pyudāhṛtaḥ||
+en: As the most powerful medicine, taken by chance, does its own work even for one who does not know it, so does a mantra that has been uttered.
+tel: మిక్కిలి వీర్యము కలిగిన ఔషధము యాదృచ్ఛికముగా సేవించినను, ఎరుగని వానికి కూడ తన గుణమును చూపునట్లే, పలికిన మంత్రమును చూపును.
+hi: जैसे अत्यन्त वीर्यवान् औषध यदि संयोग से भी ली जाय, तो न जानने वाले के लिये भी अपना गुण कर देती है, वैसे ही उच्चारण किया हुआ मन्त्र भी करता है।
 
 --- verse 20 ---
 deva:
@@ -188,6 +245,9 @@ iast:
 śrīśuka uvāca
 ta evaṁ suvinirṇīya dharmaṁ bhāgavataṁ nṛpa|
 taṁ yāmyapāśānnirmucya vipraṁ mṛtyoramūmucan||
+en: Śrī Śuka said: Having thus well settled the Bhāgavata dharma, O King, they loosed that brāhmaṇa from the nooses of Yama and freed him from death.
+tel: శ్రీశుకుడు పలికెను: రాజా, ఈ విధముగా భాగవత ధర్మమును వారు చక్కగా నిర్ణయించి, ఆ విప్రుని యమపాశముల నుండి విడిపించి మృత్యువు నుండి ముక్తుని చేసిరి.
+hi: श्रीशुकदेवजी ने कहा: हे राजन्, इस प्रकार भागवत धर्म का भली भाँति निर्णय करके उन्होंने उस ब्राह्मण को यम के पाशों से छुड़ाकर मृत्यु से मुक्त कर दिया।
 
 --- verse 21 ---
 deva:
@@ -196,6 +256,9 @@ deva:
 iast:
 iti pratyuditā yāmyā dūtā yātvā yamāntike|
 yamarājñe yathā sarvamācacakṣurariṁdama||
+en: Being answered in this way, O subduer of enemies, the messengers of Yama went into the presence of Yama and told Yamarāja everything as it had happened.
+tel: అరిందముడా, ఈ విధముగా బదులు పొందిన యమదూతలు యముని సమీపమునకు వెళ్లి, జరిగినది అంతయు యమరాజునకు ఉన్నది ఉన్నట్లు చెప్పిరి.
+hi: हे अरिन्दम, इस प्रकार उत्तर पाकर यम के दूत यम के पास जाकर यमराज से सब कुछ जैसा हुआ था वैसा कह दिया।
 
 --- verse 22 ---
 deva:
@@ -204,6 +267,9 @@ deva:
 iast:
 dvijaḥ pāśādvinirmukto gatabhīḥ prakṛtiṁ gataḥ|
 vavande śirasā viṣṇoḥ kiṅkarān darśanotsavaḥ||
+en: The brāhmaṇa, freed from the noose, his fear gone, came back to himself. The sight of them was a festival for him, and he bowed his head before the servants of Viṣṇu.
+tel: పాశము నుండి విడువబడిన ఆ ద్విజుడు భయము పోయి సహజ స్థితికి వచ్చెను. వారి దర్శనము అతనికి ఉత్సవమైనది; అతడు విష్ణువు కింకరులకు శిరముచే నమస్కరించెను.
+hi: पाश से छूटा हुआ वह ब्राह्मण भयरहित होकर अपनी सहज स्थिति में आ गया। उनका दर्शन उसके लिये उत्सव था, और उसने विष्णु के किङ्करों को सिर से प्रणाम किया।
 
 --- verse 23 ---
 deva:
@@ -212,6 +278,9 @@ deva:
 iast:
 taṁ vivakṣumabhipretya mahāpuruṣakiṅkarāḥ|
 sahasā paśyatastasya tatrāntardadhire'nagha||
+en: O sinless one, the servants of the great Person understood that he wished to speak, and at once vanished there while he was looking on.
+tel: అనఘుడా, అతడు మాటలాడగోరుచున్నాడని మహాపురుషుని కింకరులు గ్రహించి, అతడు చూచుచుండగనే అక్కడ వెంటనే అంతర్ధానమైరి.
+hi: हे अनघ, वह कुछ कहना चाहता है, यह जानकर महापुरुष के किङ्कर उसके देखते-देखते वहीं सहसा अन्तर्धान हो गये।
 
 --- verse 24 ---
 deva:
@@ -220,6 +289,9 @@ deva:
 iast:
 ajāmilo'pyathākarṇya dūtānāṁ yamakṛṣṇayoḥ|
 dharmaṁ bhāgavataṁ śuddhaṁ traividyaṁ ca guṇāśrayam||
+en: Then Ajāmila too, having heard from the messengers of Yama and of Kṛṣṇa about the pure Bhāgavata dharma and about the threefold dharma of the Vedas, which rests upon the guṇas,
+tel: పిమ్మట అజామిలుడు కూడ యముని, కృష్ణుని దూతల నుండి శుద్ధమైన భాగవత ధర్మమును, గుణములను ఆశ్రయించిన త్రైవిద్య ధర్మమును విని,
+hi: तब अजामिल ने भी यम और कृष्ण के दूतों से शुद्ध भागवत धर्म तथा गुणों पर आश्रित त्रिवेदीय धर्म को सुनकर,
 
 --- verse 25 ---
 deva:
@@ -228,6 +300,9 @@ deva:
 iast:
 bhaktimān bhagavatyāśu māhātmyaśravaṇāddhareḥ|
 anutāpo mahānāsītsmarato'śubhamātmanaḥ||
+en: at once became a devotee of the Lord through hearing of the greatness of Hari; and great repentance came upon him as he remembered his own evil.
+tel: హరి మాహాత్మ్యమును వినుటచే వెంటనే భగవంతునిపై భక్తి కలవాడయ్యెను; తన అశుభమును స్మరించుచు అతనికి గొప్ప అనుతాపము కలిగెను.
+hi: हरि की महिमा सुनने से वह तत्काल भगवान् का भक्त हो गया; और अपने अशुभ को स्मरण करते हुए उसे बड़ा पश्चात्ताप हुआ।
 
 --- verse 26 ---
 deva:
@@ -236,6 +311,9 @@ deva:
 iast:
 aho me paramaṁ kaṣṭamabhūdavijitātmanaḥ|
 yena viplāvitaṁ brahma vṛṣalyāṁ jāyatā''tmanā||
+en: Alas, the greatest misfortune came upon me, who did not conquer myself. By me brahman was washed away, for I myself begot children upon a śūdra woman.
+tel: అయ్యో, తనను జయించుకొనని నాకు పరమ కష్టము కలిగినది. నాచే బ్రహ్మము కొట్టుకొనిపోయినది; ఏలననగా నేనే వృషలిలో సంతానమును కలిగించుకొనినాను.
+hi: हाय, अपने को न जीतने वाले मुझ पर परम कष्ट आया। मेरे द्वारा ब्रह्म बह गया, क्योंकि मैंने स्वयं वृषली से सन्तान उत्पन्न की।
 
 --- verse 27 ---
 deva:
@@ -244,6 +322,9 @@ deva:
 iast:
 dhiṅmāṁ vigarhitaṁ sadbhirduṣkṛtaṁ kulakajjalam|
 hitvā bālāṁ satīṁ yo'haṁ surāpāmasatīmagām||
+en: Shame on me, who am censured by the good, a doer of evil, the soot of my family. I left my young and chaste wife and went to an unchaste woman who drank liquor.
+tel: సజ్జనులచే గర్హింపబడిన, దుష్కృతము చేసిన, కులమునకు కజ్జలమైన నాకు ధిక్కారము. పిన్నవయసు కలిగిన సతియైన భార్యను విడిచి, సురాపానము చేయు అసతి దగ్గరకు నేను పోయినాను.
+hi: सज्जनों से निन्दित, दुष्कर्म करने वाले, कुल के कलङ्क मुझे धिक्कार है। बालिका और सती पत्नी को छोड़कर मैं मदिरा पीने वाली असती के पास गया।
 
 --- verse 28 ---
 deva:
@@ -252,6 +333,9 @@ deva:
 iast:
 vṛddhāvanāthau pitarau nānyabandhū tapasvinau|
 aho mayādhunā tyaktāvakṛtajñena nīcavat||
+en: Alas, my parents were old and without protection, had no other kinsman, and bore their lot with patience. Now they have been abandoned by me, an ungrateful man, as a low man would abandon them.
+tel: అయ్యో, నా తల్లిదండ్రులు వృద్ధులు, అనాథులు, వేరే బంధువులు లేనివారు, తపస్వులు. ఇప్పుడు కృతజ్ఞత లేని నాచే వారు నీచుని వలె విడువబడినారు.
+hi: हाय, मेरे माता-पिता वृद्ध, अनाथ, दूसरे बन्धु से रहित और तपस्वी थे। अब कृतज्ञता से रहित मुझ नीच के द्वारा वे त्याग दिये गये।
 
 --- verse 29 ---
 deva:
@@ -260,6 +344,9 @@ deva:
 iast:
 so'haṁ vyaktaṁ patiṣyāmi narake bhṛśadāruṇe|
 dharmaghnāḥ kāmino yatra vindanti yamayātanāḥ||
+en: It is plain that I shall fall into a very terrible hell, where those who destroy dharma and follow their desires meet the torments of Yama.
+tel: నేను మిక్కిలి భయంకరమైన నరకమున పడుదునని స్పష్టము; అందు ధర్మమును నాశనము చేసిన కాములు యమయాతనలను పొందుదురు.
+hi: यह स्पष्ट है कि मैं अत्यन्त भयंकर नरक में गिरूँगा, जहाँ धर्म का नाश करने वाले कामी जन यम की यातनाएँ पाते हैं।
 
 --- verse 30 ---
 deva:
@@ -268,6 +355,9 @@ deva:
 iast:
 kimidaṁ svapna āhosvit sākṣād dṛṣṭamihādbhutam|
 kva yātā adya te ye māṁ vyakarṣan pāśapāṇayaḥ||
+en: Was this a thing in a dream, or was this wonder seen here with my own eyes? Where have they gone now, those who were dragging me away with nooses in their hands?
+tel: ఇది కలలోని సంగతియా, లేక ఈ అద్భుతము ఇక్కడ కన్నులతో చూచినదియా? చేతులలో పాశములు కలిగి నన్ను లాగుచున్న వారు ఇప్పుడు ఎక్కడికి పోయినారు?
+hi: यह स्वप्न में था, अथवा यह अद्भुत यहाँ साक्षात् देखा गया? हाथों में पाश लिये जो मुझे खींच रहे थे, वे अब कहाँ चले गये?
 
 --- verse 31 ---
 deva:
@@ -276,6 +366,9 @@ deva:
 iast:
 atha te kva gatāḥ siddhāścatvāraścārudarśanāḥ|
 vyamocayannīyamānaṁ baddhvā pāśairadho bhuvaḥ||
+en: And where have they gone, those four Siddhas of beautiful form, who freed me as I was being bound with nooses and taken below the earth?
+tel: అందమైన రూపము కలిగిన ఆ నలుగురు సిద్ధులు ఎక్కడికి పోయినారు? పాశములచే కట్టబడి భూమికి క్రిందకు తీసుకొనిపోబడుచున్న నన్ను వారు విడిపించిరి.
+hi: और वे चार सुन्दर दर्शन वाले सिद्ध कहाँ चले गये, जिन्होंने पाशों से बाँधकर पृथ्वी के नीचे ले जाये जा रहे मुझे छुड़ा दिया?
 
 --- verse 32 ---
 deva:
@@ -284,6 +377,9 @@ deva:
 iast:
 athāpi me durbhagasya vibudhottamadarśane|
 bhavitavyaṁ maṅgalena yenātmā me prasīdati||
+en: Even so, for me who am of ill fortune there must have been some good deed, through which I was given the sight of the best of the wise, and by which my self is now at peace.
+tel: అయినను దురదృష్టవంతుడైన నాకు ఏదో మంగలము ఉండవలెను; దానిచే విబుధోత్తముల దర్శనము నాకు కలిగినది, దానిచే నా ఆత్మ ఇప్పుడు ప్రసన్నమగుచున్నది.
+hi: तो भी मुझ दुर्भाग्यवान् के कुछ मङ्गल अवश्य रहा होगा, जिससे मुझे विबुधों में श्रेष्ठ उन पुरुषों का दर्शन हुआ और जिससे मेरा आत्मा अब प्रसन्न हो रहा है।
 
 --- verse 33 ---
 deva:
@@ -292,6 +388,9 @@ deva:
 iast:
 anyathā mriyamāṇasya nāśucervṛṣalīpateḥ|
 vaikuṇṭhanāmagrahaṇaṁ jihvā vaktumihārhati||
+en: Otherwise the tongue of a dying man who is impure and the husband of a śūdra woman could not have been able to utter here the name of Vaikuṇṭha.
+tel: అట్లు కానిచో, అశుచియై, వృషలీపతియై, మరణించుచున్న వాని నాలుక ఇక్కడ వైకుంఠుని నామమును పలుకుటకు అర్హము కాదు.
+hi: अन्यथा अशुद्ध और वृषली के पति मरते हुए पुरुष की जिह्वा यहाँ वैकुण्ठ के नाम का उच्चारण करने योग्य नहीं थी।
 
 --- verse 34 ---
 deva:
@@ -300,6 +399,9 @@ deva:
 iast:
 kva cāhaṁ kitavaḥ pāpo brahmaghno nirapatrapaḥ|
 kva ca nārāyaṇetyetadbhagavannāma maṅgalam||
+en: What am I, a cheat, a sinner, a destroyer of brahman, and without shame? And what is this blessed name of the Lord, Nārāyaṇa, which brings all good?
+tel: కితవుడు, పాపి, బ్రహ్మఘ్నుడు, సిగ్గు లేనివాడు అయిన నేను ఎక్కడ? సర్వమంగలమైన నారాయణ అను ఈ భగవన్నామము ఎక్కడ?
+hi: कहाँ मैं छली, पापी, ब्रह्म का नाश करने वाला और निर्लज्ज, और कहाँ नारायण यह मङ्गलमय भगवान् का नाम?
 
 --- verse 35 ---
 deva:
@@ -308,6 +410,9 @@ deva:
 iast:
 so'haṁ tathā yatiṣyāmi yatacittendriyānilaḥ|
 yathā na bhūya ātmānamandhe tamasi majjaye||
+en: I shall now strive, with mind, senses and breath held in, so that I may not sink my self again in blinding darkness.
+tel: చిత్తము, ఇంద్రియములు, ప్రాణమును నిగ్రహించి, మరల గాఢమైన చీకటిలో నా ఆత్మను ముంచకుండునట్లు నేను ఇప్పుడు ప్రయత్నింతును.
+hi: मन, इन्द्रिय और प्राण को वश में करके मैं अब ऐसा यत्न करूँगा कि फिर अपने को घोर अन्धकार में न डुबोऊँ।
 
 --- verse 36 ---
 deva:
@@ -316,6 +421,9 @@ deva:
 iast:
 vimucya tamimaṁ bandhamavidyākāmakarmajam|
 sarvabhūtasuhṛcchānto maitraḥ karuṇa ātmavān||
+en: Freeing myself from this bondage born of ignorance, desire and action, I shall be a friend to all beings, at peace, kindly, compassionate and master of myself,
+tel: అవిద్య, కామము, కర్మము నుండి పుట్టిన ఈ బంధము నుండి విడివడి, సర్వభూతములకు హితుడు, శాంతుడు, మైత్రి కలవాడు, కరుణ కలవాడు, ఆత్మవంతుడు అగుదును;
+hi: अविद्या, काम और कर्म से उत्पन्न इस बन्धन से मुक्त होकर मैं सब प्राणियों का हितैषी, शान्त, मैत्रीपूर्ण, करुणामय और आत्मवान् बनूँगा;
 
 --- verse 37 ---
 deva:
@@ -324,6 +432,9 @@ deva:
 iast:
 mocaye grastamātmānaṁ yoṣinmayyā''tmamāyayā|
 vikrīḍito yayaivāhaṁ krīḍāmṛga ivādhamaḥ||
+en: and I shall free my self, which has been seized by the māyā of the Lord in the form of woman, by which I, a low man, have been played with like an animal kept for sport.
+tel: స్త్రీరూపమైన భగవంతుని మాయచే పట్టబడిన నా ఆత్మను విడిపింతును; ఆ మాయచేతనే అధముడైన నేను క్రీడామృగము వలె ఆడింపబడినాను.
+hi: और स्त्रीरूपी भगवान् की माया से ग्रस्त अपने आत्मा को मुक्त करूँगा, जिस माया ने मुझ अधम को क्रीडा के पशु के समान खिलाया है।
 
 --- verse 38 ---
 deva:
@@ -332,6 +443,9 @@ deva:
 iast:
 mamāhamiti dehādau hitvāmithyārthadhīrmatim|
 dhāsye mano bhagavati śuddhaṁ tatkīrtanādibhiḥ||
+en: Giving up the mind which thinks of body and the rest as mine and I, and whose sense of the real is false, I shall fix my mind, made pure, upon the Lord by the singing of his praise and the rest.
+tel: దేహము మొదలైన వానిలో నాది, నేను అను, మిథ్యయైన అర్థముపై బుద్ధి కలిగిన మతిని విడిచి, ఆయన కీర్తనము మొదలైన వానిచే శుద్ధమైన మనసును భగవంతునిపై నిలుపుదును.
+hi: देह आदि में मेरा और मैं ऐसी, मिथ्या अर्थ में बुद्धि रखने वाली मति को छोड़कर, उनके कीर्तन आदि से शुद्ध हुए मन को मैं भगवान् में लगाऊँगा।
 
 --- verse 39 ---
 deva:
@@ -342,6 +456,9 @@ iast:
 śrīśukauvāca
 iti jātasunirvedaḥ kṣaṇasaṅgena sādhuṣu|
 gaṅgādvāramupeyāya muktasarvānubandhanaḥ||
+en: Śrī Śuka said: Thus a true turning away was born in him by a moment's company with the good; and, released from all his ties, he went to the gate of the Gaṅgā.
+tel: శ్రీశుకుడు పలికెను: ఈ విధముగా సాధువుల క్షణ సంగముచే అతనికి నిజమైన నిర్వేదము కలిగెను; సమస్త అనుబంధముల నుండి విడివడి అతడు గంగాద్వారమునకు పోయెను.
+hi: श्रीशुकदेवजी ने कहा: इस प्रकार साधुओं के क्षण भर के सङ्ग से उसे सच्चा निर्वेद हुआ; और सब अनुबन्धों से मुक्त होकर वह गङ्गाद्वार को चला गया।
 
 --- verse 40 ---
 deva:
@@ -350,6 +467,9 @@ deva:
 iast:
 sa tasmin devasadana āsīno yogamāśritaḥ|
 pratyāhṛtendriyagrāmo yuyoja mana ātmani||
+en: There, seated in a temple, he took to yoga. Drawing in the whole host of his senses, he joined his mind to the self.
+tel: అక్కడ దేవాలయమున కూర్చుండి అతడు యోగమును ఆశ్రయించెను. ఇంద్రియముల సమూహమును లోపలికి లాగి, మనసును ఆత్మలో చేర్చెను.
+hi: वहाँ देवमन्दिर में बैठकर उसने योग का आश्रय लिया। इन्द्रियों के समूह को भीतर खींचकर उसने मन को आत्मा में लगाया।
 
 --- verse 41 ---
 deva:
@@ -358,6 +478,9 @@ deva:
 iast:
 tato guṇebhya ātmānaṁ viyujyātmasamādhinā|
 yuyuje bhagavaddhāmni brahmaṇyanubhavātmani||
+en: Then, separating the self from the guṇas by concentration upon the self, he joined it to the abode of the Lord, to Brahman, which is of the nature of direct experience.
+tel: పిమ్మట ఆత్మసమాధిచే ఆత్మను గుణముల నుండి వేరు చేసి, అనుభవస్వరూపమైన బ్రహ్మమున, భగవంతుని ధామమున దానిని చేర్చెను.
+hi: तब आत्मसमाधि से आत्मा को गुणों से अलग करके उसने उसे अनुभवस्वरूप ब्रह्म में, भगवान् के धाम में लगा दिया।
 
 --- verse 42 ---
 deva:
@@ -366,6 +489,9 @@ deva:
 iast:
 yarhyupāratadhīstasminnadrākṣītpuruṣān puraḥ|
 upalabhyopalabdhān prāgvavande śirasā dvijaḥ||
+en: When his mind had withdrawn from everything, the brāhmaṇa saw those men before him in that place. He recognised them as the ones he had seen before, and bowed his head to them.
+tel: అతని బుద్ధి అంతటి నుండి ఉపరతమైనపుడు, ఆ ద్విజుడు ఎదుట ఆ పురుషులను చూచెను. మునుపు చూచినవారే వీరని ఎరిగి, శిరముచే వారికి నమస్కరించెను.
+hi: जब उसकी बुद्धि सब से हट गयी, तब उस ब्राह्मण ने वहाँ अपने सामने उन पुरुषों को देखा। उन्हें पहले देखे हुए पहचान कर उसने सिर से उन्हें प्रणाम किया।
 
 --- verse 43 ---
 deva:
@@ -374,6 +500,9 @@ deva:
 iast:
 hitvā kalevaraṁ tīrthe gaṅgāyāṁ darśanādanu|
 sadyaḥ svarūpaṁ jagṛhe bhagavatpārśvavartinām||
+en: Giving up his body at the holy place on the Gaṅgā, after that sight he at once took the form of those who stand at the side of the Lord.
+tel: ఆ దర్శనము తరువాత గంగాతీర్థమున కలేబరమును విడిచి, అతడు వెంటనే భగవంతుని పార్శ్వమున ఉండువారి స్వరూపమును పొందెను.
+hi: उस दर्शन के बाद गङ्गा के तीर्थ में शरीर छोड़कर उसने तत्काल भगवान् के पार्श्व में रहने वालों का स्वरूप प्राप्त किया।
 
 --- verse 44 ---
 deva:
@@ -382,18 +511,24 @@ deva:
 iast:
 sākaṁ vihāyasā vipro mahāpuruṣakiṅkaraiḥ|
 haimaṁ vimānamāruhya yayau yatra śriyaḥ patiḥ||
+en: The brāhmaṇa rose into the sky with the servants of the great Person, mounted a golden chariot, and went to where the lord of Śrī is.
+tel: ఆ విప్రుడు మహాపురుషుని కింకరులతో కలిసి ఆకాశమున, హేమ విమానమును ఎక్కి, శ్రీపతి ఉన్న చోటికి వెళ్లెను.
+hi: वह ब्राह्मण महापुरुष के किङ्करों के साथ आकाश में सोने के विमान पर चढ़कर वहाँ गया जहाँ श्री के पति हैं।
 
 --- verse 45 ---
 deva:
 एवं स विप्लावितसर्वधर्मा
-दास्याःपतिः पतितो गर्ह्यकर्मणा।
+दास्याः पतिः पतितो गर्ह्यकर्मणा।
 निपात्यमानो निरये हतव्रतः
 सद्यो विमुक्तो भगवन्नाम गृह्णन्॥
 iast:
 evaṁ sa viplāvitasarvadharmā
-dāsyāḥpatiḥ patito garhyakarmaṇā|
+dāsyāḥ patiḥ patito garhyakarmaṇā|
 nipātyamāno niraye hatavrataḥ
 sadyo vimukto bhagavannāma gṛhṇan||
+en: Thus this husband of a maidservant, who had washed away all dharma, who had fallen by a condemned deed and had broken his vows, was being cast down into hell, and was freed at once because he uttered the name of the Lord.
+tel: ఈ విధముగా సమస్త ధర్మమును కొట్టుకొనిపోజేసిన, గర్హ్యమైన కర్మముచే పతితుడైన, వ్రతము చెడిన ఈ దాసీపతి నరకమున పడద్రోయబడుచుండగా, భగవన్నామమును పలుకుటచే వెంటనే విముక్తుడయ్యెను.
+hi: इस प्रकार जिसने सारे धर्म को बहा दिया था, जो निन्दित कर्म से पतित हो चुका था और जिसका व्रत नष्ट हो गया था, वह दासी का पति नरक में गिराया जा रहा था, और भगवान् का नाम लेने से तत्काल मुक्त हो गया।
 
 --- verse 46 ---
 deva:
@@ -406,22 +541,31 @@ nātaḥ paraṁ karmanibandhakṛntanaṁ
 mumukṣatāṁ tīrthapadānukīrtanāt|
 na yatpunaḥ karmasu sajjate mano
 rajastamobhyāṁ kalilaṁ tato'nyathā||
+en: For those who desire release there is no cutting away of the bonds of karma higher than this, the singing of the praise of him whose feet are the holy place; for by it the mind is no longer attached to actions, while by other means it is stained with rajas and tamas.
+tel: ముక్తిని కోరువారికి తీర్థపదుని అనుకీర్తనము కన్న కర్మబంధమును తెంచునది వేరొకటి లేదు; ఎందుకనగా దానిచే మనసు మరల కర్మములలో తగులుకొనదు, ఇతర ఉపాయములచే అది రజస్తమస్సులచే కలుషితమగును.
+hi: मुक्ति चाहने वालों के लिये तीर्थपद के अनुकीर्तन से बढ़कर कर्मबन्धन को काटने वाला कुछ नहीं है; क्योंकि उससे मन फिर कर्मों में नहीं लगता, और अन्य उपायों से वह रजः और तमः से कलुषित हो जाता है।
 
 --- verse 47 ---
 deva:
-य एवंपरमं गुह्यमितिहासमघापहम्।
+य एवं परमं गुह्यमितिहासमघापहम्।
 शृणुयाच्छ्रद्धया युक्तो यश्च भक्त्यानुकीर्तयेत्॥
 iast:
-ya evaṁparamaṁ guhyamitihāsamaghāpaham|
+ya evaṁ paramaṁ guhyamitihāsamaghāpaham|
 śṛṇuyācchraddhayā yukto yaśca bhaktyānukīrtayet||
+en: One who, filled with faith, listens in this way to this supremely secret story that takes away sin, and one who recounts it with devotion,
+tel: ఈ విధముగా పరమ గుహ్యమైన, పాపమును హరించు ఈ ఇతిహాసమును శ్రద్ధతో కూడి వినువాడు, భక్తితో అనుకీర్తనము చేయువాడు,
+hi: जो इस प्रकार इस परम गुह्य और पाप को हरने वाले इतिहास को श्रद्धा से युक्त होकर सुनता है, और जो भक्ति से इसका अनुकीर्तन करता है,
 
 --- verse 48 ---
 deva:
-न वै स नरकं याति नेक्षितोयमकिङ्करैः।
+न वै स नरकं याति नेक्षितो यमकिङ्करैः।
 यद्यप्यमङ्गलो मर्त्यो विष्णुलोके महीयते॥
 iast:
-na vai sa narakaṁ yāti nekṣitoyamakiṅkaraiḥ|
+na vai sa narakaṁ yāti nekṣito yamakiṅkaraiḥ|
 yadyapyamaṅgalo martyo viṣṇuloke mahīyate||
+en: does not go to hell, and is not even looked at by the servants of Yama. Though a mortal be without merit, he is honoured in the world of Viṣṇu.
+tel: అతడు నరకమునకు పోడు, యమకింకరులచే చూడబడడు కూడ. మనుష్యుడు అమంగలుడైనను విష్ణులోకమున గౌరవింపబడును.
+hi: वह नरक को नहीं जाता, और यम के किङ्करों से देखा भी नहीं जाता। मनुष्य अमङ्गल हो, तो भी वह विष्णुलोक में सम्मानित होता है।
 
 --- verse 49 ---
 deva:
@@ -430,9 +574,15 @@ deva:
 iast:
 mriyamāṇo harernāma gṛṇanputropacāritam|
 ajāmilo'pyagāddhāma kiṁ punaḥ śraddhayā gṛṇan||
+en: Ajāmila went to that abode when, while dying, he uttered the name of Hari which he had given to his son. How much more, then, one who utters it with faith?
+tel: మరణించుచు, కుమారునికి పెట్టిన హరి నామమును పలికిన అజామిలుడు కూడ ఆ ధామమును పొందెను. శ్రద్ధతో పలుకువాని గురించి ఇక చెప్పవలెనా?
+hi: मरते समय अपने पुत्र के लिये दिया हुआ हरि का नाम लेने से अजामिल भी उस धाम को पहुँच गया। तो फिर श्रद्धा से नाम लेने वाले के विषय में क्या कहना?
 
 --- verse none ---
 deva:
 इति श्रीमद्भागवते महापुराणे पारमहंस्यां संहितायां षष्ठस्कन्धेऽजामिलोपाख्याने द्वितीयोऽध्यायः॥ २॥
 iast:
 iti śrīmadbhāgavate mahāpurāṇe pāramahaṁsyāṁ saṁhitāyāṁ ṣaṣṭhaskandhe'jāmilopākhyāne dvitīyo'dhyāyaḥ|| 2||
+en: Thus ends the second adhyāya in the sixth skandha of the Śrīmad Bhāgavata Mahāpurāṇa, the saṁhitā of the paramahaṁsas, in the story of Ajāmila.
+tel: ఇది శ్రీమద్భాగవత మహాపురాణమునందు, పరమహంసల సంహితయందు, షష్ఠస్కంధమునందు అజామిలోపాఖ్యానమున ద్వితీయాధ్యాయము.
+hi: इस प्रकार श्रीमद्भागवत महापुराण की परमहंसों की संहिता के षष्ठ स्कन्ध में अजामिल के उपाख्यान में दूसरा अध्याय समाप्त हुआ।
