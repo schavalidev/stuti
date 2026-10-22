@@ -9,7 +9,7 @@ Type: Purāṇa (an adhyāya of the Śrīmad Bhāgavata, Skandha 4)
 
 Source / recension: Base text and authority: the Gītā Press, Gorakhpur Śrīmadbhāgavata Mahāpurāṇa with Hindi translation, Part 1 (Gītā Press code 26), archive.org item `shrimadbhagwat-mahapuran-bhag-1`, printed pages 488–492; the PDF page numbers are the printed ones. The PDF carries the typesetter's own text layer in the Chanakya font encoding, and the text was decoded from it by machine with `bin/bhagavata/chanakya.py`, not read off OCR or typed. The decoder was checked against GRETIL over all twelve skandhas before any file was written, and the differences that remain were sampled and found to be readings of the two editions. Second witness: GRETIL's `sa_bhAgavatapurANa.xml` (IAST, contributed by Ulrich Stiehl), a separate editorial lineage, compared verse by verse by machine. The TTD edition with the commentaries of Śrīdhara, Vīrarāghava and Vijayadhvaja (archive.org `Bhagavata_Purana_With_Multiple_Commentaries_TTD_Critical_Edition`) is the third witness where one is needed; it was not read for this file. The IAST was generated mechanically from the Devanāgarī with `bin/dev2iast.py`.
 
-Recension note: Text-only file, written 1 Oct 2026 at the user's instruction to lay down the whole Bhāgavata first: the English, Telugu and Hindi meanings are still to be added, and the witnesses' differences listed here have been recorded by machine and not yet adjudicated. The print is followed throughout. The print numbers 36 verses and GRETIL numbers 36. Of the 36 verses GRETIL has under the same number, 31 agree with the print letter for letter once spacing and the spelling of nasals are set aside; the rest differ: 4, 12, 14, 22, 28. The edition's footnotes give these older printed readings (प्रा० पा०), which are not bracketed into the line: at 29, न्यस्तमायात०; at 33, न्यस्तमायात०. Spacing is the print's, as its text layer gives it; in a few places justification has left a space inside a word, and these are still to be closed when the verse is read. The speaker lines (श्रीशुक उवाच and the others) are printed in italic above the verse they introduce, and are given as its first line.
+Recension note: Meanings written 22 Oct 2026 (session S78). The differences between the witnesses listed below were read as the verses were glossed; except where this note says otherwise, each is a spelling, a sandhi or a word order of the two editions, none of them changes the sense, and the print's reading therefore stands unbracketed. The print is followed throughout. The print numbers 36 verses and GRETIL numbers 36. Of the 36 verses GRETIL has under the same number, 31 agree with the print letter for letter once spacing and the spelling of nasals are set aside; the rest differ: 4, 12, 14, 22, 28. The edition's footnotes give these older printed readings (प्रा० पा०), which are not bracketed into the line: at 29, न्यस्तमायात०; at 33, न्यस्तमायात०. Spacing is the print's, as its text layer gives it. The speaker lines (श्रीशुक उवाच and the others) are printed in italic above the verse they introduce, and are given as its first line. A footnote's numeral keys it to one word, and which word that is cannot be told from the note alone, so those readings stay unbracketed until the page itself is read. Two words were put right as the verses were read. At verse 15 the space after the visarga of वैन्यः was lost, which ran it into कुपितो; it is restored. At verse 21 the space between अम्भसि and धास्यसि was lost, and it is restored. GRETIL agrees with both corrected readings.
 
 Verse count: 36, plus the closing colophon printed unnumbered.
 
@@ -24,6 +24,9 @@ iast:
 maitreya uvāca
 evaṁ sa bhagavān vainyaḥ khyāpito guṇakarmabhiḥ|
 chandayāmāsa tān kāmaiḥ pratipūjyābhinandya ca||
+en: Maitreya said: Thus Lord Vainya, whose qualities and deeds had been proclaimed, honoured them and greeted them, and gratified them with the things they desired.
+tel: మైత్రేయుడు పలికెను: ఇట్లు గుణములచే, కర్మములచే కీర్తింపబడిన వైన్య ప్రభువు వారిని పూజించి, అభినందించి, వారు కోరిన వస్తువులచే వారిని సంతోషపరచెను.
+hi: मैत्रेय ने कहा: इस प्रकार गुणों और कर्मों से कीर्तित वैन्य भगवान् ने उनका पूजन और अभिनन्दन किया, और उनकी इच्छा की वस्तुओं से उन्हें संतुष्ट किया।
 
 --- verse 2 ---
 deva:
@@ -32,6 +35,9 @@ deva:
 iast:
 brāhmaṇapramukhān varṇān bhṛtyāmātyapurodhasaḥ|
 paurāṁjānapadān śreṇīḥ prakṛtīḥ samapūjayat||
+en: He honoured the varṇas headed by the brāhmaṇas, his servants, his ministers and his priests, the citizens and the country people, the guilds, and the classes of his subjects.
+tel: ఆయన బ్రాహ్మణులు మొదలైన వర్ణములను, భృత్యులను, అమాత్యులను, పురోహితులను, పౌరులను, జానపదులను, శ్రేణులను, ప్రజల వర్గములను పూజించెను.
+hi: उन्होंने ब्राह्मणों को आगे रखकर वर्णों को, भृत्यों को, अमात्यों को, पुरोहितों को, पौरों को, जानपदों को, श्रेणियों को और प्रजा के वर्गों को सम्मानित किया।
 
 --- verse 3 ---
 deva:
@@ -42,6 +48,9 @@ iast:
 vidura uvāca
 kasmāddadhāra gorūpaṁ dharitrī bahurūpiṇī|
 yāṁ dudoha pṛthustatra ko vatso dohanaṁ ca kim||
+en: Vidura said: Why did the Earth, who holds many forms, take the form of a cow? She whom Pṛthu milked — who there was the calf, and what was the milking vessel?
+tel: విదురుడు పలికెను: బహురూపిణియైన ధరిత్రి ఆవు రూపమును ఏల ధరించెను? పృథువు ఎవరి పాలను పిదికెనో, అందు దూడ ఎవరు, పాలు పిదుకు పాత్ర ఏది?
+hi: विदुर ने कहा: बहुरूपिणी धरित्री ने गो का रूप क्यों धारण किया? पृथु ने जिसको दुहा, वहाँ बछड़ा कौन था और दोहन का पात्र क्या था?
 
 --- verse 4 ---
 deva:
@@ -50,6 +59,9 @@ deva:
 iast:
 prakṛtyā viṣamā devī kṛtā tena samā katham|
 tasya medhyaṁ hayaṁ devaḥ kasya hetorapāharat||
+en: The goddess was uneven by nature. How was she made level by him? And for what reason did the god carry away his horse that was meant for the sacrifice?
+tel: ఆ దేవి ప్రకృతిచే విషమముగా ఉండెను. ఆమెను ఆయన సమముగా ఎట్లు చేసెను? యజ్ఞమునకు ఉద్దేశించిన ఆయన గుఱ్ఱమును దేవుడు ఏ కారణముచే అపహరించెను?
+hi: वह देवी स्वभाव से विषम थी। उन्होंने उसे सम कैसे किया? और यज्ञ के लिये रखे गये उनके घोड़े को देव ने किस कारण से हर लिया?
 
 --- verse 5 ---
 deva:
@@ -58,6 +70,9 @@ deva:
 iast:
 sanatkumārādbhagavato brahman brahmaviduttamāt|
 labdhvā jñānaṁ savijñānaṁ rājarṣiḥ kāṁ gatiṁ gataḥ||
+en: O brāhmaṇa, the royal sage obtained knowledge together with realisation from the blessed Sanatkumāra, the best of the knowers of Brahman. What state did he then reach?
+tel: ఓ బ్రాహ్మణుడా, బ్రహ్మవిదులలో ఉత్తముడైన భగవంతుడైన సనత్కుమారుని నుండి ఆ రాజర్షి విజ్ఞానముతో కూడిన జ్ఞానమును పొందెను. అప్పుడు ఆయన ఏ గతిని పొందెను?
+hi: हे ब्राह्मण, उस राजर्षि ने ब्रह्मवेत्ताओं में उत्तम भगवान् सनत्कुमार से विज्ञान सहित ज्ञान पाया। तब वह किस गति को प्राप्त हुआ?
 
 --- verse 6 ---
 deva:
@@ -66,6 +81,9 @@ deva:
 iast:
 yaccānyadapi kṛṣṇasya bhavān bhagavataḥ prabhoḥ|
 śravaḥ suśravasaḥ puṇyaṁ pūrvadehakathāśrayam||
+en: And whatever else you know of the holy fame of Kṛṣṇa, the blessed Lord and master, whose renown is great, which rests upon the story of his earlier body,
+tel: మఱియు, పూర్వ శరీరము యొక్క కథను ఆశ్రయించిన, భగవంతుడును ప్రభువును, మంచి కీర్తి కలవాడును అయిన కృష్ణుని పవిత్ర కీర్తి ఇంకను ఏది మీకు తెలిసియున్నదో,
+hi: और भगवान् तथा प्रभु, सुयश वाले कृष्ण का जो पवित्र यश पूर्व देह की कथा के आश्रय से और भी आप जानते हैं,
 
 --- verse 7 ---
 deva:
@@ -74,6 +92,9 @@ deva:
 iast:
 bhaktāya me'nuraktāya tava cādhokṣajasya ca|
 vaktumarhasi yo'duhyadvainyarūpeṇa gāmimām||
+en: that you should tell to me, who am your devotee and am attached to you and to Adhokṣaja, to him who in the form of Vainya milked this earth as a cow.
+tel: దానిని మీకును అధోక్షజునికిని భక్తుడనై అనురక్తుడనైన నాకు చెప్పుట తగును; ఆయన వైన్య రూపమున ఈ భూమిని ఆవువలె పాలు పిదికెను.
+hi: वह आपको मुझसे कहना चाहिये, जो आपका और अधोक्षज का भक्त तथा अनुरक्त हूँ; उन्होंने वैन्य के रूप में इस पृथ्वी को गो के समान दुहा।
 
 --- verse 8 ---
 deva:
@@ -84,6 +105,9 @@ iast:
 sūta uvāca
 codito vidureṇaivaṁ vāsudevakathāṁ prati|
 praśasya taṁ prītamanā maitreyaḥ pratyabhāṣata||
+en: Sūta said: Urged by Vidura in this way toward the story of Vāsudeva, Maitreya was pleased in mind. He praised Vidura and spoke in answer.
+tel: సూతుడు పలికెను: ఇట్లు విదురునిచే వాసుదేవుని కథ వైపు ప్రేరేపింపబడి మైత్రేయుడు మనసులో ప్రీతి చెందెను. ఆయన విదురుని ప్రశంసించి సమాధానము పలికెను.
+hi: सूत ने कहा: इस प्रकार विदुर से वासुदेव की कथा की ओर प्रेरित होकर मैत्रेय मन में प्रसन्न हुए। उन्होंने विदुर की प्रशंसा की और उत्तर दिया।
 
 --- verse 9 ---
 deva:
@@ -98,6 +122,9 @@ yadābhiṣiktaḥ pṛthuraṁga viprai-
 rāmantrito janatāyāśca pālaḥ|
 prajā niranne kṣitipṛṣṭha etya
 kṣutkṣāmadehāḥ patimabhyavocan||
+en: Maitreya said: Dear one, when Pṛthu had been consecrated by the brāhmaṇas and called to be the protector of the people, there was no food on the face of the earth. The subjects came to him with bodies wasted by hunger and spoke to their lord.
+tel: మైత్రేయుడు పలికెను: ఓ ప్రియుడా, పృథువు బ్రాహ్మణులచే అభిషేకింపబడి ప్రజల పాలకుడుగా ఆమంత్రింపబడినప్పుడు, భూమి మీద అన్నము లేకుండెను. ఆకలిచే కృశించిన శరీరములతో ప్రజలు ఆయన చెంతకు వచ్చి తమ ప్రభువుతో పలికిరి.
+hi: मैत्रेय ने कहा: हे प्रिय, जब पृथु ब्राह्मणों से अभिषिक्त हुए और प्रजा के पालक रूप में आमन्त्रित हुए, तब पृथ्वी के ऊपर अन्न नहीं था। भूख से क्षीण शरीर वाली प्रजा उनके पास आकर अपने स्वामी से बोली।
 
 --- verse 10 ---
 deva:
@@ -110,6 +137,9 @@ vayaṁ rājaṁjāṭhareṇābhitaptā
 yathāgninā koṭarasthena vṛkṣāḥ|
 tvāmadya yātāḥ śaraṇaṁ śaraṇyaṁ
 yaḥ sādhito vṛttikaraḥ patirnaḥ||
+en: O King, we are scorched by the fire in the belly, as trees are scorched by a fire lodged in their hollow. Today we have come to you for shelter, for you are the giver of shelter. You have been appointed our lord, the one who provides our livelihood.
+tel: ఓ రాజా, తొఱ్ఱలో ఉన్న అగ్నిచే చెట్లు కాలినట్లు మేము జఠరాగ్నిచే కాలుచున్నాము. ఈ దినమున శరణ్యులైన మీ శరణమునకు వచ్చితిమి. మాకు జీవనము ఇచ్చు ప్రభువుగా మీరు నియమింపబడినారు.
+hi: हे राजन्, कोटर में बैठी अग्नि से वृक्षों के समान हम जठर की अग्नि से जल रहे हैं। आज हम शरण देने वाले आपकी शरण में आये हैं। आप हमारे वृत्ति देने वाले स्वामी बनाये गये हैं।
 
 --- verse 11 ---
 deva:
@@ -122,6 +152,9 @@ tanno bhavānīhatu rātave'nnaṁ
 kṣudhārditānāṁ naradevadeva|
 yāvanna naṅkṣyāmaha ujjhitorjā
 vārtāpatistvaṁ kila lokapālaḥ||
+en: Therefore, O god among the kings, be pleased to give food to us who are afflicted by hunger. Act before our strength is gone and we perish. You are the lord of our sustenance, and indeed the protector of the world.
+tel: కావున, ఓ నరదేవదేవా, ఆకలిచే బాధపడుచున్న మాకు అన్నమును ఇచ్చుటకు ప్రయత్నింపుము. మా బలము పోయి మేము నశించుటకు ముందే చేయుము. మీరు మా జీవనమునకు ప్రభువు, లోకపాలకులు కూడ.
+hi: इसलिये हे नरदेवदेव, भूख से पीड़ित हम लोगों को अन्न देने का यत्न कीजिये। हमारा बल जाने और हम नष्ट होने से पहले कीजिये। आप हमारी वृत्ति के स्वामी हैं, और लोकपाल भी हैं।
 
 --- verse 12 ---
 deva:
@@ -132,6 +165,9 @@ iast:
 maitreya uvāca
 pṛthuḥ prajānāṁ karuṇaṁ niśamya paridevitam|
 dīrghaṁ dadhyau kuruśreṣṭha nimittaṁ so'nvapadyata||
+en: Maitreya said: Pṛthu heard the pitiful lament of the subjects, O best of the Kurus. He thought for a long time, and he found out the cause.
+tel: మైత్రేయుడు పలికెను: ఓ కురుశ్రేష్ఠా, పృథువు ప్రజల కరుణాజనకమైన ఆర్తిని వినెను. ఆయన చిరకాలము ఆలోచించి, కారణమును కనుగొనెను.
+hi: मैत्रेय ने कहा: हे कुरुश्रेष्ठ, पृथु ने प्रजा के करुण विलाप को सुना। उन्होंने बहुत देर तक विचार किया और कारण का पता लगा लिया।
 
 --- verse 13 ---
 deva:
@@ -140,6 +176,9 @@ deva:
 iast:
 iti vyavasito buddhyā pragṛhītaśarāsanaḥ|
 sandadhe viśikhaṁ bhūmeḥ kruddhastripurahā yathā||
+en: Having resolved this in his mind, he took up his bow and fitted an arrow at the Earth, angry as the destroyer of the three cities.
+tel: బుద్ధితో ఇట్లు నిశ్చయించి, ఆయన ధనుస్సును చేపట్టి, త్రిపురహరునివలె కోపించి, భూమిపై బాణమును సంధించెను.
+hi: बुद्धि से ऐसा निश्चय कर उन्होंने धनुष उठाया और त्रिपुरहा के समान क्रुद्ध होकर पृथ्वी पर बाण चढ़ाया।
 
 --- verse 14 ---
 deva:
@@ -148,14 +187,20 @@ deva:
 iast:
 pravepamānā dharaṇī niśāmyodāyudhaṁ ca tam|
 gauḥ satyapādravadbhītā mṛgīva mṛgayudrutā||
+en: The Earth trembled when she saw him with his weapon raised. She truly became a cow and fled in fear, like a doe chased by a hunter.
+tel: ఆయన ఆయుధము ఎత్తి ఉండుట చూచి ధరణి వడకెను. ఆమె నిజముగా ఆవు అయి, వేటగాడు తఱిమిన లేడివలె భయముతో పఱచెను.
+hi: उन्हें उद्यत आयुध के साथ देखकर धरणी काँप उठी। वह सचमुच गो बनकर, व्याध से खदेड़ी हुई मृगी के समान भय से भाग गयी।
 
 --- verse 15 ---
 deva:
-तामन्वधावत्तद्वैन्यःकुपितोऽत्यरुणेक्षणः।
+तामन्वधावत्तद्वैन्यः कुपितोऽत्यरुणेक्षणः।
 शरं धनुषि संधाय यत्र यत्र पलायते॥
 iast:
-tāmanvadhāvattadvainyaḥkupito'tyaruṇekṣaṇaḥ|
+tāmanvadhāvattadvainyaḥ kupito'tyaruṇekṣaṇaḥ|
 śaraṁ dhanuṣi saṁdhāya yatra yatra palāyate||
+en: Then Vainya ran after her, angry, his eyes very red, fitting an arrow to his bow wherever she fled.
+tel: అప్పుడు వైన్యుడు కోపముతో, మిక్కిలి ఎఱ్ఱని కన్నులతో, ఆమె ఎక్కడెక్కడ పఱచునో అక్కడ ధనుస్సున బాణమును సంధించి ఆమెను వెంబడించెను.
+hi: तब वैन्य क्रुद्ध होकर, अत्यन्त लाल आँखों से, जहाँ जहाँ वह भागती थी वहाँ धनुष पर बाण चढ़ाकर उसके पीछे दौड़े।
 
 --- verse 16 ---
 deva:
@@ -164,6 +209,9 @@ deva:
 iast:
 sā diśo vidiśo devī rodasī cāntaraṁ tayoḥ|
 dhāvantī tatra tatrainaṁ dadarśānūdyatāyudham||
+en: The goddess ran to the quarters and to the intermediate quarters, to heaven and to earth and to the space between the two. There and there she saw him still behind her with his weapon raised.
+tel: ఆ దేవి దిక్కులకు, విదిక్కులకు, ఆకాశమునకు, భూమికి, ఆ రెంటి నడిమి చోటునకు పఱచెను. అక్కడక్కడ ఆయుధము ఎత్తి తన వెంట వచ్చుచున్న ఆయనను ఆమె చూచెను.
+hi: वह देवी दिशाओं में, विदिशाओं में, स्वर्ग और पृथ्वी में, तथा दोनों के बीच के स्थान में दौड़ी। वहाँ वहाँ उसने आयुध उठाये अपने पीछे आते हुए उन्हीं को देखा।
 
 --- verse 17 ---
 deva:
@@ -172,6 +220,9 @@ deva:
 iast:
 loke nāvindata trāṇaṁ vainyānmṛtyoriva prajāḥ|
 trastā tadā nivavṛte hṛdayena vidūyatā||
+en: She found no shelter anywhere in the world from Vainya, as living beings find none from death. In fear she then turned back, with her heart in anguish.
+tel: మృత్యువు నుండి ప్రజలకు రక్షణ లేనట్లు, వైన్యుని నుండి ఆమెకు లోకమున రక్షణ దొరకలేదు. భయముతో ఆమె అప్పుడు దుఃఖించు హృదయముతో మరలెను.
+hi: जैसे प्रजा को मृत्यु से त्राण नहीं मिलता, वैसे ही उसे लोक में वैन्य से त्राण नहीं मिला। भय से वह तब व्यथित हृदय से लौट आयी।
 
 --- verse 18 ---
 deva:
@@ -180,6 +231,9 @@ deva:
 iast:
 uvāca ca mahābhāgaṁ dharmajñāpannavatsala|
 trāhi māmapi bhūtānāṁ pālane'vasthito bhavān||
+en: And she said to that greatly blessed one: O knower of dharma, O you who are kind to the afflicted, protect me also. You are established in the protection of all beings.
+tel: ఆమె ఆ మహాభాగునితో పలికెను: ఓ ధర్మజ్ఞా, ఆపన్నులపై వాత్సల్యము కలవాడా, నన్నును రక్షింపుము. మీరు ప్రాణులందరిని పాలించుటలో నిలిచియున్నారు.
+hi: और उसने उस महाभाग से कहा: हे धर्मज्ञ, हे आपन्नवत्सल, मेरी भी रक्षा कीजिये। आप सब प्राणियों के पालन में स्थित हैं।
 
 --- verse 19 ---
 deva:
@@ -188,6 +242,9 @@ deva:
 iast:
 sa tvaṁ jighāṁsase kasmāddīnāmakṛtakilbiṣām|
 ahaniṣyatkathaṁ yoṣāṁ dharmajña iti yo mataḥ||
+en: Why then do you wish to kill me, who am helpless and have done no wrong? How would one who is held to be a knower of dharma strike a woman?
+tel: అట్టి మీరు దీనురాలను, అపరాధము చేయనిదానను అయిన నన్ను ఏల చంపగోరుచున్నారు? ధర్మజ్ఞుడని పేరు పొందినవాడు స్త్రీని ఎట్లు చంపును?
+hi: ऐसे आप दीन और निरपराध मुझको क्यों मारना चाहते हैं? जो धर्मज्ञ माना जाता है, वह स्त्री को कैसे मारेगा?
 
 --- verse 20 ---
 deva:
@@ -196,14 +253,20 @@ deva:
 iast:
 praharanti na vai strīṣu kṛtāgaḥsvapi jantavaḥ|
 kimuta tvadvidhā rājan karuṇā dīnavatsalāḥ||
+en: Even animals do not strike at women, even when the women have done wrong. How much less would those like you, O King, who are compassionate and kind to the helpless.
+tel: అపరాధము చేసినను స్త్రీలపై జంతువులు కూడ దెబ్బ కొట్టవు. ఓ రాజా, కరుణ కలవారును దీనవత్సలురును అయిన మీ వంటివారు ఎట్లు కొట్టుదురు?
+hi: अपराध करने पर भी जन्तु स्त्रियों पर प्रहार नहीं करते। हे राजन्, तब करुणाशील और दीनवत्सल आप जैसे लोग कैसे करेंगे?
 
 --- verse 21 ---
 deva:
 मां विपाट्याजरां नावं यत्र विश्वं प्रतिष्ठितम्।
-आत्मानं च प्रजाश्चेमाः कथमम्भसिधास्यसि॥
+आत्मानं च प्रजाश्चेमाः कथमम्भसि धास्यसि॥
 iast:
 māṁ vipāṭyājarāṁ nāvaṁ yatra viśvaṁ pratiṣṭhitam|
-ātmānaṁ ca prajāścemāḥ kathamambhasidhāsyasi||
+ātmānaṁ ca prajāścemāḥ kathamambhasi dhāsyasi||
+en: I am the boat that does not grow old, and the whole world rests upon me. If you break me apart, how will you hold yourself and these subjects upon the water?
+tel: నేను ముదుసలి కాని నావను, విశ్వమంతయు నాపై నిలిచియున్నది. నన్ను చీల్చివేసి, మీరును ఈ ప్రజలును నీటిపై ఎట్లు నిలుచుదురు?
+hi: मैं वह अजर नौका हूँ, और सारा विश्व मुझ पर टिका है। मुझे फाड़कर आप अपने को और इस प्रजा को जल पर कैसे रखेंगे?
 
 --- verse 22 ---
 deva:
@@ -214,6 +277,9 @@ iast:
 pṛthuruvāca
 vasudhe tvāṁ vadhiṣyāmi macchāsanaparāṅmukhīm|
 bhāgaṁ barhiṣi yā vṛṅkte na tanoti ca no vasu||
+en: Pṛthu said: O Vasudhā, I will kill you, for you have turned your face from my command. You take your share at the sacrifice, yet you do not yield us wealth.
+tel: పృథువు పలికెను: ఓ వసుధా, నా శాసనమునకు ముఖము త్రిప్పిన నిన్ను చంపుదును. యజ్ఞమున భాగమును తీసుకొనుచున్నావు, కాని మాకు ధనమును ఈయకున్నావు.
+hi: पृथु ने कहा: हे वसुधा, मेरे शासन से मुँह मोड़ने वाली तुझको मैं मारूँगा। तू बर्हि पर भाग लेती है, परन्तु हमें वसु नहीं देती।
 
 --- verse 23 ---
 deva:
@@ -222,6 +288,9 @@ deva:
 iast:
 yavasaṁ jagdhyanudinaṁ naiva dogdhyaudhasaṁ payaḥ|
 tasyāmevaṁ hi duṣṭāyāṁ daṇḍo nātra na śasyate||
+en: You eat the grass every day, yet you do not yield the milk of your udder. For one so wicked as this, punishment here is surely fitting.
+tel: ప్రతిదినము గడ్డిని తినుచున్నావు, కాని పొదుగు పాలను ఈయకున్నావు. ఇట్లు దుష్టురాలైనదానికి ఇక్కడ దండన తప్పక తగినది.
+hi: तू प्रतिदिन घास खाती है, परन्तु ऊधस का दूध नहीं देती। इस प्रकार दुष्ट हुई के लिये यहाँ दण्ड निश्चय ही उचित है।
 
 --- verse 24 ---
 deva:
@@ -230,6 +299,9 @@ deva:
 iast:
 tvaṁ khalvoṣadhibījāni prāk sṛṣṭāni svayambhuvā|
 na muṁcasyātmaruddhāni māmavajñāya mandadhīḥ||
+en: You do not release the seeds of the herbs that the self-born Brahmā created long ago. You have held them back within yourself, disregarding me, and your mind is dull.
+tel: స్వయంభువుచే పూర్వము సృష్టింపబడిన ఓషధి బీజములను నీవు విడువకున్నావు. నన్ను అవమానించి, మందబుద్ధితో వానిని నీలోనే నిలిపికొన్నావు.
+hi: स्वयम्भू ने पहले जिन ओषधि-बीजों को रचा, उन्हें तू नहीं छोड़ती। मेरी अवज्ञा करके, मन्दबुद्धि होकर तूने उन्हें अपने में रोक रखा है।
 
 --- verse 25 ---
 deva:
@@ -238,6 +310,9 @@ deva:
 iast:
 amūṣāṁ kṣutparītānāmārtānāṁ paridevitam|
 śamayiṣyāmi madbāṇairbhinnāyāstava medasā||
+en: These people are seized by hunger and are in pain. I will quiet their lament with the fat of your body, torn open by my arrows.
+tel: ఈ ప్రజలు ఆకలిచే పీడింపబడి ఆర్తులైయున్నారు. నా బాణములచే చీల్చబడిన నీ శరీరపు క్రొవ్వుతో వారి ఆర్తిని శమింపజేయుదును.
+hi: ये लोग भूख से घिरे और आर्त हैं। मैं अपने बाणों से फाड़ी गयी तेरी मेदा से उनका विलाप शान्त करूँगा।
 
 --- verse 26 ---
 deva:
@@ -246,6 +321,9 @@ deva:
 iast:
 pumān yoṣiduta klība ātmasambhāvano'dhamaḥ|
 bhūteṣu niranukrośo nṛpāṇāṁ tadvadho'vadhaḥ||
+en: A man, or a woman, or one who is neither, who thinks highly of himself, who is low, and who has no compassion for living beings — for kings, the killing of such a one is no killing.
+tel: పురుషుడైనను, స్త్రీ అయినను, క్లీబుడైనను, తనను గొప్పగా తలచుకొని, అధముడై, ప్రాణులపై కనికరము లేనివాడైనను, రాజులకు అట్టివానిని చంపుట చంపుట కాదు.
+hi: पुरुष हो, स्त्री हो, या क्लीब हो, जो अपने को बड़ा मानता है, अधम है, और प्राणियों पर दया नहीं रखता, राजाओं के लिये उसका वध वध नहीं है।
 
 --- verse 27 ---
 deva:
@@ -254,6 +332,9 @@ deva:
 iast:
 tvāṁ stabdhāṁ durmadāṁ nītvā māyāgāṁ tilaśaḥ śaraiḥ|
 ātmayogabalenemā dhārayiṣyāmyahaṁ prajāḥ||
+en: You are stubborn and mad with pride, and you are a cow made of māyā. I will cut you with my arrows into pieces as small as sesame seeds, and I will support these subjects by the strength of my own yoga.
+tel: నీవు స్తబ్ధురాలవు, దుర్మదము కలదానవు, మాయచే ఆవు రూపము పొందినదానవు. నిన్ను బాణములచే నువ్వుగింజలంత ముక్కలుగా చేసి, నా యోగ బలముచే ఈ ప్రజలను నేను భరించుదును.
+hi: तू स्तब्ध और दुर्मद है, और माया से गो बनी है। तुझे बाणों से तिल-तिल करके, मैं अपने योगबल से इस प्रजा को धारण करूँगा।
 
 --- verse 28 ---
 deva:
@@ -262,6 +343,9 @@ deva:
 iast:
 evaṁ manyumayīṁ mūrtiṁ kṛtāntamiva bibhratam|
 praṇatā prāñjaliḥ prāha mahī saṁjātavepathuḥ||
+en: He bore a form made of anger, like the god of death himself. The Earth, shaking, bowed down before him and spoke with her palms joined.
+tel: ఆయన మన్యుమయమైన మూర్తిని, కృతాంతునివలె ధరించియుండెను. వణకుచున్న మహి ఆయనకు ప్రణమించి, చేతులు జోడించి పలికెను.
+hi: वे मन्युमयी मूर्ति को, कृतान्त के समान, धारण किये हुए थे। काँपती हुई मही ने प्रणाम कर, हाथ जोड़कर कहा।
 
 --- verse 29 ---
 deva:
@@ -276,6 +360,9 @@ namaḥ parasmai puruṣāya māyayā
 vinyastanānātanave guṇātmane|
 namaḥ svarūpānubhavena nirdhuta-
 dravyakriyākārakavibhramormaye||
+en: The Earth said: Salutation to the supreme Puruṣa, who by māyā has taken on many bodies, who is the self of the guṇas. Salutation to him in whom the waves of confusion about substance, action and agent have been washed away by the experience of his own nature.
+tel: ధర ఇట్లు పలికెను: మాయచే అనేక శరీరములను ధరించిన, గుణములకు ఆత్మయైన పరమ పురుషునికి నమస్కారము. తన స్వరూపానుభవముచే ద్రవ్యము, క్రియ, కారకము అను భ్రమల కెరటములు కడిగివేయబడిన ఆయనకు నమస్కారము.
+hi: धरा ने कहा: माया से अनेक तनुओं को धारण करने वाले, गुणों के आत्मा परम पुरुष को नमस्कार। जिनमें स्वरूप के अनुभव से द्रव्य, क्रिया और कारक के भ्रम की ऊर्मियाँ धुल गयी हैं, उन्हें नमस्कार।
 
 --- verse 30 ---
 deva:
@@ -288,6 +375,9 @@ yenāhamātmāyatanaṁ vinirmitā
 dhātrā yato'yaṁ guṇasargasaṅgrahaḥ|
 sa eva māṁ hantumudāyudhaḥ svarā-
 ḍupasthito'nyaṁ śaraṇaṁ kamāśraye||
+en: By that creator I was made the dwelling place of beings, and from him comes this gathering of the creation of the guṇas. That same self-ruler has come near with his weapon raised to kill me. What other shelter shall I seek?
+tel: ఆ ధాతచే నేను ప్రాణులకు నెలవుగా నిర్మింపబడితిని, ఆయన నుండియే ఈ గుణ సర్గ సంగ్రహము కలిగెను. ఆ స్వరాట్టే నన్ను చంపుటకు ఆయుధము ఎత్తి వచ్చియున్నాడు. నేను వేఱే ఏ శరణమును ఆశ్రయింతును?
+hi: उस धाता ने मुझे प्राणियों का आयतन बनाया, और उसी से यह गुण-सर्ग का संग्रह हुआ। वही स्वराट् मुझे मारने के लिये आयुध उठाकर उपस्थित है। मैं दूसरी किस शरण को लूँ?
 
 --- verse 31 ---
 deva:
@@ -300,6 +390,9 @@ ya etadādāvasṛjaccarācaraṁ
 svamāyayā''tmāśrayayāvitarkyayā|
 tayaiva so'yaṁ kila goptumudyataḥ
 kathaṁ nu māṁ dharmaparo jighāṁsati||
+en: He created this world of moving and unmoving things in the beginning by his own māyā, which rests in himself and cannot be thought out. By that same māyā he is said to be ready now to protect it. How then does he, who is set upon dharma, wish to kill me?
+tel: తనలోనే నిలిచిన, ఆలోచనకు అందని తన మాయచే ఆయన చరాచరమైన ఈ జగత్తును ఆదియందు సృష్టించెను. ఆ మాయచేతనే ఇప్పుడు రక్షించుటకు సిద్ధముగా ఉన్నాడని చెప్పుదురు. ధర్మపరుడైన ఆయన నన్ను ఏల చంపగోరుచున్నాడు?
+hi: उन्होंने आदि में अपनी, अपने में ही आश्रित और अचिन्त्य माया से इस चराचर जगत् की रचना की। उसी माया से वे अब रक्षा करने को उद्यत कहे जाते हैं। तब धर्मपर होकर वे मुझे क्यों मारना चाहते हैं?
 
 --- verse 32 ---
 deva:
@@ -312,6 +405,9 @@ nūnaṁ bateśasya samīhitaṁ janai-
 stanmāyayā durjayayākṛtātmabhiḥ|
 na lakṣyate yastvakarodakārayad-
 yo'neka ekaḥ parataśca īśvaraḥ||
+en: Surely the purpose of the Lord is not seen by people whose minds are not disciplined, because his māyā is hard to overcome. He is the one who acted and who caused others to act, who is many and one and beyond all, the ruler.
+tel: అకృతాత్ములైన జనులకు, జయింపరాని ఆయన మాయచే, ఈశ్వరుని సమీహితము కనబడదు. ఆయనే చేసెను, ఆయనే చేయించెను; ఆయన అనేకుడు, ఒక్కడు, అన్నిటికి అతీతుడు, ఈశ్వరుడు.
+hi: अकृतात्मा जनों को, उनकी दुर्जय माया के कारण, ईश्वर का समीहित दिखाई नहीं देता। जिसने स्वयं किया और करवाया, जो अनेक है, एक है, और सबसे परे है, वही ईश्वर है।
 
 --- verse 33 ---
 deva:
@@ -324,6 +420,9 @@ sargādi yo'syānuruṇaddhi śaktibhi-
 rdravyakriyākārakacetanātmabhiḥ|
 tasmai samunnaddhaniruddhaśaktaye
 namaḥ parasmai puruṣāya vedhase||
+en: He carries on the creation of this world and the rest by his powers, which take the form of substance, action, agent and consciousness. To him, whose powers are now sent forth and now held back, to the supreme Puruṣa, the maker, salutation.
+tel: ద్రవ్యము, క్రియ, కారకము, చేతనము అను రూపములు కలిగిన తన శక్తులచే ఈ జగత్తు సృష్టి మొదలైనవానిని ఆయన నడపుచున్నాడు. సమున్నద్ధములును నిరుద్ధములును అయిన శక్తులు కలవానికి, పరమ పురుషునికి, వేధసునికి నమస్కారము.
+hi: द्रव्य, क्रिया, कारक और चेतन रूप अपनी शक्तियों से वे इस जगत् की सृष्टि आदि को चलाते हैं। जिनकी शक्तियाँ कभी फैलायी और कभी रोकी जाती हैं, उन परम पुरुष वेधा को नमस्कार।
 
 --- verse 34 ---
 deva:
@@ -336,6 +435,9 @@ sa vai bhavānātmavinirmitaṁ jagad
 bhūtendriyāntaḥkaraṇātmakaṁ vibho|
 saṁsthāpayiṣyannaja māṁ rasātalā-
 dabhyujjahārāmbhasa ādisūkaraḥ||
+en: O Lord, O unborn one, you yourself wished to establish firmly the world you had made, which consists of the elements, the senses and the inner organ. As the first boar you lifted me up out of the water from Rasātala.
+tel: ఓ విభో, ఓ అజా, భూతములు, ఇంద్రియములు, అంతఃకరణము అను రూపము కలిగిన, తాను నిర్మించిన జగత్తును స్థిరముగా నిలుపగోరి, మీరే ఆదిసూకరముగా రసాతలము నుండి నీటిలో నుండి నన్ను పైకి ఎత్తితిరి.
+hi: हे विभो, हे अज, भूत, इन्द्रिय और अन्तःकरण रूप अपने बनाये जगत् को स्थिर करने की इच्छा से, आपने ही आदिसूकर रूप में रसातल से जल में से मुझे ऊपर उठाया।
 
 --- verse 35 ---
 deva:
@@ -348,6 +450,9 @@ apāmupasthe mayi nāvyavasthitāḥ
 prajā bhavānadya rirakṣiṣuḥ kila|
 sa vīramūrtiḥ samabhūddharādharo
 yo māṁ payasyugraśaro jighāṁsasi||
+en: I was set as a boat upon the lap of the waters, and the subjects stood upon me. Today you wish to protect them. He who became the supporter of the earth has taken the form of this hero, and you now wish to kill me with a cruel arrow for the sake of milk.
+tel: నీటి ఒడిలో నావగా నిలిపిన నాపై ప్రజలు నిలిచియున్నారు. ఈ దినమున మీరు వారిని రక్షింపగోరుచున్నారు. ధరాధరుడైనవాడే ఈ వీరమూర్తి అయినాడు; పాలకోసము ఉగ్రమైన బాణముతో మీరు ఇప్పుడు నన్ను చంపగోరుచున్నారు.
+hi: जल की गोद में नौका रूप मुझ पर प्रजा स्थित है। आज आप उसकी रक्षा करना चाहते हैं। जो धराधर थे, वही यह वीरमूर्ति बने हैं; और दूध के लिये उग्र बाण से आप अब मुझे मारना चाहते हैं।
 
 --- verse 36 ---
 deva:
@@ -360,9 +465,15 @@ nūnaṁ janairīhitamīśvarāṇā-
 masmadvidhaistadguṇasargamāyayā|
 na jñāyate mohitacittavartmabhi-
 stebhyo namo vīrayaśaskarebhyaḥ||
+en: Surely the deeds of the lords are not known by those like us, whose ways of mind are deluded by the māyā of the creation of his guṇas. Salutation to them, who bring heroic fame to pass.
+tel: ఆయన గుణ సర్గ మాయచే మోహితమైన చిత్త మార్గములు కలిగిన మా వంటివారికి ఈశ్వరులు చేసినది తెలియదు. వీరయశస్సును కలిగించు వారికి నమస్కారము.
+hi: उनकी गुण-सर्ग माया से मोहित चित्त के मार्ग वाले हम जैसे लोग ईश्वरों के किये हुए को नहीं जानते। वीर यश को करने वाले उन्हें नमस्कार।
 
 --- verse none ---
 deva:
 इति श्रीमद्भागवते महापुराणे पारमहंस्यां संहितायां चतुर्थस्कन्धे पृथुविजये धरित्रीनिग्रहो नाम सप्तदशोऽध्यायः॥ १७॥
 iast:
 iti śrīmadbhāgavate mahāpurāṇe pāramahaṁsyāṁ saṁhitāyāṁ caturthaskandhe pṛthuvijaye dharitrīnigraho nāma saptadaśo'dhyāyaḥ|| 17||
+en: Thus ends the seventeenth adhyāya, named the chastisement of the Earth, in the Victory of Pṛthu, in the fourth skandha of the Śrīmad Bhāgavata Mahāpurāṇa, the saṁhitā of the paramahaṁsas.
+tel: ఇది శ్రీమద్భాగవత మహాపురాణమునందు, పరమహంసల సంహితయందు, చతుర్థస్కంధమునందు, పృథువిజయమున ధరిత్రీనిగ్రహము అను సప్తదశాధ్యాయము.
+hi: इस प्रकार श्रीमद्भागवत महापुराण की परमहंसों की संहिता के चतुर्थ स्कन्ध में, पृथुविजय में, धरित्रीनिग्रह नामक सत्रहवाँ अध्याय समाप्त हुआ।
