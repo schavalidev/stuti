@@ -9,7 +9,7 @@ Type: Purāṇa (an adhyāya of the Śrīmad Bhāgavata, Skandha 3)
 
 Source / recension: Base text and authority: the Gītā Press, Gorakhpur Śrīmadbhāgavata Mahāpurāṇa with Hindi translation, Part 1 (Gītā Press code 26), archive.org item `shrimadbhagwat-mahapuran-bhag-1`, printed pages 380–384; the PDF page numbers are the printed ones. The PDF carries the typesetter's own text layer in the Chanakya font encoding, and the text was decoded from it by machine with `bin/bhagavata/chanakya.py`, not read off OCR or typed. The decoder was checked against GRETIL over all twelve skandhas before any file was written, and the differences that remain were sampled and found to be readings of the two editions. Second witness: GRETIL's `sa_bhAgavatapurANa.xml` (IAST, contributed by Ulrich Stiehl), a separate editorial lineage, compared verse by verse by machine. The TTD edition with the commentaries of Śrīdhara, Vīrarāghava and Vijayadhvaja (archive.org `Bhagavata_Purana_With_Multiple_Commentaries_TTD_Critical_Edition`) is the third witness where one is needed; it was not read for this file. The IAST was generated mechanically from the Devanāgarī with `bin/dev2iast.py`.
 
-Recension note: Text-only file, written 1 Oct 2026 at the user's instruction to lay down the whole Bhāgavata first: the English, Telugu and Hindi meanings are still to be added, and the witnesses' differences listed here have been recorded by machine and not yet adjudicated. The print is followed throughout. The print numbers 45 verses and GRETIL numbers 45. Of the 45 verses GRETIL has under the same number, 42 agree with the print letter for letter once spacing and the spelling of nasals are set aside; the rest differ: 17, 26, 33. The edition's footnotes give these older printed readings (प्रा० पा०), which are not bracketed into the line: at 2, रतः; at 8, च; at 30, विदस्तेभ्यस्ततश्चोभयवेदिनः; at 30, पादास्ततो. Spacing is the print's, as its text layer gives it; in a few places justification has left a space inside a word, and these are still to be closed when the verse is read. The speaker lines (श्रीशुक उवाच and the others) are printed in italic above the verse they introduce, and are given as its first line.
+Recension note: Meanings written 22 Oct 2026 (session S78). The differences between the witnesses listed below were read as the verses were glossed; except where this note says otherwise, each is a spelling, a sandhi or a word order of the two editions, none of them changes the sense, and the print's reading therefore stands unbracketed. The print is followed throughout. The print numbers 45 verses and GRETIL numbers 45. Of the 45 verses GRETIL has under the same number, 42 agree with the print letter for letter once spacing and the spelling of nasals are set aside; the rest differ: 17, 26, 33. The edition's footnotes give these older printed readings (प्रा० पा०), which are not bracketed into the line: at 2, रतः; at 8, च; at 30, विदस्तेभ्यस्ततश्चोभयवेदिनः; at 30, पादास्ततो. Spacing is the print's, as its text layer gives it. The speaker lines (श्रीशुक उवाच and the others) are printed in italic above the verse they introduce, and are given as its first line. A footnote's numeral keys it to one word, and which word that is cannot be told from the note alone, so those readings stay unbracketed until the page itself is read. Three words were put right as the verses were read. At verse 20 justification had left a space inside आवृङ्क्ते, and it is closed here. At verses 28 and 30 the opposite had happened and the space between two words was lost, giving जीवाःश्रेष्ठा and तत्रततश्, which cannot be read as they stand; the space is restored in each. GRETIL agrees with all three corrected readings.
 
 Verse count: 45, plus the closing colophon printed unnumbered.
 
@@ -24,6 +24,9 @@ iast:
 devahūtiruvāca
 lakṣaṇaṁ mahadādīnāṁ prakṛteḥ puruṣasya ca|
 svarūpaṁ lakṣyate'mīṣāṁ yena tatpāramārthikam||
+en: Devahūti said: The marks of mahat and the rest, of prakṛti and of puruṣa, by which the true nature of these is known as it really is —
+tel: దేవహూతి పలికెను: మహత్తు మొదలైనవాటి, ప్రకృతి, పురుషుల లక్షణములను, వాటి యథార్థమైన స్వరూపము ఏ లక్షణములచే తెలియబడునో వాటిని —
+hi: देवहूति ने कहा: महत् आदि के, प्रकृति के और पुरुष के लक्षण, जिनसे इनका पारमार्थिक स्वरूप लक्षित होता है —
 
 --- verse 2 ---
 deva:
@@ -32,6 +35,9 @@ deva:
 iast:
 yathā sāṁkhyeṣu kathitaṁ yanmūlaṁ tatpracakṣate|
 bhaktiyogasya me mārgaṁ brūhi vistaraśaḥ prabho||
+en: — as they have been told in the Sāṁkhya, and as its root is declared to be: now, my Lord, tell me at length the path of bhaktiyoga.
+tel: — సాంఖ్యములయందు చెప్పబడినట్లు, దాని మూలము ఏదని చెప్పుదురో అట్లు; ప్రభూ, ఇప్పుడు భక్తియోగము మార్గమును నాకు విస్తరముగా చెప్పుము.
+hi: — जैसे सांख्यों में कहे गये हैं, और जिसे उनका मूल कहते हैं; हे प्रभो, अब मुझे भक्तियोग का मार्ग विस्तार से कहिये।
 
 --- verse 3 ---
 deva:
@@ -40,6 +46,9 @@ deva:
 iast:
 virāgo yena puruṣo bhagavan sarvato bhavet|
 ācakṣva jīvalokasya vividhā mama saṁsṛtīḥ||
+en: Blessed one, tell me that by which the puruṣa becomes free of attachment to everything. And tell me of the many rounds of birth of the world of living beings.
+tel: భగవానుడా, పురుషుడు అన్నిటి నుండి విరాగుడు అగుటకు ఏది కారణమో దానిని చెప్పుము. జీవలోకము వివిధమైన సంసృతులను నాకు చెప్పుము.
+hi: हे भगवन्, वह कहिये जिससे पुरुष सब ओर से विराग को प्राप्त हो। और जीवलोक की विविध संसृतियाँ मुझे कहिये।
 
 --- verse 4 ---
 deva:
@@ -48,6 +57,9 @@ deva:
 iast:
 kālasyeśvararūpasya pareṣāṁ ca parasya te|
 svarūpaṁ bata kurvanti yaddhetoḥ kuśalaṁ janāḥ||
+en: Tell me also the true nature of time, which is your form as the Lord and is higher than the highest. It is for its sake that people do what is good.
+tel: ఈశ్వర రూపమైన, పరులకును పరమైన నీ కాలము స్వరూపమును కూడ చెప్పుము. దాని కారణముననే జనులు మేలును చేయుచున్నారు.
+hi: ईश्वररूप और परों से भी पर आपके काल का स्वरूप भी कहिये। उसी के कारण लोग कुशल कर्म करते हैं।
 
 --- verse 5 ---
 deva:
@@ -60,6 +72,9 @@ lokasya mithyābhimateracakṣuṣa-
 ściraṁ prasuptasya tamasyanāśraye|
 śrāntasya karmasvanuviddhayā dhiyā
 tvamāvirāsīḥ kila yogabhāskaraḥ||
+en: You have appeared as the sun of yoga for the world, which holds what is false to be true, which has no eye, which has long slept in a darkness that gives no shelter, and which is worn out by a mind bound up in works.
+tel: అసత్యమును సత్యమని భావించిన, కన్ను లేని, ఆశ్రయము లేని చీకటియందు చిరకాలము నిద్రించిన, కర్మలతో కూడిన బుద్ధిచే అలసిన ఈ లోకమునకు నీవు యోగ భాస్కరుడవై ప్రకటమైతివి.
+hi: जो मिथ्या को सत्य मानता है, जिसके नेत्र नहीं हैं, जो आश्रयहीन अन्धकार में चिरकाल से सोया है, और जो कर्मों में बँधी बुद्धि से श्रान्त है — उस लोक के लिये आप योग-भास्कर होकर प्रकट हुए।
 
 --- verse 6 ---
 deva:
@@ -70,6 +85,9 @@ iast:
 maitreya uvāca
 iti māturvacaḥ ślakṣṇaṁ pratinandya mahāmuniḥ|
 ābabhāṣe kuruśreṣṭha prītastāṁ karuṇārditaḥ||
+en: Maitreya said: Best of the Kurus, the great sage welcomed his mother's gentle words. He was pleased, and he was moved by pity for her, and he spoke.
+tel: మైత్రేయుడు పలికెను: కురుశ్రేష్ఠా, మహాముని తన తల్లి మృదువైన మాటను అభినందించెను. ప్రీతి పొంది, ఆమెపై కరుణ కలిగి ఆయన ఇట్లు పలికెను.
+hi: मैत्रेय ने कहा: हे कुरुश्रेष्ठ, महामुनि ने अपनी माता के श्लक्ष्ण वचन का अभिनन्दन किया। वे प्रसन्न हुए, और करुणा से द्रवित होकर उनसे बोले।
 
 --- verse 7 ---
 deva:
@@ -80,6 +98,9 @@ iast:
 śrībhagavānuvāca
 bhaktiyogo bahuvidho mārgairbhāmini bhāvyate|
 svabhāvaguṇamārgeṇa puṁsāṁ bhāvo vibhidyate||
+en: The blessed Lord said: Lady, bhaktiyoga is of many kinds and is shown by many ways. The feeling of men is divided according to the way of their own nature and their guṇas.
+tel: శ్రీభగవంతుడు పలికెను: భామినీ, భక్తియోగము అనేక విధములు; అనేక మార్గములచే భావింపబడును. తమ స్వభావము, గుణముల మార్గము ప్రకారము మనుష్యుల భావము వేరువేరుగా అగును.
+hi: श्रीभगवान् ने कहा: हे भामिनि, भक्तियोग बहुत प्रकार का है और अनेक मार्गों से भाया जाता है। अपने स्वभाव और गुणों के मार्ग के अनुसार पुरुषों का भाव भिन्न हो जाता है।
 
 --- verse 8 ---
 deva:
@@ -88,6 +109,9 @@ deva:
 iast:
 abhisandhāya yo hiṁsāṁ dambhaṁ mātsaryameva vā|
 saṁrambhī bhinnadṛgbhāvaṁ mayi kuryātsa tāmasaḥ||
+en: One who, with anger in him, worships me with an eye that sees difference, having injury, pride or envy in view, is tāmasa.
+tel: హింసను, దంభమును, లేక మాత్సర్యమును ఉద్దేశించి, కోపము కలిగినవాడై, భేద దృష్టితో నాయందు భావము చేయువాడు తామసుడు.
+hi: जो हिंसा, दम्भ अथवा मात्सर्य का अभिसन्धान करके, संरम्भ से भरा हुआ, भिन्न दृष्टि से मुझमें भाव करता है, वह तामस है।
 
 --- verse 9 ---
 deva:
@@ -96,6 +120,9 @@ deva:
 iast:
 viṣayānabhisandhāya yaśa aiśvaryameva vā|
 arcādāvarcayedyo māṁ pṛthagbhāvaḥ sa rājasaḥ||
+en: One who worships me in an image and the rest, having in view the objects of sense, or fame, or power, is of divided feeling, and he is rājasa.
+tel: విషయములను, కీర్తిని, లేక ఐశ్వర్యమును ఉద్దేశించి నన్ను అర్చా మొదలైనవాటియందు పూజించువాడు పృథక్ భావము కలవాడు; అతడు రాజసుడు.
+hi: जो विषयों का, यश का अथवा ऐश्वर्य का अभिसन्धान करके मुझे अर्चा आदि में पूजता है, वह पृथक् भाववाला है; वह राजस है।
 
 --- verse 10 ---
 deva:
@@ -104,6 +131,9 @@ deva:
 iast:
 karmanirhāramuddiśya parasmin vā tadarpaṇam|
 yajedyaṣṭavyamiti vā pṛthagbhāvaḥ sa sāttvikaḥ||
+en: One who worships with a view to wiping out his karma, or offers that worship to the Supreme, or thinks only that worship ought to be done, is of divided feeling, and he is sāttvika.
+tel: కర్మను తొలగించుకొనుటకు ఉద్దేశించి, లేక ఆ పూజను పరమాత్మకు అర్పించి, లేక పూజింపవలసినదని మాత్రమే తలచి పూజించువాడు పృథక్ భావము కలవాడు; అతడు సాత్త్వికుడు.
+hi: जो कर्म के निर्हार के उद्देश्य से, अथवा उस अर्पण को परम में समर्पित करके, अथवा केवल यह मानकर कि यजन करना चाहिये, यजन करता है, वह पृथक् भाववाला है; वह सात्त्विक है।
 
 --- verse 11 ---
 deva:
@@ -112,6 +142,9 @@ deva:
 iast:
 madguṇaśrutimātreṇa mayi sarvaguhāśaye|
 manogatiravicchinnā yathā gaṅgāmbhaso'mbudhau||
+en: At the mere hearing of my qualities, the movement of the mind towards me, who dwell in the cave of all, is unbroken, as the water of the Gaṅgā flows to the sea.
+tel: నా గుణములను వినుట మాత్రముచే, అందరి హృదయ గుహయందు ఉన్న నా వైపు మనస్సు గతి ఎడము లేనిదగును; గంగ జలము సముద్రము వైపు పోవునట్లు.
+hi: मेरे गुणों के श्रवण मात्र से, सब की गुहा में शयन करनेवाले मुझमें मन की गति अविच्छिन्न हो जाती है, जैसे गंगा का जल समुद्र की ओर जाता है।
 
 --- verse 12 ---
 deva:
@@ -120,6 +153,9 @@ deva:
 iast:
 lakṣaṇaṁ bhaktiyogasya nirguṇasya hyudāhṛtam|
 ahaitukyavyavahitā yā bhaktiḥ puruṣottame||
+en: This is said to be the mark of the bhaktiyoga which is without guṇas: that bhakti towards the highest puruṣa which asks for no cause and has nothing standing in its way.
+tel: నిర్గుణమైన భక్తియోగము లక్షణము ఇది అని చెప్పబడినది: పురుషోత్తమునియందు కారణమును కోరని, ఎడము లేని భక్తి.
+hi: निर्गुण भक्तियोग का लक्षण यह कहा गया है: पुरुषोत्तम में वह भक्ति जो अहैतुकी है और अव्यवहित है।
 
 --- verse 13 ---
 deva:
@@ -128,6 +164,9 @@ deva:
 iast:
 sālokyasārṣṭisāmīpyasārūpyaikatvamapyuta|
 dīyamānaṁ na gṛhṇanti vinā matsevanaṁ janāḥ||
+en: To dwell in the same world as I, to have equal power, to be near me, to have my own form, and even oneness with me — these are offered, and such people do not take them, if the service of me is not in them.
+tel: నా లోకమునందు నివసించుట, సమానమైన ఐశ్వర్యము, నా సమీపము, నా రూపము, ఒక్కటి అగుట — ఇవి ఇచ్చినను, నా సేవ లేనిచో ఆ జనులు వాటిని స్వీకరించరు.
+hi: सालोक्य, सार्ष्टि, सामीप्य, सारूप्य और एकत्व भी — ये दिये जाने पर भी, मेरे सेवन के बिना वे जन इन्हें ग्रहण नहीं करते।
 
 --- verse 14 ---
 deva:
@@ -136,6 +175,9 @@ deva:
 iast:
 sa eva bhaktiyogākhya ātyantika udāhṛtaḥ|
 yenātivrajya triguṇaṁ madbhāvāyopapadyate||
+en: That alone is called bhaktiyoga, and it is said to be the final state. By it one goes beyond the three guṇas and becomes fit for my own being.
+tel: అదియే భక్తియోగము అను పేరుతో ఆత్యంతికమని చెప్పబడినది. దానిచే త్రిగుణమును దాటి నా భావమునకు యోగ్యుడగును.
+hi: वही भक्तियोग नामवाला आत्यन्तिक कहा गया है। उसी से त्रिगुण को पार करके वह मेरे भाव के योग्य हो जाता है।
 
 --- verse 15 ---
 deva:
@@ -144,6 +186,9 @@ deva:
 iast:
 niṣevitenānimittena svadharmeṇa mahīyasā|
 kriyāyogena śastena nātihiṁsreṇa nityaśaḥ||
+en: By one's own dharma, which is great and is practised without any motive; by the yoga of action, which is blameless and does not do much injury, performed every day;
+tel: ఏ కోరికయు లేకుండ ఆచరింపబడిన గొప్ప స్వధర్మముచే; దోషము లేని, ఎక్కువ హింస లేని క్రియాయోగముచే, ప్రతి దినము చేయబడినదిచే;
+hi: निमित्त के बिना निषेवित महान् स्वधर्म से; प्रशस्त और अति हिंसा से रहित क्रियायोग से, जो नित्य किया जाय;
 
 --- verse 16 ---
 deva:
@@ -152,6 +197,9 @@ deva:
 iast:
 maddhiṣṇyadarśanasparśapūjāstutyabhivandanaiḥ|
 bhūteṣu madbhāvanayā sattvenāsaṅgamena ca||
+en: by seeing, touching, worshipping, praising and saluting my shrines; by thinking of me in all beings; by sattva, and by freedom from attachment;
+tel: నా స్థానములను చూచుటచే, తాకుటచే, పూజించుటచే, స్తుతించుటచే, నమస్కరించుటచే; సర్వ భూతములయందు నన్ను భావించుటచే; సత్త్వముచే, అసంగముచే;
+hi: मेरे धिष्ण्यों के दर्शन, स्पर्श, पूजा, स्तुति और अभिवन्दन से; भूतों में मेरी भावना से; सत्त्व से और असंग से;
 
 --- verse 17 ---
 deva:
@@ -160,6 +208,9 @@ deva:
 iast:
 mahatā bahumānena dīnānāmanukampayā|
 maitryā caivātmatulyeṣu yamena niyamena ca||
+en: by great respect; by pity for those who are poor; by friendship towards those who are equal to oneself; by yama and by niyama;
+tel: గొప్ప గౌరవముచే; దీనులపై కరుణచే; తనతో సమానమైన వారియందు మైత్రిచే; యమముచే, నియమముచే;
+hi: महान् बहुमान से; दीनों पर अनुकम्पा से; अपने तुल्य जनों में मैत्री से; यम से और नियम से;
 
 --- verse 18 ---
 deva:
@@ -168,6 +219,9 @@ deva:
 iast:
 ādhyātmikānuśravaṇānnāmasaṅkīrtanācca me|
 ārjavenāryasaṅgena nirahaṁkriyayā tathā||
+en: by hearing of what pertains to the Self; by the singing of my name; by straightness; by the company of noble men; and by freedom from the sense of I;
+tel: ఆధ్యాత్మికమును వినుటచే; నా నామమును కీర్తించుటచే; ఆర్జవముచే; ఆర్యుల సంగముచే; అహంకారము లేకుండుటచే;
+hi: आध्यात्मिक के अनुश्रवण से; मेरे नाम के संकीर्तन से; आर्जव से; आर्यों के संग से; और निरहंकार से;
 
 --- verse 19 ---
 deva:
@@ -176,14 +230,20 @@ deva:
 iast:
 maddharmaṇo guṇairetaiḥ parisaṁśuddha āśayaḥ|
 puruṣasyāñjasābhyeti śrutamātraguṇaṁ hi mām||
+en: by these qualities of one who follows my dharma, the heart of the puruṣa is wholly cleansed, and it goes straight to me, who am gained by the mere hearing of my qualities.
+tel: నా ధర్మమును అనుసరించువాని ఈ గుణములచే పురుషుని ఆశయము పూర్తిగా శుద్ధమగును; గుణములను వినుట మాత్రముచే పొందబడు నా వద్దకు అది సరాసరి చేరును.
+hi: मेरे धर्मवाले पुरुष के इन गुणों से उसका आशय परिसंशुद्ध हो जाता है, और वह श्रवण मात्र से प्राप्त होनेवाले मुझे अंजस ही प्राप्त कर लेता है।
 
 --- verse 20 ---
 deva:
-यथा वातरथो घ्राणमावृङ् क्ते गन्ध आशयात्।
+यथा वातरथो घ्राणमावृङ्क्ते गन्ध आशयात्।
 एवं योगरतं चेत आत्मानमविकारि यत्॥
 iast:
-yathā vātaratho ghrāṇamāvṛṅ kte gandha āśayāt|
+yathā vātaratho ghrāṇamāvṛṅkte gandha āśayāt|
 evaṁ yogarataṁ ceta ātmānamavikāri yat||
+en: As a smell, borne on the chariot of the wind, reaches the organ of smell from the place where it lies, so the mind that delights in yoga reaches the Self, which does not change.
+tel: వాయువు రథముపై వచ్చిన గంధము తన స్థానము నుండి ఘ్రాణేంద్రియమును చేరునట్లే, యోగమునందు ఆసక్తమైన చిత్తము మార్పు లేని ఆత్మను చేరును.
+hi: जैसे वायु के रथ पर आया हुआ गन्ध अपने आशय से घ्राण को प्राप्त करता है, वैसे ही योग में रत चित्त अविकारी आत्मा को प्राप्त करता है।
 
 --- verse 21 ---
 deva:
@@ -192,6 +252,9 @@ deva:
 iast:
 ahaṁ sarveṣu bhūteṣu bhūtātmāvasthitaḥ sadā|
 tamavajñāya māṁ martyaḥ kurute'rcāviḍambanam||
+en: I am always present in all beings as their inner Self. Overlooking that, a mortal makes a mockery of worship offered to me.
+tel: నేను సర్వ భూతములయందు భూతాత్మగా ఎల్లప్పుడును ఉన్నాను. దానిని అలక్ష్యము చేసి, మనుష్యుడు నాయందు అర్చా విడంబనము చేయుచున్నాడు.
+hi: मैं सब भूतों में भूतात्मा रूप से सदा अवस्थित हूँ। उसकी अवज्ञा करके मर्त्य मनुष्य मेरी अर्चा का विडम्बन करता है।
 
 --- verse 22 ---
 deva:
@@ -200,6 +263,9 @@ deva:
 iast:
 yo māṁ sarveṣu bhūteṣu santamātmānamīśvaram|
 hitvārcāṁ bhajate mauḍhyādbhasmanyeva juhoti saḥ||
+en: He who leaves me aside, the Lord, the Self present in all beings, and out of folly worships only the image, pours his oblation into ashes.
+tel: సర్వ భూతములయందు ఉన్న ఆత్మను, ఈశ్వరుడైన నన్ను విడిచి, మౌఢ్యముచే అర్చను మాత్రమే పూజించువాడు బూడిదయందే హోమము చేయుచున్నాడు.
+hi: जो सब भूतों में स्थित आत्मा और ईश्वर मुझे छोड़कर मूढ़ता से केवल अर्चा को भजता है, वह भस्म में ही हवन करता है।
 
 --- verse 23 ---
 deva:
@@ -208,6 +274,9 @@ deva:
 iast:
 dviṣataḥ parakāye māṁ mānino bhinnadarśinaḥ|
 bhūteṣu baddhavairasya na manaḥ śāntimṛcchati||
+en: The mind of one who hates me in another's body, who is proud, who sees difference, and who holds enmity towards beings, does not come to peace.
+tel: పర శరీరమునందు నన్ను ద్వేషించు, గర్వించు, భేదము చూచు, భూతములయందు వైరము కట్టుకొనిన వాని మనస్సు శాంతిని పొందదు.
+hi: जो पर के शरीर में मुझसे द्वेष करता है, जो मानी है, जो भेद देखता है, और जिसने भूतों में वैर बाँध लिया है, उसका मन शान्ति को नहीं प्राप्त होता।
 
 --- verse 24 ---
 deva:
@@ -216,6 +285,9 @@ deva:
 iast:
 ahamuccāvacairdravyaiḥ kriyayotpannayānaghe|
 naiva tuṣye'rcito'rcāyāṁ bhūtagrāmāvamāninaḥ||
+en: Sinless one, I may be worshipped in an image with substances high and low and with rites duly performed; yet I am not pleased at all with one who slights the whole body of beings.
+tel: అనఘా, ఉచ్చ నీచ ద్రవ్యములచే, చేయబడిన క్రియలచే అర్చయందు పూజింపబడినను, భూత సమూహమును అవమానించువానియందు నేను సంతోషించనే లేదు.
+hi: हे अनघे, ऊँचे-नीचे द्रव्यों से और विधिपूर्वक की गयी क्रिया से अर्चा में पूजित होने पर भी, भूत-समूह का अपमान करनेवाले से मैं तुष्ट नहीं होता।
 
 --- verse 25 ---
 deva:
@@ -224,6 +296,9 @@ deva:
 iast:
 arcādāvarcayettāvadīśvaraṁ māṁ svakarmakṛt|
 yāvanna veda svahṛdi sarvabhūteṣvavasthitam||
+en: One who does his own work should worship me, the Lord, in an image and the rest only so long as he does not know me present in his own heart and in all beings.
+tel: తన కర్మను చేయువాడు, తన హృదయమునందును సర్వ భూతములయందును ఉన్న నన్ను ఎరుగునంత వరకే, ఈశ్వరుడైన నన్ను అర్చా మొదలైనవాటియందు పూజించవలెను.
+hi: अपना कर्म करनेवाला पुरुष मुझ ईश्वर को अर्चा आदि में तब तक पूजे, जब तक वह मुझे अपने हृदय में और सब भूतों में अवस्थित नहीं जान लेता।
 
 --- verse 26 ---
 deva:
@@ -232,6 +307,9 @@ deva:
 iast:
 ātmanaśca parasyāpi yaḥ karotyantarodaram|
 tasya bhinnadṛśo mṛtyurvidadhe bhayamulbaṇam||
+en: Death lays grievous fear upon one who sees difference, who makes a division between his own self and another.
+tel: తన ఆత్మకు, పరునికి మధ్య భేదమును కల్పించు, భేదమును చూచు వానికి మృత్యువు ఉల్బణమైన భయమును కలిగించుచున్నది.
+hi: जो अपने और पर के बीच अन्तर करता है, उस भिन्नदृष्टिवाले को मृत्यु उल्बण भय देती है।
 
 --- verse 27 ---
 deva:
@@ -240,14 +318,20 @@ deva:
 iast:
 atha māṁ sarvabhūteṣu bhūtātmānaṁ kṛtālayam|
 arhayeddānamānābhyāṁ maitryābhinnena cakṣuṣā||
+en: Therefore he should honour me, who have made my dwelling in all beings as their inner Self, with gifts and with respect, with friendship, and with an eye that sees no difference.
+tel: అందుచే సర్వ భూతములయందు భూతాత్మగా నివాసము చేసికొనిన నన్ను, దానముచే, మానముచే, మైత్రిచే, భేదము చూడని చూపుచే పూజించవలెను.
+hi: इसलिये सब भूतों में भूतात्मा रूप से आलय बना चुके मुझे दान और मान से, मैत्री से, और अभिन्न दृष्टि से अर्हण करे।
 
 --- verse 28 ---
 deva:
-जीवाःश्रेष्ठा ह्यजीवानां ततः प्राणभृतः शुभे।
+जीवाः श्रेष्ठा ह्यजीवानां ततः प्राणभृतः शुभे।
 ततः सचित्ताः प्रवरास्ततश्चेन्द्रियवृत्तयः॥
 iast:
-jīvāḥśreṣṭhā hyajīvānāṁ tataḥ prāṇabhṛtaḥ śubhe|
+jīvāḥ śreṣṭhā hyajīvānāṁ tataḥ prāṇabhṛtaḥ śubhe|
 tataḥ sacittāḥ pravarāstataścendriyavṛttayaḥ||
+en: Auspicious lady, living things are better than things without life; better than those are the ones that bear the prāṇa; better than those are the ones that have a mind; and better still are the ones in which the senses work.
+tel: శుభాంగీ, జీవము లేనివాటి కంటె జీవులు శ్రేష్ఠులు; వారి కంటె ప్రాణమును మోయునవి; వాటి కంటె చిత్తము కలవి శ్రేష్ఠములు; వాటి కంటె ఇంద్రియ వృత్తులు కలవి శ్రేష్ఠములు.
+hi: हे शुभे, अजीवों से जीव श्रेष्ठ हैं; उनसे प्राणभृत् श्रेष्ठ हैं; उनसे सचित्त प्रवर हैं; और उनसे इन्द्रियवृत्तिवाले प्रवर हैं।
 
 --- verse 29 ---
 deva:
@@ -256,14 +340,20 @@ deva:
 iast:
 tatrāpi sparśavedibhyaḥ pravarā rasavedinaḥ|
 tebhyo gandhavidaḥ śreṣṭhāstataḥ śabdavido varāḥ||
+en: Among those too, the ones that know taste are better than the ones that know touch; better than them are the ones that know smell; and higher than those are the ones that know sound.
+tel: వాటిలోను, స్పర్శను ఎరుగువాటి కంటె రసమును ఎరుగునవి శ్రేష్ఠములు; వాటి కంటె గంధమును ఎరుగునవి శ్రేష్ఠములు; వాటి కంటె శబ్దమును ఎరుగునవి శ్రేష్ఠములు.
+hi: उनमें भी स्पर्श जाननेवालों से रस जाननेवाले प्रवर हैं; उनसे गन्ध जाननेवाले श्रेष्ठ हैं; और उनसे शब्द जाननेवाले वर हैं।
 
 --- verse 30 ---
 deva:
-रूपभेदविदस्तत्रततश्चोभयतोदतः।
+रूपभेदविदस्तत्र ततश्चोभयतोदतः।
 तेषां बहुपदाः श्रेष्ठाश्चतुष्पादस्ततो द्विपात्॥
 iast:
-rūpabhedavidastatratataścobhayatodataḥ|
+rūpabhedavidastatra tataścobhayatodataḥ|
 teṣāṁ bahupadāḥ śreṣṭhāścatuṣpādastato dvipāt||
+en: Better than those are the ones that know difference of form, and better than those are the ones that have teeth in both jaws. Among them the ones with many feet are better, then the ones with four feet, and then the two-footed.
+tel: వాటి కంటె రూప భేదమును ఎరుగునవి శ్రేష్ఠములు; వాటి కంటె రెండు వైపుల దంతములు కలవి శ్రేష్ఠములు. వాటిలో అనేక పాదములు కలవి శ్రేష్ఠములు; వాటి కంటె నాలుగు పాదములు కలవి; వాటి కంటె రెండు పాదములు కలవాడు.
+hi: उनसे रूप-भेद जाननेवाले श्रेष्ठ हैं, और उनसे दोनों ओर दाँतवाले श्रेष्ठ हैं। उनमें बहुपद श्रेष्ठ हैं; उनसे चतुष्पद; और उनसे द्विपद।
 
 --- verse 31 ---
 deva:
@@ -272,6 +362,9 @@ deva:
 iast:
 tato varṇāśca catvārasteṣāṁ brāhmaṇa uttamaḥ|
 brāhmaṇeṣvapi vedajño hyarthajño'bhyadhikastataḥ||
+en: Then come the four varṇas, and among them the brāhmaṇa is the best. Among brāhmaṇas too, one who knows the Veda is better, and one who knows its meaning is higher than him.
+tel: అటుపిమ్మట నాలుగు వర్ణములు; వాటిలో బ్రాహ్మణుడు ఉత్తముడు. బ్రాహ్మణులలోను వేదమును ఎరిగినవాడు శ్రేష్ఠుడు; అతని కంటె అర్థమును ఎరిగినవాడు అధికుడు.
+hi: उसके बाद चार वर्ण हैं, और उनमें ब्राह्मण उत्तम है। ब्राह्मणों में भी वेद जाननेवाला श्रेष्ठ है, और उससे अर्थ जाननेवाला अधिक है।
 
 --- verse 32 ---
 deva:
@@ -280,6 +373,9 @@ deva:
 iast:
 arthajñātsaṁśayacchettā tataḥ śreyān svakarmakṛt|
 muktasaṅgastato bhūyānadogdhā dharmamātmanaḥ||
+en: Better than one who knows the meaning is one who cuts off doubt. Better than him is one who does his own duty. Greater than him is one who is free of attachment and does not take the fruit of his dharma for himself.
+tel: అర్థమును ఎరిగినవాని కంటె సంశయమును ఛేదించువాడు శ్రేష్ఠుడు. అతని కంటె తన కర్మను చేయువాడు శ్రేష్ఠుడు. అతని కంటె సంగము విడిచినవాడు, తన ధర్మమును తన కొరకు పిండుకొననివాడు గొప్పవాడు.
+hi: अर्थ जाननेवाले से संशय का छेदन करनेवाला श्रेष्ठ है। उससे अपना कर्म करनेवाला श्रेयान् है। उससे मुक्तसंग, जो अपने लिये धर्म को नहीं दुहता, भूयान् है।
 
 --- verse 33 ---
 deva:
@@ -290,6 +386,9 @@ iast:
 tasmānmayyarpitāśeṣakriyārthātmā nirantaraḥ|
 mayyarpitātmanaḥ puṁso mayi saṁnyastakarmaṇaḥ|
 na paśyāmi paraṁ bhūtamakartuḥ samadarśanāt||
+en: Therefore I see no being higher than the man who has placed in me his whole action, his aims and his self without a break; who has given his self to me and has laid his works upon me; who is no doer and sees all alike.
+tel: అందుచే సమస్త క్రియలను, ప్రయోజనములను, ఆత్మను ఎడము లేకుండ నాయందు అర్పించిన, ఆత్మను నాయందు అర్పించిన, కర్మలను నాయందు సన్న్యసించిన, కర్త కాని, సమదర్శనము కలిగిన పురుషుని కంటె శ్రేష్ఠమైన భూతమును నేను చూడను.
+hi: इसलिये जिसने अपनी समस्त क्रिया, अर्थ और आत्मा निरन्तर मुझमें अर्पित कर दिये हैं, जिसने आत्मा मुझमें अर्पित किया है और कर्म मुझमें संन्यस्त किये हैं, जो अकर्ता है और समदर्शी है — उस पुरुष से श्रेष्ठ भूत मैं नहीं देखता।
 
 --- verse 34 ---
 deva:
@@ -298,6 +397,9 @@ deva:
 iast:
 manasaitāni bhūtāni praṇamedbahu mānayan|
 īśvaro jīvakalayā praviṣṭo bhagavāniti||
+en: In his mind he should bow to these beings and hold them in great honour, knowing that the Lord, the blessed one, has entered them by a portion of himself as the jīva.
+tel: ఈ భూతములను మనస్సుచే నమస్కరించి, ఎంతో గౌరవించవలెను; ఈశ్వరుడైన భగవంతుడు జీవ కళతో వాటియందు ప్రవేశించెనని ఎరిగి.
+hi: इन भूतों को मन से प्रणाम करे और बहुत मान दे, यह जानकर कि ईश्वर भगवान् जीव-कला से इनमें प्रविष्ट हैं।
 
 --- verse 35 ---
 deva:
@@ -306,6 +408,9 @@ deva:
 iast:
 bhaktiyogaśca yogaśca mayā mānavyudīritaḥ|
 yayorekatareṇaiva puruṣaḥ puruṣaṁ vrajet||
+en: Daughter of Manu, I have told of bhaktiyoga and of yoga. By either one of these the puruṣa reaches the Puruṣa.
+tel: మానవీ, భక్తియోగమును, యోగమును నేను చెప్పితిని. ఈ రెండులో ఏ ఒక్కటిచేతనైనను పురుషుడు పురుషుని పొందును.
+hi: हे मानवि, भक्तियोग और योग मैंने कहे। इन दोनों में से एक ही से पुरुष पुरुष को प्राप्त कर लेता है।
 
 --- verse 36 ---
 deva:
@@ -314,6 +419,9 @@ deva:
 iast:
 etadbhagavato rūpaṁ brahmaṇaḥ paramātmanaḥ|
 paraṁ pradhānaṁ puruṣaṁ daivaṁ karmaviceṣṭitam||
+en: This is the form of the blessed Lord, of brahman, of the supreme Self: the supreme, the pradhāna, the Puruṣa, the divine, that which sets karma in motion.
+tel: ఇది భగవంతుని, బ్రహ్మము, పరమాత్మ రూపము: పరము, ప్రధానము, పురుషుడు, దైవము, కర్మను కదలించునది.
+hi: यह भगवान् का, ब्रह्म का, परमात्मा का रूप है: परम, प्रधान, पुरुष, दैव, और कर्म को चेष्टित करनेवाला।
 
 --- verse 37 ---
 deva:
@@ -322,6 +430,9 @@ deva:
 iast:
 rūpabhedāspadaṁ divyaṁ kāla ityabhidhīyate|
 bhūtānāṁ mahadādīnāṁ yato bhinnadṛśāṁ bhayam||
+en: It is the ground of the differences of form, and it is divine, and it is called time. From it comes fear to beings, to mahat and the rest, who see difference.
+tel: అది రూప భేదములకు ఆశ్రయము; దివ్యము; కాలము అని చెప్పబడును. భేదమును చూచు మహత్తు మొదలైన భూతములకు దాని నుండియే భయము కలుగును.
+hi: वह रूप-भेदों का आस्पद है, दिव्य है, और काल कहा जाता है। जिससे महत् आदि भिन्नदृष्टि भूतों को भय होता है।
 
 --- verse 38 ---
 deva:
@@ -330,6 +441,9 @@ deva:
 iast:
 yo'ntaḥ praviśya bhūtāni bhūtairattyakhilāśrayaḥ|
 sa viṣṇvākhyo'dhiyajño'sau kālaḥ kalayatāṁ prabhuḥ||
+en: He who enters within beings and eats beings by beings, who is the support of all — he is called Viṣṇu, he is the Lord of sacrifice, and he is time, the master of those who bring things to their end.
+tel: భూతములలోపల ప్రవేశించి, భూతములచే భూతములను భక్షించు, అందరికి ఆశ్రయమైనవాడు — ఆయనే విష్ణువు అను పేరు కలవాడు, అధియజ్ఞుడు, అంతము చేయువారికి ప్రభువైన కాలము.
+hi: जो भूतों के भीतर प्रवेश करके भूतों के द्वारा भूतों को खाता है, और जो सब का आश्रय है — वही विष्णु नामवाला है, वही अधियज्ञ है, और वही काल है, कलन करनेवालों का प्रभु।
 
 --- verse 39 ---
 deva:
@@ -338,6 +452,9 @@ deva:
 iast:
 na cāsya kaściddayito na dveṣyo na ca bāndhavaḥ|
 āviśatyapramatto'sau pramattaṁ janamantakṛt||
+en: He has none dear to him, none hateful, and no kinsman. He is never heedless, and he enters the heedless man and makes an end of him.
+tel: ఆయనకు ప్రియుడు ఎవరును లేరు, ద్వేష్యుడు లేరు, బంధువు లేరు. ఆయన ఎప్పుడును అప్రమత్తుడు; ప్రమత్తుడైన జనునియందు ప్రవేశించి అంతము చేయువాడు.
+hi: उनका कोई दयित नहीं, कोई द्वेष्य नहीं, और कोई बान्धव नहीं। वे अप्रमत्त हैं, और प्रमत्त जन में प्रवेश करके अन्त कर देते हैं।
 
 --- verse 40 ---
 deva:
@@ -346,6 +463,9 @@ deva:
 iast:
 yadbhayādvāti vāto'yaṁ sūryastapati yadbhayāt|
 yadbhayādvarṣate devo bhagaṇo bhāti yadbhayāt||
+en: By fear of whom this wind blows; by fear of whom the sun gives heat; by fear of whom the god of rain pours down; by fear of whom the host of stars shines;
+tel: ఎవని భయముచే ఈ వాయువు వీచుచున్నది; ఎవని భయముచే సూర్యుడు తపించుచున్నాడు; ఎవని భయముచే వర్ష దేవుడు వర్షించుచున్నాడు; ఎవని భయముచే నక్షత్ర గణము ప్రకాశించుచున్నది;
+hi: जिसके भय से यह वायु बहता है; जिसके भय से सूर्य तपता है; जिसके भय से वर्षा का देव बरसता है; जिसके भय से भगण भाता है;
 
 --- verse 41 ---
 deva:
@@ -354,6 +474,9 @@ deva:
 iast:
 yadvanaspatayo bhītā latāścauṣadhibhiḥ saha|
 sve sve kāle'bhigṛhṇanti puṣpāṇi ca phalāni ca||
+en: by fear of whom the trees of the forest, and the creepers along with the herbs, each in its own season put forth their flowers and their fruits;
+tel: ఎవని భయముచే వనస్పతులు, ఓషధులతో కూడిన లతలు, తమ తమ కాలములయందు పుష్పములను, ఫలములను ధరించుచున్నవి;
+hi: जिसके भय से वनस्पति, और औषधियों के सहित लताएँ, अपने-अपने काल में पुष्प और फल धारण करती हैं;
 
 --- verse 42 ---
 deva:
@@ -362,6 +485,9 @@ deva:
 iast:
 sravanti sarito bhītā notsarpatyudadhiryataḥ|
 agnirindhe sagiribhirbhūrna majjati yadbhayāt||
+en: by fear of whom the rivers flow and the sea does not go beyond its bound; by fear of whom fire burns, and the earth with its mountains does not sink;
+tel: ఎవని భయముచే నదులు ప్రవహించుచున్నవి, సముద్రము తన హద్దును దాటుట లేదు; ఎవని భయముచే అగ్ని మండుచున్నది, పర్వతములతో కూడిన భూమి మునుగుట లేదు;
+hi: जिसके भय से सरिताएँ बहती हैं और उदधि अपनी सीमा से बाहर नहीं जाता; जिसके भय से अग्नि जलती है, और पर्वतों सहित भूमि नहीं डूबती;
 
 --- verse 43 ---
 deva:
@@ -370,6 +496,9 @@ deva:
 iast:
 nabho dadāti śvasatāṁ padaṁ yanniyamādadaḥ|
 lokaṁ svadehaṁ tanute mahān saptabhirāvṛtam||
+en: by whose rule the sky gives room to those that breathe; and the mahat spreads out the world as its own body, covered over sevenfold;
+tel: ఎవని నియమముచే ఆకాశము శ్వాసించువారికి చోటు ఇచ్చుచున్నది; మహత్తు ఏడు ఆవరణములతో కప్పబడిన లోకమును తన శరీరముగా విస్తరించుచున్నది;
+hi: जिसके नियम से वह नभ श्वास लेनेवालों को पद देता है; और महान् सात आवरणों से आवृत लोक को अपने देह के रूप में तानता है;
 
 --- verse 44 ---
 deva:
@@ -378,6 +507,9 @@ deva:
 iast:
 guṇābhimānino devāḥ sargādiṣvasya yadbhayāt|
 vartante'nuyugaṁ yeṣāṁ vaśa etaccarācaram||
+en: by fear of whom the gods who preside over the guṇas carry on their work at the creation and the rest, age after age, and in whose power is all this that moves and does not move —
+tel: ఎవని భయముచే గుణములకు అధిపతులైన దేవతలు సృష్టి మొదలైనవాటియందు యుగము యుగమున పనిచేయుచున్నారు; ఎవరి వశమున ఈ చరాచరము ఉన్నది —
+hi: जिसके भय से गुणों के अभिमानी देव सर्ग आदि में युग-युग वर्तते हैं, और जिनके वश में यह सब चराचर है —
 
 --- verse 45 ---
 deva:
@@ -386,9 +518,15 @@ deva:
 iast:
 so'nanto'ntakaraḥ kālo'nādirādikṛdavyayaḥ|
 janaṁ janena janayanmārayanmṛtyunāntakam||
+en: He is time, without end and making an end, without beginning and making the beginning, and he does not pass away. He brings a being to birth through a being, and he kills, and through death he makes an end.
+tel: ఆయన కాలము; అంతము లేనివాడు, అంతము చేయువాడు; ఆది లేనివాడు, ఆదిని చేయువాడు; నశించనివాడు. జనునిచే జనుని పుట్టించుచు, చంపుచు, మృత్యువుచే అంతము చేయువాడు.
+hi: वह काल है — अनन्त और अन्त करनेवाला, अनादि और आदि करनेवाला, और अव्यय। वह जन के द्वारा जन को जनता है, मारता है, और मृत्यु के द्वारा अन्त करता है।
 
 --- verse none ---
 deva:
 इति श्रीमद्भागवते महापुराणे पारमहंस्यां संहितायां तृतीयस्कन्धे कापिलेयोपाख्याने एकोनत्रिंशोऽध्यायः॥ २९॥
 iast:
 iti śrīmadbhāgavate mahāpurāṇe pāramahaṁsyāṁ saṁhitāyāṁ tṛtīyaskandhe kāpileyopākhyāne ekonatriṁśo'dhyāyaḥ|| 29||
+en: Thus ends the twenty-ninth adhyāya in the story of Kapila in the third skandha of the Śrīmad Bhāgavata Mahāpurāṇa, the saṁhitā of the paramahaṁsas.
+tel: ఇది శ్రీమద్భాగవత మహాపురాణమునందు, పరమహంసల సంహితయందు, తృతీయస్కంధమునందు కాపిలేయోపాఖ్యానమున ఏకోనత్రింశాధ్యాయము.
+hi: इस प्रकार श्रीमद्भागवत महापुराण की परमहंसों की संहिता के तृतीय स्कन्ध में कापिलेय उपाख्यान में उनतीसवाँ अध्याय समाप्त हुआ।
