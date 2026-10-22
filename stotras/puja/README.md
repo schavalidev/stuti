@@ -465,3 +465,25 @@ collation against the Taittirīya and Ṛgvedic witnesses therefore carries over
 differences stand unchanged. The two pages share every non-hymn line with `48`, so the translations of
 those lines are `48`'s own, cut to one hymn. Neither file supersedes `48`, `18`, `19`, `22` or `37`.
 
+## Added 2026-10-22 — three goddess pūjās from poojalu.com: `smarta/56`, `57`, `58`
+
+Annapūrṇā, Mahiṣāsuramardinī and Rājarājeśvarī have no pūjā on stotranidhi, vignanam, sanskritdocuments
+or Gītā Press (searched 2026-10-17). poojalu.com, a pandit-services site, publishes a typed Telugu PDF for
+each. **All three are stotranidhi's Bālā Tripurasundarī pūjā (`30`) with the goddess's name set into the
+name-lines**, checked line by line by machine: the same Śrī Sūkta ṛcs, the same verses, the same closing. What
+is each page's own is the saṅkalpa, the name-lines, and a hundred and eight names printed in full. The user
+ruled that they be written as printed, with the template's leftovers recorded and not corrected, so:
+
+- `56_annapurna_shodashopachara_puja.txt` — the dhyāna is the Tripurasundarī verse, the prayer सर्वस्वरूपे
+  सर्वेशि, and the pardon verse reads अन्नपूर्ण कृत्यमिति where the verse says बाल कृत्यमिति. The 108 names are
+  the Gītā Press Annapūrṇā list of `../devi/annapurna/09`, with two names dropped and two pairs joined.
+- `57_mahishasuramardini_shodashopachara_puja.txt` — Bālā's name is left standing in four places (seat verse,
+  mantra-flower, dedication, tīrtha line), each named in its `vidhi:`. The 108 names are a litany in mahā-,
+  on this page alone. The page spells मर्धिनी throughout, and it is kept.
+- `58_rajarajeshvari_shodashopachara_puja.txt` — Bālā's dhyāna and prayer with Rājarājeśvarī set into their
+  last lines, breaking the metre. The 108 names are on this page alone; several are printed in a dative that
+  is not feminine, and are kept and glossed by the stem.
+
+Each file's translations are `30`'s, with the name changed, wherever the line is `30`'s; the verses the pages
+add are translated afresh. None of the three is a witness for the others, and none supersedes `30`.
+

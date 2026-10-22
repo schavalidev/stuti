@@ -1,0 +1,871 @@
+Title: Śrī Mahiṣāsuramardinī Ṣoḍaśopacāra Pūjā
+Devanāgarī: श्री महिषासुरमर्दिनी षोडशोपचार पूजा
+Telugu: శ్రీ మహిషాసురమర్దినీ షోడశోపచార పూజ
+
+Author: Anonymous (received smārta household rite). No compiler is named and none should be inferred.
+
+Type: vidhi (ritual manual) — not a stotra. Uses the one-extra-field vidhi format documented in `../../vidhi/madhyandina/01_sandhyopasana_vidhi.txt`: a `vidhi:` field carrying the ritual instruction, then deva / iast / en / tel / hi.
+
+Recension / paddhati: **Smārta, South Indian.** The Vaiṣṇava form of the opening is kept separately at `../vaishnava/01_purvanga_vidhanam.txt` and **the two must never be merged, harmonised or collated against each other.**
+
+**This rite is the Bālā Tripurasundarī pūjā with the name of Mahiṣāsuramardinī set into it, and the file says so plainly.** The source page prints the same sixteen services, the same Śrī Sūkta ṛcs, the same paurāṇika verses, the same prāṇapratiṣṭhā, mantra-flower, royal services and closing as `30_bala_tripurasundari_shodashopachara_puja.txt`, which is stotranidhi's Bālā page; the only lines of its own are the saṅkalpa, the name-lines of the offerings, and the hundred and eight names, which the page prints in full where the Bālā page only points to them. Its dhyāna is the Tripurasundarī verse चतुर्भुजे चन्द्रकलावतंसे, its prayer the verse सर्वस्वरूपे सर्वेशि, and in four places the page has left Bālā's own name standing: the seat verse, the mantra-flower, the dedication and the tīrtha line. The user ruled on 2026-10-22 that the three goddess pūjās from this source be written as printed, with the leftovers of the template recorded and not corrected, and that is what this file does: **nothing was composed, nothing was quietly mended, and every place where the page still speaks of Bālā is named below and in the `vidhi:` field of its unit.** There is no other pūjā of Mahiṣāsuramardinī in this corpus; the stotras of the goddess are in `../../devi/main/01_mahishasuramardini_stotram.txt` and `../../devi/durga_saptashati/`.
+
+What it does not have: **no pūrvāṅga of its own in this file.** The PDF prefixes the common turmeric-Gaṇapati preliminary (ācamana, saṅkalpa, kalaśa, a short Gaṇapati pūjā), the same text in all three of the publisher's goddess PDFs and the same rite this corpus holds as `03_purvanga_vidhanam.txt` and `15_mahaganapati_shodashopachara_puja.txt`; it is not transcribed here. Use those files first.
+
+Source / recension: base text the PDF `Sri-Mahishasuramardhini-Devi-Puja-Vidhanam.pdf (21 pages, July 2025)` linked from `https://www.poojalu.com/sri-mahishasuramardhini-devi-puja-vidhanam-pdf/` (poojalu.com, "Assured Vedic Pandit Service Providers"), a typed Telugu-script document with a text layer, fetched 2026-10-17 and read with `pdftotext`. **Every line was lifted from the text layer by machine and converted to Devanāgarī with `../../bin/tel2dev.py`; no Sanskrit was typed.** The `iast:` fields were generated from the Devanāgarī by `../../bin/dev2iast.py`. The text layer prints the dīrgha svarita as the Latin quotation mark ” and the sunna as the Latin letter o on accented lines, and final visarga as the ASCII colon; all three were mapped before conversion, by the rule recorded for this publisher's kind of page in `../../bin/fetch_source.py` and in `19_durga_shodashopachara_puja.txt`. The page's own nasal spelling (the sunna, giving `संकल्पं`, `गंधं`) is kept, as the Telugu-sourced files of this folder keep it.
+
+Independent collation: **by identity with `30`, line by line, by machine.** Every line of the page that is not a name-line or one of the lines listed below is, after the nasal spelling and the daṇḍa are set aside, the same line the Bālā page carries, and `30`'s collation of the Śrī Sūkta ṛcs against `../../devi/lakshmi/06_sri_suktam.txt` and of the prāṇapratiṣṭhā against `19` therefore stands for this file; its recorded differences are unchanged here. The accented lines were further checked against `30` and `55_srisukta_vidhana_shodashopachara_puja.txt` with the accent kept, and they agree, except that this page puts the accent mark on the sunna where those pages put it before (`वर्णा॒ं` for `वर्णां॒`), which is the Telugu print's habit, recorded for the corpus's Telugu-sourced files and not a different svara; the page also writes `हि॒रण्यप्रा॒कारा॑मा॒र्द्रां` at the arghya with one mark fewer than `30`. **No printed edition of a Mahiṣāsuramardinī ṣoḍaśopacāra was found** on stotranidhi, vignanam, sanskritdocuments, Gītā Press or archive.org (searched 2026-10-17), and the hundred and eight names rest on this page alone; it is a litany of a hundred and eight names in mahā-, and no other copy of it was found. The page spells the goddess `महिषासुरमर्धिनी` with `ध` throughout, where the word is `मर्दिनी`; the spelling is kept.
+
+**Lines of the page that are not the Bālā page's**, all kept as printed:
+- The gāyatrī of the mantra-flower (unit 24) reads त्रिपुरादेवि विद्महे कामेश्वरि धीमहि, with vocatives, where the Bālā page reads the datives.
+- The saṅkalpa (unit 1) names Mahiṣāsuramardinī, spelt `महिषासुरमर्धिनी`. The name-line of every offering reads `ओं श्री महिषासुरमर्धिन्यै नमः`.
+- The dhyāna (unit 4) is the Tripurasundarī verse, not a verse of Mahiṣāsuramardinī.
+- The seat verse (unit 6) still reads `बालाम्बिके महादेवि`: Bālā's name, left standing.
+- The hundred and eight names (unit 18) are printed in full, one to a line.
+- The mantra-flower (unit 24) still reads `ओं ऐं ह्रीं श्रीं बालायै नमः`: Bālā's name-mantra, left standing.
+- The prayer (unit 27) is `सर्वस्वरूपे सर्वेशि`; its vocative is printed `कौमुरि`, and the offering line `प्रार्दनां`.
+- The dedication (unit 28) still reads `भगवती सर्वात्मिका श्री बाला त्रिपुरसुन्दरी सुप्रीता …`, and the tīrtha line (unit 29) still names `श्री बाला देवी पादोदकं`: both left standing from the template.
+
+Defects in the base text, corrected with reasons, because the page is a convenience source and not a critical edition:
+1. **`प्राणप्रतिष्ठ –` → `प्राणप्रतिष्ठा –`** (unit 2), as `30` corrected the same heading.
+2. **`आचयनीयं` → `आचमनीयं`** (unit 20). `आचयनीय` is not a word; `30` and `19` made the same correction.
+3. **`अकालमृत्यहरणं` → `अकालमृत्युहरणं`** (unit 29). A dropped `u`.
+
+Observed and deliberately **not** emended: everything `30` lists under the same heading (`सुप्रसन्नो भव`, `देवी` for `देवि`, `तदस्तुते`, the over-long tīrtha line, the plural `भवन्तु`); and in this page `गामश्यां` for `गामश्वं` in the second ṛc (unit 6), a slip of the type that is kept because the line is Vedic and no accent was to be touched.
+
+Accent: **present on the Vedic material** — the prāṇapratiṣṭhā mantra, the fifteen ṛcs of the Śrī Sūkta and the ṛc `सम्राजं च विराजं च`. 312 accent marks stand in the units: udātta `॑` (U+0951), anudātta `॒` (U+0952), dīrgha svarita `᳚` (U+1CDA). The paurāṇika verses, the dhyāna, the name-mantra and the gāyatrī are unaccented, which is right. **No accent was inferred, derived or reconstructed.**
+
+Unit count: 29 units. Not a verse count in the stotra sense — the work is a prose order of service punctuated by mantras, and the numbering is this corpus's, matched unit for unit to `30`, whose first unit, two directions of the page, has no counterpart here. The hundred and eight names (unit 18) are numbered one to a line in `deva:` and `iast:`, by the rule for lists.
+
+Sections:
+पुनः सङ्कल्पः — The second resolution (unit 1)
+प्राणप्रतिष्ठा — Placing the life-breath (units 2–3)
+ध्यानम् — Meditation (unit 4)
+षोडशोपचार पूजा — The sixteen services, with the hundred and eight names (units 5–23)
+मन्त्रपुष्पम् — The mantra-flower (unit 24)
+प्रदक्षिणम् — Circumambulation (unit 25)
+राज्ञ्योपचाराः — The royal services (unit 26)
+प्रार्थना — Prayer (unit 27)
+क्षमाप्रार्थना — Asking pardon (unit 28)
+तीर्थप्रसाद ग्रहणम् — Receiving the water and the prasāda (unit 29)
+
+Blurb: This is a worship of Mahiṣāsuramardinī, the goddess who slew the buffalo demon, in sixteen services built on the Śrī Sūkta: each service is headed by one verse of that Vedic hymn, and followed by a verse of praise and the offering under her name. The goddess is placed in the image with the placing of the life-breath, meditated upon, and worshipped with a hundred and eight names, each beginning with "great". Then come incense, the lamp, the food-offering, betel, the waving of the light, the mantra-flower, circumambulation, the royal services of a queen, a prayer, the asking of pardon and the receiving of the water and the prasāda. The opening portion and the Gaṇapati worship are not included, and are performed first.
+
+--- unit 1 | section: पुनः सङ्कल्पः ---
+vidhi:
+The second resolution. It names the rule the rite follows, the manner of the Śrī Sūkta, which the sixteen services below bear out.
+deva:
+पुनः संकल्पं –
+पूर्वोक्त एवं गुण विशेषण विशिष्टायां शुभ तिथौ श्री महिषासुरमर्धिनी देवता मुद्दिश्य श्री महिषासुरमर्धिनी देवता प्रीत्यर्थं संभवद्भिः द्रव्यैः संभवद्भिः उपचारैश्च संभविता नियमेन संभविता प्रकारेण श्रीसूक्त प्रकारेण यावच्छक्ति ध्यानावाहनादि षोडशोपचार पूजां करिष्ये ॥
+iast:
+punaḥ saṁkalpaṁ –
+pūrvokta evaṁ guṇa viśeṣaṇa viśiṣṭāyāṁ śubha tithau śrī mahiṣāsuramardhinī devatā muddiśya śrī mahiṣāsuramardhinī devatā prītyarthaṁ saṁbhavadbhiḥ dravyaiḥ saṁbhavadbhiḥ upacāraiśca saṁbhavitā niyamena saṁbhavitā prakāreṇa śrīsūkta prakāreṇa yāvacchakti dhyānāvāhanādi ṣoḍaśopacāra pūjāṁ kariṣye ||
+en: The second resolution — On this auspicious day, marked by the qualities already named, with Śrī Mahiṣāsuramardinī as the deity addressed, and for the pleasing of Śrī Mahiṣāsuramardinī, with such substances as are to be had, with such services as are to be had, with such observance as is possible and in such manner as is possible, in the manner of the Śrī Sūkta, I shall perform to the best of my power the worship in sixteen services, beginning with meditation and invocation.
+tel: పునః సంకల్పము — పూర్వమునందు చెప్పబడిన గుణ విశేషణములతో కూడిన ఈ శుభ తిథియందు, శ్రీ మహిషాసురమర్దిని దేవతను ఉద్దేశించి, శ్రీ మహిషాసురమర్దిని దేవత ప్రీతి కొఱకు, లభించు ద్రవ్యములతోను, లభించు ఉపచారములతోను, సాధ్యమైన నియమముతోను, సాధ్యమైన రీతిలోను, శ్రీసూక్త ప్రకారముగా యథాశక్తిగా ధ్యాన ఆవాహనాది షోడశోపచార పూజను చేయుచున్నాను.
+hi: पुनः सङ्कल्प — पूर्वोक्त गुण विशेषणों से युक्त इस शुभ तिथि में, श्री महिषासुरमर्दिनी देवता को उद्देश्य करके, श्री महिषासुरमर्दिनी देवता की प्रीति के लिए, जो द्रव्य उपलब्ध हों उनसे, जो उपचार उपलब्ध हों उनसे, सम्भव नियम से और सम्भव प्रकार से, श्रीसूक्त के प्रकार से यथाशक्ति ध्यान और आवाहन आदि षोडशोपचार पूजा करूँगा।
+
+--- unit 2 | section: प्राणप्रतिष्ठा ---
+vidhi:
+The placing of the life-breath. The mantra is Ṛgveda 10.59.6 with a Brāhmaṇa formula after it, printed with full accent. The same mantra stands at unit 3 of 19_durga_shodashopachara_puja.txt.
+deva:
+प्राणप्रतिष्ठा –
+ओं असु॑नीते॒ पुन॑र॒स्मासु॒ चक्षुः॒
+पुनः॑ प्रा॒णमि॒ह नो᳚ धेहि॒ भोग᳚म् ।
+ज्योक्प॑श्येम॒ सूर्य॑मु॒च्चर᳚न्त॒
+मनु॑मते मृ॒डया᳚ नः स्व॒स्ति ॥
+अ॒मृत॒ं वै प्रा॒णा अ॒मृत॒मापः॑
+प्रा॒णाने॒व य॑थास्था॒नमुप॑ह्वयते ॥
+iast:
+prāṇapratiṣṭhā –
+oṁ asunīte punarasmāsu cakṣuḥ
+punaḥ prāṇamiha no dhehi bhogam |
+jyokpaśyema sūryamuccaranta
+manumate mṛḍayā naḥ svasti ||
+amṛtaṁ vai prāṇā amṛtamāpaḥ
+prāṇāneva yathāsthānamupahvayate ||
+en: Placing of the life-breath — O Asunīti, give us back our sight, give us back our breath here, and give us enjoyment. Long may we see the sun rising. O Anumati, be gracious to us for our welfare. The breaths are the nectar of immortality, the waters are the nectar of immortality. He calls the breaths to their own places.
+tel: ప్రాణప్రతిష్ఠ — ఓ అసునీతీ, మాకు మరల చూపును ఇమ్ము, ఇచట మరల ప్రాణమును ఇమ్ము, భోగమును ఇమ్ము. ఉదయించుచున్న సూర్యుని మేము చిరకాలము చూచుచుందుము గాక. ఓ అనుమతీ, మా క్షేమము కొఱకు మమ్ము అనుగ్రహింపుము. ప్రాణములు అమృతము, జలములు అమృతము. ప్రాణములను వాటి స్థానములందు ఆహ్వానించుచున్నాడు.
+hi: प्राणप्रतिष्ठा — हे असुनीते, हमें पुनः दृष्टि दीजिए, यहाँ पुनः प्राण दीजिए, भोग दीजिए। उदय होते हुए सूर्य को हम चिरकाल तक देखें। हे अनुमते, हमारे कल्याण के लिए हम पर प्रसन्न होइए। प्राण अमृत हैं, जल अमृत है। वह प्राणों को उनके स्थानों पर बुलाता है।
+
+--- unit 3 | section: प्राणप्रतिष्ठा ---
+vidhi:
+The Goddess is asked to take her place in the image and to remain in it until the worship is finished.
+deva:
+आवाहिता भव स्थापिता भव ।
+सुप्रसन्नो भव वरदा भव ।
+स्थिरासनं कुरु प्रसीद प्रसीद ।
+देवि सर्वजगन्नाथे यावत्पूजावसानकम् ।
+तावत्त्वं प्रीतिभावेन बिंबेऽस्मिन् सन्निधिं कुरु ॥
+iast:
+āvāhitā bhava sthāpitā bhava |
+suprasanno bhava varadā bhava |
+sthirāsanaṁ kuru prasīda prasīda |
+devi sarvajagannāthe yāvatpūjāvasānakam |
+tāvattvaṁ prītibhāvena biṁbe'smin sannidhiṁ kuru ||
+en: Be invoked, be established. Be gracious, be the giver of boons. Take a firm seat. Be pleased, be pleased. O Goddess, mistress of the whole world, until this worship is ended, do you with a loving heart remain present in this image.
+tel: ఆవాహితవు కమ్ము, స్థాపితవు కమ్ము. సుప్రసన్నవు కమ్ము, వరదవు కమ్ము. స్థిరమైన ఆసనమును స్వీకరింపుము, ప్రసన్నురాలవు కమ్ము, ప్రసన్నురాలవు కమ్ము. ఓ దేవీ, సర్వజగన్నాథా, పూజ పూర్తియగు వఱకు నీవు ప్రీతిభావముతో ఈ బింబమునందు సన్నిధిని కలిగియుండుము.
+hi: आवाहित होइए, स्थापित होइए। सुप्रसन्न होइए, वरदा होइए। स्थिर आसन कीजिए, प्रसन्न होइए, प्रसन्न होइए। हे देवि, हे सम्पूर्ण जगत् की स्वामिनी, जब तक यह पूजा समाप्त न हो, तब तक आप प्रीतिभाव से इस बिम्ब में सन्निधि कीजिए।
+
+--- unit 4 | section: ध्यानम् ---
+vidhi:
+The meditation. The page prints here the well-known dhyāna of Tripurasundarī, चतुर्भुजे चन्द्रकलावतंसे, not a verse of Mahiṣāsuramardinī; it is kept as printed.
+deva:
+ध्यानं –
+चतुर्भुजे चंद्रकळावतंसे कुचोन्नते कुंकुमरागशोणे
+पुंड्रेक्षु पाशांकुश पुष्पबाणहस्ते नमस्ते जगदेकमातः
+ओं श्री महिषासुरमर्धिन्यै नमः ध्यायामि ध्यानं समर्पयामि।
+iast:
+dhyānaṁ –
+caturbhuje caṁdrakaḻāvataṁse kuconnate kuṁkumarāgaśoṇe
+puṁḍrekṣu pāśāṁkuśa puṣpabāṇahaste namaste jagadekamātaḥ
+oṁ śrī mahiṣāsuramardhinyai namaḥ dhyāyāmi dhyānaṁ samarpayāmi|
+en: Meditation — O four-armed one, who wear the digit of the moon as a crest, high-bosomed, red as the colour of kuṅkuma, holding in your hands the sugarcane bow, the noose, the goad and the flower arrows: salutation to you, the one mother of the world. Oṁ, salutation to Śrī Mahiṣāsuramardinī. I meditate; I offer meditation.
+tel: ధ్యానము — నాలుగు భుజములు కలదానా, చంద్రకళను శిరోభూషణముగా ధరించినదానా, ఉన్నతమైన స్తనములు కలదానా, కుంకుమరాగమువలె ఎఱ్ఱనిదానా, చెఱకువిల్లు, పాశము, అంకుశము, పుష్పబాణములను చేతులయందు ధరించినదానా, జగత్తునకు ఏకైక తల్లీ, నీకు నమస్కారము. ఓం శ్రీ మహిషాసురమర్దినికి నమస్కారము. ధ్యానించుచున్నాను; ధ్యానమును సమర్పించుచున్నాను.
+hi: ध्यान — हे चतुर्भुजे, चन्द्रकला को शिरोभूषण रूप में धारण करने वाली, उन्नत स्तनों वाली, कुंकुम के रंग सी लाल, इक्षुधनुष, पाश, अंकुश और पुष्पबाण हाथों में धारण करने वाली, हे जगत् की एकमात्र माता, आपको नमस्कार। ओम् श्री महिषासुरमर्दिनी को नमस्कार। ध्यान करता हूँ; ध्यान समर्पित करता हूँ।
+
+--- unit 5 | section: षोडशोपचार पूजा ---
+vidhi:
+The invocation. From here each service is headed by a ṛc of the Śrī Sūkta, taken in the hymn's own order. This is its first ṛc.
+deva:
+आवाहनं –
+हिर॑ण्यवर्णा॒ं हरि॑णीं सु॒वर्ण॑रज॒तस्र॑जाम् ।
+च॒न्द्रां हि॒रण्म॑यीं ल॒क्ष्मीं जात॑वेदो म॒ आव॑ह ॥
+सर्वमंगळमांगळ्ये भक्ताभीष्टप्रदायिनि ।
+आवाहयामि देवि त्वां सुप्रीता भव सर्वदा ॥
+ओं श्री महिषासुरमर्धिन्यै नमः आवाहयामि ।
+iast:
+āvāhanaṁ –
+hiraṇyavarṇāṁ hariṇīṁ suvarṇarajatasrajām |
+candrāṁ hiraṇmayīṁ lakṣmīṁ jātavedo ma āvaha ||
+sarvamaṁgaḻamāṁgaḻye bhaktābhīṣṭapradāyini |
+āvāhayāmi devi tvāṁ suprītā bhava sarvadā ||
+oṁ śrī mahiṣāsuramardhinyai namaḥ āvāhayāmi |
+en: Invocation — O Jātavedas, bring to me Lakṣmī, golden of hue, tawny, garlanded with gold and silver, bright as the moon, made of gold. O auspiciousness of all that is auspicious, giver of what your devotees desire, I invoke you, O Goddess. Be well pleased always. Oṁ, salutation to Śrī Mahiṣāsuramardinī. I invoke her.
+tel: ఆవాహనము — ఓ జాతవేదా, బంగారు వర్ణము కలదియు, హరిణియు, బంగారు వెండి మాలలు కలదియు, చంద్రుని వంటిదియు, హిరణ్మయియు అగు లక్ష్మిని నాకు తెమ్ము. సర్వమంగళములకు మంగళమైనదానా, భక్తుల అభీష్టములను ఇచ్చుదానా, ఓ దేవీ, నిన్ను ఆవాహనము చేయుచున్నాను. ఎల్లప్పుడును సుప్రీతవు కమ్ము. ఓం శ్రీ మహిషాసురమర్దినికి నమస్కారము. ఆవాహనము చేయుచున్నాను.
+hi: आवाहन — हे जातवेदस्, हिरण्यवर्णा, हरिणी, सुवर्ण और रजत की मालाओं वाली, चन्द्रा, हिरण्मयी लक्ष्मी को मेरे लिए ले आइए। हे सब मङ्गलों की मङ्गलरूपा, हे भक्तों को अभीष्ट देने वाली, हे देवि, मैं आपका आवाहन करता हूँ। सदा सुप्रसन्न रहिए। ओम् श्री महिषासुरमर्दिनी को नमस्कार। आवाहन करता हूँ।
+
+--- unit 6 | section: षोडशोपचार पूजा ---
+vidhi:
+The seat. The ṛc is the second of the Śrī Sūkta. The page keeps the Bālā pūjā's verse with its vocative बालाम्बिके, Bālāmbikā, unchanged; it is kept as printed.
+deva:
+आसनं –
+तां म॒ आव॑ह॒ जात॑वेदो ल॒क्ष्मीमन॑पगा॒मिनी᳚म् ।
+यस्या॒ं हिर॑ण्यं वि॒न्देय॒ं गामश्व॒ं पुरु॑षान॒हम् ॥
+बालांबिके महादेवि पूर्णचंद्रनिभानने ।
+सिंहासनमिदं देवि गृहाण सुरवंदिते ॥
+ओं श्री महिषासुरमर्धिन्यै नमः रत्नसिंहासनं समर्पयामि ।
+iast:
+āsanaṁ –
+tāṁ ma āvaha jātavedo lakṣmīmanapagāminīm |
+yasyāṁ hiraṇyaṁ vindeyaṁ gāmaśvaṁ puruṣānaham ||
+bālāṁbike mahādevi pūrṇacaṁdranibhānane |
+siṁhāsanamidaṁ devi gṛhāṇa suravaṁdite ||
+oṁ śrī mahiṣāsuramardhinyai namaḥ ratnasiṁhāsanaṁ samarpayāmi |
+en: Seat — O Jātavedas, bring to me that Lakṣmī who does not depart, through whom I may find gold, cattle, horses and men. O Bālāmbikā, great Goddess, whose face is like the full moon, O Goddess honoured by the gods, accept this throne. Oṁ, salutation to Śrī Bālā Tripurasundarī. I offer a jewelled throne.
+tel: ఆసనము — ఓ జాతవేదా, తొలగిపోని ఆ లక్ష్మిని నాకు తెమ్ము; ఎవరివలన నేను బంగారమును, గోవులను, అశ్వములను, పురుషులను పొందుదునో ఆమెను. ఓ బాలాంబికా, మహాదేవీ, పూర్ణచంద్రుని వంటి ముఖము కలదానా, దేవతలచే నమస్కరింపబడు దేవీ, ఈ సింహాసనమును గ్రహింపుము. ఓం శ్రీ బాలా త్రిపురసుందరికి నమస్కారము. రత్నసింహాసనమును సమర్పించుచున్నాను.
+hi: आसन — हे जातवेदस्, उस अनपगामिनी लक्ष्मी को मेरे लिए ले आइए, जिनसे मैं हिरण्य, गौ, अश्व और पुरुष प्राप्त करूँ। हे बालाम्बिके, हे महादेवि, हे पूर्णचन्द्र के समान मुख वाली, हे देवताओं से वन्दित देवि, यह सिंहासन ग्रहण कीजिए। ओम् श्री बाला त्रिपुरसुन्दरी को नमस्कार। रत्नसिंहासन समर्पित करता हूँ।
+
+--- unit 7 | section: षोडशोपचार पूजा ---
+vidhi:
+Water for the feet. The ṛc is the third of the Śrī Sūkta.
+deva:
+पाद्यं –
+अ॒श्व॒पू॒र्वां र॑थम॒ध्यां ह॒स्तिना॑दप्र॒बोधि॑नीम् ।
+श्रिय॑ं दे॒वीमुप॑ह्वये॒ श्रीर्मा॑दे॒वीर्जु॑षताम् ॥
+सूर्यायुतनिभस्फूर्ते स्फुरद्रत्नविभूषिते ।
+पाद्यं गृहाण देवेशि सर्वकळ्याणकारिणि ॥
+ओं श्री महिषासुरमर्धिन्यै नमः पादयोः पाद्यं समर्पयामि ।
+iast:
+pādyaṁ –
+aśvapūrvāṁ rathamadhyāṁ hastinādaprabodhinīm |
+śriyaṁ devīmupahvaye śrīrmādevīrjuṣatām ||
+sūryāyutanibhasphūrte sphuradratnavibhūṣite |
+pādyaṁ gṛhāṇa deveśi sarvakaḻyāṇakāriṇi ||
+oṁ śrī mahiṣāsuramardhinyai namaḥ pādayoḥ pādyaṁ samarpayāmi |
+en: Water for the feet — I call upon the goddess Śrī, who is preceded by horses, who stands in the midst of chariots, who is awakened by the trumpeting of elephants. May the goddess Śrī take delight in me. O you whose splendour is like ten thousand suns, adorned with shining jewels, O mistress of the gods, maker of all good, accept this water for the feet. Oṁ, salutation to Śrī Mahiṣāsuramardinī. I offer water at her feet.
+tel: పాద్యము — అశ్వములు ముందుగా కలదియు, రథముల మధ్యనున్నదియు, గజముల ధ్వనిచే మేల్కొల్పబడునదియు అగు శ్రీదేవిని ఆహ్వానించుచున్నాను. శ్రీదేవి నన్ను ప్రీతితో స్వీకరించుగాక. పదివేల సూర్యుల వంటి కాంతి కలదానా, మెరయు రత్నములచే అలంకరింపబడినదానా, ఓ దేవేశీ, సర్వకల్యాణకారిణీ, ఈ పాద్యమును గ్రహింపుము. ఓం శ్రీ మహిషాసురమర్దినికి నమస్కారము. పాదములకు పాద్యమును సమర్పించుచున్నాను.
+hi: पाद्य — अश्वपूर्वा, रथमध्या, हस्तियों के नाद से प्रबोधिनी उस श्री देवी का मैं आह्वान करता हूँ। श्री देवी मुझ पर प्रसन्न हों। हे दस सहस्र सूर्यों के समान तेज वाली, हे चमकते रत्नों से विभूषित, हे देवेशि, हे सबका कल्याण करने वाली, यह पाद्य ग्रहण कीजिए। ओम् श्री महिषासुरमर्दिनी को नमस्कार। चरणों में पाद्य समर्पित करता हूँ।
+
+--- unit 8 | section: षोडशोपचार पूजा ---
+vidhi:
+Water for the hands. The ṛc is the fourth of the Śrī Sūkta.
+deva:
+अर्घ्यं –
+का॒ं सो᳚स्मि॒तां हिर॑ण्यप्रा॒कारा॑मा॒र्द्रां
+ज्वल॑न्तीं तृ॒प्तां त॒र्पय॑न्तीम् ।
+प॒द्मे॒ स्थि॒तां प॒द्मव॑र्णा॒ं तामि॒होप॑ह्वये॒ श्रियम् ॥
+सुवासितजलं रम्यं कस्तूरीपंकमिश्रितम् ।
+गंधपुष्पाक्षतैर्युक्तं अर्घ्यं दास्यामि सुंदरि ॥
+ओं श्री महिषासुरमर्धिन्यै नमः हस्तयोरर्घ्यं समर्पयामि ।
+iast:
+arghyaṁ –
+kāṁ sosmitāṁ hiraṇyaprākārāmārdrāṁ
+jvalantīṁ tṛptāṁ tarpayantīm |
+padme sthitāṁ padmavarṇāṁ tāmihopahvaye śriyam ||
+suvāsitajalaṁ ramyaṁ kastūrīpaṁkamiśritam |
+gaṁdhapuṣpākṣatairyuktaṁ arghyaṁ dāsyāmi suṁdari ||
+oṁ śrī mahiṣāsuramardhinyai namaḥ hastayorarghyaṁ samarpayāmi |
+en: Water for the hands — Here I call upon Śrī, at whom one smiles, who is walled about with gold, who is moist, who blazes, who is satisfied and who satisfies, who stands upon the lotus and whose colour is of the lotus. Fragrant water, pleasing, mixed with musk paste, joined with sandal-paste, flowers and unbroken rice — this offering for the hands I shall give, O beautiful one. Oṁ, salutation to Śrī Mahiṣāsuramardinī. I offer water at her hands.
+tel: అర్ఘ్యము — చిరునవ్వుతో కూడినదియు, బంగారు ప్రాకారము కలదియు, ఆర్ద్రమైనదియు, జ్వలించునదియు, తృప్తియు తృప్తిని కలిగించునదియు, పద్మమునందున్నదియు, పద్మవర్ణము కలదియు అగు శ్రీదేవిని ఇచట ఆహ్వానించుచున్నాను. సువాసన గల రమ్యమైన జలమును, కస్తూరి గంధముతో కలిపినదియు, గంధ పుష్ప అక్షతలతో కూడినదియు అగు అర్ఘ్యమును నీకు ఇచ్చెదను, ఓ సుందరీ. ఓం శ్రీ మహిషాసురమర్దినికి నమస్కారము. హస్తములకు అర్ఘ్యమును సమర్పించుచున్నాను.
+hi: अर्घ्य — जिन पर स्मित किया जाता है, जो हिरण्य के प्राकार वाली हैं, आर्द्रा, ज्वलन्ती, तृप्ता और तर्पयन्ती हैं, पद्म पर स्थित और पद्मवर्णा हैं — उन श्री का मैं यहाँ आह्वान करता हूँ। सुवासित रम्य जल, कस्तूरी के लेप से मिश्रित, गन्ध, पुष्प और अक्षत से युक्त अर्घ्य मैं आपको दूँगा, हे सुन्दरि। ओम् श्री महिषासुरमर्दिनी को नमस्कार। हाथों में अर्घ्य समर्पित करता हूँ।
+
+--- unit 9 | section: षोडशोपचार पूजा ---
+vidhi:
+Water for sipping. The ṛc is the fifth of the Śrī Sūkta.
+deva:
+आचमनीयं –
+च॒न्द्रां प्र॑भा॒सां य॒शसा॒ ज्वल॑न्ती॒ं
+श्रिय॑ं लो॒के दे॒वजु॑ष्टामुदा॒राम् ।
+तां प॒द्मिनी॑मी॒ं शर॑णम॒हं प्रप॑द्ये –
+-ऽल॒क्ष्मीर्मे॑ नश्यता॒ं त्वां वृ॑णे ॥
+सुवर्णकलशानीतं चंदनागरुसंयुतम् ।
+गृहाणाचमनं देवि मया दत्तं सुरेश्वरि ॥
+ओं श्री महिषासुरमर्धिन्यै नमः मुखे आचमनीयं समर्पयामि ।
+iast:
+ācamanīyaṁ –
+candrāṁ prabhāsāṁ yaśasā jvalantīṁ
+śriyaṁ loke devajuṣṭāmudārām |
+tāṁ padminīmīṁ śaraṇamahaṁ prapadye –
+-'lakṣmīrme naśyatāṁ tvāṁ vṛṇe ||
+suvarṇakalaśānītaṁ caṁdanāgarusaṁyutam |
+gṛhāṇācamanaṁ devi mayā dattaṁ sureśvari ||
+oṁ śrī mahiṣāsuramardhinyai namaḥ mukhe ācamanīyaṁ samarpayāmi |
+en: Water for sipping — I take refuge in her, the lotus-goddess, bright as the moon, shining, blazing with fame, Śrī, honoured by the gods in the world, the generous one. Let misfortune be destroyed for me. I choose you. Brought in a golden pot, joined with sandal and aloe-wood, given by me — accept this water for sipping, O Goddess, mistress of the gods. Oṁ, salutation to Śrī Mahiṣāsuramardinī. I offer water for her mouth.
+tel: ఆచమనీయము — చంద్రుని వంటిదియు, ప్రకాశించునదియు, యశస్సుచే జ్వలించునదియు, లోకమునందు దేవతలచే సేవింపబడునదియు, ఉదారమైనదియు అగు శ్రీదేవిని, ఆ పద్మినిని శరణు పొందుచున్నాను. నాకు అలక్ష్మి నశించుగాక. నిన్ను వరించుచున్నాను. బంగారు కలశమునందు తెచ్చినదియు, చందన అగరులతో కూడినదియు, నాచే ఇవ్వబడినదియు అగు ఆచమనమును గ్రహింపుము, ఓ దేవీ, సురేశ్వరీ. ఓం శ్రీ మహిషాసురమర్దినికి నమస్కారము. ముఖమునకు ఆచమనీయమును సమర్పించుచున్నాను.
+hi: आचमनीय — चन्द्रा, प्रभासा, यश से ज्वलन्ती, लोक में देवजुष्टा, उदारा श्री — उस पद्मिनी की मैं शरण लेता हूँ। मेरी अलक्ष्मी नष्ट हो। मैं आपको वरण करता हूँ। स्वर्णकलश में लाया गया, चन्दन और अगरु से युक्त, मेरे द्वारा दिया गया आचमन ग्रहण कीजिए, हे देवि, हे सुरेश्वरि। ओम् श्री महिषासुरमर्दिनी को नमस्कार। मुख में आचमनीय समर्पित करता हूँ।
+
+--- unit 10 | section: षोडशोपचार पूजा ---
+vidhi:
+The bath in the five nectars. This service has no ṛc.
+deva:
+पंचामृतस्नानं –
+मध्वाज्य दधि संयुक्तं शर्करा क्षीर मिश्रितम् ।
+पंचामृतस्नानमिदं गृहाण परमेश्वरि ॥
+ओं श्री महिषासुरमर्धिन्यै नमः पंचामृतस्नानं समर्पयामि ।
+iast:
+paṁcāmṛtasnānaṁ –
+madhvājya dadhi saṁyuktaṁ śarkarā kṣīra miśritam |
+paṁcāmṛtasnānamidaṁ gṛhāṇa parameśvari ||
+oṁ śrī mahiṣāsuramardhinyai namaḥ paṁcāmṛtasnānaṁ samarpayāmi |
+en: Bath in the five nectars — Joined with honey, ghee and curd, mixed with sugar and milk: accept this bath in the five nectars, O supreme Goddess. Oṁ, salutation to Śrī Mahiṣāsuramardinī. I offer the bath in the five nectars.
+tel: పంచామృత స్నానము — తేనె, నెయ్యి, పెరుగులతో కూడినదియు, చక్కెర పాలతో కలిపినదియు అగు ఈ పంచామృత స్నానమును గ్రహింపుము, ఓ పరమేశ్వరీ. ఓం శ్రీ మహిషాసురమర్దినికి నమస్కారము. పంచామృత స్నానమును సమర్పించుచున్నాను.
+hi: पञ्चामृत स्नान — मधु, घृत और दधि से युक्त, शर्करा और क्षीर से मिश्रित यह पञ्चामृत स्नान ग्रहण कीजिए, हे परमेश्वरि। ओम् श्री महिषासुरमर्दिनी को नमस्कार। पञ्चामृत स्नान समर्पित करता हूँ।
+
+--- unit 11 | section: षोडशोपचार पूजा ---
+vidhi:
+The bath in pure water. The ṛc is the sixth of the Śrī Sūkta.
+deva:
+शुद्धोदकस्नानं –
+आ॒दि॒त्यव॑र्णे॒ तप॒सोऽधि॑जा॒तो
+वन॒स्पति॒स्तव॑ वृ॒क्षोऽथ बि॒ल्वः ।
+तस्य॒ फला॑नि॒ तप॒सा नु॑दन्तु
+मा॒यान्त॑रा॒याश्च॑ बा॒ह्या अ॑ल॒क्ष्मीः ॥
+गंगाजलं मयानीतं महादेवशिरःस्थितम् ।
+शुद्धोदकस्नानमिदं गृहाण परमेश्वरि ॥
+ओं श्री महिषासुरमर्धिन्यै नमः शुद्धोदकस्नानं समर्पयामि ।
+स्नानानंतरं आचमनं समर्पयामि ।
+iast:
+śuddhodakasnānaṁ –
+ādityavarṇe tapaso'dhijāto
+vanaspatistava vṛkṣo'tha bilvaḥ |
+tasya phalāni tapasā nudantu
+māyāntarāyāśca bāhyā alakṣmīḥ ||
+gaṁgājalaṁ mayānītaṁ mahādevaśiraḥsthitam |
+śuddhodakasnānamidaṁ gṛhāṇa parameśvari ||
+oṁ śrī mahiṣāsuramardhinyai namaḥ śuddhodakasnānaṁ samarpayāmi |
+snānānaṁtaraṁ ācamanaṁ samarpayāmi |
+en: Bath in pure water — O you of the colour of the sun, by your penance was the lord of the forest born, and the bilva is your tree. Let its fruits by that penance drive away misfortune from me, both the inward and the outward. Water of the Gaṅgā, which rests on the head of Mahādeva, has been brought by me: accept this bath in pure water, O supreme Goddess. Oṁ, salutation to Śrī Mahiṣāsuramardinī. I offer the bath in pure water. After the bath I offer water for sipping.
+tel: శుద్ధోదక స్నానము — ఓ ఆదిత్యవర్ణా, నీ తపస్సుచే వనస్పతి పుట్టెను, బిల్వము నీ వృక్షము. దాని ఫలములు ఆ తపస్సుచే నాకు లోపలిదియు వెలుపలిదియు అగు అలక్ష్మిని తొలగించుగాక. మహాదేవుని శిరస్సుపై నిలిచిన గంగాజలమును నేను తెచ్చితిని; ఈ శుద్ధోదక స్నానమును గ్రహింపుము, ఓ పరమేశ్వరీ. ఓం శ్రీ మహిషాసురమర్దినికి నమస్కారము. శుద్ధోదక స్నానమును సమర్పించుచున్నాను. స్నానానంతరము ఆచమనమును సమర్పించుచున్నాను.
+hi: शुद्धोदक स्नान — हे आदित्यवर्णे, आपके तप से वनस्पति उत्पन्न हुआ, और बिल्व आपका वृक्ष है। उसके फल उस तप से मेरी आन्तरिक और बाह्य अलक्ष्मी को दूर करें। महादेव के शिर पर स्थित गङ्गाजल मेरे द्वारा लाया गया है; यह शुद्धोदक स्नान ग्रहण कीजिए, हे परमेश्वरि। ओम् श्री महिषासुरमर्दिनी को नमस्कार। शुद्धोदक स्नान समर्पित करता हूँ। स्नान के पश्चात् आचमन समर्पित करता हूँ।
+
+--- unit 12 | section: षोडशोपचार पूजा ---
+vidhi:
+The garment. The ṛc is the seventh of the Śrī Sūkta.
+deva:
+वस्त्रं –
+उपै॑तु॒ मां दे॑वस॒खः
+की॒र्तिश्च॒ मणि॑ना स॒ह ।
+प्रा॒दु॒र्भू॒तोऽस्मि॑ राष्ट्रे॒ऽस्मिन्
+की॒र्तिमृ॑द्धिं द॒दातु॑ मे ॥
+सुरार्चितांघ्रियुगळे दुकूलवसनप्रिये ।
+वस्त्रयुग्मं प्रदास्यामि गृहाण त्रिपुरेश्वरि ॥
+ओं श्री महिषासुरमर्धिन्यै नमः वस्त्रद्वयं समर्पयामि ।
+iast:
+vastraṁ –
+upaitu māṁ devasakhaḥ
+kīrtiśca maṇinā saha |
+prādurbhūto'smi rāṣṭre'smin
+kīrtimṛddhiṁ dadātu me ||
+surārcitāṁghriyugaḻe dukūlavasanapriye |
+vastrayugmaṁ pradāsyāmi gṛhāṇa tripureśvari ||
+oṁ śrī mahiṣāsuramardhinyai namaḥ vastradvayaṁ samarpayāmi |
+en: Garment — Let the friend of the gods come to me, and fame with the jewel. I am born in this realm; let her give me fame and increase. O you whose two feet are worshipped by the gods, who love garments of fine cloth, I shall give a pair of garments: accept them, O mistress of Tripura. Oṁ, salutation to Śrī Mahiṣāsuramardinī. I offer a pair of garments.
+tel: వస్త్రము — దేవసఖుడును, మణితో కూడిన కీర్తియు నా వద్దకు వచ్చుగాక. ఈ రాష్ట్రమునందు నేను ఉద్భవించితిని; ఆమె నాకు కీర్తిని సమృద్ధిని ఇచ్చుగాక. దేవతలచే అర్చింపబడు పాదయుగళము కలదానా, దుకూల వస్త్రములను ప్రీతితో ధరించుదానా, వస్త్రయుగ్మమును ఇచ్చెదను; గ్రహింపుము, ఓ త్రిపురేశ్వరీ. ఓం శ్రీ మహిషాసురమర్దినికి నమస్కారము. వస్త్రద్వయమును సమర్పించుచున్నాను.
+hi: वस्त्र — देवसख और मणि सहित कीर्ति मेरे पास आएँ। मैं इस राष्ट्र में प्रादुर्भूत हूँ; वे मुझे कीर्ति और ऋद्धि दें। हे देवताओं से अर्चित चरणयुगल वाली, हे दुकूल वस्त्रों की प्रिया, मैं वस्त्रयुग्म दूँगा; ग्रहण कीजिए, हे त्रिपुरेश्वरि। ओम् श्री महिषासुरमर्दिनी को नमस्कार। वस्त्रद्वय समर्पित करता हूँ।
+
+--- unit 13 | section: षोडशोपचार पूजा ---
+vidhi:
+The bodice. The ṛc is the eighth of the Śrī Sūkta, which drives out misfortune.
+deva:
+कंचुकं –
+क्षुत्पि॑पा॒साम॑लां ज्ये॒ष्ठाम॑ल॒क्ष्मीं ना॑शया॒म्यहम् ।
+अभू॑ति॒मस॑मृद्धि॒ं च सर्वा॒ं निर्णु॑द मे॒ गृहा॑त् ॥
+स्वर्णतंतु समुद्भूतं रक्तवर्णेन शोभितम् ।
+भक्त्या दत्तं मया देवि कंचुकं परिगृह्यताम् ॥
+ओं श्री महिषासुरमर्धिन्यै नमः कंचुकं समर्पयामि ।
+iast:
+kaṁcukaṁ –
+kṣutpipāsāmalāṁ jyeṣṭhāmalakṣmīṁ nāśayāmyaham |
+abhūtimasamṛddhiṁ ca sarvāṁ nirṇuda me gṛhāt ||
+svarṇataṁtu samudbhūtaṁ raktavarṇena śobhitam |
+bhaktyā dattaṁ mayā devi kaṁcukaṁ parigṛhyatām ||
+oṁ śrī mahiṣāsuramardhinyai namaḥ kaṁcukaṁ samarpayāmi |
+en: Bodice — I destroy Alakṣmī, the elder sister, who is hunger, thirst and impurity. Drive away from my house all want and all failure of increase. Made of golden thread and beautiful in its red colour, given by me with devotion, O Goddess: let this bodice be accepted. Oṁ, salutation to Śrī Mahiṣāsuramardinī. I offer the bodice.
+tel: కంచుకము — ఆకలియు దప్పికయు మాలిన్యమును అయిన జ్యేష్ఠ అలక్ష్మిని నేను నశింపజేయుచున్నాను. అభూతిని అసమృద్ధిని సర్వమును నా గృహమునుండి తొలగింపుము. బంగారు దారములతో చేయబడినదియు, ఎఱ్ఱని వర్ణముతో శోభించునదియు, భక్తితో నాచే ఇవ్వబడినదియు అగు ఈ కంచుకమును, ఓ దేవీ, స్వీకరింపుము. ఓం శ్రీ మహిషాసురమర్దినికి నమస్కారము. కంచుకమును సమర్పించుచున్నాను.
+hi: कञ्चुक — क्षुधा, पिपासा और मल रूप ज्येष्ठा अलक्ष्मी का मैं नाश करता हूँ। अभूति और असमृद्धि — सब मेरे घर से दूर कीजिए। स्वर्ण के तन्तुओं से बना, लाल वर्ण से शोभित, मेरे द्वारा भक्ति से दिया गया यह कञ्चुक, हे देवि, स्वीकार कीजिए। ओम् श्री महिषासुरमर्दिनी को नमस्कार। कञ्चुक समर्पित करता हूँ।
+
+--- unit 14 | section: षोडशोपचार पूजा ---
+vidhi:
+Sandal-paste. The ṛc is the ninth of the Śrī Sūkta.
+deva:
+गंधं –
+ग॒ंध॒द्वा॒रां दु॑राध॒र्षा॒ं नि॒त्यपु॑ष्टां करी॒षिणी᳚म् ।
+ई॒श्वरी॑ग्ं सर्व॑भूता॒ना॒ं तामि॒होप॑ह्वये॒ श्रियम् ॥
+कर्पूरागरुकस्तूरीरोचनादिसुसंयुतम् ।
+अष्टगंधं प्रदास्यामि स्वीकुरुष्व शुभप्रदे ॥
+ओं श्री महिषासुरमर्धिन्यै नमः गंधं समर्पयामि ।
+iast:
+gaṁdhaṁ –
+gaṁdhadvārāṁ durādharṣāṁ nityapuṣṭāṁ karīṣiṇīm |
+īśvarīgṁ sarvabhūtānāṁ tāmihopahvaye śriyam ||
+karpūrāgarukastūrīrocanādisusaṁyutam |
+aṣṭagaṁdhaṁ pradāsyāmi svīkuruṣva śubhaprade ||
+oṁ śrī mahiṣāsuramardhinyai namaḥ gaṁdhaṁ samarpayāmi |
+en: Sandal-paste — Here I call upon Śrī, whose door is fragrance, who cannot be assailed, who is ever nourished and rich in cattle, the mistress of all beings. Camphor, aloe-wood, musk, gorocana and the rest, well mixed — I shall give the eightfold fragrance: take it, O giver of good. Oṁ, salutation to Śrī Mahiṣāsuramardinī. I offer sandal-paste.
+tel: గంధము — గంధమే ద్వారముగా కలదియు, ఎదిరింపరానిదియు, నిత్యము పుష్టి కలదియు, కరీషిణియు, సర్వభూతములకు ఈశ్వరియు అగు శ్రీదేవిని ఇచట ఆహ్వానించుచున్నాను. కర్పూరము, అగరు, కస్తూరి, గోరోచనము మొదలగువాటితో బాగుగా కూడిన అష్టగంధమును ఇచ్చెదను; స్వీకరింపుము, ఓ శుభప్రదా. ఓం శ్రీ మహిషాసురమర్దినికి నమస్కారము. గంధమును సమర్పించుచున్నాను.
+hi: गन्ध — गन्धद्वारा, दुराधर्षा, नित्यपुष्टा, करीषिणी, सर्वभूतों की ईश्वरी — उस श्री का मैं यहाँ आह्वान करता हूँ। कर्पूर, अगरु, कस्तूरी, रोचना आदि से भली भाँति युक्त अष्टगन्ध मैं दूँगा; स्वीकार कीजिए, हे शुभप्रदे। ओम् श्री महिषासुरमर्दिनी को नमस्कार। गन्ध समर्पित करता हूँ।
+
+--- unit 15 | section: षोडशोपचार पूजा ---
+vidhi:
+Turmeric and kuṅkuma. This service has no ṛc.
+deva:
+हरिद्राकुंकुमं –
+हरिद्रा शुभदा चैव स्त्रीणां सौभाग्यदायिनी ।
+कुंकुमं च मया दत्तं गृहाण सुरवंदिते ॥
+ओं श्री महिषासुरमर्धिन्यै नमः हरिद्राकुंकुमं समर्पयामि ।
+iast:
+haridrākuṁkumaṁ –
+haridrā śubhadā caiva strīṇāṁ saubhāgyadāyinī |
+kuṁkumaṁ ca mayā dattaṁ gṛhāṇa suravaṁdite ||
+oṁ śrī mahiṣāsuramardhinyai namaḥ haridrākuṁkumaṁ samarpayāmi |
+en: Turmeric and kuṅkuma — Turmeric is auspicious and gives women good fortune. Accept it, and the kuṅkuma given by me, O you whom the gods salute. Oṁ, salutation to Śrī Mahiṣāsuramardinī. I offer turmeric and kuṅkuma.
+tel: హరిద్రా కుంకుమము — పసుపు శుభమును ఇచ్చునది, స్త్రీలకు సౌభాగ్యమును ఇచ్చునది. దానిని, నాచే ఇవ్వబడిన కుంకుమను గ్రహింపుము, ఓ దేవతలచే నమస్కరింపబడుదానా. ఓం శ్రీ మహిషాసురమర్దినికి నమస్కారము. హరిద్రా కుంకుమమును సమర్పించుచున్నాను.
+hi: हरिद्रा कुङ्कुम — हरिद्रा शुभ देने वाली और स्त्रियों को सौभाग्य देने वाली है। उसे और मेरे द्वारा दिया गया कुङ्कुम ग्रहण कीजिए, हे देवताओं से वन्दित। ओम् श्री महिषासुरमर्दिनी को नमस्कार। हरिद्रा और कुङ्कुम समर्पित करता हूँ।
+
+--- unit 16 | section: षोडशोपचार पूजा ---
+vidhi:
+The thread of good fortune. The ṛc is the tenth of the Śrī Sūkta.
+deva:
+मांगळ्यं –
+मन॑सः॒ काम॒माकू॑तिं वा॒चः स॒त्यम॑शीमहि ।
+प॒शू॒नां रू॒पमन्न॑स्य॒ मयि॒ श्रीः श्र॑यता॒ं यशः॑ ॥
+शुद्धस्वर्णकृतं देवि मांगळ्यं मंगळप्रदम् ।
+सर्वमंगळमांगळ्यं गृहाण त्रिपुरेश्वरि ॥
+ओं श्री महिषासुरमर्धिन्यै नमः मंगळसूत्रं समर्पयामि ।
+iast:
+māṁgaḻyaṁ –
+manasaḥ kāmamākūtiṁ vācaḥ satyamaśīmahi |
+paśūnāṁ rūpamannasya mayi śrīḥ śrayatāṁ yaśaḥ ||
+śuddhasvarṇakṛtaṁ devi māṁgaḻyaṁ maṁgaḻapradam |
+sarvamaṁgaḻamāṁgaḻyaṁ gṛhāṇa tripureśvari ||
+oṁ śrī mahiṣāsuramardhinyai namaḥ maṁgaḻasūtraṁ samarpayāmi |
+en: Thread of good fortune — May we obtain the desire and the intent of the mind, and the truth of speech. May the form of cattle and of food, may prosperity and fame rest upon me. Made of pure gold, O Goddess, the thread of good fortune that gives all good, the auspiciousness of all that is auspicious: accept it, O mistress of Tripura. Oṁ, salutation to Śrī Mahiṣāsuramardinī. I offer the thread of good fortune.
+tel: మాంగల్యము — మనస్సు యొక్క కామమును సంకల్పమును, వాక్కు యొక్క సత్యమును పొందుదుము గాక. పశువుల రూపమును అన్నము యొక్క రూపమును, శ్రీయు యశస్సును నాయందు ఆశ్రయించుగాక. ఓ దేవీ, శుద్ధ సువర్ణముతో చేయబడినదియు, మంగళమును ఇచ్చునదియు, సర్వమంగళములకు మంగళమైనదియు అగు మాంగల్యమును గ్రహింపుము, ఓ త్రిపురేశ్వరీ. ఓం శ్రీ మహిషాసురమర్దినికి నమస్కారము. మంగళసూత్రమును సమర్పించుచున్నాను.
+hi: माङ्गल्य — मन का काम और आकूति तथा वाणी का सत्य हम प्राप्त करें। पशुओं का रूप और अन्न का रूप, श्री और यश मुझ में आश्रय लें। हे देवि, शुद्ध स्वर्ण से बना, मङ्गल देने वाला, सब मङ्गलों का मङ्गल यह माङ्गल्य ग्रहण कीजिए, हे त्रिपुरेश्वरि। ओम् श्री महिषासुरमर्दिनी को नमस्कार। मङ्गलसूत्र समर्पित करता हूँ।
+
+--- unit 17 | section: षोडशोपचार पूजा ---
+vidhi:
+Flowers. The ṛc is the eleventh of the Śrī Sūkta.
+deva:
+पुष्पाणि –
+क॒र्दमे॑न प्र॑जाभू॒ता॒ म॒यि॒ संभ॑व क॒र्दम ।
+श्रिय॑ं वा॒सय॑ मे कु॒ले मा॒तर॑ं पद्म॒मालि॑नीम् ॥
+मल्लिकाजातिकुसुमैश्चंपकैर्वकुलैरपि ।
+शतपत्रैश्च कल्हारैः पूजयामि वरप्रदे ॥
+ओं श्री महिषासुरमर्धिन्यै नमः पुष्पाणि समर्पयामि ।
+iast:
+puṣpāṇi –
+kardamena prajābhūtā mayi saṁbhava kardama |
+śriyaṁ vāsaya me kule mātaraṁ padmamālinīm ||
+mallikājātikusumaiścaṁpakairvakulairapi |
+śatapatraiśca kalhāraiḥ pūjayāmi varaprade ||
+oṁ śrī mahiṣāsuramardhinyai namaḥ puṣpāṇi samarpayāmi |
+en: Flowers — O Kardama, by Kardama she became rich in offspring. Be born in me. Settle Śrī in my line, the mother garlanded with lotuses. With jasmine of both kinds, with campaka and bakula flowers, with hundred-petalled lotuses and with white water-lilies I worship you, O giver of boons. Oṁ, salutation to Śrī Mahiṣāsuramardinī. I offer flowers.
+tel: పుష్పములు — ఓ కర్దమా, కర్దమునిచే ఆమె సంతానవతి ఆయెను. నాయందు ఉద్భవింపుము. పద్మమాలిని అయిన తల్లి శ్రీదేవిని నా వంశమునందు నివసింపజేయుము. మల్లె జాజి పువ్వులతోను, సంపెంగ పొగడ పువ్వులతోను, శతపత్రములతోను కల్హారములతోను నిన్ను పూజించుచున్నాను, ఓ వరప్రదా. ఓం శ్రీ మహిషాసురమర్దినికి నమస్కారము. పుష్పములను సమర్పించుచున్నాను.
+hi: पुष्प — हे कर्दम, कर्दम से वे प्रजावती हुईं। मुझ में सम्भव होइए। पद्ममालिनी माता श्री को मेरे कुल में बसाइए। मल्लिका और जाती के कुसुमों से, चम्पक और बकुल से, शतपत्र और कह्लार से मैं आपकी पूजा करता हूँ, हे वरप्रदे। ओम् श्री महिषासुरमर्दिनी को नमस्कार। पुष्प समर्पित करता हूँ।
+
+--- unit 18 | section: षोडशोपचार पूजा ---
+vidhi:
+The worship with a hundred and eight names, printed in full on the page. The list is a litany of names in mahā-, from Mahatī to Mahāsuravimardinī; no other copy of it is in this corpus.
+deva:
+अथ अष्टोत्तरशतनाम पूजा –
+1. ओं महत्यै नमः ।
+2. ओं महा मंत्रायै नमः ।
+3. ओं चेतनायै नमः ।
+4. ओं महा तंत्रायै नमः ।
+5. ओं मायायै नमः ।
+6. ओं महामय्यै नमः ।
+7. ओं महागौर्यै नमः ।
+8. ओं महा कुलायै नमः ।
+9. ओं महेश्वर्यै नमः ।
+10. ओं महा लोलायै नमः ।
+11. ओं महोदरायै नमः ।
+12. ओं महा मायायै नमः ।
+13. ओं महाबुद्ध्यै नमः ।
+14. ओं महा फलायै नमः ।
+15. ओं महाकाळ्यै नमः ।
+16. ओं महा निलायै नमः ।
+17. ओं महा बलायै नमः ।
+18. ओं महा शीलायै नमः ।
+19. ओं महा सुधायै नमः ।
+20. ओं महा बालायै नमः ।
+21. ओं महा निद्रायै नमः ।
+22. ओं महा निलयायै नमः ।
+23. ओं महा मुद्रायै नमः ।
+24. ओं महा कलायै नमः ।
+25. ओं महा दयायै नमः ।
+26. ओं महा चित्रायै नमः ।
+27. ओं महा भोगायै नमः ।
+28. ओं महा सेतवे नमः ।
+29. ओं महा मोहायै नमः ।
+30. ओं महा हेतवे नमः ।
+31. ओं महा जयायै नमः ।
+32. ओं यशस्विन्यै नमः ।
+33. ओं महातुष्ट्यै नमः ।
+34. ओं महा विद्यायै नमः ।
+35. ओं महा लज्जायै नमः ।
+36. ओं महा साध्यायै नमः ।
+37. ओं महाधृत्यै नमः ।
+38. ओं महा सत्यायै नमः ।
+39. ओं महा घोरायै नमः ।
+40. ओं महा गत्यै नमः ।
+41. ओं महा दृष्ट्रायै नमः ।
+42. ओं महा सुखिन्यै नमः ।
+43. ओं महाकांत्यै नमः ।
+44. ओं महा दुःस्वप्न नासिन्यै नमः ।
+45. ओं महाकृत्यै नमः ।
+46. ओं महा मोक्षप्रदायै नमः ।
+47. ओं महा पद्मायै नमः ।
+48. ओं महा पक्षायै नमः ।
+49. ओं महा मेधायै नमः ।
+50. ओं महा यशस्विन्यै नमः ।
+51. ओं महा बोधायै नमः ।
+52. ओं महा भद्रायै नमः ।
+53. ओं महा तपसे नमः ।
+54. ओं महा वाण्यै नमः ।
+55. ओं महा स्थानायै नमः ।
+56. ओं महा रोग विनासिन्यै नमः ।
+57. ओं महा रवायै नमः ।
+58. ओं महा धारायै नमः ।
+59. ओं महा रोषायै नमः ।
+60. ओं महा कारायै नमः ।
+61. ओं महायुधायै नमः ।
+62. ओं महा मार्यै नमः ।
+63. ओं महा बंधन संहर्यै नमः ।
+64. ओं खेचर्यै नमः ।
+65. ओं महाभय विनाशिन्यै नमः ।
+66. ओं मोहिण्यै नमः ।
+67. ओं महा नेत्रायै नमः ।
+68. ओं महा क्षेमंकर्यै नमः ।
+69. ओं महा वक्त्रायै नमः ।
+70. ओं महा क्षमायै नमः ।
+71. ओं महा वक्षसे नमः ।
+72. ओं महैश्वर्य प्रदायिन्यै नमः ।
+73. ओं महा भुजायै नमः ।
+74. ओं महा विषघ्न्यै नमः ।
+75. ओं महा महीरुहायै नमः ।
+76. ओं विषदायै नमः ।
+77. ओं पूर्णायै नमः ।
+78. ओं महा दुखः विनासिन्यै नमः ।
+79. ओं महा छायायै नमः ।
+80. ओं महा वर्षायै नमः ।
+81. ओं महानघायै नमः ।
+82. ओं महा तत्त्वायै नमः ।
+83. ओं महाशांत्यै नमः ।
+84. ओं महा कैलास वासिन्यै नमः ।
+85. ओं महाश्वासायै नमः ।
+86. ओं महा सुभद्रायै नमः ।
+87. ओं महा पर्वत नंदिन्यै नमः ।
+88. ओं सुभगायै नमः ।
+89. ओं महा ब्रह्ममय्यै नमः ।
+90. ओं महा विद्यायै नमः ।
+91. ओं मात्रे नमः ।
+92. ओं महा सत्यै नमः ।
+93. ओं महा सारायै नमः ।
+94. ओं महा प्रत्यंगिरायै नमः ।
+95. ओं महा सुरघ्न्यै नमः ।
+96. ओं महा नित्यायै नमः ।
+97. ओं महत्यै नमः ।
+98. ओं महा प्रळय कारिण्यै नमः ।
+99. ओं पार्वत्यै नमः ।
+100. ओं महा शक्त्यै नमः ।
+101. ओं चर्चितायै नमः ।
+102. ओं महामत्यै नमः ।
+103. ओं शिवायै नमः ।
+104. ओं महा मंगल कारिण्यै नमः ।
+105. ओं महा क्षांत्यै नमः ।
+106. ओं महा देव्यै नमः ।
+107. ओं महा भ्रांत्यै नमः ।
+108. ओं महा सुर विमर्दिन्यै नमः ।
+ओं श्री महिषासुरमर्धिन्यै नमः अष्टोत्तरशतनामपूजां समर्पयामि ।
+iast:
+atha aṣṭottaraśatanāma pūjā –
+1. oṁ mahatyai namaḥ |
+2. oṁ mahā maṁtrāyai namaḥ |
+3. oṁ cetanāyai namaḥ |
+4. oṁ mahā taṁtrāyai namaḥ |
+5. oṁ māyāyai namaḥ |
+6. oṁ mahāmayyai namaḥ |
+7. oṁ mahāgauryai namaḥ |
+8. oṁ mahā kulāyai namaḥ |
+9. oṁ maheśvaryai namaḥ |
+10. oṁ mahā lolāyai namaḥ |
+11. oṁ mahodarāyai namaḥ |
+12. oṁ mahā māyāyai namaḥ |
+13. oṁ mahābuddhyai namaḥ |
+14. oṁ mahā phalāyai namaḥ |
+15. oṁ mahākāḻyai namaḥ |
+16. oṁ mahā nilāyai namaḥ |
+17. oṁ mahā balāyai namaḥ |
+18. oṁ mahā śīlāyai namaḥ |
+19. oṁ mahā sudhāyai namaḥ |
+20. oṁ mahā bālāyai namaḥ |
+21. oṁ mahā nidrāyai namaḥ |
+22. oṁ mahā nilayāyai namaḥ |
+23. oṁ mahā mudrāyai namaḥ |
+24. oṁ mahā kalāyai namaḥ |
+25. oṁ mahā dayāyai namaḥ |
+26. oṁ mahā citrāyai namaḥ |
+27. oṁ mahā bhogāyai namaḥ |
+28. oṁ mahā setave namaḥ |
+29. oṁ mahā mohāyai namaḥ |
+30. oṁ mahā hetave namaḥ |
+31. oṁ mahā jayāyai namaḥ |
+32. oṁ yaśasvinyai namaḥ |
+33. oṁ mahātuṣṭyai namaḥ |
+34. oṁ mahā vidyāyai namaḥ |
+35. oṁ mahā lajjāyai namaḥ |
+36. oṁ mahā sādhyāyai namaḥ |
+37. oṁ mahādhṛtyai namaḥ |
+38. oṁ mahā satyāyai namaḥ |
+39. oṁ mahā ghorāyai namaḥ |
+40. oṁ mahā gatyai namaḥ |
+41. oṁ mahā dṛṣṭrāyai namaḥ |
+42. oṁ mahā sukhinyai namaḥ |
+43. oṁ mahākāṁtyai namaḥ |
+44. oṁ mahā duḥsvapna nāsinyai namaḥ |
+45. oṁ mahākṛtyai namaḥ |
+46. oṁ mahā mokṣapradāyai namaḥ |
+47. oṁ mahā padmāyai namaḥ |
+48. oṁ mahā pakṣāyai namaḥ |
+49. oṁ mahā medhāyai namaḥ |
+50. oṁ mahā yaśasvinyai namaḥ |
+51. oṁ mahā bodhāyai namaḥ |
+52. oṁ mahā bhadrāyai namaḥ |
+53. oṁ mahā tapase namaḥ |
+54. oṁ mahā vāṇyai namaḥ |
+55. oṁ mahā sthānāyai namaḥ |
+56. oṁ mahā roga vināsinyai namaḥ |
+57. oṁ mahā ravāyai namaḥ |
+58. oṁ mahā dhārāyai namaḥ |
+59. oṁ mahā roṣāyai namaḥ |
+60. oṁ mahā kārāyai namaḥ |
+61. oṁ mahāyudhāyai namaḥ |
+62. oṁ mahā māryai namaḥ |
+63. oṁ mahā baṁdhana saṁharyai namaḥ |
+64. oṁ khecaryai namaḥ |
+65. oṁ mahābhaya vināśinyai namaḥ |
+66. oṁ mohiṇyai namaḥ |
+67. oṁ mahā netrāyai namaḥ |
+68. oṁ mahā kṣemaṁkaryai namaḥ |
+69. oṁ mahā vaktrāyai namaḥ |
+70. oṁ mahā kṣamāyai namaḥ |
+71. oṁ mahā vakṣase namaḥ |
+72. oṁ mahaiśvarya pradāyinyai namaḥ |
+73. oṁ mahā bhujāyai namaḥ |
+74. oṁ mahā viṣaghnyai namaḥ |
+75. oṁ mahā mahīruhāyai namaḥ |
+76. oṁ viṣadāyai namaḥ |
+77. oṁ pūrṇāyai namaḥ |
+78. oṁ mahā dukhaḥ vināsinyai namaḥ |
+79. oṁ mahā chāyāyai namaḥ |
+80. oṁ mahā varṣāyai namaḥ |
+81. oṁ mahānaghāyai namaḥ |
+82. oṁ mahā tattvāyai namaḥ |
+83. oṁ mahāśāṁtyai namaḥ |
+84. oṁ mahā kailāsa vāsinyai namaḥ |
+85. oṁ mahāśvāsāyai namaḥ |
+86. oṁ mahā subhadrāyai namaḥ |
+87. oṁ mahā parvata naṁdinyai namaḥ |
+88. oṁ subhagāyai namaḥ |
+89. oṁ mahā brahmamayyai namaḥ |
+90. oṁ mahā vidyāyai namaḥ |
+91. oṁ mātre namaḥ |
+92. oṁ mahā satyai namaḥ |
+93. oṁ mahā sārāyai namaḥ |
+94. oṁ mahā pratyaṁgirāyai namaḥ |
+95. oṁ mahā suraghnyai namaḥ |
+96. oṁ mahā nityāyai namaḥ |
+97. oṁ mahatyai namaḥ |
+98. oṁ mahā praḻaya kāriṇyai namaḥ |
+99. oṁ pārvatyai namaḥ |
+100. oṁ mahā śaktyai namaḥ |
+101. oṁ carcitāyai namaḥ |
+102. oṁ mahāmatyai namaḥ |
+103. oṁ śivāyai namaḥ |
+104. oṁ mahā maṁgala kāriṇyai namaḥ |
+105. oṁ mahā kṣāṁtyai namaḥ |
+106. oṁ mahā devyai namaḥ |
+107. oṁ mahā bhrāṁtyai namaḥ |
+108. oṁ mahā sura vimardinyai namaḥ |
+oṁ śrī mahiṣāsuramardhinyai namaḥ aṣṭottaraśatanāmapūjāṁ samarpayāmi |
+en: Worship with a hundred and eight names — Oṁ, salutation to Mahatī, the great one. Mahāmaṁtrā, the great mantra. Cetanā, consciousness. Mahātaṁtrā, the great tantra. Māyā. Mahāmayī, made of greatness. Mahāgaurī, the great Gaurī. Mahākulā, of the great family. Maheśvarī, the great sovereign. Mahālolā, the greatly restless. Mahodarā, of the great belly. Mahāmāyā, the great illusion. Mahābuddhi, great intelligence. Mahāphalā, the great fruit. Mahākāḻī, the great Kālī. Mahānilā, the great dark one. Mahābalā, of great strength. Mahāśīlā, of great conduct. Mahāsudhā, the great nectar. Mahābālā, the great young one. Mahānidrā, the great sleep. Mahānilayā, the great abode. Mahāmudrā, the great seal. Mahākalā, the great art. Mahādayā, great compassion. Mahācitrā, the great wonder. Mahābhogā, of great enjoyment. Mahāsetu, the great bridge. Mahāmohā, the great delusion. Mahāhetu, the great cause. Mahājayā, the great victory. Yaśasvinī, the famed one. Mahātuṣṭi, great contentment. Mahāvidyā, the great knowledge. Mahālajjā, great modesty. Mahāsādhyā, the great goal. Mahādhṛti, great steadfastness. Mahāsatyā, the great truth. Mahāghorā, the greatly terrible. Mahāgati, the great refuge. Mahādṛṣṭrā, of the great fangs. Mahāsukhinī, greatly happy. Mahākāṁti, great radiance. Mahāduḥsvapnanāsinī, destroyer of great bad dreams. Mahākṛti, the great deed. Mahāmokṣapradā, giver of great liberation. Mahāpadmā, the great lotus. Mahāpakṣā, of the great wing. Mahāmedhā, great wisdom. Mahāyaśasvinī, of great fame. Mahābodhā, great awakening. Mahābhadrā, the greatly auspicious. Mahātapas, great austerity. Mahāvāṇī, great speech. Mahāsthānā, of the great place. Mahārogavināsinī, destroyer of great disease. Mahāravā, of the great roar. Mahādhārā, the great stream. Mahāroṣā, of great wrath. Mahākārā, of the great form. Mahāyudhā, of the great weapon. Mahāmārī, the great death. Mahābaṁdhanasaṁharī, destroyer of great bonds. Khecarī, who moves in the sky. Mahābhayavināśinī, destroyer of great fear. Mohiṇī, the enchantress. Mahānetrā, of the great eyes. Mahākṣemaṁkarī, who brings great welfare. Mahāvaktrā, of the great face. Mahākṣamā, great forbearance. Mahāvakṣas, of the great chest. Mahaiśvaryapradāyinī, giver of great sovereignty. Mahābhujā, of the great arms. Mahāviṣaghnī, destroyer of great poison. Mahāmahīruhā, the great tree. Viṣadā, the clear one. Pūrṇā, the full. Mahādukhaḥvināsinī, destroyer of great sorrow. Mahāchāyā, the great shade. Mahāvarṣā, the great rain. Mahānaghā, the greatly sinless. Mahātattvā, the great principle. Mahāśāṁti, great peace. Mahākailāsavāsinī, dwelling on great Kailāsa. Mahāśvāsā, the great breath. Mahāsubhadrā, the greatly gracious. Mahāparvatanaṁdinī, daughter of the great mountain. Subhagā, the fortunate one. Mahābrahmamayī, made of the great Brahman. Mahāvidyā, the great knowledge. Mātā, the mother. Mahāsatī, the great Satī. Mahāsārā, the great essence. Mahāpratyaṁgirā, the great Pratyaṅgirā. Mahāsuraghnī, slayer of the great demons. Mahānityā, the greatly eternal. Mahatī, the great one. Mahāpraḻayakāriṇī, who brings the great dissolution. Pārvatī. Mahāśakti, the great power. Carcitā, the anointed one. Mahāmati, great understanding. Śivā, the gracious one. Mahāmaṁgalakāriṇī, who brings great good. Mahākṣāṁti, great patience. Mahādevī, the great goddess. Mahābhrāṁti, the great bewilderment. Mahāsuravimardinī, crusher of the great demons. Oṁ, salutation to Śrī Mahiṣāsuramardinī. I offer the worship with a hundred and eight names.
+tel: అష్టోత్తరశతనామ పూజ — ఓం మహతికి నమస్కారము. మహామంత్రకు. చేతనకు. మహాతంత్రకు. మాయకు. మహామయికి. మహాగౌరికి. మహాకులకు. మహేశ్వరికి. మహాలోలకు. మహోదరకు. మహామాయకు. మహాబుద్ధికి. మహాఫలకు. మహాకాళికి. మహానిలకు. మహాబలకు. మహాశీలకు. మహాసుధకు. మహాబాలకు. మహానిద్రకు. మహానిలయకు. మహాముద్రకు. మహాకలకు. మహాదయకు. మహాచిత్రకు. మహాభోగకు. మహాసేతుకు. మహామోహకు. మహాహేతుకు. మహాజయకు. యశస్వినికి. మహాతుష్టికి. మహావిద్యకు. మహాలజ్జకు. మహాసాధ్యకు. మహాధృతికి. మహాసత్యకు. మహాఘోరకు. మహాగతికి. మహాదృష్ట్రకు. మహాసుఖినికి. మహాకాంతికి. మహాదుఃస్వప్ననాసినికి. మహాకృతికి. మహామోక్షప్రదకు. మహాపద్మకు. మహాపక్షకు. మహామేధకు. మహాయశస్వినికి. మహాబోధకు. మహాభద్రకు. మహాతపస్కి. మహావాణికి. మహాస్థానకు. మహారోగవినాసినికి. మహారవకు. మహాధారకు. మహారోషకు. మహాకారకు. మహాయుధకు. మహామారికి. మహాబంధనసంహరికి. ఖేచరికి. మహాభయవినాశినికి. మోహిణికి. మహానేత్రకు. మహాక్షేమంకరికి. మహావక్త్రకు. మహాక్షమకు. మహావక్షస్కి. మహైశ్వర్యప్రదాయినికి. మహాభుజకు. మహావిషఘ్నికి. మహామహీరుహకు. విషదకు. పూర్ణకు. మహాదుఖఃవినాసినికి. మహాఛాయకు. మహావర్షకు. మహానఘకు. మహాతత్త్వకు. మహాశాంతికి. మహాకైలాసవాసినికి. మహాశ్వాసకు. మహాసుభద్రకు. మహాపర్వతనందినికి. సుభగకు. మహాబ్రహ్మమయికి. మహావిద్యకు. మాతకు. మహాసతికి. మహాసారకు. మహాప్రత్యంగిరకు. మహాసురఘ్నికి. మహానిత్యకు. మహతికి. మహాప్రళయకారిణికి. పార్వతికి. మహాశక్తికి. చర్చితకు. మహామతికి. శివకు. మహామంగలకారిణికి. మహాక్షాంతికి. మహాదేవికి. మహాభ్రాంతికి. మహాసురవిమర్దినికి. ఓం శ్రీ మహిషాసురమర్దినికి నమస్కారము. అష్టోత్తరశతనామ పూజను సమర్పించుచున్నాను.
+hi: अष्टोत्तरशतनाम पूजा — ओम् महती को नमस्कार। महामंत्रा को। चेतना को। महातंत्रा को। माया को। महामयी को। महागौरी को। महाकुला को। महेश्वरी को। महालोला को। महोदरा को। महामाया को। महाबुद्धि को। महाफला को। महाकाळी को। महानिला को। महाबला को। महाशीला को। महासुधा को। महाबाला को। महानिद्रा को। महानिलया को। महामुद्रा को। महाकला को। महादया को। महाचित्रा को। महाभोगा को। महासेतु को। महामोहा को। महाहेतु को। महाजया को। यशस्विनी को। महातुष्टि को। महाविद्या को। महालज्जा को। महासाध्या को। महाधृति को। महासत्या को। महाघोरा को। महागति को। महादृष्ट्रा को। महासुखिनी को। महाकांति को। महादुःस्वप्ननासिनी को। महाकृति को। महामोक्षप्रदा को। महापद्मा को। महापक्षा को। महामेधा को। महायशस्विनी को। महाबोधा को। महाभद्रा को। महातपस् को। महावाणी को। महास्थाना को। महारोगविनासिनी को। महारवा को। महाधारा को। महारोषा को। महाकारा को। महायुधा को। महामारी को। महाबंधनसंहरी को। खेचरी को। महाभयविनाशिनी को। मोहिणी को। महानेत्रा को। महाक्षेमंकरी को। महावक्त्रा को। महाक्षमा को। महावक्षस् को। महैश्वर्यप्रदायिनी को। महाभुजा को। महाविषघ्नी को। महामहीरुहा को। विषदा को। पूर्णा को। महादुखःविनासिनी को। महाछाया को। महावर्षा को। महानघा को। महातत्त्वा को। महाशांति को। महाकैलासवासिनी को। महाश्वासा को। महासुभद्रा को। महापर्वतनंदिनी को। सुभगा को। महाब्रह्ममयी को। महाविद्या को। माता को। महासती को। महासारा को। महाप्रत्यंगिरा को। महासुरघ्नी को। महानित्या को। महती को। महाप्रळयकारिणी को। पार्वती को। महाशक्ति को। चर्चिता को। महामति को। शिवा को। महामंगलकारिणी को। महाक्षांति को। महादेवी को। महाभ्रांति को। महासुरविमर्दिनी को। ओम् श्री महिषासुरमर्दिनी को नमस्कार। अष्टोत्तरशतनाम पूजा समर्पित करता हूँ।
+
+--- unit 19 | section: षोडशोपचार पूजा ---
+vidhi:
+Incense. The ṛc is the twelfth of the Śrī Sūkta.
+deva:
+धूपं –
+आपः॑ सृ॒जन्तु॑ स्नि॒ग्धा॒नि॒ चि॒क्ली॒त व॑स मे॒ गृहे ।
+नि च॑ दे॒वीं मा॒तर॒ं श्रिय॑ं वा॒सय॑ मे कु॒ले ॥
+दशांगं गुग्गुलोपेतं सुगंधं च मनोहरम् ।
+धूपं दास्यामि देवेशि गृहाण त्रिपुरेश्वरि ॥
+ओं श्री महिषासुरमर्धिन्यै नमः धूपं आघ्रापयामि ।
+iast:
+dhūpaṁ –
+āpaḥ sṛjantu snigdhāni ciklīta vasa me gṛhe |
+ni ca devīṁ mātaraṁ śriyaṁ vāsaya me kule ||
+daśāṁgaṁ guggulopetaṁ sugaṁdhaṁ ca manoharam |
+dhūpaṁ dāsyāmi deveśi gṛhāṇa tripureśvari ||
+oṁ śrī mahiṣāsuramardhinyai namaḥ dhūpaṁ āghrāpayāmi |
+en: Incense — Let the waters bring forth what is smooth. O Ciklīta, dwell in my house, and settle here the goddess, the mother, Śrī, in my line. Of ten ingredients, with guggulu, fragrant and pleasing to the mind — I shall give incense, O mistress of the gods: accept it, O mistress of Tripura. Oṁ, salutation to Śrī Mahiṣāsuramardinī. I offer incense for her to smell.
+tel: ధూపము — జలములు స్నిగ్ధములను సృజించుగాక. ఓ చిక్లీతా, నా గృహమునందు నివసింపుము, మరియు తల్లియైన శ్రీదేవిని నా వంశమునందు నిలుపుము. దశాంగముతోను గుగ్గిలముతోను కూడినదియు, సుగంధమైనదియు, మనోహరమైనదియు అగు ధూపమును ఇచ్చెదను, ఓ దేవేశీ; గ్రహింపుము, ఓ త్రిపురేశ్వరీ. ఓం శ్రీ మహిషాసురమర్దినికి నమస్కారము. ధూపమును ఆఘ్రాణింపజేయుచున్నాను.
+hi: धूप — जल स्निग्ध पदार्थों को उत्पन्न करें। हे चिक्लीत, मेरे घर में वास कीजिए, और देवी माता श्री को मेरे कुल में बसाइए। दशाङ्ग और गुग्गुल से युक्त, सुगन्धित और मनोहर धूप मैं दूँगा, हे देवेशि; ग्रहण कीजिए, हे त्रिपुरेश्वरि। ओम् श्री महिषासुरमर्दिनी को नमस्कार। धूप आघ्रापित करता हूँ।
+
+--- unit 20 | section: षोडशोपचार पूजा ---
+vidhi:
+The lamp. The ṛc is the thirteenth of the Śrī Sūkta.
+deva:
+दीपं –
+आ॒र्द्रां पु॒ष्करि॑णीं पु॒ष्टि॒ं पि॒ङ्ग॒लां प॑द्ममा॒लिनीम् ।
+च॒न्द्रां हि॒रण्म॑यीं ल॒क्ष्मीं जात॑वेदो म॒ आव॑ह ॥
+घृतवर्तिसमायुक्तं अंधकारविनाशकम् ।
+दीपं दास्यामि वरदे गृहाण मुदिता भव ॥
+ओं श्री महिषासुरमर्धिन्यै नमः दीपं दर्शयामि ।
+धूपदीपानंतरं आचमनीयं समर्पयामि ।
+iast:
+dīpaṁ –
+ārdrāṁ puṣkariṇīṁ puṣṭiṁ piṅgalāṁ padmamālinīm |
+candrāṁ hiraṇmayīṁ lakṣmīṁ jātavedo ma āvaha ||
+ghṛtavartisamāyuktaṁ aṁdhakāravināśakam |
+dīpaṁ dāsyāmi varade gṛhāṇa muditā bhava ||
+oṁ śrī mahiṣāsuramardhinyai namaḥ dīpaṁ darśayāmi |
+dhūpadīpānaṁtaraṁ ācamanīyaṁ samarpayāmi |
+en: Lamp — O Jātavedas, bring to me Lakṣmī, moist, full of lotus ponds, nourishing, tawny, garlanded with lotuses, bright as the moon, made of gold. Joined with a wick in ghee, destroyer of darkness — I shall give a lamp, O giver of boons: accept it and be glad. Oṁ, salutation to Śrī Mahiṣāsuramardinī. I show the lamp. After the incense and the lamp I offer water for sipping.
+tel: దీపము — ఓ జాతవేదా, ఆర్ద్రయు, పుష్కరిణియు, పుష్టియు, పింగళయు, పద్మమాలినియు, చంద్రయు, హిరణ్మయియు అగు లక్ష్మిని నాకు తెమ్ము. నేతి వత్తితో కూడినదియు, అంధకారమును నశింపజేయునదియు అగు దీపమును ఇచ్చెదను, ఓ వరదా; గ్రహించి సంతోషించుము. ఓం శ్రీ మహిషాసురమర్దినికి నమస్కారము. దీపమును చూపుచున్నాను. ధూపదీపానంతరము ఆచమనీయమును సమర్పించుచున్నాను.
+hi: दीप — हे जातवेदस्, आर्द्रा, पुष्करिणी, पुष्टि, पिङ्गला, पद्ममालिनी, चन्द्रा, हिरण्मयी लक्ष्मी को मेरे लिए ले आइए। घृत की बत्ती से युक्त, अन्धकार का नाश करने वाला दीप मैं दूँगा, हे वरदे; ग्रहण कीजिए और प्रसन्न होइए। ओम् श्री महिषासुरमर्दिनी को नमस्कार। दीप दिखाता हूँ। धूप और दीप के पश्चात् आचमनीय समर्पित करता हूँ।
+
+--- unit 21 | section: षोडशोपचार पूजा ---
+vidhi:
+The food-offering. The ṛc is the fourteenth of the Śrī Sūkta.
+deva:
+नैवेद्यं –
+आ॒र्द्रां यः॒ करि॑णीं य॒ष्टि॒ं सु॒व॒र्णां हे॑ममा॒लिनीम् ।
+सू॒र्यां हि॒रण्म॑यीं ल॒क्ष्मी॒ं जात॑वेदो म॒ आवह ॥
+नैवेद्यं षड्रसोपेतं दधिमध्वाज्यसंयुतम् ।
+नानाभक्ष्यफलोपेतं गृहाण त्रिपुरेश्वरि ॥
+ओं श्री महिषासुरमर्धिन्यै नमः नैवेद्यं समर्पयामि ।
+iast:
+naivedyaṁ –
+ārdrāṁ yaḥ kariṇīṁ yaṣṭiṁ suvarṇāṁ hemamālinīm |
+sūryāṁ hiraṇmayīṁ lakṣmīṁ jātavedo ma āvaha ||
+naivedyaṁ ṣaḍrasopetaṁ dadhimadhvājyasaṁyutam |
+nānābhakṣyaphalopetaṁ gṛhāṇa tripureśvari ||
+oṁ śrī mahiṣāsuramardhinyai namaḥ naivedyaṁ samarpayāmi |
+en: Food-offering — O Jātavedas, bring to me Lakṣmī, moist, holding the staff of her elephants, golden, garlanded with gold, bright as the sun, made of gold. Food with the six tastes, joined with curd, honey and ghee, with many sweets and fruits: accept it, O mistress of Tripura. Oṁ, salutation to Śrī Mahiṣāsuramardinī. I offer the food-offering.
+tel: నైవేద్యము — ఓ జాతవేదా, ఆర్ద్రయు, కరిణియు, యష్టియు, సువర్ణయు, హేమమాలినియు, సూర్యయు, హిరణ్మయియు అగు లక్ష్మిని నాకు తెమ్ము. షడ్రసములతో కూడినదియు, పెరుగు తేనె నెయ్యిలతో కూడినదియు, నానా భక్ష్యములతోను ఫలములతోను కూడినదియు అగు నైవేద్యమును గ్రహింపుము, ఓ త్రిపురేశ్వరీ. ఓం శ్రీ మహిషాసురమర్దినికి నమస్కారము. నైవేద్యమును సమర్పించుచున్నాను.
+hi: नैवेद्य — हे जातवेदस्, आर्द्रा, करिणी, यष्टि, सुवर्णा, हेममालिनी, सूर्या, हिरण्मयी लक्ष्मी को मेरे लिए ले आइए। छह रसों से युक्त, दधि, मधु और घृत से युक्त, नाना भक्ष्यों और फलों से युक्त नैवेद्य ग्रहण कीजिए, हे त्रिपुरेश्वरि। ओम् श्री महिषासुरमर्दिनी को नमस्कार। नैवेद्य समर्पित करता हूँ।
+
+--- unit 22 | section: षोडशोपचार पूजा ---
+vidhi:
+Betel. The ṛc is the fifteenth and last of the Śrī Sūkta.
+deva:
+तांबूलं –
+तां म॒ आव॑ह॒ जात॑वेदो ल॒क्ष्मीमन॑पगा॒मिनी᳚म् ।
+यस्या॒ं हि॑रण्य॒ं प्रभू॑त॒ं गावो॑ दा॒स्योऽश्वा᳚न्वि॒न्देय॒ं पुरु॑षान॒हम् ॥
+पूगीफलसमायुक्तं नागवल्लीदळैर्युतम् ।
+एलालवंग संयुक्तं तांबूलं प्रतिगृह्यताम् ॥
+ओं श्री महिषासुरमर्धिन्यै नमः तांबूलं समर्पयामि ।
+iast:
+tāṁbūlaṁ –
+tāṁ ma āvaha jātavedo lakṣmīmanapagāminīm |
+yasyāṁ hiraṇyaṁ prabhūtaṁ gāvo dāsyo'śvānvindeyaṁ puruṣānaham ||
+pūgīphalasamāyuktaṁ nāgavallīdaḻairyutam |
+elālavaṁga saṁyuktaṁ tāṁbūlaṁ pratigṛhyatām ||
+oṁ śrī mahiṣāsuramardhinyai namaḥ tāṁbūlaṁ samarpayāmi |
+en: Betel — O Jātavedas, bring to me that Lakṣmī who does not depart, through whom I may find abundant gold, cattle, servants and horses, and men. Joined with areca nut, with leaves of the betel creeper, with cardamom and clove — let this betel be accepted. Oṁ, salutation to Śrī Mahiṣāsuramardinī. I offer betel.
+tel: తాంబూలము — ఓ జాతవేదా, తొలగిపోని ఆ లక్ష్మిని నాకు తెమ్ము; ఎవరివలన నేను ప్రభూతమైన బంగారమును, గోవులను, దాసీలను, అశ్వములను, పురుషులను పొందుదునో ఆమెను. పోకచెక్కతోను, నాగవల్లీ దళములతోను, ఏలకులు లవంగములతోను కూడిన ఈ తాంబూలమును స్వీకరింపుము. ఓం శ్రీ మహిషాసురమర్దినికి నమస్కారము. తాంబూలమును సమర్పించుచున్నాను.
+hi: ताम्बूल — हे जातवेदस्, उस अनपगामिनी लक्ष्मी को मेरे लिए ले आइए, जिनसे मैं प्रभूत हिरण्य, गौ, दासी, अश्व और पुरुष प्राप्त करूँ। पूगीफल सहित, नागवल्ली के दलों से युक्त, एला और लवङ्ग से युक्त यह ताम्बूल स्वीकार कीजिए। ओम् श्री महिषासुरमर्दिनी को नमस्कार। ताम्बूल समर्पित करता हूँ।
+
+--- unit 23 | section: षोडशोपचार पूजा ---
+vidhi:
+The waving of the light. Its ṛc, सम्राजं च विराजं च, stands after the fifteen ṛcs in the same place in 19_durga_shodashopachara_puja.txt.
+deva:
+नीराजनं –
+स॒म्राज॑ं च वि॒राज॑ं चाभि॒श्रीर्या च॑ नो गृ॒हे ।
+ल॒क्ष्मी रा॒ष्ट्रस्य॒ या मुखे॒ तया॑ मा॒ सग्ं सृ॒जामसि ।
+नीराजनं मयानीतं कर्पूरेण समन्वितम् ।
+तुभ्यं दास्याम्यहं देवि गृह्यतां त्रिपुरेश्वरि ॥
+ओं श्री महिषासुरमर्धिन्यै नमः कर्पूरनीराजनं समर्पयामि ।
+नीराजनानंतरं शुद्धाचमनीयं समर्पयामि ।
+iast:
+nīrājanaṁ –
+samrājaṁ ca virājaṁ cābhiśrīryā ca no gṛhe |
+lakṣmī rāṣṭrasya yā mukhe tayā mā sagṁ sṛjāmasi |
+nīrājanaṁ mayānītaṁ karpūreṇa samanvitam |
+tubhyaṁ dāsyāmyahaṁ devi gṛhyatāṁ tripureśvari ||
+oṁ śrī mahiṣāsuramardhinyai namaḥ karpūranīrājanaṁ samarpayāmi |
+nīrājanānaṁtaraṁ śuddhācamanīyaṁ samarpayāmi |
+en: Waving of the light — The sovereign and the wide-ruling, and the fortune that is in our house, and the Lakṣmī who is in the mouth of the realm — with her we unite ourselves. This waving of the light, brought by me with camphor, I give to you, O Goddess: let it be accepted, O mistress of Tripura. Oṁ, salutation to Śrī Mahiṣāsuramardinī. I offer the waving of the camphor light. After it I offer pure water for sipping.
+tel: నీరాజనము — సమ్రాజ్ఞియు విరాజ్ఞియు, మన గృహమునందున్న అభిశ్రీయు, రాష్ట్రముఖమునందున్న లక్ష్మియు — ఆమెతో మనలను కలుపుకొనుచున్నాము. కర్పూరముతో కూడి నాచే తేబడిన ఈ నీరాజనమును నీకు ఇచ్చుచున్నాను, ఓ దేవీ; స్వీకరింపుము, ఓ త్రిపురేశ్వరీ. ఓం శ్రీ మహిషాసురమర్దినికి నమస్కారము. కర్పూర నీరాజనమును సమర్పించుచున్నాను. నీరాజనానంతరము శుద్ధ ఆచమనీయమును సమర్పించుచున్నాను.
+hi: नीराजन — सम्राज्ञी और विराज्ञी, जो अभिश्री हमारे घर में है, और जो लक्ष्मी राष्ट्र के मुख में है — उससे हम स्वयं को जोड़ते हैं। कर्पूर से युक्त, मेरे द्वारा लाया गया यह नीराजन मैं आपको देता हूँ, हे देवि; ग्रहण कीजिए, हे त्रिपुरेश्वरि। ओम् श्री महिषासुरमर्दिनी को नमस्कार। कर्पूर नीराजन समर्पित करता हूँ। नीराजन के पश्चात् शुद्ध आचमनीय समर्पित करता हूँ।
+
+--- unit 24 | section: मन्त्रपुष्पम् ---
+vidhi:
+The mantra-flower. The page keeps Bālā's name-mantra, ओं ऐं ह्रीं श्रीं बालायै नमः, unchanged, and the gāyatrī of Tripurā. It is kept as printed.
+deva:
+मंत्रपुष्पं –
+ओं ऐं ह्रीं श्रीं बालायै नमः ।
+क्लीं त्रिपुरादेवि विद्महे कामेश्वरि धीमहि तन्नः क्लिन्ने प्रचोदयात् ॥
+वाग्देवि वरदे देवि चंद्ररेखासमन्विते ।
+मंत्रपुष्पमिदं भक्त्या स्वीकुरुष्व मयार्पितम् ॥
+ओं श्री महिषासुरमर्धिन्यै नमः मंत्रपुष्पं समर्पयामि ।
+iast:
+maṁtrapuṣpaṁ –
+oṁ aiṁ hrīṁ śrīṁ bālāyai namaḥ |
+klīṁ tripurādevi vidmahe kāmeśvari dhīmahi tannaḥ klinne pracodayāt ||
+vāgdevi varade devi caṁdrarekhāsamanvite |
+maṁtrapuṣpamidaṁ bhaktyā svīkuruṣva mayārpitam ||
+oṁ śrī mahiṣāsuramardhinyai namaḥ maṁtrapuṣpaṁ samarpayāmi |
+en: The mantra-flower — Oṁ aiṁ hrīṁ śrīṁ, salutation to Bālā. Klīṁ: may we know the goddess Tripurā, may we meditate upon Kāmeśvarī; may Klinnā impel us. O Goddess of speech, giver of boons, O Goddess who wear the crescent of the moon, accept this mantra-flower offered by me with devotion. Oṁ, salutation to Śrī Bālā Tripurasundarī. I offer the mantra-flower.
+tel: మంత్రపుష్పము — ఓం ఐం హ్రీం శ్రీం బాలకు నమస్కారము. క్లీం, త్రిపురాదేవిని ఎఱుగుదుము, కామేశ్వరిని ధ్యానించుచున్నాము; క్లిన్న మమ్ము ప్రేరేపించుగాక. ఓ వాగ్దేవీ, వరదా, చంద్రరేఖను ధరించిన దేవీ, భక్తితో నాచే అర్పింపబడిన ఈ మంత్రపుష్పమును స్వీకరింపుము. ఓం శ్రీ బాలా త్రిపురసుందరికి నమస్కారము. మంత్రపుష్పమును సమర్పించుచున్నాను.
+hi: मन्त्रपुष्प — ओम् ऐं ह्रीं श्रीं, बाला को नमस्कार। क्लीं, हम त्रिपुरादेवी को जानते हैं, कामेश्वरी का ध्यान करते हैं; क्लिन्ना हमें प्रेरित करें। हे वाग्देवि, हे वरदे, हे चन्द्ररेखा से युक्त देवि, मेरे द्वारा भक्ति से अर्पित यह मन्त्रपुष्प स्वीकार कीजिए। ओम् श्री बाला त्रिपुरसुन्दरी को नमस्कार। मन्त्रपुष्प समर्पित करता हूँ।
+
+--- unit 25 | section: प्रदक्षिणम् ---
+vidhi:
+Circumambulation and salutation.
+deva:
+प्रदक्षिण –
+यानि कानि च पापानि जन्मांतरकृतानि च ।
+तानि तानि प्रणश्यंति प्रदक्षिण पदे पदे ॥
+अन्यथा शरणं नास्ति त्वमेव शरणं मम ।
+तस्मात्कारुण्य भावेन रक्ष रक्ष दयामयि ॥
+ओं श्री महिषासुरमर्धिन्यै नमः प्रदक्षिणनमस्कारान् समर्पयामि ।
+iast:
+pradakṣiṇa –
+yāni kāni ca pāpāni janmāṁtarakṛtāni ca |
+tāni tāni praṇaśyaṁti pradakṣiṇa pade pade ||
+anyathā śaraṇaṁ nāsti tvameva śaraṇaṁ mama |
+tasmātkāruṇya bhāvena rakṣa rakṣa dayāmayi ||
+oṁ śrī mahiṣāsuramardhinyai namaḥ pradakṣiṇanamaskārān samarpayāmi |
+en: Circumambulation — Whatever sins have been done, and those done in other births, all of them are destroyed at each step of the circumambulation. I have no other refuge; you alone are my refuge. Therefore, in your compassion, protect me, protect me, O merciful one. Oṁ, salutation to Śrī Mahiṣāsuramardinī. I offer circumambulation and salutations.
+tel: ప్రదక్షిణము — జన్మాంతరములలో చేసినవియు, ఏ ఏ పాపములు కలవో, అవి అన్నియు ప్రదక్షిణము యొక్క ప్రతి అడుగునందును నశించును. నాకు వేఱు శరణము లేదు; నీవే నాకు శరణము. కావున కారుణ్యభావముతో రక్షింపుము, రక్షింపుము, ఓ దయామయీ. ఓం శ్రీ మహిషాసురమర్దినికి నమస్కారము. ప్రదక్షిణ నమస్కారములను సమర్పించుచున్నాను.
+hi: प्रदक्षिणा — जो कोई भी पाप किए गए हैं, और जो जन्मान्तरों में किए गए हैं, वे सब प्रदक्षिणा के पग-पग पर नष्ट हो जाते हैं। मेरी और कोई शरण नहीं है; आप ही मेरी शरण हैं। इसलिए करुणाभाव से रक्षा कीजिए, रक्षा कीजिए, हे दयामयि। ओम् श्री महिषासुरमर्दिनी को नमस्कार। प्रदक्षिणा और नमस्कार समर्पित करता हूँ।
+
+--- unit 26 | section: राज्ञ्योपचाराः ---
+vidhi:
+The royal services, offered in thought. The page uses the feminine form: the services of a queen.
+deva:
+राज्ञ्योपचाराः –
+ओं श्री महिषासुरमर्धिन्यै नमः छत्रं आच्छादयामि ।
+ओं श्री महिषासुरमर्धिन्यै नमः चामरैर्वीजयामि ।
+ओं श्री महिषासुरमर्धिन्यै नमः नृत्यं दर्शयामि ।
+ओं श्री महिषासुरमर्धिन्यै नमः गीतं श्रावयामि ।
+ओं श्री महिषासुरमर्धिन्यै नमः आंदोळिकानारोहयामि ।
+ओं श्री महिषासुरमर्धिन्यै नमः अश्वानारोहयामि ।
+ओं श्री महिषासुरमर्धिन्यै नमः गजानारोहयामि ।
+ओं श्री महिषासुरमर्धिन्यै नमः समस्त राज्ञीयोपचारान् देव्योपचारान् समर्पयामि ।
+iast:
+rājñyopacārāḥ –
+oṁ śrī mahiṣāsuramardhinyai namaḥ chatraṁ ācchādayāmi |
+oṁ śrī mahiṣāsuramardhinyai namaḥ cāmarairvījayāmi |
+oṁ śrī mahiṣāsuramardhinyai namaḥ nṛtyaṁ darśayāmi |
+oṁ śrī mahiṣāsuramardhinyai namaḥ gītaṁ śrāvayāmi |
+oṁ śrī mahiṣāsuramardhinyai namaḥ āṁdoḻikānārohayāmi |
+oṁ śrī mahiṣāsuramardhinyai namaḥ aśvānārohayāmi |
+oṁ śrī mahiṣāsuramardhinyai namaḥ gajānārohayāmi |
+oṁ śrī mahiṣāsuramardhinyai namaḥ samasta rājñīyopacārān devyopacārān samarpayāmi |
+en: The services of a queen — Oṁ, salutation to Śrī Mahiṣāsuramardinī. I hold up the parasol. I fan with the whisks. I show the dance. I cause the song to be heard. I seat her in the palanquin. I seat her upon the horse. I seat her upon the elephant. I offer all the services of a queen and all the services of a goddess.
+tel: రాజ్ఞీ ఉపచారములు — ఓం శ్రీ మహిషాసురమర్దినికి నమస్కారము. ఛత్రమును పట్టుచున్నాను. చామరములతో వీచుచున్నాను. నృత్యమును చూపుచున్నాను. గీతమును వినిపించుచున్నాను. ఆందోళికను ఎక్కించుచున్నాను. అశ్వములను ఎక్కించుచున్నాను. గజములను ఎక్కించుచున్నాను. సమస్త రాజ్ఞీయోపచారములను దేవ్యుపచారములను సమర్పించుచున్నాను.
+hi: राज्ञी के उपचार — ओम् श्री महिषासुरमर्दिनी को नमस्कार। छत्र लगाता हूँ। चामरों से वीजन करता हूँ। नृत्य दिखाता हूँ। गीत सुनाता हूँ। आन्दोलिका पर आरोहण कराता हूँ। अश्वों पर आरोहण कराता हूँ। गजों पर आरोहण कराता हूँ। समस्त राज्ञी के उपचार और देवी के उपचार समर्पित करता हूँ।
+
+--- unit 27 | section: प्रार्थना ---
+vidhi:
+The prayer, a single verse to the goddess as the form of all; the page prints कौमुरि where the vocative is कौमारि, and प्रार्दनां for प्रार्थनां, both kept as printed.
+deva:
+प्रार्थना –
+सर्वस्वरूपे सर्वेशि सर्वशक्ति स्वरूपिणि
+पूजां गृहाण कौमुरि जगन्मातर्नमोस्तुते
+ओं श्री महिषासुरमर्धिन्यै नमः प्रार्दनां समर्पयामि ॥
+iast:
+prārthanā –
+sarvasvarūpe sarveśi sarvaśakti svarūpiṇi
+pūjāṁ gṛhāṇa kaumuri jaganmātarnamostute
+oṁ śrī mahiṣāsuramardhinyai namaḥ prārdanāṁ samarpayāmi ||
+en: Prayer — O you whose form is all, sovereign of all, who are the form of all power, accept the worship, O Kaumārī, mother of the world; salutation to you. Oṁ, salutation to Śrī Mahiṣāsuramardinī. I offer the prayer.
+tel: ప్రార్థన — సర్వస్వరూపిణీ, సర్వేశ్వరీ, సర్వశక్తి స్వరూపిణీ, పూజను స్వీకరింపుము, ఓ కౌమారీ, జగన్మాతా, నీకు నమస్కారము. ఓం శ్రీ మహిషాసురమర్దినికి నమస్కారము. ప్రార్థనను సమర్పించుచున్నాను.
+hi: प्रार्थना — हे सर्वस्वरूपे, सर्वेशि, सर्वशक्ति स्वरूपिणि, पूजा ग्रहण कीजिए, हे कौमारि, हे जगन्माता, आपको नमस्कार। ओम् श्री महिषासुरमर्दिनी को नमस्कार। प्रार्थना समर्पित करता हूँ।
+
+--- unit 28 | section: क्षमाप्रार्थना ---
+vidhi:
+Asking pardon, and the closing dedication. The page keeps the Bālā pūjā's dedication unchanged, so the fruit of this worship of Mahiṣāsuramardinī is dedicated, in its words, to Śrī Bālā Tripurasundarī. It is kept as printed.
+deva:
+क्षमा प्रार्थना –
+ज्ञानतोऽज्ञानतो वाऽपि यन्मयाऽऽचरितं शिवे ।
+बाल कृत्यमिति ज्ञात्वा क्षमस्व परमेश्वरि ॥
+मंत्रहीनं क्रियाहीनं भक्तिहीनं महेश्वरि ।
+यत्पूजितं मया देवी परिपूर्णं तदस्तुते ।
+अनया ध्यानावाहनादि षोडशोपचार पूजया भगवती सर्वात्मिका श्री बाला
+त्रिपुरसुंदरी सुप्रीता सुप्रसन्ना वरदा भवंतु ॥
+iast:
+kṣamā prārthanā –
+jñānato'jñānato vā'pi yanmayā''caritaṁ śive |
+bāla kṛtyamiti jñātvā kṣamasva parameśvari ||
+maṁtrahīnaṁ kriyāhīnaṁ bhaktihīnaṁ maheśvari |
+yatpūjitaṁ mayā devī paripūrṇaṁ tadastute |
+anayā dhyānāvāhanādi ṣoḍaśopacāra pūjayā bhagavatī sarvātmikā śrī bālā
+tripurasuṁdarī suprītā suprasannā varadā bhavaṁtu ||
+en: Asking pardon — Whatever I have done, knowingly or unknowingly, O Śivā, know it to be the doing of a child and forgive it, O supreme Goddess. Whatever worship I have made, lacking in mantra, lacking in rite, lacking in devotion, O great Goddess, let it be made complete for you. By this worship in sixteen services, beginning with meditation and invocation, may Bhagavatī, the Self of all, Śrī Bālā Tripurasundarī, be well pleased, gracious, and the giver of boons.
+tel: క్షమా ప్రార్థన — తెలిసియో తెలియకయో నాచే ఏది ఆచరింపబడినదో, ఓ శివా, దానిని బాలుని చేష్టగా ఎఱిగి క్షమింపుము, ఓ పరమేశ్వరీ. మంత్రహీనముగను, క్రియాహీనముగను, భక్తిహీనముగను నాచే ఏ పూజ చేయబడినదో, ఓ మహేశ్వరీ, అది నీకు పరిపూర్ణమగుగాక. ఈ ధ్యాన ఆవాహనాది షోడశోపచార పూజచే సర్వాత్మిక అయిన భగవతి శ్రీ బాలా త్రిపురసుందరి సుప్రీతయు సుప్రసన్నయు వరదయు అగుగాక.
+hi: क्षमा प्रार्थना — जानकर या अनजाने में जो कुछ मेरे द्वारा किया गया है, हे शिवे, उसे बालक का कार्य जानकर क्षमा कीजिए, हे परमेश्वरि। मन्त्रहीन, क्रियाहीन और भक्तिहीन जो पूजा मैंने की है, हे महेश्वरि, वह आपके लिए परिपूर्ण हो। इस ध्यान और आवाहन आदि षोडशोपचार पूजा से सर्वात्मिका भगवती श्री बाला त्रिपुरसुन्दरी सुप्रीता, सुप्रसन्ना और वरदा हों।
+
+--- unit 29 | section: तीर्थप्रसाद ग्रहणम् ---
+vidhi:
+Receiving the water from the Goddess's feet and the prasāda, and the closing peace. The page keeps the Bālā pūjā's line, so the water is named as the water from the feet of Śrī Bālā Devī; it is kept as printed.
+deva:
+तीर्थप्रसाद ग्रहणं –
+अकालमृत्युहरणं सर्वव्याधिनिवारणम् ॥
+समस्तपापक्षयकरं श्री बाला देवी पादोदकं पावनं शुभम् ॥
+ओं श्री महिषासुरमर्धिन्यै नमः प्रसादं शिरसा गृह्णामि ।
+ओं शांतिः शांतिः शांतिः ॥
+iast:
+tīrthaprasāda grahaṇaṁ –
+akālamṛtyuharaṇaṁ sarvavyādhinivāraṇam ||
+samastapāpakṣayakaraṁ śrī bālā devī pādodakaṁ pāvanaṁ śubham ||
+oṁ śrī mahiṣāsuramardhinyai namaḥ prasādaṁ śirasā gṛhṇāmi |
+oṁ śāṁtiḥ śāṁtiḥ śāṁtiḥ ||
+en: Receiving the water and the prasāda — It removes untimely death and wards off every disease. It destroys all sin. The water from the feet of Śrī Bālā Devī is purifying and auspicious. Oṁ, salutation to Śrī Bālā Tripurasundarī. I receive the prasāda upon my head. Oṁ, peace, peace, peace.
+tel: తీర్థప్రసాద గ్రహణము — అకాలమృత్యువును హరించునదియు, సర్వ వ్యాధులను నివారించునదియు, సమస్త పాపములను క్షయింపజేయునదియు, పవిత్రమును శుభమును అగు శ్రీ బాలాదేవి పాదోదకము. ఓం శ్రీ బాలా త్రిపురసుందరికి నమస్కారము. ప్రసాదమును శిరస్సున గ్రహించుచున్నాను. ఓం శాంతిః శాంతిః శాంతిః.
+hi: तीर्थप्रसाद ग्रहण — अकालमृत्यु को हरने वाला, सब व्याधियों का निवारण करने वाला, समस्त पापों का क्षय करने वाला, पावन और शुभ श्री बाला देवी का पादोदक। ओम् श्री बाला त्रिपुरसुन्दरी को नमस्कार। प्रसाद शिर से ग्रहण करता हूँ। ओम् शान्तिः शान्तिः शान्तिः।
