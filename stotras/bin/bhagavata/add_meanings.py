@@ -22,7 +22,7 @@ figures, which are its real apparatus, instead of retyping them.
 Written for the Bhagavata meanings pass (S78, 17 Oct 2026). It is text-shape work, not
 Bhagavata-specific, and the Valmiki files take it unchanged.
 """
-import json, re, sys
+import datetime, json, re, sys
 
 PENDING = ("Text-only file, written 1 Oct 2026 at the user's instruction to lay down the whole "
            "Bhāgavata first: the English, Telugu and Hindi meanings are still to be added, and "
@@ -31,7 +31,12 @@ PENDING = ("Text-only file, written 1 Oct 2026 at the user's instruction to lay 
 VR = re.compile(r"Text-only file, written [^:]+: the English, Telugu and Hindi meanings are still "
                 r"to be added, and the witnesses' differences listed here were found by machine "
                 r"and have not been adjudicated or bracketed into the line\. ")
-WRITTEN = ("Meanings written 17 Oct 2026 (session S78). The differences between the witnesses "
+def _today():
+    """The day the gloss is actually written, so the note never states a stale date."""
+    return datetime.date.today().strftime("%-d %b %Y")
+
+
+WRITTEN = (f"Meanings written {_today()} (session S78). The differences between the witnesses "
            "listed below were read as the verses were glossed; except where this note says "
            "otherwise, each is a spelling, a sandhi or a word order of the two editions, none of "
            "them changes the sense, and the print's reading therefore stands unbracketed. ")
