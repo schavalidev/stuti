@@ -669,6 +669,16 @@ function App() {
   );
   const appPanel = route.view !== "reader";
 
+  /* a gate is a gate: while it stands, the app behind it is not built at all,
+     so no sheet, nudge or location lookup can reach past it */
+  if (gated) return (
+    <div className="stage">
+      <div className="app" data-screen-label="gate">
+        <GateScreen lang={lang} onOpen={() => setGated(false)} />
+      </div>
+    </div>
+  );
+
   return (
     <div className="stage">
       <div className="app" data-screen-label={route.view}>
@@ -721,7 +731,6 @@ function App() {
         {onboarding && !gated && (
           <Onboarding lang={lang} setLang={setLang} onDone={() => setOnboarding(false)} />
         )}
-        {gated && <GateScreen lang={lang} onOpen={() => setGated(false)} />}
       </div>
 
       {TweaksPanel && (
