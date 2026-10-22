@@ -236,10 +236,12 @@ switched. The two sahasranāmas gain their whole apparatus.
 
 ## Four things the test turned up
 
-**Two of the forty-six are mispaired, so it is really forty-four.** *Kumāra Stutiḥ (Deva-kṛtam)*
-and *Kumāra Stutiḥ (Vipra-kṛtam)* both resolve to `Subrahmanya/14`, and *Pitṛ Stotram
-(Brahma-kṛtam)* and *Pitṛ Stotram (Ruci-kṛtam)* both to `pitr/02`. One corpus file cannot be two
-texts; one of each pair has no counterpart and belongs in list C.
+**The two apparent mispairings were mine, not the corpus's.** *Kumāra Stutiḥ (Deva-kṛtam)* and
+*(Vipra-kṛtam)* both resolved to `Subrahmanya/14`, and the two *Pitṛ Stotram*s both to `pitr/02`,
+because the matching script took the first title that fitted. All four texts are in the corpus:
+`Subrahmanya/14` (5 verses) and `Subrahmanya/15` (19), `pitr/02` (36) and
+`pitr/05_brahmakrta_pitr_stotram.txt` (Pitṛ Stotram, Brahma-kṛtam). The list is forty-six, and
+nothing moves to list C — but the ids in the table above are wrong for those four rows.
 
 **The phalaśruti of the Viṣṇu Sahasranāma is hidden.** The reader hides a section whose heading
 matches `/nyāsa|dig-bandha/`, so that the japa apparatus does not get in a reciter's way. The
