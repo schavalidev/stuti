@@ -12,11 +12,11 @@ Recension / paddhati: **Smārta, South Indian, Telugu.** The vrata is kept by a 
 
 **This is a different work from `26_sravana_mangalagauri_vrata_kalpam.txt` and `../vrata/03_mangala_gauri_vrata_kalpam.txt`, and neither supersedes the other.** Those two files are built on the stotranidhi page and carry the long Lalitā ṣoḍaśopacāra verses; this print carries a short anuṣṭubh verse of its own at every service, a different meditation in five verses, and the services of a married woman's rite that the other files do not have: the bodice, the things of good fortune, the golden upper cloth, the gift of money, the three vāyanas, the sixteen lamps and the feeding of sixteen married women. They agree on the frame: the five-year term, the nineteen names of the worship of the limbs, and the pointer at the aṣṭottara instead of printing it. **The three must never be merged, harmonised or collated against each other.**
 
-**What this file holds, and what it does not yet.** This file carries the rite, printed pages 1 to 4 of the book, complete. The book then carries the story (printed pages 4 to 26, Sanskrit verses spoken by Kṛṣṇa to Yudhiṣṭhira, each followed by the author's Telugu explanation), the women's song of the vrata (pages 29 to 31) and the Śrāvaṇa Friday song (page 32). **Those are still to be transcribed and will be added to this file**, after the rite, as the next units. Until then the rite stands on its own, and the pointer in unit 34 to the hearing of the story has nothing in this file to point at. The Maṅgaḷagaurī aṣṭottara, which the print points at in unit 18 without printing, is not in this corpus either.
+**What this file holds.** The whole book: the rite (printed pages 1 to 4, units 1 to 34); the story (pages 4 to 26, units 35 to 125), ninety Sanskrit verses spoken by Kṛṣṇa to Yudhiṣṭhira, each followed by the author's own Telugu explanation, which stands in the `tel:` field as printed, with the rule of the vrata and the udyāpana at its end and the colophon of the Bhaviṣyottara Purāṇa; the women's song of the Śrāvaṇa Tuesday vrata (pages 27 to 31, units 126 to 181), in Telugu; and the Śrāvaṇa Friday song of Cārumatī and Varalakṣmī (pages 32 to 33, units 182 to 196), also in Telugu, the song of a different observance that the print adds at its end. **The two songs are Telugu, not Sanskrit**: for them the `deva:` and `iast:` fields carry the letters of the Telugu, as `../../devi/goda/` does for Tamil, and the `tel:` field carries the song itself. The story is the same story the song sings, told twice in two forms: a childless vaiśya of Kuṇḍina, the mendicant who refuses the alms, the one fruit from Gaṇeśa's mango tree, the son of sixteen years, the wedding at Pratiṣṭhāna, the serpent that enters the pot and becomes pearls, and the return home. The Maṅgaḷagaurī aṣṭottara, which the print points at in unit 18 without printing, is not in this corpus.
 
 Source / recension: **Challa Lakṣmī Nṛsiṁha Śāstri, *Śrāvaṇa Maṅgaḷagaurī Vratamu*, with the author's Telugu tātparya, Machilipatnam, 1958, 33 pages**, held as the user's PDF of page images at 600 dpi with no text layer of any kind. **Every line was read from the page images and typed by hand** in Telugu script as the print has it, then converted mechanically to Devanāgarī with `../../bin/tel2dev.py`, and the `iast:` field from that with `../../bin/dev2iast.py`; no Sanskrit was composed. The print writes the homorganic nasal as the sunna throughout (మంగళ), and the Devanāgarī keeps it as the anusvāra (मंगळ), as `26` does from the same kind of source. The print's `ళ` is kept as `ळ`.
 
-**The print is worn, and the reading is uncertain in twenty-four places across fifteen units, each marked ⟨?⟩ in the `deva:` and `iast:` fields.** The worst is the second verse, on where the vrata is kept each year, which carries six marks; the author's own explanation under it is clear and the translation follows the explanation. The others are single words: one in the resolution, two in the meditation, one each at the unbroken rice, one name of the worship of the limbs, the food-offering, the waving of the light, the circumambulation and the prayer, two each at the gift of money, the handful of flowers and the salutation, two for the bamboo tray in the vāyanas, and one in the closing instructions. A line between the prayer and the vāyana is worn beyond reading and is left out, and the `vidhi:` of unit 30 says so. **A second reading at higher magnification, or a second copy of the print, is wanted for these.** Nothing was reconstructed: where a word could not be read, the mark stands, and the translation gives the sense the readable words allow.
+**The print is worn, and the reading is uncertain in seventy-four places, each marked ⟨?⟩ in the `deva:` and `iast:` fields: twenty-four in the rite, across fifteen units, and fifty in the story, most of them in its first twelve verses and in the verses at the wedding (units 35 to 46, 56, 57, 77 to 79) where the type is most broken.** The worst is the second verse, on where the vrata is kept each year, which carries six marks; the author's own explanation under it is clear and the translation follows the explanation. The others are single words: one in the resolution, two in the meditation, one each at the unbroken rice, one name of the worship of the limbs, the food-offering, the waving of the light, the circumambulation and the prayer, two each at the gift of money, the handful of flowers and the salutation, two for the bamboo tray in the vāyanas, and one in the closing instructions. A line between the prayer and the vāyana is worn beyond reading and is left out, and the `vidhi:` of unit 30 says so. **A second reading at higher magnification, or a second copy of the print, is wanted for these.** Nothing was reconstructed: where a word could not be read, the mark stands, and the translation gives the sense the readable words allow.
 
 Independent collation: **none; this file rests on one printed edition.** No other copy of this work was found. The frame of the rite agrees with the stotranidhi page that `26` is built on (the five-year term, the nineteen names of the limbs in the same order, the pointer at the aṣṭottara, the vāyana), as `26` records; the service verses were searched for in that page and in this folder and stand nowhere else. The meditation's seed-syllables `ऐं ह्रीं श्रीं` and the formula `नमस्सर्वमंगळायै मंगळगौर्यै नमः` are the rite's own.
 
@@ -28,9 +28,9 @@ Observed and deliberately **not** emended:
 - **The dots** in the resolution (`आचम्य ... संकल्प्य ...`) and after each offering (`धूपम् ... मि`) are the print's own, standing for the full ācamana and saṅkalpa and for `समर्पयामि`; they are kept.
 - **`शिवसुंदरी`, `सुरश्रेष्ठे`, `परमेश्वरि`** and the other vocatives are printed with long and short endings as they come, and are kept.
 
-Accent: **none. This rite contains no Vedic mantra.** Every verse is paurāṇika, and the print carries no svara mark; 0 accent characters were counted in the units. This file can be used as it stands by any reciter, and no Paurāṇika twin is needed.
+Accent: **none. This rite contains no Vedic mantra.** Every verse is paurāṇika, and the print carries no svara mark; 0 accent characters were counted in the units. This file can be used as it stands by any reciter, and no Paurāṇika twin is needed. The story's verses are anuṣṭubh, and the print's own numbering of them is not kept; the print numbers nothing.
 
-Unit count: 34 units, the rite only. The story and the songs will be added as further units. The worship of the limbs (unit 18) is numbered one name to a line in `deva:` and `iast:`, by the rule for lists.
+Unit count: 196 units: the rite 34, the story 91 with its colophon, the Tuesday song 56, the Friday song 15. One verse of the story with its explanation is one unit; one stanza of a song is one unit. The worship of the limbs (unit 18) is numbered one name to a line in `deva:` and `iast:`, by the rule for lists.
 
 Sections:
 संकल्पः — The resolution (units 1–2)
@@ -39,8 +39,12 @@ Sections:
 अंगपूजा — Worship of the limbs (unit 18)
 उत्तरांगम् — Incense to the prayer (units 19–30)
 वायनदानम् — The vāyanas and the closing instructions (units 31–34)
+कथा — The story, Kṛṣṇa to Yudhiṣṭhira (units 35–114)
+उद्यापनम् — The rule of the vrata, the udyāpana and the colophon (units 115–125)
+श्रावण मंगळवारमु पाट — The Śrāvaṇa Tuesday song, Telugu (units 126–181)
+श्रावण शुक्रवारमु पाट — The Śrāvaṇa Friday song, Telugu (units 182–196)
 
-Blurb: This is the worship of Maṅgaḷagaurī kept on the Tuesdays of Śrāvaṇa, as printed in Machilipatnam in 1958. A married woman keeps it for five years from the year of her marriage, the first year in the house where she was born and afterwards in her husband's house, and closes it with the udyāpana. Every service has a short verse of its own. After the sixteen services come the worship of the limbs under nineteen names, the hundred and eight names, incense, the lamp, the food-offering, betel, the gift of money, the waving of the light, flowers, circumambulation, salutation and prayer. Then the vāyana is given three times, to the brāhmaṇa, to the married women and to the mother, sixteen lamps are lit, the story is heard, and sixteen married women and the mother are fed. The story and the two songs of this edition are not yet in this file.
+Blurb: This is the worship of Maṅgaḷagaurī kept on the Tuesdays of Śrāvaṇa, as printed in Machilipatnam in 1958. A married woman keeps it for five years from the year of her marriage, the first year in the house where she was born and afterwards in her husband's house, and closes it with the udyāpana. Every service has a short verse of its own. After the sixteen services come the worship of the limbs under nineteen names, the hundred and eight names, incense, the lamp, the food-offering, betel, the gift of money, the waving of the light, flowers, circumambulation, salutation and prayer. Then the vāyana is given three times, to the brāhmaṇa, to the married women and to the mother, sixteen lamps are lit, the story is heard, and sixteen married women and the mother are fed. After the rite comes the story, told by Kṛṣṇa to Yudhiṣṭhira, of the vaiśya Dharmapāla of Kuṇḍina, his son of sixteen years, the bride Suśīlā, and the serpent that became a string of pearls by the grace of Maṅgaḷagaurī, with the rule of the vrata and its closing. Then come two songs in Telugu: the women's song of this vrata, which sings the same story, and the Śrāvaṇa Friday song of Cārumatī and Varalakṣmī.
 
 --- unit 1 | section: संकल्पः ---
 vidhi:
@@ -537,3 +541,2267 @@ tataḥ chatracāmarādinā punaḥpūjāṁ kuryāt ||
 en: After that, having lit the row of sixteen lamps with ghee wicks, and having made collyrium from them after hearing the story; having put the vermilion and kuṅkuma of the goddess's prasāda fully upon the forehead, and having braided the hair; after that, among the married women of the mother's family, one should feed sixteen married women and the mother with fine food. Then one should perform the worship again with the parasol, the whisks and the rest.
 tel: తరువాత నేతి వత్తులతో పదహారు దీపముల వరుసను వెలిగించి, కథను విని వాటితో కాటుకను చేసి; దేవి ప్రసాదమైన సిందూరమును కుంకుమను నుదుటిపై పూర్తిగా పెట్టుకొని, జడను అల్లి; తరువాత తల్లి బంధువులైన సువాసినులలో పదహారు మంది సువాసినులకును తల్లికిని మృష్టాన్నముతో భోజనము పెట్టవలెను. తరువాత ఛత్రము చామరము మొదలగువాటితో మరల పూజ చేయవలెను.
 hi: उसके बाद घी की बत्तियों से सोलह दीपों की पंक्ति जलाकर, कथा सुनकर उनसे काजल बनाकर; देवी के प्रसाद का सिन्दूर और कुंकुम माथे पर पूरा लगाकर, वेणी गूँथकर; उसके बाद माता के परिवार की सुवासिनियों में से सोलह सुवासिनियों और माता को उत्तम भोजन कराना चाहिए। फिर छत्र, चँवर आदि से फिर पूजा करनी चाहिए।
+
+--- unit 35 | section: कथा ---
+vidhi:
+The story begins. Yudhiṣṭhira asks Kṛṣṇa for the vrata. Each verse is followed by the author's own Telugu explanation, which is given in the Telugu field as printed; the English and Hindi follow it.
+deva:
+युधिष्ठिर उवाच ॥
+नंदनंदन गोविंद ⟨शृण्वतां?⟩ बहुळाः कथाः ।
+श्रुता उत्कृष्टपुत्रायुः कथं ब्रूहि ⟨नवीतं?⟩ मम ॥
+iast:
+yudhiṣṭhira uvāca ||
+naṁdanaṁdana goviṁda ⟨śṛṇvatāṁ?⟩ bahuḻāḥ kathāḥ |
+śrutā utkṛṣṭaputrāyuḥ kathaṁ brūhi ⟨navītaṁ?⟩ mama ||
+en: Yudhiṣṭhira said: O Govinda, son of Nanda, many stories that bring good to those who hear them have been heard. Tell me now the vrata that gives excellent sons, long life and wealth.
+tel: నందుని కుమారుండవైన యోకృష్ణా! వినువారికి శ్రేయస్సునొసంగెడు కథ లనేకంబులుగలవు. వానిలో నెక్కువయిన పుత్రులను, ఆయువును, సంపత్తు మొదలగువానిని గలిగించు వ్రత మెద్దియో నాకుఁ జెప్పుమని ధర్మరాజు కృష్ణమూర్తి నడిగెను.
+hi: युधिष्ठिर ने कहा: हे नन्दनन्दन गोविन्द, सुनने वालों का कल्याण करने वाली अनेक कथाएँ सुनी गयी हैं। उनमें जो व्रत उत्तम पुत्र, आयु और सम्पत्ति देता है, वह मुझे बताइए।
+
+--- unit 36 | section: कथा ---
+vidhi:
+Verse 2 of the story, with the author's explanation.
+deva:
+श्रीकृष्ण उवाच ॥
+अवैधव्यकरं वक्ष्ये व्रतं चारिनिषूदन ।
+शृणुष्व सावधानस्त्वं कथां पुण्यां पुरातनीम् ॥
+iast:
+śrīkṛṣṇa uvāca ||
+avaidhavyakaraṁ vakṣye vrataṁ cāriniṣūdana |
+śṛṇuṣva sāvadhānastvaṁ kathāṁ puṇyāṁ purātanīm ||
+en: Śrī Kṛṣṇa said: O slayer of enemies, I shall tell you the vrata that keeps a woman from widowhood. Hear with a steady mind this holy and ancient story.
+tel: కృష్ణమూర్తి చెప్పుచున్నాఁడు. శత్రుసంహారకుండవైన యోధర్మరాజా! స్త్రీలకు వైధవ్యము కలుగనియ్యని వ్రతమును జెప్పుచున్నాను. కావున పుణ్యకరమును ప్రాచీనంబయిన యొక్క యితిహాసమును స్థిరచిత్తుండవై వినుము.
+hi: श्रीकृष्ण ने कहा: हे शत्रुसूदन, मैं वह व्रत कहता हूँ जो स्त्रियों को वैधव्य नहीं होने देता। इस पुण्य और प्राचीन कथा को स्थिर चित्त से सुनो।
+
+--- unit 37 | section: कथा ---
+vidhi:
+Verse 3 of the story, with the author's explanation.
+deva:
+कुंडिनं नाम नगरं ख्यातिस्तत्र द्विजप्रियः ।
+आसीद्वणिग्धर्मपालो नाम्ना बहुधनो⟨पिनः?⟩ ॥
+iast:
+kuṁḍinaṁ nāma nagaraṁ khyātistatra dvijapriyaḥ |
+āsīdvaṇigdharmapālo nāmnā bahudhano⟨pinaḥ?⟩ ||
+en: There is a famous city named Kuṇḍina. In it lived a vaiśya named Dharmapāla, who loved brāhmaṇas and had great wealth.
+tel: ప్రపంచమునందుఁ గొప్ప చోట కుండినమను పట్టణముకలదు. ఆపట్టణంబున బ్రాహ్మణులయందుఁ బ్రేమకలవాఁడును, విశేషమైన ధనముగలవాఁడును నయిన ధర్మపాలుండనెడు వైశ్యుండుగలఁడు.
+hi: कुण्डिन नाम का एक प्रसिद्ध नगर है। उसमें धर्मपाल नाम का एक वैश्य रहता था, जो ब्राह्मणों से प्रेम करता था और बहुत धनवान था।
+
+--- unit 38 | section: कथा ---
+vidhi:
+Verse 4 of the story, with the author's explanation.
+deva:
+सपत्नीकोऽप्यपुत्रोऽसौ नास्ति व्याकुलो हृदि ।
+तस्य गेहे भस्मलिप्तो देहो रुद्राक्षधारकः ॥
+जटिलो भिक्षुको नित्यमागच्छत्प्रियदर्शनः ।
+न स्वीकुर्वंस्तदन्नं स इति दृष्ट्वाऽबलाऽवदत् ॥
+iast:
+sapatnīko'pyaputro'sau nāsti vyākulo hṛdi |
+tasya gehe bhasmalipto deho rudrākṣadhārakaḥ ||
+jaṭilo bhikṣuko nityamāgacchatpriyadarśanaḥ |
+na svīkurvaṁstadannaṁ sa iti dṛṣṭvā'balā'vadat ||
+en: Though he had a wife, he had no son, and his heart was troubled. To his house there came every day a pleasant-looking mendicant, his body smeared with ash, wearing rudrākṣa beads, with matted hair, and he would not take the food they gave. Seeing this, the wife spoke.
+tel: ఆవైశ్యుండు భాగ్యగలవాఁడయనను సంతానము కలుగలేదు. అందువలన మనస్సున విచారముకలవాఁడయ్యెను. ఇట్టి సమయంబున దేహమునందు విభూతిని, రుద్రాక్షలను ధరియించినవాఁడును, జడలుకలవాఁడును, ప్రేమాస్పదమైన దృష్టికలవాఁడు నయిన యొకభిక్షుకుఁడు ఆవైశ్యుని గృహంబునకు ప్రతిదినము భిక్షకు వచ్చినవాఁడై యావైశ్యునిభార్యచేఁ బెట్టఁబడిన యన్నమును గ్రహింపక తిరిగి వెళ్ళుచునుండెను. ఆచిన్నది యా చర్యనంతయుఁ జూచి తన పెనిమిటితో నిట్లు చెప్పెను.
+hi: पत्नी होते हुए भी उसके पुत्र नहीं था, और उसका मन व्याकुल था। उसके घर प्रतिदिन एक सौम्य भिक्षुक आता था, शरीर पर भस्म लगाये, रुद्राक्ष पहने, जटाधारी, और वह उनका दिया हुआ अन्न नहीं लेता था। यह देखकर पत्नी बोली।
+
+--- unit 39 | section: कथा ---
+vidhi:
+Verse 5 of the story, with the author's explanation.
+deva:
+स्वामिन्नयं सदा याति भिक्षुको जटिलो गृहे । न स्वीकरोत्यस्मदन्नमिति दृष्ट्वा मनो⟨ऽनिकम्?⟩ ।
+दुःखं प्रजायते नित्यं श्रुत्वा भार्यावचोऽब्रवीत् ॥
+iast:
+svāminnayaṁ sadā yāti bhikṣuko jaṭilo gṛhe | na svīkarotyasmadannamiti dṛṣṭvā mano⟨'nikam?⟩ |
+duḥkhaṁ prajāyate nityaṁ śrutvā bhāryāvaco'bravīt ||
+en: My lord, this matted-haired mendicant comes to our house every day and does not accept our food. Seeing this, great sorrow rises in my heart each day. Hearing his wife's words, the husband replied.
+tel: ఓ స్వామీ! జడలను ధరించిన యీయతీశ్వరుండు భిక్షకొఱకుఁ బ్రతిదినమును మన గృహంబునకు వచ్చియు నేనిచ్చెడి యన్నమును గ్రహింపఁడాయెను. దీనినిఁ జూడ నాకు విశేషముగా దుఃఖము కలుగుచున్నదని భార్య చెప్పఁగా ఆమాటలు విని పెనిమిటి పలుకుచున్నాఁడు.
+hi: स्वामी, यह जटाधारी भिक्षुक प्रतिदिन हमारे घर आता है और हमारा अन्न नहीं लेता। यह देखकर मेरे मन में प्रतिदिन बड़ा दुःख होता है। पत्नी की बात सुनकर पति बोला।
+
+--- unit 40 | section: कथा ---
+vidhi:
+Verse 6 of the story, with the author's explanation.
+deva:
+धर्मपाल उवाच ॥
+प्रिये कदाचित्त्वं ⟨साध्वि?⟩ सुवर्णा⟨?⟩ ⟨?⟩ । यदा भिक्षो⟨?⟩ ⟨?⟩ भिक्षो⟨?⟩ ⟨?⟩ ।
+तदा तस्य प्रदेयानि सुवर्णानि प्रियोऽनघे ॥
+iast:
+dharmapāla uvāca ||
+priye kadācittvaṁ ⟨sādhvi?⟩ suvarṇā⟨?⟩ ⟨?⟩ | yadā bhikṣo⟨?⟩ ⟨?⟩ bhikṣo⟨?⟩ ⟨?⟩ |
+tadā tasya pradeyāni suvarṇāni priyo'naghe ||
+en: Dharmapāla said: Dear and faultless one, go some day to the goldsmith's shop with gold coins, and when the mendicant comes there for alms, put the coins in his cloth.
+tel: దోషరహితురాలవైన యోప్రియురాలా! నీవు సువర్ణములతోఁ గూడినదానవై ఒకానొకప్పుడు బంగారు విక్రయించెడు సంగడికి వెళ్ళి అచ్చట కెప్పుడు భిక్షకొఱకు యతీశ్వరుండు వచ్చునో అప్పుడాయన వస్త్రంబులో సువర్ణముల నుంచుమా యని ధర్మపాలుడు చెప్పెను.
+hi: धर्मपाल ने कहा: हे प्रिये, हे निर्दोष, किसी दिन सोने के सिक्के लेकर सुनार की दुकान पर जाओ, और जब वह भिक्षुक वहाँ भिक्षा के लिए आये, तब उसके वस्त्र में सिक्के रख देना।
+
+--- unit 41 | section: कथा ---
+vidhi:
+Verse 7 of the story, with the author's explanation.
+deva:
+अनंतरं तस्य भार्या ⟨चीकरत्?⟩ स्वामिनोदितं ।
+जटिलेन तु ⟨सा शप्ता?⟩ ⟨उपत्यं?⟩ तेन भविष्यति ॥
+श्रुत्वा भिक्षोरिदं वाक्यं दुःखिता तमुवाच ह ॥
+iast:
+anaṁtaraṁ tasya bhāryā ⟨cīkarat?⟩ svāminoditaṁ |
+jaṭilena tu ⟨sā śaptā?⟩ ⟨upatyaṁ?⟩ tena bhaviṣyati ||
+śrutvā bhikṣoridaṁ vākyaṁ duḥkhitā tamuvāca ha ||
+en: Then the wife did as her husband said, and the matted-haired one declared that she would have no child. Hearing the mendicant's words she was grieved and spoke to him.
+tel: అనంతరం కోమటిభార్య పెనిమిటి చెప్పినట్లు చేయఁగా యాచిన్నదానికి సంతానము కలుగదని జడదారి పలికినవాఁడాయెను. ఆయతీశ్వరుని మాటలను విని ఆమె దుఃఖించి ఆయనతో నిట్లు పలికెనట.
+hi: फिर पत्नी ने पति के कहे अनुसार किया, और उस जटाधारी ने कहा कि उसे सन्तान नहीं होगी। भिक्षुक की यह बात सुनकर वह दुःखी हुई और उससे बोली।
+
+--- unit 42 | section: कथा ---
+vidhi:
+Verse 8 of the story, with the author's explanation.
+deva:
+स्वामिन् शप्ता त्वया साऽहं ⟨च्छापा दुर्धर संपरिति?⟩ ।
+इत्युक्त्वा तस्य चरणौ ववंदे दीनभाषिणी ॥
+iast:
+svāmin śaptā tvayā sā'haṁ ⟨cchāpā durdhara saṁpariti?⟩ |
+ityuktvā tasya caraṇau vavaṁde dīnabhāṣiṇī ||
+en: My lord, I am cursed for the sin of a former birth. Free me from this curse and protect me now. So saying in a humble voice, she bowed to his feet.
+tel: ఓస్వామీ! పూర్వజన్మకృత పాపంబుచే నేను శపింపఁబడితిని. ఈ శాపవిమోచనముఁ జేసి నన్నిప్పుడు రక్షింపుమని యాచిన్నది దీనముగా మాటలాడి యాయతీశ్వరుని పాదములకు నమస్కరించెను.
+hi: स्वामी, पूर्वजन्म के पाप से मैं शापित हूँ। इस शाप से मुझे छुड़ाकर अब मेरी रक्षा कीजिए। ऐसा दीन वाणी में कहकर उसने उसके चरणों में प्रणाम किया।
+
+--- unit 43 | section: कथा ---
+vidhi:
+Verse 9 of the story, with the author's explanation.
+deva:
+जटिल उवाच ॥
+भर्तृसमीपे वक्तव्यं त्वया पुत्रि ⟨महाजया?⟩ ।
+नीलवस्त्रं समादाय ⟨नीलश्वं?⟩ गच्छ काननम् ॥
+⟨खनसि?⟩ तत्र कर्तव्यं ⟨यतार्हं?⟩ ⟨?⟩ स्थलिष्यति ॥
+iast:
+jaṭila uvāca ||
+bhartṛsamīpe vaktavyaṁ tvayā putri ⟨mahājayā?⟩ |
+nīlavastraṁ samādāya ⟨nīlaśvaṁ?⟩ gaccha kānanam ||
+⟨khanasi?⟩ tatra kartavyaṁ ⟨yatārhaṁ?⟩ ⟨?⟩ sthaliṣyati ||
+en: The matted-haired one said: Daughter, tell your husband this, as I say it. Let him put on black garments, mount a black horse and go to the forest; where the horse can go no further and tires, there he must dig.
+tel: జటిలుండు చెప్పుచున్నాఁడు:- ఓ చిన్నదానా! నాయాజ్ఞచే నీపెనిమిటితో నేఁజెప్పెడురీతి నిట్లు చెప్పుము. నల్లనివస్త్రములఁ గట్టుకొని నల్లనిగుట్టమునెక్కి యడవికి వెళ్ళి యెంతదూరము గుట్టమువెళ్ళి నడవలేక ఆయాసపడునో అంతవఱకు వెళ్ళి యచ్చటఁ ద్రవ్వవలయును.
+hi: जटाधारी ने कहा: पुत्री, अपने पति से यह बात वैसे ही कहो जैसे मैं कहता हूँ। वह काले वस्त्र पहनकर, काले घोड़े पर चढ़कर वन में जाये; जहाँ घोड़ा आगे न चल सके और थक जाये, वहाँ खोदे।
+
+--- unit 44 | section: कथा ---
+vidhi:
+Verse 10 of the story, with the author's explanation.
+deva:
+रम्यं पक्षिभिरायुक्तं मृगसंघसमाकुलं ।
+सुवर्णरचितं रत्नमाणिक्यादिविभूषितम् ॥
+नानापुष्पसमायुक्तं दृश्यं देवालयं ततः । वर्तते तत्र भवती भवानी भक्तवत्सला ।
+आराधय त्वं मनसा यथाविध्युद्धरिष्यति ॥
+iast:
+ramyaṁ pakṣibhirāyuktaṁ mṛgasaṁghasamākulaṁ |
+suvarṇaracitaṁ ratnamāṇikyādivibhūṣitam ||
+nānāpuṣpasamāyuktaṁ dṛśyaṁ devālayaṁ tataḥ | vartate tatra bhavatī bhavānī bhaktavatsalā |
+ārādhaya tvaṁ manasā yathāvidhyuddhariṣyati ||
+en: There he will see a temple, beautiful, full of birds and herds of deer, built of gold, set with gems and rubies, covered with many flowers. In it dwells Bhavānī, loving to her devotees. Worship her with your mind according to the rule, and she will lift you up.
+tel: అనంతరం బచ్చట సుందరమయినదియు, పక్షులు వ్యాపించియున్నదియు, మృగసమూహములుగలదియు, బంగారుచే నిర్మింపఁబడియు, రత్నములు మాణిక్యములు మొదలగువానిచేఁ గూర్పఁబడినదియు, అనేక పుష్పంబులతో నిండియుండిన దేవాలయము కనుపించును. ఆ దేవాలయంబులోఁ బూజ్యురాలును, భక్తులయందుఁ బ్రేమగలదియు నగు పార్వతీదేవి యుండును. ఆమెను నీమనస్సున యథావిధిగాఁ బూజించెదవేని నిన్ను రక్షింపగలదని చెప్పెను.
+hi: वहाँ उसे एक मन्दिर दिखेगा, सुन्दर, पक्षियों और मृगों के झुण्डों से भरा, सोने का बना, रत्नों और माणिक्यों से जड़ा, अनेक पुष्पों से ढका। उसमें भक्तवत्सला भवानी रहती हैं। मन से विधिपूर्वक उनकी पूजा करो, वे तुम्हारा उद्धार करेंगी।
+
+--- unit 45 | section: कथा ---
+vidhi:
+Verse 11 of the story, with the author's explanation.
+deva:
+तां भवानीति वचनं श्रुत्वाभीष्टसुखप्रदं ।
+वनंद्रे(ववंदे) तस्य चरणौ पुनःपुनरुवाच ह ॥
+iast:
+tāṁ bhavānīti vacanaṁ śrutvābhīṣṭasukhapradaṁ |
+vanaṁdre(vavaṁde) tasya caraṇau punaḥpunaruvāca ha ||
+en: Hearing these words, that Bhavānī would free her from the curse, words that gave the happiness she wished for, she rejoiced, bowed to his feet, and asked again and again about the release from the curse.
+tel: పార్వతీదేవి శాపవిమోచనచేసి నిన్ననుగ్రహించును. అని యతీశ్వరుఁడు ప్రేమచే బల్కిన మాటలను విని యానందించి ఆయనపాదములకు మ్రొక్కి మాటిమాటికి శాప విమోచనమును గుఱించి యడుగుచుండెను.
+hi: यह सुनकर कि भवानी उसे शाप से मुक्त करेंगी, इन इच्छित सुख देने वाले वचनों से वह प्रसन्न हुई, उसके चरणों में प्रणाम किया और बार-बार शाप-मोचन के विषय में पूछती रही।
+
+--- unit 46 | section: कथा ---
+vidhi:
+Verse 12 of the story, with the author's explanation.
+deva:
+⟨तदैव?⟩ काले जटिलः ⟨त्वांपरुप्यतो?⟩ बभूव सः । सा वदत्पतिम् ⟨?⟩ शृणु ⟨भिक्षोरुक्तं?⟩ ⟨पुरा?⟩ । यदुक्तं वचनं ⟨?⟩ तच्छ्रुत्वा वाक्यमानरात् ।
+नीलवस्त्रं समादाय नीलाश्वं प्रस्थितो वनम् ॥
+iast:
+⟨tadaiva?⟩ kāle jaṭilaḥ ⟨tvāṁparupyato?⟩ babhūva saḥ | sā vadatpatim ⟨?⟩ śṛṇu ⟨bhikṣoruktaṁ?⟩ ⟨purā?⟩ | yaduktaṁ vacanaṁ ⟨?⟩ tacchrutvā vākyamānarāt |
+nīlavastraṁ samādāya nīlāśvaṁ prasthito vanam ||
+en: At that moment the matted-haired one vanished. She called her husband and told him to hear with care what the mendicant had said. Hearing it, the vaiśya rejoiced, put on black garments, mounted a black horse and set out for the forest.
+tel: యతీశ్వరుండు డీప్రకారము చెప్పి యప్పుడే యంతర్ధానమయ్యెను. ఆచిన్నది పెనిమిటిని యిటురండని పిలిచి యతీశ్వరునిచేఁ జెప్పఁబడినవాక్యమును శ్రద్ధతో వినుమని యథావిధిగా జెప్పఁగా నావైశ్యుఁడు శ్రద్ధతో విని సంతసించి నల్లనివస్త్రములను ధరించి నల్లని గుఱ్ఱమునెక్కి వనమునకుఁ బ్రయాణమయ్యెను.
+hi: उसी क्षण जटाधारी अन्तर्धान हो गया। उसने पति को बुलाकर कहा कि भिक्षुक की कही बात ध्यान से सुनो। सुनकर वैश्य प्रसन्न हुआ, काले वस्त्र पहने, काले घोड़े पर चढ़ा और वन की ओर चल पड़ा।
+
+--- unit 47 | section: कथा ---
+vidhi:
+Verse 13 of the story, with the author's explanation.
+deva:
+गच्छन् नानाविधान् वृक्षान् पथि पश्यन् महाकुलः ।
+मृगान् सिंहान् दंतशूकान् पथि पश्यन् भयाकुलः ॥
+ददर्शासौ तटाकं च बाहुल्येन विराजितं । रक्तनीलोत्पलैश्चक्रवाकद्वंद्वैश्च राजितं ।
+स्नानं चकार तत्रासौ तर्पणाद्यपि भूरिशः ॥
+iast:
+gacchan nānāvidhān vṛkṣān pathi paśyan mahākulaḥ |
+mṛgān siṁhān daṁtaśūkān pathi paśyan bhayākulaḥ ||
+dadarśāsau taṭākaṁ ca bāhulyena virājitaṁ | raktanīlotpalaiścakravākadvaṁdvaiśca rājitaṁ |
+snānaṁ cakāra tatrāsau tarpaṇādyapi bhūriśaḥ ||
+en: Going on, he saw on the way trees of many kinds, and deer, lions and serpents, and was filled with fear. He came to a great lake bright with red and blue lotuses and pairs of cakravāka birds. There he bathed, and performed the sandhyā, the tarpaṇa and the other daily rites in full.
+tel: ఆవైశ్యుండు వనంబుఁ బ్రవేశించి వెళ్ళుచు మార్గంబున ననేక వృక్షములను, మృగములను, సింహములను, పాములను జూచి భయముగలవాఁడై వెళ్ళుచు నెదుట ఎఱ్ఱగలువలు, నల్లగలువలు, చక్రవాకమిథునములు మొదలగువానిచే శోభిల్లుచున్న గొప్పచెఱువుంగని యచ్చట స్నానముచేసి సంధ్యావందనము, పితృతర్పణము మొదలగు నిత్యకర్మలను విశేషముగా నెఱవేర్చెను.
+hi: आगे जाते हुए उसने मार्ग में अनेक प्रकार के वृक्ष, मृग, सिंह और सर्प देखे और भयभीत हुआ। वह लाल और नीले कमलों तथा चक्रवाक युगलों से शोभित एक बड़े सरोवर पर आया। वहाँ उसने स्नान किया और सन्ध्या, तर्पण आदि नित्य कर्म पूरे किये।
+
+--- unit 48 | section: कथा ---
+vidhi:
+Verse 14 of the story, with the author's explanation.
+deva:
+पुनरश्वं समारुह्य जगाम गहनं वनं । स्खलितं ⟨नाश्वानं?⟩ पश्यन् अश्वा दुत्तीर्य सनच ।
+जघान पृथिवीं तत्र ⟨यानद्देवालयागतः?⟩ ॥
+iast:
+punaraśvaṁ samāruhya jagāma gahanaṁ vanaṁ | skhalitaṁ ⟨nāśvānaṁ?⟩ paśyan aśvā duttīrya sanaca |
+jaghāna pṛthivīṁ tatra ⟨yānaddevālayāgataḥ?⟩ ||
+en: Mounting the horse again he went into the dense forest. Seeing the horse stumble and go no further, he got down and dug the earth there until the temple appeared.
+tel: తిరిగి గుఱ్ఱమునెక్కి చొరరాని యడవిలోఁ గొంతదూరము వెళ్ళఁగా నచ్చట గుఱ్ఱము తొట్రుపాటుకలిగి నడవలేనిదయ్యెను. అంతట గుఱ్ఱముదిగి యచ్చట దేవాలయమగుపడునంతవఱకు భూమినిఁ ద్రవ్వెను.
+hi: फिर घोड़े पर चढ़कर वह घने वन में गया। घोड़े को लड़खड़ाते और आगे न चलते देखकर वह उतरा और वहाँ पृथ्वी को तब तक खोदा जब तक मन्दिर प्रकट न हुआ।
+
+--- unit 49 | section: कथा ---
+vidhi:
+Verse 15 of the story, with the author's explanation.
+deva:
+ददर्श च महास्थूलं देवालयमथो ततः । रत्नैः ⟨?⟩ फलैरैश्च(?) माणिक्यैश्चापि सर्वतः ।
+पूजयामास जटिल वाक्यं स्मृत्वाऽतिविस्मितः ॥
+iast:
+dadarśa ca mahāsthūlaṁ devālayamatho tataḥ | ratnaiḥ ⟨?⟩ phalairaiśca(?) māṇikyaiścāpi sarvataḥ |
+pūjayāmāsa jaṭila vākyaṁ smṛtvā'tivismitaḥ ||
+en: Then below he saw a great temple, covered everywhere with gems, pearls and rubies. Remembering the words of the matted-haired one, and greatly amazed, he worshipped there as follows.
+tel: అనంతరము క్రిందిభాగమున రత్నములతోను, ముత్యములతోను, మాణిక్యములతోను, అంతట వ్యాపించియున్న గొప్ప దేవాలయమునుజూచి యతీశ్వరుండు చెప్పినరీతిగా నుండుటచే నాశ్చర్యముచెంది ముందుచెప్పెడు ప్రకారంబునఁ బూజించినవాఁడాయెను.
+hi: फिर नीचे उसने एक बड़ा मन्दिर देखा, जो सब ओर रत्नों, मोतियों और माणिक्यों से ढका था। जटाधारी की बात स्मरण कर, अत्यन्त विस्मित होकर, उसने वहाँ इस प्रकार पूजा की।
+
+--- unit 50 | section: कथा ---
+vidhi:
+Verse 16 of the story, with the author's explanation.
+deva:
+सुवर्णयुक्तवस्त्राणि चंदनं चाक्षतान् शुभान् ।
+चंपकादीनि पुष्पाणि धूपं दीपं विशेषतः ॥
+नानापक्वान्नसंयुक्तं रसैष्षड्भिस्समन्वितं ।
+नानाशाकैस्समाकीर्णं सदुग्धघृतशर्करम् ॥
+नैवेद्यं करशुद्ध्यर्थं चंदनं मुलयादिजं । संपाद्य शुष्कहृदयः फलतांबूलदक्षिणाः ।
+जजाप मंत्रान् स्तुत्वाऽसौ सगुण ध्यानपूर्वकम् ॥
+iast:
+suvarṇayuktavastrāṇi caṁdanaṁ cākṣatān śubhān |
+caṁpakādīni puṣpāṇi dhūpaṁ dīpaṁ viśeṣataḥ ||
+nānāpakvānnasaṁyuktaṁ rasaiṣṣaḍbhissamanvitaṁ |
+nānāśākaissamākīrṇaṁ sadugdhaghṛtaśarkaram ||
+naivedyaṁ karaśuddhyarthaṁ caṁdanaṁ mulayādijaṁ | saṁpādya śuṣkahṛdayaḥ phalatāṁbūladakṣiṇāḥ |
+jajāpa maṁtrān stutvā'sau saguṇa dhyānapūrvakam ||
+en: He offered garments worked with gold, sandal-paste, auspicious unbroken rice, campaka and other flowers, incense and a lamp, and a food-offering of many cooked dishes with the six tastes, many vegetables, milk, ghee and sugar. For the washing of the hands he gave water scented with sandal of the Malaya hills, and fruit, betel and a gift of money. With a content heart, and with meditation on her form, he recited the mantras of the goddess.
+tel: బంగారుతోఁగూడిన వస్త్రములను, మంచిగంధమును, శోభస్కరమైన యక్షతలను, చంపకము మొదలైన పుష్పములను, ధూపమును దీపమునిచ్చి, షడ్రసోపేతమైనదియు, అనేకశాకములతోఁ గూడినదియు, పాలు, నెయ్యి, పంచదార మొదలగు మధురపదార్థములతోఁగూడినదియు, అనేకపిండివంటలతోఁగూడిన ప్రసాదమును దేవికి నివేదనచేసి హస్తశుద్ధికొఱకు మలయము మొదలగు చందనంబులనుంచు మంచిగంధమునలిసిన జలమునిచ్చి సంతుష్టాంతరంగుఁడై సగుణభావంబుతో దేవీసంబంధమైన మంత్రములను ఆవైశ్యుఁడు రహస్యముగా జపించెను.
+hi: उसने सोने से काम किये वस्त्र, चन्दन, शुभ अक्षत, चम्पा आदि पुष्प, धूप और दीप, और छह रसों से युक्त अनेक पक्वान्न, अनेक शाक, दूध, घी और शक्कर से युक्त नैवेद्य अर्पित किया। हाथ धोने के लिए मलय-चन्दन से सुगन्धित जल दिया, और फल, ताम्बूल और दक्षिणा दी। सन्तुष्ट हृदय से, उनके रूप का ध्यान करते हुए, उसने देवी के मन्त्रों का जप किया।
+
+--- unit 51 | section: कथा ---
+vidhi:
+Verse 17 of the story, with the author's explanation.
+deva:
+देवी भक्तं गृहादेत्य लोभयामास सादरं ।
+प्रसन्ना वददत्रेयं पूजा संपादिता कथम् ॥
+येन संपादिता तुभ्यं ददामि वरमद्भुतं ।
+इति श्रुत्वा धर्मपालो देव्यग्रे पांजलिस्थितः ॥
+iast:
+devī bhaktaṁ gṛhādetya lobhayāmāsa sādaraṁ |
+prasannā vadadatreyaṁ pūjā saṁpāditā katham ||
+yena saṁpāditā tubhyaṁ dadāmi varamadbhutaṁ |
+iti śrutvā dharmapālo devyagre pāṁjalisthitaḥ ||
+en: The goddess came out of the temple, tested her devotee with care, and then appeared before him, pleased, and said: For what did you perform this worship? Whatever it was done for, I give you a wonderful boon. Hearing this, Dharmapāla stood before the goddess with folded hands.
+tel: అనంతరము పార్వతీదేవి దేవాలయంబునుండి వెలువడివచ్చి భక్తుండైన కోమటిని మనశ్శుద్ధి తెలియఁగలందులకుఁ బరీక్షించి పిదపఁ బ్రత్యక్షమై ఓయీ, నీవీపూజ నెందుకు జేసితివి, యెంత గొప్పవరంబైన నిచ్చెదనని దేవి పలుకఁగా ఆ వాక్యమును ధర్మపాలుఁడు విని దోసిలిగొగ్గి ఆమెయెదుట నిలుచుండి ఆమెను స్తోత్రము చేసినవాఁడాయెను.
+hi: देवी मन्दिर से बाहर आयीं, भक्त की सावधानी से परीक्षा ली, फिर प्रसन्न होकर प्रकट हुईं और बोलीं: तुमने यह पूजा किस लिए की? जिस लिए की हो, मैं तुम्हें अद्भुत वर देती हूँ। यह सुनकर धर्मपाल हाथ जोड़कर देवी के सामने खड़ा हुआ।
+
+--- unit 52 | section: कथा ---
+vidhi:
+Verse 18 of the story, with the author's explanation.
+deva:
+देव्युवाच ॥
+धर्मपाल त्वयाऽसम्यक् पूजा संपादिता नघ ।
+वदं याचय मन्मूर्ख(?) ददामि बहुलं धनम् ॥
+iast:
+devyuvāca ||
+dharmapāla tvayā'samyak pūjā saṁpāditā nagha |
+vadaṁ yācaya manmūrkha(?) dadāmi bahulaṁ dhanam ||
+en: The goddess said: Dharmapāla, faultless one, you have performed the worship well. Ask a boon. I give you great wealth.
+tel: దోషరహితుఁడవు నాభక్తుండవు నగు ధర్మపాలుఁడా! నీవు పూజను జక్కఁగాఁ జేసితివి. వరముఁగోరుము. విశేషధనమిచ్చెదనని దేవి పలికినదాయెను.
+hi: देवी ने कहा: धर्मपाल, हे निर्दोष, तुमने पूजा अच्छी तरह की है। वर माँगो। मैं तुम्हें बहुत धन देती हूँ।
+
+--- unit 53 | section: कथा ---
+vidhi:
+Verse 19 of the story, with the author's explanation.
+deva:
+धर्मपालः ॥
+बहुला धनसंपत्तिर्वर्तते त्वत्प्रसादतः ।
+अपत्यं प्राप्तुमिच्छामि पितॄणां तारकं शुभम् ॥
+iast:
+dharmapālaḥ ||
+bahulā dhanasaṁpattirvartate tvatprasādataḥ |
+apatyaṁ prāptumicchāmi pitṝṇāṁ tārakaṁ śubham ||
+en: Dharmapāla said: By your grace I already have great wealth. I wish to obtain a child, auspicious, who will deliver the forefathers.
+tel: ఓదేవీ! నీయనుగ్రహమువలన విశేషమైన ధనసంపత్తు నాకు గలిగియేయున్నది. పితృదేవతల ఋణమునుదీర్చి శుభములఁ గలుగఁజేయు సంతానమును బడయఁగోరియున్నాను.
+hi: धर्मपाल ने कहा: आपकी कृपा से मेरे पास बहुत धन है ही। मैं शुभ सन्तान पाना चाहता हूँ, जो पितरों का उद्धार करे।
+
+--- unit 54 | section: कथा ---
+vidhi:
+Verse 20 of the story, with the author's explanation.
+deva:
+अतिथिर्भिक्षुको गेहे गृह्णाति न मदन्नकं ।
+तेन मे बहुळं दुःखं सभार्यस्योपजायते ॥
+इति दीनवचनमब्रवीत् ॥
+iast:
+atithirbhikṣuko gehe gṛhṇāti na madannakaṁ |
+tena me bahuḻaṁ duḥkhaṁ sabhāryasyopajāyate ||
+iti dīnavacanamabravīt ||
+en: A mendicant guest comes to my house and does not take my food. From this great sorrow has come to me and to my wife. So he spoke in a humble voice.
+tel: అతిథి నాయింటికి భిక్షకై వచ్చి మేము దంపతులము పెట్టు నన్నమును గ్రహింపఁడాయెను. కాఁబట్టి నాకును నా భార్యకును విశేషమైన దుఃఖముద్భవించియున్నదని దీనుఁడై పలుకుచున్న ధర్మపాలుని మాటలను విని పార్వతీదేవి యిట్లుపలికెను.
+hi: मेरे घर एक भिक्षुक अतिथि आता है और मेरा अन्न नहीं लेता। इससे मुझे और मेरी पत्नी को बड़ा दुःख हुआ है। ऐसा उसने दीन वाणी में कहा।
+
+--- unit 55 | section: कथा ---
+vidhi:
+Verse 21 of the story, with the author's explanation.
+deva:
+देव्युवाच ॥
+धर्मपाल ⟨?⟩ ⟨?⟩ ऽपत्यं नास्ति सुखप्रदं । तथाऽपि ⟨?⟩ ⟨?⟩ ⟨?⟩ ⟨?⟩ ।
+पुत्रमल्पायुषं वाऽथा ⟨?⟩ ⟨?⟩ ॥
+iast:
+devyuvāca ||
+dharmapāla ⟨?⟩ ⟨?⟩ 'patyaṁ nāsti sukhapradaṁ | tathā'pi ⟨?⟩ ⟨?⟩ ⟨?⟩ ⟨?⟩ |
+putramalpāyuṣaṁ vā'thā ⟨?⟩ ⟨?⟩ ||
+en: The goddess said: Dharmapāla, by your fortune no child that brings happiness is in store for you. Even so, ask, and I will give: a daughter who will be widowed, or a son of short life, or a son of long life who is wicked and ignorant.
+tel: ధర్మపాలుఁడా! నీయదృష్టముచేఁ జూడఁగా నీకు సుఖమును గలుగఁజేయు సంతానము సంభవింపదు. అయినను విధవయైన కుమార్తెనుగాని, అల్పాయువుగల పుత్రునిగాని, లేక దీర్ఘాయుర్దాయముగల దుర్విద్యావాఁడగు సుతునిగాని యిచ్చెదఁ గోరుమని దేవి పలికెను.
+hi: देवी ने कहा: धर्मपाल, तुम्हारे भाग्य में सुख देने वाली सन्तान नहीं है। फिर भी माँगो, मैं दूँगी: विधवा होने वाली कन्या, या अल्पायु पुत्र, या दीर्घायु किन्तु दुष्ट और मूर्ख पुत्र।
+
+--- unit 56 | section: कथा ---
+vidhi:
+Verse 22 of the story, with the author's explanation.
+deva:
+धर्मपालः ॥
+पुत्रमल्पायुषं देहि ताऽनताऽकृतकृत्यतां ।
+⟨?⟩ प्राप्नोमीच्छामि(?) पितॄंस्तु मम घोरगान्(?) ॥
+iast:
+dharmapālaḥ ||
+putramalpāyuṣaṁ dehi tā'natā'kṛtakṛtyatāṁ |
+⟨?⟩ prāpnomīcchāmi(?) pitṝṁstu mama ghoragān(?) ||
+en: Dharmapāla said: Give me the son of short life. Through him I shall have fulfilled my duty, and I shall free my forefathers who are in the terrible hells and bring them to a good end.
+tel: అల్పాయుర్దాయముగల కుమారునొసంగుము. దానంజేసి నేను సార్థకజన్ముఁడనై కౌరవాది నరకములయందుండు నా పితృదేవతలను విముక్తులఁజేసి సుగతినిఁబొందింపగలను.
+hi: धर्मपाल ने कहा: मुझे अल्पायु पुत्र दीजिए। उससे मैं कृतकृत्य होऊँगा, और घोर नरकों में पड़े अपने पितरों को मुक्त कर सद्गति दूँगा।
+
+--- unit 57 | section: कथा ---
+vidhi:
+Verse 23 of the story, with the author's explanation.
+deva:
+देव्युवाच ॥
+मत्प्राप्त्ये व्रज मानस्य नाथा वारुह्य शुंड(?) ।
+⟨?⟩ व्रज क्रिमाश्रस्य(?) गृहीत्वा फलमद्भुतम् ॥
+पत्न्यै देयं ततः पुत्रो भविष्यति न संशयः ॥
+iast:
+devyuvāca ||
+matprāptye vraja mānasya nāthā vāruhya śuṁḍa(?) |
+⟨?⟩ vraja krimāśrasya(?) gṛhītvā phalamadbhutam ||
+patnyai deyaṁ tataḥ putro bhaviṣyati na saṁśayaḥ ||
+en: The goddess said: Climb upon the navel of Gaṇeśa, who stands beside me, and from the mango tree near him take one wonderful fruit and give it to your wife. Then a son will be born; there is no doubt.
+tel: దేవి చెప్పుచున్నది:- నా ప్రక్కనుండు విఘ్నేశ్వరుని బొడ్డుపైఁ దేశంబెక్కి యాయన సమీపమందుండు మామిడిచెట్టునఁగల ఫలములలో నాశ్చర్యకరంబగు నొకపండు తీసికొని వెళ్ళి నీభార్యకు నిచ్చెదవేనిఁ బిమ్మట పుత్రుండు కలుగును. సందేహము లేదు.
+hi: देवी ने कहा: मेरे पास खड़े गणेश की नाभि पर चढ़ो, और उनके पास के आम के वृक्ष से एक अद्भुत फल लेकर अपनी पत्नी को दो। तब पुत्र होगा; इसमें सन्देह नहीं।
+
+--- unit 58 | section: कथा ---
+vidhi:
+Verse 24 of the story, with the author's explanation.
+deva:
+इति देवीवचश्श्रुत्वा गत्वा तत्पार्श्वमवदत् ।
+नाभिंगजमुखस्याथो उपह्यजगामोहतः ॥
+फलान्युत्तार्य च ततः फलमेकं ददर्श सः ॥
+iast:
+iti devīvacaśśrutvā gatvā tatpārśvamavadat |
+nābhiṁgajamukhasyātho upahyajagāmohataḥ ||
+phalānyuttārya ca tataḥ phalamekaṁ dadarśa saḥ ||
+en: Hearing the goddess's words, he went to her side, climbed upon the navel of the elephant-faced one, and plucked fruit from the mango tree. Taking the fruits down, he saw that he had only one.
+tel: ఈ ప్రకారము ఆదేవి పలుకఁగా విని యావైశ్యుండు వెళ్ళి ఆమెసమీపమందుండు వినాయకుని బొడ్డునంటెక్కి మామిడిచెట్టుపైఁ గలయొక పండు కోయఁగా నొకపండు మాత్రమే దక్కెను.
+hi: देवी की बात सुनकर वह उनके पास गया, गजमुख की नाभि पर चढ़ा और आम के वृक्ष से फल तोड़े। फलों को उतारकर उसने देखा कि उसके पास केवल एक ही फल है।
+
+--- unit 59 | section: कथा ---
+vidhi:
+Verse 25 of the story, with the author's explanation.
+deva:
+एवं पुनः पुनः कुर्वन् फलमेकं ददर्श ह ॥
+iast:
+evaṁ punaḥ punaḥ kurvan phalamekaṁ dadarśa ha ||
+en: Again and again he did this, and each time he saw only one fruit.
+tel: ఈప్రకారము మాటిమాటికి ననేకములైన పండ్లు కోసినను ఒకపండుమాత్రమే దక్కగలదునుండెను.
+hi: बार-बार उसने ऐसा किया, और हर बार केवल एक ही फल देखा।
+
+--- unit 60 | section: कथा ---
+vidhi:
+Verse 26 of the story, with the author's explanation.
+deva:
+दृष्ट्वा गणपतिश्चाऽथ धर्मपालाय शब्दवान् ।
+षोडशे वत्सरे पार्श्वे ⟨अहिः?⟩ पुत्रं तु दंशयेत् ॥
+iast:
+dṛṣṭvā gaṇapatiścā'tha dharmapālāya śabdavān |
+ṣoḍaśe vatsare pārśve ⟨ahiḥ?⟩ putraṁ tu daṁśayet ||
+en: Seeing this, Gaṇapati spoke to Dharmapāla: In the sixteenth year a serpent will bite the son.
+tel: అనంతరము విఘ్నేశ్వరుండు కోపించి నీకుమారునిఁ బదియాఱవసంవత్సరంబునఁ బాముఁ గఱచునని పలికెను.
+hi: यह देखकर गणपति ने धर्मपाल से कहा: सोलहवें वर्ष में पुत्र को सर्प डसेगा।
+
+--- unit 61 | section: कथा ---
+vidhi:
+Verse 27 of the story, with the author's explanation.
+deva:
+धर्मपालः फलं सम्यक् वस्त्रे बद्ध्वाऽगमद्गृहां ।
+फलं पत्न्यै ददौ साऽपि भक्षयित्वा पतिव्रता ॥
+गर्भं साऽधारयामास पत्या सह सुसंगता ।
+संपूर्णे नवमे मासे प्रासूत सुतमुत्तमम् ॥
+iast:
+dharmapālaḥ phalaṁ samyak vastre baddhvā'gamadgṛhāṁ |
+phalaṁ patnyai dadau sā'pi bhakṣayitvā pativratā ||
+garbhaṁ sā'dhārayāmāsa patyā saha susaṁgatā |
+saṁpūrṇe navame māse prāsūta sutamuttamam ||
+en: Dharmapāla tied the fruit well in his cloth and went home. He gave the fruit to his wife; the faithful wife ate it, and from union with her husband she conceived. When the ninth month was complete she gave birth to an excellent son.
+tel: ధర్మపాలుండా ఫలమును వస్త్రంబునఁ గట్టి గృహమునకు వెళ్ళి భార్యకు నియ్యఁగా బతివ్రతయైన యాచిన్నది ఆపండును దిని భర్తృసంయోగమువలన గర్భిణీకలదై తొమ్మిదిమాసములు పూర్తియైనపిమ్మట శ్రేష్ఠుండయిన కుమారునిఁగనెను.
+hi: धर्मपाल ने फल को वस्त्र में अच्छी तरह बाँधकर घर गया। उसने फल पत्नी को दिया; पतिव्रता ने उसे खाया, और पति के संयोग से गर्भ धारण किया। नौवाँ मास पूरा होने पर उसने उत्तम पुत्र को जन्म दिया।
+
+--- unit 62 | section: कथा ---
+vidhi:
+Verse 28 of the story, with the author's explanation.
+deva:
+जातकर्म चकाराऽस्य पिता संतुष्टमानसः ।
+षष्ठीपूजां चकाराऽस्य षष्ठे त्वथ दिने ततः ॥
+iast:
+jātakarma cakārā'sya pitā saṁtuṣṭamānasaḥ |
+ṣaṣṭhīpūjāṁ cakārā'sya ṣaṣṭhe tvatha dine tataḥ ||
+en: The father, with a glad heart, performed the birth rite for him, and on the sixth day the worship of Ṣaṣṭhī.
+tel: తండ్రి సంతోషచిత్తుండై యాపిల్లవానికి జాతకర్మచేసి యనంతరం బాఱవదినమందు చేయఁదగిన షష్ఠీపూజను జేసెను.
+hi: पिता ने प्रसन्न मन से उसका जातकर्म किया, और छठे दिन षष्ठी-पूजन किया।
+
+--- unit 63 | section: कथा ---
+vidhi:
+Verse 29 of the story, with the author's explanation.
+deva:
+द्वादशेऽहनि ⟨?⟩ ⟨?⟩ शिवेतिकरणं कृतं ।
+षष्ठे मासि चकाराऽसौ सन्नप्राशनमद्भुतम् ॥
+iast:
+dvādaśe'hani ⟨?⟩ ⟨?⟩ śivetikaraṇaṁ kṛtaṁ |
+ṣaṣṭhe māsi cakārā'sau sannaprāśanamadbhutam ||
+en: On the twelfth day he gave him the auspicious name Śiva, and in the sixth month he performed the joyful first feeding with rice.
+tel: పండ్రెండవదినము రాఁగానే యాపిల్లవానికి మంగళప్రదంబయిన శివుఁడను నామంబిడి యాఱవమాసంబున సంతోషకరంబగు నన్నప్రాశనమును జేయించెను.
+hi: बारहवें दिन उसने उसका शुभ नाम शिव रखा, और छठे महीने में आनन्दपूर्वक अन्नप्राशन किया।
+
+--- unit 64 | section: कथा ---
+vidhi:
+Verse 30 of the story, with the author's explanation.
+deva:
+तृतीये वत्सरे चूडा षष्ठमे ब्रह्मसूत्रकं । कृत्वोपनयनं पार्थ ततोऽभूत्तुष्टमानसः ।
+दशमे वत्सरे प्राप्ते ऽब्रवीद्भार्या पतिव्रता ॥
+iast:
+tṛtīye vatsare cūḍā ṣaṣṭhame brahmasūtrakaṁ | kṛtvopanayanaṁ pārtha tato'bhūttuṣṭamānasaḥ |
+daśame vatsare prāpte 'bravīdbhāryā pativratā ||
+en: In the third year he performed the tonsure, and in the sixth year, O Pārtha, the investiture with the sacred thread, and his heart was content. When the tenth year came, his faithful wife spoke.
+tel: మూఁడవసంవత్సరమున చూడాకర్మను, ఆఱవసంవత్సరమున మహావైభవముతో నుపనయనముచేసి సంతుష్టాంతరంగుఁడై యుండెను. పిమ్మటఁ బదియవసంవత్సరము రాఁగానే పతివ్రతయైన యాతనిభార్య యిట్లు పలుకుచున్నది.
+hi: तीसरे वर्ष में उसने चूड़ाकर्म किया, और छठे वर्ष में, हे पार्थ, उपनयन किया, और उसका मन सन्तुष्ट हुआ। दसवाँ वर्ष आने पर उसकी पतिव्रता पत्नी बोली।
+
+--- unit 65 | section: कथा ---
+vidhi:
+Verse 31 of the story, with the author's explanation.
+deva:
+भार्योवाच ॥
+बालकस्य विवाहोऽपि कर्तव्यं सुमुहूर्तके ॥
+iast:
+bhāryovāca ||
+bālakasya vivāho'pi kartavyaṁ sumuhūrtake ||
+en: The wife said: The boy's marriage too must be performed at a good hour.
+tel: ఓస్వామీ! మన పిల్లవానికి మంచిముహూర్తము విచారించి వివాహమునుగూడ జేయుమని భార్యపలికెను.
+hi: पत्नी ने कहा: बालक का विवाह भी शुभ मुहूर्त में करना चाहिए।
+
+--- unit 66 | section: कथा ---
+vidhi:
+Verse 32 of the story, with the author's explanation.
+deva:
+धर्मपालः ॥
+मया संकल्पितं काश्या गमनं बालकस्य तत् ।
+कृत्वा समायातु ततो विवाहोऽस्य भविष्यति ॥
+iast:
+dharmapālaḥ ||
+mayā saṁkalpitaṁ kāśyā gamanaṁ bālakasya tat |
+kṛtvā samāyātu tato vivāho'sya bhaviṣyati ||
+en: Dharmapāla said: I have resolved that the boy shall go to Kāśī. When he has done that and returned, his marriage will take place.
+tel: ఓ చిన్నదానా! మన పిల్లవాడు కాశీనగరమునకు వెళ్ళి యాత్రచేసి వచ్చిన పిమ్మట వివాహము చేయఁదలఁచితిని అని ధర్మపాలుఁడు చెప్పెను.
+hi: धर्मपाल ने कहा: मैंने संकल्प किया है कि बालक काशी जाये। वह करके लौटने पर उसका विवाह होगा।
+
+--- unit 67 | section: कथा ---
+vidhi:
+Verse 33 of the story, with the author's explanation.
+deva:
+पुत्रोऽसौ प्रेषितस्तेन श्यालकेन समन्वितः ।
+वाराणसीं प्रतिष्ठौ तौ गृहीत्वा बहुळं धनम् ॥
+कुर्वंतौ पथि धर्मं प्रतिष्ठापुरमायातुः ॥
+iast:
+putro'sau preṣitastena śyālakena samanvitaḥ |
+vārāṇasīṁ pratiṣṭhau tau gṛhītvā bahuḻaṁ dhanam ||
+kurvaṁtau pathi dharmaṁ pratiṣṭhāpuramāyātuḥ ||
+en: He sent the son, together with his wife's brother, and taking much wealth the two set out for Vārāṇasī. Doing acts of charity on the way, they came to the city of Pratiṣṭhāna.
+tel: పిమ్మట ఆచిన్నవాఁడును, భానమఱదియుఁ గలసి విశేషమైన ధనమునుదీసికొని కాశీపట్టణమునకుఁ బ్రయాణమై వెళ్ళుచు మార్గంబున ధర్మముచేయుచు ప్రతిష్ఠానగరమునకు వెళ్ళినవారైరి.
+hi: उसने पुत्र को अपने साले के साथ भेजा, और बहुत धन लेकर दोनों वाराणसी के लिए निकले। मार्ग में धर्म करते हुए वे प्रतिष्ठान नगर पहुँचे।
+
+--- unit 68 | section: कथा ---
+vidhi:
+Verse 34 of the story, with the author's explanation.
+deva:
+क्रीडंत्यः कन्यका दृष्टाः तत्र देशे मनोरमे ॥
+iast:
+krīḍaṁtyaḥ kanyakā dṛṣṭāḥ tatra deśe manorame ||
+en: There, in a pleasant place, they saw girls at play.
+tel: ఆపట్టణంబున నొక రమ్యంబైన ప్రదేశంబున నాడుకొనుచున్న స్త్రీలను జూచినవారైరి.
+hi: वहाँ एक रमणीय स्थान में उन्होंने खेलती हुई कन्याओं को देखा।
+
+--- unit 69 | section: कथा ---
+vidhi:
+Verse 35 of the story, with the author's explanation.
+deva:
+तासां समाजे गौरांगी सुशीलानाम कन्यका ।
+तया सह सखी काचिच्चकार कलहं भृशम् ॥
+गालनं च ददावत्स्यै रंड भाग्ये मुहुर्मुहुः ॥
+iast:
+tāsāṁ samāje gaurāṁgī suśīlānāma kanyakā |
+tayā saha sakhī kāciccakāra kalahaṁ bhṛśam ||
+gālanaṁ ca dadāvatsyai raṁḍa bhāgye muhurmuhuḥ ||
+en: Among them was a fair-skinned girl named Suśīlā. A friend of hers quarrelled with her fiercely and abused her again and again, calling her a widow.
+tel: ఆస్త్రీల సమూహములోఁ బచ్చనిశరీరముగల సుశీలయను కన్యకకలదు. ఆసుశీలతో స్నేహముగల యొకానొకస్త్రీ యత్యంతము పోట్లాడి ఓ విధవా! సంపత్తుగలదానా! అని మాటిమాటికి సుశీలను దిట్టెను.
+hi: उनमें सुशीला नाम की एक गोरी कन्या थी। उसकी एक सखी ने उससे बहुत झगड़ा किया और बार-बार उसे विधवा कहकर गाली दी।
+
+--- unit 70 | section: कथा ---
+vidhi:
+Verse 36 of the story, with the author's explanation.
+deva:
+सुशीला ॥
+सखि त्वया गालनं मे व्यर्थं दत्तं शुभानने ।
+जनन्या मे मानवत्या श्चास्ति गौरीव्रतं शुभम् ॥
+तस्य प्रसादात्सकलाः संबंधिन्यः प्रियाः स्त्रियः ।
+अजन्म विधवा जाताः किं पुनः कन्यकात्वहम् ॥
+iast:
+suśīlā ||
+sakhi tvayā gālanaṁ me vyarthaṁ dattaṁ śubhānane |
+jananyā me mānavatyā ścāsti gaurīvrataṁ śubham ||
+tasya prasādātsakalāḥ saṁbaṁdhinyaḥ priyāḥ striyaḥ |
+ajanma vidhavā jātāḥ kiṁ punaḥ kanyakātvaham ||
+en: Suśīlā said: Friend of fair face, you have abused me for nothing. My mother Mānavatī keeps the auspicious Gaurī vrata. By its grace all the women of our family, our kin and our friends never become widows in their lives. What then of me, who am still a girl?
+tel: సుశీల చెప్పుచున్నది:- శుభప్రదంబయిన ముఖముగల యోచెలియా! నీవు నిష్కారణముగా నన్నుఁదిట్టితివి. మానవతియను నాతల్లి శుభముల నొసంగు గౌరీదేవిసంబంధమైన వ్రతమును జేయుచున్నది. ఆవ్రతమహిమచే మాబంధువులుగాని, చెలికత్తెలుగాని, ఇష్టమైననారుగాని సమస్తమైన స్త్రీలును జన్మాంతపర్యంతము విధవలుగానివారైయుందురు. కన్యనయిన నావిషయమై చెప్పనేల.
+hi: सुशीला ने कहा: सुन्दर मुख वाली सखी, तुमने मुझे व्यर्थ गाली दी। मेरी माता मानवती शुभ गौरी-व्रत करती हैं। उसके प्रसाद से हमारे कुल की, सम्बन्धियों की और सखियों की सब स्त्रियाँ जीवन भर विधवा नहीं होतीं। फिर मेरी, जो अभी कन्या हूँ, क्या बात?
+
+--- unit 71 | section: कथा ---
+vidhi:
+Verse 37 of the story, with the author's explanation.
+deva:
+नत्ये तस्य प्रभावं किं व्रतराजस्य भामिनि ।
+पूजसे धूपदीपौ च यत्र तत्र सुखं भवेत् ॥
+iast:
+natye tasya prabhāvaṁ kiṁ vratarājasya bhāmini |
+pūjase dhūpadīpau ca yatra tatra sukhaṁ bhavet ||
+en: I will tell you the power of that king of vratas, O lady. Wherever the goddess is worshipped with incense and lamp, there is happiness.
+tel: ఓకాంతా! శ్రేష్ఠంబగు నాగౌరీవ్రతముయొక్క మహిమను జెప్పఁదను. ఏ గౌరీపూజయందు ధూపమునుగాని, దీపమునుగాని సమర్పించెదవో ఆగౌరీపూజ సమస్తసుఖములనిచ్చును.
+hi: हे सुन्दरी, मैं तुम्हें उस व्रतराज का प्रभाव बताती हूँ। जहाँ देवी की धूप और दीप से पूजा होती है, वहाँ सुख होता है।
+
+--- unit 72 | section: कथा ---
+vidhi:
+Verse 38 of the story, with the author's explanation.
+deva:
+इति श्रुत्वा ततो वाक्यं विस्मयोत्फुल्ललोचनः ।
+मातुलश्चिंतयामास बालकस्य प्रियं ततः ॥
+iast:
+iti śrutvā tato vākyaṁ vismayotphullalocanaḥ |
+mātulaściṁtayāmāsa bālakasya priyaṁ tataḥ ||
+en: Hearing these words, the boy's maternal uncle, his eyes wide with wonder, thought of what would be good for the boy.
+tel: ఈప్రకారముగాఁ జెప్పిన సుశీలవాక్యమును విని యాపిల్లవాని మేనమామ ఆశ్చర్యముతోఁగూడిన మనస్సుకలవాఁడై యనంతరం బాపిల్లవానికి శ్రేయస్సు యెట్లుకలుగునోయని విచారించెను.
+hi: यह सुनकर बालक के मामा ने, विस्मय से आँखें खोले, सोचा कि बालक का कल्याण कैसे हो।
+
+--- unit 73 | section: कथा ---
+vidhi:
+Verse 39 of the story, with the author's explanation.
+deva:
+शतं जीवो भवेदेष पतद्धस्ताक्षता यदि ।
+पतंत्यमुष्य शिरसि इति भावः पुनः पुनः ॥
+iast:
+śataṁ jīvo bhavedeṣa pataddhastākṣatā yadi |
+pataṁtyamuṣya śirasi iti bhāvaḥ punaḥ punaḥ ||
+en: If this boy were married to Suśīlā, and the unbroken rice fell from her hands upon his head at the wedding, he would live a hundred years. So the uncle thought again and again.
+tel: ఈపిల్లవానికిని, సుశీలకును వివాహమగునేని వివాహకాలంబున యాసుశీలహస్తంబులచే నుంచఁబడిన యక్షతలు యీపిల్లవాని శిరస్సునఁ బడునేని యితఁడు నూఱుసంవత్సరములు జీవించుచున్నాఁడగునని మాటిమాటికి మేనమామ తలంచుచుండెను.
+hi: यदि इस बालक का विवाह सुशीला से हो, और विवाह में उसके हाथों से अक्षत इसके सिर पर पड़ें, तो यह सौ वर्ष जीयेगा। ऐसा मामा बार-बार सोचता रहा।
+
+--- unit 74 | section: कथा ---
+vidhi:
+Verse 40 of the story, with the author's explanation.
+deva:
+सुशीला मपि पश्यन् सः विस्मयोत्फुल्ललोचनः ।
+सुशीला परिस्थिता गेहे तदनु स्थितावुभौ ॥
+iast:
+suśīlā mapi paśyan saḥ vismayotphullalocanaḥ |
+suśīlā paristhitā gehe tadanu sthitāvubhau ||
+en: The boy too looked at Suśīlā with eyes wide in wonder. Then, as Suśīlā went home, the two followed her.
+tel: ఆబాలకుండును సుశీలనుఁజూచి యాశ్చర్యముతోఁగూడిన నేత్రంబులుకలవాఁడయ్యెను. పిమ్మట సుశీల యింటికి వెళ్ళుచుండఁగా వారిద్దఱును ఆమెవెంట వెళ్ళిరి.
+hi: बालक ने भी विस्मय भरी आँखों से सुशीला को देखा। फिर, जब सुशीला घर गयी, दोनों उसके पीछे गये।
+
+--- unit 75 | section: कथा ---
+vidhi:
+Verse 41 of the story, with the author's explanation.
+deva:
+स्वे गृहं प्राप गौरांगी निकटे तस्य हर्म्यतः ।
+सतटाके रम्यदेशे वासं चक्रतुरादरात् ॥
+iast:
+sve gṛhaṁ prāpa gaurāṁgī nikaṭe tasya harmyataḥ |
+sataṭāke ramyadeśe vāsaṁ cakraturādarāt ||
+en: The fair girl reached her house. Near it, in a pleasant place by the lake, the two took up lodging with care.
+tel: అనంతరం బాచిన్నది తనగృహమునకు వెళ్ళఁగా వారిద్దఱును ఆచిన్నదానిగృహమునకు సమీపముగానుండు నట్టియు చెఱువు దగ్గరగా నుండు మనోహరంబయిన గృహంబులో ఆసక్తితో నివసించుచుండిరి.
+hi: गोरी कन्या अपने घर पहुँची। उसके पास, सरोवर के किनारे एक रमणीय स्थान में, दोनों ने यत्नपूर्वक निवास किया।
+
+--- unit 76 | section: कथा ---
+vidhi:
+Verse 42 of the story, with the author's explanation.
+deva:
+विवाहकाले संप्राप्ते सुशीला जनको हरिः ।
+सर्वं शिवाज्ञया कुर्वन् शांतवत्या स्वकांतया ॥
+विवाहोद्योगनाजातो विचचारोचितं वरं । असन्नस्थं शिवं दृष्ट्वा तन्मातापितरावुभौ ।
+ययाचतुश्शिवां बद्धांजली विनयसंयुतौ ॥
+iast:
+vivāhakāle saṁprāpte suśīlā janako hariḥ |
+sarvaṁ śivājñayā kurvan śāṁtavatyā svakāṁtayā ||
+vivāhodyoganājāto vicacārocitaṁ varaṁ | asannasthaṁ śivaṁ dṛṣṭvā tanmātāpitarāvubhau |
+yayācatuśśivāṁ baddhāṁjalī vinayasaṁyutau ||
+en: When the time for marriage came, Suśīlā's father Hari, who did everything by the command of Śivā, took counsel with his wife Śāntavatī about a fitting bridegroom. Seeing the youth Śiva lodging near their house, the parents went to the goddess and, with folded hands and humility, asked her for a fitting son-in-law.
+tel: సుశీలకు వివాహవయస్సు రాఁగానే తండ్రియగు హరియనువాఁడు తానుజేయునదంతయు పార్వతీదేవి యాజ్ఞానుసారముగాఁ జేయువాఁడై తగినవరుఁడెక్కడ దొరకునని తనభార్యతో వివాహవిషయమైన యాలోచనచేసెను. పిమ్మట తల్లిదండ్రులిద్దఱును తమ గృహసమీపమందుండు శివుఁడను బాలునిఁజూచి తగినవాఁడనుకొని గౌరీదేవివద్దకువెళ్ళి అంజలిచేసి వినయముగలవారై తమకుఁ దగిన యల్లుని గలుగఁజేయుమని గౌరీదేవిని వేడుకొనిరి.
+hi: विवाह का समय आने पर सुशीला के पिता हरि ने, जो सब कुछ शिवा की आज्ञा से करता था, अपनी पत्नी शान्तवती से योग्य वर के विषय में विचार किया। अपने घर के पास ठहरे युवक शिव को देखकर माता-पिता देवी के पास गये और हाथ जोड़कर, विनय से, योग्य दामाद के लिए प्रार्थना की।
+
+--- unit 77 | section: कथा ---
+vidhi:
+Verse 43 of the story, with the author's explanation.
+deva:
+कन्यापितरावूचुः ॥
+उपस्थितो विवाहोऽसौ सुतायाः ⟨गोऽत्रिनगोऽंबिके?⟩ ।
+इति प्रार्थनवेळायां सतटाके शिवालये ॥
+पश्चाद्भागे निकुंजोऽभूच्छिवाख्यस्य मातुलः ।
+सुशीलां भाविनी यस्य घटयामीति चिंतयन् ॥
+iast:
+kanyāpitarāvūcuḥ ||
+upasthito vivāho'sau sutāyāḥ ⟨go'trinago'ṁbike?⟩ |
+iti prārthanaveḻāyāṁ sataṭāke śivālaye ||
+paścādbhāge nikuṁjo'bhūcchivākhyasya mātulaḥ |
+suśīlāṁ bhāvinī yasya ghaṭayāmīti ciṁtayan ||
+en: The girl's parents said: O Ambikā, our daughter's marriage is at hand; grant a fitting bridegroom. While they prayed so in the temple by the lake, Śiva's maternal uncle hid behind the temple of Kālī, thinking how to bring Suśīlā to his nephew.
+tel: ఓ పార్వతీ! మా కుమారికకు వివాహవయస్సు వచ్చినది, తగినవరుని సంభవింపఁజేయుమని సుశీలయొక్క తల్లిదండ్రులు ప్రార్థించుసమయంబున ఆశివునియొక్క మేనమామ చెఱువుసమీపమందుండు కాళికాలయమునకు వెనుకభాగమందు దాగియున్నవాఁడై మేనల్లునికి సుశీలను యిచ్చునట్లుగా ప్రార్థనచేసెను.
+hi: कन्या के माता-पिता ने कहा: हे अम्बिके, हमारी कन्या का विवाह सामने है; योग्य वर दीजिए। जब वे सरोवर के पास मन्दिर में ऐसी प्रार्थना कर रहे थे, शिव का मामा काली के मन्दिर के पीछे छिपा था, यह सोचता हुआ कि सुशीला अपने भानजे को कैसे मिले।
+
+--- unit 78 | section: कथा ---
+vidhi:
+Verse 44 of the story, with the author's explanation.
+deva:
+उवाच ⟨?⟩ ⟨शिवल्वभर्ते?⟩ पथिक ⟨श्विनाऽमः?⟩ ।
+कन्यात्वमै श्रीप्रचेयेति गौर्युक्तांबुबुधेहरिः ॥
+iast:
+uvāca ⟨?⟩ ⟨śivalvabharte?⟩ pathika ⟨śvinā'maḥ?⟩ |
+kanyātvamai śrīpraceyeti gauryuktāṁbubudhehariḥ ||
+en: He said: A traveller named Śiva is staying here. Give your daughter to him. Hearing this as the word of Gaurī, Hari resolved to do so.
+tel: శివుఁడను పేరుగల యొకమార్గస్థుఁ డిక్కడనే యుండెను. ఆపురుషునకు నీకుమార్తెనిచ్చి వివాహము చేయుమని గౌరీదేవి చెప్పఁగా ఆప్రకారమే చేయుటకు హరియు నాలోచించుచుండెను.
+hi: उसने कहा: शिव नाम का एक यात्री यहाँ ठहरा है। अपनी कन्या उसे दो। इसे गौरी का वचन मानकर हरि ने वैसा ही करने का निश्चय किया।
+
+--- unit 79 | section: कथा ---
+vidhi:
+Verse 45 of the story, with the author's explanation.
+deva:
+सुशीलया कन्ययाऽयं समर्थ इव दृश्यते । अतो देया शिवायेति वरं यांद्विदृक्षिते ।
+⟨ततः?⟩ ⟨स्नातुल?⟩ कं ⟨?⟩ ययाचे चतुरो हरिम् ॥
+iast:
+suśīlayā kanyayā'yaṁ samartha iva dṛśyate | ato deyā śivāyeti varaṁ yāṁdvidṛkṣite |
+⟨tataḥ?⟩ ⟨snātula?⟩ kaṁ ⟨?⟩ yayāce caturo harim ||
+en: Since Śiva seemed fit for the girl Suśīlā, Hari, holding it as the goddess's boon, wished to give her to Śiva. Then Śiva's clever uncle came and asked that Suśīlā be given to his nephew.
+tel: సుశీలకు శివుఁడు తగినవాఁడని తలంచెనో, ఆహేతువుచేతనే హరియు గౌరీదేవివలన వరంబుగాని శివునికిచ్చి వివాహము చేయుఁగోరఁగా అప్పుడే చతురుఁడైన శివుని మేనమామ వచ్చి సుశీలను తన మేనల్లునకిచ్చి వివాహము చేయుమని ప్రార్థించెను.
+hi: क्योंकि शिव कन्या सुशीला के योग्य लगा, हरि ने उसे देवी का वर मानकर सुशीला शिव को देने की इच्छा की। तब शिव का चतुर मामा आया और सुशीला को अपने भानजे को देने की प्रार्थना की।
+
+--- unit 80 | section: कथा ---
+vidhi:
+Verse 46 of the story, with the author's explanation.
+deva:
+मातुल उवाच ॥
+अवश्यं लग्नकालेऽसौ शिवो गौर्याः प्रियंकरः ।
+ततो मुहूर्ते संप्राप्ते विवाहमकरोच्छिवम् ॥
+iast:
+mātula uvāca ||
+avaśyaṁ lagnakāle'sau śivo gauryāḥ priyaṁkaraḥ |
+tato muhūrte saṁprāpte vivāhamakarocchivam ||
+en: The uncle said: At the hour of marriage give her without fail to Śiva, who is dear to Gaurī. Then, when the auspicious hour came, Hari married Suśīlā to Śiva.
+tel: సుముహూర్త సమయంబున అత్యంతము మనోహరుండైన శివునకు సుశీలనిచ్చి వివాహముచేయుమని శివుని మేనమామ యడిగిన పిమ్మట సుముహూర్తము రాఁగానే సుశీలను శివునికిచ్చి వివాహము చేసెను.
+hi: मामा ने कहा: विवाह के मुहूर्त पर उसे अवश्य गौरी के प्रिय शिव को दीजिए। फिर शुभ मुहूर्त आने पर हरि ने सुशीला का विवाह शिव से किया।
+
+--- unit 81 | section: कथा ---
+vidhi:
+Verse 47 of the story, with the author's explanation.
+deva:
+⟨तत्रेव?⟩ शयनं चक्रे सुशीला शिवयोर्वरः । स्वप्ने नामा गौरीगौरी मातृरूपेण भास्वता ।
+सुशीलामनवत्सौख्यं प्रियं वचनमेव च ॥
+iast:
+⟨tatreva?⟩ śayanaṁ cakre suśīlā śivayorvaraḥ | svapne nāmā gaurīgaurī mātṛrūpeṇa bhāsvatā |
+suśīlāmanavatsaukhyaṁ priyaṁ vacanameva ca ||
+en: After the wedding the bridegroom Śiva lay down with Suśīlā in the bridal chamber. Gaurī, taking the form of Suśīlā's mother, spoke a kind word in a dream to the faithful Suśīlā.
+tel: వివాహమైన పిమ్మట బెండ్లికుమారుఁడైన శివుఁడు సుశీలతోఁగూడ శయ్యాగృహంబున శయనించియుండఁగా మంగళ స్వరూపురాలయిన గౌరీదేవి సుశీలయొక్క తల్లిస్వరూపమును ధరించి పతివ్రతయైన సుశీలనుగూర్చి స్వప్నంబున ప్రియంబగు నొకవాక్యమును పలికెను.
+hi: विवाह के बाद वर शिव सुशीला के साथ शयनगृह में लेटा। गौरी ने सुशीला की माता का रूप धारण कर पतिव्रता सुशीला से स्वप्न में एक प्रिय वचन कहा।
+
+--- unit 82 | section: कथा ---
+vidhi:
+Verse 48 of the story, with the author's explanation.
+deva:
+गौरी ॥
+सुशीले तव गौरांगि भर्तुर्दंशार्थमागतः ।
+महाभुजंग उत्तिष्ठ दुग्धं स्थापय तत्पुरः ॥
+घटं च स्थापयाऽशु त्वं तन्मध्ये संगमिष्यति । कूर्पासमंगान्निष्कास्य बंधनीय स्वया घटः ।
+प्रातरुत्थाय देहि त्वं मात्रे वायनकं शुभम् ॥
+iast:
+gaurī ||
+suśīle tava gaurāṁgi bharturdaṁśārthamāgataḥ |
+mahābhujaṁga uttiṣṭha dugdhaṁ sthāpaya tatpuraḥ ||
+ghaṭaṁ ca sthāpayā'śu tvaṁ tanmadhye saṁgamiṣyati | kūrpāsamaṁgānniṣkāsya baṁdhanīya svayā ghaṭaḥ |
+prātarutthāya dehi tvaṁ mātre vāyanakaṁ śubham ||
+en: Gaurī said: Suśīlā, fair one, a great serpent has come to bite your husband. Rise, set milk before it; set a pot too, and it will enter the pot. Take the bodice from your body and tie the pot with it. In the morning rise and give it to your mother as the auspicious vāyana.
+tel: పచ్చనైన శరీరముగల యోసుశీలా! నీపెనిమిటినిగఱచుటకొఱకు గొప్పసర్పము వచ్చియున్నది. దానిముందు పాలుపోసిన యొక కుంభమునుంచెదవేని ఆకుంభములోఁ జొరపడును. అప్పుడు నీశరీరమందుండు రవికెనుదీసి యాకుంభమునుగప్పి బంధించి యుదయమున లేచి నీతల్లికి వాయనమిచ్చెదవేని శుభముకలుగును.
+hi: गौरी ने कहा: सुशीला, गोरी, तुम्हारे पति को डसने एक बड़ा सर्प आया है। उठो, उसके सामने दूध रखो; एक घड़ा भी रखो, वह घड़े में घुस जायेगा। अपने शरीर से चोली उतारकर घड़े को बाँध दो। सुबह उठकर उसे शुभ वायन के रूप में अपनी माता को दे देना।
+
+--- unit 83 | section: कथा ---
+vidhi:
+Verse 49 of the story, with the author's explanation.
+deva:
+इति गौरीवचश्श्रुत्वा सुशीला क्षणमुत्थिता ।
+ददर्शाऽग्रे निश्वसंतं कृष्णसर्पं महाभयं ॥
+ततश्चकार गौर्युक्तं प्रवृत्ता निद्रितुं ततः । उवाच वर आसन्नो क्षुल्लग्ना महती मम ।
+भक्षणायाशु देहि त्वं लड्डुकादिकमुत्तमम् ॥
+iast:
+iti gaurīvacaśśrutvā suśīlā kṣaṇamutthitā |
+dadarśā'gre niśvasaṁtaṁ kṛṣṇasarpaṁ mahābhayaṁ ||
+tataścakāra gauryuktaṁ pravṛttā nidrituṁ tataḥ | uvāca vara āsanno kṣullagnā mahatī mama |
+bhakṣaṇāyāśu dehi tvaṁ laḍḍukādikamuttamam ||
+en: Hearing Gaurī's words, Suśīlā rose at once and saw before her a terrible black serpent, hissing. She did all that Gaurī had said and lay down again. Then her husband came near and said: I am very hungry; give me laḍḍus and other good things to eat.
+tel: ఈప్రకారము గౌరీదేవి చెప్పినమాటలను విని సుశీల తక్షణమేలేచి తనముందు బుస్సుకొట్టుచు భయంకరముగనున్న నల్లని సర్పమునుజూచి పిమ్మట గౌరీదేవి చెప్పినట్లు అంతయుఁజేసి యనంతరము నిద్రించుచుండఁగా బెనిమిటి యామె సమీపమునకు వచ్చి నాకు మిక్కిలి ఆకలియగుచున్నది. తినుటకు లడ్డు మొదలగు రుచ్యములగు పదార్థములనిమ్మని సుశీలనడిగెను.
+hi: गौरी की बात सुनकर सुशीला तुरन्त उठी और सामने फुफकारते हुए भयंकर काले सर्प को देखा। उसने गौरी के कहे अनुसार सब किया और फिर लेट गयी। तब उसका पति पास आकर बोला: मुझे बहुत भूख है; खाने के लिए लड्डू आदि अच्छी चीजें दो।
+
+--- unit 84 | section: कथा ---
+vidhi:
+Verse 50 of the story, with the author's explanation.
+deva:
+श्रुत्वेति वाक्यं पात्रे सा ददौ लड्डुकमुत्तमं ।
+भक्षयित्वा शिवो ह्येमे तस्मिन् पात्रेऽंगुळीयकम् ॥
+दत्वा तत्स्थापयामास स्थले गुप्ते शुभाननः । सुखेन शयनं चक्रे सुशीला निद्रिताऽभवत् ।
+रात्र्यामल्पावशिष्टायां मस्प्रुष्ट्वेनययौ शिवः ॥
+iast:
+śrutveti vākyaṁ pātre sā dadau laḍḍukamuttamaṁ |
+bhakṣayitvā śivo hyeme tasmin pātre'ṁguḻīyakam ||
+datvā tatsthāpayāmāsa sthale gupte śubhānanaḥ | sukhena śayanaṁ cakre suśīlā nidritā'bhavat |
+rātryāmalpāvaśiṣṭāyāṁ maspruṣṭvenayayau śivaḥ ||
+en: Hearing this she gave him fine laḍḍus in a dish. Śiva ate, put his ring in that golden dish, hid it in a secret place, and slept at ease. Suśīlā too slept. When little of the night remained, Śiva rose and went away without touching her.
+tel: ఈప్రకారము పెనిమిటి పలికినవాక్యమును సుశీల విని పాత్రయందుంచిన లడ్డు మొదలగు శ్రేష్ఠమయిన పదార్థములనియ్యఁగా శోభస్కరమైన ముఖముగల ఆమెపెనిమిటి భక్షించి తన వేలియుంగరమును ఆబంగారుపాత్రయందుంచి ఆపాత్రను రహస్యమైన యొకస్థలమందుంచి సుఖముగానిద్రించెను. ఆమెయు నిద్రించెను. పిమ్మట శివుఁడు తన భార్యను స్పృశింపకయే కొంచెము రాత్రియుండఁగా లేచి వెళ్ళెను.
+hi: यह सुनकर उसने थाली में उत्तम लड्डू दिये। शिव ने खाया, अपनी अँगूठी उस सोने की थाली में रखी, उसे एक गुप्त स्थान में छिपाया और सुख से सोया। सुशीला भी सोयी। जब रात थोड़ी बची थी, शिव उसे छुए बिना उठकर चला गया।
+
+--- unit 85 | section: कथा ---
+vidhi:
+Verse 51 of the story, with the author's explanation.
+deva:
+सूर्योदये विनिद्राऽसौ लज्जमाना त्वयं ययौ ॥
+iast:
+sūryodaye vinidrā'sau lajjamānā tvayaṁ yayau ||
+en: At sunrise she rose and, full of shyness, went to her mother.
+tel: సుశీల ప్రాతఃకాలంబున లేచి సిగ్గుగలదై తల్లివద్దకు వెళ్ళెను.
+hi: सूर्योदय पर वह उठी और लज्जा से भरी अपनी माता के पास गयी।
+
+--- unit 86 | section: कथा ---
+vidhi:
+Verse 52 of the story, with the author's explanation.
+deva:
+ततः पतिमिषे साऽथ चिह्नलागादृहात्मनः ।
+अभिषेषान्नजासंति सख्येतत्तिरवांतरम् ॥
+iast:
+tataḥ patimiṣe sā'tha cihnalāgādṛhātmanaḥ |
+abhiṣeṣānnajāsaṁti sakhyetattiravāṁtaram ||
+en: Then, on the next day, the Lord Śiva came in the form of her husband, and no one knew that he was not Suśīlā's husband.
+tel: అమరునాటిదినంబున భగవంతుఁడైన శివుఁడు ఆమె పెనిమిటిరూపమునుధరించి రాఁగా ఆయన సుశీల పెనిమిటికాఁడని యెనరును యెఱుంగరైరి.
+hi: फिर अगले दिन भगवान शिव उसके पति के रूप में आये, और कोई न जान सका कि वे सुशीला के पति नहीं हैं।
+
+--- unit 87 | section: कथा ---
+vidhi:
+Verse 53 of the story, with the author's explanation.
+deva:
+ततः स्नात्वा सुशीलासा मात्रे वायनाकंददौ ।
+माता ददर्श तन्मध्ये मुक्ताहारमनुत्तमम् ॥
+ददौ प्रियायै कन्यायै सहसा तुष्टमानसा ॥
+iast:
+tataḥ snātvā suśīlāsā mātre vāyanākaṁdadau |
+mātā dadarśa tanmadhye muktāhāramanuttamam ||
+dadau priyāyai kanyāyai sahasā tuṣṭamānasā ||
+en: Then Suśīlā bathed and gave the pot to her mother as the vāyana. As soon as the mother touched it, the serpent in it had become a string of fine pearls. Seeing it, glad at heart, she gave it to her beloved daughter.
+tel: అనంతరము ఆసుశీల స్నానముచేసి ఆకుంభమును తల్లికి వాయనమియ్యఁగా నామె కుంభము స్పృశించినతోడనే దానియందుండుసర్పము ముత్యాలసరమై యుండెను. అట్టిసరమునుజూచి సంతోషచిత్తముగలదియై ప్రేమాస్పదురాలగు కుమార్తెకు దానినిచ్చెను.
+hi: फिर सुशीला ने स्नान किया और घड़ा माता को वायन के रूप में दिया। माता के छूते ही उसमें का सर्प उत्तम मोतियों की माला बन गया था। उसे देखकर प्रसन्न मन से उसने वह अपनी प्रिय कन्या को दे दी।
+
+--- unit 88 | section: कथा ---
+vidhi:
+Verse 54 of the story, with the author's explanation.
+deva:
+क्रीडाकाले तु संप्राप्ते हरश्चागाद्वरात्मना ।
+आदेशयत्सुशीलां तां क्रीडायै जननी ततः ॥
+iast:
+krīḍākāle tu saṁprāpte haraścāgādvarātmanā |
+ādeśayatsuśīlāṁ tāṁ krīḍāyai jananī tataḥ ||
+en: When the time for the bridal night came, Hara came in the form of the bridegroom, and the mother sent Suśīlā to him.
+tel: పిమ్మటఁ గ్రీడాకాలము సమీపింపఁగా అరాత్రి సాంబమూర్తి ఆమె పెనిమిటిరూపమును ధరించి వచ్చియుండ అనంతరం భామతల్లి సంభోగముకొఱకు వెళ్ళుమని సుశీలనాజ్ఞాపించెను.
+hi: जब सुहागरात का समय आया, हर वर के रूप में आये, और माता ने सुशीला को उनके पास भेजा।
+
+--- unit 89 | section: कथा ---
+vidhi:
+Verse 55 of the story, with the author's explanation.
+deva:
+सुशीला ॥
+नाऽयं पूर्वं मे जननि येन वासो गृहात्कृतः ।
+अनेन नाकं मनसा क्रीडिषीच्छामि भासमे ॥
+अत्रांतरे समासीनो हर अंतर्हितोऽभवत् ।
+इति श्रुत्वा समाख्यातौ चिंतायां पितरौ ततः ॥
+अन्नदानमतः कुर्यान् रचयाम्याच तद्व्रतं ।
+चक्रतुस्तौ तदाऽरभ्य पुराणोक्तविधानतः ॥
+iast:
+suśīlā ||
+nā'yaṁ pūrvaṁ me janani yena vāso gṛhātkṛtaḥ |
+anena nākaṁ manasā krīḍiṣīcchāmi bhāsame ||
+atrāṁtare samāsīno hara aṁtarhito'bhavat |
+iti śrutvā samākhyātau ciṁtāyāṁ pitarau tataḥ ||
+annadānamataḥ kuryān racayāmyāca tadvrataṁ |
+cakratustau tadā'rabhya purāṇoktavidhānataḥ ||
+en: Suśīlā said: Mother, this is not the man who married me before. I do not wish to be with him. At that moment Hara, who was seated there, vanished. Hearing all this, the parents were troubled, and told their daughter to keep the vrata of giving food. From that day they kept it as the Purāṇa lays down.
+tel: ఓతల్లీ! ఈపురుషుఁడు పూర్వము నన్ను వివాహము చేసికొనిన పురుషుఁడుకాఁడు. ఆకారణంబున యీపురుషునితో సంభోగించుట కిష్టములేదని సుశీల తల్లితోఁ జెప్పుచుండఁగా నక్కడ గూర్చుండియుండిన సాంబమూర్తి అదృశ్యుండయ్యెను. అనంతరమీ వృత్తాంతమంతయు తల్లిదండ్రులువిని విచారగ్రస్తులై అన్నదానవ్రతమాచరింపుమని కుమారికతోఁ జెప్పి అదిమొదలు పురాణమందు చెప్పినరీతిగా నావ్రతమును జేయుచుండిరి.
+hi: सुशीला ने कहा: माँ, यह वह पुरुष नहीं है जिसने पहले मुझसे विवाह किया। मैं इसके साथ नहीं रहना चाहती। उसी क्षण वहाँ बैठे हर अन्तर्धान हो गये। यह सब सुनकर माता-पिता चिन्तित हुए और कन्या से अन्नदान-व्रत करने को कहा। उस दिन से वे पुराण के अनुसार वह व्रत करते रहे।
+
+--- unit 90 | section: कथा ---
+vidhi:
+Verse 56 of the story, with the author's explanation.
+deva:
+सुशीला पादयोश्चक्रे क्षाळनं मुद्रिकान्विता । जलधारां ददौ माता चंदनं पुत्रभीष्टदा ।
+हरिर्दीपं च तांबूलं बुभुजुस्तत्र मानवाः ॥
+iast:
+suśīlā pādayoścakre kṣāḻanaṁ mudrikānvitā | jaladhārāṁ dadau mātā caṁdanaṁ putrabhīṣṭadā |
+harirdīpaṁ ca tāṁbūlaṁ bubhujustatra mānavāḥ ||
+en: Suśīlā, wearing the ring, washed the feet of the brāhmaṇas; her mother, wishing to fulfil her daughter's wish, brought the sandal-paste and water; her father Hari gave the lamp and the betel. So the feast was set, and people ate there freely.
+tel: సుశీల యుంగరమును ధరించినదై బ్రాహ్మణుల పాదప్రక్షాళనచేయుటయును, కొమార్తె కోటికను నెఱవేర్చు నుద్దేశ్యముగల తల్లి మంచిగంధంబును ఉదకమును దెచ్చియిచ్చుటయు, తండ్రియగు హరి నీరాజనము తాంబూలములిచ్చుటయు నేర్పఱచి యీప్రకారము అన్నదానవ్రతము జఱుపఁగా మనుష్యులు స్వేచ్ఛగా భుజించుచుండిరి.
+hi: अँगूठी पहने सुशीला ब्राह्मणों के पाँव धोती; कन्या की इच्छा पूरी करने की इच्छुक माता चन्दन और जल लाती; पिता हरि दीप और ताम्बूल देते। इस प्रकार भोज चलता रहा, और लोग वहाँ स्वेच्छा से भोजन करते रहे।
+
+--- unit 91 | section: कथा ---
+vidhi:
+Verse 57 of the story, with the author's explanation.
+deva:
+इति तेषामन्नदानं प्रवृत्तं भिक्षुसौख्यदम् ॥
+iast:
+iti teṣāmannadānaṁ pravṛttaṁ bhikṣusaukhyadam ||
+en: So their gift of food went on, bringing comfort to mendicants and travellers.
+tel: ఈప్రకారముగా వారి యన్నదానము భిక్షమెత్తుకొనువారికి, బాటసారులకు సౌఖ్యముగలుగఁజేయునదై ప్రవర్తిల్లుచుండెను.
+hi: इस प्रकार उनका अन्नदान चलता रहा, जो भिक्षुकों और यात्रियों को सुख देता था।
+
+--- unit 92 | section: कथा ---
+vidhi:
+Verse 58 of the story, with the author's explanation.
+deva:
+तावुभौ परिस्थितौ काश्यां पारिपाकाशीं सुखप्रदां ।
+निर्मलांभसि गंगाया स्नानं चक्रतुरादरात् ॥
+iast:
+tāvubhau paristhitau kāśyāṁ pāripākāśīṁ sukhapradāṁ |
+nirmalāṁbhasi gaṁgāyā snānaṁ cakraturādarāt ||
+en: The two reached Kāśī, the giver of happiness, and bathed with devotion in the pure water of the Gaṅgā.
+tel: అనంతరము శివుఁడును, మేనమామయు నిద్దఱు కాశీనగరమునకు బ్రయాణమై కొన్నిదినంబులకు కాశీనగరమునకు వెళ్ళి యచ్చట గంగానదియొక్క నిర్మలమయిన జలములో నాసక్తితో స్నానమును జేసిరి.
+hi: दोनों सुखदायिनी काशी पहुँचे और गंगा के निर्मल जल में भक्ति से स्नान किया।
+
+--- unit 93 | section: कथा ---
+vidhi:
+Verse 59 of the story, with the author's explanation.
+deva:
+स्वर्गद्वारं परिस्थितौ तौ कुर्वंतौ धर्ममुत्तमं । पीतांबराणि ददतुः भिक्षुकाणां गृहे गृहे ।
+आशिषश्च ददुस्तस्मै चिरंजीवो भवेदिति ॥
+iast:
+svargadvāraṁ paristhitau tau kurvaṁtau dharmamuttamaṁ | pītāṁbarāṇi dadatuḥ bhikṣukāṇāṁ gṛhe gṛhe |
+āśiṣaśca dadustasmai ciraṁjīvo bhavediti ||
+en: Staying at Svargadvāra and doing great acts of charity, they gave silk garments to mendicants from house to house, and the mendicants blessed him, saying: May you live long.
+tel: అనంతరము వారిద్దఱు స్వర్గద్వారమను పుణ్యస్థలమునకువెళ్ళి యచ్చట గొప్పధర్మములఁజేయుచు భిక్షులకుఁ బ్రతిగృహమునను బట్టువస్త్రములనిచ్చుచురాఁగా ఆభిక్షుకులు నీవు చిరకాలము జీవింపుమని యాశీర్వచనములు జేసిరి.
+hi: स्वर्गद्वार में रहकर बड़े धर्मकार्य करते हुए उन्होंने घर-घर भिक्षुकों को रेशमी वस्त्र दिये, और भिक्षुकों ने आशीर्वाद दिया: तुम चिरंजीवी हो।
+
+--- unit 94 | section: कथा ---
+vidhi:
+Verse 60 of the story, with the author's explanation.
+deva:
+विश्वेश्वरं समायातौ नत्वा स्तुत्वा पुनः पुनः ।
+स्वयं गृहं प्रस्थितौ तौ शिवो मातुलमद्रुतं वदत् ॥
+iast:
+viśveśvaraṁ samāyātau natvā stutvā punaḥ punaḥ |
+svayaṁ gṛhaṁ prasthitau tau śivo mātulamadrutaṁ vadat ||
+en: They came to Viśveśvara, bowed and praised him again and again, and set out for their own home. On the way Śiva suddenly spoke to his uncle.
+tel: వారిద్దఱు విశ్వేశ్వరుని దర్శనము జేసికొని నమస్కరించి యనేకవిధంబుల స్తుతియించి తిరిగి తమ గృహమునకు వచ్చుచుండఁగా మార్గంబున శివుఁడు మేనమామతో శీఘ్రముగా నొక వాక్యమును పలికెను.
+hi: वे विश्वेश्वर के पास आये, बार-बार प्रणाम और स्तुति की, और अपने घर के लिए चल पड़े। मार्ग में शिव ने अचानक मामा से कहा।
+
+--- unit 95 | section: कथा ---
+vidhi:
+Verse 61 of the story, with the author's explanation.
+deva:
+शिवः ॥
+काये किंचिदस्वास्थ्यं मातुल प्रतिभाति हि ।
+ततः प्राणोत्क्रमे तस्य यमदूता उपस्थिताः ॥
+मंगळागौरिका चाऽपि तेषां युद्धमभून्महत् । जित्वा तान् मंगळा प्राणान् ददौ आस्य शिवस्य च ।
+शिवोऽकस्मादुत्थितोऽसौ मातुलं प्रत्युवाच ह ॥
+iast:
+śivaḥ ||
+kāye kiṁcidasvāsthyaṁ mātula pratibhāti hi |
+tataḥ prāṇotkrame tasya yamadūtā upasthitāḥ ||
+maṁgaḻāgaurikā cā'pi teṣāṁ yuddhamabhūnmahat | jitvā tān maṁgaḻā prāṇān dadau āsya śivasya ca |
+śivo'kasmādutthito'sau mātulaṁ pratyuvāca ha ||
+en: Śiva said: Uncle, I feel some unease in my body. Then, as his life was leaving, the messengers of Yama stood there. Maṅgaḷagaurī came, and a great battle took place between her and them. Having defeated them, Maṅgaḷā gave Śiva his life. Śiva suddenly rose and said to his uncle:
+tel: ఓ మామా! నాశరీరమందు కొంచెము బాధగానున్నదని శివుఁడు పలుకుచున్న సమయంబుననే యమదూతలు వచ్చి యాశివుని ప్రాణములఁ దీసికొనివెళ్ళుచుండ భక్తులకు శుభములనొసంగు గౌరీదేవివచ్చి ఆయమదూతలతో గొప్పయుద్ధముచేసి వారినిజయించి శివుని ప్రాణములఁ దెచ్చి శివునికియ్యఁగా నాతండు హఠాత్తుగా లేచి మేనమామతో నిట్లు పలికెను.
+hi: शिव ने कहा: मामा, मेरे शरीर में कुछ कष्ट है। तब, जब उसके प्राण निकल रहे थे, यमदूत वहाँ खड़े हो गये। मंगलगौरी आयीं, और उनमें और यमदूतों में बड़ा युद्ध हुआ। उन्हें हराकर मंगला ने शिव को प्राण दिये। शिव सहसा उठा और मामा से बोला:
+
+--- unit 96 | section: कथा ---
+vidhi:
+Verse 62 of the story, with the author's explanation.
+deva:
+स्वप्ने युद्धं मया दृष्टं मंगळायमभृत्ययोः ।
+जिता मंगळगौर्या ते ततोऽहं शयनोत्थितः ॥
+iast:
+svapne yuddhaṁ mayā dṛṣṭaṁ maṁgaḻāyamabhṛtyayoḥ |
+jitā maṁgaḻagauryā te tato'haṁ śayanotthitaḥ ||
+en: In a dream I saw a battle between Maṅgaḷā and the servants of Yama. Maṅgaḷagaurī defeated them, and then I rose from sleep.
+tel: మంగళగౌరీదేవికిని యమభటులకును యుద్ధము జఱిగినట్లుగాను, గౌరీదేవి యమభటుల నోడించినట్లుగాను నేను స్వప్నమంచుఁ జూచుచుండఁగా నింతలో మెలకువవచ్చుటచే లేచితిని.
+hi: स्वप्न में मैंने मंगला और यम के सेवकों के बीच युद्ध देखा। मंगलगौरी ने उन्हें हराया, और तब मैं नींद से उठा।
+
+--- unit 97 | section: कथा ---
+vidhi:
+Verse 63 of the story, with the author's explanation.
+deva:
+मातुलः ॥
+यत्स्वप्नं शिववत् ज्ञातं न स्मर्तव्यं त्वया पुनः ।
+गच्छामि लघुना ते च पितरौ द्रष्टुमुत्सुकौ ॥
+परिस्थितौ तौ ततः स्तस्मात् प्रतिष्ठापुरमायतुः ।
+रम्ये तटाके तिष्ठै ते पाकारंभं प्रचक्रतुः ॥
+iast:
+mātulaḥ ||
+yatsvapnaṁ śivavat jñātaṁ na smartavyaṁ tvayā punaḥ |
+gacchāmi laghunā te ca pitarau draṣṭumutsukau ||
+paristhitau tau tataḥ stasmāt pratiṣṭhāpuramāyatuḥ |
+ramye taṭāke tiṣṭhai te pākāraṁbhaṁ pracakratuḥ ||
+en: The uncle said: Do not think again of what you saw in the dream. We have been away long; your parents at home are eager to see us. Let us go quickly to our city. So they went on and came to the city of Pratiṣṭhāna, and by a pleasant lake there they began to cook.
+tel: అల్లుఁడా! స్వప్నమందు నీ వేమిచూచితివో దానిని తిరిగి తలంపకుము. మనము వచ్చి చాలాకాలమైనది. ఇంటివద్ద నీతల్లిదండ్రులు మనలఁ జూచుటకు మిక్కిలి యపేక్షతో నుందురు. కాఁబట్టి మనము మన నగరమునకు వెళ్ళుదమని మేనమామ పలుకఁగా ననంతరము వారిద్దఱు ప్రయాణమై వచ్చుచు ప్రతిష్ఠానగరమునకు వెళ్ళి అక్కడ మనోహరమయిన యొక చెఱువువొడ్డున వంటఁజేయుట పారంభించిరి.
+hi: मामा ने कहा: स्वप्न में जो देखा, उसे फिर मत सोचो। हमें आये बहुत समय हुआ; घर पर तुम्हारे माता-पिता हमें देखने को उत्सुक होंगे। चलो, शीघ्र अपने नगर चलें। सो वे चले और प्रतिष्ठान नगर पहुँचे, और वहाँ एक रमणीय सरोवर के पास भोजन बनाने लगे।
+
+--- unit 98 | section: कथा ---
+vidhi:
+Verse 64 of the story, with the author's explanation.
+deva:
+दृष्टौ तौ हरिदासीभिः धैर्यौदार्यधरौ शुभौ ॥
+iast:
+dṛṣṭau tau haridāsībhiḥ dhairyaudāryadharau śubhau ||
+en: The maidservants of Hari's house came to the lake and saw the two, bright with courage and generosity, bringers of good.
+tel: అనంతరము హరియింట నుండు దాసీలు చెఱువునకు రాఁగా నక్కడ ధైర్యము త్యాగము మొదలగు గుణములచేఁ బ్రకాశించువారును, శుభముల నొసంగువారునగు వారిద్దఱినిజూచిరి.
+hi: हरि के घर की दासियाँ सरोवर पर आयीं और धैर्य और उदारता से शोभित, शुभ लाने वाले उन दोनों को देखा।
+
+--- unit 99 | section: कथा ---
+vidhi:
+Verse 65 of the story, with the author's explanation.
+deva:
+अन्नदानं हरेर्गेहे प्रवृत्तं तत्र गम्यतां ।
+भो दास्यो यात्रिका वयं गच्छामो वक्ष्यचिद्गृहम् ॥
+iast:
+annadānaṁ harergehe pravṛttaṁ tatra gamyatāṁ |
+bho dāsyo yātrikā vayaṁ gacchāmo vakṣyacidgṛham ||
+en: The women said: Travellers, why cook and trouble yourselves? The gift of food is going on in the house of Hari; go there. The two answered: We are pilgrims; we do not go to anyone's house.
+tel: బాటసారులారా! ఏల మీరు వంటఁజేసికొని కష్టమునుం బెంచెదరని యాస్త్రీలుపల్కఁగా మేము యాత్రికులము. కాన ఎవరియింటికిని వెళ్ళమని వారిద్దఱు ప్రత్యుత్తరమిచ్చిరి.
+hi: स्त्रियों ने कहा: यात्रियो, क्यों भोजन बनाकर कष्ट उठाते हो? हरि के घर में अन्नदान चल रहा है; वहाँ जाओ। दोनों ने उत्तर दिया: हम यात्री हैं; हम किसी के घर नहीं जाते।
+
+--- unit 100 | section: कथा ---
+vidhi:
+Verse 66 of the story, with the author's explanation.
+deva:
+इति श्रुत्वा तु तद्वाक्यं दास्यो जग्मुः स्वकं गृहं ।
+स्वस्वामिनिकथे वाक्यं मवदन् सादरं तदा ॥
+iast:
+iti śrutvā tu tadvākyaṁ dāsyo jagmuḥ svakaṁ gṛhaṁ |
+svasvāminikathe vākyaṁ mavadan sādaraṁ tadā ||
+en: Hearing these words, the maidservants went to their house and told their master with respect what had happened at the lake.
+tel: ఈ ప్రకారము ఆ బాటసారులు పలికిన మాటను విని దాసీలు తమగృహంబునకు వెళ్ళి చెఱువువద్ద జఱిగిన వృత్తాంతమును తమయజమానునికి శ్రద్ధతోఁ జెప్పినవారైరి.
+hi: यह सुनकर दासियाँ अपने घर गयीं और सरोवर पर जो हुआ, वह अपने स्वामी को आदरपूर्वक बताया।
+
+--- unit 101 | section: कथा ---
+vidhi:
+Verse 67 of the story, with the author's explanation.
+deva:
+सर्वं दासीनवचश्श्रुत्वा सहरिः प्रभुरादरात् ।
+प्रेषयामास हस्त्यादी नन्नवस्त्राणि भूरिशः ॥
+iast:
+sarvaṁ dāsīnavacaśśrutvā sahariḥ prabhurādarāt |
+preṣayāmāsa hastyādī nannavastrāṇi bhūriśaḥ ||
+en: Hearing all that the maidservants said, the master Hari, with respect, sent them much food and clothing by elephants and bearers.
+tel: దాసీల యజమానుండైన హరి యన్నదానము చేయుచున్నాఁడు. అక్కడకు మీరురండని దాసీలుపలుకఁగా విన్నవారైరి. పిమ్మట ఆదరణతో విశేషమైన వస్త్రములను అన్నమును వారికి పంపించినవారైరి.
+hi: दासियों की सारी बात सुनकर स्वामी हरि ने आदरपूर्वक हाथियों और वाहकों से उन्हें बहुत अन्न और वस्त्र भेजे।
+
+--- unit 102 | section: कथा ---
+vidhi:
+Verse 68 of the story, with the author's explanation.
+deva:
+तद्दृष्ट्वा विस्मितौ तौ च गच्छावश्च हरेर्गृहं ।
+हरिर्मातुलमभ्यर्च्य शिवं पूजितुमागतः ॥
+प्रक्षाळयंति च सा कन्या चरणौ तस्य सत्वरा । अभूद्व्रीडा मेऽयमिति जननीं प्रत्युवाच ह ।
+हरिः पप्रच्छ साश्चर्यं शिवं मंगळदर्शनम् ॥
+iast:
+taddṛṣṭvā vismitau tau ca gacchāvaśca harergṛhaṁ |
+harirmātulamabhyarcya śivaṁ pūjitumāgataḥ ||
+prakṣāḻayaṁti ca sā kanyā caraṇau tasya satvarā | abhūdvrīḍā me'yamiti jananīṁ pratyuvāca ha |
+hariḥ papraccha sāścaryaṁ śivaṁ maṁgaḻadarśanam ||
+en: Seeing this, the two were amazed and went to Hari's house. Hari first honoured the uncle, then came to honour Śiva. The girl Suśīlā, washing his feet, was overcome with shyness and told her mother: This is my husband. Hari, astonished, asked Śiva, whose sight was auspicious:
+tel: హరి పంపిన అన్నవస్త్రాదులఁ జూచి వారిద్దఱు ఆశ్చర్యమునుబొంది హరియొక్క గృహంబునకు వెళ్ళఁగా ఆహరి ముందు శివుని మేనమామనుబూజించి పిమ్మట శివుని బూజించుటకుఁ బ్రారంభింపఁగా ఆసుశీల శివుని పాదప్రక్షాళనముఁజేసి సిగ్గుగలదై ఈయనే నాపెనిమిటి యని తల్లితోఁ జెప్పఁగా హరి ఆశ్చర్యముగలవాఁడై మంగళప్రదమైన దర్శనముగల శివునితో నిట్లుపలికెను.
+hi: यह देखकर दोनों विस्मित हुए और हरि के घर गये। हरि ने पहले मामा का सत्कार किया, फिर शिव का सत्कार करने आया। कन्या सुशीला ने उसके पाँव धोते हुए लज्जा से माता से कहा: यही मेरा पति है। हरि ने विस्मित होकर मंगल दर्शन वाले शिव से पूछा:
+
+--- unit 103 | section: कथा ---
+vidhi:
+Verse 69 of the story, with the author's explanation.
+deva:
+हरिः ॥
+किंचिच्चिह्नं शिवाऽस्त्यत्र ब्रूहि मे वरदर्शन ॥
+iast:
+hariḥ ||
+kiṁciccihnaṁ śivā'styatra brūhi me varadarśana ||
+en: Hari said: O you of excellent form, if there is any token of yours here, tell me.
+tel: శ్రేష్ఠమైన రూపముగలవాఁడా! నీసంబంధమైనదేదైనను కొంచెమునుగూర్చి యిక్కడనున్నయెడలఁ జెప్పుమని హరి యడిగెను.
+hi: हरि ने कहा: हे श्रेष्ठ रूप वाले, यदि यहाँ तुम्हारा कोई चिह्न है, तो मुझे बताओ।
+
+--- unit 104 | section: कथा ---
+vidhi:
+Verse 70 of the story, with the author's explanation.
+deva:
+शिवः ॥
+ममेदं चिह्नमस्तीह इत्युक्त्वा गृहमागतः ।
+तत अनीय तत्पात्रं दर्शयामास सादरम् ॥
+iast:
+śivaḥ ||
+mamedaṁ cihnamastīha ityuktvā gṛhamāgataḥ |
+tata anīya tatpātraṁ darśayāmāsa sādaram ||
+en: Śiva said: My token is here. So saying he went into the house, brought the dish he had hidden before, and showed it with respect.
+tel: ఇక్కడ నాచిహ్నమున్నదని శివుఁడు పలికి గృహములోపలికి వెళ్ళి తాను పూర్వము దాచియుంచిన పాత్రను దెచ్చి శ్రద్ధతోఁ జూపించెను.
+hi: शिव ने कहा: मेरा चिह्न यहाँ है। ऐसा कहकर वह घर के भीतर गया, पहले छिपायी हुई थाली लाया और आदर से दिखायी।
+
+--- unit 105 | section: कथा ---
+vidhi:
+Verse 71 of the story, with the author's explanation.
+deva:
+तत्पात्रं च हरिर्दृष्ट्वा गर्भादानं चकार सः ।
+ददौ रत्नानि वस्त्राणि सुवर्णानि बहून्यपि ॥
+iast:
+tatpātraṁ ca harirdṛṣṭvā garbhādānaṁ cakāra saḥ |
+dadau ratnāni vastrāṇi suvarṇāni bahūnyapi ||
+en: Seeing the dish, Hari rejoiced, gave the daughter in marriage with the rite of garbhādāna, and gave gems, garments and much gold as gifts.
+tel: ఆపాత్రను హరి చూచి సంతసించి గర్భాదానముచేసి అనేకమయిన రత్నములను, వస్త్రములను, బంగారములను కానుకగా నిచ్చెను.
+hi: थाली देखकर हरि प्रसन्न हुआ, गर्भाधान-संस्कार के साथ कन्या दी, और रत्न, वस्त्र और बहुत सोना उपहार में दिया।
+
+--- unit 106 | section: कथा ---
+vidhi:
+Verse 72 of the story, with the author's explanation.
+deva:
+तानादाय परिस्थितौ ददंतौ बहुळं धनं । श्रावणे मासि संप्राप्ते व्रतं भौमे चकार सा ।
+भक्त्या सर्वे परिस्थितास्ते योजनं जग्मुस्तमाः ॥
+iast:
+tānādāya paristhitau dadaṁtau bahuḻaṁ dhanaṁ | śrāvaṇe māsi saṁprāpte vrataṁ bhaume cakāra sā |
+bhaktyā sarve paristhitāste yojanaṁ jagmustamāḥ ||
+en: Taking these, the two gave much wealth in charity. When the month of Śrāvaṇa came, Suśīlā kept the vrata on the Tuesday. All ate there with devotion, and the great ones went a yojana with them.
+tel: వారిద్దఱు హరియిచ్చిన ధనమును దీసికొని విశేష ధనమును ధర్మముచేసిరి. పిమ్మట శ్రావణమాసమురాఁగా మంగళవారంబున ఆసుశీల వ్రతమును జేయుచుండఁగా నందఱు నచ్చట భుజించి మహానుభావులగు వారందఱొక యామడదూరమువఱకుఁగూడవచ్చిరి.
+hi: उन्हें लेकर दोनों ने बहुत धन दान किया। श्रावण मास आने पर सुशीला ने मंगलवार को व्रत किया। सबने वहाँ भक्ति से भोजन किया, और बड़े लोग एक योजन तक उनके साथ गये।
+
+--- unit 107 | section: कथा ---
+vidhi:
+Verse 73 of the story, with the author's explanation.
+deva:
+सुशीला ॥
+गौरीविसर्जनं चाऽहं करोम्यद्यैव सादरं ।
+श्वश्रूश्वशुरयोरद्य दर्शनेऽस्ति कुतूहलम् ॥
+iast:
+suśīlā ||
+gaurīvisarjanaṁ cā'haṁ karomyadyaiva sādaraṁ |
+śvaśrūśvaśurayoradya darśane'sti kutūhalam ||
+en: Suśīlā said: I have sent Gaurī away with respect today, and now I long to see my father-in-law and mother-in-law.
+tel: గౌరీదేవిని విసర్జనచేసినదై వెంటనే మామను అత్తను జూచుటకు సంతోషము పుట్టుచున్నదని సుశీల చెప్పెను.
+hi: सुशीला ने कहा: आज मैंने आदरपूर्वक गौरी का विसर्जन किया है, और अब मुझे सास-ससुर को देखने की उत्कण्ठा है।
+
+--- unit 108 | section: कथा ---
+vidhi:
+Verse 74 of the story, with the author's explanation.
+deva:
+ततो गंतव्यमस्माभिः पितरौ द्रष्टुमादरात् ।
+इत्युक्त्वा ते गते मार्गे गौर्या आवाहनं कृतं ॥
+ददर्श तत्र सौवर्णं देवालयमनुत्तमम् ॥
+iast:
+tato gaṁtavyamasmābhiḥ pitarau draṣṭumādarāt |
+ityuktvā te gate mārge gauryā āvāhanaṁ kṛtaṁ ||
+dadarśa tatra sauvarṇaṁ devālayamanuttamam ||
+en: Then they set out with eagerness to see Śiva's parents. On the way they invoked Gaurī, and there they saw an excellent golden temple.
+tel: పిమ్మట వారిద్దఱును గృహమందుండు శివుని తల్లిదండ్రులఁజూడ నాసక్తిగలవారై ప్రయాణమై వెళ్ళుచుండఁగా మార్గమధ్యంబున గౌరీదేవిని ఆవాహనజేసి పూజింపఁగా నచ్చట శ్రేష్ఠమైన సువర్ణదేవాలయ మగుపడెను.
+hi: फिर वे शिव के माता-पिता को देखने की उत्सुकता से चले। मार्ग में उन्होंने गौरी का आवाहन किया, और वहाँ उन्हें एक उत्तम सुवर्ण-मन्दिर दिखा।
+
+--- unit 109 | section: कथा ---
+vidhi:
+Verse 75 of the story, with the author's explanation.
+deva:
+गौरी समर्चनं दीपदानं सा च व्यचीकरत् ।
+ततस्सर्वे परिस्थितास्ते पितरौ द्रष्टुमुत्सुकाः ॥
+iast:
+gaurī samarcanaṁ dīpadānaṁ sā ca vyacīkarat |
+tatassarve paristhitāste pitarau draṣṭumutsukāḥ ||
+en: Suśīlā worshipped Gaurī and gave the lamp and the rest in order. Then all set out, eager to see the parents.
+tel: పిమ్మట ఆసుశీల గౌరీదేవిని పూజించినదై దీపదానము మొదలగువానిని క్రమముగాఁజేసెను. పిమ్మట బంధువృందములు శివుని తల్లిదండ్రులఁజూచుటకు వేడుకగలవారై ప్రయాణమైరి.
+hi: सुशीला ने गौरी की पूजा की और दीपदान आदि क्रम से किया। फिर सब माता-पिता को देखने की उत्सुकता से चले।
+
+--- unit 110 | section: कथा ---
+vidhi:
+Verse 76 of the story, with the author's explanation.
+deva:
+कुंडिनासन्नदेशे तान् दृष्ट्वा विस्मयिनो जनाः ।
+अब्रुवंस्ते धर्मपालं सोत्कंठं प्रियदर्शनाः ॥
+iast:
+kuṁḍināsannadeśe tān dṛṣṭvā vismayino janāḥ |
+abruvaṁste dharmapālaṁ sotkaṁṭhaṁ priyadarśanāḥ ||
+en: Near the city of Kuṇḍina, people saw them and were amazed, and with pleasant faces spoke to Dharmapāla in joy.
+tel: కుండినమను పట్టణ సమీపమునకు వచ్చియున్న శివుని మొదలగువారినిఁజూచి జనులాశ్చర్యపడుచు ప్రీతికరమైన లక్షణములు గలవారై ధర్మపాలునితో సంతోషపూర్వకముగా నిట్లు పలికిరి.
+hi: कुण्डिन नगर के पास लोगों ने उन्हें देखा और विस्मित हुए, और प्रसन्न मुख से धर्मपाल से आनन्दपूर्वक कहा।
+
+--- unit 111 | section: कथा ---
+vidhi:
+Verse 77 of the story, with the author's explanation.
+deva:
+जनाः ॥
+धर्मपालाऽद्य ते पुत्र स्सभार्या श्श्वालकस्तथा ।
+समायातो वयं दृष्ट्वा अधुनैव समागताः ॥
+iast:
+janāḥ ||
+dharmapālā'dya te putra ssabhāryā śśvālakastathā |
+samāyāto vayaṁ dṛṣṭvā adhunaiva samāgatāḥ ||
+en: The people said: Dharmapāla, your son has come with his wife and your wife's brother. We saw them and came at once to tell you.
+tel: ఓ ధర్మపాలుఁడా! నీకుమారుఁడు భార్యాసమేతుఁడై నీభావమఱఁదితోడ వచ్చియున్నారు. మేముచూచి నీతోఁ జెప్పుటకిప్పుడే వచ్చితిమి అని జనులువచ్చి చెప్పినవారైరి.
+hi: लोगों ने कहा: धर्मपाल, तुम्हारा पुत्र पत्नी और तुम्हारे साले के साथ आया है। हमने उन्हें देखा और तुरन्त तुम्हें बताने आये।
+
+--- unit 112 | section: कथा ---
+vidhi:
+Verse 78 of the story, with the author's explanation.
+deva:
+यावज्जनावदं स्तत्र तावत्सोऽपि समागतः ।
+नमस्कारं चकाराऽसौ पितृभ्यां पितृवल्लभः ॥
+मातुलोऽपि नतिं चक्रे भगिनी धर्मपालयोः ।
+सुशीला श्वशुरायाऽपि श्वश्रूं त्वास्थिता तदा ॥
+iast:
+yāvajjanāvadaṁ statra tāvatso'pi samāgataḥ |
+namaskāraṁ cakārā'sau pitṛbhyāṁ pitṛvallabhaḥ ||
+mātulo'pi natiṁ cakre bhaginī dharmapālayoḥ |
+suśīlā śvaśurāyā'pi śvaśrūṁ tvāsthitā tadā ||
+en: Before the people had finished speaking, he too arrived. The son, loving to his parents, bowed to them. The uncle bowed to his sister and to Dharmapāla, and Suśīlā likewise to her father-in-law and mother-in-law.
+tel: జనులుచెప్పిన తక్షణమే ధర్మపాలుఁడు వెళ్ళఁగా తల్లిదండ్రులయందుఁ బ్రేమగల కుమారుఁడయిన యాశివుఁడు తల్లిదండ్రులకు నమస్కరించెను. మేనమామయుఁ దన తోఁబుట్టువునకు బావకు నమస్కారముఁజేసెను. సుశీలయు ఆరీతిని అత్తకును మామకును నమస్కారముఁజేసినదాయెను.
+hi: लोगों की बात पूरी होने से पहले वह भी आ पहुँचा। माता-पिता के प्रिय पुत्र ने उन्हें प्रणाम किया। मामा ने अपनी बहन और धर्मपाल को प्रणाम किया, और सुशीला ने वैसे ही सास-ससुर को।
+
+--- unit 113 | section: कथा ---
+vidhi:
+Verse 79 of the story, with the author's explanation.
+deva:
+श्वश्रूः ॥
+सुशीले तद्व्रतं ब्रूहि यद्व्रतस्य प्रभावतः ।
+आयुर्वृद्धिश्शिवोऽस्येति जाता कमललोचने ॥
+iast:
+śvaśrūḥ ||
+suśīle tadvrataṁ brūhi yadvratasya prabhāvataḥ |
+āyurvṛddhiśśivo'syeti jātā kamalalocane ||
+en: The mother-in-law said: Suśīlā, lotus-eyed one, tell me the vrata by whose power Śiva's life was lengthened.
+tel: ఓ సుశీలా! పద్మములవంటి నేత్రములు గలదానా! నా కుమారునికి ఆయుర్వృద్ధి యేవ్రతమహిమచే నయ్యెనో ఆవ్రత ప్రభావమును జెప్పుమని అత్త సుశీలనడిగెను.
+hi: सास ने कहा: सुशीला, कमलनयनी, वह व्रत बताओ जिसके प्रभाव से शिव की आयु बढ़ी।
+
+--- unit 114 | section: कथा ---
+vidhi:
+Verse 80 of the story, with the author's explanation.
+deva:
+सुशीला ॥
+नजानेऽहं व्रतं श्वश्रू जाने मानवतीं हरिं ।
+श्वशुरं धर्मपालं च श्वश्रूं च भवतीं तथा ॥
+मंगळां देवतां जाने परं तु युवयोस्सुतं । इत्युक्त्वा च सुशीला सा नवंदे स्वां तथाऽर्चिता ।
+भुक्त्वा भोगान् यथाऽप्साच्च कैलासं च सभर्तृका ॥
+iast:
+suśīlā ||
+najāne'haṁ vrataṁ śvaśrū jāne mānavatīṁ hariṁ |
+śvaśuraṁ dharmapālaṁ ca śvaśrūṁ ca bhavatīṁ tathā ||
+maṁgaḻāṁ devatāṁ jāne paraṁ tu yuvayossutaṁ | ityuktvā ca suśīlā sā navaṁde svāṁ tathā'rcitā |
+bhuktvā bhogān yathā'psācca kailāsaṁ ca sabhartṛkā ||
+en: Suśīlā said: Mother-in-law, I do not know the vrata. I know only Mānavatī and Hari, my father-in-law Dharmapāla, you my mother-in-law, the goddess Maṅgaḷā, and your son. So saying, Suśīlā bowed to them, and being honoured, she enjoyed many pleasures and in the end went with her husband to Kailāsa.
+tel: ఓ అత్తా! ఆవ్రతమెట్టిదో నేనెఱుంగను. నాతల్లియగు మానవతిని, తండ్రియగు హరిని, మామయగు ధర్మపాలుని, అత్తయగు మిమ్మును, మంగళప్రదురాలగు గౌరీదేవిని, మీకుమారుఁడగు నాపెనిమిటినిమాత్ర మెఱుఁగుదునని సుశీల సంతోషముతోఁ జెప్పినదాయెను. పిమ్మట స్వస్థచిత్తముగలదై వారికి నమస్కారములుజేసి పిమ్మట ననేకభోగముల ననుభవించి జన్మాంతరంబునఁ బెనిమిటితోఁగూడ కైలాసమునకు జనెను.
+hi: सुशीला ने कहा: सासू माँ, मैं व्रत नहीं जानती। मैं केवल मानवती और हरि को, ससुर धर्मपाल को, आप सास को, देवी मंगला को और आपके पुत्र को जानती हूँ। ऐसा कहकर सुशीला ने उन्हें प्रणाम किया, और सम्मानित होकर अनेक भोग भोगे और अन्त में पति के साथ कैलास गयी।
+
+--- unit 115 | section: उद्यापनम् ---
+vidhi:
+The rule of the vrata, spoken by Kṛṣṇa at the end of the story.
+deva:
+कृष्णः ॥
+श्रावणेमासि भौमेषु चतुर्षु व्रतमाचरेत् ।
+प्रातस्स्नात्वा सुसंकल्प्य व्रतमुत्तमं ॥
+उपचारैः षोडशभिः पूजयेन्मंगळां तथा । नीराजनं ततः कुर्याद्दीपैः षोडशसंख्यया ।
+मात्रे सुवासिनीभ्यश्च देयं वायनमुत्तमम् ॥
+iast:
+kṛṣṇaḥ ||
+śrāvaṇemāsi bhaumeṣu caturṣu vratamācaret |
+prātassnātvā susaṁkalpya vratamuttamaṁ ||
+upacāraiḥ ṣoḍaśabhiḥ pūjayenmaṁgaḻāṁ tathā | nīrājanaṁ tataḥ kuryāddīpaiḥ ṣoḍaśasaṁkhyayā |
+mātre suvāsinībhyaśca deyaṁ vāyanamuttamam ||
+en: Kṛṣṇa said: In the month of Śrāvaṇa, on the four Tuesdays, one should keep the vrata. Having bathed in the morning and made the resolution for this excellent vrata, one should worship Maṅgaḷā with the sixteen services, then wave the light with sixteen lamps, and give the excellent vāyana to the mother and to married women.
+tel: కృష్ణమూర్తి చెప్పుచున్నాఁడు:- శ్రావణ మాసంబున నాలుగు మంగళవారంబులయందు ప్రాతఃకాలంబునలేచి చక్కఁగా స్నానముచేసి శ్రేష్ఠంబగు గౌరీవ్రతమును జేయుటకు సంకల్పించి షోడశోపచారంబుల గౌరీదేవినిఁబూజించి కర్పూరహారతినిచ్చి పదియాఱు జ్యోతులతోఁగూడిన వాయనమును తల్లికిని ఇతర సువాసినీ స్త్రీలకును వాయనమిచ్చవలయును.
+hi: कृष्ण ने कहा: श्रावण मास में चारों मंगलवारों को व्रत करना चाहिए। प्रातः स्नान करके इस उत्तम व्रत का संकल्प करके सोलह उपचारों से मंगला की पूजा करे, फिर सोलह दीपों से आरती करे, और माता तथा सुवासिनियों को उत्तम वायन दे।
+
+--- unit 116 | section: उद्यापनम् ---
+vidhi:
+Verse 82 of the story, with the author's explanation.
+deva:
+भोक्तव्या दीपकाश्चाऽपि अन्नं लवणवर्जितं । विसर्जनं मंगळाया दीपदानं ततः क्रमात् ।
+पंचसंवत्सरे चैवं कर्तव्यं पतिमिच्छुभिः ॥
+iast:
+bhoktavyā dīpakāścā'pi annaṁ lavaṇavarjitaṁ | visarjanaṁ maṁgaḻāyā dīpadānaṁ tataḥ kramāt |
+paṁcasaṁvatsare caivaṁ kartavyaṁ patimicchubhiḥ ||
+en: The lamps too are to be partaken of, and food without salt. Then the sending away of Maṅgaḷā, and the gift of the lamp, in order. Women who wish for their husbands' long life should do this for five years.
+tel: జ్యోతుల సహితముగా ఆ పిష్టములను ఉప్పు లేకుండ అన్నముమాత్రము భుజించి దీపదానముచేసి పిమ్మట విసర్జన చేయవలయును. పెనిమిటికి దీర్ఘాయుస్సునుగోరు స్త్రీలు యీప్రకారముగా నైదుసంవత్సరములు క్రమముగా గౌరీవ్రతమును జేయవలయును.
+hi: दीपों का भी सेवन करे, और बिना नमक का अन्न। फिर क्रम से मंगला का विसर्जन और दीपदान। पति की दीर्घायु चाहने वाली स्त्रियाँ पाँच वर्ष ऐसा करें।
+
+--- unit 117 | section: उद्यापनम् ---
+vidhi:
+The udyāpana, the closing of the vrata in the fifth year.
+deva:
+अथ उद्यापनमुच्यते ॥
+पंचमे वत्सरे प्राप्ते कुर्यादुद्यापनं व्रतम् ॥
+iast:
+atha udyāpanamucyate ||
+paṁcame vatsare prāpte kuryādudyāpanaṁ vratam ||
+en: Now the udyāpana is told. When the fifth year comes, one should perform the udyāpana of the vrata.
+tel: అయిదవ సంవత్సరమున నుత్తమమయిన యీవ్రతోద్యాపనమును జేయవలయును.
+hi: अब उद्यापन कहा जाता है। पाँचवाँ वर्ष आने पर व्रत का उद्यापन करना चाहिए।
+
+--- unit 118 | section: उद्यापनम् ---
+vidhi:
+Verse 84 of the story, with the author's explanation.
+deva:
+श्रावणेमासि भौमे तु स्वाचार्यं वरयेद्व्रती ।
+दिवा व्रतं प्रकुर्वीत कलशस्थापनं निशि ॥
+मंडपे लिंगतो भद्रे पीठे देवीं प्रपूजयेत् ॥
+iast:
+śrāvaṇemāsi bhaume tu svācāryaṁ varayedvratī |
+divā vrataṁ prakurvīta kalaśasthāpanaṁ niśi ||
+maṁḍape liṁgato bhadre pīṭhe devīṁ prapūjayet ||
+en: In Śrāvaṇa, on a Tuesday, the keeper of the vrata should choose her teacher. The vrata is done by day; the setting of the pot the night before. In a pavilion, on an auspicious seat, one should worship the goddess.
+tel: శ్రావణమాసంబున మంగళవారదినంబున వ్రతమునుజేయు స్త్రీ ఆచార్యునిఁ బ్రార్థించి పగలు వ్రతమును జేయవలఁచి పూర్వదిన రాత్రియందు శుభప్రదంబయిన పీఠంబున మంటపఁజేర్పఁచి దానియందుఁ గలశమునుంచి యాకలశమునందు గౌరీదేవి నావాహనముచేసి పూజింపవలయును.
+hi: श्रावण में मंगलवार को व्रती अपने आचार्य का वरण करे। व्रत दिन में किया जाता है; कलश-स्थापन पिछली रात को। मण्डप में, शुभ पीठ पर, देवी की पूजा करे।
+
+--- unit 119 | section: उद्यापनम् ---
+vidhi:
+Verse 85 of the story, with the author's explanation.
+deva:
+उमामहेश्वरीं मूर्तिं कलशेनिष्कसे त्ततः ।
+ब्रह्मणः कलशं चैकं गणेशस्कंदयोर्द्वयं ॥
+शचीपुरंदरं त्वेकं मातृणां सप्तकं तथा । लक्ष्मीनारायणस्यैकं सावित्रीकलशं परं ।
+एकं समस्तदेवानां ग्रहाणामेकमुच्यते ॥
+iast:
+umāmaheśvarīṁ mūrtiṁ kalaśeniṣkase ttataḥ |
+brahmaṇaḥ kalaśaṁ caikaṁ gaṇeśaskaṁdayordvayaṁ ||
+śacīpuraṁdaraṁ tvekaṁ mātṛṇāṁ saptakaṁ tathā | lakṣmīnārāyaṇasyaikaṁ sāvitrīkalaśaṁ paraṁ |
+ekaṁ samastadevānāṁ grahāṇāmekamucyate ||
+en: One should invoke Umā and Maheśvara in a pot; one pot for Brahmā, one each for Gaṇeśa and Skanda, one for Śacī and Indra, seven for the mothers, one for Lakṣmī and Nārāyaṇa, a further pot for Sāvitrī, one for all the gods, and one for the planets.
+tel: పిమ్మట ఉమామహేశ్వరులకు ఒక కలశమును, బ్రహ్మకు ఒకకలశమును, విఘ్నేశ్వరునికి నొకకలశమును, కుమారస్వామికి నొకకలశమును, శచీంద్రులకు నొకకలశమును, చాముండాది సప్తమాతృకలకు నేడు కలశంబులను, లక్ష్మీనారాయణులకు నొకకలశమును, సావిత్రీదేవికి శ్రేష్ఠంబగు నొకకలశమును, ఇతరమయిన సమస్తదేవతలకు నొకకలశమును, సమస్త గ్రహంబులకు నొకకలశమును నుంచవలయును.
+hi: उमा-महेश्वर का एक कलश में आवाहन करे; ब्रह्मा के लिए एक, गणेश और स्कन्द के लिए एक-एक, शची-इन्द्र के लिए एक, सप्तमातृकाओं के लिए सात, लक्ष्मी-नारायण के लिए एक, सावित्री के लिए एक और, सब देवताओं के लिए एक, और ग्रहों के लिए एक कलश रखे।
+
+--- unit 120 | section: उद्यापनम् ---
+vidhi:
+Verse 86 of the story, with the author's explanation.
+deva:
+अशक्तौ कलशाः पंच तदशक्तौ द्वयं तथा ।
+प्रधानदेवता त्वत्र मंगळा पतिसंयुता ॥
+iast:
+aśaktau kalaśāḥ paṁca tadaśaktau dvayaṁ tathā |
+pradhānadevatā tvatra maṁgaḻā patisaṁyutā ||
+en: If one cannot, five pots; if not even that, two. Here the chief deity is Maṅgaḷā together with her husband.
+tel: పూర్వమందుఁజెప్పిన కలశములను సంపాదింపలేనివారు అయిదు కలశముల నుంచవలయును. అయిదింటిని తెచ్చుకొనలేనివారు రెండుకలశములనైన నుంచవలయును. ఇక్కడ ప్రధానదేవత పతివిశిష్టమయిన మంగళగౌరీదేవతయని చెప్పఁబడినది.
+hi: यदि न कर सके तो पाँच कलश; वह भी न हो तो दो। यहाँ प्रधान देवता पति सहित मंगला हैं।
+
+--- unit 121 | section: उद्यापनम् ---
+vidhi:
+Verse 87 of the story, with the author's explanation.
+deva:
+कलशस्थापनं पूजा यामेयामेतु जागरं ।
+प्रभाते हवनं चैव तत्तन्मंत्रैस्स्वशाखया ॥
+गुडेन जीरकेनाऽपि परमान्नेन चाऽज्यतः । अश्वत्थस्य समिद्भिश्च दूर्वाभिश्चाऽत्र होमयेत् ।
+सर्वमंगळमांगळ्ये मंत्रस्य प्रधानतः ॥
+iast:
+kalaśasthāpanaṁ pūjā yāmeyāmetu jāgaraṁ |
+prabhāte havanaṁ caiva tattanmaṁtraissvaśākhayā ||
+guḍena jīrakenā'pi paramānnena cā'jyataḥ | aśvatthasya samidbhiśca dūrvābhiścā'tra homayet |
+sarvamaṁgaḻamāṁgaḻye maṁtrasya pradhānataḥ ||
+en: After setting the pots, worship at every watch and keep vigil through the night. At dawn perform the homa with the mantras of one's own śākhā, with jaggery, cumin, sweet rice, ghee, sticks of the aśvattha and dūrvā grass. The chief mantra is "Sarvamaṅgaḷamāṅgaḷye".
+tel: విధిగా కలశస్థాపనచేసి ప్రతియామమునఁ బూజచేయుచు రాత్రియంతయు జాగరణముచేసి ప్రాతఃకాలంబున వారివారిశాఖకుఁ జెప్పఁబడిన మంత్రంబులతో బెల్లముచేతను, జీలకఱ్ఱచేతను, పరమాన్నముచేతను, ఆజ్యముచేతను, రావిసమిధలచేతను, గరికలచేతను హోమము జేయవలయును. ఇక్కడ "సర్వమంగళమాంగళ్యే" అనునది ప్రధానమంత్రము.
+hi: कलश स्थापित करके हर प्रहर पूजा करे और रात भर जागरण करे। प्रातः अपनी शाखा के मन्त्रों से गुड़, जीरा, खीर, घी, पीपल की समिधा और दूर्वा से होम करे। प्रधान मन्त्र "सर्वमंगलमांगल्ये" है।
+
+--- unit 122 | section: उद्यापनम् ---
+vidhi:
+Verse 88 of the story, with the author's explanation.
+deva:
+वायनानि प्रदद्याच्च वेणुपात्रेषु षोडश ।
+उद्दीप्यस्वेतिमंत्रेण ज्वालां पूज्य प्रदापयेत् ॥
+iast:
+vāyanāni pradadyācca veṇupātreṣu ṣoḍaśa |
+uddīpyasvetimaṁtreṇa jvālāṁ pūjya pradāpayet ||
+en: One should give sixteen vāyanas in bamboo trays, light the flames with the mantra "Uddīpyasva", worship them and give them.
+tel: పిమ్మట వెదురుపాత్రలయందు పదియాఱు వాయనములను ఉంచి "ఉద్దీప్యస్వ" అను మంత్రముచే జ్యోతుల వెలిగించి వాయనమంత్రవిధిచే నివ్వవలయును.
+hi: बाँस के पात्रों में सोलह वायन दे, "उद्दीप्यस्व" मन्त्र से ज्योतियाँ जलाकर उनकी पूजा करके दे।
+
+--- unit 123 | section: उद्यापनम् ---
+vidhi:
+Verse 89 of the story, with the author's explanation.
+deva:
+सुवासिन्यश्च संपूज्य स्ततो दंपतिपूजनं । परिदद्यान्मंगळद्रव्यं सुवासिन्यै विशेषतः ।
+गां दद्याद्दंपतीन् सर्वान् भोजयेद्देशसंग्रहाः ॥
+iast:
+suvāsinyaśca saṁpūjya stato daṁpatipūjanaṁ | paridadyānmaṁgaḻadravyaṁ suvāsinyai viśeṣataḥ |
+gāṁ dadyāddaṁpatīn sarvān bhojayeddeśasaṁgrahāḥ ||
+en: Then worship the married women, then the worship of a couple. Give the things of good fortune, especially to the married women. Give a cow, and feed all the couples gathered from the country. So the udyāpana is told in brief.
+tel: పిమ్మట సువాసినీ స్త్రీలను బూజింపవలయును. దంపతీపూజ చేయవలయును. సువాసినీ స్త్రీలకు విశేషముగా గుంకమును పసుపు మొదలగు శుభప్రదంబులగు ద్రవ్యమును లియ్యవలయును. గోదానములనుజేసి నానాదంపతులను భుజింపఁజేయవలయును. ఇట్లుద్యాపనము సంక్షేపముగాఁ జెప్పఁబడినది.
+hi: फिर सुवासिनियों की पूजा करे, फिर दम्पति-पूजन। मंगल द्रव्य दे, विशेषकर सुवासिनियों को। गोदान करे और देश भर से आये सब दम्पतियों को भोजन कराये। इस प्रकार उद्यापन संक्षेप में कहा गया।
+
+--- unit 124 | section: उद्यापनम् ---
+vidhi:
+Verse 90 of the story, with the author's explanation.
+deva:
+य इदं शृणुयान्नित्यं श्रावयेद्वा समाहितः ।
+सर्वपापविनिर्मुक्तो स याति परमां गतिम् ॥
+iast:
+ya idaṁ śṛṇuyānnityaṁ śrāvayedvā samāhitaḥ |
+sarvapāpavinirmukto sa yāti paramāṁ gatim ||
+en: Whoever hears this always, or with a collected mind causes it to be heard, is freed from all sin and goes to the highest state.
+tel: ఈకథను యెవరు విందురో స్వస్థచిత్తముగలవారై యితరులకు వినుపించుదురో వారందఱు పాపములనుండి విడువంబడి వైకుంఠమును బొందుదురు.
+hi: जो इसे सदा सुनता है, या एकाग्र मन से सुनाता है, वह सब पापों से मुक्त होकर परम गति पाता है।
+
+--- unit 125 | section: उद्यापनम् ---
+vidhi:
+The colophon of the story.
+deva:
+इति भविष्योत्तरपुराणे मंगळगौरी व्रतोद्यापन प्रकरणं समाप्तम्.
+iast:
+iti bhaviṣyottarapurāṇe maṁgaḻagaurī vratodyāpana prakaraṇaṁ samāptam.
+en: So ends the section on the Maṅgaḷagaurī vrata and its udyāpana in the Bhaviṣyottara Purāṇa.
+tel: ఇతి భవిష్యోత్తరపురాణే మంగళగౌరీ వ్రతోద్యాపన ప్రకరణం సమాప్తమ్.
+hi: इस प्रकार भविष्योत्तर पुराण में मंगलगौरी व्रत और उद्यापन का प्रकरण समाप्त हुआ।
+
+--- unit 126 | section: श्रावण मंगळवारमु पाट ---
+vidhi:
+The women's song of the Śrāvaṇa Tuesday vrata, in Telugu. It sings the story in its own order: the childless king, the mendicant who refuses the alms, the one fruit, the wedding at Pratiṣṭhāna, the serpent in the pot and the pearls, and the return. Every stanza ends with the refrain "jaya maṅgaḷā, nitya śubha maṅgaḷā", printed as ॥జ॥. The song is Telugu, not Sanskrit: the Devanāgarī and IAST fields carry its letters, the Telugu field carries the song itself.
+deva:
+ईश्वरपुत्रुनकु गजावतारुनकु पार्वतीतनयुनकु भक्तितोनू ।
+वाक्कुसुद्धिनिच्चु वैभोगरायुनकु शारदांबकु नेनु सन्नुतिंतू ॥
+जयमंगळा ।
+नित्यशुभमंगळा ॥
+iast:
+īśvaraputrunaku gajāvatārunaku pārvatītanayunaku bhaktitonū |
+vākkusuddhiniccu vaibhogarāyunaku śāradāṁbaku nenu sannutiṁtū ||
+jayamaṁgaḻā |
+nityaśubhamaṁgaḻā ||
+en: To the son of Īśvara, the one in elephant form, the son of Pārvatī, with devotion; to the lord of good fortune who gives purity of speech, and to mother Śāradā, I offer praise. Victory and auspiciousness; auspiciousness always.
+tel: ఈశ్వరపుత్రునకు గజావతారునకు పార్వతీతనయునకు భక్తితోనూ । వాక్కుసుద్ధినిచ్చు వైభోగరాయునకు శారదాంబకు నేను సన్నుతింతూ ॥ జయమంగళా । నిత్యశుభమంగళా ॥
+hi: ईश्वर के पुत्र, गज-रूप, पार्वती के पुत्र को भक्ति से; वाणी की शुद्धि देने वाले वैभव के स्वामी को और माता शारदा को मैं प्रणाम करती हूँ। जय मंगल; नित्य शुभ मंगल।
+
+--- unit 127 | section: श्रावण मंगळवारमु पाट ---
+vidhi:
+Stanza 2.
+deva:
+मंगळगौरी कथा महिमीद वॆलसिना पाटगाविंचॆदा भक्तितोनू ।
+महिमीद ऒकराजु संतानमुलेक सौभाग्यपदवि ता नेलुचुंडॆ ॥ज॥
+iast:
+maṁgaḻagaurī kathā mahimīda velasinā pāṭagāviṁcedā bhaktitonū |
+mahimīda okarāju saṁtānamuleka saubhāgyapadavi tā nelucuṁḍe ||ja||
+en: I shall sing with devotion a song of the story of Maṅgaḷagaurī, famed on the earth. On the earth a king, having no children, was ruling in the seat of fortune.
+tel: మంగళగౌరీ కథా మహిమీద వెలసినా పాటగావించెదా భక్తితోనూ । మహిమీద ఒకరాజు సంతానములేక సౌభాగ్యపదవి తా నేలుచుండె ॥జ॥
+hi: मैं भक्ति से मंगलगौरी की कथा का गीत गाऊँगी, जो पृथ्वी पर प्रसिद्ध है। पृथ्वी पर एक राजा, सन्तानहीन, सौभाग्य के पद पर राज्य करता था।
+
+--- unit 128 | section: श्रावण मंगळवारमु पाट ---
+vidhi:
+Stanza 3.
+deva:
+परमेश्वरुडुतन यात्मलोहरिषिंचि इहपरादुल वारिकि त्रमनुचु ।
+लिंगंबु तानॊक्क जंगमाकारमै गुरुधर्म घोरांडवमनुचु वच्चॆ ॥ज॥
+iast:
+parameśvaruḍutana yātmalohariṣiṁci ihaparādula vāriki tramanucu |
+liṁgaṁbu tānokka jaṁgamākāramai gurudharma ghorāṁḍavamanucu vacce ||ja||
+en: The supreme Lord, pleased in his heart, saying that he gives this world and the next, took the form of a wandering mendicant, with a liṅga, and came saying "guru-dharma, ghorāṇḍavam".
+tel: పరమేశ్వరుడుతన యాత్మలోహరిషించి ఇహపరాదుల వారికి త్రమనుచు । లింగంబు తానొక్క జంగమాకారమై గురుధర్మ ఘోరాండవమనుచు వచ్చె ॥జ॥
+hi: परमेश्वर ने अपने मन में प्रसन्न होकर, इहलोक और परलोक देने की बात कहते हुए, लिंग धारण किये जंगम का रूप लिया और "गुरु-धर्म, घोराण्डवम्" कहते हुए आये।
+
+--- unit 129 | section: श्रावण मंगळवारमु पाट ---
+vidhi:
+Stanza 4.
+deva:
+मेडमीदनुंचि दिगिवच्चि यासती बंगारुपळ्ळॆमुतो नाकेमगनू ।
+नडचिरागाजूचि परमेश्वरुडु तानु निमिषंबु निलुवकापोयॆनपुडू ॥ज॥
+iast:
+meḍamīdanuṁci digivacci yāsatī baṁgārupaḻḻemuto nākemaganū |
+naḍacirāgājūci parameśvaruḍu tānu nimiṣaṁbu niluvakāpoyenapuḍū ||ja||
+en: The queen came down from the upper storey with a golden plate, to give alms. Seeing her come, the supreme Lord did not stay a moment and went away.
+tel: మేడమీదనుంచి దిగివచ్చి యాసతీ బంగారుపళ్ళెముతో నాకేమగనూ । నడచిరాగాజూచి పరమేశ్వరుడు తాను నిమిషంబు నిలువకాపోయెనపుడూ ॥జ॥
+hi: रानी सोने की थाली लेकर ऊपर से भिक्षा देने उतरी। उसे आते देख परमेश्वर एक क्षण भी न रुके और चले गये।
+
+--- unit 130 | section: श्रावण मंगळवारमु पाट ---
+vidhi:
+Stanza 5.
+deva:
+इदियेमिचोद्यमो यॆऱुगंगवलॆननि मऱुदिनमुनाटिकी मुंदुगानू ।
+मऱुगुचाटुनयपुडु काचिकॊनियुंडगा गंटलुमोगिंचुचा वच्चॆशिवुडू ॥ज॥
+iast:
+idiyemicodyamo yeṟugaṁgavalenani maṟudinamunāṭikī muṁdugānū |
+maṟugucāṭunayapuḍu kācikoniyuṁḍagā gaṁṭalumogiṁcucā vacceśivuḍū ||ja||
+en: Wishing to know what this wonder was, the next day she waited in hiding, and Śiva came ringing his bells.
+tel: ఇదియేమిచోద్యమో యెఱుగంగవలెనని మఱుదినమునాటికీ ముందుగానూ । మఱుగుచాటునయపుడు కాచికొనియుండగా గంటలుమోగించుచా వచ్చెశివుడూ ॥జ॥
+hi: यह क्या अद्भुत बात है, यह जानने के लिए अगले दिन वह छिपकर प्रतीक्षा करती रही, और शिव घण्टियाँ बजाते हुए आये।
+
+--- unit 131 | section: श्रावण मंगळवारमु पाट ---
+vidhi:
+Stanza 6.
+deva:
+वच्चिनजंगान्नि पोनिकपट्टुकॊनि यिदियेमिकारणमु अनियडिगॆनू ।
+पुत्रपौत्रुलु लेक मीचेतिभिक्षंबु हरहरलंटरादनिबल्कॆनू ॥ज॥
+iast:
+vaccinajaṁgānni ponikapaṭṭukoni yidiyemikāraṇamu aniyaḍigenū |
+putrapautrulu leka mīcetibhikṣaṁbu haraharalaṁṭarādanibalkenū ||ja||
+en: She held the mendicant who had come, would not let him go, and asked the reason. He said: You have no sons or grandsons, so the alms from your hand cannot be touched, Hara Hara.
+tel: వచ్చినజంగాన్ని పోనికపట్టుకొని యిదియేమికారణము అనియడిగెనూ । పుత్రపౌత్రులు లేక మీచేతిభిక్షంబు హరహరలంటరాదనిబల్కెనూ ॥జ॥
+hi: उसने आये हुए जंगम को पकड़ लिया, जाने नहीं दिया, और कारण पूछा। उसने कहा: तुम्हारे पुत्र-पौत्र नहीं हैं, इसलिए तुम्हारे हाथ की भिक्षा छुई नहीं जा सकती, हर हर।
+
+--- unit 132 | section: श्रावण मंगळवारमु पाट ---
+vidhi:
+Stanza 7.
+deva:
+माकेगतियनुचु सतिपतुलिद्दरु साष्टांग मॊसगिरि शिवुनकपुडू ।
+परमेश्वरुनिगूर्चि तपस्सुचेयुमनि आनतिच्चिपोयॆ आजंगमु ॥ज॥
+iast:
+mākegatiyanucu satipatuliddaru sāṣṭāṁga mosagiri śivunakapuḍū |
+parameśvarunigūrci tapassuceyumani ānaticcipoye ājaṁgamu ||ja||
+en: Saying "What is our way?", husband and wife prostrated before Śiva. The mendicant told them to do penance to the supreme Lord, and went away.
+tel: మాకేగతియనుచు సతిపతులిద్దరు సాష్టాంగ మొసగిరి శివునకపుడూ । పరమేశ్వరునిగూర్చి తపస్సుచేయుమని ఆనతిచ్చిపోయె ఆజంగము ॥జ॥
+hi: "हमारी क्या गति है?" कहकर पति-पत्नी ने शिव को साष्टांग प्रणाम किया। जंगम ने उन्हें परमेश्वर की तपस्या करने को कहा और चला गया।
+
+--- unit 133 | section: श्रावण मंगळवारमु पाट ---
+vidhi:
+Stanza 8.
+deva:
+सतीपतुलिद्दरु राज्यमुलुविडिचि परमेश्वरुनिगूर्चि तपस्सुचेय ।
+वारिभक्तिकिमॆच्चि परमेश्वरुंडपुडु प्रत्यक्षमय्यॆनु राजुकपुडू ॥ज॥
+iast:
+satīpatuliddaru rājyamuluviḍici parameśvarunigūrci tapassuceya |
+vāribhaktikimecci parameśvaruṁḍapuḍu pratyakṣamayyenu rājukapuḍū ||ja||
+en: Husband and wife left their kingdom and did penance to the supreme Lord. Pleased with their devotion, the supreme Lord then appeared before the king.
+tel: సతీపతులిద్దరు రాజ్యములువిడిచి పరమేశ్వరునిగూర్చి తపస్సుచేయ । వారిభక్తికిమెచ్చి పరమేశ్వరుండపుడు ప్రత్యక్షమయ్యెను రాజుకపుడూ ॥జ॥
+hi: पति-पत्नी राज्य छोड़कर परमेश्वर की तपस्या करने लगे। उनकी भक्ति से प्रसन्न होकर परमेश्वर तब राजा के सामने प्रकट हुए।
+
+--- unit 134 | section: श्रावण मंगळवारमु पाट ---
+vidhi:
+Stanza 9.
+deva:
+इच्चितिनि ऒकसुतुनि मॆच्चितिनिपॊम्मनुचु स्त्रीजन्ममा पुरुषजन्ममासगा ।
+धर्मपतियैनट्टि पुण्यवतिनित्तुना पदहारुसंवत्सरमुलसुतु सिल्चुना ॥ज॥
+iast:
+iccitini okasutuni meccitinipommanucu strījanmamā puruṣajanmamāsagā |
+dharmapatiyainaṭṭi puṇyavatinittunā padahārusaṁvatsaramulasutu silcunā ||ja||
+en: I am pleased, and I give you one son, go. A daughter or a son? Shall I give a virtuous wife of a righteous husband, or a son who will live sixteen years?
+tel: ఇచ్చితిని ఒకసుతుని మెచ్చితినిపొమ్మనుచు స్త్రీజన్మమా పురుషజన్మమాసగా । ధర్మపతియైనట్టి పుణ్యవతినిత్తునా పదహారుసంవత్సరములసుతు సిల్చునా ॥జ॥
+hi: मैं प्रसन्न हूँ, तुम्हें एक पुत्र देता हूँ, जाओ। कन्या या पुत्र? धर्मपति की पुण्यवती पत्नी दूँ, या सोलह वर्ष जीने वाला पुत्र?
+
+--- unit 135 | section: श्रावण मंगळवारमु पाट ---
+vidhi:
+Stanza 10.
+deva:
+सतिपतुलिद्दरु समकूर्चुकॊनिवारु परमेश्वरुनितोड भाषिंचियु ।
+धर्मपतिनिजूचि ताळलेमुमेमु पुण्यमेमोगानि पुत्रुडु नेनू ॥ज॥
+iast:
+satipatuliddaru samakūrcukonivāru parameśvarunitoḍa bhāṣiṁciyu |
+dharmapatinijūci tāḻalemumemu puṇyamemogāni putruḍu nenū ||ja||
+en: Husband and wife took counsel together and spoke to the supreme Lord. Seeing a righteous wife we cannot bear it; whatever our merit, give us a son.
+tel: సతిపతులిద్దరు సమకూర్చుకొనివారు పరమేశ్వరునితోడ భాషించియు । ధర్మపతినిజూచి తాళలేముమేము పుణ్యమేమోగాని పుత్రుడు నేనూ ॥జ॥
+hi: पति-पत्नी ने आपस में विचार किया और परमेश्वर से कहा। धर्मपत्नी को देखकर हम सह नहीं सकते; हमारा पुण्य जो हो, हमें पुत्र दीजिए।
+
+--- unit 136 | section: श्रावण मंगळवारमु पाट ---
+vidhi:
+Stanza 11.
+deva:
+ऊरिकीमुंदरा काळिकागुडिवॆनुक चूतवृक्षमु नंदु फलमुन्नदि ।
+आफलमु तॆच्चुकॊनि भुजियिंपुमनिपलिकि अंतर्धानमय्यॆ नादेवुडू ॥ज॥
+iast:
+ūrikīmuṁdarā kāḻikāguḍivenuka cūtavṛkṣamu naṁdu phalamunnadi |
+āphalamu teccukoni bhujiyiṁpumanipaliki aṁtardhānamayye nādevuḍū ||ja||
+en: Before the town, behind the temple of Kālī, on a mango tree there is a fruit. Bring that fruit and eat it, said the god, and vanished.
+tel: ఊరికీముందరా కాళికాగుడివెనుక చూతవృక్షము నందు ఫలమున్నది । ఆఫలము తెచ్చుకొని భుజియింపుమనిపలికి అంతర్ధానమయ్యె నాదేవుడూ ॥జ॥
+hi: नगर के सामने, काली के मन्दिर के पीछे, आम के वृक्ष पर एक फल है। उस फल को लाकर खाओ, ऐसा कहकर देव अन्तर्धान हो गये।
+
+--- unit 137 | section: श्रावण मंगळवारमु पाट ---
+vidhi:
+Stanza 12.
+deva:
+आराजु हर्षमुन आवृक्षमॆक्कियु आफलमुलनु लन्नियु कोसितॆच्चि ।
+पणतिमुंदरपॆट्टि विप्पिचूडगाने वक्क पेफलमयि नॊप्पुचुंडे ॥ज॥
+iast:
+ārāju harṣamuna āvṛkṣamekkiyu āphalamulanu lanniyu kositecci |
+paṇatimuṁdarapeṭṭi vippicūḍagāne vakka pephalamayi noppucuṁḍe ||ja||
+en: The king in joy climbed the tree and plucked all the fruits and brought them. When he set them before his wife and opened the cloth, only one fruit was there.
+tel: ఆరాజు హర్షమున ఆవృక్షమెక్కియు ఆఫలములను లన్నియు కోసితెచ్చి । పణతిముందరపెట్టి విప్పిచూడగానే వక్క పేఫలమయి నొప్పుచుండే ॥జ॥
+hi: राजा ने आनन्द से वृक्ष पर चढ़कर सब फल तोड़े और लाया। पत्नी के सामने रखकर खोला तो केवल एक फल था।
+
+--- unit 138 | section: श्रावण मंगळवारमु पाट ---
+vidhi:
+Stanza 13.
+deva:
+ईश्वरुंडिच्चिन फलमुप्राप्ति यिंते अधिकफल मॊच्चुना यतिवमनसकू ।
+अनुचु भुजियिंचगा अतिव गर्भमुनिलचि नवमासमुलुनिंडॆ नातिकपुडू ॥ज॥
+iast:
+īśvaruṁḍiccina phalamuprāpti yiṁte adhikaphala moccunā yativamanasakū |
+anucu bhujiyiṁcagā ativa garbhamunilaci navamāsamuluniṁḍe nātikapuḍū ||ja||
+en: The fruit the Lord gave is only this much; will more fruit come to a woman's heart? So saying she ate it, and she conceived, and the nine months were completed.
+tel: ఈశ్వరుండిచ్చిన ఫలముప్రాప్తి యింతే అధికఫల మొచ్చునా యతివమనసకూ । అనుచు భుజియించగా అతివ గర్భమునిలచి నవమాసములునిండె నాతికపుడూ ॥జ॥
+hi: ईश्वर का दिया फल इतना ही है; स्त्री के मन को अधिक फल क्या मिलेगा? ऐसा कहकर उसने खाया, गर्भ ठहरा, और नौ मास पूरे हुए।
+
+--- unit 139 | section: श्रावण मंगळवारमु पाट ---
+vidhi:
+Stanza 14.
+deva:
+सूर्यतेजंबुलतो वॊप्पेटि सुतुनिकि पुत्रोत्सवमुजेसॆ पुण्यशालि ।
+संतोषमुनराजु नाघकरणंब्रासॆ नारायणायनि नाममिडिरी ॥ज॥
+iast:
+sūryatejaṁbulato voppeṭi sutuniki putrotsavamujese puṇyaśāli |
+saṁtoṣamunarāju nāghakaraṇaṁbrāse nārāyaṇāyani nāmamiḍirī ||ja||
+en: For the son who shone with the brightness of the sun, the meritorious one held the birth festival. The king in joy had the horoscope written, and they named him Nārāyaṇa.
+tel: సూర్యతేజంబులతో వొప్పేటి సుతునికి పుత్రోత్సవముజేసె పుణ్యశాలి । సంతోషమునరాజు నాఘకరణంబ్రాసె నారాయణాయని నామమిడిరీ ॥జ॥
+hi: सूर्य के तेज से चमकते पुत्र का पुण्यशाली ने जन्मोत्सव किया। राजा ने आनन्द से जन्मपत्री लिखवायी, और उसका नाम नारायण रखा।
+
+--- unit 140 | section: श्रावण मंगळवारमु पाट ---
+vidhi:
+Stanza 15.
+deva:
+राजकुमारुनकु रमणुलंदरु गूडि व्रुग्गुलमराबॆट्टि रॊप्पमीरा ।
+दृष्टिताककुंड चुक्कबॊट्टूपॆट्टि शिरसंटि तॊट्टिलोनुंचि रपुडू ॥ज॥
+iast:
+rājakumārunaku ramaṇulaṁdaru gūḍi vruggulamarābeṭṭi roppamīrā |
+dṛṣṭitākakuṁḍa cukkaboṭṭūpeṭṭi śirasaṁṭi toṭṭilonuṁci rapuḍū ||ja||
+en: For the prince the women gathered, waved the dish of lamps, put the mark against the evil eye, touched his head and laid him in the cradle.
+tel: రాజకుమారునకు రమణులందరు గూడి వ్రుగ్గులమరాబెట్టి రొప్పమీరా । దృష్టితాకకుండ చుక్కబొట్టూపెట్టి శిరసంటి తొట్టిలోనుంచి రపుడూ ॥జ॥
+hi: राजकुमार के लिए स्त्रियाँ एकत्र हुईं, आरती उतारी, नजर से बचाने का टीका लगाया, सिर छूकर उसे पालने में रखा।
+
+--- unit 141 | section: श्रावण मंगळवारमु पाट ---
+vidhi:
+Stanza 16.
+deva:
+बाल्यप्रायमुनाडु बालतॊडुगुलुतॊडिगि आटपाटयंभुन्ना आटजूचि ।
+नाटपॆंचिननानि नूटपॆंचीनट्लु काशीयात्रकु शाल धनमुकट्टि ॥ज॥
+iast:
+bālyaprāyamunāḍu bālatoḍugulutoḍigi āṭapāṭayaṁbhunnā āṭajūci |
+nāṭapeṁcinanāni nūṭapeṁcīnaṭlu kāśīyātraku śāla dhanamukaṭṭi ||ja||
+en: In childhood they dressed him in a child's clothes and watched his play. Having raised him so, and raised him well, they tied up money for the journey to Kāśī.
+tel: బాల్యప్రాయమునాడు బాలతొడుగులుతొడిగి ఆటపాటయంభున్నా ఆటజూచి । నాటపెంచిననాని నూటపెంచీనట్లు కాశీయాత్రకు శాల ధనముకట్టి ॥జ॥
+hi: बचपन में उसे बालक के वस्त्र पहनाये और उसका खेल देखा। उसे ऐसे पाला, अच्छी तरह पाला, और काशी-यात्रा के लिए धन बाँधा।
+
+--- unit 142 | section: श्रावण मंगळवारमु पाट ---
+vidhi:
+Stanza 17.
+deva:
+काशिकिबोदामंचु घनमुतो यिद्दरू काशिपट्नानिकेनवच्चिरी ।
+आननानिकिपोक तिचाल बडलिकगॊनि परमेश्वराज्ञचे निलचिरपुडू ॥ज॥
+iast:
+kāśikibodāmaṁcu ghanamuto yiddarū kāśipaṭnānikenavaccirī |
+ānanānikipoka ticāla baḍalikagoni parameśvarājñace nilacirapuḍū ||ja||
+en: Saying "Let us go to Kāśī", the two set out in state and came to the city of Kāśī. On the way, tired and unable to go on, by the supreme Lord's command they stopped.
+tel: కాశికిబోదామంచు ఘనముతో యిద్దరూ కాశిపట్నానికేనవచ్చిరీ । ఆననానికిపోక తిచాల బడలికగొని పరమేశ్వరాజ్ఞచే నిలచిరపుడూ ॥జ॥
+hi: "काशी चलें" कहकर दोनों ठाट से निकले और काशी नगर आये। मार्ग में थककर आगे न चल सके, परमेश्वर की आज्ञा से रुक गये।
+
+--- unit 143 | section: श्रावण मंगळवारमु पाट ---
+vidhi:
+Stanza 18.
+deva:
+श्रावणमासान मंगळगौरुनू पूजिंतुरू ।
+अंगनलु तामरपूलु कॊय्यारागा राचकूतुरु वच्चॆ रमणिवॆंट ॥ज॥
+iast:
+śrāvaṇamāsāna maṁgaḻagaurunū pūjiṁturū |
+aṁganalu tāmarapūlu koyyārāgā rācakūturu vacce ramaṇiveṁṭa ||ja||
+en: In the month of Śrāvaṇa they worship Maṅgaḷagaurī. As the women came gathering lotus flowers, the king's daughter came following a lady.
+tel: శ్రావణమాసాన మంగళగౌరునూ పూజింతురూ । అంగనలు తామరపూలు కొయ్యారాగా రాచకూతురు వచ్చె రమణివెంట ॥జ॥
+hi: श्रावण मास में वे मंगलगौरी की पूजा करते हैं। जब स्त्रियाँ कमल के फूल तोड़ती आयीं, राजकन्या एक स्त्री के पीछे आयी।
+
+--- unit 144 | section: श्रावण मंगळवारमु पाट ---
+vidhi:
+Stanza 19.
+deva:
+पुण्यांगनलॆल्ल पुव्वुलुकोसुकिरागा संनडि पडिराजुनडमानिलचॆ ।
+सत्यवतीकन्न मांगल्यवतियनि चॆऱुगुमुडि वेसिकॊनि शीघ्रमुगनू ॥ज॥
+iast:
+puṇyāṁganalella puvvulukosukirāgā saṁnaḍi paḍirājunaḍamānilace |
+satyavatīkanna māṁgalyavatiyani ceṟugumuḍi vesikoni śīghramuganū ||ja||
+en: As all the virtuous women came gathering flowers, the king's daughter stood among them. Saying "Satyavatī's daughter is the fortunate one", they tied the knot of the garment's end quickly.
+tel: పుణ్యాంగనలెల్ల పువ్వులుకోసుకిరాగా సంనడి పడిరాజునడమానిలచె । సత్యవతీకన్న మాంగల్యవతియని చెఱుగుముడి వేసికొని శీఘ్రముగనూ ॥జ॥
+hi: जब सब पुण्यवती स्त्रियाँ फूल तोड़ती आयीं, राजकन्या उनके बीच खड़ी हुई। "सत्यवती की कन्या मांगल्यवती है" कहकर उन्होंने शीघ्र आँचल की गाँठ बाँधी।
+
+--- unit 145 | section: श्रावण मंगळवारमु पाट ---
+vidhi:
+Stanza 20.
+deva:
+आरात्रिनगरुलो आवधूवरुलुनिलचि तोटलो नुंडगनू ।
+अक्कडिकि चनुडॆंचि तन्नंत निमिषमुन तोडुकॊनिपोयि मधुपर्कमिडिरी ॥ज॥
+iast:
+ārātrinagarulo āvadhūvarulunilaci toṭalo nuṁḍaganū |
+akkaḍiki canuḍeṁci tannaṁta nimiṣamuna toḍukonipoyi madhuparkamiḍirī ||ja||
+en: That night in the palace the bride and bridegroom stayed; while they were in the garden, people came there, took them within the hour, and offered the madhuparka.
+tel: ఆరాత్రినగరులో ఆవధూవరులునిలచి తోటలో నుండగనూ । అక్కడికి చనుడెంచి తన్నంత నిమిషమున తోడుకొనిపోయి మధుపర్కమిడిరీ ॥జ॥
+hi: उस रात महल में वधू-वर ठहरे; जब वे बगीचे में थे, लोग वहाँ आये, उन्हें तुरन्त ले गये, और मधुपर्क दिया।
+
+--- unit 146 | section: श्रावण मंगळवारमु पाट ---
+vidhi:
+Stanza 21.
+deva:
+ताजधुवु शास्त्रालु अन्नियुनुगाविंचि लाजहोममुचेसॆ रमणितोनू ।
+अग्निसाक्षिग पॆंड्लि आडिनासतिगूडि सप्तऋषुलकुम्रॊक्कि संभ्रममुगा ॥ज॥
+iast:
+tājadhuvu śāstrālu anniyunugāviṁci lājahomamucese ramaṇitonū |
+agnisākṣiga peṁḍli āḍināsatigūḍi saptaṛṣulakumrokki saṁbhramamugā ||ja||
+en: Performing all the rites of the śāstra, he did the offering of parched grain with the lady. With fire as witness he married the lady, bowed to the seven sages, in joy.
+tel: తాజధువు శాస్త్రాలు అన్నియునుగావించి లాజహోమముచేసె రమణితోనూ । అగ్నిసాక్షిగ పెండ్లి ఆడినాసతిగూడి సప్తఋషులకుమ్రొక్కి సంభ్రమముగా ॥జ॥
+hi: शास्त्र के सब कर्म करके उसने स्त्री के साथ लाजाहोम किया। अग्नि को साक्षी कर स्त्री से विवाह किया, सप्तर्षियों को प्रणाम किया, उत्साह से।
+
+--- unit 147 | section: श्रावण मंगळवारमु पाट ---
+vidhi:
+Stanza 22.
+deva:
+वधुवरुलुयिद्दऱिकि वॊव्वुबुन्वंबुलु चेयिंचिरच्चोट शीघ्रमुगनू ।
+रावुलंदरुतामु रम्यमुग भुजियिंचि करमुलू कनु क्कॊनि गद्दॆनुंडे ॥ज॥
+iast:
+vadhuvaruluyiddaṟiki vovvubunvaṁbulu ceyiṁciraccoṭa śīghramuganū |
+rāvulaṁdarutāmu ramyamuga bhujiyiṁci karamulū kanu kkoni gaddenuṁḍe ||ja||
+en: For the bride and bridegroom they had the gifts prepared quickly. All ate well; washing their hands, they sat upon the seat.
+tel: వధువరులుయిద్దఱికి వొవ్వుబున్వంబులు చేయించిరచ్చోట శీఘ్రముగనూ । రావులందరుతాము రమ్యముగ భుజియించి కరములూ కను క్కొని గద్దెనుండే ॥జ॥
+hi: वधू-वर के लिए उन्होंने शीघ्र उपहार बनवाये। सबने भली-भाँति भोजन किया; हाथ धोकर वे आसन पर बैठे।
+
+--- unit 148 | section: श्रावण मंगळवारमु पाट ---
+vidhi:
+Stanza 23.
+deva:
+चित्तरुवु व्रासिना चविकॆलोपलनुंचि पट्टिमंचमुवाल्चि परुपुपऱचि ।
+कस्तूरिपुनुगु जव्वाजि मॊदलुगदॆच्चि वॊप्पुतोकलिसिरि वधुवरुलकू ॥ज॥
+iast:
+cittaruvu vrāsinā cavikelopalanuṁci paṭṭimaṁcamuvālci parupupaṟaci |
+kastūripunugu javvāji modalugadecci vopputokalisiri vadhuvarulakū ||ja||
+en: In the painted chamber they placed the silk cot, spread the mattress, and brought musk, civet and perfume and gave them to the bride and groom.
+tel: చిత్తరువు వ్రాసినా చవికెలోపలనుంచి పట్టిమంచమువాల్చి పరుపుపఱచి । కస్తూరిపునుగు జవ్వాజి మొదలుగదెచ్చి వొప్పుతోకలిసిరి వధువరులకూ ॥జ॥
+hi: चित्रित कक्ष में उन्होंने रेशमी पलंग रखा, गद्दा बिछाया, और कस्तूरी, पुनुगु और सुगन्ध लाकर वधू-वर को दिये।
+
+--- unit 149 | section: श्रावण मंगळवारमु पाट ---
+vidhi:
+Stanza 24.
+deva:
+गिन्नॆलो पालु चक्कॆर तेनॆयु घृतम्मुलु आरगिंचग बॆट्टिरी ।
+कर्पूरभागालु पच्चनिचॆंबुतो पन्नीरु तॆप्पिंचि वुंचिरपुडू ॥ज॥
+iast:
+ginnelo pālu cakkera teneyu ghṛtammulu āragiṁcaga beṭṭirī |
+karpūrabhāgālu paccaniceṁbuto pannīru teppiṁci vuṁcirapuḍū ||ja||
+en: In a cup they set milk, sugar, honey and ghee for them to take, and brought pieces of camphor and rose water in a green vessel.
+tel: గిన్నెలో పాలు చక్కెర తేనెయు ఘృతమ్ములు ఆరగించగ బెట్టిరీ । కర్పూరభాగాలు పచ్చనిచెంబుతో పన్నీరు తెప్పించి వుంచిరపుడూ ॥జ॥
+hi: कटोरे में उन्होंने दूध, शक्कर, शहद और घी उन्हें लेने को रखा, और कपूर के टुकड़े और गुलाबजल हरे पात्र में लाकर रखे।
+
+--- unit 150 | section: श्रावण मंगळवारमु पाट ---
+vidhi:
+Stanza 25.
+deva:
+दंपतुलिद्दऱु यिंपुतोभुजियिंचि संतोषमुगनु तांबूल मॊसगि ।
+सतितॊडमीद पादमूनि यागिन्नॆ भक्तितो वुंचॆनू गुप्तगानू ॥ज॥
+iast:
+daṁpatuliddaṟu yiṁputobhujiyiṁci saṁtoṣamuganu tāṁbūla mosagi |
+satitoḍamīda pādamūni yāginne bhaktito vuṁcenū guptagānū ||ja||
+en: The couple ate with pleasure and exchanged betel in joy. With his foot upon his wife's lap he set that cup in secret with devotion.
+tel: దంపతులిద్దఱు యింపుతోభుజియించి సంతోషముగను తాంబూల మొసగి । సతితొడమీద పాదమూని యాగిన్నె భక్తితో వుంచెనూ గుప్తగానూ ॥జ॥
+hi: दम्पति ने आनन्द से भोजन किया और प्रसन्नता से ताम्बूल दिया। पत्नी की गोद पर पाँव रखकर उसने वह कटोरा भक्ति से गुप्त रूप से रखा।
+
+--- unit 151 | section: श्रावण मंगळवारमु पाट ---
+vidhi:
+Stanza 26.
+deva:
+तूगूटुय्यालपै दंपतुलिद्दरू शयनिंचि निद्रलु सेयगाने ।
+कालमृत्युवुवच्चि कालसर्पंबयि बालकुनिगरुवंगवॊच्चॆनपुडू ॥ज॥
+iast:
+tūgūṭuyyālapai daṁpatuliddarū śayaniṁci nidralu seyagāne |
+kālamṛtyuvuvacci kālasarpaṁbayi bālakunigaruvaṁgavoccenapuḍū ||ja||
+en: As the couple lay on the swinging cot and slept, death in the form of time came as a black serpent to bite the boy.
+tel: తూగూటుయ్యాలపై దంపతులిద్దరూ శయనించి నిద్రలు సేయగానే । కాలమృత్యువువచ్చి కాలసర్పంబయి బాలకునిగరువంగవొచ్చెనపుడూ ॥జ॥
+hi: जब दम्पति झूलते पलंग पर लेटे और सोये, काल-मृत्यु काले सर्प के रूप में बालक को डसने आया।
+
+--- unit 152 | section: श्रावण मंगळवारमु पाट ---
+vidhi:
+Stanza 27.
+deva:
+मंगळगौरी मागुवस्वप्नमंदु नीसतिकिनीडंग समयमीदि ।
+मांगल्यवति निद्र शीघ्रमुग मेल्कॊनि कनुलु मगुवडॆरचि चॆलियाचूचु ॥ज॥
+iast:
+maṁgaḻagaurī māguvasvapnamaṁdu nīsatikinīḍaṁga samayamīdi |
+māṁgalyavati nidra śīghramuga melkoni kanulu maguvaḍeraci celiyācūcu ||ja||
+en: Maṅgaḷagaurī in the dream said to the wife: This is the hour of your husband's death. The fortunate woman woke quickly from sleep, opened her eyes and looked about.
+tel: మంగళగౌరీ మాగువస్వప్నమందు నీసతికినీడంగ సమయమీది । మాంగల్యవతి నిద్ర శీఘ్రముగ మేల్కొని కనులు మగువడెరచి చెలియాచూచు ॥జ॥
+hi: मंगलगौरी ने स्वप्न में पत्नी से कहा: यह तुम्हारे पति की मृत्यु की घड़ी है। सौभाग्यवती शीघ्र नींद से जागी, आँखें खोलकर चारों ओर देखा।
+
+--- unit 153 | section: श्रावण मंगळवारमु पाट ---
+vidhi:
+Stanza 28.
+deva:
+सुमांगल्यवतिनिद्र शीघ्रमुगमेलुकॊनि कन्नुलू तॆरचि कलियचूचि ।
+कृष्णसर्पमुनूनि किलकिलनव्वुचु स्वर्णकलशमु तॆच्चियुंची ॥ज॥
+iast:
+sumāṁgalyavatinidra śīghramugamelukoni kannulū teraci kaliyacūci |
+kṛṣṇasarpamunūni kilakilanavvucu svarṇakalaśamu tecciyuṁcī ||ja||
+en: The fortunate woman, waking quickly from sleep, opened her eyes and looked about. Seeing the black serpent, she laughed aloud and brought and set a golden pot.
+tel: సుమాంగల్యవతినిద్ర శీఘ్రముగమేలుకొని కన్నులూ తెరచి కలియచూచి । కృష్ణసర్పమునూని కిలకిలనవ్వుచు స్వర్ణకలశము తెచ్చియుంచీ ॥జ॥
+hi: सौभाग्यवती शीघ्र नींद से जागकर आँखें खोलकर देखने लगी। काले सर्प को देखकर वह खिलखिलाकर हँसी और सोने का कलश लाकर रखा।
+
+--- unit 154 | section: श्रावण मंगळवारमु पाट ---
+vidhi:
+Stanza 29.
+deva:
+बालभक्तिकिमॆच्चि नागेंद्रुडपुडु कलशंबुलो ब्रवेशिंचॆनपुडू ।
+चुट्टुचुट्लुनु अतनु पवळिंचियुंड पति दक्षिणंतोजेसि म्रॊक्किनिलचॆ ॥ज॥
+iast:
+bālabhaktikimecci nāgeṁdruḍapuḍu kalaśaṁbulo braveśiṁcenapuḍū |
+cuṭṭucuṭlunu atanu pavaḻiṁciyuṁḍa pati dakṣiṇaṁtojesi mrokkinilace ||ja||
+en: Pleased with the girl's devotion, the king of serpents entered the pot. As he lay coiled, she gave the gift of money to her husband and stood bowing.
+tel: బాలభక్తికిమెచ్చి నాగేంద్రుడపుడు కలశంబులో బ్రవేశించెనపుడూ । చుట్టుచుట్లును అతను పవళించియుండ పతి దక్షిణంతోజేసి మ్రొక్కినిలచె ॥జ॥
+hi: बालिका की भक्ति से प्रसन्न होकर नागराज कलश में प्रविष्ट हुआ। जब वह कुण्डली मारे लेटा था, उसने पति को दक्षिणा दी और प्रणाम करके खड़ी हुई।
+
+--- unit 155 | section: श्रावण मंगळवारमु पाट ---
+vidhi:
+Stanza 30.
+deva:
+मुत्यालुगूर्चिन रविकॆ तानु विडचि वार्चिसिन्नाकट्टुकॊनि नॊदुटनिलचॆ ।
+पतिप्राणमॆत्तुकॊनि पणजाक्षितानु तिरिगि शयनिंचि कडुनिद्रपोया ॥ज॥
+iast:
+mutyālugūrcina ravike tānu viḍaci vārcisinnākaṭṭukoni noduṭanilace |
+patiprāṇamettukoni paṇajākṣitānu tirigi śayaniṁci kaḍunidrapoyā ||ja||
+en: She took off her pearl-worked bodice, tied it over the pot and stood on the threshold. Taking her husband's life back, the lotus-eyed one lay down again and slept deeply.
+tel: ముత్యాలుగూర్చిన రవికె తాను విడచి వార్చిసిన్నాకట్టుకొని నొదుటనిలచె । పతిప్రాణమెత్తుకొని పణజాక్షితాను తిరిగి శయనించి కడునిద్రపోయా ॥జ॥
+hi: उसने अपनी मोतियों की चोली उतारी, कलश पर बाँधी और दहलीज पर खड़ी हुई। पति के प्राण बचाकर कमलनयनी फिर लेटी और गहरी नींद सोयी।
+
+--- unit 156 | section: श्रावण मंगळवारमु पाट ---
+vidhi:
+Stanza 31.
+deva:
+अरुणोदयमुवेळ आराजु मेलुकॊनि नेटिगाडमु मनकु निडचॆसिपुडू ।
+यॆव्वरिकॆ चॆप्पका युद्धरूतिरि काशीकिचेरी शीघ्रमुनसू ॥ज॥
+iast:
+aruṇodayamuveḻa ārāju melukoni neṭigāḍamu manaku niḍacesipuḍū |
+yevvarike ceppakā yuddharūtiri kāśīkicerī śīghramunasū ||ja||
+en: At dawn the king woke and said: Today's deed has made us safe. Telling no one, they set out at once and reached Kāśī quickly.
+tel: అరుణోదయమువేళ ఆరాజు మేలుకొని నేటిగాడము మనకు నిడచెసిపుడూ । యెవ్వరికె చెప్పకా యుద్ధరూతిరి కాశీకిచేరీ శీఘ్రమునసూ ॥జ॥
+hi: प्रातः राजा जागा और बोला: आज के काम ने हमें बचाया। किसी से कुछ कहे बिना वे तुरन्त निकले और शीघ्र काशी पहुँचे।
+
+--- unit 157 | section: श्रावण मंगळवारमु पाट ---
+vidhi:
+Stanza 32.
+deva:
+तॆल्लवारंगानॆ यॆल्लप्रजलूलेचि पन्नीरुचिल्कि मुग्गुलुपॆट्टि ।
+रत्नालु गद्दॆलु रमणुलुवुंचिरि वधुवरुलुवच्चि निल्चिरपुडु ॥ज॥
+iast:
+tellavāraṁgāne yellaprajalūleci pannīrucilki muggulupeṭṭi |
+ratnālu gaddelu ramaṇuluvuṁciri vadhuvaruluvacci nilcirapuḍu ||ja||
+en: At daybreak all the people rose, sprinkled rose water, drew the floor patterns, set thrones of gems, and the bride and bridegroom came and stood.
+tel: తెల్లవారంగానె యెల్లప్రజలూలేచి పన్నీరుచిల్కి ముగ్గులుపెట్టి । రత్నాలు గద్దెలు రమణులువుంచిరి వధువరులువచ్చి నిల్చిరపుడు ॥జ॥
+hi: सुबह सब लोग उठे, गुलाबजल छिड़का, रंगोली बनायी, रत्नों के आसन रखे, और वधू-वर आकर खड़े हुए।
+
+--- unit 158 | section: श्रावण मंगळवारमु पाट ---
+vidhi:
+Stanza 33.
+deva:
+पॆळ्ळिकूतुर्नि वेसि शृंगारमुलुजेसि रत्नालगद्दॆपयि वुंचगानॆ ।
+तप्पक वधुवुपडनि मुखमू तानुजूचि तनपतिकाडनि तलचॆनपुडू ॥ज॥
+iast:
+peḻḻikūturni vesi śṛṁgāramulujesi ratnālagaddepayi vuṁcagāne |
+tappaka vadhuvupaḍani mukhamū tānujūci tanapatikāḍani talacenapuḍū ||ja||
+en: They adorned the bride and set her on the throne of gems. Seeing the face of the man who was not her bridegroom, she thought: this is not my husband.
+tel: పెళ్ళికూతుర్ని వేసి శృంగారములుజేసి రత్నాలగద్దెపయి వుంచగానె । తప్పక వధువుపడని ముఖమూ తానుజూచి తనపతికాడని తలచెనపుడూ ॥జ॥
+hi: उन्होंने वधू का शृंगार किया और उसे रत्नों के आसन पर बिठाया। उस पुरुष का मुख देखकर, जो उसका वर नहीं था, उसने सोचा: यह मेरा पति नहीं है।
+
+--- unit 159 | section: श्रावण मंगळवारमु पाट ---
+vidhi:
+Stanza 34.
+deva:
+लेचि मेडमीदकूर्चुंडिचि तिंचि जाणलैनट्टिसखियुलॆल्ल ।
+नेर्पुतो नीपति अवुनुनीयंडरू तॆलपोसितॆलिपिरा सखियलॆल्ल ॥ज॥
+iast:
+leci meḍamīdakūrcuṁḍici tiṁci jāṇalainaṭṭisakhiyulella |
+nerputo nīpati avununīyaṁḍarū telapositelipirā sakhiyalella ||ja||
+en: She rose, went up and sat in the upper storey, and told her clever friends. Skilfully all the friends tried to learn whether this was her husband.
+tel: లేచి మేడమీదకూర్చుండిచి తించి జాణలైనట్టిసఖియులెల్ల । నేర్పుతో నీపతి అవునునీయండరూ తెలపోసితెలిపిరా సఖియలెల్ల ॥జ॥
+hi: वह उठी, ऊपर जाकर बैठी, और अपनी चतुर सखियों से कहा। सब सखियों ने चतुराई से जानने का यत्न किया कि क्या यह उसका पति है।
+
+--- unit 160 | section: श्रावण मंगळवारमु पाट ---
+vidhi:
+Stanza 35.
+deva:
+सत्यसतियाडकन्नॆ तनतंड्रिनीबिलचि नामाटविनियु सन्नादरिंचु ।
+नीवु सत्रिमुनेडु निजमुतो निलिसितॆ भक्तितो यगमूलमत्तु नेनु ॥ज॥
+iast:
+satyasatiyāḍakanne tanataṁḍrinībilaci nāmāṭaviniyu sannādariṁcu |
+nīvu satrimuneḍu nijamuto nilisite bhaktito yagamūlamattu nenu ||ja||
+en: The truthful maiden called her father and said: Hear my word and honour it. If you truly stand by your daughter today, I will keep to my course with devotion.
+tel: సత్యసతియాడకన్నె తనతండ్రినీబిలచి నామాటవినియు సన్నాదరించు । నీవు సత్రిమునేడు నిజముతో నిలిసితె భక్తితో యగమూలమత్తు నేను ॥జ॥
+hi: सत्यवादिनी कन्या ने पिता को बुलाकर कहा: मेरी बात सुनो और मानो। यदि आज तुम सचमुच अपनी कन्या के साथ खड़े हो, तो मैं भक्ति से अपने मार्ग पर रहूँगी।
+
+--- unit 161 | section: श्रावण मंगळवारमु पाट ---
+vidhi:
+Stanza 36.
+deva:
+काशिचेरियुवारु गंगास्नानमुचेसि कालभैरवुल दर्शनमुजेसिरी ।
+अन्नपूर्णनुचाल अतिभक्तिवेडुकॊनि विश्वेश्वरुनि गुडि दर्शिंचिरी ॥ज॥
+iast:
+kāśiceriyuvāru gaṁgāsnānamucesi kālabhairavula darśanamujesirī |
+annapūrṇanucāla atibhaktiveḍukoni viśveśvaruni guḍi darśiṁcirī ||ja||
+en: They reached Kāśī, bathed in the Gaṅgā and saw Kālabhairava. They prayed to Annapūrṇā with great devotion and saw the temple of Viśveśvara.
+tel: కాశిచేరియువారు గంగాస్నానముచేసి కాలభైరవుల దర్శనముజేసిరీ । అన్నపూర్ణనుచాల అతిభక్తివేడుకొని విశ్వేశ్వరుని గుడి దర్శించిరీ ॥జ॥
+hi: वे काशी पहुँचे, गंगा-स्नान किया और कालभैरव के दर्शन किये। अन्नपूर्णा से बड़ी भक्ति से प्रार्थना की और विश्वेश्वर के मन्दिर के दर्शन किये।
+
+--- unit 162 | section: श्रावण मंगळवारमु पाट ---
+vidhi:
+Stanza 37.
+deva:
+मणिकर्णिकादेवि तिरुवेणिदर्शिंचि बिंदुमाधव दर्शनमुचूसिरी ।
+भागीरथिनिचाल भक्तितो वेडुकॊनि तिरिगिवच्चॆनुवारु काशिकपुडू ॥ज॥
+iast:
+maṇikarṇikādevi tiruveṇidarśiṁci biṁdumādhava darśanamucūsirī |
+bhāgīrathinicāla bhaktito veḍukoni tirigivaccenuvāru kāśikapuḍū ||ja||
+en: They saw the goddess Maṇikarṇikā and the Triveṇī, and had the sight of Bindumādhava. They prayed to Bhāgīrathī with great devotion and returned then to Kāśī.
+tel: మణికర్ణికాదేవి తిరువేణిదర్శించి బిందుమాధవ దర్శనముచూసిరీ । భాగీరథినిచాల భక్తితో వేడుకొని తిరిగివచ్చెనువారు కాశికపుడూ ॥జ॥
+hi: उन्होंने देवी मणिकर्णिका और त्रिवेणी के दर्शन किये, और बिन्दुमाधव के दर्शन पाये। भागीरथी से बड़ी भक्ति से प्रार्थना की और फिर काशी लौटे।
+
+--- unit 163 | section: श्रावण मंगळवारमु पाट ---
+vidhi:
+Stanza 38.
+deva:
+काशिचेरिरिवारु गंगस्नानमुचेत काशिपट्नानिके वच्चिरपुडु ।
+महाराजुमात्रान माम लल्लुळ्ळु तमरु गंगादिंचि निरचिरपुडु ॥ज॥
+iast:
+kāśiceririvāru gaṁgasnānamuceta kāśipaṭnānike vaccirapuḍu |
+mahārājumātrāna māma lalluḻḻu tamaru gaṁgādiṁci niracirapuḍu ||ja||
+en: They reached Kāśī and by bathing in the Gaṅgā came to the city of Kāśī. The great king's uncle and nephew bathed in the Gaṅgā and stayed.
+tel: కాశిచేరిరివారు గంగస్నానముచేత కాశిపట్నానికే వచ్చిరపుడు । మహారాజుమాత్రాన మామ లల్లుళ్ళు తమరు గంగాదించి నిరచిరపుడు ॥జ॥
+hi: वे काशी पहुँचे और गंगा-स्नान करके काशी नगर आये। महाराज के मामा-भानजे गंगा में स्नान करके ठहरे।
+
+--- unit 164 | section: श्रावण मंगळवारमु पाट ---
+vidhi:
+Stanza 39.
+deva:
+नच्चिनवारिनि भुजियिंपुडंटेनु वॊल्लमनि वारितो पलिकिरपुडु ।
+स्वयंपाकमंचुकॊनि यंदरूभुजियिंचि निलचिरी निम्मालमेडलोनु ॥ज॥
+iast:
+naccinavārini bhujiyiṁpuḍaṁṭenu vollamani vārito palikirapuḍu |
+svayaṁpākamaṁcukoni yaṁdarūbhujiyiṁci nilacirī nimmālameḍalonu ||ja||
+en: When told to feed those who came, they said no and refused. Cooking for themselves, all ate and stayed in the lime-washed mansion.
+tel: నచ్చినవారిని భుజియింపుడంటేను వొల్లమని వారితో పలికిరపుడు । స్వయంపాకమంచుకొని యందరూభుజియించి నిలచిరీ నిమ్మాలమేడలోను ॥జ॥
+hi: जब आने वालों को भोजन कराने को कहा गया, उन्होंने मना किया। स्वयं भोजन बनाकर सबने खाया और चूने से पुते महल में ठहरे।
+
+--- unit 165 | section: श्रावण मंगळवारमु पाट ---
+vidhi:
+Stanza 40.
+deva:
+कर्पूरभागालु कांततानिच्चॆ अक्कडिकवेचेसॆ अंदुनुंडि ।
+काशिवासुलकेल कर्पूरभागालु वल्लमनि वारितो पलिकिरपुडू ॥ज॥
+iast:
+karpūrabhāgālu kāṁtatānicce akkaḍikavecese aṁdunuṁḍi |
+kāśivāsulakela karpūrabhāgālu vallamani vārito palikirapuḍū ||ja||
+en: The lady gave pieces of camphor; from there she had them sent. Why camphor for the people of Kāśī? they said, and refused.
+tel: కర్పూరభాగాలు కాంతతానిచ్చె అక్కడికవేచేసె అందునుండి । కాశివాసులకేల కర్పూరభాగాలు వల్లమని వారితో పలికిరపుడూ ॥జ॥
+hi: स्त्री ने कपूर के टुकड़े दिये; वहाँ से भिजवाये। काशी के लोगों को कपूर क्यों? कहकर उन्होंने मना किया।
+
+--- unit 166 | section: श्रावण मंगळवारमु पाट ---
+vidhi:
+Stanza 41.
+deva:
+आरदेशिसरदेशि राजुलु विप्रुलु भुजियिंचि तांबूल मंदुकॊनिराग ।
+मिराचेलवल्लरनि परिचारकुलुपोयि तोडुकुपोयि राजसमुखमुनकु ॥ज॥
+iast:
+āradeśisaradeśi rājulu viprulu bhujiyiṁci tāṁbūla maṁdukonirāga |
+mirācelavallarani paricārakulupoyi toḍukupoyi rājasamukhamunaku ||ja||
+en: Kings and brāhmaṇas of this land and other lands ate and took betel. "They will not accept", said the attendants, and went and brought them before the king.
+tel: ఆరదేశిసరదేశి రాజులు విప్రులు భుజియించి తాంబూల మందుకొనిరాగ । మిరాచేలవల్లరని పరిచారకులుపోయి తోడుకుపోయి రాజసముఖమునకు ॥జ॥
+hi: इस देश और अन्य देशों के राजा और ब्राह्मण भोजन करके ताम्बूल लेते थे। "वे नहीं लेंगे", सेवकों ने कहा, और जाकर उन्हें राजा के सामने ले आये।
+
+--- unit 167 | section: श्रावण मंगळवारमु पाट ---
+vidhi:
+Stanza 42.
+deva:
+राजसमुखमुन रमणितागूर्चुंडि नाधु मानच्चेटिराकजूचि ।
+तानुमनंबुन चालसंतोषिंचि तांबूलमिच्चि कानुकमुलबॆट्टॆ ॥ज॥
+iast:
+rājasamukhamuna ramaṇitāgūrcuṁḍi nādhu mānacceṭirākajūci |
+tānumanaṁbuna cālasaṁtoṣiṁci tāṁbūlamicci kānukamulabeṭṭe ||ja||
+en: Before the king the lady sat, and seeing her husband come, she rejoiced greatly in her heart, gave betel and set gifts before him.
+tel: రాజసముఖమున రమణితాగూర్చుండి నాధు మానచ్చేటిరాకజూచి । తానుమనంబున చాలసంతోషించి తాంబూలమిచ్చి కానుకములబెట్టె ॥జ॥
+hi: राजा के सामने स्त्री बैठी, और अपने पति को आते देख उसके मन में बड़ा आनन्द हुआ, उसने ताम्बूल दिया और उपहार सामने रखे।
+
+--- unit 168 | section: श्रावण मंगळवारमु पाट ---
+vidhi:
+Stanza 43.
+deva:
+तांबूलमू यिच्चि करमुतानूबट्टि आनंदभाष्पमुल कुरिपिंचॆनू ।
+धन्युरालनैति दरि जेरितिनि नेनु राजुकु मुद्दुकूतुरनैतिनी ॥ज॥
+iast:
+tāṁbūlamū yicci karamutānūbaṭṭi ānaṁdabhāṣpamula kuripiṁcenū |
+dhanyurālanaiti dari jeritini nenu rājuku muddukūturanaitinī ||ja||
+en: Giving betel and taking his hand, she shed tears of joy. "I am blessed, I have reached the shore; I have become the king's beloved daughter."
+tel: తాంబూలమూ యిచ్చి కరముతానూబట్టి ఆనందభాష్పముల కురిపించెనూ । ధన్యురాలనైతి దరి జేరితిని నేను రాజుకు ముద్దుకూతురనైతినీ ॥జ॥
+hi: ताम्बूल देकर और उसका हाथ पकड़कर उसने आनन्द के आँसू बहाये। "मैं धन्य हुई, किनारे लगी; मैं राजा की प्यारी बेटी बनी।"
+
+--- unit 169 | section: श्रावण मंगळवारमु पाट ---
+vidhi:
+Stanza 44.
+deva:
+इदियेमिचोद्यमो वॆरगुपडि चूचुचु आश्चर्यपडि राजु अडुगगाने ।
+निकु गुर्तुलुगलवु नीलसर्पपुविनु सत्यमुगडॆल्पुमो वृत्तांतमू ॥ज॥
+iast:
+idiyemicodyamo veragupaḍi cūcucu āścaryapaḍi rāju aḍugagāne |
+niku gurtulugalavu nīlasarpapuvinu satyamugaḍelpumo vṛttāṁtamū ||ja||
+en: Wondering what this marvel was, the king looked in astonishment and asked. "You have tokens: the blue serpent; tell truly what happened."
+tel: ఇదియేమిచోద్యమో వెరగుపడి చూచుచు ఆశ్చర్యపడి రాజు అడుగగానే । నికు గుర్తులుగలవు నీలసర్పపువిను సత్యముగడెల్పుమో వృత్తాంతమూ ॥జ॥
+hi: यह क्या अद्भुत है, सोचकर राजा ने विस्मय से देखा और पूछा। "तुम्हारे पास चिह्न हैं: नीला सर्प; जो हुआ, सच कहो।"
+
+--- unit 170 | section: श्रावण मंगळवारमु पाट ---
+vidhi:
+Stanza 45.
+deva:
+काशिकिबोगा मनचु कांक्षतोनिद्दरमु निलचितोटालोनॆ वुंडगानु ।
+अक्कडिकि वेंचेसि सन्निकनिमिषमुन मधुपर्कमिच्चि कल्याणमंडॆ ॥जय॥
+iast:
+kāśikibogā manacu kāṁkṣatoniddaramu nilacitoṭālone vuṁḍagānu |
+akkaḍiki veṁcesi sannikanimiṣamuna madhuparkamicci kalyāṇamaṁḍe ||jaya||
+en: "We two, longing to go to Kāśī, stayed in the garden. There you came, and within the hour gave the madhuparka, and the wedding took place."
+tel: కాశికిబోగా మనచు కాంక్షతోనిద్దరము నిలచితోటాలోనె వుండగాను । అక్కడికి వేంచేసి సన్నికనిమిషమున మధుపర్కమిచ్చి కల్యాణమండె ॥జయ॥
+hi: "हम दोनों काशी जाने की इच्छा से बगीचे में ठहरे थे। वहाँ तुम आये, और तुरन्त मधुपर्क दिया, और विवाह हुआ।"
+
+--- unit 171 | section: श्रावण मंगळवारमु पाट ---
+vidhi:
+Stanza 46.
+deva:
+पणतिनातॊडमीद पादंबु यागिन्नॆ हत्तुगानिलिपॆनु सुवर्णकलशंबुडॆच्ची ।
+देदीप्यमानमै वॆल्गुचुंडॆनु बुज्जगिंपुचुताकि मॆड कंठमालवेसॆ ॥ज॥
+iast:
+paṇatinātoḍamīda pādaṁbu yāginne hattugānilipenu suvarṇakalaśaṁbuḍeccī |
+dedīpyamānamai velgucuṁḍenu bujjagiṁpucutāki meḍa kaṁṭhamālavese ||ja||
+en: "With your foot on my lap you set that cup firmly, bringing the golden pot. Shining, it blazed; caressing me you put the necklace about my neck."
+tel: పణతినాతొడమీద పాదంబు యాగిన్నె హత్తుగానిలిపెను సువర్ణకలశంబుడెచ్చీ । దేదీప్యమానమై వెల్గుచుండెను బుజ్జగింపుచుతాకి మెడ కంఠమాలవేసె ॥జ॥
+hi: "मेरी गोद पर पाँव रखकर तुमने वह कटोरा दृढ़ता से रखा, सोने का कलश लाकर। वह चमकता रहा; दुलार करते हुए तुमने मेरे गले में हार डाला।"
+
+--- unit 172 | section: श्रावण मंगळवारमु पाट ---
+vidhi:
+Stanza 47.
+deva:
+आकाशमंतानु पंदिल्लुगावेसि भूमियंतयु आरुगुवेसि ।
+तोरणमुलुगट्टि नगरु शृंगारिंचि कल्याणवेदिकगा जेरिरि ॥ज॥
+iast:
+ākāśamaṁtānu paṁdillugāvesi bhūmiyaṁtayu āruguvesi |
+toraṇamulugaṭṭi nagaru śṛṁgāriṁci kalyāṇavedikagā jeriri ||ja||
+en: They made the whole sky a pavilion and the whole earth a platform, tied festoons, adorned the city, and gathered at the wedding altar.
+tel: ఆకాశమంతాను పందిల్లుగావేసి భూమియంతయు ఆరుగువేసి । తోరణములుగట్టి నగరు శృంగారించి కల్యాణవేదికగా జేరిరి ॥జ॥
+hi: उन्होंने सारे आकाश को मण्डप और सारी पृथ्वी को वेदी बनाया, तोरण बाँधे, नगर सजाया, और विवाह-वेदी पर एकत्र हुए।
+
+--- unit 173 | section: श्रावण मंगळवारमु पाट ---
+vidhi:
+Stanza 48.
+deva:
+गोदानमुडिसि भूदानमुजेसि सुवर्णदानमुचेसॆ सॊंपुतोनु ।
+अश्वदानमुचेसि गजदानमुचेसि कन्यदानमुचेसॆ घनमुगानु ॥ज॥
+iast:
+godānamuḍisi bhūdānamujesi suvarṇadānamucese soṁputonu |
+aśvadānamucesi gajadānamucesi kanyadānamucese ghanamugānu ||ja||
+en: He gave a cow, gave land, gave gold with grace. He gave a horse, gave an elephant, and gave the bride in state.
+tel: గోదానముడిసి భూదానముజేసి సువర్ణదానముచేసె సొంపుతోను । అశ్వదానముచేసి గజదానముచేసి కన్యదానముచేసె ఘనముగాను ॥జ॥
+hi: उसने गोदान किया, भूदान किया, सुवर्णदान किया शोभा से। अश्वदान किया, गजदान किया, और कन्यादान किया ठाट से।
+
+--- unit 174 | section: श्रावण मंगळवारमु पाट ---
+vidhi:
+Stanza 49.
+deva:
+आरात्रिनगरिलो कन्यवधुवरुलु तल्लिदंड्रादुलनु तलचुकॊनुचु ।
+अनिबुज्जगिंपुचु मामतोअल्लुडु शीघ्रमुग सीमकुवॆळ्ळ जलॆनु ॥ज॥
+iast:
+ārātrinagarilo kanyavadhuvarulu tallidaṁḍrādulanu talacukonucu |
+anibujjagiṁpucu māmatoalluḍu śīghramuga sīmakuveḻḻa jalenu ||ja||
+en: That night in the palace the bride and bridegroom thought of their parents. Comforting him, the nephew with the uncle set out quickly for their own land.
+tel: ఆరాత్రినగరిలో కన్యవధువరులు తల్లిదండ్రాదులను తలచుకొనుచు । అనిబుజ్జగింపుచు మామతోఅల్లుడు శీఘ్రముగ సీమకువెళ్ళ జలెను ॥జ॥
+hi: उस रात महल में वधू-वर ने माता-पिता को याद किया। उसे समझाते हुए भानजा मामा के साथ शीघ्र अपने देश को चला।
+
+--- unit 175 | section: श्रावण मंगळवारमु पाट ---
+vidhi:
+Stanza 50.
+deva:
+मुद्दुकूतुरुकिच्चॆ मुत्यालपल्लकि पच्चलपल्लकी भागीरथिकिनि ।
+कोटिवेलुचेयु उत्तमाश्वमुनिच्चि अल्लुनीकूतुरुनि अंपिंचॆनु ॥ज॥
+iast:
+muddukūturukicce mutyālapallaki paccalapallakī bhāgīrathikini |
+koṭiveluceyu uttamāśvamunicci allunīkūturuni aṁpiṁcenu ||ja||
+en: He gave his beloved daughter a pearl palanquin, and an emerald palanquin for the Bhāgīrathī. Giving a fine horse worth ten million, he sent off his son-in-law and daughter.
+tel: ముద్దుకూతురుకిచ్చె ముత్యాలపల్లకి పచ్చలపల్లకీ భాగీరథికిని । కోటివేలుచేయు ఉత్తమాశ్వమునిచ్చి అల్లునీకూతురుని అంపించెను ॥జ॥
+hi: उसने अपनी प्यारी बेटी को मोतियों की पालकी दी, और भागीरथी के लिए पन्ने की पालकी। करोड़ों का उत्तम घोड़ा देकर दामाद और बेटी को विदा किया।
+
+--- unit 176 | section: श्रावण मंगळवारमु पाट ---
+vidhi:
+Stanza 51.
+deva:
+तॆलिसिनफलमॆल्ल ग्रक्कुनवॆडलॆरु भक्तितोगूड बालुडुनु ।
+गंगनु मुंदरनुंचुकॊनि तम सीमचेरि तनक्षेममुलु चॆप्पंपॆनू ॥ज॥
+iast:
+telisinaphalamella grakkunaveḍaleru bhaktitogūḍa bāluḍunu |
+gaṁganu muṁdaranuṁcukoni tama sīmaceri tanakṣemamulu ceppaṁpenū ||ja||
+en: Taking all the fruit they had gained, they set out at once, the boy with devotion. Keeping the Gaṅgā before them they reached their land and sent word of their welfare.
+tel: తెలిసినఫలమెల్ల గ్రక్కునవెడలెరు భక్తితోగూడ బాలుడును । గంగను ముందరనుంచుకొని తమ సీమచేరి తనక్షేమములు చెప్పంపెనూ ॥జ॥
+hi: प्राप्त सब फल लेकर वे तुरन्त चले, बालक भक्ति सहित। गंगा को आगे रखकर अपने देश पहुँचे और कुशल-समाचार भिजवाया।
+
+--- unit 177 | section: श्रावण मंगळवारमु पाट ---
+vidhi:
+Stanza 52.
+deva:
+तनतोटिजनमॆल्ल तत्क्षणंबॆडलगा भक्तिगा बालुडॊच्चॆनुमा ।
+पुत्रुडनि चॆप्पगा नुत्साहमुनु बॊंदि आलिंगनमुजेसि अतिवतोनू ॥ज॥
+iast:
+tanatoṭijanamella tatkṣaṇaṁbeḍalagā bhaktigā bāluḍoccenumā |
+putruḍani ceppagā nutsāhamunu boṁdi āliṁganamujesi ativatonū ||ja||
+en: All his people went out at once; "the boy has come with devotion," they said. Hearing "it is your son", the mother in joy embraced him with the lady.
+tel: తనతోటిజనమెల్ల తత్క్షణంబెడలగా భక్తిగా బాలుడొచ్చెనుమా । పుత్రుడని చెప్పగా నుత్సాహమును బొంది ఆలింగనముజేసి అతివతోనూ ॥జ॥
+hi: उसके सब लोग तुरन्त निकले; "बालक भक्ति से आया है," उन्होंने कहा। "यह तुम्हारा पुत्र है" सुनकर माता ने आनन्द से स्त्री सहित उसे गले लगाया।
+
+--- unit 178 | section: श्रावण मंगळवारमु पाट ---
+vidhi:
+Stanza 53.
+deva:
+एमिनोमुनोचि तेनॆपतिमजेसिति पुत्रभिक्षंबॆट्टॆ पुण्यशालि ।
+सत्यमुवप्पुका मांगल्यमुलुगदा मंगळगौरुनू पूजिंचिरी ॥ज॥
+iast:
+eminomunoci tenepatimajesiti putrabhikṣaṁbeṭṭe puṇyaśāli |
+satyamuvappukā māṁgalyamulugadā maṁgaḻagaurunū pūjiṁcirī ||ja||
+en: "What vow did you keep, what penance did you do, that the meritorious one gave the alms of a son?" "Truly these are the things of good fortune," they said, and worshipped Maṅgaḷagaurī.
+tel: ఏమినోమునోచి తేనెపతిమజేసితి పుత్రభిక్షంబెట్టె పుణ్యశాలి । సత్యమువప్పుకా మాంగల్యములుగదా మంగళగౌరునూ పూజించిరీ ॥జ॥
+hi: "क्या व्रत किया, क्या तप किया, कि पुण्यशाली ने पुत्र की भिक्षा दी?" "सचमुच ये मांगल्य हैं," कहकर उन्होंने मंगलगौरी की पूजा की।
+
+--- unit 179 | section: श्रावण मंगळवारमु पाट ---
+vidhi:
+Stanza 54.
+deva:
+भागीरथीचाल भक्तितोपूजिस्तिमिनंटि अत्तकूमलुगलुगुना ।
+यॆक्कुवराज्यमु मिक्किलिसंपदा तॆरगनि अयिदु साधकसौख्यमुलू ॥ज॥
+iast:
+bhāgīrathīcāla bhaktitopūjistiminaṁṭi attakūmalugalugunā |
+yekkuvarājyamu mikkilisaṁpadā teragani ayidu sādhakasaukhyamulū ||ja||
+en: "We worshipped Bhāgīrathī with great devotion," they said; "will a mother-in-law's family have such good?" Great kingdom, great wealth, and the five fruits of accomplishment without end.
+tel: భాగీరథీచాల భక్తితోపూజిస్తిమినంటి అత్తకూమలుగలుగునా । యెక్కువరాజ్యము మిక్కిలిసంపదా తెరగని అయిదు సాధకసౌఖ్యములూ ॥జ॥
+hi: "हमने भागीरथी की बड़ी भक्ति से पूजा की," उन्होंने कहा; "क्या सास के कुल को ऐसा सुख मिलेगा?" बड़ा राज्य, बहुत सम्पत्ति, और अनन्त पाँच सिद्धि-सुख।
+
+--- unit 180 | section: श्रावण मंगळवारमु पाट ---
+vidhi:
+Stanza 55.
+deva:
+ऎप्पुडुपूडिस्तॆ मांगल्यमुलु गलवु मंगळगौरुनूबूजिस्तिनि ।
+ईकथनु पाडिनवारिकि विनवारिकि नयिनविभवंबुलू ।
+इष्टसंपदलिच्चु यीराजपदविच्चु सुखमुलु बिच्चुसर्वेशुराणी ॥
+जयमंगळा नित्यशुभमंगळा ॥
+iast:
+eppuḍupūḍiste māṁgalyamulu galavu maṁgaḻagaurunūbūjistini |
+īkathanu pāḍinavāriki vinavāriki nayinavibhavaṁbulū |
+iṣṭasaṁpadaliccu yīrājapadaviccu sukhamulu biccusarveśurāṇī ||
+jayamaṁgaḻā nityaśubhamaṁgaḻā ||
+en: Whenever one worships, the things of good fortune are there; I have worshipped Maṅgaḷagaurī. To those who sing this story and those who hear it come glory. The queen of the Lord of all gives the wealth one wishes, gives the royal seat, gives happiness. Victory and auspiciousness; auspiciousness always.
+tel: ఎప్పుడుపూడిస్తె మాంగల్యములు గలవు మంగళగౌరునూబూజిస్తిని । ఈకథను పాడినవారికి వినవారికి నయినవిభవంబులూ । ఇష్టసంపదలిచ్చు యీరాజపదవిచ్చు సుఖములు బిచ్చుసర్వేశురాణీ ॥ జయమంగళా నిత్యశుభమంగళా ॥
+hi: जब भी पूजा की जाये, मांगल्य मिलता है; मैंने मंगलगौरी की पूजा की। जो इस कथा को गाते और सुनते हैं, उन्हें वैभव मिलता है। सर्वेश्वर की रानी इच्छित सम्पत्ति देती है, राजपद देती है, सुख देती है। जय मंगल; नित्य शुभ मंगल।
+
+--- unit 181 | section: श्रावण मंगळवारमु पाट ---
+vidhi:
+The closing line of the song.
+deva:
+श्रावणमंगळवारमुपाट संपूर्णमु.
+iast:
+śrāvaṇamaṁgaḻavāramupāṭa saṁpūrṇamu.
+en: So the song is complete.
+tel: శ్రావణమంగళవారముపాట సంపూర్ణము.
+hi: इस प्रकार गीत पूर्ण हुआ।
+
+--- unit 182 | section: श्रावण शुक्रवारमु पाट ---
+vidhi:
+The Śrāvaṇa Friday song, on Cārumatī and Varalakṣmī. This is the song of a different observance, the Varalakṣmī vrata, which the print adds at its end; the vrata itself is written separately in the vrata folder. Telugu, with the same refrain.
+deva:
+कैलासगिरिलोनु कल्पवृक्षमुक्रिंद प्रमथादि गणमुलू कॊलुवगानु ।
+पार्वतीपरमेश्वर्लु बागुगा कूर्चुंडि परमेश्वरुनि यडिगॆ पार्वतपुडु ॥
+जयमंगळा नित्यशुभमंगळा ॥
+iast:
+kailāsagirilonu kalpavṛkṣamukriṁda pramathādi gaṇamulū koluvagānu |
+pārvatīparameśvarlu bāgugā kūrcuṁḍi parameśvaruni yaḍige pārvatapuḍu ||
+jayamaṁgaḻā nityaśubhamaṁgaḻā ||
+en: On mount Kailāsa, under the wishing tree, with Pramatha and the other hosts in attendance, Pārvatī and the supreme Lord sat in state, and Pārvatī asked the supreme Lord. Victory and auspiciousness; auspiciousness always.
+tel: కైలాసగిరిలోను కల్పవృక్షముక్రింద ప్రమథాది గణములూ కొలువగాను । పార్వతీపరమేశ్వర్లు బాగుగా కూర్చుండి పరమేశ్వరుని యడిగె పార్వతపుడు ॥ జయమంగళా నిత్యశుభమంగళా ॥
+hi: कैलास पर्वत पर, कल्पवृक्ष के नीचे, प्रमथ आदि गणों की सेवा में, पार्वती और परमेश्वर ठाट से बैठे थे, और पार्वती ने परमेश्वर से पूछा। जय मंगल; नित्य शुभ मंगल।
+
+--- unit 183 | section: श्रावण शुक्रवारमु पाट ---
+vidhi:
+Stanza 2.
+deva:
+एव्रतमु संपदलु यॆलमितोडुत निच्चु येव्रतमु पुत्रपौत्राभिवृद्धि नॊसंगु ।
+अनुचनूपार्वति याहरुनडिगॆनु ॥
+कुंडिनीलनियेटि पट्नंबुलोपला चारुमतिअनियेटि चेडॆगलदु ।
+अत्तमामलसेव अतिभक्तितोजेसि पतिभक्तिगलिगुंडु भाग्यशाली ॥ज॥
+iast:
+evratamu saṁpadalu yelamitoḍuta niccu yevratamu putrapautrābhivṛddhi nosaṁgu |
+anucanūpārvati yāharunaḍigenu ||
+kuṁḍinīlaniyeṭi paṭnaṁbulopalā cārumatianiyeṭi ceḍegaladu |
+attamāmalaseva atibhaktitojesi patibhaktigaliguṁḍu bhāgyaśālī ||ja||
+en: "Which vrata gives wealth with joy, which vrata gives the increase of sons and grandsons?" So Pārvatī asked Hara. In the town called Kuṇḍina there is a woman named Cārumatī. Serving her mother-in-law and father-in-law with great devotion, devoted to her husband, she is fortunate.
+tel: ఏవ్రతము సంపదలు యెలమితోడుత నిచ్చు యేవ్రతము పుత్రపౌత్రాభివృద్ధి నొసంగు । అనుచనూపార్వతి యాహరునడిగెను ॥ కుండినీలనియేటి పట్నంబులోపలా చారుమతిఅనియేటి చేడెగలదు । అత్తమామలసేవ అతిభక్తితోజేసి పతిభక్తిగలిగుండు భాగ్యశాలీ ॥జ॥
+hi: "कौन सा व्रत आनन्द के साथ सम्पत्ति देता है, कौन सा व्रत पुत्र-पौत्रों की वृद्धि देता है?" ऐसा पार्वती ने हर से पूछा। कुण्डिन नाम के नगर में चारुमती नाम की एक स्त्री है। सास-ससुर की बड़ी भक्ति से सेवा करने वाली, पतिव्रता, वह भाग्यशाली है।
+
+--- unit 184 | section: श्रावण शुक्रवारमु पाट ---
+vidhi:
+Stanza 3.
+deva:
+वनितस्वप्नमंदू वरलक्ष्मिताजोयि चारुमतितालॆम्मनि चेतजरचॆनु ।
+चरिचिनप्पुडु लेचि तल्लि मीरॆव्वरनि समस्करिंचिपलिकॆ नलिनाक्षिरो ॥ज॥
+iast:
+vanitasvapnamaṁdū varalakṣmitājoyi cārumatitālemmani cetajaracenu |
+caricinappuḍu leci talli mīrevvarani samaskariṁcipalike nalinākṣiro ||ja||
+en: In the woman's dream Varalakṣmī appeared and tapped Cārumatī with her hand, saying "rise". When tapped she rose, bowed and said: Mother, who are you, O lotus-eyed one?
+tel: వనితస్వప్నమందూ వరలక్ష్మితాజోయి చారుమతితాలెమ్మని చేతజరచెను । చరిచినప్పుడు లేచి తల్లి మీరెవ్వరని సమస్కరించిపలికె నలినాక్షిరో ॥జ॥
+hi: स्त्री के स्वप्न में वरलक्ष्मी प्रकट हुईं और "उठो" कहकर हाथ से चारुमती को थपथपाया। थपथपाने पर वह उठी, प्रणाम किया और बोली: माँ, आप कौन हैं, हे कमलनयनी?
+
+--- unit 185 | section: श्रावण शुक्रवारमु पाट ---
+vidhi:
+Stanza 4.
+deva:
+वरलक्ष्मिने नेनु वरमूलु यिच्चेनु मेड्कॊनवॆ चारुमति गॊब्बनानु ।
+कॊलिचॆनप्पुडु मॆच्चि कोटिसराज्यमुल् वरमप्पुडिच्चेटि वरलक्ष्मिनि ॥ज॥
+iast:
+varalakṣmine nenu varamūlu yiccenu meḍkonave cārumati gobbanānu |
+kolicenappuḍu mecci koṭisarājyamul varamappuḍicceṭi varalakṣmini ||ja||
+en: "I am Varalakṣmī; I give boons. Wake, Cārumatī, quickly." When she worshipped her, Varalakṣmī was pleased and gave her the boon of ten million kingdoms.
+tel: వరలక్ష్మినే నేను వరమూలు యిచ్చేను మేడ్కొనవె చారుమతి గొబ్బనాను । కొలిచెనప్పుడు మెచ్చి కోటిసరాజ్యముల్ వరమప్పుడిచ్చేటి వరలక్ష్మిని ॥జ॥
+hi: "मैं वरलक्ष्मी हूँ; मैं वर देती हूँ। जागो, चारुमती, शीघ्र।" जब उसने पूजा की, वरलक्ष्मी प्रसन्न हुईं और करोड़ों राज्यों का वर दिया।
+
+--- unit 186 | section: श्रावण शुक्रवारमु पाट ---
+vidhi:
+Stanza 5.
+deva:
+एविभुनिपूड चेयवलॆननुचूनु चारुमतियडिगॆनु श्राव्यमुगदू ।
+एमासंबुन येपक्षंबु येवारमुनाडु येप्रॊदुन ॥ज॥
+iast:
+evibhunipūḍa ceyavalenanucūnu cārumatiyaḍigenu śrāvyamugadū |
+emāsaṁbuna yepakṣaṁbu yevāramunāḍu yeproduna ||ja||
+en: "How should the worship of the Lord be done?" asked Cārumatī sweetly. "In which month, which fortnight, which day, and at which hour?"
+tel: ఏవిభునిపూడ చేయవలెననుచూను చారుమతియడిగెను శ్రావ్యముగదూ । ఏమాసంబున యేపక్షంబు యేవారమునాడు యేప్రొదున ॥జ॥
+hi: "प्रभु की पूजा कैसे करनी चाहिए?" चारुमती ने मधुर स्वर में पूछा। "किस मास में, किस पक्ष में, किस वार को, और किस समय?"
+
+--- unit 187 | section: श्रावण शुक्रवारमु पाट ---
+vidhi:
+Stanza 6.
+deva:
+श्रावणमासान शुक्लपक्षमुनंदु शुक्रवारमुनाडु मुचिमापुना ।
+पंचकल्यलु डॆच्चि बागुका तनिसिल्चि सुवर्णांबरमुन शोभितमुग ॥ज॥
+iast:
+śrāvaṇamāsāna śuklapakṣamunaṁdu śukravāramunāḍu mucimāpunā |
+paṁcakalyalu ḍecci bāgukā tanisilci suvarṇāṁbaramuna śobhitamuga ||ja||
+en: "In the month of Śrāvaṇa, in the bright fortnight, on Friday, at dusk, bring the five jars, set me up well, bright in golden garments."
+tel: శ్రావణమాసాన శుక్లపక్షమునందు శుక్రవారమునాడు ముచిమాపునా । పంచకల్యలు డెచ్చి బాగుకా తనిసిల్చి సువర్ణాంబరమున శోభితముగ ॥జ॥
+hi: "श्रावण मास में, शुक्ल पक्ष में, शुक्रवार को, सन्ध्या समय, पाँच कलश लाकर मुझे अच्छी तरह स्थापित करो, सुवर्ण वस्त्र में शोभित।"
+
+--- unit 188 | section: श्रावण शुक्रवारमु पाट ---
+vidhi:
+Stanza 7.
+deva:
+चारुमतिलेचि या शय्यपैकूर्चुंडि बंधुवुल पिलिपिंचि बागुगानु ।
+स्वप्नमुन श्रीमहालक्ष्मि चकचकवच्चि कॊल्वमनिपल्कॆनु कांतलारा ॥ज॥
+iast:
+cārumatileci yā śayyapaikūrcuṁḍi baṁdhuvula pilipiṁci bāgugānu |
+svapnamuna śrīmahālakṣmi cakacakavacci kolvamanipalkenu kāṁtalārā ||ja||
+en: Cārumatī rose, sat on her bed, and called her kin together. "In my dream Śrī Mahālakṣmī came shining, and told me to worship her, O ladies."
+tel: చారుమతిలేచి యా శయ్యపైకూర్చుండి బంధువుల పిలిపించి బాగుగాను । స్వప్నమున శ్రీమహాలక్ష్మి చకచకవచ్చి కొల్వమనిపల్కెను కాంతలారా ॥జ॥
+hi: चारुमती उठी, अपने पलंग पर बैठी, और सम्बन्धियों को बुलाया। "मेरे स्वप्न में श्री महालक्ष्मी चमकती हुई आयीं और मुझे उनकी पूजा करने को कहा, हे स्त्रियो।"
+
+--- unit 189 | section: श्रावण शुक्रवारमु पाट ---
+vidhi:
+Stanza 8.
+deva:
+एविधंबुन पूज सेयवलॆन्नदो बंधुवुलु अडिगिरि प्रेमतोनु ।
+येमासंबुन येपक्षंबुन येवारमुनाडु येप्रॊद्दुना ॥ज॥
+iast:
+evidhaṁbuna pūja seyavalennado baṁdhuvulu aḍigiri prematonu |
+yemāsaṁbuna yepakṣaṁbuna yevāramunāḍu yeproddunā ||ja||
+en: "How is the worship to be done?" the kin asked with love. "In which month, which fortnight, which day, at which hour?"
+tel: ఏవిధంబున పూజ సేయవలెన్నదో బంధువులు అడిగిరి ప్రేమతోను । యేమాసంబున యేపక్షంబున యేవారమునాడు యేప్రొద్దునా ॥జ॥
+hi: "पूजा कैसे करनी है?" सम्बन्धियों ने प्रेम से पूछा। "किस मास में, किस पक्ष में, किस वार को, किस समय?"
+
+--- unit 190 | section: श्रावण शुक्रवारमु पाट ---
+vidhi:
+Stanza 9.
+deva:
+श्रावणमासान शुक्लपक्षमुनंदु शुक्रवारमुनाडु मुसिमापुना ।
+पंचकल्यलुडॆच्चि बागुगा तनुनिल्पि भक्तितो पूजिंचुमनिबॆप्पॆनू ॥ज॥
+iast:
+śrāvaṇamāsāna śuklapakṣamunaṁdu śukravāramunāḍu musimāpunā |
+paṁcakalyaluḍecci bāgugā tanunilpi bhaktito pūjiṁcumanibeppenū ||ja||
+en: "In the month of Śrāvaṇa, in the bright fortnight, on Friday, at dusk, bring the five jars, set her up well and worship with devotion," she said.
+tel: శ్రావణమాసాన శుక్లపక్షమునందు శుక్రవారమునాడు ముసిమాపునా । పంచకల్యలుడెచ్చి బాగుగా తనునిల్పి భక్తితో పూజించుమనిబెప్పెనూ ॥జ॥
+hi: "श्रावण मास में, शुक्ल पक्ष में, शुक्रवार को, सन्ध्या समय, पाँच कलश लाकर उन्हें अच्छी तरह स्थापित करो और भक्ति से पूजा करो," उसने कहा।
+
+--- unit 191 | section: श्रावण शुक्रवारमु पाट ---
+vidhi:
+Stanza 10.
+deva:
+अपुडू श्रावणमासमु मुंदुगावच्चॆननि भक्तितोपट्नमु नलंकरिंचॆ ।
+विन्नॆतोरणालु सन्नप्राजाजुलू चॆन्नुगा नगरु शृंगारिंतुरु ॥ज॥
+iast:
+apuḍū śrāvaṇamāsamu muṁdugāvaccenani bhaktitopaṭnamu nalaṁkariṁce |
+vinnetoraṇālu sannaprājājulū cennugā nagaru śṛṁgāriṁturu ||ja||
+en: Then, saying that the month of Śrāvaṇa had come early, with devotion they adorned the town. With festoons of cloth and fine roses they adorn the city beautifully.
+tel: అపుడూ శ్రావణమాసము ముందుగావచ్చెనని భక్తితోపట్నము నలంకరించె । విన్నెతోరణాలు సన్నప్రాజాజులూ చెన్నుగా నగరు శృంగారింతురు ॥జ॥
+hi: फिर, श्रावण मास जल्दी आ गया कहकर, भक्ति से उन्होंने नगर सजाया। कपड़े के तोरणों और सुन्दर गुलाबों से वे नगर को सुन्दर सजाते हैं।
+
+--- unit 192 | section: श्रावण शुक्रवारमु पाट ---
+vidhi:
+Stanza 11.
+deva:
+वरलक्ष्मीनोमनुचु वनितलु अंदरू पसुपुतोडि पट्टु पुट्टमालुकट्टि ।
+पूर्णपुकुडुमुलु पायसान्नमुलु अवश्यमुग नैवेद्यमुलुवॆडुदुहा ॥ज॥
+iast:
+varalakṣmīnomanucu vanitalu aṁdarū pasuputoḍi paṭṭu puṭṭamālukaṭṭi |
+pūrṇapukuḍumulu pāyasānnamulu avaśyamuga naivedyamuluveḍuduhā ||ja||
+en: Saying "the Varalakṣmī vow", all the women tie the yellow thread with the silk cloth, and set the full sweet dumplings and sweet rice as the offering without fail.
+tel: వరలక్ష్మీనోమనుచు వనితలు అందరూ పసుపుతోడి పట్టు పుట్టమాలుకట్టి । పూర్ణపుకుడుములు పాయసాన్నములు అవశ్యముగ నైవేద్యములువెడుదుహా ॥జ॥
+hi: "वरलक्ष्मी व्रत" कहकर सब स्त्रियाँ रेशमी वस्त्र के साथ पीला धागा बाँधती हैं, और भरे हुए मीठे कुडुमु और खीर नैवेद्य में अवश्य रखती हैं।
+
+--- unit 193 | section: श्रावण शुक्रवारमु पाट ---
+vidhi:
+Stanza 12.
+deva:
+कंड्रिमंडिगलु नुंडिगलुदंडिग कॆंचि यॊंडिन कुडुमुलु घननडलुनू ।
+दंडिगॊवल्याल खर्जूरफलमुलू विधिगा नैवेद्यमुलु ॥ज॥
+iast:
+kaṁḍrimaṁḍigalu nuṁḍigaludaṁḍiga keṁci yoṁḍina kuḍumulu ghananaḍalunū |
+daṁḍigovalyāla kharjūraphalamulū vidhigā naivedyamulu ||ja||
+en: Sweets of many kinds, measured in plenty, steamed dumplings and large cakes, great plates full of dates: so the offerings are set according to the rule.
+tel: కండ్రిమండిగలు నుండిగలుదండిగ కెంచి యొండిన కుడుములు ఘననడలునూ । దండిగొవల్యాల ఖర్జూరఫలములూ విధిగా నైవేద్యములు ॥జ॥
+hi: अनेक प्रकार की मिठाइयाँ, भरपूर मात्रा में, भाप में पके कुडुमु और बड़े पकवान, खजूर से भरी बड़ी थालियाँ: इस प्रकार विधि से नैवेद्य रखे जाते हैं।
+
+--- unit 194 | section: श्रावण शुक्रवारमु पाट ---
+vidhi:
+Stanza 13.
+deva:
+निंडुबिंडॆललोनु निर्मलवुदकमु पुंडरीकाक्षुलकु वारुपोसी ।
+तॊम्मिदिपोगुल तोरमॊप्पुगपोसि तल्लिकी कडुसंभ्रममुन ॥ज॥
+iast:
+niṁḍubiṁḍelalonu nirmalavudakamu puṁḍarīkākṣulaku vāruposī |
+tommidipogula toramoppugaposi tallikī kaḍusaṁbhramamuna ||ja||
+en: In the full jars they pour pure water for the lotus-eyed ones. The thread of nine strands they tie with care, and offer it to the mother in great joy.
+tel: నిండుబిండెలలోను నిర్మలవుదకము పుండరీకాక్షులకు వారుపోసీ । తొమ్మిదిపోగుల తోరమొప్పుగపోసి తల్లికీ కడుసంభ్రమమున ॥జ॥
+hi: भरे कलशों में वे कमलनयनों के लिए निर्मल जल भरते हैं। नौ लड़ियों का तोरम यत्न से बाँधकर बड़े उत्साह से माता को अर्पित करते हैं।
+
+--- unit 195 | section: श्रावण शुक्रवारमु पाट ---
+vidhi:
+Stanza 14.
+deva:
+वेदविदुडैनट्टि विप्रुनि पिलिपिंचिगंध मक्षतलिच्चि काळ्ळुगडिगी ।
+तॊम्मिदिपिंडिवंटलतोर मॊप्पुगबॆट्टि ब्राह्मणुनकु पायसंबॆट्टॆ ॥
+जयमंगळा नित्यशुभमंगळा ॥
+iast:
+vedaviduḍainaṭṭi vipruni pilipiṁcigaṁdha makṣatalicci kāḻḻugaḍigī |
+tommidipiṁḍivaṁṭalatora moppugabeṭṭi brāhmaṇunaku pāyasaṁbeṭṭe ||
+jayamaṁgaḻā nityaśubhamaṁgaḻā ||
+en: Calling a brāhmaṇa learned in the Veda, they give sandal-paste and unbroken rice and wash his feet. Setting out the nine sweets with the thread in order, they give the brāhmaṇa sweet rice. Victory and auspiciousness; auspiciousness always.
+tel: వేదవిదుడైనట్టి విప్రుని పిలిపించిగంధ మక్షతలిచ్చి కాళ్ళుగడిగీ । తొమ్మిదిపిండివంటలతోర మొప్పుగబెట్టి బ్రాహ్మణునకు పాయసంబెట్టె ॥ జయమంగళా నిత్యశుభమంగళా ॥
+hi: वेद जानने वाले ब्राह्मण को बुलाकर वे गन्ध और अक्षत देते हैं और उसके पाँव धोते हैं। तोरम के साथ नौ पकवान क्रम से रखकर ब्राह्मण को खीर देते हैं। जय मंगल; नित्य शुभ मंगल।
+
+--- unit 196 | section: श्रावण शुक्रवारमु पाट ---
+vidhi:
+The closing line of the song.
+deva:
+श्रावणशुक्रवारपु वरलक्ष्मीव्रतपाट संपूर्णमु
+iast:
+śrāvaṇaśukravārapu varalakṣmīvratapāṭa saṁpūrṇamu
+en: So the song is complete.
+tel: శ్రావణశుక్రవారపు వరలక్ష్మీవ్రతపాట సంపూర్ణము
+hi: इस प्रकार गीत पूर्ण हुआ।
