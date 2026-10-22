@@ -9,7 +9,7 @@ Type: Purāṇa (an adhyāya of the Śrīmad Bhāgavata, Skandha 5)
 
 Source / recension: Base text and authority: the Gītā Press, Gorakhpur Śrīmadbhāgavata Mahāpurāṇa with Hindi translation, Part 1 (Gītā Press code 26), archive.org item `shrimadbhagwat-mahapuran-bhag-1`, printed pages 645–649; the PDF page numbers are the printed ones. The PDF carries the typesetter's own text layer in the Chanakya font encoding, and the text was decoded from it by machine with `bin/bhagavata/chanakya.py`, not read off OCR or typed. The decoder was checked against GRETIL over all twelve skandhas before any file was written, and the differences that remain were sampled and found to be readings of the two editions. Second witness: GRETIL's `sa_bhAgavatapurANa.xml` (IAST, contributed by Ulrich Stiehl), a separate editorial lineage, compared verse by verse by machine. The TTD edition with the commentaries of Śrīdhara, Vīrarāghava and Vijayadhvaja (archive.org `Bhagavata_Purana_With_Multiple_Commentaries_TTD_Critical_Edition`) is the third witness where one is needed; it was not read for this file. The IAST was generated mechanically from the Devanāgarī with `bin/dev2iast.py`.
 
-Recension note: Text-only file, written 1 Oct 2026 at the user's instruction to lay down the whole Bhāgavata first: the English, Telugu and Hindi meanings are still to be added, and the witnesses' differences listed here have been recorded by machine and not yet adjudicated. The print is followed throughout. The print numbers 24 verses; GRETIL numbers 23, so from some point the two editions number the verses differently. Never match them by number. Of the 22 verses GRETIL has under the same number, 13 agree with the print letter for letter once spacing and the spelling of nasals are set aside; the rest differ: 1, 14, 16, 18, 19, 20, 21, 22, 23. GRETIL has nothing under the numbers 17, 24. The edition's footnotes give these older printed readings (प्रा० पा०), which are not bracketed into the line: at 13, मोदमदमुदितराजहंसकलहंसजल०; at 13, लोकाः स्वैरं विहरन्ति; at 15, पश्चाद्वक्ष्यामः; at 16, सहस्रैर्व्यवरुद्ध्ययमानो. Spacing is the print's, as its text layer gives it; in a few places justification has left a space inside a word, and these are still to be closed when the verse is read. The speaker lines (श्रीशुक उवाच and the others) are printed in italic above the verse they introduce, and are given as its first line.
+Recension note: Meanings written 22 Oct 2026 (session S78). The differences between the witnesses listed below were read as the verses were glossed; except where this note says otherwise, each is a spelling, a sandhi or a word order of the two editions, none of them changes the sense, and the print's reading therefore stands unbracketed. The print is followed throughout. The print numbers 24 verses; GRETIL numbers 23, so from some point the two editions number the verses differently. Never match them by number. Of the 22 verses GRETIL has under the same number, 13 agree with the print letter for letter once spacing and the spelling of nasals are set aside; the rest differ: 1, 14, 16, 18, 19, 20, 21, 22, 23. GRETIL has nothing under the numbers 17, 24. The edition's footnotes give these older printed readings (प्रा० पा०), which are not bracketed into the line: at 13, मोदमदमुदितराजहंसकलहंसजल०; at 13, लोकाः स्वैरं विहरन्ति; at 15, पश्चाद्वक्ष्यामः; at 16, सहस्रैर्व्यवरुद्ध्ययमानो. Spacing is the print's, as its text layer gives it. The speaker lines (श्रीशुक उवाच and the others) are printed in italic above the verse they introduce, and are given as its first line. A footnote's numeral keys it to one word, and which word that is cannot be told from the note alone, so those readings stay unbracketed until the page itself is read. Three words were put right as the verses were read, each one confirmed against GRETIL. At verse 1 justification had left a space inside उपरञ्जिता (°किञ्जल्कोपर ञ्जिता), and it is closed here. At verse 2 the space between यत्र and ह was lost, and at verse 9 the space between दक्षिणेन and ब्रह्मसदनाद्; both are restored, the first word in each ending in a vowel, where this print breaks almost without exception. Two wrong letters are left exactly as printed, since an emendation is outside this pass, and the meanings follow the only reading the words allow: at verse 1 प्रविष्ट stands where the feminine nominative प्रविष्टा is wanted by धारा and is what GRETIL prints, and at verse 21 मॄषयः stands where the word is ऋषयः, म् and ऋ making मृ with the short vowel. The print's own page was not re-read for either.
 
 Verse count: 24, plus the closing colophon printed unnumbered.
 
@@ -21,7 +21,7 @@ deva:
 तत्र भगवतः साक्षाद्यज्ञलिङ्गस्य विष्णो-
 र्विक्रमतो वामपादाङ्गुष्ठनखनिर्भिन्नोर्ध्वाण्ड-
 कटाहविवरेणान्तःप्रविष्ट या बाह्यजलधारा
-तच्चरणपङ्कजावनेजनारुणकिञ्जल्कोपर ञ्जिता
+तच्चरणपङ्कजावनेजनारुणकिञ्जल्कोपरञ्जिता
 अखिलजगदघमलापहोपस्पर्शनामला साक्षाद्
 भगवत्पदीत्यनुपलक्षितवचोऽभिधीयमानातिमहता
 कालेन युगसहस्रोपलक्षणेन दिवो मूर्धन्यवततार
@@ -31,15 +31,18 @@ iast:
 tatra bhagavataḥ sākṣādyajñaliṅgasya viṣṇo-
 rvikramato vāmapādāṅguṣṭhanakhanirbhinnordhvāṇḍa-
 kaṭāhavivareṇāntaḥpraviṣṭa yā bāhyajaladhārā
-taccaraṇapaṅkajāvanejanāruṇakiñjalkopara ñjitā
+taccaraṇapaṅkajāvanejanāruṇakiñjalkoparañjitā
 akhilajagadaghamalāpahopasparśanāmalā sākṣād
 bhagavatpadītyanupalakṣitavaco'bhidhīyamānātimahatā
 kālena yugasahasropalakṣaṇena divo mūrdhanyavatatāra
 yattadviṣṇupadamāhuḥ||
+en: Śrī Śuka said: There, as the blessed Viṣṇu, who is himself the embodiment of sacrifice, strode forth, the nail of the toe of his left foot broke open the upper shell of the egg of the universe, and through that opening the stream of water that was outside entered within. Reddened by the red filaments washed from his lotus feet, that stream is spotless, and its touch takes away the sin and the stain of the whole world. It is called by the name Bhagavatpadī, a word whose ground is not seen. After a very long time, measured by a thousand yugas, it came down upon the head of the sky, which they call the foot of Viṣṇu.
+tel: శ్రీశుకుడు పలికెను: అందు, సాక్షాద్యజ్ఞస్వరూపుడైన భగవంతుడు విష్ణువు అడుగు వేసినప్పుడు, ఆయన ఎడమ పాదము బొటనవేలి గోరు బ్రహ్మాండము పైకవచమును చీల్చినది; ఆ రంధ్రము ద్వారా వెలుపల ఉన్న జలధార లోపల ప్రవేశించినది. ఆ ధార ఆయన చరణకమలములను కడిగిన అరుణవర్ణపు కింజల్కములచే ఎరుపెక్కి, నిర్మలమైనది; దాని స్పర్శ సమస్త జగత్తు పాపమును, మలమును తొలగించును. దానిని భగవత్పదీ అను పేరుతో పిలుచుచున్నారు; ఆ మాటకు మూలము కనబడదు. వేయి యుగములచే గుర్తింపబడు మిక్కిలి గొప్ప కాలము గడచిన పిమ్మట అది ఆకాశము శిరమున దిగినది; దానిని విష్ణుపదము అని చెప్పుచున్నారు.
+hi: श्रीशुकदेवजी ने कहा: वहाँ साक्षात् यज्ञस्वरूप भगवान् विष्णु के पग बढ़ाने पर उनके बायें पाँव के अँगूठे के नख से ब्रह्माण्ड के ऊपरी कटाह का छिद्र हुआ, और उस छिद्र से बाहर की जलधारा भीतर प्रविष्ट हुई। उनके चरणकमलों के धोवन के अरुण किञ्जल्कों से रँगी हुई वह धारा निर्मल है, और उसका स्पर्श सारे जगत् के पाप और मल को हर लेता है। उसे भगवत्पदी नाम से कहा जाता है, जिस शब्द का मूल दिखाई नहीं देता। एक सहस्र युगों से लक्षित बहुत बड़े काल के बाद वह आकाश के मूर्धा पर उतरी, जिसे विष्णुपद कहते हैं।
 
 --- verse 2 ---
 deva:
-यत्रह वाव वीरव्रत
+यत्र ह वाव वीरव्रत
 औत्तानपादिः परमभागवतोऽस्मत्कुलदेवता-
 चरणारविन्दोदकमिति यामनुसवनमुत्कृष्यमाण-
 भगवद्भक्तियोगेन दृढं क्लिद्यमानान्तर्हृदय
@@ -48,7 +51,7 @@ deva:
 पुलककुलकोऽधुनापि परमादरेण शिरसा
 बिभर्ति॥
 iast:
-yatraha vāva vīravrata
+yatra ha vāva vīravrata
 auttānapādiḥ paramabhāgavato'smatkuladevatā-
 caraṇāravindodakamiti yāmanusavanamutkṛṣyamāṇa-
 bhagavadbhaktiyogena dṛḍhaṁ klidyamānāntarhṛdaya
@@ -56,6 +59,9 @@ autkaṇṭhyavivaśāmīlitalocanayugalakuḍmala-
 vigalitāmalabāṣpakalayābhivyajyamānaroma-
 pulakakulako'dhunāpi paramādareṇa śirasā
 bibharti||
+en: There indeed, O you of heroic vows, the son of Uttānapāda, the great devotee, bears that water on his head even now with the highest reverence, thinking, this is the water from the lotus feet of the deity of our family. By his yoga of devotion to the Lord, which rises at every moment, his inmost heart is melted through and through; overcome with longing he closes both his eyes like buds, and from them a trickle of clear tears falls, and the hair of his body stands up in thrills.
+tel: అందు, వీరవ్రతుడా, ఉత్తానపాదుని కుమారుడు, పరమభాగవతుడు, ఇది మన కులదేవత చరణారవిందముల ఉదకము అని తలచి ఆ జలమును ఇప్పటికిని పరమాదరముతో శిరమున ధరించుచున్నాడు. ప్రతి క్షణము పెరుగుచున్న భగవద్భక్తియోగముచే అతని అంతర్హృదయము గట్టిగా కరగుచున్నది; ఉత్కంఠచే వివశుడై మొగ్గలవలె రెండు కన్నులను మూసికొనుచున్నాడు, వాని నుండి నిర్మలమైన కన్నీటి ధార జారుచున్నది, అతని దేహమున రోమపులకములు పొడుచుచున్నవి.
+hi: वहाँ ही, हे वीरव्रत, उत्तानपाद के पुत्र परमभागवत उस जल को यह हमारे कुलदेवता के चरणारविन्दों का उदक है, ऐसा मानकर अब भी परम आदर से सिर पर धारण करते हैं। प्रत्येक क्षण बढ़ते हुए भगवद्भक्तियोग से उनका अन्तर्हृदय गाढ़ रूप से द्रवित होता है; उत्कण्ठा से विवश होकर वे कली के समान दोनों नेत्र मूँद लेते हैं, उनसे निर्मल आँसुओं की धार गिरती है, और उनके शरीर में रोमाञ्च उठ आता है।
 
 --- verse 3 ---
 deva:
@@ -72,6 +78,9 @@ sarvātmani vāsudeve'nuparatabhaktiyoga-
 lābhenaivopekṣitānyārthātmagatayo muktimivāgatāṁ
 mumukṣava iva sabahumānamadyāpi
 jaṭājūṭairudvahanti||
+en: Then the seven sages, who know its power, bear it even now upon their matted locks with great honour, holding that this much is the final attainment of tapas. By the very gaining of unbroken devotional yoga to the blessed Vāsudeva, the self of all, they have set aside every other aim and every other goal for themselves, and they receive it as though liberation itself had come, like men who seek liberation.
+tel: పిమ్మట దాని ప్రభావము ఎరిగిన సప్తఋషులు, తపస్సుకు ఆత్యంతిక సిద్ధి ఇంతే అని తలచి, దానిని ఇప్పటికిని జటాజూటములతో మిక్కిలి గౌరవముతో ధరించుచున్నారు. సర్వాత్మకుడైన భగవంతుడు వాసుదేవునియందు నిరంతర భక్తియోగము లభించుటచేతనే వారు ఇతర ప్రయోజనములను, ఆత్మగతులను విడిచిపెట్టిరి; ముక్తియే వచ్చినట్లుగా, ముముక్షువులవలె దానిని స్వీకరించుచున్నారు.
+hi: इसके बाद उसके प्रभाव को जाननेवाले सप्तऋषि, तप की आत्यन्तिक सिद्धि इतनी ही है, ऐसा मानकर उसे अब भी अपनी जटाओं में बड़े आदर से धारण करते हैं। सर्वात्मा भगवान् वासुदेव में अविरत भक्तियोग के लाभ से ही उन्होंने अन्य सब प्रयोजनों और आत्मगतियों की उपेक्षा कर दी है; मानो मुक्ति ही आ गयी हो, इस प्रकार मुमुक्षुओं के समान वे उसे ग्रहण करते हैं।
 
 --- verse 4 ---
 deva:
@@ -82,6 +91,9 @@ iast:
 tato'nekasahasrakoṭi-
 vimānānīkasaṅkuladevayānenāvatarantīndumaṇḍala-
 māvārya brahmasadane nipatati||
+en: Then, coming down by the path of the gods, which is crowded with many thousands of crores of hosts of celestial cars, it covers the circle of the moon and falls upon the abode of Brahmā.
+tel: పిమ్మట అనేక సహస్ర కోటుల విమానసమూహములతో నిండిన దేవయానము ద్వారా దిగి, ఇందుమండలమును కప్పి, బ్రహ్మసదనమున పడుచున్నది.
+hi: इसके बाद अनेक सहस्र कोटि विमानों की सेना से भरे देवयान से उतरती हुई वह इन्दुमण्डल को ढककर ब्रह्मसदन पर गिरती है।
 
 --- verse 5 ---
 deva:
@@ -92,6 +104,9 @@ iast:
 tatra caturdhā bhidyamānā caturbhirnāmabhi-
 ścaturdiśamabhispandantī nadanadīpatimevābhi-
 niviśati sītālakanandā cakṣurbhadreti||
+en: There it is divided into four, and flowing out in the four directions under four names it enters the lord of rivers and streams. The names are Sītā, Alakanandā, Cakṣu and Bhadrā.
+tel: అందు నాలుగుగా చీలి, నాలుగు పేరులతో నాలుగు దిక్కులకు ప్రవహించి, నదనదీపతియైన సముద్రమునే చేరుచున్నది. ఆ పేరులు సీత, అలకనంద, చక్షువు, భద్ర.
+hi: वहाँ चार भागों में बँटकर, चार नामों से चारों दिशाओं में बहती हुई वह नद-नदियों के पति समुद्र में ही प्रवेश करती है। वे नाम हैं सीता, अलकनन्दा, चक्षु और भद्रा।
 
 --- verse 6 ---
 deva:
@@ -104,6 +119,9 @@ sītā tu brahmasadanātkesarācalādigiri-
 śikharebhyo'dho'dhaḥ prasravantī gandhamādanamūrdhasu
 patitvāntareṇa bhadrāśvavarṣaṁ prācyāṁ diśi
 kṣārasamudramabhipraviśati||
+en: Sītā, flowing from the abode of Brahmā down and down from the peaks of Kesarācala and the other mountains, falls upon the heads of Gandhamādana. Then, passing through Bhadrāśvavarṣa, it enters the salt ocean in the eastern quarter.
+tel: సీత బ్రహ్మసదనము నుండి కేసరాచలము మొదలైన గిరిశిఖరముల నుండి క్రిందకు క్రిందకు ప్రవహించి, గంధమాదనము శిరములపై పడుచున్నది. పిమ్మట భద్రాశ్వవర్షము నడుమ సాగి, తూర్పుదిక్కున లవణసముద్రమును ప్రవేశించుచున్నది.
+hi: सीता ब्रह्मसदन से केसराचल आदि पर्वतों के शिखरों से नीचे-नीचे बहती हुई गन्धमादन के मूर्धाओं पर गिरती है। फिर भद्राश्ववर्ष के बीच से होकर पूर्व दिशा में क्षार समुद्र में प्रवेश करती है।
 
 --- verse 7 ---
 deva:
@@ -114,6 +132,9 @@ iast:
 evaṁ mālyavacchikharānniṣpatantī
 tato'nuparatavegā ketumālamabhi cakṣuḥ
 pratīcyāṁ diśi saritpatiṁ praviśati||
+en: In the same way Cakṣu, falling from the peak of Mālyavān and from there flowing on with unbroken speed towards Ketumāla, enters the lord of rivers in the western quarter.
+tel: అట్లే చక్షువు మాల్యవంతము శిఖరము నుండి పడి, అక్కడి నుండి ఆగని వేగముతో కేతుమాలము వైపు సాగి, పశ్చిమదిక్కున సరిత్పతిని ప్రవేశించుచున్నది.
+hi: इसी प्रकार चक्षु माल्यवान् के शिखर से गिरकर, वहाँ से अविरत वेग से केतुमाल की ओर बहकर पश्चिम दिशा में सरित्पति में प्रवेश करती है।
 
 --- verse 8 ---
 deva:
@@ -126,11 +147,14 @@ bhadrā cottarato meruśiraso nipatitā
 giriśikharādgiriśikharamatihāya śṛṅgavataḥ
 śṛṅgādavasyandamānā uttarāṁstu kurūnabhita udīcyāṁ
 diśi jaladhimabhipraviśati||
+en: And Bhadrā, fallen from the top of Meru to the north, crossing from mountain peak to mountain peak, flowing down from the peak of Śṛṅgavān towards the northern Kurus, enters the ocean in the northern quarter.
+tel: భద్ర ఉత్తరమున మేరుశిరము నుండి పడి, గిరిశిఖరము నుండి గిరిశిఖరమును దాటి, శృంగవంతము శృంగము నుండి క్రిందకు జారి, ఉత్తరకురువుల వైపు సాగి, ఉత్తరదిక్కున జలధిని ప్రవేశించుచున్నది.
+hi: और भद्रा उत्तर की ओर मेरु के शिखर से गिरकर, एक गिरिशिखर से दूसरे गिरिशिखर को पार करती हुई, शृङ्गवान् के शृङ्ग से नीचे बहती हुई, उत्तर कुरुओं की ओर जाकर उत्तर दिशा में जलधि में प्रवेश करती है।
 
 --- verse 9 ---
 deva:
 तथैवालकनन्दा
-दक्षिणेनब्रह्मसदनाद्बहूनि गिरिकूटान्यतिक्रम्य
+दक्षिणेन ब्रह्मसदनाद्बहूनि गिरिकूटान्यतिक्रम्य
 हेमकूटाद्धैमकूटान्यतिरभसतररंहसा लुठयन्ती
 भारतमभिवर्षं दक्षिणस्यां दिशि
 जलधिमभिप्रविशति यस्यां स्नानार्थं चागच्छतः
@@ -138,12 +162,15 @@ deva:
 दुर्लभमिति॥
 iast:
 tathaivālakanandā
-dakṣiṇenabrahmasadanādbahūni girikūṭānyatikramya
+dakṣiṇena brahmasadanādbahūni girikūṭānyatikramya
 hemakūṭāddhaimakūṭānyatirabhasatararaṁhasā luṭhayantī
 bhāratamabhivarṣaṁ dakṣiṇasyāṁ diśi
 jaladhimabhipraviśati yasyāṁ snānārthaṁ cāgacchataḥ
 puṁsaḥ pade pade'śvamedharājasūyādīnāṁ phalaṁ na
 durlabhamiti||
+en: In the same way Alakanandā, from the southern side of the abode of Brahmā, crossing many mountain peaks, tumbling down from Hemakūṭa over the Haimakūṭa peaks with very swift force, reaches Bhāratavarṣa and enters the ocean in the southern quarter. For a man who comes to it even only to bathe, the fruit of the Aśvamedha, the Rājasūya and the other sacrifices is not hard to get at every step.
+tel: అట్లే అలకనంద బ్రహ్మసదనమునకు దక్షిణమున నుండి, పెక్కు గిరికూటములను దాటి, హేమకూటము నుండి హైమకూట శిఖరములపై మిక్కిలి వేగముతో దూకి, భారతవర్షమును చేరి, దక్షిణదిక్కున జలధిని ప్రవేశించుచున్నది. స్నానము కొరకు మాత్రమే దాని చేరువకు వచ్చిన మనుష్యునికి అడుగడుగున అశ్వమేధము, రాజసూయము మొదలైన యజ్ఞముల ఫలము దుర్లభము కాదు.
+hi: इसी प्रकार अलकनन्दा ब्रह्मसदन के दक्षिण से बहुत से गिरिकूटों को पार करके, हेमकूट से हैमकूट शिखरों पर अत्यन्त तीव्र वेग से लुढ़कती हुई भारतवर्ष को पहुँचकर दक्षिण दिशा में जलधि में प्रवेश करती है। जो पुरुष केवल स्नान के लिये भी उसके पास आता है, उसे पग-पग पर अश्वमेध, राजसूय आदि यज्ञों का फल दुर्लभ नहीं है।
 
 --- verse 10 ---
 deva:
@@ -152,6 +179,9 @@ deva:
 iast:
 anye ca nadā nadyaśca varṣe varṣe santi
 bahuśo mervādigiriduhitaraḥ śataśaḥ||
+en: There are also many other rivers and streams in every varṣa, hundreds of them, daughters of Meru and the other mountains.
+tel: ప్రతి వర్షమునందును మేరువు మొదలైన గిరుల కుమార్తెలైన ఇతర నదములు, నదులు పెక్కు నూరులుగా ఉన్నవి.
+hi: प्रत्येक वर्ष में मेरु आदि पर्वतों की पुत्रियाँ और भी बहुत से नद और नदियाँ सैकड़ों की संख्या में हैं।
 
 --- verse 11 ---
 deva:
@@ -162,6 +192,9 @@ iast:
 tatrāpi bhāratameva varṣaṁ karmakṣetramanyānyaṣṭa
 varṣāṇi svargiṇāṁ puṇyaśeṣopabhogasthānāni
 bhaumāni svargapadāni vyapadiśanti||
+en: Among these, Bhāratavarṣa alone they declare to be the field of action. The other eight varṣas they declare to be the places where those who have gone to heaven enjoy what is left of their merit; they are abodes of heaven upon the earth.
+tel: వీనిలో భారతవర్షమునే కర్మక్షేత్రమని చెప్పుచున్నారు. మిగిలిన ఎనిమిది వర్షములు స్వర్గమును పొందినవారు తమ పుణ్యశేషమును అనుభవించు స్థానములని, భూమిపై ఉన్న స్వర్గపదములని చెప్పుచున్నారు.
+hi: इनमें भारतवर्ष को ही कर्मक्षेत्र कहते हैं। शेष आठ वर्षों को स्वर्गवासियों के पुण्य-शेष के उपभोग के स्थान, पृथ्वी पर के स्वर्गपद कहते हैं।
 
 --- verse 12 ---
 deva:
@@ -178,6 +211,9 @@ nāgāyutaprāṇānāṁ vajrasaṁhananabalavayomoda-
 pramuditamahāsauratamithunavyavāyāpavargavarṣadhṛtaika-
 garbhakalatrāṇāṁ tatra tu tretāyugasamaḥ kālo
 vartate||
+en: In them the men are like gods. Their life is ten thousand years of men, their vital strength is that of ten thousand elephants, their bodies are knit firm as a thunderbolt, and they are delighted with the joy of strength and youth; their wives hold one conception in the year in which their great and loving union comes to an end. There the time that passes is like the Tretā Yuga.
+tel: వానియందు మనుష్యులు దేవతలవంటివారు. వారి ఆయువు పదివేల మానవ సంవత్సరములు, వారి ప్రాణబలము పదివేల ఏనుగులది, వారి దేహములు వజ్రమువలె గట్టిగా కూర్చబడినవి, వారు బలము, యౌవనముల ఆనందముతో మిక్కిలి సంతోషించువారు; వారి భార్యలు తమ గొప్ప సురతమిథున సంగమము ముగియు సంవత్సరమున ఒక గర్భమును ధరించుచున్నారు. అందు త్రేతాయుగముతో సమానమైన కాలము నడచుచున్నది.
+hi: उनमें मनुष्य देवताओं के समान हैं। उनकी आयु दस हजार मानव वर्ष है, उनका प्राणबल दस हजार हाथियों का है, उनके शरीर वज्र के समान दृढ़ गठे हुए हैं, और वे बल तथा यौवन के आनन्द से प्रमुदित रहते हैं; उनकी पत्नियाँ उस वर्ष में एक गर्भ धारण करती हैं जिसमें उनका महान् सुरत-मिथुन-सङ्गम समाप्त होता है। वहाँ त्रेतायुग के समान काल बीतता है।
 
 --- verse 13 ---
 deva:
@@ -204,6 +240,9 @@ kūjiteṣu jalakrīḍādibhirvicitravinodaiḥ
 sulalitasurasundarīṇāṁ kāmakalilavilāsa-
 hāsalīlāvalokākṛṣṭamanodṛṣṭayaḥ svairaṁ
 viharanti||
+en: There the lords of the gods, to whom their own troop leaders offer great worship, roam at will in the lovely woods, hermitages, dwellings and valleys of the boundary mountains, which shine with trees, creepers and plants bent down by the beauty of clusters of flowers, fruit and tender shoots of every season, and also beside clear lakes which resound with the calls of royal geese, water fowl, kāraṇḍavas, cranes, cakravākas and the rest, birds that look like swarms of bees and are delighted by the fragrance of the many fresh lotuses in bloom. With play in the water and other varied amusements, their minds and their eyes are drawn away by the loving play, the smiles and the playful glances of the charming women of the gods.
+tel: అందు దేవపతులు తమ తమ గణనాయకులచే గొప్ప అర్హణలు పొందుచు, అన్ని ఋతువుల పుష్పగుచ్ఛములు, ఫలములు, చిగురుల శోభచే వంగిన కొమ్మలు, లతలు, వృక్షములచే ప్రకాశించు రమణీయమైన కాననములయందు, ఆశ్రమములయందు, ఆయతనములయందు, వర్షగిరుల లోయలయందు, అట్లే వికసించిన పెక్కు క్రొత్త కమలముల పరిమళముచే సంతోషించిన రాజహంసలు, జలకుక్కుటములు, కారండవములు, సారసములు, చక్రవాకములు మొదలైన మధుకరసమూహములవలె కనబడు పక్షుల కూజితములతో నిండిన నిర్మల జలాశయములయందు స్వేచ్ఛగా విహరించుచున్నారు. జలక్రీడలు మొదలైన వివిధ వినోదములతో, సులలితమైన దేవసుందరీల కామముతో నిండిన విలాసములు, నవ్వులు, లీలాపూర్వక చూపులచే వారి మనస్సులు, చూపులు ఆకర్షింపబడుచున్నవి.
+hi: वहाँ देवपति अपने-अपने गणनायकों से बड़ी अर्हणा पाते हुए, सब ऋतुओं के पुष्प-गुच्छों, फलों और किसलयों की शोभा से झुकी हुई शाखाओं, लताओं और वृक्षों से शोभित रमणीय काननों, आश्रमों, आयतनों और वर्षगिरियों की द्रोणियों में, तथा खिले हुए अनेक नये कमलों की सुगन्ध से प्रमुदित राजहंस, जलकुक्कुट, कारण्डव, सारस, चक्रवाक आदि मधुकर-समूह के समान दिखनेवाले पक्षियों के कूजन से भरे निर्मल जलाशयों के पास स्वच्छन्द विहार करते हैं। जलक्रीडा आदि विचित्र विनोदों में, सुललित देवसुन्दरियों के काम से भरे विलास, हास और लीलापूर्ण अवलोकनों से उनके मन और दृष्टि खिंच जाते हैं।
 
 --- verse 14 ---
 deva:
@@ -214,6 +253,9 @@ iast:
 navasvapi varṣeṣu bhagavānnārāyaṇo mahāpuruṣaḥ
 puruṣāṇāṁ tadanugrahāyātmatattvavyūhenātmanādyāpi
 saṁnidhīyate||
+en: In all the nine varṣas the blessed Nārāyaṇa, the Great Person, is present even now in his own person, in the array of his own nature, for the favour of those men.
+tel: తొమ్మిది వర్షములయందును భగవంతుడు నారాయణుడు, మహాపురుషుడు, ఆ మనుష్యులకు అనుగ్రహము కొరకు ఆత్మతత్త్వవ్యూహముతో తానే ఇప్పటికిని సన్నిధియై ఉన్నాడు.
+hi: नौ ही वर्षों में भगवान् नारायण, महापुरुष, उन मनुष्यों पर अनुग्रह के लिये अपने आत्मतत्त्व के व्यूह से स्वयं अब भी सन्निहित रहते हैं।
 
 --- verse 15 ---
 deva:
@@ -226,6 +268,9 @@ ilāvṛte tu bhagavān bhava
 eka eva pumānna hyanyastatrāparo nirviśati
 bhavānyāḥ śāpanimittajño yatpravekṣyataḥ strībhāva-
 statpaścādvakṣyāmi||
+en: But in Ilāvṛta the blessed Bhava alone is the one male. No other male, knowing the ground of Bhavānī's curse, enters there, for whoever enters becomes a woman. Of that I shall speak later.
+tel: ఇలావృతమునందు భగవంతుడు భవుడు ఒక్కడే పురుషుడు. భవానీ శాపమునకు కారణము ఎరిగి, వేరే పురుషుడు ఎవడును అందు ప్రవేశించడు; ఏలయనగా ప్రవేశించువానికి స్త్రీభావము కలుగును. దానిని తరువాత చెప్పెదను.
+hi: परन्तु इलावृत में भगवान् भव ही एक पुरुष हैं। भवानी के शाप का कारण जाननेवाला दूसरा कोई पुरुष वहाँ प्रवेश नहीं करता, क्योंकि जो प्रवेश करता है उसे स्त्रीभाव हो जाता है। उसे मैं आगे कहूँगा।
 
 --- verse 16 ---
 deva:
@@ -240,6 +285,9 @@ strīgaṇārbudasahasrairavarudhyamāno bhagavataścatu-
 rmūrtermahāpuruṣasya turīyāṁ tāmasīṁ mūrtiṁ prakṛtimātmanaḥ
 saṅkarṣaṇasaṁjñāmātmasamādhirūpeṇa saṁnidhāpyaita-
 dabhigṛṇan bhava upadhāvati||
+en: Surrounded by thousands of arbudas of troops of women whose mistress is Bhavānī, Bhava brings near, by the form of meditation on the self, the fourth form of the Great Person who has four forms, the tāmasa form which is his own prakṛti and bears the name Saṅkarṣaṇa, and praising him in these words he worships him.
+tel: భవానీ నాథురాలుగా గల స్త్రీగణముల అర్బుద సహస్రములచే చుట్టబడిన భవుడు, చతుర్మూర్తియైన మహాపురుషుని నాలుగవ తామస మూర్తిని — తన ప్రకృతియైన, సంకర్షణ అను పేరు గల దానిని — ఆత్మసమాధి రూపముతో సన్నిధానము చేసికొని, ఈ మాటలతో స్తుతించుచు ఆయనను ఉపాసించుచున్నాడు.
+hi: भवानी जिनकी स्वामिनी हैं, उन स्त्री-गणों के सहस्र अर्बुदों से घिरे हुए भव चतुर्मूर्ति महापुरुष की चौथी तामसी मूर्ति को, जो उनकी प्रकृति है और सङ्कर्षण नाम से जानी जाती है, आत्मसमाधि के रूप से सन्निहित करके इन शब्दों से स्तुति करते हुए उनकी उपासना करते हैं।
 
 --- verse 17 ---
 deva:
@@ -250,6 +298,9 @@ iast:
 śrībhagavānuvāca
 oṁ namo bhagavate mahāpuruṣāya sarvaguṇa-
 saṅkhyānāyānantāyāvyaktāya nama iti||
+en: The blessed Lord said: Oṁ. Salutation to the blessed Lord, the Great Person, in whom all the guṇas are reckoned, who is without end and unmanifest. Salutation.
+tel: శ్రీభగవంతుడు పలికెను: ఓం. సర్వగుణముల సంఖ్యానమైన, అనంతుడైన, అవ్యక్తుడైన భగవంతునికి, మహాపురుషునికి నమస్కారము. నమస్కారము.
+hi: श्रीभगवान् ने कहा: ॐ। सब गुणों के सङ्ख्यान रूप, अनन्त और अव्यक्त भगवान् महापुरुष को नमस्कार। नमस्कार।
 
 --- verse 18 ---
 deva:
@@ -262,6 +313,9 @@ bhaje bhajanyāraṇapādapaṅkajaṁ
 bhagasya kṛtsnasya paraṁ parāyaṇam|
 bhakteṣvalaṁ bhāvitabhūtabhāvanaṁ
 bhavāpahaṁ tvā bhavabhāvamīśvaram||
+en: I worship you, the Lord, whose lotus feet are worthy of worship and are the shelter, the highest resort of all excellence, who are enough for your devotees and who cherish the beings you have brought forth, who take away worldly existence and who are yourself the ground of it.
+tel: భజనీయమైన, శరణమైన చరణకమలములు గల, సమస్త భగమునకు పరమైన పరాయణమైన, భక్తులకు చాలినవాడైన, తాను కల్పించిన భూతములను పోషించువాడైన, భవమును తొలగించువాడైన, భవమునకు మూలమైన ఈశ్వరుడా, నిన్ను భజించుచున్నాను.
+hi: हे ईश्वर, जिनके चरणकमल भजनीय और शरण हैं, जो समस्त भग के परम परायण हैं, जो भक्तों के लिये पर्याप्त हैं और अपने उत्पन्न भूतों का पालन करते हैं, जो भव को हरते हैं और स्वयं भव के कारण हैं, उन आपको मैं भजता हूँ।
 
 --- verse 19 ---
 deva:
@@ -274,6 +328,9 @@ na yasya māyāguṇacittavṛttibhi-
 rnirīkṣato hyaṇvapi dṛṣṭirajyate|
 īśe yathā no'jitamanyuraṁhasāṁ
 kastaṁ na manyeta jigīṣurātmanaḥ||
+en: As he looks on, his sight is not coloured even a little by the workings of the mind that rise from the guṇas of māyā, as it is with us, who are not masters of the rush of our anger. Who that wishes to conquer his own self would not honour him?
+tel: ఆయన చూచునప్పుడు, మాయాగుణముల నుండి పుట్టిన చిత్తవృత్తులచే ఆయన దృష్టి అణుమాత్రమైనను రంజితము కాదు; జయింపబడని క్రోధవేగము గల మావలె కాదు. తన ఆత్మను జయింప గోరువాడు ఎవడు ఆయనను గౌరవించకుండును?
+hi: वे देखते हुए भी जिनकी दृष्टि माया के गुणों से उठी चित्तवृत्तियों से तिल भर भी रञ्जित नहीं होती, हमारे समान नहीं, जो अजित क्रोध के वेग के अधीन हैं। अपने आत्मा को जीतने की इच्छा रखनेवाला कौन उन्हें न मानेगा?
 
 --- verse 20 ---
 deva:
@@ -286,6 +343,9 @@ asaddṛśo yaḥ pratibhāti māyayā
 kṣībeva madhvāsavatāmralocanaḥ|
 na nāgavadhvo'rhaṇa īśire hriyā
 yatpādayoḥ sparśanadharṣitendriyāḥ||
+en: To those whose sight is not true he appears, through māyā, as if drunk, his eyes copper-red with honey wine. The wives of the Nāgas, their senses overcome by the touch of his feet, were not able for shame to carry his worship further.
+tel: అసత్తైన చూపు గలవారికి ఆయన మాయచే మధువాసవముచే ఎరుపెక్కిన కన్నులు గల మత్తునివలె కనబడుచున్నాడు. ఆయన పాదముల స్పర్శచే ఇంద్రియములు లొంగిపోయిన నాగవధువులు సిగ్గుచే ఆ అర్హణను కొనసాగించలేకపోయిరి.
+hi: जिनकी दृष्टि असत् है, उन्हें वे माया से मधु-आसव से ताम्र नेत्रोंवाले मत्त के समान जान पड़ते हैं। उनके चरणों के स्पर्श से जिनकी इन्द्रियाँ अभिभूत हो गयीं, वे नागवधुएँ लज्जा से उनकी अर्हणा को आगे न चला सकीं।
 
 --- verse 21 ---
 deva:
@@ -298,6 +358,9 @@ yamāhurasya sthitijanmasaṁyamaṁ
 tribhirvihīnaṁ yamanantamṝṣayaḥ|
 na veda siddhārthamiva kvacitsthitaṁ
 bhūmaṇḍalaṁ mūrdhasahasradhāmasu||
+en: Him they call the staying, the birth and the ending of this world, and him, free of these three, the sages call endless. He does not feel the circle of the earth, resting somewhere upon the thousand abodes of his heads, any more than a mustard seed is felt.
+tel: ఈ జగత్తు స్థితి, జన్మము, సంయమము ఆయననే అని చెప్పుచున్నారు; ఆ మూడు లేనివాడైన ఆయనను ఋషులు అనంతుడని చెప్పుచున్నారు. ఆయన వేయి శిరముల స్థానములయందు ఎక్కడో ఉన్న భూమండలమును ఆవగింజవలె ఎరుగడు.
+hi: इस जगत् की स्थिति, जन्म और संयम जिन्हें कहते हैं, और इन तीनों से रहित जिन्हें ऋषि अनन्त कहते हैं, वे अपने सहस्र मस्तकों के धामों में कहीं रखे हुए भूमण्डल को सरसों के दाने के समान भी नहीं जानते।
 
 --- verse 22 ---
 deva:
@@ -310,6 +373,9 @@ yasyādya āsīd guṇavigraho mahān
 vijñānadhiṣṇyo bhagavānajaḥ kila|
 yatsambhavo'haṁ trivṛtā svatejasā
 vaikārikaṁ tāmasamaindriyaṁ sṛje||
+en: From him there came first the great principle, which is the embodiment of the guṇas, and then the blessed unborn one, the seat of knowledge. I came to be from that, and with my own threefold power I bring forth the vaikārika, the tāmasa and the sensory.
+tel: ఆయన నుండి మొదట గుణవిగ్రహమైన మహత్తు కలిగినది, పిమ్మట విజ్ఞానమునకు ధిష్ణ్యమైన అజుడైన భగవంతుడు కలిగెను. ఆ దాని నుండి నేను పుట్టితిని; త్రివృత్తమైన నా తేజముతో వైకారికమును, తామసమును, ఐంద్రియమును సృజించుచున్నాను.
+hi: उनसे पहले गुणविग्रह महत्तत्त्व हुआ, और उसके बाद विज्ञान के धिष्ण्य अज भगवान् हुए। उसी से मैं उत्पन्न हुआ, और अपने त्रिवृत् तेज से वैकारिक, तामस और ऐन्द्रिय की सृष्टि करता हूँ।
 
 --- verse 23 ---
 deva:
@@ -322,6 +388,9 @@ ete vayaṁ yasya vaśe mahātmanaḥ
 sthitāḥ śakuntā iva sūtrayantritāḥ|
 mahānahaṁ vaikṛtatāmasendriyāḥ
 sṛjāma sarve yadanugrahādidam||
+en: We who are here stand in the power of that great Self like birds bound by a string: the mahat, I, and the organs born of the vaikṛta and the tāmasa. By his grace we all bring forth this world.
+tel: మేము ఇక్కడ ఉన్నవారము ఆ మహాత్ముని వశమున దారముచే కట్టబడిన పక్షులవలె నిలిచి ఉన్నాము: మహత్తు, నేను, వైకృత తామసముల నుండి పుట్టిన ఇంద్రియములు. ఆయన అనుగ్రహముచే మేమందరము ఈ జగత్తును సృజించుచున్నాము.
+hi: हम जो यहाँ हैं, उस महात्मा के वश में डोरी से बँधे पक्षियों के समान स्थित हैं: महत्, मैं, और वैकृत तथा तामस से उत्पन्न इन्द्रियाँ। उनके अनुग्रह से हम सब इस जगत् की सृष्टि करते हैं।
 
 --- verse 24 ---
 deva:
@@ -334,9 +403,15 @@ yannirmitāṁ karhyapi karmaparvaṇīṁ
 māyāṁ jano'yaṁ guṇasargamohitaḥ|
 na veda nistāraṇayogamañjasā
 tasmai namaste vilayodayātmane||
+en: This man, deluded by the creation of the guṇas, never knows the māyā made by him, which is jointed with works, nor truly the way of crossing beyond it. Salutation to you, to him whose nature is dissolution and arising.
+tel: గుణసర్గముచే మోహితుడైన ఈ జనుడు ఆయనచే నిర్మింపబడిన, కర్మములే కణుపులుగా గల మాయను, దానిని దాటు ఉపాయమును ఎన్నడును సరిగా ఎరుగడు. విలయము, ఉదయము స్వరూపముగా గల ఆ నీకు నమస్కారము.
+hi: गुणों की सृष्टि से मोहित यह जन उनकी बनायी हुई, कर्म की पर्वोंवाली माया को और उससे पार होने के उपाय को कभी ठीक से नहीं जानता। विलय और उदय जिनका स्वरूप है, उन आपको नमस्कार है।
 
 --- verse none ---
 deva:
 इति श्रीमद्भागवते महापुराणे पारमहंस्यां संहितायां पञ्चमस्कन्धे सप्तदशोऽध्यायः॥ १७॥
 iast:
 iti śrīmadbhāgavate mahāpurāṇe pāramahaṁsyāṁ saṁhitāyāṁ pañcamaskandhe saptadaśo'dhyāyaḥ|| 17||
+en: Thus ends the seventeenth adhyāya in the fifth skandha of the Śrīmad Bhāgavata Mahāpurāṇa, the saṁhitā of the paramahaṁsas.
+tel: ఇది శ్రీమద్భాగవత మహాపురాణమునందు, పరమహంసల సంహితయందు, పంచమస్కంధమునందు సప్తదశాధ్యాయము.
+hi: इस प्रकार श्रीमद्भागवत महापुराण की परमहंसों की संहिता के पञ्चम स्कन्ध में सत्रहवाँ अध्याय समाप्त हुआ।
