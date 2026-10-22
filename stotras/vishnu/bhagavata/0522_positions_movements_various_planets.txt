@@ -9,7 +9,7 @@ Type: Purāṇa (an adhyāya of the Śrīmad Bhāgavata, Skandha 5)
 
 Source / recension: Base text and authority: the Gītā Press, Gorakhpur Śrīmadbhāgavata Mahāpurāṇa with Hindi translation, Part 1 (Gītā Press code 26), archive.org item `shrimadbhagwat-mahapuran-bhag-1`, printed pages 671–674; the PDF page numbers are the printed ones. The PDF carries the typesetter's own text layer in the Chanakya font encoding, and the text was decoded from it by machine with `bin/bhagavata/chanakya.py`, not read off OCR or typed. The decoder was checked against GRETIL over all twelve skandhas before any file was written, and the differences that remain were sampled and found to be readings of the two editions. Second witness: GRETIL's `sa_bhAgavatapurANa.xml` (IAST, contributed by Ulrich Stiehl), a separate editorial lineage, compared verse by verse by machine. The TTD edition with the commentaries of Śrīdhara, Vīrarāghava and Vijayadhvaja (archive.org `Bhagavata_Purana_With_Multiple_Commentaries_TTD_Critical_Edition`) is the third witness where one is needed; it was not read for this file. The IAST was generated mechanically from the Devanāgarī with `bin/dev2iast.py`.
 
-Recension note: Text-only file, written 1 Oct 2026 at the user's instruction to lay down the whole Bhāgavata first: the English, Telugu and Hindi meanings are still to be added, and the witnesses' differences listed here have been recorded by machine and not yet adjudicated. The print is followed throughout. The print numbers 17 verses and GRETIL numbers 17. Of the 17 verses GRETIL has under the same number, 14 agree with the print letter for letter once spacing and the spelling of nasals are set aside; the rest differ: 9, 11, 15. Spacing is the print's, as its text layer gives it; in a few places justification has left a space inside a word, and these are still to be closed when the verse is read. The speaker lines (श्रीशुक उवाच and the others) are printed in italic above the verse they introduce, and are given as its first line.
+Recension note: Meanings written 22 Oct 2026 (session S78). The differences between the witnesses listed below were read as the verses were glossed; except where this note says otherwise, each is a spelling, a sandhi or a word order of the two editions, none of them changes the sense, and the print's reading therefore stands unbracketed. The print is followed throughout. The print numbers 17 verses and GRETIL numbers 17. Of the 17 verses GRETIL has under the same number, 14 agree with the print letter for letter once spacing and the spelling of nasals are set aside; the rest differ: 9, 11, 15. Spacing is the print's, as its text layer gives it. The speaker lines (श्रीशुक उवाच and the others) are printed in italic above the verse they introduce, and are given as its first line. Six lost spaces were closed as the verses were read. The print's text layer had run two words together at verse 5 (पक्षद्वयं दिवा), verse 6 (नभोवीथ्यां प्रचरति), verse 9 (प्राणो जीवश्च), verse 15 (चरति यदि), and twice at verse 17 (जनान्तर उपलभ्यन्ते and एव लोकानां). Every one of the six follows an anusvāra or a vowel, where this print breaks almost always, and in every one GRETIL has the space; the old strings were extracted from the file by machine, not typed. At verse 7 the print divides स ह द्यावापृथिव्योर्° … कार्त्स्न्येन सह भुञ्जीत where GRETIL divides सह द्यावापृथिव्योर्° … कार्त्स्न्येन स ह भुञ्जीत; both read as they stand, so the print's division is kept. The measurements are given in the verses' own units, lakṣa yojanas and muhūrtas, and none is converted.
 
 Verse count: 17, plus the closing colophon printed unnumbered.
 
@@ -28,6 +28,9 @@ yadetadbhagavata ādityasya meruṁ dhruvaṁ ca
 pradakṣiṇena parikrāmato rāśīnāmabhimukhaṁ
 pracalitaṁ cāpradakṣiṇaṁ bhagavatopavarṇitamamuṣya
 vayaṁ kathamanumimīmahīti||
+en: The king said: You have described, revered one, how the glorious sun goes round Meru and Dhruva keeping them on its right, and how it also moves facing the signs of the zodiac, keeping them on its left. How are we to understand this of the sun?
+tel: రాజు పలికెను: పూజ్యుడా, భగవంతుడైన సూర్యుడు మేరువును, ధ్రువుని కుడివైపున ఉంచుకొని ప్రదక్షిణముగా తిరుగుచున్నాడని, రాశులకు ఎదురుగా అప్రదక్షిణముగా కదలుచున్నాడని మీరు వర్ణించితిరి. ఆ సూర్యుని గురించి ఇది మేము ఎట్లు తెలిసికొనవలెను?
+hi: राजा ने कहा: पूज्य, आपने वर्णन किया कि भगवान् सूर्य मेरु और ध्रुव को अपनी दाहिनी ओर रखकर प्रदक्षिणा करते हैं, और राशियों के सामने अप्रदक्षिण रूप से भी चलते हैं। उस सूर्य के विषय में हम इसे किस प्रकार समझें?
 
 --- verse 2 ---
 deva:
@@ -48,6 +51,9 @@ rupalakṣitena kālacakreṇa dhruvaṁ meruṁ ca pradakṣiṇena
 paridhāvatā saha paridhāvamānānāṁ tadāśrayāṇāṁ
 sūryādīnāṁ grahāṇāṁ gatiranyaiva nakṣatrāntare rāśyantare
 copalabhyamānatvāt||
+en: He said: Ants and other small creatures cling to a potter's wheel and turn along with it as it turns, yet their own course is a different one, for they are seen now at one place upon it and now at another. In the same way the sun and the other planets cling to the wheel of time, which is marked out by the nakṣatras and the rāśis, and they run along with it as it runs round Dhruva and Meru keeping them on its right; yet their own course is a different one, for they are seen now in one nakṣatra and now in another, now in one rāśi and now in another.
+tel: ఆయన పలికెను: కుమ్మరి చక్రము తిరుగుచుండగా దానిని పట్టుకొని చీమలు మొదలైనవి దానితో కూడ తిరుగుచున్నవి. అయినను వాటి గతి వేరైనది, ఏలయనగా అవి ఆ చక్రముపై ఒకప్పుడు ఒక చోట, మరొకప్పుడు మరొక చోట కనబడుచున్నవి. అట్లే నక్షత్రములతో, రాశులతో గుర్తింపబడిన కాలచక్రమును సూర్యుడు మొదలైన గ్రహములు ఆశ్రయించి, ధ్రువుని, మేరువును కుడివైపున ఉంచుకొని తిరుగు ఆ చక్రముతో కూడ తిరుగుచున్నవి. అయినను వాటి గతి వేరైనది, ఏలయనగా అవి వేరొక నక్షత్రమునందు, వేరొక రాశియందు కనబడుచున్నవి.
+hi: उन्होंने कहा: कुम्हार के चक्र के घूमने पर उसे पकड़े हुए चींटी आदि उसके साथ घूमते हैं, फिर भी उनकी अपनी गति भिन्न है, क्योंकि वे उस चक्र पर कभी एक स्थान पर और कभी दूसरे स्थान पर दिखाई देते हैं। इसी प्रकार नक्षत्रों और राशियों से चिह्नित कालचक्र का आश्रय लेकर सूर्य आदि ग्रह, ध्रुव और मेरु को दाहिनी ओर रखकर घूमने वाले उस चक्र के साथ घूमते हैं, फिर भी उनकी अपनी गति भिन्न है, क्योंकि वे दूसरे नक्षत्र में और दूसरी राशि में दिखाई देते हैं।
 
 --- verse 3 ---
 deva:
@@ -64,6 +70,9 @@ karmaviśuddhinimittaṁ kavibhirapi ca vedena
 vijijñāsyamāno dvādaśadhā vibhajya ṣaṭsu
 vasantādiṣvṛtuṣu yathopajoṣamṛtuguṇān
 vidadhāti||
+en: This same glorious one is the very first Puruṣa, Nārāyaṇa himself, whom the wise and the Veda seek to know. For the welfare of the worlds and for the purifying of works he divides himself, who is made of the three Vedas, into twelve parts; and in the six seasons that begin with spring he ordains the qualities of the seasons as each is fitting.
+tel: ఈ భగవంతుడే ఆదిపురుషుడు, సాక్షాత్తు నారాయణుడు. కవులును, వేదమును ఆయనను తెలిసికొనగోరుచున్నవి. లోకముల క్షేమము కొరకు, కర్మశుద్ధి కొరకు త్రయీమయుడైన తన్ను ఆయన పన్నెండు భాగములుగా విభజించుకొని, వసంతము మొదలైన ఆరు ఋతువులలో ఋతుగుణములను తగినట్లు కల్పించుచున్నాడు.
+hi: यही भगवान् आदिपुरुष हैं, साक्षात् नारायण हैं, जिन्हें कवि और वेद जानने की इच्छा करते हैं। लोकों के कल्याण के लिए और कर्म की शुद्धि के लिए त्रयीमय अपने को वे बारह भागों में बाँटकर, वसन्त आदि छह ऋतुओं में ऋतुओं के गुणों को यथायोग्य रूप से रचते हैं।
 
 --- verse 4 ---
 deva:
@@ -76,32 +85,41 @@ tametamiha puruṣāstrayyā vidyayā
 varṇāśramācārānupathā uccāvacaiḥ karmabhirāmnātai-
 ryogavitānaiśca śraddhayā yajanto'ñjasā śreyaḥ
 samadhigacchanti||
+en: Here people who follow the practices of their varṇa and their āśrama worship this same one with faith, by the knowledge of the three Vedas, by the high and the low rites that the Veda hands down, and by the many forms of yoga; and so they readily attain the highest good.
+tel: ఇచ్చట వర్ణాశ్రమాచారములను అనుసరించు మనుష్యులు త్రయీవిద్యతో, వేదమునందు చెప్పబడిన ఉచ్చావచ కర్మలతో, యోగవితానములతో శ్రద్ధతో ఈ భగవంతునే పూజించుచు, సులభముగా శ్రేయమును పొందుచున్నారు.
+hi: यहाँ वर्ण और आश्रम के आचारों का अनुसरण करने वाले मनुष्य त्रयीविद्या से, वेद में कहे गये ऊँचे और नीचे कर्मों से, तथा योग के विस्तारों से श्रद्धापूर्वक इन्हीं की पूजा करते हुए सहज ही श्रेय को प्राप्त करते हैं।
 
 --- verse 5 ---
 deva:
 अथ स एष आत्मा लोकानां
 द्यावापृथिव्योरन्तरेण नभोवलयस्य कालचक्रगतो
 द्वादश मासान् भुङ्क्ते राशिसंज्ञान् संवत्सरावयवा-
-न्मासः पक्षद्वयंदिवा नक्तं चेति सपादर्क्ष-
+न्मासः पक्षद्वयं दिवा नक्तं चेति सपादर्क्ष-
 द्वयमुपदिशन्ति यावता षष्ठमंशं भुञ्जीत स वै
 ऋतुरित्युपदिश्यते संवत्सरावयवः॥
 iast:
 atha sa eṣa ātmā lokānāṁ
 dyāvāpṛthivyorantareṇa nabhovalayasya kālacakragato
 dvādaśa māsān bhuṅkte rāśisaṁjñān saṁvatsarāvayavā-
-nmāsaḥ pakṣadvayaṁdivā naktaṁ ceti sapādarkṣa-
+nmāsaḥ pakṣadvayaṁ divā naktaṁ ceti sapādarkṣa-
 dvayamupadiśanti yāvatā ṣaṣṭhamaṁśaṁ bhuñjīta sa vai
 ṛturityupadiśyate saṁvatsarāvayavaḥ||
+en: Now this same Self of the worlds, carried on the wheel of time in the circle of the sky between heaven and earth, enjoys the twelve months, which bear the names of the rāśis and are the parts of the year. A month is two fortnights. They teach that a month, which is one day and one night, is two nakṣatras and a quarter. The time in which he enjoys a sixth part is taught to be a season, a part of the year.
+tel: ఇక లోకముల ఆత్మయైన ఈ సూర్యుడు, భూమి ఆకాశముల నడుమ నభోవలయమునందు కాలచక్రముపై నడచుచు, రాశుల పేరులను కల, సంవత్సరమునకు అవయవములైన పన్నెండు మాసములను అనుభవించుచున్నాడు. మాసము రెండు పక్షములు. ఒక పగలు ఒక రాత్రి అగు ఆ మాసము రెండు పావు నక్షత్రములని చెప్పుచున్నారు. ఆయన ఆరవ భాగమును ఎంత కాలములో అనుభవించునో, ఆ కాలమే సంవత్సరమునకు అవయవమైన ఋతువని చెప్పబడుచున్నది.
+hi: अब लोकों के यही आत्मा सूर्य, आकाश और पृथ्वी के बीच नभोवलय में कालचक्र पर चलते हुए, राशियों के नाम वाले और संवत्सर के अवयव बारह महीनों को भोगते हैं। महीना दो पक्ष का होता है। एक दिन और एक रात वाले उस महीने को सवा दो नक्षत्र कहते हैं। वे जितने समय में छठे भाग को भोगते हैं, वही समय संवत्सर का अवयव ऋतु कहा जाता है।
 
 --- verse 6 ---
 deva:
 अथ
-च यावतार्धेन नभोवीथ्यांप्रचरति तं
+च यावतार्धेन नभोवीथ्यां प्रचरति तं
 कालमयनमाचक्षते॥
 iast:
 atha
-ca yāvatārdhena nabhovīthyāṁpracarati taṁ
+ca yāvatārdhena nabhovīthyāṁ pracarati taṁ
 kālamayanamācakṣate||
+en: And the time in which he travels through half the path of the sky they call an ayana.
+tel: ఆయన నభోవీథిలో సగమును ఎంత కాలములో సంచరించునో, ఆ కాలమును అయనము అని చెప్పుచున్నారు.
+hi: और वे आकाश के मार्ग के आधे भाग को जितने समय में चलते हैं, उस समय को अयन कहते हैं।
 
 --- verse 7 ---
 deva:
@@ -116,6 +134,9 @@ yāvannabhomaṇḍalaṁ sa ha dyāvāpṛthivyormaṇḍalābhyāṁ
 kārtsnyena saha bhuñjīta taṁ kālaṁ saṁvatsaraṁ
 parivatsaramiḍāvatsaramanuvatsaraṁ vatsaramiti
 bhānormāndyaśaighryasamagatibhiḥ samāmananti||
+en: And the span in which he, together with the spheres of heaven and earth, enjoys the whole circle of the sky — that time they name saṁvatsara, parivatsara, iḍāvatsara, anuvatsara and vatsara, according to the slow, the swift and the even motions of the sun.
+tel: ఆయన భూమి ఆకాశముల మండలములతో కూడ నభోమండలమును ఎంత కాలములో పూర్తిగా అనుభవించునో, ఆ కాలమును సూర్యుని మాంద్య, శైఘ్ర్య, సమ గతుల ననుసరించి సంవత్సరము, పరివత్సరము, ఇడావత్సరము, అనువత్సరము, వత్సరము అని పేర్కొనుచున్నారు.
+hi: और वे आकाश तथा पृथ्वी के मण्डलों के साथ सम्पूर्ण नभोमण्डल को जितने समय में पूरी तरह भोगते हैं, उस समय को सूर्य की मन्द, शीघ्र और सम गतियों के अनुसार संवत्सर, परिवत्सर, इडावत्सर, अनुवत्सर और वत्सर कहते हैं।
 
 --- verse 8 ---
 deva:
@@ -130,20 +151,26 @@ upariṣṭāllakṣayojanata upalabhyamāno'rkasya
 saṁvatsarabhuktiṁ pakṣābhyāṁ māsabhuktiṁ sapādarkṣābhyāṁ
 dinenaiva pakṣabhuktimagracārī drutataragamano
 bhuṅkte||
+en: In this way the moon, seen a lakh of yojanas above the rays of the sun, enjoys in two fortnights the sun's course of a year, in two nakṣatras and a quarter the sun's course of a month, and in a single day the sun's course of a fortnight. It goes ahead of the sun and its motion is swifter.
+tel: ఈ విధముగా సూర్యకిరణములకు ఒక లక్ష యోజనముల పైన కనబడు చంద్రుడు, సూర్యుని సంవత్సర భుక్తిని రెండు పక్షములలో, మాస భుక్తిని రెండు పావు నక్షత్రములలో, పక్ష భుక్తిని ఒక దినములోనే అనుభవించుచున్నాడు. ఆయన సూర్యుని ముందు నడచువాడు, ఆయన గమనము మిక్కిలి వేగముగా ఉన్నది.
+hi: इस प्रकार सूर्य की किरणों से एक लाख योजन ऊपर दिखाई देने वाला चन्द्रमा, सूर्य की संवत्सर भर की गति को दो पक्षों में, मास भर की गति को सवा दो नक्षत्रों में, और पक्ष भर की गति को एक ही दिन में भोगता है। वह सूर्य के आगे चलता है और उसका गमन अधिक तेज है।
 
 --- verse 9 ---
 deva:
 अथ चापूर्यमाणाभिश्च
 कलाभिरमराणां क्षीयमाणाभिश्च कलाभिः
 पितॄणामहोरात्राणि पूर्वपक्षापरपक्षाभ्यां वितन्वानः
-सर्वजीवनिवहप्राणोजीवश्चैकमेकं नक्षत्रं
+सर्वजीवनिवहप्राणो जीवश्चैकमेकं नक्षत्रं
 त्रिंशता मुहूर्तैर्भुङ्क्ते॥
 iast:
 atha cāpūryamāṇābhiśca
 kalābhiramarāṇāṁ kṣīyamāṇābhiśca kalābhiḥ
 pitṝṇāmahorātrāṇi pūrvapakṣāparapakṣābhyāṁ vitanvānaḥ
-sarvajīvanivahaprāṇojīvaścaikamekaṁ nakṣatraṁ
+sarvajīvanivahaprāṇo jīvaścaikamekaṁ nakṣatraṁ
 triṁśatā muhūrtairbhuṅkte||
+en: And with its waxing digits it spreads out the days and nights of the gods, and with its waning digits those of the forefathers, by the bright fortnight and by the dark fortnight. It is the breath of the whole host of living beings and their very life, and it enjoys one nakṣatra after another in thirty muhūrtas.
+tel: ఇంకను వృద్ధి చెందు కళలతో దేవతలకు, క్షీణించు కళలతో పితృదేవతలకు పూర్వపక్షము అపరపక్షములచే అహోరాత్రములను విస్తరించుచున్నాడు. ఆయన సర్వజీవరాశుల ప్రాణము, జీవుడు; ముప్పది ముహూర్తములలో ఒక్కొక్క నక్షత్రమును అనుభవించుచున్నాడు.
+hi: और बढ़ती हुई कलाओं से देवताओं के, तथा घटती हुई कलाओं से पितरों के अहोरात्र को पूर्वपक्ष और अपरपक्ष के द्वारा फैलाता है। वह समस्त जीवसमूह का प्राण और जीव है, और तीस मुहूर्तों में एक-एक नक्षत्र को भोगता है।
 
 --- verse 10 ---
 deva:
@@ -156,6 +183,9 @@ ya eṣa ṣoḍaśakalaḥ puruṣo
 bhagavānmanomayo'nnamayo'mṛtamayo devapitṛmanuṣya-
 bhūtapaśupakṣisarīsṛpavīrudhāṁ prāṇāpyāyana-
 śīlatvātsarvamaya iti varṇayanti||
+en: This Puruṣa of sixteen digits is the glorious moon. Because it is his nature to nourish the breath of the gods, the forefathers, men, other beings, cattle, birds, creeping things and plants, they describe him as made of mind, made of food, made of nectar, and made of all things.
+tel: పదునారు కళలు కల ఈ పురుషుడే భగవంతుడైన చంద్రుడు. దేవతలకు, పితృదేవతలకు, మనుష్యులకు, భూతములకు, పశువులకు, పక్షులకు, సరీసృపములకు, మొక్కలకు ప్రాణమును పుష్టి చేయు స్వభావము కలవాడు కావున, ఆయనను మనోమయుడు, అన్నమయుడు, అమృతమయుడు, సర్వమయుడు అని వర్ణించుచున్నారు.
+hi: सोलह कलाओं वाले यही पुरुष भगवान् चन्द्रमा हैं। देवताओं, पितरों, मनुष्यों, भूतों, पशुओं, पक्षियों, सरीसृपों और वनस्पतियों के प्राण को पुष्ट करने का स्वभाव होने से उन्हें मनोमय, अन्नमय, अमृतमय और सर्वमय कहकर वर्णन करते हैं।
 
 --- verse 11 ---
 deva:
@@ -166,6 +196,9 @@ iast:
 tata upariṣṭāttrilakṣayojanato nakṣatrāṇi meruṁ
 dakṣiṇenaiva kālāyana īśvarayojitāni
 sahābhijitāṣṭāviṁśatiḥ||
+en: Three lakh yojanas above that are the nakṣatras, fixed in their places by the Lord. Carried in the course of time, they go round Meru keeping it on their right. With Abhijit they are twenty-eight.
+tel: దానికి మూడు లక్షల యోజనముల పైన నక్షత్రములు ఉన్నవి. ఈశ్వరుడు వాటిని వాటి స్థానములలో నియోగించెను. కాలగతిలో నడచుచు అవి మేరువును కుడివైపున ఉంచుకొని తిరుగుచున్నవి. అభిజిత్తుతో కలిపి అవి ఇరువది ఎనిమిది.
+hi: उससे तीन लाख योजन ऊपर नक्षत्र हैं, जिन्हें ईश्वर ने अपने अपने स्थानों में नियुक्त किया है। काल की गति में चलते हुए वे मेरु को दाहिनी ओर रखकर घूमते हैं। अभिजित् के साथ वे अट्ठाईस हैं।
 
 --- verse 12 ---
 deva:
@@ -182,6 +215,9 @@ paścātsahaiva vārkasya śaighryamāndyasāmyā-
 bhirgatibhirarkavaccarati lokānāṁ nityadānukūla
 eva prāyeṇa varṣayaṁścāreṇānumīyate sa
 vṛṣṭiviṣṭambhagrahopaśamanaḥ||
+en: Two lakh yojanas above that Uśanā is seen. He goes before the sun, behind it, or along with it, with swift, slow and even motions, as the sun does. He is always favourable to the worlds, and from his course it is generally inferred that rain will come. He quietens the planets that hold back rain.
+tel: దానికి రెండు లక్షల యోజనముల పైన ఉశన కనబడుచున్నాడు. ఆయన సూర్యునికి ముందు, వెనుక, లేక ఆయనతో కూడనే శైఘ్ర్య, మాంద్య, సామ్య గతులతో సూర్యునివలె సంచరించుచున్నాడు. లోకములకు ఆయన ఎల్లప్పుడు అనుకూలుడు; ఆయన చారమును చూచి సామాన్యముగా వర్షము కురియునని ఊహించుచున్నారు. వృష్టిని నిరోధించు గ్రహములను ఆయన ఉపశమింపజేయువాడు.
+hi: उससे दो लाख योजन ऊपर उशना दिखाई देते हैं। वे सूर्य के आगे, पीछे, अथवा उनके साथ ही शीघ्र, मन्द और सम गतियों से सूर्य के समान चलते हैं। वे लोकों के लिए सदा अनुकूल हैं, और उनके चार से सामान्यतः वर्षा का अनुमान किया जाता है। वर्षा को रोकने वाले ग्रहों को वे शान्त करते हैं।
 
 --- verse 13 ---
 deva:
@@ -194,6 +230,9 @@ uśanasā budho vyākhyātastata upariṣṭād
 dvilakṣayojanato budhaḥ somasuta upalabhyamānaḥ
 prāyeṇa śubhakṛdyadārkād vyatiricyeta tadāti-
 vātābhraprāyānāvṛṣṭyādibhayamāśaṁsate||
+en: Budha has been described along with Uśanā. Two lakh yojanas above that Budha, the son of the moon, is seen. He is generally a doer of good; but when he departs from the sun, he portends the fear of high wind, of cloud and of drought and the like.
+tel: ఉశనునితో కూడ బుధుడు వర్ణింపబడెను. దానికి రెండు లక్షల యోజనముల పైన సోమపుత్రుడైన బుధుడు కనబడుచున్నాడు. ఆయన సామాన్యముగా శుభము చేయువాడు; కాని సూర్యునికి దూరముగా వెడలినపుడు అతివాతము, మేఘము, అనావృష్టి మొదలైన భయములను సూచించుచున్నాడు.
+hi: उशना के साथ बुध का वर्णन हो गया। उससे दो लाख योजन ऊपर सोम के पुत्र बुध दिखाई देते हैं। वे सामान्यतः शुभ करने वाले हैं; परन्तु जब वे सूर्य से हट जाते हैं, तब अति वायु, मेघ और अनावृष्टि आदि के भय की सूचना देते हैं।
 
 --- verse 14 ---
 deva:
@@ -208,18 +247,24 @@ ata
 upalabhyamānastribhistribhiḥ pakṣairekaikaśo
 rāśīndvādaśānubhuṅkte yadi na vakreṇābhivartate
 prāyeṇāśubhagraho'ghaśaṁsaḥ||
+en: Above that Aṅgāraka too is seen, at two lakh yojanas. If he does not turn backward, he enjoys the twelve rāśis one by one, three fortnights to each. He is generally an inauspicious planet and a bringer of ill.
+tel: దానికి పైన రెండు లక్షల యోజనములలో అంగారకుడును కనబడుచున్నాడు. ఆయన వక్రగతితో తిరుగకున్నచో, మూడు మూడు పక్షములతో ఒక్కొక్కటిగా పన్నెండు రాశులను అనుభవించుచున్నాడు. ఆయన సామాన్యముగా అశుభ గ్రహము, అఘమును సూచించువాడు.
+hi: उससे ऊपर दो लाख योजन पर अंगारक भी दिखाई देते हैं। यदि वे वक्र गति से न चलें, तो तीन-तीन पक्षों में एक-एक करके बारह राशियों को भोगते हैं। वे सामान्यतः अशुभ ग्रह और अघ की सूचना देने वाले हैं।
 
 --- verse 15 ---
 deva:
 तत उपरिष्टाद् द्विलक्षयोजनान्तरगतो
 भगवान् बृहस्पतिरेकैकस्मिन् राशौ
-परिवत्सरं परिवत्सरं चरतियदि न वक्रः
+परिवत्सरं परिवत्सरं चरति यदि न वक्रः
 स्यात्प्रायेणानुकूलो ब्राह्मणकुलस्य॥
 iast:
 tata upariṣṭād dvilakṣayojanāntaragato
 bhagavān bṛhaspatirekaikasmin rāśau
-parivatsaraṁ parivatsaraṁ caratiyadi na vakraḥ
+parivatsaraṁ parivatsaraṁ carati yadi na vakraḥ
 syātprāyeṇānukūlo brāhmaṇakulasya||
+en: Two lakh yojanas above that is the glorious Bṛhaspati. He moves in one rāśi after another, a year in each, unless he should be retrograde. He is generally favourable to the community of the brāhmaṇas.
+tel: దానికి రెండు లక్షల యోజనముల పైన భగవంతుడైన బృహస్పతి ఉన్నాడు. ఆయన వక్రుడు కాకున్నచో ఒక్కొక్క రాశియందు ఒక సంవత్సరము చొప్పున సంచరించుచున్నాడు. ఆయన సామాన్యముగా బ్రాహ్మణ కులమునకు అనుకూలుడు.
+hi: उससे दो लाख योजन ऊपर भगवान् बृहस्पति हैं। यदि वे वक्र न हों, तो एक-एक राशि में एक-एक वर्ष चलते हैं। वे सामान्यतः ब्राह्मण कुल के लिए अनुकूल हैं।
 
 --- verse 16 ---
 deva:
@@ -232,21 +277,30 @@ tata upariṣṭādyojanalakṣadvayātpratīyamānaḥ
 śanaiścara ekaikasmin rāśau triṁśanmāsān
 vilambamānaḥ sarvānevānuparyeti tāvadbhiranuvatsaraiḥ
 prāyeṇa hi sarveṣāmaśāntikaraḥ||
+en: Two lakh yojanas above that Śanaiścara is known to be. Lingering thirty months in each single rāśi, he passes round all of them in that many years. He generally brings unrest to all.
+tel: దానికి రెండు లక్షల యోజనముల పైన శనైశ్చరుడు తెలియబడుచున్నాడు. ఒక్కొక్క రాశియందు ముప్పది మాసములు ఆలస్యము చేయుచు, అన్ని రాశులను అన్ని సంవత్సరములలో చుట్టివచ్చుచున్నాడు. ఆయన సామాన్యముగా అందరికిని అశాంతిని కలిగించువాడు.
+hi: उससे दो लाख योजन ऊपर शनैश्चर जाने जाते हैं। एक-एक राशि में तीस महीने ठहरते हुए वे उतने ही वर्षों में सब राशियों को पार कर जाते हैं। वे सामान्यतः सब के लिए अशान्ति करने वाले हैं।
 
 --- verse 17 ---
 deva:
 तत उत्तरस्मादृषय एकादशलक्षयो-
-जनान्तरउपलभ्यन्ते य एवलोकानां
+जनान्तर उपलभ्यन्ते य एव लोकानां
 शमनुभावयन्तो भगवतो विष्णोर्यत्परमं पदं
 प्रदक्षिणं प्रक्रमन्ति॥
 iast:
 tata uttarasmādṛṣaya ekādaśalakṣayo-
-janāntaraupalabhyante ya evalokānāṁ
+janāntara upalabhyante ya eva lokānāṁ
 śamanubhāvayanto bhagavato viṣṇoryatparamaṁ padaṁ
 pradakṣiṇaṁ prakramanti||
+en: Eleven lakh yojanas above that, the sages are seen. Bringing about the welfare of the worlds, they go round that highest abode of the glorious Viṣṇu, keeping it on their right.
+tel: దానికి పైన పదునొకండు లక్షల యోజనముల దూరమున ఋషులు కనబడుచున్నారు. లోకములకు శమమును కలిగించుచు, భగవంతుడైన విష్ణువు యొక్క ఆ పరమ పదమును వారు ప్రదక్షిణముగా పరిక్రమించుచున్నారు.
+hi: उससे ऊपर ग्यारह लाख योजन की दूरी पर ऋषि दिखाई देते हैं। लोकों का कल्याण करते हुए वे भगवान् विष्णु के उस परम पद की प्रदक्षिणा करते हैं।
 
 --- verse none ---
 deva:
 इति श्रीमद्भागवते महापुराणे पारमहंस्यां संहितायां पञ्चमस्कन्धे ज्योतिश्चक्रवर्णने द्वाविंशोऽध्यायः॥ २२॥
 iast:
 iti śrīmadbhāgavate mahāpurāṇe pāramahaṁsyāṁ saṁhitāyāṁ pañcamaskandhe jyotiścakravarṇane dvāviṁśo'dhyāyaḥ|| 22||
+en: Thus ends the twenty-second adhyāya, on the description of the circle of the luminaries, in the fifth skandha of the Śrīmad Bhāgavata Mahāpurāṇa, the saṁhitā of the paramahaṁsas.
+tel: ఇది శ్రీమద్భాగవత మహాపురాణమునందు, పరమహంసల సంహితయందు, పంచమస్కంధమునందు, జ్యోతిశ్చక్రవర్ణనము అను ద్వావింశోఽధ్యాయము.
+hi: इस प्रकार श्रीमद्भागवत महापुराण की परमहंसों की संहिता के पञ्चम स्कन्ध में, ज्योतिश्चक्र के वर्णन नाम का बाईसवाँ अध्याय समाप्त हुआ।

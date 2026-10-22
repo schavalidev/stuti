@@ -9,7 +9,7 @@ Type: Purāṇa (an adhyāya of the Śrīmad Bhāgavata, Skandha 5)
 
 Source / recension: Base text and authority: the Gītā Press, Gorakhpur Śrīmadbhāgavata Mahāpurāṇa with Hindi translation, Part 1 (Gītā Press code 26), archive.org item `shrimadbhagwat-mahapuran-bhag-1`, printed pages 682–685; the PDF page numbers are the printed ones. The PDF carries the typesetter's own text layer in the Chanakya font encoding, and the text was decoded from it by machine with `bin/bhagavata/chanakya.py`, not read off OCR or typed. The decoder was checked against GRETIL over all twelve skandhas before any file was written, and the differences that remain were sampled and found to be readings of the two editions. Second witness: GRETIL's `sa_bhAgavatapurANa.xml` (IAST, contributed by Ulrich Stiehl), a separate editorial lineage, compared verse by verse by machine. The TTD edition with the commentaries of Śrīdhara, Vīrarāghava and Vijayadhvaja (archive.org `Bhagavata_Purana_With_Multiple_Commentaries_TTD_Critical_Edition`) is the third witness where one is needed; it was not read for this file. The IAST was generated mechanically from the Devanāgarī with `bin/dev2iast.py`.
 
-Recension note: Text-only file, written 1 Oct 2026 at the user's instruction to lay down the whole Bhāgavata first: the English, Telugu and Hindi meanings are still to be added, and the witnesses' differences listed here have been recorded by machine and not yet adjudicated. The print is followed throughout. The print numbers 15 verses and GRETIL numbers 15. Of the 15 verses GRETIL has under the same number, 11 agree with the print letter for letter once spacing and the spelling of nasals are set aside; the rest differ: 3, 7, 10, 15. The edition's footnotes give these older printed readings (प्रा० पा०), which are not bracketed into the line: at 8, मनुश्रुतोऽभिध्याय०; at 8, कर्मणां वा०; at 8, भावमुद्वहन् भग०. Spacing is the print's, as its text layer gives it; in a few places justification has left a space inside a word, and these are still to be closed when the verse is read. The speaker lines (श्रीशुक उवाच and the others) are printed in italic above the verse they introduce, and are given as its first line.
+Recension note: Meanings written 22 Oct 2026 (session S78). The differences between the witnesses listed below were read as the verses were glossed; except where this note says otherwise, each is a spelling, a sandhi or a word order of the two editions, none of them changes the sense, and the print's reading therefore stands unbracketed. The print is followed throughout. The print numbers 15 verses and GRETIL numbers 15. Of the 15 verses GRETIL has under the same number, 11 agree with the print letter for letter once spacing and the spelling of nasals are set aside; the rest differ: 3, 7, 10, 15. The edition's footnotes give these older printed readings (प्रा० पा०), which are not bracketed into the line: at 8, मनुश्रुतोऽभिध्याय०; at 8, कर्मणां वा०; at 8, भावमुद्वहन् भग०. Spacing is the print's, as its text layer gives it. The speaker lines (श्रीशुक उवाच and the others) are printed in italic above the verse they introduce, and are given as its first line. A footnote's numeral keys it to one word, and which word that is cannot be told from the note alone, so those readings stay unbracketed until the page itself is read. Four lost spaces were put right as the verses were read, each confirmed against GRETIL and each extracted from the file by machine rather than typed. At verse 6 the nominative स had run into एव; at verse 7 the visarga of आप्यायमानः had run into स्वपार्षद and the instrumental आसवेन into माद्यन्; at verse 12 the accusative भूगोलं had run into सगिरि. A word with its own case ending cannot open a compound, and this print breaks after a vowel, an anusvāra or a visarga almost without exception, so each join was a defect of the text layer and not the print's spacing. Every other join GRETIL splits stands as printed, each falling after a virāma consonant where the script requires the ligature, together with GRETIL's loose अधि गणयेत् at verse 12. At verse 5 the print's line break falls inside तदभिमर्शनोन्मथितहृदय without its usual continuation hyphen; the line structure is the print's and is left as it stands, and the meaning reads the compound whole, as GRETIL has it.
 
 Verse count: 15, plus the closing colophon printed unnumbered.
 
@@ -30,6 +30,9 @@ tasya mūladeśe triṁśadyojanasahasrāntara
 tānanta iti sātvatīyā draṣṭṛdṛśyayoḥ
 saṅkarṣaṇamahamityabhimānalakṣaṇaṁ yaṁ saṅkarṣaṇa-
 mityācakṣate||
+en: Śrī Śuka said: Thirty thousand yojanas below the base of that region dwells that portion of the Lord which is called tāmasī. The followers of the Sātvata way call him Ananta. In him is the mark of the sense of “I”, which draws the seer and the seen together, and for this they call him Saṅkarṣaṇa.
+tel: శ్రీశుకుడు పలికెను: ఆ ప్రదేశపు మూలమునకు ముప్పది వేల యోజనముల క్రింద, భగవంతుని తామసి అను కల విరాజిల్లుచున్నది. సాత్వత మార్గము వారు ఆయనను అనంతుడు అని పేర్కొందురు. ద్రష్టను, దృశ్యమును కలిపి “నేను” అను అభిమానము ఆయనయందు లక్షణముగా ఉన్నది; అందుచే ఆయనను సంకర్షణుడు అని చెప్పుదురు.
+hi: श्रीशुकदेवजी ने कहा: उस प्रदेश के मूल से तीस हजार योजन नीचे भगवान् की तामसी नाम की कला विराजमान है। सात्वत मार्गवाले उसे अनन्त कहते हैं। द्रष्टा और दृश्य को जोड़नेवाला “मैं” ऐसा अभिमान उसमें लक्षण रूप से है; इसी से उसे संकर्षण कहते हैं।
 
 --- verse 2 ---
 deva:
@@ -40,6 +43,9 @@ iast:
 yasyedaṁ kṣitimaṇḍalaṁ bhagavato'nantamūrteḥ
 sahasraśirasa ekasminneva śīrṣaṇi dhriyamāṇaṁ
 siddhārtha iva lakṣyate||
+en: This circle of the earth, borne upon one single head of that Lord of endless form, who has a thousand heads, is seen there like a mustard seed.
+tel: సహస్ర శిరస్సులు కలిగిన ఆ అనంతమూర్తి భగవంతుని ఒక్క శిరస్సుపై ధరింపబడిన ఈ భూమండలము, ఆవాలగింజవలె కనబడుచున్నది.
+hi: सहस्र सिरोंवाले उन अनन्तमूर्ति भगवान् के एक ही सिर पर धारण किया हुआ यह भूमण्डल सरसों के दाने के समान दिखाई देता है।
 
 --- verse 3 ---
 deva:
@@ -54,6 +60,9 @@ idaṁ kālenopasaṁjihīrṣato'marṣaviracitarucira-
 bhramadbhruvorantareṇa sāṅkarṣaṇo nāma rudra
 ekādaśavyūhastryakṣastriśikhaṁ śūlamuttambhayan
 udatiṣṭhat||
+en: When at the appointed time he wished to withdraw this world, from between his beautiful moving eyebrows, drawn together in anger, there rose up the Rudra named Sāṅkarṣaṇa, of eleven forms and of three eyes, holding a three-pointed trident aloft.
+tel: కాలము వచ్చినపుడు ఈ జగత్తును ఉపసంహరింపగోరిన ఆయన, అమర్షముచే ముడిపడి చలించుచున్న సుందరమైన కనుబొమల నడుమనుండి, పదునొకండు వ్యూహములు కలిగిన, మూడు కన్నులు కలిగిన సాంకర్షణుడు అను రుద్రుడు మూడు మొనల శూలమును పైకెత్తి పుట్టెను.
+hi: समय आने पर इस जगत् को समेटने की इच्छा करनेवाले उनकी, क्रोध से तनी हुई चंचल सुन्दर भौंहों के बीच से, ग्यारह व्यूहोंवाला और तीन नेत्रोंवाला सांकर्षण नामक रुद्र तीन नोकोंवाले त्रिशूल को ऊपर उठाये हुए प्रकट हुआ।
 
 --- verse 4 ---
 deva:
@@ -70,6 +79,9 @@ sātvatarṣabhairekāntabhaktiyogenāvanamantaḥ sva-
 vadanāni parisphuratkuṇḍalaprabhāmaṇḍita-
 gaṇḍasthalānyatimanoharāṇi pramuditamanasaḥ
 khalu vilokayanti||
+en: On the circles of the clear red jewel-like nails of his two lotus feet, the lords of the serpents, bowing with one-pointed devotion together with the foremost of the Sātvatas, behold with glad minds their own faces, most lovely, their cheeks adorned by the shining of their earrings.
+tel: ఆయన పాదకమలముల జంటయొక్క అరుణమైన, నిర్మలమైన, మణివంటి గోళ్ల మండలములలో, ఏకాంత భక్తియోగముతో సాత్వత శ్రేష్ఠులతో కూడి వంగిన నాగరాజులు, కుండలముల ప్రకాశముచే అలంకరింపబడిన చెక్కిళ్లతో మిక్కిలి మనోహరమైన తమ ముఖములను ప్రముదిత మనస్కులై చూచుచున్నారు.
+hi: उनके दोनों चरणकमलों के अरुण, निर्मल, मणि-जैसे नखों के मण्डलों में, एकान्त भक्तियोग से सात्वतश्रेष्ठों के साथ झुके हुए नागराज, कुण्डलों की प्रभा से सजे गालोंवाले अपने अत्यन्त मनोहर मुखों को प्रसन्न मन से देखते हैं।
 
 --- verse 5 ---
 deva:
@@ -92,24 +104,30 @@ hṛdayamakaradhvajāveśaruciralalitasmitāstada-
 nurāgamadamuditamadavighūrṇitāruṇakaruṇāvaloka-
 nayanavadanāravindaṁ savrīḍaṁ kila
 vilokayanti||
+en: The daughters of the serpent kings, asking his blessing, anoint his arms with a paste of aguru, sandal and kuṅkuma. Those arms are pillars of silver, clear, broad, white, fair and lovely, bright with the armlets upon their beautiful limbs. At that touch their hearts are churned, the makara-bannered god enters them, and their smiles become lovely and gentle. Then with shyness they gaze upon his lotus face, whose eyes are red and roll with the gladness and the pride of love, and whose look is full of compassion.
+tel: ఆయన దీవెనను కోరు నాగరాజకుమార్తెలు, అగురు, చందనము, కుంకుమ పంకముతో ఆయన భుజములను పూయుచున్నారు. ఆ భుజములు విశదములు, విపులములు, ధవలములు, సుభగములు, రుచిరములు, వెండిస్తంభములవంటివి, సుందరమైన అంగములపై వలయములతో మెరయుచున్నవి. ఆ స్పర్శముచే వారి హృదయములు మథింపబడి, మకరధ్వజుడు వారియందు ప్రవేశించి, వారి చిరునవ్వులు రుచిరములు, లలితములు అగుచున్నవి. అంతట వారు సిగ్గుతో, అనురాగ మదముచే ప్రముదితమై, మదముచే తిరుగుచున్న, అరుణమైన, కరుణతో నిండిన చూపు కల ఆయన ముఖారవిందమును చూచుచున్నారు.
+hi: उनका आशीर्वाद चाहनेवाली नागराजकुमारियाँ अगुरु, चन्दन और कुंकुम के पंक से उनकी भुजाओं पर लेप करती हैं। वे भुजाएँ विशद, विपुल, धवल, सुभग और रुचिर हैं, चाँदी के खम्भों के समान हैं, और सुन्दर अंगों पर पड़े वलयों से चमकती हैं। उस स्पर्श से उनके हृदय मथ जाते हैं, मकरध्वज उनमें प्रवेश करता है, और उनकी मुसकानें रुचिर और ललित हो जाती हैं। तब वे लज्जा के साथ उनके मुखारविन्द को देखती हैं, जिसके नेत्र अनुराग के मद से प्रमुदित हैं, मद से घूमते हैं, अरुण हैं और करुणा से भरे हैं।
 
 --- verse 6 ---
 deva:
-सएव भगवाननन्तोऽनन्तगुणार्णव आदिदेव
+स एव भगवाननन्तोऽनन्तगुणार्णव आदिदेव
 उपसंहृतामर्षरोषवेगो लोकानां स्वस्तय
 आस्ते॥
 iast:
-saeva bhagavānananto'nantaguṇārṇava ādideva
+sa eva bhagavānananto'nantaguṇārṇava ādideva
 upasaṁhṛtāmarṣaroṣavego lokānāṁ svastaya
 āste||
+en: That same blessed Ananta, an ocean of endless qualities, the first of the gods, has drawn back the force of his anger and his wrath, and abides for the welfare of the worlds.
+tel: ఆ భగవంతుడైన అనంతుడే, అనంత గుణముల సముద్రుడు, ఆదిదేవుడు, అమర్ష రోష వేగమును ఉపసంహరించుకొని, లోకముల శ్రేయము కొరకు ఉన్నాడు.
+hi: वे ही भगवान् अनन्त, अनन्त गुणों के समुद्र, आदिदेव, अपने अमर्ष और रोष के वेग को समेटकर लोकों के कल्याण के लिये विराजमान हैं।
 
 --- verse 7 ---
 deva:
 ध्यायमानः सुरासुरोरगसिद्धगन्धर्वविद्याधर-
 मुनिगणैरनवरतमदमुदितविकृतविह्वललोचनः
-सुललितमुखरिकामृतेनाप्यायमानःस्वपार्षद-
+सुललितमुखरिकामृतेनाप्यायमानः स्वपार्षद-
 विबुधयूथपतीनपरिम्लानरागनवतुलसिका-
-मोदमध्वासवेनमाद्यन्मधुकरव्रातमधुरगीतश्रियं
+मोदमध्वासवेन माद्यन्मधुकरव्रातमधुरगीतश्रियं
 वैजयन्तीं स्वां वनमालां नीलवासा एककुण्डलो
 हलककुदि कृतसुभगसुन्दरभुजो भगवान्माहेन्द्रो
 वारणेन्द्र इव काञ्चनीं कक्षामुदारलीलो
@@ -117,13 +135,16 @@ deva:
 iast:
 dhyāyamānaḥ surāsuroragasiddhagandharvavidyādhara-
 munigaṇairanavaratamadamuditavikṛtavihvalalocanaḥ
-sulalitamukharikāmṛtenāpyāyamānaḥsvapārṣada-
+sulalitamukharikāmṛtenāpyāyamānaḥ svapārṣada-
 vibudhayūthapatīnaparimlānarāganavatulasikā-
-modamadhvāsavenamādyanmadhukaravrātamadhuragītaśriyaṁ
+modamadhvāsavena mādyanmadhukaravrātamadhuragītaśriyaṁ
 vaijayantīṁ svāṁ vanamālāṁ nīlavāsā ekakuṇḍalo
 halakakudi kṛtasubhagasundarabhujo bhagavānmāhendro
 vāraṇendra iva kāñcanīṁ kakṣāmudāralīlo
 bibharti||
+en: He is meditated upon by the hosts of gods, asuras, serpents, Siddhas, Gandharvas, Vidyādharas and sages. His eyes are altered and unsteady with a gladness that never ceases. With the nectar of his very sweet speech he satisfies the leaders of the hosts of gods, who are his own attendants. His garland, the Vaijayantī, keeps its colour unfaded, and the fragrance of its fresh tulasī is like a wine of honey, so that the swarm of bees made drunk upon it gives the garland the beauty of sweet song. Dressed in blue, wearing a single earring, his fair and lovely arm laid upon the top of his plough, the blessed Lord of noble play bears that garland as the lordly elephant of the great Indra bears its band of gold.
+tel: దేవతలు, అసురులు, సర్పములు, సిద్ధులు, గంధర్వులు, విద్యాధరులు, మునిగణములు ఆయనను ధ్యానించుచున్నారు. ఎడతెగని మదముచే ప్రముదితమై ఆయన నేత్రములు వికృతములై, విహ్వలములై ఉన్నవి. మిక్కిలి సులలితమైన తన మాటల అమృతముచే, తన పార్షదులైన విబుధ యూథపతులను ఆయన తృప్తిపరచుచున్నాడు. ఆయన వైజయంతి అను వనమాల రాగము వాడక, క్రొత్త తులసి పరిమళము మధ్వాసవమువలె ఉండగా, దానిచే మత్తిలిన తుమ్మెదల గుంపు ఆ మాలకు మధురగీతపు శోభను కలిగించుచున్నది. నీలవస్త్రము ధరించి, ఒక్క కుండలము కలిగి, నాగటి కొనపై సుభగమైన, సుందరమైన భుజమును ఉంచి, ఉదారలీలుడైన భగవంతుడు, మహేంద్రుని గజరాజు బంగారు కక్ష్యను ధరించునట్లు ఆ మాలను ధరించుచున్నాడు.
+hi: देवता, असुर, सर्प, सिद्ध, गन्धर्व, विद्याधर और मुनिगण उनका ध्यान करते हैं। निरन्तर मद से प्रमुदित होकर उनके नेत्र विकृत और विह्वल हो रहे हैं। अपनी अत्यन्त सुललित वाणी के अमृत से वे अपने पार्षद विबुध-यूथपतियों को तृप्त करते हैं। उनकी वैजयन्ती वनमाला का रंग नहीं मुरझाता, और नयी तुलसी की सुगन्ध मधु के आसव के समान है, इसलिये उससे मतवाले भौंरों का झुण्ड उस माला को मधुर गान की शोभा देता है। नीले वस्त्र पहने, एक कुण्डल धारण किये, हल के ऊपरी भाग पर सुभग सुन्दर भुजा रखे हुए उदारलीला भगवान् उस माला को वैसे ही धारण करते हैं, जैसे महेन्द्र का गजराज सुनहली कक्ष्या धारण करता है।
 
 --- verse 8 ---
 deva:
@@ -140,6 +161,9 @@ hṛdayagranthiṁ sattvarajastamomayamantarhṛdayaṁ gata āśu
 nirbhinatti tasyānubhāvān bhagavān svāyambhuvo
 nāradaḥ saha tumburuṇā sabhāyāṁ brahmaṇaḥ
 saṁślokayāmāsa||
+en: He who is thus heard of and meditated upon enters within the heart of those who seek release, and quickly cuts the knot of the heart, a knot made of ignorance, tied by the impressions of works from a beginningless time, and made of sattva, rajas and tamas. His glories the blessed Nārada, the son of Brahmā, sang in verse with Tumburu in the assembly of Brahmā.
+tel: ఇట్లు వినబడి, ధ్యానింపబడిన ఈయన, ముముక్షువుల హృదయములోపలికి చేరి, అనాది కాలపు కర్మ వాసనలచే కట్టబడిన, అవిద్యామయమైన, సత్త్వ రజస్ తమోమయమైన హృదయగ్రంథిని శీఘ్రముగా ఛేదించుచున్నాడు. ఆయన అనుభావములను, బ్రహ్మపుత్రుడైన భగవంతుడు నారదుడు, తుంబురునితో కూడి బ్రహ్మసభయందు శ్లోకరూపమున గానము చేసెను.
+hi: इस प्रकार सुने गये और ध्यान किये गये ये, मुमुक्षुओं के हृदय के भीतर पहुँचकर, अनादि काल के कर्म-वासनाओं से बँधी, अविद्यामय, सत्त्व-रज-तमोमय हृदय-ग्रन्थि को शीघ्र काट देते हैं। उनके अनुभावों को ब्रह्मा के पुत्र भगवान् नारद ने तुम्बुरु के साथ ब्रह्मा की सभा में श्लोकों में गाया।
 
 --- verse 9 ---
 deva:
@@ -152,6 +176,9 @@ utpattisthitilayahetavo'sya kalpāḥ
 sattvādyāḥ prakṛtiguṇā yadīkṣayā''san|
 yadrūpaṁ dhruvamakṛtaṁ yadekamātman
 nānādhātkathamu ha veda tasya vartma||
+en: By his glance the guṇas of Prakṛti, beginning with sattva, became able to cause the birth, the standing and the dissolution of this world. His form is fixed and was never made. Being one, he held the many within himself. How then can anyone know his way?
+tel: ఆయన చూపుచే, సత్త్వము మొదలైన ప్రకృతి గుణములు ఈ జగత్తు ఉత్పత్తికి, స్థితికి, లయమునకు హేతువులు కాగలిగినవి. ఆయన రూపము ధ్రువము, ఎవరిచేతను చేయబడనిది. ఒక్కడే అయి, ఆయన తనయందు అనేకమును ధరించెను. ఆయన మార్గమును ఎవరు తెలియగలరు?
+hi: उनकी दृष्टि से सत्त्व आदि प्रकृति के गुण इस जगत् की उत्पत्ति, स्थिति और लय के हेतु बन सके। उनका रूप ध्रुव है और किसी के बनाये हुए नहीं है। एक होकर भी उन्होंने अपने में अनेक को धारण किया। उनका मार्ग कौन जान सकता है?
 
 --- verse 10 ---
 deva:
@@ -164,6 +191,9 @@ mūrtiṁ naḥ purukṛpayā babhāra sattvaṁ
 saṁśuddhaṁ sadasadidaṁ vibhāti yatra|
 yallīlāṁ mṛgapatirādade'navadyā-
 mādātuṁ svajanamanāṁsyudāravīryaḥ||
+en: Out of great mercy toward us he bore a form of pure sattva, in which this world of cause and effect shines. Of noble strength, like a lion, he took up a blameless play in order to win the minds of his own people.
+tel: మాపై గొప్ప కృపతో ఆయన సంశుద్ధమైన సత్త్వమయ మూర్తిని ధరించెను; అందు ఈ సత్ అసత్ ప్రపంచము ప్రకాశించుచున్నది. ఉదారవీర్యుడైన ఆయన, సింహమువలె, తన జనుల మనస్సులను గ్రహించుటకు అనవద్యమైన లీలను స్వీకరించెను.
+hi: हम पर महान् कृपा करके उन्होंने संशुद्ध सत्त्वमय मूर्ति धारण की, जिसमें यह सत्-असत् जगत् प्रकाशित होता है। उदारवीर्य वे, सिंह के समान, अपने जनों के मन को लेने के लिये निर्दोष लीला को ग्रहण करते हैं।
 
 --- verse 11 ---
 deva:
@@ -176,18 +206,24 @@ yannāma śrutamanukīrtayedakasmā-
 dārto vā yadi patitaḥ pralambhanādvā|
 hantyaṁhaḥ sapadi nṛṇāmaśeṣamanyaṁ
 kaṁ śeṣādbhagavata āśrayenmumukṣuḥ||
+en: If a man who has heard his name repeats it, even without purpose, or in pain, or when fallen, or in mockery, it destroys at once the whole sin of men. Whom other than the blessed Śeṣa should one who seeks release take as his refuge?
+tel: ఆయన నామమును విని, ఎవడైనను అకస్మాత్తుగా, ఆర్తుడై, పతితుడై, లేక పరిహాసముచే కీర్తించినను, అది మనుష్యుల పాపమును వెంటనే పూర్తిగా నశింపజేయును. ముముక్షువు భగవంతుడైన శేషుని తప్ప మరి ఎవరిని ఆశ్రయించును?
+hi: जिनका नाम सुनकर कोई अकस्मात्, या दुःख में, या गिरा हुआ, अथवा हँसी में भी कीर्तन करे, तो वह मनुष्यों के समस्त पाप को तत्काल नष्ट कर देता है। मुमुक्षु भगवान् शेष के अतिरिक्त किसका आश्रय ले?
 
 --- verse 12 ---
 deva:
 मूर्धन्यर्पितमणुवत्सहस्रमूर्ध्नो
-भूगोलंसगिरिसरित्समुद्रसत्त्वम्।
+भूगोलं सगिरिसरित्समुद्रसत्त्वम्।
 आनन्त्यादनिमितविक्रमस्य भूम्नः
 को वीर्याण्यधिगणयेत्सहस्रजिह्वः॥
 iast:
 mūrdhanyarpitamaṇuvatsahasramūrdhno
-bhūgolaṁsagirisaritsamudrasattvam|
+bhūgolaṁ sagirisaritsamudrasattvam|
 ānantyādanimitavikramasya bhūmnaḥ
 ko vīryāṇyadhigaṇayetsahasrajihvaḥ||
+en: The globe of the earth, with its mountains, rivers, oceans and creatures, set upon the head of him who has a thousand heads, is like a single atom. His strength has no measure, for he is endless. Who, even with a thousand tongues, could count the powers of that great one?
+tel: పర్వతములతో, నదులతో, సముద్రములతో, ప్రాణులతో కూడిన ఈ భూగోళము, సహస్ర శిరస్సులు కలిగిన ఆయన శిరస్సుపై ఉంచబడి అణువువలె ఉన్నది. అనంతుడైనందున ఆయన విక్రమమునకు కొలత లేదు. ఆ భూమనుని వీర్యములను సహస్ర జిహ్వలు కలవాడైనను ఎవడు లెక్కింపగలడు?
+hi: पर्वतों, नदियों, समुद्रों और प्राणियों के सहित यह भूगोल, सहस्र सिरोंवाले उनके एक सिर पर रखा हुआ अणु के समान है। अनन्त होने से उनके विक्रम का कोई माप नहीं है। उन भूमा के वीर्यों को सहस्र जिह्वावाला भी कौन गिन सकता है?
 
 --- verse 13 ---
 deva:
@@ -200,6 +236,9 @@ evamprabhāvo bhagavānananto
 durantavīryoruguṇānubhāvaḥ|
 mūle rasāyāḥ sthita ātmatantro
 yo līlayā kṣmāṁ sthitaye bibharti||
+en: Such is the power of the blessed Ananta, whose valour has no end, whose great qualities and glory are vast. He abides at the base of the nether region, resting upon himself alone, and in play he bears the earth so that it may stand.
+tel: ఇట్టి ప్రభావము కలవాడు భగవంతుడైన అనంతుడు; ఆయన వీర్యమునకు అంతము లేదు, ఆయన గుణములు, అనుభావము విశాలములు. రసాతలము మూలమున ఆత్మతంత్రుడై నిలిచి, ఆయన లీలతో భూమిని దాని స్థితి కొరకు ధరించుచున్నాడు.
+hi: ऐसे प्रभाववाले हैं भगवान् अनन्त, जिनका वीर्य दुरन्त है और जिनके गुण तथा अनुभाव विशाल हैं। रसातल के मूल में आत्मतन्त्र होकर स्थित वे लीला से पृथ्वी को उसकी स्थिति के लिये धारण करते हैं।
 
 --- verse 14 ---
 deva:
@@ -210,6 +249,9 @@ iast:
 etā hyeveha nṛbhirupagantavyā gatayo
 yathākarmavinirmitā yathopadeśamanuvarṇitāḥ
 kāmān kāmayamānaiḥ||
+en: These indeed are the courses that men must come to here, shaped according to their own works. They have been described as they were taught, for those who desire the objects of desire.
+tel: కర్మముల ననుసరించి నిర్మింపబడిన ఈ గతులే, కామములను కోరు మనుష్యులు ఇచట పొందవలసినవి. ఉపదేశము ప్రకారము ఇవి వర్ణింపబడినవి.
+hi: अपने कर्मों के अनुसार बनी हुई ये ही गतियाँ हैं, जिन्हें कामनाओं की इच्छा करनेवाले मनुष्य यहाँ प्राप्त करते हैं। उपदेश के अनुसार इनका वर्णन किया गया।
 
 --- verse 15 ---
 deva:
@@ -222,9 +264,15 @@ etāvatīrhi rājan
 puṁsaḥ pravṛttilakṣaṇasya dharmasya vipākagataya
 uccāvacā visadṛśā yathāpraśnaṁ vyācakhye
 kimanyatkathayāma iti||
+en: King, so many are the courses, high and low and unlike one another, which are the ripening of the dharma of a man marked by action. I have explained them according to your question. What else shall I tell?
+tel: రాజా, ప్రవృత్తి లక్షణము కల పురుషుని ధర్మము పక్వమైనపుడు కలుగు గతులు ఇన్ని; ఇవి ఉచ్చములు, నీచములు, ఒకదానితో ఒకటి పోలనివి. నీ ప్రశ్న ప్రకారము వీటిని వివరించితిని. ఇంక ఏమి చెప్పవలెను?
+hi: राजन्, प्रवृत्तिलक्षण धर्मवाले पुरुष के धर्म के पकने से होनेवाली गतियाँ इतनी ही हैं; वे ऊँची, नीची और एक-दूसरे से भिन्न हैं। तुम्हारे प्रश्न के अनुसार मैंने इनका वर्णन किया। और क्या कहूँ?
 
 --- verse none ---
 deva:
 इति श्रीमद्भागवते महापुराणे पारमहंस्यां संहितायां पञ्चमस्कन्धे भूविवरविध्युपवर्णनं नाम पञ्चविंशोऽध्यायः॥ २५॥
 iast:
 iti śrīmadbhāgavate mahāpurāṇe pāramahaṁsyāṁ saṁhitāyāṁ pañcamaskandhe bhūvivaravidhyupavarṇanaṁ nāma pañcaviṁśo'dhyāyaḥ|| 25||
+en: Thus ends the twenty-fifth adhyāya, called the description of the manner of the hollows of the earth, in the fifth skandha of the Śrīmad Bhāgavata Mahāpurāṇa, the saṁhitā of the paramahaṁsas.
+tel: ఇది శ్రీమద్భాగవత మహాపురాణమునందు, పరమహంసల సంహితయందు, పంచమస్కంధమునందు భూవివరవిధ్యుపవర్ణనమను పంచవింశోఽధ్యాయము.
+hi: इस प्रकार श्रीमद्भागवत महापुराण की परमहंसों की संहिता के पञ्चम स्कन्ध में भूविवरविध्युपवर्णन नामक पचीसवाँ अध्याय समाप्त हुआ।
