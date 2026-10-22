@@ -472,18 +472,25 @@ or Gītā Press (searched 2026-10-17). poojalu.com, a pandit-services site, publ
 each. **All three are stotranidhi's Bālā Tripurasundarī pūjā (`30`) with the goddess's name set into the
 name-lines**, checked line by line by machine: the same Śrī Sūkta ṛcs, the same verses, the same closing. What
 is each page's own is the saṅkalpa, the name-lines, and a hundred and eight names printed in full. The user
-ruled that they be written as printed, with the template's leftovers recorded and not corrected, so:
+ruled on 2026-10-22 that they be written for the reciter: the goddess's own dhyāna in place of the borrowed
+one, her own name wherever the page had left Bālā's, each change recorded in the header with its source, and
+nothing else composed. So:
 
-- `56_annapurna_shodashopachara_puja.txt` — the dhyāna is the Tripurasundarī verse, the prayer सर्वस्वरूपे
-  सर्वेशि, and the pardon verse reads अन्नपूर्ण कृत्यमिति where the verse says बाल कृत्यमिति. The 108 names are
-  the Gītā Press Annapūrṇā list of `../devi/annapurna/09`, with two names dropped and two pairs joined.
-- `57_mahishasuramardini_shodashopachara_puja.txt` — Bālā's name is left standing in four places (seat verse,
-  mantra-flower, dedication, tīrtha line), each named in its `vidhi:`. The 108 names are a litany in mahā-,
-  on this page alone. The page spells मर्धिनी throughout, and it is kept.
-- `58_rajarajeshvari_shodashopachara_puja.txt` — Bālā's dhyāna and prayer with Rājarājeśvarī set into their
-  last lines, breaking the metre. The 108 names are on this page alone; several are printed in a dative that
-  is not feminine, and are kept and glossed by the stem.
+- `56_annapurna_shodashopachara_puja.txt` — the dhyāna is the Gītā Press Annapūrṇā dhyāna (सिन्दूराभां
+  त्रिनेत्राम्, from `../devi/annapurna/09`); the prayer is सर्वस्वरूपे सर्वेशि as printed; the pardon verse is
+  restored to बाल कृत्यमिति where the page had set the goddess's name. The 108 names are the Gītā Press
+  Annapūrṇā list of `../devi/annapurna/09`, with two names dropped and two pairs joined.
+- `57_mahishasuramardini_shodashopachara_puja.txt` — the dhyāna is the Saptaśatī's middle-caritra dhyāna
+  (अक्षस्रक्परशुं, from `../devi/durga_saptashati/02`); the four places where the page had left Bālā's name
+  (seat verse, mantra-flower, dedication, tīrtha line) now carry Mahiṣāsuramardinī's, and the seat verse no
+  longer scans. The 108 names are a litany in mahā-, on this page alone. The page spells मर्धिनी in its
+  name-lines, and that is kept there.
+- `58_rajarajeshvari_shodashopachara_puja.txt` — the dhyāna is the Lalitā Sahasranāma dhyāna (सिन्दूरारुण
+  विग्रहां, from `../devi/lalita/36`); the prayer is Bālā's verse with Rājarājeśvarī set into its last line, as
+  the page has it. The 108 names are on this page alone; several are printed in a dative that is not
+  feminine, and are kept and glossed by the stem.
 
-Each file's translations are `30`'s, with the name changed, wherever the line is `30`'s; the verses the pages
-add are translated afresh. None of the three is a witness for the others, and none supersedes `30`.
+Each file's translations are `30`'s, with the name changed, wherever the line is `30`'s; the dhyānas carry
+the translations of the files they were lifted from; the verses the pages add are translated afresh. None of
+the three is a witness for the others, and none supersedes `30`.
 
