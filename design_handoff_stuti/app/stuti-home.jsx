@@ -532,13 +532,9 @@ function AtTempleCard({ go, lang }) {
       <h3 className="tpl-card-nm" style={{ fontFamily: font }}>{pin.name}</h3>
       {d && <div className="tpl-card-d" style={{ fontFamily: font }}>{L.name(d, lang)}</div>}
       <div className="tpl-card-acts">
-        {hymns.slice(0, 3).map((h) => (
-          <button key={h.id} className="tpl-card-go" style={{ fontFamily: font }}
-            onClick={() => go("reader", { deity: h.deity, hymn: h.id, from: "home" })}>
-            {L.hymnTitle(h, lang)}
-          </button>
-        ))}
-        {d && hymns.length > 3 && (
+        {/* standing before one deity, the card offers that deity and nothing
+            else: one way in, not a shortlist of hymns chosen for them */}
+        {d && hymns.length > 0 && (
           <button className="tpl-card-more" onClick={() => go("browse", { deity: d.id, returnTo: "home" })}>
             {L.t("tplAll", lang)}
           </button>
