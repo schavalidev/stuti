@@ -9,7 +9,7 @@ Type: Purāṇa (an adhyāya of the Śrīmad Bhāgavata, Skandha 8)
 
 Source / recension: Base text and authority: the Gītā Press, Gorakhpur Śrīmadbhāgavata Mahāpurāṇa with Hindi translation, Part 1 (Gītā Press code 26), archive.org item `shrimadbhagwat-mahapuran-bhag-1`, printed pages 941–947; the PDF page numbers are the printed ones. The PDF carries the typesetter's own text layer in the Chanakya font encoding, and the text was decoded from it by machine with `bin/bhagavata/chanakya.py`, not read off OCR or typed. The decoder was checked against GRETIL over all twelve skandhas before any file was written, and the differences that remain were sampled and found to be readings of the two editions. Second witness: GRETIL's `sa_bhAgavatapurANa.xml` (IAST, contributed by Ulrich Stiehl), a separate editorial lineage, compared verse by verse by machine. The TTD edition with the commentaries of Śrīdhara, Vīrarāghava and Vijayadhvaja (archive.org `Bhagavata_Purana_With_Multiple_Commentaries_TTD_Critical_Edition`) is the third witness where one is needed; it was not read for this file. The IAST was generated mechanically from the Devanāgarī with `bin/dev2iast.py`.
 
-Recension note: Text-only file, written 1 Oct 2026 at the user's instruction to lay down the whole Bhāgavata first: the English, Telugu and Hindi meanings are still to be added, and the witnesses' differences listed here have been recorded by machine and not yet adjudicated. The print is followed throughout. The print numbers 46 verses; GRETIL numbers 47, so from some point the two editions number the verses differently. Never match them by number. Of the 46 verses GRETIL has under the same number, 3 agree with the print letter for letter once spacing and the spelling of nasals are set aside; the rest differ: 3, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46. The edition's footnotes give these older printed readings (प्रा० पा०), which are not bracketed into the line: at 2, मेध्यस्य; at 4, हरञ्छृङ्गव०; at 7, निष्कग्रीवाः; at 12, नार्यश्च; at 19, चारस०; at 23, श्रयसद्गुणा०; at 33, महास्कन्धः; at 33, नील०; at 33, शुभाङ्गः. Spacing is the print's, as its text layer gives it; in a few places justification has left a space inside a word, and these are still to be closed when the verse is read. The speaker lines (श्रीशुक उवाच and the others) are printed in italic above the verse they introduce, and are given as its first line.
+Recension note: Meanings written 23 Oct 2026 (session S78). The differences between the witnesses listed below were read as the verses were glossed; except where this note says otherwise, each is a spelling, a sandhi or a word order of the two editions, none of them changes the sense, and the print's reading therefore stands unbracketed. The print is followed throughout. The print numbers 46 verses; GRETIL numbers 47, so from some point the two editions number the verses differently. Never match them by number. Of the 46 verses GRETIL has under the same number, 3 agree with the print letter for letter once spacing and the spelling of nasals are set aside; the rest differ: 3, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46. The edition's footnotes give these older printed readings (प्रा० पा०), which are not bracketed into the line: at 2, मेध्यस्य; at 4, हरञ्छृङ्गव०; at 7, निष्कग्रीवाः; at 12, नार्यश्च; at 19, चारस०; at 23, श्रयसद्गुणा०; at 33, महास्कन्धः; at 33, नील०; at 33, शुभाङ्गः. Spacing is the print's, as its text layer gives it. The speaker lines (श्रीशुक उवाच and the others) are printed in italic above the verse they introduce, and are given as its first line. A footnote's numeral keys it to one word, and which word that is cannot be told from the note alone, so those readings stay unbracketed until the page itself is read. One word was put right as the verses were read. At verse 18 justification had left a space inside कुङ्कुम, in चन्दनकुङ्कु मोक्षितम्, and it is closed here. GRETIL reads candanakuṅkumokṣitam whole, and कुङ्कु and मोक्षितम् are neither of them words. Two other readings are left exactly as printed. At verse 17 the print has नद्दद्विरेफां, with its first virāma one akṣara earlier than नदद्द्विरेफां, which GRETIL has and which the sense requires. That is a wrong mark and not a wrong space, so it is an emendation and outside this pass. The line stands as printed, and the meaning follows the only possible reading, the garland on which the bees are humming. At verse 20 the print joins परतोव्यपाश्रयः where GRETIL spaces parato vyapāśrayaḥ. परतः is an indeclinable and can stand first in a compound, so the printed form can be read as it stands and the print's spacing is kept.
 
 Verse count: 46, plus the closing colophon printed unnumbered.
 
@@ -24,6 +24,9 @@ iast:
 śrīśuka uvāca
 pīte gare vṛṣāṅkeṇa prītāste'maradānavāḥ|
 mamanthustarasā sindhuṁ havirdhānī tato'bhavat||
+en: Śrī Śuka said: When the poison had been drunk by Vṛṣāṅka, the gods and the dānavas were pleased. They churned the ocean with force. Then Havirdhānī, the cow of the oblation, arose from it.
+tel: శ్రీశుకుడు పలికెను: వృషాంకుడు విషమును త్రాగిన పిమ్మట, దేవతలును దానవులును ప్రీతి చెందిరి. వారు వేగముతో సముద్రమును మథించిరి. అప్పుడు హవిస్సుల ఆవు అయిన హవిర్ధాని ఆవిర్భవించెను.
+hi: श्री शुक ने कहा: वृषाङ्क के द्वारा विष पी लिये जाने पर देवता और दानव प्रसन्न हुए। उन्होंने वेग से समुद्र को मथा। तब हविष्य की गौ हविर्धानी प्रकट हुई।
 
 --- verse 2 ---
 deva:
@@ -32,6 +35,9 @@ deva:
 iast:
 tāmagnihotrīmṛṣayo jagṛhurbrahmavādinaḥ|
 yajñasya devayānasya medhyāya haviṣe nṛpa||
+en: King, the sages who speak of Brahman took that cow, fit for the agnihotra, for the pure oblation of the sacrifice that leads to the path of the gods.
+tel: రాజా, బ్రహ్మవాదులైన ఋషులు, దేవయానమైన యజ్ఞమునకు మేధ్యమైన హవిస్సు కొరకు, అగ్నిహోత్రమునకు తగిన ఆ ఆవును గ్రహించిరి.
+hi: हे राजन्, ब्रह्मवादी ऋषियों ने देवयान यज्ञ के मेध्य हविष्य के लिये अग्निहोत्र के योग्य उस गौ को ग्रहण किया।
 
 --- verse 3 ---
 deva:
@@ -40,6 +46,9 @@ deva:
 iast:
 tata uccaiḥśravā nāma hayo'bhūccandrapāṇḍuraḥ|
 tasminbaliḥ spṛhāṁ cakre nendra īśvaraśikṣayā||
+en: Then a horse named Uccaiḥśravā arose, white as the moon. Bali set his desire upon it. Indra did not, for so the Lord had instructed him.
+tel: అటుపిమ్మట చంద్రుని వలె తెల్లనైన ఉచ్చైఃశ్రవా అను పేరు గల గుర్రము పుట్టెను. బలి దానియందు కోరిక చేసెను. ఈశ్వరుని ఉపదేశము వలన ఇంద్రుడు కోరిక చేయలేదు.
+hi: तदनन्तर चन्द्रमा के समान श्वेत उच्चैःश्रवा नामक घोड़ा प्रकट हुआ। बलि ने उसमें इच्छा की। ईश्वर की शिक्षा से इन्द्र ने इच्छा नहीं की।
 
 --- verse 4 ---
 deva:
@@ -48,6 +57,9 @@ deva:
 iast:
 tata airāvato nāma vāraṇendro vinirgataḥ|
 dantaiścaturbhiḥ śvetādrerharanbhagavato mahim||
+en: Then the lord of elephants named Airāvata came out. With its four tusks it took away the greatness of the Lord's white mountain.
+tel: అటుపిమ్మట ఐరావతము అను పేరు గల గజేంద్రము బయటికి వచ్చెను. అది తన నాలుగు దంతములతో భగవంతుని శ్వేతపర్వతము యొక్క మహిమను హరించుచుండెను.
+hi: तदनन्तर ऐरावत नामक गजेन्द्र निकला। वह अपने चार दाँतों से भगवान् के श्वेत पर्वत की महिमा को हरण कर रहा था।
 
 --- verse 5 ---
 deva:
@@ -56,6 +68,9 @@ deva:
 iast:
 kaustubhākhyamabhūd ratnaṁ padmarāgo mahodadheḥ|
 tasminhariḥ spṛhāṁ cakre vakṣo'laṅkaraṇe maṇau||
+en: From the great ocean arose the gem called Kaustubha, a padmarāga. Hari set his desire upon that jewel, for the adorning of his chest.
+tel: మహాసముద్రము నుండి కౌస్తుభము అను పేరు గల పద్మరాగ రత్నము పుట్టెను. తన వక్షస్థలమును అలంకరించుట కొరకు హరి ఆ మణియందు కోరిక చేసెను.
+hi: महासमुद्र से कौस्तुभ नामक पद्मराग रत्न प्रकट हुआ। अपने वक्ष के अलङ्कार के लिये हरि ने उस मणि में इच्छा की।
 
 --- verse 6 ---
 deva:
@@ -64,6 +79,9 @@ deva:
 iast:
 tato'bhavat pārijātaḥ suralokavibhūṣaṇam|
 pūrayatyarthino yo'rthaiḥ śaśvad bhuvi yathā bhavān||
+en: Then arose the Pārijāta, the ornament of the world of the gods. It always fills those who ask with the things they seek, as you do upon the earth.
+tel: అటుపిమ్మట దేవలోకమునకు అలంకారమైన పారిజాతము పుట్టెను. భూమిపై మీరు చేయునట్లే, అది అర్థులను వారు కోరిన అర్థములతో ఎల్లప్పుడు నింపుచుండును.
+hi: तदनन्तर देवलोक के आभूषण पारिजात प्रकट हुआ। जैसे आप पृथ्वी पर करते हैं, वैसे ही वह याचकों को उनके अभीष्ट अर्थों से सदा पूर्ण करता है।
 
 --- verse 7 ---
 deva:
@@ -72,6 +90,9 @@ deva:
 iast:
 tataścāpsaraso jātā niṣkakaṇṭhyaḥ suvāsasaḥ|
 ramaṇyaḥ svargiṇāṁ valgugatilīlāvalokanaiḥ||
+en: Then the apsarases were born. They wore gold ornaments on their necks and fine garments. With their charming gait, their play and their glances they delighted the dwellers of heaven.
+tel: అటుపిమ్మట అప్సరసలు పుట్టిరి. వారు కంఠములయందు బంగారు నగలను, మంచి వస్త్రములను ధరించియుండిరి. మనోహరమైన నడకతో, లీలలతో, చూపులతో వారు స్వర్గవాసులను ఆనందింపజేసిరి.
+hi: तदनन्तर अप्सराएँ प्रकट हुईं। वे गले में सोने के आभूषण और सुन्दर वस्त्र धारण किये हुए थीं। मनोहर गति, लीला और दृष्टि से वे स्वर्गवासियों को आनन्दित करती थीं।
 
 --- verse 8 ---
 deva:
@@ -80,6 +101,9 @@ deva:
 iast:
 tataścāvirabhūt sākṣācchrī ramā bhagavatparā|
 rañjayantī diśaḥ kāntyā vidyut saudāmanī yathā||
+en: Then Śrī Ramā herself appeared. She is devoted to the Lord. With her beauty she coloured all the quarters, like lightning in a cloud.
+tel: అటుపిమ్మట శ్రీ రమాదేవి సాక్షాత్తుగా ఆవిర్భవించెను. ఆమె భగవంతునియందు పరాయణురాలు. మేఘమునందలి మెరుపువలె ఆమె తన కాంతిచే దిక్కులను రంజింపజేసెను.
+hi: तदनन्तर श्री रमा साक्षात् प्रकट हुईं। वे भगवान् में परायण हैं। मेघ की विद्युत् के समान उन्होंने अपनी कान्ति से दिशाओं को रञ्जित किया।
 
 --- verse 9 ---
 deva:
@@ -88,6 +112,9 @@ deva:
 iast:
 tasyāṁ cakruḥ spṛhāṁ sarve sasurāsuramānavāḥ|
 rūpaudāryavayovarṇamahimākṣiptacetasaḥ||
+en: All of them, the gods, the asuras and the men, set their desire upon her. Their minds were carried away by her form, her generosity, her youth, her colour and her greatness.
+tel: రూపము, ఔదార్యము, వయస్సు, వర్ణము, మహిమ అనువాటిచే మనస్సులు ఆకర్షింపబడిన దేవతలు, అసురులు, మనుష్యులు అందరును ఆమెయందు కోరిక చేసిరి.
+hi: रूप, औदार्य, वय, वर्ण और महिमा से जिनके चित्त आक्षिप्त हो गये थे, वे देवता, असुर और मनुष्य सब उनमें इच्छा करने लगे।
 
 --- verse 10 ---
 deva:
@@ -96,6 +123,9 @@ deva:
 iast:
 tasyā āsanamāninye mahendro mahadadbhutam|
 mūrtimatyaḥ saricchreṣṭhā hemakumbhairjalaṁ śuciḥ||
+en: Mahendra brought a great and wonderful seat for her. The best of the rivers took bodily form and brought pure water in golden pitchers.
+tel: మహేంద్రుడు ఆమె కొరకు గొప్ప అద్భుతమైన ఆసనమును తెచ్చెను. నదులలో శ్రేష్ఠమైనవి మూర్తిమంతములై బంగారు కుంభములతో పవిత్రమైన జలమును తెచ్చెను.
+hi: महेन्द्र उनके लिये महान् अद्भुत आसन लाये। श्रेष्ठ नदियाँ मूर्तिमती होकर सोने के कलशों में पवित्र जल लायीं।
 
 --- verse 11 ---
 deva:
@@ -104,6 +134,9 @@ deva:
 iast:
 ābhiṣecanikā bhūmirāharat sakalauṣadhīḥ|
 gāvaḥ pañca pavitrāṇi vasanto madhumādhavau||
+en: The Earth brought all the herbs that the bathing needs. The cows brought the five pure things. Spring brought the two months Madhu and Mādhava.
+tel: అభిషేకమునకు కావలసిన ఓషధులన్నిటిని భూమి తెచ్చెను. గోవులు పంచ పవిత్రములను తెచ్చెను. వసంతము మధు మాధవ మాసములను తెచ్చెను.
+hi: अभिषेक के लिये आवश्यक सब ओषधियाँ भूमि लायी। गौओं ने पाँच पवित्र वस्तुएँ दीं। वसन्त ने मधु और माधव दोनों मासों को दिया।
 
 --- verse 12 ---
 deva:
@@ -112,6 +145,9 @@ deva:
 iast:
 ṛṣayaḥ kalpayāñcakrurabhiṣekaṁ yathāvidhi|
 jagurbhadrāṇi gandharvā naṭyaśca nanṛturjaguḥ||
+en: The sages performed the bathing according to the rule. The gandharvas sang auspicious songs. The dancing women danced and sang.
+tel: ఋషులు విధి ప్రకారముగా అభిషేకమును చేసిరి. గంధర్వులు మంగళమైన పాటలను పాడిరి. నటీమణులు నృత్యము చేసి పాడిరి.
+hi: ऋषियों ने विधि के अनुसार अभिषेक किया। गन्धर्वों ने मङ्गल गीत गाये। नटियों ने नृत्य किया और गाया।
 
 --- verse 13 ---
 deva:
@@ -120,6 +156,9 @@ deva:
 iast:
 meghā mṛdaṅgapaṇavamurajānakagomukhān|
 vyanādayañchaṅkhaveṇuvīṇāstumulaniḥsvanān||
+en: The clouds sounded the mṛdaṅga, the paṇava, the muraja, the ānaka and the gomukha, and the conch, the flute and the vīṇā, all with a loud noise.
+tel: మేఘములు మృదంగము, పణవము, మురజము, ఆనకము, గోముఖము అనువాటిని, శంఖము, వేణువు, వీణ అనువాటిని గొప్ప ధ్వనితో మ్రోయించెను.
+hi: मेघों ने मृदङ्ग, पणव, मुरज, आनक और गोमुख को, तथा शङ्ख, वेणु और वीणा को तुमुल ध्वनि से बजाया।
 
 --- verse 14 ---
 deva:
@@ -128,6 +167,9 @@ deva:
 iast:
 tato'bhiṣiṣicurdevīṁ śriyaṁ padmakarāṁ satīm|
 digibhāḥ pūrṇakalaśaiḥ sūktavākyairdvijeritaiḥ||
+en: Then the elephants of the quarters bathed the goddess Śrī, the chaste one who holds a lotus in her hand. They used full pitchers, while the twice-born uttered the words of the sūktas.
+tel: అటుపిమ్మట దిగ్గజములు, ద్విజులు పలికిన సూక్త వాక్యములతో, నిండిన కలశములచే, చేతియందు పద్మమును ధరించిన సతి అయిన శ్రీదేవికి అభిషేకము చేసెను.
+hi: तदनन्तर दिग्गजों ने, द्विजों के द्वारा उच्चारित सूक्त वाक्यों के साथ, पूर्ण कलशों से, हाथ में कमल धारण करनेवाली सती श्री देवी का अभिषेक किया।
 
 --- verse 15 ---
 deva:
@@ -136,6 +178,9 @@ deva:
 iast:
 samudraḥ pītakauśeyavāsasī samupāharat|
 varuṇaḥ srajaṁ vaijayantīṁ madhunā mattaṣaṭpadām||
+en: The ocean brought a pair of yellow silk garments. Varuṇa brought the Vaijayantī garland, upon which the bees were intoxicated by its honey.
+tel: సముద్రుడు పచ్చని పట్టు వస్త్రముల జంటను తెచ్చెను. వరుణుడు, తేనెచే మత్తెక్కిన తుమ్మెదలు కలిగిన వైజయంతీ మాలను తెచ్చెను.
+hi: समुद्र ने पीत कौशेय वस्त्रों की जोड़ी दी। वरुण ने वैजयन्ती माला दी, जिस पर मधु से मत्त भ्रमर थे।
 
 --- verse 16 ---
 deva:
@@ -144,6 +189,9 @@ deva:
 iast:
 bhūṣaṇāni vicitrāṇi viśvakarmā prajāpatiḥ|
 hāraṁ sarasvatī padmamajo nāgāśca kuṇḍale||
+en: Viśvakarmā the Prajāpati brought ornaments of many kinds. Sarasvatī brought a necklace, Aja brought a lotus, and the nāgas brought a pair of earrings.
+tel: ప్రజాపతి అయిన విశ్వకర్మ విచిత్రమైన భూషణములను తెచ్చెను. సరస్వతి హారమును, అజుడు పద్మమును, నాగులు కుండలముల జంటను తెచ్చిరి.
+hi: प्रजापति विश्वकर्मा ने विचित्र आभूषण दिये। सरस्वती ने हार, अज ने कमल और नागों ने कुण्डलों की जोड़ी दी।
 
 --- verse 17 ---
 deva:
@@ -156,18 +204,24 @@ tataḥ kṛtasvastyayanotpalasrajaṁ
 naddadvirephāṁ parigṛhya pāṇinā|
 cacāla vaktraṁ sukapolakuṇḍalaṁ
 savrīḍahāsaṁ dadhatī suśobhanam||
+en: Then, when the rite for her welfare had been done, she took in her hand a garland of lotuses upon which the bees were humming. She moved forward, wearing a beautiful face with lovely cheeks and earrings and a bashful smile.
+tel: అటుపిమ్మట స్వస్త్యయనము చేయబడిన పిమ్మట, తుమ్మెదలు ఝంకారము చేయుచున్న కలువల మాలను చేతితో గ్రహించి, చక్కని చెక్కిళ్ళు, కుండలములు, సిగ్గుతో కూడిన నవ్వు కలిగిన అందమైన ముఖమును ధరించి ఆమె కదలెను.
+hi: तदनन्तर स्वस्त्ययन किये जाने पर, जिस पर भ्रमर गुञ्जार कर रहे थे उस उत्पल माला को हाथ में लेकर, सुन्दर कपोलों और कुण्डलों से युक्त तथा लज्जा के साथ मुसकानवाले सुशोभन मुख को धारण करती हुई वे चलीं।
 
 --- verse 18 ---
 deva:
 स्तनद्वयं चातिकृशोदरी समं
-निरन्तरं चन्दनकुङ्कु मोक्षितम्।
+निरन्तरं चन्दनकुङ्कुमोक्षितम्।
 ततस्ततो नूपुरवल्गुशिञ्जितै-
 र्विसर्पती हेमलतेव सा बभौ॥
 iast:
 stanadvayaṁ cātikṛśodarī samaṁ
-nirantaraṁ candanakuṅku mokṣitam|
+nirantaraṁ candanakuṅkumokṣitam|
 tatastato nūpuravalguśiñjitai-
 rvisarpatī hemalateva sā babhau||
+en: She was very slender at the waist. Her two breasts were even and close together, and sprinkled with sandal and kuṅkuma. Moving here and there with the sweet jingling of her anklets, she shone like a creeper of gold.
+tel: ఆమె మిక్కిలి సన్నని నడుము కలది. ఆమె స్తనములు రెండును సమానముగా, ఎడము లేకుండ ఉండి, చందనము కుంకుమలతో అలదబడియుండెను. అందమైన అందెల సవ్వడితో ఇటునటు కదలుచు ఆమె బంగారు లతవలె ప్రకాశించెను.
+hi: वे अत्यन्त कृश उदरवाली थीं। उनके दोनों स्तन सम और निरन्तर थे, तथा चन्दन और कुङ्कुम से उक्षित थे। नूपुरों की मधुर झङ्कार के साथ इधर उधर चलती हुई वे सोने की लता के समान शोभित हुईं।
 
 --- verse 19 ---
 deva:
@@ -180,6 +234,9 @@ vilokayantī niravadyamātmanaḥ
 padaṁ dhruvaṁ cāvyabhicārisadguṇam|
 gandharvayakṣāsurasiddhacāraṇa-
 traiviṣṭapeyādiṣu nānvavindata||
+en: She looked for a place for herself that would be blameless and firm, and whose good qualities would never fail. She did not find such a place among the gandharvas, the yakṣas, the asuras, the siddhas, the cāraṇas, the dwellers of heaven and the others.
+tel: తనకు నిందలేనిదియు, స్థిరమైనదియు, ఎన్నడును చెడని సద్గుణములు కలదియు అగు స్థానమును ఆమె వెదకెను. గంధర్వులు, యక్షులు, అసురులు, సిద్ధులు, చారణులు, స్వర్గవాసులు మొదలైనవారియందు అట్టి స్థానమును ఆమె పొందలేదు.
+hi: उन्होंने अपने लिये निरवद्य, ध्रुव और अव्यभिचारी सद्गुणोंवाले स्थान को खोजा। गन्धर्व, यक्ष, असुर, सिद्ध, चारण और स्वर्गवासी आदि में उन्होंने वैसा स्थान नहीं पाया।
 
 --- verse 20 ---
 deva:
@@ -192,6 +249,9 @@ nūnaṁ tapo yasya na manyunirjayo
 jñānaṁ kvacit tacca na saṅgavarjitam|
 kaścinmahāṁstasya na kāmanirjayaḥ
 sa īśvaraḥ kiṁ paratovyapāśrayaḥ||
+en: One has tapas, but he has not conquered anger. Another has knowledge somewhere, but it is not free of attachment. Another is great, but he has not conquered desire. And how can he be a ruler who depends upon another?
+tel: ఒకనికి తపస్సు కలదు, కాని అతడు క్రోధమును జయించలేదు. మరియొకనికి ఎక్కడో జ్ఞానము కలదు, కాని అది సంగము లేనిది కాదు. ఒకడు మహాత్ముడు, కాని అతడు కామమును జయించలేదు. ఇతరునిపై ఆధారపడినవాడు ఈశ్వరుడు ఎట్లు అగును?
+hi: किसी में तप है, पर उसने क्रोध को नहीं जीता। किसी में कहीं ज्ञान है, पर वह सङ्गरहित नहीं। कोई महान् है, पर उसने काम को नहीं जीता। और जो दूसरे के आश्रित है, वह ईश्वर कैसे हो सकता है?
 
 --- verse 21 ---
 deva:
@@ -204,6 +264,9 @@ dharmaḥ kvacit tatra na bhūtasauhṛdaṁ
 tyāgaḥ kvacit tatra na muktikāraṇam|
 vīryaṁ na puṁso'styajaveganiṣkṛtaṁ
 na hi dvitīyo guṇasaṅgavarjitaḥ||
+en: Somewhere there is dharma, but there is no friendliness to beings. Somewhere there is renunciation, but it is not the cause of liberation. A man has strength, but it is not free from the force of time. And there is no second one who is free of attachment to the guṇas.
+tel: ఎక్కడో ధర్మము కలదు, కాని అక్కడ ప్రాణులపై స్నేహము లేదు. ఎక్కడో త్యాగము కలదు, కాని అది ముక్తికి కారణము కాదు. పురుషునికి వీర్యము కలదు, కాని అది కాలము యొక్క వేగము నుండి తప్పినది కాదు. గుణముల సంగము లేని రెండవవాడు ఎవడును లేడు.
+hi: कहीं धर्म है, पर वहाँ प्राणियों के प्रति सौहार्द नहीं। कहीं त्याग है, पर वह मुक्ति का कारण नहीं। पुरुष में वीर्य है, पर वह काल के वेग से छूटा हुआ नहीं। और गुणों के सङ्ग से रहित दूसरा कोई नहीं है।
 
 --- verse 22 ---
 deva:
@@ -216,6 +279,9 @@ kvaciccirāyurna hi śīlamaṅgalaṁ
 kvacit tadapyasti na vedyamāyuṣaḥ|
 yatrobhayaṁ kutra ca so'pyamaṅgalaḥ
 sumaṅgalaḥ kaśca na kāṅkṣate hi mām||
+en: Somewhere there is long life, but not good character and auspiciousness. Somewhere that too is there, but the length of life is not known. Where both are together, he also is without auspiciousness. And the one who is wholly auspicious does not desire me.
+tel: ఎక్కడో దీర్ఘమైన ఆయువు కలదు, కాని శీలము మంగళము లేవు. ఎక్కడో అది కూడ కలదు, కాని ఆయువు ఎంతో తెలియదు. ఈ రెండును కలసి ఉన్నచోట అతడును అమంగళుడే. మిక్కిలి మంగళమైనవాడు నన్ను కోరడు.
+hi: कहीं दीर्घ आयु है, पर शील और मङ्गल नहीं। कहीं वह भी है, पर आयु का ज्ञान नहीं। जहाँ दोनों हैं, वहाँ वह भी अमङ्गल है। और जो सुमङ्गल है, वह मुझे नहीं चाहता।
 
 --- verse 23 ---
 deva:
@@ -228,6 +294,9 @@ evaṁ vimṛśyāvyabhicārisadguṇai-
 rvaraṁ nijaikāśrayatāguṇāśrayam|
 vavre varaṁ sarvaguṇairapekṣitaṁ
 ramā mukundaṁ nirapekṣamīpsitam||
+en: Having thought in this way, Ramā chose Mukunda as her husband. He is the best for his good qualities that never fail. He alone is the refuge of those who are his, and he is the abode of that very quality. All good qualities seek him, while he himself seeks nothing, and he was the one she desired.
+tel: ఈ విధముగా విచారించి రమాదేవి ముకుందుని వరునిగా వరించెను. ఎన్నడును చెడని సద్గుణములచే ఆయనయే శ్రేష్ఠుడు. తనవారికి ఆయన ఒక్కడే ఆశ్రయము, ఆ గుణమునకే ఆయన నిలయము. సర్వగుణములు ఆయనను అపేక్షించును, ఆయన దేనిని అపేక్షించడు, ఆయనయే ఆమెకు ఈప్సితుడు.
+hi: इस प्रकार विचार कर रमा ने मुकुन्द को वर के रूप में चुना। अव्यभिचारी सद्गुणों से वे ही श्रेष्ठ हैं। अपने जनों के लिये वे ही एक आश्रय हैं, और उसी गुण के वे आश्रय हैं। सब गुण उनकी अपेक्षा करते हैं, वे किसी की अपेक्षा नहीं करते, और वे ही उनके ईप्सित थे।
 
 --- verse 24 ---
 deva:
@@ -240,6 +309,9 @@ tasyāṁsadeśa uśatīṁ navakañjamālāṁ
 mādyanmadhuvratavarūthagiropaghuṣṭām|
 tasthau nidhāya nikaṭe taduraḥ svadhāma
 savrīḍahāsavikasannayanena yātā||
+en: She placed on the region of his shoulder a lovely garland of fresh lotuses, which rang with the voices of a swarm of bees intoxicated with its honey. She then stood near him, for his chest is her own abode, and she came with a bashful smile and with opening eyes.
+tel: మత్తెక్కిన తుమ్మెదల గుంపు ధ్వనులతో మ్రోగుచున్న క్రొత్త కలువల అందమైన మాలను ఆమె ఆయన భుజ ప్రదేశమునందు ఉంచెను. ఆయన వక్షస్థలము ఆమెకు స్వస్థానమే కావున ఆమె ఆయన దగ్గర నిలిచెను. సిగ్గుతో కూడిన నవ్వుతో, విచ్చుకొనుచున్న కన్నులతో ఆమె వచ్చెను.
+hi: मधु से मत्त भ्रमरों के समूह की ध्वनि से गूँजती हुई नये कमलों की सुन्दर माला को उन्होंने उनके कन्धे के प्रदेश में रखा। उनका वक्ष ही उनका स्वधाम है, इसलिये वे उनके निकट खड़ी हो गयीं। लज्जा के साथ मुसकान और खिलते नेत्रों के साथ वे आयीं।
 
 --- verse 25 ---
 deva:
@@ -252,6 +324,9 @@ tasyāḥ śriyastrijagato janako jananyā
 vakṣonivāsamakarot paramaṁ vibhūteḥ|
 śrīḥ svāḥ prajāḥ sakaruṇena nirīkṣaṇena
 yatra sthitaidhayata sādhipatīṁstrilokān||
+en: He is the father of the three worlds, and she is their mother. He made his chest her dwelling, the supreme abode of prosperity. Standing there, Śrī made her own creatures prosper with her compassionate look, and the three worlds along with their rulers.
+tel: ఆయన మూడు లోకములకు తండ్రి, ఆమె వానికి తల్లి. ఆయన తన వక్షస్థలమును ఆమెకు నివాసముగా, విభూతికి పరమ స్థానముగా చేసెను. అక్కడ నిలిచి శ్రీదేవి తన కరుణాపూర్ణమైన చూపుతో తన ప్రజలను, అధిపతులతో కూడిన మూడు లోకములను వృద్ధి చేసెను.
+hi: वे तीनों लोकों के जनक हैं और वे उनकी जननी हैं। उन्होंने अपने वक्ष को उनका निवास और विभूति का परम स्थान बनाया। वहाँ स्थित होकर श्री ने अपनी करुणापूर्ण दृष्टि से अपनी प्रजा को और अधिपतियों के साथ तीनों लोकों को बढ़ाया।
 
 --- verse 26 ---
 deva:
@@ -260,6 +335,9 @@ deva:
 iast:
 śaṅkhatūryamṛdaṅgānāṁ vāditrāṇāṁ pṛthuḥ svanaḥ|
 devānugānāṁ sastrīṇāṁ nṛtyatāṁ gāyatāmabhūt||
+en: A great sound arose from the conches, the trumpets, the mṛdaṅgas and the other instruments. The followers of the gods, together with their women, danced and sang.
+tel: శంఖములు, తూర్యములు, మృదంగములు మొదలైన వాద్యముల గొప్ప ధ్వని కలిగెను. దేవతల అనుచరులు తమ స్త్రీలతో కూడి నృత్యము చేసి పాడిరి.
+hi: शङ्ख, तूर्य, मृदङ्ग आदि वाद्यों का महान् शब्द हुआ। देवताओं के अनुचर अपनी स्त्रियों के साथ नृत्य करते और गाते थे।
 
 --- verse 27 ---
 deva:
@@ -268,6 +346,9 @@ deva:
 iast:
 brahmarudrāṅgiromukhyāḥ sarve viśvasṛjo vibhum|
 īḍire'vitathairmantraistalliṅgaiḥ puṣpavarṣiṇaḥ||
+en: Brahmā, Rudra, Aṅgiras and all the other makers of the universe praised the Lord. They used true mantras that point to him, and they rained down flowers.
+tel: బ్రహ్మ, రుద్రుడు, అంగిరసుడు మొదలైన విశ్వసృష్టికర్తలు అందరును విభుని స్తుతించిరి. ఆయనను తెలుపు సత్యమైన మంత్రములతో వారు స్తుతించి పుష్పములను కురిపించిరి.
+hi: ब्रह्मा, रुद्र, अङ्गिरा आदि सब विश्वसृष्टाओं ने विभु की स्तुति की। उन्होंने उनका बोध करानेवाले अवितथ मन्त्रों से स्तुति की और पुष्प बरसाये।
 
 --- verse 28 ---
 deva:
@@ -276,6 +357,9 @@ deva:
 iast:
 śriyā vilokitā devāḥ saprajāpatayaḥ prajāḥ|
 śīlādiguṇasampannā lebhire nirvṛtiṁ parām||
+en: The gods, together with the Prajāpatis and the creatures, were looked upon by Śrī. They became endowed with good character and the other qualities, and they obtained the highest contentment.
+tel: దేవతలు, ప్రజాపతులతో కూడిన ప్రజలు శ్రీదేవిచే చూడబడిరి. వారు శీలము మొదలైన గుణములతో సంపన్నులై పరమమైన నిర్వృతిని పొందిరి.
+hi: देवता और प्रजापतियों के सहित प्रजा श्री के द्वारा देखे गये। वे शील आदि गुणों से सम्पन्न होकर परम निर्वृति को प्राप्त हुए।
 
 --- verse 29 ---
 deva:
@@ -284,6 +368,9 @@ deva:
 iast:
 niḥsattvā lolupā rājan nirudyogā gatatrapāḥ|
 yadā copekṣitā lakṣmyā babhūvurdaityadānavāḥ||
+en: King, when Lakṣmī disregarded them, the daityas and the dānavas became without strength, greedy, without effort, and without shame.
+tel: రాజా, లక్ష్మిచే ఉపేక్షింపబడినప్పుడు దైత్యులు దానవులు సత్త్వము లేనివారు, లోలుపులు, ఉద్యోగము లేనివారు, సిగ్గు పోయినవారు అయిరి.
+hi: हे राजन्, जब लक्ष्मी ने उनकी उपेक्षा की, तब दैत्य और दानव सत्त्वहीन, लोलुप, उद्योगहीन और निर्लज्ज हो गये।
 
 --- verse 30 ---
 deva:
@@ -292,6 +379,9 @@ deva:
 iast:
 athāsīd vāruṇī devī kanyā kamalalocanā|
 asurā jagṛhustāṁ vai hareranumatena te||
+en: Then came the goddess Vāruṇī, a maiden with eyes like lotuses. Those asuras took her, with the permission of Hari.
+tel: అటుపిమ్మట కమలముల వంటి కన్నులు కలిగిన కన్య అయిన వారుణీ దేవి పుట్టెను. హరి అనుమతితో ఆ అసురులు ఆమెను గ్రహించిరి.
+hi: तदनन्तर कमल के समान नेत्रोंवाली कन्या वारुणी देवी प्रकट हुईं। हरि की अनुमति से उन असुरों ने उन्हें ग्रहण किया।
 
 --- verse 31 ---
 deva:
@@ -300,6 +390,9 @@ deva:
 iast:
 athodadhermathyamānāt kāśyapairamṛtārthibhiḥ|
 udatiṣṭhanmahārāja puruṣaḥ paramādbhutaḥ||
+en: Then, great king, as the ocean was being churned by the sons of Kaśyapa who sought the nectar, a most wonderful person rose up.
+tel: మహారాజా, అమృతమును కోరిన కాశ్యపులచే సముద్రము మథింపబడుచున్నప్పుడు, మిక్కిలి అద్భుతమైన పురుషుడు లేచెను.
+hi: हे महाराज, अमृत के इच्छुक काश्यपों के द्वारा समुद्र मथे जाने पर परम अद्भुत पुरुष उठे।
 
 --- verse 32 ---
 deva:
@@ -308,6 +401,9 @@ deva:
 iast:
 dīrghapīvaradordaṇḍaḥ kambugrīvo'ruṇekṣaṇaḥ|
 śyāmalastaruṇaḥ sragvī sarvābharaṇabhūṣitaḥ||
+en: His arms were long and stout. His neck was like a conch and his eyes were reddish. He was dark in colour and young, he wore a garland, and he was adorned with every ornament.
+tel: ఆయన బాహువులు పొడవైనవి, బలిసినవి. ఆయన కంఠము శంఖము వంటిది, కన్నులు ఎరుపు రంగు కలవి. ఆయన శ్యామల వర్ణుడు, తరుణుడు, మాల ధరించినవాడు, సర్వాభరణములతో అలంకరింపబడినవాడు.
+hi: उनकी भुजाएँ लम्बी और पुष्ट थीं। उनका कण्ठ शङ्ख के समान और नेत्र अरुण थे। वे श्यामल और तरुण थे, माला धारण किये हुए और सब आभूषणों से अलङ्कृत थे।
 
 --- verse 33 ---
 deva:
@@ -316,6 +412,9 @@ deva:
 iast:
 pītavāsā mahoraskaḥ sumṛṣṭamaṇikuṇḍalaḥ|
 snigdhakuñcitakeśāntaḥ subhagaḥ siṁhavikramaḥ||
+en: He was clothed in yellow and broad of chest. His jewelled earrings were well polished. The ends of his hair were soft and curling. He was handsome, and his valour was that of a lion.
+tel: ఆయన పచ్చని వస్త్రము ధరించినవాడు, విశాలమైన ఱొమ్ము కలవాడు. ఆయన మణికుండలములు బాగుగా మెరుగు పెట్టబడినవి. ఆయన కేశముల కొనలు మృదువుగా ఉంగరములు తిరిగినవి. ఆయన సుభగుడు, సింహము వంటి పరాక్రమము కలవాడు.
+hi: वे पीत वस्त्र धारण किये हुए और विशाल वक्षवाले थे। उनके मणिकुण्डल सुमृष्ट थे। उनके केशों के अन्त स्निग्ध और कुञ्चित थे। वे सुभग थे और उनका विक्रम सिंह के समान था।
 
 --- verse 34 ---
 deva:
@@ -324,6 +423,9 @@ deva:
 iast:
 amṛtāpūrṇakalaśaṁ bibhrad valayabhūṣitaḥ|
 sa vai bhagavataḥ sākṣādviṣṇoraṁśāṁśasambhavaḥ||
+en: He bore a pitcher full of nectar, and he was adorned with bracelets. He had truly arisen from a portion of a portion of the blessed Viṣṇu himself.
+tel: ఆయన అమృతముతో నిండిన కలశమును ధరించినవాడు, వలయములతో అలంకరింపబడినవాడు. ఆయన సాక్షాత్తుగా భగవంతుడైన విష్ణువు యొక్క అంశము యొక్క అంశము నుండి పుట్టినవాడు.
+hi: वे अमृत से भरे कलश को धारण किये हुए और वलयों से भूषित थे। वे साक्षात् भगवान् विष्णु के अंश के अंश से उत्पन्न हुए थे।
 
 --- verse 35 ---
 deva:
@@ -332,6 +434,9 @@ deva:
 iast:
 dhanvantaririti khyāta āyurvedadṛgijyabhāk|
 tamālokyāsurāḥ sarve kalaśaṁ cāmṛtābhṛtam||
+en: He is known as Dhanvantari. He is the seer of the Āyurveda, and he has a share in the sacrifices. When all the asuras saw him and the pitcher filled with nectar,
+tel: ఆయన ధన్వంతరి అని ప్రసిద్ధుడు. ఆయన ఆయుర్వేదమును దర్శించినవాడు, యజ్ఞములయందు భాగము కలవాడు. ఆయనను, అమృతముతో నిండిన కలశమును అసురులందరును చూచి,
+hi: वे धन्वन्तरि नाम से प्रसिद्ध हैं। वे आयुर्वेद के द्रष्टा हैं और यज्ञों में भाग पानेवाले हैं। उन्हें और अमृत से भरे कलश को देखकर सब असुरों ने,
 
 --- verse 36 ---
 deva:
@@ -340,6 +445,9 @@ deva:
 iast:
 lipsantaḥ sarvavastūni kalaśaṁ tarasāharan|
 nīyamāne'suraistasminkalaśe'mṛtabhājane||
+en: they desired everything for themselves and carried off the pitcher by force. While that pitcher, the vessel of the nectar, was being carried away by the asuras,
+tel: వారు అన్ని వస్తువులను కోరువారై వేగముగా ఆ కలశమును హరించిరి. అమృతపాత్రమైన ఆ కలశము అసురులచే తీసికొని పోబడుచున్నప్పుడు,
+hi: सब वस्तुओं की इच्छा करते हुए वेग से उस कलश को हर लिया। अमृत के पात्र उस कलश को असुरों के द्वारा ले जाये जाने पर,
 
 --- verse 37 ---
 deva:
@@ -350,6 +458,9 @@ iast:
 viṣaṇṇamanaso devā hariṁ śaraṇamāyayuḥ|
 iti taddainyamālokya bhagavānbhṛtyakāmakṛt|
 mā khidyata mitho'rthaṁ vaḥ sādhayiṣye svamāyayā||
+en: the gods, with dejected minds, went to Hari for refuge. Seeing their distress, the Lord, who fulfils the wishes of his servants, said: Do not grieve. By my own māyā, through their quarrel with one another, I shall accomplish your purpose.
+tel: విషణ్ణమైన మనస్సులు కలిగిన దేవతలు హరిని శరణు పొందిరి. వారి ఈ దైన్యమును చూచి, సేవకుల కోరికలను తీర్చు భగవంతుడు ఇట్లు పలికెను: మీరు దుఃఖించకుడు. నా మాయచే, వారి పరస్పర కలహముచే, మీ కార్యమును నేను సాధించెదను.
+hi: खिन्न मनवाले देवता हरि की शरण में गये। उनके इस दैन्य को देखकर, सेवकों की कामना पूर्ण करनेवाले भगवान् ने कहा: तुम खेद न करो। अपनी माया से, इनके परस्पर कलह से, मैं तुम्हारा कार्य सिद्ध करूँगा।
 
 --- verse 38 ---
 deva:
@@ -358,6 +469,9 @@ deva:
 iast:
 mithaḥ kalirabhūtteṣāṁ tadarthe tarṣacetasām|
 ahaṁ pūrvamahaṁ pūrvaṁ na tvaṁ na tvamiti prabho||
+en: Lord, a quarrel arose among them, for their minds were thirsting for the nectar. They said: I first, I first. Not you, not you.
+tel: ప్రభూ, అమృతము కొరకు దాహము కలిగిన మనస్సులు కలవారైన వారి మధ్య కలహము కలిగెను. నేను మొదట, నేను మొదట, నీవు కాదు, నీవు కాదు అని వారు పలికిరి.
+hi: हे प्रभो, अमृत के लिये तृषित चित्तवाले उनमें परस्पर कलह हुआ। वे कहने लगे: पहले मैं, पहले मैं, तू नहीं, तू नहीं।
 
 --- verse 39 ---
 deva:
@@ -366,6 +480,9 @@ deva:
 iast:
 devāḥ svaṁ bhāgamarhanti ye tulyāyāsahetavaḥ|
 satrayāga ivaitasminneṣa dharmaḥ sanātanaḥ||
+en: The gods deserve their own share, because they took an equal part in the effort. In this matter, as in a satra sacrifice, this is the eternal dharma.
+tel: సమానమైన శ్రమకు కారణమైన దేవతలు తమ భాగమునకు అర్హులు. సత్రయాగమునందు వలె ఈ విషయమునందును ఇదియే సనాతనమైన ధర్మము.
+hi: जो समान परिश्रम के कारण थे, वे देवता अपने भाग के योग्य हैं। सत्रयाग के समान इस विषय में भी यही सनातन धर्म है।
 
 --- verse 40 ---
 deva:
@@ -374,6 +491,9 @@ deva:
 iast:
 iti svānpratyaṣedhanvai daiteyā jātamatsarāḥ|
 durbalāḥ prabalān rājan gṛhītakalaśān muhuḥ||
+en: King, speaking in this way, the daiteyas grew jealous. The weak among them again and again forbade their own strong ones who had seized the pitcher.
+tel: రాజా, ఈ విధముగా పలుకుచు దైతేయులు మాత్సర్యము కలవారైరి. వారిలో బలహీనులు, కలశమును గ్రహించిన తమ బలవంతులను మాటిమాటికి వారించిరి.
+hi: हे राजन्, इस प्रकार कहते हुए दैतेय मत्सरवाले हो गये। उनमें जो दुर्बल थे, वे कलश को ले लेनेवाले अपने ही प्रबलों को बार बार रोकते रहे।
 
 --- verse 41 ---
 deva:
@@ -382,6 +502,9 @@ deva:
 iast:
 etasminnantare viṣṇuḥ sarvopāyavidīśvaraḥ|
 yoṣidrūpamanirdeśyaṁ dadhāra paramādbhutam||
+en: In this interval Viṣṇu, the Lord who knows every means, took on the form of a woman. It was beyond description and most wonderful.
+tel: ఈ మధ్యలో సర్వోపాయములను ఎరిగిన ఈశ్వరుడైన విష్ణువు స్త్రీ రూపమును ధరించెను. అది నిర్దేశింపలేనిది, మిక్కిలి అద్భుతమైనది.
+hi: इसी बीच में सब उपायों को जाननेवाले ईश्वर विष्णु ने स्त्री का रूप धारण किया। वह अनिर्देश्य और परम अद्भुत था।
 
 --- verse 42 ---
 deva:
@@ -390,6 +513,9 @@ deva:
 iast:
 prekṣaṇīyotpalaśyāmaṁ sarvāvayavasundaram|
 samānakarṇābharaṇaṁ sukapolonnasānanam||
+en: That form was dark like a blue lotus and worth looking upon. It was beautiful in every limb. The ornaments in its two ears were alike. Its face had lovely cheeks and a raised nose.
+tel: ఆ రూపము కలువవలె శ్యామలమైనది, చూడదగినది. అది అన్ని అవయవములయందును అందమైనది. దాని రెండు చెవులయందలి ఆభరణములు సమానమైనవి. దాని ముఖము చక్కని చెక్కిళ్ళు, ఉన్నతమైన ముక్కు కలది.
+hi: वह रूप उत्पल के समान श्याम और प्रेक्षणीय था। वह सब अवयवों में सुन्दर था। उसके दोनों कानों के आभूषण समान थे। उसका मुख सुन्दर कपोलों और उन्नत नासिकावाला था।
 
 --- verse 43 ---
 deva:
@@ -398,6 +524,9 @@ deva:
 iast:
 navayauvananirvṛttastanabhārakṛśodaram|
 mukhāmodānuraktālijhaṅkārodvignalocanam||
+en: Fresh youth had filled out the weight of its breasts, and its waist was slender. Bees were drawn to the fragrance of its face, and their humming made its eyes restless.
+tel: క్రొత్త యౌవనముచే నిండిన స్తనముల భారముచే దాని నడుము సన్నగా ఉండెను. ముఖము యొక్క సుగంధమునకు ఆకర్షింపబడిన తుమ్మెదల ఝంకారముచే దాని కన్నులు చలించుచుండెను.
+hi: नये यौवन से पुष्ट स्तनों के भार से उसका उदर कृश था। मुख की सुगन्ध पर अनुरक्त भ्रमरों की झङ्कार से उसके नेत्र उद्विग्न थे।
 
 --- verse 44 ---
 deva:
@@ -406,6 +535,9 @@ deva:
 iast:
 bibhrat svakeśabhāreṇa mālāmutphullamallikām|
 sugrīvakaṇṭhābharaṇaṁ subhujāṅgadabhūṣitam||
+en: With the mass of its own hair it bore a garland of jasmine in full bloom. An ornament lay upon its fine neck, and armlets adorned its fine arms.
+tel: తన కేశముల భారముతో అది వికసించిన మల్లెల మాలను ధరించెను. దాని చక్కని కంఠమునందు ఆభరణము ఉండెను, చక్కని బాహువులయందు అంగదములు అలంకరించెను.
+hi: अपने केशों के भार से उसने खिली हुई मल्लिका की माला धारण की थी। उसके सुन्दर कण्ठ में आभूषण था और सुन्दर भुजाओं में अङ्गद शोभित थे।
 
 --- verse 45 ---
 deva:
@@ -414,6 +546,9 @@ deva:
 iast:
 virajāmbarasaṁvītanitambadvīpaśobhayā|
 kāñcyā pravilasadvalgucalaccaraṇanūpuram||
+en: Its hips were like an island wrapped in a spotless garment, and a girdle shone upon them. Charming anklets moved upon its feet.
+tel: మచ్చలేని వస్త్రముతో చుట్టబడిన దాని నితంబములు ద్వీపము వలె శోభించెను, వానిపై కాంచి మెరయుచుండెను. దాని పాదములయందు అందమైన అందెలు కదలుచుండెను.
+hi: निर्मल वस्त्र से लिपटे उसके नितम्ब द्वीप के समान शोभित थे और उन पर काञ्ची चमक रही थी। उसके चरणों में मनोहर नूपुर चल रहे थे।
 
 --- verse 46 ---
 deva:
@@ -422,9 +557,15 @@ deva:
 iast:
 savrīḍasmitavikṣiptabhrūvilāsāvalokanaiḥ|
 daityayūthapacetaḥsu kāmamuddīpayan muhuḥ||
+en: With bashful smiles and with glances in which the eyebrows played, that form kindled desire again and again in the hearts of the leaders of the daitya hosts.
+tel: సిగ్గుతో కూడిన నవ్వులతో, బొమల విలాసముతో కూడిన చూపులతో, ఆ రూపము దైత్య సమూహముల నాయకుల హృదయములయందు మాటిమాటికి కామమును రగిల్చెను.
+hi: लज्जा के साथ मुसकानों और भ्रूविलास से युक्त दृष्टियों से, उस रूप ने दैत्य यूथपतियों के चित्तों में बार बार काम को उद्दीपित किया।
 
 --- verse none ---
 deva:
 इति श्रीमद्भागवते महापुराणे पारमहंस्यां संहितायामष्टमस्कन्धे भगवन्मायोपलम्भनं नामाष्टमोऽध्यायः॥ ८॥
 iast:
 iti śrīmadbhāgavate mahāpurāṇe pāramahaṁsyāṁ saṁhitāyāmaṣṭamaskandhe bhagavanmāyopalambhanaṁ nāmāṣṭamo'dhyāyaḥ|| 8||
+en: Thus ends the eighth chapter, named the Perceiving of the Lord's Māyā, in the eighth book of the great Purāṇa Śrīmad Bhāgavata, the Pāramahaṁsya Saṁhitā.
+tel: ఇది పారమహంస్యసంహిత అయిన శ్రీమద్భాగవత మహాపురాణమునందు, అష్టమస్కంధమునందు, భగవన్మాయోపలంభనము అను ఎనిమిదవ అధ్యాయము సమాప్తము.
+hi: इस प्रकार पारमहंस्य संहिता श्रीमद्भागवत महापुराण के अष्टम स्कन्ध में भगवन्मायोपलम्भन नामक आठवाँ अध्याय समाप्त हुआ।

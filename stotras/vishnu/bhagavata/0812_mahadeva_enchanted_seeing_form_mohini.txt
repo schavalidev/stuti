@@ -9,7 +9,7 @@ Type: Purāṇa (an adhyāya of the Śrīmad Bhāgavata, Skandha 8)
 
 Source / recension: Base text and authority: the Gītā Press, Gorakhpur Śrīmadbhāgavata Mahāpurāṇa with Hindi translation, Part 1 (Gītā Press code 26), archive.org item `shrimadbhagwat-mahapuran-bhag-1`, printed pages 963–969; the PDF page numbers are the printed ones. The PDF carries the typesetter's own text layer in the Chanakya font encoding, and the text was decoded from it by machine with `bin/bhagavata/chanakya.py`, not read off OCR or typed. The decoder was checked against GRETIL over all twelve skandhas before any file was written, and the differences that remain were sampled and found to be readings of the two editions. Second witness: GRETIL's `sa_bhAgavatapurANa.xml` (IAST, contributed by Ulrich Stiehl), a separate editorial lineage, compared verse by verse by machine. The TTD edition with the commentaries of Śrīdhara, Vīrarāghava and Vijayadhvaja (archive.org `Bhagavata_Purana_With_Multiple_Commentaries_TTD_Critical_Edition`) is the third witness where one is needed; it was not read for this file. The IAST was generated mechanically from the Devanāgarī with `bin/dev2iast.py`.
 
-Recension note: Text-only file, written 1 Oct 2026 at the user's instruction to lay down the whole Bhāgavata first: the English, Telugu and Hindi meanings are still to be added, and the witnesses' differences listed here have been recorded by machine and not yet adjudicated. The print is followed throughout. The print numbers 47 verses and GRETIL numbers 47. Of the 47 verses GRETIL has under the same number, 35 agree with the print letter for letter once spacing and the spelling of nasals are set aside; the rest differ: 7, 8, 12, 15, 24, 28, 34, 35, 39, 42, 43, 47. The edition's footnotes give these older printed readings (प्रा० पा०), which are not bracketed into the line: at 3, प्रतिगृह्य; at 4, मसि भूतानां त्व०; at 7, मनन्तमन्यत्; at 25, स्तद्गत०; at 35, जडीकृतो; at 37, मालोक्य; at 38, मात्मनि; at 42, आत्मानुरूपां; at 42, प्रत्यक्षमभिभाषत; at 43, ययाञ्जसा वै किमुतापरो यः; at 44, यन्माम०; at 44, योगं; at 44, उपारमद्वै; at 44, एव. Spacing is the print's, as its text layer gives it; in a few places justification has left a space inside a word, and these are still to be closed when the verse is read. The speaker lines (श्रीशुक उवाच and the others) are printed in italic above the verse they introduce, and are given as its first line.
+Recension note: Meanings written 23 Oct 2026 (session S78). The differences between the witnesses listed below were read as the verses were glossed; except where this note says otherwise, each is a spelling, a sandhi or a word order of the two editions, none of them changes the sense, and the print's reading therefore stands unbracketed. The print is followed throughout. The print numbers 47 verses and GRETIL numbers 47. Of the 47 verses GRETIL has under the same number, 35 agree with the print letter for letter once spacing and the spelling of nasals are set aside; the rest differ: 7, 8, 12, 15, 24, 28, 34, 35, 39, 42, 43, 47. The edition's footnotes give these older printed readings (प्रा० पा०), which are not bracketed into the line: at 3, प्रतिगृह्य; at 4, मसि भूतानां त्व०; at 7, मनन्तमन्यत्; at 25, स्तद्गत०; at 35, जडीकृतो; at 37, मालोक्य; at 38, मात्मनि; at 42, आत्मानुरूपां; at 42, प्रत्यक्षमभिभाषत; at 43, ययाञ्जसा वै किमुतापरो यः; at 44, यन्माम०; at 44, योगं; at 44, उपारमद्वै; at 44, एव. Spacing is the print's, as its text layer gives it. The speaker lines (श्रीशुक उवाच and the others) are printed in italic above the verse they introduce, and are given as its first line. A footnote's numeral keys it to one word, and which word that is cannot be told from the note alone, so those readings stay unbracketed until the page itself is read. Two spaces were put right as the verses were read. At verse 44 the layer had lost the space between उपारतं and वै, and it is restored. At verse 47 justification had left a space inside अङ्घ्रिं, and it is closed. GRETIL agrees with both corrected readings. Four places were left exactly as printed. At verse 12 the print reads द्रुष्टुम् where the only possible word is द्रष्टुम्, to see, and the meaning follows that reading; a wrong letter is an emendation and lies outside this pass. At verse 17 the speaker line is printed श्रीशुकउवाच without the space the same line carries at verses 14, 41 and 45; the print writes it joined in 28 places in this corpus and two already glossed files keep that spelling, so it stands here too. At verse 37 the print joins मालक्ष्यमधुसूदनः where GRETIL spaces the two words; a join after a vowel standing before a consonant is attested in about 238 places where the two editions can be aligned, so it is the print's own spacing and not a broken word. At verse 42 आत्मांशभूतां can qualify either तां मायां or भवानीं; it is read here with मायां, which the word order supports.
 
 Verse count: 47, plus the closing colophon printed unnumbered.
 
@@ -24,6 +24,9 @@ iast:
 śrībādarāyaṇiruvāca
 vṛṣadhvajo niśamyedaṁ yoṣidrūpeṇa dānavān|
 mohayitvā suragaṇānhariḥ somamapāyayat||
+en: Śrī Bādarāyaṇi said: Śiva, whose banner bears the bull, heard of this. Hari had taken the form of a woman, had deluded the Dānavas, and had made the hosts of the gods drink the nectar.
+tel: శ్రీబాదరాయణి పలికెను: వృషభము ధ్వజముగా గల శివుడు ఈ వృత్తాంతమును వినెను. హరి స్త్రీరూపమును ధరించి దానవులను మోహపరచి, దేవగణములకు అమృతమును త్రాగించెను.
+hi: श्रीबादरायणि ने कहा: जिनके ध्वज पर वृषभ है, उन शिव ने यह सुना। हरि ने स्त्री का रूप धारण करके दानवों को मोहित किया और देवगणों को अमृत पिलाया।
 
 --- verse 2 ---
 deva:
@@ -32,6 +35,9 @@ deva:
 iast:
 vṛṣamāruhya giriśaḥ sarvabhūtagaṇairvṛtaḥ|
 saha devyā yayau draṣṭuṁ yatrāste madhusūdanaḥ||
+en: Giriśa mounted his bull and set out with the Goddess, surrounded by all his hosts of beings, to see the place where Madhusūdana was.
+tel: గిరీశుడు వృషభమును ఎక్కి, తన భూతగణములన్నిటితో కూడి, దేవితో కలిసి మధుసూదనుడు ఉన్న చోటును చూడ బయలుదేరెను.
+hi: गिरीश वृषभ पर चढ़कर, अपने सब भूतगणों से घिरे हुए, देवी के साथ उस स्थान को देखने चले जहाँ मधुसूदन विराजमान थे।
 
 --- verse 3 ---
 deva:
@@ -40,6 +46,9 @@ deva:
 iast:
 sabhājito bhagavatā sādaraṁ somayā bhavaḥ|
 sūpaviṣṭa uvācedaṁ pratipūjya smayanharim||
+en: The blessed Lord welcomed Bhava and Umā with respect. Bhava sat down at ease, worshipped Hari in return, and smiling, said this.
+tel: భగవంతుడు ఉమతో కూడి వచ్చిన భవుని ఆదరముతో సత్కరించెను. భవుడు సుఖముగా ఆసీనుడై, హరిని ప్రతిపూజించి, చిరునవ్వుతో ఇట్లు పలికెను.
+hi: भगवान् ने उमा के साथ आये भव का आदर के साथ स्वागत किया। भव सुखपूर्वक बैठ गये, हरि की प्रतिपूजा की और मुसकराते हुए यह कहा।
 
 --- verse 4 ---
 deva:
@@ -50,6 +59,9 @@ iast:
 śrīmahādeva uvāca
 devadeva jagadvyāpiñjagadīśa jaganmaya|
 sarveṣāmapi bhāvānāṁ tvamātmā heturīśvaraḥ||
+en: Śrī Mahādeva said: O God of gods, you pervade the universe. O Lord of the universe, O you who are the universe itself. You are the Self, the cause and the ruler of all beings.
+tel: శ్రీమహాదేవుడు పలికెను: ఓ దేవదేవా, నీవు జగత్తునందు వ్యాపించియున్నావు. ఓ జగదీశా, ఓ జగన్మయా, సమస్త భావములకు నీవే ఆత్మయు, హేతువును, ఈశ్వరుడును.
+hi: श्रीमहादेव ने कहा: हे देवदेव, आप जगत् में व्याप्त हैं। हे जगदीश, हे जगन्मय, सब भावों के आत्मा, कारण और ईश्वर आप ही हैं।
 
 --- verse 5 ---
 deva:
@@ -58,6 +70,9 @@ deva:
 iast:
 ādyantāvasya yanmadhyamidamanyadahaṁ bahiḥ|
 yato'vyayasya naitāni tat satyaṁ brahma cid bhavān||
+en: The beginning, the end and the middle of this world, this visible world, what is other than it, the sense of being 'I', and what stands outside: none of these belongs to you, who never decay. Therefore you are that truth, you are Brahman, you are consciousness.
+tel: ఈ జగత్తు యొక్క ఆది, అంతము, మధ్యము, ఈ కనబడు ప్రపంచము, దానికి ఇతరమైనది, 'నేను' అను భావము, వెలుపల ఉన్నది, ఇవి ఏవియు అవ్యయుడైన నీకు లేవు. అందుచేత నీవే ఆ సత్యము, నీవే బ్రహ్మము, నీవే చైతన్యము.
+hi: इस जगत् का आदि, अन्त और मध्य, यह दीखने वाला संसार, इससे भिन्न जो है, 'मैं' का भाव, और बाहर जो है, इनमें से कोई भी आप में नहीं है, क्योंकि आप अविनाशी हैं। इसलिये आप ही वह सत्य हैं, आप ही ब्रह्म हैं, आप ही चैतन्य हैं।
 
 --- verse 6 ---
 deva:
@@ -66,6 +81,9 @@ deva:
 iast:
 tavaiva caraṇāmbhojaṁ śreyaskāmā nirāśiṣaḥ|
 visṛjyobhayataḥ saṅgaṁ munayaḥ samupāsate||
+en: Sages who desire the highest good and who ask for nothing give up attachment of both kinds. They worship your lotus feet alone.
+tel: శ్రేయస్సును కోరువారును, ఏ కోరికయు లేనివారును అయిన మునులు ఇరువైపుల సంగమును విడిచి, నీ చరణకమలములను మాత్రమే ఉపాసించుచున్నారు.
+hi: कल्याण की इच्छा रखने वाले और कोई कामना न रखने वाले मुनि दोनों ओर का संग छोड़कर केवल आपके चरणकमलों की उपासना करते हैं।
 
 --- verse 7 ---
 deva:
@@ -78,6 +96,9 @@ tvaṁ brahma pūrṇamamṛtaṁ viguṇaṁ viśoka-
 mānandamātramavikāramananyadanyat|
 viśvasya heturudayasthitisaṁyamānā-
 mātmeśvaraśca tadapekṣatayānapekṣaḥ||
+en: You are Brahman, full, deathless, free of the guṇas, free of sorrow, bliss alone, without change. You are not other than yourself, and you are other than all else. You are the cause of the rise, the continuance and the dissolution of the universe, and the ruler of their self. They depend upon you, while you have need of nothing.
+tel: నీవు పరిపూర్ణమైన బ్రహ్మము, అమృతస్వరూపుడు, గుణరహితుడు, శోకరహితుడు, ఆనందమాత్రుడు, వికారరహితుడు. నీవు నీకు అన్యుడు కావు, ఇతరమైన అన్నిటికి అన్యుడవు. విశ్వము యొక్క ఉదయము, స్థితి, సంహారములకు నీవే హేతువు, వానికి ఆత్మేశ్వరుడవు. అవి నీపై ఆధారపడియుండగా, నీకు ఏ అపేక్షయు లేదు.
+hi: आप पूर्ण ब्रह्म हैं, अमृतस्वरूप हैं, गुणों से रहित हैं, शोक से रहित हैं, आनन्दमात्र हैं, विकार से रहित हैं। आप अपने से भिन्न नहीं हैं और सब अन्य से भिन्न हैं। जगत् के उदय, स्थिति और संहार के कारण तथा उनके आत्मेश्वर आप ही हैं। वे आप पर निर्भर हैं, परन्तु आपको किसी की अपेक्षा नहीं है।
 
 --- verse 8 ---
 deva:
@@ -90,6 +111,9 @@ ekastvameva sadasad dvayamadvayaṁ ca
 svarṇaṁ kṛtākṛtamiveha na vastubhedaḥ|
 ajñānatastvayi janairvihito vikalpo
 yasmād guṇairvyatikaro nirupādhikasya||
+en: You alone are one. You are the cause and the effect, the dual and the one without a second. Here gold is not a different substance whether it is wrought or unwrought. People imagine difference in you out of ignorance, for the mixing that they see belongs to the guṇas, while you are free of every limiting condition.
+tel: నీవు ఒక్కడవే. కారణమును, కార్యమును, ద్వయమును, అద్వయమును నీవే. చేయబడిన బంగారమునకును, చేయబడని బంగారమునకును వస్తుభేదము లేదు. జనులు అజ్ఞానముచే నీలో భేదమును కల్పించుకొనుచున్నారు. కనబడు కలయిక గుణములకు చెందినది, నీవు ఉపాధిరహితుడవు.
+hi: आप एक ही हैं। कारण और कार्य, द्वैत और अद्वैत आप ही हैं। यहाँ गढ़े हुए और बिना गढ़े सोने में वस्तु का भेद नहीं है। लोग अज्ञान से आप में भेद की कल्पना करते हैं, क्योंकि जो मिलावट दीखती है वह गुणों की है और आप उपाधि से रहित हैं।
 
 --- verse 9 ---
 deva:
@@ -102,6 +126,9 @@ tvāṁ brahma kecidavayantyuta dharmameke
 eke paraṁ sadasatoḥ puruṣaṁ pareśam|
 anye'vayanti navaśaktiyutaṁ paraṁ tvāṁ
 kecinmahāpuruṣamavyayamātmatantram||
+en: Some understand you as Brahman, and some as dharma. Some understand you as the Puruṣa beyond cause and effect, the supreme Lord. Others understand you as the Supreme joined with the nine powers. Some understand you as the Mahāpuruṣa, imperishable and subject to himself alone.
+tel: కొందరు నిన్ను బ్రహ్మముగా తెలిసికొనుచున్నారు, కొందరు ధర్మముగా. కొందరు సత్తు అసత్తులకు అతీతుడైన పురుషుడుగా, పరమేశ్వరుడుగా తెలిసికొనుచున్నారు. ఇతరులు నవశక్తులతో కూడిన పరతత్త్వముగా నిన్ను తెలిసికొనుచున్నారు. కొందరు అవ్యయుడును ఆత్మతంత్రుడును అయిన మహాపురుషుడుగా తెలిసికొనుచున్నారు.
+hi: कुछ लोग आपको ब्रह्म जानते हैं और कुछ धर्म। कुछ आपको सत् और असत् से परे पुरुष तथा परमेश्वर जानते हैं। दूसरे आपको नौ शक्तियों से युक्त परतत्त्व जानते हैं। कुछ आपको अविनाशी और आत्मतन्त्र महापुरुष जानते हैं।
 
 --- verse 10 ---
 deva:
@@ -114,6 +141,9 @@ nāhaṁ parāyurṛṣayo na marīcimukhyā
 jānanti yadviracitaṁ khalu sattvasargāḥ|
 yanmāyayā muṣitacetasa īśa daitya-
 martyādayaḥ kimuta śaśvadabhadravṛttāḥ||
+en: I do not know what you have created, nor does Brahmā whose life is longest, nor the sages headed by Marīci, though we are born of sattva. What then of the Daityas, the mortals and the rest, whose minds your Māyā has robbed, O Lord, and whose conduct is always unholy?
+tel: నీవు సృష్టించినదానిని నేను ఎరుగను, దీర్ఘాయువైన బ్రహ్మయు ఎరుగడు, మరీచి మొదలైన ఋషులును ఎరుగరు; మేము సత్త్వమునుండి పుట్టినవారమైనను అట్లే. ఓ ఈశ్వరా, నీ మాయచే మనస్సు దొంగిలింపబడిన దైత్యులకు, మనుష్యులకు, ఇతరులకు ఎట్లు తెలియును? వారి నడవడి ఎల్లప్పుడును అశుభమైనది.
+hi: आपने जो रचा है उसे न मैं जानता हूँ, न दीर्घ आयु वाले ब्रह्मा जानते हैं, न मरीचि आदि ऋषि जानते हैं, यद्यपि हम सत्त्व से उत्पन्न हुए हैं। हे ईश्वर, फिर जिनका मन आपकी माया ने हर लिया है, उन दैत्यों, मनुष्यों और दूसरों की क्या बात, जिनका आचरण सदा अशुभ है।
 
 --- verse 11 ---
 deva:
@@ -126,6 +156,9 @@ sa tvaṁ samīhitamadaḥ sthitijanmanāśaṁ
 bhūtehitaṁ ca jagato bhavabandhamokṣau|
 vāyuryathā viśati khaṁ ca carācarākhyaṁ
 sarvaṁ tadātmakatayāvagamo'varuntse||
+en: What is willed, the birth, the continuance and the destruction of the world, the efforts of living beings, bondage to the world and release from it, all this rests in you. As the air enters the sky and all that is called moving and unmoving, so you, who are knowledge itself, hold everything, because you are the very self of all.
+tel: సంకల్పింపబడినది, జగత్తు యొక్క జన్మము, స్థితి, నాశము, ప్రాణుల ప్రయత్నములు, సంసారబంధము, మోక్షము, ఇవి అన్నియు నీయందే ఉన్నవి. వాయువు ఆకాశమునందును, చరాచరములన్నిటియందును ప్రవేశించునట్లు, జ్ఞానస్వరూపుడైన నీవు అన్నిటికి ఆత్మయై ఉండుటచే అన్నిటిని ఆవరించియున్నావు.
+hi: जो संकल्पित है, जगत् का जन्म, स्थिति और नाश, प्राणियों के प्रयत्न, संसार का बन्धन और मोक्ष, यह सब आप में ही है। जैसे वायु आकाश में और सब चराचर में प्रवेश करती है, वैसे ही ज्ञानस्वरूप आप सब के आत्मा होने के कारण सब को व्याप्त किये हुए हैं।
 
 --- verse 12 ---
 deva:
@@ -134,6 +167,9 @@ deva:
 iast:
 avatārā mayā dṛṣṭā ramamāṇasya te guṇaiḥ|
 so'haṁ tad druṣṭumicchāmi yat te yoṣidvapurdhṛtam||
+en: I have seen your descents as you sport with your own guṇas. Now I wish to see that body of a woman which you took.
+tel: నీవు నీ గుణములతో క్రీడించుచుండగా నీ అవతారములను నేను చూచితిని. ఇప్పుడు నీవు ధరించిన ఆ స్త్రీ శరీరమును చూడగోరుచున్నాను.
+hi: आप अपने गुणों से क्रीड़ा करते हुए जो अवतार लेते हैं, वे मैंने देखे हैं। अब आपने जो स्त्री का शरीर धारण किया, उसे मैं देखना चाहता हूँ।
 
 --- verse 13 ---
 deva:
@@ -142,6 +178,9 @@ deva:
 iast:
 yena sammohitā daityāḥ pāyitāścāmṛtaṁ surāḥ|
 tad didṛkṣava āyātāḥ paraṁ kautūhalaṁ hi naḥ||
+en: The Daityas were bewildered by that form, and the gods were made to drink the nectar. We have come wishing to see it. Our curiosity is very great.
+tel: ఆ రూపముచే దైత్యులు సమ్మోహితులైరి, దేవతలకు అమృతము త్రాగింపబడెను. దానిని చూడగోరి మేము వచ్చితిమి. మాకు కుతూహలము మిక్కుటముగా ఉన్నది.
+hi: उस रूप से दैत्य मोहित हुए और देवताओं को अमृत पिलाया गया। उसी को देखने की इच्छा से हम आये हैं। हमें बड़ा कुतूहल है।
 
 --- verse 14 ---
 deva:
@@ -152,6 +191,9 @@ iast:
 śrīśuka uvāca
 evamabhyarthito viṣṇurbhagavān śūlapāṇinā|
 prahasya bhāvagambhīraṁ giriśaṁ pratyabhāṣata||
+en: Śrī Śuka said: Lord Viṣṇu, thus requested by the bearer of the trident, laughed and spoke to Giriśa with deep meaning.
+tel: శ్రీశుకుడు పలికెను: శూలపాణి ఈ విధముగా ప్రార్థించగా, భగవానుడైన విష్ణువు నవ్వి, గంభీరమైన భావముతో గిరీశునితో ఇట్లు పలికెను.
+hi: श्रीशुकदेवजी ने कहा: शूलपाणि के इस प्रकार प्रार्थना करने पर भगवान् विष्णु हँसे और गम्भीर भाव से गिरीश से यह कहा।
 
 --- verse 15 ---
 deva:
@@ -162,6 +204,9 @@ iast:
 śrībhagavānuvāca
 kautūhalāya daityānāṁ yoṣidveṣo mayā kṛtaḥ|
 paśyatā surakāryāṇi gate pīyūṣabhājane||
+en: The blessed Lord said: I made the guise of a woman to rouse the curiosity of the Daityas, when the vessel of nectar had been carried away and I was attending to the work of the gods.
+tel: శ్రీభగవానుడు పలికెను: అమృతభాండము తీసుకొనిపోబడినప్పుడు, నేను దేవతల కార్యములను చూచుచుండి, దైత్యులకు కుతూహలము కలిగించుటకు స్త్రీ వేషమును చేసితిని.
+hi: श्रीभगवान् ने कहा: जब अमृत का पात्र ले जाया गया और मैं देवताओं के कार्यों को देख रहा था, तब दैत्यों में कुतूहल उत्पन्न करने के लिये मैंने स्त्री का वेष बनाया।
 
 --- verse 16 ---
 deva:
@@ -170,6 +215,9 @@ deva:
 iast:
 tatte'haṁ darśayiṣyāmi didṛkṣoḥ surasattama|
 kāmināṁ bahu mantavyaṁ saṅkalpaprabhavodayam||
+en: O best of the gods, you wish to see it, so I shall show it to you. Those who are full of desire think much of that form, and its appearance arises from resolve.
+tel: ఓ సురసత్తమా, నీవు చూడగోరుచున్నావు కావున దానిని నీకు చూపింతును. కాములైనవారు ఆ రూపమును గొప్పగా తలంచుదురు; అది సంకల్పమునుండి ఉదయించునది.
+hi: हे देवश्रेष्ठ, आप देखना चाहते हैं, इसलिये वह रूप मैं आपको दिखाऊँगा। कामी जन उस रूप को बहुत मानते हैं और उसका प्रकट होना संकल्प से होता है।
 
 --- verse 17 ---
 deva:
@@ -180,6 +228,9 @@ iast:
 śrīśukauvāca
 iti bruvāṇo bhagavāṁstatraivāntaradhīyata|
 sarvataścārayaṁścakṣurbhava āste sahomayā||
+en: Śrī Śuka said: Having said this, the Lord vanished on that very spot. Bhava stayed there with Umā, casting his eyes in every direction.
+tel: శ్రీశుకుడు పలికెను: ఇట్లు పలికి భగవంతుడు అక్కడే అంతర్ధానమయ్యెను. భవుడు ఉమతో కూడి అక్కడ ఉండి, అన్ని దిక్కులకు కన్నులను త్రిప్పుచుండెను.
+hi: श्रीशुकदेवजी ने कहा: यह कहकर भगवान् वहीं अन्तर्धान हो गये। भव उमा के साथ वहाँ रह गये और चारों ओर दृष्टि घुमाते रहे।
 
 --- verse 18 ---
 deva:
@@ -192,6 +243,9 @@ tato dadarśopavane varastriyaṁ
 vicitrapuṣpāruṇapallavadrume|
 vikrīḍatīṁ kandukalīlayā lasad
 dukūlaparyastanitambamekhalām||
+en: Then he saw in a garden a beautiful woman. The trees there bore many-coloured flowers and red young leaves. She was playing with a ball. Her silk garment shone, and her girdle rested upon her hips.
+tel: పిమ్మట ఒక ఉపవనమునందు ఆయన ఒక సుందరిని చూచెను. అక్కడి చెట్లు రంగురంగుల పుష్పములను, ఎరుపైన చిగురులను కలిగియుండెను. ఆమె బంతితో ఆడుచుండెను. ఆమె పట్టువస్త్రము మెరయుచుండెను, మేఖల పిరుదులపై ఒరిగియుండెను.
+hi: इसके पश्चात् एक उपवन में उन्होंने एक सुन्दर स्त्री को देखा। वहाँ के वृक्षों पर रंग-बिरंगे फूल और लाल कोंपलें थीं। वह गेंद से खेल रही थी। उसका रेशमी वस्त्र चमक रहा था और करधनी नितम्बों पर ढली हुई थी।
 
 --- verse 19 ---
 deva:
@@ -204,6 +258,9 @@ iast:
 prakṛṣṭahārorubharaiḥ pade pade|
 prabhajyamānāmiva madhyataścalat-
 padapravālaṁ nayatīṁ tatastataḥ||
+en: As she bent down and rose up her breasts shook, and at every step she seemed to break at the waist under the weight of her hips and her long necklace. She moved her feet, red as coral, this way and that.
+tel: ఆమె వంగి లేచుచుండగా స్తనములు కదలుచుండెను; పిరుదుల భారముచేతను, పెద్ద హారముచేతను అడుగు అడుగునకు నడుము విరుగుచున్నట్లు కనిపించెను. పగడమువలె ఎరుపైన పాదములను ఆమె అటునిటు కదుపుచుండెను.
+hi: झुकने और उठने से उसके स्तन हिलते थे, और नितम्बों के भार तथा बड़े हार के कारण पग-पग पर वह कमर से टूटती हुई जान पड़ती थी। मूँगे जैसे लाल चरणों को वह इधर-उधर रखती जाती थी।
 
 --- verse 20 ---
 deva:
@@ -216,6 +273,9 @@ dikṣu bhramatkandukacāpalairbhṛśaṁ
 prodvignatārāyatalolalocanām|
 svakarṇavibhrājitakuṇḍalollasat-
 kapolanīlālakamaṇḍitānanām||
+en: The ball bounded in every direction, and her long and restless eyes followed it with the pupils raised. The earrings shining in her ears lit up her cheeks, and dark curls adorned her face.
+tel: బంతి అన్ని దిక్కులకు ఎగురుచుండెను; దాని వెంట ఆమె విశాలమైన చంచలమైన కన్నులు, కనుపాపలు పైకి ఎగసి, తిరుగుచుండెను. చెవులలో మెరయుచున్న కుండలములు చెక్కిళ్లను ప్రకాశింపజేసెను; నల్లని ముంగురులు ఆమె ముఖమును అలంకరించెను.
+hi: गेंद चारों दिशाओं में उछलती थी और उसके पीछे उसकी लंबी चंचल आँखें, पुतलियाँ ऊपर उठाये हुए, घूमती थीं। कानों में चमकते कुण्डलों से उसके गाल दीप्त हो रहे थे और काली लटें उसके मुख को सजा रही थीं।
 
 --- verse 21 ---
 deva:
@@ -228,6 +288,9 @@ iast:
 sannahyatīṁ vāmakareṇa valgunā|
 vinighnatīmanyakareṇa kandukaṁ
 vimohayantīṁ jagadātmamāyayā||
+en: With her graceful left hand she gathered up her slipping silk and her loosened braid, and with the other hand she struck the ball. In this way she deluded the world by the Māyā of the Self.
+tel: జారుచున్న పట్టువస్త్రమును, విడిపోయిన జడను ఆమె తన అందమైన ఎడమ చేతితో సవరించుకొనుచుండెను; రెండవ చేతితో బంతిని కొట్టుచుండెను. ఈ విధముగా ఆత్మమాయచే జగత్తును మోహపరచుచుండెను.
+hi: सरकते हुए रेशमी वस्त्र और खुल गयी चोटी को वह अपने सुन्दर बायें हाथ से सँभालती थी और दूसरे हाथ से गेंद को मारती थी। इस प्रकार वह आत्ममाया से जगत् को मोहित कर रही थी।
 
 --- verse 22 ---
 deva:
@@ -240,6 +303,9 @@ tāṁ vīkṣya deva iti kandukalīlayeṣad-
 vrīḍāsphuṭasmitavisṛṣṭakaṭākṣamuṣṭaḥ|
 strīprekṣaṇapratisamīkṣaṇavihvalātmā
 nātmānamantika umāṁ svagaṇāṁśca veda||
+en: Seeing her at her play with the ball, the god was robbed by the sidelong glances that she cast with a faint smile and a little shyness. His mind was overcome as he looked at the woman and she looked back at him. He knew neither himself, nor Umā at his side, nor his own attendants.
+tel: బంతితో ఆడుచున్న ఆమెను చూచి, కొంచెము సిగ్గుతో, అస్పష్టమైన చిరునవ్వుతో ఆమె విసరిన క్రీగంటి చూపులచే ఆ దేవుడు దొంగిలింపబడెను. ఆ స్త్రీని చూచుటచేతను, ఆమె తిరిగి చూచుటచేతను ఆయన మనస్సు విహ్వలమయ్యెను. ఆయన తనను, ప్రక్కనే ఉన్న ఉమను, తన గణములను ఎరుగకుండెను.
+hi: गेंद से खेलती हुई उसे देखकर, थोड़ी लज्जा के साथ अस्पष्ट मुसकान से फेंकी गयी उसकी तिरछी चितवनों से वे देव हर लिये गये। उस स्त्री को देखने और उसके पलटकर देखने से उनका मन विह्वल हो गया। वे न अपने को, न पास खड़ी उमा को, न अपने गणों को जानते रहे।
 
 --- verse 23 ---
 deva:
@@ -252,6 +318,9 @@ tasyāḥ karāgrāt sa tu kanduko yadā
 gato vidūraṁ tamanuvrajatstriyāḥ|
 vāsaḥ sasūtraṁ laghu māruto'harad
 bhavasya devasya kilānupaśyataḥ||
+en: When the ball went far from the tip of her hand, she ran after it. The wind then carried off her light garment with its sash, while the god Bhava looked on.
+tel: ఆమె చేతి కొననుండి బంతి దూరముగా పోయినప్పుడు ఆమె దాని వెంట పరుగెత్తెను. అప్పుడు దారముతో కూడిన ఆమె తేలికైన వస్త్రమును వాయువు ఎగురగొట్టెను; భవదేవుడు చూచుచునే ఉండెను.
+hi: जब गेंद उसके हाथ के अग्र भाग से दूर चली गयी, तब वह उसके पीछे दौड़ी। उसी समय वायु उसके डोरी सहित हलके वस्त्र को उड़ा ले गयी, और भगवान् भव देखते ही रह गये।
 
 --- verse 24 ---
 deva:
@@ -260,6 +329,9 @@ deva:
 iast:
 evaṁ tāṁ rucirāpāṅgīṁ darśanīyāṁ manoramām|
 dṛṣṭvā tasyāṁ manaścakre viṣajjantyāṁ bhavaḥ kila||
+en: Bhava thus saw her, charming with her lovely sidelong glances, fair to look upon and pleasing to the mind. It is said that he set his mind upon her, as she too was drawn to him.
+tel: ఈ విధముగా అందమైన క్రీగంటి చూపులు కలిగి, చూడ ముచ్చటగొలుపుచు, మనస్సును రంజింపజేయు ఆమెను భవుడు చూచెను. ఆమెయు ఆయనయందు ఆసక్తి చూపుచుండగా, ఆయన ఆమెపై మనస్సు నిలిపెనని చెప్పబడుచున్నది.
+hi: इस प्रकार सुन्दर तिरछी चितवन वाली, देखने में प्यारी और मन को भाने वाली उसे भव ने देखा। वह भी उनकी ओर आसक्त हो रही थी, और कहा जाता है कि उन्होंने उस पर मन लगा दिया।
 
 --- verse 25 ---
 deva:
@@ -268,6 +340,9 @@ deva:
 iast:
 tayāpahṛtavijñānastatkṛtasmaravihvalaḥ|
 bhavānyā api paśyantyā gatahrīstatpadaṁ yayau||
+en: His understanding was taken away by her, and he was overcome by the desire she had awakened. He lost his shame and went to the place where she was, though Bhavānī was looking on.
+tel: ఆమెచే ఆయన వివేకము హరింపబడెను; ఆమె కలిగించిన కామముచే ఆయన విహ్వలుడయ్యెను. భవాని చూచుచున్నను ఆయన సిగ్గు విడిచి ఆమె ఉన్న చోటికి పోయెను.
+hi: उसने उनका विवेक हर लिया और उसके जगाये हुए काम से वे विह्वल हो गये। भवानी देखती रहीं, फिर भी वे लज्जा छोड़कर उसके स्थान पर चले गये।
 
 --- verse 26 ---
 deva:
@@ -276,6 +351,9 @@ deva:
 iast:
 sā tamāyāntamālokya vivastrā vrīḍitā bhṛśam|
 nilīyamānā vṛkṣeṣu hasantī nānvatiṣṭhata||
+en: Seeing him come, she was without her garment and was greatly ashamed. She hid herself among the trees, laughing, and did not stand still.
+tel: ఆయన వచ్చుట చూచి, వస్త్రము లేనిదై ఆమె మిక్కిలి సిగ్గుపడెను. చెట్ల నడుమ దాగుకొనుచు, నవ్వుచు, ఆమె నిలువలేదు.
+hi: उन्हें आते देखकर वह वस्त्र के बिना थी और बहुत लज्जित हुई। वृक्षों में छिपती हुई, हँसती हुई, वह ठहरी नहीं।
 
 --- verse 27 ---
 deva:
@@ -284,6 +362,9 @@ deva:
 iast:
 tāmanvagacchad bhagavān bhavaḥ pramuṣitendriyaḥ|
 kāmasya ca vaśaṁ nītaḥ kareṇumiva yūthapaḥ||
+en: Lord Bhava followed her, his senses robbed and himself brought under the sway of desire, as a bull elephant follows a cow elephant.
+tel: ఇంద్రియములు హరింపబడి, కామమునకు వశుడై, భగవానుడైన భవుడు ఆమె వెంట పోయెను; గజరాజు ఆడ ఏనుగు వెంట పోవునట్లు.
+hi: इन्द्रियाँ हर ली गयी थीं और वे काम के वश हो गये थे; भगवान् भव उसके पीछे चले, जैसे गजराज हथिनी के पीछे चलता है।
 
 --- verse 28 ---
 deva:
@@ -292,6 +373,9 @@ deva:
 iast:
 so'nuvrajyātivegena gṛhītvānicchatīṁ striyam|
 keśabandha upānīya bāhubhyāṁ pariṣasvaje||
+en: He ran after her with great speed, took hold of the unwilling woman, drew her near by her braid, and embraced her with his arms.
+tel: ఆయన మిక్కిలి వేగముగా వెంబడించి, ఇష్టపడని ఆ స్త్రీని పట్టుకొని, జడను పట్టి దగ్గరకు తెచ్చి, బాహువులతో కౌగిలించుకొనెను.
+hi: उन्होंने बड़े वेग से पीछा करके न चाहने वाली उस स्त्री को पकड़ लिया, चोटी से पास खींच लिया और भुजाओं से आलिंगन किया।
 
 --- verse 29 ---
 deva:
@@ -300,6 +384,9 @@ deva:
 iast:
 sopagūḍhā bhagavatā kariṇā kariṇī yathā|
 itastataḥ prasarpantī viprakīrṇaśiroruhā||
+en: Held in the embrace of the Lord, as a cow elephant is held by a bull elephant, she twisted this way and that, and her hair was scattered loose.
+tel: గజరాజుచే ఆడ ఏనుగు పట్టబడినట్లు భగవంతునిచే కౌగిలింపబడి, ఆమె అటునిటు మెలికలు తిరుగుచుండెను; ఆమె తలవెండ్రుకలు చెల్లాచెదరైనవి.
+hi: जैसे गजराज हथिनी को पकड़ लेता है, वैसे भगवान् के आलिंगन में आकर वह इधर-उधर मुड़ती रही और उसके केश बिखर गये।
 
 --- verse 30 ---
 deva:
@@ -308,6 +395,9 @@ deva:
 iast:
 ātmānaṁ mocayitvāṅga surarṣabhabhujāntarāt|
 prādravatsā pṛthuśroṇī māyā devavinirmitā||
+en: O dear one, she freed herself from the arms of that best of the gods and ran away. She of the broad hips was the Māyā fashioned by the Lord.
+tel: ఓ ప్రియమైనవాడా, దేవశ్రేష్ఠుని బాహువుల నడుమనుండి ఆమె తనను విడిపించుకొని పరుగెత్తిపోయెను. విశాలమైన కటిప్రదేశము కలిగిన ఆమె భగవంతునిచే నిర్మింపబడిన మాయయే.
+hi: हे प्रिय, देवश्रेष्ठ की भुजाओं के बीच से अपने को छुड़ाकर वह भाग चली। बड़े नितम्बों वाली वह भगवान् की रची हुई माया ही थी।
 
 --- verse 31 ---
 deva:
@@ -316,6 +406,9 @@ deva:
 iast:
 tasyāsau padavīṁ rudro viṣṇoradbhutakarmaṇaḥ|
 pratyapadyata kāmena vairiṇeva vinirjitaḥ||
+en: Rudra then followed the path of that Māyā of Viṣṇu, whose deeds are wonderful. He was conquered by desire as though by an enemy.
+tel: అద్భుతకర్ములైన విష్ణువు యొక్క ఆ మాయ వెంట రుద్రుడు పోయెను. శత్రువుచే ఓడింపబడినట్లు ఆయన కామముచే ఓడింపబడెను.
+hi: अद्भुत कर्म वाले विष्णु की उस माया के पीछे रुद्र चल पड़े। शत्रु से हारे हुए के समान वे काम से हार गये।
 
 --- verse 32 ---
 deva:
@@ -324,6 +417,9 @@ deva:
 iast:
 tasyānudhāvato retaścaskandāmogharetasaḥ|
 śuṣmiṇo yūthapasyeva vāsitāmanu dhāvataḥ||
+en: As he ran after her, the seed of him whose seed is never fruitless fell, as it happens with a rutting bull elephant that runs after a cow elephant in heat.
+tel: ఆమె వెంట పరుగెత్తుచుండగా, ఎన్నడును వ్యర్థము కాని వీర్యము కలిగిన ఆయన రేతస్సు స్కలితమయ్యెను; మదించిన గజరాజు ఋతుకాలమునందున్న ఆడ ఏనుగు వెంట పరుగెత్తునప్పుడు జరుగునట్లు.
+hi: उसके पीछे दौड़ते हुए, जिनका वीर्य कभी व्यर्थ नहीं होता, उनका रेत स्खलित हो गया; जैसे मदमत्त गजराज ऋतुकाल वाली हथिनी के पीछे दौड़ते समय होता है।
 
 --- verse 33 ---
 deva:
@@ -332,6 +428,9 @@ deva:
 iast:
 yatra yatrāpatanmahyāṁ retastasya mahātmanaḥ|
 tāni rūpyasya hemnaśca kṣetrāṇyāsanmahīpate||
+en: O lord of the earth, wherever upon the ground the seed of that great one fell, there arose fields of silver and of gold.
+tel: ఓ మహీపతీ, ఆ మహాత్ముని రేతస్సు భూమిపై ఎక్కడెక్కడ పడెనో, అక్కడక్కడ వెండి, బంగారు క్షేత్రములు ఏర్పడెను.
+hi: हे महीपति, उन महात्मा का रेत पृथ्वी पर जहाँ-जहाँ गिरा, वहाँ-वहाँ चाँदी और सोने के क्षेत्र बन गये।
 
 --- verse 34 ---
 deva:
@@ -340,6 +439,9 @@ deva:
 iast:
 saritsarassu śaileṣu vaneṣūpavaneṣu ca|
 yatra kva cāsannṛṣayastatra saṁnihito haraḥ||
+en: In rivers and lakes, upon mountains, in forests and gardens, and wherever the sages were, there Hara was present.
+tel: నదులయందు, సరస్సులయందు, పర్వతములయందు, వనములయందు, ఉపవనములయందు, ఋషులు ఎక్కడ ఉండిరో అక్కడ, హరుడు సన్నిహితుడై ఉండెను.
+hi: नदियों में, सरोवरों में, पर्वतों पर, वनों और उपवनों में, और जहाँ-जहाँ ऋषि थे, वहाँ हर उपस्थित थे।
 
 --- verse 35 ---
 deva:
@@ -348,6 +450,9 @@ deva:
 iast:
 skanne retasi so'paśyadātmānaṁ devamāyayā|
 jaḍīkṛtaṁ nṛpaśreṣṭha saṁnyavartata kaśmalāt||
+en: O best of kings, when his seed had fallen, he saw that the Lord's Māyā had made him dull, and he turned back from that confusion.
+tel: ఓ నృపశ్రేష్ఠా, రేతస్సు స్కలితమైన పిమ్మట, దేవమాయచే తాను జడుడైనట్లు ఆయన చూచెను; ఆ కల్మషమునుండి ఆయన మరలెను.
+hi: हे नृपश्रेष्ठ, रेत के स्खलित होने पर उन्होंने देखा कि देवमाया ने उन्हें जड़ बना दिया है, और वे उस कश्मल से लौट आये।
 
 --- verse 36 ---
 deva:
@@ -356,6 +461,9 @@ deva:
 iast:
 athāvagatamāhātmya ātmano jagadātmanaḥ|
 aparijñeyavīryasya na mene tadu hādbhutam||
+en: Then he understood the greatness of the Self, who is the Self of the universe and whose power cannot be known. He did not consider what had happened a wonder.
+tel: పిమ్మట జగదాత్మయైన, తెలియశక్యము కాని శక్తి కలిగిన ఆత్మ యొక్క మహిమను ఆయన గ్రహించెను. జరిగినదానిని ఆయన అద్భుతముగా తలంపలేదు.
+hi: इसके पश्चात् जगत् के आत्मा और अचिन्त्य शक्ति वाले आत्मा की महिमा को उन्होंने जान लिया। जो हुआ उसे उन्होंने अद्भुत नहीं माना।
 
 --- verse 37 ---
 deva:
@@ -364,6 +472,9 @@ deva:
 iast:
 tamaviklavamavrīḍamālakṣyamadhusūdanaḥ|
 uvāca paramaprīto bibhratsvāṁ pauruṣīṁ tanum||
+en: Madhusūdana saw that he was not disturbed and not embarrassed. Greatly pleased, and bearing his own male form, he said this.
+tel: కలత చెందనివాడును, సిగ్గుపడనివాడును అయిన ఆయనను మధుసూదనుడు చూచెను. మిక్కిలి సంతోషించి, తన పురుషరూపమును ధరించి ఆయన ఇట్లు పలికెను.
+hi: मधुसूदन ने देखा कि वे विचलित नहीं हैं और लज्जित नहीं हैं। बहुत प्रसन्न होकर, अपना पुरुष रूप धारण करके उन्होंने यह कहा।
 
 --- verse 38 ---
 deva:
@@ -374,6 +485,9 @@ iast:
 śrībhagavānuvāca
 diṣṭyā tvaṁ vibudhaśreṣṭha svāṁ niṣṭhāmātmanā sthitaḥ|
 yanme strīrūpayā svairaṁ mohito'pyaṅga māyayā||
+en: The blessed Lord said: O best of the wise, my Māyā in the form of a woman deluded you as she pleased, O dear one, and yet you stand firm in your own state by your own strength. That is a good fortune.
+tel: శ్రీభగవానుడు పలికెను: ఓ విబుధశ్రేష్ఠా, నా మాయ స్త్రీరూపముతో నిన్ను ఇష్టము వచ్చినట్లు మోహపరచినను, నీవు నీ స్వస్థితియందు నీ బలముచే నిలిచియున్నావు. ఇది అదృష్టము.
+hi: श्रीभगवान् ने कहा: हे विबुधश्रेष्ठ, मेरी माया ने स्त्री के रूप में आपको स्वेच्छा से मोहित किया, फिर भी आप अपनी निष्ठा में अपने ही बल से स्थित हैं। यह सौभाग्य है।
 
 --- verse 39 ---
 deva:
@@ -382,6 +496,9 @@ deva:
 iast:
 ko nu me'titarenmāyāṁ viṣaktastvadṛte pumān|
 tāṁstānvisṛjatīṁ bhāvāndustarāmakṛtātmabhiḥ||
+en: What man bound by attachment could cross over my Māyā, except you? She sends forth one state after another, and those who have not mastered themselves cannot cross her.
+tel: నీవు తప్ప ఆసక్తుడైన పురుషుడు ఎవడు నా మాయను దాటగలడు? ఆ మాయ ఒకదాని వెంట ఒకటిగా ఆయా భావములను విడుచుచున్నది; ఆత్మను జయించనివారికి అది దాటరానిది.
+hi: आसक्त पुरुषों में आपके सिवा कौन मेरी माया को पार कर सकता है? वह उन-उन भावों को एक के बाद एक छोड़ती जाती है, और जिन्होंने अपने को वश में नहीं किया, उनके लिये वह दुस्तर है।
 
 --- verse 40 ---
 deva:
@@ -390,6 +507,9 @@ deva:
 iast:
 seyaṁ guṇamayī māyā na tvāmabhibhaviṣyati|
 mayā sametā kālena kālarūpeṇa bhāgaśaḥ||
+en: This Māyā of mine, made of the guṇas, will not overcome you. She is joined with me and with Time, and she works part by part in the form of Time.
+tel: గుణములతో కూడిన ఈ నా మాయ నిన్ను అభిభవించదు. ఆమె నాతోను కాలముతోను కలిసి, కాలరూపముతో భాగభాగములుగా పని చేయుచున్నది.
+hi: गुणों से बनी यह मेरी माया आपको अभिभूत नहीं करेगी। वह मुझसे और काल से मिली हुई है और काल के रूप में भाग-भाग से काम करती है।
 
 --- verse 41 ---
 deva:
@@ -400,6 +520,9 @@ iast:
 śrīśuka uvāca
 evaṁ bhagavatā rājan śrīvatsāṅkena satkṛtaḥ|
 āmantrya taṁ parikramya sagaṇaḥ svālayaṁ yayau||
+en: Śrī Śuka said: O king, Bhava was honoured in this way by the blessed Lord who bears the mark of Śrīvatsa. He took leave of him, went round him, and returned to his own abode with his hosts.
+tel: శ్రీశుకుడు పలికెను: ఓ రాజా, శ్రీవత్సచిహ్నము కలిగిన భగవంతునిచే ఈ విధముగా సత్కరింపబడి, భవుడు ఆయన అనుమతిని తీసుకొని, ప్రదక్షిణము చేసి, తన గణములతో కూడి తన నివాసమునకు వెళ్లెను.
+hi: श्रीशुकदेवजी ने कहा: हे राजन्, श्रीवत्स के चिह्न वाले भगवान् से इस प्रकार सत्कार पाकर भव ने उनसे विदा ली, प्रदक्षिणा की और अपने गणों के साथ अपने धाम को चले गये।
 
 --- verse 42 ---
 deva:
@@ -408,6 +531,9 @@ deva:
 iast:
 ātmāṁśabhūtāṁ tāṁ māyāṁ bhavānīṁ bhagavānbhavaḥ|
 śaṁsatāmṛṣimukhyānāṁ prītyā''caṣṭātha bhārata||
+en: Then, O Bhārata, the blessed Bhava lovingly spoke of that Māyā, which is a portion of the Lord's own self, to Bhavānī and to the chief sages, who were offering praise.
+tel: ఓ భారతా, పిమ్మట భగవానుడైన భవుడు, భగవంతుని ఆత్మాంశమే అయిన ఆ మాయను గూర్చి, భవానికి మరియు స్తుతించుచున్న ముఖ్య ఋషులకు ప్రీతితో వర్ణించి చెప్పెను.
+hi: हे भारत, इसके पश्चात् भगवान् भव ने भगवान् के आत्मा के अंश रूप उस माया का वर्णन भवानी तथा स्तुति करते हुए प्रमुख ऋषियों से प्रेम के साथ किया।
 
 --- verse 43 ---
 deva:
@@ -420,18 +546,24 @@ api vyapaśyastvamajasya māyāṁ
 parasya puṁsaḥ paradevatāyāḥ|
 ahaṁ kalānāmṛṣabho vimuhye
 yayāvaśo'nye kimutāsvatantrāḥ||
+en: Did you see the Māyā of the unborn one, the supreme Puruṣa, the highest Deity? I am the chief among his parts, and she bewilders me and leaves me without power. What then of others, who are not independent?
+tel: అజుడైన, పరమపురుషుడైన, పరదేవతయైన ఆయన మాయను నీవు చూచితివా? కళలలో శ్రేష్ఠుడనైన నేనే ఆమెచే మోహితుడనై వశము లేనివాడనైతిని. స్వతంత్రులు కాని ఇతరుల మాట ఏమి?
+hi: अजन्मा, परम पुरुष और परदेवता की उस माया को आपने देखा? कलाओं में श्रेष्ठ मैं ही उससे मोहित हो गया और विवश हो गया। फिर जो स्वतन्त्र नहीं हैं, उनकी क्या बात।
 
 --- verse 44 ---
 deva:
 यं मामपृच्छस्त्वमुपेत्य योगात्
-समासहस्रान्त उपारतंवै।
+समासहस्रान्त उपारतं वै।
 स एष साक्षात् पुरुषः पुराणो
 न यत्र कालो विशते न वेदः॥
 iast:
 yaṁ māmapṛcchastvamupetya yogāt
-samāsahasrānta upārataṁvai|
+samāsahasrānta upārataṁ vai|
 sa eṣa sākṣāt puruṣaḥ purāṇo
 na yatra kālo viśate na vedaḥ||
+en: You came to me at the end of a thousand years, when I had just risen from yoga, and you asked me about him. He is this very ancient Puruṣa, into whom neither Time enters nor the Veda.
+tel: వేయి సంవత్సరముల చివర యోగమునుండి నేను మేల్కొనినప్పుడు నీవు వచ్చి ఎవరిని గూర్చి నన్ను అడిగితివో, ఆయనే ఈ పురాణపురుషుడు. ఆయనలో కాలము ప్రవేశించదు, వేదమును ప్రవేశించదు.
+hi: हजार वर्ष के अन्त में जब मैं योग से उठा था, तब आपने आकर जिनके विषय में मुझसे पूछा था, वे ही ये साक्षात् पुराण पुरुष हैं। उनमें न काल प्रवेश करता है, न वेद।
 
 --- verse 45 ---
 deva:
@@ -442,6 +574,9 @@ iast:
 śrīśuka uvāca
 iti te'bhihitastāta vikramaḥ śārṅgadhanvanaḥ|
 sindhornirmathane yena dhṛtaḥ pṛṣṭhe mahācalaḥ||
+en: Śrī Śuka said: Dear child, the heroic deed of the bearer of the Śārṅga bow has thus been told to you. At the churning of the ocean he held the great mountain upon his back.
+tel: శ్రీశుకుడు పలికెను: నాయనా, శార్ఙ్గధన్వుని పరాక్రమము ఈ విధముగా నీకు చెప్పబడినది. సముద్రమథనమునందు ఆయన గొప్ప పర్వతమును తన వెన్నుపై ధరించెను.
+hi: श्रीशुकदेवजी ने कहा: हे तात, शार्ङ्गधन्वा के पराक्रम का वर्णन इस प्रकार आपसे किया गया। समुद्र के मन्थन में उन्होंने उस महान् पर्वत को अपनी पीठ पर धारण किया था।
 
 --- verse 46 ---
 deva:
@@ -454,21 +589,30 @@ etanmuhuḥ kīrtayato'nuśṛṇvato
 na riṣyate jātu samudyamaḥ kvacit|
 yaduttamaślokaguṇānuvarṇanaṁ
 samastasaṁsārapariśramāpaham||
+en: For the one who recites this again and again and for the one who listens to it, no undertaking is ever ruined. The telling of the qualities of him who is praised in the finest verses removes all the weariness of worldly life.
+tel: ఇది మరల మరల కీర్తించువానికిని, వినువానికిని ఏ ప్రయత్నమును ఎప్పుడును నాశము కాదు. ఉత్తమశ్లోకుని గుణములను వర్ణించుట సంసారపు శ్రమ అంతటిని తొలగించును.
+hi: जो इसका बार-बार कीर्तन करता है और जो इसे सुनता है, उसका कोई उद्यम कभी नष्ट नहीं होता। उत्तमश्लोक भगवान् के गुणों का वर्णन संसार के सारे परिश्रम को दूर कर देता है।
 
 --- verse 47 ---
 deva:
-असदविषयमङ् घ्रिं भावगम्यं प्रपन्ना-
+असदविषयमङ्घ्रिं भावगम्यं प्रपन्ना-
 नमृतममरवर्यानाशयत् सिन्धुमथ्यम्।
 कपटयुवतिवेषो मोहयन्यः सुरारीं-
 स्तमहमुपसृतानां कामपूरं नतोऽस्मि॥
 iast:
-asadaviṣayamaṅ ghriṁ bhāvagamyaṁ prapannā-
+asadaviṣayamaṅghriṁ bhāvagamyaṁ prapannā-
 namṛtamamaravaryānāśayat sindhumathyam|
 kapaṭayuvativeṣo mohayanyaḥ surārīṁ-
 stamahamupasṛtānāṁ kāmapūraṁ nato'smi||
+en: His feet are beyond the reach of the unholy and are gained through devotion. The foremost of the immortals took refuge at those feet, and he gave them the nectar churned from the ocean to drink. In the guise of a false young woman he deluded the enemies of the gods. I bow to him, who fulfils the desires of those who come to him.
+tel: ఆయన చరణములు అసత్తునకు అందవు, భావముచేతనే పొందబడును. ఆ చరణములను ఆశ్రయించిన దేవశ్రేష్ఠులకు ఆయన సముద్రమథనమునుండి పుట్టిన అమృతమును త్రాగించెను. కపటమైన యువతి వేషముతో ఆయన సురారులను మోహపరచెను. తన్ను ఆశ్రయించినవారి కోరికలను పూర్ణము చేయు ఆయనకు నేను నమస్కరించుచున్నాను.
+hi: उनके चरण असत् की पहुँच से बाहर हैं और भाव से ही प्राप्त होते हैं। उन चरणों की शरण लेने वाले श्रेष्ठ देवताओं को उन्होंने समुद्र के मन्थन से निकला अमृत पिलाया। कपट से बनाये हुए युवती के वेष में उन्होंने देवताओं के शत्रुओं को मोहित किया। अपने शरणागतों की कामना पूर्ण करने वाले उन्हीं को मैं नमस्कार करता हूँ।
 
 --- verse none ---
 deva:
 इति श्रीमद्भागवते महापुराणे पारमहंस्यां संहितायामष्टमस्कन्धे शङ्करमोहनं नाम द्वादशोऽध्यायः॥ १२॥
 iast:
 iti śrīmadbhāgavate mahāpurāṇe pāramahaṁsyāṁ saṁhitāyāmaṣṭamaskandhe śaṅkaramohanaṁ nāma dvādaśo'dhyāyaḥ|| 12||
+en: Thus ends the twelfth chapter, named the bewildering of Śaṅkara, in the eighth book of the great Purāṇa Śrīmad Bhāgavata, the Pāramahaṁsya Saṁhitā.
+tel: ఇది పారమహంస్యసంహిత అయిన శ్రీమద్భాగవత మహాపురాణమునందు, అష్టమస్కంధమునందు, శంకరమోహనము అను పన్నెండవ అధ్యాయము సమాప్తము.
+hi: इस प्रकार पारमहंस्य संहिता श्रीमद्भागवत महापुराण के अष्टम स्कन्ध में शंकरमोहन नाम का बारहवाँ अध्याय समाप्त हुआ।

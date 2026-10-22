@@ -9,7 +9,7 @@ Type: Purāṇa (an adhyāya of the Śrīmad Bhāgavata, Skandha 8)
 
 Source / recension: Base text and authority: the Gītā Press, Gorakhpur Śrīmadbhāgavata Mahāpurāṇa with Hindi translation, Part 1 (Gītā Press code 26), archive.org item `shrimadbhagwat-mahapuran-bhag-1`, printed pages 904–909; the PDF page numbers are the printed ones. The PDF carries the typesetter's own text layer in the Chanakya font encoding, and the text was decoded from it by machine with `bin/bhagavata/chanakya.py`, not read off OCR or typed. The decoder was checked against GRETIL over all twelve skandhas before any file was written, and the differences that remain were sampled and found to be readings of the two editions. Second witness: GRETIL's `sa_bhAgavatapurANa.xml` (IAST, contributed by Ulrich Stiehl), a separate editorial lineage, compared verse by verse by machine. The TTD edition with the commentaries of Śrīdhara, Vīrarāghava and Vijayadhvaja (archive.org `Bhagavata_Purana_With_Multiple_Commentaries_TTD_Critical_Edition`) is the third witness where one is needed; it was not read for this file. The IAST was generated mechanically from the Devanāgarī with `bin/dev2iast.py`.
 
-Recension note: Text-only file, written 1 Oct 2026 at the user's instruction to lay down the whole Bhāgavata first: the English, Telugu and Hindi meanings are still to be added, and the witnesses' differences listed here have been recorded by machine and not yet adjudicated. The print is followed throughout. The print numbers 33 verses and GRETIL numbers 33. Of the 33 verses GRETIL has under the same number, 27 agree with the print letter for letter once spacing and the spelling of nasals are set aside; the rest differ: 2, 8, 11, 15, 17, 26. The edition's footnotes give these older printed readings (प्रा० पा०), which are not bracketed into the line: at 1, वस्य च गुरो; at 2, मन्वन्तरे हरे०; at 3, सर्वमन्वन्तरे; at 3, चान्यमतीते; at 4, ये; at 4, आद्यः स; at 5, नु; at 8, माह स; at 9, मेधसा; at 12, सर्वमन्वन्तरे; at 13, सर्वस्य गोप्ता त्वजरः पुराणः; at 13, तं वै विदित्वा तु; at 14, अथ यत्रर्षयः; at 16, आनन्दमेकं परमं सनातनं; at 22, शिक्षन्सुतं; at 23, नृपाः; at 27, वृषः; at 32, शिक्षन्सुतं; at 32, नृपाः. Spacing is the print's, as its text layer gives it; in a few places justification has left a space inside a word, and these are still to be closed when the verse is read. The speaker lines (श्रीशुक उवाच and the others) are printed in italic above the verse they introduce, and are given as its first line.
+Recension note: Meanings written 23 Oct 2026 (session S78). The differences between the witnesses listed below were read as the verses were glossed; except where this note says otherwise, each is a spelling, a sandhi or a word order of the two editions, none of them changes the sense, and the print's reading therefore stands unbracketed. The print is followed throughout. The print numbers 33 verses and GRETIL numbers 33. Of the 33 verses GRETIL has under the same number, 27 agree with the print letter for letter once spacing and the spelling of nasals are set aside; the rest differ: 2, 8, 11, 15, 17, 26. The edition's footnotes give these older printed readings (प्रा० पा०), which are not bracketed into the line: at 1, वस्य च गुरो; at 2, मन्वन्तरे हरे०; at 3, सर्वमन्वन्तरे; at 3, चान्यमतीते; at 4, ये; at 4, आद्यः स; at 5, नु; at 8, माह स; at 9, मेधसा; at 12, सर्वमन्वन्तरे; at 13, सर्वस्य गोप्ता त्वजरः पुराणः; at 13, तं वै विदित्वा तु; at 14, अथ यत्रर्षयः; at 16, आनन्दमेकं परमं सनातनं; at 22, शिक्षन्सुतं; at 23, नृपाः; at 27, वृषः; at 32, शिक्षन्सुतं; at 32, नृपाः. Spacing is the print's, as its text layer gives it. The speaker lines (श्रीशुक उवाच and the others) are printed in italic above the verse they introduce, and are given as its first line. A footnote's numeral keys it to one word, and which word that is cannot be told from the note alone, so those readings stay unbracketed until the page itself is read. One lost space was put right as the verses were read. At verse 12 the text layer had swallowed the space between न and यस्य and left नयस्याद्यन्तौ, which cannot be read as it stands; it is restored here. GRETIL reads न यस्याद्यन्तौ, and the sense of the verse requires it. Four other places where the two editions space the line differently were examined and left as the print has them. At verse 13 the print spaces पुरुहूत ईशः where GRETIL runs the two words together; the two words are separate and the vowel hiatus is needed for the metre. At verse 20 the print spaces रोचनस्त्वासीद् देवाश्च after a virāma, where the print's spacing is correct. At verse 23 GRETIL spaces यज्ञ होत्राद्याः inside a compound, which the print rightly prints whole. At verse 32 the print divides तत्कथा सुमहत् where GRETIL divides तत्कथासु महत्; both divisions can be read, and the print's stands. At verse 10 the print writes भुंजीथा with the anusvāra where GRETIL has भुञ्जीथा, which is a spelling of the two editions and not a defect.
 
 Verse count: 33, plus the closing colophon printed unnumbered.
 
@@ -24,6 +24,9 @@ iast:
 rājovāca
 svāyambhuvasyeha guro vaṁśo'yaṁ vistarācchrutaḥ|
 yatra viśvasṛjāṁ sargo manūnanyānvadasva naḥ||
+en: The King said: O revered teacher, the line of Svāyambhuva Manu has been heard here by us in detail, and in it the creation by the makers of the world was told. Now tell us of the other Manus.
+tel: రాజు పలికెను: ఓ గురువర్యా, స్వాయంభువ మనువు వంశము ఇక్కడ మాచేత విస్తారముగా వినబడినది, అందులో విశ్వమును సృజించువారి సృష్టి చెప్పబడినది. ఇప్పుడు ఇతర మనువులను గురించి మాకు చెప్పుము.
+hi: राजा ने कहा: हे गुरो, स्वायम्भुव मनु का यह वंश यहाँ हमने विस्तार से सुना, और उसमें विश्व के रचने वालों की सृष्टि कही गई। अब हमें अन्य मनुओं के विषय में कहिये।
 
 --- verse 2 ---
 deva:
@@ -32,6 +35,9 @@ deva:
 iast:
 yatra yatra harerjanma karmāṇi ca mahīyasaḥ|
 gṛṇanti kavayo brahmaṁstāni no vada śṛṇvatām||
+en: O brāhmaṇa, wherever the poets sing of the births and the deeds of Hari, who is the greatest of all, tell those to us, for we are listening.
+tel: ఓ బ్రాహ్మణా, మహిమ కలిగిన హరి జన్మలను, కర్మలను కవులు ఎక్కడెక్కడ కీర్తించుచున్నారో, వాటిని వినుచున్న మాకు చెప్పుము.
+hi: हे ब्रह्मन्, सबसे महान् हरि के जन्मों और कर्मों को कवि जहाँ जहाँ गाते हैं, उन्हें सुनने वाले हमसे कहिये।
 
 --- verse 3 ---
 deva:
@@ -40,6 +46,9 @@ deva:
 iast:
 yadyasminnantare brahmanbhagavānviśvabhāvanaḥ|
 kṛtavānkurute kartā hyatīte'nāgate'dya vā||
+en: O brāhmaṇa, whatever the Lord, who brings the world into being, has done in a manvantara that has passed, does today, or will do in one yet to come, tell us that.
+tel: ఓ బ్రాహ్మణా, విశ్వమును సృజించు భగవంతుడు గతించిన మన్వంతరమునందు ఏమి చేసెనో, ఈ దినమున ఏమి చేయుచున్నాడో, రాబోవు మన్వంతరమునందు ఏమి చేయునో, దానిని మాకు చెప్పుము.
+hi: हे ब्रह्मन्, विश्व को उत्पन्न करने वाले भगवान् ने बीते हुए मन्वन्तर में जो किया, आज जो करते हैं, और आने वाले मन्वन्तर में जो करेंगे, वह हमसे कहिये।
 
 --- verse 4 ---
 deva:
@@ -50,6 +59,9 @@ iast:
 ṛṣiruvāca
 manavo'sminvyatītāḥ ṣaṭ kalpe svāyambhuvādayaḥ|
 ādyaste kathito yatra devādīnāṁ ca sambhavaḥ||
+en: The sage said: In this kalpa six Manus beginning with Svāyambhuva have passed. The first of them has been told to you, and in that account came the birth of the gods and the others.
+tel: ఋషి పలికెను: ఈ కల్పమునందు స్వాయంభువుడు మొదలుగా ఆరు మనువులు గతించిరి. వారిలో మొదటివాడు నీకు చెప్పబడెను, అందులో దేవతలు మొదలైనవారి ఉత్పత్తి చెప్పబడినది.
+hi: ऋषि ने कहा: इस कल्प में स्वायम्भुव से लेकर छह मनु बीत चुके हैं। उनमें पहले मनु का वर्णन तुमसे कहा गया, और उसी में देवताओं आदि की उत्पत्ति कही गई।
 
 --- verse 5 ---
 deva:
@@ -58,6 +70,9 @@ deva:
 iast:
 ākūtyāṁ devahūtyāṁ ca duhitrostasya vai manoḥ|
 dharmajñānopadeśārthaṁ bhagavānputratāṁ gataḥ||
+en: In Ākūti and in Devahūti, the two daughters of that Manu, the Lord became a son, in order to teach dharma and knowledge.
+tel: ఆ మనువు కుమార్తెలైన ఆకూతి యందును, దేవహూతి యందును ధర్మమును, జ్ఞానమును ఉపదేశించుటకై భగవంతుడు పుత్రుడై జన్మించెను.
+hi: उस मनु की दो पुत्रियों आकूति और देवहूति में धर्म और ज्ञान का उपदेश करने के लिये भगवान् पुत्र रूप में प्रकट हुए।
 
 --- verse 6 ---
 deva:
@@ -66,6 +81,9 @@ deva:
 iast:
 kṛtaṁ purā bhagavataḥ kapilasyānuvarṇitam|
 ākhyāsye bhagavānyajño yaccakāra kurūdvaha||
+en: What the Lord Kapila did has been described before. O best of the Kurus, now I shall tell what the Lord Yajña did.
+tel: భగవంతుడైన కపిలుడు చేసిన కార్యము ఇంతకుముందే వర్ణించబడినది. ఓ కురుశ్రేష్ఠా, ఇప్పుడు భగవంతుడైన యజ్ఞుడు చేసిన కార్యమును చెప్పెదను.
+hi: भगवान् कपिल ने जो किया, उसका वर्णन पहले कर दिया गया। हे कुरुश्रेष्ठ, अब मैं वह कहूँगा जो भगवान् यज्ञ ने किया।
 
 --- verse 7 ---
 deva:
@@ -74,6 +92,9 @@ deva:
 iast:
 viraktaḥ kāmabhogeṣu śatarūpāpatiḥ prabhuḥ|
 visṛjya rājyaṁ tapase sabhāryo vanamāviśat||
+en: The lord, the husband of Śatarūpā, lost all desire for pleasures. He gave up his kingdom and entered the forest with his wife for tapas.
+tel: శతరూప భర్తయైన ఆ ప్రభువు కామభోగములయందు విరక్తుడయ్యెను. అతడు రాజ్యమును విడిచి, భార్యతో కలిసి తపస్సు కొరకు అరణ్యమును ప్రవేశించెను.
+hi: शतरूपा के पति उस प्रभु को भोगों से वैराग्य हो गया। वे राज्य छोड़कर अपनी पत्नी के साथ तपस्या के लिये वन में चले गये।
 
 --- verse 8 ---
 deva:
@@ -82,6 +103,9 @@ deva:
 iast:
 sunandāyāṁ varṣaśataṁ padaikena bhuvaṁ spṛśan|
 tapyamānastapo ghoramidamanvāha bhārata||
+en: O Bhārata, on the bank of the Sunandā he performed severe tapas for a hundred years, touching the earth with one foot, and he spoke this.
+tel: ఓ భారతా, సునందా నదీ తీరమున నూరు సంవత్సరములు ఒక పాదముతో భూమిని తాకుచు, ఘోరమైన తపస్సును ఆచరించుచు అతడు ఇట్లు పలికెను.
+hi: हे भारत, सुनन्दा नदी के तट पर सौ वर्ष तक एक ही पैर से पृथ्वी को छूते हुए, घोर तपस्या करते हुए उन्होंने यह कहा।
 
 --- verse 9 ---
 deva:
@@ -92,6 +116,9 @@ iast:
 manuruvāca
 yena cetayate viśvaṁ viśvaṁ cetayate na yam|
 yo jāgarti śayāne'sminnāyaṁ taṁ veda veda saḥ||
+en: Manu said: He by whom the whole world is made conscious, and whom the world does not make conscious; He who is awake while this world sleeps — this world does not know Him, but He knows this world.
+tel: మనువు పలికెను: ఎవరిచేత ఈ విశ్వము అంతయు చైతన్యమును పొందుచున్నదో, ఎవరిని ఈ విశ్వము చైతన్యవంతుని చేయలేదో; ఈ విశ్వము నిద్రించుచున్నప్పుడు ఎవరు మేల్కొని ఉన్నాడో; ఈ విశ్వము ఆయనను ఎరుగదు, ఆయన ఈ విశ్వమును ఎరుగును.
+hi: मनु ने कहा: जिनके द्वारा यह सारा विश्व चेतना पाता है, और जिन्हें विश्व चेतना नहीं देता; जो इस विश्व के सोने पर भी जागते रहते हैं — यह विश्व उन्हें नहीं जानता, परन्तु वे इस विश्व को जानते हैं।
 
 --- verse 10 ---
 deva:
@@ -100,6 +127,9 @@ deva:
 iast:
 ātmāvāsyamidaṁ viśvaṁ yat kiñcijjagatyāṁ jagat|
 tena tyaktena bhuṁjīthā mā gṛdhaḥ kasyasviddhanam||
+en: This whole world, and whatever moves upon the earth, is the dwelling of the Self. Enjoy that which has been left for you by Him. Do not covet the wealth of anyone.
+tel: ఈ విశ్వము అంతయు, భూమిపై కదలాడునది ఏదైనను, ఆత్మకు నివాసము. ఆయనచేత నీకు విడిచిపెట్టబడినదానిని అనుభవించుము. ఎవరి ధనమునైనను ఆశించకుము.
+hi: यह सारा विश्व, और पृथ्वी पर जो कुछ चलता है, वह आत्मा का निवास है। उनके द्वारा जो तुम्हारे लिये छोड़ा गया है, उसका भोग करो। किसी के धन की लालसा न करो।
 
 --- verse 11 ---
 deva:
@@ -108,14 +138,20 @@ deva:
 iast:
 yaṁ na paśyati paśyantaṁ cakṣuryasya na riṣyati|
 taṁ bhūtanilayaṁ devaṁ suparṇamupadhāvata||
+en: Approach that God, the resting place of all beings, Suparṇa of the beautiful wings — He whom no one sees though He himself sees, and whose sight never fails.
+tel: సమస్త భూతములకు నిలయమైన, సుందరమైన రెక్కలు కలిగిన సుపర్ణుడైన ఆ దేవుని ఆశ్రయింపుడు. ఆయన చూచుచున్నను ఆయనను ఎవరును చూడరు, ఆయన దృష్టి ఎన్నడును క్షీణించదు.
+hi: सब प्राणियों के आश्रय, सुन्दर पंखों वाले उन सुपर्ण देव की शरण लो। वे देखते हैं, पर उन्हें कोई नहीं देखता, और उनकी दृष्टि कभी क्षीण नहीं होती।
 
 --- verse 12 ---
 deva:
-नयस्याद्यन्तौ मध्यं च स्वः परो नान्तरं बहिः।
+न यस्याद्यन्तौ मध्यं च स्वः परो नान्तरं बहिः।
 विश्वस्यामूनि यद् यस्माद् विश्वं च तदृतं महत्॥
 iast:
-nayasyādyantau madhyaṁ ca svaḥ paro nāntaraṁ bahiḥ|
+na yasyādyantau madhyaṁ ca svaḥ paro nāntaraṁ bahiḥ|
 viśvasyāmūni yad yasmād viśvaṁ ca tadṛtaṁ mahat||
+en: He has no beginning, no end and no middle. For Him there is no own and no other, no inside and no outside. These belong to the universe. And since the universe itself is from Him, He is that great Truth.
+tel: ఆయనకు ఆది లేదు, అంతము లేదు, మధ్యము లేదు. ఆయనకు తనవాడు, పరుడు అను భేదము లేదు; లోపల, వెలుపల అను భేదము లేదు. ఇవి విశ్వమునకు చెందినవి. విశ్వము ఆయననుండియే కలిగినది కావున ఆయనే ఆ మహత్తరమైన సత్యము.
+hi: उनका आदि नहीं, अन्त नहीं, मध्य नहीं। उनके लिये अपना और पराया नहीं, भीतर और बाहर नहीं। ये सब विश्व के हैं। और विश्व भी उन्हीं से हुआ है, इसलिये वे ही वह महान् सत्य हैं।
 
 --- verse 13 ---
 deva:
@@ -128,6 +164,9 @@ sa viśvakāyaḥ puruhūta īśaḥ
 satyaḥ svayaṁjyotirajaḥ purāṇaḥ|
 dhatte'sya janmādyajayā''tmaśaktyā
 tāṁ vidyayodasya nirīha āste||
+en: He whose body is the universe, who is called upon by many, the ruler, the true, the self-luminous, the unborn, the ancient — He brings about the birth and the rest of this world by ajā, His own power. Casting that power aside by vidyā, He remains free from all striving.
+tel: విశ్వమే శరీరముగా కలిగిన, అనేకులచే పిలువబడిన, ఈశుడైన, సత్యమైన, స్వయంప్రకాశుడైన, జన్మరహితుడైన, పురాతనుడైన ఆయన అజ అను తన శక్తిచేత ఈ జగత్తు పుట్టుక మొదలైనవాటిని కలిగించును. విద్యచేత ఆ శక్తిని తొలగించి ఆయన ఏ ప్రయత్నమును లేక ఉండును.
+hi: जिनका शरीर विश्व है, जिन्हें बहुत लोग पुकारते हैं, जो ईश, सत्य, स्वयंप्रकाश, अजन्मा और पुराण हैं — वे अजा नामक अपनी शक्ति से इस जगत् की उत्पत्ति आदि करते हैं। विद्या से उस शक्ति को हटाकर वे सब चेष्टा से रहित रहते हैं।
 
 --- verse 14 ---
 deva:
@@ -136,6 +175,9 @@ deva:
 iast:
 athāgre ṛṣayaḥ karmāṇīhante'karmahetave|
 īhamāno hi puruṣaḥ prāyo'nīhāṁ prapadyate||
+en: And at first the sages undertake works in order to reach freedom from works. For a man who acts generally comes at last to the state of not acting.
+tel: మొదట ఋషులు కర్మరాహిత్యమును పొందుటకై కర్మలను ఆచరించుచున్నారు. కర్మను ఆచరించు మనుష్యుడు సామాన్యముగా చివరకు కర్మరాహిత్యమును పొందును.
+hi: आरम्भ में ऋषि कर्म से छूटने के लिये ही कर्म करते हैं। कर्म करने वाला मनुष्य प्रायः अन्त में कर्महीनता को प्राप्त होता है।
 
 --- verse 15 ---
 deva:
@@ -144,6 +186,9 @@ deva:
 iast:
 īhate bhagavānīśo na hi tatra viṣajjate|
 ātmalābhena pūrṇārtho nāvasīdanti ye'nu tam||
+en: The Lord, the ruler, also acts, but He is not attached to His action. He is full in His purpose, for He has gained His own Self. Those who follow Him do not fall.
+tel: ఈశుడైన భగవంతుడును కర్మను ఆచరించును, కాని ఆయన దానియందు ఆసక్తి చెందడు. ఆత్మను పొందుటచేత ఆయన పరిపూర్ణుడు. ఆయనను అనుసరించువారు పతనము చెందరు.
+hi: ईश्वर भगवान् भी कर्म करते हैं, परन्तु वे उसमें आसक्त नहीं होते। आत्मा की प्राप्ति से वे पूर्णकाम हैं। जो उनके पीछे चलते हैं, वे गिरते नहीं।
 
 --- verse 16 ---
 deva:
@@ -156,6 +201,9 @@ tamīhamānaṁ nirahaṅkṛtaṁ budhaṁ
 nirāśiṣaṁ pūrṇamananyacoditam|
 nṝn śikṣayantaṁ nijavartmasaṁsthitaṁ
 prabhuṁ prapadye'khiladharmabhāvanam||
+en: I take refuge in that Lord who acts yet is free from the sense of self, who is wise, who has no wish of His own, who is full, and who is moved by no other; who teaches men while standing firm in His own path, and who brings every dharma into being.
+tel: కర్మను ఆచరించుచున్నను అహంకారము లేనివాడు, జ్ఞాని, ఏ కోరికయు లేనివాడు, పరిపూర్ణుడు, ఇతరులచే ప్రేరేపింపబడనివాడు, తన మార్గమునందు స్థిరముగా నిలిచి మనుష్యులకు బోధించువాడు, సమస్త ధర్మములను కలిగించువాడు అయిన ఆ ప్రభువును నేను శరణు పొందుచున్నాను.
+hi: जो कर्म करते हुए भी अहंकार से रहित हैं, जो ज्ञानी हैं, जिनकी कोई कामना नहीं, जो पूर्ण हैं, जिन्हें कोई दूसरा प्रेरित नहीं करता, जो अपने मार्ग में स्थित रहकर मनुष्यों को शिक्षा देते हैं, और जो सब धर्मों को उत्पन्न करते हैं — उन प्रभु की मैं शरण लेता हूँ।
 
 --- verse 17 ---
 deva:
@@ -166,6 +214,9 @@ iast:
 śrīśuka uvāca
 iti mantropaniṣadaṁ vyāharantaṁ samāhitam|
 dṛṣṭvāsurā yātudhānā jagdhumabhyadravan kṣudhā||
+en: Śrī Śuka said: Seeing him reciting this mantra of the upaniṣad in this way with a steady mind, the asuras and the yātudhānas ran at him in hunger, to eat him.
+tel: శ్రీశుకుడు పలికెను: ఈ విధముగా స్థిరమైన మనస్సుతో ఈ మంత్రోపనిషత్తును పలుకుచున్న అతనిని చూచి, అసురులు, యాతుధానులు ఆకలితో అతనిని తినుటకు మీదికి పరుగెత్తిరి.
+hi: श्रीशुकजी ने कहा: इस प्रकार स्थिर मन से इस मन्त्रोपनिषद् का पाठ करते हुए उन्हें देखकर असुर और यातुधान भूख से उन्हें खाने के लिये दौड़ पड़े।
 
 --- verse 18 ---
 deva:
@@ -174,6 +225,9 @@ deva:
 iast:
 tāṁstathāvasitān vīkṣya yajñaḥ sarvagato hariḥ|
 yāmaiḥ parivṛto devairhatvāśāsat triviṣṭapam||
+en: Seeing them so bent upon this, Hari, who is present everywhere and who had taken the form of Yajña, surrounded by the gods called the Yāmas, killed them and ruled over Triviṣṭapa.
+tel: వారు ఆ విధముగా నిశ్చయించుకొని ఉండుటను చూచి, సర్వత్ర వ్యాపించియున్న హరి యజ్ఞరూపమున, యాములు అను దేవతలతో చుట్టుకొనబడి, వారిని సంహరించి త్రివిష్టపమును పాలించెను.
+hi: उन्हें इस प्रकार तत्पर देखकर सर्वत्र व्याप्त हरि ने यज्ञ के रूप में, याम नामक देवताओं से घिरे हुए, उनका वध किया और त्रिविष्टप का शासन किया।
 
 --- verse 19 ---
 deva:
@@ -182,6 +236,9 @@ deva:
 iast:
 svārociṣo dvitīyastu manuragneḥ suto'bhavat|
 dyumatsuṣeṇarociṣmatpramukhāstasya cātmajāḥ||
+en: The second Manu was Svārociṣa, the son of Agni. Dyumat, Suṣeṇa, Rociṣmat and others were his sons.
+tel: రెండవ మనువు స్వారోచిషుడు, అగ్ని కుమారుడు. ద్యుమంతుడు, సుషేణుడు, రోచిష్మంతుడు మొదలైనవారు అతని కుమారులు.
+hi: दूसरे मनु स्वारोचिष थे, जो अग्नि के पुत्र थे। द्युमत्, सुषेण, रोचिष्मत् आदि उनके पुत्र थे।
 
 --- verse 20 ---
 deva:
@@ -190,6 +247,9 @@ deva:
 iast:
 tatrendro rocanastvāsīd devāśca tuṣitādayaḥ|
 ūrjastambhādayaḥ sapta ṛṣayo brahmavādinaḥ||
+en: In that manvantara Rocana was Indra, and the gods were Tuṣita and the rest. The seven sages, who spoke of Brahman, were Ūrja, Stambha and the others.
+tel: ఆ మన్వంతరమునందు రోచనుడు ఇంద్రుడుగా ఉండెను, తుషితుడు మొదలైనవారు దేవతలుగా ఉండిరి. బ్రహ్మమును గురించి పలుకు సప్తఋషులు ఊర్జుడు, స్తంభుడు మొదలైనవారు.
+hi: उस मन्वन्तर में रोचन इन्द्र थे और तुषित आदि देवता थे। ब्रह्म का उपदेश करने वाले सात ऋषि ऊर्ज, स्तम्भ आदि थे।
 
 --- verse 21 ---
 deva:
@@ -198,6 +258,9 @@ deva:
 iast:
 ṛṣestu vedaśirasastuṣitā nāma patnyabhūt|
 tasyāṁ jajñe tato devo vibhurityabhiviśrutaḥ||
+en: The sage Vedaśiras had a wife named Tuṣitā. From her was then born the Lord, who became well known by the name Vibhu.
+tel: వేదశిరుడు అను ఋషికి తుషిత అను పేరుగల భార్య ఉండెను. ఆమెయందు అప్పుడు భగవంతుడు జన్మించెను; ఆయన విభుడు అను పేరుతో ప్రసిద్ధుడయ్యెను.
+hi: वेदशिरा नामक ऋषि की तुषिता नाम की पत्नी थीं। उनसे भगवान् ने जन्म लिया, और वे विभु नाम से प्रसिद्ध हुए।
 
 --- verse 22 ---
 deva:
@@ -206,6 +269,9 @@ deva:
 iast:
 aṣṭāśītisahasrāṇi munayo ye dhṛtavratāḥ|
 anvaśikṣanvrataṁ tasya kaumārabrahmacāriṇaḥ||
+en: Eighty-eight thousand sages who held firm vows learnt his vow and followed it, and they remained brahmacārins from boyhood.
+tel: దృఢమైన వ్రతములు కలిగిన ఎనుబది ఎనిమిది వేల మునులు ఆయన వ్రతమును నేర్చుకొని అనుసరించిరి; వారు బాల్యమునుండియే బ్రహ్మచారులుగా ఉండిరి.
+hi: दृढ़ व्रत वाले अट्ठासी हजार मुनियों ने उनके व्रत को सीखकर उसका पालन किया, और वे बालपन से ही ब्रह्मचारी रहे।
 
 --- verse 23 ---
 deva:
@@ -214,6 +280,9 @@ deva:
 iast:
 tṛtīya uttamo nāma priyavratasuto manuḥ|
 pavanaḥ sṛñjayo yajñahotrādyāstatsutā nṛpa||
+en: O King, the third Manu was named Uttama, the son of Priyavrata. Pavana, Sṛñjaya, Yajñahotra and others were his sons.
+tel: ఓ రాజా, మూడవ మనువు ఉత్తముడు అను పేరుగలవాడు, ప్రియవ్రతుని కుమారుడు. పవనుడు, సృంజయుడు, యజ్ఞహోత్రుడు మొదలైనవారు అతని కుమారులు.
+hi: हे राजन्, तीसरे मनु उत्तम नाम के थे, जो प्रियव्रत के पुत्र थे। पवन, सृञ्जय, यज्ञहोत्र आदि उनके पुत्र थे।
 
 --- verse 24 ---
 deva:
@@ -222,6 +291,9 @@ deva:
 iast:
 vasiṣṭhatanayāḥ sapta ṛṣayaḥ pramadādayaḥ|
 satyā vedaśrutā bhadrā devā indrastu satyajit||
+en: The seven sages were the sons of Vasiṣṭha, Pramada and the rest. The gods were the Satyas, the Vedaśrutas and the Bhadras, and Satyajit was Indra.
+tel: సప్తఋషులు వసిష్ఠుని కుమారులు, ప్రమదుడు మొదలైనవారు. సత్యులు, వేదశ్రుతులు, భద్రులు దేవతలు; సత్యజిత్తు ఇంద్రుడు.
+hi: सात ऋषि वसिष्ठ के पुत्र प्रमद आदि थे। सत्य, वेदश्रुत और भद्र देवता थे, और सत्यजित् इन्द्र थे।
 
 --- verse 25 ---
 deva:
@@ -230,6 +302,9 @@ deva:
 iast:
 dharmasya sūnṛtāyāṁ tu bhagavānpuruṣottamaḥ|
 satyasena iti khyāto jātaḥ satyavrataiḥ saha||
+en: The Lord Puruṣottama was born of Sūnṛtā, the wife of Dharma. He was known as Satyasena, and he was born together with the Satyavratas.
+tel: ధర్మునికి సూనృత యందు భగవంతుడైన పురుషోత్తముడు జన్మించెను. ఆయన సత్యసేనుడు అని ప్రసిద్ధుడయ్యెను, సత్యవ్రతులతో కలిసి జన్మించెను.
+hi: धर्म की पत्नी सूनृता से भगवान् पुरुषोत्तम प्रकट हुए। वे सत्यसेन नाम से प्रसिद्ध हुए, और सत्यव्रतों के साथ उत्पन्न हुए।
 
 --- verse 26 ---
 deva:
@@ -238,6 +313,9 @@ deva:
 iast:
 so'nṛtavrataduḥśīlānasato yakṣarākṣasān|
 bhūtadruho bhūtagaṇāṁstvavadhīt satyajitsakhaḥ||
+en: He, the friend of Satyajit, killed the yakṣas and rākṣasas who were false in their vows, evil in conduct and wicked, and the hosts of beings who harmed other beings.
+tel: సత్యజిత్తునకు మిత్రుడైన ఆయన అసత్యమైన వ్రతములు కలిగి, దుష్టమైన నడవడి కలిగి, చెడ్డవారైన యక్షులను, రాక్షసులను, ఇతర ప్రాణులను హింసించు భూతగణములను సంహరించెను.
+hi: सत्यजित् के मित्र उन्होंने झूठे व्रत वाले, दुराचारी और असत् यक्षों और राक्षसों को, तथा प्राणियों को पीड़ा देने वाले भूतगणों को मार डाला।
 
 --- verse 27 ---
 deva:
@@ -246,6 +324,9 @@ deva:
 iast:
 caturtha uttamabhrātā manurnāmnā ca tāmasaḥ|
 pṛthuḥ khyātirnaraḥ keturityādyā daśa tatsutāḥ||
+en: The fourth Manu was the brother of Uttama, Tāmasa by name. Pṛthu, Khyāti, Nara, Ketu and others, ten in all, were his sons.
+tel: నాలుగవ మనువు ఉత్తముని సోదరుడు, తామసుడు అను పేరుగలవాడు. పృథువు, ఖ్యాతి, నరుడు, కేతువు మొదలైన పదిమంది అతని కుమారులు.
+hi: चौथे मनु उत्तम के भाई तामस नाम के थे। पृथु, ख्याति, नर, केतु आदि दस उनके पुत्र थे।
 
 --- verse 28 ---
 deva:
@@ -254,6 +335,9 @@ deva:
 iast:
 satyakā harayo vīrā devāstriśikha īśvaraḥ|
 jyotirdhāmādayaḥ sapta ṛṣayastāmase'ntare||
+en: In the Tāmasa manvantara the gods were the Satyakas, the Haris and the Vīras. Triśikha was their lord. The seven sages were Jyotirdhāma and the others.
+tel: తామస మన్వంతరమునందు సత్యకులు, హరులు, వీరులు దేవతలు. త్రిశిఖుడు వారికి ఈశ్వరుడు. జ్యోతిర్ధాముడు మొదలైనవారు సప్తఋషులు.
+hi: तामस मन्वन्तर में सत्यक, हरि और वीर देवता थे। त्रिशिख उनके ईश्वर थे। ज्योतिर्धाम आदि सात ऋषि थे।
 
 --- verse 29 ---
 deva:
@@ -262,6 +346,9 @@ deva:
 iast:
 devā vaidhṛtayo nāma vidhṛtestanayā nṛpa|
 naṣṭāḥ kālena yairvedā vidhṛtāḥ svena tejasā||
+en: O King, the sons of Vidhṛti were gods named the Vaidhṛtis. By their own power they held fast the Vedas, which had been lost with the passing of time.
+tel: ఓ రాజా, విధృతి కుమారులు వైధృతులు అను పేరుగల దేవతలు. కాలక్రమమున నశించిన వేదములను వారు తమ తేజముచేత నిలుపుకొనిరి.
+hi: हे राजन्, विधृति के पुत्र वैधृति नाम के देवता थे। समय के साथ नष्ट हुए वेदों को उन्होंने अपने तेज से धारण किया।
 
 --- verse 30 ---
 deva:
@@ -270,6 +357,9 @@ deva:
 iast:
 tatrāpi jajñe bhagavānhariṇyāṁ harimedhasaḥ|
 harirityāhṛto yena gajendro mocito grahāt||
+en: In that manvantara too the Lord was born of Hariṇī, the wife of Harimedhas. He was called Hari, and by Him Gajendra was freed from the crocodile.
+tel: ఆ మన్వంతరమునందును హరిమేధునకు హరిణి యందు భగవంతుడు జన్మించెను. ఆయన హరి అని పిలువబడెను; ఆయనచేత గజేంద్రుడు మొసలినుండి విడిపించబడెను.
+hi: उस मन्वन्तर में भी हरिमेधा की पत्नी हरिणी से भगवान् का जन्म हुआ। वे हरि कहे गये, और उन्होंने गजेन्द्र को ग्राह से छुड़ाया।
 
 --- verse 31 ---
 deva:
@@ -280,6 +370,9 @@ iast:
 rājovāca
 bādarāyaṇa etat te śrotumicchāmahe vayam|
 hariryathā gajapatiṁ grāhagrastamamūmucat||
+en: The King said: O Bādarāyaṇa, we wish to hear this from you: how Hari freed the lord of the elephants, who had been seized by the crocodile.
+tel: రాజు పలికెను: ఓ బాదరాయణా, మొసలిచేత పట్టుకొనబడిన గజేంద్రుని హరి ఏ విధముగా విడిపించెనో, దానిని నీనుండి వినగోరుచున్నాము.
+hi: राजा ने कहा: हे बादरायण, हम आपसे यह सुनना चाहते हैं कि ग्राह से पकड़े गये गजराज को हरि ने किस प्रकार छुड़ाया।
 
 --- verse 32 ---
 deva:
@@ -288,6 +381,9 @@ deva:
 iast:
 tatkathā sumahat puṇyaṁ dhanyaṁ svastyayanaṁ śubham|
 yatra yatrottamaśloko bhagavāngīyate hariḥ||
+en: That story is greatly meritorious, blessed, a means of well-being, and auspicious. So is every account in which the Lord Hari, who is praised in the finest verses, is sung of.
+tel: ఆ కథ మిక్కిలి పుణ్యమైనది, ధన్యమైనది, క్షేమమును కలిగించునది, శుభమైనది. ఉత్తమ శ్లోకములచే కీర్తింపబడు భగవంతుడైన హరి ఎక్కడెక్కడ గానము చేయబడునో, అది అంతయు అట్టిదే.
+hi: वह कथा अत्यन्त पुण्य, धन्य, कल्याणकारी और शुभ है। जहाँ जहाँ उत्तम श्लोकों से प्रशंसित भगवान् हरि का गान होता है, वह सब भी ऐसा ही है।
 
 --- verse 33 ---
 deva:
@@ -302,9 +398,15 @@ parīkṣitaivaṁ sa tu bādarāyaṇiḥ
 prāyopaviṣṭena kathāsu coditaḥ|
 uvāca viprāḥ pratinandya pārthivaṁ
 mudā munīnāṁ sadasi sma śṛṇvatām||
+en: Sūta said: O brāhmaṇas, urged in this way to these accounts by Parīkṣit, who had sat down to fast until the end, Bādarāyaṇi praised the King and then spoke with joy in the assembly of the sages who were listening.
+tel: సూతుడు పలికెను: ఓ విప్రులారా, అంత్యమువరకు ఉపవాసము ఉండుటకు కూర్చున్న పరీక్షితుడు ఈ విధముగా కథలను కోరగా, బాదరాయణి ఆ రాజును ప్రశంసించి, వినుచున్న మునుల సభయందు సంతోషముతో పలికెను.
+hi: सूतजी ने कहा: हे विप्रो, अन्त तक उपवास करने के लिये बैठे हुए परीक्षित् के इस प्रकार प्रेरित करने पर बादरायणि ने उस राजा की प्रशंसा की और सुनते हुए मुनियों की सभा में आनन्द से कहा।
 
 --- verse none ---
 deva:
 इति श्रीमद्भागवते महापुराणे पारमहंस्यां संहितायां अष्टमस्कन्धे मन्वन्तरानुचरिते प्रथमोऽध्यायः॥ १॥
 iast:
 iti śrīmadbhāgavate mahāpurāṇe pāramahaṁsyāṁ saṁhitāyāṁ aṣṭamaskandhe manvantarānucarite prathamo'dhyāyaḥ|| 1||
+en: Thus ends the first adhyāya, the account of the manvantaras, in the eighth skandha of the Śrīmad Bhāgavata Mahāpurāṇa, the saṁhitā of the paramahaṁsas.
+tel: ఇది శ్రీమద్భాగవత మహాపురాణమునందు, పరమహంసల సంహితయందు, అష్టమస్కంధమునందు మన్వంతరానుచరితము అను ప్రథమాధ్యాయము.
+hi: इस प्रकार श्रीमद्भागवत महापुराण की परमहंसों की संहिता के अष्टम स्कन्ध में मन्वन्तरों का वर्णन करने वाला पहला अध्याय समाप्त हुआ।

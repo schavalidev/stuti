@@ -9,7 +9,7 @@ Type: Purāṇa (an adhyāya of the Śrīmad Bhāgavata, Skandha 8)
 
 Source / recension: Base text and authority: the Gītā Press, Gorakhpur Śrīmadbhāgavata Mahāpurāṇa with Hindi translation, Part 1 (Gītā Press code 26), archive.org item `shrimadbhagwat-mahapuran-bhag-1`, printed pages 929–934; the PDF page numbers are the printed ones. The PDF carries the typesetter's own text layer in the Chanakya font encoding, and the text was decoded from it by machine with `bin/bhagavata/chanakya.py`, not read off OCR or typed. The decoder was checked against GRETIL over all twelve skandhas before any file was written, and the differences that remain were sampled and found to be readings of the two editions. Second witness: GRETIL's `sa_bhAgavatapurANa.xml` (IAST, contributed by Ulrich Stiehl), a separate editorial lineage, compared verse by verse by machine. The TTD edition with the commentaries of Śrīdhara, Vīrarāghava and Vijayadhvaja (archive.org `Bhagavata_Purana_With_Multiple_Commentaries_TTD_Critical_Edition`) is the third witness where one is needed; it was not read for this file. The IAST was generated mechanically from the Devanāgarī with `bin/dev2iast.py`.
 
-Recension note: Text-only file, written 1 Oct 2026 at the user's instruction to lay down the whole Bhāgavata first: the English, Telugu and Hindi meanings are still to be added, and the witnesses' differences listed here have been recorded by machine and not yet adjudicated. The print is followed throughout. The print numbers 39 verses and GRETIL numbers 39. Of the 39 verses GRETIL has under the same number, 26 agree with the print letter for letter once spacing and the spelling of nasals are set aside; the rest differ: 2, 5, 6, 7, 9, 13, 14, 16, 19, 20, 24, 31, 35. The edition's footnotes give these older printed readings (प्रा० पा०), which are not bracketed into the line: at 16, कायान्; at 17, एव वृतस्तस्मि०; at 17, समुद्रमथनादिभिः; at 20, गताः; at 22, जलौषधीः; at 22, च; at 25, कामः स्ववस्तुषु; at 31, तत्त्वरो०. Spacing is the print's, as its text layer gives it; in a few places justification has left a space inside a word, and these are still to be closed when the verse is read. The speaker lines (श्रीशुक उवाच and the others) are printed in italic above the verse they introduce, and are given as its first line.
+Recension note: Meanings written 23 Oct 2026 (session S78). The differences between the witnesses listed below were read as the verses were glossed; except where this note says otherwise, each is a spelling, a sandhi or a word order of the two editions, none of them changes the sense, and the print's reading therefore stands unbracketed. The print is followed throughout. The print numbers 39 verses and GRETIL numbers 39. Of the 39 verses GRETIL has under the same number, 26 agree with the print letter for letter once spacing and the spelling of nasals are set aside; the rest differ: 2, 5, 6, 7, 9, 13, 14, 16, 19, 20, 24, 31, 35. The edition's footnotes give these older printed readings (प्रा० पा०), which are not bracketed into the line: at 16, कायान्; at 17, एव वृतस्तस्मि०; at 17, समुद्रमथनादिभिः; at 20, गताः; at 22, जलौषधीः; at 22, च; at 25, कामः स्ववस्तुषु; at 31, तत्त्वरो०. Spacing is the print's, as its text layer gives it. The speaker lines (श्रीशुक उवाच and the others) are printed in italic above the verse they introduce, and are given as its first line. A footnote's numeral keys it to one word, and which word that is cannot be told from the note alone, so those readings stay unbracketed until the page itself is read. No broken word was found in this adhyāya. Every space and every join that the two spacing detectors flagged falls after a virāma consonant or before an avagraha, where the script requires it, and GRETIL agrees with the print in each place. Two of the differences are worth naming. At verse 2 the print reads महसा where GRETIL reads सहसा, and this one does change the sense; the print's reading follows from the thousand suns of verse 1 and it stands. At verse 31 GRETIL reads what this edition prints as the older reading in its own footnote.
 
 Verse count: 39, plus the closing colophon printed unnumbered.
 
@@ -24,6 +24,9 @@ iast:
 śrīśuka uvāca
 evaṁ stutaḥ suragaṇairbhagavān harirīśvaraḥ|
 teṣāmāvirabhūd rājansahasrārkodayadyutiḥ||
+en: Śrī Śuka said: O King, praised in this way by the hosts of the gods, the blessed Lord Hari, the ruler of all, appeared before them, shining like a thousand suns rising at once.
+tel: శ్రీశుకుడు పలికెను: రాజా, దేవగణములు ఈ విధముగా స్తుతించగా, సర్వేశ్వరుడైన భగవంతుడు శ్రీహరి, ఒక్కసారి ఉదయించు వేయి సూర్యుల వలె ప్రకాశించుచు, వారి ఎదుట ప్రత్యక్షమయ్యెను.
+hi: श्रीशुकदेवजी ने कहा: हे राजन्, देवताओं के समूहों ने इस प्रकार स्तुति की। तब सबके स्वामी भगवान् श्रीहरि एक साथ उदय होते हुए सहस्र सूर्यों के समान प्रकाशित होकर उनके सामने प्रकट हुए।
 
 --- verse 2 ---
 deva:
@@ -32,6 +35,9 @@ deva:
 iast:
 tenaiva mahasā sarve devāḥ pratihatekṣaṇāḥ|
 nāpaśyankhaṁ diśaḥ kṣoṇimātmānaṁ ca kuto vibhum||
+en: By that very radiance the eyes of all the gods were struck. They could not see the sky, the directions, the earth, or even themselves. How then could they see the all-pervading Lord?
+tel: ఆ తేజస్సుచేతనే దేవతలందరి కన్నులు మూసుకుపోయెను. వారు ఆకాశమును, దిక్కులను, భూమిని, తమను తామును కూడ చూడలేకపోయిరి. అట్టి స్థితిలో సర్వవ్యాపకుడైన భగవంతుని వారు ఎట్లు చూడగలరు?
+hi: उसी तेज से सब देवताओं की आँखें बंद हो गईं। वे आकाश को, दिशाओं को, पृथ्वी को और अपने आपको भी नहीं देख सके। तब सर्वव्यापी भगवान् को वे कैसे देख पाते?
 
 --- verse 3 ---
 deva:
@@ -40,6 +46,9 @@ deva:
 iast:
 viriñco bhagavān dṛṣṭvā saha śarveṇa tāṁ tanum|
 svacchāṁ marakataśyāmāṁ kañjagarbhāruṇekṣaṇām||
+en: The lord Viriñca, together with Śarva, saw that form. It was clear, and dark green like an emerald. Its eyes were reddish like the inside of a lotus.
+tel: భగవంతుడైన విరించుడు శర్వునితో కూడి ఆ రూపమును చూచెను. అది నిర్మలమై, మరకతము వలె నల్లని ఆకుపచ్చ రంగులో ఉండెను. దాని కన్నులు పద్మము లోపలి భాగము వలె ఎరుపెక్కి ఉండెను.
+hi: भगवान् विरिंच ने शर्व के साथ उस रूप को देखा। वह निर्मल था और मरकत के समान हरा-श्याम था। उसके नेत्र कमल के भीतरी भाग के समान लालिमा लिये थे।
 
 --- verse 4 ---
 deva:
@@ -48,6 +57,9 @@ deva:
 iast:
 taptahemāvadātena lasatkauśeyavāsasā|
 prasannacārusarvāṅgīṁ sumukhīṁ sundarabhruvam||
+en: The form wore a shining silk garment, bright as molten gold. Every limb of it was pleasing and beautiful. Its face was lovely and its eyebrows were fine.
+tel: ఆ రూపము కరిగిన బంగారము వలె ప్రకాశించు పట్టు వస్త్రమును ధరించి ఉండెను. దాని అవయవములన్నియు ప్రసన్నముగను సుందరముగను ఉండెను. ముఖము మనోహరముగ ఉండెను, కనుబొమలు అందముగ ఉండెను.
+hi: वह रूप तपाये हुए सोने के समान चमकते रेशमी वस्त्र से युक्त था। उसके सब अंग प्रसन्न और सुंदर थे। मुख मनोहर था और भौंहें सुंदर थीं।
 
 --- verse 5 ---
 deva:
@@ -56,6 +68,9 @@ deva:
 iast:
 mahāmaṇikirīṭena keyūrābhyāṁ ca bhūṣitām|
 karṇābharaṇanirbhātakapolaśrīmukhāmbujām||
+en: It was adorned with a crown of great jewels and with two armlets. Its lotus face was beautiful, and the cheeks shone with the light of the ear ornaments.
+tel: అది గొప్ప మణులతో చేసిన కిరీటముతోను, రెండు కేయూరములతోను అలంకరించబడి ఉండెను. కర్ణభూషణముల కాంతిచే చెక్కిళ్ళు ప్రకాశించుచు, ముఖకమలము శోభించుచుండెను.
+hi: वह महामणियों के मुकुट से और दो केयूरों से अलंकृत था। कानों के आभूषणों की चमक से गाल दमक रहे थे और मुखकमल शोभा पा रहा था।
 
 --- verse 6 ---
 deva:
@@ -64,6 +79,9 @@ deva:
 iast:
 kāñcīkalāpavalayahāranūpuraśobhitām|
 kaustubhābharaṇāṁ lakṣmīṁ bibhratīṁ vanamālinīm||
+en: It shone with a girdle, with bangles, with a necklace and with anklets. It wore the Kaustubha jewel as its ornament. It bore Lakṣmī upon it, and it wore the garland of forest flowers.
+tel: వడ్డాణముతో, కంకణములతో, హారముతో, అందెలతో అది శోభించుచుండెను. కౌస్తుభమణిని ఆభరణముగా ధరించి ఉండెను. లక్ష్మిని తనపై ధరించి, వనమాలను ధరించి ఉండెను.
+hi: वह करधनी से, कंगनों से, हार से और नूपुरों से शोभित था। कौस्तुभ मणि उसका आभूषण था। वह लक्ष्मी को अपने ऊपर धारण किये था और वनमाला पहने था।
 
 --- verse 7 ---
 deva:
@@ -74,6 +92,9 @@ iast:
 sudarśanādibhiḥ svāstrairmūrtimadbhirupāsitām|
 tuṣṭāva devapravaraḥ saśarvaḥ puruṣaṁ param|
 sarvāmaragaṇaiḥ sākaṁ sarvāṅgairavaniṁ gataiḥ||
+en: Its own weapons, Sudarśana and the rest, stood near it in bodily form and served it. Seeing this, the foremost of the gods, together with Śarva, praised the supreme Person, and with him all the hosts of the immortals, who had laid every limb upon the ground.
+tel: సుదర్శనము మొదలైన తన ఆయుధములు మూర్తి ధరించి దానిని సేవించుచుండెను. ఇది చూచి, దేవశ్రేష్ఠుడు శర్వునితో కూడి పరమపురుషుని స్తుతించెను. అమరగణములన్నియు తమ అవయవములన్నియు నేలపై ఆనించి ఆయనతో కూడి స్తుతించెను.
+hi: सुदर्शन आदि उसके अपने अस्त्र मूर्ति धारण करके उसकी सेवा कर रहे थे। यह देखकर देवश्रेष्ठ ने शर्व के साथ परम पुरुष की स्तुति की। सब अमरगण भी अपने सब अंगों को भूमि पर रखकर उनके साथ स्तुति करने लगे।
 
 --- verse 8 ---
 deva:
@@ -88,6 +109,9 @@ ajātajanmasthitisaṁyamāyā-
 guṇāya nirvāṇasukhārṇavāya|
 aṇoraṇimne'parigaṇyadhāmne
 mahānubhāvāya namo namaste||
+en: Brahmā said: You are unborn. Birth, continuance and dissolution are not in you. You are beyond the guṇas. You are an ocean of the bliss of nirvāṇa. You are subtler than the subtlest atom. Your abode is beyond all reckoning. Your majesty is great. Obeisance to you, obeisance to you.
+tel: బ్రహ్మ పలికెను: నీవు పుట్టుక లేనివాడవు. పుట్టుట, నిలుచుట, నశించుట నీయందు లేవు. నీవు గుణములకు అతీతుడవు. నీవు నిర్వాణసుఖమునకు సముద్రము వంటివాడవు. నీవు అణువు కంటెను సూక్ష్మమైనవాడవు. నీ ధామము లెక్కింపజాలనిది. నీ ప్రభావము గొప్పది. నీకు నమస్కారము, నీకు నమస్కారము.
+hi: ब्रह्माजी ने कहा: आप अजन्मा हैं। जन्म, स्थिति और संहार आपमें नहीं हैं। आप गुणों से रहित हैं। आप निर्वाण के सुख के समुद्र हैं। आप अणु से भी सूक्ष्म हैं। आपका धाम गिनती से परे है। आपका प्रभाव महान् है। आपको नमस्कार है, आपको नमस्कार है।
 
 --- verse 9 ---
 deva:
@@ -100,6 +124,9 @@ rūpaṁ tavaitat puruṣarṣabhejyaṁ
 śreyo'rthibhirvaidikatāntrikeṇa|
 yogena dhātaḥ saha nastrilokān
 paśyāmyamuṣmin nu ha viśvamūrtau||
+en: O best among Persons, this form of yours is worshipped by those who seek the highest good, through the yoga taught in the Veda and in the Tantra. O Creator, in this form of yours, which is the whole universe, I see the three worlds together with ourselves.
+tel: పురుషశ్రేష్ఠా, శ్రేయమును కోరువారు వేదమునందును తంత్రమునందును చెప్పబడిన యోగముచే నీ ఈ రూపమును ఆరాధించుచున్నారు. ధాతా, విశ్వమంతయు అయిన ఈ నీ రూపమునందు మూడు లోకములను, మాతో కూడి, నేను చూచుచున్నాను.
+hi: हे पुरुषश्रेष्ठ, कल्याण चाहनेवाले लोग वेद और तंत्र में कहे गये योग से आपके इस रूप की उपासना करते हैं। हे धाता, विश्वरूप आपके इस स्वरूप में मैं अपने सहित तीनों लोकों को देख रहा हूँ।
 
 --- verse 10 ---
 deva:
@@ -112,6 +139,9 @@ tvayyagra āsīt tvayi madhya āsīt
 tvayyanta āsīdidamātmatantre|
 tvamādiranto jagato'sya madhyaṁ
 ghaṭasya mṛtsneva paraḥ parasmāt||
+en: This universe was in you at the beginning. It was in you in the middle. It was in you at the end. You rest upon yourself alone. You are the beginning, the middle and the end of this world, as clay is of a pot. You are higher than the highest.
+tel: ఈ జగత్తు ఆదియందు నీయందే ఉండెను. మధ్యమునందును నీయందే ఉండెను. అంతమునందును నీయందే ఉండెను. నీవు నీపైననే ఆధారపడియున్నావు. కుండకు మన్ను ఎట్లో, ఈ జగత్తునకు ఆది, మధ్యము, అంతము నీవే. నీవు పరమునకును పరమైనవాడవు.
+hi: यह जगत् आदि में आपमें ही था। मध्य में भी आपमें ही था। अंत में भी आपमें ही था। आप अपने ही आश्रय हैं। घड़े के लिये मिट्टी जैसी है, वैसे ही इस जगत् के आदि, मध्य और अंत आप ही हैं। आप परम से भी परम हैं।
 
 --- verse 11 ---
 deva:
@@ -124,6 +154,9 @@ tvaṁ māyayā''tmāśrayayā svayedaṁ
 nirmāya viśvaṁ tadanupraviṣṭaḥ|
 paśyanti yuktā manasā manīṣiṇo
 guṇavyavāye'pyaguṇaṁ vipaścitaḥ||
+en: With your own māyā, which rests in you, you made this universe and then entered into it. The wise, who are steady in yoga and clear in understanding, see with the mind that you remain without the guṇas even while the guṇas are at work.
+tel: నీయందే ఆశ్రయము కలిగిన నీ మాయచే ఈ విశ్వమును నిర్మించి, నీవు దానిలో ప్రవేశించితివి. యోగమునందు స్థిరులైన, నిర్మలబుద్ధి కలిగిన జ్ఞానులు, గుణములు పనిచేయుచున్నప్పుడును నీవు గుణరహితుడవై ఉందువని మనస్సుచే చూచుచున్నారు.
+hi: अपने में ही आश्रय रखनेवाली अपनी माया से आपने इस विश्व को रचा और फिर उसमें प्रवेश किया। योग में स्थित और निर्मल बुद्धिवाले मनीषी मन से यह देखते हैं कि गुणों के कार्य करते रहने पर भी आप गुणों से रहित ही रहते हैं।
 
 --- verse 12 ---
 deva:
@@ -136,6 +169,9 @@ yathāgnimedhasyamṛtaṁ ca goṣu
 bhuvyannamambūdyamane ca vṛttim|
 yogairmanuṣyā adhiyanti hi tvāṁ
 guṇeṣu buddhyā kavayo vadanti||
+en: As fire is obtained from wood, milk from cows, food and water from the earth, and a living from effort, so men attain you by their disciplines. The wise say that you are reached by the understanding even while men stand among the guṇas.
+tel: కట్టెలనుండి అగ్ని, గోవులనుండి పాలు, భూమినుండి అన్నము మరియు నీరు, ప్రయత్నమునుండి జీవనము ఎట్లు లభించునో, అట్లే మనుష్యులు తమ సాధనలచే నిన్ను పొందుచున్నారు. గుణముల నడుమ ఉండియు బుద్ధిచే నిన్ను పొందుదురని జ్ఞానులు చెప్పుచున్నారు.
+hi: जैसे काठ से अग्नि, गौओं से दूध, पृथ्वी से अन्न और जल, तथा परिश्रम से जीविका मिलती है, वैसे ही मनुष्य अपने साधनों से आपको प्राप्त करते हैं। मनीषी कहते हैं कि गुणों के बीच रहकर भी बुद्धि से आप प्राप्त होते हैं।
 
 --- verse 13 ---
 deva:
@@ -148,6 +184,9 @@ taṁ tvāṁ vayaṁ nātha samujjihānaṁ
 sarojanābhāticirepsitārtham|
 dṛṣṭvā gatā nirvṛtimadya sarve
 gajā davārtā iva gāṅgamambhaḥ||
+en: O Lord, O lotus-naveled one, you are the object we have desired for a very long time, and you have now risen before us. Seeing you today we have all become content, like elephants scorched by a forest fire that reach the water of the Gaṅgā.
+tel: నాథా, సరోజనాభా, మేము ఎంతో కాలము కోరిన వస్తువు నీవే. ఇప్పుడు నీవు మా ఎదుట ప్రకటమైతివి. కార్చిచ్చుచే బాధపడిన ఏనుగులు గంగాజలమును పొందినట్లు, నిన్ను ఈనాడు చూచి మేమందరము సంతృప్తి పొందితిమి.
+hi: हे नाथ, हे सरोजनाभ, हम बहुत काल से जिसे चाहते थे वह आप ही हैं, और अब आप हमारे सामने प्रकट हुए हैं। दावाग्नि से जले हुए हाथी गंगा के जल को पा लेते हैं, वैसे ही आज आपको देखकर हम सब शांति पा गये।
 
 --- verse 14 ---
 deva:
@@ -160,6 +199,9 @@ sa tvaṁ vidhatsvākhilalokapālā
 vayaṁ yadarthāstava pādamūlam|
 samāgatāste bahirantarātman
 kiṁ vānyavijñāpyamaśeṣasākṣiṇaḥ||
+en: You are such a one, so ordain what we ask. We are the guardians of all the worlds, and we have come to your feet for that very purpose. O inner self, you are outside and within. You are the witness of everything. What else have we to tell you?
+tel: అట్టివాడవైన నీవు మా కోరికను నెరవేర్పుము. మేము సమస్త లోకములను పాలించువారము, అందుకోసమే నీ పాదముల వద్దకు వచ్చితిమి. అంతరాత్మా, నీవు బయటను లోపలను ఉన్నవాడవు. నీవు అన్నిటికి సాక్షివి. ఇంక నీకు చెప్పవలసినది ఏమి ఉన్నది?
+hi: आप ऐसे हैं, इसलिये हमारी प्रार्थना पूरी कीजिये। हम सब लोकों के रक्षक हैं और इसी प्रयोजन से आपके चरणों में आये हैं। हे अंतरात्मा, आप बाहर और भीतर दोनों ओर हैं। आप सबके साक्षी हैं। हमें आपसे और क्या कहना है?
 
 --- verse 15 ---
 deva:
@@ -172,6 +214,9 @@ ahaṁ giritraśca surādayo ye
 dakṣādayo'gneriva ketavaste|
 kiṁ vā vidāmeśa pṛthagvibhātā
 vidhatsva śaṁ no dvijadevamantram||
+en: I, Giritra, the gods, Dakṣa and the rest are like the flames of a fire, and we all come from you. Though we shine as separate beings, what do we know, O Lord? Ordain our welfare, and give us your counsel for the twice-born and for the gods.
+tel: నేను, గిరిత్రుడు, దేవతలు, దక్షుడు మొదలైనవారము అగ్నినుండి పుట్టు మంటల వంటివారము, మేమందరము నీనుండియే వచ్చినవారము. వేరువేరుగా ప్రకాశించుచున్నను, ఈశా, మేము ఏమి ఎరుగుదుము? మాకు శుభమును కలిగింపుము, ద్విజులకును దేవతలకును హితమైన నీ ఉపదేశమును మాకు ఇమ్ము.
+hi: मैं, गिरित्र, देवता तथा दक्ष आदि, हम सब अग्नि की लपटों के समान हैं और आपसे ही निकले हैं। हम अलग अलग प्रकाशित होते हुए भी, हे ईश, क्या जानते हैं? हमारा कल्याण कीजिये और द्विजों तथा देवताओं के हित का अपना उपदेश हमें दीजिये।
 
 --- verse 16 ---
 deva:
@@ -186,6 +231,9 @@ evaṁ viriñcādibhirīḍitastad
 vijñāya teṣāṁ hṛdayaṁ tathaiva|
 jagāda jīmūtagabhīrayā girā
 baddhāñjalīnsaṁvṛtasarvakārakān||
+en: Śrī Śuka said: Praised in this way by Viriñca and the others, and knowing their heart just as it was, the Lord spoke to them in a voice deep as a cloud. They stood with folded hands and with all their senses held in.
+tel: శ్రీశుకుడు పలికెను: విరించుడు మొదలైనవారు ఈ విధముగా స్తుతించగా, వారి హృదయమును ఉన్నది ఉన్నట్లుగా ఎరిగి, భగవంతుడు మేఘము వలె గంభీరమైన స్వరముతో వారితో పలికెను. వారు చేతులు జోడించి, ఇంద్రియములన్నియు నిగ్రహించి నిలిచి ఉండిరి.
+hi: श्रीशुकदेवजी ने कहा: विरिंच आदि ने इस प्रकार स्तुति की, तब उनके हृदय को जैसा था वैसा ही जानकर भगवान् ने मेघ के समान गंभीर वाणी से उनसे कहा। वे हाथ जोड़े हुए और सब इंद्रियों को संयत किये हुए खड़े थे।
 
 --- verse 17 ---
 deva:
@@ -194,6 +242,9 @@ deva:
 iast:
 eka eveśvarastasminsurakārye sureśvaraḥ|
 vihartukāmastānāha samudronmathanādibhiḥ||
+en: Though he alone, the ruler and the lord of the gods, was able to accomplish that work of the gods, he wished to sport through the churning of the ocean and the rest. So he spoke to them.
+tel: ఆ దేవకార్యమును ఒక్కడే నెరవేర్చగల సమర్థుడైనను, దేవేశ్వరుడైన ఆ ప్రభువు సముద్రమథనము మొదలైనవాటిచే విహరింప గోరెను. కావున ఆయన వారితో పలికెను.
+hi: वे एक ही ईश्वर उस देवकार्य को अकेले पूरा करने में समर्थ थे, फिर भी देवेश्वर समुद्रमंथन आदि के द्वारा विहार करना चाहते थे। इसलिये उन्होंने उनसे कहा।
 
 --- verse 18 ---
 deva:
@@ -204,6 +255,9 @@ iast:
 śrībhagavānuvāca
 hanta brahmannaho śambho he devā mama bhāṣitam|
 śṛṇutāvahitāḥ sarve śreyo vaḥ syād yathā surāḥ||
+en: The blessed Lord said: O Brahmā, O Śambhu, O gods, hear my word, all of you, with attention. O gods, your good will come about through it.
+tel: శ్రీభగవంతుడు పలికెను: బ్రహ్మా, శంభూ, దేవతలారా, మీరందరు శ్రద్ధతో నా మాటను వినుడు. దేవతలారా, దానిచే మీకు శ్రేయస్సు కలుగును.
+hi: श्रीभगवान् ने कहा: हे ब्रह्मा, हे शंभु, हे देवताओं, तुम सब ध्यान देकर मेरी बात सुनो। हे देवताओं, उससे तुम्हारा कल्याण होगा।
 
 --- verse 19 ---
 deva:
@@ -212,6 +266,9 @@ deva:
 iast:
 yāta dānavadaiteyaistāvat sandhirvidhīyatām|
 kālenānugṛhītaistairyāvad vo bhava ātmanaḥ||
+en: Go now and make a treaty with the Dānavas and the sons of Diti. Time favours them at present. Keep that treaty for as long as your own rise requires it.
+tel: మీరు వెళ్ళి దానవులతోను దైతేయులతోను సంధి చేసికొనుడు. ఇప్పుడు కాలము వారికి అనుకూలముగా ఉన్నది. మీ అభ్యుదయమునకు ఎంత కాలము అవసరమో అంత కాలము ఆ సంధిని నిలుపుకొనుడు.
+hi: तुम जाओ और दानवों तथा दिति के पुत्रों से संधि कर लो। इस समय काल उनके अनुकूल है। जब तक तुम्हारे अपने अभ्युदय के लिये उसकी आवश्यकता हो, तब तक उस संधि को बनाये रखो।
 
 --- verse 20 ---
 deva:
@@ -220,6 +277,9 @@ deva:
 iast:
 arayo'pi hi sandheyāḥ sati kāryārthagaurave|
 ahimūṣakavad devā hyarthasya padavīṁ gataiḥ||
+en: O gods, when the purpose to be gained is a weighty one, those who have set out upon the road of that purpose must make a treaty even with their enemies, as the snake and the mouse once did.
+tel: దేవతలారా, సాధించవలసిన కార్యము గొప్పదైనప్పుడు, ఆ కార్యమార్గమును పట్టినవారు శత్రువులతో కూడ సంధి చేసికొనవలెను, పాము మరియు ఎలుక ఒకప్పుడు చేసికొన్నట్లు.
+hi: हे देवताओं, जब सिद्ध करने योग्य कार्य बड़ा हो, तब उस कार्य के मार्ग पर चले हुए लोगों को शत्रुओं से भी संधि कर लेनी चाहिये, जैसे सर्प और चूहे ने एक बार कर ली थी।
 
 --- verse 21 ---
 deva:
@@ -228,6 +288,9 @@ deva:
 iast:
 amṛtotpādane yatnaḥ kriyatāmavilambitam|
 yasya pītasya vai janturmṛtyugrasto'maro bhavet||
+en: Make the effort to produce the nectar without delay. When a creature held in the grip of death drinks it, that creature becomes immortal.
+tel: ఆలస్యము లేకుండ అమృతమును పుట్టించుటకు ప్రయత్నము చేయుడు. మృత్యువు పట్టులో ఉన్న ప్రాణి దానిని త్రాగినచో అమరుడగును.
+hi: बिना देर किये अमृत उत्पन्न करने का प्रयत्न करो। मृत्यु की पकड़ में आया हुआ प्राणी उसे पी ले तो वह अमर हो जाता है।
 
 --- verse 22 ---
 deva:
@@ -236,6 +299,9 @@ deva:
 iast:
 kṣiptvā kṣīrodadhau sarvā vīruttṛṇalatauṣadhīḥ|
 manthānaṁ mandaraṁ kṛtvā netraṁ kṛtvā tu vāsukim||
+en: Throw into the ocean of milk all the creepers, the grasses, the vines and the herbs. Make Mandara the churning rod, and make Vāsuki the churning rope.
+tel: పాలసముద్రములో తీగలను, గడ్డిని, లతలను, ఓషధులను అన్నిటిని వేయుడు. మందరమును కవ్వముగా చేయుడు, వాసుకిని త్రాడుగా చేయుడు.
+hi: क्षीरसागर में सब वीरुधों, घासों, लताओं और ओषधियों को डाल दो। मंदराचल को मथानी बनाओ और वासुकि को रस्सी बनाओ।
 
 --- verse 23 ---
 deva:
@@ -244,6 +310,9 @@ deva:
 iast:
 sahāyena mayā devā nirmanthadhvamatandritāḥ|
 kleśabhājo bhaviṣyanti daityā yūyaṁ phalagrahāḥ||
+en: O gods, with me as your helper, churn it without slackness. The daityas will bear the labour, and you will receive the fruit.
+tel: దేవతలారా, నేను సహాయుడనై ఉండగా, బద్ధకము లేకుండ మథింపుడు. దైత్యులు శ్రమను భరించెదరు, మీరు ఫలమును పొందెదరు.
+hi: हे देवताओं, मुझे सहायक पाकर आलस छोड़कर मंथन करो। क्लेश दैत्य उठायेंगे और फल तुम पाओगे।
 
 --- verse 24 ---
 deva:
@@ -252,6 +321,9 @@ deva:
 iast:
 yūyaṁ tadanumodadhvaṁ yadicchantyasurāḥ surāḥ|
 na saṁrambheṇa sidhyanti sarve'rthāḥ sāntvayā yathā||
+en: O gods, agree to whatever the asuras wish. Aims are not gained through anger as they are gained through gentle dealing.
+tel: దేవతలారా, అసురులు ఏది కోరినను దానికి మీరు అంగీకరింపుడు. సామముచే సిద్ధించునట్లు కార్యములు కోపముచే సిద్ధించవు.
+hi: हे देवताओं, असुर जो चाहें उसे तुम मान लो। जैसे सामनीति से कार्य सिद्ध होते हैं, वैसे क्रोध से सिद्ध नहीं होते।
 
 --- verse 25 ---
 deva:
@@ -260,6 +332,9 @@ deva:
 iast:
 na bhetavyaṁ kālakūṭād viṣājjaladhisambhavāt|
 lobhaḥ kāryo na vo jātu roṣaḥ kāmastu vastuṣu||
+en: Do not be afraid of the kālakūṭa poison that will rise from the ocean. In the things that come out of it, never let greed, or anger, or desire arise in you.
+tel: సముద్రమునుండి పుట్టు కాలకూట విషమునకు భయపడవలదు. దానినుండి వచ్చు వస్తువులయందు లోభము, రోషము, కామము మీకు ఎన్నడును కలుగకుండ చూచుకొనుడు.
+hi: समुद्र से उठनेवाले कालकूट विष से डरना नहीं। उससे निकलनेवाली वस्तुओं में लोभ, रोष और काम तुम्हें कभी न हो।
 
 --- verse 26 ---
 deva:
@@ -270,6 +345,9 @@ iast:
 śrīśuka uvāca
 iti devānsamādiśya bhagavānpuruṣottamaḥ|
 teṣāmantardadhe rājansvacchandagatirīśvaraḥ||
+en: Śrī Śuka said: O King, having instructed the gods in this way, the blessed Lord, the highest Person, the ruler who moves as he wills, disappeared from their sight.
+tel: శ్రీశుకుడు పలికెను: రాజా, ఈ విధముగా దేవతలకు ఆదేశము ఇచ్చి, పురుషోత్తముడైన భగవంతుడు, స్వేచ్ఛగా సంచరించు ఈశ్వరుడు, వారి కన్నులకు కనబడకుండ అంతర్ధానమయ్యెను.
+hi: श्रीशुकदेवजी ने कहा: हे राजन्, इस प्रकार देवताओं को आदेश देकर पुरुषोत्तम भगवान्, जो स्वच्छंद गतिवाले ईश्वर हैं, उनके सामने से अंतर्धान हो गये।
 
 --- verse 27 ---
 deva:
@@ -278,6 +356,9 @@ deva:
 iast:
 atha tasmai bhagavate namaskṛtya pitāmahaḥ|
 bhavaśca jagmatuḥ svaṁ svaṁ dhāmopeyurbaliṁ surāḥ||
+en: Then the grandfather Brahmā and Bhava bowed to that blessed Lord and went each to his own abode. The gods went to Bali.
+tel: పిమ్మట పితామహుడైన బ్రహ్మయు భవుడును ఆ భగవంతునికి నమస్కరించి, తమ తమ ధామములకు వెళ్ళిరి. దేవతలు బలి వద్దకు వెళ్ళిరి.
+hi: इसके बाद पितामह ब्रह्मा और भव उस भगवान् को नमस्कार करके अपने अपने धाम को गये। देवता बलि के पास गये।
 
 --- verse 28 ---
 deva:
@@ -286,6 +367,9 @@ deva:
 iast:
 dṛṣṭvārīnapyasaṁyattān jātakṣobhānsvanāyakān|
 nyaṣedhad daityarāṭ ślokyaḥ sandhivigrahakālavit||
+en: The king of the daityas saw that the enemies had come unarmed, and that his own leaders had grown agitated. He was worthy of praise, and he knew the time for treaty and the time for war, so he held his leaders back.
+tel: శత్రువులు ఆయుధములు లేకుండ వచ్చిరని, తన నాయకులు కలవరపడిరని దైత్యరాజు చూచెను. ప్రశంసకు యోగ్యుడైన ఆతడు సంధికిని విగ్రహమునకును తగిన కాలమును ఎరిగినవాడు, కావున తన నాయకులను వారించెను.
+hi: दैत्यराज ने देखा कि शत्रु बिना शस्त्र आये हैं और उसके अपने नायक क्षुब्ध हो उठे हैं। वह प्रशंसा के योग्य था और संधि तथा विग्रह का समय जानता था, इसलिये उसने अपने नायकों को रोक दिया।
 
 --- verse 29 ---
 deva:
@@ -294,6 +378,9 @@ deva:
 iast:
 te vairocanimāsīnaṁ guptaṁ cāsurayūthapaiḥ|
 śriyā paramayā juṣṭaṁ jitāśeṣamupāgaman||
+en: They came to Vairocani, who was seated there, guarded by the chiefs of the asuras, endowed with the highest splendour, and who had conquered all.
+tel: అసుర యూథపతులచే రక్షింపబడి, పరమమైన శ్రీతో కూడి, సమస్తమును జయించిన వైరోచని అచ్చట కూర్చుండి ఉండగా, వారు ఆయన వద్దకు వచ్చిరి.
+hi: असुरों के यूथपतियों से रक्षित, परम श्री से युक्त और सबको जीत चुके वैरोचनि वहाँ बैठे थे, और वे उनके पास आये।
 
 --- verse 30 ---
 deva:
@@ -302,6 +389,9 @@ deva:
 iast:
 mahendraḥ ślakṣṇayā vācā sāntvayitvā mahāmatiḥ|
 abhyabhāṣata tat sarvaṁ śikṣitaṁ puruṣottamāt||
+en: Mahendra was of great understanding. He soothed Bali with gentle words, and then told him everything that he had been taught by the highest Person.
+tel: మహేంద్రుడు గొప్ప బుద్ధి కలవాడు. మృదువైన మాటలతో బలిని శాంతపరచి, పురుషోత్తమునినుండి తాను నేర్చుకొన్నది అంతయు ఆతనికి చెప్పెను.
+hi: महेंद्र बड़ी बुद्धिवाले थे। उन्होंने कोमल वाणी से बलि को शांत किया और फिर पुरुषोत्तम से जो सिखाया गया था वह सब उसे कह सुनाया।
 
 --- verse 31 ---
 deva:
@@ -310,6 +400,9 @@ deva:
 iast:
 tadarocata daityasya tatrānye ye'surādhipāḥ|
 śambaro'riṣṭanemiśca ye ca tripuravāsinaḥ||
+en: That pleased the daitya, and it pleased the other lords of the asuras who were there, Śambara, Ariṣṭanemi, and those who dwelt in Tripura.
+tel: అది ఆ దైత్యునికి ఇష్టమయ్యెను, అచ్చట ఉన్న ఇతర అసురాధిపతులకును, శంబరునికి, అరిష్టనేమికి, త్రిపురవాసులకును ఇష్టమయ్యెను.
+hi: यह बात उस दैत्य को अच्छी लगी, और वहाँ उपस्थित दूसरे असुराधिपों को, शंबर को, अरिष्टनेमि को तथा त्रिपुर में रहनेवालों को भी अच्छी लगी।
 
 --- verse 32 ---
 deva:
@@ -318,6 +411,9 @@ deva:
 iast:
 tato devāsurāḥ kṛtvā saṁvidaṁ kṛtasauhṛdāḥ|
 udyamaṁ paramaṁ cakruramṛtārthe parantapa||
+en: Then, O subduer of enemies, the gods and the asuras made their agreement and became friends. They made a great effort for the sake of the nectar.
+tel: పరంతపా, పిమ్మట దేవతలును అసురులును ఒడంబడిక చేసుకొని స్నేహము కలవారైరి. అమృతము కోసము వారు గొప్ప ప్రయత్నము చేసిరి.
+hi: हे परंतप, इसके बाद देवताओं और असुरों ने आपस में समझौता कर लिया और मित्र बन गये। अमृत के लिये उन्होंने बड़ा उद्यम किया।
 
 --- verse 33 ---
 deva:
@@ -326,6 +422,9 @@ deva:
 iast:
 tataste mandaragirimojasotpāṭya durmadāḥ|
 nadanta udadhiṁ ninyuḥ śaktāḥ parighabāhavaḥ||
+en: Then those proud ones, who were strong and whose arms were like iron clubs, tore up Mount Mandara by their force and carried it towards the ocean, roaring as they went.
+tel: పిమ్మట బలిష్ఠులును, పరిఘల వంటి చేతులు కలవారును, మదము కలవారును అయిన వారు మందర పర్వతమును తమ బలముచే పెకలించి, గర్జించుచు సముద్రము వైపు మోసుకొని పోయిరి.
+hi: इसके बाद वे मदवाले, बलवान् और परिघ के समान भुजाओंवाले लोग मंदराचल को अपने बल से उखाड़कर गर्जते हुए समुद्र की ओर ले चले।
 
 --- verse 34 ---
 deva:
@@ -334,6 +433,9 @@ deva:
 iast:
 dūrabhārodvahaśrāntāḥ śakravairocanādayaḥ|
 apārayantastaṁ voḍhuṁ vivaśā vijahuḥ pathi||
+en: Śakra, Vairocani and the others grew tired from bearing so great a weight so far. They could not carry it further, and being helpless they let it fall on the way.
+tel: అంత దూరము అంత గొప్ప భారమును మోసి శక్రుడు, వైరోచని మొదలైనవారు అలసిపోయిరి. దానిని ఇంక మోయలేక, నిస్సహాయులై, మార్గములో దానిని విడిచిపెట్టిరి.
+hi: इतनी दूर इतना बड़ा भार उठाने से शक्र, वैरोचनि आदि थक गये। वे उसे आगे नहीं ले जा सके और विवश होकर मार्ग में ही उसे छोड़ दिया।
 
 --- verse 35 ---
 deva:
@@ -342,6 +444,9 @@ deva:
 iast:
 nipatansa giristatra bahūnamaradānavān|
 cūrṇayāmāsa mahatā bhāreṇa kanakācalaḥ||
+en: That golden mountain fell there, and by its great weight it crushed many of the immortals and the Dānavas.
+tel: ఆ కనకాచలము అచ్చట పడి, తన గొప్ప భారముచే అమరులను దానవులను పలువురిని నలిపివేసెను.
+hi: वह सोने का पर्वत वहीं गिर पड़ा और अपने बड़े भार से उसने बहुत से अमरों और दानवों को चूर कर दिया।
 
 --- verse 36 ---
 deva:
@@ -350,6 +455,9 @@ deva:
 iast:
 tāṁstathā bhagnamanaso bhagnabāhūrukandharān|
 vijñāya bhagavāṁstatra babhūva garuḍadhvajaḥ||
+en: The blessed Lord knew that their spirits were broken in this way, and that their arms, thighs and necks were broken. He appeared there, with Garuḍa as his banner.
+tel: వారి మనస్సులు ఈ విధముగా విరిగిపోయెనని, వారి బాహువులు, తొడలు, మెడలు విరిగెనని భగవంతుడు ఎరిగెను. గరుడధ్వజుడైన ఆయన అచ్చట ప్రకటమయ్యెను.
+hi: भगवान् ने जान लिया कि उनके मन इस प्रकार टूट गये हैं और उनकी भुजाएँ, जाँघें तथा गरदनें टूट गई हैं। गरुड़ध्वज भगवान् वहाँ प्रकट हुए।
 
 --- verse 37 ---
 deva:
@@ -358,6 +466,9 @@ deva:
 iast:
 giripātaviniṣpiṣṭānvilokyāmaradānavān|
 īkṣayā jīvayāmāsa nirjarān nirvraṇānyathā||
+en: He saw the immortals and the Dānavas crushed by the fall of the mountain. By his glance he brought them back to life, and they rose free of weariness and without a wound.
+tel: పర్వతము పడుటచే నలిగిన అమరులను దానవులను ఆయన చూచెను. తన చూపుచే వారిని బ్రతికించెను, వారు అలసట లేకుండ, గాయములు లేకుండ లేచిరి.
+hi: पर्वत के गिरने से पिसे हुए अमरों और दानवों को उन्होंने देखा। अपनी दृष्टि से उन्हें जिला दिया, और वे थकान से रहित तथा बिना घाव के उठ खड़े हुए।
 
 --- verse 38 ---
 deva:
@@ -366,6 +477,9 @@ deva:
 iast:
 giriṁ cāropya garuḍe hastenaikena līlayā|
 āruhya prayayāvabdhiṁ surāsuragaṇairvṛtaḥ||
+en: With one hand, and in play, he placed the mountain upon Garuḍa. Then he mounted Garuḍa and went to the ocean, surrounded by the hosts of the gods and the asuras.
+tel: ఒక చేతితో, లీలగా, ఆయన ఆ పర్వతమును గరుడునిపై ఎక్కించెను. పిమ్మట తాను గరుడునిపై ఎక్కి, సుర అసుర గణములచే చుట్టబడి, సముద్రమునకు వెళ్ళెను.
+hi: एक ही हाथ से, लीला से, उन्होंने उस पर्वत को गरुड़ पर रख दिया। फिर स्वयं गरुड़ पर चढ़कर, सुर और असुर गणों से घिरे हुए, वे समुद्र की ओर गये।
 
 --- verse 39 ---
 deva:
@@ -374,9 +488,15 @@ deva:
 iast:
 avaropya giriṁ skandhāt suparṇaḥ patatāṁ varaḥ|
 yayau jalānta utsṛjya hariṇā sa visarjitaḥ||
+en: Suparṇa, the best of birds, took the mountain down from his shoulder and set it at the edge of the water. Then, dismissed by Hari, he went away.
+tel: పక్షులలో శ్రేష్ఠుడైన సుపర్ణుడు ఆ పర్వతమును తన భుజమునుండి దించి, నీటి అంచున ఉంచెను. పిమ్మట హరిచే అనుమతి పొంది ఆతడు వెళ్ళిపోయెను.
+hi: पक्षियों में श्रेष्ठ सुपर्ण ने उस पर्वत को अपने कंधे से उतारकर जल के किनारे रख दिया। फिर हरि से विदा पाकर वे चले गये।
 
 --- verse none ---
 deva:
 इति श्रीमद्भागवते महापुराणे पारमहंस्यां संहितायामष्टमस्कन्धेऽमृतमथने मन्दराचलानयनं नाम षष्ठोऽध्यायः॥ ६॥
 iast:
 iti śrīmadbhāgavate mahāpurāṇe pāramahaṁsyāṁ saṁhitāyāmaṣṭamaskandhe'mṛtamathane mandarācalānayanaṁ nāma ṣaṣṭho'dhyāyaḥ|| 6||
+en: Thus ends the sixth chapter, named the bringing of Mount Mandara, in the churning for the nectar, in the eighth book of the great Purāṇa Śrīmad Bhāgavata, the Pāramahaṁsya Saṁhitā.
+tel: ఇది పారమహంస్యసంహిత అయిన శ్రీమద్భాగవత మహాపురాణమునందు, అష్టమస్కంధమునందు, అమృతమథనమునందు మందరాచలానయనము అను ఆరవ అధ్యాయము సమాప్తము.
+hi: इस प्रकार पारमहंस्य संहिता श्रीमद्भागवत महापुराण के अष्टम स्कन्ध में अमृतमथन के प्रसंग में मन्दराचलानयन नामक छठा अध्याय समाप्त हुआ।

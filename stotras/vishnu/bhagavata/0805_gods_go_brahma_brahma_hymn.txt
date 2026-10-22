@@ -9,7 +9,7 @@ Type: Purāṇa (an adhyāya of the Śrīmad Bhāgavata, Skandha 8)
 
 Source / recension: Base text and authority: the Gītā Press, Gorakhpur Śrīmadbhāgavata Mahāpurāṇa with Hindi translation, Part 1 (Gītā Press code 26), archive.org item `shrimadbhagwat-mahapuran-bhag-1`, printed pages 922–929; the PDF page numbers are the printed ones. The PDF carries the typesetter's own text layer in the Chanakya font encoding, and the text was decoded from it by machine with `bin/bhagavata/chanakya.py`, not read off OCR or typed. The decoder was checked against GRETIL over all twelve skandhas before any file was written, and the differences that remain were sampled and found to be readings of the two editions. Second witness: GRETIL's `sa_bhAgavatapurANa.xml` (IAST, contributed by Ulrich Stiehl), a separate editorial lineage, compared verse by verse by machine. The TTD edition with the commentaries of Śrīdhara, Vīrarāghava and Vijayadhvaja (archive.org `Bhagavata_Purana_With_Multiple_Commentaries_TTD_Critical_Edition`) is the third witness where one is needed; it was not read for this file. The IAST was generated mechanically from the Devanāgarī with `bin/dev2iast.py`.
 
-Recension note: Text-only file, written 1 Oct 2026 at the user's instruction to lay down the whole Bhāgavata first: the English, Telugu and Hindi meanings are still to be added, and the witnesses' differences listed here have been recorded by machine and not yet adjudicated. The print is followed throughout. The print numbers 50 verses and GRETIL numbers 50. Of the 50 verses GRETIL has under the same number, 27 agree with the print letter for letter once spacing and the spelling of nasals are set aside; the rest differ: 1, 2, 9, 15, 16, 17, 22, 23, 25, 27, 28, 30, 33, 34, 35, 36, 38, 39, 40, 41, 45, 46, 48. The edition's footnotes give these older printed readings (प्रा० पा०), which are not bracketed into the line: at 1, राजंश्चरितमेतत्ते; at 27, नमामहे; at 29, यदेकवर्णं मनसः परं; at 34, मन्नमायुः; at 34, ब्रह्म महा०; at 35, ब्रह्म महा०; at 39, र्गिरित्रो; at 41, मुखाद्; at 41, करयो०; at 41, ऊर्वोर्विशोऽङ्घ्रेरभवच्च शूद्रः; at 48, मुखाद्. Spacing is the print's, as its text layer gives it; in a few places justification has left a space inside a word, and these are still to be closed when the verse is read. The speaker lines (श्रीशुक उवाच and the others) are printed in italic above the verse they introduce, and are given as its first line.
+Recension note: Meanings written 23 Oct 2026 (session S78). The differences between the witnesses listed below were read as the verses were glossed; except where this note says otherwise, each is a spelling, a sandhi or a word order of the two editions, none of them changes the sense, and the print's reading therefore stands unbracketed. The print is followed throughout. The print numbers 50 verses and GRETIL numbers 50. Of the 50 verses GRETIL has under the same number, 27 agree with the print letter for letter once spacing and the spelling of nasals are set aside; the rest differ: 1, 2, 9, 15, 16, 17, 22, 23, 25, 27, 28, 30, 33, 34, 35, 36, 38, 39, 40, 41, 45, 46, 48. The edition's footnotes give these older printed readings (प्रा० पा०), which are not bracketed into the line: at 1, राजंश्चरितमेतत्ते; at 27, नमामहे; at 29, यदेकवर्णं मनसः परं; at 34, मन्नमायुः; at 34, ब्रह्म महा०; at 35, ब्रह्म महा०; at 39, र्गिरित्रो; at 41, मुखाद्; at 41, करयो०; at 41, ऊर्वोर्विशोऽङ्घ्रेरभवच्च शूद्रः; at 48, मुखाद्. Spacing is the print's, as its text layer gives it. The speaker lines (श्रीशुक उवाच and the others) are printed in italic above the verse they introduce, and are given as its first line. A footnote's numeral keys it to one word, and which word that is cannot be told from the note alone, so those readings stay unbracketed until the page itself is read. One word was put right as the verses were read. At verse 41 justification had left a space inside the word aṅghri: the print gives ऊर्वोर्विडोजोऽङ् घ्रिरवेदशूद्रौ, and the space is closed here to read ऊर्वोर्विडोजोऽङ्घ्रिरवेदशूद्रौ. GRETIL reads the word whole. That pāda is elliptical, and the meaning follows the only reading the words allow: the vaiśya and vigour come from the thighs, and the śūdra, who is without the Veda, from the foot. The footnote's older reading for this pāda carries the same sense and is left unbracketed. In the colophon the layer has flattened a hyphen and a line break into the middle of one word, printed संहितायामष्टमस्कन्धे- ऽमृतमथने; it is left exactly as printed and waits on a corpus-wide ruling. In eight places the print leaves a space after a virāma consonant. Each was checked against GRETIL and kept, because that spacing is the print's own and is not a broken word.
 
 Verse count: 50, plus the closing colophon printed unnumbered.
 
@@ -24,6 +24,9 @@ iast:
 śrīśuka uvāca
 rājannuditametat te hareḥ karmāghanāśanam|
 gajendramokṣaṇaṁ puṇyaṁ raivataṁ tvantaraṁ śṛṇu||
+en: Śrī Śuka said: O King, this sin-destroying deed of Hari, the holy release of Gajendra, has been told to you. Now hear of the Raivata manvantara.
+tel: శ్రీశుకుడు పలికెను: ఓ రాజా, పాపములను నశింపజేయు హరి యొక్క ఈ కార్యము, పుణ్యకరమైన గజేంద్రమోక్షణము, నీకు చెప్పబడినది. ఇప్పుడు రైవత మన్వంతరమును గురించి వినుము.
+hi: श्रीशुकदेवजी ने कहा: हे राजन्, पापों का नाश करनेवाला श्रीहरि का यह कर्म, पवित्र गजेन्द्रमोक्षण, तुमसे कहा गया। अब रैवत मन्वन्तर को सुनो।
 
 --- verse 2 ---
 deva:
@@ -32,6 +35,9 @@ deva:
 iast:
 pañcamo raivato nāma manustāmasasodaraḥ|
 balivindhyādayastasya sutā arjunapūrvakāḥ||
+en: The fifth Manu was named Raivata, and he was the brother of Tāmasa. His sons, with Arjuna at their head, were Bali, Vindhya and others.
+tel: ఐదవ మనువు పేరు రైవతుడు; అతడు తామసునికి సోదరుడు. అర్జునుడు మొదలుగా గల బలి, వింధ్యుడు మొదలైనవారు అతని కుమారులు.
+hi: पाँचवें मनु का नाम रैवत था; वे तामस के भाई थे। अर्जुन को आगे करके बलि, विन्ध्य आदि उनके पुत्र थे।
 
 --- verse 3 ---
 deva:
@@ -40,6 +46,9 @@ deva:
 iast:
 vibhurindraḥ suragaṇā rājanbhūtarayādayaḥ|
 hiraṇyaromā vedaśirā ūrdhvabāhvādayo dvijāḥ||
+en: O King, Vibhu was the Indra of that manvantara. The hosts of gods were the Bhūtas, the Rayas and others. Hiraṇyaromā, Vedaśirā, Ūrdhvabāhu and others were the brāhmaṇa sages.
+tel: ఓ రాజా, ఆ మన్వంతరమునందు విభుడు ఇంద్రుడు. భూతులు, రయులు మొదలైనవారు దేవగణములు. హిరణ్యరోముడు, వేదశిరుడు, ఊర్ధ్వబాహుడు మొదలైనవారు బ్రాహ్మణఋషులు.
+hi: हे राजन्, उस मन्वन्तर में विभु इन्द्र थे। भूत, रय आदि देवगण थे। हिरण्यरोमा, वेदशिरा, ऊर्ध्वबाहु आदि ब्राह्मण ऋषि थे।
 
 --- verse 4 ---
 deva:
@@ -48,6 +57,9 @@ deva:
 iast:
 patnī vikuṇṭhā śubhrasya vaikuṇṭhaiḥ surasattamaiḥ|
 tayoḥ svakalayā jajñe vaikuṇṭho bhagavānsvayam||
+en: Vikuṇṭhā was the wife of Śubhra. Of those two the blessed Lord himself was born by his own part as Vaikuṇṭha, together with the Vaikuṇṭhas, who are the best of the gods.
+tel: శుభ్రుని భార్య వికుంఠ. ఆ ఇద్దరికి భగవంతుడే తన కళచే వైకుంఠుడుగా జన్మించెను; దేవశ్రేష్ఠులైన వైకుంఠులతో కూడ అతడు జన్మించెను.
+hi: शुभ्र की पत्नी विकुण्ठा थीं। उन दोनों से भगवान् स्वयं अपनी कला से वैकुण्ठ नाम से उत्पन्न हुए, और देवश्रेष्ठ वैकुण्ठों के सहित उत्पन्न हुए।
 
 --- verse 5 ---
 deva:
@@ -56,6 +68,9 @@ deva:
 iast:
 vaikuṇṭhaḥ kalpito yena loko lokanamaskṛtaḥ|
 ramayā prārthyamānena devyā tatpriyakāmyayā||
+en: The goddess Ramā asked him, and out of the wish to please her he made the world Vaikuṇṭha, to which all the worlds bow.
+tel: రమాదేవి అతనిని ప్రార్థించెను. ఆమెకు ప్రియమును చేయగోరి అతడు లోకములన్నియు నమస్కరించు వైకుంఠలోకమును నిర్మించెను.
+hi: रमा देवी ने उनसे प्रार्थना की। उनको प्रिय करने की इच्छा से उन्होंने वैकुण्ठ लोक की रचना की, जिसे सब लोक नमस्कार करते हैं।
 
 --- verse 6 ---
 deva:
@@ -64,6 +79,9 @@ deva:
 iast:
 tasyānubhāvaḥ kathito guṇāśca paramodayāḥ|
 bhaumān reṇūnsa vimame yo viṣṇorvarṇayed guṇān||
+en: His greatness has been told, and his qualities, which are of the highest order. Only one who can count the particles of dust upon the earth can tell the qualities of Viṣṇu.
+tel: అతని అనుభావము చెప్పబడినది, పరమోన్నతమైన అతని గుణములును చెప్పబడినవి. భూమిపైని ధూళి రేణువులను లెక్కింపగలవాడే విష్ణువు యొక్క గుణములను వర్ణింపగలడు.
+hi: उनका अनुभाव कहा गया, और उनके परम उत्कृष्ट गुण भी कहे गये। जो पृथ्वी के धूलिकणों को गिन सके, वही विष्णु के गुणों का वर्णन कर सकता है।
 
 --- verse 7 ---
 deva:
@@ -72,6 +90,9 @@ deva:
 iast:
 ṣaṣṭhaśca cakṣuṣaḥ putraścākṣuṣo nāma vai manuḥ|
 pūrupūruṣasudyumnapramukhāścākṣuṣātmajāḥ||
+en: The sixth Manu was the son of Cakṣus and was named Cākṣuṣa. Pūru, Pūruṣa, Sudyumna and others were the chief sons of Cākṣuṣa.
+tel: ఆరవ మనువు చక్షువు కుమారుడు; అతని పేరు చాక్షుషుడు. పూరువు, పూరుషుడు, సుద్యుమ్నుడు మొదలైనవారు చాక్షుషుని ముఖ్య కుమారులు.
+hi: छठे मनु चक्षु के पुत्र थे और उनका नाम चाक्षुष था। पूरु, पूरुष, सुद्युम्न आदि चाक्षुष के प्रमुख पुत्र थे।
 
 --- verse 8 ---
 deva:
@@ -80,6 +101,9 @@ deva:
 iast:
 indro mantradrumastatra devā āpyādayo gaṇāḥ|
 munayastatra vai rājanhaviṣmadvīrakādayaḥ||
+en: In that manvantara Mantradruma was the Indra, and the hosts of gods were the Āpyas and others. The sages there, O King, were Haviṣmat, Vīraka and others.
+tel: ఆ మన్వంతరమునందు మంత్రద్రుముడు ఇంద్రుడు; ఆప్యులు మొదలైనవారు దేవగణములు. ఓ రాజా, హవిష్మంతుడు, వీరకుడు మొదలైనవారు అచ్చట మునులు.
+hi: उस मन्वन्तर में मन्त्रद्रुम इन्द्र थे और आप्य आदि देवगण थे। हे राजन्, हविष्मान्, वीरक आदि वहाँ मुनि थे।
 
 --- verse 9 ---
 deva:
@@ -88,6 +112,9 @@ deva:
 iast:
 tatrāpi devaḥ sambhūtyāṁ vairājasyābhavat sutaḥ|
 ajito nāma bhagavānaṁśena jagataḥ patiḥ||
+en: In that manvantara also the Lord, the master of the world, was born by a part of himself as the son of Vairāja by Sambhūti, and he was named Ajita.
+tel: ఆ మన్వంతరమునందును జగత్పతియైన భగవంతుడు తన అంశచే సంభూతి యందు వైరాజునకు కుమారుడై జన్మించెను; అతని పేరు అజితుడు.
+hi: उस मन्वन्तर में भी जगत् के पति भगवान् अपने अंश से सम्भूति के गर्भ से वैराज के पुत्र होकर उत्पन्न हुए, और उनका नाम अजित था।
 
 --- verse 10 ---
 deva:
@@ -96,6 +123,9 @@ deva:
 iast:
 payodhiṁ yena nirmathya surāṇāṁ sādhitā sudhā|
 bhramamāṇo'mbhasi dhṛtaḥ kūrmarūpeṇa mandaraḥ||
+en: By him the ocean was churned and the nectar was won for the gods. In the form of a tortoise he held up Mandara, which was turning about in the water.
+tel: అతడు సముద్రమును మథించి దేవతలకు అమృతమును సాధించెను. కూర్మరూపముతో నీటిలో తిరుగుచున్న మందరపర్వతమును అతడు ధరించెను.
+hi: उन्होंने समुद्र को मथकर देवताओं के लिये अमृत सिद्ध किया। कूर्म रूप से उन्होंने जल में घूमते हुए मन्दर पर्वत को धारण किया।
 
 --- verse 11 ---
 deva:
@@ -106,6 +136,9 @@ iast:
 rājovāca
 yathā bhagavatā brahmanmathitaḥ kṣīrasāgaraḥ|
 yadarthaṁ vā yataścādriṁ dadhārāmbucarātmanā||
+en: The king said: Brāhmaṇa, how was the ocean of milk churned by the Lord? For what purpose, and for what reason, did he hold up the mountain in the body of a creature that lives in water?
+tel: రాజు పలికెను: బ్రాహ్మణుడా, భగవంతుడు క్షీరసాగరమును ఎట్లు మథించెను? ఏ ప్రయోజనము కొరకు, ఏ కారణమున అతడు జలచర రూపముతో ఆ పర్వతమును ధరించెను?
+hi: राजा ने कहा: हे ब्रह्मन्, भगवान् ने क्षीरसागर को कैसे मथा? किस प्रयोजन से और किस कारण से उन्होंने जलचर के रूप में उस पर्वत को धारण किया?
 
 --- verse 12 ---
 deva:
@@ -114,6 +147,9 @@ deva:
 iast:
 yathāmṛtaṁ suraiḥ prāptaṁ kiñcānyadabhavat tataḥ|
 etad bhagavataḥ karma vadasva paramādbhutam||
+en: How was the nectar obtained by the gods, and what else came about from that? Tell me this most wonderful deed of the Lord.
+tel: దేవతలు అమృతమును ఎట్లు పొందిరి? అందువలన మరి ఏమి జరిగెను? భగవంతుని ఈ పరమాద్భుతమైన కార్యమును చెప్పుము.
+hi: देवताओं ने अमृत कैसे प्राप्त किया? और उससे और क्या हुआ? भगवान् का यह परम अद्भुत कर्म मुझसे कहिये।
 
 --- verse 13 ---
 deva:
@@ -122,6 +158,9 @@ deva:
 iast:
 tvayā saṅkathyamānena mahimnā sātvatāṁ pateḥ|
 nātitṛpyati me cittaṁ suciraṁ tāpatāpitam||
+en: The greatness of the Lord of the Sātvatas is being told by you, yet my mind, long burned by sorrow, is not satisfied.
+tel: సాత్వతపతి యొక్క మహిమ నీచే చెప్పబడుచున్నది; అయినను చిరకాలము తాపముచే తపించిన నా చిత్తము తృప్తి పొందకున్నది.
+hi: आपके द्वारा सात्वतों के पति की महिमा कही जा रही है; फिर भी बहुत समय से ताप से तपा हुआ मेरा चित्त तृप्त नहीं होता।
 
 --- verse 14 ---
 deva:
@@ -132,6 +171,9 @@ iast:
 sūta uvāca
 sampṛṣṭo bhagavānevaṁ dvaipāyanasuto dvijāḥ|
 abhinandya harervīryamabhyācaṣṭuṁ pracakrame||
+en: Sūta said: O brāhmaṇas, the blessed son of Dvaipāyana, asked in this way, praised the valour of Hari and began to speak of it.
+tel: సూతుడు పలికెను: ఓ బ్రాహ్మణులారా, ఇట్లు అడుగబడిన ద్వైపాయనుని కుమారుడైన భగవంతుడు హరి యొక్క వీర్యమును అభినందించి దానిని చెప్పుటకు ఉపక్రమించెను.
+hi: सूतजी ने कहा: हे ब्राह्मणों, इस प्रकार पूछे जाने पर द्वैपायन के पुत्र भगवान् ने श्रीहरि के वीर्य की प्रशंसा करके उसे कहना आरम्भ किया।
 
 --- verse 15 ---
 deva:
@@ -142,6 +184,9 @@ iast:
 śrīśuka uvāca
 yadā yuddhe'surairdevā bādhyamānāḥ śitāyudhaiḥ|
 gatāsavo nipatitā nottiṣṭheransma bhūyaśaḥ||
+en: Śrī Śuka said: When in battle the gods were struck by the asuras with their sharp weapons, they fell lifeless and did not rise again.
+tel: శ్రీశుకుడు పలికెను: యుద్ధమునందు వాడియైన ఆయుధములు కలిగిన అసురులచే బాధింపబడిన దేవతలు ప్రాణములు కోల్పోయి పడిపోయి, మరల లేవకుండిరి.
+hi: श्रीशुकदेवजी ने कहा: युद्ध में तीखे शस्त्रोंवाले असुरों से पीड़ित होकर देवता प्राणहीन होकर गिर पड़े और फिर नहीं उठे।
 
 --- verse 16 ---
 deva:
@@ -150,6 +195,9 @@ deva:
 iast:
 yadā durvāsasaḥ śāpāt sendrā lokāstrayo nṛpa|
 niḥśrīkāścābhavaṁstatra neśurijyādayaḥ kriyāḥ||
+en: O King, when by the curse of Durvāsas the three worlds and their Indra were without prosperity, the rites of sacrifice and the rest came to an end there.
+tel: ఓ రాజా, దుర్వాసుని శాపమువలన ఇంద్రునితో కూడిన మూడు లోకములు శ్రీహీనములైనపుడు, అచ్చట యజ్ఞము మొదలైన క్రియలు నశించెను.
+hi: हे राजन्, दुर्वासा के शाप से इन्द्र सहित तीनों लोक श्रीहीन हो गये, और वहाँ यज्ञ आदि क्रियाएँ नष्ट हो गयीं।
 
 --- verse 17 ---
 deva:
@@ -158,6 +206,9 @@ deva:
 iast:
 niśāmyaitat suragaṇā mahendravaruṇādayaḥ|
 nādhyagacchansvayaṁ mantrairmantrayanto viniścayam||
+en: Seeing this, the hosts of gods, Mahendra, Varuṇa and the rest, took counsel together, but by themselves they could reach no decision.
+tel: దీనిని చూచి మహేంద్రుడు, వరుణుడు మొదలైన దేవగణములు తమలో తాము ఆలోచించిరి; కాని స్వయముగా ఏ నిశ్చయమును పొందలేకపోయిరి.
+hi: यह देखकर महेन्द्र, वरुण आदि देवगण आपस में विचार करने लगे; किन्तु स्वयं कोई निश्चय नहीं कर सके।
 
 --- verse 18 ---
 deva:
@@ -166,6 +217,9 @@ deva:
 iast:
 tato brahmasabhāṁ jagmurmerormūrdhani sarvaśaḥ|
 sarvaṁ vijñāpayāñcakruḥ praṇatāḥ parameṣṭhine||
+en: Then they all went to the assembly of Brahmā on the summit of Meru. They bowed down and made everything known to Parameṣṭhin.
+tel: అటుపిమ్మట వారందరు మేరువు శిఖరమునందున్న బ్రహ్మసభకు వెళ్లిరి. వారు ప్రణమిల్లి పరమేష్ఠికి అంతయు తెలియజేసిరి.
+hi: तब वे सब मेरु के शिखर पर ब्रह्मा की सभा में गये। उन्होंने प्रणाम करके परमेष्ठी को सब कुछ बता दिया।
 
 --- verse 19 ---
 deva:
@@ -174,6 +228,9 @@ deva:
 iast:
 sa vilokyendravāyvādīn niḥsattvānvigataprabhān|
 lokānamaṅgalaprāyānasurānayathā vibhuḥ||
+en: The mighty one saw Indra, Vāyu and the others without strength and without their lustre, the worlds filled with ill, and the asuras grown great beyond what was right.
+tel: ఆ విభుడు ఇంద్రుడు, వాయువు మొదలైనవారు సత్త్వహీనులై ప్రభ కోల్పోయి ఉండుటను, లోకములు అమంగలముతో నిండియుండుటను, అసురులు అనుచితముగా వృద్ధి పొందియుండుటను చూచెను.
+hi: उन विभु ने देखा कि इन्द्र, वायु आदि सत्त्वहीन और प्रभाहीन हो गये हैं, लोक अमंगल से भरे हैं, और असुर अनुचित रूप से बढ़ गये हैं।
 
 --- verse 20 ---
 deva:
@@ -182,6 +239,9 @@ deva:
 iast:
 samāhitena manasā saṁsmaranpuruṣaṁ param|
 uvācotphullavadano devānsa bhagavānparaḥ||
+en: With a collected mind he remembered the Supreme Person. Then, his face shining, that exalted lord spoke to the gods.
+tel: సమాహితమైన మనసుతో అతడు పరమపురుషుని స్మరించెను. అటుపిమ్మట వికసించిన ముఖముతో ఆ పరమభగవంతుడు దేవతలతో పలికెను.
+hi: समाहित मन से उन्होंने परम पुरुष का स्मरण किया। तब प्रसन्न मुख से उन परम भगवान् ने देवताओं से कहा।
 
 --- verse 21 ---
 deva:
@@ -194,6 +254,9 @@ ahaṁ bhavo yūyamatho'surādayo
 manuṣyatiryagdrumagharmajātayaḥ|
 yasyāvatārāṁśakalāvisarjitā
 vrajāma sarve śaraṇaṁ tamavyayam||
+en: I, Śiva, you, the asuras and the rest, and the races of men, animals, trees and the creatures born of sweat, have all been sent forth by his avatāras, his parts and the parts of his parts. Let us all go for shelter to him, the imperishable one.
+tel: నేను, శివుడు, మీరు, అసురులు మొదలైనవారు, మనుష్యులు, తిర్యక్కులు, వృక్షములు, చెమటనుండి పుట్టిన జాతులు — ఇవన్నియు అతని అవతారములచే, అంశములచే, కళలచే విడువబడినవి. మనమందరము అవ్యయుడైన అతనిని శరణు పొందుదము.
+hi: मैं, शिव, आप लोग, असुर आदि, तथा मनुष्य, तिर्यक्, वृक्ष और पसीने से उत्पन्न जातियाँ — ये सब उनके अवतारों, अंशों और कलाओं से उत्पन्न किये गये हैं। हम सब उन अविनाशी की शरण में चलें।
 
 --- verse 22 ---
 deva:
@@ -206,6 +269,9 @@ na yasya vadhyo na ca rakṣaṇīyo
 nopekṣaṇīyādaraṇīyapakṣaḥ|
 athāpi sargasthitisaṁyamārthaṁ
 dhatte rajaḥsattvatamāṁsi kāle||
+en: He has no one to kill and no one to protect. For him there is no side to be neglected and none to be favoured. Yet for the sake of creation, preservation and withdrawal he takes on rajas, sattva and tamas in their due time.
+tel: అతనికి వధింపవలసినవాడు లేడు, రక్షింపవలసినవాడు లేడు. ఉపేక్షింపవలసిన పక్షము, ఆదరింపవలసిన పక్షము అతనికి లేవు. అయినను సృష్టి, స్థితి, సంహారముల కొరకు అతడు తగిన కాలమునందు రజస్సు, సత్త్వము, తమస్సులను ధరించును.
+hi: उनका कोई वध्य नहीं और कोई रक्षणीय नहीं। उनके लिये कोई पक्ष उपेक्षणीय नहीं और कोई आदरणीय नहीं। फिर भी सृष्टि, स्थिति और संयम के लिये वे समय पर रजस्, सत्त्व और तमस् को धारण करते हैं।
 
 --- verse 23 ---
 deva:
@@ -218,6 +284,9 @@ ayaṁ ca tasya sthitipālanakṣaṇaḥ
 sattvaṁ juṣāṇasya bhavāya dehinām|
 tasmād vrajāmaḥ śaraṇaṁ jagadguruṁ
 svānāṁ sa no dhāsyati śaṁ surapriyaḥ||
+en: And this is his time of preservation and protection, when he takes to sattva for the welfare of embodied beings. Therefore let us go for shelter to the teacher of the world. He is dear to the gods, and he will grant welfare to us who are his own.
+tel: ఇది అతని స్థితిపాలన కాలము; ఈ కాలమునందు అతడు దేహధారుల క్షేమము కొరకు సత్త్వమును స్వీకరించును. కావున జగద్గురువును శరణు పొందుదము. అతడు సురప్రియుడు; తనవారమైన మనకు అతడు శుభమును ఒసగును.
+hi: यह उनका स्थिति और पालन का समय है; इस समय वे देहधारियों के कल्याण के लिये सत्त्व को स्वीकार करते हैं। इसलिये हम जगद्गुरु की शरण में चलें। वे सुरप्रिय हैं; अपने जनों को वे कल्याण देंगे।
 
 --- verse 24 ---
 deva:
@@ -228,6 +297,9 @@ iast:
 śrīśuka uvāca
 ityābhāṣya surānvedhāḥ saha devairarindama|
 ajitasya padaṁ sākṣājjagāma tamasaḥ param||
+en: Śrī Śuka said: O subduer of enemies, having spoken thus to the gods, Brahmā went with them to the very abode of Ajita, which is beyond darkness.
+tel: శ్రీశుకుడు పలికెను: ఓ అరిందమా, దేవతలతో ఇట్లు పలికి, బ్రహ్మ దేవతలతో కూడి తమస్సునకు అవల ఉన్న అజితుని పదమునకు సాక్షాత్తుగా వెళ్లెను.
+hi: श्रीशुकदेवजी ने कहा: हे अरिन्दम, देवताओं से ऐसा कहकर ब्रह्मा देवताओं के सहित अन्धकार से परे अजित के पद को साक्षात् गये।
 
 --- verse 25 ---
 deva:
@@ -236,6 +308,9 @@ deva:
 iast:
 tatrādṛṣṭasvarūpāya śrutapūrvāya vai vibho|
 stutimabrūta daivībhirgīrbhistvavahitendriyaḥ||
+en: O King, there, with his senses held in, he spoke a hymn in divine words to him whose true form had not been seen and of whom he had only heard before.
+tel: ఓ రాజా, అచ్చట ఇంద్రియములను నిలుపుకొని, ఇంతకుముందు స్వరూపము చూడబడని, వినబడినవాడైన అతనికి దైవికమైన వాక్కులతో అతడు స్తుతిని పలికెను.
+hi: हे राजन्, वहाँ इन्द्रियों को संयत करके, जिनका स्वरूप पहले देखा नहीं गया था और जिनके विषय में केवल सुना था, उनकी उन्होंने दिव्य वाणी से स्तुति की।
 
 --- verse 26 ---
 deva:
@@ -250,6 +325,9 @@ avikriyaṁ satyamanantamādyaṁ
 guhāśayaṁ niṣkalamapratarkyam|
 mano'grayānaṁ vacasāniruktaṁ
 namāmahe devavaraṁ vareṇyam||
+en: Brahmā said: We bow to the best of the gods, who is to be worshipped. He is unchanging, true, endless and the first. He lies in the cave of the heart. He is without parts and beyond reasoning. He goes ahead of the mind, and speech cannot tell him.
+tel: బ్రహ్మ పలికెను: వరేణ్యుడైన దేవవరునకు మేము నమస్కరించుచున్నాము. అతడు వికారము లేనివాడు, సత్యము, అనంతుడు, ఆద్యుడు. అతడు హృదయగుహయందు ఉన్నవాడు. అతడు నిష్కలుడు, తర్కమునకు అందనివాడు. అతడు మనసునకు ముందు పోవువాడు; వాక్కుచే చెప్పబడనివాడు.
+hi: ब्रह्माजी ने कहा: वरेण्य देववर को हम नमस्कार करते हैं। वे विकाररहित, सत्य, अनन्त और आद्य हैं। वे हृदय की गुहा में स्थित हैं। वे निष्कल और तर्क से परे हैं। वे मन से आगे चलते हैं, और वाणी से उनका कथन नहीं हो सकता।
 
 --- verse 27 ---
 deva:
@@ -262,6 +340,9 @@ vipaścitaṁ prāṇamanodhiyātmanā-
 marthendriyābhāsamanidramavraṇam|
 chāyātapau yatra na gṛdhrapakṣau
 tamakṣaraṁ khaṁ triyugaṁ vrajāmahe||
+en: He is the knower. He is the light by which the objects and the senses appear to those who have breath, mind, understanding and self. He does not sleep and he has no wound. In him shade and heat do not stand apart as the two wings of a vulture do. We go to him, the imperishable, who is like space and who is called Triyuga.
+tel: అతడు విపశ్చితుడు. ప్రాణము, మనసు, బుద్ధి, ఆత్మ కలవారికి అర్థములను ఇంద్రియములను ప్రకాశింపజేయువాడు అతడే. అతనికి నిద్ర లేదు, గాయము లేదు. గ్రద్ద రెండు రెక్కలవలె ఛాయయు ఎండయు అతనియందు వేరువేరుగా నిలువవు. అక్షరుడు, ఆకాశమువంటివాడు, త్రియుగుడు అయిన అతనిని మేము పొందుచున్నాము.
+hi: वे विपश्चित् हैं। प्राण, मन, बुद्धि और आत्मा वालों के लिये अर्थ और इन्द्रियों को प्रकाशित करनेवाले वे ही हैं। उन्हें न नींद है और न कोई व्रण। गीध के दो पंखों के समान छाया और धूप उनमें अलग-अलग नहीं रहतीं। उस अक्षर, आकाश के समान और त्रियुग को हम प्राप्त होते हैं।
 
 --- verse 28 ---
 deva:
@@ -274,6 +355,9 @@ ajasya cakraṁ tvajayeryamāṇaṁ
 manomayaṁ pañcadaśāramāśu|
 triṇābhi vidyuccalamaṣṭanemi
 yadakṣamāhustamṛtaṁ prapadye||
+en: They call him the axle of the wheel of the unborn. That wheel is turned by māyā, is made of mind, has fifteen spokes, moves swiftly, has three hubs, moves like lightning, and has eight rims. I take refuge in him, who is the truth.
+tel: అజుని చక్రమునకు అక్షము అతడే అని చెప్పుదురు. ఆ చక్రము మాయచే త్రిప్పబడునది, మనోమయమైనది, పదునైదు ఆకులు కలది, శీఘ్రముగా తిరుగునది, మూడు నాభులు కలది, మెరుపువలె చలించునది, ఎనిమిది నేములు కలది. ఋతమైన అతనిని నేను శరణు పొందుచున్నాను.
+hi: अज के चक्र का अक्ष उन्हीं को कहते हैं। वह चक्र माया से घुमाया जाता है, मनोमय है, पन्द्रह अरोंवाला है, शीघ्र चलनेवाला है, तीन नाभियोंवाला है, बिजली के समान चंचल है और आठ नेमियोंवाला है। उस ऋत को मैं शरण में जाता हूँ।
 
 --- verse 29 ---
 deva:
@@ -286,6 +370,9 @@ ya ekavarṇaṁ tamasaḥ paraṁ ta-
 dalokamavyaktamanantapāram|
 āsāñcakāropasuparṇamena-
 mupāsate yogarathena dhīrāḥ||
+en: He has taken his seat in that which is of one colour, beyond darkness, without any world, unmanifest and endless in its reach. Garuḍa stands near him. The steadfast worship him by the chariot of yoga.
+tel: ఏకవర్ణమైన, తమస్సునకు అవల ఉన్న, అలోకమైన, అవ్యక్తమైన, అనంతపారమైన దానియందు అతడు ఆసీనుడై ఉన్నాడు. గరుడుడు అతని చెంత ఉన్నాడు. ధీరులు యోగరథముచే అతనిని ఉపాసించుచున్నారు.
+hi: जो एकवर्ण, अन्धकार से परे, अलोक, अव्यक्त और अनन्तपार है, उसमें वे आसीन हैं। गरुड़ उनके निकट रहते हैं। धीर पुरुष योग के रथ से उनकी उपासना करते हैं।
 
 --- verse 30 ---
 deva:
@@ -298,6 +385,9 @@ na yasya kaścātititarti māyāṁ
 yayā jano muhyati veda nārtham|
 taṁ nirjitātmātmaguṇaṁ pareśaṁ
 namāma bhūteṣu samaṁ carantam||
+en: No one crosses beyond his māyā, by which a man is bewildered and does not know the truth. We bow to that supreme Lord, who has conquered himself and his own guṇas, and who moves equally in all beings.
+tel: అతని మాయను ఎవరును దాటలేరు; ఆ మాయచే జనుడు మోహము పొంది అర్థమును ఎరుగకుండును. తనను, తన గుణములను జయించిన, భూతములన్నిటియందు సమముగా చరించు ఆ పరేశునకు మేము నమస్కరించుచున్నాము.
+hi: उनकी माया को कोई नहीं पार करता; उस माया से मनुष्य मोहित होकर अर्थ को नहीं जानता। जिन्होंने अपने को और अपने गुणों को जीत लिया है, और जो सब भूतों में समान रूप से विचरते हैं, उन परमेश्वर को हम नमस्कार करते हैं।
 
 --- verse 31 ---
 deva:
@@ -310,6 +400,9 @@ ime vayaṁ yatpriyayaiva tanvā
 sattvena sṛṣṭā bahirantarāviḥ|
 gatiṁ na sūkṣmāmṛṣayaśca vidmahe
 kuto'surādyā itarapradhānāḥ||
+en: We here have been created by sattva, which is his own dear body, and we are manifest without and within. Even so, neither we nor the sages know his subtle course. How then should the asuras and the others, in whom the other guṇas prevail, know it?
+tel: ఆయనకు ప్రియమైన తనువైన సత్త్వముచే సృష్టింపబడిన మేము బయట లోపల ఆవిర్భవించి ఉన్నాము. అయినను మేమును ఋషులును అతని సూక్ష్మమైన గతిని ఎరుగము. ఇతర గుణములు ప్రధానముగా గల అసురులు మొదలైనవారు ఎట్లు ఎరుగగలరు?
+hi: उनके प्रिय शरीर सत्त्व से रचे गये हम बाहर और भीतर प्रकट हैं। फिर भी हम और ऋषि उनकी सूक्ष्म गति को नहीं जानते। तब जिनमें अन्य गुण प्रधान हैं, वे असुर आदि कैसे जानेंगे?
 
 --- verse 32 ---
 deva:
@@ -322,6 +415,9 @@ pādau mahīyaṁ svakṛtaiva yasya
 caturvidho yatra hi bhūtasargaḥ|
 sa vai mahāpūruṣa ātmatantraḥ
 prasīdatāṁ brahma mahāvibhūtiḥ||
+en: This earth, made by himself, is his feet, and upon it stands the creation of beings of four kinds. May that great Person, who stands by himself alone, the Brahman of great majesty, be pleased.
+tel: తన చేతనే చేయబడిన ఈ భూమి అతని పాదములు; దానియందే నాలుగు విధముల భూతసృష్టి నిలిచియున్నది. ఆత్మతంత్రుడైన ఆ మహాపురుషుడు, మహావిభూతి అయిన బ్రహ్మము, ప్రసన్నుడగును గాక.
+hi: अपने ही द्वारा रची गयी यह पृथ्वी उनके चरण हैं, और उसी पर चार प्रकार की भूतसृष्टि स्थित है। आत्मतन्त्र वे महापुरुष, महाविभूति ब्रह्म, प्रसन्न हों।
 
 --- verse 33 ---
 deva:
@@ -334,6 +430,9 @@ ambhastu yadreta udāravīryaṁ
 sidhyanti jīvantyuta vardhamānāḥ|
 lokāstrayo'thākhilalokapālāḥ
 prasīdatāṁ brahma mahāvibhūtiḥ||
+en: The water is his seed, and it is of great power. By it the three worlds and all the guardians of the worlds come to be, live and grow. May that Brahman of great majesty be pleased.
+tel: ఉదారమైన వీర్యము కలిగిన అతని రేతస్సు జలము. దానిచే మూడు లోకములును, లోకపాలకులందరును సిద్ధి పొంది, జీవించి, వృద్ధి పొందుచున్నారు. మహావిభూతి అయిన ఆ బ్రహ్మము ప్రసన్నుడగును గాక.
+hi: उदार वीर्यवाला उनका रेत जल है। उससे तीनों लोक और सब लोकपाल सिद्ध होते हैं, जीते हैं और बढ़ते हैं। महाविभूति वह ब्रह्म प्रसन्न हो।
 
 --- verse 34 ---
 deva:
@@ -346,6 +445,9 @@ somaṁ mano yasya samāmananti
 divaukasāṁ vai balamandha āyuḥ|
 īśo nagānāṁ prajanaḥ prajānāṁ
 prasīdatāṁ naḥ sa mahāvibhūtiḥ||
+en: They declare that Soma is his mind, and that he is the strength, the food and the life of the dwellers in heaven. He is the lord of the trees and the begetter of creatures. May he of great majesty be pleased with us.
+tel: సోముడు అతని మనసు అని చెప్పుదురు; దివౌకసులకు బలము, అన్నము, ఆయువు అతడే. అతడు వృక్షములకు ఈశుడు, ప్రజలకు ప్రజనుడు. మహావిభూతి అయిన అతడు మనపై ప్రసన్నుడగును గాక.
+hi: सोम को उनका मन कहते हैं; स्वर्गवासियों का बल, अन्न और आयु वे ही हैं। वे वृक्षों के ईश और प्रजाओं के प्रजन हैं। महाविभूति वे हमपर प्रसन्न हों।
 
 --- verse 35 ---
 deva:
@@ -358,6 +460,9 @@ agnirmukhaṁ yasya tu jātavedā
 jātaḥ kriyākāṇḍanimittajanmā|
 antaḥsamudre'nupacan svadhātūn
 prasīdatāṁ naḥ sa mahāvibhūtiḥ||
+en: Agni, who knows all that is born, is his mouth. Agni came into being for the sake of the rites of action. Within the ocean he ripens his own elements. May he of great majesty be pleased with us.
+tel: జాతవేదుడైన అగ్ని అతని ముఖము. క్రియాకాండము నిమిత్తముగా అగ్ని జన్మించెను. సముద్రము లోపల అతడు తన ధాతువులను పరిపక్వము చేయుచున్నాడు. మహావిభూతి అయిన అతడు మనపై ప్రసన్నుడగును గాక.
+hi: जातवेदा अग्नि उनका मुख हैं। क्रियाकाण्ड के निमित्त से अग्नि उत्पन्न हुए। समुद्र के भीतर वे अपने धातुओं को पकाते हैं। महाविभूति वे हमपर प्रसन्न हों।
 
 --- verse 36 ---
 deva:
@@ -370,6 +475,9 @@ yaccakṣurāsīt taraṇirdevayānaṁ
 trayīmayo brahmaṇa eṣa dhiṣṇyam|
 dvāraṁ ca mukteramṛtaṁ ca mṛtyuḥ
 prasīdatāṁ naḥ sa mahāvibhūtiḥ||
+en: The sun, who was his eye, is the path of the gods. The sun is made of the three Vedas, is the seat of Brahman, is the door of liberation, and is both nectar and death. May he of great majesty be pleased with us.
+tel: అతని కన్ను అయిన సూర్యుడు దేవయానము. ఆ సూర్యుడు త్రయీమయుడు, బ్రహ్మకు ధిష్ణ్యము, ముక్తికి ద్వారము, అమృతమును మృత్యువును. మహావిభూతి అయిన అతడు మనపై ప్రసన్నుడగును గాక.
+hi: उनका नेत्र जो सूर्य हुआ, वह देवयान है। वह सूर्य त्रयीमय है, ब्रह्म का धिष्ण्य है, मुक्ति का द्वार है, और अमृत तथा मृत्यु भी है। महाविभूति वे हमपर प्रसन्न हों।
 
 --- verse 37 ---
 deva:
@@ -382,6 +490,9 @@ prāṇādabhūd yasya carācarāṇāṁ
 prāṇaḥ saho balamojaśca vāyuḥ|
 anvāsma samrājamivānugā vayaṁ
 prasīdatāṁ naḥ sa mahāvibhūtiḥ||
+en: From his breath came Vāyu, who is the breath, the endurance, the strength and the vigour of all that moves and all that does not move. We wait upon him as servants wait upon an emperor. May he of great majesty be pleased with us.
+tel: అతని ప్రాణమునుండి వాయువు పుట్టెను; చరాచరములకు ప్రాణము, సహము, బలము, ఓజస్సు ఆ వాయువే. అనుచరులు సమ్రాట్టును సేవించునట్లు మేము అతనిని సేవించుచున్నాము. మహావిభూతి అయిన అతడు మనపై ప్రసన్నుడగును గాక.
+hi: उनके प्राण से वायु उत्पन्न हुए; चर और अचर का प्राण, सह, बल और ओज वही हैं। जैसे अनुचर सम्राट् की सेवा करते हैं, वैसे हम उनकी सेवा करते हैं। महाविभूति वे हमपर प्रसन्न हों।
 
 --- verse 38 ---
 deva:
@@ -394,6 +505,9 @@ iast:
 prajajñire khaṁ puruṣasya nābhyāḥ|
 prāṇendriyātmāsuśarīraketaṁ
 prasīdatāṁ naḥ sa mahāvibhūtiḥ||
+en: From his ear were born the quarters, and from his heart the openings of the body. From the navel of the Person came space, which is the dwelling of the breath, the senses, the mind, the life and the body. May he of great majesty be pleased with us.
+tel: అతని శ్రోత్రమునుండి దిక్కులు, హృదయమునుండి శరీర ఛిద్రములు పుట్టెను. ఆ పురుషుని నాభినుండి ఆకాశము పుట్టెను; అది ప్రాణము, ఇంద్రియములు, మనసు, అసువు, శరీరములకు నిలయము. మహావిభూతి అయిన అతడు మనపై ప్రసన్నుడగును గాక.
+hi: उनके श्रोत्र से दिशाएँ और हृदय से शरीर के छिद्र उत्पन्न हुए। उस पुरुष की नाभि से आकाश उत्पन्न हुआ, जो प्राण, इन्द्रिय, मन, असु और शरीर का केत है। महाविभूति वे हमपर प्रसन्न हों।
 
 --- verse 39 ---
 deva:
@@ -406,6 +520,9 @@ balānmahendrastridaśāḥ prasādā-
 nmanyorgirīśo dhiṣaṇād viriñcaḥ|
 khebhyaśca chandāṁsyṛṣayo meḍhrataḥ kaḥ
 prasīdatāṁ naḥ sa mahāvibhūtiḥ||
+en: From his strength came Mahendra, from his favour the thirty gods, from his anger Girīśa, and from his understanding Viriñca. From the openings of his body came the metres and the sages, and from his loins came Ka. May he of great majesty be pleased with us.
+tel: అతని బలమునుండి మహేంద్రుడు, ప్రసాదమునుండి త్రిదశులు, మన్యువునుండి గిరీశుడు, ధిషణనుండి విరించుడు పుట్టిరి. అతని ఛిద్రములనుండి ఛందస్సులును ఋషులును, మేఢ్రమునుండి క పుట్టిరి. మహావిభూతి అయిన అతడు మనపై ప్రసన్నుడగును గాక.
+hi: उनके बल से महेन्द्र, प्रसाद से त्रिदश, मन्यु से गिरीश और धिषणा से विरिञ्च उत्पन्न हुए। उनके छिद्रों से छन्द और ऋषि, तथा मेढ्र से क उत्पन्न हुए। महाविभूति वे हमपर प्रसन्न हों।
 
 --- verse 40 ---
 deva:
@@ -418,18 +535,24 @@ iast:
 dharmaḥ stanāditaraḥ pṛṣṭhato'bhūt|
 dyauryasya śīrṣṇo'psaraso vihārāt
 prasīdatāṁ naḥ sa mahāvibhūtiḥ||
+en: From his chest came Śrī, from his shadow the forefathers, from his breast dharma, and from his back the other, which is adharma. From his head came the heaven, and from his play the apsarases. May he of great majesty be pleased with us.
+tel: అతని వక్షమునుండి శ్రీ, ఛాయనుండి పితరులు, స్తనమునుండి ధర్మము, పృష్ఠమునుండి ఇతరమైన అధర్మము పుట్టెను. అతని శీర్షమునుండి స్వర్గము, విహారమునుండి అప్సరసలు పుట్టిరి. మహావిభూతి అయిన అతడు మనపై ప్రసన్నుడగును గాక.
+hi: उनके वक्ष से श्री, छाया से पितर, स्तन से धर्म और पीठ से उससे भिन्न अधर्म उत्पन्न हुआ। उनके सिर से स्वर्ग और विहार से अप्सराएँ उत्पन्न हुईं। महाविभूति वे हमपर प्रसन्न हों।
 
 --- verse 41 ---
 deva:
 विप्रो मुखं ब्रह्म च यस्य गुह्यं
 राजन्य आसीद् भुजयोर्बलं च।
-ऊर्वोर्विडोजोऽङ् घ्रिरवेदशूद्रौ
+ऊर्वोर्विडोजोऽङ्घ्रिरवेदशूद्रौ
 प्रसीदतां नः स महाविभूतिः॥
 iast:
 vipro mukhaṁ brahma ca yasya guhyaṁ
 rājanya āsīd bhujayorbalaṁ ca|
-ūrvorviḍojo'ṅ ghriravedaśūdrau
+ūrvorviḍojo'ṅghriravedaśūdrau
 prasīdatāṁ naḥ sa mahāvibhūtiḥ||
+en: The brāhmaṇa is his mouth, and the Veda is his secret part. The kṣatriya came from his two arms, and strength as well. From his thighs came the vaiśya and vigour, and from his foot the śūdra, who is without the Veda. May he of great majesty be pleased with us.
+tel: బ్రాహ్మణుడు అతని ముఖము; వేదము అతని గుహ్యము. అతని రెండు భుజములనుండి క్షత్రియుడును బలమును పుట్టెను. ఊరువులనుండి వైశ్యుడును ఓజస్సును, చరణమునుండి వేదము లేని శూద్రుడును పుట్టెను. మహావిభూతి అయిన అతడు మనపై ప్రసన్నుడగును గాక.
+hi: ब्राह्मण उनका मुख है और वेद उनका गुह्य है। उनकी दोनों भुजाओं से क्षत्रिय और बल उत्पन्न हुए। जाँघों से वैश्य और ओज, तथा चरण से वेदरहित शूद्र उत्पन्न हुए। महाविभूति वे हमपर प्रसन्न हों।
 
 --- verse 42 ---
 deva:
@@ -442,6 +565,9 @@ lobho'dharāt prītiruparyabhūd dyuti-
 rnastaḥ paśavyaḥ sparśena kāmaḥ|
 bhruvoryamaḥ pakṣmabhavastu kālaḥ
 prasīdatāṁ naḥ sa mahāvibhūtiḥ||
+en: From his lower lip came greed, and from the upper lip affection. From his nose came lustre, and from his touch the desire that belongs to animals. From his brows came Yama, and from his eyelashes time. May he of great majesty be pleased with us.
+tel: అతని అధరమునుండి లోభము, పై పెదవినుండి ప్రీతి పుట్టెను. నాసికనుండి ద్యుతి, స్పర్శనుండి పశువులకు సంబంధించిన కామము పుట్టెను. కనుబొమలనుండి యముడు, కనురెప్పల వెంట్రుకలనుండి కాలము పుట్టెను. మహావిభూతి అయిన అతడు మనపై ప్రసన్నుడగును గాక.
+hi: उनके अधर से लोभ और ऊपर के होंठ से प्रीति उत्पन्न हुई। नासिका से द्युति और स्पर्श से पशुओं से सम्बन्ध रखनेवाला काम उत्पन्न हुआ। भौंहों से यम और पलकों से काल उत्पन्न हुआ। महाविभूति वे हमपर प्रसन्न हों।
 
 --- verse 43 ---
 deva:
@@ -454,6 +580,9 @@ dravyaṁ vayaḥ karma guṇānviśeṣaṁ
 yadyogamāyāvihitānvadanti|
 yad durvibhāvyaṁ prabudhāpabādhaṁ
 prasīdatāṁ naḥ sa mahāvibhūtiḥ||
+en: They say that matter, age, action, the guṇas and the particular forms of things are all ordained by his yogamāyā. That māyā is hard to understand, and it is set aside by one who has awakened. May he of great majesty be pleased with us.
+tel: ద్రవ్యము, వయస్సు, కర్మ, గుణములు, విశేషము — ఇవి అతని యోగమాయచే ఏర్పాటు చేయబడినవి అని చెప్పుదురు. ఆ మాయ దుర్విభావ్యము; ప్రబుద్ధుడైనవానిచే అది తొలగింపబడును. మహావిభూతి అయిన అతడు మనపై ప్రసన్నుడగును గాక.
+hi: द्रव्य, वय, कर्म, गुण और विशेष — इन सबको उनकी योगमाया से विहित कहते हैं। वह माया दुर्विभाव्य है, और प्रबुद्ध पुरुष से वह दूर हो जाती है। महाविभूति वे हमपर प्रसन्न हों।
 
 --- verse 44 ---
 deva:
@@ -466,6 +595,9 @@ namo'stu tasmā upaśāntaśaktaye
 svārājyalābhapratipūritātmane|
 guṇeṣu māyāraciteṣu vṛttibhi-
 rna sajjamānāya nabhasvadūtaye||
+en: Let there be obeisance to him, whose powers are at rest, whose self is wholly filled by the gaining of his own sovereignty, who does not cling by his activities to the guṇas fashioned by māyā, and whose movement is free like the wind.
+tel: ఉపశాంతమైన శక్తి కలిగిన, స్వారాజ్యలాభముచే ఆత్మను పూర్ణముగా నింపుకొనిన, మాయచే రచింపబడిన గుణములయందు వృత్తులచే తగులుకొననివాడైన, వాయువువలె స్వేచ్ఛగా చరించు అతనికి నమస్కారమగును గాక.
+hi: जिनकी शक्तियाँ उपशान्त हैं, जिनका आत्मा स्वराज्य के लाभ से पूर्ण भरा है, जो माया से रचे गये गुणों में अपनी वृत्तियों से नहीं लगते, और जिनकी गति वायु के समान स्वतन्त्र है, उनको नमस्कार हो।
 
 --- verse 45 ---
 deva:
@@ -474,6 +606,9 @@ deva:
 iast:
 sa tvaṁ no darśayātmānamasmatkaraṇagocaram|
 prapannānāṁ didṛkṣūṇāṁ sasmitaṁ te mukhāmbujam||
+en: You who are such, show us your own self, so that it comes within the reach of our senses. We have taken shelter with you and we wish to see. Show us your smiling lotus face.
+tel: అట్టివాడైన నీవు మా ఇంద్రియములకు గోచరమగునట్లు నీ ఆత్మను మాకు చూపుము. శరణు పొందిన, చూడగోరుచున్న మాకు చిరునవ్వుతో కూడిన నీ ముఖకమలమును చూపుము.
+hi: ऐसे आप हमारी इन्द्रियों के विषय होने योग्य अपने स्वरूप को हमें दिखाइये। शरण में आये हुए और दर्शन की इच्छा रखनेवाले हमें अपना स्मितयुक्त मुखकमल दिखाइये।
 
 --- verse 46 ---
 deva:
@@ -482,6 +617,9 @@ deva:
 iast:
 taistaiḥ svecchādhṛtai rūpaiḥ kāle kāle svayaṁ vibho|
 karma durviṣahaṁ yanno bhagavāṁstat karoti hi||
+en: O Lord, with those forms which you take of your own will, from time to time, you yourself, the blessed one, do that work which we cannot bear.
+tel: ఓ విభో, నీ ఇచ్చచే ధరించిన ఆ ఆ రూపములతో, కాలము కాలమునకు, భగవంతుడవైన నీవే మేము సహింపలేని ఆ కార్యమును చేయుచున్నావు.
+hi: हे विभो, अपनी इच्छा से धारण किये हुए उन-उन रूपों से, समय-समय पर, भगवान् आप ही वह कर्म करते हैं जो हमारे लिये दुःसह है।
 
 --- verse 47 ---
 deva:
@@ -490,6 +628,9 @@ deva:
 iast:
 kleśabhūryalpasārāṇi karmāṇi viphalāni vā|
 dehināṁ viṣayārtānāṁ na tathaivārpitaṁ tvayi||
+en: The works of embodied beings who are pained by the objects of the senses bring much trouble and little worth, or else they bear no fruit at all. What is offered to you is not of that kind.
+tel: విషయములచే పీడింపబడిన దేహధారుల కర్మలు క్లేశము ఎక్కువగా, సారము కొద్దిగా ఉండును; లేదా అవి ఫలము ఇవ్వకుండును. నీకు అర్పింపబడినది అట్టిది కాదు.
+hi: विषयों से पीड़ित देहधारियों के कर्म क्लेश से भरे और अल्प सारवाले होते हैं, अथवा फलरहित होते हैं। आपको अर्पित किया हुआ कर्म ऐसा नहीं होता।
 
 --- verse 48 ---
 deva:
@@ -498,6 +639,9 @@ deva:
 iast:
 nāvamaḥ karmakalpo'pi viphalāyeśvarārpitaḥ|
 kalpate puruṣasyaiṣa sa hyātmā dayito hitaḥ||
+en: Even the lowest kind of work, when it is offered to the Lord, does not become fruitless for a person. For he himself is the Self, dear and good.
+tel: అత్యల్పమైన కర్మయైనను ఈశ్వరునకు అర్పింపబడినపుడు, అది పురుషునకు విఫలము కాదు. ఏలయనగా అతడే ఆత్మ, దయితుడు, హితుడు.
+hi: अत्यन्त तुच्छ कर्म भी, जब ईश्वर को अर्पित किया जाता है, तो पुरुष के लिये विफल नहीं होता। क्योंकि वे ही आत्मा, दयित और हित हैं।
 
 --- verse 49 ---
 deva:
@@ -506,6 +650,9 @@ deva:
 iast:
 yathā hi skandhaśākhānāṁ tarormūlāvasecanam|
 evamārādhanaṁ viṣṇoḥ sarveṣāmātmanaśca hi||
+en: The watering of the root of a tree serves its trunk and its branches. In the same way the worship of Viṣṇu serves all beings and oneself as well.
+tel: చెట్టు మొదటికి నీరు పోయుట దాని కాండమునకును కొమ్మలకును ఉపకరించునట్లు, విష్ణువును ఆరాధించుట అందరికిని, తనకును ఉపకరించును.
+hi: जैसे वृक्ष की जड़ में जल देना उसके तने और शाखाओं के लिये होता है, वैसे ही विष्णु की आराधना सबके लिये और अपने लिये भी होती है।
 
 --- verse 50 ---
 deva:
@@ -514,9 +661,15 @@ deva:
 iast:
 namastubhyamanantāya durvitarkyātmakarmaṇe|
 nirguṇāya guṇeśāya sattvasthāya ca sāmpratam||
+en: Obeisance to you, the endless one, whose own nature and whose works are beyond thought. You are without the guṇas, you are the lord of the guṇas, and now you abide in sattva.
+tel: అనంతుడవైన నీకు నమస్కారము; నీ ఆత్మయు కర్మయు తర్కమునకు అందనివి. నీవు నిర్గుణుడవు, గుణములకు ఈశుడవు, ఇప్పుడు సత్త్వమునందు నిలిచియున్నావు.
+hi: अनन्त आपको नमस्कार है; आपका आत्मा और कर्म दुर्वितर्क्य हैं। आप निर्गुण हैं, गुणों के ईश हैं, और इस समय सत्त्व में स्थित हैं।
 
 --- verse none ---
 deva:
 इति श्रीमद्भागवते महापुराणे पारमहंस्यां संहितायामष्टमस्कन्धे- ऽमृतमथने पञ्चमोऽध्यायः॥ ५॥
 iast:
 iti śrīmadbhāgavate mahāpurāṇe pāramahaṁsyāṁ saṁhitāyāmaṣṭamaskandhe- 'mṛtamathane pañcamo'dhyāyaḥ|| 5||
+en: Thus ends the fifth chapter, in the churning for the nectar, in the eighth book of the great Purāṇa Śrīmad Bhāgavata, the Pāramahaṁsya Saṁhitā.
+tel: ఇది పారమహంస్యసంహిత అయిన శ్రీమద్భాగవత మహాపురాణమునందు, అష్టమస్కంధమునందు, అమృతమథనమునందు ఐదవ అధ్యాయము సమాప్తము.
+hi: इस प्रकार पारमहंस्य संहिता श्रीमद्भागवत महापुराण के अष्टम स्कन्ध में अमृतमथन का पाँचवाँ अध्याय समाप्त हुआ।

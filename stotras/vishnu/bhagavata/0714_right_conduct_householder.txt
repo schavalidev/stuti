@@ -9,7 +9,7 @@ Type: Purāṇa (an adhyāya of the Śrīmad Bhāgavata, Skandha 7)
 
 Source / recension: Base text and authority: the Gītā Press, Gorakhpur Śrīmadbhāgavata Mahāpurāṇa with Hindi translation, Part 1 (Gītā Press code 26), archive.org item `shrimadbhagwat-mahapuran-bhag-1`, printed pages 889–893; the PDF page numbers are the printed ones. The PDF carries the typesetter's own text layer in the Chanakya font encoding, and the text was decoded from it by machine with `bin/bhagavata/chanakya.py`, not read off OCR or typed. The decoder was checked against GRETIL over all twelve skandhas before any file was written, and the differences that remain were sampled and found to be readings of the two editions. Second witness: GRETIL's `sa_bhAgavatapurANa.xml` (IAST, contributed by Ulrich Stiehl), a separate editorial lineage, compared verse by verse by machine. The TTD edition with the commentaries of Śrīdhara, Vīrarāghava and Vijayadhvaja (archive.org `Bhagavata_Purana_With_Multiple_Commentaries_TTD_Critical_Edition`) is the third witness where one is needed; it was not read for this file. The IAST was generated mechanically from the Devanāgarī with `bin/dev2iast.py`.
 
-Recension note: Text-only file, written 1 Oct 2026 at the user's instruction to lay down the whole Bhāgavata first: the English, Telugu and Hindi meanings are still to be added, and the witnesses' differences listed here have been recorded by machine and not yet adjudicated. The print is followed throughout. The print numbers 42 verses and GRETIL numbers 42. Of the 42 verses GRETIL has under the same number, 27 agree with the print letter for letter once spacing and the spelling of nasals are set aside; the rest differ: 1, 2, 4, 7, 12, 13, 19, 20, 22, 24, 25, 27, 36, 38, 39. Spacing is the print's, as its text layer gives it; in a few places justification has left a space inside a word, and these are still to be closed when the verse is read. The speaker lines (श्रीशुक उवाच and the others) are printed in italic above the verse they introduce, and are given as its first line.
+Recension note: Meanings written 23 Oct 2026 (session S78). The differences between the witnesses listed below were read as the verses were glossed; except where this note says otherwise, each is a spelling, a sandhi or a word order of the two editions, none of them changes the sense, and the print's reading therefore stands unbracketed. The print is followed throughout. The print numbers 42 verses and GRETIL numbers 42. Of the 42 verses GRETIL has under the same number, 27 agree with the print letter for letter once spacing and the spelling of nasals are set aside; the rest differ: 1, 2, 4, 7, 12, 13, 19, 20, 22, 24, 25, 27, 36, 38, 39. Spacing is the print's, as its text layer gives it. The speaker lines (श्रीशुक उवाच and the others) are printed in italic above the verse they introduce, and are given as its first line. One broken word was put right as the verses were read. At verse 36 justification had left a space inside आण्डकोशाङ्घ्रिपो, and it is closed here. GRETIL carries the word whole and agrees with the corrected reading; its own अण्ड for the print's आण्ड is a difference of the two editions, and the print stands. The other spaces a spacing check flagged — यद् वदन्ति, यावद् भ्रियेत, जह्याद् यदर्थे, कल्पयेद् वृत्तिम्, तस्माद् ब्राह्मणदेवेषु, कुर्याद् व्यतीपाते, यद् दत्तम् — are the print's own spacing after a virāma द्, and they are left as printed.
 
 Verse count: 42, plus the closing colophon printed unnumbered.
 
@@ -24,6 +24,9 @@ iast:
 yudhiṣṭhira uvāca
 gṛhastha etāṁ padavīṁ vidhinā yena cāñjasā|
 yāti devaṛṣe brūhi mādṛśo gṛhamūḍhadhīḥ||
+en: Yudhiṣṭhira said: O divine sage, tell me by what rule a householder goes along this path easily. One like me has his understanding dulled by household life.
+tel: యుధిష్ఠిరుడు పలికెను: ఓ దేవఋషీ, గృహస్థుడు ఏ విధి వలన ఈ మార్గమున సులభముగా నడచునో చెప్పుము. నా వంటివాని బుద్ధి గృహజీవనము వలన మందమై యున్నది.
+hi: युधिष्ठिर ने कहा: हे देवर्षि, गृहस्थ किस विधि से इस मार्ग पर सरलता से चलता है, यह कहिए। मेरे जैसे पुरुष की बुद्धि घर के जीवन से मन्द हो गई है।
 
 --- verse 2 ---
 deva:
@@ -34,6 +37,9 @@ iast:
 nārada uvāca
 gṛheṣvavasthito rājankriyāḥ kurvangṛhocitāḥ|
 vāsudevārpaṇaṁ sākṣādupāsīta mahāmunīn||
+en: Nārada said: O king, let him stay in his home and do the acts that suit a householder. Let him offer those acts directly to Vāsudeva. And let him serve the great sages.
+tel: నారదుడు పలికెను: ఓ రాజా, అతడు ఇంటియందు ఉండి గృహస్థునికి తగిన కర్మలను చేయవలెను. ఆ కర్మలను సాక్షాత్తుగా వాసుదేవునికి అర్పించవలెను. మహామునులను సేవించవలెను.
+hi: नारद ने कहा: हे राजन्, वह घर में रहकर गृहस्थ के योग्य कर्म करे। उन कर्मों को साक्षात् वासुदेव को अर्पित करे। और महामुनियों की सेवा करे।
 
 --- verse 3 ---
 deva:
@@ -42,6 +48,9 @@ deva:
 iast:
 śṛṇvanbhagavato'bhīkṣṇamavatārakathāmṛtam|
 śraddadhāno yathākālamupaśāntajanāvṛtaḥ||
+en: Let him listen again and again, with faith and at the proper time, to the nectar of the stories of the Lord's descents. Let him sit surrounded by people whose minds are at peace.
+tel: భగవంతుని అవతార కథల అమృతమును శ్రద్ధతో, తగిన కాలమున, మరల మరల వినవలెను. శాంతమైన మనస్సు గల జనులతో కలిసి ఉండవలెను.
+hi: वह भगवान् के अवतारों की कथाओं के अमृत को श्रद्धा के साथ, उचित समय पर, बार बार सुने। शान्त मन वाले लोगों के साथ बैठे।
 
 --- verse 4 ---
 deva:
@@ -50,6 +59,9 @@ deva:
 iast:
 satsaṅgācchanakaiḥ saṅgamātmajāyātmajādiṣu|
 vimucyenmucyamāneṣu svayaṁ svapnavadutthitaḥ||
+en: By the company of the good, let him slowly give up his attachment to his own body, to his wife, to his children and to the rest. They fall away of themselves. He too should let them go, like a man who has risen from a dream.
+tel: సత్సంగము వలన తన శరీరము, భార్య, పుత్రులు మొదలైనవారి యందు ఆసక్తిని మెల్లమెల్లగా విడువవలెను. అవి తమంతట తామే విడిపోవుచున్నవి. కలనుండి మేల్కొన్నవాని వలె అతడును వానిని విడువవలెను.
+hi: सत्सङ्ग से वह अपने शरीर, स्त्री, पुत्र आदि में आसक्ति को धीरे धीरे छोड़ दे। वे अपने आप छूटते जाते हैं। स्वप्न से जगे हुए पुरुष के समान वह भी उन्हें छोड़ दे।
 
 --- verse 5 ---
 deva:
@@ -58,6 +70,9 @@ deva:
 iast:
 yāvadarthamupāsīno dehe gehe ca paṇḍitaḥ|
 virakto raktavat tatra nṛloke naratāṁ nyaset||
+en: The wise man should attend to his body and his home only as much as is needed. Within he is free of attachment, yet outwardly he acts like one who is attached. In this way, in the world of men, he should lay aside his human state.
+tel: పండితుడు శరీరమునందును ఇంటియందును అవసరమైనంత వరకే సంబంధము ఉంచుకొనవలెను. లోపల విరక్తుడై ఉండి, వెలుపల ఆసక్తుని వలె ప్రవర్తించవలెను. ఇట్లు నరలోకమునందు తన నరభావమును విడిచిపెట్టవలెను.
+hi: पण्डित शरीर और घर में जितना आवश्यक हो उतना ही सम्बन्ध रखे। भीतर से विरक्त रहकर बाहर से आसक्त के समान बर्ताव करे। इस प्रकार मनुष्यलोक में अपने मनुष्यभाव को छोड़ दे।
 
 --- verse 6 ---
 deva:
@@ -66,6 +81,9 @@ deva:
 iast:
 jñātayaḥ pitarau putrā bhrātaraḥ suhṛdo'pare|
 yad vadanti yadicchanti cānumodeta nirmamaḥ||
+en: Kinsmen, both parents, sons, brothers and other friends say and wish many things. He should agree with what they say and what they wish, and keep no sense of ownership.
+tel: జ్ఞాతులు, తలిదండ్రులు, పుత్రులు, సోదరులు, ఇతర మిత్రులు పలుకునవి, కోరునవి అనేకములు. అతడు మమకారము లేకుండి వారు పలికినదానికి, కోరినదానికి అనుకూలముగా ఉండవలెను.
+hi: ज्ञातिजन, माता पिता, पुत्र, भाई और दूसरे मित्र बहुत कुछ कहते और चाहते हैं। वह ममता छोड़कर उनके कहने और चाहने में सहमत हो जाए।
 
 --- verse 7 ---
 deva:
@@ -74,6 +92,9 @@ deva:
 iast:
 divyaṁ bhaumaṁ cāntarikṣaṁ vittamacyutanirmitam|
 tat sarvamupabhuñjāna etat kuryāt svato budhaḥ||
+en: Wealth of the heavens, wealth of the earth and wealth of the middle region are all made by Acyuta. The wise man enjoys all of it. He should do what has been said here of his own accord.
+tel: దివ్యమైన ధనము, భూమి నుండి వచ్చిన ధనము, అంతరిక్షము నుండి వచ్చిన ధనము — అన్నియు అచ్యుతుడు కల్పించినవే. బుద్ధిమంతుడు వానినెల్ల అనుభవించుచు, ఇక్కడ చెప్పినదానిని తనంతట తానే చేయవలెను.
+hi: दिव्य धन, भौम धन और आन्तरिक्ष धन — ये सब अच्युत के बनाए हुए हैं। बुद्धिमान् उन सबका उपभोग करते हुए यहाँ कहे गए कर्म को स्वयं करे।
 
 --- verse 8 ---
 deva:
@@ -82,6 +103,9 @@ deva:
 iast:
 yāvad bhriyeta jaṭharaṁ tāvat svatvaṁ hi dehinām|
 adhikaṁ yo'bhimanyeta sa steno daṇḍamarhati||
+en: Embodied beings own only as much as will fill the stomach. One who claims more than that is a thief and deserves punishment.
+tel: దేహధారులకు కడుపు నిండునంత వరకే స్వాధికారము కలదు. అంతకు మించి తనది అని భావించువాడు దొంగ, అతడు దండనకు అర్హుడు.
+hi: देहधारियों का अधिकार उतना ही है जितने से पेट भर जाए। जो उससे अधिक को अपना मानता है वह चोर है और दण्ड के योग्य है।
 
 --- verse 9 ---
 deva:
@@ -90,6 +114,9 @@ deva:
 iast:
 mṛgoṣṭrakharamarkākhusarīsṛpkhagamakṣikāḥ|
 ātmanaḥ putravat paśyettaireṣāmantaraṁ kiyat||
+en: Deer, camels, donkeys, monkeys, mice, creeping creatures, birds and flies — he should look upon them as his own sons. What difference is there between them and his own children?
+tel: జింకలు, ఒంటెలు, గాడిదలు, కోతులు, ఎలుకలు, ప్రాకు జంతువులు, పక్షులు, ఈగలు — వానిని తన పుత్రుల వలె చూడవలెను. వానికిని తన పిల్లలకును భేదము ఎంత?
+hi: हिरन, ऊँट, गधे, बन्दर, चूहे, रेंगने वाले जीव, पक्षी और मक्खियाँ — इन्हें वह अपने पुत्रों के समान देखे। इनमें और अपने पुत्रों में अन्तर कितना है?
 
 --- verse 10 ---
 deva:
@@ -98,6 +125,9 @@ deva:
 iast:
 trivargaṁ nātikṛcchreṇa bhajeta gṛhamedhyapi|
 yathādeśaṁ yathākālaṁ yāvaddaivopapāditam||
+en: Even the householder should seek the three aims of dharma, artha and kāma without great trouble. He should seek them according to the place, according to the time, and only so far as providence has provided.
+tel: గృహస్థుడైనను ధర్మము, అర్థము, కామము అను త్రివర్గమును మిక్కిలి శ్రమ లేకుండ సాధించవలెను. దేశమునకు తగినట్లు, కాలమునకు తగినట్లు, దైవము ఇచ్చినంత వరకే సాధించవలెను.
+hi: गृहस्थ भी धर्म, अर्थ और काम रूप त्रिवर्ग को अधिक कष्ट के बिना साधे। वह देश के अनुसार, काल के अनुसार और जितना दैव ने दिया हो उतना ही साधे।
 
 --- verse 11 ---
 deva:
@@ -106,6 +136,9 @@ deva:
 iast:
 āśvāghānte'vasāyibhyaḥ kāmānsaṁvibhajed yathā|
 apyekāmātmano dārāṁ nṛṇāṁ svatvagraho yataḥ||
+en: He should share out the things of enjoyment, as is proper, with all — with dogs, with the fallen and with the outcastes who dwell at the edge. He should not hold even his own wife as a possession, for it is from her that men take up the thought that a thing is their own.
+tel: భోగ్య వస్తువులను కుక్కలకు, పతితులకు, అంతమున నివసించు చండాలురకు కూడ తగినట్లు పంచిపెట్టవలెను. తన ఒక్క భార్యను కూడ తన సొత్తుగా భావించరాదు. ఏలయనగా మనుష్యులకు ఇది నాది అను పట్టుదల ఆమె వలననే కలుగుచున్నది.
+hi: भोग की वस्तुओं को कुत्तों, पतितों और अन्त में रहने वाले चाण्डालों तक यथायोग्य बाँट दे। अपनी एक स्त्री को भी अपनी सम्पत्ति न माने, क्योंकि मनुष्यों का यह मेरा है ऐसा आग्रह उसी से होता है।
 
 --- verse 12 ---
 deva:
@@ -114,6 +147,9 @@ deva:
 iast:
 jahyād yadarthe svaprāṇānhanyād vā pitaraṁ gurum|
 tasyāṁ svatvaṁ striyāṁ jahyād yastena hyajito jitaḥ||
+en: A man will give up his own life for her sake, or will even kill his father or his teacher. In that woman he should give up the sense of ownership. The man who gives it up has conquered what no one else conquers.
+tel: ఏ స్త్రీ కోసము మనుష్యుడు తన ప్రాణములను విడుచును, తండ్రిని గురువును చంపును, ఆ స్త్రీయందు స్వత్వమును విడిచిపెట్టవలెను. దానిని విడిచినవాడు ఎవరికిని జయింపరానిదానిని జయించినవాడు.
+hi: जिसके लिए मनुष्य अपने प्राण त्याग देता है, अपने पिता और गुरु को भी मार डालता है, उस स्त्री में वह स्वत्व का भाव छोड़ दे। जो उसे छोड़ देता है वह उसे जीत लेता है जिसे कोई नहीं जीत पाता।
 
 --- verse 13 ---
 deva:
@@ -122,6 +158,9 @@ deva:
 iast:
 kṛmiviḍbhasmaniṣṭhāntaṁ kvedaṁ tucchaṁ kalevaram|
 kva tadīyaratirbhāryā kvāyamātmā nabhaśchadiḥ||
+en: Where is this low body, which ends as worms, as dung or as ashes? Where is the wife who is the delight of that body? And where is this self, which covers even the sky?
+tel: పురుగులుగా, మలముగా, బూడిదగా అంతమగు ఈ తుచ్ఛమైన శరీరము ఎక్కడ? ఆ శరీరమునకు ప్రియమైన భార్య ఎక్కడ? ఆకాశమును కూడ కప్పునట్టి ఈ ఆత్మ ఎక్కడ?
+hi: कीड़े, विष्ठा और राख में समाप्त होने वाला यह तुच्छ शरीर कहाँ? उस शरीर की प्रिय स्त्री कहाँ? और आकाश को भी ढकने वाला यह आत्मा कहाँ?
 
 --- verse 14 ---
 deva:
@@ -130,6 +169,9 @@ deva:
 iast:
 siddhairyajñāvaśiṣṭārthaiḥ kalpayed vṛttimātmanaḥ|
 śeṣe svatvaṁ tyajanprājñaḥ padavīṁ mahatāmiyāt||
+en: He should arrange his own livelihood from the things that remain after the sacrifice. The wise man gives up ownership in all that is left over. So he reaches the path of the great ones.
+tel: యజ్ఞము పూర్తియైన పిమ్మట మిగిలిన వస్తువులతో తన జీవనమును నడుపుకొనవలెను. మిగిలినదానియందు స్వత్వమును విడిచిపెట్టు ప్రాజ్ఞుడు మహాత్ముల మార్గమును పొందును.
+hi: यज्ञ से बचे हुए पदार्थों से वह अपनी जीविका चलाए। शेष में स्वत्व का त्याग करने वाला बुद्धिमान् महापुरुषों के मार्ग को प्राप्त करता है।
 
 --- verse 15 ---
 deva:
@@ -138,6 +180,9 @@ deva:
 iast:
 devānṛṣīn nṛbhūtāni pitṝnātmānamanvaham|
 svavṛttyāgatavittena yajeta puruṣaṁ pṛthak||
+en: Day by day, with the wealth that comes from his own livelihood, he should worship the gods, the sages, men, the other beings, the forefathers and himself. In each of them he should worship the Puruṣa separately.
+tel: ప్రతిదినము తన వృత్తి వలన వచ్చిన ధనముతో దేవతలను, ఋషులను, మనుష్యులను, ఇతర ప్రాణులను, పితృదేవతలను, తనను పూజించవలెను. వారిలో ఒక్కొక్కరియందు పురుషుని వేరువేరుగా పూజించవలెను.
+hi: प्रतिदिन अपनी वृत्ति से आए धन के द्वारा वह देवताओं, ऋषियों, मनुष्यों, अन्य प्राणियों, पितरों और अपनी पूजा करे। इन सबमें वह पुरुष की अलग अलग पूजा करे।
 
 --- verse 16 ---
 deva:
@@ -146,6 +191,9 @@ deva:
 iast:
 yarhyātmano'dhikārādyāḥ sarvāḥ syuryajñasampadaḥ|
 vaitānikena vidhinā agnihotrādinā yajet||
+en: When he has the right to sacrifice and all the means for it, he should worship by the vaitānika rule, with the agnihotra and the other rites.
+tel: తనకు యజ్ఞమునకు అధికారము మొదలుకొని సమస్త సాధనములు కలిగినప్పుడు, వైతానిక విధి ప్రకారము అగ్నిహోత్రము మొదలైన కర్మలతో పూజించవలెను.
+hi: जब उसे यज्ञ का अधिकार और यज्ञ की सारी सामग्री प्राप्त हो, तब वह वैतानिक विधि से अग्निहोत्र आदि के द्वारा पूजा करे।
 
 --- verse 17 ---
 deva:
@@ -154,6 +202,9 @@ deva:
 iast:
 na hyagnimukhato'yaṁ vai bhagavānsarvayajñabhuk|
 ijyeta haviṣā rājanyathā vipramukhe hutaiḥ||
+en: O king, this Lord is the enjoyer of all sacrifices. He is not worshipped by oblations poured into the mouth of the fire as much as he is worshipped by what is offered into the mouth of a brāhmaṇa.
+tel: ఓ రాజా, ఈ భగవంతుడు సమస్త యజ్ఞములను అనుభవించువాడు. అగ్ని ముఖమునందు అర్పించిన హవిస్సుల వలన ఆయన అంతగా పూజింపబడడు. విప్రుని ముఖమునందు అర్పించిన వస్తువుల వలన ఎక్కువగా పూజింపబడును.
+hi: हे राजन्, यह भगवान् सब यज्ञों के भोक्ता हैं। अग्नि के मुख में डाले हुए हविष्य से वे उतने पूजित नहीं होते, जितने ब्राह्मण के मुख में अर्पित पदार्थों से होते हैं।
 
 --- verse 18 ---
 deva:
@@ -162,6 +213,9 @@ deva:
 iast:
 tasmād brāhmaṇadeveṣu martyādiṣu yathārhataḥ|
 taistaiḥ kāmairyajasvainaṁ kṣetrajñaṁ brāhmaṇānanu||
+en: Therefore worship this Kṣetrajña with such desirable things as each one deserves. Worship him in the brāhmaṇas, who are gods, and after the brāhmaṇas in men and in the other beings.
+tel: కావున ఈ క్షేత్రజ్ఞుని ఒక్కొక్కరి అర్హతను అనుసరించి ఆయా ఇష్ట వస్తువులతో పూజింపుము. దేవతలైన బ్రాహ్మణులయందు ఆయనను పూజింపుము, బ్రాహ్మణుల తరువాత మనుష్యులయందును ఇతర ప్రాణులయందును పూజింపుము.
+hi: इसलिए इस क्षेत्रज्ञ की पूजा, जिसकी जितनी योग्यता हो उसके अनुसार उन उन इष्ट पदार्थों से करो। देवता रूप ब्राह्मणों में उनकी पूजा करो, और ब्राह्मणों के पश्चात् मनुष्यों तथा अन्य प्राणियों में करो।
 
 --- verse 19 ---
 deva:
@@ -170,6 +224,9 @@ deva:
 iast:
 kuryādāparapakṣīyaṁ māsi prauṣṭhapade dvijaḥ|
 śrāddhaṁ pitroryathāvittaṁ tadbandhūnāṁ ca vittavān||
+en: In the dark fortnight of the month Prauṣṭhapada the twice-born should perform the śrāddha of his father and mother according to his means. One who has wealth should perform it for their relatives also.
+tel: ప్రౌష్ఠపద మాసమునందు అపర పక్షమున ద్విజుడు తన తలిదండ్రులకు తన ధనమునకు తగినట్లు శ్రాద్ధమును చేయవలెను. ధనము కలవాడు వారి బంధువులకును చేయవలెను.
+hi: प्रौष्ठपद मास के अपर पक्ष में द्विज अपने माता पिता का श्राद्ध अपने धन के अनुसार करे। जिसके पास धन हो वह उनके बन्धुओं का भी श्राद्ध करे।
 
 --- verse 20 ---
 deva:
@@ -178,6 +235,9 @@ deva:
 iast:
 ayane viṣuve kuryād vyatīpāte dinakṣaye|
 candrādityoparāge ca dvādaśīśravaṇeṣu ca||
+en: He should perform it at the beginning of an ayana, on the viṣuva day, at a vyatīpāta, at the close of a day, at an eclipse of the moon or of the sun, and on the dvādaśī days and the Śravaṇa days.
+tel: అయనము ఆరంభమున, విషువ దినమున, వ్యతీపాతమున, దినము క్షయమగు సమయమున, చంద్ర సూర్య గ్రహణములయందు, ద్వాదశి దినములయందు, శ్రవణ నక్షత్ర దినములయందు దానిని చేయవలెను.
+hi: अयन के आरम्भ में, विषुव के दिन, व्यतीपात में, दिन के क्षय के समय, चन्द्र और सूर्य के ग्रहण में, तथा द्वादशी और श्रवण के दिनों में वह श्राद्ध करे।
 
 --- verse 21 ---
 deva:
@@ -186,6 +246,9 @@ deva:
 iast:
 tṛtīyāyāṁ śuklapakṣe navamyāmatha kārtike|
 catasṛṣvapyaṣṭakāsu hemante śiśire tathā||
+en: He should perform it on the tṛtīyā of the bright fortnight, and on the navamī in the month of Kārtika. He should perform it on all four aṣṭakās as well, in Hemanta and in Śiśira.
+tel: శుక్ల పక్ష తృతీయనాడు, కార్తిక మాసమున నవమినాడు దానిని చేయవలెను. హేమంత ఋతువునందును శిశిర ఋతువునందును వచ్చు నాలుగు అష్టకలయందును చేయవలెను.
+hi: शुक्ल पक्ष की तृतीया को और कार्तिक मास की नवमी को वह श्राद्ध करे। हेमन्त और शिशिर ऋतु की चारों अष्टकाओं में भी करे।
 
 --- verse 22 ---
 deva:
@@ -194,6 +257,9 @@ deva:
 iast:
 māghe ca sitasaptamyāṁ maghārākāsamāgame|
 rākayā cānumatyā vā māsarkṣāṇi yutānyapi||
+en: He should perform it on the bright seventh in the month of Māgha, and when Maghā comes together with the full moon. He should perform it also on the asterisms from which the months take their names, when they are joined with rākā or with anumati.
+tel: మాఘ మాసమున శుక్ల సప్తమినాడు, మఘా నక్షత్రము పూర్ణిమతో కలిసినప్పుడు దానిని చేయవలెను. మాసములకు పేరు ఇచ్చిన నక్షత్రములు రాకతో లేక అనుమతితో కలిసినప్పుడును చేయవలెను.
+hi: माघ मास की शुक्ल सप्तमी को और मघा नक्षत्र के पूर्णिमा से मिलने पर वह श्राद्ध करे। जिन नक्षत्रों से मासों के नाम बने हैं, वे राका या अनुमति से युक्त हों तब भी करे।
 
 --- verse 23 ---
 deva:
@@ -202,6 +268,9 @@ deva:
 iast:
 dvādaśyāmanurādhā syācchravaṇastisra uttarāḥ|
 tisṛṣvekādaśī vāsu janmarkṣaśroṇayogayuk||
+en: He should perform it on a dvādaśī on which Anurādhā, Śravaṇa or the three Uttarā asterisms fall, and on an ekādaśī that falls on those three. He should perform it on a day joined with his own birth asterism or with Śroṇā.
+tel: అనురాధ, శ్రవణము లేక మూడు ఉత్తరా నక్షత్రములు ద్వాదశినాడు వచ్చినప్పుడు దానిని చేయవలెను. ఆ మూడు నక్షత్రములయందు ఏకాదశి వచ్చినప్పుడును చేయవలెను. తన జన్మ నక్షత్రము లేక శ్రోణా నక్షత్రము కలిసిన దినమునందును చేయవలెను.
+hi: जिस द्वादशी को अनुराधा, श्रवण अथवा तीन उत्तरा नक्षत्र पड़ें, उस दिन वह श्राद्ध करे। उन तीनों नक्षत्रों में एकादशी हो तब भी करे। अपने जन्म नक्षत्र या श्रोणा नक्षत्र के योग वाले दिन भी करे।
 
 --- verse 24 ---
 deva:
@@ -210,6 +279,9 @@ deva:
 iast:
 ta ete śreyasaḥ kālā nṛṇāṁ śreyovivardhanāḥ|
 kuryāt sarvātmanaiteṣu śreyo'moghaṁ tadāyuṣaḥ||
+en: These are the times that bring good to men, and they increase that good. On these days a man should do good with his whole heart. Then the good of his life does not go in vain.
+tel: ఇవి మనుష్యులకు శ్రేయస్సును కలిగించు కాలములు, శ్రేయస్సును వృద్ధి చేయునవి. ఈ కాలములయందు పూర్ణ మనస్సుతో శ్రేయస్కరమైన కర్మను చేయవలెను. అప్పుడు అతని ఆయువు వలన కలుగు శ్రేయస్సు వ్యర్థము కాదు.
+hi: ये काल मनुष्यों के लिए कल्याणकारी हैं और उनके कल्याण को बढ़ाते हैं। इन दिनों में मनुष्य पूरे मन से कल्याण का कर्म करे। तब उसके जीवन का कल्याण व्यर्थ नहीं होता।
 
 --- verse 25 ---
 deva:
@@ -218,6 +290,9 @@ deva:
 iast:
 eṣu snānaṁ japo homo vrataṁ devadvijārcanam|
 pitṛdevanṛbhūtebhyo yad dattaṁ taddhyanaśvaram||
+en: On these days bathing, japa, homa, vrata and the worship of the gods and of the twice-born, and whatever is given to the forefathers, to the gods, to men and to the other beings — all of this is imperishable.
+tel: ఈ కాలములయందు స్నానము, జపము, హోమము, వ్రతము, దేవతల పూజ, ద్విజుల పూజ, పితృదేవతలకు, దేవతలకు, మనుష్యులకు, ఇతర ప్రాణులకు ఇచ్చినది — ఇవి అన్నియు నాశము లేనివి.
+hi: इन दिनों में स्नान, जप, होम, व्रत, देवताओं और द्विजों की पूजा, तथा पितरों, देवताओं, मनुष्यों और अन्य प्राणियों को जो दिया जाए — यह सब अविनाशी है।
 
 --- verse 26 ---
 deva:
@@ -226,6 +301,9 @@ deva:
 iast:
 saṁskārakālo jāyāyā apatyasyātmanastathā|
 pretasaṁsthā mṛtāhaśca karmaṇyabhyudaye nṛpa||
+en: O king, the time of a saṁskāra for the wife, for the child or for oneself is such a time as well. So are the funeral rites and the day of a death. So is a rite done for prosperity.
+tel: ఓ రాజా, భార్యకు, సంతానమునకు, తనకు సంస్కారము జరుగు కాలమును అట్టి కాలమే. ప్రేత సంస్కారములును, మరణించిన దినమును అట్టివే. అభ్యుదయము కోరి చేయు కర్మయు అట్టిదే.
+hi: हे राजन्, स्त्री का, सन्तान का और अपना संस्कार जिस समय हो, वह भी ऐसा ही काल है। प्रेत संस्कार और मृत्यु का दिन भी ऐसे ही हैं। अभ्युदय के लिए किया जाने वाला कर्म भी ऐसा ही है।
 
 --- verse 27 ---
 deva:
@@ -234,6 +312,9 @@ deva:
 iast:
 atha deśānpravakṣyāmi dharmādiśreyaāvahān|
 sa vai puṇyatamo deśaḥ satpātraṁ yatra labhyate||
+en: Now I shall speak of the places that bring dharma and the other goods. That place is the most holy in which a worthy recipient is found.
+tel: ఇప్పుడు ధర్మము మొదలైన శ్రేయస్సును కలిగించు దేశములను చెప్పుదును. సత్పాత్రుడు ఎక్కడ లభించునో ఆ దేశమే మిక్కిలి పుణ్యమైనది.
+hi: अब मैं उन स्थानों को कहूँगा जो धर्म आदि कल्याण को लाते हैं। जिस स्थान में सत्पात्र मिल जाए वही सबसे अधिक पवित्र स्थान है।
 
 --- verse 28 ---
 deva:
@@ -242,6 +323,9 @@ deva:
 iast:
 bimbaṁ bhagavato yatra sarvametaccarācaram|
 yatra ha brāhmaṇakulaṁ tapovidyādayānvitam||
+en: That place is holy where there is an image of the Lord, whose form is all this world of moving and unmoving things. So is the place where there is a family of brāhmaṇas joined with tapas, with learning and with compassion.
+tel: ఈ చరాచర జగత్తు అంతయు ఎవని స్వరూపమో, ఆ భగవంతుని ప్రతిమ ఎక్కడ ఉండునో ఆ స్థలము పుణ్యమైనది. తపస్సు, విద్య, దయ కలిగిన బ్రాహ్మణ కులము ఎక్కడ ఉండునో ఆ స్థలమును అట్టిదే.
+hi: जहाँ भगवान् की प्रतिमा हो, जिनका स्वरूप यह सम्पूर्ण चराचर जगत् है, वह स्थान पवित्र है। जहाँ तप, विद्या और दया से युक्त ब्राह्मणों का कुल हो, वह स्थान भी ऐसा ही है।
 
 --- verse 29 ---
 deva:
@@ -250,6 +334,9 @@ deva:
 iast:
 yatra yatra harerarcā sa deśaḥ śreyasāṁ padam|
 yatra gaṅgādayo nadyaḥ purāṇeṣu ca viśrutāḥ||
+en: Wherever there is the worship of Hari, that place is the abode of all good things. So is the place where the rivers flow, the Gaṅgā and the others that are famed in the Purāṇas.
+tel: హరి అర్చ ఎక్కడ ఎక్కడ ఉండునో ఆ దేశము శ్రేయస్సులకు నెలవు. గంగ మొదలైన, పురాణములలో ప్రసిద్ధి పొందిన నదులు ఎక్కడ ప్రవహించునో ఆ దేశమును అట్టిదే.
+hi: जहाँ जहाँ हरि की अर्चा हो, वह स्थान सब कल्याणों का घर है। जहाँ गङ्गा आदि पुराणों में प्रसिद्ध नदियाँ हों, वह स्थान भी ऐसा ही है।
 
 --- verse 30 ---
 deva:
@@ -258,6 +345,9 @@ deva:
 iast:
 sarāṁsi puṣkarādīni kṣetrāṇyarhāśritānyuta|
 kurukṣetraṁ gayaśiraḥ prayāgaḥ pulahāśramaḥ||
+en: So are the lakes, Puṣkara and the rest, and the kṣetras where worthy ones dwell. So are Kurukṣetra, Gayaśiras, Prayāga and Pulahāśrama.
+tel: పుష్కరము మొదలైన సరస్సులును, పూజ్యులు ఆశ్రయించిన క్షేత్రములును అట్టివే. కురుక్షేత్రము, గయశిరస్సు, ప్రయాగ, పులహాశ్రమము అట్టివే.
+hi: पुष्कर आदि सरोवर और पूज्य पुरुषों के आश्रित क्षेत्र भी ऐसे ही हैं। कुरुक्षेत्र, गयशिर, प्रयाग और पुलहाश्रम भी ऐसे ही हैं।
 
 --- verse 31 ---
 deva:
@@ -266,6 +356,9 @@ deva:
 iast:
 naimiṣaṁ phālgunaṁ setuḥ prabhāso'tha kuśasthalī|
 vārāṇasī madhupurī pampā bindusarastathā||
+en: So are Naimiṣa, Phālguna, Setu, Prabhāsa, Kuśasthalī, Vārāṇasī, Madhupurī, Pampā and Bindusaras.
+tel: నైమిషము, ఫాల్గునము, సేతువు, ప్రభాసము, కుశస్థలి, వారాణసి, మధుపురి, పంపా, బిందుసరస్సు అట్టివే.
+hi: नैमिष, फाल्गुन, सेतु, प्रभास, कुशस्थली, वाराणसी, मधुपुरी, पम्पा और बिन्दुसर भी ऐसे ही हैं।
 
 --- verse 32 ---
 deva:
@@ -274,6 +367,9 @@ deva:
 iast:
 nārāyaṇāśramo nandā sītārāmāśramādayaḥ|
 sarve kulācalā rājanmahendramalayādayaḥ||
+en: So are Nārāyaṇāśrama, Nandā, and the āśramas of Sītā and Rāma and the rest. O king, so are all the kulācala mountains, Mahendra, Malaya and the others.
+tel: నారాయణాశ్రమము, నందా, సీతారాముల ఆశ్రమములు మొదలైనవి అట్టివే. ఓ రాజా, మహేంద్రము, మలయము మొదలైన కులాచలములు అన్నియు అట్టివే.
+hi: नारायणाश्रम, नन्दा तथा सीता और राम के आश्रम आदि भी ऐसे ही हैं। हे राजन्, महेन्द्र और मलय आदि सब कुलाचल पर्वत भी ऐसे ही हैं।
 
 --- verse 33 ---
 deva:
@@ -284,6 +380,9 @@ iast:
 ete puṇyatamā deśā harerarcāśritāśca ye|
 etāndeśān niṣeveta śreyaskāmo hyabhīkṣṇaśaḥ|
 dharmo hyatrehitaḥ puṁsāṁ sahasrādhiphalodayaḥ||
+en: These are the most holy places, and so are those in which the worship of Hari abides. One who desires his own good should resort to these places again and again. Dharma practised here brings men fruit a thousand times greater.
+tel: ఇవి మిక్కిలి పుణ్యమైన దేశములు. హరి అర్చ ఉండు దేశములును అట్టివే. శ్రేయస్సును కోరువాడు ఈ దేశములను మరల మరల ఆశ్రయించవలెను. ఇక్కడ చేసిన ధర్మము మనుష్యులకు వేయి రెట్లు అధికమైన ఫలమును ఇచ్చును.
+hi: ये सबसे अधिक पवित्र स्थान हैं, और वे भी जहाँ हरि की अर्चा हो। कल्याण चाहने वाला इन स्थानों का बार बार सेवन करे। यहाँ किया हुआ धर्म मनुष्यों को सहस्र गुना अधिक फल देता है।
 
 --- verse 34 ---
 deva:
@@ -292,6 +391,9 @@ deva:
 iast:
 pātraṁ tvatra niruktaṁ vai kavibhiḥ pātravittamaiḥ|
 harirevaika urvīśa yanmayaṁ vai carācaram||
+en: O lord of the earth, the seers who know best who is a worthy recipient have declared here that Hari alone is the recipient. All this world of moving and unmoving things is made of him.
+tel: ఓ భూమికి ప్రభువా, పాత్రమును బాగుగా ఎరిగిన కవులు ఇక్కడ పాత్రుడు హరి ఒక్కడే అని నిర్ణయించిరి. ఈ చరాచర జగత్తు అంతయు ఆయనయే.
+hi: हे पृथ्वीपति, पात्र को सबसे अच्छी तरह जानने वाले कवियों ने यहाँ यह निर्णय किया है कि पात्र एक हरि ही हैं। यह सम्पूर्ण चराचर जगत् उन्हीं से बना है।
 
 --- verse 35 ---
 deva:
@@ -300,14 +402,20 @@ deva:
 iast:
 devarṣyarhatsu vai satsu tatra brahmātmajādiṣu|
 rājanyadagrapūjāyāṁ mataḥ pātratayācyutaḥ||
+en: O king, the gods, the sages, the worthy ones and the sons of Brahmā were all present there. Even so, at the first worship Acyuta alone was held to be the fit recipient.
+tel: ఓ రాజా, అక్కడ దేవతలు, ఋషులు, పూజ్యులు, బ్రహ్మ పుత్రులు మొదలైన సత్పురుషులు ఉండియు, అగ్రపూజయందు అచ్యుతుడే పాత్రుడని నిర్ణయింపబడెను.
+hi: हे राजन्, वहाँ देवता, ऋषि, पूज्य पुरुष और ब्रह्मा के पुत्र आदि सत्पुरुष उपस्थित थे। तो भी अग्रपूजा में अच्युत ही पात्र माने गए।
 
 --- verse 36 ---
 deva:
-जीवराशिभिराकीर्ण आण्डकोशाङ् घ्रिपो महान्।
+जीवराशिभिराकीर्ण आण्डकोशाङ्घ्रिपो महान्।
 तन्मूलत्वादच्युतेज्या सर्वजीवात्मतर्पणम्॥
 iast:
-jīvarāśibhirākīrṇa āṇḍakośāṅ ghripo mahān|
+jīvarāśibhirākīrṇa āṇḍakośāṅghripo mahān|
 tanmūlatvādacyutejyā sarvajīvātmatarpaṇam||
+en: The great tree that is the shell of the cosmic egg is covered with hosts of living beings. Acyuta is the root of that tree. Therefore the worship of Acyuta satisfies the selves of all living beings.
+tel: జీవరాశులతో నిండిన ఈ అండకోశమే ఒక గొప్ప వృక్షము. ఆ వృక్షమునకు మూలము అచ్యుతుడే. కావున అచ్యుతుని పూజ సమస్త జీవుల ఆత్మలను తృప్తిపరచును.
+hi: जीवों के समूह से भरा हुआ यह अण्डकोश एक महान् वृक्ष है। उस वृक्ष का मूल अच्युत ही हैं। इसलिए अच्युत की पूजा सब जीवों के आत्मा को तृप्त करती है।
 
 --- verse 37 ---
 deva:
@@ -316,6 +424,9 @@ deva:
 iast:
 purāṇyanena sṛṣṭāni nṛtiryagṛṣidevatāḥ|
 śete jīvena rūpeṇa pureṣu puruṣo hyasau||
+en: The cities of the body were created by him — those of men, of animals, of sages and of gods. That Puruṣa lies within those cities in the form of the jīva.
+tel: మనుష్యులు, తిర్యక్కులు, ఋషులు, దేవతలు అను పురములను ఆయనే సృష్టించెను. ఆ పురుషుడు ఆ పురములలో జీవ రూపముతో శయనించి యున్నాడు.
+hi: मनुष्य, पशु पक्षी, ऋषि और देवता रूप पुर उसी ने रचे हैं। वह पुरुष उन पुरों में जीव रूप से शयन करता है।
 
 --- verse 38 ---
 deva:
@@ -324,6 +435,9 @@ deva:
 iast:
 teṣveṣu bhagavān rājaṁstāratamyena vartate|
 tasmāt pātraṁ hi puruṣo yāvānātmā yatheyate||
+en: O king, in all of these the Lord dwells in differing degrees. Therefore a person is a worthy recipient in the measure in which the Self is seen in him.
+tel: ఓ రాజా, ఈ అన్నియందును భగవంతుడు తారతమ్యముతో ఉండును. కావున ఏ పురుషునియందు ఆత్మ ఎంత ప్రకాశించునో అతడు అంత పాత్రుడు.
+hi: हे राजन्, इन सब में भगवान् तारतम्य से रहते हैं। इसलिए जिस पुरुष में आत्मा जितना प्रकट होता है, वह उतना ही पात्र है।
 
 --- verse 39 ---
 deva:
@@ -332,6 +446,9 @@ deva:
 iast:
 dṛṣṭvā teṣāṁ mitho nṝṇāmavajñānātmatāṁ nṛpa|
 tretādiṣu harerarcā kriyāyai kavibhiḥ kṛtā||
+en: O king, the seers saw that men disregard one another. For that reason they made the image of Hari for worship in the Tretā and the ages that followed.
+tel: ఓ రాజా, మనుష్యులు ఒకరిని ఒకరు అవమానించుకొనుటను కవులు చూచిరి. అందువలన త్రేతాయుగము మొదలైన యుగములలో పూజ కోసము హరి అర్చను ఏర్పాటు చేసిరి.
+hi: हे राजन्, कवियों ने देखा कि मनुष्य एक दूसरे का अनादर करते हैं। इसी कारण उन्होंने त्रेता आदि युगों में पूजा के लिए हरि की अर्चा बनाई।
 
 --- verse 40 ---
 deva:
@@ -340,6 +457,9 @@ deva:
 iast:
 tato'rcāyāṁ hariṁ kecit saṁśraddhāya saparyayā|
 upāsata upāstāpi nārthadā puruṣadviṣām||
+en: Since then some worship Hari in the image, with faith and with service. But such worship bears no fruit for those who hate other persons.
+tel: అప్పటినుండి కొందరు శ్రద్ధతో, ఉపచారములతో అర్చయందు హరిని ఉపాసించుచున్నారు. అయినను ఇతర పురుషులను ద్వేషించువారికి ఆ ఉపాసన ఫలమును ఇవ్వదు.
+hi: तब से कुछ लोग श्रद्धा और सेवा के साथ अर्चा में हरि की उपासना करते हैं। परन्तु जो दूसरे पुरुषों से द्वेष करते हैं, उनके लिए वह उपासना फल नहीं देती।
 
 --- verse 41 ---
 deva:
@@ -348,6 +468,9 @@ deva:
 iast:
 puruṣeṣvapi rājendra supātraṁ brāhmaṇaṁ viduḥ|
 tapasā vidyayā tuṣṭyā dhatte vedaṁ harestanum||
+en: O best of kings, among persons they hold the brāhmaṇa to be the most worthy recipient. By tapas, by learning and by contentment he bears the Veda, which is the body of Hari.
+tel: ఓ రాజేంద్రుడా, పురుషులలో బ్రాహ్మణుడే సుపాత్రుడని చెప్పుదురు. అతడు తపస్సుతో, విద్యతో, సంతృప్తితో హరి శరీరమైన వేదమును ధరించును.
+hi: हे राजेन्द्र, पुरुषों में ब्राह्मण को ही सुपात्र कहते हैं। वह तप से, विद्या से और सन्तोष से हरि के शरीर रूप वेद को धारण करता है।
 
 --- verse 42 ---
 deva:
@@ -356,9 +479,15 @@ deva:
 iast:
 nanvasya brāhmaṇā rājankṛṣṇasya jagadātmanaḥ|
 punantaḥ pādarajasā trilokīṁ daivataṁ mahat||
+en: Indeed, O king, the brāhmaṇas belong to this Kṛṣṇa, who is the self of the world. With the dust of their feet they purify the three worlds. They are the great deity.
+tel: ఓ రాజా, జగత్తునకు ఆత్మయైన ఈ కృష్ణునివారే బ్రాహ్మణులు. వారు తమ పాద ధూళితో మూడు లోకములను పవిత్రము చేయుచున్నారు. వారే గొప్ప దేవత.
+hi: हे राजन्, जगत् के आत्मा इस कृष्ण के ही ब्राह्मण हैं। वे अपने चरणों की धूल से तीनों लोकों को पवित्र करते हैं। वे ही महान् देवता हैं।
 
 --- verse none ---
 deva:
 इति श्रीमद्भागवते महापुराणे पारमहंस्यां संहितायां सप्तमस्कन्धे सदाचारनिर्णयो नाम चतुर्दशोऽध्यायः॥ १४॥
 iast:
 iti śrīmadbhāgavate mahāpurāṇe pāramahaṁsyāṁ saṁhitāyāṁ saptamaskandhe sadācāranirṇayo nāma caturdaśo'dhyāyaḥ|| 14||
+en: Thus ends the fourteenth adhyāya, named the determination of good conduct, in the seventh skandha of the Śrīmad Bhāgavata Mahāpurāṇa, the saṁhitā of the paramahaṁsas.
+tel: ఇది శ్రీమద్భాగవత మహాపురాణమునందు, పరమహంసల సంహితయందు, సప్తమస్కంధమునందు సదాచార నిర్ణయము అను చతుర్దశాధ్యాయము.
+hi: इस प्रकार श्रीमद्भागवत महापुराण की परमहंसों की संहिता के सप्तम स्कन्ध में सदाचार का निर्णय नामक चौदहवाँ अध्याय समाप्त हुआ।
