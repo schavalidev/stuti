@@ -600,6 +600,13 @@ export const STUTI_VRATA = (function () {
     },
 
     /* ---------------------------------------------------------- */
+      /* Second printed witness for the day and the offering: Vratarāja of Viśvanātha,
+         Khemraj ed., printed pp. 250-251, the Nāgapañcamī vrata quoted from the Prabhāsa
+         Khaṇḍa through Hemādri. It sets the vrata in Bhādrapada śukla pañcamī but closes
+         by enjoining the worship of the nāga kings especially on Śrāvaṇa śukla 5, with
+         milk or a milk food as the offering, and names the twelve great nāgas worshipped
+         month by month from Śrāvaṇa, where Ananta is the chief. The rite in the units is
+         the household one at stotras/puja/smarta/49_naga_panchami_puja_vidhi.txt. */
     {
       id: "naga-panchami", deity: "subrahmanya", kind: "vratam",
       name: { roman: "Nāga Pañcamī", deva: "नाग पञ्चमी", tel: "నాగ పంచమి" },
@@ -608,11 +615,24 @@ export const STUTI_VRATA = (function () {
       duration: { roman: "Forenoon", tel: "పూర్వాహ్ణం" },
       tagline: { roman: "Five-hooded nāgas drawn in turmeric and sandal, worshipped where they are drawn.", tel: "పసుపు కలిపిన చందనంతో గీసిన అయిదు పడగల నాగులు — గీసిన చోటనే పూజ." },
       who: { roman: "The household; kept for protection from serpents and the family's health.", tel: "ఇల్లంతా; సర్పభయ నివారణ, ఇంటి ఆరోగ్యం కోసం." },
+      significance: [
+        { roman: "Thirteen serpent kings are worshipped, together with their wives — Ananta, Vāsuki, Śeṣa, Padma, Kambala, Kārkoṭaka, Bhujaṅga, Aśvatara, Dhṛtarāṣṭra, Śaṅkhapāla, Kālīya, Takṣaka and Piṅgala. In Śrāvaṇa, Ananta is the chief among them.", tel: "పదమూడు నాగరాజులను, వారి పత్నులతో కలిపి పూజిస్తారు — అనంత, వాసుకి, శేష, పద్మ, కంబళ, కర్కోటక, భుజంగ, అశ్వతర, ధృతరాష్ట్ర, శంఖపాల, కాళియ, తక్షక, పింగళ. శ్రావణంలో వారిలో అనంతుడే ప్రధానం." },
+        { roman: "The nāgas are worshipped where they are drawn. Nothing is installed, and nothing is carried away when the worship is over.", tel: "గీసిన చోటనే నాగులను పూజిస్తారు. ప్రతిష్ఠ ఉండదు, పూజ ముగిసిన తరువాత ఎక్కడికీ తరలించరు." },
+        { roman: "Milk, or something made of milk, is this day's offering above all others.", tel: "ఈ రోజు అన్నిటికన్నా ముఖ్యమైన నివేదన పాలు, లేదా పాలతో చేసినవి." },
+        { roman: "The prayer at the close asks pardon for any fault in the worship, and asks that the household may never have fear from the poison of serpents.", tel: "చివరి ప్రార్థన పూజలో జరిగిన లోపాలకు క్షమాపణ కోరుతుంది, ఇంటివారికి సర్పవిష భయం ఎప్పుడూ కలుగకూడదని వేడుకుంటుంది." },
+      ],
+      timeline: [
+        { t: { roman: "The day before", tel: "ముందు రోజు" }, d: { roman: "Clean the wall where the nāgas will be drawn, and gather the samagri. Those who keep it as a vrata take a single meal on the caturthī.", tel: "నాగులను గీసే గోడను శుభ్రం చేసి, సామగ్రి సిద్ధం చేయాలి. వ్రతంగా చేసేవారు చతుర్థి నాడు ఒంటిపూట భోజనం చేస్తారు." } },
+        { t: { roman: "Morning", tel: "ఉదయం" }, d: { roman: "Bathe, then draw the five-hooded nāgas on the wall with sandal paste mixed with turmeric.", tel: "స్నానం చేసి, పసుపు కలిపిన చందనంతో గోడపై అయిదు పడగల నాగులను గీయాలి." } },
+        { t: { roman: "Forenoon", tel: "పూర్వాహ్ణం" }, d: { roman: "Do the pūrvāṅga and the Gaṇapati pūjā first, then the services to the nāgas and to their wives.", tel: "ముందుగా పూర్వాంగం, గణపతి పూజ; తరువాత నాగులకు, వారి పత్నులకు ఉపచారాలు." } },
+        { t: { roman: "At the close", tel: "ముగింపులో" }, d: { roman: "Recite the nāga names, offer the milk and the godhuma nūka, say the prayer, and give the vāyana.", tel: "నాగ నామాలు చెప్పి, పాలు, గోధుమనూక నివేదించి, ప్రార్థన చేసి, వాయనం ఇవ్వాలి." } },
+      ],
       samagri: [
         { roman: "Turmeric mixed with sandal paste, to draw the nāgas", tel: "నాగులను గీయడానికి పసుపు కలిపిన చందనం" },
         { roman: "Pañcāmṛta — milk, curd, ghee, honey, sugar", tel: "పంచామృతం — పాలు, పెరుగు, నెయ్యి, తేనె, పంచదార" },
         { roman: "Dūrvā grass, flowers, akṣatas", tel: "దూర్వాలు, పువ్వులు, అక్షతలు" },
         { roman: "Godhuma nūka (cracked wheat) for the naivedyam", tel: "నైవేద్యానికి గోధుమనూక" },
+        { roman: "Milk, or something made of milk", tel: "పాలు, లేదా పాలతో చేసినవి" },
       ],
       vidhi: [
         { step: { roman: "Draw the nāgas", tel: "నాగులను గీయడం" }, detail: { roman: "On a wall, draw images of five-hooded nāgas with sandal paste mixed with turmeric.", tel: "పసుపు కలిపిన చందనంతో గోడపై అయిదు పడగలు కలిగిన నాగ చిత్రములు లిఖించాలి." } },
@@ -622,12 +642,30 @@ export const STUTI_VRATA = (function () {
       ],
       naivedya: [
         { item: { roman: "Panakam & vaḍapappu", tel: "పానకం, వడపప్పు" }, note: { roman: "Jaggery water and soaked moong — offered in every household before the rest.", tel: "బెల్లం నీరు, నానబెట్టిన పెసరపప్పు — ప్రతి ఇంటిలో అన్నిటికన్నా ముందు సమర్పించేవి." } },
+        { item: { roman: "Milk", tel: "పాలు" }, note: { roman: "Milk, or something made of milk — this day's offering above all others.", tel: "పాలు, లేదా పాలతో చేసినవి — ఈ రోజు అన్నిటికన్నా ముఖ్యమైన నివేదన." } },
         { item: { roman: "Godhuma nūka", tel: "గోధుమనూక" }, note: { roman: "Cracked wheat, offered after the nāga names are recited.", tel: "నాగ నామాలు ప్రార్థించిన తరువాత సమర్పించేది." } },
+      ],
+      dos: [
+        { roman: "Do the pūrvāṅga and the Gaṇapati pūjā first; this rite has no opening of its own.", tel: "ముందుగా పూర్వాంగం, గణపతి పూజ చేయాలి; ఈ పూజకు తన సొంత ఉపక్రమం లేదు." },
+        { roman: "Give turmeric and kuṅkuma to the serpents' wives; they are worshipped along with the nāgas.", tel: "నాగ పత్నులకు పసుపు, కుంకుమ ఇవ్వాలి; వారిని నాగులతో పాటే పూజిస్తారు." },
+        { roman: "Offer milk, or something made of milk, along with the godhuma nūka.", tel: "గోధుమనూకతో పాటు పాలు, లేదా పాలతో చేసినవి నివేదించాలి." },
+        { roman: "Draw the nāgas with five hoods, and worship them where they stand.", tel: "నాగులను అయిదు పడగలతో గీయాలి, గీసిన చోటనే పూజించాలి." },
+      ],
+      donts: [
+        { roman: "Do not begin the services before the pūrvāṅga and the Gaṇapati pūjā are done.", tel: "పూర్వాంగం, గణపతి పూజ పూర్తి కాకుండా ఉపచారాలు మొదలుపెట్టరాదు." },
+        { roman: "Do not offer the naivedyam before the nāga names have been recited.", tel: "నాగ నామాలు చెప్పకుండా నైవేద్యం పెట్టరాదు." },
       ],
       source: { roman: "Follows a widely kept Telugu household vidhi; the nāga image and its names vary slightly by family line.", tel: "తెలుగు గృహాలలో విస్తృతంగా పాటించే విధి; నాగ చిత్రం, నామాలు కుటుంబాన్ని బట్టి కొద్దిగా మారవచ్చు." },
     },
 
     /* ---------------------------------------------------------- */
+      /* Printed witness: Vratarāja of Viśvanātha, Khemraj ed., printed pp. 308-313 — the
+         rite from the Skānda Purāṇa and the forty-verse story from the Bhaviṣya Purāṇa.
+         Written out in full at stotras/puja/vrata/13_shitala_saptami_vrata_kalpam.txt.
+         The book keeps the day in the DARK fortnight of Śrāvaṇa (and records Hemādri's
+         Bhādrapada kṛṣṇa saptamī as a second opinion); find() here gives the bright
+         fortnight, which is the Telugu household reckoning. The two are not reconciled
+         and find() has not been moved — that is the maintainer's ruling to make. */
     {
       id: "shitala-saptami", deity: "devi", kind: "vratam",
       name: { roman: "Śītalā Saptamī", deva: "शीतला सप्तमी", tel: "శీతలా సప్తమి" },
@@ -636,15 +674,61 @@ export const STUTI_VRATA = (function () {
       duration: { roman: "Forenoon", tel: "పూర్వాహ్ణం" },
       tagline: { roman: "Śītalā Devī, coolness itself — her aṣṭakam read, and what stays cool offered.", tel: "చల్లదనమే రూపమైన శీతలాదేవి — శీతలాష్టకం చదివి, చల్లని పదార్థాలు నివేదించడం." },
       who: { roman: "Kept for health; said to cool the body's three tāpas (afflictions).", tel: "ఆరోగ్యం కోసం చేసేది; త్రితాపములను చల్లార్చుతుందని విశ్వాసం." },
+      significance: [
+        { roman: "Śītalā is worshipped against fever and against the diseases that break out on the skin. Her name means the cool one.", tel: "జ్వరం, చర్మంపై కలిగే వ్యాధుల నివారణకు శీతలాదేవిని పూజిస్తారు. ఆమె పేరుకే అర్థం చల్లనిది." },
+        { roman: "The fruit stated for the vrata is that the woman who keeps it shall never be widowed and never be parted from her husband; after that, children, grandchildren, wealth and grain.", tel: "ఈ వ్రతం చేసిన స్త్రీకి వైధవ్యం రాదని, భర్తతో ఎడబాటు కలుగదని, ఆ తరువాత సంతానం, మనుమలు, ధనధాన్యాలు కలుగుతాయని ఫలశ్రుతి." },
+        { roman: "Nothing in this rite is heated and nothing is new. The food offered is curd and rice with five kinds of cooked grain and ghee.", tel: "ఈ పూజలో ఏదీ వేడి చేయరు, ఏదీ కొత్తది కాదు. నివేదన పెరుగన్నం, అయిదు రకాల పక్వాన్నాలు, నెయ్యి." },
+        { roman: "Seven girls, called the seven gaurīs, are worshipped and fed.", tel: "సప్త గౌరులు అని పిలిచే ఏడుగురు కన్యలను పూజించి భోజనం పెడతారు." },
+      ],
+      timeline: [
+        { t: { roman: "The day before", tel: "ముందు రోజు" }, d: { roman: "Gather what is to be offered. The vow is made with whatever has actually been gathered, not with a fixed list.", tel: "సమర్పించవలసినవి సిద్ధం చేయాలి. సేకరించినవి ఏవైతే ఉన్నాయో వాటితోనే సంకల్పం; నియమిత జాబితా లేదు." } },
+        { t: { roman: "Morning", tel: "ఉదయం" }, d: { roman: "Bathe, mark the seat with an eight-petalled lotus, and set an unbroken pot upon it.", tel: "స్నానం చేసి, పీఠంపై అష్టదల పద్మం వేసి, దానిపై బీట లేని కలశాన్ని ఉంచాలి." } },
+        { t: { roman: "Midday", tel: "మధ్యాహ్నం" }, d: { roman: "The tithi taken is the one running at midday. Meditate on the goddess, then offer the services, the prayer and the special arghya.", tel: "మధ్యాహ్నం ఉన్న తిథినే గ్రహించాలి. అమ్మవారిని ధ్యానించి, ఉపచారాలు, ప్రార్థన, విశేష అర్ఘ్యం సమర్పించాలి." } },
+        { t: { roman: "Afterwards", tel: "తరువాత" }, d: { roman: "Worship the seven girls and feed them, then give the vāyana to a brāhmaṇa.", tel: "ఏడుగురు కన్యలను పూజించి భోజనం పెట్టి, తరువాత బ్రాహ్మణునికి వాయనం ఇవ్వాలి." } },
+      ],
+      samagri: [
+        { roman: "An unbroken pot — nothing cracked or chipped", tel: "బీట లేని కలశం — పగిలినది, చిట్లినది కాదు" },
+        { roman: "A seat marked with an eight-petalled lotus", tel: "అష్టదల పద్మం వేసిన పీఠం" },
+        { roman: "A golden image of Śītalā, set above the pot", tel: "కలశంపై ఉంచే సువర్ణ శీతలా ప్రతిమ" },
+        { roman: "Curd and rice, five kinds of cooked grain, and ghee", tel: "పెరుగన్నం, అయిదు రకాల పక్వాన్నాలు, నెయ్యి" },
+        { roman: "Sandal, flowers, incense, a lamp and akṣata", tel: "గంధం, పువ్వులు, ధూపం, దీపం, అక్షతలు" },
+        { roman: "Fruit, betel and a fee, for the vāyana", tel: "వాయనానికి పండ్లు, తాంబూలం, దక్షిణ" },
+        { roman: "Tāmbūlam for the seven girls who are fed", tel: "భోజనం పెట్టే ఏడుగురు కన్యలకు తాంబూలం" },
+      ],
+      vidhi: [
+        { step: { roman: "Saṅkalpa", tel: "సంకల్పం" }, detail: { roman: "State the month, the fortnight, the day, the place and your own gotra and name, then take the vow — for freedom from widowhood, for unbroken union with the husband, for children and grandchildren, and for wealth and grain.", tel: "మాసం, పక్షం, తిథి, స్థలం, తన గోత్రం, పేరు చెప్పి సంకల్పం చేయాలి — అవైధవ్యం, భర్తతో అవిచ్ఛిన్న సంయోగం, సంతానం, ధనధాన్యాల కోసం." } },
+        { step: { roman: "Kalaśa sthāpana", tel: "కలశ స్థాపన" }, detail: { roman: "Set an unbroken pot on a seat marked with an eight-petalled lotus, and a golden Śītalā above it.", tel: "అష్టదల పద్మం వేసిన పీఠంపై బీట లేని కలశం, దానిపై సువర్ణ శీతలా ప్రతిమ ఉంచాలి." } },
+        { step: { roman: "Dhyāna", tel: "ధ్యానం" }, detail: { roman: "Meditate with the verse beginning \"I bow to the goddess Śītalā\" — riding an ass, wearing no clothes, holding a broom and a water pot, with a winnowing fan upon her head.", tel: "'వందేఽహం శీతలాం దేవీం' అనే శ్లోకంతో ధ్యానించాలి — గాడిదపై ఆసీన, దిగంబర, చీపురు, కలశం ధరించి, శిరసుపై చేట కలిగినది." } },
+        { step: { roman: "The services", tel: "ఉపచారాలు" }, detail: { roman: "Offer the twenty-two services, from the invitation to the bowing, each with the one name-mantra, salutation to Śītalā. The food alone is offered with its own verse.", tel: "ఆవాహనం నుండి నమస్కారం వరకు ఇరవైరెండు ఉపచారాలను, ప్రతి ఒక్కటి 'ఓం శీతలాయై నమః' అనే నామ మంత్రంతోనే సమర్పించాలి. నైవేద్యం ఒక్కటి మాత్రం దాని సొంత శ్లోకంతో." } },
+        { step: { roman: "Prayer & special arghya", tel: "ప్రార్థన, విశేష అర్ఘ్యం" }, detail: { roman: "Pray with the verse beginning \"Śītalā, burn away my sin\", then give the special arghya with the verse beginning \"Śītalā, cool of form\".", tel: "'శీతలే తు దహ' అనే శ్లోకంతో ప్రార్థించి, 'శీతలే శీతలరూపే' అనే శ్లోకంతో విశేష అర్ఘ్యం ఇవ్వాలి." } },
+        { step: { roman: "Seven gaurīs & vāyana", tel: "సప్త గౌరులు, వాయనం" }, detail: { roman: "Worship the seven girls and feed them, taking care over it; then give the vāyana — curd, rice, fruit and a fee — to a brāhmaṇa.", tel: "ఏడుగురు కన్యలను పూజించి శ్రద్ధగా భోజనం పెట్టాలి; తరువాత పెరుగన్నం, పండ్లు, దక్షిణతో కూడిన వాయనాన్ని బ్రాహ్మణునికి ఇవ్వాలి." } },
+      ],
       naivedya: [
         { item: { roman: "Panakam & vaḍapappu", tel: "పానకం, వడపప్పు" }, note: { roman: "Jaggery water and soaked moong — offered in every household before the rest.", tel: "బెల్లం నీరు, నానబెట్టిన పెసరపప్పు — ప్రతి ఇంటిలో అన్నిటికన్నా ముందు సమర్పించేవి." } },
         { item: { roman: "Dosakāya (yellow cucumber)", tel: "దోసకాయ" }, note: { roman: "The cooling fruit of her naivedya.", tel: "శీతల నైవేద్యంలో భాగం." } },
         { item: { roman: "Dadhyodanam (curd rice)", tel: "దధ్యోదనం" }, note: { roman: "Offered cool, never heated.", tel: "చల్లగానే సమర్పించాలి, వేడి చేయరాదు." } },
       ],
-      source: { roman: "Read the Śītalāṣṭakam before the naivedya is offered; a Telugu household observance for Śrāvaṇa Saptamī.", tel: "నైవేద్యం పెట్టే ముందు శీతలాష్టకము చదువుకోవాలి; శ్రావణ సప్తమి నాటి తెలుగు గృహాచారం." },
+      stotras: [{ deity: "devi", m: "shitala" }],
+      dos: [
+        { roman: "Keep the worship at midday; the tithi taken is the one running then.", tel: "మధ్యాహ్నం పూజ చేయాలి; మధ్యాహ్నం ఉన్న తిథినే గ్రహించాలి." },
+        { roman: "Read the Śītalāṣṭakam; its first verse is this rite's meditation.", tel: "శీతలాష్టకం చదవాలి; దాని మొదటి శ్లోకమే ఈ పూజ ధ్యాన శ్లోకం." },
+        { roman: "Worship the seven girls and feed them before you eat.", tel: "భోజనానికి ముందు ఏడుగురు కన్యలను పూజించి వారికి భోజనం పెట్టాలి." },
+      ],
+      donts: [
+        { roman: "Do not heat what is offered, and do not offer anything new.", tel: "నివేదించేవి వేడి చేయరాదు, కొత్తవి సమర్పించరాదు." },
+        { roman: "Do not use a cracked or chipped pot.", tel: "పగిలిన లేదా చిట్లిన కలశం వాడరాదు." },
+        { roman: "Do not wait for a fixed list of materials; the vow is made with whatever has been gathered.", tel: "నియమిత సామగ్రి జాబితా కోసం ఆగరాదు; సేకరించినవి ఏవైతే ఉన్నాయో వాటితోనే సంకల్పం." },
+      ],
+      source: { roman: "A Smārta household rite for the Śrāvaṇa saptamī. North Indian practice keeps the day in the dark fortnight and many Telugu households in the bright; your own almanac decides. Read the Śītalāṣṭakam before the naivedya is offered.", tel: "శ్రావణ సప్తమి నాటి స్మార్త గృహాచారం. ఉత్తర భారత ఆచారంలో కృష్ణ పక్షంలో, చాలా తెలుగు ఇళ్లలో శుక్ల పక్షంలో ఆచరిస్తారు; మీ పంచాంగమే నిర్ణయం. నైవేద్యం పెట్టే ముందు శీతలాష్టకము చదువుకోవాలి." },
     },
 
     /* ---------------------------------------------------------- */
+      /* Printed witness: Vratarāja of Viśvanātha, Khemraj ed., printed pp. 884-887 — the
+         Sūrya vrata to be kept on a Sunday, from the Bhaviṣya Purāṇa, 53 verses, with the
+         book's own Hindi bhāṣā ṭīkā beside it. It is a year-long vrata with a name of the
+         sun for each month; for Śrāvaṇa (vv. 25-26) the name is Gabhasti, the naivedya is
+         saktu-pūrikā, the arghya is given with a cucumber, and three handfuls of saktu are
+         the prāśana. The twelve names and Saṁjñā are at vv. 39-41. */
     {
       id: "shravana-ravivaram", deity: "surya", kind: "vratam",
       name: { roman: "Śrāvaṇa Ravivāram", deva: "श्रावण रविवारम्", tel: "శ్రావణ ఆదివారం" },
@@ -655,6 +739,18 @@ export const STUTI_VRATA = (function () {
       duration: { roman: "Dawn to the forenoon arghya", tel: "ప్రాతఃకాలం నుండి పూర్వాహ్ణ అర్ఘ్యం వరకు" },
       tagline: { roman: "Sūrya drawn in red sandal on a betel leaf, and given arghya twelve times.", tel: "తమలపాకుపై ఎర్రచందనంతో గీసిన సూర్యుడు — పన్నెండు అర్ఘ్యాలు." },
       who: { roman: "The household; kept for health and the sun's grace.", tel: "ఇల్లంతా; ఆరోగ్యం, సూర్యానుగ్రహం కోసం." },
+      significance: [
+        { roman: "This Sunday worship belongs to a Sūrya vrata kept on the Sundays of a whole year, with a different name of the sun worshipped in each month. In Śrāvaṇa the name is Gabhasti.", tel: "ఈ ఆదివార పూజ సంవత్సరమంతటి ఆదివారాలలో చేసే సూర్య వ్రతంలో భాగం; ప్రతి నెలలో సూర్యుని ఒక నామాన్ని పూజిస్తారు. శ్రావణంలో ఆ నామం గభస్తి." },
+        { roman: "Twelve names are worshipped on the twelve petals of the lotus drawn for him — Mitra, Viṣṇu, Varuṇa, Sūrya, Bhānu, Tapana, Indra, Ravi, Gabhasti, Hiraṇyaretas and Dinakṛt among them — with Sahasrakiraṇa and Saṁjñā in the centre.", tel: "సూర్యుని కోసం గీసిన పద్మం పన్నెండు రేకులపై పన్నెండు నామాలను పూజిస్తారు — మిత్ర, విష్ణు, వరుణ, సూర్య, భాను, తపన, ఇంద్ర, రవి, గభస్తి, హిరణ్యరేతస్, దినకృత్ వారిలో ఉన్నారు — మధ్యలో సంజ్ఞాసహిత సహస్రకిరణుడు." },
+        { roman: "The limbs are worshipped by name, from the feet upward, each with one of Sūrya's names.", tel: "పాదాల నుండి పైకి, సూర్యుని ఒక్కొక్క నామంతో అంగాలను పూజిస్తారు." },
+        { roman: "The fruit stated is relief from disease, skin disease first among them, and the gaining of what one asks for, whatever one's station.", tel: "వ్యాధి నివారణ — అందులో చర్మ వ్యాధి మొదటిది — ఎవరి స్థితిలో వారు కోరినది పొందడం ఫలశ్రుతి." },
+      ],
+      timeline: [
+        { t: { roman: "Before dawn", tel: "సూర్యోదయానికి ముందు" }, d: { roman: "Rise and bathe in clean water, and offer water to the gods and to the forefathers.", tel: "లేచి నిర్మల జలంలో స్నానం చేసి, దేవతలకు, పితృదేవతలకు తర్పణం ఇవ్వాలి." } },
+        { t: { roman: "At sunrise", tel: "సూర్యోదయాన" }, d: { roman: "Smear a clean place, draw the lotus with red sandal, and set Sūrya there.", tel: "శుభ్రమైన చోటును అలికి, ఎర్రచందనంతో పద్మం గీసి, అందులో సూర్యుని స్థాపించాలి." } },
+        { t: { roman: "Forenoon", tel: "పూర్వాహ్ణం" }, d: { roman: "Offer the sixteen services, worship the limbs by name, and give the arghya.", tel: "పదహారు ఉపచారాలు సమర్పించి, అంగ పూజ చేసి, అర్ఘ్యం ఇవ్వాలి." } },
+        { t: { roman: "Afterwards", tel: "తరువాత" }, d: { roman: "Feed a brāhmaṇa with a fee, then eat the day's prāśana — three handfuls of saktu in Śrāvaṇa.", tel: "దక్షిణతో బ్రాహ్మణునికి భోజనం పెట్టి, ఆ రోజు ప్రాశనం తీసుకోవాలి — శ్రావణంలో మూడు పిడికిళ్ల సక్తువులు." } },
+      ],
       samagri: [
         { roman: "A betel leaf and red sandal paste, to draw the sun's image", tel: "సూర్య బింబం గీయడానికి తమలపాకు, ఎర్రచందనం" },
         { roman: "Red flowers", tel: "ఎర్రని పువ్వులు" },
@@ -669,10 +765,31 @@ export const STUTI_VRATA = (function () {
         { step: { roman: "Naivedya", tel: "నైవేద్యం" }, detail: { roman: "Offer a ripe coconut and paṭikabellam.", tel: "ముదిరిన కొబ్బరికాయలు, పటికబెల్లం నివేదించాలి." } },
       ],
       stotras: [{ deity: "surya", m: "aditya hrdayam" }, { deity: "surya", m: "suryastakam" }, { deity: "surya", m: "surya suktam" }],
-      source: { roman: "A widely kept Śrāvaṇa household practice for Sūrya; the names spoken at each arghya follow your family's own list.", tel: "శ్రావణంలో సూర్యునికి విస్తృతంగా పాటించే గృహాచారం; అర్ఘ్యంలో పలికే నామాలు మీ కుటుంబ ఆచారాన్ని అనుసరించాలి." },
+      naivedya: [
+        { item: { roman: "Saktu pūrikā", tel: "సక్తు పూరికలు" }, note: { roman: "Barley-meal cakes — the offering named for Śrāvaṇa.", tel: "సక్తు పిండి పూరికలు — శ్రావణానికి చెప్పిన నివేదన." } },
+        { item: { roman: "Ripe coconut and paṭikabellam", tel: "ముదిరిన కొబ్బరికాయ, పటికబెల్లం" }, note: { roman: "What Telugu households offer on this day.", tel: "ఈ రోజు తెలుగు ఇళ్లలో సమర్పించేవి." } },
+        { item: { roman: "Pāyasam with ghee", tel: "నేతితో పాయసం" }, note: { roman: "The offering of this vrata in any month.", tel: "ఏ నెలలోనైనా ఈ వ్రతానికి చెప్పిన నివేదన." } },
+      ],
+      dos: [
+        { roman: "Keep the day's worship in red — red sandal, red flowers, red cloth.", tel: "ఈ రోజు పూజ అంతా ఎరుపుతోనే — ఎర్రచందనం, ఎర్రని పువ్వులు, ఎర్రని వస్త్రం." },
+        { roman: "Give the arghya with water mixed with red sandal; in Śrāvaṇa the arghya is given with a cucumber.", tel: "ఎర్రచందనం కలిపిన నీటితో అర్ఘ్యం ఇవ్వాలి; శ్రావణంలో అర్ఘ్యం దోసకాయతో ఇస్తారు." },
+        { roman: "Feed a brāhmaṇa, with a fee, before you eat.", tel: "భోజనానికి ముందు దక్షిణతో బ్రాహ్మణునికి భోజనం పెట్టాలి." },
+      ],
+      donts: [
+        { roman: "Do not offer the day's food before the arghya has been given.", tel: "అర్ఘ్యం ఇవ్వకుండా ఆ రోజు నైవేద్యం పెట్టరాదు." },
+        { roman: "Do not break the course once begun; this vrata runs the Sundays of a whole year.", tel: "మొదలుపెట్టిన క్రమాన్ని మధ్యలో ఆపరాదు; ఈ వ్రతం సంవత్సరమంతటి ఆదివారాలు సాగుతుంది." },
+      ],
+      source: { roman: "A widely kept Śrāvaṇa household practice for Sūrya, drawn from the year-long Sunday vrata in which each month has its own name of the sun — Gabhasti in Śrāvaṇa. The names spoken at each arghya follow your family's own list.", tel: "శ్రావణంలో సూర్యునికి విస్తృతంగా పాటించే గృహాచారం; ప్రతి నెలకు సూర్యుని ఒక నామం ఉండే సంవత్సర ఆదివార వ్రతం నుండి తీసుకున్నది — శ్రావణంలో ఆ నామం గభస్తి. అర్ఘ్యంలో పలికే నామాలు మీ కుటుంబ ఆచారాన్ని అనుసరించాలి." },
     },
 
     /* ---------------------------------------------------------- */
+      /* Printed witness: Vratarāja of Viśvanātha, Khemraj ed. — the Somavāra pūjāvidhi and
+         its Skanda Purāṇa vrata from printed p. 896, and the Ekabhukta Somavāra vrata of
+         the Bhaviṣya Purāṇa from printed p. 908, which is the single-meal form kept here.
+         Both name Śrāvaṇa first among the months in which the vrata is taken up, on the
+         month's first Monday. The aṅga-pūjā names in the step below are that book's, and
+         are corrected to it: it reads bhavāya bhavanāśāya mahādevāya dhīmate / ugrāya
+         cogranāśāya śarvāya śaśimauline / rudrāya nīlakaṇṭhāya śivāya bhavahāriṇe. */
     {
       id: "shravana-somavaram", deity: "shiva", kind: "vratam",
       name: { roman: "Śrāvaṇa Somavāram", deva: "श्रावण सोमवारम्", tel: "శ్రావణ సోమవారం" },
@@ -686,13 +803,41 @@ export const STUTI_VRATA = (function () {
       significance: [
         { roman: "Even one who could not keep every Monday vrata across the twelve months may keep only Śrāvaṇa's for Śiva's pleasure, and it is said to carry the merit of all of them.", tel: "పన్నెండు నెలలలో వచ్చే సోమవార వ్రతములన్నీ చేయలేకపోయినా, ఈ మాసంలో వచ్చే సోమవార వ్రతాలను శివప్రీతిగా ఆచరించడంవలన అన్ని నెలలలో చేసిన ఫలితం పొందవచ్చు." },
       ],
+      timeline: [
+        { t: { roman: "Before the pūjā", tel: "పూజకు ముందు" }, d: { roman: "Bathe well and put on clean white clothes. The vow is taken for the well-being of the household, for long life, health and prosperity, and for the pleasure of Umā and Maheśvara.", tel: "చక్కగా స్నానం చేసి శుభ్రమైన తెల్లని వస్త్రాలు ధరించాలి. ఇంటివారి క్షేమం, స్థైర్యం, ఆయురారోగ్యాలు, ఐశ్వర్య వృద్ధి కోసం, ఉమామహేశ్వరుల ప్రీతి కోసం సంకల్పం." } },
+        { t: { roman: "Forenoon", tel: "పూర్వాహ్ణం" }, d: { roman: "Meditate on Śiva with the verse beginning \"rajatagirinibham\", then offer the sixteen services with the mantra oṁ namaḥ śivāya.", tel: "'ధ్యాయేన్నిత్యం మహేశం రజతగిరినిభం' అనే శ్లోకంతో ధ్యానించి, 'ఓం నమః శివాయ' మంత్రంతో పదహారు ఉపచారాలు సమర్పించాలి." } },
+        { t: { roman: "Through the day", tel: "పగలంతా" }, d: { roman: "Keep the vrata through the day. Recite Śiva's stotras, and read or hear his stories.", tel: "పగలంతా వ్రత నియమం పాటించాలి. శివ స్తోత్రాలు చదివి, ఆయన కథలను చదవాలి లేదా వినాలి." } },
+        { t: { roman: "Evening", tel: "సాయంత్రం" }, d: { roman: "Take the single meal, after the worship is done.", tel: "పూజ పూర్తయిన తరువాత ఒంటిపూట భోజనం చేయాలి." } },
+      ],
+      samagri: [
+        { roman: "White flowers — mālatī, white lotus, campaka, kunda, mandāra, punnāga and śatapatra", tel: "తెల్లని పువ్వులు — మాలతి, తెల్లతామర, సంపెంగ, మల్లె, మందార, పున్నాగ, శతపత్రం" },
+        { roman: "A white cloth for the seat, and white clothes to wear", tel: "పీఠానికి తెల్లని వస్త్రం, ధరించడానికి తెల్లని బట్టలు" },
+        { roman: "Sandal for the smearing, and sandalwood incense", tel: "గంధం, చందనపు ధూపం" },
+        { roman: "Pañcāmṛta — milk, curd, ghee, honey, sugar", tel: "పంచామృతం — పాలు, పెరుగు, నెయ్యి, తేనె, పంచదార" },
+        { roman: "Akṣata, a ghee lamp and camphor", tel: "అక్షతలు, నేతి దీపం, కర్పూరం" },
+      ],
       vidhi: [
         { step: { roman: "Nakta vrata", tel: "నక్తవ్రతం" }, detail: { roman: "Keep a single meal, taken in the evening.", tel: "నక్తవ్రతం ఆచరించి సాయంత్రం ఒంటిపూట భోజనం చేయాలి." } },
         { step: { roman: "Ṣoḍaśopacāra", tel: "షోడశోపచారం" }, detail: { roman: "Worship Śiva with the sixteen upacāras.", tel: "శివుని షోడశోపచారములతో పూజించాలి." } },
         { step: { roman: "Stotra & kathā", tel: "స్తోత్రం, కథ" }, detail: { roman: "Recite Śiva's stotras, then read or listen to his stories.", tel: "స్తోత్రాదులు చేసి శివుని కథలను చదువవలెను లేదా వినవలెను." } },
-        { step: { roman: "The names", tel: "నామాలు" }, detail: { roman: "Chant: Śarvāya Bhavanāśāya Mahādevāya dhīmahi, Ugrāya ca Ugranāthāya Bhavāya Śaśimauline, Rudrāya Nīlakaṇṭhāya Śivāya Bhavahāriṇe.", tel: "'శర్వాయ భవనాశాయ మహాదేవాయ ధీమహి, ఉగ్రాయ చ ఉగ్రనాథాయ భవాయ శశిమౌళినే, రుద్రాయ నీలకంఠాయ శివాయ భవహారిణే' అనే నామాలను జపించాలి." } },
+        { step: { roman: "The names", tel: "నామాలు" }, detail: { roman: "Chant: Bhavāya Bhavanāśāya Mahādevāya dhīmate, Ugrāya ca Ugranāśāya Śarvāya Śaśimauline, Rudrāya Nīlakaṇṭhāya Śivāya Bhavahāriṇe — and worship the limbs with them, from the feet upward.", tel: "'భవాయ భవనాశాయ మహాదేవాయ ధీమతే, ఉగ్రాయ చోగ్రనాశాయ శర్వాయ శశిమౌళినే, రుద్రాయ నీలకంఠాయ శివాయ భవహారిణే' అనే నామాలను జపిస్తూ, పాదాల నుండి పైకి అంగ పూజ చేయాలి." } },
       ],
       stotras: [{ deity: "shiva", m: "mahamrtyu" }, { deity: "shiva", m: "rudram" }],
+      naivedya: [
+        { item: { roman: "Milk and pañcāmṛta", tel: "పాలు, పంచామృతం" }, note: { roman: "The pañcāmṛta bath is among the services; the milk is offered first.", tel: "పంచామృత స్నానం ఉపచారాలలో ఒకటి; పాలు ముందుగా సమర్పిస్తారు." } },
+        { item: { roman: "Pāyasam", tel: "పాయసం" }, note: { roman: "Rice in milk — the usual offering of a Śiva pūjā in Telugu households.", tel: "పాలలో బియ్యం — తెలుగు ఇళ్లలో శివ పూజకు సాధారణ నివేదన." } },
+        { item: { roman: "Whatever grains the household wishes", tel: "ఇంటివారు కోరిన ధాన్యాలు" }, note: { roman: "The food is left to the worshipper: whatever is desired is prepared.", tel: "నివేదన ఏది అన్నది పూజ చేసేవారికే వదిలారు: కోరినవి ఏవైతే ఉన్నాయో అవే సిద్ధం చేయాలి." } },
+      ],
+      dos: [
+        { roman: "Take the vow on the first Monday of Śrāvaṇa; Śrāvaṇa is the first of the months in which it is taken up.", tel: "శ్రావణ మాసపు మొదటి సోమవారం నాడు సంకల్పం చేయాలి; మొదలుపెట్టే నెలలలో శ్రావణమే మొదటిది." },
+        { roman: "Keep it whoever you are — a brahmacārin, a householder, a girl, a married woman and a widow may all keep it.", tel: "ఎవరైనా చేయవచ్చు — బ్రహ్మచారి, గృహస్థు, కన్య, భర్త ఉన్న స్త్రీ, వితంతువు అందరూ చేయవచ్చు." },
+        { roman: "Put on white, and offer white flowers.", tel: "తెల్లని బట్టలు ధరించి, తెల్లని పువ్వులు సమర్పించాలి." },
+        { roman: "Finish the course in the month in which it was begun.", tel: "మొదలుపెట్టిన నెలలోనే క్రమాన్ని ముగించాలి." },
+      ],
+      donts: [
+        { roman: "Do not break the course once begun; a broken vrata loses all its fruit.", tel: "మొదలుపెట్టిన క్రమాన్ని మధ్యలో ఆపరాదు; ఖండిత వ్రతం ఫలమంతా పోతుంది." },
+        { roman: "Do not keep it in anger or ill will; it is kept free of anger, pride, hatred and backbiting.", tel: "కోపంతో, ద్వేషంతో చేయరాదు; కోపం, అహంకారం, ద్వేషం, పైశున్యం లేకుండా చేయాలి." },
+      ],
       source: { roman: "A common Śrāvaṇa household practice for Śiva; some keep the nakta vrata strictly, others simply take grain only in the evening — follow your family's line.", tel: "శివునికి శ్రావణంలో పాటించే సాధారణ గృహాచారం; కొందరు నక్తవ్రతం కచ్చితంగా పాటిస్తారు, కొందరు సాయంత్రం వరకు మాత్రమే ధాన్యం తీసుకుంటారు — మీ కుటుంబ ఆచారాన్నే పాటించండి." },
     },
 

@@ -111,3 +111,44 @@ Satyanārāyaṇa (5 Vedic-removed twins for the uninitiated).
 | Utsavas and parva dinams | 36 | 5 |
 | Nomulu | 102 | 102, as `forwhat` |
 | Vrata kalpa texts | 16 | n/a — these are the rites themselves |
+
+---
+
+## Addendum — 22 October 2026
+
+**The defect named above is closed.** Rows 10, 11 and 12 — Nāga Pañcamī, Śītalā Saptamī and
+Śrāvaṇa Ravivāram — and row 4, Śrāvaṇa Somavāram, were the four entries that carried part of a
+guide and no `brief` flag, so the page printed no notice and the reader met something that looked
+finished. All four now carry the whole set: significance, timeline, samagri, vidhi, naivedya, dos
+and donts, in English and Telugu. Nothing was marked brief; they were filled.
+
+Where the matter came from:
+
+- **Śītalā Saptamī** — the rite already written in the corpus at
+  `puja/vrata/13_shitala_saptami_vrata_kalpam.txt`, from the *Vratarāja*'s Skānda chapter.
+- **Nāga Pañcamī** — the household rite at `puja/smarta/49_naga_panchami_puja_vidhi.txt`, with the
+  day's offering of milk and the Śrāvaṇa chief Ananta from the *Vratarāja*, printed pp. 250–251.
+- **Śrāvaṇa Ravivāram** — the *Vratarāja*'s Sūrya vrata for a Sunday, Bhaviṣya Purāṇa, printed
+  pp. 884–887. Śrāvaṇa's name of the sun is Gabhasti, its naivedya saktu-pūrikā, its arghya given
+  with a cucumber (vv. 25–26).
+- **Śrāvaṇa Somavāram** — the *Vratarāja*'s Somavāra pūjāvidhi, printed p. 896, and the Ekabhukta
+  Somavāra vrata of the Bhaviṣya Purāṇa, printed p. 908, which is the single-meal form the app
+  keeps. Both name Śrāvaṇa first among the months for taking the vrata up.
+
+The witness for each is recorded as a comment above its entry in `stuti-vrata-data.js`, not in the
+reader-facing `source:` field, which keeps the house rule that the reciter is never shown sourcing.
+
+**Two things this did not settle.**
+
+1. **Which seventh day Śītalā Saptamī falls on.** The *Vratarāja* keeps it in the **dark** fortnight
+   of Śrāvaṇa (and records Hemādri's Bhādrapada kṛṣṇa saptamī as a second opinion); the app's
+   `find()` gives the **bright** fortnight, which is the Telugu household reckoning. `find()` has
+   not been moved. The page now tells the reader that both are kept and that their own almanac
+   decides. The ruling is the maintainer's.
+2. **The `Vidhānam · SOON` chip** still shows on all four, because no corpus text is published yet —
+   that is the corpus-delivery seam, not this.
+
+One correction was made to existing text. The Śrāvaṇa Somavāram aṅga-pūjā names read
+`śarvāya bhavanāśāya mahādevāya dhīmahi / ugrāya ca ugranāthāya bhavāya śaśimauline`; the print has
+`bhavāya bhavanāśāya mahādevāya dhīmate / ugrāya cogranāśāya śarvāya śaśimauline`. Two names were
+exchanged and two words wrong. The page now follows the print.
