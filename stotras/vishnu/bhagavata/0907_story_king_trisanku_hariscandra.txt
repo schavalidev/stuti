@@ -9,7 +9,7 @@ Type: Purāṇa (an adhyāya of the Śrīmad Bhāgavata, Skandha 9)
 
 Source / recension: Base text and authority: the Gītā Press, Gorakhpur Śrīmadbhāgavata Mahāpurāṇa with Hindi translation, Part 2 (Gītā Press code 27), archive.org item `shrimadbhagwat-mahapuran-bhag-2`, printed pages 38–41; the PDF page numbers are the printed ones. The PDF carries the typesetter's own text layer in the Chanakya font encoding, and the text was decoded from it by machine with `bin/bhagavata/chanakya.py`, not read off OCR or typed. The decoder was checked against GRETIL over all twelve skandhas before any file was written, and the differences that remain were sampled and found to be readings of the two editions. Second witness: GRETIL's `sa_bhAgavatapurANa.xml` (IAST, contributed by Ulrich Stiehl), a separate editorial lineage, compared verse by verse by machine. The TTD edition with the commentaries of Śrīdhara, Vīrarāghava and Vijayadhvaja (archive.org `Bhagavata_Purana_With_Multiple_Commentaries_TTD_Critical_Edition`) is the third witness where one is needed; it was not read for this file. The IAST was generated mechanically from the Devanāgarī with `bin/dev2iast.py`.
 
-Recension note: Text-only file, written 1 Oct 2026 at the user's instruction to lay down the whole Bhāgavata first: the English, Telugu and Hindi meanings are still to be added, and the witnesses' differences listed here have been recorded by machine and not yet adjudicated. The print is followed throughout. The print numbers 27 verses and GRETIL numbers 27. Of the 27 verses GRETIL has under the same number, 20 agree with the print letter for letter once spacing and the spelling of nasals are set aside; the rest differ: 1, 4, 12, 16, 21, 23, 24. Spacing is the print's, as its text layer gives it; in a few places justification has left a space inside a word, and these are still to be closed when the verse is read. The speaker lines (श्रीशुक उवाच and the others) are printed in italic above the verse they introduce, and are given as its first line.
+Recension note: Meanings written 23 Oct 2026 (session S78). The differences between the witnesses listed below were read as the verses were glossed; except where this note says otherwise, each is a spelling, a sandhi or a word order of the two editions, none of them changes the sense, and the print's reading therefore stands unbracketed. The print is followed throughout. The print numbers 27 verses and GRETIL numbers 27. Of the 27 verses GRETIL has under the same number, 20 agree with the print letter for letter once spacing and the spelling of nasals are set aside; the rest differ: 1, 4, 12, 16, 21, 23, 24. Spacing is the print's, as its text layer gives it. The speaker lines (श्रीशुक उवाच and the others) are printed in italic above the verse they introduce, and are given as its first line. One word was put right as the verses were read. At verse 1 the text layer had lost the space between यौवनाश्वश्च and तत्सुतः and left यौवनाश्वश्चतत्सुतः, which cannot be read as one word, because the particle च cannot stand inside a compound; the space is restored here, and GRETIL breaks at the same place (यौवनाश्वस्तु तत्सुतः). Everywhere else the print's spacing stands. The three places where it separates a word ending in a virāma consonant from the word after it (शापाद् गुरोः at 5, अभूद् युद्धं at 7, अभूद् ब्रह्मा at 23) are correct as printed, and every join the second witness breaks — गन्धर्वानवधीत् at 3, नागाल्लब्धवरः at 3, अक्रीणान्मध्यमं at 20, ददाविन्द्रः at 23, ददावविहतां at 25, धारयंस्तच्च at 26 and the rest — falls after a virāma consonant, where the script requires the ligature. Of the differences between the witnesses, the print reads यौवनाश्वश्च at 1 where GRETIL has यौवनाश्वस्तु, अरुणः at 4 where it has प्रारुणः, शुनःशेप at 21 and 24 where it has शुनःशेफ, सत्यसारां धृतिं at 24 where it has सत्यं सारं धृतिं, अयास्यसामगः at 23 as one compound where it has अयास्यः सामगः, and जाता दन्ता at 12 where it has दन्ता जाता; the print stands in each. At verse 22 the print gives no name for the adhvaryu, so आत्मवान् is read with विश्वामित्र and the meanings make him both the होता and the अध्वर्यु.
 
 Verse count: 27, plus the closing colophon printed unnumbered.
 
@@ -19,13 +19,16 @@ Published: 2026-10-20
 deva:
 श्रीशुक उवाच
 मान्धातुः पुत्रप्रवरो योऽम्बरीषः प्रकीर्तितः।
-पितामहेन प्रवृतो यौवनाश्वश्चतत्सुतः।
+पितामहेन प्रवृतो यौवनाश्वश्च तत्सुतः।
 हारीतस्तस्य पुत्रोऽभून्मान्धातृप्रवरा इमे॥
 iast:
 śrīśuka uvāca
 māndhātuḥ putrapravaro yo'mbarīṣaḥ prakīrtitaḥ|
-pitāmahena pravṛto yauvanāśvaścatatsutaḥ|
+pitāmahena pravṛto yauvanāśvaśca tatsutaḥ|
 hārītastasya putro'bhūnmāndhātṛpravarā ime||
+en: Śrī Śuka said: Ambarīṣa, who is named as the foremost among the sons of Māndhātā, was taken as a son by his grandfather. Yauvanāśva was his son, and Hārīta was his son. These are the foremost in the line of Māndhātā.
+tel: శ్రీశుకుడు పలికెను: మాంధాత కుమారులలో శ్రేష్ఠుడని చెప్పబడిన అంబరీషుడు తన తాతచేత కుమారునిగా స్వీకరింపబడెను. అతని కుమారుడు యౌవనాశ్వుడు, అతని కుమారుడు హారీతుడు. వీరే మాంధాత వంశములో శ్రేష్ఠులు.
+hi: श्रीशुकदेवजी ने कहा: मान्धाता के पुत्रों में श्रेष्ठ कहे गये अम्बरीष को उनके पितामह ने पुत्र के रूप में ग्रहण किया। उनका पुत्र यौवनाश्व हुआ और उसका पुत्र हारीत हुआ। ये ही मान्धाता के वंश में श्रेष्ठ हैं।
 
 --- verse 2 ---
 deva:
@@ -34,6 +37,9 @@ deva:
 iast:
 narmadā bhrātṛbhirdattā purukutsāya yoragaiḥ|
 tayā rasātalaṁ nīto bhujagendraprayuktayā||
+en: Narmadā was given to Purukutsa by her brothers, the serpents. Sent by the lord of serpents, she took him down to Rasātala.
+tel: నర్మద తన సహోదరులైన సర్పములచే పురుకుత్సునికి ఇవ్వబడెను. సర్పరాజు పంపగా ఆమె అతనిని రసాతలమునకు తీసుకొనిపోయెను.
+hi: नर्मदा को उसके भाइयों, सर्पों ने पुरुकुत्स को दिया। सर्पराज के भेजने पर वह उसे रसातल में ले गयी।
 
 --- verse 3 ---
 deva:
@@ -42,6 +48,9 @@ deva:
 iast:
 gandharvānavadhīt tatra vadhyān vai viṣṇuśaktidhṛk|
 nāgāllabdhavaraḥ sarpādabhayaṁ smaratāmidam||
+en: There, bearing the power of Viṣṇu, he killed those Gandharvas who deserved to be killed. He received a boon from the Nāgas: those who remember this account have no fear of snakes.
+tel: అక్కడ విష్ణుశక్తిని ధరించి అతడు వధార్హులైన గంధర్వులను సంహరించెను. నాగుల వలన అతడు వరమును పొందెను: ఈ వృత్తాంతమును స్మరించువారికి సర్పముల వలన భయము ఉండదు.
+hi: वहाँ विष्णु की शक्ति धारण करके उसने वध के योग्य गन्धर्वों को मारा। नागों से उसे यह वर मिला कि जो इस वृत्तान्त का स्मरण करते हैं, उन्हें सर्पों से भय नहीं होता।
 
 --- verse 4 ---
 deva:
@@ -50,6 +59,9 @@ deva:
 iast:
 trasaddasyuḥ paurukutso yo'naraṇyasya dehakṛt|
 haryaśvastatsutastasmādaruṇo'tha tribandhanaḥ||
+en: Trasaddasyu was the son of Purukutsa, and he was the father of Anaraṇya. Haryaśva was his son; from him came Aruṇa, and then Tribandhana.
+tel: త్రసద్దస్యువు పురుకుత్సుని కుమారుడు; అతడే అనరణ్యునికి తండ్రి. అతని కుమారుడు హర్యశ్వుడు; అతని వలన అరుణుడు, పిమ్మట త్రిబంధనుడు.
+hi: त्रसद्दस्यु पुरुकुत्स का पुत्र था और वही अनरण्य का पिता हुआ। उसका पुत्र हर्यश्व था; उससे अरुण और फिर त्रिबन्धन हुए।
 
 --- verse 5 ---
 deva:
@@ -58,6 +70,9 @@ deva:
 iast:
 tasya satyavrataḥ putrastriśaṁkuriti viśrutaḥ|
 prāptaścāṇḍālatāṁ śāpād guroḥ kauśikatejasā||
+en: His son was Satyavrata, well known as Triśaṅku. By the curse of his guru he came to the condition of a Cāṇḍāla. By the power of Kauśika
+tel: అతని కుమారుడు సత్యవ్రతుడు; అతడు త్రిశంకుడని ప్రసిద్ధుడు. గురువు శాపము వలన అతడు చండాలత్వమును పొందెను. కౌశికుని తేజస్సు వలన
+hi: उसका पुत्र सत्यव्रत था, जो त्रिशंकु के नाम से प्रसिद्ध हुआ। गुरु के शाप से वह चाण्डाल की दशा को प्राप्त हुआ। कौशिक के तेज से
 
 --- verse 6 ---
 deva:
@@ -66,6 +81,9 @@ deva:
 iast:
 saśarīro gataḥ svargamadyāpi divi dṛśyate|
 pātito'vākśirā devaistenaiva stambhito balāt||
+en: he went to heaven in his own body, and he is seen in the sky even now. The gods cast him down head first, and that same Kauśika held him there by force.
+tel: అతడు సశరీరముగా స్వర్గమునకు వెళ్ళెను; ఇప్పటికిని అతడు ఆకాశమున కనబడును. దేవతలు అతనిని తలక్రిందుగా పడద్రోసిరి; ఆ కౌశికుడే బలముచే అతనిని అక్కడ నిలిపెను.
+hi: वह अपने शरीर के साथ स्वर्ग को गया और आज भी आकाश में दिखाई देता है। देवताओं ने उसे सिर नीचे करके गिरा दिया, और उसी कौशिक ने बल से उसे वहीं रोक रखा।
 
 --- verse 7 ---
 deva:
@@ -74,6 +92,9 @@ deva:
 iast:
 traiśaṁkavo hariścandro viśvāmitravasiṣṭhayoḥ|
 yannimittamabhūd yuddhaṁ pakṣiṇorbahuvārṣikam||
+en: Hariścandra was the son of Triśaṅku. On his account there was a war between Viśvāmitra and Vasiṣṭha, who had taken the form of birds, and it lasted many years.
+tel: త్రిశంకుని కుమారుడు హరిశ్చంద్రుడు. అతని కారణముగా పక్షిరూపములు ధరించిన విశ్వామిత్రునికి, వసిష్ఠునికి మధ్య అనేక సంవత్సరములు యుద్ధము జరిగెను.
+hi: त्रिशंकु का पुत्र हरिश्चन्द्र था। उसके कारण पक्षी का रूप धारण करनेवाले विश्वामित्र और वसिष्ठ के बीच अनेक वर्षों तक युद्ध हुआ।
 
 --- verse 8 ---
 deva:
@@ -82,6 +103,9 @@ deva:
 iast:
 so'napatyo viṣaṇṇātmā nāradasyopadeśataḥ|
 varuṇaṁ śaraṇaṁ yātaḥ putro me jāyatāṁ prabho||
+en: He had no son and his mind was full of sorrow. By the advice of Nārada he went to Varuṇa for refuge and said: O Lord, let a son be born to me,
+tel: అతనికి సంతానము లేదు; అతని మనస్సు దుఃఖముతో నిండియుండెను. నారదుని ఉపదేశము వలన అతడు వరుణుని శరణు పొంది ఇట్లనెను: ప్రభూ, నాకు కుమారుడు కలుగవలెను;
+hi: उसे पुत्र नहीं था और उसका मन खेद से भरा था। नारद के उपदेश से वह वरुण की शरण में गया और बोला: हे प्रभो, मुझे पुत्र हो,
 
 --- verse 9 ---
 deva:
@@ -90,6 +114,9 @@ deva:
 iast:
 yadi vīro mahārāja tenaiva tvāṁ yaje iti|
 tatheti varuṇenāsya putro jātastu rohitaḥ||
+en: and if he is a hero, O great king, I will worship you in sacrifice with him. Varuṇa said, So be it; and a son was born to him, Rohita.
+tel: ఓ మహారాజా, అతడు వీరుడైనచో అతనితోనే యజ్ఞమున నిన్ను పూజింతును. వరుణుడు "అట్లే అగును" అని పలికెను; అతనికి రోహితుడను కుమారుడు జన్మించెను.
+hi: हे महाराज, यदि वह वीर हो तो उसी से मैं आपका यजन करूँगा। वरुण ने कहा, ऐसा ही हो; और उसे रोहित नाम का पुत्र उत्पन्न हुआ।
 
 --- verse 10 ---
 deva:
@@ -98,6 +125,9 @@ deva:
 iast:
 jātaḥ suto hyanenāṁga māṁ yajasveti so'bravīt|
 yadā paśurnirdaśaḥ syādatha medhyo bhavediti||
+en: The son is born; now worship me with him, dear one, said Varuṇa. The king said: An animal becomes fit for sacrifice when ten days have passed.
+tel: "కుమారుడు జన్మించెను; ఓ ప్రియుడా, ఇప్పుడు అతనితో నన్ను యజింపుము" అని వరుణుడు పలికెను. రాజు ఇట్లనెను: "పది దినములు గడచిన పిమ్మట పశువు యజ్ఞమునకు యోగ్యమగును."
+hi: "पुत्र उत्पन्न हो गया; हे प्रिय, अब उसी से मेरा यजन करो," वरुण ने कहा। राजा ने कहा: "दस दिन बीत जाने पर पशु यज्ञ के योग्य होता है।"
 
 --- verse 11 ---
 deva:
@@ -106,6 +136,9 @@ deva:
 iast:
 nirdaśe ca sa āgatya yajasvetyāha so'bravīt|
 dantāḥ paśoryajjāyerannatha medhyo bhavediti||
+en: When ten days had passed he came and said, Worship me. The king said: An animal becomes fit for sacrifice when its teeth have grown.
+tel: పది దినములు గడచిన పిమ్మట అతడు వచ్చి "నన్ను యజింపుము" అనెను. రాజు ఇట్లనెను: "పశువునకు దంతములు మొలచిన పిమ్మట అది యజ్ఞమునకు యోగ్యమగును."
+hi: दस दिन बीत जाने पर वह आया और बोला, "मेरा यजन करो।" राजा ने कहा: "पशु के दाँत उग जाने पर वह यज्ञ के योग्य होता है।"
 
 --- verse 12 ---
 deva:
@@ -114,6 +147,9 @@ deva:
 iast:
 jātā dantā yajasveti sa pratyāhātha so'bravīt|
 yadā patantyasya dantā atha medhyo bhavediti||
+en: Varuṇa answered, The teeth have grown; worship me. Then the king said: When its teeth fall out, then it becomes fit for sacrifice.
+tel: వరుణుడు బదులుగా "దంతములు మొలచినవి; నన్ను యజింపుము" అనెను. అంతట రాజు ఇట్లనెను: "దంతములు రాలిన పిమ్మట అది యజ్ఞమునకు యోగ్యమగును."
+hi: वरुण ने उत्तर दिया, "दाँत उग आये; मेरा यजन करो।" तब राजा ने कहा: "जब इसके दाँत गिर जायँ, तब यह यज्ञ के योग्य होगा।"
 
 --- verse 13 ---
 deva:
@@ -122,6 +158,9 @@ deva:
 iast:
 paśornipatitā dantā yajasvetyāha so'bravīt|
 yadā paśoḥ punardantā jāyante'tha paśuḥ śuciḥ||
+en: The animal's teeth have fallen out; worship me, he said. The king said: When the animal's teeth grow again, then the animal is pure.
+tel: "పశువునకు దంతములు రాలినవి; నన్ను యజింపుము" అని అతడు అనెను. రాజు ఇట్లనెను: "పశువునకు దంతములు మరల మొలచిన పిమ్మట ఆ పశువు శుద్ధమగును."
+hi: "पशु के दाँत गिर गये; मेरा यजन करो," उसने कहा। राजा ने कहा: "जब पशु के दाँत फिर उग आयें, तब वह पशु शुद्ध होगा।"
 
 --- verse 14 ---
 deva:
@@ -130,6 +169,9 @@ deva:
 iast:
 punarjātā yajasveti sa pratyāhātha so'bravīt|
 sānnāhiko yadā rājan rājanyo'tha paśuḥ śuciḥ||
+en: They have grown again; worship me, he answered. Then the king said: O king, when a kṣatriya is able to wear armour, then the animal is pure.
+tel: "దంతములు మరల మొలచినవి; నన్ను యజింపుము" అని అతడు బదులిడెను. అంతట రాజు ఇట్లనెను: "ఓ రాజా, క్షత్రియుడు కవచమును ధరించుటకు సమర్థుడైనపుడు ఆ పశువు శుద్ధమగును."
+hi: "वे फिर उग आये; मेरा यजन करो," उसने उत्तर दिया। तब राजा ने कहा: "हे राजन्, जब क्षत्रिय कवच धारण करने योग्य हो जाय, तब वह पशु शुद्ध होता है।"
 
 --- verse 15 ---
 deva:
@@ -138,6 +180,9 @@ deva:
 iast:
 iti putrānurāgeṇa snehayantritacetasā|
 kālaṁ vaṁcayatā taṁ tamukto devastamaikṣata||
+en: In this way, out of love for his son, with his mind bound fast by affection, he put off the time. The god, told one thing and then another, kept looking to him.
+tel: ఇట్లు పుత్రుని యందలి అనురాగము వలన, స్నేహముచే కట్టుబడిన మనస్సుతో అతడు కాలమును వంచించుచుండెను. ఒకటి తరువాత ఒకటి చెప్పబడిన ఆ దేవుడు అతనిని చూచుచుండెను.
+hi: इस प्रकार पुत्र के प्रेम से, स्नेह में बँधे हुए मन से वह समय टालता रहा। एक के बाद एक बात सुनकर वह देव उसकी ओर देखता रहा।
 
 --- verse 16 ---
 deva:
@@ -146,6 +191,9 @@ deva:
 iast:
 rohitastadabhijñāya pituḥ karma cikīrṣitam|
 prāṇaprepsurdhanuṣpāṇiraraṇyaṁ pratyapadyata||
+en: Rohita came to know of the deed his father wished to do. Wishing to keep his life, he took his bow in his hand and went into the forest.
+tel: తండ్రి చేయగోరిన కార్యమును రోహితుడు తెలిసికొనెను. ప్రాణములను కాపాడుకొనగోరి అతడు ధనువును చేతబట్టి అరణ్యమునకు వెళ్ళెను.
+hi: रोहित ने अपने पिता के करने के विचार को जान लिया। प्राण की रक्षा चाहकर वह धनुष हाथ में लेकर वन को चला गया।
 
 --- verse 17 ---
 deva:
@@ -154,6 +202,9 @@ deva:
 iast:
 pitaraṁ varuṇagrastaṁ śrutvā jātamahodaram|
 rohito grāmameyāya tamindraḥ pratyaṣedhata||
+en: He heard that his father had been seized by Varuṇa and that his belly had swollen. Rohita set out for the village, but Indra stopped him.
+tel: తన తండ్రి వరుణునిచే పీడింపబడి ఉదరము ఉబ్బినదని అతడు వినెను. రోహితుడు గ్రామమునకు బయలుదేరెను; కాని ఇంద్రుడు అతనిని ఆటంకపరచెను.
+hi: उसने सुना कि उसके पिता वरुण से ग्रस्त हो गये हैं और उनका पेट बढ़ गया है। रोहित गाँव की ओर चला, परन्तु इन्द्र ने उसे रोक दिया।
 
 --- verse 18 ---
 deva:
@@ -162,6 +213,9 @@ deva:
 iast:
 bhūmeḥ paryaṭanaṁ puṇyaṁ tīrthakṣetraniṣevaṇaiḥ|
 rohitāyādiśacchakraḥ so'pyaraṇye'vasat samām||
+en: Śakra told Rohita of the merit of wandering over the earth and serving holy places and sacred fields. So he lived in the forest for a year.
+tel: భూమిని పర్యటించుటలోను, తీర్థములను క్షేత్రములను సేవించుటలోను ఉన్న పుణ్యమును శక్రుడు రోహితునికి తెలిపెను. అతడును ఒక సంవత్సరము అరణ్యమున నివసించెను.
+hi: शक्र ने रोहित को पृथ्वी पर घूमने तथा तीर्थों और क्षेत्रों के सेवन के पुण्य का उपदेश किया। वह भी एक वर्ष वन में रहा।
 
 --- verse 19 ---
 deva:
@@ -170,6 +224,9 @@ deva:
 iast:
 evaṁ dvitīye tṛtīye caturthe paṁcame tathā|
 abhyetyābhyetya sthaviro vipro bhūtvā''ha vṛtrahā||
+en: In the same way in the second, the third, the fourth and the fifth year also, the slayer of Vṛtra came again and again, took the form of an aged brāhmaṇa, and spoke in this manner.
+tel: అట్లే రెండవ, మూడవ, నాలుగవ, ఐదవ సంవత్సరములలోను వృత్రహంత మరల మరల వచ్చి, వృద్ధ బ్రాహ్మణుని రూపము ధరించి ఇట్లే పలికెను.
+hi: इसी प्रकार दूसरे, तीसरे, चौथे और पाँचवें वर्ष में भी वृत्र का नाश करनेवाला बार-बार आकर वृद्ध ब्राह्मण का रूप धारण कर ऐसा ही कहता रहा।
 
 --- verse 20 ---
 deva:
@@ -178,6 +235,9 @@ deva:
 iast:
 ṣaṣṭhaṁ saṁvatsaraṁ tatra caritvā rohitaḥ purīm|
 upavrajannajīgartādakrīṇānmadhyamaṁ sutam||
+en: After he had passed the sixth year there, Rohita came near the city and bought the middle son from Ajīgarta.
+tel: అక్కడ ఆరవ సంవత్సరమును గడిపి రోహితుడు పురమును సమీపించి, అజీగర్తుని వలన అతని మధ్య కుమారుని కొనెను.
+hi: वहाँ छठा वर्ष बिताकर रोहित नगर के पास आया और अजीगर्त से उसके बीच के पुत्र को खरीद लिया।
 
 --- verse 21 ---
 deva:
@@ -186,6 +246,9 @@ deva:
 iast:
 śunaḥśepaṁ paśuṁ pitre pradāya samavandata|
 tataḥ puruṣamedhena hariścandro mahāyaśāḥ||
+en: He gave Śunaḥśepa to his father as the animal for the sacrifice and bowed to him. Then, by the puruṣamedha sacrifice, Hariścandra of great fame
+tel: అతడు శునఃశేపుని యజ్ఞపశువుగా తన తండ్రికి ఇచ్చి నమస్కరించెను. పిమ్మట మహాయశస్కుడైన హరిశ్చంద్రుడు పురుషమేధ యజ్ఞముచే
+hi: उसने शुनःशेप को यज्ञ का पशु बनाकर अपने पिता को दिया और उन्हें प्रणाम किया। तब महायशस्वी हरिश्चन्द्र ने पुरुषमेध यज्ञ से
 
 --- verse 22 ---
 deva:
@@ -194,6 +257,9 @@ deva:
 iast:
 muktodaro'yajad devān varuṇādīn mahatkathaḥ|
 viśvāmitro'bhavat tasmin hotā cādhvaryurātmavān||
+en: was freed of his swollen belly and worshipped Varuṇa and the other gods, and the great ones tell his story. In that sacrifice Viśvāmitra, who had mastery over himself, was the hotā and the adhvaryu.
+tel: ఉదరవ్యాధి నుండి విముక్తుడై వరుణుడు మొదలైన దేవతలను పూజించెను; గొప్పవారు అతని కథను చెప్పుదురు. ఆ యజ్ఞమున ఆత్మవంతుడైన విశ్వామిత్రుడు హోతయు అధ్వర్యుడును ఆయెను.
+hi: पेट के रोग से मुक्त होकर वरुण आदि देवों का यजन किया; महान् पुरुष उसकी कथा कहते हैं। उस यज्ञ में आत्मवान् विश्वामित्र होता और अध्वर्यु हुए।
 
 --- verse 23 ---
 deva:
@@ -202,6 +268,9 @@ deva:
 iast:
 jamadagnirabhūd brahmā vasiṣṭho'yāsyasāmagaḥ|
 tasmai tuṣṭo dadāvindraḥ śātakaumbhamayaṁ ratham||
+en: Jamadagni was the brahmā, and Vasiṣṭha was the Ayāsya singer of the Sāman. Indra was pleased and gave the king a chariot made of gold.
+tel: జమదగ్ని బ్రహ్మ ఆయెను; వసిష్ఠుడు అయాస్య సామగాయకుడు ఆయెను. ఇంద్రుడు సంతుష్టుడై ఆ రాజునకు బంగారుమయమైన రథమును ఇచ్చెను.
+hi: जमदग्नि ब्रह्मा हुए और वसिष्ठ अयास्य सामगायक हुए। इन्द्र ने प्रसन्न होकर उस राजा को सोने का बना रथ दिया।
 
 --- verse 24 ---
 deva:
@@ -210,6 +279,9 @@ deva:
 iast:
 śunaḥśepasya māhātmyamupariṣṭāt pracakṣyate|
 satyasārāṁ dhṛtiṁ dṛṣṭvā sabhāryasya ca bhūpateḥ||
+en: The greatness of Śunaḥśepa will be told later. Seeing in the king, together with his wife, a steadfastness whose essence was truth,
+tel: శునఃశేపుని మహిమ ముందు చెప్పబడును. సత్యమే సారమైన ధైర్యమును, భార్యతో కూడిన ఆ రాజునందు చూచి,
+hi: शुनःशेप की महिमा आगे कही जायगी। सत्य ही जिसका सार है, ऐसी धृति को पत्नी के सहित उस राजा में देखकर,
 
 --- verse 25 ---
 deva:
@@ -218,6 +290,9 @@ deva:
 iast:
 viśvāmitro bhṛśaṁ prīto dadāvavihatāṁ gatim|
 manaḥ pṛthivyāṁ tāmadbhistejasāpo'nilena tat||
+en: Viśvāmitra was greatly pleased and gave him a course that nothing can obstruct. The king then merged his mind in the earth, the earth in water, the water in fire, and the fire in the wind.
+tel: విశ్వామిత్రుడు మిక్కిలి ప్రీతుడై అతనికి ఆటంకములేని గతిని ఇచ్చెను. పిమ్మట రాజు మనస్సును పృథివిలో, పృథివిని జలములో, జలమును తేజములో, తేజమును వాయువులో లయము చేసెను.
+hi: विश्वामित्र अत्यन्त प्रसन्न हुए और उसे अविहत गति दी। तब राजा ने मन को पृथ्वी में, पृथ्वी को जल में, जल को तेज में और तेज को वायु में लीन किया।
 
 --- verse 26 ---
 deva:
@@ -226,6 +301,9 @@ deva:
 iast:
 khe vāyuṁ dhārayaṁstacca bhūtādau taṁ mahātmani|
 tasmin jñānakalāṁ dhyātvā tayājñānaṁ vinirdahan||
+en: He held the wind in the ether, the ether in the origin of the elements, and that in the Great Principle. In that he meditated on the portion of knowledge, and with it he burned away ignorance.
+tel: వాయువును ఆకాశమున, ఆకాశమును భూతాదిలో, దానిని మహత్తత్త్వమున ధరించెను. అందు జ్ఞానకళను ధ్యానించి దానిచే అజ్ఞానమును దహించెను.
+hi: उसने वायु को आकाश में, आकाश को भूतादि में और उसे महत्तत्त्व में धारण किया। उसमें ज्ञान की कला का ध्यान करके उससे अज्ञान को जला दिया।
 
 --- verse 27 ---
 deva:
@@ -234,9 +312,15 @@ deva:
 iast:
 hitvā tāṁ svena bhāvena nirvāṇasukhasaṁvidā|
 anirdeśyāpratarkyeṇa tasthau vidhvastabandhanaḥ||
+en: He gave up that portion of knowledge as well, and with his bonds utterly broken he stood in his own state, which is the awareness of the bliss of liberation, and which cannot be pointed out and cannot be reasoned about.
+tel: ఆ జ్ఞానకళను కూడ విడిచి, బంధములు పూర్తిగా నశించినవాడై అతడు నిర్వాణసుఖము యొక్క సంవిత్తు అయిన, నిర్దేశింపరాని, తర్కింపరాని తన స్వరూపమునందు నిలిచెను.
+hi: उस ज्ञानकला को भी छोड़कर, बन्धन पूर्ण रूप से नष्ट हो जाने पर वह अपने उस स्वरूप में स्थित हो गया, जो निर्वाण-सुख का बोध है, जो न बताया जा सकता है और न तर्क से जाना जा सकता है।
 
 --- verse none ---
 deva:
 इति श्रीमद्भागवते महापुराणे पारमहंस्यां संहितायां नवमस्कन्धे हरिश्चन्द्रोपाख्यानं नाम सप्तमोऽध्यायः॥ ७॥
 iast:
 iti śrīmadbhāgavate mahāpurāṇe pāramahaṁsyāṁ saṁhitāyāṁ navamaskandhe hariścandropākhyānaṁ nāma saptamo'dhyāyaḥ|| 7||
+en: Thus ends the seventh adhyāya, the account of Hariścandra, in the ninth skandha of the Śrīmad Bhāgavata Mahāpurāṇa, the saṁhitā of the paramahaṁsas.
+tel: ఇది శ్రీమద్భాగవత మహాపురాణమునందు, పరమహంసల సంహితయందు, నవమస్కంధమునందు హరిశ్చంద్రోపాఖ్యానమను సప్తమాధ్యాయము సమాప్తము.
+hi: इस प्रकार श्रीमद्भागवत महापुराण की परमहंसों की संहिता के नवम स्कन्ध में हरिश्चन्द्र का उपाख्यान नामक सातवाँ अध्याय समाप्त हुआ।

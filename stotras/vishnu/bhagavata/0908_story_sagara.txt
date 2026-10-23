@@ -9,7 +9,7 @@ Type: Purāṇa (an adhyāya of the Śrīmad Bhāgavata, Skandha 9)
 
 Source / recension: Base text and authority: the Gītā Press, Gorakhpur Śrīmadbhāgavata Mahāpurāṇa with Hindi translation, Part 2 (Gītā Press code 27), archive.org item `shrimadbhagwat-mahapuran-bhag-2`, printed pages 41–45; the PDF page numbers are the printed ones. The PDF carries the typesetter's own text layer in the Chanakya font encoding, and the text was decoded from it by machine with `bin/bhagavata/chanakya.py`, not read off OCR or typed. The decoder was checked against GRETIL over all twelve skandhas before any file was written, and the differences that remain were sampled and found to be readings of the two editions. Second witness: GRETIL's `sa_bhAgavatapurANa.xml` (IAST, contributed by Ulrich Stiehl), a separate editorial lineage, compared verse by verse by machine. The TTD edition with the commentaries of Śrīdhara, Vīrarāghava and Vijayadhvaja (archive.org `Bhagavata_Purana_With_Multiple_Commentaries_TTD_Critical_Edition`) is the third witness where one is needed; it was not read for this file. The IAST was generated mechanically from the Devanāgarī with `bin/dev2iast.py`.
 
-Recension note: Text-only file, written 1 Oct 2026 at the user's instruction to lay down the whole Bhāgavata first: the English, Telugu and Hindi meanings are still to be added, and the witnesses' differences listed here have been recorded by machine and not yet adjudicated. The print is followed throughout. The print numbers 31 verses and GRETIL numbers 31. Of the 31 verses GRETIL has under the same number, 20 agree with the print letter for letter once spacing and the spelling of nasals are set aside; the rest differ: 8, 14, 16, 19, 20, 23, 24, 25, 28, 30, 31. Spacing is the print's, as its text layer gives it; in a few places justification has left a space inside a word, and these are still to be closed when the verse is read. The speaker lines (श्रीशुक उवाच and the others) are printed in italic above the verse they introduce, and are given as its first line.
+Recension note: Meanings written 23 Oct 2026 (session S78). The differences between the witnesses listed below were read as the verses were glossed; except where this note says otherwise, each is a spelling, a sandhi or a word order of the two editions, none of them changes the sense, and the print's reading therefore stands unbracketed. The print is followed throughout. The print numbers 31 verses and GRETIL numbers 31. Of the 31 verses GRETIL has under the same number, 20 agree with the print letter for letter once spacing and the spelling of nasals are set aside; the rest differ: 8, 14, 16, 19, 20, 23, 24, 25, 28, 30, 31. Spacing is the print's, as its text layer gives it. The speaker lines (श्रीशुक उवाच and the others) are printed in italic above the verse they introduce, and are given as its first line. One lost space was put right as the verses were read. At verse 22 the text layer had run विसर्गसृष्टा and वयम् together as विसर्गसृष्टावयम्; the space is restored here, since सृष्टा carries its own case ending and cannot begin a compound, and GRETIL reads सृष्टा वयम् as two words. Nothing else was changed. The print's line structure is left as printed: at verse 14 its line-break hyphen falls inside नौर्यया (नौ- / र्यया, GRETIL naur yayā) and at verse 25 inside लिंगमनामरूपं (लिंग- / मनामरूपं, GRETIL liṅgam anāmarūpaṁ), and both hyphens stay where the print puts them. At verse 15 पुत्रोंऽशुमान् keeps this edition's anusvāra before the avagraha. The joins after a virāma consonant (verses 5, 6, 9, 12, 17) are required by the script and are not defects, and the compounds that GRETIL merely spaces loosely (verses 18, 25, 26) stand as printed. Where the two editions differ in a word the print is followed: ते for GRETIL's त्वां at verse 23, हि मूढः for विमूढः at verse 24, अनुगृह्य for अनुग्राह्य at verse 28, क्रतुशेषं for यज्ञशेषं at verse 30, तुरंगान्वेषणे for तुरगान्वेषणे at verse 20 and अंशुमति for अंशुमते at verse 31; none of these changes the sense.
 
 Verse count: 31, plus the closing colophon printed unnumbered.
 
@@ -24,6 +24,9 @@ iast:
 śrīśuka uvāca
 harito rohitasutaścampastasmād vinirmitā|
 campāpurī sudevo'to vijayo yasya cātmajaḥ||
+en: Śrī Śuka said: Harita was the son of Rohita. From Harita came Campa, and by him the city of Campāpurī was built. From Campa came Sudeva, and the son of Sudeva was Vijaya.
+tel: శ్రీశుకుడు పలికెను: హరితుడు రోహితుని కుమారుడు. హరితుని నుండి చంపుడు కలిగెను; అతడే చంపాపురి నగరమును నిర్మించెను. చంపుని నుండి సుదేవుడు కలిగెను; సుదేవుని కుమారుడు విజయుడు.
+hi: श्रीशुकदेवजी ने कहा: हरित रोहित के पुत्र थे। हरित से चम्प हुए; उन्होंने ही चम्पापुरी नगरी बसाई। चम्प से सुदेव हुए; सुदेव के पुत्र विजय थे।
 
 --- verse 2 ---
 deva:
@@ -32,6 +35,9 @@ deva:
 iast:
 bharukastatsutastasmād vṛkastasyāpi bāhukaḥ|
 so'ribhirhṛtabhū rājā sabhāryo vanamāviśat||
+en: Bharuka was his son, and from Bharuka came Vṛka. The son of Vṛka was Bāhuka. The enemies of that king took away his land, and he entered the forest with his wife.
+tel: భరుకుడు అతని కుమారుడు; భరుకుని నుండి వృకుడు కలిగెను. వృకుని కుమారుడు బాహుకుడు. ఆ రాజు భూమిని శత్రువులు తీసుకొనిరి; అతడు భార్యతో కలిసి అరణ్యమునకు వెళ్లెను.
+hi: भरुक उनके पुत्र थे; भरुक से वृक हुए। वृक के पुत्र बाहुक थे। उस राजा की भूमि शत्रुओं ने छीन ली, और वे अपनी पत्नी के साथ वन में चले गये।
 
 --- verse 3 ---
 deva:
@@ -40,6 +46,9 @@ deva:
 iast:
 vṛddhaṁ taṁ paṁcatāṁ prāptaṁ mahiṣyanu mariṣyatī|
 aurveṇa jānatā''tmānaṁ prajāvantaṁ nivāritā||
+en: He grew old and he died there. His queen was about to die after him, but the sage Aurva knew that she was carrying a child, and he stopped her.
+tel: అతడు వృద్ధుడై అందు మరణించెను. అతని రాణి అతని వెంట మరణింపబోయెను; కాని ఔర్వ మహర్షి ఆమె గర్భమును ధరించియున్నదని ఎరిగి ఆమెను నివారించెను.
+hi: वे वृद्ध हुए और वहीं मृत्यु को प्राप्त हुए। उनकी रानी उनके पीछे मरने को तैयार थी, परन्तु और्व मुनि ने जान लिया कि वह गर्भ धारण किये हुए है, और उसे रोक दिया।
 
 --- verse 4 ---
 deva:
@@ -48,6 +57,9 @@ deva:
 iast:
 ājñāyāsyai sapatnībhirgaro datto'ndhasā saha|
 saha tenaiva saṁjātaḥ sagarākhyo mahāyaśāḥ||
+en: Her co-wives came to know of this, and they gave her poison along with her food. The child was born together with that poison. He had great fame, and he was named Sagara.
+tel: ఆమె సవతులు ఈ విషయమును తెలిసికొని, ఆహారముతో కలిపి ఆమెకు విషమును ఇచ్చిరి. ఆ విషముతో కలిసియే బిడ్డ జన్మించెను. అతడు గొప్ప యశస్సు కలవాడు; అతనికి సగరుడు అని పేరు.
+hi: उसकी सौतों ने यह जान लिया और भोजन के साथ उसे विष दे दिया। उस विष के साथ ही बालक का जन्म हुआ। वह बड़े यश वाला था और उसका नाम सगर रखा गया।
 
 --- verse 5 ---
 deva:
@@ -56,6 +68,9 @@ deva:
 iast:
 sagaraścakravartyāsīt sāgaro yatsutaiḥ kṛtaḥ|
 yastālajaṁghān yavanāñchakān haihayabarbarān||
+en: Sagara became an emperor. The ocean, the sāgara, was dug out by his sons. He did not kill the Tālajaṅghas, the Yavanas, the Śakas, the Haihayas and the Barbaras.
+tel: సగరుడు చక్రవర్తి ఆయెను. సాగరము అను సముద్రము అతని కుమారులచే త్రవ్వబడినది. తాలజంఘులను, యవనులను, శకులను, హైహయులను, బర్బరులను అతడు చంపలేదు.
+hi: सगर चक्रवर्ती हुए। सागर नामक समुद्र उनके पुत्रों ने ही खोदा। तालजंघों, यवनों, शकों, हैहयों और बर्बरों को उन्होंने मारा नहीं।
 
 --- verse 6 ---
 deva:
@@ -64,6 +79,9 @@ deva:
 iast:
 nāvadhīd guruvākyena cakre vikṛtaveṣiṇaḥ|
 muṇḍāñchmaśrudharān kāṁścinmuktakeśārdhamuṇḍitān||
+en: This was because the word of his teacher was so. He made them wear strange dress instead. Some he made shaven headed, some wearers of moustaches, some with loose hair and some shaved on half the head.
+tel: ఏలయనగా గురువు వాక్యము అట్లు ఉండెను. వారిని వికృతమైన వేషము కలవారిగా చేసెను. కొందరిని గుండు చేయించెను, కొందరిని మీసములు కలవారిగా చేసెను, కొందరిని విడిచిన జుట్టు కలవారిగా, కొందరిని సగము తల గొరిగినవారిగా చేసెను.
+hi: क्योंकि गुरु का वचन ऐसा था। उन्होंने उन्हें विकृत वेष वाले बना दिया। किसी को मुण्डित किया, किसी को मूँछ रखनेवाला बनाया, किसी को खुले केश वाला और किसी को आधा सिर मुँड़ाया हुआ बनाया।
 
 --- verse 7 ---
 deva:
@@ -72,6 +90,9 @@ deva:
 iast:
 anantarvāsasaḥ kāṁścidabahirvāsaso'parān|
 so'śvamedhairayajata sarvavedasurātmakam||
+en: Some he left without an inner garment, and others without an outer garment. With aśvamedha sacrifices he worshipped the Lord who is the self of all the Vedas and of all the gods.
+tel: కొందరిని లోపలి వస్త్రము లేనివారిగా, మరికొందరిని బయటి వస్త్రము లేనివారిగా చేసెను. సమస్త వేదముల, దేవతల ఆత్మ అయిన భగవంతుని అశ్వమేధ యజ్ఞములచే అతడు ఆరాధించెను.
+hi: किसी को भीतरी वस्त्र से रहित और किसी को बाहरी वस्त्र से रहित कर दिया। समस्त वेदों और देवताओं के आत्मा भगवान् की उन्होंने अश्वमेध यज्ञों से आराधना की।
 
 --- verse 8 ---
 deva:
@@ -80,6 +101,9 @@ deva:
 iast:
 aurvopadiṣṭayogena harimātmānamīśvaram|
 tasyotsṛṣṭaṁ paśuṁ yajñe jahārāśvaṁ purandaraḥ||
+en: He worshipped Hari, who is the Self and the ruler, by the yoga that Aurva had taught him. In his sacrifice Purandara carried off the horse that had been set free as the sacrificial animal.
+tel: ఔర్వుడు ఉపదేశించిన యోగముచే ఆత్మయు ఈశ్వరుడును అయిన శ్రీహరిని ఆరాధించెను. అతని యజ్ఞమునందు పశువుగా విడువబడిన గుర్రమును పురందరుడు అపహరించెను.
+hi: और्व के बताये हुए योग से उन्होंने आत्मा और ईश्वर श्रीहरि की आराधना की। उनके यज्ञ में पशु के रूप में छोड़े गये घोड़े को पुरन्दर हर ले गया।
 
 --- verse 9 ---
 deva:
@@ -88,6 +112,9 @@ deva:
 iast:
 sumatyāstanayā dṛptāḥ piturādeśakāriṇaḥ|
 hayamanveṣamāṇāste samantānnyakhanan mahīm||
+en: The sons of Sumati were proud. At their father's command they searched for the horse and dug up the earth on every side.
+tel: సుమతి కుమారులు గర్వము కలవారు. తండ్రి ఆదేశము ప్రకారము వారు గుర్రమును వెదకుచు అన్ని వైపుల భూమిని త్రవ్విరి.
+hi: सुमति के पुत्र घमण्डी थे। पिता की आज्ञा से वे घोड़े को खोजते हुए चारों ओर पृथ्वी को खोदने लगे।
 
 --- verse 10 ---
 deva:
@@ -96,6 +123,9 @@ deva:
 iast:
 prāgudīcyāṁ diśi hayaṁ dadṛśuḥ kapilāntike|
 eṣa vājiharaścaura āste mīlitalocanaḥ||
+en: In the north-eastern quarter they saw the horse near the sage Kapila. They said, "Here sits the thief who took the horse, with his eyes closed."
+tel: ఈశాన్య దిక్కున కపిల మహర్షి దగ్గర వారు గుర్రమును చూచిరి. "గుర్రమును తీసుకొనిన ఈ దొంగ కన్నులు మూసుకొని ఇచట కూర్చుండియున్నాడు" అని వారు పలికిరి.
+hi: उत्तर-पूर्व दिशा में कपिल मुनि के पास उन्होंने घोड़े को देखा। वे बोले, "घोड़े को हरनेवाला यह चोर आँखें मूँदकर यहाँ बैठा है।"
 
 --- verse 11 ---
 deva:
@@ -104,6 +134,9 @@ deva:
 iast:
 hanyatāṁ hanyatāṁ pāpa iti ṣaṣṭisahasriṇaḥ|
 udāyudhā abhiyayurunmimeṣa tadā muniḥ||
+en: "Kill him, kill this sinner." Saying this, the sixty thousand came at him with raised weapons. Then the sage opened his eyes.
+tel: "ఇతనిని చంపుడు, ఈ పాపిని చంపుడు" అని పలుకుచు ఆ అరువది వేలమంది ఎత్తిన ఆయుధములతో అతనిపై వచ్చిపడిరి. అప్పుడు ఆ ముని కన్నులు తెరిచెను.
+hi: "इसे मारो, इस पापी को मारो" ऐसा कहते हुए वे साठ हजार उठाये हुए शस्त्रों के साथ उस पर झपटे। तब मुनि ने आँखें खोलीं।
 
 --- verse 12 ---
 deva:
@@ -112,6 +145,9 @@ deva:
 iast:
 svaśarīrāgninā tāvanmahendrahṛtacetasaḥ|
 mahadvyatikramahatā bhasmasādabhavan kṣaṇāt||
+en: Mahendra had already taken away their minds. They were struck down by their great offence, and in a moment the fire of their own bodies turned them to ashes.
+tel: మహేంద్రుడు ఇంతకుముందే వారి బుద్ధిని హరించెను. గొప్ప అపరాధముచే వారు దెబ్బతినినవారై, తమ శరీరముల అగ్నిచే క్షణములో బూడిదగా మారిరి.
+hi: महेन्द्र ने पहले ही उनकी बुद्धि हर ली थी। बड़े अपराध से वे मारे गये और अपने ही शरीरों की अग्नि से क्षण भर में भस्म हो गये।
 
 --- verse 13 ---
 deva:
@@ -124,6 +160,9 @@ na sādhuvādo munikopabharjitā
 nṛpendraputrā iti sattvadhāmani|
 kathaṁ tamo roṣamayaṁ vibhāvyate
 jagatpavitrātmani khe rajo bhuvaḥ||
+en: It is not right to say that the sons of the king were burnt by the sage's anger, for he is the abode of sattva. How can darkness in the form of anger be thought of in him whose nature purifies the world? Can the dust of the earth stay in the sky?
+tel: ఆ రాజు కుమారులు ముని కోపముచే కాల్చబడిరి అని చెప్పుట సరియైన మాట కాదు; ఏలయనగా ఆయన సత్త్వమునకు నిలయము. లోకమును పవిత్రము చేయు స్వరూపము కలవానిలో కోపరూపమైన తమస్సును ఎట్లు ఊహింపగలము? భూమి ధూళి ఆకాశమునందు నిలువగలదా?
+hi: राजा के पुत्र मुनि के क्रोध से जल गये, ऐसा कहना उचित नहीं है; क्योंकि वे सत्त्व के धाम हैं। जगत् को पवित्र करनेवाले स्वरूप में क्रोधरूपी तमस् की कल्पना कैसे की जा सकती है? क्या पृथ्वी की धूल आकाश में ठहर सकती है?
 
 --- verse 14 ---
 deva:
@@ -136,6 +175,9 @@ yasyeritā sāṁkhyamayī dṛḍheha nau-
 ryayā mumukṣustarate duratyayam|
 bhavārṇavaṁ mṛtyupathaṁ vipaścitaḥ
 parātmabhūtasya kathaṁ pṛthaṅmatiḥ||
+en: He taught here the firm boat made of Sāṁkhya, by which one who seeks release crosses the ocean of worldly life, which is hard to cross and is the road of death. He is wise and he has become the supreme Self. How can there be any sense of difference in him?
+tel: దాటుటకు కష్టమైనదియు మృత్యువు మార్గమైనదియు అగు సంసార సముద్రమును మోక్షమును కోరువాడు దాటుటకు దృఢమైన సాంఖ్యరూపమైన నావ ఆయనచే ఇచట ఉపదేశింపబడినది. ఆయన విద్వాంసుడు, పరమాత్మ స్వరూపుడు ఆయెను. ఆయనలో భేదబుద్ధి ఎట్లు ఉండును?
+hi: पार करने में कठिन और मृत्यु का मार्ग रूप इस संसार-समुद्र को मुमुक्षु जिससे पार करता है, वह दृढ़ सांख्यरूपी नौका उन्होंने ही यहाँ बताई है। वे विद्वान् हैं और परमात्मस्वरूप हो गये हैं। उनमें भेदबुद्धि कैसे हो सकती है?
 
 --- verse 15 ---
 deva:
@@ -144,6 +186,9 @@ deva:
 iast:
 yo'samaṁjasa ityuktaḥ sa keśinyā nṛpātmajaḥ|
 tasya putroṁ'śumān nāma pitāmahahite rataḥ||
+en: The son whom Keśinī bore to the king was called Asamañjasa. His son was named Aṁśumān, and he was devoted to the good of his grandfather.
+tel: కేశిని వలన ఆ రాజునకు కలిగిన కుమారుడు అసమంజసుడు అని పిలువబడెను. అతని కుమారుడు అంశుమంతుడు అను పేరు కలవాడు; అతడు తాత మేలునందు ఆసక్తి కలవాడు.
+hi: केशिनी से राजा को जो पुत्र हुआ, वह असमंजस कहलाया। उसका पुत्र अंशुमान् नाम से था, और वह अपने दादा के हित में लगा रहता था।
 
 --- verse 16 ---
 deva:
@@ -152,6 +197,9 @@ deva:
 iast:
 asamaṁjasa ātmānaṁ darśayannasamaṁjasam|
 jātismaraḥ purā saṁgād yogī yogād vicālitaḥ||
+en: Asamañjasa showed himself to be truly unfit. He remembered his former birth. He had been a yogī before, and through attachment he had fallen from yoga.
+tel: అసమంజసుడు తనను నిజముగా అసమంజసుడు అని చూపించుకొనెను. అతనికి పూర్వ జన్మ జ్ఞాపకము ఉండెను. ముందు యోగియై ఉండెను; సంగముచే యోగము నుండి జారినవాడు.
+hi: असमंजस ने अपने को वास्तव में असमंजस ही दिखा दिया। उसे पूर्व जन्म का स्मरण था। वह पहले योगी था और संग के कारण योग से गिर गया था।
 
 --- verse 17 ---
 deva:
@@ -160,6 +208,9 @@ deva:
 iast:
 ācaran garhitaṁ loke jñātīnāṁ karma vipriyam|
 sarayvāṁ krīḍato bālān prāsyadudvejayañjanam||
+en: He did what the world condemns and what was hateful to his kinsmen. He threw into the Sarayū the boys who were playing there, and so he distressed the people.
+tel: లోకము నిందించు పనిని, జ్ఞాతులకు ఇష్టము కాని పనిని అతడు చేసెను. సరయూ నదియందు ఆడుకొనుచున్న బాలకులను ఆ నదిలో పడవైచి జనులను ఉద్వేగపరచెను.
+hi: उसने वह किया जिसकी लोक में निन्दा होती है और जो उसके ज्ञातियों को अप्रिय था। सरयू में खेलते हुए बालकों को उसने उसी नदी में फेंक दिया और लोगों को व्याकुल किया।
 
 --- verse 18 ---
 deva:
@@ -168,6 +219,9 @@ deva:
 iast:
 evaṁvṛttaḥ parityaktaḥ pitrā snehamapohya vai|
 yogaiśvaryeṇa bālāṁstān darśayitvā tato yayau||
+en: Because he behaved in this way his father put aside his affection and cast him off. By the power of his yoga he showed those boys alive again, and then he went away from there.
+tel: ఈ విధముగా ప్రవర్తించినందున తండ్రి స్నేహమును విడిచి అతనిని త్యజించెను. యోగైశ్వర్యముచే ఆ బాలకులను తిరిగి చూపి, పిమ్మట అతడు అచటి నుండి వెళ్లిపోయెను.
+hi: इस प्रकार के आचरण के कारण पिता ने स्नेह छोड़कर उसे त्याग दिया। योग के ऐश्वर्य से उसने उन बालकों को फिर दिखा दिया, और तब वहाँ से चला गया।
 
 --- verse 19 ---
 deva:
@@ -176,6 +230,9 @@ deva:
 iast:
 ayodhyāvāsinaḥ sarve bālakān punarāgatān|
 dṛṣṭvā visismire rājan rājā cāpyanvatapyata||
+en: O King, all the people of Ayodhyā were filled with wonder when they saw the boys come back. And the king too was filled with regret.
+tel: రాజా, బాలకులు తిరిగి వచ్చుట చూచి అయోధ్యావాసులందరు ఆశ్చర్యపడిరి. రాజు కూడ పశ్చాత్తాపము పొందెను.
+hi: हे राजन्, बालकों को लौटा हुआ देखकर अयोध्या के सब निवासी आश्चर्य से भर गये। राजा को भी पश्चात्ताप हुआ।
 
 --- verse 20 ---
 deva:
@@ -184,6 +241,9 @@ deva:
 iast:
 aṁśumāṁścodito rājñā turaṁgānveṣaṇe yayau|
 pitṛvyakhātānupathaṁ bhasmānti dadṛśe hayam||
+en: Aṁśumān was sent by the king and went out in search of the horse. He followed the path that his uncles had dug, and beside the ashes he saw the horse.
+tel: రాజుచే పంపబడిన అంశుమంతుడు గుర్రమును వెదకుటకు వెళ్లెను. తన పితృవ్యులు త్రవ్విన మార్గమున నడచి, బూడిద ప్రక్కన ఆ గుర్రమును చూచెను.
+hi: राजा के भेजने पर अंशुमान् घोड़े की खोज में गया। अपने चाचाओं के खोदे हुए मार्ग से चलकर उसने भस्म के पास उस घोड़े को देखा।
 
 --- verse 21 ---
 deva:
@@ -192,6 +252,9 @@ deva:
 iast:
 tatrāsīnaṁ muniṁ vīkṣya kapilākhyamadhokṣajam|
 astaut samāhitamanāḥ prāṁjaliḥ praṇato mahān||
+en: There he saw the sage seated, Adhokṣaja himself under the name of Kapila. That great man bowed down, joined his palms, steadied his mind and praised him.
+tel: కపిలుడు అను పేరు కల అధోక్షజుడైన ఆ మునిని అందు కూర్చుండియుండగా చూచి, ఆ మహాత్ముడు ప్రణమిల్లి, చేతులు జోడించి, మనస్సును నిలిపి స్తుతించెను.
+hi: वहाँ कपिल नाम वाले अधोक्षज मुनि को बैठा देखकर उस महापुरुष ने प्रणाम किया, हाथ जोड़े, मन को स्थिर किया और स्तुति की।
 
 --- verse 22 ---
 deva:
@@ -199,13 +262,16 @@ deva:
 न पश्यति त्वां परमात्मनोऽजनो
 न बुध्यतेऽद्यापि समाधियुक्तिभिः।
 कुतोऽपरे तस्य मनःशरीरधी-
-विसर्गसृष्टावयमप्रकाशाः॥
+विसर्गसृष्टा वयमप्रकाशाः॥
 iast:
 aṁśumānuvāca
 na paśyati tvāṁ paramātmano'jano
 na budhyate'dyāpi samādhiyuktibhiḥ|
 kuto'pare tasya manaḥśarīradhī-
-visargasṛṣṭāvayamaprakāśāḥ||
+visargasṛṣṭā vayamaprakāśāḥ||
+en: Aṁśumān said: Brahmā, who was born from you, the supreme Self, does not see you, and even now he does not know you by the practices of samādhi. How then can others know you? We were created in the emanation of his mind, his body and his understanding, and we have no light.
+tel: అంశుమంతుడు పలికెను: పరమాత్మ అయిన మీ నుండి పుట్టిన బ్రహ్మయే మిమ్ము చూడలేడు; సమాధి ఉపాయములచే ఇప్పటికిని ఎరుగలేడు. ఇతరులు ఎట్లు ఎరుగగలరు? ఆయన మనస్సు, శరీరము, బుద్ధి అను విసర్గమునందు సృష్టింపబడిన మేము ప్రకాశము లేనివారము.
+hi: अंशुमान् ने कहा: परमात्मा आप से उत्पन्न ब्रह्मा भी आपको नहीं देखते, और समाधि के उपायों से अब तक नहीं जान पाये। तब दूसरे कैसे जानें? उनके मन, शरीर और बुद्धि के विसर्ग में रचे गये हम प्रकाश से रहित हैं।
 
 --- verse 23 ---
 deva:
@@ -218,6 +284,9 @@ ye dehabhājastriguṇapradhānā
 guṇān vipaśyantyuta vā tamaśca|
 yanmāyayā mohitacetasaste
 viduḥ svasaṁsthaṁ na bahiḥprakāśāḥ||
+en: Those who bear bodies and in whom the three guṇas rule see only the guṇas, or else they see only darkness. Their minds are deluded by your māyā. Their light is turned outward, and so they do not know the one who dwells within them.
+tel: శరీరమును ధరించినవారు, మూడు గుణములు ప్రధానముగా కలవారు, గుణములనే చూతురు; లేదా తమస్సునే చూతురు. మీ మాయచే వారి మనస్సు మోహము పొందినది. వారి ప్రకాశము బయటికే ఉన్నందున, తమలో ఉన్నవానిని వారు ఎరుగరు.
+hi: जो शरीर धारण करते हैं और जिनमें तीनों गुण प्रधान हैं, वे गुणों को ही देखते हैं, अथवा तमस् को ही देखते हैं। आपकी माया से उनका मन मोहित है। उनका प्रकाश बाहर की ओर है, इसलिये वे अपने भीतर रहनेवाले को नहीं जानते।
 
 --- verse 24 ---
 deva:
@@ -230,6 +299,9 @@ taṁ tvāmahaṁ jñānaghanaṁ svabhāva-
 pradhvastamāyāguṇabhedamohaiḥ|
 sanandanādyairmunibhirvibhāvyaṁ
 kathaṁ hi mūḍhaḥ paribhāvayāmi||
+en: You are solid knowledge. In sages like Sanandana the delusion of difference, which comes from māyā and the guṇas, has been destroyed by their own nature, and they meditate upon you. How then can I, who am dull, meditate upon you?
+tel: మీరు జ్ఞానఘన స్వరూపులు. సనందనాది మునులలో మాయ గుణముల వలన కలిగిన భేదమోహము వారి స్వభావముచే నశించినది; వారు మిమ్ము ధ్యానింతురు. మూఢుడనైన నేను మిమ్ము ఎట్లు ధ్యానింపగలను?
+hi: आप ज्ञानघन हैं। सनन्दन आदि मुनियों में माया और गुणों से उत्पन्न भेद का मोह उनके स्वभाव से नष्ट हो गया है, और वे आपका ध्यान करते हैं। तब मैं मूढ़ आपका ध्यान कैसे करूँ?
 
 --- verse 25 ---
 deva:
@@ -242,6 +314,9 @@ praśāntamāyāguṇakarmaliṁga-
 manāmarūpaṁ sadasadvimuktam|
 jñānopadeśāya gṛhītadehaṁ
 namāmahe tvāṁ puruṣaṁ purāṇam||
+en: In you the marks of māyā, of the guṇas and of action have come to rest. You have no name and no form. You are free from what is and from what is not. You have taken a body in order to teach knowledge. We bow to you, the ancient Puruṣa.
+tel: మీలో మాయ, గుణములు, కర్మల లక్షణములు శాంతించినవి. మీకు నామము లేదు, రూపము లేదు. సత్తు నుండియు అసత్తు నుండియు మీరు విముక్తులు. జ్ఞానమును ఉపదేశించుటకై శరీరమును గ్రహించినారు. పురాణ పురుషుడైన మీకు మేము నమస్కరించుచున్నాము.
+hi: आप में माया, गुण और कर्म के लक्षण शान्त हो गये हैं। आपका न नाम है और न रूप। आप सत् और असत् से मुक्त हैं। ज्ञान का उपदेश करने के लिये आपने शरीर ग्रहण किया है। पुराण पुरुष आपको हम नमस्कार करते हैं।
 
 --- verse 26 ---
 deva:
@@ -250,6 +325,9 @@ deva:
 iast:
 tvanmāyāracite loke vastubuddhyā gṛhādiṣu|
 bhramanti kāmalobherṣyāmohavibhrāntacetasaḥ||
+en: In this world made by your māyā people take houses and the rest to be real, and they wander among them. Their minds are confused by desire, greed, envy and delusion.
+tel: మీ మాయచే రచింపబడిన ఈ లోకమునందు జనులు ఇండ్లు మొదలైనవి నిజమైనవి అను బుద్ధితో తిరుగుచున్నారు. కామము, లోభము, ఈర్ష్య, మోహములచే వారి మనస్సు చలించినది.
+hi: आपकी माया से रचे हुए इस लोक में लोग घर आदि को वास्तविक मानकर भटकते हैं। काम, लोभ, ईर्ष्या और मोह से उनका मन विभ्रान्त है।
 
 --- verse 27 ---
 deva:
@@ -258,6 +336,9 @@ deva:
 iast:
 adya naḥ sarvabhūtātman kāmakarmendriyāśayaḥ|
 mohapāśo dṛḍhaśchinno bhagavaṁstava darśanāt||
+en: O self of all beings, today the strong rope of delusion, which rests on desire, on action and on the senses, has been cut for us, O Lord, by the sight of you.
+tel: సర్వభూతాత్మా, కామము, కర్మము, ఇంద్రియములనే ఆశ్రయముగా కల దృఢమైన మోహపాశము, భగవంతుడా, మీ దర్శనముచే ఈ దినము మాకు తెగిపోయినది.
+hi: हे सर्वभूतात्मा, काम, कर्म और इन्द्रियों के आश्रय वाला दृढ़ मोह का बन्धन, हे भगवन्, आपके दर्शन से आज हमारा कट गया।
 
 --- verse 28 ---
 deva:
@@ -268,6 +349,9 @@ iast:
 śrīśuka uvāca
 itthaṁ gītānubhāvastaṁ bhagavān kapilo muniḥ|
 aṁśumantamuvācedamanugṛhya dhiyā nṛpa||
+en: Śrī Śuka said: O King, the greatness of the Lord was praised in this way. Then the sage Kapila, who is the Lord himself, favoured Aṁśumān in his heart and said this to him.
+tel: శ్రీశుకుడు పలికెను: రాజా, ఈ విధముగా భగవంతుని మహిమ కీర్తింపబడినది. అప్పుడు భగవంతుడైన కపిల ముని తన బుద్ధియందు అంశుమంతుని అనుగ్రహించి అతనితో ఇట్లు పలికెను.
+hi: श्रीशुकदेवजी ने कहा: हे राजन्, इस प्रकार भगवान् की महिमा गायी गयी। तब भगवान् कपिल मुनि ने अपने मन में अंशुमान् पर अनुग्रह करके उससे यह कहा।
 
 --- verse 29 ---
 deva:
@@ -278,6 +362,9 @@ iast:
 śrībhagavānuvāca
 aśvo'yaṁ nīyatāṁ vatsa pitāmahapaśustava|
 ime ca pitaro dagdhā gaṁgāmbho'rhanti netarat||
+en: The blessed Lord said: Child, let this horse be taken away. It is the sacrificial animal of your grandfather. And these forefathers who were burnt deserve the water of the Gaṅgā and nothing else.
+tel: శ్రీభగవంతుడు పలికెను: నాయనా, ఈ గుర్రమును తీసుకొనిపొమ్ము; ఇది మీ తాత యజ్ఞ పశువు. కాల్చబడిన ఈ పితరులు గంగా జలమునకే అర్హులు; మరి ఏదియు కాదు.
+hi: श्रीभगवान् ने कहा: वत्स, इस घोड़े को ले जाओ; यह तुम्हारे दादा का यज्ञपशु है। और जल गये ये पितर गंगा के जल के ही योग्य हैं, दूसरे किसी के नहीं।
 
 --- verse 30 ---
 deva:
@@ -286,6 +373,9 @@ deva:
 iast:
 taṁ parikramya śirasā prasādya hayamānayat|
 sagarastena paśunā kratuśeṣaṁ samāpayat||
+en: He walked round the sage, bowed his head and won his grace, and then he brought the horse back. With that animal Sagara completed what remained of his sacrifice.
+tel: అతడు ఆ మునిని ప్రదక్షిణము చేసి, శిరస్సుతో ప్రణమిల్లి ప్రసన్నుని చేసికొని, గుర్రమును తీసుకొనివచ్చెను. ఆ పశువుతో సగరుడు మిగిలిన యజ్ఞమును పూర్తి చేసెను.
+hi: उसने मुनि की परिक्रमा की, सिर से प्रणाम करके उन्हें प्रसन्न किया, और घोड़े को ले आया। उस पशु से सगर ने अपने यज्ञ का शेष भाग पूरा किया।
 
 --- verse 31 ---
 deva:
@@ -294,9 +384,15 @@ deva:
 iast:
 rājyamaṁśumati nyasya niḥspṛho muktabandhanaḥ|
 aurvopadiṣṭamārgeṇa lebhe gatimanuttamām||
+en: He placed the kingdom in the charge of Aṁśumān. He became free from longing and free from bondage, and by the path that Aurva had taught him he reached the highest state.
+tel: రాజ్యమును అంశుమంతునికి అప్పగించి, కోరికలు లేనివాడును బంధము తెగినవాడును ఆయెను. ఔర్వుడు ఉపదేశించిన మార్గముచే అతడు సర్వోత్తమమైన గతిని పొందెను.
+hi: राज्य अंशुमान् को सौंपकर वे निःस्पृह और बन्धन से मुक्त हो गये। और्व के बताये हुए मार्ग से उन्होंने परम गति प्राप्त की।
 
 --- verse none ---
 deva:
 इति श्रीमद्भागवते महापुराणे पारमहंस्यां संहितायां नवमस्कन्धे सगरोपाख्यानेऽष्टमोऽध्यायः॥ ८॥
 iast:
 iti śrīmadbhāgavate mahāpurāṇe pāramahaṁsyāṁ saṁhitāyāṁ navamaskandhe sagaropākhyāne'ṣṭamo'dhyāyaḥ|| 8||
+en: Thus ends the eighth adhyāya, in the story of Sagara, in the ninth skandha of the Śrīmad Bhāgavata Mahāpurāṇa, the saṁhitā of the paramahaṁsas.
+tel: ఇది శ్రీమద్భాగవత మహాపురాణమునందు, పరమహంసల సంహితయందు, నవమస్కంధమునందు సగరోపాఖ్యానమునందు అష్టమాధ్యాయము సమాప్తము.
+hi: इस प्रकार श्रीमद्भागवत महापुराण की परमहंसों की संहिता के नवम स्कन्ध में सगरोपाख्यान के अन्तर्गत आठवाँ अध्याय समाप्त हुआ।

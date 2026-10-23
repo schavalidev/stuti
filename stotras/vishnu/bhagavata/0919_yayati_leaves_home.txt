@@ -9,7 +9,7 @@ Type: Purāṇa (an adhyāya of the Śrīmad Bhāgavata, Skandha 9)
 
 Source / recension: Base text and authority: the Gītā Press, Gorakhpur Śrīmadbhāgavata Mahāpurāṇa with Hindi translation, Part 2 (Gītā Press code 27), archive.org item `shrimadbhagwat-mahapuran-bhag-2`, printed pages 92–95; the PDF page numbers are the printed ones. The PDF carries the typesetter's own text layer in the Chanakya font encoding, and the text was decoded from it by machine with `bin/bhagavata/chanakya.py`, not read off OCR or typed. The decoder was checked against GRETIL over all twelve skandhas before any file was written, and the differences that remain were sampled and found to be readings of the two editions. Second witness: GRETIL's `sa_bhAgavatapurANa.xml` (IAST, contributed by Ulrich Stiehl), a separate editorial lineage, compared verse by verse by machine. The TTD edition with the commentaries of Śrīdhara, Vīrarāghava and Vijayadhvaja (archive.org `Bhagavata_Purana_With_Multiple_Commentaries_TTD_Critical_Edition`) is the third witness where one is needed; it was not read for this file. The IAST was generated mechanically from the Devanāgarī with `bin/dev2iast.py`.
 
-Recension note: Text-only file, written 1 Oct 2026 at the user's instruction to lay down the whole Bhāgavata first: the English, Telugu and Hindi meanings are still to be added, and the witnesses' differences listed here have been recorded by machine and not yet adjudicated. The print is followed throughout. The print numbers 29 verses and GRETIL numbers 29. Of the 29 verses GRETIL has under the same number, 21 agree with the print letter for letter once spacing and the spelling of nasals are set aside; the rest differ: 9, 10, 14, 19, 20, 21, 22, 27. Spacing is the print's, as its text layer gives it; in a few places justification has left a space inside a word, and these are still to be closed when the verse is read. The speaker lines (श्रीशुक उवाच and the others) are printed in italic above the verse they introduce, and are given as its first line.
+Recension note: Meanings written 23 Oct 2026 (session S78). The differences between the witnesses listed below were read as the verses were glossed; except where this note says otherwise, each is a spelling, a sandhi or a word order of the two editions, none of them changes the sense, and the print's reading therefore stands unbracketed. The print is followed throughout. The print numbers 29 verses and GRETIL numbers 29. Of the 29 verses GRETIL has under the same number, 21 agree with the print letter for letter once spacing and the spelling of nasals are set aside; the rest differ: 9, 10, 14, 19, 20, 21, 22, 27. Spacing is the print's, as its text layer gives it. The speaker lines (श्रीशुक उवाच and the others) are printed in italic above the verse they introduce, and are given as its first line. No broken word was found in this adhyāya. Both directions were scanned against GRETIL by machine, and every verse the scan could not align was then read by hand. The spaces the print keeps after a virāma consonant (कश्चिद् विचिन्वन्, नामृष्यद् बस्तकर्म, अच्छिनद् रुषा, श्रुतमसद् बुद्ध्वा) are the print's own spacing and are left as printed, and so are the joins बलवानिन्द्रियग्रामो at verse 17, सर्वभूतेष्वमंगलम् at verse 15 and व्यधुनोल्लिंगम् at verse 28, where the script requires the ligature. Four of the differences from GRETIL listed above are differences of word rather than of spelling or sandhi, and the print is followed in each without change of sense: verse 10 तस्यास्तत्र against GRETIL's तस्य तत्र, verse 19 ब्रह्मण्याधाय against ब्रह्मण्यध्याय, verse 20 संविशेत् against सन्दिशेत्, and verse 21 स्वां जरसं against स्वजरसं. At verse 14 GRETIL's शांयति is a broken form and the print's शाम्यति stands; at verse 22 the two editions differ only in how the anusvāra is transliterated. In the colophon the print's text layer has lost the space between नवमस्कन्धे and एकोनविंशोऽध्यायः. GRETIL carries no colophon, so there is no second witness for it; it is left exactly as printed, with the other colophon faults of this layer, and waits on the corpus-wide ruling.
 
 Verse count: 29, plus the closing colophon printed unnumbered.
 
@@ -24,6 +24,9 @@ iast:
 śrīśuka uvāca
 sa itthamācaran kāmān straiṇo'pahnavamātmanaḥ|
 buddhvā priyāyai nirviṇṇo gāthāmetāmagāyata||
+en: Śrī Śuka said: Enjoying the objects of the senses in this way, and ruled by his wife, he came to see how his own self was being hidden from him. He grew weary of it and sang this song to his beloved.
+tel: శ్రీశుకుడు పలికెను: ఇట్లు విషయములను అనుభవించుచు, స్త్రీకి వశమైన ఆ రాజు తన ఆత్మ తనకు కనబడకుండ దాగిపోవుచున్నదని తెలిసికొనెను. అతడు విరక్తుడై తన ప్రియురాలికి ఈ గాథను పాడెను.
+hi: श्रीशुकदेवजी ने कहा: इस प्रकार विषयों का सेवन करते हुए और स्त्री के वश में रहते हुए उस राजा ने जाना कि उसका आत्मा उससे छिप गया है। वे विरक्त होकर अपनी प्रिया को यह गाथा सुनाने लगे।
 
 --- verse 2 ---
 deva:
@@ -32,6 +35,9 @@ deva:
 iast:
 śṛṇu bhārgavyamūṁ gāthāṁ madvidhācaritāṁ bhuvi|
 dhīrā yasyānuśocanti vane grāmanivāsinaḥ||
+en: Hear this song, daughter of Bhṛgu. It tells how men like me live upon the earth. Hearing it, the steadfast ones who dwell in the forest grieve for those who dwell in villages.
+tel: భార్గవీ, ఈ గాథను వినుము. ఇది భూమిపై నావంటివారి నడవడిని చెప్పునది. దీనిని విని, వనమునందు నివసించు ధీరులు గ్రామమునందు నివసించువారికొరకు శోకించుదురు.
+hi: भार्गवी, इस गाथा को सुनो। यह पृथ्वी पर मेरे जैसे पुरुषों के आचरण को कहती है। इसे सुनकर वन में रहने वाले धीर पुरुष गाँव में रहने वालों के लिये शोक करते हैं।
 
 --- verse 3 ---
 deva:
@@ -40,6 +46,9 @@ deva:
 iast:
 basta eko vane kaścid vicinvan priyamātmanaḥ|
 dadarśa kūpe patitāṁ svakarmavaśagāmajām||
+en: A he-goat was wandering alone in the forest, looking for what was dear to him. He saw a she-goat who had fallen into a well by the force of her own karma.
+tel: ఒక మేకపోతు వనమునందు ఒంటిగా తనకు ప్రియమైనదానిని వెదకుచు తిరుగుచుండెను. తన కర్మవశమున నూతిలో పడిన ఒక మేకను అతడు చూచెను.
+hi: एक बकरा वन में अकेला अपने प्रिय को खोजता हुआ फिरता था। उसने अपने ही कर्म के वश से कुएँ में गिरी हुई एक बकरी को देखा।
 
 --- verse 4 ---
 deva:
@@ -48,6 +57,9 @@ deva:
 iast:
 tasyā uddharaṇopāyaṁ bastaḥ kāmī vicintayan|
 vyadhatta tīrthamuddhṛtya viṣāṇāgreṇa rodhasī||
+en: The he-goat was full of lust. He thought of a way to lift her out, and with the tip of his horn he dug away the bank of the well and made a path.
+tel: ఆ మేకపోతు కామియై ఉండెను. ఆమెను పైకి తీయు ఉపాయమును ఆలోచించి, తన కొమ్ము కొనతో నూతి గట్టును తొలిచి దారిని చేసెను.
+hi: वह बकरा कामी था। उसने उसे ऊपर निकालने का उपाय सोचा और अपने सींग की नोक से कुएँ के किनारे को खोदकर मार्ग बना दिया।
 
 --- verse 5 ---
 deva:
@@ -56,6 +68,9 @@ deva:
 iast:
 sottīrya kūpāt suśroṇī tameva cakame kila|
 tayā vṛtaṁ samudvīkṣya bahvyo'jāḥ kāntakāminīḥ||
+en: She came out of the well, and this she-goat of fair form desired that very goat. Many she-goats who longed for a mate saw that she had chosen him.
+tel: ఆమె నూతినుండి బయటికి వచ్చెను; సుందరమైన ఆ మేక ఆ పోతునే కోరెను. భర్తను కోరు పలు మేకలు ఆమె అతనిని వరించినదని చూచిరి.
+hi: वह कुएँ से बाहर निकल आई और उस सुन्दर बकरी ने उसी बकरे को चाहा। पति को चाहने वाली बहुत-सी बकरियों ने देखा कि उसने उसे वरण कर लिया है।
 
 --- verse 6 ---
 deva:
@@ -66,6 +81,9 @@ iast:
 pīvānaṁ śmaśrulaṁ preṣṭhaṁ mīḍhvāṁsaṁ yābhakovidam|
 sa eko'javṛṣastāsāṁ bahvīnāṁ rativardhanaḥ|
 reme kāmagrahagrasta ātmānaṁ nāvabudhyata||
+en: They saw that he was stout, bearded, dearest to her, strong in seed and skilled in mating. That one he-goat became the giver of pleasure to those many she-goats. Seized by the demon of lust, he enjoyed them and did not understand his own self.
+tel: అతడు బలిష్ఠుడు, గడ్డము కలవాడు, ఆమెకు మిక్కిలి ప్రియుడు, వీర్యవంతుడు, సంగమమునందు నేర్పరి అని వారు చూచిరి. ఆ ఒక్క మేకపోతే ఆ పలు మేకలకు రతిని పెంచువాడు అయ్యెను. కామమను గ్రహము పట్టినవాడై అతడు రమించెను, తన ఆత్మను తెలిసికొనలేదు.
+hi: उन्होंने देखा कि वह मोटा-तगड़ा है, दाढ़ीवाला है, उसे अत्यन्त प्रिय है, वीर्यवान् है और संगम में निपुण है। वही एक बकरा उन बहुत-सी बकरियों का रति बढ़ाने वाला हुआ। काम नामक ग्रह से ग्रस्त होकर वह रमण करता रहा और अपने आत्मा को नहीं जान सका।
 
 --- verse 7 ---
 deva:
@@ -74,6 +92,9 @@ deva:
 iast:
 tameva preṣṭhatamayā ramamāṇamajānyayā|
 vilokya kūpasaṁvignā nāmṛṣyad bastakarma tat||
+en: The she-goat who had been lifted out of the well saw him enjoying another she-goat who was dearer still. She could not bear this deed of the goat.
+tel: నూతినుండి పైకి తీయబడిన ఆ మేక, అతడు తనకంటె ప్రియమైన వేరొక మేకతో రమించుచుండుట చూచెను. ఆ పోతు చేసిన ఆ పనిని ఆమె సహించలేదు.
+hi: कुएँ से निकाली गई उस बकरी ने देखा कि वह अपनी और भी प्यारी दूसरी बकरी के साथ रमण कर रहा है। बकरे का वह कर्म उसे सहन नहीं हुआ।
 
 --- verse 8 ---
 deva:
@@ -82,6 +103,9 @@ deva:
 iast:
 taṁ durhṛdaṁ suhṛdrūpaṁ kāminaṁ kṣaṇasauhṛdam|
 indriyārāmamutsṛjya svāminaṁ duḥkhitā yayau||
+en: He wore the form of a friend, but he was hard of heart, full of lust, a friend for a moment only, and given to the pleasure of the senses. She left him and in her sorrow went to her master.
+tel: అతడు స్నేహితుని రూపమున ఉండియు దుష్టహృదయుడు, కామి, క్షణమాత్రము స్నేహము కలవాడు, ఇంద్రియ సుఖములయందే రమించువాడు. ఆమె అతనిని విడిచి, దుఃఖించుచు తన యజమానుని చేరెను.
+hi: वह मित्र के रूप में रहकर भी दुष्ट हृदय वाला, कामी, क्षण भर का मित्र और इन्द्रियों में ही रमने वाला था। उसे छोड़कर वह दुःखी बकरी अपने स्वामी के पास चली गई।
 
 --- verse 9 ---
 deva:
@@ -90,6 +114,9 @@ deva:
 iast:
 so'pi cānugataḥ straiṇaḥ kṛpaṇastāṁ prasāditum|
 kurvanniḍaviḍākāraṁ nāśaknot pathi saṁdhitum||
+en: That goat too was wretched and ruled by the female. He followed her to win her favour, and he made the cry iḍa viḍa, but upon the road he could not win her back.
+tel: స్త్రీకి వశమైన ఆ పోతు కూడ దీనుడై, ఆమెను ప్రసన్నురాలిగా చేసికొనుటకు వెంట నడచెను. ఇడ విడ అను అరపును చేయుచు పోయెను, కాని దారిలో ఆమెను సమాధానపరచలేకపోయెను.
+hi: स्त्री के वश में रहने वाला वह बकरा भी दीन होकर उसे प्रसन्न करने के लिये पीछे-पीछे चला। वह इड विड शब्द करता रहा, परन्तु मार्ग में उसे मना न सका।
 
 --- verse 10 ---
 deva:
@@ -98,6 +125,9 @@ deva:
 iast:
 tasyāstatra dvijaḥ kaścidajāsvāmyacchinad ruṣā|
 lambantaṁ vṛṣaṇaṁ bhūyaḥ sandadhe'rthāya yogavit||
+en: There a brāhmaṇa, the owner of the she-goat, cut off in anger the hanging organ of that goat. He knew yoga, and for a purpose he joined it back again.
+tel: అక్కడ ఆ మేక యజమానియైన ఒక బ్రాహ్మణుడు కోపముతో ఆ పోతు వేలాడుచున్న అవయవమును ఖండించెను. అతడు యోగము ఎరిగినవాడు; ఒక ప్రయోజనము కొరకు దానిని తిరిగి కలిపెను.
+hi: वहाँ उस बकरी के स्वामी एक ब्राह्मण ने क्रोध से उस बकरे के लटकते हुए अंग को काट डाला। वे योग जानने वाले थे, और किसी प्रयोजन से उन्होंने उसे फिर जोड़ दिया।
 
 --- verse 11 ---
 deva:
@@ -106,6 +136,9 @@ deva:
 iast:
 sambaddhavṛṣaṇaḥ so'pi hyajayā kūpalabdhayā|
 kālaṁ bahutithaṁ bhadre kāmairnādyāpi tuṣyati||
+en: O good lady, with his organ joined again, that goat enjoyed for a long time with the she-goat he had found in the well, and even today he is not satisfied by the objects of desire.
+tel: భద్రే, అవయవము తిరిగి కలుపబడిన ఆ పోతు నూతియందు దొరకిన ఆ మేకతో చిరకాలము రమించెను. అయినను ఈనాటికిని కామములచేత అతడు తృప్తి పొందలేదు.
+hi: भद्रे, जिसका अंग फिर जोड़ दिया गया था, वह बकरा कुएँ में मिली उस बकरी के साथ बहुत समय तक रमण करता रहा। फिर भी आज तक वह भोगों से तृप्त नहीं हुआ।
 
 --- verse 12 ---
 deva:
@@ -114,6 +147,9 @@ deva:
 iast:
 tathāhaṁ kṛpaṇaḥ subhru bhavatyāḥ premayantritaḥ|
 ātmānaṁ nābhijānāmi mohitastava māyayā||
+en: O lady of beautiful brows, so am I too. I am wretched, held fast by love of you. Deluded by your māyā, I do not know my own self.
+tel: సుందరమైన కనుబొమలు కలదానా, నేనును అట్లే ఉన్నాను. నేను దీనుడను, నీ ప్రేమముచే కట్టబడియున్నాను. నీ మాయచే మోహము పొంది నా ఆత్మను నేను తెలిసికొనజాలకున్నాను.
+hi: सुन्दर भौंहों वाली, मैं भी उसी प्रकार हूँ। मैं दीन हूँ और तुम्हारे प्रेम से बँधा हुआ हूँ। तुम्हारी माया से मोहित होकर मैं अपने आत्मा को नहीं जानता।
 
 --- verse 13 ---
 deva:
@@ -122,6 +158,9 @@ deva:
 iast:
 yat pṛthivyāṁ vrīhiyavaṁ hiraṇyaṁ paśavaḥ striyaḥ|
 na duhyanti manaḥprītiṁ puṁsaḥ kāmahatasya te||
+en: Whatever rice and barley there is upon the earth, and the gold, the cattle and the women — they do not yield contentment of mind to a man who is struck by desire.
+tel: భూమిపై ఉన్న వరి, యవలు, బంగారము, పశువులు, స్త్రీలు — కామముచే కొట్టబడిన పురుషునికి ఇవి మనస్సునకు తృప్తిని ఇవ్వవు.
+hi: पृथ्वी पर जो धान और जौ हैं, और सोना, पशु तथा स्त्रियाँ हैं — वे काम से मारे हुए पुरुष को मन का सन्तोष नहीं देते।
 
 --- verse 14 ---
 deva:
@@ -130,6 +169,9 @@ deva:
 iast:
 na jātu kāmaḥ kāmānāmupabhogena śāmyati|
 haviṣā kṛṣṇavartmeva bhūya evābhivardhate||
+en: Desire is never quieted by the enjoyment of the objects of desire. Like fire fed with the offering of ghee, it grows the more.
+tel: విషయములను అనుభవించుటచే కామము ఎప్పుడును శాంతించదు. నేతి ఆహుతిచే అగ్ని వలె అది మరింత పెరుగును.
+hi: भोगों के उपभोग से काम कभी शान्त नहीं होता। घी की आहुति से बढ़ने वाली अग्नि के समान वह और भी बढ़ता जाता है।
 
 --- verse 15 ---
 deva:
@@ -138,6 +180,9 @@ deva:
 iast:
 yadā na kurute bhāvaṁ sarvabhūteṣvamaṁgalam|
 samadṛṣṭestadā puṁsaḥ sarvāḥ sukhamayā diśaḥ||
+en: When a man holds no ill will toward any living being, his vision becomes equal, and then every direction is full of happiness for him.
+tel: ఏ ప్రాణియందును అమంగళమైన భావమును మనుష్యుడు కలిగియుండనప్పుడు, అతని దృష్టి సమమగును. అప్పుడు అతనికి దిక్కులన్నియు సుఖమయములు.
+hi: जब मनुष्य किसी भी प्राणी के प्रति अमंगल भाव नहीं रखता, तब उसकी दृष्टि सम हो जाती है और उसके लिये सब दिशाएँ सुखमय हो जाती हैं।
 
 --- verse 16 ---
 deva:
@@ -146,6 +191,9 @@ deva:
 iast:
 yā dustyajā durmatibhirjīryato yā na jīryate|
 tāṁ tṛṣṇāṁ duḥkhanivahāṁ śarmakāmo drutaṁ tyajet||
+en: Those of poor understanding find thirst hard to give up, and it does not grow old even when the body grows old. It is a heap of sorrow. One who wants peace should give it up at once.
+tel: దుర్బుద్ధులకు తృష్ణను విడుచుట కష్టము; దేహము జీర్ణమైనను ఆ తృష్ణ జీర్ణము కాదు. అది దుఃఖముల కుప్ప. శాంతిని కోరువాడు దానిని వెంటనే విడువవలెను.
+hi: दुर्बुद्धि पुरुषों के लिये तृष्णा का छोड़ना कठिन है, और शरीर के जीर्ण हो जाने पर भी वह जीर्ण नहीं होती। वह दुःखों का ढेर है। कल्याण चाहने वाला पुरुष उसे तुरन्त छोड़ दे।
 
 --- verse 17 ---
 deva:
@@ -154,6 +202,9 @@ deva:
 iast:
 mātrā svasrā duhitrā vā nāviviktāsano bhavet|
 balavānindriyagrāmo vidvāṁsamapi karṣati||
+en: One should not sit in a lonely place with mother, sister or daughter. The host of the senses is strong, and it draws away even a learned man.
+tel: తల్లితో, సోదరితో, కూతురుతో ఏకాంతమైన ఆసనమున ఉండరాదు. ఇంద్రియముల సమూహము బలమైనది; అది విద్వాంసుని కూడ లాగుకొనిపోవును.
+hi: माता, बहिन अथवा पुत्री के साथ एकान्त आसन पर न बैठे। इन्द्रियों का समूह बलवान् है; वह विद्वान् को भी खींच लेता है।
 
 --- verse 18 ---
 deva:
@@ -162,6 +213,9 @@ deva:
 iast:
 pūrṇaṁ varṣasahasraṁ me viṣayān sevato'sakṛt|
 tathāpi cānusavanaṁ tṛṣṇā teṣūpajāyate||
+en: A full thousand years have passed for me in enjoying the objects of the senses again and again. Even so, the thirst for them rises in me at every turn.
+tel: విషయములను మరల మరల సేవించుచు నాకు పూర్ణముగా వేయి సంవత్సరములు గడచినవి. అయినను ప్రతిసారి వాటియందు తృష్ణ నాకు పుట్టుచున్నది.
+hi: विषयों का बार-बार सेवन करते हुए मेरे पूरे एक हजार वर्ष बीत गये। फिर भी हर बार उनमें मेरी तृष्णा उत्पन्न होती रहती है।
 
 --- verse 19 ---
 deva:
@@ -170,6 +224,9 @@ deva:
 iast:
 tasmādetāmahaṁ tyaktvā brahmaṇyādhāya mānasam|
 nirdvandvo nirahaṁkāraścariṣyāmi mṛgaiḥ saha||
+en: Therefore I shall give up this thirst. I shall fix my mind on Brahman, and free from the pairs of opposites and from the sense of I, I shall wander with the deer.
+tel: అందుచే నేను ఈ తృష్ణను విడిచెదను. మనస్సును బ్రహ్మమునందు నిలిపి, ద్వంద్వములు లేనివాడై, అహంకారము లేనివాడై మృగములతో కలిసి సంచరించెదను.
+hi: इसलिये मैं इस तृष्णा को छोड़ दूँगा। मन को ब्रह्म में लगाकर, द्वन्द्वों से रहित और अहंकार से रहित होकर मैं मृगों के साथ विचरूँगा।
 
 --- verse 20 ---
 deva:
@@ -178,6 +235,9 @@ deva:
 iast:
 dṛṣṭaṁ śrutamasad buddhvā nānudhyāyenna saṁviśet|
 saṁsṛtiṁ cātmanāśaṁ ca tatra vidvān sa ātmadṛk||
+en: One should know that what is seen and what is heard are not real. One should not dwell upon them, and should not enter into them. He who knows that in them lie the round of birth and death and the ruin of the self, he is wise and he sees the self.
+tel: చూచినది, వినినది అసత్తు అని తెలిసికొనవలెను. వాటిని చింతించరాదు, వాటియందు ప్రవేశించరాదు. వాటియందు సంసారమును, ఆత్మనాశమును ఎరిగినవాడే విద్వాంసుడు; అతడే ఆత్మను చూచువాడు.
+hi: देखे और सुने हुए विषयों को असत् जानना चाहिये। उनका चिन्तन न करे और उनमें प्रवेश न करे। उनमें संसार और आत्मनाश को जो जानता है, वही विद्वान् है और वही आत्मदर्शी है।
 
 --- verse 21 ---
 deva:
@@ -186,6 +246,9 @@ deva:
 iast:
 ityuktvā nāhuṣo jāyāṁ tadīyaṁ pūrave vayaḥ|
 dattvā svāṁ jarasaṁ tasmādādade vigataspṛhaḥ||
+en: Having said this to his wife, the son of Nahuṣa gave back to Pūru the youth that belonged to Pūru. All longing had left him, and he took back from Pūru his own old age.
+tel: ఇట్లు తన భార్యతో పలికి, నహుషుని కుమారుడు పూరునికి చెందిన యౌవనమును అతనికి తిరిగి ఇచ్చెను. కోరికలు తొలగినవాడై అతనినుండి తన ముదిమిని తిరిగి తీసికొనెను.
+hi: इस प्रकार अपनी पत्नी से कहकर नहुष के पुत्र ने पूरु का यौवन उसे लौटा दिया। सब स्पृहा से रहित होकर उन्होंने पूरु से अपना बुढ़ापा फिर ले लिया।
 
 --- verse 22 ---
 deva:
@@ -194,6 +257,9 @@ deva:
 iast:
 diśi dakṣiṇapūrvasyāṁ druhyuṁ dakṣiṇato yadum|
 pratīcyāṁ turvasuṁ cakra udīcyāmanumīśvaram||
+en: He made Druhyu the lord of the south-east direction, Yadu of the south, Turvasu of the west, and Anu of the north.
+tel: అతడు ఆగ్నేయ దిక్కునకు ద్రుహ్యుని, దక్షిణ దిక్కునకు యదువును, పశ్చిమ దిక్కునకు తుర్వసువును, ఉత్తర దిక్కునకు అనువును ఈశ్వరులుగా చేసెను.
+hi: उन्होंने दक्षिण-पूर्व दिशा में द्रुह्यु को, दक्षिण में यदु को, पश्चिम में तुर्वसु को और उत्तर में अनु को अधिपति बनाया।
 
 --- verse 23 ---
 deva:
@@ -202,6 +268,9 @@ deva:
 iast:
 bhūmaṇḍalasya sarvasya pūrumarhattamaṁ viśām|
 abhiṣicyāgrajāṁstasya vaśe sthāpya vanaṁ yayau||
+en: He consecrated Pūru, the most worthy among the people, as the king of the whole circle of the earth. He placed Pūru's elder brothers under his rule, and he went to the forest.
+tel: ప్రజలలో మిక్కిలి అర్హుడైన పూరుని సమస్త భూమండలమునకు రాజుగా అభిషేకించెను. పూరుని అన్నలను అతని వశమున ఉంచి, అతడు వనమునకు వెళ్లెను.
+hi: प्रजाओं में सबसे योग्य पूरु को उन्होंने सारे भूमण्डल का राजा बनाकर अभिषेक किया। पूरु के बड़े भाइयों को उसके अधीन रखकर वे वन को चले गये।
 
 --- verse 24 ---
 deva:
@@ -210,6 +279,9 @@ deva:
 iast:
 āsevitaṁ varṣapūgān ṣaḍvargaṁ viṣayeṣu saḥ|
 kṣaṇena mumuce nīḍaṁ jātapakṣa iva dvijaḥ||
+en: For many years he had kept the group of six engaged in the objects of the senses. He gave it up in a moment, as a bird whose wings have grown leaves its nest.
+tel: పలు సంవత్సరములు అతడు విషయములయందు షడ్వర్గమును నియోగించి ఉండెను. రెక్కలు మొలచిన పక్షి గూడును విడిచినట్లు, అతడు దానిని ఒక క్షణములో విడిచెను.
+hi: बहुत वर्षों तक उन्होंने विषयों में षड्वर्ग को लगाये रखा था। पंख निकल आने पर पक्षी जैसे घोंसला छोड़ देता है, वैसे ही उन्होंने उसे एक क्षण में छोड़ दिया।
 
 --- verse 25 ---
 deva:
@@ -222,6 +294,9 @@ sa tatra nirmuktasamastasaṁga
 ātmānubhūtyā vidhutatriliṁgaḥ|
 pare'male brahmaṇi vāsudeve
 lebhe gatiṁ bhāgavatīṁ pratītaḥ||
+en: There he was freed from every attachment. By the direct knowledge of the self he shook off the marks of the three guṇas. In the supreme and spotless Brahman, in Vāsudeva, he attained the state of a devotee of the Lord, and he was content.
+tel: అక్కడ అతడు సమస్త సంగమునుండి విడివడెను. ఆత్మానుభవముచే మూడు గుణముల గుర్తులను తొలగించుకొనెను. పరమమైన, నిర్మలమైన బ్రహ్మమునందు, వాసుదేవునియందు అతడు భాగవత గతిని పొందెను, ప్రసన్నుడై ఉండెను.
+hi: वहाँ वे समस्त संग से मुक्त हो गये। आत्मा के अनुभव से उन्होंने तीनों गुणों के चिह्नों को झाड़ डाला। परम निर्मल ब्रह्म वासुदेव में उन्होंने भागवती गति प्राप्त की और प्रसन्न हुए।
 
 --- verse 26 ---
 deva:
@@ -230,6 +305,9 @@ deva:
 iast:
 śrutvā gāthāṁ devayānī mene prastobhamātmanaḥ|
 strīpuṁsoḥ snehavaiklavyāt parihāsamiveritam||
+en: Devayānī heard the song and understood that it was spoken to instruct her. It was uttered as if in jest, out of the tenderness of the affection between wife and husband.
+tel: దేవయాని ఆ గాథను విని, ఇది తనకు చేయబడిన ఉపదేశమని తెలిసికొనెను. స్త్రీ పురుషుల స్నేహము కలిగించిన వైక్లవ్యమున, అది పరిహాసమువలె పలుకబడినది.
+hi: देवयानी ने वह गाथा सुनकर जाना कि यह उसके लिये उपदेश है। स्त्री और पुरुष के स्नेह की विकलता से वह हँसी के समान कहा गया था।
 
 --- verse 27 ---
 deva:
@@ -238,6 +316,9 @@ deva:
 iast:
 sā saṁnivāsaṁ suhṛdāṁ prapāyāmiva gacchatām|
 vijñāyeśvaratantrāṇāṁ māyāviracitaṁ prabhoḥ||
+en: She understood that those who are dear to one another are under the Lord's control, and that their living together is like the meeting of travellers at a roadside water stall. It is fashioned by the māyā of the Lord.
+tel: ప్రియమైనవారు ఈశ్వరునికి వశమైనవారు; ప్రపాయందు కలిసి ముందుకు సాగు బాటసారుల కలయికవంటిదే వారి కలయిక అని ఆమె తెలిసికొనెను. అది ప్రభువు మాయచే నిర్మించబడినది.
+hi: उसने जाना कि प्रिय जन ईश्वर के अधीन हैं, और उनका साथ रहना प्याऊ पर मिलकर आगे चल देने वाले पथिकों के साथ के समान है। वह प्रभु की माया से रचा हुआ है।
 
 --- verse 28 ---
 deva:
@@ -246,6 +327,9 @@ deva:
 iast:
 sarvatra saṁgamutsṛjya svapnaupamyena bhārgavī|
 kṛṣṇe manaḥ samāveśya vyadhunolliṁgamātmanaḥ||
+en: The daughter of Bhṛgu gave up attachment everywhere, seeing that it is like a dream. She fixed her mind upon Kṛṣṇa and shook off her own subtle body.
+tel: స్వప్నముతో సమానమని ఎరిగి, భార్గవి అంతటను సంగమును విడిచెను. కృష్ణునియందు మనస్సును నిలిపి, తన సూక్ష్మ శరీరమును విడిచివేసెను.
+hi: भार्गवी ने यह जानकर कि वह स्वप्न के समान है, सर्वत्र संग को छोड़ दिया। कृष्ण में मन लगाकर उसने अपने सूक्ष्म शरीर को झाड़ डाला।
 
 --- verse 29 ---
 deva:
@@ -254,9 +338,15 @@ deva:
 iast:
 namastubhyaṁ bhagavate vāsudevāya vedhase|
 sarvabhūtādhivāsāya śāntāya bṛhate namaḥ||
+en: Obeisance to you, the blessed Lord Vāsudeva, the creator. Obeisance to him who dwells in all beings, who is at peace, and who is vast.
+tel: భగవంతుడైన వాసుదేవునికి, విధాతయైన నీకు నమస్కారము. సమస్త భూతములయందు నివసించువానికి, శాంతునికి, బృహత్తైనవానికి నమస్కారము.
+hi: भगवान् वासुदेव को, विधाता आपको नमस्कार है। सब प्राणियों में निवास करने वाले, शान्त और महान् को नमस्कार है।
 
 --- verse none ---
 deva:
 इति श्रीमद्भागवते महापुराणे पारमहंस्यां संहितायां नवमस्कन्धेएकोनविंशोऽध्यायः॥ १९॥
 iast:
 iti śrīmadbhāgavate mahāpurāṇe pāramahaṁsyāṁ saṁhitāyāṁ navamaskandheekonaviṁśo'dhyāyaḥ|| 19||
+en: Thus ends the nineteenth adhyāya in the ninth skandha of the Śrīmad Bhāgavata Mahāpurāṇa, the saṁhitā of the paramahaṁsas.
+tel: ఇది పరమహంసల సంహిత అయిన శ్రీమద్భాగవత మహాపురాణమునందు, నవమస్కంధమునందు పందొమ్మిదవ అధ్యాయము సమాప్తము.
+hi: इस प्रकार श्रीमद्भागवत महापुराण की परमहंसों की संहिता के नवम स्कन्ध में उन्नीसवाँ अध्याय समाप्त हुआ।
