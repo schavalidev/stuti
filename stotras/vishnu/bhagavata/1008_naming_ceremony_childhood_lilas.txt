@@ -9,7 +9,7 @@ Type: Purāṇa (an adhyāya of the Śrīmad Bhāgavata, Skandha 10)
 
 Source / recension: Base text and authority: the Gītā Press, Gorakhpur Śrīmadbhāgavata Mahāpurāṇa with Hindi translation, Part 2 (Gītā Press code 27), archive.org item `shrimadbhagwat-mahapuran-bhag-2`, printed pages 167–181; the PDF page numbers are the printed ones. The PDF carries the typesetter's own text layer in the Chanakya font encoding, and the text was decoded from it by machine with `bin/bhagavata/chanakya.py`, not read off OCR or typed. The decoder was checked against GRETIL over all twelve skandhas before any file was written, and the differences that remain were sampled and found to be readings of the two editions. Second witness: GRETIL's `sa_bhAgavatapurANa.xml` (IAST, contributed by Ulrich Stiehl), a separate editorial lineage, compared verse by verse by machine. The TTD edition with the commentaries of Śrīdhara, Vīrarāghava and Vijayadhvaja (archive.org `Bhagavata_Purana_With_Multiple_Commentaries_TTD_Critical_Edition`) is the third witness where one is needed; it was not read for this file. The IAST was generated mechanically from the Devanāgarī with `bin/dev2iast.py`.
 
-Recension note: Text-only file, written 1 Oct 2026 at the user's instruction to lay down the whole Bhāgavata first: the English, Telugu and Hindi meanings are still to be added, and the witnesses' differences listed here have been recorded by machine and not yet adjudicated. The print is followed throughout. The print numbers 52 verses and GRETIL numbers 52. Of the 52 verses GRETIL has under the same number, 40 agree with the print letter for letter once spacing and the spelling of nasals are set aside; the rest differ: 5, 7, 12, 22, 23, 25, 28, 29, 39, 44, 47, 48. Spacing is the print's, as its text layer gives it; in a few places justification has left a space inside a word, and these are still to be closed when the verse is read. The speaker lines (श्रीशुक उवाच and the others) are printed in italic above the verse they introduce, and are given as its first line.
+Recension note: Meanings written 23 Oct 2026 (session S78). The differences between the witnesses listed below were read as the verses were glossed; except where this note says otherwise, each is a spelling, a sandhi or a word order of the two editions, none of them changes the sense, and the print's reading therefore stands unbracketed. The print is followed throughout. The print numbers 52 verses and GRETIL numbers 52. Of the 52 verses GRETIL has under the same number, 40 agree with the print letter for letter once spacing and the spelling of nasals are set aside; the rest differ: 5, 7, 12, 22, 23, 25, 28, 29, 39, 44, 47, 48. Spacing is the print's, as its text layer gives it. The speaker lines (श्रीशुक उवाच and the others) are printed in italic above the verse they introduce, and are given as its first line. One word was put right as the verses were read. At verse 22 justification had left a space inside अङ्घ्रि (तावङ् घ्रियुग्मम्), and the space is closed here; GRETIL reads tāv aṅghri-yugmam and agrees with the corrected reading. The print's own spacing is kept everywhere else, including सह जीवकाल- at verse 39 and दधि पयः at verse 29, which GRETIL compounds but the print separates, and the line-break hyphen at verse 24.
 
 Verse count: 52, plus the closing colophon printed unnumbered.
 
@@ -24,6 +24,9 @@ iast:
 śrīśuka uvāca
 gargaḥ purohito rājan yadūnāṁ sumahātapāḥ|
 vrajaṁ jagāma nandasya vasudevapracoditaḥ||
+en: Śrīśuka said: O King, Garga, the family priest of the Yadus, a man of very great tapas, went to Vraja, sent by Vasudeva.
+tel: శ్రీశుకుడు పలికెను: ఓ రాజా, యదువుల పురోహితుడు, మిక్కిలి గొప్ప తపస్సు కలవాడు అయిన గర్గుడు వసుదేవుని ప్రేరణతో వ్రజమునకు వెళ్లెను.
+hi: श्रीशुक ने कहा: हे राजन्, यदुओं के पुरोहित, अत्यन्त बड़े तपस्वी गर्ग वसुदेव की प्रेरणा से व्रज को गये।
 
 --- verse 2 ---
 deva:
@@ -32,6 +35,9 @@ deva:
 iast:
 taṁ dṛṣṭvā paramaprītaḥ pratyutthāya kṛtāṁjaliḥ|
 ānarcādhokṣajadhiyā praṇipātapuraḥsaram||
+en: Seeing him, Nanda was greatly pleased. He rose, joined his palms, and bowed down before him first, then worshipped him with the thought that he was Adhokṣaja himself.
+tel: ఆయనను చూసి నందుడు మిక్కిలి సంతోషించెను. లేచి నిలబడి, చేతులు జోడించి, మొదట ఆయనకు సాష్టాంగ నమస్కారము చేసి, ఆయన అధోక్షజుడే అనే భావముతో పూజించెను.
+hi: उन्हें देखकर नन्द अत्यन्त प्रसन्न हुए। वे उठ खड़े हुए, हाथ जोड़े, पहले प्रणाम किया, और उन्हें अधोक्षज ही समझकर उनकी पूजा की।
 
 --- verse 3 ---
 deva:
@@ -40,6 +46,9 @@ deva:
 iast:
 sūpaviṣṭaṁ kṛtātithyaṁ girā sūnṛtayā munim|
 nandayitvābravīd brahman pūrṇasya karavāma kim||
+en: When the sage was seated comfortably and had been received as a guest, Nanda pleased him with true and gentle words and said: Brahman, what can we do for you, who lack nothing?
+tel: ముని సుఖముగా కూర్చుండిన తరువాత, అతిథి సత్కారము పొందిన తరువాత, నందుడు సత్యమైన మృదువైన మాటలతో ఆయనను సంతోషపరచి ఇట్లు పలికెను: ఓ బ్రహ్మన్, ఏ కొరతయు లేని మీకు మేము ఏమి చేయగలము?
+hi: मुनि के सुखपूर्वक बैठ जाने और अतिथि-सत्कार पा लेने पर नन्द ने सत्य और मधुर वचनों से उन्हें प्रसन्न करके कहा: हे ब्रह्मन्, जिन्हें किसी वस्तु की कमी नहीं, उन आपके लिये हम क्या करें?
 
 --- verse 4 ---
 deva:
@@ -48,6 +57,9 @@ deva:
 iast:
 mahadvicalanaṁ nṝṇāṁ gṛhiṇāṁ dīnacetasām|
 niḥśreyasāya bhagavan kalpate nānyathā kvacit||
+en: O Lord, the coming of a great one to the homes of householders whose minds are low serves only their highest good, and never anything else.
+tel: ఓ భగవన్, దీనమైన మనస్సు కలిగిన గృహస్థుల ఇళ్లకు మహాత్ముడు వచ్చుట వారి పరమ శ్రేయస్సుకే ఉపయోగపడును, మరి ఎందుకును కాదు.
+hi: हे भगवन्, दीन मन वाले गृहस्थों के घरों में महापुरुष का आना उनके परम कल्याण के लिये ही होता है, और किसी प्रयोजन से नहीं।
 
 --- verse 5 ---
 deva:
@@ -56,6 +68,9 @@ deva:
 iast:
 jyotiṣāmayanaṁ sākṣād yattajjñānamatīndriyam|
 praṇītaṁ bhavatā yena pumān veda parāvaram||
+en: You have set forth the science of the movement of the lights, that knowledge which is beyond the senses, by which a man knows the higher and the lower.
+tel: ఇంద్రియములకు అందని ఆ జ్ఞానమును, జ్యోతిస్సుల గతిని తెలిపే శాస్త్రమును మీరే ప్రవచించినారు; దానిచేత మనుష్యుడు ఉత్తమమును అధమమును తెలుసుకొనును.
+hi: इन्द्रियों से परे जो ज्ञान है, ज्योतियों की गति का वह शास्त्र आपने ही प्रकट किया है, जिससे मनुष्य उत्तम और अधम को जान लेता है।
 
 --- verse 6 ---
 deva:
@@ -64,6 +79,9 @@ deva:
 iast:
 tvaṁ hi brahmavidāṁ śreṣṭhaḥ saṁskārān kartumarhasi|
 bālayoranayornṝṇāṁ janmanā brāhmaṇo guruḥ||
+en: You are the best of those who know Brahman. You are fit to perform the rites for these two boys. Among men, a brāhmaṇa is the guru by birth.
+tel: మీరు బ్రహ్మజ్ఞానులలో శ్రేష్ఠులు. ఈ రెండు బాలకులకు సంస్కారములు చేయుటకు మీరే అర్హులు. మనుష్యులకు బ్రాహ్మణుడు జన్మచేతనే గురువు.
+hi: आप ब्रह्मवेत्ताओं में श्रेष्ठ हैं। इन दोनों बालकों के संस्कार करने के योग्य आप ही हैं। मनुष्यों के लिये ब्राह्मण जन्म से ही गुरु है।
 
 --- verse 7 ---
 deva:
@@ -74,6 +92,9 @@ iast:
 garga uvāca
 yadūnāmahamācāryaḥ khyātaśca bhuvi sarvataḥ|
 sutaṁ mayā saṁskṛtaṁ te manyate devakīsutam||
+en: Garga said: I am known everywhere on earth as the teacher of the Yadus. If I perform the rites for your son, Kaṁsa will think him the son of Devakī.
+tel: గర్గుడు పలికెను: నేను యదువుల ఆచార్యుడని భూమిపై అంతటను ప్రసిద్ధుడను. మీ కుమారునికి నేను సంస్కారము చేసినచో, కంసుడు అతనిని దేవకీ కుమారుడని తలచును.
+hi: गर्ग ने कहा: मैं यदुओं का आचार्य हूँ और पृथ्वी पर सब ओर प्रसिद्ध हूँ। यदि आपके पुत्र का संस्कार मैं करूँ, तो कंस उसे देवकी का पुत्र समझेगा।
 
 --- verse 8 ---
 deva:
@@ -82,6 +103,9 @@ deva:
 iast:
 kaṁsaḥ pāpamatiḥ sakhyaṁ tava cānakadundubheḥ|
 devakyā aṣṭamo garbho na strī bhavitumarhati||
+en: Kaṁsa is of sinful mind. He knows your friendship with Ānakadundubhi, and he knows that the eighth child of Devakī could not be a girl.
+tel: కంసుడు పాపబుద్ధి కలవాడు. ఆనకదుందుభితో మీకున్న స్నేహము అతనికి తెలుసు; దేవకి యొక్క ఎనిమిదవ గర్భము ఆడుబిడ్డ కాజాలదని అతనికి తెలుసు.
+hi: कंस पापबुद्धि वाला है। आनकदुन्दुभि के साथ आपकी मित्रता उसे ज्ञात है, और देवकी का आठवाँ गर्भ कन्या नहीं हो सकता, यह भी उसे ज्ञात है।
 
 --- verse 9 ---
 deva:
@@ -90,6 +114,9 @@ deva:
 iast:
 iti saṁcintayañchrutvā devakyā dārikāvacaḥ|
 api hantā''gatāśaṁkastarhi tanno'nayo bhavet||
+en: Having heard Devakī's words that the child was a girl, and thinking the matter over in this way, he may come in suspicion and kill the boy. If that happens, it would be a great evil for us.
+tel: బిడ్డ ఆడుబిడ్డ అని దేవకి పలికిన మాటను విని, ఈ విధముగా ఆలోచించి, అతడు సందేహముతో వచ్చి ఈ బాలకుని చంపవచ్చును. అట్లు జరిగినచో అది మనకు గొప్ప అనిష్టము అగును.
+hi: बालक कन्या है, देवकी के इस वचन को सुनकर और इस प्रकार विचार करके वह सन्देह से आकर इस बालक को मार सकता है। ऐसा हुआ तो वह हमारे लिये बड़ा अनिष्ट होगा।
 
 --- verse 10 ---
 deva:
@@ -100,6 +127,9 @@ iast:
 nanda uvāca
 alakṣito'smin rahasi māmakairapi govraje|
 kuru dvijātisaṁskāraṁ svastivācanapūrvakam||
+en: Nanda said: Then perform the rites of the twice-born here in this cow pen, in secret, unseen even by my own people, beginning with the chanting of benediction.
+tel: నందుడు పలికెను: అట్లయినచో, నా వారికి కూడ కనబడకుండ, ఈ గోవ్రజములో రహస్యముగా, స్వస్తివాచనముతో మొదలుపెట్టి ద్విజాతి సంస్కారమును చేయుము.
+hi: नन्द ने कहा: तो मेरे अपने लोगों से भी छिपकर, इस गोशाला में एकान्त में, स्वस्तिवाचन के साथ आरम्भ करके द्विजाति-संस्कार कीजिये।
 
 --- verse 11 ---
 deva:
@@ -110,6 +140,9 @@ iast:
 śrīśuka uvāca
 evaṁ samprārthito vipraḥ svacikīrṣitameva tat|
 cakāra nāmakaraṇaṁ gūḍho rahasi bālayoḥ||
+en: Śrīśuka said: Asked in this way, the brāhmaṇa did what he himself had wished to do. Remaining hidden, he performed the naming of the two boys in secret.
+tel: శ్రీశుకుడు పలికెను: ఇట్లు ప్రార్థింపబడిన ఆ బ్రాహ్మణుడు తాను చేయగోరినదే చేసెను. గుప్తముగా ఉండి, రహస్యముగా ఆ రెండు బాలకులకు నామకరణము చేసెను.
+hi: श्रीशुक ने कहा: इस प्रकार प्रार्थना किये जाने पर उस ब्राह्मण ने वही किया जो वे स्वयं करना चाहते थे। छिपे रहकर उन्होंने एकान्त में दोनों बालकों का नामकरण किया।
 
 --- verse 12 ---
 deva:
@@ -122,6 +155,9 @@ garga uvāca
 ayaṁ hi rohiṇīputro ramayan suhṛdo guṇaiḥ|
 ākhyāsyate rāma iti balādhikyād balaṁ viduḥ|
 yadūnāmapṛthagbhāvāt saṁkarṣaṇamuśantyuta||
+en: Garga said: This son of Rohiṇī will delight his kinsmen by his qualities, and so he will be called Rāma. Because of his greater strength they know him as Bala. And because he draws the Yadus together without division, they call him Saṁkarṣaṇa.
+tel: గర్గుడు పలికెను: ఈ రోహిణీ కుమారుడు తన గుణములచే బంధువులను ఆనందపరచును, కావున ఇతడు రాముడు అని పిలువబడును. అధికమైన బలము కలవాడు కావున ఇతనిని బలుడు అని తెలియుదురు. యదువులను విడదీయకుండ కలిపి ఉంచును కావున ఇతనిని సంకర్షణుడు అని అందురు.
+hi: गर्ग ने कहा: यह रोहिणी का पुत्र अपने गुणों से सुहृदों को आनन्दित करेगा, इसलिये यह राम कहलायेगा। अधिक बल के कारण इसे बल कहते हैं। और यदुओं को अपृथक् रूप से जोड़े रखता है, इसलिये इसे संकर्षण कहते हैं।
 
 --- verse 13 ---
 deva:
@@ -130,6 +166,9 @@ deva:
 iast:
 āsan varṇāstrayo hyasya gṛhṇato'nuyugaṁ tanūḥ|
 śuklo raktastathā pīta idānīṁ kṛṣṇatāṁ gataḥ||
+en: This boy has taken bodies age after age, and in them he has had three colours: white, red and yellow. Now he has come to a dark colour.
+tel: ఈ బాలకుడు యుగమునకు యుగము శరీరములను ధరించుచు మూడు వర్ణములను కలిగి ఉండెను: తెలుపు, ఎరుపు, పసుపు. ఇప్పుడు నల్లని వర్ణమును పొందినాడు.
+hi: इस बालक ने युग-युग में शरीर धारण किये और उनमें इसके तीन वर्ण रहे: श्वेत, रक्त और पीत। अब यह कृष्ण वर्ण को प्राप्त हुआ है।
 
 --- verse 14 ---
 deva:
@@ -138,6 +177,9 @@ deva:
 iast:
 prāgayaṁ vasudevasya kvacijjātastavātmajaḥ|
 vāsudeva iti śrīmānabhijñāḥ sampracakṣate||
+en: Earlier this son of yours was born somewhere as the son of Vasudeva. Therefore those who know call this glorious one Vāsudeva.
+tel: పూర్వము ఈ మీ కుమారుడు ఎక్కడో వసుదేవునికి కుమారుడై జన్మించెను. కావున తెలిసినవారు ఈ శ్రీమంతుని వాసుదేవుడు అని పేర్కొందురు.
+hi: पहले यह आपका पुत्र कहीं वसुदेव के पुत्र रूप में जन्मा था। इसलिये जानने वाले इस श्रीमान् को वासुदेव कहते हैं।
 
 --- verse 15 ---
 deva:
@@ -146,6 +188,9 @@ deva:
 iast:
 bahūni santi nāmāni rūpāṇi ca sutasya te|
 guṇakarmānurūpāṇi tānyahaṁ veda no janāḥ||
+en: Your son has many names and many forms, according to his qualities and his deeds. I know them; other people do not.
+tel: మీ కుమారునికి అనేక నామములు, అనేక రూపములు కలవు; అవి అతని గుణములకు కర్మములకు అనురూపముగా ఉండును. వానిని నేను ఎరుగుదును, ఇతరులు ఎరుగరు.
+hi: आपके पुत्र के अनेक नाम और अनेक रूप हैं, जो उसके गुणों और कर्मों के अनुरूप हैं। उन्हें मैं जानता हूँ, दूसरे लोग नहीं जानते।
 
 --- verse 16 ---
 deva:
@@ -154,6 +199,9 @@ deva:
 iast:
 eṣa vaḥ śreya ādhāsyad gopagokulanandanaḥ|
 anena sarvadurgāṇi yūyamañjastariṣyatha||
+en: This delight of the cowherds and of Gokula will bring you good fortune. Through him you will cross all difficulties with ease.
+tel: గోపాలకులకు గోకులమునకు ఆనందము కలిగించే ఇతడు మీకు శ్రేయస్సును కలిగించును. ఇతనిచే మీరు అన్ని కష్టములను సులభముగా దాటుదురు.
+hi: गोपों और गोकुल को आनन्द देने वाला यह आपका कल्याण करेगा। इसके द्वारा आप सब कठिनाइयों को सहज ही पार कर लेंगे।
 
 --- verse 17 ---
 deva:
@@ -162,6 +210,9 @@ deva:
 iast:
 purānena vrajapate sādhavo dasyupīḍitāḥ|
 arājake rakṣyamāṇā jigyurdasyūn samedhitāḥ||
+en: O lord of Vraja, in earlier times good men who were harmed by robbers were protected by him in a land without a king, and they prospered and defeated the robbers.
+tel: ఓ వ్రజపతీ, పూర్వము దొంగలచే బాధింపబడిన సజ్జనులు రాజు లేని దేశములో ఇతనిచే రక్షింపబడి, వృద్ధి పొంది, దొంగలను జయించిరి.
+hi: हे व्रजपति, पहले डाकुओं से पीड़ित सज्जन लोग राजा-रहित देश में इसके द्वारा रक्षित होकर समृद्ध हुए और डाकुओं को जीत लिया।
 
 --- verse 18 ---
 deva:
@@ -170,6 +221,9 @@ deva:
 iast:
 ya etasmin mahābhāgāḥ prītiṁ kurvanti mānavāḥ|
 nārayo'bhibhavantyetān viṣṇupakṣānivāsurāḥ||
+en: Those men of great fortune who hold love for this boy are not overcome by enemies, just as the asuras do not overcome those who stand on Viṣṇu's side.
+tel: ఈ బాలకునిపై ప్రీతిని కలిగి ఉండే మహాభాగ్యవంతులైన మనుష్యులను శత్రువులు జయించలేరు; విష్ణుపక్షములో ఉన్నవారిని అసురులు జయించలేనట్లే.
+hi: जो महाभाग्यवान् मनुष्य इस बालक में प्रीति रखते हैं, उन्हें शत्रु नहीं जीत पाते, जैसे विष्णु के पक्ष वालों को असुर नहीं जीत पाते।
 
 --- verse 19 ---
 deva:
@@ -178,6 +232,9 @@ deva:
 iast:
 tasmānnandātmajo'yaṁ te nārāyaṇasamo guṇaiḥ|
 śriyā kīrtyānubhāvena gopāyasva samāhitaḥ||
+en: Therefore this son of Nanda is equal to Nārāyaṇa in qualities, in fortune, in fame and in power. Guard him with a steady mind.
+tel: కావున ఈ నందుని కుమారుడు గుణములలో, సంపదలో, కీర్తిలో, ప్రభావములో నారాయణునికి సమానుడు. ఏకాగ్రమైన మనస్సుతో ఇతనిని కాపాడుము.
+hi: इसलिये यह नन्द का पुत्र गुणों में, श्री में, कीर्ति में और प्रभाव में नारायण के समान है। एकाग्र मन से इसकी रक्षा कीजिये।
 
 --- verse 20 ---
 deva:
@@ -186,6 +243,9 @@ deva:
 iast:
 ityātmānaṁ samādiśya garge ca svagṛhaṁ gate|
 nandaḥ pramudito mene ātmānaṁ pūrṇamāśiṣām||
+en: Having given this counsel, Garga went to his own house. Nanda was greatly delighted and thought himself filled with all blessings.
+tel: ఈ విధముగా ఉపదేశించి గర్గుడు తన ఇంటికి వెళ్లెను. నందుడు మిక్కిలి సంతోషించి, తనను ఆశీర్వాదములతో నిండినవాడుగా భావించెను.
+hi: इस प्रकार उपदेश देकर गर्ग अपने घर चले गये। नन्द अत्यन्त प्रसन्न हुए और अपने को आशीर्वादों से पूर्ण मानने लगे।
 
 --- verse 21 ---
 deva:
@@ -194,18 +254,24 @@ deva:
 iast:
 kālena vrajatālpena gokule rāmakeśavau|
 jānubhyāṁ saha pāṇibhyāṁ riṁgamāṇau vijahratuḥ||
+en: In a short while Rāma and Keśava crept about in Gokula on their knees and hands, and played.
+tel: కొంచెము కాలము గడచిన తరువాత గోకులములో రాముడును కేశవుడును మోకాళ్లతో చేతులతో ప్రాకుచు ఆడుకొనిరి.
+hi: थोड़ा समय बीतने पर गोकुल में राम और केशव घुटनों और हाथों के सहारे रेंगते हुए खेलने लगे।
 
 --- verse 22 ---
 deva:
-तावङ् घ्रियुग्ममनुकृष्य सरीसृपन्तौ
+तावङ्घ्रियुग्ममनुकृष्य सरीसृपन्तौ
 घोषप्रघोषरुचिरं व्रजकर्दमेषु।
 तन्नादहृष्टमनसावनुसृत्य लोकं
 मुग्धप्रभीतवदुपेयतुरन्ति मात्रोः॥
 iast:
-tāvaṅ ghriyugmamanukṛṣya sarīsṛpantau
+tāvaṅghriyugmamanukṛṣya sarīsṛpantau
 ghoṣapraghoṣaruciraṁ vrajakardameṣu|
 tannādahṛṣṭamanasāvanusṛtya lokaṁ
 mugdhaprabhītavadupeyaturanti mātroḥ||
+en: Dragging their pair of feet, the two crawled in the mud of Vraja, and the sound of their anklets was lovely. Their minds delighted by that sound, they followed after other people; then, bewildered and afraid, they came back to the side of their mothers.
+tel: తమ పాదముల జంటను ఈడ్చుకొనుచు ఆ ఇద్దరు వ్రజములోని బురదలో ప్రాకిరి; వారి అందెల సవ్వడి మనోహరముగా ఉండెను. ఆ ధ్వనికి మనసు సంతోషించి వారు ఇతర జనులను అనుసరించిరి; తరువాత భ్రమతో భయముతో తమ తల్లుల దగ్గరకు తిరిగి వచ్చిరి.
+hi: अपने दोनों चरणों को घसीटते हुए वे दोनों व्रज की कीचड़ में रेंगते थे, और उनके नूपुरों का शब्द मनोहर था। उस शब्द से मन प्रसन्न होकर वे दूसरे लोगों के पीछे चल देते, फिर मोहित और भयभीत होकर अपनी माताओं के पास लौट आते।
 
 --- verse 23 ---
 deva:
@@ -218,6 +284,9 @@ tanmātarau nijasutau ghṛṇayā snuvantyau
 paṅkāṅgarāgarucirāvupaguhya dorbhyām|
 dattvā stanaṁ prapibatoḥ sma mukhaṁ nirīkṣya
 mugdhasmitālpadaśanaṁ yayatuḥ pramodam||
+en: The mothers saw their own sons lovely with the mud smeared on their limbs. They embraced them with their arms in tenderness and gave them the breast. As the children drank, the mothers looked at their faces with their innocent smiles and few teeth, and they came to great joy.
+tel: ఆ తల్లులు తమ కుమారులను, అవయవములకు పూసుకొన్న బురదతో అందముగా ఉన్నవారిని చూసి, కరుణతో బాహువులతో కౌగిలించుకొని పాలిచ్చిరి. బిడ్డలు పాలు తాగుచున్నప్పుడు, మందహాసముతో కొద్ది పలువరుసతో ఉన్న వారి ముఖములను చూచి తల్లులు గొప్ప ఆనందమును పొందిరి.
+hi: वे माताएँ अपने पुत्रों को, जो अंगों पर लगी कीचड़ से सुन्दर लग रहे थे, देखकर करुणा से भरकर भुजाओं में भर लेतीं और स्तन देतीं। बालक दूध पीते समय, मन्द हँसी और थोड़े दाँतों वाले उनके मुखों को देखकर माताएँ बड़े आनन्द को प्राप्त होतीं।
 
 --- verse 24 ---
 deva:
@@ -230,6 +299,9 @@ yarhyaṅganādarśanīyakumāralīlā-
 vantarvraje tadabalāḥ pragṛhītapucchaiḥ|
 vatsairitastata ubhāvanukṛṣyamāṇau
 prekṣantya ujjhitagṛhā jahṛṣurhasantyaḥ||
+en: When within Vraja the women saw the childhood play of the two boys, which was worth any woman's seeing, and saw them dragged here and there by calves whose tails they had caught, they left their housework, watched them, laughed and were delighted.
+tel: వ్రజము లోపల, ఏ స్త్రీయైనను చూడదగిన ఆ రెండు బాలకుల బాల్యక్రీడలను ఆ స్త్రీలు చూసినప్పుడు, తోకలను పట్టుకొన్న దూడలచే ఆ ఇద్దరు అటు ఇటు ఈడ్వబడుటను చూసినప్పుడు, వారు ఇంటి పనిని విడిచి చూచుచు నవ్వుచు సంతోషించిరి.
+hi: व्रज के भीतर, जब स्त्रियों ने उन दोनों बालकों की वह बाललीला देखी जो किसी भी स्त्री के देखने योग्य थी, और देखा कि पूँछ पकड़े हुए बछड़े उन दोनों को इधर-उधर घसीट रहे हैं, तब वे घर का काम छोड़कर देखती रहीं, हँसती रहीं और प्रसन्न हुईं।
 
 --- verse 25 ---
 deva:
@@ -242,6 +314,9 @@ iast:
 krīḍāparāvaticalau svasutau niṣeddhum|
 gṛhyāṇi kartumapi yatra na tajjananyau
 śekāta āpaturalaṁ manaso'navasthām||
+en: The two mothers were not able to keep their own sons, who moved about so much in their play, away from horned animals, fire, animals with fangs, swords, water, birds and thorns, nor even to do their household duties; and so they came to great unsteadiness of mind.
+tel: ఆడుకొనుచు మిక్కిలి చురుకుగా కదలుచున్న తమ కుమారులను కొమ్ములు కలిగిన జంతువుల నుండి, అగ్ని నుండి, కోరలు కలిగిన జంతువుల నుండి, కత్తుల నుండి, నీటి నుండి, పక్షుల నుండి, ముళ్ల నుండి ఆ తల్లులు ఆపలేకపోయిరి; ఇంటి పనులను కూడ చేయలేకపోయిరి. అందుచే వారి మనస్సు మిక్కిలి చలించెను.
+hi: खेल में बहुत चंचल अपने पुत्रों को वे दोनों माताएँ सींग वाले पशुओं, आग, दाढ़ वाले जन्तुओं, तलवारों, जल, पक्षियों और काँटों से रोक न सकीं, और घर के काम भी न कर सकीं। इससे उनका मन अत्यन्त अस्थिर हो गया।
 
 --- verse 26 ---
 deva:
@@ -250,6 +325,9 @@ deva:
 iast:
 kālenālpena rājarṣe rāmaḥ kṛṣṇaśca gokule|
 aghṛṣṭajānubhiḥ padbhirvicakramaturaṁjasā||
+en: In a short time, O royal sage, Rāma and Kṛṣṇa walked about in Gokula on their feet with ease, without dragging their knees.
+tel: ఓ రాజర్షీ, కొంచెము కాలములోనే రాముడును కృష్ణుడును గోకులములో మోకాళ్లను నేలకు రాయకుండ, పాదములతో సులభముగా నడచిరి.
+hi: हे राजर्षे, थोड़े ही समय में राम और कृष्ण गोकुल में घुटनों को घिसे बिना, पैरों से सहज ही चलने लगे।
 
 --- verse 27 ---
 deva:
@@ -258,6 +336,9 @@ deva:
 iast:
 tatastu bhagavān kṛṣṇo vayasyairvrajabālakaiḥ|
 saharāmo vrajastrīṇāṁ cikrīḍe janayan mudam||
+en: Then the blessed Kṛṣṇa, together with Rāma, played in Vraja with the cowherd boys of his own age, and gave joy to the women of Vraja.
+tel: తరువాత భగవంతుడైన కృష్ణుడు రామునితో కలిసి, తన వయస్సు గల వ్రజబాలకులతో ఆడుకొనుచు, వ్రజ స్త్రీలకు ఆనందమును కలిగించెను.
+hi: तब भगवान् कृष्ण राम के साथ अपने ही अवस्था वाले व्रज के बालकों के साथ खेलते हुए व्रज की स्त्रियों को आनन्द देने लगे।
 
 --- verse 28 ---
 deva:
@@ -266,6 +347,9 @@ deva:
 iast:
 kṛṣṇasya gopyo ruciraṁ vīkṣya kaumāracāpalam|
 śṛṇvatyāḥ kila tanmāturiti hocuḥ samāgatāḥ||
+en: The gopīs saw the lovely restlessness of Kṛṣṇa's childhood. They came together and spoke in this way, within the hearing of his mother.
+tel: కృష్ణుని బాల్యపు మనోహరమైన చపలత్వమును గోపికలు చూచిరి. వారు కలిసి వచ్చి, అతని తల్లి వినుచున్నప్పుడే ఇట్లు పలికిరి.
+hi: गोपियों ने कृष्ण के बचपन की मनोहर चपलता देखी। वे एकत्र होकर, उनकी माता के सुनते हुए ही इस प्रकार बोलीं।
 
 --- verse 29 ---
 deva:
@@ -286,6 +370,9 @@ markān bhokṣyan vibhajati sa ce-
 nnātti bhāṇḍaṁ bhinatti
 dravyālābhe sa gṛhakupito
 yātyupakrośya tokān||
+en: He lets the calves loose at the wrong hour, and laughs when we cry out. He devises ways of stealing and eats the sweet curds and the milk. He gives the monkeys food, and if they do not eat it he breaks the pot. If he finds nothing, he grows angry with the household and goes away after making the small children cry.
+tel: అతడు వేళ కాని వేళలో దూడలను విడిచిపెట్టును, మేము కేకలు వేసినప్పుడు నవ్వును. దొంగతనపు ఉపాయములను కల్పించి తీయని పెరుగును పాలను తినును. కోతులకు తినుటకు ఇచ్చును, అవి తినకపోయినచో కుండను పగులగొట్టును. ఏమియు దొరకనిచో ఇంటిపై కోపించి, చిన్న పిల్లలను ఏడిపించి వెళ్లిపోవును.
+hi: वह बिना समय ही बछड़ों को खोल देता है, और हम चिल्लाती हैं तो हँसता है। चोरी के उपाय रचकर मीठा दही और दूध खा जाता है। बन्दरों को खाने को देता है, और वे न खायें तो बरतन फोड़ देता है। कुछ न मिले तो घर पर क्रोध करके छोटे बच्चों को रुलाकर चला जाता है।
 
 --- verse 30 ---
 deva:
@@ -306,6 +393,9 @@ dhvāntāgāre dhṛtamaṇigaṇaṁ
 svāṁgamarthapradīpaṁ
 kāle gopyo yarhi gṛhakṛ-
 tyeṣu suvyagracittāḥ||
+en: Where a thing is out of the reach of his hand, he makes a way with stools and mortars and the like. He knows what is in the hanging pots and makes a hole in them, for his understanding is set within. In a dark room he wears a cluster of jewels on his body as a lamp that serves his purpose. He does all this at the hour when we gopīs are much occupied with household work.
+tel: చేతికి అందని వస్తువు ఉన్నచో పీటలతో రోళ్లతో వాని వంటి వానితో ఉపాయమును కల్పించును. ఉట్టిలోని కుండలలో ఏమి ఉన్నదో ఎరుగును, వానికి రంధ్రము చేయును; అతని తెలివి లోపలే నిలిచి ఉండును. చీకటి గదిలో తన శరీరముపై మణుల గుంపును ధరించి దానిని తన పనికి దీపముగా చేసుకొనును. గోపికలమైన మేము ఇంటి పనులలో మిక్కిలి తలమునకలై ఉండే వేళలో ఇదియంతయు చేయును.
+hi: जो वस्तु हाथ की पहुँच से बाहर हो, उसके लिये वह पीढ़े और ऊखल आदि से उपाय रच लेता है। छींके पर रखे बरतनों में क्या है, यह वह जानता है और उनमें छेद कर देता है, क्योंकि उसकी बुद्धि भीतर ही लगी रहती है। अँधेरे कमरे में वह अपने शरीर पर मणियों का समूह पहनकर उसे अपने काम का दीपक बना लेता है। यह सब वह उस समय करता है जब हम गोपियाँ घर के कामों में अत्यन्त व्यस्त रहती हैं।
 
 --- verse 31 ---
 deva:
@@ -326,6 +416,9 @@ itthaṁ strībhiḥ sabhayanayana-
 śrīmukhālokinībhi-
 rvyākhyātārthā prahasitamukhī
 na hyupālabdhumaicchat||
+en: He does such bold things, and in the clean house he passes water and the like. Having made his skill out of the ways of stealing, he then sits looking very innocent. When the women spoke in this way with their frightened eyes set on his lovely face, Yaśodā, who had the matter explained to her, only smiled and did not wish to scold him.
+tel: ఇట్టి సాహసపు పనులను చేయును, శుభ్రమైన ఇంటిలో మూత్రము మొదలైనవి చేయును. దొంగతనపు ఉపాయములతో తన నైపుణ్యమును కల్పించుకొని, తరువాత మిక్కిలి అమాయకునివలె కూర్చుండును. స్త్రీలు భయముతో కనులతో అతని మనోహరమైన ముఖమును చూచుచు ఇట్లు పలికినప్పుడు, విషయము తెలిసిన యశోద నవ్వు ముఖముతో ఉండి, అతనిని మందలించుటకు ఇష్టపడలేదు.
+hi: वह ऐसे ढीठ काम करता है, और स्वच्छ घर में मूत्र आदि कर देता है। चोरी के उपायों से अपनी कुशलता रचकर फिर बहुत भोला बनकर बैठ जाता है। जब स्त्रियाँ भयभीत नेत्रों से उसके मनोहर मुख को देखते हुए इस प्रकार बोलीं, तब बात समझ जाने पर यशोदा हँसते मुख से रह गईं और उसे डाँटना न चाहा।
 
 --- verse 32 ---
 deva:
@@ -334,6 +427,9 @@ deva:
 iast:
 ekadā krīḍamānāste rāmādyā gopadārakāḥ|
 kṛṣṇo mṛdaṁ bhakṣitavāniti mātre nyavedayan||
+en: Once, when Rāma and the other cowherd boys were at play, they reported to his mother that Kṛṣṇa had eaten earth.
+tel: ఒకనాడు రాముడు మొదలైన గోపబాలకులు ఆడుకొనుచు, కృష్ణుడు మన్ను తినెనని అతని తల్లికి చెప్పిరి.
+hi: एक दिन राम आदि गोप-बालक खेलते हुए उसकी माता से कह आये कि कृष्ण ने मिट्टी खा ली है।
 
 --- verse 33 ---
 deva:
@@ -342,6 +438,9 @@ deva:
 iast:
 sā gṛhītvā kare kṛṣṇamupālabhya hitaiṣiṇī|
 yaśodā bhayasambhrāntaprekṣaṇākṣamabhāṣata||
+en: Wishing his good, she took Kṛṣṇa by the hand and reproached him. Yaśodā spoke to him, whose eyes were unsteady with fear.
+tel: అతని మేలును కోరే ఆమె కృష్ణుని చేతిని పట్టుకొని మందలించెను. భయముతో చూపులు చలించిన అతనితో యశోద ఇట్లు పలికెను.
+hi: उसका हित चाहने वाली उसने कृष्ण का हाथ पकड़कर उसे डाँटा। भय से चंचल दृष्टि वाले उस बालक से यशोदा ने यह कहा।
 
 --- verse 34 ---
 deva:
@@ -350,6 +449,9 @@ deva:
 iast:
 kasmānmṛdamadāntātman bhavān bhakṣitavān rahaḥ|
 vadanti tāvakā hyete kumārāste'grajo'pyayam||
+en: You who do not hold yourself in check, why have you eaten earth in a hidden place? These boys who are your own companions say so, and this elder brother of yours says so too.
+tel: తనను అదుపులో ఉంచుకొనని ఓ బాలకా, రహస్యముగా మన్నును ఎందుకు తినినావు? నీ వారైన ఈ కుమారులు అట్లు చెప్పుచున్నారు, నీ ఈ అన్నయు అట్లే చెప్పుచున్నాడు.
+hi: अपने को वश में न रखने वाले, तूने छिपकर मिट्टी क्यों खाई? तेरे ही साथी ये बालक यह कहते हैं, और तेरा यह बड़ा भाई भी यही कहता है।
 
 --- verse 35 ---
 deva:
@@ -360,6 +462,9 @@ iast:
 śrīkṛṣṇa uvāca
 nāhaṁ bhakṣitavānamba sarve mithyābhiśaṁsinaḥ|
 yadi satyagirastarhi samakṣaṁ paśya me mukham||
+en: Śrī Kṛṣṇa said: Mother, I have not eaten it. They all speak falsely. If their words are true, then look at my mouth before you.
+tel: శ్రీకృష్ణుడు పలికెను: అమ్మా, నేను తినలేదు. వారందరు అసత్యమును చెప్పుచున్నారు. వారి మాటలు సత్యమైనచో, నా ముఖమును ఎదుటనే చూడుము.
+hi: श्रीकृष्ण ने कहा: माँ, मैंने नहीं खाई। ये सब झूठ कहते हैं। यदि उनकी बात सच है, तो सामने ही मेरा मुँह देख लो।
 
 --- verse 36 ---
 deva:
@@ -368,6 +473,9 @@ deva:
 iast:
 yadyevaṁ tarhi vyādehītyuktaḥ sa bhagavān hariḥ|
 vyādattāvyāhataiśvaryaḥ krīḍāmanujabālakaḥ||
+en: He was told: If it is so, then open your mouth. The blessed Hari, whose power is never hindered, opened it, playing as a human child.
+tel: అట్లయినచో నోరు తెరువుము అని చెప్పబడిన ఆ భగవంతుడైన హరి, ఎవరి ఐశ్వర్యము ఎన్నడును అడ్డగింపబడదో, మనుష్య బాలకునివలె ఆడుకొనుచు నోరు తెరచెను.
+hi: उनसे कहा गया: ऐसा है तो मुँह खोलो। वे भगवान् हरि, जिनका ऐश्वर्य कभी रुकता नहीं, मनुष्य-बालक की तरह खेलते हुए मुँह खोल दिये।
 
 --- verse 37 ---
 deva:
@@ -376,6 +484,9 @@ deva:
 iast:
 sā tatra dadṛśe viśvaṁ jagat sthāsnu ca khaṁ diśaḥ|
 sādridvīpābdhibhūgolaṁ savāyvagnīndutārakam||
+en: There she saw the universe, the moving and the unmoving world, the sky, the directions, the globe of the earth with its mountains, islands and oceans, and with the wind, fire, moon and stars.
+tel: అందులో ఆమె విశ్వమును, చరాచరమైన జగత్తును, ఆకాశమును, దిక్కులను, పర్వతములతో ద్వీపములతో సముద్రములతో ఉన్న భూగోళమును, వాయువుతో అగ్నితో చంద్రునితో నక్షత్రములతో కూడినదానిని చూచెను.
+hi: उसमें उसने विश्व को, चर और अचर जगत् को, आकाश को, दिशाओं को, पर्वतों, द्वीपों और समुद्रों वाले भूगोल को, तथा वायु, अग्नि, चन्द्र और तारों सहित सब कुछ देखा।
 
 --- verse 38 ---
 deva:
@@ -384,6 +495,9 @@ deva:
 iast:
 jyotiścakraṁ jalaṁ tejo nabhasvān viyadeva ca|
 vaikārikāṇīndriyāṇi mano mātrā guṇāstrayaḥ||
+en: She saw the circle of the lights, water, fire, the wind and space itself, the senses that arise from modification, the mind, the subtle elements and the three guṇas.
+tel: జ్యోతిశ్చక్రమును, జలమును, తేజమును, వాయువును, ఆకాశమును, వైకారికములైన ఇంద్రియములను, మనస్సును, తన్మాత్రలను, మూడు గుణములను ఆమె చూచెను.
+hi: ज्योतिश्चक्र, जल, तेज, वायु और आकाश, विकार से उत्पन्न इन्द्रियाँ, मन, तन्मात्राएँ और तीनों गुण — यह सब उसने देखा।
 
 --- verse 39 ---
 deva:
@@ -396,6 +510,9 @@ etad vicitraṁ saha jīvakāla-
 svabhāvakarmāśayaliṁgabhedam|
 sūnostanau vīkṣya vidāritāsya
 vrajaṁ sahātmānamavāpa śaṁkām||
+en: In her son's body she saw this wondrous whole, together with the living being, time, nature, karma, the dispositions and the differences of the subtle body. In his opened mouth she saw Vraja and herself as well, and she was filled with doubt.
+tel: తన కుమారుని శరీరములో, జీవునితో కాలముతో స్వభావముతో కర్మతో ఆశయములతో లింగభేదములతో కూడిన ఈ ఆశ్చర్యకరమైన దానిని ఆమె చూచెను. తెరచిన అతని నోటిలో వ్రజమును, తననుకూడ చూచి ఆమె సందేహమును పొందెను.
+hi: अपने पुत्र के शरीर में उसने जीव, काल, स्वभाव, कर्म, आशय और लिंग-भेद सहित इस विचित्र समस्त को देखा। उसके खुले मुख में व्रज को और अपने को भी देखकर वह सन्देह से भर गई।
 
 --- verse 40 ---
 deva:
@@ -408,6 +525,9 @@ kiṁ svapna etaduta devamāyā
 kiṁ vā madīyo bata buddhimohaḥ|
 atho amuṣyaiva mamārbhakasya
 yaḥ kaścanautpattika ātmayogaḥ||
+en: Is this a dream, or the māyā of a god? Or is it a confusion of my own mind? Or is it some power of the Self belonging to this very child of mine, present in him from his birth?
+tel: ఇది కలయా, లేక దేవమాయయా? లేక నా బుద్ధి యొక్క భ్రమయా? లేక ఈ నా బిడ్డకే పుట్టుకతోనే ఉన్న ఏదో ఆత్మయోగమా?
+hi: यह स्वप्न है, या देवमाया? या मेरी ही बुद्धि का मोह है? अथवा मेरे इस बालक का ही जन्म से रहा हुआ कोई आत्मयोग है?
 
 --- verse 41 ---
 deva:
@@ -420,6 +540,9 @@ atho yathāvanna vitarkagocaraṁ
 cetomanaḥkarmavacobhiraṁjasā|
 yadāśrayaṁ yena yataḥ pratīyate
 sudurvibhāvyaṁ praṇatāsmi tatpadam||
+en: Since it cannot truly be reached by reasoning, nor easily by thought, by mind, by deed or by speech, I bow down to that state which is its ground, through which and from which all this is known, and which is very hard to conceive.
+tel: ఇది తర్కముచే యథార్థముగా అందదు, చిత్తముచే మనస్సుచే కర్మచే వాక్కుచే సులభముగా అందదు. కావున, ఏది ఆశ్రయమో, ఏదిచే ఏది నుండి ఇదంతయు తెలియబడునో, ఏది తలచుటకు మిక్కిలి కష్టమో, ఆ పదమునకు నేను నమస్కరించుచున్నాను.
+hi: यह तर्क से यथार्थ रूप में प्राप्त नहीं होता, न चित्त, मन, कर्म और वाणी से सहज ही। इसलिये जो आश्रय है, जिससे और जहाँ से यह सब जाना जाता है, और जो अत्यन्त दुर्विभाव्य है, उस पद को मैं प्रणाम करती हूँ।
 
 --- verse 42 ---
 deva:
@@ -432,6 +555,9 @@ ahaṁ mamāsau patireṣa me suto
 vrajeśvarasyākhilavittapā satī|
 gopyaśca gopāḥ sahagodhanāśca me
 yanmāyayetthaṁ kumatiḥ sa me gatiḥ||
+en: I am; this is my husband; this is my son. I am the wife of the lord of Vraja and the keeper of all his wealth. The gopīs and the gopas and the cattle are mine. By whose māyā this wrong thought arises, he is my refuge.
+tel: నేను ఉన్నాను; ఇతడు నా భర్త; ఇతడు నా కుమారుడు. నేను వ్రజేశ్వరుని భార్యను, అతని సమస్త ధనమును కాపాడునదానను. గోపికలు, గోపాలకులు, గోధనము నావి. ఎవరి మాయచే ఈ దుర్బుద్ధి కలుగునో, అతడే నాకు గతి.
+hi: मैं हूँ; यह मेरा पति है; यह मेरा पुत्र है। मैं व्रजेश्वर की पत्नी और उसके समस्त धन की रक्षा करने वाली हूँ। गोपियाँ, गोप और गोधन मेरे हैं। जिसकी माया से यह कुबुद्धि होती है, वही मेरी गति है।
 
 --- verse 43 ---
 deva:
@@ -440,6 +566,9 @@ deva:
 iast:
 itthaṁ viditatattvāyāṁ gopikāyāṁ sa īśvaraḥ|
 vaiṣṇavīṁ vyatanonmāyāṁ putrasnehamayīṁ vibhuḥ||
+en: When the gopī had come to know the truth in this way, the Lord, the all-pervading ruler, spread over her the māyā of Viṣṇu, which is made of love for a son.
+tel: ఈ విధముగా గోపిక తత్త్వమును తెలుసుకొనినప్పుడు, ఆ ఈశ్వరుడు, సర్వవ్యాపి, పుత్రస్నేహముతో నిండిన వైష్ణవీ మాయను ఆమెపై విస్తరింపజేసెను.
+hi: जब गोपी ने इस प्रकार तत्त्व जान लिया, तब वे ईश्वर, वे सर्वव्यापी, पुत्र-स्नेह से बनी वैष्णवी माया को उस पर फैला दिये।
 
 --- verse 44 ---
 deva:
@@ -448,6 +577,9 @@ deva:
 iast:
 sadyonaṣṭasmṛtirgopī sā''ropyārohamātmajam|
 pravṛddhasnehakalilahṛdayā''sīd yathā purā||
+en: The gopī at once lost that memory. She set her son on her lap, and her heart was filled with love grown great, as it was before.
+tel: వెంటనే ఆ గోపికకు ఆ స్మృతి నశించెను. ఆమె తన కుమారుని ఒడిలో కూర్చుండబెట్టుకొనెను; ఆమె హృదయము పెరిగిన ప్రేమతో నిండి, మునుపటివలెనే ఉండెను.
+hi: तुरन्त ही उस गोपी की वह स्मृति नष्ट हो गई। उसने अपने पुत्र को गोद में बैठा लिया, और उसका हृदय बढ़े हुए स्नेह से भर गया, जैसा पहले था।
 
 --- verse 45 ---
 deva:
@@ -456,6 +588,9 @@ deva:
 iast:
 trayyā copaniṣadbhiśca sāṁkhyayogaiśca sātvataiḥ|
 upagīyamānamāhātmyaṁ hariṁ sāmanyatātmajam||
+en: She thought of Hari as her own son, Hari whose greatness is sung by the three Vedas, by the Upaniṣads, by the Sāṁkhya and the Yoga teachings, and by the Sātvata scriptures.
+tel: మూడు వేదములచే, ఉపనిషత్తులచే, సాంఖ్య యోగ శాస్త్రములచే, సాత్వత శాస్త్రములచే మహిమ కీర్తింపబడే ఆ హరిని ఆమె తన కుమారునిగా భావించెను.
+hi: तीनों वेदों से, उपनिषदों से, सांख्य और योग के शास्त्रों से, तथा सात्वत शास्त्रों से जिनकी महिमा गाई जाती है, उन हरि को उसने अपना पुत्र ही माना।
 
 --- verse 46 ---
 deva:
@@ -466,6 +601,9 @@ iast:
 rājovāca
 nandaḥ kimakarod brahman śreya evaṁ mahodayam|
 yaśodā ca mahābhāgā papau yasyāḥ stanaṁ hariḥ||
+en: The King said: Brahman, what good deed did Nanda do to gain so great a fortune? And what did the greatly blessed Yaśodā do, whose breast Hari drank?
+tel: రాజు పలికెను: ఓ బ్రహ్మన్, ఇంత గొప్ప శ్రేయస్సును పొందుటకు నందుడు ఏమి పుణ్యమును చేసెను? హరి ఎవరి స్తనమును త్రాగెనో, ఆ మహాభాగ్యవతి యశోద ఏమి చేసెను?
+hi: राजा ने कहा: हे ब्रह्मन्, इतना बड़ा कल्याण पाने के लिये नन्द ने कौन सा पुण्य किया? और जिनका स्तन हरि ने पिया, उन महाभाग्यवती यशोदा ने क्या किया?
 
 --- verse 47 ---
 deva:
@@ -474,6 +612,9 @@ deva:
 iast:
 pitarau nānvavindetāṁ kṛṣṇodārārbhakehitam|
 gāyantyadyāpi kavayo yallokaśamalāpaham||
+en: His own parents did not obtain the generous childhood deeds of Kṛṣṇa, which poets sing even today, and which take away the impurity of the world.
+tel: కవులు నేటికిని గానము చేసే, లోకపు మలినమును తొలగించే కృష్ణుని ఉదారమైన బాల్యక్రీడలను అతని తల్లిదండ్రులు పొందలేదు.
+hi: कवि आज भी जिन्हें गाते हैं और जो लोक के मल को दूर करते हैं, कृष्ण के उन उदार बाल-चरित्रों को उनके माता-पिता नहीं पा सके।
 
 --- verse 48 ---
 deva:
@@ -484,6 +625,9 @@ iast:
 śrīśuka uvāca
 droṇo vasūnāṁ pravaro dharayā saha bhāryayā|
 kariṣyamāṇa ādeśān brahmaṇastamuvāca ha||
+en: Śrīśuka said: Droṇa, the foremost of the Vasus, together with his wife Dharā, being about to carry out the orders of Brahmā, said this to him.
+tel: శ్రీశుకుడు పలికెను: వసువులలో శ్రేష్ఠుడైన ద్రోణుడు, తన భార్య ధరతో కలిసి, బ్రహ్మ ఆదేశములను నిర్వర్తింపబోవుచు, ఆయనతో ఇట్లు పలికెను.
+hi: श्रीशुक ने कहा: वसुओं में श्रेष्ठ द्रोण ने अपनी पत्नी धरा के साथ, ब्रह्मा के आदेशों का पालन करने को उद्यत होकर, उनसे यह कहा।
 
 --- verse 49 ---
 deva:
@@ -492,6 +636,9 @@ deva:
 iast:
 jātayornau mahādeve bhuvi viśveśvare harau|
 bhaktiḥ syāt paramā loke yayāñjo durgatiṁ taret||
+en: When we two are born on the earth, may we have the highest devotion to Hari, the great god, the lord of the universe, the devotion by which one easily crosses a bad state.
+tel: మేము ఇద్దరము భూమిపై జన్మించినప్పుడు, మహాదేవుడైన, విశ్వేశ్వరుడైన హరిపై మాకు పరమమైన భక్తి కలుగవలెను; ఆ భక్తిచే మనుష్యుడు దుర్గతిని సులభముగా దాటును.
+hi: जब हम दोनों पृथ्वी पर जन्में, तब महादेव, विश्वेश्वर हरि में हमारी परम भक्ति हो, जिससे मनुष्य दुर्गति को सहज ही पार कर जाता है।
 
 --- verse 50 ---
 deva:
@@ -500,6 +647,9 @@ deva:
 iast:
 astvityuktaḥ sa bhagavān vraje droṇo mahāyaśāḥ|
 jajñe nanda iti khyāto yaśodā sā dharābhavat||
+en: He was told, Let it be so. That blessed Droṇa of great fame was born in Vraja and became known as Nanda, and Dharā became Yaśodā.
+tel: అట్లే అగును అని ఆయనకు చెప్పబడెను. గొప్ప కీర్తి కలిగిన ఆ భగవంతుడైన ద్రోణుడు వ్రజములో జన్మించి నందుడు అని ప్రసిద్ధుడయ్యెను; ధర యశోద అయ్యెను.
+hi: ऐसा ही हो, यह उन्हें कह दिया गया। महान् यश वाले वे भगवान् द्रोण व्रज में जन्मे और नन्द नाम से प्रसिद्ध हुए, और धरा यशोदा हुईं।
 
 --- verse 51 ---
 deva:
@@ -508,6 +658,9 @@ deva:
 iast:
 tato bhaktirbhagavati putrībhūte janārdane|
 dampatyornitarāmāsīd gopagopīṣu bhārata||
+en: Then, O Bhārata, the devotion of that couple to the Lord Janārdana, who had become their child, grew very great, and so did the devotion of the gopas and the gopīs.
+tel: ఓ భారతా, తరువాత తమ బిడ్డగా అయిన భగవంతుడైన జనార్దనునిపై ఆ దంపతులకు భక్తి మిక్కిలి అధికమయ్యెను; గోపాలకులకు గోపికలకును అట్లే అయ్యెను.
+hi: हे भारत, तब अपने पुत्र बने भगवान् जनार्दन में उन दम्पति की भक्ति अत्यन्त बढ़ गई, और गोपों तथा गोपियों की भी।
 
 --- verse 52 ---
 deva:
@@ -516,9 +669,15 @@ deva:
 iast:
 kṛṣṇo brahmaṇa ādeśaṁ satyaṁ kartuṁ vraje vibhuḥ|
 saharāmo vasaṁścakre teṣāṁ prītiṁ svalīlayā||
+en: Kṛṣṇa, the all-pervading Lord, in order to make Brahmā's order true, dwelt in Vraja with Rāma and gave them joy by his own līlā.
+tel: సర్వవ్యాపి అయిన కృష్ణుడు బ్రహ్మ ఆదేశమును సత్యము చేయుటకు, రామునితో కలిసి వ్రజములో నివసించి, తన లీలచే వారికి ఆనందమును కలిగించెను.
+hi: सर्वव्यापी कृष्ण ब्रह्मा के आदेश को सत्य करने के लिये राम के साथ व्रज में रहकर अपनी लीला से उन्हें आनन्द देते रहे।
 
 --- verse none ---
 deva:
 इति श्रीमद्भागवते महापुराणे पारमहंस्यां संहितायां दशमस्कन्धे पूर्वार्धे विश्वरूपदर्शनेऽष्टमोऽध्यायः॥ ८॥
 iast:
 iti śrīmadbhāgavate mahāpurāṇe pāramahaṁsyāṁ saṁhitāyāṁ daśamaskandhe pūrvārdhe viśvarūpadarśane'ṣṭamo'dhyāyaḥ|| 8||
+en: Thus ends the eighth adhyāya, on the vision of the universal form, in the first half of the tenth skandha of the Śrīmad Bhāgavata Mahāpurāṇa, the saṁhitā of the paramahaṁsas.
+tel: ఇట్లు పరమహంసల సంహిత అయిన శ్రీమద్భాగవత మహాపురాణములో దశమ స్కంధము పూర్వార్ధములో విశ్వరూప దర్శనము అనే ఎనిమిదవ అధ్యాయము ముగిసెను.
+hi: इस प्रकार परमहंसों की संहिता श्रीमद्भागवत महापुराण के दशम स्कन्ध के पूर्वार्ध में विश्वरूप-दर्शन नामक आठवाँ अध्याय समाप्त हुआ।
