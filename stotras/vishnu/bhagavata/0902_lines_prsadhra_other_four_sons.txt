@@ -9,7 +9,7 @@ Type: Purāṇa (an adhyāya of the Śrīmad Bhāgavata, Skandha 9)
 
 Source / recension: Base text and authority: the Gītā Press, Gorakhpur Śrīmadbhāgavata Mahāpurāṇa with Hindi translation, Part 2 (Gītā Press code 27), archive.org item `shrimadbhagwat-mahapuran-bhag-2`, printed pages 11–14; the PDF page numbers are the printed ones. The PDF carries the typesetter's own text layer in the Chanakya font encoding, and the text was decoded from it by machine with `bin/bhagavata/chanakya.py`, not read off OCR or typed. The decoder was checked against GRETIL over all twelve skandhas before any file was written, and the differences that remain were sampled and found to be readings of the two editions. Second witness: GRETIL's `sa_bhAgavatapurANa.xml` (IAST, contributed by Ulrich Stiehl), a separate editorial lineage, compared verse by verse by machine. The TTD edition with the commentaries of Śrīdhara, Vīrarāghava and Vijayadhvaja (archive.org `Bhagavata_Purana_With_Multiple_Commentaries_TTD_Critical_Edition`) is the third witness where one is needed; it was not read for this file. The IAST was generated mechanically from the Devanāgarī with `bin/dev2iast.py`.
 
-Recension note: Text-only file, written 1 Oct 2026 at the user's instruction to lay down the whole Bhāgavata first: the English, Telugu and Hindi meanings are still to be added, and the witnesses' differences listed here have been recorded by machine and not yet adjudicated. The print is followed throughout. The print numbers 36 verses and GRETIL numbers 36. Of the 36 verses GRETIL has under the same number, 24 agree with the print letter for letter once spacing and the spelling of nasals are set aside; the rest differ: 2, 5, 6, 14, 19, 25, 27, 30, 31, 32, 35, 36. Spacing is the print's, as its text layer gives it; in a few places justification has left a space inside a word, and these are still to be closed when the verse is read. The speaker lines (श्रीशुक उवाच and the others) are printed in italic above the verse they introduce, and are given as its first line.
+Recension note: Meanings written 23 Oct 2026 (session S78). The differences between the witnesses listed below were read as the verses were glossed; except where this note says otherwise, each is a spelling, a sandhi or a word order of the two editions, none of them changes the sense, and the print's reading therefore stands unbracketed. The print is followed throughout. The print numbers 36 verses and GRETIL numbers 36. Of the 36 verses GRETIL has under the same number, 24 agree with the print letter for letter once spacing and the spelling of nasals are set aside; the rest differ: 2, 5, 6, 14, 19, 25, 27, 30, 31, 32, 35, 36. Spacing is the print's, as its text layer gives it. The speaker lines (श्रीशुक उवाच and the others) are printed in italic above the verse they introduce, and are given as its first line. At verse 27 the text layer had swallowed the space between अस्य and शोभनम्, which left किञ्चिच्चास्यशोभनम् as one unreadable string; the space is restored here, and GRETIL reads the two words apart. Several of the differences listed above are different words and not spellings, and they are named here because the sense was read in each place before the print was followed: at verse 5 the print has तत् and अभिससार where GRETIL has तु and अनुससार, at verse 6 अहनद् where GRETIL has अच्छिनोद्, at verse 19 कूर्च where GRETIL has पूर्ण, at verse 27 अन्यस्य कश्चन where GRETIL has अन्यो ऽस्ति कश्चन, at verse 30 बन्धुमान् and बन्धु where GRETIL has धुन्धुमान् and बुध, at verse 31 इडविडा where GRETIL has इलविला, and at verse 32 तस्याम् and योगेश्वरात् where GRETIL has यस्याम् and योगेश्वरः. In each place the sense of the verse is the same, the names of the kings are the print's, and the print's reading stands. At verse 14 the print writes एवंवृत्तो as one word where GRETIL spaces it; एवंवृत्त is a compound and is left as printed. The spaces the print keeps after a pada-final द् (प्राविशद् गोष्ठं, धृष्टाद् धार्ष्टम्, आसीद् राज्यवर्धनः, वंशकृद् राजा) are the print's own spacing and are not touched.
 
 Verse count: 36, plus the closing colophon printed unnumbered.
 
@@ -24,6 +24,9 @@ iast:
 śrīśuka uvāca
 evaṁ gate'tha sudyumne manurvaivasvataḥ sute|
 putrakāmastapastepe yamunāyāṁ śataṁ samāḥ||
+en: Śrī Śuka said: When his son Sudyumna had gone away in this manner, Manu, the son of Vivasvān, desired sons and performed tapas on the bank of the Yamunā for a hundred years.
+tel: శ్రీశుకుడు పలికెను: ఈ విధముగా తన పుత్రుడైన సుద్యుమ్నుడు వెడలిపోయిన పిమ్మట, వివస్వానుని పుత్రుడైన మనువు పుత్రులను కోరి యమునా నదీ తీరమున నూరు సంవత్సరములు తపస్సు చేసెను.
+hi: श्रीशुकदेवजी ने कहा: इस प्रकार अपने पुत्र सुद्युम्न के चले जाने पर विवस्वान् के पुत्र मनु ने पुत्रों की इच्छा से यमुना के तट पर सौ वर्ष तक तपस्या की।
 
 --- verse 2 ---
 deva:
@@ -32,6 +35,9 @@ deva:
 iast:
 tato'yajanmanurdevamapatyārthaṁ hariṁ prabhum|
 ikṣvākupūrvajān putrām̐llebhe svasadṛśān daśa||
+en: Then Manu worshipped the god Hari, the Lord, for the sake of children. He obtained ten sons like himself, and Ikṣvāku was the eldest among them.
+tel: పిమ్మట మనువు సంతానము కోసము దేవుడైన ప్రభువు హరిని ఆరాధించెను. ఆయన తనవంటి పది పుత్రులను పొందెను. వారిలో ఇక్ష్వాకుడు జ్యేష్ఠుడు.
+hi: तब मनु ने सन्तान के लिये देव प्रभु हरि की आराधना की। उन्हें अपने समान दस पुत्र प्राप्त हुए, और उनमें इक्ष्वाकु ज्येष्ठ थे।
 
 --- verse 3 ---
 deva:
@@ -40,6 +46,9 @@ deva:
 iast:
 pṛṣadhrastu manoḥ putro gopālo guruṇā kṛtaḥ|
 pālayāmāsa gā yatto rātryāṁ vīrāsanavrataḥ||
+en: Pṛṣadhra, a son of Manu, was made a keeper of cows by his guru. He guarded the cows with care, and at night he kept the vow of vīrāsana.
+tel: మనువు పుత్రుడైన పృషధ్రుడు తన గురువు చేత గోపాలకుడుగా నియమింపబడెను. ఆయన జాగ్రత్తతో గోవులను కాచెను, రాత్రియందు వీరాసన వ్రతమును పాలించెను.
+hi: मनु के पुत्र पृषध्र को उनके गुरु ने गौओं का रक्षक बनाया। वे सावधानी से गौओं की रक्षा करते थे और रात में वीरासन व्रत का पालन करते थे।
 
 --- verse 4 ---
 deva:
@@ -48,6 +57,9 @@ deva:
 iast:
 ekadā prāviśad goṣṭhaṁ śārdūlo niśi varṣati|
 śayānā gāva utthāya bhītāstā babhramurvraje||
+en: One night, while it was raining, a tiger entered the cowshed. The cows that were lying there rose up in fear and ran about in the pen.
+tel: ఒకనాటి రాత్రి వర్షము కురియుచున్నప్పుడు ఒక పెద్దపులి గోశాలలోనికి ప్రవేశించెను. అచట పరుండియున్న గోవులు భయముతో లేచి దొడ్డిలో అటునిటు పరుగెత్తెను.
+hi: एक रात वर्षा होते समय एक बाघ गोशाला में घुस आया। वहाँ लेटी हुई गौएँ भय से उठकर बाड़े में इधर-उधर दौड़ने लगीं।
 
 --- verse 5 ---
 deva:
@@ -56,6 +68,9 @@ deva:
 iast:
 ekāṁ jagrāha balavān sā cukrośa bhayāturā|
 tasyāstat kranditaṁ śrutvā pṛṣadhro'bhisasāra ha||
+en: The strong tiger seized one cow. Struck with fear, she cried out aloud. Hearing her cry, Pṛṣadhra ran towards her.
+tel: బలవంతమైన ఆ పులి ఒక గోవును పట్టుకొనెను. భయముతో బాధపడి ఆ గోవు పెద్దగా అరచెను. ఆ ఆర్తనాదమును విని పృషధ్రుడు ఆ వైపునకు పరుగెత్తెను.
+hi: उस बलवान् बाघ ने एक गौ को पकड़ लिया। भय से व्याकुल होकर वह गौ जोर से चिल्लायी। उसका आर्तनाद सुनकर पृषध्र उसकी ओर दौड़े।
 
 --- verse 6 ---
 deva:
@@ -64,6 +79,9 @@ deva:
 iast:
 khaḍgamādāya tarasā pralīnoḍugaṇe niśi|
 ajānannahanad babhroḥ śiraḥ śārdūlaśaṁkayā||
+en: He took up his sword and went quickly. That night the host of stars was hidden. Not knowing what he did, he struck the head of the tawny cow, taking her for the tiger.
+tel: ఆయన కత్తిని చేపట్టి వేగముగా వెళ్ళెను. ఆ రాత్రి నక్షత్రముల గుంపు కప్పబడియుండెను. తెలియక, పులి అని భ్రమించి ఆయన ఆ కపిల వర్ణపు గోవు తలపై కొట్టెను.
+hi: उन्होंने तलवार लेकर शीघ्र गमन किया। उस रात तारों का समूह छिपा हुआ था। न जानते हुए, बाघ समझकर उन्होंने उस कपिल वर्ण की गौ के सिर पर प्रहार किया।
 
 --- verse 7 ---
 deva:
@@ -72,6 +90,9 @@ deva:
 iast:
 vyāghro'pi vṛkṇaśravaṇo nistriṁśāgrāhatastataḥ|
 niścakrāma bhṛśaṁ bhīto raktaṁ pathi samutsṛjan||
+en: The tiger too had its ear cut by the tip of the sword. Struck in that way, it was greatly frightened. It ran out, leaving blood on the path.
+tel: ఆ పులి చెవి కూడ కత్తి కొనతో తెగిపోయెను. ఆ దెబ్బతో అది మిక్కిలి భయపడెను. దారిలో రక్తమును చిందించుచు అది పరుగెత్తి పోయెను.
+hi: बाघ का कान भी तलवार की नोक से कट गया। उस प्रहार से वह अत्यन्त भयभीत हो गया। मार्ग में रक्त गिराते हुए वह भाग निकला।
 
 --- verse 8 ---
 deva:
@@ -80,6 +101,9 @@ deva:
 iast:
 manyamāno hataṁ vyāghraṁ pṛṣadhraḥ paravīrahā|
 adrākṣīt svahatāṁ babhruṁ vyuṣṭāyāṁ niśi duḥkhitaḥ||
+en: Pṛṣadhra, the slayer of enemy heroes, thought that he had killed the tiger. When the night had passed, he saw the tawny cow slain by his own hand, and he was filled with sorrow.
+tel: శత్రువీరులను సంహరించు పృషధ్రుడు పులిని చంపితిని అని తలంచెను. రాత్రి గడచిన పిమ్మట తన చేతితో చంపబడిన ఆ కపిల వర్ణపు గోవును చూచి ఆయన దుఃఖించెను.
+hi: शत्रुवीरों का नाश करनेवाले पृषध्र ने समझा कि उन्होंने बाघ को मार डाला। रात बीतने पर अपने ही हाथ से मारी गयी उस कपिल वर्ण की गौ को देखकर वे दुःखी हुए।
 
 --- verse 9 ---
 deva:
@@ -88,6 +112,9 @@ deva:
 iast:
 taṁ śaśāpa kulācāryaḥ kṛtāgasamakāmataḥ|
 na kṣatrabandhuḥ śūdrastvaṁ karmaṇā bhavitāmunā||
+en: Though the wrong was done without intent, the family's ācārya cursed him: "You are no kṣatriya. By this deed you will become a śūdra."
+tel: ఆ తప్పు కోరిక లేక జరిగినదైనను, కులాచార్యుడు ఆయనను శపించెను: "నీవు క్షత్రియుడు కావు. ఈ కర్మము వలన శూద్రుడు అగుదువు."
+hi: वह अपराध बिना इच्छा के हुआ था, तो भी कुलाचार्य ने उन्हें शाप दिया: "तुम क्षत्रिय नहीं हो। इस कर्म से तुम शूद्र हो जाओगे।"
 
 --- verse 10 ---
 deva:
@@ -96,6 +123,9 @@ deva:
 iast:
 evaṁ śaptastu guruṇā pratyagṛhṇāt kṛtāṁjaliḥ|
 adhārayad vrataṁ vīra ūrdhvaretā munipriyam||
+en: Cursed in this way by his guru, he joined his palms and accepted it. That hero then held his seed upward and observed the vow that is dear to the munis.
+tel: ఈ విధముగా గురువు చేత శపింపబడి ఆయన చేతులు జోడించి దానిని స్వీకరించెను. పిమ్మట ఆ వీరుడు రేతస్సును పైకి నిలిపి మునులకు ప్రియమైన వ్రతమును పాలించెను.
+hi: इस प्रकार गुरु के शाप देने पर उन्होंने हाथ जोड़कर उसे स्वीकार किया। तब उस वीर ने ऊर्ध्वरेता होकर मुनियों को प्रिय व्रत का पालन किया।
 
 --- verse 11 ---
 deva:
@@ -104,6 +134,9 @@ deva:
 iast:
 vāsudeve bhagavati sarvātmani pare'male|
 ekāntitvaṁ gato bhaktyā sarvabhūtasuhṛt samaḥ||
+en: By devotion he came to single-minded love for the blessed Vāsudeva, the Self of all, who is supreme and spotless. He became the friend of all beings and the same towards all.
+tel: భక్తితో ఆయన సర్వాత్మకుడు, పరముడు, నిర్మలుడైన భగవంతుడు వాసుదేవునియందు ఏకాంత భావమును పొందెను. సర్వభూతములకు మిత్రుడై సమదృష్టి కలవాడై ఉండెను.
+hi: भक्ति से उन्होंने सर्वात्मा, परम और निर्मल भगवान् वासुदेव में एकान्त भाव प्राप्त किया। वे सब प्राणियों के मित्र और सब में समान दृष्टि रखनेवाले हो गये।
 
 --- verse 12 ---
 deva:
@@ -112,6 +145,9 @@ deva:
 iast:
 vimuktasaṁgaḥ śāntātmā saṁyatākṣo'parigrahaḥ|
 yadṛcchayopapannena kalpayan vṛttimātmanaḥ||
+en: He was free from attachment, peaceful in mind, with his senses held in, and he took nothing from anyone. He maintained himself with whatever came to him of its own accord.
+tel: ఆయన సంగమును విడిచినవాడు, శాంతమైన మనసు కలవాడు, ఇంద్రియములను నిగ్రహించినవాడు, ఎవరి నుండియు ఏమియు గ్రహింపనివాడు. తనకు తానుగా లభించినదానితో ఆయన తన జీవనమును గడపెను.
+hi: वे आसक्ति से मुक्त, शान्त मन वाले, इन्द्रियों को वश में रखनेवाले और कुछ भी ग्रहण न करनेवाले थे। जो अपने आप प्राप्त हो जाता, उसी से वे अपना निर्वाह करते थे।
 
 --- verse 13 ---
 deva:
@@ -120,6 +156,9 @@ deva:
 iast:
 ātmanyātmānamādhāya jñānatṛptaḥ samāhitaḥ|
 vicacāra mahīmetāṁ jaḍāndhabadhirākṛtiḥ||
+en: Fixing his mind on the Self, content in knowledge and steady within, he wandered over this earth, looking like one who was dull, blind and deaf.
+tel: ఆత్మయందు ఆత్మను నిలిపి, జ్ఞానముతో తృప్తుడై, సమాహితుడై, జడుని వలె, అంధుని వలె, చెవిటివాని వలె కనిపించుచు ఆయన ఈ భూమిపై సంచరించెను.
+hi: आत्मा में आत्मा को स्थापित करके, ज्ञान से तृप्त और समाहित होकर वे जड़, अन्धे और बहरे के समान दिखते हुए इस पृथ्वी पर विचरते रहे।
 
 --- verse 14 ---
 deva:
@@ -128,6 +167,9 @@ deva:
 iast:
 evaṁvṛtto vanaṁ gatvā dṛṣṭvā dāvāgnimutthitam|
 tenopayuktakaraṇo brahma prāpa paraṁ muniḥ||
+en: Living in this way, that muni went to a forest. He saw a forest fire that had risen there. He gave his body and senses up to that fire and attained the supreme Brahman.
+tel: ఈ విధముగా జీవించుచు ఆ ముని అడవికి వెళ్ళెను. అచట లేచిన దావాగ్నిని చూచెను. ఆ అగ్నికి తన శరీరమును ఇంద్రియములను సమర్పించి పరబ్రహ్మమును పొందెను.
+hi: इस प्रकार रहते हुए वे मुनि वन में गये। वहाँ उठी हुई दावाग्नि को उन्होंने देखा। उस अग्नि को अपना शरीर और इन्द्रियाँ समर्पित करके उन्होंने परब्रह्म को प्राप्त किया।
 
 --- verse 15 ---
 deva:
@@ -140,6 +182,9 @@ kaviḥ kanīyān viṣayeṣu niḥspṛho
 visṛjya rājyaṁ saha bandhubhirvanam|
 niveśya citte puruṣaṁ svarociṣaṁ
 viveśa kaiśoravayāḥ paraṁ gataḥ||
+en: Kavi, the youngest son, had no longing for the objects of the senses. He gave up the kingdom and, while still of boyish age, went to the forest with his kinsmen. He set in his heart the Puruṣa who shines by his own light, and he reached the supreme state.
+tel: కనిష్ఠ పుత్రుడైన కవికి విషయములయందు కోరిక లేదు. ఆయన రాజ్యమును విడిచి, కౌమార వయస్సులోనే బంధువులతో కలిసి అడవికి వెళ్ళెను. స్వయముగా ప్రకాశించు పురుషుని హృదయమునందు నిలిపి ఆయన పరమ స్థితిని పొందెను.
+hi: सबसे छोटे पुत्र कवि को विषयों में कोई इच्छा नहीं थी। उन्होंने राज्य छोड़कर किशोर अवस्था में ही बन्धुओं के साथ वन में प्रवेश किया। अपने ही तेज से प्रकाशित पुरुष को हृदय में स्थापित करके उन्होंने परम गति प्राप्त की।
 
 --- verse 16 ---
 deva:
@@ -148,6 +193,9 @@ deva:
 iast:
 karūṣānmānavādāsan kārūṣāḥ kṣatrajātayaḥ|
 uttarāpathagoptāro brahmaṇyā dharmavatsalāḥ||
+en: From Karūṣa, the son of Manu, came the Kārūṣas, kṣatriyas by birth. They were the protectors of the northern country. They honoured the brāhmaṇas and loved dharma.
+tel: మనువు పుత్రుడైన కరూషుని నుండి కారూషులు కలిగిరి; వారు క్షత్రియ జాతివారు. వారు ఉత్తర దేశమును రక్షించువారు. బ్రాహ్మణులను గౌరవించువారు, ధర్మమును ప్రీతితో ఆచరించువారు.
+hi: मनु के पुत्र करूष से कारूष हुए, जो क्षत्रिय जाति के थे। वे उत्तर दिशा के देश के रक्षक थे। वे ब्राह्मणों का आदर करते थे और धर्म से प्रेम रखते थे।
 
 --- verse 17 ---
 deva:
@@ -156,6 +204,9 @@ deva:
 iast:
 dhṛṣṭād dhārṣṭamabhūt kṣatraṁ brahmabhūyaṁ gataṁ kṣitau|
 nṛgasya vaṁśaḥ sumatirbhūtajyotistato vasuḥ||
+en: From Dhṛṣṭa came the Dhārṣṭa kṣatriyas, who on this earth attained the state of brāhmaṇas. In the line of Nṛga came Sumati, then Bhūtajyoti, and after him Vasu.
+tel: ధృష్టుని నుండి ధార్ష్ట క్షత్రియులు కలిగిరి; వారు ఈ భూమిపై బ్రాహ్మణత్వమును పొందిరి. నృగుని వంశమున సుమతి, పిమ్మట భూతజ్యోతి, ఆ తరువాత వసువు కలిగిరి.
+hi: धृष्ट से धार्ष्ट क्षत्रिय हुए, जिन्होंने इस पृथ्वी पर ब्राह्मणत्व प्राप्त किया। नृग के वंश में सुमति, फिर भूतज्योति और उसके बाद वसु हुए।
 
 --- verse 18 ---
 deva:
@@ -164,6 +215,9 @@ deva:
 iast:
 vasoḥ pratīkastatputra oghavānoghavatpitā|
 kanyā caughavatī nāma sudarśana uvāha tām||
+en: The son of Vasu was Pratīka. His son was Oghavān, the father of Oghavat. He had a daughter named Oghavatī, and Sudarśana married her.
+tel: వసువు పుత్రుడు ప్రతీకుడు. ఆయన పుత్రుడు ఓఘవానుడు; ఆయన ఓఘవత్తునకు తండ్రి. ఆయనకు ఓఘవతి అను కుమార్తె కలిగెను; సుదర్శనుడు ఆమెను వివాహమాడెను.
+hi: वसु के पुत्र प्रतीक हुए। उनके पुत्र ओघवान् हुए, जो ओघवत् के पिता थे। उनकी एक कन्या ओघवती नाम से हुई, और सुदर्शन ने उससे विवाह किया।
 
 --- verse 19 ---
 deva:
@@ -172,6 +226,9 @@ deva:
 iast:
 citraseno nariṣyantādṛkṣastasya suto'bhavat|
 tasya mīḍhvāṁstataḥ kūrca indrasenastu tatsutaḥ||
+en: From Nariṣyanta came Citrasena, and his son was Ṛkṣa. His son was Mīḍhvān, from him came Kūrca, and the son of Kūrca was Indrasena.
+tel: నరిష్యంతుని నుండి చిత్రసేనుడు కలిగెను; ఆయన పుత్రుడు ఋక్షుడు. ఆయన పుత్రుడు మీఢ్వానుడు, ఆయన నుండి కూర్చుడు, కూర్చుని పుత్రుడు ఇంద్రసేనుడు.
+hi: नरिष्यन्त से चित्रसेन हुए, और उनके पुत्र ऋक्ष हुए। उनके पुत्र मीढ्वान् हुए, उनसे कूर्च और कूर्च के पुत्र इन्द्रसेन हुए।
 
 --- verse 20 ---
 deva:
@@ -180,6 +237,9 @@ deva:
 iast:
 vītihotrastvindrasenāt tasya satyaśravā abhūt|
 uruśravāḥ sutastasya devadattastato'bhavat||
+en: From Indrasena came Vītihotra. His son was Satyaśravā. His son was Uruśravā, and from him came Devadatta.
+tel: ఇంద్రసేనుని నుండి వీతిహోత్రుడు కలిగెను. ఆయన పుత్రుడు సత్యశ్రవుడు. ఆయన పుత్రుడు ఉరుశ్రవుడు, ఆయన నుండి దేవదత్తుడు కలిగెను.
+hi: इन्द्रसेन से वीतिहोत्र हुए। उनके पुत्र सत्यश्रवा हुए। उनके पुत्र उरुश्रवा हुए, और उनसे देवदत्त हुए।
 
 --- verse 21 ---
 deva:
@@ -188,6 +248,9 @@ deva:
 iast:
 tato'gniveśyo bhagavānagniḥ svayamabhūt sutaḥ|
 kānīna iti vikhyāto jātūkarṇyo mahānṛṣiḥ||
+en: From him was born a son, Agniveśya, who was Agni, the blessed lord, himself. He was the great sage known as Kānīna and as Jātūkarṇya.
+tel: ఆయనకు అగ్నివేశ్యుడు అను పుత్రుడు కలిగెను; ఆయన భగవంతుడైన అగ్ని స్వయముగా జన్మించినవాడు. ఆయనే కానీనుడు అని ప్రసిద్ధుడైన జాతూకర్ణ్యుడు అను మహర్షి.
+hi: उनसे अग्निवेश्य नामक पुत्र हुए, जो स्वयं भगवान् अग्नि थे। वे कानीन नाम से प्रसिद्ध जातूकर्ण्य नामक महान् ऋषि थे।
 
 --- verse 22 ---
 deva:
@@ -196,6 +259,9 @@ deva:
 iast:
 tato brahmakulaṁ jātamāgniveśyāyanaṁ nṛpa|
 nariṣyantānvayaḥ prokto diṣṭavaṁśamataḥ śṛṇu||
+en: From him, O king, arose the brāhmaṇa family called the Āgniveśyāyanas. The line of Nariṣyanta has been told. Now hear the line of Diṣṭa.
+tel: ఓ రాజా, ఆయన నుండి ఆగ్నివేశ్యాయనులు అను బ్రాహ్మణ వంశము కలిగెను. నరిష్యంతుని వంశము చెప్పబడెను. ఇప్పుడు దిష్టుని వంశమును వినుము.
+hi: हे राजन्, उनसे आग्निवेश्यायन नामक ब्राह्मणकुल हुआ। नरिष्यन्त का वंश कह दिया गया। अब दिष्ट का वंश सुनिये।
 
 --- verse 23 ---
 deva:
@@ -204,6 +270,9 @@ deva:
 iast:
 nābhāgo diṣṭaputro'nyaḥ karmaṇā vaiśyatāṁ gataḥ|
 bhalandanaḥ sutastasya vatsaprītirbhalandanāt||
+en: Nābhāga, another son of Diṣṭa, became a vaiśya by his occupation. His son was Bhalandana, and from Bhalandana came Vatsaprīti.
+tel: దిష్టుని మరియొక పుత్రుడైన నాభాగుడు తన కర్మము వలన వైశ్యత్వమును పొందెను. ఆయన పుత్రుడు భలందనుడు, భలందనుని నుండి వత్సప్రీతి కలిగెను.
+hi: दिष्ट के दूसरे पुत्र नाभाग अपने कर्म से वैश्य हो गये। उनके पुत्र भलन्दन हुए, और भलन्दन से वत्सप्रीति हुए।
 
 --- verse 24 ---
 deva:
@@ -212,6 +281,9 @@ deva:
 iast:
 vatsaprīteḥ sutaḥ prāṁśustatsutaṁ pramatiṁ viduḥ|
 khanitraḥ pramatestasmāccākṣuṣo'tha viviṁśatiḥ||
+en: The son of Vatsaprīti was Prāṁśu. They know his son as Pramati. From Pramati came Khanitra, from him Cākṣuṣa, and then Viviṁśati.
+tel: వత్సప్రీతి పుత్రుడు ప్రాంశువు. ఆయన పుత్రుడు ప్రమతి అని తెలియుదురు. ప్రమతి నుండి ఖనిత్రుడు, ఆయన నుండి చాక్షుషుడు, పిమ్మట వివింశతి కలిగిరి.
+hi: वत्सप्रीति के पुत्र प्रांशु हुए। उनके पुत्र को प्रमति जानते हैं। प्रमति से खनित्र, उनसे चाक्षुष और फिर विविंशति हुए।
 
 --- verse 25 ---
 deva:
@@ -220,6 +292,9 @@ deva:
 iast:
 viviṁśatisuto rambhaḥ khaninetro'sya dhārmikaḥ|
 karandhamo mahārāja tasyāsīdātmajo nṛpa||
+en: The son of Viviṁśati was Rambha. His son was the righteous Khaninetra. O great king, O ruler of men, his son was Karandhama.
+tel: వివింశతి పుత్రుడు రంభుడు. ఆయన పుత్రుడు ధార్మికుడైన ఖనినేత్రుడు. ఓ మహారాజా, ఓ నృపతీ, ఆయన పుత్రుడు కరంధముడు.
+hi: विविंशति के पुत्र रम्भ हुए। उनके पुत्र धार्मिक खनिनेत्र हुए। हे महाराज, हे नृप, उनके पुत्र करन्धम हुए।
 
 --- verse 26 ---
 deva:
@@ -228,14 +303,20 @@ deva:
 iast:
 tasyāvīkṣit suto yasya maruttaścakravartyabhūt|
 saṁvarto'yājayad yaṁ vai mahāyogyaṁgiraḥsutaḥ||
+en: His son was Avīkṣit, and his son Marutta became an emperor. Saṁvarta, the great yogin and the son of Aṅgiras, made him perform a sacrifice.
+tel: ఆయన పుత్రుడు అవీక్షిత్తు; ఆయన పుత్రుడైన మరుత్తు చక్రవర్తి అయ్యెను. అంగిరసుని పుత్రుడు, మహాయోగి అయిన సంవర్తుడు ఆయనను యజ్ఞము చేయించెను.
+hi: उनके पुत्र अवीक्षित् हुए, और उनके पुत्र मरुत्त चक्रवर्ती हुए। अङ्गिरा के पुत्र महायोगी संवर्त ने उनसे यज्ञ कराया।
 
 --- verse 27 ---
 deva:
 मरुत्तस्य यथा यज्ञो न तथान्यस्य कश्चन।
-सर्वं हिरण्मयं त्वासीद् यत् किञ्चिच्चास्यशोभनम्॥
+सर्वं हिरण्मयं त्वासीद् यत् किञ्चिच्चास्य शोभनम्॥
 iast:
 maruttasya yathā yajño na tathānyasya kaścana|
-sarvaṁ hiraṇmayaṁ tvāsīd yat kiñciccāsyaśobhanam||
+sarvaṁ hiraṇmayaṁ tvāsīd yat kiñciccāsya śobhanam||
+en: No one else had a sacrifice such as the sacrifice of Marutta. Whatever was beautiful in it was all made of gold.
+tel: మరుత్తుని యజ్ఞము వంటి యజ్ఞము మరి ఎవరికిని లేదు. అందులో అందమైనది ఏదైనను అంతయు బంగారముతో చేయబడినది.
+hi: मरुत्त के यज्ञ के समान यज्ञ और किसी का नहीं हुआ। उसमें जो कुछ सुन्दर था, वह सब सोने का बना हुआ था।
 
 --- verse 28 ---
 deva:
@@ -244,6 +325,9 @@ deva:
 iast:
 amādyadindraḥ somena dakṣiṇābhirdvijātayaḥ|
 marutaḥ pariveṣṭāro viśvedevāḥ sabhāsadaḥ||
+en: There Indra was gladdened by the soma, and the brāhmaṇas by the gifts. The Maruts served the food, and the Viśvedevas were the members of the assembly.
+tel: అందు ఇంద్రుడు సోమముతో, బ్రాహ్మణులు దక్షిణలతో సంతోషించిరి. మరుద్గణములు భోజనమును వడ్డించువారు, విశ్వేదేవులు సభాసదులు.
+hi: उसमें इन्द्र सोम से और ब्राह्मण दक्षिणाओं से प्रसन्न हुए। मरुद्गण परिवेषण करनेवाले थे और विश्वेदेव सभासद थे।
 
 --- verse 29 ---
 deva:
@@ -252,6 +336,9 @@ deva:
 iast:
 maruttasya damaḥ putrastasyāsīd rājyavardhanaḥ|
 sudhṛtistatsuto jajñe saudhṛteyo naraḥ sutaḥ||
+en: The son of Marutta was Dama. His son was Rājyavardhana. His son was Sudhṛti, and the son of Sudhṛti was Nara.
+tel: మరుత్తుని పుత్రుడు దముడు. ఆయన పుత్రుడు రాజ్యవర్ధనుడు. ఆయన పుత్రుడు సుధృతి, సుధృతి పుత్రుడు నరుడు.
+hi: मरुत्त के पुत्र दम हुए। उनके पुत्र राज्यवर्धन हुए। उनके पुत्र सुधृति हुए, और सुधृति के पुत्र नर हुए।
 
 --- verse 30 ---
 deva:
@@ -260,6 +347,9 @@ deva:
 iast:
 tatsutaḥ kevalastasmād bandhumān vegavāṁstataḥ|
 bandhustasyābhavad yasya tṛṇabindurmahīpatiḥ||
+en: His son was Kevala. From him came Bandhumān, and from him Vegavān. His son was Bandhu, and the son of Bandhu was Tṛṇabindu, the lord of the earth.
+tel: ఆయన పుత్రుడు కేవలుడు. ఆయన నుండి బంధుమానుడు, ఆయన నుండి వేగవానుడు కలిగిరి. ఆయన పుత్రుడు బంధువు, బంధువు పుత్రుడు భూమికి ప్రభువైన తృణబిందువు.
+hi: उनके पुत्र केवल हुए। उनसे बन्धुमान् और उनसे वेगवान् हुए। उनके पुत्र बन्धु हुए, और बन्धु के पुत्र पृथ्वीपति तृणबिन्दु हुए।
 
 --- verse 31 ---
 deva:
@@ -268,6 +358,9 @@ deva:
 iast:
 taṁ bheje'lambuṣā devī bhajanīyaguṇālayam|
 varāpsarā yataḥ putrāḥ kanyā ceḍaviḍābhavat||
+en: The goddess Alambuṣā, the best of the apsarases, chose him as her husband, for he was the abode of qualities worthy of love. From him she had sons, and a daughter named Iḍaviḍā.
+tel: భజనీయమైన గుణములకు నిలయమైన ఆయనను అప్సరసలలో శ్రేష్ఠమైన అలంబుష అను దేవి భర్తగా వరించెను. ఆయన వలన ఆమెకు పుత్రులు కలిగిరి, ఇడవిడ అను కుమార్తె కలిగెను.
+hi: भजनीय गुणों के आश्रय उन्हें श्रेष्ठ अप्सरा अलम्बुषा देवी ने पति रूप में वरण किया। उनसे पुत्र हुए और इडविडा नाम की एक कन्या हुई।
 
 --- verse 32 ---
 deva:
@@ -276,6 +369,9 @@ deva:
 iast:
 tasyāmutpādayāmāsa viśravā dhanadaṁ sutam|
 prādāya vidyāṁ paramāmṛṣiryogeśvarāt pituḥ||
+en: In her Viśravas begot a son, Dhanada. That sage had received the highest knowledge from his father, who was a master of yoga.
+tel: ఆమెయందు విశ్రవసుడు ధనదుడు అను పుత్రుని కలిగించెను. ఆ ఋషి యోగేశ్వరుడైన తన తండ్రి నుండి పరమ విద్యను పొందియుండెను.
+hi: उसमें विश्रवा ने धनद नामक पुत्र उत्पन्न किया। उस ऋषि ने योगेश्वर अपने पिता से परम विद्या प्राप्त की थी।
 
 --- verse 33 ---
 deva:
@@ -284,6 +380,9 @@ deva:
 iast:
 viśālaḥ śūnyabandhuśca dhūmraketuśca tatsutāḥ|
 viśālo vaṁśakṛd rājā vaiśālīṁ nirmame purīm||
+en: Viśāla, Śūnyabandhu and Dhūmraketu were his sons. King Viśāla founded a line of his own and built the city of Vaiśālī.
+tel: విశాలుడు, శూన్యబంధువు, ధూమ్రకేతువు ఆయన పుత్రులు. వంశమును స్థాపించిన విశాల రాజు వైశాలి అను నగరమును నిర్మించెను.
+hi: विशाल, शून्यबन्धु और धूम्रकेतु उनके पुत्र थे। वंश चलानेवाले राजा विशाल ने वैशाली नगरी का निर्माण किया।
 
 --- verse 34 ---
 deva:
@@ -292,6 +391,9 @@ deva:
 iast:
 hemacandraḥ sutastasya dhūmrākṣastasya cātmajaḥ|
 tatputrāt saṁyamādāsīt kṛśāśvaḥ sahadevajaḥ||
+en: His son was Hemacandra, and his son was Dhūmrākṣa. From his son Saṁyama were born Kṛśāśva and Sahadeva.
+tel: ఆయన పుత్రుడు హేమచంద్రుడు, ఆయన పుత్రుడు ధూమ్రాక్షుడు. ఆయన పుత్రుడైన సంయముని నుండి కృశాశ్వుడు, సహదేవుడు కలిగిరి.
+hi: उनके पुत्र हेमचन्द्र हुए, और उनके पुत्र धूम्राक्ष हुए। उनके पुत्र संयम से कृशाश्व और सहदेव हुए।
 
 --- verse 35 ---
 deva:
@@ -300,6 +402,9 @@ deva:
 iast:
 kṛśāśvāt somadatto'bhūd yo'śvamedhairiḍaspatim|
 iṣṭvā puruṣamāpāgryāṁ gatiṁ yogeśvarāśritaḥ||
+en: From Kṛśāśva was born Somadatta. He worshipped Iḍaspati, the Puruṣa, with aśvamedha sacrifices. He took refuge in the lords of yoga and reached the foremost state.
+tel: కృశాశ్వుని నుండి సోమదత్తుడు కలిగెను. ఆయన అశ్వమేధ యజ్ఞములతో పురుషుడైన ఇడస్పతిని ఆరాధించెను. యోగేశ్వరులను ఆశ్రయించి ఆయన అగ్రమైన గతిని పొందెను.
+hi: कृशाश्व से सोमदत्त हुए। उन्होंने अश्वमेध यज्ञों से पुरुष इडस्पति की आराधना की। योगेश्वरों का आश्रय लेकर उन्होंने अग्र गति प्राप्त की।
 
 --- verse 36 ---
 deva:
@@ -308,9 +413,15 @@ deva:
 iast:
 saumadattistu sumatistatsuto janamejayaḥ|
 ete vaiśālabhūpālāstṛṇabindoryaśodharāḥ||
+en: The son of Somadatta was Sumati, and his son was Janamejaya. These were the kings of Vaiśāla, who upheld the fame of Tṛṇabindu.
+tel: సోమదత్తుని పుత్రుడు సుమతి, ఆయన పుత్రుడు జనమేజయుడు. వీరు తృణబిందువు యశస్సును నిలిపిన వైశాల దేశపు రాజులు.
+hi: सोमदत्त के पुत्र सुमति हुए, और उनके पुत्र जनमेजय हुए। ये वैशाल के राजा तृणबिन्दु के यश को धारण करनेवाले थे।
 
 --- verse none ---
 deva:
 इति श्रीमद्भागवते महापुराणे पारमहंस्यां संहितायां नवमस्कन्धे द्वितीयोऽध्यायः॥ २॥
 iast:
 iti śrīmadbhāgavate mahāpurāṇe pāramahaṁsyāṁ saṁhitāyāṁ navamaskandhe dvitīyo'dhyāyaḥ|| 2||
+en: Thus ends the second adhyāya in the ninth skandha of the Śrīmad Bhāgavata Mahāpurāṇa, the saṁhitā of the paramahaṁsas.
+tel: ఇది శ్రీమద్భాగవత మహాపురాణమునందు, పరమహంసల సంహితయందు, నవమస్కంధమునందు ద్వితీయాధ్యాయము సమాప్తము.
+hi: इस प्रकार श्रीमद्भागवत महापुराण की परमहंसों की संहिता के नवम स्कन्ध में दूसरा अध्याय समाप्त हुआ।

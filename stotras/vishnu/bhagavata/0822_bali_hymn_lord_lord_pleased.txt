@@ -9,7 +9,7 @@ Type: Purāṇa (an adhyāya of the Śrīmad Bhāgavata, Skandha 8)
 
 Source / recension: Base text and authority: the Gītā Press, Gorakhpur Śrīmadbhāgavata Mahāpurāṇa with Hindi translation, Part 1 (Gītā Press code 26), archive.org item `shrimadbhagwat-mahapuran-bhag-1`, printed pages 1006–1010; the PDF page numbers are the printed ones. The PDF carries the typesetter's own text layer in the Chanakya font encoding, and the text was decoded from it by machine with `bin/bhagavata/chanakya.py`, not read off OCR or typed. The decoder was checked against GRETIL over all twelve skandhas before any file was written, and the differences that remain were sampled and found to be readings of the two editions. Second witness: GRETIL's `sa_bhAgavatapurANa.xml` (IAST, contributed by Ulrich Stiehl), a separate editorial lineage, compared verse by verse by machine. The TTD edition with the commentaries of Śrīdhara, Vīrarāghava and Vijayadhvaja (archive.org `Bhagavata_Purana_With_Multiple_Commentaries_TTD_Critical_Edition`) is the third witness where one is needed; it was not read for this file. The IAST was generated mechanically from the Devanāgarī with `bin/dev2iast.py`.
 
-Recension note: Text-only file, written 1 Oct 2026 at the user's instruction to lay down the whole Bhāgavata first: the English, Telugu and Hindi meanings are still to be added, and the witnesses' differences listed here have been recorded by machine and not yet adjudicated. The print is followed throughout. The print numbers 36 verses and GRETIL numbers 36. Of the 36 verses GRETIL has under the same number, 27 agree with the print letter for letter once spacing and the spelling of nasals are set aside; the rest differ: 5, 6, 8, 10, 13, 15, 23, 28, 32. Spacing is the print's, as its text layer gives it; in a few places justification has left a space inside a word, and these are still to be closed when the verse is read. The speaker lines (श्रीशुक उवाच and the others) are printed in italic above the verse they introduce, and are given as its first line.
+Recension note: Meanings written 23 Oct 2026 (session S78). The differences between the witnesses listed below were read as the verses were glossed; except where this note says otherwise, each is a spelling, a sandhi or a word order of the two editions, none of them changes the sense, and the print's reading therefore stands unbracketed. The print is followed throughout. The print numbers 36 verses and GRETIL numbers 36. Of the 36 verses GRETIL has under the same number, 27 agree with the print letter for letter once spacing and the spelling of nasals are set aside; the rest differ: 5, 6, 8, 10, 13, 15, 23, 28, 32. Spacing is the print's, as its text layer gives it. The speaker lines (श्रीशुक उवाच and the others) are printed in italic above the verse they introduce, and are given as its first line. One word was put right as the verses were read. At verse 36 justification had left a space inside विनङ्क्ष्यति, and it is closed here; GRETIL reads the word whole. Two other spaces were checked and left as printed, because both read as they stand: नैवार्थकृच्छ्राद् भवतो at verse 3, where the print breaks after a virāma consonant as it regularly does, and सर्वश्रेयः प्रतीपानां at verse 27, which GRETIL writes as one compound and the print spaces.
 
 Verse count: 36, plus the closing colophon printed unnumbered.
 
@@ -24,6 +24,9 @@ iast:
 śrīśuka uvāca
 evaṁ viprakṛto rājan balirbhagavatāsuraḥ|
 bhidyamāno'pyabhinnātmā pratyāhāviklavaṁ vacaḥ||
+en: Śrī Śuka said: O King, treated in this way by the Lord, the asura Bali was pained but unbroken in mind, and he answered with words that did not falter.
+tel: శ్రీశుకుడు పలికెను: రాజా, భగవంతునిచే ఇట్లు తిరస్కరింపబడిన అసురుడైన బలి, భంగపడినను మనస్సున భంగము పొందక, తొట్రుపడని మాటలతో బదులు పలికెను.
+hi: श्रीशुकदेवजी ने कहा: हे राजन्! भगवान् के द्वारा इस प्रकार तिरस्कृत होकर असुर बलि पीड़ित हुआ, परन्तु उसका मन विचलित नहीं हुआ, और उसने बिना घबराये उत्तर दिया।
 
 --- verse 2 ---
 deva:
@@ -38,6 +41,9 @@ yadyuttamaśloka bhavān mameritaṁ
 vaco vyalīkaṁ suravarya manyate|
 karomyṛtaṁ tanna bhavet pralambhanaṁ
 padaṁ tṛtīyaṁ kuru śīrṣṇi me nijam||
+en: Bali said: O Uttamaśloka, O best of the gods, if you hold the word I spoke to be false, I shall make it true. Let it not be a deceit. Place your third step upon my head.
+tel: బలి పలికెను: ఓ ఉత్తమశ్లోకా, ఓ సురవర్యా, నేను పలికిన మాట అసత్యమని నీవు భావించినచో, నేను దానిని సత్యము చేయుదును. ఇది వంచన కాకూడదు. నీ మూడవ అడుగును నా తలపై ఉంచుము.
+hi: बलि ने कहा: हे उत्तमश्लोक! हे सुरश्रेष्ठ! यदि आप मेरे कहे हुए वचन को असत्य मानते हैं, तो मैं उसे सत्य कर दूँगा। यह छल न हो। आप अपना तीसरा चरण मेरे सिर पर रखिये।
 
 --- verse 3 ---
 deva:
@@ -50,6 +56,9 @@ bibhemi nāhaṁ nirayāt padacyuto
 na pāśabandhād vyasanād duratyayāt|
 naivārthakṛcchrād bhavato vinigrahā-
 dasādhuvādād bhṛśamudvije yathā||
+en: I do not fear hell, nor the fall from my place, nor the binding with ropes, nor hardship hard to cross, nor the loss of wealth, nor punishment from you, as much as I am greatly troubled by the charge of being a bad man.
+tel: నేను నరకమునకు భయపడను, పదవి నుండి పతనమునకు భయపడను, పాశబంధమునకు, దాటుటకు కష్టమైన ఆపదకు, ధననష్టమునకు, నీ శిక్షకు కూడ భయపడను. కాని అసాధువు అను నిందకు మాత్రము నేను మిక్కిలి ఉద్విగ్నుడనగుచున్నాను.
+hi: मैं नरक से नहीं डरता, पद से गिरने से नहीं डरता, पाश में बाँधे जाने से, कठिनता से पार होने वाले संकट से, धन के नाश से और आपके दण्ड से भी नहीं डरता। परन्तु असाधु कहे जाने से मैं अत्यन्त उद्विग्न होता हूँ।
 
 --- verse 4 ---
 deva:
@@ -58,6 +67,9 @@ deva:
 iast:
 puṁsāṁ ślāghyatamaṁ manye daṇḍamarhattamārpitam|
 yaṁ na mātā pitā bhrātā suhṛdaścādiśanti hi||
+en: I hold the punishment given by the most worthy one to be the most praiseworthy thing for men. For mother, father, brother and friends do not give such punishment.
+tel: అత్యంత అర్హుడైనవానిచే ఇవ్వబడిన శిక్ష మనుష్యులకు మిక్కిలి ప్రశంసనీయమని నేను భావించుచున్నాను. ఏలయనగా తల్లి, తండ్రి, సోదరుడు, మిత్రులు అట్టి శిక్షను ఇవ్వరు.
+hi: सबसे अधिक पूज्य के द्वारा दिया गया दण्ड मैं मनुष्यों के लिये सबसे अधिक प्रशंसनीय मानता हूँ। क्योंकि माता, पिता, भाई और मित्र ऐसा दण्ड नहीं देते।
 
 --- verse 5 ---
 deva:
@@ -66,6 +78,9 @@ deva:
 iast:
 tvaṁ nūnamasurāṇāṁ naḥ pārokṣyaḥ paramo guruḥ|
 yo no'nekamadāndhānāṁ vibhraṁśaṁ cakṣurādiśat||
+en: You are surely the highest guru of us asuras, though you act unseen. To us who are blind with many kinds of pride, you have given the loss of our fortune as an eye.
+tel: నీవు నిశ్చయముగా మాకు, అసురులకు, కనబడక ఉండియు పరమ గురువు. అనేక విధముల మదముతో అంధులమైన మాకు, ఐశ్వర్య నాశమునే నీవు కన్నుగా ఒసగితివి.
+hi: आप निश्चय ही हम असुरों के परम गुरु हैं, यद्यपि आप प्रत्यक्ष नहीं दिखते। अनेक प्रकार के मद से अंधे हुए हम लोगों को आपने ऐश्वर्य के नाश को ही नेत्र के रूप में दिया है।
 
 --- verse 6 ---
 deva:
@@ -74,6 +89,9 @@ deva:
 iast:
 yasmin vairānubandhena rūḍhena vibudhetarāḥ|
 bahavo lebhire siddhiṁ yāmu haikāntayoginaḥ||
+en: Through enmity towards you, grown firm, many who are not gods have gained the perfection that the yogīs of one pointed devotion gain.
+tel: నీయందు దృఢముగా పెరిగిన వైరబంధముచే, దేవతలు కానివారు అనేకులు, ఏకాంతయోగులు పొందు సిద్ధిని పొందిరి.
+hi: आपके प्रति दृढ़ हुए वैर के सम्बन्ध से देवताओं से भिन्न बहुत से लोगों ने वह सिद्धि पायी है, जो एकान्त योगी पाते हैं।
 
 --- verse 7 ---
 deva:
@@ -82,6 +100,9 @@ deva:
 iast:
 tenāhaṁ nigṛhīto'smi bhavatā bhūrikarmaṇā|
 baddhaśca vāruṇaiḥ pāśairnātivrīḍe na ca vyathe||
+en: Therefore I have been subdued by you, whose deeds are many, and I have been bound with the ropes of Varuṇa. I am not greatly ashamed of it, and I do not suffer.
+tel: అందుచే అనేక కర్మలు కలిగిన నీచే నేను నిగ్రహింపబడితిని, వారుణ పాశములతో బంధింపబడితిని. దానికి నేను మిక్కిలి సిగ్గుపడను, బాధపడను.
+hi: इसलिये बहुत कर्म करने वाले आपके द्वारा मैं वश में किया गया हूँ और वरुण के पाशों से बाँधा गया हूँ। इसके लिये मैं न अधिक लज्जित होता हूँ, न दुःखी होता हूँ।
 
 --- verse 8 ---
 deva:
@@ -94,6 +115,9 @@ pitāmaho me bhavadīyasaṁmataḥ
 prahrāda āviṣkṛtasādhuvādaḥ|
 bhavadvipakṣeṇa vicitravaiśasaṁ
 saṁprāpitastvatparamaḥ svapitrā||
+en: My grandfather Prahrāda was esteemed among your own people, and his good name was made known. He held you as the highest, and he was brought to many strange torments by his own father, who was your enemy.
+tel: నా పితామహుడైన ప్రహ్రాదుడు నీ వారియందు సమ్మానింపబడినవాడు, ఆయన సాధుకీర్తి ప్రకటింపబడినది. నిన్నే పరముగా భావించిన ఆయనను, నీకు విరోధియైన తన తండ్రియే విచిత్రమైన యాతనలకు గురిచేసెను.
+hi: मेरे पितामह प्रह्राद आपके भक्तों में सम्मानित थे, और उनका साधुपन प्रकट हुआ था। वे आपको ही परम मानते थे, और आपके विरोधी अपने पिता के द्वारा ही उन्हें अनेक विचित्र यातनाएँ दी गयीं।
 
 --- verse 9 ---
 deva:
@@ -106,6 +130,9 @@ kimātmanānena jahāti yo'ntataḥ
 kiṁ rikthahāraiḥ svajanākhyadasyubhiḥ|
 kiṁ jāyayā saṁsṛtihetubhūtayā
 martyasya gehaiḥ kimihāyuṣo vyayaḥ||
+en: What use is this body, which leaves a man in the end? What use are the robbers called one's own people, who carry off his wealth? What use is a wife, who becomes the cause of worldly bondage? What use are houses to a mortal man, in which his life is only spent?
+tel: చివరకు విడిచిపెట్టు ఈ దేహముచే ఏమి ప్రయోజనము? ధనమును హరించు స్వజనులు అను దొంగలచే ఏమి ప్రయోజనము? సంసారమునకు కారణమగు భార్యచే ఏమి ప్రయోజనము? ఆయువు వ్యయమగు గృహములచే మర్త్యునికి ఏమి ప్రయోజనము?
+hi: जो अन्त में छोड़ देता है, उस इस शरीर से क्या लाभ? धन हर लेने वाले स्वजन नाम के चोरों से क्या लाभ? संसार का कारण बनने वाली पत्नी से क्या लाभ? और जिनमें आयु ही व्यय होती है, उन घरों से मरणशील मनुष्य को क्या लाभ?
 
 --- verse 10 ---
 deva:
@@ -118,6 +145,9 @@ itthaṁ sa niścitya pitāmaho mahā-
 nagādhabodho bhavataḥ pādapadmam|
 dhruvaṁ prapede hyakutobhayaṁ janād
 bhītaḥ svapakṣakṣapaṇasya sattamaḥ||
+en: Having decided in this way, my grandfather, a great soul of unfathomable understanding and the best of good men, was afraid of that man who destroyed his own kinsmen, and he took refuge at your lotus feet, which are lasting and where there is no fear from any quarter.
+tel: ఇట్లు నిశ్చయించుకొని, మహాత్ముడును, అగాధమైన జ్ఞానము కలవాడును, సత్పురుషులలో ఉత్తముడును అయిన నా పితామహుడు, తన వారిని నశింపజేసిన ఆ మనుష్యునికి భయపడి, శాశ్వతములును, ఎక్కడి నుండియు భయము లేనివియు అయిన నీ పాదపద్మములను ఆశ్రయించెను.
+hi: इस प्रकार निश्चय करके मेरे पितामह, जो महान् थे, अगाध ज्ञान वाले थे और सत्पुरुषों में श्रेष्ठ थे, अपने ही पक्ष का नाश करने वाले उस पुरुष से डरकर आपके उन चरणकमलों की शरण में गये, जो स्थिर हैं और जहाँ कहीं से भय नहीं है।
 
 --- verse 11 ---
 deva:
@@ -130,6 +160,9 @@ athāhamapyātmaripostavāntikaṁ
 daivena nītaḥ prasabhaṁ tyājitaśrīḥ|
 idaṁ kṛtāntāntikavarti jīvitaṁ
 yayādhruvaṁ stabdhamatirna budhyate||
+en: And now I too have been brought by fate before you, who are my own enemy, and my fortune has been taken from me by force. It is by that fortune that a man of dull mind does not understand that this life is not lasting and stands close to death.
+tel: ఇప్పుడు నేను కూడ దైవముచే, నా శత్రువైన నీ సమీపమునకు తీసుకొనిరాబడితిని, బలవంతముగా ఐశ్వర్యము కోల్పోయితిని. ఏ ఐశ్వర్యముచే స్తబ్ధబుద్ధి కలవాడు, మృత్యువునకు సమీపమున ఉన్న ఈ జీవితము శాశ్వతము కాదని ఎరుగడు.
+hi: और अब मैं भी दैव के द्वारा आपके, अर्थात् अपने शत्रु के, पास लाया गया हूँ और बलपूर्वक अपनी सम्पत्ति से हीन कर दिया गया हूँ। उसी सम्पत्ति के कारण जड़ बुद्धि वाला मनुष्य यह नहीं समझता कि यह जीवन अस्थिर है और मृत्यु के निकट खड़ा है।
 
 --- verse 12 ---
 deva:
@@ -140,6 +173,9 @@ iast:
 śrīśuka uvāca
 tasyetthaṁ bhāṣamāṇasya prahrādo bhagavatpriyaḥ|
 ājagāma kuruśreṣṭha rākāpatirivotthitaḥ||
+en: Śrī Śuka said: O best of the Kurus, while he was speaking in this way, Prahrāda, who is dear to the Lord, came there, like the risen lord of the full moon night.
+tel: శ్రీశుకుడు పలికెను: ఓ కురుశ్రేష్ఠా, అతడు ఇట్లు మాట్లాడుచున్నప్పుడు, భగవంతునికి ప్రియుడైన ప్రహ్రాదుడు, ఉదయించిన రాకాపతి వలె అక్కడికి వచ్చెను.
+hi: श्रीशुकदेवजी ने कहा: हे कुरुश्रेष्ठ! जब वह इस प्रकार कह रहा था, तब भगवान् के प्रिय प्रह्राद वहाँ उदित हुए राकापति के समान आये।
 
 --- verse 13 ---
 deva:
@@ -152,6 +188,9 @@ tamindrasenaḥ svapitāmahaṁ śriyā
 virājamānaṁ nalināyatekṣaṇam|
 prāṁśuṁ piśaṅgāmbaramañjanatviṣaṁ
 pralambabāhuṁ subhagaṁ samaikṣata||
+en: Indrasena saw his grandfather shining with splendour, with long eyes like a lotus, tall, wearing a tawny garment, dark in lustre like collyrium, with long arms, and beautiful.
+tel: ఇంద్రసేనుడు తన పితామహుని చూచెను — శోభతో విరాజిల్లుచున్నవానిని, పద్మము వంటి విశాలమైన కన్నులు కలవానిని, ఉన్నతమైన దేహము కలవానిని, పచ్చని వస్త్రము ధరించినవానిని, కాటుక వంటి నల్లని ఛాయ కలవానిని, పొడవైన బాహువులు కలవానిని, సుందరుడైనవానిని.
+hi: इन्द्रसेन ने अपने पितामह को देखा — जो शोभा से सुशोभित थे, कमल के समान बड़े नेत्रों वाले थे, ऊँचे कद के थे, पीला वस्त्र पहने थे, काजल के समान श्याम वर्ण के थे, लम्बी भुजाओं वाले और सुन्दर थे।
 
 --- verse 14 ---
 deva:
@@ -164,6 +203,9 @@ tasmai balirvāruṇapāśayantritaḥ
 samarhaṇaṁ nopajahāra pūrvavat|
 nanāma mūrdhnāśruvilolalocanaḥ
 savrīḍanīcīnamukho babhūva ha||
+en: Bali, held fast by the ropes of Varuṇa, could not offer him the proper honour as he had done before. He bowed with his head, his eyes rolling with tears, and his face was bent down in shame.
+tel: వారుణ పాశములతో కట్టబడిన బలి, ఆయనకు మునుపటి వలె సమర్హణమును సమర్పించలేకపోయెను. కన్నీటితో చలించుచున్న కన్నులు కలవాడై తలతో నమస్కరించెను, సిగ్గుతో ముఖమును వంచుకొనెను.
+hi: वरुण के पाशों से बँधा बलि उन्हें पहले की तरह यथोचित पूजा अर्पित नहीं कर सका। उसने सिर से प्रणाम किया, उसके नेत्र आँसुओं से चंचल हो रहे थे, और लज्जा से उसका मुख नीचे झुक गया।
 
 --- verse 15 ---
 deva:
@@ -176,6 +218,9 @@ sa tatra hāsīnamudīkṣya satpatiṁ
 sunandanandādyanugairupāsitam|
 upetya bhūmau śirasā mahāmanā
 nanāma mūrdhnā pulakāśruviklavaḥ||
+en: Seeing the Lord of the good seated there, attended by Sunanda, Nanda and his other followers, the great minded Prahrāda came near and bowed with his head to the ground, overcome, with his hair standing on end and tears flowing.
+tel: సునందుడు, నందుడు మొదలైన అనుచరులచే సేవింపబడి అక్కడ ఆసీనుడైయున్న సత్పతిని చూచి, మహామనస్కుడైన ప్రహ్రాదుడు దగ్గరకు వచ్చి, భూమిపై తలతో నమస్కరించెను. పులకలతో, కన్నీటితో ఆయన పరవశుడయ్యెను.
+hi: सुनन्द, नन्द आदि अनुचरों से सेवित होकर वहाँ बैठे सत्पति को देखकर महामना प्रह्राद निकट आये और भूमि पर सिर रखकर प्रणाम किया। रोमांच और आँसुओं से वे विह्वल हो गये।
 
 --- verse 16 ---
 deva:
@@ -190,6 +235,9 @@ tvayaiva dattaṁ padamaindramūrjitaṁ
 hṛtaṁ tadevādya tathaiva śobhanam|
 manye mahānasya kṛto hyanugraho
 vibhraṁśito yacchriya ātmamohanāt||
+en: Prahrāda said: The high post of Indra was given by you alone, and today the same has been taken away by you. That too is good in the same way. I think that a great kindness has been done to him, since he has been freed from the fortune that deludes the self.
+tel: ప్రహ్రాదుడు పలికెను: గొప్పదైన ఇంద్రపదవిని నీవే ఇచ్చితివి, నేడు దానినే నీవు హరించితివి. అదియు అట్లే శోభనము. ఆత్మను మోహపరచు ఐశ్వర్యము నుండి ఇతడు విడివడినాడు కాబట్టి, ఇతనికి గొప్ప అనుగ్రహము చేయబడినదని నేను భావించుచున్నాను.
+hi: प्रह्राद ने कहा: इन्द्र का यह ऊँचा पद आपने ही दिया था, और आज उसी को आपने हर लिया है। वह भी उसी प्रकार कल्याणकारी है। मैं मानता हूँ कि इस पर बड़ी कृपा हुई है, क्योंकि आत्मा को मोहित करने वाली सम्पत्ति से यह छूट गया है।
 
 --- verse 17 ---
 deva:
@@ -202,6 +250,9 @@ yayā hi vidvānapi muhyate yata-
 stat ko vicaṣṭe gatimātmano yathā|
 tasmai namaste jagadīśvarāya vai
 nārāyaṇāyākhilalokasākṣiṇe||
+en: By that fortune even a learned man is deluded. Who then can see the true course of his own self? To you, the Lord of the universe, to Nārāyaṇa, the witness of all the worlds, be my obeisance.
+tel: ఆ ఐశ్వర్యముచే విద్వాంసుడు కూడ మోహము పొందును. అట్టివారిలో ఎవరు తన ఆత్మ గతిని యథార్థముగా చూడగలరు? జగదీశ్వరుడవైన, అఖిల లోకములకు సాక్షియైన నారాయణుడవైన నీకు నమస్కారము.
+hi: उसी सम्पत्ति से विद्वान् भी मोहित हो जाता है। तब कौन अपनी आत्मा की गति को यथार्थ रूप में देख सकता है? जगदीश्वर और सब लोकों के साक्षी नारायण आपको नमस्कार है।
 
 --- verse 18 ---
 deva:
@@ -212,6 +263,9 @@ iast:
 śrīśuka uvāca
 tasyānuśṛṇvato rājan prahrādasya kṛtāñjaleḥ|
 hiraṇyagarbho bhagavānuvāca madhusūdanam||
+en: Śrī Śuka said: O King, while Prahrāda stood with joined palms and listened, the lord Hiraṇyagarbha spoke to Madhusūdana.
+tel: శ్రీశుకుడు పలికెను: రాజా, దోసిలి ఒగ్గి వినుచున్న ప్రహ్రాదుని సమీపమున, భగవంతుడైన హిరణ్యగర్భుడు మధుసూదనునితో పలికెను.
+hi: श्रीशुकदेवजी ने कहा: हे राजन्! हाथ जोड़कर सुनते हुए प्रह्राद के सामने भगवान् हिरण्यगर्भ ने मधुसूदन से कहा।
 
 --- verse 19 ---
 deva:
@@ -220,6 +274,9 @@ deva:
 iast:
 baddhaṁ vīkṣya patiṁ sādhvī tatpatnī bhayavihvalā|
 prāñjaliḥ praṇatopendraṁ babhāṣe'vāṅmukhī nṛpa||
+en: O King, seeing her husband bound, his chaste wife was overcome with fear. With joined palms she bowed to Upendra and spoke with her face lowered.
+tel: రాజా, తన భర్త బంధింపబడుట చూచి, సాధ్వియైన ఆయన భార్య భయముతో విహ్వలయైనది. దోసిలి ఒగ్గి, ఉపేంద్రునికి ప్రణమిల్లి, ముఖమును వంచుకొని ఆమె పలికెను.
+hi: हे राजन्! अपने पति को बँधा देखकर उसकी साध्वी पत्नी भय से विह्वल हो गयी। हाथ जोड़कर उपेन्द्र को प्रणाम करके उसने मुख नीचा करके कहा।
 
 --- verse 20 ---
 deva:
@@ -234,6 +291,9 @@ krīḍārthamātmana idaṁ trijagat kṛtaṁ te
 svāmyaṁ tu tatra kudhiyo'para īśa kuryuḥ|
 kartuḥ prabhostava kimasyata āvahanti
 tyaktahriyastvadavaropitakartṛvādāḥ||
+en: Vindhyāvali said: These three worlds were made by you for your own play. But O Lord, others of poor understanding claim ownership in them. They have given up shame, and their claim of being the doers has been taken away by you. What can such people offer to you, who are the maker, the master, and the one who casts this world forth?
+tel: వింధ్యావళి పలికెను: ఈ మూడు లోకములను నీవు నీ క్రీడ కొరకు చేసితివి. ఈశా, కాని చెడు బుద్ధి కలిగిన ఇతరులు దానియందు స్వామ్యమును చెప్పుకొందురు. వారు సిగ్గు విడిచినవారు, వారి కర్తృత్వ వాదము నీచే తొలగింపబడినది. ఈ జగత్తును విసరునట్టి, కర్తయు ప్రభువును అయిన నీకు అట్టివారు ఏమి సమర్పించగలరు?
+hi: विन्ध्यावली ने कहा: ये तीनों लोक आपने अपनी क्रीड़ा के लिये बनाये हैं। परन्तु हे ईश! दुर्बुद्धि दूसरे लोग उनमें अपना स्वामित्व मानते हैं। उन्होंने लज्जा छोड़ दी है, और उनका कर्तापन का दावा आपने ही हटा दिया है। जो कर्ता, प्रभु और इस जगत् को फेंकने वाले हैं, उन आपको ऐसे लोग क्या अर्पित कर सकते हैं?
 
 --- verse 21 ---
 deva:
@@ -244,6 +304,9 @@ iast:
 brahmovāca
 bhūtabhāvana bhūteśa devadeva jaganmaya|
 muñcainaṁ hṛtasarvasvaṁ nāyamarhati nigraham||
+en: Brahmā said: O creator of beings, O lord of beings, O God of gods, O you who pervade the world, release him. All that he had has been taken away. He does not deserve this punishment.
+tel: బ్రహ్మ పలికెను: భూతములను సృజించువాడా, భూతములకు ప్రభువా, దేవదేవా, జగన్మయా, ఇతనిని విడిపించుము. ఇతని సర్వస్వము హరింపబడినది. ఇతడు ఈ నిగ్రహమునకు అర్హుడు కాడు.
+hi: ब्रह्माजी ने कहा: हे भूतभावन! हे भूतेश! हे देवदेव! हे जगन्मय! इसे छोड़ दीजिये। इसका सर्वस्व हर लिया गया है। यह इस दण्ड के योग्य नहीं है।
 
 --- verse 22 ---
 deva:
@@ -252,6 +315,9 @@ deva:
 iast:
 kṛtsnā te'nena dattā bhūrlokāḥ karmārjitāśca ye|
 niveditaṁ ca sarvasvamātmāviklavayā dhiyā||
+en: He has given you the whole earth, and the worlds that he won by his deeds. He has offered you all that he had, and his own self as well, with a mind that did not waver.
+tel: ఇతడు నీకు భూమినంతటిని, తన కర్మలచే సంపాదించిన లోకములను ఇచ్చెను. చలించని బుద్ధితో తన సర్వస్వమును, తనను కూడ నీకు సమర్పించెను.
+hi: इसने आपको सारी पृथ्वी और अपने कर्मों से जीते हुए लोक दे दिये हैं। इसने अविचल बुद्धि से अपना सर्वस्व और अपने आपको भी आपको अर्पित कर दिया है।
 
 --- verse 23 ---
 deva:
@@ -264,6 +330,9 @@ yatpādayoraśaṭhadhīḥ salilaṁ pradāya
 dūrvāṅkurairapi vidhāya satīṁ saparyām|
 apyuttamāṁ gatimasau bhajate trilokīṁ
 dāśvānaviklavamanāḥ kathamārtimṛcchet||
+en: A man of honest mind who offers water at your feet, and performs true worship even with sprouts of dūrvā grass, gains the highest state. How then should this man, who has given away the three worlds with an unwavering mind, come to grief?
+tel: కపటము లేని బుద్ధి కలవాడు నీ పాదములయందు జలమును సమర్పించి, దూర్వాంకురములతోనే సత్యమైన పూజను చేసినను, ఉత్తమ గతిని పొందును. అట్లయినచో, చలించని మనస్సుతో మూడు లోకములను దానము చేసిన ఇతడు ఎట్లు ఆర్తిని పొందును?
+hi: जो निष्कपट बुद्धि वाला मनुष्य आपके चरणों में जल अर्पित करके दूर्वा के अंकुरों से भी सच्ची पूजा करता है, वह उत्तम गति पाता है। तब अविचल मन से तीनों लोकों का दान करने वाला यह पुरुष कैसे दुःख पाये?
 
 --- verse 24 ---
 deva:
@@ -274,6 +343,9 @@ iast:
 śrībhagavānuvāca
 brahman yamanugṛhṇāmi tadviśo vidhunomyaham|
 yanmadaḥ puruṣaḥ stabdho lokaṁ māṁ cāvamanyate||
+en: The blessed Lord said: O Brahmā, from the man whom I favour I take away his riches. Made proud by them, a man grows stiff and despises the world and me as well.
+tel: శ్రీభగవానుడు పలికెను: ఓ బ్రహ్మా, నేను ఎవనిని అనుగ్రహించుదునో, అతని సంపదను నేను తొలగించుదును. దానిచే మదము కలిగిన మనుష్యుడు స్తబ్ధుడై, లోకమును, నన్ను కూడ అవమానించును.
+hi: श्रीभगवान् ने कहा: हे ब्रह्मन्! जिस पर मैं कृपा करता हूँ, उसकी सम्पत्ति मैं हर लेता हूँ। उससे मद में आया हुआ पुरुष अकड़ जाता है और लोक का तथा मेरा भी अपमान करता है।
 
 --- verse 25 ---
 deva:
@@ -282,6 +354,9 @@ deva:
 iast:
 yadā kadācijjīvātmā saṁsaran nijakarmabhiḥ|
 nānāyoniṣvanīśo'yaṁ pauruṣīṁ gatimāvrajet||
+en: When the living being, wandering through many kinds of birth by its own deeds and having no power of its own, at some time comes to the human state,
+tel: జీవాత్మ తన కర్మలచే అనేక జన్మలయందు సంచరించుచు, తనకు స్వాధీనము లేక, ఎప్పుడైనా మనుష్య జన్మను పొందినచో,
+hi: जीवात्मा अपने कर्मों से अनेक योनियों में भटकता हुआ, स्वयं असमर्थ होकर, जब कभी मनुष्य की गति को प्राप्त करता है,
 
 --- verse 26 ---
 deva:
@@ -290,6 +365,9 @@ deva:
 iast:
 janmakarmavayorūpavidyaiśvaryadhanādibhiḥ|
 yadyasya na bhavet stambhastatrāyaṁ madanugrahaḥ||
+en: and if then he has no pride on account of birth, deeds, age, beauty, learning, lordship, wealth and the rest, in him this is my grace.
+tel: జన్మ, కర్మ, వయస్సు, రూపము, విద్య, ఐశ్వర్యము, ధనము మొదలైనవాటిచే అతనికి గర్వము కలుగకుండినచో, అతనియందు ఇది నా అనుగ్రహము.
+hi: और यदि जन्म, कर्म, अवस्था, रूप, विद्या, ऐश्वर्य, धन आदि से उसे अहंकार न हो, तो उसमें यह मेरी कृपा है।
 
 --- verse 27 ---
 deva:
@@ -298,6 +376,9 @@ deva:
 iast:
 mānastambhanimittānāṁ janmādīnāṁ samantataḥ|
 sarvaśreyaḥ pratīpānāṁ hanta muhyenna matparaḥ||
+en: Birth and the rest are the causes of conceit and arrogance, and in every way they stand against all that is good. Yet one who holds me as the highest is not deluded by them.
+tel: జన్మ మొదలైనవి మానమునకు, గర్వమునకు కారణములు, అన్ని విధముల సర్వశ్రేయస్సునకు ప్రతికూలములు. అయినను నన్నే పరముగా భావించువాడు వానిచే మోహము పొందడు.
+hi: जन्म आदि मान और अकड़ के कारण हैं और सब प्रकार से सम्पूर्ण कल्याण के विरोधी हैं। फिर भी जो मुझे परम मानता है, वह उनसे मोहित नहीं होता।
 
 --- verse 28 ---
 deva:
@@ -306,6 +387,9 @@ deva:
 iast:
 eṣa dānavadaityānāmagraṇīḥ kīrtivardhanaḥ|
 ajaiṣīdajayāṁ māyāṁ sīdannapi na muhyati||
+en: This man is the foremost of the dānavas and daityas and the increaser of their fame. He has conquered māyā, which cannot be conquered. Though he is sinking, he is not deluded.
+tel: ఇతడు దానవులకు, దైత్యులకు అగ్రగణ్యుడు, కీర్తిని పెంచువాడు. జయింపరాని మాయను ఇతడు జయించెను. ఆపదలో మునిగియున్నను ఇతడు మోహము పొందడు.
+hi: यह दानवों और दैत्यों में अग्रणी है और उनकी कीर्ति बढ़ाने वाला है। इसने अजेय माया को जीत लिया है। संकट में पड़ा होकर भी यह मोहित नहीं होता।
 
 --- verse 29 ---
 deva:
@@ -314,6 +398,9 @@ deva:
 iast:
 kṣīṇarikthaścyutaḥ sthānāt kṣipto baddhaśca śatrubhiḥ|
 jñātibhiśca parityakto yātanāmanuyāpitaḥ||
+en: His wealth is gone. He has fallen from his place. He has been cast down and bound by his enemies. He has been abandoned by his kinsmen and made to undergo torment.
+tel: ఇతని ధనము క్షీణించినది. ఇతడు పదవి నుండి పతితుడైనాడు. శత్రువులచే పడద్రోయబడి బంధింపబడినాడు. జ్ఞాతులచే విడిచిపెట్టబడి యాతనను అనుభవింపజేయబడినాడు.
+hi: इसका धन नष्ट हो गया। यह अपने स्थान से गिर गया। शत्रुओं ने इसे गिराकर बाँध दिया। बन्धुओं ने इसे छोड़ दिया और इसे यातना भोगनी पड़ी।
 
 --- verse 30 ---
 deva:
@@ -322,6 +409,9 @@ deva:
 iast:
 guruṇā bhartsitaḥ śapto jahau satyaṁ na suvrataḥ|
 chalairukto mayā dharmo nāyaṁ tyajati satyavāk||
+en: He was rebuked and cursed by his guru, yet this man of good vows did not give up truth. The dharma that I spoke with words of deceit, this man, true of speech, does not abandon.
+tel: గురువుచే భర్త్సింపబడి, శపింపబడినను, సువ్రతుడైన ఇతడు సత్యమును విడువలేదు. నేను కపట వాక్కులతో చెప్పిన ధర్మమును, సత్యవాక్కు కలిగిన ఇతడు విడిచిపెట్టడు.
+hi: गुरु ने इसे डाँटा और शाप दिया, फिर भी इस सुव्रत ने सत्य को नहीं छोड़ा। मैंने छल के वचनों से जो धर्म कहा था, उसे यह सत्यवादी नहीं छोड़ता।
 
 --- verse 31 ---
 deva:
@@ -330,6 +420,9 @@ deva:
 iast:
 eṣa me prāpitaḥ sthānaṁ duṣprāpamamarairapi|
 sāvarṇerantarasyāyaṁ bhavitendro madāśrayaḥ||
+en: He has been brought by me to a place that even the immortals find hard to reach. In the manvantara of Sāvarṇi he will become Indra, with me as his support.
+tel: అమరులకు కూడ దుర్లభమైన స్థానమును నేను ఇతనికి పొందించితిని. సావర్ణి మన్వంతరమునందు ఇతడు నా ఆశ్రయముతో ఇంద్రుడు అగును.
+hi: इसे मैंने उस स्थान पर पहुँचा दिया है, जो देवताओं के लिये भी दुर्लभ है। सावर्णि मन्वन्तर में यह मेरे आश्रय से इन्द्र होगा।
 
 --- verse 32 ---
 deva:
@@ -340,6 +433,9 @@ iast:
 tāvat sutalamadhyāstāṁ viśvakarmavinirmitam|
 yannādhayo vyādhayaśca klamastandrā parābhavaḥ|
 nopasargā nivasatāṁ saṁbhavanti mamekṣayā||
+en: Till then let him dwell in Sutala, which Viśvakarmā built. There, by my look, no troubles of the mind, no diseases, no weariness, no drowsiness, no defeat and no calamities come upon those who live in it.
+tel: అంతవరకు విశ్వకర్మచే నిర్మింపబడిన సుతలమునందు ఇతడు నివసించును గాక. నా చూపుచే, అక్కడ నివసించువారికి ఆధులు, వ్యాధులు, అలసట, తంద్ర, పరాభవము, ఉపసర్గములు కలుగవు.
+hi: तब तक यह विश्वकर्मा के बनाये हुए सुतल में निवास करे। मेरी दृष्टि से वहाँ रहने वालों को न आधि, न व्याधि, न थकान, न तन्द्रा, न पराभव और न उपसर्ग होते हैं।
 
 --- verse 33 ---
 deva:
@@ -348,6 +444,9 @@ deva:
 iast:
 indrasena mahārāja yāhi bho bhadramastu te|
 sutalaṁ svargibhiḥ prārthyaṁ jñātibhiḥ parivāritaḥ||
+en: O Indrasena, great king, go now. May it be well with you. Go to Sutala, which even the dwellers of heaven desire, surrounded by your kinsmen.
+tel: ఓ ఇంద్రసేనా, మహారాజా, వెళ్ళుము. నీకు మేలు కలుగును. జ్ఞాతులతో చుట్టుకొనబడి, స్వర్గవాసులు కూడ కోరు సుతలమునకు వెళ్ళుము.
+hi: हे इन्द्रसेन! हे महाराज! जाओ, तुम्हारा कल्याण हो। अपने बन्धुओं से घिरे हुए तुम उस सुतल को जाओ, जिसकी स्वर्गवासी भी प्रार्थना करते हैं।
 
 --- verse 34 ---
 deva:
@@ -356,6 +455,9 @@ deva:
 iast:
 na tvāmabhibhaviṣyanti lokeśāḥ kimutāpare|
 tvacchāsanātigān daityāṁścakraṁ me sūdayiṣyati||
+en: The rulers of the worlds will not overcome you, much less others. My discus will destroy those daityas who go beyond your command.
+tel: లోకపాలకులు నిన్ను జయింపలేరు, ఇతరులు ఎంత మాత్రము? నీ శాసనమును అతిక్రమించు దైత్యులను నా చక్రము సంహరించును.
+hi: लोकपाल तुम्हें नहीं जीत सकेंगे, दूसरों की तो बात ही क्या। तुम्हारी आज्ञा का उल्लंघन करने वाले दैत्यों को मेरा चक्र नष्ट कर देगा।
 
 --- verse 35 ---
 deva:
@@ -364,17 +466,26 @@ deva:
 iast:
 rakṣiṣye sarvato'haṁ tvāṁ sānugaṁ saparicchadam|
 sadā sannihitaṁ vīra tatra māṁ drakṣyate bhavān||
+en: I shall protect you on every side, together with your followers and your household. O hero, you will see me always present there.
+tel: అనుచరులతో, పరివారముతో కూడిన నిన్ను నేను అన్ని వైపుల నుండి రక్షించుదును. ఓ వీరా, అక్కడ నేను ఎల్లప్పుడు సన్నిహితుడనై ఉండుటను నీవు చూచెదవు.
+hi: अनुचरों और परिवार के साथ तुम्हारी मैं सब ओर से रक्षा करूँगा। हे वीर! वहाँ तुम मुझे सदा निकट उपस्थित देखोगे।
 
 --- verse 36 ---
 deva:
 तत्र दानवदैत्यानां सङ्गात् ते भाव आसुरः।
-दृष्ट्वा मदनुभावं वै सद्यः कुण्ठो विनङ् क्ष्यति॥
+दृष्ट्वा मदनुभावं वै सद्यः कुण्ठो विनङ्क्ष्यति॥
 iast:
 tatra dānavadaityānāṁ saṅgāt te bhāva āsuraḥ|
-dṛṣṭvā madanubhāvaṁ vai sadyaḥ kuṇṭho vinaṅ kṣyati||
+dṛṣṭvā madanubhāvaṁ vai sadyaḥ kuṇṭho vinaṅkṣyati||
+en: There the asura nature in you, which came from the company of the dānavas and daityas, will see my power, and at once it will be blunted and will perish.
+tel: అక్కడ దానవులు, దైత్యుల సంగము వలన కలిగిన నీ ఆసుర భావము, నా ప్రభావమును చూచి, వెంటనే కుంఠితమై నశించును.
+hi: वहाँ दानवों और दैत्यों की संगति से उत्पन्न तुम्हारा आसुर भाव मेरे प्रभाव को देखकर तुरन्त कुण्ठित होकर नष्ट हो जायेगा।
 
 --- verse none ---
 deva:
 इति श्रीमद्भागवते महापुराणे पारमहंस्यां संहितायामष्टमस्कन्धे वामनप्रादुर्भावे बलिवामनसंवादो नाम द्वाविंशोऽध्यायः॥ २२॥
 iast:
 iti śrīmadbhāgavate mahāpurāṇe pāramahaṁsyāṁ saṁhitāyāmaṣṭamaskandhe vāmanaprādurbhāve balivāmanasaṁvādo nāma dvāviṁśo'dhyāyaḥ|| 22||
+en: Thus ends the twenty-second adhyāya, named the conversation of Bali and Vāmana, in the appearance of Vāmana, in the eighth skandha of the Śrīmad Bhāgavata Mahāpurāṇa, the saṁhitā of the paramahaṁsas.
+tel: ఇది పారమహంస్యసంహిత అయిన శ్రీమద్భాగవత మహాపురాణమునందు, అష్టమస్కంధమునందు, వామనప్రాదుర్భావమునందు బలివామనసంవాదము అను ఇరువది రెండవ అధ్యాయము సమాప్తము.
+hi: इस प्रकार पारमहंस्य संहिता श्रीमद्भागवत महापुराण के अष्टम स्कन्ध में वामनप्रादुर्भाव के अन्तर्गत बलिवामनसंवाद नामक बाईसवाँ अध्याय समाप्त हुआ।

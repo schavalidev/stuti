@@ -9,7 +9,7 @@ Type: Purāṇa (an adhyāya of the Śrīmad Bhāgavata, Skandha 8)
 
 Source / recension: Base text and authority: the Gītā Press, Gorakhpur Śrīmadbhāgavata Mahāpurāṇa with Hindi translation, Part 1 (Gītā Press code 26), archive.org item `shrimadbhagwat-mahapuran-bhag-1`, printed pages 1014–1021; the PDF page numbers are the printed ones. The PDF carries the typesetter's own text layer in the Chanakya font encoding, and the text was decoded from it by machine with `bin/bhagavata/chanakya.py`, not read off OCR or typed. The decoder was checked against GRETIL over all twelve skandhas before any file was written, and the differences that remain were sampled and found to be readings of the two editions. Second witness: GRETIL's `sa_bhAgavatapurANa.xml` (IAST, contributed by Ulrich Stiehl), a separate editorial lineage, compared verse by verse by machine. The TTD edition with the commentaries of Śrīdhara, Vīrarāghava and Vijayadhvaja (archive.org `Bhagavata_Purana_With_Multiple_Commentaries_TTD_Critical_Edition`) is the third witness where one is needed; it was not read for this file. The IAST was generated mechanically from the Devanāgarī with `bin/dev2iast.py`.
 
-Recension note: Text-only file, written 1 Oct 2026 at the user's instruction to lay down the whole Bhāgavata first: the English, Telugu and Hindi meanings are still to be added, and the witnesses' differences listed here have been recorded by machine and not yet adjudicated. The print is followed throughout. The print numbers 61 verses and GRETIL numbers 61. Of the 61 verses GRETIL has under the same number, 46 agree with the print letter for letter once spacing and the spelling of nasals are set aside; the rest differ: 2, 9, 10, 12, 20, 25, 26, 32, 37, 42, 46, 49, 51, 60, 61. The edition's footnotes give these older printed readings (प्रा० पा०), which are not bracketed into the line: at 51, गतिं; at 52, सिद्धिदः; at 53, देवदेवं; at 55, समन्विताम्; at 58, गतिं. Spacing is the print's, as its text layer gives it; in a few places justification has left a space inside a word, and these are still to be closed when the verse is read. The speaker lines (श्रीशुक उवाच and the others) are printed in italic above the verse they introduce, and are given as its first line.
+Recension note: Meanings written 23 Oct 2026 (session S78). The differences between the witnesses listed below were read as the verses were glossed; except where this note says otherwise, each is a spelling, a sandhi or a word order of the two editions, none of them changes the sense, and the print's reading therefore stands unbracketed. The print is followed throughout. The print numbers 61 verses and GRETIL numbers 61. Of the 61 verses GRETIL has under the same number, 46 agree with the print letter for letter once spacing and the spelling of nasals are set aside; the rest differ: 2, 9, 10, 12, 20, 25, 26, 32, 37, 42, 46, 49, 51, 60, 61. The edition's footnotes give these older printed readings (प्रा० पा०), which are not bracketed into the line: at 51, गतिं; at 52, सिद्धिदः; at 53, देवदेवं; at 55, समन्विताम्; at 58, गतिं. Spacing is the print's, as its text layer gives it. The speaker lines (श्रीशुक उवाच and the others) are printed in italic above the verse they introduce, and are given as its first line. A footnote's numeral keys it to one word, and which word that is cannot be told from the note alone, so those readings stay unbracketed until the page itself is read. One word was put right as the verses were read. At verse 53 the text layer had lost the space between देववरं and वरेण्यं, which cannot be read as it stands, because देववरम् carries its own accusative ending and so cannot be the first member of a compound; the space is restored here, and GRETIL reads the two words apart. The print's other spacings were checked in both directions against GRETIL and all stand: the spaces after a virāma consonant (यदर्थमदधाद् रूपं, तद् दानवेन्द्रस्य, काचिद् विशाला, यावद् ब्राह्मी, यथावद् वक्तुमर्हसि, दितिजमकथयद् यो) are the print's own, and तमःप्रकृति दुर्मर्षं and नैवंवीर्यो are each readable as printed. At verse 23 the print reads सम्मितं where GRETIL reads असम्मितं; the print is followed, so the fish has grown to the measure of the reservoirs. At verse 61 सत्यव्रतानाम् is plural and is read as those who hold to truth.
 
 Verse count: 61, plus the closing colophon printed unnumbered.
 
@@ -24,6 +24,9 @@ iast:
 rājovāca
 bhagavañchrotumicchāmi hareradbhutakarmaṇaḥ|
 avatārakathāmādyāṁ māyāmatsyaviḍambanam||
+en: The king said: Revered sir, I wish to hear the first story of the avatāra of Hari, whose deeds are wonderful, in which by his māyā he took on the likeness of a fish.
+tel: రాజు పలికెను: పూజ్యులారా, అద్భుతకర్మలు కల శ్రీహరి అవతారకథలలో మొదటిదానిని, ఆయన తన మాయచే మత్స్యరూపమును ధరించిన వృత్తాంతమును వినగోరుచున్నాను.
+hi: राजा ने कहा: भगवन्, अद्भुत कर्म करनेवाले श्रीहरि की अवतार-कथाओं में पहली कथा, जिसमें उन्होंने अपनी माया से मत्स्य का रूप धारण किया, मैं सुनना चाहता हूँ।
 
 --- verse 2 ---
 deva:
@@ -32,6 +35,9 @@ deva:
 iast:
 yadarthamadadhād rūpaṁ mātsyaṁ lokajugupsitam|
 tamaḥprakṛti durmarṣaṁ karmagrasta iveśvaraḥ||
+en: For what purpose did the Lord take on the form of a fish, which the world looks upon with contempt, whose nature is darkness and which is hard to bear, as though he were held in the grip of karma?
+tel: లోకము హేయముగా చూచునది, తమోమయమైనది, సహింపశక్యము కానిది అగు మత్స్యరూపమును, కర్మవశుడైనవానివలె, ఈశ్వరుడు ఏ ప్రయోజనము కొరకు ధరించెను?
+hi: जिसे लोग घृणा की दृष्टि से देखते हैं, जो तमोमय है और जिसे सहना कठिन है, उस मत्स्य रूप को ईश्वर ने किस प्रयोजन से धारण किया, मानो वे कर्म के वश में हों?
 
 --- verse 3 ---
 deva:
@@ -40,6 +46,9 @@ deva:
 iast:
 etanno bhagavan sarvaṁ yathāvad vaktumarhasi|
 uttamaślokacaritaṁ sarvalokasukhāvaham||
+en: Revered sir, you should tell us all this as it is, the story of the Lord whose praise is sung in the highest verse, which brings happiness to all the worlds.
+tel: పూజ్యులారా, సర్వలోకములకు సుఖమును కలిగించు ఉత్తమశ్లోకుని చరిత్రను, ఈ సమస్తమును ఉన్నది ఉన్నట్లుగా మాకు చెప్పుట తగును.
+hi: भगवन्, सब लोकों को सुख देनेवाले उत्तमश्लोक भगवान् का यह सारा चरित्र आपको हमें यथार्थ रूप से कहना चाहिये।
 
 --- verse 4 ---
 deva:
@@ -50,6 +59,9 @@ iast:
 sūta uvāca
 ityukto viṣṇurātena bhagavān bādarāyaṇiḥ|
 uvāca caritaṁ viṣṇormatsyarūpeṇa yat kṛtam||
+en: Sūta said: Asked in this way by Viṣṇurāta, the revered son of Bādarāyaṇa told the deeds that Viṣṇu did in the form of a fish.
+tel: సూతుడు పలికెను: విష్ణురాతుడు ఈ విధముగా అడిగినపుడు, పూజ్యుడైన బాదరాయణి విష్ణువు మత్స్యరూపముతో చేసిన చరిత్రను చెప్పెను.
+hi: सूतजी ने कहा: विष्णुरात के इस प्रकार पूछने पर भगवान् बादरायणि ने वह चरित्र कहा, जो विष्णु ने मत्स्य रूप से किया था।
 
 --- verse 5 ---
 deva:
@@ -60,6 +72,9 @@ iast:
 śrīśuka uvāca
 goviprasurasādhūnāṁ chandasāmapi ceśvaraḥ|
 rakṣāmicchaṁstanūrdhatte dharmasyārthasya caiva hi||
+en: Śrī Śuka said: Wishing to protect cows, brāhmaṇas, gods and holy men, and the Vedas also, and dharma and artha as well, the Lord takes on bodies.
+tel: శ్రీశుకుడు పలికెను: గోవులను, బ్రాహ్మణులను, దేవతలను, సాధువులను, వేదములను, ధర్మమును, అర్థమును రక్షింపగోరి ఈశ్వరుడు శరీరములను ధరించుచున్నాడు.
+hi: श्रीशुकदेवजी ने कहा: गौ, ब्राह्मण, देवता और साधुओं की, तथा वेदों की, और धर्म एवं अर्थ की भी रक्षा करना चाहते हुए ईश्वर शरीर धारण करते हैं।
 
 --- verse 6 ---
 deva:
@@ -68,6 +83,9 @@ deva:
 iast:
 uccāvaceṣu bhūteṣu caran vāyuriveśvaraḥ|
 noccāvacatvaṁ bhajate nirguṇatvāddhiyo guṇaiḥ||
+en: Like the wind, the Lord moves among beings high and low, yet he does not take on their high or low state, because he is free from the guṇas that belong to the understanding.
+tel: వాయువువలె ఈశ్వరుడు ఉచ్చనీచ ప్రాణులయందు సంచరించుచున్నను, ఉచ్చనీచత్వమును పొందడు. ఏలయన, బుద్ధియందలి గుణములు ఆయనకు లేవు.
+hi: वायु के समान ईश्वर ऊँचे और नीचे प्राणियों में विचरते हैं, तो भी वे ऊँचेपन या नीचेपन को प्राप्त नहीं होते, क्योंकि वे बुद्धि के गुणों से रहित हैं।
 
 --- verse 7 ---
 deva:
@@ -76,6 +94,9 @@ deva:
 iast:
 āsīdatītakalpānte brāhmo naimittiko layaḥ|
 samudropaplutāstatra lokā bhūrādayo nṛpa||
+en: O king, at the end of the past kalpa there came the naimittika dissolution of Brahmā, and then the worlds beginning with Bhūḥ were flooded over by the ocean.
+tel: రాజా, గతించిన కల్పము అంతమునందు బ్రహ్మసంబంధమైన నైమిత్తిక ప్రలయము కలిగెను. అప్పుడు భూలోకము మొదలైన లోకములు సముద్రముచే ముంచివేయబడెను.
+hi: हे राजन्, बीते कल्प के अन्त में ब्रह्मा का नैमित्तिक प्रलय हुआ, और तब भूः आदि लोक समुद्र में डूब गये।
 
 --- verse 8 ---
 deva:
@@ -84,6 +105,9 @@ deva:
 iast:
 kālenāgatanidrasya dhātuḥ śiśayiṣorbalī|
 mukhato niḥsṛtān vedān hayagrīvo'ntike'harat||
+en: When in due time sleep came upon the creator and he wished to lie down, the mighty Hayagrīva carried off from close by the Vedas that had issued from the creator's mouth.
+tel: కాలవశమున బ్రహ్మదేవునికి నిద్ర వచ్చి, ఆయన శయనింపగోరినపుడు, ఆయన ముఖమునుండి వెలువడిన వేదములను బలవంతుడైన హయగ్రీవుడు దగ్గరనుండియే అపహరించెను.
+hi: समय आने पर ब्रह्मा को नींद आ गयी और वे सोना चाहते थे; तब उनके मुख से निकले हुए वेदों को बलवान् हयग्रीव ने पास ही से हर लिया।
 
 --- verse 9 ---
 deva:
@@ -92,6 +116,9 @@ deva:
 iast:
 jñātvā tad dānavendrasya hayagrīvasya ceṣṭitam|
 dadhāra śapharīrūpaṁ bhagavān harirīśvaraḥ||
+en: Knowing this deed of Hayagrīva, the lord of the Dānavas, the Lord Hari, the ruler of all, took on the form of a śapharī fish.
+tel: దానవేంద్రుడైన హయగ్రీవుని ఆ చేష్టను ఎరిగి, భగవంతుడైన హరి, ఈశ్వరుడు, శఫరీ మత్స్యరూపమును ధరించెను.
+hi: दानवेन्द्र हयग्रीव के इस कार्य को जानकर भगवान् हरि, सबके ईश्वर, ने शफरी मत्स्य का रूप धारण किया।
 
 --- verse 10 ---
 deva:
@@ -100,6 +127,9 @@ deva:
 iast:
 tatra rājaṛṣiḥ kaścinnāmnā satyavrato mahān|
 nārāyaṇaparo'tapyat tapaḥ sa salilāśanaḥ||
+en: At that time there was a certain great royal sage named Satyavrata, devoted to Nārāyaṇa. He performed tapas, taking water alone for his food.
+tel: ఆ కాలమునందు సత్యవ్రతుడను పేరుగల మహాత్ముడైన ఒక రాజర్షి ఉండెను. నారాయణపరుడైన అతడు జలమునే ఆహారముగా గ్రహించి తపస్సును చేసెను.
+hi: उस समय सत्यव्रत नाम का कोई महान् राजर्षि था, जो नारायण का परायण था। वह जल ही का आहार करके तप करता था।
 
 --- verse 11 ---
 deva:
@@ -108,6 +138,9 @@ deva:
 iast:
 yo'sāvasmin mahākalpe tanayaḥ sa vivasvataḥ|
 śrāddhadeva iti khyāto manutve hariṇārpitaḥ||
+en: He it is who in this great kalpa is the son of Vivasvān, known as Śrāddhadeva, and was appointed by Hari to the office of Manu.
+tel: ఆ మహానుభావుడే ఈ మహాకల్పమునందు వివస్వంతుని కుమారుడు. శ్రాద్ధదేవుడని ప్రసిద్ధుడైన అతడు మనువు పదవియందు హరిచే నియమింపబడెను.
+hi: वही इस महाकल्प में विवस्वान् का पुत्र है, जो श्राद्धदेव के नाम से प्रसिद्ध हुआ और जिसे हरि ने मनु के पद पर नियुक्त किया।
 
 --- verse 12 ---
 deva:
@@ -116,6 +149,9 @@ deva:
 iast:
 ekadā kṛtamālāyāṁ kurvato jalatarpaṇam|
 tasyāñjalyudake kācicchapharyekābhyapadyata||
+en: One day, as he was offering water in the river Kṛtamālā, a certain śapharī fish came into the water held in the hollow of his hands.
+tel: ఒకనాడు కృతమాల నదియందు అతడు జలతర్పణమును చేయుచున్నపుడు, అతని దోసిలి జలమునందు ఒక శఫరీ మత్స్యము వచ్చి చేరెను.
+hi: एक दिन कृतमाला नदी में जब वह जल-तर्पण कर रहा था, तब उसकी अंजुली के जल में कोई एक शफरी मछली आ गयी।
 
 --- verse 13 ---
 deva:
@@ -124,6 +160,9 @@ deva:
 iast:
 satyavrato'ñjaligatāṁ saha toyena bhārata|
 utsasarja nadītoye śapharīṁ draviḍeśvaraḥ||
+en: O descendant of Bharata, Satyavrata, the lord of the Draviḍa country, let the śapharī that had come into his hands go into the water of the river, together with the water in his palms.
+tel: భరతవంశజుడా, ద్రవిడేశ్వరుడైన సత్యవ్రతుడు దోసిలిలోనికి వచ్చిన ఆ శఫరీని, జలముతోపాటు నదీజలమునందు విడిచిపెట్టెను.
+hi: हे भारत, द्रविड़ देश के स्वामी सत्यव्रत ने अंजुली में आयी उस शफरी को, जल के साथ ही नदी के जल में छोड़ दिया।
 
 --- verse 14 ---
 deva:
@@ -134,6 +173,9 @@ iast:
 tamāha sātikaruṇaṁ mahākāruṇikaṁ nṛpam|
 yādobhyo jñātighātibhyo dīnāṁ māṁ dīnavatsala|
 kathaṁ visṛjase rājan bhītāmasmin sarijjale||
+en: She spoke to that greatly compassionate king in a most pitiful voice: O you who are kind to the helpless, I am helpless and afraid of the water creatures that kill their own kind. Why, O king, do you let me go into this water of the river?
+tel: ఆ మహాకారుణికుడైన రాజుతో అది మిక్కిలి దీనముగా పలికెను: దీనవత్సలా, తమ జాతివారినే చంపు జలజంతువులకు భయపడుచున్న దీనను నేను. రాజా, భీతిల్లుచున్న నన్ను ఈ నదీజలమునందు ఏలాగున విడిచిపెట్టుచున్నావు?
+hi: उसने उस महाकारुणिक राजा से अत्यन्त दीन वाणी में कहा: हे दीनवत्सल, मैं दीन हूँ और अपनी ही जाति के प्राणियों को मारनेवाले जलजन्तुओं से डरती हूँ। हे राजन्, भयभीत मुझे आप इस नदी के जल में क्यों छोड़ रहे हैं?
 
 --- verse 15 ---
 deva:
@@ -142,6 +184,9 @@ deva:
 iast:
 tamātmano'nugrahārthaṁ prītyā matsyavapurdharam|
 ajānan rakṣaṇārthāya śapharyāḥ sa mano dadhe||
+en: He did not know that the Lord had taken the body of a fish out of love, in order to show him grace. He set his mind on protecting the śapharī.
+tel: తనపై అనుగ్రహము చూపుట కొరకు ప్రీతితో భగవంతుడే మత్స్యశరీరమును ధరించెనని ఎరుగక, అతడు ఆ శఫరీని రక్షించుటకు మనస్సును నిలిపెను.
+hi: अपने ऊपर अनुग्रह करने के लिये भगवान् ने ही प्रेम से मत्स्य का शरीर धारण किया है, यह न जानते हुए उसने उस शफरी की रक्षा में मन लगाया।
 
 --- verse 16 ---
 deva:
@@ -150,6 +195,9 @@ deva:
 iast:
 tasyā dīnataraṁ vākyamāśrutya sa mahīpatiḥ|
 kalaśāpsu nidhāyaināṁ dayālurninya āśramam||
+en: Hearing her most pitiful words, that compassionate lord of the earth placed her in the water of his pot and carried her to his hermitage.
+tel: దాని అతి దీనమైన మాటను విని, దయాళువైన ఆ మహీపతి దానిని కలశములోని జలమునందు ఉంచి, ఆశ్రమమునకు తీసుకొనిపోయెను.
+hi: उसका अत्यन्त दीन वचन सुनकर वह दयालु भूपति उसे कलश के जल में रखकर आश्रम ले गया।
 
 --- verse 17 ---
 deva:
@@ -158,6 +206,9 @@ deva:
 iast:
 sā tu tatraikarātreṇa vardhamānā kamaṇḍalau|
 alabdhvā''tmāvakāśaṁ vā idamāha mahīpatim||
+en: But in a single night she grew in the water pot, and finding no room for herself, she said this to the lord of the earth.
+tel: కాని ఒక్క రాత్రియందే అది కమండలువునందు పెరిగి, తనకు చాలినంత చోటు లభింపక, ఆ మహీపతితో ఇట్లు పలికెను.
+hi: परन्तु एक ही रात में वह कमण्डलु में बढ़ गयी, और अपने लिये स्थान न पाकर उसने उस भूपति से यह कहा।
 
 --- verse 18 ---
 deva:
@@ -166,6 +217,9 @@ deva:
 iast:
 nāhaṁ kamaṇḍalāvasmin kṛcchraṁ vastumihotsahe|
 kalpayaukaḥ suvipulaṁ yatrāhaṁ nivase sukham||
+en: I am not able to live here in this pot in such distress. Make me a very wide dwelling, where I may live in comfort.
+tel: ఈ కమండలువునందు ఇట్టి కష్టముతో నివసించుటకు నేను ఓపను. నేను సుఖముగా నివసించునట్లు మిక్కిలి విశాలమైన నివాసమును కల్పింపుము.
+hi: इस कमण्डलु में इस कष्ट के साथ रहने में मैं समर्थ नहीं हूँ। जहाँ मैं सुख से रह सकूँ, ऐसा बहुत विशाल स्थान बना दीजिये।
 
 --- verse 19 ---
 deva:
@@ -174,6 +228,9 @@ deva:
 iast:
 sa enāṁ tata ādāya nyadhādaudañcanodake|
 tatra kṣiptā muhūrtena hastatrayamavardhata||
+en: He took her from there and placed her in the water of a trough. Put there, within a muhūrta she grew to three hastas.
+tel: అతడు దానిని అక్కడనుండి తీసి ఉదంచనములోని జలమునందు ఉంచెను. అందు ఉంచబడిన అది ఒక ముహూర్తములో మూడు హస్తముల పరిమాణమునకు పెరిగెను.
+hi: उसने उसे वहाँ से लेकर उदञ्चन के जल में रख दिया। वहाँ रखी जाकर वह एक मुहूर्त में तीन हाथ की हो गयी।
 
 --- verse 20 ---
 deva:
@@ -182,6 +239,9 @@ deva:
 iast:
 na ma etadalaṁ rājan sukhaṁ vastumudañcanam|
 pṛthu dehi padaṁ mahyaṁ yat tvāhaṁ śaraṇaṁ gatā||
+en: O king, this trough is not enough for me to live in with comfort. Give me a wide place, for I have come to you for refuge.
+tel: రాజా, సుఖముగా నివసించుటకు ఈ ఉదంచనము నాకు చాలదు. నేను నిన్ను శరణు పొందినదానను; నాకు విశాలమైన స్థానమును ఇమ్ము.
+hi: हे राजन्, सुख से रहने के लिये यह उदञ्चन मेरे लिये पर्याप्त नहीं है। मैंने आपकी शरण ली है, इसलिये मुझे विस्तृत स्थान दीजिये।
 
 --- verse 21 ---
 deva:
@@ -190,6 +250,9 @@ deva:
 iast:
 tata ādāya sā rājñā kṣiptā rājan sarovare|
 tadāvṛtyātmanā so'yaṁ mahāmīno'nvavardhata||
+en: Then, O king, she was taken from there by the king and put into a lake. Covering it with her own body, that great fish went on growing.
+tel: రాజా, పిమ్మట రాజు దానిని అక్కడనుండి తీసి సరోవరమునందు ఉంచెను. తన శరీరముతో దానిని ఆవరించి ఆ మహామత్స్యము మరింత పెరిగెను.
+hi: हे राजन्, तब राजा ने उसे वहाँ से लेकर सरोवर में डाल दिया। अपने शरीर से उसे ढककर वह महामीन और भी बढ़ने लगा।
 
 --- verse 22 ---
 deva:
@@ -198,6 +261,9 @@ deva:
 iast:
 naitanme svastaye rājannudakaṁ salilaukasaḥ|
 nidhehi rakṣāyogena hrade māmavidāsini||
+en: O king, I live in water, and this water is not enough for my well-being. By way of protection, place me in a deep pool that never dries up.
+tel: రాజా, జలవాసినైన నాకు ఈ ఉదకము క్షేమము కొరకు చాలదు. రక్షణ కొరకు ఎన్నడును ఎండిపోని మడుగునందు నన్ను ఉంచుము.
+hi: हे राजन्, मैं जल में रहनेवाली हूँ, और मेरे कल्याण के लिये यह जल पर्याप्त नहीं है। रक्षा के लिये मुझे ऐसे कुण्ड में रखिये जो कभी सूखता नहीं।
 
 --- verse 23 ---
 deva:
@@ -206,6 +272,9 @@ deva:
 iast:
 ityuktaḥ so'nayanmatsyaṁ tatra tatrāvidāsini|
 jalāśaye sammitaṁ taṁ samudre prākṣipajjhaṣam||
+en: Spoken to in this way, he carried the fish from one unfailing reservoir to another; and when it had grown to the full measure of them, he cast that fish into the sea.
+tel: ఇట్లు చెప్పబడిన అతడు ఆ మత్స్యమును ఎండిపోని జలాశయములకు ఒకదాని తరువాత ఒకదానికి తీసుకొనిపోయెను. అది వానికి సమానమైన పరిమాణమును పొందినపుడు, ఆ మత్స్యమును సముద్రమునందు విడిచెను.
+hi: इस प्रकार कहे जाने पर वह उस मत्स्य को एक के बाद एक न सूखनेवाले जलाशय में ले गया; और जब वह उनके बराबर हो गया, तब उस मछली को समुद्र में डाल दिया।
 
 --- verse 24 ---
 deva:
@@ -214,6 +283,9 @@ deva:
 iast:
 kṣipyamāṇastamāhedamiha māṁ makarādayaḥ|
 adantyatibalā vīra māṁ nehotsraṣṭumarhasi||
+en: As it was being put into the sea, the fish said this to him: O hero, the makaras and the other very strong creatures here will eat me. You should not leave me here.
+tel: సముద్రమునందు విడువబడుచున్న ఆ మత్స్యము అతనితో ఇట్లు పలికెను: వీరా, ఇక్కడ మకరములు మొదలైన మిక్కిలి బలవంతములైన జంతువులు నన్ను తినివేయును. నన్ను ఇక్కడ విడిచిపెట్టుట నీకు తగదు.
+hi: डाले जाते समय उस मत्स्य ने उससे यह कहा: हे वीर, यहाँ मकर आदि अत्यन्त बलवान् जन्तु मुझे खा जायेंगे। मुझे यहाँ छोड़ना आपके लिये उचित नहीं है।
 
 --- verse 25 ---
 deva:
@@ -222,6 +294,9 @@ deva:
 iast:
 evaṁ vimohitastena vadatā valgubhāratīm|
 tamāha ko bhavānasmān matsyarūpeṇa mohayan||
+en: Bewildered in this way by the fish, who spoke in such sweet words, the king said to him: Who are you, that bewilder us in the form of a fish?
+tel: మధురమైన వాక్కును పలికిన ఆ మత్స్యముచే ఈ విధముగా మోహితుడైన రాజు దానితో పలికెను: మత్స్యరూపముతో మమ్ము మోహపరచుచున్న నీవు ఎవరు?
+hi: मधुर वाणी बोलनेवाले उस मत्स्य से इस प्रकार मोहित होकर राजा ने उससे कहा: मत्स्य रूप से हमें मोहित करनेवाले आप कौन हैं?
 
 --- verse 26 ---
 deva:
@@ -230,6 +305,9 @@ deva:
 iast:
 naivaṁvīryo jalacaro dṛṣṭo'smābhiḥ śruto'pi ca|
 yo bhavān yojanaśatamahnābhivyānaśe saraḥ||
+en: Never have we seen, nor even heard of, a water creature of such power as you, who in a single day have filled a lake a hundred yojanas across.
+tel: నీవలె ఇట్టి సామర్థ్యము కల జలచరమును మేము చూడలేదు, వినియు ఉండలేదు. నీవు ఒక్క దినములోనే నూరు యోజనముల సరస్సును ఆవరించితివి.
+hi: आप जैसा ऐसा सामर्थ्यवाला जलचर हमने न देखा है और न सुना भी है, जो एक ही दिन में सौ योजन के सरोवर में व्याप्त हो गये।
 
 --- verse 27 ---
 deva:
@@ -238,6 +316,9 @@ deva:
 iast:
 nūnaṁ tvaṁ bhagavān sākṣāddharirnārāyaṇo'vyayaḥ|
 anugrahāya bhūtānāṁ dhatse rūpaṁ jalaukasām||
+en: Surely you are the Lord himself, Hari Nārāyaṇa, who never passes away. To show grace to living beings you take on the form of those that live in water.
+tel: నిశ్చయముగా నీవు సాక్షాత్తు భగవంతుడైన హరి, అవ్యయుడైన నారాయణుడు. ప్రాణులపై అనుగ్రహము కొరకు జలవాసుల రూపమును ధరించుచున్నావు.
+hi: निश्चय ही आप साक्षात् भगवान् हरि, अव्यय नारायण हैं। प्राणियों पर अनुग्रह करने के लिये आप जलचरों का रूप धारण करते हैं।
 
 --- verse 28 ---
 deva:
@@ -246,6 +327,9 @@ deva:
 iast:
 namaste puruṣaśreṣṭha sthityutpattyapyayeśvara|
 bhaktānāṁ naḥ prapannānāṁ mukhyo hyātmagatirvibho||
+en: Salutation to you, best of persons, lord of the preservation, the origin and the end of the world. O all-pervading one, for us who are your devotees and have taken refuge in you, you are the chief goal of the self.
+tel: పురుషశ్రేష్ఠా, స్థితి ఉత్పత్తి ప్రళయములకు ఈశ్వరుడా, నీకు నమస్కారము. విభూ, భక్తులమై నిన్ను శరణు పొందిన మాకు నీవే ముఖ్యమైన ఆత్మగతి.
+hi: हे पुरुषश्रेष्ठ, स्थिति, उत्पत्ति और प्रलय के ईश्वर, आपको नमस्कार है। हे विभो, आपके भक्त और शरणागत हम लोगों के लिये आप ही मुख्य आत्मगति हैं।
 
 --- verse 29 ---
 deva:
@@ -254,6 +338,9 @@ deva:
 iast:
 sarve līlāvatārāste bhūtānāṁ bhūtihetavaḥ|
 jñātumicchāmyado rūpaṁ yadarthaṁ bhavatā dhṛtam||
+en: All your līlā avatāras are the cause of well-being for living beings. I wish to know for what purpose you have taken on this form.
+tel: నీ లీలావతారములన్నియు ప్రాణులకు క్షేమమునకు కారణములు. ఈ రూపమును నీవు ఏ ప్రయోజనము కొరకు ధరించితివో తెలిసికొనగోరుచున్నాను.
+hi: आपके सभी लीलावतार प्राणियों के कल्याण के कारण हैं। यह रूप आपने किस प्रयोजन से धारण किया, यह मैं जानना चाहता हूँ।
 
 --- verse 30 ---
 deva:
@@ -266,6 +353,9 @@ na te'ravindākṣa padopasarpaṇaṁ
 mṛṣā bhavet sarvasuhṛtpriyātmanaḥ|
 yathetareṣāṁ pṛthagātmanāṁ satā-
 madīdṛśo yad vapuradbhutaṁ hi naḥ||
+en: O lotus-eyed one, coming to your feet can never be fruitless, for you are the friend of all and the dear self of all. It is not as with coming to others, who hold themselves to be separate. You have shown us this wonderful form, and that itself is the proof.
+tel: అరవిందాక్షా, నీ పాదములను ఆశ్రయించుట ఎన్నడును వ్యర్థము కాదు. ఏలయన, నీవు సర్వులకు సుహృత్తు, సర్వులకు ప్రియమైన ఆత్మ. తమను వేరుగా భావించు ఇతరులను ఆశ్రయించుటవలె ఇది కాదు. ఈ అద్భుతమైన రూపమును మాకు చూపితివి; అదియే దీనికి నిదర్శనము.
+hi: हे अरविन्दाक्ष, आपके चरणों में आना कभी व्यर्थ नहीं होता, क्योंकि आप सबके सुहृद् और सबके प्रिय आत्मा हैं। अपने को अलग माननेवाले दूसरों के पास जाने के समान यह नहीं है। आपने हमें यह अद्भुत रूप दिखाया, यही इसका प्रमाण है।
 
 --- verse 31 ---
 deva:
@@ -280,6 +370,9 @@ iti bruvāṇaṁ nṛpatiṁ jagatpatiḥ
 satyavrataṁ matsyavapuryugakṣaye|
 vihartukāmaḥ pralayārṇave'bravī-
 ccikīrṣurekāntajanapriyaḥ priyam||
+en: Śrī Śuka said: King Satyavrata spoke in this way. Then the Lord of the world, who had taken the body of a fish, who at the close of the yuga wished to move about in the ocean of dissolution, and who is dear to those devoted to him alone and seeks their good, said to him what was pleasing.
+tel: శ్రీశుకుడు పలికెను: ఈ విధముగా పలికిన సత్యవ్రత మహారాజుతో, మత్స్యశరీరమును ధరించినవాడు, యుగాంతమునందు ప్రలయసముద్రమునందు విహరింపగోరినవాడు, ఏకాంతభక్తులకు ప్రియుడు, వారికి హితమును చేయగోరువాడు అగు జగత్పతి ప్రియమైన మాటను పలికెను.
+hi: श्रीशुकदेवजी ने कहा: इस प्रकार कहनेवाले राजा सत्यव्रत से, मत्स्य का शरीर धारण किये हुए, युग के अन्त में प्रलय-समुद्र में विहार करने की इच्छावाले, एकान्त भक्तों के प्रिय और उनका हित करने की इच्छावाले जगत्पति ने प्रिय वचन कहा।
 
 --- verse 32 ---
 deva:
@@ -290,6 +383,9 @@ iast:
 śrībhagavānuvāca
 saptame'dyatanādūrdhvamahanyetadarindama|
 nimaṅkṣyatyapyayāmbhodhau trailokyaṁ bhūrbhuvādikam||
+en: The blessed Lord said: O subduer of enemies, on the seventh day from today these three worlds, Bhūḥ, Bhuvaḥ and the rest, will sink in the ocean of dissolution.
+tel: శ్రీభగవంతుడు పలికెను: అరిందమా, నేటినుండి ఏడవ దినమునందు భూః భువః మొదలైన ఈ మూడు లోకములు ప్రలయసముద్రమునందు మునిగిపోవును.
+hi: श्रीभगवान् ने कहा: हे अरिन्दम, आज से सातवें दिन भूः, भुवः आदि ये तीनों लोक प्रलय के समुद्र में डूब जायेंगे।
 
 --- verse 33 ---
 deva:
@@ -298,6 +394,9 @@ deva:
 iast:
 trilokyāṁ līyamānāyāṁ saṁvartāmbhasi vai tadā|
 upasthāsyati nauḥ kācid viśālā tvāṁ mayeritā||
+en: Then, when the three worlds are dissolving in the waters of destruction, a certain large boat, sent by me, will come to you.
+tel: ఆ సమయమునందు మూడు లోకములు సంవర్తజలమునందు లీనమగుచుండగా, నాచే పంపబడిన విశాలమైన ఒక నౌక నీ దగ్గరకు వచ్చును.
+hi: तब जब तीनों लोक संवर्त-जल में लीन हो रहे होंगे, मेरे द्वारा भेजी हुई कोई विशाल नौका आपके पास आयेगी।
 
 --- verse 34 ---
 deva:
@@ -306,6 +405,9 @@ deva:
 iast:
 tvaṁ tāvadoṣadhīḥ sarvā bījānyuccāvacāni ca|
 saptarṣibhiḥ parivṛtaḥ sarvasattvopabṛṁhitaḥ||
+en: You, meanwhile, shall take all the herbs and the seeds of the high and the low kinds. You shall be surrounded by the seven sages and accompanied by all the living creatures.
+tel: అప్పటివరకు నీవు ఓషధులన్నిటిని, ఉచ్చనీచ బీజములను గ్రహింపుము. సప్తఋషులచే పరివేష్టితుడవై, సర్వప్రాణులతో కూడి ఉందువు.
+hi: तब तक आप सब ओषधियों और ऊँचे-नीचे प्रकार के बीजों को ले लीजिये। आप सप्तर्षियों से घिरे हुए और सब प्राणियों से युक्त रहेंगे।
 
 --- verse 35 ---
 deva:
@@ -314,6 +416,9 @@ deva:
 iast:
 āruhya bṛhatīṁ nāvaṁ vicariṣyasyaviklavaḥ|
 ekārṇave nirāloke ṛṣīṇāmeva varcasā||
+en: You shall board that great boat and move about without fear in the one ocean, where no light remains, by the splendour of the sages alone.
+tel: ఆ బృహత్తరమైన నౌకను ఎక్కి, వెలుగు లేని ఏకార్ణవమునందు ఋషుల తేజస్సుచేతనే భయము లేక సంచరింతువు.
+hi: आप उस बड़ी नौका पर चढ़कर, प्रकाशहीन एकार्णव में ऋषियों के तेज से ही निर्भय होकर विचरण करेंगे।
 
 --- verse 36 ---
 deva:
@@ -322,6 +427,9 @@ deva:
 iast:
 dodhūyamānāṁ tāṁ nāvaṁ samīreṇa balīyasā|
 upasthitasya me śṛṅge nibadhnīhi mahāhinā||
+en: When that boat is tossed about by a very strong wind, bind it with the great serpent to my horn, for I shall be present there.
+tel: మిక్కిలి బలమైన గాలిచే ఆ నౌక కదలించబడుచున్నపుడు, అక్కడ ఉపస్థితుడనైన నా కొమ్మునకు మహాసర్పముతో దానిని కట్టుము.
+hi: जब वह नौका अत्यन्त प्रबल वायु से डगमगाने लगे, तब वहाँ उपस्थित मेरे सींग से उसे महासर्प के द्वारा बाँध दीजिये।
 
 --- verse 37 ---
 deva:
@@ -330,6 +438,9 @@ deva:
 iast:
 ahaṁ tvāmṛṣibhiḥ sākaṁ sahanāvamudanvati|
 vikarṣan vicariṣyāmi yāvad brāhmī niśā prabho||
+en: O lord, I shall draw you along with the sages and with the boat, and shall move about in the waters as long as the night of Brahmā lasts.
+tel: ప్రభూ, ఋషులతోను నౌకతోను నిన్ను లాగుచు, బ్రాహ్మీ రాత్రి ఎంతకాలము ఉండునో అంతకాలము సముద్రమునందు సంచరింతును.
+hi: हे प्रभो, ऋषियों और नौका के सहित आपको खींचते हुए मैं, जब तक ब्राह्मी रात्रि रहेगी, तब तक जल में विचरण करूँगा।
 
 --- verse 38 ---
 deva:
@@ -338,6 +449,9 @@ deva:
 iast:
 madīyaṁ mahimānaṁ ca paraṁ brahmeti śabditam|
 vetsyasyanugṛhītaṁ me saṁpraśnairvivṛtaṁ hṛdi||
+en: Favoured by me, you will come to know my greatness, which is called the supreme Brahman, made clear in your heart by your own questions.
+tel: నాచే అనుగృహీతుడవై, పరబ్రహ్మమని చెప్పబడిన నా మహిమను, నీ ప్రశ్నలచే హృదయమునందు విశదమైనదానిని, తెలిసికొందువు.
+hi: मेरे द्वारा अनुगृहीत होकर आप परब्रह्म कहलानेवाली मेरी महिमा को जानेंगे, जो आपके प्रश्नों से आपके हृदय में स्पष्ट हो जायेगी।
 
 --- verse 39 ---
 deva:
@@ -346,6 +460,9 @@ deva:
 iast:
 itthamādiśya rājānaṁ harirantaradhīyata|
 so'nvavaikṣata taṁ kālaṁ yaṁ hṛṣīkeśa ādiśat||
+en: Having instructed the king in this way, Hari disappeared. The king waited for that time which Hṛṣīkeśa had appointed.
+tel: ఈ విధముగా రాజునకు ఆదేశించి హరి అంతర్ధానమయ్యెను. హృషీకేశుడు నిర్దేశించిన ఆ కాలమును అతడు ఎదురుచూచుచుండెను.
+hi: इस प्रकार राजा को आदेश देकर हरि अन्तर्धान हो गये। उसने उस समय की प्रतीक्षा की, जिसे हृषीकेश ने बताया था।
 
 --- verse 40 ---
 deva:
@@ -354,6 +471,9 @@ deva:
 iast:
 āstīrya darbhān prākkūlān rājarṣiḥ prāgudaṅmukhaḥ|
 niṣasāda hareḥ pādau cintayan matsyarūpiṇaḥ||
+en: The royal sage spread darbha grass with its tips to the east, and sat facing the north-east, meditating on the feet of Hari who had taken the form of a fish.
+tel: ఆ రాజర్షి తూర్పువైపు కొనలు కల దర్భలను పరచి, ఈశాన్యముఖుడై కూర్చుండి, మత్స్యరూపుడైన హరి పాదములను ధ్యానించెను.
+hi: उस राजर्षि ने पूर्व की ओर नोक वाले दर्भ बिछाये और उत्तर-पूर्व की ओर मुख करके बैठकर मत्स्यरूपी हरि के चरणों का ध्यान किया।
 
 --- verse 41 ---
 deva:
@@ -362,6 +482,9 @@ deva:
 iast:
 tataḥ samudra udvelaḥ sarvataḥ plāvayan mahīm|
 vardhamāno mahāmeghairvarṣadbhiḥ samadṛśyata||
+en: Then the sea was seen to rise beyond its shores, flooding the earth on every side, and swelling with the great clouds that were pouring rain.
+tel: పిమ్మట సముద్రము తన హద్దులను దాటి, అన్నివైపుల భూమిని ముంచివేయుచు, వర్షించుచున్న మహామేఘములచే పెరుగుచు కనిపించెను.
+hi: तब समुद्र अपनी सीमा से बढ़कर, सब ओर पृथ्वी को डुबाता हुआ, और बरसते हुए महामेघों से बढ़ता हुआ दिखाई दिया।
 
 --- verse 42 ---
 deva:
@@ -370,6 +493,9 @@ deva:
 iast:
 dhyāyan bhagavadādeśaṁ dadṛśe nāvamāgatām|
 tāmāruroha viprendrairādāyoṣadhivīrudhaḥ||
+en: Remembering the Lord's command, he saw the boat come. He took the herbs and the creeping plants and boarded it with the best of the brāhmaṇas.
+tel: భగవంతుని ఆదేశమును ధ్యానించుచు అతడు వచ్చుచున్న నౌకను చూచెను. ఓషధులను, వీరుధములను గ్రహించి, విప్రశ్రేష్ఠులతో కూడి దానిని ఎక్కెను.
+hi: भगवान् के आदेश का ध्यान करते हुए उसने आती हुई नौका को देखा। ओषधियों और लताओं को लेकर वह विप्रश्रेष्ठों के साथ उस पर चढ़ गया।
 
 --- verse 43 ---
 deva:
@@ -378,6 +504,9 @@ deva:
 iast:
 tamūcurmunayaḥ prītā rājan dhyāyasva keśavam|
 sa vai naḥ saṁkaṭādasmādavitā śaṁ vidhāsyati||
+en: The sages, well pleased, said to him: O king, meditate on Keśava. He alone will save us from this danger and will bring us well-being.
+tel: ప్రీతులైన ఆ మునులు అతనితో పలికిరి: రాజా, కేశవుని ధ్యానింపుము. ఈ సంకటమునుండి ఆయనయే మమ్ము రక్షించి క్షేమమును కలిగించును.
+hi: प्रसन्न हुए मुनियों ने उससे कहा: हे राजन्, केशव का ध्यान कीजिये। वे ही हमें इस संकट से बचायेंगे और कल्याण करेंगे।
 
 --- verse 44 ---
 deva:
@@ -386,6 +515,9 @@ deva:
 iast:
 so'nudhyātastato rājñā prādurāsīnmahārṇave|
 ekaśṛṅgadharo matsyo haimo niyutayojanaḥ||
+en: Then, meditated upon by the king, he appeared in the great ocean as a golden fish bearing a single horn, one lakh yojanas in size.
+tel: పిమ్మట రాజుచే ధ్యానింపబడిన ఆయన మహాసముద్రమునందు ప్రత్యక్షమయ్యెను. ఒక కొమ్ము కల బంగారు మత్స్యము అది, ఒక లక్ష యోజనముల పరిమాణము కలది.
+hi: तब राजा के ध्यान करने पर वे महासमुद्र में एक सींग धारण करनेवाले, एक लाख योजन के सुवर्ण मत्स्य के रूप में प्रकट हुए।
 
 --- verse 45 ---
 deva:
@@ -394,6 +526,9 @@ deva:
 iast:
 nibadhya nāvaṁ tacchṛṅge yathokto hariṇā purā|
 varatreṇāhinā tuṣṭastuṣṭāva madhusūdanam||
+en: As Hari had told him before, he bound the boat to that horn with the serpent for a rope. Being satisfied, he then praised Madhusūdana.
+tel: పూర్వము హరి చెప్పినట్లుగా, ఆ కొమ్మునకు సర్పమును త్రాడుగా చేసి నౌకను కట్టెను. సంతుష్టుడై అతడు మధుసూదనుని స్తుతించెను.
+hi: पहले हरि ने जैसा कहा था, उसी के अनुसार उसने सर्प की रस्सी से नौका को उस सींग में बाँध दिया। सन्तुष्ट होकर उसने मधुसूदन की स्तुति की।
 
 --- verse 46 ---
 deva:
@@ -408,6 +543,9 @@ anādyavidyopahatātmasaṁvida-
 stanmūlasaṁsārapariśramāturāḥ|
 yadṛcchayehopasṛtā yamāpnuyu-
 rvimuktido naḥ paramo gururbhavān||
+en: The king said: Our knowledge of the self has been struck down by ignorance that has no beginning, and we are worn out by the toil of the worldly life that grows from it. When good fortune brings such people here, they reach you. You are the giver of liberation, and you are our highest guru.
+tel: రాజు పలికెను: ఆదిలేని అవిద్యచే మా ఆత్మజ్ఞానము నశించినది; దానినుండి పుట్టిన సంసారపరిశ్రమముచే మేము బాధింపబడుచున్నాము. అదృష్టవశమున ఇక్కడకు చేరిన అట్టివారు ఎవనిని పొందుదురో, ఆ విముక్తిప్రదాత నీవు; మాకు పరమగురువు నీవే.
+hi: राजा ने कहा: अनादि अविद्या से हमारा आत्मज्ञान नष्ट हो गया है, और उसी से उत्पन्न संसार के परिश्रम से हम व्याकुल हैं। सौभाग्य से यहाँ आ पहुँचे ऐसे लोग जिन्हें प्राप्त करते हैं, वे मुक्ति देनेवाले आप ही हमारे परम गुरु हैं।
 
 --- verse 47 ---
 deva:
@@ -420,6 +558,9 @@ jano'budho'yaṁ nijakarmabandhanaḥ
 sukhecchayā karma samīhate'sukham|
 yatsevayā tāṁ vidhunotyasanmatiṁ
 granthiṁ sa bhindyāddhṛdayaṁ sa no guruḥ||
+en: This ignorant person is bound by his own actions. Wishing for happiness, he does work that brings him sorrow. By service to the Lord he gives up that false understanding. May that Lord cut the knot of the heart. He is our guru.
+tel: ఈ అజ్ఞానియైన జనుడు తన కర్మలచే బంధింపబడినాడు. సుఖమును కోరి, దుఃఖమును కలిగించు కర్మను చేయుచున్నాడు. ఎవని సేవచే ఆ అసద్బుద్ధిని వదలించుకొనునో, ఆయన హృదయమునందలి ముడిని ఛేదించుగాక. ఆయనయే మాకు గురువు.
+hi: यह अज्ञानी जन अपने ही कर्मों से बँधा है। सुख की इच्छा से वह दुःख देनेवाला कर्म करता है। जिनकी सेवा से वह उस असत् बुद्धि को छोड़ देता है, वे हृदय की गाँठ को काट दें। वे ही हमारे गुरु हैं।
 
 --- verse 48 ---
 deva:
@@ -432,6 +573,9 @@ yatsevayāgneriva rudrarodanaṁ
 pumān vijahyānmalamātmanastamaḥ|
 bhajeta varṇaṁ nijameṣa so'vyayo
 bhūyāt sa īśaḥ paramo gurorguruḥ||
+en: As gold gives up its impurity in fire, so by serving the Lord a man gives up the stain of his self, which is darkness, and takes on his own true lustre. May that imperishable Lord, the highest, the guru of gurus, be ours.
+tel: అగ్నియందు బంగారము తన మలమును వదలునట్లు, ఎవని సేవచే మనుష్యుడు తమోరూపమైన ఆత్మమలమును వదలి, తన నిజమైన వర్ణమును పొందునో, ఆ అవ్యయుడైన ఈశ్వరుడు, గురువులకు గురువైన పరమగురువు, మావారు అగుగాక.
+hi: अग्नि में सोना जैसे अपना मल छोड़ देता है, वैसे ही जिनकी सेवा से मनुष्य तमोरूप आत्ममल को छोड़कर अपने निज वर्ण को प्राप्त करता है, वे अव्यय ईश्वर, गुरुओं के गुरु परम गुरु, हमारे हों।
 
 --- verse 49 ---
 deva:
@@ -444,6 +588,9 @@ na yatprasādāyutabhāgaleśa-
 manye ca devā guravo janāḥ svayam|
 kartuṁ sametāḥ prabhavanti puṁsa-
 stamīśvaraṁ tvāṁ śaraṇaṁ prapadye||
+en: The other gods, the gurus and all people, even gathered together, cannot do for a man so much as a particle of the ten thousandth part of the grace that you give. I take refuge in you, that Lord.
+tel: ఇతర దేవతలు, గురువులు, జనులు అందరును కలిసికూడ, నీ ప్రసాదములోని పదివేలవ భాగములో ఒక అంశమునైనను మనుష్యునికి చేయజాలరు. అట్టి ఈశ్వరుడైన నిన్ను నేను శరణు పొందుచున్నాను.
+hi: दूसरे देवता, गुरु और सब जन मिलकर भी मनुष्य के लिये आपके प्रसाद के दस हजारवें भाग का एक अंश भी नहीं कर सकते। उसी ईश्वर आपकी मैं शरण लेता हूँ।
 
 --- verse 50 ---
 deva:
@@ -456,6 +603,9 @@ acakṣurandhasya yathāgraṇīḥ kṛta-
 stathā janasyāviduṣo'budho guruḥ|
 tvamarkadṛk sarvadṛśāṁ samīkṣaṇo
 vṛto gururnaḥ svagatiṁ bubhutsatām||
+en: A blind man is made the leader of one who has no eyes; in the same way an ignorant man becomes the guru of one who does not know. You see like the sun, and you are the one who sees through all eyes. We wish to know our own goal, and we have chosen you as our guru.
+tel: కన్నులు లేనివానికి అంధుడే దారి చూపువాడు అగునట్లు, ఎరుగని జనునికి అజ్ఞానియే గురువు అగుచున్నాడు. నీవు సూర్యునివలె చూచువాడవు, సర్వదృష్టులయందు చూచువాడవు. మా గతిని ఎరుగగోరు మేము నిన్ను గురువుగా వరించితిమి.
+hi: आँखों से रहित मनुष्य का अन्धा ही अग्रणी बना दिया जाता है; उसी प्रकार न जाननेवाले जन का अज्ञानी ही गुरु बन जाता है। आप सूर्य के समान देखनेवाले हैं और सब दृष्टियों में देखनेवाले हैं। अपनी गति जानने की इच्छावाले हमने आपको गुरु के रूप में वरण किया है।
 
 --- verse 51 ---
 deva:
@@ -468,6 +618,9 @@ jano janasyādiśate'satīṁ matiṁ
 yayā prapadyeta duratyayaṁ tamaḥ|
 tvaṁ tvavyayaṁ jñānamamoghamañjasā
 prapadyate yena jano nijaṁ padam||
+en: One man teaches another a false understanding, and by it he falls into darkness that is hard to cross. But you give knowledge that never fails and never passes away, by which a man easily reaches his own true state.
+tel: ఒక జనుడు మరియొక జనునికి అసద్బుద్ధిని ఉపదేశించుచున్నాడు; దానిచే అతడు దాటశక్యము కాని అంధకారమును పొందును. నీవు మాత్రము అవ్యయమైన, అమోఘమైన జ్ఞానమును ఇచ్చుచున్నావు; దానిచే జనుడు సులభముగా తన నిజమైన స్థానమును పొందును.
+hi: एक जन दूसरे जन को असत् बुद्धि सिखाता है, और उससे वह दुस्तर अन्धकार में पड़ जाता है। परन्तु आप अव्यय और अमोघ ज्ञान देते हैं, जिससे जन सहज ही अपने निज पद को प्राप्त करता है।
 
 --- verse 52 ---
 deva:
@@ -480,18 +633,24 @@ tvaṁ sarvalokasya suhṛt priyeśvaro
 hyātmā gururjñānamabhīṣṭasiddhiḥ|
 tathāpi loko na bhavantamandhadhī-
 rjānāti santaṁ hṛdi baddhakāmaḥ||
+en: You are the friend of all the world, the dear Lord, the self, the guru, knowledge itself, and the attaining of what is desired. Yet the world, blind in its understanding and bound by desire, does not know you, though you dwell in its heart.
+tel: నీవు సర్వలోకమునకు సుహృత్తు, ప్రియమైన ఈశ్వరుడు, ఆత్మ, గురువు, జ్ఞానము, అభీష్టసిద్ధి. అయినను అంధబుద్ధి కలవాడు, హృదయమునందు కామముచే కట్టబడినవాడు అగు లోకము, హృదయమునందే ఉన్న నిన్ను ఎరుగడు.
+hi: आप सारे लोक के सुहृद्, प्रिय ईश्वर, आत्मा, गुरु, ज्ञान और अभीष्ट की सिद्धि हैं। तो भी अन्धी बुद्धिवाला और हृदय में काम से बँधा हुआ लोक, हृदय में ही स्थित आपको नहीं जानता।
 
 --- verse 53 ---
 deva:
-तं त्वामहं देववरंवरेण्यं
+तं त्वामहं देववरं वरेण्यं
 प्रपद्य ईशं प्रतिबोधनाय।
 छिन्ध्यर्थदीपैर्भगवन् वचोभि-
 र्ग्रन्थीन् हृदय्यान् विवृणु स्वमोकः॥
 iast:
-taṁ tvāmahaṁ devavaraṁvareṇyaṁ
+taṁ tvāmahaṁ devavaraṁ vareṇyaṁ
 prapadya īśaṁ pratibodhanāya|
 chindhyarthadīpairbhagavan vacobhi-
 rgranthīn hṛdayyān vivṛṇu svamokaḥ||
+en: O best of the gods, most worthy to be chosen, I take refuge in you, the Lord, that you may awaken me. O blessed Lord, cut the knots in my heart with words that are lamps of the true meaning, and reveal to me your own abode.
+tel: దేవశ్రేష్ఠా, వరింపదగినవాడా, ప్రతిబోధము కొరకు ఈశ్వరుడైన ఆ నిన్ను నేను శరణు పొందుచున్నాను. భగవంతుడా, అర్థమునకు దీపములైన వచనములచే నా హృదయములోని ముడులను ఛేదింపుము; నీ స్వస్థానమును తెలియజేయుము.
+hi: हे देवश्रेष्ठ, हे वरेण्य, प्रतिबोध के लिये ईश्वर आपकी मैं शरण लेता हूँ। हे भगवन्, अर्थ के दीपक रूप वचनों से मेरे हृदय की गाँठों को काट दीजिये और अपना निज धाम प्रकट कीजिये।
 
 --- verse 54 ---
 deva:
@@ -502,6 +661,9 @@ iast:
 śrīśuka uvāca
 ityuktavantaṁ nṛpatiṁ bhagavānādipūruṣaḥ|
 matsyarūpī mahāmbhodhau viharaṁstattvamabravīt||
+en: Śrī Śuka said: To the king who had spoken in this way, the Lord, the first Person, in the form of a fish, moving about in the great ocean, told the truth of things.
+tel: శ్రీశుకుడు పలికెను: ఈ విధముగా పలికిన రాజుతో, ఆదిపురుషుడైన భగవంతుడు, మత్స్యరూపుడై మహాసముద్రమునందు విహరించుచు, తత్త్వమును చెప్పెను.
+hi: श्रीशुकदेवजी ने कहा: इस प्रकार कहनेवाले राजा से, आदिपुरुष भगवान् ने, मत्स्यरूप में महासमुद्र में विहार करते हुए, तत्त्व कहा।
 
 --- verse 55 ---
 deva:
@@ -510,6 +672,9 @@ deva:
 iast:
 purāṇasaṁhitāṁ divyāṁ sāṁkhyayogakriyāvatīm|
 satyavratasya rājarṣerātmaguhyamaśeṣataḥ||
+en: To the royal sage Satyavrata he told in full the divine Purāṇa saṁhitā, which holds Sāṁkhya, yoga and ritual action, and the secret of the self.
+tel: సాంఖ్యము, యోగము, క్రియలతో కూడిన దివ్యమైన పురాణసంహితను, ఆత్మగుహ్యమును, సత్యవ్రత రాజర్షికి సంపూర్ణముగా చెప్పెను.
+hi: सांख्य, योग और क्रिया से युक्त दिव्य पुराण-संहिता तथा आत्मा का रहस्य, राजर्षि सत्यव्रत को उन्होंने पूर्ण रूप से कहा।
 
 --- verse 56 ---
 deva:
@@ -518,6 +683,9 @@ deva:
 iast:
 aśrauṣīdṛṣibhiḥ sākamātmatattvamasaṁśayam|
 nāvyāsīno bhagavatā proktaṁ brahma sanātanam||
+en: Seated in the boat with the sages, he heard from the Lord the truth of the self, free from all doubt, and the eternal Brahman.
+tel: నౌకయందు కూర్చుండి, ఋషులతో కూడి, భగవంతునిచే చెప్పబడిన సందేహరహితమైన ఆత్మతత్త్వమును, సనాతనమైన బ్రహ్మమును అతడు వినెను.
+hi: नौका पर बैठे हुए उसने ऋषियों के साथ, भगवान् के द्वारा कहे गये संदेह-रहित आत्मतत्त्व और सनातन ब्रह्म को सुना।
 
 --- verse 57 ---
 deva:
@@ -526,6 +694,9 @@ deva:
 iast:
 atītapralayāpāya utthitāya sa vedhase|
 hatvāsuraṁ hayagrīvaṁ vedān pratyāharaddhariḥ||
+en: When the past dissolution had come to an end and the creator rose again, Hari killed the asura Hayagrīva and brought the Vedas back to him.
+tel: గతించిన ప్రలయము అంతమై బ్రహ్మదేవుడు మరల లేచినపుడు, హరి హయగ్రీవుడను అసురుని సంహరించి, వేదములను ఆయనకు తిరిగి ఇచ్చెను.
+hi: बीते प्रलय के समाप्त होने पर, उठे हुए ब्रह्मा को, हरि ने हयग्रीव असुर को मारकर वेद वापस दिये।
 
 --- verse 58 ---
 deva:
@@ -534,6 +705,9 @@ deva:
 iast:
 sa tu satyavrato rājā jñānavijñānasaṁyutaḥ|
 viṣṇoḥ prasādāt kalpe'sminnāsīd vaivasvato manuḥ||
+en: That king Satyavrata, endowed with knowledge and with discernment, became in this kalpa, by the grace of Viṣṇu, the Manu named Vaivasvata.
+tel: జ్ఞానవిజ్ఞానములు కలిగిన ఆ సత్యవ్రత మహారాజు, విష్ణువు అనుగ్రహమువలన ఈ కల్పమునందు వైవస్వత మనువు అయ్యెను.
+hi: ज्ञान और विज्ञान से युक्त वह राजा सत्यव्रत, विष्णु की कृपा से इस कल्प में वैवस्वत मनु हुआ।
 
 --- verse 59 ---
 deva:
@@ -542,6 +716,9 @@ deva:
 iast:
 satyavratasya rājarṣermāyāmatsyasya śārṅgiṇaḥ|
 saṁvādaṁ mahadākhyānaṁ śrutvā mucyeta kilbiṣāt||
+en: One who hears this great story, the talk between the royal sage Satyavrata and Śārṅgin, who had taken the form of the māyā fish, is freed from sin.
+tel: మాయామత్స్యరూపమును ధరించిన శార్ఙ్గికి, సత్యవ్రత రాజర్షికి జరిగిన సంవాదమును, ఈ మహత్తరమైన ఆఖ్యానమును విన్నవాడు పాపమునుండి విముక్తుడగును.
+hi: मायामत्स्य का रूप धारण करनेवाले शार्ङ्गी और राजर्षि सत्यव्रत के इस संवाद रूप महान् आख्यान को सुनकर मनुष्य पाप से मुक्त हो जाता है।
 
 --- verse 60 ---
 deva:
@@ -550,6 +727,9 @@ deva:
 iast:
 avatāro hareryo'yaṁ kīrtayedanvahaṁ naraḥ|
 saṅkalpāstasya sidhyanti sa yāti paramāṁ gatim||
+en: The man who proclaims this avatāra of Hari every day has his resolves fulfilled, and he goes to the highest state.
+tel: హరి యొక్క ఈ అవతారమును ప్రతిదినము కీర్తించు మనుష్యుని సంకల్పములు సిద్ధించును; అతడు పరమగతిని పొందును.
+hi: हरि के इस अवतार का जो मनुष्य प्रतिदिन कीर्तन करता है, उसके संकल्प सिद्ध होते हैं और वह परम गति को प्राप्त होता है।
 
 --- verse 61 ---
 deva:
@@ -562,9 +742,15 @@ pralayapayasi dhātuḥ suptaśaktermukhebhyaḥ
 śrutigaṇamapanītaṁ pratyupādatta hatvā|
 ditijamakathayad yo brahma satyavratānāṁ
 tamahamakhilahetuṁ jihmamīnaṁ nato'smi||
+en: In the waters of dissolution, when the creator's powers lay asleep, the Vedas were carried away from his mouths. The Lord killed the son of Diti and brought them back, and he declared Brahman to those who hold to truth. I bow to him, the cause of all, who became the fish that moves obliquely.
+tel: ప్రలయజలమునందు బ్రహ్మదేవుని శక్తులు నిద్రించియున్నపుడు, ఆయన ముఖములనుండి వేదములు అపహరింపబడెను. దితిపుత్రుని సంహరించి ఆ వేదములను ఆయన తిరిగి తెచ్చెను; సత్యవ్రతులకు బ్రహ్మమును ఉపదేశించెను. సమస్తమునకు కారణమైన, వక్రముగా పోవు మత్స్యరూపుడైన ఆయనకు నేను నమస్కరించుచున్నాను.
+hi: प्रलय के जल में जब ब्रह्मा की शक्तियाँ सो रही थीं, तब उनके मुखों से वेद हर लिये गये। दिति के पुत्र को मारकर उन्होंने वे वेद वापस लाये, और सत्य के व्रतवालों को ब्रह्म का उपदेश किया। सबके कारण, तिरछे चलनेवाले मत्स्य रूप उन्हीं को मैं नमस्कार करता हूँ।
 
 --- verse none ---
 deva:
 इति श्रीमद्भागवते महापुराणे वैयासिक्यामष्टादशसाहस्र्यां पारमहंस्यां संहितायामष्टमस्कन्धे मत्स्यावतारचरितानुवर्णनं नाम चतुर्विंशोऽध्यायः॥ २४॥
 iast:
 iti śrīmadbhāgavate mahāpurāṇe vaiyāsikyāmaṣṭādaśasāhasryāṁ pāramahaṁsyāṁ saṁhitāyāmaṣṭamaskandhe matsyāvatāracaritānuvarṇanaṁ nāma caturviṁśo'dhyāyaḥ|| 24||
+en: Thus ends the twenty-fourth adhyāya, called the telling of the story of the Matsya avatāra, in the eighth skandha of the Śrīmad Bhāgavata Mahāpurāṇa, the saṁhitā of the paramahaṁsas, made by Vyāsa and of eighteen thousand verses.
+tel: ఇది వ్యాసునిచే రచింపబడిన, పదునెనిమిది వేల శ్లోకముల శ్రీమద్భాగవత మహాపురాణమునందు, పరమహంసల సంహితయందు, అష్టమస్కంధమునందు మత్స్యావతారచరితానువర్ణనమను చతుర్వింశోఽధ్యాయము.
+hi: इस प्रकार व्यास के द्वारा रचित, अठारह हजार श्लोकों की श्रीमद्भागवत महापुराण, पारमहंस्य संहिता के अष्टम स्कन्ध में मत्स्यावतारचरितानुवर्णन नाम का चौबीसवाँ अध्याय समाप्त हुआ।

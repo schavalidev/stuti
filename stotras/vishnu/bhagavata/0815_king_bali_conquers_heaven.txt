@@ -9,7 +9,7 @@ Type: Purāṇa (an adhyāya of the Śrīmad Bhāgavata, Skandha 8)
 
 Source / recension: Base text and authority: the Gītā Press, Gorakhpur Śrīmadbhāgavata Mahāpurāṇa with Hindi translation, Part 1 (Gītā Press code 26), archive.org item `shrimadbhagwat-mahapuran-bhag-1`, printed pages 973–978; the PDF page numbers are the printed ones. The PDF carries the typesetter's own text layer in the Chanakya font encoding, and the text was decoded from it by machine with `bin/bhagavata/chanakya.py`, not read off OCR or typed. The decoder was checked against GRETIL over all twelve skandhas before any file was written, and the differences that remain were sampled and found to be readings of the two editions. Second witness: GRETIL's `sa_bhAgavatapurANa.xml` (IAST, contributed by Ulrich Stiehl), a separate editorial lineage, compared verse by verse by machine. The TTD edition with the commentaries of Śrīdhara, Vīrarāghava and Vijayadhvaja (archive.org `Bhagavata_Purana_With_Multiple_Commentaries_TTD_Critical_Edition`) is the third witness where one is needed; it was not read for this file. The IAST was generated mechanically from the Devanāgarī with `bin/dev2iast.py`.
 
-Recension note: Text-only file, written 1 Oct 2026 at the user's instruction to lay down the whole Bhāgavata first: the English, Telugu and Hindi meanings are still to be added, and the witnesses' differences listed here have been recorded by machine and not yet adjudicated. The print is followed throughout. The print numbers 36 verses; GRETIL numbers 37, so from some point the two editions number the verses differently. Never match them by number. Of the 36 verses GRETIL has under the same number, 21 agree with the print letter for letter once spacing and the spelling of nasals are set aside; the rest differ: 1, 4, 6, 7, 8, 10, 21, 29, 30, 31, 32, 33, 34, 35, 36. The edition's footnotes give these older printed readings (प्रा० पा०), which are not bracketed into the line: at 11, रीमृद्धां; at 12, रम्यां नृप गृहोद्यानैः; at 28, धृतं; at 31, मेवावमा०. Spacing is the print's, as its text layer gives it; in a few places justification has left a space inside a word, and these are still to be closed when the verse is read. The speaker lines (श्रीशुक उवाच and the others) are printed in italic above the verse they introduce, and are given as its first line.
+Recension note: Meanings written 23 Oct 2026 (session S78). The differences between the witnesses listed below were read as the verses were glossed; except where this note says otherwise, each is a spelling, a sandhi or a word order of the two editions, none of them changes the sense, and the print's reading therefore stands unbracketed. The print is followed throughout. The print numbers 36 verses; GRETIL numbers 37, so from some point the two editions number the verses differently. Never match them by number. Of the 36 verses GRETIL has under the same number, 21 agree with the print letter for letter once spacing and the spelling of nasals are set aside; the rest differ: 1, 4, 6, 7, 8, 10, 21, 29, 30, 31, 32, 33, 34, 35, 36. The edition's footnotes give these older printed readings (प्रा० पा०), which are not bracketed into the line: at 11, रीमृद्धां; at 12, रम्यां नृप गृहोद्यानैः; at 28, धृतं; at 31, मेवावमा०. Spacing is the print's, as its text layer gives it. The speaker lines (श्रीशुक उवाच and the others) are printed in italic above the verse they introduce, and are given as its first line. A footnote's numeral keys it to one word, and which word that is cannot be told from the note alone, so those readings stay unbracketed until the page itself is read. One word was put right as the verses were read. At verse 33 the print's text layer had lost the space between निलीनेषु and बलिर्वैरोचनः, and it is restored here. GRETIL reads the two words apart, and निलीनेषु carries its own locative ending, so it cannot be the first member of a compound. The print's spaces after a virāma (एतद् वेदितुम्, अभजद् भृगून्, समन्ताद् रुरुधे) are the print's own and are left as printed, and the line-break hyphens in verses 6, 7, 20, 21 and 23 stay where the print puts them. Where the two editions read differently the print stands: at 8 संनह्य against GRETIL's सन्नह्य, at 21 मुरजर्ष्टि against मुरजेष्ट, and at 28 मघवञ्छत्रोः against मघवन् छत्रोः. Two places have a wrong letter rather than a wrong space, which is an emendation and outside this pass, so the lines are left exactly as printed and the meanings follow the only possible reading: at 1 the print reads भूत्वेश्वरः where GRETIL reads भूतेश्वरः, and the meaning is that he is the Lord of all beings; at 10 the print reads दहद्भि where GRETIL reads दहद्भिः, and the meaning is that the leaders burned the horizons with their eyes. The print's verse 29 holds the second halves of GRETIL's verses 29 and 30, and the two half-verses GRETIL places first are absent from the print; that is why GRETIL numbers 37 verses to the print's 36, and from the print's verse 30 onward GRETIL's number is one higher. At 21 the kind of instrument the print's ऋष्टि names is not certain, and the meaning keeps the name in the place the list gives it.
 
 Verse count: 36, plus the closing colophon printed unnumbered.
 
@@ -24,6 +24,9 @@ iast:
 rājovāca
 baleḥ padatrayaṁ bhūmeḥ kasmāddharirayācata|
 bhūtveśvaraḥ kṛpaṇavallabdhārtho'pi babandha tam||
+en: The king said: Why did Hari beg three paces of ground from Bali? He is the Lord of all beings, yet he begged like a poor man. And why, though he had obtained what he asked for, did he bind Bali?
+tel: రాజు పలికెను: హరి బలి నుండి మూడు అడుగుల భూమిని ఎందుకు అడిగెను? ఆయన సర్వభూతములకు ఈశ్వరుడు, అయినను దీనుని వలె అడిగెను. అడిగినది లభించినను బలిని ఎందుకు బంధించెను?
+hi: राजा ने कहा: श्रीहरि ने बलि से तीन पग भूमि क्यों माँगी? वे सब भूतों के ईश्वर हैं, फिर भी दीन के समान माँगा। और माँगी हुई वस्तु पा लेने पर भी उन्होंने बलि को क्यों बाँधा?
 
 --- verse 2 ---
 deva:
@@ -32,6 +35,9 @@ deva:
 iast:
 etad veditumicchāmo mahat kautūhalaṁ hi naḥ|
 yajñeśvarasya pūrṇasya bandhanaṁ cāpyanāgasaḥ||
+en: We wish to know this, for our wonder is great. The Lord of sacrifice is full in himself, and Bali had done no wrong. How then was Bali bound?
+tel: ఇది తెలిసికొనవలెనని మేము కోరుచున్నాము; మాకు కుతూహలము గొప్పది. యజ్ఞేశ్వరుడు పరిపూర్ణుడు, బలి నిరపరాధి. అట్టి బలి ఎట్లు బంధింపబడెను?
+hi: हम यह जानना चाहते हैं, क्योंकि हमारा कौतूहल बड़ा है। यज्ञेश्वर पूर्ण हैं और बलि निरपराध था। फिर बलि कैसे बाँधा गया?
 
 --- verse 3 ---
 deva:
@@ -46,6 +52,9 @@ parājitaśrīrasubhiśca hāpito
 hīndreṇa rājanbhṛgubhiḥ sa jīvitaḥ|
 sarvātmanā tānabhajad bhṛgūnbaliḥ
 śiṣyo mahātmārthanivedanena||
+en: Śrī Śuka said: O king, Bali had lost his fortune and his life as well at Indra's hands, and the Bhṛgus brought him back to life. That great-souled one then served those Bhṛgus with his whole heart as their disciple, and offered all his wealth to them.
+tel: శ్రీశుకుడు పలికెను: ఓ రాజా, బలి ఇంద్రునిచే సంపదను, ప్రాణములను కూడ కోల్పోయెను; భృగువులు అతనిని తిరిగి బ్రదికించిరి. ఆ మహాత్ముడు శిష్యుడై, తన ధనమునంతను సమర్పించి, పూర్ణహృదయముతో ఆ భృగువులను సేవించెను.
+hi: श्रीशुकदेवजी ने कहा: हे राजन्, बलि ने इन्द्र के हाथ से सम्पत्ति और प्राण भी खो दिये थे, और भृगुवंशियों ने उसे फिर जीवित किया। तब उस महात्मा ने शिष्य बनकर अपना सारा धन समर्पित करके पूर्ण हृदय से उन भृगुवंशियों की सेवा की।
 
 --- verse 4 ---
 deva:
@@ -58,6 +67,9 @@ taṁ brāhmaṇā bhṛgavaḥ prīyamāṇā
 ayājayanviśvajitā triṇākam|
 jigīṣamāṇaṁ vidhinābhiṣicya
 mahābhiṣekeṇa mahānubhāvāḥ||
+en: Those Bhṛgu brāhmaṇas, great in power, were pleased with him. He wished to conquer heaven, so they consecrated him by rule with the great abhiṣeka and had him perform the Viśvajit sacrifice.
+tel: మహానుభావులైన ఆ భృగు బ్రాహ్మణులు అతనిపై ప్రీతి చెందిరి. అతడు స్వర్గమును జయింపగోరెను; అందుచే వారు విధిప్రకారము మహాభిషేకముతో అతనికి అభిషేకము చేసి, విశ్వజిత్ యజ్ఞమును చేయించిరి.
+hi: महान प्रभाववाले उन भृगुवंशी ब्राह्मणों ने उस पर प्रसन्न होकर, स्वर्ग जीतने की इच्छा रखनेवाले उस बलि का विधि के अनुसार महाभिषेक किया और विश्वजित् यज्ञ कराया।
 
 --- verse 5 ---
 deva:
@@ -70,6 +82,9 @@ tato rathaḥ kāñcanapaṭṭanaddho
 hayāśca haryaśvaturaṅgavarṇāḥ|
 dhvajaśca siṁhena virājamāno
 hutāśanādāsa havirbhiriṣṭāt||
+en: Then from the fire, worshipped with oblations, there came a chariot plated with gold, horses of the colour of Indra's own horses, and a banner shining with the figure of a lion.
+tel: పిమ్మట హవిస్సులతో పూజింపబడిన అగ్ని నుండి బంగారు రేకులతో కట్టబడిన రథము, ఇంద్రుని గుఱ్ఱముల వర్ణము కల గుఱ్ఱములు, సింహచిహ్నముతో ప్రకాశించు ధ్వజము కలిగెను.
+hi: तब हवियों से पूजित अग्नि से सोने के पत्तरों से जड़ा रथ, इन्द्र के घोड़ों के रंग के घोड़े, और सिंह के चिह्न से शोभित ध्वज प्रकट हुए।
 
 --- verse 6 ---
 deva:
@@ -82,6 +97,9 @@ dhanuśca divyaṁ puraṭopanaddhaṁ
 tūṇāvariktau kavacaṁ ca divyam|
 pitāmahastasya dadau ca mālā-
 mamlānapuṣpāṁ jalajaṁ ca śukraḥ||
+en: There came also a divine bow covered with gold, two quivers never empty of arrows, and divine armour. His grandfather Prahlāda gave him a garland of flowers that never fade, and Śukra gave him a conch.
+tel: దివ్యమైన, బంగారముతో కూర్చబడిన ధనువు, బాణములు ఎప్పుడును తరగని రెండు అంబులపొదులు, దివ్యమైన కవచము కూడ కలిగెను. అతని తాత ప్రహ్లాదుడు వాడని పుష్పముల మాలను ఇచ్చెను, శుక్రుడు శంఖమును ఇచ్చెను.
+hi: दिव्य और सोने से मढ़ा धनुष, बाणों से कभी रीते न होनेवाले दो तरकश, तथा दिव्य कवच भी प्राप्त हुए। उसके पितामह प्रह्लाद ने कभी न मुरझानेवाले फूलों की माला दी, और शुक्र ने शंख दिया।
 
 --- verse 7 ---
 deva:
@@ -94,6 +112,9 @@ evaṁ sa viprārjitayodhanārtha-
 staiḥ kalpitasvastyayano'tha viprān|
 pradakṣiṇīkṛtya kṛtapraṇāmaḥ
 prahrādamāmantrya namaścakāra||
+en: Having thus received from the brāhmaṇas the means of war, and having had the rites for his welfare performed by them, he walked round those brāhmaṇas, bowed to them, took leave of Prahlāda and saluted him.
+tel: ఈ విధముగా బ్రాహ్మణుల నుండి యుద్ధసాధనములను పొంది, వారిచే మంగళకర్మలను చేయించుకొని, అతడు ఆ బ్రాహ్మణులకు ప్రదక్షిణము చేసి, నమస్కరించి, ప్రహ్లాదుని అనుమతి తీసికొని ఆయనకు నమస్కారము చేసెను.
+hi: इस प्रकार ब्राह्मणों से युद्ध के साधन पाकर और उनसे अपने कल्याण के कर्म कराकर उसने उन ब्राह्मणों की परिक्रमा की, प्रणाम किया, और प्रह्लाद से अनुमति लेकर उन्हें नमस्कार किया।
 
 --- verse 8 ---
 deva:
@@ -102,6 +123,9 @@ deva:
 iast:
 athāruhya rathaṁ divyaṁ bhṛgudattaṁ mahārathaḥ|
 susragdharo'tha saṁnahya dhanvī khaḍgī dhṛteṣudhiḥ||
+en: Then that great warrior mounted the divine chariot given by the Bhṛgus. He put on his armour, wore a beautiful garland, and took up his bow, his sword and his quiver.
+tel: పిమ్మట ఆ మహారథుడు భృగువులు ఇచ్చిన దివ్యరథమును ఎక్కెను. కవచమును ధరించి, మంచి మాలను వేసికొని, ధనువును, ఖడ్గమును, అంబులపొదిని తీసికొనెను.
+hi: तब उस महारथी ने भृगुवंशियों के दिये दिव्य रथ पर चढ़कर कवच पहना, सुन्दर माला धारण की, और धनुष, तलवार तथा तरकश ले लिये।
 
 --- verse 9 ---
 deva:
@@ -110,6 +134,9 @@ deva:
 iast:
 hemāṅgadalasadbāhuḥ sphuranmakarakuṇḍalaḥ|
 rarāja rathamārūḍho dhiṣṇyastha iva havyavāṭ||
+en: His arms shone with golden armlets and his earrings shaped like a makara glittered. Seated in the chariot, he shone like the fire blazing upon its altar.
+tel: బంగారు అంగదములతో అతని బాహువులు ప్రకాశించెను, మకరాకార కుండలములు మెరసెను. రథమును ఎక్కిన అతడు వేదికపై వెలుగుచున్న అగ్ని వలె ప్రకాశించెను.
+hi: सोने के बाजूबंदों से उसकी भुजाएँ चमक रही थीं और मकर के आकार के कुण्डल दमक रहे थे। रथ पर बैठा वह वेदी पर जलती अग्नि के समान शोभित हुआ।
 
 --- verse 10 ---
 deva:
@@ -118,6 +145,9 @@ deva:
 iast:
 tulyaiśvaryabalaśrībhiḥ svayūthairdaityayūthapaiḥ|
 pibadbhiriva khaṁ dṛgbhirdahadbhi paridhīniva||
+en: The leaders of the daitya hosts, his own men, were equal to him in lordship, in strength and in splendour. With their eyes they seemed to drink up the sky and to burn the horizons.
+tel: అతని సొంత సైన్యములైన దైత్యయూథపతులు ఐశ్వర్యములో, బలములో, శోభలో అతనితో సమానులు. వారు తమ చూపులతో ఆకాశమును పానము చేయునట్లు, దిగంతములను దహించునట్లు ఉండిరి.
+hi: उसके अपने दैत्यसेनापति ऐश्वर्य, बल और शोभा में उसके समान थे। वे अपनी दृष्टि से आकाश को पी जाते से और दिशाओं के छोरों को जलाते से थे।
 
 --- verse 11 ---
 deva:
@@ -126,6 +156,9 @@ deva:
 iast:
 vṛto vikarṣan mahatīmāsurīṁ dhvajinīṁ vibhuḥ|
 yayāvindrapurīṁ svṛddhāṁ kampayanniva rodasī||
+en: Surrounded by them, that mighty one drew along the great army of the asuras. He marched upon Indra's city, rich in every way, and seemed to make heaven and earth tremble.
+tel: వారితో చుట్టబడి ఆ విభుడు గొప్ప అసురసేనను వెంట తీసికొనిపోయెను. మిక్కిలి సమృద్ధమైన ఇంద్రపురిపైకి నడచి, ఆకాశమును భూమిని కంపింపజేయునట్లు ఉండెను.
+hi: उनसे घिरा हुआ वह समर्थ बलि असुरों की उस बड़ी सेना को खींचते हुए चला। अत्यन्त समृद्ध इन्द्रपुरी पर उसने चढ़ाई की, और ऐसा लगा कि वह आकाश और पृथ्वी को कँपा रहा है।
 
 --- verse 12 ---
 deva:
@@ -134,6 +167,9 @@ deva:
 iast:
 ramyāmupavanodyānaiḥ śrīmadbhirnandanādibhiḥ|
 kūjadvihaṅgamithunairgāyanmattamadhuvrataiḥ||
+en: That city was beautiful with splendid groves and gardens, Nandana and the rest. In them pairs of birds called sweetly and bees drunk with honey hummed their songs.
+tel: ఆ పురి నందనము మొదలైన శోభాయమానమైన ఉపవనములతో, ఉద్యానములతో రమణీయముగా ఉండెను. అందు పక్షుల జంటలు కూజితము చేయుచుండెను, మధుపానమత్తమైన తుమ్మెదలు పాడుచుండెను.
+hi: वह नगरी नन्दन आदि शोभामय उपवनों और उद्यानों से रमणीय थी। उनमें पक्षियों के जोड़े मीठी बोली बोलते थे और मधु से मतवाले भौंरे गुंजार करते थे।
 
 --- verse 13 ---
 deva:
@@ -144,6 +180,9 @@ iast:
 pravālaphalapuṣporubhāraśākhāmaradrumaiḥ|
 haṁsasārasacakrāhvakāraṇḍavakulākulāḥ|
 nalinyo yatra krīḍanti pramadāḥ surasevitāḥ||
+en: Its trees of the gods had branches bowed under a great weight of shoots, fruits and flowers. In it were lotus ponds crowded with flocks of swans, cranes, cakravākas and kāraṇḍavas, and in them the beautiful women attended by the gods played.
+tel: అందలి అమరవృక్షముల కొమ్మలు చిగురులు, పండ్లు, పుష్పముల గొప్ప భారముతో వంగియుండెను. హంసలు, సారసములు, చక్రవాకములు, కారండవముల గుంపులతో నిండిన తామరకొలనులు ఉండెను; వానియందు దేవతలు సేవించు సుందరీమణులు క్రీడించుచుండిరి.
+hi: वहाँ के देववृक्षों की शाखाएँ कोंपलों, फलों और फूलों के बड़े भार से झुकी थीं। हंस, सारस, चक्रवाक और कारण्डव के झुंडों से भरी कमल की बावड़ियाँ थीं, जिनमें देवताओं से सेवित सुन्दर स्त्रियाँ क्रीडा करती थीं।
 
 --- verse 14 ---
 deva:
@@ -152,6 +191,9 @@ deva:
 iast:
 ākāśagaṅgayā devyā vṛtāṁ parikhabhūtayā|
 prākāreṇāgnivarṇena sāṭṭālenonnatena ca||
+en: The city was encircled by the divine Gaṅgā of the sky, which served as its moat, and by a high rampart of the colour of fire, with watchtowers upon it.
+tel: ఆ పురిని పరిఖగా మారిన దివ్యమైన ఆకాశగంగ చుట్టియుండెను; అగ్నివర్ణము కల ఎత్తైన ప్రాకారము అట్టాలములతో చుట్టియుండెను.
+hi: उस नगरी को खाई बनी हुई दिव्य आकाशगंगा घेरे हुए थी, और अट्टालिकाओंवाला ऊँचा तथा अग्नि के रंग का परकोटा घेरे हुए था।
 
 --- verse 15 ---
 deva:
@@ -160,6 +202,9 @@ deva:
 iast:
 rukmapaṭṭakapāṭaiśca dvāraiḥ sphaṭikagopuraiḥ|
 juṣṭāṁ vibhaktaprapathāṁ viśvakarmavinirmitām||
+en: It had gateways with doors plated with gold and towers of crystal. Its broad roads were well laid out, and it was built by Viśvakarmā.
+tel: బంగారు రేకుల తలుపులు కల ద్వారములు, స్ఫటికమయ గోపురములు దానికి ఉండెను. దాని వీథులు చక్కగా విభజింపబడియుండెను; అది విశ్వకర్మచే నిర్మింపబడినది.
+hi: उसमें सोने के पत्तरों से जड़े किवाड़ोंवाले द्वार और स्फटिक के गोपुर थे। उसकी चौड़ी सड़कें ठीक-ठीक बँटी हुई थीं, और वह विश्वकर्मा के द्वारा बनाई गई थी।
 
 --- verse 16 ---
 deva:
@@ -168,6 +213,9 @@ deva:
 iast:
 sabhācatvararathyāḍhyāṁ vimānairnyarbudairyutām|
 śṛṅgāṭakairmaṇimayairvajravidrumavedibhiḥ||
+en: It was rich in assembly halls, courtyards and streets, and was filled with nyarbudas of aerial mansions. Its crossroads were set with gems, and its platforms were of diamond and coral.
+tel: అది సభలతో, చత్వరములతో, రథ్యలతో సమృద్ధముగా ఉండెను; న్యర్బుద విమానములతో నిండియుండెను. దాని శృంగాటకములు మణిమయములు, వేదికలు వజ్రములతో పగడములతో చేయబడినవి.
+hi: वह सभाओं, चौकों और सड़कों से भरी थी और न्यर्बुद विमानों से युक्त थी। उसके चौराहे मणियों के थे और वेदिकाएँ हीरे तथा मूँगे की थीं।
 
 --- verse 17 ---
 deva:
@@ -176,6 +224,9 @@ deva:
 iast:
 yatra nityavayorūpāḥ śyāmā virajavāsasaḥ|
 bhrājante rūpavannāryo hyarcirbhiriva vahnayaḥ||
+en: There shone women of lovely form whose youth and beauty never change. They were dark in hue and clad in spotless garments, and they shone as fires shine with their flames.
+tel: అందు ఎప్పుడును మారని వయస్సు, రూపము కల సుందరాకారులైన స్త్రీలు ప్రకాశించుచుండిరి. వారు శ్యామవర్ణులు, నిర్మలమైన వస్త్రములు ధరించినవారు; జ్వాలలతో అగ్నులు ప్రకాశించునట్లు వారు ప్రకాశించుచుండిరి.
+hi: वहाँ ऐसी सुन्दर स्त्रियाँ शोभित थीं जिनकी अवस्था और रूप कभी नहीं बदलते। वे श्याम वर्ण की थीं और निर्मल वस्त्र पहने थीं, और ज्वालाओं से प्रकाशित अग्नियों के समान शोभती थीं।
 
 --- verse 18 ---
 deva:
@@ -184,6 +235,9 @@ deva:
 iast:
 surastrīkeśavibhraṣṭanavasaugandhikasrajām|
 yatrāmodamupādāya mārga āvāti mārutaḥ||
+en: There the wind blew along the roads, taking up the fragrance of the fresh saugandhika garlands that had fallen from the hair of the women of the gods.
+tel: దేవస్త్రీల కేశముల నుండి జారిన క్రొత్త సౌగంధిక మాలల పరిమళమును గ్రహించి, అందు మార్గములలో వాయువు వీచుచుండెను.
+hi: वहाँ देवांगनाओं के केशों से गिरी नई सौगन्धिक मालाओं की सुगन्ध लेकर वायु मार्गों में बहती थी।
 
 --- verse 19 ---
 deva:
@@ -192,6 +246,9 @@ deva:
 iast:
 hemajālākṣanirgacchaddhūmenāgurugandhinā|
 pāṇḍureṇa praticchannamārge yānti surapriyāḥ||
+en: White smoke scented with aguru came out through the lattices of the golden windows and covered the roads. Along those roads the beloved women of the gods walked.
+tel: బంగారు జాలకముల కిటికీల నుండి అగురు వాసన కల తెల్లని ధూమము వెలువడి మార్గములను కప్పుచుండెను. ఆ మార్గములలో దేవప్రియలు నడచుచుండిరి.
+hi: सोने की जालीदार खिड़कियों से अगुरु की गन्धवाला सफेद धुआँ निकलकर मार्गों को ढक लेता था। उन मार्गों पर देवताओं की प्रियाएँ चलती थीं।
 
 --- verse 20 ---
 deva:
@@ -204,6 +261,9 @@ muktāvitānairmaṇihemaketubhi-
 rnānāpatākāvalabhībhirāvṛtām|
 śikhaṇḍipārāvatabhṛṅganāditāṁ
 vaimānikastrīkalagītamaṅgalām||
+en: The city was covered with canopies of pearls, with flagstaffs of gems and gold, with banners of many kinds and with turrets. It rang with the cries of peacocks and pigeons and with the humming of bees, and it was made auspicious by the sweet singing of the women who move in the aerial cars.
+tel: ఆ పురి ముక్తావితానములతో, మణిమయ బంగారు కేతువులతో, నానావిధ పతాకములతో, వలభులతో కప్పబడియుండెను. నెమళ్ళు, పారావతములు, తుమ్మెదల ధ్వనులతో మ్రోగుచుండెను; విమానములలో సంచరించు స్త్రీల మధురగీతములతో మంగళకరముగా ఉండెను.
+hi: वह नगरी मोतियों के चँदोवों, मणि और सोने के ध्वजदण्डों, नाना प्रकार की पताकाओं और छज्जों से ढकी थी। वह मोरों, कबूतरों और भौंरों के शब्द से गूँजती थी, और विमानों में चलनेवाली स्त्रियों के मधुर गान से मंगलमय थी।
 
 --- verse 21 ---
 deva:
@@ -216,6 +276,9 @@ mṛdaṅgaśaṅkhānakadundubhisvanaiḥ
 satālavīṇāmurajarṣṭiveṇubhiḥ|
 nṛtyaiḥ savādyairupadevagītakai-
 rmanoramāṁ svaprabhayā jitaprabhām||
+en: It was delightful with the sounds of mṛdaṅgas, conches, ānakas and dundubhis, with cymbals, vīṇās, murajas, ṛṣṭis and flutes, with dances, with music and with the songs of the upadevas. By its own light it had overcome every other light.
+tel: మృదంగములు, శంఖములు, ఆనకములు, దుందుభుల ధ్వనులతో, తాళములు, వీణలు, మురజములు, ఋష్టులు, వేణువులతో, నృత్యములతో, వాద్యములతో, ఉపదేవతల గీతములతో అది మనోహరముగా ఉండెను. తన ప్రభచే అది ఇతర ప్రభను జయించియుండెను.
+hi: वह मृदंग, शंख, आनक और दुन्दुभि के शब्दों से, ताल, वीणा, मुरज, ऋष्टि और वेणु से, नृत्यों से, वाद्यों से और उपदेवताओं के गीतों से मनोहर थी। अपनी प्रभा से उसने दूसरी सारी प्रभा को जीत लिया था।
 
 --- verse 22 ---
 deva:
@@ -224,6 +287,9 @@ deva:
 iast:
 yāṁ na vrajantyadharmiṣṭhāḥ khalā bhūtadruhaḥ śaṭhāḥ|
 māninaḥ kāmino lubdhā ebhirhīnā vrajanti yat||
+en: To that city the unrighteous do not go, nor the cruel, nor those who harm other beings, nor the deceitful, nor the proud, nor the lustful, nor the greedy. Those who are free of these faults go there.
+tel: ఆ పురికి అధర్మిష్ఠులు పోరు, ఖలులు పోరు, ప్రాణులను హింసించువారు పోరు, శఠులు పోరు, గర్విష్ఠులు, కాముకులు, లుబ్ధులు పోరు. ఈ దోషములు లేనివారు అందు పోవుదురు.
+hi: उस नगरी में अधर्मी नहीं जाते, न क्रूर, न प्राणियों को सतानेवाले, न कपटी, न अभिमानी, न कामी, न लोभी। इन दोषों से रहित लोग वहाँ जाते हैं।
 
 --- verse 23 ---
 deva:
@@ -236,6 +302,9 @@ tāṁ devadhānīṁ sa varūthinīpati-
 rbahiḥ samantād rurudhe pṛtanyayā|
 ācāryadattaṁ jalajaṁ mahāsvanaṁ
 dadhmau prayuñjanbhayamindrayoṣitām||
+en: That lord of armies laid siege with his host to the city of the gods on every side from without. He blew the loud conch given by his teacher, and struck fear into the women of Indra's city.
+tel: ఆ సేనాపతి తన సైన్యముతో దేవధానిని బయట నుండి అంతటను ముట్టడించెను. ఆచార్యుడు ఇచ్చిన మహాధ్వని కల శంఖమును ఊది, ఇంద్రుని స్త్రీలకు భయమును కలిగించెను.
+hi: उस सेनापति ने अपनी सेना से देवधानी को बाहर से चारों ओर घेर लिया। आचार्य के दिये महान शब्दवाले शंख को बजाकर उसने इन्द्र की स्त्रियों में भय उत्पन्न किया।
 
 --- verse 24 ---
 deva:
@@ -244,6 +313,9 @@ deva:
 iast:
 maghavāṁstamabhipretya baleḥ paramamudyamam|
 sarvadevagaṇopeto gurumetaduvāca ha||
+en: Indra understood this great effort of Bali. Attended by all the hosts of the gods, he spoke thus to his teacher.
+tel: బలి యొక్క ఈ గొప్ప ఉద్యమమును ఇంద్రుడు గ్రహించెను. సర్వదేవగణములతో కూడి, గురువుతో ఇట్లు పలికెను.
+hi: इन्द्र ने बलि के इस बड़े उद्यम को समझ लिया। सब देवगणों के साथ उसने अपने गुरु से यह कहा।
 
 --- verse 25 ---
 deva:
@@ -252,6 +324,9 @@ deva:
 iast:
 bhagavannudyamo bhūyānbalernaḥ pūrvavairiṇaḥ|
 aviṣahyamimaṁ manye kenāsīttejasorjitaḥ||
+en: Revered teacher, great is this effort of Bali, our old enemy. I think it cannot be withstood. By whose power has he grown so strong?
+tel: పూజ్యుడా, మా పూర్వవైరి అయిన బలి యొక్క ఈ ఉద్యమము గొప్పది. ఇది సహింప శక్యము కాదని నేను తలంచుచున్నాను. ఎవని తేజముచే ఇతడు ఇంత బలవంతుడయ్యెను?
+hi: भगवन्, हमारे पुराने शत्रु बलि का यह उद्यम बड़ा है। मैं इसे सहने योग्य नहीं मानता। किसके तेज से यह इतना बलवान हो गया?
 
 --- verse 26 ---
 deva:
@@ -262,6 +337,9 @@ iast:
 nainaṁ kaścit kuto vāpi prativyoḍhumadhīśvaraḥ|
 pibanniva mukhenedaṁ lihanniva diśo daśa|
 dahanniva diśo dṛgbhiḥ saṁvartāgnirivotthitaḥ||
+en: No one anywhere is able to stand against him. He seems to drink up this world with his mouth, to lick the ten quarters, and to burn the quarters with his eyes. He has risen like the fire that destroys the world.
+tel: ఇతనిని ఎదిరింప ఎక్కడను ఎవ్వరును సమర్థులు కారు. ఇతడు నోటితో ఈ లోకమును పానము చేయునట్లు, పది దిక్కులను నాకునట్లు, చూపులతో దిక్కులను దహించునట్లు ఉన్నాడు. సంవర్తాగ్ని వలె పైకి లేచినాడు.
+hi: इसे रोकने में कहीं कोई समर्थ नहीं है। यह मुँह से इस जगत् को पी जाता सा, दसों दिशाओं को चाटता सा, और दृष्टि से दिशाओं को जलाता सा है। यह प्रलय की अग्नि के समान उठा है।
 
 --- verse 27 ---
 deva:
@@ -270,6 +348,9 @@ deva:
 iast:
 brūhi kāraṇametasya durdharṣatvasya madripoḥ|
 ojaḥ saho balaṁ tejo yata etatsamudyamaḥ||
+en: Tell me the reason my enemy is so hard to overcome. From where has he got this vigour, this endurance, this strength and this power, from which this great effort has come?
+tel: నా శత్రువు యొక్క ఈ దుర్ధర్షత్వమునకు కారణమును చెప్పుము. ఈ ఓజస్సు, సహస్సు, బలము, తేజస్సు ఇతనికి ఎక్కడ నుండి కలిగెను? వానిచే ఈ గొప్ప ఉద్యమము ఏర్పడినది.
+hi: मेरे शत्रु के इस दुर्धर्षपने का कारण बताइये। यह ओज, सहनशक्ति, बल और तेज इसे कहाँ से मिला, जिससे यह बड़ा उद्यम हुआ है?
 
 --- verse 28 ---
 deva:
@@ -280,6 +361,9 @@ iast:
 gururuvāca
 jānāmi maghavañchatrorunnaterasya kāraṇam|
 śiṣyāyopabhṛtaṁ tejo bhṛgubhirbrahmavādibhiḥ||
+en: The teacher said: Indra, I know the cause of this rise of your enemy. The Bhṛgus, who are versed in the Veda, have given their own power to their disciple.
+tel: గురువు పలికెను: మఘవా, నీ శత్రువు యొక్క ఈ ఉన్నతికి కారణమును నేను ఎరుగుదును. బ్రహ్మవాదులైన భృగువులు తమ తేజమును తమ శిష్యునికి ఇచ్చిరి.
+hi: गुरु ने कहा: हे मघवन्, तुम्हारे शत्रु की इस उन्नति का कारण मैं जानता हूँ। ब्रह्मवादी भृगुवंशियों ने अपना तेज अपने शिष्य को दे दिया है।
 
 --- verse 29 ---
 deva:
@@ -288,6 +372,9 @@ deva:
 iast:
 bhavadvidho bhavānvāpi varjayitveśvaraṁ harim|
 nāsya śaktaḥ puraḥ sthātuṁ kṛtāntasya yathā janāḥ||
+en: Apart from the Lord Hari, neither one like you nor you yourself is able to stand before him, just as men cannot stand before death.
+tel: ఈశ్వరుడైన హరిని తప్ప, నీవంటివాడు గాని నీవు గాని ఇతని ఎదుట నిలువ శక్తుడు కాడు; కృతాంతుని ఎదుట జనులు నిలువలేనట్లే.
+hi: ईश्वर श्रीहरि को छोड़कर न तुम्हारे समान कोई, न स्वयं तुम इसके सामने ठहरने में समर्थ हो, जैसे मनुष्य मृत्यु के सामने नहीं ठहर सकते।
 
 --- verse 30 ---
 deva:
@@ -296,6 +383,9 @@ deva:
 iast:
 tasmānnilayamutsṛjya yūyaṁ sarve triviṣṭapam|
 yāta kālaṁ pratīkṣanto yataḥ śatrorviparyayaḥ||
+en: Therefore let all of you leave your dwelling, Triviṣṭapa, and go away, awaiting the time when your enemy's fortune will turn.
+tel: అందుచే మీరందరు మీ నివాసమైన త్రివిష్టపమును వదలి, శత్రువునకు విపర్యయము కలుగు కాలమును ఎదురుచూచుచు వెళ్ళిపొండు.
+hi: इसलिये तुम सब अपने निवास त्रिविष्टप को छोड़कर चले जाओ, और उस समय की प्रतीक्षा करो जब शत्रु की दशा उलट जाएगी।
 
 --- verse 31 ---
 deva:
@@ -304,6 +394,9 @@ deva:
 iast:
 eṣa viprabalodarkaḥ sampratyūrjitavikramaḥ|
 teṣāmevāpamānena sānubandho vinaṅkṣyati||
+en: His present strength and his great valour have come from the power of the brāhmaṇas. By insulting those very brāhmaṇas he will perish, and his followers with him.
+tel: ఇతని ప్రస్తుత బలము, ఊర్జితమైన విక్రమము విప్రుల తేజము వలన కలిగినవి. ఆ విప్రులనే అవమానించుటచే ఇతడు తన అనుబంధముతో పాటు నశించును.
+hi: इसका यह बल और बढ़ा हुआ पराक्रम ब्राह्मणों के तेज से आया है। उन्हीं ब्राह्मणों का अपमान करने से यह अपने अनुयायियों के साथ नष्ट हो जाएगा।
 
 --- verse 32 ---
 deva:
@@ -312,14 +405,20 @@ deva:
 iast:
 evaṁ sumantritārthāste guruṇārthānudarśinā|
 hitvā triviṣṭapaṁ jagmurgīrvāṇāḥ kāmarūpiṇaḥ||
+en: Thus well advised by their teacher, who showed them what was good for them, the gods, who can take any form they wish, left Triviṣṭapa and went away.
+tel: ఈ విధముగా హితమును చూపిన గురువుచే చక్కగా ఉపదేశింపబడిన ఆ దేవతలు, కామరూపులైనవారు, త్రివిష్టపమును విడిచి వెళ్ళిపోయిరి.
+hi: इस प्रकार हित दिखानेवाले गुरु से भली सलाह पाकर, इच्छा के अनुसार रूप धारण करनेवाले वे देवता त्रिविष्टप को छोड़कर चले गये।
 
 --- verse 33 ---
 deva:
-देवेष्वथ निलीनेषुबलिर्वैरोचनः पुरीम्।
+देवेष्वथ निलीनेषु बलिर्वैरोचनः पुरीम्।
 देवधानीमधिष्ठाय वशं निन्ये जगत्त्रयम्॥
 iast:
-deveṣvatha nilīneṣubalirvairocanaḥ purīm|
+deveṣvatha nilīneṣu balirvairocanaḥ purīm|
 devadhānīmadhiṣṭhāya vaśaṁ ninye jagattrayam||
+en: When the gods had thus gone into hiding, Bali, the son of Virocana, took possession of Devadhānī, the city of the gods, and brought the three worlds under his rule.
+tel: దేవతలు ఇట్లు దాగిపోయిన పిమ్మట, విరోచనుని కుమారుడైన బలి దేవధాని అను ఆ పురిని ఆక్రమించి, మూడు లోకములను తన వశము చేసికొనెను.
+hi: देवताओं के इस प्रकार छिप जाने पर विरोचन के पुत्र बलि ने देवताओं की नगरी देवधानी पर अधिकार कर लिया और तीनों लोकों को अपने वश में कर लिया।
 
 --- verse 34 ---
 deva:
@@ -328,6 +427,9 @@ deva:
 iast:
 taṁ viśvajayinaṁ śiṣyaṁ bhṛgavaḥ śiṣyavatsalāḥ|
 śatena hayamedhānāmanuvratamayājayan||
+en: The Bhṛgus were fond of their disciple. He had now conquered the world and remained obedient to them, and they had him perform a hundred horse sacrifices.
+tel: శిష్యవత్సలులైన భృగువులు, విశ్వమును జయించి తమకు అనువర్తియైన ఆ శిష్యునిచే నూరు అశ్వమేధములను చేయించిరి.
+hi: शिष्य पर स्नेह रखनेवाले भृगुवंशियों ने विश्वविजयी और अपने अनुकूल रहनेवाले उस शिष्य से सौ अश्वमेध यज्ञ कराये।
 
 --- verse 35 ---
 deva:
@@ -336,6 +438,9 @@ deva:
 iast:
 tatastadanubhāvena bhuvanatrayaviśrutām|
 kīrtiṁ dikṣu vitanvānaḥ sa reja uḍurāḍiva||
+en: Then by the power of those sacrifices he spread in every direction a fame known through the three worlds, and he shone like the moon, the lord of the stars.
+tel: పిమ్మట ఆ యజ్ఞముల ప్రభావముచే అతడు ముల్లోకములలో ప్రసిద్ధమైన కీర్తిని దిక్కులయందు వ్యాపింపజేసి, నక్షత్రములకు రాజైన చంద్రుని వలె ప్రకాశించెను.
+hi: तब उन यज्ञों के प्रभाव से उसने तीनों लोकों में प्रसिद्ध कीर्ति को दिशाओं में फैलाया, और नक्षत्रों के राजा चन्द्रमा के समान शोभित हुआ।
 
 --- verse 36 ---
 deva:
@@ -344,9 +449,15 @@ deva:
 iast:
 bubhuje ca śriyaṁ svṛddhāṁ dvijadevopalambhitām|
 kṛtakṛtyamivātmānaṁ manyamāno mahāmanāḥ||
+en: That high-minded one enjoyed the abundant fortune obtained through the brāhmaṇas, who are gods on earth, and he thought of himself as one who had accomplished all that was to be done.
+tel: ఆ మహామనస్కుడు భూమిపై దేవతలైన ద్విజుల ద్వారా లభించిన సమృద్ధమైన శ్రీని అనుభవించెను; తనను కృతకృత్యునిగా భావించుకొనెను.
+hi: उस महामना ने भूदेव ब्राह्मणों के द्वारा प्राप्त हुई समृद्ध सम्पत्ति का भोग किया, और अपने को कृतकृत्य के समान मानता रहा।
 
 --- verse none ---
 deva:
 इति श्रीमद्भागवते महापुराणे पारमहंस्यां संहितायामष्टमस्कन्धे पञ्चदशोऽध्यायः॥ १५॥
 iast:
 iti śrīmadbhāgavate mahāpurāṇe pāramahaṁsyāṁ saṁhitāyāmaṣṭamaskandhe pañcadaśo'dhyāyaḥ|| 15||
+en: Thus ends the fifteenth adhyāya in the eighth skandha of the Śrīmad Bhāgavata Mahāpurāṇa, the saṁhitā of the paramahaṁsas.
+tel: ఇది శ్రీమద్భాగవత మహాపురాణమునందు, పరమహంసల సంహితయందు, అష్టమస్కంధమునందు పంచదశాధ్యాయము సమాప్తము.
+hi: इस प्रकार श्रीमद्भागवत महापुराण की परमहंसों की संहिता के अष्टम स्कन्ध में पन्द्रहवाँ अध्याय समाप्त हुआ।

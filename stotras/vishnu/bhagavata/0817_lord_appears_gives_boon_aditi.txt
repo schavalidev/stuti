@@ -9,7 +9,7 @@ Type: Purāṇa (an adhyāya of the Śrīmad Bhāgavata, Skandha 8)
 
 Source / recension: Base text and authority: the Gītā Press, Gorakhpur Śrīmadbhāgavata Mahāpurāṇa with Hindi translation, Part 1 (Gītā Press code 26), archive.org item `shrimadbhagwat-mahapuran-bhag-1`, printed pages 984–988; the PDF page numbers are the printed ones. The PDF carries the typesetter's own text layer in the Chanakya font encoding, and the text was decoded from it by machine with `bin/bhagavata/chanakya.py`, not read off OCR or typed. The decoder was checked against GRETIL over all twelve skandhas before any file was written, and the differences that remain were sampled and found to be readings of the two editions. Second witness: GRETIL's `sa_bhAgavatapurANa.xml` (IAST, contributed by Ulrich Stiehl), a separate editorial lineage, compared verse by verse by machine. The TTD edition with the commentaries of Śrīdhara, Vīrarāghava and Vijayadhvaja (archive.org `Bhagavata_Purana_With_Multiple_Commentaries_TTD_Critical_Edition`) is the third witness where one is needed; it was not read for this file. The IAST was generated mechanically from the Devanāgarī with `bin/dev2iast.py`.
 
-Recension note: Text-only file, written 1 Oct 2026 at the user's instruction to lay down the whole Bhāgavata first: the English, Telugu and Hindi meanings are still to be added, and the witnesses' differences listed here have been recorded by machine and not yet adjudicated. The print is followed throughout. The print numbers 28 verses and GRETIL numbers 28. Of the 28 verses GRETIL has under the same number, 21 agree with the print letter for letter once spacing and the spelling of nasals are set aside; the rest differ: 2, 4, 10, 13, 14, 18, 23. Spacing is the print's, as its text layer gives it; in a few places justification has left a space inside a word, and these are still to be closed when the verse is read. The speaker lines (श्रीशुक उवाच and the others) are printed in italic above the verse they introduce, and are given as its first line.
+Recension note: Meanings written 23 Oct 2026 (session S78). The differences between the witnesses listed below were read as the verses were glossed; except where this note says otherwise, each is a spelling, a sandhi or a word order of the two editions, none of them changes the sense, and the print's reading therefore stands unbracketed. The print is followed throughout. The print numbers 28 verses and GRETIL numbers 28. Of the 28 verses GRETIL has under the same number, 21 agree with the print letter for letter once spacing and the spelling of nasals are set aside; the rest differ: 2, 4, 10, 13, 14, 18, 23. Spacing is the print's, as its text layer gives it. The speaker lines (श्रीशुक उवाच and the others) are printed in italic above the verse they introduce, and are given as its first line. At verse 14 the print's text layer reads द्रुष्टुम्, which is no word; the only possible reading is द्रष्टुम्, to see, which GRETIL also has. A wrong letter is an emendation and not part of this pass, so the line stands as printed and the meaning follows द्रष्टुम्. At verse 23 GRETIL reads अमाहितमना where the print reads समाहितमना, and the print's reading is the one the sentence requires. No space needed closing or restoring here: every space the print has falls after a virāma consonant or after a visarga it separates by habit, and the two places where GRETIL has a word break and the print has none are ordinary compounds of an indeclinable (एवंरूपम् at verse 19, अन्तःपतितं at verse 27), which read as they stand. The line-break hyphens at verses 6, 10 and 27 are left where the print puts them.
 
 Verse count: 28, plus the closing colophon printed unnumbered.
 
@@ -24,6 +24,9 @@ iast:
 śrīśuka uvāca
 ityuktā sāditī rājansvabhartrā kaśyapena vai|
 anvatiṣṭhad vratamidaṁ dvādaśāhamatandritā||
+en: Śrī Śuka said: O king, being instructed in this way by her own husband Kaśyapa, Aditi kept this vow for twelve days without any slackness.
+tel: శ్రీశుకుడు పలికెను: ఓ రాజా, తన భర్తయైన కశ్యపునిచే ఈ విధముగా చెప్పబడిన అదితి, ఆలస్యము లేకుండ పన్నెండు దినములు ఈ వ్రతమును ఆచరించెను.
+hi: श्रीशुकदेवजी ने कहा: हे राजन्, अपने पति कश्यप के इस प्रकार कहने पर अदिति ने आलस्य छोड़कर बारह दिन तक इस व्रत का आचरण किया।
 
 --- verse 2 ---
 deva:
@@ -32,6 +35,9 @@ deva:
 iast:
 cintayantyekayā buddhyā mahāpuruṣamīśvaram|
 pragṛhyendriyaduṣṭāśvānmanasā buddhisārathiḥ||
+en: With undivided intelligence she thought of the great Person, the Lord. Her intelligence was the charioteer, and with the mind she held in the wicked horses of the senses.
+tel: ఏకమైన బుద్ధితో ఆమె మహాపురుషుడైన ఈశ్వరుని ధ్యానించెను. బుద్ధియే సారథిగా, మనస్సుతో దుష్టములైన ఇంద్రియములనే గుర్రములను ఆమె నిగ్రహించెను.
+hi: एक ही बुद्धि से उन्होंने महापुरुष ईश्वर का चिन्तन किया। बुद्धि सारथि थी, और मन से उन्होंने इन्द्रियों के दुष्ट घोड़ों को रोक लिया।
 
 --- verse 3 ---
 deva:
@@ -40,6 +46,9 @@ deva:
 iast:
 manaścaikāgrayā buddhyā bhagavatyakhilātmani|
 vāsudeve samādhāya cacāra ha payovratam||
+en: With one-pointed intelligence she fixed the mind on the blessed Lord Vāsudeva, the Self of all, and kept the payovrata.
+tel: ఏకాగ్రమైన బుద్ధితో, సర్వాత్మకుడైన భగవంతుడు వాసుదేవునియందు మనస్సును నిలిపి ఆమె పయోవ్రతమును ఆచరించెను.
+hi: एकाग्र बुद्धि से मन को सर्वात्मा भगवान् वासुदेव में लगाकर उन्होंने पयोव्रत का आचरण किया।
 
 --- verse 4 ---
 deva:
@@ -48,6 +57,9 @@ deva:
 iast:
 tasyāḥ prādurabhūttāta bhagavānādipūruṣaḥ|
 pītavāsāścaturbāhuḥ śaṅkhacakragadādharaḥ||
+en: Dear child, the blessed Lord, the first Person, appeared before her. He was clothed in yellow, he had four arms, and he bore the conch, the discus and the mace.
+tel: వత్సా, ఆమెయెదుట భగవంతుడు ఆదిపూరుషుడు ప్రత్యక్షమాయెను. ఆయన పీతవస్త్రము ధరించినవాడు, నాలుగు చేతులు కలవాడు, శంఖము చక్రము గదలను ధరించినవాడు.
+hi: हे वत्स, उनके सामने भगवान् आदिपूरुष प्रकट हुए। वे पीतवस्त्र धारण किये हुए, चार भुजाओं वाले, और शंख, चक्र तथा गदा धारण करने वाले थे।
 
 --- verse 5 ---
 deva:
@@ -56,6 +68,9 @@ deva:
 iast:
 taṁ netragocaraṁ vīkṣya sahasotthāya sādaram|
 nanāma bhuvi kāyena daṇḍavat prītivihvalā||
+en: Seeing him before her eyes, she rose at once with reverence. Overcome with love, she laid her body on the ground like a staff and bowed to him.
+tel: ఆయనను కన్నులయెదుట చూచి ఆమె వెంటనే ఆదరముతో లేచెను. ప్రీతితో పరవశురాలై, దండమువలె శరీరమును నేలపై ఉంచి నమస్కరించెను.
+hi: उन्हें अपने नेत्रों के सामने देखकर वे सहसा आदर के साथ उठ खड़ी हुईं। प्रेम से विह्वल होकर उन्होंने दण्ड के समान शरीर को भूमि पर रखकर प्रणाम किया।
 
 --- verse 6 ---
 deva:
@@ -68,6 +83,9 @@ sotthāya baddhāñjalirīḍituṁ sthitā
 notseha ānandajalākulekṣaṇā|
 babhūva tūṣṇīṁ pulakākulākṛti-
 staddarśanātyutsavagātravepathuḥ||
+en: She rose and stood with joined palms to praise him, but she was not able to speak, for her eyes were filled with tears of joy. She remained silent. Her body was covered with thrill, and her limbs trembled from the great joy of seeing him.
+tel: ఆమె లేచి, స్తుతించుటకు చేతులు జోడించి నిలిచెను; కాని ఆనందబాష్పములతో నిండిన కన్నులు కలిగి ఆమె పలుకజాలకపోయెను. ఆమె మౌనముగా ఉండెను. పులకలతో నిండిన శరీరము కలిగి, ఆయన దర్శనపు మహోత్సవముచే అవయవములు కంపించుచుండెను.
+hi: वे उठकर स्तुति करने के लिये हाथ जोड़कर खड़ी हो गईं, परन्तु आनन्द के आँसुओं से भरे नेत्रों के कारण कुछ कह न सकीं। वे चुप रह गईं। उनका शरीर रोमांच से भर गया, और उनके दर्शन के महान् हर्ष से उनके अंग काँपने लगे।
 
 --- verse 7 ---
 deva:
@@ -80,6 +98,9 @@ prītyā śanairgadgadayā girā hariṁ
 tuṣṭāva sā devyaditiḥ kurūdvaha|
 udvīkṣatī sā pibatīva cakṣuṣā
 ramāpatiṁ yajñapatiṁ jagatpatim||
+en: O best of the Kurus, that goddess Aditi praised Hari slowly, in words faltering with love. Gazing up at the Lord of Ramā, the Lord of sacrifice, the Lord of the world, she seemed to drink him in with her eyes.
+tel: ఓ కురుశ్రేష్ఠా, ఆ దేవి అదితి ప్రీతితో గద్గదమైన మాటలతో మెల్లగా హరిని స్తుతించెను. రమాపతిని, యజ్ఞపతిని, జగత్పతిని పైకి చూచుచు, ఆమె కన్నులతో ఆయనను త్రాగుచున్నట్లు ఉండెను.
+hi: हे कुरुश्रेष्ठ, उन देवी अदिति ने प्रेम से गद्गद वाणी में धीरे धीरे हरि की स्तुति की। रमापति, यज्ञपति और जगत्पति को ऊपर देखती हुई वे नेत्रों से उन्हें पीती हुई सी जान पड़ीं।
 
 --- verse 8 ---
 deva:
@@ -94,6 +115,9 @@ yajñeśa yajñapuruṣācyuta tīrthapāda
 tīrthaśravaḥ śravaṇamaṅgalanāmadheya|
 āpannalokavṛjinopaśamodayādya
 śaṁ naḥ kṛdhīśa bhagavannasi dīnanāthaḥ||
+en: Aditi said: Lord of sacrifice, Person of the sacrifice, Acyuta, your feet are the holy places, your fame is holy, and your name is a blessing to hear. O first one, you appear in order to quell the sorrow of the people who have come to you for shelter. Grant us well-being, O ruler. O blessed Lord, you are the protector of the helpless.
+tel: అదితి పలికెను: యజ్ఞేశా, యజ్ఞపురుషా, అచ్యుతా, నీ పాదములే తీర్థములు, నీ కీర్తి పవిత్రము, నీ నామము వినుటయే మంగళము. ఓ ఆద్యుడా, శరణు వచ్చిన జనుల దుఃఖమును శమింపజేయుటకే నీవు ఉదయించువాడవు. ఈశా, మాకు శుభము కలిగింపుము. భగవన్, నీవు దీనులకు నాథుడవు.
+hi: अदिति ने कहा: हे यज्ञेश, हे यज्ञपुरुष, हे अच्युत, आपके चरण तीर्थ हैं, आपका यश पवित्र है, और आपका नाम सुनने से ही मंगल होता है। हे आद्य, शरण में आये हुए लोगों के दुःख को शान्त करने के लिये ही आप प्रकट होते हैं। हे ईश, हमारा कल्याण कीजिये। हे भगवन्, आप दीनों के नाथ हैं।
 
 --- verse 9 ---
 deva:
@@ -106,6 +130,9 @@ viśvāya viśvabhavanasthitisaṁyamāya
 svairaṁ gṛhītapuruśaktiguṇāya bhūmne|
 svasthāya śaśvadupabṛṁhitapūrṇabodha-
 vyāpāditātmatamase haraye namaste||
+en: You are the universe. You are the coming into being, the maintenance and the withdrawal of the universe. Of your own will you take on the many powers and the guṇas. You are without limit, and you abide in yourself. In you the darkness of the self is driven away by full knowledge that grows for ever. Salutation to you, Hari.
+tel: నీవు విశ్వమే. విశ్వముయొక్క ఉత్పత్తి, స్థితి, సంహారము నీవే. స్వేచ్ఛగా నీవు అనేక శక్తులను, గుణములను స్వీకరించువాడవు. నీవు అంతము లేనివాడవు, నీయందే నిలిచినవాడవు. ఎల్లప్పుడు పెరుగుచున్న పూర్ణజ్ఞానముచే నీయందు ఆత్మయందలి అంధకారము నశించినది. హరీ, నీకు నమస్కారము.
+hi: आप विश्व हैं। विश्व की उत्पत्ति, स्थिति और संहार आप ही हैं। आप अपनी इच्छा से बहुत सी शक्तियों और गुणों को ग्रहण करते हैं। आप अनन्त हैं और अपने में ही स्थित हैं। सदा बढ़ते हुए पूर्ण ज्ञान से आपमें आत्मा का अन्धकार नष्ट हो गया है। हे हरि, आपको नमस्कार है।
 
 --- verse 10 ---
 deva:
@@ -118,6 +145,9 @@ iast:
 rdyaubhūrasāḥ sakalayogaguṇāstrivargaḥ|
 jñānaṁ ca kevalamananta bhavanti tuṣṭāt
 tvatto nṛṇāṁ kimu sapatnajayādirāśīḥ||
+en: O endless one, when you are pleased, men obtain the fullest length of life, the body they wish for, fortune that has no equal, heaven, earth and the nether world, all the powers of yoga, the three ends of life, and pure knowledge. What then is a blessing such as victory over rivals?
+tel: ఓ అనంతుడా, నీవు సంతోషించినపుడు మనుష్యులకు పరమాయువు, కోరిన శరీరము, సాటిలేని సంపద, స్వర్గము, భూమి, రసాతలము, యోగగుణములన్నియు, త్రివర్గము, కేవలజ్ఞానము కలుగును. అట్టియెడ శత్రుజయము మొదలైన ఆశీర్వాదము ఎంత?
+hi: हे अनन्त, आपके प्रसन्न होने पर मनुष्यों को परम आयु, मनचाहा शरीर, अतुलनीय लक्ष्मी, स्वर्ग, पृथ्वी और रसातल, योग के सब गुण, त्रिवर्ग और केवल ज्ञान प्राप्त होते हैं। तब शत्रुओं पर विजय आदि का वर क्या है?
 
 --- verse 11 ---
 deva:
@@ -128,6 +158,9 @@ iast:
 śrīśuka uvāca
 adityaivaṁ stuto rājanbhagavānpuṣkarekṣaṇaḥ|
 kṣetrajñaḥ sarvabhūtānāmiti hovāca bhārata||
+en: Śrī Śuka said: O king, praised in this way by Aditi, the lotus-eyed blessed Lord, who knows the field in all beings, said this, O descendant of Bharata.
+tel: శ్రీశుకుడు పలికెను: ఓ రాజా, అదితిచే ఈ విధముగా స్తుతింపబడిన పుష్కరేక్షణుడైన భగవంతుడు, సర్వభూతములలో క్షేత్రజ్ఞుడైనవాడు, ఓ భారతా, ఇట్లు పలికెను.
+hi: श्रीशुकदेवजी ने कहा: हे राजन्, अदिति के इस प्रकार स्तुति करने पर कमलनयन भगवान्, जो सब भूतों के क्षेत्रज्ञ हैं, हे भरतवंशी, यह बोले।
 
 --- verse 12 ---
 deva:
@@ -138,6 +171,9 @@ iast:
 śrībhagavānuvāca
 devamātarbhavatyā me vijñātaṁ cirakāṅkṣitam|
 yat sapatnairhṛtaśrīṇāṁ cyāvitānāṁ svadhāmataḥ||
+en: The blessed Lord said: Mother of the gods, I know what you have long wished for. It concerns your sons, whose fortune has been carried off by their rivals and who have been cast down from their own abode.
+tel: శ్రీభగవంతుడు పలికెను: దేవమాతా, నీవు చిరకాలము కోరినది నాకు తెలిసినది. శత్రువులచే సంపద హరింపబడి, తమ స్థానము నుండి పడద్రోయబడిన నీ పుత్రులను గూర్చినదే అది.
+hi: श्रीभगवान् ने कहा: हे देवमाता, आपकी चिरकाल से की हुई कामना मैं जानता हूँ। वह आपके उन पुत्रों के विषय में है, जिनकी लक्ष्मी शत्रुओं ने हर ली और जो अपने धाम से गिरा दिये गये हैं।
 
 --- verse 13 ---
 deva:
@@ -146,6 +182,9 @@ deva:
 iast:
 tānvinirjitya samare durmadānasurarṣabhān|
 pratilabdhajayaśrībhiḥ putrairicchasyupāsitum||
+en: You wish to be served by those sons, when they have conquered in battle those arrogant bulls among the Asuras and have won back the fortune of victory.
+tel: యుద్ధమున మదించిన ఆ అసురశ్రేష్ఠులను జయించి, జయలక్ష్మిని తిరిగి పొందిన ఆ పుత్రులచే సేవింపబడవలెనని నీవు కోరుచున్నావు.
+hi: युद्ध में उन मदमत्त असुरश्रेष्ठों को जीतकर और जय की लक्ष्मी को फिर पा लेने पर उन पुत्रों से सेवा पाने की आपकी इच्छा है।
 
 --- verse 14 ---
 deva:
@@ -154,6 +193,9 @@ deva:
 iast:
 indrajyeṣṭhaiḥ svatanayairhatānāṁ yudhi vidviṣām|
 striyo rudantīrāsādya druṣṭumicchasi duḥkhitāḥ||
+en: You wish to go to the wives of the enemies who are slain in battle by your own sons with Indra at their head, and to see them weeping and stricken with grief.
+tel: ఇంద్రుడు మొదలైన నీ పుత్రులచే యుద్ధమున చంపబడిన శత్రువుల భార్యలను చేరి, రోదించుచు దుఃఖించుచున్న వారిని చూడవలెనని నీవు కోరుచున్నావు.
+hi: इन्द्र आदि अपने पुत्रों के द्वारा युद्ध में मारे गये शत्रुओं की स्त्रियों के पास जाकर, रोती हुई और दुःखी उन स्त्रियों को देखने की आपकी इच्छा है।
 
 --- verse 15 ---
 deva:
@@ -162,6 +204,9 @@ deva:
 iast:
 ātmajānsusamṛddhāṁstvaṁ pratyāhṛtayaśaḥ śriyaḥ|
 nākapṛṣṭhamadhiṣṭhāya krīḍato draṣṭumicchasi||
+en: You wish to see your sons prosperous, their fame and fortune recovered, seated on the heights of heaven and playing there.
+tel: బాగుగా సమృద్ధిని పొంది, కీర్తిని సంపదను తిరిగి పొందిన నీ పుత్రులు స్వర్గశిఖరమున నిలిచి క్రీడించుచుండుట చూడవలెనని నీవు కోరుచున్నావు.
+hi: भलीभाँति समृद्ध और अपने यश तथा लक्ष्मी को फिर पा चुके अपने पुत्रों को स्वर्ग के शिखर पर बैठकर क्रीड़ा करते देखने की आपकी इच्छा है।
 
 --- verse 16 ---
 deva:
@@ -174,6 +219,9 @@ prāyo'dhunā te'surayūthanāthā
 apāraṇīyā iti devi me matiḥ|
 yatte'nukūleśvaravipraguptā
 na vikramastatra sukhaṁ dadāti||
+en: O goddess, my judgment is that these leaders of the Asura hosts cannot now be overcome for the most part, because they are guarded by the Lord, who is favourable to them, and by the brāhmaṇas. Against them valour does not give happiness.
+tel: ఓ దేవీ, ఇప్పుడు ఈ అసురసేనానాయకులను ఎక్కువగా జయింపశక్యము కాదని నా అభిప్రాయము; ఏలయన వారికి అనుకూలుడైన ఈశ్వరునిచే, బ్రాహ్మణులచే వారు రక్షింపబడియున్నారు. వారియందు పరాక్రమము సుఖమును ఇవ్వదు.
+hi: हे देवी, मेरा मत है कि इस समय ये असुरसेनाओं के नायक प्रायः जीते नहीं जा सकते, क्योंकि वे अपने अनुकूल ईश्वर और ब्राह्मणों से सुरक्षित हैं। उनके विषय में पराक्रम सुख नहीं देता।
 
 --- verse 17 ---
 deva:
@@ -186,6 +234,9 @@ athāpyupāyo mama devi cintyaḥ
 santoṣitasya vratacaryayā te|
 mamārcanaṁ nārhati gantumanyathā
 śraddhānurūpaṁ phalahetukatvāt||
+en: Even so, O goddess, I must think of a means, for I have been pleased by your keeping of the vow. Worship offered to me cannot go without fruit, because it gives fruit according to the faith with which it is done.
+tel: అయినను ఓ దేవీ, నీ వ్రతాచరణముచే సంతోషించిన నేను ఒక ఉపాయమును ఆలోచింపవలెను. నాకు చేసిన అర్చన ఫలము లేకుండ పోజాలదు; ఏలయన అది శ్రద్ధకు అనురూపముగా ఫలమును ఇచ్చునది.
+hi: तो भी हे देवी, आपके व्रत के आचरण से प्रसन्न हुए मुझे कोई उपाय सोचना है। मेरी अर्चना निष्फल नहीं जा सकती, क्योंकि वह श्रद्धा के अनुरूप फल देने वाली है।
 
 --- verse 18 ---
 deva:
@@ -198,6 +249,9 @@ tvayārcitaścāhamapatyaguptaye
 payovratenānuguṇaṁ samīḍitaḥ|
 svāṁśena putratvamupetya te sutān
 goptāsmi mārīcatapasyadhiṣṭhitaḥ||
+en: You have worshipped me with the payovrata for the protection of your children, and you have praised me as is fitting. Therefore I shall take birth as your son through my own portion, and resting on the tapas of Kaśyapa, the son of Marīci, I shall protect your sons.
+tel: సంతానరక్షణము కోరి నీవు పయోవ్రతముచే నన్ను అర్చించితివి, యోగ్యముగా స్తుతించితివి. అందుచే నా అంశముతో నీకు పుత్రుడనై, మారీచుడైన కశ్యపుని తపస్సునందు నిలిచి నీ పుత్రులను రక్షించెదను.
+hi: सन्तान की रक्षा के लिये आपने पयोव्रत से मेरी अर्चना की और यथायोग्य स्तुति की। इसलिये मैं अपने अंश से आपका पुत्र होकर, मरीचि के पुत्र कश्यप के तप में स्थित होकर आपके पुत्रों की रक्षा करूँगा।
 
 --- verse 19 ---
 deva:
@@ -206,6 +260,9 @@ deva:
 iast:
 upadhāva patiṁ bhadre prajāpatimakalmaṣam|
 māṁ ca bhāvayatī patyāvevaṁrūpamavasthitam||
+en: O good lady, worship your husband, the sinless Prajāpati, and think of me as present in your husband in this very form.
+tel: ఓ భద్రా, నిష్కల్మషుడైన ప్రజాపతి అగు నీ భర్తను ఉపాసింపుము; ఈ రూపముతోనే భర్తయందు నిలిచియున్న నన్ను భావన చేయుము.
+hi: हे भद्रे, अपने पति निष्कल्मष प्रजापति की उपासना करो, और इसी रूप में पति में स्थित मेरी भावना करो।
 
 --- verse 20 ---
 deva:
@@ -214,6 +271,9 @@ deva:
 iast:
 naitat parasmā ākhyeyaṁ pṛṣṭayāpi kathañcana|
 sarvaṁ sampadyate devi devaguhyaṁ susaṁvṛtam||
+en: This is not to be told to another in any way, even if you are asked. O goddess, a secret of the gods that is kept well brings everything to fulfilment.
+tel: అడిగినను ఎట్టి విధముగాను ఇది ఇతరులకు చెప్పకూడదు. ఓ దేవీ, బాగుగా దాచబడిన దేవగుహ్యము సమస్తమును సిద్ధింపజేయును.
+hi: पूछने पर भी यह बात किसी प्रकार दूसरे से नहीं कहनी चाहिये। हे देवी, भलीभाँति छिपाया हुआ देवगुह्य सब कुछ सिद्ध कर देता है।
 
 --- verse 21 ---
 deva:
@@ -224,6 +284,9 @@ iast:
 śrīśuka uvāca
 etāvaduktvā bhagavāṁstatraivāntaradhīyata|
 aditirdurlabhaṁ labdhvā harerjanmātmani prabhoḥ||
+en: Śrī Śuka said: Having said this much, the blessed Lord disappeared on that very spot. Aditi obtained the birth of Hari, the Lord, in herself, which is very hard to obtain.
+tel: శ్రీశుకుడు పలికెను: ఇంత చెప్పి భగవంతుడు అక్కడనే అంతర్ధానమాయెను. ప్రభువైన హరి తనయందు జన్మించుట అను దుర్లభమైనదానిని అదితి పొందెను.
+hi: श्रीशुकदेवजी ने कहा: इतना कहकर भगवान् वहीं अन्तर्धान हो गये। अदिति ने प्रभु हरि का अपने में जन्म, जो अत्यन्त दुर्लभ है, प्राप्त कर लिया।
 
 --- verse 22 ---
 deva:
@@ -232,6 +295,9 @@ deva:
 iast:
 upādhāvat patiṁ bhaktyā parayā kṛtakṛtyavat|
 sa vai samādhiyogena kaśyapastadabudhyata||
+en: She then served her husband with the highest devotion, like one whose work is accomplished. And Kaśyapa came to know of this by the yoga of samādhi.
+tel: పిమ్మట కృతకృత్యురాలివలె ఆమె పరమభక్తితో భర్తను సేవించెను. కశ్యపుడు సమాధియోగముచే దానిని తెలిసికొనెను.
+hi: तब कृतकृत्य की भाँति उन्होंने परम भक्ति से अपने पति की सेवा की। और कश्यप ने समाधियोग से इसे जान लिया।
 
 --- verse 23 ---
 deva:
@@ -242,6 +308,9 @@ iast:
 praviṣṭamātmani hareraṁśaṁ hyavitathekṣaṇaḥ|
 so'dityāṁ vīryamādhatta tapasā cirasaṁbhṛtam|
 samāhitamanā rājandāruṇyagniṁ yathānilaḥ||
+en: His vision was never false, and he knew that a portion of Hari had entered into himself. O king, with a concentrated mind he placed in Aditi that energy which he had long gathered by tapas, as the wind places fire in wood.
+tel: అవితథమైన దృష్టి కలిగిన ఆయన, హరి అంశము తనయందు ప్రవేశించినదని ఎరిగెను. ఓ రాజా, సమాహితమైన మనస్సుతో, తపస్సుచే చిరకాలము సంచితమైన వీర్యమును, గాలి కట్టెలో అగ్నిని ఉంచునట్లు, ఆయన అదితియందు ఉంచెను.
+hi: उनकी दृष्टि कभी मिथ्या नहीं होती थी, और उन्होंने जाना कि हरि का अंश उनमें प्रवेश कर गया है। हे राजन्, समाहित मन से उन्होंने तप से चिरकाल तक संचित वीर्य को, जैसे वायु काष्ठ में अग्नि को रखता है, अदिति में स्थापित किया।
 
 --- verse 24 ---
 deva:
@@ -250,6 +319,9 @@ deva:
 iast:
 aditerdhiṣṭhitaṁ garbhaṁ bhagavantaṁ sanātanam|
 hiraṇyagarbho vijñāya samīḍe guhyanāmabhiḥ||
+en: Hiraṇyagarbha knew that the eternal blessed Lord had taken his place as the child in Aditi's womb, and he praised him with secret names.
+tel: అదితి గర్భమునందు నిలిచిన సనాతనుడైన భగవంతుని ఎరిగి, హిరణ్యగర్భుడు గుహ్యనామములతో ఆయనను స్తుతించెను.
+hi: अदिति के गर्भ में स्थित सनातन भगवान् को जानकर हिरण्यगर्भ ने गुह्य नामों से उनकी स्तुति की।
 
 --- verse 25 ---
 deva:
@@ -260,6 +332,9 @@ iast:
 brahmovāca
 jayorugāya bhagavannurukrama namo'stu te|
 namo brahmaṇyadevāya triguṇāya namo namaḥ||
+en: Brahmā said: Victory to you, Urugāya. Urukrama, blessed Lord, salutation to you. Salutation to the god who favours the brāhmaṇas. Salutation again and again to him who holds the three guṇas.
+tel: బ్రహ్మ పలికెను: ఉరుగాయా, నీకు జయము. ఉరుక్రమా, భగవన్, నీకు నమస్కారము. బ్రహ్మణ్యదేవునికి నమస్కారము. త్రిగుణుడైనవానికి మరల మరల నమస్కారము.
+hi: ब्रह्माजी ने कहा: हे उरुगाय, आपकी जय हो। हे उरुक्रम, हे भगवन्, आपको नमस्कार है। ब्रह्मण्यदेव को नमस्कार है। त्रिगुण को बार बार नमस्कार है।
 
 --- verse 26 ---
 deva:
@@ -268,6 +343,9 @@ deva:
 iast:
 namaste pṛśnigarbhāya vedagarbhāya vedhase|
 trinābhāya tripṛṣṭhāya śipiviṣṭāya viṣṇave||
+en: Salutation to you, Pṛśnigarbha, Vedagarbha, the creator. Salutation to Trinābha, to Tripṛṣṭha, to Śipiviṣṭa, to Viṣṇu.
+tel: పృశ్నిగర్భా, వేదగర్భా, విధాతా, నీకు నమస్కారము. త్రినాభునికి, త్రిపృష్ఠునికి, శిపివిష్టునికి, విష్ణువునకు నమస్కారము.
+hi: हे पृश्निगर्भ, हे वेदगर्भ, हे विधाता, आपको नमस्कार है। त्रिनाभ को, त्रिपृष्ठ को, शिपिविष्ट को, विष्णु को नमस्कार है।
 
 --- verse 27 ---
 deva:
@@ -280,6 +358,9 @@ tvamādiranto bhuvanasya madhya-
 manantaśaktiṁ puruṣaṁ yamāhuḥ|
 kālo bhavānākṣipatīśa viśvaṁ
 sroto yathāntaḥpatitaṁ gabhīram||
+en: You are the beginning, the end and the middle of the world. You are he whom they call the Person of endless power. O ruler, you are Time, and you carry the universe away, as a deep current carries away what has fallen into it.
+tel: నీవు భువనమునకు ఆది, అంతము, మధ్యము. అంతము లేని శక్తి కలిగిన పురుషుడని ఎవరిని చెప్పుదురో ఆయన నీవే. ఈశా, నీవు కాలమై, లోతైన ప్రవాహము తనలో పడినదానిని కొనిపోవునట్లు, విశ్వమును కొనిపోవుచున్నావు.
+hi: आप भुवन के आदि, अन्त और मध्य हैं। जिन्हें अनन्त शक्ति वाला पुरुष कहते हैं, वे आप ही हैं। हे ईश, आप काल होकर विश्व को ऐसे बहा ले जाते हैं, जैसे गहरा प्रवाह अपने में गिरी हुई वस्तु को बहा ले जाता है।
 
 --- verse 28 ---
 deva:
@@ -292,9 +373,15 @@ tvaṁ vai prajānāṁ sthirajaṅgamānāṁ
 prajāpatīnāmasi sambhaviṣṇuḥ|
 divaukasāṁ deva divaścyutānāṁ
 parāyaṇaṁ nauriva majjato'psu||
+en: You are indeed the begetter of all beings, the moving and the unmoving, and of the Prajāpatis. O god, you are the refuge of the dwellers in heaven who have fallen from heaven, as a boat is the refuge of one sinking in the waters.
+tel: స్థిరములు, జంగమములు అయిన ప్రజలకును, ప్రజాపతులకును నీవే సంభవింపజేయువాడవు. దేవా, నీటిలో మునుగుచున్నవానికి నావ ఆశ్రయమైనట్లు, స్వర్గము నుండి పడిపోయిన దివౌకసులకు నీవే పరమగతి.
+hi: स्थिर और जंगम प्रजाओं के तथा प्रजापतियों के उत्पादक आप ही हैं। हे देव, जैसे जल में डूबते हुए के लिये नाव, वैसे ही स्वर्ग से गिरे हुए दिवौकसों के लिये आप ही परम गति हैं।
 
 --- verse none ---
 deva:
 इति श्रीमद्भागवते महापुराणे पारमहंस्यां संहितायामष्टमस्कन्धे वामनप्रादुर्भावे सप्तदशोऽध्यायः॥ १७॥
 iast:
 iti śrīmadbhāgavate mahāpurāṇe pāramahaṁsyāṁ saṁhitāyāmaṣṭamaskandhe vāmanaprādurbhāve saptadaśo'dhyāyaḥ|| 17||
+en: Thus ends the seventeenth adhyāya, in the appearance of Vāmana, in the eighth skandha of the Śrīmad Bhāgavata Mahāpurāṇa, the saṁhitā of the paramahaṁsas.
+tel: ఇది శ్రీమద్భాగవత మహాపురాణమునందు, పరమహంసల సంహితయందు, అష్టమస్కంధమునందు వామనప్రాదుర్భావమునందు సప్తదశాధ్యాయము సమాప్తము.
+hi: इस प्रकार श्रीमद्भागवत महापुराण की परमहंसों की संहिता के अष्टम स्कन्ध में वामनप्रादुर्भाव में सत्रहवाँ अध्याय समाप्त हुआ।

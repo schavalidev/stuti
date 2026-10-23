@@ -9,7 +9,7 @@ Type: Purāṇa (an adhyāya of the Śrīmad Bhāgavata, Skandha 9)
 
 Source / recension: Base text and authority: the Gītā Press, Gorakhpur Śrīmadbhāgavata Mahāpurāṇa with Hindi translation, Part 2 (Gītā Press code 27), archive.org item `shrimadbhagwat-mahapuran-bhag-2`, printed pages 7–11; the PDF page numbers are the printed ones. The PDF carries the typesetter's own text layer in the Chanakya font encoding, and the text was decoded from it by machine with `bin/bhagavata/chanakya.py`, not read off OCR or typed. The decoder was checked against GRETIL over all twelve skandhas before any file was written, and the differences that remain were sampled and found to be readings of the two editions. Second witness: GRETIL's `sa_bhAgavatapurANa.xml` (IAST, contributed by Ulrich Stiehl), a separate editorial lineage, compared verse by verse by machine. The TTD edition with the commentaries of Śrīdhara, Vīrarāghava and Vijayadhvaja (archive.org `Bhagavata_Purana_With_Multiple_Commentaries_TTD_Critical_Edition`) is the third witness where one is needed; it was not read for this file. The IAST was generated mechanically from the Devanāgarī with `bin/dev2iast.py`.
 
-Recension note: Text-only file, written 1 Oct 2026 at the user's instruction to lay down the whole Bhāgavata first: the English, Telugu and Hindi meanings are still to be added, and the witnesses' differences listed here have been recorded by machine and not yet adjudicated. The print is followed throughout. The print numbers 42 verses and GRETIL numbers 42. Of the 42 verses GRETIL has under the same number, 27 agree with the print letter for letter once spacing and the spelling of nasals are set aside; the rest differ: 3, 4, 6, 9, 13, 15, 16, 18, 19, 24, 25, 27, 30, 36, 41. Spacing is the print's, as its text layer gives it; in a few places justification has left a space inside a word, and these are still to be closed when the verse is read. The speaker lines (श्रीशुक उवाच and the others) are printed in italic above the verse they introduce, and are given as its first line.
+Recension note: Meanings written 23 Oct 2026 (session S78). The differences between the witnesses listed below were read as the verses were glossed; except where this note says otherwise, each is a spelling, a sandhi or a word order of the two editions, none of them changes the sense, and the print's reading therefore stands unbracketed. The print is followed throughout. The print numbers 42 verses and GRETIL numbers 42. Of the 42 verses GRETIL has under the same number, 27 agree with the print letter for letter once spacing and the spelling of nasals are set aside; the rest differ: 3, 4, 6, 9, 13, 15, 16, 18, 19, 24, 25, 27, 30, 36, 41. Spacing is the print's, as its text layer gives it. The speaker lines (श्रीशुक उवाच and the others) are printed in italic above the verse they introduce, and are given as its first line. Two joins in the print were weighed against GRETIL and left as printed. At verse 9 तस्मिंजज्ञे is this edition's own spelling of तस्मिञ्जज्ञे, which it also prints joined with the conjunct at 3.31.17 (तस्मिञ्जन्तुरज्ञानमोहितः) and with the anusvāra in तस्मिंस्तुष्टे and तस्मिंस्त्वं; ंज is its regular spelling of ञ्ज (पुरंजन, संज्ञा). At verse 28 एवंगुणो is a compound the print writes as one word throughout (एवंविधो, एवंवृत्तः, एवंलक्षणलक्ष्याणि), and GRETIL merely spaces it loosely. Both are read as printed, so no edit was made.
 
 Verse count: 42, plus the closing colophon printed unnumbered.
 
@@ -24,6 +24,9 @@ iast:
 rājovāca
 manvantarāṇi sarvāṇi tvayoktāni śrutāni me|
 vīryāṇyanantavīryasya harestatra kṛtāni ca||
+en: The king said: All the manvantaras have been told by you and heard by me, and also the deeds of valour done in them by Hari, whose power has no end.
+tel: రాజు పలికెను: మన్వంతరములన్నియు నీవు చెప్పితివి, నేను వినితిని; అనంతవీర్యుడైన హరి అందు చేసిన వీర్యకర్మలను కూడ వినితిని.
+hi: राजा ने कहा: सब मन्वन्तर आपने कहे और मैंने सुने, और उनमें अनन्तवीर्य हरि के किये हुए वीर्य-कर्म भी सुने।
 
 --- verse 2 ---
 deva:
@@ -32,6 +35,9 @@ deva:
 iast:
 yo'sau satyavrato nāma rājarṣirdraviḍeśvaraḥ|
 jñānaṁ yo'tītakalpānte lebhe puruṣasevayā||
+en: He who was the royal sage named Satyavrata, the lord of Draviḍa, and who at the end of the past kalpa obtained knowledge by the service of the Supreme Person —
+tel: సత్యవ్రతుడు అను పేరుగల ఆ రాజర్షి, ద్రవిడ దేశమునకు ప్రభువు, గత కల్పాంతమున పురుషసేవచే జ్ఞానమును పొందినవాడు —
+hi: सत्यव्रत नाम के वे राजर्षि, जो द्रविड के स्वामी थे, और जिन्होंने बीते कल्प के अन्त में पुरुष की सेवा से ज्ञान पाया —
 
 --- verse 3 ---
 deva:
@@ -40,6 +46,9 @@ deva:
 iast:
 sa vai vivasvataḥ putro manurāsīditi śrutam|
 tvattastasya sutāścoktā ikṣvākupramukhā nṛpāḥ||
+en: he, it has been heard, became Manu the son of Vivasvān. His sons too, the kings headed by Ikṣvāku, have been named by you.
+tel: అతడే వివస్వంతుని కుమారుడైన మనువు అయ్యెనని వినబడినది. అతని కుమారులను, ఇక్ష్వాకువు మొదలైన రాజులను కూడ నీవు చెప్పితివి.
+hi: वे ही विवस्वान् के पुत्र मनु हुए, ऐसा सुना गया है। उनके पुत्र, इक्ष्वाकु आदि राजा, आपने कहे।
 
 --- verse 4 ---
 deva:
@@ -48,6 +57,9 @@ deva:
 iast:
 teṣāṁ vaṁśaṁ pṛthag brahman vaṁśyānucaritāni ca|
 kīrtayasva mahābhāga nityaṁ śuśrūṣatāṁ hi naḥ||
+en: O brāhmaṇa, tell their line separately, and the deeds of those born in it. O greatly blessed one, we always wish to hear.
+tel: ఓ బ్రాహ్మణా, వారి వంశమును వేరుగా చెప్పుము, వంశమున పుట్టినవారి చరితములను కూడ చెప్పుము. ఓ మహాభాగా, మేము ఎల్లప్పుడు వినగోరువారము.
+hi: हे ब्राह्मण, उनका वंश अलग से कहिये, और वंश में उत्पन्न हुओं के चरित भी कहिये। हे महाभाग, हम सदा सुनना चाहते हैं।
 
 --- verse 5 ---
 deva:
@@ -56,6 +68,9 @@ deva:
 iast:
 ye bhūtā ye bhaviṣyāśca bhavantyadyatanāśca ye|
 teṣāṁ naḥ puṇyakīrtīnāṁ sarveṣāṁ vada vikramān||
+en: Those who have been, those who will be, and those who are now — tell us the valorous deeds of all of them, whose fame is holy.
+tel: గతించినవారు, రాబోవువారు, ఇప్పుడు ఉన్నవారు — పుణ్యకీర్తి గల వారందరి విక్రమములను మాకు చెప్పుము.
+hi: जो हो चुके, जो होंगे, और जो अब हैं — उन सब पुण्यकीर्ति वालों के विक्रम हमें कहिये।
 
 --- verse 6 ---
 deva:
@@ -66,6 +81,9 @@ iast:
 sūta uvāca
 evaṁ parīkṣitā rājñā sadasi brahmavādinām|
 pṛṣṭaḥ provāca bhagavāñchukaḥ paramadharmavit||
+en: Sūta said: Asked in this way by King Parīkṣit in the assembly of those who speak of Brahman, the revered Śuka, who knew dharma supremely, spoke.
+tel: సూతుడు పలికెను: బ్రహ్మవాదుల సభయందు పరీక్షిన్మహారాజుచే ఇట్లు అడుగబడిన భగవంతుడైన శుకుడు, పరమధర్మమును ఎఱిగినవాడు, పలికెను.
+hi: सूतजी ने कहा: ब्रह्मवादियों की सभा में राजा परीक्षित् के इस प्रकार पूछने पर परमधर्म के ज्ञाता भगवान् शुक ने कहा।
 
 --- verse 7 ---
 deva:
@@ -76,6 +94,9 @@ iast:
 śrīśuka uvāca
 śrūyatāṁ mānavo vaṁśaḥ prācuryeṇa paraṁtapa|
 na śakyate vistarato vaktuṁ varṣaśatairapi||
+en: Śrī Śuka said: Hear the line of Manu in its chief names, O scorcher of foes. It cannot be told in full even in hundreds of years.
+tel: శ్రీశుకుడు పలికెను: పరంతపా, మనువు వంశమును ప్రధానమైన పేరులతో వినుము. విస్తరముగా చెప్పుటకు వందల సంవత్సరములైనను చాలవు.
+hi: श्रीशुकदेवजी ने कहा: हे परंतप, मनु का वंश मुख्य नामों के साथ सुनिये। विस्तार से कहना सैकड़ों वर्षों में भी सम्भव नहीं है।
 
 --- verse 8 ---
 deva:
@@ -84,6 +105,9 @@ deva:
 iast:
 parāvareṣāṁ bhūtānāmātmā yaḥ puruṣaḥ paraḥ|
 sa evāsīdidaṁ viśvaṁ kalpānte'nyanna kiñcana||
+en: The supreme Puruṣa, who is the Self of all beings, higher and lower, He alone was this universe at the end of the kalpa. There was nothing else at all.
+tel: పరావరములైన భూతములకు ఆత్మయైన ఆ పరమపురుషుడే కల్పాంతమున ఈ విశ్వమై ఉండెను. వేరొకటి ఏదియు లేదు.
+hi: जो परम पुरुष परावर भूतों के आत्मा हैं, वे ही कल्प के अन्त में यह विश्व थे। और कुछ भी नहीं था।
 
 --- verse 9 ---
 deva:
@@ -92,6 +116,9 @@ deva:
 iast:
 tasya nābheḥ samabhavat padmakośo hiraṇmayaḥ|
 tasmiṁjajñe mahārāja svayaṁbhūścaturānanaḥ||
+en: From His navel there arose a golden lotus bud. In it, O great King, was born the four-faced Svayambhū.
+tel: ఆయన నాభి నుండి బంగారు పద్మకోశము పుట్టెను. ఓ మహారాజా, అందు చతుర్ముఖుడైన స్వయంభువు పుట్టెను.
+hi: उनकी नाभि से सुवर्ण का पद्मकोश उत्पन्न हुआ। हे महाराज, उसमें चतुर्मुख स्वयम्भू उत्पन्न हुए।
 
 --- verse 10 ---
 deva:
@@ -100,6 +127,9 @@ deva:
 iast:
 marīcirmanasastasya jajñe tasyāpi kaśyapaḥ|
 dākṣāyaṇyāṁ tato'dityāṁ vivasvānabhavat sutaḥ||
+en: From his mind Marīci was born, and of Marīci Kaśyapa. Then of Aditi, the daughter of Dakṣa, Vivasvān was born as his son.
+tel: అతని మనసు నుండి మరీచి పుట్టెను, మరీచికి కశ్యపుడు పుట్టెను. పిమ్మట దక్షుని కూతురైన అదితియందు వివస్వంతుడు కుమారుడై పుట్టెను.
+hi: उनके मन से मरीचि उत्पन्न हुए, और मरीचि से कश्यप। तदनन्तर दक्ष की पुत्री अदिति में विवस्वान् पुत्र रूप से उत्पन्न हुए।
 
 --- verse 11 ---
 deva:
@@ -108,6 +138,9 @@ deva:
 iast:
 tato manuḥ śrāddhadevaḥ saṁjñāyāmāsa bhārata|
 śraddhāyāṁ janayāmāsa daśa putrān sa ātmavān||
+en: From him, O Bhārata, Manu named Śrāddhadeva was born of Saṁjñā. That self-possessed one begot ten sons in Śraddhā.
+tel: ఓ భారతా, అతని నుండి సంజ్ఞయందు శ్రాద్ధదేవుడు అను మనువు పుట్టెను. ఆత్మవంతుడైన అతడు శ్రద్ధయందు పదిమంది కుమారులను కలిగించెను.
+hi: हे भारत, उनसे संज्ञा में श्राद्धदेव नाम के मनु उत्पन्न हुए। उस आत्मवान् ने श्रद्धा में दस पुत्र उत्पन्न किये।
 
 --- verse 12 ---
 deva:
@@ -116,6 +149,9 @@ deva:
 iast:
 ikṣvākunṛgaśaryātidiṣṭadhṛṣṭakarūṣakān|
 nariṣyantaṁ pṛṣadhraṁ ca nabhagaṁ ca kaviṁ vibhuḥ||
+en: The mighty one begot Ikṣvāku, Nṛga, Śaryāti, Diṣṭa, Dhṛṣṭa and Karūṣaka, and Nariṣyanta, Pṛṣadhra, Nabhaga and Kavi.
+tel: ఆ విభుడు ఇక్ష్వాకువు, నృగుడు, శర్యాతి, దిష్టుడు, ధృష్టుడు, కరూషకుడు, నరిష్యంతుడు, పృషధ్రుడు, నభగుడు, కవి అనువారిని కలిగించెను.
+hi: उस विभु ने इक्ष्वाकु, नृग, शर्याति, दिष्ट, धृष्ट, करूषक, नरिष्यन्त, पृषध्र, नभग और कवि को उत्पन्न किया।
 
 --- verse 13 ---
 deva:
@@ -124,6 +160,9 @@ deva:
 iast:
 aprajasya manoḥ pūrvaṁ vasiṣṭho bhagavān kila|
 mitrāvaruṇayoriṣṭiṁ prajārthamakarot prabhuḥ||
+en: Earlier, when Manu had no child, the revered and powerful Vasiṣṭha performed a sacrifice to Mitra and Varuṇa for the sake of offspring.
+tel: పూర్వము మనువునకు సంతానము లేనప్పుడు, భగవంతుడును ప్రభువును అయిన వసిష్ఠుడు సంతానము కొరకు మిత్రావరుణులకు ఇష్టిని చేసెను.
+hi: पहले जब मनु के सन्तान नहीं थी, तब भगवान् प्रभु वसिष्ठ ने सन्तान के लिये मित्र और वरुण की इष्टि की।
 
 --- verse 14 ---
 deva:
@@ -132,6 +171,9 @@ deva:
 iast:
 tatra śraddhā manoḥ patnī hotāraṁ samayācata|
 duhitrarthamupāgamya praṇipatya payovratā||
+en: There Śraddhā, the wife of Manu, who kept the vow of living on milk, came to the hotā, bowed to him, and asked him for a daughter.
+tel: అందు మనువు భార్య శ్రద్ధ, పయోవ్రతము పట్టినది, హోతను సమీపించి, ప్రణమిల్లి, కూతురు కొరకు అడిగెను.
+hi: वहाँ पयोव्रत का पालन करती हुई मनु की पत्नी श्रद्धा ने होता के पास जाकर प्रणाम करके पुत्री के लिये प्रार्थना की।
 
 --- verse 15 ---
 deva:
@@ -140,6 +182,9 @@ deva:
 iast:
 preṣito'dhvaryuṇā hotā dhyāyaṁstat susamāhitaḥ|
 haviṣi vyacarat tena vaṣaṭkāraṁ gṛṇandvijaḥ||
+en: Directed by the adhvaryu, the hotā, with his mind well fixed and thinking of that request, proceeded with the oblation, and the twice-born one uttered the vaṣaṭkāra.
+tel: అధ్వర్యుడు పంపగా, హోత సుసమాహితుడై ఆ కోరికను ధ్యానించుచు, దానితో హవిస్సునందు ప్రవర్తించెను; ఆ ద్విజుడు వషట్కారమును పలికెను.
+hi: अध्वर्यु के भेजने पर होता सुसमाहित होकर उस याचना का ध्यान करते हुए उसी भाव से हवि में प्रवृत्त हुआ, और उस द्विज ने वषट्कार का उच्चारण किया।
 
 --- verse 16 ---
 deva:
@@ -148,6 +193,9 @@ deva:
 iast:
 hotustadvyabhicāreṇa kanyelā nāma sābhavat|
 tāṁ vilokya manuḥ prāha nātihṛṣṭamanā gurum||
+en: By that lapse of the hotā a daughter named Ilā was born. Seeing her, Manu, not very pleased in mind, spoke to his guru.
+tel: హోత ఆ వ్యభిచారముచే ఇల అను పేరుగల కన్య పుట్టెను. ఆమెను చూచి, మనసు మిక్కిలి సంతోషించని మనువు గురువుతో పలికెను.
+hi: होता के उस व्यभिचार से इला नाम की कन्या उत्पन्न हुई। उसे देखकर मनु ने मन में अधिक प्रसन्न न होकर गुरु से कहा।
 
 --- verse 17 ---
 deva:
@@ -156,6 +204,9 @@ deva:
 iast:
 bhagavan kimidaṁ jātaṁ karma vo brahmavādinām|
 viparyayamaho kaṣṭaṁ maivaṁ syād brahmavikriyā||
+en: O revered one, what is this that has happened? The act of you who speak of Brahman has turned the other way. Alas, this is painful. Let there be no such failure of the Vedic word.
+tel: భగవానుడా, ఇది ఏమి జరిగినది? బ్రహ్మవాదులైన మీ కర్మ విపరీతమైనది. అయ్యో, ఇది కష్టము. బ్రహ్మవిక్రియ ఇట్లు కలుగకూడదు.
+hi: हे भगवन्, यह क्या हो गया? आप ब्रह्मवादियों का कर्म उलटा हो गया। अहो, यह कष्ट है। ऐसी ब्रह्मविक्रिया न हो।
 
 --- verse 18 ---
 deva:
@@ -164,6 +215,9 @@ deva:
 iast:
 yūyaṁ mantravido yuktāstapasā dagdhakilbiṣāḥ|
 kutaḥ saṁkalpavaiṣamyamanṛtaṁ vibudheṣviva||
+en: You know the mantras, you are disciplined, and your faults are burnt by tapas. How then has the intention gone wrong, like an untruth among the gods?
+tel: మీరు మంత్రవిదులు, యుక్తులు, తపస్సుచే కిల్బిషములు దహింపబడినవారు. అట్లయిన సంకల్పవైషమ్యము ఎట్లు కలిగెను? దేవతలయందు అసత్యము కలిగినట్లు ఇది కలిగెను.
+hi: आप मन्त्र के ज्ञाता हैं, युक्त हैं, और तपस्या से आपके किल्बिष जल गये हैं। तब संकल्प में विषमता कहाँ से हुई, जैसे देवताओं में असत्य?
 
 --- verse 19 ---
 deva:
@@ -172,6 +226,9 @@ deva:
 iast:
 tanniśamya vacastasya bhagavān prapitāmahaḥ|
 hoturvyatikramaṁ jñātvā babhāṣe ravinandanam||
+en: Hearing his words, the revered great-grandfather knew the transgression of the hotā and spoke to the son of Ravi.
+tel: అతని మాటను విని, భగవంతుడైన ప్రపితామహుడు హోత వ్యతిక్రమమును తెలిసికొని రవినందనునితో పలికెను.
+hi: उनकी बात सुनकर भगवान् प्रपितामह ने होता का व्यतिक्रम जानकर रवि के पुत्र से कहा।
 
 --- verse 20 ---
 deva:
@@ -180,6 +237,9 @@ deva:
 iast:
 etat saṁkalpavaiṣamyaṁ hotuste vyabhicārataḥ|
 tathāpi sādhayiṣye te suprajāstvaṁ svatejasā||
+en: This failure of the intention has come from the lapse of your hotā. Even so, by my own power I shall bring it about that you have good offspring.
+tel: ఈ సంకల్పవైషమ్యము నీ హోత వ్యభిచారము వలన కలిగినది. అయినను నా తేజముచే నీకు మంచి సంతానము కలుగునట్లు సాధించెదను.
+hi: यह संकल्प की विषमता तुम्हारे होता के व्यभिचार से हुई है। तो भी अपने तेज से मैं तुम्हें श्रेष्ठ सन्तान प्राप्त कराऊँगा।
 
 --- verse 21 ---
 deva:
@@ -188,6 +248,9 @@ deva:
 iast:
 evaṁ vyavasito rājan bhagavān sa mahāyaśāḥ|
 astauṣīdādipuruṣamilāyāḥ puṁstvakāmyayā||
+en: Having resolved thus, O King, that revered one of great fame praised the first Puruṣa, desiring manhood for Ilā.
+tel: ఓ రాజా, ఇట్లు నిశ్చయించుకొని, మహాయశస్కుడైన ఆ భగవంతుడు ఇలకు పుంస్త్వము కోరి ఆదిపురుషుని స్తుతించెను.
+hi: हे राजन्, इस प्रकार निश्चय करके महायशस्वी उन भगवान् ने इला के पुंस्त्व की कामना से आदिपुरुष की स्तुति की।
 
 --- verse 22 ---
 deva:
@@ -196,6 +259,9 @@ deva:
 iast:
 tasmai kāmavaraṁ tuṣṭo bhagavān harirīśvaraḥ|
 dadāvilābhavat tena sudyumnaḥ puruṣarṣabhaḥ||
+en: Pleased, the Lord Hari, the ruler, gave him the boon he desired. By it Ilā became Sudyumna, the best among men.
+tel: సంతోషించి, భగవంతుడును ఈశ్వరుడును అయిన హరి అతనికి కామవరమును ఇచ్చెను. దానిచే ఇల పురుషశ్రేష్ఠుడైన సుద్యుమ్నుడు అయ్యెను.
+hi: प्रसन्न होकर भगवान् ईश्वर हरि ने उन्हें मनचाहा वर दिया। उससे इला पुरुषश्रेष्ठ सुद्युम्न हो गयी।
 
 --- verse 23 ---
 deva:
@@ -204,6 +270,9 @@ deva:
 iast:
 sa ekadā mahārāja vicaran mṛgayāṁ vane|
 vṛtaḥ katipayāmātyairaśvamāruhya saindhavam||
+en: Once, O great King, he went hunting in the forest, surrounded by a few ministers, mounted on a horse of the Sindhu breed,
+tel: ఓ మహారాజా, ఒకనాడు అతడు కొందరు అమాత్యులతో కలిసి, సైంధవమైన గుఱ్ఱమును ఎక్కి, వనమున వేటకు తిరిగెను;
+hi: हे महाराज, एक बार वे कुछ अमात्यों के साथ सैन्धव घोड़े पर चढ़कर वन में शिकार के लिये घूमे,
 
 --- verse 24 ---
 deva:
@@ -212,6 +281,9 @@ deva:
 iast:
 pragṛhya ruciraṁ cāpaṁ śarāṁśca paramādbhutān|
 daṁśito'numṛgaṁ vīro jagāma diśamuttarām||
+en: taking up a fine bow and arrows of great wonder. Clad in armour, the hero went toward the north after the deer.
+tel: మనోహరమైన ధనువును, మిక్కిలి అద్భుతమైన బాణములను పట్టుకొని, కవచము ధరించిన ఆ వీరుడు మృగమును వెంబడించుచు ఉత్తర దిక్కునకు పోయెను.
+hi: सुन्दर धनुष और परम अद्भुत बाण लेकर, कवच धारण किये वह वीर मृग के पीछे उत्तर दिशा को गया।
 
 --- verse 25 ---
 deva:
@@ -220,6 +292,9 @@ deva:
 iast:
 sa kumāro vanaṁ meroradhastāt praviveśa ha|
 yatrāste bhagavāñcharvo ramamāṇaḥ sahomayā||
+en: That prince entered the forest below Meru, where the revered Śarva stays, enjoying himself with Umā.
+tel: ఆ కుమారుడు మేరువు క్రింద ఉన్న వనమున ప్రవేశించెను; అందు భగవంతుడైన శర్వుడు ఉమతో కలిసి రమించుచు ఉండును.
+hi: वह कुमार मेरु के नीचे के वन में प्रवेश कर गया, जहाँ भगवान् शर्व उमा के साथ रमण करते हुए रहते हैं।
 
 --- verse 26 ---
 deva:
@@ -228,6 +303,9 @@ deva:
 iast:
 tasmin praviṣṭa evāsau sudyumnaḥ paravīrahā|
 apaśyat striyamātmānamaśvaṁ ca vaḍavāṁ nṛpa||
+en: As soon as he entered there, O King, that Sudyumna, the slayer of enemy heroes, saw himself a woman and his horse a mare.
+tel: ఓ రాజా, అందు ప్రవేశించిన వెంటనే, పరవీరులను చంపు ఆ సుద్యుమ్నుడు తనను స్త్రీగా, గుఱ్ఱమును ఆడగుఱ్ఱముగా చూచెను.
+hi: हे राजन्, वहाँ प्रवेश करते ही परवीरों का नाश करने वाले उस सुद्युम्न ने अपने को स्त्री और घोड़े को घोड़ी देखा।
 
 --- verse 27 ---
 deva:
@@ -236,6 +314,9 @@ deva:
 iast:
 tathā tadanugāḥ sarve ātmaliṁgaviparyayam|
 dṛṣṭvā vimanaso'bhūvan vīkṣamāṇāḥ parasparam||
+en: So too all his followers saw the change of their own sex. They became downcast and looked at one another.
+tel: అట్లే అతని అనుచరులందరును తమ లింగము మారిపోవుటను చూచిరి. వారు విమనస్కులై ఒకరినొకరు చూచుకొనిరి.
+hi: उसी प्रकार उसके सब अनुचरों ने भी अपने लिंग का उलट जाना देखा। वे विमनस्क हो गये और एक दूसरे को देखने लगे।
 
 --- verse 28 ---
 deva:
@@ -246,6 +327,9 @@ iast:
 rājovāca
 kathamevaṁguṇo deśaḥ kena vā bhagavan kṛtaḥ|
 praśnamenaṁ samācakṣva paraṁ kautūhalaṁ hi naḥ||
+en: The king said: How did the place come to have such a quality, O revered one, or by whom was it made? Tell us the answer to this question, for our curiosity is great.
+tel: రాజు పలికెను: భగవానుడా, ఆ ప్రదేశమునకు ఇట్టి గుణము ఎట్లు కలిగెను? లేక ఎవరిచే అది చేయబడెను? ఈ ప్రశ్నను మాకు చెప్పుము; మాకు కుతూహలము మిక్కిలి ఎక్కువ.
+hi: राजा ने कहा: हे भगवन्, वह देश ऐसे गुण वाला कैसे हुआ, अथवा किसने उसे ऐसा किया? इस प्रश्न का उत्तर हमें कहिये, क्योंकि हमारा कौतूहल बहुत है।
 
 --- verse 29 ---
 deva:
@@ -256,6 +340,9 @@ iast:
 śrīśuka uvāca
 ekadā giriśaṁ draṣṭumṛṣayastatra suvratāḥ|
 diśo vitimirābhāsāḥ kurvantaḥ samupāgaman||
+en: Śrī Śuka said: Once sages of firm vows came there to see Giriśa, making the quarters free of darkness.
+tel: శ్రీశుకుడు పలికెను: ఒకనాడు సువ్రతులైన ఋషులు గిరిశుని చూడ అందు వచ్చిరి; వారు దిక్కులను చీకటి లేనివిగా చేయుచు వచ్చిరి.
+hi: श्रीशुकदेवजी ने कहा: एक बार सुव्रत ऋषि गिरिश के दर्शन के लिये वहाँ आये, और दिशाओं को अन्धकार से रहित करते हुए आये।
 
 --- verse 30 ---
 deva:
@@ -264,6 +351,9 @@ deva:
 iast:
 tān vilokyāmbikā devī vivāsā vrīḍitā bhṛśam|
 bharturaṁkāt samutthāya nīvīmāśvatha paryadhāt||
+en: Seeing them, the goddess Ambikā, who was without clothes, was greatly ashamed. She rose from her husband's lap and quickly put on her garment.
+tel: వారిని చూచి, వివస్త్రయైన అంబికాదేవి మిక్కిలి సిగ్గుపడెను. భర్త ఒడి నుండి లేచి వెంటనే నీవిని కట్టుకొనెను.
+hi: उन्हें देखकर वस्त्रहीन अम्बिका देवी बहुत लज्जित हुईं। उन्होंने पति की गोद से उठकर शीघ्र ही नीवी पहन ली।
 
 --- verse 31 ---
 deva:
@@ -272,6 +362,9 @@ deva:
 iast:
 ṛṣayo'pi tayorvīkṣya prasaṁgaṁ ramamāṇayoḥ|
 nivṛttāḥ prayayustasmānnaranārāyaṇāśramam||
+en: The sages too, seeing the union of the two who were enjoying themselves, turned back and went from there to the āśrama of Nara and Nārāyaṇa.
+tel: ఋషులును, రమించుచున్న ఆ ఇద్దరి ప్రసంగమును చూచి, మరలి అక్కడి నుండి నరనారాయణాశ్రమమునకు పోయిరి.
+hi: ऋषि भी रमण करते हुए उन दोनों के प्रसंग को देखकर लौट गये और वहाँ से नर-नारायण के आश्रम को चले गये।
 
 --- verse 32 ---
 deva:
@@ -280,6 +373,9 @@ deva:
 iast:
 tadidaṁ bhagavānāha priyāyāḥ priyakāmyayā|
 sthānaṁ yaḥ praviśedetat sa vai yoṣid bhavediti||
+en: Then the revered Lord, wishing to please his beloved, said this: whoever enters this place shall become a woman.
+tel: అప్పుడు భగవంతుడు ప్రియకు ప్రియము చేయగోరి ఇట్లు పలికెను: ఈ స్థానమున ప్రవేశించువాడు స్త్రీ అగును.
+hi: तब भगवान् ने अपनी प्रिया को प्रिय करने की इच्छा से यह कहा: जो इस स्थान में प्रवेश करेगा, वह स्त्री हो जायगा।
 
 --- verse 33 ---
 deva:
@@ -288,6 +384,9 @@ deva:
 iast:
 tata ūrdhvaṁ vanaṁ tad vai puruṣā varjayanti hi|
 sā cānucarasaṁyuktā vicacāra vanād vanam||
+en: From that time onward men avoid that forest. And she, together with her companions, wandered from forest to forest.
+tel: అప్పటి నుండి ఆ వనమును పురుషులు విడిచిపెట్టుచున్నారు. ఆమె అనుచరులతో కలిసి వనము నుండి వనమునకు తిరిగెను.
+hi: उसके बाद से उस वन को पुरुष छोड़ देते हैं। और वह अपने अनुचरों के साथ वन से वन में घूमती रही।
 
 --- verse 34 ---
 deva:
@@ -296,6 +395,9 @@ deva:
 iast:
 atha tāmāśramābhyāśe carantīṁ pramadottamām|
 strībhiḥ parivṛtāṁ vīkṣya cakame bhagavān budhaḥ||
+en: Then the revered Budha, seeing that best of women moving near his āśrama, surrounded by women, desired her.
+tel: పిమ్మట ఆశ్రమము దగ్గర స్త్రీలతో చుట్టబడి తిరుగుచున్న ఆ ప్రమదోత్తమను చూచి, భగవంతుడైన బుధుడు ఆమెను కోరెను.
+hi: तब आश्रम के पास घूमती हुई उस प्रमदोत्तमा को, स्त्रियों से घिरी हुई देखकर, भगवान् बुध ने उसकी कामना की।
 
 --- verse 35 ---
 deva:
@@ -304,6 +406,9 @@ deva:
 iast:
 sāpi taṁ cakame subhrūḥ somarājasutaṁ patim|
 sa tasyāṁ janayāmāsa purūravasamātmajam||
+en: She too, of beautiful brows, desired him, the son of King Soma, as her husband. He begot in her a son, Purūravas.
+tel: సుందరమైన కనుబొమలు గల ఆమెయు సోమరాజు కుమారుడైన అతనిని పతిగా కోరెను. అతడు ఆమెయందు పురూరవసుడు అను కుమారుని కలిగించెను.
+hi: सुन्दर भौंहों वाली वह भी सोमराज के पुत्र उन्हें पति रूप में चाहने लगी। उन्होंने उसमें पुरूरवस् नाम का पुत्र उत्पन्न किया।
 
 --- verse 36 ---
 deva:
@@ -312,6 +417,9 @@ deva:
 iast:
 evaṁ strītvamanuprāptaḥ sudyumno mānavo nṛpaḥ|
 sasmāra svakulācāryaṁ vasiṣṭhamiti śuśruma||
+en: Having thus become a woman, King Sudyumna, the son of Manu, remembered Vasiṣṭha, the preceptor of his own family. So we have heard.
+tel: ఇట్లు స్త్రీత్వమును పొందిన, మనువు కుమారుడైన సుద్యుమ్న మహారాజు తన కులాచార్యుడైన వసిష్ఠుని స్మరించెను. ఇట్లు మేము వినియున్నాము.
+hi: इस प्रकार स्त्रीत्व को प्राप्त हुए मनुपुत्र राजा सुद्युम्न ने अपने कुल के आचार्य वसिष्ठ का स्मरण किया। ऐसा हमने सुना है।
 
 --- verse 37 ---
 deva:
@@ -320,6 +428,9 @@ deva:
 iast:
 sa tasya tāṁ daśāṁ dṛṣṭvā kṛpayā bhṛśapīḍitaḥ|
 sudyumnasyāśayan puṁstvamupādhāvata śaṁkaram||
+en: Seeing that state of his, Vasiṣṭha was greatly pained by compassion. Wishing manhood for Sudyumna, he went to Śaṁkara for refuge.
+tel: అతని ఆ దశను చూచి వసిష్ఠుడు కృపచే మిక్కిలి పీడితుడాయెను. సుద్యుమ్నునకు పుంస్త్వము కోరి శంకరుని ఆశ్రయించెను.
+hi: उनकी वह दशा देखकर वसिष्ठ कृपा से अत्यन्त पीड़ित हुए। सुद्युम्न के पुंस्त्व की इच्छा से वे शंकर के पास गये।
 
 --- verse 38 ---
 deva:
@@ -328,6 +439,9 @@ deva:
 iast:
 tuṣṭastasmai sa bhagavānṛṣaye priyamāvahan|
 svāṁ ca vācamṛtāṁ kurvannidamāha viśāmpate||
+en: Pleased, the revered Lord, bringing what was dear to that sage and making his own word true, said this, O lord of the people.
+tel: ఓ విశాంపతీ, సంతోషించిన ఆ భగవంతుడు ఆ ఋషికి ప్రియమును కలిగించుచు, తన మాటను కూడ సత్యము చేయుచు, ఇట్లు పలికెను.
+hi: हे विशाम्पते, प्रसन्न हुए उन भगवान् ने उस ऋषि को प्रिय करते हुए और अपने वचन को भी सत्य करते हुए यह कहा।
 
 --- verse 39 ---
 deva:
@@ -336,6 +450,9 @@ deva:
 iast:
 māsaṁ pumān sa bhavitā māsaṁ strī tava gotrajaḥ|
 itthaṁ vyavasthayā kāmaṁ sudyumno'vatu medinīm||
+en: For one month he who is born in your line will be a man, and for one month a woman. By this arrangement let Sudyumna rule the earth as he wishes.
+tel: నీ గోత్రమున పుట్టిన అతడు ఒక నెల పురుషుడు అగును, ఒక నెల స్త్రీ అగును. ఈ వ్యవస్థచే సుద్యుమ్నుడు ఇష్టము వచ్చినట్లు భూమిని పాలించుగాక.
+hi: तुम्हारे गोत्र में उत्पन्न वह एक मास पुरुष होगा और एक मास स्त्री। इस व्यवस्था से सुद्युम्न इच्छा के अनुसार पृथ्वी का पालन करे।
 
 --- verse 40 ---
 deva:
@@ -344,6 +461,9 @@ deva:
 iast:
 ācāryānugrahāt kāmaṁ labdhvā puṁstvaṁ vyavasthayā|
 pālayāmāsa jagatīṁ nābhyanandan sma taṁ prajāḥ||
+en: By the grace of the ācārya he obtained manhood as he wished, under that arrangement, and he ruled the earth. But the people did not rejoice in him.
+tel: ఆచార్యుని అనుగ్రహముచే ఆ వ్యవస్థతో ఇష్టము వచ్చినట్లు పుంస్త్వమును పొంది అతడు జగత్తును పాలించెను. కాని ప్రజలు అతనిని అభినందించలేదు.
+hi: आचार्य के अनुग्रह से उस व्यवस्था के अनुसार मनचाहा पुंस्त्व पाकर उसने जगत् का पालन किया। परन्तु प्रजा ने उसका अभिनन्दन नहीं किया।
 
 --- verse 41 ---
 deva:
@@ -352,6 +472,9 @@ deva:
 iast:
 tasyotkalo gayo rājan vimalaśca sutāstrayaḥ|
 dakṣiṇāpatharājāno babhūvurdharmavatsalāḥ||
+en: O King, he had three sons, Utkala, Gaya and Vimala. They became kings of the southern region and were devoted to dharma.
+tel: ఓ రాజా, అతనికి ఉత్కలుడు, గయుడు, విమలుడు అను ముగ్గురు కుమారులు కలిగిరి. వారు దక్షిణాపథమునకు రాజులై ధర్మవత్సలులుగా ఉండిరి.
+hi: हे राजन्, उसके उत्कल, गय और विमल — ये तीन पुत्र हुए। वे दक्षिणापथ के राजा हुए और धर्म से प्रेम रखने वाले थे।
 
 --- verse 42 ---
 deva:
@@ -360,9 +483,15 @@ deva:
 iast:
 tataḥ pariṇate kāle pratiṣṭhānapatiḥ prabhuḥ|
 purūravasa utsṛjya gāṁ putrāya gato vanam||
+en: Then, when his time was over, the powerful lord of Pratiṣṭhāna gave the earth to his son Purūravas and went to the forest.
+tel: పిమ్మట కాలము గడచినప్పుడు, ప్రతిష్ఠానపతియైన ఆ ప్రభువు భూమిని కుమారుడైన పురూరవసునకు ఇచ్చి వనమునకు పోయెను.
+hi: तदनन्तर समय बीत जाने पर प्रतिष्ठान के स्वामी वे प्रभु पृथ्वी पुत्र पुरूरवस् को देकर वन को चले गये।
 
 --- verse none ---
 deva:
 इति श्रीमद्भागवते महापुराणे पारमहंस्यां संहितायां नवमस्कन्धे इलोपाख्याने प्रथमोऽध्यायः॥ १॥
 iast:
 iti śrīmadbhāgavate mahāpurāṇe pāramahaṁsyāṁ saṁhitāyāṁ navamaskandhe ilopākhyāne prathamo'dhyāyaḥ|| 1||
+en: Thus ends the first adhyāya, named the story of Ilā, in the ninth skandha of the Śrīmad Bhāgavata Mahāpurāṇa, the saṁhitā of the paramahaṁsas.
+tel: ఇది శ్రీమద్భాగవత మహాపురాణమునందు, పరమహంసల సంహితయందు, నవమస్కంధమునందు ఇలోపాఖ్యానము అను ప్రథమాధ్యాయము సమాప్తము.
+hi: इस प्रकार श्रीमद्भागवत महापुराण की परमहंसों की संहिता के नवम स्कन्ध में इलोपाख्यान नामक प्रथम अध्याय समाप्त हुआ।
