@@ -9,7 +9,7 @@ Type: Purāṇa (an adhyāya of the Śrīmad Bhāgavata, Skandha 10)
 
 Source / recension: Base text and authority: the Gītā Press, Gorakhpur Śrīmadbhāgavata Mahāpurāṇa with Hindi translation, Part 2 (Gītā Press code 27), archive.org item `shrimadbhagwat-mahapuran-bhag-2`, printed pages 331–338; the PDF page numbers are the printed ones. The PDF carries the typesetter's own text layer in the Chanakya font encoding, and the text was decoded from it by machine with `bin/bhagavata/chanakya.py`, not read off OCR or typed. The decoder was checked against GRETIL over all twelve skandhas before any file was written, and the differences that remain were sampled and found to be readings of the two editions. Second witness: GRETIL's `sa_bhAgavatapurANa.xml` (IAST, contributed by Ulrich Stiehl), a separate editorial lineage, compared verse by verse by machine. The TTD edition with the commentaries of Śrīdhara, Vīrarāghava and Vijayadhvaja (archive.org `Bhagavata_Purana_With_Multiple_Commentaries_TTD_Critical_Edition`) is the third witness where one is needed; it was not read for this file. The IAST was generated mechanically from the Devanāgarī with `bin/dev2iast.py`.
 
-Recension note: Text-only file, written 1 Oct 2026 at the user's instruction to lay down the whole Bhāgavata first: the English, Telugu and Hindi meanings are still to be added, and the witnesses' differences listed here have been recorded by machine and not yet adjudicated. The print is followed throughout. The print numbers 40 verses; GRETIL numbers 39, so from some point the two editions number the verses differently. Never match them by number. Of the 38 verses GRETIL has under the same number, 2 agree with the print letter for letter once spacing and the spelling of nasals are set aside; the rest differ: 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39. GRETIL has nothing under the numbers 3, 40. Spacing is the print's, as its text layer gives it; in a few places justification has left a space inside a word, and these are still to be closed when the verse is read. The section title is the edition's own, printed centred above the verse it opens, and it is carried on every verse after it. The speaker lines (श्रीशुक उवाच and the others) are printed in italic above the verse they introduce, and are given as its first line.
+Recension note: Meanings written 23 Oct 2026 (session S78). The differences between the witnesses listed below were read as the verses were glossed; except where this note says otherwise, each is a spelling, a sandhi or a word order of the two editions, none of them changes the sense, and the print's reading therefore stands unbracketed. The print is followed throughout. The print numbers 40 verses; GRETIL numbers 39, so from some point the two editions number the verses differently. Never match them by number. Of the 38 verses GRETIL has under the same number, 2 agree with the print letter for letter once spacing and the spelling of nasals are set aside; the rest differ: 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39. GRETIL has nothing under the numbers 3, 40. Spacing is the print's, as its text layer gives it. The section title is the edition's own, printed centred above the verse it opens, and it is carried on every verse after it. The speaker lines (श्रीशुक उवाच and the others) are printed in italic above the verse they introduce, and are given as its first line. One word was put right as the verses were read. At verse 21 the text layer had lost the space between अतिविहारेण and श्रान्तानां, and it is restored here; GRETIL agrees, reading वदनानि as a separate word after a separate श्रान्तानां, and अतिविहारेण carries its own instrumental ending, so it cannot be the first member of a compound. Two places were left exactly as printed. At verse 4 the layer has विमानशतसंकुलम without its virāma; the only possible reading is संकुलम्, and the meanings follow that. At verse 16 and at verses 8, 22, 23, 25 and 35 the print's line-break hyphens stand where the print puts them. Where GRETIL reads differently in a word (कवर and रसना at verse 8, सन्दधत्याः प्रादात् at verse 13, नृत्यती at verse 14, रतिविहारेण at verse 21, भक्तानां at verse 37) the print is followed.
 
 Verse count: 40, plus the closing colophon printed unnumbered.
 
@@ -24,6 +24,9 @@ iast:
 śrīśuka uvāca
 itthaṁ bhagavato gopyaḥ śrutvā vācaḥ supeśalāḥ|
 jahurvirahajaṁ tāpaṁ tadaṅgopacitāśiṣaḥ||
+en: Śuka said: Hearing these very gentle words of the Lord, the gopīs gave up the pain born of separation. The touch of his limbs made their hopes full.
+tel: శుకుడు పలికెను: భగవంతుని ఈ మృదువైన మాటలను విని గోపికలు విరహము వలన కలిగిన బాధను విడిచిపెట్టిరి. ఆయన అంగముల స్పర్శ వారి కోరికలను నిండుగా చేసెను.
+hi: शुक ने कहा: भगवान के इन अत्यंत कोमल वचनों को सुनकर गोपियों ने विरह से उत्पन्न पीड़ा छोड़ दी। उनके अंगों के स्पर्श ने उनकी आशाओं को पूर्ण कर दिया।
 
 --- verse 2 | section: Mahārāsa ---
 deva:
@@ -32,6 +35,9 @@ deva:
 iast:
 tatrārabhata govindo rāsakrīḍāmanuvrataiḥ|
 strīratnairanvitaḥ prītairanyonyābaddhabāhubhiḥ||
+en: There Govinda began the rāsa play, joined by those devoted women, the jewels among women, who were full of delight and had linked their arms with one another.
+tel: అక్కడ గోవిందుడు రాసక్రీడను ఆరంభించెను. ఆయనకు అనువ్రతలైన ఆ స్త్రీరత్నములు ఆనందముతో ఒకరి చేతిని ఒకరు పట్టుకొని ఆయనతో కూడియుండిరి.
+hi: वहाँ गोविंद ने रास की क्रीड़ा आरंभ की। उनके अनुव्रत वे स्त्रीरत्न प्रसन्न होकर एक दूसरे की बाँहों में बाँहें डालकर उनके साथ थे।
 
 --- verse 3 | section: Mahārāsa ---
 deva:
@@ -42,6 +48,9 @@ iast:
 rāsotsavaḥ sampravṛtto gopīmaṇḍalamaṇḍitaḥ|
 yogeśvareṇa kṛṣṇena tāsāṁ madhye dvayordvayoḥ|
 praviṣṭena gṛhītānāṁ kaṇṭhe svanikaṭaṁ striyaḥ||
+en: The rāsa festival began, adorned by the circle of the gopīs. Kṛṣṇa, the lord of yoga, entered among them between each pair, and the women whose necks he took in his arms stood close beside him.
+tel: గోపికల మండలముతో అలంకృతమైన రాసోత్సవము ఆరంభమయ్యెను. యోగేశ్వరుడైన కృష్ణుడు వారి మధ్య ఇద్దరిద్దరి నడుమ ప్రవేశించెను. ఆయన ఎవరి కంఠమును చేతులతో పట్టుకొనెనో ఆ స్త్రీలు ఆయన సమీపమున నిలిచిరి.
+hi: गोपियों के मंडल से सुशोभित रास का उत्सव आरंभ हुआ। योगेश्वर कृष्ण उनके बीच दो-दो के मध्य में प्रवेश कर गए, और जिनके कंठ उन्होंने अपनी बाँहों में ले लिए वे स्त्रियाँ उनके निकट खड़ी रहीं।
 
 --- verse 4 | section: Mahārāsa ---
 deva:
@@ -50,6 +59,9 @@ deva:
 iast:
 yaṁ manyeran nabhastāvad vimānaśatasaṁkulama|
 divaukasāṁ sadārāṇāmautsukyāpahṛtātmanām||
+en: One would have thought that the sky at that time was crowded with hundreds of celestial cars, bearing the gods with their wives, whose minds were carried away by eagerness.
+tel: ఆ సమయమున ఆకాశము వందలాది విమానములతో నిండియున్నదని అనిపించెను. ఆ విమానములలో ఔత్సుక్యముతో మనసు లాగబడిన దేవతలు తమ భార్యలతో కూడి యుండిరి.
+hi: उस समय आकाश सैकड़ों विमानों से भरा हुआ प्रतीत होता था। उन विमानों में उत्सुकता से जिनका मन खिंच गया था वे देवता अपनी पत्नियों के साथ बैठे थे।
 
 --- verse 5 | section: Mahārāsa ---
 deva:
@@ -58,6 +70,9 @@ deva:
 iast:
 tato dundubhayo nedurnipetuḥ puṣpavṛṣṭayaḥ|
 jagurgandharvapatayaḥ sastrīkāstadyaśo'malam||
+en: Then the drums sounded, showers of flowers fell, and the chiefs of the Gandharvas with their wives sang his spotless glory.
+tel: అప్పుడు దుందుభులు మ్రోగెను, పుష్పవృష్టి కురిసెను, గంధర్వపతులు తమ స్త్రీలతో కలిసి ఆయన నిర్మలమైన కీర్తిని గానము చేసిరి.
+hi: तब दुंदुभियाँ बजने लगीं, फूलों की वर्षा हुई, और गंधर्वों के प्रधान अपनी स्त्रियों के साथ उनका निर्मल यश गाने लगे।
 
 --- verse 6 | section: Mahārāsa ---
 deva:
@@ -66,6 +81,9 @@ deva:
 iast:
 valayānāṁ nūpurāṇāṁ kiṁkiṇīnāṁ ca yoṣitām|
 sapriyāṇāmabhūcchabdastumulo rāsamaṇḍale||
+en: A loud sound arose in the rāsa circle from the bangles, the anklets and the small bells of those women who were with their beloved.
+tel: ప్రియునితో కూడియున్న ఆ స్త్రీల వలయముల, నూపురముల, కింకిణుల శబ్దము రాసమండలమున గొప్పగా వినిపించెను.
+hi: अपने प्रियतम के साथ रहने वाली उन स्त्रियों के कंगनों, नूपुरों और किंकिणियों का बड़ा शब्द रास के मंडल में उठा।
 
 --- verse 7 | section: Mahārāsa ---
 deva:
@@ -74,6 +92,9 @@ deva:
 iast:
 tatrātiśuśubhe tābhirbhagavān devakīsutaḥ|
 madhye maṇīnāṁ haimānāṁ mahāmarakato yathā||
+en: There the Lord, the son of Devakī, shone greatly among them, as a great emerald shines among golden gems.
+tel: బంగారు మణుల మధ్య గొప్ప మరకతము వలె దేవకీపుత్రుడైన భగవంతుడు ఆ గోపికల మధ్య మిక్కిలి ప్రకాశించెను.
+hi: सोने के मणियों के बीच बड़े मरकत के समान देवकीपुत्र भगवान उन गोपियों के बीच अत्यंत शोभा पा रहे थे।
 
 --- verse 8 | section: Mahārāsa ---
 deva:
@@ -94,6 +115,9 @@ svidyanmukhyaḥ kabararaśanā-
 granthayaḥ kṛṣṇavadhvo
 gāyantyastaṁ taḍita iva
 tā meghacakre virejuḥ||
+en: With the placing of their feet, with the movement of their arms, with their smiles and the play of their brows, with their bending waists and moving breast cloths, with their earrings rolling on their cheeks, their faces moist with sweat, the knots of their braids and girdles loosened, the wives of Kṛṣṇa sang of him and shone like streaks of lightning in a bank of clouds.
+tel: పాదముల కదలికలతో, భుజముల చలనముతో, చిరునవ్వులతో, కనుబొమల విలాసముతో, వంగుచున్న నడుములతో, కదలుచున్న కుచపటములతో, చెక్కిళ్లపై ఆడుచున్న కుండలములతో, చెమట పట్టిన ముఖములతో, జడల మరియు మొలనూళ్ల ముడులు వీడిపోయి కృష్ణుని వధువులు ఆయనను గానము చేయుచు మేఘముల గుంపులో మెరుపుల వలె ప్రకాశించిరి.
+hi: पैरों की गति से, भुजाओं के हिलने से, मुस्कानों और भौंहों के विलास से, झुकती कमर और हिलते कुचपटों से, गालों पर लुढ़कते कुंडलों से, पसीने से भीगे मुखों से, तथा वेणी और करधनी की गाँठें खुल जाने पर कृष्ण की वे वधुएँ उनका गान करती हुईं मेघों के समूह में बिजली की रेखाओं के समान शोभा पा रही थीं।
 
 --- verse 9 | section: Mahārāsa ---
 deva:
@@ -102,6 +126,9 @@ deva:
 iast:
 uccairjagurnṛtyamānā raktakaṇṭhyo ratipriyāḥ|
 kṛṣṇābhimarśamuditā yadgītenedamāvṛtam||
+en: Dancing, they sang aloud with sweet throats. Love was dear to them, and they were delighted by Kṛṣṇa's touch. By their song all this was filled.
+tel: నృత్యము చేయుచు వారు మధురమైన కంఠములతో ఉచ్చస్వరముతో పాడిరి. వారికి రతి ప్రియము, వారు కృష్ణుని స్పర్శతో ఆనందించినవారు. వారి గానముతో ఇదంతయు నిండిపోయెను.
+hi: नृत्य करती हुईं वे मधुर कंठों से ऊँचे स्वर में गाने लगीं। उन्हें रति प्रिय थी और वे कृष्ण के स्पर्श से आनंदित थीं। उनके गान से यह सब भर गया।
 
 --- verse 10 | section: Mahārāsa ---
 deva:
@@ -112,6 +139,9 @@ iast:
 kācit samaṁ mukundena svarajātīramiśritāḥ|
 unninye pūjitā tena prīyatā sādhu sādhviti|
 tadeva dhruvamunninye tasyai mānaṁ ca bahvadāt||
+en: One gopī sang with Mukunda in notes of her own, not mixed with his, and raised the pitch. He was pleased and honoured her, saying, well done, well done. Another raised that same fixed note, and he gave her much praise.
+tel: ఒక గోపిక ముకుందునితో కలిసి, ఆయన స్వరముతో కలుపక తన స్వరజాతులను పాడి స్వరమును పైకి ఎత్తెను. ఆయన ప్రసన్నుడై సాధు సాధు అని ఆమెను గౌరవించెను. మరియొకతె అదే ధ్రువస్వరమును పైకి ఎత్తి పాడెను, ఆయన ఆమెకు చాలా మన్నన ఇచ్చెను.
+hi: एक गोपी ने मुकुंद के साथ, उनके स्वर से न मिलाकर अपनी स्वरजातियाँ गाईं और स्वर ऊँचा उठाया। उन्होंने प्रसन्न होकर साधु साधु कहकर उसका सम्मान किया। दूसरी ने उसी ध्रुव स्वर को ऊँचा उठाया, और उन्होंने उसे बहुत मान दिया।
 
 --- verse 11 | section: Mahārāsa ---
 deva:
@@ -120,6 +150,9 @@ deva:
 iast:
 kācid rāsapariśrāntā pārśvasthasya gadābhṛtaḥ|
 jagrāha bāhunā skandhaṁ ślathadvalayamallikā||
+en: One gopī, tired by the rāsa, took with her arm the shoulder of the bearer of the mace who stood beside her. Her bangles and her jasmine garland had slipped loose.
+tel: రాసముతో అలసిన ఒక గోపిక, తన ప్రక్కన నిలిచియున్న గదాధారి భుజమును తన చేతితో పట్టుకొనెను. ఆమె వలయములు మరియు మల్లికామాల వీడిపోయి జారుచుండెను.
+hi: रास से थकी हुई एक गोपी ने अपने पास खड़े गदाधारी का कंधा अपनी बाँह से पकड़ लिया। उसके कंगन और मल्लिका की माला ढीली होकर खिसक रही थी।
 
 --- verse 12 | section: Mahārāsa ---
 deva:
@@ -128,6 +161,9 @@ deva:
 iast:
 tatraikāṁsagataṁ bāhuṁ kṛṣṇasyotpalasaurabham|
 candanāliptamāghrāya hṛṣṭaromā cucumba ha||
+en: Then, smelling that arm of Kṛṣṇa which rested on her shoulder, fragrant as the blue lotus and smeared with sandal paste, she kissed it, and the hair of her body stood up with joy.
+tel: అప్పుడు తన భుజముపై ఉన్న కృష్ణుని ఆ బాహువును, ఉత్పలము వంటి సువాసన కలదియు చందనము పూయబడినదియు అయిన దానిని ఆఘ్రాణించి, పులకరించిన శరీరముతో ఆమె ముద్దు పెట్టుకొనెను.
+hi: तब अपने कंधे पर रखी कृष्ण की उस भुजा को, जो नीले कमल के समान सुगंधित और चंदन से लिपी थी, सूँघकर रोमांचित शरीर से उसने उसका चुंबन किया।
 
 --- verse 13 | section: Mahārāsa ---
 deva:
@@ -136,6 +172,9 @@ deva:
 iast:
 kasyāścinnāṭyavikṣiptakuṇḍalatviṣamaṇḍitam|
 gaṇḍaṁ gaṇḍe sandadhatyā adāttāmbūlacarvitam||
+en: To one who laid her cheek upon his cheek, a cheek adorned by the light of her earrings tossed about by the dance, he gave the betel he had chewed.
+tel: నాట్యముచే కదలిన కుండలముల కాంతితో అలంకరించబడిన తన చెక్కిలిని ఆయన చెక్కిలిపై ఉంచిన ఒక గోపికకు ఆయన తాను నమిలిన తాంబూలమును ఇచ్చెను.
+hi: नृत्य से हिलते कुंडलों की चमक से सुशोभित अपने गाल को जिसने उनके गाल से मिला दिया, उस गोपी को उन्होंने अपना चबाया हुआ ताम्बूल दिया।
 
 --- verse 14 | section: Mahārāsa ---
 deva:
@@ -144,6 +183,9 @@ deva:
 iast:
 nṛtyantī gāyatī kācit kūjannūpuramekhalā|
 pārśvasthācyutahastābjaṁ śrāntādhāt stanayoḥ śivam||
+en: One gopī, dancing and singing, her anklets and girdle sounding, grew tired and placed upon her breasts the lotus hand of Acyuta, who stood beside her, and it gave her peace.
+tel: నూపురములు మరియు మేఖల మ్రోగుచుండగా నృత్యము చేయుచు గానము చేయుచున్న ఒక గోపిక అలసిపోయి, తన ప్రక్కన నిలిచిన అచ్యుతుని కరకమలమును తన వక్షముపై ఉంచుకొనెను. అది ఆమెకు శాంతిని ఇచ్చెను.
+hi: नूपुर और मेखला की ध्वनि के साथ नाचती और गाती एक गोपी थक गई और उसने अपने पास खड़े अच्युत के करकमल को अपने वक्ष पर रख लिया। उससे उसे शांति मिली।
 
 --- verse 15 | section: Mahārāsa ---
 deva:
@@ -152,6 +194,9 @@ deva:
 iast:
 gopyo labdhvācyutaṁ kāntaṁ śriya ekāntavallabham|
 gṛhītakaṇṭhyastaddorbhyāṁ gāyantyastaṁ vijahrire||
+en: The gopīs had gained Acyuta as their beloved, who is the one beloved of Śrī. Their necks were held by his two arms, and they sang of him and played.
+tel: శ్రీదేవికి ఏకాంతవల్లభుడైన అచ్యుతుని కాంతునిగా పొందిన గోపికలు, ఆయన రెండు చేతులతో తమ కంఠములు పట్టుకొనబడగా ఆయనను గానము చేయుచు క్రీడించిరి.
+hi: श्री के एकांत वल्लभ अच्युत को अपने प्रियतम के रूप में पाकर गोपियाँ, जिनके कंठ उनकी दोनों भुजाओं से थामे हुए थे, उनका गान करती हुईं विहार करने लगीं।
 
 --- verse 16 | section: Mahārāsa ---
 deva:
@@ -164,6 +209,9 @@ karṇotpalālakaviṭaṁkakapolagharma-
 vaktraśriyo valayanūpuraghoṣavādyaiḥ|
 gopyaḥ samaṁ bhagavatā nanṛtuḥ svakeśa-
 srastasrajo bhramaragāyakarāsagoṣṭhyām||
+en: With blue lotuses at their ears, with their locks of hair, with beautiful cheeks and faces moist with sweat, to the music made by the sound of their bangles and anklets, their garlands slipping from their hair, the gopīs danced with the Lord in the rāsa gathering where the bees were the singers.
+tel: చెవులపై ఉత్పలములతో, ముంగురులతో, అందమైన చెక్కిళ్లతో, చెమటతో తడిసిన ముఖముల శోభతో, వలయముల నూపురముల శబ్దమే వాద్యముగా, తమ కేశముల నుండి మాలలు జారిపోగా, తుమ్మెదలే గాయకులుగా ఉన్న రాసగోష్ఠిలో గోపికలు భగవంతునితో కలిసి నృత్యము చేసిరి.
+hi: कानों पर नीले कमल, लटकती अलकें, सुंदर गाल और पसीने से भीगे मुखों की शोभा के साथ, कंगनों और नूपुरों के शब्द के ही वाद्य पर, केशों से मालाएँ खिसकती हुईं, भौंरे जहाँ गायक थे उस रास की गोष्ठी में गोपियाँ भगवान के साथ नाचने लगीं।
 
 --- verse 17 | section: Mahārāsa ---
 deva:
@@ -176,6 +224,9 @@ evaṁ pariṣvaṅgakarābhimarśa-
 snigdhekṣaṇoddāmavilāsahāsaiḥ|
 reme rameśo vrajasundarībhi-
 ryathārbhakaḥ svapratibimbavibhramaḥ||
+en: Thus with embraces, with the touch of his hands, with tender glances, with abundant play and laughter, Rameśa, the lord of Ramā, took delight with the beautiful women of Vraja, as a child plays with its own reflection.
+tel: ఇట్లు పరిష్వంగములతో, చేతుల స్పర్శతో, స్నిగ్ధమైన చూపులతో, విస్తారమైన విలాసములతో, నవ్వులతో రమాపతియైన రమేశుడు వ్రజసుందరులతో క్రీడించెను. బాలుడు తన ప్రతిబింబముతో ఆడుకొనునట్లు ఆయన క్రీడించెను.
+hi: इस प्रकार आलिंगनों से, हाथों के स्पर्श से, स्नेहभरी दृष्टियों से, उद्दाम विलास और हास से रमा के स्वामी रमेश ने व्रज की सुंदरियों के साथ विहार किया, जैसे बालक अपने ही प्रतिबिंब के साथ खेलता है।
 
 --- verse 18 | section: Mahārāsa ---
 deva:
@@ -188,6 +239,9 @@ tadaṅgasaṅgapramudākulendriyāḥ
 keśān dukūlaṁ kucapaṭṭikāṁ vā|
 nāñjaḥ prativyoḍhumalaṁ vrajastriyo
 visrastamālābharaṇāḥ kurūdvaha||
+en: O best of the Kurus, their senses were overcome with the joy of the touch of his body. The women of Vraja could not easily hold up their hair, their garments or their breast cloths. Their garlands and ornaments had slipped away.
+tel: ఓ కురూద్వహా, ఆయన శరీరస్పర్శ వలన కలిగిన ఆనందముతో వారి ఇంద్రియములు కలవరపడెను. వ్రజస్త్రీలు తమ కేశములను, దుకూలములను, కుచపట్టికలను సులభముగా సరిచేసుకొనలేకపోయిరి. వారి మాలలు మరియు ఆభరణములు జారిపోయెను.
+hi: हे कुरुश्रेष्ठ, उनके अंगों के स्पर्श के आनंद से उनकी इंद्रियाँ व्याकुल हो गईं। व्रज की स्त्रियाँ अपने केश, वस्त्र और कुचपट्टिकाएँ सहज ही सँभाल न सकीं। उनकी मालाएँ और आभूषण खिसक गए।
 
 --- verse 19 | section: Mahārāsa ---
 deva:
@@ -196,6 +250,9 @@ deva:
 iast:
 kṛṣṇavikrīḍitaṁ vīkṣya mumuhuḥ khecarastriyaḥ|
 kāmārditāḥ śaśāṁkaśca sagaṇo vismito'bhavat||
+en: Seeing Kṛṣṇa's play, the women who move in the sky were bewildered and struck by desire. The moon with his attendants was filled with wonder.
+tel: కృష్ణుని క్రీడను చూచి ఆకాశమున సంచరించు స్త్రీలు మోహమొంది కామముతో బాధపడిరి. చంద్రుడు తన గణములతో కలిసి ఆశ్చర్యమొందెను.
+hi: कृष्ण की क्रीड़ा देखकर आकाश में विचरने वाली स्त्रियाँ मोहित हो गईं और काम से पीड़ित हुईं। चंद्रमा अपने गणों के साथ विस्मित हो गया।
 
 --- verse 20 | section: Mahārāsa ---
 deva:
@@ -204,14 +261,20 @@ deva:
 iast:
 kṛtvā tāvantamātmānaṁ yāvatīrgopayoṣitaḥ|
 reme sa bhagavāṁstābhirātmārāmo'pi līlayā||
+en: Making himself as many as there were cowherd women, the Lord took delight with them in play, though he finds his delight in himself alone.
+tel: గోపస్త్రీలు ఎంతమంది ఉన్నారో అన్ని రూపములుగా తనను చేసుకొని, ఆత్మారాముడైనప్పటికీ ఆ భగవంతుడు లీలగా వారితో క్రీడించెను.
+hi: जितनी गोपस्त्रियाँ थीं उतने ही रूप अपने बना लेकर, आत्माराम होने पर भी भगवान ने लीला से उनके साथ विहार किया।
 
 --- verse 21 | section: Mahārāsa ---
 deva:
-तासामतिविहारेणश्रान्तानां वदनानि सः।
+तासामतिविहारेण श्रान्तानां वदनानि सः।
 प्रामृजत् करुणः प्रेम्णा शन्तमेनाङ्ग पाणिना॥
 iast:
-tāsāmativihāreṇaśrāntānāṁ vadanāni saḥ|
+tāsāmativihāreṇa śrāntānāṁ vadanāni saḥ|
 prāmṛjat karuṇaḥ premṇā śantamenāṅga pāṇinā||
+en: O dear one, when they were tired by that long play, he, who is compassionate, wiped their faces with love, with his most soothing hand.
+tel: ఓ ప్రియా, ఆ అతివిహారముచే అలసిపోయిన వారి ముఖములను కరుణామయుడైన ఆయన ప్రేమతో, మిక్కిలి శాంతిని ఇచ్చు తన చేతితో తుడిచెను.
+hi: हे प्रिय, उस अत्यधिक विहार से थकी हुईं उनके मुखों को करुणामय भगवान ने प्रेम से, अपने अत्यंत शांति देने वाले हाथ से पोंछा।
 
 --- verse 22 | section: Mahārāsa ---
 deva:
@@ -224,6 +287,9 @@ gopyaḥ sphuratpuraṭakuṇḍalakuntalatviḍ-
 gaṇḍaśriyā sudhitahāsanirīkṣaṇena|
 mānaṁ dadhatya ṛṣabhasya jaguḥ kṛtāni
 puṇyāni tatkararuhasparśapramodāḥ||
+en: The gopīs received honour from that best of men. Their cheeks were beautiful with the light of their shining golden earrings and their locks, and their glances were sweet with smiles. Delighted by the touch of his finger nails, they sang of his holy deeds.
+tel: మెరయుచున్న బంగారు కుండలముల మరియు ముంగురుల కాంతితో అందమైన చెక్కిళ్ల శోభతో, మధురమైన చిరునవ్వుల చూపులతో గోపికలు ఆ ఋషభుని వలన మన్నన పొందిరి. ఆయన గోళ్ల స్పర్శతో ఆనందించి వారు ఆయన పుణ్యకార్యములను గానము చేసిరి.
+hi: चमकते सोने के कुंडलों और अलकों की चमक से सुंदर गालों की शोभा तथा मधुर हँसी भरी दृष्टि के साथ गोपियों ने उस पुरुषश्रेष्ठ से मान पाया। उनके नखों के स्पर्श से आनंदित होकर उन्होंने उनके पुण्य कर्मों का गान किया।
 
 --- verse 23 | section: Mahārāsa ---
 deva:
@@ -236,6 +302,9 @@ tābhiryutaḥ śramamapohitumaṅgasaṅga-
 ghṛṣṭasrajaḥ sa kucakuṁkumaraṁjitāyāḥ|
 gandharvapālibhiranudruta āviśad vāḥ
 śrānto gajībhiribharāḍiva bhinnasetuḥ||
+en: Joined with them, he entered the water to remove his fatigue. His garland was crushed by the touch of their bodies and coloured by the kuṁkuma of their breasts, and the lines of Gandharvas followed after him. He was like a tired lord of elephants with his she elephants, after breaking a dam.
+tel: వారితో కూడి, అలసటను తీర్చుకొనుటకు ఆయన జలములో ప్రవేశించెను. వారి అంగముల స్పర్శతో నలిగిన ఆయన మాల వారి వక్షముల కుంకుమతో రంగు పొందెను. గంధర్వపాలుల వరుసలు ఆయన వెనుక వెళ్లెను. సేతువును పగులగొట్టిన అలసిన గజరాజు గజాంగనలతో కూడి నీటిలో దిగినట్లు ఆయన ఉండెను.
+hi: उनके साथ होकर थकान मिटाने के लिए उन्होंने जल में प्रवेश किया। उनके अंगों के संग से मसली गई उनकी माला उनके वक्ष के कुंकुम से रंग गई थी, और गंधर्वों की पंक्तियाँ उनके पीछे चलीं। वे बाँध तोड़कर थके हुए गजराज के समान थे जो अपनी हथिनियों के साथ जल में उतरता है।
 
 --- verse 24 | section: Mahārāsa ---
 deva:
@@ -248,6 +317,9 @@ so'mbhasyalaṁ yuvatibhiḥ pariṣicyamānaḥ
 premṇekṣitaḥ prahasatībhiritastato'ṅga|
 vaimānikaiḥ kusumavarṣibhirīḍyamāno
 reme svayaṁ svaratiratra gajendralīlaḥ||
+en: O dear one, in the water those young women sprinkled him on every side, looked at him with love as they laughed, and the gods in their celestial cars rained flowers and praised him. He took delight there, finding his joy in himself, in the manner of a lord of elephants.
+tel: ఓ ప్రియా, జలములో ఆ యువతులు ఆయనను అన్ని వైపుల నుండి జల్లుచు, నవ్వుచు ప్రేమతో చూచిరి. విమానములలో ఉన్న దేవతలు పుష్పవర్షము కురిపించి ఆయనను స్తుతించిరి. స్వరతి అయిన ఆయన గజేంద్రుని వలె అక్కడ క్రీడించెను.
+hi: हे प्रिय, जल में उन युवतियों ने उन्हें चारों ओर से सींचा और हँसते हुए प्रेम से देखा। विमानों में बैठे देवताओं ने फूल बरसाकर उनकी स्तुति की। अपने ही में रमण करने वाले वे गजेंद्र के समान वहाँ विहार करते रहे।
 
 --- verse 25 | section: Mahārāsa ---
 deva:
@@ -260,6 +332,9 @@ tataśca kṛṣṇopavane jalasthala-
 prasūnagandhānilajuṣṭadiktaṭe|
 cacāra bhṛṅgapramadāgaṇāvṛto
 yathā madacyud dviradaḥ kareṇubhiḥ||
+en: Then Kṛṣṇa walked in the grove, where the breeze carried the scent of the flowers of the water and of the land to every quarter. He was surrounded by the bees and by the young women, like an elephant flowing with rut among its she elephants.
+tel: పిమ్మట కృష్ణుడు ఉపవనములో సంచరించెను. అక్కడ జలమున, భూమిపై పూచిన పుష్పముల సువాసనను మోసుకొను గాలి అన్ని దిక్కుల అంచులను నిండించెను. తుమ్మెదలతో, యువతుల గణముతో చుట్టబడి ఆయన మదము కారు ఏనుగు కరేణువులతో తిరుగునట్లు తిరిగెను.
+hi: इसके बाद कृष्ण उपवन में विचरने लगे। वहाँ जल और थल के फूलों की गंध लिए वायु सब दिशाओं के तटों को भर रही थी। भौंरों और युवतियों के समूह से घिरे हुए वे मद बहाते हाथी के समान अपनी हथिनियों के साथ विचरते रहे।
 
 --- verse 26 | section: Mahārāsa ---
 deva:
@@ -272,6 +347,9 @@ evaṁ śaśāṁkāṁśuvirājitā niśāḥ
 sa satyakāmo'nuratābalāgaṇaḥ|
 siṣeva ātmanyavaruddhasaurataḥ
 sarvāḥ śaratkāvyakathārasāśrayāḥ||
+en: In this way he, whose every desire is true, with the host of women devoted to him, passed all those nights lit by the rays of the moon, which are the support of the sweetness of the poetry and the tales of autumn. He held his enjoyment within himself.
+tel: ఇట్లు సత్యకాముడైన ఆయన తనపై అనురాగము కలిగిన అబలాగణముతో కలిసి, చంద్రకిరణములతో ప్రకాశించు ఆ రాత్రులన్నిటిని గడిపెను. ఆ రాత్రులు శరత్కాలపు కావ్యముల, కథల రసమునకు ఆశ్రయము. ఆయన తన సురతమును తనలోనే నిలుపుకొనెను.
+hi: इस प्रकार सत्यकाम भगवान ने अपने में अनुरक्त स्त्रियों के समूह के साथ चंद्रमा की किरणों से प्रकाशित उन सब रात्रियों को बिताया। वे रात्रियाँ शरद् ऋतु के काव्य और कथाओं के रस का आश्रय हैं। उन्होंने अपने सुरत को अपने में ही रोक रखा।
 
 --- verse 27 | section: Mahārāsa ---
 deva:
@@ -282,6 +360,9 @@ iast:
 rājovāca
 saṁsthāpanāya dharmasya praśamāyetarasya ca|
 avatīrṇo hi bhagavānaṁśena jagadīśvaraḥ||
+en: The king said: The Lord, the ruler of the world, came down with a part of himself to establish dharma and to put down what is against it.
+tel: రాజు పలికెను: ధర్మమును స్థాపించుటకు, అధర్మమును శమింపజేయుటకు జగదీశ్వరుడైన భగవంతుడు అంశతో అవతరించెను.
+hi: राजा ने कहा: धर्म की स्थापना और अधर्म के शमन के लिए जगदीश्वर भगवान अंश से अवतीर्ण हुए।
 
 --- verse 28 | section: Mahārāsa ---
 deva:
@@ -290,6 +371,9 @@ deva:
 iast:
 sa kathaṁ dharmasetūnāṁ vaktā kartābhirakṣitā|
 pratīpamācarad brahman paradārābhimarśanam||
+en: Then how, O brāhmaṇa, did he who is the speaker, the doer and the protector of the bounds of dharma act against them and touch the wives of others?
+tel: ఓ బ్రాహ్మణా, ధర్మసేతువులను చెప్పువాడు, ఆచరించువాడు, రక్షించువాడు అయిన ఆయన దానికి విరుద్ధముగా పరస్త్రీలను ఎట్లు స్పృశించెను?
+hi: हे ब्राह्मण, धर्म की सीमाओं के कहने वाले, करने वाले और रक्षा करने वाले उन्होंने उसके विपरीत आचरण करके दूसरों की स्त्रियों का स्पर्श कैसे किया?
 
 --- verse 29 | section: Mahārāsa ---
 deva:
@@ -298,6 +382,9 @@ deva:
 iast:
 āptakāmo yadupatiḥ kṛtavān vai jugupsitam|
 kimabhiprāya etaṁ naḥ saṁśayaṁ chindhi suvrata||
+en: The lord of the Yadus, whose desires are all fulfilled, did what is blameworthy. With what purpose did he do it? Cut away this doubt of ours, O you of good vows.
+tel: ఆప్తకాముడైన యదుపతి నిందార్హమైన పనిని చేసెను. ఏ అభిప్రాయముతో ఆయన అట్లు చేసెను? ఓ సువ్రతా, మా ఈ సంశయమును తొలగించుము.
+hi: आप्तकाम यदुपति ने निंदनीय कर्म किया। किस अभिप्राय से किया? हे सुव्रत, हमारा यह संदेह काट दीजिए।
 
 --- verse 30 | section: Mahārāsa ---
 deva:
@@ -308,6 +395,9 @@ iast:
 śrīśuka uvāca
 dharmavyatikramo dṛṣṭa īśvarāṇāṁ ca sāhasam|
 tejīyasāṁ na doṣāya vahneḥ sarvabhujo yathā||
+en: Śuka said: A transgression of dharma and a bold act are seen in the mighty ones. For those of great power this is no fault, as it is none for fire, which eats everything.
+tel: శుకుడు పలికెను: ఈశ్వరులలో ధర్మమును అతిక్రమించుట, సాహసము చేయుట కనిపించును. సర్వమును భక్షించు అగ్నికి దోషము లేనట్లే తేజస్సు కలవారికి అది దోషము కాదు.
+hi: शुक ने कहा: ईश्वरों में धर्म का अतिक्रमण और साहस देखा जाता है। सब कुछ खा जाने वाली अग्नि के लिए जैसे दोष नहीं, वैसे ही अत्यंत तेजस्वी के लिए वह दोष नहीं है।
 
 --- verse 31 | section: Mahārāsa ---
 deva:
@@ -316,6 +406,9 @@ deva:
 iast:
 naitat samācarejjātu manasāpi hyanīśvaraḥ|
 vinaśyatyācaran mauḍhyādyathārudro'bdhijaṁ viṣam||
+en: One who is not a lord must never do this, not even in his mind. One who does it out of folly perishes, as anyone other than Rudra would perish on drinking the poison born of the ocean.
+tel: ఈశ్వరుడు కానివాడు దీనిని ఎప్పుడును చేయకూడదు, మనసుతో కూడ చేయకూడదు. మౌఢ్యముతో దానిని చేసినవాడు నశించును, రుద్రుడు కానివాడు సముద్రము నుండి పుట్టిన విషమును త్రాగి నశించునట్లే.
+hi: जो ईश्वर नहीं है वह इसे कभी न करे, मन से भी न करे। मूढ़ता से जो इसे करता है वह नष्ट हो जाता है, जैसे रुद्र के अतिरिक्त कोई समुद्र से उत्पन्न विष पीकर नष्ट हो जाता है।
 
 --- verse 32 | section: Mahārāsa ---
 deva:
@@ -324,6 +417,9 @@ deva:
 iast:
 īśvarāṇāṁ vacaḥ satyaṁ tathaivācaritaṁ kvacit|
 teṣāṁ yat svavacoyuktaṁ buddhimāṁstat samācaret||
+en: The words of the mighty ones are true, and at times their acts are true as well. A wise man should do only that act of theirs which agrees with their own words.
+tel: ఈశ్వరుల వచనము సత్యము, కొన్ని సమయములలో వారి ఆచరణము కూడ సత్యమే. వారి స్వవచనముతో సరిపోవు ఆచరణమును మాత్రమే బుద్ధిమంతుడు అనుసరించవలెను.
+hi: ईश्वरों का वचन सत्य है, और कहीं-कहीं उनका आचरण भी सत्य है। उनमें से जो उनके अपने वचन के अनुकूल हो, बुद्धिमान उसी का आचरण करे।
 
 --- verse 33 | section: Mahārāsa ---
 deva:
@@ -332,6 +428,9 @@ deva:
 iast:
 kuśalācaritenaiṣāmiha svārtho na vidyate|
 viparyayeṇa vānartho nirahaṁkāriṇāṁ prabho||
+en: O lord, those who are free from the sense of I gain nothing for themselves here by doing good, and they suffer no loss by doing the opposite.
+tel: ఓ ప్రభూ, అహంకారము లేని వారికి ఇక్కడ శుభమైన ఆచరణము వలన స్వార్థము లేదు, దానికి విరుద్ధముగా చేసినప్పుడు అనర్థము లేదు.
+hi: हे प्रभु, अहंकार से रहित इन महात्माओं को यहाँ शुभ आचरण से कोई स्वार्थ नहीं, और उसके विपरीत करने से कोई अनर्थ नहीं।
 
 --- verse 34 | section: Mahārāsa ---
 deva:
@@ -340,6 +439,9 @@ deva:
 iast:
 kimutākhilasattvānāṁ tiryaṅmartyadivaukasām|
 īśituśceśitavyānāṁ kuśalākuśalānvayaḥ||
+en: How much less, then, can good and evil touch him who is the ruler of all beings, of the animals, of men and of the gods, and of all that is ruled?
+tel: అన్ని ప్రాణులకు, తిర్యక్కులకు, మనుష్యులకు, దేవతలకు, ఈశితవ్యములైన అన్నిటికి ఈశుడైన ఆయనకు శుభాశుభముల సంబంధము ఇంకెట్లు ఉండును?
+hi: तो फिर सब प्राणियों के, पशुओं के, मनुष्यों के और देवताओं के तथा सब शासित वस्तुओं के ईश्वर को शुभ और अशुभ का संबंध कैसे हो सकता है?
 
 --- verse 35 | section: Mahārāsa ---
 deva:
@@ -352,6 +454,9 @@ yatpādapaṁkajaparāganiṣevatṛptā
 yogaprabhāvavidhutākhilakarmabandhāḥ|
 svairaṁ caranti munayo'pi na nahyamānā-
 stasyecchayā''ttavapuṣaḥ kuta eva bandhaḥ||
+en: The sages who are satisfied by serving the dust of his lotus feet, and whose every bond of karma is shaken off by the power of yoga, move as they please and are not bound. How then can there be any bond for him who took a body by his own will?
+tel: ఆయన పాదపంకజముల పరాగమును సేవించి తృప్తి పొందిన, యోగప్రభావముతో కర్మబంధములన్నిటిని తొలగించుకొనిన మునులు కూడ స్వేచ్ఛగా సంచరించుచు బంధింపబడరు. తన ఇచ్ఛతో శరీరమును ధరించిన ఆయనకు బంధము ఎక్కడ నుండి ఉండును?
+hi: उनके चरणकमलों की धूल की सेवा से तृप्त और योग के प्रभाव से सब कर्मबंधनों को झटक देने वाले मुनि भी स्वच्छंद विचरते हैं और बँधते नहीं। तो अपनी इच्छा से शरीर धारण करने वाले उनके लिए बंधन कहाँ से हो?
 
 --- verse 36 | section: Mahārāsa ---
 deva:
@@ -360,6 +465,9 @@ deva:
 iast:
 gopīnāṁ tatpatīnāṁ ca sarveṣāmeva dehinām|
 yo'ntaścarati so'dhyakṣaḥ krīḍaneneha dehabhāk||
+en: He who moves within the gopīs, within their husbands, and within all embodied beings is their overseer. He has taken a body here for play.
+tel: గోపికలలో, వారి పతులలో, అన్ని దేహధారులలో అంతరమున సంచరించు ఆయనే అధ్యక్షుడు. ఆయన క్రీడ కొరకు ఇక్కడ దేహమును ధరించెను.
+hi: जो गोपियों के भीतर, उनके पतियों के भीतर और सब देहधारियों के भीतर विचरते हैं, वे ही अध्यक्ष हैं। उन्होंने यहाँ क्रीड़ा के लिए देह धारण किया है।
 
 --- verse 37 | section: Mahārāsa ---
 deva:
@@ -368,6 +476,9 @@ deva:
 iast:
 anugrahāya bhūtānāṁ mānuṣaṁ dehamāsthitaḥ|
 bhajate tādṛśīḥ krīḍā yāḥ śrutvā tatparo bhavet||
+en: To show grace to beings he has taken a human body, and he performs such plays that one who hears of them becomes devoted to him.
+tel: ప్రాణులపై అనుగ్రహము చూపుటకు ఆయన మానుష దేహమును ధరించెను. ఎవరు విన్నచో ఆయనపై నిమగ్నులు అగుదురో అట్టి క్రీడలను ఆయన చేయును.
+hi: प्राणियों पर अनुग्रह करने के लिए उन्होंने मनुष्य का शरीर धारण किया है, और वे ऐसी क्रीड़ाएँ करते हैं जिन्हें सुनकर मनुष्य उनमें तत्पर हो जाता है।
 
 --- verse 38 | section: Mahārāsa ---
 deva:
@@ -376,6 +487,9 @@ deva:
 iast:
 nāsūyan khalu kṛṣṇāya mohitāstasya māyayā|
 manyamānāḥ svapārśvasthān svān svān dārān vrajaukasaḥ||
+en: The people of Vraja bore no ill will towards Kṛṣṇa. They were bewildered by his māyā, and each of them thought that the woman standing at his own side was his own wife.
+tel: వ్రజవాసులు కృష్ణునిపై అసూయ పడలేదు. ఆయన మాయతో మోహితులైన వారు తమ ప్రక్కన నిలిచినవారే తమ తమ భార్యలని భావించిరి.
+hi: व्रज के लोगों ने कृष्ण से असूया नहीं की। उनकी माया से मोहित होकर वे अपने पास खड़ी स्त्रियों को अपनी-अपनी पत्नी ही मानते रहे।
 
 --- verse 39 | section: Mahārāsa ---
 deva:
@@ -384,6 +498,9 @@ deva:
 iast:
 brahmarātra upāvṛtte vāsudevānumoditāḥ|
 anicchantyo yayurgopyaḥ svagṛhān bhagavatpriyāḥ||
+en: When the brāhma night had come to its end, the gopīs, who are dear to the Lord, were given leave by Vāsudeva and went to their homes, though they did not wish to go.
+tel: బ్రహ్మరాత్రి ముగియగా, భగవంతునికి ప్రియమైన గోపికలు వాసుదేవుని అనుమతి పొంది, ఇష్టము లేకపోయినను తమ ఇండ్లకు వెళ్లిరి.
+hi: ब्रह्म रात्रि के बीत जाने पर भगवान की प्रिय गोपियाँ वासुदेव की अनुमति पाकर, इच्छा न होने पर भी अपने घरों को चली गईं।
 
 --- verse 40 | section: Mahārāsa ---
 deva:
@@ -396,9 +513,15 @@ vikrīḍitaṁ vrajavadhūbhiridaṁ ca viṣṇoḥ
 śraddhānvito'nuśṛṇuyādatha varṇayed yaḥ|
 bhaktiṁ parāṁ bhagavati pratilabhya kāmaṁ
 hṛdrogamāśvapahinotyacireṇa dhīraḥ||
+en: The steady man who hears this play of Viṣṇu with the women of Vraja with faith, or who tells of it, gains the highest devotion to the Lord and quickly casts off desire, which is the disease of the heart.
+tel: వ్రజవధువులతో విష్ణువు చేసిన ఈ క్రీడను శ్రద్ధతో విన్నవాడు లేక వర్ణించినవాడు భగవంతునిపై పరమ భక్తిని పొందును. ఆ ధీరుడు హృదయరోగమైన కామమును శీఘ్రముగా విడిచిపెట్టును.
+hi: व्रज की वधुओं के साथ विष्णु की इस क्रीड़ा को जो श्रद्धा से सुनता है अथवा वर्णन करता है, वह भगवान में परम भक्ति पाता है। वह धीर पुरुष हृदय के रोग रूप काम को शीघ्र ही छोड़ देता है।
 
 --- verse none ---
 deva:
 इति श्रीमद्भागवते महापुराणे पारमहंस्यां संहितायां दशमस्कन्धे पूर्वार्धे रासक्रीडावर्णनं नाम त्रयस्त्रिंशोऽध्यायः॥ ३३॥
 iast:
 iti śrīmadbhāgavate mahāpurāṇe pāramahaṁsyāṁ saṁhitāyāṁ daśamaskandhe pūrvārdhe rāsakrīḍāvarṇanaṁ nāma trayastriṁśo'dhyāyaḥ|| 33||
+en: Thus ends the thirty third adhyāya, called the description of the rāsa play, in the first half of the tenth skandha of the Śrīmad Bhāgavata Mahāpurāṇa, the saṁhitā of the paramahaṁsas.
+tel: ఇట్లు శ్రీమద్భాగవత మహాపురాణమున, పరమహంసల సంహితయందు, దశమస్కంధము పూర్వార్ధమున రాసక్రీడావర్ణనము అను ముప్పదిమూడవ అధ్యాయము ముగిసెను.
+hi: इस प्रकार श्रीमद्भागवत महापुराण की परमहंसों की संहिता में, दशम स्कंध के पूर्वार्ध में रासक्रीड़ा का वर्णन नामक तैंतीसवाँ अध्याय समाप्त हुआ।

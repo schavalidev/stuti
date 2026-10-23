@@ -9,7 +9,7 @@ Type: Purāṇa (an adhyāya of the Śrīmad Bhāgavata, Skandha 10)
 
 Source / recension: Base text and authority: the Gītā Press, Gorakhpur Śrīmadbhāgavata Mahāpurāṇa with Hindi translation, Part 2 (Gītā Press code 27), archive.org item `shrimadbhagwat-mahapuran-bhag-2`, printed pages 327–331; the PDF page numbers are the printed ones. The PDF carries the typesetter's own text layer in the Chanakya font encoding, and the text was decoded from it by machine with `bin/bhagavata/chanakya.py`, not read off OCR or typed. The decoder was checked against GRETIL over all twelve skandhas before any file was written, and the differences that remain were sampled and found to be readings of the two editions. Second witness: GRETIL's `sa_bhAgavatapurANa.xml` (IAST, contributed by Ulrich Stiehl), a separate editorial lineage, compared verse by verse by machine. The TTD edition with the commentaries of Śrīdhara, Vīrarāghava and Vijayadhvaja (archive.org `Bhagavata_Purana_With_Multiple_Commentaries_TTD_Critical_Edition`) is the third witness where one is needed; it was not read for this file. The IAST was generated mechanically from the Devanāgarī with `bin/dev2iast.py`.
 
-Recension note: Text-only file, written 1 Oct 2026 at the user's instruction to lay down the whole Bhāgavata first: the English, Telugu and Hindi meanings are still to be added, and the witnesses' differences listed here have been recorded by machine and not yet adjudicated. The print is followed throughout. The print numbers 22 verses and GRETIL numbers 22. Of the 22 verses GRETIL has under the same number, 14 agree with the print letter for letter once spacing and the spelling of nasals are set aside; the rest differ: 4, 6, 8, 12, 13, 18, 20, 21. Spacing is the print's, as its text layer gives it; in a few places justification has left a space inside a word, and these are still to be closed when the verse is read. The speaker lines (श्रीशुक उवाच and the others) are printed in italic above the verse they introduce, and are given as its first line.
+Recension note: Meanings written 23 Oct 2026 (session S78). The differences between the witnesses listed below were read as the verses were glossed; except where this note says otherwise, each is a spelling, a sandhi or a word order of the two editions, none of them changes the sense, and the print's reading therefore stands unbracketed. The print is followed throughout. The print numbers 22 verses and GRETIL numbers 22. Of the 22 verses GRETIL has under the same number, 14 agree with the print letter for letter once spacing and the spelling of nasals are set aside; the rest differ: 4, 6, 8, 12, 13, 18, 20, 21. Spacing is the print's, as its text layer gives it. The speaker lines (श्रीशुक उवाच and the others) are printed in italic above the verse they introduce, and are given as its first line. One word was put right as the verses were read. At verse 5 justification had left a space inside अङ्घ्रि, and it is closed here; GRETIL reads tad-aṅghri-kamalaṁ whole. At verse 21 the print prints मया परोक्षं as two words where GRETIL joins them, and the print's spacing stands, मया being an instrumental standing on its own. At verses 11 and 12 GRETIL spaces one compound loosely (mandāra surabhy-anila, hasta-taralā cita-komala) where the print joins it, and the print is followed. The line-break hyphens at verses 13 and 21 are left where the print puts them.
 
 Verse count: 22, plus the closing colophon printed unnumbered.
 
@@ -24,6 +24,9 @@ iast:
 śrīśuka uvāca
 iti gopyaḥ pragāyantyaḥ pralapantyaśca citradhā|
 ruruduḥ susvaraṁ rājan kṛṣṇadarśanalālasāḥ||
+en: Śuka said: Thus the gopīs, singing and lamenting in many ways, O king, wept aloud in sweet voices, longing to see Kṛṣṇa.
+tel: శుకుడు పలికెను: ఈ విధముగా గోపికలు అనేక రీతులుగా పాడుచు, విలపించుచు, ఓ రాజా, కృష్ణుని చూడవలెనన్న కోరికతో మధురమైన స్వరముతో బిగ్గరగా ఏడ్చిరి.
+hi: शुक ने कहा: इस प्रकार गोपियाँ अनेक प्रकार से गाती और विलाप करती हुईं, हे राजन्, कृष्ण के दर्शन की उत्कण्ठा से मधुर स्वर में फूट-फूट कर रोने लगीं।
 
 --- verse 2 ---
 deva:
@@ -32,6 +35,9 @@ deva:
 iast:
 tāsāmāvirabhūcchauriḥ smayamānamukhāmbujaḥ|
 pītāmbaradharaḥ sragvī sākṣānmanmathamanmathaḥ||
+en: Then Śauri appeared before them. His lotus face was smiling. He wore yellow cloth and a garland. He was himself the one who bewilders Cupid.
+tel: అప్పుడు శౌరి వారి ఎదుట ప్రత్యక్షమయ్యెను. ఆయన ముఖకమలము చిరునవ్వుతో ఉండెను. పీతాంబరమును ధరించి, మాలను తాల్చి ఉండెను. ఆయన మన్మథునికే మన్మథుడు.
+hi: तब शौरि उनके सामने प्रकट हुए। उनका मुखकमल मुसकरा रहा था। वे पीताम्बर और माला धारण किये हुए थे। वे साक्षात् कामदेव के भी काम थे।
 
 --- verse 3 ---
 deva:
@@ -40,6 +46,9 @@ deva:
 iast:
 taṁ vilokyāgataṁ preṣṭhaṁ prītyutphulladṛśo'balāḥ|
 uttasthuryugapat sarvāstanvaḥ prāṇamivāgatam||
+en: Seeing their most beloved come, the eyes of those women opened wide with love. All of them rose up together, like bodies to which life has returned.
+tel: తమకు ప్రియతముడైన ఆయన వచ్చుట చూచి ఆ స్త్రీల కన్నులు ప్రేమతో విప్పారెను. ప్రాణము తిరిగి వచ్చిన శరీరముల వలె వారందరు ఒక్కసారిగా లేచి నిలిచిరి.
+hi: अपने परम प्रियतम को आया देखकर उन स्त्रियों के नेत्र प्रेम से खिल उठे। लौट आये प्राण से युक्त शरीरों के समान वे सब एक साथ उठ खड़ी हुईं।
 
 --- verse 4 ---
 deva:
@@ -48,14 +57,20 @@ deva:
 iast:
 kācit karāmbujaṁ śaurerjagṛhe'ñjalinā mudā|
 kācid dadhāra tadbāhumaṁse candanarūṣitam||
+en: One took Śauri's lotus hand in her joined palms with joy. One placed upon her shoulder his arm, which was smeared with sandal paste.
+tel: ఒకతె ఆనందముతో శౌరి కరకమలమును తన దోసిలిలో తీసుకొనెను. ఒకతె చందనము పూసిన ఆయన బాహువును తన భుజముపై ఉంచుకొనెను.
+hi: एक ने आनन्द से शौरि के करकमल को अपनी अंजलि में ले लिया। एक ने चन्दन से चर्चित उनकी भुजा को अपने कंधे पर रख लिया।
 
 --- verse 5 ---
 deva:
 काचिदञ्जलिनागृह्णात्तन्वी ताम्बूलचर्वितम्।
-एका तदङ् घ्रिकमलं सन्तप्ता स्तनयोरधात्॥
+एका तदङ्घ्रिकमलं सन्तप्ता स्तनयोरधात्॥
 iast:
 kācidañjalināgṛhṇāttanvī tāmbūlacarvitam|
-ekā tadaṅ ghrikamalaṁ santaptā stanayoradhāt||
+ekā tadaṅghrikamalaṁ santaptā stanayoradhāt||
+en: One slender one received in her joined palms the betel he had chewed. One, burning with the pain of separation, placed his lotus foot upon her breasts.
+tel: సన్నని దేహము కల ఒకతె ఆయన నమిలిన తాంబూలమును తన దోసిలిలో అందుకొనెను. విరహతాపముతో కాలిపోవుచున్న ఒకతె ఆయన పాదకమలమును తన వక్షముపై ఉంచుకొనెను.
+hi: एक कृशांगी ने उनका चर्वित ताम्बूल अपनी अंजलि में ले लिया। विरह के ताप से जलती हुई एक ने उनके चरणकमल को अपने वक्ष पर रख लिया।
 
 --- verse 6 ---
 deva:
@@ -64,6 +79,9 @@ deva:
 iast:
 ekā bhrukuṭimābadhya premasaṁrambhavihvalā|
 ghnatīvaikṣat kaṭākṣepaiḥ saṁdaṣṭadaśanacchadā||
+en: One knitted her brows. She was overcome by the agitation of love. Biting her lip, she looked at him with side glances, as though striking him.
+tel: ఒకతె కనుబొమలు ముడిచెను. ప్రేమతో కలిగిన ఆవేశముతో ఆమె తడబడుచుండెను. పెదవిని కొరికి, ఆమె కొట్టునట్లుగా ఓరచూపులతో ఆయనను చూచెను.
+hi: एक ने भौंहें चढ़ा लीं। वह प्रेम के आवेश से विह्वल थी। होंठ दबाकर उसने मारती हुई के समान तिरछी चितवन से उनकी ओर देखा।
 
 --- verse 7 ---
 deva:
@@ -72,6 +90,9 @@ deva:
 iast:
 aparānimiṣaddṛgbhyāṁ juṣāṇā tanmukhāmbujam|
 āpītamapi nātṛpyat santastaccaraṇaṁ yathā||
+en: Another enjoyed his lotus face with unblinking eyes. Though she drank it in, she was not satisfied, just as the saints are never satisfied with his feet.
+tel: మరియొకతె రెప్ప వాల్చని కన్నులతో ఆయన ముఖకమలమును ఆనందించెను. ఎంత త్రాగినను ఆమెకు తృప్తి కలుగలేదు. సాధువులకు ఆయన చరణములతో తృప్తి కలుగనట్లే.
+hi: दूसरी अपलक नेत्रों से उनके मुखकमल का आस्वादन करती रही। पी लेने पर भी वह तृप्त न हुई, जैसे सन्त उनके चरणों से कभी तृप्त नहीं होते।
 
 --- verse 8 ---
 deva:
@@ -80,6 +101,9 @@ deva:
 iast:
 taṁ kācinnetrarandhreṇa hṛdikṛtya nimīlya ca|
 pulakāṅgyupaguhyāste yogīvānandasamplutā||
+en: One took him in through the openings of her eyes and placed him in her heart. Then she closed her eyes, and with her limbs thrilled she embraced him within, and remained like a yogī immersed in bliss.
+tel: ఒకతె కన్నుల రంధ్రముల ద్వారా ఆయనను లోపలికి తీసుకొని హృదయములో నిలుపుకొనెను. పిమ్మట కన్నులు మూసుకొని, పులకించిన శరీరముతో ఆయనను లోపలనే కౌగిలించుకొని, ఆనందములో మునిగిన యోగి వలె నిలిచెను.
+hi: एक ने नेत्रों के छिद्रों से उन्हें भीतर ले जाकर हृदय में धारण किया। फिर नेत्र मूँदकर, पुलकित अंगों से उन्हें भीतर ही आलिंगन करके, वह आनन्द में डूबे योगी के समान स्थित हो गई।
 
 --- verse 9 ---
 deva:
@@ -88,6 +112,9 @@ deva:
 iast:
 sarvāstāḥ keśavālokaparamotsavanirvṛtāḥ|
 jahurvirahajaṁ tāpaṁ prājñaṁ prāpya yathā janāḥ||
+en: All of them were delighted by the supreme festival of seeing Keśava. They gave up the pain born of separation, as people do when they gain a wise man.
+tel: వారందరు కేశవుని దర్శనమనే పరమోత్సవముతో ఆనందము పొందిరి. జ్ఞానియైన వానిని పొందిన జనుల వలె వారు విరహము వలన కలిగిన తాపమును విడిచిరి.
+hi: वे सब केशव के दर्शन के परम उत्सव से आनन्दित हो गईं। ज्ञानी पुरुष को पा लेने वाले लोगों के समान उन्होंने विरह से उत्पन्न ताप को छोड़ दिया।
 
 --- verse 10 ---
 deva:
@@ -96,6 +123,9 @@ deva:
 iast:
 tābhirvidhūtaśokābhirbhagavānacyuto vṛtaḥ|
 vyarocatādhikaṁ tāta puruṣaḥ śaktibhiryathā||
+en: Surrounded by them, whose sorrow was thus dispelled, the blessed Lord Acyuta shone all the more, dear child, as the Puruṣa shines with his powers.
+tel: ఈ విధముగా శోకము తొలగిన ఆ గోపికలతో చుట్టబడిన భగవానుడైన అచ్యుతుడు, నాయనా, తన శక్తులతో కూడిన పురుషుని వలె మరింత ప్రకాశించెను.
+hi: इस प्रकार जिनका शोक दूर हो गया था, उन गोपियों से घिरे हुए भगवान् अच्युत, हे तात, अपनी शक्तियों से युक्त पुरुष के समान अधिक शोभा पाने लगे।
 
 --- verse 11 ---
 deva:
@@ -104,6 +134,9 @@ deva:
 iast:
 tāḥ samādāya kālindyā nirviśya pulinaṁ vibhuḥ|
 vikasatkundamandārasurabhyanilaṣaṭpadam||
+en: Taking them with him, the all-pervading Lord entered the sandbank of the Kālindī. There the breeze was fragrant with blooming kunda and mandāra flowers, and bees moved about.
+tel: వారిని తనతో తీసుకొని సర్వవ్యాపకుడైన ప్రభువు కాళిందీ నదీ ఇసుకతిన్నెను చేరెను. అక్కడ వికసించిన కుంద, మందార పుష్పముల సువాసనతో గాలి నిండి ఉండెను, తుమ్మెదలు తిరుగుచుండెను.
+hi: उन्हें साथ लेकर सर्वव्यापी प्रभु कालिन्दी के पुलिन पर पहुँचे। वहाँ खिले हुए कुन्द और मन्दार के फूलों की सुगन्ध से वायु भरी थी और भौंरे मँडरा रहे थे।
 
 --- verse 12 ---
 deva:
@@ -112,6 +145,9 @@ deva:
 iast:
 śaraccandrāṁśusandohadhvastadoṣātamaḥ śivam|
 kṛṣṇāyā hastataralācitakomalavālukam||
+en: That sandbank was auspicious. The darkness of the night there was destroyed by the mass of the autumn moon's rays. Its soft sand was heaped up by the rippling hands of the Kṛṣṇā.
+tel: ఆ ఇసుకతిన్నె శుభకరమైనది. శరత్కాల చంద్రుని కిరణముల సమూహము అక్కడి రాత్రి చీకటిని నశింపజేసెను. కృష్ణా నది చలించుచున్న చేతుల వంటి అలలు దాని మెత్తని ఇసుకను పోగుచేసెను.
+hi: वह पुलिन शुभ था। शरद् के चन्द्रमा की किरणों के समूह ने वहाँ की रात्रि का अन्धकार नष्ट कर दिया था। कृष्णा के चंचल हाथों रूपी लहरों ने उसकी कोमल बालू को बिछा दिया था।
 
 --- verse 13 ---
 deva:
@@ -124,6 +160,9 @@ taddarśanāhlādavidhūtahṛdrujo
 manorathāntaṁ śrutayo yathā yayuḥ|
 svairuttarīyaiḥ kucakuṁkumāṁkitai-
 racīklṛpannāsanamātmabandhave||
+en: The pain in their hearts was dispelled by the joy of seeing him, and they reached the end of their longing, as the śrutis do. With their own upper garments, marked with the kuṁkuma of their breasts, they prepared a seat for him who was their own kinsman.
+tel: ఆయన దర్శనము వలన కలిగిన ఆహ్లాదముతో వారి హృదయవేదన తొలగెను, శ్రుతుల వలె వారు తమ కోరిక చివరి స్థితిని చేరిరి. తమ వక్షముల కుంకుమతో అంటిన తమ ఉత్తరీయములతో వారు తమ బంధువైన ఆయనకు ఆసనమును సిద్ధము చేసిరి.
+hi: उनके दर्शन के आह्लाद से उनके हृदय की पीड़ा दूर हो गई और वे श्रुतियों के समान अपने मनोरथ के अन्त को पहुँच गईं। अपने वक्ष के कुंकुम से अंकित अपने उत्तरीयों से उन्होंने अपने बन्धु के लिए आसन तैयार किया।
 
 --- verse 14 ---
 deva:
@@ -136,6 +175,9 @@ tatropaviṣṭo bhagavān sa īśvaro
 yogeśvarāntarhṛdi kalpitāsanaḥ|
 cakāsa gopīpariṣadgato'rcita-
 strailokyalakṣmyekapadaṁ vapurdadhat||
+en: Seated there, that blessed Lord, the ruler of all, whose seat is prepared within the hearts of the masters of yoga, shone in the assembly of the gopīs. He was worshipped by them, and he bore a form that is the sole abode of the beauty of the three worlds.
+tel: అక్కడ ఆసీనుడైన ఆ భగవానుడు, సర్వమునకు ఈశ్వరుడు, యోగేశ్వరుల హృదయములలో ఆసనము సిద్ధము చేయబడిన వాడు, గోపికల సభలో ప్రకాశించెను. వారు ఆయనను పూజించిరి, మూడు లోకముల సౌందర్యమునకు ఒక్కటే నిలయమైన రూపమును ఆయన ధరించి ఉండెను.
+hi: वहाँ विराजमान वे भगवान्, सबके ईश्वर, जिनका आसन योगेश्वरों के हृदय में रचा जाता है, गोपियों की सभा में शोभा पाने लगे। वे उनसे पूजित थे और तीनों लोकों की लक्ष्मी के एकमात्र स्थान रूप शरीर धारण किये हुए थे।
 
 --- verse 15 ---
 deva:
@@ -148,6 +190,9 @@ sabhājayitvā tamanaṅgadīpanaṁ
 sahāsalīlekṣaṇavibhramabhruvā|
 saṁsparśanenāṅkakṛtāṅghrihastayoḥ
 saṁstutya īṣatkupitā babhāṣire||
+en: They honoured him who kindles love, with smiles, with playful glances and with the movement of their brows, and by touching his feet and hands which they had placed upon their laps. They praised him, and then, a little angry, they spoke.
+tel: ప్రేమను రగిలించువాడైన ఆయనను వారు చిరునవ్వులతో, లీలాయుక్తమైన చూపులతో, కనుబొమల కదలికతో సత్కరించిరి, తమ ఒడిలో ఉంచుకొనిన ఆయన పాదములను, చేతులను తాకిరి. వారు ఆయనను స్తుతించి, పిమ్మట కొంచెము కోపముతో ఇట్లు పలికిరి.
+hi: प्रेम को जगाने वाले उन्हें उन्होंने हँसी से, लीलामय चितवन से और भौंहों के विलास से सत्कार किया, तथा अपनी गोद में रखे उनके चरणों और हाथों का स्पर्श किया। उनकी स्तुति करके फिर कुछ रोष के साथ वे बोलीं।
 
 --- verse 16 ---
 deva:
@@ -158,6 +203,9 @@ iast:
 gopya ūcuḥ
 bhajato'nubhajantyeka eka etadviparyayam|
 nobhayāṁśca bhajantyeka etanno brūhi sādhu bhoḥ||
+en: The gopīs said: Some return the love of those who love them. Some do the opposite of this. Some love neither of the two. Tell us rightly about this, sir.
+tel: గోపికలు పలికిరి: కొందరు తమను ప్రేమించిన వారిని తిరిగి ప్రేమించుదురు. కొందరు దీనికి విరుద్ధముగా చేయుదురు. కొందరు ఈ ఇద్దరిని ప్రేమించరు. దీనిని గురించి మాకు చక్కగా చెప్పుము, స్వామీ.
+hi: गोपियाँ बोलीं: कुछ लोग अपने को भजने वालों को बदले में भजते हैं। कुछ इसके विपरीत करते हैं। कुछ दोनों को ही नहीं भजते। इसे हमें ठीक-ठीक बताइये, भगवन्।
 
 --- verse 17 ---
 deva:
@@ -168,6 +216,9 @@ iast:
 śrībhagavānuvāca
 mitho bhajanti ye sakhyaḥ svārthaikāntodyamā hi te|
 na tatra sauhṛdaṁ dharmaḥ svārthārthaṁ taddhi nānyathā||
+en: The blessed Lord said: O friends, those who love one another in return are intent only upon their own gain. In that there is no true friendship and no dharma. It is for their own sake and nothing else.
+tel: భగవానుడు పలికెను: ఓ సఖులారా, ఒకరినొకరు తిరిగి ప్రేమించువారు తమ స్వార్థముపైనే పూర్తిగా దృష్టి కలవారు. అందులో నిజమైన స్నేహము లేదు, ధర్మము లేదు. అది స్వార్థము కొరకే, మరి ఏమియు కాదు.
+hi: भगवान् ने कहा: हे सखियों, जो एक-दूसरे को बदले में भजते हैं, वे केवल अपने स्वार्थ में ही लगे हैं। उसमें न सच्चा सौहार्द है, न धर्म। वह अपने स्वार्थ के लिए ही है, और कुछ नहीं।
 
 --- verse 18 ---
 deva:
@@ -176,6 +227,9 @@ deva:
 iast:
 bhajantyabhajato ye vai karuṇāḥ pitaro yathā|
 dharmo nirapavādo'tra sauhṛdaṁ ca sumadhyamāḥ||
+en: Those who love even those who do not love them are compassionate, as parents are. In them, O slender-waisted ones, there is dharma beyond all reproach, and true friendship.
+tel: తమను ప్రేమించని వారిని కూడ ప్రేమించువారు కరుణ కలవారు, తల్లిదండ్రుల వలె. ఓ సుమధ్యమలారా, వారిలో ఏ దోషమును చెప్పజాలని ధర్మము, నిజమైన స్నేహము ఉన్నవి.
+hi: जो अपने को न भजने वालों को भी भजते हैं, वे माता-पिता के समान करुणामय हैं। हे सुमध्यमाओं, उनमें निर्दोष धर्म है और सच्चा सौहार्द है।
 
 --- verse 19 ---
 deva:
@@ -184,6 +238,9 @@ deva:
 iast:
 bhajato'pi na vai kecid bhajantyabhajataḥ kutaḥ|
 ātmārāmā hyāptakāmā akṛtajñā gurudruhaḥ||
+en: Some do not love even those who love them, and how then would they love those who do not? They are those who delight in the self, those whose desires are already fulfilled, the ungrateful, and those who injure their teachers.
+tel: కొందరు తమను ప్రేమించిన వారిని కూడ ప్రేమించరు, ప్రేమించని వారిని ఎట్లు ప్రేమించుదురు? వారు ఆత్మారాములు, ఆప్తకాములు, కృతజ్ఞత లేనివారు, గురువునకు ద్రోహము చేయువారు.
+hi: कुछ लोग अपने को भजने वालों को भी नहीं भजते, तो जो नहीं भजते उन्हें कैसे भजेंगे? वे आत्माराम हैं, आप्तकाम हैं, कृतज्ञता से रहित हैं, और गुरु से द्रोह करने वाले हैं।
 
 --- verse 20 ---
 deva:
@@ -196,6 +253,9 @@ nāhaṁ tu sakhyo bhajato'pi jantūn
 bhajāmyamīṣāmanuvṛttivṛttaye|
 yathādhano labdhadhane vinaṣṭe
 taccintayānyannibhṛto na veda||
+en: O friends, I however do not love in return even those beings who love me. I act so that their devotion to me may continue and grow. It is as with a poor man who gains wealth and then loses it. Absorbed in the thought of it, he knows nothing else.
+tel: ఓ సఖులారా, నేనైతే నన్ను ప్రేమించు ప్రాణులను కూడ తిరిగి ఆ రీతిగా ప్రేమించను. వారి అనువృత్తి నిలిచి పెరుగుటకే నేను అట్లు చేయుదును. ధనము లభించి పిమ్మట అది నశించిన పేదవాని వలె. దాని ధ్యాసలో మునిగి అతడు మరి ఏమియు ఎరుగడు.
+hi: हे सखियों, मैं तो अपने को भजने वाले प्राणियों को भी उसी रूप में नहीं भजता। मैं ऐसा उनकी अनुवृत्ति बनी रहे और बढ़े, इसके लिए करता हूँ। जैसे निर्धन को धन मिले और फिर नष्ट हो जाये, तो उसी के चिन्तन में डूबा हुआ वह और कुछ नहीं जानता।
 
 --- verse 21 ---
 deva:
@@ -208,6 +268,9 @@ evaṁ madarthojjhitalokaveda-
 svānāṁ hi vo mayyanuvṛttaye'balāḥ|
 mayā parokṣaṁ bhajatā tirohitaṁ
 māsūyituṁ mārhatha tat priyaṁ priyāḥ||
+en: Thus, O women, you have given up the world, the Vedas and your own people for my sake. It was so that your devotion to me might grow that I, loving you unseen, hid myself. Do not find fault with me for that, O dear ones, for I am dear to you.
+tel: ఈ విధముగా, ఓ స్త్రీలారా, మీరు నా కొరకు లోకమును, వేదములను, మీ స్వజనమును విడిచితిరి. నాపై మీ అనువృత్తి పెరుగుటకే, కనబడకుండ మిమ్ము ప్రేమించుచు నేను దాగికొంటిని. దాని కొరకు నన్ను నిందించకుడు, ఓ ప్రియమైనవారా, నేను మీకు ప్రియుడను.
+hi: इस प्रकार, हे अबलाओं, तुमने मेरे लिए लोक, वेद और अपने स्वजनों को छोड़ दिया। मुझमें तुम्हारी अनुवृत्ति बढ़े, इसी के लिए अदृश्य रहकर तुम्हें भजते हुए मैं छिप गया। इसके लिए मुझ पर दोष न लगाओ, हे प्रियाओं, मैं तुम्हारा प्रिय हूँ।
 
 --- verse 22 ---
 deva:
@@ -220,9 +283,15 @@ na pāraye'haṁ niravadyasaṁyujāṁ
 svasādhukṛtyaṁ vibudhāyuṣāpi vaḥ|
 yā mābhajan durjaragehaśṛṁkhalāḥ
 saṁvṛścya tad vaḥ pratiyātu sādhunā||
+en: Your union with me is without fault. I am not able, even with the lifespan of the gods, to repay your own good deed. You cut the chains of the home, which are hard to break, and worshipped me. Let your own goodness be the return of that debt.
+tel: నాతో మీ కలయిక ఏ దోషమును లేనిది. దేవతల ఆయువుతో కూడ మీ సత్కార్యమునకు ప్రతిఫలము ఇచ్చుటకు నేను సమర్థుడను కాను. విడదీయుటకు కష్టమైన గృహబంధముల గొలుసులను తెంచుకొని మీరు నన్ను సేవించితిరి. ఆ ఋణము మీ స్వంత సాధుత్వముతోనే తీరుగాక.
+hi: मेरे साथ तुम्हारा संयोग निर्दोष है। देवताओं की आयु से भी मैं तुम्हारे इस सत्कर्म का बदला नहीं चुका सकता। दुस्त्यज गृह की शृंखलाओं को काटकर तुमने मुझे भजा। वह ऋण तुम्हारी अपनी साधुता से ही चुके।
 
 --- verse none ---
 deva:
 इति श्रीमद्भागवते महापुराणे पारमहंस्यां संहितायां दशमस्कन्धे पूर्वार्धे रासक्रीडायां गोपीसान्त्वनं नाम द्वात्रिंशोऽध्यायः॥ ३२॥
 iast:
 iti śrīmadbhāgavate mahāpurāṇe pāramahaṁsyāṁ saṁhitāyāṁ daśamaskandhe pūrvārdhe rāsakrīḍāyāṁ gopīsāntvanaṁ nāma dvātriṁśo'dhyāyaḥ|| 32||
+en: Thus ends the thirty-second adhyāya, named the consoling of the gopīs, in the rāsa-krīḍā in the first half of the tenth skandha of the Śrīmad Bhāgavata Mahāpurāṇa, the saṁhitā of the paramahaṁsas.
+tel: ఇట్లు శ్రీమద్భాగవత మహాపురాణమున, పరమహంసల సంహితయందు, దశమ స్కంధము పూర్వార్ధమున, రాసక్రీడలో గోపీసాంత్వనము అను ముప్పది రెండవ అధ్యాయము సమాప్తము.
+hi: इस प्रकार श्रीमद्भागवत महापुराण में, परमहंसों की संहिता में, दशम स्कन्ध के पूर्वार्ध में, रासक्रीडा के अन्तर्गत गोपीसान्त्वन नामक बत्तीसवाँ अध्याय समाप्त हुआ।

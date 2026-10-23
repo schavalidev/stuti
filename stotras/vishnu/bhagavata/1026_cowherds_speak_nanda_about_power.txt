@@ -9,7 +9,7 @@ Type: Purāṇa (an adhyāya of the Śrīmad Bhāgavata, Skandha 10)
 
 Source / recension: Base text and authority: the Gītā Press, Gorakhpur Śrīmadbhāgavata Mahāpurāṇa with Hindi translation, Part 2 (Gītā Press code 27), archive.org item `shrimadbhagwat-mahapuran-bhag-2`, printed pages 297–300; the PDF page numbers are the printed ones. The PDF carries the typesetter's own text layer in the Chanakya font encoding, and the text was decoded from it by machine with `bin/bhagavata/chanakya.py`, not read off OCR or typed. The decoder was checked against GRETIL over all twelve skandhas before any file was written, and the differences that remain were sampled and found to be readings of the two editions. Second witness: GRETIL's `sa_bhAgavatapurANa.xml` (IAST, contributed by Ulrich Stiehl), a separate editorial lineage, compared verse by verse by machine. The TTD edition with the commentaries of Śrīdhara, Vīrarāghava and Vijayadhvaja (archive.org `Bhagavata_Purana_With_Multiple_Commentaries_TTD_Critical_Edition`) is the third witness where one is needed; it was not read for this file. The IAST was generated mechanically from the Devanāgarī with `bin/dev2iast.py`.
 
-Recension note: Text-only file, written 1 Oct 2026 at the user's instruction to lay down the whole Bhāgavata first: the English, Telugu and Hindi meanings are still to be added, and the witnesses' differences listed here have been recorded by machine and not yet adjudicated. The print is followed throughout. The print numbers 25 verses and GRETIL numbers 25. Of the 25 verses GRETIL has under the same number, 20 agree with the print letter for letter once spacing and the spelling of nasals are set aside; the rest differ: 7, 14, 21, 24, 25. Spacing is the print's, as its text layer gives it; in a few places justification has left a space inside a word, and these are still to be closed when the verse is read. The speaker lines (श्रीशुक उवाच and the others) are printed in italic above the verse they introduce, and are given as its first line.
+Recension note: Meanings written 23 Oct 2026 (session S78). The differences between the witnesses listed below were read as the verses were glossed; except where this note says otherwise, each is a spelling, a sandhi or a word order of the two editions, none of them changes the sense, and the print's reading therefore stands unbracketed. The print is followed throughout. The print numbers 25 verses and GRETIL numbers 25. Of the 25 verses GRETIL has under the same number, 20 agree with the print letter for letter once spacing and the spelling of nasals are set aside; the rest differ: 7, 14, 21, 24, 25. Spacing is the print's, as its text layer gives it. The speaker lines (श्रीशुक उवाच and the others) are printed in italic above the verse they introduce, and are given as its first line. No spacing was corrected in this file. The two detectors were run over all 25 verses and every join they report stands after a virāma consonant or before an avagraha, where the script itself requires it; the one join after a vowel, गुणकर्मानुरूपाणि at verse 18, is a compound that GRETIL only spaces loosely, and it is left as printed. At verse 25 the text layer gives वज्राश्मपर्षा°, which cannot be read; GRETIL reads वज्राश्मवर्षा°, showers of thunderbolt stones, and that is the only possible sense. A wrong letter is an emendation and not part of this pass, so the line stands as printed and the meaning follows that reading. At verse 24 the print carries a third half verse, दृष्टश्रुतानुभावास्ते कृष्णस्यामिततेजसः, which GRETIL does not, and GRETIL has one तं the print does not; at verse 21 the print reads महाभागाः against GRETIL's महाभागे, and at verse 7 उलूखले against उदूखले. The print is followed in each place. The speaker line at verse 15 is printed नन्दउवाच, the space between the two words having been lost in the text layer as it is in श्रीशुकउवाच elsewhere; it is left as the layer gives it.
 
 Verse count: 25, plus the closing colophon printed unnumbered.
 
@@ -24,6 +24,9 @@ iast:
 śrīśuka uvāca
 evaṁvidhāni karmāṇi gopāḥ kṛṣṇasya vīkṣya te|
 atadvīryavidaḥ procuḥ samabhyetya suvismitāḥ||
+en: Śrīśuka said: Seeing such deeds of Kṛṣṇa, the cowherds, who did not know his power, came together and spoke in great wonder.
+tel: శ్రీశుకుడు పలికెను: కృష్ణుని ఇట్టి కార్యములను చూచి, ఆయన శక్తిని ఎరుగని గోపాలకులు కూడి వచ్చి మిక్కిలి ఆశ్చర్యముతో ఇట్లు పలికిరి.
+hi: श्रीशुक ने कहा: कृष्ण के ऐसे कर्मों को देखकर, उनकी शक्ति को न जानने वाले ग्वाले एक साथ आकर बड़े विस्मय से यह बोले।
 
 --- verse 2 ---
 deva:
@@ -32,6 +35,9 @@ deva:
 iast:
 bālakasya yadetāni karmāṇyatyadbhutāni vai|
 kathamarhatyasau janma grāmyeṣvātmajugupsitam||
+en: These deeds of a boy are indeed most wonderful. How does he deserve this birth among us village people, a birth which is itself to be despised?
+tel: ఒక బాలుని ఈ కార్యములు నిజముగా మిక్కిలి అద్భుతములు. పల్లెవారమైన మా నడుమ పుట్టుటకు ఈయన ఎట్లు తగును? ఆ జన్మము తనకే నిందింపదగినది.
+hi: एक बालक के ये कर्म सचमुच अत्यन्त अद्भुत हैं। हम गाँव वालों के बीच का यह जन्म, जो स्वयं निन्दा के योग्य है, इसके लिए कैसे उचित हो सकता है?
 
 --- verse 3 ---
 deva:
@@ -40,6 +46,9 @@ deva:
 iast:
 yaḥ saptahāyano bālaḥ kareṇaikena līlayā|
 kathaṁ bibhrad girivaraṁ puṣkaraṁ gajarāḍiva||
+en: He is a boy of seven years. How did he hold up the best of mountains with one hand, in play, as a lordly elephant holds a lotus?
+tel: ఈయన ఏడు సంవత్సరముల బాలుడు. గజరాజు పద్మమును ఎత్తునట్లు, ఒక చేతితో లీలగా ఆ పర్వతశ్రేష్ఠమును ఈయన ఎట్లు ఎత్తి పట్టెను?
+hi: यह सात वर्ष का बालक है। गजराज जैसे कमल को उठाता है, वैसे ही एक हाथ से लीला से उस श्रेष्ठ पर्वत को इसने कैसे धारण किया?
 
 --- verse 4 ---
 deva:
@@ -48,6 +57,9 @@ deva:
 iast:
 tokenāmīlitākṣeṇa pūtanāyā mahaujasaḥ|
 pītaḥ stanaḥ saha prāṇaiḥ kāleneva vayastanoḥ||
+en: By this infant, with his eyes closed, the breast of the mighty Pūtanā was drunk together with her life, as time drinks the age of the body.
+tel: కన్నులు మూసుకొనియున్న ఈ పాపడు, మహాబలము గల పూతన స్తనమును ఆమె ప్రాణములతో కూడ త్రాగివేసెను; కాలము దేహపు వయస్సును త్రాగునట్లు.
+hi: आँखें मूँदे हुए इस शिशु ने महाबली पूतना के स्तन को उसके प्राणों के साथ पी लिया, जैसे काल शरीर की आयु को पी जाता है।
 
 --- verse 5 ---
 deva:
@@ -56,6 +68,9 @@ deva:
 iast:
 hinvato'dhaḥ śayānasya māsyasya caraṇāvudak|
 ano'patad viparyastaṁ rudataḥ prapadāhatam||
+en: When he was a month old he lay beneath the cart and cried, and tossed his two feet upward. The cart was struck by the front of his foot and fell overturned.
+tel: ఒక నెల వయసున ఆయన బండి క్రింద పండుకొని ఏడ్చుచు తన రెండు పాదములను పైకి విసరెను. ఆయన పాదాగ్రము తగిలి ఆ బండి తలక్రిందులై పడిపోయెను.
+hi: एक मास की अवस्था में वे गाड़ी के नीचे लेटकर रोते हुए अपने दोनों चरण ऊपर की ओर उठाने लगे। उनके पैर के अग्र भाग की चोट से वह गाड़ी उलटकर गिर पड़ी।
 
 --- verse 6 ---
 deva:
@@ -64,6 +79,9 @@ deva:
 iast:
 ekahāyana āsīno hriyamāṇo vihāyasā|
 daityena yastṛṇāvartamahan kaṇṭhagrahāturam||
+en: When he was one year old he was seated, and the demon Tṛṇāvarta carried him up into the sky. He killed that demon, who was in distress from the grip upon his throat.
+tel: ఒక సంవత్సరపు వయసున ఆయన కూర్చుండియుండగా తృణావర్తుడను రాక్షసుడు ఆయనను ఆకాశమునకు ఎత్తుకొని పోయెను. కంఠమును పట్టుకొనుటచే బాధపడుచున్న ఆ రాక్షసుని ఆయన సంహరించెను.
+hi: एक वर्ष की अवस्था में वे बैठे हुए थे, तब तृणावर्त नामक दैत्य उन्हें आकाश में उठा ले गया। गले की पकड़ से पीड़ित उस दैत्य को उन्होंने मार डाला।
 
 --- verse 7 ---
 deva:
@@ -72,6 +90,9 @@ deva:
 iast:
 kvaciddhaiyaṁgavastainye mātrā baddha ulūkhale|
 gacchannarjunayormadhye bāhubhyāṁ tāvapātayat||
+en: Once, for stealing fresh butter, he was bound to the mortar by his mother. Going between the two arjuna trees, he threw them down with his arms.
+tel: ఒకప్పుడు వెన్న దొంగిలించినందుకు తల్లి ఆయనను రోటికి కట్టివేసెను. ఆయన రెండు అర్జున వృక్షముల నడుమ పోవుచు తన చేతులతో వానిని పడద్రోసెను.
+hi: एक बार मक्खन चुराने पर माता ने उन्हें ओखली से बाँध दिया। दोनों अर्जुन वृक्षों के बीच से जाते हुए उन्होंने अपनी भुजाओं से उन्हें गिरा दिया।
 
 --- verse 8 ---
 deva:
@@ -80,6 +101,9 @@ deva:
 iast:
 vane saṁcārayan vatsān sarāmo bālakairvṛtaḥ|
 hantukāmaṁ bakaṁ dorbhyāṁ mukhato'rimapāṭayat||
+en: In the forest, grazing the calves with Rāma and surrounded by the boys, he tore apart from the beak, with his two arms, the enemy Baka, who wished to kill him.
+tel: అడవిలో రాముడితో కూడి, బాలకులచే చుట్టబడి దూడలను మేపుచుండగా, తనను చంపగోరిన బకుడను శత్రువును ఆయన తన రెండు చేతులతో ముక్కునుండి చీల్చివేసెను.
+hi: वन में राम के साथ, बालकों से घिरे हुए बछड़ों को चराते समय, उन्हें मारना चाहने वाले बक नामक शत्रु को उन्होंने अपनी दोनों भुजाओं से चोंच से चीर डाला।
 
 --- verse 9 ---
 deva:
@@ -88,6 +112,9 @@ deva:
 iast:
 vatseṣu vatsarūpeṇa praviśantaṁ jighāṁsayā|
 hatvā nyapātayattena kapitthāni ca līlayā||
+en: A demon entered among the calves in the form of a calf, with the wish to kill him. He killed it, and with its body brought down the wood-apple fruits in play.
+tel: ఒక రాక్షసుడు ఆయనను చంపగోరి దూడ రూపమున దూడల నడుమ ప్రవేశించెను. ఆయన దానిని చంపి, దానితోనే లీలగా వెలగ పండ్లను రాల్చెను.
+hi: एक असुर उन्हें मारने की इच्छा से बछड़े के रूप में बछड़ों के बीच घुस आया। उन्होंने उसे मारकर उसी से लीला से कैथ के फल गिरा दिए।
 
 --- verse 10 ---
 deva:
@@ -96,6 +123,9 @@ deva:
 iast:
 hatvā rāsabhadaiteyaṁ tadbandhūṁśca balānvitaḥ|
 cakre tālavanaṁ kṣemaṁ paripakvaphalānvitam||
+en: With Bala beside him, he killed the ass demon and his kinsmen, and made the palm grove safe, filled with ripe fruit.
+tel: బలరాముడు తోడుగా ఉండగా, ఆయన గాడిద రూపమున ఉన్న ఆ దైత్యుని, ఆతని చుట్టములను చంపి, పండిన పండ్లతో నిండిన ఆ తాటి తోటను క్షేమముగా చేసెను.
+hi: बल के साथ रहकर उन्होंने गधे के रूप वाले उस दैत्य और उसके बन्धुओं को मारकर, पके फलों से भरे उस ताड़ वन को सुरक्षित बना दिया।
 
 --- verse 11 ---
 deva:
@@ -104,6 +134,9 @@ deva:
 iast:
 pralambaṁ ghātayitvograṁ balena balaśālinā|
 amocayad vrajapaśūn gopāṁścāraṇyavahnitaḥ||
+en: He had the fierce Pralamba killed by the mighty Bala, and he saved the cattle of Vraja and the cowherds from the forest fire.
+tel: బలము గల బలరాముని చేత ఆయన భయంకరుడైన ప్రలంబుని చంపించెను. అడవి మంటనుండి వ్రజపు పశువులను, గోపాలకులను ఆయన కాపాడెను.
+hi: उन्होंने बलशाली बल के द्वारा उग्र प्रलम्ब का वध कराया, और वन की अग्नि से व्रज के पशुओं तथा ग्वालों को बचाया।
 
 --- verse 12 ---
 deva:
@@ -112,6 +145,9 @@ deva:
 iast:
 āśīviṣatamāhīndraṁ damitvā vimadaṁ hradāt|
 prasahyodvāsya yamunāṁ cakre'sau nirviṣodakām||
+en: He subdued the most venomous lord of serpents in the lake and took away his pride. He forced him out, and made the water of the Yamunā free of poison.
+tel: మడుగులో ఉన్న మిక్కిలి విషము గల ఆ సర్పరాజును ఆయన అణచి ఆతని మదమును పోగొట్టెను. ఆతనిని బలవంతముగా వెళ్లగొట్టి యమునా జలమును విషము లేనిదిగా చేసెను.
+hi: सरोवर में रहने वाले अत्यन्त विषैले उस नागराज को उन्होंने वश में करके उसका मद दूर किया। उसे बलपूर्वक बाहर निकालकर यमुना के जल को विष से रहित कर दिया।
 
 --- verse 13 ---
 deva:
@@ -120,6 +156,9 @@ deva:
 iast:
 dustyajaścānurāgo'smin sarveṣāṁ no vrajaukasām|
 nanda te tanaye'smāsu tasyāpyautpattikaḥ katham||
+en: And this love for him cannot be given up by any of us who dwell in Vraja. Nanda, how is it that your son too has such inborn love for us?
+tel: వ్రజమున నివసించు మా అందరికి ఆయనపై కలిగిన ఈ ప్రేమను విడువుట సాధ్యము కాదు. నందా, నీ కుమారునికిని మాపై ఇట్టి సహజమైన ప్రేమ ఎట్లు కలిగెను?
+hi: व्रज में रहने वाले हम सब का उन पर यह अनुराग छोड़ा नहीं जा सकता। नन्द, तुम्हारे पुत्र को भी हम पर ऐसा स्वाभाविक प्रेम कैसे है?
 
 --- verse 14 ---
 deva:
@@ -128,6 +167,9 @@ deva:
 iast:
 kva saptahāyano bālaḥ kva mahādrividhāraṇam|
 tato no jāyate śaṁkā vrajanātha tavātmaje||
+en: What is a boy of seven years, and what is the holding up of a great mountain? From this, O lord of Vraja, a doubt arises in us about your son.
+tel: ఏడు సంవత్సరముల బాలుడు ఎక్కడ, పెద్ద పర్వతమును ఎత్తి పట్టుట ఎక్కడ? వ్రజనాథా, దీనివలన నీ కుమారుని గురించి మాకు శంక కలుగుచున్నది.
+hi: सात वर्ष का बालक कहाँ, और महान पर्वत को धारण करना कहाँ? हे व्रजनाथ, इससे तुम्हारे पुत्र के विषय में हमें शंका होती है।
 
 --- verse 15 ---
 deva:
@@ -138,6 +180,9 @@ iast:
 nandauvāca
 śrūyatāṁ me vaco gopā vyetu śaṁkā ca vo'rbhake|
 enaṁ kumāramuddiśya gargo me yaduvāca ha||
+en: Nanda said: Hear my word, cowherds, and let your doubt about the child go. Garga said this to me about this boy.
+tel: నందుడు పలికెను: గోపాలకులారా, నా మాటను వినుడు; బాలుని గురించి మీ శంక తొలగిపోవును గాక. ఈ కుమారుని గురించి గర్గుడు నాకు ఇట్లు చెప్పెను.
+hi: नन्द ने कहा: ग्वालों, मेरी बात सुनो, और बालक के विषय में तुम्हारी शंका दूर हो जाए। इस कुमार के विषय में गर्ग ने मुझ से यह कहा था।
 
 --- verse 16 ---
 deva:
@@ -146,6 +191,9 @@ deva:
 iast:
 varṇāstrayaḥ kilāsyāsan gṛhṇato'nuyugaṁ tanūḥ|
 śuklo raktastathā pīta idānīṁ kṛṣṇatāṁ gataḥ||
+en: He has had three colours, taking a body in each yuga: white, red and then yellow. Now he has come to blackness.
+tel: ప్రతి యుగమున శరీరమును ధరించుచు ఈయనకు మూడు వర్ణములు ఉండెను: తెలుపు, ఎరుపు, ఆ పిమ్మట పసుపు. ఇప్పుడు ఈయన నలుపు రంగును పొందెను.
+hi: प्रत्येक युग में शरीर धारण करते हुए इसके तीन वर्ण रहे हैं: श्वेत, रक्त और उसके बाद पीत। अब यह कृष्ण वर्ण को प्राप्त हुआ है।
 
 --- verse 17 ---
 deva:
@@ -154,6 +202,9 @@ deva:
 iast:
 prāgayaṁ vasudevasya kvacijjātastavātmajaḥ|
 vāsudeva iti śrīmānabhijñāḥ sampracakṣate||
+en: Before this, your son was born somewhere as the son of Vasudeva. Therefore those who know call this glorious one Vāsudeva.
+tel: పూర్వము నీ ఈ కుమారుడు ఎక్కడో వసుదేవునికి పుట్టెను. అందువలన శ్రీమంతుడైన ఈయనను ఎరిగినవారు వాసుదేవుడని పలుకుదురు.
+hi: पहले तुम्हारा यह पुत्र कहीं वसुदेव के यहाँ उत्पन्न हुआ था। इसलिए जानने वाले इस श्रीमान को वासुदेव कहते हैं।
 
 --- verse 18 ---
 deva:
@@ -162,6 +213,9 @@ deva:
 iast:
 bahūni santi nāmāni rūpāṇi ca sutasya te|
 guṇakarmānurūpāṇi tānyahaṁ veda no janāḥ||
+en: Your son has many names and many forms, according to his qualities and his deeds. I know them; other people do not.
+tel: నీ కుమారునికి అనేక నామములు, అనేక రూపములు కలవు; అవి ఆయన గుణములకు, కర్మలకు తగినట్లు ఉండును. నేను వానిని ఎరుగుదును; ఇతర జనులు ఎరుగరు.
+hi: तुम्हारे पुत्र के बहुत नाम और बहुत रूप हैं, जो उसके गुणों और कर्मों के अनुरूप हैं। उन्हें मैं जानता हूँ, दूसरे लोग नहीं जानते।
 
 --- verse 19 ---
 deva:
@@ -170,6 +224,9 @@ deva:
 iast:
 eṣa vaḥ śreya ādhāsyad gopagokulanandanaḥ|
 anena sarvadurgāṇi yūyamañjastariṣyatha||
+en: This delight of the cowherds and of Gokula will bring you welfare. Through him you will cross all difficulties easily.
+tel: గోపాలకులకు, గోకులమునకు ఆనందమును కలిగించు ఈయన మీకు శ్రేయస్సును కూర్చును. ఈయన వలన మీరు అన్ని కష్టములను సులభముగా దాటుదురు.
+hi: ग्वालों और गोकुल को आनन्द देने वाला यह तुम्हारा कल्याण करेगा। इसके द्वारा तुम सब कठिनाइयों को सहज ही पार कर जाओगे।
 
 --- verse 20 ---
 deva:
@@ -178,6 +235,9 @@ deva:
 iast:
 purānena vrajapate sādhavo dasyupīḍitāḥ|
 arājake rakṣyamāṇā jigyurdasyūn samedhitāḥ||
+en: Formerly, O lord of Vraja, when there was no king, good people who were harassed by robbers were protected by him. They conquered the robbers and prospered.
+tel: వ్రజపతీ, పూర్వము రాజు లేని కాలమున, దొంగలచే బాధింపబడిన సజ్జనులు ఈయన చేత కాపాడబడిరి. వారు దొంగలను జయించి వృద్ధి పొందిరి.
+hi: हे व्रजपति, पहले जब राजा नहीं था, तब डाकुओं से पीड़ित सज्जन इसके द्वारा रक्षित हुए। उन्होंने डाकुओं को जीता और समृद्ध हुए।
 
 --- verse 21 ---
 deva:
@@ -186,6 +246,9 @@ deva:
 iast:
 ya etasmin mahābhāgāḥ prītiṁ kurvanti mānavāḥ|
 nārayo'bhibhavantyetān viṣṇupakṣānivāsurāḥ||
+en: Those men who are greatly fortunate and give their love to him are not overcome by enemies, as the demons do not overcome the followers of Viṣṇu.
+tel: ఈయనపై ప్రేమను ఉంచు ఆ మహాభాగ్యవంతులైన మానవులను శత్రువులు జయింపలేరు; అసురులు విష్ణుపక్షము వారిని జయింపలేనట్లే.
+hi: जो महाभाग्यवान मनुष्य इस पर प्रीति रखते हैं, उन्हें शत्रु नहीं जीत पाते, जैसे असुर विष्णु के पक्ष वालों को नहीं जीत पाते।
 
 --- verse 22 ---
 deva:
@@ -194,6 +257,9 @@ deva:
 iast:
 tasmānnanda kumāro'yaṁ nārāyaṇasamo guṇaiḥ|
 śriyā kīrtyānubhāvena tatkarmasu na vismayaḥ||
+en: Therefore, Nanda, this boy is equal to Nārāyaṇa in qualities, in fortune, in fame and in power. There is no wonder in his deeds.
+tel: అందువలన నందా, ఈ బాలుడు గుణములలో, సంపదలో, కీర్తిలో, ప్రభావములో నారాయణునితో సమానుడు. ఆయన కార్యములలో ఆశ్చర్యము ఏమియు లేదు.
+hi: इसलिए नन्द, यह कुमार गुणों में, श्री में, कीर्ति में और प्रभाव में नारायण के समान है। इसके कर्मों में आश्चर्य कुछ नहीं है।
 
 --- verse 23 ---
 deva:
@@ -202,6 +268,9 @@ deva:
 iast:
 ityaddhā māṁ samādiśya garge ca svagṛhaṁ gate|
 manye nārāyaṇasyāṁśaṁ kṛṣṇamakliṣṭakāriṇam||
+en: Having instructed me thus plainly, Garga went to his own house. I consider Kṛṣṇa, who acts without effort, to be a part of Nārāyaṇa.
+tel: ఇట్లు నాకు స్పష్టముగా బోధించి గర్గుడు తన ఇంటికి వెళ్లెను. ఆయాసము లేకుండ కార్యములను చేయు కృష్ణుని నేను నారాయణుని అంశముగా భావించుచున్నాను.
+hi: इस प्रकार मुझे स्पष्ट रूप से बताकर गर्ग अपने घर चले गए। बिना क्लेश कर्म करने वाले कृष्ण को मैं नारायण का अंश मानता हूँ।
 
 --- verse 24 ---
 deva:
@@ -212,6 +281,9 @@ iast:
 iti nandavacaḥ śrutvā gargagītaṁ vrajaukasaḥ|
 dṛṣṭaśrutānubhāvāste kṛṣṇasyāmitatejasaḥ|
 muditā nandamānarcuḥ kṛṣṇaṁ ca gatavismayāḥ||
+en: Hearing this word of Nanda, the song of Garga, the dwellers of Vraja, who had seen and heard the power of Kṛṣṇa of measureless splendour, were glad. Their wonder gone, they worshipped Nanda, and Kṛṣṇa also.
+tel: నందుని ఈ మాటను, గర్గుని వచనమును విని, అమితమైన తేజస్సు గల కృష్ణుని ప్రభావమును చూచియు విన్నవారైన ఆ వ్రజవాసులు సంతోషించిరి. ఆశ్చర్యము తొలగిన వారు నందుని, కృష్ణుని కూడ పూజించిరి.
+hi: नन्द के इस वचन को, गर्ग के कथन को सुनकर, अमित तेज वाले कृष्ण के प्रभाव को देखे और सुने हुए उन व्रजवासियों को हर्ष हुआ। विस्मय दूर हो जाने पर उन्होंने नन्द का और कृष्ण का भी पूजन किया।
 
 --- verse 25 ---
 deva:
@@ -232,9 +304,15 @@ utpāṭyaikakareṇa śailamabalo
 līlocchilīndhraṁ yathā
 bibhrad goṣṭhamapānmahendramadabhit
 prīyānna indro gavām||
+en: When the god Indra, in anger at the obstruction of his sacrifice, rained down showers of thunderbolt stones and winds, the cowherds, the cattle and the women sank down and took refuge in Kṛṣṇa alone. Seeing this, he felt compassion and smiled. Though a child, he uprooted the mountain with one hand, as a mushroom is plucked in play, and holding it he saved the cow station. May that Indra of the cows, who broke the pride of the great Indra, be pleased with us.
+tel: యజ్ఞమునకు అడ్డు కలిగినదని కోపించి ఇంద్రుడు పిడుగు రాళ్ల వానను, గాలులను కురిపించగా, గోపాలకులు, పశువులు, స్త్రీలు క్రుంగిపోవుచు కృష్ణునినే ఆశ్రయించిరి. ఇది చూచి ఆయన కరుణ పొంది చిరునవ్వు నవ్వెను. బాలుడే అయినను, లీలగా పుట్టగొడుగును పెరికినట్లు ఒక చేతితో ఆ కొండను పెరికి, దానిని పట్టి గోష్ఠమును కాపాడెను. మహేంద్రుని మదమును అణచిన ఆ గోవుల ఇంద్రుడు మాపై ప్రీతి చూపును గాక.
+hi: यज्ञ में विघ्न होने के क्रोध से इन्द्र ने वज्र के समान पत्थरों की वर्षा और वायु बरसाए, तब ग्वाले, पशु और स्त्रियाँ गिरते हुए कृष्ण की ही शरण में आए। यह देखकर उन्हें करुणा हुई और वे मुसकराए। बालक होने पर भी उन्होंने एक हाथ से उस पर्वत को ऐसे उखाड़ लिया जैसे खेल में कुकुरमुत्ता उखाड़ा जाता है, और उसे धारण करके गोष्ठ की रक्षा की। महेन्द्र के मद को तोड़ने वाले वे गौओं के इन्द्र हम पर प्रसन्न हों।
 
 --- verse none ---
 deva:
 इति श्रीमद्भागवते महापुराणे पारमहंस्यां संहितायां दशमस्कन्धे पूर्वार्धे षड्विंशोऽध्यायः॥ २६॥
 iast:
 iti śrīmadbhāgavate mahāpurāṇe pāramahaṁsyāṁ saṁhitāyāṁ daśamaskandhe pūrvārdhe ṣaḍviṁśo'dhyāyaḥ|| 26||
+en: Thus ends the twenty-sixth adhyāya in the first half of the tenth skandha of the Śrīmad Bhāgavata Mahāpurāṇa, the saṁhitā of the paramahaṁsas.
+tel: ఇట్లు శ్రీమద్భాగవత మహాపురాణమున, పారమహంస్య సంహితయందు, దశమ స్కంధము పూర్వార్ధమున షడ్వింశ అధ్యాయము సమాప్తము.
+hi: इस प्रकार श्रीमद्भागवत महापुराण में, पारमहंस्य संहिता में, दशम स्कन्ध के पूर्वार्ध में छब्बीसवाँ अध्याय समाप्त हुआ।
