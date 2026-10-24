@@ -9,7 +9,7 @@ Type: Purāṇa (an adhyāya of the Śrīmad Bhāgavata, Skandha 10)
 
 Source / recension: Base text and authority: the Gītā Press, Gorakhpur Śrīmadbhāgavata Mahāpurāṇa with Hindi translation, Part 2 (Gītā Press code 27), archive.org item `shrimadbhagwat-mahapuran-bhag-2`, printed pages 444–452; the PDF page numbers are the printed ones. The PDF carries the typesetter's own text layer in the Chanakya font encoding, and the text was decoded from it by machine with `bin/bhagavata/chanakya.py`, not read off OCR or typed. The decoder was checked against GRETIL over all twelve skandhas before any file was written, and the differences that remain were sampled and found to be readings of the two editions. Second witness: GRETIL's `sa_bhAgavatapurANa.xml` (IAST, contributed by Ulrich Stiehl), a separate editorial lineage, compared verse by verse by machine. The TTD edition with the commentaries of Śrīdhara, Vīrarāghava and Vijayadhvaja (archive.org `Bhagavata_Purana_With_Multiple_Commentaries_TTD_Critical_Edition`) is the third witness where one is needed; it was not read for this file. The IAST was generated mechanically from the Devanāgarī with `bin/dev2iast.py`.
 
-Recension note: Text-only file, written 1 Oct 2026 at the user's instruction to lay down the whole Bhāgavata first: the English, Telugu and Hindi meanings are still to be added, and the witnesses' differences listed here have been recorded by machine and not yet adjudicated. The print is followed throughout. The print numbers 58 verses; GRETIL numbers 57, so from some point the two editions number the verses differently. Never match them by number. Of the 57 verses GRETIL has under the same number, 12 agree with the print letter for letter once spacing and the spelling of nasals are set aside; the rest differ: 4, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57. GRETIL has nothing under the numbers 58. Spacing is the print's, as its text layer gives it; in a few places justification has left a space inside a word, and these are still to be closed when the verse is read. The speaker lines (श्रीशुक उवाच and the others) are printed in italic above the verse they introduce, and are given as its first line.
+Recension note: Meanings written 23 Oct 2026 (session S78). The differences between the witnesses listed below were read as the verses were glossed; except where this note says otherwise, each is a spelling, a sandhi or a word order of the two editions, none of them changes the sense, and the print's reading therefore stands unbracketed. The print is followed throughout. The print numbers 58 verses; GRETIL numbers 57, so from some point the two editions number the verses differently. Never match them by number. Of the 57 verses GRETIL has under the same number, 12 agree with the print letter for letter once spacing and the spelling of nasals are set aside; the rest differ: 4, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57. GRETIL has nothing under the numbers 58. Spacing is the print's, as its text layer gives it. The speaker lines (श्रीशुक उवाच and the others) are printed in italic above the verse they introduce, and are given as its first line. The print's extra verse is accounted for: the print carries a half-verse at 14a (यानमास्थाय जह्येतद् व्यसनात् स्वान् समुद्धर) that GRETIL does not have, so from verse 14 the print stands one ahead and its verses 14 to 20 each pair GRETIL's halves across a different boundary. Verses 14 to 18 were therefore read by hand against GRETIL 14 to 17, and no broken word was found. Both spacing detectors were run and report nothing: the periphrastic perfect वेदयांचक्रतुः at verse 2 is printed joined in every one of the twenty-four places this edition has such a form, so it is the print's own spelling. In the colophon the text layer has flattened a line break inside दशमस्कन्धे उत्तरार्धे, as it has in twelve files of this skandha; it is left as printed and waits on a corpus-wide ruling.
 
 Verse count: 58, plus the closing colophon printed unnumbered.
 
@@ -24,6 +24,9 @@ iast:
 śrīśuka uvāca
 astiḥ prāptiśca kaṁsasya mahiṣyau bharatarṣabha|
 mṛte bhartari duḥkhārte īyatuḥ sma piturgṛhān||
+en: Śrī Śuka said: Asti and Prāpti were the two queens of Kaṁsa, O best of the Bharatas. When their husband was killed, they were struck with grief and went to their father's house.
+tel: శ్రీశుకుడు పలికెను: భరతశ్రేష్ఠుడా, అస్తి, ప్రాప్తి అనువారు కంసుని ఇద్దరు భార్యలు. భర్త చంపబడగా వారు దుఃఖముతో బాధపడి తమ తండ్రి ఇంటికి వెళ్ళిరి.
+hi: श्रीशुक ने कहा: हे भरतश्रेष्ठ, अस्ति और प्राप्ति कंस की दो रानियाँ थीं। पति के मारे जाने पर वे दुःख से पीड़ित होकर अपने पिता के घर चली गईं।
 
 --- verse 2 ---
 deva:
@@ -32,6 +35,9 @@ deva:
 iast:
 pitre magadharājāya jarāsandhāya duḥkhite|
 vedayāṁcakratuḥ sarvamātmavaidhavyakāraṇam||
+en: They told their father Jarāsandha, the king of Magadha, who was himself grieved, everything about the cause of their widowhood.
+tel: దుఃఖములో ఉన్న తమ తండ్రి, మగధరాజు జరాసంధునికి వారు తమ వైధవ్యమునకు కారణమైన సమస్తమును తెలిపిరి.
+hi: दुःखी हुए अपने पिता मगधराज जरासन्ध से उन्होंने अपने विधवा होने के कारण की सारी बात कह दी।
 
 --- verse 3 ---
 deva:
@@ -40,6 +46,9 @@ deva:
 iast:
 sa tadapriyamākarṇya śokāmarṣayuto nṛpa|
 ayādavīṁ mahīṁ kartuṁ cakre paramamudyamam||
+en: O king, hearing that unwelcome news, he was filled with sorrow and anger. He made a great effort to rid the earth of the Yādavas.
+tel: రాజా, ఆ అప్రియమైన వార్తను విని అతడు శోకముతో, కోపముతో నిండిపోయెను. భూమిని యాదవులు లేనిదిగా చేయుటకు అతడు గొప్ప ప్రయత్నము చేసెను.
+hi: हे राजन्, वह अप्रिय बात सुनकर वह शोक और क्रोध से भर गया। पृथ्वी को यादवों से रहित करने के लिए उसने बड़ा उद्यम किया।
 
 --- verse 4 ---
 deva:
@@ -48,6 +57,9 @@ deva:
 iast:
 akṣauhiṇībhirviṁśatyā tisṛbhiścāpi saṁvṛtaḥ|
 yadurājadhānīṁ mathurāṁ nyaruṇat sarvatodiśam||
+en: Surrounded by twenty-three akṣauhiṇīs, he shut in Mathurā, the capital of the Yadus, on every side.
+tel: ఇరువది మూడు అక్షౌహిణులతో చుట్టబడి అతడు యదువుల రాజధాని అయిన మథురను అన్ని వైపుల నుండి ముట్టడించెను.
+hi: तेईस अक्षौहिणी सेना से घिरे हुए उसने यदुओं की राजधानी मथुरा को चारों ओर से घेर लिया।
 
 --- verse 5 ---
 deva:
@@ -56,6 +68,9 @@ deva:
 iast:
 nirīkṣya tadbalaṁ kṛṣṇa udvelamiva sāgaram|
 svapuraṁ tena saṁruddhaṁ svajanaṁ ca bhayākulam||
+en: Kṛṣṇa saw that army, which was like the sea in flood. He saw his own city shut in by it, and his own people filled with fear.
+tel: పొంగిన సముద్రమువలె ఉన్న ఆ సేనను కృష్ణుడు చూచెను. దానితో ముట్టడించబడిన తన నగరమును, భయముతో కలవరపడిన తన జనులను అతడు చూచెను.
+hi: कृष्ण ने उस सेना को देखा, जो उमड़े हुए समुद्र के समान थी। उन्होंने अपने नगर को उससे घिरा हुआ और अपने जनों को भय से व्याकुल देखा।
 
 --- verse 6 ---
 deva:
@@ -64,6 +79,9 @@ deva:
 iast:
 cintayāmāsa bhagavān hariḥ kāraṇamānuṣaḥ|
 taddeśakālānuguṇaṁ svāvatāraprayojanam||
+en: The blessed Lord Hari, who had taken a human form for a purpose, thought upon the aim of his own descent, as suited that place and that time.
+tel: ఒక కారణముతో మనుష్యరూపము ధరించిన భగవంతుడైన హరి ఆ దేశమునకు, ఆ కాలమునకు తగినట్లుగా తన అవతారము యొక్క ప్రయోజనమును గూర్చి ఆలోచించెను.
+hi: कारणवश मनुष्य रूप धारण करने वाले भगवान् हरि ने उस देश और उस काल के अनुरूप अपने अवतार के प्रयोजन का विचार किया।
 
 --- verse 7 ---
 deva:
@@ -72,6 +90,9 @@ deva:
 iast:
 haniṣyāmi balaṁ hyetad bhuvi bhāraṁ samāhitam|
 māgadhena samānītaṁ vaśyānāṁ sarvabhūbhujām||
+en: He thought: I shall destroy this army, which has been gathered here as a burden upon the earth. The king of Magadha has brought it together from all the kings who obey him.
+tel: అతడు ఇట్లు తలంచెను: భూమికి భారముగా ఇక్కడ చేర్చబడిన ఈ సేనను నేను నాశనము చేయుదును. తనకు లోబడిన రాజులందరి నుండి మగధరాజు దీనిని సమకూర్చెను.
+hi: उन्होंने सोचा: पृथ्वी के भार के रूप में यहाँ एकत्र की गई इस सेना को मैं नष्ट करूँगा। अपने अधीन सब राजाओं से मगधराज ने इसे जुटाया है।
 
 --- verse 8 ---
 deva:
@@ -80,6 +101,9 @@ deva:
 iast:
 akṣauhiṇībhiḥ saṁkhyātaṁ bhaṭāśvarathakuṁjaraiḥ|
 māgadhastu na hantavyo bhūyaḥ kartā balodyamam||
+en: It is counted in akṣauhiṇīs of foot soldiers, horses, chariots and elephants. But the king of Magadha must not be killed. He will make the effort of raising an army again.
+tel: ఇది కాల్బలము, గుఱ్ఱములు, రథములు, ఏనుగులతో అక్షౌహిణులలో లెక్కించబడినది. కాని మగధరాజును చంపరాదు. అతడు మరల సేనను సమకూర్చు ప్రయత్నము చేయును.
+hi: यह पैदल, घोड़े, रथ और हाथियों से अक्षौहिणियों में गिनी गई है। परन्तु मगधराज को नहीं मारना चाहिए। वह फिर सेना जुटाने का उद्यम करेगा।
 
 --- verse 9 ---
 deva:
@@ -88,6 +112,9 @@ deva:
 iast:
 etadartho'vatāro'yaṁ bhūbhāraharaṇāya me|
 saṁrakṣaṇāya sādhūnāṁ kṛto'nyeṣāṁ vadhāya ca||
+en: This descent of mine is for this very purpose: to take away the burden of the earth, to protect the good, and to kill the others.
+tel: నా ఈ అవతారము ఈ ప్రయోజనము కొఱకే: భూభారమును తొలగించుటకు, సాధువులను రక్షించుటకు, ఇతరులను సంహరించుటకు.
+hi: मेरा यह अवतार इसी प्रयोजन के लिए है: पृथ्वी का भार हरने के लिए, साधुओं की रक्षा के लिए और दूसरों के वध के लिए।
 
 --- verse 10 ---
 deva:
@@ -96,6 +123,9 @@ deva:
 iast:
 anyo'pi dharmarakṣāyai dehaḥ saṁbhriyate mayā|
 virāmāyāpyadharmasya kāle prabhavataḥ kvacit||
+en: At another time also a body is taken up by me, to protect dharma and to put an end to adharma, whenever adharma grows strong.
+tel: అధర్మము బలపడిన ఎప్పుడైనను, ధర్మమును రక్షించుటకు, అధర్మమును అంతము చేయుటకు నేను మఱియొక దేహమును కూడ ధరించుచున్నాను.
+hi: अधर्म जब कभी प्रबल होता है, तब धर्म की रक्षा और अधर्म के विराम के लिए मैं दूसरा शरीर भी धारण करता हूँ।
 
 --- verse 11 ---
 deva:
@@ -104,6 +134,9 @@ deva:
 iast:
 evaṁ dhyāyati govinda ākāśāt sūryavarcasau|
 rathāvupasthitau sadyaḥ sasūtau saparicchadau||
+en: While Govinda was thinking in this way, two chariots as bright as the sun came down at once from the sky, with their drivers and all their equipment.
+tel: గోవిందుడు ఇట్లు ఆలోచించుచున్నప్పుడే సూర్యునివలె ప్రకాశించు రెండు రథములు సారథులతో, సమస్త సామగ్రితో ఆకాశము నుండి వెంటనే వచ్చి నిలిచెను.
+hi: गोविन्द इस प्रकार सोच रहे थे, तभी सूर्य के समान तेजस्वी दो रथ सारथियों और सारी सामग्री के साथ आकाश से तत्काल आ उपस्थित हुए।
 
 --- verse 12 ---
 deva:
@@ -112,6 +145,9 @@ deva:
 iast:
 āyudhāni ca divyāni purāṇāni yadṛcchayā|
 dṛṣṭvā tāni hṛṣīkeśaḥ saṁkarṣaṇamathābravīt||
+en: His divine and ancient weapons also came of their own accord. Seeing them, Hṛṣīkeśa then spoke to Saṁkarṣaṇa.
+tel: దివ్యములైన, పురాతనములైన ఆయుధములు కూడ తమంతట తామే వచ్చెను. వాటిని చూచి హృషీకేశుడు అప్పుడు సంకర్షణునితో పలికెను.
+hi: दिव्य और पुरातन आयुध भी अपने आप आ गए। उन्हें देखकर हृषीकेश ने तब संकर्षण से कहा।
 
 --- verse 13 ---
 deva:
@@ -120,6 +156,9 @@ deva:
 iast:
 paśyārya vyasanaṁ prāptaṁ yadūnāṁ tvāvatāṁ prabho|
 eṣa te ratha āyāto dayitānyāyudhāni ca||
+en: See, noble brother, the danger that has come upon the Yadus, whom you protect, O lord. Here your chariot has come, and your beloved weapons.
+tel: పూజ్యుడా, ప్రభూ, నీవు రక్షించు యదువులకు వచ్చిన ఈ ఆపదను చూడుము. ఇదిగో నీ రథము వచ్చినది, నీకు ప్రియమైన ఆయుధములు కూడ వచ్చినవి.
+hi: हे पूज्य, हे प्रभो, जिनकी आप रक्षा करते हैं उन यदुओं पर आया यह संकट देखिए। यह आपका रथ आ गया है, और आपके प्रिय आयुध भी।
 
 --- verse 14 ---
 deva:
@@ -128,6 +167,9 @@ deva:
 iast:
 yānamāsthāya jahyetad vyasanāt svān samuddhara|
 etadarthaṁ hi nau janma sādhūnāmīśa śarmakṛt||
+en: Mount the chariot and destroy this army. Save your own people from this danger. For this very purpose is our birth, O lord, to bring well-being to the good.
+tel: రథము ఎక్కి ఈ సేనను సంహరించుము. ఈ ఆపద నుండి నీ జనులను ఉద్ధరించుము. ప్రభూ, సాధువులకు శుభము కలిగించుటకే మన జన్మము.
+hi: रथ पर चढ़कर इस सेना को नष्ट कीजिए। इस संकट से अपने जनों की रक्षा कीजिए। हे ईश, साधुओं का कल्याण करने के लिए ही हम दोनों का जन्म है।
 
 --- verse 15 ---
 deva:
@@ -136,6 +178,9 @@ deva:
 iast:
 trayoviṁśatyanīkākhyaṁ bhūmerbhāramapākuru|
 evaṁ sammantrya dāśārhau daṁśitau rathinau purāt||
+en: Take away this burden of the earth that is called twenty-three divisions. Having taken counsel in this way, the two descendants of Daśārha put on their armour and mounted their chariots.
+tel: ఇరువది మూడు అనీకములని చెప్పబడిన ఈ భూభారమును తొలగించుము. ఇట్లు ఆలోచించి దాశార్హులు ఇరువురు కవచములు ధరించి రథములు ఎక్కిరి.
+hi: तेईस अनीक नामक इस भूमि के भार को दूर कीजिए। इस प्रकार परामर्श करके दोनों दाशार्ह कवच धारण कर रथों पर चढ़े।
 
 --- verse 16 ---
 deva:
@@ -144,6 +189,9 @@ deva:
 iast:
 nirjagmatuḥ svāyudhāḍhyau balenālpīyasā''vṛtau|
 śaṁkhaṁ dadhmau vinirgatya harirdārukasārathiḥ||
+en: They went out from the city, rich in their own weapons, with only a very small force around them. Hari came out and blew his conch, with Dāruka as his charioteer.
+tel: తమ ఆయుధములతో నిండిన వారు మిక్కిలి కొద్దిపాటి సేనతో మాత్రమే చుట్టబడి నగరము నుండి బయలుదేరిరి. దారుకుడు సారథిగా ఉన్న హరి వెలుపలికి వచ్చి శంఖమును పూరించెను.
+hi: अपने आयुधों से सम्पन्न वे दोनों बहुत थोड़ी सेना से ही घिरे हुए नगर से निकले। दारुक सारथि वाले हरि ने बाहर आकर शंख बजाया।
 
 --- verse 17 ---
 deva:
@@ -152,6 +200,9 @@ deva:
 iast:
 tato'bhūt parasainyānāṁ hṛdi vitrāsavepathuḥ|
 tāvāha māgadho vīkṣya he kṛṣṇa puruṣādhama||
+en: Then a trembling of terror arose in the hearts of the enemy's troops. Seeing the two, the king of Magadha said: O Kṛṣṇa, lowest of men!
+tel: అప్పుడు శత్రుసేనల హృదయములలో భయముతో వణకు కలిగెను. ఆ ఇరువురిని చూచి మగధరాజు పలికెను: ఓ కృష్ణా, పురుషులలో నీచుడా!
+hi: तब शत्रु-सेनाओं के हृदय में भय से कँपकँपी उत्पन्न हुई। उन दोनों को देखकर मगधराज ने कहा: हे कृष्ण, पुरुषों में अधम!
 
 --- verse 18 ---
 deva:
@@ -160,6 +211,9 @@ deva:
 iast:
 na tvayā yoddhumicchāmi bālenaikena lajjayā|
 guptena hi tvayā manda na yotsye yāhi bandhuhan||
+en: I do not wish to fight with you, for you are a boy and you are alone. I feel shame in it. You are protected by others, O dull one, so I shall not fight. Go away, slayer of your own kinsman.
+tel: నీవు బాలుడు, ఒంటరివాడు. అందుచేత నీతో యుద్ధము చేయుటకు నేను ఇష్టపడను. నాకు సిగ్గు కలుగును. మందుడా, నీవు ఇతరులచే రక్షింపబడుచున్నావు, కావున నేను యుద్ధము చేయను. బంధువును చంపినవాడా, వెళ్ళిపొమ్ము.
+hi: तुम बालक हो और अकेले हो, इसलिए तुमसे युद्ध करना मैं नहीं चाहता। मुझे लज्जा होती है। हे मन्द, तुम दूसरों के द्वारा रक्षित हो, इसलिए मैं युद्ध नहीं करूँगा। हे बन्धुघाती, चले जाओ।
 
 --- verse 19 ---
 deva:
@@ -168,6 +222,9 @@ deva:
 iast:
 tava rāma yadi śraddhā yudhyasva dhairyamudvaha|
 hitvā vā maccharaiśchinnaṁ dehaṁ svaryāhi māṁ jahi||
+en: O Rāma, if you have faith in yourself, then fight. Hold firm. Either give up your body cut to pieces by my arrows and go to heaven, or else kill me.
+tel: రామా, నీకు శ్రద్ధ ఉన్నచో యుద్ధము చేయుము. ధైర్యమును వహించుము. నా బాణములతో ఖండింపబడిన దేహమును విడిచి స్వర్గమునకు పొమ్ము, లేదా నన్ను చంపుము.
+hi: हे राम, यदि तुम्हें श्रद्धा है तो युद्ध करो। धैर्य धारण करो। मेरे बाणों से छिन्न हुए शरीर को छोड़कर स्वर्ग जाओ, अथवा मुझे मार डालो।
 
 --- verse 20 ---
 deva:
@@ -178,6 +235,9 @@ iast:
 śrībhagavānuvāca
 na vai śūrā vikatthante darśayantyeva pauruṣam|
 na gṛhṇīmo vaco rājannāturasya mumūrṣataḥ||
+en: The blessed Lord said: Brave men do not boast. They only show their manhood. O king, we do not take up the words of one who is sick and about to die.
+tel: భగవంతుడు పలికెను: శూరులు ప్రగల్భములు పలుకరు. వారు పౌరుషమును మాత్రమే చూపుదురు. రాజా, రోగియై మరణించబోవువాని మాటలను మేము పట్టించుకొనము.
+hi: भगवान् ने कहा: शूरवीर बढ़-चढ़कर नहीं बोलते। वे केवल पौरुष दिखाते हैं। हे राजन्, जो आतुर है और मरने को है, उसके वचन हम ग्रहण नहीं करते।
 
 --- verse 21 ---
 deva:
@@ -192,6 +252,9 @@ jarāsutastāvabhisṛtya mādhavau
 mahābalaughena balīyasā''vṛṇot|
 sasainyayānadhvajavājisārathī
 sūryānalau vāyurivābhrareṇubhiḥ||
+en: Śrī Śuka said: The son of Jarā came up against the two Mādhavas and covered them with a mighty flood of a stronger army, together with their troops, their chariots, their banners, their horses and their charioteers, as the wind covers the sun and the fire with clouds of dust.
+tel: శ్రీశుకుడు పలికెను: వాయువు దుమ్ము మేఘములతో సూర్యుని, అగ్నిని కప్పివేయునట్లు జరాసుతుడు ఆ ఇద్దరు మాధవులపై దండెత్తి, మిక్కిలి బలమైన సేనా ప్రవాహముతో వారిని, వారి సేనను, రథములను, ధ్వజములను, గుఱ్ఱములను, సారథులను కప్పివేసెను.
+hi: श्रीशुक ने कहा: जरासुत ने उन दोनों माधवों पर चढ़ाई की और अत्यन्त बलवान् सेना के प्रवाह से उन्हें, उनकी सेना, रथ, ध्वज, घोड़े और सारथियों को ढक दिया, जैसे वायु धूल के बादलों से सूर्य और अग्नि को ढक देता है।
 
 --- verse 22 ---
 deva:
@@ -204,6 +267,9 @@ suparṇatāladhvajacihnitau rathā-
 valakṣayantyo harirāmayormṛdhe|
 striyaḥ purāṭṭālakaharmyagopuraṁ
 samāśritāḥ saṁmumuhuḥ śucārditāḥ||
+en: The women of the city had taken their place on the watchtowers, the mansions and the gateways. When they could no longer see in the battle the two chariots of Hari and Rāma, marked with the banner of Garuḍa and of the palm tree, they were struck with grief and fainted.
+tel: నగరములోని స్త్రీలు బురుజులను, మేడలను, గోపురములను ఆశ్రయించి ఉండిరి. గరుడధ్వజము, తాళధ్వజము గుర్తుగా కలిగిన హరి, రాముల రెండు రథములను యుద్ధములో చూడలేక వారు శోకముతో బాధపడి మూర్ఛిల్లిరి.
+hi: नगर की स्त्रियाँ अट्टालिकाओं, महलों और गोपुरों पर चढ़ी हुई थीं। गरुड़ और ताल के ध्वज से चिह्नित हरि और राम के दोनों रथों को युद्ध में न देख पाकर वे शोक से पीड़ित होकर मूर्च्छित हो गईं।
 
 --- verse 23 ---
 deva:
@@ -216,6 +282,9 @@ hariḥ parānīkapayomucāṁ muhuḥ
 śilīmukhātyulbaṇavarṣapīḍitam|
 svasainyamālokya surāsurārcitaṁ
 vyasphūrjayacchārṅgaśarāsanottamam||
+en: The enemy's army was like clouds, and it rained very fierce showers of arrows again and again. Hari saw his own army oppressed by this. He then twanged his great bow Śārṅga, which is honoured by gods and by asuras.
+tel: శత్రుసేన మేఘములవలె ఉండి మిక్కిలి ఉగ్రమైన బాణవర్షమును మాటిమాటికి కురిపించెను. దానితో పీడింపబడిన తన సేనను హరి చూచెను. అప్పుడు సురాసురులచే పూజింపబడిన తన శ్రేష్ఠమైన శార్ఙ్గ ధనువును అతడు మ్రోగించెను.
+hi: शत्रु की सेना मेघों के समान थी और वह बार-बार अत्यन्त उग्र बाणों की वर्षा करती रही। उससे पीड़ित अपनी सेना को हरि ने देखा। तब उन्होंने देवों और असुरों से पूजित अपने श्रेष्ठ शार्ङ्ग धनुष की टंकार की।
 
 --- verse 24 ---
 deva:
@@ -228,6 +297,9 @@ gṛhṇan niṣaṁgādatha sandadhaccharān
 vikṛṣya muñcañchitabāṇapūgān|
 nighnan rathān kuṁjaravājipattīn
 nirantaraṁ yadvadalātacakram||
+en: He took arrows from his quiver, set them to the bow, drew it and released showers of sharp arrows. Without a pause he struck down chariots, elephants, horses and foot soldiers, like a whirling circle of firebrands.
+tel: అతడు అమ్ములపొది నుండి బాణములను తీసి ధనువునకు సంధించి, లాగి, వాడియైన బాణముల వర్షములను విడిచెను. తిరుగుచున్న అలాతచక్రమువలె అతడు ఆగక రథములను, ఏనుగులను, గుఱ్ఱములను, కాల్బలమును కూల్చెను.
+hi: उन्होंने तरकस से बाण निकाले, धनुष पर चढ़ाए, खींचा और तीखे बाणों के समूह छोड़े। घूमते हुए अलातचक्र के समान वे बिना रुके रथों, हाथियों, घोड़ों और पैदल सैनिकों को गिराते रहे।
 
 --- verse 25 ---
 deva:
@@ -240,6 +312,9 @@ nirbhinnakumbhāḥ kariṇo nipetu-
 ranekaśo'śvā śaravṛkṇakandharāḥ|
 rathā hatāśvadhvajasūtanāyakāḥ
 padātayaśchinnabhujorukandharāḥ||
+en: Elephants fell with their frontal lobes split open. Horses fell in great numbers with their necks cut by arrows. Chariots fell with their horses, banners, drivers and commanders killed. Foot soldiers fell with their arms, thighs and necks cut off.
+tel: కుంభస్థలములు చీల్చబడిన ఏనుగులు పడిపోయెను. బాణములతో మెడలు నఱకబడిన గుఱ్ఱములు అనేకముగా పడిపోయెను. గుఱ్ఱములు, ధ్వజములు, సారథులు, నాయకులు చంపబడిన రథములు పడిపోయెను. చేతులు, తొడలు, మెడలు నఱకబడిన కాల్బలము పడిపోయెను.
+hi: कुम्भस्थल फटे हुए हाथी गिर पड़े। बाणों से गरदनें कटे हुए घोड़े अनेक संख्या में गिर पड़े। घोड़े, ध्वज, सारथि और नायक मारे जाने पर रथ गिर पड़े। भुजा, जंघा और गरदन कटे हुए पैदल सैनिक गिर पड़े।
 
 --- verse 26 ---
 deva:
@@ -252,6 +327,9 @@ saṁchidyamānadvipadebhavājinā-
 maṁgaprasūtāḥ śataśo'sṛgāpagāḥ|
 bhujāhayaḥ pūruṣaśīrṣakacchapā
 hatadvipadvīpahayagrahākulāḥ||
+en: From the limbs of the men, the elephants and the horses that were being cut apart, hundreds of rivers of blood arose. In them arms were the snakes, human heads were the tortoises, and they were crowded with dead elephants for islands and horses for crocodiles.
+tel: ఖండింపబడుచున్న మనుష్యుల, ఏనుగుల, గుఱ్ఱముల అంగములనుండి నెత్తుటి నదులు వందలుగా పుట్టెను. వాటిలో చేతులు పాములు, మనుష్యుల తలలు తాబేళ్ళు. చచ్చిన ఏనుగులు ద్వీపములుగా, గుఱ్ఱములు మొసళ్ళుగా ఆ నదులు నిండియుండెను.
+hi: कटते हुए मनुष्यों, हाथियों और घोड़ों के अंगों से सैकड़ों रक्त की नदियाँ उत्पन्न हुईं। उनमें भुजाएँ सर्प थीं और मनुष्यों के सिर कछुए थे। मरे हुए हाथी द्वीप और घोड़े ग्राह बनकर वे नदियाँ भरी हुई थीं।
 
 --- verse 27 ---
 deva:
@@ -264,6 +342,9 @@ karorumīnā narakeśaśaivalā
 dhanustaraṁgāyudhagulmasaṁkulāḥ|
 acchūrikāvartabhayānakā mahā-
 maṇipravekābharaṇāśmaśarkarāḥ||
+en: Hands and thighs were the fish in them, the hair of men was the moss, bows were the waves, and they were crowded with weapons for thickets. The whirlpools made by the discus were their terror. Great and choice gems and ornaments were their stones and gravel.
+tel: చేతులు, తొడలు వాటిలో చేపలు. మనుష్యుల వెండ్రుకలు నాచు. ధనువులు అలలు. ఆయుధములు పొదలవలె నిండియుండెను. చక్రములతో కలిగిన సుడిగుండములు భయంకరములు. గొప్ప శ్రేష్ఠమైన మణులు, ఆభరణములు వాటిలో రాళ్ళు, గులకరాళ్ళు.
+hi: हाथ और जंघाएँ उनमें मछलियाँ थीं। मनुष्यों के केश सेवार थे। धनुष तरंगें थे। आयुध झाड़ियों के समान भरे थे। चक्रों से बने भँवर भयानक थे। बड़े श्रेष्ठ मणि और आभूषण उनमें पत्थर और कंकड़ थे।
 
 --- verse 28 ---
 deva:
@@ -276,6 +357,9 @@ pravartitā bhīrubhayāvahā mṛdhe
 manasvināṁ harṣakarīḥ parasparam|
 vinighnatārīn musalena durmadān
 saṁkarṣaṇenāparimeyatejasā||
+en: These rivers were set flowing in the battle by Saṁkarṣaṇa, whose power cannot be measured, as he struck down the proud enemies with his club. They brought fear to the timid and joy to the brave, each according to his own nature.
+tel: కొలత లేని తేజము కలిగిన సంకర్షణుడు మదము కలిగిన శత్రువులను రోకలితో కూల్చుచు యుద్ధములో ఈ నదులను ప్రవహింపజేసెను. అవి పిరికివారికి భయమును, ధైర్యవంతులకు సంతోషమును ఒకరికొకరికి వేరువేరుగా కలిగించెను.
+hi: अपरिमित तेज वाले संकर्षण ने मदोन्मत्त शत्रुओं को मूसल से मारते हुए युद्ध में इन नदियों को बहाया। वे डरपोकों को भय और धैर्यवानों को हर्ष, अपने-अपने स्वभाव के अनुसार देती रहीं।
 
 --- verse 29 ---
 deva:
@@ -288,6 +372,9 @@ balaṁ tadaṁgārṇavadurgabhairavaṁ
 durantapāraṁ magadhendrapālitam|
 kṣayaṁ praṇītaṁ vasudevaputrayo-
 rvikrīḍitaṁ tajjagadīśayoḥ param||
+en: That army, protected by the king of Magadha, was dreadful like an ocean of bodies, hard to cross and without a far shore. It was brought to destruction by the two sons of Vasudeva. For those two lords of the world this was only a sport.
+tel: మగధేంద్రుడు పాలించిన ఆ సేన శరీరముల సముద్రమువలె భయంకరముగా, దాటశక్యము కాకుండ, అంతము లేనిదిగా ఉండెను. దానిని వసుదేవుని ఇద్దరు కుమారులు నాశనము చేసిరి. ఆ జగదీశ్వరులకు ఇది కేవలము ఒక ఆట మాత్రమే.
+hi: मगधेन्द्र से पालित वह सेना शरीरों के समुद्र के समान भयंकर, दुर्गम और पार रहित थी। उसे वसुदेव के दोनों पुत्रों ने नष्ट कर दिया। उन जगदीश्वरों के लिए यह केवल एक क्रीड़ा ही थी।
 
 --- verse 30 ---
 deva:
@@ -300,6 +387,9 @@ sthityudbhavāntaṁ bhuvanatrayasya yaḥ
 samīhate'nantaguṇaḥ svalīlayā|
 na tasya citraṁ parapakṣanigraha-
 stathāpi martyānuvidhasya varṇyate||
+en: He whose qualities have no limit brings about by his own play the keeping, the rise and the end of the three worlds. For him the subduing of the enemy's side is no wonder. Still it is spoken of, because he follows the ways of mortals.
+tel: అనంతగుణములు కలిగినవాడు తన లీలతో మూడు లోకముల స్థితిని, పుట్టుకను, అంతమును నడపుచున్నాడు. అతనికి శత్రుపక్షమును అణచుట ఆశ్చర్యము కాదు. అయినను అతడు మనుష్యుల రీతిని అనుసరించుచున్నాడు కావున ఇది వర్ణింపబడుచున్నది.
+hi: जिनके गुण अनन्त हैं, वे अपनी लीला से तीनों लोकों की स्थिति, उत्पत्ति और अन्त करते हैं। उनके लिए शत्रुपक्ष का निग्रह आश्चर्य नहीं है। फिर भी वे मनुष्यों की रीति का अनुसरण करते हैं, इसलिए इसका वर्णन किया जाता है।
 
 --- verse 31 ---
 deva:
@@ -308,6 +398,9 @@ deva:
 iast:
 jagrāha virathaṁ rāmo jarāsandhaṁ mahābalam|
 hatānīkāvaśiṣṭāsuṁ siṁhaḥ siṁhamivaujasā||
+en: Rāma seized Jarāsandha, who was of great strength, whose chariot was gone and who alone was left alive after his army was killed. He did it by his own power, as one lion seizes another lion.
+tel: సేన చంపబడిన పిమ్మట ఒక్కడే మిగిలిన, రథము పోయిన, మహాబలుడైన జరాసంధుని రాముడు పట్టుకొనెను. సింహము సింహమును పట్టుకొనునట్లు అతడు తన ఓజముతో అట్లు చేసెను.
+hi: सेना के मारे जाने पर अकेले बचे हुए, रथहीन, महाबली जरासन्ध को राम ने पकड़ लिया। जैसे सिंह सिंह को पकड़ता है, उसी प्रकार उन्होंने अपने ओज से यह किया।
 
 --- verse 32 ---
 deva:
@@ -316,6 +409,9 @@ deva:
 iast:
 badhyamānaṁ hatārātiṁ pāśairvāruṇamānuṣaiḥ|
 vārayāmāsa govindastena kāryacikīrṣayā||
+en: This slayer of enemies was being bound with the ropes of Varuṇa and with human ropes. Govinda stopped it, because he wished a certain work to be done through him.
+tel: శత్రువులను చంపిన అతడు వరుణపాశములతో, మనుష్యపాశములతో కట్టబడుచుండెను. అతని ద్వారా ఒక పని జరుగవలెనని కోరి గోవిందుడు దానిని ఆపెను.
+hi: शत्रुओं को मारने वाला वह वरुण के पाशों और मनुष्य के पाशों से बाँधा जा रहा था। उसके द्वारा एक कार्य कराना चाहकर गोविन्द ने उसे रोक दिया।
 
 --- verse 33 ---
 deva:
@@ -324,6 +420,9 @@ deva:
 iast:
 sa mukto lokanāthābhyāṁ vrīḍito vīrasaṁmataḥ|
 tapase kṛtasaṁkalpo vāritaḥ pathi rājabhiḥ||
+en: Set free by the two lords of the world, he was ashamed, though he was honoured among heroes. He resolved upon tapas, but on the way the kings turned him back.
+tel: లోకనాథులు ఇద్దరు విడిచిపెట్టగా అతడు సిగ్గుపడెను. అతడు వీరులలో గౌరవము పొందినవాడు. అతడు తపస్సు చేయుటకు నిశ్చయించుకొనెను, కాని మార్గములో రాజులు అతనిని ఆపిరి.
+hi: दोनों लोकनाथों के द्वारा छोड़े जाने पर वह लज्जित हुआ। वह वीरों में सम्मानित था। उसने तपस्या का संकल्प किया, परन्तु मार्ग में राजाओं ने उसे रोक दिया।
 
 --- verse 34 ---
 deva:
@@ -332,6 +431,9 @@ deva:
 iast:
 vākyaiḥ pavitrārthapadairnayanaiḥ prākṛtairapi|
 svakarmabandhaprāpto'yaṁ yadubhiste parābhavaḥ||
+en: They turned him back with words of holy meaning and also with worldly reasons. They said: This defeat of yours at the hands of the Yadus has come from the bondage of your own actions.
+tel: పవిత్రమైన అర్థము కలిగిన మాటలతో, ప్రాకృతమైన యుక్తులతో కూడ వారు అతనిని ఆపిరి. వారు పలికిరి: యదువుల చేతిలో నీకు కలిగిన ఈ పరాభవము నీ స్వకర్మబంధము వలననే కలిగినది.
+hi: पवित्र अर्थ वाले वचनों से और सांसारिक युक्तियों से भी उन्होंने उसे रोका। उन्होंने कहा: यदुओं के हाथ तुम्हारा यह पराभव तुम्हारे अपने कर्मबन्ध से ही प्राप्त हुआ है।
 
 --- verse 35 ---
 deva:
@@ -340,6 +442,9 @@ deva:
 iast:
 hateṣu sarvānīkeṣu nṛpo bārhadrathastadā|
 upekṣito bhagavatā magadhān durmanā yayau||
+en: All his divisions having been killed, King Bārhadratha then went to Magadha with a heavy heart, for the blessed Lord had let him go.
+tel: తన అనీకములన్నియు చంపబడిన పిమ్మట బార్హద్రథ రాజు అప్పుడు దుఃఖించిన మనస్సుతో మగధదేశమునకు వెళ్ళెను. భగవంతుడు అతనిని విడిచిపెట్టెను.
+hi: अपने सब अनीकों के मारे जाने पर बार्हद्रथ राजा तब दुःखी मन से मगध देश को चला गया। भगवान् ने उसकी उपेक्षा कर उसे छोड़ दिया था।
 
 --- verse 36 ---
 deva:
@@ -348,6 +453,9 @@ deva:
 iast:
 mukundo'pyakṣatabalo nistīrṇāribalārṇavaḥ|
 vikīryamāṇaḥ kusumaistridaśairanumoditaḥ||
+en: Mukunda too, his own force unhurt, had crossed the sea of the enemy's army. The gods showered flowers upon him and praised him.
+tel: ముకుందుని సేన కూడ చెక్కుచెదరక ఉండెను. అతడు శత్రుసేనా సముద్రమును దాటెను. దేవతలు అతనిపై పుష్పములను కురిపించి అతనిని మెచ్చుకొనిరి.
+hi: मुकुन्द की सेना भी अक्षत रही। उन्होंने शत्रु-सेना के समुद्र को पार कर लिया। देवताओं ने उन पर पुष्प बरसाए और उनकी प्रशंसा की।
 
 --- verse 37 ---
 deva:
@@ -356,6 +464,9 @@ deva:
 iast:
 māthurairupasaṁgamya vijvarairmuditātmabhiḥ|
 upagīyamānavijayaḥ sūtamāgadhavandibhiḥ||
+en: The people of Mathurā came up to him, free of fear and glad at heart. His victory was sung by the bards, the heralds and the panegyrists.
+tel: మథురవాసులు భయము తొలగి, సంతోషించిన మనస్సుతో అతని దగ్గరకు వచ్చిరి. సూతులు, మాగధులు, వందులు అతని విజయమును కీర్తించిరి.
+hi: मथुरावासी ज्वरहीन होकर और प्रसन्न मन से उनके पास आए। सूत, मागध और वन्दीजनों ने उनकी विजय का गान किया।
 
 --- verse 38 ---
 deva:
@@ -364,6 +475,9 @@ deva:
 iast:
 śaṁkhadundubhayo nedurbherītūryāṇyanekaśaḥ|
 vīṇāveṇumṛdaṁgāni puraṁ praviśati prabhau||
+en: Conches and drums sounded, and kettledrums and trumpets of many kinds, and vīṇās, flutes and mṛdaṅgas, as the Lord entered the city.
+tel: ప్రభువు నగరములో ప్రవేశించుచుండగా శంఖములు, దుందుభులు మ్రోగెను. భేరులు, తూర్యములు అనేకముగా మ్రోగెను. వీణలు, వేణువులు, మృదంగములు మ్రోగెను.
+hi: प्रभु के नगर में प्रवेश करते समय शंख और दुन्दुभि बजे। भेरी और तूर्य अनेक प्रकार से बजे। वीणा, वेणु और मृदंग बजे।
 
 --- verse 39 ---
 deva:
@@ -372,6 +486,9 @@ deva:
 iast:
 siktamārgāṁ hṛṣṭajanāṁ patākābhiralaṁkṛtām|
 nirghuṣṭāṁ brahmaghoṣeṇa kautukābaddhatoraṇām||
+en: The roads of the city were sprinkled with water, its people were joyful, and it was adorned with banners. It resounded with the chanting of the Vedas, and festive arches were raised at its gates.
+tel: నగరము యొక్క మార్గములు నీటితో చల్లబడెను, జనులు సంతోషించిరి, పతాకములతో అది అలంకరింపబడెను. బ్రహ్మఘోషముతో అది మ్రోగెను, ఉత్సవముగా తోరణములు కట్టబడెను.
+hi: नगर के मार्ग जल से सींचे गए, जन हर्षित हुए, और वह पताकाओं से सजाया गया। वह ब्रह्मघोष से गूँज उठा, और उत्सव के तोरण बाँधे गए।
 
 --- verse 40 ---
 deva:
@@ -380,6 +497,9 @@ deva:
 iast:
 nicīyamāno nārībhirmālyadadhyakṣatāṁkuraiḥ|
 nirīkṣyamāṇaḥ sasnehaṁ prītyutkalitalocanaiḥ||
+en: The women covered him with garlands, curds, unhusked rice and sprouts. They looked upon him with love, their eyes wide open with joy.
+tel: స్త్రీలు మాలలతో, పెరుగుతో, అక్షతలతో, మొలకలతో అతనిని కప్పివేసిరి. ప్రీతితో విప్పారిన కన్నులతో వారు అతనిని ప్రేమగా చూచిరి.
+hi: स्त्रियों ने माला, दही, अक्षत और अंकुरों से उन्हें ढक दिया। प्रीति से खिले हुए नेत्रों से उन्होंने उन्हें स्नेह के साथ देखा।
 
 --- verse 41 ---
 deva:
@@ -388,6 +508,9 @@ deva:
 iast:
 āyodhanagataṁ vittamanantaṁ vīrabhūṣaṇam|
 yadurājāya tat sarvamāhṛtaṁ prādiśatprabhuḥ||
+en: The endless wealth and the ornaments of the warriors that had been left on the battlefield were all brought in. The Lord gave all of it to the king of the Yadus.
+tel: యుద్ధభూమిలో మిగిలిన అంతులేని ధనమును, వీరుల ఆభరణములను అన్నియు తీసుకొని వచ్చిరి. ప్రభువు దానినంతటిని యదురాజునకు ఇచ్చెను.
+hi: रणभूमि में पड़ा हुआ अनन्त धन और वीरों के आभूषण सब लाए गए। प्रभु ने वह सब यदुराज को दे दिया।
 
 --- verse 42 ---
 deva:
@@ -396,6 +519,9 @@ deva:
 iast:
 evaṁ saptadaśakṛtvastāvatyakṣauhiṇībalaḥ|
 yuyudhe māgadho rājā yadubhiḥ kṛṣṇapālitaiḥ||
+en: In this way the king of Magadha, with an army of that many akṣauhiṇīs each time, fought seventeen times with the Yadus, who were protected by Kṛṣṇa.
+tel: ఇట్లు మగధరాజు ప్రతిసారి అంతే అక్షౌహిణుల సేనతో, కృష్ణుడు రక్షించిన యదువులతో పదునేడు సారులు యుద్ధము చేసెను.
+hi: इस प्रकार मगध का राजा हर बार उतनी ही अक्षौहिणी सेना के साथ, कृष्ण से रक्षित यदुओं के साथ सत्रह बार लड़ा।
 
 --- verse 43 ---
 deva:
@@ -404,6 +530,9 @@ deva:
 iast:
 akṣiṇvaṁstadbalaṁ sarvaṁ vṛṣṇayaḥ kṛṣṇatejasā|
 hateṣu sveṣvanīkeṣu tyakto'yādaribhirnṛpaḥ||
+en: The Vṛṣṇis destroyed all that army by the power of Kṛṣṇa. Each time his own divisions were killed, the king was left by his enemies and went away.
+tel: కృష్ణుని తేజముతో వృష్ణులు ఆ సేనను అంతటిని నాశనము చేసిరి. తన అనీకములు చంపబడిన ప్రతిసారి శత్రువులు ఆ రాజును విడిచిపెట్టగా అతడు వెళ్ళిపోయెను.
+hi: कृष्ण के तेज से वृष्णियों ने उस सारी सेना को नष्ट कर दिया। जब-जब उसके अनीक मारे गए, शत्रुओं ने उस राजा को छोड़ दिया और वह चला गया।
 
 --- verse 44 ---
 deva:
@@ -412,6 +541,9 @@ deva:
 iast:
 aṣṭādaśamasaṁgrāme āgāmini tadantarā|
 nāradapreṣito vīro yavanaḥ pratyadṛśyata||
+en: The eighteenth battle was yet to come. In the time between, a hero, the Yavana, appeared, sent by Nārada.
+tel: పదునెనిమిదవ యుద్ధము ఇంకను రావలసియుండెను. ఆ నడిమి కాలములో నారదుడు పంపిన యవనుడు అను వీరుడు కనిపించెను.
+hi: अठारहवाँ संग्राम आने को था। उसी बीच में नारद के द्वारा भेजा हुआ यवन नामक वीर प्रकट हुआ।
 
 --- verse 45 ---
 deva:
@@ -420,6 +552,9 @@ deva:
 iast:
 rurodha mathurāmetya tisṛbhirmlecchakoṭibhiḥ|
 nṛloke cāpratidvandvo vṛṣṇīñchrutvā''tmasammitān||
+en: He came to Mathurā and shut it in with three crores of mlecchas. He had no match among men, and he had heard that the Vṛṣṇis were equal to himself.
+tel: అతడు మథురకు వచ్చి మూడు కోట్ల మ్లేచ్ఛులతో దానిని ముట్టడించెను. మనుష్యలోకములో అతనికి ఎదురు లేదు, వృష్ణులు తనతో సమానమని అతడు వినెను.
+hi: उसने मथुरा आकर तीन करोड़ म्लेच्छों से उसे घेर लिया। मनुष्य लोक में उसका कोई प्रतिद्वन्द्वी नहीं था, और उसने सुना था कि वृष्णि उसके समान हैं।
 
 --- verse 46 ---
 deva:
@@ -428,6 +563,9 @@ deva:
 iast:
 taṁ dṛṣṭvācintayat kṛṣṇaḥ saṁkarṣaṇasahāyavān|
 aho yadūnāṁ vṛjinaṁ prāptaṁ hyubhayato mahat||
+en: Kṛṣṇa, who had Saṁkarṣaṇa for his helper, saw him and thought: Alas, a great trouble has come upon the Yadus from both sides.
+tel: సంకర్షణుడు సహాయముగా ఉన్న కృష్ణుడు అతనిని చూచి ఇట్లు తలంచెను: అయ్యో, యదువులకు రెండు వైపుల నుండి గొప్ప ఆపద వచ్చినది.
+hi: संकर्षण को सहायक रखने वाले कृष्ण ने उसे देखकर सोचा: अहो, यदुओं पर दोनों ओर से बड़ा संकट आ पड़ा है।
 
 --- verse 47 ---
 deva:
@@ -436,6 +574,9 @@ deva:
 iast:
 yavano'yaṁ nirundhe'smānadya tāvanmahābalaḥ|
 māgadho'pyadya vā śvo vā paraśvo vā''gamiṣyati||
+en: This Yavana, who is so strong, is shutting us in today. And the king of Magadha also will come today, or tomorrow, or the day after.
+tel: ఇంత బలవంతుడైన ఈ యవనుడు ఈ దినము మనలను ముట్టడించుచున్నాడు. మగధరాజు కూడ ఈ దినము, లేదా రేపు, లేదా ఎల్లుండి వచ్చును.
+hi: इतना बलवान् यह यवन आज हमें घेर रहा है। और मगधराज भी आज, या कल, या परसों आ जाएगा।
 
 --- verse 48 ---
 deva:
@@ -444,6 +585,9 @@ deva:
 iast:
 āvayoryudhyatorasya yadyāgantā jarāsutaḥ|
 bandhūn vadhiṣyatyathavā neṣyate svapuraṁ balī||
+en: If the son of Jarā comes while we two are fighting this one, then that strong king will kill our kinsmen, or he will carry them off to his own city.
+tel: మేము ఇద్దరము ఇతనితో యుద్ధము చేయుచున్నప్పుడు జరాసుతుడు వచ్చినచో, ఆ బలవంతుడైన రాజు మన బంధువులను చంపును, లేదా వారిని తన నగరమునకు కొనిపోవును.
+hi: जब हम दोनों इससे युद्ध कर रहे हों, तब यदि जरासुत आ जाए, तो वह बली राजा हमारे बन्धुओं को मार डालेगा, अथवा उन्हें अपने नगर ले जाएगा।
 
 --- verse 49 ---
 deva:
@@ -452,6 +596,9 @@ deva:
 iast:
 tasmādadya vidhāsyāmo durgaṁ dvipadadurgamam|
 tatra jñātīn samādhāya yavanaṁ ghātayāmahe||
+en: Therefore we shall today make a fort that a man on two feet cannot enter. We shall place our kinsmen there and then have the Yavana killed.
+tel: కావున ఈ దినము మనము రెండు కాళ్ళ మనుష్యుడు ప్రవేశించలేని కోటను కట్టుదము. అందులో మన జ్ఞాతులను ఉంచి పిమ్మట యవనుని చంపింతుము.
+hi: इसलिए आज हम ऐसा दुर्ग बनाएँ जिसमें दो पैर वाला मनुष्य प्रवेश न कर सके। उसमें अपने ज्ञातियों को रखकर फिर यवन का वध कराएँगे।
 
 --- verse 50 ---
 deva:
@@ -460,6 +607,9 @@ deva:
 iast:
 iti sammantrya bhagavān durgaṁ dvādaśayojanam|
 antaḥsamudre nagaraṁ kṛtsnādbhutamacīkarat||
+en: Having taken counsel in this way, the blessed Lord had a fort twelve yojanas across made in the middle of the sea, a city wonderful in every part.
+tel: ఇట్లు ఆలోచించి భగవంతుడు సముద్రము నడుమ పండ్రెండు యోజనముల కోటను కట్టించెను. ఆ నగరము అన్ని విధముల అద్భుతముగా ఉండెను.
+hi: इस प्रकार परामर्श करके भगवान् ने समुद्र के भीतर बारह योजन का दुर्ग बनवाया। वह नगर सब प्रकार से अद्भुत था।
 
 --- verse 51 ---
 deva:
@@ -468,6 +618,9 @@ deva:
 iast:
 dṛśyate yatra hi tvāṣṭraṁ vijñānaṁ śilpanaipuṇam|
 rathyācatvaravīthībhiryathāvāstu vinirmitam||
+en: In it the knowledge of Tvaṣṭā and his skill in craft could be seen. It was built with carriage roads, squares and lanes according to the rules of building.
+tel: అందులో త్వష్ట యొక్క విజ్ఞానము, శిల్పనైపుణ్యము కనిపించుచుండెను. వాస్తుశాస్త్రము ప్రకారము రథమార్గములతో, చతురములతో, వీథులతో అది నిర్మింపబడెను.
+hi: उसमें त्वष्टा का विज्ञान और शिल्प की निपुणता दिखाई देती थी। वास्तु के अनुसार रथ्या, चत्वर और वीथियों से वह बनाया गया था।
 
 --- verse 52 ---
 deva:
@@ -476,6 +629,9 @@ deva:
 iast:
 suradrumalatodyānavicitropavanānvitam|
 hemaśṛṅgairdivispṛgbhiḥ sphāṭikāṭṭālagopuraiḥ||
+en: It had gardens of the trees and creepers of the gods, and wonderful groves. Its golden turrets touched the sky, and its watchtowers and gateways were of crystal.
+tel: దేవవృక్షములు, దేవలతలు కలిగిన ఉద్యానములు, విచిత్రమైన ఉపవనములు దానికి ఉండెను. బంగారు శిఖరములు ఆకాశమును తాకుచుండెను, బురుజులు, గోపురములు స్ఫటికముతో ఉండెను.
+hi: उसमें देववृक्षों और लताओं के उद्यान तथा विचित्र उपवन थे। सोने के शिखर आकाश को छूते थे, और अट्टालिकाएँ और गोपुर स्फटिक के थे।
 
 --- verse 53 ---
 deva:
@@ -484,6 +640,9 @@ deva:
 iast:
 rājatārakuṭaiḥ koṣṭhairhemakumbhairalaṁkṛtaiḥ|
 ratnakūṭairgṛhairhaimairmahāmarakatasthalaiḥ||
+en: It had storehouses of silver and brass, adorned with golden pots. Its houses were of gold, with pinnacles of jewels and floors of great emerald.
+tel: వెండి, ఇత్తడితో చేసిన కొట్టులు బంగారు కుంభములతో అలంకరింపబడెను. బంగారు గృహములు రత్నశిఖరములతో, గొప్ప మరకత నేలలతో ఉండెను.
+hi: चाँदी और पीतल के कोष्ठ सोने के कलशों से सजाए गए थे। सोने के घर रत्नों के शिखरों और बड़े मरकत के फर्शों से युक्त थे।
 
 --- verse 54 ---
 deva:
@@ -492,6 +651,9 @@ deva:
 iast:
 vāstoṣpatīnāṁ ca gṛhairvalabhībhiśca nirmitam|
 cāturvarṇyajanākīrṇaṁ yadudevagṛhollasat||
+en: It was built with houses for the guardian deities of the dwellings, and with upper chambers. It was filled with people of the four varṇas, and it shone with the palace of the lord of the Yadus.
+tel: వాస్తోష్పతులకు గృహములతో, మేడలతో అది నిర్మింపబడెను. నాలుగు వర్ణముల జనులతో అది నిండియుండెను, యదుదేవుని గృహముతో అది ప్రకాశించెను.
+hi: वास्तोष्पतियों के घरों और वलभियों से वह बनाया गया था। चारों वर्णों के जनों से वह भरा था, और यदुदेव के भवन से वह शोभित था।
 
 --- verse 55 ---
 deva:
@@ -500,6 +662,9 @@ deva:
 iast:
 sudharmāṁ pārijātaṁ ca mahendraḥ prāhiṇoddhareḥ|
 yatra cāvasthito martyo martyadharmairna yujyate||
+en: Great Indra sent the Sudharmā hall and the Pārijāta tree to Hari. A mortal who stays in that hall is not touched by the laws of mortals.
+tel: మహేంద్రుడు సుధర్మా సభను, పారిజాత వృక్షమును హరికి పంపెను. ఆ సభలో ఉన్న మనుష్యుడు మనుష్యధర్మములతో కలియడు.
+hi: महेन्द्र ने सुधर्मा सभा और पारिजात वृक्ष हरि के पास भेजे। उस सभा में स्थित मनुष्य मनुष्य के धर्मों से युक्त नहीं होता।
 
 --- verse 56 ---
 deva:
@@ -508,6 +673,9 @@ deva:
 iast:
 śyāmaikakarṇān varuṇo hayāñchuklān manojavān|
 aṣṭau nidhipatiḥ kośān lokapālo nijodayān||
+en: Varuṇa sent horses that were white and swift as thought, each with one dark ear. The lord of treasures sent the eight treasures. The guardians of the worlds sent each what arose from himself.
+tel: ఒక చెవి నల్లగా ఉన్న, తెల్లనైన, మనోవేగము కలిగిన గుఱ్ఱములను వరుణుడు పంపెను. నిధిపతి ఎనిమిది కోశములను పంపెను. లోకపాలకులు తమ తమ నుండి పుట్టిన సంపదలను పంపిరి.
+hi: एक कान श्याम वाले, श्वेत और मन के समान वेग वाले घोड़े वरुण ने भेजे। निधिपति ने आठ कोश भेजे। लोकपालों ने अपने-अपने से उत्पन्न वैभव भेजे।
 
 --- verse 57 ---
 deva:
@@ -516,6 +684,9 @@ deva:
 iast:
 yad yad bhagavatā dattamādhipatyaṁ svasiddhaye|
 sarvaṁ pratyarpayāmāsurharau bhūmigate nṛpa||
+en: O king, whatever lordship the blessed Lord had given them for their own accomplishment, all of it they gave back to Hari when he had come down to the earth.
+tel: రాజా, తమ సిద్ధి కొఱకు భగవంతుడు ఏ ఏ ఆధిపత్యమును వారికి ఇచ్చెనో, హరి భూమికి దిగివచ్చినప్పుడు వారు దానినంతటిని అతనికి తిరిగి సమర్పించిరి.
+hi: हे राजन्, अपनी सिद्धि के लिए भगवान् ने जो-जो आधिपत्य उन्हें दिया था, हरि के भूमि पर आने पर उन्होंने वह सब उन्हें लौटा दिया।
 
 --- verse 58 ---
 deva:
@@ -526,9 +697,15 @@ iast:
 tatra yogaprabhāveṇa nītvā sarvajanaṁ hariḥ|
 prajāpālena rāmeṇa kṛṣṇaḥ samanumantritaḥ|
 nirjagāma puradvārāt padmamālī nirāyudhaḥ||
+en: There Hari brought all the people by the power of yoga. Then Kṛṣṇa, advised by Rāma, the protector of the people, went out from the gate of the city, wearing a garland of lotuses and carrying no weapon.
+tel: అక్కడకు హరి యోగప్రభావముతో జనులందరిని కొనివచ్చెను. ప్రజాపాలకుడైన రాముడితో ఆలోచించి కృష్ణుడు పద్మమాలను ధరించి, ఆయుధము లేక నగరద్వారము నుండి బయలుదేరెను.
+hi: वहाँ हरि ने योग के प्रभाव से सब जनों को पहुँचा दिया। प्रजापालक राम से परामर्श करके कृष्ण कमल की माला धारण कर, बिना आयुध, नगर के द्वार से बाहर निकले।
 
 --- verse none ---
 deva:
 इति श्रीमद्भागवते महापुराणे पारमहंस्यां संहितायां दशमस्कन्धेउत्तरार्धे दुर्गनिवेशनं नाम पञ्चाशत्तमोऽध्यायः॥ ५०॥
 iast:
 iti śrīmadbhāgavate mahāpurāṇe pāramahaṁsyāṁ saṁhitāyāṁ daśamaskandheuttarārdhe durganiveśanaṁ nāma pañcāśattamo'dhyāyaḥ|| 50||
+en: Thus ends the fiftieth adhyāya, named the establishing of the fort, in the second half of the tenth skandha of the Śrīmad Bhāgavata Mahāpurāṇa, the saṁhitā of the paramahaṁsas.
+tel: ఇట్లు పరమహంసల సంహిత అయిన శ్రీమద్భాగవత మహాపురాణములో దశమ స్కంధము ఉత్తరార్ధములో దుర్గనివేశనము అను ఏబదియవ అధ్యాయము సమాప్తము.
+hi: इस प्रकार परमहंसों की संहिता श्रीमद्भागवत महापुराण के दशम स्कन्ध के उत्तरार्ध में दुर्गनिवेशन नामक पचासवाँ अध्याय समाप्त हुआ।

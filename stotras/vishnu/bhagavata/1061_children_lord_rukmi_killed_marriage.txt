@@ -9,7 +9,7 @@ Type: Purāṇa (an adhyāya of the Śrīmad Bhāgavata, Skandha 10)
 
 Source / recension: Base text and authority: the Gītā Press, Gorakhpur Śrīmadbhāgavata Mahāpurāṇa with Hindi translation, Part 2 (Gītā Press code 27), archive.org item `shrimadbhagwat-mahapuran-bhag-2`, printed pages 520–525; the PDF page numbers are the printed ones. The PDF carries the typesetter's own text layer in the Chanakya font encoding, and the text was decoded from it by machine with `bin/bhagavata/chanakya.py`, not read off OCR or typed. The decoder was checked against GRETIL over all twelve skandhas before any file was written, and the differences that remain were sampled and found to be readings of the two editions. Second witness: GRETIL's `sa_bhAgavatapurANa.xml` (IAST, contributed by Ulrich Stiehl), a separate editorial lineage, compared verse by verse by machine. The TTD edition with the commentaries of Śrīdhara, Vīrarāghava and Vijayadhvaja (archive.org `Bhagavata_Purana_With_Multiple_Commentaries_TTD_Critical_Edition`) is the third witness where one is needed; it was not read for this file. The IAST was generated mechanically from the Devanāgarī with `bin/dev2iast.py`.
 
-Recension note: Text-only file, written 1 Oct 2026 at the user's instruction to lay down the whole Bhāgavata first: the English, Telugu and Hindi meanings are still to be added, and the witnesses' differences listed here have been recorded by machine and not yet adjudicated. The print is followed throughout. The print numbers 40 verses and GRETIL numbers 40. Of the 40 verses GRETIL has under the same number, 22 agree with the print letter for letter once spacing and the spelling of nasals are set aside; the rest differ: 1, 2, 3, 4, 5, 6, 12, 15, 16, 18, 19, 20, 25, 28, 29, 32, 38, 39. Spacing is the print's, as its text layer gives it; in a few places justification has left a space inside a word, and these are still to be closed when the verse is read. The speaker lines (श्रीशुक उवाच and the others) are printed in italic above the verse they introduce, and are given as its first line.
+Recension note: Meanings written 24 Oct 2026 (session S78). The differences between the witnesses listed below were read as the verses were glossed; except where this note says otherwise, each is a spelling, a sandhi or a word order of the two editions, none of them changes the sense, and the print's reading therefore stands unbracketed. The print is followed throughout. The print numbers 40 verses and GRETIL numbers 40. Of the 40 verses GRETIL has under the same number, 22 agree with the print letter for letter once spacing and the spelling of nasals are set aside; the rest differ: 1, 2, 3, 4, 5, 6, 12, 15, 16, 18, 19, 20, 25, 28, 29, 32, 38, 39. Spacing is the print's, as its text layer gives it. The speaker lines (श्रीशुक उवाच and the others) are printed in italic above the verse they introduce, and are given as its first line. No space was put right in this adhyāya. The justification detector found no broken word, and the lost-space detector found no join after a visarga, an anusvāra or a vowel in hiatus: every join it flagged follows a virāma consonant or an avagraha, where the script requires the ligature. The twenty-two verses it could not align were read by hand, and their differences from GRETIL are nasal spelling, avagraha spacing, compound hyphens, or GRETIL's own slips (दशाबाः, विययश्, ऊर्धगः, महांसः, प्रद्यम्नाच्, दुद्रवर्, पङ्घार्दिताः, रक्मिणी). GRETIL also runs the second half of verse 18 into verse 19, so its numbering of that pair is one step behind the print's. At verse 6 the print's line-break hyphen falls inside उपहार्यैर्दासीशता, where GRETIL reads उपहार्यैः दासीशता; the hyphen is left where the print puts it. In the colophon the layer has swallowed the space in दशमस्कन्धेउत्तरार्धे, as it has in eleven other files of this skandha; it is left as printed and waits on a corpus-wide ruling. At verse 13 श्रीमान् is read as an epithet of कुन्ति, which keeps the list to ten sons. At verse 28 the print reads तेनाक्षै where GRETIL reads तेनाक्षैर्; the print stands.
 
 Verse count: 40, plus the closing colophon printed unnumbered.
 
@@ -24,6 +24,9 @@ iast:
 śrīśuka uvāca
 ekaikaśastāḥ kṛṣṇasya putrān daśa daśābalāḥ|
 ajījanannanavamānpituḥ sarvātmasampadā||
+en: Śuka said: Those wives of Kṛṣṇa bore ten sons each, one by one. Not one of those sons was less than the father in any perfection of the self.
+tel: శుకుడు పలికెను: కృష్ణుని ఆ భార్యలు ఒక్కొక్కరు పది మంది కుమారులను కనిరి. ఆ కుమారులలో ఎవరును ఆత్మ సంపదలన్నిటిలో తండ్రికి తక్కువవారు కారు.
+hi: शुक ने कहा: कृष्ण की उन पत्नियों में से एक-एक ने दस-दस पुत्र उत्पन्न किए। उन पुत्रों में कोई भी आत्मा की सम्पदाओं में पिता से कम नहीं था।
 
 --- verse 2 ---
 deva:
@@ -32,6 +35,9 @@ deva:
 iast:
 gṛhādanapagaṁ vīkṣya rājaputryo'cyutaṁ sthitam|
 preṣṭhaṁ nyamaṁsata svaṁ svaṁ na tattattvavidaḥ striyaḥ||
+en: Acyuta never went away from the house. Seeing this, each of those princesses thought that he was dearest to her alone. Those women did not know his true nature.
+tel: అచ్యుతుడు ఇంటిని విడిచి ఎప్పుడును వెళ్లలేదు. ఇది చూచి ఆ రాజకుమార్తెలలో ఒక్కొక్కరు ఆయన తనకే ప్రియతముడని తలచిరి. ఆ స్త్రీలకు ఆయన నిజ స్వరూపము తెలియదు.
+hi: अच्युत घर से कभी दूर नहीं जाते थे। यह देखकर उन राजकुमारियों में से प्रत्येक ने समझा कि वे केवल उसी के प्रियतम हैं। उन स्त्रियों को उनका वास्तविक स्वरूप ज्ञात नहीं था।
 
 --- verse 3 ---
 deva:
@@ -44,6 +50,9 @@ cārvabjakośavadanāyatabāhunetra-
 sapremahāsarasavīkṣitavalgujalpaiḥ|
 sammohitā bhagavato na mano vijetuṁ
 svairvibhramaiḥ samaśakan vanitā vibhūmnaḥ||
+en: The Lord's face was beautiful like the bud of a lotus. His arms and his eyes were long. His smile was full of love, his glances were sweet and his words were pleasing. Those women were enchanted by all this. With their own charms they could not conquer the mind of the Lord, who is without limit.
+tel: భగవంతుని ముఖము పద్మము మొగ్గవలె అందముగా ఉండెను. ఆయన బాహువులు, నేత్రములు పొడవుగా ఉండెను. ఆయన నవ్వు ప్రేమతో నిండి ఉండెను, ఆయన చూపులు మధురముగా ఉండెను, ఆయన మాటలు హితముగా ఉండెను. ఈ అన్నిటిచే ఆ స్త్రీలు మోహితులైరి. తమ విలాసములచే వారు అపరిమితుడైన భగవంతుని మనస్సును జయింపలేకపోయిరి.
+hi: भगवान का मुख कमल की कली के समान सुन्दर था। उनकी भुजाएँ और नेत्र लम्बे थे। उनकी हँसी प्रेम से भरी थी, उनकी दृष्टि मधुर थी और उनके वचन प्रिय थे। इन सबसे वे स्त्रियाँ मोहित हो गईं। अपने विलासों से वे उन अपरिमित भगवान के मन को जीत नहीं सकीं।
 
 --- verse 4 ---
 deva:
@@ -56,6 +65,9 @@ smāyāvalokalavadarśitabhāvahāri-
 bhrūmaṇḍalaprahitasauratamantraśauṇḍaiḥ|
 patnyastu ṣoḍaśasahasramanaṁgabāṇai-
 ryasyendriyaṁ vimathituṁ karaṇairna śekuḥ||
+en: Those sixteen thousand wives sent the arrows of Ananga. Their slight glances showed their feeling, and the circle of their brows carried the secret message of desire. Even with all these means they could not stir the senses of the Lord.
+tel: ఆ పదహారు వేల భార్యలు అనంగుని బాణములను ప్రయోగించిరి. వారి చిరుచూపులు వారి భావమును తెలిపెను, వారి కనుబొమల వంపు రతి రహస్యమును పంపెను. ఈ ఉపాయములన్నిటిచేతను వారు భగవంతుని ఇంద్రియములను కదిలింపలేకపోయిరి.
+hi: उन सोलह हजार पत्नियों ने अनंग के बाण चलाए। उनकी तिरछी दृष्टि उनके भाव को प्रकट करती थी और उनकी भौंहों का मण्डल रति का गुप्त संदेश भेजता था। इन सब साधनों से भी वे भगवान की इन्द्रियों को विचलित नहीं कर सकीं।
 
 --- verse 5 ---
 deva:
@@ -68,6 +80,9 @@ itthaṁ ramāpatimavāpya patiṁ striyastā
 brahmādayo'pi na viduḥ padavīṁ yadīyām|
 bhejurmudāviratamedhitayānurāga-
 hāsāvalokanavasaṁgamalālasādyam||
+en: Thus those women obtained as their husband the Lord of Ramā, whose way even Brahmā and the others do not know. They served him with joy, and their love grew without a pause, with laughter, with glances, with fresh union, with longing and with all the rest.
+tel: ఇట్లు ఆ స్త్రీలు బ్రహ్మ మొదలైనవారికిని తెలియని మార్గము కల రమాపతిని భర్తగా పొందిరి. వారు ఆనందముతో ఆయనను సేవించిరి, వారి అనురాగము ఆపు లేకుండ పెరిగెను. నవ్వులతో, చూపులతో, కొత్త సంగమముతో, ఉత్కంఠతో, ఇంకను అన్నిటితో వారు ఆయనను సేవించిరి.
+hi: इस प्रकार उन स्त्रियों ने रमापति को पति रूप में पाया, जिनका मार्ग ब्रह्मा आदि भी नहीं जानते। उन्होंने आनन्द से उनकी सेवा की और उनका अनुराग बिना रुके बढ़ता गया। हँसी से, दृष्टि से, नए संगम से, उत्कण्ठा से और इन सबसे वे उनकी सेवा करती रहीं।
 
 --- verse 6 ---
 deva:
@@ -80,6 +95,9 @@ pratyudgamāsanavarārhaṇapādaśauca-
 tāmbūlaviśramaṇavījanagandhamālyaiḥ|
 keśaprasāraśayanasnapanopahāryai-
 rdāsīśatā api vibhorvidadhuḥ sma dāsyam||
+en: Each of them had hundreds of maidservants. Even so they themselves rendered service to the Lord. They went forward to meet him, gave him a seat, worshipped him with excellent things, washed his feet, gave him betel, relieved his weariness, fanned him, gave him scents and garlands, dressed his hair, prepared his bed, bathed him and presented him with gifts.
+tel: వారిలో ఒక్కొక్కరికి వందల కొలది దాసీలు ఉండిరి. అయినను వారే భగవంతునికి సేవ చేసిరి. వారు ఎదురు వెళ్లి ఆయనను కలిసిరి, ఆసనమిచ్చిరి, శ్రేష్ఠమైన వస్తువులతో పూజించిరి, పాదములు కడిగిరి, తాంబూలమిచ్చిరి, అలసటను తీర్చిరి, విసనకర్రతో విసిరిరి, గంధమును మాలలను ఇచ్చిరి, కేశములను దిద్దిరి, పరుపును సిద్ధము చేసిరి, స్నానము చేయించిరి, కానుకలను సమర్పించిరి.
+hi: उनमें से प्रत्येक के पास सैकड़ों दासियाँ थीं। फिर भी वे स्वयं भगवान की सेवा करती थीं। वे आगे जाकर उनका स्वागत करतीं, आसन देतीं, उत्तम वस्तुओं से पूजा करतीं, चरण धोतीं, ताम्बूल देतीं, थकान दूर करतीं, पंखा करतीं, गन्ध और माला देतीं, केश सँवारतीं, शय्या तैयार करतीं, स्नान कराती और भेंट अर्पित करती थीं।
 
 --- verse 7 ---
 deva:
@@ -88,6 +106,9 @@ deva:
 iast:
 tāsāṁ yā daśaputrāṇāṁ kṛṣṇastrīṇāṁ puroditāḥ|
 aṣṭau mahiṣyastatputrān pradyumnādīn gṛṇāmi te||
+en: Of those wives of Kṛṣṇa, each of whom had ten sons, eight were the chief queens named before. I shall now name to you their sons, Pradyumna and the rest.
+tel: పది మంది కుమారులు కల కృష్ణుని ఆ భార్యలలో ఎనమండుగురు ముందే చెప్పబడిన ప్రధాన మహిషులు. ఇప్పుడు వారి కుమారులను, ప్రద్యుమ్నుడు మొదలైనవారిని, నీకు చెప్పుదును.
+hi: दस-दस पुत्रों वाली कृष्ण की उन पत्नियों में से आठ पहले बताई गई प्रधान महिषियाँ थीं। अब मैं तुम्हें उनके पुत्र, प्रद्युम्न आदि, बताता हूँ।
 
 --- verse 8 ---
 deva:
@@ -96,6 +117,9 @@ deva:
 iast:
 cārudeṣṇaḥ sudeṣṇaśca cārudehaśca vīryavān|
 sucāruścāruguptaśca bhadracārustathāparaḥ||
+en: The sons were Cārudeṣṇa, Sudeṣṇa, the valiant Cārudeha, Sucāru, Cārugupta, and then Bhadracāru,
+tel: ఆ కుమారులు చారుదేష్ణుడు, సుదేష్ణుడు, పరాక్రమము కల చారుదేహుడు, సుచారుడు, చారుగుప్తుడు, పిమ్మట భద్రచారుడు,
+hi: वे पुत्र चारुदेष्ण, सुदेष्ण, पराक्रमी चारुदेह, सुचारु, चारुगुप्त, और फिर भद्रचारु,
 
 --- verse 9 ---
 deva:
@@ -104,6 +128,9 @@ deva:
 iast:
 cārucandro vicāruśca cāruśca daśamo hareḥ|
 pradyumnapramukhā jātā rukmiṇyāṁ nāvamāḥ pituḥ||
+en: Cārucandra, Vicāru, and Cāru the tenth. These sons of Hari, with Pradyumna at their head, were born of Rukmiṇī, and they were not less than the father.
+tel: చారుచంద్రుడు, విచారుడు, పదియవవాడు చారుడు. ప్రద్యుమ్నుడు ముఖ్యుడుగా కల ఈ హరి కుమారులు రుక్మిణికి జన్మించిరి, వారు తండ్రికి తక్కువవారు కారు.
+hi: चारुचन्द्र, विचारु, और दसवाँ चारु। प्रद्युम्न को प्रमुख मानकर ये हरि के पुत्र रुक्मिणी से उत्पन्न हुए, और वे पिता से कम नहीं थे।
 
 --- verse 10 ---
 deva:
@@ -112,6 +139,9 @@ deva:
 iast:
 bhānuḥ subhānuḥ svarbhānuḥ prabhānurbhānumāṁstathā|
 candrabhānurbṛhadbhānuratibhānustathāṣṭamaḥ||
+en: Bhānu, Subhānu, Svarbhānu, Prabhānu, Bhānumān, Candrabhānu, Bṛhadbhānu, and Atibhānu the eighth,
+tel: భానుడు, సుభానుడు, స్వర్భానుడు, ప్రభానుడు, భానుమంతుడు, చంద్రభానుడు, బృహద్భానుడు, ఎనిమిదవవాడు అతిభానుడు,
+hi: भानु, सुभानु, स्वर्भानु, प्रभानु, भानुमान्, चन्द्रभानु, बृहद्भानु, और आठवाँ अतिभानु,
 
 --- verse 11 ---
 deva:
@@ -120,6 +150,9 @@ deva:
 iast:
 śrībhānuḥ pratibhānuśca satyabhāmātmajā daśa|
 sāmbaḥ sumitraḥ purujicchatajicca sahasrajit||
+en: Śrībhānu and Pratibhānu. These ten were the sons of Satyabhāmā. Sāmba, Sumitra, Purujit, Śatajit, Sahasrajit,
+tel: శ్రీభానుడు, ప్రతిభానుడు. ఈ పది మంది సత్యభామ కుమారులు. సాంబుడు, సుమిత్రుడు, పురుజిత్తు, శతజిత్తు, సహస్రజిత్తు,
+hi: श्रीभानु और प्रतिभानु। ये दस सत्यभामा के पुत्र थे। साम्ब, सुमित्र, पुरुजित्, शतजित्, सहस्रजित्,
 
 --- verse 12 ---
 deva:
@@ -128,6 +161,9 @@ deva:
 iast:
 vijayaścitraketuśca vasumān draviḍaḥ kratuḥ|
 jāmbavatyāḥ sutā hyete sāmbādyāḥ pitṛsaṁmatāḥ||
+en: Vijaya, Citraketu, Vasumān, Draviḍa and Kratu. These sons of Jāmbavatī, Sāmba and the rest, were honoured by their father.
+tel: విజయుడు, చిత్రకేతుడు, వసుమంతుడు, ద్రవిడుడు, క్రతువు. సాంబుడు మొదలైన ఈ జాంబవతి కుమారులు తండ్రిచే గౌరవింపబడినవారు.
+hi: विजय, चित्रकेतु, वसुमान्, द्रविड और क्रतु। साम्ब आदि ये जाम्बवती के पुत्र अपने पिता से सम्मानित थे।
 
 --- verse 13 ---
 deva:
@@ -136,6 +172,9 @@ deva:
 iast:
 vīraścandro'śvasenaśca citragurvegavān vṛṣaḥ|
 āmaḥ śaṁkurvasuḥ śrīmān kuntirnāgnajiteḥ sutāḥ||
+en: Vīra, Candra, Aśvasena, Citragu, Vegavān, Vṛṣa, Āma, Śaṅku, Vasu and the glorious Kunti were the sons of Nāgnajitī.
+tel: వీరుడు, చంద్రుడు, అశ్వసేనుడు, చిత్రగువు, వేగవంతుడు, వృషుడు, ఆముడు, శంకుడు, వసువు, శోభాయుక్తుడైన కుంతి నాగ్నజితి కుమారులు.
+hi: वीर, चन्द्र, अश्वसेन, चित्रगु, वेगवान्, वृष, आम, शंकु, वसु और शोभायुक्त कुन्ति नाग्नजिती के पुत्र थे।
 
 --- verse 14 ---
 deva:
@@ -144,6 +183,9 @@ deva:
 iast:
 śrutaḥ kavirvṛṣo vīraḥ subāhurbhadra ekalaḥ|
 śāntirdarśaḥ pūrṇamāsaḥ kālindyāḥ somako'varaḥ||
+en: Śruta, Kavi, Vṛṣa, Vīra, Subāhu, Bhadra, Ekala, Śānti, Darśa, Pūrṇamāsa, and Somaka the youngest were the sons of Kālindī.
+tel: శ్రుతుడు, కవి, వృషుడు, వీరుడు, సుబాహువు, భద్రుడు, ఏకలుడు, శాంతి, దర్శుడు, పూర్ణమాసుడు, చిన్నవాడు సోమకుడు కాళింది కుమారులు.
+hi: श्रुत, कवि, वृष, वीर, सुबाहु, भद्र, एकल, शान्ति, दर्श, पूर्णमास, और सबसे छोटा सोमक कालिन्दी के पुत्र थे।
 
 --- verse 15 ---
 deva:
@@ -152,6 +194,9 @@ deva:
 iast:
 praghoṣo gātravānsiṁho balaḥ prabala ūrdhvagaḥ|
 mādryāḥ putrā mahāśaktiḥ saha ojo'parājitaḥ||
+en: Praghoṣa, Gātravān, Siṁha, Bala, Prabala, Ūrdhvaga, Mahāśakti, Saha, Oja and Aparājita were the sons of Mādrī.
+tel: ప్రఘోషుడు, గాత్రవంతుడు, సింహుడు, బలుడు, ప్రబలుడు, ఊర్ధ్వగుడు, మహాశక్తి, సహుడు, ఓజుడు, అపరాజితుడు మాద్రి కుమారులు.
+hi: प्रघोष, गात्रवान्, सिंह, बल, प्रबल, ऊर्ध्वग, महाशक्ति, सह, ओज और अपराजित माद्री के पुत्र थे।
 
 --- verse 16 ---
 deva:
@@ -160,6 +205,9 @@ deva:
 iast:
 vṛko harṣo'nilo gṛdhro vardhano'nnāda eva ca|
 mahāśaḥ pāvano vahnirmitravindātmajāḥ kṣudhiḥ||
+en: Vṛka, Harṣa, Anila, Gṛdhra, Vardhana, Annāda, Mahāśa, Pāvana, Vahni and Kṣudhi were the sons of Mitravindā.
+tel: వృకుడు, హర్షుడు, అనిలుడు, గృధ్రుడు, వర్ధనుడు, అన్నాదుడు, మహాశుడు, పావనుడు, వహ్ని, క్షుధి మిత్రవింద కుమారులు.
+hi: वृक, हर्ष, अनिल, गृध्र, वर्धन, अन्नाद, महाश, पावन, वह्नि और क्षुधि मित्रविन्दा के पुत्र थे।
 
 --- verse 17 ---
 deva:
@@ -168,6 +216,9 @@ deva:
 iast:
 saṁgrāmajid bṛhatsenaḥ śūraḥ praharaṇo'rijit|
 jayaḥ subhadro bhadrāyā vāma āyuśca satyakaḥ||
+en: Saṁgrāmajit, Bṛhatsena, Śūra, Praharaṇa, Arijit, Jaya, Subhadra, Vāma, Āyu and Satyaka were the sons of Bhadrā.
+tel: సంగ్రామజిత్తు, బృహత్సేనుడు, శూరుడు, ప్రహరణుడు, అరిజిత్తు, జయుడు, సుభద్రుడు, వాముడు, ఆయువు, సత్యకుడు భద్ర కుమారులు.
+hi: संग्रामजित्, बृहत्सेन, शूर, प्रहरण, अरिजित्, जय, सुभद्र, वाम, आयु और सत्यक भद्रा के पुत्र थे।
 
 --- verse 18 ---
 deva:
@@ -176,6 +227,9 @@ deva:
 iast:
 dīptimāṁstāmrataptādyā rohiṇyāstanayā hareḥ|
 pradyumnāccāniruddho'bhūdrukmavatyāṁ mahābalaḥ||
+en: Dīptimān, Tāmratapta and the rest were the sons of Rohiṇī, born to Hari. From Pradyumna, in Rukmavatī, was born the mighty Aniruddha.
+tel: దీప్తిమంతుడు, తామ్రతప్తుడు మొదలైనవారు హరికి రోహిణి వలన కలిగిన కుమారులు. ప్రద్యుమ్నుని వలన రుక్మవతికి మహాబలవంతుడైన అనిరుద్ధుడు జన్మించెను.
+hi: दीप्तिमान्, ताम्रतप्त आदि हरि के रोहिणी से उत्पन्न पुत्र थे। प्रद्युम्न से रुक्मवती में महाबली अनिरुद्ध का जन्म हुआ।
 
 --- verse 19 ---
 deva:
@@ -186,6 +240,9 @@ iast:
 putryāṁ tu rukmiṇo rājan nāmnā bhojakaṭe pure|
 eteṣāṁ putrapautrāśca babhūvuḥ koṭiśo nṛpa|
 mātaraḥ kṛṣṇajātānāṁ sahasrāṇi ca ṣoḍaśa||
+en: She was the daughter of Rukmī, O King, and this was in the city named Bhojakaṭa. Of these there were sons and grandsons by crores, O King. The mothers of those born of Kṛṣṇa were sixteen thousand.
+tel: ఓ రాజా, ఆమె రుక్మి కుమార్తె, ఇది భోజకటము అను పురమున జరిగెను. ఓ రాజా, వీరికి కోట్ల కొలది కుమారులు, మనుమలు కలిగిరి. కృష్ణుని వలన జన్మించినవారి తల్లులు పదహారు వేలు.
+hi: हे राजा, वह रुक्मी की पुत्री थी, और यह भोजकट नामक नगर में हुआ। हे राजा, इनके करोड़ों पुत्र और पौत्र हुए। कृष्ण से उत्पन्न हुए पुत्रों की माताएँ सोलह हजार थीं।
 
 --- verse 20 ---
 deva:
@@ -198,6 +255,9 @@ rājovāca
 kathaṁ rukmyariputrāya prādād duhitaraṁ yudhi|
 kṛṣṇena paribhūtastaṁ hantuṁ randhraṁ pratīkṣate|
 etadākhyāhi me vidvan dviṣorvaivāhikaṁ mithaḥ||
+en: The King said: Rukmī had been humiliated by Kṛṣṇa in battle, and he was waiting for a chance to kill him. How then did he give his daughter to the son of his enemy? O learned one, tell me of this marriage between two who hated each other.
+tel: రాజు పలికెను: రుక్మి యుద్ధమున కృష్ణునిచే అవమానము పొందెను, ఆయనను చంపుటకు అవకాశమును ఎదురుచూచుచుండెను. అట్టివాడు శత్రువు కుమారునికి తన కుమార్తెను ఎట్లు ఇచ్చెను? ఓ విద్వాంసుడా, ఒకరిపై ఒకరు ద్వేషము కల ఈ ఇరువురి వివాహ సంబంధమును నాకు చెప్పుము.
+hi: राजा ने कहा: रुक्मी युद्ध में कृष्ण से अपमानित हुआ था और उन्हें मारने का अवसर देख रहा था। फिर उसने अपनी पुत्री शत्रु के पुत्र को कैसे दी? हे विद्वान्, एक-दूसरे से द्वेष रखने वाले इन दोनों के इस विवाह सम्बन्ध को मुझे बताइए।
 
 --- verse 21 ---
 deva:
@@ -206,6 +266,9 @@ deva:
 iast:
 anāgatamatītaṁ ca vartamānamatīndriyam|
 viprakṛṣṭaṁ vyavahitaṁ samyak paśyanti yoginaḥ||
+en: The yogins see rightly what has not yet come, what is past, what is present, what is beyond the senses, what is far away and what is hidden.
+tel: యోగులు ఇంకను రానిదానిని, గతించినదానిని, ఇప్పుడు ఉన్నదానిని, ఇంద్రియములకు అందనిదానిని, దూరముగా ఉన్నదానిని, దాగి ఉన్నదానిని సరిగా చూడగలరు.
+hi: योगी जो अभी आया नहीं है, जो बीत गया है, जो वर्तमान है, जो इन्द्रियों से परे है, जो दूर है और जो छिपा है, उस सबको ठीक-ठीक देखते हैं।
 
 --- verse 22 ---
 deva:
@@ -216,6 +279,9 @@ iast:
 śrīśuka uvāca
 vṛtaḥ svayaṁvare sākṣādanaṁgo'ṅgayutastayā|
 rājñaḥ sametān nirjitya jahāraikaratho yudhi||
+en: Śuka said: She chose him at her svayaṁvara. He was Ananga himself, now joined with a body. He defeated the kings who had gathered there and carried her away in battle, alone on one chariot.
+tel: శుకుడు పలికెను: ఆమె తన స్వయంవరమున ఆయనను వరించెను. ఆయన శరీరమును పొందిన అనంగుడే. ఆయన అక్కడ చేరిన రాజులను ఓడించి, ఒక్కడే ఒక రథముపై యుద్ధమున ఆమెను తీసుకొనిపోయెను.
+hi: शुक ने कहा: उसने अपने स्वयंवर में उन्हें वरण किया। वे शरीर धारण किए हुए साक्षात् अनंग थे। उन्होंने वहाँ एकत्र हुए राजाओं को हराकर, अकेले एक रथ पर युद्ध में उसे हर लिया।
 
 --- verse 23 ---
 deva:
@@ -224,6 +290,9 @@ deva:
 iast:
 yadyapyanusmaran vairaṁ rukmī kṛṣṇāvamānitaḥ|
 vyatarad bhāgineyāya sutāṁ kurvan svasuḥ priyam||
+en: Rukmī had been dishonoured by Kṛṣṇa, and he still remembered that enmity. Even so he gave his daughter to his sister's son, doing what was dear to his sister.
+tel: రుక్మి కృష్ణునిచే అవమానము పొందెను, ఆ శత్రుత్వమును అతడు ఇంకను గుర్తుంచుకొనియుండెను. అయినను తన చెల్లెలికి ప్రియమైనది చేయుచు అతడు తన కుమార్తెను చెల్లెలి కుమారునికి ఇచ్చెను.
+hi: रुक्मी कृष्ण से अपमानित हुआ था और वह उस वैर को अब भी स्मरण करता था। फिर भी अपनी बहिन का प्रिय करते हुए उसने अपनी पुत्री बहिन के पुत्र को दे दी।
 
 --- verse 24 ---
 deva:
@@ -232,6 +301,9 @@ deva:
 iast:
 rukmiṇyāstanayāṁ rājan kṛtavarmasuto balī|
 upayeme viśālākṣīṁ kanyāṁ cārumatīṁ kila||
+en: O King, the strong son of Kṛtavarmā married the daughter of Rukmiṇī, the large-eyed maiden named Cārumatī.
+tel: ఓ రాజా, కృతవర్మ బలవంతుడైన కుమారుడు రుక్మిణి కుమార్తెను, విశాలమైన కన్నులు కల చారుమతి అను కన్యను వివాహము చేసుకొనెను.
+hi: हे राजा, कृतवर्मा के बलवान् पुत्र ने रुक्मिणी की पुत्री, विशाल नेत्रों वाली चारुमती नामक कन्या से विवाह किया।
 
 --- verse 25 ---
 deva:
@@ -242,6 +314,9 @@ iast:
 dauhitrāyāniruddhāya pautrīṁ rukmyadadāddhareḥ|
 rocanāṁ baddhavairo'pi svasuḥ priyacikīrṣayā|
 jānannadharmaṁ tad yaunaṁ snehapāśānubandhanaḥ||
+en: Rukmī was bound in enmity with Hari. Even so, wishing to do what was dear to his sister, he gave his son's daughter Rocanā to Aniruddha, his own daughter's son. He knew that such a marriage was not right, but he was tied by the cord of affection.
+tel: రుక్మి హరితో శత్రుత్వముతో కట్టుబడియుండెను. అయినను తన చెల్లెలికి ప్రియమైనది చేయవలెనని కోరి, తన కుమారుని కుమార్తె రోచనను తన కుమార్తె కుమారుడైన అనిరుద్ధునికి ఇచ్చెను. ఆ వివాహము ధర్మము కాదని అతడు ఎరిగియుండెను, కాని స్నేహ పాశముచే కట్టుబడియుండెను.
+hi: रुक्मी हरि के साथ वैर में बँधा हुआ था। फिर भी अपनी बहिन का प्रिय करने की इच्छा से उसने अपने पुत्र की पुत्री रोचना को अपनी पुत्री के पुत्र अनिरुद्ध को दे दिया। वह जानता था कि यह विवाह धर्म नहीं है, परन्तु वह स्नेह के बन्धन में बँधा था।
 
 --- verse 26 ---
 deva:
@@ -250,6 +325,9 @@ deva:
 iast:
 tasminnabhyudaye rājan rukmiṇī rāmakeśavau|
 puraṁ bhojakaṭaṁ jagmuḥ sāmbapradyumnakādayaḥ||
+en: O King, at that festive occasion Rukmiṇī, Rāma and Keśava, and Sāmba, Pradyumna and the others went to the city Bhojakaṭa.
+tel: ఓ రాజా, ఆ శుభ సందర్భమున రుక్మిణి, రాముడు, కేశవుడు, సాంబుడు, ప్రద్యుమ్నుడు మొదలైనవారు భోజకటము అను పురమునకు వెళ్లిరి.
+hi: हे राजा, उस मंगल अवसर पर रुक्मिणी, राम और केशव, तथा साम्ब, प्रद्युम्न आदि भोजकट नगर गए।
 
 --- verse 27 ---
 deva:
@@ -258,6 +336,9 @@ deva:
 iast:
 tasmin nivṛtta udvāhe kāliṁgapramukhā nṛpāḥ|
 dṛptāste rukmiṇaṁ procurbalamakṣairvinirjaya||
+en: When that marriage was over, the kings headed by the Kāliṅga grew proud and said to Rukmī: Defeat Bala at dice.
+tel: ఆ వివాహము పూర్తి అయిన పిమ్మట కాళింగుడు మొదలైన రాజులు గర్వము పొంది రుక్మితో ఇట్లనిరి: పాచికలతో బలుని ఓడింపుము.
+hi: वह विवाह समाप्त होने पर कालिंग आदि राजा घमण्ड में भरकर रुक्मी से बोले: पासों से बल को हरा दो।
 
 --- verse 28 ---
 deva:
@@ -266,6 +347,9 @@ deva:
 iast:
 anakṣajño hyayaṁ rājannapi tadvyasanaṁ mahat|
 ityukto balamāhūya tenākṣai rukmyadīvyata||
+en: They said: O King, he does not know dice, though he is greatly addicted to it. Being told this, Rukmī called Bala and played at dice with him.
+tel: వారు ఇట్లనిరి: ఓ రాజా, ఇతనికి పాచికలు తెలియవు, అయినను ఇతనికి దానిపై గొప్ప వ్యసనము ఉన్నది. ఇట్లు చెప్పబడిన రుక్మి బలుని పిలిచి అతనితో పాచికలాడెను.
+hi: उन्होंने कहा: हे राजा, यह पासों को नहीं जानता, फिर भी इसे उसका बड़ा व्यसन है। ऐसा कहे जाने पर रुक्मी ने बल को बुलाकर उनके साथ पासे खेले।
 
 --- verse 29 ---
 deva:
@@ -276,6 +360,9 @@ iast:
 śataṁ sahasramayutaṁ rāmastatrādade paṇam|
 taṁ tu rukmyajayattatra kāliṁgaḥ prāhasad balam|
 dantān sandarśayannuccairnāmṛṣyattaddhalāyudhaḥ||
+en: There Rāma took up a stake of a hundred, then of a thousand, then of ten thousand. Rukmī won that from him. Then the Kāliṅga laughed loudly at Bala, showing his teeth. Haladhara did not bear that.
+tel: అక్కడ రాముడు వంద, పిమ్మట వేయి, పిమ్మట పది వేల పణమును పెట్టెను. రుక్మి ఆ పణమును గెలిచెను. అప్పుడు కాళింగుడు దంతములను చూపుచు బలుని చూచి బిగ్గరగా నవ్వెను. హలాయుధుడు దానిని సహింపలేదు.
+hi: वहाँ राम ने सौ, फिर हजार, फिर दस हजार का दाँव लगाया। रुक्मी ने वह दाँव जीत लिया। तब कालिंग ने दाँत दिखाकर बल पर जोर से हँसा। हलधर ने उसे सहन नहीं किया।
 
 --- verse 30 ---
 deva:
@@ -284,6 +371,9 @@ deva:
 iast:
 tato lakṣaṁ rukmyagṛhṇād glahaṁ tatrājayad balaḥ|
 jitavānahamityāha rukmī kaitavamāśritaḥ||
+en: Then Rukmī took up a stake of a lakh. Bala won that stake. Rukmī took to deceit and said: I have won.
+tel: పిమ్మట రుక్మి లక్ష పణమును పెట్టెను. బలుడు ఆ పణమును గెలిచెను. రుక్మి కపటమును ఆశ్రయించి ఇట్లనెను: నేనే గెలిచితిని.
+hi: तब रुक्मी ने लाख का दाँव लगाया। बल ने वह दाँव जीत लिया। रुक्मी ने छल का सहारा लेकर कहा: मैंने जीत लिया है।
 
 --- verse 31 ---
 deva:
@@ -292,6 +382,9 @@ deva:
 iast:
 manyunā kṣubhitaḥ śrīmān samudra iva parvaṇi|
 jātyāruṇākṣo'tiruṣā nyarbudaṁ glahamādade||
+en: The glorious one was shaken with anger, like the sea on a parvan day. His eyes were red by nature, and with great rage they grew redder. He took up a stake of one nyarbuda.
+tel: శోభాయుక్తుడైన ఆయన పర్వదినమున సముద్రమువలె కోపముచే కలత పొందెను. ఆయన కన్నులు సహజముగా ఎరుపు, గొప్ప రోషముచే ఇంకను ఎరుపెక్కెను. ఆయన ఒక న్యర్బుద పణమును పెట్టెను.
+hi: शोभायुक्त वे पर्व के समय समुद्र के समान क्रोध से क्षुब्ध हो गए। उनके नेत्र स्वभाव से लाल थे और अत्यन्त रोष से और लाल हो गए। उन्होंने एक न्यर्बुद का दाँव लगाया।
 
 --- verse 32 ---
 deva:
@@ -300,6 +393,9 @@ deva:
 iast:
 taṁ cāpi jitavān rāmo dharmeṇacchalamāśritaḥ|
 rukmī jitaṁ mayātreme vadantu prāśnikā iti||
+en: Rāma won that stake also, and he won it rightly. But Rukmī took to deceit and said: The stake has been won by me here. Let these umpires say so.
+tel: రాముడు ఆ పణమును కూడ గెలిచెను, ధర్మముగానే గెలిచెను. కాని రుక్మి కపటమును ఆశ్రయించి ఇట్లనెను: ఇక్కడ పణము నాచే గెలువబడినది. ఈ మధ్యవర్తులే దానిని చెప్పుదురు గాక.
+hi: राम ने वह दाँव भी जीता, और धर्म से ही जीता। परन्तु रुक्मी ने छल का सहारा लेकर कहा: यहाँ दाँव मैंने जीता है। ये पंच ही यह कहें।
 
 --- verse 33 ---
 deva:
@@ -308,6 +404,9 @@ deva:
 iast:
 tadābravīnnabhovāṇī balenaiva jito glahaḥ|
 dharmato vacanenaiva rukmī vadati vai mṛṣā||
+en: Then a voice from the sky said: The stake has been won by Bala alone. By right it is his. Rukmī speaks a falsehood in his words only.
+tel: అప్పుడు ఆకాశము నుండి ఒక వాణి ఇట్లు పలికెను: పణము బలునిచేతనే గెలువబడినది. ధర్మము ప్రకారము అది ఆయనదే. రుక్మి మాటలతో మాత్రమే అసత్యమును పలుకుచున్నాడు.
+hi: तब आकाश से एक वाणी ने कहा: दाँव बल ने ही जीता है। धर्म से वह उनका ही है। रुक्मी केवल वचन से असत्य बोल रहा है।
 
 --- verse 34 ---
 deva:
@@ -316,6 +415,9 @@ deva:
 iast:
 tāmanādṛtya vaidarbho duṣṭarājanyacoditaḥ|
 saṁkarṣaṇaṁ parihasan babhāṣe kālacoditaḥ||
+en: The Vaidarbha disregarded that voice. Urged on by the wicked kings and driven by time, he mocked Saṁkarṣaṇa and said:
+tel: వైదర్భుడు ఆ వాణిని లెక్కచేయలేదు. దుష్ట రాజులచే ప్రేరేపింపబడి, కాలముచే నడిపింపబడి, అతడు సంకర్షణుని పరిహాసము చేయుచు ఇట్లనెను:
+hi: वैदर्भ ने उस वाणी का आदर नहीं किया। दुष्ट राजाओं से प्रेरित होकर और काल से प्रेरित होकर उसने संकर्षण का उपहास करते हुए कहा:
 
 --- verse 35 ---
 deva:
@@ -324,6 +426,9 @@ deva:
 iast:
 naivākṣakovidā yūyaṁ gopālā vanagocarāḥ|
 akṣairdīvyanti rājāno bāṇaiśca na bhavādṛśāḥ||
+en: You are not skilled in dice. You are cowherds who roam the forests. Kings play with dice and with arrows, and not people like you.
+tel: మీకు పాచికలలో నైపుణ్యము లేదు. మీరు అడవులలో తిరుగు గోపాలురు. రాజులు పాచికలతోను బాణములతోను ఆడుదురు, మీవంటివారు కాదు.
+hi: तुम पासों में निपुण नहीं हो। तुम वनों में घूमने वाले गोपाल हो। पासों और बाणों से राजा खेलते हैं, तुम्हारे जैसे लोग नहीं।
 
 --- verse 36 ---
 deva:
@@ -332,6 +437,9 @@ deva:
 iast:
 rukmiṇaivamadhikṣipto rājabhiścopahāsitaḥ|
 kruddhaḥ parighamudyamya jaghne taṁ nṛmṇasaṁsadi||
+en: Thus insulted by Rukmī and laughed at by the kings, Bala grew angry. He raised his club and killed him in that assembly of men.
+tel: ఇట్లు రుక్మిచే అవమానింపబడి, రాజులచే పరిహసింపబడి, బలుడు కోపము పొందెను. ఆయన పరిఘను ఎత్తి ఆ నరుల సభలో అతనిని చంపెను.
+hi: इस प्रकार रुक्मी से अपमानित और राजाओं से उपहास किए जाने पर बल को क्रोध आया। उन्होंने परिघ उठाकर उस मनुष्यों की सभा में उसे मार डाला।
 
 --- verse 37 ---
 deva:
@@ -340,6 +448,9 @@ deva:
 iast:
 kaliṁgarājaṁ tarasā gṛhītvā daśame pade|
 dantānapātayat kruddho yo'hasad vivṛtairdvijaiḥ||
+en: The king of Kaliṅga had laughed with his teeth showing. Bala seized him swiftly at the tenth step, and in anger struck out his teeth.
+tel: కళింగ రాజు దంతములను చూపుచు నవ్వియుండెను. బలుడు పదియవ అడుగులో అతనిని వేగముగా పట్టుకొని, కోపముతో అతని దంతములను రాల్చెను.
+hi: कलिंगराज दाँत दिखाकर हँसा था। बल ने दसवें पग पर उसे वेग से पकड़ लिया और क्रोध में उसके दाँत गिरा दिए।
 
 --- verse 38 ---
 deva:
@@ -348,6 +459,9 @@ deva:
 iast:
 anye nirbhinnabāhūruśiraso rudhirokṣitāḥ|
 rājāno dudruvurbhītā balena parighārditāḥ||
+en: The other kings were struck by Bala's club. Their arms, thighs and heads were split and they were smeared with blood. They fled in fear.
+tel: ఇతర రాజులు బలుని పరిఘచే కొట్టబడిరి. వారి బాహువులు, తొడలు, తలలు చీలిపోయెను, వారు రక్తముతో తడిసిపోయిరి. వారు భయముతో పారిపోయిరి.
+hi: अन्य राजा बल के परिघ से मारे गए। उनकी भुजाएँ, जाँघें और सिर फट गए और वे रक्त से भीग गए। वे भय से भाग गए।
 
 --- verse 39 ---
 deva:
@@ -356,6 +470,9 @@ deva:
 iast:
 nihate rukmiṇi śyāle nābravīt sādhvasādhu vā|
 rukmiṇībalayo rājan snehabhaṁgabhayāddhariḥ||
+en: O King, when Rukmī, his brother-in-law, was killed, Hari said nothing, neither that it was good nor that it was not good. He feared that his affection with Rukmiṇī and with Bala would break.
+tel: ఓ రాజా, తన బావ అయిన రుక్మి చంపబడినప్పుడు హరి ఏమియు పలుకలేదు, ఇది మంచిదని గాని మంచిది కాదని గాని అనలేదు. రుక్మిణితోను బలునితోను తన స్నేహము చెడునని ఆయన భయపడెను.
+hi: हे राजा, अपने साले रुक्मी के मारे जाने पर हरि ने कुछ नहीं कहा, न अच्छा कहा न बुरा। उन्हें भय था कि रुक्मिणी और बल के साथ उनका स्नेह टूट जाएगा।
 
 --- verse 40 ---
 deva:
@@ -368,9 +485,15 @@ tato'niruddhaṁ saha sūryayā varaṁ
 rathaṁ samāropya yayuḥ kuśasthalīm|
 rāmādayo bhojakaṭād daśārhāḥ
 siddhākhilārthā madhusūdanāśrayāḥ||
+en: Then they placed Aniruddha the bridegroom together with Sūryā on the chariot. Rāma and the others, the Daśārhas, went from Bhojakaṭa to Kuśasthalī. All their purposes were accomplished, for they had taken refuge in Madhusūdana.
+tel: పిమ్మట వారు వరుడైన అనిరుద్ధుని సూర్యతో కలిపి రథముపై ఎక్కించిరి. రాముడు మొదలైన దశార్హులు భోజకటము నుండి కుశస్థలికి వెళ్లిరి. మధుసూదనుని ఆశ్రయించినవారు కావున వారి ప్రయోజనములన్నియు సిద్ధించెను.
+hi: तब उन्होंने वर अनिरुद्ध को सूर्या के साथ रथ पर बैठाया। राम आदि दशार्ह भोजकट से कुशस्थली गए। मधुसूदन का आश्रय लेने के कारण उनके सभी प्रयोजन सिद्ध हो गए।
 
 --- verse none ---
 deva:
 इति श्रीमद्भागवते महापुराणे पारमहंस्यां संहितायां दशमस्कन्धेउत्तरार्धे अनिरुद्धविवाहे रुक्मिवधो नामैकषष्टितमोऽध्यायः॥ ६१॥
 iast:
 iti śrīmadbhāgavate mahāpurāṇe pāramahaṁsyāṁ saṁhitāyāṁ daśamaskandheuttarārdhe aniruddhavivāhe rukmivadho nāmaikaṣaṣṭitamo'dhyāyaḥ|| 61||
+en: Thus ends the sixty-first adhyāya, named the killing of Rukmī at the marriage of Aniruddha, in the latter half of the tenth skandha of the Śrīmad Bhāgavata Mahāpurāṇa, the saṁhitā of the paramahaṁsas.
+tel: ఇట్లు పరమహంసల సంహిత అయిన శ్రీమద్భాగవత మహాపురాణమున దశమ స్కంధము ఉత్తరార్ధమున అనిరుద్ధ వివాహమున రుక్మి వధ అను అరువది ఒకటవ అధ్యాయము ముగిసెను.
+hi: इस प्रकार परमहंसों की संहिता श्रीमद्भागवत महापुराण के दशम स्कन्ध के उत्तरार्ध में अनिरुद्ध के विवाह में रुक्मी का वध नामक इकसठवाँ अध्याय समाप्त हुआ।

@@ -9,7 +9,7 @@ Type: Purāṇa (an adhyāya of the Śrīmad Bhāgavata, Skandha 10)
 
 Source / recension: Base text and authority: the Gītā Press, Gorakhpur Śrīmadbhāgavata Mahāpurāṇa with Hindi translation, Part 2 (Gītā Press code 27), archive.org item `shrimadbhagwat-mahapuran-bhag-2`, printed pages 461–466; the PDF page numbers are the printed ones. The PDF carries the typesetter's own text layer in the Chanakya font encoding, and the text was decoded from it by machine with `bin/bhagavata/chanakya.py`, not read off OCR or typed. The decoder was checked against GRETIL over all twelve skandhas before any file was written, and the differences that remain were sampled and found to be readings of the two editions. Second witness: GRETIL's `sa_bhAgavatapurANa.xml` (IAST, contributed by Ulrich Stiehl), a separate editorial lineage, compared verse by verse by machine. The TTD edition with the commentaries of Śrīdhara, Vīrarāghava and Vijayadhvaja (archive.org `Bhagavata_Purana_With_Multiple_Commentaries_TTD_Critical_Edition`) is the third witness where one is needed; it was not read for this file. The IAST was generated mechanically from the Devanāgarī with `bin/dev2iast.py`.
 
-Recension note: Text-only file, written 1 Oct 2026 at the user's instruction to lay down the whole Bhāgavata first: the English, Telugu and Hindi meanings are still to be added, and the witnesses' differences listed here have been recorded by machine and not yet adjudicated. The print is followed throughout. The print numbers 44 verses and GRETIL numbers 44. Of the 44 verses GRETIL has under the same number, 27 agree with the print letter for letter once spacing and the spelling of nasals are set aside; the rest differ: 1, 2, 8, 10, 12, 15, 17, 19, 21, 22, 24, 31, 32, 38, 41, 42, 43. Spacing is the print's, as its text layer gives it; in a few places justification has left a space inside a word, and these are still to be closed when the verse is read. The speaker lines (श्रीशुक उवाच and the others) are printed in italic above the verse they introduce, and are given as its first line.
+Recension note: Meanings written 24 Oct 2026 (session S78). The differences between the witnesses listed below were read as the verses were glossed; except where this note says otherwise, each is a spelling, a sandhi or a word order of the two editions, none of them changes the sense, and the print's reading therefore stands unbracketed. The print is followed throughout. The print numbers 44 verses and GRETIL numbers 44. Of the 44 verses GRETIL has under the same number, 27 agree with the print letter for letter once spacing and the spelling of nasals are set aside; the rest differ: 1, 2, 8, 10, 12, 15, 17, 19, 21, 22, 24, 31, 32, 38, 41, 42, 43. Spacing is the print's, as its text layer gives it. The speaker lines (श्रीशुक उवाच and the others) are printed in italic above the verse they introduce, and are given as its first line. Two lost spaces were restored as the verses were read, both in verses the aligner could not line up against GRETIL because the editions differ in the spelling of a nasal. At verse 3 the space between धीरो and निःसंगो had been swallowed, and at verse 28 the space between अर्हयां and चक्रे; in each the first word carries its own ending and cannot begin a compound, and GRETIL reads both as two words. Three things were left as printed. At verse 32 the print writes संतुष्ट where the sense and GRETIL require संतुष्टः; the missing visarga is a wrong letter, not a wrong space, so the line stands as printed and the meaning follows the only possible reading, 'one who is content'. At verse 41 श्वोभाविनि is the print's own compound and reads as it stands. At verse 42 the print's line break with its hyphen falls inside बन्धूं-स्त्वाम्, and the print's line structure is left alone. At verse 42 the print reads कुलदेवियात्रा, the procession to the family goddess, where GRETIL has कुलदेवयात्रा; the print wins and the meanings say goddess.
 
 Verse count: 44, plus the closing colophon printed unnumbered.
 
@@ -24,6 +24,9 @@ iast:
 śrīśuka uvāca
 itthaṁ so'nugṛhīto'ṅga kṛṣṇenekṣvākunandanaḥ|
 taṁ parikramya sannamya niścakrāma guhāmukhāt||
+en: Śrī Śuka said: Thus favoured by Kṛṣṇa, O dear King, the son of Ikṣvāku went round Him, bowed to Him, and came out from the mouth of the cave.
+tel: శ్రీశుకుడు పలికెను: ఓ ప్రియమైన రాజా, ఈ విధముగా కృష్ణుని అనుగ్రహమును పొందిన ఇక్ష్వాకు వంశపుత్రుడు ఆయనకు ప్రదక్షిణము చేసి, నమస్కరించి, గుహ ముఖము నుండి బయటకు వచ్చెను.
+hi: श्रीशुक ने कहा: हे प्रिय राजा, इस प्रकार कृष्ण का अनुग्रह पाकर इक्ष्वाकु के पुत्र ने उनकी परिक्रमा की, उन्हें प्रणाम किया और गुफा के मुख से बाहर निकल आया।
 
 --- verse 2 ---
 deva:
@@ -32,14 +35,20 @@ deva:
 iast:
 sa vīkṣya kṣullakān martyān paśūn vīrudvanaspatīn|
 matvā kaliyugaṁ prāptaṁ jagāma diśamuttarām||
+en: He saw that men, animals, creepers and trees had become small, and he understood that the Kali age had come. Then he went towards the north.
+tel: మనుష్యులు, పశువులు, తీగలు, చెట్లు చిన్నవై పోయినవని ఆయన చూచెను; కలియుగము వచ్చినదని గ్రహించెను. అప్పుడు ఉత్తర దిక్కునకు వెళ్లెను.
+hi: उसने देखा कि मनुष्य, पशु, लताएँ और वृक्ष छोटे हो गए हैं, और समझ लिया कि कलियुग आ गया है। तब वह उत्तर दिशा की ओर चला गया।
 
 --- verse 3 ---
 deva:
-तपःश्रद्धायुतो धीरोनिःसंगो मुक्तसंशयः।
+तपःश्रद्धायुतो धीरो निःसंगो मुक्तसंशयः।
 समाधाय मनः कृष्णे प्राविशद् गन्धमादनम्॥
 iast:
-tapaḥśraddhāyuto dhīroniḥsaṁgo muktasaṁśayaḥ|
+tapaḥśraddhāyuto dhīro niḥsaṁgo muktasaṁśayaḥ|
 samādhāya manaḥ kṛṣṇe prāviśad gandhamādanam||
+en: Full of tapas and faith, steady, free from attachment and free from doubt, he fixed his mind on Kṛṣṇa and entered Gandhamādana.
+tel: తపస్సు మరియు శ్రద్ధతో నిండిన ఆయన ధైర్యవంతుడు, సంగము లేనివాడు, సందేహము లేనివాడు అయి, మనస్సును కృష్ణునిపై నిలిపి గంధమాదనమున ప్రవేశించెను.
+hi: तप और श्रद्धा से युक्त वह धीर, आसक्ति से रहित और संदेह से रहित होकर अपने मन को कृष्ण में लगाकर गंधमादन में प्रवेश कर गया।
 
 --- verse 4 ---
 deva:
@@ -48,6 +57,9 @@ deva:
 iast:
 badaryāśramamāsādya naranārāyaṇālayam|
 sarvadvandvasahaḥ śāntastapasā''rādhayaddharim||
+en: He reached Badaryāśrama, the abode of Nara and Nārāyaṇa, and there, bearing all pairs of opposites and at peace, he worshipped Hari by tapas.
+tel: నర నారాయణుల నివాసమైన బదర్యాశ్రమమును చేరి, అన్ని ద్వంద్వములను సహించుచు, శాంతుడై, తపస్సుచేత హరిని ఆరాధించెను.
+hi: वह नर और नारायण के निवास बदर्याश्रम में पहुँचा और वहाँ सब द्वंद्वों को सहते हुए, शांत होकर, तप से हरि की आराधना की।
 
 --- verse 5 ---
 deva:
@@ -56,6 +68,9 @@ deva:
 iast:
 bhagavān punarāvrajya purīṁ yavanaveṣṭitām|
 hatvā mlecchabalaṁ ninye tadīyaṁ dvārakāṁ dhanam||
+en: The Lord returned again to the city that the Yavana had besieged, killed the army of the mlecchas, and brought their wealth to Dvārakā.
+tel: భగవంతుడు యవనుడు చుట్టుముట్టిన ఆ నగరమునకు తిరిగి వచ్చి, మ్లేచ్ఛుల సేనను సంహరించి, వారి ధనమును ద్వారకకు తెచ్చెను.
+hi: भगवान फिर उस नगरी में लौट आए जिसे यवन ने घेर रखा था, म्लेच्छों की सेना का संहार किया और उनका धन द्वारका ले आए।
 
 --- verse 6 ---
 deva:
@@ -64,6 +79,9 @@ deva:
 iast:
 nīyamāne dhane gobhirnṛbhiścācyutacoditaiḥ|
 ājagāma jarāsandhastrayoviṁśatyanīkapaḥ||
+en: While the wealth was being carried by bullocks and by men at the command of Acyuta, Jarāsandha came, the leader of twenty-three armies.
+tel: అచ్యుతుని ఆజ్ఞచేత ఎడ్లు మరియు మనుష్యులు ఆ ధనమును తీసుకొని పోవుచున్నప్పుడు, ఇరువది మూడు సేనలకు నాయకుడైన జరాసంధుడు వచ్చెను.
+hi: अच्युत की आज्ञा से बैल और मनुष्य उस धन को ले जा रहे थे, उसी समय तेईस सेनाओं का नायक जरासंध आ पहुँचा।
 
 --- verse 7 ---
 deva:
@@ -72,6 +90,9 @@ deva:
 iast:
 vilokya vegarabhasaṁ ripusainyasya mādhavau|
 manuṣyaceṣṭāmāpannau rājan dudruvaturdrutam||
+en: Seeing the speed and force of the enemy's army, the two Mādhavas took on the behaviour of men and ran away swiftly, O King.
+tel: శత్రుసేన యొక్క వేగమును, ఉద్ధృతిని చూచి, ఆ ఇద్దరు మాధవులు మనుష్యుల వలె ప్రవర్తించి, ఓ రాజా, వేగముగా పారిపోయిరి.
+hi: शत्रु सेना का वेग और प्रबल आक्रमण देखकर दोनों माधवों ने मनुष्यों का सा आचरण किया और, हे राजा, वे तेजी से भाग चले।
 
 --- verse 8 ---
 deva:
@@ -80,6 +101,9 @@ deva:
 iast:
 vihāya vittaṁ pracuramabhītau bhīrubhītavat|
 padbhyāṁ padmapalāśābhyāṁ ceraturbahuyojanam||
+en: Leaving behind that abundant wealth, they who have no fear behaved like frightened cowards, and on their two feet, which are like lotus petals, they walked many yojanas.
+tel: ఆ విపులమైన ధనమును విడిచి, భయమే లేని వారు భయపడిన పిరికివారి వలె నడచుకొని, పద్మ రేకుల వంటి తమ రెండు పాదములతో అనేక యోజనములు నడచిరి.
+hi: उस विपुल धन को छोड़कर, जिन्हें भय नहीं है वे भयभीत कायरों के समान आचरण करते हुए, कमल की पंखुड़ियों जैसे अपने दोनों चरणों से अनेक योजन चले।
 
 --- verse 9 ---
 deva:
@@ -88,6 +112,9 @@ deva:
 iast:
 palāyamānau tau dṛṣṭvā māgadhaḥ prahasan balī|
 anvadhāvad rathānīkairīśayorapramāṇavit||
+en: Seeing the two of them fleeing, the strong king of Magadha laughed and ran after them with his chariots and his armies, for he did not know the measure of the two Lords.
+tel: పారిపోవుచున్న ఆ ఇద్దరిని చూచి, బలవంతుడైన మగధ రాజు నవ్వి, రథములతో సేనలతో వారిని వెంబడించెను; ఆ ఇద్దరు ప్రభువుల కొలత ఆయనకు తెలియదు.
+hi: उन दोनों को भागते देखकर बलवान मगधराज हँसा और रथों तथा सेनाओं के साथ उनके पीछे दौड़ा, क्योंकि वह उन दोनों ईश्वरों का माप नहीं जानता था।
 
 --- verse 10 ---
 deva:
@@ -96,6 +123,9 @@ deva:
 iast:
 pradrutya dūraṁ saṁśrāntau tuṁgamāruhatāṁ girim|
 pravarṣaṇākhyaṁ bhagavān nityadā yatra varṣati||
+en: Having run a long way and being tired, the two climbed a high mountain named Pravarṣaṇa, where the Lord rains always.
+tel: బహుదూరము పరుగెత్తి అలసిన ఆ ఇద్దరు, భగవంతుడు ఎల్లప్పుడు వర్షించు ప్రవర్షణము అను పేరుగల ఉన్నతమైన పర్వతమును ఎక్కిరి.
+hi: बहुत दूर दौड़कर थके हुए वे दोनों प्रवर्षण नाम के ऊँचे पर्वत पर चढ़ गए, जहाँ भगवान सदा वर्षा करते हैं।
 
 --- verse 11 ---
 deva:
@@ -104,6 +134,9 @@ deva:
 iast:
 girau nilīnāvājñāya nādhigamya padaṁ nṛpa|
 dadāha girimedhobhiḥ samantādagnimutsṛjan||
+en: Knowing that they were hidden on the mountain, and not finding their footprints, O King, he threw fire on every side and burnt the mountain with firewood.
+tel: వారు ఆ పర్వతమున దాగియున్నారని తెలిసి, వారి అడుగుజాడలు కనబడకపోవుటచేత, ఓ రాజా, అన్ని వైపుల అగ్నిని విడిచి, కట్టెలతో ఆ పర్వతమును దహించెను.
+hi: यह जानकर कि वे पर्वत पर छिपे हैं, और उनके पदचिह्न न पाकर, हे राजा, उसने चारों ओर आग लगाई और ईंधन से उस पर्वत को जला दिया।
 
 --- verse 12 ---
 deva:
@@ -112,6 +145,9 @@ deva:
 iast:
 tata utpatya tarasā dahyamānataṭādubhau|
 daśaikayojanottuṁgānnipetaturadho bhuvi||
+en: Then the two leapt swiftly from the burning slope and fell down to the earth from a height of eleven yojanas.
+tel: అప్పుడు ఆ ఇద్దరు దహించుకొనుచున్న ఆ చరియ నుండి వేగముగా దూకి, పదకొండు యోజనముల ఎత్తు నుండి క్రింద భూమిపై పడిరి.
+hi: तब वे दोनों जलती हुई ढाल से वेग से कूद पड़े और ग्यारह योजन की ऊँचाई से नीचे पृथ्वी पर गिर पड़े।
 
 --- verse 13 ---
 deva:
@@ -120,6 +156,9 @@ deva:
 iast:
 alakṣyamāṇau ripuṇā sānugena yadūttamau|
 svapuraṁ punarāyātau samudraparikhāṁ nṛpa||
+en: Unseen by the enemy and his followers, the two best of the Yadus came back to their own city, which has the sea for its moat, O King.
+tel: శత్రువునకు మరియు ఆయన అనుచరులకు కనబడకుండ, యదువులలో శ్రేష్ఠులైన ఆ ఇద్దరు, సముద్రమే కోటగా ఉన్న తమ నగరమునకు తిరిగి వచ్చిరి, ఓ రాజా.
+hi: शत्रु और उसके अनुचरों को दिखाई न देते हुए, यदुओं में श्रेष्ठ वे दोनों अपनी उस नगरी में लौट आए जिसकी खाई समुद्र है, हे राजा।
 
 --- verse 14 ---
 deva:
@@ -128,6 +167,9 @@ deva:
 iast:
 so'pi dagdhāviti mṛṣā manvāno balakeśavau|
 balamākṛṣya sumahanmagadhān māgadho yayau||
+en: He too wrongly thought that Balarāma and Keśava were burnt. The king of Magadha drew back his very great army and went to Magadha.
+tel: ఆయనయు బలరామ కేశవులు కాలిపోయిరని పొరపాటుగా తలంచెను. మగధ రాజు తన మహా సేనను వెనుకకు మరల్చి మగధ దేశమునకు వెళ్లెను.
+hi: उसने भी यह झूठा समझ लिया कि बलराम और केशव जल गए। मगधराज अपनी बहुत बड़ी सेना को लौटाकर मगध चला गया।
 
 --- verse 15 ---
 deva:
@@ -136,6 +178,9 @@ deva:
 iast:
 ānartādhipatiḥ śrīmān raivato revatīṁ sutām|
 brahmaṇā coditaḥ prādād balāyeti puroditam||
+en: The glorious Raivata, the lord of Ānarta, urged by Brahmā, gave his daughter Revatī to Balarāma, as has been told before.
+tel: ఆనర్త దేశాధిపతి, శ్రీమంతుడైన రైవతుడు బ్రహ్మచేత ప్రేరితుడై, తన కుమార్తె రేవతిని బలరామునికి ఇచ్చెను; ఇది ముందే చెప్పబడినది.
+hi: आनर्त के अधिपति श्रीमान रैवत ने ब्रह्मा की प्रेरणा से अपनी पुत्री रेवती बलराम को दी, जैसा पहले कहा गया है।
 
 --- verse 16 ---
 deva:
@@ -144,6 +189,9 @@ deva:
 iast:
 bhagavānapi govinda upayeme kurūdvaha|
 vaidarbhīṁ bhīṣmakasutāṁ śriyo mātrāṁ svayaṁvare||
+en: The Lord Govinda also married, O best of the Kurus, the daughter of Bhīṣmaka, the princess of Vidarbha, who is a part of Śrī, at her svayaṁvara.
+tel: ఓ కురుశ్రేష్ఠుడా, భగవంతుడైన గోవిందుడు కూడ శ్రీదేవి అంశయైన భీష్మకుని కుమార్తెను, విదర్భ రాకుమారిని, ఆమె స్వయంవరమున వివాహము చేసికొనెను.
+hi: हे कुरुश्रेष्ठ, भगवान गोविंद ने भी भीष्मक की पुत्री, विदर्भ की राजकुमारी, जो श्री का अंश है, उसे उसके स्वयंवर में ब्याह लिया।
 
 --- verse 17 ---
 deva:
@@ -152,6 +200,9 @@ deva:
 iast:
 pramathya tarasā rājñaḥ śālvādīṁścaidyapakṣagān|
 paśyatāṁ sarvalokānāṁ tārkṣyaputraḥ sudhāmiva||
+en: He crushed by force the kings Śālva and the others who were on the side of Caidya, and while all the people looked on he carried her away, as the son of Tārkṣya carried away the nectar.
+tel: చైద్యుని పక్షమున ఉన్న శాల్వుడు మొదలైన రాజులను ఆయన బలముతో అణచివేసెను; లోకులందరు చూచుచుండగా, తార్క్ష్యపుత్రుడు అమృతమును తీసుకొని పోయినట్లు ఆమెను తీసుకొని పోయెను.
+hi: चैद्य के पक्ष में खड़े शाल्व आदि राजाओं को उन्होंने बल से कुचल दिया, और सब लोगों के देखते-देखते, जैसे तार्क्ष्य के पुत्र अमृत ले गए थे, वैसे ही वे उसे ले गए।
 
 --- verse 18 ---
 deva:
@@ -162,6 +213,9 @@ iast:
 rājovāca
 bhagavān bhīṣmakasutāṁ rukmiṇīṁ rucirānanām|
 rākṣasena vidhānena upayema iti śrutam||
+en: The King said: It is heard that the Lord married Rukmiṇī, the daughter of Bhīṣmaka, of lovely face, by the rākṣasa rite.
+tel: రాజు పలికెను: భగవంతుడు అందమైన ముఖము గల భీష్మకుని కుమార్తె రుక్మిణిని రాక్షస విధానముచేత వివాహము చేసికొనెనని వినబడినది.
+hi: राजा ने कहा: सुना गया है कि भगवान ने सुंदर मुखवाली भीष्मक की पुत्री रुक्मिणी को राक्षस विधि से ब्याहा।
 
 --- verse 19 ---
 deva:
@@ -170,6 +224,9 @@ deva:
 iast:
 bhagavañchrotumicchāmi kṛṣṇasyāmitatejasaḥ|
 yathā māgadhaśālvādīn jitvā kanyāmupāharat||
+en: O revered one, I wish to hear of Kṛṣṇa of measureless splendour, how he defeated the king of Magadha, Śālva and the others, and carried the girl away.
+tel: ఓ పూజ్యుడా, అపరిమితమైన తేజస్సు గల కృష్ణుని గురించి వినగోరుచున్నాను; ఆయన మగధ రాజును, శాల్వుడు మొదలైన వారిని జయించి ఆ కన్యను ఎట్లు తీసుకొని పోయెనో చెప్పుము.
+hi: हे पूज्य, मैं अपरिमित तेज वाले कृष्ण के विषय में सुनना चाहता हूँ, कि उन्होंने मगधराज, शाल्व आदि को जीतकर उस कन्या को किस प्रकार ले गए।
 
 --- verse 20 ---
 deva:
@@ -178,6 +235,9 @@ deva:
 iast:
 brahman kṛṣṇakathāḥ puṇyā mādhvīrlokamalāpahāḥ|
 ko nu tṛpyeta śṛṇvānaḥ śrutajño nityanūtanāḥ||
+en: O brāhmaṇa, the stories of Kṛṣṇa are holy, they are sweet like honey, and they take away the impurity of the world. They are new every day. What man who knows what is worth hearing would ever have enough of hearing them?
+tel: ఓ బ్రాహ్మణుడా, కృష్ణుని కథలు పవిత్రమైనవి, తేనెవలె మధురమైనవి, లోకము యొక్క మలమును తొలగించునవి. అవి నిత్యము నూతనమైనవి. వినదగినది ఏదో ఎరిగిన వాడు వానిని వినుటలో ఎప్పుడు తృప్తిపొందును?
+hi: हे ब्राह्मण, कृष्ण की कथाएँ पवित्र हैं, मधु के समान मीठी हैं और संसार के मल को हर लेती हैं। वे प्रतिदिन नई रहती हैं। जो जानता है कि क्या सुनने योग्य है, वह उन्हें सुनते हुए कब तृप्त होगा?
 
 --- verse 21 ---
 deva:
@@ -188,6 +248,9 @@ iast:
 śrīśuka uvāca
 rājā''sīd bhīṣmako nāma vidarbhādhipatirmahān|
 tasya paṁcābhavan putrāḥ kanyaikā ca varānanā||
+en: Śrī Śuka said: There was a great king named Bhīṣmaka, the lord of Vidarbha. He had five sons, and one daughter of lovely face.
+tel: శ్రీశుకుడు పలికెను: విదర్భ దేశాధిపతి, భీష్మకుడు అను పేరుగల మహారాజు ఒకడు ఉండెను. ఆయనకు ఐదుగురు కుమారులు, అందమైన ముఖము గల ఒక కుమార్తె కలిగిరి.
+hi: श्रीशुक ने कहा: विदर्भ के अधिपति भीष्मक नाम के एक महान राजा थे। उनके पाँच पुत्र थे और सुंदर मुखवाली एक पुत्री थी।
 
 --- verse 22 ---
 deva:
@@ -196,6 +259,9 @@ deva:
 iast:
 rukmyagrajo rukmaratho rukmabāhuranantaraḥ|
 rukmakeśo rukmamālī rukmiṇyeṣāṁ svasā satī||
+en: Rukmī was the eldest; then Rukmaratha, Rukmabāhu after him, Rukmakeśa and Rukmamālī. Rukmiṇī, the chaste one, was their sister.
+tel: రుక్మి పెద్దవాడు; తరువాత రుక్మరథుడు, ఆయన తరువాత రుక్మబాహుడు, రుక్మకేశుడు, రుక్మమాలి. సాధ్వియైన రుక్మిణి వారి సోదరి.
+hi: रुक्मी सबसे बड़ा था; फिर रुक्मरथ, उसके बाद रुक्मबाहु, रुक्मकेश और रुक्ममाली। साध्वी रुक्मिणी उनकी बहन थी।
 
 --- verse 23 ---
 deva:
@@ -204,6 +270,9 @@ deva:
 iast:
 sopaśrutya mukundasya rūpavīryaguṇaśriyaḥ|
 gṛhāgatairgīyamānāstaṁ mene sadṛśaṁ patim||
+en: She heard the beauty, the valour, the qualities and the glory of Mukunda, sung by those who came to the house, and she thought him the fitting husband.
+tel: ఇంటికి వచ్చిన వారు కీర్తించిన ముకుందుని రూపమును, పరాక్రమమును, గుణములను, వైభవమును ఆమె విని, ఆయనే తనకు తగిన భర్త అని తలంచెను.
+hi: घर आए लोगों के मुख से गाए गए मुकुंद के रूप, पराक्रम, गुण और वैभव को सुनकर उसने उन्हीं को अपने योग्य पति माना।
 
 --- verse 24 ---
 deva:
@@ -212,6 +281,9 @@ deva:
 iast:
 tāṁ buddhilakṣaṇaudāryarūpaśīlaguṇāśrayām|
 kṛṣṇaśca sadṛśīṁ bhāryāṁ samudvoḍhuṁ mano dadhe||
+en: And Kṛṣṇa resolved in his mind to marry her, who was the abode of intelligence, good marks, generosity, beauty, good conduct and good qualities, as a fitting wife.
+tel: బుద్ధి, శుభలక్షణములు, ఔదార్యము, రూపము, శీలము, గుణములకు నిలయమైన ఆమెను తగిన భార్యగా వివాహము చేసికొనవలెనని కృష్ణుడును మనస్సులో నిశ్చయించుకొనెను.
+hi: और कृष्ण ने भी अपने मन में निश्चय किया कि बुद्धि, शुभ लक्षण, औदार्य, रूप, शील और गुणों की उस निधि को योग्य पत्नी के रूप में ब्याह लें।
 
 --- verse 25 ---
 deva:
@@ -220,6 +292,9 @@ deva:
 iast:
 bandhūnāmicchatāṁ dātuṁ kṛṣṇāya bhaginīṁ nṛpa|
 tato nivārya kṛṣṇadviḍ rukmī caidyamamanyata||
+en: O King, the relatives wished to give the sister to Kṛṣṇa, but Rukmī, who hated Kṛṣṇa, stopped it and settled upon Caidya.
+tel: ఓ రాజా, బంధువులు ఆ సోదరిని కృష్ణునికి ఇవ్వగోరిరి; కాని కృష్ణుని ద్వేషించు రుక్మి దానిని ఆపి, చైద్యునే నిశ్చయించెను.
+hi: हे राजा, बंधुजन उस बहन को कृष्ण को देना चाहते थे, परंतु कृष्ण से द्वेष रखनेवाले रुक्मी ने उसे रोककर चैद्य को ही ठहराया।
 
 --- verse 26 ---
 deva:
@@ -228,6 +303,9 @@ deva:
 iast:
 tadavetyāsitāpāṁgī vaidarbhī durmanā bhṛśam|
 vicintyāptaṁ dvijaṁ kaṁcit kṛṣṇāya prāhiṇod drutam||
+en: The dark-eyed princess of Vidarbha came to know this and became very sad. She thought upon it and quickly sent a trusted brāhmaṇa to Kṛṣṇa.
+tel: నల్లని కన్నులు గల విదర్భ రాకుమారి ఇది తెలిసి మిక్కిలి దుఃఖించెను. ఆమె ఆలోచించి, నమ్మకమైన ఒక బ్రాహ్మణుని వేగముగా కృష్ణుని వద్దకు పంపెను.
+hi: काली आँखों वाली विदर्भ की राजकुमारी यह जानकर बहुत दुखी हुई। उसने विचार किया और एक विश्वासपात्र ब्राह्मण को शीघ्र कृष्ण के पास भेजा।
 
 --- verse 27 ---
 deva:
@@ -236,14 +314,20 @@ deva:
 iast:
 dvārakāṁ sa samabhyetya pratīhāraiḥ praveśitaḥ|
 apaśyadādyaṁ puruṣamāsīnaṁ kāṁcanāsane||
+en: He reached Dvārakā, was let in by the gatekeepers, and saw the first Person seated on a golden seat.
+tel: ఆయన ద్వారకను చేరి, ద్వారపాలకులచేత లోపలికి ప్రవేశింపజేయబడి, బంగారు ఆసనమున కూర్చున్న ఆది పురుషుని చూచెను.
+hi: वह द्वारका पहुँचा, द्वारपालों ने उसे भीतर पहुँचाया, और उसने स्वर्ण के आसन पर बैठे आदि पुरुष को देखा।
 
 --- verse 28 ---
 deva:
 दृष्ट्वा ब्रह्मण्यदेवस्तमवरुह्य निजासनात्।
-उपवेश्यार्हयांचक्रे यथाऽऽत्मानं दिवौकसः॥
+उपवेश्यार्हयां चक्रे यथाऽऽत्मानं दिवौकसः॥
 iast:
 dṛṣṭvā brahmaṇyadevastamavaruhya nijāsanāt|
-upaveśyārhayāṁcakre yathā''tmānaṁ divaukasaḥ||
+upaveśyārhayāṁ cakre yathā''tmānaṁ divaukasaḥ||
+en: Seeing him, the Lord who holds the brāhmaṇas dear came down from his own seat, gave him a seat, and honoured him as the gods honour their own Self.
+tel: ఆయనను చూచి, బ్రాహ్మణులను ప్రియముగా చూచు ఆ దేవుడు తన ఆసనము నుండి దిగి, ఆయనను కూర్చుండబెట్టి, దేవతలు తమ ఆత్మను పూజించునట్లు ఆయనను పూజించెను.
+hi: उसे देखकर ब्राह्मणों को प्रिय माननेवाले उन देव ने अपने आसन से उतरकर उसे आसन दिया और देवता जैसे अपने आत्मा का आदर करते हैं वैसे उसका आदर किया।
 
 --- verse 29 ---
 deva:
@@ -252,6 +336,9 @@ deva:
 iast:
 taṁ bhuktavantaṁ viśrāntamupagamya satāṁ gatiḥ|
 pāṇinābhimṛśan pādāvavyagrastamapṛcchata||
+en: When he had eaten and rested, the refuge of the good went up to him, touched his feet with his hand, and calmly asked him.
+tel: ఆయన భోజనము చేసి విశ్రాంతి తీసుకొనిన తరువాత, సజ్జనులకు ఆశ్రయమైన ఆయన దగ్గరకు వచ్చి, చేతితో ఆయన పాదములను తాకి, ప్రశాంతముగా ఇట్లు అడిగెను.
+hi: जब वह भोजन कर चुका और विश्राम कर चुका, तब सज्जनों के आश्रय उनके पास गए, हाथ से उनके चरणों को छुआ और शांत भाव से उनसे पूछा।
 
 --- verse 30 ---
 deva:
@@ -260,6 +347,9 @@ deva:
 iast:
 kaccid dvijavaraśreṣṭha dharmaste vṛddhasammataḥ|
 vartate nātikṛcchreṇa saṁtuṣṭamanasaḥ sadā||
+en: O best among the twice-born, is your dharma, the dharma approved by the elders, carried on without much hardship, your mind being content always?
+tel: ఓ ద్విజశ్రేష్ఠుడా, వృద్ధులు అంగీకరించిన మీ ధర్మము ఎక్కువ కష్టము లేకుండ నడచుచున్నదా? మీ మనస్సు ఎల్లప్పుడు సంతుష్టముగా ఉన్నదా?
+hi: हे द्विजश्रेष्ठ, वृद्धजनों द्वारा मान्य आपका धर्म बहुत कष्ट के बिना चल रहा है, और आपका मन सदा संतुष्ट रहता है?
 
 --- verse 31 ---
 deva:
@@ -268,6 +358,9 @@ deva:
 iast:
 saṁtuṣṭo yarhi varteta brāhmaṇo yena kenacit|
 ahīyamānaḥ svāddharmāt sa hyasyākhilakāmadhuk||
+en: When a brāhmaṇa remains content with whatever he gets and does not fall away from his own dharma, that contentment yields him everything he desires.
+tel: బ్రాహ్మణుడు దొరికినది ఏదైనను దానితో సంతుష్టుడై, తన ధర్మము నుండి తొలగకుండ ఉన్నప్పుడు, ఆ సంతుష్టియే ఆయనకు కోరిన అన్నిటిని ఇచ్చును.
+hi: जब ब्राह्मण जो मिल जाए उसी से संतुष्ट रहता है और अपने धर्म से नहीं हटता, तब वह संतोष ही उसे सब मनोरथ दे देता है।
 
 --- verse 32 ---
 deva:
@@ -276,6 +369,9 @@ deva:
 iast:
 asantuṣṭo'sakṛllokānāpnotyapi sureśvaraḥ|
 akiṁcano'pi saṁtuṣṭa śete sarvāṁgavijvaraḥ||
+en: One who is not content wanders through the worlds again and again, even though he be the lord of the gods. One who is content sleeps with every limb free from fever, even though he has nothing.
+tel: సంతుష్టి లేనివాడు దేవతలకు ప్రభువైనను లోకములను మరల మరల తిరుగుచుండును. సంతుష్టుడైనవాడు ఏమియు లేకున్నను సర్వాంగములు తాపము లేక నిద్రించును.
+hi: जो संतुष्ट नहीं है वह देवताओं का स्वामी होकर भी बार-बार लोकों में भटकता है। जो संतुष्ट है वह कुछ भी न रखते हुए भी सब अंगों में ज्वर के बिना सोता है।
 
 --- verse 33 ---
 deva:
@@ -284,6 +380,9 @@ deva:
 iast:
 viprān svalābhasaṁtuṣṭān sādhūn bhūtasuhṛttamān|
 nirahaṁkāriṇaḥ śāntān namasye śirasāsakṛt||
+en: I bow my head again and again to the brāhmaṇas who are content with their own gain, to the good who are the best friends of all beings, who are free from pride and are at peace.
+tel: తమకు దొరికినదానితో సంతుష్టులైన బ్రాహ్మణులకు, సమస్త ప్రాణులకు మేలు కోరు సాధువులకు, అహంకారము లేనివారికి, శాంతులైనవారికి నేను తలవంచి మరల మరల నమస్కరించుచున్నాను.
+hi: अपने लाभ से संतुष्ट ब्राह्मणों को, सब प्राणियों के परम हितैषी साधुओं को, अहंकार से रहित और शांत जनों को मैं सिर झुकाकर बार-बार नमस्कार करता हूँ।
 
 --- verse 34 ---
 deva:
@@ -292,6 +391,9 @@ deva:
 iast:
 kaccid vaḥ kuśalaṁ brahman rājato yasya hi prajāḥ|
 sukhaṁ vasanti viṣaye pālyamānāḥ sa me priyaḥ||
+en: Is it well with you under your king, O brāhmaṇa? The king in whose land the subjects are protected and live happily is dear to me.
+tel: ఓ బ్రాహ్మణుడా, మీ రాజు పాలనలో మీకు క్షేమమేనా? ఎవని దేశమున ప్రజలు రక్షింపబడి సుఖముగా జీవించుచున్నారో ఆ రాజు నాకు ప్రియుడు.
+hi: हे ब्राह्मण, अपने राजा के राज्य में आप सब सकुशल हैं? जिसके देश में प्रजा रक्षित होकर सुख से रहती है, वह राजा मुझे प्रिय है।
 
 --- verse 35 ---
 deva:
@@ -300,6 +402,9 @@ deva:
 iast:
 yatastvamāgato durgaṁ nistīryeha yadicchayā|
 sarvaṁ no brūhyaguhyaṁ cet kiṁ kāryaṁ karavāma te||
+en: From where have you come, crossing a hard road, and with what wish here? Tell us everything, if it is not a secret. What work may we do for you?
+tel: కష్టమైన మార్గమును దాటి మీరు ఎక్కడ నుండి వచ్చితిరి? ఇక్కడ మీ కోరిక ఏమి? రహస్యము కాకున్నచో అంతయు మాకు చెప్పుము. మీకు ఏ పని చేయవలెను?
+hi: कठिन मार्ग पार करके आप कहाँ से आए हैं, और यहाँ आपकी इच्छा क्या है? यदि गुप्त न हो तो सब हमें कहिए। आपके लिए हम कौन सा कार्य करें?
 
 --- verse 36 ---
 deva:
@@ -308,6 +413,9 @@ deva:
 iast:
 evaṁ sampṛṣṭasampraśno brāhmaṇaḥ parameṣṭhinā|
 līlāgṛhītadehena tasmai sarvamavarṇayat||
+en: Thus questioned by the Supreme One, who has taken a body in play, the brāhmaṇa told him everything.
+tel: లీలచేత శరీరమును ధరించిన ఆ పరమేష్ఠిచేత ఇట్లు ప్రశ్నింపబడిన బ్రాహ్మణుడు ఆయనకు అంతయు వివరించి చెప్పెను.
+hi: लीला से शरीर धारण करनेवाले उन परमेष्ठी के इस प्रकार पूछने पर ब्राह्मण ने उन्हें सब कुछ कह सुनाया।
 
 --- verse 37 ---
 deva:
@@ -322,6 +430,9 @@ rukmiṇyuvāca
 nirviśya karṇavivarairharato'ṅgatāpam|
 rūpaṁ dṛśāṁ dṛśimatāmakhilārthalābhaṁ
 tvayyacyutāviśati cittamapatrapaṁ me||
+en: Rukmiṇī said: O beauty of the worlds, I have heard your qualities, which enter through the ears of those who hear and take away the pain of the body; and your form, which for the eyes of those who have sight is the gain of every object. O Acyuta, my mind enters you without shame.
+tel: రుక్మిణి పలికెను: ఓ భువన సుందరుడా, విను వారి చెవుల ద్వారములలో ప్రవేశించి దేహ తాపమును తొలగించు మీ గుణములను నేను వినితిని; చూపు గలవారి కన్నులకు సమస్త ప్రయోజనముల లాభమైన మీ రూపమును వినితిని. ఓ అచ్యుతా, నా మనస్సు సిగ్గు లేక మీలో ప్రవేశించుచున్నది.
+hi: रुक्मिणी ने कहा: हे भुवनसुंदर, मैंने आपके उन गुणों को सुना है जो सुननेवालों के कानों के द्वार से भीतर जाकर देह का ताप हर लेते हैं; और आपके उस रूप को, जो दृष्टिवालों की आँखों के लिए सब अर्थों का लाभ है। हे अच्युत, मेरा मन लज्जा छोड़कर आप में प्रवेश कर रहा है।
 
 --- verse 38 ---
 deva:
@@ -334,6 +445,9 @@ kā tvā mukunda mahatī kulaśīlarūpa-
 vidyāvayodraviṇadhāmabhirātmatulyam|
 dhīrā patiṁ kulavatī na vṛṇīta kanyā
 kāle nṛsiṁha naralokamano'bhirāmam||
+en: O Mukunda, what noble and steady girl of good family would not choose you as her husband at the proper time, you who are her equal in family, conduct, beauty, learning, age, wealth and splendour, O lion among men, you who delight the mind of the world of men?
+tel: ఓ ముకుందా, కులము, శీలము, రూపము, విద్య, వయస్సు, ధనము, తేజస్సులలో తనకు సమానుడైన మిమ్ములను, ఓ నరసింహా, మనుష్య లోకము యొక్క మనస్సును ఆనందపరచు మిమ్ములను, తగిన కాలమున ఏ ధీరయైన కులీన కన్య భర్తగా వరించకుండును?
+hi: हे मुकुंद, कुल, शील, रूप, विद्या, अवस्था, धन और तेज में अपने समान आपको, हे नरसिंह, मनुष्यलोक के मन को आनंद देनेवाले आपको, उचित समय पर कौन धीर कुलीन कन्या पति रूप में न वरेगी?
 
 --- verse 39 ---
 deva:
@@ -346,6 +460,9 @@ tanme bhavān khalu vṛtaḥ patiraṅga jāyā-
 mātmārpitaśca bhavato'tra vibho vidhehi|
 mā vīrabhāgamabhimarśatu caidya ārād
 gomāyuvanmṛgapaterbalimambujākṣa||
+en: Therefore, dear Lord, you are indeed chosen by me as my husband, and I have given my own self to you. O all-pervading one, come here and make me your wife. Let Caidya not touch the share of the hero, as a jackal takes the lion's prey, O lotus-eyed one.
+tel: అందుచేత, ఓ ప్రభూ, మీరే నాచేత భర్తగా వరింపబడితిరి; నేను నన్ను మీకు అర్పించుకొంటిని. ఓ విభూ, ఇక్కడకు వచ్చి నన్ను భార్యగా చేసికొనుము. ఓ కమలనేత్రుడా, నక్క సింహము యొక్క ఆహారమును తీసుకొనిపోవునట్లు, చైద్యుడు వీరుని భాగమును తాకకుండును గాక.
+hi: इसलिए, हे प्रभु, मैंने आपको ही पति रूप में वरा है और अपने आप को आपको अर्पित कर दिया है। हे विभो, यहाँ आकर मुझे अपनी पत्नी बनाइए। हे कमलनयन, जैसे गीदड़ सिंह का भाग ले जाता है, वैसे चैद्य वीर के भाग को न छुए।
 
 --- verse 40 ---
 deva:
@@ -358,6 +475,9 @@ pūrteṣṭadattaniyamavratadevavipra-
 gurvarcanādibhiralaṁ bhagavān pareśaḥ|
 ārādhito yadi gadāgraja etya pāṇiṁ
 gṛhṇātu me na damaghoṣasutādayo'nye||
+en: If the Lord, the supreme ruler, has been fully worshipped by me with works of public good, with sacrifices, with gifts, with observances, with vows, and with the worship of the gods, the brāhmaṇas and the guru, then let the elder brother of Gada come and take my hand, and not the son of Damaghoṣa and the others.
+tel: పూర్త కర్మలచేత, యజ్ఞములచేత, దానములచేత, నియమములచేత, వ్రతములచేత, దేవతలను, బ్రాహ్మణులను, గురువును పూజించుటచేత పరమేశ్వరుడైన భగవంతుడు నాచేత చక్కగా ఆరాధింపబడినట్లయితే, గదుని అన్న వచ్చి నా చేతిని పట్టుకొనవలెను; దమఘోషుని కుమారుడు మొదలైన ఇతరులు కాదు.
+hi: यदि पूर्त कर्मों से, यज्ञों से, दानों से, नियमों से, व्रतों से तथा देवताओं, ब्राह्मणों और गुरु की पूजा से परमेश्वर भगवान मेरे द्वारा भली भाँति आराधित हुए हों, तो गद के बड़े भाई आकर मेरा हाथ पकड़ें, दमघोष का पुत्र और दूसरे नहीं।
 
 --- verse 41 ---
 deva:
@@ -370,6 +490,9 @@ iast:
 guptaḥ sametya pṛtanāpatibhiḥ parītaḥ|
 nirmathya caidyamagadhendrabalaṁ prasahya
 māṁ rākṣasena vidhinodvaha vīryaśulkām||
+en: O unconquered one, tomorrow, when the marriage is to take place, come to Vidarbha unseen, surrounded by the leaders of your armies, crush by force the army of Caidya and of the king of Magadha, and marry me by the rākṣasa rite, for I am to be won by valour.
+tel: ఓ అజితుడా, రేపు వివాహము జరుగు సమయమున, సేనాధిపతులతో చుట్టబడి, గుప్తముగా విదర్భకు వచ్చి, చైద్యుని మరియు మగధ రాజు యొక్క సేనను బలముతో అణచివేసి, వీర్యముచేత పొందదగిన నన్ను రాక్షస విధానముచేత వివాహము చేసికొనుము.
+hi: हे अजित, कल जब विवाह होने को है, तब सेनापतियों से घिरे हुए गुप्त रूप से विदर्भ आइए, चैद्य और मगधराज की सेना को बल से कुचल दीजिए, और वीर्य से प्राप्त होने योग्य मुझे राक्षस विधि से ब्याह लीजिए।
 
 --- verse 42 ---
 deva:
@@ -382,6 +505,9 @@ antaḥpurāntaracarīmanihatya bandhūṁ-
 stvāmudvahe kathamiti pravadāmyupāyam|
 pūrvedyurasti mahatī kuladeviyātrā
 yasyāṁ bahirnavavadhūrgirijāmupeyāt||
+en: If you say, how shall I marry you, who move within the inner apartments, without killing your relatives, then I tell you the way. On the day before there is a great procession to the family goddess, in which the new bride goes outside to Girijā.
+tel: అంతఃపురము లోపల తిరుగు నిన్ను, బంధువులను చంపకుండ ఎట్లు వివాహము చేసికొందును అని మీరు అడిగినచో, ఒక ఉపాయమును చెప్పుచున్నాను. దానికి ముందు దినమున కులదేవికి పెద్ద యాత్ర జరుగును; అందులో క్రొత్త వధువు బయటకు వెళ్లి గిరిజను చేరును.
+hi: यदि आप कहें कि अंतःपुर के भीतर रहनेवाली तुम्हें बंधुओं का वध किए बिना कैसे ब्याहूँ, तो मैं एक उपाय बताती हूँ। उससे पहले दिन कुलदेवी की बड़ी यात्रा होती है, जिसमें नई वधू बाहर जाकर गिरिजा के पास पहुँचती है।
 
 --- verse 43 ---
 deva:
@@ -394,6 +520,9 @@ yasyāṅghripaṁkajarajaḥsnapanaṁ mahānto
 vāñchantyumāpatirivātmatamo'pahatyai|
 yarhyambujākṣa na labheya bhavatprasādaṁ
 jahyāmasūn vratakṛśāñchatajanmabhiḥ syāt||
+en: Great men, like the husband of Umā, wish for the bath in the dust of his lotus feet, to remove their own darkness. O lotus-eyed one, if I do not obtain your grace, I shall give up my life, worn thin by vows, and it may be obtained after a hundred births.
+tel: ఎవని పాద పద్మముల ధూళితో స్నానమును, తమ అంధకారమును తొలగించుకొనుటకు, ఉమాపతి వలె మహాత్ములు కోరుచున్నారో, ఓ కమలనేత్రుడా, ఆ మీ అనుగ్రహము నాకు దొరకనిచో, వ్రతములచేత కృశించిన నా ప్రాణములను విడుతును; వంద జన్మల తరువాత అది కలుగవచ్చును.
+hi: जिनके चरणकमलों की धूल में स्नान को, अपना अंधकार दूर करने के लिए, उमापति के समान महात्मा चाहते हैं, हे कमलनयन, यदि वह आपका अनुग्रह मुझे न मिले तो व्रतों से क्षीण अपने प्राणों को त्याग दूँगी; सौ जन्मों के बाद वह प्राप्त हो सकता है।
 
 --- verse 44 ---
 deva:
@@ -404,9 +533,15 @@ iast:
 brāhmaṇa uvāca
 ityete guhyasandeśā yadudeva mayā''hṛtāḥ|
 vimṛśya kartuṁ yaccātra kriyatāṁ tadanantaram||
+en: The brāhmaṇa said: O lord of the Yadus, these are the secret messages brought by me. Consider them, and let what is to be done here be done at once.
+tel: బ్రాహ్మణుడు పలికెను: ఓ యదుదేవా, నాచేత తెచ్చబడిన రహస్య సందేశములు ఇవి. వానిని ఆలోచించి, ఇక్కడ చేయవలసినది ఏదో దానిని వెంటనే చేయుము.
+hi: ब्राह्मण ने कहा: हे यदुदेव, मेरे द्वारा लाए गए गुप्त संदेश ये हैं। इन पर विचार कर यहाँ जो करना हो वह तुरंत किया जाए।
 
 --- verse none ---
 deva:
 इति श्रीमद्भागवते महापुराणे पारमहंस्यां संहितायां दशमस्कन्धे उत्तरार्धे रुक्मिण्युद्वाहप्रस्तावे द्विपञ्चाशत्तमोऽध्यायः॥ ५२॥
 iast:
 iti śrīmadbhāgavate mahāpurāṇe pāramahaṁsyāṁ saṁhitāyāṁ daśamaskandhe uttarārdhe rukmiṇyudvāhaprastāve dvipañcāśattamo'dhyāyaḥ|| 52||
+en: Thus ends the fifty-second adhyāya, in the section on the marriage of Rukmiṇī, in the latter half of the tenth skandha of the Śrīmad Bhāgavata Mahāpurāṇa, the saṁhitā of the paramahaṁsas.
+tel: ఇది శ్రీమద్భాగవత మహాపురాణమున, పరమహంసల సంహితయందు, దశమ స్కంధము ఉత్తరార్ధమున, రుక్మిణీ వివాహ ప్రస్తావమున ద్విపంచాశత్తమ అధ్యాయము సమాప్తము.
+hi: इस प्रकार श्रीमद्भागवत महापुराण, परमहंसों की संहिता, के दशम स्कंध के उत्तरार्ध में, रुक्मिणी के विवाह के प्रसंग में बावनवाँ अध्याय समाप्त हुआ।

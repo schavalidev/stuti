@@ -9,7 +9,7 @@ Type: Purāṇa (an adhyāya of the Śrīmad Bhāgavata, Skandha 10)
 
 Source / recension: Base text and authority: the Gītā Press, Gorakhpur Śrīmadbhāgavata Mahāpurāṇa with Hindi translation, Part 2 (Gītā Press code 27), archive.org item `shrimadbhagwat-mahapuran-bhag-2`, printed pages 530–536; the PDF page numbers are the printed ones. The PDF carries the typesetter's own text layer in the Chanakya font encoding, and the text was decoded from it by machine with `bin/bhagavata/chanakya.py`, not read off OCR or typed. The decoder was checked against GRETIL over all twelve skandhas before any file was written, and the differences that remain were sampled and found to be readings of the two editions. Second witness: GRETIL's `sa_bhAgavatapurANa.xml` (IAST, contributed by Ulrich Stiehl), a separate editorial lineage, compared verse by verse by machine. The TTD edition with the commentaries of Śrīdhara, Vīrarāghava and Vijayadhvaja (archive.org `Bhagavata_Purana_With_Multiple_Commentaries_TTD_Critical_Edition`) is the third witness where one is needed; it was not read for this file. The IAST was generated mechanically from the Devanāgarī with `bin/dev2iast.py`.
 
-Recension note: Text-only file, written 1 Oct 2026 at the user's instruction to lay down the whole Bhāgavata first: the English, Telugu and Hindi meanings are still to be added, and the witnesses' differences listed here have been recorded by machine and not yet adjudicated. The print is followed throughout. The print numbers 53 verses and GRETIL numbers 53. Of the 53 verses GRETIL has under the same number, 25 agree with the print letter for letter once spacing and the spelling of nasals are set aside; the rest differ: 2, 5, 6, 7, 10, 11, 12, 14, 15, 16, 17, 18, 19, 20, 22, 23, 25, 27, 33, 35, 37, 38, 39, 44, 46, 49, 50, 52. Spacing is the print's, as its text layer gives it; in a few places justification has left a space inside a word, and these are still to be closed when the verse is read. The speaker lines (श्रीशुक उवाच and the others) are printed in italic above the verse they introduce, and are given as its first line.
+Recension note: Meanings written 24 Oct 2026 (session S78). The differences between the witnesses listed below were read as the verses were glossed; except where this note says otherwise, each is a spelling, a sandhi or a word order of the two editions, none of them changes the sense, and the print's reading therefore stands unbracketed. The print is followed throughout. The print numbers 53 verses and GRETIL numbers 53. Of the 53 verses GRETIL has under the same number, 25 agree with the print letter for letter once spacing and the spelling of nasals are set aside; the rest differ: 2, 5, 6, 7, 10, 11, 12, 14, 15, 16, 17, 18, 19, 20, 22, 23, 25, 27, 33, 35, 37, 38, 39, 44, 46, 49, 50, 52. Spacing is the print's, as its text layer gives it. The speaker lines (श्रीशुक उवाच and the others) are printed in italic above the verse they introduce, and are given as its first line. Two broken words were put right as the verses were read, each a space that justification had left inside one word. At verse 12 the space inside प्रायुङ्क्त is closed, and at verse 35 the space inside अङ्घ्रि in श्रुतिरङ्घ्रिरुर्वी is closed. GRETIL reads both words whole. The print's other spaces were checked both ways against GRETIL and left as printed: वाङ् मये at verse 34, असृग् विमुंचन् at verse 15, भगवान् भवः at verse 33 and the rest each stand after a virāma consonant, where this print separates by habit, and सर्वतोदिशम् at verse 4, which GRETIL spaces, is this print's own joined spelling, written the same way in nine other places. नकुतश्चिद्भयोऽसुरः at verse 49 is a compound and reads as it stands. The print's line-break hyphens at verses 26, 27, 38, 39 and 52 stay where the print puts them. The readings that differ in more than spacing or the spelling of a nasal are the two editions' own, and the print stands: at verse 2 the print reads कृष्णदेवताः where GRETIL reads कृष्णदैवताः, at verse 6 ससुतैः for ससुतः, at verse 20 मुक्तशिरोरुहा for मक्त°, at verse 37 जगतो भवाय for जगतो हिताय, at verse 50 सवध्वा for सवध्वो, and at verse 49 भविष्यन्त्यजरामराः for भविष्यत्यजरामरः.
 
 Verse count: 53, plus the closing colophon printed unnumbered.
 
@@ -24,6 +24,9 @@ iast:
 śrīśuka uvāca
 apaśyatāṁ cāniruddhaṁ tadbandhūnāṁ ca bhārata|
 catvāro vārṣikā māsā vyatīyuranuśocatām||
+en: Śrī Śuka said: O Bhārata, four months of the rains passed for those who did not see Aniruddha and for his kinsmen, who grieved for him.
+tel: శ్రీశుకుడు పలికెను: భారతుడా, అనిరుద్ధుని చూడలేక అతని బంధువులు శోకించుచుండగా వర్షాకాలపు నాలుగు మాసములు గడచిపోయెను.
+hi: श्रीशुक ने कहा: हे भारत, अनिरुद्ध को न देखकर उसके बन्धुजन शोक करते रहे और वर्षा के चार महीने बीत गए।
 
 --- verse 2 ---
 deva:
@@ -32,6 +35,9 @@ deva:
 iast:
 nāradāttadupākarṇya vārtāṁ baddhasya karma ca|
 prayayuḥ śoṇitapuraṁ vṛṣṇayaḥ kṛṣṇadevatāḥ||
+en: Hearing this news from Nārada, that he was bound and what had been done, the Vṛṣṇis, whose deity is Kṛṣṇa, set out for Śoṇitapura.
+tel: నారదుని నుండి ఈ వార్తను, అతడు బంధింపబడిన సంగతిని, జరిగిన పనిని వినిన, కృష్ణుడే దైవముగా గల వృష్ణివంశీయులు శోణితపురమునకు బయలుదేరిరి.
+hi: नारद से यह समाचार, उसके बँधे होने की बात और जो किया गया था, सुनकर कृष्ण को ही अपना देवता माननेवाले वृष्णिवंशी शोणितपुर को चल पड़े।
 
 --- verse 3 ---
 deva:
@@ -40,6 +46,9 @@ deva:
 iast:
 pradyumno yuyudhānaśca gadaḥ sāmbo'tha sāraṇaḥ|
 nandopanandabhadrādyā rāmakṛṣṇānuvartinaḥ||
+en: Pradyumna and Yuyudhāna, Gada and Sāmba and Sāraṇa, Nanda, Upananda, Bhadra and the others, who follow Rāma and Kṛṣṇa,
+tel: ప్రద్యుమ్నుడు, యుయుధానుడు, గదుడు, సాంబుడు, సారణుడు, నందుడు, ఉపనందుడు, భద్రుడు మొదలైన రామకృష్ణులను అనుసరించువారు,
+hi: प्रद्युम्न और युयुधान, गद, साम्ब और सारण, नन्द, उपनन्द, भद्र आदि राम और कृष्ण के अनुगामी,
 
 --- verse 4 ---
 deva:
@@ -48,6 +57,9 @@ deva:
 iast:
 akṣauhiṇībhirdvādaśabhiḥ sametāḥ sarvatodiśam|
 rurudhurbāṇanagaraṁ samantāt sātvatarṣabhāḥ||
+en: these bulls among the Sātvatas, gathered with twelve akṣauhiṇīs, laid siege to Bāṇa's city on every side.
+tel: పన్నెండు అక్షౌహిణులతో కూడిన ఈ సాత్వత శ్రేష్ఠులు అన్ని దిక్కుల నుండి బాణుని నగరమును చుట్టుముట్టిరి.
+hi: बारह अक्षौहिणी सेना के साथ एकत्र हुए इन सात्वतश्रेष्ठों ने सब दिशाओं से बाण के नगर को चारों ओर घेर लिया।
 
 --- verse 5 ---
 deva:
@@ -56,6 +68,9 @@ deva:
 iast:
 bhajyamānapurodyānaprākārāṭṭālagopuram|
 prekṣamāṇo ruṣāviṣṭastulyasainyo'bhiniryayau||
+en: Seeing the city's gardens, walls, watchtowers and gateways being broken down, Bāṇa was filled with anger and came out with an army equal to theirs.
+tel: నగరపు ఉద్యానములు, ప్రాకారములు, అట్టాలములు, గోపురములు పడగొట్టబడుట చూచి బాణుడు కోపముతో నిండి సమానమైన సేనతో బయటికి వచ్చెను.
+hi: नगर के उद्यान, प्राकार, अट्टालिकाएँ और गोपुर तोड़े जाते देखकर बाण क्रोध से भर गया और उतनी ही सेना लेकर बाहर निकला।
 
 --- verse 6 ---
 deva:
@@ -64,6 +79,9 @@ deva:
 iast:
 bāṇārthe bhagavān rudraḥ sasutaiḥ pramathairvṛtaḥ|
 āruhya nandivṛṣabhaṁ yuyudhe rāmakṛṣṇayoḥ||
+en: For Bāṇa's sake the lord Rudra, surrounded by his sons and by the Pramathas, mounted the bull Nandi and fought with Rāma and Kṛṣṇa.
+tel: బాణుని కొరకు భగవంతుడైన రుద్రుడు తన కుమారులతో, ప్రమథులతో కలిసి నంది అను వృషభమును ఎక్కి రామకృష్ణులతో యుద్ధము చేసెను.
+hi: बाण के लिए भगवान् रुद्र अपने पुत्रों और प्रमथों से घिरे हुए नन्दी नामक वृषभ पर चढ़कर राम और कृष्ण से युद्ध करने लगे।
 
 --- verse 7 ---
 deva:
@@ -72,6 +90,9 @@ deva:
 iast:
 āsīt sutumulaṁ yuddhamadbhutaṁ romaharṣaṇam|
 kṛṣṇaśaṁkarayo rājan pradyumnaguhayorapi||
+en: O King, there was a most tumultuous battle, wonderful and making the hair stand on end, between Kṛṣṇa and Śaṁkara, and between Pradyumna and Guha also.
+tel: రాజా, కృష్ణునికి శంకరునికి, ప్రద్యుమ్నునికి గుహునికి కూడ అతి ఘోరమైన, అద్భుతమైన, రోమాంచము కలిగించు యుద్ధము జరిగెను.
+hi: हे राजन्, कृष्ण और शंकर के बीच, तथा प्रद्युम्न और गुह के बीच भी अत्यन्त भयंकर, अद्भुत और रोमांच उत्पन्न करनेवाला युद्ध हुआ।
 
 --- verse 8 ---
 deva:
@@ -80,6 +101,9 @@ deva:
 iast:
 kumbhāṇḍakūpakarṇābhyāṁ balena saha saṁyugaḥ|
 sāmbasya bāṇaputreṇa bāṇena saha sātyakeḥ||
+en: Bala fought with Kumbhāṇḍa and Kūpakarṇa, Sāmba with Bāṇa's son, and Sātyaki with Bāṇa.
+tel: కుంభాండునితో, కూపకర్ణునితో బలరామునికి, బాణుని కుమారునితో సాంబునికి, బాణునితో సాత్యకికి యుద్ధము జరిగెను.
+hi: कुम्भाण्ड और कूपकर्ण से बलराम का, बाण के पुत्र से साम्ब का और बाण से सात्यकि का युद्ध हुआ।
 
 --- verse 9 ---
 deva:
@@ -88,6 +112,9 @@ deva:
 iast:
 brahmādayaḥ surādhīśā munayaḥ siddhacāraṇāḥ|
 gandharvāpsaraso yakṣā vimānairdraṣṭumāgaman||
+en: Brahmā and the other lords of the gods, the sages, the Siddhas and Cāraṇas, the Gandharvas, the Apsarases and the Yakṣas came in their heavenly cars to see it.
+tel: బ్రహ్మ మొదలైన దేవతల అధిపతులు, మునులు, సిద్ధులు, చారణులు, గంధర్వులు, అప్సరసలు, యక్షులు విమానములతో చూడవచ్చిరి.
+hi: ब्रह्मा आदि देवताओं के अधिपति, मुनि, सिद्ध, चारण, गन्धर्व, अप्सराएँ और यक्ष विमानों से देखने आए।
 
 --- verse 10 ---
 deva:
@@ -96,6 +123,9 @@ deva:
 iast:
 śaṁkarānucarāñchaurirbhūtapramathaguhyakān|
 ḍākinīryātudhānāṁśca vetālān savināyakān||
+en: Śauri drove off the followers of Śaṁkara, the Bhūtas, the Pramathas and the Guhyakas, the Ḍākinīs, the Yātudhānas, the Vetālas along with the Vināyakas,
+tel: శౌరి శంకరుని అనుచరులను, భూతములను, ప్రమథులను, గుహ్యకులను, డాకినులను, యాతుధానులను, వినాయకులతో కూడిన వేతాళములను,
+hi: शौरि ने शंकर के अनुचरों को, भूतों, प्रमथों और गुह्यकों को, डाकिनियों को, यातुधानों को, विनायकों सहित वेतालों को,
 
 --- verse 11 ---
 deva:
@@ -104,14 +134,20 @@ deva:
 iast:
 pretamātṛpiśācāṁśca kūṣmāṇḍān brahmarākṣasān|
 drāvayāmāsa tīkṣṇāgraiḥ śaraiḥ śārṅgadhanuścyutaiḥ||
+en: the Pretas, the Mātṛs and the Piśācas, the Kūṣmāṇḍas and the Brahmarākṣasas, with sharp-pointed arrows shot from the Śārṅga bow.
+tel: ప్రేతములను, మాతృకలను, పిశాచములను, కూష్మాండులను, బ్రహ్మరాక్షసులను శార్ఙ్గధనువు నుండి వెడలిన వాడి మొనల బాణములతో పారద్రోలెను.
+hi: प्रेतों, मातृकाओं और पिशाचों को, कूष्माण्डों और ब्रह्मराक्षसों को शार्ङ्ग धनुष से छूटे तीक्ष्ण नोकवाले बाणों से भगा दिया।
 
 --- verse 12 ---
 deva:
-पृथग्विधानि प्रायुङ् क्त पिनाक्यस्त्राणि शार्ङ्गिणे।
+पृथग्विधानि प्रायुङ्क्त पिनाक्यस्त्राणि शार्ङ्गिणे।
 प्रत्यस्त्रैः शमयामास शार्ङ्गपाणिरविस्मितः॥
 iast:
-pṛthagvidhāni prāyuṅ kta pinākyastrāṇi śārṅgiṇe|
+pṛthagvidhāni prāyuṅkta pinākyastrāṇi śārṅgiṇe|
 pratyastraiḥ śamayāmāsa śārṅgapāṇiravismitaḥ||
+en: The bearer of the Pināka employed weapons of many kinds against the bearer of the Śārṅga. The wielder of the Śārṅga was not astonished, and quelled them with counter-weapons.
+tel: పినాకధారి శార్ఙ్గధారిపై నానావిధములైన అస్త్రములను ప్రయోగించెను. శార్ఙ్గపాణి ఆశ్చర్యపడక ప్రత్యస్త్రములతో వానిని శమింపజేసెను.
+hi: पिनाकधारी ने शार्ङ्गधारी पर नाना प्रकार के अस्त्र चलाए। शार्ङ्गपाणि ने आश्चर्य न करते हुए प्रत्यस्त्रों से उन्हें शान्त कर दिया।
 
 --- verse 13 ---
 deva:
@@ -120,6 +156,9 @@ deva:
 iast:
 brahmāstrasya ca brahmāstraṁ vāyavyasya ca pārvatam|
 āgneyasya ca pārjanyaṁ naijaṁ pāśupatasya ca||
+en: Against the brahmāstra he used the brahmāstra, against the vāyavya the pārvata, against the āgneya the pārjanya, and against the pāśupata his own weapon.
+tel: బ్రహ్మాస్త్రమునకు బ్రహ్మాస్త్రమును, వాయవ్యమునకు పార్వతమును, ఆగ్నేయమునకు పార్జన్యమును, పాశుపతమునకు తన స్వంత అస్త్రమును ప్రయోగించెను.
+hi: ब्रह्मास्त्र के विरुद्ध ब्रह्मास्त्र, वायव्य के विरुद्ध पार्वत, आग्नेय के विरुद्ध पार्जन्य और पाशुपत के विरुद्ध अपना निज अस्त्र चलाया।
 
 --- verse 14 ---
 deva:
@@ -128,6 +167,9 @@ deva:
 iast:
 mohayitvā tu giriśaṁ jṛmbhaṇāstreṇa jṛmbhitam|
 bāṇasya pṛtanāṁ śaurirjaghānāsigadeṣubhiḥ||
+en: Then Śauri confounded Giriśa with the jṛmbhaṇa weapon, so that he began to yawn, and struck down Bāṇa's army with sword, mace and arrows.
+tel: పిమ్మట శౌరి జృంభణాస్త్రముతో గిరిశుని మోహపరచి ఆవులింతలు కలిగించి, బాణుని సేనను కత్తితో, గదతో, బాణములతో సంహరించెను.
+hi: तब शौरि ने जृम्भणास्त्र से गिरिश को मोहित कर दिया, जिससे वे जँभाई लेने लगे, और बाण की सेना को तलवार, गदा और बाणों से मार डाला।
 
 --- verse 15 ---
 deva:
@@ -136,6 +178,9 @@ deva:
 iast:
 skandaḥ pradyumnabāṇaughairardyamānaḥ samantataḥ|
 asṛg vimuṁcan gātrebhyaḥ śikhināpākramad raṇāt||
+en: Skanda, pressed on every side by the floods of Pradyumna's arrows, shed blood from his limbs and left the battle on his peacock.
+tel: ప్రద్యుమ్నుని బాణముల సమూహములచే అన్ని వైపుల బాధింపబడిన స్కందుడు అవయవముల నుండి రక్తమును స్రవించుచు నెమలిపై యుద్ధము నుండి తొలగిపోయెను.
+hi: प्रद्युम्न के बाणसमूहों से चारों ओर पीड़ित हुए स्कन्द अपने अंगों से रक्त बहाते हुए मोर पर बैठकर युद्ध से हट गए।
 
 --- verse 16 ---
 deva:
@@ -144,6 +189,9 @@ deva:
 iast:
 kumbhāṇḍaḥ kūpakarṇaśca petaturmusalārditau|
 dudruvustadanīkāni hatanāthāni sarvataḥ||
+en: Kumbhāṇḍa and Kūpakarṇa fell, broken by the musala. Their troops, their leaders slain, fled in every direction.
+tel: కుంభాండుడు, కూపకర్ణుడు ముసలముచే కొట్టబడి కూలిరి. నాయకులు చంపబడిన వారి సేనలు అన్ని దిక్కులకు పారిపోయెను.
+hi: कुम्भाण्ड और कूपकर्ण मूसल से चूर होकर गिर पड़े। नायकों के मारे जाने पर उनकी सेनाएँ चारों ओर भाग गईं।
 
 --- verse 17 ---
 deva:
@@ -152,6 +200,9 @@ deva:
 iast:
 viśīryamāṇaṁ svabalaṁ dṛṣṭvā bāṇo'tyamarṣaṇaḥ|
 kṛṣṇamabhyadravat saṁkhye rathī hitvaiva sātyakim||
+en: Seeing his own army breaking up, Bāṇa was filled with rage. He left Sātyaki and, in his chariot, rushed at Kṛṣṇa in the battle.
+tel: తన సేన చెదరిపోవుట చూచి బాణుడు మిక్కిలి ఆగ్రహించి, సాత్యకిని విడిచి రథముపై యుద్ధములో కృష్ణునిపైకి దూకెను.
+hi: अपनी सेना को छिन्न होते देखकर बाण अत्यन्त क्रुद्ध हुआ और सात्यकि को छोड़कर रथ पर चढ़े हुए युद्ध में कृष्ण पर झपटा।
 
 --- verse 18 ---
 deva:
@@ -160,6 +211,9 @@ deva:
 iast:
 dhanūṁṣyākṛṣya yugapad bāṇaḥ paṁcaśatāni vai|
 ekaikasmiñcharau dvau dvau sandadhe raṇadurmadaḥ||
+en: Bāṇa, mad in battle, drew five hundred bows at once and fitted two arrows to each one.
+tel: యుద్ధములో మదించిన బాణుడు ఐదు వందల ధనువులను ఒక్కసారి ఎక్కుపెట్టి ప్రతి ఒక్కదానిపై రెండు రెండు బాణములను సంధించెను.
+hi: रणमद से भरे बाण ने एक ही समय पाँच सौ धनुष खींचकर प्रत्येक पर दो-दो बाण चढ़ाए।
 
 --- verse 19 ---
 deva:
@@ -168,6 +222,9 @@ deva:
 iast:
 tāni ciccheda bhagavān dhanūṁṣi yugapaddhariḥ|
 sārathiṁ rathamaśvāṁśca hatvā śaṁkhamapūrayat||
+en: The blessed Lord cut all those bows at once. He killed the charioteer, destroyed the chariot and the horses, and then blew his conch.
+tel: భగవంతుడు ఆ ధనువులను అన్నిటిని ఒక్కసారి ఖండించెను. సారథిని, రథమును, గుఱ్ఱములను నాశనము చేసి శంఖమును పూరించెను.
+hi: भगवान् ने उन सब धनुषों को एक ही बार काट डाला। सारथि, रथ और घोड़ों का नाश करके उन्होंने शंख बजाया।
 
 --- verse 20 ---
 deva:
@@ -176,6 +233,9 @@ deva:
 iast:
 tanmātā koṭarā nāma nagnā muktaśiroruhā|
 puro'vatasthe kṛṣṇasya putraprāṇarirakṣayā||
+en: Then his mother, Koṭarā by name, naked, with her hair loose, stood before Kṛṣṇa to save her son's life.
+tel: అప్పుడు అతని తల్లి కోటర అను పేరుగలది, వస్త్రము లేక, జుట్టు విరబోసుకొని, కుమారుని ప్రాణములను కాపాడుటకు కృష్ణుని ఎదుట నిలిచెను.
+hi: तब उसकी माता कोटरा नाम वाली, नग्न और खुले केशों के साथ, अपने पुत्र के प्राण बचाने के लिए कृष्ण के सामने आ खड़ी हुई।
 
 --- verse 21 ---
 deva:
@@ -184,6 +244,9 @@ deva:
 iast:
 tatastiryaṅmukho nagnāmanirīkṣan gadāgrajaḥ|
 bāṇaśca tāvad virathaśchinnadhanvāviśat puram||
+en: Then the elder brother of Gada turned his face aside and did not look at the naked woman. Meanwhile Bāṇa, without his chariot and with his bow cut, entered the city.
+tel: అప్పుడు గదాగ్రజుడు ముఖమును ప్రక్కకు త్రిప్పి ఆ వస్త్రము లేని స్త్రీని చూడలేదు. ఆ సమయములో బాణుడు రథము లేక, ధనువు ఖండింపబడి నగరములో ప్రవేశించెను.
+hi: तब गदाग्रज ने मुँह फेर लिया और उस वस्त्रहीन स्त्री को नहीं देखा। इसी बीच बाण रथ से रहित और धनुष कटा हुआ नगर में चला गया।
 
 --- verse 22 ---
 deva:
@@ -192,6 +255,9 @@ deva:
 iast:
 vidrāvite bhūtagaṇe jvarastu triśirāstripāt|
 abhyadhāvata dāśārhaṁ dahanniva diśo daśa||
+en: When the host of Bhūtas had been driven off, the Jvara of Śiva, with three heads and three feet, rushed at the descendant of Daśārha as though burning the ten directions.
+tel: భూతగణము పారద్రోలబడగా, మూడు తలలు మూడు పాదములు గల శివుని జ్వరము పది దిక్కులను దహించునట్లుగా దాశార్హునిపైకి పరుగెత్తెను.
+hi: भूतगण भगा दिए जाने पर तीन सिर और तीन पैरोंवाला शिव का ज्वर दसों दिशाओं को जलाता हुआ दाशार्ह पर दौड़ा।
 
 --- verse 23 ---
 deva:
@@ -200,6 +266,9 @@ deva:
 iast:
 atha nārāyaṇo devastaṁ dṛṣṭvā vyasṛjajjvaram|
 māheśvaro vaiṣṇavaśca yuyudhāte jvarāvubhau||
+en: Then the god Nārāyaṇa saw him and sent forth his own fever. The two fevers, that of Maheśvara and that of Viṣṇu, fought together.
+tel: అప్పుడు నారాయణ దేవుడు దానిని చూచి తన జ్వరమును విడిచెను. మాహేశ్వర జ్వరము, వైష్ణవ జ్వరము అను ఆ రెండును పరస్పరము యుద్ధము చేసెను.
+hi: तब नारायण देव ने उसे देखकर अपना ज्वर छोड़ा। माहेश्वर ज्वर और वैष्णव ज्वर, ये दोनों आपस में लड़ने लगे।
 
 --- verse 24 ---
 deva:
@@ -210,6 +279,9 @@ iast:
 māheśvaraḥ samākrandan vaiṣṇavena balārditaḥ|
 alabdhvābhayamanyatra bhīto māheśvaro jvaraḥ|
 śaraṇārthī hṛṣīkeśaṁ tuṣṭāva prayatāṁjaliḥ||
+en: The fever of Maheśvara, tormented by the strength of the Vaiṣṇava fever, cried aloud. Finding no shelter anywhere else, that frightened Maheśvara fever sought refuge, and with folded hands and a composed mind praised Hṛṣīkeśa.
+tel: వైష్ణవ జ్వరము బలముచే బాధింపబడిన మాహేశ్వర జ్వరము గట్టిగా అరచెను. వేరెక్కడను రక్షణ లభింపక భయపడిన ఆ మాహేశ్వర జ్వరము శరణు కోరి, చేతులు జోడించి, మనస్సును నిలిపి హృషీకేశుని స్తుతించెను.
+hi: वैष्णव ज्वर के बल से पीड़ित माहेश्वर ज्वर जोर से चिल्लाया। अन्यत्र कहीं आश्रय न पाकर वह भयभीत माहेश्वर ज्वर शरण चाहते हुए हाथ जोड़कर और मन को स्थिर करके हृषीकेश की स्तुति करने लगा।
 
 --- verse 25 ---
 deva:
@@ -224,6 +296,9 @@ namāmi tvānantaśaktiṁ pareśaṁ
 sarvātmānaṁ kevalaṁ jñaptimātram|
 viśvotpattisthānasaṁrodhahetuṁ
 yattad brahma brahmaliṁgaṁ praśāntam||
+en: The Fever said: I bow to you, of endless power, the supreme Lord, the Self of all, alone, pure consciousness, the cause of the world's rising, staying and dissolution, that Brahman which is made known by the Veda and is utterly at peace.
+tel: జ్వరుడు పలికెను: అంతము లేని శక్తి గలవాడా, పరమేశ్వరా, సర్వాత్మా, కేవలుడా, జ్ఞానమాత్రుడా, విశ్వము పుట్టుటకు, నిలుచుటకు, లయమగుటకు కారణమైనవాడా, వేదముచే తెలియబడు ఆ ప్రశాంతమైన బ్రహ్మమైన నీకు నమస్కరించుచున్నాను.
+hi: ज्वर ने कहा: अनन्त शक्तिवाले, परमेश्वर, सर्वात्मा, केवल, ज्ञानमात्र, विश्व की उत्पत्ति, स्थिति और संहार के कारण, वेद से जाने जानेवाले उस प्रशान्त ब्रह्म आपको मैं नमस्कार करता हूँ।
 
 --- verse 26 ---
 deva:
@@ -236,6 +311,9 @@ kālo daivaṁ karma jīvaḥ svabhāvo
 dravyaṁ kṣetraṁ prāṇa ātmā vikāraḥ|
 tatsaṁghāto bījarohapravāha-
 stvanmāyaiṣā tanniṣedhaṁ prapadye||
+en: Time, destiny, karma, the jīva, nature, matter, the field, the vital breath, the self and change, and the gathering of all these, which flows on like seed and sprout, all this is your māyā. I take refuge in that which puts an end to it.
+tel: కాలము, దైవము, కర్మ, జీవుడు, స్వభావము, ద్రవ్యము, క్షేత్రము, ప్రాణము, ఆత్మ, వికారము, మరియు వీని సముదాయము, విత్తనము మొలక వలె సాగిపోవు ఈ ప్రవాహము, ఇదియంతయు నీ మాయ. దీనిని నివారించు నిన్ను నేను శరణు పొందుచున్నాను.
+hi: काल, दैव, कर्म, जीव, स्वभाव, द्रव्य, क्षेत्र, प्राण, आत्मा और विकार, तथा इन सबका समुदाय, जो बीज और अंकुर की तरह बहता रहता है, यह सब आपकी माया है। इसका निषेध करनेवाले आपकी मैं शरण लेता हूँ।
 
 --- verse 27 ---
 deva:
@@ -248,6 +326,9 @@ nānābhāvairlīlayaivopapannai-
 rdevān sādhūm̐llokasetūn bibharṣi|
 haṁsyunmārgān hiṁsayā vartamānān
 janmaitatte bhārahārāya bhūmeḥ||
+en: By many states of being, all of them taken up as play, you support the gods, the good and the bounds of the worlds. You slay those who walk the wrong path and live by violence. This birth of yours is for taking away the burden of the earth.
+tel: లీలగా స్వీకరించిన అనేక రూపములతో నీవు దేవతలను, సాధువులను, లోకముల కట్టుబాట్లను పోషించుచున్నావు. తప్పుదారిలో నడచి హింసతో జీవించువారిని సంహరించుచున్నావు. నీ ఈ అవతారము భూమి భారమును తొలగించుటకే.
+hi: लीला से ही धारण किए हुए अनेक रूपों से आप देवताओं, साधुओं और लोकों की मर्यादाओं का पालन करते हैं। जो कुमार्ग पर चलते हैं और हिंसा से जीते हैं, उन्हें आप मारते हैं। आपका यह जन्म पृथ्वी का भार उतारने के लिए है।
 
 --- verse 28 ---
 deva:
@@ -260,6 +341,9 @@ tapto'haṁ te tejasā duḥsahena
 śāntogreṇātyulbaṇena jvareṇa|
 tāvattāpo dehināṁ te'ṅghrimūlaṁ
 no severan yāvadāśānubaddhāḥ||
+en: I am burned by your unbearable heat, by this fever that is cool and fierce at once and exceedingly strong. So long as embodied beings are bound by their desires and do not serve the sole of your foot, so long does their suffering last.
+tel: సహింపరాని నీ తేజముచే, శాంతము మరియు ఉగ్రము ఐన, మిక్కిలి తీవ్రమైన ఈ జ్వరముచే నేను తపించుచున్నాను. దేహధారులు ఆశలతో కట్టుబడి నీ పాదమూలమును సేవింపనంత వరకు వారి తాపము ఉండును.
+hi: आपके असह्य तेज से, शान्त और उग्र दोनों रूपवाले इस अत्यन्त प्रबल ज्वर से मैं जल रहा हूँ। जब तक देहधारी आशाओं से बँधे रहकर आपके चरणमूल की सेवा नहीं करते, तब तक उनका ताप बना रहता है।
 
 --- verse 29 ---
 deva:
@@ -270,6 +354,9 @@ iast:
 śrībhagavānuvāca
 triśiraste prasanno'smi vyetu te majjvarād bhayam|
 yo nau smarati saṁvādaṁ tasya tvanna bhaved bhayam||
+en: The blessed Lord said: O you of three heads, I am pleased with you. Let your fear of my fever go. Whoever remembers this talk of ours shall have no fear of you.
+tel: శ్రీభగవానుడు పలికెను: మూడు తలలు గలవాడా, నీపై నేను ప్రసన్నుడైతిని. నా జ్వరము వలని నీ భయము తొలగిపోవును గాక. మన ఈ సంవాదమును స్మరించువానికి నీ వలని భయము ఉండదు.
+hi: श्रीभगवान् ने कहा: हे त्रिशिरस्, मैं तुमसे प्रसन्न हूँ। मेरे ज्वर से तुम्हारा भय दूर हो जाए। जो हमारे इस संवाद का स्मरण करेगा, उसे तुमसे भय नहीं होगा।
 
 --- verse 30 ---
 deva:
@@ -278,6 +365,9 @@ deva:
 iast:
 ityukto'cyutamānamya gato māheśvaro jvaraḥ|
 bāṇastu rathamārūḍhaḥ prāgādyotsyaṁjanārdanam||
+en: Spoken to in this way, the Maheśvara fever bowed to Acyuta and went away. But Bāṇa, mounted on another chariot, came forward to fight Janārdana.
+tel: ఇట్లు చెప్పబడిన మాహేశ్వర జ్వరము అచ్యుతునికి నమస్కరించి వెళ్ళిపోయెను. బాణుడు మాత్రము మరియొక రథమును ఎక్కి జనార్దనునితో పోరాడుటకు ముందుకు వచ్చెను.
+hi: इस प्रकार कहे जाने पर माहेश्वर ज्वर अच्युत को प्रणाम करके चला गया। परन्तु बाण दूसरे रथ पर चढ़कर जनार्दन से लड़ने के लिए आगे आया।
 
 --- verse 31 ---
 deva:
@@ -286,6 +376,9 @@ deva:
 iast:
 tato bāhusahasreṇa nānāyudhadharo'suraḥ|
 mumoca paramakruddho bāṇāṁścakrāyudhe nṛpa||
+en: Then, O King, the asura, bearing many weapons in his thousand arms, in extreme anger shot arrows at the wielder of the discus.
+tel: రాజా, అప్పుడు వేయి చేతులతో అనేక ఆయుధములను ధరించిన ఆ అసురుడు మిక్కిలి కోపించి చక్రాయుధునిపై బాణములను విడిచెను.
+hi: हे राजन्, तब सहस्र भुजाओं में अनेक आयुध धारण किए हुए उस असुर ने अत्यन्त क्रुद्ध होकर चक्रधारी पर बाण छोड़े।
 
 --- verse 32 ---
 deva:
@@ -294,6 +387,9 @@ deva:
 iast:
 tasyāsyato'strāṇyasakṛccakreṇa kṣuraneminā|
 ciccheda bhagavān bāhūn śākhā iva vanaspateḥ||
+en: As he kept hurling his weapons, the blessed Lord cut off his arms again and again with the discus, whose rim is a razor, as one cuts the branches of a tree.
+tel: అతడు అస్త్రములను విడుచుచుండగా, భగవంతుడు కత్తివంటి అంచు గల చక్రముతో చెట్టు కొమ్మలను నరకునట్లు అతని చేతులను మాటిమాటికి ఖండించెను.
+hi: वह अस्त्र फेंकता ही जा रहा था, तब भगवान् ने छुरे जैसी धारवाले चक्र से उसकी भुजाओं को वृक्ष की शाखाओं की तरह बार बार काट डाला।
 
 --- verse 33 ---
 deva:
@@ -302,6 +398,9 @@ deva:
 iast:
 bāhuṣucchidyamāneṣu bāṇasya bhagavān bhavaḥ|
 bhaktānukampyupavrajya cakrāyudhamabhāṣata||
+en: While Bāṇa's arms were being cut off, the lord Bhava, in compassion for his devotee, came near and spoke to the wielder of the discus.
+tel: బాణుని చేతులు ఖండింపబడుచుండగా, భగవంతుడైన భవుడు తన భక్తునిపై కరుణతో దగ్గరకు వచ్చి చక్రాయుధునితో పలికెను.
+hi: बाण की भुजाएँ कटती जा रही थीं, तब भगवान् भव अपने भक्त पर दया करके निकट आकर चक्रधारी से बोले।
 
 --- verse 34 ---
 deva:
@@ -312,18 +411,24 @@ iast:
 śrīrudra uvāca
 tvaṁ hi brahma paraṁ jyotirgūḍhaṁ brahmaṇi vāṅ maye|
 yaṁ paśyantyamalātmāna ākāśamiva kevalam||
+en: Śrī Rudra said: You alone are Brahman, the supreme light, hidden in the Brahman that is made of speech. Those whose hearts are pure see you as they see the sky, alone and without a second.
+tel: శ్రీరుద్రుడు పలికెను: నీవే పరబ్రహ్మము, పరమ జ్యోతి, వాక్కుతో కూడిన బ్రహ్మములో దాగియున్నవాడు. నిర్మల మనస్సు గలవారు నిన్ను ఆకాశమువలె కేవలముగా చూచుచున్నారు.
+hi: श्रीरुद्र ने कहा: आप ही परब्रह्म हैं, परम ज्योति हैं, वाणीरूप ब्रह्म में छिपे हुए हैं। निर्मल हृदयवाले आपको आकाश की तरह केवल रूप में देखते हैं।
 
 --- verse 35 ---
 deva:
 नाभिर्नभोऽग्निर्मुखमम्बु रेतो
-द्यौः शीर्षमाशा श्रुतिरङ् घ्रिरुर्वी।
+द्यौः शीर्षमाशा श्रुतिरङ्घ्रिरुर्वी।
 चन्द्रो मनो यस्य दृगर्क आत्मा
 अहं समुद्रो जठरं भुजेन्द्रः॥
 iast:
 nābhirnabho'gnirmukhamambu reto
-dyauḥ śīrṣamāśā śrutiraṅ ghrirurvī|
+dyauḥ śīrṣamāśā śrutiraṅghrirurvī|
 candro mano yasya dṛgarka ātmā
 ahaṁ samudro jaṭharaṁ bhujendraḥ||
+en: The sky is his navel, fire his mouth, water his seed, heaven his head, the quarters his hearing, the earth his feet, the moon his mind, the sun his eye, and I am his sense of self; the ocean is his belly and Indra his arms.
+tel: ఆకాశము అతని నాభి, అగ్ని ముఖము, జలము రేతస్సు, స్వర్గము శిరస్సు, దిక్కులు చెవులు, భూమి పాదములు, చంద్రుడు మనస్సు, సూర్యుడు కన్ను, నేను అతని అహంకారము, సముద్రము ఉదరము, ఇంద్రుడు బాహువులు.
+hi: आकाश उनकी नाभि है, अग्नि मुख, जल रेतस्, स्वर्ग सिर, दिशाएँ कान, पृथ्वी चरण, चन्द्र मन, सूर्य नेत्र और मैं उनका अहंकार हूँ, समुद्र उदर है और इन्द्र भुजाएँ हैं।
 
 --- verse 36 ---
 deva:
@@ -336,6 +441,9 @@ romāṇi yasyauṣadhayo'mbuvāhāḥ
 keśā viriñco dhiṣaṇā visargaḥ|
 prajāpatirhṛdayaṁ yasya dharmaḥ
 sa vai bhavān puruṣo lokakalpaḥ||
+en: The herbs are his hairs, the clouds his locks, Viriñca his understanding, Prajāpati his power to beget, and dharma his heart. You indeed are that Puruṣa, the shaper of the worlds.
+tel: ఓషధులు అతని రోమములు, మేఘములు కేశములు, విరించుడు బుద్ధి, ప్రజాపతి ప్రజననశక్తి, ధర్మము హృదయము. నీవే లోకములను కల్పించు ఆ పురుషుడు.
+hi: ओषधियाँ उनके रोम हैं, बादल केश, विरिञ्च बुद्धि, प्रजापति प्रजनन शक्ति और धर्म हृदय है। आप ही वह पुरुष हैं, जो लोकों की रचना करते हैं।
 
 --- verse 37 ---
 deva:
@@ -348,6 +456,9 @@ tavāvatāro'yamakuṇṭhadhāman
 dharmasya guptyai jagato bhavāya|
 vayaṁ ca sarve bhavatānubhāvitā
 vibhāvayāmo bhuvanāni sapta||
+en: O you of undimmed splendour, this descent of yours is for the guarding of dharma and for the good of the world. And all of us, made able by you, give light to the seven worlds.
+tel: మందగించని తేజము గలవాడా, నీ ఈ అవతారము ధర్మమును రక్షించుటకు, లోకమునకు మేలు కలిగించుటకు. నీచే శక్తి పొందిన మేమందరము ఏడు లోకములకు వెలుగును ఇచ్చుచున్నాము.
+hi: हे अकुण्ठ तेजवाले, आपका यह अवतार धर्म की रक्षा के लिए और जगत् के कल्याण के लिए है। आपसे सामर्थ्य पाकर हम सब सातों लोकों को प्रकाशित करते हैं।
 
 --- verse 38 ---
 deva:
@@ -360,6 +471,9 @@ tvameka ādyaḥ puruṣo'dvitīya-
 sturyaḥ svadṛggheturaheturīśaḥ|
 pratīyase'thāpi yathāvikāraṁ
 svamāyayā sarvaguṇaprasiddhyai||
+en: You are the one, the first Puruṣa, without a second, the fourth, your own witness, the cause that has no cause, the Lord. Yet you appear as though you were subject to change, by your own māyā, so that all the guṇas may come forth.
+tel: నీవు ఒక్కడవే, ఆద్యుడవు, పురుషుడవు, రెండవవాడు లేనివాడవు, తుర్యుడవు, తనకు తానే సాక్షి, కారణమైనను కారణము లేనివాడవు, ఈశ్వరుడవు. అయినను గుణములన్నియు వెల్లడియగుటకు నీ మాయచే వికారము పొందినట్లు కనబడుచున్నావు.
+hi: आप एक हैं, आद्य हैं, पुरुष हैं, अद्वितीय हैं, तुर्य हैं, अपने ही साक्षी हैं, सबके कारण और स्वयं अकारण हैं, ईश्वर हैं। फिर भी सब गुणों के प्रकट होने के लिए अपनी माया से आप विकारवाले जैसे दिखाई देते हैं।
 
 --- verse 39 ---
 deva:
@@ -372,6 +486,9 @@ yathaiva sūryaḥ pihitaśchāyayā svayā
 chāyāṁ ca rūpāṇi ca saṁcakāsti|
 evaṁ guṇenāpihito guṇāṁstva-
 mātmapradīpo guṇinaśca bhūman||
+en: Just as the sun, covered by its own shadow, shows both that shadow and the forms, so you, covered by the guṇa, O infinite one, being a lamp to yourself, show the guṇas and those who possess them.
+tel: సూర్యుడు తన ఛాయచే కప్పబడినను ఆ ఛాయను, రూపములను ప్రకాశింపజేయునట్లు, భూమా, గుణముచే కప్పబడిన నీవు స్వయముగా వెలుగు గలవాడై గుణములను, గుణవంతులను ప్రకాశింపజేయుచున్నావు.
+hi: जैसे सूर्य अपनी छाया से ढका होकर भी उस छाया और रूपों को प्रकाशित करता है, वैसे ही हे भूमन्, गुण से ढके होकर भी आप स्वयंप्रकाश होकर गुणों और गुणवालों को प्रकाशित करते हैं।
 
 --- verse 40 ---
 deva:
@@ -380,6 +497,9 @@ deva:
 iast:
 yanmāyāmohitadhiyaḥ putradāragṛhādiṣu|
 unmajjanti nimajjanti prasaktā vṛjinārṇave||
+en: Those whose understanding is deluded by your māyā cling to sons, wife, house and the rest, and rise and sink in the ocean of sin.
+tel: నీ మాయచే బుద్ధి మోహము పొందినవారు కుమారులు, భార్య, ఇల్లు మొదలైన వానిపై ఆసక్తి కలిగి పాపముల సముద్రములో మునుగుచు తేలుచు ఉన్నారు.
+hi: आपकी माया से जिनकी बुद्धि मोहित है, वे पुत्र, स्त्री, घर आदि में आसक्त होकर पाप के समुद्र में उभरते और डूबते रहते हैं।
 
 --- verse 41 ---
 deva:
@@ -388,6 +508,9 @@ deva:
 iast:
 devadattamimaṁ labdhvā nṛlokamajitendriyaḥ|
 yo nādriyeta tvatpādau sa śocyo hyātmavaṁcakaḥ||
+en: Having obtained this human birth, which the gods have given, a man whose senses are not mastered and who does not honour your two feet is to be pitied, for he cheats himself.
+tel: దేవతలు ఇచ్చిన ఈ మానవ జన్మను పొందియు ఇంద్రియములను జయింపక నీ పాదములను గౌరవింపనివాడు శోచనీయుడు, ఏలయనగా అతడు తనను తానే మోసగించుకొనుచున్నాడు.
+hi: देवताओं के दिए हुए इस मनुष्य जन्म को पाकर भी जो इन्द्रियों को वश में न करके आपके चरणों का आदर नहीं करता, वह शोचनीय है, क्योंकि वह अपने को ही ठगता है।
 
 --- verse 42 ---
 deva:
@@ -396,6 +519,9 @@ deva:
 iast:
 yastvāṁ visṛjate martya ātmānaṁ priyamīśvaram|
 viparyayendriyārthārthaṁ viṣamattyamṛtaṁ tyajan||
+en: A mortal who gives you up, his own Self, his dear one, his Lord, and turns to the wrong objects of the senses, eats poison and leaves nectar aside.
+tel: నీవే తన ఆత్మ, ప్రియుడు, ఈశ్వరుడు అయినను నిన్ను విడిచి, తప్పుడు ఇంద్రియ విషయముల కొరకు ప్రవర్తించు మానవుడు అమృతమును వదలి విషమును తినుచున్నాడు.
+hi: जो मरणधर्मा आपको, जो उसका आत्मा, प्रिय और ईश्वर हैं, छोड़ देता है और विपरीत इन्द्रियविषयों के लिए चलता है, वह अमृत को त्यागकर विष खाता है।
 
 --- verse 43 ---
 deva:
@@ -404,6 +530,9 @@ deva:
 iast:
 ahaṁ brahmātha vibudhā munayaścāmalāśayāḥ|
 sarvātmanā prapannāstvāmātmānaṁ preṣṭhamīśvaram||
+en: I, and Brahmā, and the wise gods, and the sages of pure heart have taken refuge with our whole being in you, the Self, the dearest, the Lord.
+tel: నేను, బ్రహ్మ, వివేకవంతులైన దేవతలు, నిర్మల హృదయముల మునులు సర్వాత్మతో నీకే శరణు పొందితిమి. నీవే ఆత్మ, ప్రియతముడు, ఈశ్వరుడు.
+hi: मैं, ब्रह्मा, विबुध देवता और निर्मल हृदयवाले मुनि, हम सबने सम्पूर्ण भाव से आपकी शरण ली है, जो आत्मा, प्रियतम और ईश्वर हैं।
 
 --- verse 44 ---
 deva:
@@ -416,6 +545,9 @@ taṁ tvā jagatsthityudayāntahetuṁ
 samaṁ praśāntaṁ suhṛdātmadaivam|
 ananyamekaṁ jagadātmaketaṁ
 bhavāpavargāya bhajāma devam||
+en: We worship you, O God, for release from worldly existence, you who are the cause of the world's standing, rising and ending, the same to all, utterly at peace, the friend, the Self, the deity, without another, one, and the resting place of the world.
+tel: భవబంధము నుండి విముక్తి కొరకు మేము నిన్ను ఆరాధించుచున్నాము, దేవా. నీవు జగత్తు నిలుచుటకు, పుట్టుటకు, అంతమగుటకు కారణము, సమానుడు, ప్రశాంతుడు, స్నేహితుడు, ఆత్మ, దైవము, వేరొకడు లేనివాడు, ఒక్కడవే, జగత్తునకు ఆశ్రయము.
+hi: हे देव, भव से छुटकारे के लिए हम आपका भजन करते हैं। आप जगत् की स्थिति, उत्पत्ति और अन्त के कारण हैं, सम हैं, प्रशान्त हैं, सुहृद्, आत्मा और देव हैं, अनन्य हैं, एक हैं और जगत् के आश्रय हैं।
 
 --- verse 45 ---
 deva:
@@ -428,6 +560,9 @@ ayaṁ mameṣṭo dayito'nuvartī
 mayābhayaṁ dattamamuṣya deva|
 sampādyatāṁ tad bhavataḥ prasādo
 yathā hi te daityapatau prasādaḥ||
+en: This one is dear to me, loved by me, and he follows me. Protection has been given to him by me, O God. Let that favour of yours be shown to him, as the favour you showed to the lord of the Daityas.
+tel: ఇతడు నాకు ఇష్టుడు, ప్రియుడు, నన్ను అనుసరించువాడు. దేవా, నేను ఇతనికి అభయము ఇచ్చితిని. దైత్యపతికి నీవు చూపిన అనుగ్రహము వలెనే నీ అనుగ్రహము ఇతనికి కలుగునట్లు చేయుము.
+hi: यह मुझे इष्ट है, प्रिय है और मेरा अनुवर्ती है। हे देव, मैंने इसे अभय दिया है। जैसा अनुग्रह आपने दैत्यपति पर किया था, वैसा ही अनुग्रह इस पर भी पूर्ण हो।
 
 --- verse 46 ---
 deva:
@@ -438,6 +573,9 @@ iast:
 śrībhagavānuvāca
 yadāttha bhagavaṁstvannaḥ karavāma priyaṁ tava|
 bhavato yad vyavasitaṁ tanme sādhvanumoditam||
+en: The blessed Lord said: What you say, O lord, we shall do, for it is dear to you. What you have decided is well approved by me.
+tel: శ్రీభగవానుడు పలికెను: భగవంతుడా, నీవు చెప్పినట్లే మేము చేయుదుము; అది నీకు ప్రియమైనది. నీవు నిశ్చయించినది నాకు మంచిగా అంగీకారమైనది.
+hi: श्रीभगवान् ने कहा: हे भगवन्, आप जो कहते हैं, वही हम करेंगे, क्योंकि वह आपको प्रिय है। आपने जो निश्चय किया है, वह मुझे भली भाँति स्वीकार है।
 
 --- verse 47 ---
 deva:
@@ -446,6 +584,9 @@ deva:
 iast:
 avadhyo'yaṁ mamāpyeṣa vairocanisuto'suraḥ|
 prahrādāya varo datto na vadhyo me tavānvayaḥ||
+en: This asura, the son of Vairocani, must not be slain by me either. A boon was given to Prahrāda: no one of your line shall be slain by me.
+tel: వైరోచని కుమారుడైన ఈ అసురుడు నాకును వధింపదగినవాడు కాడు. ప్రహ్రాదునికి నేను వరము ఇచ్చితిని, నీ వంశమువారిని నేను చంపనని.
+hi: वैरोचनि के पुत्र यह असुर मेरे लिए भी अवध्य है। प्रह्राद को मैंने यह वर दिया था कि तुम्हारे वंश का कोई मेरे हाथ से मारा नहीं जाएगा।
 
 --- verse 48 ---
 deva:
@@ -454,6 +595,9 @@ deva:
 iast:
 darpopaśamanāyāsya pravṛkṇā bāhavo mayā|
 sūditaṁ ca balaṁ bhūri yacca bhārāyitaṁ bhuvaḥ||
+en: To put down his pride his arms have been cut off by me, and his great army, which had become a burden to the earth, has been destroyed.
+tel: ఇతని గర్వమును అణచుటకే నేను ఇతని చేతులను నరికితిని. భూమికి భారమైన ఇతని గొప్ప సేనను నాశనము చేసితిని.
+hi: इसके गर्व को शान्त करने के लिए ही मैंने इसकी भुजाएँ काटी हैं, और पृथ्वी के लिए भार बनी हुई इसकी बड़ी सेना का नाश किया है।
 
 --- verse 49 ---
 deva:
@@ -462,6 +606,9 @@ deva:
 iast:
 catvāro'sya bhujāḥ śiṣṭā bhaviṣyantyajarāmarāḥ|
 pārṣadamukhyo bhavato nakutaścidbhayo'suraḥ||
+en: Four of his arms are left, and they shall be free from old age and death. He shall be a chief among your attendants, an asura who has no fear from any quarter.
+tel: ఇతనికి నాలుగు చేతులు మిగిలియున్నవి; అవి ముసలితనము, మరణము లేనివి అగును. ఇతడు నీ పార్షదులలో ముఖ్యుడై ఎక్కడి నుండియు భయము లేని అసురుడై ఉండును.
+hi: इसकी चार भुजाएँ शेष हैं, और वे अजर और अमर हो जाएँगी। यह आपके पार्षदों में मुख्य होकर किसी भी ओर से भय न रखनेवाला असुर रहेगा।
 
 --- verse 50 ---
 deva:
@@ -470,6 +617,9 @@ deva:
 iast:
 iti labdhvābhayaṁ kṛṣṇaṁ praṇamya śirasāsuraḥ|
 prādyumniṁ rathamāropya savadhvā samupānayat||
+en: Having thus obtained safety, the asura bowed his head to Kṛṣṇa, placed Pradyumna's son with his bride upon a chariot, and brought him near.
+tel: ఇట్లు అభయమును పొందిన ఆ అసురుడు కృష్ణునికి శిరసు వంచి నమస్కరించి, ప్రద్యుమ్నుని కుమారుని వధువుతో కూడ రథముపై ఎక్కించి దగ్గరకు తీసుకొని వచ్చెను.
+hi: इस प्रकार अभय पाकर उस असुर ने कृष्ण को सिर झुकाकर प्रणाम किया और प्रद्युम्न के पुत्र को वधू के साथ रथ पर चढ़ाकर निकट ले आया।
 
 --- verse 51 ---
 deva:
@@ -478,6 +628,9 @@ deva:
 iast:
 akṣauhiṇyā parivṛtaṁ suvāsaḥsamalaṁkṛtam|
 sapatnīkaṁ puraskṛtya yayau rudrānumoditaḥ||
+en: Kṛṣṇa, with Rudra's consent, placed in front Aniruddha, who was encircled by an akṣauhiṇī, well dressed and well adorned, and was with his wife, and then departed.
+tel: రుద్రుని అనుమతితో కృష్ణుడు, అక్షౌహిణితో చుట్టబడి, మంచి వస్త్రములతో బాగుగా అలంకరింపబడి, భార్యతో కూడియున్న అనిరుద్ధుని ముందు ఉంచుకొని బయలుదేరెను.
+hi: रुद्र की अनुमति लेकर कृष्ण ने अक्षौहिणी से घिरे, सुन्दर वस्त्रों से सजे और पत्नी के साथ रहनेवाले अनिरुद्ध को आगे करके प्रस्थान किया।
 
 --- verse 52 ---
 deva:
@@ -490,6 +643,9 @@ svarājadhānīṁ samalaṁkṛtāṁ dhvajaiḥ
 satoraṇairukṣitamārgacatvarām|
 viveśa śaṁkhānakadundubhisvanai-
 rabhyudyataḥ paurasuhṛddvijātibhiḥ||
+en: He entered his own capital, which was adorned with flags and with archways and whose roads and squares had been sprinkled with water, amid the sounds of conches, drums and kettledrums, and the citizens, his friends and the twice-born came forward to welcome him.
+tel: ధ్వజములతో, తోరణములతో అలంకరింపబడి, మార్గములు చత్వరములు నీటితో తడుపబడిన తన రాజధానిలో శంఖములు, ఆనకములు, దుందుభుల ధ్వనుల మధ్య ఆయన ప్రవేశించెను. పౌరులు, మిత్రులు, ద్విజులు ఎదురుగా వచ్చి స్వాగతము చెప్పిరి.
+hi: ध्वजाओं और तोरणों से सजी हुई, जिसके मार्ग और चौक जल से सींचे गए थे, अपनी उस राजधानी में शंख, आनक और दुन्दुभि के शब्दों के बीच उन्होंने प्रवेश किया। नगरवासियों, मित्रों और द्विजों ने आगे आकर उनका स्वागत किया।
 
 --- verse 53 ---
 deva:
@@ -498,9 +654,15 @@ deva:
 iast:
 ya evaṁ kṛṣṇavijayaṁ śaṁkareṇa ca saṁyugam|
 saṁsmaret prātarutthāya na tasya syāt parājayaḥ||
+en: Whoever rises in the morning and remembers in this way Kṛṣṇa's victory and the battle with Śaṁkara, for him there shall be no defeat.
+tel: ఎవడు ఉదయమున లేచి కృష్ణుని ఈ విజయమును, శంకరునితో జరిగిన యుద్ధమును స్మరించునో, అతనికి పరాజయము కలుగదు.
+hi: जो प्रातःकाल उठकर कृष्ण के इस विजय और शंकर के साथ हुए युद्ध का स्मरण करता है, उसकी पराजय नहीं होती।
 
 --- verse none ---
 deva:
 इति श्रीमद्भागवते महापुराणे पारमहंस्यां संहितायां दशमस्कन्धे उत्तरार्धे ऽनिरुद्धानयनं नाम त्रिषष्टितमोऽध्यायः॥ ६३॥
 iast:
 iti śrīmadbhāgavate mahāpurāṇe pāramahaṁsyāṁ saṁhitāyāṁ daśamaskandhe uttarārdhe 'niruddhānayanaṁ nāma triṣaṣṭitamo'dhyāyaḥ|| 63||
+en: Thus ends the sixty-third adhyāya, named the bringing of Aniruddha, in the second half of the tenth skandha of the Śrīmad Bhāgavata Mahāpurāṇa, the saṁhitā of the paramahaṁsas.
+tel: ఇట్లు పరమహంసల సంహిత అయిన శ్రీమద్భాగవత మహాపురాణములో దశమ స్కంధము ఉత్తరార్ధములో అనిరుద్ధానయనము అను అరువది మూడవ అధ్యాయము సమాప్తము.
+hi: इस प्रकार परमहंसों की संहिता श्रीमद्भागवत महापुराण के दशम स्कन्ध के उत्तरार्ध में अनिरुद्धानयन नामक तिरसठवाँ अध्याय समाप्त हुआ।

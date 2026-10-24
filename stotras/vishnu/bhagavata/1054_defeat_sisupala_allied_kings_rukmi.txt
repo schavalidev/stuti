@@ -9,7 +9,7 @@ Type: Purāṇa (an adhyāya of the Śrīmad Bhāgavata, Skandha 10)
 
 Source / recension: Base text and authority: the Gītā Press, Gorakhpur Śrīmadbhāgavata Mahāpurāṇa with Hindi translation, Part 2 (Gītā Press code 27), archive.org item `shrimadbhagwat-mahapuran-bhag-2`, printed pages 474–481; the PDF page numbers are the printed ones. The PDF carries the typesetter's own text layer in the Chanakya font encoding, and the text was decoded from it by machine with `bin/bhagavata/chanakya.py`, not read off OCR or typed. The decoder was checked against GRETIL over all twelve skandhas before any file was written, and the differences that remain were sampled and found to be readings of the two editions. Second witness: GRETIL's `sa_bhAgavatapurANa.xml` (IAST, contributed by Ulrich Stiehl), a separate editorial lineage, compared verse by verse by machine. The TTD edition with the commentaries of Śrīdhara, Vīrarāghava and Vijayadhvaja (archive.org `Bhagavata_Purana_With_Multiple_Commentaries_TTD_Critical_Edition`) is the third witness where one is needed; it was not read for this file. The IAST was generated mechanically from the Devanāgarī with `bin/dev2iast.py`.
 
-Recension note: Text-only file, written 1 Oct 2026 at the user's instruction to lay down the whole Bhāgavata first: the English, Telugu and Hindi meanings are still to be added, and the witnesses' differences listed here have been recorded by machine and not yet adjudicated. The print is followed throughout. The print numbers 60 verses and GRETIL numbers 60. Of the 60 verses GRETIL has under the same number, 35 agree with the print letter for letter once spacing and the spelling of nasals are set aside; the rest differ: 2, 3, 4, 6, 12, 13, 19, 20, 21, 25, 26, 27, 28, 35, 36, 40, 43, 45, 46, 49, 51, 52, 53, 56, 57. Spacing is the print's, as its text layer gives it; in a few places justification has left a space inside a word, and these are still to be closed when the verse is read. The speaker lines (श्रीशुक उवाच and the others) are printed in italic above the verse they introduce, and are given as its first line.
+Recension note: Meanings written 23 Oct 2026 (session S78). The differences between the witnesses listed below were read as the verses were glossed; except where this note says otherwise, each is a spelling, a sandhi or a word order of the two editions, none of them changes the sense, and the print's reading therefore stands unbracketed. The print is followed throughout. The print numbers 60 verses and GRETIL numbers 60. Of the 60 verses GRETIL has under the same number, 35 agree with the print letter for letter once spacing and the spelling of nasals are set aside; the rest differ: 2, 3, 4, 6, 12, 13, 19, 20, 21, 25, 26, 27, 28, 35, 36, 40, 43, 45, 46, 49, 51, 52, 53, 56, 57. Spacing is the print's, as its text layer gives it. The speaker lines (श्रीशुक उवाच and the others) are printed in italic above the verse they introduce, and are given as its first line. No space was closed and none was restored: the justification detector found no broken word, and in the joins where the print's layer runs two of GRETIL's words together the first word always ends in a virāma consonant, where the script requires the ligature. The differences the note lists above are spellings of the nasals (संकर्षण for saṅkarṣaṇa, पतंग for pataṅga), readings of the two editions (कुत्र यासि for yatra yāsi at 25, घोरतरः for ghoratamaḥ at 40, नृणामेष कल्प्यते for nṛṇām eva kalpate at 43, आदाय for ādhāya at 27), and the place where GRETIL divides verses 51 and 52 one line earlier than the print. None of them changes the sense. The speaker line at verse 34 is printed श्रीशुकउवाच without the space it carries at verses 1 and 50; GRETIL has no speaker lines, so no second witness can adjudicate it, and two already glossed files keep that spelling, so it is left exactly as printed. Verses 38 to 49 are Balarāma's words to Rukmiṇī, and verse 37 alone is spoken to Kṛṣṇa; the meanings are written on that reading, which the vocatives support (साध्वि at 38, शुचिस्मिते at 49).
 
 Verse count: 60, plus the closing colophon printed unnumbered.
 
@@ -24,6 +24,9 @@ iast:
 śrīśuka uvāca
 iti sarve susaṁrabdhā vāhānāruhya daṁśitāḥ|
 svaiḥ svairbalaiḥ parikrāntā anvīyurdhṛtakārmukāḥ||
+en: Śrī Śuka said: Thus all of them, filled with great anger, put on their armour, mounted their vehicles, and followed, each surrounded by his own forces, holding their bows.
+tel: శ్రీశుకుడు పలికెను: ఈ విధముగా వారందరు మిక్కిలి కోపముతో కవచములను ధరించి, తమ వాహనములను ఎక్కి, తమ తమ సేనలతో చుట్టుకొని, ధనువులను చేత పట్టుకొని వెంబడించిరి.
+hi: श्रीशुकदेवजी ने कहा: इस प्रकार वे सब अत्यन्त क्रोध से भरकर कवच धारण किये, अपने वाहनों पर चढ़े और अपनी-अपनी सेनाओं से घिरकर, धनुष हाथ में लेकर पीछे चले.
 
 --- verse 2 ---
 deva:
@@ -32,6 +35,9 @@ deva:
 iast:
 tānāpatata ālokya yādavānīkayūthapāḥ|
 tasthustatsaṁmukhā rājanvisphūrjya svadhanūṁṣi te||
+en: Seeing them rushing on, the leaders of the Yādava army stood facing them, O king, and twanged their bows.
+tel: ఓ రాజా, వారు మీదికి వచ్చుట చూచి యాదవ సేనానాయకులు వారికి ఎదురుగా నిలిచి తమ ధనువులను మోగించిరి.
+hi: हे राजन्, उन्हें आते देखकर यादव सेना के नायक उनके सामने खड़े हो गये और अपने धनुष टंकारने लगे.
 
 --- verse 3 ---
 deva:
@@ -40,6 +46,9 @@ deva:
 iast:
 aśvapṛṣṭhe gajaskandhe rathopasthe ca kovidāḥ|
 mumucuḥ śaravarṣāṇi meghā adriṣvapo yathā||
+en: Skilled men on horseback, on the shoulders of elephants and standing in chariots released showers of arrows, as clouds pour water upon the mountains.
+tel: గుఱ్ఱముల వీపులపై, ఏనుగుల మూపులపై, రథములలో నిలిచి ఉన్న నేర్పరులు, మేఘములు పర్వతములపై నీటిని కురిపించునట్లు బాణముల వర్షములను విడిచిరి.
+hi: घोड़ों की पीठ पर, हाथियों के कंधों पर और रथों में खड़े हुए निपुण वीरों ने बाणों की वर्षा की, जैसे बादल पर्वतों पर जल बरसाते हैं.
 
 --- verse 4 ---
 deva:
@@ -48,6 +57,9 @@ deva:
 iast:
 patyurbalaṁ śarāsāraiśchannaṁ vīkṣya sumadhyamā|
 savrīḍamaikṣattadvaktraṁ bhayavihvalalocanā||
+en: Seeing her husband's force covered by that downpour of arrows, the slender lady looked at his face with shyness, her eyes troubled by fear.
+tel: బాణముల వర్షముతో తన భర్త సేన కప్పబడుట చూచి, ఆ సన్నని నడుము కల ఇల్లాలు భయముతో కలవరపడిన కన్నులతో సిగ్గుతో అతని ముఖమును చూచెను.
+hi: बाणों की उस वर्षा से अपने पति की सेना को ढकी हुई देखकर उस सुन्दर कटि वाली देवी ने भय से व्याकुल नेत्रों से लज्जापूर्वक उनका मुख देखा.
 
 --- verse 5 ---
 deva:
@@ -56,6 +68,9 @@ deva:
 iast:
 prahasya bhagavānāha mā sma bhairvāmalocane|
 vinaṁkṣyatyadhunaivaitat tāvakaiḥ śātravaṁ balam||
+en: The Lord laughed and said: Do not be afraid, lady of lovely eyes. This army of the enemy will be destroyed this very moment by your own men.
+tel: భగవంతుడు నవ్వి పలికెను: సుందరమైన కన్నులు కలదానా, భయపడకుము. శత్రువుల ఈ సేన ఇప్పుడే నీ వారి చేతనే నశించును.
+hi: भगवान् हँसकर बोले: सुन्दर नेत्रों वाली, भय न करो. शत्रु की यह सेना अभी तुम्हारे ही लोगों के हाथ से नष्ट हो जायगी.
 
 --- verse 6 ---
 deva:
@@ -64,6 +79,9 @@ deva:
 iast:
 teṣāṁ tadvikramaṁ vīrā gadasaṁkarṣaṇādayaḥ|
 amṛṣyamāṇā nārācairjaghnurhayagajān rathān||
+en: The heroes Gada, Saṁkarṣaṇa and the others could not bear that valour of theirs, and with their arrows they struck down the horses, the elephants and the chariots.
+tel: గద, సంకర్షణ మొదలగు వీరులు వారి ఆ పరాక్రమమును సహింపక, తమ బాణములతో గుఱ్ఱములను, ఏనుగులను, రథములను కూల్చిరి.
+hi: गद, संकर्षण आदि वीरों ने उनका वह पराक्रम सहन नहीं किया और अपने बाणों से घोड़ों, हाथियों और रथों को मार गिराया.
 
 --- verse 7 ---
 deva:
@@ -72,6 +90,9 @@ deva:
 iast:
 petuḥ śirāṁsi rathināmaśvināṁ gajināṁ bhuvi|
 sakuṇḍalakirīṭāni soṣṇīṣāṇi ca koṭiśaḥ||
+en: The heads of the chariot-fighters, of the horsemen and of the elephant-riders fell upon the ground in crores, some with earrings and crowns, some with turbans.
+tel: రథికుల, గుఱ్ఱపు రౌతుల, ఏనుగుల మీది వీరుల తలలు కోట్ల కొలది నేలపై పడెను; కొన్ని చెవి కమ్మలతో కిరీటములతో, కొన్ని తలగుడ్డలతో ఉండెను.
+hi: रथियों, घुड़सवारों और हाथीसवारों के सिर करोड़ों की संख्या में भूमि पर गिरे; कुछ कुण्डलों और मुकुटों से युक्त थे और कुछ पगड़ियों से.
 
 --- verse 8 ---
 deva:
@@ -80,6 +101,9 @@ deva:
 iast:
 hastāḥ sāsigadeṣvāsāḥ karabhā ūravo'ṅghrayaḥ|
 aśvāśvataranāgoṣṭrakharamartyaśirāṁsi ca||
+en: There fell hands holding swords, maces and bows, and forearms, thighs and feet, and the heads of horses, mules, elephants, camels, asses and men.
+tel: కత్తులు, గదలు, ధనువులు పట్టిన చేతులు, ముంజేతులు, తొడలు, పాదములు పడెను; గుఱ్ఱముల, కంచరగాడిదల, ఏనుగుల, ఒంటెల, గాడిదల, మనుష్యుల తలలును పడెను.
+hi: तलवार, गदा और धनुष लिये हुए हाथ, कलाइयाँ, जाँघें और पैर गिरे; और घोड़ों, खच्चरों, हाथियों, ऊँटों, गधों तथा मनुष्यों के सिर भी गिरे.
 
 --- verse 9 ---
 deva:
@@ -88,6 +112,9 @@ deva:
 iast:
 hanyamānabalānīkā vṛṣṇibhirjayakāṁkṣibhiḥ|
 rājāno vimukhā jagmurjarāsandhapuraḥsarāḥ||
+en: Their forces being struck down by the Vṛṣṇis, who desired victory, the kings turned their faces away and fled, with Jarāsandha at their head.
+tel: విజయమును కోరిన వృష్ణివీరులచే తమ సేనలు నాశనము కాగా, జరాసంధుడు ముందుండి ఆ రాజులు ముఖములు త్రిప్పుకొని పారిపోయిరి.
+hi: विजय चाहने वाले वृष्णिवीरों के द्वारा अपनी सेनाओं के मारे जाने पर वे राजा जरासन्ध को आगे कर मुँह मोड़कर भाग गये.
 
 --- verse 10 ---
 deva:
@@ -96,6 +123,9 @@ deva:
 iast:
 śiśupālaṁ samabhyetya hṛtadāramivāturam|
 naṣṭatviṣaṁ gatotsāhaṁ śuṣyadvadanamabruvan||
+en: They came up to Śiśupāla, who was stricken like a man whose wife has been carried away, his lustre gone, his spirit gone, his face dry, and they said to him:
+tel: భార్యను ఎవరో ఎత్తుకొని పోయిన వానివలె దుఃఖించుచు, తేజము పోయి, ఉత్సాహము పోయి, ముఖము ఎండిపోయిన శిశుపాలుని చేరి వారు ఇట్లు పలికిరి:
+hi: जिसकी पत्नी हर ली गयी हो उस पुरुष के समान दुःखी, तेज से हीन, उत्साह से रहित और सूखे मुख वाले शिशुपाल के पास जाकर वे बोले:
 
 --- verse 11 ---
 deva:
@@ -104,6 +134,9 @@ deva:
 iast:
 bho bhoḥ puruṣaśārdūla daurmanasyamidaṁ tyaja|
 na priyāpriyayo rājan niṣṭhā dehiṣu dṛśyate||
+en: O tiger among men, give up this sorrow of mind. O king, no fixity of the pleasant and the unpleasant is seen among embodied beings.
+tel: ఓ పురుషశార్దూలమా, ఈ మనోవేదనను విడువుము. ఓ రాజా, దేహము ధరించిన వారిలో సుఖమునకు దుఃఖమునకు స్థిరత్వము కనబడదు.
+hi: हे पुरुषों में सिंह, इस मन के खेद को छोड़ दो. हे राजन्, देहधारियों में प्रिय और अप्रिय की कोई स्थिरता नहीं देखी जाती.
 
 --- verse 12 ---
 deva:
@@ -112,6 +145,9 @@ deva:
 iast:
 yathā dārumayī yoṣinnṛtyate kuhakecchayā|
 evamīśvaratantro'yamīhate sukhaduḥkhayoḥ||
+en: As a wooden puppet in the form of a woman is made to dance at the will of the showman, so this man, who is under the control of the Lord, moves in pleasure and in pain.
+tel: కొయ్యతో చేసిన ఆడుబొమ్మ ఆటగాని ఇష్టము ప్రకారము ఆడునట్లే, ఈశ్వరునికి లోబడిన ఈ మనుష్యుడు సుఖములోను దుఃఖములోను ప్రవర్తించును.
+hi: जैसे काठ की बनी स्त्री की पुतली नट की इच्छा के अनुसार नाचती है, वैसे ही ईश्वर के अधीन यह मनुष्य सुख और दुःख में बरतता है.
 
 --- verse 13 ---
 deva:
@@ -120,6 +156,9 @@ deva:
 iast:
 śaureḥ saptadaśāhaṁ vai saṁyugāni parājitaḥ|
 trayoviṁśatibhiḥ sainyairjigya ekamahaṁ param||
+en: I was defeated by Śauri in seventeen battles, and with twenty-three armies I won only one.
+tel: శౌరిచే పదునేడు యుద్ధములలో నేను ఓడిపోయితిని; ఇరువది మూడు సేనలతో ఒక్క యుద్ధమునే నేను గెలిచితిని.
+hi: शौरि के हाथ से सत्रह युद्धों में मैं हार गया; तेईस सेनाओं के साथ केवल एक ही युद्ध मैंने जीता.
 
 --- verse 14 ---
 deva:
@@ -128,6 +167,9 @@ deva:
 iast:
 tathāpyahaṁ na śocāmi na prahṛṣyāmi karhicit|
 kālena daivayuktena jānan vidrāvitaṁ jagat||
+en: Even so I do not grieve, and I am never delighted, for I know that the world is driven about by time, which is joined with destiny.
+tel: అయినను నేను దుఃఖింపను, ఎప్పుడును సంతోషింపను; దైవముతో కూడిన కాలముచే ఈ లోకము తరుమబడుచున్నదని నేను ఎఱుగుదును.
+hi: फिर भी मैं शोक नहीं करता और कभी हर्ष भी नहीं करता, क्योंकि मैं जानता हूँ कि दैव से युक्त काल के द्वारा यह संसार इधर-उधर खदेड़ा जाता है.
 
 --- verse 15 ---
 deva:
@@ -136,6 +178,9 @@ deva:
 iast:
 adhunāpi vayaṁ sarve vīrayūthapayūthapāḥ|
 parājitāḥ phalgutantrairyadubhiḥ kṛṣṇapālitaiḥ||
+en: Now again all of us, who are leaders of the leaders of heroes, have been defeated by the Yadus, whose forces are small and who are protected by Kṛṣṇa.
+tel: ఇప్పుడును వీరనాయకులకు నాయకులమైన మేమందరము, కొద్దిపాటి సేన కలవారైన, కృష్ణుడు కాపాడు యాదవులచే ఓడిపోయితిమి.
+hi: अब भी वीरों के नायकों के नायक हम सब, थोड़ी सेना वाले तथा कृष्ण के द्वारा रक्षित यदुओं के हाथ से हार गये.
 
 --- verse 16 ---
 deva:
@@ -144,6 +189,9 @@ deva:
 iast:
 ripavo jigyuradhunā kāla ātmānusāriṇi|
 tadā vayaṁ vijeṣyāmo yadā kālaḥ pradakṣiṇaḥ||
+en: The enemies have won now, because time follows them. We shall win then, when time turns in our favour.
+tel: కాలము వారిని అనుసరించుచున్నందున ఇప్పుడు శత్రువులు గెలిచిరి. కాలము మనకు అనుకూలమైనప్పుడు మనము గెలుతుము.
+hi: अब शत्रु जीत गये, क्योंकि काल उनके अनुकूल है. जब काल हमारे अनुकूल होगा, तब हम जीतेंगे.
 
 --- verse 17 ---
 deva:
@@ -152,6 +200,9 @@ deva:
 iast:
 evaṁ prabodhito mitraiścaidyo'gāt sānugaḥ puram|
 hataśeṣāḥ punaste'pi yayuḥ svaṁ svaṁ puraṁ nṛpāḥ||
+en: Thus consoled by his friends, the son of Cedi went to his city with his followers, and those kings who were left after the slaughter also went each to his own city.
+tel: ఇట్లు మిత్రులచే ఓదార్పబడిన చైద్యుడు తన అనుచరులతో తన పురమునకు పోయెను; చంపబడగా మిగిలిన ఆ రాజులును తమ తమ పురములకు పోయిరి.
+hi: इस प्रकार मित्रों के समझाने पर चेदिराज अपने अनुचरों के साथ अपने नगर को चला गया, और मारे जाने से बचे हुए वे राजा भी अपने-अपने नगर को गये.
 
 --- verse 18 ---
 deva:
@@ -160,6 +211,9 @@ deva:
 iast:
 rukmī tu rākṣasodvāhaṁ kṛṣṇadviḍasahan svasuḥ|
 pṛṣṭhato'nvagamat kṛṣṇamakṣauhiṇyā vṛto balī||
+en: But Rukmī, who hated Kṛṣṇa, could not bear this rākṣasa marriage of his sister. Strong, and surrounded by an akṣauhiṇī, he followed Kṛṣṇa from behind.
+tel: కృష్ణుని ద్వేషించు రుక్మి తన సోదరి ఈ రాక్షస వివాహమును సహింపలేదు. బలవంతుడైన అతడు ఒక అక్షౌహిణితో చుట్టుకొని కృష్ణుని వెనుకనుండి వెంబడించెను.
+hi: परन्तु कृष्ण से द्वेष रखने वाला रुक्मी अपनी बहिन के इस राक्षस विवाह को सहन न कर सका. बलवान् वह एक अक्षौहिणी से घिरकर कृष्ण के पीछे-पीछे चला.
 
 --- verse 19 ---
 deva:
@@ -168,6 +222,9 @@ deva:
 iast:
 rukmyamarṣī susaṁrabdhaḥ śṛṇvatāṁ sarvabhūbhujām|
 pratijajñe mahābāhurdaṁśitaḥ saśarāsanaḥ||
+en: Rukmī, unable to bear it, filled with great anger, mighty-armed, in armour and with his bow, made a vow in the hearing of all the kings:
+tel: సహింపలేని రుక్మి మిక్కిలి కోపముతో, గొప్ప బాహువులు కలవాడు, కవచము ధరించి, ధనువు పట్టుకొని, రాజులందరు వినుచుండగా ప్రమాణము చేసెను:
+hi: सहन न कर सकने वाले महाबाहु रुक्मी ने अत्यन्त क्रोध से भरकर, कवच पहने और धनुष लिये हुए, सब राजाओं के सुनते हुए प्रतिज्ञा की:
 
 --- verse 20 ---
 deva:
@@ -176,6 +233,9 @@ deva:
 iast:
 ahatvā samare kṛṣṇamapratyūhya ca rukmiṇīm|
 kuṇḍinaṁ na pravekṣyāmi satyametad bravīmi vaḥ||
+en: Without killing Kṛṣṇa in battle and bringing Rukmiṇī back, I shall not enter Kuṇḍina. This I tell you as the truth.
+tel: యుద్ధములో కృష్ణుని చంపక, రుక్మిణిని వెనుకకు తెచ్చుకొనక, నేను కుండినములో అడుగు పెట్టను. ఇది సత్యమని మీకు చెప్పుచున్నాను.
+hi: युद्ध में कृष्ण को मारे बिना और रुक्मिणी को वापस लाये बिना मैं कुण्डिनपुर में प्रवेश नहीं करूँगा. यह सत्य मैं तुमसे कहता हूँ.
 
 --- verse 21 ---
 deva:
@@ -184,6 +244,9 @@ deva:
 iast:
 ityuktvā rathamāruhya sārathiṁ prāha satvaraḥ|
 codayāśvān yataḥ kṛṣṇastasya me saṁyugaṁ bhavet||
+en: Saying this he mounted his chariot and quickly said to his charioteer: Drive the horses to where Kṛṣṇa is. Let there be battle between him and me.
+tel: ఇట్లు పలికి రథము ఎక్కి, తొందరపడుచు సారథితో ఇట్లనెను: కృష్ణుడు ఎక్కడ ఉన్నాడో అక్కడికి గుఱ్ఱములను తోలుము. అతనితో నాకు యుద్ధము జరుగవలెను.
+hi: यह कहकर वह रथ पर चढ़ा और शीघ्रता से सारथि से बोला: जहाँ कृष्ण है वहाँ घोड़ों को हाँको. उसके साथ मेरा युद्ध हो.
 
 --- verse 22 ---
 deva:
@@ -192,6 +255,9 @@ deva:
 iast:
 adyāhaṁ niśitairbāṇairgopālasya sudurmateḥ|
 neṣye vīryamadaṁ yena svasā me prasabhaṁ hṛtā||
+en: Today with sharp arrows I shall take away the pride of strength of that very evil-minded cowherd, by whom my sister was carried away by force.
+tel: ఎవని వలన నా సోదరి బలవంతముగా ఎత్తుకొని పోబడినదో, ఆ మిక్కిలి దుర్బుద్ధి కల గోపాలుని పరాక్రమ గర్వమును ఈ దినము పదునైన బాణములతో నేను తొలగించెదను.
+hi: जिसके द्वारा मेरी बहिन बलपूर्वक हर ली गयी, उस अत्यन्त दुर्बुद्धि ग्वाले के बल के अभिमान को आज मैं तीखे बाणों से दूर करूँगा.
 
 --- verse 23 ---
 deva:
@@ -200,6 +266,9 @@ deva:
 iast:
 vikatthamānaḥ kumatirīśvarasyāpramāṇavit|
 rathenaikena govindaṁ tiṣṭha tiṣṭhetyathāhvayat||
+en: Boasting in this way, the man of poor understanding, who did not know the measure of the Lord, called out to Govinda with a single chariot: Stand, stand.
+tel: ఇట్లు గొప్పలు పలుకుచు, ఈశ్వరుని కొలతను ఎఱుగని ఆ దుర్బుద్ధి ఒక్క రథముతో గోవిందుని పిలిచెను: నిలువుము, నిలువుము.
+hi: इस प्रकार बढ़-बढ़कर बोलता हुआ, ईश्वर का माप न जानने वाला वह दुर्बुद्धि एक ही रथ से गोविन्द को पुकारने लगा: ठहर, ठहर.
 
 --- verse 24 ---
 deva:
@@ -208,6 +277,9 @@ deva:
 iast:
 dhanurvikṛṣya sudṛḍhaṁ jaghne kṛṣṇaṁ tribhiḥ śaraiḥ|
 āha cātra kṣaṇaṁ tiṣṭha yadūnāṁ kulapāṁsana||
+en: Drawing his bow very firmly, he struck Kṛṣṇa with three arrows and said: Stay here a moment, you disgrace of the Yadu family.
+tel: ధనువును మిక్కిలి గట్టిగా లాగి మూడు బాణములతో కృష్ణుని కొట్టి, ఇట్లనెను: యదువంశమునకు మచ్చ తెచ్చినవాడా, ఇక్కడ ఒక క్షణము నిలువుము.
+hi: धनुष को बहुत दृढ़ता से खींचकर उसने तीन बाणों से कृष्ण को मारा और कहा: हे यदुकुल को कलंकित करने वाले, यहाँ क्षण भर ठहर.
 
 --- verse 25 ---
 deva:
@@ -216,6 +288,9 @@ deva:
 iast:
 kutra yāsi svasāraṁ me muṣitvā dhvāṁkṣavaddhaviḥ|
 hariṣye'dya madaṁ manda māyinaḥ kūṭayodhinaḥ||
+en: Where will you go, having stolen my sister as a crow steals the offering? Dull one, today I shall take away the pride of you who are a deceiver and who fight by trickery.
+tel: కాకి హవిస్సును ఎత్తుకొని పోవునట్లు నా సోదరిని దొంగిలించి ఎక్కడికి పోవుచున్నావు? మందబుద్ధీ, మోసగాడవు, కపటముతో పోరాడువాడవు; ఈ దినము నీ గర్వమును నేను తొలగించెదను.
+hi: कौआ हवि को उठा ले जाय, वैसे मेरी बहिन को चुराकर कहाँ जाता है? हे मन्दबुद्धि, तू मायावी है और छल से लड़ने वाला है; आज मैं तेरा अभिमान दूर करूँगा.
 
 --- verse 26 ---
 deva:
@@ -224,6 +299,9 @@ deva:
 iast:
 yāvanna me hato bāṇaiḥ śayīthā muñca dārikām|
 smayan kṛṣṇo dhanuśchittvā ṣaḍbhirvivyādha rukmiṇam||
+en: Release the girl, so long as you have not been laid low by my arrows. Kṛṣṇa smiled, cut his bow, and pierced Rukmī with six arrows.
+tel: నా బాణములచే కూలిపోకముందే ఆ కన్యను విడిచిపెట్టుము. కృష్ణుడు నవ్వి, అతని ధనువును తెగగొట్టి, ఆరు బాణములతో రుక్మిని గుచ్చెను.
+hi: जब तक मेरे बाणों से मारा जाकर गिरा नहीं है, तब तक उस कन्या को छोड़ दे. कृष्ण ने मुसकराकर उसका धनुष काट दिया और छह बाणों से रुक्मी को बेध दिया.
 
 --- verse 27 ---
 deva:
@@ -232,6 +310,9 @@ deva:
 iast:
 aṣṭabhiścaturo vāhān dvābhyāṁ sūtaṁ dhvajaṁ tribhiḥ|
 sa cānyad dhanurādāya kṛṣṇaṁ vivyādha pañcabhiḥ||
+en: With eight arrows he struck the four horses, with two the charioteer, with three the flag. Rukmī took up another bow and pierced Kṛṣṇa with five arrows.
+tel: ఎనిమిది బాణములతో నాలుగు గుఱ్ఱములను, రెండితో సారథిని, మూడితో ధ్వజమును కొట్టెను. అతడు మఱియొక ధనువును తీసుకొని ఐదు బాణములతో కృష్ణుని గుచ్చెను.
+hi: आठ बाणों से चार घोड़ों को, दो से सारथि को और तीन से ध्वजा को मारा. उसने दूसरा धनुष लेकर पाँच बाणों से कृष्ण को बेध दिया.
 
 --- verse 28 ---
 deva:
@@ -240,6 +321,9 @@ deva:
 iast:
 taistāḍitaḥ śaraughaistu ciccheda dhanuracyutaḥ|
 punaranyadupādatta tadapyacchinadavyayaḥ||
+en: Though struck by those floods of arrows, Acyuta cut that bow. Rukmī took up yet another, and the imperishable Lord broke that one too.
+tel: ఆ బాణముల వానతో కొట్టబడినను అచ్యుతుడు ఆ ధనువును తెగగొట్టెను. అతడు ఇంకొక దానిని తీసుకొనెను; అవ్యయుడైన ప్రభువు దానిని కూడ విరిచెను.
+hi: उन बाणों की बाढ़ से मारे जाने पर भी अच्युत ने वह धनुष काट दिया. उसने फिर दूसरा लिया, और अव्यय भगवान् ने उसे भी तोड़ दिया.
 
 --- verse 29 ---
 deva:
@@ -248,6 +332,9 @@ deva:
 iast:
 parighaṁ paṭṭiśaṁ śūlaṁ carmāsī śaktitomarau|
 yad yadāyudhamādatta tat sarvaṁ so'cchinaddhariḥ||
+en: An iron club, a paṭṭiśa, a spear, shield and sword, a śakti and a tomara — whatever weapon he took up, Hari cut it all to pieces.
+tel: పరిఘము, పట్టిశము, శూలము, డాలు, కత్తి, శక్తి, తోమరము — ఏ ఆయుధమును అతడు తీసుకొనినను, హరి దానిని అంతటిని ముక్కలుగా తెగగొట్టెను.
+hi: परिघ, पट्टिश, शूल, ढाल और तलवार, शक्ति और तोमर — जो-जो आयुध उसने उठाया, हरि ने उस सबको काट दिया.
 
 --- verse 30 ---
 deva:
@@ -256,6 +343,9 @@ deva:
 iast:
 tato rathādavaplutya khaḍgapāṇirjighāṁsayā|
 kṛṣṇamabhyadravat kruddhaḥ pataṁga iva pāvakam||
+en: Then he leapt down from his chariot, sword in hand, and in anger rushed at Kṛṣṇa to kill him, like a moth at a fire.
+tel: అప్పుడు అతడు రథము నుండి దిగి, కత్తిని చేత పట్టుకొని, కోపముతో, శలభము నిప్పునకు ఎగురునట్లు, చంపవలెనని కృష్ణునిపైకి ఉరికెను.
+hi: तब वह रथ से कूदकर, हाथ में तलवार लेकर, क्रोध में, पतंगे के आग पर झपटने के समान, मारने की इच्छा से कृष्ण पर दौड़ा.
 
 --- verse 31 ---
 deva:
@@ -264,6 +354,9 @@ deva:
 iast:
 tasya cāpatataḥ khaḍgaṁ tilaśaścarma ceṣubhiḥ|
 chittvāsimādade tigmaṁ rukmiṇaṁ hantumudyataḥ||
+en: As he came on, the Lord cut his sword into pieces as small as sesame seeds, and his shield as well, with arrows. Then he took up his own sharp sword, ready to kill Rukmī.
+tel: అతడు మీదికి వచ్చుచుండగా, ప్రభువు బాణములతో అతని కత్తిని నువ్వుల వంటి ముక్కలుగా చేసి, డాలును కూడ తెగగొట్టెను. తరువాత రుక్మిని చంపుటకు సిద్ధపడి తన పదునైన కత్తిని తీసుకొనెను.
+hi: उसके आते ही भगवान् ने बाणों से उसकी तलवार को तिल-तिल करके काट दिया और ढाल को भी. फिर रुक्मी को मारने के लिये उद्यत होकर उन्होंने अपनी तीखी तलवार उठा ली.
 
 --- verse 32 ---
 deva:
@@ -272,6 +365,9 @@ deva:
 iast:
 dṛṣṭvā bhrātṛvadhodyogaṁ rukmiṇī bhayavihvalā|
 patitvā pādayorbharturuvāca karuṇaṁ satī||
+en: Seeing this attempt to kill her brother, Rukmiṇī was overcome by fear. The chaste lady fell at her husband's feet and spoke piteously:
+tel: సోదరుని చంపుటకు జరిగిన ఈ ప్రయత్నమును చూచి రుక్మిణి భయముతో కలవరపడెను. ఆ సాధ్వి భర్త పాదములపై పడి దీనముగా ఇట్లు పలికెను:
+hi: भाई को मारने के इस उद्योग को देखकर रुक्मिणी भय से व्याकुल हो गयीं. उस सती ने पति के चरणों पर गिरकर करुणापूर्वक कहा:
 
 --- verse 33 ---
 deva:
@@ -280,6 +376,9 @@ deva:
 iast:
 yogeśvarāprameyātman devadeva jagatpate|
 hantuṁ nārhasi kalyāṇa bhrātaraṁ me mahābhuja||
+en: O Lord of yoga, O you whose nature cannot be measured, O God of gods, O Lord of the world, you should not kill my brother, O auspicious one, O mighty-armed one.
+tel: ఓ యోగేశ్వరా, కొలతకు అందని స్వరూపము కలవాడా, దేవదేవా, జగత్పతీ, మంగళస్వరూపుడా, మహాబాహువులు కలవాడా, నా సోదరుని చంపుట మీకు తగదు.
+hi: हे योगेश्वर, हे अप्रमेय स्वरूप वाले, हे देवदेव, हे जगत्पति, हे कल्याणस्वरूप, हे महाबाहु, मेरे भाई को मारना आपको उचित नहीं है.
 
 --- verse 34 ---
 deva:
@@ -294,6 +393,9 @@ tayā paritrāsavikampitāṁgayā
 śucāvaśuṣyanmukharuddhakaṇṭhayā|
 kātaryavisraṁsitahemamālayā
 gṛhītapādaḥ karuṇo nyavartata||
+en: Śrī Śuka said: Her limbs were shaking with terror, her mouth was dry with grief and her throat was choked, her golden necklace had slipped down in her distress, and she held his feet. The compassionate Lord turned back.
+tel: శ్రీశుకుడు పలికెను: భయముతో ఆమె అవయవములు వడకుచుండెను, శోకముతో ముఖము ఎండి గొంతు మూసుకొనిపోయెను, దిగులుతో బంగారు హారము జారిపోయెను; ఆమె అతని పాదములను పట్టుకొనెను. కరుణ కలవాడైన ప్రభువు వెనుకకు మరలెను.
+hi: श्रीशुकदेवजी ने कहा: भय से उनके अंग काँप रहे थे, शोक से मुख सूख गया था और गला रुँध गया था, व्याकुलता से सोने का हार खिसक गया था; उन्होंने चरण पकड़ लिये. करुणामय भगवान् लौट गये.
 
 --- verse 35 ---
 deva:
@@ -306,6 +408,9 @@ cailena baddhvā tamasādhukāriṇaṁ
 saśmaśrukeśaṁ pravapan vyarūpayat|
 tāvanmamarduḥ parasainyamadbhutaṁ
 yadupravīrā nalinīṁ yathā gajāḥ||
+en: He bound that doer of evil with a piece of cloth and disfigured him by shaving his moustache, beard and hair. Meanwhile the foremost heroes of the Yadus crushed that great army of the enemy, as elephants crush a bed of lotuses.
+tel: ఆ దుష్కృత్యము చేసిన వానిని వస్త్రముతో కట్టి, మీసములను, గడ్డమును, తలవెండ్రుకలను గొఱిగి వికారునిగా చేసెను. అప్పటికి యదుశ్రేష్ఠ వీరులు, ఏనుగులు తామరతూడుల గుంపును త్రొక్కునట్లు, శత్రువుల ఆ గొప్ప సేనను నలిపివేసిరి.
+hi: उस दुष्कर्म करने वाले को वस्त्र से बाँधकर मूँछ, दाढ़ी और सिर के बाल मूँड़कर उसे कुरूप कर दिया. इतने में यदुवंश के श्रेष्ठ वीरों ने, जैसे हाथी कमलों के वन को, वैसे शत्रु की उस बड़ी सेना को मसल डाला.
 
 --- verse 36 ---
 deva:
@@ -316,6 +421,9 @@ iast:
 kṛṣṇāntikamupavrajya dadṛśustatra rukmiṇam|
 tathābhūtaṁ hataprāyaṁ dṛṣṭvā saṁkarṣaṇo vibhuḥ|
 vimucya baddhaṁ karuṇo bhagavān kṛṣṇamabravīt||
+en: They came near Kṛṣṇa and saw Rukmī there. Seeing him in that state, almost dead, the mighty Saṁkarṣaṇa was moved to pity. He released the bound man and said to Kṛṣṇa:
+tel: కృష్ణుని దగ్గరకు వచ్చి అక్కడ రుక్మిని చూచిరి. ఆ స్థితిలో, దాదాపు చచ్చినట్లున్న అతనిని చూచి, విభువైన సంకర్షణుడు కరుణ చెందెను. కట్టబడిన వానిని విడిపించి కృష్ణునితో ఇట్లు పలికెను:
+hi: वे कृष्ण के पास आये और वहाँ रुक्मी को देखा. उसे उस दशा में, लगभग मरा हुआ देखकर समर्थ संकर्षण को दया आ गयी. उन्होंने बँधे हुए उसे छुड़ाकर कृष्ण से कहा:
 
 --- verse 37 ---
 deva:
@@ -324,6 +432,9 @@ deva:
 iast:
 asādhvidaṁ tvayā kṛṣṇa kṛtamasmajjugupsitam|
 vapanaṁ śmaśrukeśānāṁ vairūpyaṁ suhṛdo vadhaḥ||
+en: Kṛṣṇa, this that you have done is not right, and it is detestable to us. The shaving of the moustache, the beard and the hair, this disfiguring, is the killing of a relative.
+tel: కృష్ణా, నీవు చేసిన ఈ పని మంచిది కాదు, మాకు అసహ్యము కలిగించునది. మీసములను, గడ్డమును, తలవెండ్రుకలను గొఱిగుట, ఈ వికారము చేయుట, బంధువును చంపుటయే.
+hi: कृष्ण, तुमने जो यह किया वह अच्छा नहीं है और हमारे लिये घृणा के योग्य है. मूँछ, दाढ़ी और सिर के बाल मूँड़ देना, यह कुरूप करना, स्वजन का वध ही है.
 
 --- verse 38 ---
 deva:
@@ -332,6 +443,9 @@ deva:
 iast:
 maivāsmān sādhvyasūyethā bhrāturvairūpyacintayā|
 sukhaduḥkhado na cānyo'sti yataḥ svakṛtabhuk pumān||
+en: Good lady, do not find fault with us through grief at your brother's disfiguring. There is no other giver of pleasure and of pain, for a man receives what he himself has done.
+tel: సాధ్వీ, సోదరుని వికారమును గూర్చిన దుఃఖముతో మాపై నింద మోపకుము. సుఖమును దుఃఖమును ఇచ్చు వేరొకడు లేడు; మనుష్యుడు తాను చేసినదానిని తానే అనుభవించును.
+hi: हे साध्वी, भाई के कुरूप होने के शोक से हम पर दोष न लगाओ. सुख और दुःख देने वाला दूसरा कोई नहीं है, क्योंकि मनुष्य अपने ही किये हुए को भोगता है.
 
 --- verse 39 ---
 deva:
@@ -340,6 +454,9 @@ deva:
 iast:
 bandhurvadhārhadoṣo'pi na bandhorvadhamarhati|
 tyājyaḥ svenaiva doṣeṇa hataḥ kiṁ hanyate punaḥ||
+en: Even a relative whose offence deserves death does not deserve to be killed by a relative. He is to be cast off. He is already destroyed by his own offence. Why should he be killed again?
+tel: చావునకు తగిన దోషము చేసిన బంధువైనను బంధువు చేతిలో చావుటకు తగడు. అతనిని విడిచిపెట్టవలెను. తన దోషముచేతనే అతడు నశించినవాడు; ఇంక మరల ఎందుకు చంపవలెను?
+hi: मरने योग्य दोष करने वाला बन्धु भी बन्धु के हाथ से मारे जाने योग्य नहीं है. उसे त्याग देना चाहिये. वह अपने ही दोष से मारा हुआ है; फिर उसे क्यों मारा जाय?
 
 --- verse 40 ---
 deva:
@@ -348,6 +465,9 @@ deva:
 iast:
 kṣatriyāṇāmayaṁ dharmaḥ prajāpativinirmitaḥ|
 bhrātāpi bhrātaraṁ hanyād yena ghoratarastataḥ||
+en: This is the dharma of the kṣatriyas, laid down by Prajāpati, that even a brother may kill his brother. There is nothing more terrible than that.
+tel: సోదరుడు సోదరునే చంపవచ్చునను ఇది ప్రజాపతి నిర్మించిన క్షత్రియుల ధర్మము. దానికంటె భయంకరమైనది వేరొకటి లేదు.
+hi: भाई भी भाई को मार सकता है, यह प्रजापति के द्वारा बनाया हुआ क्षत्रियों का धर्म है. उससे अधिक भयंकर दूसरा कुछ नहीं है.
 
 --- verse 41 ---
 deva:
@@ -356,6 +476,9 @@ deva:
 iast:
 rājyasya bhūmervittasya striyo mānasya tejasaḥ|
 mānino'nyasya vā hetoḥ śrīmadāndhāḥ kṣipanti hi||
+en: For a kingdom, for land, for wealth, for a woman, for honour, for power, or for some other cause, proud men blinded by the pride of riches strike at one another.
+tel: రాజ్యము కోసము, భూమి కోసము, ధనము కోసము, స్త్రీ కోసము, మానము కోసము, తేజము కోసము, లేక మఱి ఏ కారణము కోసమైనను, సంపద గర్వముతో కన్ను గానని అభిమానులు ఒకరిపై ఒకరు దెబ్బ తీయుదురు.
+hi: राज्य के लिये, भूमि के लिये, धन के लिये, स्त्री के लिये, मान के लिये, तेज के लिये, अथवा किसी और कारण के लिये, धन के मद से अंधे हुए अभिमानी लोग एक दूसरे पर प्रहार करते हैं.
 
 --- verse 42 ---
 deva:
@@ -364,6 +487,9 @@ deva:
 iast:
 taveyaṁ viṣamā buddhiḥ sarvabhūteṣu durhṛdām|
 yanmanyase sadābhadraṁ suhṛdāṁ bhadramajñavat||
+en: This view of yours is uneven, and it belongs to those who are ill-disposed toward all beings, in that like one without knowledge you hold what is always unwholesome to be good for your own people.
+tel: సర్వభూతములపై దుష్టబుద్ధి కలవారికి ఉండునట్టి ఈ విషమమైన బుద్ధి నీకు కలిగినది; ఎల్లప్పుడును అహితమైనదానిని, తెలివి లేనివానివలె, నీ వారికి హితమని నీవు తలంచుచున్నావు.
+hi: सब प्राणियों के प्रति बुरा भाव रखने वालों की जैसी होती है, वैसी यह विषम बुद्धि तुम्हारी हुई है; जो सदा अहितकर है उसे, अज्ञानी के समान, तुम अपने लोगों के लिये हितकर मानती हो.
 
 --- verse 43 ---
 deva:
@@ -372,6 +498,9 @@ deva:
 iast:
 ātmamoho nṛṇāmeṣa kalpyate devamāyayā|
 suhṛd durhṛdudāsīna iti dehātmamāninām||
+en: This delusion about the self arises in men through the māyā of the Lord. For those who take the body to be the self there is a friend, an enemy, and one who is neither.
+tel: మనుష్యులలో ఆత్మను గూర్చిన ఈ మోహము దేవమాయచే కలుగుచున్నది. దేహమునే ఆత్మగా తలంచువారికి మిత్రుడు, శత్రువు, ఉదాసీనుడు అను భేదము ఏర్పడును.
+hi: मनुष्यों में आत्मा के विषय में यह मोह देवमाया से उत्पन्न होता है. देह को ही आत्मा मानने वालों के लिये मित्र, शत्रु और उदासीन, ऐसा भेद बनता है.
 
 --- verse 44 ---
 deva:
@@ -380,6 +509,9 @@ deva:
 iast:
 eka eva paro hyātmā sarveṣāmapi dehinām|
 nāneva gṛhyate mūḍhairyathā jyotiryathā nabhaḥ||
+en: There is only one supreme Self in all embodied beings. It is taken by the deluded to be many, as the light is taken, as the sky is taken.
+tel: దేహము ధరించిన వారందరిలో పరమాత్మ ఒక్కడే. వెలుగును, ఆకాశమును అనేకముగా తలంచునట్లే, మూఢులు ఆయనను అనేకముగా తలంచుచున్నారు.
+hi: सब देहधारियों में परमात्मा एक ही है. जैसे प्रकाश को और आकाश को, वैसे ही मूढ़ लोग उसे अनेक मान लेते हैं.
 
 --- verse 45 ---
 deva:
@@ -388,6 +520,9 @@ deva:
 iast:
 deha ādyantavāneṣa dravyaprāṇaguṇātmakaḥ|
 ātmanyavidyayā klṛptaḥ saṁsārayati dehinam||
+en: This body has a beginning and an end. It is made of the elements, the vital airs and the guṇas. Set upon the self by ignorance, it makes the embodied one go round in saṁsāra.
+tel: ఈ దేహమునకు ఆదియు అంతమును కలవు. ఇది భూతములతో, ప్రాణములతో, గుణములతో కూడినది. అవిద్యచే ఆత్మపై కల్పింపబడి, ఇది దేహధారిని సంసారములో తిరుగునట్లు చేయును.
+hi: इस देह का आदि और अन्त है. यह द्रव्य, प्राण और गुणों से बना है. अविद्या के द्वारा आत्मा पर कल्पित होकर यह देहधारी को संसार में घुमाती है.
 
 --- verse 46 ---
 deva:
@@ -396,6 +531,9 @@ deva:
 iast:
 nātmano'nyena saṁyogo viyogaścāsataḥ sati|
 taddhetutvāttatprasiddherdṛgrūpābhyāṁ yathā raveḥ||
+en: The self has no joining with another and no parting from it; the unreal has none with the real. The self is the cause of the other, and the other is known only through the self, as the eye and form are known through the sun.
+tel: ఆత్మకు వేరొకదానితో కలయికయు లేదు, దాని నుండి ఎడబాటును లేదు; అసత్తునకు సత్తుతో అవి కలుగవు. ఆత్మయే దానికి కారణము, దాని సిద్ధియు ఆత్మచేతనే; సూర్యునిచే కన్ను, రూపము తెలియబడునట్లే.
+hi: आत्मा का किसी दूसरे के साथ संयोग भी नहीं है और वियोग भी नहीं; असत् का सत् के साथ ये नहीं होते. आत्मा ही उसका कारण है और उसकी सिद्धि भी आत्मा से ही होती है, जैसे सूर्य से नेत्र और रूप जाने जाते हैं.
 
 --- verse 47 ---
 deva:
@@ -404,6 +542,9 @@ deva:
 iast:
 janmādayastu dehasya vikriyā nātmanaḥ kvacit|
 kalānāmiva naivendormṛtirhyasya kuhūriva||
+en: Birth and the rest belong to the body. They are never changes of the self, just as waxing and waning belong to the phases and not to the moon; and death belongs to this body, as the new-moon day does.
+tel: పుట్టుక మొదలైనవి దేహమునకు కలుగు మార్పులు; అవి ఆత్మకు ఎప్పుడును కలుగవు. పెరుగుటయు తగ్గుటయు కళలకే, చంద్రునికి కాదు; అట్లే మరణము ఈ దేహమునకే, అమావాస్య వలె.
+hi: जन्म आदि देह के विकार हैं; वे आत्मा के कभी नहीं होते. बढ़ना और घटना कलाओं का है, चन्द्रमा का नहीं; वैसे ही मृत्यु इस देह की है, जैसे अमावस्या.
 
 --- verse 48 ---
 deva:
@@ -412,6 +553,9 @@ deva:
 iast:
 yathā śayāna ātmānaṁ viṣayān phalameva ca|
 anubhuṅkte'pyasatyarthe tathā''pnotyabudho bhavam||
+en: As a sleeping man experiences himself, the objects of sense and their fruit, though the object is not real, so one without understanding undergoes birth after birth.
+tel: నిద్రించువాడు, విషయము నిజము కాకపోయినను, తననూ, విషయములనూ, వాని ఫలమునూ అనుభవించునట్లే, తెలివి లేనివాడు పుట్టుకను పొందుచుండును.
+hi: जैसे सोया हुआ पुरुष, विषय वास्तविक न होने पर भी, अपने को, विषयों को और उनके फल को भोगता है, वैसे ही अज्ञानी जन्म को प्राप्त करता रहता है.
 
 --- verse 49 ---
 deva:
@@ -420,6 +564,9 @@ deva:
 iast:
 tasmādajñānajaṁ śokamātmaśoṣavimohanam|
 tattvajñānena nirhṛtya svasthā bhava śucismite||
+en: Therefore, by the knowledge of truth drive out this grief born of ignorance, which dries up the self and deludes it, and be settled in yourself, O lady of the pure smile.
+tel: కావున ఆత్మను ఎండగట్టి మోహము కలిగించు ఈ అజ్ఞానము వలన పుట్టిన శోకమును తత్త్వజ్ఞానముచే తొలగించి, పవిత్రమైన చిరునవ్వు కలదానా, స్వస్థముగా ఉండుము.
+hi: इसलिये आत्मा को सुखा देने वाले और मोह उत्पन्न करने वाले इस अज्ञान से उत्पन्न शोक को तत्त्वज्ञान से दूर करके, हे पवित्र मुसकान वाली, स्वस्थ हो जाओ.
 
 --- verse 50 ---
 deva:
@@ -430,6 +577,9 @@ iast:
 śrīśuka uvāca
 evaṁ bhagavatā tanvī rāmeṇa pratibodhitā|
 vaimanasyaṁ parityajya mano buddhyā samādadhe||
+en: Śrī Śuka said: Thus instructed by the blessed Rāma, the slender lady gave up her sorrow of mind and steadied her thought with understanding.
+tel: శ్రీశుకుడు పలికెను: ఇట్లు భగవంతుడైన రాముడు బోధించగా, ఆ సన్నని దేహము కల ఇల్లాలు మనోవేదనను విడిచి, బుద్ధిచే మనస్సును స్థిరపరచుకొనెను.
+hi: श्रीशुकदेवजी ने कहा: इस प्रकार भगवान् राम के समझाने पर उस सुकुमारी ने मन का खेद छोड़कर बुद्धि से मन को स्थिर किया.
 
 --- verse 51 ---
 deva:
@@ -438,6 +588,9 @@ deva:
 iast:
 prāṇāvaśeṣa utsṛṣṭo dviḍbhirhatabalaprabhaḥ|
 smaran virūpakaraṇaṁ vitathātmamanorathaḥ||
+en: Rukmī had only his breath left. He was let go by his enemies, his strength and his lustre struck down. He remembered his disfiguring, and his own hopes had come to nothing.
+tel: రుక్మికి ప్రాణము మాత్రము మిగిలెను. బలమును తేజమును కొట్టివేయబడి, శత్రువులచే విడిచిపెట్టబడెను. తన వికారమును జ్ఞాపకము చేసుకొనుచు, తన మనోరథములు వ్యర్థమైనవి.
+hi: रुक्मी के पास केवल प्राण ही शेष रहे. बल और तेज नष्ट होकर वह शत्रुओं के द्वारा छोड़ दिया गया. अपने कुरूप किये जाने को याद करता रहा, और उसके मनोरथ व्यर्थ हो गये.
 
 --- verse 52 ---
 deva:
@@ -448,6 +601,9 @@ iast:
 cakre bhojakaṭaṁ nāma nivāsāya mahat puram|
 ahatvā durmatiṁ kṛṣṇamapratyūhya yavīyasīm|
 kuṇḍinaṁ na pravekṣyāmītyuktvā tatrāvasad ruṣā||
+en: He made a great city named Bhojakaṭa for his dwelling. He had said, Without killing the evil-minded Kṛṣṇa and bringing back my younger sister I shall not enter Kuṇḍina, and so in his anger he lived there.
+tel: నివాసము కోసము భోజకటము అను పేరుగల గొప్ప పురమును కట్టించెను. దుర్బుద్ధి కల కృష్ణుని చంపక, చెల్లెలిని వెనుకకు తెచ్చుకొనక, కుండినములో అడుగు పెట్టనని పలికినందున, కోపముతో అక్కడనే నివసించెను.
+hi: रहने के लिये उसने भोजकट नाम का बड़ा नगर बनवाया. दुर्बुद्धि कृष्ण को मारे बिना और छोटी बहिन को वापस लाये बिना कुण्डिनपुर में प्रवेश न करूँगा, यह कहकर क्रोध में वह वहीं रहने लगा.
 
 --- verse 53 ---
 deva:
@@ -456,6 +612,9 @@ deva:
 iast:
 bhagavān bhīṣmakasutāmevaṁ nirjitya bhūmipān|
 puramānīya vidhivadupayeme kurūdvaha||
+en: O best of the Kurus, having conquered the kings in this way, the Lord brought the daughter of Bhīṣmaka to his city and married her according to the rule.
+tel: ఓ కురుశ్రేష్ఠా, ఇట్లు రాజులను జయించి, భగవంతుడు భీష్మకుని కుమార్తెను తన పురమునకు తీసుకొని వచ్చి, శాస్త్ర ప్రకారము ఆమెను వివాహము చేసుకొనెను.
+hi: हे कुरुश्रेष्ठ, इस प्रकार राजाओं को जीतकर भगवान् भीष्मक की पुत्री को अपने नगर में लाये और विधि के अनुसार उनसे विवाह किया.
 
 --- verse 54 ---
 deva:
@@ -464,6 +623,9 @@ deva:
 iast:
 tadā mahotsavo nṝṇāṁ yadupuryāṁ gṛhe gṛhe|
 abhūdananyabhāvānāṁ kṛṣṇe yadupatau nṛpa||
+en: Then, O king, there was a great festival in house after house in the city of the Yadus, among people whose love was for Kṛṣṇa, the lord of the Yadus, and for no other.
+tel: ఓ రాజా, అప్పుడు యదుపురములో ఇంటింటిలో గొప్ప ఉత్సవము జరిగెను; యదుపతియైన కృష్ణునిపై తప్ప వేరొకరిపై భావము లేని వారి మధ్య ఆ ఉత్సవము జరిగెను.
+hi: हे राजन्, तब यदुपुरी में घर-घर बड़ा उत्सव हुआ; उन लोगों के बीच, जिनका भाव यदुपति कृष्ण के अतिरिक्त किसी और में नहीं था.
 
 --- verse 55 ---
 deva:
@@ -472,6 +634,9 @@ deva:
 iast:
 narā nāryaśca muditāḥ pramṛṣṭamaṇikuṇḍalāḥ|
 pāribarhamupājahrurvarayościtravāsasoḥ||
+en: Men and women, joyful, wearing bright jewelled earrings, brought wedding gifts to the bride and the bridegroom, who were dressed in fine garments.
+tel: మగవారు ఆడవారు సంతోషముతో, మెరుగు పెట్టిన రత్నపు కమ్మలను ధరించి, చిత్రమైన వస్త్రములను కట్టుకొనిన వధూవరులకు వివాహ కానుకలను అందించిరి.
+hi: पुरुष और स्त्रियाँ आनन्द से, चमकते रत्नजटित कुण्डल पहनकर, सुन्दर वस्त्र धारण किये वर-वधू को विवाह के उपहार भेंट करने लगे.
 
 --- verse 56 ---
 deva:
@@ -484,6 +649,9 @@ sā vṛṣṇipuryuttabhitendraketubhi-
 rvicitramālyāmbararatnatoraṇaiḥ|
 babhau pratidvāryupaklṛptamaṁgalai-
 rāpūrṇakumbhāgurudhūpadīpakaiḥ||
+en: That city of the Vṛṣṇis shone with the banners of Indra raised high, with arches of many kinds made of garlands, cloth and jewels, and with auspicious things set ready at every gate, with full pots and with aguru, incense and lamps.
+tel: ఎత్తుగా నిలిపిన ఇంద్రధ్వజములతో, పూలదండలతో వస్త్రములతో రత్నములతో చేసిన రకరకముల తోరణములతో, ప్రతి ద్వారమునందు సిద్ధపరచిన మంగళ వస్తువులతో, నిండు కుంభములతో, అగరుతో, ధూపముతో, దీపములతో ఆ వృష్ణిపురము ప్రకాశించెను.
+hi: ऊँचे खड़े किये हुए इन्द्रध्वजों से, मालाओं, वस्त्रों और रत्नों के बने अनेक प्रकार के तोरणों से, हर द्वार पर सजाये हुए मंगल द्रव्यों से, भरे कलशों से, अगुरु, धूप और दीपों से वह वृष्णिपुरी शोभा पा रही थी.
 
 --- verse 57 ---
 deva:
@@ -492,6 +660,9 @@ deva:
 iast:
 siktamārgā madacyudbhirāhūtapreṣṭhabhūbhujām|
 gajairdvāssu parāmṛṣṭarambhāpūgopaśobhitā||
+en: Its roads were sprinkled by the elephants of the dear kings who had been invited, elephants dripping with the fluid of rut, and at its gates it was adorned with plantain trees and areca trees rubbed by them.
+tel: పిలువబడిన ప్రియమైన రాజుల ఏనుగులు మదజలమును కార్చుచు ఆ పురము వీథులను తడిపెను; ఆ ఏనుగులు రాచిన అరటి చెట్లతో పోక చెట్లతో ద్వారములందు ఆ పురము అలంకరింపబడెను.
+hi: बुलाये गये प्रिय राजाओं के हाथी मद बहाते हुए उस नगर के मार्गों को सींच रहे थे; उन हाथियों के रगड़े हुए केले और सुपारी के वृक्षों से द्वारों पर वह नगर सजा हुआ था.
 
 --- verse 58 ---
 deva:
@@ -500,6 +671,9 @@ deva:
 iast:
 kurusṛṁjayakaikeyavidarbhayadukuntayaḥ|
 mitho mumudire tasmin sambhramāt paridhāvatām||
+en: The Kurus, the Sṛñjayas, the Kaikeyas, the Vidarbhas, the Yadus and the Kuntis rejoiced together there as they ran about in their eagerness.
+tel: కురువులు, సృంజయులు, కైకేయులు, విదర్భులు, యదువులు, కుంతులు అక్కడ తొందరతో అటునిటు తిరుగుచు కలిసి సంతోషించిరి.
+hi: कुरु, सृंजय, कैकेय, विदर्भ, यदु और कुन्ति वहाँ उत्सुकता से इधर-उधर दौड़ते हुए आपस में आनन्दित हुए.
 
 --- verse 59 ---
 deva:
@@ -508,6 +682,9 @@ deva:
 iast:
 rukmiṇyā haraṇaṁ śrutvā gīyamānaṁ tatastataḥ|
 rājāno rājakanyāśca babhūvurbhṛśavismitāḥ||
+en: Hearing the carrying away of Rukmiṇī sung of here and there, the kings and the daughters of kings were filled with great wonder.
+tel: రుక్మిణిని ఎత్తుకొని వచ్చుట అక్కడక్కడ పాడబడుట విని, రాజులును రాజకన్యలును మిక్కిలి ఆశ్చర్యము చెందిరి.
+hi: रुक्मिणी के हरण का गान जहाँ-तहाँ सुनकर राजा और राजकन्याएँ अत्यन्त विस्मित हुए.
 
 --- verse 60 ---
 deva:
@@ -516,9 +693,15 @@ deva:
 iast:
 dvārakāyāmabhūd rājan mahāmodaḥ puraukasām|
 rukmiṇyā ramayopetaṁ dṛṣṭvā kṛṣṇaṁ śriyaḥ patim||
+en: O king, there was great delight among the people of the city in Dvārakā, on seeing Kṛṣṇa, the lord of Śrī, united with Rukmiṇī, who was Ramā herself.
+tel: ఓ రాజా, రమయైన రుక్మిణితో కలిసి ఉన్న శ్రీపతియైన కృష్ణుని చూచి, ద్వారకలో పురవాసులకు గొప్ప సంతోషము కలిగెను.
+hi: हे राजन्, रमा रूप रुक्मिणी के साथ श्रीपति कृष्ण को देखकर द्वारका में नगरवासियों को बड़ा आनन्द हुआ.
 
 --- verse none ---
 deva:
 इति श्रीमद्भागवते महापुराणे पारमहंस्यां संहितायां दशमस्कन्धे उत्तरार्धे रुक्मिण्युद्वाहे चतुःपञ्चाशत्तमोऽध्यायः॥ ५४॥
 iast:
 iti śrīmadbhāgavate mahāpurāṇe pāramahaṁsyāṁ saṁhitāyāṁ daśamaskandhe uttarārdhe rukmiṇyudvāhe catuḥpañcāśattamo'dhyāyaḥ|| 54||
+en: Thus ends the fifty-fourth adhyāya, in the section on the marriage of Rukmiṇī, in the latter half of the tenth skandha of the Śrīmad Bhāgavata Mahāpurāṇa, the saṁhitā of the paramahaṁsas.
+tel: ఇట్లు శ్రీమద్భాగవత మహాపురాణమున, పరమహంసల సంహితయందు, దశమ స్కంధము ఉత్తరార్ధమున, రుక్మిణీ వివాహము అను భాగమున, ఏబది నాలుగవ అధ్యాయము ముగిసెను.
+hi: इस प्रकार श्रीमद्भागवत महापुराण की परमहंसों की संहिता में, दशम स्कन्ध के उत्तरार्ध में, रुक्मिणी के विवाह के प्रसंग में, चौवनवाँ अध्याय समाप्त हुआ.
