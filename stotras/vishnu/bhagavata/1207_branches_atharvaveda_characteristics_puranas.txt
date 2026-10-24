@@ -9,7 +9,7 @@ Type: Purāṇa (an adhyāya of the Śrīmad Bhāgavata, Skandha 12)
 
 Source / recension: Base text and authority: the Gītā Press, Gorakhpur Śrīmadbhāgavata Mahāpurāṇa with Hindi translation, Part 2 (Gītā Press code 27), archive.org item `shrimadbhagwat-mahapuran-bhag-2`, printed pages 943–945; the PDF page numbers are the printed ones. The PDF carries the typesetter's own text layer in the Chanakya font encoding, and the text was decoded from it by machine with `bin/bhagavata/chanakya.py`, not read off OCR or typed. The decoder was checked against GRETIL over all twelve skandhas before any file was written, and the differences that remain were sampled and found to be readings of the two editions. Second witness: GRETIL's `sa_bhAgavatapurANa.xml` (IAST, contributed by Ulrich Stiehl), a separate editorial lineage, compared verse by verse by machine. The TTD edition with the commentaries of Śrīdhara, Vīrarāghava and Vijayadhvaja (archive.org `Bhagavata_Purana_With_Multiple_Commentaries_TTD_Critical_Edition`) is the third witness where one is needed; it was not read for this file. The IAST was generated mechanically from the Devanāgarī with `bin/dev2iast.py`.
 
-Recension note: Text-only file, written 1 Oct 2026 at the user's instruction to lay down the whole Bhāgavata first: the English, Telugu and Hindi meanings are still to be added, and the witnesses' differences listed here have been recorded by machine and not yet adjudicated. The print is followed throughout. The print numbers 25 verses and GRETIL numbers 25. Of the 25 verses GRETIL has under the same number, 13 agree with the print letter for letter once spacing and the spelling of nasals are set aside; the rest differ: 2, 3, 5, 7, 9, 11, 15, 16, 17, 18, 21, 23. Spacing is the print's, as its text layer gives it; in a few places justification has left a space inside a word, and these are still to be closed when the verse is read. The speaker lines (श्रीशुक उवाच and the others) are printed in italic above the verse they introduce, and are given as its first line.
+Recension note: Meanings written 24 Oct 2026 (session S78). The differences between the witnesses listed below were read as the verses were glossed; except where this note says otherwise, each is a spelling, a sandhi or a word order of the two editions, none of them changes the sense, and the print's reading therefore stands unbracketed. The print is followed throughout. The print numbers 25 verses and GRETIL numbers 25. Of the 25 verses GRETIL has under the same number, 13 agree with the print letter for letter once spacing and the spelling of nasals are set aside; the rest differ: 2, 3, 5, 7, 9, 11, 15, 16, 17, 18, 21, 23. Spacing is the print's, as its text layer gives it. The speaker lines (श्रीशुक उवाच and the others) are printed in italic above the verse they introduce, and are given as its first line. Two words were put right as the verses were read. At verse 5 justification had left a space inside the dvandva वैशम्पायनहारीतौ, whose dual ending belongs to the whole compound, and it is closed here. At verse 7 the space between चतस्रो and मूलसंहिताः was lost at a line break; चतस्रो carries its own nominative ending and cannot stand as the first member of a compound, so the space is restored. GRETIL agrees with both corrected readings, reading वैशम्पायन-हारीतौ as one compound and breaking before मूलसंहिताः. Three further differences from GRETIL were left as the print has them, being readings of the two editions and not defects: भूतमात्र° for GRETIL's भूत-सूक्ष्म° at verse 11, चतस्रो for its चत्वारो at verse 7, and प्रोक्ता for its प्रोक्तश् at verse 17, where the print's feminine agrees with संस्था. The anusvāra written before the avagraha at verse 15 (ऋषयोंऽशावतारश्च) is this edition's own spelling and is left exactly as printed.
 
 Verse count: 25, plus the closing colophon printed unnumbered.
 
@@ -24,6 +24,9 @@ iast:
 sūta uvāca
 atharvavit sumantuśca śiṣyamadhyāpayat svakām|
 saṁhitāṁ so'pi pathyāya vedadarśāya coktavān||
+en: Sūta said: Sumantu, who knew the Atharvaveda, taught his own saṁhitā to his pupil. That pupil in turn spoke it to Pathya and to Vedadarśa.
+tel: సూతుడు పలికెను: అథర్వవేదమును ఎరిగిన సుమంతుడు తన సంహితను తన శిష్యునికి బోధించెను. ఆ శిష్యుడు దానిని పథ్యునికి, వేదదర్శునికి చెప్పెను.
+hi: सूत ने कहा: अथर्ववेद के ज्ञाता सुमन्तु ने अपनी संहिता अपने शिष्य को पढ़ाई। उस शिष्य ने भी उसे पथ्य और वेददर्श को सुनाया।
 
 --- verse 2 ---
 deva:
@@ -32,6 +35,9 @@ deva:
 iast:
 śauklāyanirbrahmabalirmodoṣaḥ pippalāyaniḥ|
 vedadarśasya śiṣyāste pathyaśiṣyānatho śṛṇu||
+en: Śauklāyani, Brahmabali, Modoṣa and Pippalāyani were the pupils of Vedadarśa. Now hear the pupils of Pathya.
+tel: శౌక్లాయని, బ్రహ్మబలి, మోదోషుడు, పిప్పలాయని అనువారు వేదదర్శుని శిష్యులు. ఇప్పుడు పథ్యుని శిష్యులను గురించి వినుము.
+hi: शौक्लायनि, ब्रह्मबलि, मोदोष और पिप्पलायनि — ये वेददर्श के शिष्य थे। अब पथ्य के शिष्यों को सुनो।
 
 --- verse 3 ---
 deva:
@@ -42,6 +48,9 @@ iast:
 kumudaḥ śunako brahman jājaliścāpyatharvavit|
 babhruḥ śiṣyo'thāṁgirasaḥ saindhavāyana eva ca|
 adhīyetāṁ saṁhite dve sāvarṇyādyāstathāpare||
+en: O brāhmaṇa, Kumuda, Śunaka and Jājali, who also knew the Atharvaveda, were the pupils of Pathya. Then Babhru, the pupil of Āṅgirasa, and Saindhavāyana studied the two saṁhitās, and others headed by Sāvarṇya studied them as well.
+tel: ఓ బ్రాహ్మణా, కుముదుడు, శునకుడు, అథర్వవేదమును ఎరిగిన జాజలి అనువారు పథ్యుని శిష్యులు. పిమ్మట ఆంగిరసుని శిష్యుడైన బభ్రుడు, సైంధవాయనుడు ఇద్దరు రెండు సంహితలను అధ్యయనము చేసిరి. సావర్ణ్యుడు మొదలైన ఇతరులును వానిని అధ్యయనము చేసిరి.
+hi: हे ब्राह्मण, कुमुद, शुनक और अथर्ववेद के ज्ञाता जाजलि — ये पथ्य के शिष्य थे। फिर आंगिरस के शिष्य बभ्रु और सैन्धवायन ने दोनों संहिताओं का अध्ययन किया, और सावर्ण्य आदि दूसरों ने भी उनका अध्ययन किया।
 
 --- verse 4 ---
 deva:
@@ -50,14 +59,20 @@ deva:
 iast:
 nakṣatrakalpaḥ śāntiśca kaśyapāṁgirasādayaḥ|
 ete ātharvaṇācāryāḥ śṛṇu paurāṇikān mune||
+en: Nakṣatrakalpa, Śānti, Kaśyapa, Āṅgirasa and the others are the teachers of the Atharvaveda. Now, O sage, hear the teachers of the Purāṇas.
+tel: నక్షత్రకల్పుడు, శాంతి, కశ్యపుడు, ఆంగిరసుడు మొదలైనవారు అథర్వవేదము యొక్క ఆచార్యులు. ఓ మునీ, ఇప్పుడు పురాణముల ఆచార్యులను గురించి వినుము.
+hi: नक्षत्रकल्प, शान्ति, कश्यप, आंगिरस और दूसरे लोग अथर्ववेद के आचार्य हैं। हे मुने, अब पुराणों के आचार्यों को सुनो।
 
 --- verse 5 ---
 deva:
 त्रय्यारुणिः कश्यपश्च सावर्णिरकृतव्रणः।
-वैशम्पायन हारीतौ षड् वै पौराणिका इमे॥
+वैशम्पायनहारीतौ षड् वै पौराणिका इमे॥
 iast:
 trayyāruṇiḥ kaśyapaśca sāvarṇirakṛtavraṇaḥ|
-vaiśampāyana hārītau ṣaḍ vai paurāṇikā ime||
+vaiśampāyanahārītau ṣaḍ vai paurāṇikā ime||
+en: Trayyāruṇi, Kaśyapa, Sāvarṇi, Akṛtavraṇa, Vaiśampāyana and Hārīta — these six are the teachers of the Purāṇa.
+tel: త్రయ్యారుణి, కశ్యపుడు, సావర్ణి, అకృతవ్రణుడు, వైశంపాయనుడు, హారీతుడు — ఈ ఆరుగురు పురాణము యొక్క ఆచార్యులు.
+hi: त्रय्यारुणि, कश्यप, सावर्णि, अकृतव्रण, वैशम्पायन और हारीत — ये छह पुराण के आचार्य हैं।
 
 --- verse 6 ---
 deva:
@@ -66,14 +81,20 @@ deva:
 iast:
 adhīyanta vyāsaśiṣyāt saṁhitāṁ matpiturmukhāt|
 ekaikāmahameteṣāṁ śiṣyaḥ sarvāḥ samadhyagām||
+en: They studied the saṁhitā from the pupil of Vyāsa, from the mouth of my father. I became the pupil of these teachers and learnt all the saṁhitās, one from each of them.
+tel: వారు వ్యాసుని శిష్యుని నుండి, నా తండ్రి ముఖము నుండి సంహితను అధ్యయనము చేసిరి. నేను వారికి శిష్యుడనై, ఒక్కొక్కరి నుండి ఒక్కొక్కటిగా సంహితలను అన్నిటిని నేర్చుకొంటిని.
+hi: उन्होंने व्यास के शिष्य से, मेरे पिता के मुख से संहिता का अध्ययन किया। मैं उनका शिष्य बना और एक-एक से एक-एक लेकर सब संहिताएँ सीख लीं।
 
 --- verse 7 ---
 deva:
 कश्यपोऽहं च सावर्णी रामशिष्योऽकृतव्रणः।
-अधीमहि व्यासशिष्याच्चतस्रोमूलसंहिताः॥
+अधीमहि व्यासशिष्याच्चतस्रो मूलसंहिताः॥
 iast:
 kaśyapo'haṁ ca sāvarṇī rāmaśiṣyo'kṛtavraṇaḥ|
-adhīmahi vyāsaśiṣyāccatasromūlasaṁhitāḥ||
+adhīmahi vyāsaśiṣyāccatasro mūlasaṁhitāḥ||
+en: Kaśyapa, I myself, Sāvarṇi, and Akṛtavraṇa the pupil of Rāma — we studied four root saṁhitās from the pupil of Vyāsa.
+tel: కశ్యపుడు, నేను, సావర్ణి, రాముని శిష్యుడైన అకృతవ్రణుడు — మేము వ్యాసుని శిష్యుని నుండి నాలుగు మూలసంహితలను అధ్యయనము చేసితిమి.
+hi: कश्यप, मैं, सावर्णि और राम के शिष्य अकृतव्रण — हमने व्यास के शिष्य से चार मूल संहिताओं का अध्ययन किया।
 
 --- verse 8 ---
 deva:
@@ -82,6 +103,9 @@ deva:
 iast:
 purāṇalakṣaṇaṁ brahman brahmarṣibhirnirūpitam|
 śṛṇuṣva buddhimāśritya vedaśāstrānusārataḥ||
+en: O brāhmaṇa, hear with a steady mind the marks of a Purāṇa, which the brahmarṣis have set out in keeping with the Veda and the śāstra.
+tel: ఓ బ్రాహ్మణా, బ్రహ్మర్షులు వేదశాస్త్రముల అనుసారముగా నిరూపించిన పురాణలక్షణమును స్థిరమైన బుద్ధితో వినుము.
+hi: हे ब्राह्मण, ब्रह्मर्षियों ने वेद और शास्त्र के अनुसार जो पुराण के लक्षण बताए हैं, उन्हें स्थिर बुद्धि से सुनो।
 
 --- verse 9 ---
 deva:
@@ -90,6 +114,9 @@ deva:
 iast:
 sargo'syātha visargaśca vṛttī rakṣāntarāṇi ca|
 vaṁśo vaṁśānucaritaṁ saṁsthā heturapāśrayaḥ||
+en: The sarga of this world, then the visarga, the vṛtti, the rakṣā, the antaras, the vaṁśa, the vaṁśānucarita, the saṁsthā, the hetu and the apāśraya —
+tel: ఈ ప్రపంచము యొక్క సర్గము, పిమ్మట విసర్గము, వృత్తి, రక్ష, అంతరములు, వంశము, వంశానుచరితము, సంస్థ, హేతువు, అపాశ్రయము —
+hi: इस जगत् का सर्ग, फिर विसर्ग, वृत्ति, रक्षा, अन्तर, वंश, वंशानुचरित, संस्था, हेतु और अपाश्रय —
 
 --- verse 10 ---
 deva:
@@ -98,6 +125,9 @@ deva:
 iast:
 daśabhirlakṣaṇairyuktaṁ purāṇaṁ tadvido viduḥ|
 kecit paṁcavidhaṁ brahman mahadalpavyavasthayā||
+en: Those who know the Purāṇa say that a Purāṇa is marked by these ten characteristics. Some, O brāhmaṇa, say it has five, dividing them into the great and the small.
+tel: ఈ పది లక్షణములతో కూడినదే పురాణమని పురాణమును ఎరిగినవారు చెప్పుదురు. ఓ బ్రాహ్మణా, కొందరు పెద్దవి చిన్నవి అను విభాగము చేసి ఐదు లక్షణములే అని చెప్పుదురు.
+hi: जो पुराण को जानते हैं, वे कहते हैं कि इन दस लक्षणों से युक्त ही पुराण है। हे ब्राह्मण, कुछ लोग बड़े और छोटे का विभाग करके उसे पाँच प्रकार का कहते हैं।
 
 --- verse 11 ---
 deva:
@@ -106,6 +136,9 @@ deva:
 iast:
 avyākṛtaguṇakṣobhānmahatastrivṛto'hamaḥ|
 bhūtamātrendriyārthānāṁ sambhavaḥ sarga ucyate||
+en: The guṇas of the unmanifest are stirred, and from that comes mahat, and from mahat the threefold ahaṁkāra. The coming into being of the gross elements, the subtle elements, the senses and their objects out of these is called sarga.
+tel: అవ్యాకృతములోని గుణములు క్షోభము పొందుటవలన మహత్తు కలుగును, మహత్తు నుండి మూడు విధములైన అహంకారము కలుగును. వానినుండి భూతములు, సూక్ష్మ మాత్రలు, ఇంద్రియములు, వాని అర్థములు పుట్టుటను సర్గమని చెప్పుదురు.
+hi: अव्याकृत के गुणों में क्षोभ होने से महत् होता है, और महत् से तीन प्रकार का अहंकार होता है। इनसे भूतों, सूक्ष्म मात्राओं, इन्द्रियों और उनके विषयों की उत्पत्ति को सर्ग कहा जाता है।
 
 --- verse 12 ---
 deva:
@@ -114,6 +147,9 @@ deva:
 iast:
 puruṣānugṛhītānāmeteṣāṁ vāsanāmayaḥ|
 visargo'yaṁ samāhāro bījād bījaṁ carācaram||
+en: These same principles, when the Puruṣa favours them, gather together and are shaped by vāsanā. That gathering is visarga. In it seed comes from seed, in the moving and in the unmoving alike.
+tel: పురుషుని అనుగ్రహము పొందిన ఈ తత్త్వములు వాసనామయముగా కూడుకొనుట జరుగును. ఆ సమాహారమే విసర్గము. అందు చరములలోను అచరములలోను విత్తునుండి విత్తు కలుగును.
+hi: पुरुष के अनुग्रह को पाए हुए इन तत्त्वों का वासनामय समाहार होता है। वही विसर्ग है। उसमें चर और अचर में बीज से बीज उत्पन्न होता है।
 
 --- verse 13 ---
 deva:
@@ -122,6 +158,9 @@ deva:
 iast:
 vṛttirbhūtāni bhūtānāṁ carāṇāmacarāṇi ca|
 kṛtā svena nṛṇāṁ tatra kāmāccodanayāpi vā||
+en: Vṛtti is the way beings live upon beings. For the moving creatures the unmoving are food. Among men this living is made by one's own nature, and it follows either desire or the command of scripture.
+tel: ప్రాణులు ప్రాణులపై జీవించు విధమే వృత్తి. చరములకు అచరములు ఆహారము. మనుష్యులలో ఈ వృత్తి తమ స్వభావముచేత ఏర్పడును, అది కామమును బట్టి లేక శాస్త్రము యొక్క ఆజ్ఞను బట్టి జరుగును.
+hi: प्राणियों का प्राणियों पर जीवित रहना वृत्ति है। चर प्राणियों के लिए अचर आहार हैं। मनुष्यों में यह वृत्ति अपने स्वभाव से बनती है, और वह काम से अथवा शास्त्र की आज्ञा से चलती है।
 
 --- verse 14 ---
 deva:
@@ -130,6 +169,9 @@ deva:
 iast:
 rakṣācyutāvatārehā viśvasyānu yuge yuge|
 tiryaṅmartyarṣideveṣu hanyante yaistrayīdviṣaḥ||
+en: Rakṣā is the work of the descents of Acyuta for the world in age after age. He takes birth among animals, among men, among the sages and among the gods, and by these descents the haters of the three Vedas are slain.
+tel: యుగము యుగమున ప్రపంచము కొరకు అచ్యుతుని అవతారములు చేయు కార్యమే రక్ష. ఆయన తిర్యక్కులలో, మనుష్యులలో, ఋషులలో, దేవతలలో అవతరించును. ఆ అవతారములచేత త్రయీద్వేషులు సంహరింపబడుదురు.
+hi: युग-युग में जगत् के लिए अच्युत के अवतारों का कार्य रक्षा है। वे तिर्यकों में, मनुष्यों में, ऋषियों में और देवताओं में अवतार लेते हैं, और उन अवतारों से तीनों वेदों के द्वेषी मारे जाते हैं।
 
 --- verse 15 ---
 deva:
@@ -138,6 +180,9 @@ deva:
 iast:
 manvantaraṁ manurdevā manuputrāḥ sureśvaraḥ|
 ṛṣayoṁ'śāvatāraśca hareḥ ṣaḍvidhamucyate||
+en: Manvantara is said to have six parts: the Manu, the gods, the sons of the Manu, the lord of the gods, the sages, and the partial descent of Hari.
+tel: మన్వంతరము ఆరు విధములని చెప్పుదురు: మనువు, దేవతలు, మనువు కుమారులు, దేవతల ప్రభువు, ఋషులు, హరి యొక్క అంశావతారము.
+hi: मन्वन्तर छह प्रकार का कहा जाता है: मनु, देवता, मनु के पुत्र, देवताओं के स्वामी, ऋषि, और हरि का अंशावतार।
 
 --- verse 16 ---
 deva:
@@ -146,6 +191,9 @@ deva:
 iast:
 rājñāṁ brahmaprasūtānāṁ vaṁśastraikāliko'nvayaḥ|
 vaṁśānucaritaṁ teṣāṁ vṛttaṁ vaṁśadharāśca ye||
+en: Vaṁśa is the lineage of the kings born of Brahmā, running through the three times. Vaṁśānucarita is the conduct of those kings and of those who carry the lineage on.
+tel: బ్రహ్మనుండి పుట్టిన రాజుల వంశము, మూడు కాలములలో సాగు అన్వయము — ఇది వంశము. ఆ రాజుల వృత్తము, వంశమును నిలుపువారి వృత్తము — ఇది వంశానుచరితము.
+hi: ब्रह्मा से उत्पन्न राजाओं का वंश, जो तीनों कालों में चलने वाला अन्वय है, वह वंश है। उन राजाओं का और वंश को आगे चलाने वालों का वृत्त वंशानुचरित है।
 
 --- verse 17 ---
 deva:
@@ -154,6 +202,9 @@ deva:
 iast:
 naimittikaḥ prākṛtiko nitya ātyantiko layaḥ|
 saṁstheti kavibhiḥ proktā caturdhāsya svabhāvataḥ||
+en: Dissolution is of four kinds: naimittika, prākṛtika, nitya and ātyantika. The wise call this saṁsthā, and it is fourfold by its very nature.
+tel: లయము నాలుగు విధములు: నైమిత్తికము, ప్రాకృతికము, నిత్యము, ఆత్యంతికము. కవులు దీనిని సంస్థ అని చెప్పుదురు, అది తన స్వభావముచేతనే నాలుగు విధములు.
+hi: लय चार प्रकार का है: नैमित्तिक, प्राकृतिक, नित्य और आत्यन्तिक। कवि इसे संस्था कहते हैं, और वह अपने स्वभाव से ही चार प्रकार का है।
 
 --- verse 18 ---
 deva:
@@ -162,6 +213,9 @@ deva:
 iast:
 heturjīvo'sya sargāderavidyākarmakārakaḥ|
 yaṁ cānuśayinaṁ prāhuravyākṛtamutāpare||
+en: The hetu of this creation and of what follows it is the jīva, which acts through ignorance and through karma. Some call it anuśayin, and others call it avyākṛta.
+tel: ఈ సర్గము మొదలైన వానికి హేతువు జీవుడు; అవిద్యచేత, కర్మచేత అతడు కర్తయగును. కొందరు అతనిని అనుశయి అని చెప్పుదురు, మరికొందరు అవ్యాకృతము అని చెప్పుదురు.
+hi: इस सर्ग आदि का हेतु जीव है, जो अविद्या और कर्म के द्वारा कर्ता बनता है। कुछ लोग उसे अनुशयी कहते हैं और दूसरे अव्याकृत कहते हैं।
 
 --- verse 19 ---
 deva:
@@ -170,6 +224,9 @@ deva:
 iast:
 vyatirekānvayo yasya jāgratsvapnasuṣuptiṣu|
 māyāmayeṣu tad brahma jīvavṛttiṣvapāśrayaḥ||
+en: That Brahman which is both present in and apart from the waking, the dreaming and the deep sleep, those states of the jīva which are made of māyā, is the apāśraya.
+tel: మాయామయమైన జీవుని వృత్తులైన జాగ్రత్, స్వప్న, సుషుప్తి స్థితులలో వ్యతిరేకముగాను అన్వయముగాను ఉండు ఆ బ్రహ్మమే అపాశ్రయము.
+hi: मायामय जीव की वृत्तियों — जाग्रत्, स्वप्न और सुषुप्ति — में जो व्यतिरेक और अन्वय दोनों रूप से रहता है, वही ब्रह्म अपाश्रय है।
 
 --- verse 20 ---
 deva:
@@ -178,6 +235,9 @@ deva:
 iast:
 padārtheṣu yathā dravyaṁ sanmātraṁ rūpanāmasu|
 bījādipaṁcatāntāsu hyavasthāsu yutāyutam||
+en: It is like the substance in things, and like mere existence in forms and names, which through the states from the seed to death is both joined to them and apart from them.
+tel: పదార్థములలో ద్రవ్యము వలె, రూపములలో నామములలో సన్మాత్రము వలె; అది విత్తు మొదలుకొని మరణము వరకు ఉండు స్థితులలో కలిసియు కలియకయు ఉండును.
+hi: जैसे पदार्थों में द्रव्य, और रूपों तथा नामों में केवल सत्ता; वह बीज से लेकर मृत्यु तक की अवस्थाओं में उनसे युक्त भी है और अयुक्त भी।
 
 --- verse 21 ---
 deva:
@@ -186,6 +246,9 @@ deva:
 iast:
 virameta yadā cittaṁ hitvā vṛttitrayaṁ svayam|
 yogena vā tadā''tmānaṁ vedehāyā nivartate||
+en: When the mind of itself gives up the three states and comes to rest, or does so by yoga, then one knows the Self and turns back from all activity.
+tel: చిత్తము మూడు వృత్తులను విడిచి తనంతట విరమించినప్పుడు, లేక యోగముచేత విరమించినప్పుడు, అప్పుడు ఆత్మను ఎరుగును, ఈహ నుండి వెనుకకు మరలును.
+hi: जब चित्त तीनों वृत्तियों को छोड़कर स्वयं विराम पा जाता है, अथवा योग के द्वारा विराम पाता है, तब वह आत्मा को जान लेता है और सब चेष्टा से लौट आता है।
 
 --- verse 22 ---
 deva:
@@ -194,6 +257,9 @@ deva:
 iast:
 evaṁlakṣaṇalakṣyāṇi purāṇāni purāvidaḥ|
 munayo'ṣṭādaśa prāhuḥ kṣullakāni mahānti ca||
+en: The sages who know the past say that the Purāṇas marked by these characteristics are eighteen, some of them small and some of them great.
+tel: ఈ లక్షణములచేత గుర్తింపబడు పురాణములు పదునెనిమిది అని పురాతనమును ఎరిగిన మునులు చెప్పుదురు; వానిలో కొన్ని చిన్నవి, కొన్ని పెద్దవి.
+hi: इन लक्षणों से पहचाने जाने वाले पुराण अठारह हैं, ऐसा पुरातन को जानने वाले मुनि कहते हैं; उनमें कुछ छोटे हैं और कुछ बड़े।
 
 --- verse 23 ---
 deva:
@@ -202,6 +268,9 @@ deva:
 iast:
 brāhmaṁ pādmaṁ vaiṣṇavaṁ ca śaivaṁ laiṁgaṁ sagāruḍam|
 nāradīyaṁ bhāgavatamāgneyaṁ skāndasaṁjñitam||
+en: Brāhma, Pādma, Vaiṣṇava, Śaiva, Laiṅga, with the Gāruḍa, Nāradīya, Bhāgavata, Āgneya, and the one named Skānda;
+tel: బ్రాహ్మము, పాద్మము, వైష్ణవము, శైవము, లైంగము, గారుడముతో కూడి, నారదీయము, భాగవతము, ఆగ్నేయము, స్కాందమని పేరు గలది;
+hi: ब्राह्म, पाद्म, वैष्णव, शैव, लैंग, गारुड के साथ, नारदीय, भागवत, आग्नेय और स्कान्द नाम वाला;
 
 --- verse 24 ---
 deva:
@@ -210,6 +279,9 @@ deva:
 iast:
 bhaviṣyaṁ brahmavaivartaṁ mārkaṇḍeyaṁ savāmanam|
 vārāhaṁ mātsyaṁ kaurmaṁ ca brahmāṇḍākhyamiti triṣaṭ||
+en: Bhaviṣya, Brahmavaivarta, Mārkaṇḍeya, with the Vāmana, Vārāha, Mātsya, Kaurma, and the one called Brahmāṇḍa — these are three times six.
+tel: భవిష్యము, బ్రహ్మవైవర్తము, మార్కండేయము, వామనముతో కూడి, వారాహము, మాత్స్యము, కౌర్మము, బ్రహ్మాండమని పేరు గలది — ఇవి మూడు సార్లు ఆరు.
+hi: भविष्य, ब्रह्मवैवर्त, मार्कण्डेय, वामन के साथ, वाराह, मात्स्य, कौर्म और ब्रह्माण्ड नाम वाला — ये तीन बार छह हैं।
 
 --- verse 25 ---
 deva:
@@ -218,9 +290,15 @@ deva:
 iast:
 brahmannidaṁ samākhyātaṁ śākhāpraṇayanaṁ muneḥ|
 śiṣyaśiṣyapraśiṣyāṇāṁ brahmatejovivardhanam||
+en: O brāhmaṇa, thus has been told the setting forth of the branches by the sage, which increases the brahma-tejas of his pupils, of their pupils, and of their pupils' pupils.
+tel: ఓ బ్రాహ్మణా, మునిచేత శాఖలు ఏర్పరచబడిన విధము ఇట్లు చెప్పబడినది. ఇది శిష్యులకు, శిష్యుల శిష్యులకు, వారి ప్రశిష్యులకు బ్రహ్మతేజమును పెంచునది.
+hi: हे ब्राह्मण, मुनि के द्वारा शाखाओं के बनाए जाने की बात इस प्रकार कही गई। यह शिष्यों, शिष्यों के शिष्यों और उनके प्रशिष्यों के ब्रह्मतेज को बढ़ाने वाली है।
 
 --- verse none ---
 deva:
 इति श्रीमद्भागवते महापुराणे पारमहंस्यां संहितायां द्वादशस्कन्धे सप्तमोऽध्यायः॥ ७॥
 iast:
 iti śrīmadbhāgavate mahāpurāṇe pāramahaṁsyāṁ saṁhitāyāṁ dvādaśaskandhe saptamo'dhyāyaḥ|| 7||
+en: Thus ends the seventh adhyāya in the twelfth skandha of the Śrīmad Bhāgavata Mahāpurāṇa, the saṁhitā of the paramahaṁsas.
+tel: ఇట్లు పరమహంసల సంహిత యైన శ్రీమద్భాగవత మహాపురాణములో ద్వాదశ స్కంధమున సప్తమ అధ్యాయము ముగిసెను.
+hi: इस प्रकार परमहंसों की संहिता श्रीमद्भागवत महापुराण के द्वादश स्कन्ध में सातवाँ अध्याय समाप्त हुआ।

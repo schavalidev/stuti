@@ -9,7 +9,7 @@ Type: Purāṇa (an adhyāya of the Śrīmad Bhāgavata, Skandha 12)
 
 Source / recension: Base text and authority: the Gītā Press, Gorakhpur Śrīmadbhāgavata Mahāpurāṇa with Hindi translation, Part 2 (Gītā Press code 27), archive.org item `shrimadbhagwat-mahapuran-bhag-2`, printed pages 970–979; the PDF page numbers are the printed ones. The PDF carries the typesetter's own text layer in the Chanakya font encoding, and the text was decoded from it by machine with `bin/bhagavata/chanakya.py`, not read off OCR or typed. The decoder was checked against GRETIL over all twelve skandhas before any file was written, and the differences that remain were sampled and found to be readings of the two editions. Second witness: GRETIL's `sa_bhAgavatapurANa.xml` (IAST, contributed by Ulrich Stiehl), a separate editorial lineage, compared verse by verse by machine. The TTD edition with the commentaries of Śrīdhara, Vīrarāghava and Vijayadhvaja (archive.org `Bhagavata_Purana_With_Multiple_Commentaries_TTD_Critical_Edition`) is the third witness where one is needed; it was not read for this file. The IAST was generated mechanically from the Devanāgarī with `bin/dev2iast.py`.
 
-Recension note: Text-only file, written 1 Oct 2026 at the user's instruction to lay down the whole Bhāgavata first: the English, Telugu and Hindi meanings are still to be added, and the witnesses' differences listed here have been recorded by machine and not yet adjudicated. The print is followed throughout. The print numbers 68 verses; GRETIL numbers 69, so from some point the two editions number the verses differently. Never match them by number. Of the 68 verses GRETIL has under the same number, 16 agree with the print letter for letter once spacing and the spelling of nasals are set aside; the rest differ: 1, 2, 4, 5, 11, 14, 16, 20, 24, 25, 26, 27, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68. Spacing is the print's, as its text layer gives it; in a few places justification has left a space inside a word, and these are still to be closed when the verse is read. The speaker lines (श्रीशुक उवाच and the others) are printed in italic above the verse they introduce, and are given as its first line.
+Recension note: Meanings written 24 Oct 2026 (session S78). The differences between the witnesses listed below were read as the verses were glossed; except where this note says otherwise, each is a spelling, a sandhi or a word order of the two editions, none of them changes the sense, and the print's reading therefore stands unbracketed. The print is followed throughout. The print numbers 68 verses; GRETIL numbers 69, so from some point the two editions number the verses differently. Never match them by number. Of the 68 verses GRETIL has under the same number, 16 agree with the print letter for letter once spacing and the spelling of nasals are set aside; the rest differ: 1, 2, 4, 5, 11, 14, 16, 20, 24, 25, 26, 27, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68. Spacing is the print's, as its text layer gives it. The speaker lines (श्रीशुक उवाच and the others) are printed in italic above the verse they introduce, and are given as its first line. No typesetting gap or lost space needed closing in this adhyāya. The space the print prints in जन्म निधनं at verse 18, where GRETIL writes the compound janma-nidhanaṁ, is the print's own spacing and reads as it stands, so it is left. At verse 30 the print's layer gives दावाग्ने where the ablative दावाग्नेः is expected and GRETIL reads dāvāgneḥ; that is a letter and not a space, so the line stands as printed and the meanings follow the only possible reading, that the cowherds were saved from the spreading forest fire. The line-break hyphen in ईश- at verse 55 stays where the print puts it. The print's 68 verses divide the same text that GRETIL divides into 69, the two editions parting company in the Kṛṣṇa list around verses 29 to 35, so the verses were matched by their words and not by their numbers.
 
 Verse count: 68, plus the closing colophon printed unnumbered.
 
@@ -24,6 +24,9 @@ iast:
 sūta uvāca
 namo dharmāya mahate namaḥ kṛṣṇāya vedhase|
 brāhmaṇebhyo namaskṛtya dharmān vakṣye sanātanān||
+en: Sūta said: I bow to dharma, which is great. I bow to Kṛṣṇa, the maker of all. Having bowed to the brāhmaṇas, I shall now speak of the eternal dharmas.
+tel: సూతుడు పలికెను: మహిమ గల ధర్మమునకు నమస్కారము. సృష్టికర్తయైన కృష్ణునికి నమస్కారము. బ్రాహ్మణులకు నమస్కరించి ఇప్పుడు శాశ్వతమైన ధర్మములను చెప్పుచున్నాను.
+hi: सूत ने कहा: महान धर्म को नमस्कार है। सबके रचनेवाले कृष्ण को नमस्कार है। ब्राह्मणों को नमस्कार करके अब मैं सनातन धर्मों को कहूँगा।
 
 --- verse 2 ---
 deva:
@@ -32,6 +35,9 @@ deva:
 iast:
 etad vaḥ kathitaṁ viprā viṣṇoścaritamadbhutam|
 bhavadbhiryadahaṁ pṛṣṭo narāṇāṁ puruṣocitam||
+en: O brāhmaṇas, this wonderful story of Viṣṇu has been told to you, about which you asked me. It is worthy of the noblest among men.
+tel: ఓ బ్రాహ్మణులారా, మీరు నన్ను అడిగిన విష్ణువు యొక్క ఈ అద్భుతమైన చరిత్ర మీకు చెప్పబడినది. ఇది మనుష్యులలో శ్రేష్ఠులకు తగినది.
+hi: हे ब्राह्मणों, जो आपने मुझसे पूछा था, वह विष्णु का यह अद्भुत चरित आपको कह दिया गया। यह मनुष्यों में श्रेष्ठ पुरुषों के योग्य है।
 
 --- verse 3 ---
 deva:
@@ -40,6 +46,9 @@ deva:
 iast:
 atra saṁkīrtitaḥ sākṣāt sarvapāpaharo hariḥ|
 nārāyaṇo hṛṣīkeśo bhagavān sātvatāṁ patiḥ||
+en: Here Hari himself has been praised, who takes away all sin: Nārāyaṇa, Hṛṣīkeśa, the blessed Lord, the master of the Sātvatas.
+tel: ఇందులో సమస్త పాపములను హరించు హరియే కీర్తింపబడినాడు: నారాయణుడు, హృషీకేశుడు, భగవంతుడు, సాత్వతులకు ప్రభువు.
+hi: यहाँ सब पापों को हरनेवाले हरि की ही कीर्ति हुई है: नारायण, हृषीकेश, भगवान, सात्वतों के स्वामी।
 
 --- verse 4 ---
 deva:
@@ -48,6 +57,9 @@ deva:
 iast:
 atra brahma paraṁ guhyaṁ jagataḥ prabhavāpyayam|
 jñānaṁ ca tadupākhyānaṁ proktaṁ vijñānasaṁyutam||
+en: Here the supreme Brahman has been told, which is the secret, and the arising and the ending of the world. Knowledge has been told too, with the account that explains it, joined with realisation.
+tel: ఇందులో రహస్యమైన పరబ్రహ్మము, జగత్తు యొక్క ఉత్పత్తి మరియు నాశము చెప్పబడినవి. విజ్ఞానముతో కూడిన జ్ఞానము, దానిని వివరించు ఉపాఖ్యానము కూడ చెప్పబడినవి.
+hi: यहाँ गुह्य परब्रह्म, तथा जगत की उत्पत्ति और नाश कहे गये हैं। विज्ञान से युक्त ज्ञान और उसे समझानेवाला उपाख्यान भी कहा गया है।
 
 --- verse 5 ---
 deva:
@@ -56,6 +68,9 @@ deva:
 iast:
 bhaktiyogaḥ samākhyāto vairāgyaṁ ca tadāśrayam|
 pārīkṣitamupākhyānaṁ nāradākhyānameva ca||
+en: The yoga of devotion has been set forth, and the detachment that rests upon it. The account of Parīkṣit has been told, and the account of Nārada as well.
+tel: భక్తియోగము, దానికి ఆధారమైన వైరాగ్యము వివరింపబడినవి. పరీక్షిత్తు యొక్క ఉపాఖ్యానము, నారదుని ఉపాఖ్యానము కూడ చెప్పబడినవి.
+hi: भक्तियोग और उसके आश्रय वैराग्य का वर्णन हुआ है। परीक्षित का उपाख्यान और नारद का उपाख्यान भी कहा गया है।
 
 --- verse 6 ---
 deva:
@@ -64,6 +79,9 @@ deva:
 iast:
 prāyopaveśo rājarṣervipraśāpāt parīkṣitaḥ|
 śukasya brahmarṣabhasya saṁvādaśca parīkṣitaḥ||
+en: The royal sage Parīkṣit sat down to fast until the end of his life, because of a brāhmaṇa's curse. Then came the conversation of Śuka, the best among the brahmarṣis, with Parīkṣit.
+tel: బ్రాహ్మణుని శాపము వలన రాజర్షి పరీక్షిత్తు ప్రాణాంతము వరకు ఉపవాసమునకు కూర్చుండెను. తరువాత బ్రహ్మర్షి శ్రేష్ఠుడైన శుకుడు పరీక్షిత్తుతో చేసిన సంవాదము ఉన్నది.
+hi: ब्राह्मण के शाप के कारण राजर्षि परीक्षित का प्राणान्त तक उपवास के लिये बैठना। फिर ब्रह्मर्षियों में श्रेष्ठ शुक का परीक्षित के साथ संवाद।
 
 --- verse 7 ---
 deva:
@@ -72,6 +90,9 @@ deva:
 iast:
 yogadhāraṇayotkrāntiḥ saṁvādo nāradājayoḥ|
 avatārānugītaṁ ca sargaḥ prādhāniko'grataḥ||
+en: The leaving of the body by the practice of yoga; the conversation of Nārada and Aja; the recounting of the descents of the Lord; and then the creation out of pradhāna.
+tel: యోగధారణ ద్వారా దేహమును విడిచుట, నారదుడు మరియు అజుల సంవాదము, భగవంతుని అవతారముల కీర్తనము, తరువాత ప్రధానము నుండి జరిగిన సృష్టి.
+hi: योगधारणा से देह का त्याग, नारद और अज का संवाद, भगवान के अवतारों का कीर्तन, और फिर प्रधान से हुई सृष्टि।
 
 --- verse 8 ---
 deva:
@@ -80,6 +101,9 @@ deva:
 iast:
 viduroddhavasaṁvādaḥ kṣattṛmaitreyayostataḥ|
 purāṇasaṁhitāpraśno mahāpuruṣasaṁsthitiḥ||
+en: The conversation of Vidura and Uddhava; then that of Kṣattā and Maitreya; the question about the Purāṇa saṁhitā; and the abiding form of the great Person.
+tel: విదురుడు మరియు ఉద్ధవుల సంవాదము, తరువాత క్షత్తా మరియు మైత్రేయుల సంవాదము, పురాణ సంహిత గురించిన ప్రశ్న, మహాపురుషుని సంస్థితి.
+hi: विदुर और उद्धव का संवाद, फिर क्षत्ता और मैत्रेय का संवाद, पुराणसंहिता के विषय में प्रश्न, और महापुरुष की संस्थिति।
 
 --- verse 9 ---
 deva:
@@ -88,6 +112,9 @@ deva:
 iast:
 tataḥ prākṛtikaḥ sargaḥ sapta vaikṛtikāśca ye|
 tato brahmāṇḍasambhūtirvairājaḥ puruṣo yataḥ||
+en: Then the creation out of prakṛti, and the seven secondary creations; then the coming into being of the brahmāṇḍa, from which the Vairāja Puruṣa arose.
+tel: తరువాత ప్రకృతి నుండి జరిగిన సృష్టి, ఏడు వైకృత సృష్టులు, పిమ్మట బ్రహ్మాండము యొక్క ఉత్పత్తి, దాని నుండి వైరాజ పురుషుడు ఉద్భవించెను.
+hi: फिर प्राकृतिक सृष्टि और सात वैकृतिक सृष्टियाँ, तदनन्तर ब्रह्माण्ड की उत्पत्ति, जिससे वैराज पुरुष प्रकट हुए।
 
 --- verse 10 ---
 deva:
@@ -96,6 +123,9 @@ deva:
 iast:
 kālasya sthūlasūkṣmasya gatiḥ padmasamudbhavaḥ|
 bhuva uddharaṇe'mbhodherhiraṇyākṣavadho yathā||
+en: The course of time, gross and subtle; the rising of the lotus; and how, when the earth was lifted out of the ocean, Hiraṇyākṣa was killed.
+tel: స్థూలమైన మరియు సూక్ష్మమైన కాలము యొక్క గతి, పద్మము యొక్క ఉద్భవము, భూమిని సముద్రము నుండి ఉద్ధరించినప్పుడు హిరణ్యాక్షుని వధ ఎట్లు జరిగినది.
+hi: स्थूल और सूक्ष्म काल की गति, कमल का उद्भव, और समुद्र से पृथ्वी के उद्धार के समय हिरण्याक्ष का वध जैसे हुआ।
 
 --- verse 11 ---
 deva:
@@ -104,6 +134,9 @@ deva:
 iast:
 ūrdhvatiryagavāksargo rudrasargastathaiva ca|
 ardhanārīnarasyātha yataḥ svāyambhuvo manuḥ||
+en: The creation of the beings that go upward, across and downward, and likewise the creation of Rudra; then the form that was half woman and half man, from which Svāyambhuva Manu came.
+tel: ఊర్ధ్వముగా, తిర్యక్కుగా, అధోముఖముగా పోవు జీవుల సృష్టి, అట్లే రుద్ర సృష్టి, పిమ్మట అర్ధనారీ అర్ధనర రూపము, దాని నుండి స్వాయంభువ మనువు కలిగెను.
+hi: ऊपर, तिरछे और नीचे जानेवाले जीवों की सृष्टि, तथा रुद्र की सृष्टि, फिर आधा स्त्री और आधा पुरुष वाला रूप, जिससे स्वायम्भुव मनु हुए।
 
 --- verse 12 ---
 deva:
@@ -112,6 +145,9 @@ deva:
 iast:
 śatarūpā ca yā strīṇāmādyā prakṛtiruttamā|
 santāno dharmapatnīnāṁ kardamasya prajāpateḥ||
+en: And Śatarūpā, who is the first and the best among women; the offspring of the lawful wives of Kardama the Prajāpati.
+tel: స్త్రీలలో ప్రథమురాలు, ఉత్తమురాలు అయిన శతరూపా; ప్రజాపతి కర్దముని ధర్మపత్నుల సంతానము.
+hi: और शतरूपा, जो स्त्रियों में प्रथम और उत्तम हैं; प्रजापति कर्दम की धर्मपत्नियों की सन्तान।
 
 --- verse 13 ---
 deva:
@@ -120,6 +156,9 @@ deva:
 iast:
 avatāro bhagavataḥ kapilasya mahātmanaḥ|
 devahūtyāśca saṁvādaḥ kapilena ca dhīmatā||
+en: The descent of the blessed Lord as Kapila, the great soul; and the conversation of Devahūti with the wise Kapila.
+tel: మహాత్ముడైన కపిలుని రూపమున భగవంతుని అవతారము; దేవహూతి ధీమంతుడైన కపిలునితో చేసిన సంవాదము.
+hi: महात्मा कपिल के रूप में भगवान का अवतार; और देवहूति का बुद्धिमान कपिल के साथ संवाद।
 
 --- verse 14 ---
 deva:
@@ -128,6 +167,9 @@ deva:
 iast:
 navabrahmasamutpattirdakṣayajñavināśanam|
 dhruvasya caritaṁ paścātpṛthoḥ prācīnabarhiṣaḥ||
+en: The birth of the nine Brahmās; the destruction of Dakṣa's sacrifice; then the life of Dhruva, and after that of Pṛthu and of Prācīnabarhi.
+tel: నవ బ్రహ్మల ఉత్పత్తి, దక్షుని యజ్ఞ వినాశము, తరువాత ధ్రువుని చరిత్ర, పిమ్మట పృథువు మరియు ప్రాచీనబర్హి చరిత్రలు.
+hi: नौ ब्रह्माओं की उत्पत्ति, दक्ष के यज्ञ का विनाश, फिर ध्रुव का चरित, तदनन्तर पृथु और प्राचीनबर्हि का चरित।
 
 --- verse 15 ---
 deva:
@@ -136,6 +178,9 @@ deva:
 iast:
 nāradasya ca saṁvādastataḥ praiyavrataṁ dvijāḥ|
 nābhestato'nucaritamṛṣabhasya bharatasya ca||
+en: And the conversation with Nārada; then, O brāhmaṇas, the account of the line of Priyavrata; then the deeds of Nābhi, of Ṛṣabha and of Bharata.
+tel: నారదునితో సంవాదము; ఓ బ్రాహ్మణులారా, తరువాత ప్రియవ్రతుని వంశ వృత్తాంతము; పిమ్మట నాభి, ఋషభుడు, భరతుల చరిత్రలు.
+hi: और नारद के साथ संवाद; हे ब्राह्मणों, फिर प्रियव्रत के वंश का वृत्तान्त; तदनन्तर नाभि, ऋषभ और भरत के चरित।
 
 --- verse 16 ---
 deva:
@@ -144,6 +189,9 @@ deva:
 iast:
 dvīpavarṣasamudrāṇāṁ girinadyupavarṇanam|
 jyotiścakrasya saṁsthānaṁ pātālanarakasthitiḥ||
+en: The description of the islands, the regions, the oceans, the mountains and the rivers; the arrangement of the circle of the lights; and the position of the lower worlds and of the hells.
+tel: ద్వీపములు, వర్షములు, సముద్రములు, పర్వతములు, నదుల వర్ణనము; జ్యోతిశ్చక్రము యొక్క సంస్థానము; పాతాళములు మరియు నరకముల స్థితి.
+hi: द्वीप, वर्ष, समुद्र, पर्वत और नदियों का वर्णन; ज्योतिश्चक्र की स्थिति; और पाताल तथा नरकों की स्थिति।
 
 --- verse 17 ---
 deva:
@@ -152,6 +200,9 @@ deva:
 iast:
 dakṣajanma pracetobhyastatputrīṇāṁ ca santatiḥ|
 yato devāsuranarāstiryaṅnagakhagādayaḥ||
+en: The birth of Dakṣa from the Pracetas, and the descendants of his daughters, from whom came the devas, the asuras, men, animals, trees, birds and the rest.
+tel: ప్రచేతసుల నుండి దక్షుని జన్మము, ఆయన కుమార్తెల సంతానము, వారి నుండి దేవతలు, అసురులు, మనుష్యులు, జంతువులు, వృక్షములు, పక్షులు మొదలైనవారు కలిగిరి.
+hi: प्रचेताओं से दक्ष का जन्म, और उनकी कन्याओं की सन्तान, जिनसे देव, असुर, मनुष्य, पशु, वृक्ष, पक्षी आदि हुए।
 
 --- verse 18 ---
 deva:
@@ -160,6 +211,9 @@ deva:
 iast:
 tvāṣṭrasya janma nidhanaṁ putrayośca diterdvijāḥ|
 daityeśvarasya caritaṁ prahrādasya mahātmanaḥ||
+en: The birth and the death of the son of Tvaṣṭā, and of the two sons of Diti, O brāhmaṇas; the life of the lord of the Daityas, and of Prahrāda, the great soul.
+tel: ఓ బ్రాహ్మణులారా, త్వష్ట కుమారుని జన్మము మరియు మరణము, దితి ఇద్దరు కుమారుల జన్మము మరియు మరణము; దైత్యేశ్వరుని చరిత్ర, మహాత్ముడైన ప్రహ్రాదుని చరిత్ర.
+hi: हे ब्राह्मणों, त्वष्टा के पुत्र का तथा दिति के दोनों पुत्रों का जन्म और निधन; दैत्यों के स्वामी का चरित, और महात्मा प्रह्राद का चरित।
 
 --- verse 19 ---
 deva:
@@ -168,6 +222,9 @@ deva:
 iast:
 manvantarānukathanaṁ gajendrasya vimokṣaṇam|
 manvantarāvatārāśca viṣṇorhayaśirādayaḥ||
+en: The account of the manvantaras; the release of the lord of the elephants; and the descents of Viṣṇu in the manvantaras, Hayaśiras and the rest.
+tel: మన్వంతరముల వృత్తాంతము; గజేంద్రుని విమోక్షణము; మన్వంతరములలో విష్ణువు యొక్క అవతారములు, హయశిరుడు మొదలైనవారు.
+hi: मन्वन्तरों का वर्णन; गजेन्द्र का विमोक्षण; और मन्वन्तरों में विष्णु के अवतार, हयशिर आदि।
 
 --- verse 20 ---
 deva:
@@ -176,6 +233,9 @@ deva:
 iast:
 kaurmaṁ dhānvantaraṁ mātsyaṁ vāmanaṁ ca jagatpateḥ|
 kṣīrodamathanaṁ tadvadamṛtārthe divaukasām||
+en: The tortoise form, the form of Dhanvantari, the fish form and the dwarf form of the Lord of the world; and likewise the churning of the ocean of milk by the dwellers of heaven for the sake of the nectar.
+tel: జగత్పతి యొక్క కూర్మ రూపము, ధన్వంతరి రూపము, మత్స్య రూపము, వామన రూపము; అట్లే అమృతము కోసము దేవతలు చేసిన క్షీరసముద్ర మథనము.
+hi: जगत्पति के कूर्म, धन्वन्तरि, मत्स्य और वामन रूप; तथा अमृत के लिये देवताओं द्वारा किया गया क्षीरसागर का मन्थन।
 
 --- verse 21 ---
 deva:
@@ -184,6 +244,9 @@ deva:
 iast:
 devāsuramahāyuddhaṁ rājavaṁśānukīrtanam|
 ikṣvākujanma tadvaṁśaḥ sudyumnasya mahātmanaḥ||
+en: The great war of the devas and the asuras; the recounting of the royal lines; the birth of Ikṣvāku and his line; and that of Sudyumna, the great soul.
+tel: దేవాసురుల మహాయుద్ధము; రాజవంశముల కీర్తనము; ఇక్ష్వాకుని జన్మము మరియు ఆయన వంశము; మహాత్ముడైన సుద్యుమ్నుని వృత్తాంతము.
+hi: देव और असुरों का महायुद्ध; राजवंशों का कीर्तन; इक्ष्वाकु का जन्म और उनका वंश; तथा महात्मा सुद्युम्न का वृत्तान्त।
 
 --- verse 22 ---
 deva:
@@ -192,6 +255,9 @@ deva:
 iast:
 ilopākhyānamatroktaṁ tāropākhyānameva ca|
 sūryavaṁśānukathanaṁ śaśādādyā nṛgādayaḥ||
+en: The account of Ilā is told here, and the account of Tārā as well; the account of the line of the Sun; Śaśāda and the others, Nṛga and the rest.
+tel: ఇందులో ఇలా ఉపాఖ్యానము చెప్పబడినది, తారా ఉపాఖ్యానము కూడ; సూర్యవంశ వృత్తాంతము; శశాదుడు మొదలైనవారు, నృగుడు మొదలైనవారు.
+hi: यहाँ इला का उपाख्यान कहा गया है, और तारा का उपाख्यान भी; सूर्यवंश का वर्णन; शशाद आदि और नृग आदि।
 
 --- verse 23 ---
 deva:
@@ -200,6 +266,9 @@ deva:
 iast:
 saukanyaṁ cātha śaryāteḥ kakutsthasya ca dhīmataḥ|
 khaṭvāṁgasya ca māndhātuḥ saubhareḥ sagarasya ca||
+en: And then the story of Sukanyā, and of Śaryāti, and of the wise Kakutstha; and of Khaṭvāṁga, of Māndhātā, of Saubhari and of Sagara.
+tel: తరువాత సుకన్య వృత్తాంతము, శర్యాతి వృత్తాంతము, ధీమంతుడైన కకుత్స్థుని వృత్తాంతము; ఖట్వాంగుడు, మాంధాత, సౌభరి, సగరుల వృత్తాంతములు.
+hi: और फिर सुकन्या का तथा शर्याति का, और बुद्धिमान ककुत्स्थ का वृत्तान्त; तथा खट्वांग, मान्धाता, सौभरि और सगर का वृत्तान्त।
 
 --- verse 24 ---
 deva:
@@ -208,6 +277,9 @@ deva:
 iast:
 rāmasya kosalendrasya caritaṁ kilbiṣāpaham|
 nimeraṁgaparityāgo janakānāṁ ca sambhavaḥ||
+en: The life of Rāma, the lord of Kosala, which takes away sin; the giving up of the body by Nimi, and the birth of the Janakas.
+tel: పాపమును హరించు కోసలేంద్రుడైన రాముని చరిత్ర; నిమి దేహమును విడిచుట, జనకుల జన్మము.
+hi: पाप को हरनेवाला कोसलेन्द्र राम का चरित; निमि का शरीर त्याग, और जनकों का जन्म।
 
 --- verse 25 ---
 deva:
@@ -216,6 +288,9 @@ deva:
 iast:
 rāmasya bhārgavendrasya niḥkṣatrakaraṇaṁ bhuvaḥ|
 ailasya somavaṁśasya yayāternahuṣasya ca||
+en: The clearing of the earth of kṣatriyas by Rāma, the best of the Bhārgavas; the line of Ila, the line of the Moon, and of Yayāti and Nahuṣa.
+tel: భార్గవేంద్రుడైన రాముడు భూమిని క్షత్రియులు లేనిదిగా చేయుట; ఐలుని వంశము, సోమవంశము, యయాతి మరియు నహుషుల వృత్తాంతము.
+hi: भार्गवों में श्रेष्ठ राम द्वारा पृथ्वी को क्षत्रियों से रहित करना; ऐल का वंश, सोमवंश, तथा ययाति और नहुष का वृत्तान्त।
 
 --- verse 26 ---
 deva:
@@ -224,6 +299,9 @@ deva:
 iast:
 dauṣyanterbharatasyāpi śantanostatsutasya ca|
 yayāterjyeṣṭhaputrasya yadorvaṁśo'nukīrtitaḥ||
+en: Of Bharata the son of Duṣyanta also, and of Śantanu and his son; and the line of Yadu, the eldest son of Yayāti, has been recounted.
+tel: దుష్యంతుని కుమారుడైన భరతుని వృత్తాంతము, శంతనుడు మరియు ఆయన కుమారుని వృత్తాంతము; యయాతి జ్యేష్ఠ పుత్రుడైన యదువు వంశము కీర్తింపబడినది.
+hi: दुष्यन्त के पुत्र भरत का भी, तथा शन्तनु और उनके पुत्र का वृत्तान्त; और ययाति के ज्येष्ठ पुत्र यदु का वंश कहा गया है।
 
 --- verse 27 ---
 deva:
@@ -232,6 +310,9 @@ deva:
 iast:
 yatrāvatīrṇo bhagavānkṛṣṇākhyo jagadīśvaraḥ|
 vasudevagṛhe janma tato vṛddhiśca gokule||
+en: In that line the blessed Lord, the ruler of the world, named Kṛṣṇa, came down; his birth in the house of Vasudeva, and then his growing up in Gokula.
+tel: ఆ వంశములో జగదీశ్వరుడైన భగవంతుడు కృష్ణుడనే పేరుతో అవతరించెను; వసుదేవుని గృహమున ఆయన జన్మము, తరువాత గోకులమున ఆయన పెరుగుదల.
+hi: उसी वंश में जगदीश्वर भगवान कृष्ण नाम से अवतीर्ण हुए; वसुदेव के घर में उनका जन्म, और फिर गोकुल में उनका बढ़ना।
 
 --- verse 28 ---
 deva:
@@ -240,6 +321,9 @@ deva:
 iast:
 tasya karmāṇyapārāṇi kīrtitānyasuradviṣaḥ|
 pūtanāsupayaḥpānaṁ śakaṭoccāṭanaṁ śiśoḥ||
+en: His endless deeds have been recounted, the deeds of the enemy of the asuras: the drinking of the milk of Pūtanā along with her life, and the overturning of the cart by the child.
+tel: అసురద్విషుడైన ఆయన అపారమైన కర్మలు కీర్తింపబడినవి: పూతన ప్రాణములతో కూడిన పాలను త్రాగుట, శిశువు శకటమును పడద్రోయుట.
+hi: असुरों के शत्रु उनके अपार कर्म कहे गये: पूतना के प्राणों के साथ उसका दूध पीना, और शिशु द्वारा शकट को उलट देना।
 
 --- verse 29 ---
 deva:
@@ -248,6 +332,9 @@ deva:
 iast:
 tṛṇāvartasya niṣpeṣastathaiva bakavatsayoḥ|
 dhenukasya sahabhrātuḥ pralambasya ca saṁkṣayaḥ||
+en: The crushing of Tṛṇāvarta, and likewise of Baka and of Vatsa; the end of Dhenuka together with his brothers, and of Pralamba.
+tel: తృణావర్తుని నిష్పేషణము, అట్లే బకుడు మరియు వత్సుల నిష్పేషణము; సోదరులతో కూడిన ధేనుకుని సంక్షయము, ప్రలంబుని సంక్షయము.
+hi: तृणावर्त का तथा बक और वत्स का पिसना; भाइयों के साथ धेनुक का और प्रलम्ब का अन्त।
 
 --- verse 30 ---
 deva:
@@ -256,6 +343,9 @@ deva:
 iast:
 gopānāṁ ca paritrāṇaṁ dāvāgne parisarpataḥ|
 damanaṁ kāliyasyāhermahāhernandamokṣaṇam||
+en: The saving of the cowherds from the forest fire that was spreading; the subduing of the serpent Kāliya; and the release of Nanda from the great serpent.
+tel: వ్యాపించుచున్న దావాగ్ని నుండి గోపాలురను రక్షించుట; కాలియుడనే సర్పమును అణచుట; మహా సర్పము నుండి నందుని విడిపించుట.
+hi: फैलती हुई दावाग्नि से गोपों की रक्षा; कालिय नाग का दमन; और महासर्प से नन्द का छुटकारा।
 
 --- verse 31 ---
 deva:
@@ -264,6 +354,9 @@ deva:
 iast:
 vratacaryā tu kanyānāṁ yatra tuṣṭo'cyuto vrataiḥ|
 prasādo yajñapatnībhyo viprāṇāṁ cānutāpanam||
+en: The keeping of the vow by the girls, and the vows by which Acyuta was pleased; his favour to the wives of the sacrificers, and the repentance of the brāhmaṇas.
+tel: కన్యలు వ్రతమును ఆచరించుట, ఏ వ్రతముల వలన అచ్యుతుడు సంతోషించెనో; యజ్ఞపత్నులపై ఆయన ప్రసాదము, బ్రాహ్మణుల అనుతాపము.
+hi: कन्याओं का व्रत करना, और जिन व्रतों से अच्युत प्रसन्न हुए; यज्ञपत्नियों पर उनका अनुग्रह, और ब्राह्मणों का पश्चात्ताप।
 
 --- verse 32 ---
 deva:
@@ -272,6 +365,9 @@ deva:
 iast:
 govardhanoddhāraṇaṁ ca śakrasya surabheratha|
 yajñābhiṣekaṁ kṛṣṇasya strībhiḥ krīḍā ca rātriṣu||
+en: The lifting of Govardhana; then the sacred bathing of Kṛṣṇa by Indra and by Surabhi; and his play with the women at night.
+tel: గోవర్ధనమును ఎత్తుట; తరువాత శక్రుడు మరియు సురభి కృష్ణునికి చేసిన యజ్ఞాభిషేకము; రాత్రులలో స్త్రీలతో ఆయన క్రీడ.
+hi: गोवर्धन का उठाना; फिर शक्र और सुरभि द्वारा कृष्ण का यज्ञाभिषेक; और रात्रियों में स्त्रियों के साथ उनकी क्रीड़ा।
 
 --- verse 33 ---
 deva:
@@ -280,6 +376,9 @@ deva:
 iast:
 śaṁkhacūḍasya durbuddhervadho'riṣṭasya keśinaḥ|
 akrūrāgamanaṁ paścāt prasthānaṁ rāmakṛṣṇayoḥ||
+en: The killing of the evil-minded Śaṁkhacūḍa, of Ariṣṭa and of Keśī; then the coming of Akrūra, and the setting out of Rāma and Kṛṣṇa.
+tel: దుర్బుద్ధియైన శంఖచూడుని వధ, అరిష్టుని మరియు కేశి వధ; తరువాత అక్రూరుని ఆగమనము, రామకృష్ణుల ప్రస్థానము.
+hi: दुर्बुद्धि शंखचूड का, तथा अरिष्ट और केशी का वध; फिर अक्रूर का आना, और राम तथा कृष्ण का प्रस्थान।
 
 --- verse 34 ---
 deva:
@@ -288,6 +387,9 @@ deva:
 iast:
 vrajastrīṇāṁ vilāpaśca mathurālokanaṁ tataḥ|
 gajamuṣṭikacāṇūrakaṁsādīnāṁ ca yo vadhaḥ||
+en: The lament of the women of Vraja; then the sight of Mathurā; and the killing of the elephant, of Muṣṭika, of Cāṇūra, of Kaṁsa and the others.
+tel: వ్రజ స్త్రీల విలాపము; తరువాత మథురా దర్శనము; గజము, ముష్టికుడు, చాణూరుడు, కంసుడు మొదలైనవారి వధ.
+hi: व्रज की स्त्रियों का विलाप; फिर मथुरा का दर्शन; और गज, मुष्टिक, चाणूर, कंस आदि का वध।
 
 --- verse 35 ---
 deva:
@@ -298,6 +400,9 @@ iast:
 mṛtasyānayanaṁ sūnoḥ punaḥ sāndīpanerguroḥ|
 mathurāyāṁ nivasatā yaducakrasya yatpriyam|
 kṛtamuddhavarāmābhyāṁ yutena hariṇā dvijāḥ||
+en: The bringing back of the son of the teacher Sāndīpani, who had died; and, O brāhmaṇas, whatever good Hari did for the Yadus while he lived in Mathurā, together with Uddhava and Rāma.
+tel: గురువు సాందీపని మరణించిన కుమారుని తిరిగి తీసుకొని రావుట; ఓ బ్రాహ్మణులారా, ఉద్ధవుడు మరియు రామునితో కూడిన హరి మథురలో నివసించుచు యదు సమూహమునకు చేసిన ప్రియమైన కార్యములన్నియు.
+hi: गुरु सान्दीपनि के जिस पुत्र का निधन हो गया था, उसे लौटा लाना; और हे ब्राह्मणों, उद्धव तथा राम के साथ हरि ने मथुरा में रहते हुए यदुवंश के लिये जो प्रिय किया, वह सब।
 
 --- verse 36 ---
 deva:
@@ -306,6 +411,9 @@ deva:
 iast:
 jarāsandhasamānītasainyasya bahuśo vadhaḥ|
 ghātanaṁ yavanendrasya kuśasthalyā niveśanam||
+en: The killing, many times over, of the army brought by Jarāsandha; the slaying of the lord of the Yavanas; and the founding of Kuśasthalī.
+tel: జరాసంధుడు తీసుకొని వచ్చిన సేనను అనేక పర్యాయములు వధించుట; యవనేంద్రుని ఘాతనము; కుశస్థలి నిర్మాణము.
+hi: जरासन्ध द्वारा लाई गई सेना का बार-बार वध; यवनराज का मारा जाना; और कुशस्थली का निर्माण।
 
 --- verse 37 ---
 deva:
@@ -314,6 +422,9 @@ deva:
 iast:
 ādānaṁ pārijātasya sudharmāyāḥ surālayāt|
 rukmiṇyā haraṇaṁ yuddhe pramathya dviṣato hareḥ||
+en: The taking of the Pārijāta tree and of the Sudharmā hall from the abode of the gods; and the carrying away of Rukmiṇī by Hari, after he had crushed his enemies in battle.
+tel: దేవలోకము నుండి పారిజాతమును, సుధర్మను తీసుకొని వచ్చుట; యుద్ధములో శత్రువులను అణచి హరి రుక్మిణిని తీసుకొని వచ్చుట.
+hi: देवलोक से पारिजात और सुधर्मा सभा का लाना; और युद्ध में शत्रुओं को कुचलकर हरि द्वारा रुक्मिणी का हरण।
 
 --- verse 38 ---
 deva:
@@ -322,6 +433,9 @@ deva:
 iast:
 harasya jṛmbhaṇaṁ yuddhe bāṇasya bhujakṛntanam|
 prāgjyotiṣapatiṁ hatvā kanyānāṁ haraṇaṁ ca yat||
+en: The making of Hara to yawn in battle; the cutting off of the arms of Bāṇa; and the carrying away of the maidens after the lord of Prāgjyotiṣa was killed.
+tel: యుద్ధములో హరునికి జృంభణము కలిగించుట; బాణుని భుజములను ఖండించుట; ప్రాగ్జ్యోతిష పతిని చంపి కన్యలను తీసుకొని వచ్చుట.
+hi: युद्ध में हर को जँभाई दिलाना; बाण की भुजाओं का काटना; और प्राग्ज्योतिष के राजा को मारकर कन्याओं का हरण।
 
 --- verse 39 ---
 deva:
@@ -330,6 +444,9 @@ deva:
 iast:
 caidyapauṇḍrakaśālvānāṁ dantavaktrasya durmateḥ|
 śambaro dvividaḥ pīṭho muraḥ paṁcajanādayaḥ||
+en: Of Caidya, Pauṇḍraka and Śālva, and of the evil-minded Dantavaktra; of Śambara, Dvivida, Pīṭha, Mura, Paṁcajana and the others.
+tel: చైద్యుడు, పౌండ్రకుడు, శాల్వుడు, దుర్మతియైన దంతవక్త్రుడు; శంబరుడు, ద్వివిదుడు, పీఠుడు, మురుడు, పంచజనుడు మొదలైనవారు.
+hi: चैद्य, पौण्ड्रक और शाल्व का, तथा दुर्बुद्धि दन्तवक्त्र का; शम्बर, द्विविद, पीठ, मुर, पंचजन आदि का।
 
 --- verse 40 ---
 deva:
@@ -338,6 +455,9 @@ deva:
 iast:
 māhātmyaṁ ca vadhasteṣāṁ vārāṇasyāśca dāhanam|
 bhārāvataraṇaṁ bhūmernimittīkṛtya pāṇḍavān||
+en: Their greatness and their killing; the burning of Vārāṇasī; and the removing of the burden of the earth, with the Pāṇḍavas made the occasion for it.
+tel: వారి మాహాత్మ్యము, వారి వధ; వారాణసి దహనము; పాండవులను నిమిత్తముగా చేసి భూమి భారమును దించుట.
+hi: उनका माहात्म्य और उनका वध; वाराणसी का जलाना; और पाण्डवों को निमित्त बनाकर पृथ्वी के भार का उतारना।
 
 --- verse 41 ---
 deva:
@@ -346,6 +466,9 @@ deva:
 iast:
 vipraśāpāpadeśena saṁhāraḥ svakulasya ca|
 uddhavasya ca saṁvādo vāsudevasya cādbhutaḥ||
+en: The ending of his own family, with a brāhmaṇa's curse given as the cause; and the wonderful conversation of Uddhava and Vāsudeva.
+tel: బ్రాహ్మణ శాపమును కారణముగా చూపి తన కులమును సంహరించుట; ఉద్ధవుడు మరియు వాసుదేవుల అద్భుతమైన సంవాదము.
+hi: ब्राह्मण के शाप को कारण बताकर अपने कुल का संहार; और उद्धव तथा वासुदेव का अद्भुत संवाद।
 
 --- verse 42 ---
 deva:
@@ -354,6 +477,9 @@ deva:
 iast:
 yatrātmavidyā hyakhilā proktā dharmavinirṇayaḥ|
 tato martyaparityāga ātmayogānubhāvataḥ||
+en: In that conversation the whole knowledge of the self is spoken, and the settling of dharma; then the giving up of the mortal body by the power of the yoga of the self.
+tel: ఆ సంవాదములో సంపూర్ణమైన ఆత్మవిద్య, ధర్మ నిర్ణయము చెప్పబడినవి; తరువాత ఆత్మయోగ ప్రభావము వలన మర్త్య దేహమును విడిచుట.
+hi: उस संवाद में सम्पूर्ण आत्मविद्या और धर्म का निर्णय कहा गया है; फिर आत्मयोग के प्रभाव से मर्त्य देह का त्याग।
 
 --- verse 43 ---
 deva:
@@ -362,6 +488,9 @@ deva:
 iast:
 yugalakṣaṇavṛttiśca kalau nṝṇāmupaplavaḥ|
 caturvidhaśca pralaya utpattistrividhā tathā||
+en: The marks and the ways of the yugas; the ruin of men in the Kali age; the dissolution of four kinds; and likewise the creation of three kinds.
+tel: యుగముల లక్షణములు మరియు వృత్తులు; కలియుగములో మనుష్యుల ఉపప్లవము; నాలుగు విధముల ప్రలయము; అట్లే మూడు విధముల ఉత్పత్తి.
+hi: युगों के लक्षण और वृत्तियाँ; कलि में मनुष्यों का उपप्लव; चार प्रकार का प्रलय; और तीन प्रकार की उत्पत्ति।
 
 --- verse 44 ---
 deva:
@@ -372,6 +501,9 @@ iast:
 dehatyāgaśca rājarṣerviṣṇurātasya dhīmataḥ|
 śākhāpraṇayanamṛṣermārkaṇḍeyasya satkathā|
 mahāpuruṣavinyāsaḥ sūryasya jagadātmanaḥ||
+en: The giving up of the body by the wise royal sage Viṣṇurāta; the handing down of the branches of the Veda; the good story of the sage Mārkaṇḍeya; the setting out of the limbs of the great Person; and the account of the Sun, the self of the world.
+tel: ధీమంతుడైన రాజర్షి విష్ణురాతుడు దేహమును విడిచుట; వేద శాఖల ప్రణయనము; మార్కండేయ ఋషి సత్కథ; మహాపురుషుని అంగముల విన్యాసము; జగదాత్మయైన సూర్యుని వృత్తాంతము.
+hi: बुद्धिमान राजर्षि विष्णुरात का देह त्याग; वेद की शाखाओं का प्रणयन; मार्कण्डेय ऋषि की सत्कथा; महापुरुष के अंगों का विन्यास; और जगत के आत्मा सूर्य का वर्णन।
 
 --- verse 45 ---
 deva:
@@ -380,6 +512,9 @@ deva:
 iast:
 iti coktaṁ dvijaśreṣṭhā yatpṛṣṭo'hamihāsmi vaḥ|
 līlāvatārakarmāṇi kīrtitānīha sarvaśaḥ||
+en: Thus, O best of brāhmaṇas, what you asked me here has been told. The deeds of the Lord's playful descents have been recounted here in full.
+tel: ఓ ద్విజశ్రేష్ఠులారా, ఈ విధముగా మీరు నన్ను ఇక్కడ అడిగినది చెప్పబడినది. భగవంతుని లీలావతారముల కర్మలు ఇందులో సంపూర్ణముగా కీర్తింపబడినవి.
+hi: हे द्विजश्रेष्ठों, इस प्रकार जो आपने मुझसे यहाँ पूछा, वह कह दिया गया। भगवान के लीलावतारों के कर्म यहाँ पूर्ण रूप से कहे गये हैं।
 
 --- verse 46 ---
 deva:
@@ -388,6 +523,9 @@ deva:
 iast:
 patitaḥ skhalitaścārtaḥ kṣuttvā vā vivaśo bruvan|
 haraye nama ityuccairmucyate sarvapātakāt||
+en: One who has fallen, who has stumbled, who is in pain, or who has sneezed, and says aloud without meaning to, Salutation to Hari, is freed from every sin.
+tel: పడిపోయినవాడు, జారినవాడు, బాధపడుచున్నవాడు, లేక తుమ్మినవాడు, తనకు తెలియకుండ హరికి నమస్కారము అని పెద్దగా పలికినచో సమస్త పాపముల నుండి విముక్తుడగును.
+hi: गिरा हुआ, फिसला हुआ, पीड़ित, या छींकता हुआ मनुष्य यदि विवश होकर ऊँचे स्वर से हरि को नमस्कार कहे, तो वह सब पापों से मुक्त हो जाता है।
 
 --- verse 47 ---
 deva:
@@ -400,6 +538,9 @@ saṁkīrtyamāno bhagavānanantaḥ
 śrutānubhāvo vyasanaṁ hi puṁsām|
 praviśya cittaṁ vidhunotyaśeṣaṁ
 yathā tamo'rko'bhramivātivātaḥ||
+en: When the endless blessed Lord, whose power is heard of, is praised, he enters the mind and shakes off the whole sorrow of men, as the sun removes darkness and a strong wind removes a cloud.
+tel: మహిమ వినబడిన అనంతుడైన భగవంతుడు కీర్తింపబడినప్పుడు, ఆయన చిత్తములో ప్రవేశించి మనుష్యుల దుఃఖమును పూర్తిగా తొలగించును, సూర్యుడు చీకటిని, గాలి మేఘమును తొలగించునట్లు.
+hi: जिनका प्रभाव सुना जाता है, वे अनन्त भगवान जब कीर्तित होते हैं, तब वे चित्त में प्रवेश कर मनुष्यों के सारे दुःख को हटा देते हैं, जैसे सूर्य अन्धकार को और प्रबल वायु बादल को हटा देता है।
 
 --- verse 48 ---
 deva:
@@ -412,6 +553,9 @@ mṛṣā girastā hyasatīrasatkathā
 na kathyate yad bhagavānadhokṣajaḥ|
 tadeva satyaṁ taduhaiva maṁgalaṁ
 tadeva puṇyaṁ bhagavadguṇodayam||
+en: Those words are false and unreal, and that talk is unworthy, in which the blessed Lord Adhokṣaja is not spoken of. That alone is true, that alone is auspicious, that alone is holy, in which the qualities of the Lord arise.
+tel: భగవంతుడైన అధోక్షజుడు చెప్పబడని మాటలు అసత్యమైనవి, అసారమైనవి, ఆ కథ అసత్కథ. భగవంతుని గుణములు ప్రకాశించు మాటయే సత్యము, అదియే మంగళము, అదియే పుణ్యము.
+hi: जिनमें भगवान अधोक्षज का वर्णन नहीं है, वे वचन मिथ्या और असत् हैं, और वह कथा असत्कथा है। जिसमें भगवान के गुणों का उदय है, वही सत्य है, वही मंगल है, वही पुण्य है।
 
 --- verse 49 ---
 deva:
@@ -424,6 +568,9 @@ tadeva ramyaṁ ruciraṁ navaṁ navaṁ
 tadeva śaśvanmanaso mahotsavam|
 tadeva śokārṇavaśoṣaṇaṁ nṛṇāṁ
 yaduttamaślokayaśo'nugīyate||
+en: That alone is pleasing, that alone is beautiful, that alone is ever new; that alone is a great festival for the mind; that alone dries up the ocean of grief of men, in which the glory of the Lord of noble fame is sung.
+tel: ఉత్తమశ్లోకుని యశము గానము చేయబడునదియే రమ్యము, అదియే రుచిరము, అదియే నిత్యము నూతనము; అదియే మనసునకు మహోత్సవము; అదియే మనుష్యుల శోక సముద్రమును ఎండింపజేయును.
+hi: जिसमें उत्तमश्लोक भगवान का यश गाया जाता है, वही रमणीय है, वही सुन्दर है, वही सदा नया है; वही मन का महोत्सव है; और वही मनुष्यों के शोक-सागर को सुखा देता है।
 
 --- verse 50 ---
 deva:
@@ -436,6 +583,9 @@ na tad vacaścitrapadaṁ hareryaśo
 jagatpavitraṁ pragṛṇīta karhicit|
 tad dhvāṁkṣatīrthaṁ na tu haṁsasevitaṁ
 yatrācyutastatra hi sādhavo'malāḥ||
+en: That speech, however fine its words, never praises the glory of Hari, which makes the world pure. It is a bathing place for crows, not one served by swans. Where Acyuta is, there indeed are the spotless good people.
+tel: ఎంత అలంకారమైన పదములు కలిగినదైనను, జగత్తును పవిత్రము చేయు హరి యశమును ఎప్పుడును కీర్తించని ఆ వాక్కు కాకుల తీర్థము వంటిది, హంసలు సేవించు తీర్థము కాదు. అచ్యుతుడు ఎక్కడ ఉన్నాడో అక్కడే నిర్మలమైన సాధువులు ఉన్నారు.
+hi: जिसके पद चाहे कितने ही सुन्दर हों, वह वाणी कभी जगत को पवित्र करनेवाले हरि के यश को नहीं गाती। वह कौओं का तीर्थ है, हंसों से सेवित तीर्थ नहीं। जहाँ अच्युत हैं, वहीं निर्मल साधु हैं।
 
 --- verse 51 ---
 deva:
@@ -448,6 +598,9 @@ sa vāgvisargo janatāghasaṁplavo
 yasminpratiślokamabaddhavatyapi|
 nāmānyanantasya yaśo'ṅkitāni ya-
 cchṛṇvanti gāyanti gṛṇanti sādhavaḥ||
+en: That pouring forth of speech washes away the sin of people, in which, in verse after verse, even if it is loosely made, there stand the names of the endless Lord marked with his glory, which the good people hear, sing and recite.
+tel: ప్రతి శ్లోకములోను, రచన శిథిలమైనదైనను, యశముతో అంకితమైన అనంతుని నామములు ఉండి, వానిని సాధువులు వినుచు, గానము చేయుచు, పలుకుచున్న ఆ వాక్కు జనుల పాపమును కడిగివేయును.
+hi: जिसमें प्रत्येक श्लोक में, रचना शिथिल होने पर भी, अनन्त भगवान के यश से अंकित नाम रहते हैं, और जिन्हें साधु सुनते, गाते और कहते हैं, वह वाणी लोगों के पाप को धो देती है।
 
 --- verse 52 ---
 deva:
@@ -460,6 +613,9 @@ naiṣkarmyamapyacyutabhāvavarjitaṁ
 na śobhate jñānamalaṁ niraṁjanam|
 kutaḥ punaḥ śaśvadabhadramīśvare
 na hyarpitaṁ karma yadapyanuttamam||
+en: Even freedom from action does not shine when it is without love for Acyuta, nor does knowledge, though it be full and spotless. How much less, then, work that is not offered to the Lord, even the very best work, which is always unwholesome.
+tel: అచ్యుతునిపై భావము లేనిచో నైష్కర్మ్యము కూడ శోభించదు, పరిపూర్ణమైన నిరంజనమైన జ్ఞానము కూడ శోభించదు. ఈశ్వరునికి అర్పింపబడని కర్మ, అది ఎంత ఉత్తమమైనదైనను, సదా అభద్రమైనది కాగా అది ఇంకేమి శోభించును.
+hi: अच्युत के प्रति भाव से रहित नैष्कर्म्य भी शोभा नहीं पाता, और पूर्ण निरंजन ज्ञान भी नहीं। तब ईश्वर को अर्पित न किया गया कर्म, चाहे वह कितना ही उत्तम हो, जो सदा अभद्र है, वह कहाँ शोभा पाएगा।
 
 --- verse 53 ---
 deva:
@@ -472,6 +628,9 @@ yaśaḥśriyāmeva pariśramaḥ paro
 varṇāśramācāratapaḥśrutādiṣu|
 avismṛtiḥ śrīdharapādapadmayo-
 rguṇānuvādaśravaṇādibhirhareḥ||
+en: In the conduct of varṇa and āśrama, in tapas, in learning and the rest, the great labour is only for fame and wealth. What is worth gaining is to not forget the lotus feet of Śrīdhara, through hearing and repeating the qualities of Hari.
+tel: వర్ణాశ్రమ ఆచారములో, తపస్సులో, శ్రుత అధ్యయనములో మొదలైనవానిలో జరుగు గొప్ప పరిశ్రమము కీర్తి మరియు సంపద కోసమే. హరి గుణానువాదమును వినుట మొదలైనవాని ద్వారా శ్రీధరుని పాద పద్మములను మరువకుండుటయే పొందదగినది.
+hi: वर्ण और आश्रम के आचार में, तप में, शास्त्र के अध्ययन आदि में जो बड़ा परिश्रम होता है, वह केवल यश और धन के लिये है। हरि के गुणों के अनुवाद को सुनने आदि से श्रीधर के चरणकमलों को न भूलना ही पाने योग्य है।
 
 --- verse 54 ---
 deva:
@@ -484,6 +643,9 @@ avismṛtiḥ kṛṣṇapadāravindayoḥ
 kṣiṇotyabhadrāṇi śamaṁ tanoti ca|
 sattvasya śuddhiṁ paramātmabhaktiṁ
 jñānaṁ ca vijñānavirāgayuktam||
+en: Not forgetting the lotus feet of Kṛṣṇa destroys what is harmful and spreads peace. It gives purity of mind, devotion to the supreme Self, and knowledge joined with realisation and detachment.
+tel: కృష్ణుని పాద పద్మములను మరువకుండుట అభద్రములను నశింపజేయును, శాంతిని విస్తరింపజేయును. అది సత్త్వ శుద్ధిని, పరమాత్మ భక్తిని, విజ్ఞానము మరియు విరాగముతో కూడిన జ్ఞానమును ఇచ్చును.
+hi: कृष्ण के चरणकमलों को न भूलना अभद्र को नष्ट करता है और शान्ति फैलाता है। वह सत्त्व की शुद्धि, परमात्मा की भक्ति, और विज्ञान तथा विराग से युक्त ज्ञान देता है।
 
 --- verse 55 ---
 deva:
@@ -496,6 +658,9 @@ yūyaṁ dvijāgryā bata bhūribhāgā
 yacchaśvadātmanyakhilātmabhūtam|
 nārāyaṇaṁ devamadevamīśa-
 majasrabhāvā bhajatāviveśya||
+en: O foremost of brāhmaṇas, you are indeed greatly blessed, for with unceasing love you worship Nārāyaṇa, the God above all gods, the Lord who is the self of all, having placed him always within your own self.
+tel: ఓ ద్విజాగ్రులారా, మీరు నిజముగా మహా భాగ్యవంతులు, ఏలయనగా సర్వాత్మ స్వరూపుడైన, దేవతలకును అతీతుడైన ఈశ్వరుడు నారాయణుని మీరు మీ ఆత్మలో నిరంతరము నిలుపుకొని అజస్ర భావముతో ఆరాధించుచున్నారు.
+hi: हे द्विजश्रेष्ठों, आप निश्चय ही बड़े भाग्यवान हैं, क्योंकि सबके आत्मस्वरूप, देवों से भी परे ईश्वर नारायण को आप सदा अपने आत्मा में स्थापित कर अजस्र भाव से भजते हैं।
 
 --- verse 56 ---
 deva:
@@ -508,6 +673,9 @@ ahaṁ ca saṁsmārita ātmatattvaṁ
 śrutaṁ purā me paramarṣivaktrāt|
 prāyopaveśe nṛpateḥ parīkṣitaḥ
 sadasyṛṣīṇāṁ mahatāṁ ca śṛṇvatām||
+en: And I too have been made to remember the truth of the self, which I heard long ago from the mouth of the highest sage, at the fast unto death of King Parīkṣit, in the assembly, while the great sages were listening.
+tel: నేను కూడ ఆత్మతత్త్వమును జ్ఞాపకము చేసుకొనునట్లు చేయబడితిని. దానిని నేను పూర్వము పరమర్షి ముఖము నుండి, రాజు పరీక్షిత్తు ప్రాయోపవేశము సమయమున, మహర్షుల సదస్సులో వారు వినుచున్నప్పుడు, వినియుంటిని.
+hi: और मुझे भी आत्मतत्त्व का स्मरण कराया गया, जिसे मैंने पहले परम ऋषि के मुख से, राजा परीक्षित के प्रायोपवेश के समय, महर्षियों की सभा में उनके सुनते हुए सुना था।
 
 --- verse 57 ---
 deva:
@@ -516,6 +684,9 @@ deva:
 iast:
 etadvaḥ kathitaṁ viprāḥ kathanīyorukarmaṇaḥ|
 māhātmyaṁ vāsudevasya sarvāśubhavināśanam||
+en: O brāhmaṇas, this greatness of Vāsudeva, whose mighty deeds are worth telling, has been told to you. It destroys everything that is not auspicious.
+tel: ఓ బ్రాహ్మణులారా, చెప్పదగిన మహా కర్మలు కలిగిన వాసుదేవుని ఈ మాహాత్మ్యము మీకు చెప్పబడినది. ఇది సమస్త అశుభములను నశింపజేయును.
+hi: हे ब्राह्मणों, कहने योग्य महान कर्मोंवाले वासुदेव का यह माहात्म्य आपको कह दिया गया। यह सब अशुभ को नष्ट करता है।
 
 --- verse 58 ---
 deva:
@@ -524,6 +695,9 @@ deva:
 iast:
 ya evaṁ śrāvayennityaṁ yāmakṣaṇamananyadhīḥ|
 śraddhāvān yo'nuśṛṇuyāt punātyātmānameva saḥ||
+en: He who thus makes it heard every day, for a watch of the day or for a moment, with his mind on nothing else, and he who listens to it with faith, purifies his own self.
+tel: ఈ విధముగా అన్య చింత లేని మనసుతో ప్రతిదినము ఒక యామము కొంతసేపైనను దీనిని వినిపించువాడు, మరియు శ్రద్ధతో దీనిని వినువాడు, తన ఆత్మను పవిత్రము చేసుకొనును.
+hi: जो इस प्रकार प्रतिदिन, एक पहर या एक क्षण, अनन्य मन से इसे सुनाता है, और जो श्रद्धा से इसे सुनता है, वह अपने आत्मा को पवित्र कर लेता है।
 
 --- verse 59 ---
 deva:
@@ -532,6 +706,9 @@ deva:
 iast:
 dvādaśyāmekādaśyāṁ vā śṛṇvannāyuṣyavān bhavet|
 paṭhatyanaśnan prayatastato bhavatyapātakī||
+en: One who hears it on the twelfth day or on the eleventh day becomes long of life. One who reads it while fasting, with a pure mind, becomes free of sin.
+tel: ద్వాదశి నాడు లేక ఏకాదశి నాడు దీనిని వినువాడు ఆయుష్మంతుడగును. ఉపవాసముతో, నియమముతో దీనిని పఠించువాడు పాపము లేనివాడగును.
+hi: जो द्वादशी या एकादशी को इसे सुनता है, वह आयुष्मान होता है। जो उपवास करके संयम से इसे पढ़ता है, वह पापरहित हो जाता है।
 
 --- verse 60 ---
 deva:
@@ -540,6 +717,9 @@ deva:
 iast:
 puṣkare mathurāyāṁ ca dvāravatyāṁ yatātmavān|
 upoṣya saṁhitāmetāṁ paṭhitvā mucyate bhayāt||
+en: One who is of restrained self, and who fasts at Puṣkara, at Mathurā or at Dvāravatī and reads this saṁhitā, is freed from fear.
+tel: యతాత్ముడై పుష్కరములో, మథురలో, లేక ద్వారవతిలో ఉపవాసము చేసి ఈ సంహితను పఠించువాడు భయము నుండి విముక్తుడగును.
+hi: जो संयमी पुरुष पुष्कर में, मथुरा में या द्वारवती में उपवास करके इस संहिता को पढ़ता है, वह भय से मुक्त हो जाता है।
 
 --- verse 61 ---
 deva:
@@ -548,6 +728,9 @@ deva:
 iast:
 devatā munayaḥ siddhāḥ pitaro manavo nṛpāḥ|
 yacchanti kāmān gṛṇataḥ śṛṇvato yasya kīrtanāt||
+en: The gods, the sages, the Siddhas, the forefathers, the Manus and the kings grant the wishes of the one who recites it and of the one who hears it, because of its recital.
+tel: దీని కీర్తనము వలన దేవతలు, మునులు, సిద్ధులు, పితరులు, మనువులు, రాజులు దీనిని పలుకువాని కోరికలను, వినువాని కోరికలను తీర్చుదురు.
+hi: इसके कीर्तन से देवता, मुनि, सिद्ध, पितर, मनु और राजा इसे कहनेवाले तथा सुननेवाले की कामनाओं को पूर्ण करते हैं।
 
 --- verse 62 ---
 deva:
@@ -556,6 +739,9 @@ deva:
 iast:
 ṛco yajūṁṣi sāmāni dvijo'dhītyānuvindate|
 madhukulyā ghṛtakulyāḥ payaḥkulyāśca tatphalam||
+en: A brāhmaṇa who studies the Ṛks, the Yajus and the Sāmans obtains their fruit: streams of honey, streams of ghee and streams of milk.
+tel: ఋక్కులను, యజుస్సులను, సామములను అధ్యయనము చేసిన ద్విజుడు వాని ఫలమును పొందును: తేనె ప్రవాహములు, నేతి ప్రవాహములు, పాల ప్రవాహములు.
+hi: जो ब्राह्मण ऋक्, यजु और साम का अध्ययन करता है, वह उनका फल पाता है: मधु की धाराएँ, घृत की धाराएँ और दूध की धाराएँ।
 
 --- verse 63 ---
 deva:
@@ -564,6 +750,9 @@ deva:
 iast:
 purāṇasaṁhitāmetāmadhītya prayato dvijaḥ|
 proktaṁ bhagavatā yattu tatpadaṁ paramaṁ vrajet||
+en: A brāhmaṇa who with a pure mind studies this Purāṇa saṁhitā goes to that highest abode which the blessed Lord has spoken of.
+tel: నియమముతో ఈ పురాణ సంహితను అధ్యయనము చేసిన ద్విజుడు భగవంతుడు చెప్పిన ఆ పరమ పదమును చేరును.
+hi: जो ब्राह्मण संयम से इस पुराणसंहिता का अध्ययन करता है, वह उस परम पद को जाता है, जिसे भगवान ने कहा है।
 
 --- verse 64 ---
 deva:
@@ -572,6 +761,9 @@ deva:
 iast:
 vipro'dhītyāpnuyāt prajñāṁ rājanyodadhimekhalām|
 vaiśyo nidhipatitvaṁ ca śūdraḥ śuddhyeta pātakāt||
+en: By studying it a brāhmaṇa gains wisdom, a kṣatriya gains the earth girdled by the ocean, a vaiśya gains lordship over treasure, and a śūdra is cleansed of sin.
+tel: దీనిని అధ్యయనము చేయుట వలన బ్రాహ్మణుడు ప్రజ్ఞను పొందును, రాజన్యుడు సముద్రము చుట్టియున్న భూమిని పొందును, వైశ్యుడు నిధిపతిత్వమును పొందును, శూద్రుడు పాపము నుండి శుద్ధి పొందును.
+hi: इसके अध्ययन से ब्राह्मण प्रज्ञा पाता है, क्षत्रिय समुद्र से घिरी पृथ्वी पाता है, वैश्य निधियों का स्वामित्व पाता है, और शूद्र पाप से शुद्ध हो जाता है।
 
 --- verse 65 ---
 deva:
@@ -584,6 +776,9 @@ kalimalasaṁhatikālano'khileśo
 hariritaratra na gīyate hyabhīkṣṇam|
 iha tu punarbhagavānaśeṣamūrtiḥ
 paripaṭhito'nupadaṁ kathāprasaṅgaiḥ||
+en: Hari, the Lord of all, who destroys the mass of the impurities of the Kali age, is not sung again and again anywhere else. But here the blessed Lord, whose forms are endless, is recited at every step, through the course of the stories.
+tel: కలి మలముల సముదాయమును నశింపజేయు అఖిలేశుడైన హరి ఇతర చోటులలో మాటిమాటికి గానము చేయబడడు. కాని ఇందులో అశేష మూర్తియైన భగవంతుడు కథా ప్రసంగముల ద్వారా అడుగడుగున పఠింపబడినాడు.
+hi: कलि के मलों के समूह को नष्ट करनेवाले अखिलेश हरि अन्यत्र बारम्बार नहीं गाये जाते। परन्तु यहाँ अशेष मूर्तिवाले भगवान कथा-प्रसंगों के द्वारा पद-पद पर कहे गये हैं।
 
 --- verse 66 ---
 deva:
@@ -596,6 +791,9 @@ tamahamajamanantamātmatattvaṁ
 jagadudayasthitisaṁyamātmaśaktim|
 dyupatibhirajaśakraśaṁkarādyai-
 rduravasitastavamacyutaṁ nato'smi||
+en: I bow to that Acyuta, the unborn, the endless, the truth of the self, whose own power is the rising, the standing and the ending of the world, and whom even the lords of heaven, Aja, Śakra, Śaṁkara and the rest, cannot praise to the end.
+tel: అజుడు, అనంతుడు, ఆత్మతత్త్వ స్వరూపుడు, జగత్తు యొక్క ఉదయము, స్థితి, సంయమము తన శక్తియైనవాడు, అజుడు శక్రుడు శంకరుడు మొదలైన ద్యుపతులకు కూడ స్తుతి పూర్తి చేయ శక్యము కానివాడు, అట్టి అచ్యుతునికి నేను నమస్కరించుచున్నాను.
+hi: जो अजन्मा, अनन्त और आत्मतत्त्व हैं, जिनकी ही शक्ति जगत का उदय, स्थिति और संयम है, और जिनकी स्तुति अज, शक्र, शंकर आदि द्युपति भी पूरी नहीं कर सकते, उन अच्युत को मैं नमस्कार करता हूँ।
 
 --- verse 67 ---
 deva:
@@ -608,6 +806,9 @@ upacitanavaśaktibhiḥ sva ātma-
 nyuparacitasthirajaṁgamālayāya|
 bhagavata upalabdhimātradhāmne
 suraṛṣabhāya namaḥ sanātanāya||
+en: Salutation to the eternal blessed Lord, the best among the gods, who by his nine full-grown powers has set up within his own self the dwelling of the unmoving and the moving, and whose abode is pure awareness.
+tel: వృద్ధి చెందిన తొమ్మిది శక్తుల ద్వారా తన ఆత్మలోనే స్థిర మరియు జంగమముల నివాసమును నిర్మించుకొన్నవాడు, ఉపలబ్ధి మాత్రమే ధామమైనవాడు, దేవతలలో శ్రేష్ఠుడు, సనాతనుడు అయిన భగవంతునికి నమస్కారము.
+hi: जिन्होंने अपनी नौ पुष्ट शक्तियों से अपने ही आत्मा में स्थिर और जंगम का निवास रचा है, जिनका धाम केवल उपलब्धि है, उन देवों में श्रेष्ठ सनातन भगवान को नमस्कार है।
 
 --- verse 68 ---
 deva:
@@ -620,9 +821,15 @@ svasukhanibhṛtacetāstadvyudastānyabhāvo-
 'pyajitaruciralīlākṛṣṭasārastadīyam|
 vyatanuta kṛpayā yastattvadīpaṁ purāṇaṁ
 tamakhilavṛjinaghnaṁ vyāsasūnuṁ nato'smi||
+en: His mind was hidden in the happiness of his own self, and by that he had put away every other feeling. Yet his heart was drawn by the beautiful play of the unconquered Lord. Out of compassion he spread abroad that Purāṇa of the Lord, which is a lamp upon the truth. I bow to him, the son of Vyāsa, who destroys all sin.
+tel: తన ఆత్మ సుఖములో నిమగ్నమైన చిత్తము కలిగి, దాని వలన ఇతర భావములను విడిచినవాడైనను, అజితుని రుచిరమైన లీల ఆయన హృదయమును ఆకర్షించెను. కృపతో ఆయన తత్త్వమునకు దీపమైన ఆ భగవంతుని పురాణమును విస్తరింపజేసెను. సమస్త పాపములను నశింపజేయు ఆ వ్యాస పుత్రునికి నేను నమస్కరించుచున్నాను.
+hi: जिनका चित्त अपने आत्मा के सुख में छिपा था और उससे उन्होंने अन्य सब भाव त्याग दिये थे, फिर भी अजित भगवान की सुन्दर लीला ने उनका हृदय खींच लिया। उन्होंने कृपा से भगवान का वह पुराण फैलाया, जो तत्त्व का दीपक है। सब पापों को नष्ट करनेवाले उन व्यासपुत्र को मैं नमस्कार करता हूँ।
 
 --- verse none ---
 deva:
 इति श्रीमद्भागवते महापुराणे पारमहंस्यां संहितायां द्वादशस्कन्धे द्वादशस्कन्धार्थनिरूपणं नाम द्वादशोऽध्यायः॥ १२॥
 iast:
 iti śrīmadbhāgavate mahāpurāṇe pāramahaṁsyāṁ saṁhitāyāṁ dvādaśaskandhe dvādaśaskandhārthanirūpaṇaṁ nāma dvādaśo'dhyāyaḥ|| 12||
+en: Thus ends the twelfth adhyāya, called the setting forth of the matter of the twelfth skandha, in the twelfth skandha of the Śrīmad Bhāgavata Mahāpurāṇa, the saṁhitā of the paramahaṁsas.
+tel: ఈ విధముగా పరమహంసల సంహిత అయిన శ్రీమద్భాగవత మహాపురాణములోని ద్వాదశ స్కంధములో ద్వాదశ స్కంధార్థ నిరూపణము అను పేరు గల ద్వాదశ అధ్యాయము ముగిసినది.
+hi: इस प्रकार परमहंसों की संहिता श्रीमद्भागवत महापुराण के द्वादश स्कन्ध में द्वादशस्कन्धार्थनिरूपण नामक बारहवाँ अध्याय समाप्त हुआ।

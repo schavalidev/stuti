@@ -9,7 +9,7 @@ Type: Purāṇa (an adhyāya of the Śrīmad Bhāgavata, Skandha 12)
 
 Source / recension: Base text and authority: the Gītā Press, Gorakhpur Śrīmadbhāgavata Mahāpurāṇa with Hindi translation, Part 2 (Gītā Press code 27), archive.org item `shrimadbhagwat-mahapuran-bhag-2`, printed pages 911–916; the PDF page numbers are the printed ones. The PDF carries the typesetter's own text layer in the Chanakya font encoding, and the text was decoded from it by machine with `bin/bhagavata/chanakya.py`, not read off OCR or typed. The decoder was checked against GRETIL over all twelve skandhas before any file was written, and the differences that remain were sampled and found to be readings of the two editions. Second witness: GRETIL's `sa_bhAgavatapurANa.xml` (IAST, contributed by Ulrich Stiehl), a separate editorial lineage, compared verse by verse by machine. The TTD edition with the commentaries of Śrīdhara, Vīrarāghava and Vijayadhvaja (archive.org `Bhagavata_Purana_With_Multiple_Commentaries_TTD_Critical_Edition`) is the third witness where one is needed; it was not read for this file. The IAST was generated mechanically from the Devanāgarī with `bin/dev2iast.py`.
 
-Recension note: Text-only file, written 1 Oct 2026 at the user's instruction to lay down the whole Bhāgavata first: the English, Telugu and Hindi meanings are still to be added, and the witnesses' differences listed here have been recorded by machine and not yet adjudicated. The print is followed throughout. The print numbers 44 verses and GRETIL numbers 44. Of the 44 verses GRETIL has under the same number, 29 agree with the print letter for letter once spacing and the spelling of nasals are set aside; the rest differ: 4, 7, 13, 14, 16, 18, 20, 21, 24, 28, 30, 34, 36, 37, 44. Spacing is the print's, as its text layer gives it; in a few places justification has left a space inside a word, and these are still to be closed when the verse is read. The speaker lines (श्रीशुक उवाच and the others) are printed in italic above the verse they introduce, and are given as its first line.
+Recension note: Meanings written 24 Oct 2026 (session S78). The differences between the witnesses listed below were read as the verses were glossed; except where this note says otherwise, each is a spelling, a sandhi or a word order of the two editions, none of them changes the sense, and the print's reading therefore stands unbracketed. The print is followed throughout. The print numbers 44 verses and GRETIL numbers 44. Of the 44 verses GRETIL has under the same number, 29 agree with the print letter for letter once spacing and the spelling of nasals are set aside; the rest differ: 4, 7, 13, 14, 16, 18, 20, 21, 24, 28, 30, 34, 36, 37, 44. Spacing is the print's, as its text layer gives it. The speaker lines (श्रीशुक उवाच and the others) are printed in italic above the verse they introduce, and are given as its first line. One lost space was restored as the verses were read. At verse 25 the text layer had run येऽतीता and वर्तमाना together, and a nominative plural cannot be the first member of a compound, so the word could not be read as it stood; the space is restored here. GRETIL reads ye 'tītā vartamānā, and agrees with the corrected reading. Two differences of the print were left exactly as printed. At verse 7 the print ends the half-verse with क्षितिमण्डल where the locative क्षितिमण्डले is needed by the sentence that runs on into verse 8, and GRETIL reads kṣiti-maṇḍale; the meanings follow the locative, which is the only possible reading. At verse 28 the print's द्विजाः is taken as a vocative, although the adhyāya is spoken by Śuka to Parīkṣit; GRETIL reads te tvadīye dvijāḥ kāla adhunā, and the question of who is addressed here is left open.
 
 Verse count: 44, plus the closing colophon printed unnumbered.
 
@@ -24,6 +24,9 @@ iast:
 śrīśuka uvāca
 tataścānudinaṁ dharmaḥ satyaṁ śaucaṁ kṣamā dayā|
 kālena balinā rājan naṅkṣyatyāyurbalaṁ smṛtiḥ||
+en: Śrī Śuka said: After that, O king, dharma, truth, cleanliness, forgiveness, compassion, length of life, strength and memory will be destroyed day by day by mighty time.
+tel: శ్రీశుకుడు పలికెను: ఓ రాజా, ఆ పిమ్మట ధర్మము, సత్యము, శౌచము, క్షమ, దయ, ఆయువు, బలము, స్మృతి — ఇవి బలవంతమైన కాలము చేత దినదినము నశించిపోవును.
+hi: श्रीशुकदेवजी ने कहा: हे राजन्, उसके पश्चात् धर्म, सत्य, शौच, क्षमा, दया, आयु, बल और स्मृति — ये सब बलवान् काल के द्वारा दिन-दिन नष्ट होते जायँगे।
 
 --- verse 2 ---
 deva:
@@ -32,6 +35,9 @@ deva:
 iast:
 vittameva kalau nṝṇāṁ janmācāraguṇodayaḥ|
 dharmanyāyavyavasthāyāṁ kāraṇaṁ balameva hi||
+en: In the Kali age wealth alone will decide the standing of men in birth, in conduct and in good qualities. In the settling of dharma and justice, force alone will be the cause.
+tel: కలియుగమునందు మనుష్యులకు జన్మము, ఆచారము, గుణముల ఔన్నత్యమును ధనమే నిర్ణయించును. ధర్మమును, న్యాయమును నిర్ణయించుటలో బలమే కారణమగును.
+hi: कलियुग में मनुष्यों के जन्म, आचार और गुणों की प्रतिष्ठा धन से ही होगी। धर्म और न्याय की व्यवस्था में बल ही कारण होगा।
 
 --- verse 3 ---
 deva:
@@ -40,6 +46,9 @@ deva:
 iast:
 dāmpatye'bhirucirheturmāyaiva vyāvahārike|
 strītve puṁstve ca hi ratirvipratve sūtrameva hi||
+en: Liking alone will be the reason for the bond of husband and wife. Deceit alone will be the rule in dealings. Pleasure alone will make a woman a woman and a man a man. The sacred thread alone will make a man a brāhmaṇa.
+tel: దాంపత్యమునకు ఇష్టమే కారణమగును. వ్యవహారములలో మాయయే ప్రమాణమగును. స్త్రీత్వమునకును పురుషత్వమునకును రతియే కారణమగును. విప్రత్వమునకు యజ్ఞోపవీతమే కారణమగును.
+hi: दाम्पत्य का कारण केवल रुचि होगी। व्यवहार में केवल माया ही चलेगी। स्त्रीत्व और पुरुषत्व का कारण केवल रति होगी। विप्रत्व का कारण केवल यज्ञोपवीत होगा।
 
 --- verse 4 ---
 deva:
@@ -48,6 +57,9 @@ deva:
 iast:
 liṁgamevāśramakhyātāvanyonyāpattikāraṇam|
 avṛttyā nyāyadaurbalyaṁ pāṇḍitye cāpalaṁ vacaḥ||
+en: An outward mark alone will give the name of an āśrama, and will be the reason for people accepting one another. Want of means will make a just cause weak. Bold speech alone will pass for learning.
+tel: ఆశ్రమము పేరు వచ్చుటకు వేషమే కారణమగును, ఒకరినొకరు అంగీకరించుటకును అదే కారణమగును. ధనము లేకపోవుట చేత న్యాయము బలహీనమగును. పాండిత్యమునకు చపలమైన మాటయే ప్రమాణమగును.
+hi: आश्रम की प्रसिद्धि का और एक-दूसरे को स्वीकार करने का कारण केवल बाहरी वेष होगा। साधन के अभाव से न्याय निर्बल हो जायगा। पाण्डित्य के स्थान पर केवल चपल वाणी मानी जायगी।
 
 --- verse 5 ---
 deva:
@@ -56,6 +68,9 @@ deva:
 iast:
 anāḍhyataivāsādhutve sādhutve dambha eva tu|
 svīkāra eva codvāhe snānameva prasādhanam||
+en: Poverty alone will make a man not good. Hypocrisy alone will make him good. Mere acceptance of each other will be the marriage. Bathing alone will be the whole adornment.
+tel: ధనము లేకపోవుటయే అసాధుత్వమగును. దంభమే సాధుత్వమగును. ఒకరినొకరు స్వీకరించుటయే వివాహమగును. స్నానమే అలంకారమగును.
+hi: निर्धनता ही असाधुता मानी जायगी। दम्भ ही साधुता मानी जायगी। एक-दूसरे को स्वीकार कर लेना ही विवाह होगा। स्नान ही सारा शृंगार होगा।
 
 --- verse 6 ---
 deva:
@@ -64,6 +79,9 @@ deva:
 iast:
 dūre vāryayanaṁ tīrthaṁ lāvaṇyaṁ keśadhāraṇam|
 udarambharatā svārthaḥ satyatve dhārṣṭyameva hi||
+en: A distant place with water will be held to be a tīrtha. Long hair will be held to be beauty. Filling the belly will be held to be one's own good. Boldness alone will pass for truth.
+tel: దూరముగా నీరున్న చోటే తీర్థమగును. కేశములను పెంచుకొనుటయే లావణ్యమగును. కడుపు నింపుకొనుటయే స్వార్థమగును. సత్యమునకు ధార్ష్ట్యమే ప్రమాణమగును.
+hi: दूर जल वाला स्थान ही तीर्थ माना जायगा। बड़े केश रखना ही सुन्दरता मानी जायगी। पेट भरना ही अपना हित माना जायगा। सत्य के स्थान पर केवल धृष्टता मानी जायगी।
 
 --- verse 7 ---
 deva:
@@ -72,6 +90,9 @@ deva:
 iast:
 dākṣyaṁ kuṭumbabharaṇaṁ yaśo'rthe dharmasevanam|
 evaṁ prajābhirduṣṭābhirākīrṇe kṣitimaṇḍala||
+en: Supporting a family will be held to be skill. Dharma will be practised for the sake of fame. When the circle of the earth is filled in this way with wicked people,
+tel: కుటుంబమును పోషించుటయే దాక్ష్యమగును. కీర్తి కొరకే ధర్మమును ఆచరించుదురు. ఈ విధముగా దుష్టప్రజలతో భూమండలము నిండిపోయినప్పుడు,
+hi: कुटुम्ब का पालन ही दक्षता मानी जायगी। यश के लिये ही धर्म का आचरण किया जायगा। इस प्रकार जब पृथ्वीमण्डल दुष्ट प्रजा से भर जायगा,
 
 --- verse 8 ---
 deva:
@@ -80,6 +101,9 @@ deva:
 iast:
 brahmaviṭkṣatraśūdrāṇāṁ yo balī bhavitā nṛpaḥ|
 prajā hi lubdhai rājanyairnirghṛṇairdasyudharmabhiḥ||
+en: then whoever is strong among brāhmaṇas, vaiśyas, kṣatriyas and śūdras will become the king. The people, oppressed by greedy rulers who are without pity and who follow the ways of robbers,
+tel: అప్పుడు బ్రాహ్మణ, వైశ్య, క్షత్రియ, శూద్రులలో బలవంతుడెవడైనను రాజగును. దయలేక దస్యుల వలె ప్రవర్తించు లోభపరులైన రాజులచే పీడింపబడిన ప్రజలు,
+hi: तब ब्राह्मण, वैश्य, क्षत्रिय और शूद्रों में जो बलवान् होगा, वही राजा बन जायगा। निर्दय और डाकुओं के समान आचरण करनेवाले लोभी राजाओं से पीड़ित प्रजा,
 
 --- verse 9 ---
 deva:
@@ -88,6 +112,9 @@ deva:
 iast:
 ācchinnadāradraviṇā yāsyanti girikānanam|
 śākamūlāmiṣakṣaudraphalapuṣpāṣṭibhojanāḥ||
+en: their wives and their wealth taken away, will go to the hills and the forests, and will live on leaves, roots, meat, honey, fruits, flowers and seeds.
+tel: భార్యలను, ధనమును కోల్పోయి, కొండలకు అడవులకు పోవుదురు. ఆకుకూరలు, దుంపలు, మాంసము, తేనె, పండ్లు, పుష్పములు, విత్తనములు తిని జీవించుదురు.
+hi: स्त्री और धन छिन जाने पर पहाड़ों और वनों में चली जायगी, और शाक, मूल, मांस, मधु, फल, फूल तथा बीजों को खाकर रहेगी।
 
 --- verse 10 ---
 deva:
@@ -96,6 +123,9 @@ deva:
 iast:
 anāvṛṣṭyā vinaṅkṣyanti durbhikṣakarapīḍitāḥ|
 śītavātātapaprāvṛḍhimairanyonyataḥ prajāḥ||
+en: Afflicted by famine and by taxes, the people will perish through want of rain, and through cold, wind, heat, the rains and frost, and through one another.
+tel: దుర్భిక్షము చేతను, పన్నుల చేతను పీడింపబడిన ప్రజలు వర్షము లేకపోవుట చేత, చలి, గాలి, ఎండ, వర్షాకాలము, మంచు చేతను, ఒకరివలన ఒకరు నశించుదురు.
+hi: अकाल और कर से पीड़ित प्रजा वर्षा के अभाव से, तथा शीत, वायु, धूप, वर्षा और पाले से, और एक-दूसरे के कारण नष्ट होती जायगी।
 
 --- verse 11 ---
 deva:
@@ -104,6 +134,9 @@ deva:
 iast:
 kṣuttṛḍbhyāṁ vyādhibhiścaiva santapsyante ca cintayā|
 triṁśadviṁśativarṣāṇi paramāyuḥ kalau nṛṇām||
+en: They will be tormented by hunger and thirst, by diseases, and by worry. In the Kali age the longest life of men will be twenty or thirty years.
+tel: ఆకలి దప్పులచే, రోగములచే, చింతచే వారు బాధపడుదురు. కలియుగమునందు మనుష్యుల పరమాయువు ఇరువది ముప్పది సంవత్సరములే.
+hi: वे भूख-प्यास से, रोगों से और चिन्ता से संतप्त होंगे। कलियुग में मनुष्यों की परम आयु बीस-तीस वर्ष की ही होगी।
 
 --- verse 12 ---
 deva:
@@ -112,6 +145,9 @@ deva:
 iast:
 kṣīyamāṇeṣu deheṣu dehināṁ kalidoṣataḥ|
 varṇāśramavatāṁ dharme naṣṭe vedapathe nṛṇām||
+en: When the bodies of embodied beings waste away through the fault of Kali, when the dharma of those who keep varṇa and āśrama is destroyed, when the Vedic path of men is lost,
+tel: కలిదోషము చేత దేహధారుల శరీరములు క్షీణించినప్పుడు, వర్ణాశ్రమములను పాలించువారి ధర్మము నశించినప్పుడు, మనుష్యుల వేదమార్గము నశించినప్పుడు,
+hi: जब कलि के दोष से देहधारियों के शरीर क्षीण होने लगेंगे, जब वर्णाश्रम का पालन करनेवालों का धर्म नष्ट हो जायगा, जब मनुष्यों का वेदमार्ग लुप्त हो जायगा,
 
 --- verse 13 ---
 deva:
@@ -120,6 +156,9 @@ deva:
 iast:
 pākhaṇḍapracure dharme dasyuprāyeṣu rājasu|
 cauryānṛtavṛthāhiṁsānānāvṛttiṣu vai nṛṣu||
+en: when dharma is full of false doctrine, when kings are mostly robbers, when men live by many means, by theft, by falsehood and by needless violence,
+tel: ధర్మము పాఖండముతో నిండినప్పుడు, రాజులు దస్యులవలె అయినప్పుడు, మనుష్యులు దొంగతనము, అసత్యము, వ్యర్థమైన హింస మొదలగు నానావిధ వృత్తులతో జీవించినప్పుడు,
+hi: जब धर्म पाखण्ड से भर जायगा, जब राजा प्रायः डाकू हो जायँगे, जब मनुष्य चोरी, झूठ और व्यर्थ हिंसा आदि नाना वृत्तियों से जीवन चलायँगे,
 
 --- verse 14 ---
 deva:
@@ -128,6 +167,9 @@ deva:
 iast:
 śūdraprāyeṣu varṇeṣu chāgaprāyāsu dhenuṣu|
 gṛhaprāyeṣvāśrameṣu yaunaprāyeṣu bandhuṣu||
+en: when the varṇas are mostly śūdra, when the cows are mostly like goats, when the āśramas are mostly households, when kinship is mostly by marriage,
+tel: వర్ణములు ప్రాయికముగా శూద్రులైనప్పుడు, ఆవులు ప్రాయికముగా మేకలవలె అయినప్పుడు, ఆశ్రమములు ప్రాయికముగా గృహస్థాశ్రమమే అయినప్పుడు, బంధుత్వము ప్రాయికముగా వివాహము చేతనే ఏర్పడినప్పుడు,
+hi: जब वर्ण प्रायः शूद्र हो जायँगे, जब गौएँ प्रायः बकरियों के समान हो जायँगी, जब आश्रम प्रायः गृहस्थ ही रह जायँगे, जब बन्धुता प्रायः विवाह से ही होगी,
 
 --- verse 15 ---
 deva:
@@ -136,6 +178,9 @@ deva:
 iast:
 aṇuprāyāsvoṣadhīṣu śamīprāyeṣu sthāsnuṣu|
 vidyutprāyeṣu megheṣu śūnyaprāyeṣu sadmasu||
+en: when the plants are mostly small, when the trees are mostly like the śamī, when the clouds are mostly lightning, when the houses are mostly empty,
+tel: ఓషధులు ప్రాయికముగా చిన్నవైనప్పుడు, వృక్షములు ప్రాయికముగా శమీ వృక్షము వలె అయినప్పుడు, మేఘములు ప్రాయికముగా మెరుపులే అయినప్పుడు, ఇండ్లు ప్రాయికముగా శూన్యములైనప్పుడు,
+hi: जब ओषधियाँ प्रायः छोटी हो जायँगी, जब वृक्ष प्रायः शमी के समान हो जायँगे, जब मेघ प्रायः बिजली ही रह जायँगे, जब घर प्रायः सूने हो जायँगे,
 
 --- verse 16 ---
 deva:
@@ -144,6 +189,9 @@ deva:
 iast:
 itthaṁ kalau gataprāye jane tu kharadharmiṇi|
 dharmatrāṇāya sattvena bhagavānavatariṣyati||
+en: then, when Kali has nearly passed and people have the nature of donkeys, the blessed Lord will descend with sattva for the protection of dharma.
+tel: ఈ విధముగా కలి దాదాపు గడచినప్పుడు, జనులు గాడిదల స్వభావము కలవారైనప్పుడు, ధర్మమును రక్షించుటకు భగవంతుడు సత్త్వముతో అవతరించును.
+hi: इस प्रकार जब कलि प्रायः बीत जायगा और लोग गधों के स्वभाव वाले हो जायँगे, तब धर्म की रक्षा के लिये भगवान् सत्त्व के साथ अवतार लेंगे।
 
 --- verse 17 ---
 deva:
@@ -152,6 +200,9 @@ deva:
 iast:
 carācaragurorviṣṇorīśvarasyākhilātmanaḥ|
 dharmatrāṇāya sādhūnāṁ janma karmāpanuttaye||
+en: The birth of Viṣṇu, the teacher of all that moves and does not move, the ruler, the self of all, is for the protection of dharma, for the good, and for the removal of their karma.
+tel: చరాచరములకు గురువైన, ఈశ్వరుడైన, సర్వాత్మకుడైన విష్ణువు జన్మము ధర్మమును రక్షించుటకు, సాధువులకొరకు, వారి కర్మమును తొలగించుటకు కలుగును.
+hi: चराचर के गुरु, ईश्वर, सर्वात्मा विष्णु का जन्म धर्म की रक्षा के लिये, साधुओं के लिये और उनके कर्म को दूर करने के लिये होता है।
 
 --- verse 18 ---
 deva:
@@ -160,6 +211,9 @@ deva:
 iast:
 sambhalagrāmamukhyasya brāhmaṇasya mahātmanaḥ|
 bhavane viṣṇuyaśasaḥ kalkiḥ prādurbhaviṣyati||
+en: Kalki will appear in the house of Viṣṇuyaśas, the great-souled brāhmaṇa who is the chief of the village of Sambhala.
+tel: సంభలగ్రామమునకు ముఖ్యుడైన, మహాత్ముడైన విష్ణుయశస్సు అను బ్రాహ్మణుని ఇంట కల్కి ప్రాదుర్భవించును.
+hi: सम्भलग्राम के मुख्य, महात्मा ब्राह्मण विष्णुयशा के घर में कल्कि प्रकट होंगे।
 
 --- verse 19 ---
 deva:
@@ -168,6 +222,9 @@ deva:
 iast:
 aśvamāśugamāruhya devadattaṁ jagatpatiḥ|
 asināsādhudamanamaṣṭaiśvaryaguṇānvitaḥ||
+en: The lord of the world, joined with the eight qualities of lordship, mounting the swift horse named Devadatta, with his sword that subdues the wicked,
+tel: అష్టైశ్వర్య గుణములు కలిగిన జగత్పతి, దేవదత్తమను వేగవంతమైన గుఱ్ఱమును ఎక్కి, దుష్టులను అణచు ఖడ్గమును ధరించి,
+hi: आठ ऐश्वर्य गुणों से युक्त जगत्पति देवदत्त नामक वेगवान् घोड़े पर चढ़कर, असाधुओं का दमन करनेवाली तलवार लेकर,
 
 --- verse 20 ---
 deva:
@@ -176,6 +233,9 @@ deva:
 iast:
 vicarannāśunā kṣoṇyāṁ hayenāpratimadyutiḥ|
 nṛpaliṁgacchado dasyūn koṭiśo nihaniṣyati||
+en: moving over the earth on that swift horse, of splendour without equal, will kill robbers by the crore who hide themselves under the marks of kings.
+tel: ఆ వేగవంతమైన గుఱ్ఱముపై భూమిని సంచరించుచు, సాటిలేని తేజస్సు కలవాడై, రాజుల గుర్తులతో తమను కప్పిపుచ్చుకొను దస్యులను కోట్ల కొలది సంహరించును.
+hi: उस वेगवान् घोड़े पर पृथ्वी में विचरते हुए, अनुपम तेज वाले वे राजाओं के चिह्नों से अपने को छिपाये हुए डाकुओं को करोड़ों की संख्या में मारेंगे।
 
 --- verse 21 ---
 deva:
@@ -186,6 +246,9 @@ iast:
 atha teṣāṁ bhaviṣyanti manāṁsi viśadāni vai|
 vāsudevāṁgarāgātipuṇyagandhānilaspṛśām|
 paurajānapadānāṁ vai hateṣvakhiladasyuṣu||
+en: Then, when all the robbers have been killed, the minds of the people of the towns and of the countryside will become clear, for the wind that carries the most holy fragrance of the sandal paste on the limbs of Vāsudeva will touch them.
+tel: అప్పుడు దస్యులందరును సంహరింపబడిన పిమ్మట, వాసుదేవుని అంగరాగము యొక్క అతిపుణ్యమైన సుగంధము మోసుకొని వచ్చు గాలి తాకుట చేత, పురవాసుల మరియు జనపదవాసుల మనస్సులు నిర్మలములగును.
+hi: तब सब डाकुओं के मारे जाने पर, वासुदेव के अंगराग की अत्यन्त पवित्र सुगन्ध लिये हुए वायु के स्पर्श से नगर और जनपद के लोगों के मन निर्मल हो जायँगे।
 
 --- verse 22 ---
 deva:
@@ -194,6 +257,9 @@ deva:
 iast:
 teṣāṁ prajāvisargaśca sthaviṣṭhaḥ sambhaviṣyati|
 vāsudeve bhagavati sattvamūrtau hṛdi sthite||
+en: And when the blessed Vāsudeva, whose form is sattva, is seated in their hearts, the birth of their offspring will become very great.
+tel: సత్త్వమూర్తియైన భగవంతుడు వాసుదేవుడు వారి హృదయములో నిలిచినప్పుడు, వారి సంతానము మిక్కిలి వృద్ధి చెందును.
+hi: और जब सत्त्वमूर्ति भगवान् वासुदेव उनके हृदय में स्थित होंगे, तब उनकी सन्तान की वृद्धि बहुत बढ़ जायगी।
 
 --- verse 23 ---
 deva:
@@ -202,6 +268,9 @@ deva:
 iast:
 yadāvatīrṇo bhagavān kalkirdharmapatirhariḥ|
 kṛtaṁ bhaviṣyati tadā prajāsūtiśca sāttvikī||
+en: When the blessed Hari, the lord of dharma, has descended as Kalki, then the Kṛta age will come, and the birth of offspring will be of the sattva kind.
+tel: ధర్మపతియైన భగవంతుడు హరి కల్కిగా అవతరించినప్పుడు, అప్పుడు కృతయుగము వచ్చును, సంతానోత్పత్తియు సాత్త్వికమగును.
+hi: जब धर्मपति भगवान् हरि कल्कि के रूप में अवतीर्ण होंगे, तब कृतयुग आ जायगा और प्रजा की उत्पत्ति भी सात्त्विक होगी।
 
 --- verse 24 ---
 deva:
@@ -210,14 +279,20 @@ deva:
 iast:
 yadā candraśca sūryaśca tathā tiṣyabṛhaspatī|
 ekarāśau sameṣyanti tadā bhavati tat kṛtam||
+en: When the moon and the sun, and Tiṣya and Bṛhaspati, come together in one rāśi, then that Kṛta age begins.
+tel: చంద్రుడు, సూర్యుడు, అట్లే తిష్య మరియు బృహస్పతి ఒకే రాశిలో కలిసినప్పుడు, అప్పుడు ఆ కృతయుగము ఆరంభమగును.
+hi: जब चन्द्र और सूर्य तथा तिष्य और बृहस्पति एक ही राशि में आ जायँगे, तब वह कृतयुग आरम्भ होता है।
 
 --- verse 25 ---
 deva:
-येऽतीतावर्तमाना ये भविष्यन्ति च पार्थिवाः।
+येऽतीता वर्तमाना ये भविष्यन्ति च पार्थिवाः।
 ते त उद्देशतः प्रोक्ता वंशीयाः सोमसूर्ययोः॥
 iast:
-ye'tītāvartamānā ye bhaviṣyanti ca pārthivāḥ|
+ye'tītā vartamānā ye bhaviṣyanti ca pārthivāḥ|
 te ta uddeśataḥ proktā vaṁśīyāḥ somasūryayoḥ||
+en: The kings who have passed, those who are present, and those who will come, have all been told of in brief. They belong to the lines of Soma and Sūrya.
+tel: గతించిన రాజులు, ఇప్పుడు ఉన్నవారు, ముందు రాబోవువారు — వారందరును సంక్షేపముగా చెప్పబడినారు. వారు సోమవంశమునకును సూర్యవంశమునకును చెందినవారు.
+hi: जो राजा बीत चुके, जो वर्तमान हैं और जो आगे होंगे — वे सब संक्षेप में कह दिये गये। वे सोम और सूर्य के वंशों के हैं।
 
 --- verse 26 ---
 deva:
@@ -226,6 +301,9 @@ deva:
 iast:
 ārabhya bhavato janma yāvannandābhiṣecanam|
 etad varṣasahasraṁ tu śataṁ paṁcadaśottaram||
+en: From your birth up to the anointing of Nanda, these are one thousand years and a hundred more increased by fifteen.
+tel: మీ జన్మము నుండి నందుని అభిషేకము వరకు, ఇది వేయి సంవత్సరములు, ఇంకను పదునైదు కలిసిన నూరు సంవత్సరములు.
+hi: आपके जन्म से लेकर नन्द के अभिषेक तक यह एक हजार वर्ष और पन्द्रह अधिक सौ वर्ष है।
 
 --- verse 27 ---
 deva:
@@ -234,6 +312,9 @@ deva:
 iast:
 saptarṣīṇāṁ tu yau pūrvau dṛśyete uditau divi|
 tayostu madhye nakṣatraṁ dṛśyate yat samaṁ niśi||
+en: Of the seven sages, there are two that are seen risen first in the sky. The nakṣatra that is seen at night midway between those two, level with them,
+tel: సప్తర్షులలో ఆకాశమున ముందుగా ఉదయించి కనబడు రెండు నక్షత్రములు కలవు. ఆ రెంటి మధ్యలో, వారితో సమానముగా, రాత్రి కనబడు నక్షత్రము ఏదో,
+hi: सप्तर्षियों में जो दो पहले उदित होकर आकाश में दिखाई देते हैं, उन दोनों के मध्य में रात्रि में जो नक्षत्र उनके समान दिखाई देता है,
 
 --- verse 28 ---
 deva:
@@ -242,6 +323,9 @@ deva:
 iast:
 tenaita ṛṣayo yuktāstiṣṭhantyabdaśataṁ nṛṇām|
 ye tvadīye dvijāḥ kāle adhunā cāśritā maghāḥ||
+en: with that nakṣatra these sages stand joined for a hundred human years. O brāhmaṇas, in your own time they are now in Maghā.
+tel: ఆ నక్షత్రముతో కలిసి ఈ ఋషులు మనుష్యుల నూరు సంవత్సరములు నిలిచియుందురు. ఓ ద్విజులారా, మీ కాలమున వారు ఇప్పుడు మఘా నక్షత్రమును ఆశ్రయించియున్నారు.
+hi: उसी नक्षत्र से युक्त होकर ये ऋषि मनुष्यों के सौ वर्ष तक रहते हैं। हे द्विजो, आपके काल में वे इस समय मघा में स्थित हैं।
 
 --- verse 29 ---
 deva:
@@ -250,6 +334,9 @@ deva:
 iast:
 viṣṇorbhagavato bhānuḥ kṛṣṇākhyo'sau divaṁ gataḥ|
 tadāviśat kalirlokaṁ pāpe yad ramate janaḥ||
+en: When that sun of the blessed Viṣṇu, the one known as Kṛṣṇa, went to heaven, then Kali entered this world, in which people take delight in sin.
+tel: భగవంతుడైన విష్ణువు యొక్క సూర్యుడైన, కృష్ణుడని పేరుగల ఆ ప్రభువు దివమునకు వెళ్ళినప్పుడు, అప్పుడు కలి ఈ లోకమున ప్రవేశించెను; ఈ లోకమున జనులు పాపమునందు ఆనందించుచున్నారు.
+hi: भगवान् विष्णु के सूर्य रूप, कृष्ण नाम से विख्यात वे प्रभु जब स्वर्ग को चले गये, तब कलि ने इस लोक में प्रवेश किया, जिसमें लोग पाप में रमते हैं।
 
 --- verse 30 ---
 deva:
@@ -258,6 +345,9 @@ deva:
 iast:
 yāvat sa pādapadmābhyāṁ spṛśannāste ramāpatiḥ|
 tāvat kalirvai pṛthivīṁ parākrāntuṁ na cāśakat||
+en: As long as the lord of Ramā remained touching the earth with his lotus feet, so long Kali was not able to overrun the earth.
+tel: రమాపతి తన పాదపద్మములతో భూమిని తాకుచు ఉన్నంత కాలము, అంత కాలము కలి భూమిని ఆక్రమించుటకు సమర్థుడు కాలేదు.
+hi: जब तक रमापति अपने चरणकमलों से पृथ्वी का स्पर्श करते हुए विराजमान रहे, तब तक कलि पृथ्वी पर आक्रमण करने में समर्थ नहीं हुआ।
 
 --- verse 31 ---
 deva:
@@ -266,6 +356,9 @@ deva:
 iast:
 yadā devarṣayaḥ sapta maghāsu vicaranti hi|
 tadā pravṛttastu kalirdvādaśābdaśatātmakaḥ||
+en: When the seven divine sages move in Maghā, then Kali begins, and it consists of twelve hundred years.
+tel: సప్త దేవర్షులు మఘా నక్షత్రమున సంచరించునప్పుడు, అప్పుడు కలి ఆరంభమగును; అది పండ్రెండు నూర్ల సంవత్సరములు కలది.
+hi: जब सात देवर्षि मघा में विचरते हैं, तब कलि आरम्भ होता है, और वह बारह सौ वर्षों का होता है।
 
 --- verse 32 ---
 deva:
@@ -274,6 +367,9 @@ deva:
 iast:
 yadā maghābhyo yāsyanti pūrvāṣāḍhāṁ maharṣayaḥ|
 tadā nandāt prabhṛtyeṣa kalirvṛddhiṁ gamiṣyati||
+en: When the great sages go from Maghā to Pūrvāṣāḍhā, then from the time of Nanda onward this Kali will grow.
+tel: మహర్షులు మఘా నుండి పూర్వాషాఢకు పోయినప్పుడు, అప్పుడు నందుని కాలము నుండి మొదలుకొని ఈ కలి వృద్ధి చెందును.
+hi: जब महर्षि मघा से पूर्वाषाढ़ा को चले जायँगे, तब नन्द के समय से लेकर यह कलि बढ़ता जायगा।
 
 --- verse 33 ---
 deva:
@@ -282,6 +378,9 @@ deva:
 iast:
 yasmin kṛṣṇo divaṁ yātastasminneva tadāhani|
 pratipannaṁ kaliyugamiti prāhuḥ purāvidaḥ||
+en: On that very day on which Kṛṣṇa went to heaven, on that day the Kali age set in. So say those who know the past.
+tel: కృష్ణుడు దివమునకు వెళ్ళిన ఆ దినమునందే, ఆ దినమున కలియుగము ప్రవేశించెను. ఇట్లు పురాతనమును ఎరిగినవారు చెప్పుదురు.
+hi: जिस दिन कृष्ण स्वर्ग को गये, उसी दिन कलियुग आ गया। ऐसा प्राचीन बातों के जाननेवाले कहते हैं।
 
 --- verse 34 ---
 deva:
@@ -290,6 +389,9 @@ deva:
 iast:
 divyābdānāṁ sahasrānte caturthe tu punaḥ kṛtam|
 bhaviṣyati yadā nṝṇāṁ mana ātmaprakāśakam||
+en: At the end of the thousand divine years of the fourth yuga, the Kṛta age will come again, when the minds of men will show the self.
+tel: నాలుగవ యుగమునకు సంబంధించిన దివ్య వేయి సంవత్సరముల అంతమున మరల కృతయుగము కలుగును; అప్పుడు మనుష్యుల మనస్సు ఆత్మను ప్రకాశింపజేయునదిగా ఉండును.
+hi: चौथे युग के दिव्य एक हजार वर्षों के अन्त में फिर कृतयुग होगा, जब मनुष्यों का मन आत्मा को प्रकाशित करनेवाला होगा।
 
 --- verse 35 ---
 deva:
@@ -298,6 +400,9 @@ deva:
 iast:
 ityeṣa mānavo vaṁśo yathā saṁkhyāyate bhuvi|
 tathā viṭśūdraviprāṇāṁ tāstā jñeyā yuge yuge||
+en: Thus is this line of Manu, as it is counted on the earth. In the same way the lines of the vaiśyas, the śūdras and the brāhmaṇas are to be known, age after age.
+tel: భూమిపై లెక్కింపబడునట్లు ఈ మానవ వంశము ఇది. అట్లే వైశ్యుల, శూద్రుల, బ్రాహ్మణుల వంశములు యుగము యుగమునందు తెలియదగినవి.
+hi: इस प्रकार यह मनु का वंश है, जैसा पृथ्वी पर गिना जाता है। उसी प्रकार वैश्य, शूद्र और ब्राह्मणों के वंश भी युग-युग में जानने चाहिये।
 
 --- verse 36 ---
 deva:
@@ -306,6 +411,9 @@ deva:
 iast:
 eteṣāṁ nāmaliṁgānāṁ puruṣāṇāṁ mahātmanām|
 kathāmātrāvaśiṣṭānāṁ kīrtireva sthitā bhuvi||
+en: Of these great men, who are now only names and marks, and of whom nothing remains but the story, only the fame stands on the earth.
+tel: పేరు మరియు గుర్తులు మాత్రమే మిగిలిన, కథ మాత్రమే శేషించిన ఈ మహాత్ములైన పురుషుల కీర్తి మాత్రమే భూమిపై నిలిచియున్నది.
+hi: जो केवल नाम और चिह्न रह गये हैं, जिनकी केवल कथा शेष है, उन महात्मा पुरुषों की केवल कीर्ति ही पृथ्वी पर स्थित है।
 
 --- verse 37 ---
 deva:
@@ -314,6 +422,9 @@ deva:
 iast:
 devāpiḥ śantanorbhrātā maruścekṣvākuvaṁśajaḥ|
 kalāpagrāma āsāte mahāyogabalānvitau||
+en: Devāpi, the brother of Śantanu, and Maru, born in the line of Ikṣvāku, both stay in Kalāpagrāma, possessed of great power of yoga.
+tel: శంతనుని సోదరుడైన దేవాపి, ఇక్ష్వాకువంశమున జన్మించిన మరువు — ఈ ఇరువురును గొప్ప యోగబలము కలవారై కలాపగ్రామమున ఉన్నారు.
+hi: शन्तनु के भाई देवापि और इक्ष्वाकु के वंश में उत्पन्न मरु — ये दोनों महान् योगबल से युक्त होकर कलापग्राम में रहते हैं।
 
 --- verse 38 ---
 deva:
@@ -322,6 +433,9 @@ deva:
 iast:
 tāvihaitya kalerante vāsudevānuśikṣitau|
 varṇāśramayutaṁ dharmaṁ pūrvavat prathayiṣyataḥ||
+en: At the end of Kali those two will come here, taught by Vāsudeva, and will spread again, as before, the dharma joined with varṇa and āśrama.
+tel: కలి అంతమున ఆ ఇరువురు ఇచటికి వచ్చి, వాసుదేవునిచే ఉపదేశింపబడి, వర్ణాశ్రమములతో కూడిన ధర్మమును పూర్వమువలె మరల వ్యాపింపజేయుదురు.
+hi: कलि के अन्त में वे दोनों यहाँ आकर, वासुदेव से शिक्षा पाकर, वर्ण और आश्रम से युक्त धर्म को पहले की भाँति फिर फैलायेंगे।
 
 --- verse 39 ---
 deva:
@@ -330,6 +444,9 @@ deva:
 iast:
 kṛtaṁ tretā dvāparaṁ ca kaliśceti caturyugam|
 anena kramayogena bhuvi prāṇiṣu vartate||
+en: Kṛta, Tretā, Dvāpara and Kali — these four yugas move among the living beings on the earth in this order.
+tel: కృతము, త్రేత, ద్వాపరము, కలి — ఈ నాలుగు యుగములు ఈ క్రమముననే భూమిపై ప్రాణులలో నడచుచున్నవి.
+hi: कृत, त्रेता, द्वापर और कलि — ये चार युग इसी क्रम से पृथ्वी पर प्राणियों में चलते रहते हैं।
 
 --- verse 40 ---
 deva:
@@ -338,6 +455,9 @@ deva:
 iast:
 rājannete mayā proktā naradevāstathāpare|
 bhūmau mamatvaṁ kṛtvānte hitvemāṁ nidhanaṁ gatāḥ||
+en: O king, these kings of whom I have spoken, and the others too, made the earth their own, and at the end they left it and met their death.
+tel: ఓ రాజా, నేను చెప్పిన ఈ నరదేవులును, ఇతరులును భూమిపై మమత్వమును చేసి, అంతమున దానిని విడిచి మరణమును పొందినారు.
+hi: हे राजन्, मैंने जिन नरदेवों का वर्णन किया और दूसरे भी, वे पृथ्वी पर ममता करके अन्त में इसे छोड़कर मृत्यु को प्राप्त हुए।
 
 --- verse 41 ---
 deva:
@@ -346,6 +466,9 @@ deva:
 iast:
 kṛmiviḍbhasmasaṁjñānte rājanāmno'pi yasya ca|
 bhūtadhruk tatkṛte svārthaṁ kiṁ veda nirayo yataḥ||
+en: Even of him who bears the name of king, the end is the name of worm, of dung or of ashes. One who harms living beings for the sake of the body, does he know his own good, when hell comes from it?
+tel: రాజు అను పేరు కలవానికి కూడ అంతమున క్రిమి, విష్ఠ, భస్మము అను పేరే మిగులును. ఆ శరీరము కొరకు ప్రాణులను హింసించువాడు తన హితమును ఎరుగునా? దాని వలన నరకము కలుగును.
+hi: जो राजा नाम से जाना जाता है, उसका भी अन्त में नाम कृमि, विष्ठा या भस्म ही रह जाता है। उस शरीर के लिये जो प्राणियों को पीड़ा देता है, वह अपना हित क्या जानता है, जब उससे नरक प्राप्त होता है?
 
 --- verse 42 ---
 deva:
@@ -354,6 +477,9 @@ deva:
 iast:
 kathaṁ seyamakhaṇḍā bhūḥ pūrvairme puruṣairdhṛtā|
 matputrasya ca pautrasya matpūrvā vaṁśajasya vā||
+en: They think: this same undivided earth was held by my forefathers. How will it pass to my son, to my grandson, or to one born in my line?
+tel: వారు ఇట్లు తలచుదురు: అఖండమైన ఈ భూమి నా పూర్వపురుషులచే ధరింపబడినది. ఇది నా కుమారునికి, మనుమనికి, లేక నా వంశమున జన్మించినవానికి ఎట్లు అందును?
+hi: वे ऐसा सोचते हैं: यही अखण्ड पृथ्वी मेरे पूर्वपुरुषों ने धारण की थी। यह मेरे पुत्र को, पौत्र को अथवा मेरे वंश में उत्पन्न किसी को कैसे प्राप्त होगी?
 
 --- verse 43 ---
 deva:
@@ -362,6 +488,9 @@ deva:
 iast:
 tejo'bannamayaṁ kāyaṁ gṛhītvā''tmatayābudhāḥ|
 mahīṁ mamatayā cobhau hitvānte'darśanaṁ gatāḥ||
+en: Those without wisdom took this body, made of fire, water and food, to be the self, and took the earth to be their own. Leaving both at the end, they passed out of sight.
+tel: తేజము, జలము, అన్నములతో చేయబడిన ఈ దేహమును ఆత్మగా గ్రహించి, భూమిని తమదిగా మమతతో గ్రహించి, ఆ అబుధులు అంతమున ఆ రెంటిని విడిచి అదర్శనమును పొందినారు.
+hi: तेज, जल और अन्न से बने इस शरीर को आत्मा मानकर और पृथ्वी को ममता से अपनी मानकर, वे अज्ञानी अन्त में दोनों को छोड़कर अदृश्य हो गये।
 
 --- verse 44 ---
 deva:
@@ -370,9 +499,15 @@ deva:
 iast:
 ye ye bhūpatayo rājan bhuṁjanti bhuvamojasā|
 kālena te kṛtāḥ sarve kathāmātrāḥ kathāsu ca||
+en: O king, whatever lords of the earth enjoy the earth by their strength, time makes them all into mere stories, and into matter for stories.
+tel: ఓ రాజా, ఏ ఏ భూపతులు తమ బలము చేత భూమిని అనుభవించుచున్నారో, కాలము వారినందరిని కథామాత్రముగా చేసి, కథలలో మాత్రమే నిలుపును.
+hi: हे राजन्, जो-जो भूपति अपने बल से पृथ्वी का भोग करते हैं, काल उन सबको केवल कथा बना देता है और कथाओं में ही छोड़ देता है।
 
 --- verse none ---
 deva:
 इति श्रीमद्भागवते महापुराणे पारमहंस्यां संहितायां द्वादशस्कन्धे द्वितीयोऽध्यायः॥ २॥
 iast:
 iti śrīmadbhāgavate mahāpurāṇe pāramahaṁsyāṁ saṁhitāyāṁ dvādaśaskandhe dvitīyo'dhyāyaḥ|| 2||
+en: Thus ends the second adhyāya in the twelfth skandha of the Śrīmad Bhāgavata Mahāpurāṇa, the saṁhitā of the paramahaṁsas.
+tel: ఇది శ్రీమద్భాగవత మహాపురాణమునందు, పరమహంసల సంహితయందు, ద్వాదశస్కంధమునందు ద్వితీయాధ్యాయము.
+hi: इस प्रकार श्रीमद्भागवत महापुराण की परमहंसों की संहिता के द्वादश स्कन्ध में दूसरा अध्याय समाप्त हुआ।
