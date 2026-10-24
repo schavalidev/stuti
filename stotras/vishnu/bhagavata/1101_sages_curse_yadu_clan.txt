@@ -9,7 +9,7 @@ Type: Purāṇa (an adhyāya of the Śrīmad Bhāgavata, Skandha 11)
 
 Source / recension: Base text and authority: the Gītā Press, Gorakhpur Śrīmadbhāgavata Mahāpurāṇa with Hindi translation, Part 2 (Gītā Press code 27), archive.org item `shrimadbhagwat-mahapuran-bhag-2`, printed pages 708–712; the PDF page numbers are the printed ones. The PDF carries the typesetter's own text layer in the Chanakya font encoding, and the text was decoded from it by machine with `bin/bhagavata/chanakya.py`, not read off OCR or typed. The decoder was checked against GRETIL over all twelve skandhas before any file was written, and the differences that remain were sampled and found to be readings of the two editions. Second witness: GRETIL's `sa_bhAgavatapurANa.xml` (IAST, contributed by Ulrich Stiehl), a separate editorial lineage, compared verse by verse by machine. The TTD edition with the commentaries of Śrīdhara, Vīrarāghava and Vijayadhvaja (archive.org `Bhagavata_Purana_With_Multiple_Commentaries_TTD_Critical_Edition`) is the third witness where one is needed; it was not read for this file. The IAST was generated mechanically from the Devanāgarī with `bin/dev2iast.py`.
 
-Recension note: Text-only file, written 1 Oct 2026 at the user's instruction to lay down the whole Bhāgavata first: the English, Telugu and Hindi meanings are still to be added, and the witnesses' differences listed here have been recorded by machine and not yet adjudicated. The print is followed throughout. The print numbers 24 verses and GRETIL numbers 24. Of the 24 verses GRETIL has under the same number, 15 agree with the print letter for letter once spacing and the spelling of nasals are set aside; the rest differ: 2, 6, 10, 11, 16, 17, 18, 20, 21. Spacing is the print's, as its text layer gives it; in a few places justification has left a space inside a word, and these are still to be closed when the verse is read. The speaker lines (श्रीशुक उवाच and the others) are printed in italic above the verse they introduce, and are given as its first line.
+Recension note: Meanings written 24 Oct 2026 (session S78). The differences between the witnesses listed below were read as the verses were glossed; except where this note says otherwise, each is a spelling, a sandhi or a word order of the two editions, none of them changes the sense, and the print's reading therefore stands unbracketed. The print is followed throughout. The print numbers 24 verses and GRETIL numbers 24. Of the 24 verses GRETIL has under the same number, 15 agree with the print letter for letter once spacing and the spelling of nasals are set aside; the rest differ: 2, 6, 10, 11, 16, 17, 18, 20, 21. Spacing is the print's, as its text layer gives it. The speaker lines (श्रीशुक उवाच and the others) are printed in italic above the verse they introduce, and are given as its first line. No spacing was corrected in this file. Both detectors were run over all 24 verses, and almost every join they report stands after a virāma consonant or before an avagraha, where the script itself requires it. Three joins after a visarga or an anusvāra were examined and left as printed. अन्तःकलिं at verse 4 is a compound whose first member is an indeclinable, and GRETIL only spaces it loosely, as it does रजःकिरीटैः elsewhere. किंस्वित् at verse 15 is a fixed particle, and the two glossed files that carry it print it joined. आवेदयांचक्रुः at verse 19 is a periphrastic perfect, which is one verbal form; वर्तयांचक्रुः is left joined for the same reason at verse 26 of the sixth adhyāya of the ninth skandha. The speaker line at verse 10 is printed श्रीशुकउवाच without the space. GRETIL carries no speaker lines and cannot witness it, and the other glossed files of this pass keep the joined form, so it is left as printed. The line-break hyphens at verses 2 and 4 are the print's own and stay where the print puts them. Where the print and GRETIL differ in a letter the print is followed: मुसलम् at verses 16, 17, 18, 20 and 21 against GRETIL's मुषलम्; कर्माणि at verse 11 against GRETIL's कर्मानि; and उदारकीर्तिः at verse 10, where GRETIL's reading is a misprint and is not a word. Verses 6 and 7 are one sentence. The verb that governs the eyes, the minds and the actions of verse 6 stands in verse 7, and the two meanings are written to be read together. Verses 14 and 15 are one sentence in the same way. At verse 16 मन्दा is feminine and names the supposed woman, not the boys who are addressed, and the meaning follows that reading.
 
 Verse count: 24, plus the closing colophon printed unnumbered.
 
@@ -24,6 +24,9 @@ iast:
 śrībādarāyaṇiruvāca
 kṛtvā daityavadhaṁ kṛṣṇaḥ sarāmo yadubhirvṛtaḥ|
 bhuvo'vatārayad bhāraṁ javiṣṭhaṁ janayan kalim||
+en: Śrī Bādarāyaṇi said: Kṛṣṇa accomplished the killing of the demons. Rāma was with him and the Yadus were around him. He took away the burden of the earth, and he did this by raising a very swift strife.
+tel: శ్రీబాదరాయణి పలికెను: కృష్ణుడు దైత్యుల సంహారమును పూర్తి చేసెను. రాముడు ఆయనతో ఉండెను, యదువులు ఆయనను చుట్టి ఉండిరి. ఆయన భూమి భారమును తొలగించెను; మిక్కిలి వేగవంతమైన కలహమును పుట్టించి ఆ పనిని చేసెను.
+hi: श्रीबादरायणि ने कहा: कृष्ण ने दैत्यों का वध पूरा किया। राम उनके साथ थे और यदु उन्हें घेरे हुए थे। उन्होंने पृथ्वी का भार उतारा, और अत्यन्त वेगवान् कलह उत्पन्न करके यह किया।
 
 --- verse 2 ---
 deva:
@@ -36,6 +39,9 @@ ye kopitāḥ subahu pāṇḍusutāḥ sapatnai-
 rdurdyūtahelanakacagrahaṇādibhistān|
 kṛtvā nimittamitaretarataḥ sametān
 hatvā nṛpān niraharat kṣitibhāramīśaḥ||
+en: The sons of Pāṇḍu had been greatly angered by their rivals through the crooked game of dice, through insult, through the seizing of the hair and the rest. The Lord made them the occasion. He killed the kings who had gathered against one another, and in this way he took away the burden of the earth.
+tel: పాండుపుత్రులు శత్రువులచే కపటద్యూతముచే, అవమానముచే, కేశాకర్షణముచే, మరియు అట్టి ఇతర కార్యములచే మిక్కిలి కోపింపబడిరి. ఈశ్వరుడు వారిని నిమిత్తముగా చేసెను. ఒకరిపై ఒకరు చేరిన రాజులను ఆయన సంహరించెను; ఈ విధముగా భూమి భారమును తొలగించెను.
+hi: पाण्डु के पुत्र शत्रुओं के द्वारा कपटपूर्ण जूए से, अपमान से, केश खींचने से और ऐसे ही अन्य कार्यों से अत्यन्त क्रोधित किये गये थे। ईश्वर ने उन्हें निमित्त बनाया। परस्पर एकत्र हुए राजाओं का उन्होंने वध किया, और इस प्रकार पृथ्वी का भार उतार दिया।
 
 --- verse 3 ---
 deva:
@@ -48,6 +54,9 @@ bhūbhārarājapṛtanā yadubhirnirasya
 guptaiḥ svabāhubhiracintayadaprameyaḥ|
 manye'vanernanu gato'pyagataṁ hi bhāraṁ
 yad yādavaṁ kulamaho aviṣahyamāste||
+en: By the Yadus, who were guarded by his own arms, he drove away the armies of kings that were the burden of the earth. Then the immeasurable Lord reflected: I consider that the burden of the earth, though it has gone, has indeed not gone, because this Yādava family, alas, remains hard to bear.
+tel: తన బాహువులచే రక్షింపబడిన యదువులచే, భూభారమైన రాజసేనలను ఆయన తొలగించెను. పిమ్మట అప్రమేయుడైన ఆ ప్రభువు ఇట్లు ఆలోచించెను: భూమి భారము పోయినను పోలేదని నేను తలంచుచున్నాను; ఏలయనగా ఈ యాదవ కులము, అయ్యో, భరింపశక్యము కాక నిలిచి ఉన్నది.
+hi: अपनी भुजाओं से रक्षित यदुओं के द्वारा उन्होंने पृथ्वी का भार बनी राजाओं की सेनाओं को हटा दिया। तब उस अप्रमेय प्रभु ने विचार किया: मैं मानता हूँ कि पृथ्वी का भार चला गया, फिर भी नहीं गया; क्योंकि यह यादव कुल, हाय, असह्य रूप में बना हुआ है।
 
 --- verse 4 ---
 deva:
@@ -60,6 +69,9 @@ naivānyataḥ paribhavo'sya bhavet kathaṁci-
 nmatsaṁśrayasya vibhavonnahanasya nityam|
 antaḥkaliṁ yadukulasya vidhāya veṇu-
 stambasya vahnimiva śāntimupaimi dhāma||
+en: No defeat of this family could come from any other quarter in any way, for it has taken refuge in me and is always bound up with power. I shall set strife within the Yadu family, as fire is set within a clump of bamboo, and then I shall go in peace to my own abode.
+tel: ఈ కులమునకు ఇతరులవలన ఏ విధముగానైనను పరాభవము కలుగదు; ఏలయనగా ఇది నన్ను ఆశ్రయించినది, మరియు నిత్యము వైభవముతో కూడినది. వేణుపుంజమునందు అగ్ని పుట్టినట్లు, యదుకులమునందు అంతఃకలహమును కల్పించి, పిమ్మట నేను శాంతితో నా ధామమునకు పోవుదును.
+hi: इस कुल का पराभव किसी अन्य से किसी प्रकार भी नहीं हो सकता, क्योंकि यह मेरे आश्रित है और सदा वैभव से युक्त है। बाँस के झुरमुट में जैसे अग्नि उत्पन्न होती है, वैसे ही यदुकुल में अन्तःकलह उत्पन्न करके, फिर मैं शान्ति से अपने धाम को जाऊँगा।
 
 --- verse 5 ---
 deva:
@@ -68,6 +80,9 @@ deva:
 iast:
 evaṁ vyavasito rājan satyasaṁkalpa īśvaraḥ|
 śāpavyājena viprāṇāṁ saṁjahre svakulaṁ vibhuḥ||
+en: O King, the Lord resolved in this way. His resolve is always true, and he is the all-pervading one. Under the pretext of the curse of the brāhmaṇas, he withdrew his own family.
+tel: ఓ రాజా, ప్రభువు ఈ విధముగా నిశ్చయించెను. ఆయన సంకల్పము సదా సత్యము, ఆయన సర్వవ్యాపి. విప్రుల శాపమును వంకగా చేసుకొని ఆయన తన కులమును ఉపసంహరించెను.
+hi: हे राजन्, प्रभु ने इस प्रकार निश्चय किया। उनका संकल्प सदा सत्य है और वे विभु हैं। ब्राह्मणों के शाप के बहाने से उन्होंने अपने कुल का संहार किया।
 
 --- verse 6 ---
 deva:
@@ -76,6 +91,9 @@ deva:
 iast:
 svamūrtyā lokalāvaṇyanirmuktyā locanaṁ nṛṇām|
 gīrbhistāḥ smaratāṁ cittaṁ padaistānīkṣatāṁ kriyāḥ||
+en: With his own form, which went beyond all the beauty of the world, he took the eyes of men. With his words he took the minds of those who remembered them. With his feet he took the actions of those who looked upon them.
+tel: లోకమునందలి సౌందర్యమునంతను మించిన తన రూపముచే ఆయన మనుష్యుల కన్నులను గ్రహించెను. తన వాక్కులచే, వాటిని స్మరించువారి మనస్సును గ్రహించెను. తన పాదములచే, వాటిని చూచువారి క్రియలను గ్రహించెను.
+hi: संसार के समस्त सौन्दर्य से परे अपने रूप से उन्होंने मनुष्यों के नेत्रों को ले लिया। अपने वचनों से उनका स्मरण करनेवालों के चित्त को ले लिया। अपने चरणों से उन्हें देखनेवालों की क्रियाओं को ले लिया।
 
 --- verse 7 ---
 deva:
@@ -84,6 +102,9 @@ deva:
 iast:
 ācchidya kīrtiṁ suślokāṁ vitatya hyaṁjasā nu kau|
 tamo'nayā tariṣyantītyagāt svaṁ padamīśvaraḥ||
+en: Having thus taken them, and having spread his fair fame readily over the earth, the Lord went to his own abode, thinking that by this fame men would cross over the darkness.
+tel: ఇట్లు వాటిని గ్రహించి, తన సుకీర్తిని భూమిపై సులభముగా వ్యాపింపజేసి, ఈ కీర్తిచే జనులు అంధకారమును దాటుదురని తలంచి, ఈశ్వరుడు తన పదమునకు పోయెను.
+hi: इस प्रकार उन्हें लेकर, और अपनी सुन्दर कीर्ति को पृथ्वी पर सहज ही फैलाकर, इस कीर्ति से लोग अन्धकार को पार कर जायेंगे, यह सोचकर ईश्वर अपने पद को चले गये।
 
 --- verse 8 ---
 deva:
@@ -94,6 +115,9 @@ iast:
 rājovāca
 brahmaṇyānāṁ vadānyānāṁ nityaṁ vṛddhopasevinām|
 vipraśāpaḥ kathamabhūd vṛṣṇīnāṁ kṛṣṇacetasām||
+en: The king said: The Vṛṣṇis were devoted to the brāhmaṇas. They were generous, they always served their elders, and their minds were fixed on Kṛṣṇa. How then did the curse of the brāhmaṇas fall upon them?
+tel: రాజు పలికెను: వృష్ణివంశీయులు బ్రాహ్మణభక్తులు. వారు దానశీలురు, నిత్యము వృద్ధులను సేవించువారు, మనస్సును కృష్ణునియందు నిలిపినవారు. అట్టివారికి విప్రశాపము ఎట్లు కలిగెను?
+hi: राजा ने कहा: वृष्णिवंशी ब्राह्मणभक्त थे। वे उदार थे, सदा वृद्धों की सेवा करते थे, और उनका चित्त कृष्ण में लगा था। उन्हें ब्राह्मणों का शाप कैसे प्राप्त हुआ?
 
 --- verse 9 ---
 deva:
@@ -102,6 +126,9 @@ deva:
 iast:
 yannimittaḥ sa vai śāpo yādṛśo dvijasattama|
 kathamekātmanāṁ bheda etat sarvaṁ vadasva me||
+en: O best of the twice-born, what was the cause of that curse, and of what kind was it? How did division arise among those who were of one mind? Tell me all this.
+tel: ఓ ద్విజసత్తమా, ఆ శాపమునకు కారణమేమి, అది ఎట్టిది? ఏకాత్ములైనవారిలో భేదము ఎట్లు కలిగెను? ఇదియంతయు నాకు చెప్పుము.
+hi: हे द्विजश्रेष्ठ, उस शाप का कारण क्या था, और वह किस प्रकार का था? एकात्मा लोगों में भेद कैसे हुआ? यह सब मुझे कहिये।
 
 --- verse 10 ---
 deva:
@@ -116,6 +143,9 @@ bibhrad vapuḥ sakalasundarasanniveśaṁ
 karmācaran bhuvi sumaṁgalamāptakāmaḥ|
 āsthāya dhāma ramamāṇa udārakīrtiḥ
 saṁhartumaicchata kulaṁ sthitakṛtyaśeṣaḥ||
+en: Śrī Śuka said: He bore a body in which every beauty was set together. He performed most auspicious deeds upon the earth. All his desires were already fulfilled. He dwelt in his own abode and took his delight there, and his fame was noble. Only this one task was left for him, and he wished to withdraw his family.
+tel: శ్రీశుకుడు పలికెను: సమస్త సౌందర్యము ఒకచోట కూడిన దేహమును ఆయన ధరించెను. భూమిపై మిక్కిలి మంగళకరమైన కర్మలను ఆచరించెను. ఆయన కోరికలన్నియు ఇదివరకే నెరవేరినవి. ఆయన తన ధామమునందు ఉండి అందు రమించెను, ఆయన కీర్తి ఉదారమైనది. ఆయనకు ఈ ఒక్క పని మాత్రమే మిగిలి ఉండెను; ఆయన తన కులమును ఉపసంహరింప కోరెను.
+hi: श्रीशुकदेवजी ने कहा: समस्त सौन्दर्य जिसमें एकत्र था, ऐसा शरीर उन्होंने धारण किया। पृथ्वी पर उन्होंने अत्यन्त मंगलकारी कर्म किये। उनकी सब कामनाएँ पहले से ही पूर्ण थीं। वे अपने धाम में रहकर वहाँ रमण करते थे, और उनकी कीर्ति उदार थी। उनके लिये यही एक कार्य शेष था, और उन्होंने अपने कुल का संहार करना चाहा।
 
 --- verse 11 ---
 deva:
@@ -128,6 +158,9 @@ karmāṇi puṇyanivahāni sumaṁgalāni
 gāyajjagatkalimalāpaharāṇi kṛtvā|
 kālātmanā nivasatā yadudevagehe
 piṇḍārakaṁ samagaman munayo nisṛṣṭāḥ||
+en: He dwelt in the house of the lord of the Yadus as time itself. He performed deeds that are a mass of merit and most auspicious, deeds which take away the taint of Kali from the world that sings of them. The sages, sent away by him, then went to Piṇḍāraka.
+tel: ఆయన కాలస్వరూపుడై యదుదేవుని గృహమునందు నివసించెను. పుణ్యరాశియు, మిక్కిలి మంగళకరములును, వాటిని గానము చేయు లోకమునుండి కలిమలమును తొలగించునవియు అగు కర్మలను ఆయన ఆచరించెను. ఆయనచే పంపబడిన మునులు పిండారకమునకు పోయిరి.
+hi: वे कालस्वरूप होकर यदुदेव के गृह में निवास करते थे। पुण्य के समूह, अत्यन्त मंगलकारी, और जो उनका गान करनेवाले जगत् के कलिमल को हरते हैं, ऐसे कर्म उन्होंने किये। उनके द्वारा भेजे गये मुनि पिण्डारक को चले गये।
 
 --- verse 12 ---
 deva:
@@ -136,6 +169,9 @@ deva:
 iast:
 viśvāmitro'sitaḥ kaṇvo durvāsā bhṛguraṁgirāḥ|
 kaśyapo vāmadevo'trirvasiṣṭho nāradādayaḥ||
+en: They were Viśvāmitra, Asita, Kaṇva, Durvāsā, Bhṛgu, Aṅgirā, Kaśyapa, Vāmadeva, Atri, Vasiṣṭha, Nārada and others.
+tel: వారు విశ్వామిత్రుడు, అసితుడు, కణ్వుడు, దుర్వాసుడు, భృగువు, అంగిరసుడు, కశ్యపుడు, వామదేవుడు, అత్రి, వసిష్ఠుడు, నారదుడు మొదలైనవారు.
+hi: वे विश्वामित्र, असित, कण्व, दुर्वासा, भृगु, अंगिरा, कश्यप, वामदेव, अत्रि, वसिष्ठ, नारद आदि थे।
 
 --- verse 13 ---
 deva:
@@ -144,6 +180,9 @@ deva:
 iast:
 krīḍantastānupavrajya kumārā yadunandanāḥ|
 upasaṁgṛhya papracchuravinītā vinītavat||
+en: The boys, the sons of the Yadus, were at play. They went up to the sages and clasped their feet. They were ill-mannered, but they asked their question as though they were well-mannered.
+tel: యదునందనులైన కుమారులు ఆటయందుండిరి. వారు మునుల దగ్గరకు పోయి వారి పాదములను పట్టుకొనిరి. వారు అవినీతులు, కాని వినీతులవలె ప్రశ్నను అడిగిరి.
+hi: यदुनन्दन कुमार खेल रहे थे। उन्होंने मुनियों के पास जाकर उनके चरण पकड़े। वे अविनीत थे, परन्तु विनीत के समान उन्होंने प्रश्न पूछा।
 
 --- verse 14 ---
 deva:
@@ -152,6 +191,9 @@ deva:
 iast:
 te veṣayitvā strīveṣaiḥ sāmbaṁ jāmbavatīsutam|
 eṣā pṛcchati vo viprā antarvatnyasitekṣaṇā||
+en: They had dressed Sāmba, the son of Jāmbavatī, in the clothes of a woman. They said: O brāhmaṇas, this dark-eyed woman is with child, and she asks you a question.
+tel: జాంబవతి కుమారుడైన సాంబునకు వారు స్త్రీ వేషమును వేసిరి. వారు పలికిరి: ఓ విప్రులారా, నల్లని కన్నులు గల ఈ స్త్రీ గర్భిణి; ఈమె మిమ్ము ఒక ప్రశ్న అడుగుచున్నది.
+hi: जाम्बवती के पुत्र साम्ब को उन्होंने स्त्री के वेष पहनाये। उन्होंने कहा: हे ब्राह्मणों, काली आँखोंवाली यह स्त्री गर्भिणी है, और वह आपसे एक प्रश्न पूछती है।
 
 --- verse 15 ---
 deva:
@@ -160,6 +202,9 @@ deva:
 iast:
 praṣṭuṁ vilajjatī sākṣāt prabrūtāmoghadarśanāḥ|
 prasoṣyantī putrakāmā kiṁsvit saṁjanayiṣyati||
+en: She is ashamed to ask it before you herself. You whose sight never fails, tell us: she is about to give birth and she desires a son. What will she bring forth?
+tel: ఆమె మీ ఎదుట తానే అడుగుటకు సిగ్గుపడుచున్నది. అమోघదర్శనులైన మీరు చెప్పుడు: ఈమె ప్రసవింపబోవుచున్నది, పుత్రుని కోరుచున్నది. ఈమె ఏమి కనును?
+hi: वह आपके सामने स्वयं पूछने में लज्जित होती है। हे अमोघदर्शन, आप कहिये: वह प्रसव करने को है और पुत्र की कामना करती है। वह क्या जन्म देगी?
 
 --- verse 16 ---
 deva:
@@ -168,6 +213,9 @@ deva:
 iast:
 evaṁ pralabdhā munayastānūcuḥ kupitā nṛpa|
 janayiṣyati vo mandā musalaṁ kulanāśanam||
+en: O King, the sages were deceived in this way. They became angry and said to the boys: This dull woman will bring forth for you a club, and it will destroy your family.
+tel: ఓ రాజా, మునులు ఈ విధముగా మోసగింపబడిరి. వారు కోపించి ఆ కుమారులతో పలికిరి: మందబుద్ధి గల ఈ స్త్రీ మీకు ఒక ముసలమును కనును; అది మీ కులమును నాశనము చేయును.
+hi: हे राजन्, मुनि इस प्रकार छले गये। वे क्रोधित होकर उन कुमारों से बोले: यह मन्दबुद्धि स्त्री तुम्हारे लिये एक मूसल को जन्म देगी, और वह तुम्हारे कुल का नाश करेगा।
 
 --- verse 17 ---
 deva:
@@ -176,6 +224,9 @@ deva:
 iast:
 tacchrutvā te'tisantrastā vimucya sahasodaram|
 sāmbasya dadṛśustasmin musalaṁ khalvayasmayam||
+en: Hearing that, the boys were greatly frightened. They quickly uncovered Sāmba's belly, and there indeed they saw a club made of iron.
+tel: అది విని ఆ కుమారులు మిక్కిలి భయపడిరి. వారు వేగముగా సాంబుని ఉదరమును విప్పిరి; అందు నిజముగా ఇనుముతో చేసిన ముసలమును చూచిరి.
+hi: यह सुनकर वे कुमार अत्यन्त भयभीत हुए। उन्होंने शीघ्र ही साम्ब का उदर खोला, और वहाँ उन्होंने सचमुच लोहे का बना मूसल देखा।
 
 --- verse 18 ---
 deva:
@@ -184,6 +235,9 @@ deva:
 iast:
 kiṁ kṛtaṁ mandabhāgyairnaḥ kiṁ vadiṣyanti no janāḥ|
 iti vihvalitā gehānādāya musalaṁ yayuḥ||
+en: What have we done, we whose fortune is so poor? What will people say of us? Distressed in this way, they took the club and went to their homes.
+tel: మందభాగ్యులమైన మేము ఏమి చేసితిమి? జనులు మమ్ము గూర్చి ఏమి చెప్పుదురు? ఈ విధముగా విహ్వలులై వారు ముసలమును తీసుకొని తమ గృహములకు పోయిరి.
+hi: हम मन्दभाग्यों ने यह क्या किया? लोग हमारे विषय में क्या कहेंगे? इस प्रकार विह्वल होकर वे मूसल को लेकर अपने घरों को चले गये।
 
 --- verse 19 ---
 deva:
@@ -192,6 +246,9 @@ deva:
 iast:
 taccopanīya sadasi parimlānamukhaśriyaḥ|
 rājña āvedayāṁcakruḥ sarvayādavasannidhau||
+en: They brought it into the assembly. The beauty of their faces had faded. In the presence of all the Yādavas they reported the matter to the King.
+tel: వారు దానిని సభకు తీసుకొని వచ్చిరి. వారి ముఖములయందలి శోభ వాడిపోయెను. యాదవులందరి సన్నిధిలో వారు ఆ వృత్తాంతమును రాజునకు తెలిపిరి.
+hi: वे उसे सभा में ले आये। उनके मुखों की शोभा मुरझा गयी थी। समस्त यादवों के सामने उन्होंने वह बात राजा से कही।
 
 --- verse 20 ---
 deva:
@@ -200,6 +257,9 @@ deva:
 iast:
 śrutvāmoghaṁ vipraśāpaṁ dṛṣṭvā ca musalaṁ nṛpa|
 vismitā bhayasantrastā babhūvurdvārakaukasaḥ||
+en: O King, the dwellers of Dvārakā heard of the unfailing curse of the brāhmaṇas and saw the club. They were astonished and struck with fear.
+tel: ఓ రాజా, ద్వారకావాసులు అమోघమైన విప్రశాపమును వినిరి, ముసలమును చూచిరి. వారు ఆశ్చర్యపడిరి, భయముతో కలవరపడిరి.
+hi: हे राजन्, द्वारकावासियों ने ब्राह्मणों के अमोघ शाप को सुना और मूसल को देखा। वे आश्चर्यचकित हुए और भय से व्याकुल हुए।
 
 --- verse 21 ---
 deva:
@@ -208,6 +268,9 @@ deva:
 iast:
 taccūrṇayitvā musalaṁ yadurājaḥ sa āhukaḥ|
 samudrasalile prāsyallohaṁ cāsyāvaśeṣitam||
+en: Āhuka, that king of the Yadus, had the club ground to powder. He threw the powder and the piece of iron that was left of it into the water of the sea.
+tel: యదురాజైన ఆ ఆహుకుడు ముసలమును పొడిగా చేయించెను. ఆ పొడిని, మరియు దానిలో మిగిలిన ఇనుప ముక్కను, సముద్రజలములో పడవేసెను.
+hi: यदुराज उस आहुक ने मूसल को चूर्ण करा दिया। उस चूर्ण को, और उसमें शेष बचे लोहे के टुकड़े को, उसने समुद्र के जल में डाल दिया।
 
 --- verse 22 ---
 deva:
@@ -216,6 +279,9 @@ deva:
 iast:
 kaścinmatsyo'grasīllohaṁ cūrṇāni taralaistataḥ|
 uhyamānāni velāyāṁ lagnānyāsan kilairakāḥ||
+en: A certain fish swallowed the piece of iron. The powder was then carried by the waves, and where it settled on the shore it became, it is said, the reeds called eraka.
+tel: ఒక చేప ఆ ఇనుప ముక్కను మింగెను. పిమ్మట ఆ పొడి అలలచే కొట్టుకొని పోయి, తీరమున చేరి నిలిచినచోట ఎరక అను గడ్డి అయ్యెనని చెప్పుదురు.
+hi: किसी मछली ने लोहे के उस टुकड़े को निगल लिया। फिर वह चूर्ण लहरों से बहाया गया, और तट पर जहाँ लगा, वहाँ एरक नामक घास हो गया, ऐसा कहा जाता है।
 
 --- verse 23 ---
 deva:
@@ -224,6 +290,9 @@ deva:
 iast:
 matsyo gṛhīto matsyaghnairjālenānyaiḥ sahārṇave|
 tasyodaragataṁ lohaṁ sa śalye lubdhako'karot||
+en: The fish was caught in a net in the sea by fishermen, along with other fish. A hunter took the piece of iron that was in its belly and made it the point of his arrow.
+tel: ఆ చేప సముద్రమున ఇతర చేపలతో కూడ మత్స్యకారులచే వలలో పట్టుబడెను. ఒక వ్యాధుడు దాని ఉదరములో ఉన్న ఇనుప ముక్కను తీసుకొని తన బాణమునకు ములికిగా చేసెను.
+hi: वह मछली समुद्र में अन्य मछलियों के साथ मछुओं के जाल में पकड़ी गयी। एक व्याध ने उसके उदर में पड़े लोहे के टुकड़े को लेकर अपने बाण का फल बनाया।
 
 --- verse 24 ---
 deva:
@@ -232,9 +301,15 @@ deva:
 iast:
 bhagavāñjñātasarvārtha īśvaro'pi tadanyathā|
 kartuṁ naicchad vipraśāpaṁ kālarūpyanvamodata||
+en: The blessed Lord knew everything that had come to pass. Though he was the Lord and able to make it otherwise, he did not wish to do so. Being himself the form of time, he consented to the curse of the brāhmaṇas.
+tel: భగవంతుడు జరిగినదంతయు ఎరిగినవాడు. ఈశ్వరుడై దానిని మార్చుటకు శక్తుడైనను, ఆయన అట్లు చేయ ఇష్టపడలేదు. తాను కాలరూపుడై, విప్రశాపమును అనుమోదించెను.
+hi: भगवान् सब कुछ जानते थे। ईश्वर होने से उसे अन्यथा करने में समर्थ थे, फिर भी उन्होंने ऐसा करना नहीं चाहा। स्वयं कालरूप होकर उन्होंने ब्राह्मणों के शाप का अनुमोदन किया।
 
 --- verse none ---
 deva:
 इति श्रीमद्भागवते महापुराणे पारमहंस्यां संहितायामेकादशस्कन्धे प्रथमोऽध्यायः॥ १॥
 iast:
 iti śrīmadbhāgavate mahāpurāṇe pāramahaṁsyāṁ saṁhitāyāmekādaśaskandhe prathamo'dhyāyaḥ|| 1||
+en: Thus ends the first adhyāya in the eleventh skandha of the Śrīmad Bhāgavata Mahāpurāṇa, the saṁhitā of the paramahaṁsas.
+tel: ఇది శ్రీమద్భాగవత మహాపురాణమునందు, పరమహంసల సంహితయందు, ఏకాదశస్కంధమునందు ప్రథమాధ్యాయము సమాప్తము.
+hi: इस प्रकार श्रीमद्भागवत महापुराण की परमहंसों की संहिता के एकादश स्कन्ध में प्रथम अध्याय समाप्त हुआ।
