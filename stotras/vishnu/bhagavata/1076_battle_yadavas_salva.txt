@@ -9,7 +9,7 @@ Type: Purāṇa (an adhyāya of the Śrīmad Bhāgavata, Skandha 10)
 
 Source / recension: Base text and authority: the Gītā Press, Gorakhpur Śrīmadbhāgavata Mahāpurāṇa with Hindi translation, Part 2 (Gītā Press code 27), archive.org item `shrimadbhagwat-mahapuran-bhag-2`, printed pages 602–606; the PDF page numbers are the printed ones. The PDF carries the typesetter's own text layer in the Chanakya font encoding, and the text was decoded from it by machine with `bin/bhagavata/chanakya.py`, not read off OCR or typed. The decoder was checked against GRETIL over all twelve skandhas before any file was written, and the differences that remain were sampled and found to be readings of the two editions. Second witness: GRETIL's `sa_bhAgavatapurANa.xml` (IAST, contributed by Ulrich Stiehl), a separate editorial lineage, compared verse by verse by machine. The TTD edition with the commentaries of Śrīdhara, Vīrarāghava and Vijayadhvaja (archive.org `Bhagavata_Purana_With_Multiple_Commentaries_TTD_Critical_Edition`) is the third witness where one is needed; it was not read for this file. The IAST was generated mechanically from the Devanāgarī with `bin/dev2iast.py`.
 
-Recension note: Text-only file, written 1 Oct 2026 at the user's instruction to lay down the whole Bhāgavata first: the English, Telugu and Hindi meanings are still to be added, and the witnesses' differences listed here have been recorded by machine and not yet adjudicated. The print is followed throughout. The print numbers 33 verses and GRETIL numbers 33. Of the 33 verses GRETIL has under the same number, 24 agree with the print letter for letter once spacing and the spelling of nasals are set aside; the rest differ: 3, 4, 8, 9, 13, 19, 23, 26, 27. Spacing is the print's, as its text layer gives it; in a few places justification has left a space inside a word, and these are still to be closed when the verse is read. The speaker lines (श्रीशुक उवाच and the others) are printed in italic above the verse they introduce, and are given as its first line.
+Recension note: Meanings written 24 Oct 2026 (session S78). The differences between the witnesses listed below were read as the verses were glossed; except where this note says otherwise, each is a spelling, a sandhi or a word order of the two editions, none of them changes the sense, and the print's reading therefore stands unbracketed. The print is followed throughout. The print numbers 33 verses and GRETIL numbers 33. Of the 33 verses GRETIL has under the same number, 24 agree with the print letter for letter once spacing and the spelling of nasals are set aside; the rest differ: 3, 4, 8, 9, 13, 19, 23, 26, 27. Spacing is the print's, as its text layer gives it. The speaker lines (श्रीशुक उवाच and the others) are printed in italic above the verse they introduce, and are given as its first line. One word was put right as the verses were read. At verse 5 the space between वरेण and च्छन्दयामास had been lost in the print's text layer, and it is restored here; वरेण carries its own instrumental ending and cannot be the first member of a compound. GRETIL agrees with the corrected reading.
 
 Verse count: 33, plus the closing colophon printed unnumbered.
 
@@ -24,6 +24,9 @@ iast:
 śrīśuka uvāca
 athānyadapi kṛṣṇasya śṛṇu karmādbhutaṁ nṛpa|
 krīḍānaraśarīrasya yathā saubhapatirhataḥ||
+en: Śrīśuka said: O king, hear now another wonderful deed of Kṛṣṇa, who wore a human body as his play — how the lord of Saubha was killed.
+tel: శ్రీశుకుడు పలికెను: ఓ రాజా, లీలగా మానవ శరీరమును ధరించిన కృష్ణుని మరియొక అద్భుత కార్యమును వినుము — సౌభపతి ఎట్లు చంపబడెనో వినుము.
+hi: श्रीशुक ने कहा: हे राजन्, लीला से मनुष्य शरीर धारण करनेवाले कृष्ण का एक और अद्भुत कर्म सुनो — सौभपति किस प्रकार मारा गया, यह सुनो।
 
 --- verse 2 ---
 deva:
@@ -32,6 +35,9 @@ deva:
 iast:
 śiśupālasakhaḥ śālvo rukmiṇyudvāha āgataḥ|
 yadubhirnirjitaḥ saṁkhye jarāsandhādayastathā||
+en: Śālva, the friend of Śiśupāla, had come to the wedding of Rukmiṇī. There he was defeated in battle by the Yādavas, and so were Jarāsandha and the others.
+tel: శిశుపాలుని మిత్రుడైన శాల్వుడు రుక్మిణి వివాహమునకు వచ్చెను. అచ్చట అతడు యుద్ధమున యాదవులచే ఓడింపబడెను; జరాసంధుడు మొదలైనవారును అట్లే ఓడిపోయిరి.
+hi: शिशुपाल का मित्र शाल्व रुक्मिणी के विवाह में आया था। वहाँ वह युद्ध में यादवों से हार गया, और जरासन्ध आदि भी इसी प्रकार हारे।
 
 --- verse 3 ---
 deva:
@@ -40,6 +46,9 @@ deva:
 iast:
 śālvaḥ pratijñāmakarot śṛṇvatāṁ sarvabhūbhujām|
 ayādavīṁ kṣmāṁ kariṣye pauruṣaṁ mama paśyata||
+en: Śālva made a vow in the hearing of all the kings: I shall make the earth free of the Yādavas. See my manhood.
+tel: శాల్వుడు రాజులందరు వినుచుండగా ప్రతిజ్ఞ చేసెను: భూమిని యాదవులు లేనిదిగా చేయుదును. నా పౌరుషమును చూడుడు.
+hi: शाल्व ने सब राजाओं के सुनते हुए प्रतिज्ञा की: मैं पृथ्वी को यादवों से रहित कर दूँगा। मेरा पौरुष देखो।
 
 --- verse 4 ---
 deva:
@@ -48,14 +57,20 @@ deva:
 iast:
 iti mūḍhaḥ pratijñāya devaṁ paśupatiṁ prabhum|
 ārādhayāmāsa nṛpa pāṁsumuṣṭiṁ sakṛd grasan||
+en: O king, having made this vow, that foolish man worshipped the lord Paśupati, the master. He ate only one handful of dust each day.
+tel: ఓ రాజా, ఇట్లు ప్రతిజ్ఞ చేసి ఆ మూఢుడు ప్రభువైన పశుపతి దేవుని ఆరాధించెను. అతడు దినమునకు ఒక్క పిడికెడు ధూళిని మాత్రమే తినెను.
+hi: हे राजन्, ऐसी प्रतिज्ञा करके उस मूढ़ ने प्रभु पशुपति देव की आराधना की। वह दिन में केवल एक मुट्ठी धूल खाता था।
 
 --- verse 5 ---
 deva:
 संवत्सरान्ते भगवानाशुतोष उमापतिः।
-वरेणच्छन्दयामास शाल्वं शरणमागतम्॥
+वरेण च्छन्दयामास शाल्वं शरणमागतम्॥
 iast:
 saṁvatsarānte bhagavānāśutoṣa umāpatiḥ|
-vareṇacchandayāmāsa śālvaṁ śaraṇamāgatam||
+vareṇa cchandayāmāsa śālvaṁ śaraṇamāgatam||
+en: At the end of a year the blessed Umāpati, who is quickly pleased, offered a boon to Śālva, who had come to him for shelter.
+tel: సంవత్సరము చివర, శీఘ్రముగా ప్రసన్నుడగు భగవంతుడైన ఉమాపతి, శరణు వచ్చిన శాల్వునికి వరమును ఇచ్చుటకు అంగీకరించెను.
+hi: वर्ष के अन्त में शीघ्र प्रसन्न होनेवाले भगवान् उमापति ने शरण में आये हुए शाल्व को वर देने का वचन दिया।
 
 --- verse 6 ---
 deva:
@@ -64,6 +79,9 @@ deva:
 iast:
 devāsuramanuṣyāṇāṁ gandharvoragarakṣasām|
 abhedyaṁ kāmagaṁ vavre sa yānaṁ vṛṣṇibhīṣaṇam||
+en: He chose a vehicle that could not be broken by gods, demons, men, Gandharvas, serpents or Rākṣasas, that would go wherever he wished, and that would frighten the Vṛṣṇis.
+tel: దేవతలు, అసురులు, మనుష్యులు, గంధర్వులు, సర్పములు, రాక్షసులు ఎవరును భేదింపలేని, కోరిన చోటికి పోవు, వృష్ణులకు భయము కలిగించు యానమును అతడు కోరెను.
+hi: उसने ऐसा यान माँगा जिसे देव, असुर, मनुष्य, गन्धर्व, सर्प और राक्षस भेद न सकें, जो इच्छा के अनुसार चले, और जो वृष्णियों को भय देनेवाला हो।
 
 --- verse 7 ---
 deva:
@@ -72,6 +90,9 @@ deva:
 iast:
 tatheti giriśādiṣṭo mayaḥ parapuraṁjayaḥ|
 puraṁ nirmāya śālvāya prādātsaubhamayasmayam||
+en: Giriśa said: So be it. Ordered by him, Maya, the conqueror of the cities of enemies, built a city and gave it to Śālva. It was the Saubha, made of iron.
+tel: గిరిశుడు అట్లే అగుగాక అనెను. అతని ఆజ్ఞ పొందిన మయుడు, శత్రువుల నగరములను జయించినవాడు, నగరమును నిర్మించి శాల్వునికి ఇచ్చెను. అది ఇనుముతో చేసిన సౌభము.
+hi: गिरिश ने कहा: ऐसा ही हो। उनकी आज्ञा पाकर शत्रुओं के नगरों को जीतनेवाले मय ने नगर बनाकर शाल्व को दिया। वह लोहे का बना सौभ था।
 
 --- verse 8 ---
 deva:
@@ -80,6 +101,9 @@ deva:
 iast:
 sa labdhvā kāmagaṁ yānaṁ tamodhāma durāsadam|
 yayau dvāravatīṁ śālvo vairaṁ vṛṣṇikṛtaṁ smaran||
+en: Having obtained that vehicle which went where he wished, dark as night and hard to approach, Śālva went to Dvāravatī, remembering the enmity made by the Vṛṣṇis.
+tel: కోరిన చోటికి పోవు, చీకటి వంటి, చేరరాని ఆ యానమును పొంది, శాల్వుడు వృష్ణులు చేసిన వైరమును స్మరించుచు ద్వారవతికి వెళ్లెను.
+hi: इच्छा के अनुसार चलनेवाले, अन्धकार समान और दुर्गम उस यान को पाकर शाल्व वृष्णियों के किये वैर को स्मरण करते हुए द्वारवती को गया।
 
 --- verse 9 ---
 deva:
@@ -88,6 +112,9 @@ deva:
 iast:
 niruddhya senayā śālvo mahatyā bharatarṣabha|
 purīṁ babhaṁjopavanānyudyānāni ca sarvaśaḥ||
+en: O best of the Bharatas, Śālva shut in the city with a great army. He broke down the groves and the gardens on every side.
+tel: ఓ భరతశ్రేష్ఠా, శాల్వుడు మహాసేనతో పురిని చుట్టుముట్టెను. అతడు ఉపవనములను, ఉద్యానములను అన్ని వైపుల ధ్వంసము చేసెను.
+hi: हे भरतश्रेष्ठ, शाल्व ने बड़ी सेना से पुरी को घेर लिया। उसने उपवनों और उद्यानों को सब ओर से तोड़ डाला।
 
 --- verse 10 ---
 deva:
@@ -96,6 +123,9 @@ deva:
 iast:
 sagopurāṇi dvārāṇi prāsādāṭṭālatolikāḥ|
 vihārān sa vimānāgryānnipetuḥ śastravṛṣṭayaḥ||
+en: Showers of weapons fell upon the gates with their towers, upon the palaces, the watch-towers and the ramparts, and upon the pleasure houses and the finest aerial cars.
+tel: గోపురములతో కూడిన ద్వారములపై, ప్రాసాదములపై, అట్టాలములపై, తోలికలపై, విహార గృహములపై, శ్రేష్ఠమైన విమానములపై శస్త్రముల వర్షము కురిసెను.
+hi: गोपुरोंसहित द्वारों पर, प्रासादों पर, अट्टालकों और तोलिकाओं पर, विहार भवनों पर और श्रेष्ठ विमानों पर शस्त्रों की वर्षा गिरी।
 
 --- verse 11 ---
 deva:
@@ -104,6 +134,9 @@ deva:
 iast:
 śilā drumāścāśanayaḥ sarpā āsāraśarkarāḥ|
 pracaṇḍaścakravāto'bhūd rajasā''cchāditā diśaḥ||
+en: Stones, trees, thunderbolts, serpents and showers of hail came down. A fierce whirlwind arose, and all the directions were covered with dust.
+tel: శిలలు, వృక్షములు, పిడుగులు, సర్పములు, వడగండ్ల వర్షము పడెను. ప్రచండమైన సుడిగాలి పుట్టెను, దిక్కులన్నియు ధూళితో కప్పబడెను.
+hi: शिलाएँ, वृक्ष, वज्र, सर्प और ओलों की वर्षा गिरी। प्रचण्ड चक्रवात उठा, और सब दिशाएँ धूल से ढक गयीं।
 
 --- verse 12 ---
 deva:
@@ -112,6 +145,9 @@ deva:
 iast:
 ityardyamānā saubhena kṛṣṇasya nagarī bhṛśam|
 nābhyapadyata śaṁ rājaṁstripureṇa yathā mahī||
+en: O king, so greatly tormented by the Saubha, the city of Kṛṣṇa found no peace, just as the earth found no peace from Tripura.
+tel: ఓ రాజా, సౌభముచే ఇట్లు మిక్కిలి బాధింపబడిన కృష్ణుని నగరమునకు శాంతి లభించలేదు; త్రిపురము వలన భూమికి శాంతి లభించనట్లే.
+hi: हे राजन्, सौभ से इस प्रकार अत्यन्त पीड़ित कृष्ण की नगरी को शान्ति न मिली, जैसे त्रिपुर से पृथ्वी को शान्ति न मिली थी।
 
 --- verse 13 ---
 deva:
@@ -120,6 +156,9 @@ deva:
 iast:
 pradyumno bhagavān vīkṣya bādhyamānā nijāḥ prajāḥ|
 mā bhaiṣṭetyabhyadhād vīro rathārūḍho mahāyaśāḥ||
+en: The blessed Pradyumna saw his own people being oppressed. That hero of great fame mounted his chariot and said: Do not fear.
+tel: భగవానుడైన ప్రద్యుమ్నుడు తన ప్రజలు బాధింపబడుట చూచెను. మహాకీర్తి కల ఆ వీరుడు రథము ఎక్కి, భయపడవలదు అని పలికెను.
+hi: भगवान् प्रद्युम्न ने अपनी प्रजा को पीड़ित होते देखा। महायशस्वी वह वीर रथ पर सवार होकर बोले: डरो मत।
 
 --- verse 14 ---
 deva:
@@ -128,6 +167,9 @@ deva:
 iast:
 sātyakiścārudeṣṇaśca sāmbo'krūraḥ sahānujaḥ|
 hārdikyo bhānuvindaśca gadaśca śukasāraṇau||
+en: Sātyaki, Cārudeṣṇa, Sāmba, Akrūra with his younger brothers, Hārdikya, Bhānuvinda, Gada, and Śuka and Sāraṇa,
+tel: సాత్యకి, చారుదేష్ణుడు, సాంబుడు, తమ్ములతో కూడిన అక్రూరుడు, హార్దిక్యుడు, భానువిందుడు, గదుడు, శుకుడు, సారణుడు,
+hi: सात्यकि, चारुदेष्ण, साम्ब, अनुजोंसहित अक्रूर, हार्दिक्य, भानुविन्द, गद, तथा शुक और सारण,
 
 --- verse 15 ---
 deva:
@@ -136,6 +178,9 @@ deva:
 iast:
 apare ca maheṣvāsā rathayūthapayūthapāḥ|
 niryayurdaṁśitā guptā rathebhāśvapadātibhiḥ||
+en: and other great archers, leaders of the leaders of the chariot troops, went out armoured and guarded by chariots, elephants, horses and foot soldiers.
+tel: మరియు ఇతర మహాధనుర్ధరులు, రథయూథపతులకు యూథపతులు, కవచములు ధరించి, రథములతో, ఏనుగులతో, గుఱ్ఱములతో, కాల్బలముతో రక్షింపబడి బయలుదేరిరి.
+hi: और दूसरे महाधनुर्धर, रथयूथपतियों के यूथपति, कवच धारण करके रथों, हाथियों, घोड़ों और पैदल सैनिकों से रक्षित होकर निकले।
 
 --- verse 16 ---
 deva:
@@ -144,6 +189,9 @@ deva:
 iast:
 tataḥ pravavṛte yuddhaṁ śālvānāṁ yadubhiḥ saha|
 yathāsurāṇāṁ vibudhaistumulaṁ lomaharṣaṇam||
+en: Then the battle began between the men of Śālva and the Yādavas. It was tumultuous and made the hair stand up, like the battle of the demons with the gods.
+tel: అప్పుడు శాల్వుని సైనికులకు యాదవులకు యుద్ధము ప్రారంభమయ్యెను. అది అసురులకు దేవతలకు జరిగిన యుద్ధము వలె తుములముగా, రోమములు నిలుచునట్లు ఉండెను.
+hi: तब शाल्व के सैनिकों और यादवों का युद्ध आरम्भ हुआ। वह असुरों और देवताओं के युद्ध के समान तुमुल और रोमांच खड़ा करनेवाला था।
 
 --- verse 17 ---
 deva:
@@ -152,6 +200,9 @@ deva:
 iast:
 tāśca saubhapatermāyā divyāstrai rukmiṇīsutaḥ|
 kṣaṇena nāśayāmāsa naiśaṁ tama ivoṣṇaguḥ||
+en: The son of Rukmiṇī destroyed those magical powers of the lord of Saubha in a moment with divine weapons, as the sun destroys the darkness of night.
+tel: సౌభపతి ఆ మాయలను రుక్మిణీపుత్రుడు దివ్యాస్త్రములతో క్షణములో నాశనము చేసెను, సూర్యుడు రాత్రి చీకటిని నశింపజేయునట్లు.
+hi: सौभपति की उन मायाओं को रुक्मिणी के पुत्र ने दिव्य अस्त्रों से क्षण भर में नष्ट कर दिया, जैसे सूर्य रात्रि के अन्धकार को नष्ट करता है।
 
 --- verse 18 ---
 deva:
@@ -160,6 +211,9 @@ deva:
 iast:
 vivyādha paṁcaviṁśatyā svarṇapuṁkhairayomukhaiḥ|
 śālvasya dhvajinīpālaṁ śaraiḥ sannataparvabhiḥ||
+en: With twenty-five arrows feathered with gold and tipped with iron, with smooth joints, he pierced the commander of Śālva's army.
+tel: బంగారు రెక్కలు, ఇనుప ములుకులు కలిగి, నునుపైన కణుపులు కల ఇరువది ఐదు బాణములతో అతడు శాల్వుని సేనాధిపతిని గాయపరచెను.
+hi: सोने के पंखों और लोहे के फलवाले, चिकनी गाँठोंवाले पच्चीस बाणों से उन्होंने शाल्व के सेनापति को बेध दिया।
 
 --- verse 19 ---
 deva:
@@ -168,6 +222,9 @@ deva:
 iast:
 śatenātāḍayacchālvamekaikenāsya sainikān|
 daśabhirdaśabhirnetṝn vāhanāni tribhistribhiḥ||
+en: He struck Śālva with a hundred arrows, each of his soldiers with one, the leaders with ten each, and the mounts with three each.
+tel: అతడు శాల్వుని నూరు బాణములతో, అతని సైనికులను ఒక్కొక్కటితో, నాయకులను పది పదితో, వాహనములను మూడు మూడుతో కొట్టెను.
+hi: उन्होंने शाल्व को सौ बाणों से, उसके सैनिकों को एक-एक से, नेताओं को दस-दस से और वाहनों को तीन-तीन से मारा।
 
 --- verse 20 ---
 deva:
@@ -176,6 +233,9 @@ deva:
 iast:
 tadadbhutaṁ mahat karma pradyumnasya mahātmanaḥ|
 dṛṣṭvā taṁ pūjayāmāsuḥ sarve svaparasainikāḥ||
+en: Seeing that wonderful and great deed of the high-souled Pradyumna, all the soldiers, his own and the enemy's, honoured him.
+tel: మహాత్ముడైన ప్రద్యుమ్నుని ఆ అద్భుతమైన గొప్ప కార్యమును చూచి, తన వారు, శత్రువుల వారు అను సైనికులందరు అతనిని పూజించిరి.
+hi: महात्मा प्रद्युम्न के उस अद्भुत और महान् कर्म को देखकर अपने और शत्रु के सब सैनिकों ने उनका सम्मान किया।
 
 --- verse 21 ---
 deva:
@@ -184,6 +244,9 @@ deva:
 iast:
 bahurūpaikarūpaṁ tad dṛśyate na ca dṛśyate|
 māyāmayaṁ mayakṛtaṁ durvibhāvyaṁ parairabhūt||
+en: That city was now of many forms and now of one. It was seen and then it was not seen. It was made of magic and built by Maya, and the enemies could not make it out.
+tel: ఆ నగరము ఒకసారి అనేక రూపములతో, ఒకసారి ఒకే రూపముతో ఉండెను. అది కనబడుచు, కనబడకుండెను. మయుడు నిర్మించిన ఆ మాయామయ నగరమును శత్రువులు గ్రహింపలేకపోయిరి.
+hi: वह नगर कभी अनेक रूपोंवाला और कभी एक रूपवाला था। वह दिखता था और फिर नहीं दिखता था। माया से बना और मय के रचे उस नगर को शत्रु समझ न सके।
 
 --- verse 22 ---
 deva:
@@ -192,6 +255,9 @@ deva:
 iast:
 kvacid bhūmau kvacid vyomni girimūrdhni jale kvacit|
 alātacakravad bhrāmyat saubhaṁ tad duravasthitam||
+en: Now on the ground, now in the sky, now on a mountain top, now on the water — the Saubha whirled like a circle of firebrand, and it never stood in one place.
+tel: ఒకసారి భూమిపై, ఒకసారి ఆకాశమున, ఒకసారి పర్వత శిఖరమున, ఒకసారి నీటిపై — సౌభము అలాతచక్రము వలె తిరుగుచు ఒక చోట నిలువకుండెను.
+hi: कभी भूमि पर, कभी आकाश में, कभी पर्वत के शिखर पर, कभी जल पर — सौभ अलातचक्र के समान घूमता रहा और एक स्थान पर न ठहरा।
 
 --- verse 23 ---
 deva:
@@ -200,6 +266,9 @@ deva:
 iast:
 yatra yatropalakṣyeta sasaubhaḥ sahasainikaḥ|
 śālvastatastato'muṁcan śarān sātvatayūthapāḥ||
+en: Wherever Śālva appeared with the Saubha and with his soldiers, there the leaders of the Sātvatas released their arrows.
+tel: సౌభముతో, సైనికులతో కూడిన శాల్వుడు ఎక్కడెక్కడ కనబడెనో, అక్కడక్కడ సాత్వత యూథపతులు బాణములను విడిచిరి.
+hi: सौभ और सैनिकोंसहित शाल्व जहाँ-जहाँ दिखाई पड़ा, वहाँ-वहाँ सात्वत यूथपतियों ने बाण छोड़े।
 
 --- verse 24 ---
 deva:
@@ -208,6 +277,9 @@ deva:
 iast:
 śarairagnyarkasaṁsparśairāśīviṣadurāsadaiḥ|
 pīḍyamānapurānīkaḥ śālvo'muhyat pareritaiḥ||
+en: His city and his army were struck by the arrows the enemy sent, arrows that burned like fire and the sun and were as hard to bear as venomous serpents. Śālva was bewildered.
+tel: శత్రువులు విడిచిన బాణములు అగ్ని సూర్యుల వలె తాకుచు, విషసర్పముల వలె దుర్భరముగా ఉండెను. వానిచే తన పురము, సేన పీడింపబడగా శాల్వుడు మోహము పొందెను.
+hi: शत्रुओं के छोड़े बाण अग्नि और सूर्य के समान जलाते और विषैले सर्पों के समान दुःसह थे। उनसे अपने नगर और सेना के पीड़ित होने पर शाल्व मोहित हो गया।
 
 --- verse 25 ---
 deva:
@@ -216,6 +288,9 @@ deva:
 iast:
 śālvānīkapaśastraughairvṛṣṇivīrā bhṛśārditāḥ|
 na tatyajū raṇaṁ svaṁ svaṁ lokadvayajigīṣavaḥ||
+en: The Vṛṣṇi heroes were greatly hurt by the floods of weapons of Śālva's commanders. Still they did not leave their own places in the battle, for they wished to win both worlds.
+tel: శాల్వుని సేనాధిపతుల శస్త్రముల ప్రవాహములచే వృష్ణి వీరులు మిక్కిలి బాధింపబడిరి. అయినను రెండు లోకములను జయింప కోరువారై వారు యుద్ధమున తమ తమ స్థానములను విడువలేదు.
+hi: शाल्व के सेनापतियों के शस्त्रों के प्रवाह से वृष्णि वीर अत्यन्त पीड़ित हुए। फिर भी दोनों लोकों को जीतने की इच्छावाले वे युद्ध में अपने-अपने स्थान से न हटे।
 
 --- verse 26 ---
 deva:
@@ -224,6 +299,9 @@ deva:
 iast:
 śālvāmātyo dyumān nāma pradyumnaṁ prākprapīḍitaḥ|
 āsādya gadayā maurvyā vyāhatya vyanadad balī||
+en: Śālva's minister named Dyumān, who had been struck earlier, came up to Pradyumna. That strong man hit him with an iron club and roared.
+tel: ముందు దెబ్బ తిన్న ద్యుమానుడను శాల్వుని మంత్రి ప్రద్యుమ్నుని సమీపించెను. బలవంతుడైన అతడు ఇనుప గదతో కొట్టి గర్జించెను.
+hi: पहले आघात पाया हुआ द्युमान् नामक शाल्व का मन्त्री प्रद्युम्न के पास आया। उस बलवान् ने लोहे की गदा से प्रहार किया और गरजा।
 
 --- verse 27 ---
 deva:
@@ -232,6 +310,9 @@ deva:
 iast:
 pradyumnaṁ gadayā śīrṇavakṣaḥsthalamarindamam|
 apovāha raṇāt sūto dharmavid dārukātmajaḥ||
+en: Pradyumna, the subduer of enemies, had his chest broken by the club. Dāruka's son, the charioteer who knew his duty, carried him away from the battle.
+tel: గదచే వక్షస్థలము పగిలిన అరిందముడైన ప్రద్యుమ్నుని, ధర్మము తెలిసిన సారథి, దారుకుని కుమారుడు, యుద్ధమునుండి తీసికొనిపోయెను.
+hi: गदा से छाती फटे हुए अरिन्दम प्रद्युम्न को धर्म जाननेवाले सारथि, दारुक के पुत्र, युद्ध से हटाकर ले गये।
 
 --- verse 28 ---
 deva:
@@ -240,6 +321,9 @@ deva:
 iast:
 labdhasaṁjño muhūrtena kārṣṇiḥ sārathimabravīt|
 aho asādhvidaṁ sūta yad raṇānme'pasarpaṇam||
+en: In a moment Kārṣṇi regained his senses and said to his charioteer: Alas, O charioteer, this withdrawal of mine from the battle is not right.
+tel: క్షణములో స్పృహ పొందిన కార్ష్ణి సారథితో పలికెను: అయ్యో సారథీ, యుద్ధమునుండి నేను తొలగుట యుక్తము కాదు.
+hi: क्षण भर में होश पाकर कार्ष्णि ने सारथि से कहा: हाय सारथि, युद्ध से मेरा हट जाना उचित नहीं है।
 
 --- verse 29 ---
 deva:
@@ -248,6 +332,9 @@ deva:
 iast:
 na yadūnāṁ kule jātaḥ śrūyate raṇavicyutaḥ|
 vinā mat klībacittena sūtena prāptakilbiṣāt||
+en: No one born in the family of the Yadus is heard of as having fallen away from a battle. I alone am such, through a charioteer of unmanly mind, and from him this blame has come.
+tel: యదువంశమున పుట్టిన వారిలో యుద్ధమునుండి తొలగినవాడు ఎవడును వినబడలేదు. క్లీబచిత్తుడైన సారథి వలన ఈ నింద పొందిన నేను మాత్రమే అట్టివాడను.
+hi: यदुवंश में उत्पन्न किसी का युद्ध से हट जाना सुना नहीं गया। क्लीबचित्त सारथि के कारण यह कलंक पानेवाला केवल मैं ही ऐसा हूँ।
 
 --- verse 30 ---
 deva:
@@ -256,6 +343,9 @@ deva:
 iast:
 kiṁ nu vakṣye'bhisaṁgamya pitarau rāmakeśavau|
 yuddhāt samyagapakrāntaḥ pṛṣṭastatrātmanaḥ kṣamam||
+en: What shall I say when I meet my fathers, Rāma and Keśava? I have fully withdrawn from the battle. When they ask me there, what fitting answer have I?
+tel: నా తండ్రులైన రామకేశవులను కలిసినప్పుడు నేను ఏమి చెప్పుదును? యుద్ధమునుండి పూర్తిగా తొలగిన నన్ను అచ్చట అడిగినప్పుడు నాకు తగిన సమాధానము ఏది?
+hi: अपने पिताओं राम और केशव से मिलकर मैं क्या कहूँगा? युद्ध से पूरी तरह हटे हुए मुझसे वहाँ पूछने पर मेरे पास कौन सा योग्य उत्तर है?
 
 --- verse 31 ---
 deva:
@@ -264,6 +354,9 @@ deva:
 iast:
 vyaktaṁ me kathayiṣyanti hasantyo bhrātṛjāmayaḥ|
 klaibyaṁ kathaṁ kathaṁ vīra tavānyaiḥ kathyatāṁ mṛdhe||
+en: Plainly my brothers' wives will laugh and say to me: O hero, how, how did this cowardice of yours come about in the battle? Let others tell of it.
+tel: నా సోదరుల భార్యలు స్పష్టముగా నవ్వుచు నాతో ఇట్లు పలుకుదురు: ఓ వీరా, యుద్ధమున నీకు ఈ క్లైబ్యము ఎట్లు, ఎట్లు కలిగెను? ఇతరులు దానిని చెప్పుదురు గాక.
+hi: मेरे भाइयों की पत्नियाँ स्पष्ट ही हँसकर मुझसे कहेंगी: हे वीर, युद्ध में तुम्हारा यह क्लैब्य कैसे, कैसे हुआ? इसे दूसरे ही कहें।
 
 --- verse 32 ---
 deva:
@@ -274,6 +367,9 @@ iast:
 sārathiruvāca
 dharmaṁ vijānatā''yuṣman kṛtametanmayā vibho|
 sūtaḥ kṛcchragataṁ rakṣed rathinaṁ sārathiṁ rathī||
+en: The charioteer said: O long-lived one, O mighty one, I did this knowing the duty. The charioteer must protect the chariot warrior when he is in distress, and the chariot warrior must protect the charioteer.
+tel: సారథి పలికెను: ఓ ఆయుష్మంతుడా, ఓ ప్రభూ, ధర్మము తెలిసి నేను ఇట్లు చేసితిని. ఆపదలో ఉన్న రథికుని సారథి రక్షింపవలెను, సారథిని రథికుడు రక్షింపవలెను.
+hi: सारथि ने कहा: हे आयुष्मन्, हे विभो, धर्म को जानकर मैंने यह किया। संकट में पड़े रथी की रक्षा सारथि करे, और सारथि की रक्षा रथी करे।
 
 --- verse 33 ---
 deva:
@@ -282,9 +378,15 @@ deva:
 iast:
 etad viditvā tu bhavān mayāpovāhito raṇāt|
 upasṛṣṭaḥ pareṇeti mūrcchito gadayā hataḥ||
+en: Knowing this, I carried you away from the battle, because you had been overcome by the enemy, struck by the club and senseless.
+tel: ఇది తెలిసియే నేను మిమ్ములను యుద్ధమునుండి తీసికొనిపోయితిని, ఏలయన శత్రువుచే పీడింపబడి, గదచే కొట్టబడి మీరు మూర్ఛిల్లి ఉండిరి.
+hi: यही जानकर मैंने आपको युद्ध से हटा लिया, क्योंकि आप शत्रु से पीड़ित होकर, गदा से मारे जाकर मूर्च्छित हो गये थे।
 
 --- verse none ---
 deva:
 इति श्रीमद्भागवते महापुराणे पारमहंस्यां संहितायां दशमस्कन्धे उत्तरार्धे शाल्वयुद्धे षट्सप्ततितमोऽध्यायः॥ ७६॥
 iast:
 iti śrīmadbhāgavate mahāpurāṇe pāramahaṁsyāṁ saṁhitāyāṁ daśamaskandhe uttarārdhe śālvayuddhe ṣaṭsaptatitamo'dhyāyaḥ|| 76||
+en: Thus ends the seventy-sixth adhyāya, on the battle with Śālva, in the latter half of the tenth skandha of the Śrīmad Bhāgavata Mahāpurāṇa, the saṁhitā of the paramahaṁsas.
+tel: ఇట్లు శ్రీమద్భాగవత మహాపురాణమున, పరమహంసల సంహితయందు, దశమ స్కంధము ఉత్తరార్ధమున, శాల్వయుద్ధమును గూర్చిన డెబ్బది ఆరవ అధ్యాయము ముగిసెను.
+hi: इस प्रकार श्रीमद्भागवत महापुराण की परमहंसों की संहिता में, दशम स्कन्ध के उत्तरार्ध में, शाल्व के युद्ध से सम्बन्धित छिहत्तरवाँ अध्याय समाप्त हुआ।

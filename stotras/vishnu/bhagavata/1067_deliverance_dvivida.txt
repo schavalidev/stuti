@@ -9,7 +9,7 @@ Type: Purāṇa (an adhyāya of the Śrīmad Bhāgavata, Skandha 10)
 
 Source / recension: Base text and authority: the Gītā Press, Gorakhpur Śrīmadbhāgavata Mahāpurāṇa with Hindi translation, Part 2 (Gītā Press code 27), archive.org item `shrimadbhagwat-mahapuran-bhag-2`, printed pages 550–553; the PDF page numbers are the printed ones. The PDF carries the typesetter's own text layer in the Chanakya font encoding, and the text was decoded from it by machine with `bin/bhagavata/chanakya.py`, not read off OCR or typed. The decoder was checked against GRETIL over all twelve skandhas before any file was written, and the differences that remain were sampled and found to be readings of the two editions. Second witness: GRETIL's `sa_bhAgavatapurANa.xml` (IAST, contributed by Ulrich Stiehl), a separate editorial lineage, compared verse by verse by machine. The TTD edition with the commentaries of Śrīdhara, Vīrarāghava and Vijayadhvaja (archive.org `Bhagavata_Purana_With_Multiple_Commentaries_TTD_Critical_Edition`) is the third witness where one is needed; it was not read for this file. The IAST was generated mechanically from the Devanāgarī with `bin/dev2iast.py`.
 
-Recension note: Text-only file, written 1 Oct 2026 at the user's instruction to lay down the whole Bhāgavata first: the English, Telugu and Hindi meanings are still to be added, and the witnesses' differences listed here have been recorded by machine and not yet adjudicated. The print is followed throughout. The print numbers 28 verses and GRETIL numbers 28. Of the 28 verses GRETIL has under the same number, 16 agree with the print letter for letter once spacing and the spelling of nasals are set aside; the rest differ: 1, 3, 5, 7, 11, 13, 17, 19, 20, 23, 25, 28. Spacing is the print's, as its text layer gives it; in a few places justification has left a space inside a word, and these are still to be closed when the verse is read. The speaker lines (श्रीशुक उवाच and the others) are printed in italic above the verse they introduce, and are given as its first line.
+Recension note: Meanings written 24 Oct 2026 (session S78). The differences between the witnesses listed below were read as the verses were glossed; except where this note says otherwise, each is a spelling, a sandhi or a word order of the two editions, none of them changes the sense, and the print's reading therefore stands unbracketed. The print is followed throughout. The print numbers 28 verses and GRETIL numbers 28. Of the 28 verses GRETIL has under the same number, 16 agree with the print letter for letter once spacing and the spelling of nasals are set aside; the rest differ: 1, 3, 5, 7, 11, 13, 17, 19, 20, 23, 25, 28. Spacing is the print's, as its text layer gives it. The speaker lines (श्रीशुक उवाच and the others) are printed in italic above the verse they introduce, and are given as its first line. A detector was run over the whole adhyāya in both directions against GRETIL before the meanings were written, and no broken word was found: every place where the print joins two words that GRETIL spaces falls after a consonant with virāma, where the script requires the ligature. No edit was therefore needed. At verse 13 the print reads निरीक्षतः where GRETIL reads निरीक्षितः, and the print stands. At verse 28 the print writes the sandhi of भगवान् and जनैः as भगवांञ्जनैः, where GRETIL prints the two words apart; the print is followed. In the colophon the text layer has run दशमस्कन्धे and उत्तरार्धे together as दशमस्कन्धेउत्तरार्धे, as it has in eleven other files of this skandha; it is left as printed and waits on a corpus-wide ruling.
 
 Verse count: 28, plus the closing colophon printed unnumbered.
 
@@ -24,6 +24,9 @@ iast:
 rājovāca
 bhūyo'haṁ śrotumicchāmi rāmasyādbhutakarmaṇaḥ|
 anantasyāprameyasya yadanyat kṛtavān prabhuḥ||
+en: The King said: I wish to hear more of Rāma, whose deeds are wonderful, who is endless and immeasurable. Tell me what else the Lord did.
+tel: రాజు పలికెను: అద్భుతమైన కర్మలు కలిగిన, అనంతుడైన, అప్రమేయుడైన రాముని గురించి నేను ఇంకను వినగోరుచున్నాను. ఆ ప్రభువు మరి ఏమి చేసెనో చెప్పుము.
+hi: राजा ने कहा: अद्भुत कर्म करने वाले, अनन्त और अप्रमेय राम के विषय में मैं और सुनना चाहता हूँ। उन प्रभु ने और क्या किया, यह कहिए।
 
 --- verse 2 ---
 deva:
@@ -34,6 +37,9 @@ iast:
 śrīśuka uvāca
 narakasya sakhā kaścid dvivido nāma vānaraḥ|
 sugrīvasacivaḥ so'tha bhrātā maindasya vīryavān||
+en: Śrīśuka said: There was a certain monkey named Dvivida, a friend of Naraka. He was a minister of Sugrīva and the brother of Mainda, and he was very strong.
+tel: శ్రీశుకుడు పలికెను: నరకునికి మిత్రుడైన ద్వివిదుడు అను ఒక వానరుడు ఉండెను. అతడు సుగ్రీవుని మంత్రి, మైందుని సహోదరుడు, మిక్కిలి బలము కలవాడు.
+hi: श्रीशुक ने कहा: नरक का मित्र द्विविद नाम का एक वानर था। वह सुग्रीव का मन्त्री और मैन्द का भाई था, तथा बड़ा बलवान् था।
 
 --- verse 3 ---
 deva:
@@ -42,6 +48,9 @@ deva:
 iast:
 sakhyuḥ so'pacitiṁ kurvan vānaro rāṣṭraviplavam|
 puragrāmākarān ghoṣānadahad vahnimutsṛjan||
+en: That monkey, to avenge his friend, brought ruin upon the kingdom. He let loose fire and burned cities, villages, mines and the settlements of cowherds.
+tel: ఆ వానరుడు తన మిత్రునికి ప్రతికారము చేయుటకై రాజ్యమునకు నాశనము కలిగించెను. అతడు అగ్నిని విడిచి పట్టణములను, గ్రామములను, గనులను, గోపాలుల పల్లెలను కాల్చివేసెను.
+hi: उस वानर ने अपने मित्र का बदला लेने के लिए राज्य में उपद्रव किया। उसने आग लगाकर नगरों, गाँवों, खानों और गोपों की बस्तियों को जला दिया।
 
 --- verse 4 ---
 deva:
@@ -50,6 +59,9 @@ deva:
 iast:
 kvacit sa śailānutpāṭya tairdeśān samacūrṇayat|
 ānartān sutarāmeva yatrāste mitrahā hariḥ||
+en: Sometimes he uprooted mountains and with them ground the lands to powder. He did this most of all to the Ānarta country, where Hari, the slayer of his friend, dwells.
+tel: ఒకసారి అతడు పర్వతములను పెకలించి వానితో దేశములను పొడిపొడి చేసెను. తన మిత్రుని సంహరించిన హరి నివసించు ఆనర్తదేశమున అతడు దీనిని మరింత ఎక్కువగా చేసెను.
+hi: कभी वह पर्वतों को उखाड़कर उनसे देशों को चूर-चूर कर देता था। अपने मित्र के संहारक हरि जहाँ निवास करते हैं, उस आनर्त देश में उसने यह और भी अधिक किया।
 
 --- verse 5 ---
 deva:
@@ -58,6 +70,9 @@ deva:
 iast:
 kvacit samudramadhyastho dorbhyāmutkṣipya tajjalam|
 deśān nāgāyutaprāṇo velākūlānamajjayat||
+en: Sometimes he stood in the middle of the sea and threw up its water with both arms. Having the strength of ten thousand elephants, he drowned the lands along the shore.
+tel: ఒకసారి అతడు సముద్రము నడుమ నిలిచి రెండు చేతులతో దాని నీటిని పైకి విసిరెను. పదివేల ఏనుగుల బలము కలిగిన అతడు తీరమునందుండు దేశములను ముంచివేసెను.
+hi: कभी वह समुद्र के बीच खड़ा होकर दोनों भुजाओं से उसका जल उड़ा देता था। दस हजार हाथियों का बल रखने वाले उसने तट के देशों को डुबा दिया।
 
 --- verse 6 ---
 deva:
@@ -66,6 +81,9 @@ deva:
 iast:
 āśramānṛṣimukhyānāṁ kṛtvā bhagnavanaspatīn|
 adūṣayacchakṛnmūtrairagnīn vaitānikān khalaḥ||
+en: He broke down the trees in the hermitages of the foremost sages. That wicked one defiled their sacrificial fires with dung and urine.
+tel: అతడు ముఖ్యులైన ఋషుల ఆశ్రమములలోని చెట్లను విరిచివేసెను. ఆ దుష్టుడు వారి వైతానిక అగ్నులను పేడతోను మూత్రముతోను అపవిత్రము చేసెను.
+hi: उसने श्रेष्ठ ऋषियों के आश्रमों के वृक्षों को तोड़ डाला। उस दुष्ट ने उनकी वैतानिक अग्नियों को गोबर और मूत्र से दूषित कर दिया।
 
 --- verse 7 ---
 deva:
@@ -74,6 +92,9 @@ deva:
 iast:
 puruṣān yoṣito dṛptaḥ kṣmābhṛddroṇīguhāsu saḥ|
 nikṣipya cāpyadhācchailaiḥ peśaskārīva kīṭakam||
+en: In his arrogance he put men and women into the caves in the valleys of the mountains. He closed the caves with rocks, as a wasp shuts in an insect.
+tel: గర్వముతో అతడు పురుషులను, స్త్రీలను పర్వత లోయలలోని గుహలలో పడవేసెను. కందిరీగ ఒక కీటకమును మూసివేయునట్లు అతడు ఆ గుహలను బండలతో మూసివేసెను.
+hi: घमण्ड में भरकर उसने पुरुषों और स्त्रियों को पर्वतों की घाटियों की गुफाओं में डाल दिया। जैसे भिड़ किसी कीड़े को बन्द कर देती है, वैसे ही उसने उन गुफाओं को शिलाओं से ढँक दिया।
 
 --- verse 8 ---
 deva:
@@ -82,6 +103,9 @@ deva:
 iast:
 evaṁ deśān viprakurvan dūṣayaṁśca kulastriyaḥ|
 śrutvā sulalitaṁ gītaṁ giriṁ raivatakaṁ yayau||
+en: Thus he harmed the lands and defiled the women of good families. Then he heard very sweet singing and went to the mountain Raivataka.
+tel: ఈ విధముగా అతడు దేశములను పీడించెను, కులస్త్రీలను అపవిత్రము చేసెను. పిమ్మట మిక్కిలి మధురమైన గానమును విని అతడు రైవతక పర్వతమునకు వెళ్ళెను.
+hi: इस प्रकार उसने देशों को पीड़ा दी और कुल की स्त्रियों को दूषित किया। फिर अत्यन्त मधुर गान सुनकर वह रैवतक पर्वत पर गया।
 
 --- verse 9 ---
 deva:
@@ -90,6 +114,9 @@ deva:
 iast:
 tatrāpaśyad yadupatiṁ rāmaṁ puṣkaramālinam|
 sudarśanīyasarvāṁgaṁ lalanāyūthamadhyagam||
+en: There he saw Rāma, the lord of the Yadus, wearing a garland of lotuses, every limb of his most beautiful to see, seated in the midst of a group of women.
+tel: అక్కడ అతడు యదువుల ప్రభువైన రాముని చూచెను. ఆయన పద్మముల మాలను ధరించి, సర్వ అంగములు మిక్కిలి చూడ ముచ్చటగా ఉండి, స్త్రీల సమూహము నడుమ కూర్చుని ఉండెను.
+hi: वहाँ उसने यदुओं के स्वामी राम को देखा। वे कमलों की माला पहने हुए थे, उनके सब अंग अत्यन्त दर्शनीय थे, और वे स्त्रियों के समूह के बीच में थे।
 
 --- verse 10 ---
 deva:
@@ -98,6 +125,9 @@ deva:
 iast:
 gāyantaṁ vāruṇīṁ pītvā madavihvalalocanam|
 vibhrājamānaṁ vapuṣā prabhinnamiva vāraṇam||
+en: He had drunk vāruṇī wine and was singing, his eyes unsteady with its effect. His body shone bright, like an elephant in rut.
+tel: ఆయన వారుణి మద్యమును త్రాగి, దాని మత్తుతో కన్నులు చలించుచు గానము చేయుచుండెను. మదించిన ఏనుగు వలె ఆయన శరీరము ప్రకాశించుచుండెను.
+hi: वे वारुणी मदिरा पीकर गा रहे थे, और उसके मद से उनके नेत्र चंचल थे। मद में आए हाथी के समान उनका शरीर शोभा पा रहा था।
 
 --- verse 11 ---
 deva:
@@ -106,6 +136,9 @@ deva:
 iast:
 duṣṭaḥ śākhāmṛgaḥ śākhāmārūḍhaḥ kampayan drumān|
 cakre kilakilāśabdamātmānaṁ sampradarśayan||
+en: The wicked branch-dweller climbed a branch and shook the trees. He made a chattering sound and showed himself to them.
+tel: ఆ దుష్ట శాఖామృగము ఒక కొమ్మను ఎక్కి చెట్లను కదిలించెను. అతడు కిలకిల ధ్వని చేసి తనను వారికి చూపించుకొనెను.
+hi: उस दुष्ट शाखामृग ने एक डाल पर चढ़कर वृक्षों को हिलाया। उसने किलकिल शब्द किया और अपने आपको उन्हें दिखाया।
 
 --- verse 12 ---
 deva:
@@ -114,6 +147,9 @@ deva:
 iast:
 tasya dhārṣṭyaṁ kapervīkṣya taruṇyo jāticāpalāḥ|
 hāsyapriyā vijahasurbaladevaparigrahāḥ||
+en: Seeing the monkey's impudence, the young women laughed aloud. They were playful by nature, fond of laughter, and they were the consorts of Baladeva.
+tel: ఆ కపి ధార్ష్ట్యమును చూచి ఆ యువతులు పెద్దగా నవ్విరి. వారు స్వభావముచేతనే చపలులు, హాస్యమును ఇష్టపడువారు, బలదేవుని భార్యలు.
+hi: उस वानर की धृष्टता देखकर वे युवतियाँ खिलखिलाकर हँस पड़ीं। वे स्वभाव से ही चपल थीं, हँसी की प्रेमी थीं, और बलदेव की पत्नियाँ थीं।
 
 --- verse 13 ---
 deva:
@@ -122,6 +158,9 @@ deva:
 iast:
 tā helayāmāsa kapirbhrūkṣepaiḥ sammukhādibhiḥ|
 darśayan svagudaṁ tāsāṁ rāmasya ca nirīkṣataḥ||
+en: The monkey mocked them with movements of his brows and by standing right before them. He showed them his hindquarters, even while Rāma was looking on.
+tel: ఆ కపి కనుబొమలను ఆడించుచు, వారి ఎదుట నిలుచుచు వారిని అవమానించెను. రాముడు చూచుచున్నప్పుడే అతడు తన గుదమును వారికి చూపెను.
+hi: उस वानर ने भौंहें मटकाकर और उनके सामने खड़े होकर उनका उपहास किया। राम के देखते ही देखते उसने उन्हें अपना गुदा दिखाया।
 
 --- verse 14 ---
 deva:
@@ -130,6 +169,9 @@ deva:
 iast:
 taṁ grāvṇā prāharat kruddho balaḥ praharatāṁ varaḥ|
 sa vañcayitvā grāvāṇaṁ madirākalaśaṁ kapiḥ||
+en: Then Bala, the best of strikers, grew angry and threw a rock at him. The monkey dodged the rock and took hold of the pot of wine.
+tel: అప్పుడు కొట్టువారిలో శ్రేష్ఠుడైన బలుడు కోపించి అతనిపై ఒక బండను విసిరెను. ఆ కపి ఆ బండను తప్పించుకొని మదిర కలశమును పట్టుకొనెను.
+hi: तब प्रहार करने वालों में श्रेष्ठ बल ने क्रुद्ध होकर उस पर एक पत्थर फेंका। उस वानर ने पत्थर को बचाकर मदिरा का कलश पकड़ लिया।
 
 --- verse 15 ---
 deva:
@@ -138,6 +180,9 @@ deva:
 iast:
 gṛhītvā helayāmāsa dhūrtastaṁ kopayan hasan|
 nirbhidya kalaśaṁ duṣṭo vāsāṁsyāsphālayad balam||
+en: The rogue mocked him, laughing and making him angry. The wicked one broke the pot and pulled at Bala's garments.
+tel: ఆ ధూర్తుడు నవ్వుచు, ఆయనకు కోపము కలిగించుచు ఆయనను అపహసించెను. ఆ దుష్టుడు కలశమును పగులగొట్టి బలుని వస్త్రములను లాగెను.
+hi: उस धूर्त ने हँसते हुए और उन्हें क्रुद्ध करते हुए उनका उपहास किया। उस दुष्ट ने कलश को फोड़ दिया और बल के वस्त्रों को खींचा।
 
 --- verse 16 ---
 deva:
@@ -146,6 +191,9 @@ deva:
 iast:
 kadarthīkṛtya balavān vipracakre madoddhataḥ|
 taṁ tasyāvinayaṁ dṛṣṭvā deśāṁśca tadupadrutān||
+en: Puffed up with pride, that strong one treated him with contempt and insulted him. Bala saw that misconduct of his, and saw the lands harassed by him.
+tel: మదముతో ఉబ్బిన ఆ బలవంతుడు ఆయనను తృణీకరించి అవమానించెను. బలుడు అతని ఆ అవినయమును చూచెను, అతనిచే పీడింపబడిన దేశములను చూచెను.
+hi: मद से उन्मत्त होकर उस बलवान् ने उनका तिरस्कार किया और अपमान किया। बल ने उसका वह अविनय देखा और उसके द्वारा पीड़ित देशों को भी देखा।
 
 --- verse 17 ---
 deva:
@@ -154,6 +202,9 @@ deva:
 iast:
 kruddho musalamādatta halaṁ cārijighāṁsayā|
 dvivido'pi mahāvīryaḥ śālamudyamya pāṇinā||
+en: He grew angry and took up his club and his plough, wishing to kill his enemy. Dvivida too, of great strength, raised a śāla tree in his hand.
+tel: ఆయన కోపించి శత్రువును చంపవలెనని ముసలమును, నాగలిని చేపట్టెను. మహాబలుడైన ద్వివిదుడును చేతితో ఒక శాల వృక్షమును ఎత్తెను.
+hi: वे क्रुद्ध होकर शत्रु को मारने की इच्छा से मूसल और हल उठा लिए। महापराक्रमी द्विविद ने भी हाथ से एक शाल वृक्ष उठा लिया।
 
 --- verse 18 ---
 deva:
@@ -162,6 +213,9 @@ deva:
 iast:
 abhyetya tarasā tena balaṁ mūrdhanyatāḍayat|
 taṁ tu saṁkarṣaṇo mūrdhni patantamacalo yathā||
+en: He came up swiftly and struck Bala on the head with it. But Saṁkarṣaṇa stood unmoved like a mountain as it fell on his head.
+tel: అతడు వేగముగా వచ్చి దానితో బలుని తలపై కొట్టెను. కాని అది తలపై పడుచున్నప్పుడు సంకర్షణుడు పర్వతము వలె చలించక నిలిచెను.
+hi: उसने वेग से आकर उससे बल के सिर पर प्रहार किया। परन्तु वह सिर पर गिरते समय संकर्षण पर्वत के समान अचल खड़े रहे।
 
 --- verse 19 ---
 deva:
@@ -170,6 +224,9 @@ deva:
 iast:
 pratijagrāha balavān sunandenāhanacca tam|
 musalāhatamastiṣko vireje raktadhārayā||
+en: The mighty one received that blow and struck him with his club Sunanda. His skull broken by the club, he looked bright with the stream of blood.
+tel: బలవంతుడైన ఆయన ఆ దెబ్బను భరించి సునందముతో అతనిని కొట్టెను. ముసలముచే తల పగిలిన అతడు రక్త ధారతో ఎఱ్ఱగా కనిపించెను.
+hi: उस बलवान् ने वह प्रहार सह लिया और सुनन्द से उस पर आघात किया। मूसल से सिर फूट जाने पर वह रक्त की धारा से लाल दिखाई देने लगा।
 
 --- verse 20 ---
 deva:
@@ -178,6 +235,9 @@ deva:
 iast:
 giriryathā gairikayā prahāraṁ nānucintayan|
 punaranyaṁ samutkṣipya kṛtvā niṣpatramojasā||
+en: He was like a mountain red with ochre. Not minding the blow, he uprooted another tree and stripped it of its leaves by his strength.
+tel: అతడు గైరికముతో ఎఱ్ఱబడిన పర్వతము వలె ఉండెను. ఆ దెబ్బను లెక్కచేయక అతడు మరియొక చెట్టును పెకలించి తన బలముతో దాని ఆకులను ఊడ్చివేసెను.
+hi: वह गेरू से रंगे हुए पर्वत के समान था। उस प्रहार की चिन्ता न करके उसने दूसरा वृक्ष उखाड़ा और अपने बल से उसके पत्ते झाड़ डाले।
 
 --- verse 21 ---
 deva:
@@ -186,6 +246,9 @@ deva:
 iast:
 tenāhanat susaṁkruddhastaṁ balaḥ śatadhācchinat|
 tato'nyena ruṣā jaghne taṁ cāpi śatadhācchinat||
+en: Greatly enraged, he struck him with it, and Bala cut it into a hundred pieces. Then in anger he struck with another, and Bala cut that one also into a hundred pieces.
+tel: మిక్కిలి కోపించి అతడు దానితో ఆయనను కొట్టెను, బలుడు దానిని నూరు ముక్కలు చేసెను. పిమ్మట కోపముతో అతడు మరియొకటితో కొట్టెను, బలుడు దానిని కూడ నూరు ముక్కలు చేసెను.
+hi: अत्यन्त क्रुद्ध होकर उसने उससे प्रहार किया, और बल ने उसके सौ टुकड़े कर दिए। फिर क्रोध से उसने दूसरे से प्रहार किया, और बल ने उसके भी सौ टुकड़े कर दिए।
 
 --- verse 22 ---
 deva:
@@ -194,6 +257,9 @@ deva:
 iast:
 evaṁ yudhyan bhagavatā bhagne bhagne punaḥ punaḥ|
 ākṛṣya sarvato vṛkṣān nirvṛkṣamakarod vanam||
+en: Fighting in this way, with his trees broken again and again by the Lord, he pulled up the trees from every side and made the forest treeless.
+tel: ఈ విధముగా యుద్ధము చేయుచు, భగవంతునిచే తన చెట్లు మరల మరల విరువబడగా, అతడు అన్ని వైపుల నుండి చెట్లను పెకలించి వనమును చెట్లు లేనిదిగా చేసెను.
+hi: इस प्रकार युद्ध करते हुए, भगवान् के द्वारा उसके वृक्ष बार-बार तोड़े जाने पर, उसने चारों ओर से वृक्ष उखाड़कर वन को वृक्षहीन कर दिया।
 
 --- verse 23 ---
 deva:
@@ -202,6 +268,9 @@ deva:
 iast:
 tato'muñcacchilāvarṣaṁ balasyoparyamarṣitaḥ|
 tat sarvaṁ cūrṇayāmāsa līlayā musalāyudhaḥ||
+en: Then, unable to bear it, he let fall a shower of rocks upon Bala. The wielder of the club ground all of it to powder in play.
+tel: పిమ్మట సహింపలేక అతడు బలునిపై శిలల వర్షమును కురిపించెను. ముసలము ధరించినవాడు దానినంతటిని లీలగా పొడిపొడి చేసెను.
+hi: तब असहनशील होकर उसने बल पर शिलाओं की वर्षा की। मूसल धारण करने वाले ने उस सबको लीला से चूर-चूर कर दिया।
 
 --- verse 24 ---
 deva:
@@ -210,6 +279,9 @@ deva:
 iast:
 sa bāhū tālasaṁkāśau muṣṭīkṛtya kapīśvaraḥ|
 āsādya rohiṇīputraṁ tābhyāṁ vakṣasyarūrujat||
+en: The lord of the monkeys made fists of his two arms, which were like palm trees. He reached the son of Rohiṇī and beat him on the chest with them.
+tel: ఆ కపీశ్వరుడు తాటి చెట్ల వంటి తన రెండు చేతులను పిడికిళ్ళుగా చేసెను. అతడు రోహిణీపుత్రుని సమీపించి వానితో ఆయన వక్షముపై కొట్టెను.
+hi: उस कपीश्वर ने ताड़ के वृक्षों के समान अपनी दोनों भुजाओं की मुट्ठियाँ बाँध लीं। उसने रोहिणीपुत्र के पास जाकर उनसे उनकी छाती पर प्रहार किया।
 
 --- verse 25 ---
 deva:
@@ -218,6 +290,9 @@ deva:
 iast:
 yādavendro'pi taṁ dorbhyāṁ tyaktvā musalalāṁgale|
 jatrāvabhyardayatkruddhaḥ so'patad rudhiraṁ vaman||
+en: The lord of the Yādavas also, in anger, laid aside his club and his plough and struck him on the collarbone with both arms. He fell down, vomiting blood.
+tel: యాదవేంద్రుడును కోపముతో ముసలమును, నాగలిని విడిచి రెండు చేతులతో అతని జత్రువుపై కొట్టెను. అతడు రక్తమును కక్కుచు క్రింద పడెను.
+hi: यादवेन्द्र ने भी क्रुद्ध होकर मूसल और हल को छोड़ दिया और दोनों भुजाओं से उसकी हँसली पर प्रहार किया। वह रक्त वमन करता हुआ गिर पड़ा।
 
 --- verse 26 ---
 deva:
@@ -226,6 +301,9 @@ deva:
 iast:
 cakampe tena patatā saṭaṁkaḥ savanaspatiḥ|
 parvataḥ kuruśārdūla vāyunā naurivāmbhasi||
+en: As he fell, the mountain shook with its crags and its trees, O tiger among the Kurus, like a boat in water shaken by the wind.
+tel: అతడు పడుచున్నప్పుడు, ఓ కురుశార్దూలా, ఆ పర్వతము తన శిఖరములతోను చెట్లతోను కదిలెను, గాలిచే నీటిలో ఓడ కదలునట్లు.
+hi: हे कुरुशार्दूल, उसके गिरते समय वह पर्वत अपने शिखरों और वृक्षों के साथ हिल उठा, जैसे वायु से जल में नाव हिलती है।
 
 --- verse 27 ---
 deva:
@@ -234,6 +312,9 @@ deva:
 iast:
 jayaśabdo namaḥśabdaḥ sādhu sādhviti cāmbare|
 surasiddhamunīndrāṇāmāsīt kusumavarṣiṇām||
+en: In the sky there arose cries of victory and cries of homage, and the words well done, well done. They came from the gods, the siddhas and the foremost sages, who rained flowers.
+tel: ఆకాశమున జయధ్వని, నమోధ్వని, సాధు సాధు అను మాటలు పుట్టెను. పుష్పములను కురిపించుచున్న దేవతల, సిద్ధుల, మునీంద్రుల నుండి ఆ ధ్వనులు వచ్చెను.
+hi: आकाश में जय का शब्द, नमः का शब्द और साधु साधु ऐसे वचन उठे। ये पुष्प बरसाने वाले देवताओं, सिद्धों और मुनीन्द्रों से आए।
 
 --- verse 28 ---
 deva:
@@ -242,9 +323,15 @@ deva:
 iast:
 evaṁ nihatya dvividaṁ jagadvyatikarāvaham|
 saṁstūyamāno bhagavāṁñjanaiḥ svapuramāviśat||
+en: Having thus slain Dvivida, who brought trouble upon the world, the Lord was praised by the people and entered his own city.
+tel: ఈ విధముగా జగత్తునకు కలతను కలిగించిన ద్వివిదుని సంహరించి, భగవంతుడు జనులచే స్తుతింపబడుచు తన పురమున ప్రవేశించెను.
+hi: इस प्रकार जगत् में उपद्रव करने वाले द्विविद का वध करके भगवान् जनों से स्तुति किए जाते हुए अपने नगर में प्रविष्ट हुए।
 
 --- verse none ---
 deva:
 इति श्रीमद्भागवते महापुराणे पारमहंस्यां संहितायां दशमस्कन्धेउत्तरार्धे द्विविदवधो नाम सप्तषष्टितमोऽध्यायः॥ ६७॥
 iast:
 iti śrīmadbhāgavate mahāpurāṇe pāramahaṁsyāṁ saṁhitāyāṁ daśamaskandheuttarārdhe dvividavadho nāma saptaṣaṣṭitamo'dhyāyaḥ|| 67||
+en: Thus ends the sixty-seventh adhyāya, named the slaying of Dvivida, in the latter half of the tenth skandha of the Śrīmad Bhāgavata Mahāpurāṇa, the saṁhitā of the paramahaṁsas.
+tel: ఇట్లు పరమహంసల సంహిత అయిన శ్రీమద్భాగవత మహాపురాణమున దశమస్కంధము ఉత్తరార్ధమున ద్వివిదవధము అను అరువది ఏడవ అధ్యాయము సమాప్తము.
+hi: इस प्रकार परमहंसों की संहिता श्रीमद्भागवत महापुराण के दशम स्कन्ध के उत्तरार्ध में द्विविदवध नामक सड़सठवाँ अध्याय समाप्त हुआ।
