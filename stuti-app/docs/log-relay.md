@@ -13,6 +13,24 @@ the Netlify CLI (never paste the values into a chat, a commit, or this file):
 |---|---|
 | `STUTI_DRIVE_FOLDER` | `1msv7s9w0Q-MJJINiuVQDq-tnzmzWHKez` |
 | `STUTI_DRIVE_OAUTH` | `{"client_id":"…","client_secret":"…","refresh_token":"…"}` for the folder owner's Google account |
+
+**The scope, and the folder.** Ask for `https://www.googleapis.com/auth/drive.file`,
+not the whole-Drive scope. Google calls the wide one restricted and will not let an
+app that asks for it leave Testing mode without a security review — and in Testing
+mode it expires the refresh token every seven days, which is what kept killing this
+relay (dead again on 22 September 2026, `invalid_grant`). The narrow scope needs no
+review, so the consent screen's **Publish app** becomes available and the token
+stops expiring.
+
+The price is that `drive.file` reaches only files the app itself made, so the relay
+can no longer write into a folder you created by hand. It makes its own, once, and
+finds it again by name on each cold start; the first reply carries its id as
+`folder`, and it appears in your Drive like any other folder. `STUTI_DRIVE_FOLDER`
+is now optional and overrides all of that — set it only if you still hold the
+whole-Drive scope on a published app. `STUTI_DRIVE_FOLDER_NAME` changes the name it
+makes, and defaults to "Stuti App".
+
+`node stuti-app/tools/relay-selftest.mjs` checks this without touching Google.
 | `STUTI_DRIVE_SA` | alternative: a service-account key JSON, with the folder shared to its email as Editor |
 
 Set exactly one of the last two. **Prefer the OAuth route**: files uploaded
@@ -38,8 +56,9 @@ error. Files uploaded with your own account's refresh token are yours.
    pressing Authorize APIs, and check the redirect shown in the right pane
    carries your client id, not the playground's 407408718192.
    In step 1 type the scope `https://www.googleapis.com/auth/drive.file`
-   — or `https://www.googleapis.com/auth/drive` if the folder is one you
-   did not create in this app — authorise, then in step 2 press
+   — the wide `https://www.googleapis.com/auth/drive` only if you mean to go
+   through Google's review, and see the note above before you do —
+   authorise, then in step 2 press
    **Exchange authorization code for tokens** and copy the refresh token —
    the one the box shows *after* that press; a value left from an earlier
    attempt is the wrong token, and will fail as `unauthorized_client`.

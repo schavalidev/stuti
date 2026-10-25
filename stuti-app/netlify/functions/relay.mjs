@@ -9,7 +9,21 @@
 //       the account, so they count against its storage, not a robot's)
 //   STUTI_DRIVE_SA    — a service-account key JSON; the folder must be shared
 //       with the account's email as Editor
-// and STUTI_DRIVE_FOLDER — the folder id (the tail of its Drive URL).
+//
+// THE FOLDER, AND WHY IT IS USUALLY NOT NAMED
+// Google calls the whole-Drive scope restricted, and will not let an app
+// asking for it leave Testing mode without a security review. In Testing mode
+// it expires the refresh token every seven days, which is what kept killing
+// this relay. The narrow scope, drive.file, needs no review — but it reaches
+// only files the app itself created, so the relay can no longer write into a
+// folder made by hand in Drive. It therefore makes its own, once, and finds it
+// again by name on every cold start. That lookup is also drive.file-limited,
+// so it can only ever match the relay's own folder, never anything else in the
+// Drive it is signed into.
+//   STUTI_DRIVE_FOLDER      — optional: a folder id, which skips all of the
+//       above. Set it only with the whole-Drive scope and a published app.
+//   STUTI_DRIVE_FOLDER_NAME — optional: what to call the folder it makes.
+//       Defaults to "Stuti App".
 //
 // Feedback from the app's sheet arrives as feedback-<device>-<time>-<kind>.txt,
 // and is also mailed to the support address when these are set:
@@ -59,6 +73,31 @@ async function accessToken() {
   return cached.token;
 }
 
+/* The folder the relay writes into. An id in the environment wins, for the
+   setups that still hold the whole-Drive scope. Otherwise: find the one this
+   app made, or make it. Two cold starts at once could each make one, so the
+   oldest wins on the next lookup and the stray is left empty rather than
+   written to. */
+let folderCache = null;
+async function folderId(token) {
+  if (process.env.STUTI_DRIVE_FOLDER) return process.env.STUTI_DRIVE_FOLDER;
+  if (folderCache) return folderCache;
+  const name = (process.env.STUTI_DRIVE_FOLDER_NAME || "Stuti App").replace(/['\\]/g, "");
+  const auth = { Authorization: "Bearer " + token };
+  const q = `mimeType='application/vnd.google-apps.folder' and name='${name}' and trashed=false`;
+  const r = await fetch("https://www.googleapis.com/drive/v3/files?q=" + encodeURIComponent(q)
+    + "&orderBy=createdTime&pageSize=1&fields=files(id)", { headers: auth });
+  if (!r.ok) throw new Error("drive list " + r.status + " " + (await r.text()).slice(0, 200));
+  const found = (await r.json()).files;
+  if (found && found.length) return (folderCache = found[0].id);
+  const c = await fetch("https://www.googleapis.com/drive/v3/files?fields=id", {
+    method: "POST", headers: { ...auth, "Content-Type": "application/json" },
+    body: JSON.stringify({ name, mimeType: "application/vnd.google-apps.folder" }),
+  });
+  if (!c.ok) throw new Error("drive mkdir " + c.status + " " + (await c.text()).slice(0, 200));
+  return (folderCache = (await c.json()).id);
+}
+
 const cors = (origin) => ({
   "Access-Control-Allow-Origin": ORIGINS.some((re) => re.test(origin || "")) ? origin : "https://stuti-app.netlify.app",
   "Access-Control-Allow-Methods": "POST, OPTIONS",
@@ -71,8 +110,7 @@ export default async (req) => {
   const origin = req.headers.get("origin") || "";
   if (req.method === "OPTIONS") return new Response(null, { status: 204, headers: cors(origin) });
   if (req.method !== "POST") return reply(405, { error: "POST only" }, origin);
-  const folder = process.env.STUTI_DRIVE_FOLDER;
-  const drive = !!(folder && (process.env.STUTI_DRIVE_OAUTH || process.env.STUTI_DRIVE_SA));
+  const drive = !!(process.env.STUTI_DRIVE_OAUTH || process.env.STUTI_DRIVE_SA);
   let q; try { q = await req.json(); } catch (e) { return reply(400, { error: "bad json" }, origin); }
   const name = String(q.name || "").replace(/[^A-Za-z0-9._-]/g, "_").slice(0, 120);
   if (!BUILD.test(name) && !PREFIXES.some((p) => name.startsWith(p))) return reply(400, { error: "unknown kind" }, origin);
@@ -80,13 +118,15 @@ export default async (req) => {
   if (name.startsWith("feedback-")) {
     const mailed = await mailFeedback(q, name);
     if (!drive) return mailed ? reply(200, { mailed: true }, origin) : reply(503, { error: "relay not configured" }, origin);
-    const filed = await fileText(folder, name, "text/plain", String(q.text || ""));
+    const filed = await fileText(name, "text/plain", String(q.text || ""));
     return mailed || filed.ok ? reply(200, { mailed, filed: filed.ok }, origin) : reply(502, { error: filed.error }, origin);
   }
   if (!drive) return reply(503, { error: "relay not configured" }, origin);
   const mime = /^[a-z]+\/[a-z0-9.+-]+$/i.test(q.mime || "") ? q.mime : "text/plain";
+  let token, folder;
+  try { token = await accessToken(); folder = await folderId(token); }
+  catch (e) { return reply(502, { error: String(e.message || e) }, origin); }
   const meta = JSON.stringify({ name, parents: [folder], mimeType: mime });
-  let token; try { token = await accessToken(); } catch (e) { return reply(502, { error: String(e.message || e) }, origin); }
   const auth = { Authorization: "Bearer " + token };
 
   if (q.resumable) {
@@ -100,14 +140,16 @@ export default async (req) => {
     return reply(200, { url: r.headers.get("location") }, origin);
   }
 
-  const filed = await fileText(folder, name, mime, String(q.text || ""));
+  const filed = await fileText(name, mime, String(q.text || ""));
   return filed.ok ? reply(200, filed.json, origin) : reply(filed.status, { error: filed.error }, origin);
 };
 
-async function fileText(folder, name, mime, text) {
+async function fileText(name, mime, text) {
   if (!text) return { ok: false, status: 400, error: "empty" };
   if (Buffer.byteLength(text) > MAX_TEXT) return { ok: false, status: 413, error: "size" };
-  let token; try { token = await accessToken(); } catch (e) { return { ok: false, status: 502, error: String(e.message || e) }; }
+  let token, folder;
+  try { token = await accessToken(); folder = await folderId(token); }
+  catch (e) { return { ok: false, status: 502, error: String(e.message || e) }; }
   const auth = { Authorization: "Bearer " + token };
   const meta = JSON.stringify({ name, parents: [folder], mimeType: mime });
   const boundary = "stuti" + Math.random().toString(36).slice(2);
@@ -116,7 +158,7 @@ async function fileText(folder, name, mime, text) {
     method: "POST", body, headers: { ...auth, "Content-Type": `multipart/related; boundary=${boundary}` },
   });
   if (!r.ok) return { ok: false, status: 502, error: "drive " + r.status + " " + (await r.text()).slice(0, 200) };
-  return { ok: true, json: await r.json() };
+  return { ok: true, json: { ...(await r.json()), folder } };
 }
 
 /* One plain-text mail per message. The subject carries the kind and the build,
