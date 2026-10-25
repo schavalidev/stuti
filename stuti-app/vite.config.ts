@@ -34,6 +34,11 @@ export default defineConfig({
       workbox: {
         maximumFileSizeToCacheInBytes: 6 * 1024 * 1024, // the ~1.7MB corpus bundles into a couple of JS chunks
         navigateFallback: '/index.html',
+        // The privacy policy and the terms are plain pages, not app routes, and
+        // the fallback would hand an installed device the app instead of the
+        // page — which is exactly the device whose reader wants to read them.
+        // Google also wants a privacy policy URL that is reliably the policy.
+        navigateFallbackDenylist: [/^\/legal\//],
         // The gazetteer and the temple index are the two files the app fetches
         // only when something asks for them — a town typed into the place
         // search, a reciter standing somewhere unpinned. Workbox's default glob
