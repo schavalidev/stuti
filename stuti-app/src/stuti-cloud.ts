@@ -214,9 +214,19 @@ async function sync(interactive = false) {
     if (joined !== uid) {
       /* The first time this device meets this account. Read everything the
          account holds; if both sides carry a record and they differ, stop and
-         ask. Otherwise everything here is offered up, and where the account
-         already has something, its copy is taken (stamped 1 here, so it wins);
-         where it has nothing, this phone's copy fills it. */
+         ask. Otherwise everything here is offered up, and this phone's own
+         settings stand: the reciter chose them on the phone in their hand, and
+         an older copy from another device must not quietly replace them. Only
+         where this phone has nothing is the account's copy taken (stamped 1
+         here, so it wins). A key this phone has never set at all is not in
+         `local` and comes down with the pull below, which is how a new phone
+         still inherits the settings of an old one.
+
+         It used to be the other way around — the account won every setting on
+         a first sign-in — and a reciter signing in on their Telugu phone had
+         it turned to English by a test account from the week before, with
+         nothing said. Practice has the conflict screen; settings had nothing,
+         so they now default to the device the reciter is holding. */
       const { data: all, error } = await c.from("stuti_kv").select("key,value,ts").eq("user_id", uid).limit(5000);
       if (error) throw error;
       const remote: Record<string, Row> = {};
@@ -231,9 +241,12 @@ async function sync(interactive = false) {
         held = true;
         return;
       }
+      const now = Date.now();
       for (const k of local) {
-        if (remote[k] && !empty(remote[k].value)) meta.ts[k] = 1;
-        else if (!meta.ts[k]) meta.ts[k] = 1;
+        if (empty(localStorage.getItem(k)) && remote[k] && !empty(remote[k].value)) meta.ts[k] = 1;
+        /* one past whatever the account claims, as resolve("phone") does: the
+           phone must win even if the other device's clock was wrong */
+        else if (!meta.ts[k] || (remote[k] && meta.ts[k] <= remote[k].ts)) meta.ts[k] = Math.max(now, (remote[k] ? remote[k].ts : 0) + 1);
         if (meta.dirty.indexOf(k) === -1) meta.dirty.push(k);
       }
       try { rawRemove.call(localStorage, CURSOR); } catch (e) {}

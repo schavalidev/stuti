@@ -30,8 +30,12 @@ feedback, and Razorpay's Payment Buttons take the money.
      into Supabase → Providers → Google.
 
 Then build, verify, commit. Existing beta data is kept: on a device's first
-sign-in every key already on it is offered to the account, and a copy the
-account already holds from another phone wins.
+sign-in every key already on it is offered to the account, and this phone's
+own copy wins — for settings as well as practice. The account's copy comes
+down only for keys this phone has nothing for, which is how a new phone still
+inherits an old one's settings. (Until 25 October 2026 the account won every
+setting at a first sign-in, which turned a Telugu phone to English from a test
+account made the week before.)
 
 ## 2. What syncs, and what never leaves the phone
 

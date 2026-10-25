@@ -224,14 +224,25 @@ head("4. Asked which to keep, the reciter keeps what the account holds");
 /* ============================================================
    5. an account holding only settings is not a conflict
    ============================================================ */
-head("5. The account holds only settings — the practice should just go up");
+head("5. The account holds settings from another device — this phone's own must stand");
 {
+  /* The bug this replaced: a reciter signed in on their Telugu phone and the
+     app turned English, because a test account from the week before held
+     stuti-lang and the account won every setting on a first sign-in. */
   seed(BETA_PHONE);
-  OTHER([{ key: "stuti-theme", value: "day", ts: 9_000_000_000_000 }]);
+  OTHER([
+    { key: "stuti-theme", value: "day", ts: 9_000_000_000_000 },
+    { key: "stuti-lang", value: "roman", ts: 9_000_000_000_000 },
+    { key: "stuti-readmode", value: "paged", ts: 9_000_000_000_000 },   // this phone has never set it
+  ]);
+  localStorage.removeItem("stuti-readmode");
   await signIn();
   ok(STUTI_CLOUD_AUTH.syncState() === "synced", "no conflict is raised (state " + STUTI_CLOUD_AUTH.syncState() + ")");
   ok(kv()["stuti-japa"] === BETA_PHONE["stuti-japa"], "the practice goes up");
-  ok(localStorage.getItem("stuti-theme") === "day", "the account's newer setting comes down");
+  ok(localStorage.getItem("stuti-lang") === "tel", "the phone stays in Telugu, however old the account's copy says it is");
+  ok(localStorage.getItem("stuti-theme") === "night", "and keeps its own theme");
+  ok(kv()["stuti-lang"] === "tel", "the phone's language is what the account now holds");
+  ok(localStorage.getItem("stuti-readmode") === "paged", "a setting this phone never set still comes down from the account");
 }
 
 /* ============================================================
