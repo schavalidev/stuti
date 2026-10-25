@@ -15,7 +15,7 @@ const EXACT = new Set([
   "stuti-favs", "stuti-favs-week", "stuti-last", "stuti-loc", "stuti-lang",
   "stuti-japa", "stuti-japa-last", "stuti-plans", "stuti-thread", "stuti-vows",
   "stuti-watch", "stuti-keep", "stuti-prefs", "stuti-my-tithis",
-  "stuti-pitru-register", "stuti-dana", "stuti-recite-cfg", "stuti-ledger-span",
+  "stuti-dana", "stuti-recite-cfg", "stuti-ledger-span",
   "stuti-ledger", "stuti-nitya-lens", "stuti-fontscale", "stuti-home",
   "stuti-theme", "stuti-uiscale", "stuti-readmode", "stuti-speed", "stuti-ui-lang", "stuti-ui-lang-custom",
 ]);
@@ -23,7 +23,14 @@ const PREFIX = ["stuti-pos-", "stuti-practice-"];   // a reading position per hy
 
 /* Not here, on purpose: stuti-flyleaf (and the older stuti-gotra / -nama /
    -gender / -karma). The saṅkalpa panel promises the reciter that name and
-   gotra never leave the phone, and that promise is kept by sync too. */
+   gotra never leave the phone, and that promise is kept by sync too.
+   Nor stuti-pitru-register, for the same reason and more strongly: the
+   register holds the names and gotras of the reciter's dead — father, mother,
+   grandparents, teachers — and its own screen says, in all three languages,
+   "Kept on this device only. The names are never sent anywhere."
+   It was on this list until 25 October 2026, which would have carried those
+   names to the server the first time anyone signed in. If it is ever to sync,
+   that line has to change first. tools/sync-selftest.mjs holds the check. */
 /** the reciter's own data; device plumbing (session, relay queue, beta latch, device id) never travels */
 export const syncs = (k: string) => EXACT.has(k) || PREFIX.some((p) => k.startsWith(p));
 

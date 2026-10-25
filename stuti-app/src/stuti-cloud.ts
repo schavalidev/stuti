@@ -171,7 +171,7 @@ let busy = false, again = false, reloadOnHide = false, timer: any = null;
    These are never settled by clock alone. Settings (theme, script, font
    size, reading positions…) still go to the newer stamp. */
 const RECORD_EXACT = new Set(["stuti-favs", "stuti-favs-week", "stuti-japa", "stuti-plans", "stuti-thread", "stuti-vows",
-  "stuti-watch", "stuti-keep", "stuti-my-tithis", "stuti-pitru-register", "stuti-dana", "stuti-ledger"]);
+  "stuti-watch", "stuti-keep", "stuti-my-tithis", "stuti-dana", "stuti-ledger"]);
 const isRecord = (k: string) => RECORD_EXACT.has(k) || k.startsWith("stuti-practice-");
 const empty = (v: string | null | undefined) => v == null || v === "" || v === "{}" || v === "[]" || v === "null";
 

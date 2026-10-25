@@ -37,9 +37,10 @@ account already holds from another phone wins.
 
 Synced, one row per key in `stuti_kv` (list in `src/stuti-sync-hook.ts`):
 favourites, reading positions, place, script, japa, plans, vows, the thread,
-watch, keep, prefs, my tithis, pitṛ register, the lamp, reading settings.
+watch, keep, prefs, my tithis, the lamp, reading settings.
 
-Never sent: the flyleaf (name, gotra — the saṅkalpa panel promises this), the
+Never sent: the pitṛ register (the names and gotras of the reciter's dead —
+its own screen promises they stay on the phone), the flyleaf (name, gotra — the saṅkalpa panel promises this), the
 session, device id, relay queue, beta latch, journal.
 
 The cue record (`stuti_cue_prefs`, one row per device): place and time zone,
@@ -55,7 +56,7 @@ reciter's other devices and for a server-side reckoning that was decided against
 
 ### When two records differ
 
-Practice keys (japa, thread, vows, plans, keep, favourites, ledger, pitṛ register,
+Practice keys (japa, thread, vows, plans, keep, favourites, ledger,
 my tithis, watch, lamp, `stuti-practice-*`) are never settled by clock. If a device's
 first sign-in finds a different record on both sides, or a practice key changed on
 both phones since they last agreed, sync stops in state `conflict` and the account
