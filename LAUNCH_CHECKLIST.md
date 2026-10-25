@@ -61,7 +61,8 @@ Blocks the other three in practice: real identity sits under all of them.
       overwritten (25 Oct 2026, S61)
 - [ ] Verify first sign-in on a real phone with real beta data and your own email —
       the part the selftest cannot reach
-- [ ] Insert your own `user_id` into `stuti_admins` so the in-app feedback inbox appears
+- [x] Insert your own `user_id` into `stuti_admins` — done 25 Oct 2026 (S61); the
+      Feedback section shows on the account screen, signed in on the phone
 - [ ] Read the counters once: `select * from stuti_events_daily;`
 
 ### A2. Razorpay — giving
