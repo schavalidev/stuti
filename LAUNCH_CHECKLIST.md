@@ -256,16 +256,21 @@ the first release.
 Drafted in the app's own voice at `stuti-app/docs/legal/privacy.html` and
 `terms.html`. Two problems: nine unfilled placeholders, and they are not served.
 
-- [ ] `privacy.html:6` `[DATE]`
-- [ ] `privacy.html:8` `[OPERATOR NAME]`, `[ADDRESS]`
-- [ ] `privacy.html:50` `[REGION]`
-- [ ] `privacy.html:98` `[NAME]`, `[SUPPORT EMAIL]`, `[ADDRESS]`
-- [ ] `terms.html:6` `[DATE]`
-- [ ] `terms.html:8` `[OPERATOR NAME]`, `[ADDRESS]`
-- [ ] `terms.html:51` `[CITY]` — the courts named for disputes
-- [ ] `terms.html:54` `[SUPPORT EMAIL]`, `[ADDRESS]`
-- [ ] Move both into `stuti-app/public/` so they are served, and link them from
-      Settings. Nothing in `src/` references either file today
+- [x] `privacy.html` — filled and published 25 Oct 2026, S61
+      Operator: Srikrishna, an individual. Contact: feedback@stuti.app, no postal
+      address — the DPDP Act wants a reachable contact, not an address, from an
+      individual. The SMS provider row was cut, not filled: phone sign-in is off
+      It also now names the pitṛ register among what never leaves the phone
+      Live at https://stuti-app.netlify.app/legal/privacy.html — and the service
+      worker's navigation fallback skips /legal/, or an installed device is handed
+      the app instead of the page
+- [ ] `terms.html` — everything filled except one thing, and then it can go up
+      beside the policy in `public/legal/`
+- [ ] `terms.html` `[CITY]` — the courts named for disputes. The only blank left in
+      either document, and not one to guess
+
+- [ ] Link both from Settings. The policy is served but nothing in `src/` points a
+      reciter at it
 - [ ] Check both against the DPDP Act duties: stated purpose, consent, deletion on
       request, breach notification. The counting stance — count actions, never
       people — is already right; put it in writing
@@ -346,8 +351,14 @@ is bought.
 - [ ] `CHANNEL = "beta"` — move to `release`
 - [ ] Keep the beta latch's grandfather clause in `main.tsx` for devices that finished
       onboarding before the gate existed
-- [ ] Renew the Drive relay refresh token in Netlify. It died 22 September with
-      `invalid_grant`, and APK publishing is blocked until you do it — only you can
+- [x] The Drive relay works again, and should stop dying (25 Oct 2026, S61). The
+      cause was never the token: the relay asked for the whole-Drive scope, which
+      Google calls restricted, which kept the consent screen in Testing mode, which
+      expires a refresh token every seven days. Now on `drive.file` with the consent
+      screen published. The narrow scope still writes into the original folder, so
+      nothing moved. `tools/relay-selftest.mjs` covers the folder handling
+- [x] Stuti-v55.apk published to Drive (25 Oct 2026) — the first build carrying real
+      accounts, and the first with the pitṛ register kept off the server
 - [ ] Prune the Drive folder by hand at the next publish: newest two APKs, and never
       trash a text log
 - [ ] A staging URL that is not the live one
