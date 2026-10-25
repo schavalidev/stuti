@@ -16,3 +16,9 @@
 .fbi-meta b{color:var(--ink);font-weight:500;font-size:.9375rem}
 .fbi-body{margin-top:10px;white-space:pre-wrap;overflow-wrap:anywhere;font-size:.875rem;line-height:1.6;color:var(--ink-soft)}
 .fbi-acts{display:flex;flex-wrap:wrap;gap:4px 12px;margin-top:8px}
+
+/* .dana-later carries no padding of its own: on the dāna screen it sits in a
+   flex row (.tt-actions) that sizes it, and borrowing it here left a pill with
+   the text against its own border. These are the places it stands alone. */
+.set-sect > .dana-later{margin-top:14px;padding:0 20px}
+.fbi-acts .dana-later{min-height:38px;padding:0 14px;font-size:.8438rem}
