@@ -53,7 +53,14 @@ Blocks the other three in practice: real identity sits under all of them.
       is already known — a first-time reciter gets the signup one. A save takes a
       minute or two to reach the mailer, so a test straight after a save reads the old
       template. The OTP is eight digits unless Email OTP Length is set to 6
-- [ ] Verify first sign-in on a device that already holds beta data — existing keys are offered to the account, and the conflict screen appears when two phones disagree
+- [x] Verify the merge itself, away from the network — `node stuti-app/tools/sync-selftest.mjs`
+      runs the real `stuti-cloud.ts` against a stand-in phone and a stand-in
+      `stuti_kv`: fifty checks over ten situations, including a phone whose practice
+      predates the stamps, an account another phone already filled, and both answers
+      to the conflict screen's question. Nothing is lost, nothing is silently
+      overwritten (25 Oct 2026, S61)
+- [ ] Verify first sign-in on a real phone with real beta data and your own email —
+      the part the selftest cannot reach
 - [ ] Insert your own `user_id` into `stuti_admins` so the in-app feedback inbox appears
 - [ ] Read the counters once: `select * from stuti_events_daily;`
 
@@ -324,6 +331,14 @@ is bought.
 ---
 
 ## E. Release mechanics
+
+- [ ] The Follow screen says "Nothing is uploaded" while recording, and on a beta
+      build that is not true: when Follow stops, the session's audio goes to the
+      makers' Drive folder. The relay switch is on by default for beta and off for
+      release, so setting the channel to release mends it — but the line is still
+      wrong for anyone who turns the switch on. Either condition the line or stop
+      the audio travelling while it is shown. `stuti-follow.tsx` mirrors back to the
+      designer's project, so the new wording goes to her (found 25 Oct 2026, S61)
 
 - [x] Build stamp matches the changelog (0.9.107 / 2026.10.03, S64), and
       `release-apk.sh` now refuses to build when they disagree
