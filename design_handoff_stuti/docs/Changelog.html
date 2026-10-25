@@ -95,6 +95,25 @@ code { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: .
 
 <section class="release">
   <div class="rail">
+    <div class="ver">0.9.113</div>
+    <div class="date">25 October 2026</div>
+    <div class="rail-note">The names of the reciter's dead were on the list of things that travel to the server. They are not any more.</div>
+  </div>
+  <div class="release-body">
+    <h2 class="release-title">What the phone keeps to itself</h2>
+    <div class="entry">
+      <div class="entry-head"><span class="tag tag-fix">Fixed</span><h3>The pitṛ register no longer travels to the server</h3></div>
+      <p>The register holds the names and gotras of the reciter's dead — father, mother, grandparents, teachers — and its own screen says, in all three languages, that they are kept on this device only and are never sent anywhere. The sync hook nevertheless listed <code>stuti-pitru-register</code> among the keys an account carries, so the first time any reciter signed in, those names would have gone to the server with the rest of their practice. Nobody had signed in yet, because the published build has no account system in it, so nothing left any phone; but the next release was to be the one that turned accounts on. The design's own sync seam never listed the register. The port added it, alongside the other practice records, and the two lists were never read back against the promise on the screen. It is now off both lists and recorded with the flyleaf as something that never leaves the phone. If it is ever to sync, the line on that screen has to change first.</p>
+    </div>
+    <div class="entry">
+      <div class="entry-head"><span class="tag tag-add">Added</span><h3>A self-test for what survives a first sign-in</h3></div>
+      <p>Signing in is the one moment that can cost a reciter a year of practice, and it cannot be judged by looking at the screen: the merge either keeps what is on the phone or quietly does not. <code>stuti-app/tools/sync-selftest.mjs</code> runs the real <code>stuti-cloud.ts</code>, unaltered, against a stand-in localStorage and a stand-in <code>stuti_kv</code> table, and asserts what comes through — fifty checks over ten situations, among them a phone whose practice predates the stamps the hook writes, an account another phone has already filled, an account holding an empty record, and both answers to the question the conflict screen asks. The merge itself came through clean: nothing is lost, nothing is silently overwritten, and where two records disagree it stops and asks rather than choosing. It was this harness that found the register, by asking what must never travel and being told it had.</p>
+    </div>
+  </div>
+</section>
+
+<section class="release">
+  <div class="rail">
     <div class="ver">0.9.112</div>
     <div class="date">22 October 2026</div>
     <div class="rail-note">The almanac measured against a published one, minute by minute, and the three faults it found set right.</div>
