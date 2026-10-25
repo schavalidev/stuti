@@ -113,20 +113,22 @@ Step 1 is done: `stotras/bin/build_corpus.py` exists and runs.
 
 The relay already files feedback into Drive; only the mail leg is unset.
 
-**Mail on the domain comes first (found 25 Oct 2026, S61).** `stuti.app` is
-registered and yours — Spaceship's nameservers, a Google site verification already
-on it — but it has **no MX records at all**, so `feedback@stuti.app` silently drops
-everything sent to it. That is the address the app shows every tester, promises a
+**Mail on the domain comes first (found 25 Oct 2026, S61).** `stutiapp.com` is
+yours and sits on Cloudflare, but it has **no MX records**, so nothing can receive
+mail there yet. That is the address the app shows every tester, promises a
 reply from within three days, and which the privacy policy names as the grievance
 contact. It has to receive mail before anyone is invited to write to it.
 
-- [x] `stuti.app` is registered and yours (checked by DNS, 25 Oct 2026)
-- [ ] Receiving: add mail or a forwarder for `feedback@stuti.app`. The registrar
-      usually includes forwarding with the domain, which is the quickest; Zoho's
-      free tier gives a real mailbox if you want one. Either way it adds the MX
-      records the domain is missing
-- [ ] Sending: Resend → Domains → add `stuti.app`, then put its DKIM and SPF
-      records in at the registrar. Until that is green, `STUTI_FEEDBACK_FROM` must
+- [x] The domain is **stutiapp.com**, not `stuti.app` — Cloudflare nameservers, and
+      it already carries a Resend DKIM record. `stuti.app` belongs to a stranger,
+      and the app had been naming `feedback@stuti.app` as its support address in
+      four places, the published privacy policy among them. Corrected 25 Oct 2026
+- [ ] Receiving: Cloudflare → stutiapp.com → **Email Routing** → forward
+      `feedback@stutiapp.com` to your own inbox. It is free, takes a couple of
+      minutes, and adds the MX records itself
+- [ ] Sending: Resend → Domains → add `stutiapp.com`, then put its DKIM and SPF
+      records in at Cloudflare. A DKIM record is already there, so this may be
+      part-done. Until Resend shows the domain green, `STUTI_FEEDBACK_FROM` must
       stay unset, and Resend's test sender delivers only to your own Resend address
 - [ ] `RESEND_API_KEY` (resend.com, free tier)
 - [ ] `STUTI_FEEDBACK_TO` — the support address
