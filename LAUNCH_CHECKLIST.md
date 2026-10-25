@@ -113,6 +113,21 @@ Step 1 is done: `stotras/bin/build_corpus.py` exists and runs.
 
 The relay already files feedback into Drive; only the mail leg is unset.
 
+**Mail on the domain comes first (found 25 Oct 2026, S61).** `stuti.app` is
+registered and yours — Spaceship's nameservers, a Google site verification already
+on it — but it has **no MX records at all**, so `feedback@stuti.app` silently drops
+everything sent to it. That is the address the app shows every tester, promises a
+reply from within three days, and which the privacy policy names as the grievance
+contact. It has to receive mail before anyone is invited to write to it.
+
+- [x] `stuti.app` is registered and yours (checked by DNS, 25 Oct 2026)
+- [ ] Receiving: add mail or a forwarder for `feedback@stuti.app`. The registrar
+      usually includes forwarding with the domain, which is the quickest; Zoho's
+      free tier gives a real mailbox if you want one. Either way it adds the MX
+      records the domain is missing
+- [ ] Sending: Resend → Domains → add `stuti.app`, then put its DKIM and SPF
+      records in at the registrar. Until that is green, `STUTI_FEEDBACK_FROM` must
+      stay unset, and Resend's test sender delivers only to your own Resend address
 - [ ] `RESEND_API_KEY` (resend.com, free tier)
 - [ ] `STUTI_FEEDBACK_TO` — the support address
 - [ ] `STUTI_FEEDBACK_FROM` — a sender on a domain verified in Resend, or Resend's
