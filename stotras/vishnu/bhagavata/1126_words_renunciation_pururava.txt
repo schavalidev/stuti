@@ -9,7 +9,7 @@ Type: Purāṇa (an adhyāya of the Śrīmad Bhāgavata, Skandha 11)
 
 Source / recension: Base text and authority: the Gītā Press, Gorakhpur Śrīmadbhāgavata Mahāpurāṇa with Hindi translation, Part 2 (Gītā Press code 27), archive.org item `shrimadbhagwat-mahapuran-bhag-2`, printed pages 871–875; the PDF page numbers are the printed ones. The PDF carries the typesetter's own text layer in the Chanakya font encoding, and the text was decoded from it by machine with `bin/bhagavata/chanakya.py`, not read off OCR or typed. The decoder was checked against GRETIL over all twelve skandhas before any file was written, and the differences that remain were sampled and found to be readings of the two editions. Second witness: GRETIL's `sa_bhAgavatapurANa.xml` (IAST, contributed by Ulrich Stiehl), a separate editorial lineage, compared verse by verse by machine. The TTD edition with the commentaries of Śrīdhara, Vīrarāghava and Vijayadhvaja (archive.org `Bhagavata_Purana_With_Multiple_Commentaries_TTD_Critical_Edition`) is the third witness where one is needed; it was not read for this file. The IAST was generated mechanically from the Devanāgarī with `bin/dev2iast.py`.
 
-Recension note: Text-only file, written 1 Oct 2026 at the user's instruction to lay down the whole Bhāgavata first: the English, Telugu and Hindi meanings are still to be added, and the witnesses' differences listed here have been recorded by machine and not yet adjudicated. The print is followed throughout. The print numbers 35 verses and GRETIL numbers 35. Of the 35 verses GRETIL has under the same number, 25 agree with the print letter for letter once spacing and the spelling of nasals are set aside; the rest differ: 5, 8, 17, 24, 25, 26, 32, 33, 34, 35. Spacing is the print's, as its text layer gives it; in a few places justification has left a space inside a word, and these are still to be closed when the verse is read. The speaker lines (श्रीशुक उवाच and the others) are printed in italic above the verse they introduce, and are given as its first line.
+Recension note: Meanings written 26 Oct 2026 (session S78). The differences between the witnesses listed below were read as the verses were glossed; except where this note says otherwise, each is a spelling, a sandhi or a word order of the two editions, none of them changes the sense, and the print's reading therefore stands unbracketed. The print is followed throughout. The print numbers 35 verses and GRETIL numbers 35. Of the 35 verses GRETIL has under the same number, 25 agree with the print letter for letter once spacing and the spelling of nasals are set aside; the rest differ: 5, 8, 17, 24, 25, 26, 32, 33, 34, 35. Spacing is the print's, as its text layer gives it. The speaker lines (श्रीशुक उवाच and the others) are printed in italic above the verse they introduce, and are given as its first line. No broken word was found: bin/bhagavata/spacing.py reports none, and a both-directions check against GRETIL showed every join to fall after a virāma consonant or before an avagraha, where the print is right. At verse 24 ṣaḍvarga is taken with Śrīdhara as the five senses and the mind, not as the six inner enemies. At verse 33 arvāk is taken with Śrīdhara as “here in this world”, that is, before death. At verse 28 GRETIL divides the line as hi tā where the print reads hitā, and the print's division is followed.
 
 Verse count: 35, plus the closing colophon printed unnumbered.
 
@@ -24,6 +24,9 @@ iast:
 śrībhagavānuvāca
 mallakṣaṇamimaṁ kāyaṁ labdhvā maddharma āsthitaḥ|
 ānandaṁ paramātmānamātmasthaṁ samupaiti mām||
+en: The blessed Lord said: Having obtained this body, which is a means of reaching me, and standing firm in the dharma that leads to me, a man attains me, the Supreme Self, who is bliss and who dwells within the self.
+tel: శ్రీభగవానుడు పలికెను: నన్ను పొందుటకు సాధనమైన ఈ శరీరమును పొంది, నా ధర్మమునందు స్థిరముగా నిలిచిన మనుష్యుడు, ఆనందస్వరూపుడై ఆత్మయందే ఉన్న పరమాత్మను, అనగా నన్ను పొందును.
+hi: भगवान ने कहा: मुझे पाने का साधन इस शरीर को पाकर और मेरे धर्म में स्थिर रहकर मनुष्य मुझे पा लेता है। मैं परमात्मा हूँ, आनन्दरूप हूँ और आत्मा में ही स्थित हूँ।
 
 --- verse 2 ---
 deva:
@@ -34,6 +37,9 @@ iast:
 guṇamayyā jīvayonyā vimukto jñānaniṣṭhayā|
 guṇeṣu māyāmātreṣu dṛśyamāneṣvavastutaḥ|
 vartamāno'pi na pumān yujyate'vastubhirguṇaiḥ||
+en: By firmness in knowledge he is freed from the birth that is made of the guṇas. The guṇas are only māyā. They are seen, but they are not real. Though such a man moves among them, he is not bound by these guṇas, which have no substance.
+tel: జ్ఞాననిష్ఠచేత అతడు గుణములతో కూడిన జన్మనుండి విముక్తుడగును. గుణములు మాయ మాత్రమే. అవి కనబడును గాని వాస్తవములు కావు. అట్టి పురుషుడు వాటి మధ్య ఉన్నను, వస్తుత్వము లేని ఆ గుణములచే బంధింపబడడు.
+hi: ज्ञान में स्थिर रहने से वह गुणों से बने जन्म से मुक्त हो जाता है। गुण केवल माया हैं। वे दिखते हैं, पर वास्तविक नहीं हैं। ऐसा पुरुष उनके बीच रहता हुआ भी इन असत् गुणों से नहीं बँधता।
 
 --- verse 3 ---
 deva:
@@ -42,6 +48,9 @@ deva:
 iast:
 saṁgaṁ na kuryādasatāṁ śiśnodaratṛpāṁ kvacit|
 tasyānugastamasyandhe patatyandhānugāndhavat||
+en: One should never keep company with bad men, who satisfy only the genitals and the belly. He who follows such a man falls into blind darkness, as a blind man follows a blind man and falls.
+tel: శిశ్నమును, ఉదరమును మాత్రమే తృప్తిపరచుకొను దుర్జనులతో ఎప్పుడును సంగము చేయకూడదు. అట్టివానిని అనుసరించువాడు గుడ్డివాడు గుడ్డివానిని అనుసరించి పడునట్లు అంధకారమునందు పడును.
+hi: जो केवल इन्द्रिय और पेट को तृप्त करते हैं, ऐसे दुर्जनों का संग कभी न करे। उनके पीछे चलनेवाला अन्धे के पीछे चलते अन्धे के समान घोर अन्धकार में गिर जाता है।
 
 --- verse 4 ---
 deva:
@@ -50,6 +59,9 @@ deva:
 iast:
 ailaḥ samrāḍimāṁ gāthāmagāyata bṛhacchravāḥ|
 urvaśīvirahān muhyan nirviṇṇaḥ śokasaṁyame||
+en: Aila, the emperor of great fame, sang this song when, bewildered by separation from Urvaśī, he turned away from the world and restrained his grief.
+tel: గొప్ప కీర్తి గల ఐల చక్రవర్తి, ఊర్వశీ విరహముచే మోహితుడై, విరక్తి పొంది శోకమును నిగ్రహించుకొను సమయమున ఈ గాథను పాడెను.
+hi: महान कीर्तिवाले सम्राट ऐल ने, उर्वशी के विरह से मोहित होकर, विरक्त होते हुए और शोक को रोकते समय यह गाथा गायी।
 
 --- verse 5 ---
 deva:
@@ -58,6 +70,9 @@ deva:
 iast:
 tyaktvā''tmānaṁ vrajantīṁ tāṁ nagna unmattavannṛpaḥ|
 vilapannanvagājjāye ghore tiṣṭheti viklavaḥ||
+en: When she left him and was going away, the king, naked and like a madman, ran after her lamenting, crying out in distress: "O my wife, O cruel one, stop!"
+tel: ఆమె తనను విడిచి వెడలిపోవుచుండగా, ఆ రాజు నగ్నుడై ఉన్మత్తునివలె వెంబడించి, దీనుడై విలపించుచు "ఓ భార్యా, ఓ క్రూరా, ఆగుము" అని పలికెను.
+hi: जब वह उसे छोड़कर जा रही थी, तब वह राजा नग्न और उन्मत्त के समान विलाप करते हुए पीछे दौड़ा और व्याकुल होकर बोला: "हे पत्नी, हे निष्ठुर, ठहर जा।"
 
 --- verse 6 ---
 deva:
@@ -66,6 +81,9 @@ deva:
 iast:
 kāmānatṛpto'nujuṣan kṣullakān varṣayāminīḥ|
 na veda yāntīrnāyāntīrurvaśyākṛṣṭacetanaḥ||
+en: His desires were never satisfied. He enjoyed mean pleasures. His mind was drawn away by Urvaśī, and he did not notice the years and the nights that went and came.
+tel: అతని కామములు ఎన్నడును తృప్తి పొందలేదు. అతడు తుచ్ఛమైన భోగములను అనుభవించెను. ఊర్వశిచే మనస్సు లాగబడినవాడై, గడచిపోవు సంవత్సరములను, రాత్రులను అతడు గుర్తించలేదు.
+hi: उसकी कामनाएँ कभी तृप्त नहीं हुईं। वह तुच्छ भोगों को भोगता रहा। उर्वशी ने उसका मन खींच लिया था, इसलिए बीतते और आते वर्षों और रातों को वह जान ही न सका।
 
 --- verse 7 ---
 deva:
@@ -76,6 +94,9 @@ iast:
 aila uvāca
 aho me mohavistāraḥ kāmakaśmalacetasaḥ|
 devyā gṛhītakaṇṭhasya nāyuḥkhaṇḍā ime smṛtāḥ||
+en: Aila said: Alas, how great is the delusion of me, whose mind is soiled by desire! The goddess held my neck, and these portions of my life were not even counted by me.
+tel: ఐలుడు పలికెను: అయ్యో, కామముచే మలినమైన మనస్సు గల నా మోహము ఎంత విస్తారమైనది! దేవి నా కంఠమును పట్టుకొని యుండగా, నా ఆయువు యొక్క ఈ భాగములు నాచే లెక్కింపబడలేదు.
+hi: ऐल ने कहा: हाय, काम से मलिन मनवाले मेरे मोह का कितना विस्तार है! देवी ने मेरा गला पकड़े रखा और मेरी आयु के ये भाग मेरे द्वारा गिने ही न गये।
 
 --- verse 8 ---
 deva:
@@ -84,6 +105,9 @@ deva:
 iast:
 nāhaṁ vedābhinirmuktaḥ sūryo vābhyudito'muyā|
 muṣito varṣapūgānāṁ batāhāni gatānyuta||
+en: I did not know when the sun had set and when it had risen. Robbed by her, the days of many years have, alas, passed away.
+tel: సూర్యుడు ఎప్పుడు అస్తమించెనో, ఎప్పుడు ఉదయించెనో నాకు తెలియలేదు. ఆమెచే దోచుకొనబడి, అయ్యో, ఎన్నో సంవత్సరముల దినములు గడచిపోయినవి.
+hi: सूर्य कब डूबा और कब उगा, यह मैंने जाना ही नहीं। उसके द्वारा ठगा जाकर, हाय, कितने ही वर्षों के दिन बीत गये।
 
 --- verse 9 ---
 deva:
@@ -92,6 +116,9 @@ deva:
 iast:
 aho me ātmasammoho yenātmā yoṣitāṁ kṛtaḥ|
 krīḍāmṛgaścakravartī naradevaśikhāmaṇiḥ||
+en: Alas, this was my own delusion about myself, by which I was made a plaything of women, though I was an emperor and the crest-jewel among men and gods.
+tel: అయ్యో, ఇది నాకు నా గురించియే కలిగిన సమ్మోహము. దానిచే నేను చక్రవర్తినై, నరదేవులలో శిఖామణినై యుండియు స్త్రీలకు క్రీడామృగముగా చేయబడితిని.
+hi: हाय, यह मेरा अपने ही विषय में मोह था, जिससे मैं सम्राट और नरदेवों का शिखामणि होकर भी स्त्रियों का क्रीड़ामृग बना दिया गया।
 
 --- verse 10 ---
 deva:
@@ -100,6 +127,9 @@ deva:
 iast:
 saparicchadamātmānaṁ hitvā tṛṇamiveśvaram|
 yāntīṁ striyaṁ cānvagamaṁ nagna unmattavad rudan||
+en: I cast aside like a straw my own self, a ruler with all his attendants, and followed the woman who was going away, naked, weeping, like a madman.
+tel: పరివారముతో కూడిన ఈశ్వరుడైన నన్ను నేనే గడ్డిపోచవలె విడిచి, వెడలిపోవుచున్న ఆ స్త్రీని నగ్నుడై, ఏడ్చుచు, ఉన్మత్తునివలె అనుసరించితిని.
+hi: परिवार सहित स्वामी अपने आप को मैंने तिनके के समान छोड़ दिया और जाती हुई उस स्त्री के पीछे नग्न, रोता हुआ, उन्मत्त के समान चल पड़ा।
 
 --- verse 11 ---
 deva:
@@ -108,6 +138,9 @@ deva:
 iast:
 kutastasyānubhāvaḥ syāt teja īśatvameva vā|
 yo'nvagacchaṁ striyaṁ yāntīṁ kharavat pādatāḍitaḥ||
+en: Where is his greatness, his splendour, or his lordship, who ran after a woman going away and was struck by her foot like a donkey?
+tel: వెడలిపోవుచున్న స్త్రీని వెంబడించి, గాడిదవలె ఆమె పాదముచే తాడింపబడిన వానికి మహిమ ఎక్కడిది, తేజము ఎక్కడిది, ఈశ్వరత్వము ఎక్కడిది?
+hi: जो जाती हुई स्त्री के पीछे दौड़ा और गधे के समान उसके पैर से मारा गया, उसका प्रभाव, तेज या ईश्वरपन कहाँ रहा?
 
 --- verse 12 ---
 deva:
@@ -116,6 +149,9 @@ deva:
 iast:
 kiṁ vidyayā kiṁ tapasā kiṁ tyāgena śrutena vā|
 kiṁ viviktena maunena strībhiryasya mano hṛtam||
+en: What use is learning, what use is tapas, what use is renunciation or sacred study, what use is solitude and silence, to one whose mind has been carried away by women?
+tel: స్త్రీలచే మనస్సు హరింపబడినవానికి విద్యచే ఏమి ప్రయోజనము, తపస్సుచే ఏమి, త్యాగముచే లేదా శాస్త్రశ్రవణముచే ఏమి, ఏకాంతముచే, మౌనముచే ఏమి ప్రయోజనము?
+hi: जिसका मन स्त्रियों ने हर लिया, उसे विद्या से क्या, तप से क्या, त्याग या शास्त्र-श्रवण से क्या, और एकान्त तथा मौन से क्या लाभ?
 
 --- verse 13 ---
 deva:
@@ -124,6 +160,9 @@ deva:
 iast:
 svārthasyākovidaṁ dhiṅ māṁ mūrkhaṁ paṇḍitamāninam|
 yo'hamīśvaratāṁ prāpya strībhirgokharavajjitaḥ||
+en: Shame on me, who do not know my own good, a fool who thinks himself learned. Having attained lordship, I was conquered by women like an ox or a donkey.
+tel: తన హితమును ఎరుగని నాకు ధిక్కారము. నేను మూర్ఖుడనై, పండితుడనని అనుకొంటిని. ఈశ్వరత్వమును పొందియు ఎద్దువలె, గాడిదవలె స్త్రీలచే జయింపబడితిని.
+hi: अपने हित को न जाननेवाले मुझे धिक्कार है। मैं मूर्ख होकर भी अपने को पण्डित मानता रहा। ईश्वरपन पाकर भी बैल और गधे के समान स्त्रियों से जीत लिया गया।
 
 --- verse 14 ---
 deva:
@@ -132,6 +171,9 @@ deva:
 iast:
 sevato varṣapūgān me urvaśyā adharāsavam|
 na tṛpyatyātmabhūḥ kāmo vahnirāhutibhiryathā||
+en: For many years I enjoyed the nectar of Urvaśī's lips, yet desire, which is born of itself, was not satisfied, as fire is not satisfied by oblations.
+tel: ఎన్నో సంవత్సరములు ఊర్వశి యొక్క అధరామృతమును సేవించినను, తనంతట తానే పుట్టిన కామము తృప్తి పొందలేదు. హోమద్రవ్యములచే అగ్ని తృప్తి పొందనట్లే.
+hi: कई वर्षों तक उर्वशी के अधर का अमृत भोगने पर भी अपने आप उत्पन्न होनेवाला काम तृप्त न हुआ, जैसे आहुतियों से अग्नि तृप्त नहीं होती।
 
 --- verse 15 ---
 deva:
@@ -140,6 +182,9 @@ deva:
 iast:
 puṁścalyāpahṛtaṁ cittaṁ ko nvanyo mocituṁ prabhuḥ|
 ātmārāmeśvaramṛte bhagavantamadhokṣajam||
+en: Who else is able to free a mind that an unchaste woman has carried away, except the blessed Lord Adhokṣaja, the lord of those who delight in the Self?
+tel: పుంశ్చలిచే హరింపబడిన మనస్సును విడిపింపగల సమర్థుడు, ఆత్మారాములకు ఈశ్వరుడైన భగవంతుడు అధోక్షజుడు తప్ప మరి ఎవరు?
+hi: जिसका मन व्यभिचारिणी स्त्री ने हर लिया, उसे छुड़ाने में आत्माराम पुरुषों के स्वामी भगवान अधोक्षज के सिवा और कौन समर्थ है?
 
 --- verse 16 ---
 deva:
@@ -148,6 +193,9 @@ deva:
 iast:
 bodhitasyāpi devyā me sūktavākyena durmateḥ|
 manogato mahāmoho nāpayātyajitātmanaḥ||
+en: The goddess instructed me, dull of mind as I was, with well-spoken words. Even so the great delusion in my mind did not go away, for I had not conquered myself.
+tel: దుర్బుద్ధి గల నాకు దేవి సూక్తవాక్యములచే బోధించినను, ఆత్మను జయించనివాడైన నా మనస్సులోని మహామోహము తొలగిపోలేదు.
+hi: दुर्बुद्धि मुझको देवी ने सुन्दर वचनों से समझाया, फिर भी मन में बैठा महामोह दूर न हुआ, क्योंकि मैंने अपने को वश में नहीं किया था।
 
 --- verse 17 ---
 deva:
@@ -156,6 +204,9 @@ deva:
 iast:
 kimetayā no'pakṛtaṁ rajjvā vā sarpacetasaḥ|
 rajjusvarūpāviduṣo yo'haṁ yadajitendriyaḥ||
+en: What wrong has she done me? What wrong does a rope do to one who takes it for a snake? The fault is mine, who did not know the rope as it is and whose senses were not conquered.
+tel: ఆమె నాకు ఏమి అపకారము చేసినది? తాడును పాముగా భావించువానికి తాడు ఏమి అపకారము చేసినది? తాడు స్వరూపమును ఎరుగక, ఇంద్రియములను జయించని నాదే దోషము.
+hi: उसने मेरा क्या अपराध किया? रस्सी को साँप समझनेवाले का रस्सी क्या बिगाड़ती है? दोष मेरा ही है, जो रस्सी का असली रूप न जाना और जिसकी इन्द्रियाँ वश में न थीं।
 
 --- verse 18 ---
 deva:
@@ -164,6 +215,9 @@ deva:
 iast:
 kvāyaṁ malīmasaḥ kāyo daurgandhyādyātmako'śuciḥ|
 kva guṇāḥ saumanasyādyā hyadhyāso'vidyayā kṛtaḥ||
+en: Where is this filthy body, whose very nature is foul smell and the like, and which is impure? And where are qualities like sweet fragrance? The one is laid upon the other by ignorance.
+tel: దుర్గంధము మొదలైనవి స్వభావముగా గల, అపవిత్రమైన ఈ మలినమైన శరీరము ఎక్కడ? సౌమనస్యము మొదలైన గుణములు ఎక్కడ? ఒకదానిని మరొకదానియందు ఆరోపించుట అవిద్యచే చేయబడినది.
+hi: दुर्गन्ध आदि जिसका स्वभाव है, वह मलिन और अपवित्र शरीर कहाँ, और सुगन्ध आदि गुण कहाँ? एक पर दूसरे का यह आरोप अविद्या से किया गया है।
 
 --- verse 19 ---
 deva:
@@ -172,6 +226,9 @@ deva:
 iast:
 pitroḥ kiṁ svaṁ nu bhāryāyāḥ svāmino'gneḥ śvagṛdhrayoḥ|
 kimātmanaḥ kiṁ suhṛdāmiti yo nāvasīyate||
+en: Whose own is this body? The parents', the wife's, the master's, the fire's, the dogs' and the vultures', one's own, or one's friends'? This is never settled.
+tel: ఈ శరీరము ఎవరిది? తల్లిదండ్రులదా, భార్యదా, స్వామిదా, అగ్నిదా, కుక్కలదా, గద్దలదా, తనదా, స్నేహితులదా? ఇది ఎన్నడును నిర్ణయము కాదు.
+hi: यह शरीर किसका है? माता-पिता का, पत्नी का, स्वामी का, अग्नि का, कुत्तों और गीधों का, अपना, या मित्रों का? यह कभी निश्चित नहीं होता।
 
 --- verse 20 ---
 deva:
@@ -180,6 +237,9 @@ deva:
 iast:
 tasmin kalevare'medhye tucchaniṣṭhe viṣajjate|
 aho subhadraṁ sunasaṁ susmitaṁ ca mukhaṁ striyaḥ||
+en: Yet a man clings to that body, which is unclean and comes to a worthless end, saying: "Ah, how lovely, how fine the nose, how sweet the smile of this woman's face."
+tel: అయినను అపవిత్రమై, తుచ్ఛముగా అంతమగు ఆ శరీరమునందు మనుష్యుడు ఆసక్తి చెందును. "ఆహా, ఈ స్త్రీ ముఖము ఎంత సుందరము, ముక్కు ఎంత బాగు, చిరునవ్వు ఎంత మధురము" అని పలుకును.
+hi: फिर भी मनुष्य उस अपवित्र और तुच्छ अन्तवाले शरीर में आसक्त हो जाता है और कहता है: "अहा, इस स्त्री का मुख कितना सुन्दर, नाक कितनी सुडौल और मुसकान कितनी मीठी है।"
 
 --- verse 21 ---
 deva:
@@ -188,6 +248,9 @@ deva:
 iast:
 tvaṅmāṁsarudhirasnāyumedomajjāsthisaṁhatau|
 viṇmūtrapūye ramatāṁ kṛmīṇāṁ kiyadantaram||
+en: What difference is there between worms and one who delights in this heap of skin, flesh, blood, sinew, fat, marrow and bone, in dung, urine and pus?
+tel: చర్మము, మాంసము, రక్తము, నరములు, మేదస్సు, మజ్జ, ఎముకల ఈ కూటమియందు, విష్ఠ, మూత్రము, చీములయందు రమించువానికి, క్రిములకు ఏమి భేదము?
+hi: त्वचा, मांस, रुधिर, स्नायु, मेद, मज्जा और हड्डी के इस ढेर में तथा विष्ठा, मूत्र और पीब में रमनेवाले और कीड़ों में क्या अन्तर है?
 
 --- verse 22 ---
 deva:
@@ -196,6 +259,9 @@ deva:
 iast:
 athāpi nopasajjeta strīṣu straiṇeṣu cārthavit|
 viṣayendriyasaṁyogānmanaḥ kṣubhyati nānyathā||
+en: Even so, one who knows what is good should not keep company with women, or with men devoted to women. The mind is disturbed by the contact of the senses with their objects, and in no other way.
+tel: అయినను హితమును ఎరిగినవాడు స్త్రీలతోను, స్త్రీలోలురతోను సంగము చేయకూడదు. విషయములతో ఇంద్రియములకు కలుగు సంయోగముచేతనే మనస్సు కలత చెందును, వేరు విధముగా కాదు.
+hi: फिर भी हित जाननेवाला पुरुष स्त्रियों और स्त्री-लम्पट पुरुषों का संग न करे। विषयों के साथ इन्द्रियों के संयोग से ही मन चंचल होता है, अन्य किसी प्रकार से नहीं।
 
 --- verse 23 ---
 deva:
@@ -204,6 +270,9 @@ deva:
 iast:
 adṛṣṭādaśrutād bhāvānna bhāva upajāyate|
 asamprayuṁjataḥ prāṇān śāmyati stimitaṁ manaḥ||
+en: From an object that is not seen and not heard of, no feeling for it arises. For one who does not join his senses to their objects, the mind grows still and comes to rest.
+tel: చూడబడని, వినబడని వస్తువునందు భావము పుట్టదు. ఇంద్రియములను విషయములతో కలుపనివాని మనస్సు నిశ్చలమై శాంతిని పొందును.
+hi: जो वस्तु देखी और सुनी न गयी हो, उसमें भाव उत्पन्न नहीं होता। जो अपनी इन्द्रियों को विषयों से नहीं जोड़ता, उसका मन स्थिर होकर शान्त हो जाता है।
 
 --- verse 24 ---
 deva:
@@ -212,6 +281,9 @@ deva:
 iast:
 tasmāt saṁgo na kartavyaḥ strīṣu straiṇeṣu cendriyaiḥ|
 viduṣāṁ cāpyaviśrabdhaḥ ṣaḍvargaḥ kimu mādṛśām||
+en: Therefore one should not have contact through the senses with women or with men devoted to women. Even in the learned the group of six, the five senses and the mind, is not to be trusted. How much less in men like me.
+tel: కావున ఇంద్రియములచే స్త్రీలతోను, స్త్రీలోలురతోను సంగము చేయకూడదు. విద్వాంసులయందును షడ్వర్గము, అనగా ఐదు ఇంద్రియములు మరియు మనస్సు, నమ్మదగినది కాదు. నావంటివారియందు ఇంక ఎంత?
+hi: इसलिए इन्द्रियों के द्वारा स्त्रियों और स्त्री-लम्पट पुरुषों का संग न करे। विद्वानों में भी षड्वर्ग, अर्थात पाँच इन्द्रियाँ और मन, विश्वास के योग्य नहीं है। मुझ जैसों में तो कहना ही क्या।
 
 --- verse 25 ---
 deva:
@@ -226,6 +298,9 @@ evaṁ pragāyan nṛpadevadevaḥ
 sa urvaśīlokamatho vihāya|
 ātmānamātmanyavagamya māṁ vai
 upāramajjñānavidhūtamohaḥ||
+en: The blessed Lord said: Singing in this way, that lord of men and gods gave up the world of Urvaśī. He knew the Self within his own self, he knew me, and his delusion was shaken off by knowledge. So he came to rest.
+tel: శ్రీభగవానుడు పలికెను: ఈ విధముగా పాడుచు ఆ నరదేవదేవుడు ఊర్వశీలోకమును విడిచెను. తన ఆత్మయందే ఆత్మను ఎరిగి, నన్ను ఎరిగి, జ్ఞానముచే మోహము తొలగిన వాడై అతడు శాంతిని పొందెను.
+hi: भगवान ने कहा: इस प्रकार गाते हुए उस नरदेवदेव ने उर्वशी के लोक को छोड़ दिया। अपने ही आत्मा में आत्मा को जानकर और मुझे जानकर, ज्ञान से मोह दूर हो जाने पर वह शान्त हो गया।
 
 --- verse 26 ---
 deva:
@@ -234,6 +309,9 @@ deva:
 iast:
 tato duḥsaṁgamutsṛjya satsu sajjeta buddhimān|
 santa etasya cchindanti manovyāsaṁgamuktibhiḥ||
+en: Therefore a wise man should give up bad company and hold to the company of the good. The good cut away the attachment of his mind by their words.
+tel: కావున బుద్ధిమంతుడు దుస్సంగమును విడిచి సజ్జనులతో సంగము చేయవలెను. సత్పురుషులు తమ ఉక్తులచే వాని మనస్సు యొక్క ఆసక్తిని ఛేదించెదరు.
+hi: इसलिए बुद्धिमान पुरुष बुरे संग को छोड़कर सत्पुरुषों का संग करे। सन्त अपने वचनों से उसके मन की आसक्ति को काट देते हैं।
 
 --- verse 27 ---
 deva:
@@ -242,6 +320,9 @@ deva:
 iast:
 santo'napekṣā maccittāḥ praśāntāḥ samadarśinaḥ|
 nirmamā nirahaṁkārā nirdvandvā niṣparigrahāḥ||
+en: The good have no expectation. Their minds are fixed on me. They are peaceful. They see all alike. They have no sense of mine, no sense of I, no pairs of opposites, and they take nothing for themselves.
+tel: సత్పురుషులకు ఏ అపేక్షయు లేదు. వారి మనస్సు నాయందే నిలిచియుండును. వారు ప్రశాంతులు. వారు అందరిని సమముగా చూచెదరు. వారికి మమకారము లేదు, అహంకారము లేదు, ద్వంద్వములు లేవు, వారు ఏదియు గ్రహింపరు.
+hi: सन्तों को कोई अपेक्षा नहीं है। उनका मन मुझमें लगा रहता है। वे शान्त हैं और सबको समान दृष्टि से देखते हैं। उनमें ममता नहीं, अहंकार नहीं, द्वन्द्व नहीं, और वे कुछ ग्रहण नहीं करते।
 
 --- verse 28 ---
 deva:
@@ -250,6 +331,9 @@ deva:
 iast:
 teṣu nityaṁ mahābhāga mahābhāgeṣu matkathāḥ|
 sambhavanti hitā nṝṇāṁ juṣatāṁ prapunantyagham||
+en: O greatly blessed one, among those greatly blessed ones there are always talks about me. These talks do good to men, and they cleanse away the sin of those who attend to them.
+tel: ఓ మహాభాగా, ఆ మహాభాగులయందు ఎల్లప్పుడును నా కథలు జరుగుచుండును. ఆ కథలు మనుష్యులకు హితమును చేయును, మరియు వాటిని సేవించువారి పాపమును కడుగివేయును.
+hi: हे महाभाग, उन महाभाग सन्तों में सदा मेरी कथाएँ होती रहती हैं। वे कथाएँ मनुष्यों का हित करती हैं और उनका सेवन करनेवालों के पाप को धो देती हैं।
 
 --- verse 29 ---
 deva:
@@ -258,6 +342,9 @@ deva:
 iast:
 tā ye śṛṇvanti gāyanti hyanumodanti cādṛtāḥ|
 matparāḥ śraddadhānāśca bhaktiṁ vindanti te mayi||
+en: Those who hear them, who sing them, and who gladly approve them with reverence, who are devoted to me and have faith, obtain devotion to me.
+tel: ఆ కథలను ఆదరముతో విను వారు, పాడు వారు, సంతోషముతో అనుమోదించు వారు, నాయందే నిష్ఠ గలవారై శ్రద్ధ గలవారు, నాయందు భక్తిని పొందెదరు.
+hi: जो आदर के साथ उन कथाओं को सुनते हैं, गाते हैं और प्रसन्न होकर उनका अनुमोदन करते हैं, जो मेरे परायण और श्रद्धावान हैं, वे मुझमें भक्ति पा लेते हैं।
 
 --- verse 30 ---
 deva:
@@ -266,6 +353,9 @@ deva:
 iast:
 bhaktiṁ labdhavataḥ sādhoḥ kimanyadavaśiṣyate|
 mayyanantaguṇe brahmaṇyānandānubhavātmani||
+en: For a good man who has obtained devotion to me, what else remains? I am of endless qualities, I am Brahman, and my nature is the experience of bliss.
+tel: నాయందు భక్తిని పొందిన సాధువునకు ఇంక మిగిలినది ఏమి? నేను అనంతగుణుడను, బ్రహ్మస్వరూపుడను, ఆనందానుభవము నా స్వరూపము.
+hi: मुझमें भक्ति पा लेनेवाले साधु के लिए और क्या शेष रह जाता है? मैं अनन्त गुणोंवाला हूँ, ब्रह्म हूँ, और आनन्द का अनुभव ही मेरा स्वरूप है।
 
 --- verse 31 ---
 deva:
@@ -274,6 +364,9 @@ deva:
 iast:
 yathopaśrayamāṇasya bhagavantaṁ vibhāvasum|
 śītaṁ bhayaṁ tamo'pyeti sādhūn saṁsevatastathā||
+en: Cold, fear and darkness go away from one who takes shelter of the blessed fire. In the same way they go away from one who serves the good.
+tel: భగవంతుడైన అగ్నిని ఆశ్రయించువానికి చలి, భయము, చీకటి తొలగిపోవునట్లే, సత్పురుషులను సేవించువానికిని అవి తొలగిపోవును.
+hi: जो भगवान अग्नि की शरण लेता है, उसकी ठंड, भय और अन्धकार दूर हो जाते हैं। उसी प्रकार सन्तों की सेवा करनेवाले के भी दूर हो जाते हैं।
 
 --- verse 32 ---
 deva:
@@ -282,6 +375,9 @@ deva:
 iast:
 nimajjyonmajjatāṁ ghore bhavābdhau paramāyanam|
 santo brahmavidaḥ śāntā naurdṛḍhevāpsu majjatām||
+en: For those who sink and rise again in the terrible ocean of worldly life, the highest refuge is the good, the knowers of Brahman, the peaceful. They are like a strong boat for those sinking in water.
+tel: ఘోరమైన సంసారసముద్రమునందు మునిగి తేలుచున్న వారికి పరమగతి సత్పురుషులే, బ్రహ్మజ్ఞులే, శాంతులే. నీటిలో మునుగుచున్న వారికి దృఢమైన నావవలె వారు ఉన్నారు.
+hi: घोर संसार-समुद्र में डूबते और उभरते रहनेवालों का परम आश्रय सन्त ही हैं, जो ब्रह्म के ज्ञाता और शान्त हैं। डूबते हुए लोगों के लिए वे दृढ़ नाव के समान हैं।
 
 --- verse 33 ---
 deva:
@@ -290,6 +386,9 @@ deva:
 iast:
 annaṁ hi prāṇināṁ prāṇa ārtānāṁ śaraṇaṁ tvaham|
 dharmo vittaṁ nṛṇāṁ pretya santo'rvāg bibhyato'raṇam||
+en: Food is the life of living beings. I am the refuge of the afflicted. Dharma is the wealth of men after death. And the good are the shelter of those who are afraid here in this world.
+tel: అన్నము ప్రాణులకు ప్రాణము. ఆర్తులకు శరణము నేనే. మరణము తరువాత మనుష్యులకు ధనము ధర్మమే. ఇచ్చట ఈ లోకమునందు భయపడువారికి ఆశ్రయము సత్పురుషులే.
+hi: अन्न प्राणियों का प्राण है। दुखियों की शरण मैं हूँ। मरने के बाद मनुष्यों का धन धर्म है। और इस लोक में भय पानेवालों का आश्रय सन्त हैं।
 
 --- verse 34 ---
 deva:
@@ -298,6 +397,9 @@ deva:
 iast:
 santo diśanti cakṣūṁṣi bahirarkaḥ samutthitaḥ|
 devatā bāndhavāḥ santaḥ santa ātmāhameva ca||
+en: The good give eyes, as the risen sun gives light outside. The good are the gods, the good are the kinsmen, the good are the Self, and the good are myself.
+tel: ఉదయించిన సూర్యుడు బయట వెలుగును ఇచ్చునట్లు, సత్పురుషులు కన్నులను ఇచ్చెదరు. సత్పురుషులే దేవతలు, సత్పురుషులే బంధువులు, సత్పురుషులే ఆత్మ, సత్పురుషులే నేను.
+hi: उदय हुआ सूर्य बाहर प्रकाश देता है, उसी प्रकार सन्त आँखें देते हैं। सन्त ही देवता हैं, सन्त ही बान्धव हैं, सन्त ही आत्मा हैं और सन्त ही मैं हूँ।
 
 --- verse 35 ---
 deva:
@@ -306,9 +408,15 @@ deva:
 iast:
 vaitasenastato'pyevamurvaśyā lokaniḥspṛhaḥ|
 muktasaṁgo mahīmetāmātmārāmaścacāra ha||
+en: After that Vaitasena, in this way free of longing for Urvaśī's world, free of attachment, wandered over this earth, delighting in the Self.
+tel: ఆ తరువాత వైతసేనుడు ఈ విధముగా ఊర్వశీలోకమునందు కోరిక లేనివాడై, సంగము విడిచినవాడై, ఆత్మారాముడై ఈ భూమిపై సంచరించెను.
+hi: इसके बाद वैतसेन इस प्रकार उर्वशी के लोक की इच्छा से रहित और संग से मुक्त होकर, आत्मा में ही रमते हुए इस पृथ्वी पर विचरते रहे।
 
 --- verse none ---
 deva:
 इति श्रीमद्भागवते महापुराणे पारमहंस्यां संहितायामेकादशस्कन्धे षड्विंशोऽध्यायः॥ २६॥
 iast:
 iti śrīmadbhāgavate mahāpurāṇe pāramahaṁsyāṁ saṁhitāyāmekādaśaskandhe ṣaḍviṁśo'dhyāyaḥ|| 26||
+en: Thus ends the twenty-sixth adhyāya in the eleventh skandha of the Śrīmad Bhāgavata Mahāpurāṇa, the saṁhitā of the paramahaṁsas.
+tel: ఇట్లు పరమహంసల సంహిత యైన శ్రీమద్భాగవత మహాపురాణమునందు ఏకాదశ స్కంధమున ఇరువది ఆరవ అధ్యాయము ముగిసినది.
+hi: इस प्रकार परमहंसों की संहिता श्रीमद्भागवत महापुराण के एकादश स्कन्ध में छब्बीसवाँ अध्याय समाप्त हुआ।

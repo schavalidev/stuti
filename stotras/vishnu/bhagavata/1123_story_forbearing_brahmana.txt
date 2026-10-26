@@ -9,7 +9,7 @@ Type: Purāṇa (an adhyāya of the Śrīmad Bhāgavata, Skandha 11)
 
 Source / recension: Base text and authority: the Gītā Press, Gorakhpur Śrīmadbhāgavata Mahāpurāṇa with Hindi translation, Part 2 (Gītā Press code 27), archive.org item `shrimadbhagwat-mahapuran-bhag-2`, printed pages 855–863; the PDF page numbers are the printed ones. The PDF carries the typesetter's own text layer in the Chanakya font encoding, and the text was decoded from it by machine with `bin/bhagavata/chanakya.py`, not read off OCR or typed. The decoder was checked against GRETIL over all twelve skandhas before any file was written, and the differences that remain were sampled and found to be readings of the two editions. Second witness: GRETIL's `sa_bhAgavatapurANa.xml` (IAST, contributed by Ulrich Stiehl), a separate editorial lineage, compared verse by verse by machine. The TTD edition with the commentaries of Śrīdhara, Vīrarāghava and Vijayadhvaja (archive.org `Bhagavata_Purana_With_Multiple_Commentaries_TTD_Critical_Edition`) is the third witness where one is needed; it was not read for this file. The IAST was generated mechanically from the Devanāgarī with `bin/dev2iast.py`.
 
-Recension note: Text-only file, written 1 Oct 2026 at the user's instruction to lay down the whole Bhāgavata first: the English, Telugu and Hindi meanings are still to be added, and the witnesses' differences listed here have been recorded by machine and not yet adjudicated. The print is followed throughout. The print numbers 62 verses; GRETIL numbers 61, so from some point the two editions number the verses differently. Never match them by number. Of the 61 verses GRETIL has under the same number, 24 agree with the print letter for letter once spacing and the spelling of nasals are set aside; the rest differ: 2, 3, 8, 11, 15, 19, 22, 23, 25, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61. GRETIL has nothing under the numbers 62. Spacing is the print's, as its text layer gives it; in a few places justification has left a space inside a word, and these are still to be closed when the verse is read. The speaker lines (श्रीशुक उवाच and the others) are printed in italic above the verse they introduce, and are given as its first line.
+Recension note: Meanings written 26 Oct 2026 (session S78). The differences between the witnesses listed below were read as the verses were glossed; except where this note says otherwise, each is a spelling, a sandhi or a word order of the two editions, none of them changes the sense, and the print's reading therefore stands unbracketed. The print is followed throughout. The print numbers 62 verses; GRETIL numbers 61, so from some point the two editions number the verses differently. Never match them by number. Of the 61 verses GRETIL has under the same number, 24 agree with the print letter for letter once spacing and the spelling of nasals are set aside; the rest differ: 2, 3, 8, 11, 15, 19, 22, 23, 25, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61. GRETIL has nothing under the numbers 62. Spacing is the print's, as its text layer gives it. The speaker lines (श्रीशुक उवाच and the others) are printed in italic above the verse they introduce, and are given as its first line. No broken word was found. Both detectors were run: bin/bhagavata/spacing.py for a space left inside a word, and a GRETIL alignment run for a space lost at a line break. The two places GRETIL breaks and the print does not, svadharmastha at verse 42 and karmamūla at verse 55, are compounds GRETIL spaces loosely, and the print is followed. Every verse the detector could not align was read against GRETIL by hand; all the differences are readings of the two editions, and the print stands. From verse 34 the two editions divide the verses differently, so the numbers do not correspond after that point. Where the construction allows more than one reading the meanings follow Sridhara: at verse 2 the sense is that no one here is good but the man who can steady his own shaken mind; at verse 51 bhaumayoh is the two bodies, both made of earth; at verse 54 what the planets afflict is the body they seize, not the self; at verse 55 karma belongs where the conscious and the unconscious are joined, so it has no root in the body alone or in the purusa alone; at verse 57 the stain of the pairs belongs to the sense of I, which takes the form of samsara.
 
 Verse count: 62, plus the closing colophon printed unnumbered.
 
@@ -28,6 +28,9 @@ sa evamāśaṁsita uddhavena
 bhāgavatamukhyena dāśārhamukhyaḥ|
 sabhājayan bhṛtyavaco mukunda-
 stamābabhāṣe śravaṇīyavīryaḥ||
+en: Bādarāyaṇi said: Thus entreated by Uddhava, the foremost of the devotees, Mukunda, the foremost of the Dāśārhas, whose valour is worth hearing, honoured the words of his servant and spoke to him.
+tel: బాదరాయణి పలికెను: భక్తులలో శ్రేష్ఠుడైన ఉద్ధవుడు ఈ విధముగా ప్రార్థించగా, దాశార్హులలో శ్రేష్ఠుడు, వినదగిన పరాక్రమము కలవాడు అయిన ముకుందుడు తన సేవకుని మాటను మన్నించి అతనితో పలికెను.
+hi: बादरायणि ने कहा: भक्तों में श्रेष्ठ उद्धव ने इस प्रकार प्रार्थना की। तब दाशार्हों में श्रेष्ठ और सुनने योग्य पराक्रम वाले मुकुन्द ने अपने सेवक के वचन का आदर किया और उससे कहा।
 
 --- verse 2 ---
 deva:
@@ -38,6 +41,9 @@ iast:
 śrībhagavānuvāca
 bārhaspatya sa vai nātra sādhurvai durjaneritaiḥ|
 duruktairbhinnamātmānaṁ yaḥ samādhātumīśvaraḥ||
+en: The blessed Lord said: O son of Bṛhaspati, in this world no one is good like that man who is able to settle his own mind again when it has been torn by the harsh words of wicked men.
+tel: శ్రీభగవానుడు పలికెను: బృహస్పతి పుత్రుడా, దుర్జనుల కఠినమైన మాటలతో చెదిరిన తన మనస్సును తిరిగి నిలుపుకొనగలిగిన వానివంటి సజ్జనుడు ఈ లోకములో మరొకడు లేడు.
+hi: श्रीभगवान् ने कहा: हे बृहस्पति के पुत्र, दुर्जनों के कठोर वचनों से छिन्न हुए अपने मन को जो फिर स्थिर कर सके, ऐसे पुरुष के समान साधु इस लोक में दूसरा नहीं है।
 
 --- verse 3 ---
 deva:
@@ -46,6 +52,9 @@ deva:
 iast:
 na tathā tapyate viddhaḥ pumān bāṇaiḥ sumarmagaiḥ|
 yathā tudanti marmasthā hyasatāṁ paruṣeṣavaḥ||
+en: A man pierced by arrows that go deep into the vital parts is not pained so much as he is pained by the harsh arrows of the wicked, which lodge in the vital parts.
+tel: మర్మస్థానములలోనికి లోతుగా దిగిన బాణములతో గాయపడిన మనుష్యుడు అంతగా బాధపడడు. మర్మస్థానములలో నిలిచిన దుర్జనుల కఠినమైన బాణములు అంతకంటె ఎక్కువగా బాధించును.
+hi: मर्मस्थानों में गहरे उतरे बाणों से बिंधा हुआ मनुष्य उतना पीड़ित नहीं होता, जितना मर्म में बैठे दुर्जनों के कठोर वचन-बाण पीड़ा देते हैं।
 
 --- verse 4 ---
 deva:
@@ -54,6 +63,9 @@ deva:
 iast:
 kathayanti mahatpuṇyamitihāsamihoddhava|
 tamahaṁ varṇayiṣyāmi nibodha susamāhitaḥ||
+en: In this matter, Uddhava, people tell an old story of great merit. I shall relate it to you. Listen with full attention.
+tel: ఉద్ధవా, ఈ విషయములో గొప్ప పుణ్యము కలిగిన ఒక పురాతన కథను చెప్పుకొందురు. దానిని నేను నీకు చెప్పెదను. బాగుగా ఏకాగ్రతతో వినుము.
+hi: उद्धव, इस विषय में लोग एक महान पुण्यमय पुराना इतिहास कहते हैं। उसे मैं तुम्हें सुनाऊँगा। पूरे ध्यान से सुनो।
 
 --- verse 5 ---
 deva:
@@ -62,6 +74,9 @@ deva:
 iast:
 kenacid bhikṣuṇā gītaṁ paribhūtena durjanaiḥ|
 smaratā dhṛtiyuktena vipākaṁ nijakarmaṇām||
+en: It was sung by a certain mendicant who was insulted by wicked men. He held his mind firm and remembered the ripening of his own past deeds.
+tel: దుర్జనులచేత అవమానింపబడిన ఒక భిక్షువు దానిని పాడెను. అతడు మనస్సును స్థిరముగా ఉంచుకొని తన పూర్వకర్మల ఫలమును స్మరించెను.
+hi: उसे दुर्जनों से अपमानित एक भिक्षु ने गाया था। उसने अपना मन दृढ़ रखा और अपने पूर्व कर्मों के फल का स्मरण किया।
 
 --- verse 6 ---
 deva:
@@ -70,6 +85,9 @@ deva:
 iast:
 avantiṣu dvijaḥ kaścidāsīdāḍhyatamaḥ śriyā|
 vārtāvṛttiḥ kadaryastu kāmī lubdho'tikopanaḥ||
+en: In the land of Avanti there lived a brāhmaṇa who was very rich in wealth. He lived by trade. He was miserly, lustful, greedy and very quick to anger.
+tel: అవంతి దేశములో ఒక బ్రాహ్మణుడు ఉండెను. అతడు సంపదలో మిక్కిలి ధనవంతుడు. వ్యాపారముతో జీవించువాడు. పిసినారి, కాముకుడు, లోభి, మిక్కిలి కోపస్వభావము కలవాడు.
+hi: अवन्ति देश में एक ब्राह्मण रहता था। वह धन से बहुत सम्पन्न था। वह व्यापार से जीवन चलाता था। वह कंजूस, कामी, लोभी और अत्यन्त क्रोधी था।
 
 --- verse 7 ---
 deva:
@@ -78,6 +96,9 @@ deva:
 iast:
 jñātayo'tithayastasya vāṅmātreṇāpi nārcitāḥ|
 śūnyāvasatha ātmāpi kāle kāmairanarcitaḥ||
+en: His kinsmen and his guests were not honoured by him even with a kind word. His house was empty of welcome, and even his own body was not served at the proper time with the things it wanted.
+tel: అతని జ్ఞాతులను, అతిథులను అతడు మాటతో కూడ గౌరవించలేదు. అతని ఇల్లు ఆదరణ లేనిదై ఉండెను. తన శరీరమునకు కూడ తగిన కాలములో కోరిన వస్తువులను అతడు ఇచ్చుకొనలేదు.
+hi: उसने अपने ज्ञातियों और अतिथियों का वचन से भी आदर नहीं किया। उसका घर आदर से शून्य था। अपने शरीर को भी उसने समय पर मनचाही वस्तुएँ नहीं दीं।
 
 --- verse 8 ---
 deva:
@@ -86,6 +107,9 @@ deva:
 iast:
 duḥśīlasya kadaryasya druhyante putrabāndhavāḥ|
 dārā duhitaro bhṛtyā viṣaṇṇā nācaran priyam||
+en: The sons and kinsmen of that ill-natured and miserly man turned against him. His wife, his daughters and his servants were unhappy and did nothing to please him.
+tel: ఆ దుష్టస్వభావము కల పిసినారికి పుత్రులు, బంధువులు విరోధులైరి. అతని భార్య, కుమార్తెలు, సేవకులు దుఃఖితులై అతనికి ఇష్టమైనది ఏదియు చేయలేదు.
+hi: उस दुःशील और कंजूस के पुत्र और बान्धव उससे द्रोह करने लगे। उसकी पत्नी, पुत्रियाँ और सेवक दुखी थे और उसका प्रिय कुछ भी नहीं करते थे।
 
 --- verse 9 ---
 deva:
@@ -94,6 +118,9 @@ deva:
 iast:
 tasyaivaṁ yakṣavittasya cyutasyobhayalokataḥ|
 dharmakāmavihīnasya cukrudhuḥ paṁcabhāginaḥ||
+en: His wealth was guarded like a Yakṣa's hoard. He had fallen away from both worlds. He was without dharma and without enjoyment. So the five who have a share in a man's wealth grew angry with him.
+tel: అతని ధనము యక్షుని నిధివలె కాపాడబడెను. అతడు ఇరు లోకములనుండి పతితుడైనాడు. ధర్మము లేదు, భోగము లేదు. అందుచేత ధనములో భాగము కలవారైన అయిదుగురు అతనిపై కోపించిరి.
+hi: उसका धन यक्ष के कोश के समान रखा गया था। वह दोनों लोकों से गिर गया था। उसमें धर्म भी न था और भोग भी न था। इसलिए धन में भाग रखने वाले पाँच उस पर क्रुद्ध हुए।
 
 --- verse 10 ---
 deva:
@@ -102,6 +129,9 @@ deva:
 iast:
 tadavadhyānavisrastapuṇyaskandhasya bhūrida|
 artho'pyagacchannidhanaṁ bahvāyāsapariśramaḥ||
+en: O generous one, by that disregard the store of his merit fell away. Even his wealth, gathered with much labour and toil, came to its end.
+tel: దానమీయు స్వభావము కలవాడా, ఆ అవమానము వలన అతని పుణ్యరాశి జారిపోయెను. ఎంతో శ్రమతో, కష్టముతో కూర్చిన ధనము కూడ నాశమునకు పోయెను.
+hi: हे भूरिद, उस अवज्ञा से उसका पुण्य-समूह गिर गया। बहुत आयास और परिश्रम से जोड़ा हुआ धन भी नष्ट हो गया।
 
 --- verse 11 ---
 deva:
@@ -110,6 +140,9 @@ deva:
 iast:
 jñātayo jagṛhuḥ kiṁcit kiṁcid dasyava uddhava|
 daivataḥ kālataḥ kiṁcid brahmabandhornṛpārthivāt||
+en: Uddhava, his kinsmen seized some of it, and robbers some. Some was lost by fate and some by time. And some of that unworthy brāhmaṇa's wealth was taken by men and by the king.
+tel: ఉద్ధవా, కొంతను జ్ఞాతులు తీసుకొనిరి, కొంతను దొంగలు తీసుకొనిరి. కొంత దైవము వలన, కొంత కాలము వలన పోయెను. ఆ బ్రహ్మబంధువు ధనములో కొంతను మనుష్యులు, రాజు తీసుకొనిరి.
+hi: उद्धव, कुछ ज्ञातियों ने ले लिया, कुछ चोरों ने। कुछ दैव से और कुछ काल से नष्ट हुआ। उस ब्रह्मबन्धु का कुछ धन मनुष्यों और राजा ने ले लिया।
 
 --- verse 12 ---
 deva:
@@ -118,6 +151,9 @@ deva:
 iast:
 sa evaṁ draviṇe naṣṭe dharmakāmavivarjitaḥ|
 upekṣitaśca svajanaiścintāmāpa duratyayām||
+en: Thus with his wealth gone, bereft of dharma and of enjoyment, and neglected by his own people, he fell into a grief he could not cross.
+tel: ఈ విధముగా ధనము నశించగా, ధర్మము లేక భోగము లేక, తన వారిచేత ఉపేక్షింపబడి, దాటరాని చింతను పొందెను.
+hi: इस प्रकार धन नष्ट हो जाने पर, धर्म और भोग से रहित तथा अपने जनों से उपेक्षित होकर वह ऐसी चिन्ता में पड़ा जिसे पार करना कठिन था।
 
 --- verse 13 ---
 deva:
@@ -126,6 +162,9 @@ deva:
 iast:
 tasyaivaṁ dhyāyato dīrghaṁ naṣṭarāyastapasvinaḥ|
 khidyato bāṣpakaṇṭhasya nirvedaḥ sumahānabhūt||
+en: As he brooded long in this way, his riches lost, miserable, grieving, his throat choked with tears, a very great detachment arose in him.
+tel: ఈ విధముగా చిరకాలము ఆలోచించుచు, ధనము పోయి దీనుడై, దుఃఖించుచు, కంఠము కన్నీటితో నిండగా, అతనికి మిక్కిలి గొప్ప నిర్వేదము కలిగెను.
+hi: इस प्रकार दीर्घ काल तक सोचते हुए, धन खो देने से दीन, खिन्न और अश्रुओं से रुँधे कण्ठ वाले उस पुरुष में बहुत बड़ा निर्वेद उत्पन्न हुआ।
 
 --- verse 14 ---
 deva:
@@ -134,6 +173,9 @@ deva:
 iast:
 sa cāhedamaho kaṣṭaṁ vṛthā''tmā me'nutāpitaḥ|
 na dharmāya na kāmāya yasyārthāyāsa īdṛśaḥ||
+en: And he said this: Alas, how painful. I have tormented my own self for nothing. The wealth for which I toiled in this way served neither dharma nor enjoyment.
+tel: అతడు ఇట్లు పలికెను: అయ్యో, ఎంత కష్టము. నేను వ్యర్థముగా నా ఆత్మను బాధించుకొన్నాను. ఏ ధనము కొరకు ఇట్టి శ్రమ చేసితినో, అది ధర్మమునకు పనికిరాలేదు, భోగమునకు పనికిరాలేదు.
+hi: उसने यह कहा: हाय, कितना कष्ट है। मैंने व्यर्थ ही अपने आत्मा को सन्ताप दिया। जिस धन के लिए मैंने ऐसा परिश्रम किया, वह न धर्म के काम आया और न भोग के।
 
 --- verse 15 ---
 deva:
@@ -142,6 +184,9 @@ deva:
 iast:
 prāyeṇārthāḥ kadaryāṇāṁ na sukhāya kadācana|
 iha cātmopatāpāya mṛtasya narakāya ca||
+en: The wealth of misers generally never brings happiness. In this world it torments its owner, and when he has departed it leads him to hell.
+tel: పిసినారుల ధనము సామాన్యముగా ఎప్పుడును సుఖమును ఇవ్వదు. ఈ లోకములో అది తనను తాపము చెందించును, ఈ లోకమును విడిచిన పిమ్మట నరకమునకు కొనిపోవును.
+hi: कंजूसों का धन प्रायः कभी सुख नहीं देता। इस लोक में वह स्वयं को सन्ताप देता है, और यहाँ से चले जाने पर नरक में ले जाता है।
 
 --- verse 16 ---
 deva:
@@ -150,6 +195,9 @@ deva:
 iast:
 yaśo yaśasvināṁ śuddhaṁ ślāghyā ye guṇināṁ guṇāḥ|
 lobhaḥ svalpo'pi tān hanti śvitro rūpamivepsitam||
+en: The pure fame of the famous, and the praiseworthy qualities of men of merit — greed, even a little of it, destroys them all, as white leprosy destroys a form that was loved.
+tel: కీర్తిమంతుల నిర్మలమైన కీర్తిని, గుణవంతుల ప్రశంసింపదగిన గుణములను, కొంచెమైన లోభము నశింపజేయును. తెల్లమచ్చ ఇష్టమైన రూపమును పాడుచేయునట్లే.
+hi: यशस्वियों का निर्मल यश और गुणवानों के प्रशंसनीय गुण, इन सबको थोड़ा भी लोभ नष्ट कर देता है, जैसे श्वित्र मनचाहे रूप को बिगाड़ देता है।
 
 --- verse 17 ---
 deva:
@@ -158,6 +206,9 @@ deva:
 iast:
 arthasya sādhane siddhe utkarṣe rakṣaṇe vyaye|
 nāśopabhoga āyāsastrāsaścintā bhramo nṛṇām||
+en: In the earning of wealth, in its gaining, in its increase, in its keeping and in its spending, in its loss and in its enjoyment, men have labour, fear, worry and confusion.
+tel: ధనమును సంపాదించుటలో, పొందుటలో, పెంచుటలో, కాపాడుటలో, ఖర్చుచేయుటలో, నష్టములో, అనుభవములో మనుష్యులకు శ్రమ, భయము, చింత, భ్రమ కలుగును.
+hi: धन के साधन में, प्राप्ति में, वृद्धि में, रक्षा में, व्यय में, नाश में और उपभोग में मनुष्यों को आयास, भय, चिन्ता और भ्रम होता है।
 
 --- verse 18 ---
 deva:
@@ -166,6 +217,9 @@ deva:
 iast:
 steyaṁ hiṁsānṛtaṁ dambhaḥ kāmaḥ krodhaḥ smayo madaḥ|
 bhedo vairamaviśvāsaḥ saṁspardhā vyasanāni ca||
+en: Theft, violence, untruth, pretence, lust, anger, pride, arrogance, division, enmity, distrust, rivalry, and the ruinous habits —
+tel: దొంగతనము, హింస, అసత్యము, దంభము, కామము, క్రోధము, గర్వము, మదము, భేదము, వైరము, అవిశ్వాసము, పోటీ, వ్యసనములు —
+hi: चोरी, हिंसा, असत्य, दम्भ, काम, क्रोध, गर्व, मद, भेद, वैर, अविश्वास, स्पर्धा और व्यसन —
 
 --- verse 19 ---
 deva:
@@ -174,6 +228,9 @@ deva:
 iast:
 ete paṁcadaśānarthā hyarthamūlā matā nṛṇām|
 tasmādanarthamarthākhyaṁ śreyo'rthī dūratastyajet||
+en: these fifteen evils are held to be rooted in wealth for men. Therefore one who seeks his own good should give up from afar this evil which bears the name of wealth.
+tel: ఈ పదిహేను అనర్థములు మనుష్యులకు ధనమూలమైనవిగా చెప్పబడినవి. అందుచేత శ్రేయమును కోరువాడు ధనమనే పేరు కల ఈ అనర్థమును దూరమునుండియే విడువవలెను.
+hi: ये पन्द्रह अनर्थ मनुष्यों के लिए धनमूलक माने गए हैं। इसलिए श्रेय चाहने वाला अर्थ नामक इस अनर्थ को दूर से ही त्याग दे।
 
 --- verse 20 ---
 deva:
@@ -182,6 +239,9 @@ deva:
 iast:
 bhidyante bhrātaro dārāḥ pitaraḥ suhṛdastathā|
 ekāsnigdhāḥ kākiṇinā sadyaḥ sarve'rayaḥ kṛtāḥ||
+en: Brothers, wives, parents and friends also become divided. Those who were joined in affection are all made enemies at once over a single kākiṇī.
+tel: సోదరులు, భార్యలు, తల్లిదండ్రులు, మిత్రులు కూడ విడిపోవుదురు. ప్రేమతో ఒకటిగా ఉండిన వారందరు ఒక కాకిణి కొరకు వెంటనే శత్రువులుగా మారిపోవుదురు.
+hi: भाई, पत्नियाँ, माता-पिता और मित्र भी बँट जाते हैं। स्नेह से एक हुए वे सब एक काकिणी के कारण तत्काल शत्रु बना दिए जाते हैं।
 
 --- verse 21 ---
 deva:
@@ -190,6 +250,9 @@ deva:
 iast:
 arthenālpīyasā hyete saṁrabdhā dīptamanyavaḥ|
 tyajantyāśu spṛdho ghnanti sahasotsṛjya sauhṛdam||
+en: Roused by even a very small sum of money, these men flare up in anger. They quickly abandon one another, they contend, they kill, and they suddenly throw away their friendship.
+tel: మిక్కిలి కొంచెమైన ధనము వలన ఈ జనులు రెచ్చిపోయి కోపముతో మండుదురు. వెంటనే ఒకరిని ఒకరు విడిచిపెట్టుదురు, పోరాడుదురు, చంపుదురు, స్నేహమును హఠాత్తుగా విడిచివేయుదురు.
+hi: बहुत थोड़े धन से ही ये लोग उत्तेजित होकर क्रोध से जलने लगते हैं। वे शीघ्र एक दूसरे को छोड़ देते हैं, लड़ते हैं, मार डालते हैं और सौहार्द को सहसा त्याग देते हैं।
 
 --- verse 22 ---
 deva:
@@ -198,6 +261,9 @@ deva:
 iast:
 labdhvā janmāmaraprārthyaṁ mānuṣyaṁ tad dvijāgryatām|
 tadanādṛtya ye svārthaṁ ghnanti yāntyaśubhāṁ gatim||
+en: Having gained human birth, which even the gods long for, and in it the state of a foremost brāhmaṇa, those who disregard it and destroy their own good go to an evil state.
+tel: దేవతలు కూడ కోరుకొను మానుష జన్మను, అందులో ద్విజశ్రేష్ఠత్వమును పొంది, దానిని అనాదరము చేసి తమ శ్రేయమును నశింపజేయువారు అశుభమైన గతిని పొందుదురు.
+hi: देवताओं से भी वांछित मनुष्य जन्म और उसमें द्विजश्रेष्ठता पाकर, जो उसका अनादर करके अपने स्वार्थ का नाश करते हैं, वे अशुभ गति को जाते हैं।
 
 --- verse 23 ---
 deva:
@@ -206,6 +272,9 @@ deva:
 iast:
 svargāpavargayordvāraṁ prāpya lokamimaṁ pumān|
 draviṇe ko'nuṣajjeta martyo'narthasya dhāmani||
+en: A man has reached this world, which is the door to heaven and to liberation. What mortal would cling to wealth, the abode of evil?
+tel: స్వర్గమునకు, మోక్షమునకు ద్వారమైన ఈ లోకమును పురుషుడు పొందియున్నాడు. అనర్థమునకు నివాసమైన ధనములో మరణశీలుడైన ఎవడు ఆసక్తుడు కాగలడు?
+hi: स्वर्ग और अपवर्ग के द्वार रूप इस लोक को पाकर कौन मर्त्य पुरुष अनर्थ के धाम इस धन में आसक्त होगा?
 
 --- verse 24 ---
 deva:
@@ -214,6 +283,9 @@ deva:
 iast:
 devarṣipitṛbhūtāni jñātīn bandhūṁśca bhāginaḥ|
 asaṁvibhajya cātmānaṁ yakṣavittaḥ patatyadhaḥ||
+en: He who does not share with the gods, the sages, the forefathers and the beings, nor with his kinsmen and relatives who have a share, nor with his own self, and keeps his wealth like a Yakṣa, falls down.
+tel: దేవతలకు, ఋషులకు, పితృదేవతలకు, భూతములకు, జ్ఞాతులకు, బంధువులకు — భాగము కలవారికి — పంచి ఇవ్వక, తన ఆత్మకు కూడ ఇవ్వక, యక్షునివలె ధనమును ఉంచుకొనువాడు క్రిందికి పడిపోవును.
+hi: देव, ऋषि, पितर और भूत, तथा भाग रखने वाले ज्ञाति और बन्धु, इन्हें तथा अपने आत्मा को भी बाँटकर न देने वाला, यक्ष के समान धन रखने वाला पुरुष नीचे गिरता है।
 
 --- verse 25 ---
 deva:
@@ -222,6 +294,9 @@ deva:
 iast:
 vyarthayārthehayā vittaṁ pramattasya vayo balam|
 kuśalā yena sidhyanti jaraṭhaḥ kiṁ nu sādhaye||
+en: A fruitless striving after wealth has consumed the wealth, the years and the strength of one who was heedless. By years and strength the wise accomplish their aim. Now that I am old, what can I accomplish?
+tel: వ్యర్థమైన ధనాపేక్ష, ఏమరుపాటులో ఉండిన నా ధనమును, వయస్సును, బలమును హరించివేసెను. ఏ వయస్సుతో, బలముతో నేర్పరులు తమ ప్రయోజనమును సాధించుకొందురో అవి పోయినవి. ముదిమి వచ్చిన ఇప్పుడు నేను ఏమి సాధించగలను?
+hi: व्यर्थ धन की चाह ने प्रमत्त मेरे धन, आयु और बल को खा लिया। जिन आयु और बल से कुशल पुरुष अपना प्रयोजन सिद्ध करते हैं, वे बीत गए। अब वृद्ध होकर मैं क्या सिद्ध करूँ?
 
 --- verse 26 ---
 deva:
@@ -230,6 +305,9 @@ deva:
 iast:
 kasmāt saṁkliśyate vidvān vyarthayārthehayāsakṛt|
 kasyacinmāyayā nūnaṁ loko'yaṁ suvimohitaḥ||
+en: Why does a learned man suffer again and again through this fruitless striving after wealth? Surely this world is deeply deluded by the māyā of someone.
+tel: వ్యర్థమైన ధనాపేక్ష వలన విద్వాంసుడు మరల మరల ఎందుకు బాధపడును? ఎవరిదో మాయ వలన ఈ లోకము నిశ్చయముగా మిక్కిలి మోహితమై ఉన్నది.
+hi: व्यर्थ धन की चाह से विद्वान् पुरुष बार बार क्यों क्लेश पाता है? निश्चय ही किसी की माया से यह लोक अत्यन्त मोहित है।
 
 --- verse 27 ---
 deva:
@@ -238,6 +316,9 @@ deva:
 iast:
 kiṁ dhanairdhanadairvā kiṁ kāmairvā kāmadairuta|
 mṛtyunā grasyamānasya karmabhirvota janmadaiḥ||
+en: What are riches worth, or those who give riches? What are enjoyments worth, or those who give enjoyments? What are works worth, which give rebirth, for one who is being swallowed by death?
+tel: మృత్యువుచేత మింగబడుచున్న వానికి ధనములతో ఏమి ప్రయోజనము, ధనమిచ్చువారితో ఏమి ప్రయోజనము? భోగములతో ఏమి, భోగములిచ్చువారితో ఏమి? జన్మమును ఇచ్చు కర్మలతో ఏమి?
+hi: मृत्यु से ग्रसे जा रहे पुरुष को धन से क्या, धन देने वालों से क्या? भोगों से क्या, भोग देने वालों से क्या? और जन्म देने वाले कर्मों से क्या?
 
 --- verse 28 ---
 deva:
@@ -246,6 +327,9 @@ deva:
 iast:
 nūnaṁ me bhagavāṁstuṣṭaḥ sarvadevamayo hariḥ|
 yena nīto daśāmetāṁ nirvedaścātmanaḥ plavaḥ||
+en: Surely the blessed Lord Hari, in whom all the gods abide, is pleased with me. By him I have been brought to this state, and detachment is the raft by which the self crosses over.
+tel: సర్వదేవమయుడైన భగవంతుడు హరి నా మీద నిశ్చయముగా ప్రసన్నుడైనాడు. ఆయనే నన్ను ఈ దశకు తీసుకొనివచ్చెను. నిర్వేదము ఆత్మను దాటించు తెప్ప.
+hi: निश्चय ही सर्वदेवमय भगवान् हरि मुझ पर प्रसन्न हैं। उन्होंने ही मुझे इस दशा में पहुँचाया है। निर्वेद आत्मा को पार कराने वाली नाव है।
 
 --- verse 29 ---
 deva:
@@ -254,6 +338,9 @@ deva:
 iast:
 so'haṁ kālāvaśeṣeṇa śoṣayiṣye'ṅgamātmanaḥ|
 apramatto'khilasvārthe yadi syāt siddha ātmani||
+en: So with the time that remains I shall wear out this body of mine. I shall be watchful of the whole good of the self, if perfection is to be attained in the self.
+tel: అందుచేత మిగిలిన కాలములో నేను ఈ శరీరమును శోషింపజేయుదును. ఆత్మలో సిద్ధి లభించునేని, ఆత్మకు కలుగు సమస్త ప్రయోజనములో నేను ఏమరుపాటు లేకుండ ఉందును.
+hi: इसलिए बचे हुए समय में मैं अपने इस शरीर को सुखा दूँगा। यदि आत्मा में सिद्धि प्राप्त होती है, तो मैं आत्मा के सम्पूर्ण स्वार्थ में अप्रमत्त रहूँगा।
 
 --- verse 30 ---
 deva:
@@ -262,6 +349,9 @@ deva:
 iast:
 tatra māmanumoderan devāstribhuvaneśvarāḥ|
 muhūrtena brahmalokaṁ khaṭvāṁgaḥ samasādhayat||
+en: In this the gods, the lords of the three worlds, will approve of me. Khaṭvāṅga won the world of Brahmā in a single muhūrta.
+tel: ఇందులో ముల్లోకములకు అధిపతులైన దేవతలు నన్ను అనుమోదింతురు. ఖట్వాంగుడు ఒక ముహూర్తములోనే బ్రహ్మలోకమును సాధించుకొనెను.
+hi: इस विषय में तीनों लोकों के स्वामी देवता मेरा अनुमोदन करेंगे। खट्वांग ने एक मुहूर्त में ही ब्रह्मलोक सिद्ध कर लिया था।
 
 --- verse 31 ---
 deva:
@@ -272,6 +362,9 @@ iast:
 śrībhagavānuvāca
 ityabhipretya manasā hyāvantyo dvijasattamaḥ|
 unmucya hṛdayagranthīn śānto bhikṣurabhūnmuniḥ||
+en: The blessed Lord said: Having thus resolved in his mind, that best of brāhmaṇas of Avanti loosened the knots of his heart. He became peaceful, a mendicant and a silent sage.
+tel: శ్రీభగవానుడు పలికెను: మనస్సులో ఇట్లు నిశ్చయించుకొని, అవంతి దేశపు ఆ ద్విజశ్రేష్ఠుడు హృదయపు ముడులను విప్పుకొనెను. శాంతుడై, భిక్షువై, మునియై నిలిచెను.
+hi: श्रीभगवान् ने कहा: मन में ऐसा निश्चय करके अवन्ति देश के उस द्विजश्रेष्ठ ने हृदय की गाँठें खोल दीं। वह शान्त, भिक्षु और मुनि हो गया।
 
 --- verse 32 ---
 deva:
@@ -280,6 +373,9 @@ deva:
 iast:
 sa cacāra mahīmetāṁ saṁyatātmendriyānilaḥ|
 bhikṣārthaṁ nagaragrāmānasaṁgo'lakṣito'viśat||
+en: He wandered over this earth with his mind, his senses and his breath controlled. Free of attachment and unnoticed, he entered towns and villages for alms.
+tel: మనస్సును, ఇంద్రియములను, ప్రాణమును నిగ్రహించుకొని అతడు ఈ భూమిపై సంచరించెను. సంగము లేక, ఎవరికిని తెలియకుండ భిక్ష కొరకు నగరములలోకి, గ్రామములలోకి ప్రవేశించెను.
+hi: मन, इन्द्रियों और प्राण को वश में करके वह इस पृथ्वी पर विचरण करता रहा। असंग और अलक्षित रहकर वह भिक्षा के लिए नगरों और गाँवों में प्रवेश करता था।
 
 --- verse 33 ---
 deva:
@@ -288,6 +384,9 @@ deva:
 iast:
 taṁ vai pravayasaṁ bhikṣumavadhūtamasajjanāḥ|
 dṛṣṭvā paryabhavan bhadra bahvībhiḥ paribhūtibhiḥ||
+en: O good one, seeing that mendicant, aged and an avadhūta, wicked men set upon him with many insults.
+tel: సజ్జనుడా, ముదిమి వచ్చిన ఆ అవధూత భిక్షువును చూచి దుర్జనులు ఎన్నో అవమానములతో అతనిని బాధించిరి.
+hi: हे भद्र, उस वृद्ध अवधूत भिक्षु को देखकर असज्जनों ने अनेक प्रकार के अपमानों से उसका तिरस्कार किया।
 
 --- verse 34 ---
 deva:
@@ -296,6 +395,9 @@ deva:
 iast:
 kecittriveṇuṁ jagṛhureke pātraṁ kamaṇḍalum|
 pīṭhaṁ caike'kṣasūtraṁ ca kanthāṁ cīrāṇi kecana||
+en: Some took away his three-staff, some his bowl and his water pot, some his seat, some his rosary, and some his rag and his torn cloths.
+tel: కొందరు అతని త్రివేణు దండమును తీసుకొనిరి, కొందరు పాత్రను, కమండలువును తీసుకొనిరి. కొందరు ఆసనమును, కొందరు అక్షమాలను, కొందరు కంథను, చీరికలను తీసుకొనిరి.
+hi: किसी ने उसका त्रिवेणु ले लिया, किसी ने पात्र और कमण्डलु, किसी ने आसन, किसी ने अक्षसूत्र और किसी ने कन्था तथा चीर ले लिए।
 
 --- verse 35 ---
 deva:
@@ -304,6 +406,9 @@ deva:
 iast:
 pradāya ca punastāni darśitānyādadurmuneḥ|
 annaṁ ca bhaikṣyasampannaṁ bhuṁjānasya sarittaṭe||
+en: They gave them back, and when he had shown them they took them again. And as he was eating the food got by begging on the bank of a river,
+tel: వారు వాటిని తిరిగి ఇచ్చిరి, అతడు చూపిన పిమ్మట మరల తీసుకొనిరి. నదీ తీరమున భిక్షతో లభించిన అన్నమును అతడు తినుచుండగా,
+hi: उन्होंने वे वस्तुएँ लौटा दीं और दिखा देने पर फिर ले लीं। और नदी के तट पर भिक्षा से मिला अन्न वह खा रहा था, तब
 
 --- verse 36 ---
 deva:
@@ -312,6 +417,9 @@ deva:
 iast:
 mūtrayanti ca pāpiṣṭhāḥ ṣṭhīvantyasya ca mūrdhani|
 yatavācaṁ vācayanti tāḍayanti na vakti cet||
+en: those most sinful men passed water on him and spat on his head. He kept silence, and they made him speak; when he did not speak they beat him.
+tel: ఆ మహాపాపులు అతనిపై మూత్రము పోసిరి, అతని తలపై ఉమిసిరి. మౌనముగా ఉండిన అతనిని మాట్లాడింపజేసిరి. మాట్లాడనిచో కొట్టిరి.
+hi: उन अत्यन्त पापी लोगों ने उस पर मूत्र किया और उसके सिर पर थूका। मौन रहने वाले उसे बुलवाने लगे, और न बोलने पर पीटने लगे।
 
 --- verse 37 ---
 deva:
@@ -320,6 +428,9 @@ deva:
 iast:
 tarjayantyapare vāgbhiḥ steno'yamiti vādinaḥ|
 badhnanti rajjvā taṁ kecid badhyatāṁ badhyatāmiti||
+en: Others threatened him with words, saying, This man is a thief. Some bound him with a rope, crying, Bind him, bind him.
+tel: మరికొందరు మాటలతో బెదిరించిరి, ఇతడు దొంగ అని పలికిరి. కొందరు త్రాడుతో అతనిని కట్టిరి, కట్టుము కట్టుము అని అరచిరి.
+hi: कुछ लोग वचनों से डराने लगे और कहने लगे, यह चोर है। कुछ ने उसे रस्सी से बाँध दिया और कहने लगे, बाँधो, बाँधो।
 
 --- verse 38 ---
 deva:
@@ -328,6 +439,9 @@ deva:
 iast:
 kṣipantyeke'vajānanta eṣa dharmadhvajaḥ śaṭhaḥ|
 kṣīṇavitta imāṁ vṛttimagrahīt svajanojjhitaḥ||
+en: Some abused him and scorned him. This man is a hypocrite who carries dharma as his flag. His wealth is gone and his own people have cast him off, so he has taken up this way of living.
+tel: కొందరు నిందించి, అవమానించి పలికిరి. ఇతడు ధర్మమును జెండాగా పెట్టుకొన్న కపటి. ధనము పోయి, తనవారు విడిచిపెట్టగా ఈ వృత్తిని చేపట్టినాడు.
+hi: कुछ लोग निन्दा और अवज्ञा करते हुए कहने लगे, यह धर्म का ध्वज लिए हुए शठ है। धन नष्ट हो जाने पर और अपने जनों से त्यक्त होकर इसने यह वृत्ति ग्रहण की है।
 
 --- verse 39 ---
 deva:
@@ -336,6 +450,9 @@ deva:
 iast:
 aho eṣa mahāsāro dhṛtimān girirāḍiva|
 maunena sādhayatyarthaṁ bakavad dṛḍhaniścayaḥ||
+en: Oh, this man is of great strength and is as firm as the king of mountains. He keeps silence and accomplishes his purpose, as resolute as a heron.
+tel: ఓహో, ఇతడు మహా సారము కలవాడు, పర్వతరాజువలె ధైర్యము కలవాడు. మౌనముతోనే తన ప్రయోజనమును సాధించుకొనును, కొంగవలె దృఢమైన నిశ్చయము కలవాడు.
+hi: अहो, यह बड़ा सारवान् और गिरिराज के समान धैर्यवान् है। यह मौन से ही अपना प्रयोजन सिद्ध करता है, बगुले के समान दृढ़ निश्चय वाला है।
 
 --- verse 40 ---
 deva:
@@ -344,6 +461,9 @@ deva:
 iast:
 ityeke vihasantyenameke durvātayanti ca|
 taṁ babandhurnirurudhuryathā krīḍanakaṁ dvijam||
+en: So some laughed at him, and some passed wind on him. They bound the brāhmaṇa and shut him up as though he were a toy.
+tel: ఇట్లు కొందరు అతనిని ఎగతాళి చేసిరి, కొందరు అతనిపై అపానవాయువును విడిచిరి. ఆ బ్రాహ్మణుని బొమ్మవలె కట్టివేసి నిర్బంధించిరి.
+hi: इस प्रकार कुछ लोग उसका उपहास करते थे और कुछ उस पर अपवायु छोड़ते थे। उन्होंने उस द्विज को खिलौने के समान बाँध दिया और रोक रखा।
 
 --- verse 41 ---
 deva:
@@ -352,6 +472,9 @@ deva:
 iast:
 evaṁ sa bhautikaṁ duḥkhaṁ daivikaṁ daihikaṁ ca yat|
 bhoktavyamātmano diṣṭaṁ prāptaṁ prāptamabudhyata||
+en: In this way he understood that the sorrow which came to him from other beings, from the gods and from his own body was allotted to him and had to be borne, as often as it came.
+tel: ఈ విధముగా భూతముల వలన, దేవతల వలన, శరీరము వలన కలిగిన దుఃఖము తనకు విధింపబడినది, అనుభవింపవలసినది అని అతడు తెలిసికొనెను. వచ్చినదంతయు అట్టిదే అని గ్రహించెను.
+hi: इस प्रकार उसने जान लिया कि भूतों से, देवताओं से और देह से जो दुःख आया, वह उसके लिए नियत है और भोगना ही है। जो जो आया, वह सब ऐसा ही है।
 
 --- verse 42 ---
 deva:
@@ -360,6 +483,9 @@ deva:
 iast:
 paribhūta imāṁ gāthāmagāyata narādhamaiḥ|
 pātayadbhiḥ svadharmastho dhṛtimāsthāya sāttvikīm||
+en: Insulted by those lowest of men who were trying to make him fall, he stood firm in his own dharma, took to the sattvika kind of firmness, and sang this song.
+tel: తనను పడగొట్టజూచిన నరాధములచేత అవమానింపబడి, తన ధర్మములో నిలిచి, సాత్త్వికమైన ధైర్యమును ఆశ్రయించి అతడు ఈ గాథను పాడెను.
+hi: उसे गिराने में लगे नराधमों से अपमानित होकर भी वह अपने धर्म में स्थित रहा। उसने सात्त्विक धृति का आश्रय लिया और यह गाथा गाई।
 
 --- verse 43 ---
 deva:
@@ -374,6 +500,9 @@ nāyaṁ jano me sukhaduḥkhahetu-
 rna devatā''tmā grahakarmakālāḥ|
 manaḥ paraṁ kāraṇamāmananti
 saṁsāracakraṁ parivartayed yat||
+en: The brāhmaṇa said: These people are not the cause of my pleasure and pain. Nor are the gods, nor the self, nor the planets, nor works, nor time. The wise declare the mind to be the highest cause, and it is the mind that turns the wheel of saṁsāra.
+tel: ద్విజుడు పలికెను: ఈ జనులు నా సుఖదుఃఖములకు కారణము కాదు. దేవతలు కాదు, ఆత్మ కాదు, గ్రహములు కాదు, కర్మలు కాదు, కాలము కాదు. మనస్సే పరమ కారణమని పెద్దలు చెప్పుదురు. సంసారచక్రమును త్రిప్పునది మనస్సే.
+hi: द्विज ने कहा: ये लोग मेरे सुख दुःख के कारण नहीं हैं। न देवता, न आत्मा, न ग्रह, न कर्म और न काल। विद्वान् मन को ही परम कारण कहते हैं, और वही संसारचक्र को घुमाता है।
 
 --- verse 44 ---
 deva:
@@ -386,6 +515,9 @@ mano guṇān vai sṛjate balīya-
 stataśca karmāṇi vilakṣaṇāni|
 śuklāni kṛṣṇānyatha lohitāni
 tebhyaḥ savarṇāḥ sṛtayo bhavanti||
+en: The mind, which is very strong, creates the guṇas, and out of them works of different kinds — white, black and red. From these arise the courses of rebirth, of the same colour as the works.
+tel: మనస్సు మిక్కిలి బలమైనది. అది గుణములను సృజించును, వాటినుండి వేరువేరు కర్మలను — శుక్లమైనవి, కృష్ణమైనవి, లోహితమైనవి — సృజించును. ఆ కర్మలనుండి అదే రంగు కల గతులు కలుగును.
+hi: मन अत्यन्त बलवान् है। वह गुणों को रचता है और उनसे भिन्न भिन्न कर्मों को, जो शुक्ल, कृष्ण और लोहित हैं। उन कर्मों से उन्हीं के रंग वाली गतियाँ होती हैं।
 
 --- verse 45 ---
 deva:
@@ -398,6 +530,9 @@ anīha ātmā manasā samīhatā
 hiraṇmayo matsakha udvicaṣṭe|
 manaḥ svaliṁgaṁ parigṛhya kāmān
 juṣan nibaddho guṇasaṁgato'sau||
+en: The self does not act. It is golden, and it is my friend. It only looks on while the mind acts. Taking hold of the mind, which is its own mark, it enjoys the objects of desire and so is bound, joined to the guṇas.
+tel: ఆత్మ కర్మను చేయదు. అది హిరణ్మయము, అది నా సఖుడు. మనస్సు పనిచేయుచున్నప్పుడు అది చూచుచు మాత్రమే ఉండును. తన గుర్తే అయిన మనస్సును పట్టుకొని, కామములను అనుభవించుచు, గుణములతో కలిసి అది బద్ధమగును.
+hi: आत्मा कर्म नहीं करता। वह हिरण्मय है और मेरा सखा है। मन के कार्य करते समय वह केवल देखता रहता है। अपने ही चिह्न रूप मन को ग्रहण करके, कामों को भोगते हुए वह गुणों से संग करके बँध जाता है।
 
 --- verse 46 ---
 deva:
@@ -410,6 +545,9 @@ dānaṁ svadharmo niyamo yamaśca
 śrutaṁ ca karmāṇi ca sadvratāni|
 sarve manonigrahalakṣaṇāntāḥ
 paro hi yogo manasaḥ samādhiḥ||
+en: Gifts, one's own dharma, the observances, the restraints, the study of scripture, rites and good vows — all of these have the control of the mind as their end. The highest yoga is the stillness of the mind.
+tel: దానము, స్వధర్మము, నియమము, యమము, శాస్త్రశ్రవణము, కర్మలు, సద్వ్రతములు — ఇవన్నియు మనోనిగ్రహమునే చివరి లక్షణముగా కలవి. మనస్సు యొక్క సమాధియే పరమయోగము.
+hi: दान, स्वधर्म, नियम, यम, शास्त्र का श्रवण, कर्म और सद्व्रत — इन सबका अन्तिम लक्षण मन का निग्रह ही है। मन की समाधि ही परम योग है।
 
 --- verse 47 ---
 deva:
@@ -422,6 +560,9 @@ samāhitaṁ yasya manaḥ praśāntaṁ
 dānādibhiḥ kiṁ vada tasya kṛtyam|
 asaṁyataṁ yasya mano vinaśyad
 dānādibhiścedaparaṁ kimebhiḥ||
+en: Tell me, what need has a man of gifts and the rest, whose mind is collected and at peace? And if a man's mind is unrestrained and perishing, what more can gifts and the rest do for him?
+tel: ఎవని మనస్సు సమాహితమై శాంతముగా ఉన్నదో, అతనికి దానము మొదలైనవాటితో ఏమి పని? చెప్పుము. ఎవని మనస్సు నిగ్రహము లేక నశించుచున్నదో, అతనికి దానము మొదలైనవాటితో ఇంకా ఏమి లాభము?
+hi: जिसका मन समाहित और प्रशान्त है, उसे दान आदि से क्या काम है? कहो। और जिसका मन असंयत तथा नष्ट हो रहा है, उसे दान आदि से और क्या मिलेगा?
 
 --- verse 48 ---
 deva:
@@ -434,6 +575,9 @@ manovaśe'nye hyabhavan sma devā
 manaśca nānyasya vaśaṁ sameti|
 bhīṣmo hi devaḥ sahasaḥ sahīyān
 yuñjyād vaśe taṁ sa hi devadevaḥ||
+en: The other gods have come under the power of the mind, and the mind comes under the power of no one else. The mind is a fearsome god, stronger than the strong. He who brings it under his control is the god of gods.
+tel: ఇతర దేవతలు మనస్సు వశములోనికి వచ్చిరి, మనస్సు మాత్రము ఇతరుల వశములోనికి రాదు. మనస్సు భయంకరమైన దేవత, బలవంతులకంటె బలవంతమైనది. దానిని తన వశములో ఉంచుకొనువాడే దేవదేవుడు.
+hi: अन्य देवता मन के वश में हो गए, परन्तु मन किसी दूसरे के वश में नहीं आता। मन भयंकर देव है और बलवानों से भी बलवान् है। जो उसे वश में कर ले, वही देवों का देव है।
 
 --- verse 49 ---
 deva:
@@ -446,6 +590,9 @@ taṁ durjayaṁ śatrumasahyavega-
 maruntudaṁ tanna vijitya kecit|
 kurvantyasadvigrahamatra martyai-
 rmitrāṇyudāsīnaripūn vimūḍhāḥ||
+en: This enemy is hard to conquer. His onset cannot be borne. He wounds the vital parts. Some men do not conquer him at all, and instead, deluded, pick needless quarrels here with other men, and make of them friends, neutrals and enemies.
+tel: ఈ శత్రువును జయించుట కష్టము. ఇతని వేగమును సహించుట సాధ్యము కాదు. ఇతడు మర్మస్థానములను గాయపరచును. కొందరు ఇతనిని జయించక, మోహితులై ఇక్కడ మనుష్యులతో అనవసరమైన కలహమును కూర్చుకొని, వారిని మిత్రులుగా, తటస్థులుగా, శత్రువులుగా చేసికొందురు.
+hi: यह शत्रु दुर्जय है। उसका वेग असह्य है। वह मर्म को बेधता है। कुछ लोग उसे जीते बिना ही, मोहित होकर यहाँ मनुष्यों से व्यर्थ विग्रह करते हैं और उन्हें मित्र, उदासीन तथा शत्रु बना लेते हैं।
 
 --- verse 50 ---
 deva:
@@ -458,6 +605,9 @@ dehaṁ manomātramimaṁ gṛhītvā
 mamāhamityandhadhiyo manuṣyāḥ|
 eṣo'hamanyo'yamiti bhrameṇa
 durantapāre tamasi bhramanti||
+en: Men whose understanding is blind take this body, which is nothing but the mind, and say I and mine. In the delusion that I am this one and that man is another, they wander in a darkness whose far shore cannot be reached.
+tel: మనస్సు మాత్రమే అయిన ఈ దేహమును గ్రహించి, అంధమైన బుద్ధి కల మనుష్యులు నేను, నాది అని పలుకుదురు. నేను ఇతడను, ఇతడు వేరొకడు అను భ్రమలో పడి, దాటరాని అంచు కల చీకటిలో తిరుగుదురు.
+hi: मन मात्र इस देह को ग्रहण करके अन्धी बुद्धि वाले मनुष्य मैं और मेरा कहते हैं। मैं यह हूँ और यह दूसरा है, इस भ्रम से वे दुरन्तपार अन्धकार में भटकते हैं।
 
 --- verse 51 ---
 deva:
@@ -470,6 +620,9 @@ janastu hetuḥ sukhaduḥkhayoścet
 kimātmanaścātra ha bhaumayostat|
 jihvāṁ kvacit saṁdaśati svadadbhi-
 stadvedanāyāṁ katamāya kupyet||
+en: If other people are the cause of pleasure and pain, what has the self to do with that? It belongs to the two bodies, which are both made of earth. A man sometimes bites his tongue with his own teeth. In that pain, with whom should he be angry?
+tel: జనులే సుఖదుఃఖములకు కారణమైనచో, ఆత్మకు దానితో ఏమి సంబంధము? అది మట్టితో చేయబడిన ఆ రెండు దేహములకు సంబంధించినది. మనుష్యుడు ఒక్కొకప్పుడు తన పలువరుసతో తన నాలుకను కరచుకొనును. ఆ బాధలో అతడు ఎవరిపై కోపపడవలెను?
+hi: यदि लोग ही सुख दुःख के कारण हैं, तो आत्मा का उससे क्या सम्बन्ध? वह तो मिट्टी से बने दोनों शरीरों का है। मनुष्य कभी अपने ही दाँतों से अपनी जीभ काट लेता है। उस वेदना में वह किस पर क्रोध करे?
 
 --- verse 52 ---
 deva:
@@ -482,6 +635,9 @@ duḥkhasya heturyadi devatāstu
 kimātmanastatra vikārayostat|
 yadaṁgamaṁgena nihanyate kvacit
 krudhyeta kasmai puruṣaḥ svadehe||
+en: If the gods are the cause of pain, what has the self to do with it there? That belongs to the two limbs, which are both subject to change. When one limb is struck by another limb, with whom should a man be angry in his own body?
+tel: దేవతలే దుఃఖమునకు కారణమైనచో, అందులో ఆత్మకు ఏమి సంబంధము? అది వికారము పొందు ఆ రెండు అంగములకు సంబంధించినది. ఒక అంగము మరొక అంగముచేత కొట్టబడినప్పుడు, పురుషుడు తన దేహములో ఎవరిపై కోపపడవలెను?
+hi: यदि देवता दुःख के कारण हैं, तो उसमें आत्मा का क्या? वह तो विकार वाले दोनों अंगों का है। जब एक अंग दूसरे अंग से चोट पाता है, तब पुरुष अपने ही देह में किस पर क्रोध करे?
 
 --- verse 53 ---
 deva:
@@ -494,6 +650,9 @@ iast:
 kimanyatastatra nijasvabhāvaḥ|
 na hyātmano'nyad yadi tanmṛṣā syāt
 krudhyeta kasmānna sukhaṁ na duḥkham||
+en: If the self is the cause of pleasure and pain, then what has anything else to do with it there? It would be the self's own nature. There is nothing other than the self, and if there seems to be, it is false. Then why should one be angry? There is neither pleasure nor pain.
+tel: ఆత్మయే సుఖదుఃఖములకు కారణమైనచో, అందులో వేరొకదానికి ఏమి పని? అది ఆత్మ యొక్క స్వభావమే అగును. ఆత్మకంటె వేరైనది ఏదియు లేదు; ఉన్నట్లు తోచినను అది మిథ్య. అట్లయినచో ఎందుకు కోపపడవలెను? సుఖమును లేదు, దుఃఖమును లేదు.
+hi: यदि आत्मा ही सुख दुःख का कारण है, तो उसमें दूसरे का क्या काम? वह आत्मा का निज स्वभाव ही होगा। आत्मा से भिन्न कुछ नहीं है, और यदि प्रतीत हो तो वह मिथ्या है। तब क्रोध क्यों करे? न सुख है और न दुःख।
 
 --- verse 54 ---
 deva:
@@ -506,6 +665,9 @@ grahā nimittaṁ sukhaduḥkhayoścet
 kimātmano'jasya janasya te vai|
 grahairgrahasyaiva vadanti pīḍāṁ
 krudhyeta kasmai puruṣastato'nyaḥ||
+en: If the planets are the cause of pleasure and pain, what have they to do with the self, which is unborn? They belong to what is born. The wise say that the planets afflict only what they seize. With whom then should the man be angry, who is other than that?
+tel: గ్రహములే సుఖదుఃఖములకు నిమిత్తమైనచో, పుట్టుక లేని ఆత్మకు వాటితో ఏమి సంబంధము? అవి పుట్టినదానికే చెందును. గ్రహములు తాము పట్టుకొనిన దానినే బాధించునని పెద్దలు చెప్పుదురు. దానికంటె వేరైన ఆ పురుషుడు ఎవరిపై కోపపడవలెను?
+hi: यदि ग्रह सुख दुःख के निमित्त हैं, तो अजन्मा आत्मा का उनसे क्या? वे तो जन्म लेने वाले के हैं। विद्वान् कहते हैं कि ग्रह उसी को पीड़ा देते हैं जिसे वे ग्रहण करते हैं। उससे भिन्न वह पुरुष किस पर क्रोध करे?
 
 --- verse 55 ---
 deva:
@@ -518,6 +680,9 @@ karmāstu hetuḥ sukhaduḥkhayoścet
 kimātmanastaddhi jaḍājaḍatve|
 dehastvacit puruṣo'yaṁ suparṇaḥ
 krudhyeta kasmai na hi karmamūlam||
+en: If works are the cause of pleasure and pain, what have they to do with the self? Work belongs where the conscious and the unconscious are together. But the body has no consciousness, and this puruṣa is the suparṇa. With whom then should one be angry? The root of work is in neither.
+tel: కర్మలే సుఖదుఃఖములకు కారణమైనచో, ఆత్మకు వాటితో ఏమి సంబంధము? కర్మ చేతనము, అచేతనము కలిసి ఉన్న చోటికే చెందును. దేహమునకు చేతనము లేదు, ఈ పురుషుడు సుపర్ణుడు. అట్లయినచో ఎవరిపై కోపపడవలెను? కర్మమూలము ఈ రెండిటిలో లేదు.
+hi: यदि कर्म सुख दुःख का कारण है, तो आत्मा का उससे क्या? कर्म वहीं होता है जहाँ जड और अजड एक साथ हों। परन्तु देह अचित् है और यह पुरुष सुपर्ण है। तब किस पर क्रोध करे? कर्म का मूल दोनों में नहीं है।
 
 --- verse 56 ---
 deva:
@@ -530,6 +695,9 @@ kālastu hetuḥ sukhaduḥkhayoścet
 kimātmanastatra tadātmako'sau|
 nāgnerhi tāpo na himasya tat syāt
 krudhyeta kasmai na parasya dvandvam||
+en: If time is the cause of pleasure and pain, what has the self to do with it there? The self is of the nature of time itself. Heat is no affliction to fire, nor cold to ice. With whom then should one be angry? The highest has no pairs of opposites.
+tel: కాలమే సుఖదుఃఖములకు కారణమైనచో, అందులో ఆత్మకు ఏమి సంబంధము? ఆత్మ కాలస్వరూపమే. అగ్నికి వేడిమి బాధ కాదు, మంచుకు చల్లదనము బాధ కాదు. అట్లయినచో ఎవరిపై కోపపడవలెను? పరమాత్మకు ద్వంద్వములు లేవు.
+hi: यदि काल सुख दुःख का कारण है, तो उसमें आत्मा का क्या? आत्मा तो काल स्वरूप ही है। अग्नि को ताप पीड़ा नहीं देता, न हिम को शीत। तब किस पर क्रोध करे? पर को द्वन्द्व नहीं है।
 
 --- verse 57 ---
 deva:
@@ -542,6 +710,9 @@ na kenacit kvāpi kathaṁcanāsya
 dvandvoparāgaḥ parataḥ parasya|
 yathāhamaḥ saṁsṛtirūpiṇaḥ syā-
 devaṁ prabuddho na bibheti bhūtaiḥ||
+en: In no way, by nothing and nowhere, does the stain of the pairs of opposites touch this self, which is beyond the beyond. Such a stain belongs to the sense of I, which takes the form of saṁsāra. One who has awakened in this way has no fear of any being.
+tel: పరముకంటె పరమైన ఈ ఆత్మకు ఏ విధముగాను, ఏ దేనిచేతను, ఎక్కడను ద్వంద్వముల మరక అంటదు. ఆ మరక సంసారరూపమును ధరించు అహంకారమునకు చెందినది. ఇట్లు మేలుకొన్నవాడు ఏ భూతమునకును భయపడడు.
+hi: पर से भी पर इस आत्मा को किसी प्रकार से, किसी से और कहीं भी द्वन्द्व का उपराग नहीं लगता। वह उपराग संसाररूप अहंकार का है। इस प्रकार जाग उठा पुरुष किसी भूत से नहीं डरता।
 
 --- verse 58 ---
 deva:
@@ -554,6 +725,9 @@ etāṁ sa āsthāya parātmaniṣṭhā-
 madhyāsitāṁ pūrvatamairmaharṣibhiḥ|
 ahaṁ tariṣyāmi durantapāraṁ
 tamo mukundāṅghriniṣevayaiva||
+en: Taking my stand on this devotion to the supreme Self, in which the great sages of old abided, I shall cross this darkness whose far shore cannot be reached, by the service of Mukunda's feet alone.
+tel: పూర్వపు మహర్షులు ఆశ్రయించిన ఈ పరాత్మనిష్ఠను అవలంబించి, దాటరాని అంచు కల ఈ చీకటిని ముకుందుని చరణముల సేవతోనే నేను దాటెదను.
+hi: पूर्वकाल के महर्षियों ने जिस परात्मनिष्ठा का आश्रय लिया, उसी को लेकर मैं दुरन्तपार इस अन्धकार को मुकुन्द के चरणों की सेवा से ही पार करूँगा।
 
 --- verse 59 ---
 deva:
@@ -568,6 +742,9 @@ nirvidya naṣṭadraviṇo gataklamaḥ
 pravrajya gāṁ paryaṭamāna ittham|
 nirākṛto'sadbhirapi svadharmā-
 dakampito'muṁ munirāha gāthām||
+en: The blessed Lord said: Thus the sage grew detached. His wealth was lost and his weariness was gone. He took to the wandering life and went about the earth. Though cast down by wicked men, he did not waver from his own dharma, and he sang that song.
+tel: శ్రీభగవానుడు పలికెను: ఈ విధముగా ఆ ముని నిర్వేదము పొందెను. ధనము నశించెను, శ్రమ తీరెను. ప్రవ్రజితుడై భూమిపై సంచరించెను. దుర్జనులు అవమానించినను తన ధర్మమునుండి చలించలేదు, ఆ గాథను పాడెను.
+hi: श्रीभगवान् ने कहा: इस प्रकार वह मुनि निर्विण्ण हुआ। उसका धन नष्ट हो गया और क्लेश मिट गया। वह संन्यास लेकर पृथ्वी पर विचरने लगा। असत् जनों से तिरस्कृत होकर भी वह अपने धर्म से विचलित नहीं हुआ और उसने यह गाथा गाई।
 
 --- verse 60 ---
 deva:
@@ -576,6 +753,9 @@ deva:
 iast:
 sukhaduḥkhaprado nānyaḥ puruṣasyātmavibhramaḥ|
 mitrodāsīnaripavaḥ saṁsārastamasaḥ kṛtaḥ||
+en: No one else gives pleasure and pain to a man. It is his own confusion about himself. Friend, neutral and enemy — this division is itself saṁsāra, and it is made by ignorance.
+tel: పురుషునికి సుఖదుఃఖములను వేరొకడు ఇవ్వడు. అది అతని ఆత్మభ్రమయే. మిత్రుడు, తటస్థుడు, శత్రువు అను ఈ భేదమే సంసారము; అది అజ్ఞానము చేసినది.
+hi: पुरुष को सुख दुःख देने वाला कोई दूसरा नहीं है। वह उसका अपना आत्मभ्रम है। मित्र, उदासीन और शत्रु, यह भेद ही संसार है, और वह अज्ञान का बनाया हुआ है।
 
 --- verse 61 ---
 deva:
@@ -584,6 +764,9 @@ deva:
 iast:
 tasmāt sarvātmanā tāta nigṛhāṇa mano dhiyā|
 mayyāveśitayā yukta etāvān yogasaṁgrahaḥ||
+en: Therefore, my dear, with the understanding fixed on me, restrain the mind in every way and remain united with me. This much is the whole of yoga.
+tel: అందుచేత నాయనా, నాలో నిలిపిన బుద్ధితో సర్వవిధముగా మనస్సును నిగ్రహించుము. నాతో కలిసియుండుము. ఇంతియే యోగసంగ్రహము.
+hi: इसलिए हे तात, मुझमें लगाई हुई बुद्धि से सब प्रकार से मन का निग्रह करो और मुझसे युक्त रहो। इतना ही योग का सार है।
 
 --- verse 62 ---
 deva:
@@ -592,9 +775,15 @@ deva:
 iast:
 ya etāṁ bhikṣuṇā gītāṁ brahmaniṣṭhāṁ samāhitaḥ|
 dhārayañchrāvayañchṛṇvan dvandvairnaivābhibhūyate||
+en: He who with a collected mind holds this song of the mendicant, which is fixed on brahman, who makes others hear it, and who hears it, is never overcome by the pairs of opposites.
+tel: బ్రహ్మనిష్ఠ కల ఈ భిక్షుగీతను సమాహిత మనస్సుతో ఎవడు ధరించునో, ఇతరులకు వినిపించునో, తాను వినునో, అతడు ద్వంద్వములచేత ఎన్నడును అభిభూతుడు కాడు.
+hi: जो समाहित चित्त से ब्रह्मनिष्ठा वाली इस भिक्षुगीता को धारण करता है, दूसरों को सुनाता है और स्वयं सुनता है, वह द्वन्द्वों से कभी अभिभूत नहीं होता।
 
 --- verse none ---
 deva:
 इति श्रीमद्भागवते महापुराणे पारमहंस्यां संहितायामेकादशस्कन्धे त्रयोविंशोऽध्यायः॥ २३॥
 iast:
 iti śrīmadbhāgavate mahāpurāṇe pāramahaṁsyāṁ saṁhitāyāmekādaśaskandhe trayoviṁśo'dhyāyaḥ|| 23||
+en: Thus ends the twenty-third adhyāya in the eleventh skandha of the Śrīmad Bhāgavata Mahāpurāṇa, the saṁhitā of the paramahaṁsas.
+tel: ఇట్లు శ్రీమద్భాగవత మహాపురాణములో, పరమహంసల సంహితలో, ఏకాదశ స్కంధములో ఇరువది మూడవ అధ్యాయము ముగిసెను.
+hi: इस प्रकार श्रीमद्भागवत महापुराण की परमहंस संहिता के एकादश स्कन्ध में तेईसवाँ अध्याय समाप्त हुआ।

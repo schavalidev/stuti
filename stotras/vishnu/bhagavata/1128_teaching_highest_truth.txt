@@ -9,7 +9,7 @@ Type: Purāṇa (an adhyāya of the Śrīmad Bhāgavata, Skandha 11)
 
 Source / recension: Base text and authority: the Gītā Press, Gorakhpur Śrīmadbhāgavata Mahāpurāṇa with Hindi translation, Part 2 (Gītā Press code 27), archive.org item `shrimadbhagwat-mahapuran-bhag-2`, printed pages 882–890; the PDF page numbers are the printed ones. The PDF carries the typesetter's own text layer in the Chanakya font encoding, and the text was decoded from it by machine with `bin/bhagavata/chanakya.py`, not read off OCR or typed. The decoder was checked against GRETIL over all twelve skandhas before any file was written, and the differences that remain were sampled and found to be readings of the two editions. Second witness: GRETIL's `sa_bhAgavatapurANa.xml` (IAST, contributed by Ulrich Stiehl), a separate editorial lineage, compared verse by verse by machine. The TTD edition with the commentaries of Śrīdhara, Vīrarāghava and Vijayadhvaja (archive.org `Bhagavata_Purana_With_Multiple_Commentaries_TTD_Critical_Edition`) is the third witness where one is needed; it was not read for this file. The IAST was generated mechanically from the Devanāgarī with `bin/dev2iast.py`.
 
-Recension note: Text-only file, written 1 Oct 2026 at the user's instruction to lay down the whole Bhāgavata first: the English, Telugu and Hindi meanings are still to be added, and the witnesses' differences listed here have been recorded by machine and not yet adjudicated. The print is followed throughout. The print numbers 44 verses and GRETIL numbers 44. Of the 44 verses GRETIL has under the same number, 32 agree with the print letter for letter once spacing and the spelling of nasals are set aside; the rest differ: 1, 7, 20, 21, 22, 23, 24, 25, 30, 33, 36, 40. Spacing is the print's, as its text layer gives it; in a few places justification has left a space inside a word, and these are still to be closed when the verse is read. The speaker lines (श्रीशुक उवाच and the others) are printed in italic above the verse they introduce, and are given as its first line.
+Recension note: Meanings written 26 Oct 2026 (session S78). The differences between the witnesses listed below were read as the verses were glossed; except where this note says otherwise, each is a spelling, a sandhi or a word order of the two editions, none of them changes the sense, and the print's reading therefore stands unbracketed. The print is followed throughout. The print numbers 44 verses and GRETIL numbers 44. Of the 44 verses GRETIL has under the same number, 32 agree with the print letter for letter once spacing and the spelling of nasals are set aside; the rest differ: 1, 7, 20, 21, 22, 23, 24, 25, 30, 33, 36, 40. Spacing is the print's, as its text layer gives it. The speaker lines (श्रीशुक उवाच and the others) are printed in italic above the verse they introduce, and are given as its first line. No broken word was found. The justification detector reported none, and in the other direction no join after a vowel, an anusvāra or a visarga stands against GRETIL, so no edit was needed. Three readings were settled as the verses were read, and all three follow Śrīdhara: at verse 3 māyā is the dream state and mṛtyu the state of deep sleep; at verse 26 vartuguṇaiḥ is taken as the qualities that return in their turn; at verse 31 ukṣantam is taken as passing water. Verse 37 is a hard verse, and the English gives the sense Śrīdhara carries, that talk of duality is arthavāda and without purpose. The print's line-break hyphens at verses 17, 24 and 33 are left exactly as printed.
 
 Verse count: 44, plus the closing colophon printed unnumbered.
 
@@ -24,6 +24,9 @@ iast:
 śrībhagavānuvāca
 parasvabhāvakarmāṇi na praśaṁsenna garhayet|
 viśvamekātmakaṁ paśyan prakṛtyā puruṣeṇa ca||
+en: The blessed Lord said: One should neither praise nor blame the nature and the acts of another, seeing this world as one self, together with prakṛti and puruṣa.
+tel: శ్రీభగవానుడు పలికెను: ప్రకృతితో, పురుషునితో కూడిన ఈ విశ్వమును ఒకే ఆత్మగా చూచుచు, ఇతరుల స్వభావమును, కర్మలను పొగడకూడదు, నిందించకూడదు.
+hi: श्रीभगवान ने कहा: प्रकृति और पुरुष के साथ इस विश्व को एक ही आत्मा के रूप में देखते हुए दूसरे के स्वभाव और कर्मों की न प्रशंसा करे और न निन्दा करे।
 
 --- verse 2 ---
 deva:
@@ -32,6 +35,9 @@ deva:
 iast:
 parasvabhāvakarmāṇi yaḥ praśaṁsati nindati|
 sa āśu bhraśyate svārthādasatyabhiniveśataḥ||
+en: He who praises or blames the nature and the acts of another soon falls away from his own good, because he has taken hold of what is unreal.
+tel: ఇతరుల స్వభావమును, కర్మలను పొగడువాడు లేక నిందించువాడు అసత్యమును పట్టుకొనుటచే తన ప్రయోజనము నుండి శీఘ్రముగా జారిపోవును.
+hi: जो दूसरे के स्वभाव और कर्मों की प्रशंसा या निन्दा करता है, वह असत् को पकड़ लेने के कारण शीघ्र ही अपने प्रयोजन से गिर जाता है।
 
 --- verse 3 ---
 deva:
@@ -40,6 +46,9 @@ deva:
 iast:
 taijase nidrayā''panne piṇḍastho naṣṭacetanaḥ|
 māyāṁ prāpnoti mṛtyuṁ vā tadvannānārthadṛk pumān||
+en: When the senses are overcome by sleep, the one who dwells in the body loses his awareness. He then reaches the state of illusion, which is dream, or the state like death, which is deep sleep. So it is with the man who sees many separate objects.
+tel: ఇంద్రియములు నిద్రచే కప్పబడినప్పుడు దేహమునందున్నవాడు చైతన్యమును కోల్పోవును. అప్పుడు అతడు స్వప్నమనెడి మాయను, లేక గాఢనిద్రయనెడి మృత్యుసదృశమైన స్థితిని పొందును. అనేక అర్థములను వేరువేరుగా చూచు మనుష్యుని స్థితియు అట్టిదే.
+hi: जब इन्द्रियाँ निद्रा से ढँक जाती हैं, तब देह में रहने वाले की चेतना नष्ट हो जाती है। तब वह स्वप्न रूपी माया को, अथवा गाढ़ निद्रा रूपी मृत्यु जैसी अवस्था को प्राप्त होता है। अनेक अर्थों को अलग-अलग देखने वाले मनुष्य की दशा भी वैसी ही है।
 
 --- verse 4 ---
 deva:
@@ -48,6 +57,9 @@ deva:
 iast:
 kiṁ bhadraṁ kimabhadraṁ vā dvaitasyāvastunaḥ kiyat|
 vācoditaṁ tadanṛtaṁ manasā dhyātameva ca||
+en: What is good and what is bad in duality, which is not a real thing, and how much does it amount to? What speech says of it is untrue, and what the mind thinks of it is untrue also.
+tel: వస్తువు కాని ద్వైతమునందు శుభమేది, అశుభమేది, అది ఎంత? దానిని గూర్చి వాక్కు పలికినది అసత్యము, మనస్సు తలంచినదియు అసత్యమే.
+hi: जो वस्तु ही नहीं है, उस द्वैत में भला क्या और बुरा क्या, और वह कितना है? उसके विषय में वाणी जो कहती है वह असत्य है, और मन जो सोचता है वह भी असत्य है।
 
 --- verse 5 ---
 deva:
@@ -56,6 +68,9 @@ deva:
 iast:
 chāyāpratyāhvayābhāsā hyasanto'pyarthakāriṇaḥ|
 evaṁ dehādayo bhāvā yacchantyāmṛtyuto bhayam||
+en: A shadow, an echo and a reflection are not real, yet they do their work. In the same way the body and the rest, which are only appearances, give rise to fear that lasts until death.
+tel: ఛాయ, ప్రతిధ్వని, ప్రతిబింబము సత్యములు కాకున్నను తమ పని చేయును. అట్లే కేవలము తోచునవియైన దేహము మొదలగునవి మృత్యువు వరకు భయమును కలిగించును.
+hi: छाया, प्रतिध्वनि और प्रतिबिम्ब असत् हैं, फिर भी वे अपना काम करते हैं। इसी प्रकार केवल प्रतीति मात्र देह आदि भाव मृत्यु तक भय उत्पन्न करते हैं।
 
 --- verse 6 ---
 deva:
@@ -64,6 +79,9 @@ deva:
 iast:
 ātmaiva tadidaṁ viśvaṁ sṛjyate sṛjati prabhuḥ|
 trāyate trāti viśvātmā hriyate haratīśvaraḥ||
+en: The self alone is this whole world. It is created, and as the Lord it creates. It is protected, and as the self of all it protects. It is taken away, and as the Lord it takes away.
+tel: ఆత్మయే ఈ విశ్వమంతయు. అదియే సృజింపబడును, ప్రభువుగా అదియే సృజించును. అదియే రక్షింపబడును, విశ్వాత్మగా అదియే రక్షించును. అదియే హరింపబడును, ఈశ్వరుడుగా అదియే హరించును.
+hi: आत्मा ही यह सारा विश्व है। वही रचा जाता है और प्रभु होकर वही रचता है। वही रक्षित होता है और विश्वात्मा होकर वही रक्षा करता है। वही हरा जाता है और ईश्वर होकर वही हरता है।
 
 --- verse 7 ---
 deva:
@@ -74,6 +92,9 @@ iast:
 tasmānna hyātmano'nyasmādanyo bhāvo nirūpitaḥ|
 nirūpiteyaṁ trividhā nirmūlā bhātirātmani|
 idaṁ guṇamayaṁ viddhi trividhaṁ māyayā kṛtam||
+en: Therefore no thing has been shown to exist as other than the self and apart from it. This threefold appearance has been shown to be without root, and it appears in the self alone. Know this threefold thing, made of the guṇas, to be the work of māyā.
+tel: కావున ఆత్మకు అన్యమై, వేరుగా ఉన్న ఏ భావమును నిరూపింపబడలేదు. మూలము లేని ఈ త్రివిధమైన ప్రతిభాస ఆత్మయందే తోచుచున్నదని నిరూపింపబడినది. గుణములతో కూడిన ఈ త్రివిధమును మాయచే చేయబడినదిగా ఎరుగుము.
+hi: इसलिये आत्मा से अन्य और भिन्न कोई भाव सिद्ध नहीं किया गया है। मूल रहित यह त्रिविध प्रतीति आत्मा में ही भासती है, यह निरूपित हुआ। गुणों से बने इस त्रिविध को माया का किया हुआ जानो।
 
 --- verse 8 ---
 deva:
@@ -82,6 +103,9 @@ deva:
 iast:
 etad vidvān maduditaṁ jñānavijñānanaipuṇam|
 na nindati na ca stauti loke carati sūryavat||
+en: He who knows this teaching of mine, which is skill in knowledge and in discernment, neither blames nor praises. He moves in the world like the sun.
+tel: జ్ఞానవిజ్ఞాననైపుణ్యమైన నా ఈ ఉపదేశమును ఎరిగినవాడు నిందించడు, పొగడడు. అతడు సూర్యునివలె లోకమున సంచరించును.
+hi: ज्ञान और विज्ञान की निपुणता रूप मेरे इस उपदेश को जो जानता है, वह न निन्दा करता है और न स्तुति। वह सूर्य के समान लोक में विचरता है।
 
 --- verse 9 ---
 deva:
@@ -90,6 +114,9 @@ deva:
 iast:
 pratyakṣeṇānumānena nigamenātmasaṁvidā|
 ādyantavadasajjñātvā niḥsaṁgo vicarediha||
+en: By direct perception, by inference, by scripture and by his own experience of the self, he should know this to be unreal, with a beginning and an end, and should move about here free from attachment.
+tel: ప్రత్యక్షముచే, అనుమానముచే, శాస్త్రముచే, తన ఆత్మానుభవముచే ఇది ఆదియు అంతమును కలిగి అసత్తని ఎరిగి, సంగము లేక ఇచట సంచరించవలెను.
+hi: प्रत्यक्ष से, अनुमान से, शास्त्र से और अपने आत्मानुभव से इसे आदि और अन्त वाला तथा असत् जानकर संग रहित होकर यहाँ विचरना चाहिये।
 
 --- verse 10 ---
 deva:
@@ -100,6 +127,9 @@ iast:
 uddhava uvāca
 naivātmano na dehasya saṁsṛtirdraṣṭṛdṛśyayoḥ|
 anātmasvadṛśorīśa kasya syādupalabhyate||
+en: Uddhava said: O Lord, saṁsāra belongs neither to the self nor to the body, neither to the seer nor to the seen. The body has no consciousness, and the self sees by itself alone. To whom then does saṁsāra belong, and how is it seen?
+tel: ఉద్ధవుడు పలికెను: ఈశా, సంసారము ఆత్మకును కాదు, దేహమునకును కాదు; ద్రష్టకును కాదు, దృశ్యమునకును కాదు. దేహమునకు చైతన్యము లేదు, ఆత్మ తనచేతనే చూచును. అట్లయిన సంసారము ఎవరికి కలుగును, అది ఎట్లు కనబడుచున్నది?
+hi: उद्धव ने कहा: हे ईश, संसार न आत्मा का है और न देह का, न द्रष्टा का और न दृश्य का। देह अचेतन है और आत्मा अपने से ही देखता है। तब संसार किसका है और वह कैसे दिखाई देता है?
 
 --- verse 11 ---
 deva:
@@ -108,6 +138,9 @@ deva:
 iast:
 ātmāvyayo'guṇaḥ śuddhaḥ svayaṁjyotiranāvṛtaḥ|
 agnivaddāruvadaciddehaḥ kasyeha saṁsṛtiḥ||
+en: The self is unchanging, without guṇas, pure, self-luminous and uncovered. It is like fire, and the body is without consciousness, like wood. To whom here does saṁsāra belong?
+tel: ఆత్మ అవ్యయము, గుణరహితము, శుద్ధము, స్వయంప్రకాశము, ఆవరణము లేనిది. అది అగ్నివంటిది, దేహము కట్టెవలె అచేతనము. అట్లయిన ఇచట సంసారము ఎవరికి?
+hi: आत्मा अव्यय, गुणरहित, शुद्ध, स्वयंज्योति और अनावृत है। वह अग्नि के समान है और देह काष्ठ के समान अचेतन है। तब यहाँ संसार किसका है?
 
 --- verse 12 ---
 deva:
@@ -118,6 +151,9 @@ iast:
 śrībhagavānuvāca
 yāvad dehendriyaprāṇairātmanaḥ sannikarṣaṇam|
 saṁsāraḥ phalavāṁstāvadapārtho'pyavivekinaḥ||
+en: The blessed Lord said: As long as there is close contact of the self with the body, the senses and the prāṇas, so long saṁsāra bears fruit for the man without discernment, though it has no real meaning.
+tel: శ్రీభగవానుడు పలికెను: ఆత్మకు దేహము, ఇంద్రియములు, ప్రాణములతో సన్నికర్షము ఉన్నంత వరకు, వివేకము లేనివానికి సంసారము నిరర్థకమైనను ఫలమును ఇచ్చుచుండును.
+hi: श्रीभगवान ने कहा: जब तक आत्मा का देह, इन्द्रियों और प्राणों के साथ सन्निकर्ष है, तब तक अविवेकी के लिये संसार अर्थहीन होते हुए भी फलवान् रहता है।
 
 --- verse 13 ---
 deva:
@@ -126,6 +162,9 @@ deva:
 iast:
 arthe hyavidyamāne'pi saṁsṛtirna nivartate|
 dhyāyato viṣayānasya svapne'narthāgamo yathā||
+en: Though the object does not exist, saṁsāra does not cease for him who dwells upon the objects of sense, just as harm comes to a man in a dream.
+tel: విషయము లేకున్నను, విషయములను ధ్యానించువానికి సంసారము నివర్తించదు; స్వప్నమున అనర్థము కలుగునట్లే.
+hi: विषय न होने पर भी, विषयों का चिन्तन करने वाले का संसार नहीं निवृत्त होता, जैसे स्वप्न में अनर्थ की प्राप्ति होती है।
 
 --- verse 14 ---
 deva:
@@ -134,6 +173,9 @@ deva:
 iast:
 yathā hyapratibuddhasya prasvāpo bahvanarthabhṛt|
 sa eva pratibuddhasya na vai mohāya kalpate||
+en: Just as sleep brings much harm to one who has not awakened, and that same sleep does not delude him who is awake,
+tel: మేలుకొననివానికి నిద్ర ఎంతయో అనర్థమును కలిగించునట్లే, మేలుకొన్నవానికి ఆ నిద్రయే మోహమును కలిగించదు.
+hi: जैसे न जगे हुए मनुष्य की निद्रा बहुत अनर्थ लाती है, और वही निद्रा जगे हुए को मोह में नहीं डालती,
 
 --- verse 15 ---
 deva:
@@ -142,6 +184,9 @@ deva:
 iast:
 śokaharṣabhayakrodhalobhamohaspṛhādayaḥ|
 ahaṁkārasya dṛśyante janma mṛtyuśca nātmanaḥ||
+en: so sorrow, joy, fear, anger, greed, delusion, longing and the rest are seen to belong to the ego, and birth and death also, not to the self.
+tel: అట్లే శోకము, హర్షము, భయము, క్రోధము, లోభము, మోహము, స్పృహ మొదలగునవి, జన్మ మృత్యువులును అహంకారమునకే కనబడుచున్నవి, ఆత్మకు కాదు.
+hi: उसी प्रकार शोक, हर्ष, भय, क्रोध, लोभ, मोह, स्पृहा आदि तथा जन्म और मृत्यु अहंकार के ही देखे जाते हैं, आत्मा के नहीं।
 
 --- verse 16 ---
 deva:
@@ -154,6 +199,9 @@ dehendriyaprāṇamano'bhimāno
 jīvo'ntarātmā guṇakarmamūrtiḥ|
 sūtraṁ mahānityurudheva gītaḥ
 saṁsāra ādhāvati kālatantraḥ||
+en: The jīva, which is the sense of self in the body, the senses, the prāṇas and the mind, the inner self, taking its form from guṇa and karma, spoken of in many ways as sūtra and as mahat, runs on through saṁsāra, bound to time.
+tel: దేహము, ఇంద్రియములు, ప్రాణములు, మనస్సులయందు అభిమానమైన జీవుడు, అంతరాత్మ, గుణకర్మములే తన రూపముగా కలవాడు, సూత్రమని మహత్తని అనేక విధముల చెప్పబడినవాడు, కాలమునకు లోబడి సంసారమున పరుగెత్తును.
+hi: देह, इन्द्रिय, प्राण और मन में अभिमान रूप जीव, अन्तरात्मा, गुण और कर्म ही जिसका रूप है, जो सूत्र और महत् कहकर अनेक प्रकार से कहा गया है, वह काल के अधीन होकर संसार में दौड़ता है।
 
 --- verse 17 ---
 deva:
@@ -166,6 +214,9 @@ amūlametad bahurūparūpitaṁ
 manovacaḥprāṇaśarīrakarma|
 jñānāsinopāsanayā śitena-
 cchittvā munirgāṁ vicaratyatṛṣṇaḥ||
+en: This has no root, and it is given many forms as mind, speech, prāṇa, body and action. Cutting it with the sword of knowledge, sharpened by worship, the sage walks the earth without craving.
+tel: ఇది మూలము లేనిది, మనస్సు, వాక్కు, ప్రాణము, శరీరము, కర్మ అని అనేక రూపములుగా చేయబడినది. ఉపాసనచే పదునుపెట్టబడిన జ్ఞానఖడ్గముచే దానిని ఖండించి, ముని తృష్ణ లేక భూమిపై సంచరించును.
+hi: यह मूल रहित है और मन, वाणी, प्राण, शरीर तथा कर्म के रूप में अनेक प्रकार से रूपित है। उपासना से तीखे किये ज्ञान के खड्ग से उसे काटकर मुनि तृष्णा रहित होकर पृथ्वी पर विचरता है।
 
 --- verse 18 ---
 deva:
@@ -178,6 +229,9 @@ jñānaṁ viveko nigamastapaśca
 pratyakṣamaitihyamathānumānam|
 ādyantayorasya yadeva kevalaṁ
 kālaśca hetuśca tadeva madhye||
+en: Knowledge, discrimination, scripture, tapas, direct perception, tradition and inference are the means. That alone which is at the beginning and at the end of this world, and which is its time and its cause, is the same in the middle also.
+tel: జ్ఞానము, వివేకము, శాస్త్రము, తపస్సు, ప్రత్యక్షము, ఐతిహ్యము, అనుమానము సాధనములు. ఈ ప్రపంచమునకు ఆదియందును అంతమునందును ఏది మాత్రమే ఉన్నదో, ఏది కాలమును హేతువును అయి ఉన్నదో, అదియే మధ్యయందును ఉన్నది.
+hi: ज्ञान, विवेक, शास्त्र, तप, प्रत्यक्ष, ऐतिह्य और अनुमान साधन हैं। इस जगत् के आदि और अन्त में जो अकेला ही है, और जो इसका काल तथा हेतु है, वही मध्य में भी है।
 
 --- verse 19 ---
 deva:
@@ -190,6 +244,9 @@ yathā hiraṇyaṁ svakṛtaṁ purastāt
 paścācca sarvasya hiraṇmayasya|
 tadeva madhye vyavahāryamāṇaṁ
 nānāpadeśairahamasya tadvat||
+en: As gold is there before all that is made of gold, and after it as well, and in the middle it is that same gold dealt with under many names, so am I in regard to this world.
+tel: బంగారు వస్తువులన్నిటికి ముందును వెనుకను బంగారమే ఉన్నట్లు, మధ్యయందును అదే బంగారము అనేక పేరులతో వ్యవహరింపబడుచున్నట్లు, ఈ ప్రపంచమునకు నేను అట్లే ఉన్నాను.
+hi: जैसे सोने से बनी सब वस्तुओं से पहले और पीछे सोना ही रहता है, और मध्य में भी वही सोना अनेक नामों से बरता जाता है, वैसे ही इस जगत् के प्रति मैं हूँ।
 
 --- verse 20 ---
 deva:
@@ -202,6 +259,9 @@ vijñānametattriyavasthamaṁga
 guṇatrayaṁ kāraṇakāryakartṛ|
 samanvayena vyatirekataśca
 yenaiva turyeṇa tadeva satyam||
+en: Dear one, this consciousness has three states, and the three guṇas are its cause, its effect and its agent. There is a fourth, by which those three are known, through their being present together with it and through their being absent from it. That fourth alone is the truth.
+tel: నాయనా, ఈ విజ్ఞానము మూడు అవస్థలు కలది; మూడు గుణములే దానికి కారణము, కార్యము, కర్త. ఆ మూడును అన్వయముచేతను వ్యతిరేకముచేతను ఏ తురీయముచే ఎరుగబడునో, ఆ తురీయమే సత్యము.
+hi: हे प्रिय, यह विज्ञान तीन अवस्थाओं वाला है, और तीन गुण ही उसके कारण, कार्य और कर्ता हैं। अन्वय से और व्यतिरेक से जिस तुरीय के द्वारा वे तीनों जाने जाते हैं, वही तुरीय सत्य है।
 
 --- verse 21 ---
 deva:
@@ -214,6 +274,9 @@ na yat purastāduta yanna paścā-
 nmadhye ca tanna vyapadeśamātram|
 bhūtaṁ prasiddhaṁ ca pareṇa yad yat
 tadeva tat syāditi me manīṣā||
+en: That which is not there before, nor after, nor in the middle, is no real thing but a name only. Whatever has come to be and is known through another is nothing but that other. This is my settled view.
+tel: ముందును లేక, వెనుకను లేక, మధ్యయందును లేనిది వస్తువు కాదు, పేరు మాత్రమే. ఏది వేరొకదాని ద్వారా పుట్టినదై, వేరొకదాని ద్వారా ఎరుగబడునో, అది ఆ వేరొకదియే అగును. ఇదియే నా నిశ్చయము.
+hi: जो पहले नहीं, पीछे नहीं और मध्य में भी नहीं, वह वस्तु नहीं, केवल नाम मात्र है। जो कुछ दूसरे से उत्पन्न और दूसरे से ज्ञात होता है, वह वही दूसरा ही है। यही मेरा निश्चय है।
 
 --- verse 22 ---
 deva:
@@ -226,6 +289,9 @@ avidyamāno'pyavabhāsate yo
 vaikāriko rājasasarga eṣaḥ|
 brahma svayaṁjyotirato vibhāti
 brahmendriyārthātmavikāracitram||
+en: This creation, born of change and of rajas, has no real existence and yet it appears. Brahman is self-luminous, and therefore it shines forth as this picture of the senses, their objects, the mind and their changes.
+tel: వికారమునుండి, రజస్సునుండి పుట్టిన ఈ సృష్టికి నిజమైన ఉనికి లేదు, అయినను అది తోచుచున్నది. బ్రహ్మము స్వయంప్రకాశము; కావుననే ఇంద్రియములు, విషయములు, మనస్సు, వాటి వికారములనెడి ఈ చిత్రముగా అది ప్రకాశించుచున్నది.
+hi: विकार और रजस् से उत्पन्न यह सृष्टि वास्तव में नहीं है, तो भी भासती है। ब्रह्म स्वयंज्योति है, इसीसे वह इन्द्रिय, विषय, मन और उनके विकार रूप इस चित्र के रूप में प्रकाशित होता है।
 
 --- verse 23 ---
 deva:
@@ -238,6 +304,9 @@ evaṁ sphuṭaṁ brahmavivekahetubhiḥ
 parāpavādena viśāradena|
 chittvā''tmasandehamupārameta
 svānandatuṣṭo'khilakāmukebhyaḥ||
+en: Thus, by the reasons that discern Brahman, and by the skilled denial of what is other, one should clearly cut away all doubt about the self. Content in his own bliss, he should then turn away from every object of desire.
+tel: ఇట్లు బ్రహ్మవివేకహేతువులచే, అన్యమును నేర్పుతో నిరాకరించుటచే ఆత్మసందేహమును స్పష్టముగా ఖండించవలెను. తన ఆనందముతో తృప్తుడై, కాములైన విషయములన్నిటి నుండి ఉపరతుడు కావలెను.
+hi: इस प्रकार ब्रह्मविवेक के हेतुओं से और अन्य के निपुण निषेध से आत्मा के सन्देह को स्पष्ट रूप से काट देना चाहिये। अपने आनन्द में तृप्त होकर सब काम्य विषयों से उपरत हो जाना चाहिये।
 
 --- verse 24 ---
 deva:
@@ -250,6 +319,9 @@ nātmā vapuḥ pārthivamindriyāṇi
 devā hyasurvāyujalaṁ hutāśaḥ|
 mano'nnamātraṁ dhiṣaṇā ca sattva-
 mahaṁkṛtiḥ khaṁ kṣitirarthasāmyam||
+en: The self is not the body made of earth, nor the senses, nor the gods who preside over them, nor the breath, nor air, nor water, nor fire. It is not the mind, which is only food, nor the intellect, nor sattva, nor the ego, nor space, nor earth, nor the state in which the guṇas stand in balance.
+tel: ఆత్మ పార్థివమైన శరీరము కాదు, ఇంద్రియములు కాదు, వాటికి అధిపతులైన దేవతలు కాదు, ప్రాణము కాదు, వాయువు కాదు, జలము కాదు, అగ్ని కాదు. అన్నమాత్రమైన మనస్సు కాదు, బుద్ధి కాదు, సత్త్వము కాదు, అహంకారము కాదు, ఆకాశము కాదు, భూమి కాదు, గుణములు సమముగా ఉండు స్థితియు కాదు.
+hi: आत्मा पार्थिव शरीर नहीं, इन्द्रियाँ नहीं, उनके अधिष्ठाता देव नहीं, प्राण नहीं, वायु नहीं, जल नहीं, अग्नि नहीं। अन्नमात्र मन नहीं, बुद्धि नहीं, सत्त्व नहीं, अहंकार नहीं, आकाश नहीं, पृथ्वी नहीं, और गुणों की साम्य अवस्था भी नहीं।
 
 --- verse 25 ---
 deva:
@@ -262,6 +334,9 @@ samāhitaiḥ kaḥ karaṇairguṇātmabhi-
 rguṇo bhavenmatsuviviktadhāmnaḥ|
 vikṣipyamāṇairuta kiṁ nu dūṣaṇaṁ
 ghanairupetairvigatai raveḥ kim||
+en: My abode is wholly apart from them. What merit then comes to me when the senses, which are made of the guṇas, are composed? And what fault comes to me when they are scattered? What is it to the sun when clouds come and go?
+tel: నా ధామము వాటికి పూర్తిగా వేరు. అట్లయిన గుణములతో చేయబడిన ఇంద్రియములు సమాహితములైనప్పుడు నాకు ఏ మేలు కలుగును? అవి చెదిరినప్పుడు ఏ దోషము కలుగును? మేఘములు వచ్చినను పోయినను సూర్యునికి ఏమి?
+hi: मेरा धाम उनसे सर्वथा भिन्न है। तब गुणों से बनी इन्द्रियों के समाहित होने पर मुझे कौन सा गुण अर्थात् लाभ होगा? और उनके विक्षिप्त होने पर कौन सा दोष होगा? बादलों के आने और जाने से सूर्य का क्या?
 
 --- verse 26 ---
 deva:
@@ -274,6 +349,9 @@ yathā nabho vāyvanalāmbubhūguṇai-
 rgatāgatairvartuguṇairna sajjate|
 tathākṣaraṁ sattvarajastamomalai-
 rahaṁmateḥ saṁsṛtihetubhiḥ param||
+en: As the sky is not touched by the qualities of air, fire, water and earth, which come and go, nor by the qualities that return in their turn, so the imperishable supreme is not touched by the taints of sattva, rajas and tamas, which belong to the sense of self and are the causes of saṁsāra.
+tel: వచ్చుచు పోవుచు ఉండు వాయువు, అగ్ని, జలము, భూమి గుణములచేతను, వరుసగా తిరిగివచ్చు గుణములచేతను ఆకాశము అంటబడనట్లే, అహంభావమునకు చెందిన, సంసారహేతువులైన సత్త్వరజస్తమోమలములచే అక్షరమైన పరతత్త్వము అంటబడదు.
+hi: आते-जाते वायु, अग्नि, जल और पृथ्वी के गुणों से तथा बारी-बारी लौटने वाले गुणों से जैसे आकाश नहीं लिपटता, वैसे ही अहंभाव के, संसार के हेतु सत्त्व, रजस् और तमस् के मलों से अक्षर परम तत्त्व नहीं लिपटता।
 
 --- verse 27 ---
 deva:
@@ -286,6 +364,9 @@ tathāpi saṁgaḥ parivarjanīyo
 guṇeṣu māyāraciteṣu tāvat|
 madbhaktiyogena dṛḍhena yāvad
 rajo nirasyeta manaḥkaṣāyaḥ||
+en: Even so, attachment to the guṇas which māyā has made is to be given up entirely, until by firm devotion to me rajas, the stain of the mind, is driven out.
+tel: అయినను, నాయందు దృఢమైన భక్తియోగముచే మనస్సు యొక్క మలమైన రజస్సు తొలగిపోవునంత వరకు, మాయచే చేయబడిన గుణములయందు సంగమును పూర్తిగా విడువవలెను.
+hi: फिर भी, मेरे प्रति दृढ़ भक्तियोग से मन का मल रजस् दूर हो जाने तक, माया से रचे गुणों में संग सर्वथा छोड़ देना चाहिये।
 
 --- verse 28 ---
 deva:
@@ -298,6 +379,9 @@ yathā''mayo'sādhucikitsito nṛṇāṁ
 punaḥ punaḥ saṁtudati prarohan|
 evaṁ mano'pakvakaṣāyakarma
 kuyoginaṁ vidhyati sarvasaṁgam||
+en: As a disease of men that has been badly treated springs up again and again and gives pain, so the mind, with its taints unburnt and its karma unspent, torments the imperfect yogin who is attached to everything.
+tel: బాగుగా చికిత్స చేయబడని రోగము మనుష్యులకు మరల మరల చిగురించి బాధించునట్లే, కషాయములు పక్వము కాని, కర్మము మిగిలిన మనస్సు సర్వసంగము కల కుయోగిని బాధించును.
+hi: जैसे ठीक से चिकित्सा न किये गये रोग मनुष्यों को बार-बार उठकर पीड़ा देते हैं, वैसे ही जिसके कषाय और कर्म पके नहीं हैं, वह मन सब में आसक्त कुयोगी को बेधता है।
 
 --- verse 29 ---
 deva:
@@ -310,6 +394,9 @@ kuyogino ye vihitāntarāyai-
 rmanuṣyabhūtaistridaśopasṛṣṭaiḥ|
 te prāktanābhyāsabalena bhūyo
 yuñjanti yogaṁ na tu karmatantram||
+en: Those imperfect yogins who are hindered by obstacles which take human form and are sent by the gods take up yoga again by the strength of their former practice, and not the round of karma.
+tel: మనుష్యరూపమును ధరించిన, దేవతలచే పంపబడిన అంతరాయములతో ఆటంకపడిన కుయోగులు తమ పూర్వాభ్యాసబలముచే మరల యోగమునే అనుష్ఠించుదురు, కర్మతంత్రమును కాదు.
+hi: मनुष्य का रूप धारण किये हुए और देवताओं से भेजे गये अन्तरायों से रोके गये कुयोगी अपने पूर्व अभ्यास के बल से फिर योग को ही करते हैं, कर्मतन्त्र को नहीं।
 
 --- verse 30 ---
 deva:
@@ -322,6 +409,9 @@ karoti karma kriyate ca jantuḥ
 kenāpyasau codita ānipātāt|
 na tatra vidvān prakṛtau sthito'pi
 nivṛttatṛṣṇaḥ svasukhānubhūtyā||
+en: A living being does action and is also made to act. It is driven by something until it falls at the end. The wise man is not in that, though he stands in prakṛti, for his craving has ceased through the experience of his own bliss.
+tel: జంతువు కర్మను చేయును, చేయింపబడును. అది అంతము వరకు ఏదో ఒకదానిచే ప్రేరేపింపబడును. ప్రకృతియందు ఉన్నను విద్వాంసుడు అందు ఉండడు, ఏలయన తన సుఖానుభూతిచే అతని తృష్ణ నశించినది.
+hi: जीव कर्म करता है और कराया भी जाता है। वह अन्त तक किसी के द्वारा प्रेरित होता रहता है। प्रकृति में स्थित होकर भी विद्वान् उसमें नहीं है, क्योंकि अपने सुख के अनुभव से उसकी तृष्णा निवृत्त हो गयी है।
 
 --- verse 31 ---
 deva:
@@ -334,6 +424,9 @@ tiṣṭhantamāsīnamuta vrajantaṁ
 śayānamukṣantamadantamannam|
 svabhāvamanyat kimapīhamāna-
 mātmānamātmasthamatirna veda||
+en: He whose mind rests in the self does not know his own self as standing, as sitting, as walking, as lying down, as passing water, as eating food, or as doing anything else by its own nature.
+tel: ఆత్మయందు మనస్సు నిలిచినవాడు తన ఆత్మను నిలిచినదిగా, కూర్చున్నదిగా, నడచునదిగా, పరుండినదిగా, మూత్రము విడుచునదిగా, అన్నము తినునదిగా, లేక స్వభావముచే వేరొకటి చేయునదిగా ఎరుగడు.
+hi: जिसकी बुद्धि आत्मा में स्थित है, वह अपने आत्मा को खड़ा हुआ, बैठा हुआ, चलता हुआ, लेटा हुआ, मूत्र त्याग करता हुआ, अन्न खाता हुआ, अथवा स्वभाव से कुछ और करता हुआ नहीं जानता।
 
 --- verse 32 ---
 deva:
@@ -346,6 +439,9 @@ yadi sma paśyatyasadindriyārthaṁ
 nānānumānena viruddhamanyat|
 na manyate vastutayā manīṣī
 svāpnaṁ yathotthāya tirodadhānam||
+en: If he does see an unreal object of the senses, something other and contradicted by many kinds of inference, the thoughtful man does not hold it to be real, as what was seen in a dream vanishes when he rises.
+tel: అసత్యమైన ఇంద్రియవిషయమును, అనేక అనుమానములచే విరుద్ధమైన అన్యమును చూచినను, మనీషి దానిని వాస్తవముగా ఎంచడు; మేలుకొనినప్పుడు స్వప్నమున చూచినది మాయమగునట్లే.
+hi: असत् इन्द्रिय-विषय को, तथा अनेक अनुमानों से विरुद्ध अन्य को देखने पर भी मनीषी उसे वस्तु नहीं मानता, जैसे जाग जाने पर स्वप्न में देखा हुआ लुप्त हो जाता है।
 
 --- verse 33 ---
 deva:
@@ -358,6 +454,9 @@ pūrvaṁ gṛhītaṁ guṇakarmacitra-
 majñānamātmanyaviviktamaṁga|
 nivartate tat punarīkṣayaiva
 na gṛhyate nāpi visṛjya ātmā||
+en: Dear one, the ignorance taken up before, which is varied with guṇa and karma and is not kept apart from the self, ceases by this very seeing. The self is neither taken up nor given up.
+tel: నాయనా, పూర్వము గ్రహింపబడిన, గుణకర్మములతో విచిత్రమైన, ఆత్మనుండి వేరుచేయబడని అజ్ఞానము ఈ దర్శనముచేతనే నివర్తించును. ఆత్మ గ్రహింపబడదు, విడువబడదు.
+hi: हे प्रिय, पहले ग्रहण किया हुआ, गुण और कर्म से चित्रित, आत्मा से अलग न किया हुआ अज्ञान इसी दर्शन से निवृत्त हो जाता है। आत्मा न ग्रहण किया जाता है और न छोड़ा जाता है।
 
 --- verse 34 ---
 deva:
@@ -370,6 +469,9 @@ yathā hi bhānorudayo nṛcakṣuṣāṁ
 tamo nihanyānna tu sad vidhatte|
 evaṁ samīkṣā nipuṇā satī me
 hanyāttamisraṁ puruṣasya buddheḥ||
+en: As the rising of the sun for the eyes of men destroys the darkness but does not make the objects, so this sound and skilled discernment taught by me destroys the darkness in a man's understanding.
+tel: సూర్యోదయము మనుష్యుల కన్నులకు చీకటిని నశింపజేయునే కాని వస్తువును కల్పించదు. అట్లే నేను చెప్పిన నిపుణమైన, సత్యమైన ఈ సమీక్ష మనుష్యుని బుద్ధియందలి చీకటిని నశింపజేయును.
+hi: जैसे सूर्य का उदय मनुष्यों की आँखों के लिये अन्धकार को नष्ट करता है, पर वस्तु को रचता नहीं, वैसे ही मेरी कही हुई यह निपुण और सत्य समीक्षा मनुष्य की बुद्धि के अन्धकार को नष्ट करती है।
 
 --- verse 35 ---
 deva:
@@ -382,6 +484,9 @@ eṣa svayaṁjyotirajo'prameyo
 mahānubhūtiḥ sakalānubhūtiḥ|
 eko'dvitīyo vacasāṁ virāme
 yeneṣitā vāgasavaścaranti||
+en: This is self-luminous, unborn and beyond measure. It is the great awareness and the awareness of all. It is one, without a second, and it stands where words come to rest. Sent forth by it, speech and the vital airs move.
+tel: ఇది స్వయంజ్యోతి, అజము, అప్రమేయము. ఇది మహానుభూతి, సకలానుభూతి. ఇది ఏకము, అద్వితీయము, వాక్కులు ఆగుచోట ఉండునది. దానిచే ప్రేరేపింపబడి వాక్కును ప్రాణములును చరించును.
+hi: यह स्वयंज्योति, अजन्मा और अप्रमेय है। यह महान् अनुभूति और सबकी अनुभूति है। यह एक है, अद्वितीय है, और वाणियों के विराम में स्थित है। इसी से प्रेरित होकर वाणी और प्राण चलते हैं।
 
 --- verse 36 ---
 deva:
@@ -390,6 +495,9 @@ deva:
 iast:
 etāvānātmasaṁmoho yad vikalpastu kevale|
 ātmannṛte svamātmānamavalambo na yasya hi||
+en: The delusion about the self is just this much, that difference is imagined in the one alone. Apart from the self there is nothing on which anyone can rest.
+tel: ఆత్మను గూర్చిన సమ్మోహము ఇంతమాత్రమే; కేవలమైన ఒకదానియందు భేదమును కల్పించుటయే. ఆత్మను తప్ప ఎవనికిని ఆధారము వేరొకటి లేదు.
+hi: आत्मा के विषय में सम्मोह इतना ही है कि केवल एक में विकल्प किया जाता है। अपने आत्मा के सिवा किसी का कोई आश्रय नहीं है।
 
 --- verse 37 ---
 deva:
@@ -398,6 +506,9 @@ deva:
 iast:
 yannāmākṛtibhirgrāhyaṁ paṁcavarṇamabādhitam|
 vyarthenāpyarthavādo'yaṁ dvayaṁ paṇḍitamāninām||
+en: That which is grasped through names and forms, which is made of the five elements, and which nothing opposes — such talk of duality by those who think themselves learned is only words spoken in praise, and it is without meaning.
+tel: నామములచేతను ఆకృతులచేతను గ్రహింపబడునది, పంచభూతములతో కూడినది, ఎవ్వరును ఖండింపనిది; పండితులమని తలంచుకొనువారు చేయు ఈ ద్వైతప్రతిపాదన అర్థవాదము మాత్రమే, దానికి ప్రయోజనము లేదు.
+hi: जो नाम और आकृति से ग्रहण किया जाता है, जो पाँच भूतों का है और जिसका खण्डन नहीं किया जाता, पण्डित मानने वालों का यह द्वैत का प्रतिपादन अर्थवाद मात्र है और व्यर्थ है।
 
 --- verse 38 ---
 deva:
@@ -406,6 +517,9 @@ deva:
 iast:
 yogino'pakvayogasya yuṁjataḥ kāya utthitaiḥ|
 upasargairvihanyeta tatrāyaṁ vihito vidhiḥ||
+en: When the body of a yogin whose yoga is not yet matured, and who is still practising, is afflicted by troubles that arise, this is the rule that has been laid down for him.
+tel: యోగము పక్వము కాని, అభ్యాసము చేయుచున్న యోగి శరీరము కలిగిన ఉపసర్గములచే బాధింపబడినప్పుడు, అతనికి ఈ విధి చెప్పబడినది.
+hi: जिसका योग पका नहीं है और जो अभ्यास कर रहा है, ऐसे योगी का शरीर उठे हुए उपसर्गों से पीड़ित हो, तब उसके लिये यह विधि कही गयी है।
 
 --- verse 39 ---
 deva:
@@ -414,6 +528,9 @@ deva:
 iast:
 yogadhāraṇayā kāṁścidāsanairdhāraṇānvitaiḥ|
 tapomantrauṣadhaiḥ kāṁścidupasargān vinirdahet||
+en: He should burn away some of these troubles by fixing the mind in yoga, some by postures joined with concentration, and some by tapas, by mantras and by medicines.
+tel: కొన్ని ఉపసర్గములను యోగధారణచే, కొన్నిని ధారణతో కూడిన ఆసనములచే, కొన్నిని తపస్సుచే, మంత్రములచే, ఔషధములచే దహించవలెను.
+hi: कुछ उपसर्गों को योग की धारणा से, कुछ को धारणा से युक्त आसनों से, और कुछ को तप, मन्त्र और औषध से जला देना चाहिये।
 
 --- verse 40 ---
 deva:
@@ -422,6 +539,9 @@ deva:
 iast:
 kāṁścinmamānudhyānena nāmasaṁkīrtanādibhiḥ|
 yogeśvarānuvṛttyā vā hanyādaśubhadāñchanaiḥ||
+en: Some of them, which bring harm, he should destroy little by little by meditation on me, by the chanting of my names and the rest, or by following the masters of yoga.
+tel: అశుభమును కలిగించు వాటిలో కొన్నిని నన్ను ధ్యానించుటచే, నామసంకీర్తనము మొదలగునవి చేయుటచే, లేక యోగేశ్వరులను అనుసరించుటచే మెల్లమెల్లగా నశింపజేయవలెను.
+hi: उनमें से कुछ अशुभ देने वाले उपसर्गों को मेरे ध्यान से, नामसंकीर्तन आदि से, अथवा योगेश्वरों के अनुवर्तन से धीरे-धीरे नष्ट कर दे।
 
 --- verse 41 ---
 deva:
@@ -430,6 +550,9 @@ deva:
 iast:
 kecid dehamimaṁ dhīrāḥ sukalpaṁ vayasi sthiram|
 vidhāya vividhopāyairatha yuṁjanti siddhaye||
+en: Some steadfast men make this body fit and firm in age by various means, and then practise for the attainment of powers.
+tel: కొందరు ధీరులు అనేక ఉపాయములచే ఈ దేహమును సుకల్పముగా, వయసులో స్థిరముగా చేసి, పిమ్మట సిద్ధి కొరకు అభ్యాసము చేయుదురు.
+hi: कुछ धीर पुरुष अनेक उपायों से इस देह को सुकल्प और आयु में स्थिर बनाकर फिर सिद्धि के लिये अभ्यास करते हैं।
 
 --- verse 42 ---
 deva:
@@ -438,6 +561,9 @@ deva:
 iast:
 na hi tat kuśalādṛtyaṁ tadāyāso hyapārthakaḥ|
 antavattvāccharīrasya phalasyeva vanaspateḥ||
+en: That is not to be approved by the wise, and the effort spent on it is without purpose, because the body comes to an end, like the fruit of a tree.
+tel: అది కుశలునిచే ఆదరింపదగినది కాదు, దానికై చేయు ప్రయత్నము వ్యర్థము; ఏలయన శరీరము వనస్పతి ఫలమువలె అంతము కలది.
+hi: वह कुशल पुरुष के आदर योग्य नहीं है, और उसका परिश्रम व्यर्थ है, क्योंकि शरीर वनस्पति के फल के समान अन्तवान् है।
 
 --- verse 43 ---
 deva:
@@ -446,6 +572,9 @@ deva:
 iast:
 yogaṁ niṣevato nityaṁ kāyaścet kalpatāmiyāt|
 tacchraddadhyānna matimān yogamutsṛjya matparaḥ||
+en: If the body of one who practises yoga daily should become fit and firm, the wise man who is devoted to me does not trust in that and give up his yoga.
+tel: నిత్యము యోగమును అభ్యసించువాని శరీరము సుకల్పమైనను, నాయందు నిలిచిన బుద్ధిమంతుడు దానిని నమ్మి యోగమును విడువడు.
+hi: नित्य योग का सेवन करने वाले का शरीर यदि सुकल्प हो जाय, तो भी मुझमें लगा हुआ बुद्धिमान् उस पर विश्वास कर योग को नहीं छोड़ता।
 
 --- verse 44 ---
 deva:
@@ -454,9 +583,15 @@ deva:
 iast:
 yogacaryāmimāṁ yogī vicaran madapāśrayaḥ|
 nāntarāyairvihanyeta niḥspṛhaḥ svasukhānubhūḥ||
+en: The yogin who follows this course of yoga and takes refuge in me is not hindered by obstacles. He is without longing, and he experiences his own bliss.
+tel: ఈ యోగచర్యను అనుసరించుచు నన్ను ఆశ్రయించిన యోగి అంతరాయములచే బాధింపబడడు. అతడు స్పృహ లేనివాడు, తన సుఖమును అనుభవించువాడు.
+hi: इस योगचर्या का आचरण करता हुआ और मेरा आश्रय लेने वाला योगी अन्तरायों से नहीं रोका जाता। वह स्पृहा रहित है और अपने सुख का अनुभव करता है।
 
 --- verse none ---
 deva:
 इति श्रीमद्भागवते महापुराणे पारमहंस्यां संहितायामेकादशस्कन्धेऽष्टाविंशोऽध्यायः॥ २८॥
 iast:
 iti śrīmadbhāgavate mahāpurāṇe pāramahaṁsyāṁ saṁhitāyāmekādaśaskandhe'ṣṭāviṁśo'dhyāyaḥ|| 28||
+en: Thus ends the twenty-eighth adhyāya in the eleventh skandha of the Śrīmad Bhāgavata Mahāpurāṇa, the saṁhitā of the paramahaṁsas.
+tel: ఇట్లు శ్రీమద్భాగవత మహాపురాణమునందు, పరమహంసల సంహితయందు, ఏకాదశ స్కంధమున ఇరువది ఎనిమిదవ అధ్యాయము సమాప్తము.
+hi: इस प्रकार श्रीमद्भागवत महापुराण की परमहंसों की संहिता में एकादश स्कन्ध का अट्ठाईसवाँ अध्याय समाप्त हुआ।

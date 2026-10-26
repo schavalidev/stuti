@@ -9,7 +9,7 @@ Type: Purāṇa (an adhyāya of the Śrīmad Bhāgavata, Skandha 11)
 
 Source / recension: Base text and authority: the Gītā Press, Gorakhpur Śrīmadbhāgavata Mahāpurāṇa with Hindi translation, Part 2 (Gītā Press code 27), archive.org item `shrimadbhagwat-mahapuran-bhag-2`, printed pages 763–769; the PDF page numbers are the printed ones. The PDF carries the typesetter's own text layer in the Chanakya font encoding, and the text was decoded from it by machine with `bin/bhagavata/chanakya.py`, not read off OCR or typed. The decoder was checked against GRETIL over all twelve skandhas before any file was written, and the differences that remain were sampled and found to be readings of the two editions. Second witness: GRETIL's `sa_bhAgavatapurANa.xml` (IAST, contributed by Ulrich Stiehl), a separate editorial lineage, compared verse by verse by machine. The TTD edition with the commentaries of Śrīdhara, Vīrarāghava and Vijayadhvaja (archive.org `Bhagavata_Purana_With_Multiple_Commentaries_TTD_Critical_Edition`) is the third witness where one is needed; it was not read for this file. The IAST was generated mechanically from the Devanāgarī with `bin/dev2iast.py`.
 
-Recension note: Text-only file, written 1 Oct 2026 at the user's instruction to lay down the whole Bhāgavata first: the English, Telugu and Hindi meanings are still to be added, and the witnesses' differences listed here have been recorded by machine and not yet adjudicated. The print is followed throughout. The print numbers 44 verses and GRETIL numbers 44. Of the 44 verses GRETIL has under the same number, 34 agree with the print letter for letter once spacing and the spelling of nasals are set aside; the rest differ: 3, 11, 15, 23, 24, 29, 33, 35, 41, 43. Spacing is the print's, as its text layer gives it; in a few places justification has left a space inside a word, and these are still to be closed when the verse is read. The speaker lines (श्रीशुक उवाच and the others) are printed in italic above the verse they introduce, and are given as its first line.
+Recension note: Meanings written 26 Oct 2026 (session S78). The differences between the witnesses listed below were read as the verses were glossed; except where this note says otherwise, each is a spelling, a sandhi or a word order of the two editions, none of them changes the sense, and the print's reading therefore stands unbracketed. The print is followed throughout. The print numbers 44 verses and GRETIL numbers 44. Of the 44 verses GRETIL has under the same number, 34 agree with the print letter for letter once spacing and the spelling of nasals are set aside; the rest differ: 3, 11, 15, 23, 24, 29, 33, 35, 41, 43. Spacing is the print's, as its text layer gives it. The speaker lines (श्रीशुक उवाच and the others) are printed in italic above the verse they introduce, and are given as its first line. No typesetting defect needed correcting in this adhyāya. The detectors were run before any meaning was written: the one justification finding, तद् बुधः at verse 1, is the print's own space after a virāma consonant, which GRETIL merely writes as a loose compound (tad-budhaḥ), and it stands. Every place where GRETIL spaces a word that the print joins falls after a virāma consonant, where the script requires the ligature, or before an avagraha, where this print joins throughout (grasedājagaro'kriyaḥ at verse 2, mene'rthakāmukā at verse 24), so none of them is a lost space. The witnesses' remaining differences are nasal spelling (पिंगला against piṅgalā, संकेत against saṅketa), the print's double avagraha for a long vowel (मयाऽऽत्मा at verse 32), and readings of the two editions at verses 23, 24, 29 and 33, where the print stands. At verse 29 the print's न ह्यंगाज्जातनिर्वेदो admits more than one division; following Śrīdhara the meaning here is that a man in whom detachment has not arisen will not give up the bondage of the body, which is the sense the second half of the verse requires and the one GRETIL's न ह्यंग अजातनिर्वेदो spells out.
 
 Verse count: 44, plus the closing colophon printed unnumbered.
 
@@ -24,6 +24,9 @@ iast:
 brāhmaṇa uvāca
 sukhamaindriyakaṁ rājan svarge naraka eva ca|
 dehināṁ yad yathā duḥkhaṁ tasmānneccheta tad budhaḥ||
+en: The brāhmaṇa said: O king, the happiness of the senses comes to embodied beings in heaven and in hell as well, just as sorrow comes, without being sought. Therefore a wise man should not desire it.
+tel: బ్రాహ్మణుడు పలికెను: ఓ రాజా, దేహధారులకు స్వర్గంలోను నరకంలోను ఇంద్రియసుఖం దుఃఖం వలెనే తనంతట తానే కలుగుతుంది. కావున వివేకి దానిని కోరకూడదు.
+hi: ब्राह्मण ने कहा: हे राजन्, देहधारियों को स्वर्ग में और नरक में भी इंद्रियों का सुख, दुख के समान, अपने आप ही मिलता है। इसलिए बुद्धिमान को उसकी इच्छा नहीं करनी चाहिए।
 
 --- verse 2 ---
 deva:
@@ -32,6 +35,9 @@ deva:
 iast:
 grāsaṁ sumṛṣṭaṁ virasaṁ mahāntaṁ stokameva vā|
 yadṛcchayaivāpatitaṁ grasedājagaro'kriyaḥ||
+en: Food may be tasty or without taste, much or little. Whatever comes of its own accord, he should eat it, making no effort, like the python.
+tel: ఆహారం రుచిగా ఉండవచ్చు, రుచి లేకుండా ఉండవచ్చు, ఎక్కువగా ఉండవచ్చు, కొద్దిగా ఉండవచ్చు. తనంతట తానే లభించినది ఏదైనా, ఏ ప్రయత్నమూ చేయక, కొండచిలువ వలె తినవలెను.
+hi: भोजन स्वादिष्ट हो या बेस्वाद, बहुत हो या थोड़ा। जो अपने आप मिल जाए, उसे वह अजगर के समान बिना प्रयत्न किए खा ले।
 
 --- verse 3 ---
 deva:
@@ -40,6 +46,9 @@ deva:
 iast:
 śayītāhāni bhūrīṇi nirāhāro'nupakramaḥ|
 yadi nopanamed grāso mahāhiriva diṣṭabhuk||
+en: If food does not come to him, he should lie for many days without eating and without making any effort, like the great serpent, and take only what comes to him by destiny.
+tel: ఆహారం లభించని ఎడల, గొప్ప సర్పము వలె, ఏ ప్రయత్నమూ చేయక, తినక, ఎన్నో దినములు పడుకొని ఉండవలెను. ప్రాప్తించినదే అతని ఆహారం.
+hi: यदि भोजन न मिले तो वह बहुत दिनों तक बिना खाए और बिना कोई प्रयत्न किए पड़ा रहे, महासर्प के समान, जो प्राप्त हो वही ग्रहण करे।
 
 --- verse 4 ---
 deva:
@@ -48,6 +57,9 @@ deva:
 iast:
 ojaḥsahobalayutaṁ bibhrad dehamakarmakam|
 śayāno vītanidraśca nehetendriyavānapi||
+en: Bearing a body that has vitality, strength of mind and strength of limb, yet doing no work, lying down and free of sleep, he should not act, though he has senses.
+tel: ఓజస్సు, మనోబలం, శారీరక బలం కలిగిన దేహాన్ని ధరించి ఉండి కూడా పని చేయక, పడుకొని ఉండి నిద్ర లేక, ఇంద్రియాలు ఉన్నా ఏ చేష్టయూ చేయకూడదు.
+hi: ओज, मानसिक बल और शारीरिक बल से युक्त शरीर धारण करते हुए भी वह कोई कर्म न करे। लेटा हुआ रहे पर निद्रा से मुक्त रहे, और इंद्रियाँ होने पर भी चेष्टा न करे।
 
 --- verse 5 ---
 deva:
@@ -56,6 +68,9 @@ deva:
 iast:
 muniḥ prasannagambhīro durvigāhyo duratyayaḥ|
 anantapāro hyakṣobhyaḥ stimitoda ivārṇavaḥ||
+en: The sage is serene and deep, hard to fathom, hard to cross, without end and without limit, and he cannot be shaken, like an ocean whose waters are still.
+tel: ముని ప్రసన్నుడు, గంభీరుడు, అగాధుడు, దాటశక్యము కాని వాడు, అంతము లేని వాడు, క్షోభ పొందని వాడు — నిలిచిన జలము కల సముద్రము వలె.
+hi: मुनि प्रसन्न और गंभीर होता है, जिसकी गहराई नापी न जा सके, जिसे पार न किया जा सके, जिसका अंत और छोर न हो, और जो विचलित न हो — स्थिर जल वाले समुद्र के समान।
 
 --- verse 6 ---
 deva:
@@ -64,6 +79,9 @@ deva:
 iast:
 samṛddhakāmo hīno vā nārāyaṇaparo muniḥ|
 notsarpeta na śuṣyeta saridbhiriva sāgaraḥ||
+en: The sage who is devoted to Nārāyaṇa, whether his desires are fulfilled or he is in want, neither swells up nor dries up, as the ocean does not with the rivers.
+tel: నారాయణుని యందే నిలిచిన ముని, కోరికలు తీరినా, లోటుతో ఉన్నా, నదుల వలన సముద్రము పెరుగక ఎండిపోక ఉన్నట్లు, పెరుగడు, ఎండిపోడు.
+hi: नारायण में लगा हुआ मुनि, कामनाएँ पूरी हों या अभाव हो, न बढ़ता है और न सूखता है, जैसे नदियों से समुद्र न बढ़ता न सूखता है।
 
 --- verse 7 ---
 deva:
@@ -72,6 +90,9 @@ deva:
 iast:
 dṛṣṭvā striyaṁ devamāyāṁ tadbhāvairajitendriyaḥ|
 pralobhitaḥ patatyandhe tamasyagnau pataṁgavat||
+en: Seeing a woman, who is the māyā of the Lord, a man whose senses are not conquered is drawn by her ways and falls into blind darkness, like a moth into fire.
+tel: భగవంతుని మాయ అయిన స్త్రీని చూచి, ఇంద్రియాలను జయించని వాడు ఆమె భావములకు లోబడి, మిడత అగ్నిలో పడినట్లు, గాఢమైన అంధకారములో పడిపోతాడు.
+hi: भगवान की माया रूप स्त्री को देखकर, जिसकी इंद्रियाँ वश में नहीं हैं, वह उसके भावों से लुभाकर अंधकार में गिर जाता है, जैसे पतंगा आग में गिरता है।
 
 --- verse 8 ---
 deva:
@@ -84,6 +105,9 @@ yoṣiddhiraṇyābharaṇāmbarādi-
 dravyeṣu māyāraciteṣu mūḍhaḥ|
 pralobhitātmā hyupabhogabuddhyā
 pataṁgavannaśyati naṣṭadṛṣṭiḥ||
+en: The fool is deluded by things made by māyā: woman, gold, ornaments, clothing and the rest. His mind is drawn by the thought of enjoyment. He loses his sight and perishes like a moth.
+tel: స్త్రీ, బంగారము, ఆభరణములు, వస్త్రములు మొదలైన మాయారచితమైన వస్తువుల యందు మూఢుడై, భోగబుద్ధితో మనస్సు లోబడి, దృష్టి పోగొట్టుకొని మిడత వలె నశిస్తాడు.
+hi: स्त्री, सोना, आभूषण, वस्त्र आदि माया से रचे पदार्थों में मूढ़ होकर, भोग की बुद्धि से मन लुभाकर, वह दृष्टि खोकर पतंगे के समान नष्ट हो जाता है।
 
 --- verse 9 ---
 deva:
@@ -92,6 +116,9 @@ deva:
 iast:
 stokaṁ stokaṁ grased grāsaṁ deho varteta yāvatā|
 gṛhānahiṁsannātiṣṭhed vṛttiṁ mādhukarīṁ muniḥ||
+en: The sage should take his food little by little, only so much as keeps the body going. He should live by the way of the bee and not trouble the households.
+tel: ముని దేహము నిలిచి ఉండునంతగా మాత్రమే, కొద్ది కొద్దిగా ఆహారము తీసుకొనవలెను. గృహములకు బాధ కలిగించక, తేనెటీగ వలె భిక్షవృత్తిని అవలంబించవలెను.
+hi: मुनि थोड़ा-थोड़ा ही भोजन ले, केवल उतना जिससे शरीर चलता रहे। वह गृहस्थों को कष्ट न देकर मधुकरी वृत्ति से जीवन चलाए।
 
 --- verse 10 ---
 deva:
@@ -100,6 +127,9 @@ deva:
 iast:
 aṇubhyaśca mahadbhyaśca śāstrebhyaḥ kuśalo naraḥ|
 sarvataḥ sāramādadyāt puṣpebhya iva ṣaṭpadaḥ||
+en: From small scriptures and from great ones, a capable man should take the essence from everywhere, as the bee takes it from flowers.
+tel: చిన్న శాస్త్రముల నుండియు, పెద్ద శాస్త్రముల నుండియు, సమర్థుడైన వాడు అన్నిటి నుండి సారమును గ్రహించవలెను — పుష్పముల నుండి తేనెటీగ వలె.
+hi: छोटे शास्त्रों से और बड़े शास्त्रों से, कुशल पुरुष सब जगह से सार ग्रहण करे, जैसे भौंरा फूलों से सार लेता है।
 
 --- verse 11 ---
 deva:
@@ -108,6 +138,9 @@ deva:
 iast:
 sāyantanaṁ śvastanaṁ vā na saṁgṛhṇīta bhikṣitam|
 pāṇipātrodarāmatro makṣikeva na saṅgrahī||
+en: He should not store what he has begged, neither for the evening nor for the next day. His hand is his bowl and his stomach his vessel. He should not become a hoarder, as the bee does.
+tel: భిక్షగా లభించినది సాయంకాలము కొరకైనా, మరునాటి కొరకైనా నిలువ ఉంచుకోకూడదు. చేయి అతని పాత్ర, కడుపు అతని గిన్నె. తేనెటీగ వలె సంగ్రహించువాడు కాకూడదు.
+hi: भिक्षा में मिला हुआ वह न सायंकाल के लिए और न अगले दिन के लिए संचित करे। हाथ ही उसका पात्र और पेट ही उसका बरतन है। वह मधुमक्खी के समान संग्रह करने वाला न बने।
 
 --- verse 12 ---
 deva:
@@ -116,6 +149,9 @@ deva:
 iast:
 sāyantanaṁ śvastanaṁ vā na saṁgṛhṇīta bhikṣukaḥ|
 makṣikā iva saṁgṛhṇan saha tena vinaśyati||
+en: A mendicant should not store what he has begged, neither for the evening nor for the next day. Hoarding like the bee, he perishes along with what he has hoarded.
+tel: భిక్షువు భిక్షగా లభించినది సాయంకాలము కొరకైనా, మరునాటి కొరకైనా నిలువ ఉంచుకోకూడదు. తేనెటీగ వలె సంగ్రహించుచు, ఆ సంగ్రహముతో పాటు తానే నశించిపోతాడు.
+hi: भिक्षुक भिक्षा में मिला हुआ न सायंकाल के लिए और न अगले दिन के लिए संचित करे। मधुमक्खी के समान संग्रह करता हुआ वह उस संग्रह के साथ ही नष्ट हो जाता है।
 
 --- verse 13 ---
 deva:
@@ -124,6 +160,9 @@ deva:
 iast:
 padāpi yuvatīṁ bhikṣurna spṛśed dāravīmapi|
 spṛśan karīva badhyeta kariṇyā aṁgasaṁgataḥ||
+en: A mendicant should not touch a young woman even with his foot, not even one made of wood. Touching her, he would be bound like the elephant, which is caught through contact with the limbs of the she-elephant.
+tel: భిక్షువు యువతిని కాలితో కూడ తాకకూడదు — కొయ్యతో చేసినదైనా తాకకూడదు. తాకినచో, ఆడ ఏనుగు అవయవముల సంగముచే ఏనుగు బంధింపబడినట్లు బంధింపబడతాడు.
+hi: भिक्षुक युवती को पैर से भी न छुए, काठ की बनी हुई को भी नहीं। छूने पर वह उस हाथी के समान बँध जाता है जो हथिनी के अंगसंग में आ जाता है।
 
 --- verse 14 ---
 deva:
@@ -132,6 +171,9 @@ deva:
 iast:
 nādhigacchet striyaṁ prājñaḥ karhicinmṛtyumātmanaḥ|
 balādhikaiḥ sa hanyeta gajairanyairgajo yathā||
+en: A wise man should never approach a woman, who is his own death. He would be killed by stronger ones, as an elephant is killed by other elephants.
+tel: వివేకి తనకు మృత్యువైన స్త్రీని ఎప్పుడును చేరకూడదు. బలవంతులైన ఇతర ఏనుగులచే ఏనుగు చంపబడినట్లు, అతడు బలవంతులచే చంపబడతాడు.
+hi: बुद्धिमान पुरुष स्त्री के पास कभी न जाए, जो उसकी ही मृत्यु है। वह अधिक बलवानों के हाथ मारा जाता है, जैसे हाथी दूसरे हाथियों के हाथ मारा जाता है।
 
 --- verse 15 ---
 deva:
@@ -140,6 +182,9 @@ deva:
 iast:
 na deyaṁ nopabhogyaṁ ca lubdhairyad duḥkhasaṁcitam|
 bhuṅkte tadapi taccānyo madhuhevārthavinmadhu||
+en: What the greedy gather with great pain is neither given away nor enjoyed by them. Another man enjoys it, as the honey gatherer who knows where the wealth lies takes the honey.
+tel: లోభులు ఎంతో దుఃఖముతో కూడబెట్టినది ఇవ్వబడదు, అనుభవింపబడదు. ధనము ఎక్కడ ఉన్నదో తెలిసిన వాడు తేనెను తీసుకొనిపోయినట్లు, దానిని వేరొకడు అనుభవిస్తాడు.
+hi: लोभी जो बड़े कष्ट से जोड़ते हैं, वह न दिया जाता है और न भोगा जाता है। उसे दूसरा भोगता है, जैसे धन का पता जानने वाला मधु निकालने वाला शहद ले जाता है।
 
 --- verse 16 ---
 deva:
@@ -148,6 +193,9 @@ deva:
 iast:
 suduḥkhopārjitairvittairāśāsānāṁ gṛhāśiṣaḥ|
 madhuhevāgrato bhuṅkte yatirvai gṛhamedhinām||
+en: Householders hope for domestic blessings from wealth earned with great pain. The ascetic enjoys it before them, as the honey gatherer takes the honey first.
+tel: గృహస్థులు ఎంతో కష్టముతో సంపాదించిన ధనము వలన గృహసంబంధమైన ఆశీస్సులను ఆశిస్తారు. తేనె తీసుకొనిపోయే వాడు ముందుగా తేనెను గ్రహించినట్లు, యతి ఆ ధనమును వారికి ముందుగా అనుభవిస్తాడు.
+hi: गृहस्थ बड़े कष्ट से कमाए धन से घर के सुखों की आशा करते हैं। जैसे मधु निकालने वाला पहले शहद ले लेता है, वैसे ही यति उनसे पहले उस धन का भोग कर लेता है।
 
 --- verse 17 ---
 deva:
@@ -156,6 +204,9 @@ deva:
 iast:
 grāmyagītaṁ na śṛṇuyād yatirvanacaraḥ kvacit|
 śikṣeta hariṇād baddhānmṛgayorgītamohitāt||
+en: An ascetic who lives in the forest should never listen to worldly song. He should learn from the deer, which was caught because the hunter's song deluded it.
+tel: వనములో నివసించే యతి గ్రామ్యమైన గీతమును ఎప్పుడును వినకూడదు. వేటగాని పాటకు మోహితమై బంధింపబడిన జింక నుండి నేర్చుకొనవలెను.
+hi: वन में रहने वाला यति ग्राम्य गीत कभी न सुने। उसे उस हिरण से सीखना चाहिए जो शिकारी के गीत से मोहित होकर बँध गया।
 
 --- verse 18 ---
 deva:
@@ -164,6 +215,9 @@ deva:
 iast:
 nṛtyavāditragītāni juṣan grāmyāṇi yoṣitām|
 āsāṁ krīḍanako vaśya ṛṣyaśṛṁgo mṛgīsutaḥ||
+en: Ṛṣyaśṛṅga, the son of a doe, took pleasure in the dance, the music and the worldly songs of women, and became their plaything and subject to them.
+tel: జింక కుమారుడైన ఋష్యశృంగుడు స్త్రీల నృత్యము, వాద్యము, గ్రామ్య గీతములను ఇష్టపడి, వారి ఆట బొమ్మయై, వారికి లోబడిపోయాడు.
+hi: हिरणी के पुत्र ऋष्यशृंग ने स्त्रियों के नृत्य, वाद्य और ग्राम्य गीतों में रुचि की, और उनका खिलौना बनकर उनके वश में हो गया।
 
 --- verse 19 ---
 deva:
@@ -172,6 +226,9 @@ deva:
 iast:
 jihvayātipramāthinyā jano rasavimohitaḥ|
 mṛtyumṛcchatyasadbuddhirmīnastu baḍiśairyathā||
+en: By the tongue, which drags a man most of all, one who is deluded by taste and whose mind is set on what is not good meets death, as a fish does by the hook.
+tel: మిక్కిలి లాగివేసే నాలుక చేత, రుచికి మోహితుడై, చెడు బుద్ధి కల మనుష్యుడు, గాలముచే చేప వలె, మృత్యువును పొందుతాడు.
+hi: अत्यंत खींच लेने वाली जीभ के कारण, स्वाद से मोहित और बुरी बुद्धि वाला मनुष्य मृत्यु को प्राप्त होता है, जैसे मछली काँटे से मारी जाती है।
 
 --- verse 20 ---
 deva:
@@ -180,6 +237,9 @@ deva:
 iast:
 indriyāṇi jayantyāśu nirāhārā manīṣiṇaḥ|
 varjayitvā tu rasanaṁ tannirannasya vardhate||
+en: Thoughtful men who take no food conquer the senses quickly, but not the tongue. In one who takes no food, the tongue only grows stronger.
+tel: ఆహారము తీసుకొనని మనీషులు ఇంద్రియాలను శీఘ్రముగా జయిస్తారు. కాని నాలుకను జయించరు. అన్నము తీసుకొనని వానికి అది మరింత పెరుగుతుంది.
+hi: निराहार रहने वाले मनीषी इंद्रियों को शीघ्र जीत लेते हैं, पर जीभ को नहीं। अन्न न लेने वाले में वह और बढ़ जाती है।
 
 --- verse 21 ---
 deva:
@@ -188,6 +248,9 @@ deva:
 iast:
 tāvajjitendriyo na syād vijitānyendriyaḥ pumān|
 na jayed rasanaṁ yāvajjitaṁ sarvaṁ jite rase||
+en: So long as a man does not conquer the tongue, he is not one whose senses are conquered, even if he has conquered the other senses. When taste is conquered, all is conquered.
+tel: నాలుకను జయించనంత వరకు, మిగిలిన ఇంద్రియాలను జయించినవాడైనా, మనుష్యుడు జితేంద్రియుడు కాడు. రుచి జయింపబడినచో అన్నియు జయింపబడినట్లే.
+hi: जब तक मनुष्य जीभ को नहीं जीतता, तब तक दूसरी इंद्रियों को जीत लेने पर भी वह जितेंद्रिय नहीं है। रस जीत लिया जाए तो सब जीत लिया जाता है।
 
 --- verse 22 ---
 deva:
@@ -196,6 +259,9 @@ deva:
 iast:
 piṁgalā nāma veśyā''sīd videhanagare purā|
 tasyā me śikṣitaṁ kiṁcinnibodha nṛpanandana||
+en: O son of a king, in the city of Videha there was once a courtesan named Piṅgalā. Hear from me something that I learned from her.
+tel: ఓ రాజకుమారా, పూర్వము విదేహ నగరములో పింగళ అనే వేశ్య ఉండెను. ఆమె నుండి నేను నేర్చుకొన్నది కొంత విను.
+hi: हे राजकुमार, विदेह नगर में पहले पिंगला नाम की एक वेश्या थी। उससे मैंने जो कुछ सीखा, उसे सुनो।
 
 --- verse 23 ---
 deva:
@@ -204,6 +270,9 @@ deva:
 iast:
 sā svairiṇyekadā kāntaṁ saṁketa upaneṣyatī|
 abhūt kāle bahirdvāri bibhratī rūpamuttamam||
+en: That woman of free ways once stood at the outer door at the appointed hour, wearing her finest form, to take a lover to the place of meeting.
+tel: స్వైరిణి అయిన ఆమె ఒకనాడు, ప్రియుని సంకేత స్థానమునకు తీసుకొనిపోవుటకై, మిక్కిలి అందమైన రూపమును ధరించి, సమయమున బయటి ద్వారమున నిలిచెను.
+hi: वह स्वैरिणी एक दिन, प्रियतम को संकेत स्थान पर ले जाने के लिए, सुंदर रूप धारण कर समय पर बाहर के द्वार पर खड़ी हुई।
 
 --- verse 24 ---
 deva:
@@ -212,6 +281,9 @@ deva:
 iast:
 mārga āgacchato vīkṣya puruṣān puruṣarṣabha|
 tāñchulkadān vittavataḥ kāntān mene'rthakāmukā||
+en: O best of men, seeing men coming along the road, she, who desired money, took them to be payers of her fee, men of wealth, and her lovers.
+tel: ఓ పురుషశ్రేష్ఠా, మార్గమున వచ్చే పురుషులను చూచి, ధనమును కోరిన ఆమె, వారిని శుల్కము ఇచ్చువారుగా, ధనవంతులుగా, ప్రియులుగా భావించెను.
+hi: हे पुरुषश्रेष्ठ, मार्ग पर आते पुरुषों को देखकर, धन की इच्छा वाली उसने उन्हें शुल्क देने वाले, धनवान और अपने प्रियतम समझा।
 
 --- verse 25 ---
 deva:
@@ -220,6 +292,9 @@ deva:
 iast:
 āgateṣvapayāteṣu sā saṁketopajīvinī|
 apyanyo vittavān ko'pi māmupaiṣyati bhūridaḥ||
+en: As they came and went away, she who lived by such meetings thought: will some other wealthy man come to me, one who gives much?
+tel: వారు వచ్చి వెళ్ళిపోవుచుండగా, సంకేతముల మీద జీవించే ఆమె తలంచెను: మరి ఎవరైనా ధనవంతుడు, ఎక్కువ ఇచ్చువాడు నా దగ్గరకు వస్తాడా?
+hi: वे आते और चले जाते थे, तब संकेतों से जीवन चलाने वाली उसने सोचा: क्या कोई और धनवान, बहुत देने वाला, मेरे पास आएगा?
 
 --- verse 26 ---
 deva:
@@ -228,6 +303,9 @@ deva:
 iast:
 evaṁ durāśayā dhvastanidrā dvāryavalambatī|
 nirgacchantī praviśatī niśīthaṁ samapadyata||
+en: With this evil hope her sleep was broken. She clung to the door, going out and coming in again, until midnight came.
+tel: ఈ దురాశతో ఆమె నిద్ర చెడిపోయెను. ద్వారమును ఆశ్రయించి, బయటకు వెళ్ళుచు, లోనికి వచ్చుచు ఉండగా అర్ధరాత్రి అయ్యెను.
+hi: इस बुरी आशा से उसकी नींद टूट गई। वह द्वार का सहारा लेकर बाहर जाती और भीतर आती रही, और आधी रात हो गई।
 
 --- verse 27 ---
 deva:
@@ -236,6 +314,9 @@ deva:
 iast:
 tasyā vittāśayā śuṣyadvaktrāyā dīnacetasaḥ|
 nirvedaḥ paramo jajñe cintāhetuḥ sukhāvahaḥ||
+en: Her face dried up with the hope of money and her mind was wretched. In her the highest detachment arose, caused by that very anxiety, and it brought her happiness.
+tel: ధనము పైని ఆశతో ఆమె ముఖము ఎండిపోయెను, మనస్సు దీనమయ్యెను. ఆ చింతయే కారణమై, సుఖమును కలిగించే పరమ నిర్వేదము ఆమెలో కలిగెను.
+hi: धन की आशा से उसका मुख सूख गया और मन दीन हो गया। उसी चिंता के कारण उसमें परम निर्वेद उत्पन्न हुआ, जो सुख देने वाला था।
 
 --- verse 28 ---
 deva:
@@ -244,6 +325,9 @@ deva:
 iast:
 tasyā nirviṇṇacittāyā gītaṁ śṛṇu yathā mama|
 nirveda āśāpāśānāṁ puruṣasya yathā hyasiḥ||
+en: Hear from me the song of that woman whose mind had turned away. Detachment is to a man like a sword for the ropes of hope.
+tel: నిర్విణ్ణమైన మనస్సు కల ఆమె గీతమును నా నుండి విను. మనుష్యునికి నిర్వేదము ఆశాపాశములకు కత్తి వంటిది.
+hi: जिसका मन विरक्त हो गया, उसका गीत मुझसे सुनो। मनुष्य के लिए निर्वेद आशा के बंधनों के लिए तलवार के समान है।
 
 --- verse 29 ---
 deva:
@@ -252,6 +336,9 @@ deva:
 iast:
 na hyaṁgājjātanirvedo dehabandhaṁ jihāsati|
 yathā vijñānarahito manujo mamatāṁ nṛpa||
+en: O king, a man in whom detachment has not arisen does not wish to give up the bondage of the body, just as a man without true knowledge does not give up the sense of what is mine.
+tel: ఓ రాజా, నిర్వేదము కలుగని వాడు దేహబంధమును విడువ కోరడు, వివేకము లేని మనుష్యుడు మమకారమును విడువనట్లే.
+hi: हे राजन्, जिसमें निर्वेद उत्पन्न नहीं हुआ, वह देह के बंधन को छोड़ना नहीं चाहता, जैसे ज्ञान से रहित मनुष्य ममता को नहीं छोड़ता।
 
 --- verse 30 ---
 deva:
@@ -262,6 +349,9 @@ iast:
 piṁgalovāca
 aho me mohavitatiṁ paśyatāvijitātmanaḥ|
 yā kāntādasataḥ kāmaṁ kāmaye yena bāliśā||
+en: Piṅgalā said: See the extent of my delusion. My mind is not conquered, and being a fool I desire pleasure from a lover who has no real being.
+tel: పింగళ పలికెను: నా మోహము ఎంతటిదో చూడుడు. నా మనస్సు జయింపబడలేదు, బాలిశను అయి, నిజముగా లేని ప్రియుని నుండి సుఖమును కోరుచున్నాను.
+hi: पिंगला ने कहा: मेरे मोह का विस्तार देखो। मेरा मन वश में नहीं है, और मूढ़ होकर मैं असत् प्रियतम से सुख चाहती हूँ।
 
 --- verse 31 ---
 deva:
@@ -274,6 +364,9 @@ santaṁ samīpe ramaṇaṁ ratipradaṁ
 vittapradaṁ nityamimaṁ vihāya|
 akāmadaṁ duḥkhabhayādhiśoka-
 mohapradaṁ tucchamahaṁ bhaje'jñā||
+en: This one who is near me is my true beloved. He gives delight, he gives wealth, and he is eternal. Him I left aside, and in my ignorance I served a worthless man who gives nothing that is desired, and who gives sorrow, fear, distress, grief and delusion.
+tel: నా దగ్గరనే ఉన్న, రతిని ఇచ్చే, ధనమును ఇచ్చే, నిత్యుడైన ఈ ప్రియుని విడిచి, అజ్ఞానముతో నేను కోరినది ఇవ్వని, దుఃఖము, భయము, ఆధి, శోకము, మోహములను ఇచ్చే తుచ్ఛుడైన వానిని సేవించాను.
+hi: जो मेरे पास ही है, जो रति देने वाला, धन देने वाला और नित्य है, उस प्रियतम को छोड़कर, अज्ञान से मैंने उस तुच्छ पुरुष की सेवा की जो कामना पूरी नहीं करता और दुख, भय, आधि, शोक और मोह देता है।
 
 --- verse 32 ---
 deva:
@@ -286,6 +379,9 @@ aho mayā''tmā paritāpito vṛthā
 sāṁketyavṛttyātivigarhyavārtayā|
 straiṇānnarād yārthatṛṣo'nuśocyāt
 krītena vittaṁ ratimātmanecchatī||
+en: Alas, I have afflicted myself in vain by this trade of meetings, a most blameworthy way of living. I who sought wealth and my own pleasure was bought by a man who is a slave to women, greedy for money, and fit to be pitied.
+tel: అయ్యో, మిక్కిలి నిందింపదగిన ఈ సంకేత వృత్తితో నేను నన్ను వ్యర్థముగా తపింపజేసుకొన్నాను. ధనమును, నా సుఖమును కోరిన నేను, స్త్రీలకు లోబడిన, ధనమునకు దాహము కల, శోచనీయుడైన పురుషునిచే కొనబడ్డాను.
+hi: हाय, अत्यंत निंदनीय इस संकेतवृत्ति से मैंने अपने को व्यर्थ ही तपाया। धन और अपना सुख चाहने वाली मैं, स्त्रियों के वश में रहने वाले, धन के लोभी और शोचनीय पुरुष से मोल ली गई।
 
 --- verse 33 ---
 deva:
@@ -298,6 +394,9 @@ yadasthibhirnirmitavaṁśavaṁśya-
 sthūṇaṁ tvacā romanakhaiḥ pinaddham|
 kṣarannavadvāramagārametad
 viṇmūtrapūrṇaṁ madupaiti kānyā||
+en: This house is built with bones for its beams and rafters, covered over with skin, hair and nails, leaking from nine doors, and full of excrement and urine. What woman but me would go to it?
+tel: ఎముకలతో వంశములు, వంశ్యములు, స్తంభములు కట్టబడి, చర్మము, రోమములు, నఖములతో కప్పబడి, తొమ్మిది ద్వారముల నుండి స్రవిస్తూ, మలమూత్రములతో నిండిన ఈ ఇంటిని, నేను కాక ఏ స్త్రీ చేరును?
+hi: हड्डियों से जिसके बाँस, बल्लियाँ और खंभे बने हैं, जो त्वचा, रोम और नखों से ढका है, जो नौ द्वारों से बहता है और मल-मूत्र से भरा है — उस घर के पास मेरे सिवा कौन स्त्री जाएगी?
 
 --- verse 34 ---
 deva:
@@ -306,6 +405,9 @@ deva:
 iast:
 videhānāṁ pure hyasminnahamekaiva mūḍhadhīḥ|
 yānyamicchantyasatyasmādātmadāt kāmamacyutāt||
+en: In this city of the Videhas I alone am of foolish mind, for I desired for my pleasure another, who is not real, in place of this Acyuta, who gives his very self.
+tel: విదేహుల ఈ నగరములో మూఢబుద్ధి కలదానిని నేనొక్కతెనే. తన్ను తానే ఇచ్చే ఈ అచ్యుతుని విడిచి, సత్యము కాని వేరొకని సుఖము కొరకు కోరాను.
+hi: विदेहों के इस नगर में मूढ़ बुद्धि वाली मैं अकेली ही हूँ, क्योंकि अपने आप को ही देने वाले इस अच्युत को छोड़कर मैंने सुख के लिए किसी असत् दूसरे को चाहा।
 
 --- verse 35 ---
 deva:
@@ -314,6 +416,9 @@ deva:
 iast:
 suhṛt preṣṭhatamo nātha ātmā cāyaṁ śarīriṇām|
 taṁ vikrīyātmanaivāhaṁ rame'nena yathā ramā||
+en: This Self is the friend, the dearest one and the lord of all embodied beings. I shall buy him with my own self and take delight with him, as Ramā does.
+tel: ఈ ఆత్మయే దేహధారులకు మిత్రుడు, మిక్కిలి ప్రియుడు, ప్రభువు. నన్ను నేనే ఇచ్చి ఆయనను పొంది, రమా వలె ఆయనతో ఆనందిస్తాను.
+hi: यह आत्मा ही देहधारियों का मित्र, सबसे प्रिय और स्वामी है। अपने आप को देकर उसे पाकर मैं उसी के साथ रमा के समान आनंद करूँगी।
 
 --- verse 36 ---
 deva:
@@ -322,6 +427,9 @@ deva:
 iast:
 kiyat priyaṁ te vyabhajan kāmā ye kāmadā narāḥ|
 ādyantavanto bhāryāyā devā vā kālavidrutāḥ||
+en: How much happiness have those men given to you, who are their wife, men who grant desires but have a beginning and an end? Or the gods, who are swept away by time?
+tel: కోరికలను ఇచ్చే ఆ పురుషులు, ఆది అంతము కలవారు, భార్య అయిన నీకు ఎంత సుఖమును ఇచ్చారు? కాలముచే కొట్టుకొనిపోయే దేవతలైనా ఎంత ఇచ్చారు?
+hi: कामना पूरी करने वाले वे पुरुष, जिनका आदि और अंत है, भार्या तुझको कितना सुख दे सके? अथवा काल से बहा दिए जाने वाले देवता ही कितना दे सके?
 
 --- verse 37 ---
 deva:
@@ -330,6 +438,9 @@ deva:
 iast:
 nūnaṁ me bhagavān prīto viṣṇuḥ kenāpi karmaṇā|
 nirvedo'yaṁ durāśāyā yanme jātaḥ sukhāvahaḥ||
+en: Surely the blessed Lord Viṣṇu is pleased with me for some act of mine, since this detachment, which brings happiness, has arisen in me, whose hope was evil.
+tel: నిశ్చయముగా ఏదో ఒక కర్మము వలన భగవంతుడైన విష్ణువు నా పైని ప్రీతి చెందాడు. కావుననే దురాశ కలదానిని అయిన నాకు సుఖమును కలిగించే ఈ నిర్వేదము కలిగెను.
+hi: निश्चय ही किसी कर्म से भगवान विष्णु मुझ पर प्रसन्न हुए हैं, क्योंकि बुरी आशा वाली मुझमें सुख देने वाला यह निर्वेद उत्पन्न हुआ।
 
 --- verse 38 ---
 deva:
@@ -338,6 +449,9 @@ deva:
 iast:
 maivaṁ syurmandabhāgyāyāḥ kleśā nirvedahetavaḥ|
 yenānubandhaṁ nirhṛtya puruṣaḥ śamamṛcchati||
+en: Were it not so, these sufferings which are the cause of detachment would not come to one of little fortune like me. By detachment a man removes his attachment and reaches peace.
+tel: అట్లు కాకున్న, నిర్వేదమునకు కారణమైన ఈ క్లేశములు అల్పభాగ్యము కల నాకు కలిగి ఉండవు. నిర్వేదము చేత మనుష్యుడు అనుబంధమును తొలగించుకొని శాంతిని పొందుతాడు.
+hi: यदि ऐसा न होता तो निर्वेद के कारण बनने वाले ये क्लेश मुझ अल्पभाग्य वाली को न मिलते। निर्वेद से मनुष्य अनुबंध को हटाकर शांति पाता है।
 
 --- verse 39 ---
 deva:
@@ -346,6 +460,9 @@ deva:
 iast:
 tenopakṛtamādāya śirasā grāmyasaṁgatāḥ|
 tyaktvā durāśāḥ śaraṇaṁ vrajāmi tamadhīśvaram||
+en: Accepting on my head what he has done for me, I give up these worldly attachments and my evil hopes, and go for refuge to him, the supreme Lord.
+tel: ఆయన నాకు చేసిన ఉపకారమును శిరసా స్వీకరించి, ఈ గ్రామ్య సంగములను, దురాశలను విడిచి, ఆ అధీశ్వరుని శరణు పొందుతాను.
+hi: उसने जो उपकार किया है उसे सिर पर लेकर, इन ग्राम्य संगों और बुरी आशाओं को छोड़कर, मैं उस अधीश्वर की शरण में जाती हूँ।
 
 --- verse 40 ---
 deva:
@@ -354,6 +471,9 @@ deva:
 iast:
 santuṣṭā śraddadhatyetadyathālābhena jīvatī|
 viharāmyamunaivāhamātmanā ramaṇena vai||
+en: Content, trusting in this, and living by whatever comes, I shall take my delight with him alone, the Self, who is my true beloved.
+tel: సంతుష్టనై, ఇది నమ్మి, లభించినదానితో జీవించుచు, నా నిజమైన ప్రియుడైన ఆ ఆత్మతోనే విహరిస్తాను.
+hi: संतुष्ट होकर, इस पर श्रद्धा रखकर, और जो मिल जाए उससे जीवन चलाकर, मैं उसी आत्मा के साथ विहार करूँगी, जो मेरा सच्चा प्रियतम है।
 
 --- verse 41 ---
 deva:
@@ -362,6 +482,9 @@ deva:
 iast:
 saṁsārakūpe patitaṁ viṣayairmuṣitekṣaṇam|
 grastaṁ kālāhinā''tmānaṁ ko'nyastrātumadhīśvaraḥ||
+en: I have fallen into the well of saṁsāra, my sight has been stolen by the objects of the senses, and I am seized by the serpent of time. Who other than that supreme Lord can save me?
+tel: సంసార కూపములో పడి, విషయములచే చూపు దొంగిలింపబడి, కాల సర్పముచే పట్టుకొనబడిన నన్ను, ఆ అధీశ్వరుడు కాక వేరెవరు రక్షించగలరు?
+hi: संसार के कुएँ में गिरी, विषयों से जिसकी दृष्टि चुरा ली गई और काल के सर्प से पकड़ी गई मुझे, उस अधीश्वर के सिवा कौन बचा सकता है?
 
 --- verse 42 ---
 deva:
@@ -370,6 +493,9 @@ deva:
 iast:
 ātmaiva hyātmano goptā nirvidyeta yadākhilāt|
 apramatta idaṁ paśyed grastaṁ kālāhinā jagat||
+en: The Self alone is the protector of oneself, when a man turns away from everything. Free of heedlessness, he should see that this world is seized by the serpent of time.
+tel: అన్నిటి నుండి విరక్తి కలిగినప్పుడు, ఆత్మయే ఆత్మను కాపాడేవాడు. అప్రమత్తుడై, ఈ జగత్తు కాల సర్పముచే పట్టుకొనబడినదని చూడవలెను.
+hi: जब सब से विरक्ति हो जाए, तब आत्मा ही आत्मा का रक्षक है। अप्रमत्त होकर मनुष्य देखे कि यह जगत काल के सर्प से पकड़ा हुआ है।
 
 --- verse 43 ---
 deva:
@@ -380,6 +506,9 @@ iast:
 brāhmaṇa uvāca
 evaṁ vyavasitamatirdurāśāṁ kāntatarṣajām|
 chittvopaśamamāsthāya śayyāmupaviveśa sā||
+en: The brāhmaṇa said: Her mind resolved in this way, she cut off the evil hope that was born of her thirst for a lover, took to calm, and lay down on her bed.
+tel: బ్రాహ్మణుడు పలికెను: ఈ విధముగా నిశ్చయమైన బుద్ధి కలదై, ప్రియుని పైని తృష్ణ వలన కలిగిన దురాశను ఛేదించి, ఉపశమమును పొంది, ఆమె పడకపై పడుకొనెను.
+hi: ब्राह्मण ने कहा: इस प्रकार निश्चय बुद्धि वाली होकर, प्रियतम की तृष्णा से उत्पन्न बुरी आशा को काटकर, उपशम को प्राप्त होकर वह शय्या पर लेट गई।
 
 --- verse 44 ---
 deva:
@@ -388,9 +517,15 @@ deva:
 iast:
 āśā hi paramaṁ duḥkhaṁ nairāśyaṁ paramaṁ sukham|
 yathā sañchidya kāntāśāṁ sukhaṁ suṣvāpa piṁgalā||
+en: Hope is the greatest sorrow and freedom from hope is the greatest happiness. So Piṅgalā, having cut off the hope of a lover, slept happily.
+tel: ఆశయే పరమ దుఃఖము, ఆశ లేకుండుటయే పరమ సుఖము. కావుననే పింగళ ప్రియుని పైని ఆశను ఛేదించుకొని సుఖముగా నిద్రించెను.
+hi: आशा ही परम दुख है और निराशा ही परम सुख है। इसी से पिंगला प्रियतम की आशा को काटकर सुख से सो गई।
 
 --- verse none ---
 deva:
 इति श्रीमद्भागवते महापुराणे पारमहंस्यां संहितायामेकादशस्कन्धेऽष्टमोऽध्यायः॥ ८॥
 iast:
 iti śrīmadbhāgavate mahāpurāṇe pāramahaṁsyāṁ saṁhitāyāmekādaśaskandhe'ṣṭamo'dhyāyaḥ|| 8||
+en: Thus ends the eighth adhyāya in the eleventh skandha of the Śrīmad Bhāgavata Mahāpurāṇa, the saṁhitā of the paramahaṁsas.
+tel: ఇట్లు పరమహంసల సంహిత అయిన శ్రీమద్భాగవత మహాపురాణములో ఏకాదశ స్కంధములో అష్టమ అధ్యాయము ముగిసెను.
+hi: इस प्रकार परमहंसों की संहिता श्रीमद्भागवत महापुराण के एकादश स्कंध का आठवाँ अध्याय समाप्त हुआ।

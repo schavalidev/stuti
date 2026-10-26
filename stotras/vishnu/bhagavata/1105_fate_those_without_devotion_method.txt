@@ -9,7 +9,7 @@ Type: Purāṇa (an adhyāya of the Śrīmad Bhāgavata, Skandha 11)
 
 Source / recension: Base text and authority: the Gītā Press, Gorakhpur Śrīmadbhāgavata Mahāpurāṇa with Hindi translation, Part 2 (Gītā Press code 27), archive.org item `shrimadbhagwat-mahapuran-bhag-2`, printed pages 736–744; the PDF page numbers are the printed ones. The PDF carries the typesetter's own text layer in the Chanakya font encoding, and the text was decoded from it by machine with `bin/bhagavata/chanakya.py`, not read off OCR or typed. The decoder was checked against GRETIL over all twelve skandhas before any file was written, and the differences that remain were sampled and found to be readings of the two editions. Second witness: GRETIL's `sa_bhAgavatapurANa.xml` (IAST, contributed by Ulrich Stiehl), a separate editorial lineage, compared verse by verse by machine. The TTD edition with the commentaries of Śrīdhara, Vīrarāghava and Vijayadhvaja (archive.org `Bhagavata_Purana_With_Multiple_Commentaries_TTD_Critical_Edition`) is the third witness where one is needed; it was not read for this file. The IAST was generated mechanically from the Devanāgarī with `bin/dev2iast.py`.
 
-Recension note: Text-only file, written 1 Oct 2026 at the user's instruction to lay down the whole Bhāgavata first: the English, Telugu and Hindi meanings are still to be added, and the witnesses' differences listed here have been recorded by machine and not yet adjudicated. The print is followed throughout. The print numbers 52 verses and GRETIL numbers 52. Of the 52 verses GRETIL has under the same number, 37 agree with the print letter for letter once spacing and the spelling of nasals are set aside; the rest differ: 1, 5, 10, 11, 12, 14, 16, 18, 27, 31, 33, 36, 38, 45, 48. Spacing is the print's, as its text layer gives it; in a few places justification has left a space inside a word, and these are still to be closed when the verse is read. The speaker lines (श्रीशुक उवाच and the others) are printed in italic above the verse they introduce, and are given as its first line.
+Recension note: Meanings written 26 Oct 2026 (session S78). The differences between the witnesses listed below were read as the verses were glossed; except where this note says otherwise, each is a spelling, a sandhi or a word order of the two editions, none of them changes the sense, and the print's reading therefore stands unbracketed. The print is followed throughout. The print numbers 52 verses and GRETIL numbers 52. Of the 52 verses GRETIL has under the same number, 37 agree with the print letter for letter once spacing and the spelling of nasals are set aside; the rest differ: 1, 5, 10, 11, 12, 14, 16, 18, 27, 31, 33, 36, 38, 45, 48. Spacing is the print's, as its text layer gives it. The speaker lines (श्रीशुक उवाच and the others) are printed in italic above the verse they introduce, and are given as its first line. Three spaces were put right as the verses were read. At verse 4 the text layer had lost the space twice after दूरे, giving दूरेहरिकथाः and दूरेचाच्युतकीर्तनाः; दूरे is a locative and cannot begin a compound, GRETIL reads दूरे हरिकथाः and दूरे चाच्युतकीर्तनाः as separate words, and the spaces are restored here. At verse 18 justification had left a space inside वासुदेवपराङ्मुखाः, and it is closed; GRETIL reads the compound whole, and the print itself writes वासुदेवपराङ्मुखाः joined at 8.10.22. The print's line-break hyphens at verses 11 and 13 and in वैरेण यं at verse 48 stay where the print puts them. The speaker line at verse 51 is printed श्रीशुकउवाच without the space the print gives the same line elsewhere; GRETIL carries no speaker lines and cannot adjudicate it, the print writes it joined in twenty-eight places in this corpus, so it is left exactly as printed and the meaning follows the only possible reading. At verse 32 त्विषाकृष्णं can be read as dark in lustre, or, divided as त्विषा अकृष्णं, as not dark in lustre; Śrīdhara reads the second, and the meaning follows him. At verse 48 आकृतधियः is taken with Śrīdhara as आकृष्टधियः, their thought drawn to him. At verse 9 सहेश्वरान् is taken with Śrīdhara as the great ones along with the good.
 
 Verse count: 52, plus the closing colophon printed unnumbered.
 
@@ -24,6 +24,9 @@ iast:
 rājovāca
 bhagavantaṁ hariṁ prāyo na bhajantyātmavittamāḥ|
 teṣāmaśāntakāmānāṁ kā niṣṭhāvijitātmanām||
+en: The King said: Most of those who are counted the best knowers of the Self do not worship the blessed Lord Hari. What is the end of such men, whose desires are not stilled and who have not conquered themselves?
+tel: రాజు పలికెను: ఆత్మజ్ఞానులలో శ్రేష్ఠులుగా పరిగణింపబడువారు కూడ ప్రాయముగా భగవంతుడైన హరిని సేవించరు. కామములు శాంతించని, తమను తాము జయించుకొనని అట్టి వారి గతి ఏమి?
+hi: राजा ने कहा: जो आत्मज्ञानियों में श्रेष्ठ माने जाते हैं, वे भी प्रायः भगवान् हरि की उपासना नहीं करते। जिनकी कामनाएँ शान्त नहीं हुईं और जिन्होंने अपने को वश में नहीं किया, ऐसे पुरुषों की क्या गति होती है?
 
 --- verse 2 ---
 deva:
@@ -34,6 +37,9 @@ iast:
 camasa uvāca
 mukhabāhūrupādebhyaḥ puruṣasyāśramaiḥ saha|
 catvāro jajñire varṇā guṇairviprādayaḥ pṛthak||
+en: Camasa said: From the mouth, the arms, the thighs and the feet of the Puruṣa, together with the āśramas, the four varṇas were born separately, the brāhmaṇas and the rest, according to the guṇas.
+tel: చమసుడు పలికెను: పురుషుని ముఖము, బాహువులు, తొడలు, పాదముల నుండి ఆశ్రమములతో పాటు బ్రాహ్మణుడు మొదలైన నాలుగు వర్ణములు గుణముల ననుసరించి వేరువేరుగా పుట్టినవి.
+hi: चमस ने कहा: पुरुष के मुख, बाहु, जंघा और चरणों से आश्रमों के साथ ब्राह्मण आदि चार वर्ण गुणों के अनुसार अलग अलग उत्पन्न हुए।
 
 --- verse 3 ---
 deva:
@@ -42,14 +48,20 @@ deva:
 iast:
 ya eṣāṁ puruṣaṁ sākṣādātmaprabhavamīśvaram|
 na bhajantyavajānanti sthānād bhraṣṭāḥ patantyadhaḥ||
+en: Those among them who do not worship the Puruṣa, the Lord present before them, from whom they themselves have arisen, and who make light of him, fall from their station and go down.
+tel: వారిలో ఎవరు తమకు ఉత్పత్తి స్థానమైన, ప్రత్యక్షముగా ఈశ్వరుడైన ఆ పురుషుని సేవించక ఆయనను తిరస్కరించుదురో, వారు తమ స్థానము నుండి జారి క్రిందికి పడుదురు.
+hi: इनमें से जो अपनी उत्पत्ति के कारण, साक्षात् ईश्वररूप उस पुरुष की उपासना नहीं करते और उनका तिरस्कार करते हैं, वे अपने स्थान से गिरकर नीचे चले जाते हैं।
 
 --- verse 4 ---
 deva:
-दूरेहरिकथाः केचिद् दूरेचाच्युतकीर्तनाः।
+दूरे हरिकथाः केचिद् दूरे चाच्युतकीर्तनाः।
 स्त्रियः शूद्रादयश्चैव तेऽनुकम्प्या भवादृशाम्॥
 iast:
-dūreharikathāḥ kecid dūrecācyutakīrtanāḥ|
+dūre harikathāḥ kecid dūre cācyutakīrtanāḥ|
 striyaḥ śūdrādayaścaiva te'nukampyā bhavādṛśām||
+en: Some are far from the stories of Hari and far from the singing of Acyuta's praise. Women, śūdras and others are of this kind. They deserve the compassion of men like you.
+tel: కొందరు హరి కథలకు దూరముగా, అచ్యుతుని కీర్తనకు దూరముగా ఉందురు. స్త్రీలు, శూద్రులు మొదలైనవారు అట్టివారు. వారు మీ వంటి వారి కరుణకు పాత్రులు.
+hi: कुछ लोग हरि की कथाओं से दूर और अच्युत के कीर्तन से दूर रहते हैं। स्त्रियाँ, शूद्र आदि ऐसे ही हैं। वे आप जैसे पुरुषों की दया के पात्र हैं।
 
 --- verse 5 ---
 deva:
@@ -58,6 +70,9 @@ deva:
 iast:
 vipro rājanyavaiśyau ca hareḥ prāptāḥ padāntikam|
 śrautena janmanāthāpi muhyantyāmnāyavādinaḥ||
+en: The brāhmaṇa, the kṣatriya and the vaiśya have come near the feet of Hari by the second birth which the Veda gives. Yet even so they are deluded, for they speak only of the letter of the Veda.
+tel: బ్రాహ్మణుడు, క్షత్రియుడు, వైశ్యుడు వేదము ఇచ్చు రెండవ జన్మ వలన హరి పాదముల సమీపమునకు చేరినవారు. అయినను వారు వేద వాక్యములను మాత్రమే పలుకువారై మోహము పొందుచున్నారు.
+hi: ब्राह्मण, क्षत्रिय और वैश्य वेद से प्राप्त दूसरे जन्म के कारण हरि के चरणों के निकट पहुँच चुके हैं। फिर भी वे केवल वेद के वचनों की चर्चा करते हुए मोह में पड़ जाते हैं।
 
 --- verse 6 ---
 deva:
@@ -66,6 +81,9 @@ deva:
 iast:
 karmaṇyakovidāḥ stabdhā mūrkhāḥ paṇḍitamāninaḥ|
 vadanti cāṭukān mūḍhā yayā mādhvyā girotsukāḥ||
+en: They are not skilled in action. They are stiff with pride, foolish, and think themselves learned. Made eager by that honeyed speech, these dull men speak only words of flattery.
+tel: వారు కర్మలో నేర్పు లేనివారు. గర్వముతో బిగుసుకొనినవారు, మూర్ఖులు, తమను పండితులుగా తలంచుకొనువారు. ఆ మధురమైన వాక్కు చేత ఉత్సాహము పొంది, ఆ మూఢులు ముఖస్తుతి మాటలను మాత్రమే పలుకుదురు.
+hi: वे कर्म में कुशल नहीं हैं। वे अभिमान से अकड़े हुए, मूर्ख और अपने को पण्डित मानने वाले हैं। उसी मधुर वाणी से उत्सुक होकर वे मूढ़ केवल चापलूसी की बातें कहते हैं।
 
 --- verse 7 ---
 deva:
@@ -74,6 +92,9 @@ deva:
 iast:
 rajasā ghorasaṁkalpāḥ kāmukā ahimanyavaḥ|
 dāmbhikā māninaḥ pāpā vihasantyacyutapriyān||
+en: Through rajas their resolves are terrible. They are full of desire, and their anger is like a snake's. They are deceitful, proud and sinful, and they laugh at those who are dear to Acyuta.
+tel: రజోగుణము వలన వారి సంకల్పములు ఘోరమైనవి. వారు కామము నిండినవారు, పాము వంటి కోపము కలవారు. దంభము కలవారు, అభిమానులు, పాపులు. వారు అచ్యుతునికి ప్రియమైనవారిని చూచి నవ్వుదురు.
+hi: रजोगुण से उनके संकल्प घोर होते हैं। वे कामी हैं और उनका क्रोध सर्प के समान है। वे दम्भी, अभिमानी और पापी हैं, और अच्युत के प्रिय भक्तों की हँसी करते हैं।
 
 --- verse 8 ---
 deva:
@@ -86,6 +107,9 @@ vadanti te'nyonyamupāsitastriyo
 gṛheṣu maithunyapareṣu cāśiṣaḥ|
 yajantyasṛṣṭānnavidhānadakṣiṇaṁ
 vṛttyai paraṁ ghnanti paśūnatadvidaḥ||
+en: In homes given over to the service of women and to pleasure, they speak blessings to one another. Not knowing the Lord, they perform sacrifices in which no food is distributed and neither the rule nor the dakṣiṇā is kept, and they kill animals only for their own living.
+tel: స్త్రీల సేవకు, భోగమునకు అప్పగింపబడిన గృహములలో వారు ఒకరికొకరు ఆశీర్వచనములు పలుకుదురు. భగవంతుని ఎరుగక, అన్నదానము లేని, విధానము దక్షిణ లేని యజ్ఞములను చేయుదురు. జీవనము కొరకు మాత్రమే పశువులను చంపుదురు.
+hi: स्त्रियों की सेवा और भोग में लगे घरों में वे एक दूसरे को आशीर्वाद देते हैं। भगवान् को न जानकर वे ऐसे यज्ञ करते हैं जिनमें अन्न नहीं बाँटा जाता और न विधि रहती है, न दक्षिणा। वे केवल अपनी जीविका के लिये पशुओं का वध करते हैं।
 
 --- verse 9 ---
 deva:
@@ -98,6 +122,9 @@ iast:
 tyāgena rūpeṇa balena karmaṇā|
 jātasmayenāndhadhiyaḥ saheśvarān
 sato'vamanyanti haripriyān khalāḥ||
+en: Their minds are blind with the pride born of wealth, power, high birth, learning, renunciation, beauty, strength and action. These wicked men despise the good who are dear to Hari, and the great ones along with them.
+tel: సంపద, వైభవము, ఉత్తమ జన్మము, విద్య, త్యాగము, రూపము, బలము, కర్మల వలన పుట్టిన గర్వముతో వారి బుద్ధి అంధమైనది. ఆ దుర్జనులు హరికి ప్రియమైన సజ్జనులను, వారితో పాటు మహాత్ములను కూడ అవమానించుదురు.
+hi: धन, वैभव, कुल, विद्या, त्याग, रूप, बल और कर्म से उत्पन्न गर्व से उनकी बुद्धि अन्धी हो जाती है। वे दुष्ट हरि के प्रिय सत्पुरुषों का और उनके साथ महात्माओं का भी अपमान करते हैं।
 
 --- verse 10 ---
 deva:
@@ -110,6 +137,9 @@ sarveṣu śaśvattanubhṛtsvavasthitaṁ
 yathā khamātmānamabhīṣṭamīśvaram|
 vedopagītaṁ ca na śṛṇvate'budhā
 manorathānāṁ pravadanti vārtayā||
+en: He abides always in all who bear bodies, as the sky does, as their own Self, as the Lord who is dear to them. The Veda sings of him. These unwise men do not listen to that, and they talk instead of the tales of their own desires.
+tel: ఆకాశము వలె ఆయన శరీరధారులందరిలో నిరంతరము నెలకొని ఉన్నాడు. ఆయన వారి ఆత్మయే, వారికి ప్రియమైన ఈశ్వరుడే. వేదము ఆయనను కీర్తించును. ఆ అజ్ఞానులు దానిని వినరు. తమ మనోరథముల కథలను మాత్రమే పలుకుదురు.
+hi: वे आकाश के समान सब देहधारियों में सदा स्थित हैं। वे उनका आत्मा और उनका प्रिय ईश्वर हैं। वेद उनका गान करता है। वे अज्ञानी उसे नहीं सुनते और अपने मनोरथों की ही चर्चा करते रहते हैं।
 
 --- verse 11 ---
 deva:
@@ -122,6 +152,9 @@ loke vyavāyāmiṣamadyasevā
 nityāstu jantorna hi tatra codanā|
 vyavasthitisteṣu vivāhayajña-
 surāgrahairāsu nivṛttiriṣṭā||
+en: In the world, union with a woman, meat and wine are natural to living beings. There is no injunction for them. Their regulation is through marriage, through sacrifice, and through the ritual taking of wine. What the rule intends is withdrawal from these.
+tel: లోకములో స్త్రీ సంగమము, మాంసము, మద్యము జీవులకు సహజములు. వానికి విధి లేదు. వివాహము చేత, యజ్ఞము చేత, యజ్ఞములో మద్యమును గ్రహించుట చేత వానికి నియమము ఏర్పడినది. ఆ నియమము కోరునది వానినుండి నివృత్తియే.
+hi: संसार में स्त्रीसंग, मांस और मद्य प्राणियों के लिये स्वाभाविक हैं। इनके लिये कोई विधि नहीं है। विवाह से, यज्ञ से और यज्ञ में मद्य के ग्रहण से इनकी व्यवस्था की गयी है। इस व्यवस्था का अभिप्राय इनसे निवृत्ति ही है।
 
 --- verse 12 ---
 deva:
@@ -134,6 +167,9 @@ dhanaṁ ca dharmaikaphalaṁ yato vai
 jñānaṁ savijñānamanupraśānti|
 gṛheṣu yuñjanti kalevarasya
 mṛtyuṁ na paśyanti durantavīryam||
+en: Wealth has dharma alone for its fruit, and from dharma come knowledge, direct realisation and then peace. But men use their wealth at home for the sake of the body, and they do not see death, whose power has no end.
+tel: ధనమునకు ధర్మమే ఒక్కటే ఫలము. ధర్మము నుండి జ్ఞానము, అనుభవ జ్ఞానము, పిమ్మట శాంతి కలుగును. కాని మనుష్యులు ఆ ధనమును ఇంటిలో శరీరము కొరకు వినియోగించుకొందురు. అంతము లేని శక్తి కల మృత్యువును వారు చూడరు.
+hi: धन का एक ही फल धर्म है, और धर्म से ज्ञान, अनुभवज्ञान और उसके पश्चात् शान्ति प्राप्त होती है। परन्तु मनुष्य उस धन को घर में शरीर के लिये लगाते हैं और अनन्त शक्ति वाली मृत्यु को नहीं देखते।
 
 --- verse 13 ---
 deva:
@@ -146,6 +182,9 @@ yad ghrāṇabhakṣo vihitaḥ surāyā-
 stathā paśorālabhanaṁ na hiṁsā|
 evaṁ vyavāyaḥ prajayā na ratyā
 imaṁ viśuddhaṁ na viduḥ svadharmam||
+en: Wine is prescribed only to be smelled, and the touching of the animal in sacrifice is not killing. In the same way union is for offspring and not for pleasure. Men do not know this pure dharma of their own.
+tel: మద్యమును వాసన చూచుట మాత్రమే విధింపబడినది. యజ్ఞములో పశువును స్పృశించుట హింస కాదు. అట్లే సంగమము సంతానము కొరకే, రతి కొరకు కాదు. ఈ విశుద్ధమైన తమ ధర్మమును మనుష్యులు ఎరుగరు.
+hi: मद्य का केवल सूँघना विहित है, और यज्ञ में पशु का स्पर्श हिंसा नहीं है। इसी प्रकार संग सन्तान के लिये है, रति के लिये नहीं। अपने इस विशुद्ध धर्म को मनुष्य नहीं जानते।
 
 --- verse 14 ---
 deva:
@@ -154,6 +193,9 @@ deva:
 iast:
 ye tvanevaṁvido'santaḥ stabdhāḥ sadabhimāninaḥ|
 paśūn druhyanti visrabdhāḥ pretya khādanti te ca tān||
+en: But those who do not know in this way are wicked. They are stiff with pride and think themselves good. In their confidence they do violence to animals, and after death those animals eat them.
+tel: ఈ విధముగా ఎరుగని వారు అసత్పురుషులు. వారు గర్వముతో బిగుసుకొనినవారు, తమను సజ్జనులుగా తలంచుకొనువారు. నిర్భయముగా పశువులను హింసించుదురు. మరణము తరువాత ఆ పశువులు వారిని తినును.
+hi: परन्तु जो इस प्रकार नहीं जानते, वे असत् पुरुष हैं। वे अभिमान से अकड़े हुए और अपने को सत्पुरुष मानने वाले हैं। वे निडर होकर पशुओं पर हिंसा करते हैं, और मरने के बाद वे पशु उन्हें खाते हैं।
 
 --- verse 15 ---
 deva:
@@ -162,6 +204,9 @@ deva:
 iast:
 dviṣantaḥ parakāyeṣu svātmānaṁ harimīśvaram|
 mṛtake sānubandhe'smin baddhasnehāḥ patantyadhaḥ||
+en: They hate Hari, the Lord, their own Self, as he dwells in the bodies of others. Their affection is bound to this body, which is but a corpse, and to all that belongs to it, and so they go down.
+tel: ఇతరుల శరీరములలో ఉన్న హరిని, ఈశ్వరుని, తమ ఆత్మను వారు ద్వేషించుదురు. శవము వంటి ఈ శరీరముపై, దానికి సంబంధించిన వాటిపై వారి స్నేహము కట్టుబడి ఉండును. అందుచేత వారు క్రిందికి పడుదురు.
+hi: वे दूसरों के शरीरों में रहने वाले हरि, ईश्वर और अपने आत्मा से द्वेष करते हैं। शव के समान इस शरीर और इसके सम्बन्धियों में उनका स्नेह बँधा रहता है, और इसलिये वे नीचे गिरते हैं।
 
 --- verse 16 ---
 deva:
@@ -170,6 +215,9 @@ deva:
 iast:
 ye kaivalyamasamprāptā ye cātītāśca mūḍhatām|
 traivargikā hyakṣaṇikā ātmānaṁ ghātayanti te||
+en: Those who have not reached kaivalya, and even those who have passed beyond gross folly, stay set on the three ends of life. They have no leisure, and so they destroy their own Self.
+tel: కైవల్యమును పొందని వారు, స్థూలమైన మూఢత్వమును దాటినవారు కూడ త్రివర్గము మీదనే నిలిచియుందురు. వారికి అవకాశము ఉండదు. అందుచేత వారు తమ ఆత్మను తామే చంపుకొందురు.
+hi: जो कैवल्य को नहीं पा सके, और जो स्थूल मूढ़ता से आगे निकल भी गये, वे भी त्रिवर्ग में ही लगे रहते हैं। उन्हें अवकाश नहीं मिलता, और इस प्रकार वे अपने आत्मा का ही नाश करते हैं।
 
 --- verse 17 ---
 deva:
@@ -178,14 +226,20 @@ deva:
 iast:
 eta ātmahano'śāntā ajñāne jñānamāninaḥ|
 sīdantyakṛtakṛtyā vai kāladhvastamanorathāḥ||
+en: These are slayers of their own Self. They have no peace. In their ignorance they think they have knowledge. Their work is left undone and their desires are broken by time, and so they sink down.
+tel: వీరు తమ ఆత్మను చంపుకొనువారు. వారికి శాంతి లేదు. అజ్ఞానములో ఉండియు జ్ఞానులమని తలంచుకొందురు. చేయవలసిన పని చేయక, కాలము చేత మనోరథములు పగిలిపోయి వారు క్షీణించుదురు.
+hi: ये अपने आत्मा के ही घातक हैं। इन्हें शान्ति नहीं है। अज्ञान में रहकर भी ये अपने को ज्ञानी मानते हैं। इनका कार्य अपूर्ण रह जाता है और काल से इनके मनोरथ टूट जाते हैं, और ये नष्ट हो जाते हैं।
 
 --- verse 18 ---
 deva:
 हित्वात्यायासरचिता गृहापत्यसुहृच्छ्रियः।
-तमो विशन्त्यनिच्छन्तो वासुदेवपराङ् मुखाः॥
+तमो विशन्त्यनिच्छन्तो वासुदेवपराङ्मुखाः॥
 iast:
 hitvātyāyāsaracitā gṛhāpatyasuhṛcchriyaḥ|
-tamo viśantyanicchanto vāsudevaparāṅ mukhāḥ||
+tamo viśantyanicchanto vāsudevaparāṅmukhāḥ||
+en: They give up home, children, friends and wealth, which were built up with great toil, and unwillingly they enter darkness, for their faces are turned away from Vāsudeva.
+tel: మిక్కిలి శ్రమతో సమకూర్చుకొనిన గృహమును, సంతానమును, మిత్రులను, సంపదను విడిచి, ఇష్టము లేకయే వారు అంధకారములోనికి ప్రవేశించుదురు. ఏలయన వారు వాసుదేవుని నుండి ముఖము త్రిప్పుకొనినవారు.
+hi: बड़े परिश्रम से जुटाये हुए घर, सन्तान, मित्र और सम्पत्ति को छोड़कर वे न चाहते हुए भी अन्धकार में प्रवेश करते हैं, क्योंकि वे वासुदेव से मुँह मोड़े हुए हैं।
 
 --- verse 19 ---
 deva:
@@ -196,6 +250,9 @@ iast:
 rājovāca
 kasmin kāle sa bhagavān kiṁ varṇaḥ kīdṛśo nṛbhiḥ|
 nāmnā vā kena vidhinā pūjyate tadihocyatām||
+en: The King said: In which age is that blessed Lord of what colour and of what form? By what name and by what rule is he worshipped by men? Let this be told here.
+tel: రాజు పలికెను: ఏ కాలములో ఆ భగవంతుడు ఏ వర్ణము కలవాడు, ఏ రూపము కలవాడు? మనుష్యులు ఏ నామముతో, ఏ విధానముతో ఆయనను పూజించుదురు? ఇది ఇచ్చట తెలుపుడు.
+hi: राजा ने कहा: किस काल में वे भगवान् किस वर्ण के और किस रूप के होते हैं? मनुष्य किस नाम से और किस विधि से उनकी पूजा करते हैं? यह यहाँ बताइये।
 
 --- verse 20 ---
 deva:
@@ -206,6 +263,9 @@ iast:
 karabhājana uvāca
 kṛtaṁ tretā dvāparaṁ ca kalirityeṣu keśavaḥ|
 nānāvarṇābhidhākāro nānaiva vidhinejyate||
+en: Karabhājana said: In these ages, Kṛta, Tretā, Dvāpara and Kali, Keśava has different colours, names and forms, and he is worshipped by different rules.
+tel: కరభాజనుడు పలికెను: కృతము, త్రేత, ద్వాపరము, కలి అను ఈ యుగములలో కేశవుడు వేరువేరు వర్ణములు, నామములు, రూపములు కలవాడై, వేరువేరు విధానముల చేత పూజింపబడును.
+hi: करभाजन ने कहा: कृत, त्रेता, द्वापर और कलि, इन युगों में केशव भिन्न भिन्न वर्ण, नाम और रूप वाले होते हैं, और भिन्न भिन्न विधियों से पूजे जाते हैं।
 
 --- verse 21 ---
 deva:
@@ -214,6 +274,9 @@ deva:
 iast:
 kṛte śuklaścaturbāhurjaṭilo valkalāmbaraḥ|
 kṛṣṇājinopavītākṣān bibhrad daṇḍakamaṇḍalū||
+en: In Kṛta he is white and four-armed, with matted hair and clothed in bark. He bears the black deerskin, the sacred thread, the rosary, the staff and the water pot.
+tel: కృతయుగములో ఆయన శ్వేత వర్ణుడు, నాలుగు బాహువులు కలవాడు, జటలు కలవాడు, నారబట్టలు ధరించినవాడు. కృష్ణాజినము, యజ్ఞోపవీతము, అక్షమాల, దండము, కమండలువును ధరించును.
+hi: कृतयुग में वे श्वेत वर्ण के, चार भुजाओं वाले, जटाधारी और वल्कल वस्त्र पहने होते हैं। वे कृष्णमृगचर्म, यज्ञोपवीत, अक्षमाला, दण्ड और कमण्डलु धारण करते हैं।
 
 --- verse 22 ---
 deva:
@@ -222,6 +285,9 @@ deva:
 iast:
 manuṣyāstu tadā śāntā nirvairāḥ suhṛdaḥ samāḥ|
 yajanti tapasā devaṁ śamena ca damena ca||
+en: Men then are peaceful, without enmity, friendly to all and even-minded. They worship that God by tapas, by calm of mind and by restraint of the senses.
+tel: ఆ కాలమున మనుష్యులు శాంతులు, శత్రుత్వము లేనివారు, అందరికి మిత్రులు, సమబుద్ధి కలవారు. తపము చేత, శమము చేత, దమము చేత ఆ దేవుని పూజించుదురు.
+hi: उस समय मनुष्य शान्त, वैरहीन, सबके मित्र और समबुद्धि वाले होते हैं। वे तप से, शम से और दम से उस देव की पूजा करते हैं।
 
 --- verse 23 ---
 deva:
@@ -230,6 +296,9 @@ deva:
 iast:
 haṁsaḥ suparṇo vaikuṇṭho dharmo yogeśvaro'malaḥ|
 īśvaraḥ puruṣo'vyaktaḥ paramātmeti gīyate||
+en: He is sung of as Haṁsa, Suparṇa, Vaikuṇṭha, Dharma, Yogeśvara, the stainless one, Īśvara, Puruṣa, the unmanifest, and Paramātmā.
+tel: ఆయన హంసుడు, సుపర్ణుడు, వైకుంఠుడు, ధర్ముడు, యోగేశ్వరుడు, అమలుడు, ఈశ్వరుడు, పురుషుడు, అవ్యక్తుడు, పరమాత్మ అని కీర్తింపబడును.
+hi: वे हंस, सुपर्ण, वैकुण्ठ, धर्म, योगेश्वर, अमल, ईश्वर, पुरुष, अव्यक्त और परमात्मा, इन नामों से गाये जाते हैं।
 
 --- verse 24 ---
 deva:
@@ -238,6 +307,9 @@ deva:
 iast:
 tretāyāṁ raktavarṇo'sau caturbāhustrimekhalaḥ|
 hiraṇyakeśastrayyātmā sruksruvādyupalakṣaṇaḥ||
+en: In Tretā he is red in colour and four-armed, with three girdles and with golden hair. He is the Self of the three Vedas, and he is marked by the sruk, the sruva and the rest.
+tel: త్రేతాయుగములో ఆయన రక్త వర్ణుడు, నాలుగు బాహువులు కలవాడు, మూడు మేఖలలు కలవాడు, బంగారు కేశములు కలవాడు. ఆయన త్రయీ స్వరూపుడు, స్రుక్కు స్రువము మొదలైన చిహ్నములు కలవాడు.
+hi: त्रेतायुग में वे रक्त वर्ण के, चार भुजाओं वाले, तीन मेखलाओं वाले और स्वर्ण केश वाले होते हैं। वे त्रयीस्वरूप हैं और स्रुक्, स्रुवा आदि चिह्नों से युक्त हैं।
 
 --- verse 25 ---
 deva:
@@ -246,6 +318,9 @@ deva:
 iast:
 taṁ tadā manujā devaṁ sarvadevamayaṁ harim|
 yajanti vidyayā trayyā dharmiṣṭhā brahmavādinaḥ||
+en: Then men who are firm in dharma and who speak of Brahman worship him by the knowledge of the three Vedas, that God who contains all gods, Hari.
+tel: ఆ కాలమున ధర్మనిష్ఠులు, బ్రహ్మవాదులైన మనుష్యులు త్రయీ విద్య చేత సర్వదేవమయుడైన ఆ దేవుని, హరిని పూజించుదురు.
+hi: उस समय धर्म में स्थित और ब्रह्म की चर्चा करने वाले मनुष्य त्रयी विद्या से सर्वदेवमय उस देव हरि की पूजा करते हैं।
 
 --- verse 26 ---
 deva:
@@ -254,6 +329,9 @@ deva:
 iast:
 viṣṇuryajñaḥ pṛśnigarbhaḥ sarvadeva urukramaḥ|
 vṛṣākapirjayantaśca urugāya itīryate||
+en: He is called Viṣṇu, Yajña, Pṛśnigarbha, Sarvadeva, Urukrama, Vṛṣākapi, Jayanta and Urugāya.
+tel: ఆయన విష్ణువు, యజ్ఞుడు, పృశ్నిగర్భుడు, సర్వదేవుడు, ఉరుక్రముడు, వృషాకపి, జయంతుడు, ఉరుగాయుడు అని పేర్కొనబడును.
+hi: वे विष्णु, यज्ञ, पृश्निगर्भ, सर्वदेव, उरुक्रम, वृषाकपि, जयन्त और उरुगाय कहे जाते हैं।
 
 --- verse 27 ---
 deva:
@@ -262,6 +340,9 @@ deva:
 iast:
 dvāpare bhagavāñchyāmaḥ pītavāsā nijāyudhaḥ|
 śrīvatsādibhiraṁkaiśca lakṣaṇairupalakṣitaḥ||
+en: In Dvāpara the blessed Lord is dark, clothed in yellow and bearing his own weapons. He is known by the Śrīvatsa and the other marks and signs.
+tel: ద్వాపరయుగములో భగవంతుడు శ్యామ వర్ణుడు, పీతవస్త్రము ధరించినవాడు, తన ఆయుధములు కలవాడు. శ్రీవత్సము మొదలైన అంకముల చేత, లక్షణముల చేత ఆయన గుర్తింపబడును.
+hi: द्वापरयुग में भगवान् श्याम वर्ण के, पीत वस्त्र धारण करने वाले और अपने आयुधों से युक्त होते हैं। श्रीवत्स आदि अंकों और लक्षणों से वे पहचाने जाते हैं।
 
 --- verse 28 ---
 deva:
@@ -270,6 +351,9 @@ deva:
 iast:
 taṁ tadā puruṣaṁ martyā mahārājopalakṣaṇam|
 yajanti vedatantrābhyāṁ paraṁ jijñāsavo nṛpa||
+en: Then, O king, mortals who wish to know the Supreme worship that Puruṣa, who bears the marks of a great king, by the Veda and by the Tantra.
+tel: ఓ రాజా, ఆ కాలమున పరతత్త్వమును తెలిసికొన గోరు మనుష్యులు మహారాజ లక్షణములు కల ఆ పురుషుని వేదము చేత, తంత్రము చేత పూజించుదురు.
+hi: हे राजन्, उस समय परतत्त्व को जानने की इच्छा रखने वाले मनुष्य महाराज के लक्षणों वाले उस पुरुष की वेद और तन्त्र से पूजा करते हैं।
 
 --- verse 29 ---
 deva:
@@ -278,6 +362,9 @@ deva:
 iast:
 namaste vāsudevāya namaḥ saṁkarṣaṇāya ca|
 pradyumnāyāniruddhāya tubhyaṁ bhagavate namaḥ||
+en: Obeisance to you, Vāsudeva. Obeisance to Saṁkarṣaṇa. Obeisance to Pradyumna and to Aniruddha. Obeisance to you, the blessed Lord.
+tel: వాసుదేవా, నీకు నమస్కారము. సంకర్షణునికి నమస్కారము. ప్రద్యుమ్నునికి, అనిరుద్ధునికి నమస్కారము. భగవంతుడైన నీకు నమస్కారము.
+hi: वासुदेव, आपको नमस्कार। संकर्षण को नमस्कार। प्रद्युम्न और अनिरुद्ध को नमस्कार। भगवान् आपको नमस्कार।
 
 --- verse 30 ---
 deva:
@@ -286,6 +373,9 @@ deva:
 iast:
 nārāyaṇāya ṛṣaye puruṣāya mahātmane|
 viśveśvarāya viśvāya sarvabhūtātmane namaḥ||
+en: Obeisance to Nārāyaṇa, to the Ṛṣi, to the Puruṣa, to the great Self, to the Lord of the universe, to the universe itself, to the Self of all beings.
+tel: నారాయణునికి, ఋషికి, పురుషునికి, మహాత్మునికి, విశ్వేశ్వరునికి, విశ్వమునకు, సర్వభూతాత్మునికి నమస్కారము.
+hi: नारायण को, ऋषि को, पुरुष को, महात्मा को, विश्वेश्वर को, विश्व को और सर्वभूतात्मा को नमस्कार।
 
 --- verse 31 ---
 deva:
@@ -294,6 +384,9 @@ deva:
 iast:
 iti dvāpara urvīśa stuvanti jagadīśvaram|
 nānātantravidhānena kalāvapi yathā śṛṇu||
+en: In this way, O lord of the earth, they praise the Lord of the world in Dvāpara. Now hear how he is worshipped in Kali also, by the rules of the various Tantras.
+tel: ఓ భూపతీ, ఈ విధముగా ద్వాపరయుగములో వారు జగదీశ్వరుని స్తుతించుదురు. ఇప్పుడు కలియుగములో కూడ నానా తంత్రముల విధానము చేత ఆయన ఎట్లు పూజింపబడునో వినుము.
+hi: हे पृथ्वीपति, इस प्रकार द्वापर में वे जगदीश्वर की स्तुति करते हैं। अब कलियुग में भी नाना तन्त्रों की विधि से उनकी पूजा किस प्रकार होती है, वह सुनिये।
 
 --- verse 32 ---
 deva:
@@ -302,6 +395,9 @@ deva:
 iast:
 kṛṣṇavarṇaṁ tviṣākṛṣṇaṁ sāṁgopāṁgāstrapārṣadam|
 yajñaiḥ saṁkīrtanaprāyairyajanti hi sumedhasaḥ||
+en: His colour is kṛṣṇa, yet he is not dark in his lustre. He is with his limbs, his ornaments, his weapons and his companions. Men of good understanding worship him with sacrifices that consist mainly of the singing of his names.
+tel: ఆయన వర్ణము కృష్ణము, అయినను ఆయన కాంతి నల్లనిది కాదు. ఆయన అంగములతో, ఉపాంగములతో, ఆయుధములతో, పార్షదులతో ఉండును. సుమేధస్కులైన వారు సంకీర్తనము ప్రధానమైన యజ్ఞముల చేత ఆయనను పూజించుదురు.
+hi: उनका वर्ण कृष्ण है, फिर भी उनकी कान्ति श्याम नहीं है। वे अपने अंग, उपांग, आयुध और पार्षदों के सहित रहते हैं। सुमेधा पुरुष संकीर्तन प्रधान यज्ञों से उनकी पूजा करते हैं।
 
 --- verse 33 ---
 deva:
@@ -314,6 +410,9 @@ dhyeyaṁ sadā paribhavaghnamabhīṣṭadohaṁ
 tīrthāspadaṁ śivaviriṁcinutaṁ śaraṇyam|
 bhṛtyārtihaṁ praṇatapāla bhavābdhipotaṁ
 vande mahāpuruṣa te caraṇāravindam||
+en: They are always to be meditated upon. They destroy all insult. They yield every wish. They are the abode of the holy places. Śiva and Viriñci praise them. They are the refuge, and they remove the pain of those who serve. O protector of those who bow, O boat across the ocean of worldly life, O Great Puruṣa, I bow to your lotus feet.
+tel: అవి సదా ధ్యానింపదగినవి. అవి అవమానమును నశింపజేయును. అవి కోరినవన్నియు ఇచ్చును. అవి తీర్థములకు నిలయము. శివుడు, విరించి వానిని స్తుతించుదురు. అవి శరణము, సేవకుల బాధను తొలగించునవి. ఓ ప్రణతపాలా, ఓ సంసార సముద్రమును దాటించు నౌకా, ఓ మహాపురుషా, నీ చరణ కమలములకు నమస్కరించుచున్నాను.
+hi: वे सदा ध्यान करने योग्य हैं। वे सब अपमान का नाश करते हैं। वे सब अभीष्ट देते हैं। वे तीर्थों के आश्रय हैं। शिव और विरिंचि उनकी स्तुति करते हैं। वे शरण हैं और सेवकों की पीड़ा हरते हैं। हे प्रणतपाल, हे संसार समुद्र की नौका, हे महापुरुष, मैं आपके चरणकमलों को प्रणाम करता हूँ।
 
 --- verse 34 ---
 deva:
@@ -326,6 +425,9 @@ tyaktvā sudustyajasurepsitarājyalakṣmīṁ
 dharmiṣṭha āryavacasā yadagādaraṇyam|
 māyāmṛgaṁ dayitayepsitamanvadhāvad
 vande mahāpuruṣa te caraṇāravindam||
+en: You gave up the royal fortune, hard to give up and longed for by the gods, and firm in dharma you went to the forest at the word of a noble one. You ran after the illusory deer because your beloved wished for it. O Great Puruṣa, I bow to your lotus feet.
+tel: విడువ శక్యము కాని, దేవతలు కోరిన రాజ్యలక్ష్మిని విడిచి, ధర్మనిష్ఠుడవై ఒక ఆర్యుని మాట చేత అరణ్యమునకు వెళ్లితివి. ప్రియురాలు కోరినదని మాయా మృగము వెంట పరుగెత్తితివి. ఓ మహాపురుషా, నీ చరణ కమలములకు నమస్కరించుచున్నాను.
+hi: जिसे छोड़ना अत्यन्त कठिन है और जिसकी देवता भी इच्छा करते हैं, उस राज्यलक्ष्मी को छोड़कर, धर्म में स्थित आप एक आर्य के वचन से वन को चले गये। प्रिया की इच्छा से आप मायामृग के पीछे दौड़े। हे महापुरुष, मैं आपके चरणकमलों को प्रणाम करता हूँ।
 
 --- verse 35 ---
 deva:
@@ -334,6 +436,9 @@ deva:
 iast:
 evaṁ yugānurūpābhyāṁ bhagavān yugavartibhiḥ|
 manujairijyate rājan śreyasāmīśvaro hariḥ||
+en: In this way, O king, the blessed Lord Hari, the Lord of all that is good, is worshipped by the men of each age with the name and the form that suit that age.
+tel: ఓ రాజా, ఈ విధముగా యుగమునకు తగిన నామము చేత, రూపము చేత ఆ యుగములో ఉండు మనుష్యులు శ్రేయస్సులకు ఈశ్వరుడైన భగవంతుడైన హరిని పూజించుదురు.
+hi: हे राजन्, इस प्रकार प्रत्येक युग में रहने वाले मनुष्य उस युग के अनुरूप नाम और रूप से श्रेयों के ईश्वर भगवान् हरि की पूजा करते हैं।
 
 --- verse 36 ---
 deva:
@@ -342,6 +447,9 @@ deva:
 iast:
 kaliṁ sabhājayantyāryā guṇajñāḥ sārabhāginaḥ|
 yatra saṁkīrtanenaiva sarvaḥ svārtho'bhilabhyate||
+en: Noble men who know worth and take the essence praise Kali, because in it all one's own good is obtained by the singing of his names alone.
+tel: గుణములను ఎరిగి సారమును గ్రహించు ఆర్యులు కలియుగమును ప్రశంసించుదురు. ఏలయన దానిలో సంకీర్తనము చేత మాత్రమే తన శ్రేయస్సు అంతయు లభించును.
+hi: गुणों को जानने वाले और सार ग्रहण करने वाले आर्य पुरुष कलियुग की प्रशंसा करते हैं, क्योंकि उसमें केवल संकीर्तन से ही अपना सारा स्वार्थ प्राप्त हो जाता है।
 
 --- verse 37 ---
 deva:
@@ -350,6 +458,9 @@ deva:
 iast:
 na hyataḥ paramo lābho dehināṁ bhrāmyatāmiha|
 yato vindeta paramāṁ śāntiṁ naśyati saṁsṛtiḥ||
+en: For embodied beings who wander here there is no gain greater than this, for by it one obtains the highest peace and the round of birth and death is destroyed.
+tel: ఇచ్చట తిరుగుచున్న దేహధారులకు ఇంతకంటె గొప్ప లాభము లేదు. దాని చేత పరమ శాంతి లభించును, సంసృతి నశించును.
+hi: यहाँ भटकने वाले देहधारियों के लिये इससे बड़ा कोई लाभ नहीं है, क्योंकि इससे परम शान्ति मिलती है और संसृति नष्ट हो जाती है।
 
 --- verse 38 ---
 deva:
@@ -358,6 +469,9 @@ deva:
 iast:
 kṛtādiṣu prajā rājan kalāvicchanti sambhavam|
 kalau khalu bhaviṣyanti nārāyaṇaparāyaṇāḥ||
+en: O king, the people born in Kṛta and the other ages wish to be born in Kali. For in Kali there will indeed be men wholly given to Nārāyaṇa.
+tel: ఓ రాజా, కృతము మొదలైన యుగములలో పుట్టిన ప్రజలు కలియుగములో జన్మను కోరుదురు. ఏలయన కలియుగములో నారాయణ పరాయణులైన వారు కలుగుదురు.
+hi: हे राजन्, कृत आदि युगों की प्रजा कलियुग में जन्म लेने की इच्छा करती है, क्योंकि कलियुग में नारायणपरायण पुरुष होंगे।
 
 --- verse 39 ---
 deva:
@@ -366,6 +480,9 @@ deva:
 iast:
 kvacit kvacinmahārāja draviḍeṣu ca bhūriśaḥ|
 tāmraparṇī nadī yatra kṛtamālā payasvinī||
+en: They will be here and there, O great king, and in large numbers among the Draviḍas, where the river Tāmraparṇī flows, and the Kṛtamālā and the Payasvinī,
+tel: ఓ మహారాజా, వారు అచ్చటచ్చట ఉందురు, ద్రవిడ దేశములలో మిక్కిలి ఎక్కువగా ఉందురు. అచ్చట తామ్రపర్ణీ నది, కృతమాల, పయస్విని ప్రవహించును.
+hi: हे महाराज, वे कहीं कहीं होंगे और द्रविड़ देशों में बहुत अधिक होंगे, जहाँ ताम्रपर्णी नदी, कृतमाला और पयस्विनी बहती हैं,
 
 --- verse 40 ---
 deva:
@@ -376,6 +493,9 @@ iast:
 kāverī ca mahāpuṇyā pratīcī ca mahānadī|
 ye pibanti jalaṁ tāsāṁ manujā manujeśvara|
 prāyo bhaktā bhagavati vāsudeve'malāśayāḥ||
+en: and the greatly holy Kāverī, and the Pratīcī, the great river. O lord of men, the men who drink the water of these rivers are mostly devoted to the blessed Vāsudeva, and their hearts are pure.
+tel: మహా పుణ్యమైన కావేరి, మహానదియైన ప్రతీచి కూడ అచ్చట ప్రవహించును. ఓ మనుజేశ్వరా, ఆ నదుల జలమును త్రాగు మనుష్యులు ప్రాయముగా భగవంతుడైన వాసుదేవుని భక్తులు, నిర్మలమైన మనస్సు కలవారు.
+hi: और महापुण्यमयी कावेरी तथा महानदी प्रतीची भी वहाँ बहती हैं। हे मनुजेश्वर, इन नदियों का जल पीने वाले मनुष्य प्रायः भगवान् वासुदेव के भक्त और निर्मल हृदय वाले होते हैं।
 
 --- verse 41 ---
 deva:
@@ -388,6 +508,9 @@ devarṣibhūtāptanṛṇāṁ pitṝṇāṁ
 na kiṁkaro nāyamṛṇī ca rājan|
 sarvātmanā yaḥ śaraṇaṁ śaraṇyaṁ
 gato mukundaṁ parihṛtya kartam||
+en: O king, he who with his whole being has gone for refuge to Mukunda, the giver of refuge, and has given up all that is to be done, is no servant of the gods, the sages, beings, friends, men or the forefathers, nor is he in debt to them.
+tel: ఓ రాజా, చేయవలసిన దానిని విడిచి, సర్వాత్మతో శరణ్యుడైన ముకుందుని శరణము పొందినవాడు దేవతలకు, ఋషులకు, భూతములకు, ఆప్తులకు, మనుష్యులకు, పితరులకు కింకరుడు కాదు, వారికి ఋణపడినవాడు కాదు.
+hi: हे राजन्, जो कर्तव्य को छोड़कर सर्वात्मभाव से शरण देने वाले मुकुन्द की शरण में चला गया है, वह देवताओं, ऋषियों, भूतों, आप्तजनों, मनुष्यों और पितरों का किंकर नहीं है, और न उनका ऋणी है।
 
 --- verse 42 ---
 deva:
@@ -400,6 +523,9 @@ svapādamūlaṁ bhajataḥ priyasya
 tyaktānyabhāvasya hariḥ pareśaḥ|
 vikarma yaccotpatitaṁ kathaṁcid
 dhunoti sarvaṁ hṛdi sanniviṣṭaḥ||
+en: Hari, the Supreme Lord, is seated in the heart of his dear devotee, who worships his feet and has given up every other attachment. He shakes off every forbidden deed that has somehow arisen in that devotee.
+tel: తన పాదమూలమును సేవించు, ఇతర భావములను విడిచిన ప్రియ భక్తుని హృదయములో పరమేశ్వరుడైన హరి నెలకొని ఉండును. ఆ భక్తునిలో ఎట్లో కలిగిన నిషిద్ధ కర్మమునంతటిని ఆయన తొలగించును.
+hi: अपने चरणों की सेवा करने वाले और अन्य सब भाव छोड़ चुके प्रिय भक्त के हृदय में परमेश्वर हरि विराजते हैं। उस भक्त में जो विकर्म किसी प्रकार उत्पन्न हो गया हो, उस सबको वे धो देते हैं।
 
 --- verse 43 ---
 deva:
@@ -410,6 +536,9 @@ iast:
 nārada uvāca
 dharmān bhāgavatānitthaṁ śrutvātha mithileśvaraḥ|
 jāyanteyān munīn prītaḥ sopādhyāyo hyapūjayat||
+en: Nārada said: Having heard the dharmas of the devotees in this way, the lord of Mithilā was pleased, and together with his teachers he worshipped those sages, the sons of Jayantī.
+tel: నారదుడు పలికెను: ఈ విధముగా భాగవత ధర్మములను విని మిథిలేశ్వరుడు సంతోషించెను. ఉపాధ్యాయులతో కలిసి ఆయన జయంతీ పుత్రులైన ఆ మునులను పూజించెను.
+hi: नारद ने कहा: इस प्रकार भागवत धर्मों को सुनकर मिथिलेश्वर प्रसन्न हुए। उपाध्यायों के सहित उन्होंने जयन्ती के पुत्र उन मुनियों की पूजा की।
 
 --- verse 44 ---
 deva:
@@ -418,6 +547,9 @@ deva:
 iast:
 tato'ntardadhire siddhāḥ sarvalokasya paśyataḥ|
 rājā dharmānupātiṣṭhannavāpa paramāṁ gatim||
+en: Then those Siddhas disappeared while all the people watched. The king followed those dharmas and reached the highest state.
+tel: పిమ్మట లోకమంతయు చూచుచుండగా ఆ సిద్ధులు అదృశ్యులైరి. రాజు ఆ ధర్మములను ఆచరించి పరమ గతిని పొందెను.
+hi: इसके बाद सब लोगों के देखते देखते वे सिद्ध अन्तर्धान हो गये। राजा ने उन धर्मों का पालन किया और परम गति प्राप्त की।
 
 --- verse 45 ---
 deva:
@@ -426,6 +558,9 @@ deva:
 iast:
 tvamapyetān mahābhāga dharmān bhāgavatāñchrutān|
 āsthitaḥ śraddhayā yukto niḥsaṁgo yāsyase param||
+en: You too, O greatly blessed one, have heard these dharmas of the devotees. Standing firm in them, joined with faith and free of attachment, you will reach the Supreme.
+tel: ఓ మహాభాగా, నీవు కూడ ఈ భాగవత ధర్మములను వినినావు. శ్రద్ధతో కూడి వానిలో నిలిచి, సంగము లేనివాడవై పరమ తత్త్వమును పొందుదువు.
+hi: हे महाभाग, आपने भी ये भागवत धर्म सुने हैं। श्रद्धा के सहित इनमें स्थित रहकर, संग से रहित होकर आप परम तत्त्व को प्राप्त करेंगे।
 
 --- verse 46 ---
 deva:
@@ -434,6 +569,9 @@ deva:
 iast:
 yuvayoḥ khalu dampatyoryaśasā pūritaṁ jagat|
 putratāmagamad yad vāṁ bhagavānīśvaro hariḥ||
+en: The world has been filled with the fame of you two, husband and wife, because the blessed Lord Hari, the Lord himself, became your son.
+tel: దంపతులైన మీ ఇద్దరి యశస్సుతో జగత్తు నిండినది. ఏలయన ఈశ్వరుడైన భగవంతుడు హరి మీకు పుత్రుడు ఆయెను.
+hi: आप दोनों दम्पति के यश से जगत् भर गया है, क्योंकि ईश्वर भगवान् हरि आपके पुत्र हुए।
 
 --- verse 47 ---
 deva:
@@ -442,6 +580,9 @@ deva:
 iast:
 darśanāliṁganālāpaiḥ śayanāsanabhojanaiḥ|
 ātmā vāṁ pāvitaḥ kṛṣṇe putrasnehaṁ prakurvatoḥ||
+en: By seeing him, by embracing him, by speaking with him, by lying down, sitting and eating with him, your selves have been made pure, as you bore a parent's love towards Kṛṣṇa.
+tel: ఆయనను చూచుట చేత, కౌగిలించుట చేత, మాటలాడుట చేత, ఆయనతో పండుకొనుట, కూర్చుండుట, భోజనము చేయుట చేత, కృష్ణుని యెడల పుత్ర స్నేహమును వహించిన మీ ఆత్మలు పవిత్రములైనవి.
+hi: उन्हें देखने से, गले लगाने से, बातें करने से, उनके साथ सोने, बैठने और भोजन करने से, कृष्ण के प्रति पुत्रस्नेह रखते हुए आप दोनों के आत्मा पवित्र हो गये।
 
 --- verse 48 ---
 deva:
@@ -454,6 +595,9 @@ vaireṇa yaṁ nṛpatayaḥ śiśupālapauṇḍra-
 śālvādayo gativilāsavilokanādyaiḥ|
 dhyāyanta ākṛtadhiyaḥ śayanāsanādau
 tatsāmyamāpuranuraktadhiyāṁ punaḥ kim||
+en: Kings such as Śiśupāla, Pauṇḍra and Śālva meditated on him in enmity, through his gait, his play, his glances and the rest, while lying down and sitting, with their thought drawn to him, and they attained likeness with him. What then of those whose minds are full of love for him?
+tel: శిశుపాలుడు, పౌండ్రకుడు, శాల్వుడు మొదలైన రాజులు శత్రుత్వముతో ఆయన నడక, విలాసము, చూపు మొదలైనవాటి ద్వారా పండుకొనుచు, కూర్చుండుచు, ఆయనపై మనస్సు లాగబడి ధ్యానించిరి. వారు ఆయనతో సామ్యమును పొందిరి. అట్లయిన ఆయనపై అనురాగము కల మనస్సు కలవారి విషయము చెప్పనేల?
+hi: शिशुपाल, पौण्ड्रक और शाल्व आदि राजाओं ने वैर से उनकी चाल, विलास, दृष्टि आदि के द्वारा सोते और बैठते समय उन्हीं में खिंची बुद्धि से उनका ध्यान किया, और उन्होंने उनके साथ साम्य प्राप्त किया। फिर जिनकी बुद्धि उनमें अनुरक्त है, उनके विषय में क्या कहना?
 
 --- verse 49 ---
 deva:
@@ -462,6 +606,9 @@ deva:
 iast:
 māpatyabuddhimakṛthāḥ kṛṣṇe sarvātmanīśvare|
 māyāmanuṣyabhāvena gūḍhaiśvarye pare'vyaye||
+en: Do not hold the thought of a son towards Kṛṣṇa, the Lord who is the Self of all. He is supreme and unchanging, and his lordship is hidden, for he has taken a human form through māyā.
+tel: సర్వాత్ముడు, ఈశ్వరుడైన కృష్ణుని యెడల పుత్ర బుద్ధిని ఉంచకుము. ఆయన పరుడు, అవ్యయుడు. మాయ చేత మనుష్య భావమును ధరించి ఆయన ఐశ్వర్యము మరుగు పడియున్నది.
+hi: सर्वात्मा ईश्वर कृष्ण के प्रति पुत्रबुद्धि न रखिये। वे पर और अव्यय हैं। माया से मनुष्यभाव धारण करने के कारण उनका ऐश्वर्य छिपा हुआ है।
 
 --- verse 50 ---
 deva:
@@ -470,6 +617,9 @@ deva:
 iast:
 bhūbhārāsurarājanyahantave guptaye satām|
 avatīrṇasya nirvṛtyai yaśo loke vitanyate||
+en: He has come down to kill the asura kings who were a burden on the earth, and to protect the good. His fame is spread in the world for the peace of all.
+tel: భూమికి భారమైన అసుర రాజులను సంహరించుటకు, సజ్జనులను రక్షించుటకు ఆయన అవతరించెను. అందరి నిర్వృతి కొరకు ఆయన యశస్సు లోకములో వ్యాపించుచున్నది.
+hi: पृथ्वी के भार रूप असुर राजाओं का वध करने और सत्पुरुषों की रक्षा करने के लिये वे अवतीर्ण हुए हैं। सबकी निर्वृति के लिये उनका यश संसार में फैल रहा है।
 
 --- verse 51 ---
 deva:
@@ -480,6 +630,9 @@ iast:
 śrīśukauvāca
 etacchrutvā mahābhāgo vasudevo'tivismitaḥ|
 devakī ca mahābhāgā jahaturmohamātmanaḥ||
+en: Śrī Śuka said: Hearing this, the greatly blessed Vasudeva was filled with wonder, and the greatly blessed Devakī too. Both of them gave up the delusion of their minds.
+tel: శ్రీశుకుడు పలికెను: ఇది విని మహాభాగుడైన వసుదేవుడు మిక్కిలి ఆశ్చర్యము పొందెను, మహాభాగ అయిన దేవకి కూడ ఆశ్చర్యము పొందెను. ఇద్దరును తమ మనస్సులలోని మోహమును విడిచిరి.
+hi: श्री शुक ने कहा: यह सुनकर महाभाग वसुदेव अत्यन्त विस्मित हुए और महाभागा देवकी भी। दोनों ने अपने मन का मोह छोड़ दिया।
 
 --- verse 52 ---
 deva:
@@ -488,9 +641,15 @@ deva:
 iast:
 itihāsamimaṁ puṇyaṁ dhārayed yaḥ samāhitaḥ|
 sa vidhūyeha śamalaṁ brahmabhūyāya kalpate||
+en: He who holds this holy story in mind with full attention shakes off impurity here and becomes fit for the state of Brahman.
+tel: ఈ పుణ్యమైన ఇతిహాసమును సమాహిత చిత్తముతో ధరించువాడు ఇచ్చట మలమును తొలగించుకొని బ్రహ్మభావమునకు యోగ్యుడగును.
+hi: जो समाहित चित्त से इस पुण्य इतिहास को धारण करता है, वह यहीं मल को धो देता है और ब्रह्मभाव के योग्य हो जाता है।
 
 --- verse none ---
 deva:
 इति श्रीमद्भागवते महापुराणे पारमहंस्यां संहितायामेकादशस्कन्धे पञ्चमोऽध्यायः॥ ५॥
 iast:
 iti śrīmadbhāgavate mahāpurāṇe pāramahaṁsyāṁ saṁhitāyāmekādaśaskandhe pañcamo'dhyāyaḥ|| 5||
+en: Thus ends the fifth adhyāya in the eleventh skandha of the Śrīmad Bhāgavata Mahāpurāṇa, the saṁhitā of the paramahaṁsas.
+tel: ఇట్లు పరమహంసల సంహిత అయిన శ్రీమద్భాగవత మహాపురాణములో ఏకాదశ స్కంధమున పంచమ అధ్యాయము సమాప్తము.
+hi: इस प्रकार परमहंसों की संहिता श्रीमद्भागवत महापुराण के एकादश स्कन्ध में पाँचवाँ अध्याय समाप्त हुआ।

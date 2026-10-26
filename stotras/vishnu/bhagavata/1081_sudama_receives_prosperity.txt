@@ -9,7 +9,7 @@ Type: Purāṇa (an adhyāya of the Śrīmad Bhāgavata, Skandha 10)
 
 Source / recension: Base text and authority: the Gītā Press, Gorakhpur Śrīmadbhāgavata Mahāpurāṇa with Hindi translation, Part 2 (Gītā Press code 27), archive.org item `shrimadbhagwat-mahapuran-bhag-2`, printed pages 624–629; the PDF page numbers are the printed ones. The PDF carries the typesetter's own text layer in the Chanakya font encoding, and the text was decoded from it by machine with `bin/bhagavata/chanakya.py`, not read off OCR or typed. The decoder was checked against GRETIL over all twelve skandhas before any file was written, and the differences that remain were sampled and found to be readings of the two editions. Second witness: GRETIL's `sa_bhAgavatapurANa.xml` (IAST, contributed by Ulrich Stiehl), a separate editorial lineage, compared verse by verse by machine. The TTD edition with the commentaries of Śrīdhara, Vīrarāghava and Vijayadhvaja (archive.org `Bhagavata_Purana_With_Multiple_Commentaries_TTD_Critical_Edition`) is the third witness where one is needed; it was not read for this file. The IAST was generated mechanically from the Devanāgarī with `bin/dev2iast.py`.
 
-Recension note: Text-only file, written 1 Oct 2026 at the user's instruction to lay down the whole Bhāgavata first: the English, Telugu and Hindi meanings are still to be added, and the witnesses' differences listed here have been recorded by machine and not yet adjudicated. The print is followed throughout. The print numbers 41 verses and GRETIL numbers 41. Of the 41 verses GRETIL has under the same number, 28 agree with the print letter for letter once spacing and the spelling of nasals are set aside; the rest differ: 2, 3, 5, 6, 11, 13, 17, 21, 22, 31, 32, 35, 40. Spacing is the print's, as its text layer gives it; in a few places justification has left a space inside a word, and these are still to be closed when the verse is read. The speaker lines (श्रीशुक उवाच and the others) are printed in italic above the verse they introduce, and are given as its first line.
+Recension note: Meanings written 26 Oct 2026 (session S78). The differences between the witnesses listed below were read as the verses were glossed; except where this note says otherwise, each is a spelling, a sandhi or a word order of the two editions, none of them changes the sense, and the print's reading therefore stands unbracketed. The print is followed throughout. The print numbers 41 verses and GRETIL numbers 41. Of the 41 verses GRETIL has under the same number, 28 agree with the print letter for letter once spacing and the spelling of nasals are set aside; the rest differ: 2, 3, 5, 6, 11, 13, 17, 21, 22, 31, 32, 35, 40. Spacing is the print's, as its text layer gives it. The speaker lines (श्रीशुक उवाच and the others) are printed in italic above the verse they introduce, and are given as its first line. One lost space was put right as the verses were read. At verse 32 the print's text layer had run समृद्धीः and सर्वसम्पदाम् together, and the space is restored here; GRETIL reads samṛddhīḥ sarva-sampadām, and a visarga-final word with its own case ending cannot open a compound. In the colophon the layer has flattened a line break between दशमस्कन्धे and उत्तरार्धे, and that is left as printed, as in the other adhyāyas of this half. At verse 39 प्रभवः is taken with Śrīdhara as 'masters', so that brāhmaṇas are called the Lord's masters and his deity. At verse 34 the construction admits more than one reading; Śrīdhara's is followed, that the Lord gives openly and abundantly without being asked and without speaking of it.
 
 Verse count: 41, plus the closing colophon printed unnumbered.
 
@@ -24,6 +24,9 @@ iast:
 śrīśuka uvāca
 sa itthaṁ dvijamukhyena saha saṁkathayan hariḥ|
 sarvabhūtamano'bhijñaḥ smayamāna uvāca tam||
+en: Śrīśuka said: Speaking in this way with that foremost of brāhmaṇas, Hari, who knows the mind of every being, smiled and said to him.
+tel: శ్రీశుకుడు పలికెను: ఆ బ్రాహ్మణశ్రేష్ఠునితో ఇట్లు మాటలాడుతూ, అన్ని ప్రాణుల మనస్సును ఎరిగిన హరి చిరునవ్వు నవ్వి అతనితో ఇట్లు పలికెను.
+hi: श्रीशुक ने कहा: उस श्रेष्ठ ब्राह्मण के साथ इस प्रकार बात करते हुए, सब प्राणियों के मन को जानने वाले हरि मुसकराकर उनसे बोले।
 
 --- verse 2 ---
 deva:
@@ -32,6 +35,9 @@ deva:
 iast:
 brahmaṇyo brāhmaṇaṁ kṛṣṇo bhagavān prahasan priyam|
 premṇā nirīkṣaṇenaiva prekṣan khalu satāṁ gatiḥ||
+en: Kṛṣṇa, the blessed Lord, who loves brāhmaṇas and is the refuge of the good, smiled at that dear brāhmaṇa and looked at him with a look full of love.
+tel: బ్రాహ్మణులను ప్రేమించువాడు, సజ్జనులకు ఆశ్రయమైనవాడు అగు శ్రీకృష్ణ భగవానుడు తనకు ప్రియమైన ఆ బ్రాహ్మణుని చూచి నవ్వి, ప్రేమతో నిండిన చూపుతో అతనిని చూచెను.
+hi: ब्राह्मणों पर प्रेम रखने वाले और सज्जनों के आश्रय भगवान् कृष्ण अपने प्रिय ब्राह्मण को देखकर हँसे और प्रेम से भरी दृष्टि से उन्हें देखने लगे।
 
 --- verse 3 ---
 deva:
@@ -44,6 +50,9 @@ iast:
 kimupāyanamānītaṁ brahman me bhavatā gṛhāt|
 aṇvapyupāhṛtaṁ bhaktaiḥ premṇā bhūryeva me bhavet|
 bhūryapyabhaktopahṛtaṁ na me toṣāya kalpate||
+en: The blessed Lord said: O brāhmaṇa, what gift have you brought me from your house? Even a very small thing offered by my devotees with love becomes much for me. But much offered by one who has no devotion does not please me.
+tel: శ్రీభగవానుడు పలికెను: ఓ బ్రాహ్మణా, నీ ఇంటి నుండి నాకు ఏ కానుకను తెచ్చితివి? భక్తులు ప్రేమతో అర్పించిన అతి చిన్న వస్తువు కూడా నాకు గొప్పది అగును. భక్తి లేనివాడు ఎంత ఎక్కువ అర్పించినను అది నాకు సంతోషమును కలిగించదు.
+hi: श्रीभगवान् ने कहा: हे ब्राह्मण, आप अपने घर से मेरे लिये कौन सी भेंट लाये हैं? भक्त प्रेम से जो थोड़ी वस्तु भी अर्पित करते हैं, वह मेरे लिये बहुत हो जाती है। परन्तु भक्तिहीन व्यक्ति बहुत अर्पित करे तो भी वह मुझे सन्तोष नहीं देता।
 
 --- verse 4 ---
 deva:
@@ -52,6 +61,9 @@ deva:
 iast:
 patraṁ puṣpaṁ phalaṁ toyaṁ yo me bhaktyā prayacchati|
 tadahaṁ bhaktyupahṛtamaśnāmi prayatātmanaḥ||
+en: Whoever offers me a leaf, a flower, a fruit or water with devotion, that offering made with devotion by one of pure heart I eat.
+tel: ఆకును, పుష్పమును, ఫలమును లేక నీటిని ఎవరు భక్తితో నాకు అర్పించునో, పవిత్రమైన మనస్సుతో భక్తితో అర్పించిన ఆ కానుకను నేను భుజింతును.
+hi: जो मुझे पत्र, पुष्प, फल अथवा जल भक्ति से अर्पित करता है, शुद्ध मन वाले उस भक्त की भक्ति से दी हुई उस भेंट को मैं खाता हूँ।
 
 --- verse 5 ---
 deva:
@@ -60,6 +72,9 @@ deva:
 iast:
 ityukto'pi dvijastasmai vrīḍitaḥ pataye śriyaḥ|
 pṛthukaprasṛtiṁ rājan na prāyacchadavāṅmukhaḥ||
+en: O King, though spoken to in this way, the brāhmaṇa felt ashamed before the husband of Śrī. With his face bowed down he did not give him the handful of flat rice.
+tel: ఓ రాజా, ఇట్లు పలికినను ఆ బ్రాహ్మణుడు శ్రీదేవి పతి ఎదుట సిగ్గుపడెను. ముఖమును వాల్చుకొని అతడు ఆ పిడికెడు అటుకులను ఇవ్వలేదు.
+hi: हे राजन्, इस प्रकार कहने पर भी वह ब्राह्मण श्री के पति के सामने लज्जित हो गया। मुख नीचा किये हुए उसने वह मुट्ठी भर चिउड़ा नहीं दिया।
 
 --- verse 6 ---
 deva:
@@ -68,6 +83,9 @@ deva:
 iast:
 sarvabhūtātmadṛk sākṣāt tasyāgamanakāraṇam|
 vijñāyācintayannāyaṁ śrīkāmo mābhajatpurā||
+en: The Lord, who sees the self of all beings, knew directly the reason for his coming, and thought: This man did not worship me in the past out of desire for wealth.
+tel: సర్వ ప్రాణులలోని ఆత్మను చూచు ఆ ప్రభువు అతడు వచ్చిన కారణమును ప్రత్యక్షముగా ఎరిగి ఇట్లు తలచెను: ఇతడు పూర్వము సంపద కోరి నన్ను ఆరాధించలేదు.
+hi: सब प्राणियों के आत्मा को देखने वाले भगवान् ने उसके आने का कारण प्रत्यक्ष जान लिया और सोचा: इसने पहले धन की इच्छा से मेरी उपासना नहीं की थी।
 
 --- verse 7 ---
 deva:
@@ -76,6 +94,9 @@ deva:
 iast:
 patnyāḥ pativratāyāstu sakhā priyacikīrṣayā|
 prāpto māmasya dāsyāmi sampado'martyadurlabhāḥ||
+en: He has come to me to please his wife, who is devoted to her husband. To him I shall give riches that even the immortals find hard to obtain.
+tel: పతివ్రత అయిన తన భార్యకు సంతోషము కలిగించుటకు ఇతడు నా వద్దకు వచ్చెను. దేవతలకైనను పొందుట కష్టమైన సంపదలను నేను ఇతనికి ఇత్తును.
+hi: अपनी पतिव्रता पत्नी को प्रसन्न करने की इच्छा से यह मेरे पास आया है। इसे मैं वह सम्पत्ति दूँगा जो देवताओं को भी कठिनाई से मिलती है।
 
 --- verse 8 ---
 deva:
@@ -84,6 +105,9 @@ deva:
 iast:
 itthaṁ vicintya vasanāccīrabaddhāndvijanmanaḥ|
 svayaṁ jahāra kimidamiti pṛthukataṇḍulān||
+en: Thinking in this way he himself took out from the brāhmaṇa's garment the flat rice tied up in a rag, saying: What is this?
+tel: ఇట్లు తలచి, ఇది ఏమి అని పలుకుతూ, ఆ బ్రాహ్మణుని వస్త్రములో గుడ్డలో కట్టబడిన అటుకులను తానే బయటికి తీసెను.
+hi: ऐसा सोचकर, यह क्या है, ऐसा कहते हुए उन्होंने स्वयं उस ब्राह्मण के वस्त्र में चिथड़े में बँधे चिउड़े निकाल लिये।
 
 --- verse 9 ---
 deva:
@@ -92,6 +116,9 @@ deva:
 iast:
 nanvetadupanītaṁ me paramaprīṇanaṁ sakhe|
 tarpayantyaṁga māṁ viśvamete pṛthukataṇḍulāḥ||
+en: Friend, surely this that you have brought for me is my highest delight. Dear one, these grains of flat rice will satisfy me and the whole world.
+tel: మిత్రమా, నీవు నా కోసము తెచ్చిన ఇది నిశ్చయముగా నాకు పరమానందమును కలిగించునది. ప్రియమైనవాడా, ఈ అటుకులు నన్నును, విశ్వమునంతటినీ తృప్తిపరచును.
+hi: मित्र, तुम मेरे लिये जो यह लाये हो, वह निश्चय ही मेरे लिये परम आनन्द देने वाला है। प्रिय, ये चिउड़े मुझे और सारे विश्व को तृप्त कर देंगे।
 
 --- verse 10 ---
 deva:
@@ -100,6 +127,9 @@ deva:
 iast:
 iti muṣṭiṁ sakṛjjagdhvā dvitīyāṁ jagdhumādade|
 tāvacchrīrjagṛhe hastaṁ tatparā parameṣṭhinaḥ||
+en: Saying this he ate one handful once. As he took a second handful to eat, Śrī, who is devoted to him, held the hand of that highest Lord.
+tel: ఇట్లు పలికి ఒకసారి ఒక పిడికెడు భుజించెను. రెండవ పిడికెడు భుజించుటకు తీసుకొనగా, ఆయనయందు నిష్ఠ కలిగిన శ్రీదేవి ఆ పరమేష్ఠి హస్తమును పట్టుకొనెను.
+hi: ऐसा कहकर उन्होंने एक बार एक मुट्ठी खायी। जब वे दूसरी मुट्ठी खाने के लिये उठाने लगे, तब उनमें अनुरक्त श्री ने उन परमेष्ठी का हाथ पकड़ लिया।
 
 --- verse 11 ---
 deva:
@@ -108,6 +138,9 @@ deva:
 iast:
 etāvatālaṁ viśvātman sarvasampatsamṛddhaye|
 asmim̐lloke'thavāmuṣmin puṁsastvattoṣakāraṇam||
+en: O soul of the universe, this much is enough for the full increase of every prosperity of this man, in this world or in the other. Your being pleased is the cause of it for a man.
+tel: ఓ విశ్వాత్మా, ఈ లోకములోనైనను, పరలోకములోనైనను ఇతనికి సర్వ సంపదల పూర్ణ వృద్ధికి ఇంత చాలును. పురుషునికి నీ సంతోషమే అందుకు కారణము.
+hi: हे विश्वात्मन्, इस लोक में अथवा परलोक में इसकी सब सम्पत्तियों की पूर्ण वृद्धि के लिये इतना ही पर्याप्त है। पुरुष के लिये आपका प्रसन्न होना ही उसका कारण है।
 
 --- verse 12 ---
 deva:
@@ -116,6 +149,9 @@ deva:
 iast:
 brāhmaṇastāṁ tu rajanīmuṣitvācyutamandire|
 bhuktvā pītvā sukhaṁ mene ātmānaṁ svargataṁ yathā||
+en: The brāhmaṇa stayed that night in the house of Acyuta. Having eaten and drunk, he felt happiness, and thought himself as if he had gone to heaven.
+tel: ఆ బ్రాహ్మణుడు ఆ రాత్రిని అచ్యుతుని మందిరములో గడపెను. భోజనము చేసి, పానము చేసి అతడు సుఖమును అనుభవించి, తాను స్వర్గమునకు వెళ్ళినట్లుగా తలచెను.
+hi: वह ब्राह्मण उस रात अच्युत के भवन में रहा। भोजन और पान करके उसने सुख का अनुभव किया और अपने को ऐसा समझा जैसे वह स्वर्ग में पहुँच गया हो।
 
 --- verse 13 ---
 deva:
@@ -124,6 +160,9 @@ deva:
 iast:
 śvobhūte viśvabhāvena svasukhenābhivanditaḥ|
 jagāma svālayaṁ tāta pathyanuvrajya nanditaḥ||
+en: Dear child, next morning he was honoured by the Lord of the universe, whose happiness is his own. The Lord went with him a little along the road, and he set out for his own house, delighted.
+tel: నాయనా, మరునాడు ఉదయమున, తన సుఖమే సుఖముగా కలిగిన ఆ విశ్వభావునిచే అతడు గౌరవింపబడెను. ఆ ప్రభువు దారిలో కొంతదూరము అతనితో నడచెను, అతడు ఆనందముతో తన ఇంటికి బయలుదేరెను.
+hi: हे तात, दूसरे दिन प्रातःकाल अपने सुख से ही सुखी रहने वाले उस विश्वभाव ने उसका सम्मान किया। भगवान् कुछ दूर मार्ग तक उसके साथ चले, और वह प्रसन्न होकर अपने घर की ओर चल पड़ा।
 
 --- verse 14 ---
 deva:
@@ -132,6 +171,9 @@ deva:
 iast:
 sa cālabdhvā dhanaṁ kṛṣṇānna tu yācitavān svayam|
 svagṛhān vrīḍito'gacchanmahaddarśananirvṛtaḥ||
+en: He had not received wealth from Kṛṣṇa, nor had he himself asked for it. Feeling shy, he went to his own house, content at having seen the great one.
+tel: అతడు కృష్ణుని నుండి ధనమును పొందలేదు, తానే అడుగను లేదు. సిగ్గుపడుతూ, మహాత్ముని దర్శనముచే తృప్తి చెంది అతడు తన ఇంటికి వెళ్ళెను.
+hi: उसे कृष्ण से धन नहीं मिला, और उसने स्वयं माँगा भी नहीं। लज्जित होकर वह अपने घर गया, महान् के दर्शन से सन्तुष्ट था।
 
 --- verse 15 ---
 deva:
@@ -140,6 +182,9 @@ deva:
 iast:
 aho brahmaṇyadevasya dṛṣṭā brahmaṇyatā mayā|
 yad daridratamo lakṣmīmāśliṣṭo bibhratorasi||
+en: Ah, I have seen the love for brāhmaṇas of the Lord who is the deity of brāhmaṇas. He bears Lakṣmī on his chest, and yet he embraced me, who am the poorest of all.
+tel: ఆహా, బ్రాహ్మణులకు దేవుడైన ఆ ప్రభువు బ్రాహ్మణుల యెడల చూపిన ప్రేమను నేను చూచితిని. ఆయన లక్ష్మిని తన వక్షముపై ధరించియున్నను, అందరిలో మిక్కిలి పేదవాడైన నన్ను కౌగిలించుకొనెను.
+hi: अहो, ब्राह्मणों के देव उस भगवान् की ब्राह्मणों पर जो प्रीति है, वह मैंने देखी। वे लक्ष्मी को अपने वक्ष पर धारण करते हैं, फिर भी उन्होंने मुझ अत्यन्त दरिद्र को गले लगाया।
 
 --- verse 16 ---
 deva:
@@ -148,6 +193,9 @@ deva:
 iast:
 kvāhaṁ daridraḥ pāpīyān kva kṛṣṇaḥ śrīniketanaḥ|
 brahmabandhuriti smāhaṁ bāhubhyāṁ parirambhitaḥ||
+en: Where am I, poor and full of sin, and where is Kṛṣṇa, the abode of Śrī? Yet he held me in his two arms, though I am only a kinsman of brāhmaṇas.
+tel: పేదవాడును, పాపముతో నిండినవాడును అగు నేను ఎక్కడ, శ్రీదేవి నిలయమైన కృష్ణుడు ఎక్కడ? అయినను, బ్రాహ్మణబంధువు మాత్రమే అగు నన్ను ఆయన తన రెండు బాహువులతో హత్తుకొనెను.
+hi: कहाँ मैं दरिद्र और पापी, और कहाँ श्री के निवास कृष्ण? फिर भी ब्रह्मबन्धु मात्र मुझे उन्होंने अपनी दोनों भुजाओं से हृदय से लगाया।
 
 --- verse 17 ---
 deva:
@@ -156,6 +204,9 @@ deva:
 iast:
 nivāsitaḥ priyājuṣṭe paryaṁke bhrātaro yathā|
 mahiṣyā vījitaḥ śrānto vālavyajanahastayā||
+en: He seated me on the couch used by his beloved, as brothers are seated. I was tired, and the queen fanned me, holding a fan of hair in her hand.
+tel: సోదరులను కూర్చుండబెట్టునట్లు, తన ప్రియురాలు ఉపయోగించు పర్యంకముపై ఆయన నన్ను కూర్చుండబెట్టెను. నేను అలసియుంటిని, మహారాణి చామర వ్యజనమును చేత పట్టుకొని నాకు విసరెను.
+hi: जैसे भाइयों को बैठाया जाता है, वैसे उन्होंने मुझे अपनी प्रिया के पर्यंक पर बैठाया। मैं थका हुआ था, और महारानी ने हाथ में बालव्यजन लेकर मुझ पर हवा की।
 
 --- verse 18 ---
 deva:
@@ -164,6 +215,9 @@ deva:
 iast:
 śuśrūṣayā paramayā pādasaṁvāhanādibhiḥ|
 pūjito devadevena vipradevena devavat||
+en: I was worshipped by the Lord of the gods with the highest service, with the rubbing of my feet and the rest, as a god is worshipped, by him for whom the brāhmaṇa is a god.
+tel: బ్రాహ్మణుడే దేవుడుగా భావించు ఆ దేవదేవునిచే, పాదములను ఒత్తుట మొదలైన పరమ శుశ్రూషతో, దేవుని వలె నేను పూజింపబడితిని.
+hi: जिनके लिये ब्राह्मण ही देव है, उन देवदेव ने चरण दबाने आदि परम सेवा से देवता के समान मेरी पूजा की।
 
 --- verse 19 ---
 deva:
@@ -172,6 +226,9 @@ deva:
 iast:
 svargāpavargayoḥ puṁsāṁ rasāyāṁ bhuvi sampadām|
 sarvāsāmapi siddhīnāṁ mūlaṁ taccaraṇārcanam||
+en: The worship of his feet is the root of heaven and of release for men, of riches in the lower world and on the earth, and of all the perfections as well.
+tel: ఆయన చరణముల పూజయే మనుష్యులకు స్వర్గమునకును, మోక్షమునకును, రసాతలములోని మరియు భూమిపైని సంపదలకును, సమస్త సిద్ధులకును మూలము.
+hi: उनके चरणों की पूजा ही मनुष्यों के लिये स्वर्ग और मोक्ष का, रसातल तथा पृथ्वी की सम्पत्तियों का, और सब सिद्धियों का मूल है।
 
 --- verse 20 ---
 deva:
@@ -180,6 +237,9 @@ deva:
 iast:
 adhano'yaṁ dhanaṁ prāpya mādyannuccairna māṁ smaret|
 iti kāruṇiko nūnaṁ dhanaṁ me'bhūri nādadāt||
+en: This man is poor; getting wealth he will become greatly intoxicated with pride and will forget me. Thinking so, surely he was merciful and gave me no great wealth.
+tel: ఇతడు ధనము లేనివాడు; ధనమును పొంది మిక్కిలి మదించి నన్ను మరచిపోవును. ఇట్లు తలచి, ఆ కరుణామయుడు నిశ్చయముగా నాకు పెద్ద ధనమును ఇవ్వలేదు.
+hi: यह निर्धन है; धन पाकर अत्यन्त मदमत्त हो जायगा और मुझे भूल जायगा। ऐसा सोचकर उस करुणामय ने निश्चय ही मुझे बहुत धन नहीं दिया।
 
 --- verse 21 ---
 deva:
@@ -188,6 +248,9 @@ deva:
 iast:
 iti taccintayannantaḥ prāpto nijagṛhāntikam|
 sūryānalendusaṁkāśairvimānaiḥ sarvato vṛtam||
+en: Thinking this within himself he reached the neighbourhood of his own house, which was surrounded on all sides by palaces bright as the sun, as fire and as the moon.
+tel: ఇట్లు మనస్సులో తలచుకొనుచు అతడు తన ఇంటి చేరువకు చేరెను. ఆ చోటు సూర్యుని, అగ్ని, చంద్రుని వలె ప్రకాశించు విమానములతో అన్ని వైపుల చుట్టబడియుండెను.
+hi: मन में ऐसा सोचते हुए वह अपने घर के पास पहुँचा, जो सूर्य, अग्नि और चन्द्र के समान चमकने वाले विमानों से चारों ओर घिरा था।
 
 --- verse 22 ---
 deva:
@@ -196,6 +259,9 @@ deva:
 iast:
 vicitropavanodyānaiḥ kūjaddvijakulākulaiḥ|
 protphullakumudāmbhojakahlārotpalavāribhiḥ||
+en: It had varied groves and gardens, crowded with flocks of calling birds, and waters full of open kumuda, lotus, kahlāra and utpala flowers.
+tel: అచ్చట రకరకముల ఉపవనములు, ఉద్యానములు ఉండెను. అవి కూజితము చేయు పక్షుల గుంపులతో నిండియుండెను. జలములు విరిసిన కుముదములు, కమలములు, కహ్లారములు, ఉత్పలములతో నిండియుండెను.
+hi: वहाँ अनेक प्रकार के उपवन और उद्यान थे, जो कूजते पक्षियों के समूहों से भरे थे, और जल खिले हुए कुमुद, कमल, कह्लार और उत्पल से भरा था।
 
 --- verse 23 ---
 deva:
@@ -204,6 +270,9 @@ deva:
 iast:
 juṣṭaṁ svalaṁkṛtaiḥ pumbhiḥ strībhiśca hariṇākṣibhiḥ|
 kimidaṁ kasya vā sthānaṁ kathaṁ tadidamityabhūt||
+en: It was filled with well-adorned men and with women whose eyes were like a doe's. What is this? Whose place is this? How has it come to be so? Such was his thought.
+tel: చక్కగా అలంకరించుకొన్న పురుషులతోను, లేడి కన్నుల వంటి కన్నులు కల స్త్రీలతోను అది నిండియుండెను. ఇది ఏమి? ఇది ఎవరి స్థానము? ఇది ఇట్లు ఎట్లు అయినది? అని అతనికి తలపు కలిగెను.
+hi: वह सुन्दर आभूषण पहने पुरुषों और हिरनी के समान नेत्रों वाली स्त्रियों से भरा था। यह क्या है? यह किसका स्थान है? यह ऐसा कैसे हुआ? ऐसा उसे विचार हुआ।
 
 --- verse 24 ---
 deva:
@@ -212,6 +281,9 @@ deva:
 iast:
 evaṁ mīmāṁsamānaṁ taṁ narā nāryo'maraprabhāḥ|
 pratyagṛhṇan mahābhāgaṁ gītavādyena bhūyasā||
+en: As he was thinking in this way, men and women shining like the immortals received that greatly blessed one with abundant song and music.
+tel: అతడు ఇట్లు ఆలోచించుచుండగా, దేవతల వలె ప్రకాశించు పురుషులును, స్త్రీలును ఆ మహాభాగ్యవంతుని విస్తారమైన గీతముతోను, వాద్యముతోను ఎదుర్కొని స్వాగతించిరి.
+hi: जब वह इस प्रकार विचार कर रहा था, तब देवताओं के समान चमकने वाले पुरुषों और स्त्रियों ने उस महाभाग का बहुत से गीत और वाद्य के साथ स्वागत किया।
 
 --- verse 25 ---
 deva:
@@ -220,6 +292,9 @@ deva:
 iast:
 patimāgatamākarṇya patnyuddharṣātisambhramā|
 niścakrāma gṛhāttūrṇaṁ rūpiṇī śrīrivālayāt||
+en: Hearing that her husband had come, his wife, filled with great joy and eagerness, came out of the house at once, like Śrī herself in bodily form coming out of her abode.
+tel: పతి వచ్చెనని విని, అతని భార్య గొప్ప సంతోషముతోను, ఆతురతతోను నిండి, తన నిలయము నుండి బయటికి వచ్చు రూపము ధరించిన శ్రీదేవి వలె వెంటనే ఇంటి నుండి బయటికి వచ్చెను.
+hi: पति के आने का समाचार सुनकर उसकी पत्नी बड़े हर्ष और उत्कण्ठा से भरकर, अपने निवास से निकलती हुई साक्षात् श्री के समान, तुरन्त घर से बाहर आ गयी।
 
 --- verse 26 ---
 deva:
@@ -228,6 +303,9 @@ deva:
 iast:
 pativratā patiṁ dṛṣṭvā premotkaṇṭhāśrulocanā|
 mīlitākṣyanamad buddhyā manasā pariṣasvaje||
+en: The devoted wife, seeing her husband, her eyes full of tears from love and longing, closed her eyes, bowed to him in her mind, and embraced him in her heart.
+tel: పతివ్రత అయిన ఆమె పతిని చూచి, ప్రేమతోను, ఉత్కంఠతోను కన్నుల నిండా నీరు నింపుకొని, కన్నులు మూసుకొని, బుద్ధితో నమస్కరించి, మనస్సుతో అతనిని కౌగిలించుకొనెను.
+hi: उस पतिव्रता ने अपने पति को देखकर, प्रेम और उत्कण्ठा से आँखों में आँसू भरकर, नेत्र मूँदकर बुद्धि से प्रणाम किया और मन से उनका आलिंगन किया।
 
 --- verse 27 ---
 deva:
@@ -236,6 +314,9 @@ deva:
 iast:
 patnīṁ vīkṣya visphurantīṁ devīṁ vaimānikīmiva|
 dāsīnāṁ niṣkakaṇṭhīnāṁ madhye bhāntīṁ sa vismitaḥ||
+en: Seeing his wife shining like a goddess of the celestial cars, radiant in the midst of maidservants who wore golden necklaces, he was filled with wonder.
+tel: విమానములలో తిరుగు దేవి వలె వెలుగుతూ, బంగారు హారములు ధరించిన దాసీల మధ్య ప్రకాశించు తన భార్యను చూచి అతడు ఆశ్చర్యపడెను.
+hi: विमान में विचरने वाली देवी के समान चमकती हुई, सोने के हार पहनी दासियों के बीच शोभित अपनी पत्नी को देखकर वह विस्मित हो गया।
 
 --- verse 28 ---
 deva:
@@ -244,6 +325,9 @@ deva:
 iast:
 prītaḥ svayaṁ tayā yuktaḥ praviṣṭo nijamandiram|
 maṇistambhaśatopetaṁ mahendrabhavanaṁ yathā||
+en: Pleased, he entered his own house together with her. It had a hundred jewelled pillars, and was like the palace of great Indra.
+tel: సంతోషించి, ఆమెతో కలిసి అతడు తన మందిరములో ప్రవేశించెను. ఆ మందిరము వంద రత్న స్తంభములతో కూడి మహేంద్రుని భవనము వలె ఉండెను.
+hi: प्रसन्न होकर वह उसके साथ अपने भवन में गया। वह सौ मणिस्तम्भों से युक्त था और महेन्द्र के भवन के समान था।
 
 --- verse 29 ---
 deva:
@@ -252,6 +336,9 @@ deva:
 iast:
 payaḥphenanibhāḥ śayyā dāntā rukmaparicchadāḥ|
 paryaṁkā hemadaṇḍāni cāmaravyajanāni ca||
+en: There were beds white as the foam of milk, made of ivory with coverings of gold; couches with golden legs; and fans of yak hair.
+tel: అచ్చట పాల నురుగు వలె తెల్లని శయ్యలు, దంతముతో చేసినవి, బంగారు కప్పులు కలవి ఉండెను. బంగారు దండములు కల పర్యంకములును, చామర వ్యజనములును ఉండెను.
+hi: वहाँ दूध के फेन के समान श्वेत शय्याएँ थीं, जो हाथीदाँत की और सोने के आवरण वाली थीं। सोने के दण्ड वाले पर्यंक और चामर व्यजन भी थे।
 
 --- verse 30 ---
 deva:
@@ -260,6 +347,9 @@ deva:
 iast:
 āsanāni ca haimāni mṛdūpastaraṇāni ca|
 muktādāmavilambīni vitānāni dyumanti ca||
+en: There were seats of gold with soft cushions upon them, and shining canopies hung with strings of pearls.
+tel: బంగారు ఆసనములు, వాటిపై మెత్తని పరపులు ఉండెను. ముత్యముల దండలు వ్రేలాడు ప్రకాశించు వితానములును ఉండెను.
+hi: सोने के आसन थे और उन पर कोमल बिछौने थे। मोतियों की लड़ें लटकती हुई चमकीली चाँदनियाँ भी थीं।
 
 --- verse 31 ---
 deva:
@@ -268,14 +358,20 @@ deva:
 iast:
 svacchasphaṭikakuḍyeṣu mahāmārakateṣu ca|
 ratnadīpā bhrājamānā lalanāratnasaṁyutāḥ||
+en: On walls of clear crystal and of great emerald, jewelled lamps were shining, and with them women who were like jewels.
+tel: స్వచ్ఛమైన స్ఫటికము, గొప్ప మరకతము కల గోడలపై రత్న దీపములు ప్రకాశించుచుండెను. వాటితో పాటు రత్నముల వంటి స్త్రీలును ఉండిరి.
+hi: स्वच्छ स्फटिक और महामरकत की दीवारों पर रत्नदीप चमक रहे थे, और उनके साथ रत्न के समान स्त्रियाँ भी थीं।
 
 --- verse 32 ---
 deva:
-विलोक्य ब्राह्मणस्तत्र समृद्धीःसर्वसम्पदाम्।
+विलोक्य ब्राह्मणस्तत्र समृद्धीः सर्वसम्पदाम्।
 तर्कयामास निर्व्यग्रः स्वसमृद्धिमहैतुकीम्॥
 iast:
-vilokya brāhmaṇastatra samṛddhīḥsarvasampadām|
+vilokya brāhmaṇastatra samṛddhīḥ sarvasampadām|
 tarkayāmāsa nirvyagraḥ svasamṛddhimahaitukīm||
+en: Seeing there the abundance of every kind of wealth, the brāhmaṇa was not disturbed. He reflected upon his own prosperity, which had no cause in himself.
+tel: అచ్చట సర్వ సంపదల సమృద్ధిని చూచి ఆ బ్రాహ్మణుడు కలత చెందలేదు. తనలో ఏ కారణమును లేని తన సమృద్ధిని గురించి అతడు ఆలోచించెను.
+hi: वहाँ सब प्रकार की सम्पत्तियों की समृद्धि देखकर वह ब्राह्मण व्याकुल नहीं हुआ। अपने में कोई कारण न रखने वाली अपनी समृद्धि के विषय में उसने विचार किया।
 
 --- verse 33 ---
 deva:
@@ -288,6 +384,9 @@ nūnaṁ bataitanmama durbhagasya
 śaśvaddaridrasya samṛddhihetuḥ|
 mahāvibhūteravalokato'nyo
 naivopapadyeta yadūttamasya||
+en: Surely, for me who am unfortunate and always poor, the cause of this wealth can be nothing other than the glance of the best of the Yadus, who holds great majesty.
+tel: నిశ్చయముగా, దురదృష్టవంతుడును, ఎల్లప్పుడు పేదవాడును అగు నాకు ఈ సమృద్ధికి కారణము మహావిభూతి కల యదుశ్రేష్ఠుని చూపు తప్ప వేరొకటి కాజాలదు.
+hi: निश्चय ही मुझ दुर्भाग्यशाली और सदा दरिद्र के लिये इस समृद्धि का कारण महाविभूति वाले यदुश्रेष्ठ की दृष्टि के अतिरिक्त और कुछ नहीं हो सकता।
 
 --- verse 34 ---
 deva:
@@ -300,6 +399,9 @@ nanvabruvāṇo diśate samakṣaṁ
 yāciṣṇave bhūryapi bhūribhojaḥ|
 parjanyavattat svayamīkṣamāṇo
 dāśārhakāṇāmṛṣabhaḥ sakhā me||
+en: Indeed he who enjoys much gives much before the eyes of one who wishes to ask, and says nothing of it. Like a rain cloud he gives it himself while only looking on. Such is my friend, the bull of the Dāśārhas.
+tel: నిజముగా, విస్తారముగా అనుభవించువాడు అడుగ గోరినవానికి ఎదుటనే విస్తారముగా ఇచ్చి, దానిని గురించి ఏమియు పలుకడు. వర్షమేఘము వలె అతడు చూచుచునే తానే ఇచ్చును. అట్టివాడు దాశార్హకుల వృషభుడైన నా మిత్రుడు.
+hi: निस्सन्देह बहुत भोग करने वाला वह माँगने की इच्छा रखने वाले को सामने ही बहुत देता है और उसके विषय में कुछ कहता नहीं। मेघ के समान वह देखते हुए ही स्वयं दे देता है। ऐसा है दाशार्हकों का वृषभ, मेरा मित्र।
 
 --- verse 35 ---
 deva:
@@ -312,6 +414,9 @@ kiṁcitkarotyurvapi yat svadattaṁ
 suhṛtkṛtaṁ phalgvapi bhūrikārī|
 mayopanītāṁ pṛthukaikamuṣṭiṁ
 pratyagrahīt prītiyuto mahātmā||
+en: That great soul counts as little even the much that he himself has given, and makes much of even a trifle done by a friend. He accepted with love the one handful of flat rice that I brought.
+tel: ఆ మహాత్ముడు తాను ఇచ్చిన ఎక్కువను కూడ కొంచెముగా ఎన్నును, మిత్రుడు చేసిన అల్పమైనదానిని కూడ గొప్పగా చేయును. నేను తెచ్చిన ఒక పిడికెడు అటుకులను ఆయన ప్రేమతో స్వీకరించెను.
+hi: वह महात्मा अपने दिये हुए बहुत को भी थोड़ा गिनता है, और मित्र के किये हुए तुच्छ को भी बहुत कर देता है। मेरे लाये हुए एक मुट्ठी चिउड़े को उसने प्रेम से स्वीकार किया।
 
 --- verse 36 ---
 deva:
@@ -324,6 +429,9 @@ tasyaiva me sauhṛdasakhyamaitrī
 dāsyaṁ punarjanmani janmani syāt|
 mahānubhāvena guṇālayena
 viṣajjatastatpuruṣaprasaṁgaḥ||
+en: Let there be for me, in birth after birth, affection, friendship, love and service to him alone. For one who clings to that greatly powerful abode of good qualities there comes the company of his devotees.
+tel: ప్రతి జన్మలోను ఆయన యెడల మాత్రమే నాకు సౌహృదము, సఖ్యము, మైత్రి, దాస్యము కలుగవలెను. గుణములకు నిలయమైన ఆ మహానుభావునికి అంటుకొనియున్నవానికి ఆయన భక్తుల సాంగత్యము కలుగును.
+hi: प्रत्येक जन्म में मुझे उन्हीं के प्रति सौहार्द, सख्य, मैत्री और दास्य प्राप्त हो। गुणों के निवास उस महानुभाव में आसक्त रहने वाले को उनके भक्तों का संग प्राप्त होता है।
 
 --- verse 37 ---
 deva:
@@ -336,6 +444,9 @@ bhaktāya citrā bhagavān hi sampado
 rājyaṁ vibhūtīrna samarthayatyajaḥ|
 adīrghabodhāya vicakṣaṇaḥ svayaṁ
 paśyan nipātaṁ dhanināṁ madodbhavam||
+en: The unborn blessed Lord does not grant varied riches, a kingdom and powers to a devotee whose understanding does not look far. He is wise, and he himself sees the fall of the rich, which is born of pride.
+tel: దూరదృష్టి లేని బుద్ధి కల భక్తునికి జన్మ లేని ఆ భగవానుడు రకరకముల సంపదలను, రాజ్యమును, వైభవములను ఇవ్వడు. ఆయన వివేకవంతుడు, ధనవంతుల పతనమును, అది మదము నుండి పుట్టునని తానే చూచును.
+hi: जिस भक्त की बुद्धि दूर तक नहीं देखती, उसे अजन्मा भगवान् अनेक प्रकार की सम्पत्तियाँ, राज्य और विभूतियाँ नहीं देते। वे विचक्षण हैं और धनवानों का पतन, जो मद से उत्पन्न होता है, स्वयं देखते हैं।
 
 --- verse 38 ---
 deva:
@@ -344,6 +455,9 @@ deva:
 iast:
 itthaṁ vyavasito buddhyā bhakto'tīva janārdane|
 viṣayāñjāyayā tyakṣyan bubhuje nātilampaṭaḥ||
+en: Having resolved thus in his mind, and being very much a devotee of Janārdana, he enjoyed the objects of pleasure with his wife, meaning to give them up, and was not too greedy for them.
+tel: బుద్ధితో ఇట్లు నిశ్చయించుకొని, జనార్దనునియందు మిక్కిలి భక్తి కలిగి, వాటిని వదలివేయవలెనన్న తలంపుతో అతడు భార్యతో కలిసి భోగములను అనుభవించెను, వాటియందు మిక్కిలి ఆసక్తి చూపలేదు.
+hi: बुद्धि से ऐसा निश्चय करके, जनार्दन में अत्यन्त भक्ति रखते हुए, उन्हें छोड़ने के विचार से उसने पत्नी के साथ विषयों का भोग किया और उनमें अत्यन्त लम्पट नहीं हुआ।
 
 --- verse 39 ---
 deva:
@@ -352,6 +466,9 @@ deva:
 iast:
 tasya vai devadevasya hareryajñapateḥ prabhoḥ|
 brāhmaṇāḥ prabhavo daivaṁ na tebhyo vidyate param||
+en: Of that Lord of lords, Hari, the master of sacrifices, brāhmaṇas are the masters and the deity. There is nothing higher than them.
+tel: దేవదేవుడును, యజ్ఞపతియును, ప్రభువును అగు ఆ హరికి బ్రాహ్మణులే ప్రభువులును, దైవమును. వారికి మించినది ఏదియు లేదు.
+hi: उन देवदेव, यज्ञपति, प्रभु हरि के ब्राह्मण ही स्वामी और देवता हैं। उनसे बढ़कर और कुछ नहीं है।
 
 --- verse 40 ---
 deva:
@@ -364,6 +481,9 @@ evaṁ sa vipro bhagavatsuhṛttadā
 dṛṣṭvā svabhṛtyairajitaṁ parājitam|
 taddhyānavegodgrathitātmabandhana-
 staddhāma lebhe'cirataḥ satāṁ gatim||
+en: Thus that brāhmaṇa, the friend of the blessed Lord, saw at that time that the unconquered one is conquered by his own servants. The bonds of his self were loosened by the force of meditation on him, and before long he reached his abode, which is the goal of the good.
+tel: ఇట్లు ఆ బ్రాహ్మణుడు, భగవంతుని మిత్రుడు, జయింపరానివాడు తన సేవకులచే జయింపబడుటను అప్పుడు చూచెను. ఆయనపై ధ్యానము వేగముచే అతని ఆత్మ బంధములు విడిపోయెను, కొంతకాలములోనే అతడు సజ్జనుల గతి అయిన ఆయన ధామమును పొందెను.
+hi: इस प्रकार वह ब्राह्मण, भगवान् का सुहृद्, उस समय देख चुका था कि अजित अपने भृत्यों से जीत लिये जाते हैं। उनके ध्यान के वेग से उसके आत्मबन्धन खुल गये, और थोड़े ही समय में उसने सन्तों की गति उनके धाम को प्राप्त किया।
 
 --- verse 41 ---
 deva:
@@ -372,9 +492,15 @@ deva:
 iast:
 etad brahmaṇyadevasya śrutvā brahmaṇyatāṁ naraḥ|
 labdhabhāvo bhagavati karmabandhād vimucyate||
+en: A man who hears this love for brāhmaṇas of the Lord who is the deity of brāhmaṇas gains devotion to the blessed Lord and is freed from the bondage of works.
+tel: బ్రాహ్మణులకు దేవుడైన ఆ ప్రభువు బ్రాహ్మణుల యెడల చూపిన ఈ ప్రేమను విను మనుష్యుడు భగవంతునియందు భక్తిని పొంది కర్మ బంధము నుండి విముక్తుడు అగును.
+hi: ब्राह्मणों के देव उस भगवान् की यह ब्राह्मण-प्रीति सुनने वाला मनुष्य भगवान् में भाव प्राप्त करके कर्मबन्धन से मुक्त हो जाता है।
 
 --- verse none ---
 deva:
 इति श्रीमद्भागवते महापुराणे पारमहंस्यां संहितायां दशमस्कन्धेउत्तरार्धे पृथुकोपाख्यानं नामैकाशीतितमोऽध्यायः॥ ८१॥
 iast:
 iti śrīmadbhāgavate mahāpurāṇe pāramahaṁsyāṁ saṁhitāyāṁ daśamaskandheuttarārdhe pṛthukopākhyānaṁ nāmaikāśītitamo'dhyāyaḥ|| 81||
+en: Thus ends the eighty-first adhyāya, called the story of the flat rice, in the latter half of the tenth skandha of the Śrīmad Bhāgavata Mahāpurāṇa, the saṁhitā of the paramahaṁsas.
+tel: ఇట్లు శ్రీమద్భాగవత మహాపురాణములో, పరమహంసల సంహితలో, దశమ స్కంధము ఉత్తరార్ధములో పృథుకోపాఖ్యానము అను ఎనుబది ఒకటవ అధ్యాయము ముగిసెను.
+hi: इस प्रकार श्रीमद्भागवत महापुराण की परमहंसों की संहिता के दशम स्कन्ध के उत्तरार्ध में पृथुकोपाख्यान नामक इक्यासीवाँ अध्याय समाप्त हुआ।

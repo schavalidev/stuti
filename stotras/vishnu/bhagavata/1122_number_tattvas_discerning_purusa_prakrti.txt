@@ -9,7 +9,7 @@ Type: Purāṇa (an adhyāya of the Śrīmad Bhāgavata, Skandha 11)
 
 Source / recension: Base text and authority: the Gītā Press, Gorakhpur Śrīmadbhāgavata Mahāpurāṇa with Hindi translation, Part 2 (Gītā Press code 27), archive.org item `shrimadbhagwat-mahapuran-bhag-2`, printed pages 846–854; the PDF page numbers are the printed ones. The PDF carries the typesetter's own text layer in the Chanakya font encoding, and the text was decoded from it by machine with `bin/bhagavata/chanakya.py`, not read off OCR or typed. The decoder was checked against GRETIL over all twelve skandhas before any file was written, and the differences that remain were sampled and found to be readings of the two editions. Second witness: GRETIL's `sa_bhAgavatapurANa.xml` (IAST, contributed by Ulrich Stiehl), a separate editorial lineage, compared verse by verse by machine. The TTD edition with the commentaries of Śrīdhara, Vīrarāghava and Vijayadhvaja (archive.org `Bhagavata_Purana_With_Multiple_Commentaries_TTD_Critical_Edition`) is the third witness where one is needed; it was not read for this file. The IAST was generated mechanically from the Devanāgarī with `bin/dev2iast.py`.
 
-Recension note: Text-only file, written 1 Oct 2026 at the user's instruction to lay down the whole Bhāgavata first: the English, Telugu and Hindi meanings are still to be added, and the witnesses' differences listed here have been recorded by machine and not yet adjudicated. The print is followed throughout. The print numbers 60 verses; GRETIL numbers 61, so from some point the two editions number the verses differently. Never match them by number. Of the 60 verses GRETIL has under the same number, 22 agree with the print letter for letter once spacing and the spelling of nasals are set aside; the rest differ: 2, 3, 6, 15, 18, 20, 26, 27, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60. Spacing is the print's, as its text layer gives it; in a few places justification has left a space inside a word, and these are still to be closed when the verse is read. The speaker lines (श्रीशुक उवाच and the others) are printed in italic above the verse they introduce, and are given as its first line.
+Recension note: Meanings written 26 Oct 2026 (session S78). The differences between the witnesses listed below were read as the verses were glossed; except where this note says otherwise, each is a spelling, a sandhi or a word order of the two editions, none of them changes the sense, and the print's reading therefore stands unbracketed. The print is followed throughout. The print numbers 60 verses; GRETIL numbers 61, so from some point the two editions number the verses differently. Never match them by number. Of the 60 verses GRETIL has under the same number, 22 agree with the print letter for letter once spacing and the spelling of nasals are set aside; the rest differ: 2, 3, 6, 15, 18, 20, 26, 27, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60. Spacing is the print's, as its text layer gives it. The speaker lines (श्रीशुक उवाच and the others) are printed in italic above the verse they introduce, and are given as its first line. One word was put right as the verses were read. At verse 15 justification had left a space inside अङ्घ्रि, in पाय्वङ् घ्रिकर्माणि, and it is closed here; GRETIL reads पाय्व्-अङ्घ्रिः whole, and no word can end after a virāma ङ्. Three places were left exactly as printed. At verse 15 the print reads पाय्वङ्घ्रिकर्माणि as one compound where GRETIL has the visarga, पाय्व्-अङ्घ्रिः कर्माणि, which is a difference of the editions and the print is followed. At verse 33 the print prints आत्मा परिज्ञानमयो as two words where GRETIL joins them as आत्मापरिज्ञानमयो; the print's spacing is kept, and the meaning follows Śrīdhara, who reads ātma-aparijñāna-maya, 'arising from not fully knowing the self', which is the only reading the verse's वृथा admits. At verse 58 the print reads निष्ठितो where GRETIL reads निष्ठ्युतो; the letter is left as printed and the meaning follows the only possible reading, 'spat upon'. Verse 9's यद्वक्त्रं is read with Śrīdhara as the statement each speaker has set out, not as a mouth. GRETIL numbers 61 verses to the print's 60: its verse 2 carries the print's verse 3 opening, its verse 26 carries the print's verse 27 opening, and its verses 31 and 32 are the print's verse 31, after which GRETIL runs one number ahead. Nothing was matched by number.
 
 Verse count: 60, plus the closing colophon printed unnumbered.
 
@@ -24,6 +24,9 @@ iast:
 uddhava uvāca
 kati tattvāni viśveśa saṁkhyātānyṛṣibhiḥ prabho|
 navaikādaśa paṁca trīṇyāttha tvamiha śuśruma||
+en: Uddhava said: Lord of the universe, O master, how many tattvas have the sages counted? We have heard you say here nine, eleven, five and three.
+tel: ఉద్ధవుడు పలికెను: విశ్వేశ్వరా, ప్రభూ, ఋషులు ఎన్ని తత్త్వములను లెక్కించిరి? తొమ్మిది, పదకొండు, ఐదు, మూడు అని మీరు ఇక్కడ చెప్పినట్లు మేము విన్నాము.
+hi: उद्धव ने कहा: विश्वेश्वर, प्रभो, ऋषियों ने कितने तत्त्व गिने हैं? नौ, ग्यारह, पाँच और तीन, ऐसा आपने यहाँ कहा, यह हमने सुना है।
 
 --- verse 2 ---
 deva:
@@ -32,6 +35,9 @@ deva:
 iast:
 kecit ṣaḍviṁśatiṁ prāhurapare paṁcaviṁśatim|
 saptaike nava ṣaṭ keciccatvāryekādaśāpare||
+en: Some say twenty-six, others twenty-five. Some say seven, some nine, some six, some four, and others eleven.
+tel: కొందరు ఇరువది ఆరు అని చెప్పుదురు, కొందరు ఇరువది ఐదు అని చెప్పుదురు. కొందరు ఏడు, కొందరు తొమ్మిది, కొందరు ఆరు, కొందరు నాలుగు, కొందరు పదకొండు అని చెప్పుదురు.
+hi: कुछ छब्बीस कहते हैं, कुछ पच्चीस कहते हैं। कुछ सात, कुछ नौ, कुछ छह, कुछ चार और कुछ ग्यारह कहते हैं।
 
 --- verse 3 ---
 deva:
@@ -42,6 +48,9 @@ iast:
 kecit saptadaśa prāhuḥ ṣoḍaśaike trayodaśa|
 etāvattvaṁ hi saṁkhyānāmṛṣayo yadvivakṣayā|
 gāyanti pṛthagāyuṣmannidaṁ no vaktumarhasi||
+en: Some say seventeen, some sixteen, and some thirteen. With what intention do the sages sing of the number in these different ways? Long-lived one, you should tell us this.
+tel: కొందరు పదిహేడు, కొందరు పదహారు, కొందరు పదమూడు అని చెప్పుదురు. ఏ ఉద్దేశముతో ఋషులు సంఖ్యను ఇట్లు వేరువేరుగా చెప్పుచున్నారు? ఆయుష్మంతుడా, ఇది మాకు చెప్పవలెను.
+hi: कुछ सत्रह, कुछ सोलह और कुछ तेरह कहते हैं। किस आशय से ऋषि संख्या को इस प्रकार भिन्न भिन्न रूप में कहते हैं? आयुष्मन्, यह हमें बताइए।
 
 --- verse 4 ---
 deva:
@@ -52,6 +61,9 @@ iast:
 śrībhagavānuvāca
 yuktaṁ ca santi sarvatra bhāṣante brāhmaṇā yathā|
 māyāṁ madīyāmudgṛhya vadatāṁ kiṁ nu durghaṭam||
+en: The blessed Lord said: It is right that the brāhmaṇas everywhere speak as they do. They take hold of my māyā. For those who speak so, what is hard to establish?
+tel: శ్రీభగవానుడు పలికెను: బ్రాహ్మణులు అంతటను ఏ విధముగా చెప్పుచున్నారో అది సరియైనదే. వారు నా మాయను పట్టుకొని చెప్పుచున్నారు. అట్లు చెప్పువారికి స్థాపింపజాలనిది ఏది?
+hi: श्रीभगवान् ने कहा: ब्राह्मण सब स्थानों पर जैसा कहते हैं, वह उचित ही है। वे मेरी माया को पकड़कर कहते हैं। ऐसा कहनेवालों के लिए कौन बात सिद्ध करनी कठिन है?
 
 --- verse 5 ---
 deva:
@@ -60,6 +72,9 @@ deva:
 iast:
 naitadevaṁ yathā''ttha tvaṁ yadahaṁ vacmi tattathā|
 evaṁ vivadatāṁ hetuṁ śaktayo me duratyayāḥ||
+en: "It is not as you say. What I say, that is so." My powers, which are the cause of their disputing in this way, are hard to overcome.
+tel: "నీవు చెప్పినట్లు ఇది కాదు, నేను చెప్పినది అట్లే ఉన్నది" అని వారు వాదించుచున్నారు. ఇట్లు వాదించుటకు కారణమైన నా శక్తులు దాటుటకు కఠినమైనవి.
+hi: "जैसा तुम कहते हो वैसा यह नहीं है, जो मैं कहता हूँ वही ऐसा है" — इस प्रकार विवाद करने का कारण जो मेरी शक्तियाँ हैं, वे पार करने में कठिन हैं।
 
 --- verse 6 ---
 deva:
@@ -68,6 +83,9 @@ deva:
 iast:
 yāsāṁ vyatikarādāsīd vikalpo vadatāṁ padam|
 prāpte śamadame'pyeti vādastamanuśāmyati||
+en: Through the mingling of those powers arose the sense of difference, which became the ground of the disputants. When calmness of mind and restraint of the senses are attained, that sense of difference goes away, and the dispute subsides along with it.
+tel: ఆ శక్తుల కలయికచేత భేదబుద్ధి కలిగెను, అదియే వాదించువారికి ఆధారమైనది. శమము, దమము లభించినప్పుడు ఆ భేదబుద్ధి తొలగిపోవును, దానితోపాటు వాదము కూడ శాంతించును.
+hi: उन शक्तियों के मिलने से भेदबुद्धि उत्पन्न हुई, और वही विवाद करनेवालों का आधार बनी। शम और दम प्राप्त होने पर वह भेदबुद्धि चली जाती है, और उसके साथ विवाद भी शान्त हो जाता है।
 
 --- verse 7 ---
 deva:
@@ -76,6 +94,9 @@ deva:
 iast:
 parasparānupraveśāt tattvānāṁ puruṣarṣabha|
 paurvāparyaprasaṁkhyānaṁ yathā vakturvivakṣitam||
+en: Best of men, because the tattvas enter into one another, the counting of what comes first and what comes after is made as the speaker intends.
+tel: పురుషశ్రేష్ఠుడా, తత్త్వములు ఒకదానిలో మరియొకటి ప్రవేశించి ఉన్నందున, ముందు వెనుకల లెక్క చెప్పువాని ఉద్దేశము ప్రకారము చేయబడుచున్నది.
+hi: पुरुषश्रेष्ठ, तत्त्व एक दूसरे में प्रवेश किए हुए हैं, इसलिए पहले और पीछे की गणना वक्ता के आशय के अनुसार की जाती है।
 
 --- verse 8 ---
 deva:
@@ -84,6 +105,9 @@ deva:
 iast:
 ekasminnapi dṛśyante praviṣṭānītarāṇi ca|
 pūrvasmin vā parasmin vā tattve tattvāni sarvaśaḥ||
+en: In one tattva the others also are seen to have entered. Whether in the earlier tattva or in the later one, all the tattvas are present.
+tel: ఒక తత్త్వములోనే ఇతర తత్త్వములు కూడ ప్రవేశించి ఉన్నట్లు కనబడును. ముందటి తత్త్వములోనైనను, వెనుకటి తత్త్వములోనైనను, అన్ని తత్త్వములు ఉన్నవి.
+hi: एक ही तत्त्व में दूसरे तत्त्व भी प्रविष्ट दिखाई देते हैं। पहले तत्त्व में हो अथवा पीछे के तत्त्व में, सब तत्त्व रहते हैं।
 
 --- verse 9 ---
 deva:
@@ -92,6 +116,9 @@ deva:
 iast:
 paurvāparyamato'mīṣāṁ prasaṁkhyānamabhīpsatām|
 yathā viviktaṁ yadvaktraṁ gṛhṇīmo yuktisambhavāt||
+en: Therefore, of these who wish to count what comes first and what comes after, we accept whatever statement has been set out distinctly, since reason supports it.
+tel: కావున ముందు వెనుకల లెక్క చెప్పగోరు వారిలో, విడిగా స్పష్టముగా చెప్పబడిన వచనమును మేము అంగీకరించుచున్నాము, ఏలయన దానికి యుక్తి ఉన్నది.
+hi: इसलिए पहले और पीछे की गणना करना चाहनेवालों में से जिस वक्ता ने जैसा स्पष्ट रूप से कहा है, उसे हम स्वीकार करते हैं, क्योंकि उसमें युक्ति है।
 
 --- verse 10 ---
 deva:
@@ -100,6 +127,9 @@ deva:
 iast:
 anādyavidyāyuktasya puruṣasyātmavedanam|
 svato na sambhavādanyastattvajño jñānado bhavet||
+en: The puruṣa is joined with beginningless ignorance, and knowledge of the self does not arise in him of itself. Therefore another, one who knows the tattvas, must be the giver of that knowledge.
+tel: పురుషుడు అనాది అవిద్యతో కూడి ఉన్నాడు, ఆత్మజ్ఞానము తనంతట తానే కలుగదు. కావున తత్త్వమెరిగిన మరియొకడు ఆ జ్ఞానమును ఇచ్చువాడు కావలెను.
+hi: पुरुष अनादि अविद्या से युक्त है, और आत्मज्ञान उसे अपने आप नहीं होता। इसलिए तत्त्व को जाननेवाला कोई दूसरा ही उस ज्ञान का देनेवाला होना चाहिए।
 
 --- verse 11 ---
 deva:
@@ -108,6 +138,9 @@ deva:
 iast:
 puruṣeśvarayoratra na vailakṣaṇyamaṇvapi|
 tadanyakalpanāpārthā jñānaṁ ca prakṛterguṇaḥ||
+en: Here between the puruṣa and the Lord there is not the least difference. To suppose anything other than that is of no use, and knowledge is a quality of prakṛti.
+tel: ఇందు పురుషునికిని ఈశ్వరునికిని ఇసుమంతయైనను భేదము లేదు. అది కాక వేరొకటి ఊహించుట ప్రయోజనము లేనిది, జ్ఞానము ప్రకృతి గుణమే.
+hi: यहाँ पुरुष और ईश्वर में अणु भर भी भेद नहीं है। उससे अन्य की कल्पना करना व्यर्थ है, और ज्ञान प्रकृति का गुण है।
 
 --- verse 12 ---
 deva:
@@ -116,6 +149,9 @@ deva:
 iast:
 prakṛtirguṇasāmyaṁ vai prakṛternātmano guṇāḥ|
 sattvaṁ rajastama iti sthityutpattyantahetavaḥ||
+en: Prakṛti is the balance of the guṇas. The guṇas belong to prakṛti and not to the self. They are sattva, rajas and tamas, the causes of maintenance, of creation and of destruction.
+tel: ప్రకృతి గుణముల సామ్యమే. గుణములు ప్రకృతికి చెందినవి, ఆత్మకు చెందినవి కావు. సత్త్వము, రజస్సు, తమస్సు అనునవి స్థితి, ఉత్పత్తి, నాశములకు కారణములు.
+hi: प्रकृति गुणों की साम्यावस्था है। गुण प्रकृति के हैं, आत्मा के नहीं। सत्त्व, रज और तम — ये स्थिति, उत्पत्ति और नाश के कारण हैं।
 
 --- verse 13 ---
 deva:
@@ -124,6 +160,9 @@ deva:
 iast:
 sattvaṁ jñānaṁ rajaḥ karma tamo'jñānamihocyate|
 guṇavyatikaraḥ kālaḥ svabhāvaḥ sūtrameva ca||
+en: Here sattva is called knowledge, rajas action, and tamas ignorance. The mingling of the guṇas is kāla, and it is also called svabhāva and sūtra.
+tel: ఇందు సత్త్వము జ్ఞానమనియు, రజస్సు కర్మయనియు, తమస్సు అజ్ఞానమనియు చెప్పబడుచున్నది. గుణముల కలయికయే కాలము, దానినే స్వభావమనియు సూత్రమనియు చెప్పుదురు.
+hi: यहाँ सत्त्व को ज्ञान, रज को कर्म और तम को अज्ञान कहा जाता है। गुणों का मिलना ही काल है, और उसी को स्वभाव तथा सूत्र भी कहते हैं।
 
 --- verse 14 ---
 deva:
@@ -132,14 +171,20 @@ deva:
 iast:
 puruṣaḥ prakṛtirvyaktamahaṁkāro nabho'nilaḥ|
 jyotirāpaḥ kṣitiriti tattvānyuktāni me nava||
+en: Puruṣa, prakṛti, the manifest, ahaṁkāra, the sky, the air, the fire, the waters and the earth: these are the nine tattvas I have spoken of.
+tel: పురుషుడు, ప్రకృతి, వ్యక్తము, అహంకారము, ఆకాశము, వాయువు, అగ్ని, జలములు, భూమి — ఇవి నేను చెప్పిన తొమ్మిది తత్త్వములు.
+hi: पुरुष, प्रकृति, व्यक्त, अहंकार, आकाश, वायु, अग्नि, जल और पृथ्वी — ये नौ तत्त्व मैंने कहे हैं।
 
 --- verse 15 ---
 deva:
 श्रोत्रं त्वग्दर्शनं घ्राणो जिह्वेति ज्ञानशक्तयः।
-वाक्पाण्युपस्थपाय्वङ् घ्रिकर्माण्यंगोभयं मनः॥
+वाक्पाण्युपस्थपाय्वङ्घ्रिकर्माण्यंगोभयं मनः॥
 iast:
 śrotraṁ tvagdarśanaṁ ghrāṇo jihveti jñānaśaktayaḥ|
-vākpāṇyupasthapāyvaṅ ghrikarmāṇyaṁgobhayaṁ manaḥ||
+vākpāṇyupasthapāyvaṅghrikarmāṇyaṁgobhayaṁ manaḥ||
+en: The ear, the skin, the eye, the nose and the tongue are the powers of knowledge. Speech, the hands, the organ of generation, the anus and the feet are the organs of action. Dear one, the mind belongs to both.
+tel: చెవి, చర్మము, కన్ను, ముక్కు, నాలుక — ఇవి జ్ఞానశక్తులు. వాక్కు, చేతులు, ఉపస్థము, పాయువు, పాదములు — ఇవి కర్మేంద్రియములు. ప్రియుడా, మనస్సు ఈ రెంటికిని చెందినది.
+hi: कान, त्वचा, नेत्र, नासिका और जिह्वा — ये ज्ञानशक्तियाँ हैं। वाणी, हाथ, उपस्थ, गुदा और चरण — ये कर्मेन्द्रियाँ हैं। हे प्रिय, मन दोनों का है।
 
 --- verse 16 ---
 deva:
@@ -148,6 +193,9 @@ deva:
 iast:
 śabdaḥ sparśo raso gandho rūpaṁ cetyarthajātayaḥ|
 gatyuktyutsargaśilpāni karmāyatanasiddhayaḥ||
+en: Sound, touch, taste, smell and form are the classes of objects. Going, speaking, letting go and handiwork are the works done by the organs of action.
+tel: శబ్దము, స్పర్శము, రసము, గంధము, రూపము — ఇవి అర్థముల జాతులు. గమనము, మాట, విసర్జనము, శిల్పము — ఇవి కర్మేంద్రియములచే సాధింపబడు పనులు.
+hi: शब्द, स्पर्श, रस, गन्ध और रूप — ये अर्थों की जातियाँ हैं। चलना, बोलना, त्याग करना और शिल्प — ये कर्मेन्द्रियों से सिद्ध होनेवाले कार्य हैं।
 
 --- verse 17 ---
 deva:
@@ -156,6 +204,9 @@ deva:
 iast:
 sargādau prakṛtirhyasya kāryakāraṇarūpiṇī|
 sattvādibhirguṇairdhatte puruṣo'vyakta īkṣate||
+en: At the beginning of creation prakṛti, which has the form of both effect and cause, bears this world by the guṇas beginning with sattva. The puruṣa, unmanifest, looks on.
+tel: సృష్టి ఆరంభమున కార్యకారణ రూపమైన ప్రకృతి సత్త్వము మొదలైన గుణములచేత ఈ జగత్తును ధరించును. పురుషుడు అవ్యక్తుడై చూచుచుండును.
+hi: सृष्टि के आरम्भ में कार्य और कारण रूपवाली प्रकृति सत्त्व आदि गुणों से इस जगत् को धारण करती है। पुरुष अव्यक्त रहकर देखता है।
 
 --- verse 18 ---
 deva:
@@ -164,6 +215,9 @@ deva:
 iast:
 vyaktādayo vikurvāṇā dhātavaḥ puruṣekṣayā|
 labdhavīryāḥ sṛjantyaṇḍaṁ saṁhatāḥ prakṛterbalāt||
+en: The manifest and the rest, the elements, undergoing change by the glance of the puruṣa, gain their power, come together, and by the strength of prakṛti bring forth the egg.
+tel: వ్యక్తము మొదలైన ధాతువులు పురుషుని చూపుచేత వికారము పొంది, శక్తిని పొంది, కలిసి, ప్రకృతి బలముచేత అండమును సృజించును.
+hi: व्यक्त आदि धातु पुरुष की दृष्टि से विकार को प्राप्त होकर, वीर्य पाकर, एक होकर, प्रकृति के बल से अण्ड को उत्पन्न करते हैं।
 
 --- verse 19 ---
 deva:
@@ -172,6 +226,9 @@ deva:
 iast:
 saptaiva dhātava iti tatrārthāḥ paṁca khādayaḥ|
 jñānamātmobhayādhārastato dehendriyāsavaḥ||
+en: Some say there are only seven elements. Among them are the five objects beginning with the sky, then knowledge, and the self that supports both. From these come the body, the senses and the vital airs.
+tel: కొందరు ధాతువులు ఏడే అని చెప్పుదురు. వారిలో ఆకాశము మొదలైన ఐదు అర్థములు, జ్ఞానము, ఈ రెంటికిని ఆధారమైన ఆత్మ ఉన్నవి. వీటినుండి దేహము, ఇంద్రియములు, ప్రాణములు కలుగుచున్నవి.
+hi: कुछ कहते हैं कि धातु सात ही हैं। उनमें आकाश आदि पाँच अर्थ, ज्ञान, और दोनों का आधार आत्मा हैं। इनसे देह, इन्द्रियाँ और प्राण होते हैं।
 
 --- verse 20 ---
 deva:
@@ -180,6 +237,9 @@ deva:
 iast:
 ṣaḍityatrāpi bhūtāni paṁca ṣaṣṭhaḥ paraḥ pumān|
 tairyukta ātmasambhūtaiḥ sṛṣṭvedaṁ samupāviśat||
+en: In the count of six also there are the five elements, and the sixth is the supreme puruṣa. Joined with those that had come forth from himself, he created this world and entered into it.
+tel: ఆరు అను లెక్కలోను ఐదు భూతములు ఉన్నవి, ఆరవవాడు పరమపురుషుడు. తననుండి పుట్టిన వాటితో కూడి ఆయన ఈ జగత్తును సృజించి అందు ప్రవేశించెను.
+hi: छह की गणना में भी पाँच भूत हैं और छठा परम पुरुष है। अपने से उत्पन्न हुए उन्हीं से युक्त होकर उसने इस जगत् को रचकर उसमें प्रवेश किया।
 
 --- verse 21 ---
 deva:
@@ -188,6 +248,9 @@ deva:
 iast:
 catvāryeveti tatrāpi teja āpo'nnamātmanaḥ|
 jātāni tairidaṁ jātaṁ janmāvayavinaḥ khalu||
+en: Where there are only four, there too fire, water and food have come forth from the self. From these this world is born, and such indeed is the birth of what has parts.
+tel: నాలుగే అను చోటను కూడ అగ్ని, జలము, అన్నము ఆత్మనుండి పుట్టినవి. వీటినుండి ఈ జగత్తు పుట్టినది, అవయవములు కలిగినదాని పుట్టుక ఇదియే.
+hi: जहाँ चार ही कहे गए हैं, वहाँ भी तेज, जल और अन्न आत्मा से उत्पन्न हुए हैं। इन्हीं से यह जगत् उत्पन्न हुआ, और अवयववाले का जन्म यही है।
 
 --- verse 22 ---
 deva:
@@ -196,6 +259,9 @@ deva:
 iast:
 saṁkhyāne saptadaśake bhūtamātrendriyāṇi ca|
 paṁca paṁcaikamanasā ātmā saptadaśaḥ smṛtaḥ||
+en: In the count of seventeen there are the elements, the subtle objects and the senses, five each, and the mind as one. The self is remembered as the seventeenth.
+tel: పదిహేడు అను లెక్కలో భూతములు, తన్మాత్రలు, ఇంద్రియములు ఐదైదుగా ఉన్నవి, మనస్సు ఒకటి. ఆత్మ పదిహేడవదిగా చెప్పబడుచున్నది.
+hi: सत्रह की गणना में भूत, मात्रा और इन्द्रियाँ पाँच पाँच हैं, और मन एक है। आत्मा सत्रहवाँ कहा गया है।
 
 --- verse 23 ---
 deva:
@@ -204,6 +270,9 @@ deva:
 iast:
 tadvat ṣoḍaśasaṁkhyāne ātmaiva mana ucyate|
 bhūtendriyāṇi paṁcaiva mana ātmā trayodaśa||
+en: In the count of sixteen likewise the self alone is called the mind. In the count of thirteen there are the elements and the senses, five each, and the mind and the self.
+tel: పదహారు అను లెక్కలో అట్లే ఆత్మయే మనస్సు అని చెప్పబడును. పదమూడు అను లెక్కలో భూతములు, ఇంద్రియములు ఐదైదుగా ఉన్నవి, మనస్సు, ఆత్మ ఉన్నవి.
+hi: सोलह की गणना में उसी प्रकार आत्मा ही मन कहा जाता है। तेरह की गणना में भूत और इन्द्रियाँ पाँच पाँच हैं, तथा मन और आत्मा हैं।
 
 --- verse 24 ---
 deva:
@@ -212,6 +281,9 @@ deva:
 iast:
 ekādaśatva ātmāsau mahābhūtendriyāṇi ca|
 aṣṭau prakṛtayaścaiva puruṣaśca navetyatha||
+en: In the count of eleven the self is this one, together with the great elements and the senses. And in the count of nine there are the eight prakṛtis and the puruṣa.
+tel: పదకొండు అను లెక్కలో మహాభూతములు, ఇంద్రియములతో కూడి ఈ ఆత్మ ఉన్నది. తొమ్మిది అను లెక్కలో ఎనిమిది ప్రకృతులు, పురుషుడు ఉన్నారు.
+hi: ग्यारह की गणना में महाभूत और इन्द्रियों के साथ यह आत्मा है। और नौ की गणना में आठ प्रकृतियाँ तथा पुरुष हैं।
 
 --- verse 25 ---
 deva:
@@ -220,6 +292,9 @@ deva:
 iast:
 iti nānāprasaṁkhyānaṁ tattvānāmṛṣibhiḥ kṛtam|
 sarvaṁ nyāyyaṁ yuktimattvād viduṣāṁ kimaśobhanam||
+en: In this way the sages have made many countings of the tattvas. All are proper, because reason supports them. What is unfitting for the learned?
+tel: ఇట్లు ఋషులు తత్త్వములకు అనేక లెక్కలు చేసిరి. అన్నియు న్యాయమైనవే, ఏలయన అన్నిటికి యుక్తి ఉన్నది. విద్వాంసులకు అశోభనమైనది ఏది?
+hi: इस प्रकार ऋषियों ने तत्त्वों की अनेक गणनाएँ कीं। सब न्यायसंगत हैं, क्योंकि सबमें युक्ति है। विद्वानों के लिए अशोभन क्या है?
 
 --- verse 26 ---
 deva:
@@ -230,6 +305,9 @@ iast:
 uddhava uvāca
 prakṛtiḥ puruṣaścobhau yadyapyātmavilakṣaṇau|
 anyonyāpāśrayāt kṛṣṇa dṛśyate na bhidā tayoḥ||
+en: Uddhava said: Although prakṛti and puruṣa are both different from each other in their nature, Kṛṣṇa, because they rest upon one another, no difference between them is seen.
+tel: ఉద్ధవుడు పలికెను: కృష్ణా, ప్రకృతియు పురుషుడును స్వరూపముచేత వేరువేరైనవైనను, ఒకదానిని మరియొకటి ఆశ్రయించి ఉన్నందున వాటి భేదము కనబడదు.
+hi: उद्धव ने कहा: कृष्ण, प्रकृति और पुरुष दोनों स्वरूप से भिन्न होने पर भी, एक दूसरे के आश्रय से रहने के कारण उनका भेद दिखाई नहीं देता।
 
 --- verse 27 ---
 deva:
@@ -240,6 +318,9 @@ iast:
 prakṛtau lakṣyate hyātmā prakṛtiśca tathā''tmani|
 evaṁ me puṇḍarīkākṣa mahāntaṁ saṁśayaṁ hṛdi|
 chettumarhasi sarvajña vacobhirnayanaipuṇaiḥ||
+en: For the self is seen in prakṛti, and prakṛti likewise in the self. Lotus-eyed one, knower of all, you should cut this great doubt in my heart with words skilled in reasoning.
+tel: ప్రకృతిలో ఆత్మ కనబడుచున్నది, ఆత్మలో ప్రకృతి కనబడుచున్నది. పుండరీకాక్షా, సర్వజ్ఞా, నా హృదయములోని ఈ గొప్ప సంశయమును న్యాయనిపుణమైన మాటలచేత ఛేదింపవలెను.
+hi: प्रकृति में आत्मा दिखाई देता है और आत्मा में प्रकृति। पुण्डरीकाक्ष, सर्वज्ञ, मेरे हृदय के इस बड़े संशय को न्यायनिपुण वचनों से काट दीजिए।
 
 --- verse 28 ---
 deva:
@@ -248,6 +329,9 @@ deva:
 iast:
 tvatto jñānaṁ hi jīvānāṁ pramoṣaste'tra śaktitaḥ|
 tvameva hyātmamāyāyā gatiṁ vettha na cāparaḥ||
+en: Knowledge comes to living beings from you, and here their loss of it is by your power. You alone know the way of your own māyā, and no one else.
+tel: జీవులకు జ్ఞానము మీనుండియే కలుగును, ఇందు దాని నాశము మీ శక్తిచేతనే. మీ మాయ పోకడను మీరే ఎరుగుదురు, వేరెవరును ఎరుగరు.
+hi: जीवों को ज्ञान आपसे ही होता है, और यहाँ उसका लोप आपकी शक्ति से होता है। अपनी माया की गति आप ही जानते हैं, दूसरा कोई नहीं।
 
 --- verse 29 ---
 deva:
@@ -258,6 +342,9 @@ iast:
 śrībhagavānuvāca
 prakṛtiḥ puruṣaśceti vikalpaḥ puruṣarṣabha|
 eṣa vaikārikaḥ sargo guṇavyatikarātmakaḥ||
+en: The blessed Lord said: Best of men, the difference "prakṛti and puruṣa" is itself this creation of change, which is made of the mingling of the guṇas.
+tel: శ్రీభగవానుడు పలికెను: పురుషశ్రేష్ఠుడా, "ప్రకృతి, పురుషుడు" అను భేదమే గుణముల కలయికతో కూడిన ఈ వైకారిక సృష్టి.
+hi: श्रीभगवान् ने कहा: पुरुषश्रेष्ठ, "प्रकृति और पुरुष" यह भेद ही गुणों के मिलने से बना यह वैकारिक सर्ग है।
 
 --- verse 30 ---
 deva:
@@ -270,6 +357,9 @@ mamāṅga māyā guṇamayyanekadhā
 vikalpabuddhīśca guṇairvidhatte|
 vaikārikastrividho'dhyātmameka-
 mathādhidaivamadhibhūtamanyat||
+en: Dear one, my māyā is made of the guṇas. By the guṇas it makes the notions of difference in many ways. This creation of change is of three kinds: one is adhyātma, then adhidaiva, and the other is adhibhūta.
+tel: ప్రియుడా, గుణమయమైన నా మాయ గుణములచేత అనేక విధముల భేదబుద్ధులను కలిగించును. ఈ వైకారిక సృష్టి మూడు విధములు — ఒకటి అధ్యాత్మము, ఒకటి అధిదైవము, మరియొకటి అధిభూతము.
+hi: हे प्रिय, गुणों से बनी मेरी माया गुणों के द्वारा अनेक प्रकार से भेदबुद्धियों को रचती है। यह वैकारिक सर्ग तीन प्रकार का है — एक अध्यात्म, दूसरा अधिदैव और तीसरा अधिभूत।
 
 --- verse 31 ---
 deva:
@@ -286,6 +376,9 @@ parasparaṁ sidhyati yaḥ svataḥ khe|
 svayānubhūtyākhilasiddhasiddhiḥ|
 evaṁ tvagādi śravaṇādi cakṣu-
 rjihvādi nāsādi ca cittayuktam||
+en: In this socket the eye, the form it sees, and the sun's own body are established by one another, and the sun stands of itself in the sky. The self is other than these, the one who is first, by whose own experience every accomplished thing is accomplished. So it is also with the skin and its objects, the ear and its objects, the eye and its objects, the tongue and its objects, and the nose and its objects, each joined with the mind.
+tel: ఈ రంధ్రములోని కన్ను, చూడబడు రూపము, సూర్యుని శరీరము ఒకదానిచే మరియొకటి సిద్ధించుచున్నవి, సూర్యుడు ఆకాశమున తనంతట తానే నిలిచి ఉన్నాడు. వీటికి వేరైన, మొదటివాడైన ఆత్మ ఉన్నాడు, ఆయన అనుభవముచేతనే సిద్ధించినవన్నియు సిద్ధించుచున్నవి. ఇట్లే చర్మము మొదలైనవి, చెవి మొదలైనవి, కన్ను మొదలైనవి, నాలుక మొదలైనవి, ముక్కు మొదలైనవి మనస్సుతో కూడి ఉన్నవి.
+hi: इस रन्ध्र में नेत्र, देखा जानेवाला रूप और सूर्य का शरीर एक दूसरे से सिद्ध होते हैं, और सूर्य आकाश में स्वयं ही स्थित है। इनसे भिन्न जो आदि आत्मा है, उसी के अपने अनुभव से सब सिद्ध वस्तुएँ सिद्ध होती हैं। इसी प्रकार त्वचा आदि, कान आदि, नेत्र आदि, जिह्वा आदि और नासिका आदि भी मन से युक्त हैं।
 
 --- verse 32 ---
 deva:
@@ -298,6 +391,9 @@ yo'sau guṇakṣobhakṛto vikāraḥ
 pradhānamūlānmahataḥ prasūtaḥ|
 ahaṁ trivṛnmohavikalpahetu-
 rvaikārikastāmasa aindriyaśca||
+en: That change which is made by the stirring of the guṇas, and which has come forth from mahat, whose root is pradhāna, is the threefold "I", the cause of delusion and of the notion of difference: the vaikārika, the tāmasa and the aindriya.
+tel: గుణముల కల్లోలముచేత కలిగిన ఆ వికారము, ప్రధానము మూలముగా కలిగిన మహత్తునుండి పుట్టినది, అదియే మూడు విధములైన అహంకారము, మోహమునకును భేదబుద్ధికిని కారణము — వైకారికము, తామసము, ఐంద్రియము.
+hi: गुणों के क्षोभ से हुआ जो विकार प्रधान को मूल रखनेवाले महत् से उत्पन्न हुआ, वही तीन प्रकार का अहंकार है, जो मोह और भेदबुद्धि का कारण है — वैकारिक, तामस और ऐन्द्रिय।
 
 --- verse 33 ---
 deva:
@@ -310,6 +406,9 @@ iast:
 hyastīti nāstīti bhidārthaniṣṭhaḥ|
 vyartho'pi naivoparameta puṁsāṁ
 mattaḥ parāvṛttadhiyāṁ svalokāt||
+en: The dispute that arises from not fully knowing the self, that rests on things held to be different, and that says "it is" and "it is not", is fruitless. Yet it does not cease for men whose minds are turned away from me and from their own place.
+tel: ఆత్మను పూర్ణముగా ఎరుగకపోవుటచేత కలిగిన, భేదమైన వస్తువులయందు నిలిచిన, "ఉన్నది" "లేదు" అను వాదము వ్యర్థమే. అయినను నానుండియు తమ స్వలోకమునుండియు మరలిన బుద్ధి కలవారికి అది ఆగదు.
+hi: आत्मा को पूरी तरह न जानने से उत्पन्न, भेदरूप वस्तुओं में टिका हुआ, "है" और "नहीं है" ऐसा विवाद व्यर्थ ही है। फिर भी मुझसे और अपने लोक से विमुख बुद्धिवाले पुरुषों का वह नहीं रुकता।
 
 --- verse 34 ---
 deva:
@@ -320,6 +419,9 @@ iast:
 uddhava uvāca
 tvattaḥ parāvṛttadhiyaḥ svakṛtaiḥ karmabhiḥ prabho|
 uccāvacān yathā dehān gṛhṇanti visṛjanti ca||
+en: Uddhava said: Lord, tell me how those whose minds are turned away from you take on high and low bodies by the actions they themselves have done, and give them up again.
+tel: ఉద్ధవుడు పలికెను: ప్రభూ, మీనుండి మరలిన బుద్ధి కలవారు తాము చేసిన కర్మలచేత ఉచ్చనీచ దేహములను ఎట్లు గ్రహించుచున్నారో, ఎట్లు విడుచుచున్నారో చెప్పవలెను.
+hi: उद्धव ने कहा: प्रभो, आपसे विमुख बुद्धिवाले लोग अपने किए कर्मों से ऊँचे-नीचे शरीरों को किस प्रकार ग्रहण करते हैं और छोड़ते हैं, यह कहिए।
 
 --- verse 35 ---
 deva:
@@ -328,6 +430,9 @@ deva:
 iast:
 tanmamākhyāhi govinda durvibhāvyamanātmabhiḥ|
 na hyetat prāyaśo loke vidvāṁsaḥ santi vaṁcitāḥ||
+en: Govinda, tell me that. It is hard for those who are not established in the self to grasp. In the world there are, for the most part, no learned men who know this. They are deceived.
+tel: గోవిందా, దానిని నాకు చెప్పవలెను. ఆత్మనిష్ఠ లేనివారికి దానిని గ్రహించుట కఠినము. లోకమున దీనిని ఎరిగిన విద్వాంసులు చాలవరకు లేరు, వారు మోసపోయినవారు.
+hi: गोविन्द, वह मुझे बताइए। जो आत्मनिष्ठ नहीं हैं, उनके लिए यह समझना कठिन है। संसार में अधिकांश में इसे जाननेवाले विद्वान् नहीं हैं, वे ठगे हुए हैं।
 
 --- verse 36 ---
 deva:
@@ -338,6 +443,9 @@ iast:
 śrībhagavānuvāca
 manaḥ karmamayaṁ nṝṇāmindriyaiḥ paṁcabhiryutam|
 lokāllokaṁ prayātyanya ātmā tadanuvartate||
+en: The blessed Lord said: The mind of men is made of action and is joined with the five senses. It goes from one world to another world. The self is other than the mind, and it follows the mind.
+tel: శ్రీభగవానుడు పలికెను: మనుష్యుల మనస్సు కర్మమయమైనది, ఐదు ఇంద్రియములతో కూడినది. అది ఒక లోకమునుండి మరియొక లోకమునకు పోవును. ఆత్మ దానికి వేరైనది, అది మనస్సును అనుసరించును.
+hi: श्रीभगवान् ने कहा: मनुष्यों का मन कर्ममय है और पाँच इन्द्रियों से युक्त है। वह एक लोक से दूसरे लोक को जाता है। आत्मा उससे भिन्न है, और वह मन के पीछे चलता है।
 
 --- verse 37 ---
 deva:
@@ -346,6 +454,9 @@ deva:
 iast:
 dhyāyan mano'nu viṣayān dṛṣṭān vānuśrutānatha|
 udyat sīdat karmatantraṁ smṛtistadanu śāmyati||
+en: The mind dwells upon the objects, those that have been seen and those that have been heard of. Bound to action, it rises and it sinks. Memory of what went before subsides along with it.
+tel: మనస్సు చూచిన, వినిన విషయములను ధ్యానించుచుండును. కర్మమునకు కట్టుబడి అది పైకి లేచుచు క్రిందికి క్రుంగుచు ఉండును. దానితోపాటు పూర్వపు స్మృతి శాంతించును.
+hi: मन देखे हुए और सुने हुए विषयों का ध्यान करता रहता है। कर्म के अधीन होकर वह उठता और बैठता है। उसके साथ पूर्व की स्मृति शान्त हो जाती है।
 
 --- verse 38 ---
 deva:
@@ -354,6 +465,9 @@ deva:
 iast:
 viṣayābhiniveśena nātmānaṁ yat smaret punaḥ|
 jantorvai kasyaciddhetormṛtyuratyantavismṛtiḥ||
+en: When, through absorption in the objects, a being no longer remembers himself, that complete forgetting, from whatever cause it comes, is his death.
+tel: విషయములయందు మునిగిపోవుటచేత ఒక ప్రాణి తనను తాను మరల స్మరించకపోయినప్పుడు, ఏ కారణముచేతనైనను కలిగిన ఆ పూర్తి మరపే దాని మృత్యువు.
+hi: विषयों में डूब जाने के कारण जब जीव अपने को फिर स्मरण नहीं करता, तब किसी भी कारण से हुआ वह पूर्ण विस्मरण ही उसकी मृत्यु है।
 
 --- verse 39 ---
 deva:
@@ -362,6 +476,9 @@ deva:
 iast:
 janma tvātmatayā puṁsaḥ sarvabhāvena bhūrida|
 viṣayasvīkṛtiṁ prāhuryathā svapnamanorathaḥ||
+en: Giver of much, the sages say that the birth of a man is his taking an object to himself with his whole being, as though it were himself. It is like a dream, and like a wish built in the mind.
+tel: భూరిదా, పురుషుని జన్మము తన సర్వభావముతో ఒక విషయమును తానే అన్నట్లు స్వీకరించుటయే అని ఋషులు చెప్పుదురు. అది కలవంటిది, మనోరథము వంటిది.
+hi: भूरिद, ऋषि कहते हैं कि पुरुष का जन्म सर्वभाव से किसी विषय को अपने रूप में स्वीकार कर लेना ही है। वह स्वप्न के समान और मनोरथ के समान है।
 
 --- verse 40 ---
 deva:
@@ -370,6 +487,9 @@ deva:
 iast:
 svapnaṁ manorathaṁ cetthaṁ prāktanaṁ na smaratyasau|
 tatra pūrvamivātmānamapūrvaṁ cānupaśyati||
+en: He does not then remember the earlier dream and the earlier wish of the mind. In the new state he sees himself as though he were the one who was there before, and also as one who was not there before.
+tel: అప్పుడు అతడు పూర్వపు కలను, పూర్వపు మనోరథమును స్మరించడు. ఆ కొత్త స్థితిలో తనను పూర్వము ఉన్నవానివలె చూచుకొనును, పూర్వము లేనివానివలె కూడ చూచుకొనును.
+hi: तब वह पहले के स्वप्न और पहले के मनोरथ को स्मरण नहीं करता। उस नई अवस्था में वह अपने को पहले जैसा भी देखता है और पहले न रहा हुआ भी देखता है।
 
 --- verse 41 ---
 deva:
@@ -378,6 +498,9 @@ deva:
 iast:
 indriyāyanasṛṣṭyedaṁ traividhyaṁ bhāti vastuni|
 bahirantarbhidāheturjano'sajjanakṛd yathā||
+en: By the senses being created as its seat, this threefold difference appears in what is one. The man himself becomes the cause of the difference of outer and inner, as a man becomes the father of a worthless son.
+tel: ఇంద్రియములు ఆశ్రయముగా సృజింపబడుటచేత ఒకే వస్తువునందు ఈ మూడు విధముల భేదము కనబడును. మనుష్యుడు చెడ్డ కొడుకును కన్నవాడగునట్లు, అతడే బాహ్య అంతర భేదమునకు కారణమగును.
+hi: इन्द्रियों के आश्रय रूप से रचे जाने के कारण एक ही वस्तु में यह तीन प्रकार का भेद प्रतीत होता है। जैसे मनुष्य असत् पुत्र का पिता बनता है, वैसे ही वही बाहर और भीतर के भेद का कारण बनता है।
 
 --- verse 42 ---
 deva:
@@ -386,6 +509,9 @@ deva:
 iast:
 nityadā hyaṁga bhūtāni bhavanti na bhavanti ca|
 kālenālakṣyavegena sūkṣmatvāttanna dṛśyate||
+en: Dear one, beings are always coming into being and ceasing to be, by kāla, whose speed cannot be marked. This is not seen, because kāla is very fine.
+tel: ప్రియుడా, ప్రాణులు ఎల్లవేళలను, వేగము కనబడని కాలముచేత, పుట్టుచున్నవి, నశించుచున్నవి. కాలము మిక్కిలి సూక్ష్మమైనది, కావున ఇది కనబడదు.
+hi: हे प्रिय, प्राणी सदा, जिसका वेग लक्षित नहीं होता उस काल से, उत्पन्न होते और नष्ट होते रहते हैं। काल अत्यन्त सूक्ष्म है, इसलिए यह दिखाई नहीं देता।
 
 --- verse 43 ---
 deva:
@@ -394,6 +520,9 @@ deva:
 iast:
 yathārciṣāṁ srotasāṁ ca phalānāṁ vā vanaspateḥ|
 tathaiva sarvabhūtānāṁ vayo'vasthādayaḥ kṛtāḥ||
+en: As with the flames of a lamp, as with the streams of a river, and as with the fruits of a tree, so with all beings their ages and their states are made.
+tel: దీపపు జ్వాలలవలె, నదుల ప్రవాహములవలె, చెట్టు పండ్లవలె, అన్ని ప్రాణులకును వయస్సులును అవస్థలును కలుగుచున్నవి.
+hi: जैसे दीप की लपटों का, जैसे नदियों की धाराओं का, और जैसे वृक्ष के फलों का, वैसे ही सब प्राणियों की आयु और अवस्थाएँ बनती हैं।
 
 --- verse 44 ---
 deva:
@@ -402,6 +531,9 @@ deva:
 iast:
 so'yaṁ dīpo'rciṣāṁ yadvatsrotasāṁ tadidaṁ jalam|
 so'yaṁ pumāniti nṛṇāṁ mṛṣā gīrdhīrmṛṣāyuṣām||
+en: "This is the same lamp" is said of its flames, and "this is the same water" of the streams, and "this is the same man" of men. The speech and the thought of those whose life is false are themselves false.
+tel: "ఇది ఆ దీపమే" అని జ్వాలలను గూర్చి, "ఇది ఆ నీరే" అని ప్రవాహములను గూర్చి, "ఇతడు ఆ మనుష్యుడే" అని చెప్పుదురు. మిథ్యా ఆయువు కలవారి మాటయు బుద్ధియు మిథ్యయే.
+hi: "यह वही दीप है" ऐसा उसकी लपटों के विषय में, "यह वही जल है" ऐसा धाराओं के विषय में, और "यह वही पुरुष है" ऐसा कहा जाता है। जिनकी आयु मिथ्या है, उनकी वाणी और बुद्धि मिथ्या ही है।
 
 --- verse 45 ---
 deva:
@@ -410,6 +542,9 @@ deva:
 iast:
 mā svasya karmabījena jāyate so'pyayaṁ pumān|
 mriyate vāmaro bhrāntyā yathāgnirdārusaṁyutaḥ||
+en: Let it not be said that this man is born by the seed of his own action, nor that he, who does not die, dies. This is through delusion, as it is with fire joined to wood.
+tel: ఈ పురుషుడు తన కర్మ బీజముచేత పుట్టుచున్నాడని అనరాదు, మరణము లేనివాడైన అతడు మరణించుచున్నాడని అనరాదు. కట్టెతో కూడిన అగ్నివలె, ఇది భ్రాంతిచేతనే.
+hi: यह न कहा जाए कि यह पुरुष अपने कर्मबीज से जन्म लेता है, और न यह कि अमर होकर भी वह मरता है। यह भ्रान्ति से ही है, जैसे काष्ठ से युक्त अग्नि में।
 
 --- verse 46 ---
 deva:
@@ -418,6 +553,9 @@ deva:
 iast:
 niṣekagarbhajanmāni bālyakaumārayauvanam|
 vayomadhyaṁ jarā mṛtyurityavasthāstanornava||
+en: Conception, the stay in the womb and birth, childhood, boyhood and youth, middle age, old age and death: these are the nine states of the body.
+tel: గర్భాధానము, గర్భమున ఉండుట, జన్మము, బాల్యము, కౌమారము, యౌవనము, మధ్య వయస్సు, ముదిమి, మరణము — ఇవి శరీరమునకు తొమ్మిది అవస్థలు.
+hi: निषेक, गर्भ और जन्म, बाल्य, कौमार और यौवन, मध्य आयु, वृद्धावस्था और मृत्यु — ये शरीर की नौ अवस्थाएँ हैं।
 
 --- verse 47 ---
 deva:
@@ -426,6 +564,9 @@ deva:
 iast:
 etā manorathamayīrhyanyasyoccāvacāstanūḥ|
 guṇasaṁgādupādatte kvacit kaścijjahāti ca||
+en: These high and low bodies belong to another, and they are made of the mind's own wishing. He takes them up through attachment to the guṇas, and sometimes someone gives them up.
+tel: మనోరథమయమైన ఈ ఉచ్చనీచ శరీరములు వేరొకనికి చెందినవి. గుణముల సంగముచేత అతడు వాటిని గ్రహించును, ఒకానొకప్పుడు ఒకానొకడు వాటిని విడుచును.
+hi: मनोरथ से बने ये ऊँचे-नीचे शरीर किसी दूसरे के हैं। गुणों के संग से वह उन्हें ग्रहण करता है, और कोई कभी उन्हें छोड़ भी देता है।
 
 --- verse 48 ---
 deva:
@@ -434,6 +575,9 @@ deva:
 iast:
 ātmanaḥ pitṛputrābhyāmanumeyau bhavāpyayau|
 na bhavāpyayavastūnāmabhijño dvayalakṣaṇaḥ||
+en: The coming into being and the passing away of the self may be inferred from the father and the son. One who knows things that come into being and pass away is not himself marked by these two.
+tel: తండ్రిని కొడుకును చూచి ఆత్మకు పుట్టుకను నాశమును ఊహింపవచ్చును. పుట్టునవియు నశించునవియు అయిన వస్తువులను ఎరిగినవాడు ఈ రెంటి లక్షణము కలవాడు కాడు.
+hi: पिता और पुत्र से आत्मा के जन्म और नाश का अनुमान किया जाता है। जो उत्पन्न होने और नष्ट होनेवाली वस्तुओं को जानता है, वह इन दोनों के लक्षणवाला नहीं है।
 
 --- verse 49 ---
 deva:
@@ -442,6 +586,9 @@ deva:
 iast:
 tarorbījavipākābhyāṁ yo vidvāṁjanmasaṁyamau|
 tarorvilakṣaṇo draṣṭā evaṁ draṣṭā tanoḥ pṛthak||
+en: One who knows the birth and the end of a tree from its seed and its ripening is himself different from the tree and is its seer. In the same way the seer is apart from the body.
+tel: బీజమునుబట్టి పక్వమునుబట్టి చెట్టు పుట్టుకను అంతమును ఎరిగినవాడు చెట్టుకు వేరైనవాడు, దాని ద్రష్ట. అట్లే ద్రష్ట శరీరమునకు వేరైనవాడు.
+hi: जो बीज और पकने से वृक्ष के जन्म और अन्त को जानता है, वह वृक्ष से भिन्न और उसका द्रष्टा है। इसी प्रकार द्रष्टा शरीर से अलग है।
 
 --- verse 50 ---
 deva:
@@ -450,6 +597,9 @@ deva:
 iast:
 prakṛterevamātmānamavivicyābudhaḥ pumān|
 tattvena sparśasammūḍhaḥ saṁsāraṁ pratipadyate||
+en: A man without understanding, not having discerned himself from prakṛti in this way, is in truth bewildered by contact with it, and comes to saṁsāra.
+tel: ఇట్లు ప్రకృతినుండి ఆత్మను విడదీయక, తెలివి లేని పురుషుడు నిజముగా ఆ స్పర్శచేత మోహము పొంది సంసారమును పొందును.
+hi: इस प्रकार प्रकृति से अपने को अलग न जानकर, बुद्धिहीन पुरुष वास्तव में उस सम्पर्क से मोहित होकर संसार को प्राप्त करता है।
 
 --- verse 51 ---
 deva:
@@ -458,6 +608,9 @@ deva:
 iast:
 sattvasaṁgādṛṣīn devān rajasāsuramānuṣān|
 tamasā bhūtatiryaktvaṁ bhrāmito yāti karmabhiḥ||
+en: By attachment to sattva he goes to the sages and the gods, by rajas to the asuras and to men, and by tamas to the state of a ghost or of an animal. He is made to wander by his actions.
+tel: సత్త్వ సంగముచేత అతడు ఋషులను, దేవతలను పొందును, రజస్సుచేత అసురులను, మనుష్యులను పొందును, తమస్సుచేత భూత తిర్యక్ స్థితిని పొందును. కర్మలచేత అతడు తిరుగాడింపబడును.
+hi: सत्त्व के संग से वह ऋषियों और देवताओं को प्राप्त होता है, रज से असुरों और मनुष्यों को, और तम से भूत तथा तिर्यक् योनि को। कर्मों से वह भ्रमाया जाता है।
 
 --- verse 52 ---
 deva:
@@ -466,6 +619,9 @@ deva:
 iast:
 nṛtyato gāyataḥ paśyan yathaivānukaroti tān|
 evaṁ buddhiguṇān paśyannanīho'pyanukāryate||
+en: As one who watches dancers and singers imitates them, so one who watches the qualities of the buddhi, though he himself does not act, is made to act after them.
+tel: నాట్యము చేయువారిని, పాడువారిని చూచి ఒకడు వారిని అనుకరించునట్లు, బుద్ధి గుణములను చూచువాడు తాను చేయకున్నను వాటిని అనుసరించి చేయునట్లు చేయబడును.
+hi: जैसे नाचने और गानेवालों को देखकर कोई उनका अनुकरण करता है, वैसे ही बुद्धि के गुणों को देखनेवाला, स्वयं कुछ न करता हुआ भी, उनके अनुसार करने लगता है।
 
 --- verse 53 ---
 deva:
@@ -474,6 +630,9 @@ deva:
 iast:
 yathāmbhasā pracalatā taravo'pi calā iva|
 cakṣuṣā bhrāmyamāṇena dṛśyate bhramatīva bhūḥ||
+en: As the trees also seem to move when the water moves, and as the earth is seen to turn when the eye is turned about,
+tel: నీరు కదలినప్పుడు చెట్లును కదలుచున్నట్లు కనబడునట్లు, కన్ను తిప్పినప్పుడు భూమి తిరుగుచున్నట్లు కనబడునట్లు,
+hi: जैसे जल के हिलने पर वृक्ष भी हिलते हुए दिखते हैं, और जैसे नेत्र घुमाने पर पृथ्वी घूमती हुई दिखती है,
 
 --- verse 54 ---
 deva:
@@ -482,6 +641,9 @@ deva:
 iast:
 yathā manorathadhiyo viṣayānubhavo mṛṣā|
 svapnadṛṣṭāśca dāśārha tathā saṁsāra ātmanaḥ||
+en: and as the experience of objects in a wish of the mind is false, and the things seen in a dream are false, so, Dāśārha, is saṁsāra to the self.
+tel: మనోరథ బుద్ధియందు విషయముల అనుభవము మిథ్య అయినట్లు, కలలో చూచినవి మిథ్య అయినట్లు, దాశార్హా, ఆత్మకు సంసారము అట్టిదే.
+hi: और जैसे मनोरथ की बुद्धि में विषयों का अनुभव मिथ्या है, और स्वप्न में देखी हुई वस्तुएँ मिथ्या हैं, वैसे ही, दाशार्ह, आत्मा के लिए संसार है।
 
 --- verse 55 ---
 deva:
@@ -490,6 +652,9 @@ deva:
 iast:
 arthe hyavidyamāne'pi saṁsṛtirna nivartate|
 dhyāyato viṣayānasya svapne'narthāgamo yathā||
+en: Even when the object is not there, the round of births does not cease for one who dwells upon objects, as harm comes to a man in a dream.
+tel: విషయము లేకున్నను, విషయములను ధ్యానించువానికి సంసారము మానదు, కలలో అనర్థము కలుగునట్లు.
+hi: विषय न होने पर भी, विषयों का ध्यान करनेवाले की संसृति नहीं रुकती, जैसे स्वप्न में अनर्थ की प्राप्ति होती है।
 
 --- verse 56 ---
 deva:
@@ -498,6 +663,9 @@ deva:
 iast:
 tasmāduddhava mā bhuṅkṣva viṣayānasadindriyaiḥ|
 ātmāgrahaṇanirbhātaṁ paśya vaikalpikaṁ bhramam||
+en: Therefore, Uddhava, do not take the objects with the senses, which are not real. See the delusion of difference that shines out from not grasping the self.
+tel: కావున ఉద్ధవా, అసత్తులైన ఇంద్రియములచేత విషయములను అనుభవింపకుము. ఆత్మను గ్రహింపకపోవుటచేత తోచు ఈ వైకల్పిక భ్రమను చూడుము.
+hi: इसलिए उद्धव, असत् इन्द्रियों से विषयों का भोग न करो। आत्मा को न ग्रहण करने से प्रकट होनेवाले इस वैकल्पिक भ्रम को देखो।
 
 --- verse 57 ---
 deva:
@@ -506,6 +674,9 @@ deva:
 iast:
 kṣipto'vamānito'sadbhiḥ pralabdho'sūyito'thavā|
 tāḍitaḥ sannibaddho vā vṛttyā vā parihāpitaḥ||
+en: Thrown down, dishonoured by the wicked, mocked or envied, beaten or bound, or deprived of his livelihood,
+tel: చెడ్డవారిచేత పడద్రోయబడినవాడు, అవమానింపబడినవాడు, పరిహాసము చేయబడినవాడు, అసూయ పొందినవాడు, కొట్టబడినవాడు, కట్టివేయబడినవాడు, జీవనము పోగొట్టుకొన్నవాడు,
+hi: दुष्टों से गिराया गया, अपमानित किया गया, ठट्ठे में लिया गया अथवा असूया का पात्र बनाया गया, मारा गया या बाँधा गया, अथवा जीविका से वञ्चित किया गया,
 
 --- verse 58 ---
 deva:
@@ -514,6 +685,9 @@ deva:
 iast:
 niṣṭhito mūtrito vājñairbahudhaivaṁ prakampitaḥ|
 śreyaskāmaḥ kṛcchragata ātmanā''tmānamuddharet||
+en: spat upon and defiled with urine by the ignorant, and shaken in many ways in this manner, one who desires his own good, fallen into hardship, should lift himself up by himself.
+tel: ఎరుగనివారిచేత ఉమ్మివేయబడినవాడు, మూత్రముచేత అపవిత్రము చేయబడినవాడు, ఇట్లు అనేక విధముల కదిలింపబడినవాడు, శ్రేయమును కోరువాడు, కష్టమున పడినవాడు, తనను తానే ఉద్ధరించుకొనవలెను.
+hi: अज्ञानियों से थूका गया, मूत्र से अपवित्र किया गया, और इस प्रकार अनेक रूपों में कँपाया गया, कल्याण चाहनेवाला पुरुष कष्ट में पड़कर अपने से अपना उद्धार करे।
 
 --- verse 59 ---
 deva:
@@ -524,6 +698,9 @@ iast:
 uddhava uvāca
 yathaivamanubudhyeyaṁ vada no vadatāṁ vara|
 suduḥsahamimaṁ manye ātmanyasadatikramam||
+en: Uddhava said: Best of speakers, tell us how I may understand this. I think this offence of what is not real against the self very hard to bear.
+tel: ఉద్ధవుడు పలికెను: వక్తలలో శ్రేష్ఠుడా, ఇది నేను ఎట్లు తెలిసికొనగలనో చెప్పవలెను. ఆత్మయందు అసత్తు చేయు ఈ అతిక్రమమును నేను మిక్కిలి సహింపరానిదని తలచుచున్నాను.
+hi: उद्धव ने कहा: हे वक्ताओं में श्रेष्ठ, मैं इसे किस प्रकार समझ सकूँ, यह हमें कहिए। आत्मा पर असत् के इस अतिक्रम को मैं अत्यन्त दुःसह मानता हूँ।
 
 --- verse 60 ---
 deva:
@@ -532,9 +709,15 @@ deva:
 iast:
 viduṣāmapi viśvātman prakṛtirhi balīyasī|
 ṛte tvaddharmaniratān śāntāṁste caraṇālayān||
+en: Self of the universe, prakṛti is stronger even than the learned, except for those who are devoted to your dharma, who are at peace, and who dwell at your feet.
+tel: విశ్వాత్మా, విద్వాంసులకును ప్రకృతి బలమైనదే. మీ ధర్మమునందు నిరతులై, శాంతులై, మీ చరణములయందు నివసించువారికి మాత్రము అట్లు కాదు.
+hi: विश्वात्मन्, विद्वानों से भी प्रकृति बलवती है। केवल वे ही इसमें नहीं आते जो आपके धर्म में निरत, शान्त और आपके चरणों में निवास करनेवाले हैं।
 
 --- verse none ---
 deva:
 इति श्रीमद्भागवते महापुराणे पारमहंस्यां संहितायामेकादशस्कन्धे द्वाविंशोऽध्यायः॥ २२॥
 iast:
 iti śrīmadbhāgavate mahāpurāṇe pāramahaṁsyāṁ saṁhitāyāmekādaśaskandhe dvāviṁśo'dhyāyaḥ|| 22||
+en: Thus ends the twenty-second adhyāya in the eleventh skandha of the Śrīmad Bhāgavata Mahāpurāṇa, the saṁhitā of the paramahaṁsas.
+tel: ఇట్లు శ్రీమద్భాగవత మహాపురాణమున, పరమహంసల సంహితయందు, ఏకాదశ స్కంధమున ఇరువది రెండవ అధ్యాయము ముగిసెను.
+hi: इस प्रकार श्रीमद्भागवत महापुराण की परमहंसों की संहिता में एकादश स्कन्ध का बाईसवाँ अध्याय समाप्त हुआ।

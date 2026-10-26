@@ -9,7 +9,7 @@ Type: Purāṇa (an adhyāya of the Śrīmad Bhāgavata, Skandha 11)
 
 Source / recension: Base text and authority: the Gītā Press, Gorakhpur Śrīmadbhāgavata Mahāpurāṇa with Hindi translation, Part 2 (Gītā Press code 27), archive.org item `shrimadbhagwat-mahapuran-bhag-2`, printed pages 804–809; the PDF page numbers are the printed ones. The PDF carries the typesetter's own text layer in the Chanakya font encoding, and the text was decoded from it by machine with `bin/bhagavata/chanakya.py`, not read off OCR or typed. The decoder was checked against GRETIL over all twelve skandhas before any file was written, and the differences that remain were sampled and found to be readings of the two editions. Second witness: GRETIL's `sa_bhAgavatapurANa.xml` (IAST, contributed by Ulrich Stiehl), a separate editorial lineage, compared verse by verse by machine. The TTD edition with the commentaries of Śrīdhara, Vīrarāghava and Vijayadhvaja (archive.org `Bhagavata_Purana_With_Multiple_Commentaries_TTD_Critical_Edition`) is the third witness where one is needed; it was not read for this file. The IAST was generated mechanically from the Devanāgarī with `bin/dev2iast.py`.
 
-Recension note: Text-only file, written 1 Oct 2026 at the user's instruction to lay down the whole Bhāgavata first: the English, Telugu and Hindi meanings are still to be added, and the witnesses' differences listed here have been recorded by machine and not yet adjudicated. The print is followed throughout. The print numbers 36 verses and GRETIL numbers 36. Of the 36 verses GRETIL has under the same number, 27 agree with the print letter for letter once spacing and the spelling of nasals are set aside; the rest differ: 2, 11, 12, 14, 15, 19, 20, 27, 29. Spacing is the print's, as its text layer gives it; in a few places justification has left a space inside a word, and these are still to be closed when the verse is read. The speaker lines (श्रीशुक उवाच and the others) are printed in italic above the verse they introduce, and are given as its first line.
+Recension note: Meanings written 26 Oct 2026 (session S78). The differences between the witnesses listed below were read as the verses were glossed; except where this note says otherwise, each is a spelling, a sandhi or a word order of the two editions, none of them changes the sense, and the print's reading therefore stands unbracketed. The print is followed throughout. The print numbers 36 verses and GRETIL numbers 36. Of the 36 verses GRETIL has under the same number, 27 agree with the print letter for letter once spacing and the spelling of nasals are set aside; the rest differ: 2, 11, 12, 14, 15, 19, 20, 27, 29. Spacing is the print's, as its text layer gives it. The speaker lines (श्रीशुक उवाच and the others) are printed in italic above the verse they introduce, and are given as its first line. No typesetting gap or lost word space was found: both directions were run against GRETIL verse by verse, and every join the detector reported falls after a virāma consonant or before an avagraha, where the script requires it. At verse 21 the print spaces तदनु वायुना where GRETIL writes one word; the print's spacing stands, since these are two words. Verse 11 reads महत्यात्मन्मयि परे where the sense needs महत्यात्मनि मयि परे, as verse 14 spells it and as GRETIL reads it; this is a wrong letter and not a wrong space, so the line stays as printed and the meaning follows the only possible reading. At verse 6 ऊर्मि is glossed as hunger, thirst and the rest, with Śrīdhara. At verse 29 the print reads मद्योगश्रान्तचित्तस्य and GRETIL मद्योगशान्तचित्तस्य; the meaning given, that the mind has come to rest in yoga, holds on either reading.
 
 Verse count: 36, plus the closing colophon printed unnumbered.
 
@@ -24,6 +24,9 @@ iast:
 śrībhagavānuvāca
 jitendriyasya yuktasya jitaśvāsasya yoginaḥ|
 mayi dhārayataśceta upatiṣṭhanti siddhayaḥ||
+en: The blessed Lord said: For the yogin who has subdued his senses, who is joined in yoga, who has mastered his breath, and who holds his mind on me, the siddhis present themselves.
+tel: శ్రీభగవానుడు పలికెను: ఇంద్రియములను జయించి, యోగమున నిలిచి, శ్వాసను జయించి, నా మీద మనసును నిలుపు యోగికి సిద్ధులు స్వయముగా దగ్గరకు వచ్చును.
+hi: श्रीभगवान् ने कहा: जिसने इन्द्रियों को जीत लिया है, जो योग में स्थित है, जिसने श्वास को जीत लिया है, और जो मन को मुझमें धारण करता है, उस योगी के पास सिद्धियाँ स्वयं आ जाती हैं।
 
 --- verse 2 ---
 deva:
@@ -34,6 +37,9 @@ iast:
 uddhava uvāca
 kayā dhāraṇayā kāsvit kathaṁsvit siddhiracyuta|
 kati vā siddhayo brūhi yogināṁ siddhido bhavān||
+en: Uddhava said: By which dhāraṇā, and which siddhi, and in what manner does a siddhi come, O Acyuta? And how many are the siddhis? Tell me. You are the giver of siddhis to the yogins.
+tel: ఉద్ధవుడు పలికెను: అచ్యుతా, ఏ ధారణచే, ఏ సిద్ధి, ఏ విధముగా కలుగును? సిద్ధులు ఎన్ని? చెప్పుము. యోగులకు సిద్ధులను ఇచ్చువారు మీరే.
+hi: उद्धव ने कहा: अच्युत, किस धारणा से, कौन सी सिद्धि, किस प्रकार से होती है? और सिद्धियाँ कितनी हैं? कहिए। योगियों को सिद्धि देनेवाले आप ही हैं।
 
 --- verse 3 ---
 deva:
@@ -44,6 +50,9 @@ iast:
 śrībhagavānuvāca
 siddhayo'ṣṭādaśa proktā dhāraṇāyogapāragaiḥ|
 tāsāmaṣṭau matpradhānā daśaiva guṇahetavaḥ||
+en: The blessed Lord said: Those who have gone to the far shore of dhāraṇā-yoga have declared eighteen siddhis. Of these, eight rest chiefly in me, and ten arise from the guṇas.
+tel: శ్రీభగవానుడు పలికెను: ధారణాయోగమున పారము చేరినవారు పదునెనిమిది సిద్ధులను చెప్పిరి. వానిలో ఎనిమిది ముఖ్యముగా నాయందు ఉన్నవి. పది గుణముల నుండి కలుగునవి.
+hi: श्रीभगवान् ने कहा: धारणायोग के पारगामी पुरुषों ने अठारह सिद्धियाँ कही हैं। उनमें आठ मुख्य रूप से मुझमें हैं, और दस गुणों से उत्पन्न होती हैं।
 
 --- verse 4 ---
 deva:
@@ -52,6 +61,9 @@ deva:
 iast:
 aṇimā mahimā mūrterlaghimā prāptirindriyaiḥ|
 prākāmyaṁ śrutadṛṣṭeṣu śaktipreraṇamīśitā||
+en: Aṇimā, mahimā and laghimā, which are of the body; prāpti, which is attainment through the senses; prākāmya, which is the enjoyment of things heard of and things seen; īśitā, which is the directing of the powers;
+tel: శరీరమునకు సంబంధించిన అణిమ, మహిమ, లఘిమ; ప్రాప్తి, అనగా ఇంద్రియములచే పొందుట; ప్రాకామ్యము, అనగా వినినవి చూచినవి అనుభవించుట; ఈశిత, అనగా శక్తులను నడపుట;
+hi: शरीर से संबंधित अणिमा, महिमा और लघिमा; प्राप्ति, अर्थात् इन्द्रियों से प्राप्त करना; प्राकाम्य, अर्थात् सुने और देखे हुए विषयों का भोग; ईशिता, अर्थात् शक्तियों का संचालन;
 
 --- verse 5 ---
 deva:
@@ -60,6 +72,9 @@ deva:
 iast:
 guṇeṣvasaṁgo vaśitā yatkāmastadavasyati|
 etā me siddhayaḥ saumya aṣṭāvautpattikā matāḥ||
+en: vaśitā, which is non-attachment amid the guṇas; and the siddhi by which a man obtains whatever he desires. These eight siddhis, gentle one, are held to be mine by nature.
+tel: వశిత, అనగా గుణములయందు ఆసక్తి లేకుండుట; మరియు కోరినది కోరినట్లు పొందు సిద్ధి. సౌమ్యుడా, ఈ ఎనిమిది సిద్ధులు స్వభావముచేతనే నావిగా చెప్పబడినవి.
+hi: वशिता, अर्थात् गुणों में आसक्ति का अभाव; और वह सिद्धि जिससे मनुष्य जो चाहता है वही पाता है। सौम्य, ये आठ सिद्धियाँ स्वभाव से ही मेरी मानी गई हैं।
 
 --- verse 6 ---
 deva:
@@ -68,6 +83,9 @@ deva:
 iast:
 anūrmimattvaṁ dehe'smin dūraśravaṇadarśanam|
 manojavaḥ kāmarūpaṁ parakāyapraveśanam||
+en: Freedom in this body from the waves, which are hunger, thirst and the rest; hearing and seeing from afar; the speed of mind; taking any form at will; entering the body of another;
+tel: ఈ దేహమున ఆకలి దప్పిక మొదలగు ఊర్ములు లేకుండుట; దూరమున ఉన్నది వినుట మరియు చూచుట; మనోవేగము; కోరిన రూపము ధరించుట; ఇతరుని దేహమున ప్రవేశించుట;
+hi: इस देह में भूख प्यास आदि ऊर्मियों का न रहना; दूर का सुनना और देखना; मन के समान वेग; इच्छा के अनुसार रूप धारण करना; दूसरे के शरीर में प्रवेश करना;
 
 --- verse 7 ---
 deva:
@@ -76,6 +94,9 @@ deva:
 iast:
 svacchandamṛtyurdevānāṁ sahakrīḍānudarśanam|
 yathāsaṁkalpasaṁsiddhirājñāpratihatāgatiḥ||
+en: dying at one's own will; beholding the play of the gods and sharing in it; the fulfilment of whatever one resolves; and a command that is nowhere resisted.
+tel: తన ఇష్టప్రకారము మరణించుట; దేవతల ఆటను చూచుట మరియు వారితో కలిసి ఆడుట; సంకల్పించినది సిద్ధించుట; ఎక్కడను ఆటంకము లేని ఆజ్ఞ.
+hi: अपनी इच्छा से मरना; देवताओं की क्रीडा देखना और उनके साथ क्रीडा करना; जो संकल्प किया वह सिद्ध होना; और कहीं न रुकनेवाली आज्ञा।
 
 --- verse 8 ---
 deva:
@@ -84,6 +105,9 @@ deva:
 iast:
 trikālajñatvamadvandvaṁ paracittādyabhijñatā|
 agnyarkāmbuviṣādīnāṁ pratiṣṭambho'parājayaḥ||
+en: Knowledge of the three times; freedom from the pairs; knowledge of another's mind and the rest; the checking of fire, the sun, water, poison and the like; and remaining unconquered.
+tel: మూడు కాలములను ఎరుగుట; ద్వంద్వములు లేకుండుట; ఇతరుల మనసు మొదలగువాటిని ఎరుగుట; అగ్ని, సూర్యుడు, నీరు, విషము మొదలగువాటిని అడ్డగించుట; ఓటమి లేకుండుట.
+hi: तीनों कालों का ज्ञान; द्वन्द्वों से मुक्ति; दूसरे के मन आदि का ज्ञान; अग्नि, सूर्य, जल, विष आदि को रोक देना; और अपराजित रहना।
 
 --- verse 9 ---
 deva:
@@ -92,6 +116,9 @@ deva:
 iast:
 etāścoddeśataḥ proktā yogadhāraṇasiddhayaḥ|
 yayā dhāraṇayā yā syād yathā vā syānnibodha me||
+en: These siddhis of yoga-dhāraṇā have been declared in brief. Now learn from me by which dhāraṇā which siddhi comes, and in what manner.
+tel: యోగధారణచే కలుగు ఈ సిద్ధులు సంక్షేపముగా చెప్పబడినవి. ఇప్పుడు ఏ ధారణచే ఏ సిద్ధి, ఏ విధముగా కలుగునో నా నుండి తెలిసికొనుము.
+hi: योगधारणा से होनेवाली ये सिद्धियाँ संक्षेप में कही गई हैं। अब किस धारणा से कौन सी सिद्धि और किस प्रकार होती है, यह मुझसे सुनो।
 
 --- verse 10 ---
 deva:
@@ -100,6 +127,9 @@ deva:
 iast:
 bhūtasūkṣmātmani mayi tanmātraṁ dhārayenmanaḥ|
 aṇimānamavāpnoti tanmātropāsako mama||
+en: He should hold his mind on me as the self of the subtle elements, upon the tanmātra alone. Such a worshipper of my tanmātra form obtains aṇimā.
+tel: సూక్ష్మభూతములకు ఆత్మయైన నాయందు, తన్మాత్రము మీదనే మనసును నిలుపవలెను. నా తన్మాత్రరూపమును ఉపాసించు అట్టివాడు అణిమను పొందును.
+hi: सूक्ष्म भूतों के आत्मा मुझमें, तन्मात्र पर ही मन को धारण करना चाहिए। मेरे तन्मात्र रूप का ऐसा उपासक अणिमा को प्राप्त करता है।
 
 --- verse 11 ---
 deva:
@@ -108,6 +138,9 @@ deva:
 iast:
 mahatyātmanmayi pare yathāsaṁsthaṁ mano dadhat|
 mahimānamavāpnoti bhūtānāṁ ca pṛthak pṛthak||
+en: He who places his mind, upon each thing as it stands, on me the supreme, who am the self that is the mahat, obtains mahimā, and the greatness of the elements one by one as well.
+tel: మహత్తత్త్వరూపమైన ఆత్మయగు పరమాత్మ నాయందు, ప్రతి వస్తువును ఉన్నట్లుగా మనసున నిలుపువాడు మహిమను పొందును. భూతముల గొప్పదనమును ఒక్కొక్కటిగా కూడ పొందును.
+hi: महत्तत्त्वरूप आत्मा मुझ परम में, प्रत्येक वस्तु को जैसी वह है वैसी ही मन में धारण करनेवाला महिमा को प्राप्त करता है, और भूतों की महिमा को भी एक एक करके पाता है।
 
 --- verse 12 ---
 deva:
@@ -116,6 +149,9 @@ deva:
 iast:
 paramāṇumaye cittaṁ bhūtānāṁ mayi raṁjayan|
 kālasūkṣmārthatāṁ yogī laghimānamavāpnuyāt||
+en: The yogin who settles his mind on me as dwelling in the atoms of the elements attains laghimā, which is the subtlety of the atom of time.
+tel: భూతముల పరమాణువులయందు ఉన్న నాయందు మనసును నిలుపు యోగి, కాలపరమాణువు యొక్క సూక్ష్మత్వమైన లఘిమను పొందును.
+hi: भूतों के परमाणुओं में स्थित मुझमें मन को लगानेवाला योगी काल के परमाणु की सूक्ष्मता रूप लघिमा को प्राप्त करता है।
 
 --- verse 13 ---
 deva:
@@ -124,6 +160,9 @@ deva:
 iast:
 dhārayan mayyahaṁtattve mano vaikārike'khilam|
 sarvendriyāṇāmātmatvaṁ prāptiṁ prāpnoti manmanāḥ||
+en: Holding his whole mind on me in the vaikārika ahaṁ-tattva, and having his mind on me, he obtains prāpti, which is the state of being the self of all the senses.
+tel: వైకారికమైన అహంతత్త్వమున నాయందు మనసునంతటిని నిలిపి, నాయందే మనసు కలవాడై, అన్ని ఇంద్రియములకు ఆత్మత్వమైన ప్రాప్తిని పొందును.
+hi: वैकारिक अहंतत्त्व में मुझमें सारे मन को धारण करता हुआ, मुझमें ही मन लगाकर वह सब इन्द्रियों का आत्मत्व रूप प्राप्ति को पाता है।
 
 --- verse 14 ---
 deva:
@@ -132,6 +171,9 @@ deva:
 iast:
 mahatyātmani yaḥ sūtre dhārayenmayi mānasam|
 prākāmyaṁ pārameṣṭhyaṁ me vindate'vyaktajanmanaḥ||
+en: He who holds his mind on me as the mahat, the sūtra, obtains prākāmya, which is the supreme station of me whose birth is from the unmanifest.
+tel: సూత్రరూపమైన మహత్తత్త్వమున నాయందు మనసును నిలుపువాడు, అవ్యక్తము నుండి జన్మించిన నా పరమేష్ఠిపదమైన ప్రాకామ్యమును పొందును.
+hi: सूत्ररूप महत्तत्त्व में मुझमें मन को धारण करनेवाला, अव्यक्त से जन्म लेनेवाले मेरे परमेष्ठिपद रूप प्राकाम्य को प्राप्त करता है।
 
 --- verse 15 ---
 deva:
@@ -140,6 +182,9 @@ deva:
 iast:
 viṣṇau tryadhīśvare cittaṁ dhārayet kālavigrahe|
 sa īśitvamavāpnoti kṣetrakṣetrajñacodanām||
+en: He should hold his mind on Viṣṇu, the lord of the three, who is the form of time. He obtains īśitā, which is the directing of the field and of the knower of the field.
+tel: కాలస్వరూపుడైన, మూడింటికి అధీశ్వరుడైన విష్ణువునందు మనసును నిలుపవలెను. అతడు క్షేత్రమును క్షేత్రజ్ఞుని నడపుటయైన ఈశిత్వమును పొందును.
+hi: काल के स्वरूप, तीनों के अधीश्वर विष्णु में मन को धारण करना चाहिए। वह क्षेत्र और क्षेत्रज्ञ के संचालन रूप ईशित्व को प्राप्त करता है।
 
 --- verse 16 ---
 deva:
@@ -148,6 +193,9 @@ deva:
 iast:
 nārāyaṇe turīyākhye bhagavacchabdaśabdite|
 mano mayyādadhad yogī maddharmā vaśitāmiyāt||
+en: The yogin who places his mind on me as Nārāyaṇa, called the fourth, who is named by the word bhagavat, becomes of my nature and reaches vaśitā.
+tel: తురీయుడని పేరొందిన, భగవత్ శబ్దముచే చెప్పబడిన నారాయణుడనైన నాయందు మనసును నిలుపు యోగి, నా స్వభావము కలవాడై వశితను పొందును.
+hi: तुरीय नाम से कहे जानेवाले, भगवत् शब्द से कहे जानेवाले नारायण रूप मुझमें मन को लगानेवाला योगी मेरे स्वभाववाला होकर वशिता को प्राप्त करता है।
 
 --- verse 17 ---
 deva:
@@ -156,6 +204,9 @@ deva:
 iast:
 nirguṇe brahmaṇi mayi dhārayan viśadaṁ manaḥ|
 paramānandamāpnoti yatra kāmo'vasīyate||
+en: Holding his pure mind on me as brahman without guṇas, he obtains the highest bliss, in which all desire comes to its end.
+tel: గుణములు లేని బ్రహ్మస్వరూపుడనైన నాయందు నిర్మలమైన మనసును నిలుపుచు, కోరికలన్నియు అంతమగు పరమానందమును పొందును.
+hi: निर्गुण ब्रह्मरूप मुझमें निर्मल मन को धारण करता हुआ वह परमानन्द को प्राप्त करता है, जिसमें सारी कामना समाप्त हो जाती है।
 
 --- verse 18 ---
 deva:
@@ -164,6 +215,9 @@ deva:
 iast:
 śvetadvīpapatau cittaṁ śuddhe dharmamaye mayi|
 dhārayañchvetatāṁ yāti ṣaḍūrmirahito naraḥ||
+en: Holding his mind on me, the lord of Śvetadvīpa, pure and made of dharma, a man goes to whiteness and is freed from the six waves.
+tel: శుద్ధుడైన, ధర్మస్వరూపుడైన, శ్వేతద్వీపమునకు అధిపతియైన నాయందు మనసును నిలుపుచు, మనుష్యుడు శ్వేతత్వమును పొందును. ఆరు ఊర్ములు లేనివాడగును.
+hi: शुद्ध, धर्मरूप, श्वेतद्वीप के स्वामी मुझमें मन को धारण करता हुआ मनुष्य श्वेतता को प्राप्त करता है और छह ऊर्मियों से मुक्त हो जाता है।
 
 --- verse 19 ---
 deva:
@@ -172,6 +226,9 @@ deva:
 iast:
 mayyākāśātmani prāṇe manasā ghoṣamudvahan|
 tatropalabdhā bhūtānāṁ haṁso vācaḥ śṛṇotyasau||
+en: Bearing the sound with his mind in me, the prāṇa whose self is space, that haṁsa becomes the hearer there and hears the speech of all beings.
+tel: ఆకాశస్వరూపుడనైన నాయందు, ప్రాణమునందు మనసుచే ఘోషమును ధరించుచు, ఆ హంస అక్కడ గ్రహించువాడై భూతములందరి మాటలను వినును.
+hi: आकाशस्वरूप मुझमें, प्राण में मन से घोष को धारण करता हुआ वह हंस वहाँ ग्रहण करनेवाला होकर सब प्राणियों की वाणी सुनता है।
 
 --- verse 20 ---
 deva:
@@ -180,6 +237,9 @@ deva:
 iast:
 cakṣustvaṣṭari saṁyojya tvaṣṭāramapi cakṣuṣi|
 māṁ tatra manasā dhyāyan viśvaṁ paśyati sūkṣmadṛk||
+en: Joining the eye to Tvaṣṭā, and Tvaṣṭā also to the eye, and meditating there on me with his mind, he sees the whole world with subtle sight.
+tel: కన్నును త్వష్టయందు, త్వష్టను కన్నునందు కలిపి, అక్కడ మనసుచే నన్ను ధ్యానించుచు, సూక్ష్మదృష్టితో విశ్వమునంతటిని చూచును.
+hi: नेत्र को त्वष्टा में और त्वष्टा को भी नेत्र में जोड़कर, वहाँ मन से मेरा ध्यान करता हुआ वह सूक्ष्म दृष्टि से सारे विश्व को देखता है।
 
 --- verse 21 ---
 deva:
@@ -188,6 +248,9 @@ deva:
 iast:
 mano mayi susaṁyojya dehaṁ tadanu vāyunā|
 maddhāraṇānubhāvena tatrātmā yatra vai manaḥ||
+en: Joining his mind well to me, and then his body to the wind, by the power of dhāraṇā on me the self goes there where the mind is.
+tel: మనసును నాయందు బాగుగా కలిపి, పిమ్మట దేహమును వాయువునందు కలిపి, నా ధారణ యొక్క బలముచే, మనసు ఎక్కడ ఉన్నదో ఆత్మ అక్కడ ఉండును.
+hi: मन को मुझमें अच्छी तरह जोड़कर, उसके बाद देह को वायु में जोड़कर, मेरी धारणा के बल से आत्मा वहाँ पहुँच जाता है जहाँ मन है।
 
 --- verse 22 ---
 deva:
@@ -196,6 +259,9 @@ deva:
 iast:
 yadā mana upādāya yad yad rūpaṁ bubhūṣati|
 tattad bhavenmanorūpaṁ madyogabalamāśrayaḥ||
+en: Whenever, taking up the mind, he wishes to become some form, that very form of the mind comes to be, for the strength of yoga in me is his support.
+tel: మనసును గ్రహించి, ఏ రూపము కావలెనని కోరునో, మనసు యొక్క ఆ రూపమే అగును. నాయందు చేసిన యోగము యొక్క బలమే అతనికి ఆశ్రయము.
+hi: जब वह मन को लेकर जो जो रूप होना चाहता है, मन का वही रूप हो जाता है, क्योंकि मुझमें किए योग का बल ही उसका आश्रय है।
 
 --- verse 23 ---
 deva:
@@ -204,6 +270,9 @@ deva:
 iast:
 parakāyaṁ viśan siddha ātmānaṁ tatra bhāvayet|
 piṇḍaṁ hitvā viśet prāṇo vāyubhūtaḥ ṣaḍaṅghrivat||
+en: The accomplished one who enters another's body should contemplate himself in that body. Leaving his own frame, he should become wind and enter as the prāṇa, like a bee.
+tel: ఇతరుని దేహమున ప్రవేశించు సిద్ధుడు ఆ దేహమున తనను భావన చేయవలెను. తన పిండమును విడిచి, వాయుస్వరూపుడై, తుమ్మెద వలె ప్రాణరూపమున ప్రవేశించవలెను.
+hi: दूसरे के शरीर में प्रवेश करनेवाला सिद्ध उस शरीर में अपनी भावना करे। अपने पिण्ड को छोड़कर, वायुरूप होकर, भौंरे के समान प्राणरूप से प्रवेश करे।
 
 --- verse 24 ---
 deva:
@@ -212,6 +281,9 @@ deva:
 iast:
 pārṣṇyā''pīḍya gudaṁ prāṇaṁ hṛduraḥkaṇṭhamūrdhasu|
 āropya brahmarandhreṇa brahma nītvotsṛjettanum||
+en: Pressing the anus with the heel, he should raise the prāṇa to the heart, the chest, the throat and the head. Leading it through the brahmarandhra to brahman, he should give up the body.
+tel: మడిమతో గుదమును అదిమి, ప్రాణమును హృదయమునకు, రొమ్మునకు, కంఠమునకు, శిరస్సునకు ఎక్కించవలెను. బ్రహ్మరంధ్రము ద్వారా బ్రహ్మమునకు తీసుకొనిపోయి దేహమును విడువవలెను.
+hi: एड़ी से गुदा को दबाकर प्राण को हृदय, वक्ष, कण्ठ और सिर में चढ़ाए। ब्रह्मरन्ध्र से ब्रह्म में ले जाकर देह को छोड़ दे।
 
 --- verse 25 ---
 deva:
@@ -220,6 +292,9 @@ deva:
 iast:
 vihariṣyan surākrīḍe matsthaṁ sattvaṁ vibhāvayet|
 vimānenopatiṣṭhanti sattvavṛttīḥ surastriyaḥ||
+en: If he wishes to move about in the pleasure-grounds of the gods, he should contemplate sattva as resting in me. Women of the gods, who are made of sattva, come to him with an aerial car.
+tel: దేవతల క్రీడాస్థానములలో విహరించ కోరినచో, నాయందు ఉన్న సత్త్వమును భావన చేయవలెను. సత్త్వముచే ఏర్పడిన దేవస్త్రీలు విమానముతో అతని దగ్గరకు వచ్చెదరు.
+hi: देवताओं की क्रीडास्थली में विहार करना चाहे तो मुझमें स्थित सत्त्व की भावना करे। सत्त्व से बनी देवस्त्रियाँ विमान लेकर उसके पास आती हैं।
 
 --- verse 26 ---
 deva:
@@ -228,6 +303,9 @@ deva:
 iast:
 yathā saṁkalpayed buddhyā yadā vā matparaḥ pumān|
 mayi satye mano yuṁjaṁstathā tat samupāśnute||
+en: In whatever way, and whenever, a man devoted to me resolves with his buddhi, joining his mind to me who am the truth, in that very way he obtains it.
+tel: నా యందు నిలిచిన పురుషుడు, సత్యస్వరూపుడనైన నాయందు మనసును కలిపి, ఏ విధముగా ఎప్పుడు బుద్ధితో సంకల్పించునో, ఆ విధముగానే దానిని పొందును.
+hi: मुझमें लगा हुआ पुरुष, सत्यरूप मुझमें मन को जोड़कर, जिस प्रकार और जब बुद्धि से संकल्प करता है, उसी प्रकार उसे प्राप्त करता है।
 
 --- verse 27 ---
 deva:
@@ -236,6 +314,9 @@ deva:
 iast:
 yo vai madbhāvamāpanna īśiturvaśituḥ pumān|
 kutaścinna vihanyeta tasya cājñā yathā mama||
+en: The man who has reached the nature of me, who rule and who master, is nowhere obstructed, and his command is like my own.
+tel: ఈశితుడను వశితుడను అయిన నా స్వరూపమును పొందిన పురుషుడు ఎక్కడను అడ్డగింపబడడు. అతని ఆజ్ఞ నా ఆజ్ఞ వలెనే ఉండును.
+hi: ईशिता और वशिता रखनेवाले मेरे स्वरूप को प्राप्त पुरुष कहीं भी नहीं रोका जाता, और उसकी आज्ञा मेरी ही आज्ञा के समान होती है।
 
 --- verse 28 ---
 deva:
@@ -244,6 +325,9 @@ deva:
 iast:
 madbhaktyā śuddhasattvasya yogino dhāraṇāvidaḥ|
 tasya traikālikī buddhirjanmamṛtyūpabṛṁhitā||
+en: For the yogin whose sattva is pure through devotion to me and who knows dhāraṇā, the buddhi takes in the three times, reaching over birth and death.
+tel: నా భక్తిచే శుద్ధసత్త్వుడైన, ధారణను ఎరిగిన యోగికి, జన్మమును మరణమును దాటి సాగు త్రికాలజ్ఞానము కలుగును.
+hi: मेरी भक्ति से शुद्ध सत्त्ववाले और धारणा के जाननेवाले योगी की बुद्धि जन्म और मृत्यु के पार फैलकर तीनों कालों को जान लेती है।
 
 --- verse 29 ---
 deva:
@@ -252,6 +336,9 @@ deva:
 iast:
 agnyādibhirna hanyeta muneryogamayaṁ vapuḥ|
 madyogaśrāntacittasya yādasāmudakaṁ yathā||
+en: The body of the sage, made of yoga, is not destroyed by fire and the rest, for his mind has come to rest in yoga on me, just as water does not harm the creatures of the water.
+tel: యోగమయమైన ముని శరీరము అగ్ని మొదలగువాటిచే నశించదు. అతని మనసు నాయందు యోగమున విశ్రాంతి పొందినది. నీటి జీవులకు నీరు హాని చేయనట్లే.
+hi: योगमय मुनि का शरीर अग्नि आदि से नष्ट नहीं होता, क्योंकि उसका मन मुझमें योग में विश्राम पा चुका है, जैसे जल के जीवों को जल हानि नहीं करता।
 
 --- verse 30 ---
 deva:
@@ -260,6 +347,9 @@ deva:
 iast:
 madvibhūtīrabhidhyāyan śrīvatsāstravibhūṣitāḥ|
 dhvajātapatravyajanaiḥ sa bhavedaparājitaḥ||
+en: Meditating on my manifestations, adorned with the Śrīvatsa and the weapons, and with the banner, the parasol and the fans, he becomes unconquered.
+tel: శ్రీవత్సముచే ఆయుధములచే అలంకరింపబడిన, ధ్వజముచే ఛత్రముచే విసనకఱ్ఱలచే కూడిన నా విభూతులను ధ్యానించుచు, అతడు అపరాజితుడగును.
+hi: श्रीवत्स और अस्त्रों से सुशोभित, ध्वज, छत्र और व्यजनों से युक्त मेरी विभूतियों का ध्यान करता हुआ वह अपराजित हो जाता है।
 
 --- verse 31 ---
 deva:
@@ -268,6 +358,9 @@ deva:
 iast:
 upāsakasya māmevaṁ yogadhāraṇayā muneḥ|
 siddhayaḥ pūrvakathitā upatiṣṭhantyaśeṣataḥ||
+en: To the sage who worships me thus by dhāraṇā in yoga, the siddhis spoken of before present themselves without exception.
+tel: ఈ విధముగా యోగధారణచే నన్ను ఉపాసించు మునికి, ముందు చెప్పబడిన సిద్ధులు ఏమియు మిగులకుండ దగ్గరకు వచ్చును.
+hi: इस प्रकार योगधारणा से मेरी उपासना करनेवाले मुनि के पास पहले कही गई सिद्धियाँ पूरी तरह आ जाती हैं।
 
 --- verse 32 ---
 deva:
@@ -276,6 +369,9 @@ deva:
 iast:
 jitendriyasya dāntasya jitaśvāsātmano muneḥ|
 maddhāraṇāṁ dhārayataḥ kā sā siddhiḥ sudurlabhā||
+en: For the sage who has subdued his senses, who is restrained, whose self has mastered the breath, and who holds dhāraṇā on me, what siddhi is there that is hard to obtain?
+tel: ఇంద్రియములను జయించిన, దాంతుడైన, శ్వాసను జయించిన ఆత్మ కలిగిన, నా ధారణను ధరించు మునికి దుర్లభమైన సిద్ధి ఏది?
+hi: जिसने इन्द्रियों को जीत लिया है, जो दान्त है, जिसका आत्मा श्वास को जीत चुका है, और जो मेरी धारणा धारण करता है, उस मुनि के लिए कौन सी सिद्धि दुर्लभ है?
 
 --- verse 33 ---
 deva:
@@ -284,6 +380,9 @@ deva:
 iast:
 antarāyān vadantyetā yuṁjato yogamuttamam|
 mayā sampadyamānasya kālakṣapaṇahetavaḥ||
+en: These are called obstacles for one who practises the highest yoga. For him who is being accomplished through me they are causes of the wasting of time.
+tel: ఉత్తమయోగమును సాధించువానికి ఇవి అంతరాయములని చెప్పబడును. నా ద్వారా సిద్ధి పొందుచున్నవానికి ఇవి కాలము వ్యర్థమగుటకు కారణములు.
+hi: उत्तम योग का अभ्यास करनेवाले के लिए इन्हें अन्तराय कहा जाता है। मेरे द्वारा सिद्ध होते हुए पुरुष के लिए ये काल के नष्ट होने के कारण हैं।
 
 --- verse 34 ---
 deva:
@@ -292,6 +391,9 @@ deva:
 iast:
 janmauṣadhitapomantrairyāvatīriha siddhayaḥ|
 yogenāpnoti tāḥ sarvā nānyairyogagatiṁ vrajet||
+en: Whatever siddhis there are here through birth, herbs, tapas and mantras, all of them he obtains by yoga. By the other means one does not reach the goal of yoga.
+tel: జన్మముచే, ఓషధులచే, తపముచే, మంత్రములచే ఇక్కడ ఎన్ని సిద్ధులు కలుగునో, వాని అన్నిటిని యోగముచే పొందును. ఇతర మార్గములచే యోగగతిని పొందడు.
+hi: जन्म, औषधि, तप और मन्त्रों से यहाँ जितनी सिद्धियाँ होती हैं, उन सबको वह योग से प्राप्त करता है। दूसरे साधनों से योग की गति नहीं मिलती।
 
 --- verse 35 ---
 deva:
@@ -300,6 +402,9 @@ deva:
 iast:
 sarvāsāmapi siddhīnāṁ hetuḥ patirahaṁ prabhuḥ|
 ahaṁ yogasya sāṁkhyasya dharmasya brahmavādinām||
+en: Of all the siddhis I am the cause, the lord and the master. I am the lord of yoga, of sāṁkhya, of dharma and of those who speak of brahman.
+tel: సిద్ధులన్నిటికి హేతువును, పతిని, ప్రభువును నేనే. యోగమునకు, సాంఖ్యమునకు, ధర్మమునకు, బ్రహ్మవాదులకు అధిపతిని నేనే.
+hi: सारी सिद्धियों का हेतु, पति और प्रभु मैं ही हूँ। योग का, सांख्य का, धर्म का और ब्रह्मवादियों का स्वामी मैं ही हूँ।
 
 --- verse 36 ---
 deva:
@@ -308,9 +413,15 @@ deva:
 iast:
 ahamātmā''ntaro bāhyo'nāvṛtaḥ sarvadehinām|
 yathā bhūtāni bhūteṣu bahirantaḥ svayaṁ tathā||
+en: I am the self of all embodied beings, within and without, and I am uncovered. As the elements are within beings and outside them, so am I myself.
+tel: దేహధారులందరికి ఆత్మను నేనే. లోపల బయట ఉన్నవాడను, ఏ ఆవరణయు లేనివాడను. భూతములు భూతములయందు లోపల బయట ఉన్నట్లే, నేనును అట్లే ఉన్నాను.
+hi: सब देहधारियों का आत्मा मैं ही हूँ, भीतर और बाहर, और मैं अनावृत हूँ। जैसे भूत भूतों के भीतर और बाहर रहते हैं, वैसे ही मैं स्वयं हूँ।
 
 --- verse none ---
 deva:
 इति श्रीमद्भागवते महापुराणे पारमहंस्यां संहितायामेकादशस्कन्धे पञ्चदशोऽध्यायः॥ १५॥
 iast:
 iti śrīmadbhāgavate mahāpurāṇe pāramahaṁsyāṁ saṁhitāyāmekādaśaskandhe pañcadaśo'dhyāyaḥ|| 15||
+en: Thus ends the fifteenth adhyāya in the eleventh skandha of the Śrīmad Bhāgavata Mahāpurāṇa, the saṁhitā of the paramahaṁsas.
+tel: ఇట్లు శ్రీమద్భాగవత మహాపురాణమున, పరమహంసల సంహితయందు, ఏకాదశస్కంధమున పంచదశాధ్యాయము సమాప్తము.
+hi: इस प्रकार श्रीमद्भागवत महापुराण की परमहंसों की संहिता के एकादश स्कन्ध में पन्द्रहवाँ अध्याय समाप्त हुआ।
