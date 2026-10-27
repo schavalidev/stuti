@@ -20,7 +20,25 @@ for (const [file, key] of NAMES_FILES) {
   let text = rd(file);
   text = text.replace(/^window\.STUTI_NAMES=window\.STUTI_NAMES\|\|\{\};\n/m, "");
   const m = text.match(/window\.STUTI_NAMES\.(\w+)\s*=\s*([\s\S]*?);?\s*$/);
-  if (!m) throw new Error(`STUTI_NAMES pattern not found in ${file}`);
+  if (!m) {
+    // This has broken the pipeline twice (17 Oct, and again hours after the
+    // fix), always the same way: whatever rewrites the names collapses the
+    // two statements into one and hangs the data off the `||` default. That
+    // also breaks the prototype, which loses whichever list loads first, so
+    // the fix belongs in the design file and not here.
+    const collapsed = /window\.STUTI_NAMES\s*=\s*window\.STUTI_NAMES\s*\|\|\s*\{\s*"/.test(text);
+    throw new Error(
+      `STUTI_NAMES pattern not found in ${file}.` +
+      (collapsed
+        ? `\n  The data is assigned to window.STUTI_NAMES itself, as the || default.` +
+          `\n  It must be two statements:` +
+          `\n      window.STUTI_NAMES=window.STUTI_NAMES||{};` +
+          `\n      window.STUTI_NAMES.${key}={...};` +
+          `\n  Fix it in design_handoff_stuti/app/${file.replace(/\.ts$/, ".js")},` +
+          `\n  not here — as written the prototype drops the other name lists too.`
+        : `\n  Expected a line of the form window.STUTI_NAMES.${key}= ...`)
+    );
+  }
   if (m[1] !== key) throw new Error(`expected key ${key} in ${file}, found ${m[1]}`);
   text = text.slice(0, m.index) + `export const ${key} = ` + m[2] + ";\n";
   wr(file, text);

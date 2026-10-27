@@ -1,8 +1,8 @@
 import { Icon } from "./stuti-icons";
 import React from "react";
 import { STUTI_BUILD } from "./stuti-build";
-import { LegalRows } from "./stuti-legal-ui";
 import { AccountRow } from "./stuti-account-row";
+import { LegalRows } from "./stuti-legal-ui";
 import { RelayRow } from "./stuti-relay-ui";
 import { STUTI_DANA } from "./stuti-dana-core";
 import { DanaSheet, useDana } from "./stuti-dana";

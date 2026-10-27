@@ -102,6 +102,11 @@ code { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: .
   <div class="release-body">
     <h2 class="release-title">Reading the small print of our own app</h2>
     <div class="entry">
+      <div class="entry-head"><span class="tag tag-fix">Fixed</span><h3>The port runs again, and stops dropping the meaning notice</h3></div>
+      <p>Porting the prototype into the app has been failing since 17 October, on the Lalitā names file: the thousand names were written as one object hung off the shared <code>window.STUTI_NAMES</code> instead of under its own key. The prototype loses whichever name list loads second that way, and the port stops outright. It was mended once that same day and came back hours later, so the error now says what the shape must be and where to mend it, rather than naming a missing pattern.</p>
+      <p>Mending the port uncovered the second fault. The notice shown over a text whose meanings are not yet written is added by a step that was written but never listed in the pipeline, so every full port had been quietly removing it and leaving a blank page in its place. It is listed now, and a port run end to end reproduces the app as it stands.</p>
+    </div>
+    <div class="entry">
       <div class="entry-head"><span class="tag tag-fix">Fixed</span><h3>The Devanāgarī now breaks its compounds where the IAST already did</h3></div>
       <p>The bundled texts have carried hyphenated transliteration since they were written &mdash; <span>mahiṣāsura-mardini</span> &mdash; while the Devanāgarī on the line above stayed solid. A reciter reading the Devanāgarī got no help finding where a long compound breaks, and the two scripts disagreed about the same word. The analysis was already there, so it has simply been copied across: 2,889 hyphens into 22 texts, every one of them standing where somebody had put a hyphen in the IAST. Nothing was invented. Where a compound is welded by sandhi the hyphen is left out rather than forced &mdash; <span>jagad-amba</span> is written <span lang="sa">जगदम्ब</span>, and the <span lang="sa">द</span> carries the end of one word and the start of the next, so there is no point in it to cut. 584 joins of that kind were skipped, exactly as the IAST skips them.</p>
     </div>
