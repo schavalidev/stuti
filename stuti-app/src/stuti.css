@@ -15,12 +15,6 @@
    Noto Sans Telugu — clean, highly legible Telugu
 */
 /* Google Fonts: served locally, linked from index.html (fix-local-fonts.mjs) */
-@font-face { font-family: 'KanakaDurga'; src: url('fonts/KanakaDurga.otf') format('opentype'); font-weight: 400; font-style: normal; font-display: swap; }
-@font-face { font-family: 'KanakaDurga'; src: url('fonts/KanakaDurga-Italic.otf') format('opentype'); font-weight: 400; font-style: italic; font-display: swap; }
-@font-face { font-family: 'SangamSans'; src: url('fonts/SangamSans-Light.ttf') format('truetype'); font-weight: 300; font-style: normal; font-display: swap; }
-@font-face { font-family: 'SangamSans'; src: url('fonts/SangamSans-Regular.ttf') format('truetype'); font-weight: 400; font-style: normal; font-display: swap; }
-@font-face { font-family: 'SangamSans'; src: url('fonts/SangamSans-Medium.ttf') format('truetype'); font-weight: 500; font-style: normal; font-display: swap; }
-@font-face { font-family: 'SangamSans'; src: url('fonts/SangamSans-Bold.ttf') format('truetype'); font-weight: 700; font-style: normal; font-display: swap; }
 @font-face { font-family: 'Stuti Sans'; src: url('fonts/StutiSans-Light.ttf') format('truetype'); font-weight: 300; font-style: normal; font-display: swap; }
 @font-face { font-family: 'Stuti Sans'; src: url('fonts/StutiSans-Regular.ttf') format('truetype'); font-weight: 400; font-style: normal; font-display: swap; }
 @font-face { font-family: 'Stuti Sans'; src: url('fonts/StutiSans-Medium.ttf') format('truetype'); font-weight: 500; font-style: normal; font-display: swap; }
@@ -45,7 +39,7 @@
 
 :root {
   /* type */
-  --font-display: 'Noto Serif', 'SangamSans', 'Marcellus', Georgia, serif;
+  --font-display: 'Noto Serif', 'Marcellus', Georgia, serif;
   --font-ui: 'Noto Sans', 'Mukta', 'Noto Sans Telugu', system-ui, sans-serif;
   --font-deva: 'Noto Sans Devanagari', 'Noto Sans', 'Mukta', sans-serif;
   /* the reader's Devanagari verse face */
@@ -59,7 +53,7 @@
   --font-telugu: 'Surasans02 Regular', 'Mallanna', 'Noto Sans Telugu', 'Mukta', sans-serif;
   /* manuscript serifs — the printed index (deity page) sets its titles in these */
   --font-deva-serif: 'Noto Sans Devanagari', 'Tiro Devanagari Sanskrit', serif;
-  --font-telugu-serif: 'SangamSans', 'Tiro Telugu', 'Noto Sans Telugu', serif;
+  --font-telugu-serif: 'Tiro Telugu', 'Noto Sans Telugu', serif;
 }
 /* Telugu interface: Mallanna leads every face */
 /* Telugu interface: Mallanna leads every face, one step larger — every

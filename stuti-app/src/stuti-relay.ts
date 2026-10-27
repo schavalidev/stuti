@@ -38,6 +38,9 @@ const url = () => (onSite ? "" : SITE) + PATH;
    An explicit choice either way is kept across builds. */
 const byDefault = () => STUTI_BUILD.CHANNEL !== "release";
 export const enabled = () => { try { const v = localStorage.getItem("stuti-relay"); return v === null ? byDefault() : v === "1"; } catch (e) { return false; } };
+/* The same flag under a name that reads clearly at the call site. The Follow
+   sheet asks it before promising that a kept recitation goes nowhere. */
+export const relaySending = enabled;
 export const setEnabled = (on: boolean) => { try { localStorage.setItem("stuti-relay", on ? "1" : "0"); } catch (e) {} };
 
 export const deviceId = (() => {

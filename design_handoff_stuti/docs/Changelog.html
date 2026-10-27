@@ -95,6 +95,37 @@ code { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: .
 
 <section class="release">
   <div class="rail">
+    <div class="ver">0.9.114</div>
+    <div class="date">27 October 2026</div>
+    <div class="rail-note">Four things the app said that were not quite true, and two typefaces it had no right to pass on.</div>
+  </div>
+  <div class="release-body">
+    <h2 class="release-title">Reading the small print of our own app</h2>
+    <div class="entry">
+      <div class="entry-head"><span class="tag tag-fix">Fixed</span><h3>Two typefaces that may not be distributed</h3></div>
+      <p>Writing a credits page meant reading every bundled font's own name table rather than trusting its file name, and two of them came back without a licence. KanakaDurga carries a copyright line and nothing else — a reservation of rights, not a grant. SangamSans carries no copyright, no licence, no vendor and no designer: nothing at all. Neither can be credited, so neither can be shipped. KanakaDurga was already named by no token and cost nothing to drop. SangamSans led the Telugu serif face, which now falls to Tiro Telugu — bundled, under the Open Font Licence, and drawn for exactly this. What keeps them out of the build is removing the <code>@font-face</code>, not the token: a font file reaches the bundle because a stylesheet names it. The files stay in the source, so if a licence turns up the step comes out and nothing else does.</p>
+    </div>
+    <div class="entry">
+      <div class="entry-head"><span class="tag tag-add">Added</span><h3>A credits page, and the two legal pages reachable at last</h3></div>
+      <p>The privacy policy had been written, filled and served since Sunday, and nothing in the app pointed a reciter at it — which is most of what the law asks for. Settings now carries three rows: the policy, the terms, and a new credits page naming the editions the texts are collated from, every typeface and its licence, the software, the algorithms the pañcāṅga is calculated with, and the two data sources whose licences require attribution and were not being given it: GeoNames for places, under CC BY, and OpenStreetMap for the temple index, under the ODbL. The pages ship inside the app, so they open without a network, which matters for a document about what the app does with your practice.</p>
+    </div>
+    <div class="entry">
+      <div class="entry-head"><span class="tag tag-fix">Fixed</span><h3>Four blanks in a published privacy policy</h3></div>
+      <p>The live policy still had its drafting marks in it: how long feedback is kept, how long logs are kept, how soon we answer a request — and, worst, a note written to ourselves about whether a representative in the EU would be needed, published where a reader would meet it. The three periods are now stated plainly as two years, twelve months and thirty days. The note is gone from the page and is a question to settle, not a paragraph to show. The terms lost their own blanks the same way: giving is not open for this release, so the section says that instead of naming a refund window and a payment company, and the account section stopped asking for a mobile number the app cannot sign anyone in with.</p>
+    </div>
+    <div class="entry">
+      <div class="entry-head"><span class="tag tag-fix">Fixed</span><h3>&ldquo;Nothing is uploaded&rdquo;, on a build that uploads</h3></div>
+      <p>The sheet that asks whether to keep a recitation promised the audio stayed on the device. On a test or beta build the diagnostics switch is on by default, and a kept session's log and audio go to the makers — so the one line a reciter reads before deciding was false exactly when it mattered. The sheet now reads the switch: with it off the old promise stands, and with it on the sheet says a copy goes to the makers and where to turn that off. Nothing about what travels has changed; only whether the app admits it.</p>
+    </div>
+    <div class="entry">
+      <div class="entry-head"><span class="tag tag-add">Added</span><h3>Meaning, over a text whose meaning is not written</h3></div>
+      <p>The corpus has outrun the glosses: 332 of the 335 Bhāgavata adhyāyas are published as text alone. Turning Meaning on over one of them produced a blank page, leaving the reciter to guess whether the app had broken, the download had failed, or the verses have no meaning. None of those is true, so the page now says which it is — the verses are complete, the meaning is still being prepared, nothing is missing from your copy. A namāvalī is a different case and was already answered: its meaning is the glossary, and the page says so there instead.</p>
+    </div>
+  </div>
+</section>
+
+<section class="release">
+  <div class="rail">
     <div class="ver">0.9.113</div>
     <div class="date">25 October 2026</div>
     <div class="rail-note">The names of the reciter's dead were on the list of things that travel to the server. They are not any more.</div>

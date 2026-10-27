@@ -1,5 +1,6 @@
 import { Emblem, FavButton, Flame, Icon, deityStyle, useFavs } from "./stuti-icons";
 import { STUTI_NAMES } from "./stuti-names";
+import { MeaningGap } from "./stuti-meaning-gap";
 import React from "react";
 import { STUTI_AUDIO } from "./stuti-audio";
 import { AwaitingText } from "./stuti-await";
@@ -1648,6 +1649,7 @@ function ReaderView({ hymn: rawHymn, deity, go, theme, toggleTheme, lang, setLan
 
       {/* one verse at a time, or the whole text in one column */}
       <div className={"reader-scroll scroll" + (flow ? " is-flow" : "") + (hasSvara ? " rd-vedic" : "")} ref={scrollRef}>
+        {showMeaning && !namaluOpen && <MeaningGap hymn={hymn} lang={lang} />}
         {namaluOpen ? (
           <NamaluList hymn={hymn} lang={lang} />
         ) : flow ? (

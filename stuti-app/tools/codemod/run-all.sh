@@ -26,6 +26,7 @@ node fix-count-seam.mjs
 node fix-search-seam.mjs
 node fix-perf-seam.mjs
 node fix-relay-seam.mjs
+node fix-legal-seam.mjs
 node fix-notify-seam.mjs
 node fix-account-seam.mjs
 node fix-feedback-seam.mjs
@@ -37,6 +38,7 @@ node setup-entry.mjs
 # step edits that copy, so running it first leaves it nothing to strip
 # and the @import to Google survives into the build.
 node fix-local-fonts.mjs
+node fix-font-licence.mjs
 node fix-backdrop-prefix.mjs
 node fix-missing-imports.mjs
 # record which design commit src/ now corresponds to (read by

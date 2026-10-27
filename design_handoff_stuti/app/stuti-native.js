@@ -38,5 +38,8 @@
     grammarFor: () => [],
     /* sessions go to the makers from the app only */
     relayFollowSession: () => Promise.resolve(),
+    /* ...and so the prototype never sends one, which is what the keep sheet
+       says: with this false it promises the recitation stays on the device */
+    relaySending: () => false,
   });
 })();

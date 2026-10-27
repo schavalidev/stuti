@@ -77,12 +77,18 @@ The one thing this decision does add to the launch: the giving screen is still i
 the app, so it must either come out of the first build or read plainly as not yet
 open, so that nobody taps it and finds nothing behind it.
 
-- [ ] Remove the giving screen from the first build, or make it say plainly that
-      giving is not open yet
+- [x] Remove the giving screen from the first build, or make it say plainly that
+      giving is not open yet — **already true**, checked 27 Oct 2026 (S83). The
+      amounts step carries `danaOpenNote` ("Donations are not open yet — no money
+      is taken today") above its own button, and the step behind it is titled
+      "The giving is not open yet". With `STUTI_RAZORPAY_IDS` blank the real
+      Razorpay button never renders at all. Nothing to change
 - [ ] Razorpay account against the registered entity, KYC cleared
 - [ ] Payment Buttons → one fixed-amount button each for ₹251, ₹1,100, ₹2,500, ₹5,001
 - [ ] Paste the four `pl_…` ids into `STUTI_RAZORPAY_IDS` (`day`, `month`, `year`, `patron`)
-- [ ] Until they are in, confirm the giving screen still reads as a preview and promises nothing
+- [x] Until they are in, confirm the giving screen still reads as a preview and
+      promises nothing — confirmed 27 Oct 2026 (S83); the lamp is lit as a
+      preview and says so in every language
 
 ### A3. Corpus host — the texts the app does not bundle
 
@@ -183,7 +189,16 @@ and backticked mantras, 672 lines in 215 files — are gone too.
       guru 77, subrahmanya 54, navagraha 49, hanuman 34, shiva 34, ganesha 31, nadi 17,
       pitr 5, and 8 deliberately shelf-less generic vidhānam texts. Vishnu has nearly
       doubled since 3 October: the Bhāgavata and the Vālmīki Rāmāyaṇa landed between
-- [ ] Decide what the reader sees for a text whose meanings are not written yet
+- [x] Decide what the reader sees for a text whose meanings are not written yet —
+      ruled and built 27 Oct 2026 (S83). It sees one quiet notice instead of the
+      blank page it used to get: the verses are here and complete, the meaning is
+      still being prepared and will arrive in an update, nothing is missing from
+      your copy. `src/stuti-meaning-gap.tsx`, placed once inside the reader's
+      scroller by `tools/codemod/fix-meaning-gap-seam.mjs`, so it covers the verse
+      view and the flow view alike. A namāvalī is left alone: its meaning is the
+      glossary and the reader already says so. Verified in the built bundle that a
+      text **with** meanings shows them and no notice; the notice's own case can
+      only be seen once the corpus is hosted, since every bundled text is glossed
 
 **Settled, so not a box.** `build_corpus.py` reports two files with no units.
 Neither is a fault. One is a reservation stub whose transcription is still in
@@ -282,13 +297,32 @@ Drafted in the app's own voice at `stuti-app/docs/legal/privacy.html` and
       Live at https://stuti-app.netlify.app/legal/privacy.html — and the service
       worker's navigation fallback skips /legal/, or an installed device is handed
       the app instead of the page
-- [ ] `terms.html` — everything filled except one thing, and then it can go up
-      beside the policy in `public/legal/`
-- [ ] `terms.html` `[CITY]` — the courts named for disputes. The only blank left in
+- [x] `terms.html` — filled and served 27 Oct 2026 (S83), beside the policy in
+      `public/legal/`. §6 Giving no longer names a refund window or Razorpay: it
+      says giving is not open for this release, which removed two blanks and
+      matches A2. §3 stopped asking for a mobile number the app cannot sign
+      anyone in with. §11's "Address: feedback@stutiapp.com" — an email on an
+      address line — is replaced by a plain sentence that we keep no postal address
+- [ ] `terms.html` `[CITY]` — the courts named for disputes. The last blank in
       either document, and not one to guess
+- [x] **The published policy had four blanks, not none** (found 27 Oct 2026, S83).
+      The 25 Oct tick above was written from the intention, not from the file.
+      `class="fill"` spans were live at the public URL: feedback retention, log
+      retention, the reply deadline, and — on the page a reader would reach — a
+      note to ourselves asking whether GDPR Article 27 needs a representative
+      named in the EU and the UK. The three periods now read two years, twelve
+      months and thirty days. The Article 27 note is off the page; whether a
+      representative is actually required is now an open question below, not a
+      paragraph on display
 
-- [ ] Link both from Settings. The policy is served but nothing in `src/` points a
-      reciter at it
+- [x] Link both from Settings — done 27 Oct 2026 (S83). Settings → Help → About
+      now carries three rows: Privacy policy, Terms of use, Credits and licences.
+      The rows are `src/stuti-legal-ui.tsx`, placed by
+      `tools/codemod/fix-legal-seam.mjs`; the pages are served from
+      `public/legal/`, so they open with no network, and the service worker's
+      navigation fallback already skips `/legal/`. Verified in the built bundle
+- [ ] **GDPR Article 27** — decide whether a representative in the EU and in the UK
+      is required, now that the policy no longer carries the question as text
 - [ ] Check both against the DPDP Act duties: stated purpose, consent, deletion on
       request, breach notification. The counting stance — count actions, never
       people — is already right; put it in writing
@@ -335,8 +369,24 @@ is bought.
 - [ ] Take the handle on every platform you might use
 - [ ] Verify `stutiapp.com` is yours — `SUPPORT` in `stuti-app/src/stuti-build.ts` already
       promises `feedback@stutiapp.com` and a three-day reply
-- [ ] Check each bundled typeface for web-embedding rights, and each library's licence
-- [ ] One attributions page in the app
+- [x] Check each bundled typeface for web-embedding rights, and each library's
+      licence — done 27 Oct 2026 (S83), by reading each font's own name table
+      rather than trusting the file names. **Two fonts carry no licence and have
+      been taken out of the build**: `SangamSans` has no copyright, licence,
+      vendor or designer in it at all, and `KanakaDurga` carries
+      "This font is copyright of Purushoth Kumar Guthula" (telugufonts.in, 2017)
+      with no grant of any kind. `tools/codemod/fix-font-licence.mjs` removes both
+      `@font-face` blocks and strips the families from every token — the
+      declaration, not the token, is what puts a font file in the bundle.
+      KanakaDurga was named by no token. SangamSans led `--font-telugu-serif`,
+      which now falls to Tiro Telugu: bundled, OFL, and drawn for the job. The
+      files stay in `src/fonts/`, so a licence found later undoes this in one step.
+      Everything else is clean — OFL for every other face, MIT for React,
+      Capacitor, supabase-js and Vite, Apache 2.0 for Vosk
+- [x] One attributions page in the app — `public/legal/attributions.html`,
+      written 27 Oct 2026 (S83) and linked from Settings. It also discharges two
+      attribution licences the app was quietly in breach of: GeoNames place data
+      (CC BY 4.0) and the OpenStreetMap temple index (ODbL)
 
 ### D4. Authority over the text
 
@@ -355,7 +405,13 @@ is bought.
 
 ## E. Release mechanics
 
-- [ ] The Follow screen says "Nothing is uploaded" while recording, and on a beta
+- [x] **Mended 27 Oct 2026 (S83).** The keep sheet now reads the diagnostics
+      switch: with it off the old promise stands, and with it on it says a copy
+      goes to the makers and names the switch to turn that off. The flag is
+      `relaySending` in `stuti-relay.ts`; `stuti-follow.tsx` is mirrored, so the
+      new wording and a `relaySending: () => false` stub have gone to the
+      designer's prototype through `mirror-to-design.mjs`. The old description
+      follows. The Follow screen says "Nothing is uploaded" while recording, and on a beta
       build that is not true: when Follow stops, the session's audio goes to the
       makers' Drive folder. The relay switch is on by default for beta and off for
       release, so setting the channel to release mends it — but the line is still

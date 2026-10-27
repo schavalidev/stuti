@@ -11,8 +11,8 @@ import { STUTI_WATCH } from "./stuti-watch";
    and can serialise a small, non-personal snapshot to the clipboard.
    ============================================================ */
 export const STUTI_BUILD = (function () {
-  const VERSION = "0.9.113";
-  const BUILD = "2026.10.25";
+  const VERSION = "0.9.114";
+  const BUILD = "2026.10.27";
   const CHANNEL = "beta";                 // test | beta | release
   /* the beta latch — one shared word for invited households. Null opens the
      door to everyone (the public build). Compared case- and space-blind. */

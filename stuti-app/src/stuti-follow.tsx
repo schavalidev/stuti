@@ -18,7 +18,7 @@ import React from "react";
 import { Icon } from "./stuti-icons";
 import { FollowEngine } from "./stuti-follow-engine";
 import type { FollowStatus, Line } from "./stuti-follow-engine";
-import { relayFollowSession } from "./stuti-relay";
+import { relayFollowSession, relaySending } from "./stuti-relay";
 import { VOSK_MODELS, VoskRecognition, voskAvailable, voskDownload, voskLangFor, voskLog, voskModelReady, voskNote, voskShareSession, voskVocab } from "./stuti-vosk";
 import { grammarFor, indexVocab } from "./stuti-follow-grammar";
 import { OverlayPortal } from "./stuti-picker";
@@ -75,6 +75,14 @@ const T: Record<string, Record<string, string>> = {
   keepWhereWeb:{ roman: "It stays in this browser only, under this stotra. Nothing is uploaded.",
                  deva:  "यह केवल इस ब्राउज़र में, इसी स्तोत्र के नीचे रहेगा। कुछ भी अपलोड नहीं होता।",
                  telugu:"ఇది ఈ బ్రౌజర్‌లోనే, ఈ స్తోత్రం కింద ఉంటుంది. ఏదీ అప్‌లోడ్ కాదు." },
+  /* The two lines above are true only while the diagnostics switch in Settings
+     is off. With it on — which is its default on a test or beta build — a kept
+     session's log and its audio go to the makers as well, and the reciter is
+     owed that in the same breath as being asked to keep it. */
+  keepWhereSent:{ roman: "It stays on this device, under this stotra — and a copy goes to the makers, because \u201cSend diagnostics\u201d is on in Settings. Turn it off and nothing leaves.",
+                 deva:  "\u092f\u0939 \u0907\u0938\u0940 \u0909\u092a\u0915\u0930\u0923 \u092a\u0930, \u0907\u0938\u0940 \u0938\u094d\u0924\u094b\u0924\u094d\u0930 \u0915\u0947 \u0928\u0940\u091a\u0947 \u0930\u0939\u0924\u093e \u0939\u0948 \u2014 \u0914\u0930 \u0928\u093f\u0930\u094d\u092e\u093e\u0924\u093e\u0913\u0902 \u0915\u094b \u0928\u0915\u0932 \u092d\u0940 \u091c\u093e\u0924\u0940 \u0939\u0948, \u0915\u094d\u092f\u094b\u0902\u0915\u093f \u0938\u0947\u091f\u093f\u0902\u0917\u094d\u0938 \u092e\u0947\u0902 \u201c\u0928\u093f\u0926\u093e\u0928 \u092d\u0947\u091c\u0947\u0902\u201d \u091a\u093e\u0932\u0942 \u0939\u0948\u0964 \u0909\u0938\u0947 \u092c\u0902\u0926 \u0915\u0930 \u0926\u0947\u0902 \u0924\u094b \u0915\u0941\u0932 \u0915\u0941\u091b \u092c\u093e\u0939\u0930 \u0928\u0939\u0940\u0902 \u091c\u093e\u0924\u093e\u0964",
+                 telugu:"\u0c07\u0c26\u0c3f \u0c08 \u0c2a\u0c30\u0c3f\u0c15\u0c30\u0c02\u0c32\u0c4b\u0c28\u0c47, \u0c08 \u0c38\u0c4d\u0c24\u0c4b\u0c24\u0c4d\u0c30\u0c02 \u0c15\u0c3f\u0c02\u0c26 \u0c09\u0c02\u0c1f\u0c41\u0c02\u0c26\u0c3f \u2014 \u0c05\u0c32\u0c3e\u0c17\u0c47 \u0c12\u0c15 \u0c15\u0c3e\u0c2a\u0c3f \u0c24\u0c2f\u0c3e\u0c30\u0c40\u0c26\u0c3e\u0c30\u0c41\u0c32\u0c15\u0c41 \u0c35\u0c46\u0c33\u0c4d\u0c24\u0c41\u0c02\u0c26\u0c3f, \u0c0e\u0c02\u0c26\u0c41\u0c15\u0c02\u0c1f\u0c47 \u0c38\u0c46\u0c1f\u0c4d\u0c1f\u0c3f\u0c02\u0c17\u0c4d\u0c38\u0c4d\u200c\u0c32\u0c4b \u201c\u0c28\u0c3f\u0c35\u0c47\u0c26\u0c3f\u0c15\u0c32\u0c41 \u0c2a\u0c02\u0c2a\u0c41\u201d \u0c06\u0c28\u0c4d \u0c32\u0c4b \u0c09\u0c02\u0c26\u0c3f. \u0c26\u0c3e\u0c28\u0c3f\u0c28\u0c3f \u0c06\u0c2b\u0c4d \u0c1a\u0c47\u0c38\u0c4d\u0c24\u0c47 \u0c0e\u0c26\u0c40 \u0c2c\u0c2f\u0c1f\u0c15\u0c3f \u0c2a\u0c4b\u0c26\u0c41.",
+               },
   keep:        { roman: "Keep",                             deva: "रखें",                              telugu: "ఉంచు" },
   kept:        { roman: "Kept · {dur}. Hear it under {learn} → {listen}, or from ● beside the title.",
                  deva:  "रख लिया · {dur}। इसे {learn} → {listen} में, या शीर्षक के पास ● से सुनें।",
@@ -484,7 +492,7 @@ export function FollowChip({ follow, lang }: { follow: ReturnType<typeof useFoll
     return (
       <div className="rd-follow-chip is-needs-model is-keep" role="dialog" aria-live="polite">
         <span>{t("keepQ", lang, { dur: fmtDur(k.dur), lit: k.linesLit, n: follow.lineCount })}</span>
-        <span className="rd-follow-where">{k.failed ? t("keepFailed", lang) : t(follow.native ? "keepWhere" : "keepWhereWeb", lang)}</span>
+        <span className="rd-follow-where">{k.failed ? t("keepFailed", lang) : t(relaySending() ? "keepWhereSent" : follow.native ? "keepWhere" : "keepWhereWeb", lang)}</span>
         <span className="rd-follow-actions">
           <button type="button" className="rd-follow-act primary" onClick={follow.doKeep}>{t("keep", lang)}</button>
           <button type="button" className="rd-follow-act" onClick={follow.discardKeep}>{t("discard", lang)}</button>
@@ -601,7 +609,7 @@ export function RecitationsSheet({ follow, lang }: { follow: ReturnType<typeof u
             </button>
           </div>
         ))}
-        <div className="rd-rec-foot">{t(follow.native ? "keepWhere" : "keepWhereWeb", lang)}</div>
+        <div className="rd-rec-foot">{t(relaySending() ? "keepWhereSent" : follow.native ? "keepWhere" : "keepWhereWeb", lang)}</div>
         <audio ref={audio} preload="none" />
       </div>
     </OverlayPortal>
