@@ -124,7 +124,7 @@ Step 1 is done: `stotras/bin/build_corpus.py` exists and runs.
       from their text files, and kept each one in IndexedDB after the read. This
       was also the first sight of the meaning-gap notice in its own case, on
       Bhāgavata 9.6 — 153 of the 2,015 live rows carry no gloss yet
-- [ ] Verify on the phone, and offline after one read
+- [ ] Verify on the phone, and offline after one read — Stuti-v56.apk carries it
 - [x] Re-run `node tools/sync-corpus.mjs` to send `redirects.json` — done
       27 October 2026; it is on the host and the app's launch is clean. The first
       upload left it behind — the sync had never uploaded it — so the app asks
@@ -457,6 +457,10 @@ is bought.
       expires a refresh token every seven days. Now on `drive.file` with the consent
       screen published. The narrow scope still writes into the original folder, so
       nothing moved. `tools/relay-selftest.mjs` covers the folder handling
+- [x] Stuti-v56.apk published to Drive (27 Oct 2026) — 0.9.114, the first build
+      that can reach the hosted corpus, and the first carrying the legal and
+      credits pages, the mended Follow line and the meaning-gap notice. The web
+      went out the same day, from the bundle verified locally
 - [x] Stuti-v55.apk published to Drive (25 Oct 2026) — the first build carrying real
       accounts, and the first with the pitṛ register kept off the server
 - [ ] Prune the Drive folder by hand at the next publish: newest two APKs, and never
