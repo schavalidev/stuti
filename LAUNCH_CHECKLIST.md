@@ -379,7 +379,10 @@ Drafted in the app's own voice at `stuti-app/docs/legal/privacy.html` and
       privacy policy and the terms in one quiet line, in all three languages.
       `LegalNote` in `src/stuti-legal-ui.tsx`, placed by the legal seam; verified
       in the built bundle on a cleared device, in English and Telugu, and it
-      does not follow the reciter to the later steps
+      does not follow the reciter to the later steps. **Deployed to the web on
+      27 October; Stuti-v56.apk is behind it**, since it was built earlier the
+      same day — the APK still carries the 25 October policy and has no
+      onboarding note. The next APK carries both
 - [ ] **Still open, and it is the user's to decide: is a Hindi and Telugu
       translation of the policy wanted up front?** The line above promises it on
       request, which is the duty; translating both pages ahead of the asking is
