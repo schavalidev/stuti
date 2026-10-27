@@ -149,18 +149,26 @@ contact. It has to receive mail before anyone is invited to write to it.
       it already carries a Resend DKIM record. `stuti.app` belongs to a stranger,
       and the app had been naming `feedback@stuti.app` as its support address in
       four places, the published privacy policy among them. Corrected 25 Oct 2026
-- [ ] Receiving: Cloudflare → stutiapp.com → **Email Routing** → forward
+- [x] Receiving: done 27 October 2026. Cloudflare Email Routing is on for
+      `stutiapp.com` and the MX records resolve to `route1/2/3.mx.cloudflare.net`;
+      `feedback@stutiapp.com` forwards to the maker's own inbox. Was: Cloudflare → stutiapp.com → **Email Routing** → forward
       `feedback@stutiapp.com` to your own inbox. It is free, takes a couple of
       minutes, and adds the MX records itself
 - [ ] Sending: Resend → Domains → add `stutiapp.com`, then put its DKIM and SPF
       records in at Cloudflare. A DKIM record is already there, so this may be
       part-done. Until Resend shows the domain green, `STUTI_FEEDBACK_FROM` must
       stay unset, and Resend's test sender delivers only to your own Resend address
-- [ ] `RESEND_API_KEY` (resend.com, free tier)
-- [ ] `STUTI_FEEDBACK_TO` — the support address
-- [ ] `STUTI_FEEDBACK_FROM` — a sender on a domain verified in Resend, or Resend's
+- [x] `RESEND_API_KEY` (resend.com, free tier) — was already set, for the sign-in mail
+- [x] `STUTI_FEEDBACK_TO` — `feedback@stutiapp.com`, set 27 October 2026
+- [x] `STUTI_FEEDBACK_FROM` — `Stuti <noreply@stutiapp.com>`, set 27 October 2026.
+      Resend was already verified on this domain: DKIM at the root and Resend's
+      own MX and SPF on `send.stutiapp.com`, which is why Cloudflare's root MX
+      records do not collide with it. Was: a sender on a domain verified in Resend, or Resend's
       test sender delivers only to your own address
-- [ ] Deploy, then send one real message from the app and confirm it arrives
+- [x] Deployed 27 October 2026, and one real message sent through the live relay.
+      The relay answered `{"mailed":true,"filed":true}` — Resend accepted it and
+      it is filed in the Drive folder. Arrival in the inbox is the maker's to
+      confirm; nothing here can see that
 
 ### A5. Web push — bells that reach a closed browser
 
