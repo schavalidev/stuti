@@ -72,27 +72,38 @@ async function manifest() {
 const sha256 = (b) => createHash("sha256").update(b).digest("hex");
 const hmac = (key, s) => createHmac("sha256", key).update(s).digest();
 
-function sign({ method, key, body, contentType, cacheControl, accountId, bucket, accessKey, secret }) {
+/* RFC 3986, which is what SigV4 canonicalises with. encodeURIComponent leaves
+   !'()* alone and AWS does not, so those five are finished by hand. */
+const rfc3986 = (s) => encodeURIComponent(s).replace(/[!'()*]/g, (c) => "%" + c.charCodeAt(0).toString(16).toUpperCase());
+
+export function sign({ method, key, body, contentType, cacheControl, query, accountId, bucket, accessKey, secret, region = "auto", service = "s3" }) {
   const host = `${accountId}.r2.cloudflarestorage.com`;
   const now = new Date().toISOString().replace(/[:-]|\.\d{3}/g, "");
   const date = now.slice(0, 8);
   const payload = body ? sha256(body) : "UNSIGNED-PAYLOAD";
-  const canonicalUri = `/${bucket}/${key.split("/").map(encodeURIComponent).join("/")}`;
+  /* A bucket-level request (the listing) addresses /<bucket> with no trailing
+     slash. Signing /<bucket>/ instead and sending /<bucket> is a mismatch R2
+     answers with SignatureDoesNotMatch and no hint as to which part was wrong. */
+  const canonicalUri = key ? `/${bucket}/${key.split("/").map(rfc3986).join("/")}` : `/${bucket}`;
+  /* The query string is part of what is signed. Leaving it out of the canonical
+     request worked only as long as nothing carried one — and then the listing did. */
+  const canonicalQuery = Object.keys(query || {}).sort()
+    .map((k) => `${rfc3986(k)}=${rfc3986(query[k])}`).join("&");
   const headers = { host, "x-amz-content-sha256": payload, "x-amz-date": now };
   if (contentType) headers["content-type"] = contentType;
   if (cacheControl) headers["cache-control"] = cacheControl;
   const names = Object.keys(headers).sort();
   const canonicalHeaders = names.map((n) => `${n}:${headers[n]}\n`).join("");
   const signedHeaders = names.join(";");
-  const canonical = [method, canonicalUri, "", canonicalHeaders, signedHeaders, payload].join("\n");
-  const scope = `${date}/auto/s3/aws4_request`;
+  const canonical = [method, canonicalUri, canonicalQuery, canonicalHeaders, signedHeaders, payload].join("\n");
+  const scope = `${date}/${region}/${service}/aws4_request`;
   const toSign = ["AWS4-HMAC-SHA256", now, scope, sha256(Buffer.from(canonical))].join("\n");
   let k = hmac(Buffer.from(`AWS4${secret}`), date);
-  for (const part of ["auto", "s3", "aws4_request"]) k = hmac(k, part);
+  for (const part of [region, service, "aws4_request"]) k = hmac(k, part);
   const signature = createHmac("sha256", k).update(toSign).digest("hex");
   headers.authorization =
     `AWS4-HMAC-SHA256 Credential=${accessKey}/${scope}, SignedHeaders=${signedHeaders}, Signature=${signature}`;
-  return { url: `https://${host}${canonicalUri}`, headers };
+  return { url: `https://${host}${canonicalUri}` + (canonicalQuery ? "?" + canonicalQuery : ""), headers };
 }
 
 function credentials() {
@@ -129,15 +140,15 @@ async function listRemote(creds) {
   const keys = new Set();
   let token = null;
   do {
-    const query = new URLSearchParams({ "list-type": "2", prefix: "t/" });
-    if (token) query.set("continuation-token", token);
-    const host = `${creds.accountId}.r2.cloudflarestorage.com`;
-    const { headers } = sign({ method: "GET", key: "", ...creds });
-    const res = await fetch(`https://${host}/${creds.bucket}?${query}`, { headers });
+    const query = { "list-type": "2", prefix: "t/" };
+    if (token) query["continuation-token"] = token;
+    const { url, headers } = sign({ method: "GET", key: "", query, ...creds });
+    const res = await fetch(url, { headers });
     if (!res.ok) throw new Error(`list → ${res.status} ${await res.text()}`);
     const xml = await res.text();
     for (const m of xml.matchAll(/<Key>([^<]+)<\/Key>/g)) keys.add(m[1]);
-    token = (xml.match(/<NextContinuationToken>([^<]+)</) || [])[1] || null;
+    const more = /<IsTruncated>true<\/IsTruncated>/.test(xml);
+    token = more ? (xml.match(/<NextContinuationToken>([^<]+)</) || [])[1] || null : null;
   } while (token);
   return keys;
 }
@@ -156,6 +167,9 @@ async function copyTo(dir, wanted, indexBytes) {
 
 /* ---------------- main ---------------- */
 
+/* sync-corpus-selftest.mjs imports this module for the signer alone, so the
+   upload runs only when node was asked to run this file. */
+if (process.argv[1] && fileURLToPath(import.meta.url) === process.argv[1]) {
 const { wanted, indexBytes } = await manifest();
 console.log(`index.json names ${wanted.size} texts`);
 
@@ -192,3 +206,4 @@ console.log("index.json written");
 for (const key of toDelete) await remove(key, creds);
 if (toDelete.length) console.log(`removed ${toDelete.length} superseded texts`);
 console.log("done");
+}
