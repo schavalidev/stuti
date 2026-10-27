@@ -303,8 +303,12 @@ Drafted in the app's own voice at `stuti-app/docs/legal/privacy.html` and
       matches A2. §3 stopped asking for a mobile number the app cannot sign
       anyone in with. §11's "Address: feedback@stutiapp.com" — an email on an
       address line — is replaced by a plain sentence that we keep no postal address
-- [ ] `terms.html` `[CITY]` — the courts named for disputes. The last blank in
-      either document, and not one to guess
+- [x] `terms.html` `[CITY]` — **the clause is gone, 27 Oct 2026 (S83).** Naming a
+      city's courts is conventional but optional, and it binds almost nobody here:
+      the same paragraph already concedes that anyone outside India may sue where
+      they live, and Indian consumer law lets a consumer file in their own district
+      whatever the terms say. §10 now says the terms are governed by the laws of
+      India and stops. Neither document has a blank left in it
 - [x] **The published policy had four blanks, not none** (found 27 Oct 2026, S83).
       The 25 Oct tick above was written from the intention, not from the file.
       `class="fill"` spans were live at the public URL: feedback retention, log
