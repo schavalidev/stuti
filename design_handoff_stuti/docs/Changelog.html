@@ -97,10 +97,18 @@ code { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: .
   <div class="rail">
     <div class="ver">0.9.114</div>
     <div class="date">27 October 2026</div>
-    <div class="rail-note">Four things the app said that were not quite true, and two typefaces it had no right to pass on.</div>
+    <div class="rail-note">The two thousand texts the app does not carry are now on a host it can reach — and four things the app said that were not quite true.</div>
   </div>
   <div class="release-body">
     <h2 class="release-title">Reading the small print of our own app</h2>
+    <div class="entry">
+      <div class="entry-head"><span class="tag tag-add">Added</span><h3>The texts the app does not carry</h3></div>
+      <p>An app that fits on a phone cannot hold the whole corpus, so most of it has been built and waiting for somewhere to live. It now lives at <code>corpus.stutiapp.com</code>: 2,015 texts, about a hundred megabytes, each named by the hash of its own contents so it can be kept for a year and never asked for again. The app fetches the index at launch and a text only when it is opened, and keeps what it has read, so a text read once opens again without a network. Search felt the difference first — &ldquo;Bhagavata&rdquo; had found thirty-two stotras and now finds three hundred and sixty-five.</p>
+    </div>
+    <div class="entry">
+      <div class="entry-head"><span class="tag tag-fix">Fixed</span><h3>A retired text with nothing to point the way</h3></div>
+      <p>When a text is retired its id is not simply dropped — a small file records where it went, so a phone still holding the older index is carried to the successor instead of asking for something that is gone. The first upload left that file behind, because the command that sends the corpus had never been told to send it. One text is retired today, an unaccented Ṛgveda 1.1 superseded by the accented reading, and any phone that had it would have been stranded. The command now sends the file before the index that drops the id, and refuses to run at all if the build did not write it.</p>
+    </div>
     <div class="entry">
       <div class="entry-head"><span class="tag tag-fix">Fixed</span><h3>Two typefaces that may not be distributed</h3></div>
       <p>Writing a credits page meant reading every bundled font's own name table rather than trusting its file name, and two of them came back without a licence. KanakaDurga carries a copyright line and nothing else — a reservation of rights, not a grant. SangamSans carries no copyright, no licence, no vendor and no designer: nothing at all. Neither can be credited, so neither can be shipped. KanakaDurga was already named by no token and cost nothing to drop. SangamSans led the Telugu serif face, which now falls to Tiro Telugu — bundled, under the Open Font Licence, and drawn for exactly this. What keeps them out of the build is removing the <code>@font-face</code>, not the token: a font file reaches the bundle because a stylesheet names it. The files stay in the source, so if a licence turns up the step comes out and nothing else does.</p>
