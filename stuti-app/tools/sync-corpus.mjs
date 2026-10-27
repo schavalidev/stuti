@@ -28,6 +28,12 @@
    points at. The other order leaves a window where the app asks for a file
    that is not there yet.
 
+   **redirects.json goes up with the index, and before it.** The build records
+   a retired id and its successor there, and the app fetches it first: a device
+   still holding an older index asks for a text the new index no longer names,
+   and the redirect is the only thing that lands it on the successor rather
+   than on a 404 forever. It changes under its own name, so it is not cached.
+
    **The index is never cached, the texts always are.** A text's name carries
    its content hash, so it can be kept for a year and never revalidated;
    index.json is the one file that changes under its own name.
@@ -64,7 +70,12 @@ async function manifest() {
     if (!existsSync(full)) throw new Error(`index names a file that is not built: ${row.file}`);
     wanted.set(row.file, full);
   }
-  return { wanted, indexPath, indexBytes: Buffer.from(raw) };
+  const redirPath = path.join(CORPUS, "redirects.json");
+  if (!existsSync(redirPath)) {
+    throw new Error("corpus/redirects.json is missing — the build writes it beside the index");
+  }
+  const redirBytes = Buffer.from(await readFile(redirPath, "utf8"));
+  return { wanted, indexPath, indexBytes: Buffer.from(raw), redirBytes };
 }
 
 /* ---------------- signing, so no SDK is needed ---------------- */
@@ -155,13 +166,14 @@ async function listRemote(creds) {
 
 /* ---------------- the local rehearsal ---------------- */
 
-async function copyTo(dir, wanted, indexBytes) {
+async function copyTo(dir, wanted, indexBytes, redirBytes) {
   await mkdir(path.join(dir, "t"), { recursive: true });
   for (const [key, full] of wanted) await copyFile(full, path.join(dir, key));
   const existing = existsSync(path.join(dir, "t")) ? await readdir(path.join(dir, "t")) : [];
   const stale = existing.filter((n) => !wanted.has(`t/${n}`));
+  await writeFile(path.join(dir, "redirects.json"), redirBytes);
   await writeFile(path.join(dir, "index.json"), indexBytes);
-  console.log(`copied ${wanted.size} texts and index.json to ${dir}`);
+  console.log(`copied ${wanted.size} texts, redirects.json and index.json to ${dir}`);
   console.log(stale.length ? `  ${stale.length} stale files would be deleted on a real host` : "  nothing stale");
 }
 
@@ -170,11 +182,11 @@ async function copyTo(dir, wanted, indexBytes) {
 /* sync-corpus-selftest.mjs imports this module for the signer alone, so the
    upload runs only when node was asked to run this file. */
 if (process.argv[1] && fileURLToPath(import.meta.url) === process.argv[1]) {
-const { wanted, indexBytes } = await manifest();
+const { wanted, indexBytes, redirBytes } = await manifest();
 console.log(`index.json names ${wanted.size} texts`);
 
 if (toDir) {
-  await copyTo(path.resolve(toDir), wanted, indexBytes);
+  await copyTo(path.resolve(toDir), wanted, indexBytes, redirBytes);
   process.exit(0);
 }
 
@@ -198,9 +210,12 @@ for (const key of toUpload) {
   if (++done % 100 === 0) console.log(`  ${done}/${toUpload.length}`);
 }
 
+/* Then the redirects, so a retired id resolves before the index that drops it. */
+await put("redirects.json", redirBytes, "application/json", REVALIDATE, creds);
+
 /* Then the index, which is what makes the new texts reachable. */
 await put("index.json", indexBytes, "application/json", REVALIDATE, creds);
-console.log("index.json written");
+console.log("redirects.json and index.json written");
 
 /* Only then the sweep: until the index no longer names them, they are in use. */
 for (const key of toDelete) await remove(key, creds);

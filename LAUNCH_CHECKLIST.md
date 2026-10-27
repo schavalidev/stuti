@@ -95,12 +95,17 @@ open, so that nobody taps it and finds nothing behind it.
 Procedure: `stuti-app/docs/corpus-delivery.md`, "Order of work" step 2 onward.
 Step 1 is done: `stotras/bin/build_corpus.py` exists and runs.
 
-- [ ] Create the R2 bucket (or equivalent static host). Then an R2 API token with
+- [x] Create the R2 bucket (or equivalent static host). Then an R2 API token with
       Object Read & Write, and export `R2_ACCOUNT_ID`, `R2_BUCKET`, `R2_ACCESS_KEY_ID`,
       `R2_SECRET_ACCESS_KEY` — the sync command reads them from the environment and
       nothing is written into the repo
-- [ ] Custom domain on it
-- [ ] CORS so the app's origin may fetch
+- [x] Custom domain on it — `corpus.stutiapp.com`, live 27 October 2026
+- [x] CORS so the app's origin may fetch. The app's web origin is
+      **`stuti-app.netlify.app`**, not `stutiapp.com`; the Android build's is
+      `https://localhost`. All three, with `http://localhost:4173` for the
+      verified bundle, answer with an `Access-Control-Allow-Origin`. The dev
+      server's `http://localhost:5173` does not, so the corpus is invisible
+      there — add it if the dev server is ever used against the live host
 - [x] Sync command — `stuti-app/tools/sync-corpus.mjs`, written 21 October 2026 (S83).
       No dependencies: it signs its own S3 requests, so there is nothing to install. It
       uploads the texts first and `index.json` last, since the index is the only thing that
@@ -111,8 +116,22 @@ Step 1 is done: `stotras/bin/build_corpus.py` exists and runs.
       the whole selection without an account, and `--dry-run` says what it would send.
       Proved locally: the built app fetched the index over CORS, cached all 2,016 rows, and
       opened Bhāgavata 11.24 with its thirty verses from a text file
-- [ ] Set `STUTI_CORPUS_URL`
-- [ ] Verify in the built bundle, on the phone, and offline after one read
+- [x] Set `STUTI_CORPUS_URL` — `https://corpus.stutiapp.com`, 27 October 2026
+- [x] Uploaded: 2,015 texts and `index.json`, about 102 MB
+- [x] Verified in the built bundle, 27 October 2026. The app fetched the index
+      cross-origin, placed all 2,015 rows (search went from 32 results for
+      "Bhagavata" to 365), opened Araṇyakāṇḍa sarga 1 and Bhāgavata 1.1 and 9.6
+      from their text files, and kept each one in IndexedDB after the read. This
+      was also the first sight of the meaning-gap notice in its own case, on
+      Bhāgavata 9.6 — 153 of the 2,015 live rows carry no gloss yet
+- [ ] Verify on the phone, and offline after one read
+- [ ] Re-run `node tools/sync-corpus.mjs` to send `redirects.json`. The first
+      upload left it behind — the sync had never uploaded it — so the app asks
+      for it and gets a 404 on every launch. It is not empty: it carries the
+      retirement of `misc_vedic/01`, and without it a device holding an older
+      index asks for a text the new index no longer names and never lands on its
+      successor. Mended in the sync 27 October 2026, with a check that fails the
+      run if the file is missing from the build
 - [ ] Later, not for launch: seed in `public/corpus/`, drop the bundled text modules, per-deity keep
 
 ### A4. Feedback mail — three Netlify environment variables

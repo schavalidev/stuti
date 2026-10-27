@@ -33,4 +33,4 @@ export const STUTI_RAZORPAY_IDS = { day: "", month: "", year: "", patron: "" };
    static host with index.json and t/<id>.<hash>.json. Blank keeps the app
    on its bundled texts alone. For a test, the localStorage key
    "stuti-corpus-url" overrides this on one device. */
-export const STUTI_CORPUS_URL = "";
+export const STUTI_CORPUS_URL = "https://corpus.stutiapp.com";
