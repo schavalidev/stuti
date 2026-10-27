@@ -217,8 +217,10 @@ and backticked mantras, 672 lines in 215 files — are gone too.
       scroller by `tools/codemod/fix-meaning-gap-seam.mjs`, so it covers the verse
       view and the flow view alike. A namāvalī is left alone: its meaning is the
       glossary and the reader already says so. Verified in the built bundle that a
-      text **with** meanings shows them and no notice; the notice's own case can
-      only be seen once the corpus is hosted, since every bundled text is glossed
+      text **with** meanings shows them and no notice. The notice's own case was
+      seen on 27 October, once the corpus was hosted, on Bhāgavata 9.6 — 153 of
+      the 2,015 live rows carry no gloss yet, rather than the 332 recorded above:
+      the meanings pass has moved since
 
 **Settled, so not a box.** `build_corpus.py` reports two files with no units.
 Neither is a fault. One is a reservation stub whose transcription is still in
