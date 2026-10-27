@@ -125,7 +125,8 @@ Step 1 is done: `stotras/bin/build_corpus.py` exists and runs.
       was also the first sight of the meaning-gap notice in its own case, on
       Bhāgavata 9.6 — 153 of the 2,015 live rows carry no gloss yet
 - [ ] Verify on the phone, and offline after one read
-- [ ] Re-run `node tools/sync-corpus.mjs` to send `redirects.json`. The first
+- [x] Re-run `node tools/sync-corpus.mjs` to send `redirects.json` — done
+      27 October 2026; it is on the host and the app's launch is clean. The first
       upload left it behind — the sync had never uploaded it — so the app asks
       for it and gets a 404 on every launch. It is not empty: it carries the
       retirement of `misc_vedic/01`, and without it a device holding an older
