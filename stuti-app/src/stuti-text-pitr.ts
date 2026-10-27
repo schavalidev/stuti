@@ -531,7 +531,7 @@ export const extra = [{
       tel: "దుర్లభమైన, ధర్మాచరణకు యోగ్యమైన ఈ మానవ శరీరాన్ని ఎవరి వలన నేను పొందానో ఆ తండ్రికి మళ్ళీ మళ్ళీ నమస్కారం.",
       hi: "जिनके कारण मैंने धर्म के लिए उपयोगी यह दुर्लभ मनुष्य-शरीर प्राप्त किया, उन पिता को बारम्बार नमस्कार है।" },
     { s: 0, n: "5",
-      deva: "तीर्थस्नान-तपोहोम-जपादि यस्य दर्शनम् ।\nमहागुरोश्च गुरवे तस्मै पित्रे नमोनमः ॥",
+      deva: "तीर्थस्नान--तपोहोम--जपादि यस्य दर्शनम् ।\nमहागुरोश्च गुरवे तस्मै पित्रे नमोनमः ॥",
       iast: "tīrthasnāna-tapohoma-japādi yasya darśanam |\nmahāgurośca gurave tasmai pitre namonamaḥ ||",
       en: "To the father the mere sight of whom is bathing at a tīrtha, austerity, homa and japa; to the guru even of the great guru — salutation, salutation.",
       tel: "ఎవరి దర్శనమే తీర్థస్నానం, తపస్సు, హోమం, జపం మొదలైనవో, మహాగురువుకు కూడా గురువైన ఆ తండ్రికి మళ్ళీ మళ్ళీ నమస్కారం.",

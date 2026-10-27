@@ -63,7 +63,7 @@ export const extra = [{
       en: "This is the frame of every saṅkalpa. It states the place and the hour, then your own gotra and name. Then add the one that the day calls for, from the six below.",
       tel: "ఇది ప్రతి సంకల్పపు చట్రం. దేశకాలాలను, తరువాత మీ గోత్రనామాలను చెప్పాలి. తరువాత ఆ రోజుకి తగినదానిని కింది ఆరింటి నుండి చేర్చాలి." },
     { s: 1, n: "8",
-      deva: "अस्मत् पितॄणां अक्षय पुण्यलोकावाप्त्यर्थं नित्यश्राद्ध प्रतिनिधि सद्यः\nनित्य पितृ तर्पणं करिष्ये ॥",
+      deva: "अस्मत् पितॄणां अक्षय पुण्यलोकावाप्त्यर्थं नित्य-श्राद्ध प्रतिनिधि सद्यः\nनित्य पितृ तर्पणं करिष्ये ॥",
       iast: "asmat pitṝṇāṁ akṣaya puṇyalokāvāptyarthaṁ nitya-śrāddha pratinidhi sadyaḥ\nnitya pitṛ tarpaṇaṁ kariṣye ||",
       en: "For the daily tarpaṇam.",
       tel: "నిత్య తర్పణానికి." },
