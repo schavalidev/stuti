@@ -391,19 +391,41 @@ plan edit the sign-in email until a mail sender of our own is connected, and
 Resend will not send from a domain nobody owns. So no one can sign in until it
 is bought.
 
-- [ ] Buy `stutiapp.com` — blocks the sign-in email, and so blocks A1
+- [x] Buy `stutiapp.com` — done; it is on your Cloudflare account, its DNS is
+      yours to edit, and as of 27 October 2026 it carries Cloudflare's MX records,
+      Resend's DKIM and SPF, and the `corpus.stutiapp.com` host
 - [x] **Ruled 21 October 2026 (S83): the app keeps the name Stuti, for now.** Taken with
       the competing product known and described above. "For now" is the user's own
       wording, so the question is not closed — it is parked, and the trademark search
       below is what would reopen it
-- [ ] Search the trademark register for "Stuti" in the relevant classes — and search
-      for Sadhaka's own filings while there
+- [x] **United States: clear.** Searched 27 October 2026 on
+      `tmsearch.uspto.gov`. **No record whatever contains "stuti"**, and none
+      contains "sadhaka". The search was proved before it was trusted: the same
+      box, the same way, returns 297 records for "namaste", and a first attempt
+      driven by a URL returned "no results" for *everything*, including the
+      control — so a bare zero from that page means nothing until the control is run
+- [ ] **India: not searched, and it is the one that matters**, since both products
+      are Indian. `tmrsearch.ipindia.gov.in` could not be reached from here, and
+      its public search is behind a captcha that is not mine to complete. It is
+      free and takes a few minutes: search "Stuti" as a wordmark in classes 9
+      (downloadable software), 41 (education and training) and 42 (software as a
+      service), and search the applicant name "Sadhaka" and "Open Sadhaka" while
+      there. Worth a trademark attorney's hour before launch rather than ours
+- [x] **Who is behind `stuti.app`, as far as the public record goes** (27 Oct 2026).
+      The site names no legal entity anywhere — not in its terms, its refund page
+      or its footer — which is itself notable for a site taking money through
+      Razorpay, since Indian law requires a seller to disclose one. The footer
+      reads "© 2026 Stuti, a Sadhaka product", the terms are dated 3 August 2026,
+      and the only contact given is `editorial@opensadhaka.com`. So: a product of
+      something calling itself Sadhaka / Open Sadhaka, with no company named, no
+      US trademark, and an Indian filing we have not been able to check
 - [ ] Reserve the app name in App Store Connect when the first build is submitted;
       Apple holds names first-come from submission, not before
 - [ ] Register the obvious variants
 - [ ] Take the handle on every platform you might use
-- [ ] Verify `stutiapp.com` is yours — `SUPPORT` in `stuti-app/src/stuti-build.ts` already
-      promises `feedback@stutiapp.com` and a three-day reply
+- [x] Verify `stutiapp.com` is yours — proved 27 October 2026 by using it: mail
+      sent to `feedback@stutiapp.com` arrived in the maker's inbox, which is the
+      promise `SUPPORT` in `stuti-app/src/stuti-build.ts` makes
 - [x] Check each bundled typeface for web-embedding rights, and each library's
       licence — done 27 Oct 2026 (S83), by reading each font's own name table
       rather than trusting the file names. **Two fonts carry no licence and have
