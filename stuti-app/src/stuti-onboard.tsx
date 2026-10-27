@@ -1,6 +1,7 @@
 import { Flame, Icon, Seal, deityStyle } from "./stuti-icons";
 import React from "react";
 import { STUTI_COUNT } from "./stuti-count";
+import { LegalNote } from "./stuti-legal-ui";
 import { STUTI } from "./stuti-data";
 import { FlyleafForm, KnownClauses, useFlyleaf } from "./stuti-flyleaf";
 import { STUTI_L } from "./stuti-i18n";
@@ -181,6 +182,7 @@ function Onboarding({ lang, setLang, onDone }) {
           )}
         </div>
 
+        {i === 0 && <LegalNote lang={lang} />}
         <div className="ob-foot">
           <div className="ob-dots">
             {[0, 1, 2, 3, 4].map((n) => <span key={n} className={"ob-dot" + (n === i ? " on" : "")} />)}

@@ -358,9 +358,32 @@ Drafted in the app's own voice at `stuti-app/docs/legal/privacy.html` and
       navigation fallback already skips `/legal/`. Verified in the built bundle
 - [ ] **GDPR Article 27** — decide whether a representative in the EU and in the UK
       is required, now that the policy no longer carries the question as text
-- [ ] Check both against the DPDP Act duties: stated purpose, consent, deletion on
-      request, breach notification. The counting stance — count actions, never
-      people — is already right; put it in writing
+- [x] Checked against the DPDP Act duties, 27 October 2026. Stated purpose,
+      the manner of exercising rights, deletion on request and the route to the
+      Board were all already there. Four things were not, and are now:
+      the counting stance is **written as a promise** rather than merely
+      described ("we count actions, never people" — no profile, and no attempt
+      to count people); the breach paragraph **names the Data Protection Board
+      of India and the seventy-two hours** instead of saying "as the law
+      requires"; the children's paragraph gives **the Indian age of eighteen**
+      and says the guardian's consent must be **verifiable**; and the policy now
+      **offers itself in Hindi or Telugu on request**, which §5(3) entitles a
+      reader to ask for and the policy had never mentioned. Effective date moved
+      to 27 October
+- [x] **The notice now comes before the consent, not after it.** The one real
+      finding of that check was not in the document but in the app: §5 of the
+      DPDP Act wants the notice given before or at the time consent is sought,
+      and the GDPR at collection — and Stuti counts screen opens from first run,
+      with diagnostics already on in a test build, while the only way to the
+      policy was a row in Settings. The first onboarding screen now names the
+      privacy policy and the terms in one quiet line, in all three languages.
+      `LegalNote` in `src/stuti-legal-ui.tsx`, placed by the legal seam; verified
+      in the built bundle on a cleared device, in English and Telugu, and it
+      does not follow the reciter to the later steps
+- [ ] **Still open, and it is the user's to decide: is a Hindi and Telugu
+      translation of the policy wanted up front?** The line above promises it on
+      request, which is the duty; translating both pages ahead of the asking is
+      a larger piece of work and nobody has asked yet
 
 ### D3. Name, domain, licences
 

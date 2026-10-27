@@ -216,3 +216,33 @@
   color: var(--ink-faint);
 }
 /* @design:end */
+
+/* @design:begin — from here to the matching end is also carried by the design prototype (tools/mirror-to-design.mjs) */
+/* 4. The two legal pages, named on the first onboarding screen. The law wants
+   the notice before the consent, not after it in Settings; the screen wants it
+   quiet, because it is not what the reciter came for. */
+.ob-legal {
+  padding: 0 20px 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.ob-legal-line {
+  margin: 0;
+  font-size: 12.5px;
+  line-height: 1.55;
+  color: var(--ink-faint);
+}
+.ob-legal-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+.ob-legal-links button {
+  font-size: 12.5px;
+  line-height: 1.55;
+  color: var(--accent-ink);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+/* @design:end */
