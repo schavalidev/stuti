@@ -466,48 +466,48 @@ is offered with respect to the gods, to the sages and to the forefathers."*
 This governs new files, and prose you correct in a file that is **yours**. It does not license
 rewriting another session's file — see the standing rule above; report those instead.
 
-### Telugu — anusvāra first, conjunct in brackets — added 2026-09-13
+### Telugu — anusvāra, no brackets — added 2026-09-13, changed 2026-10-27
 
-**Standing rule (user, 2026-09-13): in the Telugu field, a homorganic nasal conjunct is written
-with anusvāra, and the conjunct form follows it in round brackets.** `అఙ్గైశ్చ` and `సఙ్గ్రామే`
-are correct but many readers cannot read them at a glance. `అంగైశ్చ` and `సంగ్రామే` are what a
-Telugu reader expects, so that form leads.
-
-The base reading is the anusvāra form. The conjunct follows immediately, no space before the
-bracket, the same way a variant reading is written:
+**Standing rule (user, 2026-10-27): in the Telugu field a homorganic nasal conjunct is written
+with anusvāra, and the conjunct is not printed.** `అఙ్గైశ్చ` and `సఙ్గ్రామే` are correct but many
+readers cannot read them at a glance. `అంగైశ్చ` and `సంగ్రామే` are what a Telugu reader expects,
+so that is what the corpus prints:
 
     tel:
-    ద్వాత్రింశద్వర్ణమంత్రో(మన్త్రో)ఽయం శంక(శఙ్క)రప్రతిభాషితః ।
+    ద్వాత్రింశద్వర్ణమంత్రోఽయం శంకరప్రతిభాషితః ।
+
+The rule of 2026-09-13 printed the conjunct after it in round brackets —
+`శంక(శఙ్క)ర` — so that a reader who knew the conjunct still found it. In practice the brackets
+crowded the line, and on a verse that also carries compound hyphens two kinds of editorial mark
+landed on the same word. **Nothing is lost by dropping them**, because the conjunct is fixed by
+the consonant that follows the anusvāra: `ం` before `క` can only be `ఙ్`. The bracketed form is
+still derivable, by `anusvara_first` in `bin/telugu_anusvara.py`.
 
 1. **This applies only to a nasal that is homorganic with the consonant after it** — `ఙ` before
    `క ఖ గ ఘ`, `ఞ` before `చ ఛ జ ఝ`, `ణ` before `ట ఠ డ ఢ`, `న` before `త థ ద ధ`, `మ` before
    `ప ఫ బ భ`. Only these have an anusvāra spelling.
 2. **Do not convert anything else.** A geminate (`అన్న`, `సమ్మ`) has no anusvāra form. A
    non-homorganic cluster has none either — `పాన్పు` and `హనుమాన్జీ` are dental `న` before a
-   labial, and they stay as they are.
-3. **A nasal inside a larger cluster stays a conjunct, with no bracket.** In `శార్ఙ్గపాణి` the
-   `ఙ` follows `ర్`, and anusvāra cannot follow a virāma. 37 places in the corpus are of this
-   kind and are correct as printed.
-4. **A short word — four akṣaras or fewer — is bracketed whole** (user, 2026-09-13), because
-   that is how the reader meets it: `శంకర(శఙ్కర)`, `మహేంద్ర(మహేన్ద్ర)`, `సుగంధ(సుగన్ధ)`,
-   `చంద్రబలం(చన్ద్రబలం)`. **Inside a longer compound the bracket covers only the akṣara before
-   the nasal through the akṣara carrying the conjunct** — `ద్వాత్రింశద్వర్ణమంత్రో(మన్త్రో)ఽయం`.
-   A long compound is never printed twice.
-5. **Where two such conjuncts sit next to each other, bracket the run once** rather than
-   producing overlapping or nested brackets. See `ఠంఠంఠం(ఠణ్ఠణ్ఠం)` in
-   `hanuman/08_ekamukha_hanumat_kavacham.txt`.
-6. **This is an orthographic convention, not a variant reading.** It needs no witness and no
+   labial, and `నృసిమ్హ` is labial `మ` before `హ`, which is not a stop. They stay as they are.
+3. **A nasal inside a larger cluster stays a conjunct.** In `శార్ఙ్గపాణి` the `ఙ` follows `ర్`,
+   and anusvāra cannot follow a virāma. 37 places in the corpus are of this kind and are correct
+   as printed.
+4. **This is an orthographic convention, not a variant reading.** It needs no witness and no
    line in the `Recension note`. It is not a recension difference, and the rule about not
    rewriting another session's file does not apply to it — the whole corpus was converted on
-   2026-09-13.
+   2026-09-13 and the brackets removed from it on 2026-10-27.
+5. **A round bracket in a Telugu field may still hold a real variant reading**, and those stay.
+   `bin/strip_anusvara_brackets.py` removed 3,020 convention brackets and left 29 files whose
+   brackets it could not prove were the convention — genuine variants like `ఇద్దరు(ఇద్దఱు)` and
+   `అండజుని(బ్రహ్మను)`, and a few mistaken conversions like `నృసింహ(నృసిమ్హ)` and `అహం(అహఙ్)`,
+   which are errors in the Telugu and want a reading, not a sweep.
+6. **Telugu generated from the Devanāgarī comes out in this form already.**
+   `bin/dev2tel.py` applies the rule by default, so `चन्द्रबलं` renders as `చంద్రబలం`. The rule
+   itself lives in `bin/telugu_anusvara.py`; pass `--conjuncts` (or `anusvara=False`) for the
+   plain letter-for-letter mapping, which is what the `tel2dev.py` round-trip test uses, because
+   the spelling is a reader convention and not part of the script mapping.
 7. The Devanāgarī and IAST fields are **not** touched. They keep the conjunct: `शङ्कर`,
    `śaṅkara`.
-8. **Telugu generated from the Devanāgarī comes out in this form already.**
-   `bin/dev2tel.py` applies the rule by default, so `चन्द्रबलं` renders as
-   `చంద్ర(చన్ద్ర)బలం`. The rule itself lives in `bin/telugu_anusvara.py` and can be run on its
-   own. Pass `--conjuncts` (or `anusvara=False`) for the plain letter-for-letter mapping; that
-   is what the `tel2dev.py` round-trip test uses, because the spelling is a reader convention
-   and not part of the script mapping.
 
 IAST is generated mechanically from the Devanāgarī to corpus convention (anusvāra `ṁ`, avagraha
 `'`, daṇḍa `|` and `||`). Do not copy stotranidhi's IAST: it marks South Indian long `ē`/`ō`

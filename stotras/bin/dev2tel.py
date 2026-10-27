@@ -31,7 +31,8 @@ few, and each is recorded here rather than left for a reader to guess.
                  conjunct follows in brackets — चन्द्र becomes చంద్ర(చన్ద్ర).
                  Many Telugu readers cannot read the conjunct at a glance. Pass
                  anusvara=False (--conjuncts on the command line) for the plain
-                 letter-for-letter form. See telugu_anusvara.py.
+                 letter-for-letter form. No bracketed conjunct is added: the
+                 corpus dropped that on 2026-10-27. See telugu_anusvara.py.
 
 Usage:
     python3 dev2tel.py                  # stdin → stdout
@@ -43,7 +44,7 @@ Usage:
 import re
 import sys
 
-from telugu_anusvara import anusvara_first
+from telugu_anusvara import anusvara_only
 
 CONS = {
     'क': 'క',  'ख': 'ఖ', 'ग': 'గ',  'घ': 'ఘ', 'ङ': 'ఙ',
@@ -144,7 +145,7 @@ def dev2tel(text: str, accents: bool = False, anusvara: bool = True) -> str:
         i += 1
 
     result = ''.join(out)
-    return anusvara_first(result) if anusvara else result
+    return anusvara_only(result) if anusvara else result
 
 
 def main() -> None:

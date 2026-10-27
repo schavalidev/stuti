@@ -1,10 +1,12 @@
 #!/usr/bin/env python3
-"""Telugu homorganic nasal conjuncts → anusvāra, with the conjunct in brackets.
+"""Telugu homorganic nasal conjuncts → anusvāra.
 
-`శఙ్కర` is correct and many readers cannot read it at a glance. This writes
-`శంక(శఙ్క)ర`: the anusvāra spelling leads, the printed conjunct follows in
-round brackets so nothing is lost. The rule is in CLAUDE.md under
-"Telugu — anusvāra first, conjunct in brackets".
+`శఙ్కర` is correct and many readers cannot read it at a glance, so the corpus
+prints `శంకర`. `anusvara_only` is the default and does that. `anusvara_first`
+is the older form, which also printed the conjunct in brackets —
+`శంక(శఙ్క)ర` — and is kept because it is how the bracketed spelling is
+derived when one is wanted. The user dropped the brackets from the corpus on
+2026-10-27; see CLAUDE.md under "Telugu — anusvāra, no brackets".
 
 Only a nasal homorganic with the consonant after it has an anusvāra spelling,
 so only those are touched. Left alone:
@@ -102,6 +104,17 @@ def _convert_run(run):
     return ''.join(out)
 
 
+def anusvara_only(text: str) -> str:
+    """Rewrite homorganic nasal conjuncts as anusvāra, with no bracket.
+
+    This is what the corpus prints since 2026-10-27 (user): `శంకర`, not
+    `శంకర(శఙ్కర)`. Nothing is lost, because the conjunct is fixed by the
+    consonant that follows the anusvāra — `ం` before `క` can only be `ఙ్` —
+    so `anusvara_first` below still derives the bracketed form on demand.
+    """
+    return TELUGU_RUN.sub(lambda m: MATCH.sub(ANUSVARA, m.group(0)), text)
+
+
 def anusvara_first(text: str) -> str:
     """Rewrite homorganic nasal conjuncts as anusvāra, conjunct in brackets."""
     return TELUGU_RUN.sub(lambda m: _convert_run(m.group(0)), text)
@@ -109,5 +122,7 @@ def anusvara_first(text: str) -> str:
 
 if __name__ == '__main__':
     import sys
-    src = ' '.join(sys.argv[1:]) or sys.stdin.read()
-    sys.stdout.write(anusvara_first(src))
+    argv = sys.argv[1:]
+    brackets = '--brackets' in argv
+    src = ' '.join(a for a in argv if a != '--brackets') or sys.stdin.read()
+    sys.stdout.write(anusvara_first(src) if brackets else anusvara_only(src))
