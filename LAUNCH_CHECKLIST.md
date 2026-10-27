@@ -135,15 +135,15 @@ Step 1 is done: `stotras/bin/build_corpus.py` exists and runs.
       run if the file is missing from the build
 - [ ] Later, not for launch: seed in `public/corpus/`, drop the bundled text modules, per-deity keep
 
-### A4. Feedback mail — three Netlify environment variables
+### A4. Feedback mail — DONE 27 October 2026
 
-The relay already files feedback into Drive; only the mail leg is unset.
-
-**Mail on the domain comes first (found 25 Oct 2026, S61).** `stutiapp.com` is
-yours and sits on Cloudflare, but it has **no MX records**, so nothing can receive
-mail there yet. That is the address the app shows every tester, promises a
-reply from within three days, and which the privacy policy names as the grievance
-contact. It has to receive mail before anyone is invited to write to it.
+A reciter can write to the app and it reaches the inbox. The whole chain was
+proved with one real message on 27 October: the app posts to the relay, the
+relay hands it to Resend and files a copy in Drive, Resend delivers to
+`feedback@stutiapp.com`, and Cloudflare forwards it on. That is the address the
+app shows every tester, the one it promises a reply from within three days, and
+the grievance contact the privacy policy names — and until that day the domain
+had no MX records at all, so nothing could receive there.
 
 - [x] The domain is **stutiapp.com**, not `stuti.app` — Cloudflare nameservers, and
       it already carries a Resend DKIM record. `stuti.app` belongs to a stranger,
@@ -167,8 +167,9 @@ contact. It has to receive mail before anyone is invited to write to it.
       test sender delivers only to your own address
 - [x] Deployed 27 October 2026, and one real message sent through the live relay.
       The relay answered `{"mailed":true,"filed":true}` — Resend accepted it and
-      it is filed in the Drive folder. Arrival in the inbox is the maker's to
-      confirm; nothing here can see that
+      it is filed in the Drive folder. It arrived in the inbox, confirmed the
+      same day, so the whole chain is proved: app → relay → Resend →
+      feedback@stutiapp.com → Cloudflare → inbox. **A4 is finished**
 
 ### A5. Web push — bells that reach a closed browser
 
