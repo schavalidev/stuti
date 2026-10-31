@@ -84,6 +84,18 @@ def main():
             w, h = l.split('\t')
             old[w] = h
     old.update(decided)
+    # the judges' corrections override the deciders, word for word
+    corr = HERE / 'corrections.tsv'
+    if corr.exists():
+        n = 0
+        for l in corr.read_text(encoding='utf-8').splitlines()[1:]:
+            w, _, adopted = l.split('\t')
+            if adopted == '=':
+                old.pop(w, None)
+            else:
+                old[w] = adopted
+            n += 1
+        print(f'  {n} corrections from the judges applied over the deciders')
     record.write_text('word\thyphenated\n' + ''.join(f'{w}\t{h}\n' for w, h in sorted(old.items())),
                       encoding='utf-8')
 
