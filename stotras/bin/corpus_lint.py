@@ -219,6 +219,10 @@ def strip_for_compare(s):
     s = unicodedata.normalize("NFC", s)
     s = s.lower()
     s = re.sub(r"\([^()]*\)", "", s)          # bracketed variants: compare the base reading
+    # A compound hyphen carries no letter. It must go before the nasal rule
+    # below, or `param-padam` keeps its m (the m is followed by a hyphen, not
+    # the p) while `parampadam` turns it to ṁ, and the two stop comparing equal.
+    s = s.replace("-", "")
     s = s.replace("ṃ", "ṁ").replace("ē", "e").replace("ō", "o").replace("r̥", "ṛ")
     s = s.replace("m̐", "ṁ")                  # candrabindu → anusvāra, either convention
     s = s.replace("ĩ", "iṁ").replace("ũ", "uṁ").replace("ã", "aṁ")  # nasalised vowels
