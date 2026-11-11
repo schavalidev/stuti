@@ -6,6 +6,7 @@ import { STUTI_LEDGER } from "./stuti-ledger-core";
 import { STUTI_LIB } from "./stuti-library-data";
 import { pick3 } from "./stuti-library";
 import { OverlayPortal } from "./stuti-picker";
+import { STUTI_BACKSTOP } from "./stuti-backstop";
 import { STUTI_JAPA, STUTI_THREAD } from "./stuti-sadhana";
 
 /* ============================================================
@@ -355,6 +356,8 @@ function MONTHS_DP(locale) { return [0,1,2,3,4,5,6,7,8,9,10,11].map((m) => new D
 function YEARS_DP(maxD) { const last = (maxD ? maxD.getFullYear() : new Date().getFullYear() + 5); const out = []; for (let y = last; y >= last - 130; y--) out.push(y); return out; }
 function DayPick({ value, max, lang, onChange, label, bad, place }) {
   const [open, setOpen] = useStateJ(false);
+  /* Back shuts the calendar before the sheet under it (seam) */
+  useEffectJ(() => (open && STUTI_BACKSTOP ? STUTI_BACKSTOP.push(() => setOpen(false)) : undefined), [open]);
   const parse = (k) => { const p = (k || max || new Date().toISOString().slice(0, 10)).split("-").map(Number); return new Date(p[0], p[1] - 1, p[2]); };
   const key = (d) => d.getFullYear() + "-" + String(d.getMonth() + 1).padStart(2, "0") + "-" + String(d.getDate()).padStart(2, "0");
   const sel = parse(value);

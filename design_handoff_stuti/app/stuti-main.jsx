@@ -552,6 +552,11 @@ function App() {
      one hard-coded screen — search always to the library, a practice always
      to Nitya — so opening either from the home lost your place. `from` is
      carried on the navigation itself and never inherited. */
+  /* the screen we are on, kept fresh for the Back handler — a sheet that eats
+     a Back press re-pushes this so the screen does not move under it */
+  const snapRef = useRefM(null);
+  snapRef.current = { route, libLens, libSub, libRet };
+
   const go = (view, payload = {}) => {
     const order = { home: 0, daily: 1, browse: 2, calendar: 2, settings: 2, plans: 2, practices: 3, practice: 3, japa: 3, plan: 3, deity: 3, search: 3, sandhyaNote: 3, pitruRegister: 4, reader: 4 };
     setDir(order[view] >= order[route.view] ? "fwd" : "back");
@@ -560,18 +565,78 @@ function App() {
        RETURNING to the library must not, or it lands the reciter one level
        above where they were. Both arrive as `go("browse")`, so intent has
        to be stated rather than guessed from the destination. */
-    if (payload.reset) { setLibSub(null); setLibLens(LENS_FROM_LABEL[t.defaultLens] || "deity"); setLibRet(null); }
-    if (payload.libSub) setLibSub(payload.libSub);
-    if (payload.libLens) setLibLens(payload.libLens);
-    if (payload.libRet) setLibRet(payload.libRet);
-    setRoute(r => ({ view, from: payload.from, ret: payload.ret, q: payload.q, deity: payload.deity ?? r.deity, hymn: payload.hymn ?? r.hymn, practice: payload.practice ?? r.practice, plan: payload.plan ?? r.plan, lens: payload.lens, lensAt: payload.lensAt, weekday: payload.weekday, voice: payload.voice }));
+    let nLens = libLens, nSub = libSub, nRet = libRet;
+    if (payload.reset) { nSub = null; nLens = LENS_FROM_LABEL[t.defaultLens] || "deity"; nRet = null; }
+    if (payload.libSub) nSub = payload.libSub;
+    if (payload.libLens) nLens = payload.libLens;
+    if (payload.libRet) nRet = payload.libRet;
+    setLibSub(nSub); setLibLens(nLens); setLibRet(nRet);
+    const next = { view, from: payload.from, ret: payload.ret, q: payload.q, deity: payload.deity ?? route.deity, hymn: payload.hymn ?? route.hymn, practice: payload.practice ?? route.practice, plan: payload.plan ?? route.plan, lens: payload.lens, lensAt: payload.lensAt, weekday: payload.weekday, voice: payload.voice };
+    setRoute(next);
+    /* mirror the move into browser history, so the phone's own Back steps back
+       through screens (see the seed + popstate handler below). An in-app back
+       arrow is itself a forward entry here, as a back link is on the website. */
+    try { window.history.pushState({ __stuti: { route: next, libLens: nLens, libSub: nSub, libRet: nRet } }, ""); } catch (e) {}
   };
 
   const openToday = () => {
     const { deity, hymn } = window.todayInfo();
-    setDir("fwd");
-    setRoute({ view: "reader", deity: deity.id, hymn: hymn.id, from: "home" });
+    go("reader", { deity: deity.id, hymn: hymn.id, from: "home" });
   };
+
+  /* ---- the device Back button ----
+     The app navigates in React state; on its own the phone's Back (and the
+     browser's) would leave the app on the first press. Every `go` above pushes
+     a history entry; a Back press pops it, and the handler here restores the
+     screen that entry held. The base entry is always Home, so Back unwinds the
+     app screen by screen and only leaves it once Home is reached. */
+  const applySnap = (snap) => {
+    setDir("back");
+    setPanelOpen(false);              // a Back press never strands an open tools panel
+    setRoute((snap && snap.route) || { view: "home" });
+    setLibLens((snap && snap.libLens) || "deity");
+    setLibSub((snap && snap.libSub) || null);
+    setLibRet((snap && snap.libRet) || null);
+  };
+  const histReady = useRefM(false);
+  useEffectM(() => {
+    if (!histReady.current) {
+      histReady.current = true;
+      try {
+        const here = { route, libLens, libSub, libRet };
+        if (route.view !== "home") {
+          window.history.replaceState({ __stuti: { route: { view: "home" }, libLens: "deity", libSub: null, libRet: null } }, "");
+          window.history.pushState({ __stuti: here }, "");
+        } else {
+          window.history.replaceState({ __stuti: here }, "");
+        }
+      } catch (e) {}
+    }
+    const onPop = (e) => {
+      /* a sheet or tools panel open over the screen takes the Back press first:
+         it closes, and the entry the press popped is pushed straight back so
+         the screen beneath does not move. */
+      if (window.STUTI_BACKSTOP && window.STUTI_BACKSTOP.pop()) {
+        try { window.history.pushState({ __stuti: snapRef.current }, ""); } catch (err) {}
+        return;
+      }
+      applySnap(e.state && e.state.__stuti);
+    };
+    window.addEventListener("popstate", onPop);
+    return () => window.removeEventListener("popstate", onPop);
+  }, []);
+
+  /* the two screen-level overlays that carry no history entry of their own —
+     the dropped tools panel and the reminders sheet — register their closer so
+     Back shuts them instead of leaving the screen */
+  useEffectM(() => {
+    if (!panelOpen || panelPin || !window.STUTI_BACKSTOP) return;
+    return window.STUTI_BACKSTOP.push(() => setPanelOpen(false));
+  }, [panelOpen, panelPin]);
+  useEffectM(() => {
+    if (!remindOpen || !window.STUTI_BACKSTOP) return;
+    return window.STUTI_BACKSTOP.push(() => setRemindOpen(false));
+  }, [remindOpen]);
 
   /* A screen can be linked to. The website's masthead points at Nitya, the
      library and the calendar, and a shared link should open the screen it

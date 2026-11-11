@@ -866,6 +866,35 @@ function ReaderView({ hymn: rawHymn, deity, go, theme, toggleTheme, lang, setLan
   );
   const pickOcc = (id) => { setOccId(id); window.toTarpanaWrite(id); setOccAsk(false); };
 
+  /* ---- the device Back button, over a reader sheet ----
+     The reader stacks many sheets over the text; a Back press should shut the
+     open one, not leave the reader. One guard stands for them all: while any
+     sheet is open it registers a closer, and the closer shuts whichever is
+     open, innermost first. The screen stays put — the app's popstate handler
+     cancels the move whenever this guard takes the press. */
+  const anySheet = !!(pada || occAsk || limAsk || fbOpen || shareOpen || storyOpen || namaluOpen || namesOpen || regOpen !== null || speedOpen || findOpen || (panelOpen && !panelPin));
+  const closeTopSheet = () => {
+    if (pada) return setPada(null);
+    if (occAsk) return setOccAsk(false);
+    if (limAsk) return setLimAsk(false);
+    if (fbOpen) return setFbOpen(false);
+    if (shareOpen) return setShareOpen(false);
+    if (storyOpen) return setStoryOpen(false);
+    if (namaluOpen) return setNamaluOpen(false);
+    if (namesOpen) return setNamesOpen(false);
+    if (regOpen !== null) return setRegOpen(null);
+    if (speedOpen) return setSpeedOpen(false);
+    if (findOpen) return setFindOpen(false);
+    if (panelOpen && !panelPin) return setPanelOpen(false);
+  };
+  /* re-register whenever the open set changes, so the closer always holds the
+     latest state and a sheet stacked over another is still closed innermost-first */
+  const sheetKey = [pada ? 1 : 0, occAsk, limAsk, fbOpen, shareOpen, storyOpen, namaluOpen, namesOpen, regOpen !== null, speedOpen, findOpen, panelOpen && !panelPin].join(",");
+  useEffect(() => {
+    if (!anySheet || !window.STUTI_BACKSTOP) return;
+    return window.STUTI_BACKSTOP.push(closeTopSheet);
+  }, [sheetKey]);
+
   // Flatten every verse into a single sequence of recitable lines.
   const ritualSet = window.STUTI_RITUAL ? window.STUTI_RITUAL(hymn) : null;
   const hasRitual = !!(ritualSet && ritualSet.size);

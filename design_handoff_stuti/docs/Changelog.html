@@ -95,6 +95,26 @@ code { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: .
 
 <section class="release">
   <div class="rail">
+    <div class="ver">0.9.133</div>
+    <div class="date">11 November 2026</div>
+    <div class="rail-note">Back did nothing at all, and a calendar opened over a sheet with no way out of it.</div>
+  </div>
+  <div class="release-body">
+    <h2 class="release-title">Back walks the app again</h2>
+    <div class="entry">
+      <div class="entry-head"><span class="tag tag-fix">Fixed</span><h3>The Back button moves between screens instead of leaving</h3></div>
+      <p>A tester found the device&rsquo;s Back button doing nothing useful anywhere in the app, and the designer was right that her design has it: the work was in her copy and not in ours, which is the fork this release series has been unpicking. Every move between screens now leaves a history entry behind it, and Back unwinds them one at a time &mdash; the library back to Today, a deity back to the library &mdash; so the app is left only from Home, and only by pressing Back there.</p>
+    </div>
+    <div class="entry">
+      <div class="entry-head"><span class="tag tag-fix">Fixed</span><h3>A sheet, and the calendar over it, close one at a time</h3></div>
+      <p>The same tester opened the sheet that adds a janma tithi, opened the calendar inside it to pick the day, and could get out of neither. Her Back stack is what answers this: while an overlay is open it registers how to shut itself, and Back asks that stack before it moves the screen. She had wired the tools panel, the reminders sheet and the reader&rsquo;s own sheets; the tithi sheet and its day picker were not on it.</p>
+      <p>They are now, and in that order, because the stack closes last-opened first: the first Back shuts the calendar and leaves the sheet standing with what was typed in it, the second shuts the sheet and leaves the calendar screen, and the third leaves the screen. Nothing is lost on the way out, which is the point &mdash; a reciter who has typed a parent&rsquo;s name and reached for the date should not have to type it again.</p>
+    </div>
+  </div>
+</section>
+
+<section class="release">
+  <div class="rail">
     <div class="ver">0.9.132</div>
     <div class="date">11 November 2026</div>
     <div class="rail-note">The designer&rsquo;s project turned out to be a fork of ours, so her work came in a piece at a time &mdash; and each piece can be taken back out on its own.</div>

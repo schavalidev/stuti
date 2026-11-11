@@ -3,6 +3,7 @@ import { STUTI_L } from "./stuti-i18n";
 import { Icon } from "./stuti-icons";
 import { AKSHARA_PANCHANGA } from "./stuti-panchanga-engine";
 import { MoonPhase, useLoc } from "./stuti-panchanga";
+import { STUTI_BACKSTOP } from "./stuti-backstop";
 
 /* ============================================================
    STUTI — the house date field
@@ -11,7 +12,7 @@ import { MoonPhase, useLoc } from "./stuti-panchanga";
    This field opens the house month — the same cal-grid, the same moon
    marks, the same gold — and names the tithi of the day under it.
    ============================================================ */
-const { useState: useDpS, useMemo: useDpM } = React;
+const { useState: useDpS, useMemo: useDpM, useEffect: useDpE } = React;
 
 const DP_T = {
   today:  { roman: "Today", deva: "आज", telugu: "ఈ రోజు" },
@@ -39,6 +40,8 @@ function HouseDate({ value, onChange, lang, min, max, ariaLabel }) {
   const [open, setOpen] = useDpS(false);
   const [cursor, setCursor] = useDpS(() => { const d = sel || today; return { y: d.getFullYear(), m: d.getMonth() }; });
   const [yearOpen, setYearOpen] = useDpS(false);
+  /* Back shuts the calendar before the sheet under it (seam) */
+  useDpE(() => (open && STUTI_BACKSTOP ? STUTI_BACKSTOP.push(() => setOpen(false)) : undefined), [open]);
   const locale = lang === "telugu" ? "te-IN" : lang === "deva" ? "hi-IN" : undefined;
 
   const nDays = new Date(cursor.y, cursor.m + 1, 0).getDate();

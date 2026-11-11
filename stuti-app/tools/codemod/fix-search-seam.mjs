@@ -107,6 +107,10 @@ sub(
   `weekday: payload.weekday }));`,
   `weekday: payload.weekday, voice: payload.voice }));`,
   "the router's route fields",
+  /* she took this up herself when the router learned to walk the Back
+     button (11 Nov 2026): the statement it sits in no longer ends the
+     way the anchor does, but the field is there */
+  { have: `voice: payload.voice` },
 );
 
 /* ---- 3. the keyboard stays down when the reciter came to talk ---- */

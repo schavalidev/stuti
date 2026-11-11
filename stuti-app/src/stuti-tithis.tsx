@@ -8,6 +8,7 @@ import { AKSHARA_PANCHANGA } from "./stuti-panchanga-engine";
 import { useLoc } from "./stuti-panchanga";
 import { OverlayPortal } from "./stuti-picker";
 import { STUTI_TITHIS } from "./stuti-tithis-core";
+import { STUTI_BACKSTOP } from "./stuti-backstop";
 import { STUTI_TRANSLIT } from "./stuti-translit";
 import { STUTI_VRATA } from "./stuti-vrata-data";
 
@@ -176,6 +177,8 @@ function ClockField({ value, onChange, lang }) {
 
 /* ---------------- the sheet ---------------- */
 function TithiSheet({ lang = "deva", rec, seedDate, onClose }) {
+  /* Back shuts this sheet before it moves the screen (seam) */
+  useEffectTT(() => (STUTI_BACKSTOP ? STUTI_BACKSTOP.push(onClose) : undefined), [onClose]);
   const L = STUTI_L, T = STUTI_TITHIS, P = AKSHARA_PANCHANGA;
   const { loc } = useLoc();
   const editing = !!(rec && rec.id);
