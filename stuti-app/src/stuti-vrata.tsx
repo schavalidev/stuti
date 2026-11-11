@@ -5,6 +5,8 @@ import { STUTI_L } from "./stuti-i18n";
 import { DeityLink, Icon, Seal, deityStyle } from "./stuti-icons";
 import { STUTI_KEEP } from "./stuti-keep-core";
 import { KeepBell, KeepSpan } from "./stuti-keep";
+import { STUTI_PARVA_KRIYA } from "./stuti-parva-kriya";
+import { STUTI_PARVA_STORIES } from "./stuti-parva-stories";
 import { STUTI_PREFS } from "./stuti-prefs";
 import { STUTI_PROV } from "./stuti-provenance";
 import { STUTI_PURNIMA } from "./stuti-purnima-data";
@@ -440,6 +442,72 @@ function PurnimaNamed({ v, lang, font }) {
   );
 }
 
+/* ---------------- a parva's story, loaded on demand ----------------
+   Most parva dinams carry only a tagline; some carry a sourced story
+   held in a month chunk that is fetched the first time this page opens
+   for that day. Until it resolves the section shows a quiet line. */
+function ParvaStory({ v, lang, font }) {
+  const PS = STUTI_PARVA_STORIES;
+  const g = (o) => vp3(o, lang);
+  const lbl = (r, d, t) => (lang === "telugu" ? t : lang === "deva" ? d : r);
+  const [st, setSt] = React.useState(() => (PS ? PS.get(v.id) : null));
+  React.useEffect(() => {
+    if (!PS || st) return;
+    let live = true;
+    PS.load(v.id).then((r) => { if (live) setSt(r); });
+    return () => { live = false; };
+  }, [v.id]);
+  if (!PS || !PS.has(v.id)) return null;
+  return (
+    <div className="vr-sect">
+      <div className="eyebrow">{lbl("The story", "कथा", "కథ")}</div>
+      {st
+        ? g(st.story).split("\n").filter(Boolean).map((p, i) => <p className="vr-para" key={i}>{p}</p>)
+        : <p className="vr-para vr-para-wait">{lbl("Opening the story…", "कथा खुल रही है…", "కథ వస్తోంది…")}</p>}
+      {st && <div className="vr-source" style={{ marginTop: 12 }}>{g(st.source)}</div>}
+    </div>
+  );
+}
+
+/* ---------------- a parva's recitation, loaded on demand ----------------
+   The words the rite itself prescribes for one act of the day — the line
+   said while tying the rakṣā, offering the sky-lamp, giving the pot. Not
+   the stotras of the deity shelf, which the reader chooses; this is the
+   one text a source fixes to the act. Held in a month chunk fetched the
+   first time this page opens for a day in that month. A day may carry
+   several. */
+function ParvaKriya({ v, lang, font }) {
+  const PK = STUTI_PARVA_KRIYA;
+  const g = (o) => vp3(o, lang);
+  const lbl = (r, d, t) => (lang === "telugu" ? t : lang === "deva" ? d : r);
+  const sc = lang === "telugu" ? "tel" : "deva";
+  const [items, setItems] = React.useState(() => (PK ? PK.get(v.id) : null));
+  React.useEffect(() => {
+    if (!PK || items) return;
+    let live = true;
+    PK.load(v.id).then((r) => { if (live) setItems(r); });
+    return () => { live = false; };
+  }, [v.id]);
+  if (!PK || !PK.has(v.id)) return null;
+  return (
+    <div className="vr-sect">
+      <div className="eyebrow">{lbl("The recitation", "क्रिया मन्त्र", "క్రియా మంత్రం")}</div>
+      {items
+        ? items.map((it, i) => (
+            <div className="vr-kriya" key={i}>
+              <div className="vr-kriya-act">{g(it.act)}</div>
+              <div className={"vr-kriya-verse " + sc}>
+                {(sc === "tel" ? it.verse.tel : it.verse.deva).split("\n").map((ln, j) => <div key={j}>{ln}</div>)}
+              </div>
+              <p className="vr-kriya-mean">{g(it.meaning)}</p>
+              <div className="vr-kriya-src">{g(it.source)}</div>
+            </div>
+          ))
+        : <p className="vr-para vr-para-wait">{lbl("Opening the recitation…", "मन्त्र खुल रहा है…", "మంత్రం వస్తోంది…")}</p>}
+    </div>
+  );
+}
+
 /* ---------------- the guide ---------------- */
 function VrataDetail({ vrataId, go, lang, onBack }) {
   const S = STUTI, L = STUTI_L, V = STUTI_VRATA;
@@ -518,8 +586,10 @@ function VrataDetail({ vrataId, go, lang, onBack }) {
 
         {isEk && <EkadashiNamed v={v} lang={lang} font={font} />}
         {isPur && <PurnimaNamed v={v} lang={lang} font={font} />}
+        {!isEk && !isPur && <ParvaStory v={v} lang={lang} font={font} />}
+        <ParvaKriya v={v} lang={lang} font={font} />
 
-        {v.brief && !isEk && !isPur && <div className="vr-brief">{L.t("vrataBrief", lang)}</div>}
+        {v.brief && !isEk && !isPur && !(STUTI_PARVA_STORIES && STUTI_PARVA_STORIES.has(v.id)) && <div className="vr-brief">{L.t("vrataBrief", lang)}</div>}
 
         {v.samagri && <SamagriList vrataId={v.id} items={v.samagri} lang={lang} />}
 

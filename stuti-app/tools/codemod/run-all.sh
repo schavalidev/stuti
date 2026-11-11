@@ -52,6 +52,9 @@ echo "pipeline complete (ported design @ $(cut -c1-9 .ported-at 2>/dev/null || e
 # last word, and they fail the run: src/ can name a painting that was never
 # copied into public/, and it can carry a finished text that no catalogue row
 # claims — in both cases the build is clean and the reader is short one thing
+# the two bodies of text the app fetches a month at a time, which no
+# string-literal check can see (see the script's own note)
+node copy-parva-chunks.mjs
 node check-assets.mjs
 node check-data.mjs
 node check-links.mjs

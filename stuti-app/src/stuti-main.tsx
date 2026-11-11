@@ -748,4 +748,25 @@ function App() {
   );
 }
 
+class StutiBoundary extends React.Component {
+  constructor(p){ super(p); this.state = { fell: false }; }
+  static getDerivedStateFromError(){ return { fell: true }; }
+  componentDidCatch(err){ try { console.error("[Stuti] a screen stopped:", err); } catch(e){} }
+  render(){
+    if(this.state.fell){
+      return (
+        <div style={{minHeight:"100vh",display:"grid",placeItems:"center",padding:"32px",textAlign:"center",background:"var(--bg)",color:"var(--ink)"}}>
+          <div style={{maxWidth:"30ch"}}>
+            <h1 style={{fontFamily:"var(--font-display)",fontWeight:400,fontSize:"26px",lineHeight:1.2,margin:"0 0 10px"}}>This screen stopped</h1>
+            <p style={{color:"var(--ink-soft)",fontSize:"16px",lineHeight:1.6,margin:"0 0 22px",textWrap:"pretty"}}>Open Stuti again to come back to where you were. Your place and your practice are kept.</p>
+            <button onClick={()=>location.reload()} style={{font:"inherit",fontSize:"15px",fontWeight:600,padding:"12px 24px",borderRadius:"999px",border:"none",background:"var(--accent)",color:"#fff",cursor:"pointer"}}>Open again</button>
+          </div>
+        </div>
+      );
+    }
+    return this.props.children;
+  }
+}
+
+export { StutiBoundary };
 export default App;

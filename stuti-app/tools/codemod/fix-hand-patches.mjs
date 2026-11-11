@@ -20,9 +20,13 @@ function must(file, text, re, what) {
 // that follows it (main.tsx and vite-plugin-pwa own both now); export App.
 {
   let t = rd("stuti-main.tsx");
-  const tail = /ReactDOM\.createRoot\(document\.getElementById\("root"\)\)\.render\(<App \/>\);[\s\S]*$/;
+  // The designer wrapped App in an error boundary (0.9.131), after a missing
+  // file blanked the tablet build in silence. The boundary is hers; main.tsx
+  // is what mounts it, since the root belongs to the port.
+  const tail = /ReactDOM\.createRoot\(document\.getElementById\("root"\)\)\.render\(\s*(?:<StutiBoundary>\s*)?<App \/>\s*(?:<\/StutiBoundary>\s*)?\);[\s\S]*$/;
   must("stuti-main.tsx", t, tail, "createRoot tail");
-  t = t.replace(tail, "export default App;\n");
+  must("stuti-main.tsx", t, /class StutiBoundary extends React\.Component/, "the error boundary");
+  t = t.replace(tail, "export { StutiBoundary };\nexport default App;\n");
   // two spots used bare useState where the rest of the file uses its own alias
   t = t.replace(/\buseState\(/g, "useStateM(");
   wr("stuti-main.tsx", t);

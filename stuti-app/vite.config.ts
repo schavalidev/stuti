@@ -47,7 +47,13 @@ export default defineConfig({
         // again on every deploy, for two files most sittings never touch. They
         // are kept out of the precache and cached when they are actually asked
         // for, which is what their loaders were written to expect.
-        globIgnores: ['stuti-gazetteer.js', 'stuti-temples.js'],
+        // The parva stories and the kriyā-mantras are the same case: 22 month
+        // files, about half a megabyte, and a sitting opens one of them at
+        // most. Their loaders inject a script when a reader opens a day in
+        // that month, and the design's own note says the worker is to keep
+        // the chunk for the pūjā room afterwards — which is cache-on-use,
+        // not precache-on-install.
+        globIgnores: ['stuti-gazetteer.js', 'stuti-temples.js', 'parva-stories/*.js', 'parva-kriya/*.js'],
         // the bell with no page open: show a sealed push and route its tap
         // (public/stuti-push-sw.js; the page half is src/stuti-webpush.ts)
         importScripts: ['stuti-push-sw.js'],
@@ -56,6 +62,13 @@ export default defineConfig({
             urlPattern: /\/stuti-(gazetteer|temples)\.js$/,
             handler: 'CacheFirst',
             options: { cacheName: 'stuti-data', expiration: { maxEntries: 4, maxAgeSeconds: 90 * 24 * 60 * 60 } },
+          },
+          {
+            // one entry per month per body of text, and they are text the
+            // Purāṇas settled: a year is a fair while to keep them
+            urlPattern: /\/parva-(stories|kriya)\/[a-z]+\.js$/,
+            handler: 'CacheFirst',
+            options: { cacheName: 'stuti-parva', expiration: { maxEntries: 24, maxAgeSeconds: 365 * 24 * 60 * 60 } },
           },
           {
             urlPattern: ({ request }) => request.destination === 'font' || request.destination === 'image',

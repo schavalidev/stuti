@@ -8,17 +8,18 @@ import { STUTI_EPHEM } from "./stuti-ephemeris";
 import { SankalpaSheet, useFlyleaf } from "./stuti-flyleaf";
 import { STUTI_L } from "./stuti-i18n";
 import { FavButton, Icon, Seal, deityStyle, useFavs } from "./stuti-icons";
+import { STUTI_KEEP } from "./stuti-keep-core";
 import { STUTI_KSHANA } from "./stuti-kshana-core";
 import { KshanaCard } from "./stuti-kshana";
-import { masaMixFor } from "./stuti-masa";
 import { nityaQueue } from "./stuti-nitya-queue";
 import { STUTI_MUHURTA } from "./stuti-muhurta";
 import { STUTI_NUDGE } from "./stuti-nudge";
 import { AKSHARA_PANCHANGA } from "./stuti-panchanga-engine";
-import { MoonPhase, RTU_VIS, SK_CONST, SeasonAmbient, samvatsaraFor, useLoc } from "./stuti-panchanga";
+import { MoonPhase, SK_CONST, samvatsaraFor, useLoc } from "./stuti-panchanga";
 import { TarpanaWhy, piT } from "./stuti-pitru";
 import { STUTI_PREFS } from "./stuti-prefs";
 import { HomePrepCard } from "./stuti-prep";
+import { STUTI_PROV } from "./stuti-provenance";
 import { hymnParts } from "./stuti-reader";
 import { STUTI_RECITE } from "./stuti-recite";
 import { manaSys, masaShown, masaSys } from "./stuti-reckoning";
@@ -418,19 +419,31 @@ const TA_T = {
   aparahna:  { roman: "Aparāhṇa", deva: "अपराह्ण", telugu: "అపరాహ్ణం" },
   atSunrise: { roman: "Sunrise", deva: "सूर्योदय", telugu: "సూర్యోదయం" },
   open:      { roman: "Open the day", deva: "दिन खोलें", telugu: "ఆ రోజు చూడండి" },
+  tasks:     { roman: "What to arrange", deva: "व्यवस्था", telugu: "ఏర్పాట్లు" },
+  tasksLeft: { roman: "{n} left", deva: "{n} शेष", telugu: "ఇంకా {n}" },
+  tasksAll:  { roman: "All done", deva: "सब हो गया", telugu: "అన్నీ అయ్యాయి" },
 };
 const ttAheadT = (k, lg) => (TA_T[k] || {})[lg === "telugu" ? "telugu" : lg === "deva" ? "deva" : "roman"] || TA_T[k].roman;
+/* a festival card put away for today: keyed by the day it was showing, so the
+   same parva reappears if it falls on another day */
+const PARVA_HIDE_KEY = "stuti-parva-hidden";
+const parvaDayKey = (date) => date.toDateString();
+function parvaHidden() { try { return JSON.parse(localStorage.getItem(PARVA_HIDE_KEY) || "[]"); } catch (e) { return []; } }
+function parvaHide(id, date) { const k = id + "|" + parvaDayKey(date), cur = parvaHidden(); if (cur.indexOf(k) === -1) { cur.push(k); try { localStorage.setItem(PARVA_HIDE_KEY, JSON.stringify(cur)); } catch (e) {} } }
+const parvaIsHidden = (id, date) => parvaHidden().indexOf(id + "|" + parvaDayKey(date)) !== -1;
 function ParvaCard({ go, lang }) {
   const V = STUTI_VRATA;
   const [, bump] = React.useState(0);
   React.useEffect(() => STUTI_PREFS.subscribe(() => bump((n) => n + 1)), []);
   React.useEffect(() => STUTI_TITHIS ? STUTI_TITHIS.subscribe(() => bump((n) => n + 1)) : undefined, []);
   let hits = [];
-  try { hits = V && V.parvasNow ? V.parvasNow().slice(0, 2) : []; } catch (e) { hits = []; }
+  try { hits = V && V.parvasNow ? V.parvasNow() : []; } catch (e) { hits = []; }
+  hits = hits.filter((hit) => !parvaIsHidden(hit.v.id, hit.date)).slice(0, 2);
   if (!hits.length) return null;
-  return <React.Fragment>{hits.map((hit) => <ParvaOne key={hit.v.id} hit={hit} go={go} lang={lang} />)}</React.Fragment>;
+  const dismiss = (hit) => { parvaHide(hit.v.id, hit.date); bump((n) => n + 1); };
+  return <React.Fragment>{hits.map((hit) => <ParvaOne key={hit.v.id} hit={hit} go={go} lang={lang} onDismiss={() => dismiss(hit)} />)}</React.Fragment>;
 }
-function ParvaOne({ hit, go, lang }) {
+function ParvaOne({ hit, go, lang, onDismiss }) {
   const L = lang || "deva";
   const { loc } = useLoc();
   const V = STUTI_VRATA, PA = AKSHARA_PANCHANGA;
@@ -522,9 +535,16 @@ function PreviewPill({ go, lang }) {
    pañcāṅga rows, opening the vrata page */
 function RoutineVrata({ go, lang }) {
   const L = lang || "deva", T = L === "telugu" ? "tel" : L === "roman" ? "roman" : "deva";
-  const V = STUTI_VRATA;
+  const V = STUTI_VRATA, K = STUTI_KEEP;
+  /* a saṅkalpa vow — one begun on any week, kept every fortnight, taken on a
+     favourable day, or a dīkṣā. These are not days the calendar brings to
+     everyone; they belong to the reciter who takes them up. They have no place
+     on the day's line unless this house has actually begun one, and then the
+     keep decides which day it is due. */
+  const isVow = (v) => !!(v.floating || v.optional || v.everyMonth || (STUTI_PROV && STUTI_PROV.isType && STUTI_PROV.isType(v, "diksha")));
+  const dueByKeep = (v) => { try { const k = K && K.find && K.find("vrata", v.id); return !!(k && K.dueToday(k)); } catch (e) { return false; } };
   let hits = [];
-  try { hits = (V.upcoming(80) || []).filter((u) => u.away === 0 && !V.isParva(u.v) && !u.v.optional); } catch (e) {}
+  try { hits = (V.upcoming(80) || []).filter((u) => u.away === 0 && !V.isParva(u.v) && (isVow(u.v) ? dueByKeep(u.v) : true)); } catch (e) {}
   if (!hits.length) return null;
   const lead = L === "telugu" ? "ఇవాళ" : L === "deva" ? "आज" : "Today";
   return (
@@ -655,28 +675,9 @@ function HomeA({ go, lang, overlayEl }) {
   const moreRows = [...vm.sun.slice(2), ...vm.yk, ...vm.caution.map(it => ({ ...it, caution: it.active }))];
   return (
     <div className="view home home-a scroll" style={deityStyle(deity)}>
-      {(() => {
-        const rv = (RTU_VIS || {})[vm.pa.ritu.iast];
-        /* a transition month blends both seasons here too, as Calendar and Māsa do */
-        const mName = masaShown ? masaShown(vm.pa) : vm.pa.masa;
-        const mix = masaMixFor ? masaMixFor(mName && mName.iast) : null;
-        const vars = mix ? { "--rtu": rv.hue, "--rtu-b": mix.hueB } : { "--rtu": rv.hue };
-        return rv ? (
-          <React.Fragment>
-            <div className="cal-season cal-season-back" aria-hidden="true" style={vars}>
-              <div className="cal-season-in cal-season-wash" data-mix={mix ? "1" : undefined} />
-            </div>
-            <div className="cal-season cal-season-front" aria-hidden="true" style={vars}>
-              <div className="cal-season-in cal-season-fg"><SeasonAmbient kind={rv.kind} dense mix={mix && mix.kinds} heat={mix && mix.heat} sunHue={mix && mix.sunHue} sunBright={mix && mix.sunBright} /></div>
-            </div>
-          </React.Fragment>
-        ) : null;
-      })()}
       <SkyHeader lang={L} go={go} />
 
       <HomeSearchBar go={go} lang={L} />
-
-      <AtTempleCard go={go} lang={L} />
 
       <HomePrepCard lang={L} />
 

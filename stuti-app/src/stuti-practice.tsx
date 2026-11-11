@@ -9,6 +9,7 @@ import { NomuTracker } from "./stuti-keep";
 import { JapaTracker, LearnTracker, LedgerLens, ReciteTracker } from "./stuti-ledger";
 import { STUTI_LIB } from "./stuti-library-data";
 import { pick3, useLensArrange, useLensSwipe } from "./stuti-library";
+import { MokkuTracker } from "./stuti-mokku";
 import { PlanEntryCard } from "./stuti-plans";
 import { RemindCard } from "./stuti-remind";
 import { STUTI_THREAD } from "./stuti-sadhana";
@@ -157,6 +158,7 @@ const NITYA_LENSES = [
   { id: "japa",     key: "lensJapa",    icon: "mala" },
   { id: "learn",   key: "lensLearn",   icon: "spark" },
   { id: "nomu",    key: "lensNomu",    icon: "marigold" },
+  { id: "mokku",  key: "lensMokku",  icon: "vayanam" },
   { id: "ledger",  key: "lensLedger",  icon: "book" },
 ];
 
@@ -229,6 +231,8 @@ function NityaView({ go, lang = "deva", showPractices = true, openRemind, initLe
           <LedgerLens lang={lang} onLens={choose} go={go} />
         ) : lens === "nomu" ? (
           <NomuTracker go={go} lang={lang} />
+        ) : lens === "mokku" ? (
+          <MokkuTracker go={go} lang={lang} />
         ) : (
           <React.Fragment>
             <TodayBand go={go} lang={lang} />
