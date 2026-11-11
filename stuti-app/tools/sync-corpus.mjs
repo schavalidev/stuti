@@ -134,15 +134,39 @@ function credentials() {
   };
 }
 
+/* Nineteen hundred uploads over a domestic line is long enough that one of them
+   will lose its connection, and a bare fetch abandons the whole run when it
+   does: a sync died at 500 of 1,973 this way, having sent fifty megabytes for
+   nothing. A dropped connection, and the two statuses R2 asks you to come back
+   for, are tried again with a widening wait. Every other answer is a real one
+   and is handed on at once, so a wrong credential still fails immediately. */
+async function send(what, url, init, tries = 5) {
+  for (let n = 1; ; n++) {
+    let why;
+    try {
+      const res = await fetch(url, init);
+      if (res.status !== 429 && res.status < 500) return res;
+      if (n >= tries) return res;
+      why = String(res.status);
+    } catch (e) {
+      if (n >= tries) throw e;
+      why = e.cause?.code || e.message;
+    }
+    const wait = 500 * 2 ** (n - 1);
+    console.log(`  ${what}: ${why} — again in ${wait / 1000}s (${n}/${tries - 1})`);
+    await new Promise((r) => setTimeout(r, wait));
+  }
+}
+
 async function put(key, body, contentType, cacheControl, creds) {
   const { url, headers } = sign({ method: "PUT", key, body, contentType, cacheControl, ...creds });
-  const res = await fetch(url, { method: "PUT", headers, body });
+  const res = await send(`PUT ${key}`, url, { method: "PUT", headers, body });
   if (!res.ok) throw new Error(`PUT ${key} → ${res.status} ${await res.text()}`);
 }
 
 async function remove(key, creds) {
   const { url, headers } = sign({ method: "DELETE", key, ...creds });
-  const res = await fetch(url, { method: "DELETE", headers });
+  const res = await send(`DELETE ${key}`, url, { method: "DELETE", headers });
   if (!res.ok && res.status !== 404) throw new Error(`DELETE ${key} → ${res.status}`);
 }
 
@@ -154,7 +178,7 @@ async function listRemote(creds) {
     const query = { "list-type": "2", prefix: "t/" };
     if (token) query["continuation-token"] = token;
     const { url, headers } = sign({ method: "GET", key: "", query, ...creds });
-    const res = await fetch(url, { headers });
+    const res = await send("list", url, { headers });
     if (!res.ok) throw new Error(`list → ${res.status} ${await res.text()}`);
     const xml = await res.text();
     for (const m of xml.matchAll(/<Key>([^<]+)<\/Key>/g)) keys.add(m[1]);
