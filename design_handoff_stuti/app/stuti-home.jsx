@@ -619,28 +619,9 @@ function HomeA({ go, lang, overlayEl }) {
   const moreRows = [...vm.sun.slice(2), ...vm.yk, ...vm.caution.map(it => ({ ...it, caution: it.active }))];
   return (
     <div className="view home home-a scroll" style={deityStyle(deity)}>
-      {(() => {
-        const rv = (window.RTU_VIS || {})[vm.pa.ritu.iast];
-        /* a transition month blends both seasons here too, as Calendar and Māsa do */
-        const mName = window.masaShown ? window.masaShown(vm.pa) : vm.pa.masa;
-        const mix = window.masaMixFor ? window.masaMixFor(mName && mName.iast) : null;
-        const vars = mix ? { "--rtu": rv.hue, "--rtu-b": mix.hueB } : { "--rtu": rv.hue };
-        return rv ? (
-          <React.Fragment>
-            <div className="cal-season cal-season-back" aria-hidden="true" style={vars}>
-              <div className="cal-season-in cal-season-wash" data-mix={mix ? "1" : undefined} />
-            </div>
-            <div className="cal-season cal-season-front" aria-hidden="true" style={vars}>
-              <div className="cal-season-in cal-season-fg"><window.SeasonAmbient kind={rv.kind} dense mix={mix && mix.kinds} heat={mix && mix.heat} sunHue={mix && mix.sunHue} sunBright={mix && mix.sunBright} /></div>
-            </div>
-          </React.Fragment>
-        ) : null;
-      })()}
       <window.SkyHeader lang={L} go={go} />
 
       <HomeSearchBar go={go} lang={L} />
-
-      <AtTempleCard go={go} lang={L} />
 
       <window.HomePrepCard lang={L} />
 

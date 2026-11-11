@@ -10,12 +10,11 @@ import { STUTI_L } from "./stuti-i18n";
 import { FavButton, Icon, Seal, deityStyle, useFavs } from "./stuti-icons";
 import { STUTI_KSHANA } from "./stuti-kshana-core";
 import { KshanaCard } from "./stuti-kshana";
-import { masaMixFor } from "./stuti-masa";
 import { nityaQueue } from "./stuti-nitya-queue";
 import { STUTI_MUHURTA } from "./stuti-muhurta";
 import { STUTI_NUDGE } from "./stuti-nudge";
 import { AKSHARA_PANCHANGA } from "./stuti-panchanga-engine";
-import { MoonPhase, RTU_VIS, SK_CONST, SeasonAmbient, samvatsaraFor, useLoc } from "./stuti-panchanga";
+import { MoonPhase, SK_CONST, samvatsaraFor, useLoc } from "./stuti-panchanga";
 import { TarpanaWhy, piT } from "./stuti-pitru";
 import { STUTI_PREFS } from "./stuti-prefs";
 import { HomePrepCard } from "./stuti-prep";
@@ -655,28 +654,9 @@ function HomeA({ go, lang, overlayEl }) {
   const moreRows = [...vm.sun.slice(2), ...vm.yk, ...vm.caution.map(it => ({ ...it, caution: it.active }))];
   return (
     <div className="view home home-a scroll" style={deityStyle(deity)}>
-      {(() => {
-        const rv = (RTU_VIS || {})[vm.pa.ritu.iast];
-        /* a transition month blends both seasons here too, as Calendar and Māsa do */
-        const mName = masaShown ? masaShown(vm.pa) : vm.pa.masa;
-        const mix = masaMixFor ? masaMixFor(mName && mName.iast) : null;
-        const vars = mix ? { "--rtu": rv.hue, "--rtu-b": mix.hueB } : { "--rtu": rv.hue };
-        return rv ? (
-          <React.Fragment>
-            <div className="cal-season cal-season-back" aria-hidden="true" style={vars}>
-              <div className="cal-season-in cal-season-wash" data-mix={mix ? "1" : undefined} />
-            </div>
-            <div className="cal-season cal-season-front" aria-hidden="true" style={vars}>
-              <div className="cal-season-in cal-season-fg"><SeasonAmbient kind={rv.kind} dense mix={mix && mix.kinds} heat={mix && mix.heat} sunHue={mix && mix.sunHue} sunBright={mix && mix.sunBright} /></div>
-            </div>
-          </React.Fragment>
-        ) : null;
-      })()}
       <SkyHeader lang={L} go={go} />
 
       <HomeSearchBar go={go} lang={L} />
-
-      <AtTempleCard go={go} lang={L} />
 
       <HomePrepCard lang={L} />
 

@@ -2,10 +2,9 @@ import { Icon } from "./stuti-icons";
 import React from "react";
 import { STUTI_EPHEM } from "./stuti-ephemeris";
 import { STUTI_L } from "./stuti-i18n";
-import { masaMixFor } from "./stuti-masa";
 import { STUTI_MUHURTA } from "./stuti-muhurta";
 import { AKSHARA_PANCHANGA } from "./stuti-panchanga-engine";
-import { LocationControl, MoonPhase, RTU_VIS, SK_CONST, SeasonAmbient, samvatsaraFor, useLoc } from "./stuti-panchanga";
+import { LocationControl, MoonPhase, SK_CONST, samvatsaraFor, useLoc } from "./stuti-panchanga";
 import { PitruRegisterDoor } from "./stuti-pitru-register";
 import { PitruDaysBody, piT } from "./stuti-pitru";
 import { masaShown } from "./stuti-reckoning";
@@ -341,26 +340,6 @@ function CalendarView({ go, lang = "deva" }) {
 
   return (
     <div className="view cal-view scroll">
-      {(() => {
-        /* the backdrop belongs to the month on screen, not to the day last
-           tapped — paging to Māgha should turn the view wintry at once */
-        const monthPa = P.forDay(new Date(cursor.y, cursor.m, 15), loc);
-        const rv = (RTU_VIS || {})[monthPa.ritu.iast];
-        /* a transition month carries a mild mix of both seasons, as the Māsa lens does */
-        const mName = masaShown ? masaShown(monthPa) : monthPa.masa;
-        const mix = masaMixFor ? masaMixFor(mName && mName.iast) : null;
-        const vars = mix ? { "--rtu": rv.hue, "--rtu-b": mix.hueB } : { "--rtu": rv.hue };
-        return rv ? (
-          <React.Fragment>
-            <div className="cal-season cal-season-back" aria-hidden="true" style={vars}>
-              <div className="cal-season-in cal-season-wash" data-mix={mix ? "1" : undefined} />
-            </div>
-            <div className="cal-season cal-season-front" aria-hidden="true" style={vars}>
-              <div className="cal-season-in cal-season-fg"><SeasonAmbient kind={rv.kind} dense mix={mix && mix.kinds} heat={mix && mix.heat} sunHue={mix && mix.sunHue} sunBright={mix && mix.sunBright} /></div>
-            </div>
-          </React.Fragment>
-        ) : null;
-      })()}
       <div className="topbar">
         <div className="topbar-title display">{L.t("calendar", lang)}</div>
         <div style={{ display: "flex", alignItems: "center", gap: 4, marginLeft: "auto", marginRight: 26 }}>
