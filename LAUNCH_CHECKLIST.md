@@ -124,6 +124,11 @@ Step 1 is done: `stotras/bin/build_corpus.py` exists and runs.
       from their text files, and kept each one in IndexedDB after the read. This
       was also the first sight of the meaning-gap notice in its own case, on
       Bhāgavata 9.6 — 153 of the 2,015 live rows carry no gloss yet
+- [x] The hyphenated corpus is on the host, 11 November 2026. 1,973 texts
+      re-uploaded under new hashes and the 1,973 superseded ones swept; the
+      live index names 2,015 and `devi/main/01` comes down hyphenated. The
+      first attempt died at 500 of 1,973 on a read timeout, so the sync now
+      retries a dropped connection
 - [ ] Verify on the phone, and offline after one read — Stuti-v56.apk carries it
 - [x] Re-run `node tools/sync-corpus.mjs` to send `redirects.json` — done
       27 October 2026; it is on the host and the app's launch is clean. The first
