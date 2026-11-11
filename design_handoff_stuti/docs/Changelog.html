@@ -95,6 +95,53 @@ code { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: .
 
 <section class="release">
   <div class="rail">
+    <div class="ver">0.9.132</div>
+    <div class="date">11 November 2026</div>
+    <div class="rail-note">The designer&rsquo;s project turned out to be a fork of ours, so her work came in a piece at a time &mdash; and each piece can be taken back out on its own.</div>
+  </div>
+  <div class="release-body">
+    <h2 class="release-title">Her six weeks, taken one change at a time</h2>
+    <div class="entry">
+      <div class="entry-head"><span class="tag tag-add">Added</span><h3>What the design brought that was wholly new</h3></div>
+      <p>Her project is published as an Artifact now rather than handed over as a folder, and reading it file by file showed why a straight port would have been a mistake: her copy is not ahead of this repository&rsquo;s design folder but a fork of it, taken before about six weeks of work that was written straight into that folder and never reached her. Of her fifty-five edited files, most would not have updated ours but reverted them &mdash; the Vedic accents, the At-a-temple card, the compass and its tīrthas, the mālā counted blind, and some seventy interface strings besides.</p>
+      <p>So what only adds was taken whole. <strong>Mokkulu</strong> arrive complete: a standing list of the promises a household has made to a deity, which no tithi can schedule and whose one demand on the app is not to be forgotten. The <strong>ābdikam week</strong> arrives with them &mdash; the arrangements a house makes before a śrāddha, held per occurrence so each year begins unchecked, with the week&rsquo;s notice naming the ones still unmade instead of counting down. And the <strong>parva stories and kriyā-mantras</strong>: the retellings a Purāṇa holds for a festival day, and the line said while the act itself is done.</p>
+      <p>Those last two are too large to parse before the first screen is drawn, so they are fetched a month at a time &mdash; by a path the code computes, which is a path no check here could see. A missing month would have come back as the app&rsquo;s own page, failed to parse, and left the day quietly without its story. The pipeline now copies the twenty-two month files into place and refuses to pass if the index names one that is not there, and the offline worker keeps them out of the install and holds each one once a reader has asked for it.</p>
+    </div>
+    <div class="entry">
+      <div class="entry-head"><span class="tag tag-chg">Changed</span><h3>Today holds still</h3></div>
+      <p>The home screen carried a moving backdrop keyed to the ṛtu &mdash; petals, leaves or frost drifting behind the day&rsquo;s reading &mdash; the calendar carried the same fall behind its grid, and on an annual festival a third drift fell all day. All three are withdrawn. Today opens plain, and paging between months sets nothing falling. The ṛtu is still read and still colours the almanac; the māsa hero keeps its drift, where the season is the subject and not the backdrop.</p>
+    </div>
+    <div class="entry">
+      <div class="entry-head"><span class="tag tag-chg">Changed</span><h3>The daily tab is named for the practice it holds</h3></div>
+      <p>The second tab gathers the day&rsquo;s recitation, the counter and the plans, and was labelled Nitya. It now reads Sādhana in every script &mdash; Sādhana, साधना, సాధన. The notice that a stotra&rsquo;s text is still being prepared named the tab by word, so it moves with it. The routes and the place a reader is returned to are unchanged.</p>
+    </div>
+    <div class="entry">
+      <div class="entry-head"><span class="tag tag-fix">Fixed</span><h3>A vow is kept by the one who takes it up, not by the calendar</h3></div>
+      <p>Vaibhava Lakṣmī is an eleven-Friday vow begun on whatever Friday a household chooses; Kedāra Gaurī is a dīkṣā kept for twenty-one days. The day&rsquo;s line named both to everyone &mdash; Vaibhava Lakṣmī every Friday, Kedāra Gaurī through every day of its span &mdash; as though the calendar had brought them to every house. It had not. A vow taken up by saṅkalpa is now named only to the house that has begun one, on the day its keep falls due. The dated vratas belong to the day and are still announced to all.</p>
+    </div>
+    <div class="entry">
+      <div class="entry-head"><span class="tag tag-chg">Changed</span><h3>A house tithi in one script, and filed by its own name</h3></div>
+      <p>Adding a janma tithi or an ābdikam wrote the typed name back into both Hindi and Telugu &mdash; two boxes to read and correct where a house reads one. The name is still spelt into the other script and still kept, so the list can be read in either language; only the script the screen is already in is shown. And the name now chooses the tab: an ābdikam, a barsi or a śrāddha names a death rite, a janma tithi or a jayanti a birth, so a rite entered on the wrong tab moves to where it belongs.</p>
+    </div>
+    <div class="entry">
+      <div class="entry-head"><span class="tag tag-fix">Fixed</span><h3>A screen that stops now says so</h3></div>
+      <p>Her launch pass found the tablet and desktop build opening on nothing at all: the shared compass asks for the saved temples as the home screen draws, that page had never loaded the file holding them, and the call threw before a single pixel was painted. The app rendered nothing and said nothing. An error boundary now wraps the whole app, whatever threw &mdash; a screen that stops says it stopped, says the reciter&rsquo;s place and practice are kept, and offers to open again.</p>
+    </div>
+    <div class="entry">
+      <div class="entry-head"><span class="tag tag-chg">Changed</span><h3>Two smaller matters of setting</h3></div>
+      <p>The reader&rsquo;s control row &mdash; Verse and Full, Meaning, Learn, Record, Pointer and Scroll &mdash; was set in pills wide enough to run off a narrow screen, so a reader could not see them all at once. The text drops from eighteen pixels to fifteen and the row fits; what a finger lands on is unchanged, each control keeping its full tap area behind the smaller face. And the printed sheet, which set every verse centred on the page, now aligns the verses, their meanings and the section headings to the left margin, so the eye returns to one place at the end of each line. The masthead keeps its centre, as a title page does.</p>
+      <p>The Itara Devatās tile lost its ring at the same time. Every other shelf carries a painting; Itara has none yet and stands for its name, but the name sat inside a bordered disc, and a ring drawn round a word reads as a frame around nothing.</p>
+    </div>
+    <div class="entry">
+      <div class="entry-head"><span class="tag tag-fix">Fixed</span><h3>Each of these can be taken back out by itself</h3></div>
+      <p>Every change above was committed on its own, so any one of them can be reverted without disturbing the others, and without touching the build that is live. That build is tagged, and the dump as she sent it is kept beside this work whole, whatever is decided about the rest of it.</p>
+      <p>Two of her changes are not here. The glide rebuilt on every step of the speed drag, and the Back button taught to shut an open sheet before it moves, are both bound up with her rewrite of the reader&rsquo;s sheet tracking &mdash; and the reader is the most diverged file the two copies have. They wait on a decision about the reader as a whole, which is the same decision the other fifty-one files are waiting on.</p>
+    </div>
+  </div>
+</section>
+
+<section class="release">
+  <div class="rail">
     <div class="ver">0.9.114</div>
     <div class="date">27 October 2026</div>
     <div class="rail-note">The two thousand texts the app does not carry are now on a host it can reach — and four things the app said that were not quite true.</div>
