@@ -94,9 +94,6 @@
 
 .chip-record { color: #a5281c; border-color: color-mix(in oklab, #c0392b 40%, var(--line)); }
 .chip-record.chip-on { background: color-mix(in oklab, #c0392b 18%, var(--surface)); }
-/* Record is a glyph alone — a square, like the row's other wordless controls.
-   The ● / ■ carry the state; the word lives in the aria-label. */
-.reader-layers.tight .chip-rec-ico { width: 32px; min-width: 32px; padding: 0; justify-content: center; font-size: calc(0.8125rem * var(--rd-scale, 1) * var(--rd-fit, 1)); }
 .rd-follow-chip.is-kept { flex-wrap: wrap; }
 /* the Record chip must never shrink or wrap inside the scrolling chip row */
 .reader-layers.tight .chip-record, .reader-layers.tight .chip-learn { flex: none; white-space: nowrap; }
@@ -168,3 +165,55 @@
 @keyframes srScrimIn { from { opacity: 0; } to { opacity: 1; } }
 @keyframes srSheetIn { from { opacity: 0; transform: scale(0.97); } to { opacity: 1; transform: none; } }
 @media (prefers-reduced-motion: reduce) { .sr-scrim, .sr-sheet { animation: none; } }
+
+/* 3. Meaning, over a text whose meanings are not written yet. The corpus
+   outran the glosses, so the reciter who turns Meaning on over one of the
+   332 unglossed Bhāgavata adhyāyas met a blank page and no reason for it.
+   Quiet by design: this is an apology, not an alert. */
+.rd-mean-gap {
+  margin: 10px 16px 2px;
+  padding: 14px 16px;
+  border: 1px solid var(--line);
+  border-radius: var(--r-md);
+  background: var(--surface-2);
+}
+.rd-mean-gap-head {
+  font-size: 14px;
+  line-height: 1.45;
+  color: var(--accent-ink);
+  margin-bottom: 6px;
+}
+.rd-mean-gap-body {
+  margin: 0;
+  font-size: 13.5px;
+  line-height: 1.6;
+  color: var(--ink-faint);
+}
+
+/* 4. The two legal pages, named on the first onboarding screen. The law wants
+   the notice before the consent, not after it in Settings; the screen wants it
+   quiet, because it is not what the reciter came for. */
+.ob-legal {
+  padding: 0 20px 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.ob-legal-line {
+  margin: 0;
+  font-size: 12.5px;
+  line-height: 1.55;
+  color: var(--ink-faint);
+}
+.ob-legal-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+.ob-legal-links button {
+  font-size: 12.5px;
+  line-height: 1.55;
+  color: var(--accent-ink);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}

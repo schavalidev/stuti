@@ -18,7 +18,6 @@ const TT = {
   whoPh:    { roman: "e.g. amma janma tithi", deva: "जैसे — amma janma tithi", telugu: "ఉదా. amma janma tithi" },
   whoPhSh:  { roman: "e.g. nanna abdikam", deva: "जैसे — nanna abdikam", telugu: "ఉదా. nanna abdikam" },
   whoAlso:  { roman: "Written out in Hindi and Telugu too. Correct either one if it is wrong.", deva: "हिन्दी और तेलुगु में भी लिखा गया। कोई ठीक न हो तो सुधार लें।", telugu: "హిందీ, తెలుగులలో కూడా వ్రాయబడింది. సరిగా లేకపోతే సరిదిద్దండి." },
-  whoAlsoOne:{ roman: "Written out in the script too. Correct it if it is wrong.", deva: "हिन्दी में भी लिख लिया गया। ठीक न हो तो सुधार लें।", telugu: "తెలుగులో కూడా వ్రాయబడింది. సరిగా లేకపోతే సరిదిద్దండి." },
   nmRoman:  { roman: "In English", deva: "अंग्रेज़ी में", telugu: "ఇంగ్లిష్‌లో" },
   nmDeva:   { roman: "In Hindi", deva: "हिन्दी में", telugu: "హిందీలో" },
   nmTel:    { roman: "In Telugu", deva: "तेलुगु में", telugu: "తెలుగులో" },
@@ -64,14 +63,6 @@ const TT = {
 const ttT = (k, lang) => (TT[k] || {})[lang === "telugu" ? "telugu" : lang === "deva" ? "deva" : "roman"] || (TT[k] || {}).roman || k;
 const ttPick = (o, lang) => (!o ? "" : lang === "telugu" ? (o.tel || o.telugu || o.roman) : lang === "deva" ? (o.deva || o.roman) : (o.roman || o.iast));
 const ttFont = (lang) => lang === "telugu" ? "var(--font-telugu)" : lang === "roman" ? "var(--font-display)" : "var(--font-deva)";
-/* the name carries its own kind: an ābdikam or barsi is a śrāddha, a janma
-   tithi or jayanti a birth. Typing the word sets the tab, so a rite entered
-   on the wrong one still lands where it belongs. */
-const TT_KIND_HINTS = [
-  ["shraddha", /abdik|abdhik|\u0101bdik|\u015br?\u0101ddh|shrad|varsh|barsi|punyati|punya ?tithi/i],
-  ["janma", /janma|jayant|birth|puttin/i],
-];
-const ttDetectKind = (roman) => { const s = roman || ""; for (const [k, re] of TT_KIND_HINTS) if (re.test(s)) return k; return null; };
 const ttDateKey = (d) => d.getFullYear() + "-" + String(d.getMonth() + 1).padStart(2, "0") + "-" + String(d.getDate()).padStart(2, "0");
 function useTithis() { const [, f] = useStateTT(0); useEffectTT(() => window.STUTI_TITHIS.subscribe(() => f((x) => x + 1)), []); return window.STUTI_TITHIS; }
 
@@ -191,12 +182,8 @@ function TithiSheet({ lang = "deva", rec, seedDate, onClose }) {
     tel: (seedNames.tel || "").trim() || ttSpell(seedNames.roman, "tel"),
   });
   const [nmOwn, setNmOwn] = useStateTT({ deva: !!(seedNames.deva || "").trim(), tel: !!(seedNames.tel || "").trim() });
-  const onNmRoman = (v) => {
-    setNm((o) => Object.assign({}, o, { roman: v },
-      nmOwn.deva ? {} : { deva: ttSpell(v, "deva") }, nmOwn.tel ? {} : { tel: ttSpell(v, "tel") }));
-    /* only on a fresh entry — re-typing a saved name should not re-file it */
-    if (!editing) { const k = ttDetectKind(v); if (k && k !== kind && T.KINDS[k]) onKind(k); }
-  };
+  const onNmRoman = (v) => setNm((o) => Object.assign({}, o, { roman: v },
+    nmOwn.deva ? {} : { deva: ttSpell(v, "deva") }, nmOwn.tel ? {} : { tel: ttSpell(v, "tel") }));
   const setNmK = (k, v) => { if (k === "roman") return onNmRoman(v); setNmOwn((o) => Object.assign({}, o, { [k]: !!v.trim() })); setNm((o) => Object.assign({}, o, { [k]: v })); };
   const NM_LABEL = { roman: "nmRoman", deva: "nmDeva", tel: "nmTel" };
   const NM_FONT = { roman: "var(--font-ui)", deva: "var(--font-deva)", tel: "var(--font-telugu)" };
@@ -255,17 +242,10 @@ function TithiSheet({ lang = "deva", rec, seedDate, onClose }) {
   const setPaksha = (p) => setTi(p * 15 + tnum);
   const setTnum = (n) => setTi(paksha * 15 + n);
   const rule = T.ruleText({ masa, ti });
-  /* the saved name, in whichever script was filled. A bare `name` here resolves
-     to the global window.name (empty on a phone), which silently kept Save
-     disabled no matter what was typed. */
-  const nameText = nm.roman.trim() || nm.tel.trim() || nm.deva.trim();
   const next = useMemoTT(() => {
-    try { const V = window.STUTI_VRATA; return V.nextDate(T.asVrata({ id: "x", name: nameText, kind, masa, ti })); } catch (e) { return null; }
+    try { const V = window.STUTI_VRATA; return V.nextDate(T.asVrata({ id: "x", name: nm.roman, kind, masa, ti })); } catch (e) { return null; }
   }, [masa, ti, kind]);
   const font = ttFont(lang);
-  /* one script beside the English, the one this screen is being read in —
-     the other is still spelt and kept, just not shown */
-  const scriptKey = lang === "telugu" ? "tel" : lang === "deva" ? "deva" : null;
   const save = () => {
     const names = { roman: nm.roman.trim(), deva: nm.deva.trim(), tel: nm.tel.trim() };
     const p = { name: names.roman || names.tel || names.deva, names, kind, masa, ti, lead, notice, from: from || null, place: placeId || null, coord: placeId === "custom" ? coord : null, time: time !== "" && time != null ? Number(time) : null };
@@ -302,14 +282,14 @@ function TithiSheet({ lang = "deva", rec, seedDate, onClose }) {
               <span>{ttT("who", lang)}</span>
               <input value={nm.roman} onChange={(e) => setNmK("roman", e.target.value)} placeholder={ttT(kind === "shraddha" ? "whoPhSh" : "whoPh", lang)} />
             </label>
-            <p className="fb-hint" style={{ margin: "10px 2px 0" }}>{ttT("whoAlsoOne", lang)}</p>
-            {scriptKey && (
-              <label className="acc-field" style={{ marginTop: 8 }}>
-                <span>{ttT(NM_LABEL[scriptKey], lang)}</span>
-                <input value={nm[scriptKey]} onChange={(e) => setNmK(scriptKey, e.target.value)} style={{ fontFamily: NM_FONT[scriptKey] }}
-                  onBlur={() => { const TR = window.STUTI_TRANSLIT, v = nm[scriptKey]; if (!TR || !v || !/[\u0900-\u097F\u0C00-\u0C7F]/.test(v)) return; const d = TR.toDeva(v); const w = scriptKey === "tel" ? TR.convert(d, "telugu") : d; if (w !== v) setNmK(scriptKey, w); }} />
+            <p className="fb-hint" style={{ margin: "10px 2px 0" }}>{ttT("whoAlso", lang)}</p>
+            {["deva", "tel"].map((k) => (
+              <label className="acc-field" key={k} style={{ marginTop: 8 }}>
+                <span>{ttT(NM_LABEL[k], lang)}</span>
+                <input value={nm[k]} onChange={(e) => setNmK(k, e.target.value)} style={{ fontFamily: NM_FONT[k] }}
+                  onBlur={() => { const TR = window.STUTI_TRANSLIT, v = nm[k]; if (!TR || !v || !/[\u0900-\u097F\u0C00-\u0C7F]/.test(v)) return; const d = TR.toDeva(v); const w = k === "tel" ? TR.convert(d, "telugu") : d; if (w !== v) setNmK(k, w); }} />
               </label>
-            )}
+            ))}
             {/* date and place are one question — the day, and where it was kept */}
             <div className="tt-row">
               <label className="acc-field">
@@ -343,6 +323,7 @@ function TithiSheet({ lang = "deva", rec, seedDate, onClose }) {
                   <span>{ttT(kind === "janma" ? "atTimeBirth" : "atTime", lang)}<small>{ttT("optional", lang)}</small></span>
                   <window.ClockField value={time} onChange={onTime} lang={lang} />
                 </label>
+                <p className="fb-hint" style={{ margin: "8px 2px 0" }}>{ttT(kind === "janma" ? "atTimeBirthNote" : "atTimeNote", lang)}</p>
               </>
             )}
             <p className="fb-hint" style={{ margin: "8px 2px 12px" }}>{ttT("fromNote", lang)}{adhika ? " " + ttT("adhika", lang) : ""}</p>
@@ -380,7 +361,7 @@ function TithiSheet({ lang = "deva", rec, seedDate, onClose }) {
             <p className="fb-hint" style={{ margin: "8px 2px 0" }}>{ttT("noticeNote", lang)}</p>
             <div className="tt-actions">
               {editing && <button className="dana-later" onClick={del}>{ttT("del", lang)}</button>}
-              <button className="dana-cta" onClick={save} disabled={!nameText}>{ttT("save", lang)}</button>
+              <button className="dana-cta" onClick={save} disabled={!nm.roman.trim()}>{ttT("save", lang)}</button>
             </div>
           </div>
         </div>

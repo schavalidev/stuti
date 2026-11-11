@@ -104,13 +104,8 @@ document.getElementById("themeBtn").addEventListener("click",function(){
   window.SITE_SETTHEME(root.getAttribute("data-theme")==="night"?"day":"night");
 });
 
-if("IntersectionObserver" in window){
-  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add("in");io.unobserve(e.target);}});},{threshold:0.12,rootMargin:"0px 0px -6% 0px"});
-  document.querySelectorAll(".reveal").forEach(function(el){io.observe(el);});
-}else{
-  /* no observer on this browser — never leave the words hidden */
-  document.querySelectorAll(".reveal").forEach(function(el){el.classList.add("in");});
-}
+var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add("in");io.unobserve(e.target);}});},{threshold:0.12,rootMargin:"0px 0px -6% 0px"});
+document.querySelectorAll(".reveal").forEach(function(el){io.observe(el);});
 /* this file is last on every page, so by now each page has registered what it
    redraws — a remembered script that is not the authored one gets one pass,
    or a returning Telugu reader meets Roman until they touch the pill */

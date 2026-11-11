@@ -158,6 +158,85 @@
 .cp-pin{width:5px;height:5px;border-radius:50%;background:var(--ink);box-shadow:0 0 0 1.5px var(--surface)}
 .cp-dial.live{border-color:var(--accent-ink)}
 .sky .cp-dial{background:var(--surface);border-color:var(--gold);box-shadow:inset 0 0 0 2px var(--surface-2),0 1px 3px rgba(0,0,0,.28)}
+/* the chosen tīrtha's needle: a gold pointer from the pin to the rim, turned
+   inside the ring so the heading it already carries is not applied twice */
+.cp-aim{position:absolute;left:50%;top:50%;width:0;height:0;margin-left:-3px;border-left:3px solid transparent;border-right:3px solid transparent;border-bottom:15px solid var(--gold);transform-origin:50% 100%;margin-top:-15px}
+/* ---------- the tīrtha sheet (opened from the dial) ---------- */
+.cp-sheet{gap:0}
+.cp-sw{margin-top:12px}
+.cp-sw-v{flex:none;font-variant-numeric:tabular-nums;color:var(--ink-soft);font-size:0.875rem}
+.cp-note{padding:12px 2px 2px;font-size:0.9375rem;line-height:1.45;color:var(--ink-soft);text-wrap:pretty}
+.cp-find{display:flex;align-items:center;gap:6px;margin:10px 0 2px;background:var(--surface-2);border:1px solid var(--line);border-radius:999px;padding:0 6px 0 14px}
+.cp-find input{flex:1;min-width:0;font:inherit;font-size:0.9375rem;background:none;border:0;outline:none;color:var(--ink);min-height:42px}
+.cp-find button{flex:none;width:30px;height:30px;border-radius:50%;background:var(--surface);color:var(--ink-soft);font-size:1.0625rem;line-height:1}
+.cp-list{gap:0}
+.cp-row{display:flex;align-items:center;gap:12px;width:100%;text-align:left;padding:11px 2px;border-bottom:1px solid var(--line-2);color:var(--ink)}
+.cp-row:last-child{border-bottom:none}
+.cp-row.on{color:var(--accent-ink)}
+.cp-row-nm{flex:1;min-width:0;font-size:1.0625rem;line-height:1.3}
+.cp-row-m{flex:none;display:flex;flex-direction:column;align-items:flex-end;gap:1px}
+.cp-row-m b{font-weight:600;font-size:0.9375rem;font-variant-numeric:tabular-nums}
+.cp-row-m i{font-style:normal;font-size:0.8125rem;color:var(--ink-soft)}
+/* a dial the size of a bead: the rim, and one needle on the bearing */
+.cp-mini{position:relative;flex:none;width:26px;height:26px;border-radius:50%;border:1px solid var(--line);background:var(--surface-2)}
+.cp-row.on .cp-mini{border-color:var(--gold)}
+/* ---------- the reciter's own temples ---------- */
+.cp-tpl{display:flex;align-items:center;gap:10px;padding:10px 2px;border-bottom:1px solid var(--line-2)}
+.cp-tpl-nm{flex:1;min-width:0;font-size:1.0625rem;color:var(--ink)}
+.cp-tpl-d{flex:none;font-size:0.8125rem;color:var(--ink-soft)}
+.cp-tpl-x{flex:none;width:28px;height:28px;border-radius:50%;background:var(--surface-2);color:var(--ink-soft);font-size:1.0625rem;line-height:1}
+.cp-tpl-add{width:100%;margin-top:10px;min-height:46px;border-radius:999px;border:1px dashed var(--line);background:var(--surface-2);color:var(--accent-ink);font-size:0.9375rem;font-weight:600}
+.cp-tpl-say{padding:9px 2px 2px;font-size:0.875rem;line-height:1.45;color:var(--ink-soft);text-wrap:pretty}
+.cp-tpl-form{display:flex;flex-direction:column;gap:9px;margin-top:11px}
+.cp-tpl-in{width:100%;min-height:46px;padding:0 14px;font:inherit;font-size:0.9375rem;color:var(--ink);background:var(--surface-2);border:1px solid var(--line);border-radius:var(--r-sm,12px)}
+.cp-tpl-acts{display:flex;gap:9px}
+.cp-tpl-ok{flex:1;min-height:46px;border-radius:999px;background:var(--accent);color:#fff;font-weight:600;font-size:0.9375rem}
+[data-theme="night"] .cp-tpl-ok{color:#1b150d}
+.cp-tpl-ok:disabled{opacity:.45}
+.cp-tpl-no{flex:none;min-height:46px;padding:0 18px;border-radius:999px;background:var(--surface-2);border:1px solid var(--line);color:var(--ink-soft);font-size:0.9375rem}
+/* the at-a-temple card: absent far more often than present */
+.tpl-card{margin:0 0 16px;padding:16px 18px 14px;background:var(--surface);border:1px solid var(--line);border-radius:20px;box-shadow:var(--shadow-sm)}
+.tpl-card-nm{margin:5px 0 0;font-family:var(--font-display);font-size:1.5rem;line-height:1.25;color:var(--ink)}
+.tpl-card-d{margin-top:2px;font-size:0.9375rem;color:var(--ink-soft)}
+.tpl-card-acts{display:flex;flex-wrap:wrap;gap:8px;margin-top:13px}
+.tpl-card-go,.tpl-card-more,.tpl-card-prad{min-height:40px;padding:0 15px;border-radius:999px;font-size:0.9063rem;background:var(--surface-2);border:1px solid var(--line);color:var(--ink)}
+.tpl-card-prad{background:var(--accent-soft);border-color:transparent;color:var(--accent-ink);font-weight:600}
+.tpl-card-src{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin-top:11px;padding-top:9px;border-top:1px solid var(--line-2);font-size:0.75rem;color:var(--ink-faint)}
+.tpl-card-src button{font:inherit;font-size:0.75rem;color:var(--accent-ink);font-weight:600;text-decoration:underline}
+.cp-mini-n{position:absolute;left:50%;top:50%;width:0;height:0;margin-left:-2.5px;margin-top:-11px;border-left:2.5px solid transparent;border-right:2.5px solid transparent;border-bottom:11px solid var(--accent-ink);transform-origin:50% 100%;transition:transform .25s ease-out}
+.cp-row.on .cp-mini-n{border-bottom-color:var(--gold)}
+/* the sun is a disc at the rim, not a needle: it is a body standing in a
+   direction, and the eye should not read it as something chosen or aimed at */
+.cp-sun{position:absolute;inset:0;transform-origin:50% 50%;pointer-events:none;transition:transform .25s ease-out}
+.cp-sun::after{content:"";position:absolute;left:50%;top:2.5px;width:5px;height:5px;margin-left:-2.5px;border-radius:50%;background:var(--accent);box-shadow:0 0 0 1px var(--surface),0 0 3px 1px var(--accent-soft)}
+.cp-mini-s{position:absolute;inset:0;transform-origin:50% 50%;transition:transform .25s ease-out}
+.cp-mini-s::after{content:"";position:absolute;left:50%;top:2px;width:5px;height:5px;margin-left:-2.5px;border-radius:50%;background:var(--accent);box-shadow:0 0 0 1px var(--surface-2)}
+/* ---------- the rites, the sun and the pradakṣiṇā count ---------- */
+/* each block in the sheet carries its own caption, since the sheet now
+   answers more than one question */
+.cp-cap{padding:18px 2px 6px;font-size:0.8125rem;letter-spacing:.06em;text-transform:uppercase;color:var(--ink-faint);font-family:var(--font-ui);font-weight:600}
+/* a reference row, not a choice: the pointer and the pressed state would
+   promise a tap that does nothing */
+.cp-rite{cursor:default}
+.cp-prad{padding:4px 2px 2px}
+.cp-prad-top{display:flex;align-items:center;justify-content:space-between;gap:12px}
+.cp-prad-n{font-size:2rem;line-height:1;font-weight:600;font-variant-numeric:tabular-nums;color:var(--ink)}
+.cp-prad-n span{font-size:1.0625rem;font-weight:400;color:var(--ink-soft)}
+.cp-prad-acts{flex:none;display:flex;align-items:center;gap:8px}
+.cp-prad-go{min-height:var(--tap);padding:0 16px;border-radius:999px;border:1px solid var(--line);background:var(--surface-2);color:var(--ink);font-size:0.9375rem;font-weight:600}
+.cp-prad-go.on{background:var(--accent-soft);border-color:var(--accent);color:var(--accent-ink)}
+.cp-prad-rs{min-height:var(--tap);padding:0 12px;border-radius:999px;background:none;color:var(--ink-soft);font-size:0.9375rem}
+/* the partial turn: one bar filling once round, so a glance says how much of
+   the present circuit is walked */
+.cp-prad-bar{position:relative;height:4px;margin:12px 0 2px;border-radius:2px;background:var(--line);overflow:hidden}
+.cp-prad-bar span{position:absolute;left:0;top:0;bottom:0;border-radius:2px;background:var(--gold);transition:width .25s ease-out}
+.cp-prad-tg{display:flex;align-items:center;gap:8px;padding:10px 0 2px;flex-wrap:wrap}
+.cp-prad-tg>span{font-size:0.875rem;color:var(--ink-soft)}
+.cp-tg{min-width:38px;min-height:32px;padding:0 10px;border-radius:999px;border:1px solid var(--line);background:var(--surface-2);color:var(--ink-soft);font-size:0.9375rem;font-variant-numeric:tabular-nums}
+.cp-tg.on{border-color:var(--gold);background:var(--surface);color:var(--accent-ink);font-weight:600}
+.cp-prad-done{padding:8px 0 0;font-size:0.9375rem;font-weight:600;color:var(--accent-ink)}
+.cp-prad-on{width:100%;min-height:46px;margin-top:4px;border-radius:999px;background:var(--accent-soft);border:1px solid transparent;color:var(--accent-ink);font-size:0.9375rem;font-weight:600}
+.cp-prad-say{padding:8px 0 2px;font-size:0.8125rem;line-height:1.45;color:var(--ink-faint);text-wrap:pretty}
 .loc-scrim { position: fixed; inset: 0; z-index: 39; }
 .locctl .loc-menu {
   position: absolute; top: calc(100% + 8px); right: 0; z-index: 40;
@@ -258,7 +337,7 @@
 [data-theme="night"] .niche-pic .niche-img--circle { box-shadow: 0 0 0 1.5px var(--frame-c), 0 0 0 3px color-mix(in oklab, var(--accent) 55%, transparent); }
 /* a niche with no painting: the headword typeset on the glass, above the name
    plate, sitting where the image would be rather than pretending to be one */
-.niche-pic .niche-word { position: absolute; left: 50%; top: 50%; width: 86%; display: flex; align-items: center; justify-content: center; padding: 0 6%; box-sizing: border-box; transform: translate(calc(-50% + var(--mx, 0) * -7px), calc(-50% + var(--my, 0) * -7px)) scale(var(--zoom, 1)); transition: transform 420ms cubic-bezier(.2,.7,.2,1); text-align: center; font-size: 1.375rem; line-height: 1.25; color: color-mix(in oklab, var(--accent-ink) 82%, #3A2A18); text-wrap: balance; }
+.niche-pic .niche-word { position: absolute; left: 50%; top: 50%; width: 78%; aspect-ratio: 1 / 1; border-radius: 50%; display: flex; align-items: center; justify-content: center; padding: 0 10%; box-sizing: border-box; background: #FCF7EF; transform: translate(calc(-50% + var(--mx, 0) * -7px), calc(-56% + var(--my, 0) * -7px)) scale(var(--zoom, 1)); transition: transform 420ms cubic-bezier(.2,.7,.2,1); text-align: center; font-size: 1.25rem; line-height: 1.2; color: color-mix(in oklab, var(--accent-ink) 82%, #3A2A18); text-wrap: balance; box-shadow: 0 0 0 1.5px var(--frame-c), 0 0 0 3px color-mix(in oklab, var(--accent) 55%, transparent); }
 .gtile-niche.is-tilt .niche-word { --zoom: 1.04; transition-duration: 120ms; }
 /* the name sits on a cream plate rising out of the painting's own ground.
    Dark ink in both themes: the tile is a lit painting, not part of the wall. */
@@ -600,7 +679,7 @@
 .reader-topbar { background: var(--bg-warm); }
 [data-theme="night"] .reader-topbar { background: #241C10; }
 .rd-parts { background: var(--bg-warm); margin: 0; }
-.reader .reciter { background: var(--surface); position: relative; z-index: 3; box-shadow: 0 -22px 46px -24px rgba(40,25,8,0.6), 0 -1px 0 color-mix(in oklab, var(--accent) 18%, var(--line)); }
+.reader .reciter { background: var(--surface); box-shadow: 0 -22px 46px -24px rgba(40,25,8,0.6), 0 -1px 0 color-mix(in oklab, var(--accent) 18%, var(--line)); }
 .reader-topbar { align-items: center; gap: 6px; padding: 12px 12px 8px; }
 .reader-topbar .icon-btn, .reader-topbar .fav-btn { width: 42px; min-width: 42px; height: 44px; border-radius: 999px; }
 .reader-topbar-title { flex: 1; text-align: left; padding-top: 7px; min-width: 0; overflow: hidden; }
@@ -681,7 +760,22 @@
 .nm-mean { font-size: calc(0.9063rem * var(--rd-scale, 1) * var(--rd-fit, 1)); color: var(--ink-soft); margin-top: 5px; line-height: 1.5; text-wrap: pretty; }
 .nm-empty { padding: 40px 0; text-align: center; color: var(--ink-faint); }
 .verse-lines { display: flex; flex-direction: column; gap: 4px; }
-.line { text-align: center; padding: 12px 8px; border-radius: 14px; cursor: pointer; transition: opacity var(--med) var(--ease), transform var(--med) var(--ease); }
+.line { text-align: center; padding: 7px 8px; border-radius: 14px; cursor: pointer; transition: opacity var(--med) var(--ease), transform var(--med) var(--ease); }
+/* Vedic svara. The colour is in the font, not here: a combining mark is painted with
+   its base run's colour, so no span can tint the mark alone, and tinting the whole
+   akṣara made the accent read as a vowel sign. The faces carry COLR/CPAL and the
+   colours are supplied below by @font-palette-values in stuti.css. The .svara span
+   that stuti-reader still emits now only carries the cluster reordering; it sets no
+   colour. See tools/fonts-vedic.py. */
+.rd-vedic .line-deva, .rd-vedic .line-telugu { font-palette: --svara; }
+[data-theme="night"] .rd-vedic .line-deva, [data-theme="night"] .rd-vedic .line-telugu,
+.night .rd-vedic .line-deva, .night .rd-vedic .line-telugu { font-palette: --svara-night; }
+/* accented Vedic texts read in a face that positions the svara marks properly */
+.rd-vedic .line-deva { font-family: var(--font-deva-vedic); }
+.rd-vedic .line-telugu { font-family: var(--font-telugu-vedic); }
+/* a pāda the source broke mid-word with a hyphen continues on the next line —
+   pull it up so the broken word reads as one, not as a paragraph break */
+.line.line-cont, .flow-line.line-cont { margin-top: -13px; padding-top: 0; }
 .line-deva { font-family: var(--font-deva-read); word-spacing: 0.18em; font-size: calc(38px * var(--rd-scale, 1) * var(--rd-fit, 1)); line-height: 1.62; color: var(--ink); transition: color var(--med); }
 .line-iast { font-family: var(--font-display); font-size: calc(17px * var(--rd-scale, 1) * var(--rd-fit, 1)); color: var(--ink-soft); margin-top: 6px; font-style: normal; }
 .line-iast-lead { font-family: var(--font-display); font-size: calc(26px * var(--rd-scale, 1) * var(--rd-fit, 1)); line-height: 1.5; color: var(--ink); font-style: normal; transition: color var(--med); }
@@ -1206,8 +1300,6 @@ select.sk-input {
 .parva-card.is-eve .parva-k{color:var(--ink-faint)}
 .parva-card.is-eve .parva-n{font-size:1.125rem}
 .parva-card .parva-chev{color:var(--ink-faint);flex:none;display:flex}
-.parva-x{position:absolute;top:6px;right:6px;z-index:3;width:32px;height:32px;display:grid;place-items:center;border:0;background:none;border-radius:50%;color:var(--ink-faint);cursor:pointer}
-.parva-x:active{background:color-mix(in oklab,var(--ink) 8%,transparent)}
 .parva-body{flex:1;min-width:0;display:flex;flex-direction:column;gap:2px}
 .parva-k{font-size:.72rem;letter-spacing:.2em;text-transform:uppercase;font-weight:700;color:var(--accent-ink)}
 [data-ui-lang="telugu"] .parva-k,[data-ui-lang="deva"] .parva-k{letter-spacing:0;font-size:.9rem}
@@ -1251,22 +1343,8 @@ select.sk-input {
 .ta-line{display:flex;justify-content:space-between;gap:10px;padding-top:8px;font-size:.8125rem;color:var(--ink-faint)}
 .ta-line b{color:var(--ink);font-weight:500}
 .ta-go{align-self:flex-start;margin-top:4px;padding:7px 12px;border-radius:999px;border:1px solid var(--line);background:var(--bg);color:var(--accent-ink);font-size:.8125rem}
-.ta-tasks{margin-top:8px;padding-top:10px;border-top:1px solid var(--line-2)}
-.ta-tasks-cap{display:flex;align-items:baseline;justify-content:space-between;gap:10px;margin-bottom:6px}
-.ta-tasks-cap>span{font-size:.75rem;letter-spacing:.04em;text-transform:uppercase;color:var(--accent-ink)}
-.ta-tasks-cap>small{font-size:.75rem;color:var(--ink-faint)}
-.ta-tasklist{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:2px}
-.ta-task>button{display:flex;align-items:flex-start;gap:10px;width:100%;padding:6px 2px;text-align:left;color:var(--ink)}
-.ta-box{flex:none;width:17px;height:17px;margin-top:1px;display:grid;place-items:center;border:1.5px solid color-mix(in oklab,var(--ink) 30%,var(--line));border-radius:5px;color:var(--bg);background:var(--bg)}
-.ta-task.on .ta-box{background:var(--accent-ink);border-color:var(--accent-ink)}
-.ta-task-text{font-size:.875rem;line-height:1.45;color:var(--ink-soft)}
-.ta-task.on .ta-task-text{color:var(--ink-faint);text-decoration:line-through}
 .tt-row{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:10px;margin-top:12px}
 .tt-row .acc-field{margin-top:0}
-/* the date field opens its calendar inline; in the two-up row it would have
-   only half the width and spill over the place field beside it, so the row
-   folds to one column while the calendar is open and the place drops below */
-.tt-row:has(.daypick-pop-down){grid-template-columns:1fr}
 .tt-clock{display:flex;align-items:center;gap:8px}
 .tt-clock select{min-height:48px;padding:0 10px;border-radius:var(--r-sm);border:1px solid var(--line);background:var(--bg);color:var(--ink);font-family:var(--font-ui);font-size:1rem}
 .tt-clock>span{color:var(--ink-faint)}
@@ -2521,27 +2599,6 @@ button.lg-bar{background:none}
 .vow-commit{width:100%;margin-top:26px;display:inline-flex;align-items:center;justify-content:center;gap:9px;background:var(--accent);color:var(--surface);border:0;border-radius:999px;padding:14px 22px;font-family:var(--font-ui);font-size: 1rem;font-weight:600;cursor:pointer;box-shadow:var(--shadow-sm)}
 .vow-commit[disabled]{opacity:.45;pointer-events:none}
 
-/* ---------- Mokkulu lens ---------- */
-.mk .vows-title{color:var(--accent-ink)}
-.mk-glyph{flex:none;width:36px;height:36px;border-radius:50%;display:grid;place-items:center;background:var(--accent-soft);border:1px solid var(--line);color:var(--accent-ink)}
-.mk-pledge{font-size:1.0625rem;line-height:1.4;color:var(--ink);margin:3px 0 2px;text-wrap:pretty}
-.mk-wish{font-size: 0.875rem;line-height:1.5;color:var(--ink-soft);margin:0 0 3px;text-wrap:pretty}
-.mk-by{color:var(--accent-ink);font-weight:600}
-.mk-row.kept{opacity:.72}
-.mk-row.kept .mk-pledge{color:var(--ink-soft)}
-.mk-row .vow-occ{font-size: 0.8125rem;letter-spacing:.01em;color:var(--ink-soft)}
-.mk-reopen{width:auto;min-width:0;padding:6px 12px;border-radius:999px;display:inline-flex;align-items:center;gap:6px;font-size: 0.8125rem;color:var(--ink-soft)}
-.mk-reopen.vow-x{height:auto}
-.mk-kept-wrap{margin-top:16px}
-.mk-kept-head{width:100%;display:flex;align-items:center;justify-content:space-between;gap:10px;background:none;border:0;border-top:1px solid var(--line-2);padding:14px 2px 2px;font-family:var(--font-ui);font-size: 0.8125rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-faint);cursor:pointer}
-.mk-kept-head svg{transition:transform .18s ease}
-.mk-kept-head.open svg{transform:rotate(180deg)}
-.mk-kept-wrap .vows-list{margin-top:12px}
-.mk-text{width:100%;font-family:var(--font-ui);font-size: 1rem;line-height:1.5;color:var(--ink);background:var(--surface);border:1px solid var(--line);border-radius:13px;padding:11px 13px;resize:vertical;min-height:52px}
-.mk-text.mk-line{min-height:0;resize:none}
-.mk-text::placeholder{color:var(--ink-faint)}
-.mk-text:focus{outline:none;border-color:var(--accent)}
-
 /* ---------- Picker (replaces native selects) ---------- */
 .sel-field{display:flex;align-items:center;gap:10px;width:100%;background:var(--surface);border:1px solid var(--line);border-radius:13px;padding:12px 13px;font-family:var(--font-ui);font-size: 1rem;color:var(--ink);cursor:pointer;text-align:left;transition:border-color .16s ease,box-shadow .16s ease}
 .sel-field:hover{border-color:var(--accent)}
@@ -3021,6 +3078,24 @@ input:is([type="date"],[type="time"],[type="month"],[type="datetime-local"]) { a
 .mala-date.bad{border-color:color-mix(in oklab,var(--caution) 55%,var(--line))}
 .mala-bad{margin-top:10px;font-size: 0.8438rem;color:color-mix(in oklab,var(--caution) 62%,var(--ink))}
 
+/* ---------- The mālā counted with the eyes closed ----------
+   The screen stops being a page and becomes the bead, so nothing in here is
+   small, nothing is aimed at, and the only thing that is not a tap target is
+   the way out. */
+.japa-blind{position:fixed;inset:0;z-index:140;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:0;background:var(--surface);color:var(--ink);text-align:center;padding:calc(18px + env(safe-area-inset-top)) 18px calc(26px + env(safe-area-inset-bottom));touch-action:manipulation;-webkit-user-select:none;user-select:none;-webkit-tap-highlight-color:transparent;cursor:pointer}
+.japa-blind-x{position:absolute;top:calc(12px + env(safe-area-inset-top));right:14px;min-height:44px;padding:0 20px;border-radius:999px;background:var(--surface-2);border:1px solid var(--line);color:var(--accent-ink);font-weight:600;font-size:0.9375rem;cursor:pointer}
+.japa-blind-x:active{transform:scale(.97)}
+.japa-blind-body{display:flex;flex-direction:column;align-items:center;gap:2px;pointer-events:none}
+.japa-blind-count{font-size:clamp(5.5rem,34vw,11rem);line-height:1;color:var(--ink);font-variant-numeric:tabular-nums}
+.japa-blind-of{font-size:1.125rem;color:var(--ink-faint);letter-spacing:.06em}
+.japa-blind-malas{margin-top:14px;font-size:1.25rem;color:var(--accent-ink)}
+.japa-blind-sitting{margin-top:2px;font-size:0.9375rem;color:var(--ink-soft);font-variant-numeric:tabular-nums}
+.japa-blind-foot{position:absolute;left:18px;right:18px;bottom:calc(26px + env(safe-area-inset-bottom));display:flex;flex-direction:column;gap:5px;pointer-events:none}
+.japa-blind-hint{font-size:1rem;color:var(--ink-soft);text-wrap:pretty}
+.japa-blind-keys{font-size:0.8125rem;color:var(--ink-faint);line-height:1.45;text-wrap:pretty}
+.japa-blind-flash{position:absolute;top:12%;left:50%;transform:translateX(-50%);background:var(--accent);color:var(--surface);font-size:1rem;font-weight:600;letter-spacing:.04em;padding:9px 20px;border-radius:999px;white-space:nowrap;box-shadow:var(--shadow-sm);pointer-events:none}
+[data-theme="night"] .japa-blind-flash{color:#1b150d}
+
 /* ---------- What today asks (Nitya band) ---------- */
 .tb-card{background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:16px 16px 14px;display:flex;flex-direction:column;gap:2px}
 .tb-head{display:flex;align-items:baseline;justify-content:space-between;gap:12px;margin-bottom:4px}
@@ -3374,14 +3449,6 @@ input:is([type="date"],[type="time"],[type="month"],[type="datetime-local"]) { a
 .vr-dont .eyebrow{color:color-mix(in oklab,var(--caution) 55%,var(--ink-soft))}
 .vr-source{margin-top:22px;padding-top:14px;border-top:1px dashed var(--line);font-size: 0.7813rem;line-height:1.55;color:var(--ink-soft);text-wrap:pretty}
 .vr-source+.vr-prov{margin-top:8px;padding-top:0;border-top:0}
-.vr-kriya{margin-top:16px}
-.vr-kriya+.vr-kriya{margin-top:22px;padding-top:20px;border-top:1px solid var(--line-2)}
-.vr-kriya-act{font-size:0.8125rem;line-height:1.5;color:var(--ink-soft);text-wrap:pretty;margin-bottom:11px}
-.vr-kriya-verse{font-size:1.0625rem;line-height:1.9;color:var(--ink);padding:1px 0 3px 15px;border-left:2px solid color-mix(in oklab,var(--gold) 50%,transparent)}
-.vr-kriya-verse.tel{font-family:var(--font-telugu)}
-.vr-kriya-verse.deva{font-family:var(--font-deva)}
-.vr-kriya-mean{margin-top:12px;font-size:0.9375rem;line-height:1.62;color:var(--ink-soft);text-wrap:pretty}
-.vr-kriya-src{margin-top:8px;font-size:0.75rem;line-height:1.5;color:var(--ink-faint);text-wrap:pretty}
 
 /* ---------- the named Ekādaśī of the fortnight ---------- */
 .ek-named{padding:18px 20px;border-radius:var(--r-md);background:var(--accent-soft);border:1px solid color-mix(in oklab,var(--accent) 22%,transparent)}
@@ -3849,10 +3916,6 @@ button.set-row:active{transform:scale(.99)}
 .flow-line.fl-on { border-radius: 8px; }
 .flow-line.fl-on .line-deva, .flow-line.fl-on .line-telugu, .flow-line.fl-on .line-iast-lead { color: var(--accent-ink); }
 .flow-lit .flow-v:not(.fl-v-on), .flow-lit .ritual-band, .flow-lit .colophon, .flow-lit .reader-end, .flow-lit .flow-tail { opacity: 0.34; }
-/* recording is not a teleprompter — the reciter reads the whole page aloud, so
-   the page stays at full strength. The lit verse still carries its highlight;
-   the rest is no longer washed out. */
-.reader.is-recording .flow-lit .flow-v:not(.fl-v-on), .reader.is-recording .flow-lit .ritual-band, .reader.is-recording .flow-lit .colophon, .reader.is-recording .flow-lit .reader-end, .reader.is-recording .flow-lit .flow-tail { opacity: 1; }
 .flow-v.fl-v-on { background: var(--surface-2); border-radius: 20px; box-shadow: 0 1px 0 var(--line), 0 16px 34px -22px rgba(43,32,23,0.22); margin: 4px -2px; padding: 15px 14px 16px; border-bottom-color: transparent; }
 .flow-lit .flow-v.fl-v-on { background: var(--surface-2); }
 .flow-lit .flow-v.fl-v-on .flow-line:not(.fl-on), .flow-lit .flow-v.fl-v-on .flow-mean, .flow-lit .flow-v.fl-v-on .flow-n, .flow-lit .flow-v.fl-v-on .verse-sec, .flow-lit .flow-v.fl-v-on .verse-sec-sub, .flow-lit .flow-v.fl-v-on .verse-speaker { opacity: 0.55; }
@@ -3911,13 +3974,13 @@ button.set-row:active{transform:scale(.99)}
 @keyframes rdTopIn{from{transform:translateY(-100%)}to{transform:none}}
 /* line three — how it reads. Three controls, so the row can be centred and
    never needs to scroll. */
-.reader-layers.tight { justify-content: flex-start; padding: 6px 12px 8px; gap: 4px; background: var(--bg-warm); border-bottom: 1px solid var(--line-2); }
-.reader-layers.tight .chip { min-height: 30px; padding: 0 11px; font-size: calc(0.9375rem * var(--rd-scale, 1) * var(--rd-fit, 1)); gap: 5px; }
+.reader-layers.tight { justify-content: flex-start; padding: 8px 12px 10px; gap: 5px; background: var(--bg-warm); border-bottom: 1px solid var(--line-2); }
+.reader-layers.tight .chip { min-height: 38px; padding: 0 12px; font-size: calc(1.125rem * var(--rd-scale, 1) * var(--rd-fit, 1)); gap: 5px; }
 .reader-layers.tight .rd-view { padding: 2px; gap: 2px; }
 .rd-story-end { margin-left: auto; }
 /* the collapsed half is a glyph alone, so nothing but a floor keeps it a
    fingertip wide — its row has ~180px spare */
-.reader-layers.tight .rd-view-btn { height: 26px; min-width: 36px; padding: 0 9px; font-size: calc(0.9375rem * var(--rd-scale, 1) * var(--rd-fit, 1)); gap: 4px; justify-content: center; }
+.reader-layers.tight .rd-view-btn { height: 32px; min-width: 44px; padding: 0 10px; font-size: calc(1.125rem * var(--rd-scale, 1) * var(--rd-fit, 1)); gap: 5px; justify-content: center; }
 /* Both halves say their name. Hiding the unchosen one saved 39px of a row with
    144px to spare, and bought a wordless control on a header where three other
    glyphs are also wordless — the book already meant Learn one row up and कथा one
@@ -4162,8 +4225,7 @@ button.set-row:active{transform:scale(.99)}
 /* the names glossary at the end of the parts row, against the right edge */
 .rd-parts { align-items: center; }
 .rd-parts .icon-btn.rd-parts-end { position: absolute !important; right: 12px; top: 50%; transform: translateY(-50%); margin: 0; width: 40px; height: 40px; min-width: 40px; }
-.rd-parts .icon-btn.rd-parts-start { position: absolute !important; left: 12px; top: 50%; transform: translateY(-50%); margin: 0; width: 40px; height: 40px; min-width: 40px; }
-.rd-parts:has(.rd-parts-end), .rd-parts:has(.rd-parts-start) { padding-right: 60px; padding-left: 60px; }
+.rd-parts:has(.rd-parts-end) { padding-right: 60px; padding-left: 60px; }
 
 /* voice search */
 .voice-btn { flex: none; width: 34px; height: 34px; min-height: 0; border-radius: 50%; display: grid; place-items: center; color: var(--ink-soft); background: none; border: 0; cursor: pointer; transition: background var(--fast), color var(--fast), transform var(--fast); }

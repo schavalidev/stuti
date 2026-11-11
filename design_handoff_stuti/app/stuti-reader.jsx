@@ -130,18 +130,6 @@ function lineDwell(line) {
   const n = src.split(/\s+/).filter(isWordTok).map(sylWeight).reduce((a, b) => a + b, 0) || 1;
   return Math.max(1400, Math.min(12000, Math.round(n * MS_PER_SYLLABLE)));
 }
-/* the glide's own weight — like lineDwell, but a long conjunct compound costs
-   more per letter than the same letters broken into short words, so a dense
-   passage holds the scroll longer than a plain one of equal height, and a
-   heavier text scrolls slower than a light one. Recitation and the word-light
-   keep lineDwell; this is for the page's pace alone. */
-function lineGlideDwell(line) {
-  const src = ((line && line.iast) || (line && line.deva) || "").normalize("NFC");
-  const toks = src.split(/\s+/).filter(isWordTok);
-  let n = 0;
-  for (const t of toks) { const lenF = 1 + Math.min(1.4, Math.max(0, (t.length - 7) / 7)); n += sylWeight(t) * lenF; }
-  return Math.max(1400, Math.min(16000, Math.round((n || 1) * MS_PER_SYLLABLE)));
-}
 const isWordTok = (t) => /[\p{L}]/u.test(t);
 function countWords(t) { return (t || "").split(/\s+/).filter(isWordTok).length; }
 /* syllable weight of one word, script-aware — a long compound holds the light
@@ -164,6 +152,30 @@ function wordDurations(text, total) {
 
 /* karaoke word run — lights each word as the recitation reaches it, so the
    reciter can follow along and learn word by word */
+/* Vedic svara marks (॑ ॒ ᳚ …) are combining marks stacked on a base akṣara;
+   a bare mark cannot be recoloured without detaching, so the accented akṣara
+   (base + its marks) is wrapped whole and tinted, lighting up every accented
+   syllable. See .svara in stuti-components.css. */
+const SVARA = /[̠̥̀́̍̎̐̑॑-॔᳐-᳿꣡-꣱]/;
+const COMB = /[̠̥̀́̍̎̐̑ऀ-ःऺ-ॏ॑-॔ॢॣ᳐-᳿‌‍꣠-ꣿఀ-ఄా-ౖౢౣ]/;
+// Devanāgarī shaping needs the marks of an akṣara in a fixed order: matra, then the
+// spacing mark (anusvāra/visarga), then the Vedic tone mark. A source that writes the tone
+// before the visarga (त॑ + ः) makes every font emit a dotted circle, so reorder each cluster.
+const SPACING_MARK = /[ऀ-ः]/;
+function orderCluster(c) {
+  if (c.length < 3) return c;
+  const a = [...c];
+  const marks = a.slice(1).sort((x, y) =>
+    (SPACING_MARK.test(x) ? 1 : SVARA.test(x) ? 2 : 0) -
+    (SPACING_MARK.test(y) ? 1 : SVARA.test(y) ? 2 : 0));
+  return a[0] + marks.join("");
+}
+function svaraSplit(tok) {
+  if (typeof tok !== "string" || !SVARA.test(tok)) return tok;
+  const cl = [];
+  for (const ch of tok) { if (cl.length && COMB.test(ch)) cl[cl.length - 1] += ch; else cl.push(ch); }
+  return cl.map((c0, i) => { const c = orderCluster(c0); return SVARA.test(c) ? <span key={i} className="svara">{c}</span> : c; });
+}
 function WordRun({ text, upto, lit, onWord }) {
   let wi = -1;
   return (
@@ -175,7 +187,7 @@ function WordRun({ text, upto, lit, onWord }) {
         const idx = wi;
         const cls = !lit ? "w" : idx < upto ? "w w-read" : idx === upto ? "w w-now" : "w w-next";
         return <span key={i} className={cls + (onWord ? " w-tap" : "")}
-          onClick={onWord ? (e) => { e.stopPropagation(); onWord(idx); } : undefined}>{tok}</span>;
+          onClick={onWord ? (e) => { e.stopPropagation(); onWord(idx); } : undefined}>{svaraSplit(tok)}</span>;
       })}
     </React.Fragment>
   );
@@ -358,7 +370,10 @@ function DeityView({ deity, go, lang = "deva", showFormCounts = true, defaultFor
   });
   const rank = t => { const i = typeOrder.indexOf(t); return i < 0 ? 99 : i; };
   groups.sort((a, b) => rank(a.type) - rank(b.type));
-  groups.forEach(g => g.rows.sort((a, b) => (a.catalog ? 1 : 0) - (b.catalog ? 1 : 0)));
+  /* declared `sort` first (decoupled from the id number, so the adhyāyas read
+     in order), then texts with their own verses before catalogue-only ones */
+  groups.forEach(g => g.rows.sort((a, b) =>
+    ((a.sort == null ? 1e9 : a.sort) - (b.sort == null ? 1e9 : b.sort)) || ((a.catalog ? 1 : 0) - (b.catalog ? 1 : 0))));
 
   const section = t => {
     const lab = (LIB && LIB.TYPE_LABELS && LIB.TYPE_LABELS[t]) || null;
@@ -412,8 +427,9 @@ function DeityView({ deity, go, lang = "deva", showFormCounts = true, defaultFor
   const entry = (h) => {
     const no = folio(++n);
     const cfgParts = !h.catalog && hymnParts(h);
+    const sibs = (window.STUTI_LIB && window.STUTI_LIB.siblingsOf) ? window.STUTI_LIB.siblingsOf(h) : [];
     return (
-      <div key={h.id} className={"gs-en-wrap" + (cfgParts ? " has-sub" : "")}>
+      <div key={h.id} className={"gs-en-wrap" + ((cfgParts || sibs.length) ? " has-sub" : "")}>
         <div className={"gs-en" + (h.catalog ? " soon" : "")}>
           <button className="gs-main" onClick={() => go("reader", { hymn: h.id, deity: deity.id, from: "deity", ret: backView })}>
             <span className="gs-no" style={{ fontFamily: indexFont }}>{no}</span>
@@ -438,7 +454,7 @@ function DeityView({ deity, go, lang = "deva", showFormCounts = true, defaultFor
               <div key={p.key} className="gs-sub-row">
                 <button className="gs-sub" onClick={() => openAt(h, p.at)}>
                   <span className="gs-sub-mark" />
-                  <span className="gs-sub-t" style={{ fontFamily: indexFont }}>{L.t(PART_LABEL[p.key], lang)}</span>
+                  <span className="gs-sub-t" style={{ fontFamily: indexFont }}>{L.t(p.label || PART_LABEL[p.key], lang)}</span>
                   <span className="gs-dl" />
                   {badge && <span className="gs-sub-badge">{badge}</span>}
                 </button>
@@ -448,6 +464,22 @@ function DeityView({ deity, go, lang = "deva", showFormCounts = true, defaultFor
               </div>
             );
             })}
+          </div>
+        )}
+        {sibs.length > 0 && (
+          <div className="gs-sub-list">
+            <div className="gs-sub-row" style={{ opacity: 0.55 }}>
+              <span className="gs-sub-t" style={{ fontFamily: indexFont }}>{L.t("otherRecensions", lang)}</span>
+            </div>
+            {sibs.map(s => (
+              <div key={s.id} className="gs-sub-row">
+                <button className="gs-sub" onClick={() => go("reader", { hymn: s.id, deity: s.deity || deity.id, from: "deity", ret: backView })}>
+                  <span className="gs-sub-mark" />
+                  <span className="gs-sub-t" style={{ fontFamily: indexFont }}>{hymnTitle(s, lang)}</span>
+                  <span className="gs-dl" />
+                </button>
+              </div>
+            ))}
           </div>
         )}
       </div>
@@ -497,7 +529,7 @@ function DeityView({ deity, go, lang = "deva", showFormCounts = true, defaultFor
               <React.Fragment key={g.type}>
                 <button className={"gs-sec gs-sec-btn" + (shut ? " shut" : "")} onClick={() => toggleFold(g.type)} aria-expanded={!shut}>
                   <span className="gs-sec-caret" aria-hidden="true" />
-                  <span className="gs-sec-name">{s.name}{s.note ? <React.Fragment> · <span className="gs-sec-note">{s.note}</span></React.Fragment> : null}</span>
+                  <span className="gs-sec-name">{s.name}</span>
                   <span className="gs-sec-n">{g.rows.length}</span>
                 </button>
                 {shut ? null : g.rows.map(entry)}
@@ -517,16 +549,39 @@ function DeityView({ deity, go, lang = "deva", showFormCounts = true, defaultFor
 function hymnParts(hymn) {
   const V = hymn.verses || [], S = hymn.sections || [];
   if (!/sahasran/i.test((hymn.title || "").normalize("NFD").replace(/[\u0300-\u036f]/g, ""))) return null;
+  // before the text is fetched there are no verses to inspect \u2014 use the split
+  // the build precomputed into the catalogue (docs/corpus-presentation.md)
+  if (!V.length && hymn.parts) return hymn.parts;
   const roman = v => ((S[v.s] || {}).roman || "");
   let nama = V.findIndex(v => v.nama || /thousand names|st[oō]tram|n[aā]m[aā]vali/i.test(roman(v)));
   if (nama <= 0) return null;
   let uttara = V.findIndex((v, i) => i > nama && /uttara|phalaśruti|fruits of recitation/i.test(roman(v) + " " + ((S[v.s] || {}).tel || "")));
   if (uttara < 0) return null;
   return [
-    { key: "purva",   at: 0 },
+    { key: "purva",   at: 0, label: purvaLabel(V, S, nama) },
     { key: "stotram", at: nama },
     { key: "uttara",  at: uttara },
   ];
+}
+
+/* What to call the movement before the names. Not every sahasranāma has a
+   pūrvapīṭhikā: eleven of them open straight into a viniyoga and a dhyāna, and
+   calling that a pūrvapīṭhikā names a frame story the text does not have. So the
+   opening is labelled for whatever is actually in it. Mirrors parts_of() in
+   stotras/bin/build_corpus.py — kept in step with it. */
+function purvaLabel(V, S, nama) {
+  const seen = new Set();
+  for (let i = 0; i < nama; i++) {
+    const r = ((S[V[i].s] || {}).roman || "").normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase();
+    if (/purva/.test(r)) return "gsPurva";          /* a real frame — keep the old name */
+    if (/viniyoga/.test(r)) seen.add("viniyoga");
+    else if (/nyasa/.test(r)) seen.add("viniyoga"); /* the nyāsas belong to the viniyoga */
+    else if (/dhyana/.test(r)) seen.add("dhyanam");
+  }
+  if (seen.has("viniyoga") && seen.has("dhyanam")) return "gsViniyogaDhyana";
+  if (seen.has("dhyanam")) return "dhyanam";
+  if (seen.has("viniyoga")) return "viniyoga";
+  return "gsPurva";
 }
 
 /* A section's "add to recitation" toggle. Sahasranāmāvali is the text's core
@@ -736,15 +791,6 @@ function ReaderView({ hymn: rawHymn, deity, go, theme, toggleTheme, lang, setLan
     return (window.STUTI_NITYA_AUTO && window.STUTI_NITYA_SPEED) || (Number.isFinite(saved) ? saved : 1);
   });
   const [speedOpen, setSpeedOpen] = useState(false);
-  const reciterRef = useRef(null);
-  /* the speed strip dismisses the way a phone expects: touch anywhere off it,
-     or start scrolling the text, and it closes — the pill is not the only exit */
-  useEffect(() => {
-    if (!speedOpen) return;
-    const away = e => { if (!reciterRef.current || !reciterRef.current.contains(e.target)) setSpeedOpen(false); };
-    document.addEventListener("pointerdown", away, true);
-    return () => document.removeEventListener("pointerdown", away, true);
-  }, [speedOpen]);
   const [loopMode, setLoopMode] = useState("off"); // off | all | verse (verse = drill one verse)
   /* ---- nitya parayana queue: after this stotra ends, count down and open the next ---- */
   const nq = window.STUTI_NITYA_Q;
@@ -819,35 +865,6 @@ function ReaderView({ hymn: rawHymn, deity, go, theme, toggleTheme, lang, setLan
     [occText, occId, hymn.id]
   );
   const pickOcc = (id) => { setOccId(id); window.toTarpanaWrite(id); setOccAsk(false); };
-
-  /* ---- the device Back button, over a reader sheet ----
-     The reader stacks many sheets over the text; a Back press should shut the
-     open one, not leave the reader. One guard stands for them all: while any
-     sheet is open it registers a closer, and the closer shuts whichever is
-     open, innermost first. The screen stays put — the app's popstate handler
-     cancels the move whenever this guard takes the press. */
-  const anySheet = !!(pada || occAsk || limAsk || fbOpen || shareOpen || storyOpen || namaluOpen || namesOpen || regOpen !== null || speedOpen || findOpen || (panelOpen && !panelPin));
-  const closeTopSheet = () => {
-    if (pada) return setPada(null);
-    if (occAsk) return setOccAsk(false);
-    if (limAsk) return setLimAsk(false);
-    if (fbOpen) return setFbOpen(false);
-    if (shareOpen) return setShareOpen(false);
-    if (storyOpen) return setStoryOpen(false);
-    if (namaluOpen) return setNamaluOpen(false);
-    if (namesOpen) return setNamesOpen(false);
-    if (regOpen !== null) return setRegOpen(null);
-    if (speedOpen) return setSpeedOpen(false);
-    if (findOpen) return setFindOpen(false);
-    if (panelOpen && !panelPin) return setPanelOpen(false);
-  };
-  /* re-register whenever the open set changes, so the closer always holds the
-     latest state and a sheet stacked over another is still closed innermost-first */
-  const sheetKey = [pada ? 1 : 0, occAsk, limAsk, fbOpen, shareOpen, storyOpen, namaluOpen, namesOpen, regOpen !== null, speedOpen, findOpen, panelOpen && !panelPin].join(",");
-  useEffect(() => {
-    if (!anySheet || !window.STUTI_BACKSTOP) return;
-    return window.STUTI_BACKSTOP.push(closeTopSheet);
-  }, [sheetKey]);
 
   // Flatten every verse into a single sequence of recitable lines.
   const ritualSet = window.STUTI_RITUAL ? window.STUTI_RITUAL(hymn) : null;
@@ -1083,6 +1100,9 @@ function ReaderView({ hymn: rawHymn, deity, go, theme, toggleTheme, lang, setLan
     if (vi != null) { const i = lines.findIndex(l => l.vi === vi); if (i >= 0) setActive(i); }
   };
   const flow = mode === "flow";
+  /* a text that carries svara reads in the Vedic face (Tiro), which places the
+     accent marks on the akṣara instead of detaching them */
+  const hasSvara = (hymn.verses || []).some(v => SVARA.test(v.deva || ""));
   /* where flow's reading has got to — a ref plus a coarse state, so the part
      tabs can follow the scroll without re-rendering the column under it */
   const flowAt = useRef(0);
@@ -1177,7 +1197,6 @@ function ReaderView({ hymn: rawHymn, deity, go, theme, toggleTheme, lang, setLan
      the column ends the reading. */
   const holdUntil = useRef(0);
   const loopRef = useRef(loopMode); loopRef.current = loopMode;   // read inside the frame loop without restarting it
-  const speedRef = useRef(speed); speedRef.current = speed;        // likewise: a new speed retimes the glide live, it does not restart it
   const hush = useRef(false);   // the next pointer move came from the page itself — do not scroll to it
   useEffect(() => {
     if (!drifting) return;
@@ -1186,41 +1205,13 @@ function ReaderView({ hymn: rawHymn, deity, go, theme, toggleTheme, lang, setLan
     /* play pressed at the foot of the page: a reading that ended begins again */
     if (sc.scrollTop >= sc.scrollHeight - sc.clientHeight - 1) sc.scrollTop = 0;
     holdUntil.current = 0;
-    /* complexity-aware pace. Each verse holds the glide for its own dwell —
-       the same syllable weight that paces the light — so a dense name-chain
-       passes slowly and a bare half-line quickly, and a heavy text as a whole
-       is slower than a light one. Not one rate spread flat over the page.
-       Speed divides the dwell inside the frame, so the control retimes a
-       running glide instead of tearing the loop down and up on every step of a
-       drag — which read as the speed not taking at all. */
-    const vDwell = {};                 // verse index -> ms this verse should hold
-    let totalDwell = 0;
-    lines.forEach((l) => { const d = lineGlideDwell(l); vDwell[l.vi] = (vDwell[l.vi] || 0) + d; totalDwell += d; });
-    let segs = [], builtH = -1, segIdx = 0;
-    const buildSegs = () => {
-      const scTop = sc.getBoundingClientRect().top, base = sc.scrollTop;
-      segs = [...sc.querySelectorAll('.flow-v[data-vi]')].map((el) => {
-        const r = el.getBoundingClientRect(), top = r.top - scTop + base;
-        return { top, bot: top + r.height, dens: (vDwell[+el.getAttribute("data-vi")] || 0) / Math.max(1, r.height) };
-      });
-      builtH = sc.scrollHeight; segIdx = 0;
-    };
-    const avgDens = () => (totalDwell > 0 && sc.scrollHeight > 0 ? totalDwell / sc.scrollHeight : 1);
-    const densityAt = (p) => {   // ms per pixel at the reading anchor, verse by verse
-      if (!segs.length) return avgDens();
-      while (segIdx < segs.length - 1 && p >= segs[segIdx].bot) segIdx++;
-      while (segIdx > 0 && p < segs[segIdx].top) segIdx--;
-      const s = segs[segIdx];
-      return (s && p >= s.top && p < s.bot && s.dens > 0) ? s.dens : avgDens();
-    };
+    const totalMs = lines.reduce((s, l) => s + lineDwell(l), 0) / speed;
     let raf = 0, last = performance.now(), acc = 0;
     const tick = (now) => {
       const dt = Math.min(64, now - last); last = now;
       const max = sc.scrollHeight - sc.clientHeight;
       if (now >= holdUntil.current && max > 0) {
-        if (sc.scrollHeight !== builtH) buildSegs();
-        const dens = Math.max(0.0001, densityAt(sc.scrollTop + sc.clientHeight * 0.33));
-        const pxPerMs = speedRef.current / dens;
+        const pxPerMs = sc.scrollHeight / totalMs;
         acc += pxPerMs * dt;
         if (acc >= 1) { const px = Math.floor(acc); acc -= px; sc.scrollTop = Math.min(max, sc.scrollTop + px); }
         if (sc.scrollTop >= max - 1) {
@@ -1248,7 +1239,7 @@ function ReaderView({ hymn: rawHymn, deity, go, theme, toggleTheme, lang, setLan
       const i = lines.findIndex(l => l.vi === flowAt.current);
       if (i >= 0 && i !== active) { hush.current = true; setActive(i); }
     };
-  }, [drifting]);
+  }, [drifting, speed]);
   const setPace = (n) => {
     if (n === drift) return;
     try { localStorage.setItem("stuti-drift", n ? "1" : "0"); } catch (e) {}
@@ -1430,7 +1421,7 @@ function ReaderView({ hymn: rawHymn, deity, go, theme, toggleTheme, lang, setLan
     </React.Fragment>
   );
   return (
-    <div className={"view reader" + (follow.on ? " is-following" : "") + (follow.recOn ? " is-recording" : "")} style={deityStyle(deity, { flex: 1, "--rd-scale": fontScale })}>
+    <div className={"view reader" + (follow.on ? " is-following" : "")} style={deityStyle(deity, { flex: 1, "--rd-scale": fontScale })}>
       {panelPin && <div className="rd-toppanel is-pinned">{panelBody}</div>}
       <div className="topbar reader-topbar">
         <button className="icon-btn" onClick={() => go(backView, { deity: deity.id, from: retView })} aria-label={window.STUTI_L.a("aBack")}>
@@ -1439,12 +1430,10 @@ function ReaderView({ hymn: rawHymn, deity, go, theme, toggleTheme, lang, setLan
         <div className="reader-topbar-title">
           <div className="reader-topbar-name display">{hymnTitle(hymn, lang)}<FavButton id={hymn.id} size={21} /><FollowButton follow={follow} lang={lang} /><RecitationsButton follow={follow} lang={lang} /></div>
         </div>
-        {/* within-page search: one fixed home in the title bar on every text, so it
-           never rides the scrolling control row and slides off a phone's edge */}
-        <button className={"icon-btn rd-top-find" + (findOpen ? " is-on" : "")} onClick={() => setFindOpen(o => !o)} aria-expanded={findOpen}
+        {parts && <button className={"icon-btn rd-top-find" + (findOpen ? " is-on" : "")} onClick={() => setFindOpen(o => !o)} aria-expanded={findOpen}
           aria-label={window.STUTI_L.t("findPlace", lang)}>
           <Icon name="search" size={19} />
-        </button>
+        </button>}
         {/* settings in the corner; when the panel is pinned it carries its own gear */}
         {!panelPin ? <button className="icon-btn" onClick={() => setPanelOpen(v => !v)} aria-expanded={panelOpen}
           aria-label={window.STUTI_L.t("readAs", lang)} title={window.STUTI_L.t("readAs", lang)}>
@@ -1457,7 +1446,7 @@ function ReaderView({ hymn: rawHymn, deity, go, theme, toggleTheme, lang, setLan
       {/* line three — how the text reads. Three controls, no scroller: the two
          views share one glyph pair and only the chosen one says its name. */}
       <div className="reader-layers tight" hidden={learnOpen && (playing || (recordOn && (!!rec.take || rec.recording)))}>
-        {hymn.about && !parts && (
+        {hymn.about && (
           <button className="icon-btn" onClick={() => setStoryOpen(true)} aria-label={window.STUTI_L.t("story", lang)} title={window.STUTI_L.t("story", lang)}>
             <Icon name="book" size={19} />
           </button>
@@ -1477,11 +1466,9 @@ function ReaderView({ hymn: rawHymn, deity, go, theme, toggleTheme, lang, setLan
         <button className={"chip" + (showMeaning ? " chip-on" : "")} onClick={() => setShowMeaning(v => !v)}>
           {window.STUTI_L.t("meaning", lang)}
         </button>
-        {/* a sahasranāma is recited and parāyaṇa'd, not memorised name by name; Learn
-           lives in Nitya, and dropping it here unburdens the longest control row */}
-        {!(parts && hymn.namesKey) && <button className={"chip chip-learn" + (learnOpen ? " chip-on" : "")} onClick={() => setLearnOpen(o => { const n = !o; if (!n) { setLearnMode(hasAudio ? "listen" : "repeat"); setPlaying(false); } return n; })}>
+        <button className={"chip chip-learn" + (learnOpen ? " chip-on" : "")} onClick={() => setLearnOpen(o => { const n = !o; if (!n) { setLearnMode(hasAudio ? "listen" : "repeat"); setPlaying(false); } return n; })}>
           {window.STUTI_L.t("learn", lang)}
-        </button>}
+        </button>
         <RecordChip follow={follow} lang={lang} />
         {/* how the page moves — two named stops, only where there is a page to move */}
         {flow && !learnOpen && !namaluOpen && (
@@ -1496,7 +1483,10 @@ function ReaderView({ hymn: rawHymn, deity, go, theme, toggleTheme, lang, setLan
             </button>
           </div>
         )}
-
+        {!parts && <button className={"icon-btn rd-story-end" + (findOpen ? " is-on" : "")} onClick={() => setFindOpen(o => !o)} aria-expanded={findOpen}
+          aria-label={window.STUTI_L.t("findPlace", lang)}>
+          <Icon name="search" size={19} />
+        </button>}
       </div>
 
       {/* line four — the nyāsa, on the two or three texts that have one. Its own
@@ -1514,13 +1504,6 @@ function ReaderView({ hymn: rawHymn, deity, go, theme, toggleTheme, lang, setLan
 
       {parts && (
         <div className="rd-parts" role="tablist" aria-label={window.STUTI_L.a("aParts")}>
-          {/* the story door rides at the head of the parts row, where the book
-             glyph sat in the control row before this bar took it over */}
-          {hymn.about && (
-            <button className="icon-btn rd-parts-start" onClick={() => setStoryOpen(true)} aria-label={window.STUTI_L.t("story", lang)} title={window.STUTI_L.t("story", lang)}>
-              <Icon name="book" size={19} />
-            </button>
-          )}
           {parts.map((p, i) => {
             const next = parts[i + 1] ? parts[i + 1].at : hymn.verses.length;
             const on = !storyOpen && (flow ? flowPart === i : (curVerse >= p.at && curVerse < next));
@@ -1627,7 +1610,7 @@ function ReaderView({ hymn: rawHymn, deity, go, theme, toggleTheme, lang, setLan
       )}
 
       {/* one verse at a time, or the whole text in one column */}
-      <div className={"reader-scroll scroll" + (flow ? " is-flow" : "")} ref={scrollRef}>
+      <div className={"reader-scroll scroll" + (flow ? " is-flow" : "") + (hasSvara ? " rd-vedic" : "")} ref={scrollRef}>
         {namaluOpen ? (
           <NamaluList hymn={hymn} lang={lang} />
         ) : flow ? (
@@ -1666,9 +1649,10 @@ function ReaderView({ hymn: rawHymn, deity, go, theme, toggleTheme, lang, setLan
                     const on = idx === active;
                     const isLast = li === dv.length - 1;
                     const showNum = isLast && hymn.verses.length > 1 && !v.pr;
+                    const cont = li > 0 && (/-\s*$/.test(dv[li - 1] || "") || /-\s*$/.test(it[li - 1] || ""));
                     return (
                       <div key={li} ref={el => (lineRefs.current[idx] = el)}
-                        className={"line" + (on ? " line-on" : "") + ((playing || follow.on) && !on ? " line-off" : "")}
+                        className={"line" + (on ? " line-on" : "") + ((playing || follow.on) && !on ? " line-off" : "") + (cont ? " line-cont" : "")}
                         onClick={() => { if (masked) setPeek(true); setActive(idx); }}>
                         {(() => {
                           var mainText = window.STUTI_BIND(lang === "telugu" ? ((tdv && tdv[li]) || window.STUTI_TRANSLIT.convert(d, "telugu")) : lang === "deva" ? d : it[li]);
@@ -1828,7 +1812,7 @@ function ReaderView({ hymn: rawHymn, deity, go, theme, toggleTheme, lang, setLan
       )}
 
       {/* the reciter bar — under both views: the flow column recites too */}
-      <div className="reciter" ref={reciterRef}>
+      <div className="reciter">
         <div className={"reciter-progress" + (lineScrub.drag ? " scrubbing" : "")} ref={lineScrub.ref} {...lineScrub.handlers}
           role="slider" aria-label={window.STUTI_L.a("aPosition")} aria-valuemin={1} aria-valuemax={lines.length} aria-valuenow={Math.max(1, active + 1)}
           onKeyDown={e => { if (e.key === "ArrowRight") step(1); if (e.key === "ArrowLeft") step(-1); }} tabIndex={0}>
@@ -1870,7 +1854,7 @@ function ReaderView({ hymn: rawHymn, deity, go, theme, toggleTheme, lang, setLan
               </div>
               <div className="spd-chips">
                 {SPEED_PRESETS.map(p => (
-                  <button key={p} type="button" className={"spd-chip" + (Math.abs(p - speed) < 0.001 ? " on" : "")} onClick={() => { putSpeed(p); setSpeedOpen(false); }}>{showSpeed(p)}×</button>
+                  <button key={p} type="button" className={"spd-chip" + (Math.abs(p - speed) < 0.001 ? " on" : "")} onClick={() => putSpeed(p)}>{showSpeed(p)}×</button>
                 ))}
                 <span className="spd-word">{speedWord}</span>
               </div>

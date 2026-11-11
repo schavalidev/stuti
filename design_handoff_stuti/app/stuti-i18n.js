@@ -14,6 +14,8 @@ window.STUTI_L = (function () {
 
     allDeities:  { roman: "All Devas",  deva: "सभी देव",       telugu: "అన్ని దేవతలు" },
     seeAll:      { roman: "See all",      deva: "सब देखें",       telugu: "అన్నీ చూడండి" },
+    otherRecensions: { roman: "Other recensions", deva: "अन्य पाठान्तर", telugu: "ఇతర పాఠాంతరాలు" },
+    allLanguages:    { roman: "All languages",    deva: "सभी भाषाएँ",    telugu: "అన్ని భాషలు" },
     reciteTo:    { roman: "Recite to",    deva: "किसे स्तुति करें", telugu: "ఎవరిని స్తుతించాలి" },
     deities:     { roman: "Devas",      deva: "देवता",          telugu: "దేవతలు" },
     today:       { roman: "Today",        deva: "आज",            telugu: "నేడు" },
@@ -52,6 +54,15 @@ window.STUTI_L = (function () {
     malas:       { roman: "mālās",            deva: "मालाएँ",       telugu: "మాలలు" },
     lifetime:    { roman: "Lifetime",         deva: "कुल",          telugu: "మొత్తం" },
     undoBead:    { roman: "Undo",             deva: "पीछे",         telugu: "వెనక్కి" },
+    /* japa with the eyes closed — the screen is the bead, so the labels are
+       read once before the eyes shut and never looked for again */
+    japaBlind:     { roman: "Count without looking", deva: "आँखें मूँदकर गिनें", telugu: "కళ్ళు మూసుకుని లెక్కించండి" },
+    japaBlindHint: { roman: "Touch anywhere to count a bead.", deva: "मनका गिनने हेतु कहीं भी स्पर्श करें।", telugu: "పూస లెక్కించడానికి ఎక్కడైనా తాకండి." },
+    japaBlindKeys: { roman: "A page-turner key also counts a bead.", deva: "पेज-टर्नर की कुंजी से भी एक मनका गिना जाता है।", telugu: "పేజ్-టర్నర్ కీ నొక్కినా ఒక పూస లెక్కలోకి వస్తుంది." },
+    japaBlindSitting: { roman: "{n} told in this sitting", deva: "इस बैठक में {n} जप", telugu: "ఈ బైఠకంలో {n} జపాలు" },
+    japaBlindMala:  { roman: "{n} mālā complete",  deva: "{n} माला पूर्ण",   telugu: "{n} మాల పూర్తయింది" },
+    japaBlindMalas: { roman: "{n} mālās complete", deva: "{n} मालाएँ पूर्ण", telugu: "{n} మాలలు పూర్తయ్యాయి" },
+    japaBlindExit: { roman: "Done",            deva: "पूर्ण",        telugu: "పూర్తి" },
 
     /* learn-by-heart plans */
     learnByHeart:   { roman: "Learn by heart",  deva: "कण्ठस्थ करें",  telugu: "కంఠస్థం చేయండి" },
@@ -214,6 +225,57 @@ window.STUTI_L = (function () {
     varna_vaishya:  { roman: "gupta",         deva: "गुप्त",          telugu: "గుప్త" },
     varna_other:    { roman: "dāsa",          deva: "दास",            telugu: "దాస" },
     compass:        { roman: "Compass",       deva: "दिशा-सूचक",     telugu: "దిక్సూచి" },
+    compassUse:     { roman: "Use the phone’s compass", deva: "फ़ोन का दिशा-सूचक चलाएँ", telugu: "ఫోన్ దిక్సూచి వాడండి" },
+    compassWait:    { roman: "waiting",        deva: "प्रतीक्षा",       telugu: "వేచి ఉంది" },
+    dikSheet:       { roman: "Which way things lie", deva: "दिशाएँ",           telugu: "దిక్కులు" },
+    tirthaDik:      { roman: "Which way the tīrthas lie", deva: "तीर्थों की दिशा", telugu: "తీర్థాల దిక్కు" },
+    tirthaNote:     { roman: "Distance and direction from {place}, counted along the great circle. Choose one and its needle stays on the dial.",
+                      deva: "{place} से दूरी और दिशा, महावृत्त के अनुसार। एक चुनें और उसकी सूई डायल पर बनी रहेगी।",
+                      telugu: "{place} నుండి దూరం, దిక్కు — మహావృత్తం ప్రకారం. ఒకటి ఎంచుకుంటే దాని ముల్లు డయల్‌పై నిలుస్తుంది." },
+    tirthaFind:     { roman: "Find a tīrtha", deva: "तीर्थ खोजें",      telugu: "తీర్థం వెతకండి" },
+    tplMine:        { roman: "My temples",       deva: "मेरे मन्दिर",      telugu: "నా ఆలయాలు" },
+    tplPin:         { roman: "Pin this place as a temple", deva: "इस जगह को मन्दिर के रूप में रखें", telugu: "ఈ స్థలాన్ని ఆలయంగా గుర్తుంచు" },
+    tplLocating:    { roman: "Finding where you are\u2026", deva: "आप कहाँ हैं, देखा जा रहा है\u2026", telugu: "మీరు ఎక్కడ ఉన్నారో చూస్తోంది\u2026" },
+    tplNoFix:       { roman: "Your position could not be found. Try again outside the building.", deva: "आपकी जगह नहीं मिली। भवन के बाहर फिर देखें।", telugu: "మీ స్థానం దొరకలేదు. భవనం బయట మళ్ళీ చూడండి." },
+    tplName:        { roman: "Name of the temple", deva: "मन्दिर का नाम",   telugu: "ఆలయం పేరు" },
+    tplDeity:       { roman: "The deity",         deva: "देवता",            telugu: "దేవత" },
+    tplSave:        { roman: "Pin it",            deva: "रखें",             telugu: "గుర్తుంచు" },
+    tplHere:        { roman: "Pinned where you stand, to within {m} metres.", deva: "आप जहाँ खड़े हैं वहीं, {m} मीटर तक सही।", telugu: "మీరు నిలబడిన చోటే, {m} మీటర్ల వరకు సరి." },
+    tplNotRight:    { roman: "Not its name? Pin it", deva: "नाम ठीक नहीं? स्वयं रखें", telugu: "పేరు సరికాదా? మీరే గుర్తుంచండి" },
+    tplAt:          { roman: "You are here",      deva: "आप यहाँ हैं",      telugu: "మీరు ఇక్కడ ఉన్నారు" },
+    tplAll:         { roman: "All of this deity\u2019s stotras", deva: "इस देवता के सब स्तोत्र", telugu: "ఈ దేవత స్తోత్రాలన్నీ" },
+    tplCount:       { roman: "Count pradak\u1e63i\u1e47\u0101", deva: "प्रदक्षिणा गिनें", telugu: "ప్రదక్షిణ లెక్కించు" },
+    tirthaNone:     { roman: "No tīrtha of that name here", deva: "इस नाम का तीर्थ यहाँ नहीं", telugu: "ఆ పేరుతో తీర్థం లేదు" },
+    /* the standing directions of the daily rites: the question the compass
+       was built for, since a rite faces a direction and a new town hides it */
+    riteDik:        { roman: "The directions the rites face", deva: "कर्मों की दिशाएँ", telugu: "కర్మల దిక్కులు" },
+    riteSandhyaPratah: { roman: "Morning sandhyā", deva: "प्रातः सन्ध्या",   telugu: "ప్రాతఃసంధ్య" },
+    riteSandhyaSayam:  { roman: "Evening sandhyā", deva: "सायं सन्ध्या",     telugu: "సాయంసంధ్య" },
+    riteJapa:       { roman: "Japa",             deva: "जप",              telugu: "జపం" },
+    riteTarpana:    { roman: "Tarpaṇa and pitṛ rites", deva: "तर्पण और पितृकर्म", telugu: "తర్పణం, పితృకర్మలు" },
+    riteAsana:      { roman: "Seat for worship", deva: "पूजा का आसन",      telugu: "పూజ ఆసనం" },
+    pradDik:        { roman: "Pradakṣiṇā count", deva: "प्रदक्षिणा गणना",   telugu: "ప్రదక్షిణ లెక్క" },
+    pradNote:       { roman: "Counted from the phone’s heading, so hold the phone the same way throughout the walk.",
+                      deva: "गणना फ़ोन की दिशा से होती है, अतः चलते समय फ़ोन को एक ही प्रकार से पकड़े रहें।",
+                      telugu: "లెక్క ఫోన్ దిక్కు ఆధారంగా జరుగుతుంది, కాబట్టి నడిచేటప్పుడు ఫోన్‌ను ఒకే విధంగా పట్టుకోండి." },
+    pradStart:      { roman: "Start counting",   deva: "गणना आरम्भ करें",   telugu: "లెక్క ప్రారంభించండి" },
+    pradStop:       { roman: "Pause",            deva: "रोकें",            telugu: "ఆపండి" },
+    pradReset:      { roman: "Reset",            deva: "फिर से",           telugu: "మొదటికి" },
+    pradNeedsCompass: { roman: "Switch the compass on to count", deva: "गिनने के लिए दिशा-सूचक चलाएँ", telugu: "లెక్కించడానికి దిక్సూచి వాడండి" },
+    pradTryAgain:   { roman: "Try the compass again", deva: "दिशा-सूचक फिर चलाएँ", telugu: "దిక్సూచి మళ్ళీ వాడండి" },
+    pradNoSensor:   { roman: "This device has no compass, so a circuit cannot be counted here. On a phone it can.",
+                      deva: "इस यन्त्र में दिशा-सूचक नहीं है, इसलिए यहाँ प्रदक्षिणा नहीं गिनी जा सकती। फ़ोन पर गिनी जा सकती है।",
+                      telugu: "ఈ పరికరంలో దిక్సూచి లేదు, కాబట్టి ఇక్కడ ప్రదక్షిణ లెక్కించలేము. ఫోన్‌లో లెక్కించవచ్చు." },
+    pradRefused:    { roman: "The compass was refused. Allow motion access for this app, then switch it on.",
+                      deva: "दिशा-सूचक की अनुमति नहीं मिली। इस ऐप को गति की अनुमति दें, फिर चलाएँ।",
+                      telugu: "దిక్సూచికి అనుమతి లేదు. ఈ యాప్‌కు కదలిక అనుమతి ఇచ్చి, తర్వాత వాడండి." },
+    pradTarget:     { roman: "How many",         deva: "कितनी",            telugu: "ఎన్ని" },
+    pradDone:       { roman: "The count is complete", deva: "गणना पूरी हुई", telugu: "లెక్క పూర్తయింది" },
+    sunDik:         { roman: "Where the sun is", deva: "सूर्य की दिशा",     telugu: "సూర్యుని దిక్కు" },
+    sunNow:         { roman: "Now",              deva: "अभी",              telugu: "ఇప్పుడు" },
+    sunRisePt:      { roman: "Rising point",     deva: "उदय-स्थान",        telugu: "ఉదయ స్థానం" },
+    sunSetPt:       { roman: "Setting point",    deva: "अस्त-स्थान",       telugu: "అస్తమయ స్థానం" },
+    sunBelow:       { roman: "Below the horizon now", deva: "अभी क्षितिज के नीचे", telugu: "ఇప్పుడు క్షితిజం క్రింద" },
     intentionL:     { roman: "Intention",     deva: "कर्म",           telugu: "కర్మ" },
     copy:           { roman: "Copy",          deva: "प्रतिलिपि",      telugu: "కాపీ" },
     copied:         { roman: "Copied",        deva: "प्रतिलिपि हुई",  telugu: "కాపీ అయింది" },
@@ -407,7 +469,7 @@ window.STUTI_L = (function () {
     awaitingBody:  { roman: "The text of this stotra is not ready yet. The verses are being typed from the source and checked line by line.", deva: "इस स्तोत्र का पाठ अभी तैयार नहीं है। श्लोक मूल से टाइप करके एक-एक पंक्ति जाँची जा रही है।", telugu: "ఈ స్తోత్రం పాఠం ఇంకా సిద్ధం కాలేదు. శ్లోకాలను మూలం నుండి టైప్ చేసి, ఒక్కో పంక్తీ సరిచూస్తున్నాం." },
     tellMe:        { roman: "Tell me when it’s ready", deva: "तैयार होने पर बताइये", telugu: "సిద్ధమయినప్పుడు చెప్పండి" },
     willTell:      { roman: "You’ll be told", deva: "सूचित करेंगे", telugu: "తెలియజేస్తాం" },
-    willTellNote:  { roman: "It will appear in Sādhana, under Awaiting text.", deva: "यह साधना में ‘पाठ की प्रतीक्षा’ में दिखेगा।", telugu: "ఇది సాధనలో ‘పాఠ్యం కోసం ఎదురుచూస్తున్నవి’ లో కనపడుతుంది." },
+    willTellNote:  { roman: "It will appear in Nitya, under Awaiting text.", deva: "यह नित्य में ‘पाठ की प्रतीक्षा’ में दिखेगा।", telugu: "ఇది నిత్యలో ‘పాఠ్యం కోసం ఎదురుచూస్తున్నవి’ లో కనపడుతుంది." },
     meanwhile:     { roman: "Meanwhile, from this Deva", deva: "इसी देव के लिए, अब", telugu: "ఇప్పటికి, ఈ దేవతకు" },
     watching:      { roman: "Awaiting text", deva: "पाठ की प्रतीक्षा", telugu: "పాఠ్యం కోసం" },
     watchingSub:   { roman: "you’ll be told as each arrives", deva: "हर पाठ आने पर सूचना", telugu: "ప్రతి పాఠ్యం వచ్చినప్పుడు తెలియజేస్తాం" },
@@ -464,6 +526,10 @@ window.STUTI_L = (function () {
     micDenied:     { roman: "The microphone is not available — recording needs permission. Open the app directly and try again.",
                      deva: "माइक्रोफोन उपलब्ध नहीं — रिकॉर्डिंग के लिए अनुमति चाहिए। ऐप को सीधे खोलकर फिर से कोशिश करें।",
                      telugu: "మైక్రోఫోన్ అందుబాటులో లేదు — రెకార్డు చేయాలంటే అనుమతి కావాలి. యాప్‌ను నేరుగా తెరిచి మళ్ళీ చూడండి." },
+
+    /* Follow: the phone set down on the mat */
+    followFaceDown:     { roman: "Hold when face down", deva: "उलटा रखने पर रुके", telugu: "బోర్లించినప్పుడు ఆపు" },
+    followHeld:         { roman: "Waiting — the phone is face down", deva: "रुका हुआ — फ़ोन उलटा रखा है", telugu: "ఆగింది — ఫోన్ బోర్లించి ఉంది" },
 
     /* first run */
     obReadIn:     { roman: "How shall the verses read?", deva: "श्लोक किस लिपि में?", telugu: "శ్లోకాలు ఏ లిపిలో?" },
@@ -572,6 +638,10 @@ window.STUTI_L = (function () {
     ksama:       { roman: "Kṣamāprārthanā-Samarpaṇam", deva: "क्षमाप्रार्थना-समर्पणम्", telugu: "క్షమాప్రార్థన-సమర్పణం" },
     uttara:      { roman: "Phalaśruti · Kṣamā", deva: "फलश्रुति · क्षमा", telugu: "ఫలశ్రుతి · క్షమ" },
     gsPurva:     { roman: "Pūrvapīṭhikā", deva: "पूर्वपीठिका", telugu: "పూర్వపీఠిక" },
+    /* Not every sahasranāma has a pūrvapīṭhikā. Where the opening movement is
+       only a viniyoga and a dhyāna, calling it a pūrvapīṭhikā names something
+       the text does not have — so the opening is labelled for what is in it. */
+    gsViniyogaDhyana: { roman: "Viniyoga · Dhyānam", deva: "विनियोग · ध्यानम्", telugu: "వినియోగం · ధ్యానం" },
     gsNamavali:  { roman: "Sahasranāmāvali", deva: "सहस्रनामावलि", telugu: "సహస్రనామావళి" },
     tabNamavali: { roman: "Nāmāvali", deva: "नामावलि", telugu: "నామావళి" },
     tabNamalu:   { roman: "Nāmalu", deva: "नामलु", telugu: "నామాలు" },
@@ -1137,7 +1207,7 @@ window.STUTI_L = (function () {
     todayTag:    { roman: "today",      deva: "आज",      telugu: "నేడు" },
 
     /* practices (anuṣṭhānam) */
-    nitya:        { roman: "Sādhana",     deva: "साधना",      telugu: "సాధన" },
+    nitya:        { roman: "Nitya",       deva: "नित्य",       telugu: "నిత్య" },
     practices:    { roman: "Sādhana",   deva: "अनुष्ठान",    telugu: "అనుష్ఠానాలు" },
     dailyPractice:{ roman: "Nitya sādhana", deva: "नित्य अनुष्ठान", telugu: "నిత్య అనుష్ఠానం" },
     savedStotras: { roman: "Saved stotras", deva: "सुरक्षित स्तोत्र", telugu: "భద్రపరచిన స్తోత్రాలు" },
@@ -1234,6 +1304,23 @@ window.STUTI_L = (function () {
     "Viśvāmitra":          { deva: "विश्वामित्र",           telugu: "విశ్వామిత్ర" },
   };
 
+  /* the Vedic recension of a nitya-karma text (śākhā chip), and the language a
+     text was written in (text-language chip) — both from the corpus catalogue */
+  const SAKHA = {
+    taittiriya:  { roman: "Taittirīya",  deva: "तैत्तिरीय",   telugu: "తైత్తిరీయ" },
+    kanva:       { roman: "Kāṇva",       deva: "काण्व",       telugu: "కాణ్వ" },
+    madhyandina: { roman: "Mādhyandina", deva: "माध्यन्दिन",  telugu: "మాధ్యందిన" },
+    rigveda:     { roman: "Ṛgveda",      deva: "ऋग्वेद",      telugu: "ఋగ్వేద" },
+  };
+  const LANGNAME = {
+    sa:  { roman: "Sanskrit", deva: "संस्कृत", telugu: "సంస్కృతం" },
+    hi:  { roman: "Hindi",    deva: "हिन्दी",  telugu: "హిందీ" },
+    awa: { roman: "Awadhi",   deva: "अवधी",    telugu: "అవధీ" },
+    bra: { roman: "Braj",     deva: "ब्रज",    telugu: "బ్రజ్" },
+    ta:  { roman: "Tamil",    deva: "तमिऴ",    telugu: "తమిళం" },
+    te:  { roman: "Telugu",   deva: "तेलुगु",  telugu: "తెలుగు" },
+  };
+
   const pick = (o, lang) => o ? (o[lang] || o.roman) : "";
 
   /* The interface language is its own setting, and every screen has to honour it
@@ -1251,7 +1338,7 @@ window.STUTI_L = (function () {
     /* the corpus's own section names — a Telugu reader wants these in Telugu
        however the chrome around them reads */
     purva: 1, stotram: 1, viniyoga: 1, dhyanam: 1, namavali: 1, phala: 1, ksama: 1, uttara: 1,
-    gsPurva: 1, gsNamavali: 1, gsUttara: 1, tabNamavali: 1, tabNamalu: 1,
+    gsPurva: 1, gsViniyogaDhyana: 1, gsNamavali: 1, gsUttara: 1, tabNamavali: 1, tabNamalu: 1,
   };
   const readLang = () => { try { return localStorage.getItem("stuti-lang") || "roman"; } catch (e) { return "roman"; } };
   const uiLang = () => {
@@ -1281,6 +1368,8 @@ window.STUTI_L = (function () {
       return a ? (a[lang] || name) : name;
     },
     hymnTitle: (h, lang) => lang === "telugu" ? (h.tel || h.title) : lang === "deva" ? (h.deva || h.title) : h.title,
+    sakha: (key, lang) => pick(SAKHA[key], lang) || key,
+    langName: (code, lang) => pick(LANGNAME[code], lang) || code,
     epithet: (d, lang) => pick(D[d.id] && D[d.id].epithet, lang) || d.epithet,
     line: (d, lang) => pick(D[d.id] && D[d.id].line, lang) || d.line,
     font: (lang) => lang === "telugu" ? "var(--font-telugu)" : lang === "deva" ? "var(--font-deva)" : "var(--font-display)",
