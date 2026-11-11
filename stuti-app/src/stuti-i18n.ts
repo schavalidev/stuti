@@ -469,7 +469,7 @@ export const STUTI_L = (function () {
     awaitingBody:  { roman: "The text of this stotra is not ready yet. The verses are being typed from the source and checked line by line.", deva: "इस स्तोत्र का पाठ अभी तैयार नहीं है। श्लोक मूल से टाइप करके एक-एक पंक्ति जाँची जा रही है।", telugu: "ఈ స్తోత్రం పాఠం ఇంకా సిద్ధం కాలేదు. శ్లోకాలను మూలం నుండి టైప్ చేసి, ఒక్కో పంక్తీ సరిచూస్తున్నాం." },
     tellMe:        { roman: "Tell me when it’s ready", deva: "तैयार होने पर बताइये", telugu: "సిద్ధమయినప్పుడు చెప్పండి" },
     willTell:      { roman: "You’ll be told", deva: "सूचित करेंगे", telugu: "తెలియజేస్తాం" },
-    willTellNote:  { roman: "It will appear in Nitya, under Awaiting text.", deva: "यह नित्य में ‘पाठ की प्रतीक्षा’ में दिखेगा।", telugu: "ఇది నిత్యలో ‘పాఠ్యం కోసం ఎదురుచూస్తున్నవి’ లో కనపడుతుంది." },
+    willTellNote:  { roman: "It will appear in Sādhana, under Awaiting text.", deva: "यह साधना में ‘पाठ की प्रतीक्षा’ में दिखेगा।", telugu: "ఇది సాధనలో ‘పాఠ్యం కోసం ఎదురుచూస్తున్నవి’ లో కనపడుతుంది." },
     meanwhile:     { roman: "Meanwhile, from this Deva", deva: "इसी देव के लिए, अब", telugu: "ఇప్పటికి, ఈ దేవతకు" },
     watching:      { roman: "Awaiting text", deva: "पाठ की प्रतीक्षा", telugu: "పాఠ్యం కోసం" },
     watchingSub:   { roman: "you’ll be told as each arrives", deva: "हर पाठ आने पर सूचना", telugu: "ప్రతి పాఠ్యం వచ్చినప్పుడు తెలియజేస్తాం" },
@@ -1207,7 +1207,7 @@ export const STUTI_L = (function () {
     todayTag:    { roman: "today",      deva: "आज",      telugu: "నేడు" },
 
     /* practices (anuṣṭhānam) */
-    nitya:        { roman: "Nitya",       deva: "नित्य",       telugu: "నిత్య" },
+    nitya:        { roman: "Sādhana",     deva: "साधना",      telugu: "సాధన" },
     practices:    { roman: "Sādhana",   deva: "अनुष्ठान",    telugu: "అనుష్ఠానాలు" },
     dailyPractice:{ roman: "Nitya sādhana", deva: "नित्य अनुष्ठान", telugu: "నిత్య అనుష్ఠానం" },
     savedStotras: { roman: "Saved stotras", deva: "सुरक्षित स्तोत्र", telugu: "భద్రపరచిన స్తోత్రాలు" },
