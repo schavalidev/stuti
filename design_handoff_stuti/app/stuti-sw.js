@@ -20,7 +20,7 @@
    answers ONLY for the files listed below (and the pinned CDN scripts) and
    declines everything else, leaving the browser to fetch it normally.
    ============================================================ */
-const VERSION = "stuti-v0.9.104";
+const VERSION = "stuti-v0.9.118";
 const SHELL = [
   "Stuti.html",
   "Stuti - Tablet & Desktop.html",
@@ -65,6 +65,30 @@ const SHELL = [
   "stuti-nomu-data.js",
   "stuti-parayana-data.js",
   "stuti-masa-data.js",
+  "stuti-parva-stories.js",
+  "parva-stories/caitra.js",
+  "parva-stories/vaisakha.js",
+  "parva-stories/jyeshtha.js",
+  "parva-stories/ashadha.js",
+  "parva-stories/shravana.js",
+  "parva-stories/bhadrapada.js",
+  "parva-stories/ashvina.js",
+  "parva-stories/kartika.js",
+  "parva-stories/margashira.js",
+  "parva-stories/magha.js",
+  "parva-stories/pushya.js",
+  "stuti-parva-kriya.js",
+  "parva-kriya/caitra.js",
+  "parva-kriya/vaisakha.js",
+  "parva-kriya/jyeshtha.js",
+  "parva-kriya/ashadha.js",
+  "parva-kriya/shravana.js",
+  "parva-kriya/bhadrapada.js",
+  "parva-kriya/ashvina.js",
+  "parva-kriya/kartika.js",
+  "parva-kriya/margashira.js",
+  "parva-kriya/magha.js",
+  "parva-kriya/phalguna.js",
   "stuti-build.js",
   "stuti-count.js",
   "stuti-proof.js",

@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="day" data-lang="roman" data-ui-lang="roman" data-palette="unified" data-seal="ratna">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Stuti · स्तुति — read and recite</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link rel="stylesheet" href="stuti.css" />
+<link rel="stylesheet" href="stuti-components.css" />
+<link rel="stylesheet" href="stuti-palette.css" />
+<link rel="stylesheet" href="site.css" />
+</head>
+<body data-page="home">
+<section class="site-hero" id="sky"></section>
+<div class="wrap site-stack">
+  <a class="home-search" href="library.html?focus=1">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="11" cy="11" r="6.5"/><path d="M16 16l4.5 4.5"/></svg>
+    <span data-t="searchBar">Search titles, verses, words</span>
+  </a>
+  <section id="panch"></section>
+  <div class="reader-nav"><span></span><a href="almanac.html"><span data-t="wholeDay">The whole day, hour by hour</span> <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div>
+</div>
+<div class="site-hero-below">
+  <div>
+    <p class="site-lede" data-t="homeLede">Mūla text in three scripts, the meaning of every line, and paced highlighting to recite by.</p>
+    <div class="site-acts">
+      <a class="cta" href="read.html"><svg width="19" height="19" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5.5v13l11-6.5z"/></svg><span data-t="beginReciting">Begin reciting</span></a>
+      <a class="ghost" href="library.html" data-t="browseLibrary">Browse the library</a>
+    </div>
+  </div>
+  <div class="site-hero-aside">
+    <div class="site-today-aside" id="todayAside"></div>
+    <div class="site-facts">
+      <div class="site-fact"><span data-t="factTexts">Texts to read</span><b id="factTexts">13</b></div>
+      <div class="site-fact"><span data-t="factVerses">Verses</span><b id="factVerses">438</b></div>
+      <a class="site-fact" href="library.html"><span data-t="factTitles">Titles catalogued</span><b id="factTitles">118</b></a>
+      <div class="site-fact"><span data-t="factScripts">Scripts</span><b>3</b></div>
+    </div>
+  </div>
+</div>
+
+<section class="band">
+  <div class="wrap">
+    <div class="sec-head sec-more reveal">
+      <div>
+        <span class="eyebrow eyebrow-a" data-t="shelfEyebrow">Complete, and glossed</span>
+        <h2 data-t="shelfHead">On the shelf today</h2>
+      </div>
+      <a class="link-more" href="library.html"><span data-t="wholeLibrary">The whole library</span> <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+    </div>
+    <div class="site-featured" id="featured"></div>
+  </div>
+</section>
+
+<section class="band band-warm">
+  <div class="wrap almanac-grid">
+    <div class="reveal">
+      <span class="eyebrow eyebrow-a" data-t="practiceEyebrow">From listener to reciter</span>
+      <h2 style="font-size:clamp(1.8rem,2.9vw,2.4rem);line-height:1.1;margin-top:11px" data-t="practiceHead">Practice, witnessed — never scored</h2>
+      <p style="font-size:16.5px;line-height:1.55;color:var(--ink-soft);margin-top:12px;text-wrap:pretty" data-t="practiceLede">Japa counted to 108, a pārāyaṇa in daily portions, a vratam on its real tithi.</p>
+      <div class="site-acts">
+        <a class="ghost" href="practice.html" data-t="howPractice">How practice works</a>
+        <a class="ghost" href="get.html" data-t="whatAppAdds">What the app adds</a>
+      </div>
+    </div>
+    <div class="note reveal" data-th="noAccount"><b>Reading needs no account.</b> The library, the reader and the day's almanac open cold. <a href="get.html#account">Why sign in</a></div>
+  </div>
+</section>
+<script src="stuti-translit.js"></script>
+<script src="stotra-index-data.js"></script>
+<script src="stuti-names-lalita.js"></script>
+<script src="stuti-names-vishnu.js"></script>
+<script src="stuti-names-ganesha.js"></script>
+<script src="stuti-data.js"></script>
+<script src="stuti-text-shiva.js"></script>
+<script src="stuti-text-shiva2.js"></script>
+<script src="stuti-text-shiva3.js"></script>
+<script src="stuti-text-devi.js"></script>
+<script src="stuti-text-devi2.js"></script>
+<script src="stuti-text-devi3.js"></script>
+<script src="stuti-text-devi4.js"></script>
+<script src="stuti-text-vishnu.js"></script>
+<script src="stuti-text-vishnu2.js"></script>
+<script src="stuti-text-hanuman.js"></script>
+<script src="stuti-text-ganesha.js"></script>
+<script src="stuti-text-ganesha2.js"></script>
+<script src="stuti-text-ganesha3.js"></script>
+<script src="stuti-text-ganesha4.js"></script>
+<script src="stuti-text-guru.js"></script>
+<script src="stuti-text-guru2.js"></script>
+<script src="stuti-text-subrahmanya.js"></script>
+<script src="stuti-text-subrahmanya2.js"></script>
+<script src="stuti-text-subrahmanya3.js"></script>
+<script src="stuti-text-subrahmanya4.js"></script>
+<script src="stuti-text-subrahmanya5.js"></script>
+<script src="stuti-text-subrahmanya6.js"></script>
+<script src="stuti-text-subrahmanya7.js"></script>
+<script src="stuti-text-subrahmanya8.js"></script>
+<script src="stuti-text-subrahmanya9.js"></script>
+<script src="stuti-text-subrahmanya10.js"></script>
+<script src="stuti-texts.js"></script>
+<script src="stuti-hindi-shiva.js"></script>
+<script src="stuti-hindi-core.js"></script>
+<script src="stuti-hindi-ganesha2.js"></script>
+<script src="stuti-hindi-subrahmanya.js"></script>
+<script src="stuti-library-data.js"></script>
+<script src="stuti-prefs.js"></script>
+<script src="stuti-ephemeris.js"></script>
+<script src="stuti-sankranti-data.js"></script>
+<script src="stuti-reckoning.js"></script>
+<script src="stuti-sankalpa-data.js"></script>
+<script src="stuti-panchanga-engine.js"></script>
+<script src="stuti-sandhya.js"></script>
+<script src="site-i18n.js"></script>
+<script src="site-lib.js"></script>
+<script src="site-panch.js"></script>
+<script src="site-home.js"></script>
+<script src="site-chrome.js"></script>
+</body>
+</html>

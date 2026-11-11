@@ -5,15 +5,15 @@
    and can serialise a small, non-personal snapshot to the clipboard.
    ============================================================ */
 window.STUTI_BUILD = (function () {
-  const VERSION = "0.9.114";
-  const BUILD = "2026.10.27";
+  const VERSION = "0.9.131";
+  const BUILD = "2026.11.03";
   const CHANNEL = "beta";                 // test | beta | release
   /* the beta latch — one shared word for invited households. Null opens the
      door to everyone (the public build). Compared case- and space-blind. */
   const GATE = "matsya";
   /* where a message goes, and how soon a reply can be promised. One place, so
      the feedback sheet, Settings and the website cannot name different doors. */
-  const SUPPORT = "feedback@stutiapp.com";
+  const SUPPORT = "feedback@stuti.app";
   const REPLY_DAYS = 3;
 
   const label = () => "Stuti " + VERSION + " · " + BUILD + " · " + CHANNEL;
@@ -31,7 +31,7 @@ window.STUTI_BUILD = (function () {
     return [
       label(),
       "texts: " + texts(),
-      "script: " + g(0, () => localStorage.getItem("stuti-lang") || "deva"),
+      "script: " + g(0, () => localStorage.getItem("stuti-lang") || "roman"),
       "theme: "  + g(0, () => localStorage.getItem("stuti-theme") || "day"),
       "place: "  + g(0, () => {
         const id = window.STUTI_LOC.getLocId();
@@ -75,7 +75,7 @@ window.STUTI_BUILD = (function () {
     "stuti-last", "stuti-loc", "stuti-detected", "stuti-nitya-lens", "stuti-speed",
     "stuti-pada-seen", "stuti-fontscale", "stuti-flyleaf", "stuti-gotra",
     "stuti-nama", "stuti-gender", "stuti-karma", "stuti-home",
-    "stuti-keep", "stuti-ledger", "stuti-recite-cfg", "stuti-session", "stuti-ui-lang", "stuti-ui-lang-custom", "stuti-uiscale",
+    "stuti-keep", "stuti-ledger", "stuti-recite-cfg", "stuti-session", "stuti-ui-lang", "stuti-ui-lang-custom", "stuti-uiscale", "stuti-mokku",
   ]);
   const APP_PREFIX = PRACTICE_PREFIX.concat(["stuti-pos-"]);
 

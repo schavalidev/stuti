@@ -322,6 +322,7 @@ function TithiAhead({ go, lang }) {
   const [, bump] = React.useState(0);
   const [open, setOpen] = React.useState(null);
   React.useEffect(() => TT ? TT.subscribe(() => bump((n) => n + 1)) : undefined, []);
+  React.useEffect(() => window.STUTI_ABDIKAM ? window.STUTI_ABDIKAM.subscribe(() => bump((n) => n + 1)) : undefined, []);
   if (!TT || !V) return null;
   const today = new Date(); today.setHours(0, 0, 0, 0);
   let rows = [];
@@ -368,6 +369,27 @@ function TithiAhead({ go, lang }) {
               <div className="ta-open">
                 <div className="ta-line"><span>{ttAheadT("rule", L)}</span><b>{window.STUTI_TITHIS.ruleText(r)[T === "tel" ? "tel" : T === "roman" ? "roman" : "deva"]}</b></div>
                 {kala && <div className="ta-line"><span>{ttAheadT(k.rule === "aparahna" ? "aparahna" : "atSunrise", L)}</span><b>{kala}</b></div>}
+                {r.kind === "shraddha" && window.STUTI_ABDIKAM && (() => {
+                  const A = window.STUTI_ABDIKAM, dn = A.done(r.id, d), left = A.tasks().length - dn.length;
+                  return (
+                    <div className="ta-tasks">
+                      <div className="ta-tasks-cap"><span>{ttAheadT("tasks", L)}</span><small>{left > 0 ? ttAheadT("tasksLeft", L).replace("{n}", left) : ttAheadT("tasksAll", L)}</small></div>
+                      <ul className="ta-tasklist">
+                        {A.tasks().map((it) => {
+                          const on = dn.indexOf(it.id) !== -1;
+                          return (
+                            <li key={it.id} className={"ta-task" + (on ? " on" : "")}>
+                              <button onClick={() => { A.toggle(r.id, d, it.id); bump((n) => n + 1); }} aria-pressed={on}>
+                                <span className="ta-box">{on && <Icon name="check" size={13} />}</span>
+                                <span className="ta-task-text">{A.text(it.text, L)}</span>
+                              </button>
+                            </li>
+                          );
+                        })}
+                      </ul>
+                    </div>
+                  );
+                })()}
                 <button className="ta-go" onClick={() => go("vrata", { vrata: v.id })}>{ttAheadT("open", L)}</button>
               </div>
             )}
@@ -382,19 +404,31 @@ const TA_T = {
   aparahna:  { roman: "Aparāhṇa", deva: "अपराह्ण", telugu: "అపరాహ్ణం" },
   atSunrise: { roman: "Sunrise", deva: "सूर्योदय", telugu: "సూర్యోదయం" },
   open:      { roman: "Open the day", deva: "दिन खोलें", telugu: "ఆ రోజు చూడండి" },
+  tasks:     { roman: "What to arrange", deva: "व्यवस्था", telugu: "ఏర్పాట్లు" },
+  tasksLeft: { roman: "{n} left", deva: "{n} शेष", telugu: "ఇంకా {n}" },
+  tasksAll:  { roman: "All done", deva: "सब हो गया", telugu: "అన్నీ అయ్యాయి" },
 };
 const ttAheadT = (k, lg) => (TA_T[k] || {})[lg === "telugu" ? "telugu" : lg === "deva" ? "deva" : "roman"] || TA_T[k].roman;
+/* a festival card put away for today: keyed by the day it was showing, so the
+   same parva reappears if it falls on another day */
+const PARVA_HIDE_KEY = "stuti-parva-hidden";
+const parvaDayKey = (date) => date.toDateString();
+function parvaHidden() { try { return JSON.parse(localStorage.getItem(PARVA_HIDE_KEY) || "[]"); } catch (e) { return []; } }
+function parvaHide(id, date) { const k = id + "|" + parvaDayKey(date), cur = parvaHidden(); if (cur.indexOf(k) === -1) { cur.push(k); try { localStorage.setItem(PARVA_HIDE_KEY, JSON.stringify(cur)); } catch (e) {} } }
+const parvaIsHidden = (id, date) => parvaHidden().indexOf(id + "|" + parvaDayKey(date)) !== -1;
 function ParvaCard({ go, lang }) {
   const V = window.STUTI_VRATA;
   const [, bump] = React.useState(0);
   React.useEffect(() => window.STUTI_PREFS.subscribe(() => bump((n) => n + 1)), []);
   React.useEffect(() => window.STUTI_TITHIS ? window.STUTI_TITHIS.subscribe(() => bump((n) => n + 1)) : undefined, []);
   let hits = [];
-  try { hits = V && V.parvasNow ? V.parvasNow().slice(0, 2) : []; } catch (e) { hits = []; }
+  try { hits = V && V.parvasNow ? V.parvasNow() : []; } catch (e) { hits = []; }
+  hits = hits.filter((hit) => !parvaIsHidden(hit.v.id, hit.date)).slice(0, 2);
   if (!hits.length) return null;
-  return <React.Fragment>{hits.map((hit) => <ParvaOne key={hit.v.id} hit={hit} go={go} lang={lang} />)}</React.Fragment>;
+  const dismiss = (hit) => { parvaHide(hit.v.id, hit.date); bump((n) => n + 1); };
+  return <React.Fragment>{hits.map((hit) => <ParvaOne key={hit.v.id} hit={hit} go={go} lang={lang} onDismiss={() => dismiss(hit)} />)}</React.Fragment>;
 }
-function ParvaOne({ hit, go, lang }) {
+function ParvaOne({ hit, go, lang, onDismiss }) {
   const L = lang || "deva";
   const { loc } = window.useLoc();
   const V = window.STUTI_VRATA, PA = window.AKSHARA_PANCHANGA;
@@ -443,6 +477,9 @@ function ParvaOne({ hit, go, lang }) {
            darbha rather than kumkum. */
         ? { "--deity-hue": 214, "--deity-chroma": 0.045 }
         : deityStyle(v.deity)}>
+      {v.kind !== "tarpana" && onDismiss && (
+        <button className="parva-x" onClick={(e) => { e.stopPropagation(); onDismiss(); }} aria-label={window.STUTI_L.a("aClose")}><Icon name="close" size={15} /></button>
+      )}
       <button className="parva-main" onClick={open}>
         {art && <img className="parva-art" src={art} alt="" />}
         <span className="parva-body">
@@ -486,9 +523,16 @@ function PreviewPill({ go, lang }) {
    pañcāṅga rows, opening the vrata page */
 function RoutineVrata({ go, lang }) {
   const L = lang || "deva", T = L === "telugu" ? "tel" : L === "roman" ? "roman" : "deva";
-  const V = window.STUTI_VRATA;
+  const V = window.STUTI_VRATA, K = window.STUTI_KEEP;
+  /* a saṅkalpa vow — one begun on any week, kept every fortnight, taken on a
+     favourable day, or a dīkṣā. These are not days the calendar brings to
+     everyone; they belong to the reciter who takes them up. They have no place
+     on the day's line unless this house has actually begun one, and then the
+     keep decides which day it is due. */
+  const isVow = (v) => !!(v.floating || v.optional || v.everyMonth || (window.STUTI_PROV && window.STUTI_PROV.isType && window.STUTI_PROV.isType(v, "diksha")));
+  const dueByKeep = (v) => { try { const k = K && K.find && K.find("vrata", v.id); return !!(k && K.dueToday(k)); } catch (e) { return false; } };
   let hits = [];
-  try { hits = (V.upcoming(80) || []).filter((u) => u.away === 0 && !V.isParva(u.v) && !u.v.optional); } catch (e) {}
+  try { hits = (V.upcoming(80) || []).filter((u) => u.away === 0 && !V.isParva(u.v) && (isVow(u.v) ? dueByKeep(u.v) : true)); } catch (e) {}
   if (!hits.length) return null;
   const lead = L === "telugu" ? "ఇవాళ" : L === "deva" ? "आज" : "Today";
   return (
@@ -501,62 +545,6 @@ function RoutineVrata({ go, lang }) {
 }
 
 /* ============ Home — "Today, first" (calm pañcāṅga + saṅkalpa sheet) ============ */
-/* ---------------- At a temple ----------------
-   A reciter standing in their own temple opens the app to recite something,
-   and the app can meet them there instead of asking. The pins are theirs
-   (stuti-temple.js); a fix is taken on opening only if they said it could be,
-   and only while there is at least one pin to match against.
-   This is a card that is absent far more often than it is present, which is
-   the point: it appears when it has something to say and never otherwise. */
-function AtTempleCard({ go, lang }) {
-  const L = window.STUTI_L, S = window.STUTI, TP = window.STUTI_TEMPLE;
-  const [found, setFound] = React.useState(null);
-  const [, force] = React.useState(0);
-  React.useEffect(() => TP.subscribe(() => force((n) => n + 1)), []);
-  React.useEffect(() => {
-    let live = true;
-    if (!TP.mayNotice()) { setFound(null); return; }
-    /* the reciter's own pins answer first; the index is only consulted when
-       none of them fits, and it is fetched only at that moment */
-    TP.here().then((h) => { if (!h || !live) return; TP.look(h.lat, h.lon).then((r) => { if (live) setFound(r); }); });
-    return () => { live = false; };
-  }, [TP.count(), TP.mayNotice()]);
-  if (!found) return null;
-  const pin = found;
-  const d = pin.deity ? S.deityById[pin.deity] : null;
-  const hymns = d ? S.hymnsForDeity(d.id) : [];
-  const font = L.font(lang);
-  return (
-    <section className="tpl-card">
-      <div className="eyebrow">{L.t("tplAt", lang)}</div>
-      <h3 className="tpl-card-nm" style={{ fontFamily: font }}>{pin.name}</h3>
-      {d && <div className="tpl-card-d" style={{ fontFamily: font }}>{L.name(d, lang)}</div>}
-      <div className="tpl-card-acts">
-        {/* standing before one deity, the card offers that deity and nothing
-            else: one way in, not a shortlist of hymns chosen for them */}
-        {d && hymns.length > 0 && (
-          <button className="tpl-card-more" onClick={() => go("browse", { deity: d.id, returnTo: "home" })}>
-            {L.t("tplAll", lang)}
-          </button>
-        )}
-        {/* the counter lives on the compass, which already holds the heading */}
-        <button className="tpl-card-prad" style={{ fontFamily: font }}
-          onClick={() => window.dispatchEvent(new Event("stuti-pradakshina"))}>
-          {L.t("tplCount", lang)}
-        </button>
-      </div>
-      {/* a name we guessed rather than were told: say whose it is, which the
-          licence of the map it came from requires, and offer the correction */}
-      {!found.mine && (
-        <div className="tpl-card-src">
-          <span>{found.credit}</span>
-          <button onClick={() => window.dispatchEvent(new Event("stuti-pin-here"))}>{L.t("tplNotRight", lang)}</button>
-        </div>
-      )}
-    </section>
-  );
-}
-
 function HomeA({ go, lang, overlayEl }) {
   const L = lang || "deva";
   const t = k => window.STUTI_L.t(k, L);
@@ -619,28 +607,9 @@ function HomeA({ go, lang, overlayEl }) {
   const moreRows = [...vm.sun.slice(2), ...vm.yk, ...vm.caution.map(it => ({ ...it, caution: it.active }))];
   return (
     <div className="view home home-a scroll" style={deityStyle(deity)}>
-      {(() => {
-        const rv = (window.RTU_VIS || {})[vm.pa.ritu.iast];
-        /* a transition month blends both seasons here too, as Calendar and Māsa do */
-        const mName = window.masaShown ? window.masaShown(vm.pa) : vm.pa.masa;
-        const mix = window.masaMixFor ? window.masaMixFor(mName && mName.iast) : null;
-        const vars = mix ? { "--rtu": rv.hue, "--rtu-b": mix.hueB } : { "--rtu": rv.hue };
-        return rv ? (
-          <React.Fragment>
-            <div className="cal-season cal-season-back" aria-hidden="true" style={vars}>
-              <div className="cal-season-in cal-season-wash" data-mix={mix ? "1" : undefined} />
-            </div>
-            <div className="cal-season cal-season-front" aria-hidden="true" style={vars}>
-              <div className="cal-season-in cal-season-fg"><window.SeasonAmbient kind={rv.kind} dense mix={mix && mix.kinds} heat={mix && mix.heat} sunHue={mix && mix.sunHue} sunBright={mix && mix.sunBright} /></div>
-            </div>
-          </React.Fragment>
-        ) : null;
-      })()}
       <window.SkyHeader lang={L} go={go} />
 
       <HomeSearchBar go={go} lang={L} />
-
-      <AtTempleCard go={go} lang={L} />
 
       <window.HomePrepCard lang={L} />
 
@@ -952,4 +921,4 @@ function DailyView({ go, lang = "deva" }) {
   );
 }
 
-Object.assign(window, { HomeA, AtTempleCard, todayInfo, DailyCard, DailyView, ContinueCard, HomeSearchBar });
+Object.assign(window, { HomeA, todayInfo, DailyCard, DailyView, ContinueCard, HomeSearchBar });

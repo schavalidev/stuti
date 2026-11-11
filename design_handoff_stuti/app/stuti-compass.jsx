@@ -34,7 +34,7 @@ const CP_TIRTHA = [
   { id: "haridwar",     roman: "Haridvāra",        deva: "हरिद्वार" },
   { id: "badrinath",    roman: "Badarīnātha",      deva: "बदरीनाथ" },
   { id: "kedarnath",    roman: "Kedāranātha",      deva: "केदारनाथ",       lat: 30.735, lon: 79.067 },
-  { id: "vaishnodevi",  roman: "Vaiṣṇodevī",       deva: "वैष्णोदेवी",     lat: 33.030, lon: 74.950 },
+  { id: "vaishnodevi",  roman: "Vaiṣणodevī",       deva: "वैष्णोदेवी",     lat: 33.030, lon: 74.950 },
   { id: "chitrakoot",   roman: "Citrakūṭa",        deva: "चित्रकूट",       lat: 25.200, lon: 80.867 },
   { id: "pushkar",      roman: "Puṣkara",          deva: "पुष्कर" },
   { id: "ujjain",       roman: "Ujjayinī",         deva: "उज्जयिनी" },

@@ -159,6 +159,14 @@ window.STUTI_NUDGE = (function () {
         : (it.date ? new Date(it.date).toLocaleDateString(locale, { weekday: "long", day: "numeric", month: "short" }) + " · " + L.t("vrataInDays", lg).replace("{n}", it.away) : "");
       title = it.name || kl;
       text = kl + (when ? " · " + when : "");
+      /* a śrāddha's notice is not a countdown — it names the week's arrangements,
+         the ones still unmade, so the bell is the reminder the house acts on */
+      if (it.tkind === "shraddha") {
+        try {
+          const A = window.STUTI_ABDIKAM, d = it.date ? new Date(it.date) : null;
+          if (A && d) { const left = A.remaining(it.ref, d, lg); if (left.length) text = text + "\n" + left.slice(0, 3).join(" · "); }
+        } catch (e) {}
+      }
     } else if (cue.kind === "tarpana") {
       /* the rite and its window in one line — what to do, and by when */
       const rt = cue.rite || {}, nm = rt.name || {};

@@ -140,6 +140,7 @@ const NITYA_LENSES = [
   { id: "japa",     key: "lensJapa",    icon: "mala" },
   { id: "learn",   key: "lensLearn",   icon: "spark" },
   { id: "nomu",    key: "lensNomu",    icon: "marigold" },
+  { id: "mokku",  key: "lensMokku",  icon: "vayanam" },
   { id: "ledger",  key: "lensLedger",  icon: "book" },
 ];
 
@@ -212,6 +213,8 @@ function NityaView({ go, lang = "deva", showPractices = true, openRemind, initLe
           <window.LedgerLens lang={lang} onLens={choose} go={go} />
         ) : lens === "nomu" ? (
           <window.NomuTracker go={go} lang={lang} />
+        ) : lens === "mokku" ? (
+          <window.MokkuTracker go={go} lang={lang} />
         ) : (
           <React.Fragment>
             <window.TodayBand go={go} lang={lang} />

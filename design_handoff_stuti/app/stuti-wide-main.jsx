@@ -153,6 +153,7 @@ function SearchView({ go, lang = "deva", backView = "browse", weekday, voice = f
           <window.VoiceButton lang={lang} autoStart={voice} onInterim={setQ} onResult={setQ} />
           {q && <button className="search-clear" onClick={() => setQ("")} aria-label="Clear search">×</button>}
         </div>
+        <button className="search-done" onClick={() => go(backView)}>{L.t("lensArrDone", lang)}</button>
       </div>
       <div style={{ padding: "6px 18px 24px" }}>
         {!live ? (
@@ -400,6 +401,11 @@ function App() {
      hub unmounts on every trip out of the library and would forget them */
   const [libLens, setLibLens] = useStateM(() => LENS_FROM_LABEL[t.defaultLens] || "deity");
   const [libSub, setLibSub] = useStateM(null);
+  /* where the library was opened FROM, when something outside it sent the
+     reciter in — Nitya's nomulu shelf tapping "add a nomu", say. The library
+     is a tab root and so has no back arrow of its own; with this set it grows
+     one, and the reciter returns to the shelf they left. */
+  const [libRet, setLibRet] = useStateM(null);
   /* changing the default lens in Tweaks should move the library to it */
   useEffectM(() => { setLibLens(LENS_FROM_LABEL[t.defaultLens] || "deity"); setLibSub(null); }, [t.defaultLens]);
 
@@ -441,9 +447,10 @@ function App() {
        RETURNING to the library must not, or it lands the reciter one level
        above where they were. Both arrive as `go("browse")`, so intent has
        to be stated rather than guessed from the destination. */
-    if (payload.reset) { setLibSub(null); setLibLens(LENS_FROM_LABEL[t.defaultLens] || "deity"); }
+    if (payload.reset) { setLibSub(null); setLibLens(LENS_FROM_LABEL[t.defaultLens] || "deity"); setLibRet(null); }
     if (payload.libSub) setLibSub(payload.libSub);
     if (payload.libLens) setLibLens(payload.libLens);
+    if (payload.libRet) setLibRet(payload.libRet);
     setRoute(r => ({ view, from: payload.from, ret: payload.ret, deity: payload.deity ?? r.deity, hymn: payload.hymn ?? r.hymn, practice: payload.practice ?? r.practice, plan: payload.plan ?? r.plan, lens: payload.lens, lensAt: payload.lensAt, weekday: payload.weekday }));
   };
 
@@ -460,7 +467,7 @@ function App() {
 
   let body;
   if (route.view === "home") body = <Home key="home" go={go} openToday={openToday} lang={lang} overlayEl={overlayEl} />;
-  else if (route.view === "browse") body = <window.LibraryHub key="browse" go={go} lang={lang} tileMode={tileMode} lens={libLens} setLens={setLibLens} sub={libSub} setSub={setLibSub} />;
+  else if (route.view === "browse") body = <window.LibraryHub key="browse" go={go} lang={lang} tileMode={tileMode} lens={libLens} setLens={setLibLens} sub={libSub} setSub={setLibSub} ret={libRet} />;
   else if (route.view === "search") body = <SearchView key="search" go={go} lang={lang} backView={route.from || "browse"} weekday={route.weekday} voice={!!route.voice} />;
   else if (route.view === "daily") body = <window.NityaView key="daily" go={go} lang={lang} showPractices={false} openRemind={() => setRemindOpen(true)} initLens={route.lens} initLensAt={route.lensAt} />;
   else if (route.view === "practices") body = <window.PracticesView key="practices" go={go} lang={lang} />;
@@ -535,7 +542,27 @@ function App() {
   );
 }
 
-ReactDOM.createRoot(document.getElementById("root")).render(<App />);
+class StutiBoundary extends React.Component {
+  constructor(p){ super(p); this.state = { fell: false }; }
+  static getDerivedStateFromError(){ return { fell: true }; }
+  componentDidCatch(err){ try { console.error("[Stuti] a screen stopped:", err); } catch(e){} }
+  render(){
+    if(this.state.fell){
+      return (
+        <div style={{minHeight:"100vh",display:"grid",placeItems:"center",padding:"32px",textAlign:"center",background:"var(--bg)",color:"var(--ink)"}}>
+          <div style={{maxWidth:"30ch"}}>
+            <h1 style={{fontFamily:"var(--font-display)",fontWeight:400,fontSize:"26px",lineHeight:1.2,margin:"0 0 10px"}}>This screen stopped</h1>
+            <p style={{color:"var(--ink-soft)",fontSize:"16px",lineHeight:1.6,margin:"0 0 22px",textWrap:"pretty"}}>Open Stuti again to come back to where you were. Your place and your practice are kept.</p>
+            <button onClick={()=>location.reload()} style={{font:"inherit",fontSize:"15px",fontWeight:600,padding:"12px 24px",borderRadius:"999px",border:"none",background:"var(--accent)",color:"#fff",cursor:"pointer"}}>Open again</button>
+          </div>
+        </div>
+      );
+    }
+    return this.props.children;
+  }
+}
+
+ReactDOM.createRoot(document.getElementById("root")).render(<StutiBoundary><App /></StutiBoundary>);
 /* arm the daily bell once the app is mounted */
 if (window.STUTI_NUDGE) window.STUTI_NUDGE.start();
 /* and take the app offline — the pūjā room is the use case, and it is the

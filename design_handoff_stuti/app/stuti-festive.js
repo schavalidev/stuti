@@ -1,13 +1,13 @@
 /* ============================================================
    STUTI — festive moments (Tweaks · Glyphs: Pigment)
-   Three things the day itself triggers, all gated by data-pigment
-   and stilled by reduced motion:
+   What the day itself triggers, gated by data-pigment and stilled
+   by reduced motion:
    · a completion shower — marking a recitation or practice done
      lets a handful of petals fall once across the screen
-   · festival drift — on a day the vrata engine names, a few petals
-     drift down slowly while the app is open, festival-wide, sparse
    · season tint — data-rtu on <html> (set by the home view) lets
      the accent lean a few degrees toward the running ṛtu
+   The all-day festival drift was withdrawn: a slow fall sitting over
+   the home screen read as clutter, not occasion.
    ============================================================ */
 (function () {
   "use strict";
@@ -56,29 +56,9 @@
     T.__festive = true;
   }
 
-  /* ---------- festival drift: sparse petals all day when a vrata falls today ---------- */
-  /* ---------- festival drift: only a marked day, not a routine one ----------
-     Weekly observances (Śrāvaṇa Sundays) and every-fortnight vratas (Ekādaśī,
-     Pradoṣa) recur too often to be an occasion — petals fall only for the
-     singular annual days. */
-  let driftTimer = null;
-  function festivalToday() {
-    try {
-      const V = window.STUTI_VRATA; if (!V) return false;
-      const p = V.parvaNow && V.parvaNow(); return !!(p && !p.eve);
-    } catch (e) { return false; }
-  }
-  function startDrift() {
-    if (driftTimer || !festivalToday()) return;
-    driftTimer = setInterval(() => {
-      if (!pig() || reduced() || document.hidden) return;
-      petal({ x: Math.random(), dur: 7 + Math.random() * 5, drift: true });
-    }, 2600);
-  }
-
   function boot() {
     if (!window.STUTI_THREAD) { setTimeout(boot, 400); return; }
-    wrapThread(); startDrift();
+    wrapThread();
   }
   if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", boot); else boot();
 })();

@@ -239,18 +239,17 @@ function SearchView({ go, lang = "deva", backView = "browse", weekday, voice = f
                 <div className="eyebrow sr-cap">{L.t("srHymns", lang)} <i>{hymnHits.length}</i></div>
                 <div className="hymn-list">
                   {hymnHits.slice(0, 30).map((h, i) => {
-                    const d = S.deityById[h.deity] || null;   // a shelf-less text has no deity
+                    const d = S.deityById[h.deity];
                     return (
                       <div key={h.id} className={"hymn-card" + (h.catalog ? " hymn-card-soon" : "")} style={{ animationDelay: `${Math.min(i, 8) * 45}ms`, ...deityStyle(d) }}>
                         <button className="hymn-card-main search-result" onClick={() => openHymn(h)}>
-                          {d && <Seal d={d} size={40} />}
+                          <Seal d={d} size={40} />
                           <div className="search-result-body">
                             <div className="hymn-card-lead" style={{ fontFamily: font, fontSize: 20, color: "var(--accent-ink)", lineHeight: 1.2, fontStyle: "normal" }}>{L.hymnTitle(h, lang)}</div>
                             <div className="hymn-card-meta">
-                              {d && <React.Fragment><span>{L.name(d, lang)}</span><span className="dot" /></React.Fragment>}
+                              <span>{L.name(d, lang)}</span>
+                              <span className="dot" />
                               <span>{h.type}</span>
-                              {h.sakha && <React.Fragment><span className="dot" /><span>{L.sakha(h.sakha, lang)}</span></React.Fragment>}
-                              {h.lang && h.lang !== "sa" && <React.Fragment><span className="dot" /><span>{L.langName(h.lang, lang)}</span></React.Fragment>}
                               {h.catalog && <React.Fragment><span className="dot" /><span style={{ fontStyle: "normal" }}>{L.t("textComingSoon", lang)}</span></React.Fragment>}
                             </div>
                           </div>
@@ -552,6 +551,11 @@ function App() {
      one hard-coded screen — search always to the library, a practice always
      to Nitya — so opening either from the home lost your place. `from` is
      carried on the navigation itself and never inherited. */
+  /* the screen we are on, kept fresh for the Back handler — a sheet that eats
+     a Back press re-pushes this so the screen does not move under it */
+  const snapRef = useRefM(null);
+  snapRef.current = { route, libLens, libSub, libRet };
+
   const go = (view, payload = {}) => {
     const order = { home: 0, daily: 1, browse: 2, calendar: 2, settings: 2, plans: 2, practices: 3, practice: 3, japa: 3, plan: 3, deity: 3, search: 3, sandhyaNote: 3, pitruRegister: 4, reader: 4 };
     setDir(order[view] >= order[route.view] ? "fwd" : "back");
@@ -560,18 +564,78 @@ function App() {
        RETURNING to the library must not, or it lands the reciter one level
        above where they were. Both arrive as `go("browse")`, so intent has
        to be stated rather than guessed from the destination. */
-    if (payload.reset) { setLibSub(null); setLibLens(LENS_FROM_LABEL[t.defaultLens] || "deity"); setLibRet(null); }
-    if (payload.libSub) setLibSub(payload.libSub);
-    if (payload.libLens) setLibLens(payload.libLens);
-    if (payload.libRet) setLibRet(payload.libRet);
-    setRoute(r => ({ view, from: payload.from, ret: payload.ret, q: payload.q, deity: payload.deity ?? r.deity, hymn: payload.hymn ?? r.hymn, practice: payload.practice ?? r.practice, plan: payload.plan ?? r.plan, lens: payload.lens, lensAt: payload.lensAt, weekday: payload.weekday, voice: payload.voice }));
+    let nLens = libLens, nSub = libSub, nRet = libRet;
+    if (payload.reset) { nSub = null; nLens = LENS_FROM_LABEL[t.defaultLens] || "deity"; nRet = null; }
+    if (payload.libSub) nSub = payload.libSub;
+    if (payload.libLens) nLens = payload.libLens;
+    if (payload.libRet) nRet = payload.libRet;
+    setLibSub(nSub); setLibLens(nLens); setLibRet(nRet);
+    const next = { view, from: payload.from, ret: payload.ret, q: payload.q, deity: payload.deity ?? route.deity, hymn: payload.hymn ?? route.hymn, practice: payload.practice ?? route.practice, plan: payload.plan ?? route.plan, lens: payload.lens, lensAt: payload.lensAt, weekday: payload.weekday, voice: payload.voice };
+    setRoute(next);
+    /* mirror the move into browser history, so the phone's own Back steps back
+       through screens (see the seed + popstate handler below). An in-app back
+       arrow is itself a forward entry here, as a back link is on the website. */
+    try { window.history.pushState({ __stuti: { route: next, libLens: nLens, libSub: nSub, libRet: nRet } }, ""); } catch (e) {}
   };
 
   const openToday = () => {
     const { deity, hymn } = window.todayInfo();
-    setDir("fwd");
-    setRoute({ view: "reader", deity: deity.id, hymn: hymn.id, from: "home" });
+    go("reader", { deity: deity.id, hymn: hymn.id, from: "home" });
   };
+
+  /* ---- the device Back button ----
+     The app navigates in React state; on its own the phone's Back (and the
+     browser's) would leave the app on the first press. Every `go` above pushes
+     a history entry; a Back press pops it, and the handler here restores the
+     screen that entry held. The base entry is always Home, so Back unwinds the
+     app screen by screen and only leaves it once Home is reached. */
+  const applySnap = (snap) => {
+    setDir("back");
+    setPanelOpen(false);              // a Back press never strands an open tools panel
+    setRoute((snap && snap.route) || { view: "home" });
+    setLibLens((snap && snap.libLens) || "deity");
+    setLibSub((snap && snap.libSub) || null);
+    setLibRet((snap && snap.libRet) || null);
+  };
+  const histReady = useRefM(false);
+  useEffectM(() => {
+    if (!histReady.current) {
+      histReady.current = true;
+      try {
+        const here = { route, libLens, libSub, libRet };
+        if (route.view !== "home") {
+          window.history.replaceState({ __stuti: { route: { view: "home" }, libLens: "deity", libSub: null, libRet: null } }, "");
+          window.history.pushState({ __stuti: here }, "");
+        } else {
+          window.history.replaceState({ __stuti: here }, "");
+        }
+      } catch (e) {}
+    }
+    const onPop = (e) => {
+      /* a sheet or tools panel open over the screen takes the Back press first:
+         it closes, and the entry the press popped is pushed straight back so
+         the screen beneath does not move. */
+      if (window.STUTI_BACKSTOP && window.STUTI_BACKSTOP.pop()) {
+        try { window.history.pushState({ __stuti: snapRef.current }, ""); } catch (err) {}
+        return;
+      }
+      applySnap(e.state && e.state.__stuti);
+    };
+    window.addEventListener("popstate", onPop);
+    return () => window.removeEventListener("popstate", onPop);
+  }, []);
+
+  /* the two screen-level overlays that carry no history entry of their own —
+     the dropped tools panel and the reminders sheet — register their closer so
+     Back shuts them instead of leaving the screen */
+  useEffectM(() => {
+    if (!panelOpen || panelPin || !window.STUTI_BACKSTOP) return;
+    return window.STUTI_BACKSTOP.push(() => setPanelOpen(false));
+  }, [panelOpen, panelPin]);
+  useEffectM(() => {
+    if (!remindOpen || !window.STUTI_BACKSTOP) return;
+    return window.STUTI_BACKSTOP.push(() => setRemindOpen(false));
+  }, [remindOpen]);
 
   /* A screen can be linked to. The website's masthead points at Nitya, the
      library and the calendar, and a shared link should open the screen it
@@ -639,16 +703,6 @@ function App() {
   );
   const appPanel = route.view !== "reader";
 
-  /* a gate is a gate: while it stands, the app behind it is not built at all,
-     so no sheet, nudge or location lookup can reach past it */
-  if (gated) return (
-    <div className="stage">
-      <div className="app" data-screen-label="gate">
-        <window.GateScreen lang={lang} onOpen={() => setGated(false)} />
-      </div>
-    </div>
-  );
-
   return (
     <div className="stage">
       <div className="app" data-screen-label={route.view}>
@@ -701,6 +755,7 @@ function App() {
         {onboarding && !gated && (
           <window.Onboarding lang={lang} setLang={setLang} onDone={() => setOnboarding(false)} />
         )}
+        {gated && <window.GateScreen lang={lang} onOpen={() => setGated(false)} />}
       </div>
 
       {window.TweaksPanel && (
@@ -718,7 +773,27 @@ function App() {
   );
 }
 
-ReactDOM.createRoot(document.getElementById("root")).render(<App />);
+class StutiBoundary extends React.Component {
+  constructor(p){ super(p); this.state = { fell: false }; }
+  static getDerivedStateFromError(){ return { fell: true }; }
+  componentDidCatch(err){ try { console.error("[Stuti] a screen stopped:", err); } catch(e){} }
+  render(){
+    if(this.state.fell){
+      return (
+        <div style={{minHeight:"100vh",display:"grid",placeItems:"center",padding:"32px",textAlign:"center",background:"var(--bg)",color:"var(--ink)"}}>
+          <div style={{maxWidth:"30ch"}}>
+            <h1 style={{fontFamily:"var(--font-display)",fontWeight:400,fontSize:"26px",lineHeight:1.2,margin:"0 0 10px"}}>This screen stopped</h1>
+            <p style={{color:"var(--ink-soft)",fontSize:"16px",lineHeight:1.6,margin:"0 0 22px",textWrap:"pretty"}}>Open Stuti again to come back to where you were. Your place and your practice are kept.</p>
+            <button onClick={()=>location.reload()} style={{font:"inherit",fontSize:"15px",fontWeight:600,padding:"12px 24px",borderRadius:"999px",border:"none",background:"var(--accent)",color:"#fff",cursor:"pointer"}}>Open again</button>
+          </div>
+        </div>
+      );
+    }
+    return this.props.children;
+  }
+}
+
+ReactDOM.createRoot(document.getElementById("root")).render(<StutiBoundary><App /></StutiBoundary>);
 /* arm the daily bell once the app is mounted */
 if (window.STUTI_NUDGE) window.STUTI_NUDGE.start();
 /* and take the app offline — the pūjā room is the use case, and it is the

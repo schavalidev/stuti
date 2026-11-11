@@ -178,7 +178,7 @@ function CalendarView({ go, lang = "deva" }) {
       : " " + P.fmtTime(min) + " " + L.t("fromTime", lang);
   };
   const span = (start, end) => from(start) + till(end);
-  /* yoga and karaṇa arrive as IAST; the Devānāgarī source is what the other
+  /* yoga and karaṇa arrive as IAST; the Devānāgarī source is what the other
      scripts derive from — the same path the home card takes */
   const YD = (window.SK_CONST && window.SK_CONST.YOGA_DEVA) || window.YOGA_DEVA || {};
   const KD = (window.SK_CONST && window.SK_CONST.KARANA_DEVA) || window.KARANA_DEVA || {};
@@ -322,26 +322,6 @@ function CalendarView({ go, lang = "deva" }) {
 
   return (
     <div className="view cal-view scroll">
-      {(() => {
-        /* the backdrop belongs to the month on screen, not to the day last
-           tapped — paging to Māgha should turn the view wintry at once */
-        const monthPa = P.forDay(new Date(cursor.y, cursor.m, 15), loc);
-        const rv = (window.RTU_VIS || {})[monthPa.ritu.iast];
-        /* a transition month carries a mild mix of both seasons, as the Māsa lens does */
-        const mName = window.masaShown ? window.masaShown(monthPa) : monthPa.masa;
-        const mix = window.masaMixFor ? window.masaMixFor(mName && mName.iast) : null;
-        const vars = mix ? { "--rtu": rv.hue, "--rtu-b": mix.hueB } : { "--rtu": rv.hue };
-        return rv ? (
-          <React.Fragment>
-            <div className="cal-season cal-season-back" aria-hidden="true" style={vars}>
-              <div className="cal-season-in cal-season-wash" data-mix={mix ? "1" : undefined} />
-            </div>
-            <div className="cal-season cal-season-front" aria-hidden="true" style={vars}>
-              <div className="cal-season-in cal-season-fg"><window.SeasonAmbient kind={rv.kind} dense mix={mix && mix.kinds} heat={mix && mix.heat} sunHue={mix && mix.sunHue} sunBright={mix && mix.sunBright} /></div>
-            </div>
-          </React.Fragment>
-        ) : null;
-      })()}
       <div className="topbar">
         <div className="topbar-title display">{L.t("calendar", lang)}</div>
         <div style={{ display: "flex", alignItems: "center", gap: 4, marginLeft: "auto", marginRight: 26 }}>
@@ -651,4 +631,3 @@ function CalendarView({ go, lang = "deva" }) {
 }
 
 Object.assign(window, { CalendarView });
-

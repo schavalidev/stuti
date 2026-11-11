@@ -248,7 +248,7 @@ siSend:{roman:"Send a one-time code",deva:"एक-बार का कोड भ
 siWhoBad:{roman:"That reads as neither a phone number nor an email address.",deva:"यह न फ़ोन नम्बर जैसा है, न ईमेल पता।",telugu:"ఇది ఫోన్ నంబర్‌గా లేదా ఈమెయిల్‌గా చదవబడదు."},
 siNoAcct:{roman:"Read without an account",deva:"बिना खाते के पढ़ें",telugu:"ఖాతా లేకుండా చదవండి"},
 siS2H:{roman:"The six digits",deva:"छह अङ्क",telugu:"ఆరు అంకెలు"},
-siSentTo:{roman:"Sent to",deva:"भेजा गया —",telugu:"పంపాం —"},
+siSentTo:{roman:"This is a preview sign-in for",deva:"यह एक प्रारूप प्रवेश है —",telugu:"ఇది ఒక నమూనా ప్రవేశం —"},
 siVerify:{roman:"Verify",deva:"सत्यापित करें",telugu:"నిర్ధారించండి"},
 siResend:{roman:"Send it again",deva:"पुनः भेजें",telugu:"మళ్ళీ పంపండి"},
 siResent:{roman:"Sent again",deva:"पुनः भेजा",telugu:"మళ్ళీ పంపాము"},
