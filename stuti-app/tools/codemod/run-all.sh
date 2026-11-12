@@ -33,6 +33,9 @@ node fix-feedback-seam.mjs
 node fix-dana-seam.mjs
 node fix-deeplink-seam.mjs
 node fix-corpus-seam.mjs
+# the next date of every vrata is a day of ephemeris walking, and it was
+# being walked again on every launch; let the answer survive one.
+node fix-vrata-cache-seam.mjs
 # Was written but never listed here, so every full port silently dropped
 # the meaning-gap notice from the reader and left a blank page over a
 # text whose meanings are not written. Found 27 Oct 2026.
