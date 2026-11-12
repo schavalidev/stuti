@@ -25,6 +25,7 @@
    whole entry rather than guessing, and so does anything unreadable.
    ============================================================ */
 import { STUTI_VRATA } from "./stuti-vrata-data";
+import { BOOT } from "./stuti-boot";
 
 const KEY = "stuti-vrata-upcoming";
 const V: any = STUTI_VRATA as any;
@@ -56,10 +57,12 @@ function restore(k: string): any[] | null {
     const running = raw <= 0 && -raw < days;
     out.push({ v, date, start, away: running ? 0 : raw, dayNo: running ? 1 - raw : null, days });
   }
+  BOOT.note = "vrata=kept";
   return out;
 }
 
 function save(k: string, rows: any[]) {
+  if (!BOOT.note) BOOT.note = "vrata=walked";
   try {
     if (!Array.isArray(rows) || !rows.length) return;
     const out = [];

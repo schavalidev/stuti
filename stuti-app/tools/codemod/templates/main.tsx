@@ -1,4 +1,5 @@
 import "./stuti-voice-shim"; // must come first: replaces window.SpeechRecognition in the native app
+import { BOOT } from "./stuti-boot"; // second: t0 is taken while the module graph is still being read
 import "./stuti-sync-hook"; // before any store writes: stamps the reciter's own keys so they can sync
 import { Capacitor } from "@capacitor/core";
 import ReactDOM from "react-dom/client";
@@ -42,25 +43,40 @@ try {
   if (prefs && prefs.onboarded && !localStorage.getItem("stuti-beta-key")) localStorage.setItem("stuti-beta-key", "1");
 } catch (e) {}
 
+BOOT.mark("imports");   // the module graph is read; everything above this line is the engine
 installVrataCache();   // before the first render asks which vrata is next
+BOOT.mark("vrata");
 installCorpus();   // the fetched catalogue, when a corpus host is configured
+BOOT.mark("corpus");
 installBundled();  // and the bundled texts, off the critical path
+BOOT.mark("bundled");
 applyCachedCorrections();
+BOOT.mark("corrections");
 (window as any).STUTI_BUILD_LABEL = STUTI_BUILD.label();   // the analytics sink names the build, nothing else about the device
 
+BOOT.mark("render0");
 ReactDOM.createRoot(document.getElementById("root")!).render(<App />);
+BOOT.mark("render1");
 
 /* arm the daily bell once the app is mounted (offline caching + push are
    handled by vite-plugin-pwa instead of the prototype's hand-written
    stuti-sw.js / manual registration block — see vite.config.ts) */
 if (STUTI_NUDGE) STUTI_NUDGE.start();
+BOOT.mark("nudge");
 registerKept();
+BOOT.mark("kept");
 installRelay();
+BOOT.mark("relay");
 installJournal();
+BOOT.mark("journal");
 installNotify();
+BOOT.mark("notify");
 installCloud();
+BOOT.mark("cloud");
 installWebPush();
+BOOT.mark("webpush");
 refreshCorrections();
+BOOT.mark("installs");
 (window as any).STUTI_COUNT_DOMAIN = "stuti-app.netlify.app";   // one site for the counters, phone and web alike
 
 /* The offline worker is for the web. Inside the Android app every file is

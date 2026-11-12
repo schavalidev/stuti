@@ -13,6 +13,7 @@
    ============================================================ */
 import { STUTI_COUNT } from "./stuti-count";
 import { deviceId, relayText } from "./stuti-relay";
+import { BOOT } from "./stuti-boot";
 
 const KEY = "stuti-journal";
 const MAX_LINES = 600;
@@ -23,7 +24,10 @@ let since = 0, screen = "", t0 = Date.now(), timer: any = null, flushing = false
 
 const clock = () => ((Date.now() - t0) / 1000).toFixed(1).padStart(7);
 export function journal(kind: string, what = "") {
-  const line = clock() + " " + kind + (what ? " " + what.replace(/\s+/g, " ").slice(0, 80) : "");
+  /* 80 characters is the right cap for a tapped label; the launch timings are
+     one line of numbers and want room, so they get it. */
+  const cap = kind.indexOf("boot") === 0 ? 400 : 80;
+  const line = clock() + " " + kind + (what ? " " + what.replace(/\s+/g, " ").slice(0, cap) : "");
   lines.push(line); since++;
   if (lines.length > MAX_LINES) lines.splice(0, lines.length - MAX_LINES);
   save();
@@ -68,6 +72,19 @@ export function installJournal() {
      from it would pull the relay and the build block to the head of the
      module graph — see the note at the head of that file */
   (window as any).STUTI_JOURNAL = journal;
+  /* first, what the launch itself cost. The observer below cannot see the
+     task that drew this screen, because it is installed after React has
+     drawn it; stuti-boot.ts watches from the time origin instead. */
+  try { journal("boot", BOOT.line()); } catch (e) {}
+  /* and again when the app goes away, which is when this file is sent. React
+     schedules the first render rather than doing it inside render(), so the
+     line above is written before the work it most wants to describe: the long
+     tasks, the contentful paint, and whether the vrata dates were kept or
+     walked. The observer in stuti-boot.ts is buffered from the time origin, so
+     nothing is missed by asking late. A timer would do, but a backgrounded
+     page has its timers throttled and that is the moment this matters most. */
+  let bootPlus = false;
+  const bootSettled = () => { if (bootPlus) return; bootPlus = true; try { journal("boot+", BOOT.line()); } catch (e) {} };
   journal("open", innerWidth + "x" + innerHeight + (document.hidden ? " hidden" : ""));
 
   /* the counter's verbs, as they happen */
@@ -91,7 +108,8 @@ export function installJournal() {
     new PerformanceObserver((l) => { for (const en of l.getEntries()) if (en.duration >= 500) journal("slow", Math.round(en.duration) + "ms on " + (screen || "?")); }).observe({ type: "longtask" });
   } catch (e) {}
 
-  document.addEventListener("visibilitychange", () => { journal(document.hidden ? "hide" : "show"); if (document.hidden) flush("hide"); });
-  window.addEventListener("pagehide", () => flush("hide"));
+  document.addEventListener("visibilitychange", () => { if (document.hidden) bootSettled(); journal(document.hidden ? "hide" : "show"); if (document.hidden) flush("hide"); });
+  window.addEventListener("pagehide", () => { bootSettled(); flush("hide"); });
+  setTimeout(bootSettled, 8000);   // and for a session that is never backgrounded
   timer = setInterval(() => { if (!document.hidden) flush("timer"); }, FLUSH_EVERY);
 }
