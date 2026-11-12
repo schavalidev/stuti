@@ -7,16 +7,12 @@ import App from "./stuti-main";
    after stuti-data; each one attaches v.hi / v.tel to the verses of the
    texts it covers and exports nothing, so nothing imported them and Vite
    never bundled them — a Devanāgarī or Telugu reader got English for every
-   text here, in every build to 17 Oct 2026. They are imported for their
-   effect, in the order the prototype loaded them. */
-import "./stuti-hindi-names-vishnu";
-import "./stuti-hindi-names-lalita";
-import "./stuti-hindi-shiva";
-import "./stuti-hindi-core";
-import "./stuti-hindi-ganesha2";
-import "./stuti-hindi-subrahmanya";
-import "./stuti-hindi-ganesha";
-import "./stuti-hindi-sahasra";
+   text here, in every build to 17 Oct 2026.
+   They are no longer imported here. A meaning can only be hung on a verse
+   that is there, and since 0.9.134 the verses arrive after first paint, so
+   these modules are loaded and re-run by stuti-bundled.ts beside the bodies
+   — in the same order the prototype loaded them, which it keeps. */
+import { installBundled } from "./stuti-bundled";   // the hymns themselves, read once the first screen is drawn
 import { STUTI_NUDGE } from "./stuti-nudge";
 import { registerKept } from "./stuti-recitations"; // kept recitations become each hymn's Listen recording
 import { installRelay } from "./stuti-relay"; // crash notes and Follow sessions go to the makers' Drive folder
@@ -46,6 +42,7 @@ try {
 } catch (e) {}
 
 installCorpus();   // the fetched catalogue, when a corpus host is configured
+installBundled();  // and the bundled texts, off the critical path
 applyCachedCorrections();
 (window as any).STUTI_BUILD_LABEL = STUTI_BUILD.label();   // the analytics sink names the build, nothing else about the device
 

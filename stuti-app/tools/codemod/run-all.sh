@@ -56,6 +56,10 @@ echo "pipeline complete (ported design @ $(cut -c1-9 .ported-at 2>/dev/null || e
 # string-literal check can see (see the script's own note)
 # the hymns are data, not program: let the engine read them as JSON
 node fix-data-as-json.mjs
+# and then part the catalogue from the hymns, so the list of names no
+# longer drags every verse in the app into the launch chunk. After
+# fix-data-as-json: it reads the JSON literal that step leaves behind.
+node fix-defer-bodies.mjs
 node fix-sheet-backstop.mjs
 node copy-parva-chunks.mjs
 node check-assets.mjs

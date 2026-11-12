@@ -62,8 +62,15 @@ globalThis.navigator ??= { userAgent: "node", language: "en", onLine: true };
 
 const load = (name) => import(pathToFileURL(join(SRC, name)).href);
 const { STUTI } = await load("stuti-data.ts");
-const { STUTI_TEXTS } = await load("stuti-texts.ts");           // binds as a side effect
+const { STUTI_TEXTS } = await load("stuti-texts.ts");           // binds the catalogue heads as a side effect
 const { STUTI_TEXTS_EXTRA } = await load("stuti-texts-extra.ts");
+/* Since 0.9.134 a text module carries its entries without their verses, which
+   live in a stuti-body-*.ts and arrive after first paint (src/stuti-bundled.ts).
+   Check 2 below asks whether every hymn that claims a text has one, so the
+   whole bound corpus must be here first — the same walk the app does, run to
+   the end rather than in idle slices. */
+const { loadAllBundled } = await load("stuti-bundled.ts");
+await loadAllBundled();
 const { STUTI_VRATA } = await load("stuti-vrata-data.ts");
 const { STUTI_MASA } = await load("stuti-masa-data.ts");
 const { STUTI_LIB } = await load("stuti-library-data.ts");
