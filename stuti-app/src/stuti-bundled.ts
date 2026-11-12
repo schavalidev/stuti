@@ -66,45 +66,62 @@ const loaded = new Set<string>();
 const inflight: Record<string, Promise<void>> = {};
 
 /* ---- the meanings and the name registries ---- */
+/* Each meaning module matches its titles against every hymn in STUTI.hymns, and
+   with the fetched corpus catalogue in place that is some 2,100 rows, not the
+   179 the bundle ships. Running all eight after each of the thirty bodies cost
+   about 144 ms a time on a laptop — thirty-three main-thread blocks and five
+   seconds of them, measured, which is worse than the parse this change removed.
+   A body a reader is waiting for attaches its meanings at once; the background
+   walk coalesces them into one run once it goes quiet. They are idempotent and
+   re-runnable, which is the whole point of registering them. */
 function runAttachers() {
   const list = (W.STUTI_HI_ATTACH || []) as Array<() => any>;
   for (const f of list) { try { f(); } catch (e) {} }
 }
+let attachPending: any = 0;
+function attachSoon() {
+  if (attachPending) clearTimeout(attachPending);
+  attachPending = setTimeout(() => { attachPending = 0; runAttachers(); bump(); }, 400);
+}
 
-let support: Promise<void> | null = null;
-/* The thousand-name registries come before any body: stuti-texts.ts generates a
-   sahasranāma's name-ślokas out of them as it binds, so a body bound without
-   them would be a text short its thousand names. */
-function loadSupport(): Promise<void> {
-  if (!support) {
-    support = Promise.all([import("./stuti-names-lazy"), import("./stuti-hindi-lazy")])
-      .then(() => { runAttachers(); })
-      .catch(() => {});
-  }
-  return support;
+let hindi: Promise<void> | null = null;
+function loadHindi(): Promise<void> {
+  if (!hindi) hindi = import("./stuti-hindi-lazy").then(() => {}).catch(() => {});
+  return hindi;
+}
+
+let names: Promise<void> | null = null;
+/* The thousand-name registries are 728 KB and only the five texts that carry a
+   namesKey need them — stuti-texts.ts generates a sahasranāma's name-ślokas out
+   of them as it binds, so those bodies must wait for them. The other
+   twenty-five modules never ask, so nothing else pays for them. */
+function loadNames(): Promise<void> {
+  if (!names) names = import("./stuti-names-lazy").then(() => {}).catch(() => {});
+  return names;
 }
 
 /* ---- one body ---- */
-export function loadBody(key: string): Promise<void> {
+/* `now` — a reader is waiting for this one, so nothing about it is deferred. */
+export function loadBody(key: string, now = false): Promise<void> {
   if (loaded.has(key)) return Promise.resolve();
   if (inflight[key]) return inflight[key];
   const m = BODY_MODS.find((x) => x.key === key);
   if (!m) return Promise.resolve();
   inflight[key] = (async () => {
-    await loadSupport();
+    await loadHindi();
+    if (m.heads.some((t: any) => t && t.namesKey)) await loadNames();
     const mod: any = await m.load();
     const bodies: any[][] = (mod && mod.default) || [];
     m.heads.forEach((t: any, i: number) => { t.verses = bodies[i] || []; STUTI_ATTACH(t); });
     loaded.add(key);
-    runAttachers();
-    bump();
+    if (now) { runAttachers(); bump(); } else attachSoon();
   })().catch(() => {});
   return inflight[key];
 }
 
 export function loadFor(h: any): Promise<void> {
   const key = h && byTitle.get(norm(h.title));
-  return key ? loadBody(key) : Promise.resolve();
+  return key ? loadBody(key, true) : Promise.resolve();
 }
 
 const idle = () => new Promise<void>((res) => {
@@ -115,18 +132,29 @@ const idle = () => new Promise<void>((res) => {
 let all: Promise<void> | null = null;
 /* Every body, one at a time, yielding the main thread between each — so the
    app stays answerable while the rest of the library fills in behind it. Also
-   what tools/codemod/check-links.mjs calls, to check the whole bound corpus. */
+   what tools/codemod/check-links.mjs calls, to check the whole bound corpus,
+   which is why it attaches the meanings itself before it resolves rather than
+   leaving them to the coalescing timer. */
 export function loadAllBundled(): Promise<void> {
   if (!all) all = (async () => {
     for (const m of BODY_MODS) { await loadBody(m.key); await idle(); }
+    if (attachPending) { clearTimeout(attachPending); attachPending = 0; }
+    runAttachers();
+    bump();
   })();
   return all;
 }
 
+/* The first screen draws before any of this. The home screen's own first render
+   is the long task at launch (about 1.4 s on a laptop, three times that on a
+   phone), and starting the walk into the middle of it only lengthens the wait
+   for a reciter who is looking at a screen that shows no verses anyway. So the
+   walk waits for the app to go quiet; a hymn opened before it gets there is
+   loaded on demand and does not wait for the queue. */
 export function installBundled() {
   const go = () => { loadAllBundled(); };
-  if (typeof W.requestIdleCallback === "function") W.requestIdleCallback(go, { timeout: 500 });
-  else setTimeout(go, 0);
+  if (typeof W.requestIdleCallback === "function") setTimeout(() => W.requestIdleCallback(go, { timeout: 3000 }), 2000);
+  else setTimeout(go, 2000);
 }
 
 /* ---- what the screens take ---- */
