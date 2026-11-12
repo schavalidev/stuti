@@ -61,8 +61,26 @@ BOOT.mark("render1");
 /* arm the daily bell once the app is mounted (offline caching + push are
    handled by vite-plugin-pwa instead of the prototype's hand-written
    stuti-sw.js / manual registration block — see vite.config.ts) */
-if (STUTI_NUDGE) STUTI_NUDGE.start();
-BOOT.mark("nudge");
+/* The daily bell waits for the first paint. arm() asks the pañcāṅga when the
+   next juncture is, and on a phone carrying held cues that was measured at
+   3,139 ms of held main thread — in the module body, so React had not drawn
+   anything yet and it was the whole of a five-second launch. Nothing wants it
+   sooner: the timer it sets cannot fire for at least a second. */
+const afterPaint = (f: () => void) => {
+  let done = false;
+  const go = () => { if (done) return; done = true; try { f(); } catch (e) {} };
+  /* whichever comes first: the frame after the first paint, or the timer. A
+     launch straight into the background paints no frame at all, and the bell
+     must be armed either way. */
+  if (typeof requestAnimationFrame === "function") {
+    requestAnimationFrame(() => {
+      if (typeof requestIdleCallback === "function") requestIdleCallback(go, { timeout: 1200 });
+      else setTimeout(go, 0);
+    });
+  }
+  setTimeout(go, 1500);
+};
+afterPaint(() => { if (STUTI_NUDGE) STUTI_NUDGE.start(); BOOT.mark("nudge"); });
 registerKept();
 BOOT.mark("kept");
 installRelay();
