@@ -269,8 +269,8 @@ import { STUTI_NAMES } from "./stuti-names";
     N.names.forEach(function (n) { if (HI[n.n] && !n.mh) n.mh = HI[n.n]; });
     return true;
   }
-  if (!attach()) {
-    let tries = 0;
-    const t = setInterval(function () { if (attach() || ++tries > 40) clearInterval(t); }, 60);
-  }
+  /* registered rather than run: stuti-bundled.ts calls this again each time a
+     hymn's verses arrive, so no meaning depends on load order any more */
+  var W: any = typeof window !== "undefined" ? window : globalThis;
+  (W.STUTI_HI_ATTACH = W.STUTI_HI_ATTACH || []).push(attach);
 })();

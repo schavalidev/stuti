@@ -967,6 +967,7 @@ export const STUTI_PADA = (function () {
 
   /* ---------- where else the word occurs ---------- */
   let CORPUS = null;
+  try { (typeof window !== "undefined" ? window : globalThis).addEventListener("stuti-bundled", function () { CORPUS = null; NAMES = null; }); } catch (e) {}
   function corpus() {
     if (CORPUS) return CORPUS;
     CORPUS = [];

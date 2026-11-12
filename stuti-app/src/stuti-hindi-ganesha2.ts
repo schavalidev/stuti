@@ -267,5 +267,8 @@ import { STUTI } from "./stuti-data";
     });
     return hit > 0;
   }
-  if (!attach()) document.addEventListener("DOMContentLoaded", attach);
+  /* registered rather than run: stuti-bundled.ts calls this again each time a
+     hymn's verses arrive, so no meaning depends on load order any more */
+  var W: any = typeof window !== "undefined" ? window : globalThis;
+  (W.STUTI_HI_ATTACH = W.STUTI_HI_ATTACH || []).push(attach);
 })();

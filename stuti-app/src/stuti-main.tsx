@@ -6,6 +6,7 @@ import { STUTI_BACKSTOP } from "./stuti-backstop";
 import { CalendarView } from "./stuti-calendar";
 import { STUTI_COUNT } from "./stuti-count";
 import { STUTI } from "./stuti-data";
+import { useBundledTick } from "./stuti-bundled";
 import { GateScreen, gateOpen } from "./stuti-gate";
 import { HomeA, todayInfo } from "./stuti-home";
 import { STUTI_L } from "./stuti-i18n";
@@ -76,6 +77,7 @@ function srTrace(text) {
 /* every verse of every text that has one, with the line index the
    reader counts in — so a result opens exactly at that verse */
 let SR_VERSES = null;
+try { (typeof window !== "undefined" ? window : globalThis).addEventListener("stuti-bundled", function () { SR_VERSES = null; }); } catch (e) {}
 function verseIndex() {
   if (SR_VERSES) return SR_VERSES;
   const out = [];
@@ -492,6 +494,7 @@ function TabBar({ view, from, ret, go, lang = "deva" }) {
 
 /* ---------------- The app ---------------- */
 function App() {
+  useBundledTick();   // the bodies arrive after first paint; the screens re-read when they do
   const S = STUTI;
   const [t, setTweak] = useTweaks(TWEAK_DEFAULTS);
   const tileMode = t.deityTile === "Full picture" ? "full" : "seal";
