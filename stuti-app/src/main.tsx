@@ -13,6 +13,7 @@ import App from "./stuti-main";
    these modules are loaded and re-run by stuti-bundled.ts beside the bodies
    — in the same order the prototype loaded them, which it keeps. */
 import { installBundled } from "./stuti-bundled";   // the hymns themselves, read once the first screen is drawn
+import { installVrataCache } from "./stuti-vrata-cache";   // the upcoming days, kept between launches
 import { STUTI_NUDGE } from "./stuti-nudge";
 import { registerKept } from "./stuti-recitations"; // kept recitations become each hymn's Listen recording
 import { installRelay } from "./stuti-relay"; // crash notes and Follow sessions go to the makers' Drive folder
@@ -41,6 +42,7 @@ try {
   if (prefs && prefs.onboarded && !localStorage.getItem("stuti-beta-key")) localStorage.setItem("stuti-beta-key", "1");
 } catch (e) {}
 
+installVrataCache();   // before the first render asks which vrata is next
 installCorpus();   // the fetched catalogue, when a corpus host is configured
 installBundled();  // and the bundled texts, off the critical path
 applyCachedCorrections();

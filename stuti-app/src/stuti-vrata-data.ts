@@ -1420,6 +1420,10 @@ export const STUTI_VRATA = (function () {
     const k = upFingerprint();
     if (upCacheKey !== k) {
       upCacheKey = k;
+      /* kept from the last launch, under this very key (stuti-vrata-cache.ts) */
+      var KEPT = (typeof window !== "undefined" && window.STUTI_VRATA_CACHE) || null;
+      var restored = KEPT && KEPT.restore(k);
+      if (restored) { upCache = restored; return limit ? upCache.slice(0, limit) : upCache.slice(); }
       upCache = all().map((v) => {
         const d = nextDate(v); if (!d) return null;
         const lead = v.lead || 0, days = v.days || 1, start = addDays(d, -lead);
@@ -1450,6 +1454,7 @@ export const STUTI_VRATA = (function () {
         const key = fold(nm) + "|" + dayKey(u.date);
         if (seenND.has(key)) return false; seenND.add(key); return true;
       });
+      if (KEPT) KEPT.save(k, upCache);
     }
     return limit ? upCache.slice(0, limit) : upCache.slice();
   }
@@ -1477,5 +1482,5 @@ export const STUTI_VRATA = (function () {
     return upcoming().filter((x) => x.date.getFullYear() === y && x.date.getMonth() === m);
   }
 
-  return { vratas, byId, lookup, all, nextDate, daysAway, upcoming, inMonth, dayKey, today, kalaWindow, isParva, parvaNow, parvasNow, southern, lunarDay: lunar };
+  return { vratas, byId, lookup, all, nextDate, daysAway, upFingerprint, upcoming, inMonth, dayKey, today, kalaWindow, isParva, parvaNow, parvasNow, southern, lunarDay: lunar };
 })();
