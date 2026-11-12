@@ -95,6 +95,23 @@ code { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: .
 
 <section class="release">
   <div class="rail">
+    <div class="ver">0.9.134</div>
+    <div class="date">12 November 2026</div>
+    <div class="rail-note">The first launch on a phone takes about seven seconds, and most of what it spends that on is not program but hymn.</div>
+  </div>
+  <div class="release-body">
+    <h2 class="release-title">The text is data, so the engine may read it as data</h2>
+    <div class="entry">
+      <div class="entry-head"><span class="tag tag-chg">Changed</span><h3>A megabyte and a half of hymn now parses as JSON</h3></div>
+      <p>Inside the app nothing is downloaded &mdash; every file is already on the phone &mdash; so the wait at first launch is the reading. The build is one script of some 5.7&nbsp;MB, and two thirds of it is the hymns: verse text, their meanings, the sahasranāma name lists. All of it was being read by a JavaScript parser, which must treat every byte as something that could be code.</p>
+      <p>A string handed to JSON.parse is not read that way. The grammar is small, the parser is a different one, and measured on a single 126&nbsp;KB file it is two and a half times faster. Thirty-four modules, 1.52&nbsp;MB of literal in all, are now written as JSON and parsed as JSON. The data is identical: each one is evaluated, sent through JSON and read back, and compared key by key before it is rewritten, because a field lost here would be a verse with no meaning or a name missing from a thousand. A module that does not come back unchanged is left as it was and named in the run.</p>
+      <p>This is worth having and it is not the answer. The measurement that matters is elsewhere, and it is written down in the commit: each deity&rsquo;s catalogue entries and its verses are one array, so the library asking for a title pulls in every verse of every hymn at launch. Until those are parted the phone reads the whole corpus to draw a screen that shows none of it.</p>
+    </div>
+  </div>
+</section>
+
+<section class="release">
+  <div class="rail">
     <div class="ver">0.9.133</div>
     <div class="date">11 November 2026</div>
     <div class="rail-note">Back did nothing at all, and a calendar opened over a sheet with no way out of it.</div>
