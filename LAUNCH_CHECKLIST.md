@@ -251,7 +251,9 @@ exists to prevent. Leave it unpublished and do not raise it again.
 - [x] Bhāgavata: meanings for all 335 adhyāyas — done 26 October 2026 (S78), each
       adhyāya glossed and read by a second reader. Checked again 14 November 2026
       (S99): `stotras/bin/unglossed.py` reports 0 units in 0 files
-- [ ] Bhāgavata māhātmyas: not written
+- [x] Bhāgavata māhātmyas — written 14 November 2026 (S99): the Padma Purāṇa's six adhyāyas
+      (`vishnu/bhagavata/0001`–`0006`) and the Skanda Purāṇa's four (`1301`–`1304`), 703 verses,
+      with meanings read twice and compound hyphens. Marked `Published:`; not yet uploaded
 - [ ] `puja/smarta/51_sravana_mangalagauri_vrata_challa.txt` — reserved 14 September,
       transcription from 400 dpi page images in progress, no text layer in the source
 - [ ] Minor deities absent from Gītā Press 1594 (Subrahmaṇya among them) need a

@@ -139,6 +139,11 @@ folder sorts as the volumes are bound. Anything that reads the first two digits 
 as a skandha must leave these ten out.
 
 `bin/bhagavata/build_mahatmya.py` wrote them, from the same text layer and with the same decoder.
+All ten carry English, Telugu and Hindi on every unit, each read by a second, independent reader,
+and compound hyphens from 2,205 new word decisions (`hyphenation/work/out/m00*.tsv`, applied with
+the ledger `hyphenation/analysis_m_mahatmya.ledger.json`). Two readings are left for a ruling and
+named in their notes: Padma 3.71, where the witness's गोविन्दसरूप keeps the metre and the print's
+-स्वरूप- breaks it, and Skanda 1.27, युवयोः against आवयोः.
 It never overwrites a file. What it met:
 
 - **The Padma Purāṇa itself is not a witness to this māhātmya's wording.** sa.wikisource.org's
