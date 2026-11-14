@@ -248,7 +248,9 @@ exists to prevent. Leave it unpublished and do not raise it again.
 
 ### Content still to write
 
-- [ ] Bhāgavata: meanings for 332 of 335 adhyāyas. Only 8.2, 8.3 and 8.4 carry them
+- [x] Bhāgavata: meanings for all 335 adhyāyas — done 26 October 2026 (S78), each
+      adhyāya glossed and read by a second reader. Checked again 14 November 2026
+      (S99): `stotras/bin/unglossed.py` reports 0 units in 0 files
 - [ ] Bhāgavata māhātmyas: not written
 - [ ] `puja/smarta/51_sravana_mangalagauri_vrata_challa.txt` — reserved 14 September,
       transcription from 400 dpi page images in progress, no text layer in the source
