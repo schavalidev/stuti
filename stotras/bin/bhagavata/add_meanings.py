@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """Add en/tel/hi meanings to a text-only corpus file, verifying nothing else moves.
 
-    add_meanings.py <file.txt> <meanings.json> [--check]
+    add_meanings.py <file.txt> <meanings.json> [--check] [--session=S99]
 
 meanings.json holds:
   {"note": "<the whole new Recension note>" | {"extra": "<sentences to append>"},
@@ -36,7 +36,10 @@ def _today():
     return datetime.date.today().strftime("%-d %b %Y")
 
 
-WRITTEN = (f"Meanings written {_today()} (session S78). The differences between the witnesses "
+# the session that writes the meanings; S78 ran the first pass, and a later one passes --session=
+SESSION = next((x.split('=', 1)[1] for x in sys.argv[1:] if x.startswith('--session=')), 'S78')
+
+WRITTEN = (f"Meanings written {_today()} (session {SESSION}). The differences between the witnesses "
            "listed below were read as the verses were glossed; except where this note says "
            "otherwise, each is a spelling, a sandhi or a word order of the two editions, none of "
            "them changes the sense, and the print's reading therefore stands unbracketed. ")
