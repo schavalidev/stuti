@@ -80,6 +80,10 @@ def _prepass(s):
     # `Á¢` together is a wide ि-hook, not ि + anusvāra (वंचितो, अङ्गिरसौ, लिंगिनो — GRETIL agrees).
     # But ि + half-forms + `¢` is a real anusvāra set over the hook: तस्मिंस्, ग्रन्थिं, त्रिंशद्.
     s = re.sub('Á(' + HALF_RE + '+)[ ]?¢', r'®\1', s)
+    # ि, a space, then `¢` before the cluster is also a real anusvāra: the dot is printed over the
+    # hook (मुक्तिं, भुक्तिं). Read off the page at māhātmya 2.7, where two lines below, at 2.9, the
+    # same word is set `Á¢` with no space and the page shows no dot.
+    s = s.replace('Á ¢', '®')
     s = s.replace('Á¢', 'Á')
     return s
 
@@ -192,6 +196,7 @@ def decode(text):
     s = _subst(text).replace('ं्र', '्रं')      # भ्रंश is set भ + ं + ्र
     s = _reorder(s)
     s = s.replace('ंु', 'ुं').replace('ंू', 'ूं')
+    s = s.replace('ंृ', 'ृं').replace('ंॄ', 'ॄं')    # श्रोतॄंश्च is set त + ं + ॄ
     s = s.replace('््', '्')                    # a virāma glyph set twice (सङ््ग्राम)
     s = s.replace('ाा', 'ा')                    # an ā glyph set twice, once only (11.11.40)
     # independent vowels written as अ + mātrā
