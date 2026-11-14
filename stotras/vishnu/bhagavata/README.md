@@ -125,10 +125,51 @@ may be set before ्र (भ्रंश). The typesetter sometimes leaves a ga
 - **Do not close spaces against GRETIL.** It was tried: GRETIL's verse text often runs words
   together, so the test joined real word boundaries (सकृद् यद्) as often as real gaps.
 
+## The two māhātmyas (14 Nov 2026, session S99)
+
+The volumes print two māhātmyas with the Purāṇa, and both are in this folder:
+
+- `0001`–`0006` — the **Padma Purāṇa's** Bhāgavata Māhātmya, 6 adhyāyas, 504 verses, code 26
+  pp. 33–80, bound before the first skandha.
+- `1301`–`1304` — the **Skanda Purāṇa's** (Vaiṣṇavakhaṇḍa), 4 adhyāyas, 199 verses, code 27
+  pp. 983–1008, bound after the twelfth.
+
+**00 and 13 are not skandhas.** They are "before Skandha 1" and "after Skandha 12", chosen so the
+folder sorts as the volumes are bound. Anything that reads the first two digits of a file number
+as a skandha must leave these ten out.
+
+`bin/bhagavata/build_mahatmya.py` wrote them, from the same text layer and with the same decoder.
+It never overwrites a file. What it met:
+
+- **The Padma Purāṇa itself is not a witness to this māhātmya's wording.** sa.wikisource.org's
+  `पद्मपुराणम्/खण्डः ६ (उत्तरखण्डः)/अध्यायः १९३`–`१९८` tells the same story in a different recension:
+  it opens with Pārvatī questioning Śiva, and most verses are reworded. Matched by wording, it
+  holds 30, 42, 25, 26, 9 and 8 of the print's verses in the six adhyāyas. So the line-by-line
+  witness is the text Wikisource carries *with its Bhāgavata*,
+  `श्रीमद्भागवतपुराणम्/माहात्म्य (पाद्मे)/अध्यायः ०१`–`०६`, which resolves sandhi between words and
+  does not say where it comes from. Each file names both and says which is which.
+- **The Skanda Purāṇa itself is a good witness.** `स्कन्दपुराणम्/खण्डः २ (वैष्णवखण्डः)/भागवतमाहात्म्यम्/अध्यायः ०१`–`०४`
+  agrees letter for letter in 157 of the 199 verses, and differs by a letter or two in the rest.
+- All 703 verses were found in the second witness, and it has no verse line the print lacks.
+- **A speaker line can stand inside a verse.** In `1303` at 23, 52, 53, 59 and 65 the print sets
+  the first half, then `ब्रह्मोवाच`, then the second half with the number. The parser hands these
+  over as an unnumbered half-verse, a speaker and a numbered half-verse; the builder joins the
+  three lines, in the order printed, as one verse. The Purāṇa proper has no such case.
+- **Two decoder rules, both read off the page.** `Á ¢` with a space between them, before a
+  cluster, is ि with a real anusvāra (`मुक्तिं`, `भुक्तिं`): at māhātmya 2.7 the page shows the dot,
+  and two lines below, at 2.9, the same word is set `Á¢` with no space and shows none. And an
+  anusvāra set before `ॄ` belongs after it (`श्रोतॄंश्च`). `bin/corpus_lint.py` caught both.
+- Wikisource's speaker lines arrive joined by sandhi (`बालोवाच`, `भक्तिरुवाच`), so a test for
+  `उवाच` alone lets them through as verse.
+- sanskritdocuments.org answered HTTP 403 to every request on 14 Nov 2026, with a browser
+  User-Agent, so its copy of the māhātmya was not read.
+
+The front matter the volumes also print — the pūjā of the book, the saptāha procedure in Hindi,
+the āratī, the Govinda-Dāmodara stotra at the end of code 27 — is not part of either māhātmya
+and is not written here.
+
 ## Still open
 
-- The meanings, adhyāya by adhyāya, with the recension notes written up by hand as in `0802`–`0804`.
-- The two māhātmyas the volumes print with the text: the Padma Purāṇa's (6 adhyāyas, code 26
-  pp. 2–80) and the Skanda Purāṇa's (4 adhyāyas, code 27 at the end). They parse cleanly
-  (`skandha: None`) and are not yet written.
+- The meanings are written: all 335 adhyāyas carry them since 26 Oct 2026 (session S78), each
+  read by a second reader. The paragraph at the top of this file describes the state on 1 Oct.
 - 8.4.25 is settled: the user kept विमलां मतिम् on 1 Oct 2026.
