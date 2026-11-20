@@ -67,6 +67,7 @@ export const STUTI_TARPANA = (function () {
     rohina:     { label: { roman: "Rohiṇa", deva: "रोहिण", tel: "రోహిణం" } },
     arunodaya:  { label: { roman: "Aruṇodaya", deva: "अरुणोदय", tel: "అరుణోదయం" } },
     chandrodaya:{ label: { roman: "Candrodaya", deva: "चन्द्रोदय", tel: "చంద్రోదయం" } },
+    pradosha:   { label: { roman: "Pradoṣa", deva: "प्रदोष", tel: "ప్రదోషం" } },
     overlap:    { label: { roman: "Caturdaśī joined with the Tuesday", deva: "मङ्गलवार से युक्त चतुर्दशी", tel: "మంగళవారంతో కూడిన చతుర్దశి" } },
     grahana:    { label: { roman: "The eclipse", deva: "ग्रहण", tel: "గ్రహణం" } },
     sankranti:  { label: { roman: "Saṅkrānti puṇyakāla", deva: "सङ्क्रान्ति पुण्यकाल", tel: "సంక్రాంతి పుణ్యకాలం" } },
@@ -86,6 +87,8 @@ export const STUTI_TARPANA = (function () {
       case "kutapa":      return { start: r + muh * 7, end: r + muh * 8 };
       case "rohina":      return { start: r + muh * 8, end: r + muh * 9 };
       case "arunodaya":   return { start: r - 96, end: r };
+      /* the vrata engine's pradoṣa: tested at sunset, kept for 96 minutes */
+      case "pradosha":    return { start: s, end: s + 96 };
       case "chandrodaya": { const m = pa.moonrise != null ? pa.moonrise : pa.moonriseNext; return m == null ? null : { start: m, end: m + 48 }; }
       default: return null;
     }
@@ -94,7 +97,7 @@ export const STUTI_TARPANA = (function () {
   function instant(kala, pa) {
     const w = window_(kala, pa);
     if (!w) return null;
-    if (kala === "chandrodaya" || kala === "arunodaya" || kala === "udaya") return w.start;
+    if (kala === "chandrodaya" || kala === "arunodaya" || kala === "udaya" || kala === "pradosha") return w.start;
     return (w.start + w.end) / 2;
   }
   const jdOf = (day, mins, tz) =>
@@ -165,12 +168,14 @@ export const STUTI_TARPANA = (function () {
   }
   /* Naraka Caturdaśī — anchored to Dīpāvalī's amāvāsyā so the two festivals
      cannot drift apart, but decided at candrodaya per Dharma Sindhu 8 */
+  function dipavaliDay(y) {
+    const V = STUTI_VRATA;
+    try { const v = V && V.all().find((x) => x.id === "dipavali"); return v ? v.find(y) : null; } catch (e) { return null; }
+  }
   function narakaDay(y) {
     const loc = place(), ck = y + "|" + placeKey(loc);
     if (narakaCache[ck] !== undefined) return narakaCache[ck];
-    const V = STUTI_VRATA;
-    let dip = null;
-    try { const v = V && V.all().find((x) => x.id === "dipavali"); if (v) dip = v.find(y); } catch (e) {}
+    const dip = dipavaliDay(y);
     narakaCache[ck] = dip
       ? (dayCarrying(dip, CATURDASHI, "chandrodaya", loc) || dayCarrying(dip, CATURDASHI, "arunodaya", loc)
          || D(dip.getFullYear(), dip.getMonth(), dip.getDate() - 1))
@@ -236,6 +241,13 @@ export const STUTI_TARPANA = (function () {
       trigger: { roman: "Naraka Caturdaśī", deva: "नरक चतुर्दशी", tel: "నరక చతుర్దశి" },
       rule: { roman: "Dharma Sindhu decides the Naraka Caturdaśī bath by the caturdaśī prevailing at moonrise. The tarpaṇam follows the bath, before sunrise — so the day is settled at candrodaya and the rite performed at aruṇodaya. Subtracting a day from Dīpāvalī gives a trayodaśī morning whenever caturdaśī and amāvāsyā share a date.",
               tel: "నరక చతుర్దశి స్నానాన్ని ధర్మసింధు చంద్రోదయ సమయంలో ఉన్న చతుర్దశిని బట్టి నిర్ణయిస్తుంది. తర్పణం స్నానం తరువాత, సూర్యోదయానికి ముందు — రోజు చంద్రోదయంతో, కర్మ అరుణోదయంలో. దీపావళి నుండి ఒక రోజు తీసేస్తే త్రయోదశి ఉదయమే వస్తుంది." },
+      sources: [SRC.ds8],
+    },
+    "yama-dipavali": {
+      badge: "prayoga", status: "prayoga", decision: "pradosha", performance: "arunodaya", offset: 0,
+      trigger: { roman: "Dīpāvalī", deva: "दीपावली", tel: "దీపావళి" },
+      rule: { roman: "Dīpāvalī is the day the amāvāsyā stands at pradoṣa. Yama Tarpaṇam is offered that morning as well, after the bath and before sunrise, as on Naraka Caturdaśī. When Naraka Caturdaśī and Dīpāvalī fall on one day, the tarpaṇam is offered once.",
+              tel: "ప్రదోష కాలంలో అమావాస్య ఉన్న రోజే దీపావళి. ఆ రోజు ఉదయం కూడా, స్నానం తరువాత సూర్యోదయానికి ముందు, నరక చతుర్దశి నాటి వలెనే యమ తర్పణం చేస్తారు. నరక చతుర్దశి, దీపావళి ఒకే రోజు వచ్చినప్పుడు తర్పణం ఒకసారే చేస్తారు." },
       sources: [SRC.ds8],
     },
     "yama-angaraka": {
@@ -684,6 +696,28 @@ export const STUTI_TARPANA = (function () {
         stotras: [{ deity: "vishnu", m: "sahasranama" }],
       }
     );
+    /* Yama Tarpaṇam is kept on Dīpāvalī as well (S100, 20 Nov 2026). The rite,
+       its names and its hour are Naraka Caturdaśī's; only the day and the first
+       line of significance differ. Where the two festivals share a civil day
+       this entry steps aside, so the day carries one Yama Tarpaṇam, not two. */
+    const yama = entries.find((e) => e.id === "yama-tarpanam");
+    if (yama) entries.splice(entries.indexOf(yama) + 1, 0, Object.assign({}, yama, {
+      id: "yama-dipavali",
+      name: { roman: "Yama Tarpaṇam · Dīpāvalī", deva: "यम तर्पणम् · दीपावली", tel: "యమ తర్పణం · దీపావళి" },
+      rule: { roman: "Dīpāvalī · after the pre-dawn bath", deva: "दीपावली · प्रभात स्नान के बाद", tel: "దీపావళి · తెల్లవారుజాము స్నానం తరువాత" },
+      find: (y) => {
+        const dip = dipavaliDay(y), nk = narakaDay(y);
+        if (!dip) return null;
+        return nk && dayKeyOf(nk) === dayKeyOf(dip) ? null : dip;
+      },
+      decisionKala: "pradosha",
+      significance: [
+        { roman: "Yama Tarpaṇam is offered on Dīpāvalī as well, the amāvāsyā after Naraka Caturdaśī. When the two fall on one day, it is offered once.",
+          tel: "నరక చతుర్దశి తరువాత వచ్చే దీపావళి అమావాస్య నాడు కూడా యమ తర్పణం చేస్తారు. రెండూ ఒకే రోజు వచ్చినప్పుడు ఒకసారే చేస్తారు." },
+      ].concat(yama.significance.slice(1)),
+      source: { roman: "The day is Dīpāvalī, the amāvāsyā standing at pradoṣa. The names and the procedure are those of Naraka Caturdaśī. Posture, tīrtha and the order of names are prayoga-specific.",
+                tel: "రోజు దీపావళి, ప్రదోష కాలంలో అమావాస్య ఉన్న రోజు. నామాలు, విధానం నరక చతుర్దశి నాటివే. ఆసనం, తీర్థం, నామ క్రమం ప్రయోగాన్ని బట్టి." },
+    }));
   }
   defineEntries();
   const ids = () => entries.map((e) => e.id);

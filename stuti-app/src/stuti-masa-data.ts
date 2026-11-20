@@ -257,7 +257,7 @@ export const STUTI_MASA = (function () {
     "radha-ashtami": M.bhadrapada, "shankara-jayanti": M.vaisakha, "dattatreya-jayanti": M.margashirsha,
     "hayagriva-jayanti": M.shravana, "vasanta-panchami": M.magha, "vasanta-navaratri": M.caitra,
     "shyamala-navaratri": M.magha, "varahi-navaratri": M.ashadha,
-    "yama-tarpanam": M.ashvina, "bhishma-tarpanam": M.magha,
+    "yama-tarpanam": M.ashvina, "yama-dipavali": M.ashvina, "bhishma-tarpanam": M.magha,
   };
   const NOMU_MASA = {
     "atla-tadde": M.ashvina, "undralla-tadde": M.bhadrapada, "uppu-nomu": M.shravana,
