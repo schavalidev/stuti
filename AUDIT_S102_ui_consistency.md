@@ -2,7 +2,7 @@
 
 Built bundle 0.9.134, phone width (375 px), roman and Telugu interfaces. Nothing was changed; this is the list to act on.
 
-## 1. Fix first: the Vidhi section is untranslated (reported by the user)
+## 1. FIXED in S102: the Vidhi section was untranslated (reported by the user)
 
 In the Telugu interface, Gaṇeśa's book lists every section in Telugu except the last, which reads "VIDHI" in Latin capitals. The cause is that `TYPE_LABELS` in the library data (design file `stuti-library-data.js`, generated into `stuti-app/src/stuti-library-data.ts:26`) has no entry for the type "Vidhi", so `typeList()` falls back to the raw English word. Śrī Varasiddhi Vināyaka Vratam (`stuti-data.ts:212`) is the only text with that type. A sweep of all twelve deity books found no other untranslated section heading.
 

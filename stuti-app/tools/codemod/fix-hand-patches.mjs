@@ -96,3 +96,23 @@ console.log("hand patches applied; ReactDOM imports added to", dom, "files");
       .map((s) => { try { return s.subscribe(f); } catch (e) { return null; } });`));
   console.log("live subscriptions rewired: ledger, today");
 }
+
+// --- stuti-library-data.ts: a label for the "Vidhi" type -------------------
+// Śrī Varasiddhi Vināyaka Vratam is typed "Vidhi", and TYPE_LABELS had no row
+// for it, so typeList() fell back to the raw word and the Telugu and Hindi
+// books showed "VIDHI" in Latin capitals under Gaṇeśa (S102 audit). The words
+// are the ones stuti-i18n already uses for vidhi. If the design adds its own
+// row, this steps aside.
+{
+  let t = rd("stuti-library-data.ts");
+  if (!/"Vidhi":\s*\{/.test(t)) {
+    const row = /(\n(\s*)"Tālam":\s*\{[^\n]*\},)/;
+    const order = /("Kṛti", "Tālam",)/;
+    must("stuti-library-data.ts", t, row, "Tālam row of TYPE_LABELS");
+    must("stuti-library-data.ts", t, order, "Kṛti, Tālam in TYPE_ORDER");
+    t = t.replace(row, `$1\n$2"Vidhi":        { deva: "विधि",            tel: "విధానం",            note: "The order of the rite" },`);
+    t = t.replace(order, `$1 "Vidhi",`);
+    wr("stuti-library-data.ts", t);
+    console.log("library: Vidhi type labelled");
+  }
+}

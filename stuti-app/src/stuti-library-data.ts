@@ -21,7 +21,7 @@ export const STUTI_LIB = (function () {
   /* canonical display order; anything unlisted sorts after */
   const TYPE_ORDER = [
     "Sahasranāma", "Nāmāvali", "Aṣṭakam", "Pañcaratna", "Kavaca",
-    "Sūkta", "Tarpaṇa", "Daṇḍaka", "Dhyāna-śloka", "Vandanā", "Stotra", "Kṛti", "Tālam", "Gītā", "Upaniṣad",
+    "Sūkta", "Tarpaṇa", "Daṇḍaka", "Dhyāna-śloka", "Vandanā", "Stotra", "Kṛti", "Tālam", "Vidhi", "Gītā", "Upaniṣad",
   ];
   const TYPE_LABELS = {
     "Sahasranāma":  { deva: "सहस्रनाम",        tel: "సహస్రనామ",          note: "The thousand names" },
@@ -39,6 +39,7 @@ export const STUTI_LIB = (function () {
     "Upaniṣad":     { deva: "उपनिषद्",         tel: "ఉపనిషత్",           note: "Esoteric teaching" },
     "Kṛti":         { deva: "कृति",            tel: "కృతి",              note: "Karnatic composition" },
     "Tālam":        { deva: "ताळम्",           tel: "తాళం",              note: "Sung to a rhythmic cycle" },
+    "Vidhi":        { deva: "विधि",            tel: "విధానం",            note: "The order of the rite" },
   };
   function typeList() {
     const counts = {};
