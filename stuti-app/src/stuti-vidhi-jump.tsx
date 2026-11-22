@@ -11,7 +11,7 @@ function VidhiJump({ hymnId, deity, go, lang, label }) {
   const L = STUTI_L, S = STUTI;
   const hymn = hymnId && S && S.hymnById ? S.hymnById(hymnId) : null;
   const ready = !!(hymn && hymn.verses && hymn.verses.length);
-  const open = () => { if (ready && go) go("reader", { hymn: hymn.id, deity: deity || hymn.deity, from: "vrata" }); };
+  const open = () => { if (ready && go) go("reader", { hymn: hymn.id, deity: deity || hymn.deity, from: "browse" }); };
   return (
     <button className={"vidhi-jump" + (ready ? "" : " is-soon")} onClick={open} aria-disabled={!ready} disabled={!ready}>
       <span>{label || L.t("vidhanamOpen", lang)}</span>

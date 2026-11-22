@@ -189,10 +189,11 @@ function PlanView({ hymnId, go, lang = "deva", backView = "daily" }) {
   if (!plan) { P.start(hymnId); return null; }
   const m = P.meta(hymn);
   const day = P.currentDay(hymnId, hymn);
-  const doneToday = plan.last === STUTI_THREAD.dkey() && plan.done.indexOf(day) >= 0;
+  const doneToday = plan.last === STUTI_THREAD.dkey() && plan.done.length > 0;
+  const shown = doneToday && !plan.finished ? plan.done[plan.done.length - 1] : day;
   return plan.finished
     ? <PlanFinished hymn={hymn} deity={deity} go={go} lang={lang} backView={backView} />
-    : <PlanDay key={hymnId + ":" + day} hymn={hymn} deity={deity} day={day} meta={m} go={go} lang={lang} backView={backView} />;
+    : <PlanDay key={hymnId + ":" + shown} hymn={hymn} deity={deity} day={shown} meta={m} go={go} lang={lang} backView={backView} />;
 }
 
 function PlanFinished({ hymn, deity, go, lang, backView = "daily" }) {

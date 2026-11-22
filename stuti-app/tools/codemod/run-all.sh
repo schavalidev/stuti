@@ -64,6 +64,7 @@ node fix-data-as-json.mjs
 # fix-data-as-json: it reads the JSON literal that step leaves behind.
 node fix-defer-bodies.mjs
 node fix-sheet-backstop.mjs
+node fix-audit-routes.mjs
 node copy-parva-chunks.mjs
 node check-assets.mjs
 node check-data.mjs

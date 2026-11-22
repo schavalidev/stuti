@@ -405,7 +405,7 @@ function TithiAhead({ go, lang }) {
               <div className="ta-open">
                 <div className="ta-line"><span>{ttAheadT("rule", L)}</span><b>{STUTI_TITHIS.ruleText(r)[T === "tel" ? "tel" : T === "roman" ? "roman" : "deva"]}</b></div>
                 {kala && <div className="ta-line"><span>{ttAheadT(k.rule === "aparahna" ? "aparahna" : "atSunrise", L)}</span><b>{kala}</b></div>}
-                <button className="ta-go" onClick={() => go("vrata", { vrata: v.id })}>{ttAheadT("open", L)}</button>
+                <button className="ta-go" onClick={() => go("browse", { libSub: { kind: "vrata", key: v.id, returnTo: "home" } })}>{ttAheadT("open", L)}</button>
               </div>
             )}
           </div>
