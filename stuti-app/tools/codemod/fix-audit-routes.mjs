@@ -33,4 +33,10 @@ patch("stuti-plans.tsx",
   `<PlanDay key={hymnId + ":" + day} hymn={hymn} deity={deity} day={day}`,
   `<PlanDay key={hymnId + ":" + shown} hymn={hymn} deity={deity} day={shown}`,
   "plan day mount");
+// 3. The privacy note said "no account, no server" beside a working sign-in
+//    that syncs to an account. Say what is true: local unless you sign in.
+patch("stuti-i18n.ts",
+  `roman: "All your data stays on this phone — no account, no server. This is where you delete it.", deva: "आपका सारा डेटा इसी फोन में रहता है — न खाता, न सर्वर। उसे हटाना हो तो यहीं से।", telugu: "మీ సమాచారం అంతా ఈ ఫోన్‌లోనే ఉంటుంది — ఖాతా లేదు, సర్వర్ లేదు. దాన్ని తొలగించాలన్నా ఇక్కడే."`,
+  `roman: "Unless you sign in, all your data stays on this phone. This is where you delete it.", deva: "जब तक आप साइन इन न करें, आपका सारा डेटा इसी फोन में रहता है। उसे हटाना हो तो यहीं से।", telugu: "మీరు సైన్ ఇన్ చేయకపోతే, మీ సమాచారం అంతా ఈ ఫోన్‌లోనే ఉంటుంది. దాన్ని తొలగించాలన్నా ఇక్కడే."`,
+  "privacy note");
 console.log("fix-audit-routes: ok");
