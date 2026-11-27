@@ -40,6 +40,9 @@ node fix-vrata-cache-seam.mjs
 # the meaning-gap notice from the reader and left a blank page over a
 # text whose meanings are not written. Found 27 Oct 2026.
 node fix-meaning-gap-seam.mjs
+# the verse view sets the next ślokas under the card on a sahasranāma, whose
+# four-name śloka otherwise left most of a phone's screen empty (S104).
+node fix-verse-ahead-seam.mjs
 # the app is called Anushtaanam since 27 Nov 2026; the design still says
 # Stuti, so without this every port would put the old name back.
 node fix-app-name.mjs

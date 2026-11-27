@@ -299,3 +299,13 @@
 .reciter-step { width: 40px; height: 40px; }
 .reciter-aux { min-width: 52px; padding: 2px; line-height: 1.15; }
 /* @design:end */
+
+/* ---- the ślokas that come next, under the card (stuti-verse-ahead.tsx) ----
+   Set as the card's text is set, a shade quieter, and aligned with it: the
+   card is 2 px in from the stage and 20 px padded. */
+.verse-ahead { display: flex; flex-direction: column; gap: 12px; margin: 14px 2px 0; padding: 0 20px; }
+.verse-ahead-verse { display: flex; flex-direction: column; gap: 4px; padding-bottom: 12px; border-bottom: 1px solid var(--line-2); }
+.verse-ahead-verse:last-child { border-bottom: 0; }
+.verse-ahead .line { text-align: left; }
+.verse-ahead :is(.line-deva, .line-telugu, .line-iast-lead) { color: var(--ink-soft); overflow-wrap: anywhere; word-break: break-word; text-wrap: pretty; min-width: 0; max-width: 100%; }
+.verse-ahead.is-quiet { opacity: 0.45; }

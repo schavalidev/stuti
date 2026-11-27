@@ -1,5 +1,6 @@
 import { Emblem, FavButton, Flame, Icon, deityStyle, useFavs } from "./stuti-icons";
 import { STUTI_NAMES } from "./stuti-names";
+import { VerseAhead } from "./stuti-verse-ahead";
 import { MeaningGap } from "./stuti-meaning-gap";
 import React from "react";
 import { STUTI_AUDIO } from "./stuti-audio";
@@ -1805,6 +1806,10 @@ function ReaderView({ hymn: rawHymn, deity, go, theme, toggleTheme, lang, setLan
               </div>
             );
           })()}
+          {(namavaliOnly || hymn.namesKey) && learnMode !== "memorize" && (
+            <VerseAhead hymn={hymn} lines={lines} curVerse={curVerse} lang={lang}
+              quiet={playing || follow.on} onPick={(i) => setActive(i)} />
+          )}
         </div>
         )}
       </div>
