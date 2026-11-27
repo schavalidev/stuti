@@ -227,43 +227,44 @@
    tablet padding, and the play button was sized for a desk. Nothing is
    removed and nothing moves: each band keeps its place and its controls, and
    is drawn to a phone's measure. The bands also stop growing with the reading
-   size past one step, because a larger text should not buy a larger frame. */
-@media (max-width: 480px) {
-  /* the pinned settings row: one line, its pin in the line rather than over it */
-  .view.reader > .rd-toppanel.is-pinned { flex-wrap: nowrap; justify-content: space-between; gap: 0; padding: 2px 6px; min-height: 44px; overflow-x: auto; scrollbar-width: none; }
-  .view.reader > .rd-toppanel.is-pinned::-webkit-scrollbar { display: none; }
-  .view.reader > .rd-toppanel.is-pinned > * { flex: none; }
-  .view.reader > .rd-toppanel.is-pinned .rd-toppanel-gap { display: none; }
-  .view.reader > .rd-toppanel.is-pinned .icon-btn { width: 34px; min-width: 34px; height: 40px; }
-  .view.reader > .rd-toppanel.is-pinned .rd-pin-btn { position: relative; top: auto; right: auto; }
-  .view.reader > .rd-toppanel.is-pinned .scriptseg button { width: 30px; height: 32px; }
-  .view.reader > .rd-toppanel.is-pinned .rd-size button { min-width: 30px; height: 32px; }
+   size past one step, because a larger text should not buy a larger frame.
+   No media query: the app is never drawn wider than --app-max (480 px). On a
+   wider window it is a 480 px frame, and the first cut of this, keyed to the
+   window, left that frame (the web, the preview) with the old bands. */
+/* the pinned settings row: one line, its pin in the line rather than over it */
+.view.reader > .rd-toppanel.is-pinned { flex-wrap: nowrap; justify-content: space-between; gap: 0; padding: 2px 6px; min-height: 44px; overflow-x: auto; scrollbar-width: none; }
+.view.reader > .rd-toppanel.is-pinned::-webkit-scrollbar { display: none; }
+.view.reader > .rd-toppanel.is-pinned > * { flex: none; }
+.view.reader > .rd-toppanel.is-pinned .rd-toppanel-gap { display: none; }
+.view.reader > .rd-toppanel.is-pinned .icon-btn { width: 34px; min-width: 34px; height: 40px; }
+.view.reader > .rd-toppanel.is-pinned .rd-pin-btn { position: relative; top: auto; right: auto; }
+.view.reader > .rd-toppanel.is-pinned .scriptseg button { width: 30px; height: 32px; }
+.view.reader > .rd-toppanel.is-pinned .rd-size button { min-width: 30px; height: 32px; }
 
-  /* the title row: the spacer that balanced the absent pin goes, and the
-     title is a phone's title */
-  .reader-topbar { padding: 4px 6px 4px; gap: 2px; }
-  .reader-topbar .icon-btn { width: 40px; min-width: 40px; height: 40px; }
-  .reader-topbar .rd-topbar-pad { display: none; }
-  .reader-topbar-title { padding-top: 0; }
-  .reader-topbar-name { font-size: calc(1.1875rem * min(var(--rd-scale, 1), 1.15)); }
-  .reader-topbar-name .fav-btn, .reader-topbar-name .rd-follow-btn { width: 32px; min-width: 32px; height: 32px; margin-left: 2px; }
+/* the title row: the spacer that balanced the absent pin goes, and the
+   title is a phone's title */
+.reader-topbar { padding: 4px 6px 4px; gap: 2px; }
+.reader-topbar .icon-btn { width: 40px; min-width: 40px; height: 40px; }
+.reader-topbar .rd-topbar-pad { display: none; }
+.reader-topbar-title { padding-top: 0; }
+.reader-topbar-name { font-size: calc(1.1875rem * min(var(--rd-scale, 1), 1.15)); }
+.reader-topbar-name .fav-btn, .reader-topbar-name .rd-follow-btn { width: 32px; min-width: 32px; height: 32px; margin-left: 2px; }
 
-  /* the chips and the parts: the same controls, less ground around them */
-  .reader-layers.tight { min-height: 42px; padding: 0 10px; }
-  .reader-layers.tight > .icon-btn { width: 36px; min-width: 36px; height: 40px; }
-  .reader-layers.tight .chip, .reader-layers.tight .rd-view-btn { font-size: calc(0.9375rem * var(--rd-fit, 1) * min(var(--rd-scale, 1), 1.15)); }
-  .rd-parts { min-height: 42px; padding: 0 12px; }
-  .rd-parts:has(.rd-parts-end) { padding: 0 48px; }
-  .rd-parts .icon-btn.rd-parts-end { right: 6px; }
-  .rd-part { font-size: calc(0.8125rem * var(--rd-fit, 1) * min(var(--rd-scale, 1), 1.15)); }
-  .rd-seg-opt { font-size: calc(1.0313rem * var(--rd-fit, 1) * min(var(--rd-scale, 1), 1.15)); padding: 4px 12px; }
+/* the chips and the parts: the same controls, less ground around them */
+.reader-layers.tight { min-height: 42px; padding: 0 10px; }
+.reader-layers.tight > .icon-btn { width: 36px; min-width: 36px; height: 40px; }
+.reader-layers.tight .chip, .reader-layers.tight .rd-view-btn { font-size: calc(0.9375rem * var(--rd-fit, 1) * min(var(--rd-scale, 1), 1.15)); }
+.rd-parts { min-height: 42px; padding: 0 12px; }
+.rd-parts:has(.rd-parts-end) { padding: 0 48px; }
+.rd-parts .icon-btn.rd-parts-end { right: 6px; }
+.rd-part { font-size: calc(0.8125rem * var(--rd-fit, 1) * min(var(--rd-scale, 1), 1.15)); }
+.rd-seg-opt { font-size: calc(1.0313rem * var(--rd-fit, 1) * min(var(--rd-scale, 1), 1.15)); padding: 4px 12px; }
 
-  /* the player: a phone's play button */
-  .reciter { padding-bottom: 4px; }
-  .reciter-progress { height: 16px; }
-  .reciter-row { gap: 12px; }
-  .reciter-center { gap: 10px; }
-  .reciter-play { width: 50px; height: 50px; box-shadow: var(--shadow-sm), 0 0 0 4px color-mix(in oklab, var(--accent) 16%, transparent); }
-  .reciter-step { width: 40px; height: 40px; }
-  .reciter-aux { min-width: 52px; padding: 2px; line-height: 1.15; }
-}
+/* the player: a phone's play button */
+.reciter { padding-bottom: 4px; }
+.reciter-progress { height: 16px; }
+.reciter-row { gap: 12px; }
+.reciter-center { gap: 10px; }
+.reciter-play { width: 50px; height: 50px; box-shadow: var(--shadow-sm), 0 0 0 4px color-mix(in oklab, var(--accent) 16%, transparent); }
+.reciter-step { width: 40px; height: 40px; }
+.reciter-aux { min-width: 52px; padding: 2px; line-height: 1.15; }
