@@ -663,7 +663,7 @@ function HomeA({ go, lang, overlayEl }) {
     setBellTick(n => n + 1);
     if (turningOff) { setNote("Notifications are stopped for now — tap the bell again to resume them."); return; }
     const text = [vm.tithi.full, vm.dateStr].filter(Boolean).join(" · ") + ` · ${t("rahuKala")} ${vm.rahuStr}`;
-    const fire = () => { try { new Notification("Stuti · " + t("todaysPanchanga"), { body: text }); } catch (e) {} };
+    const fire = () => { try { new Notification("Anushtaanam · " + t("todaysPanchanga"), { body: text }); } catch (e) {} };
     const on = "Pañcāṅga notifications are on — today's is on its way.";
     if (!N || !N.supported()) { setNote("Notifications aren't supported here — " + text); return; }
     if (N.permission() === "granted") { fire(); setNote(on); }

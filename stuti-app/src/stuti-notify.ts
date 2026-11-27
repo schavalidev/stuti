@@ -93,7 +93,7 @@ function words(cue: any) {
   if (cue.kind === "sandhya") {
     const k = cue.kala;
     return {
-      title: "Stuti · " + SY.name(k.label, lg),
+      title: "Anushtaanam · " + SY.name(k.label, lg),
       text: L.t("sandhyaNudge", lg) + " · " + P.fmtTime(((k.best.start % 1440) + 1440) % 1440) + " – " + P.fmtTime(((k.best.end % 1440) + 1440) % 1440),
       hymn: null as any,
     };
@@ -106,7 +106,7 @@ function words(cue: any) {
     const locale = lg === "telugu" ? "te-IN" : lg === "deva" ? "hi-IN" : "en-IN";
     const when = it.away === 0 ? L.t("vrataToday", lg) : it.away === 1 ? L.t("vrataTomorrow", lg)
       : (it.date ? new Date(it.date).toLocaleDateString(locale, { weekday: "long", day: "numeric", month: "short" }) + " · " + L.t("vrataInDays", lg).replace("{n}", it.away) : "");
-    return { title: it.name || kl || "Stuti", text: kl + (when ? " · " + when : ""), hymn: null as any };
+    return { title: it.name || kl || "Anushtaanam", text: kl + (when ? " · " + when : ""), hymn: null as any };
   }
   if (cue.kind === "tarpana") {
     /* the rite and its window in one line — what to do, and by when */
@@ -116,7 +116,7 @@ function words(cue: any) {
                         arunodaya: { roman: "Before sunrise", deva: "अरुणोदय", telugu: "అరుణోదయం" } };
     const k = KALA[rt.kala] || KALA.aparahna, w = cue.window;
     return {
-      title: (lg === "telugu" ? (nm.tel || nm.roman) : lg === "deva" ? (nm.deva || nm.roman) : nm.roman) || "Stuti",
+      title: (lg === "telugu" ? (nm.tel || nm.roman) : lg === "deva" ? (nm.deva || nm.roman) : nm.roman) || "Anushtaanam",
       text: (lg === "telugu" ? k.telugu : lg === "deva" ? k.deva : k.roman) + (w ? " · " + P.fmtTime(w.start) + " – " + P.fmtTime(w.end) : ""),
       hymn: null as any,
     };
@@ -124,10 +124,10 @@ function words(cue: any) {
   const parts = STUTI_NUDGE.digestParts(cue.items, lg);
   const one = (cue.items || []).filter((x: any) => x.kind === "vow" || x.kind === "plan");
   if (parts.length) {
-    return { title: "Stuti", text: parts.join(" · "), hymn: one.length === 1 ? STUTI.hymnById(one[0].hymn) || null : null };
+    return { title: "Anushtaanam", text: parts.join(" · "), hymn: one.length === 1 ? STUTI.hymnById(one[0].hymn) || null : null };
   }
   const b = STUTI_NUDGE.body(lg);
-  return { title: "Stuti", text: b.title + " — " + b.text, hymn: b.hymn };
+  return { title: "Anushtaanam", text: b.title + " — " + b.text, hymn: b.hymn };
 }
 
 /* every cue due between now and the horizon. STUTI_CUES.ring answers for
@@ -155,7 +155,7 @@ async function channel() {
   if (Capacitor.getPlatform() !== "android") return;
   try {
     await LocalNotifications.createChannel({
-      id: CHANNEL, name: "Stuti", description: "Daily and sandhyā cues",
+      id: CHANNEL, name: "Anushtaanam", description: "Daily and sandhyā cues",
       importance: 4, visibility: 1, sound: undefined, vibration: true,
     } as any);
   } catch (e) {}
@@ -287,22 +287,22 @@ export function notifyNote(lang: string, perm: string) {
   if (!native()) {
     if (!webOwns() || perm !== "granted") return null;
     const w = {
-      roman: "Cues are sent to this browser from Stuti's server, so they arrive with Stuti closed. The week ahead is sent again each time you open the app.",
-      deva: "सूचनाएँ स्तुति के सर्वर से इस ब्राउज़र को भेजी जाती हैं, इसलिए स्तुति बंद होने पर भी आती हैं। हर बार ऐप खोलने पर आगे का सप्ताह फिर से भेजा जाता है।",
-      telugu: "సూచనలు స్తుతి సర్వర్ నుండి ఈ బ్రౌజర్‌కు పంపబడతాయి, కాబట్టి స్తుతి మూసి ఉన్నా వస్తాయి. యాప్ తెరిచిన ప్రతిసారీ ముందున్న వారం మళ్లీ పంపబడుతుంది.",
+      roman: "Cues are sent to this browser from Anushtaanam's server, so they arrive with Anushtaanam closed. The week ahead is sent again each time you open the app.",
+      deva: "सूचनाएँ अनुष्ठानम् के सर्वर से इस ब्राउज़र को भेजी जाती हैं, इसलिए अनुष्ठानम् बंद होने पर भी आती हैं। हर बार ऐप खोलने पर आगे का सप्ताह फिर से भेजा जाता है।",
+      telugu: "సూచనలు అనుష్ఠానం సర్వర్ నుండి ఈ బ్రౌజర్‌కు పంపబడతాయి, కాబట్టి అనుష్ఠానం మూసి ఉన్నా వస్తాయి. యాప్ తెరిచిన ప్రతిసారీ ముందున్న వారం మళ్లీ పంపబడుతుంది.",
     };
     return lang === "telugu" ? w.telugu : lang === "roman" ? w.roman : w.deva;
   }
   const s = perm === "denied"
     ? {
-        roman: "Notifications are turned off for Stuti. Allow them in the phone's settings, then reopen this panel.",
-        deva: "स्तुति के लिए सूचनाएँ बंद हैं। फ़ोन की सेटिंग्स में उन्हें चालू करें, फिर यह पैनल दोबारा खोलें।",
-        telugu: "స్తుతికి నోటిఫికేషన్‌లు ఆపివేయబడ్డాయి. ఫోన్ సెట్టింగ్‌లలో వాటిని అనుమతించి, ఈ ప్యానెల్ మళ్లీ తెరవండి.",
+        roman: "Notifications are turned off for Anushtaanam. Allow them in the phone's settings, then reopen this panel.",
+        deva: "अनुष्ठानम् के लिए सूचनाएँ बंद हैं। फ़ोन की सेटिंग्स में उन्हें चालू करें, फिर यह पैनल दोबारा खोलें।",
+        telugu: "అనుష్ఠానానికి నోటిఫికేషన్‌లు ఆపివేయబడ్డాయి. ఫోన్ సెట్టింగ్‌లలో వాటిని అనుమతించి, ఈ ప్యానెల్ మళ్లీ తెరవండి.",
       }
     : {
-        roman: "Cues are handed to the phone, so they arrive with Stuti closed. The week ahead is laid out again each time you open the app.",
-        deva: "सूचनाएँ फ़ोन को सौंप दी जाती हैं, इसलिए स्तुति बंद होने पर भी आती हैं। हर बार ऐप खोलने पर आगे का सप्ताह फिर से तय हो जाता है।",
-        telugu: "సూచనలు ఫోన్‌కు అప్పగించబడతాయి, కాబట్టి స్తుతి మూసి ఉన్నా వస్తాయి. యాప్ తెరిచిన ప్రతిసారీ ముందున్న వారం మళ్లీ సిద్ధమవుతుంది.",
+        roman: "Cues are handed to the phone, so they arrive with Anushtaanam closed. The week ahead is laid out again each time you open the app.",
+        deva: "सूचनाएँ फ़ोन को सौंप दी जाती हैं, इसलिए अनुष्ठानम् बंद होने पर भी आती हैं। हर बार ऐप खोलने पर आगे का सप्ताह फिर से तय हो जाता है।",
+        telugu: "సూచనలు ఫోన్‌కు అప్పగించబడతాయి, కాబట్టి అనుష్ఠానం మూసి ఉన్నా వస్తాయి. యాప్ తెరిచిన ప్రతిసారీ ముందున్న వారం మళ్లీ సిద్ధమవుతుంది.",
       };
   return lang === "telugu" ? s.telugu : lang === "roman" ? s.roman : s.deva;
 }
@@ -325,13 +325,13 @@ export function cueNote(count: number, lead: number) {
   const name = STUTI_SANDHYA.name(soon.kala.label, "roman");
   const opens = new Date(at.getTime() + lead * 60000);   // the cue is laid lead minutes before the window
   return "Next: " + name + ", " + when + (lead ? " (" + lead + " min before it opens at " + opens.toLocaleTimeString(undefined, { hour: "numeric", minute: "2-digit" }) + ")" : "")
-    + ". Reminders arrive with Stuti closed.";
+    + ". Reminders arrive with Anushtaanam closed.";
 }
 
 /* the sky plate's two refusals, which speak of browsers and sites */
 export function cueRefusal(kind: "unsupported" | "denied") {
   if (!native()) return null;
   return kind === "denied"
-    ? "Notifications are turned off for Stuti — allow them in the phone's settings to get sandhyā reminders."
+    ? "Notifications are turned off for Anushtaanam — allow them in the phone's settings to get sandhyā reminders."
     : "This device cannot post notifications.";
 }

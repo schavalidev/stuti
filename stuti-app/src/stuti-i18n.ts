@@ -80,7 +80,7 @@ export const STUTI_L = (function () {
     vows:         { roman: "Dīkṣā",            deva: "दीक्षा",          telugu: "దీక్ష" },
     sankalpaVow:  { roman: "Saṅkalpa",        deva: "सङ्कल्प",        telugu: "సంకల్పం" },
     takeVow:      { roman: "Take a dīkṣā",      deva: "दीक्षा लें",     telugu: "దీక్ష తీసుకోండి" },
-    vowsEmpty:    { roman: "Pick a stotra or japa and a day — every pradoṣa, ekādaśī, or Tuesday. Stuti remembers the dates.", deva: "कोई स्तोत्र या जप और एक दिन चुनें — हर प्रदोष, एकादशी, या मंगलवार। तारीख़ें स्तुति याद रखेगी।", telugu: "ఒక స్తోత్రం లేదా జపం, ఒక రోజు ఎంచుకోండి — ప్రతి ప్రదోషం, ఏకాదశి, లేదా మంగళవారం. తేదీలు స్తుతి గుర్తుపెట్టుకుంటుంది." },
+    vowsEmpty:    { roman: "Pick a stotra or japa and a day — every pradoṣa, ekādaśī, or Tuesday. Anushtaanam remembers the dates.", deva: "कोई स्तोत्र या जप और एक दिन चुनें — हर प्रदोष, एकादशी, या मंगलवार। तारीख़ें अनुष्ठानम् याद रखेगा।", telugu: "ఒక స్తోత్రం లేదా జపం, ఒక రోజు ఎంచుకోండి — ప్రతి ప్రదోషం, ఏకాదశి, లేదా మంగళవారం. తేదీలు అనుష్ఠానం గుర్తుపెట్టుకుంటుంది." },
     vowSheetSub:  { roman: "Which dīkṣā, on which days, for how long", deva: "कौन-सी दीक्षा, किन दिनों, कितने दिन", telugu: "ఏ దీక్ష, ఏ రోజుల్లో, ఎంతకాలం" },
     vowWhenSpecial: { roman: "Marked days", deva: "ख़ास दिन", telugu: "విశేష రోజులు" },
     vowWhenOther:   { roman: "Or", deva: "या", telugu: "లేదా" },
@@ -523,9 +523,9 @@ export const STUTI_L = (function () {
     paceQuick:     { roman: "A little quick — let the line breathe", deva: "थोड़ा शीघ्र — पंक्ति को सांस दें", telugu: "కొంచెం వేగంగా ఉంది — నెమ్మదిగా చదవండి" },
     paceSlow:      { roman: "A little slow — keep it moving", deva: "थोड़ा मंद — गति बनाये रखें", telugu: "కొంచెం నెమ్మదిగా ఉంది — వేగం పెంచండి" },
     nothingHeard:  { roman: "Nothing heard — recite a little louder", deva: "कुल सुनाई नहीं — थोड़ा ऊँचा पाठ करें", telugu: "ఏమీ వినబడలేదు — కొంచెం పెద్దగా పలకండి" },
-    micDenied:     { roman: "The microphone was refused. Allow it for Stuti in Settings → Apps → Stuti → Permissions, then switch Record on again.",
-                     deva: "माइक्रोफ़ोन को अनुमति नहीं मिली। सेटिंग्स → ऐप्स → Stuti → अनुमतियाँ में माइक्रोफ़ोन चालू करें, फिर रिकॉर्ड दोबारा चालू करें।",
-                     telugu: "మైక్రోఫోన్ అనుమతి నిరాకరించబడింది. సెట్టింగ్స్ → యాప్స్ → Stuti → అనుమతులు లో మైక్రోఫోన్ అనుమతించి, రికార్డు మళ్లీ ఆన్ చేయండి." },
+    micDenied:     { roman: "The microphone was refused. Allow it for Anushtaanam in Settings → Apps → Anushtaanam → Permissions, then switch Record on again.",
+                     deva: "माइक्रोफ़ोन को अनुमति नहीं मिली। सेटिंग्स → ऐप्स → Anushtaanam → अनुमतियाँ में माइक्रोफ़ोन चालू करें, फिर रिकॉर्ड दोबारा चालू करें।",
+                     telugu: "మైక్రోఫోన్ అనుమతి నిరాకరించబడింది. సెట్టింగ్స్ → యాప్స్ → Anushtaanam → అనుమతులు లో మైక్రోఫోన్ అనుమతించి, రికార్డు మళ్లీ ఆన్ చేయండి." },
 
     /* Follow: the phone set down on the mat */
     followFaceDown:     { roman: "Hold when face down", deva: "उलटा रखने पर रुके", telugu: "బోర్లించినప్పుడు ఆపు" },
@@ -602,17 +602,17 @@ export const STUTI_L = (function () {
 
     /* the beta latch */
     gateTitle:   { roman: "A quiet beta", deva: "एक शान्त बीटा", telugu: "ఒక నిశ్శబ్ద బీటా" },
-    gateLede:    { roman: "Stuti is being tried by a few invited households before it opens to everyone. If you were sent the word, enter it here.", deva: "स्तुति सबके लिए खुलने से पहले कुछ आमंत्रित परिवारों में परखी जा रही है। यदि आपको शब्द भेजा गया है, यहाँ लिखें।", telugu: "స్తుతి అందరికీ తెరవడానికి ముందు కొన్ని ఆహ్వానిత కుటుంబాలు పరీక్షిస్తున్నాయి. మీకు పదం పంపి ఉంటే ఇక్కడ రాయండి." },
+    gateLede:    { roman: "Anushtaanam is being tried by a few invited households before it opens to everyone. If you were sent the word, enter it here.", deva: "अनुष्ठानम् सबके लिए खुलने से पहले कुछ आमंत्रित परिवारों में परखा जा रहा है। यदि आपको शब्द भेजा गया है, यहाँ लिखें।", telugu: "అనుష్ఠానాన్ని అందరికీ తెరవడానికి ముందు కొన్ని ఆహ్వానిత కుటుంబాలు పరీక్షిస్తున్నాయి. మీకు పదం పంపి ఉంటే ఇక్కడ రాయండి." },
     gatePh:      { roman: "The word you were sent", deva: "जो शब्द आपको भेजा गया", telugu: "మీకు పంపిన పదం" },
     gateGo:      { roman: "Enter", deva: "प्रवेश", telugu: "ప్రవేశం" },
     gateHint:    { roman: "It is one small word. Capitals and spaces do not matter.", deva: "एक छोटा शब्द है। बड़े-छोटे अक्षर या रिक्त स्थान से अन्तर नहीं पड़ता।", telugu: "ఒక చిన్న పదం. పెద్ద-చిన్న అక్షరాలు, ఖాళీలు పట్టవు." },
     gateNo:      { roman: "That is not it — but no harm done. Try once more, or ask whoever sent you the link.", deva: "यह नहीं — कोई बात नहीं। एक बार फिर देखें, या जिसने लिंक भेजा उनसे पूछें।", telugu: "అది కాదు — పరవాలేదు. మరోసారి ప్రయత్నించండి, లేదా లింక్ పంపినవారిని అడగండి." },
-    gateNoAgain: { roman: "Still not it. Stuti opens to everyone in a few weeks; if you would rather not wait, write to us and we will send you the word.", deva: "अभी भी नहीं। कुछ सप्ताह में स्तुति सबके लिए खुलेगी; प्रतीक्षा न करनी हो तो हमें लिखें, हम शब्द भेज देंगे।", telugu: "ఇంకా కాదు. కొన్ని వారాల్లో స్తుతి అందరికీ తెరుస్తుంది; వేచి ఉండలేకపోతే మాకు రాయండి, పదం పంపుతాము." },
+    gateNoAgain: { roman: "Still not it. Anushtaanam opens to everyone in a few weeks; if you would rather not wait, write to us and we will send you the word.", deva: "अभी भी नहीं। कुछ सप्ताह में अनुष्ठानम् सबके लिए खुलेगा; प्रतीक्षा न करनी हो तो हमें लिखें, हम शब्द भेज देंगे।", telugu: "ఇంకా కాదు. కొన్ని వారాల్లో అనుష్ఠానం అందరికీ తెరుస్తుంది; వేచి ఉండలేకపోతే మాకు రాయండి, పదం పంపుతాము." },
 
     /* saying plainly what is not real yet */
     accComing:    { roman: "Accounts and syncing — coming later", deva: "खाता और सिंक — बाद में", telugu: "ఖాతా, సింక్ — తర్వాత" },
-    accComingSub: { roman: "For now your practice is saved on this phone only. Install Stuti to your home screen to keep it, or save a copy under Device.", deva: "अभी आपका अभ्यास केवल इसी फ़ोन पर सुरक्षित है। इसे रखने के लिए स्तुति को होम स्क्रीन पर जोड़ें, या 'उपकरण' में प्रतिलिपि सुरक्षित करें।", telugu: "ప్రస్తుతం మీ సాధన ఈ ఫోన్‌లోనే భద్రంగా ఉంది. దాన్ని ఉంచుకోవడానికి స్తుతిని హోమ్ స్క్రీన్‌కు జోడించండి, లేదా 'ఫోన్'లో ప్రతిని భద్రపరచండి." },
-    remindOpenOnly: { roman: "rings while Stuti is open", deva: "स्तुति खुली हो तभी बजेगा", telugu: "స్తుతి తెరిచి ఉంటేనే మోగుతుంది" },
+    accComingSub: { roman: "For now your practice is saved on this phone only. Install Anushtaanam to your home screen to keep it, or save a copy under Device.", deva: "अभी आपका अभ्यास केवल इसी फ़ोन पर सुरक्षित है। इसे रखने के लिए अनुष्ठानम् को होम स्क्रीन पर जोड़ें, या 'उपकरण' में प्रतिलिपि सुरक्षित करें।", telugu: "ప్రస్తుతం మీ సాధన ఈ ఫోన్‌లోనే భద్రంగా ఉంది. దాన్ని ఉంచుకోవడానికి అనుష్ఠానాన్ని హోమ్ స్క్రీన్‌కు జోడించండి, లేదా 'ఫోన్'లో ప్రతిని భద్రపరచండి." },
+    remindOpenOnly: { roman: "rings while Anushtaanam is open", deva: "अनुष्ठानम् खुला हो तभी बजेगा", telugu: "అనుష్ఠానం తెరిచి ఉంటేనే మోగుతుంది" },
 
     /* provenance */
     proofYes:   { roman: "Proofed against {src}", deva: "{src} से मिलान किया गया", telugu: "{src} తో సరిచూసినది" },
@@ -657,7 +657,7 @@ export const STUTI_L = (function () {
     carryDo:     { roman: "Replace what is here", deva: "यहाँ का सब बदल दें", telugu: "ఇక్కడ ఉన్నది మార్చండి" },
     carryMerge:  { roman: "Fill gaps only", deva: "केवल रिक्त भरें", telugu: "ఖాళీలు మాత్రమే నింపండి" },
     carryCancel: { roman: "Cancel", deva: "रहने दें", telugu: "వదిలెయ్యండి" },
-    carryBad:    { roman: "That file was not written by Stuti.", deva: "यह फाइल स्तुति ने नहीं लिखी।", telugu: "ఈ ఫైలును స్తుతి రాయలేదు." },
+    carryBad:    { roman: "That file was not written by Anushtaanam.", deva: "यह फाइल अनुष्ठानम् ने नहीं लिखी।", telugu: "ఈ ఫైలును అనుష్ఠానం రాయలేదు." },
     carrySaved:  { roman: "Copy saved", deva: "प्रतिलिपि सुरक्षित", telugu: "ప్రతి భద్రమైంది" },
     carryDone:   { roman: "Restored — reopening…", deva: "पुनःस्थापित — फिर खुल रहा है…", telugu: "తిరిగి వచ్చింది — మళ్ళీ తెరుచుకుంటోంది…" },
     story:       { roman: "Story", deva: "कथा", telugu: "కథ" },
@@ -713,7 +713,7 @@ export const STUTI_L = (function () {
     allowNotifs:     { roman: "Allow notifications", deva: "सूचनाएँ स्वीकारें", telugu: "నోటిఫికేషన్‌లు అనుమతించు" },
     notifWhileOpen:  { roman: "Reminders arrive only while the app is open in a tab. Reaching a closed browser needs a push server, which this version does not have.",
                        deva: "ऐप किसी टैब में खुला हो तभी रिमाइंडर आएगा। बंद ब्राउज़र में भेजने के लिए पुश सर्वर चाहिए, जो अभी नहीं है।",
-                       telugu: "స్తుతి ఏదైనా టాబ్‌లో తెరిచి ఉంటే గంట మోగుతుంది. మూసిన బ్రౌజర్‌ను మేల్కొల్పడానికి పుష్ సర్వర్ కావాలి; ఈ బిల్డ్‌లో అది లేదు." },
+                       telugu: "అనుష్ఠానం ఏదైనా టాబ్‌లో తెరిచి ఉంటే గంట మోగుతుంది. మూసిన బ్రౌజర్‌ను మేల్కొల్పడానికి పుష్ సర్వర్ కావాలి; ఈ బిల్డ్‌లో అది లేదు." },
     notifBlocked:    { roman: "Notifications are blocked for this site. Allow them in the browser's settings, then reopen this panel.",
                        deva: "इस साइट के लिए नोटिफिकेशन बंद हैं। ब्राउज़र की सेटिंग्स में चालू करें, फिर यह पैनल दोबारा खोलें।",
                        telugu: "ఈ సైట్‌కు నోటిఫికేషన్‌లు ఆపి ఉన్నాయి. బ్రౌజర్ సైట్ సెట్టింగ్‌లలో అనుమతించి, ఈ షీట్‌ను మళ్ళీ తెరవండి." },

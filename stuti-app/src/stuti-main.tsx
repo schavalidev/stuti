@@ -51,7 +51,7 @@ const LENS_FROM_LABEL = { "Deity": "deity", "Type": "type" };
    through to the home rather than erroring. */
 function hashView() { return STUTI_ROUTE.view(); }
 /* brand wordmark + auspicious mark, per reading script */
-const BRAND_SCRIPT = { deva: "स्तुति", telugu: "స్తుతి" };
+const BRAND_SCRIPT = { deva: "अनुष्ठानम्", telugu: "అనుష్ఠానం" };
 const SHRI = { deva: "॥ श्री ॥", telugu: "॥ శ్రీ ॥", roman: "॥ Śrī ॥" };
 
 /* ---------------- Search: hymns · verses · words ----------------
@@ -760,7 +760,7 @@ function App() {
               <Icon name="cog" size={20} />
             </button>
             <div className="brand">
-              <span className="brand-name display">{uiLang === "telugu" ? "స్తుతి" : uiLang === "deva" ? "स्तुति" : "Stuti"}</span>
+              <span className="brand-name display">{uiLang === "telugu" ? "అనుష్ఠానం" : uiLang === "deva" ? "अनुष्ठानम्" : "Anushtaanam"}</span>
             </div>
           </div>
         )}
@@ -827,7 +827,7 @@ class StutiBoundary extends React.Component {
         <div style={{minHeight:"100vh",display:"grid",placeItems:"center",padding:"32px",textAlign:"center",background:"var(--bg)",color:"var(--ink)"}}>
           <div style={{maxWidth:"30ch"}}>
             <h1 style={{fontFamily:"var(--font-display)",fontWeight:400,fontSize:"26px",lineHeight:1.2,margin:"0 0 10px"}}>This screen stopped</h1>
-            <p style={{color:"var(--ink-soft)",fontSize:"16px",lineHeight:1.6,margin:"0 0 22px",textWrap:"pretty"}}>Open Stuti again to come back to where you were. Your place and your practice are kept.</p>
+            <p style={{color:"var(--ink-soft)",fontSize:"16px",lineHeight:1.6,margin:"0 0 22px",textWrap:"pretty"}}>Open Anushtaanam again to come back to where you were. Your place and your practice are kept.</p>
             <button onClick={()=>location.reload()} style={{font:"inherit",fontSize:"15px",fontWeight:600,padding:"12px 24px",borderRadius:"999px",border:"none",background:"var(--accent)",color:"#fff",cursor:"pointer"}}>Open again</button>
           </div>
         </div>

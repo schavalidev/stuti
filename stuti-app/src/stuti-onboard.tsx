@@ -104,7 +104,7 @@ function Onboarding({ lang, setLang, onDone }) {
     <div className="ob-wrap">
       <div className="ob-sheet">
         <div className="ob-top">
-          <div className="ob-brand"><Flame size={22} /><span className="ob-brand-name display">Stuti</span></div>
+          <div className="ob-brand"><Flame size={22} /><span className="ob-brand-name display">Anushtaanam</span></div>
           {i > 0 && <button className="ob-skip" onClick={finish}>{L.tIn("obSkip", lang)}</button>}
         </div>
 

@@ -82,7 +82,7 @@ export async function deleteRecitation(r: Recitation): Promise<void> {
   notify();
 }
 export async function shareRecitation(r: Recitation): Promise<void> {
-  if (native()) { await voskShareRecording(r.id, r.title || "Stuti recitation"); return; }
+  if (native()) { await voskShareRecording(r.id, r.title || "Anushtaanam recitation"); return; }
   const rec = await tx<any>("readonly", (s) => s.get(r.id));
   if (!rec || !rec.blob) return;
   const file = new File([rec.blob], (r.title || "recitation").replace(/[^\w.-]+/g, "_") + ".webm", { type: rec.blob.type || "audio/webm" });

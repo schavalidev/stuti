@@ -40,6 +40,9 @@ node fix-vrata-cache-seam.mjs
 # the meaning-gap notice from the reader and left a blank page over a
 # text whose meanings are not written. Found 27 Oct 2026.
 node fix-meaning-gap-seam.mjs
+# the app is called Anushtaanam since 27 Nov 2026; the design still says
+# Stuti, so without this every port would put the old name back.
+node fix-app-name.mjs
 node setup-entry.mjs
 # after setup-entry, which is what copies the design's CSS in: the fonts
 # step edits that copy, so running it first leaves it nothing to strip

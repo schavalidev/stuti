@@ -206,7 +206,7 @@ export const STUTI_NUDGE = (function () {
     } else {
       const parts = digestParts(cue.items, lg);
       const one = (cue.items || []).filter((x) => x.kind === "vow" || x.kind === "plan");
-      title = "Stuti";
+      title = "Anushtaanam";
       if (parts.length) {
         text = parts.join(" · ");
         if (one.length === 1) hymn = STUTI.hymnById(one[0].hymn) || null;
@@ -215,7 +215,7 @@ export const STUTI_NUDGE = (function () {
       }
     }
     try {
-      const n = new Notification(cue.kind === "sandhya" ? "Stuti · " + title : title, { body: text, tag: cue.id, silent: false });
+      const n = new Notification(cue.kind === "sandhya" ? "Anushtaanam · " + title : title, { body: text, tag: cue.id, silent: false });
       n.onclick = () => {
         window.focus();
         if (hymn) { try { location.hash = "#reader/" + hymn.deity + "/" + hymn.id; } catch (e) {} }

@@ -41,7 +41,7 @@ const TWEAK_DEFAULTS = /*EDITMODE-BEGIN*/{
 const LENS_FROM_LABEL = { "Deity": "deity", "Type": "type" };
 
 /* brand wordmark + auspicious mark, per reading script */
-const BRAND_SCRIPT = { deva: "स्तुति", telugu: "స్తుతి" };
+const BRAND_SCRIPT = { deva: "अनुष्ठानम्", telugu: "అనుష్ఠానం" };
 const SHRI = { deva: "॥ श्री ॥", telugu: "॥ శ్రీ ॥", roman: "॥ Śrī ॥" };
 
 /* ---------------- Search: hymns · verses · words ----------------
@@ -376,7 +376,7 @@ function TabBar({ view, from, ret, go, lang = "deva", theme, toggleTheme }) {
       {/* rail-only furniture — display:none on the phone (stuti-wide.css) */}
       <div className="rail-head" aria-hidden="true">
         <Flame size={30} />
-        <span className="rail-name" style={{ fontFamily: STUTI_L.font(lang) }}>{BRAND_SCRIPT[lang] || "Stuti"}</span>
+        <span className="rail-name" style={{ fontFamily: STUTI_L.font(lang) }}>{BRAND_SCRIPT[lang] || "Anushtaanam"}</span>
       </div>
       <button className={"tab tab-home" + (onHome ? " tab-on" : "")} onClick={() => go("home")}>
         <Icon name="home" size={25} /><span>{L.t("today", lang)}</span>
@@ -519,10 +519,10 @@ function App() {
               {BRAND_SCRIPT[lang] ? (
                 <React.Fragment>
                   <span className="brand-name" style={{ fontFamily: STUTI_L.font(lang), letterSpacing: 0 }}>{BRAND_SCRIPT[lang]}</span>
-                  <span className="brand-script display">Stuti</span>
+                  <span className="brand-script display">Anushtaanam</span>
                 </React.Fragment>
               ) : (
-                <span className="brand-name display">Stuti</span>
+                <span className="brand-name display">Anushtaanam</span>
               )}
             </div>
             <span className="brand-shri" style={{ fontFamily: STUTI_L.font(lang) }}>{SHRI[lang] || SHRI.deva}</span>
@@ -575,7 +575,7 @@ class StutiBoundary extends React.Component {
         <div style={{minHeight:"100vh",display:"grid",placeItems:"center",padding:"32px",textAlign:"center",background:"var(--bg)",color:"var(--ink)"}}>
           <div style={{maxWidth:"30ch"}}>
             <h1 style={{fontFamily:"var(--font-display)",fontWeight:400,fontSize:"26px",lineHeight:1.2,margin:"0 0 10px"}}>This screen stopped</h1>
-            <p style={{color:"var(--ink-soft)",fontSize:"16px",lineHeight:1.6,margin:"0 0 22px",textWrap:"pretty"}}>Open Stuti again to come back to where you were. Your place and your practice are kept.</p>
+            <p style={{color:"var(--ink-soft)",fontSize:"16px",lineHeight:1.6,margin:"0 0 22px",textWrap:"pretty"}}>Open Anushtaanam again to come back to where you were. Your place and your practice are kept.</p>
             <button onClick={()=>location.reload()} style={{font:"inherit",fontSize:"15px",fontWeight:600,padding:"12px 24px",borderRadius:"999px",border:"none",background:"var(--accent)",color:"#fff",cursor:"pointer"}}>Open again</button>
           </div>
         </div>

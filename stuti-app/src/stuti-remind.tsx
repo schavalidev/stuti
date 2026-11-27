@@ -115,7 +115,7 @@ function NudgePreview({ lang }) {
       <span className="rm-notif-ico"><Flame size={20} /></span>
       <span className="rm-notif-body">
         <span className="rm-notif-top">
-          <span className="rm-notif-app">Stuti</span>
+          <span className="rm-notif-app">Anushtaanam</span>
           <span className="rm-notif-time">{fmtTime(p.remind.time, lang)}</span>
         </span>
         <span className="rm-notif-line" style={{ fontFamily: L.font(lang) }}>

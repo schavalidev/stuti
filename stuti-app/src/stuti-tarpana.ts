@@ -253,15 +253,15 @@ export const STUTI_TARPANA = (function () {
     "yama-angaraka": {
       badge: "prayoga", status: "review", decision: "udaya", performance: "aparahna", offset: 0,
       trigger: { roman: "Any Tuesday joined with kṛṣṇa caturdaśī", deva: "कृष्ण चतुर्दशी से युक्त मङ्गलवार", tel: "కృష్ణ చతుర్దశితో కూడిన మంగళవారం" },
-      rule: { roman: "Kanchi's Veda Dharma Śāstra Sabha publishes this as a Yama tarpaṇam day, and says it applies even to those who do not ordinarily keep the amāvāsyā tarpaṇam. The month varies: the trigger is weekday, pakṣa and tithi together. The overlap rule is source-specific — Stuti tests whether caturdaśī runs at any point in that Tuesday's daylight, and does not invent a tie-break for a partial overlap.",
-              tel: "కంచి వేద ధర్మ శాస్త్ర సభ ఈ రోజును యమ తర్పణ దినంగా ప్రకటిస్తుంది; సాధారణంగా అమావాస్య తర్పణం చేయనివారికీ ఇది వర్తిస్తుందని చెబుతుంది. మాసం మారుతుంది — వారం, పక్షం, తిథి కలయికే నియమం. అతివ్యాప్తి నియమం మూలాన్ని బట్టి మారుతుంది; స్తుతి ఆ మంగళవారపు పగటిలో ఎప్పుడైనా చతుర్దశి నడుస్తోందా అని చూస్తుంది, పాక్షిక అతివ్యాప్తికి తనంతట నిర్ణయం చేయదు." },
+      rule: { roman: "Kanchi's Veda Dharma Śāstra Sabha publishes this as a Yama tarpaṇam day, and says it applies even to those who do not ordinarily keep the amāvāsyā tarpaṇam. The month varies: the trigger is weekday, pakṣa and tithi together. The overlap rule is source-specific — Anushtaanam tests whether caturdaśī runs at any point in that Tuesday's daylight, and does not invent a tie-break for a partial overlap.",
+              tel: "కంచి వేద ధర్మ శాస్త్ర సభ ఈ రోజును యమ తర్పణ దినంగా ప్రకటిస్తుంది; సాధారణంగా అమావాస్య తర్పణం చేయనివారికీ ఇది వర్తిస్తుందని చెబుతుంది. మాసం మారుతుంది — వారం, పక్షం, తిథి కలయికే నియమం. అతివ్యాప్తి నియమం మూలాన్ని బట్టి మారుతుంది; అనుష్ఠానం ఆ మంగళవారపు పగటిలో ఎప్పుడైనా చతుర్దశి నడుస్తోందా అని చూస్తుంది, పాక్షిక అతివ్యాప్తికి తనంతట నిర్ణయం చేయదు." },
       sources: [SRC.kanchiYama, SRC.kanchi],
     },
     "bhishma-tarpanam": {
       badge: "core", status: "review", decision: "udaya", performance: "madhyahna", offset: 0,
       trigger: { roman: "Māgha śukla aṣṭamī", deva: "माघ शुक्ल अष्टमी", tel: "మాఘ శుద్ధ అష్టమి" },
-      rule: { roman: "A named annual arghya, not a pitṛ rite: Bhīṣma died sonless, so it is offered in his own pravara by whoever offers it, and the traditions permit it even where the father is living. When aṣṭamī spans two civil days the nirṇaya differs by prayoga — some traditions separate the Bhīṣma śrāddha day from the snāna-and-tarpaṇa day — so Stuti names both candidates rather than choosing one.",
-              tel: "ఇది నామాంకిత వార్షిక అర్ఘ్యం, పితృ కర్మ కాదు: భీష్మునికి పుత్రుడు లేడు, కాబట్టి ఇచ్చినవారే ఆయన ప్రవరలో ఇస్తారు; తండ్రి జీవించి ఉన్నవారికీ సంప్రదాయాలు అనుమతిస్తాయి. అష్టమి రెండు రోజులకు వ్యాపించినప్పుడు నిర్ణయం ప్రయోగాన్ని బట్టి మారుతుంది — కొన్ని సంప్రదాయాలు భీష్మ శ్రాద్ధ దినాన్ని స్నాన-తర్పణ దినం నుండి వేరు చేస్తాయి — కాబట్టి స్తుతి రెండు రోజులనూ చెబుతుంది, ఒకటి ఎంచుకోదు." },
+      rule: { roman: "A named annual arghya, not a pitṛ rite: Bhīṣma died sonless, so it is offered in his own pravara by whoever offers it, and the traditions permit it even where the father is living. When aṣṭamī spans two civil days the nirṇaya differs by prayoga — some traditions separate the Bhīṣma śrāddha day from the snāna-and-tarpaṇa day — so Anushtaanam names both candidates rather than choosing one.",
+              tel: "ఇది నామాంకిత వార్షిక అర్ఘ్యం, పితృ కర్మ కాదు: భీష్మునికి పుత్రుడు లేడు, కాబట్టి ఇచ్చినవారే ఆయన ప్రవరలో ఇస్తారు; తండ్రి జీవించి ఉన్నవారికీ సంప్రదాయాలు అనుమతిస్తాయి. అష్టమి రెండు రోజులకు వ్యాపించినప్పుడు నిర్ణయం ప్రయోగాన్ని బట్టి మారుతుంది — కొన్ని సంప్రదాయాలు భీష్మ శ్రాద్ధ దినాన్ని స్నాన-తర్పణ దినం నుండి వేరు చేస్తాయి — కాబట్టి అనుష్ఠానం రెండు రోజులనూ చెబుతుంది, ఒకటి ఎంచుకోదు." },
       sources: [SRC.vyoma, SRC.kanchi],
     },
     "mahalaya": {
@@ -281,15 +281,15 @@ export const STUTI_TARPANA = (function () {
     "sankranti-pitru": {
       badge: "advanced", status: "prayoga", decision: "sankranti", performance: "sankranti", offset: 0,
       trigger: { roman: "Each solar ingress", deva: "प्रत्येक सङ्क्रान्ति", tel: "ప్రతి సంక్రాంతి" },
-      rule: { roman: "Reckoned from the ingress instant and its puṇyakāla, never from a tithi at sunrise. Which puṇyakāla applies differs by saṅkrānti and by tradition; Stuti shows the sixteen-ghaṭikā span either side of the moment and says so.",
-              tel: "సంక్రమణ క్షణం, దాని పుణ్యకాలం నుండి లెక్క — సూర్యోదయ తిథి నుండి కాదు. ఏ పుణ్యకాలం వర్తిస్తుందో సంక్రాంతిని, సంప్రదాయాన్ని బట్టి మారుతుంది; స్తుతి క్షణానికి ఇరువైపులా పదహారు ఘటికల కాలాన్ని చూపి, అదే చెబుతుంది." },
+      rule: { roman: "Reckoned from the ingress instant and its puṇyakāla, never from a tithi at sunrise. Which puṇyakāla applies differs by saṅkrānti and by tradition; Anushtaanam shows the sixteen-ghaṭikā span either side of the moment and says so.",
+              tel: "సంక్రమణ క్షణం, దాని పుణ్యకాలం నుండి లెక్క — సూర్యోదయ తిథి నుండి కాదు. ఏ పుణ్యకాలం వర్తిస్తుందో సంక్రాంతిని, సంప్రదాయాన్ని బట్టి మారుతుంది; అనుష్ఠానం క్షణానికి ఇరువైపులా పదహారు ఘటికల కాలాన్ని చూపి, అదే చెబుతుంది." },
       sources: [SRC.ds26],
     },
     "kandarshi-tarpanam": {
       badge: "prayoga", status: "prayoga", decision: "udaya", performance: "pratah", offset: 0,
       trigger: { roman: "Upākarman, by your Veda and śākhā", deva: "उपाकर्म — वेद/शाखा के अनुसार", tel: "ఉపాకర్మ — మీ వేదం, శాఖను బట్టి" },
-      rule: { roman: "Upākarman is not one day for everyone: Yajurvedins commonly keep Śrāvaṇa Pūrṇimā, Ṛgvedins the Śravaṇa nakṣatra day of Śrāvaṇa, Sāmavedins a Hasta day in Bhādrapada. Without your Veda and śākhā, Stuti will not name a day.",
-              tel: "ఉపాకర్మ అందరికీ ఒకే రోజు కాదు: యజుర్వేదులు సాధారణంగా శ్రావణ పౌర్ణమి, ఋగ్వేదులు శ్రావణంలో శ్రవణా నక్షత్ర దినం, సామవేదులు భాద్రపదంలో హస్తా దినం. మీ వేదం, శాఖ తెలియకుండా స్తుతి రోజును చెప్పదు." },
+      rule: { roman: "Upākarman is not one day for everyone: Yajurvedins commonly keep Śrāvaṇa Pūrṇimā, Ṛgvedins the Śravaṇa nakṣatra day of Śrāvaṇa, Sāmavedins a Hasta day in Bhādrapada. Without your Veda and śākhā, Anushtaanam will not name a day.",
+              tel: "ఉపాకర్మ అందరికీ ఒకే రోజు కాదు: యజుర్వేదులు సాధారణంగా శ్రావణ పౌర్ణమి, ఋగ్వేదులు శ్రావణంలో శ్రవణా నక్షత్ర దినం, సామవేదులు భాద్రపదంలో హస్తా దినం. మీ వేదం, శాఖ తెలియకుండా అనుష్ఠానం రోజును చెప్పదు." },
       sources: [SRC.ds23, SRC.kanchi],
     },
     "annual-shraddha": {
@@ -661,8 +661,8 @@ export const STUTI_TARPANA = (function () {
         significance: [
           { roman: "The trigger is a coincidence, not a month. Weekday, pakṣa and tithi must fall together. It is not an Āṣāḍha or Śrāvaṇa rite.",
             tel: "ఇది మాసం కాదు, కలయిక. వారం, పక్షం, తిథి కలిసి రావాలి. ఇది ఆషాఢ లేదా శ్రావణ కర్మ కాదు." },
-          { roman: "Where caturdaśī only partly overlaps the Tuesday, the published pañcāṅga of your tradition decides. Stuti names the day it finds and shows the overlap. It does not rule on it.",
-            tel: "చతుర్దశి ఆ మంగళవారంతో పాక్షికంగా మాత్రమే కలిసినప్పుడు, మీ సంప్రదాయపు ప్రకటిత పంచాంగమే నిర్ణయిస్తుంది. స్తుతి కనిపించిన రోజును చెప్పి, కలయికను చూపుతుంది. తీర్పు చెప్పదు." },
+          { roman: "Where caturdaśī only partly overlaps the Tuesday, the published pañcāṅga of your tradition decides. Anushtaanam names the day it finds and shows the overlap. It does not rule on it.",
+            tel: "చతుర్దశి ఆ మంగళవారంతో పాక్షికంగా మాత్రమే కలిసినప్పుడు, మీ సంప్రదాయపు ప్రకటిత పంచాంగమే నిర్ణయిస్తుంది. అనుష్ఠానం కనిపించిన రోజును చెప్పి, కలయికను చూపుతుంది. తీర్పు చెప్పదు." },
         ],
         source: { roman: "Kanchi Veda Dharma Śāstra Paripālana Sabha publishes this Yama Tarpaṇam day and its procedure; the overlap tie-break is left to that authority.",
                   tel: "కంచి వేద ధర్మ శాస్త్ర పరిపాలన సభ ఈ యమ తర్పణ దినాన్ని, విధానాన్ని ప్రకటిస్తుంది; అతివ్యాప్తి నిర్ణయం ఆ ప్రామాణికతకే వదిలేశాం." },

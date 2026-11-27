@@ -138,7 +138,7 @@ function printPrepPack(v, date, lang, items, done) {
   };
   const w = window.open("", "_blank");
   if (!w) return;
-  w.document.write('<!DOCTYPE html><html><head><meta charset="utf-8"><title>' + esc(prName(v, lang)) + ' — Stuti</title>'
+  w.document.write('<!DOCTYPE html><html><head><meta charset="utf-8"><title>' + esc(prName(v, lang)) + ' — Anushtaanam</title>'
     + '<link href="' + location.origin + '/fonts/google/fonts.css" rel="stylesheet">'
     + "<style>@page{size:letter;margin:18mm 16mm}*{box-sizing:border-box;font-style:normal}"
     + "body{margin:0;background:#fff;color:#2B2017;font-family:'Mukta',sans-serif}"
@@ -158,7 +158,7 @@ function printPrepPack(v, date, lang, items, done) {
     + '<header><div class="shri">॥ श्री ॥</div><h1>' + esc(prName(v, lang)) + "</h1>"
     + '<div class="when">' + esc(date.toLocaleDateString(prLocale(lang), { weekday: "long", day: "numeric", month: "long", year: "numeric" })) + "</div></header>"
     + block("get", L.t("samagri", lang)) + block("do", L.t("prepSteps", lang))
-    + "<footer><b>Stuti</b> · " + esc(L.t("prepCap", "roman")) + "</footer></body></html>");
+    + "<footer><b>Anushtaanam</b> · " + esc(L.t("prepCap", "roman")) + "</footer></body></html>");
   w.document.close();
   setTimeout(() => { try { w.focus(); w.print(); } catch (e) {} }, 700);
 }
@@ -285,7 +285,7 @@ function PrepCues({ lang }) {
             <span className="rm-notif-ico"><Icon name="calendar" size={20} /></span>
             <span className="rm-notif-body">
               <span className="rm-notif-top">
-                <span className="rm-notif-app">Stuti</span>
+                <span className="rm-notif-app">Anushtaanam</span>
                 <span className="rm-notif-time">{prAway(Math.max(0, next.away - P.LEAD), lang)}</span>
               </span>
               <span className="rm-notif-line" style={{ fontFamily: L.font(lang) }}>

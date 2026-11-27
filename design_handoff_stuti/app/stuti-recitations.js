@@ -110,7 +110,7 @@ async function deleteRecitation(r) {
 }
 async function shareRecitation(r) {
     if (native()) {
-        await voskShareRecording(r.id, r.title || "Stuti recitation");
+        await voskShareRecording(r.id, r.title || "Anushtaanam recitation");
         return;
     }
     const rec = await tx("readonly", (s) => s.get(r.id));

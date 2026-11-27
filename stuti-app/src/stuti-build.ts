@@ -22,7 +22,7 @@ export const STUTI_BUILD = (function () {
   const SUPPORT = "feedback@stutiapp.com";
   const REPLY_DAYS = 3;
 
-  const label = () => "Stuti " + VERSION + " · " + BUILD + " · " + CHANNEL;
+  const label = () => "Anushtaanam " + VERSION + " · " + BUILD + " · " + CHANNEL;
 
   function texts() {
     try {

@@ -50,7 +50,7 @@ function FeedbackSheet({ lang = "deva", onClose, kind: kind0, about }) {
   const facts = () => {
     const B = STUTI_BUILD;
     if (kind === "problem" && B && B.diagnostics) { try { return B.diagnostics(); } catch (e) {} }
-    const out = [B && B.label ? B.label() : "Stuti"];
+    const out = [B && B.label ? B.label() : "Anushtaanam"];
     if (about) out.push("text: " + about);
     out.push("script: " + lang);
     try {

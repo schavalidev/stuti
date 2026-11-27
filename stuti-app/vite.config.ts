@@ -24,6 +24,8 @@ export default defineConfig({
       manifest: {
         ...JSON.parse(readFileSync(new URL('../design_handoff_stuti/app/manifest.webmanifest', import.meta.url), 'utf8')),
         id: '/', start_url: '/', scope: '/',
+        // renamed 27 Nov 2026; the design's manifest still says Stuti
+        name: 'Anushtaanam · अनुष्ठानम्', short_name: 'Anushtaanam',
         background_color: '#FAF5EB', theme_color: '#FAF5EB',
         icons: [
           { src: 'icons/icon-192.png', sizes: '192x192', type: 'image/png', purpose: 'any' },

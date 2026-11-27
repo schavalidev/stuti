@@ -15,7 +15,7 @@
 self.addEventListener("push", (event) => {
   let m = {};
   try { m = event.data ? event.data.json() : {}; } catch (e) { m = {}; }
-  event.waitUntil(self.registration.showNotification(m.t || "Stuti", {
+  event.waitUntil(self.registration.showNotification(m.t || "Anushtaanam", {
     body: m.b || "",
     tag: m.g || "stuti",
     icon: "icons/icon-192.png",

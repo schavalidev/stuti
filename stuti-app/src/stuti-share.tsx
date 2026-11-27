@@ -92,7 +92,7 @@ function drawVerseCard(o) {
   // footer mark
   g.fillStyle = P.gold;
   g.font = "26px 'Marcellus', Georgia, serif";
-  g.fillText("Stuti", W / 2, H - m - 52);
+  g.fillText("Anushtaanam", W / 2, H - m - 52);
   g.fillStyle = P.faint;
   g.font = "600 17px 'Mukta', sans-serif";
   g.fillText(o.by || "", W / 2, H - m - 26);
@@ -177,7 +177,7 @@ function printStotra(hymn, lang, withMeaning) {
   });
   const w = window.open("", "_blank");
   if (!w) return;
-  w.document.write('<!DOCTYPE html><html><head><meta charset="utf-8"><title>' + esc(L.hymnTitle(hymn, lang)) + ' — Stuti</title>'
+  w.document.write('<!DOCTYPE html><html><head><meta charset="utf-8"><title>' + esc(L.hymnTitle(hymn, lang)) + ' — Anushtaanam</title>'
     + '<link href="' + location.origin + '/fonts/google/fonts.css" rel="stylesheet">'
     + "<style>"
     + "@page{size:letter;margin:18mm 16mm}"
@@ -202,7 +202,7 @@ function printStotra(hymn, lang, withMeaning) {
     + '<header><div class="shri">॥ श्री ॥</div><h1>' + esc(L.hymnTitle(hymn, lang)) + "</h1>"
     + '<div class="by">' + esc(hymn.by ? L.author(hymn.by, lang) : "") + "</div></header>"
     + body
-    + "<footer><b>Stuti</b> · " + esc(L.hymnTitle(hymn, "roman")) + "</footer></div></body></html>");
+    + "<footer><b>Anushtaanam</b> · " + esc(L.hymnTitle(hymn, "roman")) + "</footer></div></body></html>");
   w.document.close();
   setTimeout(() => { try { w.focus(); w.print(); } catch (e) {} }, 700);
 }

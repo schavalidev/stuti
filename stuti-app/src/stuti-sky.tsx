@@ -132,8 +132,8 @@ function SkyHeader({ lang = "deva", greeting, go }) {
     const n = SY.ORDER.filter((id) => sandhyaOn[id]).length;
     setConfirmNote(n === 0 ? "No sandhyā reminders are set."
       : cueNote(n, lead)
-      || (lead ? `You'll be nudged ${lead} min before ${n === 3 ? "each sandhyā" : n === 1 ? "the chosen sandhyā" : "the chosen sandhyās"} while Stuti is open.`
-      : `You'll be nudged as ${n === 3 ? "each sandhyā" : n === 1 ? "the chosen sandhyā" : "each chosen sandhyā"} opens, while Stuti is open.`));
+      || (lead ? `You'll be nudged ${lead} min before ${n === 3 ? "each sandhyā" : n === 1 ? "the chosen sandhyā" : "the chosen sandhyās"} while Anushtaanam is open.`
+      : `You'll be nudged as ${n === 3 ? "each sandhyā" : n === 1 ? "the chosen sandhyā" : "each chosen sandhyā"} opens, while Anushtaanam is open.`));
   };
   React.useEffect(() => {
     if (!confirmNote || String(confirmNote).indexOf("Next: ") !== 0) return;

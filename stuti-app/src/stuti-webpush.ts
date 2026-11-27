@@ -113,7 +113,7 @@ function weekAhead() {
       at: new Date(c.at).getTime(),
       kind: c.kind,
       msg: {
-        t: String(w.title || "Stuti").slice(0, 120),
+        t: String(w.title || "Anushtaanam").slice(0, 120),
         b: String(w.text || "").slice(0, 900),
         u: w.hymn && w.hymn.id && w.hymn.deity ? "#reader/" + w.hymn.deity + "/" + w.hymn.id : "",
         g: c.id,
